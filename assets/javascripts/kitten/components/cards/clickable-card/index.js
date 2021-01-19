@@ -9,7 +9,7 @@ const StyledClickableCard = styled.button`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   opacity: 1;
 
   transition: opacity 0.15s ease;

@@ -1,18 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
+import classNames from 'classnames'
 
-const StyledElement = styled.span`
-  &:not(:focus):not(:active) {
-    clip: rect(0 0 0 0);
-    clip-path: inset(100%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-`
-
-export const VisuallyHidden = ({ ...props }) => {
-  return <StyledElement {...props} />
+export const VisuallyHidden = ({ className, ...props }) => {
+  return (
+    <span
+      className={classNames(className, 'k-u-a11y-visuallyHidden')}
+      {...props}
+    />
+  )
 }

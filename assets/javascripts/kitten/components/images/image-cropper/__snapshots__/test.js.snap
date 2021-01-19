@@ -7,7 +7,7 @@ Array [
   >
     <label
       className="k-Label k-Label--tiny"
-      htmlFor={null}
+      htmlFor="cropper"
       onClick={[Function]}
     >
       Lorem ipsum…
@@ -17,7 +17,7 @@ Array [
     className="sc-bdVaJa CoxgX"
   >
     <div
-      className="sc-EHOje feBzzV k-BasicUploader k-BasicUploader--ready"
+      className="sc-ifAKCX bFhmek k-BasicUploader k-BasicUploader--ready"
     >
       <input
         accept=".jpg,.jpeg,.gif,.png"
@@ -27,7 +27,7 @@ Array [
         type="file"
       />
       <label
-        className="sc-bwzfXH bQxxvv k-BasicUploader__button"
+        className="sc-bwzfXH gMceKn k-BasicUploader__button"
         htmlFor="cropper"
       >
         <svg

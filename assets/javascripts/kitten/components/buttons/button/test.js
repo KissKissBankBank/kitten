@@ -129,6 +129,22 @@ describe('<Button />', () => {
     })
   })
 
+  describe('with icon and micro', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Button icon micro>
+            !
+          </Button>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with icon and tiny', () => {
     beforeEach(() => {
       component = renderer
@@ -199,6 +215,34 @@ describe('<Button />', () => {
         .create(
           <Button icon fluid>
             !
+          </Button>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with variant', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<Button variant="orion">Orion</Button>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with variant and fluid', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Button variant="orion" fluid>
+            Orion fluid
           </Button>,
         )
         .toJSON()

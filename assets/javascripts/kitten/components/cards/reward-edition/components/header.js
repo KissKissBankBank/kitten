@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import COLORS from '../../../../constants/colors-config'
@@ -10,54 +10,56 @@ import { GarbageIcon } from '../../../../components/icons/garbage-icon'
 const borderWidth = pxToRem(2)
 const borderColor = COLORS.line1
 
-const StyledContainerHeader = styled.div`
+const StyledHeader = styled.div`
   border-bottom-width: ${borderWidth};
   border-bottom-style: solid;
   border-bottom-color: ${borderColor};
   padding: ${pxToRem(15)};
   background-color: ${COLORS.background3};
   display: flex;
-`
 
-const StyledRewardAmount = styled(Text)`
-  flex: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const StyledGarbageButton = styled(Button)`
-  align-item: flex-end;
-`
-
-export class Header extends PureComponent {
-  render() {
-    const { children, onClick, garbageButton } = this.props
-
-    return (
-      <StyledContainerHeader>
-        <StyledRewardAmount>{children}</StyledRewardAmount>
-        {garbageButton && (
-          <StyledGarbageButton
-            onClick={onClick}
-            type="button"
-            aria-label="Garbage Button"
-            modifier="beryllium"
-            tiny
-            icon
-          >
-            <GarbageIcon />
-          </StyledGarbageButton>
-        )}
-      </StyledContainerHeader>
-    )
+  .k-RewardEdition__Header__Amount {
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-}
+
+  .k-RewardEdition__Header__Button {
+    align-self: flex-end;
+  }
+`
+
+export const Header = ({
+  children,
+  onClick,
+  garbageButton,
+  garbageButtonA11yText,
+}) => (
+  <StyledHeader>
+    <Text className="k-RewardEdition__Header__Amount">{children}</Text>
+    {garbageButton && (
+      <Button
+        onClick={onClick}
+        type="button"
+        aria-label={garbageButtonA11yText}
+        modifier="hydrogen"
+        micro
+        icon
+        className="k-RewardEdition__Header__Button"
+      >
+        <GarbageIcon aria-hidden />
+      </Button>
+    )}
+  </StyledHeader>
+)
 
 Header.propTypes = {
   garbageButton: PropTypes.bool,
+  garbageButtonA11yText: PropTypes.string,
 }
 
 Header.defaultProps = {
   garbageButton: true,
+  garbageButtonA11yText: 'Delete',
 }

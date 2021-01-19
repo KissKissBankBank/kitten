@@ -120,4 +120,65 @@ describe('<CrowdfundingCard />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('CrowdfundingCard with buttonText prop', () => {
+    beforeEach(() => {
+      window.matchMedia = createMockMediaMatcher(false)
+
+      component = renderer
+        .create(
+          <CrowdfundingCardWidget
+            ownerTitle="Owner title"
+            ownerDescription="Owner description"
+            imageProps={{ src: '#image', alt: '' }}
+            avatarProps={{ src: '#image', alt: '' }}
+            state="Sur"
+            loading={false}
+            title="Lorem ipsum…"
+            subtitle="Sed ut perspiciatis unde omnis iste natus error Lorem"
+            titleTruncate
+            subTitleTruncate
+            buttonText="Lorem ipsum"
+            dayCounter={null}
+            buttonText="Contribute"
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('CrowdfundingCard with forceVersion prop', () => {
+    beforeEach(() => {
+      window.matchMedia = createMockMediaMatcher(false)
+
+      component = renderer
+        .create(
+          <CrowdfundingCardWidget
+            ownerTitle="Owner title"
+            ownerDescription="Owner description"
+            imageProps={{ src: '#image', alt: '' }}
+            avatarProps={{ src: '#image', alt: '' }}
+            state="Sur"
+            loading={false}
+            title="Lorem ipsum…"
+            subtitle="Sed ut perspiciatis unde omnis iste natus error Lorem"
+            titleTruncate
+            subTitleTruncate
+            buttonText="Lorem ipsum"
+            dayCounter={null}
+            buttonText="Contribute"
+            forceVersion="desktop"
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })

@@ -1,0 +1,3 @@
+export var MOBILE_HEADER_HEIGHT = 65;
+export var TABLET_HEADER_HEIGHT = 80;
+export var DESKTOP_HEADER_HEIGHT = 80;

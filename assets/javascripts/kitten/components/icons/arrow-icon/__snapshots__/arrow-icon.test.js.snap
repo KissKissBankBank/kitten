@@ -8,9 +8,7 @@ exports[`<ArrowIcon /> by default (deprecated) matches the snapshot 1`] = `
   width="8.48"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <title>
-    Arrow
-  </title>
+  
   <path
     d="M6 0H0v6h2V2h4z"
   />
@@ -19,12 +17,19 @@ exports[`<ArrowIcon /> by default (deprecated) matches the snapshot 1`] = `
 
 exports[`<ArrowIcon /> with the version prop by default matches the snapshot 1`] = `
 <svg
-  className="sc-bdVaJa Afqxo"
+  className=""
+  fill="#222"
   height="5.64"
+  style={
+    Object {
+      "transform": "rotate(90deg)",
+    }
+  }
   viewBox="0 0 8.48 5.64"
   width="8.48"
   xmlns="http://www.w3.org/2000/svg"
 >
+  
   <path
     d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
   />
@@ -33,12 +38,19 @@ exports[`<ArrowIcon /> with the version prop by default matches the snapshot 1`]
 
 exports[`<ArrowIcon /> with the version prop when disabled matches the snapshot 1`] = `
 <svg
-  className="sc-bdVaJa eZlPuQ"
+  className=""
+  fill="#fff"
   height="5.64"
+  style={
+    Object {
+      "transform": "rotate(90deg)",
+    }
+  }
   viewBox="0 0 8.48 5.64"
   width="8.48"
   xmlns="http://www.w3.org/2000/svg"
 >
+  
   <path
     d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
   />
@@ -47,12 +59,19 @@ exports[`<ArrowIcon /> with the version prop when disabled matches the snapshot 
 
 exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to \`bottom\` matches the snapshot 1`] = `
 <svg
-  className="sc-bdVaJa gyZASH"
+  className=""
+  fill="#222"
   height="5.64"
+  style={
+    Object {
+      "transform": "rotate(180deg)",
+    }
+  }
   viewBox="0 0 8.48 5.64"
   width="8.48"
   xmlns="http://www.w3.org/2000/svg"
 >
+  
   <path
     d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
   />
@@ -61,12 +80,19 @@ exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to 
 
 exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to \`left\` matches the snapshot 1`] = `
 <svg
-  className="sc-bdVaJa bxGcNc"
+  className=""
+  fill="#222"
   height="5.64"
+  style={
+    Object {
+      "transform": "rotate(-90deg)",
+    }
+  }
   viewBox="0 0 8.48 5.64"
   width="8.48"
   xmlns="http://www.w3.org/2000/svg"
 >
+  
   <path
     d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
   />
@@ -75,12 +101,19 @@ exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to 
 
 exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to \`right\` matches the snapshot 1`] = `
 <svg
-  className="sc-bdVaJa Afqxo"
+  className=""
+  fill="#222"
   height="5.64"
+  style={
+    Object {
+      "transform": "rotate(90deg)",
+    }
+  }
   viewBox="0 0 8.48 5.64"
   width="8.48"
   xmlns="http://www.w3.org/2000/svg"
 >
+  
   <path
     d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
   />

@@ -37,5 +37,5 @@ EditIcon.propTypes = {
 };
 EditIcon.defaultProps = {
   color: '#fff',
-  title: 'Edit'
+  title: ''
 };

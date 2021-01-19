@@ -34,7 +34,6 @@
 
   .k-IconBadge__content {
     flex-basis: $content-size;
-    fill: $color;
     color: $color;
     text-align: center;
     @include k-typographyFont($font);
@@ -42,6 +41,7 @@
   }
 
   .k-IconBadge__svg {
+    fill: $color;
     display: block;
     margin: 0;
     padding: 0;

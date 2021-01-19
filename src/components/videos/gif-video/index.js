@@ -17,6 +17,13 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var StyledVideo = _styledComponents.default.video.withConfig({
+  displayName: "gif-video__StyledVideo",
+  componentId: "sc-1drzckh-0"
+})(["&::-webkit-media-controls{display:none;}"]);
+
 var GifVideo = function GifVideo(_ref) {
   var poster = _ref.poster,
       children = _ref.children,
@@ -52,17 +59,23 @@ var GifVideo = function GifVideo(_ref) {
     sources.forEach(function (source) {
       source.addEventListener('error', handleSourceError);
     });
+    return function () {
+      sources.forEach(function (source) {
+        source.removeEventListener('error', handleSourceError);
+      });
+    };
   }, [videoElement]);
   (0, _react.useEffect)(function () {
     if (sourcesLength > 0 && sourcesErrors === sourcesLength) {
       setPosterLoading(true);
     }
   }, [sourcesErrors]);
-  return /*#__PURE__*/_react.default.createElement("video", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(StyledVideo, (0, _extends2.default)({
     ref: videoElement,
     autoPlay: true,
     loop: true,
-    muted: true
+    muted: true,
+    playsInline: true
   }, props, {
     poster: shouldLoadPoster ? poster : null
   }), children);

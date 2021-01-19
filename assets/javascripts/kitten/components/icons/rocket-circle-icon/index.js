@@ -5,6 +5,7 @@ import { RocketIcon } from '../rocket-icon'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import { ScreenConfig } from '../../../constants/screen-config'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 const StyledRocketCircle = styled.div`
   display: flex;
@@ -13,35 +14,29 @@ const StyledRocketCircle = styled.div`
   width: ${({ circleWidthMobile }) => pxToRem(circleWidthMobile)};
   height: ${({ circleWidthMobile }) => pxToRem(circleWidthMobile)};
   border-radius: 100%;
-  background-color: ${({ circleColor }) => circleColor};
+  background-color: ${({ bgColor }) => bgColor};
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     width: ${({ circleWidth }) => pxToRem(circleWidth)};
     height: ${({ circleWidth }) => pxToRem(circleWidth)};
   }
-`
 
-const StyledRocketIcon = styled(
-  ({
-    rocketWidth,
-    rocketHeight,
-    rocketHeightMobile,
-    rocketWidthMobile,
-    ...others
-  }) => <RocketIcon {...others} />,
-)`
-  padding-right: ${pxToRem(2)};
-  padding-top: ${pxToRem(1)};
-  width: ${({ rocketWidthMobile }) => pxToRem(rocketWidthMobile)};
-  height: ${({ rocketHeightMobile }) => pxToRem(rocketHeightMobile)};
+  .k-RocketCircleIcon__rocketIcon {
+    padding-right: ${pxToRem(2)};
+    padding-top: ${pxToRem(1)};
+    width: ${({ rocketWidthMobile }) => pxToRem(rocketWidthMobile)};
+    height: ${({ rocketHeightMobile }) => pxToRem(rocketHeightMobile)};
 
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    width: ${({ rocketWidth }) => pxToRem(rocketWidth)};
-    height: ${({ rocketHeight }) => pxToRem(rocketHeight)};
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      width: ${({ rocketWidth }) => pxToRem(rocketWidth)};
+      height: ${({ rocketHeight }) => pxToRem(rocketHeight)};
+    }
   }
 `
 
 export const RocketCircleIcon = ({
+  color,
+  bgColor,
   circleColor,
   circleWidth,
   circleWidthMobile,
@@ -56,40 +51,49 @@ export const RocketCircleIcon = ({
   <StyledRocketCircle
     circleWidth={circleWidth}
     circleWidthMobile={circleWidthMobile}
-    circleColor={circleColor}
+    bgColor={circleColor || bgColor}
+    rocketWidth={rocketWidth}
+    rocketHeight={rocketHeight}
+    rocketHeightMobile={rocketHeightMobile}
+    rocketWidthMobile={rocketWidthMobile}
     {...others}
   >
-    <StyledRocketIcon
-      rocketWidth={rocketWidth}
-      rocketHeight={rocketHeight}
-      rocketHeightMobile={rocketHeightMobile}
-      rocketWidthMobile={rocketWidthMobile}
-      color={rocketColor}
+    <RocketIcon
+      color={color}
       title={rocketTitle}
+      className="k-RocketCircleIcon__rocketIcon"
     />
   </StyledRocketCircle>
 )
 
 RocketCircleIcon.defaultProps = {
+  bgColor: COLORS.valid,
   circleWidth: 24,
   circleWidthMobile: 20,
-  circleColor: COLORS.valid,
-  rocketWidth: 12,
+  color: COLORS.background1,
   rocketHeight: 15,
-  rocketWidthMobile: 10,
   rocketHeightMobile: 12,
-  rocketColor: COLORS.background1,
   rocketTitle: '',
+  rocketWidth: 12,
+  rocketWidthMobile: 10,
 }
 
 RocketCircleIcon.propTypes = {
   circlewidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   circlewidthMobile: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  circleColor: PropTypes.string,
+  circleColor: deprecated(
+    PropTypes.string,
+    '`circleColor` is deprecated. Please use `bgColor` instead.',
+  ),
+  bgColor: PropTypes.string,
   rocketWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   rocketHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   rocketWidthMobile: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   rocketHeightMobile: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   rocketTitle: PropTypes.string,
-  rocketColor: PropTypes.string,
+  rocketColor: deprecated(
+    PropTypes.string,
+    '`rocketColor` is deprecated. Please use `color` instead.',
+  ),
+  color: PropTypes.string,
 }

@@ -29,27 +29,33 @@ var TeamCardPhoneIcon = function TeamCardPhoneIcon(_ref) {
   var phoneNumber = _ref.phoneNumber,
       tooltipColor = _ref.tooltipColor,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["phoneNumber", "tooltipColor", "className"]);
+      buttonLabel = _ref.buttonLabel,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["phoneNumber", "tooltipColor", "className", "buttonLabel"]);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
     tag: "a",
     href: "tel:".concat(phoneNumber),
     modifier: "hydrogen",
-    className: (0, _classnames.default)('k-ButtonIcon--phone', 'k-u-hidden@s-up', className)
+    className: (0, _classnames.default)('k-ButtonIcon--phone', 'k-u-hidden@s-up', className),
+    "aria-label": buttonLabel
   }, /*#__PURE__*/_react.default.createElement(_phoneIcon.PhoneIcon, {
+    "aria-hidden": true,
     className: "k-ButtonIcon__svg"
   })), /*#__PURE__*/_react.default.createElement(_buttonWithTooltip.TeamCardButtonWithTooltip, (0, _extends2.default)({
     phoneNumber: phoneNumber,
     tooltipColor: tooltipColor,
-    className: className
+    className: className,
+    "aria-label": buttonLabel
   }, props)));
 };
 
 exports.TeamCardPhoneIcon = TeamCardPhoneIcon;
 TeamCardPhoneIcon.propTypes = {
   phoneNumber: _propTypes.default.string,
-  tooltipColor: _propTypes.default.string
+  tooltipColor: _propTypes.default.string,
+  buttonLabel: _propTypes.default.string
 };
 TeamCardPhoneIcon.defaultProps = {
   phoneNumber: '',
-  tooltipColor: _colorsConfig.default.primary1
+  tooltipColor: _colorsConfig.default.primary1,
+  buttonLabel: 'Telephone'
 };

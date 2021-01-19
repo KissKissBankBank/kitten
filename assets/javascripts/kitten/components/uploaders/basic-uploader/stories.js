@@ -16,6 +16,20 @@ export const StatusReady = args => (
   />
 )
 
+export const SizeModifiersWithButtonProps = args => (
+  <BasicUploader
+    {...args}
+    id="BasicUploader__StatusReady"
+    buttonProps={{
+      tiny: boolean('Tiny', false),
+      big: boolean('Big', false),
+      huge: boolean('Huge', false),
+      giant: boolean('Giant', false),
+    }}
+    buttonText="Send document"
+  />
+)
+
 export const OnFormError = args => (
   <BasicUploader
     {...args}

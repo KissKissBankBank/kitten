@@ -3,7 +3,7 @@ import { Alert } from './alert'
 import { boolean, text } from '@storybook/addon-knobs'
 
 export default {
-  title: 'Alert',
+  title: 'Notifications/Alert',
   component: Alert,
 }
 

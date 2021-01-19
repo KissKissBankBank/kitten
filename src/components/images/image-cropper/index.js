@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -7,332 +9,273 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ImageCropper = void 0;
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _reactCropper = _interopRequireDefault(require("react-cropper"));
+
+var _getOr = _interopRequireDefault(require("lodash/fp/getOr"));
 
 var _marger = require("../../../components/layout/marger");
 
 var _grid = require("../../../components/grid/grid");
 
-var _text = require("../../../components/typography/text");
-
 var _label = require("../../../components/form/label");
 
 var _paragraph = require("../../../components/typography/paragraph");
 
-var _simpleUploader = require("../../../components/uploaders/simple-uploader");
+var _basicUploader = require("../../../components/uploaders/basic-uploader");
 
-var _slider = require("../../../components/form/slider");
+var _rangeSlider = require("../../../components/form/range-slider");
 
 var _elementHelper = require("../../../helpers/dom/element-helper");
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+var ImageCropper = function ImageCropper(_ref) {
+  var imageSrc = _ref.imageSrc,
+      fileName = _ref.fileName,
+      aspectRatio = _ref.aspectRatio,
+      disabled = _ref.disabled,
+      isCropEnabled = _ref.isCropEnabled,
+      label = _ref.label,
+      name = _ref.name,
+      maxSize = _ref.maxSize,
+      acceptedFiles = _ref.acceptedFiles,
+      onChange = _ref.onChange,
+      buttonLabel = _ref.buttonLabel,
+      uploaderErrorLabel = _ref.uploaderErrorLabel,
+      description = _ref.description,
+      cropperInfo = _ref.cropperInfo,
+      sliderTitle = _ref.sliderTitle;
+  var cropperContainerRef = (0, _react.useRef)(null);
+  var cropperRef = (0, _react.useRef)(null);
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+  var _useState = (0, _react.useState)(imageSrc),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      imageSrcState = _useState2[0],
+      setImageSrc = _useState2[1];
 
-var ImageCropper = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2.default)(ImageCropper, _React$Component);
+  var _useState3 = (0, _react.useState)(fileName),
+      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
+      fileNameState = _useState4[0],
+      setFileName = _useState4[1];
 
-  var _super = _createSuper(ImageCropper);
+  var _useState5 = (0, _react.useState)('ready'),
+      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
+      status = _useState6[0],
+      setStatus = _useState6[1];
 
-  function ImageCropper(props) {
-    var _this;
+  var _useState7 = (0, _react.useState)(''),
+      _useState8 = (0, _slicedToArray2.default)(_useState7, 2),
+      errorText = _useState8[0],
+      setErrorText = _useState8[1];
 
-    (0, _classCallCheck2.default)(this, ImageCropper);
-    _this = _super.call(this, props);
-    _this.state = (0, _extends2.default)({}, _this.initialState(), {
-      hasErrorOnUploader: false,
-      cropperWidth: null,
-      cropperHeight: null,
-      imageSrc: _this.props.imageSrc,
-      fileName: _this.props.fileName
-    });
-    _this.handleUploaderSuccess = _this.handleUploaderSuccess.bind((0, _assertThisInitialized2.default)(_this));
-    _this.handleUploaderError = _this.handleUploaderError.bind((0, _assertThisInitialized2.default)(_this));
-    _this.handleUploaderReset = _this.handleUploaderReset.bind((0, _assertThisInitialized2.default)(_this));
-    _this.handleSliderChange = _this.handleSliderChange.bind((0, _assertThisInitialized2.default)(_this));
-    _this.handleSliderAction = _this.handleSliderAction.bind((0, _assertThisInitialized2.default)(_this));
-    _this.handleReady = _this.handleReady.bind((0, _assertThisInitialized2.default)(_this));
-    _this.handleCrop = _this.handleCrop.bind((0, _assertThisInitialized2.default)(_this));
-    _this.renderError = _this.renderError.bind((0, _assertThisInitialized2.default)(_this));
-    _this.setCropperHeight = _this.setCropperHeight.bind((0, _assertThisInitialized2.default)(_this));
-    return _this;
-  }
+  var _useState9 = (0, _react.useState)(0),
+      _useState10 = (0, _slicedToArray2.default)(_useState9, 2),
+      cropperWidth = _useState10[0],
+      setCropperWidth = _useState10[1];
 
-  (0, _createClass2.default)(ImageCropper, [{
-    key: "initialState",
-    value: function initialState() {
-      return {
-        imageSrc: null,
-        imageCropSrc: null,
-        fileName: null,
-        touched: false,
-        sliderValue: 0,
-        sliderMin: this.props.sliderMin,
-        sliderMax: this.props.sliderMax
-      };
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.setCropperHeight();
-      window.addEventListener('resize', this.setCropperHeight);
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      window.removeEventListener('resize', this.setCropperHeight);
-    }
-  }, {
-    key: "handleUploaderSuccess",
-    value: function handleUploaderSuccess(data) {
-      this.setState({
-        imageSrc: data.preview,
-        imageCropSrc: null,
-        fileName: data.name,
-        sliderValue: 0
-      }, this.setCropperHeight);
-    }
-  }, {
-    key: "handleUploaderError",
-    value: function handleUploaderError(hasError) {
-      var resetState = hasError ? this.initialState() : {};
-      this.setState((0, _extends2.default)({
-        hasErrorOnUploader: hasError
-      }, resetState));
-    }
-  }, {
-    key: "handleUploaderReset",
-    value: function handleUploaderReset() {
-      this.setState(this.initialState());
-      this.props.onChange({
-        value: null,
-        name: null
-      });
-    }
-  }, {
-    key: "handleSliderChange",
-    value: function handleSliderChange(value) {
-      this.setState({
-        sliderValue: value
-      });
-      this.refs.cropper.zoomTo(value / 100);
-    }
-  }, {
-    key: "handleSliderAction",
-    value: function handleSliderAction() {
-      this.setState({
-        touched: true
-      });
-    } // Calculate the right range for the zoom slider.
+  var _useState11 = (0, _react.useState)(0),
+      _useState12 = (0, _slicedToArray2.default)(_useState11, 2),
+      cropperHeight = _useState12[0],
+      setCropperHeight = _useState12[1];
 
-  }, {
-    key: "handleReady",
-    value: function handleReady() {
-      var imageData = this.refs.cropper.getImageData();
+  var _useState13 = (0, _react.useState)(null),
+      _useState14 = (0, _slicedToArray2.default)(_useState13, 2),
+      cropperInstance = _useState14[0],
+      setCropperInstance = _useState14[1];
+
+  var _useState15 = (0, _react.useState)(0),
+      _useState16 = (0, _slicedToArray2.default)(_useState15, 2),
+      sliderMin = _useState16[0],
+      setSliderMin = _useState16[1];
+
+  var _useState17 = (0, _react.useState)(100),
+      _useState18 = (0, _slicedToArray2.default)(_useState17, 2),
+      sliderMax = _useState18[0],
+      setSliderMax = _useState18[1];
+
+  var _useState19 = (0, _react.useState)(0),
+      _useState20 = (0, _slicedToArray2.default)(_useState19, 2),
+      initialSliderValue = _useState20[0],
+      setInitialSliderValue = _useState20[1];
+
+  var _useState21 = (0, _react.useState)(null),
+      _useState22 = (0, _slicedToArray2.default)(_useState21, 2),
+      uploadedFile = _useState22[0],
+      setUploadedFile = _useState22[1];
+
+  var _useState23 = (0, _react.useState)(null),
+      _useState24 = (0, _slicedToArray2.default)(_useState23, 2),
+      resultData = _useState24[0],
+      setResultData = _useState24[1];
+
+  (0, _react.useEffect)(function () {
+    if (cropperInstance && cropperInstance.imageData.naturalWidth) {
+      var imageData = cropperInstance.imageData;
       var naturalWidth = imageData.naturalWidth;
       var width = imageData.width;
       var ratio = width / naturalWidth * 100;
-      var min = this.props.sliderMin + ratio;
-      var max = this.props.sliderMax + ratio;
-      this.setState({
-        sliderMin: min,
-        sliderMax: max,
-        sliderValue: min
+      var min = sliderMin + ratio;
+      var max = sliderMax + ratio;
+      setSliderMin(min);
+      setSliderMax(max);
+      setInitialSliderValue(min);
+    }
+  }, [(0, _getOr.default)(null)('imageData.naturalWidth')(cropperInstance)]);
+
+  var setCropperSize = function setCropperSize() {
+    if (cropperContainerRef) {
+      var width = _elementHelper.domElementHelper.getComputedWidth(cropperContainerRef.current);
+
+      var height = width / aspectRatio;
+      setCropperWidth(width);
+      setCropperHeight(height);
+    }
+  };
+
+  (0, _react.useEffect)(function () {
+    setCropperSize();
+    window.addEventListener('resize', setCropperSize);
+    return function () {
+      return window.removeEventListener('resize', setCropperSize);
+    };
+  }, []);
+  (0, _react.useEffect)(function () {
+    setCropperSize();
+  }, [imageSrcState]);
+  var styles = {
+    width: cropperWidth,
+    height: cropperHeight
+  };
+  (0, _react.useEffect)(function () {
+    if (fileNameState && resultData) {
+      onChange({
+        value: resultData.target.src,
+        base: (0, _getOr.default)(resultData.srcElement.src)('originalTarget.src')(resultData),
+        name: fileNameState,
+        file: uploadedFile,
+        cropperData: resultData.detail
       });
     }
-  }, {
-    key: "handleCrop",
-    value: function handleCrop() {
-      if (!this.state.imageSrc) return;
-      var croppedCanvas = this.refs.cropper.getCroppedCanvas();
+  }, [resultData, fileNameState, uploadedFile]);
+  var dragMode = disabled || !isCropEnabled ? 'none' : 'move';
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
+    bottom: "1.5"
+  }, /*#__PURE__*/_react.default.createElement(_label.Label, {
+    size: "tiny",
+    htmlFor: name
+  }, label)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
+    top: "1.5",
+    bottom: "1"
+  }, /*#__PURE__*/_react.default.createElement(_basicUploader.BasicUploader, {
+    id: name,
+    fileName: fileNameState,
+    buttonText: buttonLabel,
+    disabled: disabled,
+    errorText: errorText,
+    status: status,
+    fileInputProps: {
+      accept: acceptedFiles
+    },
+    onUpload: function onUpload(e) {
+      try {
+        var file = e.currentTarget.files[0];
+        setUploadedFile(file);
 
-      if (croppedCanvas) {
-        var imageCropSrc = croppedCanvas.toDataURL();
-        this.setState({
-          imageCropSrc: imageCropSrc
-        });
-        this.props.onChange({
-          value: imageCropSrc,
-          base: this.state.imageSrc,
-          name: this.state.fileName,
-          cropperData: this.refs.cropper.getData()
-        });
-      }
-    }
-  }, {
-    key: "setCropperHeight",
-    value: function setCropperHeight() {
-      if (this.cropperContainer) {
-        var width = _elementHelper.domElementHelper.getComputedWidth(this.cropperContainer);
+        if (file.size > maxSize) {
+          setStatus('error');
+          setErrorText(uploaderErrorLabel);
+        } else {
+          var reader = new FileReader();
 
-        var height = width / this.props.aspectRatio;
-        this.setState({
-          cropperWidth: width,
-          cropperHeight: height
-        });
-      }
-    }
-  }, {
-    key: "renderCropper",
-    value: function renderCropper() {
-      var _this2 = this;
+          reader.onload = function (event) {
+            setImageSrc(event.target.result);
+            setFileName(file.name);
+          };
 
-      var styles = {
-        width: this.state.cropperWidth,
-        height: this.state.cropperHeight
-      };
-      var dragMode = this.props.disabled || !this.props.isCropEnabled ? 'none' : 'move';
-      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
-        top: "2",
-        key: "cropper"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        ref: function ref(node) {
-          _this2.cropperContainer = node;
+          reader.readAsDataURL(file);
         }
-      }, this.state.cropperWidth && this.state.cropperHeight && /*#__PURE__*/_react.default.createElement(_reactCropper.default // This helps unmount and remount a new cropper to keep
-      // the component responsive.
-      , {
-        key: "cropper-".concat(this.state.cropperHeight),
-        ref: "cropper",
-        className: "k-Cropper",
-        src: this.state.imageSrc,
-        style: styles,
-        aspectRatio: this.props.aspectRatio,
-        viewMode: 3,
-        guides: false,
-        modal: false,
-        autoCropArea: 1,
-        cropBoxMovable: false,
-        cropBoxResizable: false,
-        toggleDragModeOnDblclick: false,
-        zoomOnTouch: false,
-        zoomOnWheel: false,
-        dragMode: dragMode,
-        crop: this.handleCrop,
-        ready: this.handleReady
-      })));
-    }
-  }, {
-    key: "renderCropperInfo",
-    value: function renderCropperInfo() {
-      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
-        top: "2",
-        bottom: "1.5"
-      }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
-        modifier: "quaternary",
-        margin: false
-      }, this.props.cropperInfo));
-    }
-  }, {
-    key: "renderSlider",
-    value: function renderSlider() {
-      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
-        top: "1"
-      }, /*#__PURE__*/_react.default.createElement(_slider.Slider, {
-        name: "zoom",
-        min: this.state.sliderMin,
-        max: this.state.sliderMax,
-        value: this.state.sliderValue,
-        onChange: this.handleSliderChange,
-        onAction: this.handleSliderAction
-      }));
-    }
-  }, {
-    key: "renderSliderTitle",
-    value: function renderSliderTitle() {
-      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
-        top: "1.5",
-        bottom: "1"
-      }, /*#__PURE__*/_react.default.createElement(_label.Label, {
-        size: "micro"
-      }, this.props.sliderTitle));
-    }
-  }, {
-    key: "renderSliderAndCropperInfo",
-    value: function renderSliderAndCropperInfo() {
-      if (this.props.disabled) return;
-      return /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
-        col: "12",
-        "col-m": "6"
-      }, this.renderCropperInfo(), this.renderSliderTitle(), this.renderSlider());
-    }
-  }, {
-    key: "renderCroppingImage",
-    value: function renderCroppingImage() {
-      if (!this.state.imageSrc) return;
-      return /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
-        col: "12",
-        "col-m": "6"
-      }, this.renderCropper()), this.props.isCropEnabled && this.renderSliderAndCropperInfo());
-    }
-  }, {
-    key: "renderError",
-    value: function renderError() {
-      if (!this.state.hasErrorOnUploader) return;
-      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
-        top: "1",
-        bottom: "1"
-      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
-        color: "error",
-        size: "tiny",
-        weight: "regular"
-      }, this.props.uploaderErrorLabel));
-    }
-  }, {
-    key: "renderUploader",
-    value: function renderUploader() {
-      return /*#__PURE__*/_react.default.createElement(_simpleUploader.SimpleUploader, {
-        name: this.props.name,
-        maxSize: this.props.maxSize,
-        acceptedFiles: this.props.acceptedFiles,
-        onSuccess: this.handleUploaderSuccess,
-        onError: this.handleUploaderError,
-        onReset: this.handleUploaderReset,
-        buttonLabel: this.props.buttonLabel,
-        fileName: this.props.fileName,
-        disabled: this.props.disabled,
-        deletable: this.props.deletable,
-        base64: this.props.base64
+      } catch (e) {
+        setStatus('error');
+        setErrorText(uploaderErrorLabel);
+      }
+    },
+    onCancel: function onCancel() {
+      setImageSrc(imageSrc);
+      setFileName(fileName);
+      setErrorText('');
+      setUploadedFile(null);
+      onChange({
+        value: null,
+        name: null,
+        file: null
       });
     }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
-        col: "12"
-      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
-        bottom: "1.5"
-      }, /*#__PURE__*/_react.default.createElement(_label.Label, {
-        size: "tiny"
-      }, this.props.label)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
-        top: "1.5",
-        bottom: "1"
-      }, this.renderUploader()), this.renderError(), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
-        top: "1"
-      }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
-        modifier: "quaternary",
-        margin: false
-      }, this.props.description)))), this.renderCroppingImage());
+  })), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
+    top: "1"
+  }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
+    modifier: "quaternary",
+    margin: false
+  }, description)), imageSrcState && /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
+    col: "12",
+    "col-m": "6"
+  }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
+    top: "2"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    ref: cropperContainerRef
+  }, cropperWidth && cropperHeight && /*#__PURE__*/_react.default.createElement(_reactCropper.default, {
+    onInitialized: function onInitialized(instance) {
+      setCropperInstance(instance);
+    },
+    ref: cropperRef,
+    className: "k-Cropper",
+    src: imageSrcState,
+    style: styles,
+    initialAspectRatio: aspectRatio,
+    viewMode: 3,
+    guides: false,
+    modal: false,
+    autoCropArea: 1,
+    cropBoxMovable: false,
+    cropBoxResizable: false,
+    toggleDragModeOnDblclick: false,
+    zoomOnTouch: false,
+    zoomOnWheel: false,
+    dragMode: dragMode,
+    crop: function crop(result) {
+      setResultData(result);
     }
-  }]);
-  return ImageCropper;
-}(_react.default.Component);
+  })))), isCropEnabled && !disabled && /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
+    col: "12",
+    "col-m": "6"
+  }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
+    top: "2",
+    bottom: "1.5"
+  }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
+    modifier: "quaternary",
+    margin: false
+  }, cropperInfo)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
+    top: "1.5",
+    bottom: "1"
+  }, /*#__PURE__*/_react.default.createElement(_label.Label, {
+    size: "micro",
+    htmlFor: "zoomSlider"
+  }, sliderTitle)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
+    top: "1"
+  }, /*#__PURE__*/_react.default.createElement(_rangeSlider.RangeSlider, {
+    id: "zoomSlider",
+    name: "zoom",
+    min: sliderMin,
+    max: sliderMax,
+    step: "any",
+    initialValue: initialSliderValue,
+    onChange: function onChange(event) {
+      var value = event.target.value;
+      cropperInstance && cropperInstance.zoomTo(value / 100);
+    }
+  })))));
+};
 
 exports.ImageCropper = ImageCropper;
 ImageCropper.defaultProps = {
@@ -340,8 +283,6 @@ ImageCropper.defaultProps = {
   imageSrc: null,
   fileName: null,
   uploaderErrorLabel: 'You have an error on upload.',
-  sliderMin: 0,
-  sliderMax: 500,
   aspectRatio: 16 / 9,
   maxSize: 5 * 1024 * 1024,
   // 5 Mo.
@@ -353,6 +294,5 @@ ImageCropper.defaultProps = {
   description: 'Lorem ipsum…',
   disabled: false,
   isCropEnabled: true,
-  base64: true,
   onChange: function onChange(_fileData) {}
 };

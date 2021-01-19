@@ -1,4 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
+import styled from 'styled-components'
+
+const StyledVideo = styled.video`
+  &::-webkit-media-controls {
+    display: none;
+  }
+`
 
 export const GifVideo = ({ poster, children, ...props }) => {
   const videoElement = useRef(null)
@@ -20,6 +27,12 @@ export const GifVideo = ({ poster, children, ...props }) => {
     sources.forEach(source => {
       source.addEventListener('error', handleSourceError)
     })
+
+    return () => {
+      sources.forEach(source => {
+        source.removeEventListener('error', handleSourceError)
+      })
+    }
   }, [videoElement])
 
   useEffect(() => {
@@ -29,15 +42,16 @@ export const GifVideo = ({ poster, children, ...props }) => {
   }, [sourcesErrors])
 
   return (
-    <video
+    <StyledVideo
       ref={videoElement}
       autoPlay
       loop
       muted
+      playsInline
       {...props}
       poster={shouldLoadPoster ? poster : null}
     >
       {children}
-    </video>
+    </StyledVideo>
   )
 }

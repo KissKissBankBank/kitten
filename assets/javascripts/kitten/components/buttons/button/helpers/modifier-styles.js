@@ -135,7 +135,7 @@ export const modifierStyles = modifier => {
 
     svg,
     path {
-      fill: ${color};
+      fill: currentColor;
       transition: fill 0.2s;
     }
 
@@ -186,39 +186,24 @@ export const modifierStyles = modifier => {
 
     ${modifier !== 'checked' &&
     css`
-      :hover,
-      :focus {
+      &:hover,
+      &:focus {
         border-color: ${hoverBorderColor};
         background-color: ${hoverBgColor};
         color: ${hoverColor};
-
-        svg,
-        path {
-          fill: ${hoverColor};
-        }
       }
 
-      :active {
+      &:active {
         border-color: ${activeBorderColor};
         background-color: ${activeBgColor};
         color: ${activeColor};
-
-        svg,
-        path {
-          fill: ${activeColor};
-        }
       }
     `}
 
-    :disabled {
+    &:disabled {
       border-color: ${COLORS.line2};
       background-color: ${COLORS.line2};
       color: ${COLORS.background1};
-
-      svg,
-      path {
-        fill: ${COLORS.background1};
-      }
     }
   `
 }

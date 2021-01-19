@@ -1,5 +1,9 @@
 // Align
+@import './utilities/a11y/visually-hidden';
+
+// Align
 @import './utilities/align/align';
+@import './utilities/align-self/align-self';
 
 // Background
 @import './utilities/background/background-color';
@@ -11,10 +15,18 @@
 @import './utilities/cursor/cursor';
 
 // Display
+@import './utilities/display/block';
+@import './utilities/display/inline-block';
 @import './utilities/display/hidden';
 
 // Event
 @import './utilities/event/pointer-event';
+
+// Flex
+@import './utilities/flex/display-flex';
+@import './utilities/flex/justify-content';
+@import './utilities/flex/align-items';
+@import './utilities/flex/flex-direction';
 
 // Image
 @import './utilities/image/responsive';

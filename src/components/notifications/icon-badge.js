@@ -26,7 +26,7 @@ var _typography = require("../../helpers/utils/typography");
 var StyledBadge = _styledComponents.default.span.withConfig({
   displayName: "icon-badge__StyledBadge",
   componentId: "sc-13mitia-0"
-})(["display:flex;justify-content:center;align-items:center;padding:0;min-width:", ";min-height:", ";border-radius:", ";background-color:", ";", " ", " ", " ", ""], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), _colorsConfig.default.primary1, function (_ref) {
+})(["display:flex;justify-content:center;align-items:center;padding:0;min-width:", ";min-height:", ";border-radius:", ";background-color:", ";", " ", " ", " ", " .k-IconBadge__content{flex-basis:", ";color:", ";text-align:center;font-weight:bold;font-size:", ";line-height:0;", "}svg{fill:", ";}"], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), _colorsConfig.default.primary1, function (_ref) {
   var valid = _ref.valid;
   return valid && (0, _styledComponents.css)(["background-color:", ";"], _colorsConfig.default.valid);
 }, function (_ref2) {
@@ -38,16 +38,11 @@ var StyledBadge = _styledComponents.default.span.withConfig({
 }, function (_ref4) {
   var huge = _ref4.huge;
   return huge && (0, _styledComponents.css)(["min-width:", ";min-height:", ";border-radius:", ";"], (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50));
-});
-
-var StyledContent = _styledComponents.default.span.withConfig({
-  displayName: "icon-badge__StyledContent",
-  componentId: "sc-13mitia-1"
-})(["flex-basis:", ";fill:", ";color:", ";text-align:center;font-weight:bold;font-size:", ";line-height:0;", ""], (0, _typography.pxToRem)(11), _colorsConfig.default.background1, _colorsConfig.default.background1, (0, _typography.stepToRem)(-2), function (_ref5) {
+}, (0, _typography.pxToRem)(11), _colorsConfig.default.background1, (0, _typography.stepToRem)(-2), function (_ref5) {
   var big = _ref5.big,
       huge = _ref5.huge;
   return (big || huge) && (0, _styledComponents.css)(["font-size:", ";"], (0, _typography.stepToRem)(-1));
-});
+}, _colorsConfig.default.background1);
 
 var IconBadge = function IconBadge(_ref6) {
   var children = _ref6.children,
@@ -61,9 +56,8 @@ var IconBadge = function IconBadge(_ref6) {
     valid: valid,
     big: big,
     huge: huge
-  }, others), /*#__PURE__*/_react.default.createElement(StyledContent, {
-    big: big,
-    huge: huge
+  }, others), /*#__PURE__*/_react.default.createElement("span", {
+    className: "k-IconBadge__content"
   }, children));
 };
 

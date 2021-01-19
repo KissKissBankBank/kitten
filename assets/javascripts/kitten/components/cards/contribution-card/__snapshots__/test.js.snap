@@ -176,11 +176,11 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
               className="k-LegacyRewardCard__myContribution"
             >
               <span
-                className="sc-EHOje kaBNsB k-LegacyRewardCard__iconBadge"
+                className="sc-EHOje cOnFfw k-LegacyRewardCard__iconBadge"
                 disabled={false}
               >
                 <span
-                  className="sc-bZQynM givIjb"
+                  className="k-IconBadge__content"
                 >
                   <svg
                     className="k-IconBadge__svg"
@@ -374,11 +374,11 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="k-LegacyRewardCard__myContribution"
           >
             <span
-              className="sc-EHOje kaBNsB k-LegacyRewardCard__iconBadge"
+              className="sc-EHOje cOnFfw k-LegacyRewardCard__iconBadge"
               disabled={false}
             >
               <span
-                className="sc-bZQynM givIjb"
+                className="k-IconBadge__content"
               >
                 <svg
                   className="k-IconBadge__svg"
