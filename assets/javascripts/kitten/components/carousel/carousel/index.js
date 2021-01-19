@@ -261,6 +261,7 @@ class CarouselBase extends Component {
       <div className="k-Carousel__pagination">
         <div className="k-Carousel__pagination__buttonContainer">
           <Button
+            type="button"
             className="k-Carousel__pagination__button"
             icon
             modifier="beryllium"
@@ -277,6 +278,7 @@ class CarouselBase extends Component {
           </Button>
 
           <Button
+            type="button"
             className="k-Carousel__pagination__button"
             icon
             modifier="beryllium"

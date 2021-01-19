@@ -68,8 +68,10 @@ const StyledDropdownSelectWithInput = styled.div`
     ${TYPOGRAPHY.fontStyles.light}
     color: ${COLORS.font1};
     margin: 0 ${pxToRem(15)} 0 ${pxToRem(40)};
+    font-size: ${pxToRem(-2)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
+      font-size: ${pxToRem(-1)};
       margin-left: ${pxToRem(60)};
     }
   }
@@ -77,8 +79,13 @@ const StyledDropdownSelectWithInput = styled.div`
   .k-Form-DropdownSelectWithInput__content--selectedItem {
     background: ${COLORS.primary5};
     border-radius: ${pxToRem(4)};
-    padding: 0 ${pxToRem(15)};
-    height: ${pxToRem(46)};
+    padding: 0 ${pxToRem(10)};
+    height: ${pxToRem(40)};
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      padding: 0 ${pxToRem(15)};
+      height: ${pxToRem(46)};
+    }
   }
 
   .k-Form-DropdownSelectWithInput__placeholder {
@@ -87,7 +94,7 @@ const StyledDropdownSelectWithInput = styled.div`
   }
 
   .k-Form-DropdownSelectWithInput__content__icon {
-    margin-right: ${pxToRem(15)};
+    margin-right: ${pxToRem(10)};
     display: flex;
     align-items: center;
 
@@ -103,7 +110,20 @@ const StyledDropdownSelectWithInput = styled.div`
     svg[stroke], svg [stroke] {
       stroke: currentColor;
     }
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      margin-right: ${pxToRem(15)};
+    }
   }
+
+  &.k-Form-DropdownSelectWithInput--hideIconOnMobile {
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      .k-Form-DropdownSelectWithInput__content__icon {
+        display: none;
+      }
+    }
+  }
+
 
   .k-Form-DropdownSelectWithInput__button__arrowBox {
     position: absolute;
@@ -144,12 +164,16 @@ const StyledDropdownSelectWithInput = styled.div`
   .k-Form-DropdownSelectWithInput__input {
     display: none;
     ${TYPOGRAPHY.fontStyles.light}
+    font-size: ${stepToRem(-1)};
     color: ${COLORS.font1};
-    font-size: ${stepToRem(0)};
     appearance: none;
     padding: 0;
     border: none;
     background-color: transparent;
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      font-size: ${stepToRem(0)};
+    }
   }
 
   .k-Form-DropdownSelectWithInput__list {
@@ -212,7 +236,7 @@ const StyledDropdownSelectWithInput = styled.div`
   }
 
   .k-Form-DropdownSelectWithInput__item__icon {
-    margin-right: ${pxToRem(20)};
+    margin-right: ${pxToRem(10)};
     min-width: ${pxToRem(20)};
     display: flex;
     align-items: center;
@@ -221,6 +245,10 @@ const StyledDropdownSelectWithInput = styled.div`
     svg {
       display: block;
       max-width:100%;
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      margin-right: ${pxToRem(20)};
     }
   }
 
@@ -334,6 +362,7 @@ export const DropdownSelectWithInput = ({
   deactivateDropdown,
   className,
   menuZIndex,
+  hideIconOnMobile,
 }) => {
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
@@ -416,6 +445,7 @@ export const DropdownSelectWithInput = ({
         'k-Form-DropdownSelectWithInput--valid': valid,
         'k-Form-DropdownSelectWithInput--disabled': disabled,
         'k-Form-DropdownSelectWithInput--noDropdown': deactivateDropdown,
+        'k-Form-DropdownSelectWithInput--hideIconOnMobile': hideIconOnMobile,
       })}
       style={{ '--menu-z-index': menuZIndex }}
     >
@@ -566,6 +596,7 @@ DropdownSelectWithInput.defaultProps = {
   openOnLoad: false,
   deactivateDropdown: false,
   menuZIndex: 1000,
+  hideIconOnMobile: false,
 }
 
 DropdownSelectWithInput.propTypes = {
@@ -588,4 +619,5 @@ DropdownSelectWithInput.propTypes = {
   openOnLoad: PropTypes.bool,
   deactivateDropdown: PropTypes.bool,
   menuZIndex: PropTypes.number,
+  hideIconOnMobile: PropTypes.bool,
 }

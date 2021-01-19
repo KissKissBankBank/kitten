@@ -337,6 +337,9 @@ export const StyledCarouselContainer = styled.div`
         pxToRem(baseItemMarginBetween)};
     }
 
+    /* Fix bug IE11 ResizeObserver, to trigger a first resize */
+    min-height: 1;
+
     overflow-x: scroll;
     scroll-behavior: smooth;
     /* hide scrollbar on IE and Edge */
@@ -344,9 +347,8 @@ export const StyledCarouselContainer = styled.div`
     /* mandatory to combine scroll with this property on iOS */
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: mandatory;
-    /* Fix bug IE11 ResizeObserver, to trigger a first resize */
-    min-height: 1;
-
+    /* Hide scrollbar on Firefox. */
+    scrollbar-width: none;
     /* hide scrollbar on Chrome and Safari */
     &::-webkit-scrollbar {
       display: none;

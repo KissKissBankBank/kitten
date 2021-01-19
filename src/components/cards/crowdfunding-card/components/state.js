@@ -21,33 +21,13 @@ var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/ge
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
-
-var _typography = require("../../../../helpers/utils/typography");
-
-var _screenConfig = require("../../../../constants/screen-config");
 
 var _text = require("../../../../components/typography/text");
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-var COMPONENT_GUTTER = (0, _typography.pxToRem)(10);
-
-var StyledState = _styledComponents.default.div.withConfig({
-  displayName: "state__StyledState",
-  componentId: "colp6f-0"
-})(["position:absolute;top:0;right:0;display:inline-flex;align-items:center;background-color:", ";padding:", ";line-height:1;@media (max-width:", "){display:none;}"], _colorsConfig.default.background1, COMPONENT_GUTTER, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.max));
-
-var StyledWidgetContainer = _styledComponents.default.div.withConfig({
-  displayName: "state__StyledWidgetContainer",
-  componentId: "colp6f-1"
-})(["display:flex;position:absolute;background:", ";border-radius:", ";margin:", " ", " 0 0;right:0;top:0;padding:", " ", ";"], _colorsConfig.default.font1, (0, _typography.pxToRem)(25), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20));
 
 var State = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(State, _PureComponent);
@@ -73,7 +53,9 @@ var State = /*#__PURE__*/function (_PureComponent) {
       var _this$props2 = this.props,
           state = _this$props2.state,
           loading = _this$props2.loading;
-      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !loading && /*#__PURE__*/_react.default.createElement(StyledState, null, /*#__PURE__*/_react.default.createElement(_text.Text, {
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !loading && /*#__PURE__*/_react.default.createElement("div", {
+        className: "k-CrowdfundingCard__state"
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         size: "micro",
         lineHeight: "normal",
         weight: "regular",
@@ -86,7 +68,9 @@ var State = /*#__PURE__*/function (_PureComponent) {
       var _this$props3 = this.props,
           widgetState = _this$props3.widgetState,
           loading = _this$props3.loading;
-      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !loading && /*#__PURE__*/_react.default.createElement(StyledWidgetContainer, null, widgetState));
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !loading && /*#__PURE__*/_react.default.createElement("div", {
+        className: "k-CrowdfundingCard__widgetState"
+      }, widgetState));
     }
   }]);
   return State;

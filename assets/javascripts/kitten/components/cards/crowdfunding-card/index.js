@@ -40,6 +40,7 @@ export const CrowdfundingCard = ({
   videoSources,
   widgetState,
   buttonText,
+  forceVersion,
   ...others
 }) => {
   const removeCurrentFocus = () => {
@@ -79,6 +80,7 @@ export const CrowdfundingCard = ({
         },
       )}
       href={href}
+      forceVersion={forceVersion}
     >
       <Image
         ownerTitle={ownerTitle}
@@ -137,6 +139,7 @@ CrowdfundingCard.propTypes = {
     PropTypes.number,
   ]),
   buttonText: PropTypes.string,
+  forceVersion: PropTypes.oneOf(['mobile', 'tablet', 'desktop']),
 }
 
 CrowdfundingCard.defaultProps = {
@@ -145,4 +148,5 @@ CrowdfundingCard.defaultProps = {
   stretch: false,
   imageContainerRatio: 10 / 16,
   buttonText: null,
+  forceVersion: null,
 }
