@@ -13,6 +13,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
   - `SimilarProjectsCard`.
+- Breaking Change: Delete the following deprecated `card` SCSS mixins:
+  - `k-ProjectCard`
+  - `k-ProjectCreatorCard`
+  - `k-ProjectSimilarCard`
+
 
 ## [2.112.0] - 2020-01-18
 
