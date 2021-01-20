@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: do not apply focus styles on `VerticalStepper` when `disabled`
+
 ## [2.112.0] - 2020-01-18
 
 Feature:
