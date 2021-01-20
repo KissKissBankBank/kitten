@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useCombobox } from 'downshift'
 import COLORS from '../../../constants/colors-config'
-import { Label } from '../../../components/form/label'
+import { Label } from '../label'
 import classNames from 'classnames'
-import { WarningCircleIcon } from '../../../components/icons/warning-circle-icon'
-import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
-import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import { WarningCircleIcon } from '../../icons/warning-circle-icon'
+import { CheckedCircleIcon } from '../../icons/checked-circle-icon'
+import { ArrowIcon } from '../../icons/arrow-icon'
 import find from 'lodash/fp/find'
 import flow from 'lodash/fp/flow'
 import uniqBy from 'lodash/fp/uniqBy'
@@ -59,7 +59,7 @@ export const DropdownCombobox = ({
   const onInputValueChange = changes => {
     const newItemsList = flow(
       filter(item => {
-        return item.value
+        return item.label
           .toLowerCase()
           .startsWith(changes.inputValue.toLowerCase())
       }),
