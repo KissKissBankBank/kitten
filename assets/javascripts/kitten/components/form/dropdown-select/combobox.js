@@ -15,6 +15,12 @@ import isEmpty from 'lodash/isEmpty'
 import isObject from 'lodash/fp/isObject'
 import { StyledDropdown } from './styles'
 
+const getLabelToFilter = item => {
+  if (item.searchableLabel) return item.searchableLabel
+  if (isObject(item.label)) return item.searchableLabel || ''
+  return item.label
+}
+
 export const DropdownCombobox = ({
   labelText,
   comboboxButtonLabelText,
@@ -60,9 +66,7 @@ export const DropdownCombobox = ({
   const onInputValueChange = changes => {
     const newItemsList = flow(
       filter(item => {
-        const label = isObject(item.label)
-          ? item.searchableLabel || ''
-          : item.label
+        const label = getLabelToFilter(item)
         return label.toLowerCase().startsWith(changes.inputValue.toLowerCase())
       }),
       !isEmpty(changes.inputValue) && uniqLabelOnSearch
