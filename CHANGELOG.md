@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update mobile version of `VerticalStepper` component.
 - Fix: do not apply focus styles on `VerticalStepper` when `disabled`
 
 ## [2.112.0] - 2020-01-18
