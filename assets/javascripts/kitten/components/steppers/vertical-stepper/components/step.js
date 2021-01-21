@@ -74,8 +74,16 @@ const StyledItem = styled.li`
     padding-bottom: 0;
   }
 
+  [role='button']:focus,
+  a:focus,
+  button:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
+
   li:not(:last-of-type) {
     margin: 0 !important;
+
     &::after {
       display: none;
     }
@@ -89,6 +97,8 @@ const StyledItem = styled.li`
 const StyledLink = styled.a`
   display: inline-flex;
   align-items: center;
+  padding-right: ${pxToRem(10)};
+
   ${({ as, onClick }) =>
     (as === 'a' || onClick) &&
     css`

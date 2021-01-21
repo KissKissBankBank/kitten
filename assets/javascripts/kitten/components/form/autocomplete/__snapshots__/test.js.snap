@@ -17,7 +17,6 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   background: #fff;
   border: 0.125rem solid #eee;
   padding: 0 0.9375rem;
-  outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 0.8888888888888888rem;
@@ -49,6 +48,8 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 
 .c1:focus {
   border-color: #d8d8d8;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c1::-ms-clear {
@@ -93,7 +94,6 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   background: #fff;
   border: 0.125rem solid #eee;
   padding: 0 0.9375rem;
-  outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 0.8888888888888888rem;
@@ -126,6 +126,8 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 
 .c1:focus {
   border-color: #d8d8d8;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c1::-ms-clear {
@@ -201,7 +203,6 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   background: #fff;
   border: 0.125rem solid #eee;
   padding: 0 0.9375rem;
-  outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 0.8888888888888888rem;
@@ -233,6 +234,8 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 
 .c1:focus {
   border-color: #d8d8d8;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c1::-ms-clear {

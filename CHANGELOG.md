@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add Focus styles for focusable elements.
+- Feature: Add `summaryProps` to `Details` component.
+- Feature: Handle keyboard navigation on `Carousel`.
+- Feature: Update mobile version of `VerticalStepper` component.
 - Fix: do not apply focus styles on `VerticalStepper` when `disabled`
 - Fix: `Combobox` filter on `label` (instead of `value`)
 

@@ -16,8 +16,6 @@ const StyledTextInputWithUnit = styled.div`
   }
 
   .k-Form-TextInputWithUnit__input {
-    transition: all 0.2s;
-
     &[type='number'] {
       appearance: textfield;
 
@@ -72,9 +70,11 @@ const StyledTextInputWithUnit = styled.div`
     }
   }
 
-  &:focus-within .k-Form-TextInputWithUnit__unit {
-    border-color: ${COLORS.line2};
-    color: ${COLORS.font1};
+  &:focus-within {
+    .k-Form-TextInputWithUnit__unit {
+      border-color: ${COLORS.line2};
+      color: ${COLORS.font1};
+    }
   }
 `
 

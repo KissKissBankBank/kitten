@@ -30,7 +30,6 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -75,6 +74,11 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -127,7 +131,6 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -172,6 +175,11 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -240,7 +248,6 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border-radius: 0.25rem;
   border: 0.125rem solid #eee;
@@ -286,6 +293,11 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -338,7 +350,6 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
@@ -385,6 +396,11 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -437,7 +453,6 @@ exports[`<Button /> with \`giant\` prop matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
@@ -485,6 +500,11 @@ exports[`<Button /> with \`giant\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -553,7 +573,6 @@ exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
@@ -601,6 +620,11 @@ exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -669,7 +693,6 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem dashed #bae8fd;
   background-color: #fff;
@@ -714,6 +737,11 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -766,7 +794,6 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: 10rem;
   min-height: 2.5rem;
@@ -815,6 +842,11 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -874,7 +906,6 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   min-height: initial;
@@ -924,6 +955,11 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -1013,7 +1049,6 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
@@ -1060,6 +1095,11 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -1112,7 +1152,6 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
@@ -1168,6 +1207,11 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -1258,7 +1302,6 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
@@ -1314,6 +1357,11 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -1404,7 +1452,6 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   min-height: initial;
@@ -1456,6 +1503,11 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -1522,7 +1574,6 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: 10rem;
   min-height: 2.5rem;
@@ -1578,6 +1629,11 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -1651,7 +1707,6 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   min-height: initial;
@@ -1701,6 +1756,11 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -1761,7 +1821,6 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -1806,6 +1865,11 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -1863,7 +1927,6 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -1908,6 +1971,11 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -1960,7 +2028,6 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
@@ -2008,6 +2075,11 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -2082,7 +2154,6 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border-radius: 0.375rem;
   border: 0.125rem solid #eee;
@@ -2128,6 +2199,11 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {

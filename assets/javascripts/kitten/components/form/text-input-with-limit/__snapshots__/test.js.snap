@@ -5,7 +5,7 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
   className="sc-htpNat jYlDxq k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda"
+    className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda"
     defaultValue=""
     disabled={false}
     name="text"
@@ -24,7 +24,7 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
   className="sc-htpNat jYlDxq k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--disabled"
+    className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--disabled"
     defaultValue=""
     disabled={true}
     name="text"
@@ -43,7 +43,7 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
   className="sc-htpNat jYlDxq k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--error"
+    className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--error"
     defaultValue=""
     disabled={false}
     name="text"
@@ -62,7 +62,7 @@ exports[`<TextInputWithLimit /> with \`tiny\` prop matches with snapshot 1`] = `
   className="sc-htpNat jYlDxq k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--tiny"
+    className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--tiny"
     defaultValue=""
     disabled={false}
     name="text"
