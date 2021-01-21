@@ -16,8 +16,9 @@ import isObject from 'lodash/fp/isObject'
 import { StyledDropdown } from './styles'
 
 const getLabelToFilter = item => {
-  if (item.searchableLabel) return item.searchableLabel
-  if (isObject(item.label)) return item.searchableLabel || ''
+  if (item.searchableLabel || isObject(item.label)) {
+    return item.searchableLabel || ''
+  }
   return item.label || ''
 }
 
