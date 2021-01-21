@@ -148,7 +148,7 @@ export const WithComponentsForLabel = () => {
               label: (
                 <>
                   <ArrowIcon direction="left" />
-                  <Text weight="bold">Un titre de l'espagne</Text>
+                  <Text weight="bold">Un titre de l'Espagne</Text>
                   Une explication du label
                 </>
               ),
