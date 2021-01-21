@@ -10,6 +10,11 @@ const StyledTeamCardButtonWithTooltip = styled.a`
   position: relative;
   display: inline-block;
 
+  &[href]:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
+
   .k-TeamCardButtonWithTooltip__tooltip {
     position: absolute;
     top: ${pxToRem(55)};
@@ -66,7 +71,7 @@ export const TeamCardButtonWithTooltip = ({
       <span className="k-TeamCardButtonWithTooltip__tooltipArrow" />
     </span>
 
-    <ButtonIcon modifier="hydrogen" className="k-ButtonIcon--phone">
+    <ButtonIcon modifier="hydrogen" className="k-ButtonIcon--phone" tag="span">
       <PhoneIcon className="k-ButtonIcon__svg" />
     </ButtonIcon>
   </StyledTeamCardButtonWithTooltip>

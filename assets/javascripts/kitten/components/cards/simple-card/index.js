@@ -5,10 +5,17 @@ import { Image } from './components/image'
 import { TitleComponent } from './components/title'
 import { Subtitle } from './components/subtitle'
 import { Paragraph } from './components/paragraph'
+import { pxToRem } from '../../../helpers/utils/typography'
+import COLORS from '../../../constants/colors-config'
 
 const ContainerStyle = styled.a`
   line-height: 1;
   position: relative;
+
+  &[href]:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
 `
 
 class SimpleCardComponent extends Component {

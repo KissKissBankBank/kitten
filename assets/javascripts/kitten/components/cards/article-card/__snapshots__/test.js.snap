@@ -2,7 +2,7 @@
 
 exports[`<ArticleCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-gzVnrw dPhTDj k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-gzVnrw fySJQg k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
@@ -72,7 +72,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
 
 exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches with snapshot 1`] = `
 <div
-  className="sc-gzVnrw dPhTDj k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-gzVnrw fySJQg k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
@@ -168,7 +168,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
 
 exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
 <div
-  className="sc-gzVnrw dPhTDj k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-gzVnrw fySJQg k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
@@ -238,7 +238,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
 
 exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-gzVnrw dPhTDj k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-gzVnrw fySJQg k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href="#foobar"
   onClick={[Function]}
 >

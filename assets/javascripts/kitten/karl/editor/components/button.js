@@ -1,9 +1,10 @@
+import React from 'react'
 import styled from 'styled-components'
 import { Button, ICON } from '../../../components/buttons/button/button'
 import { modifierStyles } from '../../../components/buttons/button/helpers/modifier-styles'
 import COLORS from '../../../constants/colors-config'
 
-export default styled(Button)`
+export default styled(({ tag, ...props }) => <Button as={tag} {...props} />)`
   ${ICON};
   ${modifierStyles('hydrogen')};
 
