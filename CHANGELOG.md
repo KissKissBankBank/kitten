@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Handle keyboard navigation on `Carousel`.
 - Feature: Update mobile version of `VerticalStepper` component.
 - Fix: do not apply focus styles on `VerticalStepper` when `disabled`
+- Fix: `Combobox` filter on `label` (instead of `value`)
 
 ## [2.112.0] - 2020-01-18
 

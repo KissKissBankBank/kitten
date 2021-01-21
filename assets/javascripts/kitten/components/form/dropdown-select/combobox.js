@@ -2,17 +2,25 @@ import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useCombobox } from 'downshift'
 import COLORS from '../../../constants/colors-config'
-import { Label } from '../../../components/form/label'
+import { Label } from '../label'
 import classNames from 'classnames'
-import { WarningCircleIcon } from '../../../components/icons/warning-circle-icon'
-import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
-import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import { WarningCircleIcon } from '../../icons/warning-circle-icon'
+import { CheckedCircleIcon } from '../../icons/checked-circle-icon'
+import { ArrowIcon } from '../../icons/arrow-icon'
 import find from 'lodash/fp/find'
 import flow from 'lodash/fp/flow'
 import uniqBy from 'lodash/fp/uniqBy'
 import filter from 'lodash/fp/filter'
 import isEmpty from 'lodash/isEmpty'
+import isObject from 'lodash/fp/isObject'
 import { StyledDropdown } from './styles'
+
+const getLabelToFilter = item => {
+  if (item.searchableLabel || isObject(item.label)) {
+    return item.searchableLabel || ''
+  }
+  return item.label || ''
+}
 
 export const DropdownCombobox = ({
   labelText,
@@ -59,9 +67,8 @@ export const DropdownCombobox = ({
   const onInputValueChange = changes => {
     const newItemsList = flow(
       filter(item => {
-        return item.value
-          .toLowerCase()
-          .startsWith(changes.inputValue.toLowerCase())
+        const label = getLabelToFilter(item)
+        return label.toLowerCase().startsWith(changes.inputValue.toLowerCase())
       }),
       !isEmpty(changes.inputValue) && uniqLabelOnSearch
         ? uniqBy('label')
