@@ -5,8 +5,7 @@ create flexible components based on your own brand elements (colors, fonts,
 typographic scale, etc.).
 
 You can check out Kitten's components on
-[KissKissBankBank's styleguide](https://styleguide.kisskissbankbank.com/)
-and on [Storybook](https://kisskissbankbank.github.io/kitten/).
+[Storybook](https://kisskissbankbank.github.io/kitten/).
 
 ![Kittens](http://i.imgur.com/EbGhfDH.gif)
 
@@ -88,38 +87,10 @@ bin/cleanup
 To launch storybook locally:
 
 ```sh
-npm run storybook
+bin/start
 ```
 
-Then visit http://localhost:6006
-
-To release `Storybook` simply run this command:
-
-```sh
-npm run deploy-storybook
-```
-
-### Styleguide
-
-To launch the styleguide using webpack:
-
-```sh
-$ npm run styleguide:start
-```
-
-Then visit http://localhost:3000
-
-#### Production settings
-
-To share the styleguide with production settings (to share via ngrok for
-example), you can compile the assets:
-
-```sh
-$ npm run styleguide:build
-```
-
-It will create a `build` folder with static files. You can serve it as you wish
-
+The page http://localhost:6006 displayed automatically.
 
 ### Component testing
 

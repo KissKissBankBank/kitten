@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, GridCol } from '../components/grid/grid'
+import { Grid, GridCol } from '../../../components/grid/grid'
 import { ArrowIcon } from './index'
 
 export default {
