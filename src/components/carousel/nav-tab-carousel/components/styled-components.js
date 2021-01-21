@@ -13,6 +13,8 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _typographyConfig = _interopRequireDefault(require("./../../../../constants/typography-config"));
 
+var _colorsConfig = _interopRequireDefault(require("./../../../../constants/colors-config"));
+
 var _typography = require("./../../../../helpers/utils/typography");
 
 var _arrowIcon = require("./../../../icons/arrow-icon");
@@ -45,14 +47,14 @@ exports.LeftEmptyContainer = LeftEmptyContainer;
 var StyledRightArrowContainer = _styledComponents.default.div.withConfig({
   displayName: "styled-components__StyledRightArrowContainer",
   componentId: "jws9qo-2"
-})(["", " ", " &:hover{transform:translate(", ");", "}"], rightContainer, sharedStyledArrowIcons, (0, _typography.pxToRem)(8), sharedHoverStyledArrowIcons);
+})(["", " ", " &:focus,&:active,&:hover{transform:translate(", ");", "}&:focus{outline:", " solid ", ";outline-offset:", ";}"], rightContainer, sharedStyledArrowIcons, (0, _typography.pxToRem)(8), sharedHoverStyledArrowIcons, _colorsConfig.default.primary3, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2));
 
 exports.StyledRightArrowContainer = StyledRightArrowContainer;
 
 var StyledLeftArrowContainer = _styledComponents.default.div.withConfig({
   displayName: "styled-components__StyledLeftArrowContainer",
   componentId: "jws9qo-3"
-})(["", " ", " &:hover{transform:translate(-", ");", "}"], leftContainer, sharedStyledArrowIcons, (0, _typography.pxToRem)(8), sharedHoverStyledArrowIcons);
+})(["", " ", " &:focus,&:active,&:hover{transform:translate(-", ");", "}&:focus{outline:", " solid ", ";outline-offset:", ";}"], leftContainer, sharedStyledArrowIcons, (0, _typography.pxToRem)(8), sharedHoverStyledArrowIcons, _colorsConfig.default.primary3, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2));
 
 exports.StyledLeftArrowContainer = StyledLeftArrowContainer;
 var StyledArrowIcon = (0, _styledComponents.default)(_arrowIcon.ArrowIcon).withConfig({

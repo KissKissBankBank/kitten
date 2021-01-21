@@ -40,14 +40,16 @@ var Step = function Step(_ref) {
       className = _ref.className,
       variant = _ref.variant,
       bridge = _ref.bridge,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["success", "valid", "error", "waiting", "disabled", "statusProps", "children", "className", "variant", "bridge"]);
+      onClick = _ref.onClick,
+      other = (0, _objectWithoutProperties2.default)(_ref, ["success", "valid", "error", "waiting", "disabled", "statusProps", "children", "className", "variant", "bridge", "onClick"]);
   return /*#__PURE__*/_react.default.createElement(StyledItem, {
     className: (0, _classnames.default)('k-Steppers--VerticalStepper__item', {
       'k-Steppers--VerticalStepper__item--hasActiveLine': success,
       'k-Steppers--VerticalStepper__item--bridge': bridge
     })
   }, /*#__PURE__*/_react.default.createElement(StyledLink, (0, _extends2.default)({
-    as: other.href && !disabled ? 'a' : 'span'
+    as: other.href && !disabled ? 'a' : 'span',
+    onClick: disabled ? null : onClick
   }, other, {
     variant: variant
   }), /*#__PURE__*/_react.default.createElement(_status.Status, (0, _extends2.default)({
@@ -70,12 +72,12 @@ exports.Step = Step;
 var StyledItem = _styledComponents.default.li.withConfig({
   displayName: "step__StyledItem",
   componentId: "sc-1you76f-0"
-})(["padding:", " 0;&:first-of-type{margin-top:0;padding-top:0;}&:last-of-type{margin-bottom:0;padding-bottom:0;}li:not(:last-of-type){margin:0 !important;&::after{display:none;}}&.k-Steppers--VerticalStepper__item--bridge{padding:", " 0;}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(8));
+})(["padding:", " 0;&:first-of-type{margin-top:0;padding-top:0;}&:last-of-type{margin-bottom:0;padding-bottom:0;}[role='button']:focus,a:focus,button:focus{outline:", " solid ", ";outline-offset:", ";}li:not(:last-of-type){margin:0 !important;&::after{display:none;}}&.k-Steppers--VerticalStepper__item--bridge{padding:", " 0;}"], (0, _typography.pxToRem)(15), _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(8));
 
 var StyledLink = _styledComponents.default.a.withConfig({
   displayName: "step__StyledLink",
   componentId: "sc-1you76f-1"
-})(["display:inline-flex;align-items:center;", " .k-Steppers--VerticalStepper__step--link--content{display:flex;flex-direction:column;justify-content:center;flex:1;color:", ";&.k-Steppers--VerticalStepper__step--link--content--disabled{color:", ";}}"], function (_ref2) {
+})(["display:inline-flex;align-items:center;padding-right:", ";", " .k-Steppers--VerticalStepper__step--link--content{display:flex;flex-direction:column;justify-content:center;flex:1;color:", ";&.k-Steppers--VerticalStepper__step--link--content--disabled{color:", ";}}"], (0, _typography.pxToRem)(10), function (_ref2) {
   var as = _ref2.as,
       onClick = _ref2.onClick;
   return (as === 'a' || onClick) && (0, _styledComponents.css)(["cursor:pointer;text-decoration:none;.", "{transition:transform 0.4s;}.", "{transition:color 0.4s;}:hover,:focus,:active{.", "{transform:translateX(", ");}.", "{color:", ";}}"], _index.STEP_CLASSNAME, _index.LINK_CLASSNAME, _index.STEP_CLASSNAME, (0, _typography.pxToRem)(5), _index.LINK_CLASSNAME, _colorsConfig.default.primary3);

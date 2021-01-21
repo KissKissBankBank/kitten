@@ -53,7 +53,7 @@ var ItemWrapper = _styledComponents.default.li.withConfig({
 var StepperText = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "stepper__StepperText",
   componentId: "sc-1c0a5ko-3"
-})(["display:flex;align-items:center;white-space:nowrap;"]);
+})(["display:flex;align-items:center;white-space:nowrap;transition:color 0.2s ease;border-radius:", ";&:focus{outline:", " solid ", ";outline-offset:", ";}"], (0, _typography.pxToRem)(6), _colorsConfig.default.primary3, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2));
 
 var StepperIcon = function StepperIcon(_ref) {
   var state = _ref.state;
@@ -76,12 +76,13 @@ var StepperItem = function StepperItem(_ref2) {
       props = (0, _objectWithoutProperties2.default)(_ref2, ["children", "state"]);
   return /*#__PURE__*/_react.default.createElement(ItemWrapper, (0, _extends2.default)({
     state: state
-  }, props), /*#__PURE__*/_react.default.createElement(StepperIcon, {
-    state: state
-  }), /*#__PURE__*/_react.default.createElement(StepperText, {
+  }, props), /*#__PURE__*/_react.default.createElement(StepperText, {
     weight: "regular",
-    size: "tiny"
-  }, children));
+    size: "tiny",
+    tabIndex: "0"
+  }, /*#__PURE__*/_react.default.createElement(StepperIcon, {
+    state: state
+  }), children));
 };
 
 exports.StepperItem = StepperItem;
@@ -114,9 +115,9 @@ var StepperLink = function StepperLink(_ref3) {
     href: href,
     target: external ? '_blank' : '_self',
     rel: external ? 'nofollow noopener noreferrer' : ''
-  }, linkProps), /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StepperIcon, {
+  }, linkProps), /*#__PURE__*/_react.default.createElement(StepperIcon, {
     state: state
-  }), children)));
+  }), children));
 };
 
 exports.StepperLink = StepperLink;

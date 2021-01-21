@@ -37,6 +37,10 @@ var _subtitle = require("./components/subtitle");
 
 var _paragraph = require("./components/paragraph");
 
+var _typography = require("../../../helpers/utils/typography");
+
+var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
@@ -44,7 +48,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 var ContainerStyle = _styledComponents.default.a.withConfig({
   displayName: "simple-card__ContainerStyle",
   componentId: "sc-1g5bppt-0"
-})(["line-height:1;position:relative;"]);
+})(["line-height:1;position:relative;&[href]:focus{outline:", " solid ", ";outline-offset:", ";}"], _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2));
 
 var SimpleCardComponent = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(SimpleCardComponent, _Component);
