@@ -13,7 +13,6 @@ Features:
   - Handle keyboard navigation on `Carousel`.
   - Update mobile version of `VerticalStepper` component.
 
-
 Fixes:
 
   - do not apply focus styles on `VerticalStepper` when `disabled`
