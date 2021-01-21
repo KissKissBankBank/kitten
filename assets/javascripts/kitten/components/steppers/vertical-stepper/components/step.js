@@ -18,6 +18,7 @@ export const Step = ({
   className,
   variant,
   bridge,
+  onClick,
   ...other
 }) => {
   return (
@@ -29,6 +30,7 @@ export const Step = ({
     >
       <StyledLink
         as={other.href && !disabled ? 'a' : 'span'}
+        onClick={disabled ? null : onClick}
         {...other}
         variant={variant}
       >

@@ -2,7 +2,9 @@
 
 exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] = `
 .c3.k-Steppers--VerticalStepper__statusContainer--orion {
-  border: 0.3125rem solid #fff;
+  border-width: 0.25rem;
+  border-style: solid;
+  border-color: #fff;
 }
 
 .c3 .k-Steppers--VerticalStepper__status {
@@ -25,7 +27,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   height: 1.875rem;
   border-radius: 1.875rem;
   box-sizing: border-box;
-  margin-right: 0.9375rem;
+  margin-right: 0.6875rem;
   background-color: #fff;
   border: 0.125rem solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
@@ -65,9 +67,9 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border: 0.1875rem solid #fff;
   z-index: 1;
   padding: 0.1875rem;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: 1.875rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
@@ -93,11 +95,11 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
   background-color: #fff;
   border-color: #eee;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 0.75rem;
   margin-left: 0.4375rem;
-  margin-right: 1.25rem;
+  margin-right: 0.9375rem;
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge {
@@ -219,7 +221,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 .c4.k-Stepepers-VerticalStepper__title--orion {
-  font-size: 0.8888888888888888rem;
+  font-size: 0.7901234567901234rem;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 0.3125rem;
@@ -325,16 +327,53 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
   content: '';
   position: absolute;
-  left: 1.15625rem;
+  left: 1rem;
   top: 1.875rem;
   background-color: #eee;
-  width: 0.1875rem;
+  width: 0.125rem;
   height: 100%;
   z-index: -1;
 }
 
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
   background-color: #19b4fa;
+}
+
+@media (min-width:640px) {
+  .c3.k-Steppers--VerticalStepper__statusContainer--orion {
+    border-width: 0.3125rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 1.875rem;
+    margin-right: 0.9375rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    margin-right: 1.25rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c4.k-Stepepers-VerticalStepper__title--orion {
+    font-size: 0.8888888888888888rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
+    width: 0.1875rem;
+    left: 1.15625rem;
+  }
 }
 
 <nav
@@ -616,7 +655,9 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 
 exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c3.k-Steppers--VerticalStepper__statusContainer--orion {
-  border: 0.3125rem solid #fff;
+  border-width: 0.25rem;
+  border-style: solid;
+  border-color: #fff;
 }
 
 .c3 .k-Steppers--VerticalStepper__status {
@@ -639,7 +680,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   height: 1.875rem;
   border-radius: 1.875rem;
   box-sizing: border-box;
-  margin-right: 0.9375rem;
+  margin-right: 0.6875rem;
   background-color: #fff;
   border: 0.125rem solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
@@ -679,9 +720,9 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   border: 0.1875rem solid #fff;
   z-index: 1;
   padding: 0.1875rem;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: 1.875rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
@@ -707,11 +748,11 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
   background-color: #fff;
   border-color: #eee;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 0.75rem;
   margin-left: 0.4375rem;
-  margin-right: 1.25rem;
+  margin-right: 0.9375rem;
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge {
@@ -833,7 +874,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 }
 
 .c4.k-Stepepers-VerticalStepper__title--orion {
-  font-size: 0.8888888888888888rem;
+  font-size: 0.7901234567901234rem;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 0.3125rem;
@@ -910,16 +951,53 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
   content: '';
   position: absolute;
-  left: 1.15625rem;
+  left: 1rem;
   top: 1.875rem;
   background-color: #eee;
-  width: 0.1875rem;
+  width: 0.125rem;
   height: 100%;
   z-index: -1;
 }
 
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
   background-color: #19b4fa;
+}
+
+@media (min-width:640px) {
+  .c3.k-Steppers--VerticalStepper__statusContainer--orion {
+    border-width: 0.3125rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 1.875rem;
+    margin-right: 0.9375rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    margin-right: 1.25rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c4.k-Stepepers-VerticalStepper__title--orion {
+    font-size: 0.8888888888888888rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
+    width: 0.1875rem;
+    left: 1.15625rem;
+  }
 }
 
 <nav
