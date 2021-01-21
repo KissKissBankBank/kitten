@@ -145,6 +145,13 @@ const StyledContainerStatus = styled.div`
       height: ${pxToRem(MOBILE_STATUS_SIZE)};
       border-radius: ${pxToRem(MOBILE_STATUS_SIZE)};
 
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        width: ${pxToRem(STATUS_SIZE)};
+        height: ${pxToRem(STATUS_SIZE)};
+        border-radius: ${pxToRem(STATUS_SIZE)};
+        margin-right: ${pxToRem(15)};
+      }
+
       &.k-Steppers--VerticalStepper__status--success {
         background-color: ${COLORS.primary1};
         border-color: ${COLORS.primary1};
@@ -191,13 +198,6 @@ const StyledContainerStatus = styled.div`
           border-left: ${pxToRem(3)} dotted ${COLORS.line1};
           margin-left: ${pxToRem(3)};
         }
-      }
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        width: ${pxToRem(STATUS_SIZE)};
-        height: ${pxToRem(STATUS_SIZE)};
-        border-radius: ${pxToRem(STATUS_SIZE)};
-        margin-right: ${pxToRem(15)};
       }
     }
   }

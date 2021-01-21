@@ -338,20 +338,20 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 @media (min-width:640px) {
-  .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 1rem;
-    margin-right: 1.25rem;
-  }
-}
-
-@media (min-width:640px) {
   .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
     width: 1.875rem;
     height: 1.875rem;
     border-radius: 1.875rem;
     margin-right: 0.9375rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    margin-right: 1.25rem;
   }
 }
 
@@ -954,20 +954,20 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 }
 
 @media (min-width:640px) {
-  .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 1rem;
-    margin-right: 1.25rem;
-  }
-}
-
-@media (min-width:640px) {
   .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
     width: 1.875rem;
     height: 1.875rem;
     border-radius: 1.875rem;
     margin-right: 0.9375rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    margin-right: 1.25rem;
   }
 }
 
