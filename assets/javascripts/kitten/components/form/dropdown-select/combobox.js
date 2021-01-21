@@ -12,6 +12,7 @@ import flow from 'lodash/fp/flow'
 import uniqBy from 'lodash/fp/uniqBy'
 import filter from 'lodash/fp/filter'
 import isEmpty from 'lodash/isEmpty'
+import isObject from 'lodash/fp/isObject'
 import { StyledDropdown } from './styles'
 
 export const DropdownCombobox = ({
@@ -59,9 +60,10 @@ export const DropdownCombobox = ({
   const onInputValueChange = changes => {
     const newItemsList = flow(
       filter(item => {
-        return item.label
-          .toLowerCase()
-          .startsWith(changes.inputValue.toLowerCase())
+        const label = isObject(item.label)
+          ? item.searchableLabel || ''
+          : item.label
+        return label.toLowerCase().startsWith(changes.inputValue.toLowerCase())
       }),
       !isEmpty(changes.inputValue) && uniqLabelOnSearch
         ? uniqBy('label')
