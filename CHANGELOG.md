@@ -15,6 +15,7 @@ Breaking Changes:
   - `SliderTooltip` ;
   - `SliderWithTooltipAndPower`.
 - Remove `sliderKeyDownHandler`.
+- Remove `LoanSimulator` component and `k-LoanSimulator` styles.
 
 ## [2.113.0] - 2020-01-21
 

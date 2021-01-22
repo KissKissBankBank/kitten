@@ -210,9 +210,6 @@ export { SimplePopover } from './components/popovers/simple-popover'
 // Search
 export { SearchInput } from './components/search/search-input'
 
-// Simulators
-export { LoanSimulator } from './components/simulators/loan-simulator'
-
 // Status with Bullet
 export { StatusWithBullet } from './components/status-with-bullet'
 

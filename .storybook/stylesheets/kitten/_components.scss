@@ -162,14 +162,6 @@
 
 @include k-Popover;
 
-// Simulators
-
-@include k-LoanSimulator((
-  colors: (
-    error: map-get($k-colors, 'error'),
-  )
-));
-
 // Steppers
 
 @include k-Stepper;
