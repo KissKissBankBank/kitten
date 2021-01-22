@@ -4,7 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: do not apply focus styles on `VerticalStepper` when `disabled`
+Breaking Changes:
+
+- Remove `StyleGuide` app.
+- Remove `Karl` stories & components.
+
+## [2.113.0] - 2020-01-21
+
+Features:
+
+- Add Focus styles for focusable elements.
+- Add `summaryProps` to `Details` component.
+- Handle keyboard navigation on `Carousel`.
+- Update mobile version of `VerticalStepper` component.
+
+Fixes:
+
+- do not apply focus styles on `VerticalStepper` when `disabled`
+- `Combobox` filter on `label` (instead of `value`)
 
 ## [2.112.0] - 2020-01-18
 

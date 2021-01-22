@@ -200,6 +200,11 @@ export const modifierStyles = modifier => {
       }
     `}
 
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
+
     &:disabled {
       border-color: ${COLORS.line2};
       background-color: ${COLORS.line2};

@@ -122,7 +122,6 @@
     border-top-right-radius: $submit-border-radius;
     border-bottom-right-radius: $submit-border-radius;
     border: $border-width solid $border;
-    outline: none; // since we introduce our own focus styles
 
     color: transparent;
     text-shadow: none;

@@ -28,7 +28,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${COLORS.background1};
     text-align: left;
 
-    outline: none;
     box-sizing: border-box;
     overflow: scroll;
 

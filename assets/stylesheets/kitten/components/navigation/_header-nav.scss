@@ -34,10 +34,10 @@
   // Hover
   $hover-color: map-get($k-colors, 'primary-1');
 
-  // Focus
-  $focus-color: map-get($k-colors, 'primary-1');
+  $active-color: map-get($k-colors, 'primary-1');
 
-  $focus-alt-color: map-get($k-colors, 'primary-3');
+  // Focus
+  $focus-color: map-get($k-colors, 'primary-4');
 
   // State 'is-selected'
   $is-selected-color: map-get($k-colors, 'primary-1');
@@ -63,21 +63,11 @@
     }
 
     *:focus {
-      outline-offset: k-px-to-rem(-3px);
+      outline-offset: k-px-to-rem(-2px);
 
       outline-width: k-px-to-rem(2px);
       outline-style: solid;
-      outline-color: Highlight;
-
-      @media (-webkit-min-device-pixel-ratio:0) {
-        outline-color: -webkit-focus-ring-color;
-        outline-style: auto;
-        outline-width: k-px-to-rem(5px);
-      }
-
-      &:hover {
-        outline: none;
-      }
+      outline-color: $focus-color;
     }
   }
 
@@ -221,8 +211,8 @@
     }
 
     &:active {
-      border-color: $focus-color;
-      color: $focus-color;
+      border-color: $active-color;
+      color: $active-color;
     }
 
     &.is-selected {

@@ -119,6 +119,11 @@
 
     text-align: center;
     text-decoration: none;
+
+    &:focus {
+      outline: map-get($k-colors, 'primary-4') solid k-px-to-rem(2px);
+      outline-offset: k-px-to-rem(2px);
+    }
   }
 
   // Colors modifiers.

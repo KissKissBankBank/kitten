@@ -4,7 +4,9 @@ export var Prev = function Prev(_ref) {
   var children = _ref.children,
       hoverColor = _ref.hoverColor;
   return /*#__PURE__*/React.createElement(StyledLeftArrowContainer, {
-    hoverColor: hoverColor
+    hoverColor: hoverColor,
+    as: "button",
+    className: "k-u-reset-button"
   }, /*#__PURE__*/React.createElement(StyledArrowIcon, {
     version: "solid",
     direction: "left",

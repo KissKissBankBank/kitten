@@ -63,6 +63,13 @@ const StepperText = styled(Text)`
   display: flex;
   align-items: center;
   white-space: nowrap;
+  transition: color 0.2s ease;
+  border-radius: ${pxToRem(6)};
+
+  &:focus {
+    outline: ${COLORS.primary3} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
 `
 
 const StepperIcon = ({ state }) => {
@@ -79,8 +86,8 @@ const StepperIcon = ({ state }) => {
 export const StepperItem = ({ children, state, ...props }) => {
   return (
     <ItemWrapper state={state} {...props}>
-      <StepperIcon state={state} />
-      <StepperText weight="regular" size="tiny">
+      <StepperText weight="regular" size="tiny" tabIndex="0">
+        <StepperIcon state={state} />
         {children}
       </StepperText>
     </ItemWrapper>
@@ -120,10 +127,8 @@ export const StepperLink = ({
         rel={external ? 'nofollow noopener noreferrer' : ''}
         {...linkProps}
       >
-        <>
-          <StepperIcon state={state} />
-          {children}
-        </>
+        <StepperIcon state={state} />
+        {children}
       </StepperText>
     </ItemWrapper>
   )

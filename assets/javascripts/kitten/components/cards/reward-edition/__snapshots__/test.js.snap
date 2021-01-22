@@ -30,7 +30,6 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   min-height: initial;
@@ -82,6 +81,11 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c2:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c2:disabled {

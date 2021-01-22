@@ -144,8 +144,9 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
     };
 
     _this.goToPage = function (indexPageToGo) {
+      var loop = _this.props.loop;
       var numberOfPages = _this.state.numberOfPages;
-      var newPage = checkPage(numberOfPages, indexPageToGo);
+      var newPage = loop ? checkPageLoop(numberOfPages, indexPageToGo) : checkPage(numberOfPages, indexPageToGo);
 
       _this.viewedPages.add(newPage);
 

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import TYPOGRAPHY from './../../../../constants/typography-config';
+import COLORS from './../../../../constants/colors-config';
 import { pxToRem } from './../../../../helpers/utils/typography';
 import { ArrowIcon } from './../../../icons/arrow-icon';
 var sharedStyledArrowIcons = css(["color:#fff;", ";align-items:center;display:flex;transition:transform 0.3s ease-in-out;line-height:1;width:40%;"], TYPOGRAPHY.fontStyles.regular);
@@ -23,11 +24,11 @@ export var LeftEmptyContainer = styled.div.withConfig({
 export var StyledRightArrowContainer = styled.div.withConfig({
   displayName: "styled-components__StyledRightArrowContainer",
   componentId: "jws9qo-2"
-})(["", " ", " &:hover{transform:translate(", ");", "}"], rightContainer, sharedStyledArrowIcons, pxToRem(8), sharedHoverStyledArrowIcons);
+})(["", " ", " &:focus,&:active,&:hover{transform:translate(", ");", "}&:focus{outline:", " solid ", ";outline-offset:", ";}"], rightContainer, sharedStyledArrowIcons, pxToRem(8), sharedHoverStyledArrowIcons, COLORS.primary3, pxToRem(2), pxToRem(2));
 export var StyledLeftArrowContainer = styled.div.withConfig({
   displayName: "styled-components__StyledLeftArrowContainer",
   componentId: "jws9qo-3"
-})(["", " ", " &:hover{transform:translate(-", ");", "}"], leftContainer, sharedStyledArrowIcons, pxToRem(8), sharedHoverStyledArrowIcons);
+})(["", " ", " &:focus,&:active,&:hover{transform:translate(-", ");", "}&:focus{outline:", " solid ", ";outline-offset:", ";}"], leftContainer, sharedStyledArrowIcons, pxToRem(8), sharedHoverStyledArrowIcons, COLORS.primary3, pxToRem(2), pxToRem(2));
 export var StyledArrowIcon = styled(ArrowIcon).withConfig({
   displayName: "styled-components__StyledArrowIcon",
   componentId: "jws9qo-4"
