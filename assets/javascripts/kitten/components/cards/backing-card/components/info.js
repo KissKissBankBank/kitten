@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Text } from '../../../../index'
+import { Text } from '../../../typography/text'
 
 export const Info = ({ legend, value, ...props }) => {
   return (

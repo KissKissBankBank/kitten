@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { COLORS, pxToRem, stepToRem } from '../../../index'
+import COLORS from '../../../constants/colors-config'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 
 export const StyledBackingCard = styled.article`
   --backingCard--border-width: ${pxToRem(2)};
@@ -75,7 +76,6 @@ export const StyledBackingCard = styled.article`
   .k-BackingCard__amount {
     font-size: ${stepToRem(5)};
   }
-
   .k-BackingCard__button {
     margin: 0 ${pxToRem(30)} ${pxToRem(30)};
   }
