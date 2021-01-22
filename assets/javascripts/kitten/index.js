@@ -131,11 +131,6 @@ export { SideGrid } from './components/grid/side-grid'
 export { StickyContainer } from './components/grid/sticky-container'
 export { AdaptableGrid } from './components/grid/adaptable-grid'
 
-// Headers
-export { HeaderLogo } from './components/headers/header-logo'
-export { HeaderTitles } from './components/headers/header-titles'
-export { Header, HeaderItems, HeaderItem } from './components/headers/header'
-
 // Heroes
 export { Hero } from './components/heroes/hero'
 
