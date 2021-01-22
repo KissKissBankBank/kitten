@@ -8,6 +8,8 @@ Breaking Changes:
 
 - Remove `StyleGuide` app.
 - Remove `Karl` stories & components.
+- Remove `DevGrid` component.
+- Remove `k-DevGrid` and `k-BreakPoints` styles.
 
 ## [2.113.0] - 2020-01-21
 

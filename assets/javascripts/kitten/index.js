@@ -80,9 +80,6 @@ export { StandaloneRangeDatePicker } from './components/date-picker/standalone-r
 // Details
 export { Details } from './components/details'
 
-// Dev
-export { DevGrid } from './components/dev/dev-grid'
-
 // Dropdowns
 export { DropdownButton } from './components/dropdowns/dropdown-button'
 export { Dropdown } from './components/dropdowns/dropdown'
