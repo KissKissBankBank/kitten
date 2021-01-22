@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `BackingCard` component.
+- Feature: Add `Tag` component.
 
 ## [2.113.0] - 2020-01-21
 
