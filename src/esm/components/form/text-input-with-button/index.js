@@ -30,7 +30,7 @@ var StyledTextInput = styled(TextInput).withConfig({
 var StyledButton = styled.button.withConfig({
   displayName: "text-input-with-button__StyledButton",
   componentId: "sc-1yqni7d-2"
-})(["", ";font-size:", ";line-height:1.3;flex:1 0 auto;outline:none;appearance:none;cursor:pointer;padding:0 ", ";border-radius:0;", ";", " ", " input:invalid:not(:focus) + &{background-color:", ";border-color:", ";}", ""], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), pxToRem(30), function (_ref) {
+})(["", ";font-size:", ";line-height:1.3;flex:1 0 auto;appearance:none;cursor:pointer;padding:0 ", ";border-radius:0;", ";", " ", " input:invalid:not(:focus) + &{background-color:", ";border-color:", ";}", ""], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), pxToRem(30), function (_ref) {
   var modifier = _ref.modifier;
   return modifierStyles(modifier);
 }, function (_ref2) {

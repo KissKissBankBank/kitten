@@ -152,6 +152,14 @@ var CarouselInner = function CarouselInner(_ref) {
     };
   };
 
+  var handleKeyDown = function handleKeyDown(e) {
+    if (e.key === 'ArrowRight') {
+      goToPage(currentPageIndex + 1);
+    } else if (e.key === 'ArrowLeft') {
+      goToPage(currentPageIndex - 1);
+    }
+  };
+
   return /*#__PURE__*/_react.default.createElement("div", {
     ref: carouselInner,
     onScroll: handleInnerScroll,
@@ -161,6 +169,7 @@ var CarouselInner = function CarouselInner(_ref) {
     onTouchEnd: function onTouchEnd() {
       return setTouchState(false);
     },
+    onKeyDown: handleKeyDown,
     className: "k-Carousel__inner"
   }, (0, _toConsumableArray2.default)(Array(numberOfPages).keys()).map(function (index) {
     var isActivePage = currentPageIndex === index;
@@ -177,7 +186,10 @@ var CarouselInner = function CarouselInner(_ref) {
       hasPageBeenViewed: hasPageBeenViewed,
       isActivePage: isActivePage,
       pageItems: getDataForPage(items, index, numberOfItemsPerPage),
-      numberOfItemsPerPage: numberOfItemsPerPage
+      numberOfItemsPerPage: numberOfItemsPerPage,
+      goToCurrentPage: function goToCurrentPage() {
+        return goToPage(index);
+      }
     }));
   }));
 };

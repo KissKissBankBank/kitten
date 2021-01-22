@@ -14,13 +14,13 @@ var horizontalPadding = css(["padding-left:", ";padding-right:", ";@media (min-w
 var StyledLink = styled.a.withConfig({
   displayName: "button__StyledLink",
   componentId: "k3u2iw-0"
-})(["", " box-sizing:border-box;display:flex;align-items:center;justify-content:center;height:100%;font-size:", ";color:", ";background-color:", ";text-decoration:none;", " &:hover,&:focus{color:", ";background-color:", ";}"], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), function (_ref) {
+})(["", " box-sizing:border-box;display:flex;align-items:center;justify-content:center;height:100%;font-size:", ";color:", ";background-color:", ";text-decoration:none;&:focus{outline:", " solid ", ";outline-offset:", ";}", " &:hover,&:focus{color:", ";background-color:", ";}"], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), function (_ref) {
   var color = _ref.color;
   return color;
 }, function (_ref2) {
   var backgroundColor = _ref2.backgroundColor;
   return backgroundColor;
-}, function (_ref3) {
+}, COLORS.primary4, pxToRem(2), pxToRem(-4), function (_ref3) {
   var textShownFromMediaQuery = _ref3.textShownFromMediaQuery,
       icon = _ref3.icon,
       text = _ref3.text;
