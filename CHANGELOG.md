@@ -8,6 +8,13 @@ Breaking Changes:
 
 - Remove `StyleGuide` app.
 - Remove `Karl` stories & components.
+- Remove `k-Slider` and `k-SliderTooltip` styles.
+- Remove deprecated `Slider` components, in favor of `RangeSlider`:
+  - `Slider` ;
+  - `SliderBar` ;
+  - `SliderTooltip` ;
+  - `SliderWithTooltipAndPower`.
+- Remove `sliderKeyDownHandler`.
 
 ## [2.113.0] - 2020-01-21
 
