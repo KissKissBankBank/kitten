@@ -2,8 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { pxToRem } from '../../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
+import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
 import { LINK_CLASSNAME } from '../index'
 
@@ -29,8 +30,12 @@ const StyledParagraph = styled.span`
   }
 
   .k-Stepepers-VerticalStepper__link--orion {
-    font-size: ${pxToRem(14)};
+    font-size: ${stepToRem(-2)};
 
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      font-size: ${stepToRem(-1)};
+    }
+  
     :before {
       padding: 0 ${pxToRem(8)};
       content: '●';

@@ -95,6 +95,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
   background-color: #fff;
   border-color: #eee;
+  border-width: 0.125rem;
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 0.75rem;
@@ -252,7 +253,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 .c5 .k-Stepepers-VerticalStepper__link--orion {
-  font-size: 0.875rem;
+  font-size: 0.7901234567901234rem;
 }
 
 .c5 .k-Stepepers-VerticalStepper__link--orion:before {
@@ -360,11 +361,18 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
     height: 1rem;
     border-radius: 1rem;
     margin-right: 1.25rem;
+    border-width: 0.1875rem;
   }
 }
 
 @media (min-width:640px) {
   .c4.k-Stepepers-VerticalStepper__title--orion {
+    font-size: 0.8888888888888888rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c5 .k-Stepepers-VerticalStepper__link--orion {
     font-size: 0.8888888888888888rem;
   }
 }
@@ -748,6 +756,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
   background-color: #fff;
   border-color: #eee;
+  border-width: 0.125rem;
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 0.75rem;
@@ -905,7 +914,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 }
 
 .c5 .k-Stepepers-VerticalStepper__link--orion {
-  font-size: 0.875rem;
+  font-size: 0.7901234567901234rem;
 }
 
 .c5 .k-Stepepers-VerticalStepper__link--orion:before {
@@ -984,11 +993,18 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
     height: 1rem;
     border-radius: 1rem;
     margin-right: 1.25rem;
+    border-width: 0.1875rem;
   }
 }
 
 @media (min-width:640px) {
   .c4.k-Stepepers-VerticalStepper__title--orion {
+    font-size: 0.8888888888888888rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c5 .k-Stepepers-VerticalStepper__link--orion {
     font-size: 0.8888888888888888rem;
   }
 }
