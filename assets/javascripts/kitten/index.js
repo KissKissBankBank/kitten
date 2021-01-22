@@ -46,6 +46,7 @@ export { CheckableButton } from './components/buttons/checkable-button'
 export { SimpleCard } from './components/cards/simple-card'
 export { ArticleCard } from './components/cards/article-card'
 export { BackerCard } from './components/cards/backer-card'
+export { BackingCard } from './components/cards/backing-card'
 export { CartRewardCard } from './components/cards/cart-reward-card'
 export { ContributionCard } from './components/cards/contribution-card'
 export { DonationCard } from './components/cards/donation-card'
@@ -235,6 +236,9 @@ export { Stepper } from './components/steppers/stepper'
 export { DoubleEntryTable } from './components/tables/double-entry-table'
 export { ListTable } from './components/tables/list-table'
 export { SingleEntryTable } from './components/tables/single-entry-table'
+
+// Tag
+export { Tag } from './components/tags/tag'
 
 // Text Copy
 export { TextCopy } from './components/text-copy'
