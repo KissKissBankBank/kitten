@@ -8,6 +8,8 @@ Breaking Changes:
 
 - Remove `StyleGuide` app.
 - Remove `Karl` stories & components.
+- Remove `k-LegoGrid` styles.
+- Remove `LegoGrid` component.
 
 ## [2.113.0] - 2020-01-21
 
