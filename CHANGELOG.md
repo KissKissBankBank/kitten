@@ -8,6 +8,10 @@ Breaking Changes:
 
 - Remove `StyleGuide` app.
 - Remove `Karl` stories & components.
+- Remove `k-Header` styles.
+- Remove `Header`, `HeaderLogo` and `HeaderTitle` components.
+- Remove `k-PhoneDropdown` styles.
+- Remove `DropdownButton`, `Dropdown`, `PhoneDropdown` and `UserMenu` components.
 
 ## [2.113.0] - 2020-01-21
 

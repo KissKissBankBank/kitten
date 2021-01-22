@@ -27,7 +27,6 @@
 // Dropdowns
 
 @include k-Dropdown;
-@include k-PhoneDropdown;
 
 // Footer
 
@@ -106,10 +105,6 @@
 @include k-SideGrid;
 @include k-SingleColumn;
 @include k-VerticalGrid;
-
-// Header
-
-@include k-Header;
 
 // Images
 

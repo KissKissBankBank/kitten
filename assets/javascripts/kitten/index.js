@@ -84,10 +84,8 @@ export { Details } from './components/details'
 export { DevGrid } from './components/dev/dev-grid'
 
 // Dropdowns
-export { DropdownButton } from './components/dropdowns/dropdown-button'
-export { Dropdown } from './components/dropdowns/dropdown'
-export { PhoneDropdown } from './components/dropdowns/phone-dropdown'
-export { UserMenu } from './components/dropdowns/user-menu'
+export { DropdownButton } from './components/dropdowns/v2/dropdown-button'
+export { Dropdown } from './components/dropdowns/v2'
 
 // Expandable
 export { ExpandBoard } from './components/expandable/expand-board'
