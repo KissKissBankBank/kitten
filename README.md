@@ -90,7 +90,7 @@ To launch storybook locally:
 bin/start
 ```
 
-The page http://localhost:6006 displayed automatically.
+The page http://localhost:6006 will be displayed automatically.
 
 ### Component testing
 
