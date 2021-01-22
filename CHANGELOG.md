@@ -8,6 +8,7 @@ Breaking Changes:
 
 - Remove `StyleGuide` app.
 - Remove `Karl` stories & components.
+- Remove `k-u-blockAlign-*` utilities in favor of `k-u-align-self-*`.
 
 ## [2.113.0] - 2020-01-21
 
