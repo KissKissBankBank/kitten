@@ -13,7 +13,7 @@ const StyledParagraph = styled.span`
   padding: 0;
   line-height: 1;
 
-  .k-Stepepers-VerticalStepper__link {
+  .Steppers--VerticalStepper__link {
     ${TYPOGRAPHY.fontStyles.regular};
     font-size: ${pxToRem(12)};
     line-height: normal;
@@ -29,7 +29,7 @@ const StyledParagraph = styled.span`
     }
   }
 
-  .k-Stepepers-VerticalStepper__link--orion {
+  .Steppers--VerticalStepper__link--orion {
     font-size: ${stepToRem(-2)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
@@ -52,8 +52,8 @@ export const Link = ({ variant, className, ...props }) => {
         {...props}
         className={classNames(
           LINK_CLASSNAME,
-          'k-Stepepers-VerticalStepper__link',
-          `k-Stepepers-VerticalStepper__link--${variant}`,
+          'Steppers--VerticalStepper__link',
+          `Steppers--VerticalStepper__link--${variant}`,
           className,
         )}
       />
