@@ -2,8 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { pxToRem } from '../../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
+import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
 import { LINK_CLASSNAME } from '../index'
 
@@ -12,7 +13,7 @@ const StyledParagraph = styled.span`
   padding: 0;
   line-height: 1;
 
-  .k-Stepepers-VerticalStepper__link {
+  .k-Steppers--VerticalStepper__link {
     ${TYPOGRAPHY.fontStyles.regular};
     font-size: ${pxToRem(12)};
     line-height: normal;
@@ -28,9 +29,13 @@ const StyledParagraph = styled.span`
     }
   }
 
-  .k-Stepepers-VerticalStepper__link--orion {
-    font-size: ${pxToRem(14)};
+  .k-Steppers--VerticalStepper__link--orion {
+    font-size: ${stepToRem(-2)};
 
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      font-size: ${stepToRem(-1)};
+    }
+  
     :before {
       padding: 0 ${pxToRem(8)};
       content: '●';
@@ -47,8 +52,8 @@ export const Link = ({ variant, className, ...props }) => {
         {...props}
         className={classNames(
           LINK_CLASSNAME,
-          'k-Stepepers-VerticalStepper__link',
-          `k-Stepepers-VerticalStepper__link--${variant}`,
+          'k-Steppers--VerticalStepper__link',
+          `k-Steppers--VerticalStepper__link--${variant}`,
           className,
         )}
       />

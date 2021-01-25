@@ -4,7 +4,44 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add button types on `Carousel` navigation.
+- Fix: `VerticalStepper` mobile style fixes.
+
+## [2.113.0] - 2020-01-21
+
+Features:
+
+- Add Focus styles for focusable elements.
+- Add `summaryProps` to `Details` component.
+- Handle keyboard navigation on `Carousel`.
+- Update mobile version of `VerticalStepper` component.
+
+Fixes:
+
+- do not apply focus styles on `VerticalStepper` when `disabled`
+- `Combobox` filter on `label` (instead of `value`)
+
+## [2.112.0] - 2020-01-18
+
+Feature:
+
+- Add `hideIconOnMobile` prop on `DropdownSelectWithInput`.
+
+Fixes:
+
+- `DropdownSelectWithInput` mobile style fixes.
+- `DropdownSelect` mobile style fixes.
+- `RangeSlider` mobile style fixes.
+- `RadioButton` mobile style fixes.
+
+## [2.111.0] - 2020-01-15
+
+Feature:
+
+- Add `forceVersion` prop to `CrowdfundingCard`.
+
+Fixes:
+
+- Add button types on `Carousel` navigation.
 - Fix: Remove scrollbars on `Carousel` on Firefox.
 
 ## [2.110.0] - 2020-01-13

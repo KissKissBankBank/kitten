@@ -34,6 +34,17 @@ const AlertWrapper = styled.div`
 
   .k-Alert__button {
     flex: 0 0 auto;
+    transition: all 0.2s ease;
+
+    svg,
+    svg path {
+      transition: fill 0.2s ease;
+    }
+
+    &:focus {
+      outline: ${COLORS.background1} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(-4)};
+    }
   }
 
   a {

@@ -184,8 +184,9 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
     };
 
     _this.goToPage = function (indexPageToGo) {
+      var loop = _this.props.loop;
       var numberOfPages = _this.state.numberOfPages;
-      var newPage = checkPage(numberOfPages, indexPageToGo);
+      var newPage = loop ? checkPageLoop(numberOfPages, indexPageToGo) : checkPage(numberOfPages, indexPageToGo);
 
       _this.viewedPages.add(newPage);
 
@@ -280,6 +281,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Carousel__pagination__buttonContainer"
       }, /*#__PURE__*/_react.default.createElement(_button.Button, {
+        type: "button",
         className: "k-Carousel__pagination__button",
         icon: true,
         modifier: "beryllium",
@@ -291,6 +293,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         direction: "left",
         "aria-hidden": true
       })), /*#__PURE__*/_react.default.createElement(_button.Button, {
+        type: "button",
         className: "k-Carousel__pagination__button",
         icon: true,
         modifier: "beryllium",

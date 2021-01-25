@@ -8,15 +8,23 @@ import classNames from 'classnames'
 
 const Item = styled.div`
   display: flex;
+  position: relative;
   border: ${pxToRem(2)} solid ${COLORS.line1};
   border-top: none;
   cursor: pointer;
   padding-left: ${pxToRem(20)};
   padding-right: ${pxToRem(20)};
   background-color: ${COLORS.background1};
+  transition: background-color 0.2s ease;
 
   :hover {
     background-color: ${COLORS.background2};
+  }
+
+  &:focus {
+    z-index: 1;
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 
   &.k-List__button--withTopBorder {

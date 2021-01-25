@@ -15,19 +15,38 @@ import { DocumentIconEmpty } from '../../../components/icons/document-icon-empty
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
 
 const StyledDocumentUploader = styled.div`
-   {
-    input[type='file'] {
-      border: 0;
-      clip-path: inset(100%);
-      height: 1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute !important;
-      white-space: nowrap;
-      width: 1px;
-    }
+  input[type='file'] {
+    border: 0;
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    white-space: nowrap;
+    width: 1px;
+  }
 
-    input[type='file']:focus + label {
+  input[type='file']:focus + label {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
+
+  input[type='file']:focus,
+  input[type='file']:hover {
+    & + label {
+      background-color: ${COLORS.background2};
+      border-color: ${COLORS.line1};
+      color: ${COLORS.font1};
+
+      svg,
+      path {
+        fill: ${COLORS.font1};
+      }
+    }
+  }
+
+  input[type='file']:active {
+    & + label {
       background-color: ${COLORS.primary2};
       border-color: ${COLORS.primary2};
       color: ${COLORS.background1};
@@ -37,41 +56,41 @@ const StyledDocumentUploader = styled.div`
         fill: ${COLORS.background1};
       }
     }
+  }
 
-    input[type='file']:disabled + label {
-      border-color: ${COLORS.line2};
-      background-color: ${COLORS.line2};
-      color: ${COLORS.background1};
-      pointer-events: none;
+  input[type='file']:disabled + label {
+    border-color: ${COLORS.line2};
+    background-color: ${COLORS.line2};
+    color: ${COLORS.background1};
+    pointer-events: none;
 
-      svg,
-      path {
-        fill: ${COLORS.background1};
-      }
+    svg,
+    path {
+      fill: ${COLORS.background1};
     }
+  }
 
-    .k-DocumentManager__uploader__button {
-      padding: ${pxToRem(20)};
-    }
+  .k-DocumentManager__uploader__button {
+    padding: ${pxToRem(20)};
+  }
 
-    .k-DocumentManager__uploader__container {
-      display: flex;
-      justify-content: stretch;
-      align-items: center;
-      width: 100%;
-    }
-    .k-DocumentManager__uploader__documentIcon {
-      flex: 0 0 auto;
-      margin-right: ${pxToRem(20)};
-      align-self: flex-start;
-    }
-    .k-DocumentManager__uploader__content {
-      flex: 1 1 auto;
-    }
-    .k-DocumentManager__uploader__uploadIcon {
-      margin-left: ${pxToRem(20)};
-      flex: 0 0 auto;
-    }
+  .k-DocumentManager__uploader__container {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    width: 100%;
+  }
+  .k-DocumentManager__uploader__documentIcon {
+    flex: 0 0 auto;
+    margin-right: ${pxToRem(20)};
+    align-self: flex-start;
+  }
+  .k-DocumentManager__uploader__content {
+    flex: 1 1 auto;
+  }
+  .k-DocumentManager__uploader__uploadIcon {
+    margin-left: ${pxToRem(20)};
+    flex: 0 0 auto;
   }
 `
 
@@ -107,6 +126,12 @@ const StyledDocumentDisplay = styled.div`
     &:focus {
       color: ${COLORS.primary3};
     }
+
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
+
     &:active {
       color: ${COLORS.primary1};
       transition: none;

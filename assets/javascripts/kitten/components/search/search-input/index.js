@@ -8,7 +8,6 @@ export const SearchInput = styled.input.attrs({ type: 'search' })`
   width: 100%;
 
   border: none;
-  outline: none;
   appearance: none;
 
   ${TYPOGRAPHY.fontStyles.bold};
@@ -38,5 +37,10 @@ export const SearchInput = styled.input.attrs({ type: 'search' })`
 
   &::-ms-clear {
     display: none;
+  }
+
+  &:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 `

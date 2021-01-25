@@ -17,9 +17,10 @@ var Summary = styled.summary.withConfig({
 export var Details = function Details(_ref) {
   var children = _ref.children,
       summaryRender = _ref.summaryRender,
+      summaryProps = _ref.summaryProps,
       openDefault = _ref.open,
       onToggle = _ref.onToggle,
-      props = _objectWithoutProperties(_ref, ["children", "summaryRender", "open", "onToggle"]);
+      props = _objectWithoutProperties(_ref, ["children", "summaryRender", "summaryProps", "open", "onToggle"]);
 
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -34,16 +35,18 @@ export var Details = function Details(_ref) {
   return /*#__PURE__*/React.createElement("details", _extends({
     onToggle: handleToggle,
     open: openDefault
-  }, props), /*#__PURE__*/React.createElement(Summary, null, summaryRender({
+  }, props), /*#__PURE__*/React.createElement(Summary, summaryProps, summaryRender({
     open: open
   })), children);
 };
 Details.propTypes = {
   summaryRender: PropTypes.func.isRequired,
+  summaryProps: PropTypes.object,
   onToggle: PropTypes.func,
   open: PropTypes.bool
 };
 Details.defaultProps = {
+  summaryProps: {},
   onToggle: function onToggle() {},
   open: false
 };

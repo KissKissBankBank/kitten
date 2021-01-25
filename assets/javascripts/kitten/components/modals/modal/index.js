@@ -24,7 +24,6 @@ const GlobalStyle = createGlobalStyle`
     padding-left: ${pxToRem(60)};
     padding-right: ${pxToRem(60)};
 
-    outline: none;
     box-sizing: border-box;
     overflow: scroll;
 

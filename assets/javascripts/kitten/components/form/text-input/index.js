@@ -24,7 +24,6 @@ const StyledInput = styled.input`
   background-color: ${COLORS.background1};
   color: ${COLORS.font1};
   border-color: ${COLORS.line1};
-  outline: none;
 
   ::placeholder {
     color: ${COLORS.font2};
@@ -105,15 +104,15 @@ const StyledInput = styled.input`
 
   &:invalid {
     box-shadow: none;
-    outline: none;
     color: ${COLORS.error3};
     border-color: ${COLORS.error3};
   }
 
   &:focus {
-    outline: none;
     color: ${COLORS.font1};
     border-color: ${COLORS.line2};
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 
   // DIGITS

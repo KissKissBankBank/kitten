@@ -33,7 +33,6 @@ export const StyledDropdown = styled.div`
 
     font-size: ${stepToRem(-1)};
     text-align: left;
-    outline: none;
 
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -88,7 +87,8 @@ export const StyledDropdown = styled.div`
     font-size: inherit;
 
     &:focus {
-      outline: none;
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(-4)};
     }
     &:disabled {
       background-color: ${COLORS.line1};
@@ -100,7 +100,6 @@ export const StyledDropdown = styled.div`
     background-color: ${COLORS.background1};
     font-size: ${stepToRem(-1)};
     text-align: left;
-    outline: none;
     display: flex;
   }
   .k-Form-DropdownCombobox__arrowButton__arrowBox {
@@ -126,7 +125,8 @@ export const StyledDropdown = styled.div`
       border-top: 0;
     }
     &:focus {
-      outline: none;
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
     }
   }
 
@@ -164,6 +164,10 @@ export const StyledDropdown = styled.div`
     .k-Form-Dropdown__list {
       border-color: ${COLORS.line2};
     }
+  }
+  .k-Form-DropdownSelect__button:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 
   &.k-Form-Dropdown--error {
@@ -403,7 +407,7 @@ export const StyledDropdown = styled.div`
     }
 
     .k-Form-DropdownSelect__button__arrowBox {
-      left: ${pxToRem(20)};
+      left: ${pxToRem(17)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         left: ${pxToRem(30)};
@@ -411,7 +415,7 @@ export const StyledDropdown = styled.div`
     }
     .k-Form-DropdownCombobox__arrowButton {
       padding: 0;
-      width: ${pxToRem(40)};
+      width: ${pxToRem(35)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         width: ${pxToRem(50)};
@@ -426,7 +430,7 @@ export const StyledDropdown = styled.div`
 
     .k-Form-DropdownCombobox__input,
     .k-Form-DropdownSelect__content {
-      margin-left: ${pxToRem(20 + 10)};
+      margin-left: ${pxToRem(14 + 10)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         margin-left: ${pxToRem(30 + 10)};

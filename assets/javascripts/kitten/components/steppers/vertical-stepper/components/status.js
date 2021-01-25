@@ -9,6 +9,7 @@ import { WarningIcon } from '../../../../components/icons/warning-icon'
 import { WaitingIcon } from '../../../../components/icons/waiting-icon'
 import { DotIcon } from '../../../../components/icons/dot-icon'
 import { LockIcon } from '../../../../components/icons/lock-icon'
+import { ScreenConfig } from '../../../../constants/screen-config'
 import classNames from 'classnames'
 
 export class Status extends Component {
@@ -77,11 +78,19 @@ export class Status extends Component {
 }
 
 const STATUS_SIZE = 30
+const MOBILE_STATUS_SIZE = 24
 const INACTIVE_STATUS_SIZE = 16
+const MOBILE_INACTIVE_STATUS_SIZE = 12
 
 const StyledContainerStatus = styled.div`
   &.k-Steppers--VerticalStepper__statusContainer--orion {
-    border: ${pxToRem(5)} solid ${COLORS.background1};
+    border-width: ${pxToRem(4)};
+    border-style: solid;
+    border-color: ${COLORS.background1};
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      border-width: ${pxToRem(5)};
+    }
   }
 
   .k-Steppers--VerticalStepper__status {
@@ -95,7 +104,7 @@ const StyledContainerStatus = styled.div`
     height: ${pxToRem(STATUS_SIZE)};
     border-radius: ${pxToRem(STATUS_SIZE)};
     box-sizing: border-box;
-    margin-right: ${pxToRem(15)};
+    margin-right: ${pxToRem(11)};
 
     background-color: ${COLORS.background1};
     border: ${pxToRem(2)} solid ${COLORS.line1};
@@ -132,9 +141,16 @@ const StyledContainerStatus = styled.div`
       z-index: 1;
       padding: ${pxToRem(3)};
 
-      width: ${pxToRem(STATUS_SIZE)};
-      height: ${pxToRem(STATUS_SIZE)};
-      border-radius: ${pxToRem(STATUS_SIZE)};
+      width: ${pxToRem(MOBILE_STATUS_SIZE)};
+      height: ${pxToRem(MOBILE_STATUS_SIZE)};
+      border-radius: ${pxToRem(MOBILE_STATUS_SIZE)};
+
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        width: ${pxToRem(STATUS_SIZE)};
+        height: ${pxToRem(STATUS_SIZE)};
+        border-radius: ${pxToRem(STATUS_SIZE)};
+        margin-right: ${pxToRem(15)};
+      }
 
       &.k-Steppers--VerticalStepper__status--success {
         background-color: ${COLORS.primary1};
@@ -155,12 +171,21 @@ const StyledContainerStatus = styled.div`
       &.k-Steppers--VerticalStepper__status--disabled {
         background-color: ${COLORS.background1};
         border-color: ${COLORS.line1};
+        border-width: ${pxToRem(2)};
 
-        width: ${pxToRem(INACTIVE_STATUS_SIZE)};
-        height: ${pxToRem(INACTIVE_STATUS_SIZE)};
-        border-radius: ${pxToRem(INACTIVE_STATUS_SIZE)};
+        width: ${pxToRem(MOBILE_INACTIVE_STATUS_SIZE)};
+        height: ${pxToRem(MOBILE_INACTIVE_STATUS_SIZE)};
+        border-radius: ${pxToRem(MOBILE_INACTIVE_STATUS_SIZE)};
         margin-left: ${pxToRem(7)};
-        margin-right: ${pxToRem(20)};
+        margin-right: ${pxToRem(15)};
+
+        @media (min-width: ${ScreenConfig.S.min}px) {
+          width: ${pxToRem(INACTIVE_STATUS_SIZE)};
+          height: ${pxToRem(INACTIVE_STATUS_SIZE)};
+          border-radius: ${pxToRem(INACTIVE_STATUS_SIZE)};
+          margin-right: ${pxToRem(20)};
+          border-width: ${pxToRem(3)};
+        }
       }
       &.k-Steppers--VerticalStepper__status--bridge {
         height: ${pxToRem(21)};

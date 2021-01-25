@@ -21,15 +21,15 @@ var _downshift = require("downshift");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var _label = require("../../../components/form/label");
+var _label = require("../label");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _warningCircleIcon = require("../../../components/icons/warning-circle-icon");
+var _warningCircleIcon = require("../../icons/warning-circle-icon");
 
-var _checkedCircleIcon = require("../../../components/icons/checked-circle-icon");
+var _checkedCircleIcon = require("../../icons/checked-circle-icon");
 
-var _arrowIcon = require("../../../components/icons/arrow-icon");
+var _arrowIcon = require("../../icons/arrow-icon");
 
 var _find = _interopRequireDefault(require("lodash/fp/find"));
 
@@ -41,7 +41,17 @@ var _filter = _interopRequireDefault(require("lodash/fp/filter"));
 
 var _isEmpty = _interopRequireDefault(require("lodash/isEmpty"));
 
+var _isObject = _interopRequireDefault(require("lodash/fp/isObject"));
+
 var _styles = require("./styles");
+
+var getLabelToFilter = function getLabelToFilter(item) {
+  if (item.searchableLabel || (0, _isObject.default)(item.label)) {
+    return item.searchableLabel || '';
+  }
+
+  return item.label || '';
+};
 
 var DropdownCombobox = function DropdownCombobox(_ref) {
   var labelText = _ref.labelText,
@@ -101,7 +111,8 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
 
   var onInputValueChange = function onInputValueChange(changes) {
     var newItemsList = (0, _flow.default)((0, _filter.default)(function (item) {
-      return item.value.toLowerCase().startsWith(changes.inputValue.toLowerCase());
+      var label = getLabelToFilter(item);
+      return label.toLowerCase().startsWith(changes.inputValue.toLowerCase());
     }), !(0, _isEmpty.default)(changes.inputValue) && uniqLabelOnSearch ? (0, _uniqBy.default)('label') : function (item) {
       return item;
     })(flattenedOptions);

@@ -17,10 +17,12 @@ import { Image } from './components/image';
 import { TitleComponent } from './components/title';
 import { Subtitle } from './components/subtitle';
 import { Paragraph } from './components/paragraph';
+import { pxToRem } from '../../../helpers/utils/typography';
+import COLORS from '../../../constants/colors-config';
 var ContainerStyle = styled.a.withConfig({
   displayName: "simple-card__ContainerStyle",
   componentId: "sc-1g5bppt-0"
-})(["line-height:1;position:relative;"]);
+})(["line-height:1;position:relative;&[href]:focus{outline:", " solid ", ";outline-offset:", ";}"], COLORS.primary4, pxToRem(2), pxToRem(2));
 
 var SimpleCardComponent = /*#__PURE__*/function (_Component) {
   _inherits(SimpleCardComponent, _Component);
