@@ -122,7 +122,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error"
+      className="sc-bwzfXH bPTJHk k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -216,7 +216,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-TextInput--andromeda"
+      className="sc-bwzfXH bPTJHk k-Form-TextInput k-Form-TextInput--andromeda"
       disabled={false}
       id="input"
       name="field"
@@ -299,7 +299,7 @@ Array [
       className="sc-dnqmqq iVdmNR k-Form-PasswordInput"
     >
       <input
-        className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error"
+        className="sc-bwzfXH bPTJHk k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -422,7 +422,7 @@ Array [
       className="sc-dnqmqq iVdmNR k-Form-PasswordInput"
     >
       <input
-        className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda"
+        className="sc-bwzfXH bPTJHk k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda"
         disabled={false}
         id="input"
         name="field"

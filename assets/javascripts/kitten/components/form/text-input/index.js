@@ -75,6 +75,10 @@ const StyledInput = styled.input`
         padding: ${pxToRem(10)} ${pxToRem(30)};
       }
     }
+    &.k-Form-TextInput--tiny {
+      border-radius: ${pxToRem(4)};
+      height: ${pxToRem(50)};
+    }
   }
 
   // TEXT
