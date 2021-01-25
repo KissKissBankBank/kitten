@@ -23,7 +23,11 @@ const StyledButton = styled.button`
 
   appareance: none;
   box-sizing: border-box;
-  outline: none;
+
+  &:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
 
   &[aria-pressed='true'] {
     svg {

@@ -2,7 +2,7 @@
 
 exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa BhYzt k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+  className="sc-bdVaJa jvFjYA k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -129,7 +129,7 @@ exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
 
 exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa BhYzt k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa jvFjYA k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -275,7 +275,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "BhYzt",
+            "lastClassName": "jvFjYA",
             "rules": Array [
               ".k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
               "0.9375rem",
@@ -283,9 +283,13 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
               "0.125rem",
               " solid ",
               "#eee",
-              ";font:inherit;color:inherit;background-color:transparent;cursor:pointer;text-align:left;}.k-Accordeon__header:focus,.k-Accordeon__header:focus + .k-Accordeon__content{outline:none;border-color:",
-              "#19b4fa",
-              ";}.k-Accordeon__content{",
+              ";font:inherit;color:inherit;background-color:transparent;cursor:pointer;text-align:left;&:focus{outline:",
+              "#bae8fd",
+              " solid ",
+              "0.125rem",
+              ";outline-offset:",
+              "0.125rem",
+              ";}}.k-Accordeon__content{",
               "font-family: Maax, Helvetica, Arial, sans-serif;",
               "font-weight: 400;",
               " box-sizing:border-box;visibility:visible;overflow:visible;height:auto;border:",
@@ -315,7 +319,9 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
               "1.875rem",
               ";padding-bottom:",
               "1.875rem",
-              ";}}&.k-Accordeon--orion{.k-Accordeon__header{position:relative;padding:",
+              ";}}&.k-Accordeon--orion{.k-Accordeon__item{border-radius:",
+              "0.375rem",
+              ";}.k-Accordeon__header{position:relative;padding:",
               "1.5625rem",
               " ",
               "3.125rem",
@@ -374,7 +380,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa BhYzt k-Accordeon k-Accordeon--andromeda"
+            class="sc-bdVaJa jvFjYA k-Accordeon k-Accordeon--andromeda"
           >
             <div
               class="k-Accordeon__item"
@@ -483,7 +489,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
       }
     >
       <div
-        className="sc-bdVaJa BhYzt k-Accordeon k-Accordeon--andromeda"
+        className="sc-bdVaJa jvFjYA k-Accordeon k-Accordeon--andromeda"
       >
         <Item
           id="accordeon-0"
@@ -671,7 +677,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
 
 exports[`<Accordeon /> with one item matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa BhYzt k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+  className="sc-bdVaJa jvFjYA k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -757,7 +763,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "BhYzt",
+            "lastClassName": "jvFjYA",
             "rules": Array [
               ".k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
               "0.9375rem",
@@ -765,9 +771,13 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
               "0.125rem",
               " solid ",
               "#eee",
-              ";font:inherit;color:inherit;background-color:transparent;cursor:pointer;text-align:left;}.k-Accordeon__header:focus,.k-Accordeon__header:focus + .k-Accordeon__content{outline:none;border-color:",
-              "#19b4fa",
-              ";}.k-Accordeon__content{",
+              ";font:inherit;color:inherit;background-color:transparent;cursor:pointer;text-align:left;&:focus{outline:",
+              "#bae8fd",
+              " solid ",
+              "0.125rem",
+              ";outline-offset:",
+              "0.125rem",
+              ";}}.k-Accordeon__content{",
               "font-family: Maax, Helvetica, Arial, sans-serif;",
               "font-weight: 400;",
               " box-sizing:border-box;visibility:visible;overflow:visible;height:auto;border:",
@@ -797,7 +807,9 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
               "1.875rem",
               ";padding-bottom:",
               "1.875rem",
-              ";}}&.k-Accordeon--orion{.k-Accordeon__header{position:relative;padding:",
+              ";}}&.k-Accordeon--orion{.k-Accordeon__item{border-radius:",
+              "0.375rem",
+              ";}.k-Accordeon__header{position:relative;padding:",
               "1.5625rem",
               " ",
               "3.125rem",
@@ -856,7 +868,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa BhYzt k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+            class="sc-bdVaJa jvFjYA k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
           >
             <div
               class="k-Accordeon__item"
@@ -964,7 +976,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
       }
     >
       <div
-        className="sc-bdVaJa BhYzt k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+        className="sc-bdVaJa jvFjYA k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
       >
         <Item
           id="accordeon-0"
@@ -1171,7 +1183,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "BhYzt",
+            "lastClassName": "jvFjYA",
             "rules": Array [
               ".k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
               "0.9375rem",
@@ -1179,9 +1191,13 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
               "0.125rem",
               " solid ",
               "#eee",
-              ";font:inherit;color:inherit;background-color:transparent;cursor:pointer;text-align:left;}.k-Accordeon__header:focus,.k-Accordeon__header:focus + .k-Accordeon__content{outline:none;border-color:",
-              "#19b4fa",
-              ";}.k-Accordeon__content{",
+              ";font:inherit;color:inherit;background-color:transparent;cursor:pointer;text-align:left;&:focus{outline:",
+              "#bae8fd",
+              " solid ",
+              "0.125rem",
+              ";outline-offset:",
+              "0.125rem",
+              ";}}.k-Accordeon__content{",
               "font-family: Maax, Helvetica, Arial, sans-serif;",
               "font-weight: 400;",
               " box-sizing:border-box;visibility:visible;overflow:visible;height:auto;border:",
@@ -1211,7 +1227,9 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
               "1.875rem",
               ";padding-bottom:",
               "1.875rem",
-              ";}}&.k-Accordeon--orion{.k-Accordeon__header{position:relative;padding:",
+              ";}}&.k-Accordeon--orion{.k-Accordeon__item{border-radius:",
+              "0.375rem",
+              ";}.k-Accordeon__header{position:relative;padding:",
               "1.5625rem",
               " ",
               "3.125rem",
@@ -1270,7 +1288,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa BhYzt k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+            class="sc-bdVaJa jvFjYA k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
           >
             <div
               class="k-Accordeon__item"
@@ -1379,7 +1397,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
       }
     >
       <div
-        className="sc-bdVaJa BhYzt k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+        className="sc-bdVaJa jvFjYA k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
       >
         <Item
           id="accordeon-0"
@@ -1567,7 +1585,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
 
 exports[`<Accordeon /> with two items matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa BhYzt k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+  className="sc-bdVaJa jvFjYA k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"

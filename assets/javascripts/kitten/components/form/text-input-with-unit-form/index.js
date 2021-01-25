@@ -6,7 +6,7 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 import { TextInputWithUnit } from '../../../components/form/text-input-with-unit'
 import { Text } from '../../../components/typography/text'
 import { Label } from '../../../components/form/label'
-import { Button } from '../../../components/buttons/button'
+import { Button } from '../../../components/buttons/button/button'
 import { ScreenConfig } from '../../../constants/screen-config'
 import classNames from 'classnames'
 
@@ -143,7 +143,7 @@ export class TextInputWithUnitForm extends PureComponent {
         <Grid>
           <GridCol col="12" className={`k-u-align-${align}`}>
             <Button
-              size="big"
+              big
               modifier="helium"
               type="submit"
               onMouseEnter={onButtonMouseEnter}

@@ -17,7 +17,7 @@ const ExampleText = styled(Text)`
 `
 
 export default {
-  title: 'Lists/List',
+  title: 'List/List',
   component: List,
 }
 

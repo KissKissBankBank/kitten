@@ -76,7 +76,6 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   position: relative;
-  outline: none;
   color: #00f;
   border-bottom: 0.25rem solid transparent;
   -webkit-transition: color .2s,border-color .2s;
@@ -88,6 +87,11 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
   color: #808;
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c0 .k-NavBar__link:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0 .k-NavBar__link:focus,
@@ -259,7 +263,6 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   position: relative;
-  outline: none;
   color: #222;
   border-bottom: 0.25rem solid transparent;
   -webkit-transition: color .2s,border-color .2s;
@@ -271,6 +274,11 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
   color: #19b4fa;
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c0 .k-NavBar__link:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0 .k-NavBar__link:focus,
@@ -442,7 +450,6 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   position: relative;
-  outline: none;
   color: #222;
   border-bottom: 0.25rem solid transparent;
   -webkit-transition: color .2s,border-color .2s;
@@ -454,6 +461,11 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
   color: #19b4fa;
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c0 .k-NavBar__link:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0 .k-NavBar__link:focus,

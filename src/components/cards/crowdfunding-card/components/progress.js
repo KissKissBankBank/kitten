@@ -71,7 +71,7 @@ var ProgressBar = /*#__PURE__*/function (_PureComponent) {
         weight: "regular",
         size: "micro",
         color: "font1",
-        className: "k-CrowdfundingCard__progressBar__percent k-u-hidden@s-down"
+        className: "k-CrowdfundingCard__progressBar__percent"
       }, loading && /*#__PURE__*/_react.default.createElement("span", {
         className: "k-CrowdfundingCard__progressBar__loadingPercent"
       }), !loading && "".concat(progress, " %")));

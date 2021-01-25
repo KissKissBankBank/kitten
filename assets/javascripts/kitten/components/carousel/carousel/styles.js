@@ -266,6 +266,11 @@ export const StyledCarouselContainer = styled.div`
 
     .k-Carousel__pagination__button {
       margin: ${pxToRem(1)};
+      position: relative;
+
+      &:focus {
+        z-index: 1;
+      }
     }
   }
 
@@ -311,6 +316,12 @@ export const StyledCarouselContainer = styled.div`
   // Carousel Inner
 
   .k-Carousel__inner {
+    margin: ${pxToRem(-4)};
+    &:focus {
+      outline: ${ColorsConfig.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(-2)};
+    }
+
     display: grid;
     grid-template-columns: repeat(${({ numberOfPages }) =>
       numberOfPages}, 100%);
@@ -421,6 +432,13 @@ export const StyledCarouselContainer = styled.div`
 
     .k-Carousel__page__item {
       overflow: hidden;
+      padding: ${pxToRem(4)};
+    }
+    .k-Carousel__page__item > a {
+      &:focus {
+        outline: ${ColorsConfig.primary4} solid ${pxToRem(2)};
+        outline-offset: ${pxToRem(2)};
+      }
     }
 
     /* IE11 support */

@@ -30,8 +30,12 @@ const StyledTagButton = styled.button`
   line-height: 1.3;
   text-decoration: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
+
+  &:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
 
   &.k-Buttons__tagButton--orion {
     border-radius: ${pxToRem(8)};
@@ -40,6 +44,7 @@ const StyledTagButton = styled.button`
   :disabled {
     cursor: not-allowed;
   }
+
   > :nth-child(n) {
     margin-right: ${pxToRem(10)};
     text-align: left;
@@ -48,14 +53,14 @@ const StyledTagButton = styled.button`
     color: ${COLORS.font1};
     border-color: ${COLORS.line1};
     background-color: ${COLORS.background1};
-  
+
     &:hover,
     &:focus {
       color: ${COLORS.background1};
       border-color: ${COLORS.primary2};
       background-color: ${COLORS.primary2};
     }
-  
+
     &:active {
       color: ${COLORS.primary2};
       border-color: ${COLORS.primary2};
@@ -97,14 +102,14 @@ const StyledTagButton = styled.button`
     color: ${COLORS.font1};
     border-color: ${COLORS.line1};
     background-color: ${COLORS.background1};
-  
+
     &:hover,
     &:focus {
       color: ${COLORS.background1};
       border-color: ${COLORS.primary2};
       background-color: ${COLORS.primary2};
     }
-  
+
     &:active {
       color: ${COLORS.primary2};
       border-color: ${COLORS.primary2};
@@ -146,7 +151,6 @@ export const TagButton = ({
   variant,
   ...others
 }) => {
-
   return (
     <StyledTagButton
       className={classNames(
@@ -160,7 +164,7 @@ export const TagButton = ({
           'k-Buttons__tagButton--huge': huge,
           'k-Buttons__tagButton--selected': selected,
           'k-Buttons__tagButton--icon': icon,
-        }
+        },
       )}
       {...others}
     >

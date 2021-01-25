@@ -16,7 +16,7 @@ import { Grid, GridCol } from '../../../components/grid/grid';
 import { TextInputWithUnit } from '../../../components/form/text-input-with-unit';
 import { Text } from '../../../components/typography/text';
 import { Label } from '../../../components/form/label';
-import { Button } from '../../../components/buttons/button';
+import { Button } from '../../../components/buttons/button/button';
 import { ScreenConfig } from '../../../constants/screen-config';
 import classNames from 'classnames';
 var StyledFormContainer = styled.form.withConfig({
@@ -94,7 +94,7 @@ export var TextInputWithUnitForm = /*#__PURE__*/function (_PureComponent) {
         col: "12",
         className: "k-u-align-".concat(align)
       }, /*#__PURE__*/React.createElement(Button, {
-        size: "big",
+        big: true,
         modifier: "helium",
         type: "submit",
         onMouseEnter: onButtonMouseEnter,

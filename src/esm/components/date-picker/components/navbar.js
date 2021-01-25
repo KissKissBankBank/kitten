@@ -52,7 +52,7 @@ export var Navbar = /*#__PURE__*/function (_Component) {
         left: true
       }, /*#__PURE__*/React.createElement(ArrowIcon, {
         version: "solid",
-        fill: iconColor,
+        color: iconColor,
         direction: "left"
       })), /*#__PURE__*/React.createElement(StyledArrowIcon, {
         "aria-label": labels.nextMonth,
@@ -62,7 +62,7 @@ export var Navbar = /*#__PURE__*/function (_Component) {
         right: true
       }, /*#__PURE__*/React.createElement(ArrowIcon, {
         version: "solid",
-        fill: iconColor
+        color: iconColor
       })));
     }
   }]);

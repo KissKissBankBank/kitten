@@ -45,7 +45,6 @@
   }
 
   .k-TextInputWithButton__input {
-    outline: none; // since we introduce our own focus styles
     border-right: 0;
   }
 
@@ -64,7 +63,6 @@
 
     border-radius: $border-text-input;
 
-    outline: none;
     cursor: pointer;
 
     appearance: none;
