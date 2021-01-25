@@ -221,7 +221,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   line-height: normal;
 }
 
-.c4.Steppers--VerticalStepper__title--orion {
+.c4.k-Steppers--VerticalStepper__title--orion {
   font-size: 0.7901234567901234rem;
   font-weight: bold;
   line-height: 1;
@@ -366,7 +366,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 @media (min-width:640px) {
-  .c4.Steppers--VerticalStepper__title--orion {
+  .c4.k-Steppers--VerticalStepper__title--orion {
     font-size: 0.8888888888888888rem;
   }
 }
@@ -421,7 +421,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 Steppers--VerticalStepper__title--andromeda"
+            className="c4 k-Steppers--VerticalStepper__title--andromeda"
           >
             Title
           </p>
@@ -467,7 +467,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 Steppers--VerticalStepper__title--andromeda"
+            className="c4 k-Steppers--VerticalStepper__title--andromeda"
           >
             Title
           </p>
@@ -532,7 +532,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 Steppers--VerticalStepper__title--andromeda"
+            className="c4 k-Steppers--VerticalStepper__title--andromeda"
           >
             Title
           </p>
@@ -595,7 +595,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 Steppers--VerticalStepper__title--andromeda"
+            className="c4 k-Steppers--VerticalStepper__title--andromeda"
           >
             Title
           </p>
@@ -641,7 +641,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 Steppers--VerticalStepper__title--andromeda"
+            className="c4 k-Steppers--VerticalStepper__title--andromeda"
           >
             Title
           </p>
@@ -882,7 +882,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   line-height: normal;
 }
 
-.c4.Steppers--VerticalStepper__title--orion {
+.c4.k-Steppers--VerticalStepper__title--orion {
   font-size: 0.7901234567901234rem;
   font-weight: bold;
   line-height: 1;
@@ -998,7 +998,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 }
 
 @media (min-width:640px) {
-  .c4.Steppers--VerticalStepper__title--orion {
+  .c4.k-Steppers--VerticalStepper__title--orion {
     font-size: 0.8888888888888888rem;
   }
 }
@@ -1053,7 +1053,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 Steppers--VerticalStepper__title--orion"
+            className="c4 k-Steppers--VerticalStepper__title--orion"
           >
             Title
           </p>
@@ -1101,7 +1101,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 Steppers--VerticalStepper__title--orion"
+            className="c4 k-Steppers--VerticalStepper__title--orion"
           >
             Title
           </p>
@@ -1138,7 +1138,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 Steppers--VerticalStepper__title--orion"
+            className="c4 k-Steppers--VerticalStepper__title--orion"
           >
             Title
           </p>
@@ -1163,7 +1163,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 Steppers--VerticalStepper__title--orion"
+            className="c4 k-Steppers--VerticalStepper__title--orion"
           >
             Title
           </p>
@@ -1188,7 +1188,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 Steppers--VerticalStepper__title--orion"
+            className="c4 k-Steppers--VerticalStepper__title--orion"
           >
             Title
           </p>

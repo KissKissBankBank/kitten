@@ -13,7 +13,7 @@ const StyledTitle = styled.p`
   font-size: ${stepToRem(0)};
   line-height: normal;
 
-  &.Steppers--VerticalStepper__title--orion {
+  &.k-Steppers--VerticalStepper__title--orion {
     font-size: ${stepToRem(-2)};
     font-weight: bold;
     line-height: 1;
@@ -29,7 +29,7 @@ export const Title = ({ variant, className, children }) => {
   return (
     <StyledTitle
       className={classNames(
-        `Steppers--VerticalStepper__title--${variant}`,
+        `k-Steppers--VerticalStepper__title--${variant}`,
         className,
       )}
     >
