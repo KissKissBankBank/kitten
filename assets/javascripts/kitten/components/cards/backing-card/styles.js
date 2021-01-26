@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
+import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 
 export const StyledBackingCard = styled.article`
@@ -85,6 +86,10 @@ export const StyledBackingCard = styled.article`
 
   .k-BackingCard__descriptionWrapper {
     overflow: hidden;
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      max-height: calc(3 * 1.5 * ${stepToRem(-2)});
+    }
 
     * {
       font-size: ${stepToRem(-2)};
