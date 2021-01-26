@@ -39,6 +39,9 @@ export const StyledBackingCard = styled.article`
     .k-BackingCard__halfDrawer {
       margin: ${pxToRem(-10)} 0 0;
     }
+    .k-BackingCard__drawer + .k-BackingCard__halfDrawer {
+      margin: ${pxToRem(-10)} 0 ${pxToRem(-10)};
+    }
     .k-BackingCard__drawer--extensible {
       align-self: stretch;
     }
