@@ -20,6 +20,8 @@ export const Default = () => (
     error={boolean('Error', false)}
     disabled={boolean('Disabled', false)}
     tiny={boolean('Tiny', false)}
+    regular={boolean('Regular', true)}
+    big={boolean('Big', false)}
     huge={boolean('Huge', false)}
     giant={boolean('Giant', false)}
     center={boolean('Center', false)}

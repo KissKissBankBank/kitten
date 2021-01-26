@@ -37,6 +37,10 @@ const StyledInput = styled.input`
     height: ${pxToRem(40)};
   }
 
+  &.k-Form-TextInput--regular {
+    height: ${pxToRem(50)};
+  }
+
   &.k-Form-TextInput--huge {
     height: ${pxToRem(70)};
 
@@ -62,23 +66,30 @@ const StyledInput = styled.input`
 
   &.k-Form-TextInput--orion {
     border-radius: ${pxToRem(6)};
-    height: ${pxToRem(60)};
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
-      --input-padding-horizontal: ${pxToRem(30)};
-      border-radius: ${pxToRem(8)};
-      height: ${pxToRem(70)};
-      font-size: ${stepToRem(0)};
+    
 
-      /* IE11 */
-      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        padding: ${pxToRem(10)} ${pxToRem(30)};
-      }
-    }
-    &.k-Form-TextInput--tiny {
+    &.k-Form-TextInput--regular {
       border-radius: ${pxToRem(4)};
       height: ${pxToRem(50)};
     }
+
+    &.k-Form-TextInput--big {
+      height: ${pxToRem(60)};
+
+      @media (min-width: ${ScreenConfig.M.min}px) {
+        height: ${pxToRem(70)};
+        --input-padding-horizontal: ${pxToRem(30)};
+        border-radius: ${pxToRem(8)};
+        font-size: ${stepToRem(0)};
+  
+        /* IE11 */
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+          padding: ${pxToRem(10)} ${pxToRem(30)};
+        }
+      }
+    }
+
   }
 
   // TEXT
@@ -226,6 +237,8 @@ export class TextInput extends PureComponent {
     valid: PropTypes.bool,
     error: PropTypes.bool,
     tiny: PropTypes.bool,
+    regular: PropTypes.bool,
+    big: PropTypes.bool,
     huge: PropTypes.bool,
     giant: PropTypes.bool,
     center: PropTypes.bool,
@@ -240,6 +253,8 @@ export class TextInput extends PureComponent {
     valid: false,
     error: false,
     tiny: false,
+    regular: true,
+    big: true,
     huge: false,
     giant: false,
     center: false,
@@ -257,6 +272,8 @@ export class TextInput extends PureComponent {
       name,
       digits,
       tiny,
+      regular,
+      big,
       huge,
       giant,
       center,
@@ -294,6 +311,8 @@ export class TextInput extends PureComponent {
                 'k-Form-TextInput--error': error,
                 'k-Form-TextInput--disabled': disabled,
                 'k-Form-TextInput--tiny': tiny,
+                'k-Form-TextInput--regular': regular,
+                'k-Form-TextInput--big': big,
                 'k-Form-TextInput--huge': huge,
                 'k-Form-TextInput--giant': giant,
                 'k-Form-TextInput--alignCenter': center,
@@ -323,6 +342,8 @@ export class TextInput extends PureComponent {
               'k-Form-TextInput--error': error,
               'k-Form-TextInput--disabled': disabled,
               'k-Form-TextInput--tiny': tiny,
+              'k-Form-TextInput--regular': regular,
+              'k-Form-TextInput--big': big,
               'k-Form-TextInput--huge': huge,
               'k-Form-TextInput--giant': giant,
               'k-Form-TextInput--alignCenter': center,
