@@ -13,7 +13,11 @@ export const Default = () => {
   return (
     <Container className="k-u-margin-vertical-quadruple">
       <Tag
-        type={select('Type', ['info', 'warning', 'success', 'error'], 'info')}
+        type={select(
+          'Type',
+          ['info', 'warning', 'success', 'error', 'disabled'],
+          'info',
+        )}
       >
         <Text weight="bold">5</Text> Contributeurs
       </Tag>

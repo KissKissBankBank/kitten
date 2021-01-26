@@ -14,10 +14,20 @@ export const Info = ({ legend, value, ...props }) => {
         props.className,
       )}
     >
-      <Text weight="regular" size="tiny" lineHeight="normal">
+      <Text
+        className="k-BackingCard__info__legend"
+        weight="regular"
+        size="tiny"
+        lineHeight="normal"
+      >
         {legend}
       </Text>{' '}
-      <Text weight="light" size="tiny" lineHeight="normal">
+      <Text
+        className="k-BackingCard__info__value"
+        weight="light"
+        size="tiny"
+        lineHeight="normal"
+      >
         {value}
       </Text>
     </p>

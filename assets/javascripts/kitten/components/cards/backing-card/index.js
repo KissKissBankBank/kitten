@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { cloneElement } from 'react'
 import classNames from 'classnames'
 import { StyledBackingCard } from './styles'
 import {
@@ -8,6 +8,7 @@ import {
   Amount,
   Button,
   TagList,
+  HeadingTag,
   Description,
 } from './components'
 
@@ -33,7 +34,9 @@ export const BackingCard = ({ children, className, disabled, ...props }) => {
 
       {React.Children.map(children, child => {
         if (!child) return null
-        return child.type.name === 'Button' ? child : null
+        return child.type.name === 'Button'
+          ? cloneElement(child, { disabled })
+          : null
       })}
     </StyledBackingCard>
   )
@@ -45,4 +48,5 @@ BackingCard.Image = Image
 BackingCard.Amount = Amount
 BackingCard.Button = Button
 BackingCard.TagList = TagList
+BackingCard.HeadingTag = HeadingTag
 BackingCard.Description = Description

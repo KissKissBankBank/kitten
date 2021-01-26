@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
+import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 
@@ -49,6 +50,7 @@ export const StyledBackingCard = styled.article`
   }
 
   .k-BackingCard__button {
+    min-width: 0;
     flex: 0 0 auto;
   }
 
@@ -86,20 +88,55 @@ export const StyledBackingCard = styled.article`
 
   .k-BackingCard__descriptionWrapper {
     overflow: hidden;
+    position: relative;
 
-    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
       max-height: calc(3 * 1.5 * ${stepToRem(-2)});
     }
 
-    * {
+
+    .k-BackingCard__description * {
       font-size: ${stepToRem(-2)};
       line-height: 1.5;
     }
 
-    /* TEMP */
-    * {
-      margin: 0;
+    .k-BackingCard__description__moreButton {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding-left: ${pxToRem(40)};
+      line-height: 1.5;
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) ${pxToRem(
+        30,
+      )});
+
     }
+  }
+
+  .k-BackingCard__headingTag {
+    justify-self: start;
+    display: flex;
+    align-items: center;
+
+    color: ${COLORS.primary1};
+    ${TYPOGRAPHY.fontStyles.regular}
+    gap: ${pxToRem(10)};
+
+    svg, path {
+      color: inherit;
+
+      &[fill] {
+        fill: currentColor;
+      }
+      &[stroke] {
+        stroke: currentColor;
+      }
+    }
+  }
+
+  .k-BackingCard__info__legend,
+  .k-BackingCard__info__value {
+    white-space: nowrap;
   }
 
   .k-BackingCard__tagList {
@@ -109,5 +146,23 @@ export const StyledBackingCard = styled.article`
     display: flex;
     flex-wrap: wrap;
     gap: ${pxToRem(10)};
+  }
+
+  &.k-BackingCard--disabled {
+    color: ${COLORS.font2};
+    cursor: not-allowed;
+
+    .k-BackingCard__imageWrapper {
+      img,
+      figure,
+      video {
+        filter: grayscale(1) opacity(0.4);
+      }
+    }
+
+    .k-Tag {
+      color: ${COLORS.font2};
+      background-color: ${COLORS.line1};
+    }
   }
 `

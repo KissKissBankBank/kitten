@@ -29,6 +29,9 @@ const StyledTag = styled.span`
   &.k-Tag--error {
     background-color: ${COLORS.error2};
   }
+  &.k-Tag--disabled {
+    background-color: ${COLORS.line1};
+  }
 `
 
 export const Tag = ({ type, className, ...props }) => (
@@ -39,7 +42,7 @@ export const Tag = ({ type, className, ...props }) => (
 )
 
 Tag.propTypes = {
-  type: PropTypes.oneOf(['info', 'warning', 'success', 'error']),
+  type: PropTypes.oneOf(['info', 'warning', 'success', 'error', 'disabled']),
 }
 
 Tag.defaultProps = {

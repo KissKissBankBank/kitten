@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { boolean } from '@storybook/addon-knobs'
 import { BackingCard } from './index'
 import {
   pxToRem,
@@ -29,7 +30,7 @@ const StyledCarouselContainer = styled.div`
   margin: 40px 0;
 
   .k-Carousel--showOtherPages .k-Carousel__inner {
-    padding: 0 ${pxToRem(70)} 0 ${pxToRem(20)};
+    padding: 0 ${pxToRem(80)} 0 ${pxToRem(20)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       padding: 0 ${pxToRem(120)} 0 ${pxToRem(40)};
@@ -44,13 +45,14 @@ export default {
 
 export const Default = () => {
   return (
-    <Container>
+    <Container className="k-u-margin-vertical-quadruple">
       <Grid>
         <GridCol col="6" col-l="3">
-          <BackingCard>
+          <BackingCard disabled={boolean('Disabled', false)}>
             <BackingCard.Image>
               <img src="/kitten.jpg" alt="" />
             </BackingCard.Image>
+            <BackingCard.HeadingTag icon="star" text="Star reward" />
             <BackingCard.Title>
               Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
             </BackingCard.Title>
@@ -63,22 +65,22 @@ export const Default = () => {
               legend="Livraison estimée&nbsp;:"
               value="Janvier 2022"
             />
-            <BackingCard.Description>
-              <p>
+            <BackingCard.Description moreButtonText="See more…">
+              <p className="k-u-margin-none">
                 Maecenas tempus, tellus eget condimentum rhoncus, sem quam
                 semper libero, sit amet adipiscing sem neque sed ipsum.
               </p>
-              <p>
+              <p className="k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p>
+              <p className="k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p>
+              <p className="k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
@@ -102,12 +104,13 @@ export const Default = () => {
 
 const Row = props => {
   return (
-    <Container>
+    <Container className="k-u-margin-vertical-quadruple">
       <StyledGrid {...props}>
         <BackingCard>
           <BackingCard.Image>
             <img src="/kitten.jpg" alt="" />
           </BackingCard.Image>
+          <BackingCard.HeadingTag icon="star" text="Star reward" />
           <BackingCard.Title>
             Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
           </BackingCard.Title>
@@ -120,22 +123,197 @@ const Row = props => {
             legend="Livraison estimée&nbsp;:"
             value="Janvier 2022"
           />
-          <BackingCard.Description>
-            <p>
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
+              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+              tell
+            </p>
+          </BackingCard.Description>
+          <BackingCard.TagList>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">5</strong> contributeurs
+            </Tag>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">2/6</strong> disponibles
+            </Tag>
+          </BackingCard.TagList>
+          <BackingCard.Button>Je soutiens</BackingCard.Button>
+        </BackingCard>
+
+        <BackingCard>
+          <BackingCard.HeadingTag icon="star" text="Star reward" />
+          <BackingCard.Title>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+          </BackingCard.Title>
+          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+          <BackingCard.Info
+            legend="Prix de livraison&nbsp;:"
+            value="5&nbsp;€ (en France)"
+          />
+          <BackingCard.Info
+            legend="Livraison estimée&nbsp;:"
+            value="Janvier 2022"
+          />
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
+              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
+              libero, sit amet adipiscing sem neque sed ipsum.
+            </p>
+            <p className="k-u-margin-none">
+              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+              tell
+            </p>
+            <p className="k-u-margin-none">
+              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+              tell
+            </p>
+            <p className="k-u-margin-none">
+              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+              tell
+            </p>
+          </BackingCard.Description>
+          <BackingCard.TagList>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">5</strong> contributeurs
+            </Tag>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">2/6</strong> disponibles
+            </Tag>
+          </BackingCard.TagList>
+          <BackingCard.Button>Je soutiens</BackingCard.Button>
+        </BackingCard>
+
+        <BackingCard>
+          <BackingCard.Image>
+            <img src="/kitten.jpg" alt="" />
+          </BackingCard.Image>
+          <BackingCard.HeadingTag icon="star" text="Star reward" />
+          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+          <BackingCard.Info
+            legend="Prix de livraison&nbsp;:"
+            value="5&nbsp;€ (en France)"
+          />
+          <BackingCard.Info
+            legend="Livraison estimée&nbsp;:"
+            value="Janvier 2022"
+          />
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
+              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
+              libero, sit amet adipiscing sem neque sed ipsum.
+            </p>
+            <p className="k-u-margin-none">
+              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+              tell
+            </p>
+            <p className="k-u-margin-none">
+              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+              tell
+            </p>
+            <p className="k-u-margin-none">
+              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+              tell
+            </p>
+          </BackingCard.Description>
+          <BackingCard.TagList>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">5</strong> contributeurs
+            </Tag>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">2/6</strong> disponibles
+            </Tag>
+          </BackingCard.TagList>
+          <BackingCard.Button>Je soutiens</BackingCard.Button>
+        </BackingCard>
+
+        <BackingCard>
+          <BackingCard.HeadingTag icon="star" text="Star reward" />
+          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+          <BackingCard.Info
+            legend="Prix de livraison&nbsp;:"
+            value="5&nbsp;€ (en France)"
+          />
+          <BackingCard.Info
+            legend="Livraison estimée&nbsp;:"
+            value="Janvier 2022"
+          />
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
+              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
+              libero, sit amet adipiscing sem neque sed ipsum.
+            </p>
+            <p className="k-u-margin-none">
+              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+              tell
+            </p>
+            <p className="k-u-margin-none">
+              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+              tell
+            </p>
+            <p className="k-u-margin-none">
+              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+              tell
+            </p>
+          </BackingCard.Description>
+          <BackingCard.TagList>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">5</strong> contributeurs
+            </Tag>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">2/6</strong> disponibles
+            </Tag>
+          </BackingCard.TagList>
+          <BackingCard.Button>Je soutiens</BackingCard.Button>
+        </BackingCard>
+
+        <BackingCard>
+          <BackingCard.Image>
+            <img src="/kitten.jpg" alt="" />
+          </BackingCard.Image>
+          <BackingCard.Title>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+          </BackingCard.Title>
+          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
+              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
+              libero, sit amet adipiscing sem neque sed ipsum.
+            </p>
+            <p className="k-u-margin-none">
+              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+              tell
+            </p>
+            <p className="k-u-margin-none">
+              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+              tell
+            </p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -157,30 +335,22 @@ const Row = props => {
             Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
           </BackingCard.Title>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Info
-            legend="Prix de livraison&nbsp;:"
-            value="5&nbsp;€ (en France)"
-          />
-          <BackingCard.Info
-            legend="Livraison estimée&nbsp;:"
-            value="Janvier 2022"
-          />
-          <BackingCard.Description>
-            <p>
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -202,30 +372,22 @@ const Row = props => {
             <img src="/kitten.jpg" alt="" />
           </BackingCard.Image>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Info
-            legend="Prix de livraison&nbsp;:"
-            value="5&nbsp;€ (en France)"
-          />
-          <BackingCard.Info
-            legend="Livraison estimée&nbsp;:"
-            value="Janvier 2022"
-          />
-          <BackingCard.Description>
-            <p>
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -244,178 +406,22 @@ const Row = props => {
 
         <BackingCard>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Info
-            legend="Prix de livraison&nbsp;:"
-            value="5&nbsp;€ (en France)"
-          />
-          <BackingCard.Info
-            legend="Livraison estimée&nbsp;:"
-            value="Janvier 2022"
-          />
-          <BackingCard.Description>
-            <p>
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-          </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
-          <BackingCard.Button>Je soutiens</BackingCard.Button>
-        </BackingCard>
-
-        <BackingCard>
-          <BackingCard.Image>
-            <img src="/kitten.jpg" alt="" />
-          </BackingCard.Image>
-          <BackingCard.Title>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-          </BackingCard.Title>
-          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description>
-            <p>
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
-            </p>
-            <p>
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p>
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p>
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-          </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
-          <BackingCard.Button>Je soutiens</BackingCard.Button>
-        </BackingCard>
-
-        <BackingCard>
-          <BackingCard.Title>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-          </BackingCard.Title>
-          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description>
-            <p>
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
-            </p>
-            <p>
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p>
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p>
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-          </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
-          <BackingCard.Button>Je soutiens</BackingCard.Button>
-        </BackingCard>
-
-        <BackingCard>
-          <BackingCard.Image>
-            <img src="/kitten.jpg" alt="" />
-          </BackingCard.Image>
-          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description>
-            <p>
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
-            </p>
-            <p>
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p>
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p>
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-          </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
-          <BackingCard.Button>Je soutiens</BackingCard.Button>
-        </BackingCard>
-
-        <BackingCard>
-          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description>
-            <p>
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
-            </p>
-            <p>
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p>
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -456,7 +462,7 @@ export const MultipleCases = () => (
 export const InACarouselComponent = () => {
   const itemMinWidth = useMedia({
     queries: [getMinQuery(ScreenConfig.M.min)],
-    values: [250],
+    values: [280],
     defaultValue: 0,
   })
   const itemsPerPage = useMedia({
@@ -491,6 +497,7 @@ export const InACarouselComponent = () => {
           <BackingCard.Image>
             <img src="/kitten.jpg" alt="" />
           </BackingCard.Image>
+          <BackingCard.HeadingTag icon="diamond" text="Diamond reward" />
           <BackingCard.Title>
             Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
           </BackingCard.Title>
@@ -503,22 +510,22 @@ export const InACarouselComponent = () => {
             legend="Livraison estimée&nbsp;:"
             value="Janvier 2022"
           />
-          <BackingCard.Description>
-            <p>
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -536,6 +543,7 @@ export const InACarouselComponent = () => {
         </BackingCard>
 
         <BackingCard>
+          <BackingCard.HeadingTag icon="star" text="Star reward" />
           <BackingCard.Title>
             Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
           </BackingCard.Title>
@@ -548,22 +556,22 @@ export const InACarouselComponent = () => {
             legend="Livraison estimée&nbsp;:"
             value="Janvier 2022"
           />
-          <BackingCard.Description>
-            <p>
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -584,6 +592,7 @@ export const InACarouselComponent = () => {
           <BackingCard.Image>
             <img src="/kitten.jpg" alt="" />
           </BackingCard.Image>
+          <BackingCard.HeadingTag icon="star" text="Star reward" />
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Info
             legend="Prix de livraison&nbsp;:"
@@ -593,22 +602,22 @@ export const InACarouselComponent = () => {
             legend="Livraison estimée&nbsp;:"
             value="Janvier 2022"
           />
-          <BackingCard.Description>
-            <p>
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -626,6 +635,7 @@ export const InACarouselComponent = () => {
         </BackingCard>
 
         <BackingCard>
+          <BackingCard.HeadingTag icon="star" text="Star reward" />
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Info
             legend="Prix de livraison&nbsp;:"
@@ -635,22 +645,22 @@ export const InACarouselComponent = () => {
             legend="Livraison estimée&nbsp;:"
             value="Janvier 2022"
           />
-          <BackingCard.Description>
-            <p>
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -667,30 +677,31 @@ export const InACarouselComponent = () => {
           <BackingCard.Button>Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard>
+        <BackingCard disabled>
           <BackingCard.Image>
             <img src="/kitten.jpg" alt="" />
           </BackingCard.Image>
+          <BackingCard.HeadingTag icon="star" text="Star reward" />
           <BackingCard.Title>
             Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
           </BackingCard.Title>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description>
-            <p>
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -707,27 +718,28 @@ export const InACarouselComponent = () => {
           <BackingCard.Button>Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard>
+        <BackingCard disabled>
+          <BackingCard.HeadingTag icon="star" text="Star reward" />
           <BackingCard.Title>
             Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
           </BackingCard.Title>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description>
-            <p>
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -744,27 +756,27 @@ export const InACarouselComponent = () => {
           <BackingCard.Button>Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard>
+        <BackingCard disabled>
           <BackingCard.Image>
             <img src="/kitten.jpg" alt="" />
           </BackingCard.Image>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description>
-            <p>
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -781,24 +793,24 @@ export const InACarouselComponent = () => {
           <BackingCard.Button>Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard>
+        <BackingCard disabled>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description>
-            <p>
+          <BackingCard.Description moreButtonText="See more…">
+            <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p>
+            <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
