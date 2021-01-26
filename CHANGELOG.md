@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `BackingCard` component.
 - Feature: Add `Tag` component.
+- Feature: Add `useMedia` hook.
 
 ## [2.113.0] - 2020-01-21
 
