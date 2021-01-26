@@ -394,20 +394,21 @@ export const StyledCarouselContainer = styled.div`
   }
 
   &.k-Carousel--showOtherPages .k-Carousel__inner {
-    padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
-    scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+    margin: 0 !important;
+    padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE - 4)};
+    scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE - 4)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      padding: 0 ${pxToRem(CONTAINER_PADDING)};
-      scroll-padding: ${pxToRem(CONTAINER_PADDING)};
+      padding: 0 ${pxToRem(CONTAINER_PADDING - 4)};
+      scroll-padding: ${pxToRem(CONTAINER_PADDING - 4)};
     }
 
     .k-Carousel__inner__pageContainer {
       &:last-child {
-        padding-right: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+        padding-right: ${pxToRem(CONTAINER_PADDING_MOBILE - 4)};
 
         @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-          padding-right: ${pxToRem(CONTAINER_PADDING)};
+          padding-right: ${pxToRem(CONTAINER_PADDING - 4)};
         }
       }
     }

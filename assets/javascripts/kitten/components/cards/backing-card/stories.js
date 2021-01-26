@@ -30,10 +30,10 @@ const StyledCarouselContainer = styled.div`
   margin: 40px 0;
 
   .k-Carousel--showOtherPages .k-Carousel__inner {
-    padding: 0 ${pxToRem(80)} 0 ${pxToRem(20)};
+    padding: 0 ${pxToRem(80 - 4)} 0 ${pxToRem(20 - 4)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
-      padding: 0 ${pxToRem(120)} 0 ${pxToRem(40)};
+      padding: 0 ${pxToRem(120 - 4)} 0 ${pxToRem(40 - 4)};
     }
   }
 `
