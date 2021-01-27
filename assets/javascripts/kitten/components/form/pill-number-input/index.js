@@ -19,7 +19,7 @@ const StyledPillNumberInput = styled.div`
   border-radius: ${pxToRem(20)};
   transition: border-color .2s ease;
 
-  &:focus-within, &:hover {
+  &:hover {
     border-color: ${COLORS.line2};
   }
 
@@ -39,7 +39,8 @@ const StyledPillNumberInput = styled.div`
     text-align: center;
 
     &:focus {
-      outline: none;
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
     }
 
     &:disabled {

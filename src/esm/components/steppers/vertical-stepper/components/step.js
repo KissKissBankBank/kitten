@@ -19,7 +19,8 @@ export var Step = function Step(_ref) {
       className = _ref.className,
       variant = _ref.variant,
       bridge = _ref.bridge,
-      other = _objectWithoutProperties(_ref, ["success", "valid", "error", "waiting", "disabled", "statusProps", "children", "className", "variant", "bridge"]);
+      onClick = _ref.onClick,
+      other = _objectWithoutProperties(_ref, ["success", "valid", "error", "waiting", "disabled", "statusProps", "children", "className", "variant", "bridge", "onClick"]);
 
   return /*#__PURE__*/React.createElement(StyledItem, {
     className: classNames('k-Steppers--VerticalStepper__item', {
@@ -27,7 +28,8 @@ export var Step = function Step(_ref) {
       'k-Steppers--VerticalStepper__item--bridge': bridge
     })
   }, /*#__PURE__*/React.createElement(StyledLink, _extends({
-    as: other.href && !disabled ? 'a' : 'span'
+    as: other.href && !disabled ? 'a' : 'span',
+    onClick: disabled ? null : onClick
   }, other, {
     variant: variant
   }), /*#__PURE__*/React.createElement(Status, _extends({
@@ -47,11 +49,11 @@ export var Step = function Step(_ref) {
 var StyledItem = styled.li.withConfig({
   displayName: "step__StyledItem",
   componentId: "sc-1you76f-0"
-})(["padding:", " 0;&:first-of-type{margin-top:0;padding-top:0;}&:last-of-type{margin-bottom:0;padding-bottom:0;}li:not(:last-of-type){margin:0 !important;&::after{display:none;}}&.k-Steppers--VerticalStepper__item--bridge{padding:", " 0;}"], pxToRem(15), pxToRem(8));
+})(["padding:", " 0;&:first-of-type{margin-top:0;padding-top:0;}&:last-of-type{margin-bottom:0;padding-bottom:0;}[role='button']:focus,a:focus,button:focus{outline:", " solid ", ";outline-offset:", ";}li:not(:last-of-type){margin:0 !important;&::after{display:none;}}&.k-Steppers--VerticalStepper__item--bridge{padding:", " 0;}"], pxToRem(15), COLORS.primary4, pxToRem(2), pxToRem(2), pxToRem(8));
 var StyledLink = styled.a.withConfig({
   displayName: "step__StyledLink",
   componentId: "sc-1you76f-1"
-})(["display:inline-flex;align-items:center;", " .k-Steppers--VerticalStepper__step--link--content{display:flex;flex-direction:column;justify-content:center;flex:1;color:", ";&.k-Steppers--VerticalStepper__step--link--content--disabled{color:", ";}}"], function (_ref2) {
+})(["display:inline-flex;align-items:center;padding-right:", ";", " .k-Steppers--VerticalStepper__step--link--content{display:flex;flex-direction:column;justify-content:center;flex:1;color:", ";&.k-Steppers--VerticalStepper__step--link--content--disabled{color:", ";}}"], pxToRem(10), function (_ref2) {
   var as = _ref2.as,
       onClick = _ref2.onClick;
   return (as === 'a' || onClick) && css(["cursor:pointer;text-decoration:none;.", "{transition:transform 0.4s;}.", "{transition:color 0.4s;}:hover,:focus,:active{.", "{transform:translateX(", ");}.", "{color:", ";}}"], STEP_CLASSNAME, LINK_CLASSNAME, STEP_CLASSNAME, pxToRem(5), LINK_CLASSNAME, COLORS.primary3);

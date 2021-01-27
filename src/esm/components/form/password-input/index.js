@@ -11,7 +11,7 @@ import { pxToRem } from '../../../helpers/utils/typography';
 var StyledPasswordInput = styled.div.withConfig({
   displayName: "password-input__StyledPasswordInput",
   componentId: "sc-1futz46-0"
-})(["position:relative;display:flex;.k-Form-PasswordInput__input{padding-right:", ";}.k-Form-PasswordInput__icon{display:flex;position:absolute;z-index:1;padding:0 ", ";right:0;top:0;bottom:0;cursor:pointer;align-items:center;&[aria-pressed='true']{svg{fill:", ";transition:all 0.2s;}}}"], pxToRem(40), pxToRem(11), COLORS.primary1);
+})(["position:relative;display:flex;.k-Form-PasswordInput__input{padding-right:", ";}.k-Form-PasswordInput__icon{display:flex;position:absolute;z-index:1;padding:0 ", ";right:0;top:0;bottom:0;cursor:pointer;align-items:center;&:focus{outline:", " solid ", ";outline-offset:", ";}&[aria-pressed='true']{svg{fill:", ";transition:all 0.2s;}}}"], pxToRem(40), pxToRem(11), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary1);
 export var PasswordInput = function PasswordInput(_ref) {
   var name = _ref.name,
       iconLabel = _ref.iconLabel,

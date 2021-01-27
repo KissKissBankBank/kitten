@@ -1,13 +1,18 @@
-import React, { Fragment } from 'react'
-import { SimpleCarousel } from '../../components/carousel/simple-carousel'
-import { Marger } from '../../components/layout/marger'
-import { Title } from '../../components/typography/title'
-import { Paragraph } from '../../components/typography/paragraph'
-import { HorizontalStroke } from '../../components/layout/horizontal-stroke'
-import { Button } from '../../components/buttons/button'
+import React from 'react'
+import { SimpleCarousel } from './index'
+import { Marger } from '../../layout/marger'
+import { Title } from '../../typography/title'
+import { Paragraph } from '../../typography/paragraph'
+import { HorizontalStroke } from '../../layout/horizontal-stroke'
+import { Button } from '../../buttons/button'
+
+export default {
+  title: 'Carousel/SimpleCarousel',
+  component: SimpleCarousel,
+}
 
 const Item = ({ numItem }) => (
-  <Fragment>
+  <>
     <Marger bottom="3">
       <img
         src={`https://placeimg.com/40${numItem}/40${numItem}/nature`}
@@ -37,10 +42,10 @@ const Item = ({ numItem }) => (
         <Button>Button {numItem}</Button>
       </Marger>
     </Marger>
-  </Fragment>
+  </>
 )
 
-export const KarlSimpleCarousel = () => (
+export const Default = () => (
   <div
     style={{
       paddingLeft: 75,

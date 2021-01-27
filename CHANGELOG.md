@@ -4,7 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking Change: Delete the following deprecated `cards` components:
+Breaking Changes:
+
+- Remove `StyleGuide` app.
+- Remove `Karl` stories & components.
+- Remove `k-LegoGrid` styles.
+- Remove `LegoGrid` component.
+- Delete the following deprecated `cards` components:
   - `ArticleCard`
   - `ContributionCard`
   - `CrowdfundingCardWidget`
@@ -13,11 +19,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
   - `SimilarProjectsCard`.
-- Breaking Change: Delete the following deprecated `card` SCSS mixins:
+- Delete the following deprecated `card` SCSS mixins:
   - `k-ProjectCard`
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
 
+## [2.113.0] - 2020-01-21
+
+Features:
+
+- Add Focus styles for focusable elements.
+- Add `summaryProps` to `Details` component.
+- Handle keyboard navigation on `Carousel`.
+- Update mobile version of `VerticalStepper` component.
+
+Fixes:
+
+- do not apply focus styles on `VerticalStepper` when `disabled`
+- `Combobox` filter on `label` (instead of `value`)
 
 ## [2.112.0] - 2020-01-18
 

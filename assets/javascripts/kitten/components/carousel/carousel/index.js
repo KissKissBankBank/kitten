@@ -158,8 +158,11 @@ class CarouselBase extends Component {
   }
 
   goToPage = indexPageToGo => {
+    const { loop } = this.props
     const { numberOfPages } = this.state
-    const newPage = checkPage(numberOfPages, indexPageToGo)
+    const newPage = loop
+      ? checkPageLoop(numberOfPages, indexPageToGo)
+      : checkPage(numberOfPages, indexPageToGo)
     this.viewedPages.add(newPage)
     this.setState({ currentPageIndex: newPage })
   }

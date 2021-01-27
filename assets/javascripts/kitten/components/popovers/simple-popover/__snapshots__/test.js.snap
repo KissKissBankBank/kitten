@@ -56,7 +56,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   min-height: initial;
@@ -110,6 +109,11 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   color: #fff;
 }
 
+.c1:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c1:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -145,7 +149,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: 10rem;
   min-height: 2.5rem;
@@ -196,6 +199,11 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   color: #fff;
 }
 
+.c9:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c9:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -231,7 +239,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: 10rem;
   min-height: 2.5rem;
@@ -280,6 +287,11 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c10:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c10:disabled {
@@ -561,7 +573,6 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   min-height: initial;
@@ -613,6 +624,11 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c1:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c1:disabled {

@@ -7,11 +7,11 @@ import { createRangeFromZeroTo } from './../../../../helpers/utils/range';
 var BulletPointStyles = styled.div.withConfig({
   displayName: "pagination__BulletPointStyles",
   componentId: "sc-1thdyq2-0"
-})(["min-width:", ";min-height:", ";margin-left:", ";margin-right:", ";background-color:", ";", ""], pxToRem(6), pxToRem(6), pxToRem(4), pxToRem(4), COLORS.background1, function (_ref) {
+})(["min-width:", ";min-height:", ";margin-left:", ";margin-right:", ";background-color:", ";", " &:focus{outline:", " solid ", ";outline-offset:", ";}"], pxToRem(6), pxToRem(6), pxToRem(4), pxToRem(4), COLORS.background1, function (_ref) {
   var isSelected = _ref.isSelected,
       activeColor = _ref.activeColor;
   return isSelected && css(["background-color:", ";"], activeColor);
-});
+}, COLORS.primary3, pxToRem(2), pxToRem(2));
 var PaginationStyles = styled.div.withConfig({
   displayName: "pagination__PaginationStyles",
   componentId: "sc-1thdyq2-1"
@@ -28,13 +28,17 @@ export var Pagination = function Pagination(_ref2) {
       href: link,
       key: index,
       isSelected: activeIndex === index + 1,
-      activeColor: activeColor
+      "aria-current": activeIndex === index + 1,
+      activeColor: activeColor,
+      tabIndex: "0"
     });
   }), hasNoLinks && createRangeFromZeroTo(totalIndex).map(function (_, index) {
     return /*#__PURE__*/React.createElement(BulletPointStyles, {
       key: index,
       isSelected: activeIndex === index + 1,
-      activeColor: activeColor
+      "aria-current": activeIndex === index + 1,
+      activeColor: activeColor,
+      tabIndex: "0"
     });
   }));
 };

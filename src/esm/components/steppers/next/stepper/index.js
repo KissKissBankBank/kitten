@@ -28,7 +28,7 @@ var ItemWrapper = styled.li.withConfig({
 var StepperText = styled(Text).withConfig({
   displayName: "stepper__StepperText",
   componentId: "sc-1c0a5ko-3"
-})(["display:flex;align-items:center;white-space:nowrap;"]);
+})(["display:flex;align-items:center;white-space:nowrap;transition:color 0.2s ease;border-radius:", ";&:focus{outline:", " solid ", ";outline-offset:", ";}"], pxToRem(6), COLORS.primary3, pxToRem(2), pxToRem(2));
 
 var StepperIcon = function StepperIcon(_ref) {
   var state = _ref.state;
@@ -52,12 +52,13 @@ export var StepperItem = function StepperItem(_ref2) {
 
   return /*#__PURE__*/React.createElement(ItemWrapper, _extends({
     state: state
-  }, props), /*#__PURE__*/React.createElement(StepperIcon, {
-    state: state
-  }), /*#__PURE__*/React.createElement(StepperText, {
+  }, props), /*#__PURE__*/React.createElement(StepperText, {
     weight: "regular",
-    size: "tiny"
-  }, children));
+    size: "tiny",
+    tabIndex: "0"
+  }, /*#__PURE__*/React.createElement(StepperIcon, {
+    state: state
+  }), children));
 };
 StepperItem.propTypes = {
   state: PropTypes.oneOf(['default', 'progress', 'validated']),
@@ -88,9 +89,9 @@ export var StepperLink = function StepperLink(_ref3) {
     href: href,
     target: external ? '_blank' : '_self',
     rel: external ? 'nofollow noopener noreferrer' : ''
-  }, linkProps), /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(StepperIcon, {
+  }, linkProps), /*#__PURE__*/React.createElement(StepperIcon, {
     state: state
-  }), children)));
+  }), children));
 };
 StepperLink.propTypes = {
   href: PropTypes.string.isRequired,

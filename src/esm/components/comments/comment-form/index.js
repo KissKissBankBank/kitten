@@ -65,7 +65,7 @@ var StyledInput = styled.div.withConfig({
 var StyledTextarea = styled.textarea.withConfig({
   displayName: "comment-form__StyledTextarea",
   componentId: "sc-1yidca9-3"
-})(["color:", ";", ";width:100%;overflow-y:hidden;resize:none;box-sizing:border-box;border-width:", ";border-style:solid;border-color:", ";color:", ";padding:", ";font-size:", ";@media (min-width:", "px){font-size:", ";}:focus{outline:none;border-color:", ";color:", ";}::placeholder{color:", ";}", " ", ""], COLORS.font2, TYPOGRAPHY.fontStyles.light, pxToRem(2), COLORS.line1, COLORS.font1, pxToRem(30), stepToRem(-1), ScreenConfig.S.min, stepToRem(0), COLORS.line2, COLORS.font1, COLORS.font2, function (_ref) {
+})(["color:", ";", ";width:100%;overflow-y:hidden;resize:none;box-sizing:border-box;border-width:", ";border-style:solid;border-color:", ";color:", ";padding:", ";font-size:", ";@media (min-width:", "px){font-size:", ";}&:focus{outline:", " solid ", ";outline-offset:", ";border-color:", ";color:", ";}::placeholder{color:", ";}", " ", ""], COLORS.font2, TYPOGRAPHY.fontStyles.light, pxToRem(2), COLORS.line1, COLORS.font1, pxToRem(30), stepToRem(-1), ScreenConfig.S.min, stepToRem(0), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.line2, COLORS.font1, COLORS.font2, function (_ref) {
   var isDisabled = _ref.isDisabled;
   return isDisabled && css(_templateObject(), COLORS.line1, COLORS.font2, COLORS.line1);
 }, function (_ref2) {

@@ -35,7 +35,7 @@ var _text = require("../../../components/typography/text");
 
 var _label = require("../../../components/form/label");
 
-var _button = require("../../../components/buttons/button");
+var _button = require("../../../components/buttons/button/button");
 
 var _screenConfig = require("../../../constants/screen-config");
 
@@ -120,7 +120,7 @@ var TextInputWithUnitForm = /*#__PURE__*/function (_PureComponent) {
         col: "12",
         className: "k-u-align-".concat(align)
       }, /*#__PURE__*/_react.default.createElement(_button.Button, {
-        size: "big",
+        big: true,
         modifier: "helium",
         type: "submit",
         onMouseEnter: onButtonMouseEnter,

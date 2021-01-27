@@ -23,6 +23,7 @@ const Summary = styled.summary`
 export const Details = ({
   children,
   summaryRender,
+  summaryProps,
   open: openDefault,
   onToggle,
   ...props
@@ -36,7 +37,7 @@ export const Details = ({
 
   return (
     <details onToggle={handleToggle} open={openDefault} {...props}>
-      <Summary>{summaryRender({ open })}</Summary>
+      <Summary {...summaryProps}>{summaryRender({ open })}</Summary>
 
       {children}
     </details>
@@ -45,11 +46,13 @@ export const Details = ({
 
 Details.propTypes = {
   summaryRender: PropTypes.func.isRequired,
+  summaryProps: PropTypes.object,
   onToggle: PropTypes.func,
   open: PropTypes.bool,
 }
 
 Details.defaultProps = {
+  summaryProps: {},
   onToggle: () => {},
   open: false,
 }

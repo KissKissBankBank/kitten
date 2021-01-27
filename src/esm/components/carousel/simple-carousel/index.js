@@ -20,10 +20,10 @@ import { VisuallyHidden } from '../../../components/accessibility/visually-hidde
 var StyledContainer = styled.div.withConfig({
   displayName: "simple-carousel__StyledContainer",
   componentId: "sc-3yj2mb-0"
-})(["", " display:-ms-grid;display:grid;grid-gap:0;gap:0;> div{grid-column:1;grid-row:1;visibility:visible;opacity:1;transition:all 0.8s ease-in-out;&[aria-hidden='true']{visibility:hidden;opacity:0;pointer-events:none;}}"], function (_ref) {
+})(["", " display:-ms-grid;display:grid;grid-gap:0;gap:0;> div{grid-column:1;grid-row:1;visibility:visible;opacity:1;transition:all 0.8s ease-in-out;&[aria-hidden='true']{visibility:hidden;opacity:0;pointer-events:none;}}button,a{&:focus{outline:", " solid ", ";outline-offset:", ";}}"], function (_ref) {
   var addBottomMargin = _ref.addBottomMargin;
   return addBottomMargin && css(["margin-bottom:", ";"], pxToRem(40));
-});
+}, COLORS.primary3, pxToRem(2), pxToRem(2));
 var StyledPagination = styled.div.withConfig({
   displayName: "simple-carousel__StyledPagination",
   componentId: "sc-3yj2mb-1"
@@ -34,10 +34,10 @@ var StyledPagination = styled.div.withConfig({
 var StyledPaginationButton = styled.button.withConfig({
   displayName: "simple-carousel__StyledPaginationButton",
   componentId: "sc-3yj2mb-2"
-})(["margin-right:", ";width:", ";height:", ";border:0;padding:0;border-radius:0;appearance:none;cursor:pointer;transition:background 0.4s ease-in-out;background:", ";vertical-align:top;&[aria-selected='true']{background:", ";}"], pxToRem(5), pxToRem(6), pxToRem(6), function (_ref3) {
+})(["margin-right:", ";width:", ";height:", ";border:0;padding:0;border-radius:0;appearance:none;cursor:pointer;transition:background 0.4s ease-in-out;background:", ";vertical-align:top;&:focus{outline:", " solid ", ";outline-offset:", ";}&[aria-selected='true']{background:", ";}"], pxToRem(5), pxToRem(6), pxToRem(6), function (_ref3) {
   var paginationColor = _ref3.paginationColor;
   return paginationColor;
-}, function (_ref4) {
+}, COLORS.primary4, pxToRem(2), pxToRem(2), function (_ref4) {
   var activePaginationColor = _ref4.activePaginationColor;
   return activePaginationColor;
 });
