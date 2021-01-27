@@ -18,6 +18,24 @@ exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
 </div>
 `;
 
+exports[`<TextInputWithUnit /> with big prop matches with snapshot 1`] = `
+<div
+  className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
+>
+  <input
+    className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
+    disabled={false}
+    name="text"
+    type="number"
+  />
+  <span
+    className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--big"
+  >
+    λ
+  </span>
+</div>
+`;
+
 exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
 <div
   className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"

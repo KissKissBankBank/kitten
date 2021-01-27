@@ -57,6 +57,16 @@ describe('<TextInputWithUnit />', () => {
     })
   })
 
+  describe('with big prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInputWithUnit big />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with variant prop', () => {
     beforeEach(() => {
       component = renderer

@@ -158,6 +158,7 @@ export class TextInputWithUnit extends PureComponent {
             'k-Form-TextInputWithUnit__unit--error': this.props.error,
             'k-Form-TextInputWithUnit__unit--disabled': this.props.disabled,
             'k-Form-TextInputWithUnit__unit--tiny': this.props.tiny,
+            'k-Form-TextInputWithUnit__unit--big': this.props.big,
             'k-Form-TextInputWithUnit__unit--huge': this.props.huge,
             'k-Form-TextInputWithUnit__unit--giant': this.props.giant,
             'k-Form-TextInputWithUnit__unit--hasUnitWord': !!unitWord,
