@@ -2,7 +2,12 @@
 
 exports[`<DevGrid /> with default props matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa fBOtcW k-Dev"
+  className="sc-bdVaJa cpmHh k-Dev"
+  style={
+    Object {
+      "--DevGrid-z-index": 9999,
+    }
+  }
 >
   <div
     className="k-DevBreakpoint"

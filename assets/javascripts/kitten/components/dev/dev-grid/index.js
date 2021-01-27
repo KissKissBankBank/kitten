@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
@@ -14,7 +15,7 @@ const StyledDev = styled.div`
   .k-DevGrid {
     position: fixed;
     top: 0;
-    z-index: 9998;
+    z-index: calc(var(--DevGrid-z-index) - 1);
     width: 100%;
     height: 100%;
     pointer-events: none;
@@ -66,7 +67,7 @@ const StyledDev = styled.div`
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 9999;
+      z-index: var(--DevGrid-z-index);
       width: 2em;
       height: 1.25em;
       padding: 0.25em;
@@ -99,7 +100,7 @@ const StyledDev = styled.div`
 `
 
 // Grid over all elements that is toggled when calling Ctrl+G.
-export const DevGrid = ({ visible, storageKey }) => {
+export const DevGrid = ({ visible, storageKey, zIndex }) => {
   const [isVisible, setVisibility] = useState(visible)
 
   useEffect(() => {
@@ -128,8 +129,10 @@ export const DevGrid = ({ visible, storageKey }) => {
     })
   }
 
-  return isVisible ? (
-    <StyledDev className="k-Dev">
+  if (!isVisible) return null
+
+  return (
+    <StyledDev className="k-Dev" style={{ '--DevGrid-z-index': zIndex }}>
       <div className="k-DevBreakpoint" />
       <div className="k-DevGrid">
         <div className="k-DevGrid__container">
@@ -143,9 +146,17 @@ export const DevGrid = ({ visible, storageKey }) => {
         </div>
       </div>
     </StyledDev>
-  ) : null
+  )
 }
 
 DevGrid.defaultProps = {
   storageKey: 'k-devgrid',
+  zIndex: 9999,
+  visible: false,
+}
+
+DevGrid.propTypes = {
+  storageKey: PropTypes.string,
+  zIndex: PropTypes.number,
+  visible: PropTypes.bool,
 }
