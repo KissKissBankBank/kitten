@@ -26,7 +26,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
         className="sc-bdVaJa chkwVs"
       >
         <div
-          className="sc-bxivhb jQUNJx k-Form-TextInputWithUnit"
+          className="sc-bxivhb eyZjlr k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
         >
           <input
             autoComplete="off"
@@ -96,7 +96,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
         className="sc-bdVaJa chkwVs"
       >
         <div
-          className="sc-bxivhb jQUNJx k-Form-TextInputWithUnit"
+          className="sc-bxivhb eyZjlr k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
         >
           <input
             autoComplete="off"
@@ -164,7 +164,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
         className="sc-bdVaJa chkwVs"
       >
         <div
-          className="sc-bxivhb jQUNJx k-Form-TextInputWithUnit"
+          className="sc-bxivhb eyZjlr k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
         >
           <input
             autoComplete="off"
@@ -232,7 +232,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
         className="sc-bdVaJa CoxgX"
       >
         <div
-          className="sc-bxivhb jQUNJx k-Form-TextInputWithUnit"
+          className="sc-bxivhb eyZjlr k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
         >
           <input
             autoComplete="off"
