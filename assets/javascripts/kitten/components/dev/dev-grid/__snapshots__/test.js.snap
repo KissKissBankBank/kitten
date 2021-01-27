@@ -2,7 +2,7 @@
 
 exports[`<DevGrid /> with default props matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa dMyGje k-Dev"
+  className="sc-bdVaJa fBOtcW k-Dev"
 >
   <div
     className="k-DevBreakpoint"
