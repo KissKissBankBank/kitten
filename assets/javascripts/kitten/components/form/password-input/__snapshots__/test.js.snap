@@ -5,7 +5,7 @@ exports[`<PasswordInput /> should match its empty snapshot 1`] = `
   className="sc-htpNat faDumh k-Form-PasswordInput"
 >
   <input
-    className="sc-bdVaJa bBSQJM k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--big"
+    className="sc-bdVaJa bBSQJM k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
     disabled={false}
     id="password"
     name="password"
