@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `VerticalStepper` mobile style fixes.
 - Feature: Add `variant` prop to `TextInputWithUnit`, defaults to `andromeda`.
+- Feature: Add `big` prop to `TextInputWithUnit`.
 
 ## [2.113.0] - 2020-01-21
 
