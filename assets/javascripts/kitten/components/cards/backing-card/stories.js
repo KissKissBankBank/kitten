@@ -11,6 +11,8 @@ import {
   Title,
   Tag,
   Carousel,
+  TextInputWithUnit,
+  Label,
 } from '../../../index'
 import { useMedia } from '../../../helpers/utils/use-media-query'
 import { getMinQuery } from '../../../helpers/utils/media-queries'
@@ -674,6 +676,13 @@ export const InACarouselComponent = () => {
               <strong className="k-u-weight-regular">2/6</strong> disponibles
             </Tag>
           </BackingCard.TagList>
+          <BackingCard.Button>Je soutiens</BackingCard.Button>
+        </BackingCard>
+
+        <BackingCard>
+          <BackingCard.Title>Je donne ce que je veux</BackingCard.Title>
+          <Label htmlFor="text_input_with_unit">Montant de votre don</Label>
+          <TextInputWithUnit id="text_input_with_unit" variant="orion" />
           <BackingCard.Button>Je soutiens</BackingCard.Button>
         </BackingCard>
 
