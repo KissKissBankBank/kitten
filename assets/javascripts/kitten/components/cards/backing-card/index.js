@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import { StyledBackingCard } from './styles'
 import {
   Info,
+  Form,
   Title,
   Image,
   Amount,
@@ -43,6 +44,7 @@ export const BackingCard = ({ children, className, disabled, ...props }) => {
 }
 
 BackingCard.Info = Info
+BackingCard.Form = Form
 BackingCard.Title = Title
 BackingCard.Image = Image
 BackingCard.Amount = Amount

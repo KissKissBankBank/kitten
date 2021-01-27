@@ -681,8 +681,19 @@ export const InACarouselComponent = () => {
 
         <BackingCard>
           <BackingCard.Title>Je donne ce que je veux</BackingCard.Title>
-          <Label htmlFor="text_input_with_unit">Montant de votre don</Label>
-          <TextInputWithUnit id="text_input_with_unit" variant="orion" />
+          <BackingCard.Form>
+            <Label
+              htmlFor="text_input_with_unit"
+              className="k-u-margin-bottom-single"
+            >
+              Montant de votre don
+            </Label>
+            <TextInputWithUnit
+              id="text_input_with_unit"
+              variant="orion"
+              unit="€"
+            />
+          </BackingCard.Form>
           <BackingCard.Button>Je soutiens</BackingCard.Button>
         </BackingCard>
 

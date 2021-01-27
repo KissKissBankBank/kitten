@@ -139,6 +139,13 @@ export const StyledBackingCard = styled.article`
     white-space: nowrap;
   }
 
+  .k-BackingCard__formWrapper {
+    .k-Form-TextInputWithUnit .k-Form-TextInputWithUnit__input {
+      width: unset;
+      min-width: 0;
+    }
+  }
+
   .k-BackingCard__tagList {
     list-style: none;
     margin: 0;
