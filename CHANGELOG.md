@@ -23,6 +23,11 @@ Breaking Changes:
   - `k-ProjectCard`
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
+- Remove `k-DevGrid` styles.
+
+Features:
+
+- Migrate `DevGrid` from SASS to Styled Components.
 
 ## [2.113.0] - 2020-01-21
 
