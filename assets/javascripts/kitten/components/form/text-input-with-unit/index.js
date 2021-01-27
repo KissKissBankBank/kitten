@@ -58,6 +58,7 @@ const StyledTextInputWithUnit = styled.div`
     &.k-Form-TextInputWithUnit__unit--tiny {
       padding: 0 ${pxToRem(10)};
     }
+    &.k-Form-TextInputWithUnit__unit--big,
     &.k-Form-TextInputWithUnit__unit--huge {
       padding: 0 ${pxToRem(20)};
     }
@@ -76,6 +77,21 @@ const StyledTextInputWithUnit = styled.div`
       color: ${COLORS.font1};
     }
   }
+
+  &.k-Form-TextInputWithUnit--orion {
+    .k-Form-TextInputWithUnit__input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .k-Form-TextInputWithUnit__unit {
+      border-top-right-radius: ${pxToRem(4)};
+      border-bottom-right-radius: ${pxToRem(4)};
+    }
+    .k-Form-TextInputWithUnit__unit--big {
+      border-top-right-radius: ${pxToRem(8)};
+      border-bottom-right-radius: ${pxToRem(8)};
+    }
+  }
 `
 
 export class TextInputWithUnit extends PureComponent {
@@ -91,6 +107,7 @@ export class TextInputWithUnit extends PureComponent {
     unit: PropTypes.string,
     unitWord: PropTypes.bool,
     digits: PropTypes.number,
+    variant: PropTypes.oneOf(['andromeda', 'orion']),
   }
 
   static defaultProps = {
@@ -105,6 +122,7 @@ export class TextInputWithUnit extends PureComponent {
     center: false,
     disabled: false,
     digits: null,
+    variant: 'andromeda',
   }
 
   constructor(props) {
@@ -116,9 +134,13 @@ export class TextInputWithUnit extends PureComponent {
 
     return (
       <StyledTextInputWithUnit
-        className={classNames('k-Form-TextInputWithUnit', {
-          'k-Form-TextInputWithUnit--hasDigits': !!this.props.digits,
-        })}
+        className={classNames(
+          'k-Form-TextInputWithUnit',
+          `k-Form-TextInputWithUnit--${this.props.variant}`,
+          {
+            'k-Form-TextInputWithUnit--hasDigits': !!this.props.digits,
+          },
+        )}
       >
         <TextInput
           ref={input => {

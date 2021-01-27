@@ -45,10 +45,22 @@ describe('<TextInputWithUnit />', () => {
     })
   })
 
-  describe('with unit prop', () => {
+  describe('with unit', () => {
     beforeEach(() => {
       component = renderer
         .create(<TextInputWithUnit>€</TextInputWithUnit>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with variant prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TextInputWithUnit variant="orion">€</TextInputWithUnit>)
         .toJSON()
     })
 
