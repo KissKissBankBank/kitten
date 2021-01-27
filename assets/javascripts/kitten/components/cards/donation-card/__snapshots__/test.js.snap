@@ -61,7 +61,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                 className="sc-bdVaJa chkwVs"
               >
                 <div
-                  className="sc-EHOje eLUeFO k-Form-TextInputWithUnit"
+                  className="sc-EHOje dClcjb k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
                 >
                   <input
                     autoComplete="off"

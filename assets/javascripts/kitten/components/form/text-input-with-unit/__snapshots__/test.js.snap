@@ -2,7 +2,7 @@
 
 exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dsbbMV k-Form-TextInputWithUnit"
+  className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
 >
   <input
     className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
@@ -18,9 +18,27 @@ exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
 </div>
 `;
 
+exports[`<TextInputWithUnit /> with big prop matches with snapshot 1`] = `
+<div
+  className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
+>
+  <input
+    className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
+    disabled={false}
+    name="text"
+    type="number"
+  />
+  <span
+    className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--big"
+  >
+    λ
+  </span>
+</div>
+`;
+
 exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dsbbMV k-Form-TextInputWithUnit"
+  className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
 >
   <input
     className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--disabled"
@@ -38,7 +56,7 @@ exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dsbbMV k-Form-TextInputWithUnit"
+  className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
 >
   <input
     className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--error"
@@ -54,9 +72,9 @@ exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
 </div>
 `;
 
-exports[`<TextInputWithUnit /> with unit prop matches with snapshot 1`] = `
+exports[`<TextInputWithUnit /> with unit matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dsbbMV k-Form-TextInputWithUnit"
+  className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
 >
   <input
     className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
@@ -76,7 +94,7 @@ exports[`<TextInputWithUnit /> with unit prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with valid prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dsbbMV k-Form-TextInputWithUnit"
+  className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
 >
   <input
     className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--valid"
@@ -86,6 +104,26 @@ exports[`<TextInputWithUnit /> with valid prop matches with snapshot 1`] = `
   />
   <span
     className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--valid"
+  >
+    λ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with variant prop matches with snapshot 1`] = `
+<div
+  className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion"
+>
+  <input
+    className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--orion"
+    disabled={false}
+    name="text"
+    type="number"
+  >
+    €
+  </input>
+  <span
+    className="k-Form-TextInputWithUnit__unit"
   >
     λ
   </span>
