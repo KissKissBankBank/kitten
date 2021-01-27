@@ -67,8 +67,6 @@ const StyledInput = styled.input`
   &.k-Form-TextInput--orion {
     border-radius: ${pxToRem(6)};
 
-    
-
     &.k-Form-TextInput--regular {
       border-radius: ${pxToRem(4)};
       height: ${pxToRem(50)};
@@ -89,7 +87,6 @@ const StyledInput = styled.input`
         }
       }
     }
-
   }
 
   // TEXT
