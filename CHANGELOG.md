@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `VerticalStepper` mobile style fixes.
-- Feature: Add `regular` and `big` props on the `andromeda` and `orion` variants of `TextInput` and `regular` prop becomes the default prop.
+- Feature: Add `regular` (default) and `big` props on all variants of `TextInput`.
 
 ## [2.113.0] - 2020-01-21
 
