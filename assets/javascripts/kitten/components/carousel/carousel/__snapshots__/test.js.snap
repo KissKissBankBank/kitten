@@ -22,9 +22,10 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs kHLAVJ k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
+            onFocus={[Function]}
             title="A Lorem ipsum…"
           >
             <div
@@ -153,9 +154,10 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs kHLAVJ k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
+            onFocus={[Function]}
             title="B Lorem ipsum…"
           >
             <div
@@ -311,9 +313,10 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs kHLAVJ k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
+            onFocus={[Function]}
             title="A Lorem ipsum…"
           >
             <div
@@ -442,9 +445,10 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs kHLAVJ k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
+            onFocus={[Function]}
             title="B Lorem ipsum…"
           >
             <div
@@ -608,7 +612,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-htoDjs kHLAVJ k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
+                className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
                 href={null}
                 onClick={[Function]}
                 title="A"
@@ -746,7 +750,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-htoDjs kHLAVJ k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
+                className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
                 href={null}
                 onClick={[Function]}
                 title="A"
@@ -884,7 +888,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-htoDjs kHLAVJ k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
+                className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
                 href={null}
                 onClick={[Function]}
                 title="A"
@@ -1016,9 +1020,10 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs kHLAVJ k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
+            onFocus={[Function]}
             title="A Lorem ipsum…"
           >
             <div
@@ -1147,9 +1152,10 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs kHLAVJ k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
+            onFocus={[Function]}
             title="B Lorem ipsum…"
           >
             <div
@@ -1305,9 +1311,10 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs kHLAVJ k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
+            onFocus={[Function]}
             title="A Lorem ipsum…"
           >
             <div
@@ -1436,9 +1443,10 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs kHLAVJ k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
+            onFocus={[Function]}
             title="B Lorem ipsum…"
           >
             <div
@@ -1600,9 +1608,10 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs kHLAVJ k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
+            onFocus={[Function]}
             title="A Lorem ipsum…"
           >
             <div
@@ -1731,9 +1740,10 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs kHLAVJ k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
+            onFocus={[Function]}
             title="B Lorem ipsum…"
           >
             <div
