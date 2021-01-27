@@ -251,7 +251,7 @@ export class TextInput extends PureComponent {
     error: false,
     tiny: false,
     regular: true,
-    big: true,
+    big: false,
     huge: false,
     giant: false,
     center: false,
