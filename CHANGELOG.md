@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update default values styles and `large` prop on `orion` variant.
 - Fix: `VerticalStepper` mobile style fixes.
 - Feature: Add `variant` prop to `TextInputWithUnit`, defaults to `andromeda`.
 - Feature: Add `big` prop to `TextInputWithUnit`.
