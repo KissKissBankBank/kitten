@@ -102,7 +102,7 @@ export const StyledBackingCard = styled.article`
 
     .k-BackingCard__description__moreButton {
       position: absolute;
-      bottom: 0;
+      top: calc(2 * 1.5 * ${stepToRem(-2)});
       right: 0;
       padding-left: ${pxToRem(40)};
       line-height: 1.5;
@@ -173,6 +173,10 @@ export const StyledBackingCard = styled.article`
     .k-Tag {
       color: ${COLORS.font2};
       background-color: ${COLORS.line1};
+    }
+
+    .k-BackingCard__description__moreButton {
+      color: ${COLORS.font2};
     }
   }
 `
