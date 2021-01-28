@@ -285,7 +285,7 @@ export const DocumentManager = ({
         />
         <Button
           fluid
-          borderRadius={4}
+          borderRadius={6}
           {...buttonProps}
           as="label"
           htmlFor={id}
@@ -295,12 +295,11 @@ export const DocumentManager = ({
           )}
         >
           <div className="k-DocumentManager__uploader__container">
-            <div className="k-DocumentManager__uploader__documentIcon">
+            <div className="k-DocumentManager__uploader__documentIcon k-u-hidden@xs-down">
               <IconContainer status={internalStatus}>
                 {documentIcon}
               </IconContainer>
             </div>
-
             <div className="k-DocumentManager__uploader__content">
               <Text
                 tag="p"
@@ -347,7 +346,7 @@ export const DocumentManager = ({
       >
         <Button
           fluid
-          borderRadius={4}
+          borderRadius={6}
           {...buttonProps}
           as="div"
           className={classNames(
@@ -373,7 +372,7 @@ export const DocumentManager = ({
       )}
     >
       <div className="k-DocumentManager__display__container">
-        <div className="k-DocumentManager__display__documentIcon">
+        <div className="k-DocumentManager__display__documentIcon k-u-hidden@xs-down">
           <IconContainer status={status}>{documentIcon}</IconContainer>
         </div>
 

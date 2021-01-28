@@ -11,14 +11,14 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa isdFiT k-DocumentManager__uploader__button"
+    className="sc-bdVaJa fBWHXD k-DocumentManager__uploader__button"
     htmlFor="DocumentManager"
   >
     <div
       className="k-DocumentManager__uploader__container"
     >
       <div
-        className="k-DocumentManager__uploader__documentIcon"
+        className="k-DocumentManager__uploader__documentIcon k-u-hidden@xs-down"
       >
         <div
           className="sc-gzVnrw bIWWyz k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
@@ -95,14 +95,14 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa bQOVYS k-DocumentManager__uploader__button"
+    className="sc-bdVaJa cuvJhz k-DocumentManager__uploader__button"
     htmlFor="DocumentManager"
   >
     <div
       className="k-DocumentManager__uploader__container"
     >
       <div
-        className="k-DocumentManager__uploader__documentIcon"
+        className="k-DocumentManager__uploader__documentIcon k-u-hidden@xs-down"
       >
         <div
           className="sc-gzVnrw bIWWyz k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
