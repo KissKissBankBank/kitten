@@ -8,6 +8,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `Tag` component.
 - Feature: Add `useMedia` hook.
 - Fix: Fix mixup between `k-u-margin-vertical` and `k-u-margin-horizontal`.
+- Feature: Add `k-u-size-giant` utility.
+- Feature: Add `giant` value to `size` prop to `Text` component.
 - Fix: `VerticalStepper` mobile style fixes.
 - Feature: Add `variant` prop to `TextInputWithUnit`, defaults to `andromeda`.
 - Feature: Add `big` prop to `TextInputWithUnit`.

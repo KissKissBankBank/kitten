@@ -680,7 +680,9 @@ export const InACarouselComponent = () => {
         </BackingCard>
 
         <BackingCard>
-          <BackingCard.Title>Je donne ce que je veux</BackingCard.Title>
+          <BackingCard.Title textSize="giant" strokeSize="default">
+            Je donne ce que je veux
+          </BackingCard.Title>
           <BackingCard.Form>
             <Label
               htmlFor="text_input_with_unit"
