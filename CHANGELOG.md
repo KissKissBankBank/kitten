@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `VerticalStepper` mobile style fixes.
 - Feature: Add `regular` (default) and `big` props on all variants of `TextInput`.
+- Feature: Add `variant` prop to `TextInputWithUnit`, defaults to `andromeda`.
+- Feature: Add `big` prop to `TextInputWithUnit`.
 
 ## [2.113.0] - 2020-01-21
 
@@ -170,7 +172,7 @@ Fixes:
 
 - Fix ref errors on `LazyObserver` and `Dropdown`.
 - Fix `VerticalStepper` styles.
-- Update `error` props on `VerticalStepper` with `variant="orion"`.
+- Update `error` props on `VerticalStepper` with `variant`.
 
 ## [2.101.0] - 2020-11-30
 
