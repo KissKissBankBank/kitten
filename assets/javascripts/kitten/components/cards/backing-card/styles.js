@@ -145,7 +145,7 @@ export const StyledBackingCard = styled.article`
     .k-Form-TextInputWithUnit .k-Form-TextInputWithUnit__input {
       width: unset;
       min-width: 0;
-      flex: 1 0 auto;
+      flex: 1 1 auto;
     }
   }
 
