@@ -23,7 +23,7 @@ Breaking Changes:
   - `k-ProjectCard`
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
-- Remove `k-DevGrid` styles.
+- Remove `k-DevGrid` and `k-DevBreakpoints` styles.
 
 Features:
 
