@@ -177,7 +177,6 @@ const StyledRadioButton = styled.div`
     .k-Form-RadioButton__labelText {
       ${TYPOGRAPHY.fontStyles.regular};
       line-height: ${pxToRem(20)};
-      font-size: ${stepToRem(-1)};
     }
 
     @media (min-width: ${ScreenConfig.S.min}px) {
@@ -189,21 +188,16 @@ const StyledRadioButton = styled.div`
         padding: ${pxToRem(30 - 3)} ${pxToRem(15)};
       }
 
-      .k-Form-RadioButton__labelText {
-        font-size: ${stepToRem(-1)};
-        flex: 1 0 calc(100% - ${pxToRem(20 + 10)});
-        line-height: ${pxToRem(22)};
+      .k-Form-RadioButton__label::before {
+        margin-top: ${pxToRem(2)};
+        width: ${pxToRem(20)};
+        height: ${pxToRem(20)};
       }
 
-      &.k-Form-RadioButton--largeLabel {  
-        .k-Form-RadioButton__labelText {
-          font-size: ${stepToRem(0)};
-        }
-
-        .k-Form-RadioButton__label::before {
-          width: ${pxToRem(20)};
-          height: ${pxToRem(20)};
-        }
+      .k-Form-RadioButton__labelText {
+        font-size: ${stepToRem(0)};
+        flex: 1 0 calc(100% - ${pxToRem(20 + 10)});
+        line-height: ${pxToRem(22)};
       }
 
       .k-Form-RadioButton__labelContents {
