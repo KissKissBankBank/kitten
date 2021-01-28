@@ -32,7 +32,7 @@ export const HeadingTag = ({ text, icon, className, ...props }) => {
 }
 
 HeadingTag.propTypes = {
-  icon: PropTypes.oneOf('star', 'diamond'),
+  icon: PropTypes.oneOf(['star', 'diamond']),
   text: PropTypes.node,
 }
 HeadingTag.defaultProps = {

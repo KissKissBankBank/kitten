@@ -12,12 +12,12 @@ export const Description = ({
   const [displayMoreButton, setMoreButtonDisplay] = useState(false)
 
   useEffect(() => {
-    if (!descriptionElementRef) {
-      return null
-    }
+    if (!descriptionElementRef) return
 
     const parent = descriptionElementRef.current
-    const child = descriptionElementRef.current.children[0]
+    const child = descriptionElementRef.current?.children[0]
+
+    if (!child) return
 
     if (parent.clientHeight < child.clientHeight) {
       setMoreButtonDisplay(true)
