@@ -23,7 +23,7 @@ exports[`<TextInputWithUnit /> with big prop matches with snapshot 1`] = `
   className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
 >
   <input
-    className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
+    className="sc-bdVaJa bBSQJM k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--big"
     disabled={false}
     name="text"
     type="number"
@@ -115,7 +115,7 @@ exports[`<TextInputWithUnit /> with variant prop matches with snapshot 1`] = `
   className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion"
 >
   <input
-    className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--orion"
+    className="sc-bdVaJa bBSQJM k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--orion k-Form-TextInput--regular"
     disabled={false}
     name="text"
     type="number"
