@@ -2,7 +2,7 @@
 
 exports[`<DocumentManager /> should match snapshot 1`] = `
 <div
-  className="sc-ifAKCX ilXKjW k-DocumentManager__uploader"
+  className="sc-ifAKCX iLZtqq k-DocumentManager__uploader"
 >
   <input
     disabled={false}
@@ -18,7 +18,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
       className="k-DocumentManager__uploader__container"
     >
       <div
-        className="k-DocumentManager__uploader__documentIcon k-u-hidden@xs-down"
+        className="k-DocumentManager__uploader__documentIcon"
       >
         <div
           className="sc-gzVnrw bIWWyz k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
@@ -85,7 +85,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
 
 exports[`<DocumentManager /> should match snapshot with props 1`] = `
 <div
-  className="sc-ifAKCX ilXKjW k-DocumentManager__uploader"
+  className="sc-ifAKCX iLZtqq k-DocumentManager__uploader"
 >
   <input
     disabled={false}
@@ -102,7 +102,7 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
       className="k-DocumentManager__uploader__container"
     >
       <div
-        className="k-DocumentManager__uploader__documentIcon k-u-hidden@xs-down"
+        className="k-DocumentManager__uploader__documentIcon"
       >
         <div
           className="sc-gzVnrw bIWWyz k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
