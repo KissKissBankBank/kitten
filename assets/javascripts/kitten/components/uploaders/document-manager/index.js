@@ -13,6 +13,7 @@ import { ClockCircleIcon } from '../../../components/icons/clock-circle-icon'
 import { Loader } from '../../../components/loaders/loader'
 import { DocumentIconEmpty } from '../../../components/icons/document-icon-empty'
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledDocumentUploader = styled.div`
   input[type='file'] {
@@ -84,6 +85,9 @@ const StyledDocumentUploader = styled.div`
     flex: 0 0 auto;
     margin-right: ${pxToRem(20)};
     align-self: flex-start;
+    @media (max-width: ${ScreenConfig.S.min}px) {
+      display: none;
+    }
   }
   .k-DocumentManager__uploader__content {
     flex: 1 1 auto;
@@ -295,7 +299,7 @@ export const DocumentManager = ({
           )}
         >
           <div className="k-DocumentManager__uploader__container">
-            <div className="k-DocumentManager__uploader__documentIcon k-u-hidden@xs-down">
+            <div className="k-DocumentManager__uploader__documentIcon">
               <IconContainer status={internalStatus}>
                 {documentIcon}
               </IconContainer>
@@ -372,7 +376,7 @@ export const DocumentManager = ({
       )}
     >
       <div className="k-DocumentManager__display__container">
-        <div className="k-DocumentManager__display__documentIcon k-u-hidden@xs-down">
+        <div className="k-DocumentManager__display__documentIcon">
           <IconContainer status={status}>{documentIcon}</IconContainer>
         </div>
 
