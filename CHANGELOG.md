@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `VerticalStepper` mobile style fixes.
+- Feature: Add `regular` (default) and `big` props on all variants of `TextInput`.
 - Feature: Add `variant` prop to `TextInputWithUnit`, defaults to `andromeda`.
 - Feature: Add `big` prop to `TextInputWithUnit`.
 - Feature: Change `DocumentManager` `radius` and hide icon on `xs` screen.
