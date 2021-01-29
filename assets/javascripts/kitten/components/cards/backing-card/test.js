@@ -25,7 +25,7 @@ describe('<BackingCard />', () => {
       component = renderer
         .create(
           <BackingCard>
-            <BackingCard disabled>
+            <BackingCard disabled hasBorder={false}>
               <BackingCard.Image>
                 <img src="/kitten.jpg" alt="" />
               </BackingCard.Image>
@@ -42,7 +42,7 @@ describe('<BackingCard />', () => {
                 legend="Livraison estimée&nbsp;:"
                 value="Janvier 2022"
               />
-              <BackingCard.Description moreButtonText="See more…">
+              <BackingCard.Description moreButtonText="See more…" truncateText>
                 <p className="k-u-margin-none">
                   Maecenas tempus, tellus eget condimentum rhoncus, sem quam
                   semper libero, sit amet adipiscing sem neque sed ipsum.
