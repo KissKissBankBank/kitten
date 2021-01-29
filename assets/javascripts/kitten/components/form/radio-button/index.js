@@ -179,6 +179,23 @@ const StyledRadioButton = styled.div`
       line-height: ${pxToRem(20)};
     }
 
+    &.k-Form-RadioButton--regular,
+    &.k-Form-RadioButton--big {
+      .k-Form-RadioButton__label {
+        .k-Form-RadioButton__labelText {
+          font-size: ${stepToRem(-1)};
+        }
+      }
+    }
+
+    &.k-Form-RadioButton--regular,
+    &.k-Form-RadioButton--big {
+      .k-Form-RadioButton__label::before {
+        width: ${pxToRem(16)};
+        height: ${pxToRem(16)};
+      }
+    }
+
     @media (min-width: ${ScreenConfig.S.min}px) {
       margin: ${pxToRem(20)} 0;
 
@@ -188,14 +205,15 @@ const StyledRadioButton = styled.div`
         padding: ${pxToRem(30 - 3)} ${pxToRem(15)};
       }
 
-      .k-Form-RadioButton__label::before {
-        margin-top: ${pxToRem(2)};
-        width: ${pxToRem(20)};
-        height: ${pxToRem(20)};
+      &.k-Form-RadioButton--big {
+        .k-Form-RadioButton__label::before {
+          margin-top: ${pxToRem(2)};
+          width: ${pxToRem(20)};
+          height: ${pxToRem(20)};
+        }
       }
 
       .k-Form-RadioButton__labelText {
-        font-size: ${stepToRem(0)};
         flex: 1 0 calc(100% - ${pxToRem(20 + 10)});
         line-height: ${pxToRem(22)};
       }
@@ -207,6 +225,14 @@ const StyledRadioButton = styled.div`
 
       .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {
         border-width: ${pxToRem(6)};
+      }
+
+      &.k-Form-RadioButton--big {
+        .k-Form-RadioButton__label {
+          .k-Form-RadioButton__labelText {
+            font-size: ${stepToRem(0)};
+          }
+        }
       }
     }
   }
@@ -238,6 +264,7 @@ export const RadioButton = ({
   inputClassName,
   large,
   largeContent,
+  size,
   text,
   error,
   disabled,
@@ -252,6 +279,7 @@ export const RadioButton = ({
         className,
         `k-Form-RadioButton--${variant}`,
         `k-Form-RadioButton--${design}`,
+        `k-Form-RadioButton--${size}`,
         {
           'k-Form-RadioButton--error': error,
           'k-Form-RadioButton--largeLabel': large,
@@ -292,6 +320,7 @@ RadioButton.propTypes = {
   disabled: PropTypes.bool,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   design: PropTypes.oneOf(['disc', 'check']),
+  size: PropTypes.oneOf(['regular', 'big']),
 }
 
 RadioButton.defaultProps = {
@@ -301,4 +330,5 @@ RadioButton.defaultProps = {
   disabled: false,
   variant: 'andromeda',
   design: 'disc',
+  size: 'regular',
 }
