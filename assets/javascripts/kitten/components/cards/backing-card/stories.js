@@ -67,7 +67,10 @@ export const Default = () => {
               legend="Livraison estimée&nbsp;:"
               value="Janvier 2022"
             />
-            <BackingCard.Description moreButtonText="See more…">
+            <BackingCard.Description
+              moreButtonText="See more…"
+              truncateText={boolean('Truncate text', false)}
+            >
               <p className="k-u-margin-none">
                 Maecenas tempus, tellus eget condimentum rhoncus, sem quam
                 semper libero, sit amet adipiscing sem neque sed ipsum.
@@ -512,7 +515,7 @@ export const InACarouselComponent = () => {
             legend="Livraison estimée&nbsp;:"
             value="Janvier 2022"
           />
-          <BackingCard.Description moreButtonText="See more…">
+          <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
@@ -558,7 +561,7 @@ export const InACarouselComponent = () => {
             legend="Livraison estimée&nbsp;:"
             value="Janvier 2022"
           />
-          <BackingCard.Description moreButtonText="See more…">
+          <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
@@ -604,7 +607,7 @@ export const InACarouselComponent = () => {
             legend="Livraison estimée&nbsp;:"
             value="Janvier 2022"
           />
-          <BackingCard.Description moreButtonText="See more…">
+          <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
@@ -647,7 +650,7 @@ export const InACarouselComponent = () => {
             legend="Livraison estimée&nbsp;:"
             value="Janvier 2022"
           />
-          <BackingCard.Description moreButtonText="See more…">
+          <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
@@ -708,7 +711,7 @@ export const InACarouselComponent = () => {
             Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
           </BackingCard.Title>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description moreButtonText="See more…">
+          <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
@@ -746,7 +749,7 @@ export const InACarouselComponent = () => {
             Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
           </BackingCard.Title>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description moreButtonText="See more…">
+          <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
@@ -783,7 +786,7 @@ export const InACarouselComponent = () => {
             <img src="/kitten.jpg" alt="" />
           </BackingCard.Image>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description moreButtonText="See more…">
+          <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.
@@ -817,7 +820,7 @@ export const InACarouselComponent = () => {
 
         <BackingCard disabled>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description moreButtonText="See more…">
+          <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
               Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
               libero, sit amet adipiscing sem neque sed ipsum.

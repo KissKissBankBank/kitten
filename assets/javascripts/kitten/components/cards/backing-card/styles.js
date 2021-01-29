@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 
 export const StyledBackingCard = styled.article`
@@ -32,6 +31,7 @@ export const StyledBackingCard = styled.article`
     grid-gap: ${pxToRem(20)};
     align-content: start;
     overflow: hidden;
+    text-align: left;
 
     .k-BackingCard__drawer {
       grid-column: row-start / span row-end;
@@ -90,27 +90,27 @@ export const StyledBackingCard = styled.article`
     overflow: hidden;
     position: relative;
 
-    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+    &.k-BackingCard__descriptionWrapper--truncateText {
       max-height: calc(3 * 1.5 * ${stepToRem(-2)});
+
+      .k-BackingCard__description__moreButton {
+        position: absolute;
+        top: calc(2 * 1.5 * ${stepToRem(-2)});
+        right: 0;
+        padding-left: ${pxToRem(40)};
+        line-height: 1.5;
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) ${pxToRem(
+          30,
+        )});
+      }
     }
 
-
     .k-BackingCard__description * {
+      ${TYPOGRAPHY.fontStyles.regular}
       font-size: ${stepToRem(-2)};
       line-height: 1.5;
     }
 
-    .k-BackingCard__description__moreButton {
-      position: absolute;
-      top: calc(2 * 1.5 * ${stepToRem(-2)});
-      right: 0;
-      padding-left: ${pxToRem(40)};
-      line-height: 1.5;
-      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) ${pxToRem(
-        30,
-      )});
-
-    }
   }
 
   .k-BackingCard__headingTag {
