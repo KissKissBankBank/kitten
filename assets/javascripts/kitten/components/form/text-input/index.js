@@ -307,11 +307,6 @@ export class TextInput extends PureComponent {
                 'k-Form-TextInput--valid': valid,
                 'k-Form-TextInput--error': error,
                 'k-Form-TextInput--disabled': disabled,
-                'k-Form-TextInput--tiny': tiny,
-                'k-Form-TextInput--regular': regular,
-                'k-Form-TextInput--big': big,
-                'k-Form-TextInput--huge': huge,
-                'k-Form-TextInput--giant': giant,
                 'k-Form-TextInput--alignCenter': center,
               },
             )}
