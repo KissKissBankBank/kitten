@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `regular` (default) and `big` props on all variants of `TextInput`.
 - Feature: Add `variant` prop to `TextInputWithUnit`, defaults to `andromeda`.
 - Feature: Add `big` prop to `TextInputWithUnit`.
+- Feature: Change `DocumentManager` `radius` and hide icon on `xs` screen.
 
 ## [2.113.0] - 2020-01-21
 
