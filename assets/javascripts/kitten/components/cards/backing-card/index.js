@@ -1,4 +1,5 @@
 import React, { cloneElement } from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { StyledBackingCard } from './styles'
 import {
@@ -13,12 +14,19 @@ import {
   Description,
 } from './components'
 
-export const BackingCard = ({ children, className, disabled, ...props }) => {
+export const BackingCard = ({
+  children,
+  className,
+  disabled,
+  hasBorder,
+  ...props
+}) => {
   return (
     <StyledBackingCard
       {...props}
       className={classNames('k-BackingCard', className, {
         'k-BackingCard--disabled': disabled,
+        'k-BackingCard--hasBorder': hasBorder,
       })}
     >
       {React.Children.map(children, child => {
@@ -52,3 +60,13 @@ BackingCard.Button = Button
 BackingCard.TagList = TagList
 BackingCard.HeadingTag = HeadingTag
 BackingCard.Description = Description
+
+BackingCard.defaultProps = {
+  hasBorder: true,
+  disabled: false,
+}
+
+BackingCard.propTypes = {
+  hasBorder: PropTypes.bool,
+  disabled: PropTypes.bool,
+}

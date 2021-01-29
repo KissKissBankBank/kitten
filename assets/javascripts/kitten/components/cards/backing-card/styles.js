@@ -4,8 +4,8 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 
 export const StyledBackingCard = styled.article`
-  --backingCard--border-width: ${pxToRem(2)};
-  --backingCard--border-radius: ${pxToRem(8)};
+  --backingCard--border-width: 0;
+  --backingCard--border-radius: 0;
   --backingCard--grid-min: ${pxToRem(120)};
 
   /* CARD STYLE */
@@ -14,6 +14,11 @@ export const StyledBackingCard = styled.article`
   border-radius: var(--backingCard--border-radius);
   display: flex;
   flex-direction: column;
+
+  &.k-BackingCard--hasBorder {
+    --backingCard--border-width: ${pxToRem(2)};
+    --backingCard--border-radius: ${pxToRem(8)};
+  }
 
   /* STRUCTURE */
 

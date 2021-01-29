@@ -50,7 +50,10 @@ export const Default = () => {
     <Container className="k-u-margin-vertical-quadruple">
       <Grid>
         <GridCol col="6" col-l="3">
-          <BackingCard disabled={boolean('Disabled', false)}>
+          <BackingCard
+            disabled={boolean('Disabled', false)}
+            hasBorder={boolean('Has border', true)}
+          >
             <BackingCard.Image>
               <img src="/kitten.jpg" alt="" />
             </BackingCard.Image>
