@@ -31,8 +31,6 @@ const StyledInput = styled.input`
 
   // SIZES
 
-  height: ${pxToRem(50)};
-
   &.k-Form-TextInput--tiny {
     height: ${pxToRem(40)};
   }
@@ -65,14 +63,13 @@ const StyledInput = styled.input`
   padding: ${pxToRem(10)} var(--input-padding-horizontal);
 
   &.k-Form-TextInput--orion {
-    border-radius: ${pxToRem(6)};
-
     &.k-Form-TextInput--regular {
       border-radius: ${pxToRem(4)};
       height: ${pxToRem(50)};
     }
 
     &.k-Form-TextInput--big {
+      border-radius: ${pxToRem(6)};
       height: ${pxToRem(60)};
 
       @media (min-width: ${ScreenConfig.M.min}px) {

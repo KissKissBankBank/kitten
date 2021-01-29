@@ -5,7 +5,7 @@ exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
   className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
 >
   <input
-    className="sc-bdVaJa bBSQJM k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
     disabled={false}
     name="text"
     type="number"
@@ -23,7 +23,7 @@ exports[`<TextInputWithUnit /> with big prop matches with snapshot 1`] = `
   className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
 >
   <input
-    className="sc-bdVaJa bBSQJM k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--big"
+    className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--big"
     disabled={false}
     name="text"
     type="number"
@@ -41,7 +41,7 @@ exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
   className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
 >
   <input
-    className="sc-bdVaJa bBSQJM k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--disabled k-Form-TextInput--regular"
+    className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--disabled k-Form-TextInput--regular"
     disabled={true}
     name="text"
     type="number"
@@ -59,7 +59,7 @@ exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
   className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
 >
   <input
-    className="sc-bdVaJa bBSQJM k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
+    className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
     disabled={false}
     name="text"
     type="number"
@@ -77,7 +77,7 @@ exports[`<TextInputWithUnit /> with unit matches with snapshot 1`] = `
   className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
 >
   <input
-    className="sc-bdVaJa bBSQJM k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
     disabled={false}
     name="text"
     type="number"
@@ -97,7 +97,7 @@ exports[`<TextInputWithUnit /> with valid prop matches with snapshot 1`] = `
   className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
 >
   <input
-    className="sc-bdVaJa bBSQJM k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--valid k-Form-TextInput--regular"
+    className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--valid k-Form-TextInput--regular"
     disabled={false}
     name="text"
     type="number"
@@ -115,7 +115,7 @@ exports[`<TextInputWithUnit /> with variant prop matches with snapshot 1`] = `
   className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion"
 >
   <input
-    className="sc-bdVaJa bBSQJM k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--orion k-Form-TextInput--regular"
+    className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--orion k-Form-TextInput--regular"
     disabled={false}
     name="text"
     type="number"
