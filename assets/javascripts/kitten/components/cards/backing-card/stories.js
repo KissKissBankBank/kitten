@@ -75,8 +75,10 @@ export const Default = () => {
               truncateText={boolean('Truncate text', false)}
             >
               <p className="k-u-margin-none">
-                Maecenas tempus, tellus eget condimentum rhoncus, sem quam
-                semper libero, sit amet adipiscing sem neque sed ipsum.
+                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+                tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+                <em className="k-u-style-italic">sit amet adipiscing</em> sem
+                neque sed ipsum.
               </p>
               <p className="k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -133,8 +135,10 @@ const Row = props => {
           />
           <BackingCard.Description moreButtonText="See more…">
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -179,8 +183,10 @@ const Row = props => {
           />
           <BackingCard.Description moreButtonText="See more…">
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -225,8 +231,10 @@ const Row = props => {
           />
           <BackingCard.Description moreButtonText="See more…">
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -268,8 +276,10 @@ const Row = props => {
           />
           <BackingCard.Description moreButtonText="See more…">
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -308,8 +318,10 @@ const Row = props => {
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Description moreButtonText="See more…">
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -345,8 +357,10 @@ const Row = props => {
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Description moreButtonText="See more…">
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -382,8 +396,10 @@ const Row = props => {
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Description moreButtonText="See more…">
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -416,8 +432,10 @@ const Row = props => {
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Description moreButtonText="See more…">
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -520,8 +538,10 @@ export const InACarouselComponent = () => {
           />
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -566,8 +586,10 @@ export const InACarouselComponent = () => {
           />
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -612,8 +634,10 @@ export const InACarouselComponent = () => {
           />
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -655,8 +679,10 @@ export const InACarouselComponent = () => {
           />
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -716,8 +742,10 @@ export const InACarouselComponent = () => {
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -754,8 +782,10 @@ export const InACarouselComponent = () => {
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -791,8 +821,10 @@ export const InACarouselComponent = () => {
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -825,8 +857,10 @@ export const InACarouselComponent = () => {
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-              libero, sit amet adipiscing sem neque sed ipsum.
+              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+              <em className="k-u-style-italic">sit amet adipiscing</em> sem
+              neque sed ipsum.
             </p>
             <p className="k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
