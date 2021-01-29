@@ -85,7 +85,7 @@ const StyledDocumentUploader = styled.div`
     flex: 0 0 auto;
     margin-right: ${pxToRem(20)};
     align-self: flex-start;
-    @media (max-width: ${ScreenConfig.S.min}px) {
+    @media (max-width: ${pxToRem(ScreenConfig.S.min)}) {
       display: none;
     }
   }
