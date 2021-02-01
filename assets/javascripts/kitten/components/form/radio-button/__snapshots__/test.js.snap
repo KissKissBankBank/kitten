@@ -2,7 +2,7 @@
 
 exports[`<RadioButton /> default matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa gqEzXH k-Form-RadioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
+  className="sc-bdVaJa dEtMHp k-Form-RadioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
 >
   <input
     className="k-Form-RadioButton__input"

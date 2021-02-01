@@ -59,6 +59,7 @@ const StyledRadioButton = styled.div`
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
   }
+
   .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {
     border: ${pxToRem(5)} solid ${COLORS.primary1};
   }
@@ -91,7 +92,6 @@ const StyledRadioButton = styled.div`
       border-color: ${COLORS.line2};
     }
   }
-
 
   /* Label text styles */
 
@@ -153,6 +153,11 @@ const StyledRadioButton = styled.div`
   &.k-Form-RadioButton--orion {
     margin: ${pxToRem(15)} 0;
 
+    .k-Form-RadioButton__label::before {
+      width: ${pxToRem(16)};
+      height: ${pxToRem(16)};
+    }
+
     .k-Form-RadioButton__label {
       box-sizing: border-box;
       padding: ${pxToRem(18)} ${pxToRem(15)};
@@ -177,21 +182,7 @@ const StyledRadioButton = styled.div`
     .k-Form-RadioButton__labelText {
       ${TYPOGRAPHY.fontStyles.regular};
       line-height: ${pxToRem(20)};
-    }
-
-    &.k-Form-RadioButton--regular,
-    &.k-Form-RadioButton--big {
-      .k-Form-RadioButton__labelText {
-        font-size: ${stepToRem(-1)};
-      }
-    }
-
-    &.k-Form-RadioButton--regular,
-    &.k-Form-RadioButton--big {
-      .k-Form-RadioButton__label::before {
-        width: ${pxToRem(16)};
-        height: ${pxToRem(16)};
-      }
+      font-size: ${stepToRem(-1)};
     }
 
     @media (min-width: ${ScreenConfig.S.min}px) {
@@ -225,14 +216,13 @@ const StyledRadioButton = styled.div`
         border-width: ${pxToRem(6)};
       }
 
-      &.k-Form-RadioButton--big {{
+      &.k-Form-RadioButton--big {
         .k-Form-RadioButton__labelText {
           font-size: ${stepToRem(0)};
         }
       }
     }
   }
-
 
   /* DESIGN = "check" */
 
@@ -246,11 +236,11 @@ const StyledRadioButton = styled.div`
     &.k-Form-RadioButton--error .k-Form-RadioButton__input:checked:not(:disabled) + .k-Form-RadioButton__label::before {
       background-color: ${COLORS.error};
     }
+
     .k-Form-RadioButton__input:disabled + .k-Form-RadioButton__label::before {
       background-color: ${COLORS.line2};
     }
   }
-
 `
 
 export const RadioButton = ({
