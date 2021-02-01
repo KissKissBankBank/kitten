@@ -6,7 +6,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 export const StyledBackingCard = styled.article`
   --backingCard--border-width: 0;
   --backingCard--border-radius: 0;
-  --backingCard--grid-min: ${pxToRem(120)};
+  --backingCard--grid-col: repeat(auto-fit, minmax(${pxToRem(120)}, 1fr));
 
   /* CARD STYLE */
 
@@ -30,9 +30,7 @@ export const StyledBackingCard = styled.article`
     flex: 1 1 auto;
     padding: ${pxToRem(30)};
     display: grid;
-    grid-template-columns:
-      [row-start] repeat(auto-fit, minmax(var(--backingCard--grid-min), 1fr))
-      [row-end];
+    grid-template-columns: [row-start] var(--backingCard--grid-col) [row-end];
     grid-gap: ${pxToRem(20)};
     align-content: start;
     overflow: hidden;
@@ -47,6 +45,7 @@ export const StyledBackingCard = styled.article`
       margin: ${pxToRem(-10)} 0 0;
     }
     .k-BackingCard__drawer + .k-BackingCard__halfDrawer {
+      grid-column-start: row-start;
       margin: ${pxToRem(-10)} 0 ${pxToRem(-10)};
     }
     .k-BackingCard__drawer--extensible {
@@ -81,6 +80,8 @@ export const StyledBackingCard = styled.article`
       height: 100%;
       object-fit: cover;
       object-position: center center;
+      border-top-left-radius: var(--backingCard--border-radius);
+      border-top-right-radius: var(--backingCard--border-radius);
     }
   }
 
