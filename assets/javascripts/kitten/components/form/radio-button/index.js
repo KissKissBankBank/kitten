@@ -225,11 +225,9 @@ const StyledRadioButton = styled.div`
         border-width: ${pxToRem(6)};
       }
 
-      &.k-Form-RadioButton--big {
-        .k-Form-RadioButton__label {
-          .k-Form-RadioButton__labelText {
-            font-size: ${stepToRem(0)};
-          }
+      &.k-Form-RadioButton--big {{
+        .k-Form-RadioButton__labelText {
+          font-size: ${stepToRem(0)};
         }
       }
     }
