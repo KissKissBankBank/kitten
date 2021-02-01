@@ -15,6 +15,26 @@ Features:
 Fix:
 - `VerticalStepper` mobile style fixes.
 
+Breaking Changes:
+
+- Remove `StyleGuide` app.
+- Remove `Karl` stories & components.
+- Remove `k-LegoGrid` styles.
+- Remove `LegoGrid` component.
+- Delete the following deprecated `cards` components:
+  - `ArticleCard`
+  - `ContributionCard`
+  - `CrowdfundingCardWidget`
+  - `ProjectCard`
+  - `ProjectCreatorCard`
+  - `ProjectSimilarCard`
+  - `RewardCardLegacy`
+  - `SimilarProjectsCard`.
+- Delete the following deprecated `card` SCSS mixins:
+  - `k-ProjectCard`
+  - `k-ProjectCreatorCard`
+  - `k-ProjectSimilarCard`
+
 ## [2.113.0] - 2020-01-21
 
 Features:
