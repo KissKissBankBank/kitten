@@ -181,10 +181,8 @@ const StyledRadioButton = styled.div`
 
     &.k-Form-RadioButton--regular,
     &.k-Form-RadioButton--big {
-      .k-Form-RadioButton__label {
-        .k-Form-RadioButton__labelText {
-          font-size: ${stepToRem(-1)};
-        }
+      .k-Form-RadioButton__labelText {
+        font-size: ${stepToRem(-1)};
       }
     }
 
