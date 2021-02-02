@@ -1,69 +1,126 @@
-import React, { Component } from 'react'
+import React from 'react'
+import styled from 'styled-components'
 import classNames from 'classnames'
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../../constants/screen-config'
 import PropTypes from 'prop-types'
 
-export class LinkList extends Component {
-  constructor() {
-    super()
+const StyledLinkList = styled.ul`
+  .k-LinkList {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
 
-    this.renderItem = this.renderItem.bind(this)
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      text-align: left;
+    }
   }
-
-  renderItems() {
-    return this.props.items.map(this.renderItem)
+  .k-LinkList__item {
+    margin-bottom: k-px-to-rem(5px);
   }
-
-  renderItem(element) {
-    const { key, item, href, active, weight, className, ...others } = element
-
-    const { color, lineHeight, itemMargin } = this.props
-
-    const linkListClassName = classNames('k-LinkList__link', className, {
-      'is-active': active,
-      'k-LinkList__link--light': color == 'light',
-      'k-LinkList__link--dark': color == 'dark',
-      'k-LinkList__link--normalLineHeight': lineHeight == 'normal',
-      'k-LinkList__link--regularWeight':
-        this.props.weight == 'regular' && !weight,
-      'k-LinkList__link--lightWeight': this.props.weight == 'light' && !weight,
-      'k-LinkList__item--regularWeight': weight == 'regular',
-      'k-LinkList__item--lightWeight': weight == 'light',
-    })
-
-    const linkListItemClassName = classNames('k-LinkList__item', {
-      'k-LinkList__item--doubleMargin': itemMargin == 'double',
-      'k-LinkList__item--tripleMargin': itemMargin == 'triple',
-    })
-
-    return (
-      <li className={linkListItemClassName} key={key}>
-        <a {...others} href={href} className={linkListClassName}>
-          {item}
-        </a>
-      </li>
-    )
+  .k-LinkList__item--doubleMargin {
+    margin-bottom: $double-margin;
   }
-
-  render() {
-    const {
-      className,
-      margin,
-      items,
-      lineHeight,
-      itemMargin,
-      ...others
-    } = this.props
-
-    const listClassName = classNames('k-LinkList', className, {
-      'k-LinkList--withoutMargin': !margin,
-    })
-
-    return (
-      <ul {...others} className={listClassName}>
-        {this.renderItems()}
-      </ul>
-    )
+  
+  .k-LinkList__item--tripleMargin {
+    margin-bottom: $triple-margin;
   }
+  
+  .k-LinkList__link {
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-size);
+  
+    text-decoration: none;
+  
+    &:active,
+    &.is-active {
+     color: $active-color;
+    }
+  
+    &:hover {
+      color: $hover-color;
+    }
+  
+    transition: color .2s;
+  }
+  
+  .k-LinkList__item--regularWeight,
+  .k-LinkList__link--regularWeight {
+    @include k-typographyFont($font);
+  }
+  
+  .k-LinkList__item--lightWeight,
+  .k-LinkList__link--lightWeight {
+    @include k-typographyFont($font-light);
+  }
+  
+  .k-LinkList__link--normalLineHeight {
+    line-height: $normal-line-height;
+  }
+  
+  .k-LinkList__link--light {
+    color: $light-link-color;
+  }
+  
+  .k-LinkList__link--dark {
+    color: $dark-link-color;
+  }
+  
+  .k-LinkList--withoutMargin {
+    margin-top: 0;
+    margin-bottom: 0;
+  
+    .k-LinkList__item:last-child {
+      margin-bottom: 0;
+    }
+  }
+`
+
+export const LinkList = ({
+  className,
+  margin,
+  items,
+  lineHeight,
+  itemMargin,
+  color,
+  weight,
+  ...others
+}) => {
+
+  return (
+    <ul
+      {...others}
+      className={classNames(
+        'k-LinkList',
+        {'k-LinkList--withoutMargin': !margin}
+      )}
+    >
+      {items.map(({ item, key }) => (
+        <li className={classNames(
+          'k-LinkList__item',
+          `k-LinkList__item--${itemMargin}`,   
+        )}
+          key={key}
+        >
+          <a 
+            {...others}
+            href={href}
+            className={classNames(
+              'k-LinkList__link',
+              `k-LinkList__link--${color}`,
+              `k-LinkList__item--${weight}`,
+              {
+                'k-LinkList__link--regularWeight': weight == 'regular' && !weight,
+                'k-LinkList__link--lightWeight': weight == 'light' && !weight,
+              },
+            )}
+          >
+            {item}
+          </a>
+        </li>
+      ))}
+    </ul>
+  )
 }
 
 LinkList.propTypes = {
