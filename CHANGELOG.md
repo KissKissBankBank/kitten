@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Breaking Changes:
 
-- Remove `FormRow` component.
+- Remove `FormRow` component and `k-FormRow` styles.
 - Remove `StyleGuide` app.
 - Remove `Karl` stories & components.
 - Remove `k-LegoGrid` styles.
