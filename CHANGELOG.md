@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Breaking Changes:
 
+- Remove `Search` component.
 - Remove `StyleGuide` app.
 - Remove `Karl` stories & components.
 - Remove `k-LegoGrid` styles.
