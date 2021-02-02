@@ -596,7 +596,7 @@ export const InACarouselComponent = () => {
         loop
         tinyButtons
       >
-        <BackingCard>
+        <BackingCard as="button" className="k-u-reset-button">
           <BackingCard.Image>
             <img src="/kitten.jpg" alt="" />
           </BackingCard.Image>
@@ -644,10 +644,10 @@ export const InACarouselComponent = () => {
               <strong className="k-u-weight-regular">2/6</strong> disponibles
             </Tag>
           </BackingCard.TagList>
-          <BackingCard.Button>Je soutiens</BackingCard.Button>
+          <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard>
+        <BackingCard as="button" className="k-u-reset-button">
           <BackingCard.HeadingTag icon="star" text="Star reward" />
           <BackingCard.Title>
             Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
@@ -692,10 +692,10 @@ export const InACarouselComponent = () => {
               <strong className="k-u-weight-regular">2/6</strong> disponibles
             </Tag>
           </BackingCard.TagList>
-          <BackingCard.Button>Je soutiens</BackingCard.Button>
+          <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard>
+        <BackingCard as="button" className="k-u-reset-button">
           <BackingCard.Image>
             <GifVideo poster="/kitten.jpg">
               <source
@@ -749,10 +749,10 @@ export const InACarouselComponent = () => {
               <strong className="k-u-weight-regular">2/6</strong> disponibles
             </Tag>
           </BackingCard.TagList>
-          <BackingCard.Button>Je soutiens</BackingCard.Button>
+          <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard>
+        <BackingCard as="button" className="k-u-reset-button">
           <BackingCard.HeadingTag icon="star" text="Star reward" />
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Info
@@ -794,7 +794,7 @@ export const InACarouselComponent = () => {
               <strong className="k-u-weight-regular">2/6</strong> disponibles
             </Tag>
           </BackingCard.TagList>
-          <BackingCard.Button>Je soutiens</BackingCard.Button>
+          <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
         </BackingCard>
 
         <BackingCard>
@@ -817,7 +817,7 @@ export const InACarouselComponent = () => {
           <BackingCard.Button>Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard disabled>
+        <BackingCard disabled as="button" className="k-u-reset-button">
           <BackingCard.Image>
             <img src="/kitten.jpg" alt="" />
           </BackingCard.Image>
@@ -857,10 +857,9 @@ export const InACarouselComponent = () => {
               <strong className="k-u-weight-regular">2/6</strong> disponibles
             </Tag>
           </BackingCard.TagList>
-          <BackingCard.Button>Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard disabled>
+        <BackingCard disabled as="button" className="k-u-reset-button">
           <BackingCard.HeadingTag icon="star" text="Star reward" />
           <BackingCard.Title>
             Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
@@ -897,10 +896,9 @@ export const InACarouselComponent = () => {
               <strong className="k-u-weight-regular">2/6</strong> disponibles
             </Tag>
           </BackingCard.TagList>
-          <BackingCard.Button>Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard disabled>
+        <BackingCard disabled as="button" className="k-u-reset-button">
           <BackingCard.Image>
             <GifVideo poster="/kitten.jpg">
               <source
@@ -945,10 +943,9 @@ export const InACarouselComponent = () => {
               <strong className="k-u-weight-regular">2/6</strong> disponibles
             </Tag>
           </BackingCard.TagList>
-          <BackingCard.Button>Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard disabled>
+        <BackingCard disabled as="button" className="k-u-reset-button">
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
@@ -981,7 +978,6 @@ export const InACarouselComponent = () => {
               <strong className="k-u-weight-regular">2/6</strong> disponibles
             </Tag>
           </BackingCard.TagList>
-          <BackingCard.Button>Je soutiens</BackingCard.Button>
         </BackingCard>
       </Carousel>
     </StyledCarouselContainer>
