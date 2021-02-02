@@ -14,6 +14,7 @@ export const StyledBackingCard = styled.article`
   border-radius: var(--backingCard--border-radius);
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 
   &.k-BackingCard--hasBorder {
     --backingCard--border-width: ${pxToRem(2)};
