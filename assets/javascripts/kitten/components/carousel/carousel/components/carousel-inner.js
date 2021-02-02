@@ -61,6 +61,7 @@ export const CarouselInner = ({
   onResizeInner,
   pagesClassName,
   viewedPages,
+  pageClickText,
 }) => {
   const [isTouched, setTouchState] = useState(false)
   const carouselInner = useRef(null)
@@ -133,6 +134,14 @@ export const CarouselInner = ({
     }
   }
 
+  const handlePageClick = index => e => {
+    if (index === currentPageIndex) return
+
+    e.preventDefault()
+    scrollToPage(index)
+    document.activeElement.blur()
+  }
+
   const handleKeyDown = e => {
     if (e.key === 'ArrowRight') {
       goToPage(currentPageIndex + 1)
@@ -157,6 +166,9 @@ export const CarouselInner = ({
         return (
           <div
             key={index}
+            role="button"
+            aria-label={pageClickText(index + 1)}
+            onClick={handlePageClick(index)}
             className={classNames(
               'k-Carousel__inner__pageContainer',
               pagesClassName,

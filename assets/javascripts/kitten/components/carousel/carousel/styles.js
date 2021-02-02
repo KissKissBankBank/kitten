@@ -364,6 +364,10 @@ export const StyledCarouselContainer = styled.div`
 
       &:not(.k-Carousel__inner__pageContainer--isActivePage) {
         cursor: pointer;
+
+        .k-Carousel__page__item > * {
+          pointer-events: none;
+        }
       }
     }
 

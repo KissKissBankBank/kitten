@@ -178,6 +178,7 @@ class CarouselBase extends Component {
       viewportIsMOrLess,
       pagesClassName,
       exportVisibilityProps,
+      pageClickText,
     } = this.props
 
     const { currentPageIndex, numberOfItemsPerPage, numberOfPages } = this.state
@@ -208,6 +209,7 @@ class CarouselBase extends Component {
         onResizeInner={this.onResizeInner}
         pagesClassName={pagesClassName}
         viewedPages={this.viewedPages}
+        pageClickText={pageClickText}
       />
     )
   }
@@ -386,6 +388,9 @@ CarouselBase.defaultProps = {
   },
   prevButtonText: 'Previous items',
   nextButtonText: 'Next items',
+  pageClickText: page => {
+    return `Page ${page}`
+  },
   firstButtonText: 'First items',
   lastButtonText: 'Last items',
   showPageSquares: false,
@@ -417,6 +422,7 @@ CarouselBase.propTypes = {
   }),
   prevButtonText: PropTypes.string,
   nextButtonText: PropTypes.string,
+  pageClickText: PropTypes.func,
   tinyButtons: PropTypes.bool,
   firstButtonText: PropTypes.string,
   lastButtonText: PropTypes.string,

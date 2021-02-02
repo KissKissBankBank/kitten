@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Fix Carousel margin and padding calculations.
+- Feature: Add `pageClickText` prop to Carousel for page click action.
 
 ## [2.114.0] - 2020-01-29
 
