@@ -14,7 +14,7 @@ import { VisuallyHidden } from '../../../components/accessibility/visually-hidde
 import classNames from 'classnames'
 import { Grid, GridCol } from '../../../components/grid/grid'
 
-import { StyledCarouselContainer } from './styles'
+import { StyledCarouselContainer, OUTLINE_PLUS_OFFSET } from './styles'
 
 const getDataLength = ({ data, children }) => {
   if (!!data) return data.length
@@ -72,10 +72,11 @@ const getMarginBetweenAccordingToViewport = (
   viewportIsXSOrLess,
   viewportIsMOrLess,
 ) => {
-  if (viewportIsXSOrLess) return CONTAINER_PADDING_MOBILE / 2
-  if (viewportIsMOrLess) return CONTAINER_PADDING / 2
+  if (viewportIsXSOrLess)
+    return CONTAINER_PADDING_MOBILE / 2 - OUTLINE_PLUS_OFFSET * 2
+  if (viewportIsMOrLess) return CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2
 
-  return baseItemMarginBetween
+  return baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2
 }
 
 class CarouselBase extends Component {

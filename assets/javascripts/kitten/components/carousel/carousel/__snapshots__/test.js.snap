@@ -2,7 +2,7 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dnzoib k-Carousel"
+  className="sc-htpNat hDttjx k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -13,7 +13,6 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
   >
     <div
       className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
-      onClick={[Function]}
     >
       <div
         className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -78,7 +77,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dnzoib k-Carousel"
+  className="sc-htpNat hDttjx k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -89,7 +88,6 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
   >
     <div
       className="k-Carousel__inner__pageContainer custom-class k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
-      onClick={[Function]}
     >
       <div
         className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -156,7 +154,7 @@ exports[`<Carousel /> empty carousel matches with snapshot 1`] = `null`;
 
 exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat iLKiCQ k-Carousel k-LegacyCarousel"
+  className="sc-htpNat SbxkW k-Carousel k-LegacyCarousel"
 >
   <div
     className="k-Grid"
@@ -173,7 +171,6 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
       >
         <div
           className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
-          onClick={[Function]}
         >
           <div
             className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -243,7 +240,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} matches with snapshot 1`] = `
 <div
-  className="sc-htpNat iLKiCQ k-Carousel k-LegacyCarousel"
+  className="sc-htpNat SbxkW k-Carousel k-LegacyCarousel"
 >
   <div
     className="k-Grid"
@@ -260,7 +257,6 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
       >
         <div
           className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
-          onClick={[Function]}
         >
           <div
             className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -330,7 +326,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
 
 exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 <div
-  className="sc-htpNat iLKiCQ k-Carousel k-LegacyCarousel"
+  className="sc-htpNat SbxkW k-Carousel k-LegacyCarousel"
 >
   <div
     className="k-Grid"
@@ -347,7 +343,6 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
       >
         <div
           className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
-          onClick={[Function]}
         >
           <div
             className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -417,7 +412,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dnzoib k-Carousel"
+  className="sc-htpNat hDttjx k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -428,7 +423,6 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
   >
     <div
       className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
-      onClick={[Function]}
     >
       <div
         className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -493,7 +487,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
 
 exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat hPhwtq k-Carousel"
+  className="sc-htpNat vdKcn k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -504,7 +498,6 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
   >
     <div
       className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
-      onClick={[Function]}
     >
       <div
         className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -575,7 +568,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 
 exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dnzoib k-Carousel"
+  className="sc-htpNat hDttjx k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -586,7 +579,6 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
   >
     <div
       className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
-      onClick={[Function]}
     >
       <div
         className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
