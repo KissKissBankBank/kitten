@@ -31,19 +31,19 @@ export const BackingCard = ({
     >
       {React.Children.map(children, child => {
         if (!child) return null
-        return child.type.name === 'Image' ? child : null
+        return child.props.__TYPE === 'Image' ? child : null
       })}
 
       <div className="k-BackingCard__gridWrapper">
         {React.Children.map(children, child => {
           if (!child) return null
-          return ['Image', 'Button'].includes(child.type.name) ? null : child
+          return ['Image', 'Button'].includes(child.props.__TYPE) ? null : child
         })}
       </div>
 
       {React.Children.map(children, child => {
         if (!child) return null
-        return child.type.name === 'Button'
+        return child.props.__TYPE === 'Button'
           ? cloneElement(child, { disabled })
           : null
       })}

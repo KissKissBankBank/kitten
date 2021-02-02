@@ -1,13 +1,17 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Button as KittenButton } from '../../../buttons/button/button'
 
 export const Button = props => {
+  let cleanProps = Object.assign({}, props)
+  delete cleanProps.__TYPE
+
   return (
     <KittenButton
       borderRadius={4}
       modifier="helium"
-      {...props}
+      {...cleanProps}
       className={classNames(
         'k-BackingCard__button',
         'k-BackingCard__drawer',
@@ -15,4 +19,13 @@ export const Button = props => {
       )}
     />
   )
+}
+
+Button.propTypes = {
+  children: PropTypes.node,
+  __TYPE: PropTypes.string,
+}
+
+Button.defaultProps = {
+  __TYPE: 'Button',
 }

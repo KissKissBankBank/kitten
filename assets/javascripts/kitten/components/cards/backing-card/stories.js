@@ -597,7 +597,7 @@ export const InACarouselComponent = () => {
         tinyButtons
       >
         <BackingCard as="button" className="k-u-reset-button">
-          <BackingCard.Image>
+          <BackingCard.Image id="one_such_ID" className="hellowORLD">
             <img src="/kitten.jpg" alt="" />
           </BackingCard.Image>
           <BackingCard.HeadingTag icon="diamond" text="Diamond reward" />
