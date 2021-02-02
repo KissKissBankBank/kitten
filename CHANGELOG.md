@@ -6,6 +6,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `size` prop to `RadioButton`, defaults to `regular`.
 
+## [2.115.0] - 2020-02-02
+
+Feature:
+
+- Add `pageClickText` prop to `Carousel` for page click action.
+
+Fix:
+
+- Fix `Carousel` margin and padding calculations.
+
 ## [2.114.0] - 2020-01-29
 
 Features:
@@ -28,8 +38,8 @@ Features:
 
 Fixes:
 
-- do not apply focus styles on `VerticalStepper` when `disabled`
-- `Combobox` filter on `label` (instead of `value`)
+- Stop applying focus styles on `VerticalStepper` when `disabled`.
+- `Combobox` filter on `label` (instead of `value`).
 
 ## [2.112.0] - 2020-01-18
 
@@ -53,7 +63,7 @@ Feature:
 Fixes:
 
 - Add button types on `Carousel` navigation.
-- Fix: Remove scrollbars on `Carousel` on Firefox.
+- Remove scrollbars on `Carousel` on Firefox.
 
 ## [2.110.0] - 2020-01-13
 
