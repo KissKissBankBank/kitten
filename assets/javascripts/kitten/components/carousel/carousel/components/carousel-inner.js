@@ -61,12 +61,13 @@ export const CarouselInner = ({
   onResizeInner,
   pagesClassName,
   viewedPages,
+  pageClickText,
 }) => {
   const [isTouched, setTouchState] = useState(false)
   const carouselInner = useRef(null)
   const previousIndexPageVisible = usePrevious(currentPageIndex)
 
-  let observer
+  let resizeObserver
 
   const onResizeObserve = ([entry]) => {
     const innerWidth = entry.contentRect.width
@@ -74,13 +75,13 @@ export const CarouselInner = ({
   }
 
   useEffect(() => {
-    observer = new ResizeObserver(onResizeObserve)
+    resizeObserver = new ResizeObserver(onResizeObserve)
 
-    return () => observer.disconnect()
+    return () => resizeObserver.disconnect()
   }, [])
 
   useEffect(() => {
-    carouselInner.current && observer.observe(carouselInner.current)
+    carouselInner.current && resizeObserver.observe(carouselInner.current)
   }, [carouselInner])
 
   useEffect(() => {
@@ -165,6 +166,8 @@ export const CarouselInner = ({
         return (
           <div
             key={index}
+            role="button"
+            aria-label={pageClickText(index + 1)}
             onClick={handlePageClick(index)}
             className={classNames(
               'k-Carousel__inner__pageContainer',

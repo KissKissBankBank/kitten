@@ -11,15 +11,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `k-u-size-giant` utility.
 - Feature: Add `giant` value to `size` prop to `Text` component.
 
+## [2.115.0] - 2020-02-02
+
+Feature:
+
+- Add `pageClickText` prop to `Carousel` for page click action.
+
+Fix:
+
+- Fix `Carousel` margin and padding calculations.
+
 ## [2.114.0] - 2020-01-29
 
 Features:
+
 - Add `regular` (default) and `big` props on all variants of `TextInput`.
 - Add `variant` prop to `TextInputWithUnit`, defaults to `andromeda`.
 - Add `big` prop to `TextInputWithUnit`.
 - Change `DocumentManager` `radius` and hide icon on `xs` screen.
 
 Fix:
+
 - `VerticalStepper` mobile style fixes.
 
 ## [2.113.0] - 2020-01-21
@@ -33,8 +45,8 @@ Features:
 
 Fixes:
 
-- do not apply focus styles on `VerticalStepper` when `disabled`
-- `Combobox` filter on `label` (instead of `value`)
+- Stop applying focus styles on `VerticalStepper` when `disabled`.
+- `Combobox` filter on `label` (instead of `value`).
 
 ## [2.112.0] - 2020-01-18
 
@@ -58,7 +70,7 @@ Feature:
 Fixes:
 
 - Add button types on `Carousel` navigation.
-- Fix: Remove scrollbars on `Carousel` on Firefox.
+- Remove scrollbars on `Carousel` on Firefox.
 
 ## [2.110.0] - 2020-01-13
 
