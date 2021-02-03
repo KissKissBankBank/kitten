@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import * as stories from './check-list.stories.js'
+import * as stories from './link-list.stories.js'
 import { LinkList } from './index'
 
 <Meta title="Links/LinkList" component={LinkList} />
@@ -27,5 +27,5 @@ import { LinkList } from '@kisskissbankbank/kitten'
 ### With Items
 
 ```js
-<LinkList />
+<LinkList items={ [{ key: …, item: …, href: …, weight: …, }] }/>
 ```
