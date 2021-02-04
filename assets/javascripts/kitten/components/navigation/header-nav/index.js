@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
-
-import { StickyContainer } from '../../../components/grid/sticky-container'
+import styled, { css } from 'styled-components'
+import { ScreenConfig } from '../../../constants/screen-config'
 import { Button } from './components/button'
 import { Logo } from './components/logo'
 import { BurgerMenu } from './components/burger-menu'
@@ -15,7 +14,14 @@ import { LoggedOut } from './components/logged-out'
 import { Logged } from './components/logged'
 import { Hidden } from './components/hidden'
 import { QuickAccessLink } from './components/quick-access-link'
-
+import {
+  MOBILE_HEADER_HEIGHT,
+  TABLET_HEADER_HEIGHT,
+  DESKTOP_HEADER_HEIGHT,
+} from './config'
+import { StickyContainer } from '../../../components/grid/sticky-container'
+import COLORS from '../../../constants/colors-config'
+import { pxToRem } from '../../../helpers/utils/typography'
 import {
   getFocusableElementsFrom,
   keyboardNavigation,
@@ -29,7 +35,44 @@ import emitter from '../../../helpers/utils/emitter'
 import { DROPDOWN_ANIMATED_DELAY } from '../../../constants/dropdown-config'
 import { usePrevious } from '../../../helpers/utils/use-previous-hook'
 
-import { StyledHeader } from './styles'
+const StyledStickyContainer = styled(StickyContainer)`
+  ${({ isMenuExpanded }) =>
+    isMenuExpanded &&
+    css`
+      transition: none;
+    `}
+
+  .k-Spacer + & {
+    box-shadow: 0 ${pxToRem(2)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
+  }
+`
+
+const Header = styled.header`
+  position: relative;
+  z-index: ${({ isMenuExpanded, zIndex }) =>
+    isMenuExpanded ? zIndex.headerWithOpenMenu : zIndex.header};
+`
+
+const Navigation = styled.nav`
+  width: 100vw;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &,
+  .quickAccessLink {
+    height: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+    background: ${({ updateBackground }) =>
+      updateBackground ? COLORS.background3 : COLORS.background1};
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      height: ${pxToRem(TABLET_HEADER_HEIGHT)};
+    }
+
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      height: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
+    }
+  }
+`
 
 const HeaderNav = ({
   children,
@@ -43,7 +86,6 @@ const HeaderNav = ({
   const [isMenuExpanded, setMenuExpanded] = useState(false)
   const [menuExpandBy, setMenuExpandBy] = useState(null)
   const [stickyState, setStickyState] = useState(null)
-  const [isBackgroundInactive, setBackgroundInactive] = useState(null)
   const stickyContainerRef = useRef(null)
   const headerRef = useRef(null)
   const previousStickyState = usePrevious(stickyState)
@@ -118,6 +160,8 @@ const HeaderNav = ({
     }
   }
 
+  const updateHeaderBackground = () => /UserMenu/.test(menuExpandBy)
+
   const callOnToggle = ({ isExpanded, expandBy }) => {
     if (!isExpanded && previousStickyState === 'always') {
       stickyContainerRef.current.setSticky()
@@ -131,10 +175,6 @@ const HeaderNav = ({
     setStickyState(isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp')
   }, [isFixed, isMenuExpanded])
 
-  useEffect(() => {
-    setBackgroundInactive(/UserMenu/.test(menuExpandBy))
-  }, [menuExpandBy])
-
   return (
     <Context.Provider
       value={{
@@ -144,32 +184,28 @@ const HeaderNav = ({
         callOnToggle,
       }}
     >
-      <StyledHeader
-        style={{
-          '--HeaderNav-zIndex': zIndexConfig.header,
-          '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu,
-        }}
-        zIndex={zIndexConfig}
-        className={classNames('k-HeaderNav__wrapper', {
-          'k-HeaderNav--menuIsExpanded': isMenuExpanded,
-          'k-HeaderNav--inactiveBackground': isBackgroundInactive,
-        })}
-      >
-        <StickyContainer
+      <Header zIndex={zIndexConfig} isMenuExpanded={isMenuExpanded}>
+        <StyledStickyContainer
           ref={stickyContainerRef}
           isSticky={stickyState}
-          className="k-HeaderNav__stickyContainer"
+          isMenuExpanded={isMenuExpanded}
           {...stickyProps}
         >
-          <nav ref={headerRef} role="banner" id={id} className="k-HeaderNav">
+          <Navigation
+            ref={headerRef}
+            role="banner"
+            id={id}
+            className="k-HeaderNav"
+            updateBackground={updateHeaderBackground()}
+          >
             <QuickAccessLink
               className="quickAccessLink"
               {...quickAccessProps}
             />
             {children}
-          </nav>
-        </StickyContainer>
-      </StyledHeader>
+          </Navigation>
+        </StyledStickyContainer>
+      </Header>
     </Context.Provider>
   )
 }

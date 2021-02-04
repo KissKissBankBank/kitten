@@ -6,7 +6,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Breaking Changes:
 
-- Migrate `HeaderNav` and remove `k-HeaderNav` styles.
 - Remove `StyleGuide` app.
 - Remove `Karl` stories & components.
 - Remove `k-LegoGrid` styles.

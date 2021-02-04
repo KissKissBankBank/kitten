@@ -151,6 +151,8 @@
 
 // Navigation
 
+@include k-HeaderNav;
+
 @include k-HorizontalNav;
 
 @include k-PlatformSwitch((
