@@ -5,7 +5,7 @@ import { select } from '@storybook/addon-knobs'
 import { Tag } from './index'
 
 export default {
-  title: 'Tags/Tag',
+  title: 'Atoms/Tag',
   component: Tag,
 }
 

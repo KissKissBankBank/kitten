@@ -8,6 +8,9 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 // Accordeon
 export { Accordeon } from './components/accordeon'
 
+// Atoms
+export { Tag } from './components/atoms/tag'
+
 // Avatar
 export { AvatarWithTextAndBadge } from './components/avatar/avatar-with-text-and-badge'
 
@@ -236,9 +239,6 @@ export { Stepper } from './components/steppers/stepper'
 export { DoubleEntryTable } from './components/tables/double-entry-table'
 export { ListTable } from './components/tables/list-table'
 export { SingleEntryTable } from './components/tables/single-entry-table'
-
-// Tag
-export { Tag } from './components/tags/tag'
 
 // Text Copy
 export { TextCopy } from './components/text-copy'

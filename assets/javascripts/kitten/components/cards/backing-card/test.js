@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { BackingCard } from './index'
-import { Tag } from '../../../components/tags/tag'
+import { Tag } from '../../../components/atoms/tag'
 
 describe('<BackingCard />', () => {
   let component
