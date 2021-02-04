@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `size` prop to `HeaderMenu.Item` & refactoring.
+
 ## [2.115.0] - 2020-02-02
 
 Feature:
