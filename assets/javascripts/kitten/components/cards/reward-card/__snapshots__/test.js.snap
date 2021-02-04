@@ -39,8 +39,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         className="k-RewardCard__diamondBadge"
       >
         <span
-          className="sc-ifAKCX hWyXQl"
-          disabled={false}
+          className="sc-ifAKCX bwjOio k-IconBadge k-IconBadge--normal k-IconBadge--big"
         >
           <span
             className="k-IconBadge__content"
@@ -105,8 +104,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         className="k-RewardCard__starredBadge"
       >
         <span
-          className="sc-ifAKCX hWyXQl"
-          disabled={false}
+          className="sc-ifAKCX bwjOio k-IconBadge k-IconBadge--normal k-IconBadge--big"
         >
           <span
             className="k-IconBadge__content"
@@ -216,8 +214,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
     className="k-RewardCard__checkedIconLine"
   >
     <span
-      className="sc-ifAKCX kYpVhn k-RewardCard__iconBadge"
-      disabled={false}
+      className="sc-ifAKCX bwjOio k-IconBadge k-RewardCard__iconBadge k-IconBadge--normal k-IconBadge--valid"
     >
       <span
         className="k-IconBadge__content"

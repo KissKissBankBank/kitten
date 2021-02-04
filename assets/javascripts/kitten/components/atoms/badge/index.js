@@ -76,7 +76,7 @@ Badge.propTypes = {
   spaced: PropTypes.bool,
   withBorder: PropTypes.bool,
   color: PropTypes.string,
-  Icon: PropTypes.node,
+  Icon: PropTypes.func,
   a11yText: PropTypes.string,
 }
 
