@@ -23,6 +23,11 @@ Breaking Changes:
   - `k-ProjectCard`
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
+- Remove `k-Badge` and `k-IconBadge` styles.
+
+Features:
+
+- Refactor `Badge` and `IconBadge` components.
 
 ## [2.113.0] - 2020-01-21
 

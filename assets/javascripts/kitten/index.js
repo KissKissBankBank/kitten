@@ -8,6 +8,11 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 // Accordeon
 export { Accordeon } from './components/accordeon'
 
+// Atoms
+
+export { Badge } from './components/atoms/badge'
+export { IconBadge } from './components/atoms/icon-badge'
+
 // Avatar
 export { AvatarWithTextAndBadge } from './components/avatar/avatar-with-text-and-badge'
 
@@ -190,8 +195,6 @@ export { NavBar } from './components/navigation/nav-bar'
 
 // Notifications
 export { Alert } from './components/notifications/alert'
-export { Badge } from './components/notifications/badge'
-export { IconBadge } from './components/notifications/icon-badge'
 
 // Pages
 export { MarkdownPage } from './components/pages/markdown'
