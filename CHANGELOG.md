@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `Text` component.
+
 Breaking Changes:
 
 - Remove `StyleGuide` app.
