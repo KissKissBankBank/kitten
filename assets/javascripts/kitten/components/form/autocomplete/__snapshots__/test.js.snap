@@ -201,8 +201,8 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   width: 0.3125rem;
   height: 0.3125rem;
   border-radius: 0.3125rem;
-  -webkit-animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(.2,.68,.18,1.08);
-  animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(.2,.68,.18,1.08);
+  -webkit-animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }

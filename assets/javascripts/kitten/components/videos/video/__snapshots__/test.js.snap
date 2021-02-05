@@ -45,7 +45,7 @@ exports[`<Video /> with some props matches with snapshot 1`] = `
     className="sc-bwzfXH gSBjvA"
   >
     <div
-      className="sc-htpNat kOkfGZ k-Loader"
+      className="sc-htpNat GQGZe k-Loader"
     >
       <svg
         className="k-Loader__circle"
