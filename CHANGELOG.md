@@ -23,6 +23,8 @@ Breaking Changes:
   - `k-ProjectCard`
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
+- Migrate `Loader` and `LoaderWithParagraph` components
+  and remove `k-Loader` and `k-LoaderWithParagraph` styles.
 
 ## [2.113.0] - 2020-01-21
 

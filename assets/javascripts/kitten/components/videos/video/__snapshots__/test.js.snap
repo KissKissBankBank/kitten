@@ -45,41 +45,41 @@ exports[`<Video /> with some props matches with snapshot 1`] = `
     className="sc-bwzfXH gSBjvA"
   >
     <div
-      className="k-Loader"
+      className="sc-htpNat kOkfGZ k-Loader"
     >
       <svg
         className="k-Loader__circle"
-        viewBox="0 0 10 10"
+        fill="#222"
+        viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={5}
-          cy={5}
-          fill={null}
+          cx={2.5}
+          cy={2.5}
           r={5}
         />
       </svg>
       <svg
         className="k-Loader__circle"
-        viewBox="0 0 10 10"
+        fill="#222"
+        viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={5}
-          cy={5}
-          fill={null}
+          cx={2.5}
+          cy={2.5}
           r={5}
         />
       </svg>
       <svg
         className="k-Loader__circle"
-        viewBox="0 0 10 10"
+        fill="#222"
+        viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={5}
-          cy={5}
-          fill={null}
+          cx={2.5}
+          cy={2.5}
           r={5}
         />
       </svg>

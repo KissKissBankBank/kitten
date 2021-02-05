@@ -10,7 +10,7 @@ import { UploadIcon } from '../../../components/icons/upload-icon'
 import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
 import { CrossCircleIcon } from '../../../components/icons/cross-circle-icon'
 import { ClockCircleIcon } from '../../../components/icons/clock-circle-icon'
-import { Loader } from '../../../components/loaders/loader'
+import { Loader } from '../../../components/atoms/loader'
 import { DocumentIconEmpty } from '../../../components/icons/document-icon-empty'
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
 
