@@ -35,7 +35,6 @@ const StyledParagraph = styled.span`
     @media (min-width: ${ScreenConfig.S.min}px) {
       font-size: ${stepToRem(-1)};
     }
-
     :before {
       padding: 0 ${pxToRem(8)};
       content: '●';

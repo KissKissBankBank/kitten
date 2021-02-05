@@ -25,7 +25,7 @@ export const Description = ({
     if (parent.clientHeight < child.clientHeight) {
       setMoreButtonDisplay(true)
     }
-  }, [descriptionElementRef])
+  }, [descriptionElementRef, truncateText])
 
   return (
     <div
