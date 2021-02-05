@@ -8,7 +8,6 @@ export const Amount = props => {
       tag="p"
       weight="bold"
       lineHeight="1"
-      fontStyle="italic"
       {...props}
       className={classNames(
         'k-BackingCard__amount',
