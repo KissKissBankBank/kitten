@@ -230,6 +230,7 @@ const StyledRadioButton = styled.div`
         }
 
         .k-Form-RadioButton__labelText {
+          flex: 1 0 calc(100% - ${pxToRem(20 + 20)});
           font-size: ${stepToRem(0)};
         }
       }
