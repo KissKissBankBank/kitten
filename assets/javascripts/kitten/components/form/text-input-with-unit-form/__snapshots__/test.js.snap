@@ -2,7 +2,7 @@
 
 exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
 <form
-  className="sc-gzVnrw hovhA"
+  className="sc-htoDjs fyEwBx"
   onSubmit={[Function]}
 >
   <div
@@ -15,7 +15,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
         className="sc-bdVaJa eGDgJX"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-EHOje iZtRtZ k-Label k-Label--micro"
           htmlFor="donation-amount"
           onClick={[Function]}
         >
@@ -57,7 +57,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
       className="k-Grid__col--12 k-u-align-center"
     >
       <button
-        className="sc-EHOje dXaVFU k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+        className="sc-bZQynM jmpHTF k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
         disabled={false}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -72,7 +72,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
 <form
-  className="sc-gzVnrw hovhA"
+  className="sc-htoDjs fyEwBx"
   onSubmit={[Function]}
 >
   <div
@@ -85,7 +85,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
         className="sc-bdVaJa eGDgJX"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-EHOje iZtRtZ k-Label k-Label--micro"
           htmlFor=""
           onClick={[Function]}
         >
@@ -125,7 +125,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
       className="k-Grid__col--12 k-u-align-center"
     >
       <button
-        className="sc-EHOje dXaVFU k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+        className="sc-bZQynM jmpHTF k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
         disabled={false}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -140,7 +140,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] = `
 <form
-  className="sc-gzVnrw hovhA"
+  className="sc-htoDjs fyEwBx"
   onSubmit={[Function]}
 >
   <div
@@ -153,7 +153,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
         className="sc-bdVaJa eGDgJX"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-EHOje iZtRtZ k-Label k-Label--micro"
           htmlFor=""
           onClick={[Function]}
         >
@@ -193,7 +193,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
       className="k-Grid__col--12 k-u-align-center"
     >
       <button
-        className="sc-EHOje dXaVFU k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+        className="sc-bZQynM jmpHTF k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
         disabled={true}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -208,7 +208,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
 
 exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
 <form
-  className="sc-gzVnrw hovhA"
+  className="sc-htoDjs fyEwBx"
   onSubmit={[Function]}
 >
   <div
@@ -221,7 +221,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
         className="sc-bdVaJa eGDgJX"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-EHOje iZtRtZ k-Label k-Label--micro"
           htmlFor=""
           onClick={[Function]}
         >
@@ -270,7 +270,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
       className="k-Grid__col--12 k-u-align-center"
     >
       <button
-        className="sc-EHOje dXaVFU k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+        className="sc-bZQynM jmpHTF k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
         disabled={false}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}

@@ -23,6 +23,7 @@ Breaking Changes:
   - `k-ProjectCard`
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
+- Migrate `Label` component and remove `k-Label` styles.
 
 ## [2.113.0] - 2020-01-21
 

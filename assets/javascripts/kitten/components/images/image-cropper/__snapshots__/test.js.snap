@@ -6,7 +6,7 @@ Array [
     className="sc-bdVaJa eGDgJX"
   >
     <label
-      className="k-Label k-Label--tiny"
+      className="sc-bwzfXH brSdQO k-Label k-Label--tiny"
       htmlFor="cropper"
       onClick={[Function]}
     >
@@ -17,7 +17,7 @@ Array [
     className="sc-bdVaJa CoxgX"
   >
     <div
-      className="sc-ifAKCX cBWvFc k-BasicUploader k-BasicUploader--ready"
+      className="sc-EHOje hIPPHw k-BasicUploader k-BasicUploader--ready"
     >
       <input
         accept=".jpg,.jpeg,.gif,.png"
@@ -27,7 +27,7 @@ Array [
         type="file"
       />
       <label
-        className="sc-bwzfXH bBxqNJ k-BasicUploader__button"
+        className="sc-htpNat hlLzcf k-BasicUploader__button"
         htmlFor="cropper"
       >
         <svg

@@ -2,12 +2,11 @@
 
 exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
 <fieldset
-  className="sc-bwzfXH ekoBnF k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
+  className="sc-htpNat fHMJkJ k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
   disabled={false}
 >
   <legend
-    className="k-Label k-Form-RadioButtonSet__label"
-    htmlFor={null}
+    className="sc-bwzfXH brSdQO k-Label k-Form-RadioButtonSet__label k-Label--normal"
     onClick={[Function]}
   >
     Label
@@ -85,12 +84,11 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
 
 exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = `
 <fieldset
-  className="sc-bwzfXH ekoBnF k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
+  className="sc-htpNat fHMJkJ k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
   disabled={false}
 >
   <legend
-    className="k-Label k-Form-RadioButtonSet__label"
-    htmlFor={null}
+    className="sc-bwzfXH brSdQO k-Label k-Form-RadioButtonSet__label k-Label--normal"
     onClick={[Function]}
   >
     Label test
@@ -168,7 +166,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
 
 exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
 <fieldset
-  className="sc-bwzfXH ekoBnF k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
+  className="sc-htpNat fHMJkJ k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
   disabled={false}
 >
   <legend>

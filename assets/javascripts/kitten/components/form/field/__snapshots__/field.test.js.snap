@@ -17,7 +17,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
           htmlFor="autocomplete"
           onClick={[Function]}
         >
@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-iwsKbI cdTKwF"
+      className="sc-gZMcBi kXcfTS"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-gZMcBi lmEZvD"
+        className="sc-gqjmRU bCbnjI"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -69,7 +69,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -122,7 +122,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error"
+      className="sc-htpNat iTNLrc k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -133,7 +133,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-EHOje jvzENE k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-bZQynM bOrPFB k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -163,7 +163,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -216,7 +216,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-TextInput--andromeda"
+      className="sc-htpNat iTNLrc k-Form-TextInput k-Form-TextInput--andromeda"
       disabled={false}
       id="input"
       name="field"
@@ -243,7 +243,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -296,10 +296,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-dnqmqq iVdmNR k-Form-PasswordInput"
+      className="sc-iwsKbI jDVtoP k-Form-PasswordInput"
     >
       <input
-        className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error"
+        className="sc-htpNat iTNLrc k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -336,7 +336,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-EHOje jvzENE k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-bZQynM bOrPFB k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -366,7 +366,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -419,10 +419,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-dnqmqq iVdmNR k-Form-PasswordInput"
+      className="sc-iwsKbI jDVtoP k-Form-PasswordInput"
     >
       <input
-        className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda"
+        className="sc-htpNat iTNLrc k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda"
         disabled={false}
         id="input"
         name="field"
@@ -475,7 +475,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
           htmlFor="option-a"
           onClick={[Function]}
         >
@@ -488,14 +488,14 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <fieldset
-      className="sc-gzVnrw eXZJHp k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
+      className="sc-htoDjs dxNZQM k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
       disabled={false}
     >
       <div
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-bZQynM jneaHT k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-gzVnrw byaGpw k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -517,7 +517,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-bZQynM jneaHT k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-gzVnrw byaGpw k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -538,7 +538,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-bZQynM jneaHT k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-gzVnrw byaGpw k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -581,7 +581,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
           htmlFor="select"
           onClick={[Function]}
         >

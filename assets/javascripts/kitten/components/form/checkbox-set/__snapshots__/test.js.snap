@@ -2,12 +2,11 @@
 
 exports[`<CheckboxSet /> default matches with snapshot 1`] = `
 <fieldset
-  className="sc-htpNat bvDOix k-Form-CheckboxSet"
+  className="sc-bxivhb dMlFJp k-Form-CheckboxSet"
   disabled={false}
 >
   <legend
-    className="k-Label k-Form-CheckboxSet__label"
-    htmlFor={null}
+    className="sc-htpNat dAYfV k-Label k-Form-CheckboxSet__label k-Label--normal"
     onClick={[Function]}
   >
     Label
@@ -69,12 +68,11 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
 
 exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
 <fieldset
-  className="sc-htpNat bvDOix k-Form-CheckboxSet"
+  className="sc-bxivhb dMlFJp k-Form-CheckboxSet"
   disabled={false}
 >
   <legend
-    className="k-Label k-Form-CheckboxSet__label"
-    htmlFor={null}
+    className="sc-htpNat dAYfV k-Label k-Form-CheckboxSet__label k-Label--normal"
     onClick={[Function]}
   >
     Label test
@@ -136,7 +134,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
 
 exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
 <fieldset
-  className="sc-htpNat bvDOix k-Form-CheckboxSet"
+  className="sc-bxivhb dMlFJp k-Form-CheckboxSet"
   disabled={false}
 >
   <legend>
