@@ -84,7 +84,7 @@ exports[`<LinkList /> default matches with snapshot 1`] = `
     className="k-LinkList__item k-LinkList__item--double"
   >
     <a
-      className="k-LinkList__link k-LinkList__link--dark k-LinkList__item--regular k-LinkList__link--isActive"
+      className="k-LinkList__link k-LinkList__link--dark k-LinkList__link--regular k-LinkList__item--regular k-LinkList__link--isActive"
       href="#"
     >
       Item 1
@@ -94,7 +94,7 @@ exports[`<LinkList /> default matches with snapshot 1`] = `
     className="k-LinkList__item k-LinkList__item--double"
   >
     <a
-      className="k-LinkList__link k-LinkList__link--dark k-LinkList__item--regular"
+      className="k-LinkList__link k-LinkList__link--dark k-LinkList__link--regular k-LinkList__item--regular"
       href="#"
     >
       Item 2
@@ -104,7 +104,7 @@ exports[`<LinkList /> default matches with snapshot 1`] = `
     className="k-LinkList__item k-LinkList__item--double"
   >
     <a
-      className="k-LinkList__link k-LinkList__link--dark k-LinkList__item--regular"
+      className="k-LinkList__link k-LinkList__link--dark k-LinkList__link--regular k-LinkList__item--regular"
       href="#"
     >
       Item 3

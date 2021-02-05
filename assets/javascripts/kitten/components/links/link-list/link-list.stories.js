@@ -42,19 +42,21 @@ export const SimpleList = () => {
 export const WithBackgroundDark = () => {
   return (
     <Grid>
-      <GridCol col="3">
+      <GridCol
+        col="3"
+        className={select('Color', colorOptions, 'light') && 'has-overrides dark-background'}
+      >
         <LinkList
-        style={{backgroundColor: '#222' }}
-        color={select('Color', colorOptions, 'light')}
-        itemMargin={select('Item margin', marginOptions, 'double')}
-        weight={select('weight', weightOptions, 'regular')}
-        margin={boolean('Margin', true)}
-        items={[
-          { key: '1', item: 'Item 1', href:"#", active: true },
-          { key: '2', item: 'Item 2', href:"#" },
-          { key: '3', item: 'Item 3', href:"#", weight: "light" },
-        ]}
-      />
+          color={select('Color', colorOptions, 'light')}
+          itemMargin={select('Item margin', marginOptions, 'double')}
+          weight={select('weight', weightOptions, 'regular')}
+          margin={boolean('Margin', true)}
+          items={[
+            { key: '1', item: 'Item 1', href:"#", active: true },
+            { key: '2', item: 'Item 2', href:"#" },
+            { key: '3', item: 'Item 3', href:"#", weight: "light" },
+          ]}
+        />
       </GridCol>
     </Grid>
   )

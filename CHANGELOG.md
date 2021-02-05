@@ -4,10 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Feature: Convert `LinkList` in CSS-in-JS.
-
 Breaking Changes:
 
+- Convert `LinkList` component and delete `k-LinkList` styles.
 - Remove `StyleGuide` app.
 - Remove `Karl` stories & components.
 - Remove `k-LegoGrid` styles.

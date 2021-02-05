@@ -95,6 +95,7 @@ export const LinkList = ({
       {...others}
       className={classNames(
         'k-LinkList',
+        others.className,
         {'k-LinkList--withoutMargin': !margin}
       )}
     >
@@ -105,18 +106,16 @@ export const LinkList = ({
         )}
           key={key}
         >
-          <a 
-            {...others}
+          <a
             href={href}
             className={classNames(
               'k-LinkList__link',
+              item.className,
               `k-LinkList__link--${color}`,
+              `k-LinkList__link--${weight}`,
               `k-LinkList__item--${weight}`,
-              {
-                'k-LinkList__link--isActive': active,
-                'k-LinkList__link--regular': weight == 'regular' && !weight,
-                'k-LinkList__link--light': weight == 'light' && !weight,
-              },
+
+              { 'k-LinkList__link--isActive': active },
             )}
           >
             {item}
