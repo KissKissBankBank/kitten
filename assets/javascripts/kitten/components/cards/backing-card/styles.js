@@ -38,7 +38,7 @@ export const StyledBackingCard = styled.article`
     text-align: left;
 
     .k-BackingCard__drawer {
-      grid-column: row-start / row-end;
+      grid-column: row-start / span row-end;
       align-self: start;
       margin: 0;
     }
