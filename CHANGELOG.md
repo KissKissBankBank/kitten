@@ -23,6 +23,7 @@ Breaking Changes:
   - `k-ProjectCard`
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
+- Replace redundent `Switch` with more modern `ToggleSwitch`.
 
 ## [2.113.0] - 2020-01-21
 
