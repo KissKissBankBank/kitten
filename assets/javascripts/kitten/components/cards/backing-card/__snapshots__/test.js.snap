@@ -68,12 +68,12 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
           </h3>
         </div>
         <p
-          className="sc-bwzfXH uTxCW k-u-line-height-1 k-u-style-italic k-u-weight-bold k-BackingCard__amount k-BackingCard__drawer"
+          className="sc-bwzfXH uTxCW k-u-line-height-1 k-u-weight-bold k-BackingCard__amount k-BackingCard__drawer"
         >
           65 €
         </p>
         <p
-          className="k-BackingCard__info k-BackingCard__halfDrawer k-u-size-tiny k-u-line-height-normal"
+          className="k-BackingCard__info k-u-size-tiny k-u-line-height-normal k-BackingCard__halfDrawer"
         >
           <span
             className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BackingCard__info__legend"
@@ -88,7 +88,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
           </span>
         </p>
         <p
-          className="k-BackingCard__info k-BackingCard__halfDrawer k-u-size-tiny k-u-line-height-normal"
+          className="k-BackingCard__info k-u-size-tiny k-u-line-height-normal k-BackingCard__halfDrawer"
         >
           <span
             className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BackingCard__info__legend"
