@@ -10,7 +10,6 @@ const sass = {
   'background-3': '#f6f6f6', // Light Grey
   'line-1': '#eee', // Semi Light Grey
   'line-2': '#d8d8d8', // Grey
-  'line-3': '#dbdbdb', // Grey
 
   'primary-1': '#19b4fa', // Primary
   'primary-2': '#05a8e6', // Semi Dark Primary

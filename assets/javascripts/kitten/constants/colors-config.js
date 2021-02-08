@@ -10,7 +10,6 @@ export default {
 
   line1: '#eee', // Semi Light Grey
   line2: '#d8d8d8', // Grey
-  line3: '#dbdbdb', // Semi Dark Grey Light
 
   primary1: '#19b4fa', // Primary
   primary2: '#05a8e6', // Semi Dark Primary
