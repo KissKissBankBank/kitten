@@ -207,5 +207,8 @@ export const StyledBackingCard = styled.article`
       border-color: ${COLORS.primary2};
       background-color: ${COLORS.primary2};
     }
+    .k-BackingCard__description__moreButton {
+      color: ${COLORS.primary2};
+    }
   }
 `
