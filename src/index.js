@@ -17,6 +17,12 @@ Object.defineProperty(exports, "Accordeon", {
     return _accordeon.Accordeon;
   }
 });
+Object.defineProperty(exports, "Tag", {
+  enumerable: true,
+  get: function get() {
+    return _tag.Tag;
+  }
+});
 Object.defineProperty(exports, "AvatarWithTextAndBadge", {
   enumerable: true,
   get: function get() {
@@ -177,6 +183,12 @@ Object.defineProperty(exports, "BackerCard", {
   enumerable: true,
   get: function get() {
     return _backerCard.BackerCard;
+  }
+});
+Object.defineProperty(exports, "BackingCard", {
+  enumerable: true,
+  get: function get() {
+    return _backingCard.BackingCard;
   }
 });
 Object.defineProperty(exports, "CartRewardCard", {
@@ -1756,6 +1768,8 @@ var _visuallyHidden = require("./components/accessibility/visually-hidden");
 
 var _accordeon = require("./components/accordeon");
 
+var _tag = require("./components/atoms/tag");
+
 var _avatarWithTextAndBadge = require("./components/avatar/avatar-with-text-and-badge");
 
 var _docLinkBox = require("./components/box/doc-link-box");
@@ -1793,6 +1807,8 @@ var _simpleCard = require("./components/cards/simple-card");
 var _articleCard = require("./components/cards/article-card");
 
 var _backerCard = require("./components/cards/backer-card");
+
+var _backingCard = require("./components/cards/backing-card");
 
 var _cartRewardCard = require("./components/cards/cart-reward-card");
 
