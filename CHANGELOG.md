@@ -23,6 +23,7 @@ Breaking Changes:
   - `k-ProjectCard`
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
+- Delete deprecated `RewardCard` (replaced by `BackingCard`).
 
 ## [2.116.0] - 2020-02-08
 
