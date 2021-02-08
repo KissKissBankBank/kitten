@@ -1,17 +1,28 @@
-import React, { Component } from 'react'
+import React from 'react'
 import classNames from 'classnames'
+import styled from 'styled-components'
+import { stepToRem } from '../../../helpers/utils/typography'
+import TYPOGRAPHY from '../../../constants/typography-config'
 
-export class SupTitle extends Component {
-  render() {
-    const { className, tag, ...supTitleProps } = this.props
+const StyledSupTitle = styled.div`
+  font-size: ${stepToRem(-1)};
+  line-height: normal;
+  text-transform: uppercase;
+  ${TYPOGRAPHY.fontStyles.bold};
+`
 
-    const supTitleClassName = classNames('k-SupTitle', className)
+export const SupTitle = ({
+  className,
+  tag,
+  ...supTitleProps
+}) => (
 
-    const Tag = tag
-
-    return <Tag className={supTitleClassName} {...supTitleProps} />
-  }
-}
+  <StyledSupTitle
+    as={tag}
+    className={classNames('k-SupTitle', className)}
+    {...supTitleProps}
+  />
+)
 
 SupTitle.defaultProps = {
   tag: 'div',
