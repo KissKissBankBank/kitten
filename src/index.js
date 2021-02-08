@@ -173,12 +173,6 @@ Object.defineProperty(exports, "SimpleCard", {
     return _simpleCard.SimpleCard;
   }
 });
-Object.defineProperty(exports, "ArticleCard", {
-  enumerable: true,
-  get: function get() {
-    return _articleCard.ArticleCard;
-  }
-});
 Object.defineProperty(exports, "BackerCard", {
   enumerable: true,
   get: function get() {
@@ -197,34 +191,10 @@ Object.defineProperty(exports, "CartRewardCard", {
     return _cartRewardCard.CartRewardCard;
   }
 });
-Object.defineProperty(exports, "ContributionCard", {
-  enumerable: true,
-  get: function get() {
-    return _contributionCard.ContributionCard;
-  }
-});
 Object.defineProperty(exports, "DonationCard", {
   enumerable: true,
   get: function get() {
     return _donationCard.DonationCard;
-  }
-});
-Object.defineProperty(exports, "ProjectCard", {
-  enumerable: true,
-  get: function get() {
-    return _projectCard.ProjectCard;
-  }
-});
-Object.defineProperty(exports, "ProjectCreatorCard", {
-  enumerable: true,
-  get: function get() {
-    return _projectCreatorCard.ProjectCreatorCard;
-  }
-});
-Object.defineProperty(exports, "ProjectSimilarCard", {
-  enumerable: true,
-  get: function get() {
-    return _projectSimilarCard.ProjectSimilarCard;
   }
 });
 Object.defineProperty(exports, "RewardCard", {
@@ -237,12 +207,6 @@ Object.defineProperty(exports, "RewardEdition", {
   enumerable: true,
   get: function get() {
     return _rewardEdition.RewardEdition;
-  }
-});
-Object.defineProperty(exports, "SimilarProjectsCard", {
-  enumerable: true,
-  get: function get() {
-    return _similarProjectsCard.SimilarProjectsCard;
   }
 });
 Object.defineProperty(exports, "TeamCard", {
@@ -573,12 +537,6 @@ Object.defineProperty(exports, "GridCol", {
   enumerable: true,
   get: function get() {
     return _grid.GridCol;
-  }
-});
-Object.defineProperty(exports, "LegoGrid", {
-  enumerable: true,
-  get: function get() {
-    return _legoGrid.LegoGrid;
   }
 });
 Object.defineProperty(exports, "Row", {
@@ -1804,29 +1762,17 @@ var _checkableButton = require("./components/buttons/checkable-button");
 
 var _simpleCard = require("./components/cards/simple-card");
 
-var _articleCard = require("./components/cards/article-card");
-
 var _backerCard = require("./components/cards/backer-card");
 
 var _backingCard = require("./components/cards/backing-card");
 
 var _cartRewardCard = require("./components/cards/cart-reward-card");
 
-var _contributionCard = require("./components/cards/contribution-card");
-
 var _donationCard = require("./components/cards/donation-card");
-
-var _projectCard = require("./components/cards/project-card");
-
-var _projectCreatorCard = require("./components/cards/project-creator-card");
-
-var _projectSimilarCard = require("./components/cards/project-similar-card");
 
 var _rewardCard = require("./components/cards/reward-card");
 
 var _rewardEdition = require("./components/cards/reward-edition");
-
-var _similarProjectsCard = require("./components/cards/similar-projects-card");
 
 var _teamCard = require("./components/cards/team-card");
 
@@ -1935,8 +1881,6 @@ var _container = require("./components/grid/container");
 var _scrollableContainer = require("./components/grid/scrollable-container");
 
 var _grid = require("./components/grid/grid");
-
-var _legoGrid = require("./components/grid/lego-grid");
 
 var _row = require("./components/grid/row");
 
