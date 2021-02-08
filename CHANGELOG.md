@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `BackingCard` component.
+- Feature: Add `Tag` component.
+- Feature: Add `useMedia` hook.
+- Fix: Fix mixup between `k-u-margin-vertical` and `k-u-margin-horizontal`.
+- Feature: Add `k-u-size-giant` utility.
+- Feature: Add `giant` value to `size` prop to `Text` component.
+
 ## [2.115.0] - 2020-02-02
 
 Feature:
@@ -17,12 +24,14 @@ Fix:
 ## [2.114.0] - 2020-01-29
 
 Features:
+
 - Add `regular` (default) and `big` props on all variants of `TextInput`.
 - Add `variant` prop to `TextInputWithUnit`, defaults to `andromeda`.
 - Add `big` prop to `TextInputWithUnit`.
 - Change `DocumentManager` `radius` and hide icon on `xs` screen.
 
 Fix:
+
 - `VerticalStepper` mobile style fixes.
 
 ## [2.113.0] - 2020-01-21
