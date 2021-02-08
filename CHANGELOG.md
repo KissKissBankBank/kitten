@@ -4,12 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `BackingCard` component.
-- Feature: Add `Tag` component.
-- Feature: Add `useMedia` hook.
-- Fix: Fix mixup between `k-u-margin-vertical` and `k-u-margin-horizontal`.
-- Feature: Add `k-u-size-giant` utility.
-- Feature: Add `giant` value to `size` prop to `Text` component.
+## [2.116.0] - 2020-02-08
+
+Features:
+
+- Add `BackingCard` component.
+- Add `Tag` component.
+- Add `useMedia` hook.
+- Add `k-u-size-giant` utility.
+- Add `giant` value to `size` prop to `Text` component.
+
+Fix:
+
+- Fix mixup between `k-u-margin-vertical` and `k-u-margin-horizontal`.
 
 ## [2.115.0] - 2020-02-02
 
