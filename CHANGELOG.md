@@ -4,7 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Breaking Changes:
+## [3.0.0-beta.1] - 2020-02-08
+
+Breaking changes:
 
 - Remove `StyleGuide` app.
 - Remove `Karl` stories & components.
