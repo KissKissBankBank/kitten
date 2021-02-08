@@ -6,6 +6,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `size` prop to `RadioButton`, defaults to `regular`.
 
+## [2.116.0] - 2020-02-08
+
+Features:
+
+- Add `BackingCard` component.
+- Add `Tag` component.
+- Add `useMedia` hook.
+- Add `k-u-size-giant` utility.
+- Add `giant` value to `size` prop to `Text` component.
+
+Fix:
+
+- Fix mixup between `k-u-margin-vertical` and `k-u-margin-horizontal`.
+
 ## [2.115.0] - 2020-02-02
 
 Feature:
@@ -19,12 +33,14 @@ Fix:
 ## [2.114.0] - 2020-01-29
 
 Features:
+
 - Add `regular` (default) and `big` props on all variants of `TextInput`.
 - Add `variant` prop to `TextInputWithUnit`, defaults to `andromeda`.
 - Add `big` prop to `TextInputWithUnit`.
 - Change `DocumentManager` `radius` and hide icon on `xs` screen.
 
 Fix:
+
 - `VerticalStepper` mobile style fixes.
 
 ## [2.113.0] - 2020-01-21
