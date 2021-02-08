@@ -7,14 +7,16 @@ export const StyledBackingCard = styled.article`
   --backingCard--border-width: 0;
   --backingCard--border-radius: 0;
   --backingCard--grid-col: repeat(auto-fit, minmax(${pxToRem(120)}, 1fr));
+  --backingCard--border-color: ${COLORS.line1};
 
   /* CARD STYLE */
 
-  border: var(--backingCard--border-width) solid ${COLORS.line1};
+  border: var(--backingCard--border-width) solid var(--backingCard--border-color);
   border-radius: var(--backingCard--border-radius);
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  transition: border-color .2s ease-in-out;
 
   &.k-BackingCard--hasBorder {
     --backingCard--border-width: ${pxToRem(2)};
@@ -83,6 +85,7 @@ export const StyledBackingCard = styled.article`
       object-position: center center;
       border-top-left-radius: var(--backingCard--border-radius);
       border-top-right-radius: var(--backingCard--border-radius);
+      transition: transform .2s ease-in-out;
     }
   }
 
@@ -184,6 +187,25 @@ export const StyledBackingCard = styled.article`
 
     .k-BackingCard__description__moreButton {
       color: ${COLORS.font2};
+    }
+  }
+
+  button&:hover,
+  a&:hover {
+    --backingCard--border-color: ${COLORS.font3};
+
+    cursor: pointer;
+
+    .k-BackingCard__imageWrapper {
+      img,
+      figure,
+      video {
+        transform: scale(1.05);
+      }
+    }
+    .k-BackingCard__button {
+      border-color: ${COLORS.primary2};
+      background-color: ${COLORS.primary2};
     }
   }
 `

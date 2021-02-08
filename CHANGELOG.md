@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `hover` styles for `BackingCard`.
+- Feature: `line3` color for a light semi dark grey.
+
 ## [2.117.0] - 2020-02-08
 
 Feature:
