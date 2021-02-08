@@ -8,6 +8,9 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 // Accordeon
 export { Accordeon } from './components/accordeon'
 
+// Atoms
+export { Tag } from './components/atoms/tag'
+
 // Avatar
 export { AvatarWithTextAndBadge } from './components/avatar/avatar-with-text-and-badge'
 
@@ -45,6 +48,7 @@ export { CheckableButton } from './components/buttons/checkable-button'
 // Cards
 export { SimpleCard } from './components/cards/simple-card'
 export { BackerCard } from './components/cards/backer-card'
+export { BackingCard } from './components/cards/backing-card'
 export { CartRewardCard } from './components/cards/cart-reward-card'
 export { DonationCard } from './components/cards/donation-card'
 export { RewardCard } from './components/cards/reward-card'
