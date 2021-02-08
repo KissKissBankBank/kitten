@@ -190,6 +190,7 @@ export const StyledBackingCard = styled.article`
     }
   }
 
+  &.k-BackingCard--hasHover:hover,
   button&:hover,
   a&:hover {
     --backingCard--border-color: ${COLORS.line2};
