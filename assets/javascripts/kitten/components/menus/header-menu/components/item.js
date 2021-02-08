@@ -46,17 +46,13 @@ export const Item = ({
         className={classNames('k-HeaderMenu__item__link', other.className)}
         aria-current={isSelected ? 'page' : null}
       >
-        {external ? (
-          <>
-            {children}
-            <ArrowIcon
-              className="k-HeaderMenu__item__arrow"
-              version="solid"
-              direction="right"
-            />
-          </>
-        ) : (
-          children
+        {children}
+        {external && (
+          <ArrowIcon
+            className="k-HeaderMenu__item__arrow headerMenuArrowIcon"
+            version="solid"
+            direction="right"
+          />
         )}
       </a>
     )}

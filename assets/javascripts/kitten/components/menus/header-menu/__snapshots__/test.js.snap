@@ -460,7 +460,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
         Custom component
       </a>
       <svg
-        className="k-HeaderMenu__item__arrow"
+        className="k-HeaderMenu__item__arrow headerMenuArrowIcon"
         fill="#222"
         height="5.64"
         style={
