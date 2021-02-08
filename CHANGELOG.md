@@ -23,6 +23,7 @@ Breaking Changes:
   - `k-ProjectCard`
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
+- Migrate `InformationBox` component and remove `k-InformationBox` styles.
 
 ## [2.113.0] - 2020-01-21
 
