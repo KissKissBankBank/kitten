@@ -24,6 +24,12 @@ Breaking Changes:
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
 
+## [2.117.0] - 2020-02-08
+
+Feature:
+
+- Add `size` prop to `HeaderMenu.Item` & refactoring.
+
 ## [2.116.0] - 2020-02-08
 
 Features:
