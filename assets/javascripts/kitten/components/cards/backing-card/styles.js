@@ -192,7 +192,7 @@ export const StyledBackingCard = styled.article`
 
   button&:hover,
   a&:hover {
-    --backingCard--border-color: ${COLORS.font3};
+    --backingCard--border-color: ${COLORS.line3};
 
     cursor: pointer;
 
