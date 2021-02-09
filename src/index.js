@@ -965,30 +965,6 @@ Object.defineProperty(exports, "HighlightHalo", {
     return _highlightHalo.HighlightHalo;
   }
 });
-Object.defineProperty(exports, "HeaderTour", {
-  enumerable: true,
-  get: function get() {
-    return _headerTour.HeaderTour;
-  }
-});
-Object.defineProperty(exports, "TourPopover", {
-  enumerable: true,
-  get: function get() {
-    return _tourPopover.TourPopover;
-  }
-});
-Object.defineProperty(exports, "TourStep", {
-  enumerable: true,
-  get: function get() {
-    return _tourStep.TourStep;
-  }
-});
-Object.defineProperty(exports, "Tour", {
-  enumerable: true,
-  get: function get() {
-    return _tour.Tour;
-  }
-});
 Object.defineProperty(exports, "Paragraph", {
   enumerable: true,
   get: function get() {
@@ -2015,14 +1991,6 @@ var _tooltipNew = require("./components/tooltips/tooltip-new");
 var _tooltip = require("./components/tooltips/tooltip");
 
 var _highlightHalo = require("./components/tours/highlight-halo");
-
-var _headerTour = require("./components/tours/header-tour");
-
-var _tourPopover = require("./components/tours/tour-popover");
-
-var _tourStep = require("./components/tours/tour-step");
-
-var _tour = require("./components/tours/tour");
 
 var _paragraph = require("./components/typography/paragraph");
 

@@ -244,10 +244,6 @@ export { Tooltip } from './components/tooltips/tooltip'
 
 // Tours
 export { HighlightHalo } from './components/tours/highlight-halo'
-export { HeaderTour } from './components/tours/header-tour'
-export { TourPopover } from './components/tours/tour-popover'
-export { TourStep } from './components/tours/tour-step'
-export { Tour } from './components/tours/tour'
 
 // Typography
 export { Paragraph } from './components/typography/paragraph'
