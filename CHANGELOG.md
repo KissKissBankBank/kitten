@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Breaking change:
 
-- Convert `Paragraph` component and delete `k-Paragraph` styles.
+- Convert `Paragraph` component.
 - Remove `k-Alert` SCSS mixin.
 
 
