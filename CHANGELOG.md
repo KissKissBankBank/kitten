@@ -28,6 +28,13 @@ Breaking changes:
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
 
+## [2.118.0] - 2020-02-09
+
+Features:
+
+- Add `size` prop to `RadioButton`, defaults to `regular`.
+- Add `hover` styles for `BackingCard`.
+
 ## [2.117.0] - 2020-02-08
 
 Feature:

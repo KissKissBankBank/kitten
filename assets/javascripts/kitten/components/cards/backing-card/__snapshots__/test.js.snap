@@ -2,7 +2,7 @@
 
 exports[`<BackingCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bdVaJa eeLavE k-BackingCard k-BackingCard--hasBorder"
+  className="sc-bdVaJa hHGRuH k-BackingCard k-BackingCard--hasBorder"
 >
   <div
     className="k-BackingCard__gridWrapper"
@@ -22,148 +22,138 @@ exports[`<BackingCard /> default matches with snapshot 1`] = `
 
 exports[`<BackingCard /> with some props matches with snapshot 1`] = `
 <article
-  className="sc-bdVaJa eeLavE k-BackingCard k-BackingCard--hasBorder"
+  className="sc-bdVaJa hHGRuH k-BackingCard k-BackingCard--disabled"
 >
+  <div
+    className="k-BackingCard__imageWrapper"
+  >
+    <img
+      alt=""
+      src="/kitten.jpg"
+    />
+  </div>
   <div
     className="k-BackingCard__gridWrapper"
   >
-    <article
-      className="sc-bdVaJa eeLavE k-BackingCard k-BackingCard--disabled"
+    <span
+      className="sc-EHOje hGIGkH k-Tag k-BackingCard__headingTag k-BackingCard__drawer k-Tag--info"
+    >
+      <svg
+        fill="#222"
+        height="13"
+        viewBox="0 0 18 16"
+        width="14"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+        <path
+          d="M8.999 0l1.93 5.974c.028.09.112.15.206.15l6.274-.013-5.084 3.68a.216.216 0 0 0-.079.242L14.198 16l-5.072-3.7a.216.216 0 0 0-.255 0L3.801 16l1.953-5.967a.216.216 0 0 0-.079-.243L.591 6.111l6.274.012c.094 0 .178-.06.207-.15L8.999 0z"
+        />
+      </svg>
+      Star reward
+    </span>
+    <div
+      className="k-BackingCard__titleWrapper k-BackingCard__drawer"
+    >
+      <h3
+        className="sc-bwzfXH uTxCW k-u-line-height-1 k-u-size-default k-u-weight-bold k-BackingCard__title k-u-margin-none"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+      </h3>
+    </div>
+    <p
+      className="sc-bwzfXH uTxCW k-u-line-height-1 k-u-weight-bold k-BackingCard__amount k-BackingCard__drawer"
+    >
+      65 €
+    </p>
+    <p
+      className="k-BackingCard__info k-u-size-tiny k-u-line-height-normal k-BackingCard__halfDrawer"
+    >
+      <span
+        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BackingCard__info__legend"
+      >
+        Prix de livraison :
+      </span>
+       
+      <span
+        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-light k-BackingCard__info__value"
+      >
+        5 € (en France)
+      </span>
+    </p>
+    <p
+      className="k-BackingCard__info k-u-size-tiny k-u-line-height-normal k-BackingCard__halfDrawer"
+    >
+      <span
+        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BackingCard__info__legend"
+      >
+        Livraison estimée :
+      </span>
+       
+      <span
+        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-light k-BackingCard__info__value"
+      >
+        Janvier 2022
+      </span>
+    </p>
+    <div
+      className="k-BackingCard__descriptionWrapper k-BackingCard__drawer k-BackingCard__drawer--extensible k-BackingCard__descriptionWrapper--truncateText"
     >
       <div
-        className="k-BackingCard__imageWrapper"
+        className="k-BackingCard__description"
       >
-        <img
-          alt=""
-          src="/kitten.jpg"
-        />
+        <p
+          className="k-u-margin-none"
+        >
+          Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
+        </p>
+        <p
+          className="k-u-margin-none"
+        >
+          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+        </p>
+        <p
+          className="k-u-margin-none"
+        >
+          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+        </p>
+        <p
+          className="k-u-margin-none"
+        >
+          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+        </p>
       </div>
-      <div
-        className="k-BackingCard__gridWrapper"
+    </div>
+    <ul
+      className="k-BackingCard__tagList k-BackingCard__drawer"
+    >
+      <li
+        className="sc-EHOje hGIGkH k-Tag k-Tag--info"
       >
-        <span
-          className="sc-EHOje hGIGkH k-Tag k-BackingCard__headingTag k-BackingCard__drawer k-Tag--info"
+        <strong
+          className="k-u-weight-regular"
         >
-          <svg
-            fill="#222"
-            height="13"
-            viewBox="0 0 18 16"
-            width="14"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            
-            <path
-              d="M8.999 0l1.93 5.974c.028.09.112.15.206.15l6.274-.013-5.084 3.68a.216.216 0 0 0-.079.242L14.198 16l-5.072-3.7a.216.216 0 0 0-.255 0L3.801 16l1.953-5.967a.216.216 0 0 0-.079-.243L.591 6.111l6.274.012c.094 0 .178-.06.207-.15L8.999 0z"
-            />
-          </svg>
-          Star reward
-        </span>
-        <div
-          className="k-BackingCard__titleWrapper k-BackingCard__drawer"
-        >
-          <h3
-            className="sc-bwzfXH uTxCW k-u-line-height-1 k-u-size-default k-u-weight-bold k-BackingCard__title k-u-margin-none"
-          >
-            Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-          </h3>
-        </div>
-        <p
-          className="sc-bwzfXH uTxCW k-u-line-height-1 k-u-weight-bold k-BackingCard__amount k-BackingCard__drawer"
-        >
-          65 €
-        </p>
-        <p
-          className="k-BackingCard__info k-u-size-tiny k-u-line-height-normal k-BackingCard__halfDrawer"
-        >
-          <span
-            className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BackingCard__info__legend"
-          >
-            Prix de livraison :
-          </span>
-           
-          <span
-            className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-light k-BackingCard__info__value"
-          >
-            5 € (en France)
-          </span>
-        </p>
-        <p
-          className="k-BackingCard__info k-u-size-tiny k-u-line-height-normal k-BackingCard__halfDrawer"
-        >
-          <span
-            className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BackingCard__info__legend"
-          >
-            Livraison estimée :
-          </span>
-           
-          <span
-            className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-light k-BackingCard__info__value"
-          >
-            Janvier 2022
-          </span>
-        </p>
-        <div
-          className="k-BackingCard__descriptionWrapper k-BackingCard__drawer k-BackingCard__drawer--extensible k-BackingCard__descriptionWrapper--truncateText"
-        >
-          <div
-            className="k-BackingCard__description"
-          >
-            <p
-              className="k-u-margin-none"
-            >
-              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
-            </p>
-            <p
-              className="k-u-margin-none"
-            >
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
-            </p>
-            <p
-              className="k-u-margin-none"
-            >
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
-            </p>
-            <p
-              className="k-u-margin-none"
-            >
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
-            </p>
-          </div>
-        </div>
-        <ul
-          className="k-BackingCard__tagList k-BackingCard__drawer"
-        >
-          <li
-            className="sc-EHOje hGIGkH k-Tag k-Tag--info"
-          >
-            <strong
-              className="k-u-weight-regular"
-            >
-              5
-            </strong>
-             
-            contributeurs
-          </li>
-          <li
-            className="sc-EHOje hGIGkH k-Tag k-Tag--info"
-          >
-            <strong
-              className="k-u-weight-regular"
-            >
-              2/6
-            </strong>
-             
-            disponibles
-          </li>
-        </ul>
-      </div>
-      <button
-        className="sc-bxivhb hYUqPP k-BackingCard__button k-BackingCard__drawer"
-        disabled={true}
+          5
+        </strong>
+         contributeurs
+      </li>
+      <li
+        className="sc-EHOje hGIGkH k-Tag k-Tag--info"
       >
-        Je soutiens
-      </button>
-    </article>
+        <strong
+          className="k-u-weight-regular"
+        >
+          2/6
+        </strong>
+         disponibles
+      </li>
+    </ul>
   </div>
+  <button
+    className="sc-bxivhb hYUqPP k-BackingCard__button k-BackingCard__drawer"
+    disabled={true}
+  >
+    Je soutiens
+  </button>
 </article>
 `;
