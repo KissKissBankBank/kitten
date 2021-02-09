@@ -1,31 +1,27 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { modifierStyles } from './helpers/modifier-styles'
 
 const StyledParagraph = styled.p`
   ${TYPOGRAPHY.fontStyles.light};
-  ${({ modifier }) => modifierStyles(modifier)}
 
-  ${({ margin }) =>
-    !margin &&
-    css`
-      margin-top: 0;
-      margin-bottom: 0;
-    `}
+  &.k-Paragraph--margin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  &.k-Paragraph--normalLineHeight {
+    line-height: normal;
+  }
 
-  ${({ normalLineHeight }) =>
-    normalLineHeight &&
-    css`
-      line-height: normal;
-    `}
+  &.k-Paragraph--italic {
+    font-style: italic;
+  }
 
-  ${({ italic }) =>
-    italic &&
-    css`
-      font-style: italic;
-    `}
+  ${modifierStyles('&.k-Paragraph--modifier')}
 `
 
 export const Paragraph = ({
@@ -39,10 +35,14 @@ export const Paragraph = ({
   return (
     <StyledParagraph
       as={tag}
-      modifier={modifier}
-      normalLineHeight={normalLineHeight}
-      italic={italic}
-      margin={margin}
+      className={classNames(
+        `k-Paragraph--${modifier}`,
+        {
+          'k-Paragraph--margin': margin,
+          'k-Paragraph--normalLineHeight': normalLineHeight,
+          'k-Paragraph--italic': italic,
+        },
+      )}
       {...other}
     />
   )
