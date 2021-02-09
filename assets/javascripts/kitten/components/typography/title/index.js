@@ -1,31 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import classNames from 'classnames'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { modifierStyles } from './helpers/modifier-styles'
 
 const StyledTitle = styled.span`
   ${TYPOGRAPHY.fontStyles.bold};
-  ${({ modifier }) => modifierStyles(modifier)}
 
-  ${({ margin }) =>
-    !margin &&
-    css`
-      margin-top: 0;
-      margin-bottom: 0;
-    `}
+  &.k-Title--margin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
-  ${({ italic }) =>
-    italic &&
-    css`
-      font-style: italic;
-    `}
+  &.k-Title--italic {
+    font-style: italic;
+  }
+   /* 
+  &.k-Title--cssColor {
+    color: ${cssColor};
+  } */}
 
-  ${({ cssColor }) =>
-    cssColor &&
-    css`
-      color: ${cssColor};
-    `}
+  ${modifierStyles('&.k-Title--modifier')}
 `
 
 export const Title = ({
@@ -39,11 +35,15 @@ export const Title = ({
   return (
     <StyledTitle
       as={tag}
+      className={classNames(
+        `k-Title--${modifier}`,
+        {
+          'k-Title--margin': margin,
+          'k-Title--italic': italic,
+          'k-Title--cssColor': cssColor,
+        }
+      )}
       {...other}
-      modifier={modifier}
-      margin={margin}
-      italic={italic}
-      cssColor={cssColor}
     />
   )
 }
