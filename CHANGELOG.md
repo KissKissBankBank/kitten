@@ -5,6 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `size` prop to `RadioButton`, defaults to `regular`.
+- Feature: Add `hover` styles for `BackingCard`.
+- Feature: `line3` color for a light semi dark grey.
+
+## [2.117.0] - 2020-02-08
+
+Feature:
+
+- Add `size` prop to `HeaderMenu.Item` & refactoring.
 
 ## [2.116.0] - 2020-02-08
 
