@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { Alert } from './alert'
+import { Alert } from './'
 
 describe('<Alert />', () => {
   it('should matches with default snapshot', () => {

@@ -4,16 +4,16 @@ import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutPr
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
-import { CloseButton } from '../../components/buttons/close-button';
-import COLORS from '../../constants/colors-config';
-import TYPOGRAPHY from '../../constants/typography-config';
-import { ScreenConfig } from '../../constants/screen-config';
-import { pxToRem, stepToRem } from '../../helpers/utils/typography';
+import { CloseButton } from '../../../components/buttons/close-button';
+import COLORS from '../../../constants/colors-config';
+import TYPOGRAPHY from '../../../constants/typography-config';
+import { ScreenConfig } from '../../../constants/screen-config';
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import classNames from 'classnames';
 var fadeOut = keyframes(["0%{opacity:1;}100%{opacity:0;}"]);
 var AlertWrapper = styled.div.withConfig({
   displayName: "alert__AlertWrapper",
-  componentId: "j865fd-0"
+  componentId: "a2683e-0"
 })(["", ";position:relative;overflow:hidden;background-color:", ";color:", ";display:flex;align-items:flex-start;.k-Alert__text{padding:", " ", ";flex:1 0 0;font-size:", ";@media (min-width:", "){text-align:center;}}.k-Alert__button{flex:0 0 auto;transition:all 0.2s ease;svg,svg path{transition:fill 0.2s ease;}&:focus{outline:", " solid ", ";outline-offset:", ";}}a{", ";color:inherit;text-decoration:underline;}&.k-Alert--success{color:", ";background-color:", ";}&.k-Alert--error{color:", ";background-color:", ";}&.k-Alert--warning{color:", ";background-color:", ";}&.k-Alert--hasCloseButton{.k-Alert__text{@media (min-width:", "){margin-left:", ";}}}&.k-Alert--shouldHide{pointer-events:none;animation:", " 0.4s cubic-bezier(0.895,0.03,0.685,0.22) forwards;}"], TYPOGRAPHY.fontStyles.light, COLORS.primary5, COLORS.primary1, pxToRem(13), pxToRem(20), stepToRem(-1), pxToRem(ScreenConfig.S.min), COLORS.background1, pxToRem(2), pxToRem(-4), TYPOGRAPHY.fontStyles.bold, COLORS.valid, COLORS.tertiary1, COLORS.error, COLORS.error2, COLORS.warning, COLORS.warning2, pxToRem(ScreenConfig.S.min), pxToRem(50), fadeOut);
 export var Alert = function Alert(_ref) {
   var className = _ref.className,
