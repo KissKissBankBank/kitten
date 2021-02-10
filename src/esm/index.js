@@ -158,8 +158,6 @@ export { IconBadge } from './components/notifications/icon-badge'; // Pages
 
 export { MarkdownPage } from './components/pages/markdown'; // Popovers
 
-export { CallToActionPopover } from './components/popovers/call-to-action-popover';
-export { Popover } from './components/popovers/popover';
 export { SimplePopover } from './components/popovers/simple-popover'; // Search
 
 export { SearchInput } from './components/search/search-input'; // Simulators
