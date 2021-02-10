@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `regular` (default) and `big` props on all variants of `DropdownSelect`.
+## [2.119.0] - 2020-02-10
+
+Feature:
+
+- Add `regular` (default) and `big` props on all variants of `DropdownSelect`.
 
 ## [2.118.0] - 2020-02-09
 
