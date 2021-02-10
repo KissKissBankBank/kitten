@@ -386,15 +386,9 @@ export const StyledDropdown = styled.div`
   &.k-Form-Dropdown--orion {
     .k-Form-DropdownCombobox,
     .k-Form-DropdownSelect__button {
-      height: ${pxToRem(40)};
+      height: ${pxToRem(50)};
       border-radius: ${pxToRem(4)};
-      padding-right: ${pxToRem(10)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        height: ${pxToRem(60)};
-        border-radius: ${pxToRem(6)};
-        padding-right: ${pxToRem(20)};
-      }
+      padding-right: ${pxToRem(15)};
     }
 
     &.k-Form-Dropdown--big {
