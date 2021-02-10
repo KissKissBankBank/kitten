@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: Remove `k-Alert` SCSS mixin.
+- Breaking change: Remove `k-TagList` SCSS mixin.
+- Breaking change: Remove `TagList` component.
 
 ## [3.0.0-beta.1] - 2020-02-08
 
