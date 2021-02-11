@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toggletip /> Default matches with snapshot 1`] = `
+<span
+  className="sc-bdVaJa hSsYpi k-Toggletip k-Toggletip--info"
+  style={
+    Object {
+      "--toggletipAction-left": "NaNrem",
+      "--toggletipAction-top": "NaNrem",
+      "style": undefined,
+    }
+  }
+>
+  <button
+    aria-label="Sample label"
+    className="k-Toggletip__action k-u-reset-button"
+    onBlur={[Function]}
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      fill="#fff"
+      height={10}
+      viewBox="0 0 6 10"
+      width={6}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
+      />
+    </svg>
+  </button>
+  <span
+    role="status"
+  />
+</span>
+`;
+
+exports[`<Toggletip /> With props matches with snapshot 1`] = `
+<span
+  className="sc-bdVaJa hSsYpi k-Toggletip k-Toggletip--warning"
+  style={
+    Object {
+      "--toggletipAction-left": "NaNrem",
+      "--toggletipAction-top": "NaNrem",
+      "style": undefined,
+    }
+  }
+>
+  <button
+    aria-label="Sample label"
+    className="k-Toggletip__action k-u-reset-button customClassName"
+    onBlur={[Function]}
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      height={10}
+      width={2}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M1.82 6.86H.168V0H1.82v6.86zM0 8.96c0-.28.098-.518.294-.714a.972.972 0 0 1 .714-.294c.28 0 .518.098.714.294a.972.972 0 0 1 .294.714c0 .27-.098.504-.294.7a.972.972 0 0 1-.714.294.972.972 0 0 1-.714-.294.956.956 0 0 1-.294-.7z"
+        fill="#fff"
+        fillRule="evenodd"
+      />
+    </svg>
+  </button>
+  <span
+    role="status"
+  />
+</span>
+`;
