@@ -2,10 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
+import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { modifierStyles } from './helpers/modifier-styles'
 
 const StyledTitle = styled.span`
+  --Title-css-color : ${COLORS.font1};
+
   ${TYPOGRAPHY.fontStyles.bold};
 
   &.k-Title--margin {
@@ -16,11 +19,11 @@ const StyledTitle = styled.span`
   &.k-Title--italic {
     font-style: italic;
   }
-   /* 
-  &.k-Title--cssColor {
-    color: ${cssColor};
-  } */}
 
+  &.k-Title--cssColor {
+    color: var(--Title-css-color);
+  }
+  
   ${modifierStyles('&.k-Title--modifier')}
 `
 
@@ -40,9 +43,9 @@ export const Title = ({
         {
           'k-Title--margin': margin,
           'k-Title--italic': italic,
-          'k-Title--cssColor': cssColor,
         }
       )}
+      style={{ '--Title-css-color': cssColor }}
       {...other}
     />
   )
