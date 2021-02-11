@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: Remove `k-Alert` SCSS mixin.
+- Breaking change: Remove `Comment` coming from 'form/comment' path.
+  Prefer use `comments/comment` path.
+- Breaking change: Remove `CommentForm` coming from 'form/comment-form' path.
+  Prefer use `comments/comment-form` path.
+- Breaking change: Remove `CommentAvatar` coming from 'form/comment-avatar'
+  path. Prefer use `comments/comment-avatar` path.
 
 ## [3.0.0-beta.1] - 2020-02-08
 
