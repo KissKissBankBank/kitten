@@ -2,7 +2,8 @@
 
 exports[`<Toggletip /> Default matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa hSsYpi k-Toggletip k-Toggletip--info"
+  className="sc-bdVaJa imDtDI k-Toggletip k-Toggletip--info"
+  id="Toggletip-demo"
   style={
     Object {
       "--toggletipAction-left": "NaNrem",
@@ -39,7 +40,8 @@ exports[`<Toggletip /> Default matches with snapshot 1`] = `
 
 exports[`<Toggletip /> With props matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa hSsYpi k-Toggletip k-Toggletip--warning"
+  className="sc-bdVaJa imDtDI k-Toggletip k-Toggletip--warning"
+  id="Toggletip-demo"
   style={
     Object {
       "--toggletipAction-left": "NaNrem",
