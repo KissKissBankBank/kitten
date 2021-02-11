@@ -2,7 +2,7 @@
 
 exports[`<Toggletip /> Default matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa imDtDI k-Toggletip k-Toggletip--info"
+  className="sc-bdVaJa cBUNev k-Toggletip k-Toggletip--info"
   id="Toggletip-demo"
   style={
     Object {
@@ -17,6 +17,11 @@ exports[`<Toggletip /> Default matches with snapshot 1`] = `
     className="k-Toggletip__action k-u-reset-button"
     onBlur={[Function]}
     onClick={[Function]}
+    style={
+      Object {
+        "--toggletipAction-color": null,
+      }
+    }
     type="button"
   >
     <svg
@@ -40,7 +45,7 @@ exports[`<Toggletip /> Default matches with snapshot 1`] = `
 
 exports[`<Toggletip /> With props matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa imDtDI k-Toggletip k-Toggletip--warning"
+  className="sc-bdVaJa cBUNev k-Toggletip k-Toggletip--warning"
   id="Toggletip-demo"
   style={
     Object {
@@ -55,6 +60,11 @@ exports[`<Toggletip /> With props matches with snapshot 1`] = `
     className="k-Toggletip__action k-u-reset-button customClassName"
     onBlur={[Function]}
     onClick={[Function]}
+    style={
+      Object {
+        "--toggletipAction-color": null,
+      }
+    }
     type="button"
   >
     <svg

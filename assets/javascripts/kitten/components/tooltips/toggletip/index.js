@@ -162,7 +162,7 @@ export const Toggletip = ({
     document.addEventListener('keydown', handleKeydownEscape)
     window.addEventListener('resize', throttle(updateCoordinates, 50))
 
-    const bubbleElement = actionElement.current.nextElementSibling?.children[0]
+    const bubbleElement = actionElement.current?.nextElementSibling?.children[0]
     const bubbleElementCoords = bubbleElement?.getBoundingClientRect() || {}
 
     const shouldDisplayBubbleLowTop =
