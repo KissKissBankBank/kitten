@@ -7,9 +7,10 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import { modifierStyles } from './helpers/modifier-styles'
 
 const StyledTitle = styled.span`
-  --Title-css-color : ${COLORS.font1};
+  --Title-css-color: ${COLORS.font1};
 
   ${TYPOGRAPHY.fontStyles.bold};
+  color: var(--Title-css-color);
 
   &.k-Title--margin {
     margin-top: 0;
@@ -20,10 +21,6 @@ const StyledTitle = styled.span`
     font-style: italic;
   }
 
-  &.k-Title--cssColor {
-    color: var(--Title-css-color);
-  }
-  
   ${modifierStyles('&.k-Title--modifier')}
 `
 
