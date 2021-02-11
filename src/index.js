@@ -563,36 +563,6 @@ Object.defineProperty(exports, "AdaptableGrid", {
     return _adaptableGrid.AdaptableGrid;
   }
 });
-Object.defineProperty(exports, "HeaderLogo", {
-  enumerable: true,
-  get: function get() {
-    return _headerLogo.HeaderLogo;
-  }
-});
-Object.defineProperty(exports, "HeaderTitles", {
-  enumerable: true,
-  get: function get() {
-    return _headerTitles.HeaderTitles;
-  }
-});
-Object.defineProperty(exports, "Header", {
-  enumerable: true,
-  get: function get() {
-    return _header.Header;
-  }
-});
-Object.defineProperty(exports, "HeaderItems", {
-  enumerable: true,
-  get: function get() {
-    return _header.HeaderItems;
-  }
-});
-Object.defineProperty(exports, "HeaderItem", {
-  enumerable: true,
-  get: function get() {
-    return _header.HeaderItem;
-  }
-});
 Object.defineProperty(exports, "Hero", {
   enumerable: true,
   get: function get() {
@@ -1889,12 +1859,6 @@ var _sideGrid = require("./components/grid/side-grid");
 var _stickyContainer = require("./components/grid/sticky-container");
 
 var _adaptableGrid = require("./components/grid/adaptable-grid");
-
-var _headerLogo = require("./components/headers/header-logo");
-
-var _headerTitles = require("./components/headers/header-titles");
-
-var _header = require("./components/headers/header");
 
 var _hero = require("./components/heroes/hero");
 
