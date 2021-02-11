@@ -6,7 +6,10 @@ import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
-import { CONTAINER_PADDING_THIN } from '../../../constants/grid-config'
+import {
+  CONTAINER_PADDING,
+  CONTAINER_PADDING_THIN,
+} from '../../../constants/grid-config'
 import { QuestionMarkIcon } from '../../../components/icons/question-mark-icon'
 import { WarningIcon } from '../../../components/icons/warning-icon'
 
@@ -86,9 +89,13 @@ const StyledWrapper = styled.span`
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       border-radius: ${pxToRem(8)};
-      position: absolute;
-      top: calc(var(--toggletipAction-size) / 2);
-      left: calc(100% + ${pxToRem(20)});
+      position: fixed;
+      top: calc(var(--toggletipAction-top) + var(--toggletipAction-size) / 2);
+      left: calc(
+        var(--toggletipAction-left) + var(--toggletipAction-size) +
+          ${pxToRem(20)}
+      );
+      right: ${pxToRem(CONTAINER_PADDING)};
       transform: translateY(-50%);
       min-width: ${pxToRem(220)};
       max-width: ${pxToRem(440)};
@@ -99,9 +106,21 @@ const StyledWrapper = styled.span`
         border-right-color: var(--toggletipBubble-color);
       }
 
+      &.k-Toggletip__bubble--lowTop {
+        top: ${pxToRem(CONTAINER_PADDING_THIN)};
+        transform: none;
+
+        &:after {
+          top: calc(
+            var(--toggletipAction-top) - ${pxToRem(CONTAINER_PADDING_THIN)} -
+              ${pxToRem(10)} + (var(--toggletipAction-size) / 2)
+          );
+        }
+      }
+
       &.k-Toggletip__bubble--left {
         left: initial;
-        right: calc(100% + ${pxToRem(20)});
+        right: calc(100vw - var(--toggletipAction-left) + ${pxToRem(20)});
 
         &:after {
           left: initial;
@@ -135,12 +154,21 @@ export const Toggletip = ({
   const [isOpen, setOpen] = useState(false)
   const [actionPosition, setActionPosition] = useState({})
   const [bubbleOnLeftSide, setBubbleOnLeftSide] = useState(false)
+  const [bubbleLowTop, setBubbleLowTop] = useState(false)
   const actionElement = useRef(null)
 
   useEffect(() => {
     document.addEventListener('click', handleOutsideClick)
     document.addEventListener('keydown', handleKeydownEscape)
     window.addEventListener('resize', throttle(updateCoordinates, 50))
+
+    const bubbleElementCoords =
+      actionElement.current.nextElementSibling?.children[0]?.getBoundingClientRect() ||
+      {}
+
+    const shouldDisplayBubbleLowTop =
+      actionPosition.top < bubbleElementCoords.height / 2
+    setBubbleLowTop(shouldDisplayBubbleLowTop)
 
     return () => {
       document.removeEventListener('click', handleOutsideClick)
@@ -156,7 +184,7 @@ export const Toggletip = ({
   const updateCoordinates = () => {
     if (!actionElement.current) return
 
-    const actionElementCoords = actionElement.current?.getBoundingClientRect()
+    const actionElementCoords = actionElement.current.getBoundingClientRect()
 
     setActionPosition({
       top: actionElementCoords.top,
@@ -213,6 +241,10 @@ export const Toggletip = ({
         onClick={handleClick}
         onBlur={() => setOpen(false)}
         ref={actionElement}
+        style={{
+          '--toggletipAction-color': actionProps.color || null,
+          ...actionProps.style,
+        }}
       >
         <ButtonIcon modifier={modifier} />
       </button>
@@ -228,8 +260,13 @@ export const Toggletip = ({
               bubbleProps.className,
               {
                 'k-Toggletip__bubble--left': bubbleOnLeftSide,
+                'k-Toggletip__bubble--lowTop': bubbleLowTop,
               },
             )}
+            style={{
+              '--toggletipBubble-color': bubbleProps.color || null,
+              ...bubbleProps.style,
+            }}
           >
             {children}
           </span>
