@@ -187,6 +187,43 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 `;
 
 exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0.3125rem;
+  line-height: 1;
+}
+
+.c2 .k-Loader__circle {
+  display: inline-block;
+  margin-left: 0.125rem;
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: 0.3125rem;
+  -webkit-animation: IUlBv 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  animation: IUlBv 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.c2 .k-Loader__circle:nth-child(1) {
+  -webkit-animation-delay: calc(-1.75s / 3);
+  animation-delay: calc(-1.75s / 3);
+  margin-left: 0;
+}
+
+.c2 .k-Loader__circle:nth-child(2) {
+  -webkit-animation-delay: calc(-1.75s / 3 / 2);
+  animation-delay: calc(-1.75s / 3 / 2);
+}
+
+.c2 .k-Loader__circle:nth-child(3) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -242,7 +279,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   display: none;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -275,7 +312,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
     type="text"
   />
   <div
-    className="k-Loader c2"
+    className="k-Loader c2 c3"
   >
     <svg
       className="k-Loader__circle"

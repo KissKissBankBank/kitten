@@ -82,7 +82,7 @@ export const Loader = styled(({ tag, className, color, ...others }) => {
   }
 `
 
-Loader.PropTypes = {
+Loader.propTypes = {
   tag: PropTypes.string,
   className: PropTypes.string,
   color: PropTypes.string,

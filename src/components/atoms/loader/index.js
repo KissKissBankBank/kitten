@@ -64,7 +64,7 @@ var Loader = (0, _styledComponents.default)(function (_ref2) {
   componentId: "s50q4c-0"
 })(["display:flex;height:", ";line-height:1;.k-Loader__circle{display:inline-block;margin-left:", ";width:", ";height:", ";border-radius:", ";animation:", " ", " 0s infinite ", ";animation-fill-mode:both;&:nth-child(1){animation-delay:calc(-", " / 3);margin-left:0;}&:nth-child(2){animation-delay:calc(-", " / 3 / 2);}&:nth-child(3){animation-delay:0s;}}"], circleSize, spacing, circleSize, circleSize, circleSize, loaderAnimationKeyframes, duration, easing, duration, duration);
 exports.Loader = Loader;
-Loader.PropTypes = {
+Loader.propTypes = {
   tag: _propTypes.default.string,
   className: _propTypes.default.string,
   color: _propTypes.default.string
