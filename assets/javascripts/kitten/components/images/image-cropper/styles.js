@@ -83,7 +83,7 @@ export const StyledCropper = styled.div`
       width: 100%;
       height: 100%;
 
-      outline: 1px solid ${COLORS};
+      outline: 1px solid ${COLORS.line1};
     }
 
     .cropper-dashed {
