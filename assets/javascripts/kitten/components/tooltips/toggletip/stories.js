@@ -52,6 +52,9 @@ export const MultipleToggletips = () => (
         actionLabel="Sample label"
         id="Toggletip-center"
         place="right"
+        bubbleProps={{
+          zIndex: 500,
+        }}
       >
         This is a text{' '}
         <a className="k-u-link k-u-link-font1" href="#">

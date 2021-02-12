@@ -31,6 +31,7 @@ describe('<Toggletip />', () => {
             modifier="warning"
             bubbleProps={{
               className: 'customClassName',
+              zIndex: 500,
             }}
             actionProps={{
               className: 'customClassName',

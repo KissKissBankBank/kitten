@@ -49,7 +49,7 @@ const StyledWrapper = styled.span`
   .k-Toggletip__bubble {
     --toggletipBubble-arrowMainPosition: ${pxToRem(-2 * 10)};
 
-    z-index: 1;
+    z-index: var(--toggletipBubble-zIndex);
     box-sizing: border-box;
     padding: ${pxToRem(12)};
     background-color: var(--toggletipBubble-color);
@@ -269,6 +269,7 @@ export const Toggletip = ({
               'k-u-line-height-1-3',
               bubbleProps.className,
               {
+                '--toggletipBubble-zIndex': bubbleProps.zIndex || 1,
                 'k-Toggletip__bubble--left': bubbleOnLeftSide,
                 'k-Toggletip__bubble--lowTop': bubbleLowTop,
                 'k-Toggletip__bubble--rightLimit':
