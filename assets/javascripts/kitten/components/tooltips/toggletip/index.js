@@ -269,7 +269,6 @@ export const Toggletip = ({
               'k-u-line-height-1-3',
               bubbleProps.className,
               {
-                '--toggletipBubble-zIndex': bubbleProps.zIndex || 1,
                 'k-Toggletip__bubble--left': bubbleOnLeftSide,
                 'k-Toggletip__bubble--lowTop': bubbleLowTop,
                 'k-Toggletip__bubble--rightLimit':
@@ -277,6 +276,7 @@ export const Toggletip = ({
               },
             )}
             style={{
+              '--toggletipBubble-zIndex': bubbleProps.zIndex || 1,
               '--toggletipBubble-color': bubbleProps.color || null,
               ...bubbleProps.style,
             }}
