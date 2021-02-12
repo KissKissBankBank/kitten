@@ -8,8 +8,8 @@ exports[`<Toggletip /> Default matches with snapshot 1`] = `
   onMouseLeave={[Function]}
   style={
     Object {
-      "--toggletipAction-left": "NaNrem",
-      "--toggletipAction-top": "NaNrem",
+      "--toggletipAction-left": undefined,
+      "--toggletipAction-top": undefined,
     }
   }
 >
@@ -52,8 +52,8 @@ exports[`<Toggletip /> With props matches with snapshot 1`] = `
   onMouseLeave={[Function]}
   style={
     Object {
-      "--toggletipAction-left": "NaNrem",
-      "--toggletipAction-top": "NaNrem",
+      "--toggletipAction-left": undefined,
+      "--toggletipAction-top": undefined,
     }
   }
 >

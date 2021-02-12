@@ -254,8 +254,12 @@ export const Toggletip = ({
         `k-Toggletip--${modifier}`,
       )}
       style={{
-        '--toggletipAction-top': pxToRem(actionPosition.top),
-        '--toggletipAction-left': pxToRem(actionPosition.left),
+        '--toggletipAction-top': actionPosition.top
+          ? pxToRem(actionPosition.top)
+          : undefined,
+        '--toggletipAction-left': actionPosition.left
+          ? pxToRem(actionPosition.left)
+          : undefined,
         ...style,
       }}
       onMouseEnter={() => setHoverState(true)}
