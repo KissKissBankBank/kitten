@@ -68,6 +68,7 @@ export var Text = /*#__PURE__*/function (_Component) {
         'k-u-font-setting-tnum': setting == 'tnum',
         // Monospaced numbers.
         // Size.
+        'k-u-size-giant': size == 'giant',
         'k-u-size-huge': size == 'huge',
         'k-u-size-big': size == 'big',
         'k-u-size-default': size == 'default',
@@ -123,7 +124,7 @@ Text.propTypes = {
   /**
     Available sizes:
   */
-  size: PropTypes.oneOf(['huge', 'big', 'default', 'tiny', 'micro', 'nano']),
+  size: PropTypes.oneOf(['giant', 'huge', 'big', 'default', 'tiny', 'micro', 'nano']),
 
   /**
     Available font styles (`normal` or `italic`):

@@ -4,7 +4,9 @@
 // Accessibility
 export { VisuallyHidden } from './components/accessibility/visually-hidden'; // Accordeon
 
-export { Accordeon } from './components/accordeon'; // Avatar
+export { Accordeon } from './components/accordeon'; // Atoms
+
+export { Tag } from './components/atoms/tag'; // Avatar
 
 export { AvatarWithTextAndBadge } from './components/avatar/avatar-with-text-and-badge'; // Box
 
@@ -26,17 +28,12 @@ export { ButtonImageWithText } from './components/buttons/button-image-with-text
 export { CheckableButton } from './components/buttons/checkable-button'; // Cards
 
 export { SimpleCard } from './components/cards/simple-card';
-export { ArticleCard } from './components/cards/article-card';
 export { BackerCard } from './components/cards/backer-card';
+export { BackingCard } from './components/cards/backing-card';
 export { CartRewardCard } from './components/cards/cart-reward-card';
-export { ContributionCard } from './components/cards/contribution-card';
 export { DonationCard } from './components/cards/donation-card';
-export { ProjectCard } from './components/cards/project-card';
-export { ProjectCreatorCard } from './components/cards/project-creator-card';
-export { ProjectSimilarCard } from './components/cards/project-similar-card';
 export { RewardCard } from './components/cards/reward-card';
 export { RewardEdition } from './components/cards/reward-edition';
-export { SimilarProjectsCard } from './components/cards/similar-projects-card';
 export { TeamCard } from './components/cards/team-card';
 export { Triptych } from './components/cards/triptych';
 export { VerticalCardWithAction } from './components/cards/vertical-card-with-action';
@@ -100,7 +97,6 @@ export { TextInput } from './components/form/text-input'; // Grid
 export { Container } from './components/grid/container';
 export { ScrollableContainer } from './components/grid/scrollable-container';
 export { Grid, GridCol } from './components/grid/grid';
-export { LegoGrid } from './components/grid/lego-grid';
 export { Row } from './components/grid/row';
 export { SideGrid } from './components/grid/side-grid';
 export { StickyContainer } from './components/grid/sticky-container';
