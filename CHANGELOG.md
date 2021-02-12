@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: Remove `k-Alert` SCSS mixin.
+- Breaking change: Remove `k-Loader` and `k-LoaderWithParagraph` SCSS mixins.
+- Breaking change: Move `Loader` and `LoaderWithParagraph` in
+  `components/atoms` directory.
 
 ## [3.0.0-beta.1] - 2020-02-08
 

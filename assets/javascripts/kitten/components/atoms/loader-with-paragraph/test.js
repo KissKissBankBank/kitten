@@ -1,6 +1,6 @@
 import React from 'react'
 import { LoaderWithParagraph } from './index'
-import { Loader } from '../../../components/loaders/loader'
+import { Loader } from '../../../components/atoms/loader'
 import { Paragraph } from '../../../components/typography/paragraph'
 
 describe('<LoaderWithParagraph />', () => {

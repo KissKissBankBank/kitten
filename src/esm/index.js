@@ -6,6 +6,8 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'; // 
 
 export { Accordeon } from './components/accordeon'; // Atoms
 
+export { Loader } from './components/atoms/loader';
+export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph';
 export { Tag } from './components/atoms/tag'; // Avatar
 
 export { AvatarWithTextAndBadge } from './components/avatar/avatar-with-text-and-badge'; // Box
@@ -132,10 +134,7 @@ export { List } from './components/lists/list';
 export { CheckList } from './components/lists/check-list';
 export { NavList } from './components/lists/nav-list';
 export { TagList } from './components/lists/tag-list';
-export { Timeline } from './components/lists/timeline'; // Loaders
-
-export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph';
-export { Loader } from './components/loaders/loader'; // Menus
+export { Timeline } from './components/lists/timeline'; // Menus
 
 export { HeaderMenu } from './components/menus/header-menu'; // Meters
 

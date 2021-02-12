@@ -1,18 +1,19 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { Loader } from '../../../components/loaders/loader'
+import styled from 'styled-components'
+import { Loader } from '../../../components/atoms/loader'
 import { Paragraph } from '../../../components/typography/paragraph'
 
-export class LoaderWithParagraph extends Component {
-  render() {
-    const {
-      className,
-      loaderPosition,
-      loaderProps,
-      paragraphProps,
-      ...others
-    } = this.props
-
+export const LoaderWithParagraph = styled(
+  ({
+    children,
+    className,
+    loaderPosition,
+    loaderProps,
+    paragraphProps,
+    ...others
+  }) => {
     const containerClassName = classNames(
       'k-LoaderWithParagraph',
       {
@@ -41,19 +42,34 @@ export class LoaderWithParagraph extends Component {
         {loaderBefore ? loader : null}
 
         <Paragraph modifier="secondary" margin={false} {...paragraphProps}>
-          {this.props.children}
+          {children}
         </Paragraph>
 
         {loaderBefore ? null : loader}
       </div>
     )
+  },
+)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &.k-LoaderWithParagraph--column {
+    flex-direction: column;
   }
+`
+
+LoaderWithParagraph.propTypes = {
+  className: PropTypes.string,
+  loaderPosition: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+  loaderProps: PropTypes.object,
+  paragraphProps: PropTypes.object,
 }
 
 LoaderWithParagraph.defaultProps = {
   children: 'Loading',
   className: null,
-  loaderPosition: 'left', // Available options: top, right, bottom, left.
+  loaderPosition: 'left',
   loaderProps: {}, // Show Loader component.
   paragraphProps: {}, // Show Paragraph component.
 }

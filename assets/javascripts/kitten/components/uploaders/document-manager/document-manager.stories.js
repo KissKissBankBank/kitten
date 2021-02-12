@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import { boolean } from '@storybook/addon-knobs'
 import { DocumentManager } from './index'
-import { Loader } from '../../../components/loaders/loader'
+import { Loader } from '../../../components/atoms/loader'
 import { DocumentIconEmpty } from '../../../components/icons/document-icon-empty'
 import { DocumentIconHouse } from '../../../components/icons/document-icon-house'
 import { DocumentIconPerson } from '../../../components/icons/document-icon-person'

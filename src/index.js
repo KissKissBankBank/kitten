@@ -17,6 +17,18 @@ Object.defineProperty(exports, "Accordeon", {
     return _accordeon.Accordeon;
   }
 });
+Object.defineProperty(exports, "Loader", {
+  enumerable: true,
+  get: function get() {
+    return _loader.Loader;
+  }
+});
+Object.defineProperty(exports, "LoaderWithParagraph", {
+  enumerable: true,
+  get: function get() {
+    return _loaderWithParagraph.LoaderWithParagraph;
+  }
+});
 Object.defineProperty(exports, "Tag", {
   enumerable: true,
   get: function get() {
@@ -723,18 +735,6 @@ Object.defineProperty(exports, "Timeline", {
   enumerable: true,
   get: function get() {
     return _timeline.Timeline;
-  }
-});
-Object.defineProperty(exports, "LoaderWithParagraph", {
-  enumerable: true,
-  get: function get() {
-    return _loaderWithParagraph.LoaderWithParagraph;
-  }
-});
-Object.defineProperty(exports, "Loader", {
-  enumerable: true,
-  get: function get() {
-    return _loader.Loader;
   }
 });
 Object.defineProperty(exports, "HeaderMenu", {
@@ -1726,6 +1726,10 @@ var _visuallyHidden = require("./components/accessibility/visually-hidden");
 
 var _accordeon = require("./components/accordeon");
 
+var _loader = require("./components/atoms/loader");
+
+var _loaderWithParagraph = require("./components/atoms/loader-with-paragraph");
+
 var _tag = require("./components/atoms/tag");
 
 var _avatarWithTextAndBadge = require("./components/avatar/avatar-with-text-and-badge");
@@ -1939,10 +1943,6 @@ var _navList = require("./components/lists/nav-list");
 var _tagList = require("./components/lists/tag-list");
 
 var _timeline = require("./components/lists/timeline");
-
-var _loaderWithParagraph = require("./components/loaders/loader-with-paragraph");
-
-var _loader = require("./components/loaders/loader");
 
 var _headerMenu = require("./components/menus/header-menu");
 

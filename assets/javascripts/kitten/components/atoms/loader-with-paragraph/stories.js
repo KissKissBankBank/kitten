@@ -1,18 +1,13 @@
 import React from 'react'
 import { text, select } from '@storybook/addon-knobs'
-import { Loader } from './loader'
-import { LoaderWithParagraph } from './loader-with-paragraph'
+import { LoaderWithParagraph } from './'
 
 export default {
-  title: 'Loaders/Loaders',
-  component: Loader,
+  title: 'Atoms/LoaderWithParagraph',
+  component: LoaderWithParagraph,
 }
 
 export const Default = () => {
-  return <Loader color={text('Color', 'black')} />
-}
-
-export const WithParagraph = () => {
   return (
     <LoaderWithParagraph
       loaderPosition={select(
