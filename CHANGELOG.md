@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: Remove `k-Alert` SCSS mixin.
+- Feature: Add `parseHtml` to ESM build.
 
 ## [3.0.0-beta.1] - 2020-02-08
 
