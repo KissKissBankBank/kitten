@@ -4,6 +4,8 @@ exports[`<Toggletip /> Default matches with snapshot 1`] = `
 <span
   className="sc-bdVaJa tSArF k-Toggletip k-Toggletip--info"
   id="Toggletip-demo"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
   style={
     Object {
       "--toggletipAction-left": "NaNrem",
@@ -47,6 +49,8 @@ exports[`<Toggletip /> With props matches with snapshot 1`] = `
 <span
   className="sc-bdVaJa tSArF k-Toggletip k-Toggletip--warning"
   id="Toggletip-demo"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
   style={
     Object {
       "--toggletipAction-left": "NaNrem",
