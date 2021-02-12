@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: Remove `k-Alert` SCSS mixin.
-- Breaking change: Refactor `Badge` and `IconBadge` components.
+- Breaking change: Refactor and move `Badge` and `IconBadge` components.
 
 ## [3.0.0-beta.1] - 2020-02-08
 
