@@ -989,6 +989,12 @@ Object.defineProperty(exports, "StaticTooltip", {
     return _staticTooltip.StaticTooltip;
   }
 });
+Object.defineProperty(exports, "Toggletip", {
+  enumerable: true,
+  get: function get() {
+    return _toggletip.Toggletip;
+  }
+});
 Object.defineProperty(exports, "TooltipNew", {
   enumerable: true,
   get: function get() {
@@ -2065,6 +2071,8 @@ var _textCopy = require("./components/text-copy");
 var _questionMarkWithTooltip = require("./components/tooltips/question-mark-with-tooltip");
 
 var _staticTooltip = require("./components/tooltips/static-tooltip");
+
+var _toggletip = require("./components/tooltips/toggletip");
 
 var _tooltipNew = require("./components/tooltips/tooltip-new");
 
