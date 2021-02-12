@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { IconBadge } from '../../../../components/notifications/icon-badge'
+import { IconBadge } from '../../../../components/atoms/icon-badge'
 import { CheckedIcon } from '../../../../components/icons/checked-icon'
 
 export const RewardCardCheckedIconLine = props => (
