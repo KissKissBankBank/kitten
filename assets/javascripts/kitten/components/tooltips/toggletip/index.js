@@ -154,12 +154,24 @@ export const Toggletip = ({
   bubbleProps,
   ...props
 }) => {
+  const [isHover, setHoverState] = useState(false)
+  const [hasBeenClicked, setClickedState] = useState(false)
   const [isOpen, setOpen] = useState(false)
   const [actionPosition, setActionPosition] = useState({})
   const [bubbleOnLeftSide, setBubbleOnLeftSide] = useState(false)
   const [bubbleLowTop, setBubbleLowTop] = useState(false)
   const [bubbleRightLimit, setBubbleRightLimit] = useState(false)
   const actionElement = useRef(null)
+
+  useEffect(() => {
+    if (isHover) {
+      setOpen(true)
+    }
+
+    if (!isHover && !hasBeenClicked) {
+      setOpen(false)
+    }
+  }, [isHover, hasBeenClicked])
 
   useEffect(() => {
     document.addEventListener('click', handleOutsideClick)
@@ -209,11 +221,13 @@ export const Toggletip = ({
 
   const handleOutsideClick = event => {
     if (actionElement.current !== event.target) {
+      setClickedState(false)
       setOpen(false)
     }
   }
   const handleKeydownEscape = event => {
     if (event.key === 'Escape') {
+      setClickedState(false)
       setOpen(false)
     }
   }
@@ -222,7 +236,10 @@ export const Toggletip = ({
     event.preventDefault()
     setOpen(false)
 
-    window.setTimeout(() => setOpen(true), 100)
+    window.setTimeout(() => {
+      setOpen(true)
+      setClickedState(true)
+    }, 100)
   }
 
   return (
@@ -237,6 +254,8 @@ export const Toggletip = ({
         '--toggletipAction-top': pxToRem(actionPosition.top),
         '--toggletipAction-left': pxToRem(actionPosition.left),
       }}
+      onMouseEnter={() => setHoverState(true)}
+      onMouseLeave={() => setHoverState(false)}
       {...props}
     >
       <button
