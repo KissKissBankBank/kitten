@@ -53,6 +53,7 @@ export const Badge = ({
   a11yText,
   color,
   withBorder,
+  style,
   ...others
 }) => {
   return (
@@ -65,7 +66,10 @@ export const Badge = ({
           'k-Badge--no-border': !withBorder,
           'k-Badge--hasIcon': !!Icon,
         })}
-        style={{ '--Badge-background-color': color }}
+        style={{
+          '--Badge-background-color': color,
+          ...style,
+        }}
         {...others}
       />
     </>
