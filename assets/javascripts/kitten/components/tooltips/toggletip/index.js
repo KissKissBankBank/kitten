@@ -250,9 +250,9 @@ export const Toggletip = ({
         `k-Toggletip--${modifier}`,
       )}
       style={{
-        style,
         '--toggletipAction-top': pxToRem(actionPosition.top),
         '--toggletipAction-left': pxToRem(actionPosition.left),
+        ...style,
       }}
       onMouseEnter={() => setHoverState(true)}
       onMouseLeave={() => setHoverState(false)}

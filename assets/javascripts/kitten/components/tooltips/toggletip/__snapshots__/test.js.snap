@@ -10,7 +10,6 @@ exports[`<Toggletip /> Default matches with snapshot 1`] = `
     Object {
       "--toggletipAction-left": "NaNrem",
       "--toggletipAction-top": "NaNrem",
-      "style": undefined,
     }
   }
 >
@@ -55,7 +54,6 @@ exports[`<Toggletip /> With props matches with snapshot 1`] = `
     Object {
       "--toggletipAction-left": "NaNrem",
       "--toggletipAction-top": "NaNrem",
-      "style": undefined,
     }
   }
 >
