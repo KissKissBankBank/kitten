@@ -236,12 +236,6 @@ export { SingleEntryTable } from './components/tables/single-entry-table'
 // Text Copy
 export { TextCopy } from './components/text-copy'
 
-// Tooltips
-export { QuestionMarkWithTooltip } from './components/tooltips/question-mark-with-tooltip'
-export { StaticTooltip } from './components/tooltips/static-tooltip'
-export { TooltipNew } from './components/tooltips/tooltip-new'
-export { Tooltip } from './components/tooltips/tooltip'
-
 // Tours
 export { HighlightHalo } from './components/tours/highlight-halo'
 export { HeaderTour } from './components/tours/header-tour'

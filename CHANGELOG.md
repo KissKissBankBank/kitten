@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: Remove `k-Alert` SCSS mixin.
+- Breaking change: Remove `k-Tooltip`, `k-TooltipNew` and `k-StaticTooltip` styles.
+- Breaking change: Remove `QuestionMarkWithTooltip`, `Tooltip`, `TooltipNew` and `StaticTooltip` components.
+- Breaking change: Remove `withTooltip` HOC.
+
 
 ## [3.0.0-beta.1] - 2020-02-08
 
