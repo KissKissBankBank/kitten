@@ -1,5 +1,5 @@
 import React from 'react'
-import { text, select } from '@storybook/addon-knobs'
+import { text, select, boolean } from '@storybook/addon-knobs'
 import { Toggletip } from './index'
 import COLORS from '../../../constants/colors-config'
 
@@ -38,12 +38,17 @@ export const MultipleToggletips = () => (
         }}
       >
         First toggletip.
-        <br />
-        Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus
-        commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit
-        amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-        Donec ullamcorper nulla non metus auctor fringilla.
+        {boolean('Long Text', false) && (
+          <>
+            <br />
+            Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac
+            cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+            justo sit amet risus. Cras justo odio, dapibus ac facilisis in,
+            egestas eget quam. Donec ullamcorper nulla non metus auctor
+            fringilla.
+          </>
+        )}
       </Toggletip>
     </div>
     <div className="k-u-margin-vertical-quadruple k-u-align-right">
@@ -60,6 +65,17 @@ export const MultipleToggletips = () => (
         <a className="k-u-link k-u-link-font1" href="#">
           with a link
         </a>
+        {boolean('Long Text', false) && (
+          <>
+            <br />
+            Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac
+            cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+            justo sit amet risus. Cras justo odio, dapibus ac facilisis in,
+            egestas eget quam. Donec ullamcorper nulla non metus auctor
+            fringilla.
+          </>
+        )}
         .
       </Toggletip>
     </div>
@@ -71,12 +87,17 @@ export const MultipleToggletips = () => (
         place="right"
       >
         This is a text for the last toggletip.
-        <br />
-        Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus
-        commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit
-        amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-        Donec ullamcorper nulla non metus auctor fringilla.
+        {boolean('Long Text', false) && (
+          <>
+            <br />
+            Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac
+            cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+            justo sit amet risus. Cras justo odio, dapibus ac facilisis in,
+            egestas eget quam. Donec ullamcorper nulla non metus auctor
+            fringilla.
+          </>
+        )}
       </Toggletip>
     </div>
   </div>
