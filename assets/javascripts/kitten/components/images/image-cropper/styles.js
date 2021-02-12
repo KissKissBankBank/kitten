@@ -1,17 +1,34 @@
-/// Cropper styles
-///
-/// @source https://github.com/fengyuanchen/cropper
-///
-/// @example scss - Usage
-///
-///   @include k-Cropper;
+import styled from 'styled-components'
+import COLORS from '../../../constants/colors-config'
+import { ScreenConfig } from '../../../constants/screen-config'
+import { GUTTER } from '../../../constants/grid-config'
+import { pxToRem } from '../../../helpers/utils/typography'
 
-@mixin k-Cropper {
-  $border-color: map-get($k-colors, 'line-1');
+export const StyledCropper = styled.div`
+  .k-Cropper__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: ${pxToRem(GUTTER)};
+
+    &:empty {
+      margin: 0;
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      flex-direction: row;
+      .k-Cropper__wrapper__cropper {
+        flex: 0 1 50%;
+        width: 50%;
+      }
+      .k-Cropper__wrapper__slider {
+        flex: 0 1 50%;
+        width: 50%;
+      }
+    }
+  }
 
   .k-Cropper {
-
-    // CSS originally from the cropper library.
+    /* CSS originally from the cropper library. */
     .cropper-container {
       font-size: 0;
       line-height: 0;
@@ -22,7 +39,7 @@
     }
 
     .cropper-container img {
-      // Avoid margin top issue (Occurs only when margin-top <= -height)
+      /* Avoid margin top issue (Occurs only when margin-top <= -height) */
       display: block;
       min-width: 0 !important;
       max-width: none !important;
@@ -30,7 +47,7 @@
       max-height: none !important;
       width: 100%;
       height: 100%;
-      image-orientation: 0deg
+      image-orientation: 0deg;
     }
 
     .cropper-wrap-box,
@@ -55,7 +72,7 @@
     }
 
     .cropper-modal {
-      opacity: .5;
+      opacity: 0.5;
       background-color: #000;
     }
 
@@ -66,7 +83,7 @@
       width: 100%;
       height: 100%;
 
-      outline: 1px solid $border-color;
+      outline: 1px solid ${COLORS};
     }
 
     .cropper-dashed {
@@ -74,8 +91,8 @@
 
       display: block;
 
-      opacity: .5;
-      border: 0 dashed #eee
+      opacity: 0.5;
+      border: 0 dashed #eee;
     }
 
     .cropper-dashed.dashed-h {
@@ -84,7 +101,7 @@
       width: 100%;
       height: 33.33333%;
       border-top-width: 1px;
-      border-bottom-width: 1px
+      border-bottom-width: 1px;
     }
 
     .cropper-dashed.dashed-v {
@@ -93,7 +110,7 @@
       width: 33.33333%;
       height: 100%;
       border-right-width: 1px;
-      border-left-width: 1px
+      border-left-width: 1px;
     }
 
     .cropper-center {
@@ -106,7 +123,7 @@
       width: 0;
       height: 0;
 
-      opacity: .75;
+      opacity: 0.75;
     }
 
     .cropper-center:before,
@@ -114,21 +131,21 @@
       position: absolute;
       display: block;
       content: ' ';
-      background-color: #eee
+      background-color: #eee;
     }
 
     .cropper-center:before {
       top: 0;
       left: -3px;
       width: 7px;
-      height: 1px
+      height: 1px;
     }
 
     .cropper-center:after {
       top: -3px;
       left: 0;
       width: 1px;
-      height: 7px
+      height: 7px;
     }
 
     .cropper-face,
@@ -152,42 +169,42 @@
     }
 
     .cropper-line {
-      background-color: #39f
+      background-color: #39f;
     }
 
     .cropper-line.line-e {
       top: 0;
       right: -3px;
       width: 5px;
-      cursor: e-resize
+      cursor: e-resize;
     }
 
     .cropper-line.line-n {
       top: -3px;
       left: 0;
       height: 5px;
-      cursor: n-resize
+      cursor: n-resize;
     }
 
     .cropper-line.line-w {
       top: 0;
       left: -3px;
       width: 5px;
-      cursor: w-resize
+      cursor: w-resize;
     }
 
     .cropper-line.line-s {
       bottom: -3px;
       left: 0;
       height: 5px;
-      cursor: s-resize
+      cursor: s-resize;
     }
 
     .cropper-point {
       width: 5px;
       height: 5px;
 
-      opacity: .75;
+      opacity: 0.75;
       background-color: #39f;
     }
 
@@ -195,46 +212,46 @@
       top: 50%;
       right: -3px;
       margin-top: -3px;
-      cursor: e-resize
+      cursor: e-resize;
     }
 
     .cropper-point.point-n {
       top: -3px;
       left: 50%;
       margin-left: -3px;
-      cursor: n-resize
+      cursor: n-resize;
     }
 
     .cropper-point.point-w {
       top: 50%;
       left: -3px;
       margin-top: -3px;
-      cursor: w-resize
+      cursor: w-resize;
     }
 
     .cropper-point.point-s {
       bottom: -3px;
       left: 50%;
       margin-left: -3px;
-      cursor: s-resize
+      cursor: s-resize;
     }
 
     .cropper-point.point-ne {
       top: -3px;
       right: -3px;
-      cursor: ne-resize
+      cursor: ne-resize;
     }
 
     .cropper-point.point-nw {
       top: -3px;
       left: -3px;
-      cursor: nw-resize
+      cursor: nw-resize;
     }
 
     .cropper-point.point-sw {
       bottom: -3px;
       left: -3px;
-      cursor: sw-resize
+      cursor: sw-resize;
     }
 
     .cropper-point.point-se {
@@ -243,20 +260,20 @@
       width: 20px;
       height: 20px;
       cursor: se-resize;
-      opacity: 1
+      opacity: 1;
     }
 
     @media (min-width: 768px) {
       .cropper-point.point-se {
         width: 15px;
-        height: 15px
+        height: 15px;
       }
     }
 
     @media (min-width: 992px) {
       .cropper-point.point-se {
         width: 10px;
-        height: 10px
+        height: 10px;
       }
     }
 
@@ -264,7 +281,7 @@
       .cropper-point.point-se {
         width: 5px;
         height: 5px;
-        opacity: .75
+        opacity: 0.75;
       }
     }
 
@@ -277,7 +294,7 @@
       height: 200%;
       content: ' ';
       opacity: 0;
-      background-color: #39f
+      background-color: #39f;
     }
 
     .cropper-invisible {
@@ -312,4 +329,4 @@
       cursor: not-allowed;
     }
   }
-}
+`
