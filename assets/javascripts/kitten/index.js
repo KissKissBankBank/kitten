@@ -236,6 +236,10 @@ export { SingleEntryTable } from './components/tables/single-entry-table'
 // Text Copy
 export { TextCopy } from './components/text-copy'
 
+// Tooltips
+
+export { Toggletip } from './components/tooltips/toggletip'
+
 // Tours
 export { HighlightHalo } from './components/tours/highlight-halo'
 export { HeaderTour } from './components/tours/header-tour'
