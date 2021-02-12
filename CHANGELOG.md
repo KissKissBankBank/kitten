@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `Toggletip` component.
+## [2.120.0] - 2020-02-12
+
+Feature:
+
+- Add `Toggletip` component.
 
 ## [2.119.0] - 2020-02-10
 
