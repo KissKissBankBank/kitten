@@ -6,10 +6,7 @@ import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
-import {
-  CONTAINER_PADDING,
-  CONTAINER_PADDING_THIN,
-} from '../../../constants/grid-config'
+import { CONTAINER_PADDING_THIN } from '../../../constants/grid-config'
 import { QuestionMarkIcon } from '../../../components/icons/question-mark-icon'
 import { WarningIcon } from '../../../components/icons/warning-icon'
 
@@ -69,13 +66,12 @@ const StyledWrapper = styled.span`
 
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
       border-radius: ${pxToRem(6)};
-      position: fixed;
-      top: calc(
-        var(--toggletipAction-top) + var(--toggletipAction-size) +
-          ${pxToRem(20)}
+      position: absolute;
+      top: calc(var(--toggletipAction-size) + ${pxToRem(20)});
+      left: calc(
+        -1 * var(--toggletipAction-left) + ${pxToRem(CONTAINER_PADDING_THIN)}
       );
-      left: ${pxToRem(CONTAINER_PADDING_THIN)};
-      right: ${pxToRem(CONTAINER_PADDING_THIN)};
+      width: calc(100vw - ${pxToRem(CONTAINER_PADDING_THIN * 2)});
 
       &:after {
         top: var(--toggletipBubble-arrowMainPosition);
@@ -89,16 +85,21 @@ const StyledWrapper = styled.span`
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       border-radius: ${pxToRem(8)};
-      position: fixed;
-      top: calc(var(--toggletipAction-top) + var(--toggletipAction-size) / 2);
-      left: calc(
-        var(--toggletipAction-left) + var(--toggletipAction-size) +
-          ${pxToRem(20)}
-      );
-      right: ${pxToRem(CONTAINER_PADDING)};
+      position: absolute;
+      top: calc(var(--toggletipAction-size) / 2);
+      left: calc(100% + ${pxToRem(20)});
       transform: translateY(-50%);
       min-width: ${pxToRem(220)};
       max-width: ${pxToRem(440)};
+      width: max-content;
+
+      &.k-Toggletip__bubble--rightLimit {
+        max-width: calc(
+          100vw - var(--toggletipAction-left) -
+            ${pxToRem(CONTAINER_PADDING_THIN + 20)} -
+            var(--toggletipAction-size)
+        );
+      }
 
       &:after {
         left: var(--toggletipBubble-arrowMainPosition);
@@ -107,7 +108,9 @@ const StyledWrapper = styled.span`
       }
 
       &.k-Toggletip__bubble--lowTop {
-        top: ${pxToRem(CONTAINER_PADDING_THIN)};
+        top: calc(
+          -1 * var(--toggletipAction-top) + ${pxToRem(CONTAINER_PADDING_THIN)}
+        );
         transform: none;
 
         &:after {
@@ -120,7 +123,7 @@ const StyledWrapper = styled.span`
 
       &.k-Toggletip__bubble--left {
         left: initial;
-        right: calc(100vw - var(--toggletipAction-left) + ${pxToRem(20)});
+        right: calc(100% + ${pxToRem(20)});
 
         &:after {
           left: initial;
@@ -155,6 +158,7 @@ export const Toggletip = ({
   const [actionPosition, setActionPosition] = useState({})
   const [bubbleOnLeftSide, setBubbleOnLeftSide] = useState(false)
   const [bubbleLowTop, setBubbleLowTop] = useState(false)
+  const [bubbleRightLimit, setBubbleRightLimit] = useState(false)
   const actionElement = useRef(null)
 
   useEffect(() => {
@@ -194,6 +198,13 @@ export const Toggletip = ({
     const shouldDisplayOnLeftSide =
       document.body.clientWidth < actionElementCoords.right + bubblePlusMargins
     setBubbleOnLeftSide(shouldDisplayOnLeftSide)
+
+    const shouldDisplayBubbleRightLimit =
+      document.body.clientWidth -
+        (actionElementCoords.right + CONTAINER_PADDING_THIN + 20) <
+      440
+
+    setBubbleRightLimit(shouldDisplayBubbleRightLimit)
   }
 
   const handleOutsideClick = event => {
@@ -260,6 +271,8 @@ export const Toggletip = ({
               {
                 'k-Toggletip__bubble--left': bubbleOnLeftSide,
                 'k-Toggletip__bubble--lowTop': bubbleLowTop,
+                'k-Toggletip__bubble--rightLimit':
+                  !bubbleOnLeftSide && bubbleRightLimit,
               },
             )}
             style={{
