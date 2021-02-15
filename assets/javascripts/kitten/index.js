@@ -157,7 +157,6 @@ export { IconList } from './components/lists/icon-list'
 export { BulletList } from './components/lists/bullet-list'
 export { List } from './components/lists/list'
 export { CheckList } from './components/lists/check-list'
-export { NavList } from './components/lists/nav-list'
 export { Timeline } from './components/lists/timeline'
 
 // Loaders

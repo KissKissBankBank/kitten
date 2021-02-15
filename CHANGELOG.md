@@ -10,6 +10,7 @@ Breaking changes:
 - Remove `Header`, `HeaderLogo` and `HeaderTitle` components.
 - Remove `k-PhoneDropdown` styles.
 - Remove `DropdownButton`, `Dropdown`, `PhoneDropdown` and `UserMenu` components.
+- Remove `NavList` component.
 
 ## [3.0.0-beta.2] - 2021-02-15
 
