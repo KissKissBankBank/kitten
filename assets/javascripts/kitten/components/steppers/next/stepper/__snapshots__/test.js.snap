@@ -11,11 +11,12 @@ exports[`NEXT // <Stepper /> default item matches with snapshot 1`] = `
       className="sc-bxivhb BaPoz"
     >
       <span
-        className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-ButtonIcon--empty--nano"
-      />
-      <span
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX eFUNXG"
+        tabIndex="0"
       >
+        <span
+          className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-ButtonIcon--empty--nano"
+        />
         Default Item
       </span>
     </li>
@@ -34,7 +35,7 @@ exports[`NEXT // <Stepper /> default link matches with snapshot 1`] = `
       className="sc-bxivhb BaPoz"
     >
       <a
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu k-u-link k-u-link-font1"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX eFUNXG k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel=""
         target="_self"
@@ -60,7 +61,7 @@ exports[`NEXT // <Stepper /> external link matches with snapshot 1`] = `
       className="sc-bxivhb BaPoz"
     >
       <a
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu k-u-link k-u-link-font1"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX eFUNXG k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel="nofollow noopener noreferrer"
         target="_blank"
@@ -87,7 +88,7 @@ exports[`NEXT // <Stepper /> link with linkProps matches with snapshot 1`] = `
     >
       <a
         aria-current="page"
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu k-u-link k-u-link-font1"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX eFUNXG k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel="nofollow noopener noreferrer"
         target="_blank"
@@ -113,11 +114,12 @@ exports[`NEXT // <Stepper /> pointer item matches with snapshot 1`] = `
       className="sc-bxivhb hbYiXc"
     >
       <span
-        className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-ButtonIcon--empty--nano"
-      />
-      <span
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX eFUNXG"
+        tabIndex="0"
       >
+        <span
+          className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-ButtonIcon--empty--nano"
+        />
         Default Item
       </span>
     </li>
@@ -136,30 +138,25 @@ exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
       className="sc-bxivhb EOtIZ"
     >
       <span
-        className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-Stepper__icon--inProgress"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX eFUNXG"
+        tabIndex="0"
       >
-        <svg
-          className="k-ButtonIcon__svg k-Stepper__svg"
-          fill="#222"
-          height="5.64"
-          style={
-            Object {
-              "transform": "rotate(90deg)",
-            }
-          }
-          viewBox="0 0 8.48 5.64"
-          width="8.48"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-Stepper__icon--inProgress"
         >
-          
-          <path
-            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
-          />
-        </svg>
-      </span>
-      <span
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu"
-      >
+          <svg
+            className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg k-Stepper__svg"
+            height="5.64"
+            viewBox="0 0 6 6"
+            width="8.48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            
+            <path
+              d="M6 0H0v6h2V2h4z"
+            />
+          </svg>
+        </span>
         Progress Item
       </span>
     </li>
@@ -178,7 +175,7 @@ exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
       className="sc-bxivhb EOtIZ"
     >
       <a
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu k-u-link k-u-link-primary1"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX eFUNXG k-u-link k-u-link-primary1"
         href="https://www.kisskissbankbank.com"
         rel=""
         target="_self"
@@ -187,21 +184,15 @@ exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
           className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-Stepper__icon--inProgress"
         >
           <svg
-            className="k-ButtonIcon__svg k-Stepper__svg"
-            fill="#222"
+            className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg k-Stepper__svg"
             height="5.64"
-            style={
-              Object {
-                "transform": "rotate(90deg)",
-              }
-            }
-            viewBox="0 0 8.48 5.64"
+            viewBox="0 0 6 6"
             width="8.48"
             xmlns="http://www.w3.org/2000/svg"
           >
             
             <path
-              d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+              d="M6 0H0v6h2V2h4z"
             />
           </svg>
         </span>
@@ -223,25 +214,26 @@ exports[`NEXT // <Stepper /> validated item matches with snapshot 1`] = `
       className="sc-bxivhb BaPoz"
     >
       <span
-        className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-Stepper__icon--validated k-ButtonIcon--checked--nano"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX eFUNXG"
+        tabIndex="0"
       >
-        <svg
-          className="k-ButtonIcon__svg k-Stepper__svg"
-          fill="#fff"
-          height="8"
-          viewBox="0 0 11 8"
-          width="11"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-Stepper__icon--validated k-ButtonIcon--checked--nano"
         >
-          
-          <path
-            d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
-          />
-        </svg>
-      </span>
-      <span
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu"
-      >
+          <svg
+            className="k-ButtonIcon__svg k-Stepper__svg"
+            fill="#fff"
+            height="8"
+            viewBox="0 0 11 8"
+            width="11"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            
+            <path
+              d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
+            />
+          </svg>
+        </span>
         Validated Item
       </span>
     </li>

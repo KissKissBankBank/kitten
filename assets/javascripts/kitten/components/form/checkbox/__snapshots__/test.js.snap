@@ -2,7 +2,7 @@
 
 exports[`<Checkbox /> default matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH eUqPfd k-Form-Checkbox k-Form-Checkbox--andromeda"
+  className="sc-bwzfXH geqKJJ k-Form-Checkbox k-Form-Checkbox--andromeda"
 >
   <input
     className="k-Form-Checkbox__input"
@@ -21,7 +21,7 @@ exports[`<Checkbox /> default matches with snapshot 1`] = `
 
 exports[`<Checkbox /> whith label and children props matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH eUqPfd k-Form-Checkbox k-Form-Checkbox--andromeda"
+  className="sc-bwzfXH geqKJJ k-Form-Checkbox k-Form-Checkbox--andromeda"
 >
   <input
     className="k-Form-Checkbox__input"
@@ -45,7 +45,7 @@ exports[`<Checkbox /> whith label and children props matches with snapshot 1`] =
 
 exports[`<Checkbox /> with label prop matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH eUqPfd k-Form-Checkbox k-Form-Checkbox--andromeda"
+  className="sc-bwzfXH geqKJJ k-Form-Checkbox k-Form-Checkbox--andromeda"
 >
   <input
     className="k-Form-Checkbox__input"

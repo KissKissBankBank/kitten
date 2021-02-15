@@ -184,39 +184,4 @@ describe('<RewardCard />', () => {
       expect(component).toMatchSnapshot()
     })
   })
-
-  describe('with legacy props', () => {
-    it('matches with snapshot', () => {
-      window.matchMedia = createMockMediaMatcher(false)
-
-      // Desactivate warnings.
-      jest.spyOn(global.console, 'error').mockImplementation(() => {})
-
-      const component = renderer
-        .create(
-          <RewardCard
-            className="customClassName"
-            titleAmount="Custom title amount"
-            imageProps={{
-              src: '#image',
-              alt: 'Image alt',
-            }}
-            titleDescription="Custom title description"
-            textDescription="Custom text description"
-            titleContributors="Custom title contributors"
-            titleDelivery="Custom title delivery"
-            titleAvailability="Custom title availability"
-            valueContributors="Custom value contributors"
-            valueDelivery="Custom value delivery"
-            valueAvailability="Custom value availability"
-            button="Custom text button"
-            myContribution="Custom my contribution"
-            manageContribution="Custom manage contribution"
-            manageContributionLink="Custom manage link contribution"
-          />,
-        )
-        .toJSON()
-      expect(component).toMatchSnapshot()
-    })
-  })
 })

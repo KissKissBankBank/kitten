@@ -60,8 +60,6 @@
   // Input
   .k-TextInputWithUnit__input {
     display: table-cell;
-    outline: none; // since we introduce our own focus styles
-
     transition: all $transition-speed;
 
     @include k-formRemoveNumberSpinner;

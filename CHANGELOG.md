@@ -6,6 +6,115 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breaking Change: `ArrowIcon` defaults to `solid` version.
 - Breaking Change: Delete `DeprecatedArrowIcon`.
+- Breaking change: Remove `k-Alert` SCSS mixin.
+- Breaking change: Remove `k-TagList` SCSS mixin.
+- Breaking change: Remove `TagList` component.
+- Breaking change: Remove `k-Tour` and `k-HeaderTour` SCSS mixins.
+- Breaking change: Delete `Tour`, `TourStep`, `TourPopover`
+  and `HeaderTour` components.
+- Breaking change: Remove `k-Popover` SCSS mixin.
+- Breaking change: Remove `Popover` and `CallToActionPopover`.
+- Breaking change: Remove `k-ExternalRichLink` SCSS mixin.
+- Breaking change: Remove `ExternalRichLink` component.
+- Breaking change: Remove `k-u-blockAlign-*` utilities in favor of `k-u-align-self-*`.
+
+## [3.0.0-beta.1] - 2020-02-08
+
+Breaking changes:
+
+- Remove `StyleGuide` app.
+- Remove `Karl` stories & components.
+- Remove `k-LegoGrid` styles.
+- Remove `LegoGrid` component.
+- Delete the following deprecated `cards` components:
+  - `ArticleCard`
+  - `ContributionCard`
+  - `CrowdfundingCardWidget`
+  - `ProjectCard`
+  - `ProjectCreatorCard`
+  - `ProjectSimilarCard`
+  - `RewardCardLegacy`
+  - `SimilarProjectsCard`.
+- Delete the following deprecated `card` SCSS mixins:
+  - `k-ProjectCard`
+  - `k-ProjectCreatorCard`
+  - `k-ProjectSimilarCard`
+
+## [2.120.0] - 2020-02-12
+
+Feature:
+
+- Add `Toggletip` component.
+
+## [2.119.0] - 2020-02-10
+
+Feature:
+
+- Add `regular` (default) and `big` props on all variants of `DropdownSelect`.
+
+## [2.118.0] - 2020-02-09
+
+Features:
+
+- Add `size` prop to `RadioButton`, defaults to `regular`.
+- Add `hover` styles for `BackingCard`.
+
+## [2.117.0] - 2020-02-08
+
+Feature:
+
+- Add `size` prop to `HeaderMenu.Item` & refactoring.
+
+## [2.116.0] - 2020-02-08
+
+Features:
+
+- Add `BackingCard` component.
+- Add `Tag` component.
+- Add `useMedia` hook.
+- Add `k-u-size-giant` utility.
+- Add `giant` value to `size` prop to `Text` component.
+
+Fix:
+
+- Fix mixup between `k-u-margin-vertical` and `k-u-margin-horizontal`.
+
+## [2.115.0] - 2020-02-02
+
+Feature:
+
+- Add `pageClickText` prop to `Carousel` for page click action.
+
+Fix:
+
+- Fix `Carousel` margin and padding calculations.
+
+## [2.114.0] - 2020-01-29
+
+Features:
+
+- Add `regular` (default) and `big` props on all variants of `TextInput`.
+- Add `variant` prop to `TextInputWithUnit`, defaults to `andromeda`.
+- Add `big` prop to `TextInputWithUnit`.
+- Change `DocumentManager` `radius` and hide icon on `xs` screen.
+
+Fix:
+
+- `VerticalStepper` mobile style fixes.
+
+## [2.113.0] - 2020-01-21
+
+Features:
+
+- Add Focus styles for focusable elements.
+- Add `summaryProps` to `Details` component.
+- Handle keyboard navigation on `Carousel`.
+- Update mobile version of `VerticalStepper` component.
+
+Fixes:
+
+- Stop applying focus styles on `VerticalStepper` when `disabled`.
+- `Combobox` filter on `label` (instead of `value`).
 
 ## [2.112.0] - 2020-01-18
 
@@ -29,7 +138,7 @@ Feature:
 Fixes:
 
 - Add button types on `Carousel` navigation.
-- Fix: Remove scrollbars on `Carousel` on Firefox.
+- Remove scrollbars on `Carousel` on Firefox.
 
 ## [2.110.0] - 2020-01-13
 
@@ -156,7 +265,7 @@ Fixes:
 
 - Fix ref errors on `LazyObserver` and `Dropdown`.
 - Fix `VerticalStepper` styles.
-- Update `error` props on `VerticalStepper` with `variant="orion"`.
+- Update `error` props on `VerticalStepper` with `variant`.
 
 ## [2.101.0] - 2020-11-30
 

@@ -28,7 +28,7 @@ var _typography = require("../../../../helpers/utils/typography");
 var StyledTeamCardButtonWithTooltip = _styledComponents.default.a.withConfig({
   displayName: "button-with-tooltip__StyledTeamCardButtonWithTooltip",
   componentId: "kafbae-0"
-})(["position:relative;display:inline-block;.k-TeamCardButtonWithTooltip__tooltip{position:absolute;top:", ";padding:", ";margin-left:", ";font-size:", ";line-height:normal;font-weight:regular;color:", ";white-space:nowrap;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s;background-color:", ";border:", " solid ", ";}&:hover .k-TeamCardButtonWithTooltip__tooltip,&:focus .k-TeamCardButtonWithTooltip__tooltip{visibility:visible;opacity:1;}.k-TeamCardButtonWithTooltip__tooltipArrow{position:absolute;left:50%;bottom:102%;height:0;width:0;margin-left:", ";border-width:", ";border-top-color:transparent;border-left-color:transparent;border-right-color:transparent;border-bottom-color:", ";border-style:solid;pointer-events:none;}"], (0, _typography.pxToRem)(55), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(-50), (0, _typography.stepToRem)(-1), _colorsConfig.default.background1, function (_ref) {
+})(["position:relative;display:inline-block;&[href]:focus{outline:", " solid ", ";outline-offset:", ";}.k-TeamCardButtonWithTooltip__tooltip{position:absolute;top:", ";padding:", ";margin-left:", ";font-size:", ";line-height:normal;font-weight:regular;color:", ";white-space:nowrap;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s;background-color:", ";border:", " solid ", ";}&:hover .k-TeamCardButtonWithTooltip__tooltip,&:focus .k-TeamCardButtonWithTooltip__tooltip{visibility:visible;opacity:1;}.k-TeamCardButtonWithTooltip__tooltipArrow{position:absolute;left:50%;bottom:102%;height:0;width:0;margin-left:", ";border-width:", ";border-top-color:transparent;border-left-color:transparent;border-right-color:transparent;border-bottom-color:", ";border-style:solid;pointer-events:none;}"], _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(55), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(-50), (0, _typography.stepToRem)(-1), _colorsConfig.default.background1, function (_ref) {
   var tooltipColor = _ref.tooltipColor;
   return tooltipColor;
 }, (0, _typography.pxToRem)(2), function (_ref2) {
@@ -52,7 +52,8 @@ var TeamCardButtonWithTooltip = function TeamCardButtonWithTooltip(_ref4) {
     className: "k-TeamCardButtonWithTooltip__tooltipArrow"
   })), /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
     modifier: "hydrogen",
-    className: "k-ButtonIcon--phone"
+    className: "k-ButtonIcon--phone",
+    tag: "span"
   }, /*#__PURE__*/_react.default.createElement(_phoneIcon.PhoneIcon, {
     className: "k-ButtonIcon__svg"
   })));

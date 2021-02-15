@@ -12,9 +12,6 @@
 
 // Cards
 @import './components/cards/card';
-@import './components/cards/project-card';
-@import './components/cards/project-creator-card';
-@import './components/cards/project-similar-card';
 
 // Dev
 @import './components/dev/dev-breakpoint';
@@ -53,7 +50,6 @@
 // Grid
 @import './components/grid/container';
 @import './components/grid/grid';
-@import './components/grid/lego-grid';
 @import "./components/grid/row";
 @import "./components/grid/side-grid";
 @import "./components/grid/single-column";
@@ -78,12 +74,10 @@
 @import './components/lines/info-lines';
 
 // Links
-@import './components/links/external-rich-link';
 @import './components/links/link-list';
 
 // Lists
 @import './components/lists/bullet-list';
-@import './components/lists/tag-list';
 
 // Loaders
 @import './components/loaders/loader';
@@ -103,15 +97,11 @@
 @import './components/navigation/user-menu';
 
 // Notifications
-@import './components/notifications/alert';
 @import './components/notifications/badge';
 @import './components/notifications/icon-badge';
 
 // Press
 @import './components/press/press-quotes';
-
-// Popovers
-@import './components/popovers/popover';
 
 // Simulators
 @import './components/simulators/loan-simulator';
@@ -133,10 +123,6 @@
 @import './components/tooltips/tooltip';
 @import './components/tooltips/tooltip-new';
 @import './components/tooltips/static-tooltip';
-
-// Tours
-@import './components/tours/tour';
-@import './components/tours/header-tour';
 
 // Typography
 @import './components/typography/body-copy';

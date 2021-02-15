@@ -77,10 +77,11 @@ const StyledNav = styled.nav`
     border-radius: 0;
     border-width: 0;
     border-style: solid;
-    outline: none;
     color: ${COLORS.font1};
     border-color: ${COLORS.line1};
     background-color: ${COLORS.background1};
+    transition: background-color 0.2s ease, border-color 0.2s ease,
+      color 0.2s ease;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: ${pxToRem(50)};
@@ -94,6 +95,11 @@ const StyledNav = styled.nav`
       border-color: ${COLORS.primary1};
       background-color: ${COLORS.background1};
       text-decoration: none;
+    }
+
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
     }
 
     &:active {
@@ -245,6 +251,7 @@ const PaginationBase = forwardRef(
             aria-current={isActive && 'page'}
             aria-label={ariaLabel}
             onClick={isActive ? null : pageClickHandler(number)}
+            tabIndex="0"
           >
             {number}
           </Text>

@@ -15,9 +15,6 @@
 // Cards
 
 @include k-Card;
-@include k-ProjectCard;
-@include k-ProjectCreatorCard;
-@include k-ProjectSimilarCard;
 
 // Dev
 
@@ -101,7 +98,6 @@
 // Grid
 
 @include k-Grid;
-@include k-LegoGrid;
 @include k-Row;
 @include k-SideGrid;
 @include k-SingleColumn;
@@ -131,14 +127,11 @@
 
 // Links
 
-@include k-ExternalRichLink;
-
 @include k-LinkList;
 
 // Lists
 
 @include k-BulletList;
-@include k-TagList;
 
 // Loaders
 
@@ -170,17 +163,12 @@
 
 // Notifications
 
-@include k-Alert;
 @include k-Badge;
 @include k-IconBadge;
 
 // Press
 
 @include k-PressQuotes;
-
-// Popover
-
-@include k-Popover;
 
 // Simulators
 
@@ -215,11 +203,6 @@
 @include k-Tooltip;
 @include k-TooltipNew;
 @include k-StaticTooltip;
-
-// Tours
-
-@include k-Tour;
-@include k-HeaderTour;
 
 // Typography
 

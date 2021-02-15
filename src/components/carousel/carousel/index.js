@@ -98,9 +98,9 @@ var checkPageLoop = function checkPageLoop(numberOfPages, newPage) {
 exports.checkPageLoop = checkPageLoop;
 
 var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess) {
-  if (viewportIsXSOrLess) return _gridConfig.CONTAINER_PADDING_MOBILE / 2;
-  if (viewportIsMOrLess) return _gridConfig.CONTAINER_PADDING / 2;
-  return baseItemMarginBetween;
+  if (viewportIsXSOrLess) return _gridConfig.CONTAINER_PADDING_MOBILE / 2 - _styles.OUTLINE_PLUS_OFFSET * 2;
+  if (viewportIsMOrLess) return _gridConfig.CONTAINER_PADDING / 2 - _styles.OUTLINE_PLUS_OFFSET * 2;
+  return baseItemMarginBetween - _styles.OUTLINE_PLUS_OFFSET * 2;
 };
 
 var CarouselBase = /*#__PURE__*/function (_Component) {
@@ -184,8 +184,9 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
     };
 
     _this.goToPage = function (indexPageToGo) {
+      var loop = _this.props.loop;
       var numberOfPages = _this.state.numberOfPages;
-      var newPage = checkPage(numberOfPages, indexPageToGo);
+      var newPage = loop ? checkPageLoop(numberOfPages, indexPageToGo) : checkPage(numberOfPages, indexPageToGo);
 
       _this.viewedPages.add(newPage);
 
@@ -203,7 +204,8 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           viewportIsXSOrLess = _this$props2.viewportIsXSOrLess,
           viewportIsMOrLess = _this$props2.viewportIsMOrLess,
           pagesClassName = _this$props2.pagesClassName,
-          exportVisibilityProps = _this$props2.exportVisibilityProps;
+          exportVisibilityProps = _this$props2.exportVisibilityProps,
+          pageClickText = _this$props2.pageClickText;
       var _this$state3 = _this.state,
           currentPageIndex = _this$state3.currentPageIndex,
           numberOfItemsPerPage = _this$state3.numberOfItemsPerPage,
@@ -231,7 +233,8 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         numberOfPages: numberOfPages,
         onResizeInner: _this.onResizeInner,
         pagesClassName: pagesClassName,
-        viewedPages: _this.viewedPages
+        viewedPages: _this.viewedPages,
+        pageClickText: pageClickText
       });
     };
 
@@ -384,6 +387,9 @@ CarouselBase.defaultProps = {
   },
   prevButtonText: 'Previous items',
   nextButtonText: 'Next items',
+  pageClickText: function pageClickText(page) {
+    return "Page ".concat(page);
+  },
   firstButtonText: 'First items',
   lastButtonText: 'Last items',
   showPageSquares: false,
@@ -414,6 +420,7 @@ CarouselBase.propTypes = {
   }),
   prevButtonText: _propTypes.default.string,
   nextButtonText: _propTypes.default.string,
+  pageClickText: _propTypes.default.func,
   tinyButtons: _propTypes.default.bool,
   firstButtonText: _propTypes.default.string,
   lastButtonText: _propTypes.default.string,

@@ -25,7 +25,6 @@ const StyledDatePicker = styled.div`
   .DayPickerInput-Overlay {
     box-shadow: none;
     margin-top: 18px;
-    outline: none;
     min-width: calc(7 * ${tinyCellSize} + 2 * ${tinyDayPickerPadding});
 
     @media (min-width: ${ScreenConfig.S.min}px) {
@@ -86,7 +85,6 @@ const StyledDatePicker = styled.div`
     vertical-align: middle;
     box-sizing: border-box;
     ${fontSize}
-    outline: none;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: ${cellSize};
@@ -102,6 +100,11 @@ const StyledDatePicker = styled.div`
 
     &.DayPicker-Day--outside {
       border: 0;
+    }
+
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
     }
   }
 
@@ -144,21 +147,24 @@ const StyledDatePicker = styled.div`
   .DayPicker-wrapper {
     padding: 0 ${tinyDayPickerPadding} ${tinyDayPickerPadding}
       ${tinyDayPickerPadding};
-    outline: none;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       padding: 0 ${dayPickerPadding} ${dayPickerPadding} ${dayPickerPadding};
+    }
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
     }
   }
 
   .DayPicker {
     ${fontSize}
     ${TYPOGRAPHY.fontStyles.light}
-    outline: none;
 
     ${({ styles }) => css`
       border: solid ${styles.borderColor} ${borderSize};
     `}
+
     /* Hovered selectable day*/
     &:not(.DayPicker--interactionDisabled) {
       .DayPicker-Day {

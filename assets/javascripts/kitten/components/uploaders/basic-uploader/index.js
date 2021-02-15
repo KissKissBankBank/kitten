@@ -31,6 +31,8 @@ const StyledBasicUploader = styled.div`
     background-color: ${COLORS.primary2};
     border-color: ${COLORS.primary2};
     color: ${COLORS.background1};
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
 
     svg,
     path {
@@ -70,6 +72,11 @@ const StyledBasicUploader = styled.div`
     justify-content: center;
     align-items: center;
     ${modifierStyles('beryllium')}
+
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
   }
 `
 
