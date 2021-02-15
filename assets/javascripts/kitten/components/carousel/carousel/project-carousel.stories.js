@@ -120,6 +120,13 @@ export const Default = () => (
       paginationPosition={object('paginationPosition', paginationPosition)}
       showPageSquares={boolean('showPageSquares', false)}
       loop={boolean('loop', false)}
+      hidePaginationOnMobile={boolean('hidePaginationOnMobile', false)}
+      hidePagination={boolean('hidePagination', false)}
+      showOtherPages={boolean('showOtherPages', false)}
+      preferCompletePaginationOnMobile={boolean(
+        'preferCompletePaginationOnMobile',
+        false,
+      )}
     >
       {data.map(item => (
         <CrowdfundingCard
@@ -161,6 +168,13 @@ export const WithSpecificColNumber = () => (
       paginationPosition={object('paginationPosition', paginationPosition)}
       showPageSquares={boolean('showPageSquares', false)}
       loop={boolean('loop', false)}
+      hidePaginationOnMobile={boolean('hidePaginationOnMobile', false)}
+      hidePagination={boolean('hidePagination', false)}
+      showOtherPages={boolean('showOtherPages', false)}
+      preferCompletePaginationOnMobile={boolean(
+        'preferCompletePaginationOnMobile',
+        false,
+      )}
     >
       {data.map(item => (
         <CrowdfundingCard

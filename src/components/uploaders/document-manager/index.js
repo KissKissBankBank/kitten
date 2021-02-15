@@ -45,10 +45,12 @@ var _documentIconEmpty = require("../../../components/icons/document-icon-empty"
 
 var _visuallyHidden = require("../../../components/accessibility/visually-hidden");
 
+var _screenConfig = require("../../../constants/screen-config");
+
 var StyledDocumentUploader = _styledComponents.default.div.withConfig({
   displayName: "document-manager__StyledDocumentUploader",
   componentId: "fhf9cu-0"
-})(["input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{outline:", " solid ", ";outline-offset:", ";}input[type='file']:focus,input[type='file']:hover{& + label{background-color:", ";border-color:", ";color:", ";svg,path{fill:", ";}}}input[type='file']:active{& + label{background-color:", ";border-color:", ";color:", ";svg,path{fill:", ";}}}input[type='file']:disabled + label{border-color:", ";background-color:", ";color:", ";pointer-events:none;svg,path{fill:", ";}}.k-DocumentManager__uploader__button{padding:", ";}.k-DocumentManager__uploader__container{display:flex;justify-content:stretch;align-items:center;width:100%;}.k-DocumentManager__uploader__documentIcon{flex:0 0 auto;margin-right:", ";align-self:flex-start;}.k-DocumentManager__uploader__content{flex:1 1 auto;}.k-DocumentManager__uploader__uploadIcon{margin-left:", ";flex:0 0 auto;}"], _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.background2, _colorsConfig.default.line1, _colorsConfig.default.font1, _colorsConfig.default.font1, _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.line2, _colorsConfig.default.line2, _colorsConfig.default.background1, _colorsConfig.default.background1, (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20));
+})(["input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{outline:", " solid ", ";outline-offset:", ";}input[type='file']:focus,input[type='file']:hover{& + label{background-color:", ";border-color:", ";color:", ";svg,path{fill:", ";}}}input[type='file']:active{& + label{background-color:", ";border-color:", ";color:", ";svg,path{fill:", ";}}}input[type='file']:disabled + label{border-color:", ";background-color:", ";color:", ";pointer-events:none;svg,path{fill:", ";}}.k-DocumentManager__uploader__button{padding:", ";}.k-DocumentManager__uploader__container{display:flex;justify-content:stretch;align-items:center;width:100%;}.k-DocumentManager__uploader__documentIcon{flex:0 0 auto;margin-right:", ";align-self:flex-start;@media (max-width:", "){display:none;}}.k-DocumentManager__uploader__content{flex:1 1 auto;}.k-DocumentManager__uploader__uploadIcon{margin-left:", ";flex:0 0 auto;}"], _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.background2, _colorsConfig.default.line1, _colorsConfig.default.font1, _colorsConfig.default.font1, _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.line2, _colorsConfig.default.line2, _colorsConfig.default.background1, _colorsConfig.default.background1, (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.XS.max), (0, _typography.pxToRem)(20));
 
 var StyledDocumentLoading = _styledComponents.default.div.withConfig({
   displayName: "document-manager__StyledDocumentLoading",
@@ -181,7 +183,7 @@ var DocumentManager = function DocumentManager(_ref2) {
       disabled: internalDisabled
     })), /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
       fluid: true,
-      borderRadius: 4
+      borderRadius: 6
     }, buttonProps, {
       as: "label",
       htmlFor: id,
@@ -220,7 +222,7 @@ var DocumentManager = function DocumentManager(_ref2) {
       className: (0, _classnames.default)('k-DocumentManager__loading', props.className)
     }), /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
       fluid: true,
-      borderRadius: 4
+      borderRadius: 6
     }, buttonProps, {
       as: "div",
       className: (0, _classnames.default)('k-DocumentManager__loading__button', buttonProps.className)

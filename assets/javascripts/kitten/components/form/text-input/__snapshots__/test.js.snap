@@ -1,8 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<TextInput /> with \`big\` prop matches with snapshot 1`] = `
+<input
+  className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--big"
+  disabled={false}
+  name="text"
+/>
+`;
+
 exports[`<TextInput /> with \`center\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--alignCenter"
+  className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--alignCenter"
   disabled={false}
   name="text"
 />
@@ -10,7 +18,7 @@ exports[`<TextInput /> with \`center\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`digits\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_12 k-Form-TextInput--andromeda"
+  className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_12 k-Form-TextInput--andromeda k-Form-TextInput--regular"
   disabled={false}
   name="text"
   style={
@@ -23,7 +31,7 @@ exports[`<TextInput /> with \`digits\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`disabled\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--disabled"
+  className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--disabled k-Form-TextInput--regular"
   disabled={true}
   name="text"
 />
@@ -31,7 +39,7 @@ exports[`<TextInput /> with \`disabled\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`error\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error"
+  className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
   disabled={false}
   name="text"
 />
@@ -39,7 +47,7 @@ exports[`<TextInput /> with \`error\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`giant\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--giant"
+  className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--giant"
   disabled={false}
   name="text"
 />
@@ -47,7 +55,7 @@ exports[`<TextInput /> with \`giant\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`huge\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--huge"
+  className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--huge"
   disabled={false}
   name="text"
 />
@@ -55,15 +63,23 @@ exports[`<TextInput /> with \`huge\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`name\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInput--andromeda"
+  className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
   disabled={false}
   name="foobar"
 />
 `;
 
+exports[`<TextInput /> with \`regular\` prop matches with snapshot 1`] = `
+<input
+  className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
+  disabled={false}
+  name="text"
+/>
+`;
+
 exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInput--andromeda"
+  className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
   disabled={false}
   name="text"
 />
@@ -74,7 +90,7 @@ exports[`<TextInput /> with \`textarea\` tag matches with snapshot 1`] = `
   className="sc-bwzfXH bEnvnC k-Form-TextInput__textareaContainer k-Form-TextInput__textareaContainer--andromeda"
 >
   <textarea
-    className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInput--andromeda"
+    className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInput--andromeda"
     disabled={false}
     name="message"
   />
@@ -86,7 +102,7 @@ exports[`<TextInput /> with \`textarea\` tag matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`tiny\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--tiny"
+  className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--tiny k-Form-TextInput--regular"
   disabled={false}
   name="text"
 />
@@ -94,7 +110,7 @@ exports[`<TextInput /> with \`tiny\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`valid\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--valid"
+  className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--valid k-Form-TextInput--regular"
   disabled={false}
   name="text"
 />
