@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking change: Remove `Popover` and `CallToActionPopover`.
 - Breaking change: Remove `k-ExternalRichLink` SCSS mixin.
 - Breaking change: Remove `ExternalRichLink` component.
+- Breaking change: Remove `k-u-blockAlign-*` utilities in favor of `k-u-align-self-*`.
 
 ## [3.0.0-beta.1] - 2020-02-08
 
