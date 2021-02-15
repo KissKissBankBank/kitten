@@ -131,8 +131,6 @@
 
 // Links
 
-@include k-ExternalRichLink;
-
 @include k-LinkList;
 
 // Lists
@@ -176,10 +174,6 @@
 
 @include k-PressQuotes;
 
-// Popover
-
-@include k-Popover;
-
 // Simulators
 
 @include k-LoanSimulator((
@@ -213,11 +207,6 @@
 @include k-Tooltip;
 @include k-TooltipNew;
 @include k-StaticTooltip;
-
-// Tours
-
-@include k-Tour;
-@include k-HeaderTour;
 
 // Typography
 

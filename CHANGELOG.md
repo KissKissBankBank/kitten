@@ -7,6 +7,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking change: Remove `k-Alert` SCSS mixin.
 - Breaking change: Remove `k-TagList` SCSS mixin.
 - Breaking change: Remove `TagList` component.
+- Breaking change: Remove `k-Tour` and `k-HeaderTour` SCSS mixins.
+- Breaking change: Delete `Tour`, `TourStep`, `TourPopover`
+  and `HeaderTour` components.
+- Breaking change: Remove `k-Popover` SCSS mixin.
+- Breaking change: Remove `Popover` and `CallToActionPopover`.
+- Breaking change: Remove `k-ExternalRichLink` SCSS mixin.
+- Breaking change: Remove `ExternalRichLink` component.
 
 ## [3.0.0-beta.1] - 2020-02-08
 
@@ -29,6 +36,18 @@ Breaking changes:
   - `k-ProjectCard`
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
+
+## [2.120.0] - 2020-02-12
+
+Feature:
+
+- Add `Toggletip` component.
+
+## [2.119.0] - 2020-02-10
+
+Feature:
+
+- Add `regular` (default) and `big` props on all variants of `DropdownSelect`.
 
 ## [2.118.0] - 2020-02-09
 

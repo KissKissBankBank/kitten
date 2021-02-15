@@ -671,12 +671,6 @@ Object.defineProperty(exports, "InfoLines", {
     return _infoLines.InfoLines;
   }
 });
-Object.defineProperty(exports, "ExternalRichLink", {
-  enumerable: true,
-  get: function get() {
-    return _externalRichLink.ExternalRichLink;
-  }
-});
 Object.defineProperty(exports, "LinkList", {
   enumerable: true,
   get: function get() {
@@ -821,18 +815,6 @@ Object.defineProperty(exports, "MarkdownPage", {
     return _markdown.MarkdownPage;
   }
 });
-Object.defineProperty(exports, "CallToActionPopover", {
-  enumerable: true,
-  get: function get() {
-    return _callToActionPopover.CallToActionPopover;
-  }
-});
-Object.defineProperty(exports, "Popover", {
-  enumerable: true,
-  get: function get() {
-    return _popover.Popover;
-  }
-});
 Object.defineProperty(exports, "SimplePopover", {
   enumerable: true,
   get: function get() {
@@ -941,6 +923,12 @@ Object.defineProperty(exports, "StaticTooltip", {
     return _staticTooltip.StaticTooltip;
   }
 });
+Object.defineProperty(exports, "Toggletip", {
+  enumerable: true,
+  get: function get() {
+    return _toggletip.Toggletip;
+  }
+});
 Object.defineProperty(exports, "TooltipNew", {
   enumerable: true,
   get: function get() {
@@ -957,30 +945,6 @@ Object.defineProperty(exports, "HighlightHalo", {
   enumerable: true,
   get: function get() {
     return _highlightHalo.HighlightHalo;
-  }
-});
-Object.defineProperty(exports, "HeaderTour", {
-  enumerable: true,
-  get: function get() {
-    return _headerTour.HeaderTour;
-  }
-});
-Object.defineProperty(exports, "TourPopover", {
-  enumerable: true,
-  get: function get() {
-    return _tourPopover.TourPopover;
-  }
-});
-Object.defineProperty(exports, "TourStep", {
-  enumerable: true,
-  get: function get() {
-    return _tourStep.TourStep;
-  }
-});
-Object.defineProperty(exports, "Tour", {
-  enumerable: true,
-  get: function get() {
-    return _tour.Tour;
   }
 });
 Object.defineProperty(exports, "Paragraph", {
@@ -1916,8 +1880,6 @@ var _verticalStroke = require("./components/layout/vertical-stroke");
 
 var _infoLines = require("./components/lines/info-lines");
 
-var _externalRichLink = require("./components/links/external-rich-link");
-
 var _linkList = require("./components/links/link-list");
 
 var _iconList = require("./components/lists/icon-list");
@@ -1966,10 +1928,6 @@ var _iconBadge = require("./components/notifications/icon-badge");
 
 var _markdown = require("./components/pages/markdown");
 
-var _callToActionPopover = require("./components/popovers/call-to-action-popover");
-
-var _popover = require("./components/popovers/popover");
-
 var _simplePopover = require("./components/popovers/simple-popover");
 
 var _searchInput = require("./components/search/search-input");
@@ -2002,19 +1960,13 @@ var _questionMarkWithTooltip = require("./components/tooltips/question-mark-with
 
 var _staticTooltip = require("./components/tooltips/static-tooltip");
 
+var _toggletip = require("./components/tooltips/toggletip");
+
 var _tooltipNew = require("./components/tooltips/tooltip-new");
 
 var _tooltip = require("./components/tooltips/tooltip");
 
 var _highlightHalo = require("./components/tours/highlight-halo");
-
-var _headerTour = require("./components/tours/header-tour");
-
-var _tourPopover = require("./components/tours/tour-popover");
-
-var _tourStep = require("./components/tours/tour-step");
-
-var _tour = require("./components/tours/tour");
 
 var _paragraph = require("./components/typography/paragraph");
 
