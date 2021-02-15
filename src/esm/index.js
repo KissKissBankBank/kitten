@@ -123,7 +123,6 @@ export { VerticalStroke } from './components/layout/vertical-stroke'; // Lines
 
 export { InfoLines } from './components/lines/info-lines'; // Links
 
-export { ExternalRichLink } from './components/links/external-rich-link';
 export { LinkList } from './components/links/link-list'; // Lists
 
 export { IconList } from './components/lists/icon-list';
@@ -182,6 +181,7 @@ export { TextCopy } from './components/text-copy'; // Tooltips
 
 export { QuestionMarkWithTooltip } from './components/tooltips/question-mark-with-tooltip';
 export { StaticTooltip } from './components/tooltips/static-tooltip';
+export { Toggletip } from './components/tooltips/toggletip';
 export { TooltipNew } from './components/tooltips/tooltip-new';
 export { Tooltip } from './components/tooltips/tooltip'; // Tours
 

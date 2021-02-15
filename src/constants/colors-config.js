@@ -39,7 +39,7 @@ var _default = {
   // Semi Light Green
   valid: '#61d079',
   // Green
-  valid1: 'rgba(97, 208, 121, .1)',
+  valid1: 'hsl(133, 54%, 94%)',
   // Green Light
   error: '#ff0046',
   // Red
@@ -48,7 +48,7 @@ var _default = {
   error3: '#ffb2c7',
   // Semi Light Red
   orange: '#ff7800',
-  orange1: 'rgba(255, 130, 15, .1)',
+  orange1: '#fff2e7',
   // Orange light
   warning: '#8a6d3b',
   warning2: '#fcf8e3'
