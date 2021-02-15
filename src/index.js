@@ -821,18 +821,6 @@ Object.defineProperty(exports, "MarkdownPage", {
     return _markdown.MarkdownPage;
   }
 });
-Object.defineProperty(exports, "CallToActionPopover", {
-  enumerable: true,
-  get: function get() {
-    return _callToActionPopover.CallToActionPopover;
-  }
-});
-Object.defineProperty(exports, "Popover", {
-  enumerable: true,
-  get: function get() {
-    return _popover.Popover;
-  }
-});
 Object.defineProperty(exports, "SimplePopover", {
   enumerable: true,
   get: function get() {
@@ -1971,10 +1959,6 @@ var _badge = require("./components/notifications/badge");
 var _iconBadge = require("./components/notifications/icon-badge");
 
 var _markdown = require("./components/pages/markdown");
-
-var _callToActionPopover = require("./components/popovers/call-to-action-popover");
-
-var _popover = require("./components/popovers/popover");
 
 var _simplePopover = require("./components/popovers/simple-popover");
 
