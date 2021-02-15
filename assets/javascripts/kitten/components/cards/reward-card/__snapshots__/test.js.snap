@@ -2,7 +2,7 @@
 
 exports[`<RewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM htIJZx k-RewardCard"
+  className="sc-bdVaJa hceOql k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -11,7 +11,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
       className="k-RewardCard__rowContent"
     >
       <h6
-        className="sc-htpNat kVNXBx k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        className="sc-bxivhb fefSsp k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
       >
         Custom title mount
       </h6>
@@ -27,7 +27,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM htIJZx k-RewardCard"
+  className="sc-bdVaJa hceOql k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -39,7 +39,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         className="k-RewardCard__diamondBadge"
       >
         <span
-          className="sc-EHOje dFYoQB"
+          className="sc-ifAKCX hWyXQl"
           disabled={false}
         >
           <span
@@ -65,19 +65,19 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
           className="k-RewardCard__diamondBadge__content"
         >
           <span
-            className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-nano k-u-weight-bold"
+            className="sc-bwzfXH uTxCW k-u-color-font1 k-u-size-nano k-u-weight-bold"
           >
             Starred label
           </span>
           <span
-            className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-nano"
+            className="sc-bwzfXH uTxCW k-u-color-font1 k-u-size-nano"
           >
             Lorem ipsum
           </span>
         </div>
       </div>
       <h6
-        className="sc-htpNat kVNXBx k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        className="sc-bxivhb fefSsp k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
       >
         Custom title mount
       </h6>
@@ -93,7 +93,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM htIJZx k-RewardCard customClassName"
+  className="sc-bdVaJa hceOql k-RewardCard customClassName"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -105,7 +105,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         className="k-RewardCard__starredBadge"
       >
         <span
-          className="sc-EHOje dFYoQB"
+          className="sc-ifAKCX hWyXQl"
           disabled={false}
         >
           <span
@@ -131,24 +131,24 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           className="k-RewardCard__starredBadge__content"
         >
           <span
-            className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-nano k-u-weight-bold"
+            className="sc-bwzfXH uTxCW k-u-color-font1 k-u-size-nano k-u-weight-bold"
           >
             Starred label
           </span>
           <span
-            className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-nano"
+            className="sc-bwzfXH uTxCW k-u-color-font1 k-u-size-nano"
           >
             Lorem ipsum
           </span>
         </div>
       </div>
       <h6
-        className="sc-htpNat kVNXBx k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        className="sc-bxivhb fefSsp k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
       >
         100$
       </h6>
       <p
-        className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-weight-bold"
+        className="sc-bwzfXH uTxCW k-u-color-font1 k-u-weight-bold"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
       </p>
@@ -158,15 +158,15 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
       </p>
       <ul
-        className="sc-dnqmqq bYuYzA k-List"
+        className="sc-bZQynM bkXVsB k-List"
       >
         <li>
           <span
-            className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-RewardCard__infos k-RewardCard__infos--hasBottomMargin"
+            className="sc-bwzfXH uTxCW k-u-color-font1 k-u-size-micro k-u-weight-regular k-RewardCard__infos k-RewardCard__infos--hasBottomMargin"
           >
             Contributors: 
             <span
-              className="sc-ifAKCX cFlEyZ k-u-weight-light"
+              className="sc-bwzfXH uTxCW k-u-weight-light"
             >
               35
             </span>
@@ -174,11 +174,11 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </li>
         <li>
           <span
-            className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-RewardCard__infos k-RewardCard__infos--hasBottomMargin"
+            className="sc-bwzfXH uTxCW k-u-color-font1 k-u-size-micro k-u-weight-regular k-RewardCard__infos k-RewardCard__infos--hasBottomMargin"
           >
             Availability: 
             <span
-              className="sc-ifAKCX cFlEyZ k-u-weight-light"
+              className="sc-bwzfXH uTxCW k-u-weight-light"
             >
               42/1000
             </span>
@@ -186,11 +186,11 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </li>
         <li>
           <span
-            className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-RewardCard__infos"
+            className="sc-bwzfXH uTxCW k-u-color-font1 k-u-size-micro k-u-weight-regular k-RewardCard__infos"
           >
             Delivery: 
             <span
-              className="sc-ifAKCX cFlEyZ k-u-weight-light"
+              className="sc-bwzfXH uTxCW k-u-weight-light"
             >
               January 2019
             </span>
@@ -216,7 +216,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
     className="k-RewardCard__checkedIconLine"
   >
     <span
-      className="sc-EHOje cOnFfw k-RewardCard__iconBadge"
+      className="sc-ifAKCX kYpVhn k-RewardCard__iconBadge"
       disabled={false}
     >
       <span
@@ -242,12 +242,12 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
     className="k-RewardCard__checkedSection"
   >
     <p
-      className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-tiny"
+      className="sc-bwzfXH uTxCW k-u-color-font1 k-u-size-tiny"
     >
       You contributed to this project.
     </p>
     <a
-      className="sc-ifAKCX cFlEyZ k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
+      className="sc-bwzfXH uTxCW k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
       href="#"
     >
       Manage my contribution
@@ -256,191 +256,9 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 </div>
 `;
 
-exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
-<div
-  className="sc-bwzfXH bCeqqR k-LegacyRewardCard customClassName"
-  disabled={false}
->
-  <div
-    className="sc-bdVaJa fdLNbY"
-  >
-    <div
-      className="k-Grid k-LegacyRewardCard__row"
-    >
-      <div
-        className="k-Grid__col--12 k-Grid__col--7@s k-Grid__col--7@l"
-      >
-        <div
-          className={null}
-        >
-          <div
-            className="sc-bdVaJa zBUGX"
-          >
-            <h1
-              className="sc-htpNat KvJvV k-u-color-font1"
-            >
-              Custom title amount
-            </h1>
-          </div>
-          <div
-            className="sc-bdVaJa iDiPml"
-          >
-            <div
-              className="sc-bxivhb gmqSjE k-HorizontalStroke k-HorizontalStroke--size--big"
-              color="#222"
-              style={
-                Object {
-                  "height": null,
-                  "width": null,
-                }
-              }
-            />
-          </div>
-          <div
-            className="sc-bdVaJa gSHEXD"
-          >
-            <p
-              className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-huge k-u-weight-bold k-u-margin-none"
-            >
-              Custom title description
-            </p>
-          </div>
-          <div
-            className="sc-bdVaJa ggQxmM"
-          >
-            <p
-              className="k-Paragraph k-u-color-font1 k-Paragraph--tertiary k-Paragraph--withoutMargin"
-            >
-              Custom text description
-            </p>
-          </div>
-        </div>
-        <div
-          className={null}
-        >
-          <div
-            className="sc-bdVaJa iDiPml"
-          >
-            <span
-              className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
-            >
-              Custom title contributors 
-              <span
-                className="sc-ifAKCX cFlEyZ k-u-weight-light"
-              >
-                Custom value contributors
-              </span>
-            </span>
-            <span
-              className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
-            >
-              Custom title delivery 
-              <span
-                className="sc-ifAKCX cFlEyZ k-u-weight-light"
-              >
-                Custom value delivery
-              </span>
-            </span>
-            <span
-              className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
-            >
-              Custom title availability 
-              <span
-                className="sc-ifAKCX cFlEyZ k-u-weight-light"
-              >
-                Custom value availability
-              </span>
-            </span>
-          </div>
-        </div>
-        <div
-          className="sc-bdVaJa jtnNso"
-        >
-          <button
-            aria-labelledby="Custom text button"
-            className="k-Button k-Button--helium k-Button--big k-LegacyRewardCard__button"
-            disabled={false}
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            tabIndex={null}
-            type="button"
-          >
-            Custom text button
-          </button>
-          <div
-            className="sc-bdVaJa jtfdLD"
-          >
-            <div
-              className="k-LegacyRewardCard__myContribution"
-            >
-              <span
-                className="sc-EHOje cOnFfw k-LegacyRewardCard__iconBadge"
-                disabled={false}
-              >
-                <span
-                  className="k-IconBadge__content"
-                >
-                  <svg
-                    className="k-IconBadge__svg"
-                    fill="#fff"
-                    height="8"
-                    viewBox="0 0 11 8"
-                    width="11"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    
-                    <path
-                      d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
-                    />
-                  </svg>
-                </span>
-              </span>
-              <div
-                className="k-LegacyRewardCard__myContribution__text"
-              >
-                <span
-                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-tiny k-u-weight-regular"
-                >
-                  Custom my contribution
-                  <br />
-                  <a
-                    className="sc-ifAKCX cFlEyZ k-u-color-primary1 k-u-decoration-none k-u-weight-regular"
-                    href="Custom manage link contribution"
-                  >
-                    Custom manage contribution
-                  </a>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="k-Grid__col--12 k-Grid__col--4@s k-Grid__col--offset-1@s LegacyRewardCard__col_image"
-      >
-        <div
-          className="sc-bdVaJa bDWFJH"
-        >
-          <div
-            className={null}
-          >
-            <img
-              alt="Image alt"
-              className="k-LegacyRewardCard__image"
-              src="#image"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`<RewardCard /> with video matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM htIJZx k-RewardCard"
+  className="sc-bdVaJa hceOql k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -449,7 +267,7 @@ exports[`<RewardCard /> with video matches with snapshot 1`] = `
       className="k-RewardCard__rowContent"
     >
       <h6
-        className="sc-htpNat kVNXBx k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        className="sc-bxivhb fefSsp k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
       >
         Custom title mount
       </h6>
@@ -467,7 +285,7 @@ exports[`<RewardCard /> with video matches with snapshot 1`] = `
       >
         <video
           autoPlay={true}
-          className="sc-gzVnrw gSBsWz k-RewardCard__video"
+          className="sc-htpNat bkaCVb k-RewardCard__video"
           loop={false}
           muted={true}
           playsInline={true}

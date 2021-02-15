@@ -33,6 +33,8 @@ export default {
   // Semi Light Green
   valid: '#61d079',
   // Green
+  valid1: 'hsl(133, 54%, 94%)',
+  // Green Light
   error: '#ff0046',
   // Red
   error2: '#ffe5ec',
@@ -40,6 +42,8 @@ export default {
   error3: '#ffb2c7',
   // Semi Light Red
   orange: '#ff7800',
+  orange1: '#fff2e7',
+  // Orange light
   warning: '#8a6d3b',
   warning2: '#fcf8e3'
 };

@@ -1,5 +1,5 @@
 import React from 'react'
-import { text, boolean, object, select } from '@storybook/addon-knobs'
+import { text, boolean, select } from '@storybook/addon-knobs'
 import { RewardCard as RewardCardComponent } from './index'
 import { Container } from '../../../components/grid/container'
 import { Grid, GridCol } from '../../../components/grid/grid'
@@ -500,51 +500,3 @@ export const RewardCard = () => {
     </StyledStoryContainer>
   )
 }
-
-export const Legacy_RewardCard = () => (
-  <StyledStoryContainer>
-    <Grid>
-      <GridCol offset="1" col="10">
-        <RewardCard
-          titleAmount={text('Title amount', 'For 00€')}
-          subtitle={text(
-            'subtitle',
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
-          )}
-          description={text(
-            'Text Description',
-            'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.',
-          )}
-          infos={[
-            object('Infos[0]', { label: 'Contributors:', value: '35' }),
-            object('Infos[1]', {
-              label: 'Delivery:',
-              value: 'January 2018',
-            }),
-            object('Infos[2]', { label: 'Availability:', value: '200' }),
-          ]}
-          buttonLabel={text('Button label', 'Choose')}
-          manageContributionDescription={text(
-            'Manage contribution description',
-            'You contributed to this project',
-          )}
-          manageContributionLinkLabel={text(
-            'Manage contribution link label',
-            'Manage my contribution',
-          )}
-          manageContributionLink={text(
-            'Manage contribution link href',
-            'https://www.google.com',
-          )}
-          isDisabled={boolean('Is Disabled', false)}
-          starred={boolean('Is Starred', false)}
-          starLabel={text('Label for featured reward', 'Featured reward')}
-          imageProps={object('Src/Alt', {
-            src: 'http://via.placeholder.com/200x240/caf4fe/caf4fe',
-            alt: '',
-          })}
-        />
-      </GridCol>
-    </Grid>
-  </StyledStoryContainer>
-)

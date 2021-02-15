@@ -18,6 +18,7 @@ npm publish
 echo "Done! kitten v$PACKAGE_VERSION is published! 🚀"
 echo "I can use it alteady with npm install @kisskissbankbank/kitten"
 
-npm run deploy-storybook
-
-echo "Storybook is updated! https://kisskissbankbank.github.io/kitten"
+if [ "$1" == "with-storybook" ]; then
+  npm run deploy-storybook
+  echo "Storybook is updated! https://kisskissbankbank.github.io/kitten"
+fi

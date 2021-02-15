@@ -30,10 +30,14 @@ const sass = {
   'tertiary-3': '#4ae191',
 
   'valid': '#61d079', // Green
+  'valid1': 'rgba(97, 208, 121, .1)', // Green Light
 
   'error': '#ff0046', // Red
   'error-2': '#ffe5ec', // Light Red
   'error-3': '#ffb2c7', // Semi Light Red
+
+  'orange': '#ff7800',
+  'orange1': 'rgba(255, 130, 15, .1)', // Orange light
 
   'red-light-mdc': '#ffebe0',
   'red-mdc': '#ff0000',

@@ -10,7 +10,7 @@ const StoryContainer = ({ children }) => (
 )
 
 export default {
-  title: 'Tooltip/Tooltip',
+  title: 'Tooltips/Tooltip',
   component: Tooltip,
 }
 
