@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: Remove `k-Alert` SCSS mixin.
+- Breaking change: Remove `k-Tour` and `k-HeaderTour` SCSS mixins.
+- Breaking change: Delete `Tour`, `TourStep`, `TourPopover`
+  and `HeaderTour` components.
 - Breaking change: Remove `k-Popover` SCSS mixin.
 - Breaking change: Remove `Popover` and `CallToActionPopover`.
 - Breaking change: Remove `k-ExternalRichLink` SCSS mixin.
