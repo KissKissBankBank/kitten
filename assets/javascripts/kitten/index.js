@@ -115,6 +115,7 @@ export { TextInputWithLimit } from './components/form/text-input-with-limit'
 export { TextInputWithUnitForm } from './components/form/text-input-with-unit-form'
 export { TextInputWithUnit } from './components/form/text-input-with-unit'
 export { TextInput } from './components/form/text-input'
+export { ToggleSwitch } from './components/form/toggle-switch'
 
 // Grid
 export { Container } from './components/grid/container'
