@@ -671,12 +671,6 @@ Object.defineProperty(exports, "InfoLines", {
     return _infoLines.InfoLines;
   }
 });
-Object.defineProperty(exports, "ExternalRichLink", {
-  enumerable: true,
-  get: function get() {
-    return _externalRichLink.ExternalRichLink;
-  }
-});
 Object.defineProperty(exports, "LinkList", {
   enumerable: true,
   get: function get() {
@@ -1927,8 +1921,6 @@ var _sideLayout = require("./components/layout/side-layout");
 var _verticalStroke = require("./components/layout/vertical-stroke");
 
 var _infoLines = require("./components/lines/info-lines");
-
-var _externalRichLink = require("./components/links/external-rich-link");
 
 var _linkList = require("./components/links/link-list");
 

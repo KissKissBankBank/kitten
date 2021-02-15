@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking change: Remove `k-Alert` SCSS mixin.
 - Breaking Change: Remove `k-SideGrid` and `k-VerticalGrid` mixins.
 - Feature: Migrate `SideGrid` and `SideLayout` to Styled Components.
+- Breaking change: Remove `k-ExternalRichLink` SCSS mixin.
+- Breaking change: Remove `ExternalRichLink` component.
 
 ## [3.0.0-beta.1] - 2020-02-08
 
