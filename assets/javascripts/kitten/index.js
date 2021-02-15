@@ -157,7 +157,6 @@ export { VerticalStroke } from './components/layout/vertical-stroke'
 export { InfoLines } from './components/lines/info-lines'
 
 // Links
-export { ExternalRichLink } from './components/links/external-rich-link'
 export { LinkList } from './components/links/link-list'
 
 // Lists
@@ -201,8 +200,6 @@ export { IconBadge } from './components/notifications/icon-badge'
 export { MarkdownPage } from './components/pages/markdown'
 
 // Popovers
-export { CallToActionPopover } from './components/popovers/call-to-action-popover'
-export { Popover } from './components/popovers/popover'
 export { SimplePopover } from './components/popovers/simple-popover'
 
 // Search
@@ -239,6 +236,7 @@ export { TextCopy } from './components/text-copy'
 // Tooltips
 export { QuestionMarkWithTooltip } from './components/tooltips/question-mark-with-tooltip'
 export { StaticTooltip } from './components/tooltips/static-tooltip'
+export { Toggletip } from './components/tooltips/toggletip'
 export { TooltipNew } from './components/tooltips/tooltip-new'
 export { Tooltip } from './components/tooltips/tooltip'
 

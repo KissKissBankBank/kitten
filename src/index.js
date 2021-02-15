@@ -671,12 +671,6 @@ Object.defineProperty(exports, "InfoLines", {
     return _infoLines.InfoLines;
   }
 });
-Object.defineProperty(exports, "ExternalRichLink", {
-  enumerable: true,
-  get: function get() {
-    return _externalRichLink.ExternalRichLink;
-  }
-});
 Object.defineProperty(exports, "LinkList", {
   enumerable: true,
   get: function get() {
@@ -827,18 +821,6 @@ Object.defineProperty(exports, "MarkdownPage", {
     return _markdown.MarkdownPage;
   }
 });
-Object.defineProperty(exports, "CallToActionPopover", {
-  enumerable: true,
-  get: function get() {
-    return _callToActionPopover.CallToActionPopover;
-  }
-});
-Object.defineProperty(exports, "Popover", {
-  enumerable: true,
-  get: function get() {
-    return _popover.Popover;
-  }
-});
 Object.defineProperty(exports, "SimplePopover", {
   enumerable: true,
   get: function get() {
@@ -945,6 +927,12 @@ Object.defineProperty(exports, "StaticTooltip", {
   enumerable: true,
   get: function get() {
     return _staticTooltip.StaticTooltip;
+  }
+});
+Object.defineProperty(exports, "Toggletip", {
+  enumerable: true,
+  get: function get() {
+    return _toggletip.Toggletip;
   }
 });
 Object.defineProperty(exports, "TooltipNew", {
@@ -1898,8 +1886,6 @@ var _verticalStroke = require("./components/layout/vertical-stroke");
 
 var _infoLines = require("./components/lines/info-lines");
 
-var _externalRichLink = require("./components/links/external-rich-link");
-
 var _linkList = require("./components/links/link-list");
 
 var _iconList = require("./components/lists/icon-list");
@@ -1950,10 +1936,6 @@ var _iconBadge = require("./components/notifications/icon-badge");
 
 var _markdown = require("./components/pages/markdown");
 
-var _callToActionPopover = require("./components/popovers/call-to-action-popover");
-
-var _popover = require("./components/popovers/popover");
-
 var _simplePopover = require("./components/popovers/simple-popover");
 
 var _searchInput = require("./components/search/search-input");
@@ -1985,6 +1967,8 @@ var _textCopy = require("./components/text-copy");
 var _questionMarkWithTooltip = require("./components/tooltips/question-mark-with-tooltip");
 
 var _staticTooltip = require("./components/tooltips/static-tooltip");
+
+var _toggletip = require("./components/tooltips/toggletip");
 
 var _tooltipNew = require("./components/tooltips/tooltip-new");
 
