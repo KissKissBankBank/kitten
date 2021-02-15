@@ -10,7 +10,12 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
     src="#image"
   />
   <h1
-    className="sc-bwzfXH ffdHnv"
+    className="sc-bwzfXH evizya k-Title--senary"
+    style={
+      Object {
+        "--Title-css-color": null,
+      }
+    }
   >
     Custom title
   </h1>
@@ -28,7 +33,12 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
     src="#image"
   />
   <h1
-    className="sc-bwzfXH ffdHnv"
+    className="sc-bwzfXH evizya k-Title--senary"
+    style={
+      Object {
+        "--Title-css-color": null,
+      }
+    }
   >
     Custom title
   </h1>

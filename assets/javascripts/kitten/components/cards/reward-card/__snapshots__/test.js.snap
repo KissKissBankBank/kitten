@@ -11,7 +11,12 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
       className="k-RewardCard__rowContent"
     >
       <h6
-        className="sc-bxivhb fefSsp k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        className="sc-bxivhb hmaGzH k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        style={
+          Object {
+            "--Title-css-color": "#222",
+          }
+        }
       >
         Custom title mount
       </h6>
@@ -77,7 +82,12 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         </div>
       </div>
       <h6
-        className="sc-bxivhb fefSsp k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        className="sc-bxivhb hmaGzH k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        style={
+          Object {
+            "--Title-css-color": "#222",
+          }
+        }
       >
         Custom title mount
       </h6>
@@ -143,7 +153,12 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </div>
       </div>
       <h6
-        className="sc-bxivhb fefSsp k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        className="sc-bxivhb hmaGzH k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        style={
+          Object {
+            "--Title-css-color": "#222",
+          }
+        }
       >
         100$
       </h6>
@@ -267,7 +282,12 @@ exports[`<RewardCard /> with video matches with snapshot 1`] = `
       className="k-RewardCard__rowContent"
     >
       <h6
-        className="sc-bxivhb fefSsp k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        className="sc-bxivhb hmaGzH k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        style={
+          Object {
+            "--Title-css-color": "#222",
+          }
+        }
       >
         Custom title mount
       </h6>
