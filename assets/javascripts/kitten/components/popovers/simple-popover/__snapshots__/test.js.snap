@@ -23,7 +23,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   letter-spacing: .01rem;
   font-weight: 600;
   color: var(--Title-css-color);
-  font-size: NaNrem;
+  font-size: 1.125rem;
   line-height: 1.2;
 }
 
@@ -374,13 +374,13 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 @media (min-width:40rem) {
   .c5 {
-    font-size: NaNrem;
+    font-size: 1.265625rem;
   }
 }
 
 @media (min-width:67.5rem) {
   .c5 {
-    font-size: NaNrem;
+    font-size: 1.601806640625rem;
   }
 }
 
@@ -495,7 +495,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c4"
     >
       <h2
-        className="c5 k-Title--senary"
+        className="c5"
         id="popover-title"
         style={
           Object {
@@ -554,7 +554,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   letter-spacing: .01rem;
   font-weight: 600;
   color: var(--Title-css-color);
-  font-size: NaNrem;
+  font-size: 1.125rem;
   line-height: 1.2;
 }
 
@@ -704,13 +704,13 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c4 {
-    font-size: NaNrem;
+    font-size: 1.265625rem;
   }
 }
 
 @media (min-width:67.5rem) {
   .c4 {
-    font-size: NaNrem;
+    font-size: 1.601806640625rem;
   }
 }
 
@@ -774,7 +774,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
       className="c3"
     >
       <h2
-        className="c4 k-Title--senary"
+        className="c4"
         id="popover-title"
         style={
           Object {

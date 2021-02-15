@@ -21,7 +21,7 @@ const StyledTitle = styled.span`
     font-style: italic;
   }
 
-  ${modifierStyles('&.k-Title--modifier')}
+  ${({ modifier }) => modifierStyles(modifier)}
 `
 
 export const Title = ({
@@ -35,8 +35,8 @@ export const Title = ({
   return (
     <StyledTitle
       as={tag}
+      modifier={modifier}
       className={classNames(
-        `k-Title--${modifier}`,
         {
           'k-Title--margin': margin,
           'k-Title--italic': italic,
