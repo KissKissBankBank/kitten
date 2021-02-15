@@ -157,7 +157,6 @@ export { VerticalStroke } from './components/layout/vertical-stroke'
 export { InfoLines } from './components/lines/info-lines'
 
 // Links
-export { ExternalRichLink } from './components/links/external-rich-link'
 export { LinkList } from './components/links/link-list'
 
 // Lists
