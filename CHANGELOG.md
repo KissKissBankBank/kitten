@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: `ArrowIcon` defaults to `solid` version.
+- Breaking Change: Delete `DeprecatedArrowIcon`.
 - Breaking change: Remove `k-Alert` SCSS mixin.
 - Breaking change: Remove `k-TagList` SCSS mixin.
 - Breaking change: Remove `TagList` component.

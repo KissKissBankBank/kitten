@@ -529,7 +529,6 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
                     disabled={false}
                     height="5.64"
                     title=""
-                    version="solid"
                     width="8.48"
                   >
                     <svg
@@ -618,7 +617,6 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
                     disabled={false}
                     height="5.64"
                     title=""
-                    version="solid"
                     width="8.48"
                   >
                     <svg
@@ -1016,7 +1014,6 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
                     disabled={false}
                     height="5.64"
                     title=""
-                    version="solid"
                     width="8.48"
                   >
                     <svg
@@ -1105,7 +1102,6 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
                     disabled={false}
                     height="5.64"
                     title=""
-                    version="solid"
                     width="8.48"
                   >
                     <svg
@@ -1437,7 +1433,6 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
                     disabled={false}
                     height="5.64"
                     title=""
-                    version="solid"
                     width="8.48"
                   >
                     <svg
@@ -1526,7 +1521,6 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
                     disabled={false}
                     height="5.64"
                     title=""
-                    version="solid"
                     width="8.48"
                   >
                     <svg
