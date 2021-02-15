@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: Remove `k-Alert` SCSS mixin.
+- Breaking change: Remove `k-TagList` SCSS mixin.
+- Breaking change: Remove `TagList` component.
 - Breaking change: Remove `k-Tour` and `k-HeaderTour` SCSS mixins.
 - Breaking change: Delete `Tour`, `TourStep`, `TourPopover`
   and `HeaderTour` components.

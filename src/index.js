@@ -707,12 +707,6 @@ Object.defineProperty(exports, "NavList", {
     return _navList.NavList;
   }
 });
-Object.defineProperty(exports, "TagList", {
-  enumerable: true,
-  get: function get() {
-    return _tagList.TagList;
-  }
-});
 Object.defineProperty(exports, "Timeline", {
   enumerable: true,
   get: function get() {
@@ -1897,8 +1891,6 @@ var _list = require("./components/lists/list");
 var _checkList = require("./components/lists/check-list");
 
 var _navList = require("./components/lists/nav-list");
-
-var _tagList = require("./components/lists/tag-list");
 
 var _timeline = require("./components/lists/timeline");
 
