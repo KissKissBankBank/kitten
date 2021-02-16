@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { TitleWithStroke } from '../../../../components/typography/title-with-stroke'
-import { Paragraph } from '../../../components/typography/paragraph/next'
+import { Paragraph } from '../../../../components/typography/paragraph'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import {
@@ -136,7 +136,7 @@ export const DialogWithPictureBorder = () => {
           </TitleWithStroke>
           <Paragraph
             className="DialogWithPictureBorder__paragraph k-u-margin-none"
-            modifier="tertiary"
+            modifier="secondary"
           >
             Citoyenneté, optimiste et indépendance. Créé en 2009,
             KissKissBankBank, pionnier du financement participatif en France,

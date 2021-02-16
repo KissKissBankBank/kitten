@@ -4,7 +4,7 @@ import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Title } from '../../../../components/typography/title'
-import { Paragraph } from '../../../components/typography/paragraph/next'
+import { Paragraph } from '../../../../components/typography/paragraph'
 import { Text } from '../../../../components/typography/text'
 import {
   Button,
@@ -85,7 +85,7 @@ const TextWithImage = ({ imagePosition }) => (
           </Marger>
 
           <Marger bottom="2">
-            <Paragraph modifier="secondary" margin={false}>
+            <Paragraph modifier="tertiary" margin={false}>
               Devenez mentor gratuitement. Accompagnez, conseillez ou financez
               directement des créateurs de projets.
             </Paragraph>

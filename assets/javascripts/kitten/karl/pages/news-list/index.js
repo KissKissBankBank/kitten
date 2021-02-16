@@ -5,7 +5,7 @@ import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
 import { Title } from '../../../components/typography/title'
-import { Paragraph } from '../../../components/typography/paragraph/next'
+import { Paragraph } from '../../../components/typography/paragraph'
 import { Text } from '../../../components/typography/text'
 import { Container } from '../../../components/grid/container'
 import { Button } from '../../../components/buttons/button/button'
@@ -118,7 +118,7 @@ const NewsList = () => {
             size="big"
             className="k-u-margin-top-double k-u-margin-bottom-quadruple"
           />
-          <Paragraph modifier="primary">
+          <Paragraph modifier="secondary">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
             commodo ligula eget dolor. Cum sociis natoque penatibus et magnis
             dis parturient montes.
@@ -140,7 +140,7 @@ const NewsList = () => {
             size="big"
             className="k-u-margin-top-double k-u-margin-bottom-quadruple"
           />
-          <Paragraph modifier="primary">
+          <Paragraph modifier="secondary">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
             commodo ligula eget dolor. Cum sociis natoque penatibus et magnis
             dis parturient montes.

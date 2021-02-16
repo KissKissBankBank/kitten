@@ -4,7 +4,7 @@ import { Container } from '../../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../../components/grid/grid'
 import { Marger } from '../../../../../components/layout/marger'
 import { Title } from '../../../../../components/typography/title'
-import { Paragraph } from '../../../../../components/typography/next/paragraph'
+import { Paragraph } from '../../../../../components/typography/paragraph'
 import { Text } from '../../../../../components/typography/text'
 import { HorizontalStroke } from '../../../../../components/layout/horizontal-stroke'
 import { Button } from '../../../../../components/buttons/button'
@@ -59,7 +59,7 @@ class PaymentChoices extends Component {
             </Marger>
 
             <Marger top={{ default: 3, fromL: 4 }} bottom="4">
-              <Paragraph modifier="secondary" margin={false}>
+              <Paragraph modifier="tertiary" margin={false}>
                 Vous serez débité dès aujourd’hui. En cas d’échec de la
                 collecte, le montant de votre contribution vous sera totalement
                 remboursé.
@@ -249,7 +249,7 @@ class PaymentChoices extends Component {
 
                     <Accordeon.Content>
                       <Marger bottom="3">
-                        <Paragraph modifier="secondary" margin={false}>
+                        <Paragraph modifier="tertiary" margin={false}>
                           Après avoir validé votre demande, vous serez
                           automatiquement redirigé vers la page de connexion
                           Paypal
@@ -278,7 +278,7 @@ class PaymentChoices extends Component {
 
                       <Accordeon.Content>
                         <Marger bottom="3">
-                          <Paragraph modifier="secondary" margin={false}>
+                          <Paragraph modifier="tertiary" margin={false}>
                             Vous serez automatiquement redirigé vers la page de
                             notre prestataire de paiement.
                           </Paragraph>

@@ -2,7 +2,7 @@ import React from 'react'
 import { SimpleCarousel } from './index'
 import { Marger } from '../../layout/marger'
 import { Title } from '../../typography/title'
-import { Paragraph } from '../../typography/next/paragraph'
+import { Paragraph } from '../../typography/paragraph/next'
 import { HorizontalStroke } from '../../layout/horizontal-stroke'
 import { Button } from '../../buttons/button'
 
