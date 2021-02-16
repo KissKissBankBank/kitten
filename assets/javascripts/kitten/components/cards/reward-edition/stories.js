@@ -14,10 +14,6 @@ import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { EditIcon } from '../../../components/icons/edit-icon'
 
-const StoryContainer = ({ children }) => (
-  <div className="story-Container story-Grid">{children}</div>
-)
-
 const borderWidth = pxToRem(1)
 
 const StyledButton = styled(Button)`
@@ -39,54 +35,59 @@ const StyledIcon = styled(EditIcon)`
 export default {
   title: 'Cards/RewardEdition',
   component: RewardEdition,
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const Default = () => {
   return (
-    <StoryContainer>
-      <RewardEdition>
-        <RewardEdition.Header garbageButton={boolean('Garbage button', true)}>
-          <Text weight="regular" size="default">
-            Contrepartie pour _€
-          </Text>
-        </RewardEdition.Header>
+    <RewardEdition>
+      <RewardEdition.Header garbageButton={boolean('Garbage button', true)}>
+        <Text weight="regular" size="default">
+          Contrepartie pour _€
+        </Text>
+      </RewardEdition.Header>
 
-        <RewardEdition.Content>
-          <div className="k-u-hidden@s-down">
-            <ButtonGroup>
-              <ButtonGroup.Button>Button1</ButtonGroup.Button>
-              <ButtonGroup.Button>Button2</ButtonGroup.Button>
-              <ButtonGroup.Button>Button3</ButtonGroup.Button>
-            </ButtonGroup>
-          </div>
+      <RewardEdition.Content>
+        <div className="k-u-hidden@s-down">
+          <ButtonGroup>
+            <ButtonGroup.Button>Button1</ButtonGroup.Button>
+            <ButtonGroup.Button>Button2</ButtonGroup.Button>
+            <ButtonGroup.Button>Button3</ButtonGroup.Button>
+          </ButtonGroup>
+        </div>
 
-          <div className="k-u-hidden@m-up">
-            <ExpandBoard>
-              <ExpandBoard.Button
-                big={false}
-                borderRadius={4}
-                withBottomBorderRadius={4}
-              >
-                Button1
-              </ExpandBoard.Button>
-              <ExpandBoard.Content>
-                <StyledButton>Button2</StyledButton>
-                <StyledButton>Button3</StyledButton>
-              </ExpandBoard.Content>
-            </ExpandBoard>
-          </div>
-        </RewardEdition.Content>
+        <div className="k-u-hidden@m-up">
+          <ExpandBoard>
+            <ExpandBoard.Button
+              big={false}
+              borderRadius={4}
+              withBottomBorderRadius={4}
+            >
+              Button1
+            </ExpandBoard.Button>
+            <ExpandBoard.Content>
+              <StyledButton>Button2</StyledButton>
+              <StyledButton>Button3</StyledButton>
+            </ExpandBoard.Content>
+          </ExpandBoard>
+        </div>
+      </RewardEdition.Content>
 
-        <RewardEdition.Footer />
-      </RewardEdition>
-    </StoryContainer>
+      <RewardEdition.Footer />
+    </RewardEdition>
   )
 }
 
 export const RewardEditionKissKissCode = () => {
   return (
     <>
-      <StoryContainer>
+      <div>
         <RewardEdition>
           <RewardEdition.Header>
             <Text weight="regular" size="default">
@@ -135,9 +136,8 @@ export const RewardEditionKissKissCode = () => {
             </Button>
           </StyledContainer>
         </RewardEdition>
-      </StoryContainer>
-
-      <StoryContainer>
+      </div>
+      <div>
         <RewardEdition>
           <RewardEdition.Header>
             <Text weight="regular" size="default">
@@ -205,7 +205,7 @@ export const RewardEditionKissKissCode = () => {
             </Button>
           </StyledContainer>
         </RewardEdition>
-      </StoryContainer>
+      </div>
     </>
   )
 }

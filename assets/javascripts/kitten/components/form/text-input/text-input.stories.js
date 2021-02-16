@@ -13,21 +13,27 @@ const variantOptions = {
 }
 
 export const Default = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <TextInput
-      tag={select('Tag', tagOptions, 'input')}
-      variant={select('Variant', variantOptions, 'andromeda')}
-      valid={boolean('Valid', false)}
-      error={boolean('Error', false)}
-      disabled={boolean('Disabled', false)}
-      tiny={boolean('Tiny', false)}
-      regular={boolean('Regular', true)}
-      big={boolean('Big', false)}
-      huge={boolean('Huge', false)}
-      giant={boolean('Giant', false)}
-      center={boolean('Center', false)}
-      placeholder={text('Placeholder', 'Les props sont transmises')}
-      digits={number('Digits', 12)}
-    />
-  </div>
+  <TextInput
+    tag={select('Tag', tagOptions, 'input')}
+    variant={select('Variant', variantOptions, 'andromeda')}
+    valid={boolean('Valid', false)}
+    error={boolean('Error', false)}
+    disabled={boolean('Disabled', false)}
+    tiny={boolean('Tiny', false)}
+    regular={boolean('Regular', true)}
+    big={boolean('Big', false)}
+    huge={boolean('Huge', false)}
+    giant={boolean('Giant', false)}
+    center={boolean('Center', false)}
+    placeholder={text('Placeholder', 'Les props sont transmises')}
+    digits={number('Digits', 12)}
+  />
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      <Story />
+    </div>
+  ),
+]

@@ -10,7 +10,7 @@ const alignOptions = {
 }
 
 export const Default = () => (
-  <div className="story-Container">
+  <>
     <Pagination
       margin={boolean('Margin', true)}
       align={select('Align', alignOptions, null)}
@@ -107,5 +107,13 @@ export const Default = () => (
       totalPages={9999}
       currentPage={9042}
     />
-  </div>
+  </>
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container">
+      <Story />
+    </div>
+  ),
+]

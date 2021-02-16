@@ -34,7 +34,7 @@ export default {
 
 export const Default = () => {
   return (
-    <div className="story-Container story-Grid">
+    <>
       <BackingCard
         disabled={boolean('Disabled', false)}
         hasBorder={boolean('Has border', true)}
@@ -44,7 +44,7 @@ export const Default = () => {
         </BackingCard.Image>
         <BackingCard.HeadingTag icon="star" text="Star reward" />
         <BackingCard.Title>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+          With an image and a very very, very long title
         </BackingCard.Title>
         <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
         <BackingCard.Info
@@ -88,13 +88,7 @@ export const Default = () => {
         </BackingCard.TagList>
         <BackingCard.Button>Je soutiens</BackingCard.Button>
       </BackingCard>
-    </div>
-  )
-}
 
-export const Video = () => {
-  return (
-    <div className="story-Container story-Grid">
       <BackingCard
         disabled={boolean('Disabled', false)}
         hasBorder={boolean('Has border', true)}
@@ -112,10 +106,8 @@ export const Video = () => {
           </GifVideo>
         </BackingCard.Image>
         <BackingCard.HeadingTag icon="star" text="Star reward" />
-        <BackingCard.Title>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-        </BackingCard.Title>
-        <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+        <BackingCard.Title>With a video</BackingCard.Title>
+        <BackingCard.Amount>95&nbsp;€</BackingCard.Amount>
         <BackingCard.Info
           legend="Prix de livraison&nbsp;:"
           value="5&nbsp;€ (en France)"
@@ -157,7 +149,7 @@ export const Video = () => {
         </BackingCard.TagList>
         <BackingCard.Button>Je soutiens</BackingCard.Button>
       </BackingCard>
-    </div>
+    </>
   )
 }
 
@@ -582,3 +574,11 @@ export const InACarouselComponent = () => {
     </StyledCarouselContainer>
   )
 }
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid">
+      <Story />
+    </div>
+  ),
+]

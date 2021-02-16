@@ -10,30 +10,38 @@ const modifierOptions = {
 }
 
 export const Default = () => (
-  <div className="story-Container story-Grid">
-    <TagButton
-      tiny={boolean('Tiny', false)}
-      big={boolean('Big', false)}
-      huge={boolean('Huge', false)}
-      modifier={select('Modifier', modifierOptions, 'hydrogen')}
-      selected={boolean('Select', false)}
-      variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
-    >
-      {(text, ('Text', 'MyTag'))}
-    </TagButton>
-  </div>
+  <TagButton
+    tiny={boolean('Tiny', false)}
+    big={boolean('Big', false)}
+    huge={boolean('Huge', false)}
+    modifier={select('Modifier', modifierOptions, 'hydrogen')}
+    selected={boolean('Select', false)}
+    variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
+  >
+    {(text, ('Text', 'MyTag'))}
+  </TagButton>
 )
 
 export const WithIcon = () => (
-  <div className="story-Container story-Grid">
-    <TagButton
-      tiny={boolean('Tiny', false)}
-      big={boolean('Big', false)}
-      huge={boolean('Huge', false)}
-      selected={boolean('Select', false)}
-      icon={boolean('Icon', false)}
-    >
-      <VisaIcon />
-    </TagButton>
-  </div>
+  <TagButton
+    tiny={boolean('Tiny', false)}
+    big={boolean('Big', false)}
+    huge={boolean('Huge', false)}
+    selected={boolean('Select', false)}
+    icon={boolean('Icon', false)}
+  >
+    <VisaIcon />
+  </TagButton>
 )
+
+export default {
+  component: TagButton,
+  title: 'Buttons/TagButton',
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--thin">
+        <Story />
+      </div>
+    ),
+  ],
+}

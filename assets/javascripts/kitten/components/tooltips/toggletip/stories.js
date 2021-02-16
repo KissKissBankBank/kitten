@@ -6,27 +6,30 @@ import COLORS from '../../../constants/colors-config'
 export default {
   title: 'Tooltips/Toggletip',
   component: Toggletip,
+  decorators: [
+    Story => (
+      <div className="story-Container">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
-export const Default = () => {
-  return (
-    <div className="story-Container">
-      <Toggletip
-        actionLabel="Sample label"
-        id="Toggletip-demo"
-        modifier={select(
-          'Modifier',
-          ['info', 'warning', 'error', 'success', 'disabled'],
-          'info',
-        )}
-        children={text('Text', 'The text of my Toggletip.')}
-      />
-    </div>
-  )
-}
+export const Default = () => (
+  <Toggletip
+    actionLabel="Sample label"
+    id="Toggletip-demo"
+    modifier={select(
+      'Modifier',
+      ['info', 'warning', 'error', 'success', 'disabled'],
+      'info',
+    )}
+    children={text('Text', 'The text of my Toggletip.')}
+  />
+)
 
 export const MultipleToggletips = () => (
-  <div className="story-Container">
+  <>
     <div className="k-u-margin-bottom-quadruple">
       <Toggletip
         actionLabel="Sample label"
@@ -100,5 +103,5 @@ export const MultipleToggletips = () => (
         )}
       </Toggletip>
     </div>
-  </div>
+  </>
 )

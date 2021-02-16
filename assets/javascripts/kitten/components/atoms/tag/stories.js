@@ -6,20 +6,25 @@ import { Tag } from './index'
 export default {
   title: 'Atoms/Tag',
   component: Tag,
+  decorators: [
+    Story => (
+      <div className="story-Container">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const Default = () => {
   return (
-    <div className="story-Container">
-      <Tag
-        type={select(
-          'Type',
-          ['info', 'warning', 'success', 'error', 'disabled'],
-          'info',
-        )}
-      >
-        <Text weight="bold">5</Text> Contributeurs
-      </Tag>
-    </div>
+    <Tag
+      type={select(
+        'Type',
+        ['info', 'warning', 'success', 'error', 'disabled'],
+        'info',
+      )}
+    >
+      <Text weight="bold">5</Text> Contributeurs
+    </Tag>
   )
 }

@@ -8,6 +8,13 @@ export default {
   parameters: {
     component: Timeline,
   },
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 const itemHeightChoices = {
@@ -16,12 +23,12 @@ const itemHeightChoices = {
 }
 
 export const Default = () => (
-  <div className="story-Container story-Grid">
+  <>
     <div></div>
     <Timeline itemHeight={select('itemHeight', itemHeightChoices, 'large')}>
       <span>foo</span>
       <span>bar</span>
       <span>baz</span>
     </Timeline>
-  </div>
+  </>
 )

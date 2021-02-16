@@ -4,20 +4,23 @@ import { Loader } from '../../../components/loaders/loader'
 import { TextInputWithButton } from './index'
 
 export const Default = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <TextInputWithButton
-      valid={boolean('Valid', false)}
-      error={boolean('Error', false)}
-      disabled={boolean('Disabled', false)}
-      tiny={boolean('Tiny', false)}
-      huge={boolean('Huge', false)}
-      giant={boolean('Giant', false)}
-      buttonValue={<Loader />}
-      inputValue={text('inputValue', 'Une valeur')}
-      placeholder={text(
-        'Les props sont transmises',
-        'Les props sont transmises',
-      )}
-    />
-  </div>
+  <TextInputWithButton
+    valid={boolean('Valid', false)}
+    error={boolean('Error', false)}
+    disabled={boolean('Disabled', false)}
+    tiny={boolean('Tiny', false)}
+    huge={boolean('Huge', false)}
+    giant={boolean('Giant', false)}
+    buttonValue={<Loader />}
+    inputValue={text('inputValue', 'Une valeur')}
+    placeholder={text('Les props sont transmises', 'Les props sont transmises')}
+  />
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      <Story />
+    </div>
+  ),
+]

@@ -19,59 +19,62 @@ const ExampleText = styled(Text)`
 export default {
   title: 'List/List',
   component: List,
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const SimpleList = () => {
   return (
-    <div className="story-Container story-Grid">
-      <List>
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-      </List>
-    </div>
+    <List>
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+    </List>
   )
 }
 
 export const ListWithButtonItem = () => {
   return (
-    <div className="story-Container story-Grid story-Grid--large">
-      <List bottomBorderRadiusValue={number('bottomBorderRadiusValue', 0)}>
-        <List.ButtonItem hasArrow={boolean('hasArrow', true)} withTopBorder>
-          <ExampleWrapper>
-            <ExampleText tag="p" weight="regular" color="font1" size="tiny">
-              Taille XS
-            </ExampleText>
-            <Text tag="small" color="font1" size="micro">
-              Disponibilité: 10/30
-            </Text>
-          </ExampleWrapper>
-        </List.ButtonItem>
-        <List.ButtonItem
-          hasArrow={boolean('hasArrow', true)}
-          disabled={boolean('disabled', false)}
-          active={boolean('active', false)}
-        >
-          <ExampleWrapper>
-            <ExampleText tag="p" weight="regular" size="tiny">
-              Taille M
-            </ExampleText>
-            <Text tag="small" size="micro">
-              Disponibilité: 10/30
-            </Text>
-          </ExampleWrapper>
-        </List.ButtonItem>
-        <List.ButtonItem hasArrow={boolean('hasArrow', true)}>
-          <ExampleWrapper>
-            <ExampleText tag="p" weight="regular" size="tiny">
-              Taille XXL
-            </ExampleText>
-            <Text tag="small" size="micro">
-              Disponibilité: 10/30
-            </Text>
-          </ExampleWrapper>
-        </List.ButtonItem>
-      </List>
-    </div>
+    <List bottomBorderRadiusValue={number('bottomBorderRadiusValue', 0)}>
+      <List.ButtonItem hasArrow={boolean('hasArrow', true)} withTopBorder>
+        <ExampleWrapper>
+          <ExampleText tag="p" weight="regular" color="font1" size="tiny">
+            Taille XS
+          </ExampleText>
+          <Text tag="small" color="font1" size="micro">
+            Disponibilité: 10/30
+          </Text>
+        </ExampleWrapper>
+      </List.ButtonItem>
+      <List.ButtonItem
+        hasArrow={boolean('hasArrow', true)}
+        disabled={boolean('disabled', false)}
+        active={boolean('active', false)}
+      >
+        <ExampleWrapper>
+          <ExampleText tag="p" weight="regular" size="tiny">
+            Taille M
+          </ExampleText>
+          <Text tag="small" size="micro">
+            Disponibilité: 10/30
+          </Text>
+        </ExampleWrapper>
+      </List.ButtonItem>
+      <List.ButtonItem hasArrow={boolean('hasArrow', true)}>
+        <ExampleWrapper>
+          <ExampleText tag="p" weight="regular" size="tiny">
+            Taille XXL
+          </ExampleText>
+          <Text tag="small" size="micro">
+            Disponibilité: 10/30
+          </Text>
+        </ExampleWrapper>
+      </List.ButtonItem>
+    </List>
   )
 }

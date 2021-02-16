@@ -10,12 +10,18 @@
     padding-left: k-px-to-rem(40px);
     padding-right: k-px-to-rem(40px);
   }
+
+  .docs-story & {
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
 .story-Grid {
   display: grid;
   grid-gap: k-px-to-rem(20px);
   grid-template-columns: 1fr;
+  align-items: start;
 
   @include k-media-min('s') {
     grid-template-columns: repeat(3, 1fr);

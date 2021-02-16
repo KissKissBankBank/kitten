@@ -11,14 +11,17 @@ import {
 export default {
   component: SocialButtonIcon,
   title: 'Buttons/SocialButtonIcon',
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--thin">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
-const StoryContainer = ({ children }) => (
-  <div className="story-Container story-Grid story-Grid--thin">{children}</div>
-)
-
 export const SocialButtonIcon = () => (
-  <StoryContainer>
+  <>
     <div>
       <FacebookButtonIcon>Facebook</FacebookButtonIcon>
     </div>
@@ -42,5 +45,5 @@ export const SocialButtonIcon = () => (
     <div>
       <PinterestButtonIcon>Pinterest</PinterestButtonIcon>
     </div>
-  </StoryContainer>
+  </>
 )

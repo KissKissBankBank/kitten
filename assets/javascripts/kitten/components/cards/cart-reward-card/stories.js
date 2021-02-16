@@ -9,13 +9,20 @@ export default {
   parameters: {
     component: CartRewardCard,
   },
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const Default = () => {
   const cardComponent = useRef(null)
 
   return (
-    <div className="story-Container story-Grid story-Grid--large">
+    <>
       <CartRewardCard
         ref={cardComponent}
         titleAmount={text('Title Amount', 'For 00€')}
@@ -46,6 +53,6 @@ export const Default = () => {
           Close using close() method
         </Button>
       </div>
-    </div>
+    </>
   )
 }

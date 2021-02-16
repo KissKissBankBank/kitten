@@ -8,91 +8,79 @@ import { DocumentIconPerson } from '../../../components/icons/document-icon-pers
 import { usePrevious } from '../../../helpers/utils/use-previous-hook'
 
 export const StatusReady = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <DocumentManager
-      id="DocumentManager__StatusReady"
-      buttonTitle="Upload a document"
-      buttonSubtitle="Document size must be 2Mb or less."
-      documentIcon={<DocumentIconHouse />}
-    />
-  </div>
+  <DocumentManager
+    id="DocumentManager__StatusReady"
+    buttonTitle="Upload a document"
+    buttonSubtitle="Document size must be 2Mb or less."
+    documentIcon={<DocumentIconHouse />}
+  />
 )
 
 export const StatusValid = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <DocumentManager
-      id="DocumentManager__StatusValid"
-      displayTitle="Recto/Verso de ma pièce d’identité validé le 6 janvier 2020"
-      displaySubtitle="document.pdf"
-      status="valid"
-      canCancel={boolean('canCancel', false)}
-      statusText="The document is valid."
-      documentIcon={<DocumentIconPerson />}
-    />
-  </div>
+  <DocumentManager
+    id="DocumentManager__StatusValid"
+    displayTitle="Recto/Verso de ma pièce d’identité validé le 6 janvier 2020"
+    displaySubtitle="document.pdf"
+    status="valid"
+    canCancel={boolean('canCancel', false)}
+    statusText="The document is valid."
+    documentIcon={<DocumentIconPerson />}
+  />
 )
 
 export const StatusError = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <DocumentManager
-      id="DocumentManager__StatusError"
-      buttonTitle="Upload a document"
-      buttonSubtitle="Document size must be 2Mb or less."
-      displayTitle={
-        <>
-          Extrat KBIS refusé le 8 février 2020 pour la raison suivante :
-          <br />
-          mauvaise adresse
-        </>
-      }
-      displaySubtitle="document.pdf"
-      status="error"
-      canReplace={boolean('canReplace', true)}
-      statusText="The document has been rejected. Please upload another one."
-      documentIcon={<DocumentIconHouse />}
-    />
-  </div>
+  <DocumentManager
+    id="DocumentManager__StatusError"
+    buttonTitle="Upload a document"
+    buttonSubtitle="Document size must be 2Mb or less."
+    displayTitle={
+      <>
+        Extrat KBIS refusé le 8 février 2020 pour la raison suivante :
+        <br />
+        mauvaise adresse
+      </>
+    }
+    displaySubtitle="document.pdf"
+    status="error"
+    canReplace={boolean('canReplace', true)}
+    statusText="The document has been rejected. Please upload another one."
+    documentIcon={<DocumentIconHouse />}
+  />
 )
 
 export const StatusWaiting = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <DocumentManager
-      id="DocumentManager__StatusWaiting"
-      displayTitle="Votre RIB est en cours de validation"
-      displaySubtitle="document.pdf"
-      status="wait"
-      canCancel={boolean('canCancel', false)}
-      statusText="The document is awaiting for validation."
-      documentIcon={<DocumentIconEmpty />}
-    />
-  </div>
+  <DocumentManager
+    id="DocumentManager__StatusWaiting"
+    displayTitle="Votre RIB est en cours de validation"
+    displaySubtitle="document.pdf"
+    status="wait"
+    canCancel={boolean('canCancel', false)}
+    statusText="The document is awaiting for validation."
+    documentIcon={<DocumentIconEmpty />}
+  />
 )
 
 export const StatusLoading = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <DocumentManager
-      id="DocumentManager__StatusLoading"
-      buttonProps={{
-        modifier: 'helium',
-      }}
-      status="loading"
-      loaderText="The document is currently loading"
-    />
-  </div>
+  <DocumentManager
+    id="DocumentManager__StatusLoading"
+    buttonProps={{
+      modifier: 'helium',
+    }}
+    status="loading"
+    loaderText="The document is currently loading"
+  />
 )
 
 export const CustomFileInputProps = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <DocumentManager
-      id="DocumentManager__CustomFileInputProps"
-      buttonTitle="Send document"
-      buttonSubtitle="Document size must be 2Mb or less."
-      fileInputProps={{
-        accept: 'image/png, image/jpeg',
-        multiple: true,
-      }}
-    />
-  </div>
+  <DocumentManager
+    id="DocumentManager__CustomFileInputProps"
+    buttonTitle="Send document"
+    buttonSubtitle="Document size must be 2Mb or less."
+    fileInputProps={{
+      accept: 'image/png, image/jpeg',
+      multiple: true,
+    }}
+  />
 )
 
 export const CustomFunctions = () => {
@@ -164,4 +152,16 @@ export const CustomFunctions = () => {
       tabIndex="-1"
     />
   )
+}
+
+export default {
+  component: DocumentManager,
+  title: 'Box/DocumentManager',
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }

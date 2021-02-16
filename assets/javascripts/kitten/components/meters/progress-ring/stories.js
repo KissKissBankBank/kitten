@@ -44,44 +44,45 @@ export default {
   parameters: {
     component: ProgressRing,
   },
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const DefaultProps = () => (
-  <div className="story-Container story-Grid">
-    <StyledContainer>
-      <ProgressRing
-        color={color('Color', COLORS.primary2)}
-        value={number('Value', 50)}
-        width={number('Width', 160)}
-        strokeWidth={number('Stroke width', 10)}
-        animationSpeed={number('speed', 3)}
-        variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
-      />
-      <StyledText size="micro" color="font1" weight="regular">
-        Financé à 50%
-      </StyledText>
-    </StyledContainer>
-  </div>
+  <StyledContainer>
+    <ProgressRing
+      color={color('Color', COLORS.primary2)}
+      value={number('Value', 50)}
+      width={number('Width', 160)}
+      strokeWidth={number('Stroke width', 10)}
+      animationSpeed={number('speed', 3)}
+      variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
+    />
+    <StyledText size="micro" color="font1" weight="regular">
+      Financé à 50%
+    </StyledText>
+  </StyledContainer>
 )
 
 export const SuccessProgress = () => (
-  <div className="story-Container story-Grid">
-    <StyledContainer>
-      <SuccessProgressRing />
-      <StyledText size="micro" color="font1" weight="regular">
-        Projet réussi !
-      </StyledText>
-    </StyledContainer>
-  </div>
+  <StyledContainer>
+    <SuccessProgressRing />
+    <StyledText size="micro" color="font1" weight="regular">
+      Projet réussi !
+    </StyledText>
+  </StyledContainer>
 )
 
 export const OvertimeProgress = () => (
-  <div className="story-Container story-Grid">
-    <StyledContainer>
-      <OvertimeProgressRing />
-      <StyledText size="micro" color="font1" weight="regular">
-        Financé à 120% - en prolongation !
-      </StyledText>
-    </StyledContainer>
-  </div>
+  <StyledContainer>
+    <OvertimeProgressRing />
+    <StyledText size="micro" color="font1" weight="regular">
+      Financé à 120% - en prolongation !
+    </StyledText>
+  </StyledContainer>
 )

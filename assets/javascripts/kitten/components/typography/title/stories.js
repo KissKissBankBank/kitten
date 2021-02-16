@@ -21,171 +21,170 @@ export default {
     component: Title,
     componentSubtitle: 'List of Title',
   },
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const DefaultProps = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <Title
-      modifier={select('Modifier', modifierOptions, 'primary')}
-      italic={boolean('Italic', false)}
-      margin={boolean('Margin', false)}
-      cssColor={color('cssColor', COLORS.font1)}
-    >
-      {text('Title', 'Lorem ipsum dolor sit amet')}
-    </Title>
-  </div>
+  <Title
+    modifier={select('Modifier', modifierOptions, 'primary')}
+    italic={boolean('Italic', false)}
+    margin={boolean('Margin', false)}
+    cssColor={color('cssColor', COLORS.font1)}
+  >
+    {text('Title', 'Lorem ipsum dolor sit amet')}
+  </Title>
 )
 
 export const Modifier = () => (
-  <div className="story-Container story-Grid story-Grid--large">
+  <div>
     <div>
-      <div>
-        <Text weight="bold">Primary</Text>
-        <br />
-        <Text size="micro">• Desktop version - 64px</Text>
-        <br />
-        <Title modifier="primary">Lorem ipsum dolor sit amet…</Title>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Tablet version - 48px</Text>
-          <br />
-          <Title modifier="secondary">Lorem ipsum dolor sit amet…</Title>
-        </p>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Mobile version - 36px</Text>
-          <br />
-          <Title modifier="tertiary">Lorem ipsum dolor sit amet…</Title>
-        </p>
-      </div>
-
-      <div className="k-u-margin-top-septuple">
-        <Text weight="bold">Secondary</Text>
-        <br />
-        <Text size="micro">• Desktop version - 48px</Text>
+      <Text weight="bold">Primary</Text>
+      <br />
+      <Text size="micro">• Desktop version - 64px</Text>
+      <br />
+      <Title modifier="primary">Lorem ipsum dolor sit amet…</Title>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Tablet version - 48px</Text>
         <br />
         <Title modifier="secondary">Lorem ipsum dolor sit amet…</Title>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Tablet version - 36px</Text>
-          <br />
-          <Title modifier="tertiary">Lorem ipsum dolor sit amet…</Title>
-        </p>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Mobile version - 32px</Text>
-          <br />
-          <Title modifier="quaternary">Lorem ipsum dolor sit amet…</Title>
-        </p>
-      </div>
-
-      <div className="k-u-margin-top-septuple">
-        <Text weight="bold">Tertiary</Text>
-        <br />
-        <Text size="micro">• Desktop version - 36px</Text>
+      </p>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Mobile version - 36px</Text>
         <br />
         <Title modifier="tertiary">Lorem ipsum dolor sit amet…</Title>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Tablet version - 32px</Text>
-          <br />
-          <Title modifier="quaternary">Lorem ipsum dolor sit amet…</Title>
-        </p>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Mobile version - 28px</Text>
-          <br />
-          <Title modifier="quinary">Lorem ipsum dolor sit amet…</Title>
-        </p>
-      </div>
+      </p>
+    </div>
 
-      <div className="k-u-margin-top-septuple">
-        <Text weight="bold">Quaternary</Text>
+    <div className="k-u-margin-top-septuple">
+      <Text weight="bold">Secondary</Text>
+      <br />
+      <Text size="micro">• Desktop version - 48px</Text>
+      <br />
+      <Title modifier="secondary">Lorem ipsum dolor sit amet…</Title>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Tablet version - 36px</Text>
         <br />
-        <Text size="micro">• Desktop version - 32px</Text>
+        <Title modifier="tertiary">Lorem ipsum dolor sit amet…</Title>
+      </p>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Mobile version - 32px</Text>
         <br />
         <Title modifier="quaternary">Lorem ipsum dolor sit amet…</Title>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Tablet version - 28px</Text>
-          <br />
-          <Title modifier="quinary">Lorem ipsum dolor sit amet…</Title>
-        </p>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Mobile version - 24px</Text>
-          <br />
-          <Title modifier="senary">Lorem ipsum dolor sit amet…</Title>
-        </p>
-      </div>
+      </p>
+    </div>
 
-      <div className="k-u-margin-top-septuple">
-        <Text weight="bold">Quinary</Text>
+    <div className="k-u-margin-top-septuple">
+      <Text weight="bold">Tertiary</Text>
+      <br />
+      <Text size="micro">• Desktop version - 36px</Text>
+      <br />
+      <Title modifier="tertiary">Lorem ipsum dolor sit amet…</Title>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Tablet version - 32px</Text>
         <br />
-        <Text size="micro">• Desktop version - 28px</Text>
+        <Title modifier="quaternary">Lorem ipsum dolor sit amet…</Title>
+      </p>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Mobile version - 28px</Text>
         <br />
         <Title modifier="quinary">Lorem ipsum dolor sit amet…</Title>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Tablet version - 24px</Text>
-          <br />
-          <Title modifier="senary">Lorem ipsum dolor sit amet…</Title>
-        </p>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Mobile version - 20px</Text>
-          <br />
-          <Title modifier="septenary">Lorem ipsum dolor sit amet…</Title>
-        </p>
-      </div>
+      </p>
+    </div>
 
-      <div className="k-u-margin-top-septuple">
-        <Text weight="bold">Senary</Text>
+    <div className="k-u-margin-top-septuple">
+      <Text weight="bold">Quaternary</Text>
+      <br />
+      <Text size="micro">• Desktop version - 32px</Text>
+      <br />
+      <Title modifier="quaternary">Lorem ipsum dolor sit amet…</Title>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Tablet version - 28px</Text>
         <br />
-        <Text size="micro">• Desktop version - 24px</Text>
+        <Title modifier="quinary">Lorem ipsum dolor sit amet…</Title>
+      </p>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Mobile version - 24px</Text>
         <br />
         <Title modifier="senary">Lorem ipsum dolor sit amet…</Title>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Tablet version - 20px</Text>
-          <br />
-          <Title modifier="septenary">Lorem ipsum dolor sit amet…</Title>
-        </p>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Mobile version - 18px</Text>
-          <br />
-          <Text size="big" weight="bold">
-            Lorem ipsum dolor sit amet…
-          </Text>
-        </p>
-      </div>
+      </p>
+    </div>
 
-      <div className="k-u-margin-top-septuple">
-        <Text weight="bold">Septenary</Text>
+    <div className="k-u-margin-top-septuple">
+      <Text weight="bold">Quinary</Text>
+      <br />
+      <Text size="micro">• Desktop version - 28px</Text>
+      <br />
+      <Title modifier="quinary">Lorem ipsum dolor sit amet…</Title>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Tablet version - 24px</Text>
         <br />
-        <Text size="micro">• Desktop version - 20px</Text>
+        <Title modifier="senary">Lorem ipsum dolor sit amet…</Title>
+      </p>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Mobile version - 20px</Text>
         <br />
         <Title modifier="septenary">Lorem ipsum dolor sit amet…</Title>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Tablet version - 18px</Text>
-          <br />
-          <Text size="big" weight="bold">
-            Lorem ipsum dolor sit amet…
-          </Text>
-        </p>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Mobile version - 16px</Text>
-          <br />
-          <Text size="default" weight="bold">
-            Lorem ipsum dolor sit amet…
-          </Text>
-        </p>
-      </div>
+      </p>
+    </div>
+
+    <div className="k-u-margin-top-septuple">
+      <Text weight="bold">Senary</Text>
+      <br />
+      <Text size="micro">• Desktop version - 24px</Text>
+      <br />
+      <Title modifier="senary">Lorem ipsum dolor sit amet…</Title>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Tablet version - 20px</Text>
+        <br />
+        <Title modifier="septenary">Lorem ipsum dolor sit amet…</Title>
+      </p>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Mobile version - 18px</Text>
+        <br />
+        <Text size="big" weight="bold">
+          Lorem ipsum dolor sit amet…
+        </Text>
+      </p>
+    </div>
+
+    <div className="k-u-margin-top-septuple">
+      <Text weight="bold">Septenary</Text>
+      <br />
+      <Text size="micro">• Desktop version - 20px</Text>
+      <br />
+      <Title modifier="septenary">Lorem ipsum dolor sit amet…</Title>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Tablet version - 18px</Text>
+        <br />
+        <Text size="big" weight="bold">
+          Lorem ipsum dolor sit amet…
+        </Text>
+      </p>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Mobile version - 16px</Text>
+        <br />
+        <Text size="default" weight="bold">
+          Lorem ipsum dolor sit amet…
+        </Text>
+      </p>
     </div>
   </div>
 )
 
 export const WithoutMargin = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <Title modifier="primary" margin={false}>
-      Lorem ipsum dolor sit amet…
-    </Title>
-  </div>
+  <Title modifier="primary" margin={false}>
+    Lorem ipsum dolor sit amet…
+  </Title>
 )
 
 export const Italic = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <Title modifier="primary" italic>
-      Lorem ipsum dolor sit amet…
-    </Title>
-  </div>
+  <Title modifier="primary" italic>
+    Lorem ipsum dolor sit amet…
+  </Title>
 )

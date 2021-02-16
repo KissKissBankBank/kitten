@@ -11,16 +11,21 @@ const variantOptions = {
 export default {
   title: 'Meters/Progress',
   component: _Progress,
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const Progress = args => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <_Progress
-      {...args}
-      value={number('Value', 50)}
-      color={color('Color', COLORS.primary1)}
-      rampProps={{ style: { height: 6 } }}
-      variant={select('Variant', variantOptions, 'andromeda')}
-    />
-  </div>
+  <_Progress
+    {...args}
+    value={number('Value', 50)}
+    color={color('Color', COLORS.primary1)}
+    rampProps={{ style: { height: 6 } }}
+    variant={select('Variant', variantOptions, 'andromeda')}
+  />
 )

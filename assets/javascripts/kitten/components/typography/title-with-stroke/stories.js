@@ -27,215 +27,212 @@ export default {
     component: TitleWithStroke,
     componentSubtitle: 'List of TitleWithStroke',
   },
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const DefaultProps = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <TitleWithStroke
-      modifier={select('Modifier', modifierOptions, 'primary')}
-      italic={boolean('Italic', false)}
-      align={select('Align', alignOptions, 'left')}
-      cssColor={color('cssColor', COLORS.font1)}
-    >
-      {text('Title', 'Lorem ipsum dolor sit amet')}
-    </TitleWithStroke>
-  </div>
+  <TitleWithStroke
+    modifier={select('Modifier', modifierOptions, 'primary')}
+    italic={boolean('Italic', false)}
+    align={select('Align', alignOptions, 'left')}
+    cssColor={color('cssColor', COLORS.font1)}
+  >
+    {text('Title', 'Lorem ipsum dolor sit amet')}
+  </TitleWithStroke>
 )
 
 export const Modifier = () => (
-  <div className="story-Container story-Grid story-Grid--large">
+  <div>
     <div>
-      <div>
-        <Text weight="bold">Primary</Text>
-        <br />
-        <Text size="micro">• Desktop version - 64px</Text>
-        <br />
-        <TitleWithStroke modifier="primary">
-          Lorem ipsum dolor sit amet…
-        </TitleWithStroke>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Tablet version - 48px</Text>
-          <br />
-          <TitleWithStroke modifier="secondary">
-            Lorem ipsum dolor sit amet…
-          </TitleWithStroke>
-        </p>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Mobile version - 36px</Text>
-          <br />
-          <TitleWithStroke modifier="tertiary">
-            Lorem ipsum dolor sit amet…
-          </TitleWithStroke>
-        </p>
-      </div>
-
-      <div className="k-u-margin-top-septuple">
-        <Text weight="bold">Secondary</Text>
-        <br />
-        <Text size="micro">• Desktop version - 48px</Text>
+      <Text weight="bold">Primary</Text>
+      <br />
+      <Text size="micro">• Desktop version - 64px</Text>
+      <br />
+      <TitleWithStroke modifier="primary">
+        Lorem ipsum dolor sit amet…
+      </TitleWithStroke>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Tablet version - 48px</Text>
         <br />
         <TitleWithStroke modifier="secondary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Tablet version - 36px</Text>
-          <br />
-          <TitleWithStroke modifier="tertiary">
-            Lorem ipsum dolor sit amet…
-          </TitleWithStroke>
-        </p>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Mobile version - 32px</Text>
-          <br />
-          <TitleWithStroke modifier="quaternary">
-            Lorem ipsum dolor sit amet…
-          </TitleWithStroke>
-        </p>
-      </div>
-
-      <div className="k-u-margin-top-septuple">
-        <Text weight="bold">Tertiary</Text>
-        <br />
-        <Text size="micro">• Desktop version - 36px</Text>
+      </p>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Mobile version - 36px</Text>
         <br />
         <TitleWithStroke modifier="tertiary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Tablet version - 32px</Text>
-          <br />
-          <TitleWithStroke modifier="quaternary">
-            Lorem ipsum dolor sit amet…
-          </TitleWithStroke>
-        </p>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Mobile version - 28px</Text>
-          <br />
-          <TitleWithStroke modifier="quinary">
-            Lorem ipsum dolor sit amet…
-          </TitleWithStroke>
-        </p>
-      </div>
+      </p>
+    </div>
 
-      <div className="k-u-margin-top-septuple">
-        <Text weight="bold">Quaternary</Text>
+    <div className="k-u-margin-top-septuple">
+      <Text weight="bold">Secondary</Text>
+      <br />
+      <Text size="micro">• Desktop version - 48px</Text>
+      <br />
+      <TitleWithStroke modifier="secondary">
+        Lorem ipsum dolor sit amet…
+      </TitleWithStroke>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Tablet version - 36px</Text>
         <br />
-        <Text size="micro">• Desktop version - 32px</Text>
+        <TitleWithStroke modifier="tertiary">
+          Lorem ipsum dolor sit amet…
+        </TitleWithStroke>
+      </p>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Mobile version - 32px</Text>
         <br />
         <TitleWithStroke modifier="quaternary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Tablet version - 28px</Text>
-          <br />
-          <TitleWithStroke modifier="quinary">
-            Lorem ipsum dolor sit amet…
-          </TitleWithStroke>
-        </p>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Mobile version - 24px</Text>
-          <br />
-          <TitleWithStroke modifier="senary">
-            Lorem ipsum dolor sit amet…
-          </TitleWithStroke>
-        </p>
-      </div>
+      </p>
+    </div>
 
-      <div className="k-u-margin-top-septuple">
-        <Text weight="bold">Quinary</Text>
+    <div className="k-u-margin-top-septuple">
+      <Text weight="bold">Tertiary</Text>
+      <br />
+      <Text size="micro">• Desktop version - 36px</Text>
+      <br />
+      <TitleWithStroke modifier="tertiary">
+        Lorem ipsum dolor sit amet…
+      </TitleWithStroke>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Tablet version - 32px</Text>
         <br />
-        <Text size="micro">• Desktop version - 28px</Text>
+        <TitleWithStroke modifier="quaternary">
+          Lorem ipsum dolor sit amet…
+        </TitleWithStroke>
+      </p>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Mobile version - 28px</Text>
         <br />
         <TitleWithStroke modifier="quinary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Tablet version - 24px</Text>
-          <br />
-          <TitleWithStroke modifier="senary">
-            Lorem ipsum dolor sit amet…
-          </TitleWithStroke>
-        </p>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Mobile version - 20px</Text>
-          <br />
-          <TitleWithStroke modifier="septenary">
-            Lorem ipsum dolor sit amet…
-          </TitleWithStroke>
-        </p>
-      </div>
+      </p>
+    </div>
 
-      <div className="k-u-margin-top-septuple">
-        <Text weight="bold">Senary</Text>
+    <div className="k-u-margin-top-septuple">
+      <Text weight="bold">Quaternary</Text>
+      <br />
+      <Text size="micro">• Desktop version - 32px</Text>
+      <br />
+      <TitleWithStroke modifier="quaternary">
+        Lorem ipsum dolor sit amet…
+      </TitleWithStroke>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Tablet version - 28px</Text>
         <br />
-        <Text size="micro">• Desktop version - 24px</Text>
+        <TitleWithStroke modifier="quinary">
+          Lorem ipsum dolor sit amet…
+        </TitleWithStroke>
+      </p>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Mobile version - 24px</Text>
         <br />
         <TitleWithStroke modifier="senary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Tablet version - 20px</Text>
-          <br />
-          <TitleWithStroke modifier="septenary">
-            Lorem ipsum dolor sit amet…
-          </TitleWithStroke>
-        </p>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Mobile version - 18px</Text>
-          <br />
-          <Text size="big" weight="bold">
-            Lorem ipsum dolor sit amet…
-          </Text>
-        </p>
-      </div>
+      </p>
+    </div>
 
-      <div className="k-u-margin-top-septuple">
-        <Text weight="bold">Septenary</Text>
+    <div className="k-u-margin-top-septuple">
+      <Text weight="bold">Quinary</Text>
+      <br />
+      <Text size="micro">• Desktop version - 28px</Text>
+      <br />
+      <TitleWithStroke modifier="quinary">
+        Lorem ipsum dolor sit amet…
+      </TitleWithStroke>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Tablet version - 24px</Text>
         <br />
-        <Text size="micro">• Desktop version - 20px</Text>
+        <TitleWithStroke modifier="senary">
+          Lorem ipsum dolor sit amet…
+        </TitleWithStroke>
+      </p>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Mobile version - 20px</Text>
         <br />
         <TitleWithStroke modifier="septenary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Tablet version - 18px</Text>
-          <br />
-          <Text size="big" weight="bold">
-            Lorem ipsum dolor sit amet…
-          </Text>
-        </p>
-        <p className="k-u-margin-top-single">
-          <Text size="micro">• Mobile version - 16px</Text>
-          <br />
-          <Text size="default" weight="bold">
-            Lorem ipsum dolor sit amet…
-          </Text>
-        </p>
-      </div>
+      </p>
+    </div>
+
+    <div className="k-u-margin-top-septuple">
+      <Text weight="bold">Senary</Text>
+      <br />
+      <Text size="micro">• Desktop version - 24px</Text>
+      <br />
+      <TitleWithStroke modifier="senary">
+        Lorem ipsum dolor sit amet…
+      </TitleWithStroke>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Tablet version - 20px</Text>
+        <br />
+        <TitleWithStroke modifier="septenary">
+          Lorem ipsum dolor sit amet…
+        </TitleWithStroke>
+      </p>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Mobile version - 18px</Text>
+        <br />
+        <Text size="big" weight="bold">
+          Lorem ipsum dolor sit amet…
+        </Text>
+      </p>
+    </div>
+
+    <div className="k-u-margin-top-septuple">
+      <Text weight="bold">Septenary</Text>
+      <br />
+      <Text size="micro">• Desktop version - 20px</Text>
+      <br />
+      <TitleWithStroke modifier="septenary">
+        Lorem ipsum dolor sit amet…
+      </TitleWithStroke>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Tablet version - 18px</Text>
+        <br />
+        <Text size="big" weight="bold">
+          Lorem ipsum dolor sit amet…
+        </Text>
+      </p>
+      <p className="k-u-margin-top-single">
+        <Text size="micro">• Mobile version - 16px</Text>
+        <br />
+        <Text size="default" weight="bold">
+          Lorem ipsum dolor sit amet…
+        </Text>
+      </p>
     </div>
   </div>
 )
 
 export const AlignCenter = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <TitleWithStroke modifier="primary" align="center">
-      Lorem ipsum dolor sit amet
-    </TitleWithStroke>
-  </div>
+  <TitleWithStroke modifier="primary" align="center">
+    Lorem ipsum dolor sit amet
+  </TitleWithStroke>
 )
 
 export const AlignRight = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <TitleWithStroke modifier="primary" align="right">
-      Lorem ipsum dolor sit amet
-    </TitleWithStroke>
-  </div>
+  <TitleWithStroke modifier="primary" align="right">
+    Lorem ipsum dolor sit amet
+  </TitleWithStroke>
 )
 
 export const Italic = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <TitleWithStroke modifier="primary" italic>
-      Lorem ipsum dolor sit amet…
-    </TitleWithStroke>
-  </div>
+  <TitleWithStroke modifier="primary" italic>
+    Lorem ipsum dolor sit amet…
+  </TitleWithStroke>
 )

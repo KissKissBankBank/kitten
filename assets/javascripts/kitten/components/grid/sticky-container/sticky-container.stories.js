@@ -16,26 +16,24 @@ const BlockContent = () => {
 }
 
 export const AlwaysSticky = () => (
-  <div className="story-Container">
-    <div
-      style={{
-        minHeight: '1200px',
-        backgroundColor: COLORS.line1,
-        position: 'relative',
-      }}
-    >
-      <StickyContainer isSticky="always">
-        <div
-          style={{
-            fontSize: '40px',
-            lineHeight: '40px',
-          }}
-        >
-          🐈
-        </div>
-      </StickyContainer>
-      <BlockContent />
-    </div>
+  <div
+    style={{
+      minHeight: '1200px',
+      backgroundColor: COLORS.line1,
+      position: 'relative',
+    }}
+  >
+    <StickyContainer isSticky="always">
+      <div
+        style={{
+          fontSize: '40px',
+          lineHeight: '40px',
+        }}
+      >
+        🐈
+      </div>
+    </StickyContainer>
+    <BlockContent />
   </div>
 )
 
@@ -43,46 +41,6 @@ export const StickyTopOnScrollUp = () => {
   const component = useRef(null)
 
   return (
-    <div className="story-Container">
-      <div
-        style={{
-          minHeight: '1200px',
-          backgroundColor: COLORS.line1,
-          position: 'relative',
-        }}
-      >
-        <StickyContainer isSticky="topOnScrollUp" top="0" ref={component}>
-          <div
-            style={{
-              fontSize: '40px',
-              lineHeight: '40px',
-            }}
-          >
-            🐈
-          </div>
-        </StickyContainer>
-        <BlockContent />
-        <button
-          onClick={() => {
-            component.current.setSticky()
-          }}
-        >
-          Stik me!
-        </button>
-        <button
-          onClick={() => {
-            component.current.setUnsticky()
-          }}
-        >
-          Unstik me!
-        </button>
-      </div>
-    </div>
-  )
-}
-
-export const StickyBottomOnScrollDown = () => (
-  <div className="story-Container">
     <div
       style={{
         minHeight: '1200px',
@@ -90,7 +48,7 @@ export const StickyBottomOnScrollDown = () => (
         position: 'relative',
       }}
     >
-      <StickyContainer isSticky="bottomOnScrollDown" bottom="0">
+      <StickyContainer isSticky="topOnScrollUp" top="0" ref={component}>
         <div
           style={{
             fontSize: '40px',
@@ -101,6 +59,54 @@ export const StickyBottomOnScrollDown = () => (
         </div>
       </StickyContainer>
       <BlockContent />
+      <button
+        onClick={() => {
+          component.current.setSticky()
+        }}
+      >
+        Stik me!
+      </button>
+      <button
+        onClick={() => {
+          component.current.setUnsticky()
+        }}
+      >
+        Unstik me!
+      </button>
     </div>
+  )
+}
+
+export const StickyBottomOnScrollDown = () => (
+  <div
+    style={{
+      minHeight: '1200px',
+      backgroundColor: COLORS.line1,
+      position: 'relative',
+    }}
+  >
+    <StickyContainer isSticky="bottomOnScrollDown" bottom="0">
+      <div
+        style={{
+          fontSize: '40px',
+          lineHeight: '40px',
+        }}
+      >
+        🐈
+      </div>
+    </StickyContainer>
+    <BlockContent />
   </div>
 )
+
+export default {
+  component: StickyContainer,
+  title: 'Grid/StickyContainer',
+  decorators: [
+    Story => (
+      <div className="story-Container">
+        <Story />
+      </div>
+    ),
+  ],
+}

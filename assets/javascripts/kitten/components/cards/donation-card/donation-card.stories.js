@@ -8,22 +8,28 @@ const versionOptions = {
 }
 
 export const Default = () => (
-  <div className="story-Container story-Grid">
-    <DonationCard
-      title={text(
-        'Title Amount',
-        'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.',
-      )}
-      isDisabled={boolean('Disabled', false)}
-      version={select('Version', versionOptions, 'default')}
-      donationForm={object('donationForm', {
-        inputUnit: '€',
-        inputLabel: 'Enter your amount',
-        inputPlaceholder: 'Enter your amount',
-        inputIsOnError: false,
-        errorMessage: 'lorem ipsum dolor sit amet',
-        buttonLabel: 'Choose',
-      })}
-    />
-  </div>
+  <DonationCard
+    title={text(
+      'Title Amount',
+      'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.',
+    )}
+    isDisabled={boolean('Disabled', false)}
+    version={select('Version', versionOptions, 'default')}
+    donationForm={object('donationForm', {
+      inputUnit: '€',
+      inputLabel: 'Enter your amount',
+      inputPlaceholder: 'Enter your amount',
+      inputIsOnError: false,
+      errorMessage: 'lorem ipsum dolor sit amet',
+      buttonLabel: 'Choose',
+    })}
+  />
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid">
+      <Story />
+    </div>
+  ),
+]

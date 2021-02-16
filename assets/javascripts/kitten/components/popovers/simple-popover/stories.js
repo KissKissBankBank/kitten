@@ -2,13 +2,18 @@ import React, { useState } from 'react'
 import { SimplePopover } from './index'
 import { Button } from '../../../components/buttons/button/button'
 
-const StoryContainer = ({ children }) => (
-  <div className="story-Container story-Grid story-Grid--large">{children}</div>
-)
-
 export default {
   title: 'Popovers/SimplePopover',
   component: SimplePopover,
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <div>
+          <Story />
+        </div>
+      </div>
+    ),
+  ],
 }
 
 export const Default = () => {
@@ -20,7 +25,7 @@ export const Default = () => {
   }
 
   return (
-    <StoryContainer>
+    <>
       <SimplePopover
         isVisible={isVisible}
         onCloseClick={closeClick}
@@ -48,9 +53,11 @@ export const Default = () => {
       />
 
       {!isVisible && (
-        <Button onClick={() => setVisibility(true)}>Show Popover</Button>
+        <div>
+          <Button onClick={() => setVisibility(true)}>Show Popover</Button>
+        </div>
       )}
-    </StoryContainer>
+    </>
   )
 }
 
@@ -63,7 +70,7 @@ export const WithoutIllustration = () => {
   }
 
   return (
-    <StoryContainer>
+    <>
       <SimplePopover
         isVisible={isVisible}
         onCloseClick={closeClick}
@@ -90,9 +97,11 @@ export const WithoutIllustration = () => {
       />
 
       {!isVisible && (
-        <Button onClick={() => setVisibility(true)}>Show Popover</Button>
+        <div>
+          <Button onClick={() => setVisibility(true)}>Show Popover</Button>
+        </div>
       )}
-    </StoryContainer>
+    </>
   )
 }
 
@@ -105,7 +114,7 @@ export const WithoutButtons = () => {
   }
 
   return (
-    <StoryContainer>
+    <>
       <SimplePopover
         isVisible={isVisible}
         onCloseClick={closeClick}
@@ -117,8 +126,10 @@ export const WithoutButtons = () => {
       />
 
       {!isVisible && (
-        <Button onClick={() => setVisibility(true)}>Show Popover</Button>
+        <div>
+          <Button onClick={() => setVisibility(true)}>Show Popover</Button>
+        </div>
       )}
-    </StoryContainer>
+    </>
   )
 }

@@ -15,6 +15,13 @@ export default {
   parameters: {
     component: DropdownSelectWithInput,
   },
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 const options = [
@@ -54,96 +61,92 @@ export const Default = () => {
   const [labelProps, setLabelProps] = useState(null)
 
   return (
-    <div className="story-Container story-Grid">
-      <div>
-        <DropdownSelectWithInput
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={boolean('hide label?', false)}
-          labelText={text('LabelText', 'label')}
-          options={options}
-          labelPropsGetter={passedLabelProps => {
-            passedLabelProps && setLabelProps(passedLabelProps())
-          }}
-          resetOnBackspace={boolean('resetOnBackspace', false)}
-          highlightOptionBox={boolean('highlightOptionBox', true)}
-          hideIconOnMobile={boolean('hideIconOnMobile', false)}
-        />
-        <p>
-          Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-          Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Etiam porta sem malesuada magna mollis euismod.
-        </p>
-        <p>labelPropsGetter props:</p>
-        <ul>
-          {labelProps &&
-            Object.keys(labelProps).map(prop => (
-              <li>
-                {prop}: {labelProps[prop]}
-              </li>
-            ))}
-        </ul>
-      </div>
+    <div>
+      <DropdownSelectWithInput
+        id={text('id', 'dropdown-select')}
+        error={boolean('error', false)}
+        valid={boolean('valid', false)}
+        disabled={boolean('disabled', false)}
+        hideLabel={boolean('hide label?', false)}
+        labelText={text('LabelText', 'label')}
+        options={options}
+        labelPropsGetter={passedLabelProps => {
+          passedLabelProps && setLabelProps(passedLabelProps())
+        }}
+        resetOnBackspace={boolean('resetOnBackspace', false)}
+        highlightOptionBox={boolean('highlightOptionBox', true)}
+        hideIconOnMobile={boolean('hideIconOnMobile', false)}
+      />
+      <p>
+        Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+        Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam
+        porta sem malesuada magna mollis euismod.
+      </p>
+      <p>labelPropsGetter props:</p>
+      <ul>
+        {labelProps &&
+          Object.keys(labelProps).map(prop => (
+            <li>
+              {prop}: {labelProps[prop]}
+            </li>
+          ))}
+      </ul>
     </div>
   )
 }
 
 export const DeactivatedDropdown = () => {
   return (
-    <div className="story-Container story-Grid">
-      <div>
-        <DropdownSelectWithInput
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={true}
-          labelText="Facebook"
-          options={options}
-          resetOnBackspace={boolean('resetOnBackspace', false)}
-          highlightOptionBox={boolean('highlightOptionBox', true)}
-          defaultSelectedValue="facebook"
-          deactivateDropdown
-          className="k-u-margin-bottom-triple"
-          menuZIndex={number('menuZIndex', 1000)}
-          hideIconOnMobile={boolean('hideIconOnMobile', false)}
-        />
-        <DropdownSelectWithInput
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={true}
-          labelText="Twitter"
-          options={options}
-          resetOnBackspace={boolean('resetOnBackspace', false)}
-          highlightOptionBox={boolean('highlightOptionBox', true)}
-          defaultSelectedValue="twitter"
-          deactivateDropdown
-          className="k-u-margin-bottom-triple"
-          menuZIndex={number('menuZIndex', 1000)}
-          hideIconOnMobile={boolean('hideIconOnMobile', false)}
-        />
-        <DropdownSelectWithInput
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={true}
-          labelText="Instagram"
-          options={options}
-          resetOnBackspace={boolean('resetOnBackspace', false)}
-          highlightOptionBox={boolean('highlightOptionBox', true)}
-          defaultSelectedValue="instagram"
-          deactivateDropdown
-          className="k-u-margin-bottom-triple"
-          menuZIndex={number('menuZIndex', 1000)}
-          hideIconOnMobile={boolean('hideIconOnMobile', false)}
-        />
-      </div>
+    <div>
+      <DropdownSelectWithInput
+        id={text('id', 'dropdown-select')}
+        error={boolean('error', false)}
+        valid={boolean('valid', false)}
+        disabled={boolean('disabled', false)}
+        hideLabel={true}
+        labelText="Facebook"
+        options={options}
+        resetOnBackspace={boolean('resetOnBackspace', false)}
+        highlightOptionBox={boolean('highlightOptionBox', true)}
+        defaultSelectedValue="facebook"
+        deactivateDropdown
+        className="k-u-margin-bottom-triple"
+        menuZIndex={number('menuZIndex', 1000)}
+        hideIconOnMobile={boolean('hideIconOnMobile', false)}
+      />
+      <DropdownSelectWithInput
+        id={text('id', 'dropdown-select')}
+        error={boolean('error', false)}
+        valid={boolean('valid', false)}
+        disabled={boolean('disabled', false)}
+        hideLabel={true}
+        labelText="Twitter"
+        options={options}
+        resetOnBackspace={boolean('resetOnBackspace', false)}
+        highlightOptionBox={boolean('highlightOptionBox', true)}
+        defaultSelectedValue="twitter"
+        deactivateDropdown
+        className="k-u-margin-bottom-triple"
+        menuZIndex={number('menuZIndex', 1000)}
+        hideIconOnMobile={boolean('hideIconOnMobile', false)}
+      />
+      <DropdownSelectWithInput
+        id={text('id', 'dropdown-select')}
+        error={boolean('error', false)}
+        valid={boolean('valid', false)}
+        disabled={boolean('disabled', false)}
+        hideLabel={true}
+        labelText="Instagram"
+        options={options}
+        resetOnBackspace={boolean('resetOnBackspace', false)}
+        highlightOptionBox={boolean('highlightOptionBox', true)}
+        defaultSelectedValue="instagram"
+        deactivateDropdown
+        className="k-u-margin-bottom-triple"
+        menuZIndex={number('menuZIndex', 1000)}
+        hideIconOnMobile={boolean('hideIconOnMobile', false)}
+      />
     </div>
   )
 }

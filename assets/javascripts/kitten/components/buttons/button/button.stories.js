@@ -1,9 +1,6 @@
 import React from 'react'
 import { text, boolean, number, radios, select } from '@storybook/addon-knobs'
 import { Button } from './button'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
 import { HeartIcon } from '../../icons/heart-icon'
 import { Badge } from '../../..'
 import { Cart } from '../../icons/cart'
@@ -59,14 +56,6 @@ export const WithText = () => (
   </Button>
 )
 
-WithText.decorators = [
-  Story => (
-    <div className="story-Container">
-      <Story />
-    </div>
-  ),
-]
-
 export const WithIcon = () => (
   <Button
     micro={boolean('Micro', false)}
@@ -87,20 +76,6 @@ export const WithIcon = () => (
     />
   </Button>
 )
-
-WithIcon.decorators = [
-  Story => (
-    <Marger top="4" bottom="4">
-      <Container>
-        <Grid>
-          <GridCol>
-            <Story />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
-  ),
-]
 
 export const WithTextAndIcon = () => {
   const iconPosition = radios('Icon position', svgPositionOptions, 'left')
@@ -134,19 +109,6 @@ export const WithTextAndIcon = () => {
     </Button>
   )
 }
-WithTextAndIcon.decorators = [
-  Story => (
-    <Marger top="4" bottom="4">
-      <Container>
-        <Grid>
-          <GridCol>
-            <Story />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
-  ),
-]
 
 export const WithBadge = () => (
   <Button
@@ -165,16 +127,14 @@ export const WithBadge = () => (
   </Button>
 )
 
-WithBadge.decorators = [
-  Story => (
-    <Marger top="4" bottom="4">
-      <Container>
-        <Grid>
-          <GridCol>
-            <Story />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
-  ),
-]
+export default {
+  component: Button,
+  title: 'Buttons/Button',
+  decorators: [
+    Story => (
+      <div className="story-Container">
+        <Story />
+      </div>
+    ),
+  ],
+}

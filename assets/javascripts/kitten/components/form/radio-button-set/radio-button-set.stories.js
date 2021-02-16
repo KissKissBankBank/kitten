@@ -31,122 +31,122 @@ export default {
   parameters: {
     component: RadioButtonSet,
   },
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <OrionGlobalStyle />
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const Default = () => (
-  <div className="story-Container">
-    <RadioButtonSet
-      id={text('ID', 'story-radio-button-set')}
-      label={text('Label', null)}
-      items={[
-        {
-          text: text('Option A', 'Option A'),
-          id: 'option-a',
-          defaultChecked: true,
-        },
-        {
-          text: text('Option B', 'Option B'),
-          id: 'option-b',
-        },
-        {
-          text: text('Option C', 'Option C'),
-          id: 'option-c',
-        },
-      ]}
-      error={boolean('Error?', false)}
-      disabled={boolean('Disabled', false)}
-      variant={select(
-        'Variant',
-        { andromeda: 'andromeda', orion: 'orion' },
-        'andromeda',
-      )}
-      design={select('design', { disc: 'disc', check: 'check' }, 'disc')}
-    />
-  </div>
+  <RadioButtonSet
+    id={text('ID', 'story-radio-button-set')}
+    label={text('Label', null)}
+    items={[
+      {
+        text: text('Option A', 'Option A'),
+        id: 'option-a',
+        defaultChecked: true,
+      },
+      {
+        text: text('Option B', 'Option B'),
+        id: 'option-b',
+      },
+      {
+        text: text('Option C', 'Option C'),
+        id: 'option-c',
+      },
+    ]}
+    error={boolean('Error?', false)}
+    disabled={boolean('Disabled', false)}
+    variant={select(
+      'Variant',
+      { andromeda: 'andromeda', orion: 'orion' },
+      'andromeda',
+    )}
+    design={select('design', { disc: 'disc', check: 'check' }, 'disc')}
+  />
 )
 
 export const OrionGrid = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <OrionGlobalStyle />
-    <RadioButtonSet
-      className="k-Form-RadioButtonSet__orionGrid"
-      id={text('ID', 'story-radio-button-set')}
-      items={[
-        {
-          text: text('Option A', '25 €'),
-          id: 'option-a',
-          defaultChecked: true,
-        },
-        {
-          text: text('Option B', '50 €'),
-          id: 'option-b',
-        },
-        {
-          text: text('Option C', '100 €'),
-          id: 'option-c',
-        },
-        {
-          text: text('Option D', '200 €'),
-          id: 'option-d',
-        },
-        {
-          text: text('Option E', '500 €'),
-          id: 'option-e',
-        },
-        {
-          text: text('Option F', '1000 €'),
-          id: 'option-f',
-        },
-      ]}
-      error={boolean('Error?', false)}
-      disabled={boolean('Disabled', false)}
-      variant="orion"
-      design={select('design', { disc: 'disc', check: 'check' }, 'disc')}
-    >
-      <h1 className="k-Title k-Title--quaternary k-u-margin-bottom-triple">
-        Choisissez le montant que vous souhaitez offrir
-      </h1>
-    </RadioButtonSet>
-  </div>
+  <RadioButtonSet
+    className="k-Form-RadioButtonSet__orionGrid"
+    id={text('ID', 'story-radio-button-set')}
+    items={[
+      {
+        text: text('Option A', '25 €'),
+        id: 'option-a',
+        defaultChecked: true,
+      },
+      {
+        text: text('Option B', '50 €'),
+        id: 'option-b',
+      },
+      {
+        text: text('Option C', '100 €'),
+        id: 'option-c',
+      },
+      {
+        text: text('Option D', '200 €'),
+        id: 'option-d',
+      },
+      {
+        text: text('Option E', '500 €'),
+        id: 'option-e',
+      },
+      {
+        text: text('Option F', '1000 €'),
+        id: 'option-f',
+      },
+    ]}
+    error={boolean('Error?', false)}
+    disabled={boolean('Disabled', false)}
+    variant="orion"
+    design={select('design', { disc: 'disc', check: 'check' }, 'disc')}
+  >
+    <h1 className="k-Title k-Title--quaternary k-u-margin-bottom-triple">
+      Choisissez le montant que vous souhaitez offrir
+    </h1>
+  </RadioButtonSet>
 )
 export const OrionGridWithLabel = () => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <OrionGlobalStyle />
-    <RadioButtonSet
-      label="Test de label"
-      className="k-Form-RadioButtonSet__orionGrid"
-      id={text('ID', 'story-radio-button-set')}
-      items={[
-        {
-          text: text('Option A', '25 €'),
-          id: 'option-a',
-          defaultChecked: true,
-        },
-        {
-          text: text('Option B', '50 €'),
-          id: 'option-b',
-        },
-        {
-          text: text('Option C', '100 €'),
-          id: 'option-c',
-        },
-        {
-          text: text('Option D', '200 €'),
-          id: 'option-d',
-        },
-        {
-          text: text('Option E', '500 €'),
-          id: 'option-e',
-        },
-        {
-          text: text('Option F', '1000 €'),
-          id: 'option-f',
-        },
-      ]}
-      error={boolean('Error?', false)}
-      disabled={boolean('Disabled', false)}
-      variant="orion"
-      design={select('design', { disc: 'disc', check: 'check' }, 'disc')}
-    />
-  </div>
+  <RadioButtonSet
+    label="Test de label"
+    className="k-Form-RadioButtonSet__orionGrid"
+    id={text('ID', 'story-radio-button-set')}
+    items={[
+      {
+        text: text('Option A', '25 €'),
+        id: 'option-a',
+        defaultChecked: true,
+      },
+      {
+        text: text('Option B', '50 €'),
+        id: 'option-b',
+      },
+      {
+        text: text('Option C', '100 €'),
+        id: 'option-c',
+      },
+      {
+        text: text('Option D', '200 €'),
+        id: 'option-d',
+      },
+      {
+        text: text('Option E', '500 €'),
+        id: 'option-e',
+      },
+      {
+        text: text('Option F', '1000 €'),
+        id: 'option-f',
+      },
+    ]}
+    error={boolean('Error?', false)}
+    disabled={boolean('Disabled', false)}
+    variant="orion"
+    design={select('design', { disc: 'disc', check: 'check' }, 'disc')}
+  />
 )

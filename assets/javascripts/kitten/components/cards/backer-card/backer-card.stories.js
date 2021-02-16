@@ -1,17 +1,17 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { text } from '@storybook/addon-knobs'
 import { BackerCard } from './index'
 import { Text } from '../../../components/typography/text'
 
 const Description = () => (
-  <Fragment>
+  <>
     Lorem{' '}
     <Text color="primary1" weight="regular">
       ipsum
     </Text>{' '}
     dolor sit amet, <br />
     <Text weight="regular">consectetur adipiscing elit</Text>…
-  </Fragment>
+  </>
 )
 
 export default {

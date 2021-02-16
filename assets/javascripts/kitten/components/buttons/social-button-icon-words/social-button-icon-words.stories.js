@@ -9,14 +9,17 @@ import {
 export default {
   component: SocialButtonIconWords,
   title: 'Buttons/SocialButtonIconWords',
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
-const StoryContainer = ({ children }) => (
-  <div className="story-Container story-Grid">{children}</div>
-)
-
 export const SocialButtonIconWords = () => (
-  <StoryContainer>
+  <>
     <div>
       <FacebookButtonIconWords fluid>Facebook</FacebookButtonIconWords>
     </div>
@@ -32,5 +35,5 @@ export const SocialButtonIconWords = () => (
     <div>
       <LinkedinButtonIconWords fluid>Linkedin</LinkedinButtonIconWords>
     </div>
-  </StoryContainer>
+  </>
 )

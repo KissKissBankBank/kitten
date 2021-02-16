@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { text, boolean } from '@storybook/addon-knobs'
 import { CheckableButton } from './index'
 
-export const IsCheckable = () => {
+export const Default = () => {
   const [buttonIsChecked, changeButtonState] = useState(true)
 
   return (
-    <div className="story-Container story-Grid story-Grid--large">
+    <>
       <div>
         <CheckableButton
           tiny={boolean('Tiny', false)}
@@ -40,6 +40,14 @@ export const IsCheckable = () => {
           <small>Clickable button</small>
         </p>
       </div>
-    </div>
+    </>
   )
 }
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      <Story />
+    </div>
+  ),
+]

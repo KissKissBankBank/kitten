@@ -60,55 +60,54 @@ const autoFill = {
   Name: 'name',
 }
 
-const Container = props => (
-  <div {...props} className="story-Container story-Grid story-Grid--large" />
-)
-
 const onChange = value => console.warn('Selected value', value)
 
 export default {
   title: 'Form/SelectWithState',
   component: SelectWithState,
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const Default = () => (
-  <Container>
-    <SelectWithState
-      id="select-with-label"
-      onChange={onChange}
-      labelText="Please select a bike brand"
-      placeholder="Choose a bike brand"
-      options={options}
-      searchable={boolean('Searchable', false)}
-      clearable={boolean('Clearable', false)}
-      error={boolean('Error', false)}
-      error={boolean('Error', false)}
-      valid={boolean('Valid', false)}
-      tiny={boolean('Tiny', false)}
-      huge={boolean('Huge', false)}
-      giant={boolean('Giant', false)}
-      autoFill={select('AutoFill', autoFill)}
-    />
-  </Container>
+  <SelectWithState
+    id="select-with-label"
+    onChange={onChange}
+    labelText="Please select a bike brand"
+    placeholder="Choose a bike brand"
+    options={options}
+    searchable={boolean('Searchable', false)}
+    clearable={boolean('Clearable', false)}
+    error={boolean('Error', false)}
+    error={boolean('Error', false)}
+    valid={boolean('Valid', false)}
+    tiny={boolean('Tiny', false)}
+    huge={boolean('Huge', false)}
+    giant={boolean('Giant', false)}
+    autoFill={select('AutoFill', autoFill)}
+  />
 )
 
 export const Multi = () => (
-  <Container>
-    <SelectWithState
-      id="select-with-label"
-      onChange={onChange}
-      labelText="Please select a bike brand"
-      placeholder="Choose a bike brand"
-      options={multiOptions}
-      searchable={boolean('Searchable', false)}
-      clearable={boolean('Clearable', false)}
-      error={boolean('Error', false)}
-      error={boolean('Error', false)}
-      valid={boolean('Valid', false)}
-      tiny={boolean('Tiny', false)}
-      huge={boolean('Huge', false)}
-      giant={boolean('Giant', false)}
-      autoFill={select('AutoFill', autoFill)}
-    />
-  </Container>
+  <SelectWithState
+    id="select-with-label"
+    onChange={onChange}
+    labelText="Please select a bike brand"
+    placeholder="Choose a bike brand"
+    options={multiOptions}
+    searchable={boolean('Searchable', false)}
+    clearable={boolean('Clearable', false)}
+    error={boolean('Error', false)}
+    error={boolean('Error', false)}
+    valid={boolean('Valid', false)}
+    tiny={boolean('Tiny', false)}
+    huge={boolean('Huge', false)}
+    giant={boolean('Giant', false)}
+    autoFill={select('AutoFill', autoFill)}
+  />
 )
