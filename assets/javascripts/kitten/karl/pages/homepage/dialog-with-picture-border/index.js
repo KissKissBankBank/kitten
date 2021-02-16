@@ -136,7 +136,7 @@ export const DialogWithPictureBorder = () => {
           </TitleWithStroke>
           <Paragraph
             className="DialogWithPictureBorder__paragraph k-u-margin-none"
-            modifier="secondary"
+            modifier="quaternary"
           >
             Citoyenneté, optimiste et indépendance. Créé en 2009,
             KissKissBankBank, pionnier du financement participatif en France,
