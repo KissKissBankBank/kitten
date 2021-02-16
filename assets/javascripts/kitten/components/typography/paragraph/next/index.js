@@ -21,7 +21,7 @@ const StyledParagraph = styled.p`
     font-style: italic;
   }
 
-  ${modifierStyles('&.k-Paragraph--modifier')}
+  ${({ modifier }) => modifierStyles(modifier)}
 `
 
 export const Paragraph = ({
@@ -35,8 +35,8 @@ export const Paragraph = ({
   return (
     <StyledParagraph
       as={tag}
+      modifier={modifier}
       className={classNames(
-        `k-Paragraph--${modifier}`,
         {
           'k-Paragraph--margin': margin,
           'k-Paragraph--normalLineHeight': normalLineHeight,
