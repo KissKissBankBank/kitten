@@ -17,7 +17,7 @@ Array [
     className="sc-bdVaJa CoxgX"
   >
     <div
-      className="sc-ifAKCX cBWvFc k-BasicUploader k-BasicUploader--ready"
+      className="sc-EHOje hIPPHw k-BasicUploader k-BasicUploader--ready"
     >
       <input
         accept=".jpg,.jpeg,.gif,.png"
@@ -27,7 +27,7 @@ Array [
         type="file"
       />
       <label
-        className="sc-bwzfXH bBxqNJ k-BasicUploader__button"
+        className="sc-htpNat hlLzcf k-BasicUploader__button"
         htmlFor="cropper"
       >
         <svg
@@ -54,7 +54,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+      className="sc-bwzfXH bskqth"
     >
       Lorem ipsum…
     </p>

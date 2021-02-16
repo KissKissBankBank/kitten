@@ -16,7 +16,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
         Custom title mount
       </h6>
       <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        className="sc-EHOje dirCl"
       >
         Custom text description
       </p>
@@ -82,7 +82,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         Custom title mount
       </h6>
       <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        className="sc-EHOje dirCl"
       >
         Custom text description
       </p>
@@ -153,12 +153,12 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
       </p>
       <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        className="sc-EHOje dirCl"
       >
         Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
       </p>
       <ul
-        className="sc-bZQynM bkXVsB k-List"
+        className="sc-gzVnrw dKBqp k-List"
       >
         <li>
           <span
@@ -272,7 +272,7 @@ exports[`<RewardCard /> with video matches with snapshot 1`] = `
         Custom title mount
       </h6>
       <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        className="sc-EHOje dirCl"
       >
         Custom text description
       </p>

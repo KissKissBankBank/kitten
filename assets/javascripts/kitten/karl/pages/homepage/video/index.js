@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { TitleWithStroke } from '../../../../components/typography/title-with-stroke'
-import { Paragraph } from '../../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'

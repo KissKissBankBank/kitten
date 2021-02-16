@@ -2,7 +2,7 @@ import React from 'react'
 import { Marger } from '../../../../../components/layout/marger'
 import { Title } from '../../../../../components/typography/title'
 import { Text } from '../../../../../components/typography/text'
-import { Paragraph } from '../../../../../components/typography/paragraph'
+import { Paragraph } from '../../../../../components/typography/next/paragraph'
 import { parseHtml } from '../../../../../helpers/utils/parser'
 import { HorizontalStroke } from '../../../../../components/layout/horizontal-stroke'
 import COLORS from '../../../../../constants/colors-config'
@@ -45,7 +45,7 @@ export const CardWithButton = ({
     )}
     <Marger top={horizontalStroke ? 3 : 1} bottom={notice ? 1.5 : 3}>
       <Paragraph
-        modifier="quaternary"
+        modifier="tertiary"
         margin={false}
         style={{ color: COLORS.font1 }}
       >

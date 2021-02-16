@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 import { Loader } from '../../../components/loaders/loader'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 
 export class LoaderWithParagraph extends Component {
   render() {
@@ -40,7 +40,7 @@ export class LoaderWithParagraph extends Component {
       <div className={containerClassName} {...others}>
         {loaderBefore ? loader : null}
 
-        <Paragraph modifier="secondary" margin={false} {...paragraphProps}>
+        <Paragraph modifier="primary" margin={false} {...paragraphProps}>
           {this.props.children}
         </Paragraph>
 

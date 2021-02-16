@@ -27,7 +27,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
   >
     <div>
       <div
-        className="sc-htpNat hbzMcy"
+        className="sc-bxivhb dluWKp"
       >
         <div
           className="k-u-margin-bottom-triple"
@@ -68,7 +68,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
     className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l k-Triptych__contentColumn"
   >
     <div
-      className="sc-htpNat hbzMcy"
+      className="sc-bxivhb dluWKp"
     >
       <div
         className="k-u-margin-bottom-triple"
@@ -88,7 +88,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           Donsectetur adipiscing elit
         </h1>
         <p
-          className="k-Paragraph k-u-align-center k-u-margin-top-singleHalf--important k-Paragraph--quaternary k-Paragraph--withoutMargin"
+          className="sc-htpNat ixwtRD k-u-align-center k-u-margin-top-singleHalf--important"
         >
           Nulla ut orci velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
         </p>
@@ -112,7 +112,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
     className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l k-Triptych__contentColumn k-Triptych__contentColumn--odd"
   >
     <div
-      className="sc-htpNat hbzMcy"
+      className="sc-bxivhb dluWKp"
     >
       <div
         className="k-u-margin-bottom-triple"

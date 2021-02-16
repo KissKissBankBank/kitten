@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../components/layout/marger'
 import { Title } from '../../../components/typography/title'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -81,7 +81,7 @@ export const VerticalCard = ({
       )}
       {description && (
         <Marger top={withTitleStroke ? 0 : 1}>
-          <Paragraph modifier="quaternary" tag={descriptionTag} margin={false}>
+          <Paragraph modifier="tertiary" tag={descriptionTag} margin={false}>
             {description}
           </Paragraph>
         </Marger>

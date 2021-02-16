@@ -4,7 +4,7 @@ import getOr from 'lodash/fp/getOr'
 import { Marger } from '../../../components/layout/marger'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { Label } from '../../../components/form/label'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 import { BasicUploader } from '../../../components/uploaders/basic-uploader'
 import { RangeSlider } from '../../../components/form/range-slider'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
@@ -144,7 +144,7 @@ export const ImageCropper = ({
       </Marger>
 
       <Marger top="1">
-        <Paragraph modifier="quaternary" margin={false}>
+        <Paragraph modifier="tertiary" margin={false}>
           {description}
         </Paragraph>
       </Marger>
@@ -186,7 +186,7 @@ export const ImageCropper = ({
           {isCropEnabled && !disabled && (
             <GridCol col="12" col-m="6">
               <Marger top="2" bottom="1.5">
-                <Paragraph modifier="quaternary" margin={false}>
+                <Paragraph modifier="tertiary" margin={false}>
                   {cropperInfo}
                 </Paragraph>
               </Marger>

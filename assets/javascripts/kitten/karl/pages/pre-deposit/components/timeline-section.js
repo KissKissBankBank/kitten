@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Container } from '../../../../components/grid/container'
 import { Title } from '../../../../components/typography/title'
-import { Paragraph } from '../../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 import { Button } from '../../../../components/buttons/button'
 import { Timeline } from '../../../../components/lists/timeline'
 import COLORS from '../../../../constants/colors-config'
@@ -36,7 +36,7 @@ const TimelineSection = ({ paragraphProps }) => (
         <Timeline itemHeight="thin" color="#19b4fa">
           <Paragraph
             {...paragraphProps}
-            modifier="tertiary"
+            modifier="secondary"
             style={{ color: COLORS.font1 }}
           >
             Je fixe le montant que je souhaite collecter et la durée que
@@ -44,14 +44,14 @@ const TimelineSection = ({ paragraphProps }) => (
           </Paragraph>
           <Paragraph
             {...paragraphProps}
-            modifier="tertiary"
+            modifier="secondary"
             style={{ color: COLORS.font1 }}
           >
             Je complète la page de présentation de mon projet.
           </Paragraph>
           <Paragraph
             {...paragraphProps}
-            modifier="tertiary"
+            modifier="secondary"
             style={{ color: COLORS.font1 }}
           >
             Je reçois les conseils d’un coach pour booster ma collecte et mes
@@ -59,7 +59,7 @@ const TimelineSection = ({ paragraphProps }) => (
           </Paragraph>
           <Paragraph
             {...paragraphProps}
-            modifier="tertiary"
+            modifier="secondary"
             style={{ color: COLORS.font1 }}
           >
             Quand je suis prêt·e, je lance ma collecte et mobilise mes

@@ -6,7 +6,7 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { Button } from '../../../components/buttons/button'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 import COLORS from '../../../constants/colors-config'
 import { List } from '../../../components/lists/list'
 import { ExpandBoard } from '../../../components/expandable/expand-board'
@@ -265,7 +265,7 @@ export const RewardCard = () => {
                   className={classNames('RewardCard_story__description', {
                     RewardCard_story__disabled: disabled,
                   })}
-                  modifier="quaternary"
+                  modifier="tertiary"
                   margin={false}
                 >
                   {text(

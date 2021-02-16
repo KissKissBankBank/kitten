@@ -2,7 +2,7 @@
 
 exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb NpcKf k-CartRewardCard"
+  className="sc-ifAKCX bpiQjo k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
@@ -48,7 +48,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-top-double k-u-margin-top-single@xs-down"
     >
       <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        className="sc-bxivhb WUtOh"
       >
         Custom text description
       </p>
@@ -60,7 +60,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb NpcKf k-CartRewardCard"
+  className="sc-ifAKCX bpiQjo k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
@@ -106,7 +106,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       className="k-u-margin-bottom-double k-u-margin-top-double k-u-margin-top-single@xs-down"
     >
       <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        className="sc-bxivhb WUtOh"
       >
         Custom text description
       </p>
@@ -118,7 +118,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
 
 exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb NpcKf k-CartRewardCard"
+  className="sc-ifAKCX bpiQjo k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
@@ -176,7 +176,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-top-double"
     >
       <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        className="sc-bxivhb WUtOh"
       >
         Custom text description
       </p>

@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { RewardCard } from './index'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 import { List } from '../../../components/lists/list'
 import { Text } from '../../../components/typography/text'
 
@@ -32,7 +32,7 @@ describe('<RewardCard />', () => {
               <RewardCard.RowContent>
                 <RewardCard.Title>Custom title mount</RewardCard.Title>
 
-                <Paragraph modifier="quaternary" margin={false}>
+                <Paragraph modifier="tertiary" margin={false}>
                   Custom text description
                 </Paragraph>
               </RewardCard.RowContent>
@@ -67,7 +67,7 @@ describe('<RewardCard />', () => {
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                 </Text>
 
-                <Paragraph modifier="quaternary" margin={false}>
+                <Paragraph modifier="tertiary" margin={false}>
                   Superatis Tauri montis verticibus qui ad solis ortum sublimius
                   attolluntur, Cilicia spatiis porrigitur late distentis dives
                   bonis omnibus terra, eiusque lateri dextro adnexa Isauria,
@@ -135,7 +135,7 @@ describe('<RewardCard />', () => {
               <RewardCard.RowContent>
                 <RewardCard.Title>Custom title mount</RewardCard.Title>
 
-                <Paragraph modifier="quaternary" margin={false}>
+                <Paragraph modifier="tertiary" margin={false}>
                   Custom text description
                 </Paragraph>
               </RewardCard.RowContent>
@@ -173,7 +173,7 @@ describe('<RewardCard />', () => {
 
                 <RewardCard.Title>Custom title mount</RewardCard.Title>
 
-                <Paragraph modifier="quaternary" margin={false}>
+                <Paragraph modifier="tertiary" margin={false}>
                   Custom text description
                 </Paragraph>
               </RewardCard.RowContent>

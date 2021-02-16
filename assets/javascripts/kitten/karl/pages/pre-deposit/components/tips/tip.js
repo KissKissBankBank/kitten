@@ -1,6 +1,6 @@
 import React from 'react'
 import { TitleWithStroke } from '../../../../../components/typography/title-with-stroke'
-import { Paragraph } from '../../../../../components/typography/paragraph'
+import { Paragraph } from '../../../../../components/typography/next/paragraph'
 
 export const Tip = ({ title, paragraph }) => (
   <div className="k-u-margin-top-triple k-u-margin-top-none@s-up k-u-margin-top-decuple@l-up">
@@ -8,7 +8,7 @@ export const Tip = ({ title, paragraph }) => (
       {title}
     </TitleWithStroke>
 
-    <Paragraph modifier="quaternary" margin={false}>
+    <Paragraph modifier="tertiary" margin={false}>
       {paragraph}
     </Paragraph>
   </div>

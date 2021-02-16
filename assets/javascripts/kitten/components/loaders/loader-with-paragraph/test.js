@@ -1,7 +1,7 @@
 import React from 'react'
 import { LoaderWithParagraph } from './index'
 import { Loader } from '../../../components/loaders/loader'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 
 describe('<LoaderWithParagraph />', () => {
   describe('by default', () => {
