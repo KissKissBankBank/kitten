@@ -8,7 +8,6 @@ import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledContainer = styled.div`
-  margin: ${pxToRem(30)};
   padding-bottom: ${pxToRem(30)};
   border-bottom: ${pxToRem(2)} solid ${COLORS.line2};
 
@@ -40,7 +39,7 @@ export default {
 }
 
 export const Default = () => (
-  <StyledContainer>
+  <StyledContainer className="story-Container story-Grid story-Grid--large">
     <Grid>
       <GridCol offset="1" col="10">
         <ExpandBoard withAnimation={boolean('withAnimation', true)}>
@@ -49,7 +48,7 @@ export const Default = () => (
             borderRadius={number('Border radius', 4, radiusBorderRange)}
             big={boolean('Big', false)}
           >
-            {text('Button text', 'KissKissBankBank & Co')}
+            {text('Button text', 'KissKissBankBank')}
           </ExpandBoard.Button>
           <ExpandBoard.Content>
             <div className="ExpandBoardStory__content">
@@ -69,7 +68,7 @@ export const Default = () => (
 )
 
 export const ListOfButtons = () => (
-  <StyledContainer>
+  <StyledContainer className="story-Container story-Grid story-Grid--large">
     <Grid>
       <GridCol offset="1" col="10">
         <ExpandBoardWithButtonItemList

@@ -13,12 +13,14 @@ const tagOptions = {
 }
 
 export const Default = () => (
-  <TextInputWithLimit
-    disabled={boolean('Disabled', false)}
-    tag={select('Tag', tagOptions, 'input')}
-    variant={select('Variant', variantOptions, 'andromeda')}
-    limit={number('Limit', 80)}
-  />
+  <div className="story-Container story-Grid story-Grid--large">
+    <TextInputWithLimit
+      disabled={boolean('Disabled', false)}
+      tag={select('Tag', tagOptions, 'input')}
+      variant={select('Variant', variantOptions, 'andromeda')}
+      limit={number('Limit', 80)}
+    />
+  </div>
 )
 
 Default.storyName = 'Text input with limit'

@@ -7,20 +7,11 @@ import {
   FieldSelectExample,
   FieldAutocompleteExample,
 } from './field.examples'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
 
 const StoryGrid = ({ children }) => (
-  <Container>
-    <Grid>
-      <GridCol col="6">
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
-  </Container>
+  <div className="story-Container story-Grid story-Grid--large">
+    <div>{children}</div>
+  </div>
 )
 
 export default {

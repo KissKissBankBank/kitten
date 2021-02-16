@@ -8,12 +8,14 @@ const variantOptions = {
 }
 
 export const Default = () => (
-  <PasswordInput
-    iconLabel={text('Icon label', 'Show password')}
-    hiddenIconLabel={text('Hidden icon label', 'Hide password')}
-    placeholder={text('Placeholder', 'Enter your code')}
-    variant={select('Variant', variantOptions, 'orion')}
-  />
+  <div className="story-Container story-Grid story-Grid--large">
+    <PasswordInput
+      iconLabel={text('Icon label', 'Show password')}
+      hiddenIconLabel={text('Hidden icon label', 'Hide password')}
+      placeholder={text('Placeholder', 'Enter your code')}
+      variant={select('Variant', variantOptions, 'orion')}
+    />
+  </div>
 )
 
 Default.storyName = 'Password input'

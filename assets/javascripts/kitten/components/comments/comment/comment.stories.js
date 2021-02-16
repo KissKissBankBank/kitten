@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { text, object, boolean } from '@storybook/addon-knobs'
 import { Comment } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
 import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
 
 const CommentExample = props => {
@@ -65,10 +64,8 @@ export const Default = () => (
 
 Default.decorators = [
   Story => (
-    <Grid style={{ marginTop: '5em' }}>
-      <GridCol offset="1" col="8">
-        <Story />
-      </GridCol>
-    </Grid>
+    <div className="story-Container story-Grid story-Grid--large">
+      <Story />
+    </div>
   ),
 ]

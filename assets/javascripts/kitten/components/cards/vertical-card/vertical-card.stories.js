@@ -1,9 +1,6 @@
 import React from 'react'
 import { text, object, select, boolean } from '@storybook/addon-knobs'
 import { VerticalCard } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
 
 const textAlign = {
   Left: 'left',
@@ -32,14 +29,8 @@ export const Default = () => (
 
 Default.decorators = [
   Story => (
-    <Marger top="3" bottom="3">
-      <Container>
-        <Grid>
-          <GridCol col-l="4" col-s="6" col-xs="10" offset-xs="1" col-xxs="12">
-            <Story />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
+    <div className="story-Container story-Grid">
+      <Story />
+    </div>
   ),
 ]

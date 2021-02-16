@@ -9,97 +9,113 @@ export default {
 }
 
 export const StatusReady = args => (
-  <BasicUploader
-    {...args}
-    id="BasicUploader__StatusReady"
-    buttonText="Send document"
-  />
+  <div className="story-Container story-Grid story-Grid--large">
+    <BasicUploader
+      {...args}
+      id="BasicUploader__StatusReady"
+      buttonText="Send document"
+    />
+  </div>
 )
 
 export const SizeModifiersWithButtonProps = args => (
-  <BasicUploader
-    {...args}
-    id="BasicUploader__StatusReady"
-    buttonProps={{
-      tiny: boolean('Tiny', false),
-      big: boolean('Big', false),
-      huge: boolean('Huge', false),
-      giant: boolean('Giant', false),
-    }}
-    buttonText="Send document"
-  />
+  <div className="story-Container story-Grid story-Grid--large">
+    <BasicUploader
+      {...args}
+      id="BasicUploader__StatusReady"
+      buttonProps={{
+        tiny: boolean('Tiny', false),
+        big: boolean('Big', false),
+        huge: boolean('Huge', false),
+        giant: boolean('Giant', false),
+      }}
+      buttonText="Send document"
+    />
+  </div>
 )
 
 export const OnFormError = args => (
-  <BasicUploader
-    {...args}
-    id="BasicUploader__OnFormError"
-    buttonText="Send document"
-    errorText="Veuillez sélectionner un fichier à envoyer"
-  />
+  <div className="story-Container story-Grid story-Grid--large">
+    <BasicUploader
+      {...args}
+      id="BasicUploader__OnFormError"
+      buttonText="Send document"
+      errorText="Veuillez sélectionner un fichier à envoyer"
+    />
+  </div>
 )
 
 export const StatusValid = args => (
-  <BasicUploader
-    {...args}
-    id="BasicUploader__StatusValid"
-    buttonText="Send document"
-    fileName="document.pdf"
-    status="valid"
-    canCancel={boolean('canCancel', false)}
-    disabled={boolean('disabled', false)}
-    statusText="The document is valid."
-  />
+  <div className="story-Container story-Grid story-Grid--large">
+    <BasicUploader
+      {...args}
+      id="BasicUploader__StatusValid"
+      buttonText="Send document"
+      fileName="document.pdf"
+      status="valid"
+      canCancel={boolean('canCancel', false)}
+      disabled={boolean('disabled', false)}
+      statusText="The document is valid."
+    />
+  </div>
 )
 
 export const StatusError = args => (
-  <BasicUploader
-    {...args}
-    id="BasicUploader__StatusError"
-    buttonText="Send document"
-    fileName="document.pdf"
-    status="error"
-    canCancel={boolean('canCancel', true)}
-    disabled={boolean('disabled', false)}
-    statusText="The document has been rejected. Please upload another one."
-  />
+  <div className="story-Container story-Grid story-Grid--large">
+    <BasicUploader
+      {...args}
+      id="BasicUploader__StatusError"
+      buttonText="Send document"
+      fileName="document.pdf"
+      status="error"
+      canCancel={boolean('canCancel', true)}
+      disabled={boolean('disabled', false)}
+      statusText="The document has been rejected. Please upload another one."
+    />
+  </div>
 )
 
 export const StatusWaiting = args => (
-  <BasicUploader
-    {...args}
-    id="BasicUploader__StatusWaiting"
-    buttonText="Send document"
-    fileName="document.pdf"
-    status="wait"
-    canCancel={boolean('canCancel', false)}
-    disabled={boolean('disabled', false)}
-    statusText="The document is awaiting for validation."
-  />
+  <div className="story-Container story-Grid story-Grid--large">
+    <BasicUploader
+      {...args}
+      id="BasicUploader__StatusWaiting"
+      buttonText="Send document"
+      fileName="document.pdf"
+      status="wait"
+      canCancel={boolean('canCancel', false)}
+      disabled={boolean('disabled', false)}
+      statusText="The document is awaiting for validation."
+    />
+  </div>
 )
 
 export const StatusLoading = args => (
-  <BasicUploader
-    {...args}
-    id="BasicUploader__StatusLoading"
-    buttonText="Send document"
-    buttonProps={{
-      big: true,
-      modifier: 'helium',
-    }}
-    status="loading"
-  />
+  <div className="story-Container story-Grid story-Grid--large">
+    <BasicUploader
+      {...args}
+      id="BasicUploader__StatusLoading"
+      buttonText="Send document"
+      buttonProps={{
+        big: true,
+        modifier: 'helium',
+      }}
+      status="loading"
+    />
+  </div>
 )
 
 export const CustomFileInputProps = args => (
-  <BasicUploader
-    {...args}
-    id="BasicUploader__CustomFileInputProps"
-    fileInputProps={{
-      accept: 'image/png, image/jpeg',
-      multiple: true,
-    }}
-  />
+  <div className="story-Container story-Grid story-Grid--large">
+    <BasicUploader
+      {...args}
+      id="BasicUploader__CustomFileInputProps"
+      fileInputProps={{
+        accept: 'image/png, image/jpeg',
+        multiple: true,
+      }}
+    />
+  </div>
 )
 
 export const CustomFunctions = args => {
@@ -107,31 +123,33 @@ export const CustomFunctions = args => {
   const [uploadedFiles, setUploadedFiles] = useState(null)
 
   return (
-    <BasicUploader
-      {...args}
-      id="BasicUploader__CustomFunctions"
-      onUpload={event => {
-        setLoadingState(true)
-        setUploadedFiles(event.currentTarget.files)
-      }}
-      onCancel={() => {
-        setLoadingState(false)
-        setUploadedFiles(null)
-      }}
-      buttonText="Send document"
-      buttonProps={
-        isLoading && {
-          modifier: 'helium',
+    <div className="story-Container story-Grid story-Grid--large">
+      <BasicUploader
+        {...args}
+        id="BasicUploader__CustomFunctions"
+        onUpload={event => {
+          setLoadingState(true)
+          setUploadedFiles(event.currentTarget.files)
+        }}
+        onCancel={() => {
+          setLoadingState(false)
+          setUploadedFiles(null)
+        }}
+        buttonText="Send document"
+        buttonProps={
+          isLoading && {
+            modifier: 'helium',
+          }
         }
-      }
-      fileInputProps={{
-        multiple: true,
-      }}
-      status={isLoading ? 'loading' : 'ready'}
-      fileName={
-        isLoading && `Currently uploading ${uploadedFiles.length} files`
-      }
-      loaderAnimation={isLoading && <Loader />}
-    />
+        fileInputProps={{
+          multiple: true,
+        }}
+        status={isLoading ? 'loading' : 'ready'}
+        fileName={
+          isLoading && `Currently uploading ${uploadedFiles.length} files`
+        }
+        loaderAnimation={isLoading && <Loader />}
+      />
+    </div>
   )
 }

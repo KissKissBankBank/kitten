@@ -1,16 +1,13 @@
 import React from 'react'
 import { number, color } from '@storybook/addon-knobs'
 import { HighlightHalo } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
 import COLORS from '../../../constants/colors-config'
 
 const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="10" style={{ marginLeft: 60 }}>
-      {children}
-    </Marger>
-  </Container>
+  <div className="story-Container story-Grid k-u-margin-top-decuple--important">
+    <div></div>
+    {children}
+  </div>
 )
 
 export default {

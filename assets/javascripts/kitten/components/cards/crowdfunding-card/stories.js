@@ -1,9 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { text, boolean, number, select } from '@storybook/addon-knobs'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
 import { CrowdfundingCard as CrowdfundingCardComponent } from './index'
 import { Text } from '../../../components/typography/text'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
@@ -12,15 +9,7 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import { parseHtml } from '../../../helpers/utils/parser'
 
 const StoryContainer = ({ children }) => (
-  <Container>
-    <Grid>
-      <GridCol col-m="4">
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
-  </Container>
+  <div className="story-Container story-Grid">{children}</div>
 )
 
 export default {

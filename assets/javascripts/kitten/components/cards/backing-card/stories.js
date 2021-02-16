@@ -5,9 +5,6 @@ import { BackingCard } from './index'
 import {
   pxToRem,
   ScreenConfig,
-  Container,
-  Grid,
-  GridCol,
   Title,
   Tag,
   Carousel,
@@ -37,144 +34,130 @@ export default {
 
 export const Default = () => {
   return (
-    <Container className="k-u-margin-vertical-quadruple">
-      <Grid>
-        <GridCol col="6" col-l="3">
-          <BackingCard
-            disabled={boolean('Disabled', false)}
-            hasBorder={boolean('Has border', true)}
-          >
-            <BackingCard.Image>
-              <img src="/kitten.jpg" alt="" />
-            </BackingCard.Image>
-            <BackingCard.HeadingTag icon="star" text="Star reward" />
-            <BackingCard.Title>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-            </BackingCard.Title>
-            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-            <BackingCard.Info
-              legend="Prix de livraison&nbsp;:"
-              value="5&nbsp;€ (en France)"
-            />
-            <BackingCard.Info
-              legend="Livraison estimée&nbsp;:"
-              value="Janvier 2022"
-            />
-            <BackingCard.Description
-              moreButtonText="See more…"
-              truncateText={boolean('Truncate text', false)}
-            >
-              <p className="k-u-margin-none">
-                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-                tellus eget condimentum rhoncus, sem quam semper libero,{' '}
-                <em className="k-u-style-italic">sit amet adipiscing</em> sem
-                neque sed ipsum.
-              </p>
-              <p className="k-u-margin-none">
-                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                tell
-              </p>
-              <p className="k-u-margin-none">
-                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                tell
-              </p>
-              <p className="k-u-margin-none">
-                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                tell
-              </p>
-            </BackingCard.Description>
-            <BackingCard.TagList>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">5</strong> contributeurs
-              </Tag>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">2/6</strong> disponibles
-              </Tag>
-            </BackingCard.TagList>
-            <BackingCard.Button>Je soutiens</BackingCard.Button>
-          </BackingCard>
-        </GridCol>
-      </Grid>
-    </Container>
+    <div className="story-Container story-Grid">
+      <BackingCard
+        disabled={boolean('Disabled', false)}
+        hasBorder={boolean('Has border', true)}
+      >
+        <BackingCard.Image>
+          <img src="/kitten.jpg" alt="" />
+        </BackingCard.Image>
+        <BackingCard.HeadingTag icon="star" text="Star reward" />
+        <BackingCard.Title>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+        </BackingCard.Title>
+        <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+        <BackingCard.Info
+          legend="Prix de livraison&nbsp;:"
+          value="5&nbsp;€ (en France)"
+        />
+        <BackingCard.Info
+          legend="Livraison estimée&nbsp;:"
+          value="Janvier 2022"
+        />
+        <BackingCard.Description
+          moreButtonText="See more…"
+          truncateText={boolean('Truncate text', false)}
+        >
+          <p className="k-u-margin-none">
+            <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+            tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+            <em className="k-u-style-italic">sit amet adipiscing</em> sem neque
+            sed ipsum.
+          </p>
+          <p className="k-u-margin-none">
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+          <p className="k-u-margin-none">
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+          <p className="k-u-margin-none">
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+        </BackingCard.Description>
+        <BackingCard.TagList>
+          <Tag as="li">
+            <strong className="k-u-weight-regular">5</strong> contributeurs
+          </Tag>
+          <Tag as="li">
+            <strong className="k-u-weight-regular">2/6</strong> disponibles
+          </Tag>
+        </BackingCard.TagList>
+        <BackingCard.Button>Je soutiens</BackingCard.Button>
+      </BackingCard>
+    </div>
   )
 }
 
 export const Video = () => {
   return (
-    <Container className="k-u-margin-vertical-quadruple">
-      <Grid>
-        <GridCol col="6" col-l="3">
-          <BackingCard
-            disabled={boolean('Disabled', false)}
-            hasBorder={boolean('Has border', true)}
-          >
-            <BackingCard.Image>
-              <GifVideo poster="/kitten.jpg">
-                <source
-                  src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm"
-                  type="video/webm"
-                />
-                <source
-                  src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4"
-                  type="video/mp4"
-                />
-              </GifVideo>
-            </BackingCard.Image>
-            <BackingCard.HeadingTag icon="star" text="Star reward" />
-            <BackingCard.Title>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-            </BackingCard.Title>
-            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-            <BackingCard.Info
-              legend="Prix de livraison&nbsp;:"
-              value="5&nbsp;€ (en France)"
+    <div className="story-Container story-Grid">
+      <BackingCard
+        disabled={boolean('Disabled', false)}
+        hasBorder={boolean('Has border', true)}
+      >
+        <BackingCard.Image>
+          <GifVideo poster="/kitten.jpg">
+            <source
+              src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm"
+              type="video/webm"
             />
-            <BackingCard.Info
-              legend="Livraison estimée&nbsp;:"
-              value="Janvier 2022"
+            <source
+              src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4"
+              type="video/mp4"
             />
-            <BackingCard.Description
-              moreButtonText="See more…"
-              truncateText={boolean('Truncate text', false)}
-            >
-              <p className="k-u-margin-none">
-                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-                tellus eget condimentum rhoncus, sem quam semper libero,{' '}
-                <em className="k-u-style-italic">sit amet adipiscing</em> sem
-                neque sed ipsum.
-              </p>
-              <p className="k-u-margin-none">
-                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                tell
-              </p>
-              <p className="k-u-margin-none">
-                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                tell
-              </p>
-              <p className="k-u-margin-none">
-                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                tell
-              </p>
-            </BackingCard.Description>
-            <BackingCard.TagList>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">5</strong> contributeurs
-              </Tag>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">2/6</strong> disponibles
-              </Tag>
-            </BackingCard.TagList>
-            <BackingCard.Button>Je soutiens</BackingCard.Button>
-          </BackingCard>
-        </GridCol>
-      </Grid>
-    </Container>
+          </GifVideo>
+        </BackingCard.Image>
+        <BackingCard.HeadingTag icon="star" text="Star reward" />
+        <BackingCard.Title>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+        </BackingCard.Title>
+        <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+        <BackingCard.Info
+          legend="Prix de livraison&nbsp;:"
+          value="5&nbsp;€ (en France)"
+        />
+        <BackingCard.Info
+          legend="Livraison estimée&nbsp;:"
+          value="Janvier 2022"
+        />
+        <BackingCard.Description
+          moreButtonText="See more…"
+          truncateText={boolean('Truncate text', false)}
+        >
+          <p className="k-u-margin-none">
+            <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+            tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+            <em className="k-u-style-italic">sit amet adipiscing</em> sem neque
+            sed ipsum.
+          </p>
+          <p className="k-u-margin-none">
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+          <p className="k-u-margin-none">
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+          <p className="k-u-margin-none">
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+        </BackingCard.Description>
+        <BackingCard.TagList>
+          <Tag as="li">
+            <strong className="k-u-weight-regular">5</strong> contributeurs
+          </Tag>
+          <Tag as="li">
+            <strong className="k-u-weight-regular">2/6</strong> disponibles
+          </Tag>
+        </BackingCard.TagList>
+        <BackingCard.Button>Je soutiens</BackingCard.Button>
+      </BackingCard>
+    </div>
   )
 }
 
@@ -197,11 +180,11 @@ export const InACarouselComponent = () => {
 
   return (
     <StyledCarouselContainer>
-      <Container>
+      <div className="story-Container">
         <Title tag="h2" modifier="senary" className="k-u-margin-bottom-double">
           Choisissez votre contrepartie
         </Title>
-      </Container>
+      </div>
 
       <Carousel
         itemMinWidth={itemMinWidth}

@@ -1,21 +1,10 @@
 import React from 'react'
 import { select, boolean } from '@storybook/addon-knobs'
 import { HeaderMenu } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
 import { LendopolisLogo } from '../../logos/lendopolis-logo'
 
 const StoryGrid = ({ children }) => (
-  <Container>
-    <Grid>
-      <GridCol col="3">
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
-  </Container>
+  <div className="story-Container story-Grid">{children}</div>
 )
 
 export default {

@@ -1,8 +1,5 @@
 import React from 'react'
 import { optionsKnob, text, boolean } from '@storybook/addon-knobs'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
 import { Autocomplete } from './index'
 import { Field } from '../../form/field'
 import { LocationIcon } from '../../icons/location-icon'
@@ -128,15 +125,9 @@ const items = [
 ]
 
 const StoryGrid = ({ children }) => (
-  <Container>
-    <Grid>
-      <GridCol col-l="3">
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
-  </Container>
+  <div className="story-Container story-Grid">
+    <div>{children}</div>
+  </div>
 )
 
 export const Default = () => (

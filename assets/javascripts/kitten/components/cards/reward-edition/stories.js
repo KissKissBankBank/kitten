@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { boolean } from '@storybook/addon-knobs'
 import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
 import { Text } from '../../../components/typography/text'
 import { ButtonGroup } from '../../../components/buttons/button-group'
 import { Button } from '../../../components/buttons/button/button'
@@ -10,22 +9,13 @@ import { Field } from '../../../components/form/field'
 import { ArrowContainer } from '../../../components/layout/arrow-container'
 import { BulletList } from '../../../components/lists/bullet-list'
 import { ExpandBoard } from '../../../components/expandable/expand-board'
-import { Grid, GridCol } from '../../grid/grid'
 import { RewardEdition } from './index'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { EditIcon } from '../../../components/icons/edit-icon'
 
 const StoryContainer = ({ children }) => (
-  <Container>
-    <Grid>
-      <GridCol col="6">
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
-  </Container>
+  <div className="story-Container story-Grid">{children}</div>
 )
 
 const borderWidth = pxToRem(1)

@@ -4,12 +4,14 @@ import { CounterBlock } from '../../../components/meters/counter-block'
 
 export const Default = () => {
   return (
-    <CounterBlock
-      title={text('Title', 'Total validated amount')}
-      subTitle={text('Sub Title', 'collected since Novembre 19th 2014')}
-      counter={text('Counter', '52 982 287')}
-      unit={text('Unit', '€')}
-    />
+    <div className="story-Container">
+      <CounterBlock
+        title={text('Title', 'Total validated amount')}
+        subTitle={text('Sub Title', 'collected since Novembre 19th 2014')}
+        counter={text('Counter', '52 982 287')}
+        unit={text('Unit', '€')}
+      />
+    </div>
   )
 }
 

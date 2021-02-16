@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import styled, { css, createGlobalStyle } from 'styled-components'
 import { select } from '@storybook/addon-knobs'
 import { ListTable } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
@@ -16,11 +14,7 @@ import {
 } from '../../../constants/grid-config'
 
 const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      {children}
-    </Marger>
-  </Container>
+  <div className="story-Container">{children}</div>
 )
 
 const ListTableStyles = createGlobalStyle`

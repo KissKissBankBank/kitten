@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container } from '../../grid/container'
 import { Triptych } from './index'
 import { VerticalCardWithAction } from '../../cards/vertical-card-with-action'
 import { Title } from '../../typography/title'
@@ -13,7 +12,7 @@ export default {
 }
 
 export const Default = () => (
-  <Container>
+  <div className="story-Container">
     <Triptych
       title={
         <Title tag="h2" modifier="secondary" margin={false}>
@@ -53,5 +52,5 @@ export const Default = () => (
         />
       }
     />
-  </Container>
+  </div>
 )

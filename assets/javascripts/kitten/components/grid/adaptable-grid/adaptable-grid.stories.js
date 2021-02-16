@@ -1,10 +1,9 @@
 import React from 'react'
 import { text } from '@storybook/addon-knobs'
 import { AdaptableGrid, AdaptableGridCol } from './index'
-import { Container } from '../../../components/grid/container'
 
 export const Default = () => (
-  <Container>
+  <div className="story-Container">
     <AdaptableGrid colNumber={10} as={text('Container tag', 'div')}>
       <AdaptableGridCol
         as={text('First child tag', 'div')}
@@ -30,5 +29,5 @@ export const Default = () => (
         </div>
       </AdaptableGridCol>
     </AdaptableGrid>
-  </Container>
+  </div>
 )

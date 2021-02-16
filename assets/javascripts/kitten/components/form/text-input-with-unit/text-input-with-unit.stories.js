@@ -3,7 +3,7 @@ import { boolean, text, number, select } from '@storybook/addon-knobs'
 import { TextInputWithUnit } from './index'
 
 export const Default = () => (
-  <div className="k-u-margin-vertical-quadruple k-u-margin-horizontal-auto">
+  <div className="story-Container story-Grid story-Grid--large">
     <TextInputWithUnit
       valid={boolean('Valid', false)}
       disabled={boolean('Disabled', false)}

@@ -2,7 +2,6 @@ import React from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { Checkbox } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
 
 export default {
   component: Checkbox,
@@ -13,8 +12,8 @@ export default {
 }
 
 export const Default = () => (
-  <Grid>
-    <GridCol offset="1" col="8">
+  <div className="story-Container story-Grid">
+    <div>
       <Checkbox
         onLabelClick={action('label-click')}
         indeterminate={boolean('indeterminate', false)}
@@ -24,8 +23,6 @@ export const Default = () => (
       >
         {text('text', 'Checkbox Label')}
       </Checkbox>
-    </GridCol>
-    <GridCol offset="1" col="8">
       <Checkbox
         id="checkbox_id_2"
         indeterminate={boolean('indeterminate', false)}
@@ -34,13 +31,13 @@ export const Default = () => (
       >
         This label has a <a href="#link">link</a>.
       </Checkbox>
-    </GridCol>
-  </Grid>
+    </div>
+  </div>
 )
 
 export const WithContent = () => (
-  <Grid>
-    <GridCol offset="1" col="8">
+  <div className="story-Container story-Grid story-Grid--large">
+    <div>
       <Checkbox
         indeterminate={boolean('indeterminate', false)}
         id={text('id', 'checkbox_id')}
@@ -90,6 +87,6 @@ export const WithContent = () => (
         commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
         elit.
       </Checkbox>
-    </GridCol>
-  </Grid>
+    </div>
+  </div>
 )

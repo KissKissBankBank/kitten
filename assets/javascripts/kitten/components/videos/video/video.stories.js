@@ -1,7 +1,5 @@
 import React from 'react'
 import { text, number, boolean } from '@storybook/addon-knobs'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { Video } from './index'
 import { Loader } from '../../loaders/loader'
@@ -29,17 +27,15 @@ export const Default = () => (
 
 Default.decorators = [
   Story => (
-    <Marger top="3" bottom="3">
-      <Container>
-        <Grid>
-          <GridCol
-            col={number('Grid number', 3)}
-            style={{ height: number('Height', 400) }}
-          >
-            <Story />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
+    <div className="story-Container">
+      <Grid>
+        <GridCol
+          col={number('Grid number', 3)}
+          style={{ height: number('Height', 400) }}
+        >
+          <Story />
+        </GridCol>
+      </Grid>
+    </div>
   ),
 ]

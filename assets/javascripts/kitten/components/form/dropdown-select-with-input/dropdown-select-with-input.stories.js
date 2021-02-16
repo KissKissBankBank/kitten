@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { text, boolean, number } from '@storybook/addon-knobs'
 import { DropdownSelectWithInput } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
 
 import { FacebookIcon } from '../../../components/icons/facebook-icon'
 import { TwitterIcon } from '../../../components/icons/twitter-icon'
@@ -55,8 +54,8 @@ export const Default = () => {
   const [labelProps, setLabelProps] = useState(null)
 
   return (
-    <Grid>
-      <GridCol offset="1" col="8">
+    <div className="story-Container story-Grid">
+      <div>
         <DropdownSelectWithInput
           id={text('id', 'dropdown-select')}
           error={boolean('error', false)}
@@ -87,15 +86,15 @@ export const Default = () => {
               </li>
             ))}
         </ul>
-      </GridCol>
-    </Grid>
+      </div>
+    </div>
   )
 }
 
 export const DeactivatedDropdown = () => {
   return (
-    <Grid>
-      <GridCol offset="1" col="8">
+    <div className="story-Container story-Grid">
+      <div>
         <DropdownSelectWithInput
           id={text('id', 'dropdown-select')}
           error={boolean('error', false)}
@@ -144,7 +143,7 @@ export const DeactivatedDropdown = () => {
           menuZIndex={number('menuZIndex', 1000)}
           hideIconOnMobile={boolean('hideIconOnMobile', false)}
         />
-      </GridCol>
-    </Grid>
+      </div>
+    </div>
   )
 }

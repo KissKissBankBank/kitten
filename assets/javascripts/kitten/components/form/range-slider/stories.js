@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
 import { number, select } from '@storybook/addon-knobs'
 import { RangeSlider } from './index'
 
-const Container = styled.div`
-  max-width: 300px;
-  margin: 30px auto;
-`
+const Container = props => (
+  <div {...props} className="story-Container story-Grid story-Grid--large" />
+)
 
 export default {
   title: 'Form/RangeSlider',

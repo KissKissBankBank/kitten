@@ -1,11 +1,10 @@
 import React from 'react'
 import { DocLinkBox } from './index'
 import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
 import { text, boolean } from '@storybook/addon-knobs'
 
 export const Default = () => (
-  <Container>
+  <div className="story-Container story-Grid story-Grid--large">
     <Marger top="5" bottom="5">
       <DocLinkBox
         isExternal={boolean('isExternal', true)}
@@ -17,5 +16,5 @@ export const Default = () => (
         )}
       />
     </Marger>
-  </Container>
+  </div>
 )

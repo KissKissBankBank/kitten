@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import { boolean, select } from '@storybook/addon-knobs'
 import { SelectWithState } from './index'
 
@@ -61,10 +60,9 @@ const autoFill = {
   Name: 'name',
 }
 
-const Container = styled.div`
-  max-width: 300px;
-  margin: 30px auto;
-`
+const Container = props => (
+  <div {...props} className="story-Container story-Grid story-Grid--large" />
+)
 
 const onChange = value => console.warn('Selected value', value)
 

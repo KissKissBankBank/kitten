@@ -1,16 +1,10 @@
 import React from 'react'
 import { boolean, select } from '@storybook/addon-knobs'
 import { Accordeon } from './index'
-import { Marger } from '../layout/marger'
-import { Container } from '../grid/container'
 import { SelectWithState } from '../form/select-with-state'
 
 const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      {children}
-    </Marger>
-  </Container>
+  <div className="story-Container story-Grid story-Grid--large">{children}</div>
 )
 
 export default {

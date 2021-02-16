@@ -1,15 +1,9 @@
-import { Container } from '../grid/container'
-import { Marger } from '../..'
 import React from 'react'
 import { text, boolean } from '@storybook/addon-knobs'
 import { TextCopy } from './index'
 
 const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      {children}
-    </Marger>
-  </Container>
+  <div className="story-Container story-Grid story-Grid--large">{children}</div>
 )
 
 export default {

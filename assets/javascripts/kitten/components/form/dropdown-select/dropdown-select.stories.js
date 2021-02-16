@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { text, boolean, select, number } from '@storybook/addon-knobs'
 import { DropdownSelect } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
 import { ArrowIcon } from '../../icons/arrow-icon'
 import { Text } from '../../typography/text'
 
@@ -39,8 +38,8 @@ export const Default = () => {
   const [labelProps, setLabelProps] = useState(null)
 
   return (
-    <Grid>
-      <GridCol offset="1" col="8">
+    <div className="story-Container story-Grid story-Grid--large">
+      <div>
         <DropdownSelect
           id={text('id', 'dropdown-select')}
           error={boolean('error', false)}
@@ -79,94 +78,90 @@ export const Default = () => {
               </li>
             ))}
         </ul>
-      </GridCol>
-    </Grid>
+      </div>
+    </div>
   )
 }
 
 export const WithDuplicateValue = () => {
   return (
-    <Grid>
-      <GridCol offset="1" col="8">
-        <DropdownSelect
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={boolean('hide label?', false)}
-          combobox={true}
-          labelText={text('LabelText', 'label')}
-          options={[
-            { value: 'france', label: 'France' },
-            { value: 'france', label: 'France' },
-            { value: 'irlande', label: 'Irlande' },
-          ]}
-          size={select(
-            'size',
-            ['tiny', 'normal', 'big', 'huge', 'giant'],
-            'normal',
-          )}
-          variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
-          defaultSelectedValue="focus"
-          comboboxButtonLabelText={text('Buton aria-label', 'label')}
-          noResultText={text('No results text', 'No results')}
-          uniqLabelOnSearch={boolean('uniqLabelOnSearch', false)}
-          menuZIndex={number('menuZIndex', 1000)}
-        />
-      </GridCol>
-    </Grid>
+    <div className="story-Container story-Grid story-Grid--large">
+      <DropdownSelect
+        id={text('id', 'dropdown-select')}
+        error={boolean('error', false)}
+        valid={boolean('valid', false)}
+        disabled={boolean('disabled', false)}
+        hideLabel={boolean('hide label?', false)}
+        combobox={true}
+        labelText={text('LabelText', 'label')}
+        options={[
+          { value: 'france', label: 'France' },
+          { value: 'france', label: 'France' },
+          { value: 'irlande', label: 'Irlande' },
+        ]}
+        size={select(
+          'size',
+          ['tiny', 'normal', 'big', 'huge', 'giant'],
+          'normal',
+        )}
+        variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
+        defaultSelectedValue="focus"
+        comboboxButtonLabelText={text('Buton aria-label', 'label')}
+        noResultText={text('No results text', 'No results')}
+        uniqLabelOnSearch={boolean('uniqLabelOnSearch', false)}
+        menuZIndex={number('menuZIndex', 1000)}
+      />
+    </div>
   )
 }
 
 export const WithComponentsForLabel = () => {
   return (
-    <Grid>
-      <GridCol offset="1" col="8">
-        <DropdownSelect
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={boolean('hide label?', false)}
-          combobox={true}
-          labelText={text('LabelText', 'label')}
-          options={[
-            {
-              value: 'France',
-              searchableLabel: 'France',
-              label: (
-                <>
-                  <ArrowIcon direction="left" />
-                  <Text weight="bold">Un titre de la France</Text>
-                  Une explication du label
-                </>
-              ),
-            },
-            {
-              value: 'Espagne',
-              searchableLabel: 'Espagne',
-              label: (
-                <>
-                  <ArrowIcon direction="left" />
-                  <Text weight="bold">Un titre de l'Espagne</Text>
-                  Une explication du label
-                </>
-              ),
-            },
-          ]}
-          size={select(
-            'size',
-            ['tiny', 'normal', 'big', 'huge', 'giant'],
-            'normal',
-          )}
-          variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
-          defaultSelectedValue="focus"
-          comboboxButtonLabelText={text('Buton aria-label', 'label')}
-          noResultText={text('No results text', 'No results')}
-          uniqLabelOnSearch={boolean('uniqLabelOnSearch', false)}
-          menuZIndex={number('menuZIndex', 1000)}
-        />
-      </GridCol>
-    </Grid>
+    <div className="story-Container story-Grid story-Grid--large">
+      <DropdownSelect
+        id={text('id', 'dropdown-select')}
+        error={boolean('error', false)}
+        valid={boolean('valid', false)}
+        disabled={boolean('disabled', false)}
+        hideLabel={boolean('hide label?', false)}
+        combobox={true}
+        labelText={text('LabelText', 'label')}
+        options={[
+          {
+            value: 'France',
+            searchableLabel: 'France',
+            label: (
+              <>
+                <ArrowIcon direction="left" />
+                <Text weight="bold">Un titre de la France</Text>
+                Une explication du label
+              </>
+            ),
+          },
+          {
+            value: 'Espagne',
+            searchableLabel: 'Espagne',
+            label: (
+              <>
+                <ArrowIcon direction="left" />
+                <Text weight="bold">Un titre de l'Espagne</Text>
+                Une explication du label
+              </>
+            ),
+          },
+        ]}
+        size={select(
+          'size',
+          ['tiny', 'normal', 'big', 'huge', 'giant'],
+          'normal',
+        )}
+        variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
+        defaultSelectedValue="focus"
+        comboboxButtonLabelText={text('Buton aria-label', 'label')}
+        noResultText={text('No results text', 'No results')}
+        uniqLabelOnSearch={boolean('uniqLabelOnSearch', false)}
+        menuZIndex={number('menuZIndex', 1000)}
+      />
+    </div>
   )
 }

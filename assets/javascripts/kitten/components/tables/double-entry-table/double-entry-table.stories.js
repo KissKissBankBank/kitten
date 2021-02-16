@@ -1,9 +1,8 @@
 import React from 'react'
 import { DoubleEntryTable } from './index'
-import { Container } from '../../grid/container'
 
 export const Default = () => (
-  <Container className="k-u-margin-top-decuple k-u-margin-bottom-decuple">
+  <div className="story-Container">
     <DoubleEntryTable id="TestDoubleEntryTable">
       <DoubleEntryTable.Header className="customHeaderClass">
         <DoubleEntryTable.HeaderCol>Header 0</DoubleEntryTable.HeaderCol>
@@ -121,5 +120,5 @@ export const Default = () => (
         </DoubleEntryTable.Row>
       </DoubleEntryTable.Body>
     </DoubleEntryTable>
-  </Container>
+  </div>
 )

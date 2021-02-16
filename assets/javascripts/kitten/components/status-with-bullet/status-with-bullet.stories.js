@@ -1,7 +1,6 @@
 import React from 'react'
 import { text, select } from '@storybook/addon-knobs'
 import { StatusWithBullet } from './index'
-import { Grid, GridCol } from '../../components/grid/grid'
 
 export const Default = () => (
   <StatusWithBullet
@@ -12,10 +11,8 @@ export const Default = () => (
 
 Default.decorators = [
   Story => (
-    <Grid style={{ marginTop: '5em' }}>
-      <GridCol offset="1" col="8">
-        <Story />
-      </GridCol>
-    </Grid>
+    <div className="story-Container story-Grid">
+      <Story />
+    </div>
   ),
 ]

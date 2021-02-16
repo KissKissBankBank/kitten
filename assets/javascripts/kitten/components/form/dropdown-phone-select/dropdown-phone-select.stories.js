@@ -1,7 +1,6 @@
 import React from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { DropdownPhoneSelect } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
 import flagFile from 'icons/flags.png'
 
 export default {
@@ -14,8 +13,8 @@ export default {
 
 export const Default = () => {
   return (
-    <Grid>
-      <GridCol offset-l="1" col-l="8">
+    <div className="story-Container story-Grid">
+      <div>
         <DropdownPhoneSelect
           id={text('id', 'dropdown-select')}
           error={boolean('error', false)}
@@ -50,43 +49,41 @@ export const Default = () => {
           penatibus et magnis dis parturient montes, nascetur ridiculus mus.
           Etiam porta sem malesuada magna mollis euismod.
         </p>
-      </GridCol>
-    </Grid>
+      </div>
+    </div>
   )
 }
 
 export const WithoutValues = () => {
   return (
-    <Grid>
-      <GridCol offset-l="1" col-l="8">
-        <DropdownPhoneSelect
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={boolean('hide label?', false)}
-          labelText={text('LabelText', 'label')}
-          resetOnBackspace
-          highlightOptionBox
-          placeholder={text('placeholder', 'Téléphone')}
-          phoneProps={{
-            preferredCountries: [
-              'fr',
-              'be',
-              'lu',
-              're',
-              'gp',
-              'mq',
-              'pf',
-              'nc',
-              'gf',
-              'yt',
-            ],
-          }}
-          locale={select('locale', ['fr', 'en', 'nl'], 'fr')}
-          flagsUrl={flagFile}
-        />
-      </GridCol>
-    </Grid>
+    <div className="story-Container story-Grid">
+      <DropdownPhoneSelect
+        id={text('id', 'dropdown-select')}
+        error={boolean('error', false)}
+        valid={boolean('valid', false)}
+        disabled={boolean('disabled', false)}
+        hideLabel={boolean('hide label?', false)}
+        labelText={text('LabelText', 'label')}
+        resetOnBackspace
+        highlightOptionBox
+        placeholder={text('placeholder', 'Téléphone')}
+        phoneProps={{
+          preferredCountries: [
+            'fr',
+            'be',
+            'lu',
+            're',
+            'gp',
+            'mq',
+            'pf',
+            'nc',
+            'gf',
+            'yt',
+          ],
+        }}
+        locale={select('locale', ['fr', 'en', 'nl'], 'fr')}
+        flagsUrl={flagFile}
+      />
+    </div>
   )
 }

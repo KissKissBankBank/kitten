@@ -21,13 +21,15 @@ const modifierOptions = {
 }
 
 export const Default = () => (
-  <HorizontalStroke
-    size={select('Size', sizeOptions, 'default')}
-    modifier={select('Modifier', modifierOptions)}
-    customSize={{
-      width: number('Width', null),
-      height: number('Height', null),
-    }}
-    style={object('Style object', { backgroundColor: '#333' })}
-  />
+  <div className="story-Container story-Grid">
+    <HorizontalStroke
+      size={select('Size', sizeOptions, 'default')}
+      modifier={select('Modifier', modifierOptions)}
+      customSize={{
+        width: number('Width', null),
+        height: number('Height', null),
+      }}
+      style={object('Style object', { backgroundColor: '#333' })}
+    />
+  </div>
 )

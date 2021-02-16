@@ -1,20 +1,9 @@
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
 import { ButtonGroup } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
 
 const StoryContainer = ({ children }) => (
-  <Container>
-    <Grid>
-      <GridCol>
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
-  </Container>
+  <div className="story-Container">{children}</div>
 )
 
 export const Default = () => (

@@ -61,15 +61,9 @@ export const WithText = () => (
 
 WithText.decorators = [
   Story => (
-    <Marger top="4" bottom="4">
-      <Container>
-        <Grid>
-          <GridCol>
-            <Story />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
+    <div className="story-Container">
+      <Story />
+    </div>
   ),
 ]
 

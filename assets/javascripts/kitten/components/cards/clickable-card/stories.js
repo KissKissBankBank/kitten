@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import { text, number, select, color, boolean } from '@storybook/addon-knobs'
 import { ClickableCard } from './index'
-import { Container } from '../../../components/grid/container'
 import { Text } from '../../../components/typography/text'
 import COLORS from '../../../constants/colors-config'
-import { Grid, GridCol } from '../../grid/grid'
 
 export default {
   component: Default,
@@ -15,11 +13,7 @@ export default {
 }
 
 const StoryContainer = ({ children }) => (
-  <Container className="k-u-margin-top-quintuple k-u-margin-bottom-quintuple">
-    <Grid>
-      <GridCol col-m="6">{children}</GridCol>
-    </Grid>
-  </Container>
+  <div className="story-Container story-Grid">{children}</div>
 )
 
 export const Default = () => {

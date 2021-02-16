@@ -10,7 +10,7 @@ export default {
 
 export const Default = () => {
   return (
-    <div className="k-u-margin-vertical-octuple k-u-margin-horizontal-quadruple">
+    <div className="story-Container">
       <Toggletip
         actionLabel="Sample label"
         id="Toggletip-demo"
@@ -26,7 +26,7 @@ export const Default = () => {
 }
 
 export const MultipleToggletips = () => (
-  <div className="k-u-margin-vertical-quadruple k-u-margin-horizontal-quadruple">
+  <div className="story-Container">
     <div className="k-u-margin-bottom-quadruple">
       <Toggletip
         actionLabel="Sample label"

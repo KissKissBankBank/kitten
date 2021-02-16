@@ -8,15 +8,17 @@ const versionOptions = {
 }
 
 export const Default = () => (
-  <TextInputWithUnitForm
-    inputId={text('Id', '')}
-    inputLabel={text('Label', '')}
-    inputUnit={text('Unit', '€')}
-    inputIsOnError={boolean('Error?', false)}
-    errorMessage={text('Error', 'Error message…')}
-    buttonLabel={text('Button', 'To contribute')}
-    align={text('Align', 'center')}
-    formIsDisabled={boolean('Disabled?', false)}
-    version={select('Version', versionOptions, 'default')}
-  />
+  <div className="story-Container story-Grid story-Grid--large">
+    <TextInputWithUnitForm
+      inputId={text('Id', '')}
+      inputLabel={text('Label', '')}
+      inputUnit={text('Unit', '€')}
+      inputIsOnError={boolean('Error?', false)}
+      errorMessage={text('Error', 'Error message…')}
+      buttonLabel={text('Button', 'To contribute')}
+      align={text('Align', 'center')}
+      formIsDisabled={boolean('Disabled?', false)}
+      version={select('Version', versionOptions, 'default')}
+    />
+  </div>
 )

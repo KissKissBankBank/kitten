@@ -1,4 +1,3 @@
-import { Container } from '../../grid/container'
 import { Text } from '../../typography/text'
 import React from 'react'
 import { select } from '@storybook/addon-knobs'
@@ -11,7 +10,7 @@ export default {
 
 export const Default = () => {
   return (
-    <Container className="k-u-margin-vertical-quadruple">
+    <div className="story-Container">
       <Tag
         type={select(
           'Type',
@@ -21,6 +20,6 @@ export const Default = () => {
       >
         <Text weight="bold">5</Text> Contributeurs
       </Tag>
-    </Container>
+    </div>
   )
 }

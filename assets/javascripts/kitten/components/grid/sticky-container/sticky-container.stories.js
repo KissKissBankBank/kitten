@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import { StickyContainer } from './index'
-import { Container } from '../../../components/grid/container'
 import COLORS from '../../../constants/colors-config'
 import { createRangeFromZeroTo } from '../../../helpers/utils/range'
 
@@ -17,7 +16,7 @@ const BlockContent = () => {
 }
 
 export const AlwaysSticky = () => (
-  <Container>
+  <div className="story-Container">
     <div
       style={{
         minHeight: '1200px',
@@ -37,14 +36,14 @@ export const AlwaysSticky = () => (
       </StickyContainer>
       <BlockContent />
     </div>
-  </Container>
+  </div>
 )
 
 export const StickyTopOnScrollUp = () => {
   const component = useRef(null)
 
   return (
-    <Container>
+    <div className="story-Container">
       <div
         style={{
           minHeight: '1200px',
@@ -78,12 +77,12 @@ export const StickyTopOnScrollUp = () => {
           Unstik me!
         </button>
       </div>
-    </Container>
+    </div>
   )
 }
 
 export const StickyBottomOnScrollDown = () => (
-  <Container>
+  <div className="story-Container">
     <div
       style={{
         minHeight: '1200px',
@@ -103,5 +102,5 @@ export const StickyBottomOnScrollDown = () => (
       </StickyContainer>
       <BlockContent />
     </div>
-  </Container>
+  </div>
 )

@@ -2,7 +2,6 @@ import React from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { RadioButton } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
 
 export default {
   component: RadioButton,
@@ -13,8 +12,8 @@ export default {
 }
 
 export const Default = () => (
-  <Grid>
-    <GridCol offset="1" col="8">
+  <div className="story-Container story-Grid story-Grid--large">
+    <div>
       <RadioButton
         id="test_1"
         name="test"
@@ -75,6 +74,6 @@ export const Default = () => (
       >
         {text('Content', '')}
       </RadioButton>
-    </GridCol>
-  </Grid>
+    </div>
+  </div>
 )

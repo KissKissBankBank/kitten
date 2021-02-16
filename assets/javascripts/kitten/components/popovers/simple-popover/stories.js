@@ -1,15 +1,9 @@
 import React, { useState } from 'react'
 import { SimplePopover } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
 import { Button } from '../../../components/buttons/button/button'
 
 const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="10" style={{ marginLeft: 60 }}>
-      {children}
-    </Marger>
-  </Container>
+  <div className="story-Container story-Grid story-Grid--large">{children}</div>
 )
 
 export default {

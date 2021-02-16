@@ -9,10 +9,12 @@ const variantOptions = {
 }
 
 export const Default = () => (
-  <TextInputWithIcon
-    disabled={boolean('Disabled', false)}
-    placeholder={text('Placeholder', 'Les props sont transmises')}
-    variant={select('Variant', variantOptions, 'andromeda')}
-    icon={<SearchIcon aria-label="Search icon" width="15" height="15" />}
-  />
+  <div className="story-Container story-Grid story-Grid--large">
+    <TextInputWithIcon
+      disabled={boolean('Disabled', false)}
+      placeholder={text('Placeholder', 'Les props sont transmises')}
+      variant={select('Variant', variantOptions, 'andromeda')}
+      icon={<SearchIcon aria-label="Search icon" width="15" height="15" />}
+    />
+  </div>
 )

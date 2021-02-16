@@ -1,12 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
 import { AvatarWithTextAndBadge } from './index'
 import { text, color } from '@storybook/addon-knobs'
 import { Text } from '../../../components/typography/text'
-
-const Container = styled.div`
-  padding: 20px;
-`
 
 export default {
   title: 'Avatar/AvatarWithTextAndBadge',
@@ -14,7 +9,7 @@ export default {
 }
 
 export const WithAvatar = args => (
-  <Container>
+  <div className="story-Container">
     <AvatarWithTextAndBadge {...args}>
       <AvatarWithTextAndBadge.Image
         src={text('Image src', 'https://via.placeholder.com/40x40.png')}
@@ -37,11 +32,11 @@ export const WithAvatar = args => (
         />
       </AvatarWithTextAndBadge.Text>
     </AvatarWithTextAndBadge>
-  </Container>
+  </div>
 )
 
 export const WithText = args => (
-  <Container>
+  <div className="story-Container">
     <AvatarWithTextAndBadge {...args}>
       <AvatarWithTextAndBadge.Image
         text={text('', 'JC')}
@@ -71,5 +66,5 @@ export const WithText = args => (
         </Text>
       </AvatarWithTextAndBadge.Text>
     </AvatarWithTextAndBadge>
-  </Container>
+  </div>
 )
