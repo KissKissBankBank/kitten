@@ -118,7 +118,7 @@ const StyledCheckbox = styled.div`
   }
 
   .k-Form-Checkbox__content {
-    flex: 1 0 100%;
+    flex: 1 1 100%;
     margin: ${pxToRem(5)} 0 0 ${pxToRem(20 + 10)};
   }
 `
