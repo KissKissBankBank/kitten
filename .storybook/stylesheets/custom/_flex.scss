@@ -2,13 +2,13 @@
   &.show-flex{
     .k-u-flex,
     .k-u-inlineFlex {
-      height: 150px;
-      padding: 4px;
-      border: 1px solid k-map-fetch($k-colors, 'primary-4');
+      height: k-px-to-rem(150px);
+      padding: k-px-to-rem(4px);
+      border: k-px-to-rem(1px) solid k-map-fetch($k-colors, 'primary-4');
 
       & > * {
         margin: 0;
-        border: 1px solid k-map-fetch($k-colors, 'primary-1');
+        border: k-px-to-rem(1px) solid k-map-fetch($k-colors, 'primary-1');
       }
     }
   }
