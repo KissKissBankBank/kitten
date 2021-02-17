@@ -2,7 +2,7 @@
 
 exports[`<Title /> by default matches with snapshot 1`] = `
 <h1
-  className="sc-bdVaJa iFNvYH"
+  className="sc-bdVaJa jztvjI"
   style={
     Object {
       "--Title-css-color": "#555",

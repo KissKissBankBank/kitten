@@ -10,6 +10,8 @@ const StyledTitle = styled.span`
   --Title-css-color: ${COLORS.font1};
 
   ${TYPOGRAPHY.fontStyles.bold};
+
+  color: ${COLORS.font1}; /* IE11 */
   color: var(--Title-css-color);
 
   &.k-Title--margin {
