@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix: Fix init and resize coords calculation on `Toggletip`.
+
 ## [2.120.0] - 2020-02-12
 
 Feature:
