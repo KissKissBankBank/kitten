@@ -53,7 +53,6 @@ var LinkBox = function LinkBox(_ref) {
   }, props.children, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-LinkBox__arrow"
   }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-    version: "solid",
     height: "10",
     width: "10"
   }))));
