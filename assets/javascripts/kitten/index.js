@@ -151,6 +151,7 @@ export { ImageWithCaption } from './components/images/image-with-caption'
 
 // Layout
 export { ArrowContainer } from './components/layout/arrow-container'
+export { DashboardLayout } from './components/layout/dashboard-layout'
 export { IconContainer } from './components/layout/icon-container'
 export { HorizontalStroke } from './components/layout/horizontal-stroke'
 export { Line } from './components/layout/line'
