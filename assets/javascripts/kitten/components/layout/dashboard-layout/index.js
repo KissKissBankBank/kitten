@@ -97,7 +97,7 @@ const StyledDashboard = styled.div`
           flex: 0 0 ${pxToRem(40)};
           width: ${pxToRem(40)};
           height: ${pxToRem(40)};
-          background-color: #2d2d2d;
+          background-color: ${COLORS.line3};
           border-radius: ${pxToRem(6)};
           display: flex;
           align-items: center;
@@ -131,7 +131,7 @@ const StyledDashboard = styled.div`
           align-items: center;
 
           background-color: ${COLORS.font1};
-          border-left: ${pxToRem(2)} solid #2d2d2d;
+          border-left: ${pxToRem(2)} solid ${COLORS.line3};
 
           > * {
             align-self: initial;
