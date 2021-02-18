@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `DashboardLayout` component.
 - Feature: Add `DashboardMenu` component.
+- Feature: Add icons components:
+  - `HomeIcon`
+  - `TagIcon`
+  - `FileIcon`
+  - `LoudspeakerIcon`
+  - `ShieldIcon`.
 
 ## [2.120.0] - 2020-02-12
 
