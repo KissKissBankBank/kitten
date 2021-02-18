@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `DashboardLayout` component.
+- Feature: Add `DashboardMenu` component.
 
 ## [2.120.0] - 2020-02-12
 

@@ -181,6 +181,7 @@ export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph'
 export { Loader } from './components/loaders/loader'
 
 // Menus
+export { DashboardMenu } from './components/menus/dashboard-menu'
 export { HeaderMenu } from './components/menus/header-menu'
 
 // Meters
