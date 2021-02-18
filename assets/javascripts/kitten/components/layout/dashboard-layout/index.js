@@ -51,6 +51,7 @@ const StyledDashboard = styled.div`
 
   @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
     overflow: hidden;
+    position: relative;
 
     .k-DashboardLayout {
       --DashboardLayout-main-margin: calc(
@@ -229,7 +230,7 @@ const StyledDashboard = styled.div`
           gap: ${pxToRem(15)};
           color: ${COLORS.background1};
           transition: color .2s ease;
-          ${TYPOGRAPHY.fontStyles.bold}
+          ${TYPOGRAPHY.fontStyles.regular}
           font-size: ${stepToRem(-1)};
           line-height: 1.2;
           text-decoration: none;
@@ -283,8 +284,6 @@ const StyledDashboard = styled.div`
     position: absolute;
     top: 0;
     left: -100%;
-    display: inline-flex;
-    align-items: center;
     z-index: 110;
     padding: ${pxToRem(20)} ${pxToRem(30)};
     color: ${COLORS.background1};
