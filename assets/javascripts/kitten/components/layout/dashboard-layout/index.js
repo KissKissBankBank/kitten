@@ -4,7 +4,6 @@ import classNames from 'classnames'
 
 import {
   NUM_COLUMNS,
-  CONTAINER_MAX_WIDTH,
   GUTTER,
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
@@ -19,13 +18,10 @@ import { getMinQuery } from '../../../helpers/utils/media-queries'
 import { BurgerIcon } from '../../../components/icons/burger-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 
-const ALL_COLS = `(var(--DashboardLayout-width) - ${pxToRem(
+const ALL_COLS = `(100vw - ${pxToRem(
   2 * CONTAINER_PADDING + (NUM_COLUMNS - 1) * GUTTER,
 )})`
 const ONE_COL = `(${ALL_COLS} / ${NUM_COLUMNS})`
-const THREE_COLS_PLUS_GUTTER = `(${ALL_COLS} / 4 + ${pxToRem(
-  3 * GUTTER + CONTAINER_PADDING,
-)})`
 const SIX_COLS = `(${ALL_COLS} / 2 + ${pxToRem(
   5 * GUTTER + CONTAINER_PADDING,
 )})`
@@ -38,7 +34,6 @@ const StyledDashboard = styled.div`
   }
 
   .k-DashboardLayout {
-    --DashboardLayout-width: 100vw;
     min-height: 100vh;
     display: grid;
 
@@ -213,9 +208,7 @@ const StyledDashboard = styled.div`
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     .k-DashboardLayout {
-      --DashboardLayout-three-cols: calc(${THREE_COLS_PLUS_GUTTER});
-
-      grid-template-columns: var(--DashboardLayout-three-cols) 1fr;
+      grid-template-columns: 25% 1fr;
 
       .k-DashboardLayout__sideWrapper {
         display: flex;
@@ -226,16 +219,7 @@ const StyledDashboard = styled.div`
         bottom: 0;
         overflow: scroll;
         gap: ${pxToRem(30)};
-        padding-top: ${pxToRem(30)};
-        padding-bottom: ${pxToRem(30)};
-
-        .k-DashboardLayout__backLink,
-        .k-DashboardLayout__heading,
-        .k-DashboardLayout__navigation,
-        .k-DashboardLayout__footer {
-          margin-left: ${pxToRem(CONTAINER_PADDING)};
-          margin-right: ${pxToRem(30)};
-        }
+        padding: ${pxToRem(30)};
 
         .k-DashboardLayout__backLink {
           flex: 0 0 auto;
@@ -280,8 +264,8 @@ const StyledDashboard = styled.div`
           padding-bottom: ${pxToRem(80)};
 
           > *:not(.k-DashboardLayout__fullWidth) {
-            margin-left: calc(${ONE_COL} + ${pxToRem(GUTTER)});
-            margin-right: ${pxToRem(CONTAINER_PADDING)};
+            margin-left: 10%;
+            margin-right: 15%;
           }
         }
       }
@@ -289,34 +273,20 @@ const StyledDashboard = styled.div`
   }
 
   /* SUPER DESKTOP */
-
   @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
     .k-DashboardLayout {
-      --DashboardLayout-width: ${pxToRem(CONTAINER_MAX_WIDTH)};
-      --DashboardLayout-page-margin: calc(
-        (100vw - var(--DashboardLayout-width)) / 2
-      );
-      --DashboardLayout-three-cols: calc(
-        ${THREE_COLS_PLUS_GUTTER} + var(--DashboardLayout-page-margin)
-      );
-
-      .k-DashboardLayout__sideWrapper {
-        padding-left: var(--DashboardLayout-page-margin);
-      }
-
-      .k-DashboardLayout__mainWrapper {
-        .k-DashboardLayout__main {
-          > *:not(.k-DashboardLayout__fullWidth) {
-            margin-right: calc(
-              var(--DashboardLayout-page-margin) + ${pxToRem(CONTAINER_PADDING)}
-            );
-          }
-        }
-      }
+      grid-template-columns: ${pxToRem(385)} 1fr;
     }
   }
 
+
   /* FIX AvatarWithTextAndBadge */
+
+  .text--withEllipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
 
   .k-ButtonImageWithText__text {
     padding-top: 0;

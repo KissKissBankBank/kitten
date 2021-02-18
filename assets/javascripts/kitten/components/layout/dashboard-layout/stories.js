@@ -78,7 +78,7 @@ export const Default = () => (
           height={pxToRem(60)}
         />
 
-        <AvatarWithTextAndBadge.Text>
+        <AvatarWithTextAndBadge.Text withEllipsisOverflow={true}>
           <Text lineHeight="normal" weight="regular" color="background1">
             T-shirts brodés Free Boobs Club
           </Text>
