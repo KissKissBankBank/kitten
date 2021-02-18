@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
 
@@ -10,8 +10,14 @@ import {
   CONTAINER_PADDING,
 } from '../../../constants/grid-config'
 import COLORS from '../../../constants/colors-config'
+import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { useMedia } from '../../../helpers/utils/use-media-query'
+import { getMinQuery } from '../../../helpers/utils/media-queries'
+
+import { BurgerIcon } from '../../../components/icons/burger-icon'
+import { ArrowIcon } from '../../../components/icons/arrow-icon'
 
 const ALL_COLS = `(var(--DashboardLayout-width) - ${pxToRem(
   2 * CONTAINER_PADDING + (NUM_COLUMNS - 1) * GUTTER,
@@ -36,13 +42,20 @@ const StyledDashboard = styled.div`
     min-height: 100vh;
     display: grid;
 
-    .k-DashboardLayout__sideBar {
+    .k-DashboardLayout__sideWrapper {
       background-color: ${COLORS.font1};
     }
   }
 
+  .k-DashboardLayout__backLink:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
+
+  /* TABLET + MOBILE */
+
   @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-    overflow-x: hidden;
+    overflow: hidden;
 
     .k-DashboardLayout {
       --DashboardLayout-main-margin: calc(
@@ -54,33 +67,114 @@ const StyledDashboard = styled.div`
       transform: translateX(calc(-1 * ${SIX_COLS} - ${pxToRem(2)}));
       transition: transform 0.3s ease-in-out;
 
-      &.k-DashboardLayout--isOpen {
-        transform: none;
-        transition: transform 0.3s ease-in-out;
+      .k-DashboardLayout__heading__button__text,
+      .k-DashboardLayout__backLink__text {
+        clip: rect(0 0 0 0);
+        clip-path: inset(100%);
+        height: ${pxToRem(1)};
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: ${pxToRem(1)};
       }
 
-      .k-DashboardLayout__sideBar {
+      &.k-DashboardLayout--isOpen {
+        position: fixed;
+        transform: none;
+        transition: transform 0.3s ease-in-out;
+
+        .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before {
+          opacity: .8;
+          background-color: ${COLORS.font1};
+          pointer-events: all;
+        }
+      }
+
+      .k-DashboardLayout__sideWrapper {
+        height: 100vh;
+        overflow-y: scroll;
         padding: ${pxToRem(30)};
+        display: flex;
+        flex-direction: column;
+        gap: ${pxToRem(30)};
+
+        .k-DashboardLayout__backLink {
+          flex: 0 0 ${pxToRem(40)};
+          width: ${pxToRem(40)};
+          height: ${pxToRem(40)};
+          background-color: #2d2d2d;
+          border-radius: ${pxToRem(6)};
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background-color .2s ease;
+        }
 
         .k-DashboardLayout__heading {
           display: none;
         }
+        .k-DashboardLayout__navigation {
+          flex: 1 1 100%;
+        }
+        .k-DashboardLayout__footer {
+          flex: 0 1 auto;
+        }
       }
 
-      .k-DashboardLayout__mainBar {
+      .k-DashboardLayout__mainWrapper {
         width: calc(100vw + ${pxToRem(2)});
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
 
         .k-DashboardLayout__heading {
-          padding: ${pxToRem(15)} ${pxToRem(CONTAINER_PADDING)};
+          padding-left: ${pxToRem(CONTAINER_PADDING)};
+          padding-right: ${pxToRem(CONTAINER_PADDING)};
           height: ${pxToRem(80)};
+          flex: 0 0 ${pxToRem(80)};
+          display: flex;
+          align-items: center;
+
           background-color: ${COLORS.font1};
-          border-left: ${pxToRem(2)} solid ${COLORS.font2};
+          border-left: ${pxToRem(2)} solid #2d2d2d;
+
+          > * {
+            align-self: initial;
+          }
+        }
+
+        .k-DashboardLayout__heading__buttonWrapper {
+          flex: 0 0 ${pxToRem(12 + 12 * 2)};
+          margin-left: ${pxToRem(-12)};
+          margin-right: ${pxToRem(12)};
+        }
+
+        .k-DashboardLayout__heading__button {
+          padding: ${pxToRem(12)};
         }
 
         .k-DashboardLayout__main {
+          position: relative;
           margin-left: ${pxToRem(2)};
+          flex: 1 0 auto;
+          padding-top: ${pxToRem(80)};
+          padding-bottom: ${pxToRem(80)};
 
-          *:not(.k-DashboardLayout__fullWidth) {
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: ${pxToRem(-2)};
+            right: 0;
+            bottom: 0;
+            background-color: ${COLORS.background1};
+            opacity: 0;
+            pointer-events: none;
+            z-index: 100;
+            transition: background-color .2s ease-in-out, opacity .2s ease-in-out;
+          }
+
+          > *:not(.k-DashboardLayout__fullWidth) {
             margin-left: var(--DashboardLayout-main-margin);
             margin-right: var(--DashboardLayout-main-margin);
           }
@@ -88,6 +182,8 @@ const StyledDashboard = styled.div`
       }
     }
   }
+
+  /* MOBILE */
 
   @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
     .k-DashboardLayout {
@@ -98,16 +194,22 @@ const StyledDashboard = styled.div`
         );
       transform: translateX(calc(-100vw + ${pxToRem(50 - 2)}));
 
-      .k-DashboardLayout__sideBar {
+      .k-DashboardLayout__sideWrapper {
         padding: ${pxToRem(20)};
       }
-      .k-DashboardLayout__mainBar {
+      .k-DashboardLayout__mainWrapper {
         .k-DashboardLayout__heading {
-          padding: ${pxToRem(15)} ${pxToRem(CONTAINER_PADDING_THIN)};
+          padding-left: ${pxToRem(CONTAINER_PADDING_THIN)};
+          padding-right: ${pxToRem(CONTAINER_PADDING_THIN)};
+        }
+        .k-DashboardLayout__main {
+          padding-top: ${pxToRem(50)};
         }
       }
     }
   }
+
+  /* DESKTOP */
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     .k-DashboardLayout {
@@ -115,19 +217,46 @@ const StyledDashboard = styled.div`
 
       grid-template-columns: var(--DashboardLayout-three-cols) 1fr;
 
-      .k-DashboardLayout__sideBar {
+      .k-DashboardLayout__sideWrapper {
         display: flex;
         flex-direction: column;
         height: 100vh;
         position: sticky;
         top: 0;
+        bottom: 0;
         overflow: scroll;
+        gap: ${pxToRem(30)};
+        padding-top: ${pxToRem(30)};
+        padding-bottom: ${pxToRem(30)};
 
+        .k-DashboardLayout__backLink,
         .k-DashboardLayout__heading,
         .k-DashboardLayout__navigation,
         .k-DashboardLayout__footer {
           margin-left: ${pxToRem(CONTAINER_PADDING)};
-          margin-right: ${pxToRem(GUTTER)};
+          margin-right: ${pxToRem(30)};
+        }
+
+        .k-DashboardLayout__backLink {
+          flex: 0 0 auto;
+          align-self: start;
+          display: inline-flex;
+          align-items: center;
+          gap: ${pxToRem(15)};
+          color: ${COLORS.background1};
+          transition: color .2s ease;
+          ${TYPOGRAPHY.fontStyles.bold}
+          font-size: ${stepToRem(-1)};
+          line-height: 1.2;
+          text-decoration: none;
+
+          svg {
+            fill: currentColor;
+          }
+
+          &:hover {
+            color: ${COLORS.primary1};
+          }
         }
 
         .k-DashboardLayout__heading {
@@ -141,13 +270,16 @@ const StyledDashboard = styled.div`
         }
       }
 
-      .k-DashboardLayout__mainBar {
+      .k-DashboardLayout__mainWrapper {
         .k-DashboardLayout__heading {
           display: none;
         }
 
         .k-DashboardLayout__main {
-          *:not(.k-DashboardLayout__fullWidth) {
+          padding-top: ${pxToRem(80)};
+          padding-bottom: ${pxToRem(80)};
+
+          > *:not(.k-DashboardLayout__fullWidth) {
             margin-left: calc(${ONE_COL} + ${pxToRem(GUTTER)});
             margin-right: ${pxToRem(CONTAINER_PADDING)};
           }
@@ -156,33 +288,87 @@ const StyledDashboard = styled.div`
     }
   }
 
+  /* SUPER DESKTOP */
+
   @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
-    --DashboardLayout-width: ${pxToRem(CONTAINER_MAX_WIDTH)};
-    --DashboardLayout-page-margin: calc(
-      (100vw - var(--DashboardLayout-width)) / 2
-    );
-    --DashboardLayout-three-cols: calc(
-      ${THREE_COLS_PLUS_GUTTER} + var(--DashboardLayout-page-margin)
-    );
+    .k-DashboardLayout {
+      --DashboardLayout-width: ${pxToRem(CONTAINER_MAX_WIDTH)};
+      --DashboardLayout-page-margin: calc(
+        (100vw - var(--DashboardLayout-width)) / 2
+      );
+      --DashboardLayout-three-cols: calc(
+        ${THREE_COLS_PLUS_GUTTER} + var(--DashboardLayout-page-margin)
+      );
 
-    .k-DashboardLayout__sideBar {
-      padding-left: var(--DashboardLayout-page-margin);
-    }
+      .k-DashboardLayout__sideWrapper {
+        padding-left: var(--DashboardLayout-page-margin);
+      }
 
-    .k-DashboardLayout__mainBar {
-      .k-DashboardLayout__main {
-        *:not(.k-DashboardLayout__fullWidth) {
-          margin-right: calc(
-            var(--DashboardLayout-page-margin) + ${pxToRem(CONTAINER_PADDING)}
-          );
+      .k-DashboardLayout__mainWrapper {
+        .k-DashboardLayout__main {
+          > *:not(.k-DashboardLayout__fullWidth) {
+            margin-right: calc(
+              var(--DashboardLayout-page-margin) + ${pxToRem(CONTAINER_PADDING)}
+            );
+          }
         }
       }
     }
   }
+
+  /* FIX AvatarWithTextAndBadge */
+
+  .k-ButtonImageWithText__text {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 `
 
-export const DashboardLayout = props => {
+export const DashboardLayout = ({
+  children,
+  backLinkProps,
+  buttonProps,
+  ...props
+}) => {
   const [isOpen, setOpen] = useState(false)
+  const sideBarElement = useRef(null)
+  const contentElement = useRef(null)
+
+  const isDesktop = useMedia({
+    queries: [getMinQuery(ScreenConfig.L.min)],
+    values: [true],
+    defaultValue: false,
+  })
+
+  useEffect(() => {
+    if (isOpen && sideBarElement && contentElement) {
+      sideBarElement.current.focus()
+
+      window.addEventListener('keydown', handleKeyDown)
+      contentElement.current.addEventListener('click', handleMainClick)
+
+      return () => {
+        window.removeEventListener('keydown', handleKeyDown)
+        contentElement.current.removeEventListener('click', handleMainClick)
+      }
+    }
+  }, [isOpen, sideBarElement, contentElement])
+
+  const handleButtonClick = () => {
+    setOpen(current => {
+      return !current
+    })
+  }
+
+  const handleKeyDown = event => {
+    if (event.key === 'Escape') {
+      setOpen(false)
+    }
+  }
+
+  const handleMainClick = () => {
+    setOpen(false)
+  }
 
   return (
     <StyledDashboard className="k-DashboardLayout__wrapper">
@@ -191,111 +377,127 @@ export const DashboardLayout = props => {
           'k-DashboardLayout--isOpen': isOpen,
         })}
       >
-        <div className="k-DashboardLayout__sideBar">
-          <header className="k-DashboardLayout__heading">
-            <p className="k-u-color-background1">Heading</p>
-          </header>
-          <section className="k-DashboardLayout__navigation">
-            <ul>
-              <li className="k-u-color-background1">1</li>
-              <li className="k-u-color-background1">2</li>
-              <li className="k-u-color-background1">3</li>
-              <li className="k-u-color-background1">4</li>
-            </ul>
-          </section>
-          <footer className="k-DashboardLayout__footer">
-            <p className="k-u-color-background1">Help?</p>
-          </footer>
+        <div
+          ref={sideBarElement}
+          tabIndex={0}
+          className="k-DashboardLayout__sideWrapper"
+          aria-hidden={isDesktop ? null : !isOpen}
+        >
+          <a
+            {...backLinkProps}
+            className={classNames(
+              'k-DashboardLayout__backLink',
+              backLinkProps.className,
+            )}
+          >
+            <ArrowIcon
+              direction="left"
+              color={COLORS.background1}
+              version="solid"
+            />
+            <span className="k-DashboardLayout__backLink__text">
+              {backLinkProps.children}
+            </span>
+          </a>
+          {React.Children.map(children, child => {
+            if (!child) return null
+            return child.type.name !== 'Header' ? null : child
+          })}
+
+          {React.Children.map(children, child => {
+            if (!child) return null
+            return child.type.name !== 'SideContent' ? null : child
+          })}
+
+          {React.Children.map(children, child => {
+            if (!child) return null
+            return child.type.name !== 'SideFooter' ? null : child
+          })}
         </div>
-        <div className="k-DashboardLayout__mainBar">
-          <header className="k-DashboardLayout__heading">
-            <button
-              onClick={() => {
-                setOpen(current => {
-                  return !current
+        <div className="k-DashboardLayout__mainWrapper">
+          {React.Children.map(children, child => {
+            if (!child) return null
+            return child.type.name !== 'Header'
+              ? null
+              : React.cloneElement(child, {
+                  isOpen,
+                  hasButton: true,
+                  buttonProps: {
+                    ...buttonProps,
+                    onClick: handleButtonClick,
+                    'aria-expanded': isOpen,
+                  },
                 })
-              }}
-            >
-              ->
-            </button>
-            <p className="k-u-color-background1">Heading</p>
-          </header>
-          <section className="k-DashboardLayout__main">
-            <p>
-              Donec id elit non mi porta gravida at eget metus. Morbi leo risus,
-              porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Curabitur blandit tempus
-              porttitor. Maecenas sed diam eget risus varius blandit sit amet
-              non magna. Cras mattis consectetur purus sit amet fermentum.
-            </p>
-            <p>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
-              eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque
-              ornare sem lacinia quam venenatis vestibulum. Fusce dapibus,
-              tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-              fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Morbi leo risus, porta ac consectetur
-              ac, vestibulum at eros. Aenean lacinia bibendum nulla sed
-              consectetur.
-            </p>
-            <p>
-              Integer posuere erat a ante venenatis dapibus posuere velit
-              aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-              venenatis vestibulum. Sed posuere consectetur est at lobortis.
-              Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus
-              mollis interdum. Sed posuere consectetur est at lobortis.
-            </p>
-            <p className="k-DashboardLayout__fullWidth">
-              Donec id elit non mi porta gravida at eget metus. Morbi leo risus,
-              porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Curabitur blandit tempus
-              porttitor. Maecenas sed diam eget risus varius blandit sit amet
-              non magna. Cras mattis consectetur purus sit amet fermentum.
-            </p>
-            <p className="k-DashboardLayout__fullWidth">
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
-              eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque
-              ornare sem lacinia quam venenatis vestibulum. Fusce dapibus,
-              tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-              fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Morbi leo risus, porta ac consectetur
-              ac, vestibulum at eros. Aenean lacinia bibendum nulla sed
-              consectetur.
-            </p>
-            <p>
-              Integer posuere erat a ante venenatis dapibus posuere velit
-              aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-              venenatis vestibulum. Sed posuere consectetur est at lobortis.
-              Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus
-              mollis interdum. Sed posuere consectetur est at lobortis.
-            </p>
-            <p>
-              Donec id elit non mi porta gravida at eget metus. Morbi leo risus,
-              porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Curabitur blandit tempus
-              porttitor. Maecenas sed diam eget risus varius blandit sit amet
-              non magna. Cras mattis consectetur purus sit amet fermentum.
-            </p>
-            <p>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
-              eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque
-              ornare sem lacinia quam venenatis vestibulum. Fusce dapibus,
-              tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-              fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Morbi leo risus, porta ac consectetur
-              ac, vestibulum at eros. Aenean lacinia bibendum nulla sed
-              consectetur.
-            </p>
-            <p>
-              Integer posuere erat a ante venenatis dapibus posuere velit
-              aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-              venenatis vestibulum. Sed posuere consectetur est at lobortis.
-              Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus
-              mollis interdum. Sed posuere consectetur est at lobortis.
-            </p>
+          })}
+
+          <section ref={contentElement} className="k-DashboardLayout__main">
+            {React.Children.map(children, child => {
+              if (!child) return null
+              return ['Header', 'SideContent', 'SideFooter'].includes(
+                child.type.name,
+              )
+                ? null
+                : child
+            })}
           </section>
         </div>
       </div>
     </StyledDashboard>
   )
 }
+
+const Header = ({
+  className,
+  hasButton,
+  buttonProps,
+  children,
+  isOpen,
+  ...props
+}) => {
+  const { openLabel, closeLabel, ...otherButtonProps } = buttonProps || {}
+
+  return (
+    <header
+      className={classNames('k-DashboardLayout__heading', className)}
+      {...props}
+    >
+      {hasButton && buttonProps && (
+        <div className="k-DashboardLayout__heading__buttonWrapper">
+          <button
+            {...otherButtonProps}
+            className={classNames(
+              'k-DashboardLayout__heading__button',
+              'k-u-reset-button',
+              buttonProps.className,
+            )}
+          >
+            <BurgerIcon isActive={isOpen} mainColor={COLORS.background1} />
+            <span className="k-DashboardLayout__heading__button__text">
+              {isOpen ? closeLabel : openLabel}
+            </span>
+          </button>
+        </div>
+      )}
+
+      {children}
+    </header>
+  )
+}
+
+const SideContent = ({ className, ...props }) => (
+  <section
+    className={classNames('k-DashboardLayout__navigation', className)}
+    {...props}
+  />
+)
+
+const SideFooter = ({ className, ...props }) => (
+  <footer
+    className={classNames('k-DashboardLayout__footer', className)}
+    {...props}
+  />
+)
+
+DashboardLayout.Header = Header
+DashboardLayout.SideContent = SideContent
+DashboardLayout.SideFooter = SideFooter
