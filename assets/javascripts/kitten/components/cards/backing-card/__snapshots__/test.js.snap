@@ -36,7 +36,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
     className="k-BackingCard__gridWrapper"
   >
     <span
-      className="sc-EHOje hGIGkH k-Tag k-BackingCard__headingTag k-BackingCard__drawer k-Tag--info"
+      className="sc-EHOje ckZRuJ k-Tag k-BackingCard__headingTag k-BackingCard__drawer k-Tag--info"
     >
       <svg
         fill="#222"
@@ -128,7 +128,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
       className="k-BackingCard__tagList k-BackingCard__drawer"
     >
       <li
-        className="sc-EHOje hGIGkH k-Tag k-Tag--info"
+        className="sc-EHOje ckZRuJ k-Tag k-Tag--info"
       >
         <strong
           className="k-u-weight-regular"
@@ -138,7 +138,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
          contributeurs
       </li>
       <li
-        className="sc-EHOje hGIGkH k-Tag k-Tag--info"
+        className="sc-EHOje ckZRuJ k-Tag k-Tag--info"
       >
         <strong
           className="k-u-weight-regular"

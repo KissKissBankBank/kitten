@@ -34,7 +34,6 @@ export var Item = function Item(_ref) {
     "aria-current": isSelected ? 'page' : null
   }), children, external && /*#__PURE__*/React.createElement(ArrowIcon, {
     className: "k-HeaderMenu__item__arrow headerMenuArrowIcon",
-    version: "solid",
     direction: "right"
   })));
 };
