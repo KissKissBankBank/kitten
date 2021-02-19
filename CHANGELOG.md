@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: Remove `k-Alert` SCSS mixin.
+- Breaking change: Delete deprecated `RewardCard` (replaced by `BackingCard`).
 - Feature: Add `parseHtml` to ESM build.
 
 ## [3.0.0-beta.2] - 2021-02-15
