@@ -4,7 +4,6 @@ import {
   FieldInputExample,
   FieldPasswordExample,
   FieldRadioButtonSetExample,
-  FieldSelectExample,
   FieldAutocompleteExample,
 } from './field.examples'
 import { Marger } from '../../layout/marger'

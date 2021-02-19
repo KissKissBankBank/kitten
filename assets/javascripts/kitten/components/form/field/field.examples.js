@@ -107,34 +107,6 @@ export const FieldRadioButtonSetExample = ({
   </FieldBase>
 )
 
-export const FieldSelectExample = ({
-  id,
-  label,
-  tooltip,
-  tooltipId,
-  placeholder,
-  options,
-  error,
-  errorMessage,
-}) => (
-  <FieldBase
-    id={id}
-    label={label}
-    tooltip={tooltip}
-    tooltipId={tooltipId}
-    error={error}
-    errorMessage={errorMessage}
-  >
-    <Field.Select
-      id={id}
-      name="select"
-      placeholder={placeholder}
-      options={options}
-      error={error}
-    />
-  </FieldBase>
-)
-
 export const FieldAutocompleteExample = ({
   id,
   label,
