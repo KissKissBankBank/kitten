@@ -9,20 +9,20 @@ describe('<LinkList />', () => {
   describe('default', () => {
     beforeEach(() => {
       component = renderer
-      .create(
-        <LinkList
-          color="dark"
-          itemMargin="double"
-          weight="regular"
-          margin
-          items={[
-            { key: '1', item: 'Item 1', href: "#", active: true },
-            { key: '2', item: 'Item 2', href: "#" },
-            { key: '3', item: 'Item 3', href: "#" },
-          ]}
-        />
-      )
-      .toJSON()
+        .create(
+          <LinkList
+            color="dark"
+            itemMargin="double"
+            weight="regular"
+            margin
+            items={[
+              { key: '1', item: 'Item 1', href: '#', active: true },
+              { key: '2', item: 'Item 2', href: '#' },
+              { key: '3', item: 'Item 3', href: '#' },
+            ]}
+          />,
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {

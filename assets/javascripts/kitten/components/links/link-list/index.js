@@ -19,7 +19,7 @@ const StyledLinkList = styled.ul`
   &.k-LinkList--withoutMargin {
     margin-top: 0;
     margin-bottom: 0;
-  
+
     .k-LinkList__item:last-child {
       margin-bottom: 0;
     }
@@ -32,46 +32,46 @@ const StyledLinkList = styled.ul`
   .k-LinkList__item--double {
     margin-bottom: ${pxToRem(10)};
   }
-  
+
   .k-LinkList__item--triple {
     margin-bottom: ${pxToRem(15)};
   }
-  
+
   .k-LinkList__link {
     ${TYPOGRAPHY.fontStyles.regular};
     font-size: ${stepToRem(-1)};
     text-decoration: none;
-  
+
     &:active,
     &.k-LinkList__link--isActive {
-     color: ${COLORS.primary3};
+      color: ${COLORS.primary3};
     }
-  
+
     &:hover {
       color: ${COLORS.primary1};
     }
-  
-    transition: color .2s;
+
+    transition: color 0.2s;
   }
-  
+
   .k-LinkList__item--regular,
   .k-LinkList__link--regular {
     ${TYPOGRAPHY.fontStyles.regular};
   }
-  
+
   .k-LinkList__item--light,
   .k-LinkList__link--light {
     ${TYPOGRAPHY.fontStyles.light};
   }
-  
+
   .k-LinkList__link--normalLineHeight {
     line-height: normal;
   }
-  
+
   .k-LinkList__link--light {
     color: ${COLORS.background1};
   }
-  
+
   .k-LinkList__link--dark {
     color: ${COLORS.font1};
   }
@@ -89,21 +89,19 @@ export const LinkList = ({
   active,
   ...others
 }) => {
-
   return (
     <StyledLinkList
       {...others}
-      className={classNames(
-        'k-LinkList',
-        others.className,
-        {'k-LinkList--withoutMargin': !margin}
-      )}
+      className={classNames('k-LinkList', others.className, {
+        'k-LinkList--withoutMargin': !margin,
+      })}
     >
       {items.map(({ item, key, href, active }) => (
-        <li className={classNames(
-          'k-LinkList__item',
-          `k-LinkList__item--${itemMargin}`,   
-        )}
+        <li
+          className={classNames(
+            'k-LinkList__item',
+            `k-LinkList__item--${itemMargin}`,
+          )}
           key={key}
         >
           <a
@@ -140,7 +138,7 @@ LinkList.propTypes = {
       weight: PropTypes.string,
       active: PropTypes.bool,
     }),
-  )
+  ),
 }
 
 LinkList.defaultProps = {

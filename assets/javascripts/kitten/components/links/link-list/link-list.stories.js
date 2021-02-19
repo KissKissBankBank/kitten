@@ -31,9 +31,9 @@ export const SimpleList = () => {
       weight={select('Weight', weightOptions, 'regular')}
       margin={boolean('Margin', true)}
       items={[
-        { key: '1', item: 'Item 1', href: "#", active: true },
-        { key: '2', item: 'Item 2', href: "#" },
-        { key: '3', item: 'Item 3', href: "#" },
+        { key: '1', item: 'Item 1', href: '#', active: true },
+        { key: '2', item: 'Item 2', href: '#' },
+        { key: '3', item: 'Item 3', href: '#' },
       ]}
     />
   )
@@ -44,7 +44,10 @@ export const WithBackgroundDark = () => {
     <Grid>
       <GridCol
         col="3"
-        className={select('Color', colorOptions, 'light') && 'has-overrides dark-background'}
+        className={
+          select('Color', colorOptions, 'light') &&
+          'has-overrides dark-background'
+        }
       >
         <LinkList
           color={select('Color', colorOptions, 'light')}
@@ -52,9 +55,9 @@ export const WithBackgroundDark = () => {
           weight={select('weight', weightOptions, 'regular')}
           margin={boolean('Margin', true)}
           items={[
-            { key: '1', item: 'Item 1', href:"#", active: true },
-            { key: '2', item: 'Item 2', href:"#" },
-            { key: '3', item: 'Item 3', href:"#", weight: "light" },
+            { key: '1', item: 'Item 1', href: '#', active: true },
+            { key: '2', item: 'Item 2', href: '#' },
+            { key: '3', item: 'Item 3', href: '#', weight: 'light' },
           ]}
         />
       </GridCol>

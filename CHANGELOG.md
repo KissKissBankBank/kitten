@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove old `NavTabCarousel`.
 - Breaking change: Delete deprecated `RewardCard` (replaced by `BackingCard`).
 - Feature: Add `parseHtml` to ESM build.
 - Breaking change: Migrate `HeaderNav` and remove `k-HeaderNav` styles.
