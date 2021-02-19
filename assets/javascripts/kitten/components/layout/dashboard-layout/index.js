@@ -302,6 +302,7 @@ export const DashboardLayout = ({
   ...props
 }) => {
   const [isOpen, setOpen] = useState(false)
+  const [touchCoords, setTouchCoords] = useState([])
   const sideBarElement = useRef(null)
   const contentElement = useRef(null)
 
@@ -309,8 +310,8 @@ export const DashboardLayout = ({
     isFunction(child?.props?.children)
       ? React.cloneElement(child, {
           children: child.props.children({
-            openDashboardLayout: () => setOpen(true),
-            closeDashboardLayout: () => setOpen(false),
+            openSideBar: () => setOpen(true),
+            closeSideBar: () => setOpen(false),
           }),
         })
       : child
@@ -322,18 +323,49 @@ export const DashboardLayout = ({
   })
 
   useEffect(() => {
-    if (isOpen && sideBarElement && contentElement) {
-      sideBarElement.current.focus()
+    if (sideBarElement && contentElement) {
+      if (isOpen) {
+        sideBarElement.current.focus()
 
-      window.addEventListener('keydown', handleKeyDown)
-      contentElement.current.addEventListener('click', handleMainClick)
+        window.addEventListener('keydown', handleKeyDown)
+        contentElement.current.addEventListener('click', handleMainClick)
+        sideBarElement.current.addEventListener('touchstart', handleTouchStart)
+        sideBarElement.current.addEventListener('touchend', handleTouchEnd)
 
-      return () => {
-        window.removeEventListener('keydown', handleKeyDown)
-        contentElement.current.removeEventListener('click', handleMainClick)
+        return () => {
+          window.removeEventListener('keydown', handleKeyDown)
+          contentElement.current.removeEventListener('click', handleMainClick)
+          sideBarElement.current.removeEventListener(
+            'touchstart',
+            handleTouchStart,
+          )
+          sideBarElement.current.removeEventListener('touchend', handleTouchEnd)
+        }
+      }
+
+      if (!isOpen) {
+        contentElement.current.focus()
       }
     }
   }, [isOpen, sideBarElement, contentElement])
+
+  const handleTouchStart = event => {
+    setTouchCoords([event.touches[0].clientX])
+  }
+
+  const handleTouchEnd = event => {
+    setTouchCoords(current => [current[0], event.changedTouches[0].clientX])
+  }
+
+  useEffect(() => {
+    if (touchCoords[1] && touchCoords[0]) {
+      const distanceX = touchCoords[1] - touchCoords[0]
+
+      if (distanceX < -40) {
+        setOpen(false)
+      }
+    }
+  }, [touchCoords])
 
   const handleButtonClick = () => {
     setOpen(current => {
@@ -348,6 +380,7 @@ export const DashboardLayout = ({
   }
 
   const handleMainClick = () => {
+    event.stopPropagation()
     setOpen(false)
   }
 
@@ -397,7 +430,11 @@ export const DashboardLayout = ({
             return child.type.name !== 'SideFooter' ? null : child
           })}
         </div>
-        <div className="k-DashboardLayout__mainWrapper">
+        <div
+          ref={contentElement}
+          tabIndex={0}
+          className="k-DashboardLayout__mainWrapper"
+        >
           {React.Children.map(children, child => {
             if (!child) return null
             return child.type.name !== 'Header'
@@ -408,12 +445,12 @@ export const DashboardLayout = ({
                   buttonProps: {
                     ...buttonProps,
                     onClick: handleButtonClick,
-                    'aria-expanded': isOpen,
+                    'aria-expanded': isOpen ? isOpen : null,
                   },
                 })
           })}
 
-          <section ref={contentElement} className="k-DashboardLayout__main">
+          <section className="k-DashboardLayout__main">
             {React.Children.map(children, child => {
               if (!child) return null
               return ['Header', 'SideContent', 'SideFooter'].includes(

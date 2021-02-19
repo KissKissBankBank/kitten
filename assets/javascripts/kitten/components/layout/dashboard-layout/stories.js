@@ -103,13 +103,16 @@ export const Default = () => (
       </AvatarWithTextAndBadge>
     </DashboardLayout.Header>
     <DashboardLayout.SideContent>
-      {({ openDashboardLayout, closeDashboardLayout }) => {
-        console.warn(openDashboardLayout, closeDashboardLayout)
+      {({ closeSideBar }) => {
         return (
           <DashboardMenu>
             <DashboardMenu.Item
               href="#"
               icon={() => <HomeIcon color="currentColor" />}
+              onClick={e => {
+                e.preventDefault()
+                closeSideBar()
+              }}
             >
               Accueil
             </DashboardMenu.Item>
@@ -117,30 +120,50 @@ export const Default = () => (
               href="#"
               isActive
               icon={() => <TagIcon color="currentColor" />}
+              onClick={e => {
+                e.preventDefault()
+                closeSideBar()
+              }}
             >
               Contreparties
             </DashboardMenu.Item>
             <DashboardMenu.Item
               href="#"
               icon={() => <FilterIcon color="currentColor" />}
+              onClick={e => {
+                e.preventDefault()
+                closeSideBar()
+              }}
             >
               Paramètres
             </DashboardMenu.Item>
             <DashboardMenu.Item
               href="https://www.kisskissbankbank.com"
               icon={() => <FileIcon color="currentColor" />}
+              onClick={e => {
+                e.preventDefault()
+                closeSideBar()
+              }}
             >
               Page Projet
             </DashboardMenu.Item>
             <DashboardMenu.Item
               href="https://www.kisskissbankbank.com"
               icon={() => <LoudspeakerIcon color="currentColor" />}
+              onClick={e => {
+                e.preventDefault()
+                closeSideBar()
+              }}
             >
               Marketing
             </DashboardMenu.Item>
             <DashboardMenu.Expandable
               title="Admin"
               icon={() => <ShieldIcon color="currentColor" />}
+              onClick={e => {
+                e.preventDefault()
+                closeSideBar()
+              }}
             >
               <DashboardMenu.Item href="#">
                 Destinataire des fonds
