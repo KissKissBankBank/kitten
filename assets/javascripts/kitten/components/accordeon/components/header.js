@@ -23,7 +23,6 @@ export const Header = ({ id, children, index }) => {
       <span className="k-Accordeon__header__content">{children}</span>
       <span className="k-Accordeon__header__arrow">
         <ArrowIcon
-          version="solid"
           direction={selectedItem === index ? 'top' : 'bottom'}
           aria-hidden
         />

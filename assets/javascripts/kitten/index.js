@@ -156,7 +156,6 @@ export { VerticalStroke } from './components/layout/vertical-stroke'
 export { InfoLines } from './components/lines/info-lines'
 
 // Links
-export { ExternalRichLink } from './components/links/external-rich-link'
 export { LinkList } from './components/links/link-list'
 
 // Lists
@@ -165,7 +164,6 @@ export { BulletList } from './components/lists/bullet-list'
 export { List } from './components/lists/list'
 export { CheckList } from './components/lists/check-list'
 export { NavList } from './components/lists/nav-list'
-export { TagList } from './components/lists/tag-list'
 export { Timeline } from './components/lists/timeline'
 
 // Loaders
@@ -200,8 +198,6 @@ export { IconBadge } from './components/notifications/icon-badge'
 export { MarkdownPage } from './components/pages/markdown'
 
 // Popovers
-export { CallToActionPopover } from './components/popovers/call-to-action-popover'
-export { Popover } from './components/popovers/popover'
 export { SimplePopover } from './components/popovers/simple-popover'
 
 // Search
@@ -238,15 +234,12 @@ export { TextCopy } from './components/text-copy'
 // Tooltips
 export { QuestionMarkWithTooltip } from './components/tooltips/question-mark-with-tooltip'
 export { StaticTooltip } from './components/tooltips/static-tooltip'
+export { Toggletip } from './components/tooltips/toggletip'
 export { TooltipNew } from './components/tooltips/tooltip-new'
 export { Tooltip } from './components/tooltips/tooltip'
 
 // Tours
 export { HighlightHalo } from './components/tours/highlight-halo'
-export { HeaderTour } from './components/tours/header-tour'
-export { TourPopover } from './components/tours/tour-popover'
-export { TourStep } from './components/tours/tour-step'
-export { Tour } from './components/tours/tour'
 
 // Typography
 export { Paragraph } from './components/typography/paragraph'
@@ -395,5 +388,6 @@ export { default as useContinuousIntersectionObserver } from './helpers/utils/co
 export { default as useIntersectionObserver } from './helpers/utils/intersection-hook'
 export { default as useLazyObserver } from './helpers/utils/lazy-hook'
 export { default as margin } from './helpers/utils/margin'
+export { parseHtml } from './helpers/utils/parser'
 export { pxToRem, stepToRem } from './helpers/utils/typography'
 export { usePrevious } from './helpers/utils/use-previous-hook'
