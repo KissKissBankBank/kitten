@@ -51,6 +51,15 @@ const InnerUserMenu = () => (
   >
     <HeaderMenu.Item href="#">Mon espace personnel</HeaderMenu.Item>
     <HeaderMenu.Item href="#">Mes projets</HeaderMenu.Item>
+    <HeaderMenu.Item size="tiny" href="#">
+      Gluten Mag
+    </HeaderMenu.Item>
+    <HeaderMenu.Item size="tiny" href="#">
+      Kallix — Mobilier de bureau pour le télétravail
+    </HeaderMenu.Item>
+    <HeaderMenu.Item size="tiny" href="#">
+      Mon premier court-métrage
+    </HeaderMenu.Item>
     <HeaderMenu.Item href="#">Mes contributions</HeaderMenu.Item>
     <HeaderMenu.Item href="#">Mes messages</HeaderMenu.Item>
     <HeaderMenu.Item href="#">Modifier mon profil</HeaderMenu.Item>
