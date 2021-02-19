@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
+import isFunction from 'lodash/fp/isFunction'
 import classNames from 'classnames'
 
 import {
@@ -304,6 +305,16 @@ export const DashboardLayout = ({
   const sideBarElement = useRef(null)
   const contentElement = useRef(null)
 
+  const renderComponent = child =>
+    isFunction(child?.props?.children)
+      ? React.cloneElement(child, {
+          children: child.props.children({
+            openDashboardLayout: () => setOpen(true),
+            closeDashboardLayout: () => setOpen(false),
+          }),
+        })
+      : child
+
   const isDesktop = useMedia({
     queries: [getMinQuery(ScreenConfig.L.min)],
     values: [true],
@@ -376,7 +387,9 @@ export const DashboardLayout = ({
 
           {React.Children.map(children, child => {
             if (!child) return null
-            return child.type.name !== 'SideContent' ? null : child
+            return child.type.name !== 'SideContent'
+              ? null
+              : renderComponent(child)
           })}
 
           {React.Children.map(children, child => {
