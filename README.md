@@ -171,7 +171,7 @@ Once the pull request is accepted:
 - Run this command:
 
 ```sh
-bin/publish
+bin/publish with-storybook
 ```
 
 - Update

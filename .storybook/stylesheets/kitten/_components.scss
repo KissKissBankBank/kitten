@@ -39,10 +39,8 @@
 @include k-FormActions;
 @include k-FormComposer;
 @include k-FormInfo;
-@include k-FormRow;
 @include k-RadioButton;
 @include k-RadioButtonSet;
-@include k-SearchInput;
 
 @include k-Select;
 
@@ -112,10 +110,6 @@
 @include k-Cropper;
 @include k-ImageWithCaption;
 
-// Icons
-
-@include k-ArrowIcon;
-
 // Layout
 
 @include k-HorizontalStroke;
@@ -129,14 +123,9 @@
 
 @include k-InfoLines;
 
-// Links
-
-@include k-ExternalRichLink;
-
 // Lists
 
 @include k-BulletList;
-@include k-TagList;
 
 // Loaders
 
@@ -148,8 +137,6 @@
 @include k-Progress;
 
 // Navigation
-
-@include k-HeaderNav;
 
 @include k-HorizontalNav;
 
@@ -168,17 +155,12 @@
 
 // Notifications
 
-@include k-Alert;
 @include k-Badge;
 @include k-IconBadge;
 
 // Press
 
 @include k-PressQuotes;
-
-// Popover
-
-@include k-Popover;
 
 // Simulators
 
@@ -213,11 +195,6 @@
 @include k-Tooltip;
 @include k-TooltipNew;
 @include k-StaticTooltip;
-
-// Tours
-
-@include k-Tour;
-@include k-HeaderTour;
 
 // Typography
 
