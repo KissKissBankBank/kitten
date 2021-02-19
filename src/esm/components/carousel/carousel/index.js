@@ -251,7 +251,6 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         onClick: _this.goPrevPage,
         disabled: !loop && (currentPageIndex < 1 || numberOfPages < 1)
       }, /*#__PURE__*/React.createElement(VisuallyHidden, null, loop && (currentPageIndex < 1 || numberOfPages < 1) ? lastButtonText : prevButtonText), /*#__PURE__*/React.createElement(ArrowIcon, {
-        version: "solid",
         direction: "left",
         "aria-hidden": true
       })), /*#__PURE__*/React.createElement(Button, {
@@ -263,7 +262,6 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         onClick: _this.goNextPage,
         disabled: !loop && currentPageIndex >= numberOfPages - 1
       }, /*#__PURE__*/React.createElement(VisuallyHidden, null, loop && currentPageIndex >= numberOfPages - 1 ? firstButtonText : nextButtonText), /*#__PURE__*/React.createElement(ArrowIcon, {
-        version: "solid",
         direction: "right",
         "aria-hidden": true
       }))), showPageSquares && /*#__PURE__*/React.createElement("div", {
