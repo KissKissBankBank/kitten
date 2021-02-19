@@ -110,7 +110,6 @@ export { RadioButton } from './components/form/radio-button'
 export { RangeSlider } from './components/form/range-slider'
 export { RichTextInput } from './components/form/rich-text-input'
 export { SelectWithState } from './components/form/select-with-state'
-export { Slider } from './components/form/slider'
 export { Switch } from './components/form/switch'
 export { TextInputAndSelect } from './components/form/text-input-and-select'
 export { TextInputWithLimit } from './components/form/text-input-with-limit'
@@ -200,14 +199,6 @@ export { SimplePopover } from './components/popovers/simple-popover'
 
 // Search
 export { SearchInput } from './components/search/search-input'
-
-// Simulators
-export { LoanSimulator } from './components/simulators/loan-simulator'
-
-// Sliders
-export { SliderBar } from './components/sliders/slider-bar'
-export { SliderTooltip } from './components/sliders/slider-tooltip'
-export { SliderWithTooltipAndPower } from './components/sliders/slider-with-tooltip-and-power'
 
 // Status with Bullet
 export { StatusWithBullet } from './components/status-with-bullet'
