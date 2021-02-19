@@ -65,7 +65,6 @@ export var Navbar = /*#__PURE__*/function (_PureComponent) {
         },
         icon: true
       }, /*#__PURE__*/React.createElement(ArrowIcon, {
-        version: "solid",
         fill: iconColor,
         direction: "left",
         width: "8",
@@ -77,7 +76,6 @@ export var Navbar = /*#__PURE__*/function (_PureComponent) {
         },
         icon: true
       }, /*#__PURE__*/React.createElement(ArrowIcon, {
-        version: "solid",
         fill: iconColor,
         direction: "right",
         width: "8",

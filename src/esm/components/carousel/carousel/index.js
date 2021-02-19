@@ -22,7 +22,7 @@ import { CarouselInner } from './components/carousel-inner';
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden';
 import classNames from 'classnames';
 import { Grid, GridCol } from '../../../components/grid/grid';
-import { StyledCarouselContainer } from './styles';
+import { StyledCarouselContainer, OUTLINE_PLUS_OFFSET } from './styles';
 
 var getDataLength = function getDataLength(_ref) {
   var data = _ref.data,
@@ -58,9 +58,9 @@ export var checkPageLoop = function checkPageLoop(numberOfPages, newPage) {
 };
 
 var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess) {
-  if (viewportIsXSOrLess) return CONTAINER_PADDING_MOBILE / 2;
-  if (viewportIsMOrLess) return CONTAINER_PADDING / 2;
-  return baseItemMarginBetween;
+  if (viewportIsXSOrLess) return CONTAINER_PADDING_MOBILE / 2 - OUTLINE_PLUS_OFFSET * 2;
+  if (viewportIsMOrLess) return CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2;
+  return baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2;
 };
 
 var CarouselBase = /*#__PURE__*/function (_Component) {
@@ -164,7 +164,8 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           viewportIsXSOrLess = _this$props2.viewportIsXSOrLess,
           viewportIsMOrLess = _this$props2.viewportIsMOrLess,
           pagesClassName = _this$props2.pagesClassName,
-          exportVisibilityProps = _this$props2.exportVisibilityProps;
+          exportVisibilityProps = _this$props2.exportVisibilityProps,
+          pageClickText = _this$props2.pageClickText;
       var _this$state3 = _this.state,
           currentPageIndex = _this$state3.currentPageIndex,
           numberOfItemsPerPage = _this$state3.numberOfItemsPerPage,
@@ -192,7 +193,8 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         numberOfPages: numberOfPages,
         onResizeInner: _this.onResizeInner,
         pagesClassName: pagesClassName,
-        viewedPages: _this.viewedPages
+        viewedPages: _this.viewedPages,
+        pageClickText: pageClickText
       });
     };
 
@@ -249,7 +251,6 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         onClick: _this.goPrevPage,
         disabled: !loop && (currentPageIndex < 1 || numberOfPages < 1)
       }, /*#__PURE__*/React.createElement(VisuallyHidden, null, loop && (currentPageIndex < 1 || numberOfPages < 1) ? lastButtonText : prevButtonText), /*#__PURE__*/React.createElement(ArrowIcon, {
-        version: "solid",
         direction: "left",
         "aria-hidden": true
       })), /*#__PURE__*/React.createElement(Button, {
@@ -261,7 +262,6 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         onClick: _this.goNextPage,
         disabled: !loop && currentPageIndex >= numberOfPages - 1
       }, /*#__PURE__*/React.createElement(VisuallyHidden, null, loop && currentPageIndex >= numberOfPages - 1 ? firstButtonText : nextButtonText), /*#__PURE__*/React.createElement(ArrowIcon, {
-        version: "solid",
         direction: "right",
         "aria-hidden": true
       }))), showPageSquares && /*#__PURE__*/React.createElement("div", {
@@ -346,6 +346,9 @@ CarouselBase.defaultProps = {
   },
   prevButtonText: 'Previous items',
   nextButtonText: 'Next items',
+  pageClickText: function pageClickText(page) {
+    return "Page ".concat(page);
+  },
   firstButtonText: 'First items',
   lastButtonText: 'Last items',
   showPageSquares: false,
@@ -376,6 +379,7 @@ CarouselBase.propTypes = {
   }),
   prevButtonText: PropTypes.string,
   nextButtonText: PropTypes.string,
+  pageClickText: PropTypes.func,
   tinyButtons: PropTypes.bool,
   firstButtonText: PropTypes.string,
   lastButtonText: PropTypes.string,
