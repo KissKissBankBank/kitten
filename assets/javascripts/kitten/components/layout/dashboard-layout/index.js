@@ -379,7 +379,7 @@ export const DashboardLayout = ({
     }
   }
 
-  const handleMainClick = () => {
+  const handleMainClick = event => {
     event.stopPropagation()
     setOpen(false)
   }
