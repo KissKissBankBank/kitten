@@ -389,5 +389,6 @@ export { default as useContinuousIntersectionObserver } from './helpers/utils/co
 export { default as useIntersectionObserver } from './helpers/utils/intersection-hook'
 export { default as useLazyObserver } from './helpers/utils/lazy-hook'
 export { default as margin } from './helpers/utils/margin'
+export { parseHtml } from './helpers/utils/parser'
 export { pxToRem, stepToRem } from './helpers/utils/typography'
 export { usePrevious } from './helpers/utils/use-previous-hook'
