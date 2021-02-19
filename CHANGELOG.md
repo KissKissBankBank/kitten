@@ -4,25 +4,41 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Convert `SupTitle` component and delete `k-SupTitle` styles.
-- Feature: Update `Text` component.
-- Breaking change: Remove `Uploader` and `SimpleUploader` components.
-- Breaking change: Remove `k-SimpleUploader` mixin.
-- Breaking change: Remove old `NavTabCarousel`.
-- Breaking change: Delete deprecated `RewardCard` (replaced by `BackingCard`).
-- Feature: Add `parseHtml` to ESM build.
-- Breaking change: Migrate `HeaderNav` and remove `k-HeaderNav` styles.
-- Breaking change: Remove `FormRow` component and `k-FormRow` styles.
-- Breaking change: Remove `Search` component and `k-SearchInput` styles.
-- Breaking change: Convert `LinkList` component and delete `k-LinkList` styles.
-- Remove `k-Slider` and `k-SliderTooltip` styles.
-- Remove deprecated `Slider` components, in favor of `RangeSlider`:
-  - `Slider` ;
-  - `SliderBar` ;
-  - `SliderTooltip` ;
-  - `SliderWithTooltipAndPower`.
-- Remove `sliderKeyDownHandler`.
-- Remove `LoanSimulator` component and `k-LoanSimulator` styles.
+## [3.0.0-beta.3] - 2021-02-19
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-FormRow`
+  - `k-HeaderNav`
+  - `k-LinkList`
+  - `k-LoanSimulator`
+  - `k-SearchInput`
+  - `k-SimpleUploader`
+  - `k-Slider`
+  - `k-SliderTooltip`
+  - `k-SupTitle`
+- Delete the following deprecated components:
+  - `FormRow`
+  - `LoanSimulator`
+  - `NavTabCarousel`
+  - `RewardCard` (replaced by `BackingCard`)
+  - `Search`
+  - `SimpleUploader`
+  - `Slider` (replaced by `RangeSlider`)
+  - `SliderBar`
+  - `SliderTooltip`
+  - `SliderWithTooltipAndPower`
+  - `Uploader`
+- Delete `sliderKeyDownHandler` helper.
+
+Features:
+
+- Convert `HeaderNav` component.
+- Convert `LinkList` component
+- Convert `SupTitle` component.
+- Update `Text` component.
+- Add `parseHtml` helper to ESM build.
 
 ## [3.0.0-beta.2] - 2021-02-15
 
@@ -30,7 +46,7 @@ Breaking changes:
 
 - `ArrowIcon` now defaults to `solid` version.
 - Remove `k-u-blockAlign-*` utilities in favor of `k-u-align-self-*`.
-- Delete the following deprecated `card` SCSS mixins:
+- Delete the following deprecated SCSS mixins:
   - `k-Alert`
   - `k-ExternalRichLink`
   - `k-HeaderTour`
