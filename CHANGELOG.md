@@ -70,9 +70,8 @@ Breaking changes:
 
 - Remove `StyleGuide` app.
 - Remove `Karl` stories & components.
-- Remove `k-LegoGrid` styles.
-- Remove `LegoGrid` component.
 - Delete the following deprecated SCSS mixins:
+  - `k-LegoGrid`
   - `k-ProjectCard`
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
@@ -80,6 +79,7 @@ Breaking changes:
   - `ArticleCard`
   - `ContributionCard`
   - `CrowdfundingCardWidget`
+  - `LegoGrid`
   - `ProjectCard`
   - `ProjectCreatorCard`
   - `ProjectSimilarCard`
