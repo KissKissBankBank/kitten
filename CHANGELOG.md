@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Convert `SupTitle` component and delete `k-SupTitle` styles.
 - Feature: Update `Text` component.
 - Breaking change: Remove `Uploader` and `SimpleUploader` components.
 - Breaking change: Remove `k-SimpleUploader` mixin.

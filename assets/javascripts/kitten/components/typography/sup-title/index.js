@@ -1,19 +1,16 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
+import React from 'react'
+import { Text } from '../../../components/typography/text'
 
-export class SupTitle extends Component {
-  render() {
-    const { className, tag, ...supTitleProps } = this.props
-
-    const supTitleClassName = classNames('k-SupTitle', className)
-
-    const Tag = tag
-
-    return <Tag className={supTitleClassName} {...supTitleProps} />
-  }
-}
+export const SupTitle = (textProps) => (
+  <Text
+    size="tiny"
+    lineHeigth="normal"
+    transform="uppercase"
+    weight="bold"
+    {...textProps}
+  />
+)
 
 SupTitle.defaultProps = {
-  tag: 'div',
   children: 'Lorem ipsum',
 }
