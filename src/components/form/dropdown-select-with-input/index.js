@@ -184,7 +184,6 @@ var DropdownSelectWithInput = function DropdownSelectWithInput(_ref) {
     className: "k-Form-DropdownSelectWithInput__button__arrowBox",
     "aria-hidden": true
   }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-    version: "solid",
     direction: isOpen ? 'top' : 'bottom'
   })), /*#__PURE__*/_react.default.createElement("span", {
     className: "k-Form-DropdownSelectWithInput__button__statusBadges"

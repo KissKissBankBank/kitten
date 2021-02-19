@@ -9,7 +9,7 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
   >
     <svg
       className="sc-ifAKCX jyHSSs"
-      fill="#222"
+      fill="#fff"
       height="5.64"
       style={
         Object {
@@ -92,7 +92,7 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
   >
     <svg
       className="sc-ifAKCX jyHSSs"
-      fill="#222"
+      fill="#fff"
       height="5.64"
       style={
         Object {

@@ -8,6 +8,9 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 // Accordeon
 export { Accordeon } from './components/accordeon'
 
+// Atoms
+export { Tag } from './components/atoms/tag'
+
 // Avatar
 export { AvatarWithTextAndBadge } from './components/avatar/avatar-with-text-and-badge'
 
@@ -45,9 +48,9 @@ export { CheckableButton } from './components/buttons/checkable-button'
 // Cards
 export { SimpleCard } from './components/cards/simple-card'
 export { BackerCard } from './components/cards/backer-card'
+export { BackingCard } from './components/cards/backing-card'
 export { CartRewardCard } from './components/cards/cart-reward-card'
 export { DonationCard } from './components/cards/donation-card'
-export { RewardCard } from './components/cards/reward-card'
 export { RewardEdition } from './components/cards/reward-edition'
 export { TeamCard } from './components/cards/team-card'
 export { Triptych } from './components/cards/triptych'
@@ -98,7 +101,6 @@ export { DropdownSelect } from './components/form/dropdown-select'
 export { FormActions } from './components/form/form-actions'
 export { FormAmountAndCurrency } from './components/form/form-amount-and-currency'
 export { FormPhoneNumber } from './components/form/form-phone-number'
-export { FormRow } from './components/form/form-row'
 export { Label } from './components/form/label'
 export { LocationInput } from './components/form/location-input'
 export { PasswordInput } from './components/form/password-input'
@@ -107,9 +109,7 @@ export { RadioButtonSet } from './components/form/radio-button-set'
 export { RadioButton } from './components/form/radio-button'
 export { RangeSlider } from './components/form/range-slider'
 export { RichTextInput } from './components/form/rich-text-input'
-export { Search } from './components/form/search'
 export { SelectWithState } from './components/form/select-with-state'
-export { Slider } from './components/form/slider'
 export { Switch } from './components/form/switch'
 export { TextInputAndSelect } from './components/form/text-input-and-select'
 export { TextInputWithLimit } from './components/form/text-input-with-limit'
@@ -153,7 +153,6 @@ export { VerticalStroke } from './components/layout/vertical-stroke'
 export { InfoLines } from './components/lines/info-lines'
 
 // Links
-export { ExternalRichLink } from './components/links/external-rich-link'
 export { LinkList } from './components/links/link-list'
 
 // Lists
@@ -162,7 +161,6 @@ export { BulletList } from './components/lists/bullet-list'
 export { List } from './components/lists/list'
 export { CheckList } from './components/lists/check-list'
 export { NavList } from './components/lists/nav-list'
-export { TagList } from './components/lists/tag-list'
 export { Timeline } from './components/lists/timeline'
 
 // Loaders
@@ -197,20 +195,10 @@ export { IconBadge } from './components/notifications/icon-badge'
 export { MarkdownPage } from './components/pages/markdown'
 
 // Popovers
-export { CallToActionPopover } from './components/popovers/call-to-action-popover'
-export { Popover } from './components/popovers/popover'
 export { SimplePopover } from './components/popovers/simple-popover'
 
 // Search
 export { SearchInput } from './components/search/search-input'
-
-// Simulators
-export { LoanSimulator } from './components/simulators/loan-simulator'
-
-// Sliders
-export { SliderBar } from './components/sliders/slider-bar'
-export { SliderTooltip } from './components/sliders/slider-tooltip'
-export { SliderWithTooltipAndPower } from './components/sliders/slider-with-tooltip-and-power'
 
 // Status with Bullet
 export { StatusWithBullet } from './components/status-with-bullet'
@@ -235,15 +223,12 @@ export { TextCopy } from './components/text-copy'
 // Tooltips
 export { QuestionMarkWithTooltip } from './components/tooltips/question-mark-with-tooltip'
 export { StaticTooltip } from './components/tooltips/static-tooltip'
+export { Toggletip } from './components/tooltips/toggletip'
 export { TooltipNew } from './components/tooltips/tooltip-new'
 export { Tooltip } from './components/tooltips/tooltip'
 
 // Tours
 export { HighlightHalo } from './components/tours/highlight-halo'
-export { HeaderTour } from './components/tours/header-tour'
-export { TourPopover } from './components/tours/tour-popover'
-export { TourStep } from './components/tours/tour-step'
-export { Tour } from './components/tours/tour'
 
 // Typography
 export { Paragraph } from './components/typography/paragraph'
@@ -255,8 +240,6 @@ export { TitleWithStroke } from './components/typography/title-with-stroke'
 // Uploaders
 export { BasicUploader } from './components/uploaders/basic-uploader'
 export { DocumentManager } from './components/uploaders/document-manager'
-export { SimpleUploader } from './components/uploaders/simple-uploader'
-export { Uploader } from './components/uploaders/uploader'
 
 // Videos
 export { Video } from './components/videos/video'
@@ -392,5 +375,6 @@ export { default as useContinuousIntersectionObserver } from './helpers/utils/co
 export { default as useIntersectionObserver } from './helpers/utils/intersection-hook'
 export { default as useLazyObserver } from './helpers/utils/lazy-hook'
 export { default as margin } from './helpers/utils/margin'
+export { parseHtml } from './helpers/utils/parser'
 export { pxToRem, stepToRem } from './helpers/utils/typography'
 export { usePrevious } from './helpers/utils/use-previous-hook'
