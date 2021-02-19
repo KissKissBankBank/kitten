@@ -14,7 +14,7 @@ import { VisuallyHidden } from '../../../components/accessibility/visually-hidde
 import classNames from 'classnames'
 import { Grid, GridCol } from '../../../components/grid/grid'
 
-import { StyledCarouselContainer } from './styles'
+import { StyledCarouselContainer, OUTLINE_PLUS_OFFSET } from './styles'
 
 const getDataLength = ({ data, children }) => {
   if (!!data) return data.length
@@ -72,10 +72,11 @@ const getMarginBetweenAccordingToViewport = (
   viewportIsXSOrLess,
   viewportIsMOrLess,
 ) => {
-  if (viewportIsXSOrLess) return CONTAINER_PADDING_MOBILE / 2
-  if (viewportIsMOrLess) return CONTAINER_PADDING / 2
+  if (viewportIsXSOrLess)
+    return CONTAINER_PADDING_MOBILE / 2 - OUTLINE_PLUS_OFFSET * 2
+  if (viewportIsMOrLess) return CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2
 
-  return baseItemMarginBetween
+  return baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2
 }
 
 class CarouselBase extends Component {
@@ -177,6 +178,7 @@ class CarouselBase extends Component {
       viewportIsMOrLess,
       pagesClassName,
       exportVisibilityProps,
+      pageClickText,
     } = this.props
 
     const { currentPageIndex, numberOfItemsPerPage, numberOfPages } = this.state
@@ -207,6 +209,7 @@ class CarouselBase extends Component {
         onResizeInner={this.onResizeInner}
         pagesClassName={pagesClassName}
         viewedPages={this.viewedPages}
+        pageClickText={pageClickText}
       />
     )
   }
@@ -274,7 +277,7 @@ class CarouselBase extends Component {
                 ? lastButtonText
                 : prevButtonText}
             </VisuallyHidden>
-            <ArrowIcon version="solid" direction="left" aria-hidden />
+            <ArrowIcon direction="left" aria-hidden />
           </Button>
 
           <Button
@@ -291,7 +294,7 @@ class CarouselBase extends Component {
                 ? firstButtonText
                 : nextButtonText}
             </VisuallyHidden>
-            <ArrowIcon version="solid" direction="right" aria-hidden />
+            <ArrowIcon direction="right" aria-hidden />
           </Button>
         </div>
 
@@ -385,6 +388,9 @@ CarouselBase.defaultProps = {
   },
   prevButtonText: 'Previous items',
   nextButtonText: 'Next items',
+  pageClickText: page => {
+    return `Page ${page}`
+  },
   firstButtonText: 'First items',
   lastButtonText: 'Last items',
   showPageSquares: false,
@@ -416,6 +422,7 @@ CarouselBase.propTypes = {
   }),
   prevButtonText: PropTypes.string,
   nextButtonText: PropTypes.string,
+  pageClickText: PropTypes.func,
   tinyButtons: PropTypes.bool,
   firstButtonText: PropTypes.string,
   lastButtonText: PropTypes.string,

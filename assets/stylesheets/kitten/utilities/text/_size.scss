@@ -13,6 +13,14 @@
 ///     <p class="k-u-small--important">…</p>
 
 @mixin k-utilities-size {
+  .k-u-size-giant {
+    @include k-typographyFontSize(4, $without-line-height: true);
+
+    &--important {
+      @include k-typographyFontSize(4, $without-line-height: true, $important: true);
+    }
+  }
+
   .k-u-size-huge {
     @include k-typographyFontSize(2, $without-line-height: true);
 
