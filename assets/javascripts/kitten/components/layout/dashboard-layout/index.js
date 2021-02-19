@@ -18,6 +18,8 @@ import { getMinQuery } from '../../../helpers/utils/media-queries'
 import { BurgerIcon } from '../../../components/icons/burger-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 
+import { Flow } from './flow'
+
 const ALL_COLS = `(100vw - ${pxToRem(
   2 * CONTAINER_PADDING + (NUM_COLUMNS - 1) * GUTTER,
 )})`
@@ -217,7 +219,6 @@ const StyledDashboard = styled.div`
         height: 100vh;
         position: sticky;
         top: 0;
-        bottom: 0;
         overflow: scroll;
         gap: ${pxToRem(30)};
         padding: ${pxToRem(30)};
@@ -502,3 +503,4 @@ const SideFooter = ({ className, ...props }) => (
 DashboardLayout.Header = Header
 DashboardLayout.SideContent = SideContent
 DashboardLayout.SideFooter = SideFooter
+DashboardLayout.Flow = Flow
