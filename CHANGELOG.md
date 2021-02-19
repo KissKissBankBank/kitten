@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `parseHtml` to ESM build.
 - Breaking change: Migrate `HeaderNav` and remove `k-HeaderNav` styles.
 - Breaking change: Remove `FormRow` component and `k-FormRow` styles.
+- Breaking change: Remove `Search` component and `k-SearchInput` styles.
 
 ## [3.0.0-beta.2] - 2021-02-15
 
