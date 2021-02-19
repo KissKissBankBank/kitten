@@ -60,7 +60,6 @@ export var ExpandBoardButton = /*#__PURE__*/function (_PureComponent) {
         type: "button",
         borderRadius: borderRadius
       }, /*#__PURE__*/React.createElement("div", null, expanded ? defaultExpandChildren : children, /*#__PURE__*/React.createElement(StyledArrowIcon, {
-        version: "solid",
         direction: expanded ? 'top' : 'bottom',
         fill: COLORS.background1
       })));
