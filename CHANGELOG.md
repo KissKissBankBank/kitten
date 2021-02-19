@@ -72,7 +72,11 @@ Breaking changes:
 - Remove `Karl` stories & components.
 - Remove `k-LegoGrid` styles.
 - Remove `LegoGrid` component.
-- Delete the following deprecated `cards` components:
+- Delete the following deprecated SCSS mixins:
+  - `k-ProjectCard`
+  - `k-ProjectCreatorCard`
+  - `k-ProjectSimilarCard`
+- Delete the following deprecated components:
   - `ArticleCard`
   - `ContributionCard`
   - `CrowdfundingCardWidget`
@@ -81,10 +85,6 @@ Breaking changes:
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
   - `SimilarProjectsCard`.
-- Delete the following deprecated `card` SCSS mixins:
-  - `k-ProjectCard`
-  - `k-ProjectCreatorCard`
-  - `k-ProjectSimilarCard`
 
 ## [2.120.1] - 2021-02-19
 
