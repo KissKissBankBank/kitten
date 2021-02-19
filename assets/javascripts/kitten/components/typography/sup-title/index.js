@@ -1,13 +1,12 @@
 import React from 'react'
 import { Text } from '../../../components/typography/text'
 
-export const SupTitle = ({ className, ...textProps}) => (
+export const SupTitle = (textProps) => (
   <Text
     size="tiny"
     lineHeigth="normal"
     transform="uppercase"
     weight="bold"
-    className={className}
     {...textProps}
   />
 )
