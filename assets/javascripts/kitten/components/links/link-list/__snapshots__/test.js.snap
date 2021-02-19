@@ -34,8 +34,8 @@ exports[`<LinkList /> default matches with snapshot 1`] = `
   font-size: 0.8888888888888888rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
+  -webkit-transition: color .2s;
+  transition: color .2s;
 }
 
 .c0 .k-LinkList__link:active,

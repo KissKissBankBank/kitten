@@ -21,7 +21,6 @@ Breaking changes:
 - Delete the following deprecated components:
   - `FormRow`
   - `LoanSimulator`
-  - `NavTabCarousel`
   - `RewardCard` (replaced by `BackingCard`)
   - `Search`
   - `SimpleUploader`
