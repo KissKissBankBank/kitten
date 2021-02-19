@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `Text` component.
 - Breaking change: Remove `Uploader` and `SimpleUploader` components.
 - Breaking change: Remove `k-SimpleUploader` mixin.
 - Breaking change: Remove old `NavTabCarousel`.
