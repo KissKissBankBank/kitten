@@ -39,36 +39,10 @@
 @include k-FormActions;
 @include k-FormComposer;
 @include k-FormInfo;
-@include k-FormRow;
 @include k-RadioButton;
 @include k-RadioButtonSet;
-@include k-SearchInput;
 
 @include k-Select;
-
-@include k-SliderTooltip((
-  colors: (
-    border: map-get($k-colors, 'primary-4'),
-    border-inactive: map-get($k-colors, 'line-1'),
-    background: map-get($k-colors, 'background-2'),
-    background-inactive: map-get($k-colors, 'background-2'),
-    text: map-get($k-colors, 'primary-1'),
-    text-inactive: map-get($k-colors, 'font-2'),
-  )
-));
-
-@include k-Slider((
-  colors: (
-    progress: map-get($k-colors, 'primary-1'),
-    progress-disabled: map-get($k-colors, 'line-2'),
-    ramp: map-get($k-colors, 'line-1'),
-    handle: map-get($k-colors, 'primary-1'),
-    handle-disabled: map-get($k-colors, 'line-2'),
-    icon: map-get($k-colors, 'background-1'),
-    icon-disabled: map-get($k-colors, 'background-1'),
-    border: map-get($k-colors, 'primary-1'),
-  )
-));
 
 @include k-Switch;
 @include k-TextAreaWrapper;
@@ -112,10 +86,6 @@
 @include k-Cropper;
 @include k-ImageWithCaption;
 
-// Icons
-
-@include k-ArrowIcon;
-
 // Layout
 
 @include k-HorizontalStroke;
@@ -129,16 +99,9 @@
 
 @include k-InfoLines;
 
-// Links
-
-@include k-ExternalRichLink;
-
-@include k-LinkList;
-
 // Lists
 
 @include k-BulletList;
-@include k-TagList;
 
 // Loaders
 
@@ -150,8 +113,6 @@
 @include k-Progress;
 
 // Navigation
-
-@include k-HeaderNav;
 
 @include k-HorizontalNav;
 
@@ -170,25 +131,12 @@
 
 // Notifications
 
-@include k-Alert;
 @include k-Badge;
 @include k-IconBadge;
 
 // Press
 
 @include k-PressQuotes;
-
-// Popover
-
-@include k-Popover;
-
-// Simulators
-
-@include k-LoanSimulator((
-  colors: (
-    error: map-get($k-colors, 'error'),
-  )
-));
 
 // Steppers
 
@@ -216,17 +164,8 @@
 @include k-TooltipNew;
 @include k-StaticTooltip;
 
-// Tours
-
-@include k-Tour;
-@include k-HeaderTour;
-
 // Typography
 
 @include k-TypographyBodyCopy;
 @include k-Title;
 @include k-Paragraph;
-
-// Uploaders
-
-@include k-SimpleUploader;

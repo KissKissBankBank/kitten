@@ -8,7 +8,6 @@ export var Next = function Next(_ref) {
     as: "button",
     className: "k-u-reset-button"
   }, /*#__PURE__*/React.createElement(StyledNextText, null, children), /*#__PURE__*/React.createElement(StyledArrowIcon, {
-    version: "solid",
     fill: "#fff"
   }));
 };

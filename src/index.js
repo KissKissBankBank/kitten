@@ -173,12 +173,6 @@ Object.defineProperty(exports, "SimpleCard", {
     return _simpleCard.SimpleCard;
   }
 });
-Object.defineProperty(exports, "ArticleCard", {
-  enumerable: true,
-  get: function get() {
-    return _articleCard.ArticleCard;
-  }
-});
 Object.defineProperty(exports, "BackerCard", {
   enumerable: true,
   get: function get() {
@@ -197,34 +191,10 @@ Object.defineProperty(exports, "CartRewardCard", {
     return _cartRewardCard.CartRewardCard;
   }
 });
-Object.defineProperty(exports, "ContributionCard", {
-  enumerable: true,
-  get: function get() {
-    return _contributionCard.ContributionCard;
-  }
-});
 Object.defineProperty(exports, "DonationCard", {
   enumerable: true,
   get: function get() {
     return _donationCard.DonationCard;
-  }
-});
-Object.defineProperty(exports, "ProjectCard", {
-  enumerable: true,
-  get: function get() {
-    return _projectCard.ProjectCard;
-  }
-});
-Object.defineProperty(exports, "ProjectCreatorCard", {
-  enumerable: true,
-  get: function get() {
-    return _projectCreatorCard.ProjectCreatorCard;
-  }
-});
-Object.defineProperty(exports, "ProjectSimilarCard", {
-  enumerable: true,
-  get: function get() {
-    return _projectSimilarCard.ProjectSimilarCard;
   }
 });
 Object.defineProperty(exports, "RewardCard", {
@@ -237,12 +207,6 @@ Object.defineProperty(exports, "RewardEdition", {
   enumerable: true,
   get: function get() {
     return _rewardEdition.RewardEdition;
-  }
-});
-Object.defineProperty(exports, "SimilarProjectsCard", {
-  enumerable: true,
-  get: function get() {
-    return _similarProjectsCard.SimilarProjectsCard;
   }
 });
 Object.defineProperty(exports, "TeamCard", {
@@ -575,12 +539,6 @@ Object.defineProperty(exports, "GridCol", {
     return _grid.GridCol;
   }
 });
-Object.defineProperty(exports, "LegoGrid", {
-  enumerable: true,
-  get: function get() {
-    return _legoGrid.LegoGrid;
-  }
-});
 Object.defineProperty(exports, "Row", {
   enumerable: true,
   get: function get() {
@@ -713,12 +671,6 @@ Object.defineProperty(exports, "InfoLines", {
     return _infoLines.InfoLines;
   }
 });
-Object.defineProperty(exports, "ExternalRichLink", {
-  enumerable: true,
-  get: function get() {
-    return _externalRichLink.ExternalRichLink;
-  }
-});
 Object.defineProperty(exports, "LinkList", {
   enumerable: true,
   get: function get() {
@@ -753,12 +705,6 @@ Object.defineProperty(exports, "NavList", {
   enumerable: true,
   get: function get() {
     return _navList.NavList;
-  }
-});
-Object.defineProperty(exports, "TagList", {
-  enumerable: true,
-  get: function get() {
-    return _tagList.TagList;
   }
 });
 Object.defineProperty(exports, "Timeline", {
@@ -869,18 +815,6 @@ Object.defineProperty(exports, "MarkdownPage", {
     return _markdown.MarkdownPage;
   }
 });
-Object.defineProperty(exports, "CallToActionPopover", {
-  enumerable: true,
-  get: function get() {
-    return _callToActionPopover.CallToActionPopover;
-  }
-});
-Object.defineProperty(exports, "Popover", {
-  enumerable: true,
-  get: function get() {
-    return _popover.Popover;
-  }
-});
 Object.defineProperty(exports, "SimplePopover", {
   enumerable: true,
   get: function get() {
@@ -989,6 +923,12 @@ Object.defineProperty(exports, "StaticTooltip", {
     return _staticTooltip.StaticTooltip;
   }
 });
+Object.defineProperty(exports, "Toggletip", {
+  enumerable: true,
+  get: function get() {
+    return _toggletip.Toggletip;
+  }
+});
 Object.defineProperty(exports, "TooltipNew", {
   enumerable: true,
   get: function get() {
@@ -1005,30 +945,6 @@ Object.defineProperty(exports, "HighlightHalo", {
   enumerable: true,
   get: function get() {
     return _highlightHalo.HighlightHalo;
-  }
-});
-Object.defineProperty(exports, "HeaderTour", {
-  enumerable: true,
-  get: function get() {
-    return _headerTour.HeaderTour;
-  }
-});
-Object.defineProperty(exports, "TourPopover", {
-  enumerable: true,
-  get: function get() {
-    return _tourPopover.TourPopover;
-  }
-});
-Object.defineProperty(exports, "TourStep", {
-  enumerable: true,
-  get: function get() {
-    return _tourStep.TourStep;
-  }
-});
-Object.defineProperty(exports, "Tour", {
-  enumerable: true,
-  get: function get() {
-    return _tour.Tour;
   }
 });
 Object.defineProperty(exports, "Paragraph", {
@@ -1071,18 +987,6 @@ Object.defineProperty(exports, "DocumentManager", {
   enumerable: true,
   get: function get() {
     return _documentManager.DocumentManager;
-  }
-});
-Object.defineProperty(exports, "SimpleUploader", {
-  enumerable: true,
-  get: function get() {
-    return _simpleUploader.SimpleUploader;
-  }
-});
-Object.defineProperty(exports, "Uploader", {
-  enumerable: true,
-  get: function get() {
-    return _uploader.Uploader;
   }
 });
 Object.defineProperty(exports, "Video", {
@@ -1804,29 +1708,17 @@ var _checkableButton = require("./components/buttons/checkable-button");
 
 var _simpleCard = require("./components/cards/simple-card");
 
-var _articleCard = require("./components/cards/article-card");
-
 var _backerCard = require("./components/cards/backer-card");
 
 var _backingCard = require("./components/cards/backing-card");
 
 var _cartRewardCard = require("./components/cards/cart-reward-card");
 
-var _contributionCard = require("./components/cards/contribution-card");
-
 var _donationCard = require("./components/cards/donation-card");
-
-var _projectCard = require("./components/cards/project-card");
-
-var _projectCreatorCard = require("./components/cards/project-creator-card");
-
-var _projectSimilarCard = require("./components/cards/project-similar-card");
 
 var _rewardCard = require("./components/cards/reward-card");
 
 var _rewardEdition = require("./components/cards/reward-edition");
-
-var _similarProjectsCard = require("./components/cards/similar-projects-card");
 
 var _teamCard = require("./components/cards/team-card");
 
@@ -1936,8 +1828,6 @@ var _scrollableContainer = require("./components/grid/scrollable-container");
 
 var _grid = require("./components/grid/grid");
 
-var _legoGrid = require("./components/grid/lego-grid");
-
 var _row = require("./components/grid/row");
 
 var _sideGrid = require("./components/grid/side-grid");
@@ -1978,8 +1868,6 @@ var _verticalStroke = require("./components/layout/vertical-stroke");
 
 var _infoLines = require("./components/lines/info-lines");
 
-var _externalRichLink = require("./components/links/external-rich-link");
-
 var _linkList = require("./components/links/link-list");
 
 var _iconList = require("./components/lists/icon-list");
@@ -1991,8 +1879,6 @@ var _list = require("./components/lists/list");
 var _checkList = require("./components/lists/check-list");
 
 var _navList = require("./components/lists/nav-list");
-
-var _tagList = require("./components/lists/tag-list");
 
 var _timeline = require("./components/lists/timeline");
 
@@ -2030,10 +1916,6 @@ var _iconBadge = require("./components/notifications/icon-badge");
 
 var _markdown = require("./components/pages/markdown");
 
-var _callToActionPopover = require("./components/popovers/call-to-action-popover");
-
-var _popover = require("./components/popovers/popover");
-
 var _simplePopover = require("./components/popovers/simple-popover");
 
 var _searchInput = require("./components/search/search-input");
@@ -2066,19 +1948,13 @@ var _questionMarkWithTooltip = require("./components/tooltips/question-mark-with
 
 var _staticTooltip = require("./components/tooltips/static-tooltip");
 
+var _toggletip = require("./components/tooltips/toggletip");
+
 var _tooltipNew = require("./components/tooltips/tooltip-new");
 
 var _tooltip = require("./components/tooltips/tooltip");
 
 var _highlightHalo = require("./components/tours/highlight-halo");
-
-var _headerTour = require("./components/tours/header-tour");
-
-var _tourPopover = require("./components/tours/tour-popover");
-
-var _tourStep = require("./components/tours/tour-step");
-
-var _tour = require("./components/tours/tour");
 
 var _paragraph = require("./components/typography/paragraph");
 
@@ -2093,10 +1969,6 @@ var _titleWithStroke = require("./components/typography/title-with-stroke");
 var _basicUploader = require("./components/uploaders/basic-uploader");
 
 var _documentManager = require("./components/uploaders/document-manager");
-
-var _simpleUploader = require("./components/uploaders/simple-uploader");
-
-var _uploader = require("./components/uploaders/uploader");
 
 var _video = require("./components/videos/video");
 

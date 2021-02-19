@@ -4,7 +4,52 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Breaking Changes:
+- Feature: Update `Text` component.
+- Breaking change: Remove `Uploader` and `SimpleUploader` components.
+- Breaking change: Remove `k-SimpleUploader` mixin.
+- Breaking change: Remove old `NavTabCarousel`.
+- Breaking change: Delete deprecated `RewardCard` (replaced by `BackingCard`).
+- Feature: Add `parseHtml` to ESM build.
+- Breaking change: Migrate `HeaderNav` and remove `k-HeaderNav` styles.
+- Breaking change: Remove `FormRow` component and `k-FormRow` styles.
+- Breaking change: Remove `Search` component and `k-SearchInput` styles.
+- Breaking change: Convert `LinkList` component and delete `k-LinkList` styles.
+- Remove `k-Slider` and `k-SliderTooltip` styles.
+- Remove deprecated `Slider` components, in favor of `RangeSlider`:
+  - `Slider` ;
+  - `SliderBar` ;
+  - `SliderTooltip` ;
+  - `SliderWithTooltipAndPower`.
+- Remove `sliderKeyDownHandler`.
+- Remove `LoanSimulator` component and `k-LoanSimulator` styles.
+
+## [3.0.0-beta.2] - 2021-02-15
+
+Breaking changes:
+
+- `ArrowIcon` now defaults to `solid` version.
+- Remove `k-u-blockAlign-*` utilities in favor of `k-u-align-self-*`.
+- Delete the following deprecated `card` SCSS mixins:
+  - `k-Alert`
+  - `k-ExternalRichLink`
+  - `k-HeaderTour`
+  - `k-Popover`
+  - `k-TagList`
+  - `k-Tour`
+- Delete the following deprecated components:
+  - `CallToActionPopover`
+  - `DeprecatedArrowIcon`
+  - `ExternalRichLink`
+  - `HeaderTour`
+  - `Popover`
+  - `TagList`
+  - `Tour`
+  - `TourPopover`
+  - `TourStep`
+
+## [3.0.0-beta.1] - 2021-02-08
+
+Breaking changes:
 
 - Convert `SupTitle` component and delete `k-SupTitle` styles.
 - Remove `StyleGuide` app.
@@ -25,7 +70,38 @@ Breaking Changes:
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
 
-## [2.116.0] - 2020-02-08
+## [2.120.1] - 2021-02-19
+
+Fix:
+
+- Fix init and resize coords calculation on `Toggletip`.
+
+## [2.120.0] - 2021-02-12
+
+Feature:
+
+- Add `Toggletip` component.
+
+## [2.119.0] - 2021-02-10
+
+Feature:
+
+- Add `regular` (default) and `big` props on all variants of `DropdownSelect`.
+
+## [2.118.0] - 2021-02-09
+
+Features:
+
+- Add `size` prop to `RadioButton`, defaults to `regular`.
+- Add `hover` styles for `BackingCard`.
+
+## [2.117.0] - 2021-02-08
+
+Feature:
+
+- Add `size` prop to `HeaderMenu.Item` & refactoring.
+
+## [2.116.0] - 2021-02-08
 
 Features:
 
@@ -39,7 +115,7 @@ Fix:
 
 - Fix mixup between `k-u-margin-vertical` and `k-u-margin-horizontal`.
 
-## [2.115.0] - 2020-02-02
+## [2.115.0] - 2021-02-02
 
 Feature:
 
@@ -49,7 +125,7 @@ Fix:
 
 - Fix `Carousel` margin and padding calculations.
 
-## [2.114.0] - 2020-01-29
+## [2.114.0] - 2021-01-29
 
 Features:
 
@@ -62,7 +138,7 @@ Fix:
 
 - `VerticalStepper` mobile style fixes.
 
-## [2.113.0] - 2020-01-21
+## [2.113.0] - 2021-01-21
 
 Features:
 
@@ -76,7 +152,7 @@ Fixes:
 - Stop applying focus styles on `VerticalStepper` when `disabled`.
 - `Combobox` filter on `label` (instead of `value`).
 
-## [2.112.0] - 2020-01-18
+## [2.112.0] - 2021-01-18
 
 Feature:
 
@@ -89,7 +165,7 @@ Fixes:
 - `RangeSlider` mobile style fixes.
 - `RadioButton` mobile style fixes.
 
-## [2.111.0] - 2020-01-15
+## [2.111.0] - 2021-01-15
 
 Feature:
 
@@ -100,7 +176,7 @@ Fixes:
 - Add button types on `Carousel` navigation.
 - Remove scrollbars on `Carousel` on Firefox.
 
-## [2.110.0] - 2020-01-13
+## [2.110.0] - 2021-01-13
 
 Feature:
 
@@ -110,14 +186,14 @@ Fix:
 
 - Fix overflow style on `ScrollableContainer`.
 
-## [2.109.0] - 2020-01-12
+## [2.109.0] - 2021-01-12
 
 Features:
 
 - Replace deprecated `Slider` with `RangeSlider` on `ImageCropper`.
 - Add `className` prop propagation to `RewardCard`.
 
-## [2.108.0] - 2020-01-11
+## [2.108.0] - 2021-01-11
 
 Features:
 
