@@ -34,9 +34,10 @@ Breaking changes:
 
 Features:
 
-- Convert `HeaderNav` component.
-- Convert `LinkList` component
-- Convert `SupTitle` component.
+- Convert the following components to CSS-in-JS:
+  - `HeaderNav`
+  - `LinkList`
+  - `SupTitle`
 - Update `Text` component.
 - Add `parseHtml` helper to ESM build.
 
