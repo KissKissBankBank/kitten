@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove `Uploader` and `SimpleUploader` components.
+- Breaking change: Remove `k-SimpleUploader` mixin.
 - Breaking change: Remove old `NavTabCarousel`.
 - Breaking change: Delete deprecated `RewardCard` (replaced by `BackingCard`).
 - Feature: Add `parseHtml` to ESM build.

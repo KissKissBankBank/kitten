@@ -989,18 +989,6 @@ Object.defineProperty(exports, "DocumentManager", {
     return _documentManager.DocumentManager;
   }
 });
-Object.defineProperty(exports, "SimpleUploader", {
-  enumerable: true,
-  get: function get() {
-    return _simpleUploader.SimpleUploader;
-  }
-});
-Object.defineProperty(exports, "Uploader", {
-  enumerable: true,
-  get: function get() {
-    return _uploader.Uploader;
-  }
-});
 Object.defineProperty(exports, "Video", {
   enumerable: true,
   get: function get() {
@@ -1981,10 +1969,6 @@ var _titleWithStroke = require("./components/typography/title-with-stroke");
 var _basicUploader = require("./components/uploaders/basic-uploader");
 
 var _documentManager = require("./components/uploaders/document-manager");
-
-var _simpleUploader = require("./components/uploaders/simple-uploader");
-
-var _uploader = require("./components/uploaders/uploader");
 
 var _video = require("./components/videos/video");
 

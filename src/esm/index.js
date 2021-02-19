@@ -193,9 +193,7 @@ export { Title } from './components/typography/title';
 export { TitleWithStroke } from './components/typography/title-with-stroke'; // Uploaders
 
 export { BasicUploader } from './components/uploaders/basic-uploader';
-export { DocumentManager } from './components/uploaders/document-manager';
-export { SimpleUploader } from './components/uploaders/simple-uploader';
-export { Uploader } from './components/uploaders/uploader'; // Videos
+export { DocumentManager } from './components/uploaders/document-manager'; // Videos
 
 export { Video } from './components/videos/video';
 export { GifVideo } from './components/videos/gif-video';
