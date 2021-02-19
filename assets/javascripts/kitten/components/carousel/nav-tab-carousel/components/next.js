@@ -13,7 +13,7 @@ export const Next = ({ children, hoverColor }) => {
       className="k-u-reset-button"
     >
       <StyledNextText>{children}</StyledNextText>
-      <StyledArrowIcon version="solid" fill="#fff" />
+      <StyledArrowIcon fill="#fff" />
     </StyledRightArrowContainer>
   )
 }

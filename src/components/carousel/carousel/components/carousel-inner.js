@@ -74,7 +74,8 @@ var CarouselInner = function CarouselInner(_ref) {
       numberOfPages = _ref.numberOfPages,
       onResizeInner = _ref.onResizeInner,
       pagesClassName = _ref.pagesClassName,
-      viewedPages = _ref.viewedPages;
+      viewedPages = _ref.viewedPages,
+      pageClickText = _ref.pageClickText;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -83,7 +84,7 @@ var CarouselInner = function CarouselInner(_ref) {
 
   var carouselInner = (0, _react.useRef)(null);
   var previousIndexPageVisible = (0, _usePreviousHook.usePrevious)(currentPageIndex);
-  var observer;
+  var resizeObserver;
 
   var onResizeObserve = function onResizeObserve(_ref2) {
     var _ref3 = (0, _slicedToArray2.default)(_ref2, 1),
@@ -94,13 +95,13 @@ var CarouselInner = function CarouselInner(_ref) {
   };
 
   (0, _react.useEffect)(function () {
-    observer = new _resizeObserverPolyfill.default(onResizeObserve);
+    resizeObserver = new _resizeObserverPolyfill.default(onResizeObserve);
     return function () {
-      return observer.disconnect();
+      return resizeObserver.disconnect();
     };
   }, []);
   (0, _react.useEffect)(function () {
-    carouselInner.current && observer.observe(carouselInner.current);
+    carouselInner.current && resizeObserver.observe(carouselInner.current);
   }, [carouselInner]);
   (0, _react.useEffect)(function () {
     if (currentPageIndex !== previousIndexPageVisible) {
@@ -176,6 +177,8 @@ var CarouselInner = function CarouselInner(_ref) {
     var hasPageBeenViewed = viewedPages.has(index);
     return /*#__PURE__*/_react.default.createElement("div", {
       key: index,
+      role: "button",
+      "aria-label": pageClickText(index + 1),
       onClick: handlePageClick(index),
       className: (0, _classnames.default)('k-Carousel__inner__pageContainer', pagesClassName, {
         'k-Carousel__inner__pageContainer--isActivePage': isActivePage,

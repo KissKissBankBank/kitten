@@ -122,7 +122,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error"
+      className="sc-bwzfXH kzSCOi k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
       disabled={false}
       id="input"
       name="field"
@@ -216,7 +216,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-TextInput--andromeda"
+      className="sc-bwzfXH kzSCOi k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
       disabled={false}
       id="input"
       name="field"
@@ -299,7 +299,7 @@ Array [
       className="sc-dnqmqq iVdmNR k-Form-PasswordInput"
     >
       <input
-        className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error"
+        className="sc-bwzfXH kzSCOi k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"
@@ -422,7 +422,7 @@ Array [
       className="sc-dnqmqq iVdmNR k-Form-PasswordInput"
     >
       <input
-        className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda"
+        className="sc-bwzfXH kzSCOi k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"
@@ -495,7 +495,7 @@ Array [
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-bZQynM jneaHT k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-bZQynM ioFeMM k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -517,7 +517,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-bZQynM jneaHT k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-bZQynM ioFeMM k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -538,7 +538,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-bZQynM jneaHT k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-bZQynM ioFeMM k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"

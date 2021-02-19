@@ -57,9 +57,6 @@
 // Headers
 @import './components/headers/header';
 
-// Icons
-@import "./components/icons/arrow-icon";
-
 // Images
 @import "./components/images/cropper";
 @import "./components/images/image-with-caption";
@@ -76,12 +73,10 @@
 @import './components/lines/info-lines';
 
 // Links
-@import './components/links/external-rich-link';
 @import './components/links/link-list';
 
 // Lists
 @import './components/lists/bullet-list';
-@import './components/lists/tag-list';
 
 // Loaders
 @import './components/loaders/loader';
@@ -94,22 +89,17 @@
 @import './components/modals/modal';
 
 // Navigation
-@import './components/navigation/header-nav';
 @import './components/navigation/horizontal-nav';
 @import './components/navigation/platform-switch';
 @import './components/navigation/tab-bar';
 @import './components/navigation/user-menu';
 
 // Notifications
-@import './components/notifications/alert';
 @import './components/notifications/badge';
 @import './components/notifications/icon-badge';
 
 // Press
 @import './components/press/press-quotes';
-
-// Popovers
-@import './components/popovers/popover';
 
 // Simulators
 @import './components/simulators/loan-simulator';
@@ -131,10 +121,6 @@
 @import './components/tooltips/tooltip';
 @import './components/tooltips/tooltip-new';
 @import './components/tooltips/static-tooltip';
-
-// Tours
-@import './components/tours/tour';
-@import './components/tours/header-tour';
 
 // Typography
 @import './components/typography/body-copy';

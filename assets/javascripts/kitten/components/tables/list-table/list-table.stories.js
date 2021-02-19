@@ -452,10 +452,7 @@ export const Toggleable = () => {
               aria-controls="toggleableListTable"
             >
               Voir les détails
-              <ArrowIcon
-                direction={displayed ? 'top' : 'bottom'}
-                version="solid"
-              />
+              <ArrowIcon direction={displayed ? 'top' : 'bottom'} />
             </ToggleButton>
           </Col>
         </HeaderRow>

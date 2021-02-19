@@ -148,8 +148,7 @@ var PaginationBase = (0, _react.forwardRef)(function (_ref2, _ref) {
       className: "Pagination__ArrowIcon",
       direction: direction,
       disabled: isDisabled,
-      "aria-hidden": "true",
-      version: "solid"
+      "aria-hidden": "true"
     })));
   };
 
