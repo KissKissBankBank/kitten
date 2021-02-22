@@ -4,6 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `DashboardLayout` component.
+- Feature: Add `Flow` subcomponent to `DashboardLayout`.
+- Feature: Add `LightbulbIllustration` with `size` prop.
+- Feature: Add `DashboardMenu` component.
+- Feature: Add icons components:
+  - `HomeIcon`
+  - `TagIcon`
+  - `FileIcon`
+  - `LoudspeakerIcon`
+  - `ShieldIcon`.
+
 ## [2.120.1] - 2021-02-19
 
 Fix:
