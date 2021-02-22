@@ -659,6 +659,12 @@ Object.defineProperty(exports, "ArrowContainer", {
     return _arrowContainer.ArrowContainer;
   }
 });
+Object.defineProperty(exports, "DashboardLayout", {
+  enumerable: true,
+  get: function get() {
+    return _dashboardLayout.DashboardLayout;
+  }
+});
 Object.defineProperty(exports, "IconContainer", {
   enumerable: true,
   get: function get() {
@@ -777,6 +783,12 @@ Object.defineProperty(exports, "Loader", {
   enumerable: true,
   get: function get() {
     return _loader.Loader;
+  }
+});
+Object.defineProperty(exports, "DashboardMenu", {
+  enumerable: true,
+  get: function get() {
+    return _dashboardMenu.DashboardMenu;
   }
 });
 Object.defineProperty(exports, "HeaderMenu", {
@@ -1625,6 +1637,36 @@ Object.defineProperty(exports, "YoutubeIcon", {
     return _youtubeIcon.YoutubeIcon;
   }
 });
+Object.defineProperty(exports, "HomeIcon", {
+  enumerable: true,
+  get: function get() {
+    return _homeIcon.HomeIcon;
+  }
+});
+Object.defineProperty(exports, "TagIcon", {
+  enumerable: true,
+  get: function get() {
+    return _tagIcon.TagIcon;
+  }
+});
+Object.defineProperty(exports, "FileIcon", {
+  enumerable: true,
+  get: function get() {
+    return _fileIcon.FileIcon;
+  }
+});
+Object.defineProperty(exports, "LoudspeakerIcon", {
+  enumerable: true,
+  get: function get() {
+    return _loudspeakerIcon.LoudspeakerIcon;
+  }
+});
+Object.defineProperty(exports, "ShieldIcon", {
+  enumerable: true,
+  get: function get() {
+    return _shieldIcon.ShieldIcon;
+  }
+});
 Object.defineProperty(exports, "COLORS", {
   enumerable: true,
   get: function get() {
@@ -1966,6 +2008,8 @@ var _imageWithCaption = require("./components/images/image-with-caption");
 
 var _arrowContainer = require("./components/layout/arrow-container");
 
+var _dashboardLayout = require("./components/layout/dashboard-layout");
+
 var _iconContainer = require("./components/layout/icon-container");
 
 var _horizontalStroke = require("./components/layout/horizontal-stroke");
@@ -2005,6 +2049,8 @@ var _timeline = require("./components/lists/timeline");
 var _loaderWithParagraph = require("./components/loaders/loader-with-paragraph");
 
 var _loader = require("./components/loaders/loader");
+
+var _dashboardMenu = require("./components/menus/dashboard-menu");
 
 var _headerMenu = require("./components/menus/header-menu");
 
@@ -2281,6 +2327,16 @@ var _warningIcon = require("./components/icons/warning-icon");
 var _whatsappIcon = require("./components/icons/whatsapp-icon");
 
 var _youtubeIcon = require("./components/icons/youtube-icon");
+
+var _homeIcon = require("./components/icons/home-icon");
+
+var _tagIcon = require("./components/icons/tag-icon");
+
+var _fileIcon = require("./components/icons/file-icon");
+
+var _loudspeakerIcon = require("./components/icons/loudspeaker-icon");
+
+var _shieldIcon = require("./components/icons/shield-icon");
 
 var _colorsConfig = _interopRequireDefault(require("./constants/colors-config"));
 

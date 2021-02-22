@@ -119,6 +119,7 @@ export { ImageCropper } from './components/images/image-cropper';
 export { ImageWithCaption } from './components/images/image-with-caption'; // Layout
 
 export { ArrowContainer } from './components/layout/arrow-container';
+export { DashboardLayout } from './components/layout/dashboard-layout';
 export { IconContainer } from './components/layout/icon-container';
 export { HorizontalStroke } from './components/layout/horizontal-stroke';
 export { Line } from './components/layout/line';
@@ -144,6 +145,7 @@ export { Timeline } from './components/lists/timeline'; // Loaders
 export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph';
 export { Loader } from './components/loaders/loader'; // Menus
 
+export { DashboardMenu } from './components/menus/dashboard-menu';
 export { HeaderMenu } from './components/menus/header-menu'; // Meters
 
 export { CounterBlock } from './components/meters/counter-block';
@@ -302,7 +304,12 @@ export { WaitingIcon } from './components/icons/waiting-icon';
 export { WarningCircleIcon } from './components/icons/warning-circle-icon';
 export { WarningIcon } from './components/icons/warning-icon';
 export { WhatsAppIcon } from './components/icons/whatsapp-icon';
-export { YoutubeIcon } from './components/icons/youtube-icon'; // ---------
+export { YoutubeIcon } from './components/icons/youtube-icon';
+export { HomeIcon } from './components/icons/home-icon';
+export { TagIcon } from './components/icons/tag-icon';
+export { FileIcon } from './components/icons/file-icon';
+export { LoudspeakerIcon } from './components/icons/loudspeaker-icon';
+export { ShieldIcon } from './components/icons/shield-icon'; // ---------
 // CONSTANTS
 // ---------
 
