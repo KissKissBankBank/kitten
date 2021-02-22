@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
 
@@ -106,6 +107,14 @@ const StyledFlow = styled.div`
     position: sticky;
     top: ${pxToRem(80)};
     padding-bottom: ${pxToRem(40)};
+
+    svg {
+      margin-bottom: ${pxToRem(20)};
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      display: none;
+    }
   }
 
   .k-DashboardLayout__flow__loading {
@@ -149,15 +158,21 @@ const Nav = ({ className, children, ...props }) => {
   )
 }
 
-const Aside = ({ className, children, withoutLight = false, ...props }) => {
+const Aside = ({
+  className,
+  children,
+  withoutLight = false,
+  mobileAsideProps,
+  ...props
+}) => {
   return (
     <aside
       {...props}
       className={classNames('k-DashboardLayout__flow__aside', className)}
     >
-      <MobileAside>{children}</MobileAside>
-      <div className="k-DashboardLayout__flow__aside__content k-u-hidden@m-down">
-        {!withoutLight && <Lightbulb className="k-u-margin-bottom-double" />}
+      <MobileAside {...mobileAsideProps}>{children}</MobileAside>
+      <div className="k-DashboardLayout__flow__aside__content">
+        {!withoutLight && <Lightbulb />}
         {children}
       </div>
     </aside>
@@ -168,7 +183,6 @@ export const Flow = ({
   children,
   className,
   loading,
-  backgroundImage,
   loaderComponent,
   ...props
 }) => {
@@ -188,6 +202,19 @@ export const Flow = ({
       })}
     </StyledFlow>
   )
+}
+
+Aside.propTypes = {
+  withoutLight: PropTypes.bool,
+  mobileAsideProps: PropTypes.shape({
+    openLabel: PropTypes.node.isRequired,
+    closeLabel: PropTypes.node.isRequired,
+  }),
+}
+
+Flow.propTypes = {
+  loading: PropTypes.bool,
+  loaderComponent: PropTypes.node,
 }
 
 Flow.Content = Content

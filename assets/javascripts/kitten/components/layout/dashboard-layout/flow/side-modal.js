@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
 
@@ -49,6 +50,7 @@ const Wrapper = styled.div`
       rgba(0, 0, 0, 0.15);
     pointer-events: all;
     border: none;
+    transition: background-color 0.2s ease-in-out;
 
     &:focus {
       outline: ${COLORS.primary4} solid ${pxToRem(2)};
@@ -69,6 +71,8 @@ const Wrapper = styled.div`
     padding: ${pxToRem(30)};
     border-radius: ${pxToRem(6)};
     overflow-y: scroll;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       max-width: ${pxToRem(350)};
@@ -76,6 +80,7 @@ const Wrapper = styled.div`
     }
 
     &[hidden] {
+      opacity: 0;
       display: none;
     }
 
@@ -88,26 +93,42 @@ const Wrapper = styled.div`
     }
   }
 
+  .k-DashboardLayout__flow__mobileAsideBackground {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ${COLORS.font1};
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: inherit;
+  }
+
   &.k-DashboardLayout__flow__mobileAside--open {
     pointer-events: all;
 
     .k-DashboardLayout__flow__mobileAsideBackground {
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(34, 34, 34, 0.8);
+      opacity: 0.8;
     }
-
     .k-DashboardLayout__flow__mobileAsideButton {
       background-color: ${COLORS.primary1};
     }
   }
+
+  .k-DashboardLayout__flow__mobileAsideButton__text {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: ${pxToRem(1)};
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: ${pxToRem(1)};
+  }
 `
 
-const MobileAsideComponent = ({ children }) => {
+const MobileAsideComponent = ({ children, openLabel, closeLabel }) => {
   const { show, buttonProps, modalProps, wrapperProps, closeAction } = useModal(
     {
       id: 'DashboardLayout-sideModal',
@@ -115,7 +136,6 @@ const MobileAsideComponent = ({ children }) => {
       modalOpenText: '2',
     },
   )
-
   return (
     <Wrapper
       className={classNames('k-DashboardLayout__flow__mobileAside', {
@@ -128,9 +148,19 @@ const MobileAsideComponent = ({ children }) => {
         {...buttonProps}
       >
         {show ? (
-          <CrossIcon color={COLORS.background1} aria-hidden />
+          <>
+            <CrossIcon color={COLORS.background1} aria-hidden />
+            <span className="k-DashboardLayout__flow__mobileAsideButton__text">
+              {closeLabel}
+            </span>
+          </>
         ) : (
-          <Lightbulb size="small" aria-hidden />
+          <>
+            <Lightbulb size="small" aria-hidden />
+            <span className="k-DashboardLayout__flow__mobileAsideButton__text">
+              {openLabel}
+            </span>
+          </>
         )}
       </button>
       <div
@@ -147,14 +177,16 @@ const MobileAsideComponent = ({ children }) => {
   )
 }
 
-export const MobileAside = ({ children }) => {
+export const MobileAside = props => {
   const bodyElement =
     domElementHelper.canUseDom() && document.querySelector('#root')
 
   return bodyElement
-    ? ReactDOM.createPortal(
-        <MobileAsideComponent>{children}</MobileAsideComponent>,
-        bodyElement,
-      )
+    ? ReactDOM.createPortal(<MobileAsideComponent {...props} />, bodyElement)
     : null
+}
+
+MobileAsideComponent.propTypes = {
+  openLabel: PropTypes.node.isRequired,
+  closeLabel: PropTypes.node.isRequired,
 }

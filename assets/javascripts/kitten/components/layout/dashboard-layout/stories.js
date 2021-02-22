@@ -260,7 +260,12 @@ const FlowExample = () => (
         sem nec elit.
       </p>
     </DashboardLayout.Flow.Content>
-    <DashboardLayout.Flow.Aside>
+    <DashboardLayout.Flow.Aside
+      mobileAsideProps={{
+        openLabel: 'Open help',
+        closeLabel: 'Close help',
+      }}
+    >
       <DashboardLayout.Flow.AsideCard>
         Side content
       </DashboardLayout.Flow.AsideCard>
