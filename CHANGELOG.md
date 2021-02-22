@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove `k-Separator` SCSS mixin.
+- Breaking change: Remove `k-VerticalSeparator` and
+  `k-separatorBase` SCSS mixins.
 - Breaking change: Remove `k-VerticalStroke` SCSS mixin, convert `VerticalStroke`.
 - Breaking change: Migrate `InformationBox` component and remove `k-InformationBox` styles.
 - Feature: Add `onChange` to `ToggleSwitch` API.
