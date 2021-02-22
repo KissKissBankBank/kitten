@@ -15,8 +15,9 @@
 // Custom styles for stories
 
 @import 'custom/flex';
+@import 'custom/background';
 
 // Custom styles for StoryBook iFrame.
-body {
-  margin: 0;
+body, body.sb-show-main.sb-main-padded {
+  padding: 0;
 }

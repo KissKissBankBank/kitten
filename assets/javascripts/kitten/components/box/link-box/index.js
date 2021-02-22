@@ -35,7 +35,7 @@ export const LinkBox = ({ className, href, isExternal, ...props }) => {
         {props.children}
 
         <div className="k-LinkBox__arrow">
-          <ArrowIcon version="solid" height="10" width="10" />
+          <ArrowIcon height="10" width="10" />
         </div>
       </div>
     </StyledLinkBox>

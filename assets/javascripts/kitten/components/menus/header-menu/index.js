@@ -1,21 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
+
 import { Item } from './components/item'
 import { Badge } from './components/badge'
-import { Context } from './components/context'
-import COLORS from '../../../constants/colors-config'
-import { pxToRem } from '../../../helpers/utils/typography'
-
-const borderStyle = `${pxToRem(1)} solid ${COLORS.line1}`
-
-const List = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border-left: ${({ noBorder }) => (noBorder ? 0 : borderStyle)};
-  border-right: ${({ noBorder }) => (noBorder ? 0 : borderStyle)};
-`
+import { StyledList } from './styles'
 
 export const HeaderMenu = ({
   backgroundColors,
@@ -23,20 +12,28 @@ export const HeaderMenu = ({
   borderSideOnHover,
   largeItem,
   noBorder,
-  children,
-}) => (
-  <Context.Provider
-    value={{
-      backgroundColors: backgroundColors,
-      borderSide: borderSide,
-      borderSideOnHover: borderSideOnHover,
-      largeItem: largeItem,
-      noBorder: noBorder,
-    }}
-  >
-    <List noBorder={noBorder}>{children}</List>
-  </Context.Provider>
-)
+  className,
+  style,
+  ...props
+}) => {
+  return (
+    <StyledList
+      className={classNames('k-HeaderMenu', className, {
+        'k-HeaderMenu--hasBorders': !noBorder,
+        'k-HeaderMenu--hasBorderOnSide': !!borderSide,
+        'k-HeaderMenu--hasBorderOnSide-left': borderSide === 'left',
+        'k-HeaderMenu--hasBorderOnSide-right': borderSide === 'right',
+        'k-HeaderMenu--hasBorderOnSideOnHover': borderSideOnHover,
+        'k-HeaderMenu--hasBigItems': largeItem,
+      })}
+      style={{
+        ...style,
+        '--headerMenu-background-colors-hover': backgroundColors?.hover,
+      }}
+      {...props}
+    />
+  )
+}
 
 HeaderMenu.Item = Item
 HeaderMenu.Badge = Badge

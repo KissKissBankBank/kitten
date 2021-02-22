@@ -88,7 +88,6 @@ var Navbar = /*#__PURE__*/function (_PureComponent) {
         },
         icon: true
       }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-        version: "solid",
         fill: iconColor,
         direction: "left",
         width: "8",
@@ -100,7 +99,6 @@ var Navbar = /*#__PURE__*/function (_PureComponent) {
         },
         icon: true
       }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-        version: "solid",
         fill: iconColor,
         direction: "right",
         width: "8",
