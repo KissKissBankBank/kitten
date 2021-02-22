@@ -305,7 +305,6 @@ button:hover .c1 {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    bottom: 0;
     overflow: scroll;
     gap: 1.875rem;
     padding: 1.875rem;

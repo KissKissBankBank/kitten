@@ -51,10 +51,6 @@ const StyledFlow = styled.div`
     box-sizing: border-box;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    position: relative;
-
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       grid-column: 1 / 2;
     }
@@ -87,10 +83,6 @@ const StyledFlow = styled.div`
     justify-content: space-between;
     gap: ${pxToRem(20)};
     margin: ${pxToRem(20)} 0;
-
-    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-      justify-content: stretch;
-    }
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       gap: ${pxToRem(40)};

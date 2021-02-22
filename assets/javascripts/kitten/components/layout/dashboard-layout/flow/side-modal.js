@@ -1,13 +1,15 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import classNames from 'classnames'
+
+import { domElementHelper } from '../../../../helpers/dom/element-helper'
+import { useModal } from '../../../../helpers/dom/use-modal'
 import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { CrossIcon } from '../../../../components/icons/cross-icon'
 import { LightbulbIllustration as Lightbulb } from '../../../../components/illustrations/lightbulb-illustration'
-
-import { useModal } from '../../../../helpers/dom/use-modal'
 
 const Wrapper = styled.div`
   position: fixed;
@@ -47,6 +49,11 @@ const Wrapper = styled.div`
       rgba(0, 0, 0, 0.15);
     pointer-events: all;
     border: none;
+
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       flex: 0 0 ${pxToRem(70)};
@@ -100,7 +107,7 @@ const Wrapper = styled.div`
   }
 `
 
-export const MobileAside = ({ children }) => {
+const MobileAsideComponent = ({ children }) => {
   const { show, buttonProps, modalProps, wrapperProps, closeAction } = useModal(
     {
       id: 'DashboardLayout-sideModal',
@@ -108,6 +115,7 @@ export const MobileAside = ({ children }) => {
       modalOpenText: '2',
     },
   )
+
   return (
     <Wrapper
       className={classNames('k-DashboardLayout__flow__mobileAside', {
@@ -122,7 +130,7 @@ export const MobileAside = ({ children }) => {
         {show ? (
           <CrossIcon color={COLORS.background1} aria-hidden />
         ) : (
-          <Lightbulb aria-hidden />
+          <Lightbulb size="small" aria-hidden />
         )}
       </button>
       <div
@@ -137,4 +145,16 @@ export const MobileAside = ({ children }) => {
       />
     </Wrapper>
   )
+}
+
+export const MobileAside = ({ children }) => {
+  const bodyElement =
+    domElementHelper.canUseDom() && document.querySelector('#root')
+
+  return bodyElement
+    ? ReactDOM.createPortal(
+        <MobileAsideComponent>{children}</MobileAsideComponent>,
+        bodyElement,
+      )
+    : null
 }
