@@ -176,6 +176,7 @@ export const Toggletip = ({
   useEffect(() => {
     document.addEventListener('click', handleOutsideClick)
     document.addEventListener('keydown', handleKeydownEscape)
+    document.addEventListener('DOMContentLoaded', updateCoordinates)
     window.addEventListener('resize', throttleUpdateCoordinates)
 
     const bubbleElement = actionElement.current?.nextElementSibling?.children[0]
@@ -188,17 +189,10 @@ export const Toggletip = ({
     return () => {
       document.removeEventListener('click', handleOutsideClick)
       document.removeEventListener('keydown', handleKeydownEscape)
+      document.removeEventListener('DOMContentLoaded', updateCoordinates)
       window.removeEventListener('resize', throttleUpdateCoordinates)
     }
   }, [isOpen])
-
-  useEffect(() => {
-    updateCoordinates()
-  }, [actionElement])
-
-  const throttleUpdateCoordinates = () => {
-    throttle(updateCoordinates, 50)
-  }
 
   const updateCoordinates = () => {
     if (!actionElement.current) return
@@ -222,6 +216,8 @@ export const Toggletip = ({
 
     setBubbleRightLimit(shouldDisplayBubbleRightLimit)
   }
+
+  const throttleUpdateCoordinates = throttle(updateCoordinates, 50)
 
   const handleOutsideClick = event => {
     if (actionElement.current !== event.target) {
