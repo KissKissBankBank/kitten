@@ -192,7 +192,7 @@ export class CartRewardCard extends Component {
             },
           )}
         >
-          <Paragraph tag={descriptionTag} margin={false} modifier="tertiary">
+          <Paragraph tag={descriptionTag} noMargin={false} modifier="tertiary">
             {textDescription}
             {description}
           </Paragraph>

@@ -16,7 +16,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
         Custom title mount
       </h6>
       <p
-        className="sc-EHOje dirCl"
+        className="sc-EHOje fhJfT"
       >
         Custom text description
       </p>

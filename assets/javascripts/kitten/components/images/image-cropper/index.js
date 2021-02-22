@@ -144,7 +144,7 @@ export const ImageCropper = ({
       </Marger>
 
       <Marger top="1">
-        <Paragraph modifier="tertiary" margin={false}>
+        <Paragraph modifier="tertiary" noMargin={false}>
           {description}
         </Paragraph>
       </Marger>

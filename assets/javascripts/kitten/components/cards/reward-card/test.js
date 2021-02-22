@@ -32,7 +32,7 @@ describe('<RewardCard />', () => {
               <RewardCard.RowContent>
                 <RewardCard.Title>Custom title mount</RewardCard.Title>
 
-                <Paragraph modifier="tertiary" margin={false}>
+                <Paragraph modifier="tertiary" noMargin={false}>
                   Custom text description
                 </Paragraph>
               </RewardCard.RowContent>

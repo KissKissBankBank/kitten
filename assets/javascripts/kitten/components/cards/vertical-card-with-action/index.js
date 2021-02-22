@@ -55,7 +55,7 @@ export const VerticalCardWithAction = ({
         <Paragraph
           modifier="tertiary"
           tag={descriptionTag}
-          margin={false}
+          noMargin={false}
           className="k-u-align-center k-u-margin-top-singleHalf--important"
         >
           {description}

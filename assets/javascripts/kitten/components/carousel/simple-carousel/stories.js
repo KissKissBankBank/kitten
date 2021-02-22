@@ -33,7 +33,7 @@ const Item = ({ numItem }) => (
       </Marger>
 
       <Marger top="3" bottom="3">
-        <Paragraph modifier="secondary" margin={false} style={{ color: '#FFF' }}>
+        <Paragraph modifier="secondary" noMargin={false} style={{ color: '#FFF' }}>
           Parapraph {numItem}
         </Paragraph>
       </Marger>

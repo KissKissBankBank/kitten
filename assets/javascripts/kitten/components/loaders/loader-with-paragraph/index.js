@@ -40,7 +40,7 @@ export class LoaderWithParagraph extends Component {
       <div className={containerClassName} {...others}>
         {loaderBefore ? loader : null}
 
-        <Paragraph modifier="primary" margin={false} {...paragraphProps}>
+        <Paragraph modifier="primary" noMargin={false} {...paragraphProps}>
           {this.props.children}
         </Paragraph>
 

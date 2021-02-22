@@ -266,7 +266,7 @@ export const RewardCard = () => {
                     RewardCard_story__disabled: disabled,
                   })}
                   modifier="tertiary"
-                  margin={false}
+                  noMargin={false}
                 >
                   {text(
                     'Reward description',

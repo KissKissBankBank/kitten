@@ -36,7 +36,7 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-htpNat ixwtRD"
+      className="sc-htpNat dZlYBG"
     >
       Custom text
     </p>
