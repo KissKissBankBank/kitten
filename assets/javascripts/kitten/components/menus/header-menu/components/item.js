@@ -50,7 +50,6 @@ export const Item = ({
         {external && (
           <ArrowIcon
             className="k-HeaderMenu__item__arrow headerMenuArrowIcon"
-            version="solid"
             direction="right"
           />
         )}

@@ -227,16 +227,16 @@ export const AllIcons = () => {
 
       <Group title="ArrowIcon">
         <IconContainer suffix='direction="top"'>
-          <ArrowIcon version="solid" color={colorInput} direction="top" />
+          <ArrowIcon color={colorInput} direction="top" />
         </IconContainer>
         <IconContainer suffix='direction="bottom"'>
-          <ArrowIcon version="solid" color={colorInput} direction="bottom" />
+          <ArrowIcon color={colorInput} direction="bottom" />
         </IconContainer>
         <IconContainer suffix='direction="left"'>
-          <ArrowIcon version="solid" color={colorInput} direction="left" />
+          <ArrowIcon color={colorInput} direction="left" />
         </IconContainer>
         <IconContainer suffix='direction="right"'>
-          <ArrowIcon version="solid" color={colorInput} direction="right" />
+          <ArrowIcon color={colorInput} direction="right" />
         </IconContainer>
       </Group>
 
