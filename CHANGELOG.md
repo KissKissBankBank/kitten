@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `DashboardLayout` component.
+- Feature: Add `Flow` subcomponent to `DashboardLayout`.
+- Feature: Add `LightbulbIllustration` with `size` prop.
+
 
 ## [2.120.0] - 2020-02-12
 
