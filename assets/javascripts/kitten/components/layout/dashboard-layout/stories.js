@@ -13,6 +13,13 @@ import {
   pxToRem,
   ScreenConfig,
   StatusWithBullet,
+  DashboardMenu,
+  HomeIcon,
+  TagIcon,
+  FilterIcon,
+  FileIcon,
+  LoudspeakerIcon,
+  ShieldIcon,
 } from '../../..'
 
 const CardHolder = styled.div`
@@ -97,12 +104,96 @@ export const Default = () => (
       </AvatarWithTextAndBadge>
     </DashboardLayout.Header>
     <DashboardLayout.SideContent>
-      <ul className="k-u-margin-none">
-        <li className="k-u-color-background1">Lien 1</li>
-        <li className="k-u-color-background1">Lien 2</li>
-        <li className="k-u-color-background1">Lien 3</li>
-        <li className="k-u-color-background1">Lien 4</li>
-      </ul>
+      {({ closeSideBar }) => {
+        return (
+          <DashboardMenu>
+            <DashboardMenu.Item
+              href="#"
+              icon={() => <HomeIcon color="currentColor" />}
+              onClick={e => {
+                e.preventDefault()
+                closeSideBar()
+              }}
+            >
+              Accueil
+            </DashboardMenu.Item>
+            <DashboardMenu.Item
+              href="#"
+              isActive
+              icon={() => <TagIcon color="currentColor" />}
+              onClick={e => {
+                e.preventDefault()
+                closeSideBar()
+              }}
+            >
+              Contreparties
+            </DashboardMenu.Item>
+            <DashboardMenu.Item
+              href="#"
+              icon={() => <FilterIcon color="currentColor" />}
+              onClick={e => {
+                e.preventDefault()
+                closeSideBar()
+              }}
+            >
+              Paramètres
+            </DashboardMenu.Item>
+            <DashboardMenu.Item
+              href="https://www.kisskissbankbank.com"
+              icon={() => <FileIcon color="currentColor" />}
+              onClick={e => {
+                e.preventDefault()
+                closeSideBar()
+              }}
+            >
+              Page Projet
+            </DashboardMenu.Item>
+            <DashboardMenu.Item
+              href="https://www.kisskissbankbank.com"
+              icon={() => <LoudspeakerIcon color="currentColor" />}
+              onClick={e => {
+                e.preventDefault()
+                closeSideBar()
+              }}
+            >
+              Marketing
+            </DashboardMenu.Item>
+            <DashboardMenu.Expandable
+              title="Admin"
+              icon={() => <ShieldIcon color="currentColor" />}
+            >
+              <DashboardMenu.Item
+                href="#"
+                onClick={e => {
+                  e.preventDefault()
+                  closeSideBar()
+                }}
+              >
+                Destinataire des fonds
+              </DashboardMenu.Item>
+              <DashboardMenu.Item
+                href="#"
+                onClick={e => {
+                  e.preventDefault()
+                  closeSideBar()
+                }}
+                isActive
+              >
+                Confirmation d'identité
+              </DashboardMenu.Item>
+              <DashboardMenu.Item
+                href="#"
+                onClick={e => {
+                  e.preventDefault()
+                  closeSideBar()
+                }}
+              >
+                Documents justificatifs
+              </DashboardMenu.Item>
+            </DashboardMenu.Expandable>
+          </DashboardMenu>
+        )
+      }}
     </DashboardLayout.SideContent>
     <DashboardLayout.SideFooter>
       <HelpBox>
