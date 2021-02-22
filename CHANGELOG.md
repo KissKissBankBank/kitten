@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `onChange` to `ToggleSwitch` API.
+
 ## [3.0.0-beta.3] - 2021-02-19
 
 Breaking changes:
