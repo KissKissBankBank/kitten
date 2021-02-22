@@ -95,6 +95,7 @@ export var Toggletip = function Toggletip(_ref2) {
 
     document.addEventListener('click', handleOutsideClick);
     document.addEventListener('keydown', handleKeydownEscape);
+    document.addEventListener('DOMContentLoaded', updateCoordinates);
     window.addEventListener('resize', throttleUpdateCoordinates);
     var bubbleElement = (_actionElement$curren = actionElement.current) === null || _actionElement$curren === void 0 ? void 0 : (_actionElement$curren2 = _actionElement$curren.nextElementSibling) === null || _actionElement$curren2 === void 0 ? void 0 : _actionElement$curren2.children[0];
     var bubbleElementCoords = (bubbleElement === null || bubbleElement === void 0 ? void 0 : bubbleElement.getBoundingClientRect()) || {};
@@ -103,16 +104,10 @@ export var Toggletip = function Toggletip(_ref2) {
     return function () {
       document.removeEventListener('click', handleOutsideClick);
       document.removeEventListener('keydown', handleKeydownEscape);
+      document.removeEventListener('DOMContentLoaded', updateCoordinates);
       window.removeEventListener('resize', throttleUpdateCoordinates);
     };
   }, [isOpen]);
-  useEffect(function () {
-    updateCoordinates();
-  }, [actionElement]);
-
-  var throttleUpdateCoordinates = function throttleUpdateCoordinates() {
-    throttle(updateCoordinates, 50);
-  };
 
   var updateCoordinates = function updateCoordinates() {
     if (!actionElement.current) return;
@@ -127,6 +122,8 @@ export var Toggletip = function Toggletip(_ref2) {
     var shouldDisplayBubbleRightLimit = document.body.clientWidth - (actionElementCoords.right + CONTAINER_PADDING_THIN + 20) < 440;
     setBubbleRightLimit(shouldDisplayBubbleRightLimit);
   };
+
+  var throttleUpdateCoordinates = throttle(updateCoordinates, 50);
 
   var handleOutsideClick = function handleOutsideClick(event) {
     if (actionElement.current !== event.target) {

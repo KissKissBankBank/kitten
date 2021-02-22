@@ -51,7 +51,6 @@ export { BackerCard } from './components/cards/backer-card'
 export { BackingCard } from './components/cards/backing-card'
 export { CartRewardCard } from './components/cards/cart-reward-card'
 export { DonationCard } from './components/cards/donation-card'
-export { RewardCard } from './components/cards/reward-card'
 export { RewardEdition } from './components/cards/reward-edition'
 export { TeamCard } from './components/cards/team-card'
 export { Triptych } from './components/cards/triptych'
@@ -102,7 +101,6 @@ export { DropdownSelect } from './components/form/dropdown-select'
 export { FormActions } from './components/form/form-actions'
 export { FormAmountAndCurrency } from './components/form/form-amount-and-currency'
 export { FormPhoneNumber } from './components/form/form-phone-number'
-export { FormRow } from './components/form/form-row'
 export { Label } from './components/form/label'
 export { LocationInput } from './components/form/location-input'
 export { PasswordInput } from './components/form/password-input'
@@ -111,9 +109,7 @@ export { RadioButtonSet } from './components/form/radio-button-set'
 export { RadioButton } from './components/form/radio-button'
 export { RangeSlider } from './components/form/range-slider'
 export { RichTextInput } from './components/form/rich-text-input'
-export { Search } from './components/form/search'
 export { SelectWithState } from './components/form/select-with-state'
-export { Slider } from './components/form/slider'
 export { Switch } from './components/form/switch'
 export { TextInputAndSelect } from './components/form/text-input-and-select'
 export { TextInputWithLimit } from './components/form/text-input-with-limit'
@@ -204,14 +200,6 @@ export { SimplePopover } from './components/popovers/simple-popover'
 // Search
 export { SearchInput } from './components/search/search-input'
 
-// Simulators
-export { LoanSimulator } from './components/simulators/loan-simulator'
-
-// Sliders
-export { SliderBar } from './components/sliders/slider-bar'
-export { SliderTooltip } from './components/sliders/slider-tooltip'
-export { SliderWithTooltipAndPower } from './components/sliders/slider-with-tooltip-and-power'
-
 // Status with Bullet
 export { StatusWithBullet } from './components/status-with-bullet'
 
@@ -252,8 +240,6 @@ export { TitleWithStroke } from './components/typography/title-with-stroke'
 // Uploaders
 export { BasicUploader } from './components/uploaders/basic-uploader'
 export { DocumentManager } from './components/uploaders/document-manager'
-export { SimpleUploader } from './components/uploaders/simple-uploader'
-export { Uploader } from './components/uploaders/uploader'
 
 // Videos
 export { Video } from './components/videos/video'
@@ -389,5 +375,6 @@ export { default as useContinuousIntersectionObserver } from './helpers/utils/co
 export { default as useIntersectionObserver } from './helpers/utils/intersection-hook'
 export { default as useLazyObserver } from './helpers/utils/lazy-hook'
 export { default as margin } from './helpers/utils/margin'
+export { parseHtml } from './helpers/utils/parser'
 export { pxToRem, stepToRem } from './helpers/utils/typography'
 export { usePrevious } from './helpers/utils/use-previous-hook'

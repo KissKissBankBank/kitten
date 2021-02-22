@@ -4,13 +4,50 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [3.0.0-beta.3] - 2021-02-19
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-FormRow`
+  - `k-HeaderNav`
+  - `k-LinkList`
+  - `k-LoanSimulator`
+  - `k-SearchInput`
+  - `k-SimpleUploader`
+  - `k-Slider`
+  - `k-SliderTooltip`
+  - `k-SupTitle`
+- Delete the following deprecated components:
+  - `FormRow`
+  - `LoanSimulator`
+  - `NavTabCarousel` (deprecated duplicate from `carousels/tab-bar-carousel`)
+  - `RewardCard` (replaced by `BackingCard`)
+  - `Search`
+  - `SimpleUploader`
+  - `Slider` (replaced by `RangeSlider`)
+  - `SliderBar`
+  - `SliderTooltip`
+  - `SliderWithTooltipAndPower`
+  - `Uploader`
+- Delete `sliderKeyDownHandler` helper.
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+  - `HeaderNav`
+  - `LinkList`
+  - `SupTitle`
+- Update `Text` component.
+- Add `parseHtml` helper to ESM build.
+
 ## [3.0.0-beta.2] - 2021-02-15
 
 Breaking changes:
 
 - `ArrowIcon` now defaults to `solid` version.
 - Remove `k-u-blockAlign-*` utilities in favor of `k-u-align-self-*`.
-- Delete the following deprecated `card` SCSS mixins:
+- Delete the following deprecated SCSS mixins:
   - `k-Alert`
   - `k-ExternalRichLink`
   - `k-HeaderTour`
@@ -34,21 +71,27 @@ Breaking changes:
 
 - Remove `StyleGuide` app.
 - Remove `Karl` stories & components.
-- Remove `k-LegoGrid` styles.
-- Remove `LegoGrid` component.
-- Delete the following deprecated `cards` components:
+- Delete the following deprecated SCSS mixins:
+  - `k-LegoGrid`
+  - `k-ProjectCard`
+  - `k-ProjectCreatorCard`
+  - `k-ProjectSimilarCard`
+- Delete the following deprecated components:
   - `ArticleCard`
   - `ContributionCard`
   - `CrowdfundingCardWidget`
+  - `LegoGrid`
   - `ProjectCard`
   - `ProjectCreatorCard`
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
   - `SimilarProjectsCard`.
-- Delete the following deprecated `card` SCSS mixins:
-  - `k-ProjectCard`
-  - `k-ProjectCreatorCard`
-  - `k-ProjectSimilarCard`
+
+## [2.120.1] - 2021-02-19
+
+Fix:
+
+- Fix init and resize coords calculation on `Toggletip`.
 
 ## [2.120.0] - 2021-02-12
 
