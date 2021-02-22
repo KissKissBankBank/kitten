@@ -8,7 +8,7 @@ import { modifierStyles } from './helpers/modifier-styles'
 const StyledParagraph = styled.p`
   ${TYPOGRAPHY.fontStyles.light};
 
-  &.k-Paragraph--margin {
+  &.k-Paragraph--noMargin {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -27,7 +27,7 @@ const StyledParagraph = styled.p`
 export const Paragraph = ({
   tag,
   modifier,
-  margin,
+  noMargin,
   normalLineHeight,
   italic,
   ...other
@@ -38,7 +38,7 @@ export const Paragraph = ({
       modifier={modifier}
       className={classNames(
         {
-          'k-Paragraph--margin': margin,
+          'k-Paragraph--noMargin': noMargin,
           'k-Paragraph--normalLineHeight': normalLineHeight,
           'k-Paragraph--italic': italic,
         },
@@ -51,7 +51,7 @@ export const Paragraph = ({
 Paragraph.defaultProps = {
   tag: 'p',
   modifier: 'primary',
-  margin: true,
+  noMargin: true,
   normalLineHeight: false,
   italic: false,
 }
@@ -65,7 +65,7 @@ Paragraph.propTypes = {
   /**
     Remove default margins of `title` attribut.
   */
-  margin: PropTypes.bool,
+  noMargin: PropTypes.bool,
   /**
     Line-height normal (1.2).
   */

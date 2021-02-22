@@ -12,7 +12,7 @@ describe('<Paragraph />', () => {
           <Paragraph
             tag="p"
             modifier="primary"
-            margin
+            noMargin
             normalLineHeight={false}
             italic={false}
             children="Lorem ipsum dolor sit amet…"
@@ -38,9 +38,9 @@ describe('<Paragraph />', () => {
     })
   })
 
-  describe('with margin', () => {
+  describe('wittout margin', () => {
     beforeEach(() => {
-      component = renderer.create(<Paragraph tag="p" margin />).toJSON()
+      component = renderer.create(<Paragraph tag="p" noMargin />).toJSON()
     })
 
     it('matches with snapshot', () => {
