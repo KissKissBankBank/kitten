@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove `k-ImageWithCaption` SCSS mixin.
+- Breaking change: Remove `ImageWithCaption` component.
 - Breaking change: Remove `k-PhoneDropdown` styles.
 - Breaking change: Remove `DropdownButton`, `Dropdown`, `PhoneDropdown` and `UserMenu` components.
 - Breaking change: Remove `NavList` component.

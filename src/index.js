@@ -551,12 +551,6 @@ Object.defineProperty(exports, "ImageCropper", {
     return _imageCropper.ImageCropper;
   }
 });
-Object.defineProperty(exports, "ImageWithCaption", {
-  enumerable: true,
-  get: function get() {
-    return _imageWithCaption.ImageWithCaption;
-  }
-});
 Object.defineProperty(exports, "ArrowContainer", {
   enumerable: true,
   get: function get() {
@@ -1759,8 +1753,6 @@ var _adaptableGrid = require("./components/grid/adaptable-grid");
 var _hero = require("./components/heroes/hero");
 
 var _imageCropper = require("./components/images/image-cropper");
-
-var _imageWithCaption = require("./components/images/image-with-caption");
 
 var _arrowContainer = require("./components/layout/arrow-container");
 

@@ -100,8 +100,7 @@ export { AdaptableGrid } from './components/grid/adaptable-grid'; // Heroes
 
 export { Hero } from './components/heroes/hero'; // Images
 
-export { ImageCropper } from './components/images/image-cropper';
-export { ImageWithCaption } from './components/images/image-with-caption'; // Layout
+export { ImageCropper } from './components/images/image-cropper'; // Layout
 
 export { ArrowContainer } from './components/layout/arrow-container';
 export { IconContainer } from './components/layout/icon-container';
