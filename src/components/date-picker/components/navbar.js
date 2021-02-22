@@ -70,7 +70,6 @@ var Navbar = /*#__PURE__*/function (_Component) {
         },
         left: true
       }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-        version: "solid",
         color: iconColor,
         direction: "left"
       })), /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
@@ -80,7 +79,6 @@ var Navbar = /*#__PURE__*/function (_Component) {
         },
         right: true
       }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-        version: "solid",
         color: iconColor
       })));
     }

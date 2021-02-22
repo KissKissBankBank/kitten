@@ -4,48 +4,145 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Breaking changes:
-
-- Remove `k-Alert` SCSS mixin.
 - Refactor and move `Badge` and `IconBadge` components.
 - Remove `k-Badge` and `k-IconBadge` styles.
+- Breaking change: Remove `Comment` coming from `form/comment` path.
+  Prefer use `comments/comment` path.
+- Breaking change: Remove `CommentForm` coming from `form/comment-form` path.
+  Prefer use `comments/comment-form` path.
+- Breaking change: Remove `CommentAvatar` coming from `form/comment-avatar`
+  path. Prefer use `comments/comment-avatar` path.
+- Breaking change: Remove `k-ImageWithCaption` SCSS mixin.
+- Breaking change: Remove `ImageWithCaption` component.
+- Breaking change: Remove `k-PhoneDropdown` styles.
+- Breaking change: Remove `DropdownButton`, `Dropdown`, `PhoneDropdown` and `UserMenu` components.
+- Breaking change: Remove `NavList` component.
+- Breaking change: Remove `k-Header` SCSS mixin.
+- Breaking change: Remove `Header`, `HeaderLogo` and `HeaderTitles` components.
+  Prefer use `HeaderNav` component.
+- Remove `Switch` replaced with `ToggleSwitch`.
+- Breaking change: Remove `k-Separator` SCSS mixin.
+- Breaking change: Remove `k-VerticalSeparator` and
+  `k-separatorBase` SCSS mixins.
+- Breaking change: Remove `k-VerticalStroke` SCSS mixin, convert `VerticalStroke`.
+- Breaking change: Migrate `InformationBox` component and remove `k-InformationBox` styles.
+- Feature: Add `onChange` to `ToggleSwitch` API.
 
-## [3.0.0-beta.1] - 2020-02-08
+## [3.0.0-beta.3] - 2021-02-19
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-FormRow`
+  - `k-HeaderNav`
+  - `k-LinkList`
+  - `k-LoanSimulator`
+  - `k-SearchInput`
+  - `k-SimpleUploader`
+  - `k-Slider`
+  - `k-SliderTooltip`
+  - `k-SupTitle`
+- Delete the following deprecated components:
+  - `FormRow`
+  - `LoanSimulator`
+  - `NavTabCarousel` (deprecated duplicate from `carousels/tab-bar-carousel`)
+  - `RewardCard` (replaced by `BackingCard`)
+  - `Search`
+  - `SimpleUploader`
+  - `Slider` (replaced by `RangeSlider`)
+  - `SliderBar`
+  - `SliderTooltip`
+  - `SliderWithTooltipAndPower`
+  - `Uploader`
+- Delete `sliderKeyDownHandler` helper.
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+  - `HeaderNav`
+  - `LinkList`
+  - `SupTitle`
+- Update `Text` component.
+- Add `parseHtml` helper to ESM build.
+
+## [3.0.0-beta.2] - 2021-02-15
+
+Breaking changes:
+
+- `ArrowIcon` now defaults to `solid` version.
+- Remove `k-u-blockAlign-*` utilities in favor of `k-u-align-self-*`.
+- Delete the following deprecated SCSS mixins:
+  - `k-Alert`
+  - `k-ExternalRichLink`
+  - `k-HeaderTour`
+  - `k-Popover`
+  - `k-TagList`
+  - `k-Tour`
+- Delete the following deprecated components:
+  - `CallToActionPopover`
+  - `DeprecatedArrowIcon`
+  - `ExternalRichLink`
+  - `HeaderTour`
+  - `Popover`
+  - `TagList`
+  - `Tour`
+  - `TourPopover`
+  - `TourStep`
+
+## [3.0.0-beta.1] - 2021-02-08
 
 Breaking changes:
 
 - Remove `StyleGuide` app.
 - Remove `Karl` stories & components.
-- Remove `k-LegoGrid` styles.
-- Remove `LegoGrid` component.
-- Delete the following deprecated `cards` components:
+- Delete the following deprecated SCSS mixins:
+  - `k-LegoGrid`
+  - `k-ProjectCard`
+  - `k-ProjectCreatorCard`
+  - `k-ProjectSimilarCard`
+- Delete the following deprecated components:
   - `ArticleCard`
   - `ContributionCard`
   - `CrowdfundingCardWidget`
+  - `LegoGrid`
   - `ProjectCard`
   - `ProjectCreatorCard`
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
   - `SimilarProjectsCard`.
-- Delete the following deprecated `card` SCSS mixins:
-  - `k-ProjectCard`
-  - `k-ProjectCreatorCard`
-  - `k-ProjectSimilarCard`
 
-## [2.118.0] - 2020-02-09
+## [2.120.1] - 2021-02-19
+
+Fix:
+
+- Fix init and resize coords calculation on `Toggletip`.
+
+## [2.120.0] - 2021-02-12
+
+Feature:
+
+- Add `Toggletip` component.
+
+## [2.119.0] - 2021-02-10
+
+Feature:
+
+- Add `regular` (default) and `big` props on all variants of `DropdownSelect`.
+
+## [2.118.0] - 2021-02-09
 
 Features:
 
 - Add `size` prop to `RadioButton`, defaults to `regular`.
 - Add `hover` styles for `BackingCard`.
 
-## [2.117.0] - 2020-02-08
+## [2.117.0] - 2021-02-08
 
 Feature:
 
 - Add `size` prop to `HeaderMenu.Item` & refactoring.
 
-## [2.116.0] - 2020-02-08
+## [2.116.0] - 2021-02-08
 
 Features:
 
@@ -59,7 +156,7 @@ Fix:
 
 - Fix mixup between `k-u-margin-vertical` and `k-u-margin-horizontal`.
 
-## [2.115.0] - 2020-02-02
+## [2.115.0] - 2021-02-02
 
 Feature:
 
@@ -69,7 +166,7 @@ Fix:
 
 - Fix `Carousel` margin and padding calculations.
 
-## [2.114.0] - 2020-01-29
+## [2.114.0] - 2021-01-29
 
 Features:
 
@@ -82,7 +179,7 @@ Fix:
 
 - `VerticalStepper` mobile style fixes.
 
-## [2.113.0] - 2020-01-21
+## [2.113.0] - 2021-01-21
 
 Features:
 
@@ -96,7 +193,7 @@ Fixes:
 - Stop applying focus styles on `VerticalStepper` when `disabled`.
 - `Combobox` filter on `label` (instead of `value`).
 
-## [2.112.0] - 2020-01-18
+## [2.112.0] - 2021-01-18
 
 Feature:
 
@@ -109,7 +206,7 @@ Fixes:
 - `RangeSlider` mobile style fixes.
 - `RadioButton` mobile style fixes.
 
-## [2.111.0] - 2020-01-15
+## [2.111.0] - 2021-01-15
 
 Feature:
 
@@ -120,7 +217,7 @@ Fixes:
 - Add button types on `Carousel` navigation.
 - Remove scrollbars on `Carousel` on Firefox.
 
-## [2.110.0] - 2020-01-13
+## [2.110.0] - 2021-01-13
 
 Feature:
 
@@ -130,14 +227,14 @@ Fix:
 
 - Fix overflow style on `ScrollableContainer`.
 
-## [2.109.0] - 2020-01-12
+## [2.109.0] - 2021-01-12
 
 Features:
 
 - Replace deprecated `Slider` with `RangeSlider` on `ImageCropper`.
 - Add `className` prop propagation to `RewardCard`.
 
-## [2.108.0] - 2020-01-11
+## [2.108.0] - 2021-01-11
 
 Features:
 
