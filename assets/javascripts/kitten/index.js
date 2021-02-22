@@ -9,6 +9,9 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 export { Accordeon } from './components/accordeon'
 
 // Atoms
+
+export { Badge } from './components/atoms/badge'
+export { IconBadge } from './components/atoms/icon-badge'
 export { Tag } from './components/atoms/tag'
 
 // Avatar
@@ -179,8 +182,6 @@ export { NavBar } from './components/navigation/nav-bar'
 
 // Notifications
 export { Alert } from './components/notifications/alert'
-export { Badge } from './components/notifications/badge'
-export { IconBadge } from './components/notifications/icon-badge'
 
 // Pages
 export { MarkdownPage } from './components/pages/markdown'

@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { IconBadge } from './icon-badge'
+import { IconBadge } from './index'
 
 describe('<IconBadge />', () => {
   let component
@@ -8,7 +8,7 @@ describe('<IconBadge />', () => {
   describe('by default', () => {
     beforeEach(() => {
       component = renderer
-        .create(<IconBadge children="Custom children" valid big huge />)
+        .create(<IconBadge children="Custom children" valid size="big" />)
         .toJSON()
     })
 

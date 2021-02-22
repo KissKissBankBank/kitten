@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Refactor and move `Badge` and `IconBadge` components.
+- Remove `k-Badge` and `k-IconBadge` styles.
 - Breaking change: Remove `Comment` coming from `form/comment` path.
   Prefer use `comments/comment` path.
 - Breaking change: Remove `CommentForm` coming from `form/comment-form` path.

@@ -2,8 +2,7 @@
 
 exports[`<IconBadge /> by default matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa kqnBTx"
-  disabled={false}
+  className="sc-bdVaJa dyecEi k-IconBadge k-IconBadge--big k-IconBadge--valid"
 >
   <span
     className="k-IconBadge__content"
