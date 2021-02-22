@@ -10,6 +10,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   Prefer use `comments/comment-form` path.
 - Breaking change: Remove `CommentAvatar` coming from `form/comment-avatar`
   path. Prefer use `comments/comment-avatar` path.
+- Breaking change: Remove `k-ImageWithCaption` SCSS mixin.
+- Breaking change: Remove `ImageWithCaption` component.
 - Breaking change: Remove `k-PhoneDropdown` styles.
 - Breaking change: Remove `DropdownButton`, `Dropdown`, `PhoneDropdown` and `UserMenu` components.
 - Breaking change: Remove `NavList` component.
