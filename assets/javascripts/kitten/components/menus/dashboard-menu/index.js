@@ -10,24 +10,25 @@ import { ArrowIcon } from '../../../components/icons/arrow-icon'
 const StyledDashboardMenu = styled.nav`
   color: ${COLORS.font2};
 
+  /* OVERRIDE DEFAULTS */
+
   .k-DashboardMenu__expandable__title,
   .k-DashboardMenu__item {
     &, &:visited, &:link {
       color: ${COLORS.font2};
       font-size: ${stepToRem(-1)};
       text-decoration: none;
+      transition: color .2s ease, background-color .2s ease;
     }
 
     &:focus, &:hover {
-      color: ${COLORS.primary1} !important;
+      background-color: ${COLORS.line3} !important;
     }
     &:focus {
       outline: ${COLORS.primary3} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(2)};
     }
   }
-
-  /* BLOCK STYLES */
 
   .k-DashboardMenu__list,
   .k-DashboardMenu__expandable__list {
@@ -36,12 +37,20 @@ const StyledDashboardMenu = styled.nav`
     list-style: none;
   }
 
-  .k-DashboardMenu__expandable__title::-webkit-details-marker {
-    display: none;
-  }
-  .k-DashboardMenu__expandable__title {
+  .k-DashboardMenu__expandable summary {
     list-style: none;
+
+    &:focus {
+      outline: ${COLORS.primary3} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
   }
+
+  /* BLOCK STYLES */
 
   .k-DashboardMenu__item .k-DashboardMenu__item__text,
   .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title__text {
@@ -76,7 +85,6 @@ const StyledDashboardMenu = styled.nav`
   .k-DashboardMenu__list > li > .k-DashboardMenu__item {
     ${TYPOGRAPHY.fontStyles.regular}
     background-color: ${COLORS.font1};
-    transition: color .2s ease, background-color .2s ease;
     cursor: pointer;
   }
   .k-DashboardMenu__expandable--hasActiveInside .k-DashboardMenu__expandable__title,
@@ -88,11 +96,11 @@ const StyledDashboardMenu = styled.nav`
   .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item {
     ${TYPOGRAPHY.fontStyles.light}
     line-height: ${pxToRem(18)};
-    transition: color .2s ease;
 
+    &:hover, &:focus,
     &[aria-current="page"] {
       ${TYPOGRAPHY.fontStyles.regular}
-      color: ${COLORS.primary1};
+      color: ${COLORS.background1};
     }
   }
 
@@ -120,13 +128,14 @@ const StyledDashboardMenu = styled.nav`
     padding: ${pxToRem(5)};
 
     svg {
+      display: block;
       fill: currentColor;
       transition: transform .2s ease-in-out;
     }
   }
 
   [open] .k-DashboardMenu__expandable__title__arrow svg {
-    transform: rotate(0deg) !important;
+    transform: rotate(360deg) !important;
   }
 `
 
@@ -145,11 +154,7 @@ const Item = ({ className, icon, isActive, children, ...props }) => (
       aria-current={isActive ? 'page' : null}
       {...props}
     >
-      {icon && (
-        <span className="k-DashboardMenu__iconWrapper k-DashboardMenu__item__iconWrapper">
-          {icon()}
-        </span>
-      )}
+      {icon && <span className="k-DashboardMenu__iconWrapper">{icon()}</span>}
       <span className="k-DashboardMenu__item__text">{children}</span>
     </a>
   </li>
@@ -177,18 +182,18 @@ const Expandable = ({ className, children, icon, title, ...props }) => {
         open={hasActiveInside ? hasActiveInside : null}
         {...props}
       >
-        <summary className="k-DashboardMenu__expandable__title">
-          {icon && (
-            <span className="k-DashboardMenu__iconWrapper k-DashboardMenu__expandable__iconWrapper">
-              {icon()}
+        <summary>
+          <div className="k-DashboardMenu__expandable__title">
+            {icon && (
+              <span className="k-DashboardMenu__iconWrapper">{icon()}</span>
+            )}
+            <span className="k-DashboardMenu__expandable__title__text">
+              {title}
             </span>
-          )}
-          <span className="k-DashboardMenu__expandable__title__text">
-            {title}
-          </span>
-          <span className="k-DashboardMenu__expandable__title__arrow">
-            <ArrowIcon version="solid" direction="bottom" />
-          </span>
+            <span className="k-DashboardMenu__expandable__title__arrow">
+              <ArrowIcon version="solid" direction="bottom" />
+            </span>
+          </div>
         </summary>
         <ul className="k-DashboardMenu__expandable__list">{children}</ul>
       </details>
