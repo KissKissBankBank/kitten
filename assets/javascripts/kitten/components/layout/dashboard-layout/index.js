@@ -376,11 +376,11 @@ export const DashboardLayout = ({
   }, [isOpen, sideBarElement, contentElement])
 
   const handleTouchStart = event => {
-    setTouchCoords([event.touches[0].clientX])
+    setTouchCoords([event?.touches[0]?.clientX])
   }
 
   const handleTouchEnd = event => {
-    setTouchCoords(current => [current[0], event.changedTouches[0].clientX])
+    setTouchCoords(current => [current[0], event?.changedTouches[0]?.clientX])
   }
 
   useEffect(() => {

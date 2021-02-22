@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
+import find from 'lodash/fp/find'
 
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
@@ -165,12 +167,8 @@ const Expandable = ({ className, children, icon, title, ...props }) => {
 
   useEffect(() => {
     setActiveInside(false)
-
-    React.Children.map(children, child => {
-      if (child.props?.isActive) {
-        setActiveInside(true)
-      }
-    })
+    const hasActiveChild = find(child => child?.props?.isActive)(children)
+    setActiveInside(hasActiveChild)
   })
 
   return (
@@ -199,6 +197,16 @@ const Expandable = ({ className, children, icon, title, ...props }) => {
       </details>
     </li>
   )
+}
+
+Item.proptypes = {
+  icon: PropTypes.func,
+  isActive: PropTypes.bool,
+}
+
+Expandable.proptypes = {
+  icon: PropTypes.func,
+  title: PropTypes.node,
 }
 
 DashboardMenu.Item = Item
