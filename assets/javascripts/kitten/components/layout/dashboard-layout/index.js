@@ -480,11 +480,7 @@ export const DashboardLayout = ({
                 })
           })}
 
-          <main
-            ref={contentElement}
-            className="k-DashboardLayout__main"
-            id="main"
-          >
+          <main className="k-DashboardLayout__main" id="main">
             {React.Children.map(children, child => {
               if (!child) return null
               return ['Header', 'SideContent', 'SideFooter'].includes(
