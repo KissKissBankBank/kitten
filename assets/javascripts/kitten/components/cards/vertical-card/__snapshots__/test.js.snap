@@ -10,7 +10,7 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
     src="#image"
   />
   <h1
-    className="sc-bwzfXH iPzLOg"
+    className="sc-bwzfXH dTcwDm k-Title--hasMargin"
     style={
       Object {
         "--Title-css-color": null,
@@ -33,7 +33,7 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
     src="#image"
   />
   <h1
-    className="sc-bwzfXH iPzLOg"
+    className="sc-bwzfXH dTcwDm k-Title--hasMargin"
     style={
       Object {
         "--Title-css-color": null,

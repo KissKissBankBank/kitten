@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Breaking change:
 - Remove `k-Alert` SCSS mixin.
 - Convert `Title` and remove `k-Title` SCSS mixin.
+- Remplace `margin` by `hasMargin` prop on `Title`.
 
 ## [3.0.0-beta.2] - 2021-02-15
 
