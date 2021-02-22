@@ -17,6 +17,18 @@ Object.defineProperty(exports, "Accordeon", {
     return _accordeon.Accordeon;
   }
 });
+Object.defineProperty(exports, "Badge", {
+  enumerable: true,
+  get: function get() {
+    return _badge.Badge;
+  }
+});
+Object.defineProperty(exports, "IconBadge", {
+  enumerable: true,
+  get: function get() {
+    return _iconBadge.IconBadge;
+  }
+});
 Object.defineProperty(exports, "Tag", {
   enumerable: true,
   get: function get() {
@@ -317,18 +329,6 @@ Object.defineProperty(exports, "Dropdown", {
     return _dropdown.Dropdown;
   }
 });
-Object.defineProperty(exports, "PhoneDropdown", {
-  enumerable: true,
-  get: function get() {
-    return _phoneDropdown.PhoneDropdown;
-  }
-});
-Object.defineProperty(exports, "UserMenu", {
-  enumerable: true,
-  get: function get() {
-    return _userMenu.UserMenu;
-  }
-});
 Object.defineProperty(exports, "ExpandBoard", {
   enumerable: true,
   get: function get() {
@@ -455,12 +455,6 @@ Object.defineProperty(exports, "SelectWithState", {
     return _selectWithState.SelectWithState;
   }
 });
-Object.defineProperty(exports, "Switch", {
-  enumerable: true,
-  get: function get() {
-    return _switch.Switch;
-  }
-});
 Object.defineProperty(exports, "TextInputAndSelect", {
   enumerable: true,
   get: function get() {
@@ -489,6 +483,12 @@ Object.defineProperty(exports, "TextInput", {
   enumerable: true,
   get: function get() {
     return _textInput.TextInput;
+  }
+});
+Object.defineProperty(exports, "ToggleSwitch", {
+  enumerable: true,
+  get: function get() {
+    return _toggleSwitch.ToggleSwitch;
   }
 });
 Object.defineProperty(exports, "Container", {
@@ -647,12 +647,6 @@ Object.defineProperty(exports, "CheckList", {
     return _checkList.CheckList;
   }
 });
-Object.defineProperty(exports, "NavList", {
-  enumerable: true,
-  get: function get() {
-    return _navList.NavList;
-  }
-});
 Object.defineProperty(exports, "Timeline", {
   enumerable: true,
   get: function get() {
@@ -747,18 +741,6 @@ Object.defineProperty(exports, "Alert", {
   enumerable: true,
   get: function get() {
     return _alert.Alert;
-  }
-});
-Object.defineProperty(exports, "Badge", {
-  enumerable: true,
-  get: function get() {
-    return _badge.Badge;
-  }
-});
-Object.defineProperty(exports, "IconBadge", {
-  enumerable: true,
-  get: function get() {
-    return _iconBadge.IconBadge;
   }
 });
 Object.defineProperty(exports, "MarkdownPage", {
@@ -1636,6 +1618,10 @@ var _visuallyHidden = require("./components/accessibility/visually-hidden");
 
 var _accordeon = require("./components/accordeon");
 
+var _badge = require("./components/atoms/badge");
+
+var _iconBadge = require("./components/atoms/icon-badge");
+
 var _tag = require("./components/atoms/tag");
 
 var _avatarWithTextAndBadge = require("./components/avatar/avatar-with-text-and-badge");
@@ -1716,13 +1702,9 @@ var _details = require("./components/details");
 
 var _devGrid = require("./components/dev/dev-grid");
 
-var _dropdownButton = require("./components/dropdowns/dropdown-button");
+var _dropdownButton = require("./components/dropdowns/v2/dropdown-button");
 
-var _dropdown = require("./components/dropdowns/dropdown");
-
-var _phoneDropdown = require("./components/dropdowns/phone-dropdown");
-
-var _userMenu = require("./components/dropdowns/user-menu");
+var _dropdown = require("./components/dropdowns/v2/dropdown");
 
 var _expandBoard = require("./components/expandable/expand-board");
 
@@ -1766,8 +1748,6 @@ var _richTextInput = require("./components/form/rich-text-input");
 
 var _selectWithState = require("./components/form/select-with-state");
 
-var _switch = require("./components/form/switch");
-
 var _textInputAndSelect = require("./components/form/text-input-and-select");
 
 var _textInputWithLimit = require("./components/form/text-input-with-limit");
@@ -1777,6 +1757,8 @@ var _textInputWithUnitForm = require("./components/form/text-input-with-unit-for
 var _textInputWithUnit = require("./components/form/text-input-with-unit");
 
 var _textInput = require("./components/form/text-input");
+
+var _toggleSwitch = require("./components/form/toggle-switch");
 
 var _container = require("./components/grid/container");
 
@@ -1828,8 +1810,6 @@ var _list = require("./components/lists/list");
 
 var _checkList = require("./components/lists/check-list");
 
-var _navList = require("./components/lists/nav-list");
-
 var _timeline = require("./components/lists/timeline");
 
 var _loaderWithParagraph = require("./components/loaders/loader-with-paragraph");
@@ -1861,10 +1841,6 @@ var _tabBar = require("./components/navigation/tab-bar");
 var _navBar = require("./components/navigation/nav-bar");
 
 var _alert = require("./components/notifications/alert");
-
-var _badge = require("./components/notifications/badge");
-
-var _iconBadge = require("./components/notifications/icon-badge");
 
 var _markdown = require("./components/pages/markdown");
 

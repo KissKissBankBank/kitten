@@ -105,7 +105,6 @@ var Expandable = function Expandable(_ref3) {
   }, title), /*#__PURE__*/_react.default.createElement("span", {
     className: "k-DashboardMenu__expandable__title__arrow"
   }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-    version: "solid",
     direction: "bottom"
   })))), /*#__PURE__*/_react.default.createElement("ul", {
     className: "k-DashboardMenu__expandable__list"

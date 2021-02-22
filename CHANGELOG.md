@@ -4,29 +4,48 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Refactor and move `Badge` and `IconBadge` components.
-- Remove `k-Badge` and `k-IconBadge` styles.
-- Breaking change: Remove `Comment` coming from `form/comment` path.
-  Prefer use `comments/comment` path.
-- Breaking change: Remove `CommentForm` coming from `form/comment-form` path.
-  Prefer use `comments/comment-form` path.
-- Breaking change: Remove `CommentAvatar` coming from `form/comment-avatar`
-  path. Prefer use `comments/comment-avatar` path.
-- Breaking change: Remove `k-ImageWithCaption` SCSS mixin.
-- Breaking change: Remove `ImageWithCaption` component.
-- Breaking change: Remove `k-PhoneDropdown` styles.
-- Breaking change: Remove `DropdownButton`, `Dropdown`, `PhoneDropdown` and `UserMenu` components.
-- Breaking change: Remove `NavList` component.
-- Breaking change: Remove `k-Header` SCSS mixin.
-- Breaking change: Remove `Header`, `HeaderLogo` and `HeaderTitles` components.
-  Prefer use `HeaderNav` component.
-- Remove `Switch` replaced with `ToggleSwitch`.
-- Breaking change: Remove `k-Separator` SCSS mixin.
-- Breaking change: Remove `k-VerticalSeparator` and
-  `k-separatorBase` SCSS mixins.
-- Breaking change: Remove `k-VerticalStroke` SCSS mixin, convert `VerticalStroke`.
-- Breaking change: Migrate `InformationBox` component and remove `k-InformationBox` styles.
-- Feature: Add `onChange` to `ToggleSwitch` API.
+## [3.0.0-beta.4] - 2021-02-22
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-Badge`
+  - `k-Header`
+  - `k-IconBadge`
+  - `k-ImageWithCaption`
+  - `k-InformationBox`
+  - `k-PhoneDropdown`
+  - `k-Separator`
+  - `k-separatorBase`
+  - `k-VerticalSeparator`
+  - `k-VerticalStroke`
+- Delete the following deprecated components:
+  - `Comment` from `form/comment`
+    (replaced by `comments/comment`)
+  - `CommentAvatar` from `form/comment-avatar`
+    (replaced by `comments/comment-avatar`)
+  - `CommentForm` from `form/comment-form`
+    (replaced by `comments/comment-form`)
+  - `Dropdown`
+  - `DropdownButton`
+  - `Header` (replaced by `HeaderNav`)
+  - `HeaderLogo` (replaced by `HeaderNav`)
+  - `HeaderTitles` (replaced by `HeaderNav`)
+  - `ImageWithCaption`
+  - `NavList`
+  - `PhoneDropdown`
+  - `Switch` (replaced by `ToggleSwitch`)
+  - `UserMenu`
+- Convert and move the following components to CSS-in-JS:
+  - `Badge`
+  - `IconBadge`
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+  - `InformationBox`
+  - `VerticalStroke`
+- Add `onChange` to `ToggleSwitch` API.
 
 ## [3.0.0-beta.3] - 2021-02-19
 

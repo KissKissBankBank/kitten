@@ -6,6 +6,8 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'; // 
 
 export { Accordeon } from './components/accordeon'; // Atoms
 
+export { Badge } from './components/atoms/badge';
+export { IconBadge } from './components/atoms/icon-badge';
 export { Tag } from './components/atoms/tag'; // Avatar
 
 export { AvatarWithTextAndBadge } from './components/avatar/avatar-with-text-and-badge'; // Box
@@ -56,10 +58,8 @@ export { Details } from './components/details'; // Dev
 
 export { DevGrid } from './components/dev/dev-grid'; // Dropdowns
 
-export { DropdownButton } from './components/dropdowns/dropdown-button';
-export { Dropdown } from './components/dropdowns/dropdown';
-export { PhoneDropdown } from './components/dropdowns/phone-dropdown';
-export { UserMenu } from './components/dropdowns/user-menu'; // Expandable
+export { DropdownButton } from './components/dropdowns/v2/dropdown-button';
+export { Dropdown } from './components/dropdowns/v2/dropdown'; // Expandable
 
 export { ExpandBoard } from './components/expandable/expand-board'; // Form
 
@@ -83,12 +83,12 @@ export { RadioButton } from './components/form/radio-button';
 export { RangeSlider } from './components/form/range-slider';
 export { RichTextInput } from './components/form/rich-text-input';
 export { SelectWithState } from './components/form/select-with-state';
-export { Switch } from './components/form/switch';
 export { TextInputAndSelect } from './components/form/text-input-and-select';
 export { TextInputWithLimit } from './components/form/text-input-with-limit';
 export { TextInputWithUnitForm } from './components/form/text-input-with-unit-form';
 export { TextInputWithUnit } from './components/form/text-input-with-unit';
-export { TextInput } from './components/form/text-input'; // Grid
+export { TextInput } from './components/form/text-input';
+export { ToggleSwitch } from './components/form/toggle-switch'; // Grid
 
 export { Container } from './components/grid/container';
 export { ScrollableContainer } from './components/grid/scrollable-container';
@@ -121,7 +121,6 @@ export { IconList } from './components/lists/icon-list';
 export { BulletList } from './components/lists/bullet-list';
 export { List } from './components/lists/list';
 export { CheckList } from './components/lists/check-list';
-export { NavList } from './components/lists/nav-list';
 export { Timeline } from './components/lists/timeline'; // Loaders
 
 export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph';
@@ -143,9 +142,7 @@ export { Pagination } from './components/navigation/pagination';
 export { TabBar } from './components/navigation/tab-bar';
 export { NavBar } from './components/navigation/nav-bar'; // Notifications
 
-export { Alert } from './components/notifications/alert';
-export { Badge } from './components/notifications/badge';
-export { IconBadge } from './components/notifications/icon-badge'; // Pages
+export { Alert } from './components/notifications/alert'; // Pages
 
 export { MarkdownPage } from './components/pages/markdown'; // Popovers
 

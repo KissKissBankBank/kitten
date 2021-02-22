@@ -153,8 +153,7 @@ export var DashboardLayout = function DashboardLayout(_ref) {
     className: classNames('k-DashboardLayout__backLink', backLinkProps.className)
   }), /*#__PURE__*/React.createElement(ArrowIcon, {
     direction: "left",
-    color: COLORS.background1,
-    version: "solid"
+    color: COLORS.background1
   }), /*#__PURE__*/React.createElement("span", {
     className: "k-DashboardLayout__backLink__text"
   }, backLinkProps.children)), renderComponentArray(getReactElementsByType({
