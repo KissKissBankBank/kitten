@@ -52,6 +52,7 @@ const StyledDashboard = styled.div`
 
   @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
     overflow: hidden;
+    position: relative;
 
     .k-DashboardLayout {
       --DashboardLayout-main-margin: calc(
@@ -230,7 +231,7 @@ const StyledDashboard = styled.div`
           gap: ${pxToRem(15)};
           color: ${COLORS.background1};
           transition: color .2s ease;
-          ${TYPOGRAPHY.fontStyles.bold}
+          ${TYPOGRAPHY.fontStyles.regular}
           font-size: ${stepToRem(-1)};
           line-height: 1.2;
           text-decoration: none;
@@ -280,7 +281,29 @@ const StyledDashboard = styled.div`
     }
   }
 
+  .k-DashboardLayout__quickAccessLink {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 110;
+    padding: ${pxToRem(20)} ${pxToRem(30)};
+    color: ${COLORS.background1};
+    background-color: ${COLORS.font1};
+    ${TYPOGRAPHY.fontStyles.regular}
+    line-height: 1;
+    font-size: ${stepToRem(1)};
+    text-decoration: none;
+    transition: opacity .2s ease, left .2s ease;
+    transition-delay: 0, 0;
+    opacity: 0;
 
+    &:focus, &:active {
+      left: 0;
+      opacity: 1;
+      transition-delay: 0, .2s;
+      outline: ${pxToRem(2)} solid ${COLORS.primary4};
+    }
+  }
   /* FIX AvatarWithTextAndBadge */
 
   .text--withEllipsis {
@@ -299,6 +322,7 @@ export const DashboardLayout = ({
   children,
   backLinkProps,
   buttonProps,
+  quickAccessLinkText,
   ...props
 }) => {
   const [isOpen, setOpen] = useState(false)
@@ -392,6 +416,9 @@ export const DashboardLayout = ({
           'k-DashboardLayout--isOpen': isOpen,
         })}
       >
+        <a className="k-DashboardLayout__quickAccessLink" href="#main">
+          {quickAccessLinkText}
+        </a>
         <div
           ref={sideBarElement}
           tabIndex={0}
@@ -453,7 +480,11 @@ export const DashboardLayout = ({
                 })
           })}
 
-          <section className="k-DashboardLayout__main">
+          <main
+            ref={contentElement}
+            className="k-DashboardLayout__main"
+            id="main"
+          >
             {React.Children.map(children, child => {
               if (!child) return null
               return ['Header', 'SideContent', 'SideFooter'].includes(
@@ -462,7 +493,7 @@ export const DashboardLayout = ({
                 ? null
                 : renderComponent(child)
             })}
-          </section>
+          </main>
         </div>
       </div>
     </StyledDashboard>

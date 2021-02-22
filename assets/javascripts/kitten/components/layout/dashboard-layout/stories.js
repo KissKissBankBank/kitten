@@ -75,6 +75,7 @@ export const Default = () => (
       openLabel: 'Ouvrir le menu',
       closeLabel: 'Fermer le menu',
     }}
+    quickAccessLinkText="Accéder au contenu"
   >
     <DashboardLayout.Header>
       <AvatarWithTextAndBadge>

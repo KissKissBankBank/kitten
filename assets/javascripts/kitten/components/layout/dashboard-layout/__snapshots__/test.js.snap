@@ -39,6 +39,36 @@ button:hover .c1 {
   outline-offset: 0.125rem;
 }
 
+.c0 .k-DashboardLayout__quickAccessLink {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 110;
+  padding: 1.25rem 1.875rem;
+  color: #fff;
+  background-color: #222;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 1.125rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: opacity .2s ease,left .2s ease;
+  transition: opacity .2s ease,left .2s ease;
+  -webkit-transition-delay: 0,0;
+  transition-delay: 0,0;
+  opacity: 0;
+}
+
+.c0 .k-DashboardLayout__quickAccessLink:focus,
+.c0 .k-DashboardLayout__quickAccessLink:active {
+  left: 0;
+  opacity: 1;
+  -webkit-transition-delay: 0,.2s;
+  transition-delay: 0,.2s;
+  outline: 0.125rem solid #bae8fd;
+}
+
 .c0 .text--withEllipsis {
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -53,6 +83,7 @@ button:hover .c1 {
 @media (max-width:67.4375rem) {
   .c0 {
     overflow: hidden;
+    position: relative;
   }
 
   .c0 .k-DashboardLayout {
@@ -300,11 +331,7 @@ button:hover .c1 {
     -webkit-transition: color .2s ease;
     transition: color .2s ease;
     font-family: Maax,Helvetica,Arial,sans-serif;
-    -webkit-letter-spacing: .01rem;
-    -moz-letter-spacing: .01rem;
-    -ms-letter-spacing: .01rem;
-    letter-spacing: .01rem;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.8888888888888888rem;
     line-height: 1.2;
     -webkit-text-decoration: none;
@@ -364,6 +391,10 @@ button:hover .c1 {
   <div
     className="k-DashboardLayout"
   >
+    <a
+      className="k-DashboardLayout__quickAccessLink"
+      href="#main"
+    />
     <div
       aria-hidden={true}
       className="k-DashboardLayout__sideWrapper"
@@ -465,13 +496,14 @@ button:hover .c1 {
         </div>
         Header content
       </header>
-      <section
+      <main
         className="k-DashboardLayout__main"
+        id="main"
       >
         <p>
           Main content
         </p>
-      </section>
+      </main>
     </div>
   </div>
 </div>
