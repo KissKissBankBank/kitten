@@ -1,5 +1,921 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = `
+.c2 {
+  border: none;
+  background: #eee;
+}
+
+.c2.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
+}
+
+.c2.k-HorizontalStroke--size--tiny {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
+.c2.k-HorizontalStroke--size--default {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c2.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c2.k-HorizontalStroke--size--huge {
+  width: 6.25rem;
+  height: 0.375rem;
+}
+
+.c2.k-HorizontalStroke--modifier--primary {
+  width: 2.5rem;
+  height: 0.375rem;
+}
+
+.c2.k-HorizontalStroke--modifier--secondary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c2.k-HorizontalStroke--modifier--tertiary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c2.k-HorizontalStroke--modifier--quaternary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c2.k-HorizontalStroke--modifier--quinary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c2.k-HorizontalStroke--modifier--senary {
+  width: 0;
+  height: 0;
+}
+
+.c2.k-HorizontalStroke--modifier--septenary {
+  width: 0;
+  height: 0;
+}
+
+.c1 {
+  background-color: #e8f7fe;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.c1 .k-DashboardLayout__flow__sideCard__title {
+  margin-bottom: 1.25rem;
+}
+
+.c1 .k-DashboardLayout__flow__sideCard__list {
+  list-style: disc;
+  margin-left: 0.9375rem;
+  padding: 0;
+}
+
+.c1 .k-DashboardLayout__flow__sideCard__list li {
+  margin-bottom: 0.625rem;
+  line-height: 1.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0 {
+  position: relative;
+}
+
+.c0:not(.k-DashboardLayout__flow--isLoading) .k-DashboardLayout__flow__loading {
+  display: none;
+}
+
+.c0.k-DashboardLayout__flow--isLoading .k-DashboardLayout__flow__contentGrid {
+  display: none;
+}
+
+.c0 .k-DashboardLayout__flow__contentGrid,
+.c0 .k-DashboardLayout__flow__loading {
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.c0 .k-DashboardLayout__flow__contentGrid {
+  box-sizing: border-box;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .k-DashboardLayout__flow__content {
+  padding-bottom: 3.125rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c0 .k-DashboardLayout__flow__nav {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  bottom: -5rem;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer > * {
+  min-width: 0;
+  max-width: 11.25rem;
+  -webkit-flex: 1 1 11.25rem;
+  -ms-flex: 1 1 11.25rem;
+  flex: 1 1 11.25rem;
+}
+
+.c0 .k-DashboardLayout__flow__aside__content {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5rem;
+  padding-bottom: 2.5rem;
+}
+
+.c0 .k-DashboardLayout__flow__aside__content svg {
+  margin-bottom: 1.25rem;
+}
+
+.c0 .k-DashboardLayout__flow__loading {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  padding-bottom: 5rem;
+}
+
+@media (min-width:40rem) {
+  .c2.k-HorizontalStroke--modifier--primary {
+    width: 3.125rem;
+    height: 0.375rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--secondary {
+    width: 2.5rem;
+    height: 0.375rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--tertiary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--quaternary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--quinary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--senary {
+    width: 0;
+    height: 0;
+  }
+
+  .c2.k-HorizontalStroke--modifier--septenary {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c2.k-HorizontalStroke--modifier--primary {
+    width: 3.125rem;
+    height: 0.375rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--secondary {
+    width: 3.125rem;
+    height: 0.375rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--tertiary {
+    width: 2.5rem;
+    height: 0.375rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--quaternary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--quinary {
+    width: 0;
+    height: 0;
+  }
+
+  .c2.k-HorizontalStroke--modifier--senary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--septenary {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c1 {
+    padding: 1.875rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.9375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c1 .k-DashboardLayout__flow__sideCard__list li {
+    font-size: 0.8888888888888888rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: calc(100% * 4 / 3 * 0.1);
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__contentGrid,
+  .c0 .k-DashboardLayout__flow__loading {
+    margin-bottom: 1.875rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__contentGrid {
+    grid-column: 1 / 2;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__content {
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__nav {
+    bottom: 0;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__nav__actionsContainer {
+    gap: 2.5rem;
+    margin: 1.875rem 0;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__aside {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width:67.4375rem) {
+  .c0 .k-DashboardLayout__flow__aside__content {
+    display: none;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__loading {
+    grid-column: 1 / 2;
+  }
+}
+
+<div
+  className="c0 k-DashboardLayout__flow"
+>
+  <div
+    className="k-DashboardLayout__flow__loading"
+  >
+    <div
+      className="k-Loader"
+    >
+      <svg
+        className="k-Loader__circle"
+        viewBox="0 0 10 10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={5}
+          cy={5}
+          fill={null}
+          r={5}
+        />
+      </svg>
+      <svg
+        className="k-Loader__circle"
+        viewBox="0 0 10 10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={5}
+          cy={5}
+          fill={null}
+          r={5}
+        />
+      </svg>
+      <svg
+        className="k-Loader__circle"
+        viewBox="0 0 10 10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={5}
+          cy={5}
+          fill={null}
+          r={5}
+        />
+      </svg>
+    </div>
+  </div>
+  <section
+    className="k-DashboardLayout__flow__content"
+  >
+    Main flow content
+  </section>
+  <aside
+    className="k-DashboardLayout__flow__aside"
+  >
+    <div
+      className="k-DashboardLayout__flow__aside__content"
+    >
+      <svg
+        height={70}
+        viewBox="0 0 62 70"
+        width={62}
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <path
+            d="M31 9c12.15 0 22 9.85 22 22 0 8.973-5.372 16.691-13.075 20.114L38 54H24l-1.924-2.885C14.372 47.692 9 39.973 9 31 9 18.85 18.85 9 31 9zM7.983 43.134l1 1.732-4.33 2.5-1-1.732 4.33-2.5zm46.034 0l4.33 2.5-1 1.732-4.33-2.5 1-1.732zM62 30v2h-5v-2h5zM5 30v2H0v-2h5zm52.347-15.366l1 1.732-4.33 2.5-1-1.732 4.33-2.5zm-52.694 0l4.33 2.5-1 1.732-4.33-2.5 1-1.732zm40.981-10.98l1.732 1-2.5 4.33-1.732-1 2.5-4.33zm-29.268 0l2.5 4.33-1.732 1-2.5-4.33 1.732-1zM32 0v5h-2V0h2z"
+            fill="#FFEBDE"
+          />
+          <path
+            d="M31 16.5a1.5 1.5 0 010 3c-6.351 0-11.5 5.149-11.5 11.5a1.5 1.5 0 01-3 0c0-8.008 6.492-14.5 14.5-14.5z"
+            fill="#FFF"
+            fillRule="nonzero"
+          />
+          <path
+            d="M25.613 38.21l.094.083L30 42.586V50a1 1 0 01-1.993.117L28 50v-6.585l-3.707-3.708a1 1 0 01-.083-1.32l.083-.094a1 1 0 011.32-.083zm12.094.083a1 1 0 01.083 1.32l-.083.094L34 43.414V50a1 1 0 01-.883.993L33 51a1 1 0 01-.993-.883L32 50v-7.414l4.293-4.293a1 1 0 011.414 0z"
+            fill="#222"
+            fillRule="nonzero"
+          />
+          <path
+            d="M26 66a2 2 0 01-2-2v-1h14v1a2 2 0 01-2 2h-2v1a3 3 0 01-6 0v-1h-2zm12-7v2H24v-2h14zm0-5v3H24v-3h14z"
+            fill="#00B3FD"
+          />
+          <path
+            d="M24 57h14v2H24zM24 61h14v2H24z"
+            fill="#FFF"
+          />
+        </g>
+      </svg>
+      <div
+        className="c1 k-DashboardLayout__flow__sideCard"
+      >
+        Side content in a card
+      </div>
+    </div>
+  </aside>
+  <nav
+    className="k-DashboardLayout__flow__nav"
+  >
+    <div
+      className="c2 k-HorizontalStroke k-HorizontalStroke--size--tiny"
+      color="#eee"
+      style={
+        Object {
+          "height": undefined,
+          "width": "100%",
+        }
+      }
+    />
+    <div
+      className="k-DashboardLayout__flow__nav__actionsContainer"
+    >
+      <button>
+        Back
+      </button>
+      <button>
+        Save
+      </button>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapshot 1`] = `
+.c2 {
+  border: none;
+  background: #eee;
+}
+
+.c2.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
+}
+
+.c2.k-HorizontalStroke--size--tiny {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
+.c2.k-HorizontalStroke--size--default {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c2.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c2.k-HorizontalStroke--size--huge {
+  width: 6.25rem;
+  height: 0.375rem;
+}
+
+.c2.k-HorizontalStroke--modifier--primary {
+  width: 2.5rem;
+  height: 0.375rem;
+}
+
+.c2.k-HorizontalStroke--modifier--secondary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c2.k-HorizontalStroke--modifier--tertiary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c2.k-HorizontalStroke--modifier--quaternary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c2.k-HorizontalStroke--modifier--quinary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c2.k-HorizontalStroke--modifier--senary {
+  width: 0;
+  height: 0;
+}
+
+.c2.k-HorizontalStroke--modifier--septenary {
+  width: 0;
+  height: 0;
+}
+
+.c1 {
+  background-color: #e8f7fe;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.c1 .k-DashboardLayout__flow__sideCard__title {
+  margin-bottom: 1.25rem;
+}
+
+.c1 .k-DashboardLayout__flow__sideCard__list {
+  list-style: disc;
+  margin-left: 0.9375rem;
+  padding: 0;
+}
+
+.c1 .k-DashboardLayout__flow__sideCard__list li {
+  margin-bottom: 0.625rem;
+  line-height: 1.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0 {
+  position: relative;
+}
+
+.c0:not(.k-DashboardLayout__flow--isLoading) .k-DashboardLayout__flow__loading {
+  display: none;
+}
+
+.c0.k-DashboardLayout__flow--isLoading .k-DashboardLayout__flow__contentGrid {
+  display: none;
+}
+
+.c0 .k-DashboardLayout__flow__contentGrid,
+.c0 .k-DashboardLayout__flow__loading {
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.c0 .k-DashboardLayout__flow__contentGrid {
+  box-sizing: border-box;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .k-DashboardLayout__flow__content {
+  padding-bottom: 3.125rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c0 .k-DashboardLayout__flow__nav {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  bottom: -5rem;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer > * {
+  min-width: 0;
+  max-width: 11.25rem;
+  -webkit-flex: 1 1 11.25rem;
+  -ms-flex: 1 1 11.25rem;
+  flex: 1 1 11.25rem;
+}
+
+.c0 .k-DashboardLayout__flow__aside__content {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5rem;
+  padding-bottom: 2.5rem;
+}
+
+.c0 .k-DashboardLayout__flow__aside__content svg {
+  margin-bottom: 1.25rem;
+}
+
+.c0 .k-DashboardLayout__flow__loading {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  padding-bottom: 5rem;
+}
+
+@media (min-width:40rem) {
+  .c2.k-HorizontalStroke--modifier--primary {
+    width: 3.125rem;
+    height: 0.375rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--secondary {
+    width: 2.5rem;
+    height: 0.375rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--tertiary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--quaternary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--quinary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--senary {
+    width: 0;
+    height: 0;
+  }
+
+  .c2.k-HorizontalStroke--modifier--septenary {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c2.k-HorizontalStroke--modifier--primary {
+    width: 3.125rem;
+    height: 0.375rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--secondary {
+    width: 3.125rem;
+    height: 0.375rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--tertiary {
+    width: 2.5rem;
+    height: 0.375rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--quaternary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--quinary {
+    width: 0;
+    height: 0;
+  }
+
+  .c2.k-HorizontalStroke--modifier--senary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c2.k-HorizontalStroke--modifier--septenary {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c1 {
+    padding: 1.875rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.9375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c1 .k-DashboardLayout__flow__sideCard__list li {
+    font-size: 0.8888888888888888rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: calc(100% * 4 / 3 * 0.1);
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__contentGrid,
+  .c0 .k-DashboardLayout__flow__loading {
+    margin-bottom: 1.875rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__contentGrid {
+    grid-column: 1 / 2;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__content {
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__nav {
+    bottom: 0;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__nav__actionsContainer {
+    gap: 2.5rem;
+    margin: 1.875rem 0;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__aside {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width:67.4375rem) {
+  .c0 .k-DashboardLayout__flow__aside__content {
+    display: none;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__loading {
+    grid-column: 1 / 2;
+  }
+}
+
+<div
+  className="c0 k-DashboardLayout__flow"
+>
+  <div
+    className="k-DashboardLayout__flow__loading"
+  >
+    <div
+      className="k-Loader"
+    >
+      <svg
+        className="k-Loader__circle"
+        viewBox="0 0 10 10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={5}
+          cy={5}
+          fill={null}
+          r={5}
+        />
+      </svg>
+      <svg
+        className="k-Loader__circle"
+        viewBox="0 0 10 10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={5}
+          cy={5}
+          fill={null}
+          r={5}
+        />
+      </svg>
+      <svg
+        className="k-Loader__circle"
+        viewBox="0 0 10 10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={5}
+          cy={5}
+          fill={null}
+          r={5}
+        />
+      </svg>
+    </div>
+  </div>
+  <section
+    className="k-DashboardLayout__flow__content"
+  >
+    Main flow content
+  </section>
+  <aside
+    className="k-DashboardLayout__flow__aside"
+  >
+    <div
+      className="k-DashboardLayout__flow__aside__content"
+    >
+      <svg
+        height={70}
+        viewBox="0 0 62 70"
+        width={62}
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <path
+            d="M31 9c12.15 0 22 9.85 22 22 0 8.973-5.372 16.691-13.075 20.114L38 54H24l-1.924-2.885C14.372 47.692 9 39.973 9 31 9 18.85 18.85 9 31 9zM7.983 43.134l1 1.732-4.33 2.5-1-1.732 4.33-2.5zm46.034 0l4.33 2.5-1 1.732-4.33-2.5 1-1.732zM62 30v2h-5v-2h5zM5 30v2H0v-2h5zm52.347-15.366l1 1.732-4.33 2.5-1-1.732 4.33-2.5zm-52.694 0l4.33 2.5-1 1.732-4.33-2.5 1-1.732zm40.981-10.98l1.732 1-2.5 4.33-1.732-1 2.5-4.33zm-29.268 0l2.5 4.33-1.732 1-2.5-4.33 1.732-1zM32 0v5h-2V0h2z"
+            fill="#FFEBDE"
+          />
+          <path
+            d="M31 16.5a1.5 1.5 0 010 3c-6.351 0-11.5 5.149-11.5 11.5a1.5 1.5 0 01-3 0c0-8.008 6.492-14.5 14.5-14.5z"
+            fill="#FFF"
+            fillRule="nonzero"
+          />
+          <path
+            d="M25.613 38.21l.094.083L30 42.586V50a1 1 0 01-1.993.117L28 50v-6.585l-3.707-3.708a1 1 0 01-.083-1.32l.083-.094a1 1 0 011.32-.083zm12.094.083a1 1 0 01.083 1.32l-.083.094L34 43.414V50a1 1 0 01-.883.993L33 51a1 1 0 01-.993-.883L32 50v-7.414l4.293-4.293a1 1 0 011.414 0z"
+            fill="#222"
+            fillRule="nonzero"
+          />
+          <path
+            d="M26 66a2 2 0 01-2-2v-1h14v1a2 2 0 01-2 2h-2v1a3 3 0 01-6 0v-1h-2zm12-7v2H24v-2h14zm0-5v3H24v-3h14z"
+            fill="#00B3FD"
+          />
+          <path
+            d="M24 57h14v2H24zM24 61h14v2H24z"
+            fill="#FFF"
+          />
+        </g>
+      </svg>
+      <div
+        className="c1 k-DashboardLayout__flow__sideCard"
+      >
+        Side content in a card
+      </div>
+    </div>
+  </aside>
+  <nav
+    className="k-DashboardLayout__flow__nav"
+  >
+    <div
+      className="c2 k-HorizontalStroke k-HorizontalStroke--size--tiny"
+      color="#eee"
+      style={
+        Object {
+          "height": undefined,
+          "width": "100%",
+        }
+      }
+    />
+    <div
+      className="k-DashboardLayout__flow__nav__actionsContainer"
+    >
+      <button>
+        Back
+      </button>
+      <button>
+        Save
+      </button>
+    </div>
+  </nav>
+</div>
+`;
+
 exports[`<DashboardLayout /> with default props matches with snapshot 1`] = `
 .c1 {
   overflow: visible;
@@ -305,7 +1221,6 @@ button:hover .c1 {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    bottom: 0;
     overflow: scroll;
     gap: 1.875rem;
     padding: 1.875rem;
