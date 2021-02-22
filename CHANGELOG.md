@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove `k-PhoneDropdown` styles.
+- Breaking change: Remove `DropdownButton`, `Dropdown`, `PhoneDropdown` and `UserMenu` components.
+- Breaking change: Remove `NavList` component.
 - Breaking change: Remove `k-Header` SCSS mixin.
 - Breaking change: Remove `Header`, `HeaderLogo` and `HeaderTitles` components.
   Prefer use `HeaderNav` component.

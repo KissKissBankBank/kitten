@@ -81,10 +81,8 @@ export { Details } from './components/details'
 export { DevGrid } from './components/dev/dev-grid'
 
 // Dropdowns
-export { DropdownButton } from './components/dropdowns/dropdown-button'
-export { Dropdown } from './components/dropdowns/dropdown'
-export { PhoneDropdown } from './components/dropdowns/phone-dropdown'
-export { UserMenu } from './components/dropdowns/user-menu'
+export { DropdownButton } from './components/dropdowns/v2/dropdown-button'
+export { Dropdown } from './components/dropdowns/v2/dropdown'
 
 // Expandable
 export { ExpandBoard } from './components/expandable/expand-board'
@@ -155,7 +153,6 @@ export { IconList } from './components/lists/icon-list'
 export { BulletList } from './components/lists/bullet-list'
 export { List } from './components/lists/list'
 export { CheckList } from './components/lists/check-list'
-export { NavList } from './components/lists/nav-list'
 export { Timeline } from './components/lists/timeline'
 
 // Loaders
