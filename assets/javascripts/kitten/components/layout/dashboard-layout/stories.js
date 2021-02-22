@@ -267,7 +267,16 @@ const FlowExample = () => (
       }}
     >
       <DashboardLayout.Flow.AsideCard>
-        Side content
+        <DashboardLayout.Flow.AsideCard.Title>
+          Side content in Title
+        </DashboardLayout.Flow.AsideCard.Title>
+        <DashboardLayout.Flow.AsideCard.Paragraph>
+          Side content in Paragraph
+        </DashboardLayout.Flow.AsideCard.Paragraph>
+        <DashboardLayout.Flow.AsideCard.List>
+          <li>Side content in List (item 1)</li>
+          <li>Side content in List (item 2)</li>
+        </DashboardLayout.Flow.AsideCard.List>
       </DashboardLayout.Flow.AsideCard>
     </DashboardLayout.Flow.Aside>
     <DashboardLayout.Flow.Nav>

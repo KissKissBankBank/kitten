@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
 
-import { pxToRem } from '../../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
-import { Paragraph as SideParagraph } from '../../../../components/typography/paragraph'
+import { Paragraph as SideParagraph } from '../../../../components/typography/paragraph/next'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
 
@@ -26,10 +26,16 @@ const StyledSideCard = styled.div`
   .k-DashboardLayout__flow__sideCard__list {
     list-style: disc;
     margin-left: ${pxToRem(15)};
+    padding: 0;
 
     li {
       margin-bottom: ${pxToRem(10)};
       line-height: ${pxToRem(22)};
+      font-size: ${stepToRem(-2)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        font-size: ${stepToRem(-1)};
+      }
     }
   }
 `
@@ -54,7 +60,7 @@ const Title = ({ className, ...props }) => {
 const Paragraph = ({ className, ...props }) => {
   return (
     <SideParagraph
-      modifier="quaternary"
+      modifier="tertiary"
       margin={false}
       className={classNames(
         'k-DashboardLayout__flow__sideCard__paragraph',
