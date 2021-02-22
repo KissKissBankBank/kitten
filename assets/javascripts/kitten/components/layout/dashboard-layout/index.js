@@ -16,6 +16,10 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { useMedia } from '../../../helpers/utils/use-media-query'
 import { getMinQuery } from '../../../helpers/utils/media-queries'
+import {
+  getReactElementsByType,
+  getReactElementsWithoutTypeArray,
+} from '../../../helpers/react/react-elements'
 
 import { BurgerIcon } from '../../../components/icons/burger-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
@@ -331,17 +335,22 @@ export const DashboardLayout = ({
   const sideBarElement = useRef(null)
   const contentElement = useRef(null)
 
-  const renderComponent = child =>
-    isFunction(child?.props?.children)
-      ? React.cloneElement(child, {
-          children: child.props.children({
-            openSideBar: () => setOpen(true),
-            closeSideBar: () => setOpen(false),
-            isSidebarOpen: isOpen,
-          }),
-        })
-      : child
+  const renderComponentArray = (childrenArray, otherProps) => {
+    return childrenArray.map(child => {
+      if (!child || !child.props) return null
 
+      return isFunction(child.props?.children)
+        ? React.cloneElement(child, {
+            children: child.props.children({
+              openSideBar: () => setOpen(true),
+              closeSideBar: () => setOpen(false),
+              isSidebarOpen: isOpen,
+              ...otherProps,
+            }),
+          })
+        : React.cloneElement(child, otherProps)
+    })
+  }
   const isDesktop = useMedia({
     queries: [getMinQuery(ScreenConfig.L.min)],
     values: [true],
@@ -442,54 +451,55 @@ export const DashboardLayout = ({
               {backLinkProps.children}
             </span>
           </a>
-          {React.Children.map(children, child => {
-            if (!child) return null
-            return child.type.name !== 'Header' ? null : renderComponent(child)
-          })}
+          {renderComponentArray(
+            getReactElementsByType({
+              children: children,
+              type: Header,
+            }),
+          )}
 
-          {React.Children.map(children, child => {
-            if (!child) return null
-            return child.type.name !== 'SideContent'
-              ? null
-              : renderComponent(child)
-          })}
+          {renderComponentArray(
+            getReactElementsByType({
+              children: children,
+              type: SideContent,
+            }),
+          )}
 
-          {React.Children.map(children, child => {
-            if (!child) return null
-            return child.type.name !== 'SideFooter'
-              ? null
-              : renderComponent(child)
-          })}
+          {renderComponentArray(
+            getReactElementsByType({
+              children: children,
+              type: SideFooter,
+            }),
+          )}
         </div>
         <div
           ref={contentElement}
           tabIndex={0}
           className="k-DashboardLayout__mainWrapper"
         >
-          {React.Children.map(children, child => {
-            if (!child) return null
-            return child.type.name !== 'Header'
-              ? null
-              : React.cloneElement(child, {
-                  isOpen,
-                  hasButton: true,
-                  buttonProps: {
-                    ...buttonProps,
-                    onClick: handleButtonClick,
-                    'aria-expanded': isOpen ? isOpen : null,
-                  },
-                })
-          })}
+          {renderComponentArray(
+            getReactElementsByType({
+              children: children,
+              type: Header,
+            }),
+            {
+              isOpen,
+              hasButton: true,
+              buttonProps: {
+                ...buttonProps,
+                onClick: handleButtonClick,
+                'aria-expanded': isOpen ? isOpen : null,
+              },
+            },
+          )}
 
           <main className="k-DashboardLayout__main" id="main">
-            {React.Children.map(children, child => {
-              if (!child) return null
-              return ['Header', 'SideContent', 'SideFooter'].includes(
-                child.type.name,
-              )
-                ? null
-                : renderComponent(child)
-            })}
+            {renderComponentArray(
+              getReactElementsWithoutTypeArray({
+                children,
+                typeArray: [Header, SideContent, SideFooter],
+              }),
+            )}
           </main>
         </div>
       </div>
