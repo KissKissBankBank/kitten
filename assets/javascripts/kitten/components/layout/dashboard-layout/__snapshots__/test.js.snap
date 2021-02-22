@@ -79,11 +79,13 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 .c1 .k-DashboardLayout__flow__sideCard__list {
   list-style: disc;
   margin-left: 0.9375rem;
+  padding: 0;
 }
 
 .c1 .k-DashboardLayout__flow__sideCard__list li {
   margin-bottom: 0.625rem;
   line-height: 1.375rem;
+  font-size: 0.7901234567901234rem;
 }
 
 .c0 {
@@ -262,6 +264,12 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
     padding: 1.875rem;
     border-radius: 0.5rem;
     margin-bottom: 0.9375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c1 .k-DashboardLayout__flow__sideCard__list li {
+    font-size: 0.8888888888888888rem;
   }
 }
 
@@ -529,11 +537,13 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 .c1 .k-DashboardLayout__flow__sideCard__list {
   list-style: disc;
   margin-left: 0.9375rem;
+  padding: 0;
 }
 
 .c1 .k-DashboardLayout__flow__sideCard__list li {
   margin-bottom: 0.625rem;
   line-height: 1.375rem;
+  font-size: 0.7901234567901234rem;
 }
 
 .c0 {
@@ -712,6 +722,12 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
     padding: 1.875rem;
     border-radius: 0.5rem;
     margin-bottom: 0.9375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c1 .k-DashboardLayout__flow__sideCard__list li {
+    font-size: 0.8888888888888888rem;
   }
 }
 
