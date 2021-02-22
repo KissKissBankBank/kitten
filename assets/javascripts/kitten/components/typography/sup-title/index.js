@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text } from '../../../components/typography/text'
 
-export const SupTitle = (textProps) => (
+export const SupTitle = textProps => (
   <Text
     size="tiny"
     lineHeigth="normal"

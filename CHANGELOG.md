@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Migrate `InformationBox` component and remove `k-InformationBox` styles.
 - Feature: Add `onChange` to `ToggleSwitch` API.
 
 ## [3.0.0-beta.3] - 2021-02-19
