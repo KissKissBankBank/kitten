@@ -9,6 +9,7 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import { LightbulbIllustration as Lightbulb } from '../../../../components/illustrations/lightbulb-illustration'
 import { Loader } from '../../../../components/loaders/loader'
+import { getReactElementsWithoutType } from '../../../../helpers/react/react-elements'
 
 import { SideCard } from './side-card'
 import { MobileAside } from './side-modal'
@@ -196,10 +197,7 @@ export const Flow = ({
       <div className="k-DashboardLayout__flow__loading">
         {!!loaderComponent ? loaderComponent : <Loader />}
       </div>
-      {React.Children.map(children, child => {
-        if (!child) return null
-        return loading && child.type.name !== 'Aside' ? null : child
-      })}
+      {getReactElementsWithoutType({ children, type: 'Aside' })}
     </StyledFlow>
   )
 }
