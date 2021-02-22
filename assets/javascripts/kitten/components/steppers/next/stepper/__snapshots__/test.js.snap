@@ -145,15 +145,21 @@ exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
           className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-Stepper__icon--inProgress"
         >
           <svg
-            className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg k-Stepper__svg"
+            className="k-ButtonIcon__svg k-Stepper__svg"
+            fill="#222"
             height="5.64"
-            viewBox="0 0 6 6"
+            style={
+              Object {
+                "transform": "rotate(90deg)",
+              }
+            }
+            viewBox="0 0 8.48 5.64"
             width="8.48"
             xmlns="http://www.w3.org/2000/svg"
           >
             
             <path
-              d="M6 0H0v6h2V2h4z"
+              d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
             />
           </svg>
         </span>
@@ -184,15 +190,21 @@ exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
           className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-Stepper__icon--inProgress"
         >
           <svg
-            className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg k-Stepper__svg"
+            className="k-ButtonIcon__svg k-Stepper__svg"
+            fill="#222"
             height="5.64"
-            viewBox="0 0 6 6"
+            style={
+              Object {
+                "transform": "rotate(90deg)",
+              }
+            }
+            viewBox="0 0 8.48 5.64"
             width="8.48"
             xmlns="http://www.w3.org/2000/svg"
           >
             
             <path
-              d="M6 0H0v6h2V2h4z"
+              d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
             />
           </svg>
         </span>

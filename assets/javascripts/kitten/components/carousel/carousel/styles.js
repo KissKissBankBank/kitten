@@ -8,6 +8,8 @@ import {
 } from '../../../constants/grid-config'
 import ColorsConfig from '../../../constants/colors-config'
 
+export const OUTLINE_PLUS_OFFSET = 4
+
 // STYLE HELPERS
 
 const flexContainerdirectionStyle = mediaQuery => ({ paginationPosition }) => {
@@ -326,15 +328,17 @@ export const StyledCarouselContainer = styled.div`
     grid-template-columns: repeat(${({ numberOfPages }) =>
       numberOfPages}, 100%);
 
-    grid-gap: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
+    grid-gap: ${pxToRem(
+      CONTAINER_PADDING_MOBILE / 2 - OUTLINE_PLUS_OFFSET * 2,
+    )};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      grid-gap: ${pxToRem(CONTAINER_PADDING / 2)};
+      grid-gap: ${pxToRem(CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2)};
     }
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       grid-gap: ${({ baseItemMarginBetween }) =>
-        pxToRem(baseItemMarginBetween)};
+        pxToRem(baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2)};
     }
 
     /* Fix bug IE11 ResizeObserver, to trigger a first resize */
@@ -346,7 +350,7 @@ export const StyledCarouselContainer = styled.div`
     -ms-over-flow-style: none;
     /* mandatory to combine scroll with this property on iOS */
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: mandatory;
+    scroll-snap-type: x mandatory;
     /* Hide scrollbar on Firefox. */
     scrollbar-width: none;
     /* hide scrollbar on Chrome and Safari */
@@ -356,10 +360,14 @@ export const StyledCarouselContainer = styled.div`
 
     .k-Carousel__inner__pageContainer {
       width: 100%;
-      scroll-snap-align: center;
+      scroll-snap-align: start;
 
       &:not(.k-Carousel__inner__pageContainer--isActivePage) {
         cursor: pointer;
+
+        .k-Carousel__page__item > * {
+          pointer-events: none;
+        }
       }
     }
 
@@ -394,20 +402,23 @@ export const StyledCarouselContainer = styled.div`
   }
 
   &.k-Carousel--showOtherPages .k-Carousel__inner {
-    padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
-    scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+    margin: 0 !important;
+    padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE - OUTLINE_PLUS_OFFSET)};
+    scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE - OUTLINE_PLUS_OFFSET)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      padding: 0 ${pxToRem(CONTAINER_PADDING)};
-      scroll-padding: ${pxToRem(CONTAINER_PADDING)};
+      padding: 0 ${pxToRem(CONTAINER_PADDING - OUTLINE_PLUS_OFFSET)};
+      scroll-padding: ${pxToRem(CONTAINER_PADDING - OUTLINE_PLUS_OFFSET)};
     }
 
     .k-Carousel__inner__pageContainer {
       &:last-child {
-        padding-right: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+        padding-right: ${pxToRem(
+          CONTAINER_PADDING_MOBILE - OUTLINE_PLUS_OFFSET,
+        )};
 
         @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-          padding-right: ${pxToRem(CONTAINER_PADDING)};
+          padding-right: ${pxToRem(CONTAINER_PADDING - OUTLINE_PLUS_OFFSET)};
         }
       }
     }
@@ -420,19 +431,21 @@ export const StyledCarouselContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(${({ numberOfItemsPerPage }) =>
       numberOfItemsPerPage}, 1fr);
-    grid-gap: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
+    grid-gap: ${pxToRem(
+      CONTAINER_PADDING_MOBILE / 2 - OUTLINE_PLUS_OFFSET * 2,
+    )};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      grid-gap: ${pxToRem(CONTAINER_PADDING / 2)};
+      grid-gap: ${pxToRem(CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2)};
     }
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       grid-gap: ${({ baseItemMarginBetween }) =>
-        pxToRem(baseItemMarginBetween)};
+        pxToRem(baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2)};
     }
 
     .k-Carousel__page__item {
       overflow: hidden;
-      padding: ${pxToRem(4)};
+      padding: ${pxToRem(OUTLINE_PLUS_OFFSET)};
     }
     .k-Carousel__page__item > a {
       &:focus {

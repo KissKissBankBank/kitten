@@ -39,7 +39,6 @@ var Header = function Header(_ref) {
   }, children), /*#__PURE__*/_react.default.createElement("span", {
     className: "k-Accordeon__header__arrow"
   }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-    version: "solid",
     direction: selectedItem === index ? 'top' : 'bottom',
     "aria-hidden": true
   })));
