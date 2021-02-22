@@ -15,13 +15,15 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   font-size: 0.8888888888888888rem;
   -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-transition: color .2s ease,background-color .2s ease;
+  transition: color .2s ease,background-color .2s ease;
 }
 
 .c0 .k-DashboardMenu__expandable__title:focus,
 .c0 .k-DashboardMenu__item:focus,
 .c0 .k-DashboardMenu__expandable__title:hover,
 .c0 .k-DashboardMenu__item:hover {
-  color: #19b4fa !important;
+  background-color: #2d2d2d !important;
 }
 
 .c0 .k-DashboardMenu__expandable__title:focus,
@@ -37,12 +39,17 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   list-style: none;
 }
 
-.c0 .k-DashboardMenu__expandable__title::-webkit-details-marker {
-  display: none;
+.c0 .k-DashboardMenu__expandable summary {
+  list-style: none;
 }
 
-.c0 .k-DashboardMenu__expandable__title {
-  list-style: none;
+.c0 .k-DashboardMenu__expandable summary:focus {
+  outline: #0496cc solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0 .k-DashboardMenu__expandable summary::-webkit-details-marker {
+  display: none;
 }
 
 .c0 .k-DashboardMenu__item .k-DashboardMenu__item__text,
@@ -90,8 +97,6 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   background-color: #222;
-  -webkit-transition: color .2s ease,background-color .2s ease;
-  transition: color .2s ease,background-color .2s ease;
   cursor: pointer;
 }
 
@@ -105,14 +110,14 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
   line-height: 1.125rem;
-  -webkit-transition: color .2s ease;
-  transition: color .2s ease;
 }
 
+.c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item:hover,
+.c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item:focus,
 .c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item[aria-current="page"] {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  color: #19b4fa;
+  color: #fff;
 }
 
 .c0 .k-DashboardMenu__iconWrapper {
@@ -151,6 +156,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DashboardMenu__expandable__title__arrow svg {
+  display: block;
   fill: currentColor;
   -webkit-transition: -webkit-transform .2s ease-in-out;
   -webkit-transition: transform .2s ease-in-out;
@@ -158,9 +164,9 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 [open] .k-DashboardMenu__expandable__title__arrow svg {
-  -webkit-transform: rotate(0deg) !important;
-  -ms-transform: rotate(0deg) !important;
-  transform: rotate(0deg) !important;
+  -webkit-transform: rotate(360deg) !important;
+  -ms-transform: rotate(360deg) !important;
+  transform: rotate(360deg) !important;
 }
 
 <nav
@@ -178,7 +184,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
         href="#"
       >
         <span
-          className="k-DashboardMenu__iconWrapper k-DashboardMenu__item__iconWrapper"
+          className="k-DashboardMenu__iconWrapper"
         >
           <svg>
             <d />
@@ -200,7 +206,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
         href="#"
       >
         <span
-          className="k-DashboardMenu__iconWrapper k-DashboardMenu__item__iconWrapper"
+          className="k-DashboardMenu__iconWrapper"
         >
           <svg>
             <d />
@@ -220,43 +226,45 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
         className="k-DashboardMenu__expandable"
         open={null}
       >
-        <summary
-          className="k-DashboardMenu__expandable__title"
-        >
-          <span
-            className="k-DashboardMenu__iconWrapper k-DashboardMenu__expandable__iconWrapper"
+        <summary>
+          <div
+            className="k-DashboardMenu__expandable__title"
           >
-            <svg>
-              <d />
-            </svg>
-          </span>
-          <span
-            className="k-DashboardMenu__expandable__title__text"
-          >
-            Expandable item
-          </span>
-          <span
-            className="k-DashboardMenu__expandable__title__arrow"
-          >
-            <svg
-              className=""
-              fill="#222"
-              height="5.64"
-              style={
-                Object {
-                  "transform": "rotate(180deg)",
-                }
-              }
-              viewBox="0 0 8.48 5.64"
-              width="8.48"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              className="k-DashboardMenu__iconWrapper"
             >
-              
-              <path
-                d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
-              />
-            </svg>
-          </span>
+              <svg>
+                <d />
+              </svg>
+            </span>
+            <span
+              className="k-DashboardMenu__expandable__title__text"
+            >
+              Expandable item
+            </span>
+            <span
+              className="k-DashboardMenu__expandable__title__arrow"
+            >
+              <svg
+                className=""
+                fill="#222"
+                height="5.64"
+                style={
+                  Object {
+                    "transform": "rotate(180deg)",
+                  }
+                }
+                viewBox="0 0 8.48 5.64"
+                width="8.48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                
+                <path
+                  d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+                />
+              </svg>
+            </span>
+          </div>
         </summary>
         <ul
           className="k-DashboardMenu__expandable__list"
