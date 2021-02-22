@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import isFunction from 'lodash/fp/isFunction'
 import classNames from 'classnames'
@@ -547,6 +548,24 @@ const SideFooter = ({ className, ...props }) => (
     {...props}
   />
 )
+
+DashboardLayout.propTypes = {
+  backLinkProps: PropTypes.object,
+  buttonProps: PropTypes.shape({
+    openLabel: PropTypes.node.isRequired,
+    closeLabel: PropTypes.node.isRequired,
+  }),
+  quickAccessLinkText: PropTypes.node.isRequired,
+}
+
+Header.propTypes = {
+  buttonProps: PropTypes.shape({
+    openLabel: PropTypes.node.isRequired,
+    closeLabel: PropTypes.node.isRequired,
+  }),
+  hasButton: PropTypes.bool,
+  isOpen: PropTypes.bool,
+}
 
 DashboardLayout.Header = Header
 DashboardLayout.SideContent = SideContent

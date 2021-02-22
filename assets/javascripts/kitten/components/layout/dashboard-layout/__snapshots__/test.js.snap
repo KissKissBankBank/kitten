@@ -394,7 +394,9 @@ button:hover .c1 {
     <a
       className="k-DashboardLayout__quickAccessLink"
       href="#main"
-    />
+    >
+      Custom quick access link text
+    </a>
     <div
       aria-hidden={true}
       className="k-DashboardLayout__sideWrapper"
