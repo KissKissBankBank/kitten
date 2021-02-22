@@ -8,13 +8,13 @@ exports[`<Paragraph /> by default matches with snapshot 1`] = `
 </p>
 `;
 
-exports[`<Paragraph /> with modifier matches with snapshot 1`] = `
+exports[`<Paragraph /> with margin matches with snapshot 1`] = `
 <p
   className="sc-bdVaJa hbOtfO k-Paragraph--noMargin"
 />
 `;
 
-exports[`<Paragraph /> with no margin matches with snapshot 1`] = `
+exports[`<Paragraph /> with modifier matches with snapshot 1`] = `
 <p
   className="sc-bdVaJa hbOtfO k-Paragraph--noMargin"
 />

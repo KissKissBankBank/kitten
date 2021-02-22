@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Breaking change:
 
-- Convert `Paragraph` component and `margin` become `noMargin` prop.
+- Convert `Paragraph` component and `margin` becomes `noMargin` prop.
 - Remove `k-Alert` SCSS mixin.
 
 ## [3.0.0-beta.2] - 2021-02-15
