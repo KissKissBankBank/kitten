@@ -111,6 +111,20 @@ Breaking changes:
   - `RewardCardLegacy`
   - `SimilarProjectsCard`.
 
+## [2.121.0] - 2021-02-22
+
+Features:
+
+- Add `DashboardLayout` component with `Flow` subcomponent.
+- Add `DashboardMenu` component.
+- Add `LightbulbIllustration` with `size` (large, normal) prop.
+- Add icons components:
+  - `HomeIcon`
+  - `TagIcon`
+  - `FileIcon`
+  - `LoudspeakerIcon`
+  - `ShieldIcon`.
+
 ## [2.120.1] - 2021-02-19
 
 Fix:
