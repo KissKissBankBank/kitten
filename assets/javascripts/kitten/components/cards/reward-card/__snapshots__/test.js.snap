@@ -11,7 +11,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
       className="k-RewardCard__rowContent"
     >
       <h6
-        className="sc-bxivhb hGjUEt k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        className="sc-bxivhb ecGGEz k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
         style={
           Object {
             "--Title-css-color": "#222",
@@ -82,7 +82,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         </div>
       </div>
       <h6
-        className="sc-bxivhb hGjUEt k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        className="sc-bxivhb ecGGEz k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
         style={
           Object {
             "--Title-css-color": "#222",
@@ -153,7 +153,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </div>
       </div>
       <h6
-        className="sc-bxivhb hGjUEt k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        className="sc-bxivhb ecGGEz k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
         style={
           Object {
             "--Title-css-color": "#222",
@@ -282,7 +282,7 @@ exports[`<RewardCard /> with video matches with snapshot 1`] = `
       className="k-RewardCard__rowContent"
     >
       <h6
-        className="sc-bxivhb hGjUEt k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
+        className="sc-bxivhb ecGGEz k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
         style={
           Object {
             "--Title-css-color": "#222",

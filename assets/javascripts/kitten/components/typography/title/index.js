@@ -14,7 +14,7 @@ const StyledTitle = styled.span`
   color: ${COLORS.font1}; /* IE11 */
   color: var(--Title-css-color);
 
-  &.k-Title--hasMargin {
+  &:not(.k-Title--noMargin) {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -29,7 +29,7 @@ const StyledTitle = styled.span`
 export const Title = ({
   modifier,
   tag,
-  hasMargin,
+  noMargin,
   italic,
   cssColor,
   ...other
@@ -40,7 +40,7 @@ export const Title = ({
       modifier={modifier}
       className={classNames(
         {
-          'k-Title--hasMargin': hasMargin,
+          'k-Title--noMargin': noMargin,
           'k-Title--italic': italic,
         }
       )}
@@ -53,7 +53,7 @@ export const Title = ({
 Title.defaultProps = {
   tag: 'h1',
   modifier: 'primary',
-  hasMargin: true,
+  noMargin: true,
   italic: false,
   cssColor: null,
 }
@@ -75,7 +75,7 @@ Title.propTypes = {
   /**
     Remove default margins of `title` attribut.
   */
-  hasMargin: PropTypes.bool,
+  noMargin: PropTypes.bool,
   /**
     Specify a color (use a CSS color string).
   */

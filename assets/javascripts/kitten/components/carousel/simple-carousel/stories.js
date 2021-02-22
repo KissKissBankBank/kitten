@@ -23,7 +23,7 @@ const Item = ({ numItem }) => (
 
     <Marger top="3" bottom="3" style={{ padding: '0 40px' }}>
       <Marger bottom="2">
-        <Title modifier="senary" margin={false} style={{ color: '#FFF' }}>
+        <Title modifier="senary" noMargin={false} style={{ color: '#FFF' }}>
           Title {numItem}
         </Title>
       </Marger>

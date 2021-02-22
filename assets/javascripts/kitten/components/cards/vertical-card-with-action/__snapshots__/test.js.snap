@@ -17,7 +17,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
     className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
   >
     <h1
-      className="sc-bdVaJa gcJzNv k-u-align-center"
+      className="sc-bdVaJa goVsRi k-u-align-center"
       style={
         Object {
           "--Title-css-color": null,
@@ -61,7 +61,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
     className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
   >
     <h1
-      className="sc-bdVaJa gcJzNv k-u-align-center k-u-margin-bottom-singleHalf--important"
+      className="sc-bdVaJa goVsRi k-u-align-center k-u-margin-bottom-singleHalf--important"
       style={
         Object {
           "--Title-css-color": null,

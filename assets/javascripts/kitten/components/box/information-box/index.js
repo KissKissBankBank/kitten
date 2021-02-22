@@ -10,7 +10,7 @@ export class InformationBox extends Component {
       <div className="k-InformationBox" {...other}>
         <div className="k-InformationBox__container">
           <Marger bottom="1">
-            <Title tag="p" margin={false} modifier="quaternary">
+            <Title tag="p" noMargin={false} modifier="quaternary">
               {title}
             </Title>
           </Marger>

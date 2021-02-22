@@ -170,7 +170,7 @@ export class CartRewardCard extends Component {
             'k-u-margin-bottom-single@xs-down': !subtitle,
           })}
         >
-          <Title italic modifier="quinary" margin={false} tag={titleTag}>
+          <Title italic modifier="quinary" noMargin={false} tag={titleTag}>
             {titleAmount}
           </Title>
         </div>

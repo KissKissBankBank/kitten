@@ -130,7 +130,7 @@ export const SimplePopover = ({
       )}
       <div>
         <Marger bottom=".5">
-          <Title id={titleId} modifier="senary" margin={false} tag="h2">
+          <Title id={titleId} modifier="senary" noMargin={false} tag="h2">
             {title}
           </Title>
         </Marger>

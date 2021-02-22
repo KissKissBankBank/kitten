@@ -17,7 +17,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="sc-bdVaJa bwDdrh"
         >
           <h2
-            className="sc-bwzfXH etRCJb sc-gqjmRU fvSujs"
+            className="sc-bwzfXH jhXDVM sc-gqjmRU fvSujs"
             style={
               Object {
                 "--Title-css-color": null,

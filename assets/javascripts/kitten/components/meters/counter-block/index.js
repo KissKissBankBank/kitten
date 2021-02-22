@@ -83,7 +83,7 @@ export const CounterBlock = ({
     <Container>
       {isString(title) ? (
         <Marger bottom={margin}>
-          <Title modifier="tertiary" margin={false} tag={titleTag}>
+          <Title modifier="tertiary" noMargin={false} tag={titleTag}>
             {title}
           </Title>
         </Marger>

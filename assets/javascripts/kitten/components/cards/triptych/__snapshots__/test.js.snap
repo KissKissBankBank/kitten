@@ -12,7 +12,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-bottom-double"
       >
         <h2
-          className="sc-bwzfXH etjqRl k-Title--hasMargin"
+          className="sc-bwzfXH eQvhrD"
           style={
             Object {
               "--Title-css-color": null,
@@ -47,7 +47,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
         >
           <h1
-            className="sc-bwzfXH dTcwDm k-u-align-center"
+            className="sc-bwzfXH gdZCuG k-u-align-center"
             style={
               Object {
                 "--Title-css-color": null,
@@ -93,7 +93,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-bwzfXH dTcwDm k-u-align-center k-u-margin-bottom-singleHalf--important"
+          className="sc-bwzfXH gdZCuG k-u-align-center k-u-margin-bottom-singleHalf--important"
           style={
             Object {
               "--Title-css-color": null,
@@ -142,7 +142,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-bwzfXH dTcwDm k-u-align-center"
+          className="sc-bwzfXH gdZCuG k-u-align-center"
           style={
             Object {
               "--Title-css-color": null,

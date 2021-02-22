@@ -71,7 +71,7 @@ export const VerticalCard = ({
   return (
     <Card textAlign={textAlign} {...others}>
       <Img {...imgProps} styles={style} />
-      <Title modifier="senary" tag={titleTag} margin={false}>
+      <Title modifier="senary" tag={titleTag} noMargin={false}>
         {title}
       </Title>
       {withTitleStroke && (

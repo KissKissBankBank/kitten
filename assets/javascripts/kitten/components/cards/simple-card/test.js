@@ -70,7 +70,7 @@ describe('<SimpleCard />', () => {
       expect(component.find(Title).text()).toBe('Simple card title')
       expect(component.find(Title).props()).toMatchObject({
         modifier: 'senary',
-        margin: false,
+        noMargin: false,
         className: 'k-Card__title',
       })
     })

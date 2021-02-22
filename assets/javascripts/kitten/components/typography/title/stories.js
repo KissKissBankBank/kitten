@@ -31,7 +31,7 @@ export const DefaultProps = () => (
       <Title
         modifier={select('Modifier', modifierOptions, 'primary')}
         italic={boolean('Italic', false)}
-        hasMargin={boolean('Margin', false)}
+        noMargin={boolean('Margin', false)}
         cssColor={color('cssColor', COLORS.font1)}
       >
         {text('Title', 'Lorem ipsum dolor sit amet')}
@@ -177,7 +177,7 @@ export const Modifier = () => (
 )
 
 export const WithoutMargin = () => (
-  <Title modifier="primary" hasMargin={false}>
+  <Title modifier="primary" noMargin={false}>
     Lorem ipsum dolor sit amet…
   </Title>
 )
