@@ -380,7 +380,7 @@ export const DashboardLayout = ({
       }
 
       if (!isOpen) {
-        contentElement.current.focus()
+        contentElement?.current?.focus()
       }
     }
   }, [isOpen, sideBarElement, contentElement])
