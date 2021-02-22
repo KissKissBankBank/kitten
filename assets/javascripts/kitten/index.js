@@ -182,6 +182,7 @@ export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph'
 export { Loader } from './components/loaders/loader'
 
 // Menus
+export { DashboardMenu } from './components/menus/dashboard-menu'
 export { HeaderMenu } from './components/menus/header-menu'
 
 // Meters
@@ -365,6 +366,11 @@ export { WarningCircleIcon } from './components/icons/warning-circle-icon'
 export { WarningIcon } from './components/icons/warning-icon'
 export { WhatsAppIcon } from './components/icons/whatsapp-icon'
 export { YoutubeIcon } from './components/icons/youtube-icon'
+export { HomeIcon } from './components/icons/home-icon'
+export { TagIcon } from './components/icons/tag-icon'
+export { FileIcon } from './components/icons/file-icon'
+export { LoudspeakerIcon } from './components/icons/loudspeaker-icon'
+export { ShieldIcon } from './components/icons/shield-icon'
 
 // ---------
 // CONSTANTS

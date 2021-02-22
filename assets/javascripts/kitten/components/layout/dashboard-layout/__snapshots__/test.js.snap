@@ -1309,7 +1309,9 @@ button:hover .c1 {
     <a
       className="k-DashboardLayout__quickAccessLink"
       href="#main"
-    />
+    >
+      Custom quick access link text
+    </a>
     <div
       aria-hidden={true}
       className="k-DashboardLayout__sideWrapper"
@@ -1361,6 +1363,7 @@ button:hover .c1 {
     </div>
     <div
       className="k-DashboardLayout__mainWrapper"
+      tabIndex={0}
     >
       <header
         className="k-DashboardLayout__heading"
@@ -1369,7 +1372,7 @@ button:hover .c1 {
           className="k-DashboardLayout__heading__buttonWrapper"
         >
           <button
-            aria-expanded={false}
+            aria-expanded={null}
             className="k-DashboardLayout__heading__button k-u-reset-button"
             onClick={[Function]}
           >

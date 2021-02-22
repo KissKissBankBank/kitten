@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import isFunction from 'lodash/fp/isFunction'
 import classNames from 'classnames'
 
 import {
@@ -14,6 +16,10 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { useMedia } from '../../../helpers/utils/use-media-query'
 import { getMinQuery } from '../../../helpers/utils/media-queries'
+import {
+  getReactElementsByType,
+  getReactElementsWithoutTypeArray,
+} from '../../../helpers/react/react-elements'
 
 import { BurgerIcon } from '../../../components/icons/burger-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
@@ -326,9 +332,26 @@ export const DashboardLayout = ({
   ...props
 }) => {
   const [isOpen, setOpen] = useState(false)
+  const [touchCoords, setTouchCoords] = useState([])
   const sideBarElement = useRef(null)
   const contentElement = useRef(null)
 
+  const renderComponentArray = (childrenArray, otherProps) => {
+    return childrenArray.map(child => {
+      if (!child || !child.props) return null
+
+      return isFunction(child.props?.children)
+        ? React.cloneElement(child, {
+            children: child.props.children({
+              openSideBar: () => setOpen(true),
+              closeSideBar: () => setOpen(false),
+              isSidebarOpen: isOpen,
+              ...otherProps,
+            }),
+          })
+        : React.cloneElement(child, otherProps)
+    })
+  }
   const isDesktop = useMedia({
     queries: [getMinQuery(ScreenConfig.L.min)],
     values: [true],
@@ -336,18 +359,49 @@ export const DashboardLayout = ({
   })
 
   useEffect(() => {
-    if (isOpen && sideBarElement && contentElement) {
-      sideBarElement.current.focus()
+    if (sideBarElement && contentElement) {
+      if (isOpen) {
+        sideBarElement.current.focus()
 
-      window.addEventListener('keydown', handleKeyDown)
-      contentElement.current.addEventListener('click', handleMainClick)
+        window.addEventListener('keydown', handleKeyDown)
+        contentElement.current.addEventListener('click', handleMainClick)
+        sideBarElement.current.addEventListener('touchstart', handleTouchStart)
+        sideBarElement.current.addEventListener('touchend', handleTouchEnd)
 
-      return () => {
-        window.removeEventListener('keydown', handleKeyDown)
-        contentElement.current.removeEventListener('click', handleMainClick)
+        return () => {
+          window.removeEventListener('keydown', handleKeyDown)
+          contentElement.current.removeEventListener('click', handleMainClick)
+          sideBarElement.current.removeEventListener(
+            'touchstart',
+            handleTouchStart,
+          )
+          sideBarElement.current.removeEventListener('touchend', handleTouchEnd)
+        }
+      }
+
+      if (!isOpen) {
+        contentElement.current.focus()
       }
     }
   }, [isOpen, sideBarElement, contentElement])
+
+  const handleTouchStart = event => {
+    setTouchCoords([event?.touches[0]?.clientX])
+  }
+
+  const handleTouchEnd = event => {
+    setTouchCoords(current => [current[0], event?.changedTouches[0]?.clientX])
+  }
+
+  useEffect(() => {
+    if (touchCoords[1] && touchCoords[0]) {
+      const distanceX = touchCoords[1] - touchCoords[0]
+
+      if (distanceX < -40) {
+        setOpen(false)
+      }
+    }
+  }, [touchCoords])
 
   const handleButtonClick = () => {
     setOpen(current => {
@@ -361,7 +415,8 @@ export const DashboardLayout = ({
     }
   }
 
-  const handleMainClick = () => {
+  const handleMainClick = event => {
+    event.stopPropagation()
     setOpen(false)
   }
 
@@ -397,50 +452,55 @@ export const DashboardLayout = ({
               {backLinkProps.children}
             </span>
           </a>
-          {React.Children.map(children, child => {
-            if (!child) return null
-            return child.type.name !== 'Header' ? null : child
-          })}
+          {renderComponentArray(
+            getReactElementsByType({
+              children: children,
+              type: Header,
+            }),
+          )}
 
-          {React.Children.map(children, child => {
-            if (!child) return null
-            return child.type.name !== 'SideContent' ? null : child
-          })}
+          {renderComponentArray(
+            getReactElementsByType({
+              children: children,
+              type: SideContent,
+            }),
+          )}
 
-          {React.Children.map(children, child => {
-            if (!child) return null
-            return child.type.name !== 'SideFooter' ? null : child
-          })}
+          {renderComponentArray(
+            getReactElementsByType({
+              children: children,
+              type: SideFooter,
+            }),
+          )}
         </div>
-        <div className="k-DashboardLayout__mainWrapper">
-          {React.Children.map(children, child => {
-            if (!child) return null
-            return child.type.name !== 'Header'
-              ? null
-              : React.cloneElement(child, {
-                  isOpen,
-                  hasButton: true,
-                  buttonProps: {
-                    ...buttonProps,
-                    onClick: handleButtonClick,
-                    'aria-expanded': isOpen,
-                  },
-                })
-          })}
+        <div
+          ref={contentElement}
+          tabIndex={0}
+          className="k-DashboardLayout__mainWrapper"
+        >
+          {renderComponentArray(
+            getReactElementsByType({
+              children: children,
+              type: Header,
+            }),
+            {
+              isOpen,
+              hasButton: true,
+              buttonProps: {
+                ...buttonProps,
+                onClick: handleButtonClick,
+                'aria-expanded': isOpen ? isOpen : null,
+              },
+            },
+          )}
 
-          <main
-            ref={contentElement}
-            className="k-DashboardLayout__main"
-            id="main"
-          >
-            {React.Children.map(children, child => {
-              if (!child) return null
-              return ['Header', 'SideContent', 'SideFooter'].includes(
-                child.type.name,
-              )
-                ? null
-                : child
-            })}
+          <main className="k-DashboardLayout__main" id="main">
+            {renderComponentArray(
+              getReactElementsWithoutTypeArray({
+                children,
+                typeArray: [Header, SideContent, SideFooter],
+              }),
+            )}
           </main>
         </div>
       </div>
@@ -499,6 +559,24 @@ const SideFooter = ({ className, ...props }) => (
     {...props}
   />
 )
+
+DashboardLayout.propTypes = {
+  backLinkProps: PropTypes.object,
+  buttonProps: PropTypes.shape({
+    openLabel: PropTypes.node.isRequired,
+    closeLabel: PropTypes.node.isRequired,
+  }),
+  quickAccessLinkText: PropTypes.node.isRequired,
+}
+
+Header.propTypes = {
+  buttonProps: PropTypes.shape({
+    openLabel: PropTypes.node.isRequired,
+    closeLabel: PropTypes.node.isRequired,
+  }),
+  hasButton: PropTypes.bool,
+  isOpen: PropTypes.bool,
+}
 
 DashboardLayout.Header = Header
 DashboardLayout.SideContent = SideContent
