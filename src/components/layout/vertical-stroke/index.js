@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -13,57 +11,35 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+var _react = _interopRequireDefault(require("react"));
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _react = _interopRequireWildcard(require("react"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+var _typography = require("../../../helpers/utils/typography");
 
-var VerticalStroke = /*#__PURE__*/function (_Component) {
-  (0, _inherits2.default)(VerticalStroke, _Component);
-
-  var _super = _createSuper(VerticalStroke);
-
-  function VerticalStroke() {
-    (0, _classCallCheck2.default)(this, VerticalStroke);
-    return _super.apply(this, arguments);
-  }
-
-  (0, _createClass2.default)(VerticalStroke, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          className = _this$props.className,
-          size = _this$props.size,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["className", "size"]);
-      var verticalStrokeClassName = (0, _classnames.default)('k-VerticalStroke', {
-        'k-VerticalStroke--tiny': size == 'tiny',
-        'k-VerticalStroke--default': size == 'default',
-        'k-VerticalStroke--big': size == 'big',
-        'k-VerticalStroke--huge': size == 'huge'
-      }, className);
-      return /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({
-        className: verticalStrokeClassName
-      }, others));
-    }
-  }]);
-  return VerticalStroke;
-}(_react.Component);
-
+var VerticalStroke = (0, _styledComponents.default)(function (_ref) {
+  var className = _ref.className,
+      size = _ref.size,
+      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "size"]);
+  var verticalStrokeClassName = (0, _classnames.default)('k-VerticalStroke', {
+    'k-VerticalStroke--tiny': size === 'tiny',
+    'k-VerticalStroke--default': size === 'default',
+    'k-VerticalStroke--big': size === 'big',
+    'k-VerticalStroke--huge': size === 'huge'
+  }, className);
+  return /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({
+    className: verticalStrokeClassName
+  }, others));
+}).withConfig({
+  displayName: "vertical-stroke__VerticalStroke",
+  componentId: "sc-5qljff-0"
+})(["&.k-VerticalStroke{display:block;border:none;background:", ";}&.k-VerticalStroke--tiny{height:", ";width:", ";}&.k-VerticalStroke--default{height:", ";width:", ";}&.k-VerticalStroke--big{height:", ";width:", ";}&.k-VerticalStroke--huge{height:", ";width:", ";}"], _colorsConfig.default.font1, (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(100), (0, _typography.pxToRem)(6));
 exports.VerticalStroke = VerticalStroke;
 VerticalStroke.propTypes = {
   size: _propTypes.default.oneOf(['tiny', 'default', 'big', 'huge'])
