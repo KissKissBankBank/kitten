@@ -55,6 +55,12 @@ Breaking changes:
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
 
+## [2.120.1] - 2021-02-19
+
+Fix:
+
+- Fix init and resize coords calculation on `Toggletip`.
+
 ## [2.120.0] - 2021-02-12
 
 Feature:
