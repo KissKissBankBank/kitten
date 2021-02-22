@@ -2,11 +2,10 @@ import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 import './stylesheets/app-kitten.scss'
 import React from 'react'
-import { addDecorator } from '@storybook/react'
-import GridDecorator from './decorators/grid'
-import { addParameters } from '@storybook/react'
+import { addDecorator, addParameters } from '@storybook/react'
+import DevGridDecorator from './decorators/dev-grid'
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
-import { themes } from '@storybook/theming';
+import { themes } from '@storybook/theming'
 
 addParameters({
   docs: {
@@ -22,4 +21,4 @@ addParameters({
   },
 })
 
-addDecorator(GridDecorator)
+addDecorator(DevGridDecorator)
