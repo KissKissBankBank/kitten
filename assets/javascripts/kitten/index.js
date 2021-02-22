@@ -110,12 +110,12 @@ export { RadioButton } from './components/form/radio-button'
 export { RangeSlider } from './components/form/range-slider'
 export { RichTextInput } from './components/form/rich-text-input'
 export { SelectWithState } from './components/form/select-with-state'
-export { Switch } from './components/form/switch'
 export { TextInputAndSelect } from './components/form/text-input-and-select'
 export { TextInputWithLimit } from './components/form/text-input-with-limit'
 export { TextInputWithUnitForm } from './components/form/text-input-with-unit-form'
 export { TextInputWithUnit } from './components/form/text-input-with-unit'
 export { TextInput } from './components/form/text-input'
+export { ToggleSwitch } from './components/form/toggle-switch'
 
 // Grid
 export { Container } from './components/grid/container'

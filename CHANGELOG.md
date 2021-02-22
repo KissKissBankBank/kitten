@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Remove `Switch` replaced with `ToggleSwitch`.
 - Breaking change: Remove `k-Separator` SCSS mixin.
 - Breaking change: Remove `k-VerticalSeparator` and
   `k-separatorBase` SCSS mixins.
