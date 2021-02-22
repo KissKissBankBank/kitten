@@ -443,11 +443,7 @@ export const DashboardLayout = ({
               backLinkProps.className,
             )}
           >
-            <ArrowIcon
-              direction="left"
-              color={COLORS.background1}
-              version="solid"
-            />
+            <ArrowIcon direction="left" color={COLORS.background1} />
             <span className="k-DashboardLayout__backLink__text">
               {backLinkProps.children}
             </span>

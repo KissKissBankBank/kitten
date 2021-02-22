@@ -189,7 +189,7 @@ const Expandable = ({ className, children, icon, title, ...props }) => {
               {title}
             </span>
             <span className="k-DashboardMenu__expandable__title__arrow">
-              <ArrowIcon version="solid" direction="bottom" />
+              <ArrowIcon direction="bottom" />
             </span>
           </div>
         </summary>
