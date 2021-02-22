@@ -17,9 +17,9 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _classnames = _interopRequireDefault(require("classnames"));
 
-var _screenConfig = require("../../../constants/screen-config");
+var _stickyContainer = require("../../../components/grid/sticky-container");
 
 var _button = require("./components/button");
 
@@ -45,14 +45,6 @@ var _hidden = require("./components/hidden");
 
 var _quickAccessLink = require("./components/quick-access-link");
 
-var _config = require("./config");
-
-var _stickyContainer = require("../../../components/grid/sticky-container");
-
-var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
-
-var _typography = require("../../../helpers/utils/typography");
-
 var _a11y = require("../../../helpers/dom/a11y");
 
 var _events = _interopRequireWildcard(require("../../../helpers/dom/events"));
@@ -63,39 +55,16 @@ var _dropdownConfig = require("../../../constants/dropdown-config");
 
 var _usePreviousHook = require("../../../helpers/utils/use-previous-hook");
 
-var StyledStickyContainer = (0, _styledComponents.default)(_stickyContainer.StickyContainer).withConfig({
-  displayName: "header-nav__StyledStickyContainer",
-  componentId: "gabj0o-0"
-})(["", " .k-Spacer + &{box-shadow:0 ", " ", " rgba(0,0,0,0.1);}"], function (_ref) {
-  var isMenuExpanded = _ref.isMenuExpanded;
-  return isMenuExpanded && (0, _styledComponents.css)(["transition:none;"]);
-}, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(4));
+var _styles = require("./styles");
 
-var Header = _styledComponents.default.header.withConfig({
-  displayName: "header-nav__Header",
-  componentId: "gabj0o-1"
-})(["position:relative;z-index:", ";"], function (_ref2) {
-  var isMenuExpanded = _ref2.isMenuExpanded,
-      zIndex = _ref2.zIndex;
-  return isMenuExpanded ? zIndex.headerWithOpenMenu : zIndex.header;
-});
-
-var Navigation = _styledComponents.default.nav.withConfig({
-  displayName: "header-nav__Navigation",
-  componentId: "gabj0o-2"
-})(["width:100vw;overflow:hidden;box-sizing:border-box;&,.quickAccessLink{height:", ";background:", ";@media (min-width:", "px){height:", ";}@media (min-width:", "px){height:", ";}}"], (0, _typography.pxToRem)(_config.MOBILE_HEADER_HEIGHT), function (_ref3) {
-  var updateBackground = _ref3.updateBackground;
-  return updateBackground ? _colorsConfig.default.background3 : _colorsConfig.default.background1;
-}, _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(_config.TABLET_HEADER_HEIGHT), _screenConfig.ScreenConfig.L.min, (0, _typography.pxToRem)(_config.DESKTOP_HEADER_HEIGHT));
-
-var HeaderNav = function HeaderNav(_ref4) {
-  var children = _ref4.children,
-      id = _ref4.id,
-      isFixed = _ref4.isFixed,
-      isLogged = _ref4.isLogged,
-      quickAccessProps = _ref4.quickAccessProps,
-      stickyProps = _ref4.stickyProps,
-      zIndexConfig = _ref4.zIndexConfig;
+var HeaderNav = function HeaderNav(_ref) {
+  var children = _ref.children,
+      id = _ref.id,
+      isFixed = _ref.isFixed,
+      isLogged = _ref.isLogged,
+      quickAccessProps = _ref.quickAccessProps,
+      stickyProps = _ref.stickyProps,
+      zIndexConfig = _ref.zIndexConfig;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -112,20 +81,25 @@ var HeaderNav = function HeaderNav(_ref4) {
       stickyState = _useState6[0],
       setStickyState = _useState6[1];
 
+  var _useState7 = (0, _react.useState)(null),
+      _useState8 = (0, _slicedToArray2.default)(_useState7, 2),
+      isBackgroundInactive = _useState8[0],
+      setBackgroundInactive = _useState8[1];
+
   var stickyContainerRef = (0, _react.useRef)(null);
   var headerRef = (0, _react.useRef)(null);
   var previousStickyState = (0, _usePreviousHook.usePrevious)(stickyState);
 
-  var focusDropdown = function focusDropdown(_ref5) {
-    var dropdown = _ref5.detail;
+  var focusDropdown = function focusDropdown(_ref2) {
+    var dropdown = _ref2.detail;
 
     _emitter.default.emit(_events.TOGGLE_DROPDOWN_EVENT, false);
 
     dropdown.focus();
   };
 
-  var focusElementNextToDropdown = function focusElementNextToDropdown(_ref6) {
-    var dropdown = _ref6.detail;
+  var focusElementNextToDropdown = function focusElementNextToDropdown(_ref3) {
+    var dropdown = _ref3.detail;
 
     _emitter.default.emit(_events.TOGGLE_DROPDOWN_EVENT, false);
 
@@ -173,13 +147,9 @@ var HeaderNav = function HeaderNav(_ref4) {
     }
   };
 
-  var updateHeaderBackground = function updateHeaderBackground() {
-    return /UserMenu/.test(menuExpandBy);
-  };
-
-  var callOnToggle = function callOnToggle(_ref7) {
-    var isExpanded = _ref7.isExpanded,
-        expandBy = _ref7.expandBy;
+  var callOnToggle = function callOnToggle(_ref4) {
+    var isExpanded = _ref4.isExpanded,
+        expandBy = _ref4.expandBy;
 
     if (!isExpanded && previousStickyState === 'always') {
       stickyContainerRef.current.setSticky();
@@ -192,6 +162,9 @@ var HeaderNav = function HeaderNav(_ref4) {
   (0, _react.useEffect)(function () {
     setStickyState(isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp');
   }, [isFixed, isMenuExpanded]);
+  (0, _react.useEffect)(function () {
+    setBackgroundInactive(/UserMenu/.test(menuExpandBy));
+  }, [menuExpandBy]);
   return /*#__PURE__*/_react.default.createElement(_context.Context.Provider, {
     value: {
       isLogged: isLogged,
@@ -199,19 +172,25 @@ var HeaderNav = function HeaderNav(_ref4) {
       expandBy: menuExpandBy,
       callOnToggle: callOnToggle
     }
-  }, /*#__PURE__*/_react.default.createElement(Header, {
+  }, /*#__PURE__*/_react.default.createElement(_styles.StyledHeader, {
+    style: {
+      '--HeaderNav-zIndex': zIndexConfig.header,
+      '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu
+    },
     zIndex: zIndexConfig,
-    isMenuExpanded: isMenuExpanded
-  }, /*#__PURE__*/_react.default.createElement(StyledStickyContainer, (0, _extends2.default)({
+    className: (0, _classnames.default)('k-HeaderNav__wrapper', {
+      'k-HeaderNav--menuIsExpanded': isMenuExpanded,
+      'k-HeaderNav--inactiveBackground': isBackgroundInactive
+    })
+  }, /*#__PURE__*/_react.default.createElement(_stickyContainer.StickyContainer, (0, _extends2.default)({
     ref: stickyContainerRef,
     isSticky: stickyState,
-    isMenuExpanded: isMenuExpanded
-  }, stickyProps), /*#__PURE__*/_react.default.createElement(Navigation, {
+    className: "k-HeaderNav__stickyContainer"
+  }, stickyProps), /*#__PURE__*/_react.default.createElement("nav", {
     ref: headerRef,
     role: "banner",
     id: id,
-    className: "k-HeaderNav",
-    updateBackground: updateHeaderBackground()
+    className: "k-HeaderNav"
   }, /*#__PURE__*/_react.default.createElement(_quickAccessLink.QuickAccessLink, (0, _extends2.default)({
     className: "quickAccessLink"
   }, quickAccessProps)), children))));

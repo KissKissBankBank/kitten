@@ -1,29 +1,40 @@
 import React from 'react'
-import { Title } from '../../../components/typography/title'
-import { InformationBox } from '../../../components/box/information-box'
+import renderer from 'react-test-renderer'
+import { InformationBox } from './index'
 
 describe('<InformationBox />', () => {
+  let component
+
   describe('by default', () => {
-    const defaultComponent = shallow(<InformationBox />)
+    beforeEach(() => {
+      component = renderer.create(<InformationBox />).toJSON()
+    })
 
-    it('renders .k-InformationBox', () => {
-      expect(defaultComponent.find('.k-InformationBox')).toHaveLength(1)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('title prop', () => {
-    const component = shallow(<InformationBox title="Lorem ipsum" />)
-
-    it('renders a <Title />', () => {
-      expect(component.find(Title)).toHaveLength(1)
+  describe('with contents', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <InformationBox
+            title="Title"
+            titleProps={{
+              tag: 'h3',
+              className: 'customClassName',
+              'aria-label': 'custom aria prop',
+            }}
+          >
+            Content
+          </InformationBox>,
+        )
+        .toJSON()
     })
-  })
 
-  describe('children prop', () => {
-    const component = mount(<InformationBox>Example content</InformationBox>)
-
-    it('adds a children element', () => {
-      expect(component.text()).toBe('Example content')
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 })
