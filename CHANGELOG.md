@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove `k-Header` SCSS mixin.
+- Breaking change: Remove `Header`, `HeaderLogo` and `HeaderTitles` components.
+  Prefer use `HeaderNav` component.
 - Remove `Switch` replaced with `ToggleSwitch`.
 - Breaking change: Remove `k-Separator` SCSS mixin.
 - Breaking change: Remove `k-VerticalSeparator` and

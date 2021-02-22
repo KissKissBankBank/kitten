@@ -152,7 +152,7 @@ export class UserMenu extends Component {
         title={this.props.buttonTitle}
         notifications={this.props.buttonNotifications}
         badgeColor={this.props.badgeColor}
-        textClassName="k-Header__userMenuText--withEllipsis"
+        textClassName="k-UserMenu__text--withEllipsis"
       />
     )
   }
