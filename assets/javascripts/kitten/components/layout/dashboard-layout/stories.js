@@ -160,18 +160,33 @@ export const Default = () => (
             <DashboardMenu.Expandable
               title="Admin"
               icon={() => <ShieldIcon color="currentColor" />}
-              onClick={e => {
-                e.preventDefault()
-                closeSideBar()
-              }}
             >
-              <DashboardMenu.Item href="#">
+              <DashboardMenu.Item
+                href="#"
+                onClick={e => {
+                  e.preventDefault()
+                  closeSideBar()
+                }}
+              >
                 Destinataire des fonds
               </DashboardMenu.Item>
-              <DashboardMenu.Item href="#" isActive>
+              <DashboardMenu.Item
+                href="#"
+                onClick={e => {
+                  e.preventDefault()
+                  closeSideBar()
+                }}
+                isActive
+              >
                 Confirmation d'identité
               </DashboardMenu.Item>
-              <DashboardMenu.Item href="#">
+              <DashboardMenu.Item
+                href="#"
+                onClick={e => {
+                  e.preventDefault()
+                  closeSideBar()
+                }}
+              >
                 Documents justificatifs
               </DashboardMenu.Item>
             </DashboardMenu.Expandable>

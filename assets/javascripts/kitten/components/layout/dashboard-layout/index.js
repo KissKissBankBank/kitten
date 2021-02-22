@@ -312,6 +312,7 @@ export const DashboardLayout = ({
           children: child.props.children({
             openSideBar: () => setOpen(true),
             closeSideBar: () => setOpen(false),
+            isSidebarOpen: isOpen,
           }),
         })
       : child
@@ -415,7 +416,7 @@ export const DashboardLayout = ({
           </a>
           {React.Children.map(children, child => {
             if (!child) return null
-            return child.type.name !== 'Header' ? null : child
+            return child.type.name !== 'Header' ? null : renderComponent(child)
           })}
 
           {React.Children.map(children, child => {
@@ -427,7 +428,9 @@ export const DashboardLayout = ({
 
           {React.Children.map(children, child => {
             if (!child) return null
-            return child.type.name !== 'SideFooter' ? null : child
+            return child.type.name !== 'SideFooter'
+              ? null
+              : renderComponent(child)
           })}
         </div>
         <div
@@ -457,7 +460,7 @@ export const DashboardLayout = ({
                 child.type.name,
               )
                 ? null
-                : child
+                : renderComponent(child)
             })}
           </section>
         </div>
