@@ -361,7 +361,7 @@ export const DashboardLayout = ({
   useEffect(() => {
     if (sideBarElement && contentElement) {
       if (isOpen) {
-        sideBarElement.current.focus()
+        sideBarElement?.current?.focus()
 
         window.addEventListener('keydown', handleKeyDown)
         contentElement.current.addEventListener('click', handleMainClick)
