@@ -215,6 +215,7 @@ ToggleSwitch.defaultProps = {
   label: 'switch',
   locked: false,
   reverseOrder: false,
+  onChange: () => {},
 }
 
 ToggleSwitch.propTypes = {
@@ -230,4 +231,5 @@ ToggleSwitch.propTypes = {
   label: PropTypes.string,
   locked: PropTypes.bool,
   reverseOrder: PropTypes.bool,
+  onChange: PropTypes.func,
 }
