@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export const LightbulbIllustration = ({ size, ...props }) => {
   if (size === 'small') {
@@ -57,4 +58,8 @@ export const LightbulbIllustration = ({ size, ...props }) => {
       </g>
     </svg>
   )
+}
+
+LightbulbIllustration.propTypes = {
+  size: PropTypes.oneOf(['small', 'normal', null, undefined]),
 }
