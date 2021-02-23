@@ -133,13 +133,7 @@ Breaking changes:
   - `ProjectCreatorCard`
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
-  - `SimilarProjectsCard`.
-<<<<<<< HEAD
-- Delete the following deprecated `card` SCSS mixins:
-  - `k-ProjectCard`
-  - `k-ProjectCreatorCard`
-  - `k-ProjectSimilarCard`
-=======
+  - `SimilarProjectsCard`
 
 ## [2.121.0] - 2021-02-22
 
@@ -154,7 +148,6 @@ Features:
   - `FileIcon`
   - `LoudspeakerIcon`
   - `ShieldIcon`.
->>>>>>> v3-dev
 
 ## [2.120.1] - 2021-02-19
 
