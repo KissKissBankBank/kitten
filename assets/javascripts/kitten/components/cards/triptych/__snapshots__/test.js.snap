@@ -47,16 +47,12 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
         >
           <h1
-<<<<<<< HEAD
             className="sc-bwzfXH bZnrIM k-Title k-u-align-center"
             style={
               Object {
                 "--Title-css-color": null,
               }
             }
-=======
-            className="sc-htpNat iUEESa k-u-align-center"
->>>>>>> v3-dev
           >
             Lorem ipsum dolor sit amet
           </h1>
@@ -97,16 +93,12 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-<<<<<<< HEAD
           className="sc-bwzfXH bZnrIM k-Title k-u-align-center k-u-margin-bottom-singleHalf--important"
           style={
             Object {
               "--Title-css-color": null,
             }
           }
-=======
-          className="sc-htpNat iUEESa k-u-align-center k-u-margin-bottom-singleHalf--important"
->>>>>>> v3-dev
         >
           Donsectetur adipiscing elit
         </h1>
@@ -150,16 +142,12 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-<<<<<<< HEAD
           className="sc-bwzfXH bZnrIM k-Title k-u-align-center"
           style={
             Object {
               "--Title-css-color": null,
             }
           }
-=======
-          className="sc-htpNat iUEESa k-u-align-center"
->>>>>>> v3-dev
         >
           Praesent tincidunt ultrices sem
         </h1>
