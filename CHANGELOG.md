@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix display on `DashboardLayout` for Chrome.
+- Feature: add `fullHeightContent` prop to `DashboardLayout`.
+- Feature: add `shouldHideButton` prop to `DashboardLayout.Flow`.
+
 ## [2.121.0] - 2021-02-22
 
 Features:

@@ -161,8 +161,6 @@ const StyledDashboard = styled.div`
           position: relative;
           margin-left: ${pxToRem(2)};
           flex: 1 0 auto;
-          padding-top: ${pxToRem(80)};
-          padding-bottom: ${pxToRem(80)};
 
           &::before {
             content: "";
@@ -176,6 +174,11 @@ const StyledDashboard = styled.div`
             pointer-events: none;
             z-index: 100;
             transition: background-color .2s ease-in-out, opacity .2s ease-in-out;
+          }
+
+          &:not(.k-DashboardLayout__main--fullHeight) {
+            padding-top: ${pxToRem(80)};
+            padding-bottom: ${pxToRem(80)};
           }
 
           > *:not(.k-DashboardLayout__fullWidth) {
@@ -207,7 +210,10 @@ const StyledDashboard = styled.div`
           padding-right: ${pxToRem(CONTAINER_PADDING_THIN)};
         }
         .k-DashboardLayout__main {
-          padding-top: ${pxToRem(50)};
+          &:not(.k-DashboardLayout__main--fullHeight) {
+            padding-top: ${pxToRem(50)};
+            padding-bottom: ${pxToRem(50)};
+          }
         }
       }
     }
@@ -268,8 +274,10 @@ const StyledDashboard = styled.div`
         }
 
         .k-DashboardLayout__main {
-          padding-top: ${pxToRem(80)};
-          padding-bottom: ${pxToRem(80)};
+          &:not(.k-DashboardLayout__main--fullHeight) {
+            padding-top: ${pxToRem(80)};
+            padding-bottom: ${pxToRem(80)};
+          }
 
           > *:not(.k-DashboardLayout__fullWidth) {
             margin-left: 10%;
@@ -310,18 +318,6 @@ const StyledDashboard = styled.div`
       outline: ${pxToRem(2)} solid ${COLORS.primary4};
     }
   }
-  /* FIX AvatarWithTextAndBadge */
-
-  .text--withEllipsis {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  .k-ButtonImageWithText__text {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 `
 
 export const DashboardLayout = ({
@@ -329,6 +325,7 @@ export const DashboardLayout = ({
   backLinkProps,
   buttonProps,
   quickAccessLinkText,
+  fullHeightContent,
   ...props
 }) => {
   const [isOpen, setOpen] = useState(false)
@@ -510,7 +507,12 @@ export const DashboardLayout = ({
             },
           )}
 
-          <main className="k-DashboardLayout__main" id="main">
+          <main
+            className={classNames('k-DashboardLayout__main', {
+              'k-DashboardLayout__main--fullHeight': fullHeightContent,
+            })}
+            id="main"
+          >
             {renderComponentArray(
               getReactElementsWithoutTypeArray({
                 children,
@@ -583,6 +585,7 @@ DashboardLayout.propTypes = {
     closeLabel: PropTypes.node.isRequired,
   }),
   quickAccessLinkText: PropTypes.node.isRequired,
+  fullHeightContent: PropTypes.bool,
 }
 
 Header.propTypes = {
