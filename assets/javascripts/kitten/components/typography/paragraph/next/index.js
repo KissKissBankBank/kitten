@@ -30,6 +30,7 @@ export const Paragraph = ({
   noMargin,
   normalLineHeight,
   italic,
+  className,
   ...other
 }) => {
   return (
@@ -37,6 +38,8 @@ export const Paragraph = ({
       as={tag}
       modifier={modifier}
       className={classNames(
+        'k-Paragraph',
+        className,
         {
           'k-Paragraph--noMargin': noMargin,
           'k-Paragraph--normalLineHeight': normalLineHeight,
