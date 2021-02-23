@@ -38,7 +38,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
     >
       <h1
-        className="sc-bwzfXH ekdXjO k-Title--italic"
+        className="sc-bwzfXH AMZiG k-Title k-Title--italic"
         style={
           Object {
             "--Title-css-color": null,
@@ -101,7 +101,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
     >
       <h1
-        className="sc-bwzfXH ekdXjO k-Title--italic"
+        className="sc-bwzfXH AMZiG k-Title k-Title--italic"
         style={
           Object {
             "--Title-css-color": null,
@@ -164,7 +164,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-double"
     >
       <Custom title tag
-        className="sc-bwzfXH ekdXjO k-Title--italic"
+        className="sc-bwzfXH AMZiG k-Title k-Title--italic"
         modifier="quinary"
         style={
           Object {

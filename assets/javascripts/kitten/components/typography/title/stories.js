@@ -31,7 +31,7 @@ export const DefaultProps = () => (
       <Title
         modifier={select('Modifier', modifierOptions, 'primary')}
         italic={boolean('Italic', false)}
-        noMargin={boolean('Margin', false)}
+        noMargin={boolean('No margin', false)}
         cssColor={color('cssColor', COLORS.font1)}
       >
         {text('Title', 'Lorem ipsum dolor sit amet')}

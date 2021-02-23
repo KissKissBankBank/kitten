@@ -28,7 +28,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   line-height: 1.2;
 }
 
-.c5:not(.k-Title--noMargin) {
+.c5.k-Title--noMargin {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -496,7 +496,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c4"
     >
       <h2
-        className="c5"
+        className="c5 k-Title"
         id="popover-title"
         style={
           Object {
@@ -560,7 +560,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   line-height: 1.2;
 }
 
-.c4:not(.k-Title--noMargin) {
+.c4.k-Title--noMargin {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -776,7 +776,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
       className="c3"
     >
       <h2
-        className="c4"
+        className="c4 k-Title"
         id="popover-title"
         style={
           Object {

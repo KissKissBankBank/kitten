@@ -14,7 +14,7 @@ const StyledTitle = styled.span`
   color: ${COLORS.font1}; /* IE11 */
   color: var(--Title-css-color);
 
-  &:not(.k-Title--noMargin) {
+  &.k-Title--noMargin {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -32,6 +32,7 @@ export const Title = ({
   noMargin,
   italic,
   cssColor,
+  className,
   ...other
 }) => {
   return (
@@ -39,6 +40,8 @@ export const Title = ({
       as={tag}
       modifier={modifier}
       className={classNames(
+        'k-Title',
+        className,
         {
           'k-Title--noMargin': noMargin,
           'k-Title--italic': italic,
