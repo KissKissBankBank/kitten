@@ -915,6 +915,7 @@ button:hover .c1 {
 
 .c0 {
   position: relative;
+  overscroll-behavior: none;
 }
 
 .c0 * {
@@ -933,6 +934,11 @@ button:hover .c1 {
 .c0 .k-DashboardLayout__backLink:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0 .k-DashboardLayout__sideWrapper:focus,
+.c0 .k-DashboardLayout__mainWrapper:focus {
+  outline: 0.125rem solid #bae8fd;
 }
 
 .c0 .k-DashboardLayout__quickAccessLink {
@@ -1067,6 +1073,7 @@ button:hover .c1 {
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
+    background-color: #fff;
     width: calc(100vw + 0.125rem);
     display: -webkit-box;
     display: -webkit-flex;
@@ -1250,6 +1257,10 @@ button:hover .c1 {
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
+    background-color: #fff;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
