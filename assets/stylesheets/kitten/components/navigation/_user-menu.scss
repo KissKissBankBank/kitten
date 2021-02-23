@@ -117,4 +117,11 @@
       border-#{to_lower_case($position)}: $border-size solid $border-color;
     }
   }
+
+  .k-UserMenu__text--withEllipsis {
+    text-overflow: ellipsis;
+    max-width: k-px-to-rem(110px);
+    white-space: nowrap;
+    overflow: hidden;
+  }
 }
