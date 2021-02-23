@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { Text as KittenText } from '../../../components/typography/text'
-import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
+import { Badge as KittenBadge } from '../../../components/atoms/badge'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { getReactElementsByType } from '../../../helpers/react/react-elements'
@@ -84,13 +84,13 @@ Image.defaultProps = {
 }
 
 const Badge = ({ backgroundColor, children, a11yText }) => (
-  <span
-    className="k-ButtonWithBadge__badge k-Badge"
-    style={{ backgroundColor }}
+  <KittenBadge
+    className="k-ButtonWithBadge__badge"
+    color={backgroundColor}
+    a11yText={a11yText}
   >
-    <span aria-hidden="true">{children}</span>
-    {a11yText && <VisuallyHidden>{a11yText}</VisuallyHidden>}
-  </span>
+    {children}
+  </KittenBadge>
 )
 
 Badge.propTypes = {
@@ -103,7 +103,7 @@ Badge.defaultProps = {
   a11yText: 'Notification(s)',
 }
 
-const Text = ({ textClassName, withEllipsisOverflow, children, ...props }) => {
+const Text = ({ textClassName, withEllipsisOverflow, children }) => {
   const textClassNames = classNames(
     textClassName,
     'k-ButtonImageWithText__text',

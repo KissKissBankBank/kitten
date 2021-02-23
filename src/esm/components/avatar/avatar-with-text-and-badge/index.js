@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Text as KittenText } from '../../../components/typography/text';
-import { VisuallyHidden } from '../../../components/accessibility/visually-hidden';
+import { Badge as KittenBadge } from '../../../components/atoms/badge';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { getReactElementsByType } from '../../../helpers/react/react-elements';
@@ -82,14 +82,11 @@ var Badge = function Badge(_ref6) {
   var backgroundColor = _ref6.backgroundColor,
       children = _ref6.children,
       a11yText = _ref6.a11yText;
-  return /*#__PURE__*/React.createElement("span", {
-    className: "k-ButtonWithBadge__badge k-Badge",
-    style: {
-      backgroundColor: backgroundColor
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    "aria-hidden": "true"
-  }, children), a11yText && /*#__PURE__*/React.createElement(VisuallyHidden, null, a11yText));
+  return /*#__PURE__*/React.createElement(KittenBadge, {
+    className: "k-ButtonWithBadge__badge",
+    color: backgroundColor,
+    a11yText: a11yText
+  }, children);
 };
 
 Badge.propTypes = {
@@ -104,9 +101,7 @@ Badge.defaultProps = {
 var Text = function Text(_ref7) {
   var textClassName = _ref7.textClassName,
       withEllipsisOverflow = _ref7.withEllipsisOverflow,
-      children = _ref7.children,
-      props = _objectWithoutProperties(_ref7, ["textClassName", "withEllipsisOverflow", "children"]);
-
+      children = _ref7.children;
   var textClassNames = classNames(textClassName, 'k-ButtonImageWithText__text', 'k-ButtonImageWithText__text--withoutPaddingRight', 'always-visible', {
     'text--withEllipsis': withEllipsisOverflow
   });

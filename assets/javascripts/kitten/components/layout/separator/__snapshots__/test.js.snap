@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Separator /> by default matches with snapshot 1`] = `
+.c0.k-Separator {
+  margin: 0;
+  border: none;
+  background: #eee;
+  height: 0.0625rem;
+}
+
+.c0.k-Separator--darker {
+  background: #d8d8d8;
+}
+
+<hr
+  className="k-Separator c0"
+/>
+`;
+
+exports[`<Separator /> with className prop matches with snapshot 1`] = `
+.c0.k-Separator {
+  margin: 0;
+  border: none;
+  background: #eee;
+  height: 0.0625rem;
+}
+
+.c0.k-Separator--darker {
+  background: #d8d8d8;
+}
+
+<hr
+  className="k-Separator c0 custom__class"
+/>
+`;
+
+exports[`<Separator /> with darker prop matches with snapshot 1`] = `
+.c0.k-Separator {
+  margin: 0;
+  border: none;
+  background: #eee;
+  height: 0.0625rem;
+}
+
+.c0.k-Separator--darker {
+  background: #d8d8d8;
+}
+
+<hr
+  className="k-Separator k-Separator--darker c0"
+/>
+`;
+
+exports[`<Separator /> with other prop matches with snapshot 1`] = `
+.c0.k-Separator {
+  margin: 0;
+  border: none;
+  background: #eee;
+  height: 0.0625rem;
+}
+
+.c0.k-Separator--darker {
+  background: #d8d8d8;
+}
+
+<hr
+  aria-hidden="true"
+  className="k-Separator c0"
+/>
+`;

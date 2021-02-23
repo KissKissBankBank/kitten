@@ -9,13 +9,93 @@ Breaking change:
 - Convert `Paragraph` component and `margin` becomes `noMargin` prop.
 - Remove `k-Alert` SCSS mixin.
 
+## [3.0.0-beta.4] - 2021-02-22
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-Badge`
+  - `k-Header`
+  - `k-IconBadge`
+  - `k-ImageWithCaption`
+  - `k-InformationBox`
+  - `k-PhoneDropdown`
+  - `k-Separator`
+  - `k-separatorBase`
+  - `k-VerticalSeparator`
+  - `k-VerticalStroke`
+- Delete the following deprecated components:
+  - `Comment` from `form/comment`
+    (replaced by `comments/comment`)
+  - `CommentAvatar` from `form/comment-avatar`
+    (replaced by `comments/comment-avatar`)
+  - `CommentForm` from `form/comment-form`
+    (replaced by `comments/comment-form`)
+  - `Dropdown`
+  - `DropdownButton`
+  - `Header` (replaced by `HeaderNav`)
+  - `HeaderLogo` (replaced by `HeaderNav`)
+  - `HeaderTitles` (replaced by `HeaderNav`)
+  - `ImageWithCaption`
+  - `NavList`
+  - `PhoneDropdown`
+  - `Switch` (replaced by `ToggleSwitch`)
+  - `UserMenu`
+- Convert and move the following components to CSS-in-JS:
+  - `Badge`
+  - `IconBadge`
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+  - `InformationBox`
+  - `VerticalStroke`
+- Add `onChange` to `ToggleSwitch` API.
+
+## [3.0.0-beta.3] - 2021-02-19
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-FormRow`
+  - `k-HeaderNav`
+  - `k-LinkList`
+  - `k-LoanSimulator`
+  - `k-SearchInput`
+  - `k-SimpleUploader`
+  - `k-Slider`
+  - `k-SliderTooltip`
+  - `k-SupTitle`
+- Delete the following deprecated components:
+  - `FormRow`
+  - `LoanSimulator`
+  - `NavTabCarousel` (deprecated duplicate from `carousels/tab-bar-carousel`)
+  - `RewardCard` (replaced by `BackingCard`)
+  - `Search`
+  - `SimpleUploader`
+  - `Slider` (replaced by `RangeSlider`)
+  - `SliderBar`
+  - `SliderTooltip`
+  - `SliderWithTooltipAndPower`
+  - `Uploader`
+- Delete `sliderKeyDownHandler` helper.
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+  - `HeaderNav`
+  - `LinkList`
+  - `SupTitle`
+- Update `Text` component.
+- Add `parseHtml` helper to ESM build.
+
 ## [3.0.0-beta.2] - 2021-02-15
 
 Breaking changes:
 
 - `ArrowIcon` now defaults to `solid` version.
 - Remove `k-u-blockAlign-*` utilities in favor of `k-u-align-self-*`.
-- Delete the following deprecated `card` SCSS mixins:
+- Delete the following deprecated SCSS mixins:
   - `k-Alert`
   - `k-ExternalRichLink`
   - `k-HeaderTour`
@@ -39,21 +119,42 @@ Breaking changes:
 
 - Remove `StyleGuide` app.
 - Remove `Karl` stories & components.
-- Remove `k-LegoGrid` styles.
-- Remove `LegoGrid` component.
-- Delete the following deprecated `cards` components:
+- Delete the following deprecated SCSS mixins:
+  - `k-LegoGrid`
+  - `k-ProjectCard`
+  - `k-ProjectCreatorCard`
+  - `k-ProjectSimilarCard`
+- Delete the following deprecated components:
   - `ArticleCard`
   - `ContributionCard`
   - `CrowdfundingCardWidget`
+  - `LegoGrid`
   - `ProjectCard`
   - `ProjectCreatorCard`
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
   - `SimilarProjectsCard`.
+<<<<<<< HEAD
 - Delete the following deprecated `card` SCSS mixins:
   - `k-ProjectCard`
   - `k-ProjectCreatorCard`
   - `k-ProjectSimilarCard`
+=======
+
+## [2.121.0] - 2021-02-22
+
+Features:
+
+- Add `DashboardLayout` component with `Flow` subcomponent.
+- Add `DashboardMenu` component.
+- Add `LightbulbIllustration` with `size` (large, normal) prop.
+- Add icons components:
+  - `HomeIcon`
+  - `TagIcon`
+  - `FileIcon`
+  - `LoudspeakerIcon`
+  - `ShieldIcon`.
+>>>>>>> v3-dev
 
 ## [2.120.1] - 2021-02-19
 
