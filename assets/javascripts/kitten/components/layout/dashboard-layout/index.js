@@ -336,7 +336,7 @@ export const DashboardLayout = ({
   const sideBarElement = useRef(null)
   const contentElement = useRef(null)
 
-  const renderComponentArray = (childrenArray, otherProps) => {
+  const renderComponentChildrenArray = (childrenArray, otherProps) => {
     return childrenArray.map(child => {
       if (!child || !child.props) return null
 
@@ -352,6 +352,22 @@ export const DashboardLayout = ({
         : React.cloneElement(child, otherProps)
     })
   }
+
+  const renderComponentArray = (childrenArray, otherProps) => {
+    return childrenArray.map(child => {
+      if (!child) return null
+
+      return isFunction(child)
+        ? child({
+            openSideBar: () => setOpen(true),
+            closeSideBar: () => setOpen(false),
+            isSidebarOpen: isOpen,
+            ...otherProps,
+          })
+        : React.cloneElement(child, otherProps)
+    })
+  }
+
   const isDesktop = useMedia({
     queries: [getMinQuery(ScreenConfig.L.min)],
     values: [true],
@@ -452,21 +468,21 @@ export const DashboardLayout = ({
               {backLinkProps.children}
             </span>
           </a>
-          {renderComponentArray(
+          {renderComponentChildrenArray(
             getReactElementsByType({
               children: children,
               type: Header,
             }),
           )}
 
-          {renderComponentArray(
+          {renderComponentChildrenArray(
             getReactElementsByType({
               children: children,
               type: SideContent,
             }),
           )}
 
-          {renderComponentArray(
+          {renderComponentChildrenArray(
             getReactElementsByType({
               children: children,
               type: SideFooter,
@@ -478,7 +494,7 @@ export const DashboardLayout = ({
           tabIndex={0}
           className="k-DashboardLayout__mainWrapper"
         >
-          {renderComponentArray(
+          {renderComponentChildrenArray(
             getReactElementsByType({
               children: children,
               type: Header,

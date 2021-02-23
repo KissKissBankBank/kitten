@@ -233,7 +233,10 @@ export const Default = () => {
         </HelpBox>
       </DashboardLayout.SideFooter>
 
-      {selectedView === 'flow' && <FlowExample />}
+      {({ isSidebarOpen }) => {
+        if (selectedView !== 'flow') return null
+        return <FlowExample isSidebarOpen={isSidebarOpen} />
+      }}
       {selectedView === 'dashboard' && <DashExample />}
       {selectedView === 'table' && <TableExample />}
     </DashboardLayout>
@@ -276,7 +279,7 @@ const TableExample = () => (
   </>
 )
 
-const FlowExample = () => (
+const FlowExample = ({ isSidebarOpen }) => (
   <DashboardLayout.Flow loading={boolean('loading', false)}>
     <DashboardLayout.Flow.Content>
       <Title
@@ -355,6 +358,7 @@ const FlowExample = () => (
       mobileAsideProps={{
         openLabel: 'Open help',
         closeLabel: 'Close help',
+        shouldHideButton: isSidebarOpen,
       }}
     >
       <DashboardLayout.Flow.AsideCard>
