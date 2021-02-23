@@ -142,6 +142,7 @@
     "build:js:esm": "npm run clean:src:esm && NODE_ENV=production BABEL_ENV=esm babel assets/javascripts/kitten/ -d src/esm --ignore 'assets/**/*.test.js','assets/**/test.js','assets/**/*.stories.js','assets/**/stories.js','assets/**/__mocks__/*.js','assets/javascripts/kitten/karl'",
     "build:css": "webpack --config webpack.config.sass.js",
     "build:utilities": "rm -rf src/stylesheets && webpack --config webpack/utilities.config.js",
+    "build:kisskissApp": "rm -rf src/stylesheets && webpack --config webpack/kisskiss-app.config.js",
     "eslint": "eslint --fix assets/javascripts/**",
     "prettier": "find ./assets/javascripts -regex '.*.js' | xargs prettier --config prettier.config.js --write"
   },
