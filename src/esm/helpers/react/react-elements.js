@@ -13,3 +13,17 @@ export var getReactElementsWithoutType = function getReactElementsWithoutType(_r
     return child.type !== type;
   });
 };
+export var getReactElementsByTypeArray = function getReactElementsByTypeArray(_ref3) {
+  var children = _ref3.children,
+      typeArray = _ref3.typeArray;
+  return React.Children.toArray(children).filter(function (child) {
+    return typeArray.includes(child.type);
+  });
+};
+export var getReactElementsWithoutTypeArray = function getReactElementsWithoutTypeArray(_ref4) {
+  var children = _ref4.children,
+      typeArray = _ref4.typeArray;
+  return React.Children.toArray(children).filter(function (child) {
+    return !typeArray.includes(child.type);
+  });
+};

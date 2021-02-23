@@ -2,15 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
-
-const NotificationBadge = ({ notifications, badgeColor }) => (
-  <span
-    className="k-ButtonWithBadge__badge k-Badge"
-    style={{ backgroundColor: badgeColor }}
-  >
-    {notifications}
-  </span>
-)
+import { Badge } from '../../../components/atoms/badge'
 
 export class ButtonImageWithTextAndBadge extends React.Component {
   render() {
@@ -55,10 +47,9 @@ export class ButtonImageWithTextAndBadge extends React.Component {
             />
           </span>
           {notifications && (
-            <NotificationBadge
-              notifications={notifications}
-              badgeColor={badgeColor}
-            />
+            <Badge color={badgeColor} className="k-ButtonWithBadge__badge">
+              {notifications}
+            </Badge>
           )}
         </span>
         <p className={textClass}>{text}</p>

@@ -70,25 +70,32 @@ export var ToggleSwitch = function ToggleSwitch(_ref11) {
       locked = _ref11.locked,
       reverseOrder = _ref11.reverseOrder,
       switchProps = _ref11.switchProps,
-      others = _objectWithoutProperties(_ref11, ["activeColor", "big", "checkedColor", "defaultColor", "disabled", "disabledColor", "id", "isChecked", "isLabelVisible", "label", "labelProps", "locked", "reverseOrder", "switchProps"]);
+      onChange = _ref11.onChange,
+      others = _objectWithoutProperties(_ref11, ["activeColor", "big", "checkedColor", "defaultColor", "disabled", "disabledColor", "id", "isChecked", "isLabelVisible", "label", "labelProps", "locked", "reverseOrder", "switchProps", "onChange"]);
 
   var _useState = useState(isChecked),
       _useState2 = _slicedToArray(_useState, 2),
       isPressed = _useState2[0],
       setPressedState = _useState2[1];
 
+  var handleClick = function handleClick() {
+    onChange && onChange(!isPressed);
+    setPressedState(function (current) {
+      return !current;
+    });
+  };
+
   return /*#__PURE__*/React.createElement(StyledSwitchContainer, _extends({
     isDisabled: disabled || locked,
     reverseOrder: reverseOrder
   }, others), /*#__PURE__*/React.createElement(StyledSwitch, _extends({
-    onClick: function onClick() {
-      return setPressedState(!isPressed);
-    },
+    onClick: handleClick,
     type: "button",
     id: id,
     disabled: disabled || locked,
     "aria-pressed": isPressed,
     "aria-label": isLabelVisible ? null : label,
+    "aria-labelledby": isLabelVisible ? "".concat(id, "_label") : null,
     checkedColor: checkedColor,
     defaultColor: defaultColor,
     disabledColor: disabledColor,
@@ -101,7 +108,8 @@ export var ToggleSwitch = function ToggleSwitch(_ref11) {
     width: "12",
     color: COLORS.font1
   }))), isLabelVisible && /*#__PURE__*/React.createElement(StyledLabel, _extends({
-    for: id,
+    htmlFor: id,
+    id: "".concat(id, "_label"),
     disabledColor: disabledColor,
     big: big
   }, labelProps), label));
@@ -117,7 +125,8 @@ ToggleSwitch.defaultProps = {
   isLabelVisible: true,
   label: 'switch',
   locked: false,
-  reverseOrder: false
+  reverseOrder: false,
+  onChange: function onChange() {}
 };
 ToggleSwitch.propTypes = {
   activeColor: PropTypes.string,
@@ -131,5 +140,6 @@ ToggleSwitch.propTypes = {
   isLabelVisible: PropTypes.bool,
   label: PropTypes.string,
   locked: PropTypes.bool,
-  reverseOrder: PropTypes.bool
+  reverseOrder: PropTypes.bool,
+  onChange: PropTypes.func
 };
