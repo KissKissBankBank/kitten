@@ -186,7 +186,7 @@ export const ImageCropper = ({
           {isCropEnabled && !disabled && (
             <GridCol col="12" col-m="6">
               <Marger top="2" bottom="1.5">
-                <Paragraph modifier="tertiary" margin={false}>
+                <Paragraph modifier="tertiary" noMargin={false}>
                   {cropperInfo}
                 </Paragraph>
               </Marger>
