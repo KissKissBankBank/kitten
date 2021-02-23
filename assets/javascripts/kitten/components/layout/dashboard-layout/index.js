@@ -36,6 +36,7 @@ const SIX_COLS = `(${ALL_COLS} / 2 + ${pxToRem(
 
 const StyledDashboard = styled.div`
   position: relative;
+  overscroll-behavior: none;
 
   * {
     box-sizing: border-box;
@@ -126,6 +127,7 @@ const StyledDashboard = styled.div`
       }
 
       .k-DashboardLayout__mainWrapper {
+        background-color: ${COLORS.background1};
         width: calc(100vw + ${pxToRem(2)});
         display: flex;
         align-items: stretch;
@@ -269,6 +271,8 @@ const StyledDashboard = styled.div`
       }
 
       .k-DashboardLayout__mainWrapper {
+        background-color: ${COLORS.background1};
+
         .k-DashboardLayout__heading {
           display: none;
         }
@@ -292,6 +296,13 @@ const StyledDashboard = styled.div`
   @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
     .k-DashboardLayout {
       grid-template-columns: ${pxToRem(385)} 1fr;
+    }
+  }
+
+  .k-DashboardLayout__sideWrapper,
+  .k-DashboardLayout__mainWrapper {
+    &:focus {
+      outline: ${pxToRem(2)} solid ${COLORS.primary4};
     }
   }
 
