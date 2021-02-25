@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkList /> default matches with snapshot 1`] = `
+.c0 {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.c0.k-LinkList--withoutMargin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c0.k-LinkList--withoutMargin .k-LinkList__item:last-child {
+  margin-bottom: 0;
+}
+
+.c0 .k-LinkList__item {
+  margin-bottom: 0.3125rem;
+}
+
+.c0 .k-LinkList__item--double {
+  margin-bottom: 0.625rem;
+}
+
+.c0 .k-LinkList__item--triple {
+  margin-bottom: 0.9375rem;
+}
+
+.c0 .k-LinkList__link {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.c0 .k-LinkList__link:active,
+.c0 .k-LinkList__link.k-LinkList__link--isActive {
+  color: #0496cc;
+}
+
+.c0 .k-LinkList__link:hover {
+  color: #19b4fa;
+}
+
+.c0 .k-LinkList__item--regular,
+.c0 .k-LinkList__link--regular {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+}
+
+.c0 .k-LinkList__item--light,
+.c0 .k-LinkList__link--light {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+.c0 .k-LinkList__link--normalLineHeight {
+  line-height: normal;
+}
+
+.c0 .k-LinkList__link--light {
+  color: #fff;
+}
+
+.c0 .k-LinkList__link--dark {
+  color: #222;
+}
+
+@media (min-width:640px) {
+  .c0 {
+    text-align: left;
+  }
+}
+
+<ul
+  className="c0 k-LinkList"
+>
+  <li
+    className="k-LinkList__item k-LinkList__item--double"
+  >
+    <a
+      className="k-LinkList__link k-LinkList__link--dark k-LinkList__link--regular k-LinkList__item--regular k-LinkList__link--isActive"
+      href="#"
+    >
+      Item 1
+    </a>
+  </li>
+  <li
+    className="k-LinkList__item k-LinkList__item--double"
+  >
+    <a
+      className="k-LinkList__link k-LinkList__link--dark k-LinkList__link--regular k-LinkList__item--regular"
+      href="#"
+    >
+      Item 2
+    </a>
+  </li>
+  <li
+    className="k-LinkList__item k-LinkList__item--double"
+  >
+    <a
+      className="k-LinkList__link k-LinkList__link--dark k-LinkList__link--regular k-LinkList__item--regular"
+      href="#"
+    >
+      Item 3
+    </a>
+  </li>
+</ul>
+`;

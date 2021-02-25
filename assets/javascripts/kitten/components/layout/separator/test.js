@@ -1,40 +1,50 @@
 import React from 'react'
-import { Separator } from '../../../components/layout/separator'
+import renderer from 'react-test-renderer'
+import 'jest-styled-components'
+import { Separator } from './'
 
 describe('<Separator />', () => {
-  describe('by default', () => {
-    const separator = shallow(<Separator />)
+  let component
 
-    it('is a <hr />', () => {
-      expect(separator.is('hr')).toBe(true)
+  describe('by default', () => {
+    beforeEach(() => {
+      component = renderer.create(<Separator />).toJSON()
     })
 
-    it('has good class', () => {
-      expect(separator.hasClass('k-Separator')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('with darker prop', () => {
-    const separator = shallow(<Separator darker />)
+    beforeEach(() => {
+      component = renderer.create(<Separator darker />).toJSON()
+    })
 
-    it('has good class', () => {
-      expect(separator.hasClass('k-Separator--darker')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('with className prop', () => {
-    const separator = shallow(<Separator className="custom__class" />)
+    beforeEach(() => {
+      component = renderer
+        .create(<Separator className="custom__class" />)
+        .toJSON()
+    })
 
-    it('has a custom class', () => {
-      expect(separator.hasClass('custom__class')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('with other prop', () => {
-    const separator = shallow(<Separator aria-hidden="true" />)
+    beforeEach(() => {
+      component = renderer.create(<Separator aria-hidden="true" />).toJSON()
+    })
 
-    it('has an aria-hidden attribute', () => {
-      expect(separator.props()['aria-hidden']).toBe('true')
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 })

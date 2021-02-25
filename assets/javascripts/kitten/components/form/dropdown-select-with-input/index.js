@@ -499,10 +499,7 @@ export const DropdownSelectWithInput = ({
               className="k-Form-DropdownSelectWithInput__button__arrowBox"
               aria-hidden
             >
-              <ArrowIcon
-                version="solid"
-                direction={isOpen ? 'top' : 'bottom'}
-              />
+              <ArrowIcon direction={isOpen ? 'top' : 'bottom'} />
             </span>
           )}
           <span className="k-Form-DropdownSelectWithInput__button__statusBadges">

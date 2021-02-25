@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import { Badge } from '../../../components/notifications/badge'
+import { Badge } from '../../../components/atoms/badge'
 import classNames from 'classnames'
 import Markdown from 'react-markdown'
 

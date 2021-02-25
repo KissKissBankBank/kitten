@@ -13,6 +13,7 @@ import { ClockCircleIcon } from '../../../components/icons/clock-circle-icon'
 import { Loader } from '../../../components/atoms/loader'
 import { DocumentIconEmpty } from '../../../components/icons/document-icon-empty'
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledDocumentUploader = styled.div`
   input[type='file'] {
@@ -84,6 +85,9 @@ const StyledDocumentUploader = styled.div`
     flex: 0 0 auto;
     margin-right: ${pxToRem(20)};
     align-self: flex-start;
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      display: none;
+    }
   }
   .k-DocumentManager__uploader__content {
     flex: 1 1 auto;
@@ -285,7 +289,7 @@ export const DocumentManager = ({
         />
         <Button
           fluid
-          borderRadius={4}
+          borderRadius={6}
           {...buttonProps}
           as="label"
           htmlFor={id}
@@ -300,7 +304,6 @@ export const DocumentManager = ({
                 {documentIcon}
               </IconContainer>
             </div>
-
             <div className="k-DocumentManager__uploader__content">
               <Text
                 tag="p"
@@ -347,7 +350,7 @@ export const DocumentManager = ({
       >
         <Button
           fluid
-          borderRadius={4}
+          borderRadius={6}
           {...buttonProps}
           as="div"
           className={classNames(

@@ -21,7 +21,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _text = require("../../../components/typography/text");
 
-var _visuallyHidden = require("../../../components/accessibility/visually-hidden");
+var _badge = require("../../../components/atoms/badge");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
@@ -102,14 +102,11 @@ var Badge = function Badge(_ref6) {
   var backgroundColor = _ref6.backgroundColor,
       children = _ref6.children,
       a11yText = _ref6.a11yText;
-  return /*#__PURE__*/_react.default.createElement("span", {
-    className: "k-ButtonWithBadge__badge k-Badge",
-    style: {
-      backgroundColor: backgroundColor
-    }
-  }, /*#__PURE__*/_react.default.createElement("span", {
-    "aria-hidden": "true"
-  }, children), a11yText && /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, a11yText));
+  return /*#__PURE__*/_react.default.createElement(_badge.Badge, {
+    className: "k-ButtonWithBadge__badge",
+    color: backgroundColor,
+    a11yText: a11yText
+  }, children);
 };
 
 Badge.propTypes = {
@@ -124,8 +121,7 @@ Badge.defaultProps = {
 var Text = function Text(_ref7) {
   var textClassName = _ref7.textClassName,
       withEllipsisOverflow = _ref7.withEllipsisOverflow,
-      children = _ref7.children,
-      props = (0, _objectWithoutProperties2.default)(_ref7, ["textClassName", "withEllipsisOverflow", "children"]);
+      children = _ref7.children;
   var textClassNames = (0, _classnames.default)(textClassName, 'k-ButtonImageWithText__text', 'k-ButtonImageWithText__text--withoutPaddingRight', 'always-visible', {
     'text--withEllipsis': withEllipsisOverflow
   });

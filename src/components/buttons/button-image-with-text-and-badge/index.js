@@ -29,20 +29,11 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
+var _badge = require("../../../components/atoms/badge");
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-var NotificationBadge = function NotificationBadge(_ref) {
-  var notifications = _ref.notifications,
-      badgeColor = _ref.badgeColor;
-  return /*#__PURE__*/_react.default.createElement("span", {
-    className: "k-ButtonWithBadge__badge k-Badge",
-    style: {
-      backgroundColor: badgeColor
-    }
-  }, notifications);
-};
 
 var ButtonImageWithTextAndBadge = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(ButtonImageWithTextAndBadge, _React$Component);
@@ -88,10 +79,10 @@ var ButtonImageWithTextAndBadge = /*#__PURE__*/function (_React$Component) {
         width: widthImg,
         height: heightImg,
         alt: altImg
-      })), notifications && /*#__PURE__*/_react.default.createElement(NotificationBadge, {
-        notifications: notifications,
-        badgeColor: badgeColor
-      })), /*#__PURE__*/_react.default.createElement("p", {
+      })), notifications && /*#__PURE__*/_react.default.createElement(_badge.Badge, {
+        color: badgeColor,
+        className: "k-ButtonWithBadge__badge"
+      }, notifications)), /*#__PURE__*/_react.default.createElement("p", {
         className: textClass
       }, text));
     }
