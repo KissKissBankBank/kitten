@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Convert `ResponsiveIframeContainer` and remove `k-ResponsiveIframeContainer` mixin.
+
 ## [3.0.0-beta.5] - 2021-02-25
 
 Breaking changes:

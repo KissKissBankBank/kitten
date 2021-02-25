@@ -3,7 +3,7 @@
 exports[`<EmbedPlayer /> with default props matches with snapshot 1`] = `
 <div
   aria-label={null}
-  className="sc-bdVaJa bybmuZ k-EmbedPlayer"
+  className="sc-bwzfXH iLMWKN k-EmbedPlayer"
   onClick={null}
   onFocus={null}
   onKeyPress={null}
@@ -15,10 +15,10 @@ exports[`<EmbedPlayer /> with default props matches with snapshot 1`] = `
     className="k-EmbedPlayer__playerPreview"
   >
     <div
-      className="k-ResponsiveIframeContainer"
+      className="sc-bdVaJa hmXkXA k-ResponsiveIframeContainer"
       style={
         Object {
-          "paddingBottom": "50%",
+          "--ResponsiveImageContainer-ratio": "50%",
         }
       }
     >
@@ -35,7 +35,7 @@ exports[`<EmbedPlayer /> with default props matches with snapshot 1`] = `
 exports[`<EmbedPlayer /> with some props matches with snapshot 1`] = `
 <div
   aria-label="Play"
-  className="sc-bdVaJa bybmuZ k-EmbedPlayer k-EmbedPlayer--cursorPointer"
+  className="sc-bwzfXH iLMWKN k-EmbedPlayer k-EmbedPlayer--cursorPointer"
   onClick={[Function]}
   onFocus={[Function]}
   onKeyPress={[Function]}
@@ -61,10 +61,10 @@ exports[`<EmbedPlayer /> with some props matches with snapshot 1`] = `
       </svg>
     </div>
     <div
-      className="k-ResponsiveIframeContainer"
+      className="sc-bdVaJa hmXkXA k-ResponsiveIframeContainer"
       style={
         Object {
-          "paddingBottom": "60%",
+          "--ResponsiveImageContainer-ratio": "60%",
         }
       }
     >
