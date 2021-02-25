@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: convert `LocationInput` to CSS-in-JS.
+- Breaking change: remove `k-LocationInput` mixin.
+
 ## [3.0.0-beta.19] - 2021-03-19
 
 Breaking changes:
@@ -269,6 +272,9 @@ Features:
 - Convert the following components to CSS-in-JS:
   - `DevGrid`
   - `ImageCropper`
+
+- Breaking change: convert `LocationInput` to CSS-in-JS.
+- Breaking change: remove `k-LocationInput` mixin.
 
 ## [3.0.0-beta.4] - 2021-02-22
 
