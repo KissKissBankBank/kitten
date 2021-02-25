@@ -1,63 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ImageCropper /> matches with snapshot 1`] = `
-Array [
-  <div
-    className="sc-bdVaJa eGDgJX"
+<div
+  className="sc-EHOje bGfBLo"
+>
+  <label
+    className="k-Label k-u-margin-bottom-singleHalf k-Label--tiny"
+    htmlFor="cropper"
+    onClick={[Function]}
   >
+    Lorem ipsum…
+  </label>
+  <div
+    className="sc-bxivhb ekbhYA k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
+  >
+    <input
+      accept=".jpg,.jpeg,.gif,.png"
+      disabled={false}
+      id="cropper"
+      onChange={[Function]}
+      type="file"
+    />
     <label
-      className="k-Label k-Label--tiny"
+      className="sc-bdVaJa jABQcw k-BasicUploader__button"
       htmlFor="cropper"
-      onClick={[Function]}
     >
-      Lorem ipsum…
-    </label>
-  </div>,
-  <div
-    className="sc-bdVaJa CoxgX"
-  >
-    <div
-      className="sc-ifAKCX cBWvFc k-BasicUploader k-BasicUploader--ready"
-    >
-      <input
-        accept=".jpg,.jpeg,.gif,.png"
-        disabled={false}
-        id="cropper"
-        onChange={[Function]}
-        type="file"
-      />
-      <label
-        className="sc-bwzfXH bBxqNJ k-BasicUploader__button"
-        htmlFor="cropper"
+      <svg
+        aria-hidden={true}
+        className="k-BasicUploader__button__uploadIcon k-u-margin-right-singleHalf"
+        fill="#fff"
+        height="13"
+        viewBox="0 0 12 13"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          aria-hidden={true}
-          className="k-BasicUploader__button__uploadIcon k-u-margin-right-singleHalf"
-          fill="#fff"
-          height="13"
-          viewBox="0 0 12 13"
-          width="12"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          
-          <path
-            d="M7 4.207v4H5v-4L3.172 6 1.757 4.62 6 0 10.243 4.62 8.828 6 7 4.207zM0 8h2v5H0zM10 8h2v5h-2zM0 11h12v2H0z"
-          />
-        </svg>
-        <span>
-          Choose a file…
-        </span>
-      </label>
-    </div>
-  </div>,
-  <div
-    className="sc-bdVaJa ggQxmM"
+        
+        <path
+          d="M7 4.207v4H5v-4L3.172 6 1.757 4.62 6 0 10.243 4.62 8.828 6 7 4.207zM0 8h2v5H0zM10 8h2v5h-2zM0 11h12v2H0z"
+        />
+      </svg>
+      <span>
+        Choose a file…
+      </span>
+    </label>
+  </div>
+  <p
+    className="k-Paragraph k-u-margin-top-single k-Paragraph--quaternary k-Paragraph--withoutMargin"
   >
-    <p
-      className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
-    >
-      Lorem ipsum…
-    </p>
-  </div>,
-]
+    Lorem ipsum…
+  </p>
+  <div
+    aria-live="polite"
+    className="k-Cropper__wrapper k-u-margin-top-double"
+  />
+</div>
 `;
