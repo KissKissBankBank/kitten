@@ -54,7 +54,7 @@ const Header = styled.header`
 `
 
 const Navigation = styled.nav`
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   box-sizing: border-box;
 
