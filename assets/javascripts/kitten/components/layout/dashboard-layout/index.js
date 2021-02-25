@@ -36,6 +36,7 @@ const SIX_COLS = `(${ALL_COLS} / 2 + ${pxToRem(
 
 const StyledDashboard = styled.div`
   position: relative;
+  overscroll-behavior: none;
 
   * {
     box-sizing: border-box;
@@ -126,6 +127,7 @@ const StyledDashboard = styled.div`
       }
 
       .k-DashboardLayout__mainWrapper {
+        background-color: ${COLORS.background1};
         width: calc(100vw + ${pxToRem(2)});
         display: flex;
         align-items: stretch;
@@ -161,8 +163,6 @@ const StyledDashboard = styled.div`
           position: relative;
           margin-left: ${pxToRem(2)};
           flex: 1 0 auto;
-          padding-top: ${pxToRem(80)};
-          padding-bottom: ${pxToRem(80)};
 
           &::before {
             content: "";
@@ -176,6 +176,11 @@ const StyledDashboard = styled.div`
             pointer-events: none;
             z-index: 100;
             transition: background-color .2s ease-in-out, opacity .2s ease-in-out;
+          }
+
+          &:not(.k-DashboardLayout__main--fullHeight) {
+            padding-top: ${pxToRem(80)};
+            padding-bottom: ${pxToRem(80)};
           }
 
           > *:not(.k-DashboardLayout__fullWidth) {
@@ -207,7 +212,10 @@ const StyledDashboard = styled.div`
           padding-right: ${pxToRem(CONTAINER_PADDING_THIN)};
         }
         .k-DashboardLayout__main {
-          padding-top: ${pxToRem(50)};
+          &:not(.k-DashboardLayout__main--fullHeight) {
+            padding-top: ${pxToRem(50)};
+            padding-bottom: ${pxToRem(50)};
+          }
         }
       }
     }
@@ -263,13 +271,17 @@ const StyledDashboard = styled.div`
       }
 
       .k-DashboardLayout__mainWrapper {
+        background-color: ${COLORS.background1};
+
         .k-DashboardLayout__heading {
           display: none;
         }
 
         .k-DashboardLayout__main {
-          padding-top: ${pxToRem(80)};
-          padding-bottom: ${pxToRem(80)};
+          &:not(.k-DashboardLayout__main--fullHeight) {
+            padding-top: ${pxToRem(80)};
+            padding-bottom: ${pxToRem(80)};
+          }
 
           > *:not(.k-DashboardLayout__fullWidth) {
             margin-left: 10%;
@@ -284,6 +296,13 @@ const StyledDashboard = styled.div`
   @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
     .k-DashboardLayout {
       grid-template-columns: ${pxToRem(385)} 1fr;
+    }
+  }
+
+  .k-DashboardLayout__sideWrapper,
+  .k-DashboardLayout__mainWrapper {
+    &:focus {
+      outline: ${pxToRem(2)} solid ${COLORS.primary4};
     }
   }
 
@@ -310,18 +329,6 @@ const StyledDashboard = styled.div`
       outline: ${pxToRem(2)} solid ${COLORS.primary4};
     }
   }
-  /* FIX AvatarWithTextAndBadge */
-
-  .text--withEllipsis {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  .k-ButtonImageWithText__text {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 `
 
 export const DashboardLayout = ({
@@ -329,6 +336,7 @@ export const DashboardLayout = ({
   backLinkProps,
   buttonProps,
   quickAccessLinkText,
+  fullHeightContent,
   ...props
 }) => {
   const [isOpen, setOpen] = useState(false)
@@ -336,7 +344,7 @@ export const DashboardLayout = ({
   const sideBarElement = useRef(null)
   const contentElement = useRef(null)
 
-  const renderComponentArray = (childrenArray, otherProps) => {
+  const renderComponentChildrenArray = (childrenArray, otherProps) => {
     return childrenArray.map(child => {
       if (!child || !child.props) return null
 
@@ -352,6 +360,22 @@ export const DashboardLayout = ({
         : React.cloneElement(child, otherProps)
     })
   }
+
+  const renderComponentArray = (childrenArray, otherProps) => {
+    return childrenArray.map(child => {
+      if (!child) return null
+
+      return isFunction(child)
+        ? child({
+            openSideBar: () => setOpen(true),
+            closeSideBar: () => setOpen(false),
+            isSidebarOpen: isOpen,
+            ...otherProps,
+          })
+        : React.cloneElement(child, otherProps)
+    })
+  }
+
   const isDesktop = useMedia({
     queries: [getMinQuery(ScreenConfig.L.min)],
     values: [true],
@@ -432,7 +456,7 @@ export const DashboardLayout = ({
         </a>
         <div
           ref={sideBarElement}
-          tabIndex={0}
+          tabIndex={-1}
           className="k-DashboardLayout__sideWrapper"
           aria-hidden={isDesktop ? null : !isOpen}
         >
@@ -452,21 +476,21 @@ export const DashboardLayout = ({
               {backLinkProps.children}
             </span>
           </a>
-          {renderComponentArray(
+          {renderComponentChildrenArray(
             getReactElementsByType({
               children: children,
               type: Header,
             }),
           )}
 
-          {renderComponentArray(
+          {renderComponentChildrenArray(
             getReactElementsByType({
               children: children,
               type: SideContent,
             }),
           )}
 
-          {renderComponentArray(
+          {renderComponentChildrenArray(
             getReactElementsByType({
               children: children,
               type: SideFooter,
@@ -475,10 +499,10 @@ export const DashboardLayout = ({
         </div>
         <div
           ref={contentElement}
-          tabIndex={0}
+          tabIndex={-1}
           className="k-DashboardLayout__mainWrapper"
         >
-          {renderComponentArray(
+          {renderComponentChildrenArray(
             getReactElementsByType({
               children: children,
               type: Header,
@@ -494,7 +518,12 @@ export const DashboardLayout = ({
             },
           )}
 
-          <main className="k-DashboardLayout__main" id="main">
+          <main
+            className={classNames('k-DashboardLayout__main', {
+              'k-DashboardLayout__main--fullHeight': fullHeightContent,
+            })}
+            id="main"
+          >
             {renderComponentArray(
               getReactElementsWithoutTypeArray({
                 children,
@@ -567,6 +596,7 @@ DashboardLayout.propTypes = {
     closeLabel: PropTypes.node.isRequired,
   }),
   quickAccessLinkText: PropTypes.node.isRequired,
+  fullHeightContent: PropTypes.bool,
 }
 
 Header.propTypes = {
