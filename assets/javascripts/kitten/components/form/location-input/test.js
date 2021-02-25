@@ -1,20 +1,30 @@
 import React from 'react'
-import { LocationInput } from '../../../components/form/location-input'
+import renderer from 'react-test-renderer'
+import { LocationInput } from './index'
+import { setupGoogleMock } from '../../../config/__mocks__/googleMock'
 
 describe('<LocationInput />', () => {
-  describe('by default', () => {
-    const component = shallow(<LocationInput />)
-
-    it('renders a .k-LocationInput', () => {
-      expect(component.find('.k-LocationInput')).toHaveLength(1)
+  it('should match its snapshot with props', () => {
+    beforeAll(() => {
+      setupGoogleMock()
     })
 
-    it('renders a .k-LocationInput__icon', () => {
-      expect(component.find('.k-LocationInput__icon')).toHaveLength(1)
-    })
+    const tree = renderer
+      .create(
+        <LocationInput
+          id="location-input-test"
+          name="location-input"
+          className="custom-wrapper-class-name"
+          onChange={e => console.warn(e)}
+          onSelect={e => console.warn(e)}
+          defaultValue="Paris, France"
+          inputProps={{
+            className: 'custom-input-class-name',
+          }}
+        />,
+      )
+      .toJSON()
 
-    it('renders a PlacesAutocomplete', () => {
-      expect(component.find('PlacesAutocomplete')).toHaveLength(1)
-    })
+    expect(tree).toMatchSnapshot()
   })
 })
