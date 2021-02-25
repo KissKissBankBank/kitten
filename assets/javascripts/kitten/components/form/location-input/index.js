@@ -111,7 +111,7 @@ export const LocationInput = ({
   name,
   ...others
 }) => {
-  const [address, updateAddress] = useState(null)
+  const [address, updateAddress] = useState(defaultValue)
 
   const handleChange = returnedAddress => {
     updateAddress(returnedAddress)
