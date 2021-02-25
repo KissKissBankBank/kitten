@@ -30,7 +30,7 @@ export const StyledHeader = styled.header`
     align-items: center;
     overflow: hidden;
     padding-left: ${pxToRem(10)};
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     box-sizing: border-box;
 

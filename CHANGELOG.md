@@ -130,6 +130,20 @@ Breaking changes:
   - `RewardCardLegacy`
   - `SimilarProjectsCard`.
 
+## [2.122.0] - 2021-02-25
+
+Features:
+
+- Add `fullHeightContent` prop to `DashboardLayout`.
+- Add `shouldHideButton` prop to `DashboardLayout.Flow`.
+
+Fixes:
+
+- Fix `HeaderNav` width on Windows (Chrome & Firefox).
+- Fix `CheckableButton` focus styles while staying accessible.
+- Fix display on `DashboardLayout` for Chrome.
+- Fix details display on `DashboardMenu`.
+
 ## [2.121.0] - 2021-02-22
 
 Features:
