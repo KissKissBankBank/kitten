@@ -4,12 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.122.0] - 2021-02-25
+
+Features:
+
+- Add `fullHeightContent` prop to `DashboardLayout`.
+- Add `shouldHideButton` prop to `DashboardLayout.Flow`.
+
+Fixes:
+
 - Fix `HeaderNav` width on Windows (Chrome & Firefox).
+- Fix `CheckableButton` focus styles while staying accessible.
 - Fix display on `DashboardLayout` for Chrome.
 - Fix details display on `DashboardMenu`.
-- Feature: add `fullHeightContent` prop to `DashboardLayout`.
-- Feature: add `shouldHideButton` prop to `DashboardLayout.Flow`.
-- Fix `CheckableButton` focus styles while staying accessible.
 
 ## [2.121.0] - 2021-02-22
 
