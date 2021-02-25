@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix `CheckableButton` focus styles while staying accessible.
+
 ## [2.121.0] - 2021-02-22
 
 Features:
