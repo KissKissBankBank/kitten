@@ -9,6 +9,11 @@ Breaking changes:
 - Remove `k-Cropper` SCSS mixin.
 - Migrate `Loader` and `LoaderWithParagraph` components
   and remove `k-Loader` and `k-LoaderWithParagraph` styles.
+- Remove `k-DevGrid` and `k-DevBreakpoints` styles.
+
+Features:
+
+- Migrate `DevGrid` from SASS to Styled Components.
 
 ## [3.0.0-beta.4] - 2021-02-22
 
