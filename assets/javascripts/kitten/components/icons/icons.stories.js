@@ -83,6 +83,11 @@ import { DocumentIconEmpty } from './document-icon-empty'
 import { DocumentIconHouse } from './document-icon-house'
 import { DocumentIconPerson } from './document-icon-person'
 import { GlobeIcon } from './globe-icon'
+import { FileIcon } from './file-icon'
+import { HomeIcon } from './home-icon'
+import { LoudspeakerIcon } from './loudspeaker-icon'
+import { ShieldIcon } from './shield-icon'
+import { TagIcon } from './tag-icon'
 import { FlagIcon, flagList } from './flag-icon'
 import flagFile from 'icons/flags.png'
 
@@ -227,16 +232,16 @@ export const AllIcons = () => {
 
       <Group title="ArrowIcon">
         <IconContainer suffix='direction="top"'>
-          <ArrowIcon version="solid" color={colorInput} direction="top" />
+          <ArrowIcon color={colorInput} direction="top" />
         </IconContainer>
         <IconContainer suffix='direction="bottom"'>
-          <ArrowIcon version="solid" color={colorInput} direction="bottom" />
+          <ArrowIcon color={colorInput} direction="bottom" />
         </IconContainer>
         <IconContainer suffix='direction="left"'>
-          <ArrowIcon version="solid" color={colorInput} direction="left" />
+          <ArrowIcon color={colorInput} direction="left" />
         </IconContainer>
         <IconContainer suffix='direction="right"'>
-          <ArrowIcon version="solid" color={colorInput} direction="right" />
+          <ArrowIcon color={colorInput} direction="right" />
         </IconContainer>
       </Group>
 
@@ -333,6 +338,11 @@ export const AllIcons = () => {
         <IconContainer
           children={<GlobeIcon color={colorInput} width="16" height="16" />}
         />
+        <IconContainer children={<FileIcon color={colorInput} />} />
+        <IconContainer children={<HomeIcon color={colorInput} />} />
+        <IconContainer children={<LoudspeakerIcon color={colorInput} />} />
+        <IconContainer children={<ShieldIcon color={colorInput} />} />
+        <IconContainer children={<TagIcon color={colorInput} />} />
       </Group>
       <Group title="Country flag icons">
         {flagList.map(country => (

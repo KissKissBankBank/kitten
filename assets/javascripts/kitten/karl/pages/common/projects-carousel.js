@@ -103,7 +103,6 @@ const ProjectsCarousel = ({
     >
       {buttonLabel}
       <ArrowIcon
-        version="solid"
         className="k-Button__icon k-ButtonIcon__svg"
         style={{ width: 6 }}
       />

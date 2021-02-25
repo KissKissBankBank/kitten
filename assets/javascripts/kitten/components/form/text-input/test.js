@@ -45,6 +45,26 @@ describe('<TextInput />', () => {
     })
   })
 
+  describe('with `regular` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInput regular />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `big` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInput big />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with `huge` prop', () => {
     beforeEach(() => {
       component = renderer.create(<TextInput huge />).toJSON()

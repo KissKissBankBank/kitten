@@ -14,18 +14,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import COLORS from '../../../constants/colors-config';
-
-var NotificationBadge = function NotificationBadge(_ref) {
-  var notifications = _ref.notifications,
-      badgeColor = _ref.badgeColor;
-  return /*#__PURE__*/React.createElement("span", {
-    className: "k-ButtonWithBadge__badge k-Badge",
-    style: {
-      backgroundColor: badgeColor
-    }
-  }, notifications);
-};
-
+import { Badge } from '../../../components/atoms/badge';
 export var ButtonImageWithTextAndBadge = /*#__PURE__*/function (_React$Component) {
   _inherits(ButtonImageWithTextAndBadge, _React$Component);
 
@@ -72,10 +61,10 @@ export var ButtonImageWithTextAndBadge = /*#__PURE__*/function (_React$Component
         width: widthImg,
         height: heightImg,
         alt: altImg
-      })), notifications && /*#__PURE__*/React.createElement(NotificationBadge, {
-        notifications: notifications,
-        badgeColor: badgeColor
-      })), /*#__PURE__*/React.createElement("p", {
+      })), notifications && /*#__PURE__*/React.createElement(Badge, {
+        color: badgeColor,
+        className: "k-ButtonWithBadge__badge"
+      }, notifications)), /*#__PURE__*/React.createElement("p", {
         className: textClass
       }, text));
     }

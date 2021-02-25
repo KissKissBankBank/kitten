@@ -26,11 +26,11 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
         className="sc-bdVaJa chkwVs"
       >
         <div
-          className="sc-bxivhb jQUNJx k-Form-TextInputWithUnit"
+          className="sc-bxivhb eyZjlr k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
         >
           <input
             autoComplete="off"
-            className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
+            className="sc-bwzfXH kzSCOi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
             defaultValue=""
             disabled={false}
             id="donation-amount"
@@ -96,11 +96,11 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
         className="sc-bdVaJa chkwVs"
       >
         <div
-          className="sc-bxivhb jQUNJx k-Form-TextInputWithUnit"
+          className="sc-bxivhb eyZjlr k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
         >
           <input
             autoComplete="off"
-            className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
+            className="sc-bwzfXH kzSCOi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
             defaultValue=""
             disabled={false}
             id=""
@@ -164,11 +164,11 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
         className="sc-bdVaJa chkwVs"
       >
         <div
-          className="sc-bxivhb jQUNJx k-Form-TextInputWithUnit"
+          className="sc-bxivhb eyZjlr k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
         >
           <input
             autoComplete="off"
-            className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--disabled"
+            className="sc-bwzfXH kzSCOi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--disabled k-Form-TextInput--regular"
             defaultValue=""
             disabled={true}
             id=""
@@ -232,11 +232,11 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
         className="sc-bdVaJa CoxgX"
       >
         <div
-          className="sc-bxivhb jQUNJx k-Form-TextInputWithUnit"
+          className="sc-bxivhb eyZjlr k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
         >
           <input
             autoComplete="off"
-            className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--error"
+            className="sc-bwzfXH kzSCOi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
             defaultValue=""
             disabled={false}
             id=""

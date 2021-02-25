@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoaderWithParagraph /> With custom props should match with snapshot 1`] = `
+<div
+  className="sc-bwzfXH kPKUiS k-LoaderWithParagraph customClassName k-LoaderWithParagraph--bottom"
+>
+  <button
+    aria-hidden={true}
+    className="sc-bdVaJa cgjwHV k-Loader k-LoaderWithParagraph__loader customClassName"
+  >
+    <svg
+      className="k-Loader__circle"
+      fill="red"
+      viewBox="0 0 5 5"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx={2.5}
+        cy={2.5}
+        r={5}
+      />
+    </svg>
+    <svg
+      className="k-Loader__circle"
+      fill="red"
+      viewBox="0 0 5 5"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx={2.5}
+        cy={2.5}
+        r={5}
+      />
+    </svg>
+    <svg
+      className="k-Loader__circle"
+      fill="red"
+      viewBox="0 0 5 5"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx={2.5}
+        cy={2.5}
+        r={5}
+      />
+    </svg>
+  </button>
+  <p
+    className="k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--withoutMargin"
+  >
+    A custom loading massage
+  </p>
+</div>
+`;
+
+exports[`<LoaderWithParagraph /> With default props should match with snapshot 1`] = `
+<div
+  className="sc-bwzfXH kPKUiS k-LoaderWithParagraph k-LoaderWithParagraph--left"
+>
+  <div
+    aria-hidden={true}
+    className="sc-bdVaJa cgjwHV k-Loader k-LoaderWithParagraph__loader"
+  >
+    <svg
+      className="k-Loader__circle"
+      fill="#222"
+      viewBox="0 0 5 5"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx={2.5}
+        cy={2.5}
+        r={5}
+      />
+    </svg>
+    <svg
+      className="k-Loader__circle"
+      fill="#222"
+      viewBox="0 0 5 5"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx={2.5}
+        cy={2.5}
+        r={5}
+      />
+    </svg>
+    <svg
+      className="k-Loader__circle"
+      fill="#222"
+      viewBox="0 0 5 5"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx={2.5}
+        cy={2.5}
+        r={5}
+      />
+    </svg>
+  </div>
+  <p
+    className="k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--withoutMargin"
+  >
+    Loading
+  </p>
+</div>
+`;
