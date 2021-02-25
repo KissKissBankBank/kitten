@@ -8,6 +8,8 @@ export { Accordeon } from './components/accordeon'; // Atoms
 
 export { Badge } from './components/atoms/badge';
 export { IconBadge } from './components/atoms/icon-badge';
+export { Loader } from './components/atoms/loader';
+export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph';
 export { Tag } from './components/atoms/tag'; // Avatar
 
 export { AvatarWithTextAndBadge } from './components/avatar/avatar-with-text-and-badge'; // Box
@@ -121,10 +123,7 @@ export { IconList } from './components/lists/icon-list';
 export { BulletList } from './components/lists/bullet-list';
 export { List } from './components/lists/list';
 export { CheckList } from './components/lists/check-list';
-export { Timeline } from './components/lists/timeline'; // Loaders
-
-export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph';
-export { Loader } from './components/loaders/loader'; // Menus
+export { Timeline } from './components/lists/timeline'; // Menus
 
 export { DashboardMenu } from './components/menus/dashboard-menu';
 export { HeaderMenu } from './components/menus/header-menu'; // Meters
