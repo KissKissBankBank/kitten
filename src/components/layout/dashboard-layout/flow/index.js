@@ -29,7 +29,7 @@ var _horizontalStroke = require("../../../../components/layout/horizontal-stroke
 
 var _lightbulbIllustration = require("../../../../components/illustrations/lightbulb-illustration");
 
-var _loader = require("../../../../components/loaders/loader");
+var _loader = require("../../../../components/atoms/loader");
 
 var _reactElements = require("../../../../helpers/react/react-elements");
 

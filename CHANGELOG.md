@@ -4,16 +4,25 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [3.0.0-beta.5] - 2021-02-25
+
 Breaking changes:
 
-- Remove `k-Cropper` SCSS mixin.
-- Migrate `Loader` and `LoaderWithParagraph` components
-  and remove `k-Loader` and `k-LoaderWithParagraph` styles.
-- Remove `k-DevGrid` and `k-DevBreakpoints` styles.
+- Delete the following deprecated SCSS mixins:
+  - `k-Cropper`
+  - `k-DevBreakpoints`
+  - `k-DevGrid`
+  - `k-Loader`
+  - `k-LoaderWithParagraph`
+- Convert and move the following components to CSS-in-JS:
+  - `Loader`
+  - `LoaderWithParagraph`
 
 Features:
 
-- Migrate `DevGrid` from SASS to Styled Components.
+- Convert the following components to CSS-in-JS:
+  - `DevGrid`
+  - `ImageCropper`
 
 ## [3.0.0-beta.4] - 2021-02-22
 

@@ -39,7 +39,7 @@ var _crossCircleIcon = require("../../../components/icons/cross-circle-icon");
 
 var _clockCircleIcon = require("../../../components/icons/clock-circle-icon");
 
-var _loader = require("../../../components/loaders/loader");
+var _loader = require("../../../components/atoms/loader");
 
 var _documentIconEmpty = require("../../../components/icons/document-icon-empty");
 
