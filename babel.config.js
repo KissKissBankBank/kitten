@@ -30,7 +30,7 @@ module.exports = api => {
         {
           modules: isESMBuild ? false : 'commonjs',
           targets: {
-            browsers: ['last 2 versions', 'ie >= 10'],
+            browsers: ['> 0.5% in FR, last 2 versions, Firefox ESR, not dead'],
           },
         },
       ],

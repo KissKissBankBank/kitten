@@ -1,7 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React, { useRef, useEffect } from 'react';
-import { Badge } from '../../../components/notifications/badge';
+import { Badge } from '../../../components/atoms/badge';
 import classNames from 'classnames';
 import Markdown from 'react-markdown';
 export var HorizontalNav = function HorizontalNav(_ref) {
