@@ -8,7 +8,7 @@ import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import { LightbulbIllustration as Lightbulb } from '../../../../components/illustrations/lightbulb-illustration'
-import { Loader } from '../../../../components/loaders/loader'
+import { Loader } from '../../../../components/atoms/loader'
 import { getReactElementsWithoutType } from '../../../../helpers/react/react-elements'
 
 import { SideCard } from './side-card'
