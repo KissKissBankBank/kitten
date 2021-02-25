@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: Remove `k-Cropper` SCSS mixin.
+Breaking changes:
+
+- Remove `k-Cropper` SCSS mixin.
+- Migrate `Loader` and `LoaderWithParagraph` components
+  and remove `k-Loader` and `k-LoaderWithParagraph` styles.
 
 ## [3.0.0-beta.4] - 2021-02-22
 

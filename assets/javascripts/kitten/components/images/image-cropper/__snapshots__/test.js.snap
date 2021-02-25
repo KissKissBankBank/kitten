@@ -2,7 +2,7 @@
 
 exports[`<ImageCropper /> matches with snapshot 1`] = `
 <div
-  className="sc-EHOje bGfBLo"
+  className="sc-bZQynM fwsfcS"
 >
   <label
     className="k-Label k-u-margin-bottom-singleHalf k-Label--tiny"
@@ -12,7 +12,7 @@ exports[`<ImageCropper /> matches with snapshot 1`] = `
     Lorem ipsum…
   </label>
   <div
-    className="sc-bxivhb ekbhYA k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
+    className="sc-ifAKCX cBWvFc k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
   >
     <input
       accept=".jpg,.jpeg,.gif,.png"
