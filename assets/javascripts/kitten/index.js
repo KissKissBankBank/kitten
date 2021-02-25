@@ -9,10 +9,10 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 export { Accordeon } from './components/accordeon'
 
 // Atoms
-export { Loader } from './components/atoms/loader'
-export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph'
 export { Badge } from './components/atoms/badge'
 export { IconBadge } from './components/atoms/icon-badge'
+export { Loader } from './components/atoms/loader'
+export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph'
 export { Tag } from './components/atoms/tag'
 
 // Avatar
