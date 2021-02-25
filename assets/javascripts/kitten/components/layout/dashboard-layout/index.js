@@ -456,7 +456,7 @@ export const DashboardLayout = ({
         </a>
         <div
           ref={sideBarElement}
-          tabIndex={0}
+          tabIndex={-1}
           className="k-DashboardLayout__sideWrapper"
           aria-hidden={isDesktop ? null : !isOpen}
         >
@@ -499,7 +499,7 @@ export const DashboardLayout = ({
         </div>
         <div
           ref={contentElement}
-          tabIndex={0}
+          tabIndex={-1}
           className="k-DashboardLayout__mainWrapper"
         >
           {renderComponentChildrenArray(

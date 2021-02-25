@@ -1299,7 +1299,7 @@ button:hover .c1 {
     <div
       aria-hidden={true}
       className="k-DashboardLayout__sideWrapper"
-      tabIndex={0}
+      tabIndex={-1}
     >
       <a
         className="k-DashboardLayout__backLink"
@@ -1347,7 +1347,7 @@ button:hover .c1 {
     </div>
     <div
       className="k-DashboardLayout__mainWrapper"
-      tabIndex={0}
+      tabIndex={-1}
     >
       <header
         className="k-DashboardLayout__heading"
