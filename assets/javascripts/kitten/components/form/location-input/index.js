@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-// Via "https://github.com/kenny-hibino/react-places-autocomplete"
-import PlacesAutocomplete, { geocodeByPlaceId } from 'react-places-autocomplete'
-import { LocationIcon } from '../../../components/icons/location-icon'
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
+import PlacesAutocomplete, { geocodeByPlaceId } from 'react-places-autocomplete'
 
+import { LocationIcon } from '../../../components/icons/location-icon'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
@@ -103,96 +103,94 @@ const StyledLocationInput = styled.div`
 // For example:
 //   <script src="https://maps.googleapis.com/maps/api/js?key=…&libraries=places"></script>
 
-export class LocationInput extends Component {
-  constructor(props) {
-    super(props)
+export const LocationInput = ({
+  onChange,
+  onSelect,
+  defaultValue,
+  inputProps,
+  name,
+  ...others
+}) => {
+  const [address, updateAddress] = useState(null)
 
-    this.state = {
-      address: this.props.defaultValue,
-    }
-
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSelect = this.handleSelect.bind(this)
+  const handleChange = returnedAddress => {
+    updateAddress(returnedAddress)
+    onChange({ value: returnedAddress, name: name })
   }
 
-  handleChange(address) {
-    this.setState({ address })
-    this.props.onChange({ value: address, name: this.props.name })
-  }
-
-  handleSelect(address, placeId) {
+  const handleSelect = (returnedAddress, placeId) => {
     geocodeByPlaceId(placeId).then(results => {
       const place = results[0]
 
       if (place) {
-        this.setState({ address })
-        this.props.onSelect({ value: address, placeId, place })
+        updateAddress(returnedAddress)
+        onSelect({ value: returnedAddress, placeId, place })
       }
     })
   }
 
-  render() {
-    const {
-      onChange,
-      onSelect,
-      defaultValue,
-      inputProps,
-      ...others
-    } = this.props
+  return (
+    <PlacesAutocomplete
+      value={address}
+      onSelect={handleSelect}
+      onChange={handleChange}
+      {...others}
+    >
+      {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+        <StyledLocationInput className="k-LocationInput">
+          <div className="k-LocationInput__icon">
+            <LocationIcon />
+          </div>
+          <input
+            {...getInputProps({
+              ...inputProps,
+              className: classNames(
+                'k-LocationInput__input',
+                inputProps?.className,
+              ),
+            })}
+          />
+          <div className="k-LocationInput__autocomplete">
+            {loading && <div>Loading...</div>}
+            {suggestions.map(suggestion => {
+              const className = suggestion.active
+                ? 'k-LocationInput__autocompleteItem--active'
+                : 'k-LocationInput__autocompleteItem'
 
-    return (
-      <PlacesAutocomplete
-        value={this.state.address}
-        onSelect={this.handleSelect}
-        onChange={this.handleChange}
-        {...others}
-      >
-        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <StyledLocationInput className="k-LocationInput">
-            <div className="k-LocationInput__icon">
-              <LocationIcon />
-            </div>
-            <input
-              {...getInputProps({
-                ...inputProps,
-                className: classNames(
-                  'k-LocationInput__input',
-                  inputProps?.className,
-                ),
-              })}
-            />
-            <div className="k-LocationInput__autocomplete">
-              {loading && <div>Loading...</div>}
-              {suggestions.map(suggestion => {
-                const className = suggestion.active
-                  ? 'k-LocationInput__autocompleteItem--active'
-                  : 'k-LocationInput__autocompleteItem'
-
-                return (
-                  <div
-                    {...getSuggestionItemProps(suggestion, {
-                      className,
-                    })}
-                  >
-                    <span className="k-LocationInput__autocompleteItem__mainText">
-                      {suggestion.formattedSuggestion.mainText}
-                    </span>{' '}
-                    <span className="k-LocationInput__autocompleteItem__secondaryText">
-                      {suggestion.formattedSuggestion.secondaryText}
-                    </span>
-                  </div>
-                )
-              })}
-            </div>
-          </StyledLocationInput>
-        )}
-      </PlacesAutocomplete>
-    )
-  }
+              return (
+                <div
+                  {...getSuggestionItemProps(suggestion, {
+                    className,
+                  })}
+                >
+                  <span className="k-LocationInput__autocompleteItem__mainText">
+                    {suggestion.formattedSuggestion.mainText}
+                  </span>{' '}
+                  <span className="k-LocationInput__autocompleteItem__secondaryText">
+                    {suggestion.formattedSuggestion.secondaryText}
+                  </span>
+                </div>
+              )
+            })}
+          </div>
+        </StyledLocationInput>
+      )}
+    </PlacesAutocomplete>
+  )
 }
 
 LocationInput.defaultProps = {
   onChange: () => {},
   onSelect: () => {},
   defaultValue: '',
+  inputProps: {},
+  name: 'location-input',
+}
+
+LocationInput.propTypes = {
+  onChange: PropTypes.func,
+  onSelect: PropTypes.func,
+  defaultValue: PropTypes.string,
+  inputProps: PropTypes.object,
+  name: PropTypes.string,
 }
