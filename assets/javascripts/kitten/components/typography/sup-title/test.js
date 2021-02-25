@@ -7,13 +7,7 @@ describe('<SupTitle />', () => {
 
   describe('by default', () => {
     beforeEach(() => {
-      component = renderer
-        .create(
-          <SupTitle>
-            Lorem ipsun
-          </SupTitle>
-        )
-        .toJSON()
+      component = renderer.create(<SupTitle>Lorem ipsun</SupTitle>).toJSON()
     })
 
     it('matches with snapshot', () => {

@@ -17,6 +17,18 @@ Object.defineProperty(exports, "Accordeon", {
     return _accordeon.Accordeon;
   }
 });
+Object.defineProperty(exports, "Badge", {
+  enumerable: true,
+  get: function get() {
+    return _badge.Badge;
+  }
+});
+Object.defineProperty(exports, "IconBadge", {
+  enumerable: true,
+  get: function get() {
+    return _iconBadge.IconBadge;
+  }
+});
 Object.defineProperty(exports, "Tag", {
   enumerable: true,
   get: function get() {
@@ -317,18 +329,6 @@ Object.defineProperty(exports, "Dropdown", {
     return _dropdown.Dropdown;
   }
 });
-Object.defineProperty(exports, "PhoneDropdown", {
-  enumerable: true,
-  get: function get() {
-    return _phoneDropdown.PhoneDropdown;
-  }
-});
-Object.defineProperty(exports, "UserMenu", {
-  enumerable: true,
-  get: function get() {
-    return _userMenu.UserMenu;
-  }
-});
 Object.defineProperty(exports, "ExpandBoard", {
   enumerable: true,
   get: function get() {
@@ -455,12 +455,6 @@ Object.defineProperty(exports, "SelectWithState", {
     return _selectWithState.SelectWithState;
   }
 });
-Object.defineProperty(exports, "Switch", {
-  enumerable: true,
-  get: function get() {
-    return _switch.Switch;
-  }
-});
 Object.defineProperty(exports, "TextInputAndSelect", {
   enumerable: true,
   get: function get() {
@@ -489,6 +483,12 @@ Object.defineProperty(exports, "TextInput", {
   enumerable: true,
   get: function get() {
     return _textInput.TextInput;
+  }
+});
+Object.defineProperty(exports, "ToggleSwitch", {
+  enumerable: true,
+  get: function get() {
+    return _toggleSwitch.ToggleSwitch;
   }
 });
 Object.defineProperty(exports, "Container", {
@@ -539,36 +539,6 @@ Object.defineProperty(exports, "AdaptableGrid", {
     return _adaptableGrid.AdaptableGrid;
   }
 });
-Object.defineProperty(exports, "HeaderLogo", {
-  enumerable: true,
-  get: function get() {
-    return _headerLogo.HeaderLogo;
-  }
-});
-Object.defineProperty(exports, "HeaderTitles", {
-  enumerable: true,
-  get: function get() {
-    return _headerTitles.HeaderTitles;
-  }
-});
-Object.defineProperty(exports, "Header", {
-  enumerable: true,
-  get: function get() {
-    return _header.Header;
-  }
-});
-Object.defineProperty(exports, "HeaderItems", {
-  enumerable: true,
-  get: function get() {
-    return _header.HeaderItems;
-  }
-});
-Object.defineProperty(exports, "HeaderItem", {
-  enumerable: true,
-  get: function get() {
-    return _header.HeaderItem;
-  }
-});
 Object.defineProperty(exports, "Hero", {
   enumerable: true,
   get: function get() {
@@ -581,16 +551,16 @@ Object.defineProperty(exports, "ImageCropper", {
     return _imageCropper.ImageCropper;
   }
 });
-Object.defineProperty(exports, "ImageWithCaption", {
-  enumerable: true,
-  get: function get() {
-    return _imageWithCaption.ImageWithCaption;
-  }
-});
 Object.defineProperty(exports, "ArrowContainer", {
   enumerable: true,
   get: function get() {
     return _arrowContainer.ArrowContainer;
+  }
+});
+Object.defineProperty(exports, "DashboardLayout", {
+  enumerable: true,
+  get: function get() {
+    return _dashboardLayout.DashboardLayout;
   }
 });
 Object.defineProperty(exports, "IconContainer", {
@@ -677,12 +647,6 @@ Object.defineProperty(exports, "CheckList", {
     return _checkList.CheckList;
   }
 });
-Object.defineProperty(exports, "NavList", {
-  enumerable: true,
-  get: function get() {
-    return _navList.NavList;
-  }
-});
 Object.defineProperty(exports, "Timeline", {
   enumerable: true,
   get: function get() {
@@ -699,6 +663,12 @@ Object.defineProperty(exports, "Loader", {
   enumerable: true,
   get: function get() {
     return _loader.Loader;
+  }
+});
+Object.defineProperty(exports, "DashboardMenu", {
+  enumerable: true,
+  get: function get() {
+    return _dashboardMenu.DashboardMenu;
   }
 });
 Object.defineProperty(exports, "HeaderMenu", {
@@ -771,18 +741,6 @@ Object.defineProperty(exports, "Alert", {
   enumerable: true,
   get: function get() {
     return _alert.Alert;
-  }
-});
-Object.defineProperty(exports, "Badge", {
-  enumerable: true,
-  get: function get() {
-    return _badge.Badge;
-  }
-});
-Object.defineProperty(exports, "IconBadge", {
-  enumerable: true,
-  get: function get() {
-    return _iconBadge.IconBadge;
   }
 });
 Object.defineProperty(exports, "MarkdownPage", {
@@ -1475,6 +1433,36 @@ Object.defineProperty(exports, "YoutubeIcon", {
     return _youtubeIcon.YoutubeIcon;
   }
 });
+Object.defineProperty(exports, "HomeIcon", {
+  enumerable: true,
+  get: function get() {
+    return _homeIcon.HomeIcon;
+  }
+});
+Object.defineProperty(exports, "TagIcon", {
+  enumerable: true,
+  get: function get() {
+    return _tagIcon.TagIcon;
+  }
+});
+Object.defineProperty(exports, "FileIcon", {
+  enumerable: true,
+  get: function get() {
+    return _fileIcon.FileIcon;
+  }
+});
+Object.defineProperty(exports, "LoudspeakerIcon", {
+  enumerable: true,
+  get: function get() {
+    return _loudspeakerIcon.LoudspeakerIcon;
+  }
+});
+Object.defineProperty(exports, "ShieldIcon", {
+  enumerable: true,
+  get: function get() {
+    return _shieldIcon.ShieldIcon;
+  }
+});
 Object.defineProperty(exports, "COLORS", {
   enumerable: true,
   get: function get() {
@@ -1630,6 +1618,10 @@ var _visuallyHidden = require("./components/accessibility/visually-hidden");
 
 var _accordeon = require("./components/accordeon");
 
+var _badge = require("./components/atoms/badge");
+
+var _iconBadge = require("./components/atoms/icon-badge");
+
 var _tag = require("./components/atoms/tag");
 
 var _avatarWithTextAndBadge = require("./components/avatar/avatar-with-text-and-badge");
@@ -1710,13 +1702,9 @@ var _details = require("./components/details");
 
 var _devGrid = require("./components/dev/dev-grid");
 
-var _dropdownButton = require("./components/dropdowns/dropdown-button");
+var _dropdownButton = require("./components/dropdowns/v2/dropdown-button");
 
-var _dropdown = require("./components/dropdowns/dropdown");
-
-var _phoneDropdown = require("./components/dropdowns/phone-dropdown");
-
-var _userMenu = require("./components/dropdowns/user-menu");
+var _dropdown = require("./components/dropdowns/v2/dropdown");
 
 var _expandBoard = require("./components/expandable/expand-board");
 
@@ -1760,8 +1748,6 @@ var _richTextInput = require("./components/form/rich-text-input");
 
 var _selectWithState = require("./components/form/select-with-state");
 
-var _switch = require("./components/form/switch");
-
 var _textInputAndSelect = require("./components/form/text-input-and-select");
 
 var _textInputWithLimit = require("./components/form/text-input-with-limit");
@@ -1771,6 +1757,8 @@ var _textInputWithUnitForm = require("./components/form/text-input-with-unit-for
 var _textInputWithUnit = require("./components/form/text-input-with-unit");
 
 var _textInput = require("./components/form/text-input");
+
+var _toggleSwitch = require("./components/form/toggle-switch");
 
 var _container = require("./components/grid/container");
 
@@ -1786,19 +1774,13 @@ var _stickyContainer = require("./components/grid/sticky-container");
 
 var _adaptableGrid = require("./components/grid/adaptable-grid");
 
-var _headerLogo = require("./components/headers/header-logo");
-
-var _headerTitles = require("./components/headers/header-titles");
-
-var _header = require("./components/headers/header");
-
 var _hero = require("./components/heroes/hero");
 
 var _imageCropper = require("./components/images/image-cropper");
 
-var _imageWithCaption = require("./components/images/image-with-caption");
-
 var _arrowContainer = require("./components/layout/arrow-container");
+
+var _dashboardLayout = require("./components/layout/dashboard-layout");
 
 var _iconContainer = require("./components/layout/icon-container");
 
@@ -1828,13 +1810,13 @@ var _list = require("./components/lists/list");
 
 var _checkList = require("./components/lists/check-list");
 
-var _navList = require("./components/lists/nav-list");
-
 var _timeline = require("./components/lists/timeline");
 
 var _loaderWithParagraph = require("./components/loaders/loader-with-paragraph");
 
 var _loader = require("./components/loaders/loader");
+
+var _dashboardMenu = require("./components/menus/dashboard-menu");
 
 var _headerMenu = require("./components/menus/header-menu");
 
@@ -1859,10 +1841,6 @@ var _tabBar = require("./components/navigation/tab-bar");
 var _navBar = require("./components/navigation/nav-bar");
 
 var _alert = require("./components/notifications/alert");
-
-var _badge = require("./components/notifications/badge");
-
-var _iconBadge = require("./components/notifications/icon-badge");
 
 var _markdown = require("./components/pages/markdown");
 
@@ -2087,6 +2065,16 @@ var _warningIcon = require("./components/icons/warning-icon");
 var _whatsappIcon = require("./components/icons/whatsapp-icon");
 
 var _youtubeIcon = require("./components/icons/youtube-icon");
+
+var _homeIcon = require("./components/icons/home-icon");
+
+var _tagIcon = require("./components/icons/tag-icon");
+
+var _fileIcon = require("./components/icons/file-icon");
+
+var _loudspeakerIcon = require("./components/icons/loudspeaker-icon");
+
+var _shieldIcon = require("./components/icons/shield-icon");
 
 var _colorsConfig = _interopRequireDefault(require("./constants/colors-config"));
 

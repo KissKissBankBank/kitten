@@ -10,7 +10,6 @@
 // Boxes
 
 @include k-LinkBox;
-@include k-InformationBox;
 
 // Cards
 
@@ -24,7 +23,6 @@
 // Dropdowns
 
 @include k-Dropdown;
-@include k-PhoneDropdown;
 
 // Footer
 
@@ -42,7 +40,6 @@
 @include k-RadioButton;
 @include k-RadioButtonSet;
 
-@include k-Switch;
 @include k-TextAreaWrapper;
 @include k-TextInput;
 @include k-TextInputWithLimit;
@@ -75,23 +72,15 @@
 @include k-SingleColumn;
 @include k-VerticalGrid;
 
-// Header
-
-@include k-Header;
-
 // Images
 
 @include k-Cropper;
-@include k-ImageWithCaption;
 
 // Layout
 
 @include k-HorizontalStroke;
 @include k-Line;
 @include k-ResponsiveIframeContainer;
-@include k-Separator;
-@include k-VerticalSeparator;
-@include k-VerticalStroke;
 
 // Lines
 
@@ -126,11 +115,6 @@
 @include k-TabBar((z-index: 50));
 
 @include k-UserMenu;
-
-// Notifications
-
-@include k-Badge;
-@include k-IconBadge;
 
 // Press
 

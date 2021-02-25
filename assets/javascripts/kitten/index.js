@@ -9,6 +9,9 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 export { Accordeon } from './components/accordeon'
 
 // Atoms
+
+export { Badge } from './components/atoms/badge'
+export { IconBadge } from './components/atoms/icon-badge'
 export { Tag } from './components/atoms/tag'
 
 // Avatar
@@ -81,10 +84,8 @@ export { Details } from './components/details'
 export { DevGrid } from './components/dev/dev-grid'
 
 // Dropdowns
-export { DropdownButton } from './components/dropdowns/dropdown-button'
-export { Dropdown } from './components/dropdowns/dropdown'
-export { PhoneDropdown } from './components/dropdowns/phone-dropdown'
-export { UserMenu } from './components/dropdowns/user-menu'
+export { DropdownButton } from './components/dropdowns/v2/dropdown-button'
+export { Dropdown } from './components/dropdowns/v2/dropdown'
 
 // Expandable
 export { ExpandBoard } from './components/expandable/expand-board'
@@ -107,11 +108,11 @@ export { RadioButtonSet } from './components/form/radio-button-set'
 export { RadioButton } from './components/form/radio-button'
 export { RangeSlider } from './components/form/range-slider'
 export { RichTextInput } from './components/form/rich-text-input'
-export { Switch } from './components/form/switch'
 export { TextInputWithLimit } from './components/form/text-input-with-limit'
 export { TextInputWithUnitForm } from './components/form/text-input-with-unit-form'
 export { TextInputWithUnit } from './components/form/text-input-with-unit'
 export { TextInput } from './components/form/text-input'
+export { ToggleSwitch } from './components/form/toggle-switch'
 
 // Grid
 export { Container } from './components/grid/container'
@@ -122,20 +123,15 @@ export { SideGrid } from './components/grid/side-grid'
 export { StickyContainer } from './components/grid/sticky-container'
 export { AdaptableGrid } from './components/grid/adaptable-grid'
 
-// Headers
-export { HeaderLogo } from './components/headers/header-logo'
-export { HeaderTitles } from './components/headers/header-titles'
-export { Header, HeaderItems, HeaderItem } from './components/headers/header'
-
 // Heroes
 export { Hero } from './components/heroes/hero'
 
 // Images
 export { ImageCropper } from './components/images/image-cropper'
-export { ImageWithCaption } from './components/images/image-with-caption'
 
 // Layout
 export { ArrowContainer } from './components/layout/arrow-container'
+export { DashboardLayout } from './components/layout/dashboard-layout'
 export { IconContainer } from './components/layout/icon-container'
 export { HorizontalStroke } from './components/layout/horizontal-stroke'
 export { Line } from './components/layout/line'
@@ -156,7 +152,6 @@ export { IconList } from './components/lists/icon-list'
 export { BulletList } from './components/lists/bullet-list'
 export { List } from './components/lists/list'
 export { CheckList } from './components/lists/check-list'
-export { NavList } from './components/lists/nav-list'
 export { Timeline } from './components/lists/timeline'
 
 // Loaders
@@ -164,6 +159,7 @@ export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph'
 export { Loader } from './components/loaders/loader'
 
 // Menus
+export { DashboardMenu } from './components/menus/dashboard-menu'
 export { HeaderMenu } from './components/menus/header-menu'
 
 // Meters
@@ -184,8 +180,6 @@ export { NavBar } from './components/navigation/nav-bar'
 
 // Notifications
 export { Alert } from './components/notifications/alert'
-export { Badge } from './components/notifications/badge'
-export { IconBadge } from './components/notifications/icon-badge'
 
 // Pages
 export { MarkdownPage } from './components/pages/markdown'
@@ -331,6 +325,11 @@ export { WarningCircleIcon } from './components/icons/warning-circle-icon'
 export { WarningIcon } from './components/icons/warning-icon'
 export { WhatsAppIcon } from './components/icons/whatsapp-icon'
 export { YoutubeIcon } from './components/icons/youtube-icon'
+export { HomeIcon } from './components/icons/home-icon'
+export { TagIcon } from './components/icons/tag-icon'
+export { FileIcon } from './components/icons/file-icon'
+export { LoudspeakerIcon } from './components/icons/loudspeaker-icon'
+export { ShieldIcon } from './components/icons/shield-icon'
 
 // ---------
 // CONSTANTS

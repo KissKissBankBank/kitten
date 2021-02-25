@@ -8,7 +8,6 @@
 
 // Box
 @import './components/box/link-box';
-@import './components/box/information-box';
 
 // Cards
 @import './components/cards/card';
@@ -19,7 +18,6 @@
 
 // Dropdowns
 @import './components/dropdowns/dropdown';
-@import './components/dropdowns/phone-dropdown';
 
 // Footer
 @import './components/footer/footer';
@@ -34,7 +32,6 @@
 @import './components/form/label';
 @import './components/form/radio-button-set';
 @import './components/form/radio-button';
-@import './components/form/switch';
 @import './components/form/text-area-wrapper';
 @import './components/form/text-input';
 @import './components/form/text-input-with-button';
@@ -50,20 +47,13 @@
 @import "./components/grid/single-column";
 @import "./components/grid/vertical-grid";
 
-// Headers
-@import './components/headers/header';
-
 // Images
 @import "./components/images/cropper";
-@import "./components/images/image-with-caption";
 
 // Layout
 @import './components/layout/horizontal-stroke';
 @import './components/layout/line';
 @import './components/layout/responsive-iframe-container';
-@import './components/layout/separator';
-@import './components/layout/vertical-separator';
-@import './components/layout/vertical-stroke';
 
 // Lines
 @import './components/lines/info-lines';
@@ -86,10 +76,6 @@
 @import './components/navigation/platform-switch';
 @import './components/navigation/tab-bar';
 @import './components/navigation/user-menu';
-
-// Notifications
-@import './components/notifications/badge';
-@import './components/notifications/icon-badge';
 
 // Press
 @import './components/press/press-quotes';
