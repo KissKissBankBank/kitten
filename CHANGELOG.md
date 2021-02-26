@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: convert `FormAction` to CSS-in-JS.
+- Breaking change: remove `k-FormAction` mixin.
 - Breaking change: convert `Line` to CSS-in-JS.
 - Breaking change: remove `k-Line` mixin.
 - Feature: Add `useFlexGapCheck` hook for `gap` feature detection.
