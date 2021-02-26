@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove `LinkBox` default export.
+- Breaking change: Remove deprecated `LinkBox/deprecated` component.
+- Breaking change: Remove `k-LinkBox` mixin.
+- Fix `InformationBox` style.
+
 ## [3.0.0-beta.5] - 2021-02-25
 
 Breaking changes:
