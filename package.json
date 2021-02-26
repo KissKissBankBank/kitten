@@ -133,10 +133,9 @@
     "deploy-storybook": "storybook-to-ghpages",
     "clean:src": "rm -rf src/components src/config src/constants src/handlers src/helpers src/hoc",
     "clean:src:esm": "rm -rf src/esm",
-    "build": "npm run build:js && npm run build:js:esm && npm run build:css && npm run build:utilities",
-    "build:js": "npm run clean:src && NODE_ENV=production babel assets/javascripts/kitten/ -d src --ignore 'assets/**/*.test.js','assets/**/test.js','assets/**/*.stories.js','assets/**/stories.js','assets/**/__mocks__/*.js','assets/javascripts/kitten/karl'",
-    "build:js:esm": "npm run clean:src:esm && NODE_ENV=production BABEL_ENV=esm babel assets/javascripts/kitten/ -d src/esm --ignore 'assets/**/*.test.js','assets/**/test.js','assets/**/*.stories.js','assets/**/stories.js','assets/**/__mocks__/*.js','assets/javascripts/kitten/karl'",
-    "build:css": "webpack --config webpack.config.sass.js",
+    "build": "npm run build:js && npm run build:js:esm && npm run build:utilities",
+    "build:js": "npm run clean:src && NODE_ENV=production babel assets/javascripts/kitten/ -d src --ignore 'assets/**/*.test.js','assets/**/test.js','assets/**/*.stories.js','assets/**/stories.js','assets/**/__mocks__/*.js'",
+    "build:js:esm": "npm run clean:src:esm && NODE_ENV=production BABEL_ENV=esm babel assets/javascripts/kitten/ -d src/esm --ignore 'assets/**/*.test.js','assets/**/test.js','assets/**/*.stories.js','assets/**/stories.js','assets/**/__mocks__/*.js'",
     "build:utilities": "rm -rf src/stylesheets && webpack --config webpack/utilities.config.js",
     "eslint": "eslint --fix assets/javascripts/**",
     "prettier": "find ./assets/javascripts -regex '.*.js' | xargs prettier --config prettier.config.js --write"
