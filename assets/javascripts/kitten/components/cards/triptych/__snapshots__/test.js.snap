@@ -2,32 +2,32 @@
 
 exports[`<Triptych /> with default props matches with snapshot 1`] = `
 <div
-  className="k-Grid sc-bwzfXH eCQnae k-Triptych k-u-align-center"
+  className="sc-bdVaJa kYEWWI k-Grid sc-htpNat cxDGI k-Triptych k-u-align-center"
 >
   <div
-    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--offset-0@m k-Grid__col--10@l k-Grid__col--offset-1@l"
+    className="k-Grid__col k-Grid__col--12 k-Grid__col--6-m k-Grid__col--offset-0-m k-Grid__col--10-l k-Grid__col--offset-1-l"
   >
     <div>
       <div
         className="k-u-margin-bottom-double"
       >
         <h2
-          className="sc-htpNat iqXlfZ"
+          className="sc-bxivhb bPrJHl"
         >
           Main title goes here !
         </h2>
       </div>
       <span
-        className="k-VerticalStroke k-VerticalStroke--huge sc-bdVaJa dinLYG k-Triptych__verticalStroke k-u-margin-bottom-double"
+        className="k-VerticalStroke k-VerticalStroke--huge sc-bwzfXH fTWsWV k-Triptych__verticalStroke k-u-margin-bottom-double"
       />
     </div>
   </div>
   <div
-    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l k-Triptych__contentColumn k-Triptych__contentColumn--odd"
+    className="k-Grid__col k-Grid__col--12 k-Grid__col--6-m k-Grid__col--4-l k-Triptych__contentColumn k-Triptych__contentColumn--odd"
   >
     <div>
       <div
-        className="sc-bxivhb dluWKp"
+        className="sc-ifAKCX cqtsgm"
       >
         <div
           className="k-u-margin-bottom-triple"
@@ -42,7 +42,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
         >
           <h1
-            className="sc-htpNat iUEESa k-u-align-center"
+            className="sc-bxivhb ebgsHQ k-u-align-center"
           >
             Lorem ipsum dolor sit amet
           </h1>
@@ -65,10 +65,10 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l k-Triptych__contentColumn"
+    className="k-Grid__col k-Grid__col--12 k-Grid__col--6-m k-Grid__col--4-l k-Triptych__contentColumn"
   >
     <div
-      className="sc-bxivhb dluWKp"
+      className="sc-ifAKCX cqtsgm"
     >
       <div
         className="k-u-margin-bottom-triple"
@@ -83,7 +83,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-htpNat iUEESa k-u-align-center k-u-margin-bottom-singleHalf--important"
+          className="sc-bxivhb ebgsHQ k-u-align-center k-u-margin-bottom-singleHalf--important"
         >
           Donsectetur adipiscing elit
         </h1>
@@ -109,10 +109,10 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l k-Triptych__contentColumn k-Triptych__contentColumn--odd"
+    className="k-Grid__col k-Grid__col--12 k-Grid__col--6-m k-Grid__col--4-l k-Triptych__contentColumn k-Triptych__contentColumn--odd"
   >
     <div
-      className="sc-bxivhb dluWKp"
+      className="sc-ifAKCX cqtsgm"
     >
       <div
         className="k-u-margin-bottom-triple"
@@ -127,7 +127,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-htpNat iUEESa k-u-align-center"
+          className="sc-bxivhb ebgsHQ k-u-align-center"
         >
           Praesent tincidunt ultrices sem
         </h1>
