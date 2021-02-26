@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Ultra breaking change: remove all SASS component mixins, helpers, definitions and schemas that are not used.
+
 - Breaking change: convert `Line` to CSS-in-JS.
 - Breaking change: remove `k-Line` mixin.
 - Feature: Add `useFlexGapCheck` hook for `gap` feature detection.
