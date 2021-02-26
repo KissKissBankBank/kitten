@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: convert `Line` to CSS-in-JS.
+- Breaking change: remove `k-Line` mixin.
+- Feature: Add `useFlexGapCheck` hook for `gap` feature detection.
+
 ## [3.0.0-beta.5] - 2021-02-25
 
 Breaking changes:
