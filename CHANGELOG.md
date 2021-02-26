@@ -7,6 +7,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking change: convert `Line` to CSS-in-JS.
 - Breaking change: remove `k-Line` mixin.
 - Feature: Add `useFlexGapCheck` hook for `gap` feature detection.
+- Fix gap bug on Safari for the following components:
+  - `Loader`
+  - `LoaderWithParagraph`
+  - `BackingCard`
+  - `ImageCropper`
+  - `DashboardLayout`
+  - `DashboardLayout.Flow`
+  - `DashboardMenu`
 
 ## [3.0.0-beta.5] - 2021-02-25
 

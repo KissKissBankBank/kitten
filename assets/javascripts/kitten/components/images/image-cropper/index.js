@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
+import classNames from 'classnames'
 import Cropper from 'react-cropper'
 import getOr from 'lodash/fp/getOr'
 import { Label } from '../../../components/form/label'
@@ -7,6 +8,7 @@ import { BasicUploader } from '../../../components/uploaders/basic-uploader'
 import { RangeSlider } from '../../../components/form/range-slider'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
 import { StyledCropper } from './styles'
+import { useFlexGapCheck } from '../../../helpers/dom/use-flex-gap-check'
 
 export const ImageCropper = ({
   imageSrc,
@@ -24,6 +26,7 @@ export const ImageCropper = ({
   description,
   cropperInfo,
   sliderTitle,
+  className,
 }) => {
   const cropperContainerRef = useRef(null)
   const cropperRef = useRef(null)
@@ -39,6 +42,7 @@ export const ImageCropper = ({
   const [initialSliderValue, setInitialSliderValue] = useState(0)
   const [uploadedFile, setUploadedFile] = useState(null)
   const [resultData, setResultData] = useState(null)
+  const canUseGap = useFlexGapCheck()
 
   useEffect(() => {
     if (cropperInstance && cropperInstance.imageData.naturalWidth) {
@@ -91,7 +95,11 @@ export const ImageCropper = ({
   }, [resultData, fileNameState, uploadedFile])
   const dragMode = disabled || !isCropEnabled ? 'none' : 'move'
   return (
-    <StyledCropper>
+    <StyledCropper
+      className={classNames('k-UploadAndCropper', className, {
+        'k-UploadAndCropper--noGap': !canUseGap,
+      })}
+    >
       <Label
         size="tiny"
         htmlFor={name}

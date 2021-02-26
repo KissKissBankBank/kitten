@@ -8,6 +8,7 @@ import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import { useFlexGapCheck } from '../../../helpers/dom/use-flex-gap-check'
 
 const StyledDashboardMenu = styled.nav`
   color: ${COLORS.font2};
@@ -81,6 +82,16 @@ const StyledDashboardMenu = styled.nav`
     border-radius: ${pxToRem(6)};
   }
 
+  &.k-DashboardMenu--noGap  {
+    .k-DashboardMenu__expandable__list .k-DashboardMenu__itemWrapper:not(:last-child) {
+      margin-bottom: ${pxToRem(10)};
+    }
+
+    .k-DashboardMenu__iconWrapper,
+    .k-DashboardMenu__expandable__title__text {
+      margin-right: ${pxToRem(10)};
+    }
+  }
 
   /* TEXT STYLES */
   .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,
@@ -143,8 +154,14 @@ const StyledDashboardMenu = styled.nav`
 `
 
 export const DashboardMenu = ({ className, ...props }) => {
+  const canUseGap = useFlexGapCheck()
+
   return (
-    <StyledDashboardMenu className={classNames('k-DashboardMenu', className)}>
+    <StyledDashboardMenu
+      className={classNames('k-DashboardMenu', className, {
+        'k-DashboardMenu--noGap': !canUseGap,
+      })}
+    >
       <ul className="k-DashboardMenu__list" {...props} />
     </StyledDashboardMenu>
   )
