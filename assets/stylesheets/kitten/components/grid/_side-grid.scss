@@ -63,42 +63,42 @@
   }
 
   .k-SideGrid__row {
-    @include k-grid;
+    // @include k-grid;
   }
 
   .k-SideGrid__content {
-    @include k-grid-col(12);
+    // @include k-grid-col(12);
     background-color: $background;
     padding-bottom: k-px-to-rem(30px);
 
     @include k-media-min('m') {
       padding-bottom: k-px-to-rem(50px);
 
-      @include k-grid-col(8);
+      // @include k-grid-col(8);
 
       .k-SideGrid--asideLarge & {
-        @include k-grid-col(7);
+        // @include k-grid-col(7);
       }
 
       .k-SideGrid--asideSmall & {
-        @include k-grid-col(9);
+        // @include k-grid-col(9);
       }
     }
   }
 
   .k-SideGrid__aside {
-    @include k-grid-col(4);
+    // @include k-grid-col(4);
     display: flex;
     border-left: $half-gutter solid $background;
     padding-left: 0;
     padding-right: $half-gutter;
 
     .k-SideGrid--asideLarge & {
-      @include k-grid-col(5);
+      // @include k-grid-col(5);
     }
 
     .k-SideGrid--asideSmall & {
-      @include k-grid-col(3);
+      // @include k-grid-col(3);
     }
 
     .k-SideGrid--asideStart & {

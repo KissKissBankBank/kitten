@@ -19,10 +19,6 @@
 
 @include k-Dropdown;
 
-// Footer
-
-@include k-Footer;
-
 // Form
 
 @include k-Checkbox;
@@ -57,13 +53,8 @@
   )
 ));
 
-// Footer
-
-@include k-Footer;
-
 // Grid
 
-@include k-Grid;
 @include k-Row;
 @include k-SideGrid;
 @include k-SingleColumn;
