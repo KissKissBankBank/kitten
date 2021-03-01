@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: Remove `k-SideGrid` and `k-VerticalGrid` mixins.
+- Feature: Migrate `SideGrid` and `SideLayout` to Styled Components.
 - Breaking change: Remove `k-Tooltip`, `k-TooltipNew` and `k-StaticTooltip` styles.
 - Breaking change: Remove `QuestionMarkWithTooltip`, `Tooltip`, `TooltipNew` and `StaticTooltip` components.
 - Breaking change: Remove `withTooltip` HOC.
