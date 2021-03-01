@@ -6,7 +6,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="k-Line"
+      className="sc-bwzfXH cbKhgF k-Line k-Line--noGap"
       style={
         Object {
           "lineHeight": 1,
@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gZMcBi kXcfTS"
+      className="sc-gqjmRU gSiJXU"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-gqjmRU bCbnjI"
+        className="sc-VigVT iQhtHk"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -58,7 +58,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="k-Line"
+      className="sc-bwzfXH cbKhgF k-Line k-Line--noGap"
       style={
         Object {
           "lineHeight": 1,
@@ -79,34 +79,25 @@ Array [
       <div
         className="k-Line__item"
       >
-        <span
-          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
-          id="tooltip"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "--toggletipAction-left": undefined,
-              "--toggletipAction-top": undefined,
-            }
-          }
+        <div
+          className="k-Tooltip"
         >
           <button
-            className="k-Toggletip__action k-u-reset-button"
-            onBlur={[Function]}
+            aria-describedby="tooltip"
+            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
+            data-dismiss="tooltip"
+            data-event="TooltipEvents__open_tooltip"
+            data-for="tooltip"
+            data-place="right"
+            data-tip={true}
             onClick={[Function]}
-            style={
-              Object {
-                "--toggletipAction-color": null,
-              }
-            }
+            tabIndex={null}
             type="button"
           >
             <svg
+              className="k-ButtonIcon__svg"
               fill="#fff"
-              height={10}
               viewBox="0 0 6 10"
-              width={6}
               xmlns="http://www.w3.org/2000/svg"
             >
               
@@ -115,10 +106,15 @@ Array [
               />
             </svg>
           </button>
-          <span
-            role="status"
-          />
-        </span>
+          <div
+            className="__react_component_tooltip place-top type-dark "
+            data-id="tooltip"
+            id="tooltip"
+            role="tooltip"
+          >
+            Tooltip
+          </div>
+        </div>
       </div>
     </div>
   </div>,
@@ -156,7 +152,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="k-Line"
+      className="sc-bwzfXH cbKhgF k-Line k-Line--noGap"
       style={
         Object {
           "lineHeight": 1,
@@ -177,34 +173,25 @@ Array [
       <div
         className="k-Line__item"
       >
-        <span
-          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
-          id="tooltip"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "--toggletipAction-left": undefined,
-              "--toggletipAction-top": undefined,
-            }
-          }
+        <div
+          className="k-Tooltip"
         >
           <button
-            className="k-Toggletip__action k-u-reset-button"
-            onBlur={[Function]}
+            aria-describedby="tooltip"
+            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
+            data-dismiss="tooltip"
+            data-event="TooltipEvents__open_tooltip"
+            data-for="tooltip"
+            data-place="right"
+            data-tip={true}
             onClick={[Function]}
-            style={
-              Object {
-                "--toggletipAction-color": null,
-              }
-            }
+            tabIndex={null}
             type="button"
           >
             <svg
+              className="k-ButtonIcon__svg"
               fill="#fff"
-              height={10}
               viewBox="0 0 6 10"
-              width={6}
               xmlns="http://www.w3.org/2000/svg"
             >
               
@@ -213,10 +200,15 @@ Array [
               />
             </svg>
           </button>
-          <span
-            role="status"
-          />
-        </span>
+          <div
+            className="__react_component_tooltip place-top type-dark "
+            data-id="tooltip"
+            id="tooltip"
+            role="tooltip"
+          >
+            Tooltip
+          </div>
+        </div>
       </div>
     </div>
   </div>,
@@ -240,7 +232,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="k-Line"
+      className="sc-bwzfXH cbKhgF k-Line k-Line--noGap"
       style={
         Object {
           "lineHeight": 1,
@@ -261,34 +253,25 @@ Array [
       <div
         className="k-Line__item"
       >
-        <span
-          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
-          id="tooltip"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "--toggletipAction-left": undefined,
-              "--toggletipAction-top": undefined,
-            }
-          }
+        <div
+          className="k-Tooltip"
         >
           <button
-            className="k-Toggletip__action k-u-reset-button"
-            onBlur={[Function]}
+            aria-describedby="tooltip"
+            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
+            data-dismiss="tooltip"
+            data-event="TooltipEvents__open_tooltip"
+            data-for="tooltip"
+            data-place="right"
+            data-tip={true}
             onClick={[Function]}
-            style={
-              Object {
-                "--toggletipAction-color": null,
-              }
-            }
+            tabIndex={null}
             type="button"
           >
             <svg
+              className="k-ButtonIcon__svg"
               fill="#fff"
-              height={10}
               viewBox="0 0 6 10"
-              width={6}
               xmlns="http://www.w3.org/2000/svg"
             >
               
@@ -297,10 +280,15 @@ Array [
               />
             </svg>
           </button>
-          <span
-            role="status"
-          />
-        </span>
+          <div
+            className="__react_component_tooltip place-top type-dark "
+            data-id="tooltip"
+            id="tooltip"
+            role="tooltip"
+          >
+            Tooltip
+          </div>
+        </div>
       </div>
     </div>
   </div>,
@@ -367,7 +355,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="k-Line"
+      className="sc-bwzfXH cbKhgF k-Line k-Line--noGap"
       style={
         Object {
           "lineHeight": 1,
@@ -388,34 +376,25 @@ Array [
       <div
         className="k-Line__item"
       >
-        <span
-          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
-          id="tooltip"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "--toggletipAction-left": undefined,
-              "--toggletipAction-top": undefined,
-            }
-          }
+        <div
+          className="k-Tooltip"
         >
           <button
-            className="k-Toggletip__action k-u-reset-button"
-            onBlur={[Function]}
+            aria-describedby="tooltip"
+            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
+            data-dismiss="tooltip"
+            data-event="TooltipEvents__open_tooltip"
+            data-for="tooltip"
+            data-place="right"
+            data-tip={true}
             onClick={[Function]}
-            style={
-              Object {
-                "--toggletipAction-color": null,
-              }
-            }
+            tabIndex={null}
             type="button"
           >
             <svg
+              className="k-ButtonIcon__svg"
               fill="#fff"
-              height={10}
               viewBox="0 0 6 10"
-              width={6}
               xmlns="http://www.w3.org/2000/svg"
             >
               
@@ -424,10 +403,15 @@ Array [
               />
             </svg>
           </button>
-          <span
-            role="status"
-          />
-        </span>
+          <div
+            className="__react_component_tooltip place-top type-dark "
+            data-id="tooltip"
+            id="tooltip"
+            role="tooltip"
+          >
+            Tooltip
+          </div>
+        </div>
       </div>
     </div>
   </div>,
@@ -480,7 +464,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="k-Line"
+      className="sc-bwzfXH cbKhgF k-Line k-Line--noGap"
       style={
         Object {
           "lineHeight": 1,
@@ -586,7 +570,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="k-Line"
+      className="sc-bwzfXH cbKhgF k-Line k-Line--noGap"
       style={
         Object {
           "lineHeight": 1,

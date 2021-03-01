@@ -11,19 +11,19 @@ export const Default = () => (
   <Grid>
     <GridCol offset="1" col="10">
       <div>
-        <ArrowIcon version="solid" direction="top" />
+        <ArrowIcon direction="top" />
       </div>
       <div>
-        <ArrowIcon version="solid" direction="right" />
+        <ArrowIcon direction="right" />
       </div>
       <div>
-        <ArrowIcon version="solid" direction="bottom" />
+        <ArrowIcon direction="bottom" />
       </div>
       <div>
-        <ArrowIcon version="solid" direction="left" />
+        <ArrowIcon direction="left" />
       </div>
       <div>
-        <ArrowIcon version="solid" direction="top" disabled />
+        <ArrowIcon direction="top" disabled />
       </div>
     </GridCol>
   </Grid>

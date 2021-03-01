@@ -9,7 +9,7 @@ Array [
       className="sc-bwzfXH gRnEuD"
     >
       <div
-        className="k-Line"
+        className="sc-htpNat eoyQWy k-Line k-Line--noGap"
         style={
           Object {
             "lineHeight": 1,
@@ -57,7 +57,7 @@ Array [
       className="sc-bwzfXH gRnEuD"
     >
       <div
-        className="k-Line"
+        className="sc-htpNat eoyQWy k-Line k-Line--noGap"
         style={
           Object {
             "lineHeight": 1,
@@ -110,7 +110,7 @@ Array [
       className="sc-bwzfXH gRnEuD"
     >
       <div
-        className="k-Line"
+        className="sc-htpNat eoyQWy k-Line k-Line--noGap"
         style={
           Object {
             "lineHeight": 1,
