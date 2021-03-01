@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { ScreenConfig } from '../../../constants/screen-config'
@@ -190,6 +191,10 @@ const HeaderNav = ({
           isSticky={stickyState}
           isMenuExpanded={isMenuExpanded}
           {...stickyProps}
+          className={classNames(
+            'k-HeaderNav__stickyContainer',
+            stickyProps.className,
+          )}
         >
           <Navigation
             ref={headerRef}
