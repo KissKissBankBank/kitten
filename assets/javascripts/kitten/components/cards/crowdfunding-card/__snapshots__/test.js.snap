@@ -630,13 +630,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   text-decoration: none;
 }
 
-.c2 >:nth-child(n) {
+.c2 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
-}
-
-.c2 >:last-child {
-  margin-right: 0;
 }
 
 .c2 svg,
@@ -1252,13 +1248,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   text-decoration: none;
 }
 
-.c2 >:nth-child(n) {
+.c2 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
-}
-
-.c2 >:last-child {
-  margin-right: 0;
 }
 
 .c2 svg,
@@ -1876,13 +1868,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   text-decoration: none;
 }
 
-.c3 >:nth-child(n) {
+.c3 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
-}
-
-.c3 >:last-child {
-  margin-right: 0;
 }
 
 .c3 svg,

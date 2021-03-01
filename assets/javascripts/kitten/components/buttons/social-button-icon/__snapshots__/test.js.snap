@@ -52,7 +52,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -185,7 +185,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -332,7 +332,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -481,7 +481,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -630,7 +630,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -763,7 +763,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -903,7 +903,7 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -1036,7 +1036,7 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -1176,7 +1176,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -1309,7 +1309,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -1449,7 +1449,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -1582,7 +1582,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
 }

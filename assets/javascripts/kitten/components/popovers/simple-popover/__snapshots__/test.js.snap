@@ -80,13 +80,9 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   text-decoration: none;
 }
 
-.c1 >:nth-child(n) {
+.c1 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
-}
-
-.c1 >:last-child {
-  margin-right: 0;
 }
 
 .c1 svg,
@@ -170,13 +166,9 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   text-decoration: none;
 }
 
-.c9 >:nth-child(n) {
+.c9 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
-}
-
-.c9 >:last-child {
-  margin-right: 0;
 }
 
 .c9 svg,
@@ -260,13 +252,9 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   text-decoration: none;
 }
 
-.c10 >:nth-child(n) {
+.c10 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
-}
-
-.c10 >:last-child {
-  margin-right: 0;
 }
 
 .c10 svg,
@@ -597,13 +585,9 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c1 >:nth-child(n) {
+.c1 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
-}
-
-.c1 >:last-child {
-  margin-right: 0;
 }
 
 .c1 svg,

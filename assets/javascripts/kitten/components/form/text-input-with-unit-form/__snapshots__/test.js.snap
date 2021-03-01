@@ -57,7 +57,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
       className="k-Grid__col--12 k-u-align-center"
     >
       <button
-        className="sc-EHOje dXaVFU k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+        className="sc-EHOje jTXTfS k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
         disabled={false}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -125,7 +125,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
       className="k-Grid__col--12 k-u-align-center"
     >
       <button
-        className="sc-EHOje dXaVFU k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+        className="sc-EHOje jTXTfS k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
         disabled={false}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -193,7 +193,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
       className="k-Grid__col--12 k-u-align-center"
     >
       <button
-        className="sc-EHOje dXaVFU k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+        className="sc-EHOje jTXTfS k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
         disabled={true}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -270,7 +270,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
       className="k-Grid__col--12 k-u-align-center"
     >
       <button
-        className="sc-EHOje dXaVFU k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+        className="sc-EHOje jTXTfS k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
         disabled={false}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}

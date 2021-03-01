@@ -48,10 +48,6 @@ const StyledButton = styled.button`
       }
     `}
 
-  > :last-child {
-    margin-right: 0;
-  }
-
   ${({ borderRadius }) =>
     borderRadius > 0 &&
     css`

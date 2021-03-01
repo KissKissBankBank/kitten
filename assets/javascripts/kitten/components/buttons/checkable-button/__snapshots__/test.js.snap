@@ -47,13 +47,9 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0 svg,
@@ -202,13 +198,9 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0 svg,
@@ -373,13 +365,9 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0 svg,
@@ -528,13 +516,9 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0 svg,
@@ -674,13 +658,9 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
+.c0 >:not(:last-child) {
   margin-right: 0.625rem;
   text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0 svg,

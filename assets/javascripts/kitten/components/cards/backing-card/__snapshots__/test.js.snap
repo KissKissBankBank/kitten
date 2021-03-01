@@ -150,7 +150,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
     </ul>
   </div>
   <button
-    className="sc-bxivhb hYUqPP k-BackingCard__button k-BackingCard__drawer"
+    className="sc-bxivhb jhUcSF k-BackingCard__button k-BackingCard__drawer"
     disabled={true}
   >
     Je soutiens
