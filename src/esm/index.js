@@ -161,11 +161,7 @@ export { SingleEntryTable } from './components/tables/single-entry-table'; // Te
 
 export { TextCopy } from './components/text-copy'; // Tooltips
 
-export { QuestionMarkWithTooltip } from './components/tooltips/question-mark-with-tooltip';
-export { StaticTooltip } from './components/tooltips/static-tooltip';
-export { Toggletip } from './components/tooltips/toggletip';
-export { TooltipNew } from './components/tooltips/tooltip-new';
-export { Tooltip } from './components/tooltips/tooltip'; // Tours
+export { Toggletip } from './components/tooltips/toggletip'; // Tours
 
 export { HighlightHalo } from './components/tours/highlight-halo'; // Typography
 
@@ -293,6 +289,7 @@ export { createEvent } from './helpers/dom/create-event';
 export { cssPropertyDistributor } from './helpers/dom/css-property-distributor';
 export { default as domElementHelper } from './helpers/dom/element-helper';
 export { nativeInputValueSetter } from './helpers/dom/native-input-value-setter';
+export { useFlexGapCheck } from './helpers/dom/use-flex-gap-check';
 export { getReactElementsByType, getReactElementsWithoutType } from './helpers/react/react-elements';
 export { default as useContinuousIntersectionObserver } from './helpers/utils/continuous-intersection-hook';
 export { default as useIntersectionObserver } from './helpers/utils/intersection-hook';

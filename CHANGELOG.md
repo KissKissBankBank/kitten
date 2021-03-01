@@ -4,28 +4,48 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Make `Marger` a function instead of a React.Component.
-- Breaking change: Remove `LinkBox` default export.
-- Breaking change: Remove deprecated `LinkBox/deprecated` component.
-- Breaking change: Remove `k-LinkBox` mixin.
+## [3.0.0-beta.6] - 2021-03-01
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-Line`
+  - `k-LinkBox`
+  - `k-SideGrid`
+  - `k-StaticTooltip`
+  - `k-Tooltip`
+  - `k-TooltipNew`
+  - `k-VerticalGrid`
+- Delete the following deprecated components:
+  - `LinkBox/deprecated`
+  - `QuestionMarkWithTooltip`
+  - `StaticTooltip`
+  - `Tooltip`
+  - `TooltipNew`
+- Remove `withTooltip` HOC.
+- Remove `LinkBox` default export.
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+  - `Line`
+  - `SideGrid`
+  - `SideLayout`
+- Make `Marger` a function instead of a React.Component.
+- Add `tooltipProps` prop to `Field/Label` component.
+- Add `useFlexGapCheck` hook for flexbox `gap` feature detection.
+
+Fixes:
+
 - Fix `InformationBox` style.
-- Breaking Change: Remove `k-SideGrid` and `k-VerticalGrid` mixins.
-- Feature: Migrate `SideGrid` and `SideLayout` to Styled Components.
-- Breaking change: Remove `k-Tooltip`, `k-TooltipNew` and `k-StaticTooltip` styles.
-- Breaking change: Remove `QuestionMarkWithTooltip`, `Tooltip`, `TooltipNew` and `StaticTooltip` components.
-- Breaking change: Remove `withTooltip` HOC.
-- Feature: Add `tooltipProps` prop to `Field/Label` component.
-- Breaking change: convert `Line` to CSS-in-JS.
-- Breaking change: remove `k-Line` mixin.
-- Feature: Add `useFlexGapCheck` hook for `gap` feature detection.
 - Fix gap bug on Safari for the following components:
+  - `BackingCard`
+  - `DashboardLayout.Flow`
+  - `DashboardLayout`
+  - `DashboardMenu`
+  - `ImageCropper`
   - `Loader`
   - `LoaderWithParagraph`
-  - `BackingCard`
-  - `ImageCropper`
-  - `DashboardLayout`
-  - `DashboardLayout.Flow`
-  - `DashboardMenu`
 
 ## [3.0.0-beta.5] - 2021-02-25
 

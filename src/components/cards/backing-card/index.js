@@ -23,16 +23,20 @@ var _styles = require("./styles");
 
 var _components = require("./components");
 
+var _useFlexGapCheck = require("../../../helpers/dom/use-flex-gap-check");
+
 var BackingCard = function BackingCard(_ref) {
   var children = _ref.children,
       className = _ref.className,
       disabled = _ref.disabled,
       hasBorder = _ref.hasBorder,
       props = (0, _objectWithoutProperties2.default)(_ref, ["children", "className", "disabled", "hasBorder"]);
+  var canUseGap = (0, _useFlexGapCheck.useFlexGapCheck)();
   return /*#__PURE__*/_react.default.createElement(_styles.StyledBackingCard, (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-BackingCard', className, {
       'k-BackingCard--disabled': disabled,
-      'k-BackingCard--hasBorder': hasBorder
+      'k-BackingCard--hasBorder': hasBorder,
+      'k-BackingCard--noGap': !canUseGap
     })
   }), _react.default.Children.map(children, function (child) {
     if (!child) return null;

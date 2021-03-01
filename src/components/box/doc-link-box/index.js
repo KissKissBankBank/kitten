@@ -13,7 +13,7 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireDefault(require("react"));
 
-var _linkBox = _interopRequireDefault(require("./../link-box"));
+var _linkBox = require("./../link-box");
 
 var _linkBoxIllustration = require("./../../../components/illustrations/link-box-illustration");
 
@@ -25,12 +25,12 @@ var DocLinkBox = function DocLinkBox(_ref) {
       title = _ref.title,
       text = _ref.text,
       props = (0, _objectWithoutProperties2.default)(_ref, ["isExternal", "href", "title", "text"]);
-  return /*#__PURE__*/_react.default.createElement(_linkBox.default, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_linkBox.LinkBox, (0, _extends2.default)({
     href: href,
     isExternal: isExternal
-  }, props), /*#__PURE__*/_react.default.createElement(_linkBox.default.Icon, null, /*#__PURE__*/_react.default.createElement(_linkBoxIllustration.LinkBoxIllustration, {
+  }, props), /*#__PURE__*/_react.default.createElement(_linkBox.LinkBox.Icon, null, /*#__PURE__*/_react.default.createElement(_linkBoxIllustration.LinkBoxIllustration, {
     className: "k-LinkBox__icon--svg"
-  })), /*#__PURE__*/_react.default.createElement(_linkBox.default.Text, null, /*#__PURE__*/_react.default.createElement(_text.Text, {
+  })), /*#__PURE__*/_react.default.createElement(_linkBox.LinkBox.Text, null, /*#__PURE__*/_react.default.createElement(_text.Text, {
     tag: "span",
     weight: "regular",
     size: "tiny",

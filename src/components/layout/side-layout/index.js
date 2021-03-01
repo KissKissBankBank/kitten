@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -7,85 +9,50 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.SideLayout = void 0;
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _bowser = _interopRequireDefault(require("bowser"));
 
 var _sideGrid = require("../../../components/grid/side-grid");
 
-var _grid = require("../../../components/grid/grid");
+var StyledSideLayout = (0, _styledComponents.default)(_sideGrid.SideGrid).withConfig({
+  displayName: "side-layout__StyledSideLayout",
+  componentId: "ocof17-0"
+})([".k-VerticalGrid__fluid{flex-basis:100%;}.k-VerticalGrid__fullHeight{height:100vh;}.k-VerticalGrid__container{display:flex;height:100%;}.k-VerticalGrid__element{flex-grow:1;}"]);
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+var SideLayout = function SideLayout(_ref) {
+  var className = _ref.className,
+      children = _ref.children,
+      sidebar = _ref.sidebar;
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+  var _useState = (0, _react.useState)(false),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      needsFullHeight = _useState2[0],
+      setNeedsFullHeight = _useState2[1];
 
-var SideLayout = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2.default)(SideLayout, _React$Component);
-
-  var _super = _createSuper(SideLayout);
-
-  function SideLayout(props) {
-    var _this;
-
-    (0, _classCallCheck2.default)(this, SideLayout);
-    _this = _super.call(this, props);
-    _this.state = {
-      needsFullHeight: false
-    };
-    return _this;
-  }
-
-  (0, _createClass2.default)(SideLayout, [{
-    key: "needsFullHeight",
-    value: function needsFullHeight() {
-      return !!_bowser.default.safari;
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.setState({
-        needsFullHeight: this.needsFullHeight()
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var className = this.props.className;
-      var hasFluidLayout = (className || '').search('k-VerticalGrid__fluid') != -1;
-      var hasFullHeightLayout = hasFluidLayout && this.state.needsFullHeight;
-      var sideLayoutClassName = (0, _classnames.default)(className, {
-        'k-VerticalGrid__fullHeight': hasFullHeightLayout
-      });
-      return /*#__PURE__*/_react.default.createElement(_sideGrid.SideGrid, {
-        className: sideLayoutClassName,
-        containerClassName: "k-VerticalGrid__container",
-        rowClassName: "k-VerticalGrid__element"
-      }, /*#__PURE__*/_react.default.createElement(_sideGrid.SideGridContent, null, /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
-        "col-s": "12"
-      }, this.props.children))), /*#__PURE__*/_react.default.createElement(_sideGrid.SideGridAside, {
-        className: "k-VerticalGrid__element"
-      }, this.props.sidebar));
-    }
-  }]);
-  return SideLayout;
-}(_react.default.Component);
+  (0, _react.useEffect)(function () {
+    setNeedsFullHeight(!!_bowser.default.safari);
+  }, []);
+  var hasFluidLayout = (className || '').search('k-VerticalGrid__fluid') != -1;
+  return /*#__PURE__*/_react.default.createElement(StyledSideLayout, {
+    className: (0, _classnames.default)(className, {
+      'k-VerticalGrid__fullHeight': hasFluidLayout && needsFullHeight
+    }),
+    containerClassName: "k-VerticalGrid__container",
+    rowClassName: "k-VerticalGrid__element"
+  }, /*#__PURE__*/_react.default.createElement(_sideGrid.SideGridContent, null, children), /*#__PURE__*/_react.default.createElement(_sideGrid.SideGridAside, {
+    className: "k-VerticalGrid__element"
+  }, sidebar));
+};
 
 exports.SideLayout = SideLayout;
 SideLayout.defaultProps = {
   children: 'Children',
-  // sidebar: renderOfWhatYouWant() // Content for aside grid
-  // E.g: see assets/javascripts/../../karl/layout/side-layout.js
   sidebar: null
 };
