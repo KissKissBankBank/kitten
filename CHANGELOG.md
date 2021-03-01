@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Make `Marger` a function instead of a React.Component.
 - Breaking change: Remove `LinkBox` default export.
 - Breaking change: Remove deprecated `LinkBox/deprecated` component.
 - Breaking change: Remove `k-LinkBox` mixin.
