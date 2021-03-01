@@ -328,6 +328,7 @@ export const Button = ({
   fluid,
   icon,
   borderRadius,
+  tag,
   ...props
 }) => {
   const actualSize = (() => {
@@ -369,6 +370,7 @@ export const Button = ({
       style={{ '--border-radius': pxToRem(borderRadius) }}
       modifier={modifier}
       type="button"
+      as={tag}
       {...props}
     >
       {children}
@@ -377,6 +379,7 @@ export const Button = ({
 }
 
 Button.propTypes = {
+  tag: PropType.string,
   borderRadius: PropTypes.number,
   nano: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   micro: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
@@ -414,6 +417,7 @@ Button.propTypes = {
   variant: PropTypes.oneOf(['andromeda', 'orion']),
 }
 Button.defaultProps = {
+  tag: 'button',
   fluid: false,
   icon: false,
   rounded: false,

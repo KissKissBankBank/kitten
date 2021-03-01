@@ -16,6 +16,22 @@ describe('<Button />', () => {
     })
   })
 
+  describe('with `tag` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Button tag="a" href="#helloWorld">
+            MyButton
+          </Button>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with `tiny` prop', () => {
     beforeEach(() => {
       component = renderer
