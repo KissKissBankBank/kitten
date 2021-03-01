@@ -97,7 +97,7 @@ var DashboardLayout = function DashboardLayout(_ref) {
   };
 
   var renderComponentArray = function renderComponentArray(childrenArray, otherProps) {
-    return childrenArray.map(function (child) {
+    return childrenArray.map(function (child, index) {
       if (!child) return null;
       return (0, _isFunction.default)(child) ? child((0, _extends2.default)({
         openSideBar: function openSideBar() {
@@ -107,7 +107,9 @@ var DashboardLayout = function DashboardLayout(_ref) {
           return setOpen(false);
         },
         isSidebarOpen: isOpen
-      }, otherProps)) : _react.default.cloneElement(child, otherProps);
+      }, otherProps)) : _react.default.cloneElement(child, (0, _extends2.default)({
+        key: "content_child_".concat(index)
+      }, otherProps));
     });
   };
 
@@ -201,7 +203,8 @@ var DashboardLayout = function DashboardLayout(_ref) {
     className: (0, _classnames.default)('k-DashboardLayout__backLink', backLinkProps.className)
   }), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
     direction: "left",
-    color: _colorsConfig.default.background1
+    color: _colorsConfig.default.background1,
+    version: "solid"
   }), /*#__PURE__*/_react.default.createElement("span", {
     className: "k-DashboardLayout__backLink__text"
   }, backLinkProps.children)), renderComponentChildrenArray((0, _reactElements.getReactElementsByType)({

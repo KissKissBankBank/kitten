@@ -376,7 +376,7 @@ export const DashboardLayout = ({
   }
 
   const renderComponentArray = (childrenArray, otherProps) => {
-    return childrenArray.map(child => {
+    return childrenArray.map((child, index) => {
       if (!child) return null
 
       return isFunction(child)
@@ -386,7 +386,10 @@ export const DashboardLayout = ({
             isSidebarOpen: isOpen,
             ...otherProps,
           })
-        : React.cloneElement(child, otherProps)
+        : React.cloneElement(child, {
+            key: `content_child_${index}`,
+            ...otherProps,
+          })
     })
   }
 

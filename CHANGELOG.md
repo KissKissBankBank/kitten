@@ -162,6 +162,17 @@ Breaking changes:
   - `RewardCardLegacy`
   - `SimilarProjectsCard`.
 
+## [2.123.0] - 2021-03-01
+
+Feature:
+
+-  Add `PeopleIcon`, `StatsIcon` and `SpeechBubbleIcon`.
+
+Fixes:
+
+- Remove `unique "key" prop` error on `DashboardLayout`.
+- Fix `StickyContainer` width on `HeaderNav`.
+
 ## [2.122.0] - 2021-02-25
 
 Features:

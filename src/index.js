@@ -1463,6 +1463,24 @@ Object.defineProperty(exports, "ShieldIcon", {
     return _shieldIcon.ShieldIcon;
   }
 });
+Object.defineProperty(exports, "PeopleIcon", {
+  enumerable: true,
+  get: function get() {
+    return _peopleIcon.PeopleIcon;
+  }
+});
+Object.defineProperty(exports, "StatsIcon", {
+  enumerable: true,
+  get: function get() {
+    return _statsIcon.StatsIcon;
+  }
+});
+Object.defineProperty(exports, "SpeechBubbleIcon", {
+  enumerable: true,
+  get: function get() {
+    return _speechBubbleIcon.SpeechBubbleIcon;
+  }
+});
 Object.defineProperty(exports, "COLORS", {
   enumerable: true,
   get: function get() {
@@ -2075,6 +2093,12 @@ var _fileIcon = require("./components/icons/file-icon");
 var _loudspeakerIcon = require("./components/icons/loudspeaker-icon");
 
 var _shieldIcon = require("./components/icons/shield-icon");
+
+var _peopleIcon = require("./components/icons/people-icon");
+
+var _statsIcon = require("./components/icons/stats-icon");
+
+var _speechBubbleIcon = require("./components/icons/speech-bubble-icon");
 
 var _colorsConfig = _interopRequireDefault(require("./constants/colors-config"));
 
