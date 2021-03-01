@@ -24,32 +24,32 @@ const StyledButtonImage = styled.button`
     opacity: 0.8;
   }
 
-  &.k-ButtonImageNext--tiny {
+  &.k-ButtonImage--tiny {
     width: ${pxToRem(30)};
     height: ${pxToRem(30)};
   }
 
-  &.k-ButtonImageNext--big {
+  &.k-ButtonImage--big {
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: ${pxToRem(50)};
       height: ${pxToRem(50)};
     }
   }
 
-  &.k-ButtonImageNext--huge {
+  &.k-ButtonImage--huge {
     width: ${pxToRem(80)};
     height: ${pxToRem(80)};
   }
 
-  &.k-ButtonImageNext--withoutPointerEvents {
+  &.k-ButtonImage--withoutPointerEvents {
     pointer-events: none;
   }
 
-  &.k-ButtonImageNext--withBorder {
+  &.k-ButtonImage--withBorder {
     border: ${pxToRem(2)} solid ${COLORS.line1};
   }
 
-  .k-ButtonImageNext__img {
+  .k-ButtonImage__img {
     display: block;
     margin: 0;
     padding: 0;
@@ -75,13 +75,13 @@ export const ButtonImage = ({
     <StyledButtonImage
       as={tag}
       className={classNames(
-        'k-ButtonImageNext',
+        'k-ButtonImage',
         {
-          'k-ButtonImageNext--tiny': tiny,
-          'k-ButtonImageNext--big': big,
-          'k-ButtonImageNext--huge': huge,
-          'k-ButtonImageNext--withoutPointerEvents': withoutPointerEvents,
-          'k-ButtonImageNext--withBorder': withBorder,
+          'k-ButtonImage--tiny': tiny,
+          'k-ButtonImage--big': big,
+          'k-ButtonImage--huge': huge,
+          'k-ButtonImage--withoutPointerEvents': withoutPointerEvents,
+          'k-ButtonImage--withBorder': withBorder,
         },
         className,
       )}
@@ -90,7 +90,7 @@ export const ButtonImage = ({
       {!!img && (
         <img
           {...img}
-          className={classNames('k-ButtonImageNext__img', img.className)}
+          className={classNames('k-ButtonImage__img', img.className)}
           alt={img.alt || ''}
         />
       )}
