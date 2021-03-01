@@ -10,6 +10,7 @@ export { Badge } from './components/atoms/badge';
 export { IconBadge } from './components/atoms/icon-badge';
 export { Loader } from './components/atoms/loader';
 export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph';
+export { StepperIcon, StepperIconDefault, StepperIconInProgress, StepperIconValidated } from './components/atoms/stepper-icon';
 export { Tag } from './components/atoms/tag'; // Avatar
 
 export { AvatarWithTextAndBadge } from './components/avatar/avatar-with-text-and-badge'; // Box
@@ -152,7 +153,6 @@ export { SearchInput } from './components/search/search-input'; // Status with B
 export { StatusWithBullet } from './components/status-with-bullet'; // Steppers
 
 export { VerticalStepper } from './components/steppers/vertical-stepper';
-export { StepperIconDefault, StepperIconInProgress, StepperIconValidated } from './components/steppers/stepper-icon';
 export { Stepper } from './components/steppers/stepper'; // Tables
 
 export { DoubleEntryTable } from './components/tables/double-entry-table';

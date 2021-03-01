@@ -1,7 +1,9 @@
-// https://ishadeed.com/article/flexbox-gap/
+import domElementHelper from '../element-helper'; // https://ishadeed.com/article/flexbox-gap/
 // Waiting for next Safari
+
 export var useFlexGapCheck = function useFlexGapCheck() {
-  // create flex container with row-gap set
+  if (!domElementHelper.canUseDom()) return true; // create flex container with row-gap set
+
   var flex = document.createElement('div');
   flex.style.display = 'flex';
   flex.style.flexDirection = 'column';

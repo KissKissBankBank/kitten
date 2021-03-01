@@ -41,6 +41,30 @@ Object.defineProperty(exports, "LoaderWithParagraph", {
     return _loaderWithParagraph.LoaderWithParagraph;
   }
 });
+Object.defineProperty(exports, "StepperIcon", {
+  enumerable: true,
+  get: function get() {
+    return _stepperIcon.StepperIcon;
+  }
+});
+Object.defineProperty(exports, "StepperIconDefault", {
+  enumerable: true,
+  get: function get() {
+    return _stepperIcon.StepperIconDefault;
+  }
+});
+Object.defineProperty(exports, "StepperIconInProgress", {
+  enumerable: true,
+  get: function get() {
+    return _stepperIcon.StepperIconInProgress;
+  }
+});
+Object.defineProperty(exports, "StepperIconValidated", {
+  enumerable: true,
+  get: function get() {
+    return _stepperIcon.StepperIconValidated;
+  }
+});
 Object.defineProperty(exports, "Tag", {
   enumerable: true,
   get: function get() {
@@ -777,24 +801,6 @@ Object.defineProperty(exports, "VerticalStepper", {
   enumerable: true,
   get: function get() {
     return _verticalStepper.VerticalStepper;
-  }
-});
-Object.defineProperty(exports, "StepperIconDefault", {
-  enumerable: true,
-  get: function get() {
-    return _stepperIcon.StepperIconDefault;
-  }
-});
-Object.defineProperty(exports, "StepperIconInProgress", {
-  enumerable: true,
-  get: function get() {
-    return _stepperIcon.StepperIconInProgress;
-  }
-});
-Object.defineProperty(exports, "StepperIconValidated", {
-  enumerable: true,
-  get: function get() {
-    return _stepperIcon.StepperIconValidated;
   }
 });
 Object.defineProperty(exports, "Stepper", {
@@ -1632,6 +1638,8 @@ var _loader = require("./components/atoms/loader");
 
 var _loaderWithParagraph = require("./components/atoms/loader-with-paragraph");
 
+var _stepperIcon = require("./components/atoms/stepper-icon");
+
 var _tag = require("./components/atoms/tag");
 
 var _avatarWithTextAndBadge = require("./components/avatar/avatar-with-text-and-badge");
@@ -1857,8 +1865,6 @@ var _searchInput = require("./components/search/search-input");
 var _statusWithBullet = require("./components/status-with-bullet");
 
 var _verticalStepper = require("./components/steppers/vertical-stepper");
-
-var _stepperIcon = require("./components/steppers/stepper-icon");
 
 var _stepper = require("./components/steppers/stepper");
 

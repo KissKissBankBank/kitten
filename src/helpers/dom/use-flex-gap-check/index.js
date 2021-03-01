@@ -1,14 +1,19 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.useFlexGapCheck = void 0;
 
+var _elementHelper = _interopRequireDefault(require("../element-helper"));
+
 // https://ishadeed.com/article/flexbox-gap/
 // Waiting for next Safari
 var useFlexGapCheck = function useFlexGapCheck() {
-  // create flex container with row-gap set
+  if (!_elementHelper.default.canUseDom()) return true; // create flex container with row-gap set
+
   var flex = document.createElement('div');
   flex.style.display = 'flex';
   flex.style.flexDirection = 'column';
