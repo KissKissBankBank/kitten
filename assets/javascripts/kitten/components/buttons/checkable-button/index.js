@@ -27,8 +27,8 @@ const StyledCheckableButton = styled(Button)`
     position: absolute;
 
     ${({ size }) => {
-      if (size === 'true') return checkedCircleIconStyle(15)
-      if (size === 'true') return checkedCircleIconStyle(24)
+      if (size === 'tiny') return checkedCircleIconStyle(15)
+      if (size === 'big') return checkedCircleIconStyle(24)
       return checkedCircleIconStyle(20)
     }}
 
