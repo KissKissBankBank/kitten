@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SideLayout /> by default matches with snapshot 1`] = `
+.c2 {
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  max-width: 90rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.c0 .k-SideGrid__content {
+  background-color: #fff;
+  padding-bottom: 1.875rem;
+}
+
+.c0 .k-SideGrid__aside {
+  display: none;
+}
+
+.c0 .k-SideGrid__asideContent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  border-left: 0.0625rem solid #eee;
+  background-color: #fbfbfb;
+}
+
+.c0.k-SideGrid--aside-start .k-SideGrid__row {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c0.k-SideGrid--aside-start .k-SideGrid__aside {
+  border-left: none;
+  border-right: 0.625rem solid #fff;
+  padding-left: 0.625rem;
+  padding-right: 0;
+}
+
+.c0.k-SideGrid--aside-start .k-SideGrid__asideContent {
+  border-left: none;
+  border-right: 0.0625rem solid #eee;
+}
+
+.c1 .k-VerticalGrid__fluid {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c1 .k-VerticalGrid__fullHeight {
+  height: 100vh;
+}
+
+.c1 .k-VerticalGrid__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.c1 .k-VerticalGrid__element {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+@media (min-width:640px) {
+  .c2 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0 {
+    background: linear-gradient( to right,#fff 0%,#fff 50%,#fbfbfb 50%,#fbfbfb 100% );
+  }
+}
+
+@media (min-width:48rem) {
+  .c0 .k-SideGrid__content {
+    padding-bottom: 3.125rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0 .k-SideGrid__aside {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-left: 0.625rem solid #fff;
+    padding-left: 0;
+    padding-right: 0.625rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-SideGrid--aside-start {
+    background: linear-gradient( to left,#fff 0%,#fff 50%,#fbfbfb 50%,#fbfbfb 100% );
+  }
+}
+
+<div
+  className="c0 k-SideGrid c1 ClassName k-SideGrid--aside-end k-SideGrid--aside-default"
+>
+  <div
+    className="c2 k-SideGrid__container k-VerticalGrid__container"
+  >
+    <div
+      className="k-Grid k-SideGrid__row k-VerticalGrid__element"
+    >
+      <div
+        className="k-Grid__col--12 k-Grid__col--8@m k-SideGrid__content"
+      >
+        Foobar
+      </div>
+      <div
+        className="k-Grid__col--12 k-Grid__col--4@m k-SideGrid__aside k-VerticalGrid__element"
+      >
+        <div
+          className="k-SideGrid__asideContent"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<SideLayout /> with sidebar prop matches with snapshot 1`] = `
+.c2 {
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  max-width: 90rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.c0 .k-SideGrid__content {
+  background-color: #fff;
+  padding-bottom: 1.875rem;
+}
+
+.c0 .k-SideGrid__aside {
+  display: none;
+}
+
+.c0 .k-SideGrid__asideContent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  border-left: 0.0625rem solid #eee;
+  background-color: #fbfbfb;
+}
+
+.c0.k-SideGrid--aside-start .k-SideGrid__row {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c0.k-SideGrid--aside-start .k-SideGrid__aside {
+  border-left: none;
+  border-right: 0.625rem solid #fff;
+  padding-left: 0.625rem;
+  padding-right: 0;
+}
+
+.c0.k-SideGrid--aside-start .k-SideGrid__asideContent {
+  border-left: none;
+  border-right: 0.0625rem solid #eee;
+}
+
+.c1 .k-VerticalGrid__fluid {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c1 .k-VerticalGrid__fullHeight {
+  height: 100vh;
+}
+
+.c1 .k-VerticalGrid__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.c1 .k-VerticalGrid__element {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+@media (min-width:640px) {
+  .c2 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0 {
+    background: linear-gradient( to right,#fff 0%,#fff 50%,#fbfbfb 50%,#fbfbfb 100% );
+  }
+}
+
+@media (min-width:48rem) {
+  .c0 .k-SideGrid__content {
+    padding-bottom: 3.125rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0 .k-SideGrid__aside {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-left: 0.625rem solid #fff;
+    padding-left: 0;
+    padding-right: 0.625rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-SideGrid--aside-start {
+    background: linear-gradient( to left,#fff 0%,#fff 50%,#fbfbfb 50%,#fbfbfb 100% );
+  }
+}
+
+<div
+  className="c0 k-SideGrid c1 k-SideGrid--aside-end k-SideGrid--aside-default"
+>
+  <div
+    className="c2 k-SideGrid__container k-VerticalGrid__container"
+  >
+    <div
+      className="k-Grid k-SideGrid__row k-VerticalGrid__element"
+    >
+      <div
+        className="k-Grid__col--12 k-Grid__col--8@m k-SideGrid__content"
+      >
+        Foobar
+      </div>
+      <div
+        className="k-Grid__col--12 k-Grid__col--4@m k-SideGrid__aside k-VerticalGrid__element"
+      >
+        <div
+          className="k-SideGrid__asideContent"
+        >
+          Sidebar content
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

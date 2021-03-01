@@ -5,6 +5,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Make `Marger` a function instead of a React.Component.
+- Breaking change: Remove `LinkBox` default export.
+- Breaking change: Remove deprecated `LinkBox/deprecated` component.
+- Breaking change: Remove `k-LinkBox` mixin.
+- Fix `InformationBox` style.
+- Breaking Change: Remove `k-SideGrid` and `k-VerticalGrid` mixins.
+- Feature: Migrate `SideGrid` and `SideLayout` to Styled Components.
+- Breaking change: Remove `k-Tooltip`, `k-TooltipNew` and `k-StaticTooltip` styles.
+- Breaking change: Remove `QuestionMarkWithTooltip`, `Tooltip`, `TooltipNew` and `StaticTooltip` components.
+- Breaking change: Remove `withTooltip` HOC.
+- Feature: Add `tooltipProps` prop to `Field/Label` component.
+- Breaking change: convert `Line` to CSS-in-JS.
+- Breaking change: remove `k-Line` mixin.
+- Feature: Add `useFlexGapCheck` hook for `gap` feature detection.
+- Fix gap bug on Safari for the following components:
+  - `Loader`
+  - `LoaderWithParagraph`
+  - `BackingCard`
+  - `ImageCropper`
+  - `DashboardLayout`
+  - `DashboardLayout.Flow`
+  - `DashboardMenu`
 
 ## [3.0.0-beta.5] - 2021-02-25
 
@@ -151,6 +172,17 @@ Breaking changes:
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
   - `SimilarProjectsCard`.
+
+## [2.123.0] - 2021-03-01
+
+Feature:
+
+-  Add `PeopleIcon`, `StatsIcon` and `SpeechBubbleIcon`.
+
+Fixes:
+
+- Remove `unique "key" prop` error on `DashboardLayout`.
+- Fix `StickyContainer` width on `HeaderNav`.
 
 ## [2.122.0] - 2021-02-25
 
