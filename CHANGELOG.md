@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Allow for `null` value on `HeaderNav` `stickyProps` prop.
+
 ## [2.123.0] - 2021-03-01
 
 Feature:
