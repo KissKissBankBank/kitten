@@ -92,7 +92,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
               className="k-Grid__col--12 k-u-align-center"
             >
               <button
-                className="sc-gzVnrw gXqVkF k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+                className="sc-gzVnrw jbWRzU k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
                 disabled={false}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}

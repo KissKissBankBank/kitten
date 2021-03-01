@@ -2,7 +2,7 @@
 
 exports[`<ButtonIcon /> by default matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa MVkmT sc-htpNat eNOWYY k-ButtonIcon"
+  className="sc-bdVaJa eqpcrT sc-htpNat eNOWYY k-ButtonIcon"
 >
   <svg
     className="k-ButtonIcon__svg"
@@ -12,7 +12,7 @@ exports[`<ButtonIcon /> by default matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> className prop matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa MVkmT sc-htpNat eNOWYY k-ButtonIcon test_className_prop"
+  className="sc-bdVaJa eqpcrT sc-htpNat eNOWYY k-ButtonIcon test_className_prop"
 >
   <svg
     className="k-ButtonIcon__svg"
@@ -22,7 +22,7 @@ exports[`<ButtonIcon /> className prop matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> modifier prop matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa dGjTkf sc-htpNat eNOWYY k-ButtonIcon"
+  className="sc-bdVaJa eqafPC sc-htpNat eNOWYY k-ButtonIcon"
 >
   <svg
     className="k-ButtonIcon__svg"
@@ -32,7 +32,7 @@ exports[`<ButtonIcon /> modifier prop matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> rounded prop matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa dXWuit sc-htpNat eNOWYY k-ButtonIcon"
+  className="sc-bdVaJa hPrArd sc-htpNat eNOWYY k-ButtonIcon"
 >
   <svg
     className="k-ButtonIcon__svg"
@@ -42,7 +42,7 @@ exports[`<ButtonIcon /> rounded prop matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> size prop matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa DMqca sc-htpNat eNOWYY k-ButtonIcon k-ButtonIcon--nano"
+  className="sc-bdVaJa kJlCqw sc-htpNat eNOWYY k-ButtonIcon k-ButtonIcon--nano"
 >
   <svg
     className="k-ButtonIcon__svg"
@@ -52,7 +52,7 @@ exports[`<ButtonIcon /> size prop matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> tag prop matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa MVkmT sc-htpNat eNOWYY k-ButtonIcon"
+  className="sc-bdVaJa eqpcrT sc-htpNat eNOWYY k-ButtonIcon"
 >
   <svg
     className="k-ButtonIcon__svg"
@@ -62,7 +62,7 @@ exports[`<ButtonIcon /> tag prop matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> with tag="a" and no href matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa MVkmT sc-htpNat eNOWYY k-ButtonIcon"
+  className="sc-bdVaJa eqpcrT sc-htpNat eNOWYY k-ButtonIcon"
 >
   <svg
     className="k-ButtonIcon__svg"
@@ -72,7 +72,7 @@ exports[`<ButtonIcon /> with tag="a" and no href matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> with tag="a" href="foo" matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa MVkmT sc-htpNat eNOWYY k-ButtonIcon"
+  className="sc-bdVaJa eqpcrT sc-htpNat eNOWYY k-ButtonIcon"
   href="foo"
 >
   <svg
@@ -83,6 +83,6 @@ exports[`<ButtonIcon /> with tag="a" href="foo" matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> without children matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa MVkmT sc-htpNat eNOWYY k-ButtonIcon"
+  className="sc-bdVaJa eqpcrT sc-htpNat eNOWYY k-ButtonIcon"
 />
 `;
