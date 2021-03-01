@@ -67,10 +67,6 @@ export const WithText = () => (
     variant={select('Variant', variantOptions, 'andromeda')}
     disabled={boolean('Disabled', false)}
     borderRadius={number('Border radius', 0, radiusBorderRange)}
-    tiny={boolean('Tiny', false)}
-    big={boolean('Big', false)}
-    huge={boolean('Huge', false)}
-    giant={boolean('Giant', false)}
   >
     {text('Text', 'MyButton')}
   </Button>
@@ -100,12 +96,6 @@ export const WithIcon = () => (
     disabled={boolean('Disabled', false)}
     borderRadius={number('Border radius', 0, radiusBorderRange)}
     icon
-    nano={boolean('Nano', false)}
-    micro={boolean('Micro', false)}
-    tiny={boolean('Tiny', false)}
-    big={boolean('Big', false)}
-    huge={boolean('Huge', false)}
-    giant={boolean('Giant', false)}
   >
     <HeartIcon
       width={number('Icon size', 15, svgSizeRange)}
@@ -138,10 +128,6 @@ export const WithTextAndIcon = () => {
       variant={select('Variant', variantOptions, 'andromeda')}
       disabled={boolean('Disabled', false)}
       borderRadius={number('Border radius', 0, radiusBorderRange)}
-      tiny={boolean('Tiny', false)}
-      big={boolean('Big', false)}
-      huge={boolean('Huge', false)}
-      giant={boolean('Giant', false)}
     >
       {iconPosition === 'left' && (
         <HeartIcon
@@ -181,10 +167,6 @@ export const WithBadge = () => (
     modifier={select('Modifier', modifierOptions, 'helium')}
     variant={select('Variant', variantOptions, 'andromeda')}
     disabled={boolean('Disabled', false)}
-    tiny={boolean('Tiny', false)}
-    big={boolean('Big', false)}
-    huge={boolean('Huge', false)}
-    giant={boolean('Giant', false)}
   >
     <span>{text('Text', 'MyButton')}</span>
     <Badge color={text('Badge color', 'red')} Icon={Cart}>
