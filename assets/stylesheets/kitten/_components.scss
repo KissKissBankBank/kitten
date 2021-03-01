@@ -6,9 +6,6 @@
 @import './components/buttons/button';
 @import './components/buttons/tag-button';
 
-// Box
-@import './components/box/link-box';
-
 // Cards
 @import './components/cards/card';
 
@@ -40,9 +37,7 @@
 @import './components/grid/container';
 @import './components/grid/grid';
 @import "./components/grid/row";
-@import "./components/grid/side-grid";
 @import "./components/grid/single-column";
-@import "./components/grid/vertical-grid";
 
 // Layout
 @import './components/layout/horizontal-stroke';
@@ -78,11 +73,6 @@
 
 // Titles
 @import './components/titles/title-with-actions';
-
-// Tooltips
-@import './components/tooltips/tooltip';
-@import './components/tooltips/tooltip-new';
-@import './components/tooltips/static-tooltip';
 
 // Typography
 @import './components/typography/body-copy';

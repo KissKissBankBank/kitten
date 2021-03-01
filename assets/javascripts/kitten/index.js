@@ -132,7 +132,10 @@ export { Grid, GridCol } from './components/grid/grid'
 export { Row } from './components/grid/row'
 export { SideGrid } from './components/grid/side-grid'
 export { StickyContainer } from './components/grid/sticky-container'
-export { AdaptableGrid } from './components/grid/adaptable-grid'
+export {
+  AdaptableGrid,
+  AdaptableGridCol,
+} from './components/grid/adaptable-grid'
 
 // Heroes
 export { Hero } from './components/heroes/hero'
@@ -213,11 +216,8 @@ export { SingleEntryTable } from './components/tables/single-entry-table'
 export { TextCopy } from './components/text-copy'
 
 // Tooltips
-export { QuestionMarkWithTooltip } from './components/tooltips/question-mark-with-tooltip'
-export { StaticTooltip } from './components/tooltips/static-tooltip'
+
 export { Toggletip } from './components/tooltips/toggletip'
-export { TooltipNew } from './components/tooltips/tooltip-new'
-export { Tooltip } from './components/tooltips/tooltip'
 
 // Tours
 export { HighlightHalo } from './components/tours/highlight-halo'
@@ -332,6 +332,9 @@ export { TagIcon } from './components/icons/tag-icon'
 export { FileIcon } from './components/icons/file-icon'
 export { LoudspeakerIcon } from './components/icons/loudspeaker-icon'
 export { ShieldIcon } from './components/icons/shield-icon'
+export { PeopleIcon } from './components/icons/people-icon'
+export { StatsIcon } from './components/icons/stats-icon'
+export { SpeechBubbleIcon } from './components/icons/speech-bubble-icon'
 
 // ---------
 // CONSTANTS

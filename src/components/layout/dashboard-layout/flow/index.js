@@ -33,6 +33,8 @@ var _loader = require("../../../../components/atoms/loader");
 
 var _reactElements = require("../../../../helpers/react/react-elements");
 
+var _useFlexGapCheck = require("../../../../helpers/dom/use-flex-gap-check");
+
 var _sideCard = require("./side-card");
 
 var _sideModal = require("./side-modal");
@@ -40,7 +42,7 @@ var _sideModal = require("./side-modal");
 var StyledFlow = _styledComponents.default.div.withConfig({
   displayName: "flow__StyledFlow",
   componentId: "vmfwfw-0"
-})(["position:relative;display:flex;flex-direction:column;align-items:stretch;min-height:100%;@media (min-width:", "){min-height:100vh;display:grid;grid-template-rows:1fr auto;grid-template-columns:4fr 3fr;gap:0 calc(100% * 4 / 3 * 0.1);}&:not(.k-DashboardLayout__flow--isLoading){.k-DashboardLayout__flow__loading{display:none;}}&.k-DashboardLayout__flow--isLoading{.k-DashboardLayout__flow__content{display:none;}}.k-DashboardLayout__flow__loading,.k-DashboardLayout__flow__content{flex:1 0 100%;background-color:", ";padding-top:", ";padding-bottom:", ";@media (min-width:", "){padding-top:", ";}@media (min-width:", "){grid-column:1 / 2;padding-bottom:", ";}}.k-DashboardLayout__flow__nav{flex:0 0 auto;background-color:", ";width:100%;@media (min-width:", "){grid-column:1 / 2;bottom:0;position:sticky;z-index:1;}}.k-DashboardLayout__flow__nav__actionsContainer{display:flex;align-items:center;justify-content:space-between;gap:", ";margin:", " 0;@media (min-width:", "){gap:", ";margin:", " 0;}> *{min-width:0;max-width:", ";flex:1 1 ", ";}}.k-DashboardLayout__flow__aside{@media (min-width:", "){grid-column:2 / 3;}}.k-DashboardLayout__flow__aside__content{position:sticky;top:", ";padding-bottom:", ";svg{margin-bottom:", ";}@media (max-width:", "){display:none;}}.k-DashboardLayout__flow__loading{display:flex;align-items:center;justify-content:center;}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), _colorsConfig.default.background1, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(20), _colorsConfig.default.background1, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(180), (0, _typography.pxToRem)(180), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.max));
+})(["position:relative;display:flex;flex-direction:column;align-items:stretch;min-height:100%;@media (min-width:", "){min-height:100vh;display:grid;grid-template-rows:1fr auto;grid-template-columns:4fr 3fr;gap:0 calc(100% * 4 / 3 * 0.1);}&:not(.k-DashboardLayout__flow--isLoading){.k-DashboardLayout__flow__loading{display:none;}}&.k-DashboardLayout__flow--isLoading{.k-DashboardLayout__flow__content{display:none;}}.k-DashboardLayout__flow__loading,.k-DashboardLayout__flow__content{flex:1 0 100%;background-color:", ";padding-top:", ";padding-bottom:", ";@media (min-width:", "){padding-top:", ";}@media (min-width:", "){grid-column:1 / 2;padding-bottom:", ";}}.k-DashboardLayout__flow__nav{flex:0 0 auto;background-color:", ";width:100%;@media (min-width:", "){grid-column:1 / 2;bottom:0;position:sticky;z-index:1;}}.k-DashboardLayout__flow__nav__actionsContainer{display:flex;align-items:center;justify-content:space-between;gap:", ";margin:", " 0;@media (min-width:", "){gap:", ";margin:", " 0;}> *{min-width:0;max-width:", ";flex:1 1 ", ";}}.k-DashboardLayout__flow__aside{@media (min-width:", "){grid-column:2 / 3;}}.k-DashboardLayout__flow__aside__content{position:sticky;top:", ";padding-bottom:", ";svg{margin-bottom:", ";}@media (max-width:", "){display:none;}}.k-DashboardLayout__flow__loading{display:flex;align-items:center;justify-content:center;}&.k-DashboardLayout__flow--noGap{.k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child){margin-right:", ";@media (min-width:", "){margin-right:", ";}}}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), _colorsConfig.default.background1, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(20), _colorsConfig.default.background1, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(180), (0, _typography.pxToRem)(180), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.max), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(40));
 
 var Content = function Content(_ref) {
   var className = _ref.className,
@@ -87,9 +89,11 @@ var Flow = function Flow(_ref4) {
       loading = _ref4.loading,
       loaderComponent = _ref4.loaderComponent,
       props = (0, _objectWithoutProperties2.default)(_ref4, ["children", "className", "loading", "loaderComponent"]);
+  var canUseGap = (0, _useFlexGapCheck.useFlexGapCheck)();
   return /*#__PURE__*/_react.default.createElement(StyledFlow, (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__flow', className, 'k-DashboardLayout__fullHeight', {
-      'k-DashboardLayout__flow--isLoading': loading
+      'k-DashboardLayout__flow--isLoading': loading,
+      'k-DashboardLayout__flow--noGap': !canUseGap
     })
   }, props), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-DashboardLayout__flow__loading"

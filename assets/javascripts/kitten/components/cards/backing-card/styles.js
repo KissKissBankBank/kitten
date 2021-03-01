@@ -212,4 +212,13 @@ export const StyledBackingCard = styled.article`
       color: ${COLORS.primary2};
     }
   }
+
+  &.k-BackingCard--noGap {
+    .k-BackingCard__headingTag svg {
+      margin-right: ${pxToRem(10)};
+    }
+    .k-BackingCard__tagList > :not(:last-child) {
+      margin-right: ${pxToRem(10)};
+    }
+  }
 `

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
+import { useFlexGapCheck } from '../../../helpers/dom/use-flex-gap-check'
 
 const BULLET_SIZE = 5
 
@@ -35,6 +36,10 @@ const StyledLoader = styled.div`
     }
   }
 
+  &.k-Loader--noGap .k-Loader__circle:not(:last-child) {
+    margin-right: ${pxToRem(2)};
+  }
+
   @keyframes k-Loader-animation-scale {
     0% {
       transform: scale(1);
@@ -62,17 +67,23 @@ const Circle = ({ color, ...others }) => (
   </svg>
 )
 
-export const Loader = ({ tag, className, color, ...others }) => (
-  <StyledLoader
-    as={tag}
-    className={classNames('k-Loader', className)}
-    {...others}
-  >
-    <Circle className="k-Loader__circle" color={color} />
-    <Circle className="k-Loader__circle" color={color} />
-    <Circle className="k-Loader__circle" color={color} />
-  </StyledLoader>
-)
+export const Loader = ({ tag, className, color, ...others }) => {
+  const canUseGap = useFlexGapCheck()
+
+  return (
+    <StyledLoader
+      as={tag}
+      className={classNames('k-Loader', className, {
+        'k-Loader--noGap': !canUseGap,
+      })}
+      {...others}
+    >
+      <Circle className="k-Loader__circle" color={color} />
+      <Circle className="k-Loader__circle" color={color} />
+      <Circle className="k-Loader__circle" color={color} />
+    </StyledLoader>
+  )
+}
 
 Loader.defaultProps = {
   tag: 'div',
