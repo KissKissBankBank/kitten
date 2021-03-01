@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add DOM check to `useFlexGapCheck`.
+
 ## [3.0.0-beta.7] - 2021-03-01
 
 Feature:
