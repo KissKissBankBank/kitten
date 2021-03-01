@@ -6,7 +6,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="k-Line"
+      className="sc-htpNat eoyQWy k-Line k-Line--noGap"
       style={
         Object {
           "lineHeight": 1,
@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU gSiJXU"
+      className="sc-VigVT cfOvOR"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-VigVT faGjpy"
+        className="sc-jTzLTM jMdYrl"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -58,7 +58,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="k-Line"
+      className="sc-htpNat eoyQWy k-Line k-Line--noGap"
       style={
         Object {
           "lineHeight": 1,
@@ -79,25 +79,34 @@ Array [
       <div
         className="k-Line__item"
       >
-        <div
-          className="k-Tooltip"
+        <span
+          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
+          id="tooltip"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "--toggletipAction-left": undefined,
+              "--toggletipAction-top": undefined,
+            }
+          }
         >
           <button
-            aria-describedby="tooltip"
-            className="sc-bwzfXH bRRDsJ"
-            data-dismiss="tooltip"
-            data-event="TooltipEvents__open_tooltip"
-            data-for="tooltip"
-            data-place="right"
-            data-tip={true}
+            className="k-Toggletip__action k-u-reset-button"
+            onBlur={[Function]}
             onClick={[Function]}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
             type="button"
           >
             <svg
               fill="#fff"
-              height="10"
+              height={10}
               viewBox="0 0 6 10"
-              width="10"
+              width={6}
               xmlns="http://www.w3.org/2000/svg"
             >
               
@@ -106,15 +115,10 @@ Array [
               />
             </svg>
           </button>
-          <div
-            className="__react_component_tooltip place-top type-dark "
-            data-id="tooltip"
-            id="tooltip"
-            role="tooltip"
-          >
-            Tooltip
-          </div>
-        </div>
+          <span
+            role="status"
+          />
+        </span>
       </div>
     </div>
   </div>,
@@ -122,7 +126,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-bxivhb faAfYI k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error"
+      className="sc-bxivhb egjSVE k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
       disabled={false}
       id="input"
       name="field"
@@ -152,7 +156,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="k-Line"
+      className="sc-htpNat eoyQWy k-Line k-Line--noGap"
       style={
         Object {
           "lineHeight": 1,
@@ -173,25 +177,34 @@ Array [
       <div
         className="k-Line__item"
       >
-        <div
-          className="k-Tooltip"
+        <span
+          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
+          id="tooltip"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "--toggletipAction-left": undefined,
+              "--toggletipAction-top": undefined,
+            }
+          }
         >
           <button
-            aria-describedby="tooltip"
-            className="sc-bwzfXH bRRDsJ"
-            data-dismiss="tooltip"
-            data-event="TooltipEvents__open_tooltip"
-            data-for="tooltip"
-            data-place="right"
-            data-tip={true}
+            className="k-Toggletip__action k-u-reset-button"
+            onBlur={[Function]}
             onClick={[Function]}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
             type="button"
           >
             <svg
               fill="#fff"
-              height="10"
+              height={10}
               viewBox="0 0 6 10"
-              width="10"
+              width={6}
               xmlns="http://www.w3.org/2000/svg"
             >
               
@@ -200,15 +213,10 @@ Array [
               />
             </svg>
           </button>
-          <div
-            className="__react_component_tooltip place-top type-dark "
-            data-id="tooltip"
-            id="tooltip"
-            role="tooltip"
-          >
-            Tooltip
-          </div>
-        </div>
+          <span
+            role="status"
+          />
+        </span>
       </div>
     </div>
   </div>,
@@ -216,7 +224,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-bxivhb faAfYI k-Form-TextInput k-Form-TextInput--andromeda"
+      className="sc-bxivhb egjSVE k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
       disabled={false}
       id="input"
       name="field"
@@ -232,7 +240,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="k-Line"
+      className="sc-htpNat eoyQWy k-Line k-Line--noGap"
       style={
         Object {
           "lineHeight": 1,
@@ -253,25 +261,34 @@ Array [
       <div
         className="k-Line__item"
       >
-        <div
-          className="k-Tooltip"
+        <span
+          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
+          id="tooltip"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "--toggletipAction-left": undefined,
+              "--toggletipAction-top": undefined,
+            }
+          }
         >
           <button
-            aria-describedby="tooltip"
-            className="sc-bwzfXH bRRDsJ"
-            data-dismiss="tooltip"
-            data-event="TooltipEvents__open_tooltip"
-            data-for="tooltip"
-            data-place="right"
-            data-tip={true}
+            className="k-Toggletip__action k-u-reset-button"
+            onBlur={[Function]}
             onClick={[Function]}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
             type="button"
           >
             <svg
               fill="#fff"
-              height="10"
+              height={10}
               viewBox="0 0 6 10"
-              width="10"
+              width={6}
               xmlns="http://www.w3.org/2000/svg"
             >
               
@@ -280,15 +297,10 @@ Array [
               />
             </svg>
           </button>
-          <div
-            className="__react_component_tooltip place-top type-dark "
-            data-id="tooltip"
-            id="tooltip"
-            role="tooltip"
-          >
-            Tooltip
-          </div>
-        </div>
+          <span
+            role="status"
+          />
+        </span>
       </div>
     </div>
   </div>,
@@ -296,10 +308,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gZMcBi deIJCS k-Form-PasswordInput"
+      className="sc-gZMcBi ladMhP k-Form-PasswordInput"
     >
       <input
-        className="sc-bxivhb faAfYI k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error"
+        className="sc-bxivhb egjSVE k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"
@@ -355,7 +367,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="k-Line"
+      className="sc-htpNat eoyQWy k-Line k-Line--noGap"
       style={
         Object {
           "lineHeight": 1,
@@ -376,25 +388,34 @@ Array [
       <div
         className="k-Line__item"
       >
-        <div
-          className="k-Tooltip"
+        <span
+          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
+          id="tooltip"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "--toggletipAction-left": undefined,
+              "--toggletipAction-top": undefined,
+            }
+          }
         >
           <button
-            aria-describedby="tooltip"
-            className="sc-bwzfXH bRRDsJ"
-            data-dismiss="tooltip"
-            data-event="TooltipEvents__open_tooltip"
-            data-for="tooltip"
-            data-place="right"
-            data-tip={true}
+            className="k-Toggletip__action k-u-reset-button"
+            onBlur={[Function]}
             onClick={[Function]}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
             type="button"
           >
             <svg
               fill="#fff"
-              height="10"
+              height={10}
               viewBox="0 0 6 10"
-              width="10"
+              width={6}
               xmlns="http://www.w3.org/2000/svg"
             >
               
@@ -403,15 +424,10 @@ Array [
               />
             </svg>
           </button>
-          <div
-            className="__react_component_tooltip place-top type-dark "
-            data-id="tooltip"
-            id="tooltip"
-            role="tooltip"
-          >
-            Tooltip
-          </div>
-        </div>
+          <span
+            role="status"
+          />
+        </span>
       </div>
     </div>
   </div>,
@@ -419,10 +435,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gZMcBi deIJCS k-Form-PasswordInput"
+      className="sc-gZMcBi ladMhP k-Form-PasswordInput"
     >
       <input
-        className="sc-bxivhb faAfYI k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda"
+        className="sc-bxivhb egjSVE k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"
@@ -464,7 +480,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="k-Line"
+      className="sc-htpNat eoyQWy k-Line k-Line--noGap"
       style={
         Object {
           "lineHeight": 1,
@@ -495,7 +511,7 @@ Array [
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-htoDjs kfWTKy k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-htoDjs demUfu k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -517,7 +533,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-htoDjs kfWTKy k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-htoDjs demUfu k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -538,7 +554,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-htoDjs kfWTKy k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-htoDjs demUfu k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -570,7 +586,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="k-Line"
+      className="sc-htpNat eoyQWy k-Line k-Line--noGap"
       style={
         Object {
           "lineHeight": 1,

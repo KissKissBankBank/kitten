@@ -30,7 +30,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
@@ -75,6 +74,11 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -141,7 +145,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
@@ -188,6 +191,11 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -270,7 +278,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
@@ -331,6 +338,11 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -397,7 +409,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
@@ -460,6 +471,11 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -542,7 +558,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem solid #00669e;
   background-color: #00669e;
@@ -587,6 +602,11 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   border-color: #004880;
   background-color: #004880;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -653,7 +673,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
@@ -700,6 +719,11 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   border-color: #004880;
   background-color: #004880;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -782,7 +806,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem solid #55acee;
   background-color: #55acee;
@@ -827,6 +850,11 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   border-color: #388ed0;
   background-color: #388ed0;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -893,7 +921,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
@@ -940,6 +967,11 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   border-color: #388ed0;
   background-color: #388ed0;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {

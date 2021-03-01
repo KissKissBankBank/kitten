@@ -55,9 +55,11 @@ const StyledRadioButton = styled.div`
   /* Label statuses */
 
   .k-Form-RadioButton__input:focus + .k-Form-RadioButton__label::before {
-    outline: none;
     border-color: ${COLORS.primary1};
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
+
   .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {
     border: ${pxToRem(5)} solid ${COLORS.primary1};
   }
@@ -90,7 +92,6 @@ const StyledRadioButton = styled.div`
       border-color: ${COLORS.line2};
     }
   }
-
 
   /* Label text styles */
 
@@ -152,12 +153,21 @@ const StyledRadioButton = styled.div`
   &.k-Form-RadioButton--orion {
     margin: ${pxToRem(15)} 0;
 
+    .k-Form-RadioButton__label::before {
+      width: ${pxToRem(16)};
+      height: ${pxToRem(16)};
+    }
+
     .k-Form-RadioButton__label {
       box-sizing: border-box;
-      padding: ${pxToRem(18)} ${pxToRem(15)};
-      min-height: ${pxToRem(60)};
+      min-height: ${pxToRem(70)};
       border-radius: ${pxToRem(6)};
       border: 2px solid ${COLORS.line1};
+      padding: ${pxToRem(26 - 4)} ${pxToRem(15)};
+    }
+
+    .k-Form-RadioButton__label::before {
+      margin-top: ${pxToRem(3)};
     }
 
     .k-Form-RadioButton__input:checked:not(:disabled),
@@ -176,25 +186,24 @@ const StyledRadioButton = styled.div`
     .k-Form-RadioButton__labelText {
       ${TYPOGRAPHY.fontStyles.regular};
       line-height: ${pxToRem(20)};
+      font-size: ${stepToRem(-1)};
+    }
+
+    &.k-Form-RadioButton--big {
+      .k-Form-RadioButton__label {
+        min-height: ${pxToRem(60)};
+        padding: ${pxToRem(20 - 4)} ${pxToRem(15)};
+      }
     }
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       margin: ${pxToRem(20)} 0;
 
-      .k-Form-RadioButton__label {
-        min-height: ${pxToRem(80)};
-        border-radius: ${pxToRem(8)};
-        padding: ${pxToRem(30 - 3)} ${pxToRem(15)};
-      }
-
       .k-Form-RadioButton__label::before {
-        margin-top: ${pxToRem(2)};
-        width: ${pxToRem(20)};
-        height: ${pxToRem(20)};
+        margin-top: ${pxToRem(4)};
       }
 
       .k-Form-RadioButton__labelText {
-        font-size: ${stepToRem(0)};
         flex: 1 0 calc(100% - ${pxToRem(20 + 10)});
         line-height: ${pxToRem(22)};
       }
@@ -207,9 +216,26 @@ const StyledRadioButton = styled.div`
       .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {
         border-width: ${pxToRem(6)};
       }
+
+      &.k-Form-RadioButton--big {
+        .k-Form-RadioButton__label {
+          min-height: ${pxToRem(80)};
+          padding: ${pxToRem(30 - 4)} ${pxToRem(15)};
+        }
+
+        .k-Form-RadioButton__label::before {
+          margin: ${pxToRem(2)} ${pxToRem(20)} 0 0;
+          width: ${pxToRem(20)};
+          height: ${pxToRem(20)};
+        }
+
+        .k-Form-RadioButton__labelText {
+          flex: 1 0 calc(100% - ${pxToRem(20 + 20)});
+          font-size: ${stepToRem(0)};
+        }
+      }
     }
   }
-
 
   /* DESIGN = "check" */
 
@@ -223,11 +249,11 @@ const StyledRadioButton = styled.div`
     &.k-Form-RadioButton--error .k-Form-RadioButton__input:checked:not(:disabled) + .k-Form-RadioButton__label::before {
       background-color: ${COLORS.error};
     }
+
     .k-Form-RadioButton__input:disabled + .k-Form-RadioButton__label::before {
       background-color: ${COLORS.line2};
     }
   }
-
 `
 
 export const RadioButton = ({
@@ -237,6 +263,7 @@ export const RadioButton = ({
   inputClassName,
   large,
   largeContent,
+  size,
   text,
   error,
   disabled,
@@ -251,6 +278,7 @@ export const RadioButton = ({
         className,
         `k-Form-RadioButton--${variant}`,
         `k-Form-RadioButton--${design}`,
+        `k-Form-RadioButton--${size}`,
         {
           'k-Form-RadioButton--error': error,
           'k-Form-RadioButton--largeLabel': large,
@@ -291,6 +319,7 @@ RadioButton.propTypes = {
   disabled: PropTypes.bool,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   design: PropTypes.oneOf(['disc', 'check']),
+  size: PropTypes.oneOf(['regular', 'big']),
 }
 
 RadioButton.defaultProps = {
@@ -300,4 +329,5 @@ RadioButton.defaultProps = {
   disabled: false,
   variant: 'andromeda',
   design: 'disc',
+  size: 'regular',
 }

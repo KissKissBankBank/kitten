@@ -35,8 +35,12 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0.k-Buttons__tagButton--orion {
@@ -210,8 +214,12 @@ exports[`<TagButton /> with \`huge\` prop matches with snapshot 1`] = `
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0.k-Buttons__tagButton--orion {
@@ -385,8 +393,12 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0.k-Buttons__tagButton--orion {
@@ -560,8 +572,12 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0.k-Buttons__tagButton--orion {
@@ -735,8 +751,12 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0.k-Buttons__tagButton--orion {
@@ -910,8 +930,12 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0.k-Buttons__tagButton--orion {
@@ -1101,8 +1125,12 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0.k-Buttons__tagButton--orion {

@@ -72,7 +72,6 @@
     display: block;
     padding: k-px-to-rem(15px) k-px-to-rem(20px);
 
-    outline: none;
     border-left: $border-size solid $border-color;
     background-color: $background-color;
 
@@ -117,5 +116,12 @@
     .k-UserMenu__border#{$position} {
       border-#{to_lower_case($position)}: $border-size solid $border-color;
     }
+  }
+
+  .k-UserMenu__text--withEllipsis {
+    text-overflow: ellipsis;
+    max-width: k-px-to-rem(110px);
+    white-space: nowrap;
+    overflow: hidden;
   }
 }

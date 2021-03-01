@@ -3,7 +3,7 @@
 exports[`<Pagination /> by default should match its empty snapshot 1`] = `
 <nav
   aria-label="Pagination navigation"
-  className="sc-bwzfXH jimmEN Pagination Pagination--isAligned-undefined"
+  className="sc-bwzfXH gFJIwV Pagination Pagination--isAligned-undefined"
   role="navigation"
 >
   <ul
@@ -51,6 +51,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         className="sc-bdVaJa bDWFJH k-u-decoration-none k-u-size-tiny k-u-weight-regular Pagination__Link"
         href="#1"
         onClick={[Function]}
+        tabIndex="0"
       >
         1
       </a>
@@ -70,6 +71,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         className="sc-bdVaJa bDWFJH k-u-decoration-none k-u-size-tiny k-u-weight-regular Pagination__Link"
         href="#9"
         onClick={[Function]}
+        tabIndex="0"
       >
         9
       </a>
@@ -83,6 +85,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         className="sc-bdVaJa bDWFJH k-u-decoration-none k-u-size-tiny k-u-weight-regular Pagination__Link"
         href={null}
         onClick={null}
+        tabIndex="0"
       >
         10
       </span>
@@ -96,6 +99,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         className="sc-bdVaJa bDWFJH k-u-decoration-none k-u-size-tiny k-u-weight-regular Pagination__Link"
         href="#11"
         onClick={[Function]}
+        tabIndex="0"
       >
         11
       </a>
@@ -115,6 +119,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         className="sc-bdVaJa bDWFJH k-u-decoration-none k-u-size-tiny k-u-weight-regular Pagination__Link"
         href="#42"
         onClick={[Function]}
+        tabIndex="0"
       >
         42
       </a>

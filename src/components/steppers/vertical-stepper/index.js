@@ -29,6 +29,8 @@ var _link = require("./components/link");
 
 var _list = require("./components/list");
 
+var _screenConfig = require("../../../constants/screen-config");
+
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var STEP_CLASSNAME = 'VerticalStepper__step';
@@ -53,7 +55,7 @@ exports.VerticalStepper = VerticalStepper;
 var StyledNav = _styledComponents.default.nav.withConfig({
   displayName: "vertical-stepper__StyledNav",
   componentId: "sc-1uso67w-0"
-})(["position:relative;padding:1px 0;.k-Steppers--VerticalStepper{margin:0;padding:0;list-style:none;:before{position:absolute;top:0;bottom:0;left:", ";z-index:-1;content:'';border-left:", " dashed ", ";}&.k-Steppers--VerticalStepper__orion{margin-left:", ";:before{border-left:none;}li:not(:last-of-type){position:relative;&::after{content:'';position:absolute;left:", ";top:", ";background-color:", ";width:", ";height:100%;z-index:-1;}}li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after{background-color:", ";}}}"], (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(-5), (0, _typography.pxToRem)(18.5), (0, _typography.pxToRem)(30), _colorsConfig.default.line1, (0, _typography.pxToRem)(3), _colorsConfig.default.primary1);
+})(["position:relative;padding:1px 0;.k-Steppers--VerticalStepper{margin:0;padding:0;list-style:none;:before{position:absolute;top:0;bottom:0;left:", ";z-index:-1;content:'';border-left:", " dashed ", ";}&.k-Steppers--VerticalStepper__orion{margin-left:", ";:before{border-left:none;}li:not(:last-of-type){position:relative;&::after{content:'';position:absolute;left:", ";top:", ";background-color:", ";width:", ";height:100%;z-index:-1;@media (min-width:", "px){width:", ";left:", ";}}}li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after{background-color:", ";}}}"], (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(-5), (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(30), _colorsConfig.default.line1, (0, _typography.pxToRem)(2), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(18.5), _colorsConfig.default.primary1);
 
 VerticalStepper.Step = _step.Step;
 VerticalStepper.Title = _title.Title;

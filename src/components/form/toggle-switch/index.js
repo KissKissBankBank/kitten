@@ -49,10 +49,10 @@ var StyledSwitchContainer = _styledComponents.default.div.withConfig({
 var StyledSwitch = _styledComponents.default.button.withConfig({
   displayName: "toggle-switch__StyledSwitch",
   componentId: "ski4b0-1"
-})(["display:inline-block;position:relative;box-sizing:border-box;width:", ";height:", ";color:", ";background-color:currentColor;border:", " solid ", ";border-radius:", ";transition:color ", " ease,border-color ", " ease,background-color ", " ease;cursor:pointer;&:focus{border-color:", ";box-shadow:0 0 0 ", " ", ";outline:none;}.k-ToggleSwitch__circle{position:absolute;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;left:-", ";top:-", ";width:", ";height:", ";content:'';background-color:", ";border:", " solid ", ";border-radius:", ";transition:left ", " ease,color ", " ease,border-color ", " ease,background-color ", " ease;}&[aria-pressed='true']{color:", ";border-color:currentColor;.k-ToggleSwitch__circle{left:", ";border-color:currentColor;}}&:active{color:", ";&,.k-ToggleSwitch__circle{border-color:", ";}}&[disabled]{cursor:not-allowed;", " .k-ToggleSwitch__circle{pointer-events:none;}}"], (0, _typography.pxToRem)(switchWidth), (0, _typography.pxToRem)(switchHeight), function (_ref3) {
+})(["display:inline-block;position:relative;box-sizing:border-box;width:", ";height:", ";color:", ";background-color:currentColor;border:", " solid ", ";border-radius:", ";transition:color ", " ease,border-color ", " ease,background-color ", " ease;cursor:pointer;&:focus{border-color:", ";outline:", " solid ", ";outline-offset:", ";.k-ToggleSwitch__circle{border-color:", ";}}.k-ToggleSwitch__circle{position:absolute;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;left:-", ";top:-", ";width:", ";height:", ";content:'';background-color:", ";border:", " solid ", ";border-radius:", ";transition:left ", " ease,color ", " ease,border-color ", " ease,background-color ", " ease;}&[aria-pressed='true']{color:", ";border-color:currentColor;.k-ToggleSwitch__circle{left:", ";border-color:currentColor;}}&:active{color:", ";&,.k-ToggleSwitch__circle{border-color:", ";}}&[disabled]{cursor:not-allowed;", " .k-ToggleSwitch__circle{pointer-events:none;}}"], (0, _typography.pxToRem)(switchWidth), (0, _typography.pxToRem)(switchHeight), function (_ref3) {
   var defaultColor = _ref3.defaultColor;
   return defaultColor;
-}, (0, _typography.pxToRem)(borderSize), _colorsConfig.default.line2, (0, _typography.pxToRem)(borderRadius), transitionDuration, transitionDuration, transitionDuration, _colorsConfig.default.primary1, (0, _typography.pxToRem)(2), _colorsConfig.default.primary4, (0, _typography.pxToRem)(borderSize), (0, _typography.pxToRem)(borderSize), (0, _typography.pxToRem)(switchHeight), (0, _typography.pxToRem)(switchHeight), _colorsConfig.default.background1, (0, _typography.pxToRem)(borderSize), _colorsConfig.default.line2, (0, _typography.pxToRem)(switchHeight), transitionDuration, transitionDuration, transitionDuration, transitionDuration, function (_ref4) {
+}, (0, _typography.pxToRem)(borderSize), _colorsConfig.default.line2, (0, _typography.pxToRem)(borderRadius), transitionDuration, transitionDuration, transitionDuration, _colorsConfig.default.primary1, _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary1, (0, _typography.pxToRem)(borderSize), (0, _typography.pxToRem)(borderSize), (0, _typography.pxToRem)(switchHeight), (0, _typography.pxToRem)(switchHeight), _colorsConfig.default.background1, (0, _typography.pxToRem)(borderSize), _colorsConfig.default.line2, (0, _typography.pxToRem)(switchHeight), transitionDuration, transitionDuration, transitionDuration, transitionDuration, function (_ref4) {
   var checkedColor = _ref4.checkedColor;
   return checkedColor;
 }, (0, _typography.pxToRem)(switchWidth - switchHeight - borderSize), function (_ref5) {
@@ -95,25 +95,32 @@ var ToggleSwitch = function ToggleSwitch(_ref11) {
       locked = _ref11.locked,
       reverseOrder = _ref11.reverseOrder,
       switchProps = _ref11.switchProps,
-      others = (0, _objectWithoutProperties2.default)(_ref11, ["activeColor", "big", "checkedColor", "defaultColor", "disabled", "disabledColor", "id", "isChecked", "isLabelVisible", "label", "labelProps", "locked", "reverseOrder", "switchProps"]);
+      onChange = _ref11.onChange,
+      others = (0, _objectWithoutProperties2.default)(_ref11, ["activeColor", "big", "checkedColor", "defaultColor", "disabled", "disabledColor", "id", "isChecked", "isLabelVisible", "label", "labelProps", "locked", "reverseOrder", "switchProps", "onChange"]);
 
   var _useState = (0, _react.useState)(isChecked),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
       isPressed = _useState2[0],
       setPressedState = _useState2[1];
 
+  var handleClick = function handleClick() {
+    onChange && onChange(!isPressed);
+    setPressedState(function (current) {
+      return !current;
+    });
+  };
+
   return /*#__PURE__*/_react.default.createElement(StyledSwitchContainer, (0, _extends2.default)({
     isDisabled: disabled || locked,
     reverseOrder: reverseOrder
   }, others), /*#__PURE__*/_react.default.createElement(StyledSwitch, (0, _extends2.default)({
-    onClick: function onClick() {
-      return setPressedState(!isPressed);
-    },
+    onClick: handleClick,
     type: "button",
     id: id,
     disabled: disabled || locked,
     "aria-pressed": isPressed,
     "aria-label": isLabelVisible ? null : label,
+    "aria-labelledby": isLabelVisible ? "".concat(id, "_label") : null,
     checkedColor: checkedColor,
     defaultColor: defaultColor,
     disabledColor: disabledColor,
@@ -126,7 +133,8 @@ var ToggleSwitch = function ToggleSwitch(_ref11) {
     width: "12",
     color: _colorsConfig.default.font1
   }))), isLabelVisible && /*#__PURE__*/_react.default.createElement(StyledLabel, (0, _extends2.default)({
-    for: id,
+    htmlFor: id,
+    id: "".concat(id, "_label"),
     disabledColor: disabledColor,
     big: big
   }, labelProps), label));
@@ -144,7 +152,8 @@ ToggleSwitch.defaultProps = {
   isLabelVisible: true,
   label: 'switch',
   locked: false,
-  reverseOrder: false
+  reverseOrder: false,
+  onChange: function onChange() {}
 };
 ToggleSwitch.propTypes = {
   activeColor: _propTypes.default.string,
@@ -158,5 +167,6 @@ ToggleSwitch.propTypes = {
   isLabelVisible: _propTypes.default.bool,
   label: _propTypes.default.string,
   locked: _propTypes.default.bool,
-  reverseOrder: _propTypes.default.bool
+  reverseOrder: _propTypes.default.bool,
+  onChange: _propTypes.default.func
 };

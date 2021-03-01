@@ -24,7 +24,6 @@ const StyledButton = styled.button`
   text-decoration: none;
 
   appearance: none;
-  outline: none;
 
   cursor: pointer;
 

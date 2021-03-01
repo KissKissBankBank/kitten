@@ -2,10 +2,10 @@
 
 exports[`<PasswordInput /> should match its empty snapshot 1`] = `
 <div
-  className="sc-htpNat dEVjRj k-Form-PasswordInput"
+  className="sc-htpNat faDumh k-Form-PasswordInput"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda"
+    className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
     disabled={false}
     id="password"
     name="password"

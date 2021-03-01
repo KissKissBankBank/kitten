@@ -24,7 +24,6 @@ const StyledInput = styled.input`
   background-color: ${COLORS.background1};
   color: ${COLORS.font1};
   border-color: ${COLORS.line1};
-  outline: none;
 
   ::placeholder {
     color: ${COLORS.font2};
@@ -32,10 +31,12 @@ const StyledInput = styled.input`
 
   // SIZES
 
-  height: ${pxToRem(50)};
-
   &.k-Form-TextInput--tiny {
     height: ${pxToRem(40)};
+  }
+
+  &.k-Form-TextInput--regular {
+    height: ${pxToRem(50)};
   }
 
   &.k-Form-TextInput--huge {
@@ -62,18 +63,26 @@ const StyledInput = styled.input`
   padding: ${pxToRem(10)} var(--input-padding-horizontal);
 
   &.k-Form-TextInput--orion {
-    border-radius: ${pxToRem(6)};
-    height: ${pxToRem(60)};
+    &.k-Form-TextInput--regular {
+      border-radius: ${pxToRem(4)};
+      height: ${pxToRem(50)};
+    }
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
-      --input-padding-horizontal: ${pxToRem(30)};
-      border-radius: ${pxToRem(8)};
-      height: ${pxToRem(70)};
-      font-size: ${stepToRem(0)};
+    &.k-Form-TextInput--big {
+      border-radius: ${pxToRem(6)};
+      height: ${pxToRem(60)};
 
-      /* IE11 */
-      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        padding: ${pxToRem(10)} ${pxToRem(30)};
+      @media (min-width: ${ScreenConfig.M.min}px) {
+        height: ${pxToRem(70)};
+        --input-padding-horizontal: ${pxToRem(30)};
+        border-radius: ${pxToRem(8)};
+        font-size: ${stepToRem(0)};
+
+        /* IE11 */
+        @media screen and (-ms-high-contrast: active),
+          (-ms-high-contrast: none) {
+          padding: ${pxToRem(10)} ${pxToRem(30)};
+        }
       }
     }
   }
@@ -105,15 +114,15 @@ const StyledInput = styled.input`
 
   &:invalid {
     box-shadow: none;
-    outline: none;
     color: ${COLORS.error3};
     border-color: ${COLORS.error3};
   }
 
   &:focus {
-    outline: none;
     color: ${COLORS.font1};
     border-color: ${COLORS.line2};
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 
   // DIGITS
@@ -223,6 +232,8 @@ export class TextInput extends PureComponent {
     valid: PropTypes.bool,
     error: PropTypes.bool,
     tiny: PropTypes.bool,
+    regular: PropTypes.bool,
+    big: PropTypes.bool,
     huge: PropTypes.bool,
     giant: PropTypes.bool,
     center: PropTypes.bool,
@@ -237,6 +248,8 @@ export class TextInput extends PureComponent {
     valid: false,
     error: false,
     tiny: false,
+    regular: true,
+    big: false,
     huge: false,
     giant: false,
     center: false,
@@ -254,6 +267,8 @@ export class TextInput extends PureComponent {
       name,
       digits,
       tiny,
+      regular,
+      big,
       huge,
       giant,
       center,
@@ -290,9 +305,6 @@ export class TextInput extends PureComponent {
                 'k-Form-TextInput--valid': valid,
                 'k-Form-TextInput--error': error,
                 'k-Form-TextInput--disabled': disabled,
-                'k-Form-TextInput--tiny': tiny,
-                'k-Form-TextInput--huge': huge,
-                'k-Form-TextInput--giant': giant,
                 'k-Form-TextInput--alignCenter': center,
               },
             )}
@@ -320,6 +332,8 @@ export class TextInput extends PureComponent {
               'k-Form-TextInput--error': error,
               'k-Form-TextInput--disabled': disabled,
               'k-Form-TextInput--tiny': tiny,
+              'k-Form-TextInput--regular': regular,
+              'k-Form-TextInput--big': big,
               'k-Form-TextInput--huge': huge,
               'k-Form-TextInput--giant': giant,
               'k-Form-TextInput--alignCenter': center,

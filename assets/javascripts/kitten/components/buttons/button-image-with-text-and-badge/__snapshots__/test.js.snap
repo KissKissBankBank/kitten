@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonImageWithTextAndBadge /> default snapshot 1`] = `
+<button
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="k-ButtonImageWithText"
+  onClick={[Function]}
+  title="Custom title"
+>
+  <span
+    className="k-ButtonWithBadge"
+  >
+    <span
+      className="k-ButtonImage"
+    >
+      <img
+        alt="Custom alt"
+        className="k-ButtonImage__img"
+        height={300}
+        src="http://via.placeholder.com/300x300"
+        width={300}
+      />
+    </span>
+  </span>
+  <p
+    className="k-ButtonImageWithText__text k-ButtonImageWithText__text--withoutPaddingRight"
+  >
+    Custom text
+  </p>
+</button>
+`;
+
+exports[`<ButtonImageWithTextAndBadge /> snapshot with notifications 1`] = `
+<button
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="k-ButtonImageWithText"
+  onClick={[Function]}
+  title="Custom title"
+>
+  <span
+    className="k-ButtonWithBadge"
+  >
+    <span
+      className="k-ButtonImage"
+    >
+      <img
+        alt="Custom alt"
+        className="k-ButtonImage__img"
+        height={300}
+        src="http://via.placeholder.com/300x300"
+        width={300}
+      />
+    </span>
+    <span
+      aria-label={null}
+      className="sc-bdVaJa ednBsT k-Badge k-ButtonWithBadge__badge"
+      style={
+        Object {
+          "--Badge-background-color": "#FF0000",
+        }
+      }
+    >
+      !
+    </span>
+  </span>
+  <p
+    className="k-ButtonImageWithText__text k-ButtonImageWithText__text--withoutPaddingRight"
+  >
+    Custom text
+  </p>
+</button>
+`;

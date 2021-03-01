@@ -30,7 +30,6 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   min-height: initial;
@@ -80,6 +79,11 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -151,7 +155,6 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: 10rem;
   min-height: 2.5rem;
@@ -207,6 +210,11 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -291,7 +299,6 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   min-height: initial;
@@ -357,6 +364,11 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -428,7 +440,6 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: 10rem;
   min-height: 2.5rem;
@@ -500,6 +511,11 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -584,7 +600,6 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   min-height: initial;
@@ -634,6 +649,11 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   border-color: #004880;
   background-color: #004880;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -705,7 +725,6 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: 10rem;
   min-height: 2.5rem;
@@ -761,6 +780,11 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   border-color: #004880;
   background-color: #004880;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -845,7 +869,6 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   min-height: initial;
@@ -895,6 +918,11 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
   border-color: #9f0000;
   background-color: #9f0000;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -966,7 +994,6 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: 10rem;
   min-height: 2.5rem;
@@ -1022,6 +1049,11 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
   border-color: #9f0000;
   background-color: #9f0000;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -1106,7 +1138,6 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   min-height: initial;
@@ -1156,6 +1187,11 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   border-color: #388ed0;
   background-color: #388ed0;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -1227,7 +1263,6 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: 10rem;
   min-height: 2.5rem;
@@ -1283,6 +1318,11 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   border-color: #388ed0;
   background-color: #388ed0;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -1367,7 +1407,6 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   min-height: initial;
@@ -1417,6 +1456,11 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   border-color: #e10000;
   background-color: #e10000;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -1488,7 +1532,6 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: 10rem;
   min-height: 2.5rem;
@@ -1544,6 +1587,11 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   border-color: #e10000;
   background-color: #e10000;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {

@@ -50,12 +50,9 @@ const StyledCheckbox = styled.div`
     transition: border-color .2s, background-color .2s;
 
     &:focus {
-      outline: none;
       border-color: ${COLORS.primary1};
-    }
-
-    &:checked:focus {
-      box-shadow: 0 0 ${pxToRem(3)} ${COLORS.primary1};
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
     }
 
     &:checked,

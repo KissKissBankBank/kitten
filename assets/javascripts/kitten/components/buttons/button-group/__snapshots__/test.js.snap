@@ -30,7 +30,6 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -75,6 +74,11 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c1:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c1:disabled {

@@ -16,11 +16,11 @@ import { CrossCircleIcon } from '../../../components/icons/cross-circle-icon';
 import { ClockCircleIcon } from '../../../components/icons/clock-circle-icon';
 import { CrossIcon } from '../../../components/icons/cross-icon';
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden';
-import { Loader } from '../../../components/loaders/loader';
+import { Loader } from '../../../components/atoms/loader';
 var StyledBasicUploader = styled.div.withConfig({
   displayName: "basic-uploader__StyledBasicUploader",
   componentId: "sc-1t7apx8-0"
-})(["input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{background-color:", ";border-color:", ";color:", ";svg,path{fill:", ";}}&:not(.k-BasicUploader--loading){input[type='file']:disabled + label{border-color:", ";background-color:", ";color:", ";pointer-events:none;svg,path{fill:", ";}}}.k-BasicUploader__statusBlock{margin-top:", ";display:flex;& > * + *{margin-left:", ";}}.k-BasicUploader__cancelButton{width:", ";height:", ";cursor:pointer;padding:0;display:flex;justify-content:center;align-items:center;", "}"], COLORS.primary2, COLORS.primary2, COLORS.background1, COLORS.background1, COLORS.line2, COLORS.line2, COLORS.background1, COLORS.background1, pxToRem(15), pxToRem(10), pxToRem(20), pxToRem(20), modifierStyles('beryllium'));
+})(["input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{background-color:", ";border-color:", ";color:", ";outline:", " solid ", ";outline-offset:", ";svg,path{fill:", ";}}&:not(.k-BasicUploader--loading){input[type='file']:disabled + label{border-color:", ";background-color:", ";color:", ";pointer-events:none;svg,path{fill:", ";}}}.k-BasicUploader__statusBlock{margin-top:", ";display:flex;& > * + *{margin-left:", ";}}.k-BasicUploader__cancelButton{width:", ";height:", ";cursor:pointer;padding:0;display:flex;justify-content:center;align-items:center;", " &:focus{outline:", " solid ", ";outline-offset:", ";}}"], COLORS.primary2, COLORS.primary2, COLORS.background1, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.background1, COLORS.line2, COLORS.line2, COLORS.background1, COLORS.background1, pxToRem(15), pxToRem(10), pxToRem(20), pxToRem(20), modifierStyles('beryllium'), COLORS.primary4, pxToRem(2), pxToRem(2));
 var statusesWithIcons = ['error', 'valid', 'wait'];
 export var BasicUploader = function BasicUploader(_ref) {
   var id = _ref.id,

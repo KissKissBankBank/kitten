@@ -70,8 +70,7 @@ var Navbar = /*#__PURE__*/function (_Component) {
         },
         left: true
       }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-        version: "solid",
-        fill: iconColor,
+        color: iconColor,
         direction: "left"
       })), /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
         "aria-label": labels.nextMonth,
@@ -80,8 +79,7 @@ var Navbar = /*#__PURE__*/function (_Component) {
         },
         right: true
       }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-        version: "solid",
-        fill: iconColor
+        color: iconColor
       })));
     }
   }]);

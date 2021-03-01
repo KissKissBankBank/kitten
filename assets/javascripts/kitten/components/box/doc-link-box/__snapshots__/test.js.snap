@@ -2,7 +2,7 @@
 
 exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa hikopz"
+  className="sc-bdVaJa ebdoYP"
   href="#"
 >
   <div
@@ -58,7 +58,7 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
       </svg>
     </div>
     <div
-      className="k-u-margin-top-double k-u-margin-bottom-double k-LinkBox__textContainer"
+      className="k-LinkBox__textContainer"
     >
       <span
         className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
@@ -95,7 +95,7 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa hikopz"
+  className="sc-bdVaJa ebdoYP"
   href="#foobar"
   rel="noopener"
   target="_blank"
@@ -153,7 +153,7 @@ exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
       </svg>
     </div>
     <div
-      className="k-u-margin-top-double k-u-margin-bottom-double k-LinkBox__textContainer"
+      className="k-LinkBox__textContainer"
     >
       <span
         className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular"

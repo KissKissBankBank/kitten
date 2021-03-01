@@ -251,7 +251,7 @@ const ToggleableTable = styled(ListTable)`
 `
 
 export const Default = () => (
-  <div className="k-u-margin-top-quintuple k-u-margin-bottom-quintuple">
+  <>
     <ListTableStyles />
     <ListTable id="CustomListTable">
       <ListTable.Header
@@ -415,7 +415,7 @@ export const Default = () => (
         </ListTable.Row>
       </ListTable.Body>
     </ListTable>
-  </div>
+  </>
 )
 
 export const Toggleable = () => {
@@ -452,10 +452,7 @@ export const Toggleable = () => {
               aria-controls="toggleableListTable"
             >
               Voir les détails
-              <ArrowIcon
-                direction={displayed ? 'top' : 'bottom'}
-                version="solid"
-              />
+              <ArrowIcon direction={displayed ? 'top' : 'bottom'} />
             </ToggleButton>
           </Col>
         </HeaderRow>

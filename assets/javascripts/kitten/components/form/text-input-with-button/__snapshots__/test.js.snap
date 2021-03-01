@@ -5,12 +5,12 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda"
+    className="sc-bdVaJa VHhzP k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--regular"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-ifAKCX fTLYnf"
+    className="sc-ifAKCX gmGUyD"
     disabled={false}
     type="button"
   >
@@ -24,12 +24,12 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda"
+    className="sc-bdVaJa VHhzP k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--regular"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-ifAKCX fTLYnf"
+    className="sc-ifAKCX gmGUyD"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -44,52 +44,52 @@ exports[`<TextInputWithButton /> with component inside button value matches with
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda"
+    className="sc-bdVaJa VHhzP k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--regular"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
   />
   <button
-    className="sc-ifAKCX fTLYnf"
+    className="sc-ifAKCX gmGUyD"
     disabled={false}
     type="button"
   >
     <div
-      className="k-Loader"
+      className="sc-EHOje bjtzCy k-Loader k-Loader--noGap"
     >
       <svg
         className="k-Loader__circle"
-        viewBox="0 0 10 10"
+        fill="#222"
+        viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={5}
-          cy={5}
-          fill={null}
+          cx={2.5}
+          cy={2.5}
           r={5}
         />
       </svg>
       <svg
         className="k-Loader__circle"
-        viewBox="0 0 10 10"
+        fill="#222"
+        viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={5}
-          cy={5}
-          fill={null}
+          cx={2.5}
+          cy={2.5}
           r={5}
         />
       </svg>
       <svg
         className="k-Loader__circle"
-        viewBox="0 0 10 10"
+        fill="#222"
+        viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={5}
-          cy={5}
-          fill={null}
+          cx={2.5}
+          cy={2.5}
           r={5}
         />
       </svg>
@@ -103,12 +103,12 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--disabled"
+    className="sc-bdVaJa VHhzP k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--disabled k-Form-TextInput--regular"
     disabled={true}
     name="text"
   />
   <button
-    className="sc-ifAKCX eOaFgv"
+    className="sc-ifAKCX fFKGd"
     disabled={true}
     type="button"
   >
@@ -122,12 +122,12 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--error"
+    className="sc-bdVaJa VHhzP k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-ifAKCX UINyt"
+    className="sc-ifAKCX lfwjyn"
     disabled={false}
     type="button"
   >
@@ -141,12 +141,12 @@ exports[`<TextInputWithButton /> with giant prop matches with snapshot 1`] = `
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--giant"
+    className="sc-bdVaJa VHhzP k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--giant"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-ifAKCX fTLYnf"
+    className="sc-ifAKCX gmGUyD"
     disabled={false}
     type="button"
   >
@@ -160,12 +160,12 @@ exports[`<TextInputWithButton /> with huge prop matches with snapshot 1`] = `
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--huge"
+    className="sc-bdVaJa VHhzP k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--huge"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-ifAKCX fTLYnf"
+    className="sc-ifAKCX gmGUyD"
     disabled={false}
     type="button"
   >
@@ -179,14 +179,14 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda"
+    className="sc-bdVaJa VHhzP k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--regular"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
     value="foobar"
   />
   <button
-    className="sc-ifAKCX fTLYnf"
+    className="sc-ifAKCX gmGUyD"
     disabled={false}
     type="button"
   >
@@ -200,12 +200,12 @@ exports[`<TextInputWithButton /> with tiny prop matches with snapshot 1`] = `
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--tiny"
+    className="sc-bdVaJa VHhzP k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--tiny k-Form-TextInput--regular"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-ifAKCX fTLYnf"
+    className="sc-ifAKCX gmGUyD"
     disabled={false}
     type="button"
   >
@@ -219,12 +219,12 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--valid"
+    className="sc-bdVaJa VHhzP k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--valid k-Form-TextInput--regular"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-ifAKCX kjMLpG"
+    className="sc-ifAKCX UOJWq"
     disabled={false}
     type="button"
   >

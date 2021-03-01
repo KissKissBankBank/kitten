@@ -15,26 +15,17 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
-
-var _visuallyHidden = require("../../../../components/accessibility/visually-hidden");
+var _badge = require("../../../../components/atoms/badge");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
 var Badge = function Badge(_ref) {
-  var children = _ref.children,
-      className = _ref.className,
-      backgroundColor = _ref.backgroundColor,
-      a11yText = _ref.a11yText,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "className", "backgroundColor", "a11yText"]);
-  var badgeClassNames = (0, _classnames.default)('k-Badge', 'k-Badge--spaced', 'k-Badge--no-border', className);
-  return /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({}, props, {
-    className: badgeClassNames,
-    "aria-hidden": "true",
-    style: {
-      backgroundColor: backgroundColor
-    }
-  }), children, a11yText && /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, a11yText));
+  var backgroundColor = _ref.backgroundColor,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["backgroundColor"]);
+  return /*#__PURE__*/_react.default.createElement(_badge.Badge, (0, _extends2.default)({
+    color: backgroundColor,
+    spaced: true
+  }, props));
 };
 
 exports.Badge = Badge;

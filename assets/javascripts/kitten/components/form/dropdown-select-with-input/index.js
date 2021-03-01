@@ -201,8 +201,10 @@ const StyledDropdownSelectWithInput = styled.div`
       border: ${pxToRem(2)} solid ${COLORS.line1};
       border-top: 0;
     }
-    &:focus {
-      outline: none;
+
+    :focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
     }
   }
 
@@ -259,10 +261,14 @@ const StyledDropdownSelectWithInput = styled.div`
     .k-Form-DropdownSelectWithInput__container,
     .k-Form-DropdownSelectWithInput__list {
       border-color: ${COLORS.line2};
-    }
+      }
 
-    button, input {
-      outline: none;
+
+
+    .k-Form-DropdownSelectWithInput__button:focus,
+    .k-Form-DropdownSelectWithInput__input:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(-2)};
     }
   }
 
@@ -493,10 +499,7 @@ export const DropdownSelectWithInput = ({
               className="k-Form-DropdownSelectWithInput__button__arrowBox"
               aria-hidden
             >
-              <ArrowIcon
-                version="solid"
-                direction={isOpen ? 'top' : 'bottom'}
-              />
+              <ArrowIcon direction={isOpen ? 'top' : 'bottom'} />
             </span>
           )}
           <span className="k-Form-DropdownSelectWithInput__button__statusBadges">

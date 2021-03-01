@@ -4,7 +4,14 @@
 // Accessibility
 export { VisuallyHidden } from './components/accessibility/visually-hidden'; // Accordeon
 
-export { Accordeon } from './components/accordeon'; // Avatar
+export { Accordeon } from './components/accordeon'; // Atoms
+
+export { Badge } from './components/atoms/badge';
+export { IconBadge } from './components/atoms/icon-badge';
+export { Loader } from './components/atoms/loader';
+export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph';
+export { StepperIcon, StepperIconDefault, StepperIconInProgress, StepperIconValidated } from './components/atoms/stepper-icon';
+export { Tag } from './components/atoms/tag'; // Avatar
 
 export { AvatarWithTextAndBadge } from './components/avatar/avatar-with-text-and-badge'; // Box
 
@@ -26,17 +33,11 @@ export { ButtonImageWithText } from './components/buttons/button-image-with-text
 export { CheckableButton } from './components/buttons/checkable-button'; // Cards
 
 export { SimpleCard } from './components/cards/simple-card';
-export { ArticleCard } from './components/cards/article-card';
 export { BackerCard } from './components/cards/backer-card';
+export { BackingCard } from './components/cards/backing-card';
 export { CartRewardCard } from './components/cards/cart-reward-card';
-export { ContributionCard } from './components/cards/contribution-card';
 export { DonationCard } from './components/cards/donation-card';
-export { ProjectCard } from './components/cards/project-card';
-export { ProjectCreatorCard } from './components/cards/project-creator-card';
-export { ProjectSimilarCard } from './components/cards/project-similar-card';
-export { RewardCard } from './components/cards/reward-card';
 export { RewardEdition } from './components/cards/reward-edition';
-export { SimilarProjectsCard } from './components/cards/similar-projects-card';
 export { TeamCard } from './components/cards/team-card';
 export { Triptych } from './components/cards/triptych';
 export { VerticalCardWithAction } from './components/cards/vertical-card-with-action';
@@ -60,10 +61,8 @@ export { Details } from './components/details'; // Dev
 
 export { DevGrid } from './components/dev/dev-grid'; // Dropdowns
 
-export { DropdownButton } from './components/dropdowns/dropdown-button';
-export { Dropdown } from './components/dropdowns/dropdown';
-export { PhoneDropdown } from './components/dropdowns/phone-dropdown';
-export { UserMenu } from './components/dropdowns/user-menu'; // Expandable
+export { DropdownButton } from './components/dropdowns/v2/dropdown-button';
+export { Dropdown } from './components/dropdowns/v2/dropdown'; // Expandable
 
 export { ExpandBoard } from './components/expandable/expand-board'; // Form
 
@@ -78,7 +77,6 @@ export { DropdownSelect } from './components/form/dropdown-select';
 export { FormActions } from './components/form/form-actions';
 export { FormAmountAndCurrency } from './components/form/form-amount-and-currency';
 export { FormPhoneNumber } from './components/form/form-phone-number';
-export { FormRow } from './components/form/form-row';
 export { Label } from './components/form/label';
 export { LocationInput } from './components/form/location-input';
 export { PasswordInput } from './components/form/password-input';
@@ -87,35 +85,28 @@ export { RadioButtonSet } from './components/form/radio-button-set';
 export { RadioButton } from './components/form/radio-button';
 export { RangeSlider } from './components/form/range-slider';
 export { RichTextInput } from './components/form/rich-text-input';
-export { Search } from './components/form/search';
 export { SelectWithState } from './components/form/select-with-state';
-export { Slider } from './components/form/slider';
-export { Switch } from './components/form/switch';
 export { TextInputAndSelect } from './components/form/text-input-and-select';
 export { TextInputWithLimit } from './components/form/text-input-with-limit';
 export { TextInputWithUnitForm } from './components/form/text-input-with-unit-form';
 export { TextInputWithUnit } from './components/form/text-input-with-unit';
-export { TextInput } from './components/form/text-input'; // Grid
+export { TextInput } from './components/form/text-input';
+export { ToggleSwitch } from './components/form/toggle-switch'; // Grid
 
 export { Container } from './components/grid/container';
 export { ScrollableContainer } from './components/grid/scrollable-container';
 export { Grid, GridCol } from './components/grid/grid';
-export { LegoGrid } from './components/grid/lego-grid';
 export { Row } from './components/grid/row';
 export { SideGrid } from './components/grid/side-grid';
 export { StickyContainer } from './components/grid/sticky-container';
-export { AdaptableGrid } from './components/grid/adaptable-grid'; // Headers
-
-export { HeaderLogo } from './components/headers/header-logo';
-export { HeaderTitles } from './components/headers/header-titles';
-export { Header, HeaderItems, HeaderItem } from './components/headers/header'; // Heroes
+export { AdaptableGrid, AdaptableGridCol } from './components/grid/adaptable-grid'; // Heroes
 
 export { Hero } from './components/heroes/hero'; // Images
 
-export { ImageCropper } from './components/images/image-cropper';
-export { ImageWithCaption } from './components/images/image-with-caption'; // Layout
+export { ImageCropper } from './components/images/image-cropper'; // Layout
 
 export { ArrowContainer } from './components/layout/arrow-container';
+export { DashboardLayout } from './components/layout/dashboard-layout';
 export { IconContainer } from './components/layout/icon-container';
 export { HorizontalStroke } from './components/layout/horizontal-stroke';
 export { Line } from './components/layout/line';
@@ -127,20 +118,15 @@ export { VerticalStroke } from './components/layout/vertical-stroke'; // Lines
 
 export { InfoLines } from './components/lines/info-lines'; // Links
 
-export { ExternalRichLink } from './components/links/external-rich-link';
 export { LinkList } from './components/links/link-list'; // Lists
 
 export { IconList } from './components/lists/icon-list';
 export { BulletList } from './components/lists/bullet-list';
 export { List } from './components/lists/list';
 export { CheckList } from './components/lists/check-list';
-export { NavList } from './components/lists/nav-list';
-export { TagList } from './components/lists/tag-list';
-export { Timeline } from './components/lists/timeline'; // Loaders
+export { Timeline } from './components/lists/timeline'; // Menus
 
-export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph';
-export { Loader } from './components/loaders/loader'; // Menus
-
+export { DashboardMenu } from './components/menus/dashboard-menu';
 export { HeaderMenu } from './components/menus/header-menu'; // Meters
 
 export { CounterBlock } from './components/meters/counter-block';
@@ -156,28 +142,17 @@ export { Pagination } from './components/navigation/pagination';
 export { TabBar } from './components/navigation/tab-bar';
 export { NavBar } from './components/navigation/nav-bar'; // Notifications
 
-export { Alert } from './components/notifications/alert';
-export { Badge } from './components/notifications/badge';
-export { IconBadge } from './components/notifications/icon-badge'; // Pages
+export { Alert } from './components/notifications/alert'; // Pages
 
 export { MarkdownPage } from './components/pages/markdown'; // Popovers
 
-export { CallToActionPopover } from './components/popovers/call-to-action-popover';
-export { Popover } from './components/popovers/popover';
 export { SimplePopover } from './components/popovers/simple-popover'; // Search
 
-export { SearchInput } from './components/search/search-input'; // Simulators
-
-export { LoanSimulator } from './components/simulators/loan-simulator'; // Sliders
-
-export { SliderBar } from './components/sliders/slider-bar';
-export { SliderTooltip } from './components/sliders/slider-tooltip';
-export { SliderWithTooltipAndPower } from './components/sliders/slider-with-tooltip-and-power'; // Status with Bullet
+export { SearchInput } from './components/search/search-input'; // Status with Bullet
 
 export { StatusWithBullet } from './components/status-with-bullet'; // Steppers
 
 export { VerticalStepper } from './components/steppers/vertical-stepper';
-export { StepperIconDefault, StepperIconInProgress, StepperIconValidated } from './components/steppers/stepper-icon';
 export { Stepper } from './components/steppers/stepper'; // Tables
 
 export { DoubleEntryTable } from './components/tables/double-entry-table';
@@ -186,16 +161,9 @@ export { SingleEntryTable } from './components/tables/single-entry-table'; // Te
 
 export { TextCopy } from './components/text-copy'; // Tooltips
 
-export { QuestionMarkWithTooltip } from './components/tooltips/question-mark-with-tooltip';
-export { StaticTooltip } from './components/tooltips/static-tooltip';
-export { TooltipNew } from './components/tooltips/tooltip-new';
-export { Tooltip } from './components/tooltips/tooltip'; // Tours
+export { Toggletip } from './components/tooltips/toggletip'; // Tours
 
-export { HighlightHalo } from './components/tours/highlight-halo';
-export { HeaderTour } from './components/tours/header-tour';
-export { TourPopover } from './components/tours/tour-popover';
-export { TourStep } from './components/tours/tour-step';
-export { Tour } from './components/tours/tour'; // Typography
+export { HighlightHalo } from './components/tours/highlight-halo'; // Typography
 
 export { Paragraph } from './components/typography/paragraph';
 export { SupTitle } from './components/typography/sup-title';
@@ -204,9 +172,7 @@ export { Title } from './components/typography/title';
 export { TitleWithStroke } from './components/typography/title-with-stroke'; // Uploaders
 
 export { BasicUploader } from './components/uploaders/basic-uploader';
-export { DocumentManager } from './components/uploaders/document-manager';
-export { SimpleUploader } from './components/uploaders/simple-uploader';
-export { Uploader } from './components/uploaders/uploader'; // Videos
+export { DocumentManager } from './components/uploaders/document-manager'; // Videos
 
 export { Video } from './components/videos/video';
 export { GifVideo } from './components/videos/gif-video';
@@ -298,7 +264,15 @@ export { WaitingIcon } from './components/icons/waiting-icon';
 export { WarningCircleIcon } from './components/icons/warning-circle-icon';
 export { WarningIcon } from './components/icons/warning-icon';
 export { WhatsAppIcon } from './components/icons/whatsapp-icon';
-export { YoutubeIcon } from './components/icons/youtube-icon'; // ---------
+export { YoutubeIcon } from './components/icons/youtube-icon';
+export { HomeIcon } from './components/icons/home-icon';
+export { TagIcon } from './components/icons/tag-icon';
+export { FileIcon } from './components/icons/file-icon';
+export { LoudspeakerIcon } from './components/icons/loudspeaker-icon';
+export { ShieldIcon } from './components/icons/shield-icon';
+export { PeopleIcon } from './components/icons/people-icon';
+export { StatsIcon } from './components/icons/stats-icon';
+export { SpeechBubbleIcon } from './components/icons/speech-bubble-icon'; // ---------
 // CONSTANTS
 // ---------
 
@@ -315,10 +289,12 @@ export { createEvent } from './helpers/dom/create-event';
 export { cssPropertyDistributor } from './helpers/dom/css-property-distributor';
 export { default as domElementHelper } from './helpers/dom/element-helper';
 export { nativeInputValueSetter } from './helpers/dom/native-input-value-setter';
+export { useFlexGapCheck } from './helpers/dom/use-flex-gap-check';
 export { getReactElementsByType, getReactElementsWithoutType } from './helpers/react/react-elements';
 export { default as useContinuousIntersectionObserver } from './helpers/utils/continuous-intersection-hook';
 export { default as useIntersectionObserver } from './helpers/utils/intersection-hook';
 export { default as useLazyObserver } from './helpers/utils/lazy-hook';
 export { default as margin } from './helpers/utils/margin';
+export { parseHtml } from './helpers/utils/parser';
 export { pxToRem, stepToRem } from './helpers/utils/typography';
 export { usePrevious } from './helpers/utils/use-previous-hook';
