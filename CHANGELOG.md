@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking change: remove `k-Stepper` mixin and `k-Stepper__icon` style.
 - Breaking change: convert and move `StepperIcon*` components to `atoms`.
 - Feature: Add `StepperIcon` component with `state` prop.
+- Feature: Add `empty` prop to `IconBadge`.
 - Breaking change: convert `Line` to CSS-in-JS.
 - Breaking change: remove `k-Line` mixin.
 - Feature: Add `useFlexGapCheck` hook for `gap` feature detection.
