@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `PeopleIcon`, `StatsIcon` and `SpeechBubbleIcon`.
+- Fix: Remove `unique "key" prop` error on `DashboardLayout`.
 - Fix `StickyContainer` width on `HeaderNav`.
 
 ## [2.122.0] - 2021-02-25
