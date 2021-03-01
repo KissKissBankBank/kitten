@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove `LinkBox` default export.
+- Breaking change: Remove deprecated `LinkBox/deprecated` component.
+- Breaking change: Remove `k-LinkBox` mixin.
+- Fix `InformationBox` style.
 - Breaking Change: Remove `k-SideGrid` and `k-VerticalGrid` mixins.
 - Feature: Migrate `SideGrid` and `SideLayout` to Styled Components.
 - Breaking change: Remove `k-Tooltip`, `k-TooltipNew` and `k-StaticTooltip` styles.
