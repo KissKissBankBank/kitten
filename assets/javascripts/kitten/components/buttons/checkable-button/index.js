@@ -55,29 +55,37 @@ const StyledCheckableButton = styled(Button)`
     transform: scale(0);
   }
 
-  &[aria-checked='true']::after {
+  &[aria-checked]::after {
     opacity: 1;
     transform: scale(1);
     transition-timing-function: ease, cubic-bezier(0.2, 2, 0.7, 1);
   }
 
-  ${({ modifier, disabled }) =>
+  &:focus {
+    outline-offset: ${pxToRem(-2)};
+  }
+
+  ${({ modifier }) =>
     modifier !== 'copper' &&
-    !disabled &&
     css`
-      :hover,
-      :focus {
+      :hover:not(:disabled),
+      :focus:not(:disabled) {
         border-color: ${COLORS.primary4};
         background-color: ${COLORS.background1};
         color: ${COLORS.primary1};
       }
 
-      :active {
+      :active:not(:disabled) {
         border-color: ${COLORS.primary2};
         background-color: ${COLORS.background1};
         color: ${COLORS.primary2};
       }
     `}
+
+  &[aria-checked]:focus {
+    outline: ${COLORS.primary1} solid ${pxToRem(2)};
+    border-color: ${COLORS.primary1};
+  }
 `
 
 export const CheckableButton = ({ isChecked, children, error, ...props }) => {
@@ -95,7 +103,7 @@ export const CheckableButton = ({ isChecked, children, error, ...props }) => {
   return (
     <StyledCheckableButton
       {...props}
-      aria-checked={isChecked}
+      aria-checked={isChecked || null}
       modifier={checkedModifier}
     >
       {children}

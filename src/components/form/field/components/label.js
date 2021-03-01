@@ -31,7 +31,7 @@ var _marger = require("../../../layout/marger");
 
 var _label = require("../../../form/label");
 
-var _tooltip = require("../../../tooltips/tooltip");
+var _toggletip = require("../../../tooltips/toggletip");
 
 var _line = require("../../../layout/line");
 
@@ -56,9 +56,10 @@ var FieldLabel = /*#__PURE__*/function (_Component) {
           children = _this$props.children,
           tooltip = _this$props.tooltip,
           tooltipId = _this$props.tooltipId,
+          tooltipProps = _this$props.tooltipProps,
           labelProps = _this$props.labelProps,
           link = _this$props.link,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["children", "tooltip", "tooltipId", "labelProps", "link"]);
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link"]);
       return /*#__PURE__*/_react.default.createElement(_marger.Marger, (0, _extends2.default)({
         bottom: "1"
       }, others), /*#__PURE__*/_react.default.createElement(_line.Line, {
@@ -67,9 +68,12 @@ var FieldLabel = /*#__PURE__*/function (_Component) {
         }
       }, /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({}, labelProps, {
         size: labelProps.size || 'micro'
-      }), children)), tooltip && /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_tooltip.Tooltip, {
-        id: tooltipId
-      }, tooltip)), link && /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, link)));
+      }), children)), tooltip && /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_toggletip.Toggletip, (0, _extends2.default)({
+        id: tooltipId,
+        bubbleProps: {
+          zIndex: 2
+        }
+      }, tooltipProps), tooltip)), link && /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, link)));
     }
   }]);
   return FieldLabel;

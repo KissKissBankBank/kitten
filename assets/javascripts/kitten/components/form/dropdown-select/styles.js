@@ -33,7 +33,6 @@ export const StyledDropdown = styled.div`
 
     font-size: ${stepToRem(-1)};
     text-align: left;
-    outline: none;
 
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -88,7 +87,8 @@ export const StyledDropdown = styled.div`
     font-size: inherit;
 
     &:focus {
-      outline: none;
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(-4)};
     }
     &:disabled {
       background-color: ${COLORS.line1};
@@ -100,7 +100,6 @@ export const StyledDropdown = styled.div`
     background-color: ${COLORS.background1};
     font-size: ${stepToRem(-1)};
     text-align: left;
-    outline: none;
     display: flex;
   }
   .k-Form-DropdownCombobox__arrowButton__arrowBox {
@@ -126,7 +125,8 @@ export const StyledDropdown = styled.div`
       border-top: 0;
     }
     &:focus {
-      outline: none;
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
     }
   }
 
@@ -164,6 +164,10 @@ export const StyledDropdown = styled.div`
     .k-Form-Dropdown__list {
       border-color: ${COLORS.line2};
     }
+  }
+  .k-Form-DropdownSelect__button:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 
   &.k-Form-Dropdown--error {
@@ -382,16 +386,24 @@ export const StyledDropdown = styled.div`
   &.k-Form-Dropdown--orion {
     .k-Form-DropdownCombobox,
     .k-Form-DropdownSelect__button {
-      height: ${pxToRem(60)};
-      border-radius: ${pxToRem(6)};
-      padding-right: ${pxToRem(10)};
+      height: ${pxToRem(50)};
+      border-radius: ${pxToRem(4)};
+      padding-right: ${pxToRem(15)};
+    }
 
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        height: ${pxToRem(70)};
-        border-radius: ${pxToRem(8)};
-        padding-right: ${pxToRem(20)};
+    &.k-Form-Dropdown--big {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button {
+        height: ${pxToRem(60)};
+        border-radius: ${pxToRem(6)};
+        padding-right: ${pxToRem(10)};
+
+        @media (min-width: ${ScreenConfig.S.min}px) {
+          height: ${pxToRem(70)};
+          border-radius: ${pxToRem(8)};
+          padding-right: ${pxToRem(20)};
+        }
       }
-
     }
 
     &.k-Form-Dropdown--isOpen {

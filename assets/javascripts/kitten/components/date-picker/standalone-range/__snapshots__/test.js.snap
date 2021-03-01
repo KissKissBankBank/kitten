@@ -2,7 +2,7 @@
 
 exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="sc-EHOje qffpI"
+  className="sc-bZQynM dxrDNb"
 >
   <div
     className="DayPicker Selectable"
@@ -14,23 +14,17 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
       tabIndex={0}
     >
       <p
-        className="sc-bwzfXH uTxCW k-u-size-tiny k-u-weight-regular sc-htpNat rGrEc"
+        className="sc-htpNat KtFsv k-u-size-tiny k-u-weight-regular sc-bxivhb BTiTW"
       >
         Sélectionnez la période souhaitée
       </p>
       <div
-        className="sc-bxivhb ijxXmX DayPicker-NavBar"
+        className="sc-ifAKCX jhToMv DayPicker-NavBar"
       >
         <button
           aria-label="Mois précédent, Décembre 2018"
-          className="sc-bdVaJa fCnQxu k-Button sc-ifAKCX emcmvl k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+          className="sc-bdVaJa eqpcrT sc-EHOje lbpOMi"
           onClick={[Function]}
-          style={
-            Object {
-              "--border-radius": 0,
-            }
-          }
-          type="button"
         >
           <svg
             className=""
@@ -53,14 +47,8 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         </button>
         <button
           aria-label="Mois suivant, Février 2019"
-          className="sc-bdVaJa fCnQxu k-Button sc-ifAKCX emcmvl k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+          className="sc-bdVaJa eqpcrT sc-EHOje lbpOMi"
           onClick={[Function]}
-          style={
-            Object {
-              "--border-radius": 0,
-            }
-          }
-          type="button"
         >
           <svg
             className=""

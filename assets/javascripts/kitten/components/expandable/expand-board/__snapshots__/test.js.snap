@@ -7,20 +7,15 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
   <button
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
-    className="sc-bdVaJa eOqspx k-Button sc-bwzfXH dEAqqy k-Button--big k-Button--helium k-Button--andromeda"
+    className="sc-bdVaJa cgScxS sc-htpNat RoTKj"
     disabled={false}
     onClick={[Function]}
-    style={
-      Object {
-        "--border-radius": 0,
-      }
-    }
     type="button"
   >
     <div>
       Alice
       <svg
-        className="sc-htpNat iqcbvN"
+        className="sc-bxivhb GRsEG"
         fill="#222"
         height="5.64"
         style={
@@ -49,20 +44,15 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
   <button
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
-    className="sc-bdVaJa eOqspx k-Button sc-bwzfXH dEAqqy k-Button--big k-Button--helium k-Button--andromeda"
+    className="sc-bdVaJa cgScxS sc-htpNat RoTKj"
     disabled={true}
     onClick={[Function]}
-    style={
-      Object {
-        "--border-radius": 0,
-      }
-    }
     type="button"
   >
     <div>
       Alice
       <svg
-        className="sc-htpNat iqcbvN"
+        className="sc-bxivhb GRsEG"
         fill="#222"
         height="5.64"
         style={

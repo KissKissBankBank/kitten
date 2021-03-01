@@ -2,7 +2,7 @@
 
 exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa dcdXhM k-Form-Dropdown k-Form-Dropdown--andromeda k-Form-Dropdown--normal k-Form-Dropdown--isOpen"
+  className="sc-bdVaJa dPEdhZ k-Form-Dropdown k-Form-Dropdown--andromeda k-Form-Dropdown--normal k-Form-Dropdown--isOpen"
   style={
     Object {
       "--menu-z-index": 1000,
@@ -38,15 +38,21 @@ exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
       className="k-Form-DropdownSelect__button__arrowBox"
     >
       <svg
-        className="k-ArrowIcon k-ArrowIcon--top"
+        className=""
+        fill="#222"
         height="5.64"
-        viewBox="0 0 6 6"
+        style={
+          Object {
+            "transform": null,
+          }
+        }
+        viewBox="0 0 8.48 5.64"
         width="8.48"
         xmlns="http://www.w3.org/2000/svg"
       >
         
         <path
-          d="M6 0H0v6h2V2h4z"
+          d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
         />
       </svg>
     </span>

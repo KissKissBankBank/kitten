@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert /> should matches with closeButton snapshot 1`] = `
+<div
+  className="sc-htpNat dRiDYb k-Alert k-Alert--hasCloseButton"
+  role="alert"
+>
+  <div
+    className="k-Alert__text"
+  >
+    Alert !
+  </div>
+  <button
+    aria-label="Close"
+    className="sc-bdVaJa awWNQ k-Alert__button"
+    onClick={[Function]}
+    title="Close"
+    type="button"
+  >
+    <svg
+      fill="#222"
+      height="8"
+      viewBox="0 0 8 8"
+      width="8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+      />
+      <path
+        d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<Alert /> should matches with default snapshot 1`] = `
+<div
+  className="sc-htpNat dRiDYb k-Alert"
+  role="alert"
+>
+  <div
+    className="k-Alert__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
+
+exports[`<Alert /> should matches with error snapshot 1`] = `
+<div
+  className="sc-htpNat dRiDYb k-Alert k-Alert--error"
+  role="alert"
+>
+  <div
+    className="k-Alert__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
+
+exports[`<Alert /> should matches with success snapshot 1`] = `
+<div
+  className="sc-htpNat dRiDYb k-Alert k-Alert--success"
+  role="alert"
+>
+  <div
+    className="k-Alert__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
+
+exports[`<Alert /> should matches with warning snapshot 1`] = `
+<div
+  className="sc-htpNat dRiDYb k-Alert k-Alert--warning"
+  role="alert"
+>
+  <div
+    className="k-Alert__text"
+  >
+    Alert !
+  </div>
+</div>
+`;

@@ -161,6 +161,11 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   color: #fff;
 }
 
+.c1:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c1:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;

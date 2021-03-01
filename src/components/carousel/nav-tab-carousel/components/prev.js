@@ -15,11 +15,12 @@ var Prev = function Prev(_ref) {
   var children = _ref.children,
       hoverColor = _ref.hoverColor;
   return /*#__PURE__*/_react.default.createElement(_styledComponents.StyledLeftArrowContainer, {
-    hoverColor: hoverColor
+    hoverColor: hoverColor,
+    as: "button",
+    className: "k-u-reset-button"
   }, /*#__PURE__*/_react.default.createElement(_styledComponents.StyledArrowIcon, {
-    version: "solid",
     direction: "left",
-    fill: "#fff"
+    color: "#fff"
   }), /*#__PURE__*/_react.default.createElement(_styledComponents.StyledPrevText, null, children));
 };
 

@@ -10,7 +10,7 @@ import TYPOGRAPHY from '../../../constants/typography-config';
 import COLORS from '../../../constants/colors-config';
 import { VisuallyHidden } from '../../accessibility/visually-hidden';
 import slugify from 'slugify';
-import { Loader } from '../../loaders/loader';
+import { Loader } from '../../atoms/loader';
 var itemHeight = 38;
 var maxItemsVisibled = 3;
 var borderSize = 2;
@@ -21,7 +21,7 @@ var Container = styled.div.withConfig({
 var Input = styled.input.withConfig({
   displayName: "autocomplete__Input",
   componentId: "lfeqwe-1"
-})(["display:block;width:100%;height:", ";box-sizing:border-box;background:", ";border:", " solid ", ";padding:0 ", ";outline:none;", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}:focus{border-color:", ";}::-ms-clear{display:none;}", " ", ""], pxToRem(50), COLORS.background1, pxToRem(borderSize), COLORS.line1, pxToRem(15), TYPOGRAPHY.fontStyles.light, stepToRem(-1), COLORS.font1, COLORS.font2, COLORS.font2, COLORS.line2, function (_ref) {
+})(["display:block;width:100%;height:", ";box-sizing:border-box;background:", ";border:", " solid ", ";padding:0 ", ";", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}:focus{border-color:", ";outline:", " solid ", ";outline-offset:", ";}::-ms-clear{display:none;}", " ", ""], pxToRem(50), COLORS.background1, pxToRem(borderSize), COLORS.line1, pxToRem(15), TYPOGRAPHY.fontStyles.light, stepToRem(-1), COLORS.font1, COLORS.font2, COLORS.font2, COLORS.line2, COLORS.primary4, pxToRem(2), pxToRem(2), function (_ref) {
   var error = _ref.error;
   return error && css(["border-color:", ";color:", ";:focus{border-color:", ";color:", ";}"], COLORS.error3, COLORS.error3, COLORS.line2, COLORS.font1);
 }, function (_ref2) {
@@ -76,7 +76,7 @@ var NoResultItem = styled.li.withConfig({
 var Item = styled.li.withConfig({
   displayName: "autocomplete__Item",
   componentId: "lfeqwe-6"
-})(["padding:", " ", ";", ";font-size:", ";line-height:1.3;color:", ";cursor:pointer;transition:background-color 0.2s;:hover,:focus,:active{background-color:", ";}:focus{outline:none;}&[aria-selected='true']{background-color:", ";}"], pxToRem(10), pxToRem(15), TYPOGRAPHY.fontStyles.light, stepToRem(-1), COLORS.font1, COLORS.background3, COLORS.line1);
+})(["padding:", " ", ";", ";font-size:", ";line-height:1.3;color:", ";cursor:pointer;transition:background-color 0.2s;:hover,:focus,:active{background-color:", ";}:focus{outline:", " solid ", ";outline-offset:", ";}&[aria-selected='true']{background-color:", ";}"], pxToRem(10), pxToRem(15), TYPOGRAPHY.fontStyles.light, stepToRem(-1), COLORS.font1, COLORS.background3, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.line1);
 export var Autocomplete = function Autocomplete(_ref9) {
   var defaultItems = _ref9.items,
       error = _ref9.error,

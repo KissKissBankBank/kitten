@@ -2,7 +2,7 @@
 
 exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`] = `
 <div
-  className="sc-htoDjs jsaOOI"
+  className="sc-gzVnrw kCbSGM"
 >
   <div
     className="sc-bxivhb eVBmAO"
@@ -43,17 +43,17 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
     </div>
   </div>
   <div
-    className="sc-dnqmqq edtGeW"
+    className="sc-htoDjs dnHiPG"
   >
     <div
-      className="sc-iwsKbI jpDFaK"
+      className="sc-dnqmqq igAaxS"
     >
       <textarea
         aria-describedby=""
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="sc-gZMcBi jLUELU"
+        className="sc-iwsKbI btoNKa"
         defaultValue=""
         disabled={false}
         id={null}
@@ -62,10 +62,10 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         rows="1"
       />
       <div
-        className="sc-gqjmRU laqAat"
+        className="sc-gZMcBi inrZDX"
       >
         <span
-          className="sc-VigVT gHjKnO"
+          className="sc-gqjmRU TPpbB"
         />
       </div>
     </div>
@@ -85,7 +85,7 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
 
 exports[`<CommentForm /> should match its empty snapshot 1`] = `
 <div
-  className="sc-htoDjs jsaOOI"
+  className="sc-gzVnrw kCbSGM"
 >
   <div
     className="sc-bxivhb eVBmAO"
@@ -105,17 +105,17 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
     </div>
   </div>
   <div
-    className="sc-dnqmqq edtGeW"
+    className="sc-htoDjs dnHiPG"
   >
     <div
-      className="sc-iwsKbI jpDFaK"
+      className="sc-dnqmqq igAaxS"
     >
       <textarea
         aria-describedby=""
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="sc-gZMcBi jLUELU"
+        className="sc-iwsKbI btoNKa"
         defaultValue=""
         disabled={false}
         id="custom-textarea-id"
@@ -124,10 +124,10 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         rows="1"
       />
       <div
-        className="sc-gqjmRU laqAat"
+        className="sc-gZMcBi inrZDX"
       >
         <span
-          className="sc-VigVT gHjKnO"
+          className="sc-gqjmRU TPpbB"
         />
       </div>
     </div>

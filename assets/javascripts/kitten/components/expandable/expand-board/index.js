@@ -77,7 +77,6 @@ export class ExpandBoardButton extends PureComponent {
         <div>
           {expanded ? defaultExpandChildren : children}
           <StyledArrowIcon
-            version="solid"
             direction={expanded ? 'top' : 'bottom'}
             fill={COLORS.background1}
           />

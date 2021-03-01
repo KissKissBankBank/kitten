@@ -16,6 +16,10 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -27,10 +31,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -56,91 +56,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   margin-right: 0;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
-.c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0 0.625rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
-  font-size: 0.8888888888888888rem;
-}
-
-.c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
-  width: 100%;
-}
-
-.c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
-}
-
 .c0 svg,
 .c0 path {
   fill: currentColor;
@@ -161,6 +76,11 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   color: #fff;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -174,175 +94,8 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   }
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
-  }
-}
-
 <button
-  className="c0 k-Button k-Button--normal k-Button--social_facebook k-Button--andromeda"
-  style={
-    Object {
-      "--border-radius": 0,
-    }
-  }
-  type="button"
+  className="c0"
 >
   <svg
     fill="#222"
@@ -378,6 +131,10 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -389,10 +146,8 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  min-width: initial;
+  width: 100%;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -418,91 +173,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   margin-right: 0;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
-.c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0 0.625rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
-  font-size: 0.8888888888888888rem;
-}
-
-.c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
-  width: 100%;
-}
-
-.c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
-}
-
 .c0 svg,
 .c0 path {
   fill: currentColor;
@@ -523,6 +193,11 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   color: #fff;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -536,29 +211,8 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   }
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
-  }
-}
-
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0 {
     min-width: 13.75rem;
     min-height: 4.375rem;
     padding: 0 2.5rem;
@@ -567,144 +221,14 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 }
 
 @media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
+  .c0 {
     width: 13.75rem;
     height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--social_facebook k-Button--andromeda k-Button--fluid"
-  style={
-    Object {
-      "--border-radius": 0,
-    }
-  }
-  type="button"
+  className="c0"
 >
   <svg
     fill="#222"
@@ -740,6 +264,10 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -751,10 +279,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -787,91 +311,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   margin-right: 0;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
-.c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0 0.625rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
-  font-size: 0.8888888888888888rem;
-}
-
-.c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
-  width: 100%;
-}
-
-.c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
-}
-
 .c0 svg,
 .c0 path {
   fill: currentColor;
@@ -901,6 +340,11 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   color: #fff;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -914,175 +358,8 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   }
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
-  }
-}
-
 <button
-  className="c0 k-Button k-Button--normal k-Button--social_instagram k-Button--andromeda"
-  style={
-    Object {
-      "--border-radius": 0,
-    }
-  }
-  type="button"
+  className="c0"
 >
   <svg
     fill="#222"
@@ -1118,6 +395,10 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1129,10 +410,8 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  min-width: initial;
+  width: 100%;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -1165,91 +444,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   margin-right: 0;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
-.c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0 0.625rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
-  font-size: 0.8888888888888888rem;
-}
-
-.c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
-  width: 100%;
-}
-
-.c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
-}
-
 .c0 svg,
 .c0 path {
   fill: currentColor;
@@ -1279,6 +473,11 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   color: #fff;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -1292,29 +491,8 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   }
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
-  }
-}
-
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0 {
     min-width: 13.75rem;
     min-height: 4.375rem;
     padding: 0 2.5rem;
@@ -1323,144 +501,14 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 }
 
 @media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
+  .c0 {
     width: 13.75rem;
     height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--social_instagram k-Button--andromeda k-Button--fluid"
-  style={
-    Object {
-      "--border-radius": 0,
-    }
-  }
-  type="button"
+  className="c0"
 >
   <svg
     fill="#222"
@@ -1496,6 +544,10 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1507,10 +559,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #00669e;
   background-color: #00669e;
   color: #fff;
@@ -1536,91 +584,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   margin-right: 0;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
-.c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0 0.625rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
-  font-size: 0.8888888888888888rem;
-}
-
-.c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
-  width: 100%;
-}
-
-.c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
-}
-
 .c0 svg,
 .c0 path {
   fill: currentColor;
@@ -1641,6 +604,11 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   color: #fff;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -1654,175 +622,8 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   }
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
-  }
-}
-
 <button
-  className="c0 k-Button k-Button--normal k-Button--social_linkedin k-Button--andromeda"
-  style={
-    Object {
-      "--border-radius": 0,
-    }
-  }
-  type="button"
+  className="c0"
 >
   <svg
     fill="#222"
@@ -1858,6 +659,10 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1869,10 +674,8 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  min-width: initial;
+  width: 100%;
   border: 0.125rem solid #00669e;
   background-color: #00669e;
   color: #fff;
@@ -1898,91 +701,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   margin-right: 0;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
-.c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0 0.625rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
-  font-size: 0.8888888888888888rem;
-}
-
-.c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
-  width: 100%;
-}
-
-.c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
-}
-
 .c0 svg,
 .c0 path {
   fill: currentColor;
@@ -2003,6 +721,11 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   color: #fff;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -2016,29 +739,8 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   }
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
-  }
-}
-
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0 {
     min-width: 13.75rem;
     min-height: 4.375rem;
     padding: 0 2.5rem;
@@ -2047,144 +749,14 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 }
 
 @media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
+  .c0 {
     width: 13.75rem;
     height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--social_linkedin k-Button--andromeda k-Button--fluid"
-  style={
-    Object {
-      "--border-radius": 0,
-    }
-  }
-  type="button"
+  className="c0"
 >
   <svg
     fill="#222"
@@ -2220,6 +792,10 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -2231,10 +807,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #55acee;
   background-color: #55acee;
   color: #fff;
@@ -2260,91 +832,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   margin-right: 0;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
-.c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0 0.625rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
-  font-size: 0.8888888888888888rem;
-}
-
-.c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
-  width: 100%;
-}
-
-.c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
-}
-
 .c0 svg,
 .c0 path {
   fill: currentColor;
@@ -2365,6 +852,11 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   color: #fff;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -2378,175 +870,8 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   }
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
-  }
-}
-
 <button
-  className="c0 k-Button k-Button--normal k-Button--social_twitter k-Button--andromeda"
-  style={
-    Object {
-      "--border-radius": 0,
-    }
-  }
-  type="button"
+  className="c0"
 >
   <svg
     fill="#222"
@@ -2582,6 +907,10 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -2593,10 +922,8 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  min-width: initial;
+  width: 100%;
   border: 0.125rem solid #55acee;
   background-color: #55acee;
   color: #fff;
@@ -2622,91 +949,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   margin-right: 0;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
-.c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0 0.625rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
-  font-size: 0.8888888888888888rem;
-}
-
-.c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
-  width: 100%;
-}
-
-.c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
-}
-
 .c0 svg,
 .c0 path {
   fill: currentColor;
@@ -2727,6 +969,11 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   color: #fff;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -2740,29 +987,8 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   }
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
-  }
-}
-
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0 {
     min-width: 13.75rem;
     min-height: 4.375rem;
     padding: 0 2.5rem;
@@ -2771,144 +997,14 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 }
 
 @media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
+  .c0 {
     width: 13.75rem;
     height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--social_twitter k-Button--andromeda k-Button--fluid"
-  style={
-    Object {
-      "--border-radius": 0,
-    }
-  }
-  type="button"
+  className="c0"
 >
   <svg
     fill="#222"

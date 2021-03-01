@@ -67,7 +67,6 @@
       position: relative;
       display: block;
       box-sizing: border-box;
-      outline: none;
       padding: 0 k-px-to-rem(15px) 0 k-px-to-rem(35px);
 
       width: 100%;
@@ -88,7 +87,6 @@
       }
 
       &:focus {
-        outline: none;
         border-color: $border-color-focus;
       }
 

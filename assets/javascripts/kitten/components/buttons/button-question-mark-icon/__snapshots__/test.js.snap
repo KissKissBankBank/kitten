@@ -2,12 +2,7 @@
 
 exports[`ButtonQuestionMarkIcon /> default snapshot 1`] = `
 <button
-  className="sc-bdVaJa eOqspx k-Button k-Button--nano k-Button--helium k-Button--andromeda k-Button--hasIcon k-Button--rounded"
-  style={
-    Object {
-      "--border-radius": 0,
-    }
-  }
+  className="sc-bdVaJa eYHkjy"
   type="button"
 >
   <svg

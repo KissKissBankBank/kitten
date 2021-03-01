@@ -46,7 +46,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 var StyledTextInputWithUnit = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-unit__StyledTextInputWithUnit",
   componentId: "gjmccx-0"
-})(["display:flex;width:1%;&:not(.k-Form-TextInputWithUnit--hasDigits){width:100%;}.k-Form-TextInputWithUnit__input{transition:all 0.2s;&[type='number']{appearance:textfield;&::-webkit-inner-spin-button,&::-webkit-outer-spin-button{margin:0;appearance:none;}}}.k-Form-TextInputWithUnit__unit{display:flex;align-items:center;justify-content:center;background-color:", ";border:", " solid ", ";border-left:0;border-radius:0;box-sizing:border-box;padding:0 ", ";color:", ";white-space:nowrap;transition:all 0.2s;font-size:", ";", ";&.k-Form-TextInputWithUnit__unit--valid{border-color:", ";color:", ";}&.k-Form-TextInputWithUnit__unit--error{border-color:", ";color:", ";}&.k-Form-TextInputWithUnit__unit--disabled{color:", ";background-color:", ";}&.k-Form-TextInputWithUnit__unit--tiny{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--huge{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--giant{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--hasUnitWord{font-size:", ";}}&:focus-within .k-Form-TextInputWithUnit__unit{border-color:", ";color:", ";}"], _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(15), _colorsConfig.default.font1, (0, _typography.stepToRem)(0), _typographyConfig.default.fontStyles.regular, _colorsConfig.default.tertiary2, _colorsConfig.default.valid, _colorsConfig.default.error3, _colorsConfig.default.error, _colorsConfig.default.font2, _colorsConfig.default.line1, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(25), (0, _typography.stepToRem)(-1), _colorsConfig.default.line2, _colorsConfig.default.font1);
+})(["display:flex;width:1%;&:not(.k-Form-TextInputWithUnit--hasDigits){width:100%;}.k-Form-TextInputWithUnit__input{&[type='number']{appearance:textfield;&::-webkit-inner-spin-button,&::-webkit-outer-spin-button{margin:0;appearance:none;}}}.k-Form-TextInputWithUnit__unit{display:flex;align-items:center;justify-content:center;background-color:", ";border:", " solid ", ";border-left:0;border-radius:0;box-sizing:border-box;padding:0 ", ";color:", ";white-space:nowrap;transition:all 0.2s;font-size:", ";", ";&.k-Form-TextInputWithUnit__unit--valid{border-color:", ";color:", ";}&.k-Form-TextInputWithUnit__unit--error{border-color:", ";color:", ";}&.k-Form-TextInputWithUnit__unit--disabled{color:", ";background-color:", ";}&.k-Form-TextInputWithUnit__unit--tiny{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--big,&.k-Form-TextInputWithUnit__unit--huge{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--giant{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--hasUnitWord{font-size:", ";}}&:focus-within{.k-Form-TextInputWithUnit__unit{border-color:", ";color:", ";}}&.k-Form-TextInputWithUnit--orion{.k-Form-TextInputWithUnit__input{border-top-right-radius:0;border-bottom-right-radius:0;}.k-Form-TextInputWithUnit__unit{border-top-right-radius:", ";border-bottom-right-radius:", ";}.k-Form-TextInputWithUnit__unit--big{border-top-right-radius:", ";border-bottom-right-radius:", ";}}"], _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(15), _colorsConfig.default.font1, (0, _typography.stepToRem)(0), _typographyConfig.default.fontStyles.regular, _colorsConfig.default.tertiary2, _colorsConfig.default.valid, _colorsConfig.default.error3, _colorsConfig.default.error, _colorsConfig.default.font2, _colorsConfig.default.line1, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(25), (0, _typography.stepToRem)(-1), _colorsConfig.default.line2, _colorsConfig.default.font1, (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(8));
 
 var TextInputWithUnit = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TextInputWithUnit, _PureComponent);
@@ -68,7 +68,7 @@ var TextInputWithUnit = /*#__PURE__*/function (_PureComponent) {
           unitWord = _this$props.unitWord,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["unit", "unitWord"]);
       return /*#__PURE__*/_react.default.createElement(StyledTextInputWithUnit, {
-        className: (0, _classnames.default)('k-Form-TextInputWithUnit', {
+        className: (0, _classnames.default)('k-Form-TextInputWithUnit', "k-Form-TextInputWithUnit--".concat(this.props.variant), {
           'k-Form-TextInputWithUnit--hasDigits': !!this.props.digits
         })
       }, /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({
@@ -83,6 +83,7 @@ var TextInputWithUnit = /*#__PURE__*/function (_PureComponent) {
           'k-Form-TextInputWithUnit__unit--error': this.props.error,
           'k-Form-TextInputWithUnit__unit--disabled': this.props.disabled,
           'k-Form-TextInputWithUnit__unit--tiny': this.props.tiny,
+          'k-Form-TextInputWithUnit__unit--big': this.props.big,
           'k-Form-TextInputWithUnit__unit--huge': this.props.huge,
           'k-Form-TextInputWithUnit__unit--giant': this.props.giant,
           'k-Form-TextInputWithUnit__unit--hasUnitWord': !!unitWord
@@ -99,13 +100,15 @@ TextInputWithUnit.propTypes = {
   valid: _propTypes.default.bool,
   error: _propTypes.default.bool,
   tiny: _propTypes.default.bool,
+  big: _propTypes.default.bool,
   huge: _propTypes.default.bool,
   giant: _propTypes.default.bool,
   center: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
   unit: _propTypes.default.string,
   unitWord: _propTypes.default.bool,
-  digits: _propTypes.default.number
+  digits: _propTypes.default.number,
+  variant: _propTypes.default.oneOf(['andromeda', 'orion'])
 };
 TextInputWithUnit.defaultProps = {
   unit: 'λ',
@@ -114,9 +117,11 @@ TextInputWithUnit.defaultProps = {
   valid: false,
   error: false,
   tiny: false,
+  big: false,
   huge: false,
   giant: false,
   center: false,
   disabled: false,
-  digits: null
+  digits: null,
+  variant: 'andromeda'
 };

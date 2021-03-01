@@ -1,51 +1,29 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-import React, { Component } from 'react';
+import React from 'react';
+import styled from 'styled-components';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-export var VerticalStroke = /*#__PURE__*/function (_Component) {
-  _inherits(VerticalStroke, _Component);
+import COLORS from '../../../constants/colors-config';
+import { pxToRem } from '../../../helpers/utils/typography';
+export var VerticalStroke = styled(function (_ref) {
+  var className = _ref.className,
+      size = _ref.size,
+      others = _objectWithoutProperties(_ref, ["className", "size"]);
 
-  var _super = _createSuper(VerticalStroke);
-
-  function VerticalStroke() {
-    _classCallCheck(this, VerticalStroke);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(VerticalStroke, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          className = _this$props.className,
-          size = _this$props.size,
-          others = _objectWithoutProperties(_this$props, ["className", "size"]);
-
-      var verticalStrokeClassName = classNames('k-VerticalStroke', {
-        'k-VerticalStroke--tiny': size == 'tiny',
-        'k-VerticalStroke--default': size == 'default',
-        'k-VerticalStroke--big': size == 'big',
-        'k-VerticalStroke--huge': size == 'huge'
-      }, className);
-      return /*#__PURE__*/React.createElement("span", _extends({
-        className: verticalStrokeClassName
-      }, others));
-    }
-  }]);
-
-  return VerticalStroke;
-}(Component);
+  var verticalStrokeClassName = classNames('k-VerticalStroke', {
+    'k-VerticalStroke--tiny': size === 'tiny',
+    'k-VerticalStroke--default': size === 'default',
+    'k-VerticalStroke--big': size === 'big',
+    'k-VerticalStroke--huge': size === 'huge'
+  }, className);
+  return /*#__PURE__*/React.createElement("span", _extends({
+    className: verticalStrokeClassName
+  }, others));
+}).withConfig({
+  displayName: "vertical-stroke__VerticalStroke",
+  componentId: "sc-5qljff-0"
+})(["&.k-VerticalStroke{display:block;border:none;background:", ";}&.k-VerticalStroke--tiny{height:", ";width:", ";}&.k-VerticalStroke--default{height:", ";width:", ";}&.k-VerticalStroke--big{height:", ";width:", ";}&.k-VerticalStroke--huge{height:", ";width:", ";}"], COLORS.font1, pxToRem(20), pxToRem(2), pxToRem(30), pxToRem(4), pxToRem(50), pxToRem(4), pxToRem(100), pxToRem(6));
 VerticalStroke.propTypes = {
   size: PropTypes.oneOf(['tiny', 'default', 'big', 'huge'])
 };

@@ -161,6 +161,11 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   color: #fff;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -522,6 +527,11 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {

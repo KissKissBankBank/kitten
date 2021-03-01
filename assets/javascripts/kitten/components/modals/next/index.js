@@ -45,7 +45,6 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
     background-color: ${COLORS.background1};
     box-sizing: border-box;
-    outline: none;
     transform: scale(0.94);
     margin-right: ${pxToRem(20)};
     margin-left: ${pxToRem(20)};

@@ -42,6 +42,10 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -53,10 +57,17 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  width: 1.875rem;
+  height: 1.875rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -82,91 +93,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   margin-right: 0;
 }
 
-.c1.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
-.c1.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c1.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0 0.625rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c1.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
-  font-size: 0.8888888888888888rem;
-}
-
-.c1.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c1.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c1.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-}
-
-.c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c1.k-Button--fluid {
-  min-width: initial;
-  width: 100%;
-}
-
-.c1.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c1.k-Button--orion {
-  border-radius: 0.375rem;
-}
-
 .c1 svg,
 .c1 path {
   fill: currentColor;
@@ -185,6 +111,11 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c1:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c1:disabled {
@@ -208,6 +139,10 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -219,13 +154,13 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #19b4fa;
-  background-color: #19b4fa;
-  color: #fff;
+  border: 0.125rem solid #eee;
+  background-color: #fff;
+  color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -248,91 +183,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   margin-right: 0;
 }
 
-.c9.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
-.c9.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c9.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0 0.625rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c9.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
-  font-size: 0.8888888888888888rem;
-}
-
-.c9.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c9.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c9.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-}
-
-.c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c9.k-Button--fluid {
-  min-width: initial;
-  width: 100%;
-}
-
-.c9.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c9.k-Button--orion {
-  border-radius: 0.375rem;
-}
-
 .c9 svg,
 .c9 path {
   fill: currentColor;
@@ -353,7 +203,102 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   color: #fff;
 }
 
+.c9:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c9:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+  border: 0.125rem solid #19b4fa;
+  background-color: #19b4fa;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c10:disabled {
+  cursor: not-allowed;
+}
+
+.c10:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c10 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c10 >:last-child {
+  margin-right: 0;
+}
+
+.c10 svg,
+.c10 path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c10:hover,
+.c10:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
+  color: #fff;
+}
+
+.c10:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
+.c10:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c10:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -442,76 +387,14 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--nano {
+  .c1 {
     width: 6.25rem;
     height: 1.25rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c1.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c1.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c1.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid) {
+  .c1 {
     width: 3.125rem;
     min-width: 0;
     min-height: 0;
@@ -519,86 +402,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  .c1 {
     width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c1.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c1.k-Button--orion {
-    border-radius: 0.5rem;
   }
 }
 
@@ -610,163 +415,23 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--tiny {
+  .c9 {
     width: 10rem;
     height: 2.5rem;
   }
 }
 
-@media (min-width:40rem) {
-  .c9.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c9.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c9.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c10 {
+    width: 12.5rem;
+    height: 3.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c9.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c9.k-Button--orion {
-    border-radius: 0.5rem;
+  .c10 {
+    width: 10rem;
+    height: 2.5rem;
   }
 }
 
@@ -800,13 +465,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 >
   <button
     aria-label="Close"
-    className="c1 k-Button c2 k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+    className="c1 c2"
     onClick={[Function]}
-    style={
-      Object {
-        "--border-radius": 0,
-      }
-    }
     type="button"
   >
     <svg
@@ -856,26 +516,14 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c7 c8"
     >
       <button
-        className="c1 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda"
+        className="c9"
         onClick={[Function]}
-        style={
-          Object {
-            "--border-radius": 0,
-          }
-        }
-        type="button"
       >
         J’ai compris
       </button>
       <button
-        className="c9 k-Button k-Button--tiny k-Button--helium k-Button--andromeda"
+        className="c10"
         onClick={[Function]}
-        style={
-          Object {
-            "--border-radius": 0,
-          }
-        }
-        type="button"
       >
         Mes préférences
       </button>
@@ -922,6 +570,10 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -933,10 +585,17 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  width: 1.875rem;
+  height: 1.875rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -962,91 +621,6 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c1.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
-.c1.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c1.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0 0.625rem;
-  font-size: 0.7901234567901234rem;
-}
-
-.c1.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
-  font-size: 0.8888888888888888rem;
-}
-
-.c1.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c1.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-}
-
-.c1.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-}
-
-.c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c1.k-Button--fluid {
-  min-width: initial;
-  width: 100%;
-}
-
-.c1.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c1.k-Button--orion {
-  border-radius: 0.375rem;
-}
-
 .c1 svg,
 .c1 path {
   fill: currentColor;
@@ -1065,6 +639,11 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c1:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c1:disabled {
@@ -1135,76 +714,14 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--nano {
+  .c1 {
     width: 6.25rem;
     height: 1.25rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c1.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c1.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c1.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid) {
+  .c1 {
     width: 3.125rem;
     min-width: 0;
     min-height: 0;
@@ -1212,86 +729,8 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  .c1 {
     width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c1.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c1.k-Button--orion {
-    border-radius: 0.5rem;
   }
 }
 
@@ -1309,13 +748,8 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 >
   <button
     aria-label="Close"
-    className="c1 k-Button c2 k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+    className="c1 c2"
     onClick={[Function]}
-    style={
-      Object {
-        "--border-radius": 0,
-      }
-    }
     type="button"
   >
     <svg

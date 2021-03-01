@@ -63,13 +63,7 @@ export class Navbar extends PureComponent {
             onClick={() => onPreviousClick()}
             icon
           >
-            <ArrowIcon
-              version="solid"
-              fill={iconColor}
-              direction="left"
-              width="8"
-              height="8"
-            />
+            <ArrowIcon fill={iconColor} direction="left" width="8" height="8" />
           </StyledArrowIcon>
 
           <StyledArrowIcon
@@ -78,7 +72,6 @@ export class Navbar extends PureComponent {
             icon
           >
             <ArrowIcon
-              version="solid"
               fill={iconColor}
               direction="right"
               width="8"

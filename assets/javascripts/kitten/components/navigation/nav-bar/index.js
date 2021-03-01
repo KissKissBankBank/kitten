@@ -64,16 +64,20 @@ const StyledNavBar = styled.div`
     justify-content: center;
     flex-direction: row;
     position: relative;
-    outline: none;
     color: ${({ colors }) => colors.link || COLORS.font1};
     border-bottom: ${pxToRem(4)} solid ${({ colors }) =>
-      colors.border || 'transparent'};
+  colors.border || 'transparent'};
     transition: color .2s, border-color .2s;
     cursor: pointer;
 
     &:hover {
       color: ${({ colors }) => colors.activeLink || COLORS.primary1};
       text-decoration: none;
+    }
+
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
     }
 
     &:focus,

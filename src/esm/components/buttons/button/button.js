@@ -22,7 +22,7 @@ import { ScreenConfig } from '../../../constants/screen-config';
 var StyledButton = styled.button.withConfig({
   displayName: "button__StyledButton",
   componentId: "sc-1q5nte0-0"
-})(["display:inline-flex;align-items:center;justify-content:center;position:relative;box-sizing:border-box;", " ", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appearance:none;outline:none;cursor:pointer;&:disabled{cursor:not-allowed;}&:hover{text-decoration:none;}>:nth-child(n){margin-right:", ";text-align:left;}", " >:last-child{margin-right:0;}", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", ""], function () {
+})(["display:inline-flex;align-items:center;justify-content:center;position:relative;box-sizing:border-box;", " ", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appearance:none;cursor:pointer;&:disabled{cursor:not-allowed;}&:hover{text-decoration:none;}>:nth-child(n){margin-right:", ";text-align:left;}", " >:last-child{margin-right:0;}", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", ""], function () {
   return DEFAULT;
 }, TYPOGRAPHY.fontStyles.regular, stepToRem(-1), COLORS.font1, pxToRem(10), function (_ref) {
   var modifier = _ref.modifier;

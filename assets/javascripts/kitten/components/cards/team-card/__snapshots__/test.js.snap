@@ -2,22 +2,16 @@
 
 exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM irevkI"
+  className="sc-gzVnrw eQBJaH"
 >
   
   
   <button
     aria-label="linkedin"
-    className="sc-bxivhb cUHMhh k-Button sc-ifAKCX cmwmYw k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--normal k-Button--social_linkedin k-Button--andromeda k-Button--hasIcon"
+    className="sc-bxivhb eingDW sc-EHOje jWiCbK k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny"
     href="https://www.linkedin.com"
     rel="noopener"
-    style={
-      Object {
-        "--border-radius": 0,
-      }
-    }
     target="_blank"
-    type="button"
   >
     <svg
       aria-hidden={true}
@@ -57,18 +51,12 @@ Array [
     </span>
   </div>,
   <div
-    className="sc-bZQynM irevkI"
+    className="sc-gzVnrw eQBJaH"
   >
     <button
       aria-label="E-mail"
-      className="sc-bxivhb hDzWxm k-Button sc-ifAKCX cmwmYw k-ButtonIcon k-ButtonIcon--phone k-TeamCardIcons__buttonIcon k-ButtonIcon--normal k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="sc-bxivhb jUNyVQ sc-EHOje jWiCbK k-ButtonIcon k-ButtonIcon--phone k-TeamCardIcons__buttonIcon"
       href="mailto:example@kisskissbankbank.com"
-      style={
-        Object {
-          "--border-radius": 0,
-        }
-      }
-      type="button"
     >
       <svg
         aria-hidden={true}
@@ -87,14 +75,8 @@ Array [
     </button>
     <button
       aria-label="Telephone"
-      className="sc-bxivhb hDzWxm k-Button sc-ifAKCX cmwmYw k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up k-TeamCardIcons__buttonIcon k-ButtonIcon--normal k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="sc-bxivhb jUNyVQ sc-EHOje jWiCbK k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up k-TeamCardIcons__buttonIcon"
       href="tel:06 00 00 00 00"
-      style={
-        Object {
-          "--border-radius": 0,
-        }
-      }
-      type="button"
     >
       <svg
         aria-hidden={true}
@@ -111,7 +93,7 @@ Array [
     </button>
     <a
       aria-label="Telephone"
-      className="sc-EHOje jOdFWG k-TeamCardIcons__buttonIcon"
+      className="sc-bZQynM dphkAY k-TeamCardIcons__buttonIcon"
       href="tel:06 00 00 00 00"
     >
       <span
@@ -123,13 +105,7 @@ Array [
         />
       </span>
       <button
-        className="sc-bxivhb hDzWxm k-Button sc-ifAKCX cmwmYw k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--normal k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
-        style={
-          Object {
-            "--border-radius": 0,
-          }
-        }
-        type="button"
+        className="sc-bxivhb jUNyVQ sc-EHOje jWiCbK k-ButtonIcon k-ButtonIcon--phone"
       >
         <svg
           className="k-ButtonIcon__svg"
@@ -146,16 +122,10 @@ Array [
     </a>
     <button
       aria-label="linkedin"
-      className="sc-bxivhb cUHMhh k-Button sc-ifAKCX cmwmYw k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--normal k-Button--social_linkedin k-Button--andromeda k-Button--hasIcon"
+      className="sc-bxivhb eingDW sc-EHOje jWiCbK k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny"
       href="https://www.linkedin.com"
       rel="noopener"
-      style={
-        Object {
-          "--border-radius": 0,
-        }
-      }
       target="_blank"
-      type="button"
     >
       <svg
         aria-hidden={true}
@@ -172,16 +142,10 @@ Array [
     </button>
     <button
       aria-label="twitter"
-      className="sc-bxivhb etehVI k-Button sc-ifAKCX cmwmYw k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--normal k-Button--social_twitter k-Button--andromeda k-Button--hasIcon"
+      className="sc-bxivhb dFamgZ sc-EHOje jWiCbK k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny"
       href="https://www.twitter.com"
       rel="noopener"
-      style={
-        Object {
-          "--border-radius": 0,
-        }
-      }
       target="_blank"
-      type="button"
     >
       <svg
         aria-hidden={true}
