@@ -27,6 +27,7 @@ export const Lendopolis = () => (
     <LendopolisHeaderNavStory
       isLogged={boolean('Is logged', false)}
       isFixed={boolean('Is fixed', false)}
+      stickyProps={boolean('null stickyProps?') ? null : {}}
     />
   </Container>
 )

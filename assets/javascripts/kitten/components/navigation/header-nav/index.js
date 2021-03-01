@@ -161,7 +161,7 @@ const HeaderNav = ({
           {...stickyProps}
           className={classNames(
             'k-HeaderNav__stickyContainer',
-            stickyProps.className,
+            stickyProps?.className,
           )}
         >
           <nav ref={headerRef} role="banner" id={id} className="k-HeaderNav">
