@@ -193,7 +193,7 @@ const HeaderNav = ({
           {...stickyProps}
           className={classNames(
             'k-HeaderNav__stickyContainer',
-            stickyProps?.className || null,
+            stickyProps?.className,
           )}
         >
           <Navigation
