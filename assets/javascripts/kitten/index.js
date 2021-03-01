@@ -212,11 +212,8 @@ export { SingleEntryTable } from './components/tables/single-entry-table'
 export { TextCopy } from './components/text-copy'
 
 // Tooltips
-export { QuestionMarkWithTooltip } from './components/tooltips/question-mark-with-tooltip'
-export { StaticTooltip } from './components/tooltips/static-tooltip'
+
 export { Toggletip } from './components/tooltips/toggletip'
-export { TooltipNew } from './components/tooltips/tooltip-new'
-export { Tooltip } from './components/tooltips/tooltip'
 
 // Tours
 export { HighlightHalo } from './components/tours/highlight-halo'
@@ -331,6 +328,9 @@ export { TagIcon } from './components/icons/tag-icon'
 export { FileIcon } from './components/icons/file-icon'
 export { LoudspeakerIcon } from './components/icons/loudspeaker-icon'
 export { ShieldIcon } from './components/icons/shield-icon'
+export { PeopleIcon } from './components/icons/people-icon'
+export { StatsIcon } from './components/icons/stats-icon'
+export { SpeechBubbleIcon } from './components/icons/speech-bubble-icon'
 
 // ---------
 // CONSTANTS
@@ -363,6 +363,7 @@ export { createEvent } from './helpers/dom/create-event'
 export { cssPropertyDistributor } from './helpers/dom/css-property-distributor'
 export { default as domElementHelper } from './helpers/dom/element-helper'
 export { nativeInputValueSetter } from './helpers/dom/native-input-value-setter'
+export { useFlexGapCheck } from './helpers/dom/use-flex-gap-check'
 export {
   getReactElementsByType,
   getReactElementsWithoutType,
