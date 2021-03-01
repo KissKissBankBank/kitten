@@ -4,13 +4,25 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: depreciate `Stepper` in favour of `Next` `Stepper`.
-- Breaking change: convert deprecated `Stepper` to CSS-in-JS.
-- Breaking change: remove `k-Stepper` mixin and `k-Stepper__icon` style.
-- Breaking change: convert and move `StepperIcon*` components to `atoms`.
-- Feature: Add `StepperIcon` component with `state` prop.
-- Feature: Add `empty` prop to `IconBadge`.
-- Fix: Add DOM check to `useFlexGapCheck`.
+## [3.0.0-beta.8] - 2021-03-01
+
+Breaking changes:
+
+- Depreciate `Stepper` in favour of `Next` `Stepper`.
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Stepper`
+  - `k-Stepper__icon`
+- Convert `StepperIcon*` to CSS-in-JS and move to `atoms`.
+
+Features:
+
+- Convert deprecated `Stepper` to CSS-in-JS.
+- Add `StepperIcon` component with `state` prop.
+- Add `empty` prop to `IconBadge`.
+
+Fix:
+
+- Add DOM check to `useFlexGapCheck`.
 
 ## [3.0.0-beta.7] - 2021-03-01
 
