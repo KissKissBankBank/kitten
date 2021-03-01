@@ -6,10 +6,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [3.0.0-beta.7] - 2021-03-01
 
-- Fix: Add DOM check to `DevGrid`.
-- Fix: Add width to `StickyContainer` in `HeaderNav`.
-- Fix: Use wrapper and relative positioning for a `Badge` with `Icon` prop.
-- Feature: Add `AdaptableGridCol` to ESM export.
+Feature:
+
+- Add `AdaptableGridCol` to ESM export.
+
+Fixes:
+
+- Add DOM check to `DevGrid`.
+- Add width to `StickyContainer` in `HeaderNav`.
+- Use wrapper and relative positioning for a `Badge` with `Icon` prop.
 
 ## [3.0.0-beta.6] - 2021-03-01
 
