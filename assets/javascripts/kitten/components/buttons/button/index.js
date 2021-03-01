@@ -379,7 +379,7 @@ export const Button = ({
 }
 
 Button.propTypes = {
-  tag: PropType.string,
+  tag: PropTypes.string,
   borderRadius: PropTypes.number,
   nano: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   micro: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
