@@ -1,16 +1,16 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import COLORS from '../../../../constants/colors-config'
-import { ScreenConfig } from '../../../../constants/screen-config'
-import classNames from 'classnames'
-import { Text } from '../../../typography/text'
-import {
-  StepperIconDefault,
-  StepperIconInProgress,
-  StepperIconValidated,
-} from '../../../../components/steppers/stepper-icon'
 import PropTypes from 'prop-types'
+import deprecated from 'prop-types-extra/lib/deprecated'
+import styled, { css } from 'styled-components'
+import classNames from 'classnames'
+
+import { pxToRem } from '../../../helpers/utils/typography'
+import COLORS from '../../../constants/colors-config'
+import { ScreenConfig } from '../../../constants/screen-config'
+import { Text } from '../../../components/typography/text'
+import { StepperIcon } from '../../../components/atoms/stepper-icon'
+
+import { Stepper as DeprecatedStepper } from './deprecated'
 
 const Wrapper = styled.div`
   display: block;
@@ -38,14 +38,21 @@ const List = styled.ul`
 const ItemWrapper = styled.li`
   display: flex;
   align-items: center;
+
   :not(:last-child) {
-    padding-right: ${pxToRem(50)};
+    margin-right: ${pxToRem(25)};
   }
-  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
     :not(:last-child) {
-      padding-right: ${pxToRem(25)};
+      margin-right: ${pxToRem(50)};
     }
   }
+
+  .k-Stepper__icon {
+    margin-right: ${pxToRem(10)};
+  }
+
   ${props =>
     props.state === 'progress' &&
     css`
@@ -72,22 +79,11 @@ const StepperText = styled(Text)`
   }
 `
 
-const StepperIcon = ({ state }) => {
-  switch (state) {
-    case 'progress':
-      return <StepperIconInProgress />
-    case 'validated':
-      return <StepperIconValidated />
-    default:
-      return <StepperIconDefault />
-  }
-}
-
 export const StepperItem = ({ children, state, ...props }) => {
   return (
     <ItemWrapper state={state} {...props}>
       <StepperText weight="regular" size="tiny" tabIndex="0">
-        <StepperIcon state={state} />
+        <StepperIcon className="k-Stepper__icon" state={state} />
         {children}
       </StepperText>
     </ItemWrapper>
@@ -127,7 +123,7 @@ export const StepperLink = ({
         rel={external ? 'nofollow noopener noreferrer' : ''}
         {...linkProps}
       >
-        <StepperIcon state={state} />
+        <StepperIcon className="k-Stepper__icon" state={state} />
         {children}
       </StepperText>
     </ItemWrapper>
@@ -147,7 +143,11 @@ StepperLink.defaultProps = {
   linkProps: {},
 }
 
-export const Stepper = ({ children, ...others }) => {
+export const Stepper = ({ children, items, ...others }) => {
+  if (!!items) {
+    return <DeprecatedStepper items={items} {...others} />
+  }
+
   return (
     <Wrapper>
       <List {...others}>{children}</List>
@@ -155,7 +155,9 @@ export const Stepper = ({ children, ...others }) => {
   )
 }
 
-Stepper.propTypes = {}
+Stepper.propTypes = {
+  items: deprecated(PropTypes.array, 'Use subcomponents instead of items prop'),
+}
 
 Stepper.Item = StepperItem
 Stepper.Link = StepperLink
