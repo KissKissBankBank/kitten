@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking change: convert and move `StepperIcon*` components to `atoms`.
 - Feature: Add `StepperIcon` component with `state` prop.
 - Feature: Add `empty` prop to `IconBadge`.
+- Fix: Add DOM check to `useFlexGapCheck`.
 
 ## [3.0.0-beta.7] - 2021-03-01
 
