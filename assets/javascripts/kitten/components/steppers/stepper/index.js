@@ -1,119 +1,51 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import deprecated from 'prop-types-extra/lib/deprecated'
+import styled, { css } from 'styled-components'
 import classNames from 'classnames'
-import styled from 'styled-components'
 
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
-import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
-
+import { Text } from '../../../components/typography/text'
 import { StepperIcon } from '../../../components/atoms/stepper-icon'
 
-const StyledStepper = styled.nav`
-  ${TYPOGRAPHY.fontStyles.regular}
-  font-size: ${stepToRem(-1)};
-  line-height: 1.3;
-  color: ${COLORS.font1};
-  text-align: left;
+import { Stepper as DeprecatedStepper } from './deprecated'
 
-  .k-Stepper__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+const Wrapper = styled.div`
+  display: block;
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+`
 
-    margin: 0;
-    padding: ${pxToRem(15)} 0;
-    list-style: none;
+const List = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  height: ${pxToRem(80)};
+  box-sizing: border-box;
+  min-width: min-content;
+  padding-right: 40px;
+  background-color: ${COLORS.primary6};
+  margin: 0;
+  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+    height: ${pxToRem(65)};
+  }
+`
 
-    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+const ItemWrapper = styled.li`
+  display: flex;
+  align-items: center;
+
+  :not(:last-child) {
+    margin-right: ${pxToRem(25)};
   }
 
-  .k-Stepper__list--alignStart {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .k-Stepper__item {
-    margin: 0 ${pxToRem(20)};
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-      margin: ${pxToRem(20 / 3)} 0;
-
-      &:first-child {
-        margin-top: 0;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-  }
-  .k-Stepper__list--alignStart .k-Stepper__item {
-    margin: 0 ${pxToRem(20)} ${pxToRem((20 / 3) * 2)} 0;
-  }
-
-  .k-Stepper__item--tinySpacing {
-    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-      margin-left: ${pxToRem(15)};
-      margin-right: ${pxToRem(15)};
-    }
-  }
-
-  // Link
-  .k-Stepper__link {
-    display: flex;
-    align-items: center;
-    color: ${COLORS.font1};
-    text-decoration: none;
-    cursor: pointer;
-
-    transition: .2s color;
-
-    &:hover {
-      color: ${COLORS.primary1};
-      text-decoration: none;
-    }
-
-    &:active {
-      color: ${COLORS.primary1};
-      text-decoration: none;
-    }
-  }
-
-  .k-Stepper__link--inProgress {
-    color: ${COLORS.primary1};
-
-    &:hover {
-      color: ${COLORS.primary2};
-      text-decoration: none;
-    }
-
-    &:active {
-      color: ${COLORS.primary3};
-      text-decoration: none;
-    }
-  }
-
-  .k-Stepper__link--inactive {
-    color: ${COLORS.font2};
-    cursor: not-allowed;
-
-    &:hover,
-    &:active {
-      color: ${COLORS.font2};
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    :not(:last-child) {
+      margin-right: ${pxToRem(50)};
     }
   }
 
@@ -121,88 +53,111 @@ const StyledStepper = styled.nav`
     margin-right: ${pxToRem(10)};
   }
 
-  .k-Stepper__break {
-    display: block;
+  ${props =>
+    props.state === 'progress' &&
+    css`
+      color: ${COLORS.primary1};
+    `}
 
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      display: none;
-    }
+  ${props =>
+    props.pointer &&
+    css`
+      cursor: pointer;
+    `}
+`
 
-    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-      display: none;
-    }
+const StepperText = styled(Text)`
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+  border-radius: ${pxToRem(6)};
+
+  &:focus {
+    outline: ${COLORS.primary3} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 `
 
-export const Stepper = ({ items, withAlignStart, withTinySpacing }) => {
-  const insertLineBreaks = text => {
-    const regex = /(\n)/i
-    const brClassNames = classNames({
-      'k-Stepper__break': !withAlignStart,
-    })
+export const StepperItem = ({ children, state, ...props }) => {
+  return (
+    <ItemWrapper state={state} {...props}>
+      <StepperText weight="regular" size="tiny" tabIndex="0">
+        <StepperIcon className="k-Stepper__icon" state={state} />
+        {children}
+      </StepperText>
+    </ItemWrapper>
+  )
+}
 
-    return text
-      .split(regex)
-      .map((line, index) =>
-        line.match(regex) ? <br className={brClassNames} key={index} /> : line,
-      )
-  }
+StepperItem.propTypes = {
+  state: PropTypes.oneOf(['default', 'progress', 'validated']),
+  pointer: PropTypes.bool,
+}
 
-  const Link = ({ href, iconType, linkClassNames, text, ...other }) => {
-    const Tag = href ? 'a' : 'span'
-    const className = classNames('k-Stepper__link', linkClassNames)
+StepperItem.defaultProps = {
+  state: 'default',
+  pointer: false,
+}
 
-    return (
-      <Tag className={className} href={href} {...other}>
-        <StepperIcon
-          state={iconType}
-          className={classNames(
-            'k-Stepper__icon',
-            `k-Stepper__icon--${iconType}`,
-          )}
-        />
-        {insertLineBreaks(text)}
-      </Tag>
-    )
+export const StepperLink = ({
+  children,
+  state,
+  href,
+  external,
+  linkProps,
+  ...props
+}) => {
+  return (
+    <ItemWrapper state={state} {...props}>
+      <StepperText
+        weight="regular"
+        size="tiny"
+        tag="a"
+        className={classNames('k-u-link', {
+          'k-u-link-font1': state !== 'progress',
+          'k-u-link-primary1': state === 'progress',
+        })}
+        href={href}
+        target={external ? '_blank' : '_self'}
+        rel={external ? 'nofollow noopener noreferrer' : ''}
+        {...linkProps}
+      >
+        <StepperIcon className="k-Stepper__icon" state={state} />
+        {children}
+      </StepperText>
+    </ItemWrapper>
+  )
+}
+
+StepperLink.propTypes = {
+  href: PropTypes.string.isRequired,
+  state: PropTypes.oneOf(['default', 'progress', 'validated']),
+  external: PropTypes.bool,
+  linkProps: PropTypes.object,
+}
+
+StepperLink.defaultProps = {
+  state: 'default',
+  external: false,
+  linkProps: {},
+}
+
+export const Stepper = ({ children, items, ...others }) => {
+  if (!!items) {
+    return <DeprecatedStepper items={items} {...others} />
   }
 
   return (
-    <StyledStepper className="k-Stepper" role="navigation">
-      <ul
-        className={classNames('k-Stepper__list', {
-          'k-Stepper__list--alignStart': withAlignStart,
-        })}
-      >
-        {items.map((item, index) => (
-          <li
-            className={classNames('k-Stepper__item', {
-              'k-Stepper__item--tinySpacing': withTinySpacing,
-            })}
-            key={index}
-          >
-            <Link {...item} />
-          </li>
-        ))}
-      </ul>
-    </StyledStepper>
+    <Wrapper>
+      <List {...others}>{children}</List>
+    </Wrapper>
   )
 }
 
 Stepper.propTypes = {
-  withAlignStart: PropTypes.bool,
-  withTinySpacing: PropTypes.bool,
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      href: PropTypes.string,
-      iconType: PropTypes.oneOf(['default', 'inProgress', 'validated']),
-      linkClassNames: PropTypes.string,
-      text: PropTypes.string,
-    }),
-  ),
+  items: deprecated(PropTypes.array, 'Use subcomponents instead of items prop'),
 }
 
-Stepper.defaultProps = {
-  withAlignStart: false,
-  withTinySpacing: false,
-  items: [],
-}
+Stepper.Item = StepperItem
+Stepper.Link = StepperLink

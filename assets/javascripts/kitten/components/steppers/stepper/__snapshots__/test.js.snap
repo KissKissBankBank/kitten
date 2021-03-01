@@ -2,16 +2,16 @@
 
 exports[`NEXT // <Stepper /> default item matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bxivhb hHVBoC"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-ifAKCX dRAqBK"
   >
     <li
-      className="sc-ifAKCX cNimlI"
+      className="sc-EHOje eidYnr"
     >
       <span
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje jLnbdv"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-bZQynM DEchD"
         tabIndex="0"
       >
         <span
@@ -30,16 +30,16 @@ exports[`NEXT // <Stepper /> default item matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> default link matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bxivhb hHVBoC"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-ifAKCX dRAqBK"
   >
     <li
-      className="sc-ifAKCX cNimlI"
+      className="sc-EHOje eidYnr"
     >
       <a
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje jLnbdv k-u-link k-u-link-font1"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-bZQynM DEchD k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel=""
         target="_self"
@@ -60,16 +60,16 @@ exports[`NEXT // <Stepper /> default link matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> external link matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bxivhb hHVBoC"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-ifAKCX dRAqBK"
   >
     <li
-      className="sc-ifAKCX cNimlI"
+      className="sc-EHOje eidYnr"
     >
       <a
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje jLnbdv k-u-link k-u-link-font1"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-bZQynM DEchD k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel="nofollow noopener noreferrer"
         target="_blank"
@@ -90,17 +90,17 @@ exports[`NEXT // <Stepper /> external link matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> link with linkProps matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bxivhb hHVBoC"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-ifAKCX dRAqBK"
   >
     <li
-      className="sc-ifAKCX cNimlI"
+      className="sc-EHOje eidYnr"
     >
       <a
         aria-current="page"
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje jLnbdv k-u-link k-u-link-font1"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-bZQynM DEchD k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel="nofollow noopener noreferrer"
         target="_blank"
@@ -121,16 +121,16 @@ exports[`NEXT // <Stepper /> link with linkProps matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> pointer item matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bxivhb hHVBoC"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-ifAKCX dRAqBK"
   >
     <li
-      className="sc-ifAKCX hEYfAM"
+      className="sc-EHOje dtUmCp"
     >
       <span
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje jLnbdv"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-bZQynM DEchD"
         tabIndex="0"
       >
         <span
@@ -149,16 +149,16 @@ exports[`NEXT // <Stepper /> pointer item matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bxivhb hHVBoC"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-ifAKCX dRAqBK"
   >
     <li
-      className="sc-ifAKCX bKzmaM"
+      className="sc-EHOje DgYQt"
     >
       <span
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje jLnbdv"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-bZQynM DEchD"
         tabIndex="0"
       >
         <span
@@ -196,16 +196,16 @@ exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bxivhb hHVBoC"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-ifAKCX dRAqBK"
   >
     <li
-      className="sc-ifAKCX bKzmaM"
+      className="sc-EHOje DgYQt"
     >
       <a
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje jLnbdv k-u-link k-u-link-primary1"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-bZQynM DEchD k-u-link k-u-link-primary1"
         href="https://www.kisskissbankbank.com"
         rel=""
         target="_self"
@@ -245,16 +245,16 @@ exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> validated item matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bxivhb hHVBoC"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-ifAKCX dRAqBK"
   >
     <li
-      className="sc-ifAKCX cNimlI"
+      className="sc-EHOje eidYnr"
     >
       <span
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje jLnbdv"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-bZQynM DEchD"
         tabIndex="0"
       >
         <span

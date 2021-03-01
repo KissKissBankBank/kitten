@@ -4,7 +4,7 @@ import { Stepper, StepperLink, StepperItem } from './index'
 
 export default {
   component: Stepper,
-  title: 'Steppers/Next/Stepper',
+  title: 'Steppers/Stepper',
   parameters: {
     component: Stepper,
     subcomponents: { 'Stepper.Item': StepperItem, 'Stepper.Link': StepperLink },

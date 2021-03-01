@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: convert `Stepper` to CSS-in-JS.
+- Breaking change: depreciate `Stepper` in favour of `Next` `Stepper`.
+- Breaking change: convert deprecated `Stepper` to CSS-in-JS.
 - Breaking change: remove `k-Stepper` mixin and `k-Stepper__icon` style.
 - Breaking change: convert and move `StepperIcon*` components to `atoms`.
 - Feature: Add `StepperIcon` component with `state` prop.
