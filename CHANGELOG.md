@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Use relative positioning for a `Badge` following an `Icon`.
 - Fix: No right-side margin on `Button` last child.
 - Feature: Add `AdaptableGridCol` to ESM export.
 - Breaking change: convert `Line` to CSS-in-JS.

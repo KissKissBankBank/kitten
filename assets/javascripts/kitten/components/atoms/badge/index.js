@@ -40,9 +40,9 @@ const StyledBadge = styled.span`
   }
 
   &.k-Badge--hasIcon {
-    position: absolute;
-    margin-left: ${pxToRem(-8)};
-    margin-top: ${pxToRem(-4)};
+    position: relative;
+    left: ${pxToRem(-8)};
+    top: ${pxToRem(-4)};
   }
 `
 
