@@ -2,13 +2,13 @@
 
 exports[`<DonationCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-iwsKbI iOQYwX"
+  className="sc-dnqmqq eSvlpf"
 >
   <div
     className="sc-bdVaJa fdLNbY"
   >
     <div
-      className="k-Grid sc-gZMcBi bbWrzm"
+      className="k-Grid sc-iwsKbI cDglDD"
     >
       <div
         className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--offset-1@m k-Grid__col--8@l k-Grid__col--offset-2@l"
@@ -17,7 +17,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="sc-bdVaJa bwDdrh"
         >
           <h2
-            className="sc-bwzfXH gWcALb sc-gqjmRU fvSujs"
+            className="sc-bwzfXH gWcALb sc-gZMcBi jlMtHK"
           >
             Custom title mount
           </h2>
@@ -26,7 +26,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="sc-bdVaJa iDiPml"
         >
           <div
-            className="sc-htpNat tODhy k-HorizontalStroke sc-VigVT bjpEBD k-HorizontalStroke--size--big"
+            className="sc-htpNat tODhy k-HorizontalStroke sc-gqjmRU bXbQmO k-HorizontalStroke--size--big"
             color="#222"
             style={
               Object {
@@ -37,7 +37,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           />
         </div>
         <form
-          className="sc-dnqmqq coLjZr"
+          className="sc-htoDjs fyEwBx"
           onSubmit={[Function]}
         >
           <div
@@ -92,10 +92,15 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
               className="k-Grid__col--12 k-u-align-center"
             >
               <button
-                className="sc-gzVnrw jbWRzU k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+                className="sc-gzVnrw iuEquz k-Button k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default k-Button--big k-Button--helium k-Button--andromeda"
                 disabled={false}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "--border-radius": 0,
+                  }
+                }
                 type="submit"
               >
                 To contribute

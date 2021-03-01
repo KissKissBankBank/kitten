@@ -32,11 +32,11 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
         </svg>
       </div>
       <span
-        className="sc-bwzfXH eDGITK k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents sc-EHOje gZpgHE"
+        className="sc-bwzfXH dyZCQx k-ButtonImage k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
       >
         <img
           alt="Image alt"
-          className="k-ButtonImageNext__img"
+          className="k-ButtonImage__img"
           src="#image"
         />
       </span>
@@ -91,11 +91,11 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
       className="sc-ifAKCX dXFfMI"
     >
       <span
-        className="sc-bwzfXH eDGITK k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents sc-EHOje gZpgHE"
+        className="sc-bwzfXH dyZCQx k-ButtonImage k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
       >
         <img
           alt="Image alt"
-          className="k-ButtonImageNext__img"
+          className="k-ButtonImage__img"
           src="#image"
         />
       </span>
@@ -179,11 +179,11 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
       className="sc-ifAKCX dXFfMI"
     >
       <span
-        className="sc-bwzfXH eDGITK k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents sc-EHOje gZpgHE"
+        className="sc-bwzfXH dyZCQx k-ButtonImage k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
       >
         <img
           alt="Image alt"
-          className="k-ButtonImageNext__img"
+          className="k-ButtonImage__img"
           src="#image"
         />
       </span>

@@ -2,7 +2,7 @@
 
 exports[`<BasicUploader /> should match snapshot 1`] = `
 <div
-  className="sc-ifAKCX cBWvFc k-BasicUploader k-BasicUploader--ready"
+  className="sc-bxivhb ekbhYA k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -11,8 +11,14 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa fyebpc k-BasicUploader__button"
+    className="sc-bdVaJa hMAXFG k-Button k-BasicUploader__button k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--fluid"
     htmlFor="BasicUploader"
+    style={
+      Object {
+        "--border-radius": 0,
+      }
+    }
+    type="button"
   >
     <svg
       aria-hidden={true}
@@ -37,7 +43,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 <div
-  className="sc-ifAKCX cBWvFc k-BasicUploader k-BasicUploader--ready"
+  className="sc-bxivhb ekbhYA k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -46,8 +52,14 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa fyebpc k-BasicUploader__button"
+    className="sc-bdVaJa hMAXFG k-Button k-BasicUploader__button k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--fluid"
     htmlFor="BasicUploader"
+    style={
+      Object {
+        "--border-radius": 0,
+      }
+    }
+    type="button"
   >
     <svg
       aria-hidden={true}
@@ -72,7 +84,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with props 1`] = `
 <div
-  className="sc-ifAKCX cBWvFc k-BasicUploader k-BasicUploader--valid"
+  className="sc-bxivhb ekbhYA k-BasicUploader k-BasicUploader--valid"
 >
   <input
     disabled={true}
@@ -82,8 +94,14 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa hBlZXR k-BasicUploader__button"
+    className="sc-bdVaJa hMAXFG k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--fluid"
     htmlFor="BasicUploader"
+    style={
+      Object {
+        "--border-radius": 0,
+      }
+    }
+    type="button"
   >
     <svg
       aria-hidden={true}
@@ -132,12 +150,12 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     </button>
     <div>
       <p
-        className="sc-htpNat KtFsv k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BasicUploader__statusTitle  k-u-margin-none k-u-line-height-1-3"
+        className="sc-bwzfXH uTxCW k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BasicUploader__statusTitle  k-u-margin-none k-u-line-height-1-3"
       >
         document.pdf
       </p>
       <p
-        className="sc-htpNat KtFsv k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-BasicUploader__statusSubtitle  k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+        className="sc-bwzfXH uTxCW k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-BasicUploader__statusSubtitle  k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
       >
         The document has been validated
       </p>

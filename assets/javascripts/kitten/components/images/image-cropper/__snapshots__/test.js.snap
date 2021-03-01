@@ -2,7 +2,7 @@
 
 exports[`<ImageCropper /> matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM djQxWs k-UploadAndCropper k-UploadAndCropper--noGap"
+  className="sc-EHOje euAkzP k-UploadAndCropper k-UploadAndCropper--noGap"
 >
   <label
     className="k-Label k-u-margin-bottom-singleHalf k-Label--tiny"
@@ -12,7 +12,7 @@ exports[`<ImageCropper /> matches with snapshot 1`] = `
     Lorem ipsum…
   </label>
   <div
-    className="sc-ifAKCX cBWvFc k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
+    className="sc-bxivhb ekbhYA k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
   >
     <input
       accept=".jpg,.jpeg,.gif,.png"
@@ -22,8 +22,14 @@ exports[`<ImageCropper /> matches with snapshot 1`] = `
       type="file"
     />
     <label
-      className="sc-bdVaJa fyebpc k-BasicUploader__button"
+      className="sc-bdVaJa hMAXFG k-Button k-BasicUploader__button k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--fluid"
       htmlFor="cropper"
+      style={
+        Object {
+          "--border-radius": 0,
+        }
+      }
+      type="button"
     >
       <svg
         aria-hidden={true}

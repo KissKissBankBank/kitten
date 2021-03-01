@@ -27,7 +27,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
     className="k-u-margin-top-triple k-u-align-center"
   >
     <button
-      className="sc-bwzfXH fnIkzy k-Button k-VerticalCardWithAction__button k-Button--normal k-Button--helium k-Button--andromeda"
+      className="sc-bwzfXH biVSSC k-Button k-VerticalCardWithAction__button k-Button--normal k-Button--helium k-Button--andromeda"
       href={null}
       onClick={null}
       style={
@@ -74,7 +74,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
     className="k-u-margin-top-triple k-u-align-center"
   >
     <button
-      className="sc-bwzfXH fnIkzy k-Button k-VerticalCardWithAction__button k-Button--normal k-Button--helium k-Button--andromeda"
+      className="sc-bwzfXH biVSSC k-Button k-VerticalCardWithAction__button k-Button--normal k-Button--helium k-Button--andromeda"
       href={null}
       onClick={null}
       style={

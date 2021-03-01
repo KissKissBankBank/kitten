@@ -17,11 +17,11 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
     className="sc-bdVaJa eDkcBx"
   >
     <span
-      className="sc-htpNat gBPtjm k-ButtonImageNext k-ButtonImageNext--huge k-ButtonImageNext--withoutPointerEvents sc-EHOje dpqDOD"
+      className="sc-htpNat jPWAjf k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents sc-EHOje dpqDOD"
     >
       <img
         alt=""
-        className="k-ButtonImageNext__img"
+        className="k-ButtonImage__img"
         src="#custom-src"
       />
     </span>
@@ -60,11 +60,11 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
     className="sc-bdVaJa eDkcBx"
   >
     <span
-      className="sc-htpNat gBPtjm k-ButtonImageNext k-ButtonImageNext--huge k-ButtonImageNext--withoutPointerEvents sc-EHOje dpqDOD"
+      className="sc-htpNat jPWAjf k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents sc-EHOje dpqDOD"
     >
       <img
         alt=""
-        className="k-ButtonImageNext__img"
+        className="k-ButtonImage__img"
         src="#custom-src"
       />
     </span>
