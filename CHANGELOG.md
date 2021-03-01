@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
+
 ## [3.0.0-beta.8] - 2021-03-01
 
 Breaking changes:
