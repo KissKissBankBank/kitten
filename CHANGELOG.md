@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Add width to `StickyContainer` in `HeaderNav`.
-- Fix: Use relative positioning for a `Badge` following an `Icon`.
+- Fix: Use wrapper and relative positioning for a `Badge` with `Icon` prop.
 - Fix: No right-side margin on `Button` last child.
 - Feature: Add `AdaptableGridCol` to ESM export.
 - Breaking change: convert `Line` to CSS-in-JS.
