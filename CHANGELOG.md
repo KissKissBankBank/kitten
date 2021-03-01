@@ -7,7 +7,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Add DOM check to `DevGrid`.
 - Fix: Add width to `StickyContainer` in `HeaderNav`.
 - Fix: Use wrapper and relative positioning for a `Badge` with `Icon` prop.
-- Fix: No right-side margin on `Button` last child.
 - Feature: Add `AdaptableGridCol` to ESM export.
 - Breaking change: convert `Line` to CSS-in-JS.
 - Breaking change: remove `k-Line` mixin.

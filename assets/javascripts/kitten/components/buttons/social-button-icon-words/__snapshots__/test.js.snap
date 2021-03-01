@@ -47,7 +47,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   text-decoration: none;
 }
 
-.c0 >:not(:last-child) {
+.c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -180,7 +180,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   text-decoration: none;
 }
 
-.c0 >:not(:last-child) {
+.c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -318,7 +318,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   text-decoration: none;
 }
 
-.c0 >:not(:last-child) {
+.c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -467,7 +467,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   text-decoration: none;
 }
 
-.c0 >:not(:last-child) {
+.c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -607,7 +607,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   text-decoration: none;
 }
 
-.c0 >:not(:last-child) {
+.c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -740,7 +740,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   text-decoration: none;
 }
 
-.c0 >:not(:last-child) {
+.c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -871,7 +871,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   text-decoration: none;
 }
 
-.c0 >:not(:last-child) {
+.c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -1004,7 +1004,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   text-decoration: none;
 }
 
-.c0 >:not(:last-child) {
+.c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }

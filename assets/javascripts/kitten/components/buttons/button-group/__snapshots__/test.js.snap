@@ -47,7 +47,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c1 >:not(:last-child) {
+.c1 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }

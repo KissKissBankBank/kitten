@@ -35,7 +35,7 @@ const StyledButton = styled.button`
     text-decoration: none;
   }
 
-  > :not(:last-child) {
+  > :nth-child(n) {
     margin-right: ${pxToRem(10)};
     text-align: left;
   }
@@ -47,6 +47,10 @@ const StyledButton = styled.button`
         margin-right: 0;
       }
     `}
+
+  > :last-child {
+    margin-right: 0;
+  }
 
   ${({ borderRadius }) =>
     borderRadius > 0 &&

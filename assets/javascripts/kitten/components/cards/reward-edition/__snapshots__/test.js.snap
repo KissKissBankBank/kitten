@@ -54,9 +54,13 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c2 >:not(:last-child) {
+.c2 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
+}
+
+.c2 >:last-child {
+  margin-right: 0;
 }
 
 .c2 svg,
