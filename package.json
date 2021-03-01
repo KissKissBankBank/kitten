@@ -1,6 +1,6 @@
 {
   "name": "@kisskissbankbank/kitten",
-  "version": "3.0.0-beta.4",
+  "version": "3.0.0-beta.5",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src",
@@ -174,10 +174,7 @@
   },
   "browserslist": {
     "production": [
-      "> 5%",
-      "ie >= 11",
-      "ios_saf >= 9",
-      "Safari >= 8"
+      "> 0.5% in FR, last 2 versions, Firefox ESR, not dead"
     ]
   }
 }

@@ -187,6 +187,41 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 `;
 
 exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0.3125rem;
+  line-height: 1;
+  gap: 0.125rem;
+}
+
+.c2 .k-Loader__circle {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: 0.3125rem;
+  -webkit-animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.c2 .k-Loader__circle:nth-child(1) {
+  -webkit-animation-delay: calc(-1.75s / 3);
+  animation-delay: calc(-1.75s / 3);
+}
+
+.c2 .k-Loader__circle:nth-child(2) {
+  -webkit-animation-delay: calc(-1.75s / 3 / 2);
+  animation-delay: calc(-1.75s / 3 / 2);
+}
+
+.c2 .k-Loader__circle:nth-child(3) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -242,7 +277,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   display: none;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -275,41 +310,41 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
     type="text"
   />
   <div
-    className="k-Loader c2"
+    className="c2 k-Loader c3"
   >
     <svg
       className="k-Loader__circle"
-      viewBox="0 0 10 10"
+      fill="#b8b8b8"
+      viewBox="0 0 5 5"
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle
-        cx={5}
-        cy={5}
-        fill="#b8b8b8"
+        cx={2.5}
+        cy={2.5}
         r={5}
       />
     </svg>
     <svg
       className="k-Loader__circle"
-      viewBox="0 0 10 10"
+      fill="#b8b8b8"
+      viewBox="0 0 5 5"
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle
-        cx={5}
-        cy={5}
-        fill="#b8b8b8"
+        cx={2.5}
+        cy={2.5}
         r={5}
       />
     </svg>
     <svg
       className="k-Loader__circle"
-      viewBox="0 0 10 10"
+      fill="#b8b8b8"
+      viewBox="0 0 5 5"
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle
-        cx={5}
-        cy={5}
-        fill="#b8b8b8"
+        cx={2.5}
+        cy={2.5}
         r={5}
       />
     </svg>

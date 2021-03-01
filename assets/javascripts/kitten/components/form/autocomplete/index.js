@@ -7,7 +7,7 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
 import slugify from 'slugify'
-import { Loader } from '../../loaders/loader'
+import { Loader } from '../../atoms/loader'
 
 const itemHeight = 38
 const maxItemsVisibled = 3

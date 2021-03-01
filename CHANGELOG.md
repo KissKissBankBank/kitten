@@ -5,9 +5,31 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Breaking change:
-- Remove `k-Alert` SCSS mixin.
 - Convert `Title` and remove `k-Title` SCSS mixin.
 - Remplace `margin` by `noMargin` prop on `Title`.
+- Breaking change: convert `Line` to CSS-in-JS.
+- Breaking change: remove `k-Line` mixin.
+- Feature: Add `useFlexGapCheck` hook for `gap` feature detection.
+
+## [3.0.0-beta.5] - 2021-02-25
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-Cropper`
+  - `k-DevBreakpoints`
+  - `k-DevGrid`
+  - `k-Loader`
+  - `k-LoaderWithParagraph`
+- Convert and move the following components to CSS-in-JS:
+  - `Loader`
+  - `LoaderWithParagraph`
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+  - `DevGrid`
+  - `ImageCropper`
 
 ## [3.0.0-beta.4] - 2021-02-22
 
@@ -134,6 +156,20 @@ Breaking changes:
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
   - `SimilarProjectsCard`.
+
+## [2.122.0] - 2021-02-25
+
+Features:
+
+- Add `fullHeightContent` prop to `DashboardLayout`.
+- Add `shouldHideButton` prop to `DashboardLayout.Flow`.
+
+Fixes:
+
+- Fix `HeaderNav` width on Windows (Chrome & Firefox).
+- Fix `CheckableButton` focus styles while staying accessible.
+- Fix display on `DashboardLayout` for Chrome.
+- Fix details display on `DashboardMenu`.
 
 ## [2.121.0] - 2021-02-22
 

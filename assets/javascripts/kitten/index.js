@@ -9,9 +9,10 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 export { Accordeon } from './components/accordeon'
 
 // Atoms
-
 export { Badge } from './components/atoms/badge'
 export { IconBadge } from './components/atoms/icon-badge'
+export { Loader } from './components/atoms/loader'
+export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph'
 export { Tag } from './components/atoms/tag'
 
 // Avatar
@@ -157,10 +158,6 @@ export { BulletList } from './components/lists/bullet-list'
 export { List } from './components/lists/list'
 export { CheckList } from './components/lists/check-list'
 export { Timeline } from './components/lists/timeline'
-
-// Loaders
-export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph'
-export { Loader } from './components/loaders/loader'
 
 // Menus
 export { DashboardMenu } from './components/menus/dashboard-menu'
@@ -366,6 +363,7 @@ export { createEvent } from './helpers/dom/create-event'
 export { cssPropertyDistributor } from './helpers/dom/css-property-distributor'
 export { default as domElementHelper } from './helpers/dom/element-helper'
 export { nativeInputValueSetter } from './helpers/dom/native-input-value-setter'
+export { useFlexGapCheck } from './helpers/dom/use-flex-gap-check'
 export {
   getReactElementsByType,
   getReactElementsWithoutType,

@@ -12,10 +12,6 @@
 // Cards
 @import './components/cards/card';
 
-// Dev
-@import './components/dev/dev-breakpoint';
-@import './components/dev/dev-grid';
-
 // Dropdowns
 @import './components/dropdowns/dropdown';
 
@@ -48,12 +44,8 @@
 @import "./components/grid/single-column";
 @import "./components/grid/vertical-grid";
 
-// Images
-@import "./components/images/cropper";
-
 // Layout
 @import './components/layout/horizontal-stroke';
-@import './components/layout/line';
 @import './components/layout/responsive-iframe-container';
 
 // Lines
@@ -61,10 +53,6 @@
 
 // Lists
 @import './components/lists/bullet-list';
-
-// Loaders
-@import './components/loaders/loader';
-@import './components/loaders/loader-with-paragraph';
 
 // Meters
 @import './components/meters/progress';

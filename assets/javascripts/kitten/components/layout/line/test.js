@@ -1,70 +1,31 @@
+import { Line } from './'
+import renderer from 'react-test-renderer'
 import React from 'react'
-import { Line } from '../../../components/layout/line'
 
-describe('<Line />', () => {
-  describe('by default', () => {
-    const component = shallow(<Line />)
-
-    it('renders a <div />', () => {
-      expect(component.is('div')).toBe(true)
-    })
-
-    it('has "k-Line" class', () => {
-      expect(component.hasClass('k-Line')).toBe(true)
-    })
+describe('<Line/>', () => {
+  it('should match snapshot with default behavior', () => {
+    const component = renderer
+      .create(
+        <Line>
+          <Line.Item>Item 1</Line.Item>
+          <Line.Item>Item 2</Line.Item>
+          <Line.Item>Item 3</Line.Item>
+        </Line>,
+      )
+      .toJSON()
+    expect(component).toMatchSnapshot()
   })
 
-  describe('className prop', () => {
-    const component = shallow(<Line className="test-Line--lorem" />)
-
-    it('has a custom class', () => {
-      expect(component.hasClass('test-Line--lorem')).toBe(true)
-    })
-  })
-
-  describe('children prop', () => {
-    const component = shallow(
-      <Line>
-        <p>Lorem ipsum…</p>
-      </Line>,
-    ).children()
-
-    it('renders a <p>', () => {
-      expect(component.is('p')).toBe(true)
-    })
-  })
-})
-
-describe('<Line.Item />', () => {
-  describe('by default', () => {
-    const component = shallow(<Line.Item />)
-
-    it('renders a <div />', () => {
-      expect(component.is('div')).toBe(true)
-    })
-
-    it('has "k-Line__item" class', () => {
-      expect(component.hasClass('k-Line__item')).toBe(true)
-    })
-  })
-
-  describe('className prop', () => {
-    const component = shallow(<Line className="test-Line__item--lorem" />)
-
-    it('has a custom class', () => {
-      expect(component.hasClass('test-Line__item--lorem')).toBe(true)
-    })
-  })
-
-  describe('children prop', () => {
-    const component = shallow(
-      <Line>
-        <p>Lorem ipsum…</p>
-      </Line>,
-    ).children()
-
-    it('renders a <p>', () => {
-      expect(component.is('p')).toBe(true)
-    })
+  it('should match snapshot with props', () => {
+    const component = renderer
+      .create(
+        <Line className="custom-class">
+          <Line.Item className="custom-class">Item 1</Line.Item>
+          <p>Item 2</p>
+          <Line.Item>Item 3</Line.Item>
+        </Line>,
+      )
+      .toJSON()
+    expect(component).toMatchSnapshot()
   })
 })

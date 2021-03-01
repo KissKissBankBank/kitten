@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { Video } from './index'
-import { Loader } from '../../loaders/loader'
+import { Loader } from '../../atoms/loader'
 
 describe('<Video />', () => {
   let component
