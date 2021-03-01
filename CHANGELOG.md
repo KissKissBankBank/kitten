@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [3.0.0-beta.7] - 2021-03-01
+
 - Fix: Add DOM check to `DevGrid`.
 - Fix: Add width to `StickyContainer` in `HeaderNav`.
 - Fix: Use wrapper and relative positioning for a `Badge` with `Icon` prop.

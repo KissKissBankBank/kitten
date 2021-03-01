@@ -551,6 +551,12 @@ Object.defineProperty(exports, "AdaptableGrid", {
     return _adaptableGrid.AdaptableGrid;
   }
 });
+Object.defineProperty(exports, "AdaptableGridCol", {
+  enumerable: true,
+  get: function get() {
+    return _adaptableGrid.AdaptableGridCol;
+  }
+});
 Object.defineProperty(exports, "Hero", {
   enumerable: true,
   get: function get() {
