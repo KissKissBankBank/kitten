@@ -92,6 +92,7 @@ Array [
           }
         >
           <button
+            aria-label="Learn more"
             className="k-Toggletip__action k-u-reset-button"
             onBlur={[Function]}
             onClick={[Function]}
@@ -190,6 +191,7 @@ Array [
           }
         >
           <button
+            aria-label="Learn more"
             className="k-Toggletip__action k-u-reset-button"
             onBlur={[Function]}
             onClick={[Function]}
@@ -274,6 +276,7 @@ Array [
           }
         >
           <button
+            aria-label="Learn more"
             className="k-Toggletip__action k-u-reset-button"
             onBlur={[Function]}
             onClick={[Function]}
@@ -401,6 +404,7 @@ Array [
           }
         >
           <button
+            aria-label="Learn more"
             className="k-Toggletip__action k-u-reset-button"
             onBlur={[Function]}
             onClick={[Function]}
