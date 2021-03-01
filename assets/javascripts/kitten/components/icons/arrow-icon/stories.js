@@ -3,7 +3,7 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 import { ArrowIcon } from './index'
 
 export default {
-  title: 'ArrowIcon',
+  title: 'Icons/ArrowIcon',
   component: ArrowIcon,
 }
 

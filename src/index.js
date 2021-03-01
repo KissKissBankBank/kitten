@@ -821,34 +821,10 @@ Object.defineProperty(exports, "TextCopy", {
     return _textCopy.TextCopy;
   }
 });
-Object.defineProperty(exports, "QuestionMarkWithTooltip", {
-  enumerable: true,
-  get: function get() {
-    return _questionMarkWithTooltip.QuestionMarkWithTooltip;
-  }
-});
-Object.defineProperty(exports, "StaticTooltip", {
-  enumerable: true,
-  get: function get() {
-    return _staticTooltip.StaticTooltip;
-  }
-});
 Object.defineProperty(exports, "Toggletip", {
   enumerable: true,
   get: function get() {
     return _toggletip.Toggletip;
-  }
-});
-Object.defineProperty(exports, "TooltipNew", {
-  enumerable: true,
-  get: function get() {
-    return _tooltipNew.TooltipNew;
-  }
-});
-Object.defineProperty(exports, "Tooltip", {
-  enumerable: true,
-  get: function get() {
-    return _tooltip.Tooltip;
   }
 });
 Object.defineProperty(exports, "HighlightHalo", {
@@ -1571,6 +1547,12 @@ Object.defineProperty(exports, "nativeInputValueSetter", {
     return _nativeInputValueSetter.nativeInputValueSetter;
   }
 });
+Object.defineProperty(exports, "useFlexGapCheck", {
+  enumerable: true,
+  get: function get() {
+    return _useFlexGapCheck.useFlexGapCheck;
+  }
+});
 Object.defineProperty(exports, "getReactElementsByType", {
   enumerable: true,
   get: function get() {
@@ -1882,15 +1864,7 @@ var _singleEntryTable = require("./components/tables/single-entry-table");
 
 var _textCopy = require("./components/text-copy");
 
-var _questionMarkWithTooltip = require("./components/tooltips/question-mark-with-tooltip");
-
-var _staticTooltip = require("./components/tooltips/static-tooltip");
-
 var _toggletip = require("./components/tooltips/toggletip");
-
-var _tooltipNew = require("./components/tooltips/tooltip-new");
-
-var _tooltip = require("./components/tooltips/tooltip");
 
 var _highlightHalo = require("./components/tours/highlight-halo");
 
@@ -2117,6 +2091,8 @@ var _cssPropertyDistributor = require("./helpers/dom/css-property-distributor");
 var _elementHelper = _interopRequireDefault(require("./helpers/dom/element-helper"));
 
 var _nativeInputValueSetter = require("./helpers/dom/native-input-value-setter");
+
+var _useFlexGapCheck = require("./helpers/dom/use-flex-gap-check");
 
 var _reactElements = require("./helpers/react/react-elements");
 
