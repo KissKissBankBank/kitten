@@ -126,7 +126,10 @@ export { Grid, GridCol } from './components/grid/grid'
 export { Row } from './components/grid/row'
 export { SideGrid } from './components/grid/side-grid'
 export { StickyContainer } from './components/grid/sticky-container'
-export { AdaptableGrid } from './components/grid/adaptable-grid'
+export {
+  AdaptableGrid,
+  AdaptableGridCol,
+} from './components/grid/adaptable-grid'
 
 // Heroes
 export { Hero } from './components/heroes/hero'
