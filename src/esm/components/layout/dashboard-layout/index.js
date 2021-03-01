@@ -65,7 +65,7 @@ export var DashboardLayout = function DashboardLayout(_ref) {
   };
 
   var renderComponentArray = function renderComponentArray(childrenArray, otherProps) {
-    return childrenArray.map(function (child) {
+    return childrenArray.map(function (child, index) {
       if (!child) return null;
       return isFunction(child) ? child(_extends({
         openSideBar: function openSideBar() {
@@ -75,7 +75,9 @@ export var DashboardLayout = function DashboardLayout(_ref) {
           return setOpen(false);
         },
         isSidebarOpen: isOpen
-      }, otherProps)) : React.cloneElement(child, otherProps);
+      }, otherProps)) : React.cloneElement(child, _extends({
+        key: "content_child_".concat(index)
+      }, otherProps));
     });
   };
 

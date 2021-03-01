@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import React, { useState, useEffect, useRef } from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { ScreenConfig } from '../../../constants/screen-config';
@@ -162,7 +163,9 @@ var HeaderNav = function HeaderNav(_ref4) {
     ref: stickyContainerRef,
     isSticky: stickyState,
     isMenuExpanded: isMenuExpanded
-  }, stickyProps), /*#__PURE__*/React.createElement(Navigation, {
+  }, stickyProps, {
+    className: classNames('k-HeaderNav__stickyContainer', stickyProps.className)
+  }), /*#__PURE__*/React.createElement(Navigation, {
     ref: headerRef,
     role: "banner",
     id: id,
