@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking Change: Remove `SelectWithState` (replaced by `DrodownSelect`)
+- Breaking Change: Remove `SelectWithState` (replaced by `DropdownSelect`)
 
 ## [3.0.0-beta.4] - 2021-02-22
 
