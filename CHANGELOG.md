@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking Change: Remove `SelectWithState` (replaced by `DropdownSelect`)
+- Breaking change: Remove `SelectWithState` (replaced by `DropdownSelect`).
+- Breaking change: Remove deprecated `FormAmountAndCurrency`, `FormPhoneNumber` and `TextInputAndSelect` components.
 
 ## [3.0.0-beta.4] - 2021-02-22
 
