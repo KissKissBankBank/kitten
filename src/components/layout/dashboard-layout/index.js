@@ -97,7 +97,7 @@ var DashboardLayout = function DashboardLayout(_ref) {
   };
 
   var renderComponentArray = function renderComponentArray(childrenArray, otherProps) {
-    return childrenArray.map(function (child) {
+    return childrenArray.map(function (child, index) {
       if (!child) return null;
       return (0, _isFunction.default)(child) ? child((0, _extends2.default)({
         openSideBar: function openSideBar() {
@@ -107,7 +107,9 @@ var DashboardLayout = function DashboardLayout(_ref) {
           return setOpen(false);
         },
         isSidebarOpen: isOpen
-      }, otherProps)) : _react.default.cloneElement(child, otherProps);
+      }, otherProps)) : _react.default.cloneElement(child, (0, _extends2.default)({
+        key: "content_child_".concat(index)
+      }, otherProps));
     });
   };
 
