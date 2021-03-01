@@ -15,9 +15,9 @@ var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/sli
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var _classnames = _interopRequireDefault(require("classnames"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _stickyContainer = require("../../../components/grid/sticky-container");
 
@@ -184,9 +184,10 @@ var HeaderNav = function HeaderNav(_ref) {
     })
   }, /*#__PURE__*/_react.default.createElement(_stickyContainer.StickyContainer, (0, _extends2.default)({
     ref: stickyContainerRef,
-    isSticky: stickyState,
-    className: "k-HeaderNav__stickyContainer"
-  }, stickyProps), /*#__PURE__*/_react.default.createElement("nav", {
+    isSticky: stickyState
+  }, stickyProps, {
+    className: (0, _classnames.default)('k-HeaderNav__stickyContainer', stickyProps.className)
+  }), /*#__PURE__*/_react.default.createElement("nav", {
     ref: headerRef,
     role: "banner",
     id: id,

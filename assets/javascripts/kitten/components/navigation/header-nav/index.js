@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
-import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
 
 import { StickyContainer } from '../../../components/grid/sticky-container'
 import { Button } from './components/button'
@@ -158,8 +158,11 @@ const HeaderNav = ({
         <StickyContainer
           ref={stickyContainerRef}
           isSticky={stickyState}
-          className="k-HeaderNav__stickyContainer"
           {...stickyProps}
+          className={classNames(
+            'k-HeaderNav__stickyContainer',
+            stickyProps.className,
+          )}
         >
           <nav ref={headerRef} role="banner" id={id} className="k-HeaderNav">
             <QuickAccessLink

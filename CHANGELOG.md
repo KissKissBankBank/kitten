@@ -8,9 +8,49 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Add width to `StickyContainer` in `HeaderNav`.
 - Fix: Use wrapper and relative positioning for a `Badge` with `Icon` prop.
 - Feature: Add `AdaptableGridCol` to ESM export.
-- Breaking change: convert `Line` to CSS-in-JS.
-- Breaking change: remove `k-Line` mixin.
-- Feature: Add `useFlexGapCheck` hook for `gap` feature detection.
+
+## [3.0.0-beta.6] - 2021-03-01
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-Line`
+  - `k-LinkBox`
+  - `k-SideGrid`
+  - `k-StaticTooltip`
+  - `k-Tooltip`
+  - `k-TooltipNew`
+  - `k-VerticalGrid`
+- Delete the following deprecated components:
+  - `LinkBox/deprecated`
+  - `QuestionMarkWithTooltip`
+  - `StaticTooltip`
+  - `Tooltip`
+  - `TooltipNew`
+- Remove `withTooltip` HOC.
+- Remove `LinkBox` default export.
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+  - `Line`
+  - `SideGrid`
+  - `SideLayout`
+- Make `Marger` a function instead of a React.Component.
+- Add `tooltipProps` prop to `Field/Label` component.
+- Add `useFlexGapCheck` hook for flexbox `gap` feature detection.
+
+Fixes:
+
+- Fix `InformationBox` style.
+- Fix gap bug on Safari for the following components:
+  - `BackingCard`
+  - `DashboardLayout.Flow`
+  - `DashboardLayout`
+  - `DashboardMenu`
+  - `ImageCropper`
+  - `Loader`
+  - `LoaderWithParagraph`
 
 ## [3.0.0-beta.5] - 2021-02-25
 
@@ -157,6 +197,17 @@ Breaking changes:
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
   - `SimilarProjectsCard`.
+
+## [2.123.0] - 2021-03-01
+
+Feature:
+
+-  Add `PeopleIcon`, `StatsIcon` and `SpeechBubbleIcon`.
+
+Fixes:
+
+- Remove `unique "key" prop` error on `DashboardLayout`.
+- Fix `StickyContainer` width on `HeaderNav`.
 
 ## [2.122.0] - 2021-02-25
 

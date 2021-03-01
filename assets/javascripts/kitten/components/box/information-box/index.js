@@ -9,7 +9,7 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledInformationBox = styled.div`
-  .k-InformationBox {
+  &.k-InformationBox {
     display: inline-block;
     ${TYPOGRAPHY.fontStyles.light}
   }

@@ -1,8 +1,8 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import React, { useState, useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import { StickyContainer } from '../../../components/grid/sticky-container';
 import { Button } from './components/button';
 import { Logo } from './components/logo';
@@ -146,9 +146,10 @@ var HeaderNav = function HeaderNav(_ref) {
     })
   }, /*#__PURE__*/React.createElement(StickyContainer, _extends({
     ref: stickyContainerRef,
-    isSticky: stickyState,
-    className: "k-HeaderNav__stickyContainer"
-  }, stickyProps), /*#__PURE__*/React.createElement("nav", {
+    isSticky: stickyState
+  }, stickyProps, {
+    className: classNames('k-HeaderNav__stickyContainer', stickyProps.className)
+  }), /*#__PURE__*/React.createElement("nav", {
     ref: headerRef,
     role: "banner",
     id: id,
