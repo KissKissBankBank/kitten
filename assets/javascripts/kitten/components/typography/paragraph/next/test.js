@@ -38,7 +38,7 @@ describe('<Paragraph />', () => {
     })
   })
 
-  describe('with margin', () => {
+  describe('with no margin', () => {
     beforeEach(() => {
       component = renderer.create(<Paragraph tag="p" noMargin />).toJSON()
     })
