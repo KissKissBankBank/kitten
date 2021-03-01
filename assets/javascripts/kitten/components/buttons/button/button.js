@@ -35,7 +35,7 @@ const StyledButton = styled.button`
     text-decoration: none;
   }
 
-  > :nth-child(n) {
+  > :not(:last-child) {
     margin-right: ${pxToRem(10)};
     text-align: left;
   }
