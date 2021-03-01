@@ -15,6 +15,8 @@ var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/sli
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
@@ -83,7 +85,7 @@ var Header = _styledComponents.default.header.withConfig({
 var Navigation = _styledComponents.default.nav.withConfig({
   displayName: "header-nav__Navigation",
   componentId: "gabj0o-2"
-})(["width:100vw;overflow:hidden;box-sizing:border-box;&,.quickAccessLink{height:", ";background:", ";@media (min-width:", "px){height:", ";}@media (min-width:", "px){height:", ";}}"], (0, _typography.pxToRem)(_config.MOBILE_HEADER_HEIGHT), function (_ref3) {
+})(["width:100%;overflow:hidden;box-sizing:border-box;&,.quickAccessLink{height:", ";background:", ";@media (min-width:", "px){height:", ";}@media (min-width:", "px){height:", ";}}"], (0, _typography.pxToRem)(_config.MOBILE_HEADER_HEIGHT), function (_ref3) {
   var updateBackground = _ref3.updateBackground;
   return updateBackground ? _colorsConfig.default.background3 : _colorsConfig.default.background1;
 }, _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(_config.TABLET_HEADER_HEIGHT), _screenConfig.ScreenConfig.L.min, (0, _typography.pxToRem)(_config.DESKTOP_HEADER_HEIGHT));
@@ -206,7 +208,9 @@ var HeaderNav = function HeaderNav(_ref4) {
     ref: stickyContainerRef,
     isSticky: stickyState,
     isMenuExpanded: isMenuExpanded
-  }, stickyProps), /*#__PURE__*/_react.default.createElement(Navigation, {
+  }, stickyProps, {
+    className: (0, _classnames.default)('k-HeaderNav__stickyContainer', stickyProps.className)
+  }), /*#__PURE__*/_react.default.createElement(Navigation, {
     ref: headerRef,
     role: "banner",
     id: id,

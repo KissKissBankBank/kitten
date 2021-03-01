@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import React, { useState, useEffect, useRef } from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { ScreenConfig } from '../../../constants/screen-config';
@@ -43,7 +44,7 @@ var Header = styled.header.withConfig({
 var Navigation = styled.nav.withConfig({
   displayName: "header-nav__Navigation",
   componentId: "gabj0o-2"
-})(["width:100vw;overflow:hidden;box-sizing:border-box;&,.quickAccessLink{height:", ";background:", ";@media (min-width:", "px){height:", ";}@media (min-width:", "px){height:", ";}}"], pxToRem(MOBILE_HEADER_HEIGHT), function (_ref3) {
+})(["width:100%;overflow:hidden;box-sizing:border-box;&,.quickAccessLink{height:", ";background:", ";@media (min-width:", "px){height:", ";}@media (min-width:", "px){height:", ";}}"], pxToRem(MOBILE_HEADER_HEIGHT), function (_ref3) {
   var updateBackground = _ref3.updateBackground;
   return updateBackground ? COLORS.background3 : COLORS.background1;
 }, ScreenConfig.S.min, pxToRem(TABLET_HEADER_HEIGHT), ScreenConfig.L.min, pxToRem(DESKTOP_HEADER_HEIGHT));
@@ -162,7 +163,9 @@ var HeaderNav = function HeaderNav(_ref4) {
     ref: stickyContainerRef,
     isSticky: stickyState,
     isMenuExpanded: isMenuExpanded
-  }, stickyProps), /*#__PURE__*/React.createElement(Navigation, {
+  }, stickyProps, {
+    className: classNames('k-HeaderNav__stickyContainer', stickyProps.className)
+  }), /*#__PURE__*/React.createElement(Navigation, {
     ref: headerRef,
     role: "banner",
     id: id,

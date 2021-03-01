@@ -4,7 +4,7 @@ import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { Video } from './index'
-import { Loader } from '../../loaders/loader'
+import { Loader } from '../../atoms/loader'
 
 export const Default = () => (
   <Video

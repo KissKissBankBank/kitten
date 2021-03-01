@@ -45,7 +45,7 @@ var _crossIcon = require("../../../components/icons/cross-icon");
 
 var _visuallyHidden = require("../../../components/accessibility/visually-hidden");
 
-var _loader = require("../../../components/loaders/loader");
+var _loader = require("../../../components/atoms/loader");
 
 var StyledBasicUploader = _styledComponents.default.div.withConfig({
   displayName: "basic-uploader__StyledBasicUploader",

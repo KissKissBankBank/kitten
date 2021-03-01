@@ -312,7 +312,6 @@ const PaginationBase = forwardRef(
               direction={direction}
               disabled={isDisabled}
               aria-hidden="true"
-              version="solid"
             />
           </Text>
         </li>
