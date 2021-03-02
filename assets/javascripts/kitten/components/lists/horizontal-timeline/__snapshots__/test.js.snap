@@ -2,7 +2,12 @@
 
 exports[`<HorizontalTimeline /> by default matches with snapshot 1`] = `
 <dl
-  className="sc-bdVaJa bLQdBO k-HorizontalTimeline"
+  className="sc-bdVaJa ghdUue k-HorizontalTimeline"
+  style={
+    Object {
+      "--HorizontalTimeline-columnsCount": 0,
+    }
+  }
 >
   <i
     className="k-HorizontalTimeline__line"
@@ -15,7 +20,12 @@ exports[`<HorizontalTimeline /> by default matches with snapshot 1`] = `
 
 exports[`<HorizontalTimeline /> with HorizontalTimeline.Block and ellipsisColumns prop matches with snapshot 1`] = `
 <dl
-  className="sc-bdVaJa bLQdBO k-HorizontalTimeline"
+  className="sc-bdVaJa ghdUue k-HorizontalTimeline"
+  style={
+    Object {
+      "--HorizontalTimeline-columnsCount": 2,
+    }
+  }
 >
   <dt
     className="k-HorizontalTimeline__year"

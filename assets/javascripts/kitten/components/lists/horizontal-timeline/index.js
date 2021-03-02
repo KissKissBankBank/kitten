@@ -13,7 +13,9 @@ const StyledHorizontalTimeline = styled.dl`
   margin: 0;
   white-space: initial;
 
-  grid-template-columns: [col-start] repeat(6, 1fr) [col-end] ${pxToRem(18)};
+  grid-template-columns: [col-start] repeat(var(--HorizontalTimeline-columnsCount), 1fr) [col-end] ${pxToRem(
+    18,
+  )};
   grid-template-rows: 1fr [row-center] ${pxToRem(35)} [row-center-end] 1fr;
 
   .k-HorizontalTimeline__year, .k-HorizontalTimeline__block {
@@ -143,36 +145,39 @@ const Block = ({ year, children }) => (
   </>
 )
 
-Block.defaultProps = {
-  year: '2000',
-}
 Block.propTypes = {
-  year: PropTypes.node,
+  year: PropTypes.node.isRequired,
 }
 
 export const HorizontalTimeline = ({
   children,
   className,
   ellipsisColumns,
+  style,
   ...props
-}) => (
-  <StyledHorizontalTimeline
-    className={classNames('k-HorizontalTimeline', className)}
-    {...props}
-  >
-    {children}
-    <i className="k-HorizontalTimeline__line" />
+}) => {
+  const columnsCount = React.Children.count(children)
 
-    {ellipsisColumns?.map(value => (
-      <b
-        key={`ellipsis-marker-${value}`}
-        class="k-HorizontalTimeline__ellipsis"
-        style={{ '--HorizontalTimeline-ellipsis-column': value }}
-      />
-    ))}
-    <b class="k-HorizontalTimeline__ellipsis" />
-  </StyledHorizontalTimeline>
-)
+  return (
+    <StyledHorizontalTimeline
+      className={classNames('k-HorizontalTimeline', className)}
+      style={{ ...style, '--HorizontalTimeline-columnsCount': columnsCount }}
+      {...props}
+    >
+      {children}
+      <i className="k-HorizontalTimeline__line" />
+
+      {ellipsisColumns?.map(value => (
+        <b
+          key={`ellipsis-marker-${value}`}
+          class="k-HorizontalTimeline__ellipsis"
+          style={{ '--HorizontalTimeline-ellipsis-column': value }}
+        />
+      ))}
+      <b class="k-HorizontalTimeline__ellipsis" />
+    </StyledHorizontalTimeline>
+  )
+}
 
 HorizontalTimeline.defaultProps = {
   ellipsisColumns: [],
