@@ -60,10 +60,6 @@ const HelpBox = styled.div`
   display: flex;
   align-items: center;
   border-radius: ${pxToRem(8)};
-
-  > * {
-    align-self: initial;
-  }
 `
 
 export default {
@@ -95,17 +91,15 @@ export const Default = () => {
         <AvatarWithTextAndBadge>
           <AvatarWithTextAndBadge.Image src="/kitten.jpg" alt="" size="big" />
 
-          <AvatarWithTextAndBadge.Text withEllipsisOverflow>
-            <Text lineHeight="normal" weight="regular" color="background1">
+          <AvatarWithTextAndBadge.Text
+            withEllipsisOverflow
+            className="k-u-color-background1--important"
+          >
+            <Text lineHeight="normal" weight="regular">
               T-shirts brodés Free Boobs Club
             </Text>
             <br />
-            <Text
-              lineHeight="normal"
-              weight="light"
-              size="nano"
-              color="background1"
-            >
+            <Text lineHeight="normal" weight="light" size="nano">
               <StatusWithBullet as="span" />
               Prêt a être partagé avec mon coach
             </Text>
