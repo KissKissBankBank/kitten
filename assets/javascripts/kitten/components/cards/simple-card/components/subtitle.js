@@ -5,13 +5,11 @@ import { parseHtml } from '../../../../helpers/utils/parser'
 
 export const Subtitle = ({ subtitle }) => {
   return (
-    <Text
-      size="micro"
-      weight="regular"
-      className="k-u-margin-bottom-singleHalf"
-    >
-      {parseHtml(subtitle)}
-    </Text>
+    <div className="k-u-margin-bottom-singleHalf">
+      <Text size="micro" weight="regular">
+        {parseHtml(subtitle)}
+      </Text>
+    </div>
   )
 }
 

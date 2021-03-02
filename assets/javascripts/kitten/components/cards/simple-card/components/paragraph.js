@@ -7,14 +7,11 @@ import { parseHtml } from '../../../../helpers/utils/parser'
 export const Paragraph = ({ paragraph }) => {
   return (
     <>
-      <Text
-        lineHeight="normal"
-        size="micro"
-        weight="light"
-        className="k-u-margin-bottom-singleHalf"
-      >
-        {parseHtml(paragraph)}
-      </Text>
+      <div className="k-u-margin-bottom-singleHalf">
+        <Text lineHeight="normal" size="micro" weight="light">
+          {parseHtml(paragraph)}
+        </Text>
+      </div>
       <HorizontalStroke size="tiny" className="k-u-margin-top-singleHalf" />
     </>
   )
