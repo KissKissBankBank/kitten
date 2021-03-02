@@ -150,11 +150,7 @@ export const ImageCropper = ({
           })
         }}
       />
-      <Paragraph
-        modifier="tertiary"
-        noMargin={false}
-        className="k-u-margin-top-single"
-      >
+      <Paragraph modifier="tertiary" noMargin className="k-u-margin-top-single">
         {description}
       </Paragraph>
       <div
@@ -198,7 +194,7 @@ export const ImageCropper = ({
               <div className="k-Cropper__wrapper__slider">
                 <Paragraph
                   modifier="tertiary"
-                  noMargin={false}
+                  noMargin
                   className="k-u-margin-bottom-singleHalf"
                 >
                   {cropperInfo}

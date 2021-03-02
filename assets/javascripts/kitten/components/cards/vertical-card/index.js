@@ -81,7 +81,7 @@ export const VerticalCard = ({
       )}
       {description && (
         <Marger top={withTitleStroke ? 0 : 1}>
-          <Paragraph modifier="tertiary" tag={descriptionTag} noMargin={false}>
+          <Paragraph modifier="tertiary" tag={descriptionTag} noMargin>
             {description}
           </Paragraph>
         </Marger>

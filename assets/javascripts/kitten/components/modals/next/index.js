@@ -186,7 +186,7 @@ const ModalParagraph = ({ children, withoutMargin, className, align }) => (
   <StyledParagraph
     modifier="tertiary"
     style={{ textAlign: align }}
-    noMargin={false}
+    noMargin
     tag="p"
     className={classNames('k-Modal__paragraph', className, {
       'k-u-margin-bottom-triple': !withoutMargin,

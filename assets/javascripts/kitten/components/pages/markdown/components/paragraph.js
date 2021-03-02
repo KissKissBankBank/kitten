@@ -7,7 +7,7 @@ export const MarkdownParagraph = ({ children }) => (
   <Context.Consumer>
     {({ paragraphModifier }) => (
       <Marger bottom="2.6">
-        <Paragraph modifier={paragraphModifier} noMargin={false}>
+        <Paragraph modifier={paragraphModifier} noMargin>
           {children}
         </Paragraph>
       </Marger>

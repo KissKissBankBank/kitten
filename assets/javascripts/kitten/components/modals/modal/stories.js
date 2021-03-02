@@ -45,7 +45,7 @@ const StoryContent = ({ content }) => (
     </Marger>
 
     <Marger top="2" bottom="4">
-      <Paragraph modifier="secondary" noMargin={false} tag="p">
+      <Paragraph modifier="secondary" noMargin tag="p">
         {content}
       </Paragraph>
     </Marger>
