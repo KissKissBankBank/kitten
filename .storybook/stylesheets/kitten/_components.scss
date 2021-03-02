@@ -7,10 +7,6 @@
 @include k-ButtonWithBadge;
 @include k-TagButton;
 
-// Boxes
-
-@include k-LinkBox;
-
 // Cards
 
 @include k-Card;
@@ -65,9 +61,7 @@
 
 @include k-Grid;
 @include k-Row;
-@include k-SideGrid;
 @include k-SingleColumn;
-@include k-VerticalGrid;
 
 // Layout
 
@@ -107,10 +101,6 @@
 
 @include k-PressQuotes;
 
-// Steppers
-
-@include k-Stepper;
-
 // Teaser
 
 @include k-Teaser;
@@ -126,12 +116,6 @@
 // Titles
 
 @include k-TitleWithActions;
-
-// Tooltips
-
-@include k-Tooltip;
-@include k-TooltipNew;
-@include k-StaticTooltip;
 
 // Typography
 

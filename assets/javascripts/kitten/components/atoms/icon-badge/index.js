@@ -7,6 +7,7 @@ import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 
 const StyledBadge = styled.span`
+  box-sizing: border-box;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -16,12 +17,32 @@ const StyledBadge = styled.span`
   border-radius: ${pxToRem(30)};
   background-color: ${COLORS.primary1};
 
+  &.k-IconBadge--empty {
+    border: ${pxToRem(2)} solid ${COLORS.line1};
+    background-color: ${COLORS.background1};
+  }
+
   &.k-IconBadge--valid {
     background-color: ${COLORS.valid};
   }
 
   &.k-IconBadge--disabled {
     background-color: ${COLORS.line2};
+  }
+
+  &.k-IconBadge--tiny {
+    min-width: ${pxToRem(20)};
+    min-height: ${pxToRem(20)};
+    border-radius: ${pxToRem(20)};
+
+    .k-IconBadge__content {
+      font-size: ${stepToRem(-1)};
+
+      &,
+      & svg {
+        max-width: ${pxToRem(14)};
+      }
+    }
   }
 
   &.k-IconBadge--big {
@@ -63,6 +84,7 @@ export const IconBadge = ({
   children,
   disabled,
   valid,
+  empty,
   big,
   huge,
   size,
@@ -72,6 +94,7 @@ export const IconBadge = ({
     className={classNames('k-IconBadge', className, `k-IconBadge--${size}`, {
       'k-IconBadge--disabled': disabled,
       'k-IconBadge--valid': valid,
+      'k-IconBadge--empty': empty,
       'k-IconBadge--big': big,
       'k-IconBadge--huge': huge,
     })}
@@ -90,7 +113,8 @@ IconBadge.defaultProps = {
 IconBadge.propTypes = {
   disabled: PropTypes.bool,
   valid: PropTypes.bool,
+  empty: PropTypes.bool,
   big: PropTypes.bool,
   huge: PropTypes.bool,
-  size: PropTypes.oneOf(['normal', 'big', 'huge']),
+  size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge']),
 }

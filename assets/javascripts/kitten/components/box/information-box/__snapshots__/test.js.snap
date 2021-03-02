@@ -2,7 +2,7 @@
 
 exports[`<InformationBox /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH odorm k-InformationBox"
+  className="sc-bwzfXH fsqDNS k-InformationBox"
 >
   <div
     className="k-InformationBox__container"
@@ -24,7 +24,7 @@ exports[`<InformationBox /> by default matches with snapshot 1`] = `
 
 exports[`<InformationBox /> with contents matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH odorm k-InformationBox"
+  className="sc-bwzfXH fsqDNS k-InformationBox"
 >
   <div
     className="k-InformationBox__container"

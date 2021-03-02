@@ -19,7 +19,8 @@ export const Default = () => (
     <IconBadge
       disabled={boolean('disabled', false)}
       valid={boolean('valid', false)}
-      size={select('size', ['normal', 'big', 'huge'], 'normal')}
+      empty={boolean('empty', false)}
+      size={select('size', ['tiny', 'normal', 'big', 'huge'], 'normal')}
     >
       <StarIcon color={COLORS.background1} />
     </IconBadge>

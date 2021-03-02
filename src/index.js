@@ -41,6 +41,30 @@ Object.defineProperty(exports, "LoaderWithParagraph", {
     return _loaderWithParagraph.LoaderWithParagraph;
   }
 });
+Object.defineProperty(exports, "StepperIcon", {
+  enumerable: true,
+  get: function get() {
+    return _stepperIcon.StepperIcon;
+  }
+});
+Object.defineProperty(exports, "StepperIconDefault", {
+  enumerable: true,
+  get: function get() {
+    return _stepperIcon.StepperIconDefault;
+  }
+});
+Object.defineProperty(exports, "StepperIconInProgress", {
+  enumerable: true,
+  get: function get() {
+    return _stepperIcon.StepperIconInProgress;
+  }
+});
+Object.defineProperty(exports, "StepperIconValidated", {
+  enumerable: true,
+  get: function get() {
+    return _stepperIcon.StepperIconValidated;
+  }
+});
 Object.defineProperty(exports, "Tag", {
   enumerable: true,
   get: function get() {
@@ -551,6 +575,12 @@ Object.defineProperty(exports, "AdaptableGrid", {
     return _adaptableGrid.AdaptableGrid;
   }
 });
+Object.defineProperty(exports, "AdaptableGridCol", {
+  enumerable: true,
+  get: function get() {
+    return _adaptableGrid.AdaptableGridCol;
+  }
+});
 Object.defineProperty(exports, "Hero", {
   enumerable: true,
   get: function get() {
@@ -773,24 +803,6 @@ Object.defineProperty(exports, "VerticalStepper", {
     return _verticalStepper.VerticalStepper;
   }
 });
-Object.defineProperty(exports, "StepperIconDefault", {
-  enumerable: true,
-  get: function get() {
-    return _stepperIcon.StepperIconDefault;
-  }
-});
-Object.defineProperty(exports, "StepperIconInProgress", {
-  enumerable: true,
-  get: function get() {
-    return _stepperIcon.StepperIconInProgress;
-  }
-});
-Object.defineProperty(exports, "StepperIconValidated", {
-  enumerable: true,
-  get: function get() {
-    return _stepperIcon.StepperIconValidated;
-  }
-});
 Object.defineProperty(exports, "Stepper", {
   enumerable: true,
   get: function get() {
@@ -821,34 +833,10 @@ Object.defineProperty(exports, "TextCopy", {
     return _textCopy.TextCopy;
   }
 });
-Object.defineProperty(exports, "QuestionMarkWithTooltip", {
-  enumerable: true,
-  get: function get() {
-    return _questionMarkWithTooltip.QuestionMarkWithTooltip;
-  }
-});
-Object.defineProperty(exports, "StaticTooltip", {
-  enumerable: true,
-  get: function get() {
-    return _staticTooltip.StaticTooltip;
-  }
-});
 Object.defineProperty(exports, "Toggletip", {
   enumerable: true,
   get: function get() {
     return _toggletip.Toggletip;
-  }
-});
-Object.defineProperty(exports, "TooltipNew", {
-  enumerable: true,
-  get: function get() {
-    return _tooltipNew.TooltipNew;
-  }
-});
-Object.defineProperty(exports, "Tooltip", {
-  enumerable: true,
-  get: function get() {
-    return _tooltip.Tooltip;
   }
 });
 Object.defineProperty(exports, "HighlightHalo", {
@@ -1463,6 +1451,24 @@ Object.defineProperty(exports, "ShieldIcon", {
     return _shieldIcon.ShieldIcon;
   }
 });
+Object.defineProperty(exports, "PeopleIcon", {
+  enumerable: true,
+  get: function get() {
+    return _peopleIcon.PeopleIcon;
+  }
+});
+Object.defineProperty(exports, "StatsIcon", {
+  enumerable: true,
+  get: function get() {
+    return _statsIcon.StatsIcon;
+  }
+});
+Object.defineProperty(exports, "SpeechBubbleIcon", {
+  enumerable: true,
+  get: function get() {
+    return _speechBubbleIcon.SpeechBubbleIcon;
+  }
+});
 Object.defineProperty(exports, "COLORS", {
   enumerable: true,
   get: function get() {
@@ -1553,6 +1559,12 @@ Object.defineProperty(exports, "nativeInputValueSetter", {
     return _nativeInputValueSetter.nativeInputValueSetter;
   }
 });
+Object.defineProperty(exports, "useFlexGapCheck", {
+  enumerable: true,
+  get: function get() {
+    return _useFlexGapCheck.useFlexGapCheck;
+  }
+});
 Object.defineProperty(exports, "getReactElementsByType", {
   enumerable: true,
   get: function get() {
@@ -1625,6 +1637,8 @@ var _iconBadge = require("./components/atoms/icon-badge");
 var _loader = require("./components/atoms/loader");
 
 var _loaderWithParagraph = require("./components/atoms/loader-with-paragraph");
+
+var _stepperIcon = require("./components/atoms/stepper-icon");
 
 var _tag = require("./components/atoms/tag");
 
@@ -1852,8 +1866,6 @@ var _statusWithBullet = require("./components/status-with-bullet");
 
 var _verticalStepper = require("./components/steppers/vertical-stepper");
 
-var _stepperIcon = require("./components/steppers/stepper-icon");
-
 var _stepper = require("./components/steppers/stepper");
 
 var _doubleEntryTable = require("./components/tables/double-entry-table");
@@ -1864,15 +1876,7 @@ var _singleEntryTable = require("./components/tables/single-entry-table");
 
 var _textCopy = require("./components/text-copy");
 
-var _questionMarkWithTooltip = require("./components/tooltips/question-mark-with-tooltip");
-
-var _staticTooltip = require("./components/tooltips/static-tooltip");
-
 var _toggletip = require("./components/tooltips/toggletip");
-
-var _tooltipNew = require("./components/tooltips/tooltip-new");
-
-var _tooltip = require("./components/tooltips/tooltip");
 
 var _highlightHalo = require("./components/tours/highlight-halo");
 
@@ -2076,6 +2080,12 @@ var _loudspeakerIcon = require("./components/icons/loudspeaker-icon");
 
 var _shieldIcon = require("./components/icons/shield-icon");
 
+var _peopleIcon = require("./components/icons/people-icon");
+
+var _statsIcon = require("./components/icons/stats-icon");
+
+var _speechBubbleIcon = require("./components/icons/speech-bubble-icon");
+
 var _colorsConfig = _interopRequireDefault(require("./constants/colors-config"));
 
 var _gridConfig = require("./constants/grid-config");
@@ -2093,6 +2103,8 @@ var _cssPropertyDistributor = require("./helpers/dom/css-property-distributor");
 var _elementHelper = _interopRequireDefault(require("./helpers/dom/element-helper"));
 
 var _nativeInputValueSetter = require("./helpers/dom/native-input-value-setter");
+
+var _useFlexGapCheck = require("./helpers/dom/use-flex-gap-check");
 
 var _reactElements = require("./helpers/react/react-elements");
 
