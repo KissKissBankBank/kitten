@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Refactor `AvatarWithTextAndBadge` to CSS-in-JS.
+- Feature: Add `hoverable` prop to `AvatarWithTextAndBadge`.
 - Feature: Add explicit utility class `k-u-pointer-events-none` to `k-utilities-event` mixin.
 
 ## [3.0.0-beta.8] - 2021-03-01
