@@ -42,7 +42,7 @@ class TitleComponent extends PureComponent {
         {!loading && (
           <Title
             tag="p"
-            noMargin={false}
+            noMargin
             className="k-Card__title k-CrowdfundingCard__title__title"
             {...titleProps}
           >

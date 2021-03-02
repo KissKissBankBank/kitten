@@ -17,7 +17,7 @@ export class TitleComponent extends PureComponent {
           tag="p"
           {...titleProps}
           className={titleClassName}
-          noMargin={false}
+          noMargin
           modifier="senary"
         >
           {parseHtml(title)}

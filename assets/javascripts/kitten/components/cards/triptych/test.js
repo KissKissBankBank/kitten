@@ -13,7 +13,7 @@ describe('<Triptych />', () => {
         .create(
           <Triptych
             title={
-              <Title tag="h2" modifier="secondary" noMargin={false}>
+              <Title tag="h2" modifier="secondary" noMargin>
                 Main title goes here !
               </Title>
             }

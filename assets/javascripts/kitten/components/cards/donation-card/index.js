@@ -93,7 +93,7 @@ export class DonationCard extends PureComponent {
               offset-l={version === 'tiny' ? 0 : 2}
             >
               <Marger bottom="2">
-                <StyledTitle noMargin={false} tag={titleTag}>
+                <StyledTitle noMargin tag={titleTag}>
                   {title}
                 </StyledTitle>
               </Marger>

@@ -8,7 +8,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     className="sc-htpNat cFMsPG"
   >
     <p
-      className="sc-bdVaJa ldpdRg k-Title"
+      className="sc-bdVaJa ldpdRg k-Title k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,

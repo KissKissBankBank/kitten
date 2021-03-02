@@ -496,7 +496,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c4"
     >
       <h2
-        className="c5 k-Title"
+        className="c5 k-Title k-Title--noMargin"
         id="popover-title"
         style={
           Object {
@@ -776,7 +776,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
       className="c3"
     >
       <h2
-        className="c4 k-Title"
+        className="c4 k-Title k-Title--noMargin"
         id="popover-title"
         style={
           Object {

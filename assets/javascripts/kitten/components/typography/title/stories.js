@@ -177,7 +177,7 @@ export const Modifier = () => (
 )
 
 export const WithoutMargin = () => (
-  <Title modifier="primary" noMargin={false}>
+  <Title modifier="primary" noMargin>
     Lorem ipsum dolor sit amet…
   </Title>
 )
