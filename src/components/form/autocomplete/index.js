@@ -33,7 +33,7 @@ var _visuallyHidden = require("../../accessibility/visually-hidden");
 
 var _slugify = _interopRequireDefault(require("slugify"));
 
-var _loader = require("../../loaders/loader");
+var _loader = require("../../atoms/loader");
 
 var itemHeight = 38;
 var maxItemsVisibled = 3;

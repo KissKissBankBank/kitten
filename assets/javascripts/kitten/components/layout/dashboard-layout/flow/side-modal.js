@@ -28,6 +28,10 @@ const Wrapper = styled.div`
   align-items: flex-end;
   pointer-events: none;
 
+  &.k-DashboardLayout__flow--hideButtonAndModal {
+    display: none;
+  }
+
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     padding: ${pxToRem(40)} ${pxToRem(40)} ${pxToRem(135)};
   }
@@ -128,7 +132,12 @@ const Wrapper = styled.div`
   }
 `
 
-const MobileAsideComponent = ({ children, openLabel, closeLabel }) => {
+const MobileAsideComponent = ({
+  children,
+  openLabel,
+  closeLabel,
+  shouldHideButton,
+}) => {
   const { show, buttonProps, modalProps, wrapperProps, closeAction } = useModal(
     {
       id: 'DashboardLayout-sideModal',
@@ -139,6 +148,7 @@ const MobileAsideComponent = ({ children, openLabel, closeLabel }) => {
   return (
     <Wrapper
       className={classNames('k-DashboardLayout__flow__mobileAside', {
+        'k-DashboardLayout__flow--hideButtonAndModal': shouldHideButton,
         'k-DashboardLayout__flow__mobileAside--open': show,
       })}
       {...wrapperProps}

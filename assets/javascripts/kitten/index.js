@@ -9,9 +9,16 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 export { Accordeon } from './components/accordeon'
 
 // Atoms
-
 export { Badge } from './components/atoms/badge'
 export { IconBadge } from './components/atoms/icon-badge'
+export { Loader } from './components/atoms/loader'
+export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph'
+export {
+  StepperIcon,
+  StepperIconDefault,
+  StepperIconInProgress,
+  StepperIconValidated,
+} from './components/atoms/stepper-icon'
 export { Tag } from './components/atoms/tag'
 
 // Avatar
@@ -125,7 +132,10 @@ export { Grid, GridCol } from './components/grid/grid'
 export { Row } from './components/grid/row'
 export { SideGrid } from './components/grid/side-grid'
 export { StickyContainer } from './components/grid/sticky-container'
-export { AdaptableGrid } from './components/grid/adaptable-grid'
+export {
+  AdaptableGrid,
+  AdaptableGridCol,
+} from './components/grid/adaptable-grid'
 
 // Heroes
 export { Hero } from './components/heroes/hero'
@@ -157,10 +167,6 @@ export { BulletList } from './components/lists/bullet-list'
 export { List } from './components/lists/list'
 export { CheckList } from './components/lists/check-list'
 export { Timeline } from './components/lists/timeline'
-
-// Loaders
-export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph'
-export { Loader } from './components/loaders/loader'
 
 // Menus
 export { DashboardMenu } from './components/menus/dashboard-menu'
@@ -199,11 +205,6 @@ export { StatusWithBullet } from './components/status-with-bullet'
 
 // Steppers
 export { VerticalStepper } from './components/steppers/vertical-stepper'
-export {
-  StepperIconDefault,
-  StepperIconInProgress,
-  StepperIconValidated,
-} from './components/steppers/stepper-icon'
 export { Stepper } from './components/steppers/stepper'
 
 // Tables
@@ -215,11 +216,8 @@ export { SingleEntryTable } from './components/tables/single-entry-table'
 export { TextCopy } from './components/text-copy'
 
 // Tooltips
-export { QuestionMarkWithTooltip } from './components/tooltips/question-mark-with-tooltip'
-export { StaticTooltip } from './components/tooltips/static-tooltip'
+
 export { Toggletip } from './components/tooltips/toggletip'
-export { TooltipNew } from './components/tooltips/tooltip-new'
-export { Tooltip } from './components/tooltips/tooltip'
 
 // Tours
 export { HighlightHalo } from './components/tours/highlight-halo'
@@ -334,6 +332,9 @@ export { TagIcon } from './components/icons/tag-icon'
 export { FileIcon } from './components/icons/file-icon'
 export { LoudspeakerIcon } from './components/icons/loudspeaker-icon'
 export { ShieldIcon } from './components/icons/shield-icon'
+export { PeopleIcon } from './components/icons/people-icon'
+export { StatsIcon } from './components/icons/stats-icon'
+export { SpeechBubbleIcon } from './components/icons/speech-bubble-icon'
 
 // ---------
 // CONSTANTS
@@ -366,6 +367,7 @@ export { createEvent } from './helpers/dom/create-event'
 export { cssPropertyDistributor } from './helpers/dom/css-property-distributor'
 export { default as domElementHelper } from './helpers/dom/element-helper'
 export { nativeInputValueSetter } from './helpers/dom/native-input-value-setter'
+export { useFlexGapCheck } from './helpers/dom/use-flex-gap-check'
 export {
   getReactElementsByType,
   getReactElementsWithoutType,
