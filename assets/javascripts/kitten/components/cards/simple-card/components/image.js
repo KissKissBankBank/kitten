@@ -1,29 +1,13 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import classNames from 'classnames'
 import { Text } from '../../../../components/typography/text'
 import { Marger } from '../../../../components/layout/marger'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 
-const StyledImage = styled.img`
-  width: 100%;
-  display: block;
-`
 const playerButtonSize = pxToRem(70)
-
-const StyledPlayerButton = styled.div`
-  width: ${playerButtonSize};
-  height: ${playerButtonSize};
-  background: ${COLORS.font1};
-  position: absolute;
-  top: calc(50% - ${playerButtonSize} / 2);
-  left: calc(50% - ${playerButtonSize} / 2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-`
 
 const StyledImageContainer = styled(Marger)`
   position: relative;
@@ -33,64 +17,86 @@ const StyledImageContainer = styled(Marger)`
   background-color: ${({ imageContainerBackground }) =>
     imageContainerBackground};
 
-  ${({ imageContainerRatio }) =>
-    imageContainerRatio &&
-    css`
-      overflow: hidden;
-      position: relative;
-      padding-top: calc(100% / calc(${imageContainerRatio}));
+  &.k-Card__imageContainer--ratio {
+    overflow: hidden;
+    position: relative;
+    padding-top: calc(100% / calc(${imageContainerRatio}));
 
-      & > img {
-        position: absolute;
-        top: 0;
-        height: auto;
-        text-align: center;
-      }
-    `}
+    & > img {
+      position: absolute;
+      top: 0;
+      height: auto;
+      text-align: center;
+    }
+  }
+
+  .k-Card__image {
+    width: 100%;
+    display: block;
+  }
+
+  .k-card__playerButton {
+    width: ${playerButtonSize};
+    height: ${playerButtonSize};
+    background: ${COLORS.font1};
+    position: absolute;
+    top: calc(50% - ${playerButtonSize} / 2);
+    left: calc(50% - ${playerButtonSize} / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
 `
 
-export class Image extends PureComponent {
-  render() {
-    const {
-      imageProps,
-      withPlayerButtonOnImage,
-      arrowColor,
-      ariaLabel,
-      imageContainerBackground,
-      imageContainerRatio,
-    } = this.props
+export const Image = ({
+  imageProps,
+  withPlayerButtonOnImage,
+  arrowColor,
+  ariaLabel,
+  imageContainerBackground,
+  imageContainerRatio,
+  className,
+}) => {
 
-    const PlayerButtonOnImage = props => (
-      <StyledPlayerButton>
-        <Text
-          size="default"
-          weight="regular"
-          color={props.arrowColor}
-          aria-label={props.ariaLabel}
-        >
-          ►
-        </Text>
-      </StyledPlayerButton>
-    )
-
-    return (
-      <StyledImageContainer
-        bottom="2"
-        className="k-Card__imageContainer"
-        imageContainerBackground={imageContainerBackground}
-        imageContainerRatio={imageContainerRatio}
+  const PlayerButtonOnImage = () => (
+    <div className="k-card__playerButton">
+      <Text
+        size="default"
+        weight="regular"
+        color={arrowColor}
+        aria-label={ariaLabel}
       >
-        {withPlayerButtonOnImage && (
-          <PlayerButtonOnImage arrowColor={arrowColor} ariaLabel={ariaLabel} />
+        ►
+      </Text>
+    </div>
+  )
+
+  return (
+    <StyledImageContainer
+      bottom="2"
+      className={classNames(
+        "k-Card__imageContainer",
+        className,
+        {
+          'k-Card__imageContainer--ratio' : imageContainerRatio,
+          'k-Card__imageContainer--background' : imageContainerBackground,
+        },
+      )}
+    >
+      {withPlayerButtonOnImage && (
+        <PlayerButtonOnImage arrowColor={arrowColor} ariaLabel={ariaLabel} />
+      )}
+      <img
+        {...imageProps}
+        alt={imageProps.alt || ''}
+        className={classNames(
+          "k-Card__image",
+          className,
         )}
-        <StyledImage
-          {...imageProps}
-          alt={imageProps.alt || ''}
-          className="k-Card__image"
-        />
-      </StyledImageContainer>
-    )
-  }
+      />
+    </StyledImageContainer>
+  )
 }
 
 Image.propTypes = {
