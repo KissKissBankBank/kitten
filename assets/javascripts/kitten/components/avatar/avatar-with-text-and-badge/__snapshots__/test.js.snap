@@ -2,7 +2,7 @@
 
 exports[`<AvatarWithTextAndBadge /> with multiple lines and badge should match with snapshot 1`] = `
 <div
-  className="sc-bwzfXH cBDcGu k-Avatar__wrapper"
+  className="sc-bwzfXH hcgrmC k-Avatar__wrapper"
 >
   <div
     className="k-Avatar k-Avatar--big"
@@ -56,7 +56,7 @@ exports[`<AvatarWithTextAndBadge /> with multiple lines and badge should match w
 
 exports[`<AvatarWithTextAndBadge /> with simple props and avatar should match with snapshot 1`] = `
 <div
-  className="sc-bwzfXH cBDcGu k-Avatar__wrapper"
+  className="sc-bwzfXH hcgrmC k-Avatar__wrapper"
 >
   <div
     className="k-Avatar k-Avatar--regular"
@@ -89,7 +89,7 @@ exports[`<AvatarWithTextAndBadge /> with simple props and avatar should match wi
 
 exports[`<AvatarWithTextAndBadge /> with simple props and no avatar image should match with snapshot 1`] = `
 <div
-  className="sc-bwzfXH cBDcGu k-Avatar__wrapper"
+  className="sc-bwzfXH hcgrmC k-Avatar__wrapper"
 >
   <div
     className="k-Avatar k-Avatar--regular"

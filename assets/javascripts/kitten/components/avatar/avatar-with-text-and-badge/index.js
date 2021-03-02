@@ -74,6 +74,7 @@ const StyledWrapper = styled.div`
     padding-right: 0;
     margin: 0;
     text-align: left;
+    color: ${COLORS.font1};
 
     ${TYPOGRAPHY.fontStyles.regular}
     font-size: ${stepToRem(-1)};
