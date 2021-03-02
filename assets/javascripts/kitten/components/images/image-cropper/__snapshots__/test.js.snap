@@ -2,7 +2,7 @@
 
 exports[`<ImageCropper /> matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM djQxWs k-UploadAndCropper k-UploadAndCropper--noGap"
+  className="sc-gzVnrw bsEtaZ k-UploadAndCropper k-UploadAndCropper--noGap"
 >
   <label
     className="k-Label k-u-margin-bottom-singleHalf k-Label--tiny"
@@ -12,7 +12,7 @@ exports[`<ImageCropper /> matches with snapshot 1`] = `
     Lorem ipsum…
   </label>
   <div
-    className="sc-ifAKCX cBWvFc k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
+    className="sc-EHOje hIPPHw k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
   >
     <input
       accept=".jpg,.jpeg,.gif,.png"
@@ -22,7 +22,7 @@ exports[`<ImageCropper /> matches with snapshot 1`] = `
       type="file"
     />
     <label
-      className="sc-bdVaJa jABQcw k-BasicUploader__button"
+      className="sc-bwzfXH bBxqNJ k-BasicUploader__button"
       htmlFor="cropper"
     >
       <svg
@@ -45,7 +45,7 @@ exports[`<ImageCropper /> matches with snapshot 1`] = `
     </label>
   </div>
   <p
-    className="k-Paragraph k-u-margin-top-single k-Paragraph--quaternary k-Paragraph--withoutMargin"
+    className="sc-bdVaJa hNwnqU k-u-margin-top-single"
   >
     Lorem ipsum…
   </p>
