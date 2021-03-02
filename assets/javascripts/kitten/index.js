@@ -176,6 +176,7 @@ export { CheckList } from './components/lists/check-list'
 export { NavList } from './components/lists/nav-list'
 export { TagList } from './components/lists/tag-list'
 export { Timeline } from './components/lists/timeline'
+export { HorizontalTimeline } from './components/lists/horizontal-timeline'
 
 // Loaders
 export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph'

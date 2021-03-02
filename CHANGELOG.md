@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `HorizontalTimeline` component.
+
 ## [2.123.1] - 2021-03-01
 
 Fix:
