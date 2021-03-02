@@ -92,6 +92,15 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
+.c0.k-DashboardMenu--noGap .k-DashboardMenu__expandable__list .k-DashboardMenu__itemWrapper:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+.c0.k-DashboardMenu--noGap .k-DashboardMenu__iconWrapper,
+.c0.k-DashboardMenu--noGap .k-DashboardMenu__expandable__title__text {
+  margin-right: 0.625rem;
+}
+
 .c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item {
   font-family: Maax,Helvetica,Arial,sans-serif;
@@ -100,6 +109,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   cursor: pointer;
 }
 
+.c0 .k-DashboardMenu__expandable[open] .k-DashboardMenu__expandable__title,
 .c0 .k-DashboardMenu__expandable--hasActiveInside .k-DashboardMenu__expandable__title,
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item[aria-current="page"] {
   color: #fff;
@@ -170,7 +180,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 }
 
 <nav
-  className="c0 k-DashboardMenu"
+  className="c0 k-DashboardMenu k-DashboardMenu--noGap"
 >
   <ul
     className="k-DashboardMenu__list"

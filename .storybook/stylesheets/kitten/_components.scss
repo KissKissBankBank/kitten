@@ -7,18 +7,9 @@
 @include k-ButtonWithBadge;
 @include k-TagButton;
 
-// Boxes
-
-@include k-LinkBox;
-
 // Cards
 
 @include k-Card;
-
-// Dev
-
-@include k-DevGrid;
-@include k-DevBreakpoint;
 
 // Dropdowns
 
@@ -70,18 +61,11 @@
 
 @include k-Grid;
 @include k-Row;
-@include k-SideGrid;
 @include k-SingleColumn;
-@include k-VerticalGrid;
-
-// Images
-
-@include k-Cropper;
 
 // Layout
 
 @include k-HorizontalStroke;
-@include k-Line;
 @include k-ResponsiveIframeContainer;
 
 // Lines
@@ -91,11 +75,6 @@
 // Lists
 
 @include k-BulletList;
-
-// Loaders
-
-@include k-Loader;
-@include k-LoaderWithParagraph;
 
 // Meters
 
@@ -122,10 +101,6 @@
 
 @include k-PressQuotes;
 
-// Steppers
-
-@include k-Stepper;
-
 // Teaser
 
 @include k-Teaser;
@@ -141,12 +116,6 @@
 // Titles
 
 @include k-TitleWithActions;
-
-// Tooltips
-
-@include k-Tooltip;
-@include k-TooltipNew;
-@include k-StaticTooltip;
 
 // Typography
 

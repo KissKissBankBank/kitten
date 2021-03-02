@@ -13,6 +13,10 @@ export const StyledHeader = styled.header`
   position: relative;
   z-index: var(--HeaderNav-zIndex);
 
+  .k-HeaderNav__stickyContainer {
+    width: 100%;
+  }
+
   &.k-HeaderNav--menuIsExpanded {
     z-index: var(--HeaderNav-zIndex-openMenu);
 
@@ -30,7 +34,7 @@ export const StyledHeader = styled.header`
     align-items: center;
     overflow: hidden;
     padding-left: ${pxToRem(10)};
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     box-sizing: border-box;
 

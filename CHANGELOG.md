@@ -8,6 +8,101 @@ Breaking change:
 
 - Convert `Paragraph` component and `margin` becomes `noMargin` prop.
 
+## [3.0.0-beta.8] - 2021-03-01
+
+Breaking changes:
+
+- Depreciate `Stepper` in favour of `Next` `Stepper`.
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Stepper`
+  - `k-Stepper__icon`
+- Convert `StepperIcon*` to CSS-in-JS and move to `atoms`.
+
+Features:
+
+- Convert deprecated `Stepper` to CSS-in-JS.
+- Add `StepperIcon` component with `state` prop.
+- Add `empty` prop to `IconBadge`.
+
+Fix:
+
+- Add DOM check to `useFlexGapCheck`.
+
+## [3.0.0-beta.7] - 2021-03-01
+
+Feature:
+
+- Add `AdaptableGridCol` to ESM export.
+
+Fixes:
+
+- Add DOM check to `DevGrid`.
+- Add width to `StickyContainer` in `HeaderNav`.
+- Use wrapper and relative positioning for a `Badge` with `Icon` prop.
+
+## [3.0.0-beta.6] - 2021-03-01
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-Line`
+  - `k-LinkBox`
+  - `k-SideGrid`
+  - `k-StaticTooltip`
+  - `k-Tooltip`
+  - `k-TooltipNew`
+  - `k-VerticalGrid`
+- Delete the following deprecated components:
+  - `LinkBox/deprecated`
+  - `QuestionMarkWithTooltip`
+  - `StaticTooltip`
+  - `Tooltip`
+  - `TooltipNew`
+- Remove `withTooltip` HOC.
+- Remove `LinkBox` default export.
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+  - `Line`
+  - `SideGrid`
+  - `SideLayout`
+- Make `Marger` a function instead of a React.Component.
+- Add `tooltipProps` prop to `Field/Label` component.
+- Add `useFlexGapCheck` hook for flexbox `gap` feature detection.
+
+Fixes:
+
+- Fix `InformationBox` style.
+- Fix gap bug on Safari for the following components:
+  - `BackingCard`
+  - `DashboardLayout.Flow`
+  - `DashboardLayout`
+  - `DashboardMenu`
+  - `ImageCropper`
+  - `Loader`
+  - `LoaderWithParagraph`
+
+## [3.0.0-beta.5] - 2021-02-25
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-Cropper`
+  - `k-DevBreakpoints`
+  - `k-DevGrid`
+  - `k-Loader`
+  - `k-LoaderWithParagraph`
+- Convert and move the following components to CSS-in-JS:
+  - `Loader`
+  - `LoaderWithParagraph`
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+  - `DevGrid`
+  - `ImageCropper`
+
 ## [3.0.0-beta.4] - 2021-02-22
 
 Breaking changes:
@@ -133,6 +228,37 @@ Breaking changes:
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
   - `SimilarProjectsCard`
+
+## [2.123.1] - 2021-03-01
+
+Fix:
+
+- Allow for `null` value on `HeaderNav` `stickyProps` prop.
+
+## [2.123.0] - 2021-03-01
+
+Feature:
+
+-  Add `PeopleIcon`, `StatsIcon` and `SpeechBubbleIcon`.
+
+Fixes:
+
+- Remove `unique "key" prop` error on `DashboardLayout`.
+- Fix `StickyContainer` width on `HeaderNav`.
+
+## [2.122.0] - 2021-02-25
+
+Features:
+
+- Add `fullHeightContent` prop to `DashboardLayout`.
+- Add `shouldHideButton` prop to `DashboardLayout.Flow`.
+
+Fixes:
+
+- Fix `HeaderNav` width on Windows (Chrome & Firefox).
+- Fix `CheckableButton` focus styles while staying accessible.
+- Fix display on `DashboardLayout` for Chrome.
+- Fix details display on `DashboardMenu`.
 
 ## [2.121.0] - 2021-02-22
 

@@ -21,6 +21,9 @@ import {
   FileIcon,
   LoudspeakerIcon,
   ShieldIcon,
+  PeopleIcon,
+  StatsIcon,
+  SpeechBubbleIcon,
 } from '../../..'
 
 import { Default as Table } from '../../tables/list-table/list-table.stories.js'
@@ -50,6 +53,21 @@ const CardHolder = styled.div`
   }
 `
 
+const StyledAvatarWithTextAndBadge = styled(AvatarWithTextAndBadge)`
+  /* FIX AvatarWithTextAndBadge */
+
+  .text--withEllipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .k-ButtonImageWithText__text {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+`
+
 const HelpBox = styled.div`
   height: ${pxToRem(80)};
   background-color: rgb(255, 255, 255, 0.05);
@@ -70,7 +88,7 @@ export default {
 
 export const Default = () => {
   const selectedView = select(
-    'content type',
+    'content_type',
     ['flow', 'dashboard', 'table'],
     'flow',
   )
@@ -86,9 +104,10 @@ export const Default = () => {
         closeLabel: 'Fermer le menu',
       }}
       quickAccessLinkText="Accéder au contenu"
+      fullHeightContent={selectedView === 'flow'}
     >
       <DashboardLayout.Header>
-        <AvatarWithTextAndBadge>
+        <StyledAvatarWithTextAndBadge>
           <AvatarWithTextAndBadge.Image
             src="/kitten.jpg"
             alt=""
@@ -111,60 +130,86 @@ export const Default = () => {
               Prêt a être partagé avec mon coach
             </Text>
           </AvatarWithTextAndBadge.Text>
-        </AvatarWithTextAndBadge>
+        </StyledAvatarWithTextAndBadge>
       </DashboardLayout.Header>
       <DashboardLayout.SideContent>
         {({ closeSideBar }) => {
           return (
             <DashboardMenu>
               <DashboardMenu.Item
-                href="#"
+                href="?id=layout-dashboardlayout--default&knob-content_type=dashboard&viewMode=story"
+                isActive={
+                  window.location.search ===
+                  '?id=layout-dashboardlayout--default&knob-content_type=dashboard&viewMode=story'
+                }
                 icon={() => <HomeIcon color="currentColor" />}
-                onClick={e => {
-                  e.preventDefault()
-                  closeSideBar()
-                }}
+                onClick={() => closeSideBar()}
               >
                 Accueil
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="#"
-                isActive
+                href="?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story"
+                isActive={
+                  window.location.search ===
+                  '?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story'
+                }
+                icon={() => <PeopleIcon color="currentColor" />}
+                onClick={() => closeSideBar()}
+              >
+                Contributeurs
+              </DashboardMenu.Item>
+              <DashboardMenu.Item
+                href="?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story&custom=a"
+                isActive={
+                  window.location.search ===
+                  '?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story&custom=a'
+                }
                 icon={() => <TagIcon color="currentColor" />}
-                onClick={e => {
-                  e.preventDefault()
-                  closeSideBar()
-                }}
+                onClick={() => closeSideBar()}
               >
                 Contreparties
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="#"
+                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=b"
+                isActive={
+                  window.location.search ===
+                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=b'
+                }
                 icon={() => <FilterIcon color="currentColor" />}
-                onClick={e => {
-                  e.preventDefault()
-                  closeSideBar()
-                }}
+                onClick={() => closeSideBar()}
               >
                 Paramètres
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="https://www.kisskissbankbank.com"
+                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story"
+                isActive={
+                  window.location.search ===
+                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story'
+                }
                 icon={() => <FileIcon color="currentColor" />}
-                onClick={e => {
-                  e.preventDefault()
-                  closeSideBar()
-                }}
+                onClick={() => closeSideBar()}
               >
                 Page Projet
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="https://www.kisskissbankbank.com"
+                href="?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story"
+                isActive={
+                  window.location.search ===
+                  '?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story'
+                }
+                icon={() => <StatsIcon color="currentColor" />}
+                onClick={() => closeSideBar()}
+              >
+                Statistiques
+              </DashboardMenu.Item>
+              <DashboardMenu.Item
+                href="?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story&custom=1"
+                isActive={
+                  window.location.search ===
+                  '?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story&custom=1'
+                }
                 icon={() => <LoudspeakerIcon color="currentColor" />}
-                onClick={e => {
-                  e.preventDefault()
-                  closeSideBar()
-                }}
+                onClick={() => closeSideBar()}
               >
                 Marketing
               </DashboardMenu.Item>
@@ -173,41 +218,54 @@ export const Default = () => {
                 icon={() => <ShieldIcon color="currentColor" />}
               >
                 <DashboardMenu.Item
-                  href="#"
-                  onClick={e => {
-                    e.preventDefault()
-                    closeSideBar()
-                  }}
+                  href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=1"
+                  isActive={
+                    window.location.search ===
+                    '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=1'
+                  }
+                  onClick={() => closeSideBar()}
                 >
                   Destinataire des fonds
                 </DashboardMenu.Item>
                 <DashboardMenu.Item
-                  href="#"
-                  onClick={e => {
-                    e.preventDefault()
-                    closeSideBar()
-                  }}
-                  isActive
+                  href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=2"
+                  isActive={
+                    window.location.search ===
+                    '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=2'
+                  }
+                  onClick={() => closeSideBar()}
                 >
                   Confirmation d'identité
                 </DashboardMenu.Item>
                 <DashboardMenu.Item
-                  href="#"
-                  onClick={e => {
-                    e.preventDefault()
-                    closeSideBar()
-                  }}
+                  href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=3"
+                  isActive={
+                    window.location.search ===
+                    '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=3'
+                  }
+                  onClick={() => closeSideBar()}
                 >
                   Documents justificatifs
                 </DashboardMenu.Item>
               </DashboardMenu.Expandable>
+              <DashboardMenu.Item
+                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=4"
+                isActive={
+                  window.location.search ===
+                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=4'
+                }
+                icon={() => <SpeechBubbleIcon color="currentColor" />}
+                onClick={() => closeSideBar()}
+              >
+                Actualités
+              </DashboardMenu.Item>
             </DashboardMenu>
           )
         }}
       </DashboardLayout.SideContent>
       <DashboardLayout.SideFooter>
         <HelpBox>
-          <AvatarWithTextAndBadge>
+          <StyledAvatarWithTextAndBadge>
             <AvatarWithTextAndBadge.Image src="/kitten.jpg" alt="" />
 
             <AvatarWithTextAndBadge.Text>
@@ -229,11 +287,14 @@ export const Default = () => {
                 Contacter votre coach
               </Text>
             </AvatarWithTextAndBadge.Text>
-          </AvatarWithTextAndBadge>
+          </StyledAvatarWithTextAndBadge>
         </HelpBox>
       </DashboardLayout.SideFooter>
 
-      {selectedView === 'flow' && <FlowExample />}
+      {({ isSidebarOpen }) => {
+        if (selectedView !== 'flow') return null
+        return <FlowExample isSidebarOpen={isSidebarOpen} />
+      }}
       {selectedView === 'dashboard' && <DashExample />}
       {selectedView === 'table' && <TableExample />}
     </DashboardLayout>
@@ -276,7 +337,7 @@ const TableExample = () => (
   </>
 )
 
-const FlowExample = () => (
+const FlowExample = ({ isSidebarOpen }) => (
   <DashboardLayout.Flow loading={boolean('loading', false)}>
     <DashboardLayout.Flow.Content>
       <Title
@@ -355,6 +416,7 @@ const FlowExample = () => (
       mobileAsideProps={{
         openLabel: 'Open help',
         closeLabel: 'Close help',
+        shouldHideButton: isSidebarOpen,
       }}
     >
       <DashboardLayout.Flow.AsideCard>
