@@ -136,6 +136,9 @@ const StyledHorizontalTimeline = styled.dl`
     position: absolute;
     right: calc(100% + ${pxToRem(3)});
   }
+  .k-HorizontalTimeline__ellipsis[style] {
+    margin-left: ${pxToRem(14)};
+  }
 `
 
 const Block = ({ year, children }) => (
