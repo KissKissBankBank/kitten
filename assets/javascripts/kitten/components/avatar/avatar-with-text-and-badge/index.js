@@ -13,7 +13,6 @@ import { getReactElementsByType } from '../../../helpers/react/react-elements'
 const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
-  align-self: flex-start;
   padding: 0;
   border: none;
   background: none;
