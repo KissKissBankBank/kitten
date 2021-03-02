@@ -126,8 +126,18 @@ export const Default = () => {
               size="nano"
               color="background1"
             >
-              <StatusWithBullet as="span" />
-              Prêt a être partagé avec mon coach
+              <StatusWithBullet
+                as="span"
+                weight="light"
+                size="micro"
+                statusType={select(
+                  'Status type',
+                  ['danger', 'success', 'warning', 'neutral', 'none'],
+                  'success',
+                )}
+              >
+                Prêt a être partagé
+              </StatusWithBullet>
             </Text>
           </AvatarWithTextAndBadge.Text>
         </StyledAvatarWithTextAndBadge>

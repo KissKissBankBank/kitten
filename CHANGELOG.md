@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Move `StatusWithBullet` to `atoms`.
+- Feature: Add `warning`, `neutral` and `none` values to `StatusWithBullet` `statusType` prop.
+- Feature: Add `size` and `weight` props to `StatusWithBullet`.
+- Feature: `statusMessage` prop is no longer required, you can now use `children` alternatively in `StatusWithBullet`.
+
 ## [3.0.0-beta.8] - 2021-03-01
 
 Breaking changes:
