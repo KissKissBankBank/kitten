@@ -24,6 +24,7 @@ import { useFlexGapCheck } from '../../../helpers/dom/use-flex-gap-check'
 
 import { BurgerIcon } from '../../../components/icons/burger-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import { LongArrowIcon } from '../../../components/icons/long-arrow-icon'
 
 import { Flow } from './flow'
 
@@ -485,7 +486,18 @@ export const DashboardLayout = ({
               backLinkProps.className,
             )}
           >
-            <ArrowIcon direction="left" color={COLORS.background1} />
+            <LongArrowIcon
+              aria-hidden
+              className="k-u-hidden@m-down"
+              direction="left"
+              color={COLORS.background1}
+            />
+            <ArrowIcon
+              aria-hidden
+              className="k-u-hidden@l-up"
+              direction="left"
+              color={COLORS.background1}
+            />
             <span className="k-DashboardLayout__backLink__text">
               {backLinkProps.children}
             </span>

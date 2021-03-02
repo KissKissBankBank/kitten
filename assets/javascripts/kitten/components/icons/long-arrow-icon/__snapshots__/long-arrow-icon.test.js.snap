@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LongArrowIcon /> default props matches the snapshot 1`] = `
+<svg
+  className=""
+  fill="#222"
+  height="10"
+  style={
+    Object {
+      "transform": "rotate(180deg)",
+    }
+  }
+  viewBox="0 0 12 10"
+  width="12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+  <path
+    d="M4.243.757l1.414 1.415-1.829 1.827L12 4v2H3.828l1.829 1.828-1.414 1.415L0 5 4.243.757z"
+  />
+</svg>
+`;
+
+exports[`<LongArrowIcon /> when disabled matches the snapshot 1`] = `
+<svg
+  className=""
+  fill="#fff"
+  height="10"
+  style={
+    Object {
+      "transform": "rotate(180deg)",
+    }
+  }
+  viewBox="0 0 12 10"
+  width="12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+  <path
+    d="M4.243.757l1.414 1.415-1.829 1.827L12 4v2H3.828l1.829 1.828-1.414 1.415L0 5 4.243.757z"
+  />
+</svg>
+`;
+
+exports[`<LongArrowIcon /> with the prop \`direction\` set to \`bottom\` matches the snapshot 1`] = `
+<svg
+  className=""
+  fill="#222"
+  height="10"
+  style={
+    Object {
+      "transform": "rotate(-90deg)",
+    }
+  }
+  viewBox="0 0 12 10"
+  width="12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+  <path
+    d="M4.243.757l1.414 1.415-1.829 1.827L12 4v2H3.828l1.829 1.828-1.414 1.415L0 5 4.243.757z"
+  />
+</svg>
+`;
+
+exports[`<LongArrowIcon /> with the prop \`direction\` set to \`left\` matches the snapshot 1`] = `
+<svg
+  className=""
+  fill="#222"
+  height="10"
+  style={
+    Object {
+      "transform": null,
+    }
+  }
+  viewBox="0 0 12 10"
+  width="12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+  <path
+    d="M4.243.757l1.414 1.415-1.829 1.827L12 4v2H3.828l1.829 1.828-1.414 1.415L0 5 4.243.757z"
+  />
+</svg>
+`;
+
+exports[`<LongArrowIcon /> with the prop \`direction\` set to \`right\` matches the snapshot 1`] = `
+<svg
+  className=""
+  fill="#222"
+  height="10"
+  style={
+    Object {
+      "transform": "rotate(180deg)",
+    }
+  }
+  viewBox="0 0 12 10"
+  width="12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+  <path
+    d="M4.243.757l1.414 1.415-1.829 1.827L12 4v2H3.828l1.829 1.828-1.414 1.415L0 5 4.243.757z"
+  />
+</svg>
+`;
