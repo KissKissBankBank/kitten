@@ -1,14 +1,15 @@
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import React, { useEffect, useState, useRef } from 'react';
+import classNames from 'classnames';
 import Cropper from 'react-cropper';
 import getOr from 'lodash/fp/getOr';
-import { Marger } from '../../../components/layout/marger';
-import { Grid, GridCol } from '../../../components/grid/grid';
 import { Label } from '../../../components/form/label';
 import { Paragraph } from '../../../components/typography/paragraph';
 import { BasicUploader } from '../../../components/uploaders/basic-uploader';
 import { RangeSlider } from '../../../components/form/range-slider';
 import { domElementHelper } from '../../../helpers/dom/element-helper';
+import { StyledCropper } from './styles';
+import { useFlexGapCheck } from '../../../helpers/dom/use-flex-gap-check';
 export var ImageCropper = function ImageCropper(_ref) {
   var imageSrc = _ref.imageSrc,
       fileName = _ref.fileName,
@@ -24,7 +25,8 @@ export var ImageCropper = function ImageCropper(_ref) {
       uploaderErrorLabel = _ref.uploaderErrorLabel,
       description = _ref.description,
       cropperInfo = _ref.cropperInfo,
-      sliderTitle = _ref.sliderTitle;
+      sliderTitle = _ref.sliderTitle,
+      className = _ref.className;
   var cropperContainerRef = useRef(null);
   var cropperRef = useRef(null);
 
@@ -88,6 +90,7 @@ export var ImageCropper = function ImageCropper(_ref) {
       resultData = _useState24[0],
       setResultData = _useState24[1];
 
+  var canUseGap = useFlexGapCheck();
   useEffect(function () {
     if (cropperInstance && cropperInstance.imageData.naturalWidth) {
       var imageData = cropperInstance.imageData;
@@ -137,16 +140,17 @@ export var ImageCropper = function ImageCropper(_ref) {
     }
   }, [resultData, fileNameState, uploadedFile]);
   var dragMode = disabled || !isCropEnabled ? 'none' : 'move';
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Marger, {
-    bottom: "1.5"
+  return /*#__PURE__*/React.createElement(StyledCropper, {
+    className: classNames('k-UploadAndCropper', className, {
+      'k-UploadAndCropper--noGap': !canUseGap
+    })
   }, /*#__PURE__*/React.createElement(Label, {
     size: "tiny",
-    htmlFor: name
-  }, label)), /*#__PURE__*/React.createElement(Marger, {
-    top: "1.5",
-    bottom: "1"
-  }, /*#__PURE__*/React.createElement(BasicUploader, {
+    htmlFor: name,
+    className: "k-u-margin-bottom-singleHalf"
+  }, label), /*#__PURE__*/React.createElement(BasicUploader, {
     id: name,
+    className: "k-u-margin-top-singleHalf k-u-margin-bottom-single",
     fileName: fileNameState,
     buttonText: buttonLabel,
     disabled: disabled,
@@ -189,18 +193,16 @@ export var ImageCropper = function ImageCropper(_ref) {
         file: null
       });
     }
-  })), /*#__PURE__*/React.createElement(Marger, {
-    top: "1"
-  }, /*#__PURE__*/React.createElement(Paragraph, {
+  }), /*#__PURE__*/React.createElement(Paragraph, {
     modifier: "quaternary",
-    margin: false
-  }, description)), imageSrcState && /*#__PURE__*/React.createElement(Grid, null, /*#__PURE__*/React.createElement(GridCol, {
-    col: "12",
-    "col-m": "6"
-  }, /*#__PURE__*/React.createElement(Marger, {
-    top: "2"
-  }, /*#__PURE__*/React.createElement("div", {
-    ref: cropperContainerRef
+    margin: false,
+    className: "k-u-margin-top-single"
+  }, description), /*#__PURE__*/React.createElement("div", {
+    className: "k-Cropper__wrapper k-u-margin-top-double",
+    "aria-live": "polite"
+  }, imageSrcState && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+    ref: cropperContainerRef,
+    className: "k-Cropper__wrapper__cropper"
   }, cropperWidth && cropperHeight && /*#__PURE__*/React.createElement(Cropper, {
     onInitialized: function onInitialized(instance) {
       setCropperInstance(instance);
@@ -223,24 +225,17 @@ export var ImageCropper = function ImageCropper(_ref) {
     crop: function crop(result) {
       setResultData(result);
     }
-  })))), isCropEnabled && !disabled && /*#__PURE__*/React.createElement(GridCol, {
-    col: "12",
-    "col-m": "6"
-  }, /*#__PURE__*/React.createElement(Marger, {
-    top: "2",
-    bottom: "1.5"
+  })), isCropEnabled && !disabled && /*#__PURE__*/React.createElement("div", {
+    className: "k-Cropper__wrapper__slider"
   }, /*#__PURE__*/React.createElement(Paragraph, {
     modifier: "quaternary",
-    margin: false
-  }, cropperInfo)), /*#__PURE__*/React.createElement(Marger, {
-    top: "1.5",
-    bottom: "1"
-  }, /*#__PURE__*/React.createElement(Label, {
+    margin: false,
+    className: "k-u-margin-bottom-singleHalf"
+  }, cropperInfo), /*#__PURE__*/React.createElement(Label, {
     size: "micro",
-    htmlFor: "zoomSlider"
-  }, sliderTitle)), /*#__PURE__*/React.createElement(Marger, {
-    top: "1"
-  }, /*#__PURE__*/React.createElement(RangeSlider, {
+    htmlFor: "zoomSlider",
+    className: "k-u-margin-top-singleHalf k-u-margin-bottom-single"
+  }, sliderTitle), /*#__PURE__*/React.createElement(RangeSlider, {
     id: "zoomSlider",
     name: "zoom",
     min: sliderMin,
@@ -250,7 +245,8 @@ export var ImageCropper = function ImageCropper(_ref) {
     onChange: function onChange(event) {
       var value = event.target.value;
       cropperInstance && cropperInstance.zoomTo(value / 100);
-    }
+    },
+    className: "k-u-margin-top-single"
   })))));
 };
 ImageCropper.defaultProps = {

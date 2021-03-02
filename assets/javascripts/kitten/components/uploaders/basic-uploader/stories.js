@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { boolean } from '@storybook/addon-knobs'
 import { BasicUploader } from './index'
-import { Loader } from '../../../components/loaders/loader'
+import { Loader } from '../../../components/atoms/loader'
 
 export default {
   component: BasicUploader,

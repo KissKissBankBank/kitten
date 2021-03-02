@@ -14,3 +14,23 @@ Kitten is designed with one font in mind,
 [Maax, by 205TF](https://www.205.tf/?search=Maax). Other font may be used,
 but they might not fit with the vertical dimensions of Maax.
 
+## DevGrid
+
+To better use the 12-cols Grid, Kitten incorporates a grid overlay utility.
+Its name is DevGrid, and it can be imported as a React component.
+
+```js
+import { DevGrid } from '@kisskissbankbank/kitten'
+
+…
+  return (
+    <DevGrid />
+  )
+…
+```
+
+When the component is present on the page, it can be invoked by pressing Ctrl-G
+(like Control-Grid).
+The upper left corner will show the current breakpoint, and the grid will be
+superimposed on the page.
+In the Kitten Storybook, DevGrid is present on all Stories, not no Docs pages.
