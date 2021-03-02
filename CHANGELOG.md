@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `LongArrowIcon` component.
+
 ## [3.0.0-beta.8] - 2021-03-01
 
 Breaking changes:
