@@ -53,21 +53,6 @@ const CardHolder = styled.div`
   }
 `
 
-const StyledAvatarWithTextAndBadge = styled(AvatarWithTextAndBadge)`
-  /* FIX AvatarWithTextAndBadge */
-
-  .text--withEllipsis {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  .k-ButtonImageWithText__text {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-`
-
 const HelpBox = styled.div`
   height: ${pxToRem(80)};
   background-color: rgb(255, 255, 255, 0.05);
@@ -76,7 +61,7 @@ const HelpBox = styled.div`
   align-items: center;
   border-radius: ${pxToRem(8)};
 
-  > div {
+  > * {
     align-self: initial;
   }
 `
@@ -107,15 +92,10 @@ export const Default = () => {
       fullHeightContent={selectedView === 'flow'}
     >
       <DashboardLayout.Header>
-        <StyledAvatarWithTextAndBadge>
-          <AvatarWithTextAndBadge.Image
-            src="/kitten.jpg"
-            alt=""
-            width={pxToRem(60)}
-            height={pxToRem(60)}
-          />
+        <AvatarWithTextAndBadge>
+          <AvatarWithTextAndBadge.Image src="/kitten.jpg" alt="" size="big" />
 
-          <AvatarWithTextAndBadge.Text withEllipsisOverflow={true}>
+          <AvatarWithTextAndBadge.Text withEllipsisOverflow>
             <Text lineHeight="normal" weight="regular" color="background1">
               T-shirts brodés Free Boobs Club
             </Text>
@@ -130,7 +110,7 @@ export const Default = () => {
               Prêt a être partagé avec mon coach
             </Text>
           </AvatarWithTextAndBadge.Text>
-        </StyledAvatarWithTextAndBadge>
+        </AvatarWithTextAndBadge>
       </DashboardLayout.Header>
       <DashboardLayout.SideContent>
         {({ closeSideBar }) => {
@@ -265,29 +245,19 @@ export const Default = () => {
       </DashboardLayout.SideContent>
       <DashboardLayout.SideFooter>
         <HelpBox>
-          <StyledAvatarWithTextAndBadge>
+          <AvatarWithTextAndBadge as="a" href="#">
             <AvatarWithTextAndBadge.Image src="/kitten.jpg" alt="" />
 
             <AvatarWithTextAndBadge.Text>
-              <Text
-                lineHeight="normal"
-                weight="bold"
-                color="background1"
-                size="tiny"
-              >
+              <Text weight="bold" color="background1" size="tiny">
                 Besoin d’aide ?
               </Text>
               <br />
-              <Text
-                lineHeight="normal"
-                weight="bold"
-                color="primary1"
-                size="tiny"
-              >
+              <Text weight="bold" color="primary1" size="tiny">
                 Contacter votre coach
               </Text>
             </AvatarWithTextAndBadge.Text>
-          </StyledAvatarWithTextAndBadge>
+          </AvatarWithTextAndBadge>
         </HelpBox>
       </DashboardLayout.SideFooter>
 

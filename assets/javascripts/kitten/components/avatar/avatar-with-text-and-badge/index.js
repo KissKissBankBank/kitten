@@ -17,6 +17,7 @@ const StyledWrapper = styled.div`
   padding: 0;
   border: none;
   background: none;
+  text-decoration: none;
 
   .k-Avatar {
     margin-right: ${pxToRem(10)};
@@ -75,6 +76,7 @@ const StyledWrapper = styled.div`
     margin: 0;
     text-align: left;
     color: ${COLORS.font1};
+    text-decoration: none;
 
     ${TYPOGRAPHY.fontStyles.regular}
     font-size: ${stepToRem(-1)};
