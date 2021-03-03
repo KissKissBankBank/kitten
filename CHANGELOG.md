@@ -4,11 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [2.123.2] - 2021-03-03
+## [3.0.0-beta.9] - 2021-03-03
 
-Fix: 
-
-- Perf problem with `Carousel` on mobile devices 
+Release `2.123.2`
 
 ## [3.0.0-beta.8] - 2021-03-01
 
@@ -231,6 +229,12 @@ Breaking changes:
   - `RewardCardLegacy`
   - `SimilarProjectsCard`.
 
+## [2.123.2] - 2021-03-03
+
+Fix:
+
+- Perf problem with `Carousel` on mobile devices
+
 ## [2.123.1] - 2021-03-01
 
 Fix:
@@ -241,7 +245,7 @@ Fix:
 
 Feature:
 
--  Add `PeopleIcon`, `StatsIcon` and `SpeechBubbleIcon`.
+- Add `PeopleIcon`, `StatsIcon` and `SpeechBubbleIcon`.
 
 Fixes:
 
