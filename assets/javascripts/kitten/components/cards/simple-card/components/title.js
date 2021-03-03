@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { parseHtml } from '../../../../helpers/utils/parser'
-import { Title as KittenTitle } from '../../../../components/typography/title'
+import { Title as TitleComponent } from '../../../../components/typography/title'
 import { Marger } from '../../../../components/layout/marger'
 
 export const Title = ({
@@ -12,7 +12,7 @@ export const Title = ({
 
   return (
     <Marger top="2" bottom=".3">
-      <KittenTitle
+      <TitleComponent
         tag="p"
         {...titleProps}
         className={classNames(
@@ -23,7 +23,7 @@ export const Title = ({
         modifier="senary"
       >
         {parseHtml(title)}
-      </KittenTitle>
+      </TitleComponent>
     </Marger>
   )
 }

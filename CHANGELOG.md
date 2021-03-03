@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking changes: Convert `SimpleCard` the following components to CSS-in-JS.
+- Feature: Refactor `SimpleCard` to CSS-in-JS.
 
 ## [3.0.0-beta.8] - 2021-03-01
 
