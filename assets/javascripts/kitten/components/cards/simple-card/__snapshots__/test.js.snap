@@ -5,7 +5,7 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
   className="sc-EHOje ftnBiB k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="sc-bwzfXH bZkrPQ sc-htpNat fRcPmS k-Card__imageContainer k-SimpleCard__imageContainer"
+    className="sc-bwzfXH gFuBrN sc-htpNat fRcPmS k-Card__imageContainer k-SimpleCard__imageContainer"
   >
     <img
       alt=""
@@ -21,7 +21,7 @@ exports[`<SimpleCard /> with imageContainerRatio props matches with snapshot 1`]
   className="sc-EHOje ftnBiB k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="sc-bwzfXH koowCo sc-htpNat fRcPmS k-Card__imageContainer k-SimpleCard__imageContainer k-SimpleCard__imageContainer--ratio"
+    className="sc-bwzfXH ydIsS sc-htpNat fRcPmS k-Card__imageContainer k-SimpleCard__imageContainer k-SimpleCard__imageContainer--ratio"
   >
     <img
       alt=""
@@ -37,7 +37,7 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
   className="sc-EHOje ftnBiB k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="sc-bwzfXH bZkrPQ sc-htpNat fRcPmS k-Card__imageContainer k-SimpleCard__imageContainer"
+    className="sc-bwzfXH gFuBrN sc-htpNat fRcPmS k-Card__imageContainer k-SimpleCard__imageContainer"
   >
     <div
       className="k-SimpleCard__playerButton"
@@ -67,7 +67,7 @@ exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
   className="sc-EHOje ftnBiB k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="sc-bwzfXH bZkrPQ sc-htpNat fRcPmS k-Card__imageContainer k-SimpleCard__imageContainer"
+    className="sc-bwzfXH gFuBrN sc-htpNat fRcPmS k-Card__imageContainer k-SimpleCard__imageContainer"
   >
     <img
       alt=""
