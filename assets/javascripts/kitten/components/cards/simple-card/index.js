@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { card } from '../../../hoc/card'
 import { Image } from './components/image'
-import { TitleComponent } from './components/title'
+import { Title } from './components/title'
 import { Subtitle } from './components/subtitle'
 import { Paragraph } from './components/paragraph'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -45,7 +45,7 @@ class SimpleCardComponent extends Component {
           arrowColor={arrowColor}
           ariaLabel={ariaLabel}
         />
-        {title && <TitleComponent title={title} titleProps={titleProps} />}
+        {title && <Title title={title} titleProps={titleProps} />}
         {subtitle && <Subtitle subtitle={subtitle} />}
         {paragraph && <Paragraph paragraph={paragraph} />}
       </ContainerStyle>
