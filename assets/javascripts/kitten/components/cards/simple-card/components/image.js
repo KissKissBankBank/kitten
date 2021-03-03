@@ -124,8 +124,8 @@ Image.defaultProps = {
     alt: '',
   },
   withPlayerButtonOnImage: false,
-  arrowColor: "background1",
+  arrowColor: 'background1',
   href: '#',
-  imageContainerBackground: COLORS.font1,
+  imageContainerBackground: COLORS.line1,
   playerButtonSize: 70,
 }
