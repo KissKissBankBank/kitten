@@ -4,6 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins: 
+  - `k-BulletList`
+
+- Convert and move the following components to CSS-in-JS:
+  - `BulletList`
+
 ## [3.0.0-beta.9] - 2021-03-03
 
 Release `2.123.2`
