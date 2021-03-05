@@ -62,18 +62,18 @@ exports[`<BulletList /> default matches with snapshot 1`] = `
   className="c0 k-BulletList"
 >
   <li
-    className="k-BulletList__item k-BulletList__item--default"
+    className="k-BulletList__item k-BulletList__item--regular"
     id="1"
   >
     Dis Manibus
   </li>
   <li
-    className="k-BulletList__item k-BulletList__item--default"
+    className="k-BulletList__item k-BulletList__item--regular"
   >
     Calpurnia Felicla
   </li>
   <li
-    className="k-BulletList__item k-BulletList__item--default"
+    className="k-BulletList__item k-BulletList__item--regular"
   >
     Germulio coniugi
   </li>

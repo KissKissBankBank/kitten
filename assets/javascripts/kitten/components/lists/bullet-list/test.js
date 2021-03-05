@@ -11,7 +11,7 @@ describe('<BulletList />', () => {
       component = renderer
       .create(
           <BulletList
-            size="default"
+            size="regular"
             items={[
               { key: '1', item: 'Dis Manibus', id: '1' },
               { key: '2', item: 'Calpurnia Felicla' },
