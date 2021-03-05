@@ -86,6 +86,6 @@ BulletList.propTypes = {
 }
 
 BulletList.defaultProps = {
-  size: null,
+  size: 'regular',
   items: [],
 }

@@ -136,7 +136,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="k-BulletList__item k-BulletList__item--null sc-ifAKCX hPTZCJ"
+        className="k-BulletList__item k-BulletList__item--regular sc-ifAKCX hPTZCJ"
       >
         Unordered list can use asterisks
       </li>
@@ -149,7 +149,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="k-BulletList__item k-BulletList__item--null sc-ifAKCX hPTZCJ"
+        className="k-BulletList__item k-BulletList__item--regular sc-ifAKCX hPTZCJ"
       >
         Or minuses
       </li>
@@ -162,7 +162,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="k-BulletList__item k-BulletList__item--null sc-ifAKCX hPTZCJ"
+        className="k-BulletList__item k-BulletList__item--regular sc-ifAKCX hPTZCJ"
       >
         Or pluses
       </li>
@@ -345,7 +345,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="k-BulletList__item k-BulletList__item--null sc-ifAKCX hPTZCJ"
+        className="k-BulletList__item k-BulletList__item--regular sc-ifAKCX hPTZCJ"
       >
         Unordered list can use asterisks
       </li>
@@ -358,7 +358,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="k-BulletList__item k-BulletList__item--null sc-ifAKCX hPTZCJ"
+        className="k-BulletList__item k-BulletList__item--regular sc-ifAKCX hPTZCJ"
       >
         Or minuses
       </li>
@@ -371,7 +371,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="k-BulletList__item k-BulletList__item--null sc-ifAKCX hPTZCJ"
+        className="k-BulletList__item k-BulletList__item--regular sc-ifAKCX hPTZCJ"
       >
         Or pluses
       </li>
