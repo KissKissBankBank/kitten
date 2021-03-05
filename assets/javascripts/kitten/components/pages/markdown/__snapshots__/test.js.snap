@@ -133,10 +133,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kKOIuD"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="sc-ifAKCX byUWJJ"
+        className="k-BulletList__item k-BulletList__item--null sc-ifAKCX hPTZCJ"
       >
         Unordered list can use asterisks
       </li>
@@ -146,10 +146,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kKOIuD"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="sc-ifAKCX byUWJJ"
+        className="k-BulletList__item k-BulletList__item--null sc-ifAKCX hPTZCJ"
       >
         Or minuses
       </li>
@@ -159,10 +159,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kKOIuD"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="sc-ifAKCX byUWJJ"
+        className="k-BulletList__item k-BulletList__item--null sc-ifAKCX hPTZCJ"
       >
         Or pluses
       </li>
@@ -342,10 +342,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kKOIuD"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="sc-ifAKCX hdtMub"
+        className="k-BulletList__item k-BulletList__item--null sc-ifAKCX hPTZCJ"
       >
         Unordered list can use asterisks
       </li>
@@ -355,10 +355,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kKOIuD"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="sc-ifAKCX hdtMub"
+        className="k-BulletList__item k-BulletList__item--null sc-ifAKCX hPTZCJ"
       >
         Or minuses
       </li>
@@ -368,10 +368,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kKOIuD"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="sc-ifAKCX hdtMub"
+        className="k-BulletList__item k-BulletList__item--null sc-ifAKCX hPTZCJ"
       >
         Or pluses
       </li>
