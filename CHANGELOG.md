@@ -4,6 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking change: 
+- `TextInput`: Deprecate size props (`giant`, `huge`, `big`, `tiny`).
+
+Features:
+
+- Add `size` prop to `TextInput` component.
+
+
 ## [3.0.0-beta.9] - 2021-03-03
 
 Release `2.123.2`
