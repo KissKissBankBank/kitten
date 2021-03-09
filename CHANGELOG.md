@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix:
+
+- Fix Lodash imports on `DropdownPhoneSelect`.
+
 ## [3.0.0-beta.9] - 2021-03-03
 
 Release `2.123.2`
