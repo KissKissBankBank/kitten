@@ -8,7 +8,6 @@ Breaking change:
 - `TextInput`: Deprecate size props (`giant`, `huge`, `big`, `tiny`).
 
 Features:
-
 - Add `size` prop to `TextInput` component.
 
 

@@ -68,6 +68,7 @@ export const TextInputWithButton = ({
       <TextInput
         className={classNames(
           'k-Form-TextInputWithButton--input',
+          className,
         )}
         {...others}
         valid={valid}
@@ -79,7 +80,7 @@ export const TextInputWithButton = ({
       <button
         className={classNames(
           'k-Form-TextInputWithButton--button',
-          className,
+          // ...buttonProps.className,
           {
             'k-Form-TextInputWithButton--button__valid': valid,
             'k-Form-TextInputWithButton--button__error': error,
