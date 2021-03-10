@@ -53,7 +53,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-top-double k-u-margin-top-single@xs-down"
     >
       <p
-        className="sc-bxivhb iikKd"
+        className="sc-bxivhb ilwwbB k-Paragraph k-Paragraph--noMargin"
       >
         Custom text description
       </p>
@@ -116,7 +116,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       className="k-u-margin-bottom-double k-u-margin-top-double k-u-margin-top-single@xs-down"
     >
       <p
-        className="sc-bxivhb iikKd"
+        className="sc-bxivhb ilwwbB k-Paragraph k-Paragraph--noMargin"
       >
         Custom text description
       </p>
@@ -188,7 +188,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-top-double"
     >
       <p
-        className="sc-bxivhb iikKd"
+        className="sc-bxivhb ilwwbB k-Paragraph k-Paragraph--noMargin"
       >
         Custom text description
       </p>

@@ -103,7 +103,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           Donsectetur adipiscing elit
         </h1>
         <p
-          className="sc-bxivhb iikKd k-u-align-center k-u-margin-top-singleHalf--important"
+          className="sc-bxivhb ilwwbB k-Paragraph k-u-align-center k-u-margin-top-singleHalf--important k-Paragraph--noMargin"
         >
           Nulla ut orci velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
         </p>
