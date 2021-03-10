@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [3.0.0-beta.11] - 2021-03-11
+
 Breaking changes:
 
 - Delete the following deprecated components: `Paragraph`.

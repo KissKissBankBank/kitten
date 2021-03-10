@@ -61,7 +61,7 @@ var TitleComponent = /*#__PURE__*/function (_PureComponent) {
         tag: "p"
       }, titleProps, {
         className: titleClassName,
-        margin: false,
+        noMargin: true,
         modifier: "senary"
       }), (0, _parser.parseHtml)(title)));
     }
