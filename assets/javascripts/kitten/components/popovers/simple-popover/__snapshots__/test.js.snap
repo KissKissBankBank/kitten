@@ -27,6 +27,30 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   margin-bottom: 0;
 }
 
+.c5.k-Title--italic {
+  font-style: italic;
+}
+
+.c7 {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 0.7901234567901234rem;
+  line-height: 1.6;
+}
+
+.c7.k-Paragraph--noMargin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c7.k-Paragraph--normalLineHeight {
+  line-height: normal;
+}
+
+.c7.k-Paragraph--italic {
+  font-style: italic;
+}
+
 .c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -497,6 +521,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
     >
       <p
         className="k-Paragraph k-Paragraph--quaternary"
+        className="c7 k-Paragraph k-Paragraph--noMargin"
       >
         Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. 
       </p>
@@ -542,6 +567,30 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.c4.k-Title--italic {
+  font-style: italic;
+}
+
+.c6 {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 0.7901234567901234rem;
+  line-height: 1.6;
+}
+
+.c6.k-Paragraph--noMargin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c6.k-Paragraph--normalLineHeight {
+  line-height: normal;
+}
+
+.c6.k-Paragraph--italic {
+  font-style: italic;
 }
 
 .c1 {
@@ -762,8 +811,8 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
     >
       <p
         className="k-Paragraph k-Paragraph--quaternary"
+        className="c6 k-Paragraph k-Paragraph--noMargin"
       >
-        
       </p>
     </div>
   </div>
