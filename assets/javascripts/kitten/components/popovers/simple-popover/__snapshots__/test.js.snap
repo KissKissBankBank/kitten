@@ -15,16 +15,26 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 .c5 {
+  --Title-css-color: #222;
   font-family: Maax,Helvetica,Arial,sans-serif;
   -webkit-letter-spacing: .01rem;
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
   letter-spacing: .01rem;
   font-weight: 600;
+  color: #222;
+  color: var(--Title-css-color);
   font-size: 1.125rem;
   line-height: 1.2;
+}
+
+.c5.k-Title--noMargin {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.c5.k-Title--italic {
+  font-style: italic;
 }
 
 .c1 {
@@ -486,8 +496,13 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c4"
     >
       <h2
-        className="c5"
+        className="c5 k-Title k-Title--noMargin"
         id="popover-title"
+        style={
+          Object {
+            "--Title-css-color": null,
+          }
+        }
       >
         This popover has a title
       </h2>
@@ -532,16 +547,26 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 }
 
 .c4 {
+  --Title-css-color: #222;
   font-family: Maax,Helvetica,Arial,sans-serif;
   -webkit-letter-spacing: .01rem;
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
   letter-spacing: .01rem;
   font-weight: 600;
+  color: #222;
+  color: var(--Title-css-color);
   font-size: 1.125rem;
   line-height: 1.2;
+}
+
+.c4.k-Title--noMargin {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.c4.k-Title--italic {
+  font-style: italic;
 }
 
 .c1 {
@@ -751,8 +776,13 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
       className="c3"
     >
       <h2
-        className="c4"
+        className="c4 k-Title k-Title--noMargin"
         id="popover-title"
+        style={
+          Object {
+            "--Title-css-color": null,
+          }
+        }
       >
         
       </h2>

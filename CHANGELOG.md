@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Breaking change:
+Breaking changes:
+
+- Convert `Title` and remove `k-Title` SCSS mixin.
+- Remplace `margin` by `noMargin` prop on `Title`.
 
 - Convert `Paragraph` component and `margin` becomes `noMargin` prop.
 

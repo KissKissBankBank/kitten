@@ -174,7 +174,7 @@ const GlobalStyle = createGlobalStyle`
 const ModalTitle = ({ children }) => (
   <Title
     modifier="quaternary"
-    margin={false}
+    noMargin
     tag="p"
     className="k-u-margin-bottom-singleHalf--important k-u-align-center"
   >
