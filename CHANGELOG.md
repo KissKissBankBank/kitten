@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking change:
+
+- Convert `Paragraph` component and `margin` becomes `noMargin` prop.
+
 ## [3.0.0-beta.10] - 2021-03-10
 
 Fix:
@@ -235,7 +239,7 @@ Breaking changes:
   - `ProjectCreatorCard`
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
-  - `SimilarProjectsCard`.
+  - `SimilarProjectsCard`
 
 ## [2.123.3] - 2021-03-10
 
