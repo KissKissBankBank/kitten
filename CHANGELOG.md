@@ -4,11 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Use callback ref in `useLazyObserver`.
+
 ## [2.123.2] - 2021-03-03
 
-Fix: 
+Fix:
 
-- Perf problem with `Carousel` on mobile devices 
+- Perf problem with `Carousel` on mobile devices
 
 ## [2.123.1] - 2021-03-01
 
