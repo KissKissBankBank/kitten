@@ -15,16 +15,26 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 .c5 {
+  --Title-css-color: #222;
   font-family: Maax,Helvetica,Arial,sans-serif;
   -webkit-letter-spacing: .01rem;
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
   letter-spacing: .01rem;
   font-weight: 600;
+  color: #222;
+  color: var(--Title-css-color);
   font-size: 1.125rem;
   line-height: 1.2;
+}
+
+.c5.k-Title--noMargin {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.c5.k-Title--italic {
+  font-style: italic;
 }
 
 .c7 {
@@ -32,6 +42,19 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   font-weight: 400;
   font-size: 0.7901234567901234rem;
   line-height: 1.6;
+}
+
+.c7.k-Paragraph--noMargin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c7.k-Paragraph--normalLineHeight {
+  line-height: normal;
+}
+
+.c7.k-Paragraph--italic {
+  font-style: italic;
 }
 
 .c1 {
@@ -505,8 +528,13 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c4"
     >
       <h2
-        className="c5"
+        className="c5 k-Title k-Title--noMargin"
         id="popover-title"
+        style={
+          Object {
+            "--Title-css-color": null,
+          }
+        }
       >
         This popover has a title
       </h2>
@@ -515,7 +543,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c6"
     >
       <p
-        className="c7"
+        className="c7 k-Paragraph k-Paragraph--noMargin"
       >
         Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. 
       </p>
@@ -551,16 +579,26 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 }
 
 .c4 {
+  --Title-css-color: #222;
   font-family: Maax,Helvetica,Arial,sans-serif;
   -webkit-letter-spacing: .01rem;
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
   letter-spacing: .01rem;
   font-weight: 600;
+  color: #222;
+  color: var(--Title-css-color);
   font-size: 1.125rem;
   line-height: 1.2;
+}
+
+.c4.k-Title--noMargin {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.c4.k-Title--italic {
+  font-style: italic;
 }
 
 .c6 {
@@ -568,6 +606,19 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   font-weight: 400;
   font-size: 0.7901234567901234rem;
   line-height: 1.6;
+}
+
+.c6.k-Paragraph--noMargin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c6.k-Paragraph--normalLineHeight {
+  line-height: normal;
+}
+
+.c6.k-Paragraph--italic {
+  font-style: italic;
 }
 
 .c1 {
@@ -789,8 +840,13 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
       className="c3"
     >
       <h2
-        className="c4"
+        className="c4 k-Title k-Title--noMargin"
         id="popover-title"
+        style={
+          Object {
+            "--Title-css-color": null,
+          }
+        }
       >
         
       </h2>
@@ -799,7 +855,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
       className="c5"
     >
       <p
-        className="c6"
+        className="c6 k-Paragraph k-Paragraph--noMargin"
       >
         
       </p>
