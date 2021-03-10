@@ -44,7 +44,7 @@ export const TextInputWithUnitForm = ({
   onInputChange,
   onInputFocus,
   version,
-  size,
+  ...others
 }) => {
 
   return (
@@ -83,7 +83,7 @@ export const TextInputWithUnitForm = ({
               onFocus={onInputFocus}
               defaultValue={inputDefaultValue}
               autoComplete="off"
-              size={size}
+              {...others}
             />
           </Marger>
 

@@ -112,7 +112,7 @@ TextInputWithButton.defaultProps = {
   valid: false,
   error: false,
   disabled: false,
-  size: null,
+  size: 'regular',
   buttonValue: 'Button',
   modifier: 'beryllium',
 }

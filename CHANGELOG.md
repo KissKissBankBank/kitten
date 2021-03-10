@@ -10,7 +10,7 @@ Breaking change:
   `TextInput`,
   `TextInputWithUnit`,
 
-Features:
+Feature:
 
 - Add `size` prop to `TextInput`, `TextInputWithUnit` component.
 
