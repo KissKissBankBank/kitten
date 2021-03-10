@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import ReactModal from 'react-modal'
 import { CloseButton } from '../../../components/buttons/close-button'
 import { Button } from '../../../components/buttons/button/button'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 import { Text } from '../../../components/typography/text'
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -184,9 +184,9 @@ const ModalTitle = ({ children }) => (
 
 const ModalParagraph = ({ children, withoutMargin, className, align }) => (
   <StyledParagraph
-    modifier="quaternary"
+    modifier="tertiary"
     style={{ textAlign: align }}
-    margin={false}
+    noMargin
     tag="p"
     className={classNames('k-Modal__paragraph', className, {
       'k-u-margin-bottom-triple': !withoutMargin,

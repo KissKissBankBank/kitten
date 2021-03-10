@@ -6,9 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Breaking changes:
 
+- Delete the following deprecated components: `Paragraph`.
 - Convert `Title` and remove `k-Title` SCSS mixin.
 - Remplace `margin` by `noMargin` prop on `Title`.
-
 - Convert `Paragraph` component and `margin` becomes `noMargin` prop.
 
 ## [3.0.0-beta.10] - 2021-03-10
