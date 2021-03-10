@@ -5,20 +5,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Breaking change:
-- Deprecate size props (`giant`, `huge`, `big`, `tiny`): 
+
+- Deprecate size props (`giant`, `huge`, `regular`, `big`, `tiny`): 
   `TextInput`,
   `TextInputWithUnit`,
 
 Features:
+
 - Add `size` prop to `TextInput`, `TextInputWithUnit` component.
+
+## [3.0.0-beta.10] - 2021-03-10
 
 Fix:
 
 - Fix Lodash imports on `DropdownPhoneSelect`.
 
+(Release `2.123.3`)
+
 ## [3.0.0-beta.9] - 2021-03-03
 
-Release `2.123.2`
+(Release `2.123.2`)
 
 ## [3.0.0-beta.8] - 2021-03-01
 
