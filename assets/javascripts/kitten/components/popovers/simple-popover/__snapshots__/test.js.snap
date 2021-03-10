@@ -10,7 +10,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   margin-bottom: 0.625rem;
 }
 
-.c8 {
+.c7 {
   margin-top: 1.875rem;
 }
 
@@ -25,13 +25,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.c7 {
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-size: 0.7901234567901234rem;
-  line-height: 1.6;
 }
 
 .c1 {
@@ -127,7 +120,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   color: #fff;
 }
 
-.c10 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -164,6 +157,96 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c9:disabled {
+  cursor: not-allowed;
+}
+
+.c9:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c9 >:last-child {
+  margin-right: 0;
+}
+
+.c9 svg,
+.c9 path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c9:hover,
+.c9:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
+  color: #fff;
+}
+
+.c9:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
+.c9:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c9:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+  border: 0.125rem solid #19b4fa;
+  background-color: #19b4fa;
+  color: #fff;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -212,96 +295,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 .c10:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
-}
-
-.c11 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-  box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.8888888888888888rem;
-  color: #222;
-  line-height: 1.3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
-  font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #19b4fa;
-  background-color: #19b4fa;
-  color: #fff;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-}
-
-.c11:disabled {
-  cursor: not-allowed;
-}
-
-.c11:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c11 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c11 >:last-child {
-  margin-right: 0;
-}
-
-.c11 svg,
-.c11 path {
-  fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
-}
-
-.c11:hover,
-.c11:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
-}
-
-.c11:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
-}
-
-.c11:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c11:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -366,7 +359,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c9 > * + * {
+.c8 > * + * {
   margin-top: 1.25rem;
 }
 
@@ -379,18 +372,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 @media (min-width:67.5rem) {
   .c5 {
     font-size: 1.601806640625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c7 {
-    font-size: 0.8888888888888888rem;
-  }
-}
-
-@media (min-width:67.5rem) {
-  .c7 {
-    font-size: 0.8888888888888888rem;
   }
 }
 
@@ -416,28 +397,28 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c10 {
+  .c9 {
     width: 12.5rem;
     height: 3.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c10 {
+  .c9 {
     width: 10rem;
     height: 2.5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c11 {
+  .c10 {
     width: 12.5rem;
     height: 3.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c11 {
+  .c10 {
     width: 10rem;
     height: 2.5rem;
   }
@@ -459,7 +440,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media (min-width:640px) {
-  .c9 > * + * {
+  .c8 > * + * {
     margin-top: 0;
     margin-left: 1.25rem;
   }
@@ -515,22 +496,22 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c6"
     >
       <p
-        className="c7"
+        className="k-Paragraph k-Paragraph--quaternary"
       >
         Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. 
       </p>
     </div>
     <div
-      className="c8 c9"
+      className="c7 c8"
     >
       <button
-        className="c10"
+        className="c9"
         onClick={[Function]}
       >
         J’ai compris
       </button>
       <button
-        className="c11"
+        className="c10"
         onClick={[Function]}
       >
         Mes préférences
@@ -561,13 +542,6 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.c6 {
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-size: 0.7901234567901234rem;
-  line-height: 1.6;
 }
 
 .c1 {
@@ -714,18 +688,6 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 @media (min-width:67.5rem) {
   .c4 {
     font-size: 1.601806640625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c6 {
-    font-size: 0.8888888888888888rem;
-  }
-}
-
-@media (min-width:67.5rem) {
-  .c6 {
-    font-size: 0.8888888888888888rem;
   }
 }
 
@@ -799,7 +761,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
       className="c5"
     >
       <p
-        className="c6"
+        className="k-Paragraph k-Paragraph--quaternary"
       >
         
       </p>
