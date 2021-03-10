@@ -2,7 +2,7 @@
 
 exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jFjLPT"
+  className="sc-htpNat bFKYFz"
 >
   <input
     className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithButton--input k-Form-TextInput--andromeda k-Form-TextInput--null"
@@ -11,7 +11,6 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
   />
   <button
     className="k-Form-TextInputWithButton--button"
-    modifier="beryllium"
     type="button"
   >
     Button
@@ -21,7 +20,7 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jFjLPT"
+  className="sc-htpNat bFKYFz"
 >
   <input
     className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithButton--input k-Form-TextInput--andromeda k-Form-TextInput--null"
@@ -30,7 +29,6 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
   />
   <button
     className="k-Form-TextInputWithButton--button"
-    modifier="beryllium"
     onClick={[Function]}
     type="button"
   >
@@ -41,7 +39,7 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
 
 exports[`<TextInputWithButton /> with component inside button value matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jFjLPT"
+  className="sc-htpNat bFKYFz"
 >
   <input
     className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithButton--input k-Form-TextInput--andromeda k-Form-TextInput--null"
@@ -51,7 +49,6 @@ exports[`<TextInputWithButton /> with component inside button value matches with
   />
   <button
     className="k-Form-TextInputWithButton--button"
-    modifier="beryllium"
     type="button"
   >
     <div
@@ -100,7 +97,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
 
 exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jFjLPT"
+  className="sc-htpNat bFKYFz"
 >
   <input
     className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithButton--input k-Form-TextInput--andromeda k-Form-TextInput--null k-Form-TextInput--disabled"
@@ -109,7 +106,6 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
   />
   <button
     className="k-Form-TextInputWithButton--button k-Form-TextInputWithButton--button__disabled"
-    modifier="beryllium"
     type="button"
   >
     Button
@@ -119,7 +115,7 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
 
 exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jFjLPT"
+  className="sc-htpNat bFKYFz"
 >
   <input
     className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithButton--input k-Form-TextInput--andromeda k-Form-TextInput--null k-Form-TextInput--error"
@@ -128,7 +124,6 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
   />
   <button
     className="k-Form-TextInputWithButton--button k-Form-TextInputWithButton--button__error"
-    modifier="beryllium"
     type="button"
   >
     Button
@@ -138,7 +133,7 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jFjLPT"
+  className="sc-htpNat bFKYFz"
 >
   <input
     className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithButton--input k-Form-TextInput--andromeda k-Form-TextInput--null"
@@ -149,7 +144,6 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
   />
   <button
     className="k-Form-TextInputWithButton--button"
-    modifier="beryllium"
     type="button"
   >
     Button
@@ -159,7 +153,7 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jFjLPT"
+  className="sc-htpNat bFKYFz"
 >
   <input
     className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithButton--input k-Form-TextInput--andromeda k-Form-TextInput--tiny"
@@ -168,7 +162,6 @@ exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
   />
   <button
     className="k-Form-TextInputWithButton--button"
-    modifier="beryllium"
     type="button"
   >
     Button
@@ -178,7 +171,7 @@ exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jFjLPT"
+  className="sc-htpNat bFKYFz"
 >
   <input
     className="sc-bdVaJa VHhzP k-Form-TextInput k-Form-TextInputWithButton--input k-Form-TextInput--andromeda k-Form-TextInput--null k-Form-TextInput--valid"
@@ -187,7 +180,6 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
   />
   <button
     className="k-Form-TextInputWithButton--button k-Form-TextInputWithButton--button__valid"
-    modifier="beryllium"
     type="button"
   >
     Button

@@ -64,7 +64,7 @@ export const TextInputWithButton = ({
 }) => {
 
   return (
-    <StyledTextInputWithButton>
+    <StyledTextInputWithButton modifier={modifier}>
       <TextInput
         className={classNames(
           'k-Form-TextInputWithButton--input',
@@ -80,7 +80,7 @@ export const TextInputWithButton = ({
       <button
         className={classNames(
           'k-Form-TextInputWithButton--button',
-          // ...buttonProps.className,
+          className,
           {
             'k-Form-TextInputWithButton--button__valid': valid,
             'k-Form-TextInputWithButton--button__error': error,
@@ -88,7 +88,6 @@ export const TextInputWithButton = ({
           }
         )}
         type="button"
-        modifier={modifier}
         {...buttonProps}
       >
         {value || buttonValue}
