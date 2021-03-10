@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../components/layout/marger'
@@ -26,139 +26,138 @@ const StyledFormContainer = styled.form`
   }
 `
 
-export class TextInputWithUnitForm extends PureComponent {
-  static propTypes = {
-    inputId: PropTypes.string.isRequired,
-    inputPlaceholder: PropTypes.string,
-    inputLabel: PropTypes.string.isRequired,
-    inputUnit: PropTypes.string.isRequired,
-    inputDefaultValue: PropTypes.string,
-    onInputBlur: PropTypes.func,
-    onInputChange: PropTypes.func,
-    onInputFocus: PropTypes.func,
-    inputIsOnError: PropTypes.bool,
-    errorMessage: PropTypes.string,
+export const TextInputWithUnitForm = ({
+  align,
+  formIsDisabled,
+  inputId,
+  inputPlaceholder,
+  inputUnit,
+  inputLabel,
+  inputDefaultValue,
+  inputIsOnError,
+  errorMessage,
+  buttonLabel,
+  onButtonMouseEnter,
+  onButtonMouseLeave,
+  onFormSubmit,
+  onInputBlur,
+  onInputChange,
+  onInputFocus,
+  version,
+  size,
+}) => {
 
-    buttonLabel: PropTypes.string.isRequired,
-    onButtonMouseEnter: PropTypes.func,
-    onButtonMouseLeave: PropTypes.func,
-
-    align: PropTypes.string,
-    formIsDisabled: PropTypes.bool,
-    onFormSubmit: PropTypes.func,
-
-    version: PropTypes.oneOf(['default', 'tiny']),
-  }
-
-  static defaultProps = {
-    inputId: '',
-    inputLabel: '',
-    inputUnit: '',
-    buttonLabel: '',
-    inputPlaceholder: '',
-    inputDefaultValue: '',
-    onInputBlur: () => {},
-    onInputChange: () => {},
-    onInputFocus: () => {},
-    inputIsOnError: false,
-    errorMessage: '',
-    onButtonMouseEnter: () => {},
-    onButtonMouseLeave: () => {},
-    formIsDisabled: false,
-    onFormSubmit: () => {},
-    align: 'center',
-    version: 'default',
-  }
-
-  render() {
-    const {
-      align,
-      formIsDisabled,
-      inputId,
-      inputPlaceholder,
-      inputUnit,
-      inputLabel,
-      inputDefaultValue,
-      inputIsOnError,
-      errorMessage,
-      buttonLabel,
-      onButtonMouseEnter,
-      onButtonMouseLeave,
-      onFormSubmit,
-      onInputBlur,
-      onInputChange,
-      onInputFocus,
-      version,
-    } = this.props
-
-    return (
-      <StyledFormContainer onSubmit={onFormSubmit}>
-        <Grid
-          className={classNames(
-            'k-Form-TextInputWithUnitForm__grid',
-            `k-Form-TextInputWithUnitForm__grid--${align}`,
-            'k-u-margin-top-triple',
-            'k-u-margin-bottom-triple',
-            {
-              'k-u-margin-bottom-single--important': inputIsOnError,
-            },
-          )}
+  return (
+    <StyledFormContainer onSubmit={onFormSubmit}>
+      <Grid
+        className={classNames(
+          'k-Form-TextInputWithUnitForm__grid',
+          `k-Form-TextInputWithUnitForm__grid--${align}`,
+          'k-u-margin-top-triple',
+          'k-u-margin-bottom-triple',
+          {
+            'k-u-margin-bottom-single--important': inputIsOnError,
+          },
+        )}
+      >
+        <GridCol
+          col-m={version === 'tiny' ? 0 : 5}
+          col-xs={version === 'tiny' ? 0 : 7}
         >
-          <GridCol
-            col-m={version === 'tiny' ? 0 : 5}
-            col-xs={version === 'tiny' ? 0 : 7}
-          >
-            <Marger bottom="1.5">
-              <Label size="micro" htmlFor={inputId}>
-                {inputLabel}
-              </Label>
-            </Marger>
+          <Marger bottom="1.5">
+            <Label size="micro" htmlFor={inputId}>
+              {inputLabel}
+            </Label>
+          </Marger>
 
-            <Marger top="1.5" bottom={inputIsOnError ? 1 : null}>
-              <TextInputWithUnit
-                error={inputIsOnError}
-                id={inputId}
-                type="number"
-                placeholder={inputPlaceholder}
-                unit={inputUnit}
-                disabled={formIsDisabled}
-                onBlur={onInputBlur}
-                onChange={onInputChange}
-                onFocus={onInputFocus}
-                defaultValue={inputDefaultValue}
-                autoComplete="off"
-              />
-            </Marger>
-
-            {inputIsOnError && (
-              <Marger top="1">
-                <Text size="micro" color="error" weight="regular">
-                  {errorMessage}
-                </Text>
-              </Marger>
-            )}
-          </GridCol>
-        </Grid>
-
-        <Grid>
-          <GridCol col="12" className={`k-u-align-${align}`}>
-            <Button
-              big
-              modifier="helium"
-              type="submit"
-              onMouseEnter={onButtonMouseEnter}
-              onMouseLeave={onButtonMouseLeave}
+          <Marger top="1.5" bottom={inputIsOnError ? 1 : null}>
+            <TextInputWithUnit
+              error={inputIsOnError}
+              id={inputId}
+              type="number"
+              placeholder={inputPlaceholder}
+              unit={inputUnit}
               disabled={formIsDisabled}
-              className={classNames(
-                'k-Form-TextInputWithUnitForm__submit',
-                `k-Form-TextInputWithUnitForm__grid--${version}`,
-              )}
-            >
-              {buttonLabel}
-            </Button>
-          </GridCol>
-        </Grid>
-      </StyledFormContainer>
-    )
-  }
+              onBlur={onInputBlur}
+              onChange={onInputChange}
+              onFocus={onInputFocus}
+              defaultValue={inputDefaultValue}
+              autoComplete="off"
+              size={size}
+            />
+          </Marger>
+
+          {inputIsOnError && (
+            <Marger top="1">
+              <Text size="micro" color="error" weight="regular">
+                {errorMessage}
+              </Text>
+            </Marger>
+          )}
+        </GridCol>
+      </Grid>
+
+      <Grid>
+        <GridCol col="12" className={`k-u-align-${align}`}>
+          <Button
+            big
+            modifier="helium"
+            type="submit"
+            onMouseEnter={onButtonMouseEnter}
+            onMouseLeave={onButtonMouseLeave}
+            disabled={formIsDisabled}
+            className={classNames(
+              'k-Form-TextInputWithUnitForm__submit',
+              `k-Form-TextInputWithUnitForm__grid--${version}`,
+            )}
+          >
+            {buttonLabel}
+          </Button>
+        </GridCol>
+      </Grid>
+    </StyledFormContainer>
+  )
+}
+
+TextInputWithUnitForm.propTypes = {
+  inputId: PropTypes.string.isRequired,
+  inputPlaceholder: PropTypes.string,
+  inputLabel: PropTypes.string.isRequired,
+  inputUnit: PropTypes.string.isRequired,
+  inputDefaultValue: PropTypes.string,
+  onInputBlur: PropTypes.func,
+  onInputChange: PropTypes.func,
+  onInputFocus: PropTypes.func,
+  inputIsOnError: PropTypes.bool,
+  errorMessage: PropTypes.string,
+
+  buttonLabel: PropTypes.string.isRequired,
+  onButtonMouseEnter: PropTypes.func,
+  onButtonMouseLeave: PropTypes.func,
+
+  align: PropTypes.string,
+  formIsDisabled: PropTypes.bool,
+  onFormSubmit: PropTypes.func,
+
+  version: PropTypes.oneOf(['default', 'tiny']),
+}
+
+TextInputWithUnitForm.defaultProps = {
+  inputId: '',
+  inputLabel: '',
+  inputUnit: '',
+  buttonLabel: '',
+  inputPlaceholder: '',
+  inputDefaultValue: '',
+  onInputBlur: () => {},
+  onInputChange: () => {},
+  onInputFocus: () => {},
+  inputIsOnError: false,
+  errorMessage: '',
+  onButtonMouseEnter: () => {},
+  onButtonMouseLeave: () => {},
+  formIsDisabled: false,
+  onFormSubmit: () => {},
+  align: 'center',
+  version: 'default',
 }

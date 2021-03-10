@@ -61,7 +61,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                 className="sc-bdVaJa chkwVs"
               >
                 <div
-                  className="sc-EHOje dClcjb k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
+                  className="sc-EHOje joVcTL k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
                 >
                   <input
                     autoComplete="off"
@@ -77,7 +77,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                     type="number"
                   />
                   <span
-                    className="k-Form-TextInputWithUnit__unit"
+                    className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--regular"
                   >
                     €
                   </span>
