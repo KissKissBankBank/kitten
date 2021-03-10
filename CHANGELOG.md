@@ -12,7 +12,10 @@ Breaking change:
 
 Feature:
 
-- Add `size` prop to `TextInput`, `TextInputWithUnit` component.
+- Add `size` prop to :
+  `TextInput`,
+  `TextInputWithButton`,
+  `TextInputWithUnit` components.
 
 ## [3.0.0-beta.10] - 2021-03-10
 
