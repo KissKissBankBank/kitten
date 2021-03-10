@@ -8,9 +8,17 @@ Breaking change:
 
 - Convert `Paragraph` component and `margin` becomes `noMargin` prop.
 
+## [3.0.0-beta.10] - 2021-03-10
+
+Fix:
+
+- Fix Lodash imports on `DropdownPhoneSelect`.
+
+(Release `2.123.3`)
+
 ## [3.0.0-beta.9] - 2021-03-03
 
-Release `2.123.2`
+(Release `2.123.2`)
 
 ## [3.0.0-beta.8] - 2021-03-01
 
@@ -233,11 +241,17 @@ Breaking changes:
   - `RewardCardLegacy`
   - `SimilarProjectsCard`
 
+## [2.123.3] - 2021-03-10
+
+Fix:
+
+- Use callback ref in `useLazyObserver`.
+
 ## [2.123.2] - 2021-03-03
 
 Fix:
 
-- Perf problem with `Carousel` on mobile devices
+- Perf problem with `Carousel` on mobile devices.
 
 ## [2.123.1] - 2021-03-01
 
