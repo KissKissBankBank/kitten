@@ -73,7 +73,6 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   display: flex;
   height: 0.3125rem;
   line-height: 1;
-  gap: 0.125rem;
 }
 
 .c1 .k-Loader__circle {
@@ -101,7 +100,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   animation-delay: 0s;
 }
 
-.c1.k-Loader--noGap .k-Loader__circle:not(:last-child) {
+.c1 .k-Loader__circle:not(:last-child) {
   margin-right: 0.125rem;
 }
 
@@ -182,8 +181,11 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 1.25rem;
   margin: 1.25rem 0;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
+  margin-right: 1.25rem;
 }
 
 .c0 .k-DashboardLayout__flow__nav__actionsContainer > * {
@@ -218,10 +220,6 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.c0.k-DashboardLayout__flow--noGap .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
-  margin-right: 1.25rem;
 }
 
 @media (min-width:40rem) {
@@ -349,8 +347,13 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout__flow__nav__actionsContainer {
-    gap: 2.5rem;
     margin: 1.875rem 0;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
+    margin-right: 2.5rem;
   }
 }
 
@@ -366,20 +369,14 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   }
 }
 
-@media (min-width:67.5rem) {
-  .c0.k-DashboardLayout__flow--noGap .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
-    margin-right: 2.5rem;
-  }
-}
-
 <div
-  className="c0 k-DashboardLayout__flow k-DashboardLayout__fullHeight k-DashboardLayout__flow--noGap"
+  className="c0 k-DashboardLayout__flow k-DashboardLayout__fullHeight"
 >
   <div
     className="k-DashboardLayout__flow__loading"
   >
     <div
-      className="c1 k-Loader k-Loader--noGap"
+      className="c1 k-Loader"
     >
       <svg
         className="k-Loader__circle"
@@ -570,7 +567,6 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   display: flex;
   height: 0.3125rem;
   line-height: 1;
-  gap: 0.125rem;
 }
 
 .c1 .k-Loader__circle {
@@ -598,7 +594,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   animation-delay: 0s;
 }
 
-.c1.k-Loader--noGap .k-Loader__circle:not(:last-child) {
+.c1 .k-Loader__circle:not(:last-child) {
   margin-right: 0.125rem;
 }
 
@@ -679,8 +675,11 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 1.25rem;
   margin: 1.25rem 0;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
+  margin-right: 1.25rem;
 }
 
 .c0 .k-DashboardLayout__flow__nav__actionsContainer > * {
@@ -715,10 +714,6 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.c0.k-DashboardLayout__flow--noGap .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
-  margin-right: 1.25rem;
 }
 
 @media (min-width:40rem) {
@@ -846,8 +841,13 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout__flow__nav__actionsContainer {
-    gap: 2.5rem;
     margin: 1.875rem 0;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
+    margin-right: 2.5rem;
   }
 }
 
@@ -863,20 +863,14 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   }
 }
 
-@media (min-width:67.5rem) {
-  .c0.k-DashboardLayout__flow--noGap .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
-    margin-right: 2.5rem;
-  }
-}
-
 <div
-  className="c0 k-DashboardLayout__flow k-DashboardLayout__fullHeight k-DashboardLayout__flow--noGap"
+  className="c0 k-DashboardLayout__flow k-DashboardLayout__fullHeight"
 >
   <div
     className="k-DashboardLayout__flow__loading"
   >
     <div
-      className="c1 k-Loader k-Loader--noGap"
+      className="c1 k-Loader"
     >
       <svg
         className="k-Loader__circle"
@@ -1069,10 +1063,6 @@ button:hover .c1 {
   outline: 0.125rem solid #bae8fd;
 }
 
-.c0 .k-DashboardLayout--noGap .k-DashboardLayout__sideWrapper >:not(:last-child) {
-  margin-bottom: 1.875rem;
-}
-
 @media (max-width:67.4375rem) {
   .c0 {
     overflow: hidden;
@@ -1131,7 +1121,10 @@ button:hover .c1 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 1.875rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper >:not(:last-child) {
+    margin-bottom: 1.875rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__backLink {
@@ -1304,8 +1297,11 @@ button:hover .c1 {
     position: sticky;
     top: 0;
     overflow: scroll;
-    gap: 1.875rem;
     padding: 1.875rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper >:not(:last-child) {
+    margin-bottom: 1.875rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__backLink {
@@ -1323,7 +1319,6 @@ button:hover .c1 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 0.9375rem;
     color: #fff;
     -webkit-transition: color .2s ease;
     transition: color .2s ease;
@@ -1341,6 +1336,10 @@ button:hover .c1 {
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__backLink:hover {
     color: #19b4fa;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__backLink .k-DashboardLayout__backLink__text {
+    margin-left: 0.9375rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {
@@ -1386,17 +1385,11 @@ button:hover .c1 {
   }
 }
 
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout--noGap .k-DashboardLayout__backLink__text {
-    margin-left: 0.9375rem;
-  }
-}
-
 <div
   className="c0 k-DashboardLayout__wrapper"
 >
   <div
-    className="k-DashboardLayout k-DashboardLayout--noGap"
+    className="k-DashboardLayout"
   >
     <a
       className="k-DashboardLayout__quickAccessLink"
