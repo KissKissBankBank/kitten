@@ -1407,7 +1407,27 @@ button:hover .c1 {
         href="#"
       >
         <svg
-          className=""
+          aria-hidden={true}
+          className="k-u-hidden@m-down"
+          fill="#fff"
+          height="10"
+          style={
+            Object {
+              "transform": null,
+            }
+          }
+          viewBox="0 0 12 10"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M4.243.757l1.414 1.415-1.829 1.827L12 4v2H3.828l1.829 1.828-1.414 1.415L0 5 4.243.757z"
+          />
+        </svg>
+        <svg
+          aria-hidden={true}
+          className="k-u-hidden@l-up"
           fill="#fff"
           height="5.64"
           style={

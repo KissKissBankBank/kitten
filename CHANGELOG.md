@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `LongArrowIcon` component.
 - Breaking change: Move `StatusWithBullet` to `atoms`.
 - Feature: Add `warning`, `neutral` and `none` values to `StatusWithBullet` `statusType` prop.
 - Feature: Add `size` and `weight` props to `StatusWithBullet`.
