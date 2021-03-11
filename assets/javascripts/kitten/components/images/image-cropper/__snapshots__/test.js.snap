@@ -2,7 +2,7 @@
 
 exports[`<ImageCropper /> matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM djQxWs k-UploadAndCropper k-UploadAndCropper--noGap"
+  className="sc-bZQynM bqJTVP k-UploadAndCropper"
 >
   <label
     className="k-Label k-u-margin-bottom-singleHalf k-Label--tiny"
