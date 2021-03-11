@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormActions /> with custom props matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+.c0.k-FormActions--noGap .k-FormActions__item {
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem;
+}
+
+@media (min-width:40rem) {
+  .c0.k-FormActions--spreadOut-s-up {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .c0.k-FormActions--spreadOut-s-up.k-FormActions--noGap .k-FormActions__item:first-child {
+    margin-left: 0;
+  }
+
+  .c0.k-FormActions--spreadOut-s-up.k-FormActions--noGap .k-FormActions__item:last-child {
+    margin-right: 0;
+  }
+}
+
+<div
+  className="c0 k-FormActions custom-class-name k-FormActions--spreadOut-s-up k-FormActions--noGap"
+  id="custom-id"
+>
+  <div
+    className="k-FormActions__item custom-item-class-name"
+  >
+    Item 1
+  </div>
+  <div
+    className="k-FormActions__item custom-item-class-name"
+  >
+    Item 2
+  </div>
+</div>
+`;
+
+exports[`<FormActions /> with default props matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+.c0.k-FormActions--noGap .k-FormActions__item {
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem;
+}
+
+@media (min-width:40rem) {
+  .c0.k-FormActions--spreadOut-s-up {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .c0.k-FormActions--spreadOut-s-up.k-FormActions--noGap .k-FormActions__item:first-child {
+    margin-left: 0;
+  }
+
+  .c0.k-FormActions--spreadOut-s-up.k-FormActions--noGap .k-FormActions__item:last-child {
+    margin-right: 0;
+  }
+}
+
+<div
+  className="c0 k-FormActions k-FormActions--spreadOut-s-up k-FormActions--noGap"
+>
+  <div
+    className="k-FormActions__item"
+  >
+    Item 1
+  </div>
+  <div
+    className="k-FormActions__item"
+  >
+    Item 2
+  </div>
+</div>
+`;
