@@ -2,14 +2,14 @@
 
 exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
 <form
-  className="sc-gzVnrw hovhA"
+  className="sc-htoDjs fyEwBx"
   onSubmit={[Function]}
 >
   <div
-    className="k-Grid k-Form-TextInputWithUnitForm__grid k-Form-TextInputWithUnitForm__grid--center k-u-margin-top-triple k-u-margin-bottom-triple"
+    className="sc-bwzfXH hqtNjR k-Grid k-Form-TextInputWithUnitForm__grid k-Form-TextInputWithUnitForm__grid--center k-u-margin-top-triple k-u-margin-bottom-triple"
   >
     <div
-      className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--7-xs k-Grid__col--5-m"
     >
       <div
         className="sc-bdVaJa eGDgJX"
@@ -26,11 +26,11 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
         className="sc-bdVaJa chkwVs"
       >
         <div
-          className="sc-bxivhb eyZjlr k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
+          className="sc-ifAKCX evStEB k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
         >
           <input
             autoComplete="off"
-            className="sc-bwzfXH kzSCOi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+            className="sc-htpNat buJppH k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
             defaultValue=""
             disabled={false}
             id="donation-amount"
@@ -51,13 +51,13 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="k-Grid"
+    className="sc-bwzfXH hqtNjR k-Grid"
   >
     <div
-      className="k-Grid__col--12 k-u-align-center"
+      className="k-Grid__col k-Grid__col--12 k-u-align-center"
     >
       <button
-        className="sc-EHOje dXaVFU k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+        className="sc-bZQynM jmpHTF k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
         disabled={false}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -72,14 +72,14 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
 <form
-  className="sc-gzVnrw hovhA"
+  className="sc-htoDjs fyEwBx"
   onSubmit={[Function]}
 >
   <div
-    className="k-Grid k-Form-TextInputWithUnitForm__grid k-Form-TextInputWithUnitForm__grid--center k-u-margin-top-triple k-u-margin-bottom-triple"
+    className="sc-bwzfXH hqtNjR k-Grid k-Form-TextInputWithUnitForm__grid k-Form-TextInputWithUnitForm__grid--center k-u-margin-top-triple k-u-margin-bottom-triple"
   >
     <div
-      className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--7-xs k-Grid__col--5-m"
     >
       <div
         className="sc-bdVaJa eGDgJX"
@@ -96,11 +96,11 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
         className="sc-bdVaJa chkwVs"
       >
         <div
-          className="sc-bxivhb eyZjlr k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
+          className="sc-ifAKCX evStEB k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
         >
           <input
             autoComplete="off"
-            className="sc-bwzfXH kzSCOi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+            className="sc-htpNat buJppH k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
             defaultValue=""
             disabled={false}
             id=""
@@ -119,13 +119,13 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="k-Grid"
+    className="sc-bwzfXH hqtNjR k-Grid"
   >
     <div
-      className="k-Grid__col--12 k-u-align-center"
+      className="k-Grid__col k-Grid__col--12 k-u-align-center"
     >
       <button
-        className="sc-EHOje dXaVFU k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+        className="sc-bZQynM jmpHTF k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
         disabled={false}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -140,14 +140,14 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] = `
 <form
-  className="sc-gzVnrw hovhA"
+  className="sc-htoDjs fyEwBx"
   onSubmit={[Function]}
 >
   <div
-    className="k-Grid k-Form-TextInputWithUnitForm__grid k-Form-TextInputWithUnitForm__grid--center k-u-margin-top-triple k-u-margin-bottom-triple"
+    className="sc-bwzfXH hqtNjR k-Grid k-Form-TextInputWithUnitForm__grid k-Form-TextInputWithUnitForm__grid--center k-u-margin-top-triple k-u-margin-bottom-triple"
   >
     <div
-      className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--7-xs k-Grid__col--5-m"
     >
       <div
         className="sc-bdVaJa eGDgJX"
@@ -164,11 +164,11 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
         className="sc-bdVaJa chkwVs"
       >
         <div
-          className="sc-bxivhb eyZjlr k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
+          className="sc-ifAKCX evStEB k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
         >
           <input
             autoComplete="off"
-            className="sc-bwzfXH kzSCOi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--disabled k-Form-TextInput--regular"
+            className="sc-htpNat buJppH k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--disabled k-Form-TextInput--regular"
             defaultValue=""
             disabled={true}
             id=""
@@ -187,13 +187,13 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
     </div>
   </div>
   <div
-    className="k-Grid"
+    className="sc-bwzfXH hqtNjR k-Grid"
   >
     <div
-      className="k-Grid__col--12 k-u-align-center"
+      className="k-Grid__col k-Grid__col--12 k-u-align-center"
     >
       <button
-        className="sc-EHOje dXaVFU k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+        className="sc-bZQynM jmpHTF k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
         disabled={true}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -208,14 +208,14 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
 
 exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
 <form
-  className="sc-gzVnrw hovhA"
+  className="sc-htoDjs fyEwBx"
   onSubmit={[Function]}
 >
   <div
-    className="k-Grid k-Form-TextInputWithUnitForm__grid k-Form-TextInputWithUnitForm__grid--center k-u-margin-top-triple k-u-margin-bottom-triple k-u-margin-bottom-single--important"
+    className="sc-bwzfXH hqtNjR k-Grid k-Form-TextInputWithUnitForm__grid k-Form-TextInputWithUnitForm__grid--center k-u-margin-top-triple k-u-margin-bottom-triple k-u-margin-bottom-single--important"
   >
     <div
-      className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--7-xs k-Grid__col--5-m"
     >
       <div
         className="sc-bdVaJa eGDgJX"
@@ -232,11 +232,11 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
         className="sc-bdVaJa CoxgX"
       >
         <div
-          className="sc-bxivhb eyZjlr k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
+          className="sc-ifAKCX evStEB k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
         >
           <input
             autoComplete="off"
-            className="sc-bwzfXH kzSCOi k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
+            className="sc-htpNat buJppH k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
             defaultValue=""
             disabled={false}
             id=""
@@ -256,7 +256,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
         className="sc-bdVaJa ggQxmM"
       >
         <span
-          className="sc-ifAKCX cFlEyZ k-u-color-error k-u-size-micro k-u-weight-regular"
+          className="sc-EHOje jvzENE k-u-color-error k-u-size-micro k-u-weight-regular"
         >
           Error message…
         </span>
@@ -264,13 +264,13 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="k-Grid"
+    className="sc-bwzfXH hqtNjR k-Grid"
   >
     <div
-      className="k-Grid__col--12 k-u-align-center"
+      className="k-Grid__col k-Grid__col--12 k-u-align-center"
     >
       <button
-        className="sc-EHOje dXaVFU k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+        className="sc-bZQynM jmpHTF k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
         disabled={false}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}

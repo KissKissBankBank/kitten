@@ -31,7 +31,7 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _title = require("../../../components/typography/title");
 
-var _paragraph = require("../../../components/typography/paragraph");
+var _next = require("../../../components/typography/paragraph/next");
 
 var _gridConfig = require("../../../constants/grid-config");
 
@@ -127,13 +127,13 @@ var SimplePopover = function SimplePopover(_ref2) {
   }, /*#__PURE__*/_react.default.createElement(_title.Title, {
     id: titleId,
     modifier: "senary",
-    margin: false,
+    noMargin: true,
     tag: "h2"
   }, title)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: ".5",
     bottom: "1"
-  }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
-    modifier: "quaternary"
+  }, /*#__PURE__*/_react.default.createElement(_next.Paragraph, {
+    modifier: "tertiary"
   }, text)), buttons.length > 0 && /*#__PURE__*/_react.default.createElement(ButtonsContainer, {
     top: "3"
   }, buttons.map(function (_ref3, i) {

@@ -2,7 +2,12 @@
 
 exports[`<Title /> by default matches with snapshot 1`] = `
 <h1
-  className="sc-bdVaJa duRKpN"
+  className="sc-bdVaJa cWWsKm k-Title k-Title--noMargin"
+  style={
+    Object {
+      "--Title-css-color": "#555",
+    }
+  }
 >
   Lorem ipsum dolor sit amet…
 </h1>

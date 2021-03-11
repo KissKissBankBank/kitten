@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Cropper from 'react-cropper';
 import getOr from 'lodash/fp/getOr';
 import { Label } from '../../../components/form/label';
-import { Paragraph } from '../../../components/typography/paragraph';
+import { Paragraph } from '../../../components/typography/paragraph/next';
 import { BasicUploader } from '../../../components/uploaders/basic-uploader';
 import { RangeSlider } from '../../../components/form/range-slider';
 import { domElementHelper } from '../../../helpers/dom/element-helper';
@@ -190,8 +190,8 @@ export var ImageCropper = function ImageCropper(_ref) {
       });
     }
   }), /*#__PURE__*/React.createElement(Paragraph, {
-    modifier: "quaternary",
-    margin: false,
+    modifier: "tertiary",
+    noMargin: true,
     className: "k-u-margin-top-single"
   }, description), /*#__PURE__*/React.createElement("div", {
     className: "k-Cropper__wrapper k-u-margin-top-double",
@@ -224,8 +224,8 @@ export var ImageCropper = function ImageCropper(_ref) {
   })), isCropEnabled && !disabled && /*#__PURE__*/React.createElement("div", {
     className: "k-Cropper__wrapper__slider"
   }, /*#__PURE__*/React.createElement(Paragraph, {
-    modifier: "quaternary",
-    margin: false,
+    modifier: "tertiary",
+    noMargin: true,
     className: "k-u-margin-bottom-singleHalf"
   }, cropperInfo), /*#__PURE__*/React.createElement(Label, {
     size: "micro",
