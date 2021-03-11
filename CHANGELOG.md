@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: delete buggy `useFlexGapCheck`.
+
 Breaking changes:
 
 - Delete the following deprecated components: `Paragraph`.
