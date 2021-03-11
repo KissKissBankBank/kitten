@@ -4,24 +4,33 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: delete buggy `useFlexGapCheck`.
-- Breaking change: convert Row` to CSS-in-JS.
-- Breaking change: remove `k-Row` mixin.
-- Breaking change: remove `k-Grid` mixin, `k-grid` and `k-grid-col*` helpers.
-- Breaking change: convert `Grid` to CSS-in-JS.
-- Breaking change: remove `k-Footer` mixin.
-- Breaking change: convert `FormAction` to CSS-in-JS.
-- Breaking change: remove `k-FormAction` mixin.
-- Breaking change: convert `Line` to CSS-in-JS.
-- Breaking change: remove `k-Line` mixin.
-- Feature: Add `useFlexGapCheck` hook for `gap` feature detection.
+## [3.0.0-beta.11] - 2021-03-11
 
 Breaking changes:
 
-- Delete the following deprecated components: `Paragraph`.
-- Convert `Title` and remove `k-Title` SCSS mixin.
-- Remplace `margin` by `noMargin` prop on `Title`.
-- Convert `Paragraph` component and `margin` becomes `noMargin` prop.
+- Delete buggy `useFlexGapCheck`.
+- Delete the following deprecated components:
+  - `Paragraph` (replaced by `Next` `Paragraph`)
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Title`
+  - `k-Paragraph`
+  - `k-Row`
+  - `k-Grid`
+  - `k-grid` and `k-grid-col*` helpers
+  - `k-Footer`
+  - `k-FormAction`
+  - `k-Line`
+- Remplace prop `margin` with `noMargin` on `Title`.
+- Remplace prop `margin` with `noMargin` on `Paragraph`.
+
+Features:
+
+- Convert the following component to CSS-in-JS:
+  - `Title`
+  - `Row`
+  - `Grid`
+  - `FormAction`
+  - `Line`
 
 ## [3.0.0-beta.10] - 2021-03-10
 
