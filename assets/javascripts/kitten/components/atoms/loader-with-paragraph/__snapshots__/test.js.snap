@@ -2,7 +2,7 @@
 
 exports[`<LoaderWithParagraph /> With custom props should match with snapshot 1`] = `
 <div
-  className="sc-bwzfXH ircPLF k-LoaderWithParagraph customClassName k-LoaderWithParagraph--bottom"
+  className="sc-bwzfXH fvfusg k-LoaderWithParagraph customClassName k-LoaderWithParagraph--bottom"
 >
   <button
     aria-hidden={true}
@@ -55,7 +55,7 @@ exports[`<LoaderWithParagraph /> With custom props should match with snapshot 1`
 
 exports[`<LoaderWithParagraph /> With default props should match with snapshot 1`] = `
 <div
-  className="sc-bwzfXH ircPLF k-LoaderWithParagraph k-LoaderWithParagraph--left"
+  className="sc-bwzfXH fvfusg k-LoaderWithParagraph k-LoaderWithParagraph--left"
 >
   <div
     aria-hidden={true}

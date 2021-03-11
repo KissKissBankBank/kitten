@@ -2,7 +2,7 @@
 
 exports[`<BackingCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bdVaJa cFeUxQ k-BackingCard k-BackingCard--hasBorder"
+  className="sc-bdVaJa fXezwd k-BackingCard k-BackingCard--hasBorder"
 >
   <div
     className="k-BackingCard__gridWrapper"
@@ -22,7 +22,7 @@ exports[`<BackingCard /> default matches with snapshot 1`] = `
 
 exports[`<BackingCard /> with some props matches with snapshot 1`] = `
 <article
-  className="sc-bdVaJa cFeUxQ k-BackingCard k-BackingCard--disabled"
+  className="sc-bdVaJa fXezwd k-BackingCard k-BackingCard--disabled"
 >
   <div
     className="k-BackingCard__imageWrapper"
