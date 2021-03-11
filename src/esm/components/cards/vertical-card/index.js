@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { Marger } from '../../../components/layout/marger';
 import { Title } from '../../../components/typography/title';
-import { Paragraph } from '../../../components/typography/paragraph';
+import { Paragraph } from '../../../components/typography/paragraph/next';
 import { HorizontalStroke } from '../../../components/layout/horizontal-stroke';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem } from '../../../helpers/utils/typography';
@@ -68,15 +68,15 @@ export var VerticalCard = function VerticalCard(_ref4) {
   })), /*#__PURE__*/React.createElement(Title, {
     modifier: "senary",
     tag: titleTag,
-    margin: false
+    noMargin: true
   }, title), withTitleStroke && /*#__PURE__*/React.createElement(StrokePosition, {
     selfAlign: textAlign
   }, /*#__PURE__*/React.createElement(StyledHorizontalStroke, null)), description && /*#__PURE__*/React.createElement(Marger, {
     top: withTitleStroke ? 0 : 1
   }, /*#__PURE__*/React.createElement(Paragraph, {
-    modifier: "quaternary",
+    modifier: "tertiary",
     tag: descriptionTag,
-    margin: false
+    noMargin: true
   }, description)));
 };
 VerticalCard.propTypes = {

@@ -107,7 +107,7 @@ var DonationCard = /*#__PURE__*/function (_PureComponent) {
       }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: "2"
       }, /*#__PURE__*/_react.default.createElement(StyledTitle, {
-        margin: false,
+        noMargin: true,
         tag: titleTag
       }, title)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "2",

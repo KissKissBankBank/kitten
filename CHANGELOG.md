@@ -5,6 +5,57 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
+- Breaking change: `Paragraph` is replaced with `Next` `Paragraph`.
+
+
+## [3.0.0-beta.13] - 2021-03-11
+
+- Revert back to `beta.11` changes, keep fix.
+
+## [3.0.0-beta.12] - 2021-03-11
+
+- Revert all `beta.11` changes, except:
+  - Delete buggy `useFlexGapCheck`.
+
+## [3.0.0-beta.11] - 2021-03-11
+
+Breaking changes:
+
+- Delete buggy `useFlexGapCheck`.
+- Delete the following deprecated components:
+  - `Paragraph` (replaced by `Next` `Paragraph`, see beta.14)
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Title`
+  - `k-Paragraph` (see beta.14)
+  - `k-Row`
+  - `k-Grid`
+  - `k-grid` and `k-grid-col*` helpers
+  - `k-Footer`
+  - `k-FormAction`
+  - `k-Line`
+- Remplace prop `margin` with `noMargin` on `Title`.
+- Remplace prop `margin` with `noMargin` on `Paragraph`.
+
+Features:
+
+- Convert the following component to CSS-in-JS:
+  - `Title`
+  - `Row`
+  - `Grid`
+  - `FormAction`
+  - `Line`
+
+## [3.0.0-beta.10] - 2021-03-10
+
+Fix:
+
+- Fix Lodash imports on `DropdownPhoneSelect`.
+
+(Release `2.123.3`)
+
+## [3.0.0-beta.9] - 2021-03-03
+
+(Release `2.123.2`)
 
 ## [3.0.0-beta.8] - 2021-03-01
 
@@ -225,7 +276,19 @@ Breaking changes:
   - `ProjectCreatorCard`
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
-  - `SimilarProjectsCard`.
+  - `SimilarProjectsCard`
+
+## [2.123.3] - 2021-03-10
+
+Fix:
+
+- Use callback ref in `useLazyObserver`.
+
+## [2.123.2] - 2021-03-03
+
+Fix:
+
+- Perf problem with `Carousel` on mobile devices.
 
 ## [2.123.1] - 2021-03-01
 
@@ -237,7 +300,7 @@ Fix:
 
 Feature:
 
--  Add `PeopleIcon`, `StatsIcon` and `SpeechBubbleIcon`.
+- Add `PeopleIcon`, `StatsIcon` and `SpeechBubbleIcon`.
 
 Fixes:
 
