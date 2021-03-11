@@ -1559,6 +1559,12 @@ Object.defineProperty(exports, "nativeInputValueSetter", {
     return _nativeInputValueSetter.nativeInputValueSetter;
   }
 });
+Object.defineProperty(exports, "useFlexGapCheck", {
+  enumerable: true,
+  get: function get() {
+    return _useFlexGapCheck.useFlexGapCheck;
+  }
+});
 Object.defineProperty(exports, "getReactElementsByType", {
   enumerable: true,
   get: function get() {
@@ -2097,6 +2103,8 @@ var _cssPropertyDistributor = require("./helpers/dom/css-property-distributor");
 var _elementHelper = _interopRequireDefault(require("./helpers/dom/element-helper"));
 
 var _nativeInputValueSetter = require("./helpers/dom/native-input-value-setter");
+
+var _useFlexGapCheck = require("./helpers/dom/use-flex-gap-check");
 
 var _reactElements = require("./helpers/react/react-elements");
 

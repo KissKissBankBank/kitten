@@ -31,6 +31,8 @@ var _elementHelper = require("../../../helpers/dom/element-helper");
 
 var _styles = require("./styles");
 
+var _useFlexGapCheck = require("../../../helpers/dom/use-flex-gap-check");
+
 var ImageCropper = function ImageCropper(_ref) {
   var imageSrc = _ref.imageSrc,
       fileName = _ref.fileName,
@@ -111,6 +113,7 @@ var ImageCropper = function ImageCropper(_ref) {
       resultData = _useState24[0],
       setResultData = _useState24[1];
 
+  var canUseGap = (0, _useFlexGapCheck.useFlexGapCheck)();
   (0, _react.useEffect)(function () {
     if (cropperInstance && cropperInstance.imageData.naturalWidth) {
       var imageData = cropperInstance.imageData;
@@ -162,7 +165,9 @@ var ImageCropper = function ImageCropper(_ref) {
   }, [resultData, fileNameState, uploadedFile]);
   var dragMode = disabled || !isCropEnabled ? 'none' : 'move';
   return /*#__PURE__*/_react.default.createElement(_styles.StyledCropper, {
-    className: (0, _classnames.default)('k-UploadAndCropper', className)
+    className: (0, _classnames.default)('k-UploadAndCropper', className, {
+      'k-UploadAndCropper--noGap': !canUseGap
+    })
   }, /*#__PURE__*/_react.default.createElement(_label.Label, {
     size: "tiny",
     htmlFor: name,
