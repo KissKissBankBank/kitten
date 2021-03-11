@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking Changes:
+
+- `Paragraph` is replaced with `Next` `Paragraph`.
+
+
 ## [3.0.0-beta.13] - 2021-03-11
 
 - Revert back to `beta.11` changes, keep fix.
@@ -19,10 +24,10 @@ Breaking changes:
 
 - Delete buggy `useFlexGapCheck`.
 - Delete the following deprecated components:
-  - `Paragraph` (replaced by `Next` `Paragraph`)
+  - `Paragraph` (replaced by `Next` `Paragraph`, see beta.14)
 - Delete the following deprecated SCSS mixins and styles:
   - `k-Title`
-  - `k-Paragraph`
+  - `k-Paragraph` (see beta.14)
   - `k-Row`
   - `k-Grid`
   - `k-grid` and `k-grid-col*` helpers
