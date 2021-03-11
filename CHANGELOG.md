@@ -19,7 +19,7 @@ Breaking changes:
   - `k-grid` and `k-grid-col*` helpers
   - `k-Footer`
   - `k-FormAction`
-  -  `k-Line`
+  - `k-Line`
 
 - Remplace prop `margin` with `noMargin` on `Title`.
 - Remplace prop `margin` with `noMargin` on `Paragraph`.
