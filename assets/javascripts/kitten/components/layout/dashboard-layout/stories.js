@@ -21,6 +21,9 @@ import {
   FileIcon,
   LoudspeakerIcon,
   ShieldIcon,
+  PeopleIcon,
+  StatsIcon,
+  SpeechBubbleIcon,
 } from '../../..'
 
 import { Default as Table } from '../../tables/list-table/list-table.stories.js'
@@ -150,16 +153,27 @@ export const Default = () => {
                   window.location.search ===
                   '?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story'
                 }
+                icon={() => <PeopleIcon color="currentColor" />}
+                onClick={() => closeSideBar()}
+              >
+                Contributeurs
+              </DashboardMenu.Item>
+              <DashboardMenu.Item
+                href="?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story&custom=a"
+                isActive={
+                  window.location.search ===
+                  '?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story&custom=a'
+                }
                 icon={() => <TagIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
               >
                 Contreparties
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=a"
+                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=b"
                 isActive={
                   window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=a'
+                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=b'
                 }
                 icon={() => <FilterIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
@@ -182,6 +196,17 @@ export const Default = () => {
                 isActive={
                   window.location.search ===
                   '?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story'
+                }
+                icon={() => <StatsIcon color="currentColor" />}
+                onClick={() => closeSideBar()}
+              >
+                Statistiques
+              </DashboardMenu.Item>
+              <DashboardMenu.Item
+                href="?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story&custom=1"
+                isActive={
+                  window.location.search ===
+                  '?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story&custom=1'
                 }
                 icon={() => <LoudspeakerIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
@@ -223,6 +248,17 @@ export const Default = () => {
                   Documents justificatifs
                 </DashboardMenu.Item>
               </DashboardMenu.Expandable>
+              <DashboardMenu.Item
+                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=4"
+                isActive={
+                  window.location.search ===
+                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=4'
+                }
+                icon={() => <SpeechBubbleIcon color="currentColor" />}
+                onClick={() => closeSideBar()}
+              >
+                Actualités
+              </DashboardMenu.Item>
             </DashboardMenu>
           )
         }}

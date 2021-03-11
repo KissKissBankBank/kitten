@@ -20,6 +20,7 @@ import {
   getReactElementsByType,
   getReactElementsWithoutTypeArray,
 } from '../../../helpers/react/react-elements'
+import { useFlexGapCheck } from '../../../helpers/dom/use-flex-gap-check'
 
 import { BurgerIcon } from '../../../components/icons/burger-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
@@ -329,6 +330,18 @@ const StyledDashboard = styled.div`
       outline: ${pxToRem(2)} solid ${COLORS.primary4};
     }
   }
+
+  .k-DashboardLayout--noGap {
+    .k-DashboardLayout__sideWrapper > :not(:last-child) {
+      margin-bottom: ${pxToRem(30)};
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      .k-DashboardLayout__backLink__text {
+        margin-left: ${pxToRem(15)};
+      }
+    }
+  }
 `
 
 export const DashboardLayout = ({
@@ -343,6 +356,7 @@ export const DashboardLayout = ({
   const [touchCoords, setTouchCoords] = useState([])
   const sideBarElement = useRef(null)
   const contentElement = useRef(null)
+  const canUseGap = useFlexGapCheck()
 
   const renderComponentChildrenArray = (childrenArray, otherProps) => {
     return childrenArray.map(child => {
@@ -362,7 +376,7 @@ export const DashboardLayout = ({
   }
 
   const renderComponentArray = (childrenArray, otherProps) => {
-    return childrenArray.map(child => {
+    return childrenArray.map((child, index) => {
       if (!child) return null
 
       return isFunction(child)
@@ -372,7 +386,10 @@ export const DashboardLayout = ({
             isSidebarOpen: isOpen,
             ...otherProps,
           })
-        : React.cloneElement(child, otherProps)
+        : React.cloneElement(child, {
+            key: `content_child_${index}`,
+            ...otherProps,
+          })
     })
   }
 
@@ -449,6 +466,7 @@ export const DashboardLayout = ({
       <div
         className={classNames('k-DashboardLayout', props.className, {
           'k-DashboardLayout--isOpen': isOpen,
+          'k-DashboardLayout--noGap': !canUseGap,
         })}
       >
         <a className="k-DashboardLayout__quickAccessLink" href="#main">

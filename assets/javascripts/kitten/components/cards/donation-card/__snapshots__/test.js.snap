@@ -17,7 +17,12 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="sc-bdVaJa bwDdrh"
         >
           <h2
-            className="sc-htpNat hbLhrJ sc-VigVT bZAFpV"
+            className="sc-htpNat bcRsBV k-Title sc-VigVT bZAFpV k-Title--noMargin"
+            style={
+              Object {
+                "--Title-css-color": null,
+              }
+            }
           >
             Custom title mount
           </h2>
