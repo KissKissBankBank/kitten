@@ -21,7 +21,7 @@
     $gutter: k-map-fetch($k-grid, 'gutter-width');
 
     .k-TestimonyList {
-      @include k-grid;
+      // @include k-grid;
     }
 
     .k-TestimonyList__row {
@@ -29,28 +29,28 @@
       flex-wrap: wrap;
       justify-content: space-around;
 
-      @include k-grid-col(10);
-      @include k-grid-offset(1);
+      // @include k-grid-col(10);
+      // @include k-grid-offset(1);
 
       @include k-media-min('xs') {
-        @include k-grid-col(8);
-        @include k-grid-offset(2);
+        // @include k-grid-col(8);
+        // @include k-grid-offset(2);
       }
 
       @include k-media-min('m') {
-        @include k-grid-col(12);
-        @include k-grid-offset(0);
+        // @include k-grid-col(12);
+        // @include k-grid-offset(0);
       }
 
       @include k-media-min('l') {
-        @include k-grid-col(10);
-        @include k-grid-offset(1);
+        // @include k-grid-col(10);
+        // @include k-grid-offset(1);
       }
     }
 
     .k-TestimonyList__item {
       @include k-media-min('m') {
-        @include k-grid-col(6);
+        // @include k-grid-col(6);
         padding-left: 5%;
         padding-right: 5%;
       }
