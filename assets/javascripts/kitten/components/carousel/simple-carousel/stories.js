@@ -2,7 +2,7 @@ import React from 'react'
 import { SimpleCarousel } from './index'
 import { Marger } from '../../layout/marger'
 import { Title } from '../../typography/title'
-import { Paragraph } from '../../typography/paragraph/next'
+import { Paragraph } from '../../typography/paragraph'
 import { HorizontalStroke } from '../../layout/horizontal-stroke'
 import { Button } from '../../buttons/button'
 
@@ -33,7 +33,7 @@ const Item = ({ numItem }) => (
       </Marger>
 
       <Marger top="3" bottom="3">
-        <Paragraph modifier="secondary" noMargin style={{ color: '#FFF' }}>
+        <Paragraph modifier="tertiary" margin={false} style={{ color: '#FFF' }}>
           Parapraph {numItem}
         </Paragraph>
       </Marger>

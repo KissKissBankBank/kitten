@@ -2,7 +2,7 @@
 
 exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
 <div
-  className="sc-htpNat hbzMcy"
+  className="sc-bwzfXH gpkizz"
 >
   <div
     className="k-u-margin-bottom-triple"
@@ -46,7 +46,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
 
 exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-htpNat hbzMcy"
+  className="sc-bwzfXH gpkizz"
 >
   <div
     className="k-u-margin-bottom-triple"
@@ -71,7 +71,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
       Custom title
     </h1>
     <p
-      className="sc-bwzfXH byuKHQ k-Paragraph k-u-align-center k-u-margin-top-singleHalf--important k-Paragraph--noMargin"
+      className="k-Paragraph k-u-align-center k-u-margin-top-singleHalf--important k-Paragraph--quaternary k-Paragraph--withoutMargin"
     >
       Custom text
     </p>
