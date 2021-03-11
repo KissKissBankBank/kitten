@@ -15,25 +15,25 @@
 ///   </div>
 @mixin k-TitleWithActions {
   .k-titleWithActions {
-    // @include k-grid;
+    @include k-grid;
     text-align: center;
   }
 
   .k-titleWithActions__title {
-    // @include k-grid-col(12);
+    @include k-grid-col(12);
     @include k-typographyFont('light');
     @include k-typographyFontSize(5);
     margin-bottom: k-px-to-rem(30px);
 
     @include k-media-min('m') {
-      // @include k-grid-col(8);
-      // @include k-grid-offset(2);
+      @include k-grid-col(8);
+      @include k-grid-offset(2);
       @include k-typographyFontSize(4, 1.25);
     }
 
     @include k-media-min('l') {
-      // @include k-grid-col(6);
-      // @include k-grid-offset(3);
+      @include k-grid-col(6);
+      @include k-grid-offset(3);
     }
   }
 
@@ -45,12 +45,12 @@
     // one button per line
     //     [ x ]
     //     [ x ]
-    // @include k-grid-col(12);
+    @include k-grid-col(12);
 
     @include k-media-min('m') {
       // one line of two buttons next to each other
       //    [ x ] [ x ]
-      // @include k-grid-col(6);
+      @include k-grid-col(6);
 
       &.is-first { text-align: right; }
       &.is-last { text-align: left; }

@@ -20,28 +20,28 @@
 ///   </div>
 @mixin k-Teaser {
   .k-Teaser {
-    // @include k-grid;
+    @include k-grid;
     align-items: center;
   }
 
   .k-Teaser__col {
-    // @include k-grid-col(12);
+    @include k-grid-col(12);
 
     @include k-media-min('m') {
       // One large col with offsets
-      // @include k-grid-offset(2);
-      // @include k-grid-col(8);
+      @include k-grid-offset(2);
+      @include k-grid-col(8);
     }
 
     @include k-media-min('l') {
       // Two cols with an offset on each side
-      // @include k-grid-col(4);
+      @include k-grid-col(4);
 
-      // @include k-grid-offset(1);
+      @include k-grid-offset(1);
 
       // center offset needs to be twice as large
       &:nth-of-type(2) {
-        // @include k-grid-offset(2);
+        @include k-grid-offset(2);
       }
     }
   }
@@ -51,12 +51,12 @@
       order: -1;
 
       &:nth-of-type(2) {
-        // @include k-grid-offset(1);
+        @include k-grid-offset(1);
       }
     }
 
     .k-Teaser__col--end\@l-up {
-      // @include k-grid-offset(2);
+      @include k-grid-offset(2);
     }
   }
 

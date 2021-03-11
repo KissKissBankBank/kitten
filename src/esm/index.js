@@ -289,6 +289,7 @@ export { createEvent } from './helpers/dom/create-event';
 export { cssPropertyDistributor } from './helpers/dom/css-property-distributor';
 export { default as domElementHelper } from './helpers/dom/element-helper';
 export { nativeInputValueSetter } from './helpers/dom/native-input-value-setter';
+export { useFlexGapCheck } from './helpers/dom/use-flex-gap-check';
 export { getReactElementsByType, getReactElementsWithoutType } from './helpers/react/react-elements';
 export { default as useContinuousIntersectionObserver } from './helpers/utils/continuous-intersection-hook';
 export { default as useIntersectionObserver } from './helpers/utils/intersection-hook';

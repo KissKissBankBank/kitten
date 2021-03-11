@@ -80,7 +80,7 @@ export var DonationCard = /*#__PURE__*/function (_PureComponent) {
       }, /*#__PURE__*/React.createElement(Marger, {
         bottom: "2"
       }, /*#__PURE__*/React.createElement(StyledTitle, {
-        noMargin: true,
+        margin: false,
         tag: titleTag
       }, title)), /*#__PURE__*/React.createElement(Marger, {
         top: "2",

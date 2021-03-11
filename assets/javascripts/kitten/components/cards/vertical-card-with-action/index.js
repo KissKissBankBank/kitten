@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Title } from '../../../components/typography/title'
-import { Paragraph } from '../../../components/typography/paragraph/next'
+import { Paragraph } from '../../../components/typography/paragraph'
 import { Button } from '../../../components/buttons/button'
 import COLORS from '../../../constants/colors-config'
 import classNames from 'classnames'
@@ -44,7 +44,7 @@ export const VerticalCardWithAction = ({
       <Title
         modifier="senary"
         tag={titleTag}
-        noMargin
+        margin={false}
         className={classNames('k-u-align-center', {
           'k-u-margin-bottom-singleHalf--important': !!description,
         })}
@@ -53,9 +53,9 @@ export const VerticalCardWithAction = ({
       </Title>
       {description && (
         <Paragraph
-          modifier="tertiary"
+          modifier="quaternary"
           tag={descriptionTag}
-          noMargin
+          margin={false}
           className="k-u-align-center k-u-margin-top-singleHalf--important"
         >
           {description}

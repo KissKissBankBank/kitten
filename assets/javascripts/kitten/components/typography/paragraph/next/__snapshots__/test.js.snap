@@ -2,32 +2,32 @@
 
 exports[`<Paragraph /> by default matches with snapshot 1`] = `
 <p
-  className="sc-bdVaJa hbOtfO k-Paragraph k-Paragraph--noMargin"
+  className="sc-bdVaJa cyesXU"
 >
   Lorem ipsum dolor sit amet…
 </p>
 `;
 
-exports[`<Paragraph /> with modifier matches with snapshot 1`] = `
+exports[`<Paragraph /> with margin matches with snapshot 1`] = `
 <p
-  className="sc-bdVaJa hbOtfO k-Paragraph k-Paragraph--noMargin"
+  className="sc-bdVaJa cyesXU"
 />
 `;
 
-exports[`<Paragraph /> with no margin matches with snapshot 1`] = `
+exports[`<Paragraph /> with modifier matches with snapshot 1`] = `
 <p
-  className="sc-bdVaJa hbOtfO k-Paragraph k-Paragraph--noMargin"
+  className="sc-bdVaJa cyesXU"
 />
 `;
 
 exports[`<Paragraph /> without italic matches with snapshot 1`] = `
 <p
-  className="sc-bdVaJa hbOtfO k-Paragraph k-Paragraph--noMargin"
+  className="sc-bdVaJa cyesXU"
 />
 `;
 
 exports[`<Paragraph /> without normal line height matches with snapshot 1`] = `
 <p
-  className="sc-bdVaJa hbOtfO k-Paragraph k-Paragraph--noMargin"
+  className="sc-bdVaJa cyesXU"
 />
 `;

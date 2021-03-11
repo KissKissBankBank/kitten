@@ -12,7 +12,7 @@ describe('<Title />', () => {
           <Title
             tag="h1"
             modifier="primary"
-            noMargin
+            margin={false}
             italic={false}
             children="Lorem ipsum dolor sit amet…"
             cssColor="#555"

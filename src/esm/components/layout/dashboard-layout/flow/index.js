@@ -11,12 +11,13 @@ import { HorizontalStroke } from '../../../../components/layout/horizontal-strok
 import { LightbulbIllustration as Lightbulb } from '../../../../components/illustrations/lightbulb-illustration';
 import { Loader } from '../../../../components/atoms/loader';
 import { getReactElementsWithoutType } from '../../../../helpers/react/react-elements';
+import { useFlexGapCheck } from '../../../../helpers/dom/use-flex-gap-check';
 import { SideCard } from './side-card';
 import { MobileAside } from './side-modal';
 var StyledFlow = styled.div.withConfig({
   displayName: "flow__StyledFlow",
   componentId: "vmfwfw-0"
-})(["position:relative;display:flex;flex-direction:column;align-items:stretch;min-height:100%;@media (min-width:", "){min-height:100vh;display:grid;grid-template-rows:1fr auto;grid-template-columns:4fr 3fr;gap:0 calc(100% * 4 / 3 * 0.1);}&:not(.k-DashboardLayout__flow--isLoading){.k-DashboardLayout__flow__loading{display:none;}}&.k-DashboardLayout__flow--isLoading{.k-DashboardLayout__flow__content{display:none;}}.k-DashboardLayout__flow__loading,.k-DashboardLayout__flow__content{flex:1 0 100%;background-color:", ";padding-top:", ";padding-bottom:", ";@media (min-width:", "){padding-top:", ";}@media (min-width:", "){grid-column:1 / 2;padding-bottom:", ";}}.k-DashboardLayout__flow__nav{flex:0 0 auto;background-color:", ";width:100%;@media (min-width:", "){grid-column:1 / 2;bottom:0;position:sticky;z-index:1;}}.k-DashboardLayout__flow__nav__actionsContainer{display:flex;align-items:center;justify-content:space-between;margin:", " 0;@media (min-width:", "){margin:", " 0;}& >:not(:last-child){margin-right:", ";@media (min-width:", "){margin-right:", ";}}& > *{min-width:0;max-width:", ";flex:1 1 ", ";}}.k-DashboardLayout__flow__aside{@media (min-width:", "){grid-column:2 / 3;}}.k-DashboardLayout__flow__aside__content{position:sticky;top:", ";padding-bottom:", ";svg{margin-bottom:", ";}@media (max-width:", "){display:none;}}.k-DashboardLayout__flow__loading{display:flex;align-items:center;justify-content:center;}"], pxToRem(ScreenConfig.L.min), COLORS.background1, pxToRem(50), pxToRem(50), pxToRem(ScreenConfig.S.min), pxToRem(80), pxToRem(ScreenConfig.L.min), pxToRem(20), COLORS.background1, pxToRem(ScreenConfig.L.min), pxToRem(20), pxToRem(ScreenConfig.L.min), pxToRem(30), pxToRem(20), pxToRem(ScreenConfig.L.min), pxToRem(40), pxToRem(180), pxToRem(180), pxToRem(ScreenConfig.L.min), pxToRem(80), pxToRem(40), pxToRem(20), pxToRem(ScreenConfig.M.max));
+})(["position:relative;display:flex;flex-direction:column;align-items:stretch;min-height:100%;@media (min-width:", "){min-height:100vh;display:grid;grid-template-rows:1fr auto;grid-template-columns:4fr 3fr;gap:0 calc(100% * 4 / 3 * 0.1);}&:not(.k-DashboardLayout__flow--isLoading){.k-DashboardLayout__flow__loading{display:none;}}&.k-DashboardLayout__flow--isLoading{.k-DashboardLayout__flow__content{display:none;}}.k-DashboardLayout__flow__loading,.k-DashboardLayout__flow__content{flex:1 0 100%;background-color:", ";padding-top:", ";padding-bottom:", ";@media (min-width:", "){padding-top:", ";}@media (min-width:", "){grid-column:1 / 2;padding-bottom:", ";}}.k-DashboardLayout__flow__nav{flex:0 0 auto;background-color:", ";width:100%;@media (min-width:", "){grid-column:1 / 2;bottom:0;position:sticky;z-index:1;}}.k-DashboardLayout__flow__nav__actionsContainer{display:flex;align-items:center;justify-content:space-between;gap:", ";margin:", " 0;@media (min-width:", "){gap:", ";margin:", " 0;}> *{min-width:0;max-width:", ";flex:1 1 ", ";}}.k-DashboardLayout__flow__aside{@media (min-width:", "){grid-column:2 / 3;}}.k-DashboardLayout__flow__aside__content{position:sticky;top:", ";padding-bottom:", ";svg{margin-bottom:", ";}@media (max-width:", "){display:none;}}.k-DashboardLayout__flow__loading{display:flex;align-items:center;justify-content:center;}&.k-DashboardLayout__flow--noGap{.k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child){margin-right:", ";@media (min-width:", "){margin-right:", ";}}}"], pxToRem(ScreenConfig.L.min), COLORS.background1, pxToRem(50), pxToRem(50), pxToRem(ScreenConfig.S.min), pxToRem(80), pxToRem(ScreenConfig.L.min), pxToRem(20), COLORS.background1, pxToRem(ScreenConfig.L.min), pxToRem(20), pxToRem(20), pxToRem(ScreenConfig.L.min), pxToRem(40), pxToRem(30), pxToRem(180), pxToRem(180), pxToRem(ScreenConfig.L.min), pxToRem(80), pxToRem(40), pxToRem(20), pxToRem(ScreenConfig.M.max), pxToRem(20), pxToRem(ScreenConfig.L.min), pxToRem(40));
 
 var Content = function Content(_ref) {
   var className = _ref.className,
@@ -67,9 +68,11 @@ export var Flow = function Flow(_ref4) {
       loaderComponent = _ref4.loaderComponent,
       props = _objectWithoutProperties(_ref4, ["children", "className", "loading", "loaderComponent"]);
 
+  var canUseGap = useFlexGapCheck();
   return /*#__PURE__*/React.createElement(StyledFlow, _extends({
     className: classNames('k-DashboardLayout__flow', className, 'k-DashboardLayout__fullHeight', {
-      'k-DashboardLayout__flow--isLoading': loading
+      'k-DashboardLayout__flow--isLoading': loading,
+      'k-DashboardLayout__flow--noGap': !canUseGap
     })
   }, props), /*#__PURE__*/React.createElement("div", {
     className: "k-DashboardLayout__flow__loading"

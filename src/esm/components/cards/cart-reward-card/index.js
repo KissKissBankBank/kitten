@@ -16,7 +16,7 @@ import { GarbageIcon } from '../../../components/icons/garbage-icon';
 import { ButtonIcon } from '../../../components/buttons/button-icon';
 import { Title } from '../../../components/typography/title';
 import { Text } from '../../../components/typography/text';
-import { Paragraph } from '../../../components/typography/paragraph/next';
+import { Paragraph } from '../../../components/typography/paragraph';
 import COLORS from '../../../constants/colors-config';
 import { ScreenConfig } from '../../../constants/screen-config';
 import { domElementHelper } from '../../../helpers/dom/element-helper';
@@ -109,7 +109,7 @@ export var CartRewardCard = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/React.createElement(Title, {
         italic: true,
         modifier: "quinary",
-        noMargin: true,
+        margin: false,
         tag: titleTag
       }, titleAmount)), subtitle && /*#__PURE__*/React.createElement("div", {
         className: "k-u-margin-bottom-single k-u-margin-top-double"
@@ -122,8 +122,8 @@ export var CartRewardCard = /*#__PURE__*/function (_Component) {
         })
       }, /*#__PURE__*/React.createElement(Paragraph, {
         tag: descriptionTag,
-        noMargin: true,
-        modifier: "tertiary"
+        margin: false,
+        modifier: "quaternary"
       }, textDescription, description)), this.renderBottomContent());
     }
   }, {

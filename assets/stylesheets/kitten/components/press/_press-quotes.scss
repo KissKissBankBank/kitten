@@ -17,12 +17,12 @@
 ///   </div>
 @mixin k-PressQuotes {
   .k-PressQuotes {
-    // @include k-grid;
+    @include k-grid;
     text-align: center;
   }
 
   .k-PressQuotes__title {
-    // @include k-grid-col(12);
+    @include k-grid-col(12);
     margin-top: 0;
     margin-bottom: k-px-to-rem(30px);
 
@@ -31,18 +31,18 @@
   }
 
   .k-PressQuotes__quotes {
-    // @include k-grid-col(6);
-    // @include k-grid-offset(3);
+    @include k-grid-col(6);
+    @include k-grid-offset(3);
 
     @include k-media-min('l') {
-      // @include k-grid-col(10);
-      // @include k-grid-offset(1);
+      @include k-grid-col(10);
+      @include k-grid-offset(1);
       display: flex;
     }
 
     @include k-media-min('xl') {
-      // @include k-grid-col(8);
-      // @include k-grid-offset(2);
+      @include k-grid-col(8);
+      @include k-grid-offset(2);
     }
   }
 

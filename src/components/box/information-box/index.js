@@ -43,7 +43,7 @@ var InformationBox = function InformationBox(_ref) {
     className: "k-InformationBox__container"
   }, /*#__PURE__*/_react.default.createElement(_title.Title, (0, _extends2.default)({
     tag: "p",
-    noMargin: true,
+    margin: false,
     modifier: "quaternary"
   }, titleProps, {
     className: (0, _classnames.default)('k-InformationBox__title', 'k-u-margin-bottom-single', titleProps.className)

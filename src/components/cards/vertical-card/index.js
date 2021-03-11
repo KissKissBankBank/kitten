@@ -23,7 +23,7 @@ var _marger = require("../../../components/layout/marger");
 
 var _title = require("../../../components/typography/title");
 
-var _next = require("../../../components/typography/paragraph/next");
+var _paragraph = require("../../../components/typography/paragraph");
 
 var _horizontalStroke = require("../../../components/layout/horizontal-stroke");
 
@@ -91,15 +91,15 @@ var VerticalCard = function VerticalCard(_ref4) {
   })), /*#__PURE__*/_react.default.createElement(_title.Title, {
     modifier: "senary",
     tag: titleTag,
-    noMargin: true
+    margin: false
   }, title), withTitleStroke && /*#__PURE__*/_react.default.createElement(StrokePosition, {
     selfAlign: textAlign
   }, /*#__PURE__*/_react.default.createElement(StyledHorizontalStroke, null)), description && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: withTitleStroke ? 0 : 1
-  }, /*#__PURE__*/_react.default.createElement(_next.Paragraph, {
-    modifier: "tertiary",
+  }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
+    modifier: "quaternary",
     tag: descriptionTag,
-    noMargin: true
+    margin: false
   }, description)));
 };
 

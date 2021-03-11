@@ -46,7 +46,7 @@ export var CounterBlock = function CounterBlock(_ref) {
     bottom: margin
   }, /*#__PURE__*/React.createElement(Title, {
     modifier: "tertiary",
-    noMargin: true,
+    margin: false,
     tag: titleTag
   }, title)) : title, /*#__PURE__*/React.createElement(FlexContainer, null, /*#__PURE__*/React.createElement(StrokeContainer, {
     className: "k-u-hidden@m-down"

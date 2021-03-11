@@ -4,11 +4,12 @@ import classNames from 'classnames';
 import Cropper from 'react-cropper';
 import getOr from 'lodash/fp/getOr';
 import { Label } from '../../../components/form/label';
-import { Paragraph } from '../../../components/typography/paragraph/next';
+import { Paragraph } from '../../../components/typography/paragraph';
 import { BasicUploader } from '../../../components/uploaders/basic-uploader';
 import { RangeSlider } from '../../../components/form/range-slider';
 import { domElementHelper } from '../../../helpers/dom/element-helper';
 import { StyledCropper } from './styles';
+import { useFlexGapCheck } from '../../../helpers/dom/use-flex-gap-check';
 export var ImageCropper = function ImageCropper(_ref) {
   var imageSrc = _ref.imageSrc,
       fileName = _ref.fileName,
@@ -89,6 +90,7 @@ export var ImageCropper = function ImageCropper(_ref) {
       resultData = _useState24[0],
       setResultData = _useState24[1];
 
+  var canUseGap = useFlexGapCheck();
   useEffect(function () {
     if (cropperInstance && cropperInstance.imageData.naturalWidth) {
       var imageData = cropperInstance.imageData;
@@ -139,7 +141,9 @@ export var ImageCropper = function ImageCropper(_ref) {
   }, [resultData, fileNameState, uploadedFile]);
   var dragMode = disabled || !isCropEnabled ? 'none' : 'move';
   return /*#__PURE__*/React.createElement(StyledCropper, {
-    className: classNames('k-UploadAndCropper', className)
+    className: classNames('k-UploadAndCropper', className, {
+      'k-UploadAndCropper--noGap': !canUseGap
+    })
   }, /*#__PURE__*/React.createElement(Label, {
     size: "tiny",
     htmlFor: name,
@@ -190,8 +194,8 @@ export var ImageCropper = function ImageCropper(_ref) {
       });
     }
   }), /*#__PURE__*/React.createElement(Paragraph, {
-    modifier: "tertiary",
-    noMargin: true,
+    modifier: "quaternary",
+    margin: false,
     className: "k-u-margin-top-single"
   }, description), /*#__PURE__*/React.createElement("div", {
     className: "k-Cropper__wrapper k-u-margin-top-double",
@@ -224,8 +228,8 @@ export var ImageCropper = function ImageCropper(_ref) {
   })), isCropEnabled && !disabled && /*#__PURE__*/React.createElement("div", {
     className: "k-Cropper__wrapper__slider"
   }, /*#__PURE__*/React.createElement(Paragraph, {
-    modifier: "tertiary",
-    noMargin: true,
+    modifier: "quaternary",
+    margin: false,
     className: "k-u-margin-bottom-singleHalf"
   }, cropperInfo), /*#__PURE__*/React.createElement(Label, {
     size: "micro",
