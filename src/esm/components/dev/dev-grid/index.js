@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../constants/screen-config';
 import { NUM_COLUMNS, CONTAINER_MAX_WIDTH, GUTTER, CONTAINER_PADDING_THIN, CONTAINER_PADDING } from '../../../constants/grid-config';
+import { domElementHelper } from '../../../helpers/dom/element-helper';
 var StyledDev = styled.div.withConfig({
   displayName: "dev-grid__StyledDev",
   componentId: "sc-1xn9237-0"
@@ -22,17 +23,21 @@ export var DevGrid = function DevGrid(_ref) {
       setVisibility = _useState2[1];
 
   useEffect(function () {
-    window.addEventListener('keydown', handleKeyDown);
-    if (window.sessionStorage.getItem(storageKey)) setVisibility(true);
+    domElementHelper.canUseDom() && window.addEventListener('keydown', handleKeyDown);
+
+    if (domElementHelper.canUseDom() && window.sessionStorage.getItem(storageKey)) {
+      setVisibility(true);
+    }
+
     return function () {
-      return window.removeEventListener('keydown', handleKeyDown);
+      return domElementHelper.canUseDom() && window.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
   useEffect(function () {
     if (isVisible) {
-      window.sessionStorage.setItem(storageKey, 'on');
+      domElementHelper.canUseDom() && window.sessionStorage.setItem(storageKey, 'on');
     } else {
-      window.sessionStorage.removeItem(storageKey);
+      domElementHelper.canUseDom() && window.sessionStorage.removeItem(storageKey);
     }
   }, [isVisible]);
 
