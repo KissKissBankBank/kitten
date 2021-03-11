@@ -26,7 +26,6 @@ Breaking changes:
 
 Features:
 
-- Add `useFlexGapCheck` hook for `gap` feature detection.
 - Convert the following component to CSS-in-JS:
   - `Title`
   - `Row`
