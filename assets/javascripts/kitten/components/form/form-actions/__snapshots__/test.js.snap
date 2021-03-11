@@ -13,10 +13,9 @@ exports[`<FormActions /> with custom props matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  gap: 0.625rem;
 }
 
-.c0.k-FormActions--noGap .k-FormActions__item {
+.c0 .k-FormActions__item {
   margin-left: 0.3125rem;
   margin-right: 0.3125rem;
 }
@@ -29,17 +28,17 @@ exports[`<FormActions /> with custom props matches with snapshot 1`] = `
     justify-content: space-between;
   }
 
-  .c0.k-FormActions--spreadOut-s-up.k-FormActions--noGap .k-FormActions__item:first-child {
+  .c0.k-FormActions--spreadOut-s-up .k-FormActions__item:first-child {
     margin-left: 0;
   }
 
-  .c0.k-FormActions--spreadOut-s-up.k-FormActions--noGap .k-FormActions__item:last-child {
+  .c0.k-FormActions--spreadOut-s-up .k-FormActions__item:last-child {
     margin-right: 0;
   }
 }
 
 <div
-  className="c0 k-FormActions custom-class-name k-FormActions--spreadOut-s-up k-FormActions--noGap"
+  className="c0 k-FormActions custom-class-name k-FormActions--spreadOut-s-up"
   id="custom-id"
 >
   <div
@@ -68,10 +67,9 @@ exports[`<FormActions /> with default props matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  gap: 0.625rem;
 }
 
-.c0.k-FormActions--noGap .k-FormActions__item {
+.c0 .k-FormActions__item {
   margin-left: 0.3125rem;
   margin-right: 0.3125rem;
 }
@@ -84,17 +82,17 @@ exports[`<FormActions /> with default props matches with snapshot 1`] = `
     justify-content: space-between;
   }
 
-  .c0.k-FormActions--spreadOut-s-up.k-FormActions--noGap .k-FormActions__item:first-child {
+  .c0.k-FormActions--spreadOut-s-up .k-FormActions__item:first-child {
     margin-left: 0;
   }
 
-  .c0.k-FormActions--spreadOut-s-up.k-FormActions--noGap .k-FormActions__item:last-child {
+  .c0.k-FormActions--spreadOut-s-up .k-FormActions__item:last-child {
     margin-right: 0;
   }
 }
 
 <div
-  className="c0 k-FormActions k-FormActions--spreadOut-s-up k-FormActions--noGap"
+  className="c0 k-FormActions k-FormActions--spreadOut-s-up"
 >
   <div
     className="k-FormActions__item"

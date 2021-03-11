@@ -10,7 +10,6 @@ import { HorizontalStroke } from '../../../../components/layout/horizontal-strok
 import { LightbulbIllustration as Lightbulb } from '../../../../components/illustrations/lightbulb-illustration'
 import { Loader } from '../../../../components/atoms/loader'
 import { getReactElementsWithoutType } from '../../../../helpers/react/react-elements'
-import { useFlexGapCheck } from '../../../../helpers/dom/use-flex-gap-check'
 
 import { SideCard } from './side-card'
 import { MobileAside } from './side-modal'
@@ -76,15 +75,21 @@ const StyledFlow = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: ${pxToRem(20)};
     margin: ${pxToRem(20)} 0;
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      gap: ${pxToRem(40)};
       margin: ${pxToRem(30)} 0;
     }
 
-    > * {
+    & > :not(:last-child) {
+      margin-right: ${pxToRem(20)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+        margin-right: ${pxToRem(40)};
+      }
+    }
+
+    & > * {
       min-width: 0;
       max-width: ${pxToRem(180)};
       flex: 1 1 ${pxToRem(180)};
@@ -115,16 +120,6 @@ const StyledFlow = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  &.k-DashboardLayout__flow--noGap {
-    .k-DashboardLayout__flow__nav__actionsContainer > :not(:last-child) {
-      margin-right: ${pxToRem(20)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        margin-right: ${pxToRem(40)};
-      }
-    }
   }
 `
 
@@ -183,8 +178,6 @@ export const Flow = ({
   loaderComponent,
   ...props
 }) => {
-  const canUseGap = useFlexGapCheck()
-
   return (
     <StyledFlow
       className={classNames(
@@ -193,7 +186,6 @@ export const Flow = ({
         'k-DashboardLayout__fullHeight',
         {
           'k-DashboardLayout__flow--isLoading': loading,
-          'k-DashboardLayout__flow--noGap': !canUseGap,
         },
       )}
       {...props}
