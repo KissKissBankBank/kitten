@@ -2,7 +2,7 @@
 
 exports[`<LoaderWithParagraph /> With custom props should match with snapshot 1`] = `
 <div
-  className="sc-bwzfXH fvfusg k-LoaderWithParagraph customClassName k-LoaderWithParagraph--bottom"
+  className="sc-htpNat fAhqdt k-LoaderWithParagraph customClassName k-LoaderWithParagraph--bottom"
 >
   <button
     aria-hidden={true}
@@ -46,7 +46,7 @@ exports[`<LoaderWithParagraph /> With custom props should match with snapshot 1`
     </svg>
   </button>
   <p
-    className="k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--withoutMargin"
+    className="sc-bwzfXH bSjWPD k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--noMargin"
   >
     A custom loading massage
   </p>
@@ -55,7 +55,7 @@ exports[`<LoaderWithParagraph /> With custom props should match with snapshot 1`
 
 exports[`<LoaderWithParagraph /> With default props should match with snapshot 1`] = `
 <div
-  className="sc-bwzfXH fvfusg k-LoaderWithParagraph k-LoaderWithParagraph--left"
+  className="sc-htpNat fAhqdt k-LoaderWithParagraph k-LoaderWithParagraph--left"
 >
   <div
     aria-hidden={true}
@@ -99,7 +99,7 @@ exports[`<LoaderWithParagraph /> With default props should match with snapshot 1
     </svg>
   </div>
   <p
-    className="k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--withoutMargin"
+    className="sc-bwzfXH bSjWPD k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--noMargin"
   >
     Loading
   </p>
