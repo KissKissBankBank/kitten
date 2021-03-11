@@ -13,6 +13,7 @@ import {
   HeadingTag,
   Description,
 } from './components'
+import { useFlexGapCheck } from '../../../helpers/dom/use-flex-gap-check'
 
 export const BackingCard = ({
   children,
@@ -21,12 +22,15 @@ export const BackingCard = ({
   hasBorder,
   ...props
 }) => {
+  const canUseGap = useFlexGapCheck()
+
   return (
     <StyledBackingCard
       {...props}
       className={classNames('k-BackingCard', className, {
         'k-BackingCard--disabled': disabled,
         'k-BackingCard--hasBorder': hasBorder,
+        'k-BackingCard--noGap': !canUseGap,
       })}
     >
       {React.Children.map(children, child => {

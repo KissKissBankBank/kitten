@@ -2,7 +2,7 @@ import React from 'react'
 import { text, boolean } from '@storybook/addon-knobs'
 import { Button } from '../../../components/buttons/button'
 import { Title } from '../../../components/typography/title'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 import { Modal } from '../../../components/modals/modal'
 import { Marger } from '../../../components/layout/marger'
 
@@ -39,13 +39,13 @@ const paragraphContainer = `
 const StoryContent = ({ content }) => (
   <Marger top="8" bottom="8">
     <Marger bottom="2">
-      <Title modifier="tertiary" margin={false} tag="p">
+      <Title modifier="tertiary" noMargin tag="p">
         Lorem ipsum dolor sit consectetuer
       </Title>
     </Marger>
 
     <Marger top="2" bottom="4">
-      <Paragraph modifier="tertiary" margin={false} tag="p">
+      <Paragraph modifier="secondary" noMargin tag="p">
         {content}
       </Paragraph>
     </Marger>

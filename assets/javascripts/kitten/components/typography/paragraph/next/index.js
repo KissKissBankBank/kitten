@@ -1,48 +1,51 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { modifierStyles } from './helpers/modifier-styles'
 
 const StyledParagraph = styled.p`
   ${TYPOGRAPHY.fontStyles.light};
+
+  &.k-Paragraph--noMargin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  &.k-Paragraph--normalLineHeight {
+    line-height: normal;
+  }
+
+  &.k-Paragraph--italic {
+    font-style: italic;
+  }
+
   ${({ modifier }) => modifierStyles(modifier)}
-
-  ${({ margin }) =>
-    !margin &&
-    css`
-      margin-top: 0;
-      margin-bottom: 0;
-    `}
-
-  ${({ normalLineHeight }) =>
-    normalLineHeight &&
-    css`
-      line-height: normal;
-    `}
-
-  ${({ italic }) =>
-    italic &&
-    css`
-      font-style: italic;
-    `}
 `
 
 export const Paragraph = ({
   tag,
   modifier,
-  margin,
+  noMargin,
   normalLineHeight,
   italic,
+  className,
   ...other
 }) => {
   return (
     <StyledParagraph
       as={tag}
       modifier={modifier}
-      normalLineHeight={normalLineHeight}
-      italic={italic}
-      margin={margin}
+      className={classNames(
+        'k-Paragraph',
+        className,
+        {
+          'k-Paragraph--noMargin': noMargin,
+          'k-Paragraph--normalLineHeight': normalLineHeight,
+          'k-Paragraph--italic': italic,
+        },
+      )}
       {...other}
     />
   )
@@ -51,7 +54,7 @@ export const Paragraph = ({
 Paragraph.defaultProps = {
   tag: 'p',
   modifier: 'primary',
-  margin: true,
+  noMargin: true,
   normalLineHeight: false,
   italic: false,
 }
@@ -65,7 +68,7 @@ Paragraph.propTypes = {
   /**
     Remove default margins of `title` attribut.
   */
-  margin: PropTypes.bool,
+  noMargin: PropTypes.bool,
   /**
     Line-height normal (1.2).
   */
