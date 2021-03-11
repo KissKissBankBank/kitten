@@ -4,9 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Breaking Changes:
-
-- `Paragraph` is replaced with `Next` `Paragraph`.
+- Fix: Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
+- Breaking change: `Paragraph` is replaced with `Next` `Paragraph`.
 
 
 ## [3.0.0-beta.13] - 2021-03-11
