@@ -68,7 +68,7 @@ export const LoaderWithParagraph = ({
 
       <Paragraph
         modifier="secondary"
-        margin={false}
+        noMargin
         {...paragraphProps}
         className={classNames(
           'k-LoaderWithParagraph__paragraph',

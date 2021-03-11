@@ -12,7 +12,6 @@ describe('<Paragraph />', () => {
           <Paragraph
             tag="p"
             modifier="primary"
-            noMargin
             normalLineHeight={false}
             italic={false}
             children="Lorem ipsum dolor sit amet…"
