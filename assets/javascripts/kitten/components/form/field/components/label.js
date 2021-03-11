@@ -10,6 +10,7 @@ export class FieldLabel extends Component {
     link: PropTypes.node,
     tooltip: PropTypes.string,
     labelProps: PropTypes.object,
+    tooltipProps: PropTypes.object,
   }
 
   static defaultProps = {

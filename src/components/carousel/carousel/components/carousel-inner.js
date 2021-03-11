@@ -27,8 +27,9 @@ var _usePreviousHook = require("../../../../helpers/utils/use-previous-hook");
 
 if (_elementHelper.domElementHelper.canUseDom()) {
   require('smoothscroll-polyfill').polyfill();
-} // inspired by https://github.com/cferdinandi/scrollStop
+}
 
+var isTouched = false; // inspired by https://github.com/cferdinandi/scrollStop
 
 var scrollStop = function scrollStop(callback) {
   if (!callback) return;
@@ -76,12 +77,6 @@ var CarouselInner = function CarouselInner(_ref) {
       pagesClassName = _ref.pagesClassName,
       viewedPages = _ref.viewedPages,
       pageClickText = _ref.pageClickText;
-
-  var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isTouched = _useState2[0],
-      setTouchState = _useState2[1];
-
   var carouselInner = (0, _react.useRef)(null);
   var previousIndexPageVisible = (0, _usePreviousHook.usePrevious)(currentPageIndex);
   var resizeObserver;
@@ -165,10 +160,10 @@ var CarouselInner = function CarouselInner(_ref) {
     ref: carouselInner,
     onScroll: handleInnerScroll,
     onTouchStart: function onTouchStart() {
-      return setTouchState(true);
+      return isTouched = true;
     },
     onTouchEnd: function onTouchEnd() {
-      return setTouchState(false);
+      return isTouched = false;
     },
     onKeyDown: handleKeyDown,
     className: "k-Carousel__inner"
