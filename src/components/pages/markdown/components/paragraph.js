@@ -9,7 +9,7 @@ exports.MarkdownParagraph = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _paragraph = require("../../../typography/paragraph");
+var _next = require("../../../typography/paragraph/next");
 
 var _marger = require("../../../layout/marger");
 
@@ -21,9 +21,9 @@ var MarkdownParagraph = function MarkdownParagraph(_ref) {
     var paragraphModifier = _ref2.paragraphModifier;
     return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
       bottom: "2.6"
-    }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
+    }, /*#__PURE__*/_react.default.createElement(_next.Paragraph, {
       modifier: paragraphModifier,
-      margin: false
+      noMargin: true
     }, children));
   });
 };

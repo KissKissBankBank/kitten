@@ -2,46 +2,43 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+import classNames from 'classnames';
+import COLORS from '../../../constants/colors-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { modifierStyles } from './helpers/modifier-styles';
 var StyledTitle = styled.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-46lshq-0"
-})(["", ";", " ", " ", " ", ""], TYPOGRAPHY.fontStyles.bold, function (_ref) {
+})(["--Title-css-color:", ";", ";color:", ";color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], COLORS.font1, TYPOGRAPHY.fontStyles.bold, COLORS.font1, function (_ref) {
   var modifier = _ref.modifier;
   return modifierStyles(modifier);
-}, function (_ref2) {
-  var margin = _ref2.margin;
-  return !margin && css(["margin-top:0;margin-bottom:0;"]);
-}, function (_ref3) {
-  var italic = _ref3.italic;
-  return italic && css(["font-style:italic;"]);
-}, function (_ref4) {
-  var cssColor = _ref4.cssColor;
-  return cssColor && css(["color:", ";"], cssColor);
 });
-export var Title = function Title(_ref5) {
-  var modifier = _ref5.modifier,
-      tag = _ref5.tag,
-      margin = _ref5.margin,
-      italic = _ref5.italic,
-      cssColor = _ref5.cssColor,
-      other = _objectWithoutProperties(_ref5, ["modifier", "tag", "margin", "italic", "cssColor"]);
+export var Title = function Title(_ref2) {
+  var modifier = _ref2.modifier,
+      tag = _ref2.tag,
+      noMargin = _ref2.noMargin,
+      italic = _ref2.italic,
+      cssColor = _ref2.cssColor,
+      className = _ref2.className,
+      other = _objectWithoutProperties(_ref2, ["modifier", "tag", "noMargin", "italic", "cssColor", "className"]);
 
   return /*#__PURE__*/React.createElement(StyledTitle, _extends({
-    as: tag
-  }, other, {
+    as: tag,
     modifier: modifier,
-    margin: margin,
-    italic: italic,
-    cssColor: cssColor
-  }));
+    className: classNames('k-Title', className, {
+      'k-Title--noMargin': noMargin,
+      'k-Title--italic': italic
+    }),
+    style: {
+      '--Title-css-color': cssColor
+    }
+  }, other));
 };
 Title.defaultProps = {
   tag: 'h1',
   modifier: 'primary',
-  margin: true,
+  noMargin: true,
   italic: false,
   cssColor: null
 };
@@ -56,7 +53,7 @@ Title.propTypes = {
   /**
     Remove default margins of `title` attribut.
   */
-  margin: PropTypes.bool,
+  noMargin: PropTypes.bool,
 
   /**
     Specify a color (use a CSS color string).

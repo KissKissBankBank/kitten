@@ -2,15 +2,20 @@
 
 exports[`<VerticalCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX fhNYyh"
+  className="sc-EHOje kJvSfu"
 >
   <img
     alt=""
-    className="sc-bxivhb kTYzCt"
+    className="sc-ifAKCX fexEDx"
     src="#image"
   />
   <h1
-    className="sc-bwzfXH ffdHnv"
+    className="sc-bwzfXH bZnrIM k-Title k-Title--noMargin"
+    style={
+      Object {
+        "--Title-css-color": null,
+      }
+    }
   >
     Custom title
   </h1>
@@ -20,15 +25,20 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
 
 exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX fhNYyh"
+  className="sc-EHOje kJvSfu"
 >
   <img
     alt="Image alt"
-    className="sc-bxivhb kTYzCt"
+    className="sc-ifAKCX fexEDx"
     src="#image"
   />
   <h1
-    className="sc-bwzfXH ffdHnv"
+    className="sc-bwzfXH bZnrIM k-Title k-Title--noMargin"
+    style={
+      Object {
+        "--Title-css-color": null,
+      }
+    }
   >
     Custom title
   </h1>
@@ -36,7 +46,7 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+      className="sc-htpNat lkbNRc k-Paragraph k-Paragraph--noMargin"
     >
       Custom text
     </p>

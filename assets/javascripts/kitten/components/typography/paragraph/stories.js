@@ -1,8 +1,8 @@
 import React from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { Paragraph } from './index'
-import { Text } from '../../../../components/typography/text'
-import { Marger } from '../../../layout/marger'
+import { Text } from '../../../components/typography/text'
+import { Marger } from '../../layout/marger'
 
 const modifierOptions = {
   Primary: 'primary',
@@ -23,7 +23,7 @@ export default {
 export const DefaultProp = () => (
   <Paragraph
     modifier={select('Modifier', modifierOptions, 'primary')}
-    margin={boolean('Margin', true)}
+    noMargin={boolean('No margin', true)}
     normalLineHeight={boolean('Normal line height', false)}
     italic={boolean('Italic', false)}
   >
