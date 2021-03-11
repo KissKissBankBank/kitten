@@ -13,6 +13,7 @@ export { Badge } from './components/atoms/badge'
 export { IconBadge } from './components/atoms/icon-badge'
 export { Loader } from './components/atoms/loader'
 export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph'
+export { StatusWithBullet } from './components/atoms/status-with-bullet'
 export {
   StepperIcon,
   StepperIconDefault,
@@ -197,9 +198,6 @@ export { SimplePopover } from './components/popovers/simple-popover'
 
 // Search
 export { SearchInput } from './components/search/search-input'
-
-// Status with Bullet
-export { StatusWithBullet } from './components/status-with-bullet'
 
 // Steppers
 export { VerticalStepper } from './components/steppers/vertical-stepper'

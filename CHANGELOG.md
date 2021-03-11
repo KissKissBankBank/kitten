@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Move `StatusWithBullet` to `atoms`.
+- Feature: Add `warning`, `neutral` and `none` values to `StatusWithBullet` `statusType` prop.
+- Feature: Add `size` and `weight` props to `StatusWithBullet`.
+- Feature: `statusMessage` prop is no longer required, you can now use `children` alternatively in `StatusWithBullet`.
 - Feature: Refactor `AvatarWithTextAndBadge` to CSS-in-JS.
 - Feature: Add `hoverable` prop to `AvatarWithTextAndBadge`.
 - Feature: Add `size` prop to `AvatarWithTextAndBadge.Image`.

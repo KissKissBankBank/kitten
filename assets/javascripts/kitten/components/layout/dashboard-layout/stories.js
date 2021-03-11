@@ -99,9 +99,24 @@ export const Default = () => {
               T-shirts brodés Free Boobs Club
             </Text>
             <br />
-            <Text lineHeight="normal" weight="light" size="nano">
-              <StatusWithBullet as="span" />
-              Prêt a être partagé avec mon coach
+            <Text
+              lineHeight="normal"
+              weight="light"
+              size="nano"
+              color="background1"
+            >
+              <StatusWithBullet
+                as="span"
+                weight="light"
+                size="micro"
+                statusType={select(
+                  'Status type',
+                  ['danger', 'success', 'warning', 'neutral', 'none'],
+                  'success',
+                )}
+              >
+                Prêt a être partagé
+              </StatusWithBullet>
             </Text>
           </AvatarWithTextAndBadge.Text>
         </AvatarWithTextAndBadge>
