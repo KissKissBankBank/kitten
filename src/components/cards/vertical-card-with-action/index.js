@@ -19,7 +19,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _title = require("../../../components/typography/title");
 
-var _next = require("../../../components/typography/paragraph/next");
+var _paragraph = require("../../../components/typography/paragraph");
 
 var _button = require("../../../components/buttons/button");
 
@@ -51,14 +51,14 @@ var VerticalCardWithAction = function VerticalCardWithAction(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_title.Title, {
     modifier: "senary",
     tag: titleTag,
-    noMargin: true,
+    margin: false,
     className: (0, _classnames.default)('k-u-align-center', {
       'k-u-margin-bottom-singleHalf--important': !!description
     })
-  }, title), description && /*#__PURE__*/_react.default.createElement(_next.Paragraph, {
-    modifier: "tertiary",
+  }, title), description && /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
+    modifier: "quaternary",
     tag: descriptionTag,
-    noMargin: true,
+    margin: false,
     className: "k-u-align-center k-u-margin-top-singleHalf--important"
   }, description)), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-u-margin-top-triple k-u-align-center"

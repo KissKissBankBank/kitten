@@ -31,7 +31,7 @@ var _closeButton = require("../../../components/buttons/close-button");
 
 var _button = require("../../../components/buttons/button/button");
 
-var _next = require("../../../components/typography/paragraph/next");
+var _paragraph = require("../../../components/typography/paragraph");
 
 var _text = require("../../../components/typography/text");
 
@@ -62,7 +62,7 @@ function _templateObject() {
 var paddingPlusGutters = 2 * _gridConfig.CONTAINER_PADDING + 11 * _gridConfig.GUTTER;
 var oneGridCol = "calc((100vw - ".concat((0, _typography.pxToRem)(paddingPlusGutters), ") / 12 + ").concat((0, _typography.pxToRem)(_gridConfig.GUTTER), ")");
 var negativeOneGridCol = "calc(0px - ((100vw - ".concat((0, _typography.pxToRem)(paddingPlusGutters), ") / 12 + ").concat((0, _typography.pxToRem)(_gridConfig.GUTTER), "))");
-var StyledParagraph = (0, _styledComponents.default)(_next.Paragraph).withConfig({
+var StyledParagraph = (0, _styledComponents.default)(_paragraph.Paragraph).withConfig({
   displayName: "next__StyledParagraph",
   componentId: "sc-6re6vo-0"
 })(["font-size:", ";@media (min-width:", "){font-size:", ";}"], (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(14));
@@ -82,7 +82,7 @@ var ModalTitle = function ModalTitle(_ref) {
   var children = _ref.children;
   return /*#__PURE__*/_react.default.createElement(_title.Title, {
     modifier: "quaternary",
-    noMargin: true,
+    margin: false,
     tag: "p",
     className: "k-u-margin-bottom-singleHalf--important k-u-align-center"
   }, children);
@@ -94,11 +94,11 @@ var ModalParagraph = function ModalParagraph(_ref2) {
       className = _ref2.className,
       align = _ref2.align;
   return /*#__PURE__*/_react.default.createElement(StyledParagraph, {
-    modifier: "tertiary",
+    modifier: "quaternary",
     style: {
       textAlign: align
     },
-    noMargin: true,
+    margin: false,
     tag: "p",
     className: (0, _classnames.default)('k-Modal__paragraph', className, {
       'k-u-margin-bottom-triple': !withoutMargin,

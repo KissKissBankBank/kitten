@@ -9,7 +9,7 @@ import { CrossIcon } from '../../../components/icons/cross-icon';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { Title } from '../../../components/typography/title';
-import { Paragraph } from '../../../components/typography/paragraph/next';
+import { Paragraph } from '../../../components/typography/paragraph';
 import { CONTAINER_PADDING_THIN } from '../../../constants/grid-config';
 import { ScreenConfig } from '../../../constants/screen-config';
 import { Button } from '../../../components/buttons/button/button';
@@ -97,13 +97,13 @@ export var SimplePopover = function SimplePopover(_ref2) {
   }, /*#__PURE__*/React.createElement(Title, {
     id: titleId,
     modifier: "senary",
-    noMargin: true,
+    margin: false,
     tag: "h2"
   }, title)), /*#__PURE__*/React.createElement(Marger, {
     top: ".5",
     bottom: "1"
   }, /*#__PURE__*/React.createElement(Paragraph, {
-    modifier: "tertiary"
+    modifier: "quaternary"
   }, text)), buttons.length > 0 && /*#__PURE__*/React.createElement(ButtonsContainer, {
     top: "3"
   }, buttons.map(function (_ref3, i) {

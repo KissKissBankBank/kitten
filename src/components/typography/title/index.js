@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -15,11 +17,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-var _classnames = _interopRequireDefault(require("classnames"));
-
-var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
@@ -28,37 +26,42 @@ var _modifierStyles = require("./helpers/modifier-styles");
 var StyledTitle = _styledComponents.default.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-46lshq-0"
-})(["--Title-css-color:", ";", ";color:", ";color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], _colorsConfig.default.font1, _typographyConfig.default.fontStyles.bold, _colorsConfig.default.font1, function (_ref) {
+})(["", ";", " ", " ", " ", ""], _typographyConfig.default.fontStyles.bold, function (_ref) {
   var modifier = _ref.modifier;
   return (0, _modifierStyles.modifierStyles)(modifier);
+}, function (_ref2) {
+  var margin = _ref2.margin;
+  return !margin && (0, _styledComponents.css)(["margin-top:0;margin-bottom:0;"]);
+}, function (_ref3) {
+  var italic = _ref3.italic;
+  return italic && (0, _styledComponents.css)(["font-style:italic;"]);
+}, function (_ref4) {
+  var cssColor = _ref4.cssColor;
+  return cssColor && (0, _styledComponents.css)(["color:", ";"], cssColor);
 });
 
-var Title = function Title(_ref2) {
-  var modifier = _ref2.modifier,
-      tag = _ref2.tag,
-      noMargin = _ref2.noMargin,
-      italic = _ref2.italic,
-      cssColor = _ref2.cssColor,
-      className = _ref2.className,
-      other = (0, _objectWithoutProperties2.default)(_ref2, ["modifier", "tag", "noMargin", "italic", "cssColor", "className"]);
+var Title = function Title(_ref5) {
+  var modifier = _ref5.modifier,
+      tag = _ref5.tag,
+      margin = _ref5.margin,
+      italic = _ref5.italic,
+      cssColor = _ref5.cssColor,
+      other = (0, _objectWithoutProperties2.default)(_ref5, ["modifier", "tag", "margin", "italic", "cssColor"]);
   return /*#__PURE__*/_react.default.createElement(StyledTitle, (0, _extends2.default)({
-    as: tag,
+    as: tag
+  }, other, {
     modifier: modifier,
-    className: (0, _classnames.default)('k-Title', className, {
-      'k-Title--noMargin': noMargin,
-      'k-Title--italic': italic
-    }),
-    style: {
-      '--Title-css-color': cssColor
-    }
-  }, other));
+    margin: margin,
+    italic: italic,
+    cssColor: cssColor
+  }));
 };
 
 exports.Title = Title;
 Title.defaultProps = {
   tag: 'h1',
   modifier: 'primary',
-  noMargin: true,
+  margin: true,
   italic: false,
   cssColor: null
 };
@@ -73,7 +76,7 @@ Title.propTypes = {
   /**
     Remove default margins of `title` attribut.
   */
-  noMargin: _propTypes.default.bool,
+  margin: _propTypes.default.bool,
 
   /**
     Specify a color (use a CSS color string).

@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Title } from '../../../components/typography/title';
-import { Paragraph } from '../../../components/typography/paragraph/next';
+import { Paragraph } from '../../../components/typography/paragraph';
 import { Button } from '../../../components/buttons/button';
 import COLORS from '../../../constants/colors-config';
 import classNames from 'classnames';
@@ -32,14 +32,14 @@ export var VerticalCardWithAction = function VerticalCardWithAction(_ref) {
   }, /*#__PURE__*/React.createElement(Title, {
     modifier: "senary",
     tag: titleTag,
-    noMargin: true,
+    margin: false,
     className: classNames('k-u-align-center', {
       'k-u-margin-bottom-singleHalf--important': !!description
     })
   }, title), description && /*#__PURE__*/React.createElement(Paragraph, {
-    modifier: "tertiary",
+    modifier: "quaternary",
     tag: descriptionTag,
-    noMargin: true,
+    margin: false,
     className: "k-u-align-center k-u-margin-top-singleHalf--important"
   }, description)), /*#__PURE__*/React.createElement("div", {
     className: "k-u-margin-top-triple k-u-align-center"

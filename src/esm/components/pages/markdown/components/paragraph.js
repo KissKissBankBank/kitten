@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paragraph } from '../../../typography/paragraph/next';
+import { Paragraph } from '../../../typography/paragraph';
 import { Marger } from '../../../layout/marger';
 import { Context } from './context';
 export var MarkdownParagraph = function MarkdownParagraph(_ref) {
@@ -10,7 +10,7 @@ export var MarkdownParagraph = function MarkdownParagraph(_ref) {
       bottom: "2.6"
     }, /*#__PURE__*/React.createElement(Paragraph, {
       modifier: paragraphModifier,
-      noMargin: true
+      margin: false
     }, children));
   });
 };

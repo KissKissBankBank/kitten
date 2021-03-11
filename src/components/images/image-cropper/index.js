@@ -21,7 +21,7 @@ var _getOr = _interopRequireDefault(require("lodash/fp/getOr"));
 
 var _label = require("../../../components/form/label");
 
-var _next = require("../../../components/typography/paragraph/next");
+var _paragraph = require("../../../components/typography/paragraph");
 
 var _basicUploader = require("../../../components/uploaders/basic-uploader");
 
@@ -30,6 +30,8 @@ var _rangeSlider = require("../../../components/form/range-slider");
 var _elementHelper = require("../../../helpers/dom/element-helper");
 
 var _styles = require("./styles");
+
+var _useFlexGapCheck = require("../../../helpers/dom/use-flex-gap-check");
 
 var ImageCropper = function ImageCropper(_ref) {
   var imageSrc = _ref.imageSrc,
@@ -111,6 +113,7 @@ var ImageCropper = function ImageCropper(_ref) {
       resultData = _useState24[0],
       setResultData = _useState24[1];
 
+  var canUseGap = (0, _useFlexGapCheck.useFlexGapCheck)();
   (0, _react.useEffect)(function () {
     if (cropperInstance && cropperInstance.imageData.naturalWidth) {
       var imageData = cropperInstance.imageData;
@@ -162,7 +165,9 @@ var ImageCropper = function ImageCropper(_ref) {
   }, [resultData, fileNameState, uploadedFile]);
   var dragMode = disabled || !isCropEnabled ? 'none' : 'move';
   return /*#__PURE__*/_react.default.createElement(_styles.StyledCropper, {
-    className: (0, _classnames.default)('k-UploadAndCropper', className)
+    className: (0, _classnames.default)('k-UploadAndCropper', className, {
+      'k-UploadAndCropper--noGap': !canUseGap
+    })
   }, /*#__PURE__*/_react.default.createElement(_label.Label, {
     size: "tiny",
     htmlFor: name,
@@ -212,9 +217,9 @@ var ImageCropper = function ImageCropper(_ref) {
         file: null
       });
     }
-  }), /*#__PURE__*/_react.default.createElement(_next.Paragraph, {
-    modifier: "tertiary",
-    noMargin: true,
+  }), /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
+    modifier: "quaternary",
+    margin: false,
     className: "k-u-margin-top-single"
   }, description), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Cropper__wrapper k-u-margin-top-double",
@@ -246,9 +251,9 @@ var ImageCropper = function ImageCropper(_ref) {
     }
   })), isCropEnabled && !disabled && /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Cropper__wrapper__slider"
-  }, /*#__PURE__*/_react.default.createElement(_next.Paragraph, {
-    modifier: "tertiary",
-    noMargin: true,
+  }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
+    modifier: "quaternary",
+    margin: false,
     className: "k-u-margin-bottom-singleHalf"
   }, cropperInfo), /*#__PURE__*/_react.default.createElement(_label.Label, {
     size: "micro",
