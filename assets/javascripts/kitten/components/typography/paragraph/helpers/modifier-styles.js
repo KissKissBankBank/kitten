@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
-import { stepToRem, pxToRem } from '../../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../../constants/screen-config'
+import { stepToRem, pxToRem } from '../../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 export const modifierStyles = modifier => {
   let fontStepOnMobile

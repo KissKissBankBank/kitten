@@ -9,7 +9,7 @@ Array [
       className="sc-bwzfXH gRnEuD"
     >
       <div
-        className="sc-bxivhb dkxhWm k-Line k-Line--noGap"
+        className="sc-bxivhb iPIptC k-Line"
         style={
           Object {
             "lineHeight": 1,
@@ -57,7 +57,7 @@ Array [
       className="sc-bwzfXH gRnEuD"
     >
       <div
-        className="sc-bxivhb dkxhWm k-Line k-Line--noGap"
+        className="sc-bxivhb iPIptC k-Line"
         style={
           Object {
             "lineHeight": 1,
@@ -110,7 +110,7 @@ Array [
       className="sc-bwzfXH gRnEuD"
     >
       <div
-        className="sc-bxivhb dkxhWm k-Line k-Line--noGap"
+        className="sc-bxivhb iPIptC k-Line"
         style={
           Object {
             "lineHeight": 1,

@@ -2,7 +2,7 @@
 
 exports[`<Line/> should match snapshot with default behavior 1`] = `
 <div
-  className="sc-bdVaJa jzxMpd k-Line k-Line--noGap"
+  className="sc-bdVaJa elQzvA k-Line"
 >
   <div
     className="k-Line__item"
@@ -24,7 +24,7 @@ exports[`<Line/> should match snapshot with default behavior 1`] = `
 
 exports[`<Line/> should match snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa jzxMpd k-Line custom-class k-Line--noGap"
+  className="sc-bdVaJa elQzvA k-Line custom-class"
 >
   <div
     className="k-Line__item custom-class"
