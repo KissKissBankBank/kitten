@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: delete buggy `useFlexGapCheck`.
+- Breaking change: Revert all other changes.
 
 ## [3.0.0-beta.11] - 2021-03-11
 
