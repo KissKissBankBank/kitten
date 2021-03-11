@@ -9,7 +9,7 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledInformationBox = styled.div`
-  .k-InformationBox {
+  &.k-InformationBox {
     display: inline-block;
     ${TYPOGRAPHY.fontStyles.light}
   }
@@ -30,7 +30,7 @@ export const InformationBox = ({ title, titleProps, children, ...other }) => (
     <div className="k-InformationBox__container">
       <Title
         tag="p"
-        margin={false}
+        noMargin
         modifier="quaternary"
         {...titleProps}
         className={classNames(

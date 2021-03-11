@@ -40,9 +40,9 @@ const StyledBadge = styled.span`
   }
 
   &.k-Badge--hasIcon {
-    position: absolute;
-    margin-left: ${pxToRem(-8)};
-    margin-top: ${pxToRem(-4)};
+    position: relative;
+    left: ${pxToRem(-8)};
+    top: ${pxToRem(-8)};
   }
 `
 
@@ -58,20 +58,36 @@ export const Badge = ({
 }) => {
   return (
     <>
-      {Icon && <Icon />}
-      <StyledBadge
-        aria-label={a11yText}
-        className={classNames('k-Badge', className, {
-          'k-Badge--spaced': spaced,
-          'k-Badge--no-border': !withBorder,
-          'k-Badge--hasIcon': !!Icon,
-        })}
-        style={{
-          '--Badge-background-color': color,
-          ...style,
-        }}
-        {...others}
-      />
+      {Icon ? (
+        <div className="k-Badge__wrapper k-u-flex k-u-flex-alignItems-center">
+          <Icon />
+          <StyledBadge
+            aria-label={a11yText}
+            className={classNames('k-Badge', 'k-Badge--hasIcon', className, {
+              'k-Badge--spaced': spaced,
+              'k-Badge--no-border': !withBorder,
+            })}
+            style={{
+              '--Badge-background-color': color,
+              ...style,
+            }}
+            {...others}
+          />
+        </div>
+      ) : (
+        <StyledBadge
+          aria-label={a11yText}
+          className={classNames('k-Badge', className, {
+            'k-Badge--spaced': spaced,
+            'k-Badge--no-border': !withBorder,
+          })}
+          style={{
+            '--Badge-background-color': color,
+            ...style,
+          }}
+          {...others}
+        />
+      )}
     </>
   )
 }

@@ -13,6 +13,10 @@ export const StyledHeader = styled.header`
   position: relative;
   z-index: var(--HeaderNav-zIndex);
 
+  .k-HeaderNav__stickyContainer {
+    width: 100%;
+  }
+
   &.k-HeaderNav--menuIsExpanded {
     z-index: var(--HeaderNav-zIndex-openMenu);
 

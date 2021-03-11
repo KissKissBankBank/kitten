@@ -101,6 +101,10 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   animation-delay: 0s;
 }
 
+.c1.k-Loader--noGap .k-Loader__circle:not(:last-child) {
+  margin-right: 0.125rem;
+}
+
 .c2 {
   background-color: #e8f7fe;
   width: 100%;
@@ -214,6 +218,10 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.c0.k-DashboardLayout__flow--noGap .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
+  margin-right: 1.25rem;
 }
 
 @media (min-width:40rem) {
@@ -358,14 +366,20 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   }
 }
 
+@media (min-width:67.5rem) {
+  .c0.k-DashboardLayout__flow--noGap .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+}
+
 <div
-  className="c0 k-DashboardLayout__flow k-DashboardLayout__fullHeight"
+  className="c0 k-DashboardLayout__flow k-DashboardLayout__fullHeight k-DashboardLayout__flow--noGap"
 >
   <div
     className="k-DashboardLayout__flow__loading"
   >
     <div
-      className="c1 k-Loader"
+      className="c1 k-Loader k-Loader--noGap"
     >
       <svg
         className="k-Loader__circle"
@@ -584,6 +598,10 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   animation-delay: 0s;
 }
 
+.c1.k-Loader--noGap .k-Loader__circle:not(:last-child) {
+  margin-right: 0.125rem;
+}
+
 .c2 {
   background-color: #e8f7fe;
   width: 100%;
@@ -697,6 +715,10 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.c0.k-DashboardLayout__flow--noGap .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
+  margin-right: 1.25rem;
 }
 
 @media (min-width:40rem) {
@@ -841,14 +863,20 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   }
 }
 
+@media (min-width:67.5rem) {
+  .c0.k-DashboardLayout__flow--noGap .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+}
+
 <div
-  className="c0 k-DashboardLayout__flow k-DashboardLayout__fullHeight"
+  className="c0 k-DashboardLayout__flow k-DashboardLayout__fullHeight k-DashboardLayout__flow--noGap"
 >
   <div
     className="k-DashboardLayout__flow__loading"
   >
     <div
-      className="c1 k-Loader"
+      className="c1 k-Loader k-Loader--noGap"
     >
       <svg
         className="k-Loader__circle"
@@ -1039,6 +1067,10 @@ button:hover .c1 {
   -webkit-transition-delay: 0,.2s;
   transition-delay: 0,.2s;
   outline: 0.125rem solid #bae8fd;
+}
+
+.c0 .k-DashboardLayout--noGap .k-DashboardLayout__sideWrapper >:not(:last-child) {
+  margin-bottom: 1.875rem;
 }
 
 @media (max-width:67.4375rem) {
@@ -1354,11 +1386,17 @@ button:hover .c1 {
   }
 }
 
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout--noGap .k-DashboardLayout__backLink__text {
+    margin-left: 0.9375rem;
+  }
+}
+
 <div
   className="c0 k-DashboardLayout__wrapper"
 >
   <div
-    className="k-DashboardLayout"
+    className="k-DashboardLayout k-DashboardLayout--noGap"
   >
     <a
       className="k-DashboardLayout__quickAccessLink"

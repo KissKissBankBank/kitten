@@ -1,7 +1,11 @@
+import domElementHelper from '../element-helper'
+
 // https://ishadeed.com/article/flexbox-gap/
 // Waiting for next Safari
 
 export const useFlexGapCheck = () => {
+  if (!domElementHelper.canUseDom()) return true
+
   // create flex container with row-gap set
   const flex = document.createElement('div')
   flex.style.display = 'flex'
