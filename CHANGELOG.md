@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Refactor `AvatarWithTextAndBadge` to CSS-in-JS.
+- Feature: Add `hoverable` prop to `AvatarWithTextAndBadge`.
+- Feature: Add `size` prop to `AvatarWithTextAndBadge.Image`.
+- Feature: Deprecate `textClassName` prop in favor of `className` on `AvatarWithTextAndBadge.Text`.
+- Feature: Add explicit utility class `k-u-pointer-events-none` to `k-utilities-event` mixin.
 - Breaking change: Remove deprecated `DonationCard` and `TextInputWithUnitForm`.
 - Fix: Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
 - Breaking change: `Paragraph` is replaced with `Next` `Paragraph`.

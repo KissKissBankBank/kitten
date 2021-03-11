@@ -120,11 +120,8 @@ export const StyledHeader = styled.header`
     height: 100%;
     display: flex;
 
-    .text--withEllipsis {
-      text-overflow: ellipsis;
+    .k-Avatar__text.k-Avatar__text--hasEllipsis {
       max-width: ${pxToRem(145)};
-      white-space: nowrap;
-      overflow: hidden;
     }
   }
 
