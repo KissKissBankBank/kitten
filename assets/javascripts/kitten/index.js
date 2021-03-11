@@ -13,6 +13,7 @@ export { Badge } from './components/atoms/badge'
 export { IconBadge } from './components/atoms/icon-badge'
 export { Loader } from './components/atoms/loader'
 export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph'
+export { StatusWithBullet } from './components/atoms/status-with-bullet'
 export {
   StepperIcon,
   StepperIconDefault,
@@ -60,7 +61,6 @@ export { SimpleCard } from './components/cards/simple-card'
 export { BackerCard } from './components/cards/backer-card'
 export { BackingCard } from './components/cards/backing-card'
 export { CartRewardCard } from './components/cards/cart-reward-card'
-export { DonationCard } from './components/cards/donation-card'
 export { RewardEdition } from './components/cards/reward-edition'
 export { TeamCard } from './components/cards/team-card'
 export { Triptych } from './components/cards/triptych'
@@ -120,7 +120,6 @@ export { RichTextInput } from './components/form/rich-text-input'
 export { SelectWithState } from './components/form/select-with-state'
 export { TextInputAndSelect } from './components/form/text-input-and-select'
 export { TextInputWithLimit } from './components/form/text-input-with-limit'
-export { TextInputWithUnitForm } from './components/form/text-input-with-unit-form'
 export { TextInputWithUnit } from './components/form/text-input-with-unit'
 export { TextInput } from './components/form/text-input'
 export { ToggleSwitch } from './components/form/toggle-switch'
@@ -199,9 +198,6 @@ export { SimplePopover } from './components/popovers/simple-popover'
 
 // Search
 export { SearchInput } from './components/search/search-input'
-
-// Status with Bullet
-export { StatusWithBullet } from './components/status-with-bullet'
 
 // Steppers
 export { VerticalStepper } from './components/steppers/vertical-stepper'
@@ -368,7 +364,6 @@ export { createEvent } from './helpers/dom/create-event'
 export { cssPropertyDistributor } from './helpers/dom/css-property-distributor'
 export { default as domElementHelper } from './helpers/dom/element-helper'
 export { nativeInputValueSetter } from './helpers/dom/native-input-value-setter'
-export { useFlexGapCheck } from './helpers/dom/use-flex-gap-check'
 export {
   getReactElementsByType,
   getReactElementsWithoutType,

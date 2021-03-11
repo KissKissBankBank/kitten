@@ -12,14 +12,10 @@
 // Dropdowns
 @import './components/dropdowns/dropdown';
 
-// Footer
-@import './components/footer/footer';
-
 // Form
 @import './components/form/checkbox-set';
 @import './components/form/checkbox';
 @import './components/form/location-input';
-@import './components/form/form-actions';
 @import './components/form/form-composer';
 @import './components/form/form-info';
 @import './components/form/label';
@@ -35,8 +31,7 @@
 
 // Grid
 @import './components/grid/container';
-@import './components/grid/grid';
-@import "./components/grid/row";
+@import "./components/grid/side-grid";
 @import "./components/grid/single-column";
 
 // Layout
@@ -76,5 +71,3 @@
 
 // Typography
 @import './components/typography/body-copy';
-@import './components/typography/paragraph';
-@import './components/typography/title';

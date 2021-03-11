@@ -1,6 +1,6 @@
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 import { domElementHelper } from '../../../../helpers/dom/element-helper';
 import { CarouselPage } from './carousel-page';
@@ -9,8 +9,9 @@ import { usePrevious } from '../../../../helpers/utils/use-previous-hook';
 
 if (domElementHelper.canUseDom()) {
   require('smoothscroll-polyfill').polyfill();
-} // inspired by https://github.com/cferdinandi/scrollStop
+}
 
+var isTouched = false; // inspired by https://github.com/cferdinandi/scrollStop
 
 var scrollStop = function scrollStop(callback) {
   if (!callback) return;
@@ -58,12 +59,6 @@ export var CarouselInner = function CarouselInner(_ref) {
       pagesClassName = _ref.pagesClassName,
       viewedPages = _ref.viewedPages,
       pageClickText = _ref.pageClickText;
-
-  var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      isTouched = _useState2[0],
-      setTouchState = _useState2[1];
-
   var carouselInner = useRef(null);
   var previousIndexPageVisible = usePrevious(currentPageIndex);
   var resizeObserver;
@@ -147,10 +142,10 @@ export var CarouselInner = function CarouselInner(_ref) {
     ref: carouselInner,
     onScroll: handleInnerScroll,
     onTouchStart: function onTouchStart() {
-      return setTouchState(true);
+      return isTouched = true;
     },
     onTouchEnd: function onTouchEnd() {
-      return setTouchState(false);
+      return isTouched = false;
     },
     onKeyDown: handleKeyDown,
     className: "k-Carousel__inner"

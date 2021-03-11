@@ -1,49 +1,50 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import classNames from 'classnames'
+import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { modifierStyles } from './helpers/modifier-styles'
 
 const StyledTitle = styled.span`
+  --Title-css-color: ${COLORS.font1};
+
   ${TYPOGRAPHY.fontStyles.bold};
+
+  color: ${COLORS.font1}; /* IE11 */
+  color: var(--Title-css-color);
+
+  &.k-Title--noMargin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &.k-Title--italic {
+    font-style: italic;
+  }
+
   ${({ modifier }) => modifierStyles(modifier)}
-
-  ${({ margin }) =>
-    !margin &&
-    css`
-      margin-top: 0;
-      margin-bottom: 0;
-    `}
-
-  ${({ italic }) =>
-    italic &&
-    css`
-      font-style: italic;
-    `}
-
-  ${({ cssColor }) =>
-    cssColor &&
-    css`
-      color: ${cssColor};
-    `}
 `
 
 export const Title = ({
   modifier,
   tag,
-  margin,
+  noMargin,
   italic,
   cssColor,
+  className,
   ...other
 }) => {
   return (
     <StyledTitle
       as={tag}
-      {...other}
       modifier={modifier}
-      margin={margin}
-      italic={italic}
-      cssColor={cssColor}
+      className={classNames('k-Title', className, {
+        'k-Title--noMargin': noMargin,
+        'k-Title--italic': italic,
+      })}
+      style={{ '--Title-css-color': cssColor }}
+      {...other}
     />
   )
 }
@@ -51,7 +52,7 @@ export const Title = ({
 Title.defaultProps = {
   tag: 'h1',
   modifier: 'primary',
-  margin: true,
+  noMargin: true,
   italic: false,
   cssColor: null,
 }
@@ -73,7 +74,7 @@ Title.propTypes = {
   /**
     Remove default margins of `title` attribut.
   */
-  margin: PropTypes.bool,
+  noMargin: PropTypes.bool,
   /**
     Specify a color (use a CSS color string).
   */
