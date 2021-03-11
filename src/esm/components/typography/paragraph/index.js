@@ -35,7 +35,7 @@ export var Paragraph = function Paragraph(_ref2) {
 Paragraph.defaultProps = {
   tag: 'p',
   modifier: 'primary',
-  noMargin: true,
+  noMargin: false,
   normalLineHeight: false,
   italic: false
 };

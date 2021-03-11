@@ -54,7 +54,7 @@ exports.Paragraph = Paragraph;
 Paragraph.defaultProps = {
   tag: 'p',
   modifier: 'primary',
-  noMargin: true,
+  noMargin: false,
   normalLineHeight: false,
   italic: false
 };
