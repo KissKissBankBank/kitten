@@ -38,12 +38,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
     >
       <h1
-        className="sc-bwzfXH AMZiG k-Title k-Title--noMargin k-Title--italic"
-        style={
-          Object {
-            "--Title-css-color": null,
-          }
-        }
+        className="sc-bwzfXH cavDWq"
       >
         Custom title amount
       </h1>
@@ -101,12 +96,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
     >
       <h1
-        className="sc-bwzfXH AMZiG k-Title k-Title--noMargin k-Title--italic"
-        style={
-          Object {
-            "--Title-css-color": null,
-          }
-        }
+        className="sc-bwzfXH cavDWq"
       >
         Custom title amount
       </h1>
@@ -164,13 +154,11 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-double"
     >
       <Custom title tag
-        className="sc-bwzfXH AMZiG k-Title k-Title--noMargin k-Title--italic"
+        className="sc-bwzfXH cavDWq"
+        cssColor={null}
+        italic={true}
+        margin={false}
         modifier="quinary"
-        style={
-          Object {
-            "--Title-css-color": null,
-          }
-        }
       >
         Custom title amount
       </Custom title tag>

@@ -8,12 +8,7 @@ exports[`<InformationBox /> by default matches with snapshot 1`] = `
     className="k-InformationBox__container"
   >
     <p
-      className="sc-bdVaJa kytFjT k-Title k-InformationBox__title k-u-margin-bottom-single k-Title--noMargin"
-      style={
-        Object {
-          "--Title-css-color": null,
-        }
-      }
+      className="sc-bdVaJa kDUvvA k-InformationBox__title k-u-margin-bottom-single"
     />
     <div
       className="k-InformationBox__content k-u-margin-top-single"
@@ -31,12 +26,7 @@ exports[`<InformationBox /> with contents matches with snapshot 1`] = `
   >
     <h3
       aria-label="custom aria prop"
-      className="sc-bdVaJa kytFjT k-Title k-InformationBox__title k-u-margin-bottom-single customClassName k-Title--noMargin"
-      style={
-        Object {
-          "--Title-css-color": null,
-        }
-      }
+      className="sc-bdVaJa kDUvvA k-InformationBox__title k-u-margin-bottom-single customClassName"
     >
       Title
     </h3>

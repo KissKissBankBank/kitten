@@ -30,7 +30,7 @@ export const InformationBox = ({ title, titleProps, children, ...other }) => (
     <div className="k-InformationBox__container">
       <Title
         tag="p"
-        noMargin
+        margin={false}
         modifier="quaternary"
         {...titleProps}
         className={classNames(

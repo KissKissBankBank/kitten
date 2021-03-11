@@ -1,0 +1,81 @@
+/// Title
+///
+/// @group typography
+///
+/// @example scss - usage
+///
+///   @include k-Title;
+///
+/// @example html
+///
+///   <h1 class='k-Title k-Title--primary'>Title 1</h1>
+///   <h2 class='k-Title k-Title--secondary'>Title 2</h2>
+///   <h3 class='k-Title k-Title--tertiary'>Title 3</h3>
+///   <h4 class='k-Title k-Title--quaternary'>Title 4</h4>
+///   <h5 class='k-Title k-Title--quinary'>Title 5</h5>
+///   <h6 class='k-Title k-Title--senary'>Title 6</h6>
+
+@mixin k-Title {
+  $font: 'bold';
+
+  .k-Title {
+    @include k-typographyFont($font);
+  }
+
+  .k-Title--primary {
+    @include k-typographyFontScale(
+      $font-step: 7,
+      $font-step-on-media: 12,
+      $line-height: 1.2
+    );
+  }
+
+  .k-Title--secondary {
+    @include k-typographyFontScale(
+      $font-step: 6,
+      $font-step-on-media: 9,
+      $line-height: 1.2
+    );
+  }
+
+  .k-Title--tertiary {
+    @include k-typographyFontScale(
+      $font-step: 5,
+      $font-step-on-media: 7,
+      $line-height: 1.2
+    );
+  }
+
+  .k-Title--quaternary {
+    @include k-typographyFontScale(
+      $font-step: 4,
+      $font-step-on-media: 5,
+      $line-height: 1.2
+    );
+  }
+
+  .k-Title--quinary {
+    @include k-typographyFontScale(
+      $font-step: 2,
+      $font-step-on-media: 4,
+      $line-height: 1.2
+    );
+  }
+
+  .k-Title--senary {
+    @include k-typographyFontScale(
+      $font-step: 1,
+      $font-step-on-media: 2,
+      $line-height: 1.2
+    );
+  }
+
+  .k-Title--withoutMargin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .k-Title--italic {
+    font-style: italic;
+  }
+}

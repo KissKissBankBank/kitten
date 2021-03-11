@@ -39,7 +39,7 @@ const paragraphContainer = `
 const StoryContent = ({ content }) => (
   <Marger top="8" bottom="8">
     <Marger bottom="2">
-      <Title modifier="tertiary" noMargin tag="p">
+      <Title modifier="tertiary" margin={false} tag="p">
         Lorem ipsum dolor sit consectetuer
       </Title>
     </Marger>

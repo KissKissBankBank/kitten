@@ -16,7 +16,7 @@ export const Default = () => (
   <Container>
     <Triptych
       title={
-        <Title tag="h2" modifier="secondary" noMargin>
+        <Title tag="h2" modifier="secondary" margin={false}>
           Main title goes here !
         </Title>
       }

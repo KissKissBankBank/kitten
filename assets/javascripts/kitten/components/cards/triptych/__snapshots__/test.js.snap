@@ -12,12 +12,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-bottom-double"
       >
         <h2
-          className="sc-htpNat ASAqK k-Title k-Title--noMargin"
-          style={
-            Object {
-              "--Title-css-color": null,
-            }
-          }
+          className="sc-htpNat iqXlfZ"
         >
           Main title goes here !
         </h2>
@@ -47,12 +42,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
         >
           <h1
-            className="sc-htpNat cidyXL k-Title k-u-align-center k-Title--noMargin"
-            style={
-              Object {
-                "--Title-css-color": null,
-              }
-            }
+            className="sc-htpNat iUEESa k-u-align-center"
           >
             Lorem ipsum dolor sit amet
           </h1>
@@ -93,12 +83,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-htpNat cidyXL k-Title k-u-align-center k-u-margin-bottom-singleHalf--important k-Title--noMargin"
-          style={
-            Object {
-              "--Title-css-color": null,
-            }
-          }
+          className="sc-htpNat iUEESa k-u-align-center k-u-margin-bottom-singleHalf--important"
         >
           Donsectetur adipiscing elit
         </h1>
@@ -142,12 +127,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-htpNat cidyXL k-Title k-u-align-center k-Title--noMargin"
-          style={
-            Object {
-              "--Title-css-color": null,
-            }
-          }
+          className="sc-htpNat iUEESa k-u-align-center"
         >
           Praesent tincidunt ultrices sem
         </h1>

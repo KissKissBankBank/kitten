@@ -44,7 +44,7 @@ export const VerticalCardWithAction = ({
       <Title
         modifier="senary"
         tag={titleTag}
-        noMargin
+        margin={false}
         className={classNames('k-u-align-center', {
           'k-u-margin-bottom-singleHalf--important': !!description,
         })}
