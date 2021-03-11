@@ -15,10 +15,6 @@
 
 @include k-Dropdown;
 
-// Footer
-
-@include k-Footer;
-
 // Form
 
 @include k-Checkbox;
@@ -51,10 +47,6 @@
     color: map-get($k-colors, 'error'),
   )
 ));
-
-// Footer
-
-@include k-Footer;
 
 // Grid
 

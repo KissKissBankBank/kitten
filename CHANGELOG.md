@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breaking change: convert Row` to CSS-in-JS.
 - Breaking change: remove `k-Row` mixin.
+- Breaking change: remove `k-Grid` mixin, `k-grid` and `k-grid-col*` helpers.
+- Breaking change: convert `Grid` to CSS-in-JS.
+- Breaking change: remove `k-Footer` mixin.
 - Breaking change: convert `FormAction` to CSS-in-JS.
 - Breaking change: remove `k-FormAction` mixin.
 - Breaking change: convert `Line` to CSS-in-JS.
