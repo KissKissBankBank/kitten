@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove deprecated `DonationCard` and `TextInputWithUnitForm`.
 - Fix: Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
 - Breaking change: `Paragraph` is replaced with `Next` `Paragraph`.
 

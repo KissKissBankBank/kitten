@@ -39,14 +39,10 @@ export const Title = ({
     <StyledTitle
       as={tag}
       modifier={modifier}
-      className={classNames(
-        'k-Title',
-        className,
-        {
-          'k-Title--noMargin': noMargin,
-          'k-Title--italic': italic,
-        }
-      )}
+      className={classNames('k-Title', className, {
+        'k-Title--noMargin': noMargin,
+        'k-Title--italic': italic,
+      })}
       style={{ '--Title-css-color': cssColor }}
       {...other}
     />
