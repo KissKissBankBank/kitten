@@ -45,6 +45,8 @@ var _burgerIcon = require("../../../components/icons/burger-icon");
 
 var _arrowIcon = require("../../../components/icons/arrow-icon");
 
+var _longArrowIcon = require("../../../components/icons/long-arrow-icon");
+
 var _flow = require("./flow");
 
 var ALL_COLS = "(100vw - ".concat((0, _typography.pxToRem)(2 * _gridConfig.CONTAINER_PADDING + (_gridConfig.NUM_COLUMNS - 1) * _gridConfig.GUTTER), ")");
@@ -201,7 +203,14 @@ var DashboardLayout = function DashboardLayout(_ref) {
     "aria-hidden": isDesktop ? null : !isOpen
   }, /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({}, backLinkProps, {
     className: (0, _classnames.default)('k-DashboardLayout__backLink', backLinkProps.className)
+  }), /*#__PURE__*/_react.default.createElement(_longArrowIcon.LongArrowIcon, {
+    "aria-hidden": true,
+    className: "k-u-hidden@m-down",
+    direction: "left",
+    color: _colorsConfig.default.background1
   }), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+    "aria-hidden": true,
+    className: "k-u-hidden@l-up",
     direction: "left",
     color: _colorsConfig.default.background1
   }), /*#__PURE__*/_react.default.createElement("span", {

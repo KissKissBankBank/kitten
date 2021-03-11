@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -13,64 +11,73 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+var _react = _interopRequireDefault(require("react"));
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _react = _interopRequireWildcard(require("react"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
-var Paragraph = /*#__PURE__*/function (_Component) {
-  (0, _inherits2.default)(Paragraph, _Component);
+var _modifierStyles = require("./helpers/modifier-styles");
 
-  var _super = _createSuper(Paragraph);
+var StyledParagraph = _styledComponents.default.p.withConfig({
+  displayName: "paragraph__StyledParagraph",
+  componentId: "sc-1qoa9gz-0"
+})(["", ";&.k-Paragraph--noMargin{margin-top:0;margin-bottom:0;}&.k-Paragraph--normalLineHeight{line-height:normal;}&.k-Paragraph--italic{font-style:italic;}", ""], _typographyConfig.default.fontStyles.light, function (_ref) {
+  var modifier = _ref.modifier;
+  return (0, _modifierStyles.modifierStyles)(modifier);
+});
 
-  function Paragraph() {
-    (0, _classCallCheck2.default)(this, Paragraph);
-    return _super.apply(this, arguments);
-  }
-
-  (0, _createClass2.default)(Paragraph, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          className = _this$props.className,
-          tag = _this$props.tag,
-          modifier = _this$props.modifier,
-          margin = _this$props.margin,
-          normalLineHeight = _this$props.normalLineHeight,
-          italic = _this$props.italic,
-          other = (0, _objectWithoutProperties2.default)(_this$props, ["className", "tag", "modifier", "margin", "normalLineHeight", "italic"]);
-      var paragraphClassNames = (0, _classnames.default)('k-Paragraph', className, "k-Paragraph--".concat(modifier), {
-        'k-Paragraph--withoutMargin': !margin,
-        'k-Paragraph--normalLineHeight': normalLineHeight,
-        'k-Paragraph--italic': italic
-      });
-      var Tag = tag;
-      return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
-        className: paragraphClassNames
-      }, other));
-    }
-  }]);
-  return Paragraph;
-}(_react.Component);
+var Paragraph = function Paragraph(_ref2) {
+  var tag = _ref2.tag,
+      modifier = _ref2.modifier,
+      noMargin = _ref2.noMargin,
+      normalLineHeight = _ref2.normalLineHeight,
+      italic = _ref2.italic,
+      className = _ref2.className,
+      other = (0, _objectWithoutProperties2.default)(_ref2, ["tag", "modifier", "noMargin", "normalLineHeight", "italic", "className"]);
+  return /*#__PURE__*/_react.default.createElement(StyledParagraph, (0, _extends2.default)({
+    as: tag,
+    modifier: modifier,
+    className: (0, _classnames.default)('k-Paragraph', className, {
+      'k-Paragraph--noMargin': noMargin,
+      'k-Paragraph--normalLineHeight': normalLineHeight,
+      'k-Paragraph--italic': italic
+    })
+  }, other));
+};
 
 exports.Paragraph = Paragraph;
 Paragraph.defaultProps = {
   tag: 'p',
   modifier: 'primary',
-  margin: true,
+  noMargin: true,
   normalLineHeight: false,
   italic: false
+};
+Paragraph.propTypes = {
+  tag: _propTypes.default.string,
+
+  /**
+    Title have seven modifiers. With different size depending on the device (`desktop`, `tablet` and `mobile`).
+  */
+  modifier: _propTypes.default.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+
+  /**
+    Remove default margins of `title` attribut.
+  */
+  noMargin: _propTypes.default.bool,
+
+  /**
+    Line-height normal (1.2).
+  */
+  normalLineHeight: _propTypes.default.bool,
+
+  /**
+    Use `font-style: italic`.
+  */
+  italic: _propTypes.default.bool
 };

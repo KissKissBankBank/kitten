@@ -83,7 +83,8 @@ exports.FieldLabel = FieldLabel;
 FieldLabel.propTypes = {
   link: _propTypes.default.node,
   tooltip: _propTypes.default.string,
-  labelProps: _propTypes.default.object
+  labelProps: _propTypes.default.object,
+  tooltipProps: _propTypes.default.object
 };
 FieldLabel.defaultProps = {
   tooltip: null,
