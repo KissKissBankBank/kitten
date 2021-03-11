@@ -1,0 +1,177 @@
+/// A page footer where you can insert an app logo, extra logos, a copyright,
+/// etc.
+///
+/// @group footer
+///
+/// @example scss - usage
+///   @include k-Footer;
+///
+/// @example html
+///   <div class="k-Footer">
+///     <div class="k-Footer__brand">…</div>
+///     <div class="k-Footer__nav">…</div>
+///     <div class="k-Footer__actions">…</div>
+///     <div class="k-Footer__logos">…</div>
+///     <div class="k-Footer__copyright">…</div>
+///   </div>
+@mixin k-Footer {
+  .k-Footer {
+    @include k-grid;
+    margin-top: k-px-to-rem(50px);
+    margin-bottom: k-px-to-rem(30px);
+    text-align: center;
+  }
+
+  .k-Footer__brand {
+    @include k-typographyFont('light');
+    @include k-typographyFontSize(-1);
+
+    @include k-grid-col(12);
+
+    @include k-media-min('s') {
+      @include k-grid-col(4);
+      @include k-grid-offset(4);
+    }
+
+    @include k-media-min('l') {
+      @include k-grid-col(2);
+      @include k-grid-offset(0);
+      text-align: left;
+    }
+  }
+
+  .k-Footer__brand__text {
+    max-width: 12rem;
+    margin: k-px-to-rem(26px) auto k-px-to-rem(30px); // text is centered
+    line-height: 1.4;
+
+    @include k-media-min('l') {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 0; // text is left-aligned
+    }
+  }
+
+  .k-Footer__nav {
+    @include k-grid-col(12);
+
+    @include k-media-min('l') {
+      @include k-grid-col(8);
+      text-align: left;
+    }
+  }
+
+  .k-Footer__nav__container {
+    @include k-grid;
+  }
+
+  .k-Footer__nav__links {
+    margin-top: 0;
+
+    @include k-grid-col(12);
+
+    @include k-media-min('m') {
+      @include k-grid-col(4);
+    }
+  }
+
+  .k-Footer__actions {
+    margin-top: 1rem;
+
+    @include k-grid-col(12);
+
+    @include k-media-min('l') {
+      @include k-grid-col(2);
+      @include k-grid-offset(0);
+    }
+  }
+
+  .k-Footer__actions__select {
+    margin: 0 auto;
+    max-width: 16rem;
+    text-align: left;
+  }
+
+  .k-Footer__logos {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    @include k-grid-col(12);
+
+    @include k-media-min('l') {
+      @include k-grid-col(8);
+    }
+
+    @include k-typographyFont('light');
+    @include k-typographyFontSize(-1, 1.4);
+  }
+
+  .k-Footer__logos__list {
+    @include k-grid;
+  }
+
+  .k-Footer__logo {
+    @include k-grid-col(12);
+
+    @include k-media-min('s') {
+      @include k-grid-col(6);
+    }
+
+    @include k-media-min('l') {
+      display: flex;
+      text-align: left;
+    }
+  }
+
+  .k-Footer__copyright {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    align-self: flex-end;
+
+    @include k-typographyFont('bold');
+    @include k-typographyFontSize(-1);
+
+    @include k-grid-col(12);
+    @include k-media-min('l') {
+      padding-bottom: k-px-to-rem(21px);
+
+      @include k-grid-col(4);
+      text-align: right;
+    }
+  }
+
+  .k-Footer__logo__img {
+    // minimum height and aligns the logos vertically
+    line-height: 4rem;
+
+    margin-bottom: k-px-to-rem(10px);
+
+    > img,
+    > svg {
+      vertical-align: middle;
+    }
+
+
+    @include k-media-min('l') {
+      > img,
+      > svg {
+        display: block;
+        width: 100%;
+        vertical-align: top;
+      }
+
+      margin-bottom: 0;
+      margin-right: 1rem;
+    }
+  }
+
+  .k-Footer__logo__text {
+    margin: 0 auto;
+    max-width: 23rem;
+
+    a {
+      color: inherit;
+    }
+  }
+}

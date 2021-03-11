@@ -1,0 +1,96 @@
+/// Grid
+///
+/// A flexible grid system based on flexbox.
+///
+/// @ignore    +-Grid---------------------------+
+/// @ignore    |+-Grid__col--6-+                |
+/// @ignore    ||              |+-Grid__col--6-+|
+/// @ignore    ||              ||              ||
+/// @ignore    ||              ||              ||
+/// @ignore    ||              |+--------------+|
+/// @ignore    |+--------------+                |
+/// @ignore    +--------------------------------+
+///
+/// @group grid
+///
+/// @example scss - usage
+///
+///     @include k-Grid;
+///
+/// @example html
+///
+///     <div class="k-Grid">
+///       <div class="k-Grid__col--12 k-Grid__col--6@lg">
+///         …
+///       </div>
+///       <div class="k-Grid__col--12 k-Grid__col--6@lg">
+///         …
+///       </div>
+///     </div>
+@mixin k-Grid {
+  $gutter-width: k-map-fetch($k-grid, 'gutter-width');
+
+  // Container row
+  .k-Grid {
+    @include k-grid;
+  }
+
+  // k-Grid__col-1 to k-Grid__col-6 helpers
+  @each $name, $query in $k-media-queries {
+    $min-width: map-get($query, 'min-width');
+
+    // No media query for the smallest media query (xxs), it's the default
+    @if $min-width == null {
+      @include _k-GridCols($name, $min-width);
+    } @else {
+      @media (min-width: $min-width) {
+        @include _k-GridCols($name, $min-width);
+      }
+    }
+  }
+}
+
+// Helper classes for col-1 to col-12, as well as offsets
+@mixin _k-GridCols($media, $min-width) {
+  $number-of-columns: k-map-fetch($k-grid, 'columns');
+
+  %k-col-#{$media} {
+    @include k-grid-colBase;
+  }
+
+  // Columns
+
+  @for $columns from 1 through $number-of-columns {
+    // For the smallest width, do not add breakpoint suffix (@xxs)
+    @if $min-width == null {
+      .k-Grid__col--#{$columns} {
+        @include k-grid-colSize($columns);
+        @extend %k-col-#{$media};
+      }
+
+    // For all other widths, add breakpoint suffixes (@s, @m, @l, …)
+    } @else {
+      .k-Grid__col--#{$columns}\@#{$media} {
+        @include k-grid-colSize($columns);
+        @extend %k-col-#{$media};
+      }
+    }
+  }
+
+  // Offsets
+
+  @for $columns from 0 through $number-of-columns {
+    // For the smallest width, do not add breakpoint suffix (@xxs)
+    @if $min-width == null {
+      .k-Grid__col--offset-#{$columns} {
+        @include k-grid-offset($columns);
+      }
+
+    // For all other widths, add breakpoint suffixes (@s, @m, @l, …)
+    } @else {
+      .k-Grid__col--offset-#{$columns}\@#{$media} {
+        @include k-grid-offset($columns);
+      }
+    }
+  }
+}

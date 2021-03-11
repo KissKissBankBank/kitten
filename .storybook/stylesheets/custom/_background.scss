@@ -1,8 +1,5 @@
 .has-overrides {
   &.dark-background {
-    background-color: k-map-fetch($k-colors, 'font-1');
-  }
-  &.color-background {
-    background-color: var(--bgcolor, k-map-fetch($k-colors, 'primary-4'));
+    background-color:  k-map-fetch($k-colors, 'font-1');
   }
 }
