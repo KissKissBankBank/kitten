@@ -426,9 +426,15 @@ export { usePrevious } from './helpers/utils/use-previous-hook'
 export { stringUtils, upcaseFirst } from './helpers/utils/string'
 export { hexToRgba } from './helpers/utils/hex-to-rgba'
 
-// -------
-// HELPERS
-// -------
+// ---
+// HOC
+// ---
 
 export { default as withLazy } from './hoc/with-lazy'
 export { withMediaQueries, mediaQueries } from './hoc/media-queries'
+
+// ------
+// CONFIG
+// ------
+
+export { getScssPaths } from './config/paths'
