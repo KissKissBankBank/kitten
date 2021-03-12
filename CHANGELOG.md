@@ -46,6 +46,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `withLazy`
   - `withMediaQueries`
   - `mediaQueries`
+  - `getScssPaths`
 
 ## [3.0.0-beta.15] - 2021-03-12
 
