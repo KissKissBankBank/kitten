@@ -6,7 +6,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kYsUiJ k-Title k-Title--noMargin"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="h1"
       style={
         Object {
@@ -35,7 +35,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat hXOnrW"
   >
     <h2
-      className="sc-bdVaJa kytFjT k-Title k-Title--noMargin"
+      className="sc-bdVaJa kytFjT k-Title"
       id="h2"
       style={
         Object {
@@ -50,7 +50,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat hXOnrW"
   >
     <h3
-      className="sc-bdVaJa dfDOea k-Title k-Title--noMargin"
+      className="sc-bdVaJa dfDOea k-Title"
       id="h3"
       style={
         Object {
@@ -65,7 +65,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kYsUiJ k-Title k-Title--noMargin"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="emphasis"
       style={
         Object {
@@ -129,7 +129,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kYsUiJ k-Title k-Title--noMargin"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="list"
       style={
         Object {
@@ -197,7 +197,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kYsUiJ k-Title k-Title--noMargin"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="link"
       style={
         Object {
@@ -245,7 +245,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kYsUiJ k-Title k-Title--noMargin"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="h1"
       style={
         Object {
@@ -274,7 +274,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat hXOnrW"
   >
     <h2
-      className="sc-bdVaJa kytFjT k-Title k-Title--noMargin"
+      className="sc-bdVaJa kytFjT k-Title"
       id="h2"
       style={
         Object {
@@ -289,7 +289,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat hXOnrW"
   >
     <h3
-      className="sc-bdVaJa dfDOea k-Title k-Title--noMargin"
+      className="sc-bdVaJa dfDOea k-Title"
       id="h3"
       style={
         Object {
@@ -304,7 +304,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kYsUiJ k-Title k-Title--noMargin"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="emphasis"
       style={
         Object {
@@ -368,7 +368,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kYsUiJ k-Title k-Title--noMargin"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="list"
       style={
         Object {
@@ -436,7 +436,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kYsUiJ k-Title k-Title--noMargin"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="link"
       style={
         Object {

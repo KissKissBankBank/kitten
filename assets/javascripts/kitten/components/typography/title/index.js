@@ -52,7 +52,7 @@ export const Title = ({
 Title.defaultProps = {
   tag: 'h1',
   modifier: 'primary',
-  noMargin: true,
+  noMargin: false,
   italic: false,
   cssColor: null,
 }
