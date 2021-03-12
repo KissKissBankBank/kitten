@@ -2,7 +2,7 @@
 
 exports[`<HorizontalTimeline /> by default matches with snapshot 1`] = `
 <dl
-  className="sc-bdVaJa eOasLy k-HorizontalTimeline"
+  className="sc-bdVaJa gEUAmR k-HorizontalTimeline"
   style={
     Object {
       "--HorizontalTimeline-columnsCount": 0,
@@ -20,7 +20,7 @@ exports[`<HorizontalTimeline /> by default matches with snapshot 1`] = `
 
 exports[`<HorizontalTimeline /> with HorizontalTimeline.Block and ellipsisColumns prop matches with snapshot 1`] = `
 <dl
-  className="sc-bdVaJa eOasLy k-HorizontalTimeline"
+  className="sc-bdVaJa gEUAmR k-HorizontalTimeline"
   style={
     Object {
       "--HorizontalTimeline-columnsCount": 2,
