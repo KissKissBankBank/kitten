@@ -9,16 +9,20 @@ describe('<SingleEntryTable />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <SingleEntryTable id="SingleEntryTable">
+          <SingleEntryTable id="SingleEntryTable" className="customClass">
             <SingleEntryTable.Header className="customHeaderClass">
-              <SingleEntryTable.HeaderCol>Header 1</SingleEntryTable.HeaderCol>
+              <SingleEntryTable.HeaderCol className="customHeaderColClass">
+                Header 1
+              </SingleEntryTable.HeaderCol>
               <SingleEntryTable.HeaderCol>Header 2</SingleEntryTable.HeaderCol>
               <SingleEntryTable.HeaderCol>Header 3</SingleEntryTable.HeaderCol>
             </SingleEntryTable.Header>
 
             <SingleEntryTable.Body>
               <SingleEntryTable.Row>
-                <SingleEntryTable.Col>Content 1</SingleEntryTable.Col>
+                <SingleEntryTable.Col className="customColClass">
+                  Content 1
+                </SingleEntryTable.Col>
                 <SingleEntryTable.Col>Content 2</SingleEntryTable.Col>
                 <SingleEntryTable.Col>Content 3</SingleEntryTable.Col>
               </SingleEntryTable.Row>
