@@ -2,10 +2,12 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { Styles } from './styles';
 export var DoubleEntryTable = function DoubleEntryTable(_ref) {
   var firstColWidth = _ref.firstColWidth,
-      props = _objectWithoutProperties(_ref, ["firstColWidth"]);
+      className = _ref.className,
+      props = _objectWithoutProperties(_ref, ["firstColWidth", "className"]);
 
   return /*#__PURE__*/React.createElement(Styles, {
     className: "DoubleEntryTable__Container",
@@ -13,7 +15,7 @@ export var DoubleEntryTable = function DoubleEntryTable(_ref) {
   }, /*#__PURE__*/React.createElement("div", {
     className: "DoubleEntryTable__TableContainer"
   }, /*#__PURE__*/React.createElement("table", _extends({
-    className: "DoubleEntryTable__Table"
+    className: classNames('DoubleEntryTable__Table', className)
   }, props))));
 };
 
@@ -33,22 +35,31 @@ DoubleEntryTable.Row = function (props) {
   return /*#__PURE__*/React.createElement("tr", props);
 };
 
-DoubleEntryTable.Col = function (props) {
+DoubleEntryTable.Col = function (_ref3) {
+  var className = _ref3.className,
+      props = _objectWithoutProperties(_ref3, ["className"]);
+
   return /*#__PURE__*/React.createElement("td", _extends({
-    className: "DoubleEntryTable__Column DoubleEntryTable__Column--Col"
+    className: classNames('DoubleEntryTable__Column DoubleEntryTable__Column--Col', className)
   }, props));
 };
 
-DoubleEntryTable.HeaderCol = function (props) {
+DoubleEntryTable.HeaderCol = function (_ref4) {
+  var className = _ref4.className,
+      props = _objectWithoutProperties(_ref4, ["className"]);
+
   return /*#__PURE__*/React.createElement("th", _extends({
-    className: "DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol",
+    className: classNames('DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol', className),
     scope: "column"
   }, props));
 };
 
-DoubleEntryTable.TitleCol = function (props) {
+DoubleEntryTable.TitleCol = function (_ref5) {
+  var className = _ref5.className,
+      props = _objectWithoutProperties(_ref5, ["className"]);
+
   return /*#__PURE__*/React.createElement("th", _extends({
-    className: "DoubleEntryTable__Column DoubleEntryTable__Column--TitleCol",
+    className: classNames('DoubleEntryTable__Column DoubleEntryTable__Column--TitleCol', className),
     scope: "row"
   }, props));
 };
