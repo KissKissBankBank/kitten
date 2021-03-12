@@ -38,7 +38,7 @@ export var Title = function Title(_ref2) {
 Title.defaultProps = {
   tag: 'h1',
   modifier: 'primary',
-  noMargin: true,
+  noMargin: false,
   italic: false,
   cssColor: null
 };
