@@ -16,43 +16,46 @@ const StyledHorizontalTimeline = styled.dl`
   grid-template-columns: [col-start] repeat(var(--HorizontalTimeline-columnsCount), 1fr) [col-end] ${pxToRem(
     18,
   )};
-  grid-template-rows: 1fr [row-center] ${pxToRem(35)} [row-center-end] 1fr;
+  grid-template-rows: 1fr [row-center] ${pxToRem(14)} [row-center-end] 1fr;
+
+  grid-gap: ${pxToRem(10)} 0;
 
   .k-HorizontalTimeline__year, .k-HorizontalTimeline__block {
     padding: 0;
     margin: 0;
   }
 
-  .k-HorizontalTimeline__year:nth-of-type(2n),
-  .k-HorizontalTimeline__block:nth-of-type(2n + 1){
-    grid-row: 1 / 2;
+  .k-HorizontalTimeline__year:nth-of-type(even),
+  .k-HorizontalTimeline__block:nth-of-type(odd){
+    grid-row: 1 / span 1;
     align-self: end;
   }
 
-  .k-HorizontalTimeline__block:nth-of-type(2n),
-  .k-HorizontalTimeline__year:nth-of-type(2n + 1) {
-    grid-row: 3 / 4;
+  .k-HorizontalTimeline__block:nth-of-type(even),
+  .k-HorizontalTimeline__year:nth-of-type(odd) {
+    grid-row: 3 / span 1;
     align-self: start;
   }
 
   .k-HorizontalTimeline__year {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    gap: ${pxToRem(5)};
     align-items: center;
     justify-self: start;
     width: ${pxToRem(50)};
     margin-left: calc((${pxToRem(50)} - ${pxToRem(15)}) / -2);
-    position: relative;
     z-index: 3;
 
     ${TYPOGRAPHY.fontStyles.regular}
     font-size: ${stepToRem(-1)};
   }
-  .k-HorizontalTimeline__year:nth-of-type(2n) {
-    margin-bottom: ${pxToRem(-30)};
+  .k-HorizontalTimeline__year:nth-of-type(even) {
+    flex-direction: column;
+    margin-bottom: ${pxToRem(-24)};
   }
-  .k-HorizontalTimeline__year:nth-of-type(2n + 1) {
-    margin-top: ${pxToRem(-30)};
+  .k-HorizontalTimeline__year:nth-of-type(odd) {
+    margin-top: ${pxToRem(-24)};
     flex-direction: column-reverse;
   }
 
@@ -60,14 +63,13 @@ const StyledHorizontalTimeline = styled.dl`
     content: '';
     width: ${pxToRem(14)};
     height: ${pxToRem(14)};
-    border-radius: ${pxToRem(20)};
+    border-radius: ${pxToRem(14)};
     border: ${pxToRem(4)} solid ${COLORS.primary1};
     display: block;
     grid-row: 2;
     box-sizing: border-box;
     background-color: white;
     box-shadow: 0 0 0 ${pxToRem(3)} white;
-    margin: ${pxToRem(5)} 0;
   }
 
   .k-HorizontalTimeline__year:nth-of-type(1)::after {
@@ -81,8 +83,8 @@ const StyledHorizontalTimeline = styled.dl`
     margin-right: calc(${pxToRem(-15)} - (${pxToRem(50)} - ${pxToRem(15)}) / 2);
   }
 
-  .k-HorizontalTimeline__block:nth-of-type(2n)::before,
-  .k-HorizontalTimeline__block:nth-of-type(2n + 1)::after {
+  .k-HorizontalTimeline__block:nth-of-type(even)::before,
+  .k-HorizontalTimeline__block:nth-of-type(odd)::after {
     content: "";
     display: block;
     height: ${pxToRem(20)};
@@ -91,10 +93,10 @@ const StyledHorizontalTimeline = styled.dl`
     background-color: ${COLORS.primary4};
     margin-left: calc((${pxToRem(16)} - ${pxToRem(2)}) / 2);
   }
-  .k-HorizontalTimeline__block:nth-of-type(2n)::before {
+  .k-HorizontalTimeline__block:nth-of-type(even)::before {
     margin-bottom: ${pxToRem(10)};
   }
-  .k-HorizontalTimeline__block:nth-of-type(2n + 1)::after {
+  .k-HorizontalTimeline__block:nth-of-type(odd)::after {
     margin-top: ${pxToRem(10)};
   }
 
