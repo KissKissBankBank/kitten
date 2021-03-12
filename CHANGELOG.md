@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Revert default value for `Title` margin.
+
 ## [3.0.0-beta.14] - 2021-03-12
 
 Breaking changes:
