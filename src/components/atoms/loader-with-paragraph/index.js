@@ -45,7 +45,7 @@ var LoaderWithParagraph = function LoaderWithParagraph(_ref) {
     className: (0, _classnames.default)('k-LoaderWithParagraph__loader', loaderProps.className)
   })), /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, (0, _extends2.default)({
     modifier: "secondary",
-    margin: false
+    noMargin: true
   }, paragraphProps, {
     className: (0, _classnames.default)('k-LoaderWithParagraph__paragraph', paragraphProps.className)
   }), children));

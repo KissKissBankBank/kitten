@@ -16,6 +16,7 @@ import { getMinQuery } from '../../../helpers/utils/media-queries';
 import { getReactElementsByType, getReactElementsWithoutTypeArray } from '../../../helpers/react/react-elements';
 import { BurgerIcon } from '../../../components/icons/burger-icon';
 import { ArrowIcon } from '../../../components/icons/arrow-icon';
+import { LongArrowIcon } from '../../../components/icons/long-arrow-icon';
 import { Flow } from './flow';
 var ALL_COLS = "(100vw - ".concat(pxToRem(2 * CONTAINER_PADDING + (NUM_COLUMNS - 1) * GUTTER), ")");
 var ONE_COL = "(".concat(ALL_COLS, " / ").concat(NUM_COLUMNS, ")");
@@ -169,7 +170,14 @@ export var DashboardLayout = function DashboardLayout(_ref) {
     "aria-hidden": isDesktop ? null : !isOpen
   }, /*#__PURE__*/React.createElement("a", _extends({}, backLinkProps, {
     className: classNames('k-DashboardLayout__backLink', backLinkProps.className)
+  }), /*#__PURE__*/React.createElement(LongArrowIcon, {
+    "aria-hidden": true,
+    className: "k-u-hidden@m-down",
+    direction: "left",
+    color: COLORS.background1
   }), /*#__PURE__*/React.createElement(ArrowIcon, {
+    "aria-hidden": true,
+    className: "k-u-hidden@l-up",
     direction: "left",
     color: COLORS.background1
   }), /*#__PURE__*/React.createElement("span", {

@@ -543,7 +543,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c6"
     >
       <p
-        className="c7 k-Paragraph k-Paragraph--noMargin"
+        className="c7 k-Paragraph"
       >
         Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. 
       </p>
@@ -855,7 +855,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
       className="c5"
     >
       <p
-        className="c6 k-Paragraph k-Paragraph--noMargin"
+        className="c6 k-Paragraph"
       >
         
       </p>

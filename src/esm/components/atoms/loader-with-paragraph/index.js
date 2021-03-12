@@ -27,7 +27,7 @@ export var LoaderWithParagraph = function LoaderWithParagraph(_ref) {
     className: classNames('k-LoaderWithParagraph__loader', loaderProps.className)
   })), /*#__PURE__*/React.createElement(Paragraph, _extends({
     modifier: "secondary",
-    margin: false
+    noMargin: true
   }, paragraphProps, {
     className: classNames('k-LoaderWithParagraph__paragraph', paragraphProps.className)
   }), children));

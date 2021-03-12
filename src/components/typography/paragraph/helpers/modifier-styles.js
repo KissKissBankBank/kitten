@@ -7,9 +7,9 @@ exports.modifierStyles = void 0;
 
 var _styledComponents = require("styled-components");
 
-var _typography = require("../../../../../helpers/utils/typography");
+var _typography = require("../../../../helpers/utils/typography");
 
-var _screenConfig = require("../../../../../constants/screen-config");
+var _screenConfig = require("../../../../constants/screen-config");
 
 var modifierStyles = function modifierStyles(modifier) {
   var fontStepOnMobile;

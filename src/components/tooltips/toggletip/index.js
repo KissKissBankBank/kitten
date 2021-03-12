@@ -106,6 +106,11 @@ var Toggletip = function Toggletip(_ref2) {
       setBubbleRightLimit = _useState14[1];
 
   var actionElement = (0, _react.useRef)(null);
+  var bubbleClassName = bubbleProps.bubbleClassName,
+      bubbleZIndex = bubbleProps.bubbleZIndex,
+      bubbleColor = bubbleProps.bubbleColor,
+      bubbleStyle = bubbleProps.bubbleStyle,
+      otherBubbleProps = (0, _objectWithoutProperties2.default)(bubbleProps, ["bubbleClassName", "bubbleZIndex", "bubbleColor", "bubbleStyle"]);
   (0, _react.useEffect)(function () {
     if (isHover) {
       setOpen(true);
@@ -201,17 +206,17 @@ var Toggletip = function Toggletip(_ref2) {
     modifier: modifier
   })), /*#__PURE__*/_react.default.createElement("span", {
     role: "status"
-  }, isOpen && /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({}, bubbleProps, {
-    className: (0, _classnames.default)('k-Toggletip__bubble', 'k-u-weight-light', 'k-u-size-tiny', 'k-u-line-height-1-3', bubbleProps.className, {
+  }, isOpen && /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({
+    className: (0, _classnames.default)('k-Toggletip__bubble', 'k-u-weight-light', 'k-u-size-tiny', 'k-u-line-height-1-3', bubbleClassName, {
       'k-Toggletip__bubble--left': bubbleOnLeftSide,
       'k-Toggletip__bubble--lowTop': bubbleLowTop,
       'k-Toggletip__bubble--rightLimit': !bubbleOnLeftSide && bubbleRightLimit
     }),
     style: (0, _extends2.default)({
-      '--toggletipBubble-zIndex': bubbleProps.zIndex || 1,
-      '--toggletipBubble-color': bubbleProps.color || null
-    }, bubbleProps.style)
-  }), children)));
+      '--toggletipBubble-zIndex': bubbleZIndex || 1,
+      '--toggletipBubble-color': bubbleColor || null
+    }, bubbleStyle)
+  }, otherBubbleProps), children)));
 };
 
 exports.Toggletip = Toggletip;

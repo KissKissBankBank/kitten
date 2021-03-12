@@ -4,19 +4,31 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `LongArrowIcon` component.
-- Breaking change: Move `StatusWithBullet` to `atoms`.
-- Feature: Add `warning`, `neutral` and `none` values to `StatusWithBullet` `statusType` prop.
-- Feature: Add `size` and `weight` props to `StatusWithBullet`.
-- Feature: `statusMessage` prop is no longer required, you can now use `children` alternatively in `StatusWithBullet`.
-- Feature: Refactor `AvatarWithTextAndBadge` to CSS-in-JS.
-- Feature: Add `hoverable` prop to `AvatarWithTextAndBadge`.
-- Feature: Add `size` prop to `AvatarWithTextAndBadge.Image`.
-- Feature: Deprecate `textClassName` prop in favor of `className` on `AvatarWithTextAndBadge.Text`.
-- Feature: Add explicit utility class `k-u-pointer-events-none` to `k-utilities-event` mixin.
-- Breaking change: Remove deprecated `DonationCard` and `TextInputWithUnitForm`.
-- Fix: Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
-- Breaking change: `Paragraph` is replaced with `Next` `Paragraph`.
+## [3.0.0-beta.14] - 2021-03-12
+
+Breaking changes:
+
+- Delete the following deprecated components:
+  - `DonationCard`
+  - `TextInputWithUnitForm`
+- `Paragraph` is replaced with `Next` `Paragraph`.
+- Move `StatusWithBullet` to `atoms`.
+
+Features:
+
+- Refactor `AvatarWithTextAndBadge` to CSS-in-JS.
+- Add `LongArrowIcon` component.
+- Add `warning`, `neutral` and `none` values to `StatusWithBullet` `statusType` prop.
+- Add `size` and `weight` props to `StatusWithBullet`.
+- `statusMessage` prop is no longer required, you can now use `children` alternatively in `StatusWithBullet`.
+- Add `hoverable` prop to `AvatarWithTextAndBadge`.
+- Add `size` prop to `AvatarWithTextAndBadge.Image`.
+- Deprecate `textClassName` prop in favor of `className` on `AvatarWithTextAndBadge.Text`.
+- Add explicit utility class `k-u-pointer-events-none` to `k-utilities-event` mixin.
+
+Fix:
+
+- Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
 
 
 ## [3.0.0-beta.13] - 2021-03-11
