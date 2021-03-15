@@ -71,7 +71,8 @@ export const GridCol = ({ className, ...props }) => {
 
       return classNames(classNamesByMediaQuery, {
         [`k-Grid__col--${col}-${mediaQuery}`]: col,
-        [`k-Grid__col--offset-${offset}-${mediaQuery}`]: offset,
+        [`k-Grid__col--offset-${offset}-${mediaQuery}`]:
+          !!offset || offset === 0,
       })
     })
 

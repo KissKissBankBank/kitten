@@ -83,10 +83,12 @@ const StyledWrapper = styled.div`
   }
 
   .k-Avatar__text--hasEllipsis {
-    max-width: 100%;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    &, & * {
+      max-width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
   }
 
   .k-Avatar--big {
