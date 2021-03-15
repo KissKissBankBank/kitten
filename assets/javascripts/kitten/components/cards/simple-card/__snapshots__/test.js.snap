@@ -5,11 +5,11 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
   className="sc-EHOje ftnBiB k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="sc-bwzfXH gFuBrN sc-htpNat fRcPmS k-Card__imageContainer k-SimpleCard__imageContainer"
+    className="sc-bwzfXH dgLGwV sc-htpNat jKPJTa k-SimpleCard__imageContainer"
   >
     <img
       alt=""
-      className="k-Card__image k-SimpleCard__image"
+      className="k-SimpleCard__image"
       src=""
     />
   </div>
@@ -21,11 +21,11 @@ exports[`<SimpleCard /> with imageContainerRatio props matches with snapshot 1`]
   className="sc-EHOje ftnBiB k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="sc-bwzfXH ydIsS sc-htpNat fRcPmS k-Card__imageContainer k-SimpleCard__imageContainer k-SimpleCard__imageContainer--ratio"
+    className="sc-bwzfXH dTtCto sc-htpNat jKPJTa k-SimpleCard__imageContainer k-SimpleCard__imageContainer--ratio"
   >
     <img
       alt=""
-      className="k-Card__image k-SimpleCard__image"
+      className="k-SimpleCard__image"
       src=""
     />
   </div>
@@ -37,13 +37,13 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
   className="sc-EHOje ftnBiB k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="sc-bwzfXH gFuBrN sc-htpNat fRcPmS k-Card__imageContainer k-SimpleCard__imageContainer"
+    className="sc-bwzfXH dgLGwV sc-htpNat jKPJTa k-SimpleCard__imageContainer"
   >
     <div
       className="k-SimpleCard__playerButton"
       style={
         Object {
-          "--k-SimpleCard-player-button-size": "4.375rem",
+          "--SimpleCard-player-button-size": "4.375rem",
         }
       }
     >
@@ -55,7 +55,7 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
     </div>
     <img
       alt=""
-      className="k-Card__image k-SimpleCard__image"
+      className="k-SimpleCard__image"
       src=""
     />
   </div>
@@ -67,11 +67,11 @@ exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
   className="sc-EHOje ftnBiB k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="sc-bwzfXH gFuBrN sc-htpNat fRcPmS k-Card__imageContainer k-SimpleCard__imageContainer"
+    className="sc-bwzfXH dgLGwV sc-htpNat jKPJTa k-SimpleCard__imageContainer"
   >
     <img
       alt=""
-      className="k-Card__image k-SimpleCard__image"
+      className="k-SimpleCard__image"
       src=""
     />
   </div>

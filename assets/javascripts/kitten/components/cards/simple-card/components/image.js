@@ -11,12 +11,16 @@ const StyledImageContainer = styled(Marger)`
   position: relative;
   transition: opacity ease 600ms, z-index ease 600ms;
   z-index: 1;
-  background-color: var(--k-SimpleCard-image-container-background);
+  background-color: var(--SimpleCard-image-container-background);
+
+  &.k-SimpleCard__imageContainer {
+    overflow: hidden;
+  }
 
   &.k-SimpleCard__imageContainer--ratio {
     overflow: hidden;
     position: relative;
-    padding-top: calc(100% / calc(var(--k-SimpleCard-image-container-ratio)));
+    padding-top: calc(100% / calc(var(--SimpleCard-image-container-ratio)));
 
     & > img {
       position: absolute;
@@ -27,12 +31,12 @@ const StyledImageContainer = styled(Marger)`
   }
 
   .k-SimpleCard__playerButton {
-    width: var(--k-SimpleCard-player-button-size);
-    height: var(--k-SimpleCard-player-button-size);
+    width: var(--SimpleCard-player-button-size);
+    height: var(--SimpleCard-player-button-size);
     background: ${COLORS.font1};
     position: absolute;
-    top: calc(50% - var(--k-SimpleCard-player-button-size) / 2);
-    left: calc(50% - var(--k-SimpleCard-player-button-size) / 2);
+    top: calc(50% - var(--SimpleCard-player-button-size) / 2);
+    left: calc(50% - var(--SimpleCard-player-button-size) / 2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,6 +46,7 @@ const StyledImageContainer = styled(Marger)`
   .k-SimpleCard__image {
     width: 100%;
     display: block;
+    transition: transform .4s ease-in-out;
   }
 `
 
@@ -60,22 +65,21 @@ export const Image = ({
     <StyledImageContainer
       bottom="2"
       className={classNames(
-        "k-Card__imageContainer",
         "k-SimpleCard__imageContainer",
         className,
         { 'k-SimpleCard__imageContainer--ratio': imageContainerRatio },
       )}
       style={{
         ...style,
-        '--k-SimpleCard-image-container-background': imageContainerBackground,
-        '--k-SimpleCard-image-container-ratio': imageContainerRatio,
+        '--SimpleCard-image-container-background': imageContainerBackground,
+        '--SimpleCard-image-container-ratio': imageContainerRatio,
       }}
     >
       {withPlayerButtonOnImage && (
         <div
           className="k-SimpleCard__playerButton"
           style={{
-            '--k-SimpleCard-player-button-size': pxToRem(playerButtonSize),
+            '--SimpleCard-player-button-size': pxToRem(playerButtonSize),
           }}
         >
           <Text
@@ -93,7 +97,6 @@ export const Image = ({
         {...imageProps}
         alt={imageProps.alt || ''}
         className={classNames(
-          "k-Card__image",
           "k-SimpleCard__image",
         )}
       />
