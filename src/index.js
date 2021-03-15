@@ -773,6 +773,12 @@ Object.defineProperty(exports, "Timeline", {
     return _timeline.Timeline;
   }
 });
+Object.defineProperty(exports, "HorizontalTimeline", {
+  enumerable: true,
+  get: function get() {
+    return _horizontalTimeline.HorizontalTimeline;
+  }
+});
 Object.defineProperty(exports, "LoaderWithParagraph", {
   enumerable: true,
   get: function get() {
@@ -2063,6 +2069,8 @@ var _navList = require("./components/lists/nav-list");
 var _tagList = require("./components/lists/tag-list");
 
 var _timeline = require("./components/lists/timeline");
+
+var _horizontalTimeline = require("./components/lists/horizontal-timeline");
 
 var _loaderWithParagraph = require("./components/loaders/loader-with-paragraph");
 
