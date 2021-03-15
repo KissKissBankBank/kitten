@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Fix ellipsis for children of `AvaratWithTextAndBadge`.
+- Fix: Fix alignment on `HeaderNav` `UserMenuButton`.
+- Fix: Fix `GridCol` offset class for `0` value.
 
 ## [3.0.0-beta.15] - 2021-03-12
 
