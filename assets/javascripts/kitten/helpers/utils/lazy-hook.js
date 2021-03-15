@@ -3,9 +3,10 @@ import LazyObserver from './lazy-observer'
 
 const useLazyObserver = lazyComponentRef => {
   const [withLazyObserver, setLazyObserver] = useState(false)
-  const hasNoRef = !lazyComponentRef?.current
 
   useEffect(() => {
+    const hasNoRef = !lazyComponentRef?.current
+
     if (hasNoRef) {
       console.warn(
         'lazyComponentRef.current does not exist, useLazyObserver will return true',

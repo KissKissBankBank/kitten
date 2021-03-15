@@ -6,7 +6,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="sc-htpNat eoyQWy k-Line k-Line--noGap"
+      className="sc-htpNat cEJbdw k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -58,7 +58,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="sc-htpNat eoyQWy k-Line k-Line--noGap"
+      className="sc-htpNat cEJbdw k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -92,6 +92,7 @@ Array [
           }
         >
           <button
+            aria-label="Learn more"
             className="k-Toggletip__action k-u-reset-button"
             onBlur={[Function]}
             onClick={[Function]}
@@ -156,7 +157,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="sc-htpNat eoyQWy k-Line k-Line--noGap"
+      className="sc-htpNat cEJbdw k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -190,6 +191,7 @@ Array [
           }
         >
           <button
+            aria-label="Learn more"
             className="k-Toggletip__action k-u-reset-button"
             onBlur={[Function]}
             onClick={[Function]}
@@ -240,7 +242,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="sc-htpNat eoyQWy k-Line k-Line--noGap"
+      className="sc-htpNat cEJbdw k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -274,6 +276,7 @@ Array [
           }
         >
           <button
+            aria-label="Learn more"
             className="k-Toggletip__action k-u-reset-button"
             onBlur={[Function]}
             onClick={[Function]}
@@ -367,7 +370,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="sc-htpNat eoyQWy k-Line k-Line--noGap"
+      className="sc-htpNat cEJbdw k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -401,6 +404,7 @@ Array [
           }
         >
           <button
+            aria-label="Learn more"
             className="k-Toggletip__action k-u-reset-button"
             onBlur={[Function]}
             onClick={[Function]}
@@ -480,7 +484,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="sc-htpNat eoyQWy k-Line k-Line--noGap"
+      className="sc-htpNat cEJbdw k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -586,7 +590,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="sc-htpNat eoyQWy k-Line k-Line--noGap"
+      className="sc-htpNat cEJbdw k-Line"
       style={
         Object {
           "lineHeight": 1,

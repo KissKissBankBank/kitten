@@ -20,10 +20,10 @@ import {
   getReactElementsByType,
   getReactElementsWithoutTypeArray,
 } from '../../../helpers/react/react-elements'
-import { useFlexGapCheck } from '../../../helpers/dom/use-flex-gap-check'
 
 import { BurgerIcon } from '../../../components/icons/burger-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import { LongArrowIcon } from '../../../components/icons/long-arrow-icon'
 
 import { Flow } from './flow'
 
@@ -102,7 +102,10 @@ const StyledDashboard = styled.div`
         padding: ${pxToRem(30)};
         display: flex;
         flex-direction: column;
-        gap: ${pxToRem(30)};
+
+        & > :not(:last-child) {
+          margin-bottom: ${pxToRem(30)};
+        }
 
         .k-DashboardLayout__backLink {
           flex: 0 0 ${pxToRem(40)};
@@ -235,15 +238,17 @@ const StyledDashboard = styled.div`
         position: sticky;
         top: 0;
         overflow: scroll;
-        gap: ${pxToRem(30)};
         padding: ${pxToRem(30)};
+
+        & > :not(:last-child) {
+          margin-bottom: ${pxToRem(30)};
+        }
 
         .k-DashboardLayout__backLink {
           flex: 0 0 auto;
           align-self: start;
           display: inline-flex;
           align-items: center;
-          gap: ${pxToRem(15)};
           color: ${COLORS.background1};
           transition: color .2s ease;
           ${TYPOGRAPHY.fontStyles.regular}
@@ -258,7 +263,12 @@ const StyledDashboard = styled.div`
           &:hover {
             color: ${COLORS.primary1};
           }
+
+          .k-DashboardLayout__backLink__text {
+            margin-left: ${pxToRem(15)};
+          }
         }
+
 
         .k-DashboardLayout__heading {
           flex: 0 1 auto;
@@ -330,18 +340,6 @@ const StyledDashboard = styled.div`
       outline: ${pxToRem(2)} solid ${COLORS.primary4};
     }
   }
-
-  .k-DashboardLayout--noGap {
-    .k-DashboardLayout__sideWrapper > :not(:last-child) {
-      margin-bottom: ${pxToRem(30)};
-    }
-
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      .k-DashboardLayout__backLink__text {
-        margin-left: ${pxToRem(15)};
-      }
-    }
-  }
 `
 
 export const DashboardLayout = ({
@@ -356,7 +354,6 @@ export const DashboardLayout = ({
   const [touchCoords, setTouchCoords] = useState([])
   const sideBarElement = useRef(null)
   const contentElement = useRef(null)
-  const canUseGap = useFlexGapCheck()
 
   const renderComponentChildrenArray = (childrenArray, otherProps) => {
     return childrenArray.map(child => {
@@ -466,7 +463,6 @@ export const DashboardLayout = ({
       <div
         className={classNames('k-DashboardLayout', props.className, {
           'k-DashboardLayout--isOpen': isOpen,
-          'k-DashboardLayout--noGap': !canUseGap,
         })}
       >
         <a className="k-DashboardLayout__quickAccessLink" href="#main">
@@ -485,7 +481,18 @@ export const DashboardLayout = ({
               backLinkProps.className,
             )}
           >
-            <ArrowIcon direction="left" color={COLORS.background1} />
+            <LongArrowIcon
+              aria-hidden
+              className="k-u-hidden@m-down"
+              direction="left"
+              color={COLORS.background1}
+            />
+            <ArrowIcon
+              aria-hidden
+              className="k-u-hidden@l-up"
+              direction="left"
+              color={COLORS.background1}
+            />
             <span className="k-DashboardLayout__backLink__text">
               {backLinkProps.children}
             </span>

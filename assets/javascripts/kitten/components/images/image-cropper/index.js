@@ -3,12 +3,11 @@ import classNames from 'classnames'
 import Cropper from 'react-cropper'
 import getOr from 'lodash/fp/getOr'
 import { Label } from '../../../components/form/label'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 import { BasicUploader } from '../../../components/uploaders/basic-uploader'
 import { RangeSlider } from '../../../components/form/range-slider'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
 import { StyledCropper } from './styles'
-import { useFlexGapCheck } from '../../../helpers/dom/use-flex-gap-check'
 
 export const ImageCropper = ({
   imageSrc,
@@ -42,7 +41,6 @@ export const ImageCropper = ({
   const [initialSliderValue, setInitialSliderValue] = useState(0)
   const [uploadedFile, setUploadedFile] = useState(null)
   const [resultData, setResultData] = useState(null)
-  const canUseGap = useFlexGapCheck()
 
   useEffect(() => {
     if (cropperInstance && cropperInstance.imageData.naturalWidth) {
@@ -95,11 +93,7 @@ export const ImageCropper = ({
   }, [resultData, fileNameState, uploadedFile])
   const dragMode = disabled || !isCropEnabled ? 'none' : 'move'
   return (
-    <StyledCropper
-      className={classNames('k-UploadAndCropper', className, {
-        'k-UploadAndCropper--noGap': !canUseGap,
-      })}
-    >
+    <StyledCropper className={classNames('k-UploadAndCropper', className)}>
       <Label
         size="tiny"
         htmlFor={name}
@@ -150,15 +144,9 @@ export const ImageCropper = ({
           })
         }}
       />
-
-      <Paragraph
-        modifier="quaternary"
-        margin={false}
-        className="k-u-margin-top-single"
-      >
+      <Paragraph modifier="tertiary" noMargin className="k-u-margin-top-single">
         {description}
       </Paragraph>
-
       <div
         className="k-Cropper__wrapper k-u-margin-top-double"
         aria-live="polite"
@@ -199,8 +187,8 @@ export const ImageCropper = ({
             {isCropEnabled && !disabled && (
               <div className="k-Cropper__wrapper__slider">
                 <Paragraph
-                  modifier="quaternary"
-                  margin={false}
+                  modifier="tertiary"
+                  noMargin
                   className="k-u-margin-bottom-singleHalf"
                 >
                   {cropperInfo}
