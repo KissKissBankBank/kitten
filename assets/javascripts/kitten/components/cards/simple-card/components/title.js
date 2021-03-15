@@ -30,7 +30,7 @@ export const Title = ({
 
 Title.propTypes = {
   title: PropTypes.string,
-  titleProps: PropTypes.shape(),
+  titleProps: PropTypes.object,
 }
 
 Title.defaultProps = {
