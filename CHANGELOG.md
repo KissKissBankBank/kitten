@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [2.124.0] - 2021-03-15
+## [2.125.0] - 2021-03-15
 
 Feature:
 
