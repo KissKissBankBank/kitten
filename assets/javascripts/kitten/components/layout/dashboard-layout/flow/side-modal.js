@@ -188,8 +188,7 @@ const MobileAsideComponent = ({
 }
 
 export const MobileAside = props => {
-  const bodyElement =
-    domElementHelper.canUseDom() && document.querySelector('#root')
+  const bodyElement = domElementHelper.canUseDom() && document.body
 
   return bodyElement
     ? ReactDOM.createPortal(<MobileAsideComponent {...props} />, bodyElement)
