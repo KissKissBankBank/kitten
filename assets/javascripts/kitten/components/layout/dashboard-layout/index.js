@@ -23,6 +23,7 @@ import {
 
 import { BurgerIcon } from '../../../components/icons/burger-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import { LongArrowIcon } from '../../../components/icons/long-arrow-icon'
 
 import { Flow } from './flow'
 
@@ -36,6 +37,7 @@ const SIX_COLS = `(${ALL_COLS} / 2 + ${pxToRem(
 
 const StyledDashboard = styled.div`
   position: relative;
+  overscroll-behavior: none;
 
   * {
     box-sizing: border-box;
@@ -100,7 +102,10 @@ const StyledDashboard = styled.div`
         padding: ${pxToRem(30)};
         display: flex;
         flex-direction: column;
-        gap: ${pxToRem(30)};
+
+        & > :not(:last-child) {
+          margin-bottom: ${pxToRem(30)};
+        }
 
         .k-DashboardLayout__backLink {
           flex: 0 0 ${pxToRem(40)};
@@ -126,6 +131,7 @@ const StyledDashboard = styled.div`
       }
 
       .k-DashboardLayout__mainWrapper {
+        background-color: ${COLORS.background1};
         width: calc(100vw + ${pxToRem(2)});
         display: flex;
         align-items: stretch;
@@ -161,8 +167,6 @@ const StyledDashboard = styled.div`
           position: relative;
           margin-left: ${pxToRem(2)};
           flex: 1 0 auto;
-          padding-top: ${pxToRem(80)};
-          padding-bottom: ${pxToRem(80)};
 
           &::before {
             content: "";
@@ -176,6 +180,11 @@ const StyledDashboard = styled.div`
             pointer-events: none;
             z-index: 100;
             transition: background-color .2s ease-in-out, opacity .2s ease-in-out;
+          }
+
+          &:not(.k-DashboardLayout__main--fullHeight) {
+            padding-top: ${pxToRem(80)};
+            padding-bottom: ${pxToRem(80)};
           }
 
           > *:not(.k-DashboardLayout__fullWidth) {
@@ -207,7 +216,10 @@ const StyledDashboard = styled.div`
           padding-right: ${pxToRem(CONTAINER_PADDING_THIN)};
         }
         .k-DashboardLayout__main {
-          padding-top: ${pxToRem(50)};
+          &:not(.k-DashboardLayout__main--fullHeight) {
+            padding-top: ${pxToRem(50)};
+            padding-bottom: ${pxToRem(50)};
+          }
         }
       }
     }
@@ -226,15 +238,17 @@ const StyledDashboard = styled.div`
         position: sticky;
         top: 0;
         overflow: scroll;
-        gap: ${pxToRem(30)};
         padding: ${pxToRem(30)};
+
+        & > :not(:last-child) {
+          margin-bottom: ${pxToRem(30)};
+        }
 
         .k-DashboardLayout__backLink {
           flex: 0 0 auto;
           align-self: start;
           display: inline-flex;
           align-items: center;
-          gap: ${pxToRem(15)};
           color: ${COLORS.background1};
           transition: color .2s ease;
           ${TYPOGRAPHY.fontStyles.regular}
@@ -249,7 +263,12 @@ const StyledDashboard = styled.div`
           &:hover {
             color: ${COLORS.primary1};
           }
+
+          .k-DashboardLayout__backLink__text {
+            margin-left: ${pxToRem(15)};
+          }
         }
+
 
         .k-DashboardLayout__heading {
           flex: 0 1 auto;
@@ -263,13 +282,17 @@ const StyledDashboard = styled.div`
       }
 
       .k-DashboardLayout__mainWrapper {
+        background-color: ${COLORS.background1};
+
         .k-DashboardLayout__heading {
           display: none;
         }
 
         .k-DashboardLayout__main {
-          padding-top: ${pxToRem(80)};
-          padding-bottom: ${pxToRem(80)};
+          &:not(.k-DashboardLayout__main--fullHeight) {
+            padding-top: ${pxToRem(80)};
+            padding-bottom: ${pxToRem(80)};
+          }
 
           > *:not(.k-DashboardLayout__fullWidth) {
             margin-left: 10%;
@@ -284,6 +307,13 @@ const StyledDashboard = styled.div`
   @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
     .k-DashboardLayout {
       grid-template-columns: ${pxToRem(385)} 1fr;
+    }
+  }
+
+  .k-DashboardLayout__sideWrapper,
+  .k-DashboardLayout__mainWrapper {
+    &:focus {
+      outline: ${pxToRem(2)} solid ${COLORS.primary4};
     }
   }
 
@@ -310,18 +340,6 @@ const StyledDashboard = styled.div`
       outline: ${pxToRem(2)} solid ${COLORS.primary4};
     }
   }
-  /* FIX AvatarWithTextAndBadge */
-
-  .text--withEllipsis {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  .k-ButtonImageWithText__text {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 `
 
 export const DashboardLayout = ({
@@ -329,6 +347,7 @@ export const DashboardLayout = ({
   backLinkProps,
   buttonProps,
   quickAccessLinkText,
+  fullHeightContent,
   ...props
 }) => {
   const [isOpen, setOpen] = useState(false)
@@ -336,7 +355,7 @@ export const DashboardLayout = ({
   const sideBarElement = useRef(null)
   const contentElement = useRef(null)
 
-  const renderComponentArray = (childrenArray, otherProps) => {
+  const renderComponentChildrenArray = (childrenArray, otherProps) => {
     return childrenArray.map(child => {
       if (!child || !child.props) return null
 
@@ -352,6 +371,25 @@ export const DashboardLayout = ({
         : React.cloneElement(child, otherProps)
     })
   }
+
+  const renderComponentArray = (childrenArray, otherProps) => {
+    return childrenArray.map((child, index) => {
+      if (!child) return null
+
+      return isFunction(child)
+        ? child({
+            openSideBar: () => setOpen(true),
+            closeSideBar: () => setOpen(false),
+            isSidebarOpen: isOpen,
+            ...otherProps,
+          })
+        : React.cloneElement(child, {
+            key: `content_child_${index}`,
+            ...otherProps,
+          })
+    })
+  }
+
   const isDesktop = useMedia({
     queries: [getMinQuery(ScreenConfig.L.min)],
     values: [true],
@@ -432,7 +470,7 @@ export const DashboardLayout = ({
         </a>
         <div
           ref={sideBarElement}
-          tabIndex={0}
+          tabIndex={-1}
           className="k-DashboardLayout__sideWrapper"
           aria-hidden={isDesktop ? null : !isOpen}
         >
@@ -443,26 +481,37 @@ export const DashboardLayout = ({
               backLinkProps.className,
             )}
           >
-            <ArrowIcon direction="left" color={COLORS.background1} />
+            <LongArrowIcon
+              aria-hidden
+              className="k-u-hidden@m-down"
+              direction="left"
+              color={COLORS.background1}
+            />
+            <ArrowIcon
+              aria-hidden
+              className="k-u-hidden@l-up"
+              direction="left"
+              color={COLORS.background1}
+            />
             <span className="k-DashboardLayout__backLink__text">
               {backLinkProps.children}
             </span>
           </a>
-          {renderComponentArray(
+          {renderComponentChildrenArray(
             getReactElementsByType({
               children: children,
               type: Header,
             }),
           )}
 
-          {renderComponentArray(
+          {renderComponentChildrenArray(
             getReactElementsByType({
               children: children,
               type: SideContent,
             }),
           )}
 
-          {renderComponentArray(
+          {renderComponentChildrenArray(
             getReactElementsByType({
               children: children,
               type: SideFooter,
@@ -471,10 +520,10 @@ export const DashboardLayout = ({
         </div>
         <div
           ref={contentElement}
-          tabIndex={0}
+          tabIndex={-1}
           className="k-DashboardLayout__mainWrapper"
         >
-          {renderComponentArray(
+          {renderComponentChildrenArray(
             getReactElementsByType({
               children: children,
               type: Header,
@@ -490,7 +539,12 @@ export const DashboardLayout = ({
             },
           )}
 
-          <main className="k-DashboardLayout__main" id="main">
+          <main
+            className={classNames('k-DashboardLayout__main', {
+              'k-DashboardLayout__main--fullHeight': fullHeightContent,
+            })}
+            id="main"
+          >
             {renderComponentArray(
               getReactElementsWithoutTypeArray({
                 children,
@@ -563,6 +617,7 @@ DashboardLayout.propTypes = {
     closeLabel: PropTypes.node.isRequired,
   }),
   quickAccessLinkText: PropTypes.node.isRequired,
+  fullHeightContent: PropTypes.bool,
 }
 
 Header.propTypes = {

@@ -8,6 +8,10 @@ export { Accordeon } from './components/accordeon'; // Atoms
 
 export { Badge } from './components/atoms/badge';
 export { IconBadge } from './components/atoms/icon-badge';
+export { Loader } from './components/atoms/loader';
+export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph';
+export { StatusWithBullet } from './components/atoms/status-with-bullet';
+export { StepperIcon, StepperIconDefault, StepperIconInProgress, StepperIconValidated } from './components/atoms/stepper-icon';
 export { Tag } from './components/atoms/tag'; // Avatar
 
 export { AvatarWithTextAndBadge } from './components/avatar/avatar-with-text-and-badge'; // Box
@@ -33,7 +37,6 @@ export { SimpleCard } from './components/cards/simple-card';
 export { BackerCard } from './components/cards/backer-card';
 export { BackingCard } from './components/cards/backing-card';
 export { CartRewardCard } from './components/cards/cart-reward-card';
-export { DonationCard } from './components/cards/donation-card';
 export { RewardEdition } from './components/cards/reward-edition';
 export { TeamCard } from './components/cards/team-card';
 export { Triptych } from './components/cards/triptych';
@@ -85,7 +88,6 @@ export { RichTextInput } from './components/form/rich-text-input';
 export { SelectWithState } from './components/form/select-with-state';
 export { TextInputAndSelect } from './components/form/text-input-and-select';
 export { TextInputWithLimit } from './components/form/text-input-with-limit';
-export { TextInputWithUnitForm } from './components/form/text-input-with-unit-form';
 export { TextInputWithUnit } from './components/form/text-input-with-unit';
 export { TextInput } from './components/form/text-input';
 export { ToggleSwitch } from './components/form/toggle-switch'; // Grid
@@ -96,7 +98,7 @@ export { Grid, GridCol } from './components/grid/grid';
 export { Row } from './components/grid/row';
 export { SideGrid } from './components/grid/side-grid';
 export { StickyContainer } from './components/grid/sticky-container';
-export { AdaptableGrid } from './components/grid/adaptable-grid'; // Heroes
+export { AdaptableGrid, AdaptableGridCol } from './components/grid/adaptable-grid'; // Heroes
 
 export { Hero } from './components/heroes/hero'; // Images
 
@@ -121,10 +123,7 @@ export { IconList } from './components/lists/icon-list';
 export { BulletList } from './components/lists/bullet-list';
 export { List } from './components/lists/list';
 export { CheckList } from './components/lists/check-list';
-export { Timeline } from './components/lists/timeline'; // Loaders
-
-export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph';
-export { Loader } from './components/loaders/loader'; // Menus
+export { Timeline } from './components/lists/timeline'; // Menus
 
 export { DashboardMenu } from './components/menus/dashboard-menu';
 export { HeaderMenu } from './components/menus/header-menu'; // Meters
@@ -148,12 +147,9 @@ export { MarkdownPage } from './components/pages/markdown'; // Popovers
 
 export { SimplePopover } from './components/popovers/simple-popover'; // Search
 
-export { SearchInput } from './components/search/search-input'; // Status with Bullet
-
-export { StatusWithBullet } from './components/status-with-bullet'; // Steppers
+export { SearchInput } from './components/search/search-input'; // Steppers
 
 export { VerticalStepper } from './components/steppers/vertical-stepper';
-export { StepperIconDefault, StepperIconInProgress, StepperIconValidated } from './components/steppers/stepper-icon';
 export { Stepper } from './components/steppers/stepper'; // Tables
 
 export { DoubleEntryTable } from './components/tables/double-entry-table';
@@ -162,11 +158,7 @@ export { SingleEntryTable } from './components/tables/single-entry-table'; // Te
 
 export { TextCopy } from './components/text-copy'; // Tooltips
 
-export { QuestionMarkWithTooltip } from './components/tooltips/question-mark-with-tooltip';
-export { StaticTooltip } from './components/tooltips/static-tooltip';
-export { Toggletip } from './components/tooltips/toggletip';
-export { TooltipNew } from './components/tooltips/tooltip-new';
-export { Tooltip } from './components/tooltips/tooltip'; // Tours
+export { Toggletip } from './components/tooltips/toggletip'; // Tours
 
 export { HighlightHalo } from './components/tours/highlight-halo'; // Typography
 
@@ -189,6 +181,7 @@ export { AlignCenterIcon } from './components/icons/align-center-icon';
 export { AlignLeftIcon } from './components/icons/align-left-icon';
 export { AlignRightIcon } from './components/icons/align-right-icon';
 export { ArrowIcon } from './components/icons/arrow-icon';
+export { LongArrowIcon } from './components/icons/long-arrow-icon';
 export { BancontactIcon } from './components/icons/bancontact-icon';
 export { BlockquoteIcon } from './components/icons/blockquote-icon';
 export { BoldIcon } from './components/icons/bold-icon';
@@ -274,7 +267,10 @@ export { HomeIcon } from './components/icons/home-icon';
 export { TagIcon } from './components/icons/tag-icon';
 export { FileIcon } from './components/icons/file-icon';
 export { LoudspeakerIcon } from './components/icons/loudspeaker-icon';
-export { ShieldIcon } from './components/icons/shield-icon'; // ---------
+export { ShieldIcon } from './components/icons/shield-icon';
+export { PeopleIcon } from './components/icons/people-icon';
+export { StatsIcon } from './components/icons/stats-icon';
+export { SpeechBubbleIcon } from './components/icons/speech-bubble-icon'; // ---------
 // CONSTANTS
 // ---------
 

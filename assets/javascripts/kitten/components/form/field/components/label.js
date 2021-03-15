@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../layout/marger'
 import { Label } from '../../../form/label'
-import { Tooltip } from '../../../tooltips/tooltip'
+import { Toggletip } from '../../../tooltips/toggletip'
 import { Line } from '../../../layout/line'
 
 export class FieldLabel extends Component {
@@ -10,6 +10,7 @@ export class FieldLabel extends Component {
     link: PropTypes.node,
     tooltip: PropTypes.string,
     labelProps: PropTypes.object,
+    tooltipProps: PropTypes.object,
   }
 
   static defaultProps = {
@@ -22,6 +23,7 @@ export class FieldLabel extends Component {
       children,
       tooltip,
       tooltipId,
+      tooltipProps,
       labelProps,
       link,
       ...others
@@ -38,7 +40,13 @@ export class FieldLabel extends Component {
 
           {tooltip && (
             <Line.Item>
-              <Tooltip id={tooltipId}>{tooltip}</Tooltip>
+              <Toggletip
+                id={tooltipId}
+                bubbleProps={{ zIndex: 2 }}
+                {...tooltipProps}
+              >
+                {tooltip}
+              </Toggletip>
             </Line.Item>
           )}
 

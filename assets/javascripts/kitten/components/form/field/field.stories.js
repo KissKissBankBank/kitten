@@ -34,6 +34,7 @@ export const WithInput = () => {
         tiny={boolean('Tiny', false)}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
+        tooltipProps={{ actionLabel: 'Learn more' }}
         tooltipId={text('Tooltip ID', 'tooltip')}
         placeholder={text('Placeholder', 'Placeholder…')}
         error={boolean('Error?', false)}
@@ -53,6 +54,7 @@ export const WithPassword = () => {
         tiny={boolean('Tiny', false)}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
+        tooltipProps={{ actionLabel: 'Learn more' }}
         tooltipId={text('Tooltip ID', 'tooltip')}
         placeholder={text('Placeholder', 'Placeholder…')}
         error={boolean('Error?', false)}
@@ -70,6 +72,7 @@ export const WithRadioButtons = () => {
         tiny={boolean('Tiny', false)}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
+        tooltipProps={{ actionLabel: 'Learn more' }}
         tooltipId={text('Tooltip ID', 'tooltip')}
         items={[
           {
@@ -101,6 +104,7 @@ export const WithSelect = () => {
         tiny={boolean('Tiny', false)}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
+        tooltipProps={{ actionLabel: 'Learn more' }}
         tooltipId={text('Tooltip ID', 'tooltip')}
         placeholder={text('Placeholder', 'Select…')}
         options={[
@@ -123,6 +127,7 @@ export const WithAutocomplete = () => {
         tiny={boolean('Tiny', false)}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
+        tooltipProps={{ actionLabel: 'Learn more' }}
         tooltipId={text('Tooltip ID', 'tooltip')}
         placeholder={text('Placeholder', 'Select…')}
         items={[

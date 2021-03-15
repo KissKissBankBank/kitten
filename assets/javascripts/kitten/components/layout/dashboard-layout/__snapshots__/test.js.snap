@@ -1,88 +1,126 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = `
-.c2 {
+.c3 {
   border: none;
   background: #eee;
 }
 
-.c2.k-HorizontalStroke--size--micro {
+.c3.k-HorizontalStroke--size--micro {
   width: 0.9375rem;
   height: 0.125rem;
 }
 
-.c2.k-HorizontalStroke--size--tiny {
+.c3.k-HorizontalStroke--size--tiny {
   width: 1.25rem;
   height: 0.125rem;
 }
 
-.c2.k-HorizontalStroke--size--default {
+.c3.k-HorizontalStroke--size--default {
   width: 1.875rem;
   height: 0.25rem;
 }
 
-.c2.k-HorizontalStroke--size--big {
+.c3.k-HorizontalStroke--size--big {
   width: 3.125rem;
   height: 0.25rem;
 }
 
-.c2.k-HorizontalStroke--size--huge {
+.c3.k-HorizontalStroke--size--huge {
   width: 6.25rem;
   height: 0.375rem;
 }
 
-.c2.k-HorizontalStroke--modifier--primary {
+.c3.k-HorizontalStroke--modifier--primary {
   width: 2.5rem;
   height: 0.375rem;
 }
 
-.c2.k-HorizontalStroke--modifier--secondary {
+.c3.k-HorizontalStroke--modifier--secondary {
   width: 1.875rem;
   height: 0.25rem;
 }
 
-.c2.k-HorizontalStroke--modifier--tertiary {
+.c3.k-HorizontalStroke--modifier--tertiary {
   width: 1.875rem;
   height: 0.25rem;
 }
 
-.c2.k-HorizontalStroke--modifier--quaternary {
+.c3.k-HorizontalStroke--modifier--quaternary {
   width: 1.875rem;
   height: 0.25rem;
 }
 
-.c2.k-HorizontalStroke--modifier--quinary {
+.c3.k-HorizontalStroke--modifier--quinary {
   width: 1.875rem;
   height: 0.25rem;
 }
 
-.c2.k-HorizontalStroke--modifier--senary {
+.c3.k-HorizontalStroke--modifier--senary {
   width: 0;
   height: 0;
 }
 
-.c2.k-HorizontalStroke--modifier--septenary {
+.c3.k-HorizontalStroke--modifier--septenary {
   width: 0;
   height: 0;
 }
 
 .c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0.3125rem;
+  line-height: 1;
+}
+
+.c1 .k-Loader__circle {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: 0.3125rem;
+  -webkit-animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.c1 .k-Loader__circle:nth-child(1) {
+  -webkit-animation-delay: calc(-1.75s / 3);
+  animation-delay: calc(-1.75s / 3);
+}
+
+.c1 .k-Loader__circle:nth-child(2) {
+  -webkit-animation-delay: calc(-1.75s / 3 / 2);
+  animation-delay: calc(-1.75s / 3 / 2);
+}
+
+.c1 .k-Loader__circle:nth-child(3) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.c1 .k-Loader__circle:not(:last-child) {
+  margin-right: 0.125rem;
+}
+
+.c2 {
   background-color: #e8f7fe;
   width: 100%;
   box-sizing: border-box;
 }
 
-.c1 .k-DashboardLayout__flow__sideCard__title {
+.c2 .k-DashboardLayout__flow__sideCard__title {
   margin-bottom: 1.25rem;
 }
 
-.c1 .k-DashboardLayout__flow__sideCard__list {
+.c2 .k-DashboardLayout__flow__sideCard__list {
   list-style: disc;
   margin-left: 0.9375rem;
   padding: 0;
 }
 
-.c1 .k-DashboardLayout__flow__sideCard__list li {
+.c2 .k-DashboardLayout__flow__sideCard__list li {
   margin-bottom: 0.625rem;
   line-height: 1.375rem;
   font-size: 0.7901234567901234rem;
@@ -90,45 +128,44 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 
 .c0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 100%;
 }
 
 .c0:not(.k-DashboardLayout__flow--isLoading) .k-DashboardLayout__flow__loading {
   display: none;
 }
 
-.c0.k-DashboardLayout__flow--isLoading .k-DashboardLayout__flow__contentGrid {
+.c0.k-DashboardLayout__flow--isLoading .k-DashboardLayout__flow__content {
   display: none;
 }
 
-.c0 .k-DashboardLayout__flow__contentGrid,
-.c0 .k-DashboardLayout__flow__loading {
-  background-color: #fff;
-  position: relative;
-  z-index: 1;
-}
-
-.c0 .k-DashboardLayout__flow__contentGrid {
-  box-sizing: border-box;
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
+.c0 .k-DashboardLayout__flow__loading,
 .c0 .k-DashboardLayout__flow__content {
+  -webkit-flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  background-color: #fff;
+  padding-top: 3.125rem;
   padding-bottom: 3.125rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .c0 .k-DashboardLayout__flow__nav {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   background-color: #fff;
-  position: absolute;
   width: 100%;
-  bottom: -5rem;
 }
 
 .c0 .k-DashboardLayout__flow__nav__actionsContainer {
@@ -144,8 +181,11 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 1.25rem;
   margin: 1.25rem 0;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
+  margin-right: 1.25rem;
 }
 
 .c0 .k-DashboardLayout__flow__nav__actionsContainer > * {
@@ -168,7 +208,6 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 }
 
 .c0 .k-DashboardLayout__flow__loading {
-  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -181,86 +220,84 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 100%;
-  padding-bottom: 5rem;
 }
 
 @media (min-width:40rem) {
-  .c2.k-HorizontalStroke--modifier--primary {
+  .c3.k-HorizontalStroke--modifier--primary {
     width: 3.125rem;
     height: 0.375rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--secondary {
+  .c3.k-HorizontalStroke--modifier--secondary {
     width: 2.5rem;
     height: 0.375rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--tertiary {
+  .c3.k-HorizontalStroke--modifier--tertiary {
     width: 1.875rem;
     height: 0.25rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--quaternary {
+  .c3.k-HorizontalStroke--modifier--quaternary {
     width: 1.875rem;
     height: 0.25rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--quinary {
+  .c3.k-HorizontalStroke--modifier--quinary {
     width: 1.875rem;
     height: 0.25rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--senary {
+  .c3.k-HorizontalStroke--modifier--senary {
     width: 0;
     height: 0;
   }
 
-  .c2.k-HorizontalStroke--modifier--septenary {
+  .c3.k-HorizontalStroke--modifier--septenary {
     width: 0;
     height: 0;
   }
 }
 
 @media (min-width:67.5rem) {
-  .c2.k-HorizontalStroke--modifier--primary {
+  .c3.k-HorizontalStroke--modifier--primary {
     width: 3.125rem;
     height: 0.375rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--secondary {
+  .c3.k-HorizontalStroke--modifier--secondary {
     width: 3.125rem;
     height: 0.375rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--tertiary {
+  .c3.k-HorizontalStroke--modifier--tertiary {
     width: 2.5rem;
     height: 0.375rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--quaternary {
+  .c3.k-HorizontalStroke--modifier--quaternary {
     width: 1.875rem;
     height: 0.25rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--quinary {
+  .c3.k-HorizontalStroke--modifier--quinary {
     width: 0;
     height: 0;
   }
 
-  .c2.k-HorizontalStroke--modifier--senary {
+  .c3.k-HorizontalStroke--modifier--senary {
     width: 1.875rem;
     height: 0.25rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--septenary {
+  .c3.k-HorizontalStroke--modifier--septenary {
     width: 0;
     height: 0;
   }
 }
 
 @media (min-width:67.5rem) {
-  .c1 {
+  .c2 {
     padding: 1.875rem;
     border-radius: 0.5rem;
     margin-bottom: 0.9375rem;
@@ -268,50 +305,55 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 }
 
 @media (min-width:40rem) {
-  .c1 .k-DashboardLayout__flow__sideCard__list li {
+  .c2 .k-DashboardLayout__flow__sideCard__list li {
     font-size: 0.8888888888888888rem;
   }
 }
 
 @media (min-width:67.5rem) {
   .c0 {
+    min-height: 100vh;
     display: grid;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 4fr 3fr;
-    gap: calc(100% * 4 / 3 * 0.1);
+    gap: 0 calc(100% * 4 / 3 * 0.1);
   }
 }
 
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout__flow__contentGrid,
-  .c0 .k-DashboardLayout__flow__loading {
-    margin-bottom: 1.875rem;
-  }
-}
-
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout__flow__contentGrid {
-    grid-column: 1 / 2;
-  }
-}
-
-@media (min-width:67.5rem) {
+@media (min-width:40rem) {
+  .c0 .k-DashboardLayout__flow__loading,
   .c0 .k-DashboardLayout__flow__content {
+    padding-top: 5rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__loading,
+  .c0 .k-DashboardLayout__flow__content {
+    grid-column: 1 / 2;
     padding-bottom: 1.25rem;
   }
 }
 
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout__flow__nav {
+    grid-column: 1 / 2;
     bottom: 0;
     position: -webkit-sticky;
     position: sticky;
+    z-index: 1;
   }
 }
 
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout__flow__nav__actionsContainer {
-    gap: 2.5rem;
     margin: 1.875rem 0;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
+    margin-right: 2.5rem;
   }
 }
 
@@ -327,54 +369,48 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   }
 }
 
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout__flow__loading {
-    grid-column: 1 / 2;
-  }
-}
-
 <div
-  className="c0 k-DashboardLayout__flow"
+  className="c0 k-DashboardLayout__flow k-DashboardLayout__fullHeight"
 >
   <div
     className="k-DashboardLayout__flow__loading"
   >
     <div
-      className="k-Loader"
+      className="c1 k-Loader"
     >
       <svg
         className="k-Loader__circle"
-        viewBox="0 0 10 10"
+        fill="#222"
+        viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={5}
-          cy={5}
-          fill={null}
+          cx={2.5}
+          cy={2.5}
           r={5}
         />
       </svg>
       <svg
         className="k-Loader__circle"
-        viewBox="0 0 10 10"
+        fill="#222"
+        viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={5}
-          cy={5}
-          fill={null}
+          cx={2.5}
+          cy={2.5}
           r={5}
         />
       </svg>
       <svg
         className="k-Loader__circle"
-        viewBox="0 0 10 10"
+        fill="#222"
+        viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={5}
-          cy={5}
-          fill={null}
+          cx={2.5}
+          cy={2.5}
           r={5}
         />
       </svg>
@@ -425,7 +461,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
         </g>
       </svg>
       <div
-        className="c1 k-DashboardLayout__flow__sideCard"
+        className="c2 k-DashboardLayout__flow__sideCard"
       >
         Side content in a card
       </div>
@@ -435,7 +471,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
     className="k-DashboardLayout__flow__nav"
   >
     <div
-      className="c2 k-HorizontalStroke k-HorizontalStroke--size--tiny"
+      className="c3 k-HorizontalStroke k-HorizontalStroke--size--tiny"
       color="#eee"
       style={
         Object {
@@ -459,88 +495,126 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 `;
 
 exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapshot 1`] = `
-.c2 {
+.c3 {
   border: none;
   background: #eee;
 }
 
-.c2.k-HorizontalStroke--size--micro {
+.c3.k-HorizontalStroke--size--micro {
   width: 0.9375rem;
   height: 0.125rem;
 }
 
-.c2.k-HorizontalStroke--size--tiny {
+.c3.k-HorizontalStroke--size--tiny {
   width: 1.25rem;
   height: 0.125rem;
 }
 
-.c2.k-HorizontalStroke--size--default {
+.c3.k-HorizontalStroke--size--default {
   width: 1.875rem;
   height: 0.25rem;
 }
 
-.c2.k-HorizontalStroke--size--big {
+.c3.k-HorizontalStroke--size--big {
   width: 3.125rem;
   height: 0.25rem;
 }
 
-.c2.k-HorizontalStroke--size--huge {
+.c3.k-HorizontalStroke--size--huge {
   width: 6.25rem;
   height: 0.375rem;
 }
 
-.c2.k-HorizontalStroke--modifier--primary {
+.c3.k-HorizontalStroke--modifier--primary {
   width: 2.5rem;
   height: 0.375rem;
 }
 
-.c2.k-HorizontalStroke--modifier--secondary {
+.c3.k-HorizontalStroke--modifier--secondary {
   width: 1.875rem;
   height: 0.25rem;
 }
 
-.c2.k-HorizontalStroke--modifier--tertiary {
+.c3.k-HorizontalStroke--modifier--tertiary {
   width: 1.875rem;
   height: 0.25rem;
 }
 
-.c2.k-HorizontalStroke--modifier--quaternary {
+.c3.k-HorizontalStroke--modifier--quaternary {
   width: 1.875rem;
   height: 0.25rem;
 }
 
-.c2.k-HorizontalStroke--modifier--quinary {
+.c3.k-HorizontalStroke--modifier--quinary {
   width: 1.875rem;
   height: 0.25rem;
 }
 
-.c2.k-HorizontalStroke--modifier--senary {
+.c3.k-HorizontalStroke--modifier--senary {
   width: 0;
   height: 0;
 }
 
-.c2.k-HorizontalStroke--modifier--septenary {
+.c3.k-HorizontalStroke--modifier--septenary {
   width: 0;
   height: 0;
 }
 
 .c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0.3125rem;
+  line-height: 1;
+}
+
+.c1 .k-Loader__circle {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: 0.3125rem;
+  -webkit-animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.c1 .k-Loader__circle:nth-child(1) {
+  -webkit-animation-delay: calc(-1.75s / 3);
+  animation-delay: calc(-1.75s / 3);
+}
+
+.c1 .k-Loader__circle:nth-child(2) {
+  -webkit-animation-delay: calc(-1.75s / 3 / 2);
+  animation-delay: calc(-1.75s / 3 / 2);
+}
+
+.c1 .k-Loader__circle:nth-child(3) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.c1 .k-Loader__circle:not(:last-child) {
+  margin-right: 0.125rem;
+}
+
+.c2 {
   background-color: #e8f7fe;
   width: 100%;
   box-sizing: border-box;
 }
 
-.c1 .k-DashboardLayout__flow__sideCard__title {
+.c2 .k-DashboardLayout__flow__sideCard__title {
   margin-bottom: 1.25rem;
 }
 
-.c1 .k-DashboardLayout__flow__sideCard__list {
+.c2 .k-DashboardLayout__flow__sideCard__list {
   list-style: disc;
   margin-left: 0.9375rem;
   padding: 0;
 }
 
-.c1 .k-DashboardLayout__flow__sideCard__list li {
+.c2 .k-DashboardLayout__flow__sideCard__list li {
   margin-bottom: 0.625rem;
   line-height: 1.375rem;
   font-size: 0.7901234567901234rem;
@@ -548,45 +622,44 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 
 .c0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 100%;
 }
 
 .c0:not(.k-DashboardLayout__flow--isLoading) .k-DashboardLayout__flow__loading {
   display: none;
 }
 
-.c0.k-DashboardLayout__flow--isLoading .k-DashboardLayout__flow__contentGrid {
+.c0.k-DashboardLayout__flow--isLoading .k-DashboardLayout__flow__content {
   display: none;
 }
 
-.c0 .k-DashboardLayout__flow__contentGrid,
-.c0 .k-DashboardLayout__flow__loading {
-  background-color: #fff;
-  position: relative;
-  z-index: 1;
-}
-
-.c0 .k-DashboardLayout__flow__contentGrid {
-  box-sizing: border-box;
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
+.c0 .k-DashboardLayout__flow__loading,
 .c0 .k-DashboardLayout__flow__content {
+  -webkit-flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  background-color: #fff;
+  padding-top: 3.125rem;
   padding-bottom: 3.125rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .c0 .k-DashboardLayout__flow__nav {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   background-color: #fff;
-  position: absolute;
   width: 100%;
-  bottom: -5rem;
 }
 
 .c0 .k-DashboardLayout__flow__nav__actionsContainer {
@@ -602,8 +675,11 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 1.25rem;
   margin: 1.25rem 0;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
+  margin-right: 1.25rem;
 }
 
 .c0 .k-DashboardLayout__flow__nav__actionsContainer > * {
@@ -626,7 +702,6 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 }
 
 .c0 .k-DashboardLayout__flow__loading {
-  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -639,86 +714,84 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 100%;
-  padding-bottom: 5rem;
 }
 
 @media (min-width:40rem) {
-  .c2.k-HorizontalStroke--modifier--primary {
+  .c3.k-HorizontalStroke--modifier--primary {
     width: 3.125rem;
     height: 0.375rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--secondary {
+  .c3.k-HorizontalStroke--modifier--secondary {
     width: 2.5rem;
     height: 0.375rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--tertiary {
+  .c3.k-HorizontalStroke--modifier--tertiary {
     width: 1.875rem;
     height: 0.25rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--quaternary {
+  .c3.k-HorizontalStroke--modifier--quaternary {
     width: 1.875rem;
     height: 0.25rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--quinary {
+  .c3.k-HorizontalStroke--modifier--quinary {
     width: 1.875rem;
     height: 0.25rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--senary {
+  .c3.k-HorizontalStroke--modifier--senary {
     width: 0;
     height: 0;
   }
 
-  .c2.k-HorizontalStroke--modifier--septenary {
+  .c3.k-HorizontalStroke--modifier--septenary {
     width: 0;
     height: 0;
   }
 }
 
 @media (min-width:67.5rem) {
-  .c2.k-HorizontalStroke--modifier--primary {
+  .c3.k-HorizontalStroke--modifier--primary {
     width: 3.125rem;
     height: 0.375rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--secondary {
+  .c3.k-HorizontalStroke--modifier--secondary {
     width: 3.125rem;
     height: 0.375rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--tertiary {
+  .c3.k-HorizontalStroke--modifier--tertiary {
     width: 2.5rem;
     height: 0.375rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--quaternary {
+  .c3.k-HorizontalStroke--modifier--quaternary {
     width: 1.875rem;
     height: 0.25rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--quinary {
+  .c3.k-HorizontalStroke--modifier--quinary {
     width: 0;
     height: 0;
   }
 
-  .c2.k-HorizontalStroke--modifier--senary {
+  .c3.k-HorizontalStroke--modifier--senary {
     width: 1.875rem;
     height: 0.25rem;
   }
 
-  .c2.k-HorizontalStroke--modifier--septenary {
+  .c3.k-HorizontalStroke--modifier--septenary {
     width: 0;
     height: 0;
   }
 }
 
 @media (min-width:67.5rem) {
-  .c1 {
+  .c2 {
     padding: 1.875rem;
     border-radius: 0.5rem;
     margin-bottom: 0.9375rem;
@@ -726,50 +799,55 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 }
 
 @media (min-width:40rem) {
-  .c1 .k-DashboardLayout__flow__sideCard__list li {
+  .c2 .k-DashboardLayout__flow__sideCard__list li {
     font-size: 0.8888888888888888rem;
   }
 }
 
 @media (min-width:67.5rem) {
   .c0 {
+    min-height: 100vh;
     display: grid;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 4fr 3fr;
-    gap: calc(100% * 4 / 3 * 0.1);
+    gap: 0 calc(100% * 4 / 3 * 0.1);
   }
 }
 
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout__flow__contentGrid,
-  .c0 .k-DashboardLayout__flow__loading {
-    margin-bottom: 1.875rem;
-  }
-}
-
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout__flow__contentGrid {
-    grid-column: 1 / 2;
-  }
-}
-
-@media (min-width:67.5rem) {
+@media (min-width:40rem) {
+  .c0 .k-DashboardLayout__flow__loading,
   .c0 .k-DashboardLayout__flow__content {
+    padding-top: 5rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__loading,
+  .c0 .k-DashboardLayout__flow__content {
+    grid-column: 1 / 2;
     padding-bottom: 1.25rem;
   }
 }
 
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout__flow__nav {
+    grid-column: 1 / 2;
     bottom: 0;
     position: -webkit-sticky;
     position: sticky;
+    z-index: 1;
   }
 }
 
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout__flow__nav__actionsContainer {
-    gap: 2.5rem;
     margin: 1.875rem 0;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
+    margin-right: 2.5rem;
   }
 }
 
@@ -785,54 +863,48 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   }
 }
 
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout__flow__loading {
-    grid-column: 1 / 2;
-  }
-}
-
 <div
-  className="c0 k-DashboardLayout__flow"
+  className="c0 k-DashboardLayout__flow k-DashboardLayout__fullHeight"
 >
   <div
     className="k-DashboardLayout__flow__loading"
   >
     <div
-      className="k-Loader"
+      className="c1 k-Loader"
     >
       <svg
         className="k-Loader__circle"
-        viewBox="0 0 10 10"
+        fill="#222"
+        viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={5}
-          cy={5}
-          fill={null}
+          cx={2.5}
+          cy={2.5}
           r={5}
         />
       </svg>
       <svg
         className="k-Loader__circle"
-        viewBox="0 0 10 10"
+        fill="#222"
+        viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={5}
-          cy={5}
-          fill={null}
+          cx={2.5}
+          cy={2.5}
           r={5}
         />
       </svg>
       <svg
         className="k-Loader__circle"
-        viewBox="0 0 10 10"
+        fill="#222"
+        viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={5}
-          cy={5}
-          fill={null}
+          cx={2.5}
+          cy={2.5}
           r={5}
         />
       </svg>
@@ -883,7 +955,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
         </g>
       </svg>
       <div
-        className="c1 k-DashboardLayout__flow__sideCard"
+        className="c2 k-DashboardLayout__flow__sideCard"
       >
         Side content in a card
       </div>
@@ -893,7 +965,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
     className="k-DashboardLayout__flow__nav"
   >
     <div
-      className="c2 k-HorizontalStroke k-HorizontalStroke--size--tiny"
+      className="c3 k-HorizontalStroke k-HorizontalStroke--size--tiny"
       color="#eee"
       style={
         Object {
@@ -935,6 +1007,7 @@ button:hover .c1 {
 
 .c0 {
   position: relative;
+  overscroll-behavior: none;
 }
 
 .c0 * {
@@ -953,6 +1026,11 @@ button:hover .c1 {
 .c0 .k-DashboardLayout__backLink:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0 .k-DashboardLayout__sideWrapper:focus,
+.c0 .k-DashboardLayout__mainWrapper:focus {
+  outline: 0.125rem solid #bae8fd;
 }
 
 .c0 .k-DashboardLayout__quickAccessLink {
@@ -983,17 +1061,6 @@ button:hover .c1 {
   -webkit-transition-delay: 0,.2s;
   transition-delay: 0,.2s;
   outline: 0.125rem solid #bae8fd;
-}
-
-.c0 .text--withEllipsis {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.c0 .k-ButtonImageWithText__text {
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 @media (max-width:67.4375rem) {
@@ -1054,7 +1121,10 @@ button:hover .c1 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 1.875rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper >:not(:last-child) {
+    margin-bottom: 1.875rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__backLink {
@@ -1098,6 +1168,7 @@ button:hover .c1 {
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
+    background-color: #fff;
     width: calc(100vw + 0.125rem);
     display: -webkit-box;
     display: -webkit-flex;
@@ -1155,8 +1226,6 @@ button:hover .c1 {
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before {
@@ -1172,6 +1241,11 @@ button:hover .c1 {
     z-index: 100;
     -webkit-transition: background-color .2s ease-in-out,opacity .2s ease-in-out;
     transition: background-color .2s ease-in-out,opacity .2s ease-in-out;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main > *:not(.k-DashboardLayout__fullWidth) {
@@ -1199,8 +1273,9 @@ button:hover .c1 {
     padding-right: 1.25rem;
   }
 
-  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main {
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
     padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
   }
 }
 
@@ -1222,8 +1297,11 @@ button:hover .c1 {
     position: sticky;
     top: 0;
     overflow: scroll;
-    gap: 1.875rem;
     padding: 1.875rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper >:not(:last-child) {
+    margin-bottom: 1.875rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__backLink {
@@ -1241,7 +1319,6 @@ button:hover .c1 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 0.9375rem;
     color: #fff;
     -webkit-transition: color .2s ease;
     transition: color .2s ease;
@@ -1259,6 +1336,10 @@ button:hover .c1 {
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__backLink:hover {
     color: #19b4fa;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__backLink .k-DashboardLayout__backLink__text {
+    margin-left: 0.9375rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {
@@ -1279,11 +1360,15 @@ button:hover .c1 {
     flex: 0 1 auto;
   }
 
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
+    background-color: #fff;
+  }
+
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
     display: none;
   }
 
-  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main {
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
@@ -1315,14 +1400,34 @@ button:hover .c1 {
     <div
       aria-hidden={true}
       className="k-DashboardLayout__sideWrapper"
-      tabIndex={0}
+      tabIndex={-1}
     >
       <a
         className="k-DashboardLayout__backLink"
         href="#"
       >
         <svg
-          className=""
+          aria-hidden={true}
+          className="k-u-hidden@m-down"
+          fill="#fff"
+          height="10"
+          style={
+            Object {
+              "transform": null,
+            }
+          }
+          viewBox="0 0 12 10"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M4.243.757l1.414 1.415-1.829 1.827L12 4v2H3.828l1.829 1.828-1.414 1.415L0 5 4.243.757z"
+          />
+        </svg>
+        <svg
+          aria-hidden={true}
+          className="k-u-hidden@l-up"
           fill="#fff"
           height="5.64"
           style={
@@ -1363,7 +1468,7 @@ button:hover .c1 {
     </div>
     <div
       className="k-DashboardLayout__mainWrapper"
-      tabIndex={0}
+      tabIndex={-1}
     >
       <header
         className="k-DashboardLayout__heading"

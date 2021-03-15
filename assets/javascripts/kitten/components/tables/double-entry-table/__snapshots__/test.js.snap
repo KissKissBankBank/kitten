@@ -8,7 +8,7 @@ exports[`<DoubleEntryTable /> with a complete structure and custom classes match
     className="DoubleEntryTable__TableContainer"
   >
     <table
-      className="DoubleEntryTable__Table"
+      className="DoubleEntryTable__Table customClass"
       id="DestBoubleEntryTable"
     >
       <thead
@@ -28,7 +28,7 @@ exports[`<DoubleEntryTable /> with a complete structure and custom classes match
             Header 2
           </th>
           <th
-            className="DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol"
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol customHeaderColClass"
             scope="column"
           >
             Header 3
@@ -38,13 +38,13 @@ exports[`<DoubleEntryTable /> with a complete structure and custom classes match
       <tbody>
         <tr>
           <th
-            className="DoubleEntryTable__Column DoubleEntryTable__Column--TitleCol"
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--TitleCol customTitleColClass"
             scope="row"
           >
             Content 1
           </th>
           <td
-            className="DoubleEntryTable__Column DoubleEntryTable__Column--Col"
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--Col customColClass"
           >
             Content 2
           </td>

@@ -7,26 +7,13 @@
 @include k-ButtonWithBadge;
 @include k-TagButton;
 
-// Boxes
-
-@include k-LinkBox;
-
 // Cards
 
 @include k-Card;
 
-// Dev
-
-@include k-DevGrid;
-@include k-DevBreakpoint;
-
 // Dropdowns
 
 @include k-Dropdown;
-
-// Footer
-
-@include k-Footer;
 
 // Form
 
@@ -34,7 +21,6 @@
 @include k-CheckboxSet;
 @include k-LocationInput;
 @include k-Label;
-@include k-FormActions;
 @include k-FormComposer;
 @include k-FormInfo;
 @include k-RadioButton;
@@ -60,27 +46,10 @@
   )
 ));
 
-// Footer
-
-@include k-Footer;
-
 // Grid
 
-@include k-Grid;
-@include k-Row;
 @include k-SideGrid;
 @include k-SingleColumn;
-@include k-VerticalGrid;
-
-// Images
-
-@include k-Cropper;
-
-// Layout
-
-@include k-HorizontalStroke;
-@include k-Line;
-@include k-ResponsiveIframeContainer;
 
 // Lines
 
@@ -89,11 +58,6 @@
 // Lists
 
 @include k-BulletList;
-
-// Loaders
-
-@include k-Loader;
-@include k-LoaderWithParagraph;
 
 // Meters
 
@@ -120,10 +84,6 @@
 
 @include k-PressQuotes;
 
-// Steppers
-
-@include k-Stepper;
-
 // Teaser
 
 @include k-Teaser;
@@ -140,14 +100,6 @@
 
 @include k-TitleWithActions;
 
-// Tooltips
-
-@include k-Tooltip;
-@include k-TooltipNew;
-@include k-StaticTooltip;
-
 // Typography
 
 @include k-TypographyBodyCopy;
-@include k-Title;
-@include k-Paragraph;

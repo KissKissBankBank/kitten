@@ -8,7 +8,7 @@ import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import { LightbulbIllustration as Lightbulb } from '../../../../components/illustrations/lightbulb-illustration'
-import { Loader } from '../../../../components/loaders/loader'
+import { Loader } from '../../../../components/atoms/loader'
 import { getReactElementsWithoutType } from '../../../../helpers/react/react-elements'
 
 import { SideCard } from './side-card'
@@ -16,11 +16,17 @@ import { MobileAside } from './side-modal'
 
 const StyledFlow = styled.div`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100%;
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    min-height: 100vh;
     display: grid;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 4fr 3fr;
-    gap: calc(100% * 4 / 3 * 0.1); /* 10% of the parent element */
+    gap: 0 calc(100% * 4 / 3 * 0.1); /* 10% of the parent element */
   }
 
   &:not(.k-DashboardLayout__flow--isLoading) {
@@ -30,52 +36,38 @@ const StyledFlow = styled.div`
   }
 
   &.k-DashboardLayout__flow--isLoading {
-    .k-DashboardLayout__flow__contentGrid {
+    .k-DashboardLayout__flow__content {
       display: none;
     }
   }
 
-  .k-DashboardLayout__flow__contentGrid,
-  .k-DashboardLayout__flow__loading {
+  .k-DashboardLayout__flow__loading,
+  .k-DashboardLayout__flow__content {
+    flex: 1 0 100%;
     background-color: ${COLORS.background1};
-    position: relative;
-    z-index: 1;
-  }
+    padding-top: ${pxToRem(50)};
+    padding-bottom: ${pxToRem(50)};
 
-  .k-DashboardLayout__flow__contentGrid,
-  .k-DashboardLayout__flow__loading {
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      margin-bottom: ${pxToRem(30)};
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      padding-top: ${pxToRem(80)};
     }
-  }
 
-  .k-DashboardLayout__flow__contentGrid {
-    box-sizing: border-box;
-    height: 100%;
-    display: flex;
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       grid-column: 1 / 2;
-    }
-  }
-
-  .k-DashboardLayout__flow__content {
-    padding-bottom: ${pxToRem(50)};
-    flex-grow: 1;
-
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       padding-bottom: ${pxToRem(20)};
     }
   }
 
   .k-DashboardLayout__flow__nav {
+    flex: 0 0 auto;
     background-color: ${COLORS.background1};
-    position: absolute;
     width: 100%;
-    bottom: ${pxToRem(-80)};
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      grid-column: 1 / 2;
       bottom: 0;
       position: sticky;
+      z-index: 1;
     }
   }
 
@@ -83,15 +75,21 @@ const StyledFlow = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: ${pxToRem(20)};
     margin: ${pxToRem(20)} 0;
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      gap: ${pxToRem(40)};
       margin: ${pxToRem(30)} 0;
     }
 
-    > * {
+    & > :not(:last-child) {
+      margin-right: ${pxToRem(20)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+        margin-right: ${pxToRem(40)};
+      }
+    }
+
+    & > * {
       min-width: 0;
       max-width: ${pxToRem(180)};
       flex: 1 1 ${pxToRem(180)};
@@ -119,16 +117,9 @@ const StyledFlow = styled.div`
   }
 
   .k-DashboardLayout__flow__loading {
-    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    padding-bottom: ${pxToRem(80)};
-
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      grid-column: 1 / 2;
-    }
   }
 `
 
@@ -189,9 +180,14 @@ export const Flow = ({
 }) => {
   return (
     <StyledFlow
-      className={classNames('k-DashboardLayout__flow', className, {
-        'k-DashboardLayout__flow--isLoading': loading,
-      })}
+      className={classNames(
+        'k-DashboardLayout__flow',
+        className,
+        'k-DashboardLayout__fullHeight',
+        {
+          'k-DashboardLayout__flow--isLoading': loading,
+        },
+      )}
       {...props}
     >
       <div className="k-DashboardLayout__flow__loading">

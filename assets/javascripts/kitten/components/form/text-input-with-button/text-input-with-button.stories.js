@@ -1,6 +1,6 @@
 import React from 'react'
 import { boolean, text } from '@storybook/addon-knobs'
-import { Loader } from '../../../components/loaders/loader'
+import { Loader } from '../../../components/atoms/loader'
 import { TextInputWithButton } from './index'
 
 export const Default = () => (

@@ -19,6 +19,7 @@ describe('<Field />', () => {
             label="Label"
             tooltip="Tooltip"
             tooltipId="tooltip"
+            tooltipProps={{ actionLabel: 'Learn more' }}
             placeholder="Placeholder…"
             tiny={false}
           />,
@@ -41,6 +42,7 @@ describe('<Field />', () => {
             label="Label"
             tooltip="Tooltip"
             tooltipId="tooltip"
+            tooltipProps={{ actionLabel: 'Learn more' }}
             placeholder="Placeholder…"
             error
             errorMessage="Error!"
@@ -64,6 +66,7 @@ describe('<Field />', () => {
             label="Label"
             tooltip="Tooltip"
             tooltipId="tooltip"
+            tooltipProps={{ actionLabel: 'Learn more' }}
             placeholder="Placeholder…"
           />,
         )
@@ -85,6 +88,7 @@ describe('<Field />', () => {
             label="Label"
             tooltip="Tooltip"
             tooltipId="tooltip"
+            tooltipProps={{ actionLabel: 'Learn more' }}
             placeholder="Placeholder…"
             error
             errorMessage="Error!"
