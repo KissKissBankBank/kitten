@@ -28,7 +28,7 @@ var _typography = require("../../../helpers/utils/typography");
 var StyledStatus = _styledComponents.default.span.withConfig({
   displayName: "status-with-bullet__StyledStatus",
   componentId: "db70ps-0"
-})(["color:currentColor;display:inline-flex;align-items:center;line-height:1.2;.k-StatusWithBullet__bullet{background-color:currentColor;border-radius:50%;margin-top:", ";}&.k-StatusWithBullet--danger{color:", ";}&.k-StatusWithBullet--success{color:", ";}&.k-StatusWithBullet--warning{color:", ";}&.k-StatusWithBullet--neutral{color:", ";}&.k-StatusWithBullet--normal{font-size:", ";.k-StatusWithBullet__bullet{width:", ";height:", ";margin-right:", ";}}&.k-StatusWithBullet--tiny{font-size:", ";.k-StatusWithBullet__bullet{width:", ";height:", ";margin-right:", ";}}&.k-StatusWithBullet--micro{font-size:", ";.k-StatusWithBullet__bullet{width:", ";height:", ";margin-right:", ";}}&.k-StatusWithBullet--light{", "}&.k-StatusWithBullet--regular{", "}&.k-StatusWithBullet--bold{", "}"], (0, _typography.pxToRem)(2), _colorsConfig.default.error, _colorsConfig.default.valid, _colorsConfig.default.orange, _colorsConfig.default.primary1, (0, _typography.stepToRem)(0), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(11), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.stepToRem)(-2), (0, _typography.pxToRem)(7), (0, _typography.pxToRem)(7), (0, _typography.pxToRem)(8), _typographyConfig.default.fontStyles.light, _typographyConfig.default.fontStyles.regular, _typographyConfig.default.fontStyles.bold);
+})(["color:currentColor;display:inline-flex;align-items:center;line-height:1.2;.k-StatusWithBullet__bullet{background-color:currentColor;border-radius:50%;margin-top:", ";flex:0 0 auto;}.k-StatusWithBullet__status{flex:0 1 auto;}&.k-StatusWithBullet--danger{color:", ";}&.k-StatusWithBullet--success{color:", ";}&.k-StatusWithBullet--warning{color:", ";}&.k-StatusWithBullet--neutral{color:", ";}&.k-StatusWithBullet--normal{font-size:", ";.k-StatusWithBullet__bullet{width:", ";height:", ";margin-right:", ";}}&.k-StatusWithBullet--tiny{font-size:", ";.k-StatusWithBullet__bullet{width:", ";height:", ";margin-right:", ";}}&.k-StatusWithBullet--micro{font-size:", ";.k-StatusWithBullet__bullet{width:", ";height:", ";margin-right:", ";}}&.k-StatusWithBullet--light{", "}&.k-StatusWithBullet--regular{", "}&.k-StatusWithBullet--bold{", "}"], (0, _typography.pxToRem)(2), _colorsConfig.default.error, _colorsConfig.default.valid, _colorsConfig.default.orange, _colorsConfig.default.primary1, (0, _typography.stepToRem)(0), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(11), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.stepToRem)(-2), (0, _typography.pxToRem)(7), (0, _typography.pxToRem)(7), (0, _typography.pxToRem)(8), _typographyConfig.default.fontStyles.light, _typographyConfig.default.fontStyles.regular, _typographyConfig.default.fontStyles.bold);
 
 var StatusWithBullet = function StatusWithBullet(_ref) {
   var statusMessage = _ref.statusMessage,
@@ -45,7 +45,9 @@ var StatusWithBullet = function StatusWithBullet(_ref) {
     "aria-hidden": "true"
   }, bulletProps, {
     className: (0, _classnames.default)('k-StatusWithBullet__bullet', bulletProps === null || bulletProps === void 0 ? void 0 : bulletProps.className)
-  })), statusMessage || children);
+  })), /*#__PURE__*/_react.default.createElement("span", {
+    className: "k-StatusWithBullet__status"
+  }, statusMessage || children));
 };
 
 exports.StatusWithBullet = StatusWithBullet;
