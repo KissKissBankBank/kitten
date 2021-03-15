@@ -30,7 +30,7 @@ var _typography = require("../../../helpers/utils/typography");
 var StyledInformationBox = _styledComponents.default.div.withConfig({
   displayName: "information-box__StyledInformationBox",
   componentId: "sc-83px7p-0"
-})([".k-InformationBox{display:inline-block;", "}.k-InformationBox__container{padding:", " ", " ", " ", ";color:", ";background-color:", ";border:", " solid ", ";}"], _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), _colorsConfig.default.font1, _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.line1);
+})(["&.k-InformationBox{display:inline-block;", "}.k-InformationBox__container{padding:", " ", " ", " ", ";color:", ";background-color:", ";border:", " solid ", ";}"], _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), _colorsConfig.default.font1, _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.line1);
 
 var InformationBox = function InformationBox(_ref) {
   var title = _ref.title,
@@ -43,7 +43,7 @@ var InformationBox = function InformationBox(_ref) {
     className: "k-InformationBox__container"
   }, /*#__PURE__*/_react.default.createElement(_title.Title, (0, _extends2.default)({
     tag: "p",
-    margin: false,
+    noMargin: true,
     modifier: "quaternary"
   }, titleProps, {
     className: (0, _classnames.default)('k-InformationBox__title', 'k-u-margin-bottom-single', titleProps.className)

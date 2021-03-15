@@ -210,7 +210,7 @@ export const Accordeon = ({
 
     setSelectedItem(newItem)
 
-    onChange(items[newItem].props.id || `${id}-${newItem}`)
+    onChange(items[newItem]?.props?.id || `${id}-${newItem}`)
   }
 
   const context = {

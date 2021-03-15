@@ -11,7 +11,7 @@ import { pxToRem } from '../../../helpers/utils/typography';
 var StyledInformationBox = styled.div.withConfig({
   displayName: "information-box__StyledInformationBox",
   componentId: "sc-83px7p-0"
-})([".k-InformationBox{display:inline-block;", "}.k-InformationBox__container{padding:", " ", " ", " ", ";color:", ";background-color:", ";border:", " solid ", ";}"], TYPOGRAPHY.fontStyles.light, pxToRem(10), pxToRem(20), pxToRem(20), pxToRem(20), COLORS.font1, COLORS.background1, pxToRem(2), COLORS.line1);
+})(["&.k-InformationBox{display:inline-block;", "}.k-InformationBox__container{padding:", " ", " ", " ", ";color:", ";background-color:", ";border:", " solid ", ";}"], TYPOGRAPHY.fontStyles.light, pxToRem(10), pxToRem(20), pxToRem(20), pxToRem(20), COLORS.font1, COLORS.background1, pxToRem(2), COLORS.line1);
 export var InformationBox = function InformationBox(_ref) {
   var title = _ref.title,
       titleProps = _ref.titleProps,
@@ -24,7 +24,7 @@ export var InformationBox = function InformationBox(_ref) {
     className: "k-InformationBox__container"
   }, /*#__PURE__*/React.createElement(Title, _extends({
     tag: "p",
-    margin: false,
+    noMargin: true,
     modifier: "quaternary"
   }, titleProps, {
     className: classNames('k-InformationBox__title', 'k-u-margin-bottom-single', titleProps.className)

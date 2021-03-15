@@ -1,62 +1,71 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
 import { Paragraph } from './index'
 
-describe('Paragraph with default props', () => {
-  const defaultComponent = shallow(<Paragraph />)
+describe('<Paragraph />', () => {
+  let component
 
-  it('has a default paragraph attribute', () => {
-    expect(defaultComponent.find('.k-Paragraph')).toHaveLength(1)
-  })
-
-  it('has a default tag', () => {
-    expect(defaultComponent.type()).toBe('p')
-  })
-
-  it('has a default class', () => {
-    expect(defaultComponent.hasClass('k-Paragraph--primary')).toBe(true)
-  })
-
-  describe('<Paragraph />', () => {
-    const component = shallow(
-      <Paragraph className="k-Paragraph--custom">Loren ipsum…</Paragraph>,
-    )
-
-    it('renders a <p class="k-Paragraph" />', () => {
-      expect(component.type()).toBe('p')
-      expect(component.hasClass('k-Paragraph--custom')).toBe(true)
-      expect(component.hasClass('k-Paragraph--primary')).toBe(true)
-      expect(component.text()).toBe('Loren ipsum…')
+  describe('by default', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Paragraph
+            tag="p"
+            modifier="primary"
+            normalLineHeight={false}
+            italic={false}
+            children="Lorem ipsum dolor sit amet…"
+          />,
+        )
+        .toJSON()
     })
 
-    describe('modifier', () => {
-      it('accepts secondary', () => {
-        const component = shallow(<Paragraph modifier="secondary" />)
-        expect(component.hasClass('k-Paragraph--secondary')).toBe(true)
-      })
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('with margin prop', () => {
-    const component = shallow(<Paragraph margin={false} />)
+  describe('with modifier', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<Paragraph tag="p" modifier="primary" />)
+        .toJSON()
+    })
 
-    it('has a good class', () => {
-      expect(component.hasClass('k-Paragraph--withoutMargin')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('with normalLineHeight prop', () => {
-    const component = shallow(<Paragraph normalLineHeight />)
+  describe('with no margin', () => {
+    beforeEach(() => {
+      component = renderer.create(<Paragraph tag="p" noMargin />).toJSON()
+    })
 
-    it('has a good class', () => {
-      expect(component.hasClass('k-Paragraph--normalLineHeight')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('with italic prop', () => {
-    const component = shallow(<Paragraph italic />)
+  describe('without normal line height', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<Paragraph tag="p" normalLineHeight={false} />)
+        .toJSON()
+    })
 
-    it('has a good class', () => {
-      expect(component.hasClass('k-Paragraph--italic')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('without italic', () => {
+    beforeEach(() => {
+      component = renderer.create(<Paragraph tag="p" italic={false} />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 })

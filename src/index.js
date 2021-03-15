@@ -41,6 +41,36 @@ Object.defineProperty(exports, "LoaderWithParagraph", {
     return _loaderWithParagraph.LoaderWithParagraph;
   }
 });
+Object.defineProperty(exports, "StatusWithBullet", {
+  enumerable: true,
+  get: function get() {
+    return _statusWithBullet.StatusWithBullet;
+  }
+});
+Object.defineProperty(exports, "StepperIcon", {
+  enumerable: true,
+  get: function get() {
+    return _stepperIcon.StepperIcon;
+  }
+});
+Object.defineProperty(exports, "StepperIconDefault", {
+  enumerable: true,
+  get: function get() {
+    return _stepperIcon.StepperIconDefault;
+  }
+});
+Object.defineProperty(exports, "StepperIconInProgress", {
+  enumerable: true,
+  get: function get() {
+    return _stepperIcon.StepperIconInProgress;
+  }
+});
+Object.defineProperty(exports, "StepperIconValidated", {
+  enumerable: true,
+  get: function get() {
+    return _stepperIcon.StepperIconValidated;
+  }
+});
 Object.defineProperty(exports, "Tag", {
   enumerable: true,
   get: function get() {
@@ -213,12 +243,6 @@ Object.defineProperty(exports, "CartRewardCard", {
   enumerable: true,
   get: function get() {
     return _cartRewardCard.CartRewardCard;
-  }
-});
-Object.defineProperty(exports, "DonationCard", {
-  enumerable: true,
-  get: function get() {
-    return _donationCard.DonationCard;
   }
 });
 Object.defineProperty(exports, "RewardEdition", {
@@ -479,12 +503,6 @@ Object.defineProperty(exports, "TextInputWithLimit", {
     return _textInputWithLimit.TextInputWithLimit;
   }
 });
-Object.defineProperty(exports, "TextInputWithUnitForm", {
-  enumerable: true,
-  get: function get() {
-    return _textInputWithUnitForm.TextInputWithUnitForm;
-  }
-});
 Object.defineProperty(exports, "TextInputWithUnit", {
   enumerable: true,
   get: function get() {
@@ -549,6 +567,12 @@ Object.defineProperty(exports, "AdaptableGrid", {
   enumerable: true,
   get: function get() {
     return _adaptableGrid.AdaptableGrid;
+  }
+});
+Object.defineProperty(exports, "AdaptableGridCol", {
+  enumerable: true,
+  get: function get() {
+    return _adaptableGrid.AdaptableGridCol;
   }
 });
 Object.defineProperty(exports, "Hero", {
@@ -761,34 +785,10 @@ Object.defineProperty(exports, "SearchInput", {
     return _searchInput.SearchInput;
   }
 });
-Object.defineProperty(exports, "StatusWithBullet", {
-  enumerable: true,
-  get: function get() {
-    return _statusWithBullet.StatusWithBullet;
-  }
-});
 Object.defineProperty(exports, "VerticalStepper", {
   enumerable: true,
   get: function get() {
     return _verticalStepper.VerticalStepper;
-  }
-});
-Object.defineProperty(exports, "StepperIconDefault", {
-  enumerable: true,
-  get: function get() {
-    return _stepperIcon.StepperIconDefault;
-  }
-});
-Object.defineProperty(exports, "StepperIconInProgress", {
-  enumerable: true,
-  get: function get() {
-    return _stepperIcon.StepperIconInProgress;
-  }
-});
-Object.defineProperty(exports, "StepperIconValidated", {
-  enumerable: true,
-  get: function get() {
-    return _stepperIcon.StepperIconValidated;
   }
 });
 Object.defineProperty(exports, "Stepper", {
@@ -821,34 +821,10 @@ Object.defineProperty(exports, "TextCopy", {
     return _textCopy.TextCopy;
   }
 });
-Object.defineProperty(exports, "QuestionMarkWithTooltip", {
-  enumerable: true,
-  get: function get() {
-    return _questionMarkWithTooltip.QuestionMarkWithTooltip;
-  }
-});
-Object.defineProperty(exports, "StaticTooltip", {
-  enumerable: true,
-  get: function get() {
-    return _staticTooltip.StaticTooltip;
-  }
-});
 Object.defineProperty(exports, "Toggletip", {
   enumerable: true,
   get: function get() {
     return _toggletip.Toggletip;
-  }
-});
-Object.defineProperty(exports, "TooltipNew", {
-  enumerable: true,
-  get: function get() {
-    return _tooltipNew.TooltipNew;
-  }
-});
-Object.defineProperty(exports, "Tooltip", {
-  enumerable: true,
-  get: function get() {
-    return _tooltip.Tooltip;
   }
 });
 Object.defineProperty(exports, "HighlightHalo", {
@@ -939,6 +915,12 @@ Object.defineProperty(exports, "ArrowIcon", {
   enumerable: true,
   get: function get() {
     return _arrowIcon.ArrowIcon;
+  }
+});
+Object.defineProperty(exports, "LongArrowIcon", {
+  enumerable: true,
+  get: function get() {
+    return _longArrowIcon.LongArrowIcon;
   }
 });
 Object.defineProperty(exports, "BancontactIcon", {
@@ -1463,6 +1445,24 @@ Object.defineProperty(exports, "ShieldIcon", {
     return _shieldIcon.ShieldIcon;
   }
 });
+Object.defineProperty(exports, "PeopleIcon", {
+  enumerable: true,
+  get: function get() {
+    return _peopleIcon.PeopleIcon;
+  }
+});
+Object.defineProperty(exports, "StatsIcon", {
+  enumerable: true,
+  get: function get() {
+    return _statsIcon.StatsIcon;
+  }
+});
+Object.defineProperty(exports, "SpeechBubbleIcon", {
+  enumerable: true,
+  get: function get() {
+    return _speechBubbleIcon.SpeechBubbleIcon;
+  }
+});
 Object.defineProperty(exports, "COLORS", {
   enumerable: true,
   get: function get() {
@@ -1626,6 +1626,10 @@ var _loader = require("./components/atoms/loader");
 
 var _loaderWithParagraph = require("./components/atoms/loader-with-paragraph");
 
+var _statusWithBullet = require("./components/atoms/status-with-bullet");
+
+var _stepperIcon = require("./components/atoms/stepper-icon");
+
 var _tag = require("./components/atoms/tag");
 
 var _avatarWithTextAndBadge = require("./components/avatar/avatar-with-text-and-badge");
@@ -1667,8 +1671,6 @@ var _backerCard = require("./components/cards/backer-card");
 var _backingCard = require("./components/cards/backing-card");
 
 var _cartRewardCard = require("./components/cards/cart-reward-card");
-
-var _donationCard = require("./components/cards/donation-card");
 
 var _rewardEdition = require("./components/cards/reward-edition");
 
@@ -1755,8 +1757,6 @@ var _selectWithState = require("./components/form/select-with-state");
 var _textInputAndSelect = require("./components/form/text-input-and-select");
 
 var _textInputWithLimit = require("./components/form/text-input-with-limit");
-
-var _textInputWithUnitForm = require("./components/form/text-input-with-unit-form");
 
 var _textInputWithUnit = require("./components/form/text-input-with-unit");
 
@@ -1848,11 +1848,7 @@ var _simplePopover = require("./components/popovers/simple-popover");
 
 var _searchInput = require("./components/search/search-input");
 
-var _statusWithBullet = require("./components/status-with-bullet");
-
 var _verticalStepper = require("./components/steppers/vertical-stepper");
-
-var _stepperIcon = require("./components/steppers/stepper-icon");
 
 var _stepper = require("./components/steppers/stepper");
 
@@ -1864,15 +1860,7 @@ var _singleEntryTable = require("./components/tables/single-entry-table");
 
 var _textCopy = require("./components/text-copy");
 
-var _questionMarkWithTooltip = require("./components/tooltips/question-mark-with-tooltip");
-
-var _staticTooltip = require("./components/tooltips/static-tooltip");
-
 var _toggletip = require("./components/tooltips/toggletip");
-
-var _tooltipNew = require("./components/tooltips/tooltip-new");
-
-var _tooltip = require("./components/tooltips/tooltip");
 
 var _highlightHalo = require("./components/tours/highlight-halo");
 
@@ -1903,6 +1891,8 @@ var _alignLeftIcon = require("./components/icons/align-left-icon");
 var _alignRightIcon = require("./components/icons/align-right-icon");
 
 var _arrowIcon = require("./components/icons/arrow-icon");
+
+var _longArrowIcon = require("./components/icons/long-arrow-icon");
 
 var _bancontactIcon = require("./components/icons/bancontact-icon");
 
@@ -2075,6 +2065,12 @@ var _fileIcon = require("./components/icons/file-icon");
 var _loudspeakerIcon = require("./components/icons/loudspeaker-icon");
 
 var _shieldIcon = require("./components/icons/shield-icon");
+
+var _peopleIcon = require("./components/icons/people-icon");
+
+var _statsIcon = require("./components/icons/stats-icon");
+
+var _speechBubbleIcon = require("./components/icons/speech-bubble-icon");
 
 var _colorsConfig = _interopRequireDefault(require("./constants/colors-config"));
 

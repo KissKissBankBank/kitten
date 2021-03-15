@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { ArrowIcon } from './arrow-icon'
+import { LongArrowIcon } from './long-arrow-icon'
 import { BancontactIcon } from './bancontact-icon'
 import { BubbleIcon } from './bubble-icon'
 import { BurgerIcon } from './burger-icon/index'
@@ -88,6 +89,9 @@ import { HomeIcon } from './home-icon'
 import { LoudspeakerIcon } from './loudspeaker-icon'
 import { ShieldIcon } from './shield-icon'
 import { TagIcon } from './tag-icon'
+import { PeopleIcon } from './people-icon'
+import { StatsIcon } from './stats-icon'
+import { SpeechBubbleIcon } from './speech-bubble-icon'
 import { FlagIcon, flagList } from './flag-icon'
 import flagFile from 'icons/flags.png'
 
@@ -243,6 +247,18 @@ export const AllIcons = () => {
         <IconContainer suffix='direction="right"'>
           <ArrowIcon color={colorInput} direction="right" />
         </IconContainer>
+        <IconContainer suffix='direction="top"'>
+          <LongArrowIcon color={colorInput} direction="top" />
+        </IconContainer>
+        <IconContainer suffix='direction="bottom"'>
+          <LongArrowIcon color={colorInput} direction="bottom" />
+        </IconContainer>
+        <IconContainer suffix='direction="left"'>
+          <LongArrowIcon color={colorInput} direction="left" />
+        </IconContainer>
+        <IconContainer suffix='direction="right"'>
+          <LongArrowIcon color={colorInput} direction="right" />
+        </IconContainer>
       </Group>
 
       <Group title="Complex icons">
@@ -343,6 +359,9 @@ export const AllIcons = () => {
         <IconContainer children={<LoudspeakerIcon color={colorInput} />} />
         <IconContainer children={<ShieldIcon color={colorInput} />} />
         <IconContainer children={<TagIcon color={colorInput} />} />
+        <IconContainer children={<PeopleIcon color={colorInput} />} />
+        <IconContainer children={<StatsIcon color={colorInput} />} />
+        <IconContainer children={<SpeechBubbleIcon color={colorInput} />} />
       </Group>
       <Group title="Country flag icons">
         {flagList.map(country => (

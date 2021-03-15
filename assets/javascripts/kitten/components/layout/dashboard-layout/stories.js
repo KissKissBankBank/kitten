@@ -21,6 +21,9 @@ import {
   FileIcon,
   LoudspeakerIcon,
   ShieldIcon,
+  PeopleIcon,
+  StatsIcon,
+  SpeechBubbleIcon,
 } from '../../..'
 
 import { Default as Table } from '../../tables/list-table/list-table.stories.js'
@@ -50,21 +53,6 @@ const CardHolder = styled.div`
   }
 `
 
-const StyledAvatarWithTextAndBadge = styled(AvatarWithTextAndBadge)`
-  /* FIX AvatarWithTextAndBadge */
-
-  .text--withEllipsis {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  .k-ButtonImageWithText__text {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-`
-
 const HelpBox = styled.div`
   height: ${pxToRem(80)};
   background-color: rgb(255, 255, 255, 0.05);
@@ -72,10 +60,6 @@ const HelpBox = styled.div`
   display: flex;
   align-items: center;
   border-radius: ${pxToRem(8)};
-
-  > div {
-    align-self: initial;
-  }
 `
 
 export default {
@@ -104,30 +88,31 @@ export const Default = () => {
       fullHeightContent={selectedView === 'flow'}
     >
       <DashboardLayout.Header>
-        <StyledAvatarWithTextAndBadge>
-          <AvatarWithTextAndBadge.Image
-            src="/kitten.jpg"
-            alt=""
-            width={pxToRem(60)}
-            height={pxToRem(60)}
-          />
+        <AvatarWithTextAndBadge>
+          <AvatarWithTextAndBadge.Image src="/kitten.jpg" alt="" size="big" />
 
-          <AvatarWithTextAndBadge.Text withEllipsisOverflow={true}>
-            <Text lineHeight="normal" weight="regular" color="background1">
+          <AvatarWithTextAndBadge.Text
+            withEllipsisOverflow
+            className="k-u-color-background1--important"
+          >
+            <Text lineHeight="normal" weight="regular">
               T-shirts brodés Free Boobs Club
             </Text>
             <br />
-            <Text
-              lineHeight="normal"
+            <StatusWithBullet
+              as="span"
               weight="light"
-              size="nano"
-              color="background1"
+              size="micro"
+              statusType={select(
+                'Status type',
+                ['danger', 'success', 'warning', 'neutral', 'none'],
+                'success',
+              )}
             >
-              <StatusWithBullet as="span" />
-              Prêt a être partagé avec mon coach
-            </Text>
+              Prêt a être partagé avec un texte long pour tester l’ellipse
+            </StatusWithBullet>
           </AvatarWithTextAndBadge.Text>
-        </StyledAvatarWithTextAndBadge>
+        </AvatarWithTextAndBadge>
       </DashboardLayout.Header>
       <DashboardLayout.SideContent>
         {({ closeSideBar }) => {
@@ -150,16 +135,27 @@ export const Default = () => {
                   window.location.search ===
                   '?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story'
                 }
+                icon={() => <PeopleIcon color="currentColor" />}
+                onClick={() => closeSideBar()}
+              >
+                Contributeurs
+              </DashboardMenu.Item>
+              <DashboardMenu.Item
+                href="?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story&custom=a"
+                isActive={
+                  window.location.search ===
+                  '?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story&custom=a'
+                }
                 icon={() => <TagIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
               >
                 Contreparties
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=a"
+                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=b"
                 isActive={
                   window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=a'
+                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=b'
                 }
                 icon={() => <FilterIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
@@ -182,6 +178,17 @@ export const Default = () => {
                 isActive={
                   window.location.search ===
                   '?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story'
+                }
+                icon={() => <StatsIcon color="currentColor" />}
+                onClick={() => closeSideBar()}
+              >
+                Statistiques
+              </DashboardMenu.Item>
+              <DashboardMenu.Item
+                href="?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story&custom=1"
+                isActive={
+                  window.location.search ===
+                  '?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story&custom=1'
                 }
                 icon={() => <LoudspeakerIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
@@ -223,35 +230,36 @@ export const Default = () => {
                   Documents justificatifs
                 </DashboardMenu.Item>
               </DashboardMenu.Expandable>
+              <DashboardMenu.Item
+                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=4"
+                isActive={
+                  window.location.search ===
+                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=4'
+                }
+                icon={() => <SpeechBubbleIcon color="currentColor" />}
+                onClick={() => closeSideBar()}
+              >
+                Actualités
+              </DashboardMenu.Item>
             </DashboardMenu>
           )
         }}
       </DashboardLayout.SideContent>
       <DashboardLayout.SideFooter>
         <HelpBox>
-          <StyledAvatarWithTextAndBadge>
+          <AvatarWithTextAndBadge as="a" href="#">
             <AvatarWithTextAndBadge.Image src="/kitten.jpg" alt="" />
 
             <AvatarWithTextAndBadge.Text>
-              <Text
-                lineHeight="normal"
-                weight="bold"
-                color="background1"
-                size="tiny"
-              >
+              <Text weight="bold" color="background1" size="tiny">
                 Besoin d’aide ?
               </Text>
               <br />
-              <Text
-                lineHeight="normal"
-                weight="bold"
-                color="primary1"
-                size="tiny"
-              >
+              <Text weight="bold" color="primary1" size="tiny">
                 Contacter votre coach
               </Text>
             </AvatarWithTextAndBadge.Text>
-          </StyledAvatarWithTextAndBadge>
+          </AvatarWithTextAndBadge>
         </HelpBox>
       </DashboardLayout.SideFooter>
 

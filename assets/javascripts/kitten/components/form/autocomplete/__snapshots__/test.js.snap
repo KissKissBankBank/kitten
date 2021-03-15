@@ -194,7 +194,6 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   display: flex;
   height: 0.3125rem;
   line-height: 1;
-  gap: 0.125rem;
 }
 
 .c2 .k-Loader__circle {
@@ -220,6 +219,10 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 .c2 .k-Loader__circle:nth-child(3) {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
+}
+
+.c2 .k-Loader__circle:not(:last-child) {
+  margin-right: 0.125rem;
 }
 
 .c0 {

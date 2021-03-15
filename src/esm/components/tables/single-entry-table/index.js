@@ -4,9 +4,10 @@ import React from 'react';
 import { Styles } from './styles';
 import classNames from 'classnames';
 export var SingleEntryTable = function SingleEntryTable(_ref) {
-  var _ref$isSliding = _ref.isSliding,
+  var className = _ref.className,
+      _ref$isSliding = _ref.isSliding,
       isSliding = _ref$isSliding === void 0 ? false : _ref$isSliding,
-      props = _objectWithoutProperties(_ref, ["isSliding"]);
+      props = _objectWithoutProperties(_ref, ["className", "isSliding"]);
 
   return /*#__PURE__*/React.createElement(Styles, {
     className: classNames('SingleEntryTable__Container', {
@@ -15,7 +16,7 @@ export var SingleEntryTable = function SingleEntryTable(_ref) {
   }, /*#__PURE__*/React.createElement("div", {
     className: "SingleEntryTable__TableContainer"
   }, /*#__PURE__*/React.createElement("table", _extends({
-    className: "SingleEntryTable__Table"
+    className: classNames('SingleEntryTable__Table', className)
   }, props))));
 };
 
@@ -35,15 +36,21 @@ SingleEntryTable.Row = function (props) {
   return /*#__PURE__*/React.createElement("tr", props);
 };
 
-SingleEntryTable.Col = function (props) {
+SingleEntryTable.Col = function (_ref3) {
+  var className = _ref3.className,
+      props = _objectWithoutProperties(_ref3, ["className"]);
+
   return /*#__PURE__*/React.createElement("td", _extends({
-    className: "SingleEntryTable__Column SingleEntryTable__Column--Col"
+    className: classNames('SingleEntryTable__Column SingleEntryTable__Column--Col', className)
   }, props));
 };
 
-SingleEntryTable.HeaderCol = function (props) {
+SingleEntryTable.HeaderCol = function (_ref4) {
+  var className = _ref4.className,
+      props = _objectWithoutProperties(_ref4, ["className"]);
+
   return /*#__PURE__*/React.createElement("th", _extends({
-    className: "SingleEntryTable__Column SingleEntryTable__Column--HeaderCol",
+    className: classNames('SingleEntryTable__Column SingleEntryTable__Column--HeaderCol', className),
     scope: "column"
   }, props));
 };

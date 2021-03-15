@@ -10,6 +10,7 @@ import {
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
 } from '../../../constants/grid-config'
+import { domElementHelper } from '../../../helpers/dom/element-helper'
 
 const StyledDev = styled.div`
   .k-DevGrid {
@@ -104,18 +105,28 @@ export const DevGrid = ({ visible, storageKey, zIndex }) => {
   const [isVisible, setVisibility] = useState(visible)
 
   useEffect(() => {
-    window.addEventListener('keydown', handleKeyDown)
+    domElementHelper.canUseDom() &&
+      window.addEventListener('keydown', handleKeyDown)
 
-    if (window.sessionStorage.getItem(storageKey)) setVisibility(true)
+    if (
+      domElementHelper.canUseDom() &&
+      window.sessionStorage.getItem(storageKey)
+    ) {
+      setVisibility(true)
+    }
 
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    return () =>
+      domElementHelper.canUseDom() &&
+      window.removeEventListener('keydown', handleKeyDown)
   }, [])
 
   useEffect(() => {
     if (isVisible) {
-      window.sessionStorage.setItem(storageKey, 'on')
+      domElementHelper.canUseDom() &&
+        window.sessionStorage.setItem(storageKey, 'on')
     } else {
-      window.sessionStorage.removeItem(storageKey)
+      domElementHelper.canUseDom() &&
+        window.sessionStorage.removeItem(storageKey)
     }
   }, [isVisible])
 
@@ -124,9 +135,7 @@ export const DevGrid = ({ visible, storageKey, zIndex }) => {
 
     e.preventDefault()
 
-    setVisibility(current => {
-      return !current
-    })
+    setVisibility(current => !current)
   }
 
   if (!isVisible) return null

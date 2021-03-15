@@ -5,6 +5,169 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: Convert `ResponsiveIframeContainer` and remove `k-ResponsiveIframeContainer` mixin.
+- Fix: Fix error in `Accordion` when closing pane.
+- Fix: Fix ellipsis for children of `AvaratWithTextAndBadge`.
+- Fix: Fix alignment on `HeaderNav` `UserMenuButton`.
+- Fix: Fix `GridCol` offset class for `0` value.
+
+## [3.0.0-beta.15] - 2021-03-12
+
+Fix:
+
+- Revert default value for `Title` margin.
+
+(Release `2.124.0`)
+
+## [3.0.0-beta.14] - 2021-03-12
+
+Breaking changes:
+
+- Delete the following deprecated components:
+  - `DonationCard`
+  - `TextInputWithUnitForm`
+- `Paragraph` is replaced with `Next` `Paragraph`.
+- Move `StatusWithBullet` to `atoms`.
+
+Features:
+
+- Refactor `AvatarWithTextAndBadge` to CSS-in-JS.
+- Add `LongArrowIcon` component.
+- Add `warning`, `neutral` and `none` values to `StatusWithBullet` `statusType` prop.
+- Add `size` and `weight` props to `StatusWithBullet`.
+- `statusMessage` prop is no longer required, you can now use `children` alternatively in `StatusWithBullet`.
+- Add `hoverable` prop to `AvatarWithTextAndBadge`.
+- Add `size` prop to `AvatarWithTextAndBadge.Image`.
+- Deprecate `textClassName` prop in favor of `className` on `AvatarWithTextAndBadge.Text`.
+- Add explicit utility class `k-u-pointer-events-none` to `k-utilities-event` mixin.
+
+Fix:
+
+- Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
+
+
+## [3.0.0-beta.13] - 2021-03-11
+
+- Revert back to `beta.11` changes, keep fix.
+
+## [3.0.0-beta.12] - 2021-03-11
+
+- Revert all `beta.11` changes, except:
+  - Delete buggy `useFlexGapCheck`.
+
+## [3.0.0-beta.11] - 2021-03-11
+
+Breaking changes:
+
+- Delete buggy `useFlexGapCheck`.
+- Delete the following deprecated components:
+  - `Paragraph` (replaced by `Next` `Paragraph`, see beta.14)
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Title`
+  - `k-Paragraph` (see beta.14)
+  - `k-Row`
+  - `k-Grid`
+  - `k-grid` and `k-grid-col*` helpers
+  - `k-Footer`
+  - `k-FormAction`
+  - `k-Line`
+- Remplace prop `margin` with `noMargin` on `Title`.
+- Remplace prop `margin` with `noMargin` on `Paragraph`.
+
+Features:
+
+- Convert the following component to CSS-in-JS:
+  - `Title`
+  - `Row`
+  - `Grid`
+  - `FormAction`
+  - `Line`
+
+## [3.0.0-beta.10] - 2021-03-10
+
+Fix:
+
+- Fix Lodash imports on `DropdownPhoneSelect`.
+
+(Release `2.123.3`)
+
+## [3.0.0-beta.9] - 2021-03-03
+
+(Release `2.123.2`)
+
+## [3.0.0-beta.8] - 2021-03-01
+
+Breaking changes:
+
+- Depreciate `Stepper` in favour of `Next` `Stepper`.
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Stepper`
+  - `k-Stepper__icon`
+- Convert `StepperIcon*` to CSS-in-JS and move to `atoms`.
+
+Features:
+
+- Convert deprecated `Stepper` to CSS-in-JS.
+- Add `StepperIcon` component with `state` prop.
+- Add `empty` prop to `IconBadge`.
+
+Fix:
+
+- Add DOM check to `useFlexGapCheck`.
+
+## [3.0.0-beta.7] - 2021-03-01
+
+Feature:
+
+- Add `AdaptableGridCol` to ESM export.
+
+Fixes:
+
+- Add DOM check to `DevGrid`.
+- Add width to `StickyContainer` in `HeaderNav`.
+- Use wrapper and relative positioning for a `Badge` with `Icon` prop.
+
+## [3.0.0-beta.6] - 2021-03-01
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-Line`
+  - `k-LinkBox`
+  - `k-SideGrid`
+  - `k-StaticTooltip`
+  - `k-Tooltip`
+  - `k-TooltipNew`
+  - `k-VerticalGrid`
+- Delete the following deprecated components:
+  - `LinkBox/deprecated`
+  - `QuestionMarkWithTooltip`
+  - `StaticTooltip`
+  - `Tooltip`
+  - `TooltipNew`
+- Remove `withTooltip` HOC.
+- Remove `LinkBox` default export.
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+  - `Line`
+  - `SideGrid`
+  - `SideLayout`
+- Make `Marger` a function instead of a React.Component.
+- Add `tooltipProps` prop to `Field/Label` component.
+- Add `useFlexGapCheck` hook for flexbox `gap` feature detection.
+
+Fixes:
+
+- Fix `InformationBox` style.
+- Fix gap bug on Safari for the following components:
+  - `BackingCard`
+  - `DashboardLayout.Flow`
+  - `DashboardLayout`
+  - `DashboardMenu`
+  - `ImageCropper`
+  - `Loader`
+  - `LoaderWithParagraph`
 
 ## [3.0.0-beta.5] - 2021-02-25
 
@@ -150,7 +313,48 @@ Breaking changes:
   - `ProjectCreatorCard`
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
-  - `SimilarProjectsCard`.
+  - `SimilarProjectsCard`
+
+## [2.124.0] - 2021-03-12
+
+Features:
+
+- Add `className` prop propagation to `SingleEntryTable` and subcomponents:
+  - `SingleEntryTable.Col`
+  - `SingleEntryTable.HeaderCol`
+- Add `className` prop propagation to `DoubleEntryTable` and subcomponents:
+  - `DoubleEntryTable.Col`
+  - `DoubleEntryTable.HeaderCol`
+  - `DoubleEntryTable.TitleCol`
+
+## [2.123.3] - 2021-03-10
+
+Fix:
+
+- Use callback ref in `useLazyObserver`.
+
+## [2.123.2] - 2021-03-03
+
+Fix:
+
+- Perf problem with `Carousel` on mobile devices.
+
+## [2.123.1] - 2021-03-01
+
+Fix:
+
+- Allow for `null` value on `HeaderNav` `stickyProps` prop.
+
+## [2.123.0] - 2021-03-01
+
+Feature:
+
+- Add `PeopleIcon`, `StatsIcon` and `SpeechBubbleIcon`.
+
+Fixes:
+
+- Remove `unique "key" prop` error on `DashboardLayout`.
+- Fix `StickyContainer` width on `HeaderNav`.
 
 ## [2.122.0] - 2021-02-25
 

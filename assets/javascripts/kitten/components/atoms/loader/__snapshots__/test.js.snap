@@ -2,7 +2,7 @@
 
 exports[`<Loader /> With custom props should match with snapshot 1`] = `
 <button
-  className="sc-bdVaJa cgjwHV k-Loader customClassName"
+  className="sc-bdVaJa fnuzVd k-Loader customClassName"
 >
   <svg
     className="k-Loader__circle"
@@ -45,7 +45,7 @@ exports[`<Loader /> With custom props should match with snapshot 1`] = `
 
 exports[`<Loader /> With default props should match with snapshot 1`] = `
 <div
-  className="sc-bdVaJa cgjwHV k-Loader"
+  className="sc-bdVaJa fnuzVd k-Loader"
 >
   <svg
     className="k-Loader__circle"

@@ -25,6 +25,8 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _gridConfig = require("../../../constants/grid-config");
 
+var _elementHelper = require("../../../helpers/dom/element-helper");
+
 var StyledDev = _styledComponents.default.div.withConfig({
   displayName: "dev-grid__StyledDev",
   componentId: "sc-1xn9237-0"
@@ -42,17 +44,21 @@ var DevGrid = function DevGrid(_ref) {
       setVisibility = _useState2[1];
 
   (0, _react.useEffect)(function () {
-    window.addEventListener('keydown', handleKeyDown);
-    if (window.sessionStorage.getItem(storageKey)) setVisibility(true);
+    _elementHelper.domElementHelper.canUseDom() && window.addEventListener('keydown', handleKeyDown);
+
+    if (_elementHelper.domElementHelper.canUseDom() && window.sessionStorage.getItem(storageKey)) {
+      setVisibility(true);
+    }
+
     return function () {
-      return window.removeEventListener('keydown', handleKeyDown);
+      return _elementHelper.domElementHelper.canUseDom() && window.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
   (0, _react.useEffect)(function () {
     if (isVisible) {
-      window.sessionStorage.setItem(storageKey, 'on');
+      _elementHelper.domElementHelper.canUseDom() && window.sessionStorage.setItem(storageKey, 'on');
     } else {
-      window.sessionStorage.removeItem(storageKey);
+      _elementHelper.domElementHelper.canUseDom() && window.sessionStorage.removeItem(storageKey);
     }
   }, [isVisible]);
 

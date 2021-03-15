@@ -32,6 +32,8 @@ describe('<Toggletip />', () => {
             bubbleProps={{
               className: 'customClassName',
               zIndex: 500,
+              color: 'black',
+              style: { width: '100%' },
             }}
             actionProps={{
               className: 'customClassName',

@@ -1,11 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import { Styles } from './styles'
 
-export const DoubleEntryTable = ({ firstColWidth, ...props }) => (
+export const DoubleEntryTable = ({ firstColWidth, className, ...props }) => (
   <Styles className="DoubleEntryTable__Container" firstColWidth={firstColWidth}>
     <div className="DoubleEntryTable__TableContainer">
-      <table className="DoubleEntryTable__Table" {...props} />
+      <table
+        className={classNames('DoubleEntryTable__Table', className)}
+        {...props}
+      />
     </div>
   </Styles>
 )
@@ -17,22 +21,31 @@ DoubleEntryTable.Header = ({ children, headerRowProps, ...others }) => (
 )
 DoubleEntryTable.Body = props => <tbody {...props} />
 DoubleEntryTable.Row = props => <tr {...props} />
-DoubleEntryTable.Col = props => (
+DoubleEntryTable.Col = ({ className, ...props }) => (
   <td
-    className="DoubleEntryTable__Column DoubleEntryTable__Column--Col"
+    className={classNames(
+      'DoubleEntryTable__Column DoubleEntryTable__Column--Col',
+      className,
+    )}
     {...props}
   />
 )
-DoubleEntryTable.HeaderCol = props => (
+DoubleEntryTable.HeaderCol = ({ className, ...props }) => (
   <th
-    className="DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol"
+    className={classNames(
+      'DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol',
+      className,
+    )}
     scope="column"
     {...props}
   />
 )
-DoubleEntryTable.TitleCol = props => (
+DoubleEntryTable.TitleCol = ({ className, ...props }) => (
   <th
-    className="DoubleEntryTable__Column DoubleEntryTable__Column--TitleCol"
+    className={classNames(
+      'DoubleEntryTable__Column DoubleEntryTable__Column--TitleCol',
+      className,
+    )}
     scope="row"
     {...props}
   />
