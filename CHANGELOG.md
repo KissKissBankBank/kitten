@@ -4,6 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Delete the following deprecated SCSS mixins:
+  - `k-HorizontalNav`
+  - `k-TabBar`
+- Breaking change: Delete the following deprecated components:
+  - `HorizontalNav`
+  - `MarkdownPage`
+  - `TabBar`
+
 ## [3.0.0-beta.15] - 2021-03-12
 
 Fix:

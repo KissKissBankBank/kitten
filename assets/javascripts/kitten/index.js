@@ -190,9 +190,6 @@ export { NavBar } from './components/navigation/nav-bar'
 // Notifications
 export { Alert } from './components/notifications/alert'
 
-// Pages
-export { MarkdownPage } from './components/pages/markdown'
-
 // Popovers
 export { SimplePopover } from './components/popovers/simple-popover'
 
