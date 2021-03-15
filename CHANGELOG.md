@@ -6,6 +6,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `HorizontalTimeline` component.
 
+## [2.124.0] - 2021-03-12
+
+Features:
+
+- Add `className` prop propagation to `SingleEntryTable` and subcomponents:
+  - `SingleEntryTable.Col`
+  - `SingleEntryTable.HeaderCol`
+- Add `className` prop propagation to `DoubleEntryTable` and subcomponents:
+  - `DoubleEntryTable.Col`
+  - `DoubleEntryTable.HeaderCol`
+  - `DoubleEntryTable.TitleCol`
+
 ## [2.123.3] - 2021-03-10
 
 Fix:
