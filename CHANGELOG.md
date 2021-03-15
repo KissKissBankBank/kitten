@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Breaking changes:
 
-- Delete the following deprecated SCSS mixins: 
+- Delete the following deprecated SCSS mixin: 
   - `k-BulletList`
 
 - Convert and move the following components to CSS-in-JS:
