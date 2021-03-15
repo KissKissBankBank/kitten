@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Convert `ResponsiveIframeContainer` and remove `k-ResponsiveIframeContainer` mixin.
 - Fix: Fix error in `Accordion` when closing pane.
 - Fix: Fix ellipsis for children of `AvaratWithTextAndBadge`.
 - Fix: Fix alignment on `HeaderNav` `UserMenuButton`.
