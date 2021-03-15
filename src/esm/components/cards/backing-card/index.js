@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { StyledBackingCard } from './styles';
 import { Info, Form, Title, Image, Amount, Button, TagList, HeadingTag, Description } from './components';
-import { useFlexGapCheck } from '../../../helpers/dom/use-flex-gap-check';
 export var BackingCard = function BackingCard(_ref) {
   var children = _ref.children,
       className = _ref.className,
@@ -13,12 +12,10 @@ export var BackingCard = function BackingCard(_ref) {
       hasBorder = _ref.hasBorder,
       props = _objectWithoutProperties(_ref, ["children", "className", "disabled", "hasBorder"]);
 
-  var canUseGap = useFlexGapCheck();
   return /*#__PURE__*/React.createElement(StyledBackingCard, _extends({}, props, {
     className: classNames('k-BackingCard', className, {
       'k-BackingCard--disabled': disabled,
-      'k-BackingCard--hasBorder': hasBorder,
-      'k-BackingCard--noGap': !canUseGap
+      'k-BackingCard--hasBorder': hasBorder
     })
   }), React.Children.map(children, function (child) {
     if (!child) return null;

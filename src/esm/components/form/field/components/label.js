@@ -61,7 +61,8 @@ export var FieldLabel = /*#__PURE__*/function (_Component) {
 FieldLabel.propTypes = {
   link: PropTypes.node,
   tooltip: PropTypes.string,
-  labelProps: PropTypes.object
+  labelProps: PropTypes.object,
+  tooltipProps: PropTypes.object
 };
 FieldLabel.defaultProps = {
   tooltip: null,

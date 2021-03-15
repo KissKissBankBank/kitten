@@ -11,12 +11,13 @@ export const StyledBackingCard = styled.article`
 
   /* CARD STYLE */
 
-  border: var(--backingCard--border-width) solid var(--backingCard--border-color);
+  border: var(--backingCard--border-width) solid
+    var(--backingCard--border-color);
   border-radius: var(--backingCard--border-radius);
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  transition: border-color .2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
 
   &.k-BackingCard--hasBorder {
     --backingCard--border-width: ${pxToRem(2)};
@@ -85,7 +86,7 @@ export const StyledBackingCard = styled.article`
       object-position: center center;
       border-top-left-radius: var(--backingCard--border-radius);
       border-top-right-radius: var(--backingCard--border-radius);
-      transition: transform .2s ease-in-out;
+      transition: transform 0.2s ease-in-out;
     }
   }
 
@@ -109,9 +110,11 @@ export const StyledBackingCard = styled.article`
         right: 0;
         padding-left: ${pxToRem(40)};
         line-height: 1.5;
-        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) ${pxToRem(
-          30,
-        )});
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) ${pxToRem(30)}
+        );
       }
     }
 
@@ -120,7 +123,6 @@ export const StyledBackingCard = styled.article`
       font-size: ${stepToRem(-2)};
       line-height: calc(1.5 * ${stepToRem(-2)});
     }
-
   }
 
   .k-BackingCard__headingTag {
@@ -130,9 +132,13 @@ export const StyledBackingCard = styled.article`
 
     color: ${COLORS.primary1};
     ${TYPOGRAPHY.fontStyles.regular}
-    gap: ${pxToRem(10)};
 
-    svg, path {
+    svg {
+      margin-right: ${pxToRem(10)};
+    }
+
+    svg,
+    path {
       color: inherit;
 
       &[fill] {
@@ -165,7 +171,10 @@ export const StyledBackingCard = styled.article`
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: ${pxToRem(10)};
+
+    & > :not(:last-child) {
+      margin-right: ${pxToRem(10)};
+    }
   }
 
   &.k-BackingCard--disabled {
@@ -210,15 +219,6 @@ export const StyledBackingCard = styled.article`
     }
     .k-BackingCard__description__moreButton {
       color: ${COLORS.primary2};
-    }
-  }
-
-  &.k-BackingCard--noGap {
-    .k-BackingCard__headingTag svg {
-      margin-right: ${pxToRem(10)};
-    }
-    .k-BackingCard__tagList > :not(:last-child) {
-      margin-right: ${pxToRem(10)};
     }
   }
 `

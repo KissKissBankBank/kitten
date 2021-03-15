@@ -55,7 +55,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
     type="button"
   >
     <div
-      className="sc-EHOje bjtzCy k-Loader k-Loader--noGap"
+      className="sc-EHOje jMZZNq k-Loader"
     >
       <svg
         className="k-Loader__circle"

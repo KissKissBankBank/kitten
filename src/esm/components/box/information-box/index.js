@@ -24,7 +24,7 @@ export var InformationBox = function InformationBox(_ref) {
     className: "k-InformationBox__container"
   }, /*#__PURE__*/React.createElement(Title, _extends({
     tag: "p",
-    margin: false,
+    noMargin: true,
     modifier: "quaternary"
   }, titleProps, {
     className: classNames('k-InformationBox__title', 'k-u-margin-bottom-single', titleProps.className)

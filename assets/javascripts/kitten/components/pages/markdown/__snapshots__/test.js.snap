@@ -6,8 +6,13 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="h1"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
     >
       H1
     </h1>
@@ -30,8 +35,13 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat hXOnrW"
   >
     <h2
-      className="sc-bdVaJa eiyshY"
+      className="sc-bdVaJa kytFjT k-Title"
       id="h2"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
     >
       H2
     </h2>
@@ -40,8 +50,13 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat hXOnrW"
   >
     <h3
-      className="sc-bdVaJa dheggY"
+      className="sc-bdVaJa dfDOea k-Title"
       id="h3"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
     >
       H3
     </h3>
@@ -50,8 +65,13 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="emphasis"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
     >
       Emphasis
     </h1>
@@ -74,7 +94,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat kcNXMt"
   >
     <p
-      className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin"
+      className="sc-bZQynM cvUhvm k-Paragraph k-Paragraph--noMargin"
     >
       Emphasis, aka italics, with 
       <em>
@@ -109,8 +129,13 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="list"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
     >
       List
     </h1>
@@ -172,8 +197,13 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="link"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
     >
       Link
     </h1>
@@ -196,7 +226,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kcNXMt"
   >
     <p
-      className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin"
+      className="sc-bZQynM cvUhvm k-Paragraph k-Paragraph--noMargin"
     >
       <a
         className="k-Paragraph__link"
@@ -215,8 +245,13 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="h1"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
     >
       H1
     </h1>
@@ -239,8 +274,13 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat hXOnrW"
   >
     <h2
-      className="sc-bdVaJa eiyshY"
+      className="sc-bdVaJa kytFjT k-Title"
       id="h2"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
     >
       H2
     </h2>
@@ -249,8 +289,13 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat hXOnrW"
   >
     <h3
-      className="sc-bdVaJa dheggY"
+      className="sc-bdVaJa dfDOea k-Title"
       id="h3"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
     >
       H3
     </h3>
@@ -259,8 +304,13 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="emphasis"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
     >
       Emphasis
     </h1>
@@ -283,7 +333,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat kcNXMt"
   >
     <p
-      className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+      className="sc-bZQynM hvWTWB k-Paragraph k-Paragraph--noMargin"
     >
       Emphasis, aka italics, with 
       <em>
@@ -318,8 +368,13 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="list"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
     >
       List
     </h1>
@@ -381,8 +436,13 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-bdVaJa kYsUiJ k-Title"
       id="link"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
     >
       Link
     </h1>
@@ -405,7 +465,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kcNXMt"
   >
     <p
-      className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+      className="sc-bZQynM hvWTWB k-Paragraph k-Paragraph--noMargin"
     >
       <a
         className="k-Paragraph__link"

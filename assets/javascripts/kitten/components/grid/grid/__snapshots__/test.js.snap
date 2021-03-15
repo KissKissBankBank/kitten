@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Grid /> default matches with snapshot 1`] = `
+<div
+  className="sc-bdVaJa kYEWWI k-Grid"
+/>
+`;
+
+exports[`<Grid /> with props matches with snapshot 1`] = `
+<div
+  aria-hidden={true}
+  className="sc-bdVaJa kYEWWI k-Grid custom-className"
+>
+  <p>
+    custom child
+  </p>
+</div>
+`;
+
+exports[`<GridCol /> default matches with snapshot 1`] = `
+<div
+  className="k-Grid__col k-Grid__col--12"
+/>
+`;
+
+exports[`<GridCol /> with props matches with snapshot 1`] = `
+<div
+  aria-hidden={true}
+  className="k-Grid__col k-Grid__col--12 custom-className"
+>
+  <p>
+    custom child
+  </p>
+</div>
+`;
+
+exports[`<GridCol /> with props matches with snapshot 2`] = `
+<div
+  className="k-Grid__col k-Grid__col--12 k-Grid__col--10-xs k-Grid__col--offset-1-xs k-Grid__col--8-s k-Grid__col--offset-2-s k-Grid__col--6-m k-Grid__col--offset-3-m k-Grid__col--4-l k-Grid__col--offset-4-l"
+/>
+`;
