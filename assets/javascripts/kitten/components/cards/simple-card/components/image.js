@@ -67,7 +67,7 @@ export const Image = ({
       )}
       style={{
         ...style,
-        '--k-SimpleCard-image-container-background': imageContainerBackground,
+        '--SimpleCard-image-container-background': imageContainerBackground,
         '--k-SimpleCard-image-container-ratio': imageContainerRatio,
       }}
     >
