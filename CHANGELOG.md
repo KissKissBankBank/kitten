@@ -9,7 +9,7 @@ Breaking changes:
 - Delete the following deprecated SCSS mixin: 
   - `k-BulletList`
 
-- Convert and move the following components to CSS-in-JS:
+- Convert and move the following component to CSS-in-JS:
   - `BulletList`
 
 ## [3.0.0-beta.9] - 2021-03-03
