@@ -2,11 +2,19 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 import '../../../config/__mocks__/matchMediaMock.js'
+import ReactDOM from 'react-dom'
 
 import { DashboardLayout } from './index'
 
 describe('<DashboardLayout />', () => {
   let component
+
+  beforeAll(() => {
+    global.scrollTo = jest.fn()
+    ReactDOM.createPortal = jest.fn(element => {
+      return element
+    })
+  })
 
   describe('with default props', () => {
     beforeEach(() => {
