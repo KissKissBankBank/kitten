@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove `SelectWithState` (replaced by `DropdownSelect`).
+- Breaking change: Remove deprecated `FormAmountAndCurrency`, `FormPhoneNumber` and `TextInputAndSelect` components.
 - Breaking change: Convert `ResponsiveIframeContainer` and remove `k-ResponsiveIframeContainer` mixin.
 - Fix: Fix error in `Accordion` when closing pane.
 - Fix: Fix ellipsis for children of `AvaratWithTextAndBadge`.
