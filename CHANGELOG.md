@@ -317,6 +317,12 @@ Breaking changes:
   - `RewardCardLegacy`
   - `SimilarProjectsCard`
 
+## [2.125.0] - 2021-03-15
+
+Feature:
+
+- Add `HorizontalTimeline` component.
+
 ## [2.124.0] - 2021-03-12
 
 Features:
