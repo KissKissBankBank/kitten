@@ -41,6 +41,12 @@ Object.defineProperty(exports, "LoaderWithParagraph", {
     return _loaderWithParagraph.LoaderWithParagraph;
   }
 });
+Object.defineProperty(exports, "StatusWithBullet", {
+  enumerable: true,
+  get: function get() {
+    return _statusWithBullet.StatusWithBullet;
+  }
+});
 Object.defineProperty(exports, "StepperIcon", {
   enumerable: true,
   get: function get() {
@@ -239,12 +245,6 @@ Object.defineProperty(exports, "CartRewardCard", {
     return _cartRewardCard.CartRewardCard;
   }
 });
-Object.defineProperty(exports, "DonationCard", {
-  enumerable: true,
-  get: function get() {
-    return _donationCard.DonationCard;
-  }
-});
 Object.defineProperty(exports, "RewardEdition", {
   enumerable: true,
   get: function get() {
@@ -425,18 +425,6 @@ Object.defineProperty(exports, "FormActions", {
     return _formActions.FormActions;
   }
 });
-Object.defineProperty(exports, "FormAmountAndCurrency", {
-  enumerable: true,
-  get: function get() {
-    return _formAmountAndCurrency.FormAmountAndCurrency;
-  }
-});
-Object.defineProperty(exports, "FormPhoneNumber", {
-  enumerable: true,
-  get: function get() {
-    return _formPhoneNumber.FormPhoneNumber;
-  }
-});
 Object.defineProperty(exports, "Label", {
   enumerable: true,
   get: function get() {
@@ -485,28 +473,10 @@ Object.defineProperty(exports, "RichTextInput", {
     return _richTextInput.RichTextInput;
   }
 });
-Object.defineProperty(exports, "SelectWithState", {
-  enumerable: true,
-  get: function get() {
-    return _selectWithState.SelectWithState;
-  }
-});
-Object.defineProperty(exports, "TextInputAndSelect", {
-  enumerable: true,
-  get: function get() {
-    return _textInputAndSelect.TextInputAndSelect;
-  }
-});
 Object.defineProperty(exports, "TextInputWithLimit", {
   enumerable: true,
   get: function get() {
     return _textInputWithLimit.TextInputWithLimit;
-  }
-});
-Object.defineProperty(exports, "TextInputWithUnitForm", {
-  enumerable: true,
-  get: function get() {
-    return _textInputWithUnitForm.TextInputWithUnitForm;
   }
 });
 Object.defineProperty(exports, "TextInputWithUnit", {
@@ -695,6 +665,12 @@ Object.defineProperty(exports, "Timeline", {
     return _timeline.Timeline;
   }
 });
+Object.defineProperty(exports, "HorizontalTimeline", {
+  enumerable: true,
+  get: function get() {
+    return _horizontalTimeline.HorizontalTimeline;
+  }
+});
 Object.defineProperty(exports, "DashboardMenu", {
   enumerable: true,
   get: function get() {
@@ -789,12 +765,6 @@ Object.defineProperty(exports, "SearchInput", {
   enumerable: true,
   get: function get() {
     return _searchInput.SearchInput;
-  }
-});
-Object.defineProperty(exports, "StatusWithBullet", {
-  enumerable: true,
-  get: function get() {
-    return _statusWithBullet.StatusWithBullet;
   }
 });
 Object.defineProperty(exports, "VerticalStepper", {
@@ -927,6 +897,12 @@ Object.defineProperty(exports, "ArrowIcon", {
   enumerable: true,
   get: function get() {
     return _arrowIcon.ArrowIcon;
+  }
+});
+Object.defineProperty(exports, "LongArrowIcon", {
+  enumerable: true,
+  get: function get() {
+    return _longArrowIcon.LongArrowIcon;
   }
 });
 Object.defineProperty(exports, "BancontactIcon", {
@@ -1559,12 +1535,6 @@ Object.defineProperty(exports, "nativeInputValueSetter", {
     return _nativeInputValueSetter.nativeInputValueSetter;
   }
 });
-Object.defineProperty(exports, "useFlexGapCheck", {
-  enumerable: true,
-  get: function get() {
-    return _useFlexGapCheck.useFlexGapCheck;
-  }
-});
 Object.defineProperty(exports, "getReactElementsByType", {
   enumerable: true,
   get: function get() {
@@ -1638,6 +1608,8 @@ var _loader = require("./components/atoms/loader");
 
 var _loaderWithParagraph = require("./components/atoms/loader-with-paragraph");
 
+var _statusWithBullet = require("./components/atoms/status-with-bullet");
+
 var _stepperIcon = require("./components/atoms/stepper-icon");
 
 var _tag = require("./components/atoms/tag");
@@ -1681,8 +1653,6 @@ var _backerCard = require("./components/cards/backer-card");
 var _backingCard = require("./components/cards/backing-card");
 
 var _cartRewardCard = require("./components/cards/cart-reward-card");
-
-var _donationCard = require("./components/cards/donation-card");
 
 var _rewardEdition = require("./components/cards/reward-edition");
 
@@ -1744,10 +1714,6 @@ var _dropdownSelect = require("./components/form/dropdown-select");
 
 var _formActions = require("./components/form/form-actions");
 
-var _formAmountAndCurrency = require("./components/form/form-amount-and-currency");
-
-var _formPhoneNumber = require("./components/form/form-phone-number");
-
 var _label = require("./components/form/label");
 
 var _locationInput = require("./components/form/location-input");
@@ -1764,13 +1730,7 @@ var _rangeSlider = require("./components/form/range-slider");
 
 var _richTextInput = require("./components/form/rich-text-input");
 
-var _selectWithState = require("./components/form/select-with-state");
-
-var _textInputAndSelect = require("./components/form/text-input-and-select");
-
 var _textInputWithLimit = require("./components/form/text-input-with-limit");
-
-var _textInputWithUnitForm = require("./components/form/text-input-with-unit-form");
 
 var _textInputWithUnit = require("./components/form/text-input-with-unit");
 
@@ -1830,6 +1790,8 @@ var _checkList = require("./components/lists/check-list");
 
 var _timeline = require("./components/lists/timeline");
 
+var _horizontalTimeline = require("./components/lists/horizontal-timeline");
+
 var _dashboardMenu = require("./components/menus/dashboard-menu");
 
 var _headerMenu = require("./components/menus/header-menu");
@@ -1861,8 +1823,6 @@ var _markdown = require("./components/pages/markdown");
 var _simplePopover = require("./components/popovers/simple-popover");
 
 var _searchInput = require("./components/search/search-input");
-
-var _statusWithBullet = require("./components/status-with-bullet");
 
 var _verticalStepper = require("./components/steppers/vertical-stepper");
 
@@ -1907,6 +1867,8 @@ var _alignLeftIcon = require("./components/icons/align-left-icon");
 var _alignRightIcon = require("./components/icons/align-right-icon");
 
 var _arrowIcon = require("./components/icons/arrow-icon");
+
+var _longArrowIcon = require("./components/icons/long-arrow-icon");
 
 var _bancontactIcon = require("./components/icons/bancontact-icon");
 
@@ -2103,8 +2065,6 @@ var _cssPropertyDistributor = require("./helpers/dom/css-property-distributor");
 var _elementHelper = _interopRequireDefault(require("./helpers/dom/element-helper"));
 
 var _nativeInputValueSetter = require("./helpers/dom/native-input-value-setter");
-
-var _useFlexGapCheck = require("./helpers/dom/use-flex-gap-check");
 
 var _reactElements = require("./helpers/react/react-elements");
 

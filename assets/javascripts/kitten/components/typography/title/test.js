@@ -7,13 +7,23 @@ describe('<Title />', () => {
 
   describe('by default', () => {
     beforeEach(() => {
+      component = renderer.create(<Title />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with props', () => {
+    beforeEach(() => {
       component = renderer
         .create(
           <Title
-            tag="h1"
-            modifier="primary"
-            margin={false}
-            italic={false}
+            tag="h3"
+            modifier="quinary"
+            noMargin
+            italic
             children="Lorem ipsum dolor sit amet…"
             cssColor="#555"
           />,

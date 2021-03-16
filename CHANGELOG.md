@@ -17,6 +17,101 @@ Feature:
   - `TextInputWithButton`
   - `TextInputWithUnit`
 
+## [3.0.0-beta.16] - 2021-03-15
+
+Breaking changes:
+
+- Delete the following deprecated components:
+  - `SelectWithState` (replaced by `DropdownSelect`)
+  - `FormAmountAndCurrency`
+  - `FormPhoneNumber`
+  - `TextInputAndSelect`
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-ResponsiveIframeContainer`
+  - `k-Select`
+
+Feature:
+
+- Refactor `ResponsiveIframeContainer` to CSS-in-JS
+
+Fixes:
+
+- Fix error in `Accordion` when closing pane.
+- Fix ellipsis for children of `AvaratWithTextAndBadge`.
+- Fix alignment on `HeaderNav` `UserMenuButton`.
+- Fix `GridCol` offset class for `0` value.
+
+## [3.0.0-beta.15] - 2021-03-12
+
+Fix:
+
+- Revert default value for `Title` margin.
+
+(Release `2.124.0`)
+
+## [3.0.0-beta.14] - 2021-03-12
+
+Breaking changes:
+
+- Delete the following deprecated components:
+  - `DonationCard`
+  - `TextInputWithUnitForm`
+- `Paragraph` is replaced with `Next` `Paragraph`.
+- Move `StatusWithBullet` to `atoms`.
+
+Features:
+
+- Refactor `AvatarWithTextAndBadge` to CSS-in-JS.
+- Add `LongArrowIcon` component.
+- Add `warning`, `neutral` and `none` values to `StatusWithBullet` `statusType` prop.
+- Add `size` and `weight` props to `StatusWithBullet`.
+- `statusMessage` prop is no longer required, you can now use `children` alternatively in `StatusWithBullet`.
+- Add `hoverable` prop to `AvatarWithTextAndBadge`.
+- Add `size` prop to `AvatarWithTextAndBadge.Image`.
+- Deprecate `textClassName` prop in favor of `className` on `AvatarWithTextAndBadge.Text`.
+- Add explicit utility class `k-u-pointer-events-none` to `k-utilities-event` mixin.
+
+Fix:
+
+- Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
+
+## [3.0.0-beta.13] - 2021-03-11
+
+- Revert back to `beta.11` changes, keep fix.
+
+## [3.0.0-beta.12] - 2021-03-11
+
+- Revert all `beta.11` changes, except:
+  - Delete buggy `useFlexGapCheck`.
+
+## [3.0.0-beta.11] - 2021-03-11
+
+Breaking changes:
+
+- Delete buggy `useFlexGapCheck`.
+- Delete the following deprecated components:
+  - `Paragraph` (replaced by `Next` `Paragraph`, see beta.14)
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Title`
+  - `k-Paragraph` (see beta.14)
+  - `k-Row`
+  - `k-Grid`
+  - `k-grid` and `k-grid-col*` helpers
+  - `k-Footer`
+  - `k-FormAction`
+  - `k-Line`
+- Remplace prop `margin` with `noMargin` on `Title`.
+- Remplace prop `margin` with `noMargin` on `Paragraph`.
+
+Features:
+
+- Convert the following component to CSS-in-JS:
+  - `Title`
+  - `Row`
+  - `Grid`
+  - `FormAction`
+  - `Line`
+
 ## [3.0.0-beta.10] - 2021-03-10
 
 Fix:
@@ -248,7 +343,25 @@ Breaking changes:
   - `ProjectCreatorCard`
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
-  - `SimilarProjectsCard`.
+  - `SimilarProjectsCard`
+
+## [2.125.0] - 2021-03-15
+
+Feature:
+
+- Add `HorizontalTimeline` component.
+
+## [2.124.0] - 2021-03-12
+
+Features:
+
+- Add `className` prop propagation to `SingleEntryTable` and subcomponents:
+  - `SingleEntryTable.Col`
+  - `SingleEntryTable.HeaderCol`
+- Add `className` prop propagation to `DoubleEntryTable` and subcomponents:
+  - `DoubleEntryTable.Col`
+  - `DoubleEntryTable.HeaderCol`
+  - `DoubleEntryTable.TitleCol`
 
 ## [2.123.3] - 2021-03-10
 

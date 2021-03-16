@@ -12,20 +12,15 @@
 // Dropdowns
 @import './components/dropdowns/dropdown';
 
-// Footer
-@import './components/footer/footer';
-
 // Form
 @import './components/form/checkbox-set';
 @import './components/form/checkbox';
 @import './components/form/location-input';
-@import './components/form/form-actions';
 @import './components/form/form-composer';
 @import './components/form/form-info';
 @import './components/form/label';
 @import './components/form/radio-button-set';
 @import './components/form/radio-button';
-@import './components/form/select';
 @import './components/form/text-area-wrapper';
 @import './components/form/text-input';
 @import './components/form/text-input-with-button';
@@ -35,13 +30,11 @@
 
 // Grid
 @import './components/grid/container';
-@import './components/grid/grid';
-@import "./components/grid/row";
+@import "./components/grid/side-grid";
 @import "./components/grid/single-column";
 
 // Layout
 @import './components/layout/horizontal-stroke';
-@import './components/layout/responsive-iframe-container';
 
 // Lines
 @import './components/lines/info-lines';
@@ -76,5 +69,3 @@
 
 // Typography
 @import './components/typography/body-copy';
-@import './components/typography/paragraph';
-@import './components/typography/title';

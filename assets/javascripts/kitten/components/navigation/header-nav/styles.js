@@ -120,17 +120,15 @@ export const StyledHeader = styled.header`
     height: 100%;
     display: flex;
 
-    .text--withEllipsis {
-      text-overflow: ellipsis;
+    .k-Avatar__text.k-Avatar__text--hasEllipsis {
       max-width: ${pxToRem(145)};
-      white-space: nowrap;
-      overflow: hidden;
     }
   }
 
   .k-HeaderNav__UserMenuButton {
-    display: flex;
     align-self: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     height: 100%;
     padding: 0 ${pxToRem(40)};

@@ -15,23 +15,16 @@
 
 @include k-Dropdown;
 
-// Footer
-
-@include k-Footer;
-
 // Form
 
 @include k-Checkbox;
 @include k-CheckboxSet;
 @include k-LocationInput;
 @include k-Label;
-@include k-FormActions;
 @include k-FormComposer;
 @include k-FormInfo;
 @include k-RadioButton;
 @include k-RadioButtonSet;
-
-@include k-Select;
 
 @include k-TextAreaWrapper;
 @include k-TextInput;
@@ -53,20 +46,10 @@
   )
 ));
 
-// Footer
-
-@include k-Footer;
-
 // Grid
 
-@include k-Grid;
-@include k-Row;
+@include k-SideGrid;
 @include k-SingleColumn;
-
-// Layout
-
-@include k-HorizontalStroke;
-@include k-ResponsiveIframeContainer;
 
 // Lines
 
@@ -120,5 +103,3 @@
 // Typography
 
 @include k-TypographyBodyCopy;
-@include k-Title;
-@include k-Paragraph;

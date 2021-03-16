@@ -13,6 +13,7 @@ export { Badge } from './components/atoms/badge'
 export { IconBadge } from './components/atoms/icon-badge'
 export { Loader } from './components/atoms/loader'
 export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph'
+export { StatusWithBullet } from './components/atoms/status-with-bullet'
 export {
   StepperIcon,
   StepperIconDefault,
@@ -60,7 +61,6 @@ export { SimpleCard } from './components/cards/simple-card'
 export { BackerCard } from './components/cards/backer-card'
 export { BackingCard } from './components/cards/backing-card'
 export { CartRewardCard } from './components/cards/cart-reward-card'
-export { DonationCard } from './components/cards/donation-card'
 export { RewardEdition } from './components/cards/reward-edition'
 export { TeamCard } from './components/cards/team-card'
 export { Triptych } from './components/cards/triptych'
@@ -107,8 +107,6 @@ export { DropdownPhoneSelect } from './components/form/dropdown-phone-select'
 export { DropdownSelectWithInput } from './components/form/dropdown-select-with-input'
 export { DropdownSelect } from './components/form/dropdown-select'
 export { FormActions } from './components/form/form-actions'
-export { FormAmountAndCurrency } from './components/form/form-amount-and-currency'
-export { FormPhoneNumber } from './components/form/form-phone-number'
 export { Label } from './components/form/label'
 export { LocationInput } from './components/form/location-input'
 export { PasswordInput } from './components/form/password-input'
@@ -117,10 +115,7 @@ export { RadioButtonSet } from './components/form/radio-button-set'
 export { RadioButton } from './components/form/radio-button'
 export { RangeSlider } from './components/form/range-slider'
 export { RichTextInput } from './components/form/rich-text-input'
-export { SelectWithState } from './components/form/select-with-state'
-export { TextInputAndSelect } from './components/form/text-input-and-select'
 export { TextInputWithLimit } from './components/form/text-input-with-limit'
-export { TextInputWithUnitForm } from './components/form/text-input-with-unit-form'
 export { TextInputWithUnit } from './components/form/text-input-with-unit'
 export { TextInput } from './components/form/text-input'
 export { ToggleSwitch } from './components/form/toggle-switch'
@@ -167,6 +162,7 @@ export { BulletList } from './components/lists/bullet-list'
 export { List } from './components/lists/list'
 export { CheckList } from './components/lists/check-list'
 export { Timeline } from './components/lists/timeline'
+export { HorizontalTimeline } from './components/lists/horizontal-timeline'
 
 // Menus
 export { DashboardMenu } from './components/menus/dashboard-menu'
@@ -199,9 +195,6 @@ export { SimplePopover } from './components/popovers/simple-popover'
 
 // Search
 export { SearchInput } from './components/search/search-input'
-
-// Status with Bullet
-export { StatusWithBullet } from './components/status-with-bullet'
 
 // Steppers
 export { VerticalStepper } from './components/steppers/vertical-stepper'
@@ -246,6 +239,7 @@ export { AlignCenterIcon } from './components/icons/align-center-icon'
 export { AlignLeftIcon } from './components/icons/align-left-icon'
 export { AlignRightIcon } from './components/icons/align-right-icon'
 export { ArrowIcon } from './components/icons/arrow-icon'
+export { LongArrowIcon } from './components/icons/long-arrow-icon'
 export { BancontactIcon } from './components/icons/bancontact-icon'
 export { BlockquoteIcon } from './components/icons/blockquote-icon'
 export { BoldIcon } from './components/icons/bold-icon'
@@ -367,7 +361,6 @@ export { createEvent } from './helpers/dom/create-event'
 export { cssPropertyDistributor } from './helpers/dom/css-property-distributor'
 export { default as domElementHelper } from './helpers/dom/element-helper'
 export { nativeInputValueSetter } from './helpers/dom/native-input-value-setter'
-export { useFlexGapCheck } from './helpers/dom/use-flex-gap-check'
 export {
   getReactElementsByType,
   getReactElementsWithoutType,
