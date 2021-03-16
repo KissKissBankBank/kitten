@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import emitter from '../../../../helpers/utils/emitter'
 import { DropdownButton } from './dropdown-button'
-import deprecated from 'prop-types-extra/lib/deprecated'
 import domElementHelper from '../../../../helpers/dom/element-helper'
 import { useWindowWidth } from '../../../../helpers/utils/use-window-width-hook'
 import domEvents, {
@@ -23,7 +22,6 @@ import { DROPDOWN_ANIMATED_DELAY } from '../../../../constants/dropdown-config'
 export const Dropdown = React.forwardRef(
   (
     {
-      arrowHorizontalPosition,
       button,
       buttonClassName,
       buttonContentOnCollapsed,
@@ -32,24 +30,20 @@ export const Dropdown = React.forwardRef(
       className,
       closeEvents,
       closeOnOuterClick,
-      contentHorizontalPosition,
       dropdownContent,
       dropdownContentWidth,
-      dropdownListArrow,
       isExpanded,
       keepInitialButtonAction,
       onPositionUpdate,
       onToggle,
       positionedHorizontallyWith,
       positionedVerticallyWith,
-      positionedWith,
       positionedWithBorder,
       refreshEvents,
     },
     dropdownRef,
   ) => {
     const dropdownContentRef = useRef(null)
-    const arrowRef = useRef(null)
     const dropdownButtonRef = useRef(null)
     const [isExpandedState, setIsExpanded] = useState(isExpanded)
     const [toggleByEventType, setToggleByEventType] = useState(null)
@@ -245,12 +239,11 @@ export const Dropdown = React.forwardRef(
     }
 
     const isSelfReference = () =>
-      typeof positionedWith === 'undefined' &&
       typeof positionedVerticallyWith === 'undefined'
 
     const getVerticalReferenceElement = () => {
       if (!isSelfReference()) {
-        return (positionedVerticallyWith || positionedWith)()
+        return positionedVerticallyWith()
       }
       // Prevent error from ref not set by `useRef`.
       return has('current')(dropdownRef) ? dropdownRef.current : dropdownRef
@@ -361,24 +354,11 @@ export const Dropdown = React.forwardRef(
             top: verticalReferenceElementState,
             left: horizontalReferenceElementState || 0,
             width: dropdownContentWidth,
-            ...contentHorizontalPosition,
           }}
           aria-hidden={!isExpandedState}
           aria-labelledby={buttonId}
         >
           {dropdownContent}
-          {dropdownListArrow && (
-            <span
-              ref={arrowRef}
-              style={{
-                position: 'absolute',
-                top: 0,
-                ...arrowHorizontalPosition,
-              }}
-            >
-              {dropdownListArrow}
-            </span>
-          )}
         </div>
       </div>
     )
@@ -386,7 +366,6 @@ export const Dropdown = React.forwardRef(
 )
 
 Dropdown.propTypes = {
-  arrowHorizontalPosition: PropTypes.object,
   button: PropTypes.node,
   buttonClassName: PropTypes.string,
   buttonContentOnCollapsed: PropTypes.node,
@@ -395,23 +374,17 @@ Dropdown.propTypes = {
   className: PropTypes.string,
   closeEvents: PropTypes.array,
   closeOnOuterClick: PropTypes.bool,
-  contentHorizontalPosition: PropTypes.object,
   dropdownContentWidth: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
   ]),
   dropdownContent: PropTypes.node,
-  dropdownListArrow: PropTypes.node,
   isExpanded: PropTypes.bool,
   keepInitialButtonAction: PropTypes.bool,
   onPositionUpdate: PropTypes.func,
   onToggle: PropTypes.func,
   positionedHorizontallyWith: PropTypes.func,
   positionedVerticallyWith: PropTypes.func,
-  positionedWith: deprecated(
-    PropTypes.func,
-    'Prefere use `positionedVerticallyWith` when using `Dropdown` component.',
-  ),
   positionedWithBorder: PropTypes.bool,
   refreshEvents: PropTypes.array,
 }
@@ -423,10 +396,6 @@ Dropdown.defaultProps = {
   // If set to true, keep the inital toggle events to focus on design button
   // trough `button` prop.
   keepInitialButtonAction: false,
-
-  // Custom horizontal position for content and content arrow.
-  contentHorizontalPosition: {},
-  arrowHorizontalPosition: { left: '50%' },
 
   // Button settings
   buttonContentOnExpanded: 'Close me',
