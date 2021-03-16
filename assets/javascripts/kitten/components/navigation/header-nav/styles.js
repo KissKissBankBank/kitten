@@ -241,8 +241,8 @@ export const StyledHeader = styled.header`
     visibility: hidden;
     opacity: 0;
     transition: margin 0.2s, visibility 0.2s, opacity 0.2s;
-    /* Height is needed to allow scroll on navigation. The 100% is equal to the
-       header height. */
+    /* Max-height is needed to allow scroll on menu.
+       The 100% is equal to the header height. */
     max-height: calc(100vh - 100%);
     box-shadow: 0 ${pxToRem(3)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
 
