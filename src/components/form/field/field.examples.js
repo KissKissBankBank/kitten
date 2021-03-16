@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.FieldAutocompleteExample = exports.FieldSelectExample = exports.FieldRadioButtonSetExample = exports.FieldPasswordExample = exports.FieldInputExample = void 0;
+exports.FieldAutocompleteExample = exports.FieldRadioButtonSetExample = exports.FieldPasswordExample = exports.FieldInputExample = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -120,46 +120,17 @@ var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref4) {
 
 exports.FieldRadioButtonSetExample = FieldRadioButtonSetExample;
 
-var FieldSelectExample = function FieldSelectExample(_ref5) {
+var FieldAutocompleteExample = function FieldAutocompleteExample(_ref5) {
   var id = _ref5.id,
       label = _ref5.label,
       tooltip = _ref5.tooltip,
       tooltipId = _ref5.tooltipId,
       tooltipProps = _ref5.tooltipProps,
       placeholder = _ref5.placeholder,
-      options = _ref5.options,
       error = _ref5.error,
-      errorMessage = _ref5.errorMessage;
-  return /*#__PURE__*/_react.default.createElement(FieldBase, {
-    id: id,
-    label: label,
-    tooltip: tooltip,
-    tooltipProps: tooltipProps,
-    tooltipId: tooltipId,
-    error: error,
-    errorMessage: errorMessage
-  }, /*#__PURE__*/_react.default.createElement(_field.Field.Select, {
-    id: id,
-    name: "select",
-    placeholder: placeholder,
-    options: options,
-    error: error
-  }));
-};
-
-exports.FieldSelectExample = FieldSelectExample;
-
-var FieldAutocompleteExample = function FieldAutocompleteExample(_ref6) {
-  var id = _ref6.id,
-      label = _ref6.label,
-      tooltip = _ref6.tooltip,
-      tooltipId = _ref6.tooltipId,
-      tooltipProps = _ref6.tooltipProps,
-      placeholder = _ref6.placeholder,
-      error = _ref6.error,
-      errorMessage = _ref6.errorMessage,
-      items = _ref6.items,
-      tiny = _ref6.tiny;
+      errorMessage = _ref5.errorMessage,
+      items = _ref5.items,
+      tiny = _ref5.tiny;
   return /*#__PURE__*/_react.default.createElement(FieldBase, {
     id: id,
     label: label,

@@ -99,25 +99,18 @@ export const Default = () => {
               T-shirts brodés Free Boobs Club
             </Text>
             <br />
-            <Text
-              lineHeight="normal"
+            <StatusWithBullet
+              as="span"
               weight="light"
-              size="nano"
-              color="background1"
+              size="micro"
+              statusType={select(
+                'Status type',
+                ['danger', 'success', 'warning', 'neutral', 'none'],
+                'success',
+              )}
             >
-              <StatusWithBullet
-                as="span"
-                weight="light"
-                size="micro"
-                statusType={select(
-                  'Status type',
-                  ['danger', 'success', 'warning', 'neutral', 'none'],
-                  'success',
-                )}
-              >
-                Prêt a être partagé
-              </StatusWithBullet>
-            </Text>
+              Prêt a être partagé avec un texte long pour tester l’ellipse
+            </StatusWithBullet>
           </AvatarWithTextAndBadge.Text>
         </AvatarWithTextAndBadge>
       </DashboardLayout.Header>

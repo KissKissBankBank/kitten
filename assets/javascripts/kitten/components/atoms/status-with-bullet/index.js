@@ -16,6 +16,11 @@ const StyledStatus = styled.span`
     background-color: currentColor;
     border-radius: 50%;
     margin-top: ${pxToRem(2)};
+    flex: 0 0 auto;
+  }
+
+  .k-StatusWithBullet__status {
+    flex: 0 1 auto;
   }
 
   &.k-StatusWithBullet--danger {
@@ -101,7 +106,9 @@ export const StatusWithBullet = ({
           bulletProps?.className,
         )}
       />
-      {statusMessage || children}
+      <span className="k-StatusWithBullet__status">
+        {statusMessage || children}
+      </span>
     </StyledStatus>
   )
 }

@@ -26,8 +26,6 @@
 @include k-RadioButton;
 @include k-RadioButtonSet;
 
-@include k-Select;
-
 @include k-TextAreaWrapper;
 @include k-TextInput;
 @include k-TextInputWithLimit;
@@ -52,11 +50,6 @@
 
 @include k-SideGrid;
 @include k-SingleColumn;
-
-// Layout
-
-@include k-HorizontalStroke;
-@include k-ResponsiveIframeContainer;
 
 // Lines
 
