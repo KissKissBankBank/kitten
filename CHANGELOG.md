@@ -6,16 +6,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Breaking change:
 
-- Deprecate size props (`giant`, `huge`, `regular`, `big`, `tiny`): 
-  `TextInput`,
-  `TextInputWithUnit`,
+- Deprecate size props (`giant`, `huge`, `regular`, `big`, `tiny`) on the following components:
+  - `TextInput`
+  - `TextInputWithUnit`
 
 Feature:
 
-- Add `size` prop to :
-  `TextInput`,
-  `TextInputWithButton`,
-  `TextInputWithUnit` components.
+- Add `size` prop to the following components: 
+  - `TextInput`
+  - `TextInputWithButton`
+  - `TextInputWithUnit`
 
 ## [3.0.0-beta.10] - 2021-03-10
 

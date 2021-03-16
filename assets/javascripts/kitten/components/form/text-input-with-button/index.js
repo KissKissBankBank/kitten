@@ -12,11 +12,11 @@ import deprecated from 'prop-types-extra/lib/deprecated'
 const StyledTextInputWithButton = styled.div`
   display: flex;
 
-  .k-Form-TextInputWithButton--input {
+  .k-Form-TextInputWithButton__input {
     border-right: 0;
   }
 
-  .k-Form-TextInputWithButton--button {
+  .k-Form-TextInputWithButton__button {
     ${TYPOGRAPHY.fontStyles.regular};
     font-size: ${stepToRem(-1)};
     line-height: 1.3;
@@ -29,12 +29,13 @@ const StyledTextInputWithButton = styled.div`
     ${({ modifier }) => modifierStyles(modifier)};
   }
 
-  &.k-Form-TextInputWithButton--button__valid {
+  &.k-Form-TextInputWithButton__button--valid {
     background-color: ${COLORS.valid};
     border-color: ${COLORS.valid};
   }
       
-  &.k-Form-TextInputWithButton--button__error {
+  &.k-Form-TextInputWithButton__button--error {
+    cursor: not-allowed;
     background-color: ${COLORS.error};
     border-color: ${COLORS.error};
 
@@ -42,10 +43,6 @@ const StyledTextInputWithButton = styled.div`
       background-color: ${COLORS.error};
       border-color: ${COLORS.error};
     }
-  }
-  
-  &.k-Form-TextInputWithButton--button__error {
-    cursor: not-allowed;
   }
 `
 
@@ -64,10 +61,13 @@ export const TextInputWithButton = ({
 }) => {
 
   return (
-    <StyledTextInputWithButton modifier={modifier}>
+    <StyledTextInputWithButton
+      className="k-Form-TextInputWithButton"
+      modifier={modifier}
+    >
       <TextInput
         className={classNames(
-          'k-Form-TextInputWithButton--input',
+          'k-Form-TextInputWithButton__input',
           className,
         )}
         {...others}
@@ -78,17 +78,17 @@ export const TextInputWithButton = ({
         value={inputValue}
       />
       <button
+        {...buttonProps}
         className={classNames(
-          'k-Form-TextInputWithButton--button',
-          className,
+          'k-Form-TextInputWithButton__button',
           {
-            'k-Form-TextInputWithButton--button__valid': valid,
-            'k-Form-TextInputWithButton--button__error': error,
-            'k-Form-TextInputWithButton--button__disabled': disabled,
+            'k-Form-TextInputWithButton__button--valid': valid,
+            'k-Form-TextInputWithButton__button--error': error,
+            'k-Form-TextInputWithButton__button--disabled': disabled,
           }
         )}
         type="button"
-        {...buttonProps}
+        disabled={disabled}
       >
         {value || buttonValue}
       </button>
