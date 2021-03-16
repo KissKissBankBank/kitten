@@ -9,14 +9,16 @@ export const Title = ({
   title,
   titleProps
 }) => {
-  const titleClassName = classNames('k-Card__title', titleProps.className)
 
   return (
     <Marger top="2" bottom=".3">
       <TitleComponent
         tag="p"
         {...titleProps}
-        className={titleClassName}
+        className={classNames(
+          'k-Card__title',
+          titleProps.className,
+        )}
         noMargin
         modifier="senary"
       >
