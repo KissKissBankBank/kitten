@@ -344,6 +344,18 @@ export { default as TYPOGRAPHY } from './constants/typography-config'
 // Constants from Components
 
 export {
+  domEvents,
+  A11Y_EVENT,
+  FOCUS_EVENT,
+  A11Y_FIRST_FOCUS_REACHED_EVENT,
+  A11Y_LAST_FOCUS_REACHED_EVENT,
+  DROPDOWN_EVENT,
+  TOGGLE_DROPDOWN_EVENT,
+  DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
+  DROPDOWN_LAST_FOCUS_REACHED_EVENT,
+} from './helpers/dom/events'
+export { DROPDOWN_ANIMATED_DELAY } from './constants/dropdown-config'
+export {
   MOBILE_HEADER_HEIGHT,
   TABLET_HEADER_HEIGHT,
   DESKTOP_HEADER_HEIGHT,
@@ -368,3 +380,5 @@ export { default as margin } from './helpers/utils/margin'
 export { parseHtml } from './helpers/utils/parser'
 export { pxToRem, stepToRem } from './helpers/utils/typography'
 export { usePrevious } from './helpers/utils/use-previous-hook'
+export { useWindowWidth } from './helpers/utils/use-window-width-hook'
+export { dispatchEvent } from './helpers/dom/events'
