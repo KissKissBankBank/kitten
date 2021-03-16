@@ -238,20 +238,9 @@ export const Dropdown = React.forwardRef(
       })
     }
 
-    const isSelfReference = () =>
-      typeof positionedVerticallyWith === 'undefined'
-
-    const getVerticalReferenceElement = () => {
-      if (!isSelfReference()) {
-        return positionedVerticallyWith()
-      }
-      // Prevent error from ref not set by `useRef`.
-      return has('current')(dropdownRef) ? dropdownRef.current : dropdownRef
-    }
-
     const getComputedHeightElement = () =>
       domElementHelper.getComputedHeight(
-        getVerticalReferenceElement(),
+        positionedVerticallyWith(),
         positionedWithBorder,
       )
 
@@ -313,7 +302,6 @@ export const Dropdown = React.forwardRef(
           'k-Dropdown',
           {
             'k-Dropdown--isExpanded': isExpandedState,
-            'k-Dropdown--asReference': isSelfReference(),
           },
           className,
         )}
@@ -384,7 +372,7 @@ Dropdown.propTypes = {
   onPositionUpdate: PropTypes.func,
   onToggle: PropTypes.func,
   positionedHorizontallyWith: PropTypes.func,
-  positionedVerticallyWith: PropTypes.func,
+  positionedVerticallyWith: PropTypes.func.isRequired,
   positionedWithBorder: PropTypes.bool,
   refreshEvents: PropTypes.array,
 }

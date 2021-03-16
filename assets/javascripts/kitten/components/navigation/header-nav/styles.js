@@ -232,10 +232,6 @@ export const StyledHeader = styled.header`
     display: flex;
   }
 
-  .k-Dropdown--asReference {
-    position: relative;
-  }
-
   .k-Dropdown__content {
     position: absolute;
     top: 0;
