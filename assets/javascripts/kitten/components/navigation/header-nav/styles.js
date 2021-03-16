@@ -256,13 +256,13 @@ export const StyledHeader = styled.header`
       left: 0 !important;
       right: 0 !important;
     }
+  }
 
-    .k-Dropdown--isExpanded & {
-      margin-top: 0;
-      visibility: visible;
-      opacity: 1;
-      overflow-x: hidden;
-      overflow-y: scroll;
-    }
+  .k-Dropdown--isExpanded .k-Dropdown__content {
+    margin-top: 0;
+    visibility: visible;
+    opacity: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 `
