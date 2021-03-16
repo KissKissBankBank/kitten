@@ -166,6 +166,7 @@ export { BulletList } from './components/lists/bullet-list'
 export { List } from './components/lists/list'
 export { CheckList } from './components/lists/check-list'
 export { Timeline } from './components/lists/timeline'
+export { HorizontalTimeline } from './components/lists/horizontal-timeline'
 
 // Menus
 export { DashboardMenu } from './components/menus/dashboard-menu'
