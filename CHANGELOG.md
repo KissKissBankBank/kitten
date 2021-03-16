@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Dropdown`
+  - `k-PlatformSwitch`
+  - `k-UserMenu`
 ## [3.0.0-beta.16] - 2021-03-15
 
 Breaking changes:

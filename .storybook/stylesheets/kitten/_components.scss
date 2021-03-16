@@ -11,10 +11,6 @@
 
 @include k-Card;
 
-// Dropdowns
-
-@include k-Dropdown;
-
 // Form
 
 @include k-Checkbox;
@@ -67,18 +63,7 @@
 
 @include k-HorizontalNav;
 
-@include k-PlatformSwitch((
-  colors: (
-    background: map-get($k-colors, 'background-2'),
-    border: map-get($k-colors, 'line-1'),
-    background-hover: map-get($k-colors, 'line-1'),
-    border-active: map-get($k-colors, 'primary-1'),
-  )
-));
-
 @include k-TabBar((z-index: 50));
-
-@include k-UserMenu;
 
 // Press
 
