@@ -10,6 +10,10 @@ Breaking changes:
   - `k-Dropdown`
   - `k-PlatformSwitch`
   - `k-UserMenu`
+- Move the following components:
+  - `Dropdown` -> `components/navigation/header-menu/components`
+  - `DropdownButton` -> `components/navigation/header-menu/components`
+
 ## [3.0.0-beta.16] - 2021-03-15
 
 Breaking changes:

@@ -90,10 +90,6 @@ export { Details } from './components/details'
 // Dev
 export { DevGrid } from './components/dev/dev-grid'
 
-// Dropdowns
-export { DropdownButton } from './components/dropdowns/v2/dropdown-button'
-export { Dropdown } from './components/dropdowns/v2/dropdown'
-
 // Expandable
 export { ExpandBoard } from './components/expandable/expand-board'
 

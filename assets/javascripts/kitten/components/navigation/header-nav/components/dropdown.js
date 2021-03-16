@@ -3,22 +3,22 @@ import has from 'lodash/fp/has'
 import isNull from 'lodash/fp/isNull'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import emitter from '../../../helpers/utils/emitter'
+import emitter from '../../../../helpers/utils/emitter'
 import { DropdownButton } from './dropdown-button'
 import deprecated from 'prop-types-extra/lib/deprecated'
-import domElementHelper from '../../../helpers/dom/element-helper'
-import { useWindowWidth } from '../../../helpers/utils/use-window-width-hook'
+import domElementHelper from '../../../../helpers/dom/element-helper'
+import { useWindowWidth } from '../../../../helpers/utils/use-window-width-hook'
 import domEvents, {
   TOGGLE_DROPDOWN_EVENT,
   DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
   DROPDOWN_LAST_FOCUS_REACHED_EVENT,
   dispatchEvent,
-} from '../../../helpers/dom/events'
+} from '../../../../helpers/dom/events'
 import {
   getFocusableElementsFrom,
   keyboardNavigation,
-} from '../../../helpers/dom/a11y'
-import { DROPDOWN_ANIMATED_DELAY } from '../../../constants/dropdown-config'
+} from '../../../../helpers/dom/a11y'
+import { DROPDOWN_ANIMATED_DELAY } from '../../../../constants/dropdown-config'
 
 export const Dropdown = React.forwardRef(
   (
@@ -285,19 +285,6 @@ export const Dropdown = React.forwardRef(
       return 0
     }
 
-    const getArrowPositionStyle = () => {
-      return { position: 'absolute', top: 0, ...arrowHorizontalPosition }
-    }
-
-    const getDropdownContentStyle = () => {
-      return {
-        top: verticalReferenceElementState,
-        left: horizontalReferenceElementState || 0,
-        width: dropdownContentWidth,
-        ...contentHorizontalPosition,
-      }
-    }
-
     // Component listener callbacks
     const revertHandleClickOnLinks = () => handleClickOnLinks()
 
@@ -326,36 +313,18 @@ export const Dropdown = React.forwardRef(
       toggle(!isExpandedState)
     }
 
-    // Rendering
-    const renderButtonContentElement = () => {
-      if (isExpandedState) {
-        return buttonContentOnExpanded
-      }
-
-      return buttonContentOnCollapsed
-    }
-
-    const Arrow = () => {
-      if (!dropdownListArrow) return null
-
-      return (
-        <span ref={arrowRef} style={getArrowPositionStyle()}>
-          {dropdownListArrow}
-        </span>
-      )
-    }
-
-    const dropdownClassName = classNames(
-      'k-Dropdown',
-      {
-        'is-expanded': isExpandedState,
-        'k-Dropdown--asReference': isSelfReference(),
-      },
-      className,
-    )
-
     return (
-      <div ref={dropdownRef} className={dropdownClassName}>
+      <div
+        ref={dropdownRef}
+        className={classNames(
+          'k-Dropdown',
+          {
+            'k-Dropdown--isExpanded': isExpandedState,
+            'k-Dropdown--asReference': isSelfReference(),
+          },
+          className,
+        )}
+      >
         {button &&
           (keepInitialButtonAction ? (
             <DropdownButton
@@ -379,19 +348,37 @@ export const Dropdown = React.forwardRef(
             isExpanded={isExpandedState}
             onClick={handleButtonClick}
           >
-            {renderButtonContentElement()}
+            {isExpandedState
+              ? buttonContentOnExpanded
+              : buttonContentOnCollapsed}
           </DropdownButton>
         )}
 
         <div
           ref={dropdownContentRef}
           className="k-Dropdown__content"
-          style={getDropdownContentStyle()}
+          style={{
+            top: verticalReferenceElementState,
+            left: horizontalReferenceElementState || 0,
+            width: dropdownContentWidth,
+            ...contentHorizontalPosition,
+          }}
           aria-hidden={!isExpandedState}
           aria-labelledby={buttonId}
         >
           {dropdownContent}
-          <Arrow />
+          {dropdownListArrow && (
+            <span
+              ref={arrowRef}
+              style={{
+                position: 'absolute',
+                top: 0,
+                ...arrowHorizontalPosition,
+              }}
+            >
+              {dropdownListArrow}
+            </span>
+          )}
         </div>
       </div>
     )
@@ -463,6 +450,3 @@ Dropdown.defaultProps = {
   // Called when the dropdown is opened or closed
   onToggle: function () {},
 }
-
-// DEPRECATED: do not use default export.
-export default Dropdown

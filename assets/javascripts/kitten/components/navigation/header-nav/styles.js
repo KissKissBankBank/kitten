@@ -141,7 +141,7 @@ export const StyledHeader = styled.header`
       border-color: ${COLORS.background3};
     }
 
-    .is-expanded & {
+    .k-Dropdown--isExpanded & {
       &,
       &:hover {
         background-color: ${COLORS.background1};
@@ -225,6 +225,44 @@ export const StyledHeader = styled.header`
     &.is-selected {
       border-color: currentColor;
       color: ${COLORS.primary1};
+    }
+  }
+
+  .k-Dropdown {
+    display: flex;
+  }
+
+  .k-Dropdown--asReference {
+    position: relative;
+  }
+
+  .k-Dropdown__content {
+    position: absolute;
+    top: 0;
+    z-index: 20;
+    min-width: ${pxToRem(200)};
+    margin-top: ${pxToRem(-10)};
+    visibility: hidden;
+    opacity: 0;
+    transition: margin 0.2s, visibility 0.2s, opacity 0.2s;
+    /* Height is needed to allow scroll on navigation. The 100% is equal to the
+       header height. */
+    max-height: calc(100vh - 100%);
+    box-shadow: 0 ${pxToRem(3)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      min-width: 0;
+      width: 100% !important;
+      left: 0 !important;
+      right: 0 !important;
+    }
+
+    .k-Dropdown--isExpanded & {
+      margin-top: 0;
+      visibility: visible;
+      opacity: 1;
+      overflow-x: hidden;
+      overflow-y: scroll;
     }
   }
 `

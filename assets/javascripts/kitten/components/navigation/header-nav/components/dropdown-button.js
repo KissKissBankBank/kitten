@@ -1,17 +1,15 @@
-import React, { useEffect, forwardRef } from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 export const DropdownButton = forwardRef(
   ({ id, className, isExpanded, ...rest }, dropdownButtonRef) => {
-    const buttonClassName = classNames('k-Dropdown__button', className)
-
     return (
       <button
         ref={dropdownButtonRef}
         id={id}
         type="button"
-        className={buttonClassName}
+        className={classNames('k-Dropdown__button', className)}
         aria-haspopup="true"
         aria-expanded={isExpanded}
         {...rest}
@@ -30,6 +28,3 @@ DropdownButton.defaultProps = {
   onClick: () => {},
   isExpanded: false,
 }
-
-// DEPRECATED: do not use default export.
-export default DropdownButton
