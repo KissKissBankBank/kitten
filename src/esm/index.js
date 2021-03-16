@@ -123,7 +123,13 @@ export { IconList } from './components/lists/icon-list';
 export { BulletList } from './components/lists/bullet-list';
 export { List } from './components/lists/list';
 export { CheckList } from './components/lists/check-list';
-export { Timeline } from './components/lists/timeline'; // Menus
+export { NavList } from './components/lists/nav-list';
+export { TagList } from './components/lists/tag-list';
+export { Timeline } from './components/lists/timeline';
+export { HorizontalTimeline } from './components/lists/horizontal-timeline'; // Loaders
+
+export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph';
+export { Loader } from './components/loaders/loader'; // Menus
 
 export { DashboardMenu } from './components/menus/dashboard-menu';
 export { HeaderMenu } from './components/menus/header-menu'; // Meters
