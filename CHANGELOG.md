@@ -13,6 +13,8 @@ Breaking changes:
 - Move the following components:
   - `Dropdown` -> `components/navigation/header-menu/components`
   - `DropdownButton` -> `components/navigation/header-menu/components`
+- Remove default export for `Dropdown`.
+- Remove unused props for `Dropdown`.
 
 ## [3.0.0-beta.16] - 2021-03-15
 
