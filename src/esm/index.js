@@ -75,8 +75,6 @@ export { DropdownPhoneSelect } from './components/form/dropdown-phone-select';
 export { DropdownSelectWithInput } from './components/form/dropdown-select-with-input';
 export { DropdownSelect } from './components/form/dropdown-select';
 export { FormActions } from './components/form/form-actions';
-export { FormAmountAndCurrency } from './components/form/form-amount-and-currency';
-export { FormPhoneNumber } from './components/form/form-phone-number';
 export { Label } from './components/form/label';
 export { LocationInput } from './components/form/location-input';
 export { PasswordInput } from './components/form/password-input';
@@ -85,8 +83,6 @@ export { RadioButtonSet } from './components/form/radio-button-set';
 export { RadioButton } from './components/form/radio-button';
 export { RangeSlider } from './components/form/range-slider';
 export { RichTextInput } from './components/form/rich-text-input';
-export { SelectWithState } from './components/form/select-with-state';
-export { TextInputAndSelect } from './components/form/text-input-and-select';
 export { TextInputWithLimit } from './components/form/text-input-with-limit';
 export { TextInputWithUnit } from './components/form/text-input-with-unit';
 export { TextInput } from './components/form/text-input';
@@ -123,13 +119,8 @@ export { IconList } from './components/lists/icon-list';
 export { BulletList } from './components/lists/bullet-list';
 export { List } from './components/lists/list';
 export { CheckList } from './components/lists/check-list';
-export { NavList } from './components/lists/nav-list';
-export { TagList } from './components/lists/tag-list';
 export { Timeline } from './components/lists/timeline';
-export { HorizontalTimeline } from './components/lists/horizontal-timeline'; // Loaders
-
-export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph';
-export { Loader } from './components/loaders/loader'; // Menus
+export { HorizontalTimeline } from './components/lists/horizontal-timeline'; // Menus
 
 export { DashboardMenu } from './components/menus/dashboard-menu';
 export { HeaderMenu } from './components/menus/header-menu'; // Meters

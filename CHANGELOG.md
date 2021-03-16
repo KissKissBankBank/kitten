@@ -6,6 +6,30 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Refactor `SimpleCard` to CSS-in-JS.
 
+## [3.0.0-beta.16] - 2021-03-15
+
+Breaking changes:
+
+- Delete the following deprecated components:
+  - `SelectWithState` (replaced by `DropdownSelect`)
+  - `FormAmountAndCurrency`
+  - `FormPhoneNumber`
+  - `TextInputAndSelect`
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-ResponsiveIframeContainer`
+  - `k-Select`
+
+Feature:
+
+- Refactor `ResponsiveIframeContainer` to CSS-in-JS
+
+Fixes:
+
+- Fix error in `Accordion` when closing pane.
+- Fix ellipsis for children of `AvaratWithTextAndBadge`.
+- Fix alignment on `HeaderNav` `UserMenuButton`.
+- Fix `GridCol` offset class for `0` value.
+
 ## [3.0.0-beta.15] - 2021-03-12
 
 Fix:

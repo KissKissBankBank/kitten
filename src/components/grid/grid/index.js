@@ -68,7 +68,7 @@ var GridCol = function GridCol(_ref2) {
       var mediaQuery = size.toLowerCase();
       var col = props["col-".concat(mediaQuery)];
       var offset = props["offset-".concat(mediaQuery)];
-      return (0, _classnames.default)(classNamesByMediaQuery, (_classNames = {}, (0, _defineProperty2.default)(_classNames, "k-Grid__col--".concat(col, "-").concat(mediaQuery), col), (0, _defineProperty2.default)(_classNames, "k-Grid__col--offset-".concat(offset, "-").concat(mediaQuery), offset), _classNames));
+      return (0, _classnames.default)(classNamesByMediaQuery, (_classNames = {}, (0, _defineProperty2.default)(_classNames, "k-Grid__col--".concat(col, "-").concat(mediaQuery), col), (0, _defineProperty2.default)(_classNames, "k-Grid__col--offset-".concat(offset, "-").concat(mediaQuery), !!offset || offset === 0), _classNames));
     });
     return classNamesByMediaQuery;
   }; // Remove unknown props in others.

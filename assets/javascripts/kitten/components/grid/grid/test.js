@@ -73,7 +73,7 @@ describe('<GridCol />', () => {
             col-m="6"
             offset-m="3"
             col-l="4"
-            offset-l="4"
+            offset-l="0"
           />,
         )
         .toJSON()
