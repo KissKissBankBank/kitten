@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Breaking changes:
 
+- Deprecated size props (`small`, `large`, `big`, `huge`) on `BulletList` component.
 - Delete the following deprecated SCSS mixin: 
   - `k-BulletList`
 
