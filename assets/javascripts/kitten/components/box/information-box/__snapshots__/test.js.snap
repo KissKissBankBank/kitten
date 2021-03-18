@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InformationBox /> by default matches with snapshot 1`] = `
+<div
+  className="sc-bwzfXH fsqDNS k-InformationBox"
+>
+  <div
+    className="k-InformationBox__container"
+  >
+    <p
+      className="sc-bdVaJa kytFjT k-Title k-InformationBox__title k-u-margin-bottom-single k-Title--noMargin"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
+    />
+    <div
+      className="k-InformationBox__content k-u-margin-top-single"
+    />
+  </div>
+</div>
+`;
+
+exports[`<InformationBox /> with contents matches with snapshot 1`] = `
+<div
+  className="sc-bwzfXH fsqDNS k-InformationBox"
+>
+  <div
+    className="k-InformationBox__container"
+  >
+    <h3
+      aria-label="custom aria prop"
+      className="sc-bdVaJa kytFjT k-Title k-InformationBox__title k-u-margin-bottom-single customClassName k-Title--noMargin"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
+    >
+      Title
+    </h3>
+    <div
+      className="k-InformationBox__content k-u-margin-top-single"
+    >
+      Content
+    </div>
+  </div>
+</div>
+`;

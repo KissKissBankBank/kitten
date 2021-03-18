@@ -2,7 +2,7 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dnzoib k-Carousel"
+  className="sc-bxivhb lclApx k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -12,8 +12,10 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
     onTouchStart={[Function]}
   >
     <div
+      aria-label="Page 1"
       className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
       onClick={[Function]}
+      role="button"
     >
       <div
         className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -22,7 +24,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-dnqmqq epPPOf k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -37,7 +39,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
               >
                 <img
                   alt=""
-                  className="k-Card__image k-CrowdfundingCard__image__image"
+                  className="k-CrowdfundingCard__image__image"
                   src="#image"
                 />
               </div>
@@ -62,12 +64,12 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
                 >
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
                   >
                     A Owner title
                   </div>
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
                   >
                     A Owner description
                   </div>
@@ -89,7 +91,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -98,7 +100,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -107,7 +109,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -120,7 +122,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw hwlBmK k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-htoDjs kIYaHy k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -133,7 +135,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 />
               </div>
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
               >
                 100 %
               </span>
@@ -142,7 +144,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
               className="k-CrowdfundingCard__state"
             >
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
               >
                 Lorem ipsum…
               </span>
@@ -154,7 +156,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-dnqmqq epPPOf k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -169,7 +171,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
               >
                 <img
                   alt=""
-                  className="k-Card__image k-CrowdfundingCard__image__image"
+                  className="k-CrowdfundingCard__image__image"
                   src="#image"
                 />
               </div>
@@ -194,12 +196,12 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
                 >
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
                   >
                     B Owner title
                   </div>
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
                   >
                     B Owner description
                   </div>
@@ -221,7 +223,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -230,7 +232,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -239,7 +241,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -252,7 +254,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw fDxguE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-htoDjs jBCsxU k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -265,7 +267,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 />
               </div>
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
               >
                 42 %
               </span>
@@ -274,7 +276,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
               className="k-CrowdfundingCard__state"
             >
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
               >
                 Lorem ipsum…
               </span>
@@ -293,7 +295,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dnzoib k-Carousel"
+  className="sc-bxivhb lclApx k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -303,8 +305,10 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
     onTouchStart={[Function]}
   >
     <div
+      aria-label="Page 1"
       className="k-Carousel__inner__pageContainer custom-class k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
       onClick={[Function]}
+      role="button"
     >
       <div
         className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -313,7 +317,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-dnqmqq epPPOf k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -328,7 +332,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
               >
                 <img
                   alt=""
-                  className="k-Card__image k-CrowdfundingCard__image__image"
+                  className="k-CrowdfundingCard__image__image"
                   src="#image"
                 />
               </div>
@@ -353,12 +357,12 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
                 >
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
                   >
                     A Owner title
                   </div>
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
                   >
                     A Owner description
                   </div>
@@ -380,7 +384,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -389,7 +393,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -398,7 +402,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -411,7 +415,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw hwlBmK k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-htoDjs kIYaHy k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -424,7 +428,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 />
               </div>
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
               >
                 100 %
               </span>
@@ -433,7 +437,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
               className="k-CrowdfundingCard__state"
             >
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
               >
                 Lorem ipsum…
               </span>
@@ -445,7 +449,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-dnqmqq epPPOf k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -460,7 +464,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
               >
                 <img
                   alt=""
-                  className="k-Card__image k-CrowdfundingCard__image__image"
+                  className="k-CrowdfundingCard__image__image"
                   src="#image"
                 />
               </div>
@@ -485,12 +489,12 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
                 >
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
                   >
                     B Owner title
                   </div>
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
                   >
                     B Owner description
                   </div>
@@ -512,7 +516,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -521,7 +525,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -530,7 +534,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -543,7 +547,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw fDxguE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-htoDjs jBCsxU k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -556,7 +560,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 />
               </div>
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
               >
                 42 %
               </span>
@@ -565,7 +569,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
               className="k-CrowdfundingCard__state"
             >
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
               >
                 Lorem ipsum…
               </span>
@@ -586,13 +590,13 @@ exports[`<Carousel /> empty carousel matches with snapshot 1`] = `null`;
 
 exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat iLKiCQ k-Carousel k-LegacyCarousel"
+  className="sc-bxivhb jFkGpF k-Carousel k-LegacyCarousel"
 >
   <div
-    className="k-Grid"
+    className="sc-htpNat doaSEf k-Grid"
   >
     <div
-      className="k-Grid__col--12 k-Grid__col--10@l k-Grid__col--offset-1@l"
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--10-l k-Grid__col--offset-1-l"
     >
       <div
         className="k-Carousel__inner"
@@ -602,8 +606,10 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
         onTouchStart={[Function]}
       >
         <div
+          aria-label="Page 1"
           className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
           onClick={[Function]}
+          role="button"
         >
           <div
             className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -612,7 +618,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
+                className="sc-dnqmqq epPPOf k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
                 href={null}
                 onClick={[Function]}
                 title="A"
@@ -626,7 +632,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                   >
                     <img
                       alt=""
-                      className="k-Card__image k-CrowdfundingCard__image__image"
+                      className="k-CrowdfundingCard__image__image"
                       src="https://placehold.it/160x100/caf4fe/caf4fe"
                       style={
                         Object {
@@ -656,12 +662,12 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                       className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
                     >
                       <div
-                        className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                        className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
                       >
                         
                       </div>
                       <div
-                        className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                        className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
                       >
                         
                       </div>
@@ -683,7 +689,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                     aria-valuemax={100}
                     aria-valuemin={0}
                     aria-valuenow={0}
-                    className="sc-gzVnrw krUgSA k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                    className="sc-htoDjs dkTMcT k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                     role="progressbar"
                   >
                     <div
@@ -696,7 +702,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                     />
                   </div>
                   <span
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
                   >
                     0 %
                   </span>
@@ -716,7 +722,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="k-Grid__col--12 k-Grid__col--1@l"
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--1-l"
     />
   </div>
 </div>
@@ -724,13 +730,13 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} matches with snapshot 1`] = `
 <div
-  className="sc-htpNat iLKiCQ k-Carousel k-LegacyCarousel"
+  className="sc-bxivhb jFkGpF k-Carousel k-LegacyCarousel"
 >
   <div
-    className="k-Grid"
+    className="sc-htpNat doaSEf k-Grid"
   >
     <div
-      className="k-Grid__col--12 k-Grid__col--11@l k-Grid__col--offset-0@l"
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--11-l k-Grid__col--offset-0-l"
     >
       <div
         className="k-Carousel__inner"
@@ -740,8 +746,10 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
         onTouchStart={[Function]}
       >
         <div
+          aria-label="Page 1"
           className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
           onClick={[Function]}
+          role="button"
         >
           <div
             className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -750,7 +758,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
+                className="sc-dnqmqq epPPOf k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
                 href={null}
                 onClick={[Function]}
                 title="A"
@@ -764,7 +772,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                   >
                     <img
                       alt=""
-                      className="k-Card__image k-CrowdfundingCard__image__image"
+                      className="k-CrowdfundingCard__image__image"
                       src="https://placehold.it/160x100/caf4fe/caf4fe"
                       style={
                         Object {
@@ -794,12 +802,12 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                       className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
                     >
                       <div
-                        className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                        className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
                       >
                         
                       </div>
                       <div
-                        className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                        className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
                       >
                         
                       </div>
@@ -821,7 +829,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                     aria-valuemax={100}
                     aria-valuemin={0}
                     aria-valuenow={0}
-                    className="sc-gzVnrw krUgSA k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                    className="sc-htoDjs dkTMcT k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                     role="progressbar"
                   >
                     <div
@@ -834,7 +842,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                     />
                   </div>
                   <span
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
                   >
                     0 %
                   </span>
@@ -854,7 +862,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
       </div>
     </div>
     <div
-      className="k-Grid__col--12 k-Grid__col--1@l"
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--1-l"
     />
   </div>
 </div>
@@ -862,13 +870,13 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
 
 exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 <div
-  className="sc-htpNat iLKiCQ k-Carousel k-LegacyCarousel"
+  className="sc-bxivhb jFkGpF k-Carousel k-LegacyCarousel"
 >
   <div
-    className="k-Grid"
+    className="sc-htpNat doaSEf k-Grid"
   >
     <div
-      className="k-Grid__col--12 k-Grid__col--10@l k-Grid__col--offset-1@l"
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--10-l k-Grid__col--offset-1-l"
     >
       <div
         className="k-Carousel__inner"
@@ -878,8 +886,10 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
         onTouchStart={[Function]}
       >
         <div
+          aria-label="Page 1"
           className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
           onClick={[Function]}
+          role="button"
         >
           <div
             className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -888,7 +898,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
+                className="sc-dnqmqq epPPOf k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
                 href={null}
                 onClick={[Function]}
                 title="A"
@@ -902,7 +912,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                   >
                     <img
                       alt=""
-                      className="k-Card__image k-CrowdfundingCard__image__image"
+                      className="k-CrowdfundingCard__image__image"
                       src="https://placehold.it/160x100/caf4fe/caf4fe"
                       style={
                         Object {
@@ -932,12 +942,12 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                       className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
                     >
                       <div
-                        className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                        className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
                       >
                         
                       </div>
                       <div
-                        className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                        className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
                       >
                         
                       </div>
@@ -959,7 +969,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                     aria-valuemax={100}
                     aria-valuemin={0}
                     aria-valuenow={0}
-                    className="sc-gzVnrw krUgSA k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                    className="sc-htoDjs dkTMcT k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                     role="progressbar"
                   >
                     <div
@@ -972,7 +982,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                     />
                   </div>
                   <span
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
                   >
                     0 %
                   </span>
@@ -992,7 +1002,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="k-Grid__col--12 k-Grid__col--1@l"
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--1-l"
     />
   </div>
 </div>
@@ -1000,7 +1010,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dnzoib k-Carousel"
+  className="sc-bxivhb lclApx k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -1010,8 +1020,10 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
     onTouchStart={[Function]}
   >
     <div
+      aria-label="Page 1"
       className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
       onClick={[Function]}
+      role="button"
     >
       <div
         className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -1020,7 +1032,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-dnqmqq epPPOf k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -1035,7 +1047,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
               >
                 <img
                   alt=""
-                  className="k-Card__image k-CrowdfundingCard__image__image"
+                  className="k-CrowdfundingCard__image__image"
                   src="#image"
                 />
               </div>
@@ -1060,12 +1072,12 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
                 >
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
                   >
                     A Owner title
                   </div>
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
                   >
                     A Owner description
                   </div>
@@ -1087,7 +1099,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1096,7 +1108,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1105,7 +1117,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1118,7 +1130,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw hwlBmK k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-htoDjs kIYaHy k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -1131,7 +1143,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 />
               </div>
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
               >
                 100 %
               </span>
@@ -1140,7 +1152,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
               className="k-CrowdfundingCard__state"
             >
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
               >
                 Lorem ipsum…
               </span>
@@ -1152,7 +1164,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-dnqmqq epPPOf k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -1167,7 +1179,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
               >
                 <img
                   alt=""
-                  className="k-Card__image k-CrowdfundingCard__image__image"
+                  className="k-CrowdfundingCard__image__image"
                   src="#image"
                 />
               </div>
@@ -1192,12 +1204,12 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
                 >
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
                   >
                     B Owner title
                   </div>
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
                   >
                     B Owner description
                   </div>
@@ -1219,7 +1231,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1228,7 +1240,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1237,7 +1249,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1250,7 +1262,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw fDxguE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-htoDjs jBCsxU k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -1263,7 +1275,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 />
               </div>
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
               >
                 42 %
               </span>
@@ -1272,7 +1284,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
               className="k-CrowdfundingCard__state"
             >
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
               >
                 Lorem ipsum…
               </span>
@@ -1291,7 +1303,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
 
 exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat hPhwtq k-Carousel"
+  className="sc-bxivhb efUMNO k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -1301,8 +1313,10 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
     onTouchStart={[Function]}
   >
     <div
+      aria-label="Page 1"
       className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
       onClick={[Function]}
+      role="button"
     >
       <div
         className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -1311,7 +1325,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-dnqmqq epPPOf k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -1326,7 +1340,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
               >
                 <img
                   alt=""
-                  className="k-Card__image k-CrowdfundingCard__image__image"
+                  className="k-CrowdfundingCard__image__image"
                   src="#image"
                 />
               </div>
@@ -1351,12 +1365,12 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
                 >
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
                   >
                     A Owner title
                   </div>
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
                   >
                     A Owner description
                   </div>
@@ -1378,7 +1392,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1387,7 +1401,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1396,7 +1410,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1409,7 +1423,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw hwlBmK k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-htoDjs kIYaHy k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -1422,7 +1436,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 />
               </div>
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
               >
                 100 %
               </span>
@@ -1431,7 +1445,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
               className="k-CrowdfundingCard__state"
             >
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
               >
                 Lorem ipsum…
               </span>
@@ -1443,7 +1457,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-dnqmqq epPPOf k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -1458,7 +1472,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
               >
                 <img
                   alt=""
-                  className="k-Card__image k-CrowdfundingCard__image__image"
+                  className="k-CrowdfundingCard__image__image"
                   src="#image"
                 />
               </div>
@@ -1483,12 +1497,12 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
                 >
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
                   >
                     B Owner title
                   </div>
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
                   >
                     B Owner description
                   </div>
@@ -1510,7 +1524,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1519,7 +1533,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1528,7 +1542,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1541,7 +1555,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw fDxguE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-htoDjs jBCsxU k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -1554,7 +1568,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 />
               </div>
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
               >
                 42 %
               </span>
@@ -1563,7 +1577,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
               className="k-CrowdfundingCard__state"
             >
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
               >
                 Lorem ipsum…
               </span>
@@ -1588,7 +1602,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 
 exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dnzoib k-Carousel"
+  className="sc-bxivhb lclApx k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -1598,8 +1612,10 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
     onTouchStart={[Function]}
   >
     <div
+      aria-label="Page 1"
       className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
       onClick={[Function]}
+      role="button"
     >
       <div
         className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
@@ -1608,7 +1624,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-dnqmqq epPPOf k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -1623,7 +1639,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
               >
                 <img
                   alt=""
-                  className="k-Card__image k-CrowdfundingCard__image__image"
+                  className="k-CrowdfundingCard__image__image"
                   src="#image"
                 />
               </div>
@@ -1648,12 +1664,12 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
                 >
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
                   >
                     A Owner title
                   </div>
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
                   >
                     A Owner description
                   </div>
@@ -1675,7 +1691,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1684,7 +1700,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1693,7 +1709,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1706,7 +1722,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw hwlBmK k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-htoDjs kIYaHy k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -1719,7 +1735,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 />
               </div>
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
               >
                 100 %
               </span>
@@ -1728,7 +1744,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
               className="k-CrowdfundingCard__state"
             >
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
               >
                 Lorem ipsum…
               </span>
@@ -1740,7 +1756,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-htoDjs hZwMVS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-dnqmqq epPPOf k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -1755,7 +1771,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
               >
                 <img
                   alt=""
-                  className="k-Card__image k-CrowdfundingCard__image__image"
+                  className="k-CrowdfundingCard__image__image"
                   src="#image"
                 />
               </div>
@@ -1780,12 +1796,12 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
                 >
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
                   >
                     B Owner title
                   </div>
                   <div
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                    className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
                   >
                     B Owner description
                   </div>
@@ -1807,7 +1823,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1816,7 +1832,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1825,7 +1841,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 className="k-CrowdfundingCard__informations__infoContainer"
               >
                 <span
-                  className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
                 >
                   Lorem ipsum…
                 </span>
@@ -1838,7 +1854,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw fDxguE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-htoDjs jBCsxU k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -1851,7 +1867,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 />
               </div>
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
               >
                 42 %
               </span>
@@ -1860,7 +1876,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
               className="k-CrowdfundingCard__state"
             >
               <span
-                className="sc-bxivhb bUZGRr k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
               >
                 Lorem ipsum…
               </span>

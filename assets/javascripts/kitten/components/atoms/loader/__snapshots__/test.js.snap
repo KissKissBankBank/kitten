@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader /> With custom props should match with snapshot 1`] = `
+<button
+  className="sc-bdVaJa fnuzVd k-Loader customClassName"
+>
+  <svg
+    className="k-Loader__circle"
+    fill="red"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx={2.5}
+      cy={2.5}
+      r={5}
+    />
+  </svg>
+  <svg
+    className="k-Loader__circle"
+    fill="red"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx={2.5}
+      cy={2.5}
+      r={5}
+    />
+  </svg>
+  <svg
+    className="k-Loader__circle"
+    fill="red"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx={2.5}
+      cy={2.5}
+      r={5}
+    />
+  </svg>
+</button>
+`;
+
+exports[`<Loader /> With default props should match with snapshot 1`] = `
+<div
+  className="sc-bdVaJa fnuzVd k-Loader"
+>
+  <svg
+    className="k-Loader__circle"
+    fill="#222"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx={2.5}
+      cy={2.5}
+      r={5}
+    />
+  </svg>
+  <svg
+    className="k-Loader__circle"
+    fill="#222"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx={2.5}
+      cy={2.5}
+      r={5}
+    />
+  </svg>
+  <svg
+    className="k-Loader__circle"
+    fill="#222"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx={2.5}
+      cy={2.5}
+      r={5}
+    />
+  </svg>
+</div>
+`;

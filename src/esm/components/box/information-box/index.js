@@ -1,56 +1,44 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import styled from 'styled-components';
 import { Title } from '../../../components/typography/title';
-import { Marger } from '../../../components/layout/marger';
-export var InformationBox = /*#__PURE__*/function (_Component) {
-  _inherits(InformationBox, _Component);
+import COLORS from '../../../constants/colors-config';
+import TYPOGRAPHY from '../../../constants/typography-config';
+import { pxToRem } from '../../../helpers/utils/typography';
+var StyledInformationBox = styled.div.withConfig({
+  displayName: "information-box__StyledInformationBox",
+  componentId: "sc-83px7p-0"
+})(["&.k-InformationBox{display:inline-block;", "}.k-InformationBox__container{padding:", " ", " ", " ", ";color:", ";background-color:", ";border:", " solid ", ";}"], TYPOGRAPHY.fontStyles.light, pxToRem(10), pxToRem(20), pxToRem(20), pxToRem(20), COLORS.font1, COLORS.background1, pxToRem(2), COLORS.line1);
+export var InformationBox = function InformationBox(_ref) {
+  var title = _ref.title,
+      titleProps = _ref.titleProps,
+      children = _ref.children,
+      other = _objectWithoutProperties(_ref, ["title", "titleProps", "children"]);
 
-  var _super = _createSuper(InformationBox);
-
-  function InformationBox() {
-    _classCallCheck(this, InformationBox);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(InformationBox, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          title = _this$props.title,
-          children = _this$props.children,
-          other = _objectWithoutProperties(_this$props, ["title", "children"]);
-
-      return /*#__PURE__*/React.createElement("div", _extends({
-        className: "k-InformationBox"
-      }, other), /*#__PURE__*/React.createElement("div", {
-        className: "k-InformationBox__container"
-      }, /*#__PURE__*/React.createElement(Marger, {
-        bottom: "1"
-      }, /*#__PURE__*/React.createElement(Title, {
-        tag: "p",
-        margin: false,
-        modifier: "quaternary"
-      }, title)), /*#__PURE__*/React.createElement(Marger, {
-        top: "1"
-      }, children)));
-    }
-  }]);
-
-  return InformationBox;
-}(Component);
+  return /*#__PURE__*/React.createElement(StyledInformationBox, _extends({}, other, {
+    className: classNames('k-InformationBox', other.className)
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "k-InformationBox__container"
+  }, /*#__PURE__*/React.createElement(Title, _extends({
+    tag: "p",
+    noMargin: true,
+    modifier: "quaternary"
+  }, titleProps, {
+    className: classNames('k-InformationBox__title', 'k-u-margin-bottom-single', titleProps.className)
+  }), title), /*#__PURE__*/React.createElement("div", {
+    className: "k-InformationBox__content k-u-margin-top-single"
+  }, children)));
+};
 InformationBox.defaultProps = {
   title: null,
+  titleProps: {},
   children: null
+};
+InformationBox.propTypes = {
+  title: PropTypes.node,
+  titleProps: PropTypes.object,
+  children: PropTypes.node
 };

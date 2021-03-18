@@ -13,13 +13,14 @@ import { UploadIcon } from '../../../components/icons/upload-icon';
 import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon';
 import { CrossCircleIcon } from '../../../components/icons/cross-circle-icon';
 import { ClockCircleIcon } from '../../../components/icons/clock-circle-icon';
-import { Loader } from '../../../components/loaders/loader';
+import { Loader } from '../../../components/atoms/loader';
 import { DocumentIconEmpty } from '../../../components/icons/document-icon-empty';
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden';
+import { ScreenConfig } from '../../../constants/screen-config';
 var StyledDocumentUploader = styled.div.withConfig({
   displayName: "document-manager__StyledDocumentUploader",
   componentId: "fhf9cu-0"
-})(["input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{outline:", " solid ", ";outline-offset:", ";}input[type='file']:focus,input[type='file']:hover{& + label{background-color:", ";border-color:", ";color:", ";svg,path{fill:", ";}}}input[type='file']:active{& + label{background-color:", ";border-color:", ";color:", ";svg,path{fill:", ";}}}input[type='file']:disabled + label{border-color:", ";background-color:", ";color:", ";pointer-events:none;svg,path{fill:", ";}}.k-DocumentManager__uploader__button{padding:", ";}.k-DocumentManager__uploader__container{display:flex;justify-content:stretch;align-items:center;width:100%;}.k-DocumentManager__uploader__documentIcon{flex:0 0 auto;margin-right:", ";align-self:flex-start;}.k-DocumentManager__uploader__content{flex:1 1 auto;}.k-DocumentManager__uploader__uploadIcon{margin-left:", ";flex:0 0 auto;}"], COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.background2, COLORS.line1, COLORS.font1, COLORS.font1, COLORS.primary2, COLORS.primary2, COLORS.background1, COLORS.background1, COLORS.line2, COLORS.line2, COLORS.background1, COLORS.background1, pxToRem(20), pxToRem(20), pxToRem(20));
+})(["input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{outline:", " solid ", ";outline-offset:", ";}input[type='file']:focus,input[type='file']:hover{& + label{background-color:", ";border-color:", ";color:", ";svg,path{fill:", ";}}}input[type='file']:active{& + label{background-color:", ";border-color:", ";color:", ";svg,path{fill:", ";}}}input[type='file']:disabled + label{border-color:", ";background-color:", ";color:", ";pointer-events:none;svg,path{fill:", ";}}.k-DocumentManager__uploader__button{padding:", ";}.k-DocumentManager__uploader__container{display:flex;justify-content:stretch;align-items:center;width:100%;}.k-DocumentManager__uploader__documentIcon{flex:0 0 auto;margin-right:", ";align-self:flex-start;@media (max-width:", "){display:none;}}.k-DocumentManager__uploader__content{flex:1 1 auto;}.k-DocumentManager__uploader__uploadIcon{margin-left:", ";flex:0 0 auto;}"], COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.background2, COLORS.line1, COLORS.font1, COLORS.font1, COLORS.primary2, COLORS.primary2, COLORS.background1, COLORS.background1, COLORS.line2, COLORS.line2, COLORS.background1, COLORS.background1, pxToRem(20), pxToRem(20), pxToRem(ScreenConfig.XS.max), pxToRem(20));
 var StyledDocumentLoading = styled.div.withConfig({
   displayName: "document-manager__StyledDocumentLoading",
   componentId: "fhf9cu-1"
@@ -148,7 +149,7 @@ export var DocumentManager = function DocumentManager(_ref2) {
       disabled: internalDisabled
     })), /*#__PURE__*/React.createElement(Button, _extends({
       fluid: true,
-      borderRadius: 4
+      borderRadius: 6
     }, buttonProps, {
       as: "label",
       htmlFor: id,
@@ -187,7 +188,7 @@ export var DocumentManager = function DocumentManager(_ref2) {
       className: classNames('k-DocumentManager__loading', props.className)
     }), /*#__PURE__*/React.createElement(Button, _extends({
       fluid: true,
-      borderRadius: 4
+      borderRadius: 6
     }, buttonProps, {
       as: "div",
       className: classNames('k-DocumentManager__loading__button', buttonProps.className)

@@ -2,7 +2,7 @@
 
 exports[`<LinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa kKCOBn"
+  className="sc-bdVaJa ebdoYP"
   href="#"
 >
   <div
@@ -36,7 +36,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa kKCOBn"
+  className="sc-bdVaJa ebdoYP"
   href="#foobar"
   rel="noopener"
   target="_blank"
@@ -67,7 +67,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
       </svg>
     </div>
     <div
-      className="k-u-margin-top-double k-u-margin-bottom-double k-LinkBox__textContainer"
+      className="k-LinkBox__textContainer"
     >
       foobar
     </div>
@@ -90,92 +90,6 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         
         <path
           d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
-        />
-      </svg>
-    </div>
-  </div>
-</a>
-`;
-
-exports[`Deprecated <LinkBox /> by default matches with snapshot 1`] = `
-<a
-  className="sc-bdVaJa kKCOBn"
-  href="#"
-  title="My title"
->
-  <div
-    className="k-LinkBox__link"
-  >
-    <div
-      className="k-LinkBox__arrow"
-    >
-      <svg
-        className=""
-        fill="#222"
-        height="10"
-        style={
-          Object {
-            "transform": "rotate(90deg)",
-          }
-        }
-        viewBox="0 0 8.48 5.64"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        
-        <path
-          d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
-        />
-      </svg>
-    </div>
-  </div>
-</a>
-`;
-
-exports[`Deprecated <LinkBox /> with some props matches with snapshot 1`] = `
-<a
-  className="sc-bdVaJa kKCOBn"
-  href="#foobar"
-  rel="noopener"
-  target="_blank"
->
-  <div
-    className="k-LinkBox__link k-LinkBox__link--deprecated"
-  >
-    <div
-      className="k-LinkBox__icon k-LinkBox__icon--deprecated k-u-hidden@xs-down--important"
-    />
-    <div
-      className="k-LinkBox__textContainer k-LinkBox__textContainer--deprecated k-u-margin-top-double k-u-margin-bottom-double"
-    >
-      <div
-        className="sc-htpNat bkOirm"
-      >
-        <span
-          className="sc-bwzfXH uTxCW k-u-color-font1 k-u-size-default k-u-weight-regular k-u-line-height-1"
-        >
-          Lorem ipsum
-        </span>
-      </div>
-      <span
-        className="sc-bwzfXH uTxCW k-u-color-font1 k-u-size-tiny k-u-weight-light k-u-line-height-1-3"
-      >
-        In enim justo, rhoncus ut,
-      </span>
-    </div>
-    <div
-      className="k-LinkBox__arrow"
-    >
-      <svg
-        className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
-        height="5.64"
-        viewBox="0 0 6 6"
-        width="8.48"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        
-        <path
-          d="M6 0H0v6h2V2h4z"
         />
       </svg>
     </div>

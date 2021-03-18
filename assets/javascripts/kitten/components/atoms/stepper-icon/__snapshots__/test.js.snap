@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepperIcon /> StepperIconDefault matches with snapshot 1`] = `
+<span
+  className="sc-bdVaJa oCMmu k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--empty"
+>
+  <span
+    className="k-IconBadge__content"
+  />
+</span>
+`;
+
+exports[`<StepperIcon /> StepperIconInProgress matches with snapshot 1`] = `
+<span
+  className="sc-bdVaJa oCMmu k-IconBadge custom-class-name k-IconBadge--tiny"
+>
+  <span
+    className="k-IconBadge__content"
+  >
+    <svg
+      className=""
+      fill="#222"
+      height="5.64"
+      style={
+        Object {
+          "transform": "rotate(90deg)",
+        }
+      }
+      viewBox="0 0 8.48 5.64"
+      width="8.48"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+      />
+    </svg>
+  </span>
+</span>
+`;
+
+exports[`<StepperIcon /> StepperIconValidated matches with snapshot 1`] = `
+<span
+  className="sc-bdVaJa oCMmu k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid"
+>
+  <span
+    className="k-IconBadge__content"
+  >
+    <svg
+      fill="#fff"
+      height="8"
+      viewBox="0 0 11 8"
+      width="11"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
+      />
+    </svg>
+  </span>
+</span>
+`;
+
+exports[`<StepperIcon /> by default matches with snapshot 1`] = `
+<span
+  className="sc-bdVaJa oCMmu k-IconBadge k-IconBadge--tiny k-IconBadge--empty"
+>
+  <span
+    className="k-IconBadge__content"
+  />
+</span>
+`;
+
+exports[`<StepperIcon /> state = progress matches with snapshot 1`] = `
+<span
+  className="sc-bdVaJa oCMmu k-IconBadge custom-class-name k-IconBadge--tiny"
+>
+  <span
+    className="k-IconBadge__content"
+  >
+    <svg
+      className=""
+      fill="#222"
+      height="5.64"
+      style={
+        Object {
+          "transform": "rotate(90deg)",
+        }
+      }
+      viewBox="0 0 8.48 5.64"
+      width="8.48"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+      />
+    </svg>
+  </span>
+</span>
+`;
+
+exports[`<StepperIcon /> state = valid matches with snapshot 1`] = `
+<span
+  className="sc-bdVaJa oCMmu k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid"
+>
+  <span
+    className="k-IconBadge__content"
+  >
+    <svg
+      fill="#fff"
+      height="8"
+      viewBox="0 0 11 8"
+      width="11"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
+      />
+    </svg>
+  </span>
+</span>
+`;

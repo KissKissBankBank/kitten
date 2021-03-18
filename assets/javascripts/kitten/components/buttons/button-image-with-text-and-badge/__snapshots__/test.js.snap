@@ -54,10 +54,11 @@ exports[`<ButtonImageWithTextAndBadge /> snapshot with notifications 1`] = `
       />
     </span>
     <span
-      className="k-ButtonWithBadge__badge k-Badge"
+      aria-label={null}
+      className="sc-bdVaJa ednBsT k-Badge k-ButtonWithBadge__badge"
       style={
         Object {
-          "backgroundColor": "#FF0000",
+          "--Badge-background-color": "#FF0000",
         }
       }
     >

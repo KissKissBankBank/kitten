@@ -43,7 +43,7 @@ var getCircleIcon = function getCircleIcon(color) {
 var StyledCheckableButton = (0, _styledComponents.default)(_button.Button).withConfig({
   displayName: "checkable-button__StyledCheckableButton",
   componentId: "b6e3u-0"
-})(["&::after{content:'';position:absolute;", " ", " background-repeat:no-repeat;background-position:50% 50%;opacity:0;transform-origin:50% 50%;transition:opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);transform:scale(0);}&[aria-checked='true']::after{opacity:1;transform:scale(1);transition-timing-function:ease,cubic-bezier(0.2,2,0.7,1);}", ""], function (_ref) {
+})(["&::after{content:'';position:absolute;", " ", " background-repeat:no-repeat;background-position:50% 50%;opacity:0;transform-origin:50% 50%;transition:opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);transform:scale(0);}&[aria-checked]::after{opacity:1;transform:scale(1);transition-timing-function:ease,cubic-bezier(0.2,2,0.7,1);}&:focus{outline-offset:", ";}", " &[aria-checked]:focus{outline:", " solid ", ";border-color:", ";}"], function (_ref) {
   var tiny = _ref.tiny,
       big = _ref.big;
   if (tiny === true) return checkedCircleIconStyle(15);
@@ -63,11 +63,10 @@ var StyledCheckableButton = (0, _styledComponents.default)(_button.Button).withC
   }
 
   return (0, _styledComponents.css)(["background-image:url(", ");"], getCircleIcon(color));
-}, function (_ref3) {
-  var modifier = _ref3.modifier,
-      disabled = _ref3.disabled;
-  return modifier !== 'copper' && !disabled && (0, _styledComponents.css)([":hover,:focus{border-color:", ";background-color:", ";color:", ";}:active{border-color:", ";background-color:", ";color:", ";}"], _colorsConfig.default.primary4, _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary2, _colorsConfig.default.background1, _colorsConfig.default.primary2);
-});
+}, (0, _typography.pxToRem)(-2), function (_ref3) {
+  var modifier = _ref3.modifier;
+  return modifier !== 'copper' && (0, _styledComponents.css)([":hover:not(:disabled),:focus:not(:disabled){border-color:", ";background-color:", ";color:", ";}:active:not(:disabled){border-color:", ";background-color:", ";color:", ";}"], _colorsConfig.default.primary4, _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary2, _colorsConfig.default.background1, _colorsConfig.default.primary2);
+}, _colorsConfig.default.primary1, (0, _typography.pxToRem)(2), _colorsConfig.default.primary1);
 
 var CheckableButton = function CheckableButton(_ref4) {
   var isChecked = _ref4.isChecked,
@@ -89,7 +88,7 @@ var CheckableButton = function CheckableButton(_ref4) {
   }();
 
   return /*#__PURE__*/_react.default.createElement(StyledCheckableButton, (0, _extends2.default)({}, props, {
-    "aria-checked": isChecked,
+    "aria-checked": isChecked || null,
     modifier: checkedModifier
   }), children);
 };

@@ -25,8 +25,6 @@ var _error = require("./components/error");
 
 var _radioButtonSet = require("./components/radio-button-set");
 
-var _select = require("./components/select");
-
 var _checkbox = require("./components/checkbox");
 
 var _password = require("./components/password");
@@ -67,7 +65,6 @@ exports.Field = Field;
 Field.Label = _label.FieldLabel;
 Field.Input = _input.FieldInput;
 Field.RadioButtonSet = _radioButtonSet.FieldRadioButtonSet;
-Field.Select = _select.FieldSelect;
 Field.Checkbox = _checkbox.FieldCheckbox;
 Field.ErrorMessage = _error.FieldError;
 Field.Password = _password.FieldPassword;

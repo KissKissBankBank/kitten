@@ -6,39 +6,17 @@
 @import './components/buttons/button';
 @import './components/buttons/tag-button';
 
-// Box
-@import './components/box/link-box';
-@import './components/box/information-box';
-
-// Cards
-@import './components/cards/card';
-
-// Dev
-@import './components/dev/dev-breakpoint';
-@import './components/dev/dev-grid';
-
 // Dropdowns
 @import './components/dropdowns/dropdown';
-@import './components/dropdowns/phone-dropdown';
-
-// Footer
-@import './components/footer/footer';
 
 // Form
 @import './components/form/checkbox-set';
 @import './components/form/checkbox';
 @import './components/form/location-input';
-@import './components/form/form-actions';
 @import './components/form/form-composer';
 @import './components/form/form-info';
-@import './components/form/form-row';
 @import './components/form/radio-button-set';
 @import './components/form/radio-button';
-@import './components/form/search-input';
-@import './components/form/select';
-@import './components/form/slider-tooltip';
-@import './components/form/slider';
-@import './components/form/switch';
 @import './components/form/text-area-wrapper';
 @import './components/form/text-input';
 @import './components/form/text-input-with-button';
@@ -48,44 +26,14 @@
 
 // Grid
 @import './components/grid/container';
-@import './components/grid/grid';
-@import "./components/grid/row";
 @import "./components/grid/side-grid";
 @import "./components/grid/single-column";
-@import "./components/grid/vertical-grid";
-
-// Headers
-@import './components/headers/header';
-
-// Icons
-@import "./components/icons/arrow-icon";
-
-// Images
-@import "./components/images/cropper";
-@import "./components/images/image-with-caption";
 
 // Layout
 @import './components/layout/horizontal-stroke';
-@import './components/layout/line';
-@import './components/layout/responsive-iframe-container';
-@import './components/layout/separator';
-@import './components/layout/vertical-separator';
-@import './components/layout/vertical-stroke';
 
 // Lines
 @import './components/lines/info-lines';
-
-// Links
-@import './components/links/external-rich-link';
-@import './components/links/link-list';
-
-// Lists
-@import './components/lists/bullet-list';
-@import './components/lists/tag-list';
-
-// Loaders
-@import './components/loaders/loader';
-@import './components/loaders/loader-with-paragraph';
 
 // Meters
 @import './components/meters/progress';
@@ -94,28 +42,11 @@
 @import './components/modals/modal';
 
 // Navigation
-@import './components/navigation/header-nav';
-@import './components/navigation/horizontal-nav';
 @import './components/navigation/platform-switch';
-@import './components/navigation/tab-bar';
 @import './components/navigation/user-menu';
-
-// Notifications
-@import './components/notifications/alert';
-@import './components/notifications/badge';
-@import './components/notifications/icon-badge';
 
 // Press
 @import './components/press/press-quotes';
-
-// Popovers
-@import './components/popovers/popover';
-
-// Simulators
-@import './components/simulators/loan-simulator';
-
-// Steppers
-@import './components/steppers/stepper';
 
 // Teaser
 @import "./components/teaser/teaser";
@@ -127,20 +58,5 @@
 // Titles
 @import './components/titles/title-with-actions';
 
-// Tooltips
-@import './components/tooltips/tooltip';
-@import './components/tooltips/tooltip-new';
-@import './components/tooltips/static-tooltip';
-
-// Tours
-@import './components/tours/tour';
-@import './components/tours/header-tour';
-
 // Typography
 @import './components/typography/body-copy';
-@import './components/typography/paragraph';
-@import './components/typography/sup-title';
-@import './components/typography/title';
-
-// Uploaders
-@import './components/uploaders/simple-uploader';

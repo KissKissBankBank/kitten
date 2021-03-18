@@ -171,6 +171,7 @@ const StyledContainerStatus = styled.div`
       &.k-Steppers--VerticalStepper__status--disabled {
         background-color: ${COLORS.background1};
         border-color: ${COLORS.line1};
+        border-width: ${pxToRem(2)};
 
         width: ${pxToRem(MOBILE_INACTIVE_STATUS_SIZE)};
         height: ${pxToRem(MOBILE_INACTIVE_STATUS_SIZE)};
@@ -183,6 +184,7 @@ const StyledContainerStatus = styled.div`
           height: ${pxToRem(INACTIVE_STATUS_SIZE)};
           border-radius: ${pxToRem(INACTIVE_STATUS_SIZE)};
           margin-right: ${pxToRem(20)};
+          border-width: ${pxToRem(3)};
         }
       }
       &.k-Steppers--VerticalStepper__status--bridge {

@@ -1,5 +1,26 @@
 import React from 'react'
 import classNames from 'classnames'
+import styled from 'styled-components'
+
+const StyledWrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+
+  padding-bottom: 67.5%;
+  padding-bottom: var(--ResponsiveImageContainer-ratio);
+  height: 0;
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+  }
+`
 
 export const ResponsiveIframeContainer = ({
   ratio,
@@ -7,17 +28,16 @@ export const ResponsiveIframeContainer = ({
   className,
   ...props
 }) => {
-  const componentClassName = classNames(
-    'k-ResponsiveIframeContainer',
-    className,
+  return (
+    <StyledWrapper
+      className={classNames('k-ResponsiveIframeContainer', className)}
+      style={{
+        ...style,
+        '--ResponsiveImageContainer-ratio': `${ratio}%`,
+      }}
+      {...props}
+    />
   )
-
-  const styles = {
-    ...style,
-    paddingBottom: `${ratio}%`,
-  }
-
-  return <div className={componentClassName} style={styles} {...props} />
 }
 
 ResponsiveIframeContainer.defaultProps = {
