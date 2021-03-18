@@ -94,7 +94,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat kcNXMt"
   >
     <p
-      className="sc-bZQynM cvUhvm k-Paragraph k-Paragraph--noMargin"
+      className="sc-EHOje bSlYeT k-Paragraph k-Paragraph--noMargin"
     >
       Emphasis, aka italics, with 
       <em>
@@ -158,10 +158,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kKOIuD"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="sc-ifAKCX byUWJJ"
+        className="k-BulletList__item k-BulletList__item--regular sc-ifAKCX hPTZCJ"
       >
         Unordered list can use asterisks
       </li>
@@ -171,10 +171,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kKOIuD"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="sc-ifAKCX byUWJJ"
+        className="k-BulletList__item k-BulletList__item--regular sc-ifAKCX hPTZCJ"
       >
         Or minuses
       </li>
@@ -184,10 +184,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kKOIuD"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="sc-ifAKCX byUWJJ"
+        className="k-BulletList__item k-BulletList__item--regular sc-ifAKCX hPTZCJ"
       >
         Or pluses
       </li>
@@ -226,7 +226,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kcNXMt"
   >
     <p
-      className="sc-bZQynM cvUhvm k-Paragraph k-Paragraph--noMargin"
+      className="sc-EHOje bSlYeT k-Paragraph k-Paragraph--noMargin"
     >
       <a
         className="k-Paragraph__link"
@@ -333,7 +333,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat kcNXMt"
   >
     <p
-      className="sc-bZQynM hvWTWB k-Paragraph k-Paragraph--noMargin"
+      className="sc-EHOje izWPJs k-Paragraph k-Paragraph--noMargin"
     >
       Emphasis, aka italics, with 
       <em>
@@ -397,10 +397,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kKOIuD"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="sc-ifAKCX hdtMub"
+        className="k-BulletList__item k-BulletList__item--regular sc-ifAKCX hPTZCJ"
       >
         Unordered list can use asterisks
       </li>
@@ -410,10 +410,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kKOIuD"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="sc-ifAKCX hdtMub"
+        className="k-BulletList__item k-BulletList__item--regular sc-ifAKCX hPTZCJ"
       >
         Or minuses
       </li>
@@ -423,10 +423,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kKOIuD"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-bxivhb hRPXqj k-BulletList"
     >
       <li
-        className="sc-ifAKCX hdtMub"
+        className="k-BulletList__item k-BulletList__item--regular sc-ifAKCX hPTZCJ"
       >
         Or pluses
       </li>
@@ -465,7 +465,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kcNXMt"
   >
     <p
-      className="sc-bZQynM hvWTWB k-Paragraph k-Paragraph--noMargin"
+      className="sc-EHOje izWPJs k-Paragraph k-Paragraph--noMargin"
     >
       <a
         className="k-Paragraph__link"
