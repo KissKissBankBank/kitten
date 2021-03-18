@@ -12,11 +12,12 @@ Breaking change:
 
 Feature:
 
-- Add `size` prop to the following components: 
+- Add `size` prop to the following components:
   - `TextInput`
   - `TextInputWithButton`
   - `TextInputWithUnit`
 
+- Migrate `Label` component and remove `k-Label` styles.
 - Breaking change: Delete the following deprecated SCSS mixins:
   - `k-HorizontalNav`
   - `k-TabBar`
@@ -366,7 +367,6 @@ Breaking changes:
   - `ProjectCreatorCard`
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
-  - `SimilarProjectsCard`
 
 ## [2.125.0] - 2021-03-15
 
