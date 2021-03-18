@@ -12,7 +12,7 @@ const sizeOptions = {
 }
 
 export const Default = () => (
-  <Container>      
+  <Container>
     <BulletList
       size={select('Size', sizeOptions, 'regular')}
       items={[

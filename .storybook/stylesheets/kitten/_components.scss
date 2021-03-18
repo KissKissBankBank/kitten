@@ -57,8 +57,6 @@
 
 // Navigation
 
-@include k-HorizontalNav;
-
 @include k-PlatformSwitch((
   colors: (
     background: map-get($k-colors, 'background-2'),
@@ -67,8 +65,6 @@
     border-active: map-get($k-colors, 'primary-1'),
   )
 ));
-
-@include k-TabBar((z-index: 50));
 
 @include k-UserMenu;
 

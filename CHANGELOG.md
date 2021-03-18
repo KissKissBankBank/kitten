@@ -4,6 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Delete the following deprecated SCSS mixins:
+  - `k-HorizontalNav`
+  - `k-TabBar`
+- Breaking change: Delete the following deprecated components:
+  - `HorizontalNav`
+  - `MarkdownPage`
+  - `TabBar`
+
 - Breaking change: Remove `k-Card` mixin.
 - Breaking change: Remove `card` HOC.
 - Feature: Refactor `SimpleCard` to CSS-in-JS.
@@ -12,7 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Breaking changes:
 
 - Deprecated size props (`small`, `large`, `big`, `huge`) on `BulletList` component.
-- Delete the following deprecated SCSS mixin: 
+- Delete the following deprecated SCSS mixin:
   - `k-BulletList`
 - Convert and move the following component to CSS-in-JS:
   - `BulletList`

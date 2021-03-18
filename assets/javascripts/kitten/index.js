@@ -191,16 +191,11 @@ export { Overlay } from './components/modals/overlay'
 
 // Navigation
 export { default as HeaderNav } from './components/navigation/header-nav'
-export { HorizontalNav } from './components/navigation/horizontal-nav'
 export { Pagination } from './components/navigation/pagination'
-export { TabBar } from './components/navigation/tab-bar'
 export { NavBar } from './components/navigation/nav-bar'
 
 // Notifications
 export { Alert } from './components/notifications/alert'
-
-// Pages
-export { MarkdownPage } from './components/pages/markdown'
 
 // Popovers
 export { SimplePopover } from './components/popovers/simple-popover'

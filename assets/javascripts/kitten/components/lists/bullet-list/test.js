@@ -9,7 +9,7 @@ describe('<BulletList />', () => {
   describe('default', () => {
     beforeEach(() => {
       component = renderer
-      .create(
+        .create(
           <BulletList
             size="regular"
             items={[
