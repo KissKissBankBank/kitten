@@ -1,11 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SimpleCard /> by default matches with snapshot 1`] = `
-<div
-  className="sc-EHOje ftnBiB k-Card k-Card--withoutBoxShadowOnHover"
+<a
+  className="sc-ifAKCX coJgDe k-SimpleCard"
+  href="#"
 >
   <div
-    className="sc-bwzfXH dgLGwV sc-htpNat jKPJTa k-SimpleCard__imageContainer"
+    className="k-SimpleCard__imageContainer"
+    style={
+      Object {
+        "--SimpleCard-image-container-background": "#eee",
+        "--SimpleCard-image-container-ratio": null,
+      }
+    }
   >
     <img
       alt=""
@@ -13,15 +20,22 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
       src=""
     />
   </div>
-</div>
+</a>
 `;
 
 exports[`<SimpleCard /> with imageContainerRatio props matches with snapshot 1`] = `
-<div
-  className="sc-EHOje ftnBiB k-Card k-Card--withoutBoxShadowOnHover"
+<a
+  className="sc-ifAKCX coJgDe k-SimpleCard"
+  href="#"
 >
   <div
-    className="sc-bwzfXH dTtCto sc-htpNat jKPJTa k-SimpleCard__imageContainer k-SimpleCard__imageContainer--ratio"
+    className="k-SimpleCard__imageContainer k-SimpleCard__imageContainer--ratio"
+    style={
+      Object {
+        "--SimpleCard-image-container-background": "#eee",
+        "--SimpleCard-image-container-ratio": 1.7777777777777777,
+      }
+    }
   >
     <img
       alt=""
@@ -29,15 +43,22 @@ exports[`<SimpleCard /> with imageContainerRatio props matches with snapshot 1`]
       src=""
     />
   </div>
-</div>
+</a>
 `;
 
 exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot 1`] = `
-<div
-  className="sc-EHOje ftnBiB k-Card k-Card--withoutBoxShadowOnHover"
+<a
+  className="sc-ifAKCX coJgDe k-SimpleCard"
+  href="#"
 >
   <div
-    className="sc-bwzfXH dgLGwV sc-htpNat jKPJTa k-SimpleCard__imageContainer"
+    className="k-SimpleCard__imageContainer"
+    style={
+      Object {
+        "--SimpleCard-image-container-background": "#eee",
+        "--SimpleCard-image-container-ratio": null,
+      }
+    }
   >
     <div
       className="k-SimpleCard__playerButton"
@@ -59,15 +80,22 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
       src=""
     />
   </div>
-</div>
+</a>
 `;
 
 exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
-<div
-  className="sc-EHOje ftnBiB k-Card k-Card--withoutBoxShadowOnHover"
+<a
+  className="sc-ifAKCX coJgDe k-SimpleCard"
+  href="#"
 >
   <div
-    className="sc-bwzfXH dgLGwV sc-htpNat jKPJTa k-SimpleCard__imageContainer"
+    className="k-SimpleCard__imageContainer"
+    style={
+      Object {
+        "--SimpleCard-image-container-background": "#eee",
+        "--SimpleCard-image-container-ratio": null,
+      }
+    }
   >
     <img
       alt=""
@@ -75,5 +103,5 @@ exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
       src=""
     />
   </div>
-</div>
+</a>
 `;

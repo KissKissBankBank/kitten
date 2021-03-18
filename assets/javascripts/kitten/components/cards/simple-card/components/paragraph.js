@@ -6,14 +6,18 @@ import { parseHtml } from '../../../../helpers/utils/parser'
 
 export const Paragraph = ({ paragraph }) => {
   return (
-    <>
-      <div className="k-u-margin-bottom-singleHalf">
-        <Text lineHeight="normal" size="micro" weight="light">
-          {parseHtml(paragraph)}
-        </Text>
-      </div>
+    <div className="k-SimpleCard__paragraph">
+      <Text
+        lineHeight="normal"
+        size="micro"
+        weight="light"
+        tag="p"
+        className="k-u-margin-bottom-singleHalf"
+      >
+        {parseHtml(paragraph)}
+      </Text>
       <HorizontalStroke size="tiny" className="k-u-margin-top-singleHalf" />
-    </>
+    </div>
   )
 }
 

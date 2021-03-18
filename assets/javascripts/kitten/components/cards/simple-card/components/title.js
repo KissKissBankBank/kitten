@@ -5,20 +5,13 @@ import { parseHtml } from '../../../../helpers/utils/parser'
 import { Title as TitleComponent } from '../../../../components/typography/title'
 import { Marger } from '../../../../components/layout/marger'
 
-export const Title = ({
-  title,
-  titleProps
-}) => {
-
+export const Title = ({ title, titleProps }) => {
   return (
     <Marger top="2" bottom=".3">
       <TitleComponent
         tag="p"
         {...titleProps}
-        className={classNames(
-          'k-Card__title',
-          titleProps.className,
-        )}
+        className={classNames('k-SimpleCard__title', titleProps.className)}
         noMargin
         modifier="senary"
       >

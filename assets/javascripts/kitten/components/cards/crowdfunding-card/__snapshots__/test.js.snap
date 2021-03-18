@@ -39,6 +39,37 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   padding-bottom: 0.3125rem;
   overflow: hidden;
   display: block;
+  background: #fff;
+  color: #222;
+}
+
+.c0[href] {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.c0[href] .k-CrowdfundingCard__image__image {
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -webkit-transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+
+.c0[href] .k-CrowdfundingCard__title__title {
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+.c0[href]:hover .k-CrowdfundingCard__image__image,
+.c0[href]:focus .k-CrowdfundingCard__image__image {
+  -webkit-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  transform: scale(1.07);
+}
+
+.c0[href]:hover .k-CrowdfundingCard__title__title,
+.c0[href]:focus .k-CrowdfundingCard__title__title {
+  color: #19b4fa;
 }
 
 .c0[href]:focus {
@@ -434,7 +465,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     >
       <img
         alt=""
-        className="k-Card__image k-CrowdfundingCard__image__image"
+        className="k-CrowdfundingCard__image__image"
         src="#image"
       />
     </div>
@@ -675,6 +706,37 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   padding-bottom: 0.3125rem;
   overflow: hidden;
   display: block;
+  background: #fff;
+  color: #222;
+}
+
+.c0[href] {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.c0[href] .k-CrowdfundingCard__image__image {
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -webkit-transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+
+.c0[href] .k-CrowdfundingCard__title__title {
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+.c0[href]:hover .k-CrowdfundingCard__image__image,
+.c0[href]:focus .k-CrowdfundingCard__image__image {
+  -webkit-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  transform: scale(1.07);
+}
+
+.c0[href]:hover .k-CrowdfundingCard__title__title,
+.c0[href]:focus .k-CrowdfundingCard__title__title {
+  color: #19b4fa;
 }
 
 .c0[href]:focus {
@@ -1077,7 +1139,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
     >
       <img
         alt=""
-        className="k-Card__image k-CrowdfundingCard__image__image"
+        className="k-CrowdfundingCard__image__image"
         src="#image"
       />
     </div>
@@ -1297,6 +1359,37 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   padding-bottom: 0.3125rem;
   overflow: hidden;
   display: block;
+  background: #fff;
+  color: #222;
+}
+
+.c0[href] {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.c0[href] .k-CrowdfundingCard__image__image {
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -webkit-transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+
+.c0[href] .k-CrowdfundingCard__title__title {
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+.c0[href]:hover .k-CrowdfundingCard__image__image,
+.c0[href]:focus .k-CrowdfundingCard__image__image {
+  -webkit-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  transform: scale(1.07);
+}
+
+.c0[href]:hover .k-CrowdfundingCard__title__title,
+.c0[href]:focus .k-CrowdfundingCard__title__title {
+  color: #19b4fa;
 }
 
 .c0[href]:focus {
@@ -1697,7 +1790,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
     >
       <img
         alt=""
-        className="k-Card__image k-CrowdfundingCard__image__image"
+        className="k-CrowdfundingCard__image__image"
         src="#image"
       />
     </div>
@@ -1921,6 +2014,37 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   padding-bottom: 0.3125rem;
   overflow: hidden;
   display: block;
+  background: #fff;
+  color: #222;
+}
+
+.c0[href] {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.c0[href] .k-CrowdfundingCard__image__image {
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -webkit-transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+
+.c0[href] .k-CrowdfundingCard__title__title {
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+.c0[href]:hover .k-CrowdfundingCard__image__image,
+.c0[href]:focus .k-CrowdfundingCard__image__image {
+  -webkit-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  transform: scale(1.07);
+}
+
+.c0[href]:hover .k-CrowdfundingCard__title__title,
+.c0[href]:focus .k-CrowdfundingCard__title__title {
+  color: #19b4fa;
 }
 
 .c0[href]:focus {
@@ -2323,7 +2447,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     >
       <video
         autoPlay={true}
-        className="c1 k-Card__image k-CrowdfundingCard__image__image testClass"
+        className="c1 k-CrowdfundingCard__image__image testClass"
         loop={false}
         muted={false}
         playsInline={true}
