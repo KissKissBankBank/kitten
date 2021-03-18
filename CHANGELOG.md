@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove `k-Card` mixin.
+- Breaking change: Remove `card` HOC.
+- Feature: Refactor `SimpleCard` to CSS-in-JS.
+- Feature: Add `playerButtonSize` prop to `SimpleCard`.
+
 Breaking changes:
 
 - Deprecated size props (`small`, `large`, `big`, `huge`) on `BulletList` component.
