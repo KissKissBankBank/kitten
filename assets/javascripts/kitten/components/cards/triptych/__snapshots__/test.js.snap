@@ -32,7 +32,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
   >
     <div>
       <div
-        className="sc-EHOje eaHrjG"
+        className="sc-bZQynM fcNcaE"
       >
         <div
           className="k-u-margin-bottom-triple"
@@ -62,10 +62,14 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-u-margin-top-triple k-u-align-center"
         >
           <button
-            className="k-Button k-Button--helium k-VerticalCardWithAction__button"
+            className="sc-EHOje cxiFbp k-Button k-VerticalCardWithAction__button k-Button--normal k-Button--helium k-Button--andromeda"
             href={null}
             onClick={null}
-            tabIndex={null}
+            style={
+              Object {
+                "--border-radius": 0,
+              }
+            }
             type="button"
           >
             Lorem
@@ -78,7 +82,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
     className="k-Grid__col k-Grid__col--12 k-Grid__col--6-m k-Grid__col--4-l k-Triptych__contentColumn"
   >
     <div
-      className="sc-EHOje eaHrjG"
+      className="sc-bZQynM fcNcaE"
     >
       <div
         className="k-u-margin-bottom-triple"
@@ -112,10 +116,14 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="k-Button k-Button--helium k-VerticalCardWithAction__button"
+          className="sc-EHOje cxiFbp k-Button k-VerticalCardWithAction__button k-Button--normal k-Button--helium k-Button--andromeda"
           href={null}
           onClick={null}
-          tabIndex={null}
+          style={
+            Object {
+              "--border-radius": 0,
+            }
+          }
           type="button"
         >
           Ipsum
@@ -127,7 +135,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
     className="k-Grid__col k-Grid__col--12 k-Grid__col--6-m k-Grid__col--4-l k-Triptych__contentColumn k-Triptych__contentColumn--odd"
   >
     <div
-      className="sc-EHOje eaHrjG"
+      className="sc-bZQynM fcNcaE"
     >
       <div
         className="k-u-margin-bottom-triple"
@@ -157,10 +165,14 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="k-Button k-Button--helium k-VerticalCardWithAction__button"
+          className="sc-EHOje cxiFbp k-Button k-VerticalCardWithAction__button k-Button--normal k-Button--helium k-Button--andromeda"
           href={null}
           onClick={null}
-          tabIndex={null}
+          style={
+            Object {
+              "--border-radius": 0,
+            }
+          }
           type="button"
         >
           Dolor

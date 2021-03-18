@@ -10,21 +10,51 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   margin-bottom: 0.625rem;
 }
 
-.c7 {
+.c8 {
   margin-top: 1.875rem;
 }
 
 .c5 {
+  --Title-css-color: #222;
   font-family: Maax,Helvetica,Arial,sans-serif;
   -webkit-letter-spacing: .01rem;
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
   letter-spacing: .01rem;
   font-weight: 600;
+  color: #222;
+  color: var(--Title-css-color);
   font-size: 1.125rem;
   line-height: 1.2;
+}
+
+.c5.k-Title--noMargin {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.c5.k-Title--italic {
+  font-style: italic;
+}
+
+.c7 {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 0.7901234567901234rem;
+  line-height: 1.6;
+}
+
+.c7.k-Paragraph--noMargin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c7.k-Paragraph--normalLineHeight {
+  line-height: normal;
+}
+
+.c7.k-Paragraph--italic {
+  font-style: italic;
 }
 
 .c1 {
@@ -198,7 +228,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   color: #fff;
 }
 
-.c9 {
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -235,62 +265,62 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c9:disabled {
+.c10:disabled {
   cursor: not-allowed;
 }
 
-.c9:hover {
+.c10:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9 >:nth-child(n) {
+.c10 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c9 >:last-child {
+.c10 >:last-child {
   margin-right: 0;
 }
 
-.c9.k-Button--hasBorderRadius {
+.c10.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
 
-.c9.k-Button--nano {
+.c10.k-Button--nano {
   min-width: 6.25rem;
   min-height: 1.25rem;
   padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
-.c9.k-Button--micro {
+.c10.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
   padding: 0 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
-.c9.k-Button--tiny {
+.c10.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
   padding: 0 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c9.k-Button--huge {
+.c10.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
   padding: 0 0.625rem;
 }
 
-.c9.k-Button--giant {
+.c10.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
   padding: 0 0.625rem;
 }
 
-.c9.k-Button--hasIcon:not(.k-Button--fluid) {
+.c10.k-Button--hasIcon:not(.k-Button--fluid) {
   min-width: initial;
   min-height: initial;
   width: 3.125rem;
@@ -298,72 +328,72 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   padding: 0;
 }
 
-.c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+.c10.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+.c10.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
   width: 1.875rem;
   height: 1.875rem;
 }
 
-.c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+.c10.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
   width: 2.5rem;
   height: 2.5rem;
 }
 
-.c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+.c10.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
   min-width: initial;
   width: 4.375rem;
   height: 4.375rem;
 }
 
-.c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+.c10.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
   min-width: initial;
   width: 4.375rem;
   height: 4.375rem;
 }
 
-.c9.k-Button--fluid {
+.c10.k-Button--fluid {
   min-width: initial;
   width: 100%;
 }
 
-.c9.k-Button--rounded {
+.c10.k-Button--rounded {
   border-radius: 50%;
 }
 
-.c9.k-Button--orion {
+.c10.k-Button--orion {
   border-radius: 0.375rem;
 }
 
-.c9 svg,
-.c9 path {
+.c10 svg,
+.c10 path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
 
-.c9:hover,
-.c9:focus {
+.c10:hover,
+.c10:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c9:active {
+.c10:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c9:focus {
+.c10:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
-.c9:disabled {
+.c10:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -428,7 +458,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c8 > * + * {
+.c9 > * + * {
   margin-top: 1.25rem;
 }
 
@@ -441,6 +471,18 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 @media (min-width:67.5rem) {
   .c5 {
     font-size: 1.601806640625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c7 {
+    font-size: 0.8888888888888888rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c7 {
+    font-size: 0.8888888888888888rem;
   }
 }
 
@@ -613,35 +655,35 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9 {
+  .c10 {
     width: 12.5rem;
     height: 3.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--nano {
+  .c10.k-Button--nano {
     width: 6.25rem;
     height: 1.25rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--micro {
+  .c10.k-Button--micro {
     width: 6.25rem;
     height: 1.25rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--tiny {
+  .c10.k-Button--tiny {
     width: 10rem;
     height: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c9.k-Button--big {
+  .c10.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
     padding: 0 2.5rem;
@@ -650,14 +692,14 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--big {
+  .c10.k-Button--big {
     width: 13.75rem;
     height: 4.375rem;
   }
 }
 
 @media (min-width:768px) {
-  .c9.k-Button--huge {
+  .c10.k-Button--huge {
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
@@ -666,14 +708,14 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--huge {
+  .c10.k-Button--huge {
     width: 13.75rem;
     height: 5rem;
   }
 }
 
 @media (min-width:768px) {
-  .c9.k-Button--giant {
+  .c10.k-Button--giant {
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
@@ -682,14 +724,14 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--giant {
+  .c10.k-Button--giant {
     width: 13.75rem;
     height: 5.625rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid) {
+  .c10.k-Button--hasIcon:not(.k-Button--fluid) {
     width: 3.125rem;
     min-width: 0;
     min-height: 0;
@@ -697,25 +739,25 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  .c10.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
     width: 1.25rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  .c10.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
     width: 1.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  .c10.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
     width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+  .c10.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
     min-width: 0;
     min-height: 0;
     padding: 0;
@@ -725,13 +767,13 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+  .c10.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
     width: 4.375rem;
   }
 }
 
 @media (min-width:48rem) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  .c10.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
     min-width: initial;
     width: 5rem;
     height: 5rem;
@@ -739,13 +781,13 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  .c10.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
     width: 5rem;
   }
 }
 
 @media (min-width:48rem) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  .c10.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     min-width: initial;
     width: 5.625rem;
     height: 5.625rem;
@@ -753,13 +795,13 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  .c10.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c9.k-Button--orion {
+  .c10.k-Button--orion {
     min-width: 13.75rem;
     min-height: 4.375rem;
     padding: 0 2.5rem;
@@ -768,14 +810,14 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c9.k-Button--orion {
+  .c10.k-Button--orion {
     width: 13.75rem;
     height: 4.375rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c9.k-Button--orion {
+  .c10.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
@@ -796,7 +838,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media (min-width:640px) {
-  .c8 > * + * {
+  .c9 > * + * {
     margin-top: 0;
     margin-left: 1.25rem;
   }
@@ -847,8 +889,13 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c4"
     >
       <h2
-        className="c5"
+        className="c5 k-Title k-Title--noMargin"
         id="popover-title"
+        style={
+          Object {
+            "--Title-css-color": null,
+          }
+        }
       >
         This popover has a title
       </h2>
@@ -857,13 +904,13 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c6"
     >
       <p
-        className="k-Paragraph k-Paragraph--quaternary"
+        className="c7 k-Paragraph"
       >
         Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. 
       </p>
     </div>
     <div
-      className="c7 c8"
+      className="c8 c9"
     >
       <button
         className="c1 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda"
@@ -878,7 +925,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
         J’ai compris
       </button>
       <button
-        className="c9 k-Button k-Button--tiny k-Button--helium k-Button--andromeda"
+        className="c10 k-Button k-Button--tiny k-Button--helium k-Button--andromeda"
         onClick={[Function]}
         style={
           Object {
@@ -905,16 +952,46 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 }
 
 .c4 {
+  --Title-css-color: #222;
   font-family: Maax,Helvetica,Arial,sans-serif;
   -webkit-letter-spacing: .01rem;
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
   letter-spacing: .01rem;
   font-weight: 600;
+  color: #222;
+  color: var(--Title-css-color);
   font-size: 1.125rem;
   line-height: 1.2;
+}
+
+.c4.k-Title--noMargin {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.c4.k-Title--italic {
+  font-style: italic;
+}
+
+.c6 {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 0.7901234567901234rem;
+  line-height: 1.6;
+}
+
+.c6.k-Paragraph--noMargin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c6.k-Paragraph--normalLineHeight {
+  line-height: normal;
+}
+
+.c6.k-Paragraph--italic {
+  font-style: italic;
 }
 
 .c1 {
@@ -1139,6 +1216,18 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 @media (min-width:67.5rem) {
   .c4 {
     font-size: 1.601806640625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c6 {
+    font-size: 0.8888888888888888rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c6 {
+    font-size: 0.8888888888888888rem;
   }
 }
 
@@ -1354,8 +1443,13 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
       className="c3"
     >
       <h2
-        className="c4"
+        className="c4 k-Title k-Title--noMargin"
         id="popover-title"
+        style={
+          Object {
+            "--Title-css-color": null,
+          }
+        }
       >
         
       </h2>
@@ -1364,7 +1458,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
       className="c5"
     >
       <p
-        className="k-Paragraph k-Paragraph--quaternary"
+        className="c6 k-Paragraph"
       >
         
       </p>
