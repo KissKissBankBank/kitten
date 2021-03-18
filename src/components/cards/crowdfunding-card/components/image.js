@@ -46,14 +46,14 @@ var Image = function Image(_ref) {
     } : null
   }, !loading && videoSources.length == 0 && /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, otherImageProps, {
     alt: alt || '',
-    className: (0, _classnames.default)('k-Card__image', 'k-CrowdfundingCard__image__image', otherImageProps.className),
+    className: (0, _classnames.default)('k-CrowdfundingCard__image__image', otherImageProps.className),
     style: backgroundColor ? (0, _extends2.default)({
       backgroundColor: backgroundColor
     }, otherImageProps.style) : otherImageProps.style
   })), !loading && videoSources.length > 0 && /*#__PURE__*/_react.default.createElement(_gifVideo.GifVideo, (0, _extends2.default)({
     poster: otherImageProps.src
   }, videoProps, {
-    className: (0, _classnames.default)('k-Card__image', 'k-CrowdfundingCard__image__image', videoProps.className),
+    className: (0, _classnames.default)('k-CrowdfundingCard__image__image', videoProps.className),
     style: backgroundColor ? (0, _extends2.default)({
       backgroundColor: backgroundColor
     }, videoProps.style) : videoProps.style

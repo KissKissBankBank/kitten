@@ -8,7 +8,7 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
     className="DayPickerInput"
   >
     <div
-      className="sc-htpNat ijthRO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
+      className="sc-htpNat lblaZj k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
     >
       <input
         autoComplete="off"
@@ -26,7 +26,7 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
         value=""
       />
       <span
-        className="k-Form-TextInputWithUnit__unit"
+        className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--regular"
       >
         📅
       </span>

@@ -2,7 +2,7 @@
 
 exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-EHOje SxtzC k-CartRewardCard"
+  className="sc-gzVnrw iWHHLz k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
@@ -10,13 +10,8 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
   >
     <button
       aria-label="Delete"
-      className="sc-bwzfXH hHlkkN k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="sc-bwzfXH dDIDRF sc-bxivhb fVJshV k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro"
       onClick={[Function]}
-      style={
-        Object {
-          "--border-radius": 0,
-        }
-      }
       type="button"
     >
       <svg
@@ -42,7 +37,12 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
     >
       <h1
-        className="sc-bxivhb jrbSxD"
+        className="sc-ifAKCX eEYcYp k-Title k-Title--noMargin k-Title--italic"
+        style={
+          Object {
+            "--Title-css-color": null,
+          }
+        }
       >
         Custom title amount
       </h1>
@@ -52,7 +52,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-top-double k-u-margin-top-single@xs-down"
     >
       <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        className="sc-bZQynM gXguPQ k-Paragraph k-Paragraph--noMargin"
       >
         Custom text description
       </p>
@@ -64,7 +64,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 1`] = `
 <div
-  className="sc-EHOje SxtzC k-CartRewardCard"
+  className="sc-gzVnrw iWHHLz k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
@@ -72,13 +72,8 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
   >
     <button
       aria-label="Delete"
-      className="sc-bwzfXH hHlkkN k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="sc-bwzfXH dDIDRF sc-bxivhb fVJshV k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro"
       onClick={[Function]}
-      style={
-        Object {
-          "--border-radius": 0,
-        }
-      }
       type="button"
     >
       <svg
@@ -104,7 +99,12 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
     >
       <h1
-        className="sc-bxivhb jrbSxD"
+        className="sc-ifAKCX eEYcYp k-Title k-Title--noMargin k-Title--italic"
+        style={
+          Object {
+            "--Title-css-color": null,
+          }
+        }
       >
         Custom title amount
       </h1>
@@ -114,7 +114,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       className="k-u-margin-bottom-double k-u-margin-top-double k-u-margin-top-single@xs-down"
     >
       <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        className="sc-bZQynM gXguPQ k-Paragraph k-Paragraph--noMargin"
       >
         Custom text description
       </p>
@@ -126,7 +126,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
 
 exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-EHOje SxtzC k-CartRewardCard"
+  className="sc-gzVnrw iWHHLz k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
@@ -134,13 +134,8 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
   >
     <button
       aria-label="Delete"
-      className="sc-bwzfXH hHlkkN k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="sc-bwzfXH dDIDRF sc-bxivhb fVJshV k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro"
       onClick={[Function]}
-      style={
-        Object {
-          "--border-radius": 0,
-        }
-      }
       type="button"
     >
       <svg
@@ -166,11 +161,13 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-double"
     >
       <Custom title tag
-        className="sc-bxivhb jrbSxD"
-        cssColor={null}
-        italic={true}
-        margin={false}
+        className="sc-ifAKCX eEYcYp k-Title k-Title--noMargin k-Title--italic"
         modifier="quinary"
+        style={
+          Object {
+            "--Title-css-color": null,
+          }
+        }
       >
         Custom title amount
       </Custom title tag>
@@ -179,7 +176,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-single k-u-margin-top-double"
     >
       <span
-        className="sc-ifAKCX cFlEyZ k-u-size-default k-u-weight-bold"
+        className="sc-EHOje jvzENE k-u-size-default k-u-weight-bold"
       >
         Custom subtitle
       </span>
@@ -188,18 +185,18 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-top-double"
     >
       <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        className="sc-bZQynM gXguPQ k-Paragraph k-Paragraph--noMargin"
       >
         Custom text description
       </p>
     </div>
     <p
-      className="sc-ifAKCX cFlEyZ k-u-size-tiny k-u-weight-regular k-u-margin-none"
+      className="sc-EHOje jvzENE k-u-size-tiny k-u-weight-regular k-u-margin-none"
     >
       Custom shipping title
        
       <span
-        className="sc-ifAKCX cFlEyZ k-u-weight-light"
+        className="sc-EHOje jvzENE k-u-weight-light"
       >
         Custom shipping value
       </span>
@@ -208,7 +205,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="sc-bdVaJa jtfdLD"
     >
       <a
-        className="sc-ifAKCX cFlEyZ k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
+        className="sc-EHOje jvzENE k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
         href="Custom amount link"
       >
         Custom amount

@@ -6,7 +6,7 @@ import { CrossIcon } from '../../../components/icons/cross-icon'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { Title } from '../../../components/typography/title'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 import { CONTAINER_PADDING_THIN } from '../../../constants/grid-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { Button } from '../../../components/buttons/button'
@@ -130,12 +130,12 @@ export const SimplePopover = ({
       )}
       <div>
         <Marger bottom=".5">
-          <Title id={titleId} modifier="senary" margin={false} tag="h2">
+          <Title id={titleId} modifier="senary" noMargin tag="h2">
             {title}
           </Title>
         </Marger>
         <Marger top=".5" bottom="1">
-          <Paragraph modifier="quaternary">{text}</Paragraph>
+          <Paragraph modifier="tertiary">{text}</Paragraph>
         </Marger>
         {buttons.length > 0 && (
           <ButtonsContainer top="3">

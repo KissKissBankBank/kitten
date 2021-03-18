@@ -88,9 +88,11 @@ var Accordeon = function Accordeon(_ref) {
   }, [accordeonElement]);
 
   var updateSelectedItem = function updateSelectedItem(newSelectedItem) {
+    var _items$newItem, _items$newItem$props;
+
     var newItem = closeOnClick && newSelectedItem === internalSelectedItem ? null : newSelectedItem;
     setSelectedItem(newItem);
-    onChange(items[newItem].props.id || "".concat(id, "-").concat(newItem));
+    onChange(((_items$newItem = items[newItem]) === null || _items$newItem === void 0 ? void 0 : (_items$newItem$props = _items$newItem.props) === null || _items$newItem$props === void 0 ? void 0 : _items$newItem$props.id) || "".concat(id, "-").concat(newItem));
   };
 
   var context = {

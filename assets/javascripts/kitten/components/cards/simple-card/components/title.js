@@ -1,38 +1,32 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { parseHtml } from '../../../../helpers/utils/parser'
-import { Title } from '../../../../components/typography/title'
+import { Title as TitleComponent } from '../../../../components/typography/title'
 import { Marger } from '../../../../components/layout/marger'
 
-export class TitleComponent extends PureComponent {
-  render() {
-    const { title, titleProps } = this.props
-
-    const titleClassName = classNames('k-Card__title', titleProps.className)
-
-    return (
-      <Marger top="2" bottom=".3">
-        <Title
-          tag="p"
-          {...titleProps}
-          className={titleClassName}
-          margin={false}
-          modifier="senary"
-        >
-          {parseHtml(title)}
-        </Title>
-      </Marger>
-    )
-  }
+export const Title = ({ title, titleProps }) => {
+  return (
+    <Marger top="2" bottom=".3">
+      <TitleComponent
+        tag="p"
+        {...titleProps}
+        className={classNames('k-SimpleCard__title', titleProps.className)}
+        noMargin
+        modifier="senary"
+      >
+        {parseHtml(title)}
+      </TitleComponent>
+    </Marger>
+  )
 }
 
-TitleComponent.propTypes = {
+Title.propTypes = {
   title: PropTypes.string,
-  titleProps: PropTypes.shape(),
+  titleProps: PropTypes.object,
 }
 
-TitleComponent.defaultProps = {
+Title.defaultProps = {
   title: null,
   titleProps: {},
 }

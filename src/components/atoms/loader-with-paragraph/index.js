@@ -25,12 +25,10 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _useFlexGapCheck = require("../../../helpers/dom/use-flex-gap-check");
-
 var StyledLoaderWithParagraph = _styledComponents.default.div.withConfig({
   displayName: "loader-with-paragraph__StyledLoaderWithParagraph",
   componentId: "sc-1a44voe-0"
-})(["display:flex;align-items:center;gap:", ";&.k-LoaderWithParagraph--noGap .k-LoaderWithParagraph__loader{margin-right:", ";}&.k-LoaderWithParagraph--top{flex-direction:column;}&.k-LoaderWithParagraph--bottom{flex-direction:column-reverse;}&.k-LoaderWithParagraph--left{flex-direction:row;}&.k-LoaderWithParagraph--right{flex-direction:row-reverse;}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10));
+})(["display:flex;align-items:center;&.k-LoaderWithParagraph--top{.k-LoaderWithParagraph__loader{margin-bottom:", ";}flex-direction:column;}&.k-LoaderWithParagraph--bottom{.k-LoaderWithParagraph__loader{margin-top:", ";}flex-direction:column-reverse;}&.k-LoaderWithParagraph--left{.k-LoaderWithParagraph__loader{margin-right:", ";}flex-direction:row;}&.k-LoaderWithParagraph--right{.k-LoaderWithParagraph__loader{margin-left:", ";}flex-direction:row-reverse;}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10));
 
 var LoaderWithParagraph = function LoaderWithParagraph(_ref) {
   var className = _ref.className,
@@ -39,18 +37,15 @@ var LoaderWithParagraph = function LoaderWithParagraph(_ref) {
       paragraphProps = _ref.paragraphProps,
       children = _ref.children,
       others = (0, _objectWithoutProperties2.default)(_ref, ["className", "loaderPosition", "loaderProps", "paragraphProps", "children"]);
-  var canUseGap = (0, _useFlexGapCheck.useFlexGapCheck)();
   return /*#__PURE__*/_react.default.createElement(StyledLoaderWithParagraph, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-LoaderWithParagraph', className, "k-LoaderWithParagraph--".concat(loaderPosition), {
-      'k-LoaderWithParagraph--noGap': !canUseGap
-    })
+    className: (0, _classnames.default)('k-LoaderWithParagraph', className, "k-LoaderWithParagraph--".concat(loaderPosition))
   }, others), /*#__PURE__*/_react.default.createElement(_loader.Loader, (0, _extends2.default)({
     "aria-hidden": true
   }, loaderProps, {
     className: (0, _classnames.default)('k-LoaderWithParagraph__loader', loaderProps.className)
   })), /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, (0, _extends2.default)({
     modifier: "secondary",
-    margin: false
+    noMargin: true
   }, paragraphProps, {
     className: (0, _classnames.default)('k-LoaderWithParagraph__paragraph', paragraphProps.className)
   }), children));

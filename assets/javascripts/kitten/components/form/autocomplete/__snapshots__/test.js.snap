@@ -194,7 +194,6 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   display: flex;
   height: 0.3125rem;
   line-height: 1;
-  gap: 0.125rem;
 }
 
 .c2 .k-Loader__circle {
@@ -222,7 +221,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   animation-delay: 0s;
 }
 
-.c2.k-Loader--noGap .k-Loader__circle:not(:last-child) {
+.c2 .k-Loader__circle:not(:last-child) {
   margin-right: 0.125rem;
 }
 
@@ -314,7 +313,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
     type="text"
   />
   <div
-    className="c2 k-Loader c3 k-Loader--noGap"
+    className="c2 k-Loader c3"
   >
     <svg
       className="k-Loader__circle"

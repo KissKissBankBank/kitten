@@ -12,7 +12,6 @@ import { FieldLabel } from './components/label';
 import { FieldInput } from './components/input';
 import { FieldError } from './components/error';
 import { FieldRadioButtonSet } from './components/radio-button-set';
-import { FieldSelect } from './components/select';
 import { FieldCheckbox } from './components/checkbox';
 import { FieldPassword } from './components/password';
 import { FieldAutocomplete } from './components/autocomplete';
@@ -44,7 +43,6 @@ export var Field = /*#__PURE__*/function (_Component) {
 Field.Label = FieldLabel;
 Field.Input = FieldInput;
 Field.RadioButtonSet = FieldRadioButtonSet;
-Field.Select = FieldSelect;
 Field.Checkbox = FieldCheckbox;
 Field.ErrorMessage = FieldError;
 Field.Password = FieldPassword;
