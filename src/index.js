@@ -425,18 +425,6 @@ Object.defineProperty(exports, "FormActions", {
     return _formActions.FormActions;
   }
 });
-Object.defineProperty(exports, "FormAmountAndCurrency", {
-  enumerable: true,
-  get: function get() {
-    return _formAmountAndCurrency.FormAmountAndCurrency;
-  }
-});
-Object.defineProperty(exports, "FormPhoneNumber", {
-  enumerable: true,
-  get: function get() {
-    return _formPhoneNumber.FormPhoneNumber;
-  }
-});
 Object.defineProperty(exports, "Label", {
   enumerable: true,
   get: function get() {
@@ -483,18 +471,6 @@ Object.defineProperty(exports, "RichTextInput", {
   enumerable: true,
   get: function get() {
     return _richTextInput.RichTextInput;
-  }
-});
-Object.defineProperty(exports, "SelectWithState", {
-  enumerable: true,
-  get: function get() {
-    return _selectWithState.SelectWithState;
-  }
-});
-Object.defineProperty(exports, "TextInputAndSelect", {
-  enumerable: true,
-  get: function get() {
-    return _textInputAndSelect.TextInputAndSelect;
   }
 });
 Object.defineProperty(exports, "TextInputWithLimit", {
@@ -687,6 +663,12 @@ Object.defineProperty(exports, "Timeline", {
   enumerable: true,
   get: function get() {
     return _timeline.Timeline;
+  }
+});
+Object.defineProperty(exports, "HorizontalTimeline", {
+  enumerable: true,
+  get: function get() {
+    return _horizontalTimeline.HorizontalTimeline;
   }
 });
 Object.defineProperty(exports, "DashboardMenu", {
@@ -1732,10 +1714,6 @@ var _dropdownSelect = require("./components/form/dropdown-select");
 
 var _formActions = require("./components/form/form-actions");
 
-var _formAmountAndCurrency = require("./components/form/form-amount-and-currency");
-
-var _formPhoneNumber = require("./components/form/form-phone-number");
-
 var _label = require("./components/form/label");
 
 var _locationInput = require("./components/form/location-input");
@@ -1751,10 +1729,6 @@ var _radioButton = require("./components/form/radio-button");
 var _rangeSlider = require("./components/form/range-slider");
 
 var _richTextInput = require("./components/form/rich-text-input");
-
-var _selectWithState = require("./components/form/select-with-state");
-
-var _textInputAndSelect = require("./components/form/text-input-and-select");
 
 var _textInputWithLimit = require("./components/form/text-input-with-limit");
 
@@ -1815,6 +1789,8 @@ var _list = require("./components/lists/list");
 var _checkList = require("./components/lists/check-list");
 
 var _timeline = require("./components/lists/timeline");
+
+var _horizontalTimeline = require("./components/lists/horizontal-timeline");
 
 var _dashboardMenu = require("./components/menus/dashboard-menu");
 

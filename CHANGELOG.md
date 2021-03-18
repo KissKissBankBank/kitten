@@ -12,6 +12,45 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `MarkdownPage`
   - `TabBar`
 
+- Breaking change: Remove `k-Card` mixin.
+- Breaking change: Remove `card` HOC.
+- Feature: Refactor `SimpleCard` to CSS-in-JS.
+- Feature: Add `playerButtonSize` prop to `SimpleCard`.
+
+Breaking changes:
+
+- Deprecated size props (`small`, `large`, `big`, `huge`) on `BulletList` component.
+- Delete the following deprecated SCSS mixin:
+  - `k-BulletList`
+- Convert and move the following component to CSS-in-JS:
+  - `BulletList`
+
+- Feature: Add missing exports to ESM exports.
+
+## [3.0.0-beta.16] - 2021-03-15
+
+Breaking changes:
+
+- Delete the following deprecated components:
+  - `SelectWithState` (replaced by `DropdownSelect`)
+  - `FormAmountAndCurrency`
+  - `FormPhoneNumber`
+  - `TextInputAndSelect`
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-ResponsiveIframeContainer`
+  - `k-Select`
+
+Feature:
+
+- Refactor `ResponsiveIframeContainer` to CSS-in-JS
+
+Fixes:
+
+- Fix error in `Accordion` when closing pane.
+- Fix ellipsis for children of `AvaratWithTextAndBadge`.
+- Fix alignment on `HeaderNav` `UserMenuButton`.
+- Fix `GridCol` offset class for `0` value.
+
 ## [3.0.0-beta.15] - 2021-03-12
 
 Fix:
@@ -316,6 +355,12 @@ Breaking changes:
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
   - `SimilarProjectsCard`
+
+## [2.125.0] - 2021-03-15
+
+Feature:
+
+- Add `HorizontalTimeline` component.
 
 ## [2.124.0] - 2021-03-12
 
