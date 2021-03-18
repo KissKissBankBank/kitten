@@ -16,6 +16,47 @@ Breaking changes:
 - Remove default export for `Dropdown` and `DropdownButton`.
 - Remove unused props for `Dropdown`.
 
+## [3.0.0-beta.18] - 2021-03-18
+
+Fix:
+
+- Fix bug caused by adding `getScssPaths` in ESM export.
+
+## [3.0.0-beta.17] - 2021-03-18
+
+Breaking changes:
+
+- Delete the following deprecated components:
+  - `HorizontalNav`
+  - `MarkdownPage`
+  - `TabBar`
+- Delete the following deprecated SCSS mixins:
+  - `k-BulletList`
+  - `k-Card`
+  - `k-HorizontalNav`
+  - `k-Label`
+  - `k-TabBar`
+- Convert and move the following component to CSS-in-JS:
+  - `BulletList`
+- Remove size props (`giant`, `huge`, `regular`, `big`, `tiny`) on the following components:
+  - `BulletList`
+  - `TextInput`
+  - `TextInputWithUnit`
+- Delete `card` HOC.
+
+Features:
+
+- Add `size` prop to the following components:
+  - `BulletList`
+  - `TextInput`
+  - `TextInputWithButton`
+  - `TextInputWithUnit`
+- Refactor the following components to CSS-in-JS:
+  - `Label`
+  - `SimpleCard`
+- Add `playerButtonSize` prop to `SimpleCard`.
+- Add missing exports to ESM exports.
+
 ## [3.0.0-beta.16] - 2021-03-15
 
 Breaking changes:
@@ -73,7 +114,6 @@ Features:
 Fix:
 
 - Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
-
 
 ## [3.0.0-beta.13] - 2021-03-11
 

@@ -168,7 +168,7 @@ export const RewardEditionKissKissCode = () => {
               <Marger top="2" bottom="3">
                 <ArrowContainer position="top" color={COLORS.primary5}>
                   <BulletList
-                    small
+                    size="tiny"
                     items={[
                       {
                         key: '1',

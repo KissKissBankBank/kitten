@@ -7,16 +7,11 @@
 @include k-ButtonWithBadge;
 @include k-TagButton;
 
-// Cards
-
-@include k-Card;
-
 // Form
 
 @include k-Checkbox;
 @include k-CheckboxSet;
 @include k-LocationInput;
-@include k-Label;
 @include k-FormComposer;
 @include k-FormInfo;
 @include k-RadioButton;
@@ -51,19 +46,9 @@
 
 @include k-InfoLines;
 
-// Lists
-
-@include k-BulletList;
-
 // Meters
 
 @include k-Progress;
-
-// Navigation
-
-@include k-HorizontalNav;
-
-@include k-TabBar((z-index: 50));
 
 // Press
 

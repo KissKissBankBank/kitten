@@ -6,16 +6,12 @@
 @import './components/buttons/button';
 @import './components/buttons/tag-button';
 
-// Cards
-@import './components/cards/card';
-
 // Form
 @import './components/form/checkbox-set';
 @import './components/form/checkbox';
 @import './components/form/location-input';
 @import './components/form/form-composer';
 @import './components/form/form-info';
-@import './components/form/label';
 @import './components/form/radio-button-set';
 @import './components/form/radio-button';
 @import './components/form/text-area-wrapper';
@@ -36,18 +32,11 @@
 // Lines
 @import './components/lines/info-lines';
 
-// Lists
-@import './components/lists/bullet-list';
-
 // Meters
 @import './components/meters/progress';
 
 // Modals
 @import './components/modals/modal';
-
-// Navigation
-@import './components/navigation/horizontal-nav';
-@import './components/navigation/tab-bar';
 
 // Press
 @import './components/press/press-quotes';

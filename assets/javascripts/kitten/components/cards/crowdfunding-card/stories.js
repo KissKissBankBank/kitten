@@ -37,6 +37,7 @@ export const CrowdfundingCard = () => (
   <StoryContainer>
     <CrowdfundingCardComponent
       href={text('Link', '#')}
+      imageProps={{ alt: '', src: text('Image url', '/kitten.jpg') }}
       ownerTitle={text('Owner title', 'Owner title')}
       ownerDescription={text('Owner description', 'Owner description')}
       loading={boolean('Loading', false)}
@@ -139,14 +140,15 @@ export const LendopolisCrowdfundingCard = () => {
     <StoryContainer>
       <CrowdfundingCardComponent
         href={text('Link', '#')}
+        imageProps={{ alt: '', src: text('Image url', '/kitten.jpg') }}
         ownerTitle={text('Owner title', 'Urbasolar Energy Ocean Indien 6')}
         loading={boolean('Loading', false)}
         stretch={boolean('Stretch', false)}
         cardTitle={text('Title', 'Centrale solaire Urbasolar Le Port')}
         cardSubTitle={text('SubTitle', 'Obligation convertible')}
-        info1={text('Info1', <Info label="maturité" text="48 mois" />)}
-        info2={text('Info2', <Info label="sur 157 000 €" text="157 000 €" />)}
-        info3={text('Info3', <Info label="Taux d'intérêt" text="5,0%" />)}
+        info1={<Info label="maturité" text="48 mois" />}
+        info2={<Info label="sur 157 000 €" text="157 000 €" />}
+        info3={<Info label="Taux d'intérêt" text="5,0%" />}
         progress={number('Progress', 42)}
         widgetState={STATE_CHOICES[widgetState]}
         additionalInfo={'Collecte réservée aux départements : 92, 34, 12, 82'}
