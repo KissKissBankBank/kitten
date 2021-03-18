@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add missing exports to ESM exports.
+
 ## [3.0.0-beta.16] - 2021-03-15
 
 Breaking changes:
