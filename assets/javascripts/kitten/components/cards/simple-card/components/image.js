@@ -1,54 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import classNames from 'classnames'
 import { Text } from '../../../../components/typography/text'
-import { Marger } from '../../../../components/layout/marger'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
-
-const StyledImageContainer = styled(Marger)`
-  position: relative;
-  transition: opacity ease 600ms, z-index ease 600ms;
-  z-index: 1;
-  background-color: var(--SimpleCard-image-container-background);
-
-  &.k-SimpleCard__imageContainer {
-    overflow: hidden;
-  }
-
-  &.k-SimpleCard__imageContainer--ratio {
-    overflow: hidden;
-    position: relative;
-    padding-top: calc(100% / calc(var(--SimpleCard-image-container-ratio)));
-
-    & > img {
-      position: absolute;
-      top: 0;
-      height: auto;
-      text-align: center;
-    }
-  }
-
-  .k-SimpleCard__playerButton {
-    width: var(--SimpleCard-player-button-size);
-    height: var(--SimpleCard-player-button-size);
-    background: ${COLORS.font1};
-    position: absolute;
-    top: calc(50% - var(--SimpleCard-player-button-size) / 2);
-    left: calc(50% - var(--SimpleCard-player-button-size) / 2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-  }
-
-  .k-SimpleCard__image {
-    width: 100%;
-    display: block;
-    transition: transform .4s ease-in-out;
-  }
-`
 
 export const Image = ({
   imageProps,
@@ -62,13 +17,10 @@ export const Image = ({
   style,
 }) => {
   return (
-    <StyledImageContainer
-      bottom="2"
-      className={classNames(
-        "k-SimpleCard__imageContainer",
-        className,
-        { 'k-SimpleCard__imageContainer--ratio': imageContainerRatio },
-      )}
+    <div
+      className={classNames('k-SimpleCard__imageContainer', className, {
+        'k-SimpleCard__imageContainer--ratio': imageContainerRatio,
+      })}
       style={{
         ...style,
         '--SimpleCard-image-container-background': imageContainerBackground,
@@ -96,11 +48,9 @@ export const Image = ({
       <img
         {...imageProps}
         alt={imageProps.alt || ''}
-        className={classNames(
-          "k-SimpleCard__image",
-        )}
+        className={classNames('k-SimpleCard__image', imageProps.className)}
       />
-    </StyledImageContainer>
+    </div>
   )
 }
 

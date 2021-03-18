@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove `k-Card` mixin.
+- Breaking change: Remove `card` HOC.
 - Feature: Refactor `SimpleCard` to CSS-in-JS.
+- Feature: Add `playerButtonSize` prop to `SimpleCard`.
 
 ## [3.0.0-beta.16] - 2021-03-15
 
