@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Migrate `Label` component and remove `k-Label` styles.
 - Breaking change: Delete the following deprecated SCSS mixins:
   - `k-HorizontalNav`
   - `k-TabBar`
@@ -354,7 +355,6 @@ Breaking changes:
   - `ProjectCreatorCard`
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
-  - `SimilarProjectsCard`
 
 ## [2.125.0] - 2021-03-15
 
