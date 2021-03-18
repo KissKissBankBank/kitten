@@ -1,11 +1,15 @@
 import React from 'react'
+import { createGlobalStyle } from 'styled-components'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { RadioButtonSet } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
-import { createGlobalStyle } from 'styled-components'
-import { ScreenConfig } from '../../../constants/screen-config'
-import { GUTTER } from '../../../constants/grid-config'
-import { pxToRem } from '../../../helpers/utils/typography'
+import {
+  Grid,
+  GridCol,
+  GUTTER,
+  pxToRem,
+  ScreenConfig,
+  Title,
+} from '../../../index'
 
 const OrionGlobalStyle = createGlobalStyle`
   .k-Form-RadioButtonSet.k-Form-RadioButtonSet__orionGrid .k-Form-RadioButtonSet__radioContainer {
@@ -107,9 +111,9 @@ export const OrionGrid = () => (
         variant="orion"
         design={select('design', { disc: 'disc', check: 'check' }, 'disc')}
       >
-        <h1 className="k-Title k-Title--quaternary k-u-margin-bottom-triple">
+        <Title modifier="quaternary" className="k-u-margin-bottom-triple">
           Choisissez le montant que vous souhaitez offrir
-        </h1>
+        </Title>
       </RadioButtonSet>
     </GridCol>
   </Grid>
