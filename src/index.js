@@ -1823,12 +1823,6 @@ Object.defineProperty(exports, "mediaQueries", {
     return _mediaQueries.mediaQueries;
   }
 });
-Object.defineProperty(exports, "getScssPaths", {
-  enumerable: true,
-  get: function get() {
-    return _paths.getScssPaths;
-  }
-});
 
 var _visuallyHidden = require("./components/accessibility/visually-hidden");
 
@@ -2337,5 +2331,3 @@ var _hexToRgba = require("./helpers/utils/hex-to-rgba");
 var _withLazy = _interopRequireDefault(require("./hoc/with-lazy"));
 
 var _mediaQueries = require("./hoc/media-queries");
-
-var _paths = require("./config/paths");
