@@ -220,7 +220,6 @@ export { SingleEntryTable } from './components/tables/single-entry-table'
 export { TextCopy } from './components/text-copy'
 
 // Tooltips
-
 export { Toggletip } from './components/tooltips/toggletip'
 
 // Tours
