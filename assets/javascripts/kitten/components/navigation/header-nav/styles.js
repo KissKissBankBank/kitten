@@ -126,8 +126,9 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__UserMenuButton {
-    display: flex;
     align-self: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     height: 100%;
     padding: 0 ${pxToRem(40)};

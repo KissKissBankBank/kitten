@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { TextInput } from '../../../components/form/text-input'
@@ -38,43 +38,45 @@ const StyledTextInputWithIcon = styled.div`
   }
 `
 
-export class TextInputWithIcon extends PureComponent {
-  static propTypes = {
-    disabled: PropTypes.bool,
-    accessibilityLabel: PropTypes.string,
-    icon: PropTypes.node.isRequired,
-  }
+export const TextInputWithIcon = ({
+  disabled,
+  icon,
+  accessibilityLabel,
+  ...others
+}) => {
 
-  static defaultProps = {
-    accessibilityLabel: '',
-    disabled: false,
-  }
-
-  render() {
-    const { disabled, icon, accessibilityLabel, ...others } = this.props
-
-    return (
-      <StyledTextInputWithIcon className="k-Form-TextInputWithIcon">
-        {accessibilityLabel && (
-          <VisuallyHidden>{accessibilityLabel}</VisuallyHidden>
+  return (
+    <StyledTextInputWithIcon className="k-Form-TextInputWithIcon">
+      {accessibilityLabel && (
+        <VisuallyHidden>{accessibilityLabel}</VisuallyHidden>
+      )}
+      <TextInput
+        {...others}
+        className={classNames(
+          'k-Form-TextInputWithIcon__input',
+          others.className,
         )}
-        <TextInput
-          {...others}
-          className={classNames(
-            'k-Form-TextInputWithIcon__input',
-            others.className,
-          )}
-          disabled={disabled}
-        />
-        <span
-          aria-hidden="true"
-          className={classNames('k-Form-TextInputWithIcon__icon', {
-            'k-Form-TextInputWithIcon__icon--disabled': disabled,
-          })}
-        >
-          {icon}
-        </span>
-      </StyledTextInputWithIcon>
-    )
-  }
+        disabled={disabled}
+      />
+      <span
+        aria-hidden="true"
+        className={classNames('k-Form-TextInputWithIcon__icon', {
+          'k-Form-TextInputWithIcon__icon--disabled': disabled,
+        })}
+      >
+        {icon}
+      </span>
+    </StyledTextInputWithIcon>
+  )
+}
+
+TextInputWithIcon.propTypes = {
+  disabled: PropTypes.bool,
+  accessibilityLabel: PropTypes.string,
+  icon: PropTypes.node.isRequired,
+}
+
+TextInputWithIcon.defaultProps = {
+  accessibilityLabel: '',
+  disabled: false,
 }
