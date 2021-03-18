@@ -46,8 +46,8 @@ var TitleComponent = /*#__PURE__*/function (_PureComponent) {
         className: "k-CrowdfundingCard__title"
       }, !loading && /*#__PURE__*/React.createElement(Title, _extends({
         tag: "p",
-        margin: false,
-        className: "k-Card__title k-CrowdfundingCard__title__title"
+        noMargin: true,
+        className: "k-CrowdfundingCard__title__title"
       }, titleProps), titleTruncate && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Truncate, {
         lines: 2,
         className: "k-CrowdfundingCard__noWrap k-u-hidden@s-down"

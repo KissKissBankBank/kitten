@@ -5,27 +5,37 @@ import { Loader } from '../../../components/atoms/loader'
 import { Paragraph } from '../../../components/typography/paragraph'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { useFlexGapCheck } from '../../../helpers/dom/use-flex-gap-check'
 
 const StyledLoaderWithParagraph = styled.div`
   display: flex;
   align-items: center;
-  gap: ${pxToRem(10)};
-
-  &.k-LoaderWithParagraph--noGap .k-LoaderWithParagraph__loader {
-    margin-right: ${pxToRem(10)};
-  }
 
   &.k-LoaderWithParagraph--top {
+    .k-LoaderWithParagraph__loader {
+      margin-bottom: ${pxToRem(10)};
+    }
+
     flex-direction: column;
   }
   &.k-LoaderWithParagraph--bottom {
+    .k-LoaderWithParagraph__loader {
+      margin-top: ${pxToRem(10)};
+    }
+
     flex-direction: column-reverse;
   }
   &.k-LoaderWithParagraph--left {
+    .k-LoaderWithParagraph__loader {
+      margin-right: ${pxToRem(10)};
+    }
+
     flex-direction: row;
   }
   &.k-LoaderWithParagraph--right {
+    .k-LoaderWithParagraph__loader {
+      margin-left: ${pxToRem(10)};
+    }
+
     flex-direction: row-reverse;
   }
 `
@@ -38,17 +48,12 @@ export const LoaderWithParagraph = ({
   children,
   ...others
 }) => {
-  const canUseGap = useFlexGapCheck()
-
   return (
     <StyledLoaderWithParagraph
       className={classNames(
         'k-LoaderWithParagraph',
         className,
         `k-LoaderWithParagraph--${loaderPosition}`,
-        {
-          'k-LoaderWithParagraph--noGap': !canUseGap,
-        },
       )}
       {...others}
     >
@@ -63,7 +68,7 @@ export const LoaderWithParagraph = ({
 
       <Paragraph
         modifier="secondary"
-        margin={false}
+        noMargin
         {...paragraphProps}
         className={classNames(
           'k-LoaderWithParagraph__paragraph',

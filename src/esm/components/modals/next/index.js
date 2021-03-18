@@ -20,7 +20,7 @@ import classNames from 'classnames';
 import ReactModal from 'react-modal';
 import { CloseButton } from '../../../components/buttons/close-button';
 import { Button } from '../../../components/buttons/button/button';
-import { Paragraph } from '../../../components/typography/paragraph';
+import { Paragraph } from '../../../components/typography/paragraph/next';
 import { Text } from '../../../components/typography/text';
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { pxToRem } from '../../../helpers/utils/typography';
@@ -52,7 +52,7 @@ var ModalTitle = function ModalTitle(_ref) {
   var children = _ref.children;
   return /*#__PURE__*/React.createElement(Title, {
     modifier: "quaternary",
-    margin: false,
+    noMargin: true,
     tag: "p",
     className: "k-u-margin-bottom-singleHalf--important k-u-align-center"
   }, children);
@@ -64,11 +64,11 @@ var ModalParagraph = function ModalParagraph(_ref2) {
       className = _ref2.className,
       align = _ref2.align;
   return /*#__PURE__*/React.createElement(StyledParagraph, {
-    modifier: "quaternary",
+    modifier: "tertiary",
     style: {
       textAlign: align
     },
-    margin: false,
+    noMargin: true,
     tag: "p",
     className: classNames('k-Modal__paragraph', className, {
       'k-u-margin-bottom-triple': !withoutMargin,

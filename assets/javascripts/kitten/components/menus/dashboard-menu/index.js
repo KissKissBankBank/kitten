@@ -8,7 +8,6 @@ import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
-import { useFlexGapCheck } from '../../../helpers/dom/use-flex-gap-check'
 
 const StyledDashboardMenu = styled.nav`
   color: ${COLORS.font2};
@@ -68,7 +67,10 @@ const StyledDashboardMenu = styled.nav`
       padding: 0 ${pxToRem(40)} ${pxToRem(20)} ${pxToRem(60)};
       display: flex;
       flex-direction: column;
-      gap: ${pxToRem(10)};
+
+      .k-DashboardMenu__itemWrapper:not(:last-child) {
+        margin-bottom: ${pxToRem(10)};
+      }
     }
   }
 
@@ -77,20 +79,13 @@ const StyledDashboardMenu = styled.nav`
     display: flex;
     height: ${pxToRem(50)};
     align-items: center;
-    gap: ${pxToRem(10)};
     padding: 0 ${pxToRem(10)};
     border-radius: ${pxToRem(6)};
   }
 
-  &.k-DashboardMenu--noGap  {
-    .k-DashboardMenu__expandable__list .k-DashboardMenu__itemWrapper:not(:last-child) {
-      margin-bottom: ${pxToRem(10)};
-    }
-
-    .k-DashboardMenu__iconWrapper,
-    .k-DashboardMenu__expandable__title__text {
-      margin-right: ${pxToRem(10)};
-    }
+  .k-DashboardMenu__iconWrapper,
+  .k-DashboardMenu__expandable__title__text {
+    margin-right: ${pxToRem(10)};
   }
 
   /* TEXT STYLES */
@@ -154,14 +149,8 @@ const StyledDashboardMenu = styled.nav`
 `
 
 export const DashboardMenu = ({ className, ...props }) => {
-  const canUseGap = useFlexGapCheck()
-
   return (
-    <StyledDashboardMenu
-      className={classNames('k-DashboardMenu', className, {
-        'k-DashboardMenu--noGap': !canUseGap,
-      })}
-    >
+    <StyledDashboardMenu className={classNames('k-DashboardMenu', className)}>
       <ul className="k-DashboardMenu__list" {...props} />
     </StyledDashboardMenu>
   )
