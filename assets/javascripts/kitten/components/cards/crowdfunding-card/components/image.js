@@ -30,7 +30,6 @@ const Image = ({
           {...otherImageProps}
           alt={alt || ''}
           className={classNames(
-            'k-Card__image',
             'k-CrowdfundingCard__image__image',
             otherImageProps.className,
           )}
@@ -49,7 +48,6 @@ const Image = ({
           poster={otherImageProps.src}
           {...videoProps}
           className={classNames(
-            'k-Card__image',
             'k-CrowdfundingCard__image__image',
             videoProps.className,
           )}

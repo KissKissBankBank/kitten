@@ -43,7 +43,7 @@ class TitleComponent extends PureComponent {
           <Title
             tag="p"
             noMargin
-            className="k-Card__title k-CrowdfundingCard__title__title"
+            className="k-CrowdfundingCard__title__title"
             {...titleProps}
           >
             {titleTruncate && (

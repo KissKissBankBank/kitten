@@ -6,9 +6,6 @@
 @import './components/buttons/button';
 @import './components/buttons/tag-button';
 
-// Cards
-@import './components/cards/card';
-
 // Dropdowns
 @import './components/dropdowns/dropdown';
 
@@ -39,9 +36,6 @@
 // Lines
 @import './components/lines/info-lines';
 
-// Lists
-@import './components/lists/bullet-list';
-
 // Meters
 @import './components/meters/progress';
 
@@ -49,9 +43,7 @@
 @import './components/modals/modal';
 
 // Navigation
-@import './components/navigation/horizontal-nav';
 @import './components/navigation/platform-switch';
-@import './components/navigation/tab-bar';
 @import './components/navigation/user-menu';
 
 // Press

@@ -17,6 +17,29 @@ Feature:
   - `TextInputWithButton`
   - `TextInputWithUnit`
 
+- Breaking change: Delete the following deprecated SCSS mixins:
+  - `k-HorizontalNav`
+  - `k-TabBar`
+- Breaking change: Delete the following deprecated components:
+  - `HorizontalNav`
+  - `MarkdownPage`
+  - `TabBar`
+
+- Breaking change: Remove `k-Card` mixin.
+- Breaking change: Remove `card` HOC.
+- Feature: Refactor `SimpleCard` to CSS-in-JS.
+- Feature: Add `playerButtonSize` prop to `SimpleCard`.
+
+Breaking changes:
+
+- Deprecated size props (`small`, `large`, `big`, `huge`) on `BulletList` component.
+- Delete the following deprecated SCSS mixin:
+  - `k-BulletList`
+- Convert and move the following component to CSS-in-JS:
+  - `BulletList`
+
+- Feature: Add missing exports to ESM exports.
+
 ## [3.0.0-beta.16] - 2021-03-15
 
 Breaking changes:
