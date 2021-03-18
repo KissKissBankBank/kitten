@@ -378,7 +378,7 @@ export {
   ICON_BIG as BUTTON_STYLE_ICON_BIG,
   ICON_HUGE as BUTTON_STYLE_ICON_HUGE,
   ICON_GIANT as BUTTON_STYLE_ICON_GIANT,
-} from './components/buttons/button/button'
+} from './components/buttons/button'
 export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/carousel/carousel/styles'
 export {
   MICRO as HORIZONTAL_STROKE_STYLE_MICRO,
