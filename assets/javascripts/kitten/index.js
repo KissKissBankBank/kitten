@@ -175,13 +175,9 @@ export { HorizontalTimeline } from './components/lists/horizontal-timeline'
 //Logos
 export { KissKissBankBankLogo } from './components/logos/kisskissbankbanklogo'
 export { LendopolisLogo } from './components/logos/lendopolis-logo'
-
-// Logos
-export { KissKissBankBankLogo } from './components/logos/kisskissbankbanklogo'
 export { GoodeedLogo } from './components/logos/goodeedlogo'
 export { MaisonDeCrowdfundingLogo } from './components/logos/mdc'
 export { MicrodonLogo } from './components/logos/microdonlogo'
-export { LendopolisLogo } from './components/logos/lendopolis-logo'
 export { KkbbCoLogo } from './components/logos/kkbb-co'
 
 // Menus
