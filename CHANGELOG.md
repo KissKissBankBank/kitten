@@ -4,6 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking change:
+
+- Deprecate size props (`giant`, `huge`, `regular`, `big`, `tiny`) on the following components:
+  - `TextInput`
+  - `TextInputWithUnit`
+
+Feature:
+
+- Add `size` prop to the following components:
+  - `TextInput`
+  - `TextInputWithButton`
+  - `TextInputWithUnit`
+
 - Migrate `Label` component and remove `k-Label` styles.
 - Breaking change: Delete the following deprecated SCSS mixins:
   - `k-HorizontalNav`
@@ -85,7 +98,6 @@ Features:
 Fix:
 
 - Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
-
 
 ## [3.0.0-beta.13] - 2021-03-11
 

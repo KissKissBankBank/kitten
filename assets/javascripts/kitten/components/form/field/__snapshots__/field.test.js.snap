@@ -127,7 +127,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-ifAKCX fchHyN k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
+      className="sc-ifAKCX fchHyN k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -314,7 +314,7 @@ Array [
       className="sc-gqjmRU jMoQnM k-Form-PasswordInput"
     >
       <input
-        className="sc-ifAKCX fchHyN k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
+        className="sc-ifAKCX fchHyN k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
