@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add 
+  - `MaisonDeCrowdfundingLogo`
+  - `MicrodonLogo`
+  - `GoodeedLogo` components.
+  
 ## [3.0.0-beta.15] - 2021-03-12
 
 Fix:
