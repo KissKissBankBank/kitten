@@ -4,42 +4,40 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Breaking change:
-
-- Deprecate size props (`giant`, `huge`, `regular`, `big`, `tiny`) on the following components:
-  - `TextInput`
-  - `TextInputWithUnit`
-
-Feature:
-
-- Add `size` prop to the following components:
-  - `TextInput`
-  - `TextInputWithButton`
-  - `TextInputWithUnit`
-
-- Migrate `Label` component and remove `k-Label` styles.
-- Breaking change: Delete the following deprecated SCSS mixins:
-  - `k-HorizontalNav`
-  - `k-TabBar`
-- Breaking change: Delete the following deprecated components:
-  - `HorizontalNav`
-  - `MarkdownPage`
-  - `TabBar`
-
-- Breaking change: Remove `k-Card` mixin.
-- Breaking change: Remove `card` HOC.
-- Feature: Refactor `SimpleCard` to CSS-in-JS.
-- Feature: Add `playerButtonSize` prop to `SimpleCard`.
+## [3.0.0-beta.17] - 2021-03-18
 
 Breaking changes:
 
-- Deprecated size props (`small`, `large`, `big`, `huge`) on `BulletList` component.
-- Delete the following deprecated SCSS mixin:
+- Delete the following deprecated components:
+  - `HorizontalNav`
+  - `MarkdownPage`
+  - `TabBar`
+- Delete the following deprecated SCSS mixins:
   - `k-BulletList`
+  - `k-Card`
+  - `k-HorizontalNav`
+  - `k-Label`
+  - `k-TabBar`
 - Convert and move the following component to CSS-in-JS:
   - `BulletList`
+- Remove size props (`giant`, `huge`, `regular`, `big`, `tiny`) on the following components:
+  - `BulletList`
+  - `TextInput`
+  - `TextInputWithUnit`
+- Delete `card` HOC.
 
-- Feature: Add missing exports to ESM exports.
+Features:
+
+- Add `size` prop to the following components:
+  - `BulletList`
+  - `TextInput`
+  - `TextInputWithButton`
+  - `TextInputWithUnit`
+- Refactor the following components to CSS-in-JS:
+  - `Label`
+  - `SimpleCard`
+- Add `playerButtonSize` prop to `SimpleCard`.
+- Add missing exports to ESM exports.
 
 ## [3.0.0-beta.16] - 2021-03-15
 
@@ -367,6 +365,7 @@ Breaking changes:
   - `ProjectCreatorCard`
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
+  - `SimilarProjectsCard`
 
 ## [2.125.0] - 2021-03-15
 

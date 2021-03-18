@@ -74,17 +74,13 @@ var TextInput = /*#__PURE__*/function (_PureComponent) {
           disabled = _this$props.disabled,
           name = _this$props.name,
           digits = _this$props.digits,
-          tiny = _this$props.tiny,
-          regular = _this$props.regular,
-          big = _this$props.big,
-          huge = _this$props.huge,
-          giant = _this$props.giant,
+          size = _this$props.size,
           center = _this$props.center,
           tag = _this$props.tag,
           variant = _this$props.variant,
           className = _this$props.className,
           style = _this$props.style,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "name", "digits", "tiny", "regular", "big", "huge", "giant", "center", "tag", "variant", "className", "style"]);
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "name", "digits", "size", "center", "tag", "variant", "className", "style"]);
       var digitsClass = !!digits ? "k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_".concat(digits) : null;
 
       if (tag === 'textarea') {
@@ -116,15 +112,10 @@ var TextInput = /*#__PURE__*/function (_PureComponent) {
           },
           disabled: disabled,
           name: name,
-          className: (0, _classnames.default)('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--".concat(variant), {
+          className: (0, _classnames.default)('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--".concat(variant), "k-Form-TextInput--".concat(size), {
             'k-Form-TextInput--valid': valid,
             'k-Form-TextInput--error': error,
             'k-Form-TextInput--disabled': disabled,
-            'k-Form-TextInput--tiny': tiny,
-            'k-Form-TextInput--regular': regular,
-            'k-Form-TextInput--big': big,
-            'k-Form-TextInput--huge': huge,
-            'k-Form-TextInput--giant': giant,
             'k-Form-TextInput--alignCenter': center
           }),
           style: !!digits ? (0, _extends2.default)({
@@ -142,11 +133,7 @@ TextInput.propTypes = {
   tag: _propTypes.default.string,
   valid: _propTypes.default.bool,
   error: _propTypes.default.bool,
-  tiny: _propTypes.default.bool,
-  regular: _propTypes.default.bool,
-  big: _propTypes.default.bool,
-  huge: _propTypes.default.bool,
-  giant: _propTypes.default.bool,
+  size: _propTypes.default.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
   center: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
   name: _propTypes.default.string,
@@ -158,11 +145,7 @@ TextInput.defaultProps = {
   // or 'textarea'
   valid: false,
   error: false,
-  tiny: false,
-  regular: true,
-  big: false,
-  huge: false,
-  giant: false,
+  size: 'regular',
   center: false,
   disabled: false,
   name: 'text',
