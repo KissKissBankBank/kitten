@@ -424,9 +424,3 @@ export { hexToRgba } from './helpers/utils/hex-to-rgba'
 
 export { default as withLazy } from './hoc/with-lazy'
 export { withMediaQueries, mediaQueries } from './hoc/media-queries'
-
-// ------
-// CONFIG
-// ------
-
-export { getScssPaths } from './config/paths'
