@@ -1,49 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<BulletList /> default matches with snapshot 1`] = `
+.c0 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.c0 .k-BulletList__item {
+  margin: 0.3125rem 1rem;
+  display: block;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #222;
+}
+
+.c0 .k-BulletList__item:before {
+  margin-left: -1rem;
+  margin-right: 0.625rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 0.375rem;
+  height: 0.375rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #222;
+  content: '';
+}
+
+.c0 .k-BulletList__item--tiny {
+  font-size: 0.7901234567901234rem;
+}
+
+.c0 .k-BulletList__item--tiny:before {
+  width: 0.25rem;
+  height: 0.25rem;
+}
+
+.c0 .k-BulletList__item--regular {
+  font-size: 0.8888888888888888rem;
+}
+
+.c0 .k-BulletList__item--large {
+  font-size: 1rem;
+}
+
+.c0 .k-BulletList__item--big {
+  font-size: 1.125rem;
+  margin: 0.625rem 0;
+}
+
+.c0 .k-BulletList__item--huge {
+  font-size: 1.265625rem;
+  margin: 0.625rem 0;
+}
+
 <ul
   aria-hidden="true"
-  className="sc-bdVaJa eUtzqk"
+  className="c0 k-BulletList"
 >
   <li
-    className="sc-bwzfXH jUkWMz"
+    className="k-BulletList__item k-BulletList__item--regular"
     id="1"
   >
     Dis Manibus
   </li>
   <li
-    className="sc-bwzfXH jUkWMz"
+    className="k-BulletList__item k-BulletList__item--regular"
   >
     Calpurnia Felicla
   </li>
   <li
-    className="sc-bwzfXH jUkWMz"
+    className="k-BulletList__item k-BulletList__item--regular"
   >
     Germulio coniugi
   </li>
 </ul>
-`;
-
-exports[`<BulletList /> with big props matches with snapshot 1`] = `
-<ul
-  className="sc-bdVaJa eUtzqk"
-/>
-`;
-
-exports[`<BulletList /> with huge props matches with snapshot 1`] = `
-<ul
-  className="sc-bdVaJa eUtzqk"
-/>
-`;
-
-exports[`<BulletList /> with large props matches with snapshot 1`] = `
-<ul
-  className="sc-bdVaJa eUtzqk"
-/>
-`;
-
-exports[`<BulletList /> with small props matches with snapshot 1`] = `
-<ul
-  className="sc-bdVaJa eUtzqk"
-/>
 `;

@@ -7,8 +7,68 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add 
   - `MaisonDeCrowdfundingLogo`
   - `MicrodonLogo`
-  - `GoodeedLogo` components.
+  - `GoodeedLogo`
+  - `KkbbCoLogo` components.
   
+## [3.0.0-beta.17] - 2021-03-18
+
+Breaking changes:
+
+- Delete the following deprecated components:
+  - `HorizontalNav`
+  - `MarkdownPage`
+  - `TabBar`
+- Delete the following deprecated SCSS mixins:
+  - `k-BulletList`
+  - `k-Card`
+  - `k-HorizontalNav`
+  - `k-Label`
+  - `k-TabBar`
+- Convert and move the following component to CSS-in-JS:
+  - `BulletList`
+- Remove size props (`giant`, `huge`, `regular`, `big`, `tiny`) on the following components:
+  - `BulletList`
+  - `TextInput`
+  - `TextInputWithUnit`
+- Delete `card` HOC.
+
+Features:
+
+- Add `size` prop to the following components:
+  - `BulletList`
+  - `TextInput`
+  - `TextInputWithButton`
+  - `TextInputWithUnit`
+- Refactor the following components to CSS-in-JS:
+  - `Label`
+  - `SimpleCard`
+- Add `playerButtonSize` prop to `SimpleCard`.
+- Add missing exports to ESM exports.
+
+## [3.0.0-beta.16] - 2021-03-15
+
+Breaking changes:
+
+- Delete the following deprecated components:
+  - `SelectWithState` (replaced by `DropdownSelect`)
+  - `FormAmountAndCurrency`
+  - `FormPhoneNumber`
+  - `TextInputAndSelect`
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-ResponsiveIframeContainer`
+  - `k-Select`
+
+Feature:
+
+- Refactor `ResponsiveIframeContainer` to CSS-in-JS
+
+Fixes:
+
+- Fix error in `Accordion` when closing pane.
+- Fix ellipsis for children of `AvaratWithTextAndBadge`.
+- Fix alignment on `HeaderNav` `UserMenuButton`.
+- Fix `GridCol` offset class for `0` value.
+
 ## [3.0.0-beta.15] - 2021-03-12
 
 Fix:
@@ -42,7 +102,6 @@ Features:
 Fix:
 
 - Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
-
 
 ## [3.0.0-beta.13] - 2021-03-11
 
@@ -313,6 +372,12 @@ Breaking changes:
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
   - `SimilarProjectsCard`
+
+## [2.125.0] - 2021-03-15
+
+Feature:
+
+- Add `HorizontalTimeline` component.
 
 ## [2.124.0] - 2021-03-12
 

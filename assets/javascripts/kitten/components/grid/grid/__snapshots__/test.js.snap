@@ -36,6 +36,6 @@ exports[`<GridCol /> with props matches with snapshot 1`] = `
 
 exports[`<GridCol /> with props matches with snapshot 2`] = `
 <div
-  className="k-Grid__col k-Grid__col--12 k-Grid__col--10-xs k-Grid__col--offset-1-xs k-Grid__col--8-s k-Grid__col--offset-2-s k-Grid__col--6-m k-Grid__col--offset-3-m k-Grid__col--4-l k-Grid__col--offset-4-l"
+  className="k-Grid__col k-Grid__col--12 k-Grid__col--10-xs k-Grid__col--offset-1-xs k-Grid__col--8-s k-Grid__col--offset-2-s k-Grid__col--6-m k-Grid__col--offset-3-m k-Grid__col--4-l k-Grid__col--offset-0-l"
 />
 `;
