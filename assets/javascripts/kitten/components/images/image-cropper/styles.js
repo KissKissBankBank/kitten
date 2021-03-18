@@ -27,6 +27,15 @@ export const StyledCropper = styled.div`
     }
   }
 
+  .k-Cropper__wrapper__cropper {
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      margin-bottom: ${pxToRem(10)};
+    }
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      margin-right: ${pxToRem(10)};
+    }
+  }
+
   .k-Cropper {
     /* CSS originally from the cropper library. */
     .cropper-container {

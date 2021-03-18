@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Label /> should match its empty snapshot 1`] = `
+<label
+  className="sc-bdVaJa iGKbZH k-Label k-Label--normal"
+  onClick={[Function]}
+>
+  Label
+</label>
+`;
+
+exports[`<Label /> should match its propped snapshot 1`] = `
+<span
+  className="sc-bdVaJa iGKbZH k-Label k-Label--tiny k-Label--withoutPointerEvents"
+  htmlFor="customId"
+  onClick={[Function]}
+>
+  Custom form label
+</span>
+`;

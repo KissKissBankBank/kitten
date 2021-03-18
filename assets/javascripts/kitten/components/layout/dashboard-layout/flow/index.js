@@ -75,15 +75,21 @@ const StyledFlow = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: ${pxToRem(20)};
     margin: ${pxToRem(20)} 0;
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      gap: ${pxToRem(40)};
       margin: ${pxToRem(30)} 0;
     }
 
-    > * {
+    & > :not(:last-child) {
+      margin-right: ${pxToRem(20)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+        margin-right: ${pxToRem(40)};
+      }
+    }
+
+    & > * {
       min-width: 0;
       max-width: ${pxToRem(180)};
       flex: 1 1 ${pxToRem(180)};

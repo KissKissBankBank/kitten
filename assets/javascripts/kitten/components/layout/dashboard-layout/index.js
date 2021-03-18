@@ -23,6 +23,7 @@ import {
 
 import { BurgerIcon } from '../../../components/icons/burger-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import { LongArrowIcon } from '../../../components/icons/long-arrow-icon'
 
 import { Flow } from './flow'
 
@@ -101,7 +102,10 @@ const StyledDashboard = styled.div`
         padding: ${pxToRem(30)};
         display: flex;
         flex-direction: column;
-        gap: ${pxToRem(30)};
+
+        & > :not(:last-child) {
+          margin-bottom: ${pxToRem(30)};
+        }
 
         .k-DashboardLayout__backLink {
           flex: 0 0 ${pxToRem(40)};
@@ -234,15 +238,17 @@ const StyledDashboard = styled.div`
         position: sticky;
         top: 0;
         overflow: scroll;
-        gap: ${pxToRem(30)};
         padding: ${pxToRem(30)};
+
+        & > :not(:last-child) {
+          margin-bottom: ${pxToRem(30)};
+        }
 
         .k-DashboardLayout__backLink {
           flex: 0 0 auto;
           align-self: start;
           display: inline-flex;
           align-items: center;
-          gap: ${pxToRem(15)};
           color: ${COLORS.background1};
           transition: color .2s ease;
           ${TYPOGRAPHY.fontStyles.regular}
@@ -257,7 +263,12 @@ const StyledDashboard = styled.div`
           &:hover {
             color: ${COLORS.primary1};
           }
+
+          .k-DashboardLayout__backLink__text {
+            margin-left: ${pxToRem(15)};
+          }
         }
+
 
         .k-DashboardLayout__heading {
           flex: 0 1 auto;
@@ -362,7 +373,7 @@ export const DashboardLayout = ({
   }
 
   const renderComponentArray = (childrenArray, otherProps) => {
-    return childrenArray.map(child => {
+    return childrenArray.map((child, index) => {
       if (!child) return null
 
       return isFunction(child)
@@ -372,7 +383,10 @@ export const DashboardLayout = ({
             isSidebarOpen: isOpen,
             ...otherProps,
           })
-        : React.cloneElement(child, otherProps)
+        : React.cloneElement(child, {
+            key: `content_child_${index}`,
+            ...otherProps,
+          })
     })
   }
 
@@ -467,7 +481,18 @@ export const DashboardLayout = ({
               backLinkProps.className,
             )}
           >
-            <ArrowIcon direction="left" color={COLORS.background1} />
+            <LongArrowIcon
+              aria-hidden
+              className="k-u-hidden@m-down"
+              direction="left"
+              color={COLORS.background1}
+            />
+            <ArrowIcon
+              aria-hidden
+              className="k-u-hidden@l-up"
+              direction="left"
+              color={COLORS.background1}
+            />
             <span className="k-DashboardLayout__backLink__text">
               {backLinkProps.children}
             </span>

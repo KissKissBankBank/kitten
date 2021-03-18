@@ -13,8 +13,17 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _typography = require("../../../helpers/utils/typography");
+
+var StyledLine = _styledComponents.default.div.withConfig({
+  displayName: "line__StyledLine",
+  componentId: "sc-2c9zv8-0"
+})(["display:flex;align-items:center;.k-Line__item:not(:last-child){margin-right:", ";}"], (0, _typography.pxToRem)(10));
+
 var Line = function Line(props) {
-  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement(StyledLine, (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-Line', props.className)
   }));
 };

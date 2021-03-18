@@ -3,7 +3,7 @@ import { boolean, select } from '@storybook/addon-knobs'
 import { Accordeon } from './index'
 import { Marger } from '../layout/marger'
 import { Container } from '../grid/container'
-import { SelectWithState } from '../form/select-with-state'
+import { DropdownSelect } from '../form/dropdown-select'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -91,7 +91,9 @@ export const WithOverflowBug = () => {
         <Accordeon.Item>
           <Accordeon.Header>Header</Accordeon.Header>
           <Accordeon.Content>
-            <SelectWithState
+            <DropdownSelect
+              id="dropdown-select"
+              labelText="Label"
               options={[
                 { value: 'foo', label: 'Foo' },
                 { value: 'bar', label: 'Bar' },

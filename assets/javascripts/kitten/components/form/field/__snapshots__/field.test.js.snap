@@ -6,7 +6,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="sc-bwzfXH cbKhgF k-Line k-Line--noGap"
+      className="sc-bxivhb iPIptC k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -17,7 +17,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
           htmlFor="autocomplete"
           onClick={[Function]}
         >
@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU gSiJXU"
+      className="sc-jTzLTM cIolCp"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-VigVT iQhtHk"
+        className="sc-fjdhpX clvnbt"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -58,7 +58,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="sc-bwzfXH cbKhgF k-Line k-Line--noGap"
+      className="sc-bxivhb iPIptC k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -69,7 +69,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -79,25 +79,35 @@ Array [
       <div
         className="k-Line__item"
       >
-        <div
-          className="k-Tooltip"
+        <span
+          className="sc-htpNat qekvb k-Toggletip k-Toggletip--info"
+          id="tooltip"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "--toggletipAction-left": undefined,
+              "--toggletipAction-top": undefined,
+            }
+          }
         >
           <button
-            aria-describedby="tooltip"
-            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
-            data-dismiss="tooltip"
-            data-event="TooltipEvents__open_tooltip"
-            data-for="tooltip"
-            data-place="right"
-            data-tip={true}
+            aria-label="Learn more"
+            className="k-Toggletip__action k-u-reset-button"
+            onBlur={[Function]}
             onClick={[Function]}
-            tabIndex={null}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
             type="button"
           >
             <svg
-              className="k-ButtonIcon__svg"
               fill="#fff"
+              height={10}
               viewBox="0 0 6 10"
+              width={6}
               xmlns="http://www.w3.org/2000/svg"
             >
               
@@ -106,15 +116,10 @@ Array [
               />
             </svg>
           </button>
-          <div
-            className="__react_component_tooltip place-top type-dark "
-            data-id="tooltip"
-            id="tooltip"
-            role="tooltip"
-          >
-            Tooltip
-          </div>
-        </div>
+          <span
+            role="status"
+          />
+        </span>
       </div>
     </div>
   </div>,
@@ -122,7 +127,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-htpNat buJppH k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
+      className="sc-ifAKCX fchHyN k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -133,7 +138,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-bZQynM bOrPFB k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-htoDjs bZzhDu k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -152,7 +157,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="sc-bwzfXH cbKhgF k-Line k-Line--noGap"
+      className="sc-bxivhb iPIptC k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -163,7 +168,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -173,25 +178,35 @@ Array [
       <div
         className="k-Line__item"
       >
-        <div
-          className="k-Tooltip"
+        <span
+          className="sc-htpNat qekvb k-Toggletip k-Toggletip--info"
+          id="tooltip"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "--toggletipAction-left": undefined,
+              "--toggletipAction-top": undefined,
+            }
+          }
         >
           <button
-            aria-describedby="tooltip"
-            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
-            data-dismiss="tooltip"
-            data-event="TooltipEvents__open_tooltip"
-            data-for="tooltip"
-            data-place="right"
-            data-tip={true}
+            aria-label="Learn more"
+            className="k-Toggletip__action k-u-reset-button"
+            onBlur={[Function]}
             onClick={[Function]}
-            tabIndex={null}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
             type="button"
           >
             <svg
-              className="k-ButtonIcon__svg"
               fill="#fff"
+              height={10}
               viewBox="0 0 6 10"
+              width={6}
               xmlns="http://www.w3.org/2000/svg"
             >
               
@@ -200,15 +215,10 @@ Array [
               />
             </svg>
           </button>
-          <div
-            className="__react_component_tooltip place-top type-dark "
-            data-id="tooltip"
-            id="tooltip"
-            role="tooltip"
-          >
-            Tooltip
-          </div>
-        </div>
+          <span
+            role="status"
+          />
+        </span>
       </div>
     </div>
   </div>,
@@ -216,7 +226,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-htpNat buJppH k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
+      className="sc-ifAKCX fchHyN k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
       disabled={false}
       id="input"
       name="field"
@@ -232,7 +242,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="sc-bwzfXH cbKhgF k-Line k-Line--noGap"
+      className="sc-bxivhb iPIptC k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -243,7 +253,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -253,25 +263,35 @@ Array [
       <div
         className="k-Line__item"
       >
-        <div
-          className="k-Tooltip"
+        <span
+          className="sc-htpNat qekvb k-Toggletip k-Toggletip--info"
+          id="tooltip"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "--toggletipAction-left": undefined,
+              "--toggletipAction-top": undefined,
+            }
+          }
         >
           <button
-            aria-describedby="tooltip"
-            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
-            data-dismiss="tooltip"
-            data-event="TooltipEvents__open_tooltip"
-            data-for="tooltip"
-            data-place="right"
-            data-tip={true}
+            aria-label="Learn more"
+            className="k-Toggletip__action k-u-reset-button"
+            onBlur={[Function]}
             onClick={[Function]}
-            tabIndex={null}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
             type="button"
           >
             <svg
-              className="k-ButtonIcon__svg"
               fill="#fff"
+              height={10}
               viewBox="0 0 6 10"
+              width={6}
               xmlns="http://www.w3.org/2000/svg"
             >
               
@@ -280,15 +300,10 @@ Array [
               />
             </svg>
           </button>
-          <div
-            className="__react_component_tooltip place-top type-dark "
-            data-id="tooltip"
-            id="tooltip"
-            role="tooltip"
-          >
-            Tooltip
-          </div>
-        </div>
+          <span
+            role="status"
+          />
+        </span>
       </div>
     </div>
   </div>,
@@ -296,10 +311,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-iwsKbI jDVtoP k-Form-PasswordInput"
+      className="sc-gqjmRU jMoQnM k-Form-PasswordInput"
     >
       <input
-        className="sc-htpNat buJppH k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error k-Form-TextInput--regular"
+        className="sc-ifAKCX fchHyN k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -336,7 +351,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-bZQynM bOrPFB k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-htoDjs bZzhDu k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -355,7 +370,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="sc-bwzfXH cbKhgF k-Line k-Line--noGap"
+      className="sc-bxivhb iPIptC k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -366,7 +381,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -376,25 +391,35 @@ Array [
       <div
         className="k-Line__item"
       >
-        <div
-          className="k-Tooltip"
+        <span
+          className="sc-htpNat qekvb k-Toggletip k-Toggletip--info"
+          id="tooltip"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "--toggletipAction-left": undefined,
+              "--toggletipAction-top": undefined,
+            }
+          }
         >
           <button
-            aria-describedby="tooltip"
-            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
-            data-dismiss="tooltip"
-            data-event="TooltipEvents__open_tooltip"
-            data-for="tooltip"
-            data-place="right"
-            data-tip={true}
+            aria-label="Learn more"
+            className="k-Toggletip__action k-u-reset-button"
+            onBlur={[Function]}
             onClick={[Function]}
-            tabIndex={null}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
             type="button"
           >
             <svg
-              className="k-ButtonIcon__svg"
               fill="#fff"
+              height={10}
               viewBox="0 0 6 10"
+              width={6}
               xmlns="http://www.w3.org/2000/svg"
             >
               
@@ -403,15 +428,10 @@ Array [
               />
             </svg>
           </button>
-          <div
-            className="__react_component_tooltip place-top type-dark "
-            data-id="tooltip"
-            id="tooltip"
-            role="tooltip"
-          >
-            Tooltip
-          </div>
-        </div>
+          <span
+            role="status"
+          />
+        </span>
       </div>
     </div>
   </div>,
@@ -419,10 +439,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-iwsKbI jDVtoP k-Form-PasswordInput"
+      className="sc-gqjmRU jMoQnM k-Form-PasswordInput"
     >
       <input
-        className="sc-htpNat buJppH k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+        className="sc-ifAKCX fchHyN k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"
@@ -464,7 +484,7 @@ Array [
     className="sc-bdVaJa hOgMxB"
   >
     <div
-      className="sc-bwzfXH cbKhgF k-Line k-Line--noGap"
+      className="sc-bxivhb iPIptC k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -475,7 +495,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--micro"
+          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
           htmlFor="option-a"
           onClick={[Function]}
         >
@@ -488,14 +508,14 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <fieldset
-      className="sc-htoDjs dxNZQM k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
+      className="sc-iwsKbI dGyjnX k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
       disabled={false}
     >
       <div
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-gzVnrw gfCVKb k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-dnqmqq eCZoWN k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -517,7 +537,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-gzVnrw gfCVKb k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-dnqmqq eCZoWN k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -538,7 +558,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-gzVnrw gfCVKb k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-dnqmqq eCZoWN k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -560,93 +580,6 @@ Array [
         </div>
       </div>
     </fieldset>
-  </div>,
-]
-`;
-
-exports[`<Field /> with <Field.Select /> matches with snapshot 1`] = `
-Array [
-  <div
-    className="sc-bdVaJa hOgMxB"
-  >
-    <div
-      className="sc-bwzfXH cbKhgF k-Line k-Line--noGap"
-      style={
-        Object {
-          "lineHeight": 1,
-        }
-      }
-    >
-      <div
-        className="k-Line__item"
-      >
-        <label
-          className="k-Label k-Label--micro"
-          htmlFor="select"
-          onClick={[Function]}
-        >
-          Label
-        </label>
-      </div>
-    </div>
-  </div>,
-  <div
-    className="sc-bdVaJa ggQxmM"
-  >
-    <div
-      className="k-Select"
-    >
-      <div
-        className="Select Select--single"
-      >
-        <div
-          className="Select-control"
-          onKeyDown={[Function]}
-          onMouseDown={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-        >
-          <span
-            className="Select-multi-value-wrapper"
-            id="react-select-2--value"
-          >
-            <div
-              className="Select-placeholder"
-            >
-              Select…
-            </div>
-            <div
-              aria-activedescendant="react-select-2--value"
-              aria-disabled="false"
-              aria-expanded={false}
-              aria-owns=""
-              className="Select-input"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              role="combobox"
-              style={
-                Object {
-                  "border": 0,
-                  "display": "inline-block",
-                  "width": 1,
-                }
-              }
-              tabIndex={0}
-            />
-          </span>
-          <span
-            className="Select-arrow-zone"
-            onMouseDown={[Function]}
-          >
-            <span
-              className="Select-arrow"
-              onMouseDown={[Function]}
-            />
-          </span>
-        </div>
-      </div>
-    </div>
   </div>,
 ]
 `;

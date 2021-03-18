@@ -1,5 +1,5 @@
 import React from 'react'
-import LinkBox from './../link-box'
+import { LinkBox } from './../link-box'
 import { LinkBoxIllustration } from './../../../components/illustrations/link-box-illustration'
 import { Text } from './../../../components/typography/text'
 

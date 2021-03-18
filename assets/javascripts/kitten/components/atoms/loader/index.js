@@ -11,7 +11,6 @@ const StyledLoader = styled.div`
   display: flex;
   height: ${pxToRem(BULLET_SIZE)};
   line-height: 1;
-  gap: ${pxToRem(2)};
 
   .k-Loader__circle {
     width: ${pxToRem(BULLET_SIZE)};
@@ -32,6 +31,10 @@ const StyledLoader = styled.div`
 
     &:nth-child(3) {
       animation-delay: 0s;
+    }
+
+    &:not(:last-child) {
+      margin-right: ${pxToRem(2)};
     }
   }
 
@@ -62,17 +65,19 @@ const Circle = ({ color, ...others }) => (
   </svg>
 )
 
-export const Loader = ({ tag, className, color, ...others }) => (
-  <StyledLoader
-    as={tag}
-    className={classNames('k-Loader', className)}
-    {...others}
-  >
-    <Circle className="k-Loader__circle" color={color} />
-    <Circle className="k-Loader__circle" color={color} />
-    <Circle className="k-Loader__circle" color={color} />
-  </StyledLoader>
-)
+export const Loader = ({ tag, className, color, ...others }) => {
+  return (
+    <StyledLoader
+      as={tag}
+      className={classNames('k-Loader', className)}
+      {...others}
+    >
+      <Circle className="k-Loader__circle" color={color} />
+      <Circle className="k-Loader__circle" color={color} />
+      <Circle className="k-Loader__circle" color={color} />
+    </StyledLoader>
+  )
+}
 
 Loader.defaultProps = {
   tag: 'div',
