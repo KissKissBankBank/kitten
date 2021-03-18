@@ -101,43 +101,17 @@ export var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref
     error: error
   }));
 };
-export var FieldSelectExample = function FieldSelectExample(_ref5) {
+export var FieldAutocompleteExample = function FieldAutocompleteExample(_ref5) {
   var id = _ref5.id,
       label = _ref5.label,
       tooltip = _ref5.tooltip,
       tooltipId = _ref5.tooltipId,
       tooltipProps = _ref5.tooltipProps,
       placeholder = _ref5.placeholder,
-      options = _ref5.options,
       error = _ref5.error,
-      errorMessage = _ref5.errorMessage;
-  return /*#__PURE__*/React.createElement(FieldBase, {
-    id: id,
-    label: label,
-    tooltip: tooltip,
-    tooltipProps: tooltipProps,
-    tooltipId: tooltipId,
-    error: error,
-    errorMessage: errorMessage
-  }, /*#__PURE__*/React.createElement(Field.Select, {
-    id: id,
-    name: "select",
-    placeholder: placeholder,
-    options: options,
-    error: error
-  }));
-};
-export var FieldAutocompleteExample = function FieldAutocompleteExample(_ref6) {
-  var id = _ref6.id,
-      label = _ref6.label,
-      tooltip = _ref6.tooltip,
-      tooltipId = _ref6.tooltipId,
-      tooltipProps = _ref6.tooltipProps,
-      placeholder = _ref6.placeholder,
-      error = _ref6.error,
-      errorMessage = _ref6.errorMessage,
-      items = _ref6.items,
-      tiny = _ref6.tiny;
+      errorMessage = _ref5.errorMessage,
+      items = _ref5.items,
+      tiny = _ref5.tiny;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,

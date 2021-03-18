@@ -2,40 +2,52 @@
 
 exports[`<StatusWithBullet /> should match its empty snapshot 1`] = `
 <span
-  className="sc-bdVaJa kyWlgl k-StatusWithBullet k-StatusWithBullet--success k-StatusWithBullet--tiny k-StatusWithBullet--regular"
+  className="sc-bdVaJa hpjRKv k-StatusWithBullet k-StatusWithBullet--success k-StatusWithBullet--tiny k-StatusWithBullet--regular"
 >
   <span
     aria-hidden="true"
     className="k-StatusWithBullet__bullet"
   />
-  This is a text
+  <span
+    className="k-StatusWithBullet__status"
+  >
+    This is a text
+  </span>
 </span>
 `;
 
 exports[`<StatusWithBullet /> should match its snapshot with children 1`] = `
 <span
-  className="sc-bdVaJa kyWlgl k-StatusWithBullet k-StatusWithBullet--danger k-StatusWithBullet--tiny k-StatusWithBullet--regular"
+  className="sc-bdVaJa hpjRKv k-StatusWithBullet k-StatusWithBullet--danger k-StatusWithBullet--tiny k-StatusWithBullet--regular"
 >
   <span
     aria-hidden="true"
     className="k-StatusWithBullet__bullet"
   />
-  Sample message
+  <span
+    className="k-StatusWithBullet__status"
+  >
+    Sample message
+  </span>
 </span>
 `;
 
 exports[`<StatusWithBullet /> should match its snapshot with many props 1`] = `
 <span
-  className="sc-bdVaJa kyWlgl k-StatusWithBullet k-u-sample-class k-StatusWithBullet--none k-StatusWithBullet--micro k-StatusWithBullet--light"
+  className="sc-bdVaJa hpjRKv k-StatusWithBullet k-u-sample-class k-StatusWithBullet--none k-StatusWithBullet--micro k-StatusWithBullet--light"
 >
   <span
     aria-hidden="true"
     className="k-StatusWithBullet__bullet k-u-sample-class"
   />
   <span
-    className="k-u-sample-class"
+    className="k-StatusWithBullet__status"
   >
-    Sample message
+    <span
+      className="k-u-sample-class"
+    >
+      Sample message
+    </span>
   </span>
 </span>
 `;

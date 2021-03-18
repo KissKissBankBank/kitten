@@ -4,49 +4,31 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add the following exports to ESM exports:
-  - `buttonModifierStyles`
-  - `Autocomplete`
-  - `strokeModifierStyles`
-  - `strokeModifierStylesWithoutMargin`
-  - `KissKissBankBankLogo`
-  - `LendopolisLogo`
-  - `titleModifierStyles`
-  - `paragraphModifierStyles`
-  - `titleHelperModifierStyles`
-  - `SCREEN_SIZE_XXS`
-  - `SCREEN_SIZE_XS`
-  - `SCREEN_SIZE_S`
-  - `SCREEN_SIZE_M`
-  - `SCREEN_SIZE_L`
-  - `SCREEN_SIZE_XL`
-  - `ORDERED_SCREEN_SIZES`
-  - `BUTTON_STYLE_FLUID`
-  - `BUTTON_STYLE_DEFAULT`
-  - `BUTTON_STYLE_TINY`
-  - `BUTTON_STYLE_BIG`
-  - `BUTTON_STYLE_HUGE`
-  - `BUTTON_STYLE_GIANT`
-  - `BUTTON_STYLE_ICON`
-  - `BUTTON_STYLE_ICON_MICRO`
-  - `BUTTON_STYLE_ICON_TINY`
-  - `BUTTON_STYLE_ICON_BIG`
-  - `BUTTON_STYLE_ICON_HUGE`
-  - `BUTTON_STYLE_ICON_GIANT`
-  - `CAROUSEL_OUTLINE_PLUS_OFFSET`
-  - `HORIZONTAL_STROKE_STYLE_MICRO`
-  - `HORIZONTAL_STROKE_STYLE_TINY`
-  - `HORIZONTAL_STROKE_STYLE_DEFAULT`
-  - `HORIZONTAL_STROKE_STYLE_BIG`
-  - `HORIZONTAL_STROKE_STYLE_HUGE`
-  - `LazyObserver`
-  - `stringUtils`
-  - `upcaseFirst`
-  - `hexToRgba`
-  - `withLazy`
-  - `withMediaQueries`
-  - `mediaQueries`
-  - `getScssPaths`
+- Feature: Add missing exports to ESM exports.
+
+## [3.0.0-beta.16] - 2021-03-15
+
+Breaking changes:
+
+- Delete the following deprecated components:
+  - `SelectWithState` (replaced by `DropdownSelect`)
+  - `FormAmountAndCurrency`
+  - `FormPhoneNumber`
+  - `TextInputAndSelect`
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-ResponsiveIframeContainer`
+  - `k-Select`
+
+Feature:
+
+- Refactor `ResponsiveIframeContainer` to CSS-in-JS
+
+Fixes:
+
+- Fix error in `Accordion` when closing pane.
+- Fix ellipsis for children of `AvaratWithTextAndBadge`.
+- Fix alignment on `HeaderNav` `UserMenuButton`.
+- Fix `GridCol` offset class for `0` value.
 
 ## [3.0.0-beta.15] - 2021-03-12
 
@@ -352,6 +334,12 @@ Breaking changes:
   - `ProjectSimilarCard`
   - `RewardCardLegacy`
   - `SimilarProjectsCard`
+
+## [2.125.0] - 2021-03-15
+
+Feature:
+
+- Add `HorizontalTimeline` component.
 
 ## [2.124.0] - 2021-03-12
 
