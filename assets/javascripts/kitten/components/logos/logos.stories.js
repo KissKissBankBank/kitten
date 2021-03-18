@@ -8,6 +8,7 @@ import { GoodeedLogo } from './goodeedlogo'
 import { MaisonDeCrowdfundingLogo } from './mdc'
 import { MicrodonLogo } from './microdonlogo'
 import { LendopolisLogo } from './lendopolis-logo'
+import { KkbbCoLogo } from './kkbb-co'
 
 const Container = styled.div`
   padding: ${pxToRem(40)};
@@ -16,7 +17,7 @@ const Container = styled.div`
 const Group = styled(({ className, children, title }) => {
   return (
     <>
-      <h2>{title}</h2>
+      <h2 style={{fontSize: '20px'}}>{title}</h2>
       <div className={className}>{children}</div>
     </>
   )
@@ -83,12 +84,16 @@ export const AllLogos = () => {
         />
       </Group>
 
-      <Group title="Goodeed">
-        <LogoContainer children={<GoodeedLogo />} />
+      <Group title="KissKissBankBank&Co">
+        <LogoContainer children={<KkbbCoLogo />} />
       </Group>
 
       <Group title="Maison de Crowdfunding">
         <LogoContainer children={<MaisonDeCrowdfundingLogo />} />
+      </Group>
+
+      <Group title="Goodeed">
+        <LogoContainer children={<GoodeedLogo />} />
       </Group>
 
       <Group title="MicroDon">
