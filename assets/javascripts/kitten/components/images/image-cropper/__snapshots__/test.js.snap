@@ -22,7 +22,7 @@ exports[`<ImageCropper /> matches with snapshot 1`] = `
       type="file"
     />
     <label
-      className="sc-htpNat hlLzcf k-BasicUploader__button"
+      className="sc-htpNat kbrkiV k-BasicUploader__button"
       htmlFor="cropper"
     >
       <svg
