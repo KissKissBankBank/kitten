@@ -4,6 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Dropdown`
+  - `k-PlatformSwitch`
+  - `k-UserMenu`
+- Move the following components:
+  - `Dropdown` -> `components/navigation/header-menu/components`
+  - `DropdownButton` -> `components/navigation/header-menu/components`
+- Remove default export for `Dropdown` and `DropdownButton`.
+- Remove unused props for `Dropdown`.
+
 - Feature: Add the following Logo components:
   - `MaisonDeCrowdfundingLogo`
   - `MicrodonLogo`

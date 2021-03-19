@@ -108,7 +108,6 @@ export const TextInputWithUnit = ({
   disabled,
   ...others
 }) => {
-
   const input = useRef(null)
 
   return (
@@ -125,14 +124,11 @@ export const TextInputWithUnit = ({
         ref={input}
         {...others}
         size={size}
-        className={classNames(
-          'k-Form-TextInputWithUnit__input',
-          className,
-        )}
+        className={classNames('k-Form-TextInputWithUnit__input', className)}
       />
       <span
         className={classNames(
-          'k-Form-TextInputWithUnit__unit', 
+          'k-Form-TextInputWithUnit__unit',
           `k-Form-TextInputWithUnit__unit--${size}`,
           {
             'k-Form-TextInputWithUnit__unit--valid': valid,

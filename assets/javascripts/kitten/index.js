@@ -92,10 +92,6 @@ export { Details } from './components/details'
 // Dev
 export { DevGrid } from './components/dev/dev-grid'
 
-// Dropdowns
-export { DropdownButton } from './components/dropdowns/v2/dropdown-button'
-export { Dropdown } from './components/dropdowns/v2/dropdown'
-
 // Expandable
 export { ExpandBoard } from './components/expandable/expand-board'
 
@@ -367,6 +363,21 @@ export {
   ScreenConfig,
 } from './constants/screen-config'
 export { default as TYPOGRAPHY } from './constants/typography-config'
+export { DROPDOWN_ANIMATED_DELAY } from './constants/dropdown-config'
+
+// Constants from Helpers
+
+export {
+  domEvents,
+  A11Y_EVENT,
+  FOCUS_EVENT,
+  A11Y_FIRST_FOCUS_REACHED_EVENT,
+  A11Y_LAST_FOCUS_REACHED_EVENT,
+  DROPDOWN_EVENT,
+  TOGGLE_DROPDOWN_EVENT,
+  DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
+  DROPDOWN_LAST_FOCUS_REACHED_EVENT,
+} from './helpers/dom/events'
 
 // Constants from Components
 
@@ -418,6 +429,8 @@ export { default as margin } from './helpers/utils/margin'
 export { parseHtml } from './helpers/utils/parser'
 export { pxToRem, stepToRem } from './helpers/utils/typography'
 export { usePrevious } from './helpers/utils/use-previous-hook'
+export { useWindowWidth } from './helpers/utils/use-window-width-hook'
+export { dispatchEvent } from './helpers/dom/events'
 export { stringUtils, upcaseFirst } from './helpers/utils/string'
 export { hexToRgba } from './helpers/utils/hex-to-rgba'
 
