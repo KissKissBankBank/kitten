@@ -16,6 +16,10 @@ module.exports = {
           kitten: path.join(__dirname, '../assets/javascripts/kitten'),
           icons: path.join(__dirname, '../assets/images/icons'),
         },
+        fallback: {
+          crypto: require.resolve('crypto-browserify'),
+          stream: require.resolve('stream-browserify'),
+        },
       },
     }
     alteredConfig.module.rules.push({

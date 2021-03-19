@@ -113,6 +113,7 @@
     "sinon": "9.2.4",
     "sinon-test": "3.0.0",
     "style-loader": "2.0.0",
+    "terser-webpack-plugin": "5.1.1",
     "webpack": "5.26.3",
     "webpack-cli": "4.5.0",
     "webpack-fix-style-only-entries": "0.6.1"
