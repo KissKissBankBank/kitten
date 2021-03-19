@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove all `@kisskissbankbank/kitten/src/next` exports.
+- Feature: Add `ModalNext` export for `modals/next`.
+- Feature: Add deprecation warning on `Modal` (`modals/modal`).
+
 ## [3.0.0-beta.18] - 2021-03-18
 
 Fix:

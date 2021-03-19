@@ -98,6 +98,12 @@ export class Modal extends Component {
     showModal: false,
   }
 
+  componentDidMount() {
+    console.warn(
+      'The Modal component on `modals/modal` will be deprecated in favor of `ModalNext`.',
+    )
+  }
+
   open = () => {
     this.setState({ showModal: true })
   }

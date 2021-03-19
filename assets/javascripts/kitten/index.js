@@ -187,6 +187,7 @@ export { ProgressRing } from './components/meters/progress-ring'
 
 // Modals
 export { Modal } from './components/modals/modal'
+export { Modal as ModalNext } from './components/modals/next'
 export { Overlay } from './components/modals/overlay'
 
 // Navigation
