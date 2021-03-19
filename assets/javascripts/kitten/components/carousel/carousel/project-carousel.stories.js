@@ -10,7 +10,7 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 
 export default {
   component: Default,
-  title: 'Carousels/Carousel/ProjectCarousel',
+  title: 'Molecules/Carousel/ProjectCarousel',
   parameters: {
     component: Default,
   },

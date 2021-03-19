@@ -5,7 +5,7 @@ import { text, boolean, color, select } from '@storybook/addon-knobs'
 
 export default {
   component: Hero,
-  title: 'Heroes/Hero',
+  title: 'Organisms/Hero',
   parameters: {
     component: Hero,
   },

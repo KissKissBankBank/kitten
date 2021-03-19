@@ -17,7 +17,7 @@ const Container = styled.div`
 const Group = styled(({ className, children, title }) => {
   return (
     <>
-      <h2 style={{fontSize: '20px'}}>{title}</h2>
+      <h2 style={{ fontSize: '20px' }}>{title}</h2>
       <div className={className}>{children}</div>
     </>
   )
@@ -32,9 +32,7 @@ const LogoContainer = styled(({ className, children, name }) => {
   return (
     <div className={className}>
       <div className="svgWrapper">{children}</div>
-      <Text size="micro">
-        {name}
-      </Text>
+      <Text size="micro">{name}</Text>
     </div>
   )
 })`
@@ -65,9 +63,7 @@ export const AllLogos = () => {
   return (
     <Container>
       <Group title="KissKissBankBank">
-        <LogoContainer
-          children={<KissKissBankBankLogo />}
-        />
+        <LogoContainer children={<KissKissBankBankLogo />} />
         <LogoContainer
           className="noMaxDimensions"
           name="version tiny"
@@ -97,10 +93,10 @@ export const AllLogos = () => {
       </Group>
 
       <Group title="MicroDon">
-        <LogoContainer children={ <MicrodonLogo />} />
+        <LogoContainer children={<MicrodonLogo />} />
       </Group>
     </Container>
   )
 }
 
-export default { title: 'Logos/List' }
+export default { title: 'Graphics/Logos' }

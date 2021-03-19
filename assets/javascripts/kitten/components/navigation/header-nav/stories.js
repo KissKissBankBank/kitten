@@ -18,7 +18,7 @@ const Container = styled.div`
 `
 
 export default {
-  title: 'Navigation/HeaderNav',
+  title: 'Organisms/HeaderNav',
   component: LendopolisHeaderNavStory,
 }
 

@@ -378,4 +378,4 @@ export const AllIcons = () => {
   )
 }
 
-export default { title: 'Icons/List' }
+export default { title: 'Graphics/Icons' }

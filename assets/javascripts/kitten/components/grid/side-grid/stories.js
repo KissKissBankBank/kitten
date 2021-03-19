@@ -11,7 +11,7 @@ import {
 } from '../../../index'
 
 export default {
-  title: 'Grid/SideGrid',
+  title: 'Organisms/SideGrid',
   component: SideGrid,
 }
 

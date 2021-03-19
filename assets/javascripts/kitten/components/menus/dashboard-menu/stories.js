@@ -15,7 +15,7 @@ import {
 } from '../../..'
 
 export default {
-  title: 'Menus/DashboardMenu',
+  title: 'Organisms/DashboardMenu',
   component: DashboardMenu,
 }
 

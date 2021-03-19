@@ -36,7 +36,7 @@ const radiusBottomBorderRange = {
 
 export default {
   component: ExpandBoard,
-  title: 'Expandable/ExpandBoard',
+  title: 'Molecules/ExpandBoard',
 }
 
 export const Default = () => (

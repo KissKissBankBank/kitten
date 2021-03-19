@@ -63,7 +63,7 @@ const StoryButton = ({ children }) => (
 )
 
 export default {
-  title: 'Modals/Modal',
+  title: 'Molecules/Modal',
   component: Modal,
 }
 

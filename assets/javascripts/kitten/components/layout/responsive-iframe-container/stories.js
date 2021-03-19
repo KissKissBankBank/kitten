@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs'
 import COLORS from '../../../constants/colors-config'
 
 export default {
-  title: 'Layout/ResponsiveIframeContainer',
+  title: 'Molecules/ResponsiveIframeContainer',
   component: ResponsiveIframeContainer,
 }
 

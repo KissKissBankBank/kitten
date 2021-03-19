@@ -4,7 +4,7 @@ import { ScrollableContainer, Container, Text, Grid, GridCol } from '../../..'
 
 export default {
   component: HorizontalTimeline,
-  title: 'List/HorizontalTimeline',
+  title: 'Organisms/HorizontalTimeline',
   parameters: {
     component: HorizontalTimeline,
   },

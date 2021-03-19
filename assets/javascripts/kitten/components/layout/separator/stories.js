@@ -6,7 +6,7 @@ import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 
 export default {
-  title: 'Layout/Separator',
+  title: 'Atoms/Separator',
   component: Separator,
 }
 

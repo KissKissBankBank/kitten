@@ -13,7 +13,7 @@ const StoryGrid = ({ children }) => (
 )
 
 export default {
-  title: 'Icons/FilterIcon',
+  title: 'Graphics/Icons/FilterIcon',
   component: FilterIcon,
 }
 

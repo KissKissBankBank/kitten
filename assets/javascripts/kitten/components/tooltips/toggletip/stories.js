@@ -4,7 +4,7 @@ import { Toggletip } from './index'
 import COLORS from '../../../constants/colors-config'
 
 export default {
-  title: 'Tooltips/Toggletip',
+  title: 'Molecules/Toggletip',
   component: Toggletip,
 }
 

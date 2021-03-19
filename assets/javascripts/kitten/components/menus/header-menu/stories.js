@@ -19,7 +19,7 @@ const StoryGrid = ({ children }) => (
 )
 
 export default {
-  title: 'Menus/HeaderMenu',
+  title: 'Organisms/HeaderMenu',
   component: HeaderMenu,
 }
 

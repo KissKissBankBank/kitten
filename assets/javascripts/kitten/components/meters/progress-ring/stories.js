@@ -42,7 +42,7 @@ const OvertimeProgressRing = () => <RocketCircleIcon aria-hidden />
 
 export default {
   component: ProgressRing,
-  title: 'Meters/ProgressRing',
+  title: 'Atoms/ProgressRing',
   parameters: {
     component: ProgressRing,
   },

@@ -9,7 +9,7 @@ const variantOptions = {
 }
 
 export default {
-  title: 'Meters/Progress',
+  title: 'Atoms/Progress',
   component: _Progress,
 }
 

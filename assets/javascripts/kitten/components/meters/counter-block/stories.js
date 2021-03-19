@@ -14,6 +14,6 @@ export const Default = () => {
 }
 
 export default {
-  title: 'Meters/CounterBlock',
+  title: 'Organisms/CounterBlock',
   component: CounterBlock,
 }

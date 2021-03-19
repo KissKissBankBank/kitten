@@ -14,7 +14,7 @@ const StoryGrid = ({ children }) => (
 )
 
 export default {
-  title: 'Icons/BurgerIcon',
+  title: 'Graphics/Icons/BurgerIcon',
   component: BurgerIcon,
 }
 

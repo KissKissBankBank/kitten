@@ -7,7 +7,7 @@ import { GifVideo } from './index'
 
 export default {
   component: GifVideo,
-  title: 'Videos/GifVideo',
+  title: 'Atoms/GifVideo',
 }
 
 export const Default = () => (

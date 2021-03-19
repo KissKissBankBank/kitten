@@ -4,7 +4,7 @@ import { text, color, number, boolean, select } from '@storybook/addon-knobs'
 import { Text } from '../../../components/typography/text'
 
 export default {
-  title: 'Avatar/AvatarWithTextAndBadge',
+  title: 'Atoms/AvatarWithTextAndBadge',
   component: AvatarWithTextAndBadge,
 }
 

@@ -63,7 +63,7 @@ const HelpBox = styled.div`
 `
 
 export default {
-  title: 'Layout/DashboardLayout',
+  title: 'Organisms/DashboardLayout',
   component: DashboardLayout,
 }
 

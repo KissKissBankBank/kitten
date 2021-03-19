@@ -3,7 +3,7 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 import { LongArrowIcon } from './index'
 
 export default {
-  title: 'Icons/LongArrowIcon',
+  title: 'Graphics/Icons/LongArrowIcon',
   component: LongArrowIcon,
 }
 

@@ -6,7 +6,7 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 
 export default {
   component: Timeline,
-  title: 'List/Timeline',
+  title: 'Organisms/Timeline',
   parameters: {
     component: Timeline,
   },

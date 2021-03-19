@@ -14,7 +14,7 @@ const StoryContainer = ({ children }) => (
 )
 
 export default {
-  title: 'Notifications/HighlightHalo',
+  title: 'Atoms/HighlightHalo',
   component: HighlightHalo,
 }
 
