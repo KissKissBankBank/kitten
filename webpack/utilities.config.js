@@ -1,8 +1,6 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries')
-const autoprefixer = require('autoprefixer')
-const cssnano = require('cssnano')
 
 module.exports = {
   mode: 'production',
@@ -19,14 +17,7 @@ module.exports = {
         use: [
           { loader: MiniCssExtractPlugin.loader },
           'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [autoprefixer(), cssnano],
-              },
-            },
-          },
+          'postcss-loader',
           'sass-loader',
         ],
       },
