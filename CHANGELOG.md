@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add missing exports to ESM exports.
+## [3.0.0-beta.19] - 2021-03-19
 
 Breaking changes:
 
@@ -18,12 +18,15 @@ Breaking changes:
 - Remove default export for `Dropdown` and `DropdownButton`.
 - Remove unused props for `Dropdown`.
 
-- Feature: Add the following Logo components:
+Features:
+
+- Add the following Logo components:
   - `MaisonDeCrowdfundingLogo`
   - `MicrodonLogo`
   - `GoodeedLogo`
   - `KkbbCoLogo`
-  
+- Add missing exports to ESM exports.
+
 ## [3.0.0-beta.18] - 2021-03-18
 
 Fix:

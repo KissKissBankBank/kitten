@@ -7,7 +7,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.DropdownButton = void 0;
+exports.DropdownButton = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -24,12 +24,11 @@ var DropdownButton = (0, _react.forwardRef)(function (_ref, dropdownButtonRef) {
       className = _ref.className,
       isExpanded = _ref.isExpanded,
       rest = (0, _objectWithoutProperties2.default)(_ref, ["id", "className", "isExpanded"]);
-  var buttonClassName = (0, _classnames.default)('k-Dropdown__button', className);
   return /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
     ref: dropdownButtonRef,
     id: id,
     type: "button",
-    className: buttonClassName,
+    className: (0, _classnames.default)('k-Dropdown__button', className),
     "aria-haspopup": "true",
     "aria-expanded": isExpanded
   }, rest));
@@ -43,7 +42,4 @@ DropdownButton.defaultProps = {
   children: 'Toggle button',
   onClick: function onClick() {},
   isExpanded: false
-}; // DEPRECATED: do not use default export.
-
-var _default = DropdownButton;
-exports.default = _default;
+};
