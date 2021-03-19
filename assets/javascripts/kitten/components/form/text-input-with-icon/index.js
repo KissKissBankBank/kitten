@@ -44,7 +44,6 @@ export const TextInputWithIcon = ({
   accessibilityLabel,
   ...others
 }) => {
-
   return (
     <StyledTextInputWithIcon className="k-Form-TextInputWithIcon">
       {accessibilityLabel && (

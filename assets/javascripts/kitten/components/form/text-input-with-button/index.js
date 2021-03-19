@@ -33,7 +33,7 @@ const StyledTextInputWithButton = styled.div`
     background-color: ${COLORS.valid};
     border-color: ${COLORS.valid};
   }
-      
+
   &.k-Form-TextInputWithButton__button--error {
     cursor: not-allowed;
     background-color: ${COLORS.error};
@@ -59,17 +59,13 @@ export const TextInputWithButton = ({
   className,
   ...others
 }) => {
-
   return (
     <StyledTextInputWithButton
       className="k-Form-TextInputWithButton"
       modifier={modifier}
     >
       <TextInput
-        className={classNames(
-          'k-Form-TextInputWithButton__input',
-          className,
-        )}
+        className={classNames('k-Form-TextInputWithButton__input', className)}
         {...others}
         valid={valid}
         error={error}
@@ -79,14 +75,11 @@ export const TextInputWithButton = ({
       />
       <button
         {...buttonProps}
-        className={classNames(
-          'k-Form-TextInputWithButton__button',
-          {
-            'k-Form-TextInputWithButton__button--valid': valid,
-            'k-Form-TextInputWithButton__button--error': error,
-            'k-Form-TextInputWithButton__button--disabled': disabled,
-          }
-        )}
+        className={classNames('k-Form-TextInputWithButton__button', {
+          'k-Form-TextInputWithButton__button--valid': valid,
+          'k-Form-TextInputWithButton__button--error': error,
+          'k-Form-TextInputWithButton__button--disabled': disabled,
+        })}
         type="button"
         disabled={disabled}
       >
