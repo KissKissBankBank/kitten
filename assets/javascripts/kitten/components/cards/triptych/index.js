@@ -81,14 +81,15 @@ export const Triptych = ({ title, item1, item2, item3 }) => {
   const titleElement = useRef(null)
   const firstElement = useRef(null)
 
-  useEffect(() => {
-    const updateSecondCardMargin = () => {
-      const titleHeight = titleElement.current.clientHeight
-      const firstHeight = firstElement.current.clientHeight
-      setsecondElementMarginTop(firstHeight - titleHeight)
-    }
+  const updateSecondCardMargin = () => {
+    const titleHeight = titleElement.current.clientHeight
+    const firstHeight = firstElement.current.clientHeight
+    setsecondElementMarginTop(firstHeight - titleHeight)
+  }
 
-    const debounceUpdateMargin = () => debounce(200)(updateSecondCardMargin)
+  const debounceUpdateMargin = () => debounce(200)(updateSecondCardMargin)
+
+  useEffect(() => {
     debounceUpdateMargin()
     window.addEventListener('resize', debounceUpdateMargin)
     window.addEventListener('load', debounceUpdateMargin)
