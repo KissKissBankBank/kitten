@@ -22,10 +22,9 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [
-                autoprefixer(),
-                cssnano,
-              ],
+              postcssOptions: {
+                plugins: [autoprefixer(), cssnano],
+              },
             },
           },
           'sass-loader',
@@ -33,8 +32,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new MiniCssExtractPlugin(),
-    new FixStyleOnlyEntriesPlugin(),
-  ],
+  plugins: [new MiniCssExtractPlugin(), new FixStyleOnlyEntriesPlugin()],
 }
