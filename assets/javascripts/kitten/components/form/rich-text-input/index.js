@@ -11,7 +11,7 @@ export class RichTextInput extends React.Component {
 
     this.state = { content: props.content }
 
-    this.handleChange = this.handleChange.bind(this)
+    this.handleChange=this.handleChange.bind(this)
   }
 
   handleChange(value) {

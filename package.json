@@ -138,7 +138,6 @@
     "build:utilities": "rm -rf src/stylesheets && webpack --config webpack/utilities.config.js",
     "eslint": "eslint --fix assets/javascripts/**",
     "prettier": "find ./assets/javascripts -regex '.*.js' | xargs prettier --config prettier.config.js --write",
-    "prepare": "husky install"
   },
   "lint-staged": {
     "assets/**/*.js": [
