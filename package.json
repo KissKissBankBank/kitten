@@ -23,7 +23,7 @@
   "author": "KissKissBankBank & Co",
   "homepage": "https://github.com/KissKissBankBank/kitten#readme",
   "dependencies": {
-    "autoprefixer": "9.8.6",
+    "autoprefixer": "10.2.5",
     "bowser": "1.9.4",
     "classnames": "2.2.6",
     "credit-card-type": "9.1.0",
