@@ -45,7 +45,8 @@ export { VerticalCardWithAction } from './components/cards/vertical-card-with-ac
 export { VerticalCard } from './components/cards/vertical-card';
 export { ClickableCard } from './components/cards/clickable-card';
 export { CrowdfundingCard } from './components/cards/crowdfunding-card';
-export { EngagementCard } from './components/cards/engagement-card'; // Carousel
+export { EngagementCard } from './components/cards/engagement-card';
+export { EngagementCardWithImage } from './components/cards/engagement-card/withImage'; // Carousel
 
 export { Carousel } from './components/carousel/carousel';
 export { NavTabCarousel } from './components/carousel/nav-tab-carousel';
@@ -60,10 +61,7 @@ export { StandaloneRangeDatePicker } from './components/date-picker/standalone-r
 
 export { Details } from './components/details'; // Dev
 
-export { DevGrid } from './components/dev/dev-grid'; // Dropdowns
-
-export { DropdownButton } from './components/dropdowns/v2/dropdown-button';
-export { Dropdown } from './components/dropdowns/v2/dropdown'; // Expandable
+export { DevGrid } from './components/dev/dev-grid'; // Expandable
 
 export { ExpandBoard } from './components/expandable/expand-board'; // Form
 
@@ -126,7 +124,11 @@ export { Timeline } from './components/lists/timeline';
 export { HorizontalTimeline } from './components/lists/horizontal-timeline'; //Logos
 
 export { KissKissBankBankLogo } from './components/logos/kisskissbankbanklogo';
-export { LendopolisLogo } from './components/logos/lendopolis-logo'; // Menus
+export { LendopolisLogo } from './components/logos/lendopolis-logo';
+export { GoodeedLogo } from './components/logos/goodeedlogo';
+export { MaisonDeCrowdfundingLogo } from './components/logos/mdc';
+export { MicrodonLogo } from './components/logos/microdonlogo';
+export { KkbbCoLogo } from './components/logos/kkbb-co'; // Menus
 
 export { DashboardMenu } from './components/menus/dashboard-menu';
 export { HeaderMenu } from './components/menus/header-menu'; // Meters
@@ -234,6 +236,7 @@ export { LinkIcon } from './components/icons/link-icon';
 export { ListIcon } from './components/icons/list-icon';
 export { LocationIcon } from './components/icons/location-icon';
 export { LockIcon } from './components/icons/lock-icon';
+export { LoginIcon } from './components/icons/login-icon';
 export { MaestroIcon } from './components/icons/maestro-icon';
 export { MasterCardIcon } from './components/icons/mastercard-icon';
 export { MenuIcon } from './components/icons/menu-icon';
@@ -279,7 +282,10 @@ export { SpeechBubbleIcon } from './components/icons/speech-bubble-icon'; // ---
 export { default as COLORS } from './constants/colors-config';
 export { NUM_COLUMNS, CONTAINER_MAX_WIDTH, GUTTER, CONTAINER_PADDING_THIN, CONTAINER_PADDING } from './constants/grid-config';
 export { SCREEN_SIZE_XXS, SCREEN_SIZE_XS, SCREEN_SIZE_S, SCREEN_SIZE_M, SCREEN_SIZE_L, SCREEN_SIZE_XL, ORDERED_SCREEN_SIZES, ScreenConfig } from './constants/screen-config';
-export { default as TYPOGRAPHY } from './constants/typography-config'; // Constants from Components
+export { default as TYPOGRAPHY } from './constants/typography-config';
+export { DROPDOWN_ANIMATED_DELAY } from './constants/dropdown-config'; // Constants from Helpers
+
+export { domEvents, A11Y_EVENT, FOCUS_EVENT, A11Y_FIRST_FOCUS_REACHED_EVENT, A11Y_LAST_FOCUS_REACHED_EVENT, DROPDOWN_EVENT, TOGGLE_DROPDOWN_EVENT, DROPDOWN_FIRST_FOCUS_REACHED_EVENT, DROPDOWN_LAST_FOCUS_REACHED_EVENT } from './helpers/dom/events'; // Constants from Components
 
 export { FLUID as BUTTON_STYLE_FLUID, DEFAULT as BUTTON_STYLE_DEFAULT, TINY as BUTTON_STYLE_TINY, BIG as BUTTON_STYLE_BIG, HUGE as BUTTON_STYLE_HUGE, GIANT as BUTTON_STYLE_GIANT, ICON as BUTTON_STYLE_ICON, ICON_MICRO as BUTTON_STYLE_ICON_MICRO, ICON_TINY as BUTTON_STYLE_ICON_TINY, ICON_BIG as BUTTON_STYLE_ICON_BIG, ICON_HUGE as BUTTON_STYLE_ICON_HUGE, ICON_GIANT as BUTTON_STYLE_ICON_GIANT } from './components/buttons/button/button';
 export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/carousel/carousel/styles';
@@ -301,6 +307,8 @@ export { default as margin } from './helpers/utils/margin';
 export { parseHtml } from './helpers/utils/parser';
 export { pxToRem, stepToRem } from './helpers/utils/typography';
 export { usePrevious } from './helpers/utils/use-previous-hook';
+export { useWindowWidth } from './helpers/utils/use-window-width-hook';
+export { dispatchEvent } from './helpers/dom/events';
 export { stringUtils, upcaseFirst } from './helpers/utils/string';
 export { hexToRgba } from './helpers/utils/hex-to-rgba'; // ---
 // HOC

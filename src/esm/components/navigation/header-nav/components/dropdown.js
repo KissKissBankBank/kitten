@@ -1,21 +1,18 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import React, { useState, useEffect, useRef } from 'react';
 import has from 'lodash/fp/has';
 import isNull from 'lodash/fp/isNull';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import emitter from '../../../helpers/utils/emitter';
+import emitter from '../../../../helpers/utils/emitter';
 import { DropdownButton } from './dropdown-button';
-import deprecated from 'prop-types-extra/lib/deprecated';
-import domElementHelper from '../../../helpers/dom/element-helper';
-import { useWindowWidth } from '../../../helpers/utils/use-window-width-hook';
-import domEvents, { TOGGLE_DROPDOWN_EVENT, DROPDOWN_FIRST_FOCUS_REACHED_EVENT, DROPDOWN_LAST_FOCUS_REACHED_EVENT, dispatchEvent } from '../../../helpers/dom/events';
-import { getFocusableElementsFrom, keyboardNavigation } from '../../../helpers/dom/a11y';
-import { DROPDOWN_ANIMATED_DELAY } from '../../../constants/dropdown-config';
+import domElementHelper from '../../../../helpers/dom/element-helper';
+import { useWindowWidth } from '../../../../helpers/utils/use-window-width-hook';
+import domEvents, { TOGGLE_DROPDOWN_EVENT, DROPDOWN_FIRST_FOCUS_REACHED_EVENT, DROPDOWN_LAST_FOCUS_REACHED_EVENT, dispatchEvent } from '../../../../helpers/dom/events';
+import { getFocusableElementsFrom, keyboardNavigation } from '../../../../helpers/dom/a11y';
+import { DROPDOWN_ANIMATED_DELAY } from '../../../../constants/dropdown-config';
 export var Dropdown = React.forwardRef(function (_ref, dropdownRef) {
-  var arrowHorizontalPosition = _ref.arrowHorizontalPosition,
-      button = _ref.button,
+  var button = _ref.button,
       buttonClassName = _ref.buttonClassName,
       buttonContentOnCollapsed = _ref.buttonContentOnCollapsed,
       buttonContentOnExpanded = _ref.buttonContentOnExpanded,
@@ -23,21 +20,17 @@ export var Dropdown = React.forwardRef(function (_ref, dropdownRef) {
       className = _ref.className,
       closeEvents = _ref.closeEvents,
       closeOnOuterClick = _ref.closeOnOuterClick,
-      contentHorizontalPosition = _ref.contentHorizontalPosition,
       dropdownContent = _ref.dropdownContent,
       dropdownContentWidth = _ref.dropdownContentWidth,
-      dropdownListArrow = _ref.dropdownListArrow,
       isExpanded = _ref.isExpanded,
       keepInitialButtonAction = _ref.keepInitialButtonAction,
       onPositionUpdate = _ref.onPositionUpdate,
       onToggle = _ref.onToggle,
       positionedHorizontallyWith = _ref.positionedHorizontallyWith,
       positionedVerticallyWith = _ref.positionedVerticallyWith,
-      positionedWith = _ref.positionedWith,
       positionedWithBorder = _ref.positionedWithBorder,
       refreshEvents = _ref.refreshEvents;
   var dropdownContentRef = useRef(null);
-  var arrowRef = useRef(null);
   var dropdownButtonRef = useRef(null);
 
   var _useState = useState(isExpanded),
@@ -221,21 +214,8 @@ export var Dropdown = React.forwardRef(function (_ref, dropdownRef) {
     });
   };
 
-  var isSelfReference = function isSelfReference() {
-    return typeof positionedWith === 'undefined' && typeof positionedVerticallyWith === 'undefined';
-  };
-
-  var getVerticalReferenceElement = function getVerticalReferenceElement() {
-    if (!isSelfReference()) {
-      return (positionedVerticallyWith || positionedWith)();
-    } // Prevent error from ref not set by `useRef`.
-
-
-    return has('current')(dropdownRef) ? dropdownRef.current : dropdownRef;
-  };
-
   var getComputedHeightElement = function getComputedHeightElement() {
-    return domElementHelper.getComputedHeight(getVerticalReferenceElement(), positionedWithBorder);
+    return domElementHelper.getComputedHeight(positionedVerticallyWith(), positionedWithBorder);
   };
 
   var getComputedLeftElement = function getComputedLeftElement() {
@@ -258,21 +238,6 @@ export var Dropdown = React.forwardRef(function (_ref, dropdownRef) {
     }
 
     return 0;
-  };
-
-  var getArrowPositionStyle = function getArrowPositionStyle() {
-    return _extends({
-      position: 'absolute',
-      top: 0
-    }, arrowHorizontalPosition);
-  };
-
-  var getDropdownContentStyle = function getDropdownContentStyle() {
-    return _extends({
-      top: verticalReferenceElementState,
-      left: horizontalReferenceElementState || 0,
-      width: dropdownContentWidth
-    }, contentHorizontalPosition);
   }; // Component listener callbacks
 
 
@@ -300,32 +265,13 @@ export var Dropdown = React.forwardRef(function (_ref, dropdownRef) {
     event.stopPropagation();
     event.preventDefault();
     toggle(!isExpandedState);
-  }; // Rendering
-
-
-  var renderButtonContentElement = function renderButtonContentElement() {
-    if (isExpandedState) {
-      return buttonContentOnExpanded;
-    }
-
-    return buttonContentOnCollapsed;
   };
 
-  var Arrow = function Arrow() {
-    if (!dropdownListArrow) return null;
-    return /*#__PURE__*/React.createElement("span", {
-      ref: arrowRef,
-      style: getArrowPositionStyle()
-    }, dropdownListArrow);
-  };
-
-  var dropdownClassName = classNames('k-Dropdown', {
-    'is-expanded': isExpandedState,
-    'k-Dropdown--asReference': isSelfReference()
-  }, className);
   return /*#__PURE__*/React.createElement("div", {
     ref: dropdownRef,
-    className: dropdownClassName
+    className: classNames('k-Dropdown', {
+      'k-Dropdown--isExpanded': isExpandedState
+    }, className)
   }, button && (keepInitialButtonAction ? /*#__PURE__*/React.createElement(DropdownButton, {
     ref: dropdownButtonRef,
     className: buttonClassName,
@@ -338,16 +284,19 @@ export var Dropdown = React.forwardRef(function (_ref, dropdownRef) {
     id: buttonId,
     isExpanded: isExpandedState,
     onClick: handleButtonClick
-  }, renderButtonContentElement()), /*#__PURE__*/React.createElement("div", {
+  }, isExpandedState ? buttonContentOnExpanded : buttonContentOnCollapsed), /*#__PURE__*/React.createElement("div", {
     ref: dropdownContentRef,
     className: "k-Dropdown__content",
-    style: getDropdownContentStyle(),
+    style: {
+      top: verticalReferenceElementState,
+      left: horizontalReferenceElementState || 0,
+      width: dropdownContentWidth
+    },
     "aria-hidden": !isExpandedState,
     "aria-labelledby": buttonId
-  }, dropdownContent, /*#__PURE__*/React.createElement(Arrow, null)));
+  }, dropdownContent));
 });
 Dropdown.propTypes = {
-  arrowHorizontalPosition: PropTypes.object,
   button: PropTypes.node,
   buttonClassName: PropTypes.string,
   buttonContentOnCollapsed: PropTypes.node,
@@ -356,17 +305,14 @@ Dropdown.propTypes = {
   className: PropTypes.string,
   closeEvents: PropTypes.array,
   closeOnOuterClick: PropTypes.bool,
-  contentHorizontalPosition: PropTypes.object,
   dropdownContentWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   dropdownContent: PropTypes.node,
-  dropdownListArrow: PropTypes.node,
   isExpanded: PropTypes.bool,
   keepInitialButtonAction: PropTypes.bool,
   onPositionUpdate: PropTypes.func,
   onToggle: PropTypes.func,
   positionedHorizontallyWith: PropTypes.func,
-  positionedVerticallyWith: PropTypes.func,
-  positionedWith: deprecated(PropTypes.func, 'Prefere use `positionedVerticallyWith` when using `Dropdown` component.'),
+  positionedVerticallyWith: PropTypes.func.isRequired,
   positionedWithBorder: PropTypes.bool,
   refreshEvents: PropTypes.array
 };
@@ -376,11 +322,6 @@ Dropdown.defaultProps = {
   // If set to true, keep the inital toggle events to focus on design button
   // trough `button` prop.
   keepInitialButtonAction: false,
-  // Custom horizontal position for content and content arrow.
-  contentHorizontalPosition: {},
-  arrowHorizontalPosition: {
-    left: '50%'
-  },
   // Button settings
   buttonContentOnExpanded: 'Close me',
   buttonContentOnCollapsed: 'Expand me',
@@ -397,6 +338,4 @@ Dropdown.defaultProps = {
   onPositionUpdate: function onPositionUpdate() {},
   // Called when the dropdown is opened or closed
   onToggle: function onToggle() {}
-}; // DEPRECATED: do not use default export.
-
-export default Dropdown;
+};
