@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add missing exports to ESM exports.
+
 Breaking changes:
 
 - Delete the following deprecated SCSS mixins and styles:
