@@ -4,12 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add 
+- Feature: Add the following Logo components:
   - `MaisonDeCrowdfundingLogo`
   - `MicrodonLogo`
   - `GoodeedLogo`
-  - `KkbbCoLogo` components.
+  - `KkbbCoLogo`
   
+## [3.0.0-beta.18] - 2021-03-18
+
+Fix:
+
+- Fix bug caused by adding `getScssPaths` in ESM export.
+
 ## [3.0.0-beta.17] - 2021-03-18
 
 Breaking changes:
