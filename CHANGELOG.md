@@ -16,6 +16,12 @@ Breaking changes:
 - Remove default export for `Dropdown` and `DropdownButton`.
 - Remove unused props for `Dropdown`.
 
+- Feature: Add the following Logo components:
+  - `MaisonDeCrowdfundingLogo`
+  - `MicrodonLogo`
+  - `GoodeedLogo`
+  - `KkbbCoLogo`
+  
 ## [3.0.0-beta.18] - 2021-03-18
 
 Fix:
