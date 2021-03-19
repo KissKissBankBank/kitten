@@ -3,10 +3,7 @@ module.exports = api => {
   const isESMBuild = process.env.BABEL_ENV === 'esm'
 
   const plugins = [
-    [
-      '@babel/plugin-transform-runtime',
-      { useESModules: isESMBuild }
-    ],
+    ['@babel/plugin-transform-runtime', { useESModules: isESMBuild }],
     '@babel/plugin-transform-react-jsx',
     [
       '@babel/plugin-proposal-object-rest-spread',
