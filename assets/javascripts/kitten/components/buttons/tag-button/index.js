@@ -9,12 +9,14 @@ import classNames from 'classnames'
 const StyledTagButton = styled.button`
   min-height: ${pxToRem(40)};
   min-width: ${pxToRem(60)};
-  padding: 0 ${pxToRem(20)};
-  font-size: ${stepToRem(-2)};
+  /* IE11 */
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     height: ${pxToRem(40)};
     width: ${pxToRem(60)};
   }
+
+  padding: 0 ${pxToRem(20)};
+  font-size: ${stepToRem(-2)};
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -149,23 +151,26 @@ export const TagButton = ({
   icon,
   className,
   variant,
+  size,
+  tag,
+  as,
   ...others
 }) => {
   return (
     <StyledTagButton
+      type={!tag && !as ? 'button' : null}
       className={classNames(
         'k-Buttons__tagButton',
         className,
         `k-Buttons__tagButton--${modifier}`,
         `k-Buttons__tagButton--${variant}`,
+        `k-Buttons__tagButton--${size}`,
         {
-          'k-Buttons__tagButton--tiny': tiny,
-          'k-Buttons__tagButton--big': big,
-          'k-Buttons__tagButton--huge': huge,
           'k-Buttons__tagButton--selected': selected,
           'k-Buttons__tagButton--icon': icon,
         },
       )}
+      as={tag || as}
       {...others}
     >
       {children}
@@ -175,9 +180,7 @@ export const TagButton = ({
 
 TagButton.propTypes = {
   modifier: PropTypes.oneOf(['helium', 'hydrogen', 'carbon']),
-  tiny: PropTypes.bool,
-  big: PropTypes.bool,
-  huge: PropTypes.bool,
+  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge']),
   icon: PropTypes.bool,
   selected: PropTypes.bool,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
@@ -187,9 +190,7 @@ TagButton.defaultProps = {
   children: 'Tag',
   modifier: 'hydrogen',
   icon: false,
-  tiny: false,
-  big: false,
-  huge: false,
+  size: 'regular',
   selected: false,
   variant: 'andromeda',
 }

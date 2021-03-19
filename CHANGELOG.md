@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove size props (`giant`, `huge`, `regular`, `big`, `tiny`) on `TagButton`.
+- Breaking change: Remove `k-TagButton` mixin.
+- Feature: Add `size` component to `TagButton`.
+
 ## [3.0.0-beta.19] - 2021-03-19
 
 Breaking changes:
