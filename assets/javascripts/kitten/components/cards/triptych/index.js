@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import debounce from 'lodash/fp/debounce'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { VerticalStroke } from '../../../components/layout/vertical-stroke'
 import { ScreenConfig } from '../../../constants/screen-config'
-import { debounce } from '../../../helpers/utils/debounce'
 import { pxToRem } from '../../../helpers/utils/typography'
 import styled from 'styled-components'
 
@@ -81,22 +81,20 @@ export const Triptych = ({ title, item1, item2, item3 }) => {
   const titleElement = useRef(null)
   const firstElement = useRef(null)
 
-  const updateSecondCardMargin = () => {
-    const titleHeight = titleElement.current.clientHeight
-    const firstHeight = firstElement.current.clientHeight
-    setsecondElementMarginTop(firstHeight - titleHeight)
-  }
-
-  const debounceUpdateMargin = () => debounce(updateSecondCardMargin, 200)
-
   useEffect(() => {
-    debounceUpdateMargin()
+    const updateSecondCardMargin = () => {
+      const titleHeight = titleElement.current.clientHeight
+      const firstHeight = firstElement.current.clientHeight
+      setsecondElementMarginTop(firstHeight - titleHeight)
+    }
 
-    window.addEventListener('resize', debounceUpdateMargin())
-    window.addEventListener('load', debounceUpdateMargin())
+    const debounceUpdateMargin = () => debounce(200)(updateSecondCardMargin)
+    debounceUpdateMargin()
+    window.addEventListener('resize', debounceUpdateMargin)
+    window.addEventListener('load', debounceUpdateMargin)
     return () => {
-      window.removeEventListener('resize', debounceUpdateMargin())
-      window.removeEventListener('load', debounceUpdateMargin())
+      window.removeEventListener('resize', debounceUpdateMargin)
+      window.removeEventListener('load', debounceUpdateMargin)
     }
   }, [])
 
