@@ -6,6 +6,29 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Ultra breaking change: remove all SASS component mixins, helpers, definitions and schemas that are not used.
 
+## [3.0.0-beta.19] - 2021-03-19
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Dropdown`
+  - `k-PlatformSwitch`
+  - `k-UserMenu`
+- Move the following components:
+  - `Dropdown` -> `components/navigation/header-menu/components`
+  - `DropdownButton` -> `components/navigation/header-menu/components`
+- Remove default export for `Dropdown` and `DropdownButton`.
+- Remove unused props for `Dropdown`.
+
+Features:
+
+- Add the following Logo components:
+  - `MaisonDeCrowdfundingLogo`
+  - `MicrodonLogo`
+  - `GoodeedLogo`
+  - `KkbbCoLogo`
+- Add missing exports to ESM exports.
+
 ## [3.0.0-beta.18] - 2021-03-18
 
 Fix:

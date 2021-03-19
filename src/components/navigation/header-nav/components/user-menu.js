@@ -19,7 +19,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _dropdown = _interopRequireDefault(require("../../../../components/dropdowns/v2/dropdown"));
+var _dropdown = require("./dropdown");
 
 var _context = require("./context");
 
@@ -63,7 +63,7 @@ var UserMenu = function UserMenu(_ref) {
   return /*#__PURE__*/_react.default.createElement(_context.Context.Consumer, null, function (_ref2) {
     var id = _ref2.id,
         callOnToggle = _ref2.callOnToggle;
-    return /*#__PURE__*/_react.default.createElement(_dropdown.default, (0, _extends2.default)({}, props, {
+    return /*#__PURE__*/_react.default.createElement(_dropdown.Dropdown, (0, _extends2.default)({}, props, {
       button: button,
       buttonClassName: buttonClassName,
       buttonId: getButtonId(id),
