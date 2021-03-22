@@ -137,7 +137,7 @@
     "build:css": "webpack --config webpack/sass.config.js",
     "build:utilities": "rm -rf src/stylesheets && webpack --config webpack/utilities.config.js",
     "eslint": "eslint --fix assets/javascripts/**",
-    "prettier": "find ./assets/javascripts -regex '.*.js' | xargs prettier --config prettier.config.js --write",
+    "prettier": "find ./assets/javascripts -regex '.*.js' | xargs prettier --config prettier.config.js --write"
   },
   "lint-staged": {
     "assets/**/*.js": [
