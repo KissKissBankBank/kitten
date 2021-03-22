@@ -32,7 +32,7 @@
     "event-emitter": "0.3.5",
     "html-to-react": "1.4.5",
     "is-string-a-number": "2.0.2",
-    "js-base64": "3.6.0",
+    "js-base64": "2.6.4",
     "lodash": "4.17.21",
     "modularscale-js": "3.0.1",
     "modularscale-sass": "3.0.10",
