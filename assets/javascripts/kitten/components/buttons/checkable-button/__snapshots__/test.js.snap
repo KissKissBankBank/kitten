@@ -394,7 +394,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 <button
   aria-checked={null}
-  className="c0 k-Button c1 k-Button--normal k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button c1 k-Button--regular k-Button--hydrogen k-Button--andromeda"
   disabled={false}
   style={
     Object {
@@ -1208,7 +1208,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-Button--normal k-Button--lithium k-Button--andromeda"
+  className="c0 k-Button c1 k-Button--regular k-Button--lithium k-Button--andromeda"
   disabled={true}
   style={
     Object {
@@ -1602,7 +1602,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-Button--normal k-Button--copper k-Button--andromeda"
+  className="c0 k-Button c1 k-Button--regular k-Button--copper k-Button--andromeda"
   disabled={false}
   style={
     Object {

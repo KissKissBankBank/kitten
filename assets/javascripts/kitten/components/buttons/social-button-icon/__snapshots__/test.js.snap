@@ -341,7 +341,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--social_facebook k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_facebook k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -1085,7 +1085,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--social_instagram k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_instagram k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -1829,7 +1829,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--social_linkedin k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_linkedin k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -2557,7 +2557,7 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--social_pinterest k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_pinterest k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -3285,7 +3285,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--social_twitter k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_twitter k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -4013,7 +4013,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--social_youtube k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_youtube k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,

@@ -384,7 +384,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   role="group"
 >
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--normal k-Button--hydrogen k-Button--andromeda"
+    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--andromeda"
     style={
       Object {
         "--border-radius": 0,
@@ -395,7 +395,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
     Button1
   </button>
   <button
-    className="c1 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--normal k-Button--hydrogen k-Button--andromeda"
+    className="c1 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--regular k-Button--hydrogen k-Button--andromeda"
     style={
       Object {
         "--border-radius": 0,
@@ -406,7 +406,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
     Button2
   </button>
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--normal k-Button--hydrogen k-Button--andromeda"
+    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--andromeda"
     style={
       Object {
         "--border-radius": 0,

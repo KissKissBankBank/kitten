@@ -534,7 +534,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
         className="k-u-margin-top-single"
       >
         <span
-          className="c1 k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          className="c1 k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -1509,7 +1509,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
         className="k-u-margin-top-single"
       >
         <span
-          className="c1 k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          className="c1 k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -1571,7 +1571,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c3 k-Button k-Button--normal k-Button--helium k-Button--andromeda k-Button--fluid"
+      className="c3 k-Button k-Button--regular k-Button--helium k-Button--andromeda k-Button--fluid"
       style={
         Object {
           "--border-radius": 0,
@@ -2466,7 +2466,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
         className="k-u-margin-top-single"
       >
         <span
-          className="c1 k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          className="c1 k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -2528,7 +2528,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c3 k-Button k-Button--normal k-Button--helium k-Button--andromeda k-Button--fluid"
+      className="c3 k-Button k-Button--regular k-Button--helium k-Button--andromeda k-Button--fluid"
       style={
         Object {
           "--border-radius": 0,
@@ -3441,7 +3441,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
         className="k-u-margin-top-single"
       >
         <span
-          className="c2 k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          className="c2 k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -3503,7 +3503,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c4 k-Button k-Button--normal k-Button--helium k-Button--andromeda k-Button--fluid"
+      className="c4 k-Button k-Button--regular k-Button--helium k-Button--andromeda k-Button--fluid"
       style={
         Object {
           "--border-radius": 0,
