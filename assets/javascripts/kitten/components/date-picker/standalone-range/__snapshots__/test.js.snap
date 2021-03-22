@@ -78,6 +78,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
           role="grid"
         >
           <div
+            aria-live="polite"
             className="DayPicker-Caption"
             role="heading"
           >
