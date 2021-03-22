@@ -8,4 +8,4 @@ export default {
   },
 }
 
-export const FullPage = PreDeposit
+export const FullPage = args => <PreDeposit {...args} />
