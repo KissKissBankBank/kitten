@@ -3,19 +3,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'production',
-  entry: [
-    '@babel/polyfill',
-    './styleguide/index.js',
-  ],
+  entry: ['./assets/stylesheets/index.js'],
   resolve: {
-    extensions: ['.scss', '.js', '.json'],
+    extensions: ['.js', '.scss'],
     alias: {
-      icons: path.join(__dirname, './assets/images/icons')
-    }
-  },
-  output: {
-    path: path.resolve(__dirname),
-    filename: 'build/app.js',
+      icons: path.join(__dirname, './assets/images/icons'),
+    },
   },
   module: {
     rules: [
@@ -24,9 +17,9 @@ module.exports = {
         test: /\.scss$/,
         use: [
           { loader: MiniCssExtractPlugin.loader },
-          "css-loader",
-          "sass-loader"
-        ]
+          'css-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.(png|jpg|woff|woff2|eot|ttf|svg|otf)$/,
@@ -36,7 +29,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'build/app.css',
+      filename: 'STYLE.css',
     }),
-  ]
+  ],
 }
