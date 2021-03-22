@@ -32,44 +32,10 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with `tiny` prop', () => {
+  describe('with `size` prop', () => {
     beforeEach(() => {
       component = renderer
         .create(<Button size="tiny">MyButton</Button>)
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with `big` prop', () => {
-    beforeEach(() => {
-      component = renderer.create(<Button size="big">MyButton</Button>).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with `huge` prop', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(<Button size="huge">MyButton</Button>)
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with `giant` prop', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(<Button size="giant">MyButton</Button>)
         .toJSON()
     })
 

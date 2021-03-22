@@ -47,6 +47,7 @@ export const ButtonIcon = ({
       'k-ButtonIcon--withoutHover': withoutHover,
       'k-ButtonIcon--verticalArrow': verticalArrow,
     })}
+    size={size}
     {...others}
     icon
   />
@@ -54,7 +55,7 @@ export const ButtonIcon = ({
 
 ButtonIcon.defaultProps = {
   tag: 'button',
-  size: 'normal',
+  size: 'regular',
   modifier: 'hydrogen',
   withoutHover: false,
   verticalArrow: false,

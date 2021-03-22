@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
@@ -63,9 +64,7 @@ const StyledButtonImage = styled.button`
 export const ButtonImage = ({
   tag,
   className,
-  tiny,
-  big,
-  huge,
+  size,
   withoutPointerEvents,
   withBorder,
   img,
@@ -76,10 +75,8 @@ export const ButtonImage = ({
       as={tag}
       className={classNames(
         'k-ButtonImage',
+        `k-ButtonImage--${size}`,
         {
-          'k-ButtonImage--tiny': tiny,
-          'k-ButtonImage--big': big,
-          'k-ButtonImage--huge': huge,
           'k-ButtonImage--withoutPointerEvents': withoutPointerEvents,
           'k-ButtonImage--withBorder': withBorder,
         },
@@ -101,12 +98,21 @@ export const ButtonImage = ({
 ButtonImage.defaultProps = {
   tag: 'button',
   className: null,
-  tiny: false,
-  big: false,
-  huge: false,
+  size: 'regular',
   withoutPointerEvents: false,
   withBorder: false,
   img: {
     className: null,
+  },
+}
+
+ButtonImage.propTypes = {
+  tag: PropTypes.string,
+  className: PropTypes.string,
+  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge']),
+  withoutPointerEvents: PropTypes.bool,
+  withBorder: PropTypes.bool,
+  img: {
+    className: PropTypes.string,
   },
 }

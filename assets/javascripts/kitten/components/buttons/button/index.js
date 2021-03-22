@@ -348,7 +348,7 @@ export const Button = ({
       case props.giant:
         return 'giant'
       default:
-        return 'normal'
+        return 'regular'
     }
   })()
 
@@ -397,7 +397,7 @@ Button.propTypes = {
     'big',
     'huge',
     'giant',
-    'normal',
+    'regular',
   ]),
   modifier: PropTypes.oneOf([
     'hydrogen',
@@ -422,7 +422,7 @@ Button.defaultProps = {
   icon: false,
   rounded: false,
   borderRadius: 0,
-  size: 'normal',
+  size: 'regular',
   modifier: 'hydrogen',
   variant: 'andromeda',
 }

@@ -53,15 +53,15 @@ const sizeOptions = {
   Nano: 'nano',
   Micro: 'micro',
   Tiny: 'tiny',
+  Regular: 'regular',
   Big: 'big',
   Huge: 'huge',
   Giant: 'giant',
-  Normal: 'normal',
 }
 
 export const WithText = () => (
   <Button
-    size={select('Size', sizeOptions, 'normal')}
+    size={select('Size', sizeOptions, 'regular')}
     fluid={boolean('Fluid', false)}
     modifier={select('Modifier', modifierOptions, 'hydrogen')}
     variant={select('Variant', variantOptions, 'andromeda')}
@@ -88,7 +88,7 @@ WithText.decorators = [
 
 export const WithIcon = () => (
   <Button
-    size={select('Size', sizeOptions, 'normal')}
+    size={select('Size', sizeOptions, 'regular')}
     rounded={boolean('Rounded', false)}
     modifier={select('Modifier', modifierOptions, 'hydrogen')}
     variant={select('Variant', variantOptions, 'andromeda')}
@@ -122,7 +122,7 @@ export const WithTextAndIcon = () => {
   const iconPosition = radios('Icon position', svgPositionOptions, 'left')
   return (
     <Button
-      size={select('Size', sizeOptions, 'normal')}
+      size={select('Size', sizeOptions, 'regular')}
       fluid={boolean('Fluid', false)}
       modifier={select('Modifier', modifierOptions, 'hydrogen')}
       variant={select('Variant', variantOptions, 'andromeda')}
@@ -163,7 +163,7 @@ WithTextAndIcon.decorators = [
 
 export const WithBadge = () => (
   <Button
-    size={select('Size', sizeOptions, 'normal')}
+    size={select('Size', sizeOptions, 'regular')}
     modifier={select('Modifier', modifierOptions, 'helium')}
     variant={select('Variant', variantOptions, 'andromeda')}
     disabled={boolean('Disabled', false)}

@@ -4,7 +4,6 @@ import { CrossIcon } from '../../../components/icons/cross-icon'
 
 export const CloseButton = ({
   closeButtonLabel,
-  size,
   buttonModifier,
   ...others
 }) => (
@@ -14,7 +13,6 @@ export const CloseButton = ({
     title={closeButtonLabel}
     aria-label={closeButtonLabel}
     modifier={buttonModifier}
-    size={size}
     {...others}
   >
     <CrossIcon width="8" height="8" />
@@ -24,5 +22,4 @@ export const CloseButton = ({
 CloseButton.defaultProps = {
   closeButtonLabel: 'Close',
   buttonModifier: 'hydrogen',
-  size: null,
 }
