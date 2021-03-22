@@ -124,7 +124,8 @@ var InnerAnonymousMenu = function InnerAnonymousMenu() {
 
 var LendopolisHeaderNavStory = function LendopolisHeaderNavStory(_ref) {
   var isLogged = _ref.isLogged,
-      isFixed = _ref.isFixed;
+      isFixed = _ref.isFixed,
+      stickyProps = _ref.stickyProps;
 
   var _useState = (0, _react.useState)(null),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -153,7 +154,8 @@ var LendopolisHeaderNavStory = function LendopolisHeaderNavStory(_ref) {
       href: '#view',
       text: 'Aller au contenu',
       zIndex: 300
-    }
+    },
+    stickyProps: stickyProps
   }, /*#__PURE__*/_react.default.createElement(_index.default.BurgerMenu, {
     dropdownContentWidth: (0, _typography.pxToRem)(burgerMenuWidth)
   }, /*#__PURE__*/_react.default.createElement(InnerBurgerMenu, null)), /*#__PURE__*/_react.default.createElement(_index.default.Logo, {

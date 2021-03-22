@@ -100,6 +100,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   cursor: pointer;
 }
 
+.c0 .k-DashboardMenu__expandable[open] .k-DashboardMenu__expandable__title,
 .c0 .k-DashboardMenu__expandable--hasActiveInside .k-DashboardMenu__expandable__title,
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item[aria-current="page"] {
   color: #fff;

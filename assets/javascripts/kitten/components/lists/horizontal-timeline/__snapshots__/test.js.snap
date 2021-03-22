@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HorizontalTimeline /> by default matches with snapshot 1`] = `
+<dl
+  className="sc-bdVaJa gEUAmR k-HorizontalTimeline"
+  style={
+    Object {
+      "--HorizontalTimeline-columnsCount": 0,
+    }
+  }
+>
+  <i
+    className="k-HorizontalTimeline__line"
+  />
+  <b
+    class="k-HorizontalTimeline__ellipsis"
+  />
+</dl>
+`;
+
+exports[`<HorizontalTimeline /> with HorizontalTimeline.Block and ellipsisColumns prop matches with snapshot 1`] = `
+<dl
+  className="sc-bdVaJa gEUAmR k-HorizontalTimeline"
+  style={
+    Object {
+      "--HorizontalTimeline-columnsCount": 2,
+    }
+  }
+>
+  <dt
+    className="k-HorizontalTimeline__year"
+  >
+    2008
+  </dt>
+  <dd
+    className="k-HorizontalTimeline__block"
+  >
+    Content 1
+  </dd>
+  <dt
+    className="k-HorizontalTimeline__year"
+  >
+    2009
+  </dt>
+  <dd
+    className="k-HorizontalTimeline__block"
+  >
+    Content 2
+  </dd>
+  <i
+    className="k-HorizontalTimeline__line"
+  />
+  <b
+    class="k-HorizontalTimeline__ellipsis"
+    style={
+      Object {
+        "--HorizontalTimeline-ellipsis-column": 1,
+      }
+    }
+  />
+  <b
+    class="k-HorizontalTimeline__ellipsis"
+  />
+</dl>
+`;

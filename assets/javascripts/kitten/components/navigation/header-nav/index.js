@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { ScreenConfig } from '../../../constants/screen-config'
@@ -54,7 +55,7 @@ const Header = styled.header`
 `
 
 const Navigation = styled.nav`
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   box-sizing: border-box;
 
@@ -190,6 +191,10 @@ const HeaderNav = ({
           isSticky={stickyState}
           isMenuExpanded={isMenuExpanded}
           {...stickyProps}
+          className={classNames(
+            'k-HeaderNav__stickyContainer',
+            stickyProps?.className,
+          )}
         >
           <Navigation
             ref={headerRef}

@@ -90,45 +90,44 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 
 .c0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 100%;
 }
 
 .c0:not(.k-DashboardLayout__flow--isLoading) .k-DashboardLayout__flow__loading {
   display: none;
 }
 
-.c0.k-DashboardLayout__flow--isLoading .k-DashboardLayout__flow__contentGrid {
+.c0.k-DashboardLayout__flow--isLoading .k-DashboardLayout__flow__content {
   display: none;
 }
 
-.c0 .k-DashboardLayout__flow__contentGrid,
-.c0 .k-DashboardLayout__flow__loading {
-  background-color: #fff;
-  position: relative;
-  z-index: 1;
-}
-
-.c0 .k-DashboardLayout__flow__contentGrid {
-  box-sizing: border-box;
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
+.c0 .k-DashboardLayout__flow__loading,
 .c0 .k-DashboardLayout__flow__content {
+  -webkit-flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  background-color: #fff;
+  padding-top: 3.125rem;
   padding-bottom: 3.125rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .c0 .k-DashboardLayout__flow__nav {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   background-color: #fff;
-  position: absolute;
   width: 100%;
-  bottom: -5rem;
 }
 
 .c0 .k-DashboardLayout__flow__nav__actionsContainer {
@@ -168,7 +167,6 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 }
 
 .c0 .k-DashboardLayout__flow__loading {
-  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -181,8 +179,6 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 100%;
-  padding-bottom: 5rem;
 }
 
 @media (min-width:40rem) {
@@ -275,36 +271,36 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 
 @media (min-width:67.5rem) {
   .c0 {
+    min-height: 100vh;
     display: grid;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 4fr 3fr;
-    gap: calc(100% * 4 / 3 * 0.1);
+    gap: 0 calc(100% * 4 / 3 * 0.1);
   }
 }
 
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout__flow__contentGrid,
-  .c0 .k-DashboardLayout__flow__loading {
-    margin-bottom: 1.875rem;
-  }
-}
-
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout__flow__contentGrid {
-    grid-column: 1 / 2;
-  }
-}
-
-@media (min-width:67.5rem) {
+@media (min-width:40rem) {
+  .c0 .k-DashboardLayout__flow__loading,
   .c0 .k-DashboardLayout__flow__content {
+    padding-top: 5rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__loading,
+  .c0 .k-DashboardLayout__flow__content {
+    grid-column: 1 / 2;
     padding-bottom: 1.25rem;
   }
 }
 
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout__flow__nav {
+    grid-column: 1 / 2;
     bottom: 0;
     position: -webkit-sticky;
     position: sticky;
+    z-index: 1;
   }
 }
 
@@ -327,14 +323,8 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   }
 }
 
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout__flow__loading {
-    grid-column: 1 / 2;
-  }
-}
-
 <div
-  className="c0 k-DashboardLayout__flow"
+  className="c0 k-DashboardLayout__flow k-DashboardLayout__fullHeight"
 >
   <div
     className="k-DashboardLayout__flow__loading"
@@ -548,45 +538,44 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 
 .c0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 100%;
 }
 
 .c0:not(.k-DashboardLayout__flow--isLoading) .k-DashboardLayout__flow__loading {
   display: none;
 }
 
-.c0.k-DashboardLayout__flow--isLoading .k-DashboardLayout__flow__contentGrid {
+.c0.k-DashboardLayout__flow--isLoading .k-DashboardLayout__flow__content {
   display: none;
 }
 
-.c0 .k-DashboardLayout__flow__contentGrid,
-.c0 .k-DashboardLayout__flow__loading {
-  background-color: #fff;
-  position: relative;
-  z-index: 1;
-}
-
-.c0 .k-DashboardLayout__flow__contentGrid {
-  box-sizing: border-box;
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
+.c0 .k-DashboardLayout__flow__loading,
 .c0 .k-DashboardLayout__flow__content {
+  -webkit-flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  background-color: #fff;
+  padding-top: 3.125rem;
   padding-bottom: 3.125rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .c0 .k-DashboardLayout__flow__nav {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   background-color: #fff;
-  position: absolute;
   width: 100%;
-  bottom: -5rem;
 }
 
 .c0 .k-DashboardLayout__flow__nav__actionsContainer {
@@ -626,7 +615,6 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 }
 
 .c0 .k-DashboardLayout__flow__loading {
-  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -639,8 +627,6 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 100%;
-  padding-bottom: 5rem;
 }
 
 @media (min-width:40rem) {
@@ -733,36 +719,36 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 
 @media (min-width:67.5rem) {
   .c0 {
+    min-height: 100vh;
     display: grid;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 4fr 3fr;
-    gap: calc(100% * 4 / 3 * 0.1);
+    gap: 0 calc(100% * 4 / 3 * 0.1);
   }
 }
 
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout__flow__contentGrid,
-  .c0 .k-DashboardLayout__flow__loading {
-    margin-bottom: 1.875rem;
-  }
-}
-
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout__flow__contentGrid {
-    grid-column: 1 / 2;
-  }
-}
-
-@media (min-width:67.5rem) {
+@media (min-width:40rem) {
+  .c0 .k-DashboardLayout__flow__loading,
   .c0 .k-DashboardLayout__flow__content {
+    padding-top: 5rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0 .k-DashboardLayout__flow__loading,
+  .c0 .k-DashboardLayout__flow__content {
+    grid-column: 1 / 2;
     padding-bottom: 1.25rem;
   }
 }
 
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout__flow__nav {
+    grid-column: 1 / 2;
     bottom: 0;
     position: -webkit-sticky;
     position: sticky;
+    z-index: 1;
   }
 }
 
@@ -785,14 +771,8 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   }
 }
 
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout__flow__loading {
-    grid-column: 1 / 2;
-  }
-}
-
 <div
-  className="c0 k-DashboardLayout__flow"
+  className="c0 k-DashboardLayout__flow k-DashboardLayout__fullHeight"
 >
   <div
     className="k-DashboardLayout__flow__loading"
@@ -935,6 +915,7 @@ button:hover .c1 {
 
 .c0 {
   position: relative;
+  overscroll-behavior: none;
 }
 
 .c0 * {
@@ -953,6 +934,11 @@ button:hover .c1 {
 .c0 .k-DashboardLayout__backLink:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0 .k-DashboardLayout__sideWrapper:focus,
+.c0 .k-DashboardLayout__mainWrapper:focus {
+  outline: 0.125rem solid #bae8fd;
 }
 
 .c0 .k-DashboardLayout__quickAccessLink {
@@ -983,17 +969,6 @@ button:hover .c1 {
   -webkit-transition-delay: 0,.2s;
   transition-delay: 0,.2s;
   outline: 0.125rem solid #bae8fd;
-}
-
-.c0 .text--withEllipsis {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.c0 .k-ButtonImageWithText__text {
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 @media (max-width:67.4375rem) {
@@ -1098,6 +1073,7 @@ button:hover .c1 {
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
+    background-color: #fff;
     width: calc(100vw + 0.125rem);
     display: -webkit-box;
     display: -webkit-flex;
@@ -1155,8 +1131,6 @@ button:hover .c1 {
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before {
@@ -1172,6 +1146,11 @@ button:hover .c1 {
     z-index: 100;
     -webkit-transition: background-color .2s ease-in-out,opacity .2s ease-in-out;
     transition: background-color .2s ease-in-out,opacity .2s ease-in-out;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main > *:not(.k-DashboardLayout__fullWidth) {
@@ -1199,8 +1178,9 @@ button:hover .c1 {
     padding-right: 1.25rem;
   }
 
-  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main {
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
     padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
   }
 }
 
@@ -1279,11 +1259,15 @@ button:hover .c1 {
     flex: 0 1 auto;
   }
 
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
+    background-color: #fff;
+  }
+
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
     display: none;
   }
 
-  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main {
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
@@ -1315,7 +1299,7 @@ button:hover .c1 {
     <div
       aria-hidden={true}
       className="k-DashboardLayout__sideWrapper"
-      tabIndex={0}
+      tabIndex={-1}
     >
       <a
         className="k-DashboardLayout__backLink"
@@ -1363,7 +1347,7 @@ button:hover .c1 {
     </div>
     <div
       className="k-DashboardLayout__mainWrapper"
-      tabIndex={0}
+      tabIndex={-1}
     >
       <header
         className="k-DashboardLayout__heading"

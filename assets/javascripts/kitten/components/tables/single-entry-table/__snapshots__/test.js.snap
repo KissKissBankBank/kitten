@@ -82,7 +82,7 @@ exports[`<SingleEntryTable /> with a complete structure and custom classes match
     className="SingleEntryTable__TableContainer"
   >
     <table
-      className="SingleEntryTable__Table"
+      className="SingleEntryTable__Table customClass"
       id="SingleEntryTable"
     >
       <thead
@@ -90,7 +90,7 @@ exports[`<SingleEntryTable /> with a complete structure and custom classes match
       >
         <tr>
           <th
-            className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol"
+            className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol customHeaderColClass"
             scope="column"
           >
             Header 1
@@ -112,7 +112,7 @@ exports[`<SingleEntryTable /> with a complete structure and custom classes match
       <tbody>
         <tr>
           <td
-            className="SingleEntryTable__Column SingleEntryTable__Column--Col"
+            className="SingleEntryTable__Column SingleEntryTable__Column--Col customColClass"
           >
             Content 1
           </td>

@@ -108,7 +108,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   transform: scale(0);
 }
 
-.c1[aria-checked='true']::after {
+.c1[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -117,17 +117,26 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
 }
 
-.c1:hover,
 .c1:focus {
+  outline-offset: -0.125rem;
+}
+
+.c1:hover:not(:disabled),
+.c1:focus:not(:disabled) {
   border-color: #bae8fd;
   background-color: #fff;
   color: #19b4fa;
 }
 
-.c1:active {
+.c1:active:not(:disabled) {
   border-color: #05a8e6;
   background-color: #fff;
   color: #05a8e6;
+}
+
+.c1[aria-checked]:focus {
+  outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -138,7 +147,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 }
 
 <button
-  aria-checked={false}
+  aria-checked={null}
   className="c0 c1"
   disabled={false}
 >
@@ -254,7 +263,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   transform: scale(0);
 }
 
-.c1[aria-checked='true']::after {
+.c1[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -263,17 +272,26 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
 }
 
-.c1:hover,
 .c1:focus {
+  outline-offset: -0.125rem;
+}
+
+.c1:hover:not(:disabled),
+.c1:focus:not(:disabled) {
   border-color: #bae8fd;
   background-color: #fff;
   color: #19b4fa;
 }
 
-.c1:active {
+.c1:active:not(:disabled) {
   border-color: #05a8e6;
   background-color: #fff;
   color: #05a8e6;
+}
+
+.c1[aria-checked]:focus {
+  outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -416,13 +434,35 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   transform: scale(0);
 }
 
-.c1[aria-checked='true']::after {
+.c1[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   -webkit-transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
+}
+
+.c1:focus {
+  outline-offset: -0.125rem;
+}
+
+.c1:hover:not(:disabled),
+.c1:focus:not(:disabled) {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #19b4fa;
+}
+
+.c1:active:not(:disabled) {
+  border-color: #05a8e6;
+  background-color: #fff;
+  color: #05a8e6;
+}
+
+.c1[aria-checked]:focus {
+  outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -549,13 +589,22 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   transform: scale(0);
 }
 
-.c1[aria-checked='true']::after {
+.c1[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   -webkit-transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
+}
+
+.c1:focus {
+  outline-offset: -0.125rem;
+}
+
+.c1[aria-checked]:focus {
+  outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -686,7 +735,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   transform: scale(0);
 }
 
-.c1[aria-checked='true']::after {
+.c1[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -695,17 +744,26 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
 }
 
-.c1:hover,
 .c1:focus {
+  outline-offset: -0.125rem;
+}
+
+.c1:hover:not(:disabled),
+.c1:focus:not(:disabled) {
   border-color: #bae8fd;
   background-color: #fff;
   color: #19b4fa;
 }
 
-.c1:active {
+.c1:active:not(:disabled) {
   border-color: #05a8e6;
   background-color: #fff;
   color: #05a8e6;
+}
+
+.c1[aria-checked]:focus {
+  outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {

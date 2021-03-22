@@ -176,6 +176,7 @@ export { CheckList } from './components/lists/check-list'
 export { NavList } from './components/lists/nav-list'
 export { TagList } from './components/lists/tag-list'
 export { Timeline } from './components/lists/timeline'
+export { HorizontalTimeline } from './components/lists/horizontal-timeline'
 
 // Loaders
 export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph'
@@ -371,6 +372,9 @@ export { TagIcon } from './components/icons/tag-icon'
 export { FileIcon } from './components/icons/file-icon'
 export { LoudspeakerIcon } from './components/icons/loudspeaker-icon'
 export { ShieldIcon } from './components/icons/shield-icon'
+export { PeopleIcon } from './components/icons/people-icon'
+export { StatsIcon } from './components/icons/stats-icon'
+export { SpeechBubbleIcon } from './components/icons/speech-bubble-icon'
 
 // ---------
 // CONSTANTS

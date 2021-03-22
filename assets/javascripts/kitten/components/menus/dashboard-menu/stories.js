@@ -9,6 +9,9 @@ import {
   FileIcon,
   LoudspeakerIcon,
   ShieldIcon,
+  PeopleIcon,
+  StatsIcon,
+  SpeechBubbleIcon,
 } from '../../..'
 
 export default {
@@ -20,6 +23,12 @@ export const Default = () => (
   <DashboardMenu>
     <DashboardMenu.Item href="#" icon={() => <HomeIcon color="currentColor" />}>
       Accueil
+    </DashboardMenu.Item>
+    <DashboardMenu.Item
+      href="#"
+      icon={() => <PeopleIcon color="currentColor" />}
+    >
+      Contributeurs
     </DashboardMenu.Item>
     <DashboardMenu.Item
       href="#"
@@ -42,6 +51,12 @@ export const Default = () => (
     </DashboardMenu.Item>
     <DashboardMenu.Item
       href="https://www.kisskissbankbank.com"
+      icon={() => <StatsIcon color="currentColor" />}
+    >
+      Statistiques
+    </DashboardMenu.Item>
+    <DashboardMenu.Item
+      href="https://www.kisskissbankbank.com"
       icon={() => <LoudspeakerIcon color="currentColor" />}
     >
       Marketing
@@ -56,5 +71,11 @@ export const Default = () => (
       </DashboardMenu.Item>
       <DashboardMenu.Item href="#">Documents justificatifs</DashboardMenu.Item>
     </DashboardMenu.Expandable>
+    <DashboardMenu.Item
+      href="https://www.kisskissbankbank.com"
+      icon={() => <SpeechBubbleIcon color="currentColor" />}
+    >
+      Actualités
+    </DashboardMenu.Item>
   </DashboardMenu>
 )

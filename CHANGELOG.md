@@ -4,6 +4,67 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.125.0] - 2021-03-15
+
+Feature:
+
+- Add `HorizontalTimeline` component.
+
+## [2.124.0] - 2021-03-12
+
+Features:
+
+- Add `className` prop propagation to `SingleEntryTable` and subcomponents:
+  - `SingleEntryTable.Col`
+  - `SingleEntryTable.HeaderCol`
+- Add `className` prop propagation to `DoubleEntryTable` and subcomponents:
+  - `DoubleEntryTable.Col`
+  - `DoubleEntryTable.HeaderCol`
+  - `DoubleEntryTable.TitleCol`
+
+## [2.123.3] - 2021-03-10
+
+Fix:
+
+- Use callback ref in `useLazyObserver`.
+
+## [2.123.2] - 2021-03-03
+
+Fix:
+
+- Perf problem with `Carousel` on mobile devices.
+
+## [2.123.1] - 2021-03-01
+
+Fix:
+
+- Allow for `null` value on `HeaderNav` `stickyProps` prop.
+
+## [2.123.0] - 2021-03-01
+
+Feature:
+
+-  Add `PeopleIcon`, `StatsIcon` and `SpeechBubbleIcon`.
+
+Fixes:
+
+- Remove `unique "key" prop` error on `DashboardLayout`.
+- Fix `StickyContainer` width on `HeaderNav`.
+
+## [2.122.0] - 2021-02-25
+
+Features:
+
+- Add `fullHeightContent` prop to `DashboardLayout`.
+- Add `shouldHideButton` prop to `DashboardLayout.Flow`.
+
+Fixes:
+
+- Fix `HeaderNav` width on Windows (Chrome & Firefox).
+- Fix `CheckableButton` focus styles while staying accessible.
+- Fix display on `DashboardLayout` for Chrome.
+- Fix details display on `DashboardMenu`.
+
 ## [2.121.0] - 2021-02-22
 
 Features:

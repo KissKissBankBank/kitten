@@ -88,6 +88,9 @@ import { HomeIcon } from './home-icon'
 import { LoudspeakerIcon } from './loudspeaker-icon'
 import { ShieldIcon } from './shield-icon'
 import { TagIcon } from './tag-icon'
+import { PeopleIcon } from './people-icon'
+import { StatsIcon } from './stats-icon'
+import { SpeechBubbleIcon } from './speech-bubble-icon'
 import { FlagIcon, flagList } from './flag-icon'
 import flagFile from 'icons/flags.png'
 
@@ -343,6 +346,9 @@ export const AllIcons = () => {
         <IconContainer children={<LoudspeakerIcon color={colorInput} />} />
         <IconContainer children={<ShieldIcon color={colorInput} />} />
         <IconContainer children={<TagIcon color={colorInput} />} />
+        <IconContainer children={<PeopleIcon color={colorInput} />} />
+        <IconContainer children={<StatsIcon color={colorInput} />} />
+        <IconContainer children={<SpeechBubbleIcon color={colorInput} />} />
       </Group>
       <Group title="Country flag icons">
         {flagList.map(country => (
