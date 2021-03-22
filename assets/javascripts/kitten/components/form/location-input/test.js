@@ -3,12 +3,13 @@ import renderer from 'react-test-renderer'
 import { LocationInput } from './index'
 import { setupGoogleMock } from '../../../config/__mocks__/googleMock'
 
+beforeAll(() => {
+  setupGoogleMock()
+  return true
+})
+
 describe('<LocationInput />', () => {
   it('should match its snapshot with props', () => {
-    beforeAll(() => {
-      setupGoogleMock()
-    })
-
     const tree = renderer
       .create(
         <LocationInput

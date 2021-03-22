@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LocationInput /> should match its snapshot with props 1`] = `
+<div
+  className=""
+  id="PlacesAutocomplete__root"
+  style={
+    Object {
+      "paddingBottom": "0px",
+      "position": "relative",
+    }
+  }
+>
+  <input
+    autoComplete="off"
+    className=""
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "display": "inline-block",
+        "padding": "10px",
+        "width": "100%",
+      }
+    }
+    type="text"
+  />
+</div>
+`;
