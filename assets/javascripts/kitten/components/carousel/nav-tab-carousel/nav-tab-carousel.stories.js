@@ -25,7 +25,7 @@ const links = [
 ]
 
 export default {
-  title: 'Molecules/NavTabCarousel',
+  title: 'Molecules/Carousels/NavTabCarousel',
   component: NavTabCarousel,
 }
 

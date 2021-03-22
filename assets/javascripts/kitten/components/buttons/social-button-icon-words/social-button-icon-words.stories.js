@@ -11,7 +11,7 @@ import { Grid, GridCol } from '../../grid/grid'
 
 export default {
   component: SocialButtonIconWords,
-  title: 'Buttons/SocialButtonIconWords',
+  title: 'Molecules/Buttons/SocialButtonIconWords',
 }
 
 const StoryContainer = ({ children }) => (

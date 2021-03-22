@@ -4,7 +4,7 @@ import { boolean } from '@storybook/addon-knobs'
 
 export default {
   component: Row,
-  title: 'Grid/Row',
+  title: 'Structure/Row',
   parameters: {
     component: Row,
   },

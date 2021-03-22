@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs'
 
 export default {
   component: SupTitle,
-  title: 'Typography/SupTitle',
+  title: 'Atoms/Typography/SupTitle',
   parameters: {
     component: SupTitle,
   },

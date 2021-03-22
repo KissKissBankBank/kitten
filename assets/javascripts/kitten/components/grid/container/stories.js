@@ -3,7 +3,7 @@ import { Container } from './index'
 import COLORS from '../../../constants/colors-config'
 
 export default {
-  title: 'Grid/Container',
+  title: 'Structure/Container',
   component: Container,
 }
 

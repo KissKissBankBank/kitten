@@ -25,7 +25,7 @@ const StoryContainer = ({ children }) => (
 
 export default {
   component: CrowdfundingCard,
-  title: 'Cards/CrowdfundingCard',
+  title: 'Molecules/Cards/CrowdfundingCard',
   parameters: {
     component: CrowdfundingCard,
     componentSubtitle:

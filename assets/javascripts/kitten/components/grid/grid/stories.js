@@ -3,7 +3,7 @@ import { Grid, GridCol } from './index'
 import { Container } from '../../..'
 
 export default {
-  title: 'Grid/Grid',
+  title: 'Structure/Grid',
   component: Grid,
 }
 

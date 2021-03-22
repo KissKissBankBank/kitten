@@ -8,7 +8,7 @@ import { Grid, GridCol } from '../../grid/grid'
 
 export default {
   component: Default,
-  title: 'Cards/ClickableCard',
+  title: 'Molecules/Cards/ClickableCard',
   parameters: {
     component: Default,
   },

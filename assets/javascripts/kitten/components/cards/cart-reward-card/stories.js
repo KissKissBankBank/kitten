@@ -7,7 +7,7 @@ import { Button } from '../../../components/buttons/button/button'
 
 export default {
   component: CartRewardCard,
-  title: 'Cards/CartRewardCard',
+  title: 'Molecules/Cards/CartRewardCard',
   parameters: {
     component: CartRewardCard,
   },

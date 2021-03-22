@@ -31,7 +31,7 @@ const StyledCarouselContainer = styled.div`
 `
 
 export default {
-  title: 'Cards/BackingCard',
+  title: 'Molecules/Cards/BackingCard',
   component: BackingCard,
 }
 

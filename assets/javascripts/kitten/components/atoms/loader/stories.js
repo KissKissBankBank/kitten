@@ -3,7 +3,7 @@ import { color } from '@storybook/addon-knobs'
 import { Loader } from './index'
 
 export default {
-  title: 'Atoms/Loader',
+  title: 'Atoms/LoadingAnimations/Loader',
   component: Loader,
 }
 

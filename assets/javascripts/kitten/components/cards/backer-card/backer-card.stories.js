@@ -18,7 +18,7 @@ const Description = () => (
 )
 
 export default {
-  title: 'Cards/BackerCard',
+  title: 'Molecules/Cards/BackerCard',
   component: BackerCard,
   decorators: [
     Story => (

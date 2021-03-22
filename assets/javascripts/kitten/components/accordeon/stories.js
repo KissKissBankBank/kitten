@@ -14,7 +14,7 @@ const StoryContainer = ({ children }) => (
 )
 
 export default {
-  title: 'Molecules/Accordeon',
+  title: 'Molecules/Expanding/Accordeon',
   component: Accordeon,
 }
 

@@ -6,7 +6,7 @@ import COLORS from '../../../constants/colors-config'
 
 export default {
   component: Text,
-  title: 'Typography/Text',
+  title: 'Atoms/Typography/Text',
   parameters: {
     component: Text,
     componentSubtitle: 'List of Text',

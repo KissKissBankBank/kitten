@@ -10,7 +10,7 @@ import { ScreenConfig } from '../../../constants/screen-config'
 
 export default {
   component: Default,
-  title: 'Molecules/Carousel/EngagementsCarousel',
+  title: 'Molecules/Carousels/Carousel: Engagements',
   parameters: {
     component: Default,
   },

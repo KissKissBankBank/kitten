@@ -5,7 +5,7 @@ import { Loader } from '../../../components/atoms/loader'
 
 export default {
   component: BasicUploader,
-  title: 'Molecules/BasicUploader',
+  title: 'Molecules/Upload/BasicUploader',
 }
 
 export const StatusReady = args => (

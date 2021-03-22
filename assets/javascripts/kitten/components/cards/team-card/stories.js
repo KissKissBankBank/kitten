@@ -7,7 +7,7 @@ import { Marger } from '../../layout/marger'
 
 export default {
   component: TeamCard,
-  title: 'Cards/TeamCard',
+  title: 'Molecules/Cards/TeamCard',
   parameters: {
     component: TeamCard,
   },

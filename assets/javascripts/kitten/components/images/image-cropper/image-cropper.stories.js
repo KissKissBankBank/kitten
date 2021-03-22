@@ -2,7 +2,7 @@ import React from 'react'
 import { ImageCropper } from './index'
 
 export default {
-  title: 'Molecules/Cropper',
+  title: 'Molecules/Upload/Cropper',
   component: ImageCropper,
 }
 

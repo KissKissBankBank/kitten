@@ -12,7 +12,7 @@ const StyledEngagementCardWithImage = styled(EngagementCardWithImage)`
 
 export default {
   component: EngagementCardWithImage,
-  title: 'Cards/EngagementCardWithImage',
+  title: 'Molecules/Cards/EngagementCardWithImage',
   parameters: {
     component: EngagementCardWithImage,
   },

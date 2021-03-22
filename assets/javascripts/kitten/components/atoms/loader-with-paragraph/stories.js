@@ -3,7 +3,7 @@ import { text, select } from '@storybook/addon-knobs'
 import { LoaderWithParagraph } from './index'
 
 export default {
-  title: 'Atoms/LoaderWithParagraph',
+  title: 'Atoms/LoadingAnimations/LoaderWithParagraph',
   component: LoaderWithParagraph,
 }
 

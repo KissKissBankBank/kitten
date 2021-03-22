@@ -13,7 +13,7 @@ import { Grid, GridCol } from '../../grid/grid'
 
 export default {
   component: SocialButtonIcon,
-  title: 'Buttons/SocialButtonIcon',
+  title: 'Molecules/Buttons/SocialButtonIcon',
 }
 
 const StoryContainer = ({ children }) => (

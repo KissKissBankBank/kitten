@@ -6,7 +6,7 @@ import { Title } from '../../typography/title'
 
 export default {
   component: Triptych,
-  title: 'Cards/Triptych',
+  title: 'Molecules/Cards/Triptych',
   parameters: {
     component: Triptych,
   },

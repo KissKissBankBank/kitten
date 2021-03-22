@@ -18,7 +18,7 @@ const modifierOptions = {
 
 export default {
   component: Title,
-  title: 'Typography/Title',
+  title: 'Atoms/Typography/Title',
   parameters: {
     component: Title,
     componentSubtitle: 'List of Title',

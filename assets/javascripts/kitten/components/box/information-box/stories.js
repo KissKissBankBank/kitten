@@ -3,7 +3,7 @@ import { text } from '@storybook/addon-knobs'
 import { InformationBox } from './index'
 
 export default {
-  title: 'Molecules/InformationBox',
+  title: 'Molecules/Boxes/InformationBox',
   component: InformationBox,
 }
 

@@ -5,7 +5,7 @@ import COLORS from '../../../constants/colors-config'
 import { CheckedCircleIcon } from '../../icons/checked-circle-icon'
 
 export default {
-  title: 'Molecules/IconContainer',
+  title: 'Molecules/Boxes/IconContainer',
   component: IconContainer,
 }
 

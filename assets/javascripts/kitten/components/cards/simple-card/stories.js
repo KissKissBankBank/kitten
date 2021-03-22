@@ -6,7 +6,7 @@ import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 
 export default {
-  title: 'Cards/SimpleCard',
+  title: 'Molecules/Cards/SimpleCard',
   component: SimpleCard,
 }
 

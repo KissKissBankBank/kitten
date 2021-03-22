@@ -47,7 +47,7 @@ const StyledIcon = styled(EditIcon)`
 `
 
 export default {
-  title: 'Cards/RewardEdition',
+  title: 'Molecules/Cards/RewardEdition',
   component: RewardEdition,
 }
 

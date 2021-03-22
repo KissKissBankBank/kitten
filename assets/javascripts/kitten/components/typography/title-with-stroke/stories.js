@@ -24,7 +24,7 @@ const alignOptions = {
 
 export default {
   component: TitleWithStroke,
-  title: 'Typography/TitleWithStroke',
+  title: 'Atoms/Typography/TitleWithStroke',
   parameters: {
     component: TitleWithStroke,
     componentSubtitle: 'List of TitleWithStroke',

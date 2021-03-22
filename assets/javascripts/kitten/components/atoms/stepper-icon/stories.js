@@ -2,7 +2,7 @@ import React from 'react'
 import { StepperIcon } from './index'
 
 export default {
-  title: 'Atoms/StepperIcon',
+  title: 'Atoms/Status/StepperIcon',
   component: StepperIcon,
 }
 

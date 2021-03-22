@@ -13,7 +13,7 @@ const modifierOptions = {
 
 export default {
   component: Paragraph,
-  title: 'Typography/Paragraph',
+  title: 'Atoms/Typography/Paragraph',
   parameters: {
     component: Paragraph,
     componentSubtitle: 'List of Paragraph',
