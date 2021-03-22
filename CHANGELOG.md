@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `HorizontalTimeline` `className` property name.
+
 ## [3.0.0-beta.19] - 2021-03-19
 
 Breaking changes:
