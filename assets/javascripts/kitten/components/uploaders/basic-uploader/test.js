@@ -25,7 +25,7 @@ describe('<BasicUploader />', () => {
       .create(
         <BasicUploader
           id="BasicUploader"
-          buttonProps={{ big: true }}
+          buttonProps={{ size: 'big' }}
           fileInputProps={{ multiple: true }}
           disabled={true}
           fileName="document.pdf"

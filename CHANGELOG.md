@@ -4,6 +4,32 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking Change:
+- Remove `k-Button*` SASS mixin and CSS styles.
+- `Button`: Deprecate size props (`giant`, `huge`, `big`, `tiny`).
+- Remove deprecated Button (`buttons/button`), replace it with Button (`buttons/button/button`)
+- Remove `ButtonImageWithText` and `ButtonImageWithTextAndBadge`.
+
+Features:
+
+- Add `size` prop to Button component.
+- Add `rounded` prop to Button component.
+- Add `social_facebook`, `social_twitter`, `social_linkedin`, `social_instagram`,
+  `social_youtube`, `social_pinterest` modifiers to Button component.
+- Add `InstagramButtonIconWords` component.
+- Add `type="button"` to Button by default.
+
+Fixes:
+
+- Refactor `FacebookButtonIconWords`, `TwitterButtonIconWords`,
+  `LinkedinButtonIconWords` components.
+- Refactor `FacebookButtonIcon`, `TwitterButtonIcon`, `LinkedinButtonIcon`,
+  `InstagramButtonIcon`, `YoutubeButtonIcon`,  `PinterestButtonIcon` components.
+- Refactor `CloseButton` component.
+- Refactor `ButtonQuestionMarkIcon` component.
+- Refactor `ButtonIcon` component.
+- Refactor `ButtonImage` component.
+
 - Breaking change: convert `LocationInput` to CSS-in-JS.
 - Breaking change: remove `k-LocationInput` mixin.
 - Breaking change: Remove all `@kisskissbankbank/kitten/src/next` exports.
