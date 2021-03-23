@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: convert `LocationInput` to CSS-in-JS.
+- Breaking change: remove `k-LocationInput` mixin.
 - Breaking change: Remove all `@kisskissbankbank/kitten/src/next` exports.
 - Breaking change: remove `big` and `huge` props from `ModalNext`.
 - Feature: Add `ModalNext` export for `modals/next`.
@@ -280,6 +282,9 @@ Features:
 - Convert the following components to CSS-in-JS:
   - `DevGrid`
   - `ImageCropper`
+
+- Breaking change: convert `LocationInput` to CSS-in-JS.
+- Breaking change: remove `k-LocationInput` mixin.
 
 ## [3.0.0-beta.4] - 2021-02-22
 
