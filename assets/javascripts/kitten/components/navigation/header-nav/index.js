@@ -24,8 +24,8 @@ import domEvents, {
   DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
   DROPDOWN_LAST_FOCUS_REACHED_EVENT,
   TOGGLE_DROPDOWN_EVENT,
+  dispatchEvent,
 } from '../../../helpers/dom/events'
-import emitter from '../../../helpers/utils/emitter'
 import { DROPDOWN_ANIMATED_DELAY } from '../../../constants/dropdown-config'
 import { usePrevious } from '../../../helpers/utils/use-previous-hook'
 
@@ -49,12 +49,12 @@ const HeaderNav = ({
   const previousStickyState = usePrevious(stickyState)
 
   const focusDropdown = ({ detail: dropdown }) => {
-    emitter.emit(TOGGLE_DROPDOWN_EVENT, false)
+    dispatchEvent(TOGGLE_DROPDOWN_EVENT, { nextExpandedState: false })()
     dropdown.focus()
   }
 
   const focusElementNextToDropdown = ({ detail: dropdown }) => {
-    emitter.emit(TOGGLE_DROPDOWN_EVENT, false)
+    dispatchEvent(TOGGLE_DROPDOWN_EVENT, { nextExpandedState: false })()
 
     if (!headerRef.current) return
 

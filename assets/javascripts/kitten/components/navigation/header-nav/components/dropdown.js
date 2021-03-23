@@ -3,7 +3,6 @@ import has from 'lodash/fp/has'
 import isNull from 'lodash/fp/isNull'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import emitter from '../../../../helpers/utils/emitter'
 import { DropdownButton } from './dropdown-button'
 import domElementHelper from '../../../../helpers/dom/element-helper'
 import { useWindowWidth } from '../../../../helpers/utils/use-window-width-hook'
@@ -78,7 +77,9 @@ export const Dropdown = React.forwardRef(
       handleDropdownPosition()
       handleClickOnLinks()
 
-      emitter.on(TOGGLE_DROPDOWN_EVENT, toggle)
+      const toggleEvent = evt => toggle(evt?.detail?.nextExpandedState)
+
+      window.addEventListener(TOGGLE_DROPDOWN_EVENT, toggleEvent)
 
       if (refreshEvents) {
         refreshEvents.forEach(ev => {
@@ -111,8 +112,6 @@ export const Dropdown = React.forwardRef(
       return () => {
         revertHandleClickOnLinks()
 
-        emitter.off(TOGGLE_DROPDOWN_EVENT, toggle)
-
         if (refreshEvents) {
           refreshEvents.forEach(ev => {
             window.removeEventListener(ev, handleDropdownPosition)
@@ -126,6 +125,7 @@ export const Dropdown = React.forwardRef(
         }
 
         window.removeEventListener('keydown', closeDropdownOnEsc)
+        window.removeEventListener(TOGGLE_DROPDOWN_EVENT, toggleEvent)
 
         if (!isNull(dropdownButtonRef.current)) {
           dropdownButtonRef.current.removeEventListener(
