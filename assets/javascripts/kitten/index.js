@@ -69,6 +69,7 @@ export { VerticalCard } from './components/cards/vertical-card'
 export { ClickableCard } from './components/cards/clickable-card'
 export { CrowdfundingCard } from './components/cards/crowdfunding-card'
 export { EngagementCard } from './components/cards/engagement-card'
+export { EngagementCardWithImage } from './components/cards/engagement-card/withImage'
 
 // Carousel
 export { Carousel } from './components/carousel/carousel'
@@ -89,10 +90,6 @@ export { Details } from './components/details'
 
 // Dev
 export { DevGrid } from './components/dev/dev-grid'
-
-// Dropdowns
-export { DropdownButton } from './components/dropdowns/v2/dropdown-button'
-export { Dropdown } from './components/dropdowns/v2/dropdown'
 
 // Expandable
 export { ExpandBoard } from './components/expandable/expand-board'
@@ -173,6 +170,10 @@ export { HorizontalTimeline } from './components/lists/horizontal-timeline'
 //Logos
 export { KissKissBankBankLogo } from './components/logos/kisskissbankbanklogo'
 export { LendopolisLogo } from './components/logos/lendopolis-logo'
+export { GoodeedLogo } from './components/logos/goodeedlogo'
+export { MaisonDeCrowdfundingLogo } from './components/logos/mdc'
+export { MicrodonLogo } from './components/logos/microdonlogo'
+export { KkbbCoLogo } from './components/logos/kkbb-co'
 
 // Menus
 export { DashboardMenu } from './components/menus/dashboard-menu'
@@ -214,7 +215,6 @@ export { SingleEntryTable } from './components/tables/single-entry-table'
 export { TextCopy } from './components/text-copy'
 
 // Tooltips
-
 export { Toggletip } from './components/tooltips/toggletip'
 
 // Tours
@@ -299,6 +299,7 @@ export { LinkIcon } from './components/icons/link-icon'
 export { ListIcon } from './components/icons/list-icon'
 export { LocationIcon } from './components/icons/location-icon'
 export { LockIcon } from './components/icons/lock-icon'
+export { LoginIcon } from './components/icons/login-icon'
 export { MaestroIcon } from './components/icons/maestro-icon'
 export { MasterCardIcon } from './components/icons/mastercard-icon'
 export { MenuIcon } from './components/icons/menu-icon'
@@ -362,6 +363,21 @@ export {
   ScreenConfig,
 } from './constants/screen-config'
 export { default as TYPOGRAPHY } from './constants/typography-config'
+export { DROPDOWN_ANIMATED_DELAY } from './constants/dropdown-config'
+
+// Constants from Helpers
+
+export {
+  domEvents,
+  A11Y_EVENT,
+  FOCUS_EVENT,
+  A11Y_FIRST_FOCUS_REACHED_EVENT,
+  A11Y_LAST_FOCUS_REACHED_EVENT,
+  DROPDOWN_EVENT,
+  TOGGLE_DROPDOWN_EVENT,
+  DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
+  DROPDOWN_LAST_FOCUS_REACHED_EVENT,
+} from './helpers/dom/events'
 
 // Constants from Components
 
@@ -413,6 +429,8 @@ export { default as margin } from './helpers/utils/margin'
 export { parseHtml } from './helpers/utils/parser'
 export { pxToRem, stepToRem } from './helpers/utils/typography'
 export { usePrevious } from './helpers/utils/use-previous-hook'
+export { useWindowWidth } from './helpers/utils/use-window-width-hook'
+export { dispatchEvent } from './helpers/dom/events'
 export { stringUtils, upcaseFirst } from './helpers/utils/string'
 export { hexToRgba } from './helpers/utils/hex-to-rgba'
 

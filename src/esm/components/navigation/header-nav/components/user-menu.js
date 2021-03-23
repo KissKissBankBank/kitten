@@ -3,7 +3,7 @@ import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import Dropdown from '../../../../components/dropdowns/v2/dropdown';
+import { Dropdown } from './dropdown';
 import { Context } from './context';
 import { getReactElementsByType } from '../../../../helpers/react/react-elements';
 import classNames from 'classnames';

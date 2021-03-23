@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import React, { useEffect, forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 export var DropdownButton = forwardRef(function (_ref, dropdownButtonRef) {
@@ -9,12 +9,11 @@ export var DropdownButton = forwardRef(function (_ref, dropdownButtonRef) {
       isExpanded = _ref.isExpanded,
       rest = _objectWithoutProperties(_ref, ["id", "className", "isExpanded"]);
 
-  var buttonClassName = classNames('k-Dropdown__button', className);
   return /*#__PURE__*/React.createElement("button", _extends({
     ref: dropdownButtonRef,
     id: id,
     type: "button",
-    className: buttonClassName,
+    className: classNames('k-Dropdown__button', className),
     "aria-haspopup": "true",
     "aria-expanded": isExpanded
   }, rest));
@@ -27,6 +26,4 @@ DropdownButton.defaultProps = {
   children: 'Toggle button',
   onClick: function onClick() {},
   isExpanded: false
-}; // DEPRECATED: do not use default export.
-
-export default DropdownButton;
+};
