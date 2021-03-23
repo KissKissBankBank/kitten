@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove size props (`giant`, `huge`, `regular`, `big`, `tiny`) on `TagButton`.
+- Breaking change: Remove `k-TagButton` mixin.
+- Feature: Add `size` component to `TagButton`.
 - Fix: Fix `HorizontalTimeline` `className` property name.
 - Fix: Replace `ResizeObserver` with `window.resize` on `Carousel`.
 
