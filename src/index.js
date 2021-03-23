@@ -185,12 +185,6 @@ Object.defineProperty(exports, "ButtonIcon", {
     return _buttonIcon.ButtonIcon;
   }
 });
-Object.defineProperty(exports, "ButtonImageWithTextAndBadge", {
-  enumerable: true,
-  get: function get() {
-    return _buttonImageWithTextAndBadge.ButtonImageWithTextAndBadge;
-  }
-});
 Object.defineProperty(exports, "ButtonGroup", {
   enumerable: true,
   get: function get() {
@@ -279,12 +273,6 @@ Object.defineProperty(exports, "TagButton", {
   enumerable: true,
   get: function get() {
     return _tagButton.TagButton;
-  }
-});
-Object.defineProperty(exports, "ButtonImageWithText", {
-  enumerable: true,
-  get: function get() {
-    return _buttonImageWithText.ButtonImageWithText;
   }
 });
 Object.defineProperty(exports, "CheckableButton", {
@@ -861,6 +849,12 @@ Object.defineProperty(exports, "Modal", {
   enumerable: true,
   get: function get() {
     return _modal.Modal;
+  }
+});
+Object.defineProperty(exports, "ModalNext", {
+  enumerable: true,
+  get: function get() {
+    return _next.Modal;
   }
 });
 Object.defineProperty(exports, "Overlay", {
@@ -1946,11 +1940,9 @@ var _informationBox = require("./components/box/information-box");
 
 var _linkBox = require("./components/box/link-box");
 
-var _button = require("./components/buttons/button/button");
+var _button = require("./components/buttons/button");
 
 var _buttonIcon = require("./components/buttons/button-icon");
-
-var _buttonImageWithTextAndBadge = require("./components/buttons/button-image-with-text-and-badge");
 
 var _buttonGroup = require("./components/buttons/button-group");
 
@@ -1965,8 +1957,6 @@ var _socialButtonIconWords = require("./components/buttons/social-button-icon-wo
 var _socialButtonIcon = require("./components/buttons/social-button-icon");
 
 var _tagButton = require("./components/buttons/tag-button");
-
-var _buttonImageWithText = require("./components/buttons/button-image-with-text");
 
 var _checkableButton = require("./components/buttons/checkable-button");
 
@@ -2143,6 +2133,8 @@ var _progress = require("./components/meters/progress");
 var _progressRing = require("./components/meters/progress-ring");
 
 var _modal = require("./components/modals/modal");
+
+var _next = require("./components/modals/next");
 
 var _overlay = require("./components/modals/overlay");
 

@@ -4,7 +4,6 @@ import has from 'lodash/fp/has';
 import isNull from 'lodash/fp/isNull';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import emitter from '../../../../helpers/utils/emitter';
 import { DropdownButton } from './dropdown-button';
 import domElementHelper from '../../../../helpers/dom/element-helper';
 import { useWindowWidth } from '../../../../helpers/utils/use-window-width-hook';
@@ -75,7 +74,14 @@ export var Dropdown = React.forwardRef(function (_ref, dropdownRef) {
   useEffect(function () {
     handleDropdownPosition();
     handleClickOnLinks();
-    emitter.on(TOGGLE_DROPDOWN_EVENT, toggle);
+
+    var toggleEvent = function toggleEvent(evt) {
+      var _evt$detail;
+
+      return toggle(evt === null || evt === void 0 ? void 0 : (_evt$detail = evt.detail) === null || _evt$detail === void 0 ? void 0 : _evt$detail.nextExpandedState);
+    };
+
+    window.addEventListener(TOGGLE_DROPDOWN_EVENT, toggleEvent);
 
     if (refreshEvents) {
       refreshEvents.forEach(function (ev) {
@@ -102,7 +108,6 @@ export var Dropdown = React.forwardRef(function (_ref, dropdownRef) {
 
     return function () {
       revertHandleClickOnLinks();
-      emitter.off(TOGGLE_DROPDOWN_EVENT, toggle);
 
       if (refreshEvents) {
         refreshEvents.forEach(function (ev) {
@@ -117,6 +122,7 @@ export var Dropdown = React.forwardRef(function (_ref, dropdownRef) {
       }
 
       window.removeEventListener('keydown', closeDropdownOnEsc);
+      window.removeEventListener(TOGGLE_DROPDOWN_EVENT, toggleEvent);
 
       if (!isNull(dropdownButtonRef.current)) {
         dropdownButtonRef.current.removeEventListener('keydown', dropdownKbdTrigger);

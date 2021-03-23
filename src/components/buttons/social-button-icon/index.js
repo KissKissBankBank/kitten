@@ -11,7 +11,7 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _react = _interopRequireDefault(require("react"));
 
-var _button = require("../../../components/buttons/button/button");
+var _button = require("../../../components/buttons/button");
 
 var _facebookIcon = require("../../../components/icons/facebook-icon");
 
@@ -31,8 +31,7 @@ var FacebookButtonIcon = function FacebookButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/_react.default.createElement(_facebookIcon.FacebookIcon, {
     width: "14",
-    height: "14",
-    title: "Facebook"
+    height: "14"
   }));
 };
 
@@ -44,8 +43,7 @@ var TwitterButtonIcon = function TwitterButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/_react.default.createElement(_twitterIcon.TwitterIcon, {
     width: "15",
-    height: "15",
-    title: "Twitter"
+    height: "15"
   }));
 };
 
@@ -57,8 +55,7 @@ var LinkedinButtonIcon = function LinkedinButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/_react.default.createElement(_linkedinIcon.LinkedinIcon, {
     width: "12",
-    height: "12",
-    title: "LinkedIn"
+    height: "12"
   }));
 };
 
@@ -70,8 +67,7 @@ var InstagramButtonIcon = function InstagramButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/_react.default.createElement(_instagramIcon.InstagramIcon, {
     width: "16",
-    height: "16",
-    title: "Instagram"
+    height: "16"
   }));
 };
 
@@ -83,8 +79,7 @@ var YoutubeButtonIcon = function YoutubeButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/_react.default.createElement(_youtubeIcon.YoutubeIcon, {
     width: "16",
-    height: "16",
-    title: "YouTube"
+    height: "16"
   }));
 };
 
@@ -96,8 +91,7 @@ var PinterestButtonIcon = function PinterestButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/_react.default.createElement(_pinterestIcon.PinterestIcon, {
     width: "16",
-    height: "16",
-    title: "Pinterest"
+    height: "16"
   }));
 };
 

@@ -9,13 +9,7 @@ export var DefaultExample = function DefaultExample() {
   return /*#__PURE__*/React.createElement(CreditCardForm, null, /*#__PURE__*/React.createElement(CreditCardForm.Number, null), /*#__PURE__*/React.createElement(CreditCardForm.Expiry, null), /*#__PURE__*/React.createElement(CreditCardForm.Cvc, null));
 };
 export var CustomExample = function CustomExample() {
-  var handleChange = function handleChange(values) {
-    console.warn('Values:', values);
-  };
-
-  return /*#__PURE__*/React.createElement(CreditCardForm, {
-    onChange: handleChange
-  }, /*#__PURE__*/React.createElement(Number, null), /*#__PURE__*/React.createElement(Expiry, null), /*#__PURE__*/React.createElement(Cvc, null));
+  return /*#__PURE__*/React.createElement(CreditCardForm, null, /*#__PURE__*/React.createElement(Number, null), /*#__PURE__*/React.createElement(Expiry, null), /*#__PURE__*/React.createElement(Cvc, null));
 };
 
 var Number = function Number() {

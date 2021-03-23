@@ -11,7 +11,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _button = require("../../../../components/buttons/button/button");
+var _button = require("../../../../components/buttons/button");
 
 var CardButton = function CardButton(_ref) {
   var text = _ref.text,

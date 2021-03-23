@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -11,69 +9,51 @@ exports.ButtonIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
-
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+var _button = require("../../../components/buttons/button");
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var ButtonIcon = /*#__PURE__*/function (_Component) {
-  (0, _inherits2.default)(ButtonIcon, _Component);
+var _typography = require("../../../helpers/utils/typography");
 
-  var _super = _createSuper(ButtonIcon);
+var StyledButton = (0, _styledComponents.default)(function (_ref) {
+  var tag = _ref.tag,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["tag"]);
+  return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, props, {
+    as: tag
+  }));
+}).withConfig({
+  displayName: "button-icon__StyledButton",
+  componentId: "jhbmf4-0"
+})(["svg,.k-ButtonIcon__svg{display:block;margin:0;padding:0;width:", ";height:", ";transition:fill 0.2s;pointer-events:none;.k-ButtonIcon__svg__stroke{transition:stroke 0.2s;}}&.k-ButtonIcon--nano svg,&.k-ButtonIcon--nano .k-ButtonIcon__svg{width:", ";height:", ";}.k-ButtonIcon--withoutHover{pointer-events:none;}"], (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(8));
 
-  function ButtonIcon() {
-    (0, _classCallCheck2.default)(this, ButtonIcon);
-    return _super.apply(this, arguments);
-  }
-
-  (0, _createClass2.default)(ButtonIcon, [{
-    key: "render",
-    value: function render() {
-      var _classNames;
-
-      var _this$props = this.props,
-          className = _this$props.className,
-          tag = _this$props.tag,
-          modifier = _this$props.modifier,
-          size = _this$props.size,
-          withoutHover = _this$props.withoutHover,
-          verticalArrow = _this$props.verticalArrow,
-          rounded = _this$props.rounded,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["className", "tag", "modifier", "size", "withoutHover", "verticalArrow", "rounded"]);
-      var buttonIconClassNames = (0, _classnames.default)('k-ButtonIcon', className, (_classNames = {}, (0, _defineProperty2.default)(_classNames, "k-ButtonIcon--".concat(modifier), modifier), (0, _defineProperty2.default)(_classNames, "k-ButtonIcon--".concat(size), size), (0, _defineProperty2.default)(_classNames, 'k-ButtonIcon--withoutHover', withoutHover), (0, _defineProperty2.default)(_classNames, 'k-ButtonIcon--verticalArrow', verticalArrow), (0, _defineProperty2.default)(_classNames, 'k-ButtonIcon--rounded', rounded), _classNames)); // Adds keyboard accessibility to `<a>`
-
-      var tabindex = tag == 'a' && !this.props.href ? 0 : null;
-      var Tag = tag;
-      return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
-        className: buttonIconClassNames,
-        tabIndex: tabindex
-      }, others));
-    }
-  }]);
-  return ButtonIcon;
-}(_react.Component);
+var ButtonIcon = function ButtonIcon(_ref2) {
+  var className = _ref2.className,
+      tag = _ref2.tag,
+      withoutHover = _ref2.withoutHover,
+      verticalArrow = _ref2.verticalArrow,
+      size = _ref2.size,
+      others = (0, _objectWithoutProperties2.default)(_ref2, ["className", "tag", "withoutHover", "verticalArrow", "size"]);
+  return /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
+    className: (0, _classnames.default)('k-ButtonIcon', className, "k-ButtonIcon--".concat(size), {
+      'k-ButtonIcon--withoutHover': withoutHover,
+      'k-ButtonIcon--verticalArrow': verticalArrow
+    }),
+    size: size
+  }, others, {
+    icon: true
+  }));
+};
 
 exports.ButtonIcon = ButtonIcon;
 ButtonIcon.defaultProps = {
   tag: 'button',
-  size: null,
+  size: 'regular',
   modifier: 'hydrogen',
   withoutHover: false,
   verticalArrow: false,

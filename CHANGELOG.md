@@ -4,44 +4,58 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [3.0.0-beta.20] - 2021-03-23
+
 Breaking Change:
-- Remove `k-Button*` SASS mixin and CSS styles.
-- `Button`: Deprecate size props (`giant`, `huge`, `big`, `tiny`).
-- Remove deprecated Button (`buttons/button`), replace it with Button (`buttons/button/button`)
-- Remove `ButtonImageWithText` and `ButtonImageWithTextAndBadge`.
+
+- Breaking change: Remove all `@kisskissbankbank/kitten/src/next` exports.
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Button*`
+  - `k-LocationInput`
+  - `k-TagButton`
+- Remove size props (`giant`, `huge`, `regular`, `big`, `tiny`) on the following components:
+  - `Button`
+  - `ModalNext`
+  - `TagButton`
+- Remove the following deprecated components:
+  - `Button` (`buttons/button`, replaced with `Button` (`buttons/button/button`))
+  - `ButtonImageWithText`
+  - `ButtonImageWithTextAndBadge`
 
 Features:
 
-- Add `size` prop to Button component.
+- Refactor the following components to CSS-in-JS:
+  - `ButtonIcon`
+  - `ButtonImage`
+  - `ButtonQuestionMarkIcon`
+  - `CloseButton`
+  - `FacebookButtonIcon`
+  - `FacebookButtonIconWords`
+  - `InstagramButtonIcon`
+  - `LinkedinButtonIcon`,
+  - `LinkedinButtonIconWords`
+  - `LocationInput`
+  - `PinterestButtonIcon`
+  - `TwitterButtonIcon`
+  - `TwitterButtonIconWords`
+  - `YoutubeButtonIcon`
+- Add `size` prop to the following components:
+  - `Button`
+  - `ModalNext`
+  - `TagButton`
 - Add `rounded` prop to Button component.
 - Add `social_facebook`, `social_twitter`, `social_linkedin`, `social_instagram`,
   `social_youtube`, `social_pinterest` modifiers to Button component.
 - Add `InstagramButtonIconWords` component.
 - Add `type="button"` to Button by default.
+- Add `ModalNext` export for `modals/next`.
+- Add deprecation warning on `Modal` (`modals/modal`).
 
 Fixes:
 
-- Refactor `FacebookButtonIconWords`, `TwitterButtonIconWords`,
-  `LinkedinButtonIconWords` components.
-- Refactor `FacebookButtonIcon`, `TwitterButtonIcon`, `LinkedinButtonIcon`,
-  `InstagramButtonIcon`, `YoutubeButtonIcon`,  `PinterestButtonIcon` components.
-- Refactor `CloseButton` component.
-- Refactor `ButtonQuestionMarkIcon` component.
-- Refactor `ButtonIcon` component.
-- Refactor `ButtonImage` component.
-
-- Breaking change: convert `LocationInput` to CSS-in-JS.
-- Breaking change: remove `k-LocationInput` mixin.
-- Breaking change: Remove all `@kisskissbankbank/kitten/src/next` exports.
-- Breaking change: remove `big` and `huge` props from `ModalNext`.
-- Feature: Add `ModalNext` export for `modals/next`.
-- Feature: Add deprecation warning on `Modal` (`modals/modal`).
-- Feature: Add `size` prop to `ModalNext`.
-- Breaking change: Remove size props (`giant`, `huge`, `regular`, `big`, `tiny`) on `TagButton`.
-- Breaking change: Remove `k-TagButton` mixin.
-- Feature: Add `size` component to `TagButton`.
-- Fix: Fix `HorizontalTimeline` `className` property name.
-- Fix: Replace `ResizeObserver` with `window.resize` on `Carousel`.
+- Fix `HorizontalTimeline` `className` property name.
+- Replace `ResizeObserver` with `window.resize` on `Carousel`.
+- Use `CustomEvent` instead of `event-emitter` on `Dropdown`.
 
 ## [3.0.0-beta.19] - 2021-03-19
 
