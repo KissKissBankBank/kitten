@@ -1,85 +1,53 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
-export var ButtonImage = /*#__PURE__*/function (_Component) {
-  _inherits(ButtonImage, _Component);
+import styled from 'styled-components';
+import COLORS from '../../../constants/colors-config';
+import { pxToRem } from '../../../helpers/utils/typography';
+import { ScreenConfig } from '../../../constants/screen-config';
+var StyledButtonImage = styled.button.withConfig({
+  displayName: "button-image__StyledButtonImage",
+  componentId: "sc-1kqp0ma-0"
+})(["width:", ";height:", ";border-radius:50%;box-sizing:border-box;display:flex;overflow:hidden;cursor:pointer;border:0;padding:0;opacity:1;transition:opacity 0.2s;&:hover,&:focus{opacity:0.8;}&.k-ButtonImage--tiny{width:", ";height:", ";}&.k-ButtonImage--big{@media (min-width:", "px){width:", ";height:", ";}}&.k-ButtonImage--huge{width:", ";height:", ";}&.k-ButtonImage--withoutPointerEvents{pointer-events:none;}&.k-ButtonImage--withBorder{border:", " solid ", ";}.k-ButtonImage__img{display:block;margin:0;padding:0;border:0;width:100%;height:100%;object-fit:cover;}"], pxToRem(40), pxToRem(40), pxToRem(30), pxToRem(30), ScreenConfig.S.min, pxToRem(50), pxToRem(50), pxToRem(80), pxToRem(80), pxToRem(2), COLORS.line1);
+export var ButtonImage = function ButtonImage(_ref) {
+  var tag = _ref.tag,
+      className = _ref.className,
+      size = _ref.size,
+      withoutPointerEvents = _ref.withoutPointerEvents,
+      withBorder = _ref.withBorder,
+      img = _ref.img,
+      others = _objectWithoutProperties(_ref, ["tag", "className", "size", "withoutPointerEvents", "withBorder", "img"]);
 
-  var _super = _createSuper(ButtonImage);
-
-  function ButtonImage() {
-    _classCallCheck(this, ButtonImage);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(ButtonImage, [{
-    key: "renderImage",
-    value: function renderImage(props) {
-      if (!props) return null;
-
-      var className = props.className,
-          alt = props.alt,
-          others = _objectWithoutProperties(props, ["className", "alt"]);
-
-      var imgClassName = classNames('k-ButtonImage__img', className);
-      return /*#__PURE__*/React.createElement("img", _extends({
-        className: imgClassName,
-        alt: alt || ''
-      }, others));
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          tag = _this$props.tag,
-          className = _this$props.className,
-          tiny = _this$props.tiny,
-          big = _this$props.big,
-          huge = _this$props.huge,
-          withoutPointerEvents = _this$props.withoutPointerEvents,
-          withBorder = _this$props.withBorder,
-          img = _this$props.img,
-          others = _objectWithoutProperties(_this$props, ["tag", "className", "tiny", "big", "huge", "withoutPointerEvents", "withBorder", "img"]);
-
-      var buttonClassName = classNames('k-ButtonImage', {
-        'k-ButtonImage--tiny': tiny,
-        'k-ButtonImage--big': big,
-        'k-ButtonImage--huge': huge,
-        'k-ButtonImage--withoutPointerEvents': withoutPointerEvents,
-        'k-ButtonImage--withBorder': withBorder
-      }, className); // Adds keyboard accessibility to `<a>`
-
-      var tabindex = tag == 'a' && !this.props.href ? 0 : null;
-      var Tag = tag;
-      return /*#__PURE__*/React.createElement(Tag, _extends({
-        className: buttonClassName,
-        tabIndex: tabindex
-      }, others), this.renderImage(img));
-    }
-  }]);
-
-  return ButtonImage;
-}(Component);
+  return /*#__PURE__*/React.createElement(StyledButtonImage, _extends({
+    as: tag,
+    className: classNames('k-ButtonImage', "k-ButtonImage--".concat(size), {
+      'k-ButtonImage--withoutPointerEvents': withoutPointerEvents,
+      'k-ButtonImage--withBorder': withBorder
+    }, className)
+  }, others), !!img && /*#__PURE__*/React.createElement("img", _extends({}, img, {
+    className: classNames('k-ButtonImage__img', img.className),
+    alt: img.alt || ''
+  })));
+};
 ButtonImage.defaultProps = {
   tag: 'button',
   className: null,
-  tiny: false,
-  big: false,
-  huge: false,
+  size: 'regular',
   withoutPointerEvents: false,
   withBorder: false,
   img: {
     className: null
+  }
+};
+ButtonImage.propTypes = {
+  tag: PropTypes.string,
+  className: PropTypes.string,
+  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge']),
+  withoutPointerEvents: PropTypes.bool,
+  withBorder: PropTypes.bool,
+  img: {
+    className: PropTypes.string
   }
 };

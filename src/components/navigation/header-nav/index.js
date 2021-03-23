@@ -49,8 +49,6 @@ var _a11y = require("../../../helpers/dom/a11y");
 
 var _events = _interopRequireWildcard(require("../../../helpers/dom/events"));
 
-var _emitter = _interopRequireDefault(require("../../../helpers/utils/emitter"));
-
 var _dropdownConfig = require("../../../constants/dropdown-config");
 
 var _usePreviousHook = require("../../../helpers/utils/use-previous-hook");
@@ -92,17 +90,17 @@ var HeaderNav = function HeaderNav(_ref) {
 
   var focusDropdown = function focusDropdown(_ref2) {
     var dropdown = _ref2.detail;
-
-    _emitter.default.emit(_events.TOGGLE_DROPDOWN_EVENT, false);
-
+    (0, _events.dispatchEvent)(_events.TOGGLE_DROPDOWN_EVENT, {
+      nextExpandedState: false
+    })();
     dropdown.focus();
   };
 
   var focusElementNextToDropdown = function focusElementNextToDropdown(_ref3) {
     var dropdown = _ref3.detail;
-
-    _emitter.default.emit(_events.TOGGLE_DROPDOWN_EVENT, false);
-
+    (0, _events.dispatchEvent)(_events.TOGGLE_DROPDOWN_EVENT, {
+      nextExpandedState: false
+    })();
     if (!headerRef.current) return;
     setTimeout(function () {
       var focusableElements = (0, _a11y.getFocusableElementsFrom)(headerRef.current);

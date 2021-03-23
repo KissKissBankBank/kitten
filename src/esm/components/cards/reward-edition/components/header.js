@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
 import { pxToRem } from '../../../../helpers/utils/typography';
 import { Text } from '../../../../components/typography/text';
-import { Button } from '../../../../components/buttons/button/button';
+import { Button } from '../../../../components/buttons/button';
 import { GarbageIcon } from '../../../../components/icons/garbage-icon';
 var borderWidth = pxToRem(2);
 var borderColor = COLORS.line1;
@@ -24,7 +24,7 @@ export var Header = function Header(_ref) {
     type: "button",
     "aria-label": garbageButtonA11yText,
     modifier: "hydrogen",
-    micro: true,
+    size: "micro",
     icon: true,
     className: "k-RewardEdition__Header__Button"
   }, /*#__PURE__*/React.createElement(GarbageIcon, {
