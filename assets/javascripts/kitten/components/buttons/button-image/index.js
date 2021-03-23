@@ -112,7 +112,7 @@ ButtonImage.propTypes = {
   size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge']),
   withoutPointerEvents: PropTypes.bool,
   withBorder: PropTypes.bool,
-  img: {
+  img: PropTypes.shape({
     className: PropTypes.string,
-  },
+  }),
 }
