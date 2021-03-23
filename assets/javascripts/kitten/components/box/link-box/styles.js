@@ -16,6 +16,13 @@ export const StyledLinkBox = styled.a`
       transform: translate(${pxToRem(5)}, ${pxToRem(0)});
     }
   }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary4};
+  }
+
 
   .k-LinkBox__link {
     display: flex;

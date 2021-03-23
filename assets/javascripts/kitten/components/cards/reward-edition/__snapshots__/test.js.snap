@@ -88,6 +88,14 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c2:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c2:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c2:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;

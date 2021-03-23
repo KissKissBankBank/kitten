@@ -44,6 +44,12 @@ const List = styled.ul`
       outline: ${COLORS.primary4} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(2)};
     }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
 
     &[aria-selected='true'] {
       svg,
@@ -76,6 +82,12 @@ const StyledDetails = styled(Details)`
           fill: ${COLORS.primary1};
         }
       }
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
     }
   }
 `

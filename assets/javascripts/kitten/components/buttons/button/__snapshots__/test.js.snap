@@ -81,6 +81,14 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -180,6 +188,14 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -300,6 +316,14 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -401,6 +425,14 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -505,6 +537,14 @@ exports[`<Button /> with \`giant\` prop matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -627,6 +667,14 @@ exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -744,6 +792,14 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   outline-offset: 0.125rem;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -847,6 +903,14 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -960,6 +1024,14 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -1102,6 +1174,14 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -1212,6 +1292,14 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -1364,6 +1452,14 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -1510,6 +1606,14 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -1634,6 +1738,14 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -1763,6 +1875,14 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -1872,6 +1992,14 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -1978,6 +2106,14 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -2080,6 +2216,14 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -2204,6 +2348,14 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {

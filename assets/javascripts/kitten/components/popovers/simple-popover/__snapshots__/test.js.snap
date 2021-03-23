@@ -144,6 +144,14 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   outline-offset: 0.125rem;
 }
 
+.c1:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c1:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c1:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -234,6 +242,14 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   outline-offset: 0.125rem;
 }
 
+.c10:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c10:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c10:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -322,6 +338,14 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 .c11:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c11:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c11:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c11:disabled {
@@ -706,6 +730,14 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 .c1:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c1:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c1:disabled {

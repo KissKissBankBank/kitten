@@ -22,6 +22,12 @@ const BulletPointStyles = styled.div`
     outline: ${COLORS.primary3} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
   }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary3};
+  }
 `
 
 const PaginationStyles = styled.div`

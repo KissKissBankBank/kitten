@@ -81,6 +81,14 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   outline-offset: 0.125rem;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -212,6 +220,14 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -359,6 +375,14 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -510,6 +534,14 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   outline-offset: 0.125rem;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -639,6 +671,14 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -774,6 +814,14 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   outline-offset: 0.125rem;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -903,6 +951,14 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -1036,6 +1092,14 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {

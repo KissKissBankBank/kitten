@@ -64,6 +64,12 @@ const StyledCheckableButton = styled(Button)`
   &:focus {
     outline-offset: ${pxToRem(-2)};
   }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary4};
+  }
 
   ${({ modifier }) =>
     modifier !== 'copper' &&

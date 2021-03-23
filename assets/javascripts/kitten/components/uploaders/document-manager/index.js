@@ -31,6 +31,12 @@ const StyledDocumentUploader = styled.div`
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
   }
+  input[type='file']:focus:not(:focus-visible) + label {
+    outline-color: transparent;
+  }
+  input[type='file']:focus-visible + label {
+    outline-color: ${COLORS.primary4};
+  }
 
   input[type='file']:focus,
   input[type='file']:hover {
@@ -134,6 +140,12 @@ const StyledDocumentDisplay = styled.div`
     &:focus {
       outline: ${COLORS.primary4} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
     }
 
     &:active {

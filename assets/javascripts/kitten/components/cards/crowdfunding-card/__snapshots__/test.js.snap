@@ -77,6 +77,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   outline-offset: 0.125rem;
 }
 
+.c0[href]:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0[href]:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0 .k-CrowdfundingCard__paddedContainer {
   padding: 0 0.625rem;
 }
@@ -695,6 +703,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   outline-offset: 0.125rem;
 }
 
+.c2:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c2:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c2:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -742,6 +758,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 .c0[href]:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0[href]:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0[href]:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {
@@ -1348,6 +1372,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   outline-offset: 0.125rem;
 }
 
+.c2:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c2:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c2:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -1395,6 +1427,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 .c0[href]:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0[href]:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0[href]:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {
@@ -2003,6 +2043,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   outline-offset: 0.125rem;
 }
 
+.c3:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c3:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c3:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -2050,6 +2098,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 .c0[href]:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0[href]:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0[href]:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {

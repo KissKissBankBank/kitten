@@ -12,7 +12,7 @@ exports[`<ImageCropper /> matches with snapshot 1`] = `
     Lorem ipsum…
   </label>
   <div
-    className="sc-bZQynM eVIrJG k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
+    className="sc-bZQynM cBPpjg k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
   >
     <input
       accept=".jpg,.jpeg,.gif,.png"
@@ -22,7 +22,7 @@ exports[`<ImageCropper /> matches with snapshot 1`] = `
       type="file"
     />
     <label
-      className="sc-htpNat hlLzcf k-BasicUploader__button"
+      className="sc-htpNat jOiTZh k-BasicUploader__button"
       htmlFor="cropper"
     >
       <svg

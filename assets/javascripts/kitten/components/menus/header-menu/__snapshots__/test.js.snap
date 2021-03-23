@@ -36,6 +36,14 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   transition: color 0.2s,background-color 0.4s;
 }
 
+.c0 .k-HeaderMenu__item__link:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0 .k-HeaderMenu__item__link:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -264,6 +272,14 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   background-color: var(--headerMenu-background-colors-hover);
   -webkit-transition: color 0.2s,background-color 0.4s;
   transition: color 0.2s,background-color 0.4s;
+}
+
+.c0 .k-HeaderMenu__item__link:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0 .k-HeaderMenu__item__link:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
@@ -518,6 +534,14 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   transition: color 0.2s,background-color 0.4s;
 }
 
+.c0 .k-HeaderMenu__item__link:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0 .k-HeaderMenu__item__link:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -746,6 +770,14 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   background-color: var(--headerMenu-background-colors-hover);
   -webkit-transition: color 0.2s,background-color 0.4s;
   transition: color 0.2s,background-color 0.4s;
+}
+
+.c0 .k-HeaderMenu__item__link:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0 .k-HeaderMenu__item__link:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
