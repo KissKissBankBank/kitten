@@ -31,9 +31,8 @@ export { InformationBox } from './components/box/information-box'
 export { LinkBox } from './components/box/link-box'
 
 // Buttons
-export { Button } from './components/buttons/button/button'
+export { Button } from './components/buttons/button'
 export { ButtonIcon } from './components/buttons/button-icon'
-export { ButtonImageWithTextAndBadge } from './components/buttons/button-image-with-text-and-badge'
 export { ButtonGroup } from './components/buttons/button-group'
 export { ButtonImage } from './components/buttons/button-image'
 export { ButtonQuestionMarkIcon } from './components/buttons/button-question-mark-icon'
@@ -53,7 +52,6 @@ export {
   PinterestButtonIcon,
 } from './components/buttons/social-button-icon'
 export { TagButton } from './components/buttons/tag-button'
-export { ButtonImageWithText } from './components/buttons/button-image-with-text'
 export { CheckableButton } from './components/buttons/checkable-button'
 
 export { modifierStyles as buttonModifierStyles } from './components/buttons/button/helpers/modifier-styles'
@@ -188,6 +186,7 @@ export { ProgressRing } from './components/meters/progress-ring'
 
 // Modals
 export { Modal } from './components/modals/modal'
+export { Modal as ModalNext } from './components/modals/next'
 export { Overlay } from './components/modals/overlay'
 
 // Navigation
@@ -396,7 +395,7 @@ export {
   ICON_BIG as BUTTON_STYLE_ICON_BIG,
   ICON_HUGE as BUTTON_STYLE_ICON_HUGE,
   ICON_GIANT as BUTTON_STYLE_ICON_GIANT,
-} from './components/buttons/button/button'
+} from './components/buttons/button'
 export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/carousel/carousel/styles'
 export {
   MICRO as HORIZONTAL_STROKE_STYLE_MICRO,

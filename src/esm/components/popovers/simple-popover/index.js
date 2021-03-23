@@ -12,7 +12,7 @@ import { Title } from '../../../components/typography/title';
 import { Paragraph } from '../../../components/typography/paragraph/next';
 import { CONTAINER_PADDING_THIN } from '../../../constants/grid-config';
 import { ScreenConfig } from '../../../constants/screen-config';
-import { Button } from '../../../components/buttons/button/button';
+import { Button } from '../../../components/buttons/button';
 var borderSize = 2;
 var PopoverContainer = styled.div.withConfig({
   displayName: "simple-popover__PopoverContainer",
@@ -83,7 +83,7 @@ export var SimplePopover = function SimplePopover(_ref2) {
     onClick: onCloseClick,
     type: "button",
     modifier: "hydrogen",
-    micro: true,
+    size: "micro",
     icon: true
   }, /*#__PURE__*/React.createElement(CrossIcon, {
     "aria-hidden": true,

@@ -19,7 +19,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _arrowIcon = require("../../../icons/arrow-icon");
 
-var _button = require("../../../../components/buttons/button/button");
+var _button = require("../../../../components/buttons/button");
 
 var Item = function Item(_ref) {
   var children = _ref.children,

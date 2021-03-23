@@ -19,7 +19,7 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _text = require("../../../../components/typography/text");
 
-var _button = require("../../../../components/buttons/button/button");
+var _button = require("../../../../components/buttons/button");
 
 var _garbageIcon = require("../../../../components/icons/garbage-icon");
 
@@ -43,7 +43,7 @@ var Header = function Header(_ref) {
     type: "button",
     "aria-label": garbageButtonA11yText,
     modifier: "hydrogen",
-    micro: true,
+    size: "micro",
     icon: true,
     className: "k-RewardEdition__Header__Button"
   }, /*#__PURE__*/_react.default.createElement(_garbageIcon.GarbageIcon, {

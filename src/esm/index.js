@@ -20,9 +20,8 @@ export { DocLinkBox } from './components/box/doc-link-box';
 export { InformationBox } from './components/box/information-box';
 export { LinkBox } from './components/box/link-box'; // Buttons
 
-export { Button } from './components/buttons/button/button';
+export { Button } from './components/buttons/button';
 export { ButtonIcon } from './components/buttons/button-icon';
-export { ButtonImageWithTextAndBadge } from './components/buttons/button-image-with-text-and-badge';
 export { ButtonGroup } from './components/buttons/button-group';
 export { ButtonImage } from './components/buttons/button-image';
 export { ButtonQuestionMarkIcon } from './components/buttons/button-question-mark-icon';
@@ -30,7 +29,6 @@ export { CloseButton } from './components/buttons/close-button';
 export { FacebookButtonIconWords, TwitterButtonIconWords, LinkedinButtonIconWords, InstagramButtonIconWords } from './components/buttons/social-button-icon-words';
 export { FacebookButtonIcon, TwitterButtonIcon, LinkedinButtonIcon, InstagramButtonIcon, YoutubeButtonIcon, PinterestButtonIcon } from './components/buttons/social-button-icon';
 export { TagButton } from './components/buttons/tag-button';
-export { ButtonImageWithText } from './components/buttons/button-image-with-text';
 export { CheckableButton } from './components/buttons/checkable-button';
 export { modifierStyles as buttonModifierStyles } from './components/buttons/button/helpers/modifier-styles'; // Cards
 
@@ -138,6 +136,7 @@ export { Progress } from './components/meters/progress';
 export { ProgressRing } from './components/meters/progress-ring'; // Modals
 
 export { Modal } from './components/modals/modal';
+export { Modal as ModalNext } from './components/modals/next';
 export { Overlay } from './components/modals/overlay'; // Navigation
 
 export { default as HeaderNav } from './components/navigation/header-nav';
@@ -287,7 +286,7 @@ export { DROPDOWN_ANIMATED_DELAY } from './constants/dropdown-config'; // Consta
 
 export { domEvents, A11Y_EVENT, FOCUS_EVENT, A11Y_FIRST_FOCUS_REACHED_EVENT, A11Y_LAST_FOCUS_REACHED_EVENT, DROPDOWN_EVENT, TOGGLE_DROPDOWN_EVENT, DROPDOWN_FIRST_FOCUS_REACHED_EVENT, DROPDOWN_LAST_FOCUS_REACHED_EVENT } from './helpers/dom/events'; // Constants from Components
 
-export { FLUID as BUTTON_STYLE_FLUID, DEFAULT as BUTTON_STYLE_DEFAULT, TINY as BUTTON_STYLE_TINY, BIG as BUTTON_STYLE_BIG, HUGE as BUTTON_STYLE_HUGE, GIANT as BUTTON_STYLE_GIANT, ICON as BUTTON_STYLE_ICON, ICON_MICRO as BUTTON_STYLE_ICON_MICRO, ICON_TINY as BUTTON_STYLE_ICON_TINY, ICON_BIG as BUTTON_STYLE_ICON_BIG, ICON_HUGE as BUTTON_STYLE_ICON_HUGE, ICON_GIANT as BUTTON_STYLE_ICON_GIANT } from './components/buttons/button/button';
+export { FLUID as BUTTON_STYLE_FLUID, DEFAULT as BUTTON_STYLE_DEFAULT, TINY as BUTTON_STYLE_TINY, BIG as BUTTON_STYLE_BIG, HUGE as BUTTON_STYLE_HUGE, GIANT as BUTTON_STYLE_GIANT, ICON as BUTTON_STYLE_ICON, ICON_MICRO as BUTTON_STYLE_ICON_MICRO, ICON_TINY as BUTTON_STYLE_ICON_TINY, ICON_BIG as BUTTON_STYLE_ICON_BIG, ICON_HUGE as BUTTON_STYLE_ICON_HUGE, ICON_GIANT as BUTTON_STYLE_ICON_GIANT } from './components/buttons/button';
 export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/carousel/carousel/styles';
 export { MICRO as HORIZONTAL_STROKE_STYLE_MICRO, TINY as HORIZONTAL_STROKE_STYLE_TINY, DEFAULT as HORIZONTAL_STROKE_STYLE_DEFAULT, BIG as HORIZONTAL_STROKE_STYLE_BIG, HUGE as HORIZONTAL_STROKE_STYLE_HUGE } from './components/layout/horizontal-stroke';
 export { MOBILE_HEADER_HEIGHT, TABLET_HEADER_HEIGHT, DESKTOP_HEADER_HEIGHT } from './components/navigation/header-nav/config'; // -------

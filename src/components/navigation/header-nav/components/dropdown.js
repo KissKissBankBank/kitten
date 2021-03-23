@@ -21,8 +21,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _emitter = _interopRequireDefault(require("../../../../helpers/utils/emitter"));
-
 var _dropdownButton = require("./dropdown-button");
 
 var _elementHelper = _interopRequireDefault(require("../../../../helpers/dom/element-helper"));
@@ -100,7 +98,13 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
     handleDropdownPosition();
     handleClickOnLinks();
 
-    _emitter.default.on(_events.TOGGLE_DROPDOWN_EVENT, toggle);
+    var toggleEvent = function toggleEvent(evt) {
+      var _evt$detail;
+
+      return toggle(evt === null || evt === void 0 ? void 0 : (_evt$detail = evt.detail) === null || _evt$detail === void 0 ? void 0 : _evt$detail.nextExpandedState);
+    };
+
+    window.addEventListener(_events.TOGGLE_DROPDOWN_EVENT, toggleEvent);
 
     if (refreshEvents) {
       refreshEvents.forEach(function (ev) {
@@ -128,8 +132,6 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
     return function () {
       revertHandleClickOnLinks();
 
-      _emitter.default.off(_events.TOGGLE_DROPDOWN_EVENT, toggle);
-
       if (refreshEvents) {
         refreshEvents.forEach(function (ev) {
           window.removeEventListener(ev, handleDropdownPosition);
@@ -143,6 +145,7 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
       }
 
       window.removeEventListener('keydown', closeDropdownOnEsc);
+      window.removeEventListener(_events.TOGGLE_DROPDOWN_EVENT, toggleEvent);
 
       if (!(0, _isNull.default)(dropdownButtonRef.current)) {
         dropdownButtonRef.current.removeEventListener('keydown', dropdownKbdTrigger);
