@@ -112,6 +112,19 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   margin-right: 0;
 }
 
+.c1:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c1:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c1.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -289,6 +302,19 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 .c10 >:last-child {
   margin-right: 0;
+}
+
+.c10:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c10:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c10:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c10.k-Button--hasBorderRadius {
@@ -1063,6 +1089,19 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 
 .c1 >:last-child {
   margin-right: 0;
+}
+
+.c1:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c1:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c1.k-Button--hasBorderRadius {

@@ -56,6 +56,19 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -477,6 +490,19 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -902,6 +928,19 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -1325,6 +1364,19 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -1733,6 +1785,19 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0.k-Button--hasBorderRadius {

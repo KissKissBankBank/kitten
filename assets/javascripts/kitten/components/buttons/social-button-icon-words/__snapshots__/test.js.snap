@@ -56,6 +56,19 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -429,6 +442,19 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -811,6 +837,19 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -1204,6 +1243,19 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -1588,6 +1640,19 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -1961,6 +2026,19 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -2338,6 +2416,19 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -2711,6 +2802,19 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0.k-Button--hasBorderRadius {

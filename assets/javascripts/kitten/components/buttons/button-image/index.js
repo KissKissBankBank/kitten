@@ -25,6 +25,18 @@ const StyledButtonImage = styled.button`
     opacity: 0.8;
   }
 
+  &:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary4};
+  }
+
+
   &.k-ButtonImage--tiny {
     width: ${pxToRem(30)};
     height: ${pxToRem(30)};
