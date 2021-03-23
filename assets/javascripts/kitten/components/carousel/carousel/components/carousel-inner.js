@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import ResizeObserver from 'resize-observer-polyfill'
-import throttle from 'lodash/throttle'
+import throttle from 'lodash/fp/throttle'
 import { domElementHelper } from '../../../../helpers/dom/element-helper'
 import { CarouselPage } from './carousel-page'
 import classNames from 'classnames'
@@ -80,7 +80,7 @@ export const CarouselInner = ({
     innerWidth && onResizeInner(innerWidth)
   }
 
-  const throttleWindowResize = throttle(onWindowResize, 200)
+  const throttleWindowResize = throttle(200)(onWindowResize)
 
   useEffect(() => {
     if (currentPageIndex !== previousIndexPageVisible) {
