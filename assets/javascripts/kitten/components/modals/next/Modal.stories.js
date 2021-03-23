@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { text, boolean, number } from '@storybook/addon-knobs'
+import { text, boolean, number, select } from '@storybook/addon-knobs'
 import { Modal } from './index'
 import { Button } from '../../../components/buttons/button/button'
 
@@ -49,8 +49,7 @@ export const OneButton = () => (
   <Modal
     trigger={<Button modifier="helium">Open</Button>}
     hasCloseButton={boolean('Has close button', true)}
-    big={boolean('Big size', false)}
-    huge={boolean('Huge size', false)}
+    size={select('Size', ['regular', 'big', 'huge'], 'regular')}
     zIndex={number('Overlay z-index', 110)}
   >
     {() => (
@@ -69,8 +68,7 @@ export const TwoButton = () => (
   <Modal
     trigger={<Button modifier="helium">Open</Button>}
     hasCloseButton={boolean('Has close button', true)}
-    big={boolean('Big size', true)}
-    huge={boolean('Huge size', false)}
+    size={select('Size', ['regular', 'big', 'huge'], 'regular')}
   >
     {() => (
       <>
@@ -95,8 +93,7 @@ export const WithState = () => {
       <Modal
         isOpen={showModal}
         hasCloseButton={boolean('Has close button', true)}
-        big={boolean('Big size', false)}
-        huge={boolean('Huge size', false)}
+        size={select('Size', ['regular', 'big', 'huge'], 'regular')}
         onClose={() => updateModalState(false)}
       >
         {() => (
@@ -146,8 +143,7 @@ export const Multi = () => {
 export const WithoutButton = () => (
   <Modal
     trigger={<Button modifier="helium">Open</Button>}
-    big={boolean('Big size', false)}
-    huge={boolean('Huge size', false)}
+    size={select('Size', ['regular', 'big', 'huge'], 'regular')}
     zIndex={number('Overlay z-index', 110)}
   >
     {() => (

@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove all `@kisskissbankbank/kitten/src/next` exports.
+- Breaking change: remove `big` and `huge` props from `ModalNext`.
+- Feature: Add `ModalNext` export for `modals/next`.
+- Feature: Add deprecation warning on `Modal` (`modals/modal`).
+- Feature: Add `size` prop to `ModalNext`.
 - Breaking change: Remove size props (`giant`, `huge`, `regular`, `big`, `tiny`) on `TagButton`.
 - Breaking change: Remove `k-TagButton` mixin.
 - Feature: Add `size` component to `TagButton`.
