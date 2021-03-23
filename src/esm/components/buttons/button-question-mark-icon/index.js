@@ -1,15 +1,16 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import React from 'react';
+import { Button } from '../../../components/buttons/button';
 import { QuestionMarkIcon } from '../../../components/icons/question-mark-icon';
-import { ButtonIcon } from '../../../components/buttons/button-icon';
 export var ButtonQuestionMarkIcon = function ButtonQuestionMarkIcon(props) {
-  return /*#__PURE__*/React.createElement(ButtonIcon, _extends({
-    className: "k-ButtonIcon--tooltip--nano",
+  return /*#__PURE__*/React.createElement(Button, _extends({
     modifier: "helium",
     size: "nano",
-    type: "button",
-    rounded: true
+    rounded: true,
+    icon: true,
+    type: "button"
   }, props), /*#__PURE__*/React.createElement(QuestionMarkIcon, {
-    className: "k-ButtonIcon__svg"
+    width: "10",
+    height: "10"
   }));
 };

@@ -6,6 +6,59 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Limit focus outline display to keyboard navigation.
 
+## [3.0.0-beta.20] - 2021-03-23
+
+Breaking Change:
+
+- Breaking change: Remove all `@kisskissbankbank/kitten/src/next` exports.
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Button*`
+  - `k-LocationInput`
+  - `k-TagButton`
+- Remove size props (`giant`, `huge`, `regular`, `big`, `tiny`) on the following components:
+  - `Button`
+  - `ModalNext`
+  - `TagButton`
+- Remove the following deprecated components:
+  - `Button` (`buttons/button`, replaced with `Button` (`buttons/button/button`))
+  - `ButtonImageWithText`
+  - `ButtonImageWithTextAndBadge`
+
+Features:
+
+- Refactor the following components to CSS-in-JS:
+  - `ButtonIcon`
+  - `ButtonImage`
+  - `ButtonQuestionMarkIcon`
+  - `CloseButton`
+  - `FacebookButtonIcon`
+  - `FacebookButtonIconWords`
+  - `InstagramButtonIcon`
+  - `LinkedinButtonIcon`,
+  - `LinkedinButtonIconWords`
+  - `LocationInput`
+  - `PinterestButtonIcon`
+  - `TwitterButtonIcon`
+  - `TwitterButtonIconWords`
+  - `YoutubeButtonIcon`
+- Add `size` prop to the following components:
+  - `Button`
+  - `ModalNext`
+  - `TagButton`
+- Add `rounded` prop to Button component.
+- Add `social_facebook`, `social_twitter`, `social_linkedin`, `social_instagram`,
+  `social_youtube`, `social_pinterest` modifiers to Button component.
+- Add `InstagramButtonIconWords` component.
+- Add `type="button"` to Button by default.
+- Add `ModalNext` export for `modals/next`.
+- Add deprecation warning on `Modal` (`modals/modal`).
+
+Fixes:
+
+- Fix `HorizontalTimeline` `className` property name.
+- Replace `ResizeObserver` with `window.resize` on `Carousel`.
+- Use `CustomEvent` instead of `event-emitter` on `Dropdown`.
+
 ## [3.0.0-beta.19] - 2021-03-19
 
 Breaking changes:
@@ -271,6 +324,9 @@ Features:
 - Convert the following components to CSS-in-JS:
   - `DevGrid`
   - `ImageCropper`
+
+- Breaking change: convert `LocationInput` to CSS-in-JS.
+- Breaking change: remove `k-LocationInput` mixin.
 
 ## [3.0.0-beta.4] - 2021-02-22
 

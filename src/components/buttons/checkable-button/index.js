@@ -17,7 +17,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _button = require("../../../components/buttons/button/button");
+var _button = require("../../../components/buttons/button");
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
@@ -44,10 +44,9 @@ var StyledCheckableButton = (0, _styledComponents.default)(_button.Button).withC
   displayName: "checkable-button__StyledCheckableButton",
   componentId: "b6e3u-0"
 })(["&::after{content:'';position:absolute;", " ", " background-repeat:no-repeat;background-position:50% 50%;opacity:0;transform-origin:50% 50%;transition:opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);transform:scale(0);}&[aria-checked]::after{opacity:1;transform:scale(1);transition-timing-function:ease,cubic-bezier(0.2,2,0.7,1);}&:focus{outline-offset:", ";}", " &[aria-checked]:focus{outline:", " solid ", ";border-color:", ";}"], function (_ref) {
-  var tiny = _ref.tiny,
-      big = _ref.big;
-  if (tiny === true) return checkedCircleIconStyle(15);
-  if (big === true) return checkedCircleIconStyle(24);
+  var size = _ref.size;
+  if (size === 'tiny') return checkedCircleIconStyle(15);
+  if (size === 'big') return checkedCircleIconStyle(24);
   return checkedCircleIconStyle(20);
 }, function (_ref2) {
   var modifier = _ref2.modifier,
@@ -95,16 +94,12 @@ var CheckableButton = function CheckableButton(_ref4) {
 
 exports.CheckableButton = CheckableButton;
 CheckableButton.propTypes = {
-  big: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
   error: _propTypes.default.bool,
-  isChecked: _propTypes.default.bool,
-  tiny: _propTypes.default.bool
+  isChecked: _propTypes.default.bool
 };
 CheckableButton.defaultProps = {
-  big: false,
   disabled: false,
   error: false,
-  isChecked: false,
-  tiny: false
+  isChecked: false
 };

@@ -16,10 +16,6 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -31,6 +27,10 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -54,6 +54,91 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c0 svg,
@@ -102,117 +187,29 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   }
 }
 
-<input
-  className="c0"
-  type="submit"
-  value="MyButton"
-/>
-`;
-
-exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-  box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.8888888888888888rem;
-  color: #222;
-  line-height: 1.3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-}
-
-.c0:disabled {
-  cursor: not-allowed;
-}
-
-.c0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
-.c0 svg,
-.c0 path {
-  fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
-}
-
-.c0:hover,
-.c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
-}
-
-.c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
-.c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0 {
+  .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
     padding: 0 2.5rem;
@@ -221,17 +218,146 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
 }
 
 @media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--big {
     width: 13.75rem;
     height: 4.375rem;
   }
 }
 
-<button
-  className="c0"
->
-  MyButton
-</button>
+@media (min-width:768px) {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
+<input
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="submit"
+  value="MyButton"
+/>
 `;
 
 exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
@@ -250,10 +376,6 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -265,7 +387,10 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  border-radius: 0.25rem;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -289,6 +414,91 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c0 svg,
@@ -337,8 +547,175 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
 <button
-  className="c0"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasBorderRadius"
+  style={
+    Object {
+      "--border-radius": "0.25rem",
+    }
+  }
+  type="button"
 >
   MyButton
 </button>
@@ -360,10 +737,6 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -375,31 +748,118 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  border: 0.125rem solid #eee;
+  background-color: #fff;
+  color: #222;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
   min-width: initial;
   width: 100%;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
-  cursor: not-allowed;
+.c0.k-Button--rounded {
+  border-radius: 50%;
 }
 
-.c0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c0 svg,
@@ -448,248 +908,45 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   }
 }
 
-<button
-  className="c0"
->
-  MyButton
-</button>
-`;
-
-exports[`<Button /> with \`giant\` prop matches with snapshot 1`] = `
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-  box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.8888888888888888rem;
-  color: #222;
-  line-height: 1.3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-}
-
-.c0:disabled {
-  cursor: not-allowed;
-}
-
-.c0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
-.c0 svg,
-.c0 path {
-  fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
-}
-
-.c0:hover,
-.c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
-}
-
-.c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
-.c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
-}
-
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
   }
 }
 
-@media (min-width:768px) {
-  .c0 {
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--big {
     min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
+    min-height: 4.375rem;
     padding: 0 2.5rem;
+    font-size: 1rem;
   }
 }
 
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--big {
     width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-<button
-  className="c0"
->
-  MyButton
-</button>
-`;
-
-exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-  box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.8888888888888888rem;
-  color: #222;
-  line-height: 1.3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-}
-
-.c0:disabled {
-  cursor: not-allowed;
-}
-
-.c0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
-.c0 svg,
-.c0 path {
-  fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
-}
-
-.c0:hover,
-.c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
-}
-
-.c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
-.c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
+    height: 4.375rem;
   }
 }
 
 @media (min-width:768px) {
-  .c0 {
+  .c0.k-Button--huge {
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
@@ -698,14 +955,128 @@ exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
 }
 
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--huge {
     width: 13.75rem;
     height: 5rem;
   }
 }
 
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
 <button
-  className="c0"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
 >
   MyButton
 </button>
@@ -727,10 +1098,6 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -742,6 +1109,10 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem dashed #bae8fd;
   background-color: #fff;
   color: #19b4fa;
@@ -767,6 +1138,91 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   margin-right: 0;
 }
 
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
+}
+
 .c0 svg,
 .c0 path {
   fill: currentColor;
@@ -813,14 +1269,181 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
 <button
-  className="c0"
+  className="c0 k-Button k-Button--regular k-Button--oxygen k-Button--andromeda"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
 >
   MyButton
 </button>
 `;
 
-exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
+exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -836,10 +1459,6 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -851,9 +1470,9 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -880,6 +1499,91 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
+}
+
 .c0 svg,
 .c0 path {
   fill: currentColor;
@@ -927,17 +1631,539 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
     width: 10rem;
     height: 2.5rem;
   }
 }
 
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
 <button
-  className="c0"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
 >
   MyButton
 </button>
+`;
+
+exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  border: 0.125rem solid #eee;
+  background-color: #fff;
+  color: #222;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
+}
+
+.c0 svg,
+.c0 path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
+  color: #fff;
+}
+
+.c0:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
+<a
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  href="#helloWorld"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
+>
+  MyButton
+</a>
 `;
 
 exports[`<Button /> with icon and big matches with snapshot 1`] = `
@@ -956,10 +2182,6 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -971,11 +2193,10 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -999,6 +2220,91 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c0 svg,
@@ -1047,8 +2353,29 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
 @media (min-width:40rem) {
-  .c0 {
+  .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
     padding: 0 2.5rem;
@@ -1057,35 +2384,144 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 }
 
 @media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--big {
     width: 13.75rem;
     height: 4.375rem;
   }
 }
 
+@media (min-width:768px) {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
     width: 3.125rem;
     min-width: 0;
     min-height: 0;
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
 @media (min-width:40rem) {
-  .c0 {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
     width: 4.375rem;
     height: 4.375rem;
   }
 }
 
 @media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
     width: 4.375rem;
   }
 }
 
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
 <button
-  className="c0"
+  className="c0 k-Button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
 >
   !
 </button>
@@ -1107,10 +2543,6 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1122,8 +2554,10 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: initial;
-  width: 100%;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -1147,6 +2581,91 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c0 svg,
@@ -1195,8 +2714,175 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
 <button
-  className="c0"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasIcon"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
 >
   !
 </button>
@@ -1218,10 +2904,6 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1233,17 +2915,10 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-height: 4.375rem;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -1267,6 +2942,91 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c0 svg,
@@ -1315,8 +3075,61 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
 @media (min-width:768px) {
-  .c0 {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
@@ -1325,22 +3138,70 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 }
 
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--giant {
     width: 13.75rem;
     height: 5.625rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
     width: 3.125rem;
     min-width: 0;
     min-height: 0;
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
 @media (min-width:48rem) {
-  .c0 {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     min-width: initial;
     width: 5.625rem;
     height: 5.625rem;
@@ -1348,13 +3209,41 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 }
 
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
   }
 }
 
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
 <button
-  className="c0"
+  className="c0 k-Button k-Button--giant k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
 >
   !
 </button>
@@ -1376,10 +3265,6 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1391,17 +3276,10 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-height: 4.375rem;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -1425,6 +3303,91 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c0 svg,
@@ -1473,8 +3436,45 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
 @media (min-width:768px) {
-  .c0 {
+  .c0.k-Button--huge {
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
@@ -1483,22 +3483,72 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 }
 
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--huge {
     width: 13.75rem;
     height: 5rem;
   }
 }
 
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
     width: 3.125rem;
     min-width: 0;
     min-height: 0;
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
 @media (min-width:48rem) {
-  .c0 {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
     min-width: initial;
     width: 5rem;
     height: 5rem;
@@ -1506,13 +3556,55 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 }
 
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
     width: 5rem;
   }
 }
 
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
 <button
-  className="c0"
+  className="c0 k-Button k-Button--huge k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
 >
   !
 </button>
@@ -1534,10 +3626,6 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1549,13 +3637,10 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-  width: 1.875rem;
-  height: 1.875rem;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -1579,6 +3664,91 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c0 svg,
@@ -1628,7 +3798,76 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
     width: 3.125rem;
     min-width: 0;
     min-height: 0;
@@ -1636,13 +3875,97 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
     width: 1.875rem;
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
 <button
-  className="c0"
+  className="c0 k-Button k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
 >
   !
 </button>
@@ -1664,10 +3987,6 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1679,17 +3998,10 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-  width: 2.5rem;
-  height: 2.5rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -1713,6 +4025,91 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c0 svg,
@@ -1762,14 +4159,76 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
     width: 10rem;
     height: 2.5rem;
   }
 }
 
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
     width: 3.125rem;
     min-width: 0;
     min-height: 0;
@@ -1777,13 +4236,97 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
     width: 2.5rem;
   }
 }
 
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
 <button
-  className="c0"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
 >
   !
 </button>
@@ -1805,10 +4348,6 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1820,11 +4359,10 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -1848,6 +4386,91 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c0 svg,
@@ -1897,15 +4520,174 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
     width: 3.125rem;
     min-width: 0;
     min-height: 0;
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
 <button
-  className="c0"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
 >
   !
 </button>
@@ -1927,10 +4709,6 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1942,6 +4720,10 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -1965,6 +4747,91 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c0 svg,
@@ -2013,8 +4880,175 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
 <button
-  className="c0"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
 >
   <span>
     My
@@ -2041,10 +5075,6 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -2056,6 +5086,10 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -2079,6 +5113,91 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c0 svg,
@@ -2127,8 +5246,175 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    border-radius: 0.5rem;
+  }
+}
+
 <button
-  className="c0"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
 >
   MyButton
 </button>
@@ -2150,10 +5436,6 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -2165,9 +5447,10 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: initial;
-  width: 100%;
-  border-radius: 0.375rem;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -2191,6 +5474,91 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c0 svg,
@@ -2239,8 +5607,29 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
 @media (min-width:40rem) {
-  .c0 {
+  .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
     padding: 0 2.5rem;
@@ -2249,20 +5638,144 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 }
 
 @media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
     width: 13.75rem;
     height: 4.375rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0 {
+  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fluid"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
 >
   Orion fluid
 </button>
@@ -2284,10 +5797,6 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -2299,7 +5808,10 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  border-radius: 0.375rem;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -2323,6 +5835,91 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
 
 .c0 >:last-child {
   margin-right: 0;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c0.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c0.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c0.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c0.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c0.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c0.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c0 svg,
@@ -2371,8 +5968,29 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
 @media (min-width:40rem) {
-  .c0 {
+  .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
     padding: 0 2.5rem;
@@ -2381,20 +5999,144 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
 }
 
 @media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
+  .c0.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0.k-Button--orion {
     width: 13.75rem;
     height: 4.375rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0 {
+  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion"
+  style={
+    Object {
+      "--border-radius": 0,
+    }
+  }
+  type="button"
 >
   Orion
 </button>

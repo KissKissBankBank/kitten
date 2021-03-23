@@ -25,7 +25,7 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _button = require("../../../components/buttons/button/button");
+var _button = require("../../../components/buttons/button");
 
 var _modifierStyles = require("../../../components/buttons/button/helpers/modifier-styles");
 

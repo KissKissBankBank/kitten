@@ -1,8 +1,4 @@
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-
-var _arguments = arguments,
-    _this = this;
-
 import { useState, useEffect } from 'react';
 export var useDebounce = function useDebounce(value, msDelay) {
   var _useState = useState(value),
@@ -19,15 +15,4 @@ export var useDebounce = function useDebounce(value, msDelay) {
     };
   }, [value]);
   return debouncedValue;
-};
-export var debounce = function debounce(fn, msDelay) {
-  var inDebounce;
-  return function () {
-    var context = _this;
-    var args = _arguments;
-    clearTimeout(inDebounce);
-    inDebounce = setTimeout(function () {
-      return fn.apply(context, args);
-    }, msDelay);
-  };
 };

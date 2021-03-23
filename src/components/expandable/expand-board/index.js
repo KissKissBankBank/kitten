@@ -25,7 +25,7 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _button = require("../../../components/buttons/button/button");
+var _button = require("../../../components/buttons/button");
 
 var _arrowIcon = require("../../../components/icons/arrow-icon");
 
@@ -35,7 +35,7 @@ var _typography = require("../../../helpers/utils/typography");
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 var StyledButton = (0, _styledComponents.default)(_button.Button).withConfig({
   displayName: "expand-board__StyledButton",
@@ -70,10 +70,10 @@ var ExpandBoardButton = /*#__PURE__*/function (_PureComponent) {
           onClick = _this$props.onClick,
           ariaId = _this$props.ariaId,
           borderRadius = _this$props.borderRadius,
-          big = _this$props.big;
+          size = _this$props.size;
       var defaultExpandChildren = expandChildren ? expandChildren : children;
       return /*#__PURE__*/_react.default.createElement(StyledButton, {
-        big: big,
+        size: size,
         modifier: "helium",
         disabled: disabled,
         "aria-expanded": expanded,
@@ -98,7 +98,7 @@ ExpandBoardButton.propTypes = {
   expanded: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
   onClick: _propTypes.default.func,
-  big: _propTypes.default.bool,
+  size: _propTypes.default.string,
   borderRadius: _propTypes.default.number
 };
 ExpandBoardButton.defaultProps = {
@@ -108,7 +108,7 @@ ExpandBoardButton.defaultProps = {
   onClick: function onClick() {},
   ariaId: '',
   borderRadius: 0,
-  big: true
+  size: 'big'
 };
 
 var ExpandBoardContent = /*#__PURE__*/function (_PureComponent2) {

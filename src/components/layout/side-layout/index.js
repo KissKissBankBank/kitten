@@ -21,6 +21,8 @@ var _bowser = _interopRequireDefault(require("bowser"));
 
 var _sideGrid = require("../../../components/grid/side-grid");
 
+var _elementHelper = _interopRequireDefault(require("../../../helpers/dom/element-helper"));
+
 var StyledSideLayout = (0, _styledComponents.default)(_sideGrid.SideGrid).withConfig({
   displayName: "side-layout__StyledSideLayout",
   componentId: "ocof17-0"
@@ -37,7 +39,11 @@ var SideLayout = function SideLayout(_ref) {
       setNeedsFullHeight = _useState2[1];
 
   (0, _react.useEffect)(function () {
-    setNeedsFullHeight(!!_bowser.default.safari);
+    if (!_elementHelper.default.canUseDom()) return;
+
+    var browser = _bowser.default.getParser(window.navigator.userAgent);
+
+    setNeedsFullHeight(browser.isBrowser('safari'));
   }, []);
   var hasFluidLayout = (className || '').search('k-VerticalGrid__fluid') != -1;
   return /*#__PURE__*/_react.default.createElement(StyledSideLayout, {

@@ -2,8 +2,9 @@ import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import styled from 'styled-components';
-import bowser from 'bowser';
+import Bowser from 'bowser';
 import { SideGrid, SideGridContent, SideGridAside } from '../../../components/grid/side-grid';
+import domElementHelper from '../../../helpers/dom/element-helper';
 var StyledSideLayout = styled(SideGrid).withConfig({
   displayName: "side-layout__StyledSideLayout",
   componentId: "ocof17-0"
@@ -19,7 +20,9 @@ export var SideLayout = function SideLayout(_ref) {
       setNeedsFullHeight = _useState2[1];
 
   useEffect(function () {
-    setNeedsFullHeight(!!bowser.safari);
+    if (!domElementHelper.canUseDom()) return;
+    var browser = Bowser.getParser(window.navigator.userAgent);
+    setNeedsFullHeight(browser.isBrowser('safari'));
   }, []);
   var hasFluidLayout = (className || '').search('k-VerticalGrid__fluid') != -1;
   return /*#__PURE__*/React.createElement(StyledSideLayout, {

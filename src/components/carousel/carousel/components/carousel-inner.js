@@ -9,13 +9,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.CarouselInner = void 0;
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
 var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
 
 var _react = _interopRequireWildcard(require("react"));
 
 var _resizeObserverPolyfill = _interopRequireDefault(require("resize-observer-polyfill"));
+
+var _throttle = _interopRequireDefault(require("lodash/fp/throttle"));
 
 var _elementHelper = require("../../../../helpers/dom/element-helper");
 
@@ -79,25 +79,19 @@ var CarouselInner = function CarouselInner(_ref) {
       pageClickText = _ref.pageClickText;
   var carouselInner = (0, _react.useRef)(null);
   var previousIndexPageVisible = (0, _usePreviousHook.usePrevious)(currentPageIndex);
-  var resizeObserver;
-
-  var onResizeObserve = function onResizeObserve(_ref2) {
-    var _ref3 = (0, _slicedToArray2.default)(_ref2, 1),
-        entry = _ref3[0];
-
-    var innerWidth = entry.contentRect.width;
-    onResizeInner(innerWidth);
-  };
-
   (0, _react.useEffect)(function () {
-    resizeObserver = new _resizeObserverPolyfill.default(onResizeObserve);
+    _elementHelper.domElementHelper.canUseDom() && window.addEventListener('resize', throttleWindowResize);
     return function () {
-      return resizeObserver.disconnect();
+      return _elementHelper.domElementHelper.canUseDom() && window.removeEventListener('resize', throttleWindowResize);
     };
   }, []);
-  (0, _react.useEffect)(function () {
-    carouselInner.current && resizeObserver.observe(carouselInner.current);
-  }, [carouselInner]);
+
+  var onWindowResize = function onWindowResize() {
+    var innerWidth = carouselInner.current && carouselInner.current.clientWidth;
+    innerWidth && onResizeInner(innerWidth);
+  };
+
+  var throttleWindowResize = (0, _throttle.default)(200)(onWindowResize);
   (0, _react.useEffect)(function () {
     if (currentPageIndex !== previousIndexPageVisible) {
       scrollToPage(currentPageIndex);

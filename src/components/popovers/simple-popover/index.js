@@ -37,7 +37,7 @@ var _gridConfig = require("../../../constants/grid-config");
 
 var _screenConfig = require("../../../constants/screen-config");
 
-var _button = require("../../../components/buttons/button/button");
+var _button = require("../../../components/buttons/button");
 
 var borderSize = 2;
 
@@ -113,7 +113,7 @@ var SimplePopover = function SimplePopover(_ref2) {
     onClick: onCloseClick,
     type: "button",
     modifier: "hydrogen",
-    micro: true,
+    size: "micro",
     icon: true
   }, /*#__PURE__*/_react.default.createElement(_crossIcon.CrossIcon, {
     "aria-hidden": true,

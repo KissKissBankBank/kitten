@@ -43,13 +43,13 @@ export var HorizontalTimeline = function HorizontalTimeline(_ref2) {
   }), ellipsisColumns === null || ellipsisColumns === void 0 ? void 0 : ellipsisColumns.map(function (value) {
     return /*#__PURE__*/React.createElement("b", {
       key: "ellipsis-marker-".concat(value),
-      class: "k-HorizontalTimeline__ellipsis",
+      className: "k-HorizontalTimeline__ellipsis",
       style: {
         '--HorizontalTimeline-ellipsis-column': value
       }
     });
   }), /*#__PURE__*/React.createElement("b", {
-    class: "k-HorizontalTimeline__ellipsis"
+    className: "k-HorizontalTimeline__ellipsis"
   }));
 };
 HorizontalTimeline.defaultProps = {

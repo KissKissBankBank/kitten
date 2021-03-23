@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -43,32 +43,14 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
+var _templateObject, _templateObject2;
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-function _templateObject2() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n  .k-Modal__overlay {\n    opacity: 0;\n  }\n  .k-Modal__content {\n    opacity: 0;\n    transform: scale(.94);\n  }\n\n  .k-Modal__overlay--afterOpen {\n    transition: opacity .3s ease;\n    opacity: 1;\n  }\n  .k-Modal--afterOpen {\n    transition: opacity .3s ease, transform .3s ease;\n    transform: scale(1);\n    opacity: 1;\n  }\n\n  .k-Modal__overlay--beforeClose {\n    opacity: 0;\n  }\n  .k-Modal--beforeClose {\n    transition: opacity .3s ease, transform .5s ease;\n    transform: scale(1.06);\n    opacity: 0;\n  }\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n  body.k-Modal__body--open {\n    overflow: hidden;\n  }\n\n  .k-Modal__content {\n    position: relative;\n    max-height: calc(100% - ", " * 2);\n    max-width: calc(100vw - ", " * 2);\n\n    background-color: ", ";\n    text-align: center;\n    padding-left: ", ";\n    padding-right: ", ";\n\n    box-sizing: border-box;\n    overflow: scroll;\n\n    @media (min-width: ", ") {\n      max-width: ", ";\n      padding-left: ", ";\n      padding-right: ", ";\n    }\n  }\n\n  .k-Modal__close {\n    position: absolute;\n    top: 0;\n    right: ", ";\n\n    button {\n      margin: 0;\n    }\n  }\n\n  .k-Modal__close--fixed {\n    position: fixed;\n  }\n\n  .k-Modal__overlay {\n    position: fixed;\n    z-index: 10;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n    background-color: rgba(34, 34, 34, .9);\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject(), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), _colorsConfig.default.background1, (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(690), (0, _typography.pxToRem)(110), (0, _typography.pxToRem)(110), (0, _typography.pxToRem)(30));
-var AnimatedGlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject2());
+var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n  body.k-Modal__body--open {\n    overflow: hidden;\n  }\n\n  .k-Modal__content {\n    position: relative;\n    max-height: calc(100% - ", " * 2);\n    max-width: calc(100vw - ", " * 2);\n\n    background-color: ", ";\n    text-align: center;\n    padding-left: ", ";\n    padding-right: ", ";\n\n    box-sizing: border-box;\n    overflow: scroll;\n\n    @media (min-width: ", ") {\n      max-width: ", ";\n      padding-left: ", ";\n      padding-right: ", ";\n    }\n  }\n\n  .k-Modal__close {\n    position: absolute;\n    top: 0;\n    right: ", ";\n\n    button {\n      margin: 0;\n    }\n  }\n\n  .k-Modal__close--fixed {\n    position: fixed;\n  }\n\n  .k-Modal__overlay {\n    position: fixed;\n    z-index: 10;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n    background-color: rgba(34, 34, 34, .9);\n  }\n"])), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), _colorsConfig.default.background1, (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(690), (0, _typography.pxToRem)(110), (0, _typography.pxToRem)(110), (0, _typography.pxToRem)(30));
+var AnimatedGlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject2 || (_templateObject2 = (0, _taggedTemplateLiteral2.default)(["\n  .k-Modal__overlay {\n    opacity: 0;\n  }\n  .k-Modal__content {\n    opacity: 0;\n    transform: scale(.94);\n  }\n\n  .k-Modal__overlay--afterOpen {\n    transition: opacity .3s ease;\n    opacity: 1;\n  }\n  .k-Modal--afterOpen {\n    transition: opacity .3s ease, transform .3s ease;\n    transform: scale(1);\n    opacity: 1;\n  }\n\n  .k-Modal__overlay--beforeClose {\n    opacity: 0;\n  }\n  .k-Modal--beforeClose {\n    transition: opacity .3s ease, transform .5s ease;\n    transform: scale(1.06);\n    opacity: 0;\n  }\n"])));
 
 var Modal = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Modal, _Component);
@@ -109,6 +91,11 @@ var Modal = /*#__PURE__*/function (_Component) {
   }
 
   (0, _createClass2.default)(Modal, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      console.warn('The Modal component on `modals/modal` will be deprecated in favor of `ModalNext`.');
+    }
+  }, {
     key: "renderCloseModal",
     value: function renderCloseModal() {
       var closeButtonLabel = this.props.closeButtonLabel;

@@ -1,10 +1,10 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import * as stories from './button-image-with-text.stories.js'
-import { ButtonImageWithText } from './index'
+import * as stories from './button-image.stories.js'
+import { ButtonImage } from './index'
 
-<Meta title="Buttons/ButtonImageWithText" component={ButtonImageWithText} />
+<Meta title="Buttons/ButtonImage" component={ButtonImage} />
 
-# ButtonImageWithText
+# ButtonImage
 
 <Canvas>
   <Story name="Example" story={stories.Default} />
@@ -13,7 +13,7 @@ import { ButtonImageWithText } from './index'
 ## Import
 
 ```js
-import { ButtonImageWithText } from '@kisskissbankbank/kitten'
+import { ButtonImage } from '@kisskissbankbank/kitten/src/components/buttons/button-image-with-text'
 ```
 
 ## Usage
@@ -21,16 +21,16 @@ import { ButtonImageWithText } from '@kisskissbankbank/kitten'
 #### Default
 
 ```js
-<ButtonImageWithText title="Title" description="Lorem ipsum" />
+<ButtonImage title="Title" description="Lorem ipsum" />
 ```
 
 #### With props
 
 ```js
-<LinkBox
+<ButtonImage
   title="Title"
   description="Lorem ipsum"
-  micro
+  size="tiny"
   tag="span"
   titleRegular
   textRegular

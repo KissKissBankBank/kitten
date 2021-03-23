@@ -14,7 +14,7 @@ describe('<DocumentManager />', () => {
       .create(
         <DocumentManager
           id="DocumentManager"
-          buttonProps={{ big: true }}
+          buttonProps={{ size: 'big' }}
           fileInputProps={{ multiple: true }}
           uploaderStatus="valid"
           displayTitle="document validate"

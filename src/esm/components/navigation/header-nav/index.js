@@ -17,8 +17,7 @@ import { Logged } from './components/logged';
 import { Hidden } from './components/hidden';
 import { QuickAccessLink } from './components/quick-access-link';
 import { getFocusableElementsFrom, keyboardNavigation } from '../../../helpers/dom/a11y';
-import domEvents, { DROPDOWN_FIRST_FOCUS_REACHED_EVENT, DROPDOWN_LAST_FOCUS_REACHED_EVENT, TOGGLE_DROPDOWN_EVENT } from '../../../helpers/dom/events';
-import emitter from '../../../helpers/utils/emitter';
+import domEvents, { DROPDOWN_FIRST_FOCUS_REACHED_EVENT, DROPDOWN_LAST_FOCUS_REACHED_EVENT, TOGGLE_DROPDOWN_EVENT, dispatchEvent } from '../../../helpers/dom/events';
 import { DROPDOWN_ANIMATED_DELAY } from '../../../constants/dropdown-config';
 import { usePrevious } from '../../../helpers/utils/use-previous-hook';
 import { StyledHeader } from './styles';
@@ -58,13 +57,17 @@ var HeaderNav = function HeaderNav(_ref) {
 
   var focusDropdown = function focusDropdown(_ref2) {
     var dropdown = _ref2.detail;
-    emitter.emit(TOGGLE_DROPDOWN_EVENT, false);
+    dispatchEvent(TOGGLE_DROPDOWN_EVENT, {
+      nextExpandedState: false
+    })();
     dropdown.focus();
   };
 
   var focusElementNextToDropdown = function focusElementNextToDropdown(_ref3) {
     var dropdown = _ref3.detail;
-    emitter.emit(TOGGLE_DROPDOWN_EVENT, false);
+    dispatchEvent(TOGGLE_DROPDOWN_EVENT, {
+      nextExpandedState: false
+    })();
     if (!headerRef.current) return;
     setTimeout(function () {
       var focusableElements = getFocusableElementsFrom(headerRef.current);

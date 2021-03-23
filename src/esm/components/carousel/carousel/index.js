@@ -8,7 +8,7 @@ import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 import React, { Component, Fragment } from 'react';
 import deprecated from 'prop-types-extra/lib/deprecated';
@@ -16,7 +16,7 @@ import PropTypes from 'prop-types';
 import { createRangeFromZeroTo } from '../../../helpers/utils/range';
 import { withMediaQueries } from '../../../hoc/media-queries';
 import { CONTAINER_PADDING, CONTAINER_PADDING_MOBILE } from '../../../constants/grid-config';
-import { Button } from '../../../components/buttons/button/button';
+import { Button } from '../../../components/buttons/button';
 import { ArrowIcon } from '../../../components/icons/arrow-icon';
 import { CarouselInner } from './components/carousel-inner';
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden';

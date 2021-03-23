@@ -70,7 +70,7 @@ const SocialLinks = ({ links = [] }) => (
           key={link.name}
           aria-label={link.name}
           href={link.href}
-          modifier={link.name}
+          modifier={`social_${link.name}`}
           size="tiny"
           target="_blank"
           rel="noopener"

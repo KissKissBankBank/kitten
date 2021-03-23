@@ -13,7 +13,7 @@ exports[`<HorizontalTimeline /> by default matches with snapshot 1`] = `
     className="k-HorizontalTimeline__line"
   />
   <b
-    class="k-HorizontalTimeline__ellipsis"
+    className="k-HorizontalTimeline__ellipsis"
   />
 </dl>
 `;
@@ -51,7 +51,7 @@ exports[`<HorizontalTimeline /> with HorizontalTimeline.Block and ellipsisColumn
     className="k-HorizontalTimeline__line"
   />
   <b
-    class="k-HorizontalTimeline__ellipsis"
+    className="k-HorizontalTimeline__ellipsis"
     style={
       Object {
         "--HorizontalTimeline-ellipsis-column": 1,
@@ -59,7 +59,7 @@ exports[`<HorizontalTimeline /> with HorizontalTimeline.Block and ellipsisColumn
     }
   />
   <b
-    class="k-HorizontalTimeline__ellipsis"
+    className="k-HorizontalTimeline__ellipsis"
   />
 </dl>
 `;

@@ -2,16 +2,67 @@
 
 exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] = `
 .c1 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c1:hover,
+.c1:focus {
+  opacity: 0.8;
+}
+
+.c1.k-ButtonImage--tiny {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c1.k-ButtonImage--huge {
+  width: 5rem;
+  height: 5rem;
+}
+
+.c1.k-ButtonImage--withoutPointerEvents {
+  pointer-events: none;
+}
+
+.c1.k-ButtonImage--withBorder {
+  border: 0.125rem solid #eee;
+}
+
+.c1 .k-ButtonImage__img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c2 {
   max-width: 100%;
 }
 
-.c1 .k-Meters-Progress__ramp {
+.c2 .k-Meters-Progress__ramp {
   position: relative;
   height: 0.125rem;
   background: #eee;
 }
 
-.c1 .k-Meters-Progress__ramp::after {
+.c2 .k-Meters-Progress__ramp::after {
   content: '';
   position: absolute;
   top: 0;
@@ -24,13 +75,13 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   background: #19b4fa;
 }
 
-.c1.k-Meters-Progress--disabled .k-Meters-Progress__ramp::after,
-.c1.is-disabled .k-Meters-Progress__ramp::after {
+.c2.k-Meters-Progress--disabled .k-Meters-Progress__ramp::after,
+.c2.is-disabled .k-Meters-Progress__ramp::after {
   background: #d8d8d8;
 }
 
-.c1.k-Meters-Progress--orion .k-Meters-Progress__ramp,
-.c1.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
+.c2.k-Meters-Progress--orion .k-Meters-Progress__ramp,
+.c2.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
   border-radius: 0.1875rem;
 }
 
@@ -380,6 +431,13 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 
 .c0 .k-CrowdfundingCard__image__imageContainer {
   padding-top: calc( (0.625) * 100% );
+}
+
+@media (min-width:640px) {
+  .c1.k-ButtonImage--big {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
 }
 
 @media (min-width:40rem) {
@@ -484,8 +542,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
         className="k-u-margin-top-single"
       >
         <span
-          className="k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
-          tabIndex={null}
+          className="c1 k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -556,7 +613,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
-      className="c1 k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+      className="c2 k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
       role="progressbar"
     >
       <div
@@ -589,16 +646,67 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 
 exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with snapshot 1`] = `
 .c1 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c1:hover,
+.c1:focus {
+  opacity: 0.8;
+}
+
+.c1.k-ButtonImage--tiny {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c1.k-ButtonImage--huge {
+  width: 5rem;
+  height: 5rem;
+}
+
+.c1.k-ButtonImage--withoutPointerEvents {
+  pointer-events: none;
+}
+
+.c1.k-ButtonImage--withBorder {
+  border: 0.125rem solid #eee;
+}
+
+.c1 .k-ButtonImage__img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c2 {
   max-width: 100%;
 }
 
-.c1 .k-Meters-Progress__ramp {
+.c2 .k-Meters-Progress__ramp {
   position: relative;
   height: 0.125rem;
   background: #eee;
 }
 
-.c1 .k-Meters-Progress__ramp::after {
+.c2 .k-Meters-Progress__ramp::after {
   content: '';
   position: absolute;
   top: 0;
@@ -611,17 +719,17 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   background: #19b4fa;
 }
 
-.c1.k-Meters-Progress--disabled .k-Meters-Progress__ramp::after,
-.c1.is-disabled .k-Meters-Progress__ramp::after {
+.c2.k-Meters-Progress--disabled .k-Meters-Progress__ramp::after,
+.c2.is-disabled .k-Meters-Progress__ramp::after {
   background: #d8d8d8;
 }
 
-.c1.k-Meters-Progress--orion .k-Meters-Progress__ramp,
-.c1.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
+.c2.k-Meters-Progress--orion .k-Meters-Progress__ramp,
+.c2.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
   border-radius: 0.1875rem;
 }
 
-.c2 {
+.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -636,10 +744,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -651,8 +755,10 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: initial;
-  width: 100%;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #19b4fa;
   background-color: #19b4fa;
   color: #fff;
@@ -660,58 +766,143 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c2:disabled {
+.c3:disabled {
   cursor: not-allowed;
 }
 
-.c2:hover {
+.c3:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c2 >:nth-child(n) {
+.c3 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c2 >:last-child {
+.c3 >:last-child {
   margin-right: 0;
 }
 
-.c2 svg,
-.c2 path {
+.c3.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c3.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c3.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c3.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c3.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c3.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c3.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c3.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c3.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c3.k-Button--orion {
+  border-radius: 0.375rem;
+}
+
+.c3 svg,
+.c3 path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
 
-.c2:hover,
-.c2:focus {
+.c3:hover,
+.c3:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c2:active {
+.c3:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c2:focus {
+.c3:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
-.c2:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline-color: transparent;
 }
 
-.c2:focus-visible {
+.c3:focus-visible {
   outline-color: #bae8fd;
 }
 
-.c2:disabled {
+.c3:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1065,10 +1256,178 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   padding-top: calc( (0.625) * 100% );
 }
 
+@media (min-width:640px) {
+  .c1.k-ButtonImage--big {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+}
+
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2 {
+  .c3 {
     width: 12.5rem;
     height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c3.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c3.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c3.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid) {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c3.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c3.k-Button--orion {
+    border-radius: 0.5rem;
   }
 }
 
@@ -1174,8 +1533,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
         className="k-u-margin-top-single"
       >
         <span
-          className="k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
-          tabIndex={null}
+          className="c1 k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -1215,7 +1573,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
-      className="c1 k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+      className="c2 k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
       role="progressbar"
     >
       <div
@@ -1237,7 +1595,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c2"
+      className="c3 k-Button k-Button--regular k-Button--helium k-Button--andromeda k-Button--fluid"
+      style={
+        Object {
+          "--border-radius": 0,
+        }
+      }
       type="button"
     >
       Contribute
@@ -1258,16 +1621,67 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 
 exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches with snapshot 1`] = `
 .c1 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c1:hover,
+.c1:focus {
+  opacity: 0.8;
+}
+
+.c1.k-ButtonImage--tiny {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c1.k-ButtonImage--huge {
+  width: 5rem;
+  height: 5rem;
+}
+
+.c1.k-ButtonImage--withoutPointerEvents {
+  pointer-events: none;
+}
+
+.c1.k-ButtonImage--withBorder {
+  border: 0.125rem solid #eee;
+}
+
+.c1 .k-ButtonImage__img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c2 {
   max-width: 100%;
 }
 
-.c1 .k-Meters-Progress__ramp {
+.c2 .k-Meters-Progress__ramp {
   position: relative;
   height: 0.125rem;
   background: #eee;
 }
 
-.c1 .k-Meters-Progress__ramp::after {
+.c2 .k-Meters-Progress__ramp::after {
   content: '';
   position: absolute;
   top: 0;
@@ -1280,17 +1694,17 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   background: #19b4fa;
 }
 
-.c1.k-Meters-Progress--disabled .k-Meters-Progress__ramp::after,
-.c1.is-disabled .k-Meters-Progress__ramp::after {
+.c2.k-Meters-Progress--disabled .k-Meters-Progress__ramp::after,
+.c2.is-disabled .k-Meters-Progress__ramp::after {
   background: #d8d8d8;
 }
 
-.c1.k-Meters-Progress--orion .k-Meters-Progress__ramp,
-.c1.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
+.c2.k-Meters-Progress--orion .k-Meters-Progress__ramp,
+.c2.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
   border-radius: 0.1875rem;
 }
 
-.c2 {
+.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1305,10 +1719,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1320,8 +1730,10 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: initial;
-  width: 100%;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #19b4fa;
   background-color: #19b4fa;
   color: #fff;
@@ -1329,58 +1741,143 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c2:disabled {
+.c3:disabled {
   cursor: not-allowed;
 }
 
-.c2:hover {
+.c3:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c2 >:nth-child(n) {
+.c3 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c2 >:last-child {
+.c3 >:last-child {
   margin-right: 0;
 }
 
-.c2 svg,
-.c2 path {
+.c3.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c3.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c3.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c3.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c3.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c3.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c3.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c3.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c3.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c3.k-Button--orion {
+  border-radius: 0.375rem;
+}
+
+.c3 svg,
+.c3 path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
 
-.c2:hover,
-.c2:focus {
+.c3:hover,
+.c3:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c2:active {
+.c3:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c2:focus {
+.c3:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
-.c2:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline-color: transparent;
 }
 
-.c2:focus-visible {
+.c3:focus-visible {
   outline-color: #bae8fd;
 }
 
-.c2:disabled {
+.c3:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1808,10 +2305,178 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   padding-top: calc( (0.625) * 100% );
 }
 
+@media (min-width:640px) {
+  .c1.k-ButtonImage--big {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+}
+
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2 {
+  .c3 {
     width: 12.5rem;
     height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c3.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c3.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c3.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid) {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c3.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c3.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c3.k-Button--orion {
+    border-radius: 0.5rem;
   }
 }
 
@@ -1841,8 +2506,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
         className="k-u-margin-top-single"
       >
         <span
-          className="k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
-          tabIndex={null}
+          className="c1 k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -1882,7 +2546,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
-      className="c1 k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+      className="c2 k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
       role="progressbar"
     >
       <div
@@ -1904,7 +2568,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c2"
+      className="c3 k-Button k-Button--regular k-Button--helium k-Button--andromeda k-Button--fluid"
+      style={
+        Object {
+          "--border-radius": 0,
+        }
+      }
       type="button"
     >
       Contribute
@@ -1924,21 +2593,72 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 `;
 
 exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with snapshot 1`] = `
+.c2 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c2:hover,
+.c2:focus {
+  opacity: 0.8;
+}
+
+.c2.k-ButtonImage--tiny {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c2.k-ButtonImage--huge {
+  width: 5rem;
+  height: 5rem;
+}
+
+.c2.k-ButtonImage--withoutPointerEvents {
+  pointer-events: none;
+}
+
+.c2.k-ButtonImage--withBorder {
+  border: 0.125rem solid #eee;
+}
+
+.c2 .k-ButtonImage__img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .c1::-webkit-media-controls {
   display: none;
 }
 
-.c2 {
+.c3 {
   max-width: 100%;
 }
 
-.c2 .k-Meters-Progress__ramp {
+.c3 .k-Meters-Progress__ramp {
   position: relative;
   height: 0.125rem;
   background: #eee;
 }
 
-.c2 .k-Meters-Progress__ramp::after {
+.c3 .k-Meters-Progress__ramp::after {
   content: '';
   position: absolute;
   top: 0;
@@ -1951,17 +2671,17 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   background: #19b4fa;
 }
 
-.c2.k-Meters-Progress--disabled .k-Meters-Progress__ramp::after,
-.c2.is-disabled .k-Meters-Progress__ramp::after {
+.c3.k-Meters-Progress--disabled .k-Meters-Progress__ramp::after,
+.c3.is-disabled .k-Meters-Progress__ramp::after {
   background: #d8d8d8;
 }
 
-.c2.k-Meters-Progress--orion .k-Meters-Progress__ramp,
-.c2.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
+.c3.k-Meters-Progress--orion .k-Meters-Progress__ramp,
+.c3.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
   border-radius: 0.1875rem;
 }
 
-.c3 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1976,10 +2696,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1991,8 +2707,10 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: initial;
-  width: 100%;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #19b4fa;
   background-color: #19b4fa;
   color: #fff;
@@ -2000,58 +2718,143 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c3:disabled {
+.c4:disabled {
   cursor: not-allowed;
 }
 
-.c3:hover {
+.c4:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c3 >:nth-child(n) {
+.c4 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c3 >:last-child {
+.c4 >:last-child {
   margin-right: 0;
 }
 
-.c3 svg,
-.c3 path {
+.c4.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c4.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c4.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c4.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c4.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c4.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c4.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c4.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c4.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c4.k-Button--orion {
+  border-radius: 0.375rem;
+}
+
+.c4 svg,
+.c4 path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
 
-.c3:hover,
-.c3:focus {
+.c4:hover,
+.c4:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c3:active {
+.c4:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c3:focus {
+.c4:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
-.c3:focus:not(:focus-visible) {
+.c4:focus:not(:focus-visible) {
   outline-color: transparent;
 }
 
-.c3:focus-visible {
+.c4:focus-visible {
   outline-color: #bae8fd;
 }
 
-.c3:disabled {
+.c4:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -2405,10 +3208,178 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   padding-top: calc( (0.625) * 100% );
 }
 
+@media (min-width:640px) {
+  .c2.k-ButtonImage--big {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+}
+
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c3 {
+  .c4 {
     width: 12.5rem;
     height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4.k-Button--nano {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c4.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c4.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c4.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4.k-Button--hasIcon:not(.k-Button--fluid) {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+    width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c4.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c4.k-Button--orion {
+    border-radius: 0.5rem;
   }
 }
 
@@ -2526,8 +3497,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
         className="k-u-margin-top-single"
       >
         <span
-          className="k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
-          tabIndex={null}
+          className="c2 k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -2567,7 +3537,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
-      className="c2 k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+      className="c3 k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
       role="progressbar"
     >
       <div
@@ -2589,7 +3559,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c3"
+      className="c4 k-Button k-Button--regular k-Button--helium k-Button--andromeda k-Button--fluid"
+      style={
+        Object {
+          "--border-radius": 0,
+        }
+      }
       type="button"
     >
       Lorem ipsum
