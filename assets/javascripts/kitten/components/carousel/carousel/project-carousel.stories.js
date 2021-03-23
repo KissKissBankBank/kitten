@@ -150,7 +150,7 @@ export const Default = () => (
           cardTitle={item.title}
           cardSubTitle="Custom subtitle"
           titlesMinHeight
-          progress="84"
+          progress={84}
           state="Custom state"
         />
       ))}
@@ -198,7 +198,7 @@ export const WithSpecificColNumber = () => (
           cardTitle={item.title}
           cardSubTitle="Custom subtitle"
           titlesMinHeight
-          progress="84"
+          progress={84}
           state="Custom state"
         />
       ))}
@@ -235,7 +235,7 @@ export const InNestedGrid = () => (
           cardTitle={item.title}
           cardSubTitle="Custom subtitle"
           titlesMinHeight
-          progress="84"
+          progress={84}
           state="Custom state"
         />
       ))}
@@ -276,7 +276,7 @@ export const InLegacyGrid = () => (
           cardTitle={item.title}
           cardSubTitle="Custom subtitle"
           titlesMinHeight
-          progress="84"
+          progress={84}
           state="Custom state"
         />
       )}
@@ -323,7 +323,7 @@ const CardComponent = ({ item, hasPageBeenViewed, isActivePage }) => (
     cardTitle={item.title}
     cardSubTitle={isActivePage ? 'Is active page' : 'Inactive page'}
     titlesMinHeight
-    progress="84"
+    progress={84}
     state="Custom state"
   />
 )
