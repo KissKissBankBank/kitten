@@ -175,11 +175,11 @@ export const HorizontalTimeline = ({
       {ellipsisColumns?.map(value => (
         <b
           key={`ellipsis-marker-${value}`}
-          class="k-HorizontalTimeline__ellipsis"
+          className="k-HorizontalTimeline__ellipsis"
           style={{ '--HorizontalTimeline-ellipsis-column': value }}
         />
       ))}
-      <b class="k-HorizontalTimeline__ellipsis" />
+      <b className="k-HorizontalTimeline__ellipsis" />
     </StyledHorizontalTimeline>
   )
 }
