@@ -22,7 +22,7 @@ describe('<CheckableButton />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <CheckableButton isChecked tiny>
+          <CheckableButton isChecked size="tiny">
             MyCheckableButton
           </CheckableButton>,
         )
@@ -38,7 +38,7 @@ describe('<CheckableButton />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <CheckableButton isChecked big>
+          <CheckableButton isChecked size="big">
             MyCheckableButton
           </CheckableButton>,
         )

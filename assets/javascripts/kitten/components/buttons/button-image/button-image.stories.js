@@ -1,13 +1,11 @@
 import React from 'react'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text, boolean, select } from '@storybook/addon-knobs'
 import { ButtonImage } from './index'
 
 export const Default = () => (
   <ButtonImage
     tag={text('Tag', 'button')}
-    tiny={boolean('Tiny', false)}
-    big={boolean('Big', false)}
-    huge={boolean('Huge', false)}
+    size={select('Size', ['tiny', 'regular', 'big', 'huge'], 'regular')}
     withoutPointerEvents={boolean('withoutPointerEvents', false)}
     withBorder={boolean('withBorder', false)}
     img={{

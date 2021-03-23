@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { text, boolean, number } from '@storybook/addon-knobs'
 import { Modal } from './index'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem

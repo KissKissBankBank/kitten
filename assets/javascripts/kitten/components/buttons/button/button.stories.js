@@ -1,6 +1,6 @@
 import React from 'react'
 import { text, boolean, number, radios, select } from '@storybook/addon-knobs'
-import { Button } from './button'
+import { Button } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
@@ -41,14 +41,27 @@ const modifierOptions = {
   Oxygen: 'oxygen',
   Checked: 'checked',
   Copper: 'copper',
+  Social_facebook: 'social_facebook',
+  Social_twitter: 'social_twitter',
+  Social_linkedin: 'social_linkedin',
+  Social_instagram: 'social_instagram',
+  Social_youtube: 'social_youtube',
+  Social_pinterest: 'social_pinterest',
+}
+
+const sizeOptions = {
+  Nano: 'nano',
+  Micro: 'micro',
+  Tiny: 'tiny',
+  Regular: 'regular',
+  Big: 'big',
+  Huge: 'huge',
+  Giant: 'giant',
 }
 
 export const WithText = () => (
   <Button
-    tiny={boolean('Tiny', false)}
-    big={boolean('Big', false)}
-    huge={boolean('Huge', false)}
-    giant={boolean('Giant', false)}
+    size={select('Size', sizeOptions, 'regular')}
     fluid={boolean('Fluid', false)}
     modifier={select('Modifier', modifierOptions, 'hydrogen')}
     variant={select('Variant', variantOptions, 'andromeda')}
@@ -75,13 +88,8 @@ WithText.decorators = [
 
 export const WithIcon = () => (
   <Button
+    size={select('Size', sizeOptions, 'regular')}
     rounded={boolean('Rounded', false)}
-    nano={boolean('Nano', false)}
-    micro={boolean('Micro', false)}
-    tiny={boolean('Tiny', false)}
-    big={boolean('Big', false)}
-    huge={boolean('Huge', false)}
-    giant={boolean('Giant', false)}
     modifier={select('Modifier', modifierOptions, 'hydrogen')}
     variant={select('Variant', variantOptions, 'andromeda')}
     fluid={boolean('Fluid', false)}
@@ -114,10 +122,7 @@ export const WithTextAndIcon = () => {
   const iconPosition = radios('Icon position', svgPositionOptions, 'left')
   return (
     <Button
-      tiny={boolean('Tiny', false)}
-      big={boolean('Big', false)}
-      huge={boolean('Huge', false)}
-      giant={boolean('Giant', false)}
+      size={select('Size', sizeOptions, 'regular')}
       fluid={boolean('Fluid', false)}
       modifier={select('Modifier', modifierOptions, 'hydrogen')}
       variant={select('Variant', variantOptions, 'andromeda')}
@@ -158,10 +163,7 @@ WithTextAndIcon.decorators = [
 
 export const WithBadge = () => (
   <Button
-    tiny={boolean('Tiny', false)}
-    big={boolean('Big', false)}
-    huge={boolean('Huge', false)}
-    giant={boolean('Giant', false)}
+    size={select('Size', sizeOptions, 'regular')}
     modifier={select('Modifier', modifierOptions, 'helium')}
     variant={select('Variant', variantOptions, 'andromeda')}
     disabled={boolean('Disabled', false)}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text, boolean, select } from '@storybook/addon-knobs'
 import { CheckableButton } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -14,9 +14,11 @@ export const IsCheckable = () => {
         <Grid>
           <GridCol col={4}>
             <CheckableButton
-              tiny={boolean('Tiny', false)}
-              big={boolean('Big', false)}
-              huge={boolean('Huge', false)}
+              size={select(
+                'Size',
+                ['micro', 'tiny', 'regular', 'big', 'huge', 'giant'],
+                'regular',
+              )}
               giant={boolean('Giant', false)}
               disabled={boolean('Disabled', false)}
               error={boolean('Error', false)}
@@ -30,9 +32,11 @@ export const IsCheckable = () => {
           </GridCol>
           <GridCol col={4}>
             <CheckableButton
-              tiny={boolean('Tiny', false)}
-              big={boolean('Big', false)}
-              huge={boolean('Huge', false)}
+              size={select(
+                'Size',
+                ['micro', 'tiny', 'regular', 'big', 'huge', 'giant'],
+                'regular',
+              )}
               giant={boolean('Giant', false)}
               disabled={boolean('Disabled', false)}
               error={boolean('Error', false)}

@@ -27,13 +27,13 @@ const sizesObject = {
   nano: 'nano',
   micro: 'micro',
   tiny: 'tiny',
-  null: null,
+  regular: 'regular',
   big: 'big',
 }
 
 export const Default = () => (
   <StoryContainer>
-    <ButtonIcon modifier="helium" size={select('Size', sizesObject, null)}>
+    <ButtonIcon modifier="helium" size={select('Size', sizesObject, 'regular')}>
       <QuestionMarkIcon />
     </ButtonIcon>
   </StoryContainer>

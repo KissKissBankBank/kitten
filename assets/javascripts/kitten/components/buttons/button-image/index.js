@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
@@ -24,32 +25,32 @@ const StyledButtonImage = styled.button`
     opacity: 0.8;
   }
 
-  &.k-ButtonImageNext--tiny {
+  &.k-ButtonImage--tiny {
     width: ${pxToRem(30)};
     height: ${pxToRem(30)};
   }
 
-  &.k-ButtonImageNext--big {
+  &.k-ButtonImage--big {
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: ${pxToRem(50)};
       height: ${pxToRem(50)};
     }
   }
 
-  &.k-ButtonImageNext--huge {
+  &.k-ButtonImage--huge {
     width: ${pxToRem(80)};
     height: ${pxToRem(80)};
   }
 
-  &.k-ButtonImageNext--withoutPointerEvents {
+  &.k-ButtonImage--withoutPointerEvents {
     pointer-events: none;
   }
 
-  &.k-ButtonImageNext--withBorder {
+  &.k-ButtonImage--withBorder {
     border: ${pxToRem(2)} solid ${COLORS.line1};
   }
 
-  .k-ButtonImageNext__img {
+  .k-ButtonImage__img {
     display: block;
     margin: 0;
     padding: 0;
@@ -63,9 +64,7 @@ const StyledButtonImage = styled.button`
 export const ButtonImage = ({
   tag,
   className,
-  tiny,
-  big,
-  huge,
+  size,
   withoutPointerEvents,
   withBorder,
   img,
@@ -75,13 +74,11 @@ export const ButtonImage = ({
     <StyledButtonImage
       as={tag}
       className={classNames(
-        'k-ButtonImageNext',
+        'k-ButtonImage',
+        `k-ButtonImage--${size}`,
         {
-          'k-ButtonImageNext--tiny': tiny,
-          'k-ButtonImageNext--big': big,
-          'k-ButtonImageNext--huge': huge,
-          'k-ButtonImageNext--withoutPointerEvents': withoutPointerEvents,
-          'k-ButtonImageNext--withBorder': withBorder,
+          'k-ButtonImage--withoutPointerEvents': withoutPointerEvents,
+          'k-ButtonImage--withBorder': withBorder,
         },
         className,
       )}
@@ -90,7 +87,7 @@ export const ButtonImage = ({
       {!!img && (
         <img
           {...img}
-          className={classNames('k-ButtonImageNext__img', img.className)}
+          className={classNames('k-ButtonImage__img', img.className)}
           alt={img.alt || ''}
         />
       )}
@@ -101,12 +98,21 @@ export const ButtonImage = ({
 ButtonImage.defaultProps = {
   tag: 'button',
   className: null,
-  tiny: false,
-  big: false,
-  huge: false,
+  size: 'regular',
   withoutPointerEvents: false,
   withBorder: false,
   img: {
     className: null,
+  },
+}
+
+ButtonImage.propTypes = {
+  tag: PropTypes.string,
+  className: PropTypes.string,
+  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge']),
+  withoutPointerEvents: PropTypes.bool,
+  withBorder: PropTypes.bool,
+  img: {
+    className: PropTypes.string,
   },
 }

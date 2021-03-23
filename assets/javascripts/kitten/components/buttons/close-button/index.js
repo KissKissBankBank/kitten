@@ -1,10 +1,9 @@
 import React from 'react'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 import { CrossIcon } from '../../../components/icons/cross-icon'
 
 export const CloseButton = ({
   closeButtonLabel,
-  size,
   buttonModifier,
   ...others
 }) => (
@@ -14,8 +13,6 @@ export const CloseButton = ({
     title={closeButtonLabel}
     aria-label={closeButtonLabel}
     modifier={buttonModifier}
-    tiny={size === 'tiny'}
-    big={size === 'big'}
     {...others}
   >
     <CrossIcon width="8" height="8" />
@@ -25,5 +22,4 @@ export const CloseButton = ({
 CloseButton.defaultProps = {
   closeButtonLabel: 'Close',
   buttonModifier: 'hydrogen',
-  size: null,
 }

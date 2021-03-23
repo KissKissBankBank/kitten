@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 
@@ -37,21 +37,17 @@ const StyledButton = styled(({ tag, ...props }) => (
 export const ButtonIcon = ({
   className,
   tag,
-  size,
   withoutHover,
   verticalArrow,
+  size,
   ...others
 }) => (
   <StyledButton
-    className={classNames('k-ButtonIcon', className, {
-      [`k-ButtonIcon--${size}`]: size,
+    className={classNames('k-ButtonIcon', className, `k-ButtonIcon--${size}`, {
       'k-ButtonIcon--withoutHover': withoutHover,
       'k-ButtonIcon--verticalArrow': verticalArrow,
     })}
-    nano={size === 'nano'}
-    micro={size === 'micro'}
-    tiny={size === 'tiny'}
-    big={size === 'big'}
+    size={size}
     {...others}
     icon
   />
@@ -59,7 +55,7 @@ export const ButtonIcon = ({
 
 ButtonIcon.defaultProps = {
   tag: 'button',
-  size: null,
+  size: 'regular',
   modifier: 'hydrogen',
   withoutHover: false,
   verticalArrow: false,
