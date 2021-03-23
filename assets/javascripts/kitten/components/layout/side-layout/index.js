@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import classNames from 'classnames'
 import styled from 'styled-components'
-import bowser from 'bowser'
+import Bowser from 'bowser'
 import {
   SideGrid,
   SideGridContent,
   SideGridAside,
 } from '../../../components/grid/side-grid'
+import domElementHelper from '../../../helpers/dom/element-helper'
 
 const StyledSideLayout = styled(SideGrid)`
   .k-VerticalGrid__fluid {
@@ -28,7 +29,9 @@ export const SideLayout = ({ className, children, sidebar }) => {
   const [needsFullHeight, setNeedsFullHeight] = useState(false)
 
   useEffect(() => {
-    setNeedsFullHeight(!!bowser.safari)
+    if (!domElementHelper.canUseDom()) return
+    const browser = Bowser.getParser(window.navigator.userAgent)
+    setNeedsFullHeight(browser.isBrowser('safari'))
   }, [])
 
   const hasFluidLayout = (className || '').search('k-VerticalGrid__fluid') != -1
