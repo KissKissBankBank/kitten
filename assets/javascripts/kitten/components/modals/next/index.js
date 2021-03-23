@@ -166,8 +166,8 @@ const GlobalStyle = createGlobalStyle`
 
   .k-ModalNext__closeButton--fullSize {
     position: absolute;
-    left: ${pxToRem(20)}
-    top: ${pxToRem(12)}
+    left: ${pxToRem(20)};
+    top: ${pxToRem(12)};
   }
 `
 
@@ -285,8 +285,7 @@ const InnerModal = ({
   modalProps,
   hasCloseButton,
   maxWidth,
-  big,
-  huge,
+  size,
   isOpen,
   zIndex,
   fullSize,
@@ -294,7 +293,7 @@ const InnerModal = ({
   ...others
 }) => {
   const [{ show }, dispatch] = useContext(ModalContext)
-  const colsOnDesktop = huge ? 10 : big ? 8 : 6
+  const colsOnDesktop = size === 'huge' ? 10 : size === 'big' ? 8 : 6
   const close = () => {
     dispatch(updateState(false))
     if (onClose) {
@@ -411,8 +410,7 @@ Modal.propTypes = {
   fullSize: PropTypes.bool,
   modalProps: PropTypes.object,
   hasCloseButton: PropTypes.bool,
-  big: PropTypes.bool,
-  huge: PropTypes.bool,
+  size: PropTypes.oneOf(['regular', 'big', 'huge']),
   isOpen: PropTypes.bool,
   zIndex: PropTypes.number,
   fullSizeTitle: PropTypes.string,
@@ -426,8 +424,7 @@ Modal.defaultProps = {
   fullSize: false,
   modalProps: {},
   hasCloseButton: true,
-  big: false,
-  huge: false,
+  size: 'regular',
   isOpen: false,
   zIndex: 110,
   fullSizeTitle: '',
