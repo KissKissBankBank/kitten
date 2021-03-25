@@ -72,7 +72,7 @@ exports.Step = Step;
 var StyledItem = _styledComponents.default.li.withConfig({
   displayName: "step__StyledItem",
   componentId: "sc-1you76f-0"
-})(["padding:", " 0;&:first-of-type{margin-top:0;padding-top:0;}&:last-of-type{margin-bottom:0;padding-bottom:0;}[role='button']:focus,a:focus,button:focus{outline:", " solid ", ";outline-offset:", ";}li:not(:last-of-type){margin:0 !important;&::after{display:none;}}&.k-Steppers--VerticalStepper__item--bridge{padding:", " 0;}"], (0, _typography.pxToRem)(15), _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(8));
+})(["padding:", " 0;&:first-of-type{margin-top:0;padding-top:0;}&:last-of-type{margin-bottom:0;padding-bottom:0;}[role='button']:focus,a:focus,button:focus{outline:", " solid ", ";outline-offset:", ";}[role='button']:focus:not(:focus-visible),a:focus:not(:focus-visible),button:focus:not(:focus-visible){outline-color:transparent;}[role='button']:focus-visible,a:focus-visible,button:focus-visible{outline-color:", ";}li:not(:last-of-type){margin:0 !important;&::after{display:none;}}&.k-Steppers--VerticalStepper__item--bridge{padding:", " 0;}"], (0, _typography.pxToRem)(15), _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary4, (0, _typography.pxToRem)(8));
 
 var StyledLink = _styledComponents.default.a.withConfig({
   displayName: "step__StyledLink",

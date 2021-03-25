@@ -30,7 +30,7 @@ var ItemWrapper = styled.li.withConfig({
 var StepperText = styled(Text).withConfig({
   displayName: "stepper__StepperText",
   componentId: "guuzry-3"
-})(["display:flex;align-items:center;white-space:nowrap;transition:color 0.2s ease;border-radius:", ";&:focus{outline:", " solid ", ";outline-offset:", ";}"], pxToRem(6), COLORS.primary3, pxToRem(2), pxToRem(2));
+})(["display:flex;align-items:center;white-space:nowrap;transition:color 0.2s ease;border-radius:", ";&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}"], pxToRem(6), COLORS.primary3, pxToRem(2), pxToRem(2), COLORS.primary4);
 export var StepperItem = function StepperItem(_ref) {
   var children = _ref.children,
       state = _ref.state,
