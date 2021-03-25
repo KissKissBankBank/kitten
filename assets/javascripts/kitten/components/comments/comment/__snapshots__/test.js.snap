@@ -32,7 +32,7 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
         </svg>
       </div>
       <span
-        className="sc-bwzfXH dyZCQx k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
+        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
       >
         <img
           alt="Image alt"
@@ -91,7 +91,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
       className="sc-ifAKCX dXFfMI"
     >
       <span
-        className="sc-bwzfXH dyZCQx k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
+        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
       >
         <img
           alt="Image alt"
@@ -179,7 +179,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
       className="sc-ifAKCX dXFfMI"
     >
       <span
-        className="sc-bwzfXH dyZCQx k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
+        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
       >
         <img
           alt="Image alt"
@@ -227,7 +227,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     >
       <button
         aria-pressed="true"
-        className="sc-gzVnrw iCoQkn"
+        className="sc-gzVnrw ppGk"
         role="button"
       >
         

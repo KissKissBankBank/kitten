@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-fjdhpX clvnbt"
+        className="sc-fjdhpX hcrKga"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -127,7 +127,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-ifAKCX fchHyN k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
+      className="sc-ifAKCX bBVDCc k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -226,7 +226,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-ifAKCX fchHyN k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
+      className="sc-ifAKCX bBVDCc k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
       disabled={false}
       id="input"
       name="field"
@@ -311,10 +311,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU jMoQnM k-Form-PasswordInput"
+      className="sc-gqjmRU cbiifr k-Form-PasswordInput"
     >
       <input
-        className="sc-ifAKCX fchHyN k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
+        className="sc-ifAKCX bBVDCc k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -439,10 +439,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU jMoQnM k-Form-PasswordInput"
+      className="sc-gqjmRU cbiifr k-Form-PasswordInput"
     >
       <input
-        className="sc-ifAKCX fchHyN k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+        className="sc-ifAKCX bBVDCc k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"
@@ -515,7 +515,7 @@ Array [
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-dnqmqq eCZoWN k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-dnqmqq kULSdo k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -537,7 +537,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-dnqmqq eCZoWN k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-dnqmqq kULSdo k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -558,7 +558,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-dnqmqq eCZoWN k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-dnqmqq kULSdo k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"

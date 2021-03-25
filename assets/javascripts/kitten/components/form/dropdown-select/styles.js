@@ -90,6 +90,12 @@ export const StyledDropdown = styled.div`
       outline: ${COLORS.primary4} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(-4)};
     }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
     &:disabled {
       background-color: ${COLORS.line1};
     }
@@ -127,6 +133,12 @@ export const StyledDropdown = styled.div`
     &:focus {
       outline: ${COLORS.primary4} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
     }
   }
 
@@ -168,6 +180,12 @@ export const StyledDropdown = styled.div`
   .k-Form-DropdownSelect__button:focus {
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
+  }
+  .k-Form-DropdownSelect__button:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  .k-Form-DropdownSelect__button:focus-visible {
+    outline-color: ${COLORS.primary4};
   }
 
   &.k-Form-Dropdown--error {

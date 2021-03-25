@@ -69,6 +69,12 @@ export const StyledHeader = styled.header`
       outline-style: solid;
       outline-color: ${COLORS.primary4};
     }
+    *:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    *:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
   }
 
   .k-HeaderNav--inactiveBackground .k-HeaderNav,

@@ -32,7 +32,7 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         </svg>
       </div>
       <span
-        className="sc-bwzfXH dyZCQx k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
+        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
       >
         <img
           alt="Image alt"
@@ -53,7 +53,7 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="sc-gZMcBi dnoQcw"
+        className="sc-gZMcBi fLjKTd"
         defaultValue=""
         disabled={false}
         id={null}
@@ -94,7 +94,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       className="sc-ifAKCX dXFfMI"
     >
       <span
-        className="sc-bwzfXH dyZCQx k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
+        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
       >
         <img
           alt="Image alt"
@@ -115,7 +115,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="sc-gZMcBi dnoQcw"
+        className="sc-gZMcBi fLjKTd"
         defaultValue=""
         disabled={false}
         id="custom-textarea-id"

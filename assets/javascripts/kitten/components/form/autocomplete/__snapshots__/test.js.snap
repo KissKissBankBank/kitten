@@ -52,6 +52,14 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c1:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c1:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c1::-ms-clear {
   display: none;
 }
@@ -128,6 +136,14 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   border-color: #d8d8d8;
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c1:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c1::-ms-clear {
@@ -274,6 +290,14 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   border-color: #d8d8d8;
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c1:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c1::-ms-clear {

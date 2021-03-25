@@ -60,6 +60,14 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0 .k-Form-RadioButton__input:focus:not(:focus-visible) + .k-Form-RadioButton__label::before {
+  outline-color: transparent;
+}
+
+.c0 .k-Form-RadioButton__input:focus-visible + .k-Form-RadioButton__label::before {
+  outline-color: #bae8fd;
+}
+
 .c0 .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {
   border: 0.3125rem solid #19b4fa;
 }

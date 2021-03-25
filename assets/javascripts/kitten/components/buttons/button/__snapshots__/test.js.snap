@@ -56,6 +56,19 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -164,6 +177,14 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -408,6 +429,19 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -516,6 +550,14 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -761,6 +803,19 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -869,6 +924,14 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -1114,6 +1177,19 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -1222,6 +1298,14 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -1467,6 +1551,19 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -1575,6 +1672,14 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -1820,6 +1925,19 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -1928,6 +2046,14 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -2174,6 +2300,19 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -2282,6 +2421,14 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -2527,6 +2674,19 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -2635,6 +2795,14 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -2880,6 +3048,19 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -2988,6 +3169,14 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -3233,6 +3422,19 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -3341,6 +3543,14 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -3586,6 +3796,19 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -3694,6 +3917,14 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -3939,6 +4170,19 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -4047,6 +4291,14 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -4292,6 +4544,19 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -4400,6 +4665,14 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -4645,6 +4918,19 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -4753,6 +5039,14 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -5003,6 +5297,19 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -5111,6 +5418,14 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -5356,6 +5671,19 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -5464,6 +5792,14 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {
@@ -5709,6 +6045,19 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   margin-right: 0;
 }
 
+.c0:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0.k-Button--hasBorderRadius {
   border-radius: var(--border-radius);
 }
@@ -5817,6 +6166,14 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0:disabled {

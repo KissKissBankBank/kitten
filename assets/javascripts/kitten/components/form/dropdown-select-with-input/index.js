@@ -202,9 +202,15 @@ const StyledDropdownSelectWithInput = styled.div`
       border-top: 0;
     }
 
-    :focus {
+    &:focus {
       outline: ${COLORS.primary4} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
     }
   }
 
@@ -263,13 +269,20 @@ const StyledDropdownSelectWithInput = styled.div`
       border-color: ${COLORS.line2};
       }
 
-
-
     .k-Form-DropdownSelectWithInput__button:focus,
     .k-Form-DropdownSelectWithInput__input:focus {
       outline: ${COLORS.primary4} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(-2)};
     }
+    .k-Form-DropdownSelectWithInput__button:focus:not(:focus-visible),
+    .k-Form-DropdownSelectWithInput__input:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    .k-Form-DropdownSelectWithInput__button:focus-visible,
+    .k-Form-DropdownSelectWithInput__input:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
+
   }
 
   &.k-Form-DropdownSelectWithInput--error .k-Form-DropdownSelectWithInput__input,

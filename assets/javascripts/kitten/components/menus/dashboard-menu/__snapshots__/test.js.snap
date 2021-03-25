@@ -32,6 +32,16 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0 .k-DashboardMenu__expandable__title:focus:not(:focus-visible),
+.c0 .k-DashboardMenu__item:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0 .k-DashboardMenu__expandable__title:focus-visible,
+.c0 .k-DashboardMenu__item:focus-visible {
+  outline-color: #0496cc;
+}
+
 .c0 .k-DashboardMenu__list,
 .c0 .k-DashboardMenu__expandable__list {
   margin: 0;
@@ -46,6 +56,14 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__expandable summary:focus {
   outline: #0496cc solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0 .k-DashboardMenu__expandable summary:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0 .k-DashboardMenu__expandable summary:focus-visible {
+  outline-color: #0496cc;
 }
 
 .c0 .k-DashboardMenu__expandable summary::-webkit-details-marker {
