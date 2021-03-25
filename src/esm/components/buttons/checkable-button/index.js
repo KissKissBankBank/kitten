@@ -23,7 +23,7 @@ var getCircleIcon = function getCircleIcon(color) {
 var StyledCheckableButton = styled(Button).withConfig({
   displayName: "checkable-button__StyledCheckableButton",
   componentId: "b6e3u-0"
-})(["&::after{content:'';position:absolute;", " ", " background-repeat:no-repeat;background-position:50% 50%;opacity:0;transform-origin:50% 50%;transition:opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);transform:scale(0);}&[aria-checked]::after{opacity:1;transform:scale(1);transition-timing-function:ease,cubic-bezier(0.2,2,0.7,1);}&:focus{outline-offset:", ";}", " &[aria-checked]:focus{outline:", " solid ", ";border-color:", ";}"], function (_ref) {
+})(["&::after{content:'';position:absolute;", " ", " background-repeat:no-repeat;background-position:50% 50%;opacity:0;transform-origin:50% 50%;transition:opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);transform:scale(0);}&[aria-checked]::after{opacity:1;transform:scale(1);transition-timing-function:ease,cubic-bezier(0.2,2,0.7,1);}&:focus{outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}", " &[aria-checked]:focus{outline:", " solid ", ";border-color:", ";}"], function (_ref) {
   var size = _ref.size;
   if (size === 'tiny') return checkedCircleIconStyle(15);
   if (size === 'big') return checkedCircleIconStyle(24);
@@ -42,7 +42,7 @@ var StyledCheckableButton = styled(Button).withConfig({
   }
 
   return css(["background-image:url(", ");"], getCircleIcon(color));
-}, pxToRem(-2), function (_ref3) {
+}, pxToRem(-2), COLORS.primary4, function (_ref3) {
   var modifier = _ref3.modifier;
   return modifier !== 'copper' && css([":hover:not(:disabled),:focus:not(:disabled){border-color:", ";background-color:", ";color:", ";}:active:not(:disabled){border-color:", ";background-color:", ";color:", ";}"], COLORS.primary4, COLORS.background1, COLORS.primary1, COLORS.primary2, COLORS.background1, COLORS.primary2);
 }, COLORS.primary1, pxToRem(2), COLORS.primary1);

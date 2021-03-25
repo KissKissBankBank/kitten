@@ -527,12 +527,6 @@ Object.defineProperty(exports, "RangeSlider", {
     return _rangeSlider.RangeSlider;
   }
 });
-Object.defineProperty(exports, "RichTextInput", {
-  enumerable: true,
-  get: function get() {
-    return _richTextInput.RichTextInput;
-  }
-});
 Object.defineProperty(exports, "TextInput", {
   enumerable: true,
   get: function get() {
@@ -2041,8 +2035,6 @@ var _radioButton = require("./components/form/radio-button");
 var _radioButtonSet = require("./components/form/radio-button-set");
 
 var _rangeSlider = require("./components/form/range-slider");
-
-var _richTextInput = require("./components/form/rich-text-input");
 
 var _textInput = require("./components/form/text-input");
 
