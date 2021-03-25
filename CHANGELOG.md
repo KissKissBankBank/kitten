@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `loadingText` prop to `LocationInput`.
+- Fix: Fix dropdown list position on `LocationInput`.
+- Fix: Remove console message on `LocationInput`.
+
 ## [3.0.0-beta.22] - 2021-03-25
 
 Rollback:
