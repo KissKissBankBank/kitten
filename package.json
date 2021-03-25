@@ -1,6 +1,6 @@
 {
   "name": "@kisskissbankbank/kitten",
-  "version": "3.0.0-beta.21",
+  "version": "3.0.0-beta.22",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src",
@@ -36,7 +36,7 @@
     "modularscale-sass": "^3.0.10",
     "prop-types": "^15.7.2",
     "prop-types-extra": "^1.1.1",
-    "react-cropper": "2.1.6",
+    "react-cropper": "2.1.1",
     "react-day-picker": "^7.4.10",
     "react-modal": "^3.12.1",
     "react-number-format": "^4.5.1",

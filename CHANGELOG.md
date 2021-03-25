@@ -8,15 +8,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Fix dropdown list position on `LocationInput`.
 - Fix: Remove console message on `LocationInput`.
 
+## [3.0.0-beta.22] - 2021-03-25
+
+Rollback:
+
+- Version: `"react-cropper": "2.1.1"`
+
 ## [3.0.0-beta.21] - 2021-03-25
 
 Breaking Change:
+
 - Remove `RichTextInput` component.
 
-Fix: 
+Fix:
+
 - Limit focus outline display to keyboard navigation.
 
 Revert:
+
 - Fix: Replace `ResizeObserver` with `window.resize` on `Carousel`. (beta.20)
 
 ## [3.0.0-beta.20] - 2021-03-23
@@ -335,6 +344,7 @@ Breaking changes:
 Features:
 
 - Convert the following components to CSS-in-JS:
+
   - `DevGrid`
   - `ImageCropper`
 
