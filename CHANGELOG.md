@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Limit focus outline display to keyboard navigation.
+- Revert: Fix: Replace `ResizeObserver` with `window.resize` on `Carousel`. (beta.20)
+- Breaking Change: Remove `RichTextInput` component
 
 ## [3.0.0-beta.20] - 2021-03-23
 
