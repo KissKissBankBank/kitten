@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `loadingText` prop to `LocationInput`.
+- Fix: Fix dropdown list position on `LocationInput`.
+- Fix: Remove console message on `LocationInput`.
 - Fix: Limit focus outline display to keyboard navigation.
 - Revert: Fix: Replace `ResizeObserver` with `window.resize` on `Carousel`. (beta.20)
 - Breaking Change: Remove `RichTextInput` component
