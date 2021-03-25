@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Rollback: Version: `"react-cropper": "2.1.1"`
+
 ## [3.0.0-beta.21] - 2021-03-25
 
 Breaking Change:
