@@ -47,14 +47,14 @@ exports.LeftEmptyContainer = LeftEmptyContainer;
 var StyledRightArrowContainer = _styledComponents.default.div.withConfig({
   displayName: "styled-components__StyledRightArrowContainer",
   componentId: "jws9qo-2"
-})(["", " ", " &:focus,&:active,&:hover{transform:translate(", ");", "}&:focus{outline:", " solid ", ";outline-offset:", ";}"], rightContainer, sharedStyledArrowIcons, (0, _typography.pxToRem)(8), sharedHoverStyledArrowIcons, _colorsConfig.default.primary3, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2));
+})(["", " ", " &:focus,&:active,&:hover{transform:translate(", ");", "}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}"], rightContainer, sharedStyledArrowIcons, (0, _typography.pxToRem)(8), sharedHoverStyledArrowIcons, _colorsConfig.default.primary3, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary3);
 
 exports.StyledRightArrowContainer = StyledRightArrowContainer;
 
 var StyledLeftArrowContainer = _styledComponents.default.div.withConfig({
   displayName: "styled-components__StyledLeftArrowContainer",
   componentId: "jws9qo-3"
-})(["", " ", " &:focus,&:active,&:hover{transform:translate(-", ");", "}&:focus{outline:", " solid ", ";outline-offset:", ";}"], leftContainer, sharedStyledArrowIcons, (0, _typography.pxToRem)(8), sharedHoverStyledArrowIcons, _colorsConfig.default.primary3, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2));
+})(["", " ", " &:focus,&:active,&:hover{transform:translate(-", ");", "}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}"], leftContainer, sharedStyledArrowIcons, (0, _typography.pxToRem)(8), sharedHoverStyledArrowIcons, _colorsConfig.default.primary3, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary3);
 
 exports.StyledLeftArrowContainer = StyledLeftArrowContainer;
 var StyledArrowIcon = (0, _styledComponents.default)(_arrowIcon.ArrowIcon).withConfig({
