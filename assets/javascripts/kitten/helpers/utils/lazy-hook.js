@@ -18,6 +18,8 @@ const useLazyObserver = lazyComponentRef => {
     LazyObserver.observe(lazyComponentRef.current, () => setLazyObserver(true))
 
     return () => {
+      const hasNoRef = !lazyComponentRef?.current
+
       if (hasNoRef) return
 
       LazyObserver.unobserve(lazyComponentRef.current)
