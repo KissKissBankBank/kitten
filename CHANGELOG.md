@@ -4,10 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Ultra breaking change: remove all SASS component mixins, helpers, definitions and schemas that are not used.
-- Feature: Add `loadingText` prop to `LocationInput`.
-- Fix: Fix dropdown list position on `LocationInput`.
-- Fix: Remove console message on `LocationInput`.
+## [3.0.0-beta.23] - 2021-03-25
+
+Breaking change:
+
+- Remove all SASS component mixins, helpers, definitions and schemas that are not used.
+
+Feature:
+
+- Add `loadingText` prop to `LocationInput`.
+
+Fixes:
+
+- Fix dropdown list position on `LocationInput`.
+- Remove console message on `LocationInput`.
 
 ## [3.0.0-beta.22] - 2021-03-25
 
