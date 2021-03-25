@@ -51,6 +51,12 @@ const StyledTextarea = styled.textarea`
     border-color: ${COLORS.line2};
     color: ${COLORS.font1};
   }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary4};
+  }
 
   ::placeholder {
     color: ${COLORS.font2};

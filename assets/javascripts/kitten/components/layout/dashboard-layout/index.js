@@ -56,6 +56,12 @@ const StyledDashboard = styled.div`
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
   }
+  .k-DashboardLayout__backLink:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  .k-DashboardLayout__backLink:focus-visible {
+    outline-color: ${COLORS.primary4};
+  }
 
   /* TABLET + MOBILE */
 

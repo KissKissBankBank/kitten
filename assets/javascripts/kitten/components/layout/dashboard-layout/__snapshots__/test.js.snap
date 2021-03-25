@@ -1028,6 +1028,14 @@ button:hover .c1 {
   outline-offset: 0.125rem;
 }
 
+.c0 .k-DashboardLayout__backLink:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0 .k-DashboardLayout__backLink:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0 .k-DashboardLayout__sideWrapper:focus,
 .c0 .k-DashboardLayout__mainWrapper:focus {
   outline: 0.125rem solid #bae8fd;

@@ -68,6 +68,12 @@ const StyledColorsStory = styled.div`
       outline: ${COLORS.primary4} solid 2px;
       outline-offset: 2px;
     }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
   }
   .story-Colors__color__box {
     height: 3em;

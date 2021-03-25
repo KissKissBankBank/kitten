@@ -18,7 +18,7 @@ var tinyDayPickerPadding = pxToRem(20);
 var StyledDatePicker = styled.div.withConfig({
   displayName: "standalone-range__StyledDatePicker",
   componentId: "yne6lo-0"
-})(["display:inline-block;box-sizing:border-box;.DayPickerInput-Overlay{min-width:calc(7 * ", " + 2 * ", ");margin-top:", ";box-shadow:none;@media (min-width:", "px){min-width:calc(7 * ", " + 2 * ", ");}}.DayPicker-Caption{text-align:center;height:", ";line-height:", ";margin:0;padding:0;overflow:hidden;", " & div{margin:0;font-size:", ";}}.DayPicker{font-size:", ";", " border:none;.DayPicker-Month{margin:0;@media (min-width:", "px){&:first-of-type{margin-right:", ";}}}.DayPicker-Weekday{", " ", "}.DayPicker-Weekday,.DayPicker-Day{padding:0;width:", ";height:", ";vertical-align:middle;box-sizing:border-box;font-size:", ";@media (min-width:", "px){width:", ";height:", ";}}.DayPicker-Day{", " border-radius:0;&.DayPicker-Day--today{", " ", "}&.DayPicker-Day--selected{outline-offset:calc(-1 * ", " / 2);&:not(.DayPicker-Day--outside):not(.DayPicker-Day--disabled){&,&:hover{", "}&:focus{z-index:25;", " outline-offset:0;}&.DayPicker-Day--start,&.DayPicker-Day--end{&,&:hover{", "}&:focus{", " outline-offset:calc(", " / -2);z-index:25;}}}}&.DayPicker-Day--disabled{", " pointer-events:none;}&.DayPicker-Day--outside{border:0;}&:not(.DayPicker-Day--disabled):focus{z-index:25;position:relative;outline-style:solid;outline-width:", ";", "}}&:not(.DayPicker--interactionDisabled) .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover{", " ", "}}"], tinyCellSize, tinyDayPickerPadding, pxToRem(18), ScreenConfig.S.min, cellSize, dayPickerPadding, cellSize, cellSize, function (_ref) {
+})(["display:inline-block;box-sizing:border-box;.DayPickerInput-Overlay{min-width:calc(7 * ", " + 2 * ", ");margin-top:", ";box-shadow:none;@media (min-width:", "px){min-width:calc(7 * ", " + 2 * ", ");}}.DayPicker-Caption{text-align:center;height:", ";line-height:", ";margin:0;padding:0;overflow:hidden;", " & div{margin:0;font-size:", ";}}.DayPicker{font-size:", ";", " border:none;.DayPicker-Month{margin:0;@media (min-width:", "px){&:first-of-type{margin-right:", ";}}}.DayPicker-Weekday{", " ", "}.DayPicker-Weekday,.DayPicker-Day{padding:0;width:", ";height:", ";vertical-align:middle;box-sizing:border-box;font-size:", ";@media (min-width:", "px){width:", ";height:", ";}}.DayPicker-Day{", " border-radius:0;&.DayPicker-Day--today{", " ", "}&.DayPicker-Day--selected{outline-offset:calc(-1 * ", " / 2);&:not(.DayPicker-Day--outside):not(.DayPicker-Day--disabled){&,&:hover{", "}&:focus{z-index:25;", " outline-offset:0;}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{", "}&.DayPicker-Day--start,&.DayPicker-Day--end{&,&:hover{", "}&:focus{", " outline-offset:calc(", " / -2);z-index:25;}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{", "}}}}&.DayPicker-Day--disabled{", " pointer-events:none;}&.DayPicker-Day--outside{border:0;}&:not(.DayPicker-Day--disabled):focus{z-index:25;position:relative;outline-style:solid;outline-width:", ";", "}}&:not(.DayPicker--interactionDisabled) .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover{", " ", "}}"], tinyCellSize, tinyDayPickerPadding, pxToRem(18), ScreenConfig.S.min, cellSize, dayPickerPadding, cellSize, cellSize, function (_ref) {
   var styles = _ref.styles;
   return css(["background-color:", ";color:", ";"], styles.header.backgroundColor, styles.header.color);
 }, stepToRem(-1), stepToRem(-1), TYPOGRAPHY.fontStyles.light, ScreenConfig.M.min, pxToRem(30), TYPOGRAPHY.fontStyles.regular, function (_ref2) {
@@ -38,37 +38,43 @@ var StyledDatePicker = styled.div.withConfig({
   return css(["outline-color:", ";"], styles.day.focus.color);
 }, function (_ref7) {
   var styles = _ref7.styles;
-  return css(["border:", " ", ";position:relative;z-index:20;background-color:", ";color:", ";outline:", " solid ", ";"], styles.day.selectedStartAndEnd.backgroundColor, borderSize, styles.day.selectedStartAndEnd.backgroundColor, styles.day.selectedStartAndEnd.color, styles.day.selectedStartAndEnd.backgroundColor, borderSize);
+  return css(["outline-color:", ";"], styles.day.focus.color);
 }, function (_ref8) {
   var styles = _ref8.styles;
-  return css(["outline:", " solid calc(", " * 2);"], styles.day.focus.color, borderSize);
-}, borderSize, function (_ref9) {
+  return css(["border:", " ", ";position:relative;z-index:20;background-color:", ";color:", ";outline:", " solid ", ";"], styles.day.selectedStartAndEnd.backgroundColor, borderSize, styles.day.selectedStartAndEnd.backgroundColor, styles.day.selectedStartAndEnd.color, styles.day.selectedStartAndEnd.backgroundColor, borderSize);
+}, function (_ref9) {
   var styles = _ref9.styles;
-  return css(["color:", ";"], styles.day.disabled.color);
+  return css(["outline:", " solid calc(", " * 2);"], styles.day.focus.color, borderSize);
 }, borderSize, function (_ref10) {
   var styles = _ref10.styles;
-  return css(["outline-color:", ";outline-offset:0;"], styles.day.focus.color);
-}, TYPOGRAPHY.fontStyles.light, function (_ref11) {
+  return css(["outline-color:", ";"], styles.day.focus.color);
+}, function (_ref11) {
   var styles = _ref11.styles;
+  return css(["color:", ";"], styles.day.disabled.color);
+}, borderSize, function (_ref12) {
+  var styles = _ref12.styles;
+  return css(["outline-color:", ";outline-offset:0;"], styles.day.focus.color);
+}, TYPOGRAPHY.fontStyles.light, function (_ref13) {
+  var styles = _ref13.styles;
   return css(["background-color:", ";color:", ";border:", ";outline:", ";"], styles.day.hover.backgroundColor, styles.day.hover.color, styles.day.hover.backgroundColor, borderSize);
 });
-export var StandaloneRangeDatePicker = function StandaloneRangeDatePicker(_ref12) {
-  var from = _ref12.from,
-      to = _ref12.to,
-      onChange = _ref12.onChange,
-      styles = _ref12.styles,
-      locale = _ref12.locale,
-      months = _ref12.months,
-      weekDays = _ref12.weekDays,
-      weekdaysShort = _ref12.weekdaysShort,
-      previousMonth = _ref12.previousMonth,
-      disabledDays = _ref12.disabledDays,
-      nextMonth = _ref12.nextMonth,
-      title = _ref12.title,
-      firstDayOfWeek = _ref12.firstDayOfWeek,
-      initialMonth = _ref12.initialMonth,
-      numberOfMonths = _ref12.numberOfMonths,
-      datePickerProps = _objectWithoutProperties(_ref12, ["from", "to", "onChange", "styles", "locale", "months", "weekDays", "weekdaysShort", "previousMonth", "disabledDays", "nextMonth", "title", "firstDayOfWeek", "initialMonth", "numberOfMonths"]);
+export var StandaloneRangeDatePicker = function StandaloneRangeDatePicker(_ref14) {
+  var from = _ref14.from,
+      to = _ref14.to,
+      onChange = _ref14.onChange,
+      styles = _ref14.styles,
+      locale = _ref14.locale,
+      months = _ref14.months,
+      weekDays = _ref14.weekDays,
+      weekdaysShort = _ref14.weekdaysShort,
+      previousMonth = _ref14.previousMonth,
+      disabledDays = _ref14.disabledDays,
+      nextMonth = _ref14.nextMonth,
+      title = _ref14.title,
+      firstDayOfWeek = _ref14.firstDayOfWeek,
+      initialMonth = _ref14.initialMonth,
+      numberOfMonths = _ref14.numberOfMonths,
+      datePickerProps = _objectWithoutProperties(_ref14, ["from", "to", "onChange", "styles", "locale", "months", "weekDays", "weekdaysShort", "previousMonth", "disabledDays", "nextMonth", "title", "firstDayOfWeek", "initialMonth", "numberOfMonths"]);
 
   var _useState = useState({
     from: from,

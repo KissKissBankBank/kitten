@@ -57,8 +57,16 @@ const StyledLocationInput = styled.div`
   }
 
   .k-LocationInput__autocomplete {
+    box-sizing: border-box;
     background-color: ${COLORS.background1};
     border: ${pxToRem(2)} solid ${COLORS.line1};
+    border-top: 0;
+    position: absolute;
+    z-index: 1000;
+    z-index: var(--menu-z-index, 1000);
+    width: 100%;
+
+    overflow-y: scroll;
 
     &:empty {
       border: 0;
@@ -91,6 +99,11 @@ const StyledLocationInput = styled.div`
     margin-left: 1ch;
   }
 
+  .k-LocationInput__loading {
+    padding-left: ${pxToRem(20)};
+    color: ${COLORS.font2};
+  }
+
   .k-LocationInput__icon {
     position: absolute;
     z-index: 1;
@@ -109,6 +122,7 @@ export const LocationInput = ({
   defaultValue,
   inputProps,
   name,
+  loadingText,
   ...others
 }) => {
   const [address, updateAddress] = useState(defaultValue)
@@ -151,7 +165,12 @@ export const LocationInput = ({
             })}
           />
           <div className="k-LocationInput__autocomplete">
-            {loading && <div>Loading...</div>}
+            {loading && (
+              <div
+                className="k-LocationInput__loading k-LocationInput__autocompleteItem"
+              >
+                {loadingText}
+              </div>)}
             {suggestions.map(suggestion => {
               const className = suggestion.active
                 ? 'k-LocationInput__autocompleteItem--active'
@@ -159,6 +178,7 @@ export const LocationInput = ({
 
               return (
                 <div
+                  key={suggestion.formattedSuggestion.mainText}
                   {...getSuggestionItemProps(suggestion, {
                     className,
                   })}
@@ -185,6 +205,7 @@ LocationInput.defaultProps = {
   defaultValue: '',
   inputProps: {},
   name: 'location-input',
+  loadingText: 'Loading...',
 }
 
 LocationInput.propTypes = {
@@ -193,4 +214,5 @@ LocationInput.propTypes = {
   defaultValue: PropTypes.string,
   inputProps: PropTypes.object,
   name: PropTypes.string,
+  loadingText: PropTypes.string,
 }

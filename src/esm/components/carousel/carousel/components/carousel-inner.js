@@ -1,7 +1,7 @@
+import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import React, { useEffect, useRef } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
-import throttle from 'lodash/fp/throttle';
 import { domElementHelper } from '../../../../helpers/dom/element-helper';
 import { CarouselPage } from './carousel-page';
 import classNames from 'classnames';
@@ -61,19 +61,25 @@ export var CarouselInner = function CarouselInner(_ref) {
       pageClickText = _ref.pageClickText;
   var carouselInner = useRef(null);
   var previousIndexPageVisible = usePrevious(currentPageIndex);
-  useEffect(function () {
-    domElementHelper.canUseDom() && window.addEventListener('resize', throttleWindowResize);
-    return function () {
-      return domElementHelper.canUseDom() && window.removeEventListener('resize', throttleWindowResize);
-    };
-  }, []);
+  var resizeObserver;
 
-  var onWindowResize = function onWindowResize() {
-    var innerWidth = carouselInner.current && carouselInner.current.clientWidth;
-    innerWidth && onResizeInner(innerWidth);
+  var onResizeObserve = function onResizeObserve(_ref2) {
+    var _ref3 = _slicedToArray(_ref2, 1),
+        entry = _ref3[0];
+
+    var innerWidth = entry.contentRect.width;
+    onResizeInner(innerWidth);
   };
 
-  var throttleWindowResize = throttle(200)(onWindowResize);
+  useEffect(function () {
+    resizeObserver = new ResizeObserver(onResizeObserve);
+    return function () {
+      return resizeObserver.disconnect();
+    };
+  }, []);
+  useEffect(function () {
+    carouselInner.current && resizeObserver.observe(carouselInner.current);
+  }, [carouselInner]);
   useEffect(function () {
     if (currentPageIndex !== previousIndexPageVisible) {
       scrollToPage(currentPageIndex);

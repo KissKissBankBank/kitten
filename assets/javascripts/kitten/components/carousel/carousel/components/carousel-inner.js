@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import ResizeObserver from 'resize-observer-polyfill'
-import throttle from 'lodash/fp/throttle'
 import { domElementHelper } from '../../../../helpers/dom/element-helper'
 import { CarouselPage } from './carousel-page'
 import classNames from 'classnames'
@@ -69,18 +68,22 @@ export const CarouselInner = ({
   const carouselInner = useRef(null)
   const previousIndexPageVisible = usePrevious(currentPageIndex)
 
-  useEffect(() => {
-    domElementHelper.canUseDom() && window.addEventListener('resize', throttleWindowResize)
+  let resizeObserver
 
-    return () => domElementHelper.canUseDom() && window.removeEventListener('resize', throttleWindowResize)
-  }, [])
-
-  const onWindowResize = () => {
-    const innerWidth = carouselInner.current && carouselInner.current.clientWidth
-    innerWidth && onResizeInner(innerWidth)
+  const onResizeObserve = ([entry]) => {
+    const innerWidth = entry.contentRect.width
+    onResizeInner(innerWidth)
   }
 
-  const throttleWindowResize = throttle(200)(onWindowResize)
+  useEffect(() => {
+    resizeObserver = new ResizeObserver(onResizeObserve)
+
+    return () => resizeObserver.disconnect()
+  }, [])
+
+  useEffect(() => {
+    carouselInner.current && resizeObserver.observe(carouselInner.current)
+  }, [carouselInner])
 
   useEffect(() => {
     if (currentPageIndex !== previousIndexPageVisible) {

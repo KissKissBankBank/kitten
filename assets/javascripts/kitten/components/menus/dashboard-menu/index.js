@@ -30,6 +30,12 @@ const StyledDashboardMenu = styled.nav`
       outline: ${COLORS.primary3} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(2)};
     }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary3};
+    }
   }
 
   .k-DashboardMenu__list,
@@ -45,6 +51,12 @@ const StyledDashboardMenu = styled.nav`
     &:focus {
       outline: ${COLORS.primary3} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary3};
     }
 
     &::-webkit-details-marker {

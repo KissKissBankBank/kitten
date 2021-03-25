@@ -94,6 +94,14 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0 .k-NavBar__link:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0 .k-NavBar__link:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0 .k-NavBar__link:focus,
 .c0 .k-NavBar__link[aria-current="page"] {
   border-color: rgba(128,0,128,.5);
@@ -281,6 +289,14 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0 .k-NavBar__link:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0 .k-NavBar__link:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c0 .k-NavBar__link:focus,
 .c0 .k-NavBar__link[aria-current="page"] {
   border-color: #19b4fa;
@@ -466,6 +482,14 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
 .c0 .k-NavBar__link:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0 .k-NavBar__link:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0 .k-NavBar__link:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c0 .k-NavBar__link:focus,

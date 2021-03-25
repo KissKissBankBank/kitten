@@ -2,7 +2,7 @@
 
 exports[`<BasicUploader /> should match snapshot 1`] = `
 <div
-  className="sc-bxivhb ekbhYA k-BasicUploader k-BasicUploader--ready"
+  className="sc-bxivhb joiif k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -11,7 +11,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa hMAXFG k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+    className="sc-bdVaJa bzmmMp k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
     htmlFor="BasicUploader"
     style={
       Object {
@@ -43,7 +43,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 <div
-  className="sc-bxivhb ekbhYA k-BasicUploader k-BasicUploader--ready"
+  className="sc-bxivhb joiif k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -52,7 +52,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa hMAXFG k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+    className="sc-bdVaJa bzmmMp k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
     htmlFor="BasicUploader"
     style={
       Object {
@@ -84,7 +84,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with props 1`] = `
 <div
-  className="sc-bxivhb ekbhYA k-BasicUploader k-BasicUploader--valid"
+  className="sc-bxivhb joiif k-BasicUploader k-BasicUploader--valid"
 >
   <input
     disabled={true}
@@ -94,7 +94,7 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa hMAXFG k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+    className="sc-bdVaJa bzmmMp k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--fluid"
     htmlFor="BasicUploader"
     style={
       Object {
