@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking Change: Remove `RichTextInput` component
+
 ## [3.0.0-beta.20] - 2021-03-23
 
 Breaking Change:
