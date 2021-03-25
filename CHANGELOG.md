@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix SCSS imports
+
 ## [3.0.0-beta.23] - 2021-03-25
 
 Breaking change:
