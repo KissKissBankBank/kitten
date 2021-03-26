@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix item classes transmission on `BulletList`.
+
 ## [3.0.0-beta.24] - 2021-03-25
 
 Fix:

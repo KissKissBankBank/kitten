@@ -30,52 +30,51 @@ exports[`<BulletList /> default matches with snapshot 1`] = `
   content: '';
 }
 
-.c0 .k-BulletList__item--tiny {
+.c0 .k-BulletList__item--tiny .k-BulletList__item {
   font-size: 0.7901234567901234rem;
 }
 
-.c0 .k-BulletList__item--tiny:before {
+.c0 .k-BulletList__item--tiny .k-BulletList__item:before {
   width: 0.25rem;
   height: 0.25rem;
 }
 
-.c0 .k-BulletList__item--regular {
+.c0 .k-BulletList__item--regular .k-BulletList__item {
   font-size: 0.8888888888888888rem;
 }
 
-.c0 .k-BulletList__item--large {
+.c0 .k-BulletList__item--large .k-BulletList__item {
   font-size: 1rem;
 }
 
-.c0 .k-BulletList__item--big {
+.c0 .k-BulletList__item--big .k-BulletList__item {
   font-size: 1.125rem;
   margin: 0.625rem 0;
 }
 
-.c0 .k-BulletList__item--huge {
+.c0 .k-BulletList__item--huge .k-BulletList__item {
   font-size: 1.265625rem;
   margin: 0.625rem 0;
 }
 
 <ul
-  aria-hidden="true"
-  className="c0 k-BulletList"
+  className="c0 k-BulletList k-BulletList--regular"
 >
   <li
-    className="k-BulletList__item k-BulletList__item--regular"
+    className="k-BulletList__item"
     id="1"
   >
     Dis Manibus
   </li>
   <li
-    className="k-BulletList__item k-BulletList__item--regular"
+    className="k-BulletList__item"
   >
     Calpurnia Felicla
   </li>
   <li
-    className="k-BulletList__item k-BulletList__item--regular"
+    className="k-BulletList__item customItemClass"
   >
-    Germulio coniugi
+    Germulio Niugi
   </li>
 </ul>
 `;
