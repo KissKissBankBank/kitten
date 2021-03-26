@@ -58,7 +58,7 @@ exports[`<BulletList /> default matches with snapshot 1`] = `
 }
 
 <ul
-  className="c0 k-BulletList k-BulletList--regular"
+  className="c0 k-BulletList k-BulletList--regular customListClass"
 >
   <li
     className="k-BulletList__item"
