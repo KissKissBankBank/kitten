@@ -4,6 +4,211 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [3.0.0] - 2021-03-26
+
+Breaking changes:
+
+- Remove `StyleGuide` app.
+- Remove `Karl` stories & components.
+- Remove SCSS mixins.
+- Reorganize components.
+- Remove all `@kisskissbankbank/kitten/src/next` exports.
+- Remove all SASS component mixins, helpers, definitions and schemas that are not used.
+- Remove the following deprecated components:
+  - `ArticleCard`
+  - `Button` (`buttons/button`, replaced with `Button` (`buttons/button/button`))
+  - `ButtonImageWithText`
+  - `ButtonImageWithTextAndBadge`
+  - `CallToActionPopover`
+  - `Comment` from `form/comment` (replaced by `comments/comment`)
+  - `CommentAvatar` from `form/comment-avatar` (replaced by `comments/comment-avatar`)
+  - `CommentForm` from `form/comment-form` (replaced by `comments/comment-form`)
+  - `ContributionCard`
+  - `CrowdfundingCardWidget`
+  - `DeprecatedArrowIcon`
+  - `DonationCard`
+  - `Dropdown`
+  - `DropdownButton`
+  - `ExternalRichLink`
+  - `FormAmountAndCurrency`
+  - `FormPhoneNumber`
+  - `FormRow`
+  - `Header` (replaced by `HeaderNav`)
+  - `HeaderLogo` (replaced by `HeaderNav`)
+  - `HeaderTitles` (replaced by `HeaderNav`)
+  - `HeaderTour`
+  - `HorizontalNav`
+  - `ImageWithCaption`
+  - `LegoGrid`
+  - `LinkBox/deprecated`
+  - `LoanSimulator`
+  - `MarkdownPage`
+  - `NavList`
+  - `NavTabCarousel` (deprecated duplicate from `carousels/tab-bar-carousel`)
+  - `Paragraph` (replaced by `Next` `Paragraph`, see beta.14)
+  - `PhoneDropdown`
+  - `Popover`
+  - `ProjectCard`
+  - `ProjectCreatorCard`
+  - `ProjectSimilarCard`
+  - `QuestionMarkWithTooltip`
+  - `RewardCard` (replaced by `BackingCard`)
+  - `RewardCardLegacy`
+  - `RichTextInput`
+  - `Search`
+  - `SelectWithState` (replaced by `DropdownSelect`)
+  - `SimilarProjectsCard`
+  - `SimpleUploader`
+  - `Slider` (replaced by `RangeSlider`)
+  - `SliderBar`
+  - `SliderTooltip`
+  - `SliderWithTooltipAndPower`
+  - `StaticTooltip`
+  - `Switch` (replaced by `ToggleSwitch`)
+  - `TabBar`
+  - `TagList`
+  - `TextInputAndSelect`
+  - `TextInputWithUnitForm`
+  - `Tooltip`
+  - `TooltipNew`
+  - `Tour`
+  - `TourPopover`
+  - `TourStep`
+  - `Uploader`
+  - `UserMenu`
+- Remove the following deprecated HOCs:
+  - `card`
+  - `withTooltip`
+- Remove  default export for the following components:
+  - `Dropdown`
+  - `DropdownButton`
+  - `LinkBox`
+- Remove `sliderKeyDownHandler` helper.
+- Depreciate `Stepper` in favour of `Next` `Stepper`.
+- Replace `Paragraph` with `Next` `Paragraph` (see beta.14).
+- `ArrowIcon` now defaults to `solid` version.
+- Remove `k-u-blockAlign-*` utilities in favor of `k-u-align-self-*`.
+- Remplace prop `margin` with `noMargin` on the following components:
+  - `Paragraph`
+  - `Title`
+- Remove size props (`giant`, `huge`, `regular`, `big`, `tiny`) on the following components:
+  - `BulletList`
+  - `Button`
+  - `ModalNext`
+  - `TagButton`
+  - `TextInput`
+  - `TextInputWithUnit`
+- Remove unused props on `Dropdown`.
+
+Features:
+
+- Add `LongArrowIcon` component.
+- Add the following Logo components:
+  - `MaisonDeCrowdfundingLogo`
+  - `MicrodonLogo`
+  - `GoodeedLogo`
+  - `KkbbCoLogo`
+- Add missing components, helpers and constants to ESM exports.
+- Convert the following components to CSS-in-JS:
+  - `AvatarWithTextAndBadge`
+  - `Badge`
+  - `BulletList`
+  - `ButtonIcon`
+  - `ButtonImage`
+  - `ButtonQuestionMarkIcon`
+  - `CloseButton`
+  - `DevGrid`
+  - `FacebookButtonIcon`
+  - `FacebookButtonIconWords`
+  - `FormAction`
+  - `Grid`
+  - `HeaderNav`
+  - `IconBadge`
+  - `ImageCropper`
+  - `InformationBox`
+  - `InstagramButtonIcon`
+  - `Label`
+  - `Line`
+  - `Line`
+  - `LinkedinButtonIcon`,
+  - `LinkedinButtonIconWords`
+  - `LinkList`
+  - `Loader`
+  - `LoaderWithParagraph`
+  - `LocationInput`
+  - `PinterestButtonIcon`
+  - `ResponsiveIframeContainer`
+  - `Row`
+  - `SideGrid`
+  - `SideLayout`
+  - `SimpleCard`
+  - `Stepper`
+  - `StepperIcon*`
+  - `SupTitle`
+  - `Title`
+  - `TwitterButtonIcon`
+  - `TwitterButtonIconWords`
+  - `VerticalStroke`
+  - `YoutubeButtonIcon`
+- Update & refactor the following components:
+  - `Text`
+  - `Marger`
+- Add `onChange` to `ToggleSwitch` API.
+- Add `tooltipProps` prop to `Field/Label` component.
+- Add `StepperIcon` component with `state` prop.
+- Add `empty` prop to `IconBadge`.
+- Add `warning`, `neutral` and `none` values to `StatusWithBullet` `statusType` prop.
+- Add `size` and `weight` props to `StatusWithBullet`.
+- `statusMessage` prop is no longer required, you can now use `children` alternatively in `StatusWithBullet`.
+- Add `hoverable` prop to `AvatarWithTextAndBadge`.
+- Deprecate `textClassName` prop in favor of `className` on `AvatarWithTextAndBadge.Text`.
+- Add explicit utility class `k-u-pointer-events-none` to `k-utilities-event` mixin.
+- Add `size` prop to the following components:
+  - `AvatarWithTextAndBadge.Image`
+  - `BulletList`
+  - `Button`
+  - `ModalNext`
+  - `TagButton`
+  - `TextInput`
+  - `TextInputWithButton`
+  - `TextInputWithUnit`
+- Add `playerButtonSize` prop to `SimpleCard`.
+- Add `rounded` prop to Button component.
+- Add `social_facebook`, `social_twitter`, `social_linkedin`, `social_instagram`,
+  `social_youtube`, `social_pinterest` modifiers to Button component.
+- Add `InstagramButtonIconWords` component.
+- Add `type="button"` to Button by default.
+- Add `ModalNext` export for `modals/next`.
+- Add deprecation warning on `Modal` (`modals/modal`).
+- Add `loadingText` prop to `LocationInput`.
+
+Fixes:
+
+- Fix `InformationBox` style.
+- Fix gap bug on Safari for the following components:
+  - `BackingCard`
+  - `DashboardLayout.Flow`
+  - `DashboardLayout`
+  - `DashboardMenu`
+  - `ImageCropper`
+  - `Loader`
+  - `LoaderWithParagraph`
+- Add DOM check to `DevGrid`.
+- Add width to `StickyContainer` in `HeaderNav`.
+- Use wrapper and relative positioning for a `Badge` with `Icon` prop.
+- Fix Lodash imports on `DropdownPhoneSelect`.
+- Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
+- Revert default value for `Title` margin.
+- Fix console error in `Accordion` when closing pane.
+- Fix ellipsis for children of `AvaratWithTextAndBadge`.
+- Fix alignment on `HeaderNav` `UserMenuButton`.
+- Fix `GridCol` offset class for `0` value.
+- Fix dropdown list position on `LocationInput`.
+- Remove console message on `LocationInput`.
+- Limit focus outline display to keyboard navigation.
+- Fix `HorizontalTimeline` `className` property name.
+- Use `CustomEvent` instead of `event-emitter` on `Dropdown`.
+
 ## [3.0.0-beta.25] - 2021-03-26
 
 Fix:
