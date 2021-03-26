@@ -18,7 +18,7 @@ export var BulletList = function BulletList(_ref) {
       others = _objectWithoutProperties(_ref, ["items", "size", "className"]);
 
   return /*#__PURE__*/React.createElement(StyledBulletList, _extends({
-    className: classNames('k-BulletList', "k-BulletList--".concat(size))
+    className: classNames('k-BulletList', "k-BulletList--".concat(size), className)
   }, others), items.map(function (_ref2) {
     var item = _ref2.item,
         key = _ref2.key,

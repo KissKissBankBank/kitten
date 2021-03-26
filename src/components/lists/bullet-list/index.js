@@ -36,7 +36,7 @@ var BulletList = function BulletList(_ref) {
       className = _ref.className,
       others = (0, _objectWithoutProperties2.default)(_ref, ["items", "size", "className"]);
   return /*#__PURE__*/_react.default.createElement(StyledBulletList, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-BulletList', "k-BulletList--".concat(size))
+    className: (0, _classnames.default)('k-BulletList', "k-BulletList--".concat(size), className)
   }, others), items.map(function (_ref2) {
     var item = _ref2.item,
         key = _ref2.key,
