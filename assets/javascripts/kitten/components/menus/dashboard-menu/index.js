@@ -30,6 +30,12 @@ const StyledDashboardMenu = styled.nav`
       outline: ${COLORS.primary3} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(2)};
     }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary3};
+    }
   }
 
   .k-DashboardMenu__list,
@@ -45,6 +51,12 @@ const StyledDashboardMenu = styled.nav`
     &:focus {
       outline: ${COLORS.primary3} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary3};
     }
 
     &::-webkit-details-marker {
@@ -67,7 +79,10 @@ const StyledDashboardMenu = styled.nav`
       padding: 0 ${pxToRem(40)} ${pxToRem(20)} ${pxToRem(60)};
       display: flex;
       flex-direction: column;
-      gap: ${pxToRem(10)};
+
+      .k-DashboardMenu__itemWrapper:not(:last-child) {
+        margin-bottom: ${pxToRem(10)};
+      }
     }
   }
 
@@ -76,11 +91,14 @@ const StyledDashboardMenu = styled.nav`
     display: flex;
     height: ${pxToRem(50)};
     align-items: center;
-    gap: ${pxToRem(10)};
     padding: 0 ${pxToRem(10)};
     border-radius: ${pxToRem(6)};
   }
 
+  .k-DashboardMenu__iconWrapper,
+  .k-DashboardMenu__expandable__title__text {
+    margin-right: ${pxToRem(10)};
+  }
 
   /* TEXT STYLES */
   .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,
@@ -190,7 +208,7 @@ const Expandable = ({ className, children, icon, title, ...props }) => {
               {title}
             </span>
             <span className="k-DashboardMenu__expandable__title__arrow">
-              <ArrowIcon version="solid" direction="bottom" />
+              <ArrowIcon direction="bottom" />
             </span>
           </div>
         </summary>

@@ -7,7 +7,7 @@ import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_MOBILE,
 } from '../../../constants/grid-config'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { CarouselInner } from './components/carousel-inner'
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
@@ -277,7 +277,7 @@ class CarouselBase extends Component {
                 ? lastButtonText
                 : prevButtonText}
             </VisuallyHidden>
-            <ArrowIcon version="solid" direction="left" aria-hidden />
+            <ArrowIcon direction="left" aria-hidden />
           </Button>
 
           <Button
@@ -294,7 +294,7 @@ class CarouselBase extends Component {
                 ? firstButtonText
                 : nextButtonText}
             </VisuallyHidden>
-            <ArrowIcon version="solid" direction="right" aria-hidden />
+            <ArrowIcon direction="right" aria-hidden />
           </Button>
         </div>
 

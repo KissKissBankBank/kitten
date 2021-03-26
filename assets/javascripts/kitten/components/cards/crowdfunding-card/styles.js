@@ -15,10 +15,42 @@ const mobileStyles = css`
   padding-bottom: ${pxToRem(5)};
   overflow: hidden;
   display: block;
+  background: ${COLORS.background1};
+  color: ${COLORS.font1};
+
+  &[href] {
+    text-decoration: inherit;
+    color: inherit;
+
+    .k-CrowdfundingCard__image__image {
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .k-CrowdfundingCard__title__title {
+      transition: color 0.4s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      .k-CrowdfundingCard__image__image {
+        transform: scale(1.07);
+      }
+
+      .k-CrowdfundingCard__title__title {
+        color: ${COLORS.primary1};
+      }
+    }
+  }
 
   &[href]:focus {
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
+  }
+  &[href]:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &[href]:focus-visible {
+    outline-color: ${COLORS.primary4};
   }
 
   .k-CrowdfundingCard__paddedContainer {
@@ -199,24 +231,6 @@ const mobileStyles = css`
     animation-name: ${loadingKeyframes};
   }
 
-  /* Widget-specific styles */
-
-  &.k-CrowdfundingCardWidget {
-    .k-CrowdfundingCard__titleAndDesc {
-      margin-top: ${pxToRem(5)};
-    }
-
-    .k-CrowdfundingCard__titleWrapper {
-      display: flex;
-    }
-
-    .k-CrowdfundingCard__title__dayCounter {
-      line-height: 1;
-      margin-left: calc(2 * ${COMPONENT_GUTTER});
-      margin-top: ${pxToRem(10)};
-    }
-  }
-
   /* isLoading */
 
   &.k-CrowdfundingCard--isLoading {
@@ -346,12 +360,6 @@ const tabletStyles = css`
 
   .k-CrowdfundingCard__progressBar__percent {
     display: inherit;
-  }
-
-  &.k-CrowdfundingCardWidget {
-    .k-CrowdfundingCard__title {
-      padding: 0 ${COMPONENT_GUTTER} 0 0;
-    }
   }
 
   &.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {

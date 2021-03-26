@@ -8,7 +8,7 @@ import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import { LightbulbIllustration as Lightbulb } from '../../../../components/illustrations/lightbulb-illustration'
-import { Loader } from '../../../../components/loaders/loader'
+import { Loader } from '../../../../components/atoms/loader'
 import { getReactElementsWithoutType } from '../../../../helpers/react/react-elements'
 
 import { SideCard } from './side-card'
@@ -75,15 +75,21 @@ const StyledFlow = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: ${pxToRem(20)};
     margin: ${pxToRem(20)} 0;
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      gap: ${pxToRem(40)};
       margin: ${pxToRem(30)} 0;
     }
 
-    > * {
+    & > :not(:last-child) {
+      margin-right: ${pxToRem(20)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+        margin-right: ${pxToRem(40)};
+      }
+    }
+
+    & > * {
       min-width: 0;
       max-width: ${pxToRem(180)};
       flex: 1 1 ${pxToRem(180)};

@@ -123,6 +123,14 @@ const StyledDatePicker = styled.div`
             `}
             outline-offset: 0;
           }
+          &:focus:not(:focus-visible) {
+            outline-color: transparent;
+          }
+          &:focus-visible {
+            ${({ styles }) => css`
+              outline-color: ${styles.day.focus.color};
+            `}
+          }
 
           /* START AND END STYLES */
           &.DayPicker-Day--start, &.DayPicker-Day--end {
@@ -146,6 +154,14 @@ const StyledDatePicker = styled.div`
               `}
               outline-offset: calc(${borderSize} / -2);
               z-index: 25;
+            }
+            &:focus:not(:focus-visible) {
+              outline-color: transparent;
+            }
+            &:focus-visible {
+              ${({ styles }) => css`
+                outline-color: ${styles.day.focus.color};
+              `}
             }
           }
         }

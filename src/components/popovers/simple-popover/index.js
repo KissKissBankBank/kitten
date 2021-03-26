@@ -31,13 +31,13 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _title = require("../../../components/typography/title");
 
-var _paragraph = require("../../../components/typography/paragraph");
+var _next = require("../../../components/typography/paragraph/next");
 
 var _gridConfig = require("../../../constants/grid-config");
 
 var _screenConfig = require("../../../constants/screen-config");
 
-var _button = require("../../../components/buttons/button/button");
+var _button = require("../../../components/buttons/button");
 
 var borderSize = 2;
 
@@ -113,7 +113,7 @@ var SimplePopover = function SimplePopover(_ref2) {
     onClick: onCloseClick,
     type: "button",
     modifier: "hydrogen",
-    micro: true,
+    size: "micro",
     icon: true
   }, /*#__PURE__*/_react.default.createElement(_crossIcon.CrossIcon, {
     "aria-hidden": true,
@@ -127,13 +127,13 @@ var SimplePopover = function SimplePopover(_ref2) {
   }, /*#__PURE__*/_react.default.createElement(_title.Title, {
     id: titleId,
     modifier: "senary",
-    margin: false,
+    noMargin: true,
     tag: "h2"
   }, title)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: ".5",
     bottom: "1"
-  }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
-    modifier: "quaternary"
+  }, /*#__PURE__*/_react.default.createElement(_next.Paragraph, {
+    modifier: "tertiary"
   }, text)), buttons.length > 0 && /*#__PURE__*/_react.default.createElement(ButtonsContainer, {
     top: "3"
   }, buttons.map(function (_ref3, i) {

@@ -1,98 +1,98 @@
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-import React, { Component } from 'react';
+import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import React, { createContext, useContext } from 'react';
 import classNames from 'classnames';
-import { stringUtils } from '../../../helpers/utils/string';
-export var SideGrid = /*#__PURE__*/function (_Component) {
-  _inherits(SideGrid, _Component);
-
-  var _super = _createSuper(SideGrid);
-
-  function SideGrid() {
-    _classCallCheck(this, SideGrid);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(SideGrid, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          className = _this$props.className,
-          containerClassName = _this$props.containerClassName,
-          rowClassName = _this$props.rowClassName;
-      var _this$props2 = this.props,
-          asidePosition = _this$props2.asidePosition,
-          asideSize = _this$props2.asideSize;
-      asidePosition = stringUtils.upcaseFirst(asidePosition);
-      asideSize = stringUtils.upcaseFirst(asideSize);
-      var sideGridClassName = classNames('k-SideGrid', className, "k-SideGrid--aside".concat(asidePosition), "k-SideGrid--aside".concat(asideSize));
-      return /*#__PURE__*/React.createElement("div", {
-        className: sideGridClassName
-      }, /*#__PURE__*/React.createElement("div", {
-        className: classNames('k-SideGrid__container', containerClassName)
-      }, /*#__PURE__*/React.createElement("div", {
-        className: classNames('k-SideGrid__row', rowClassName)
-      }, this.props.children)));
+import styled from 'styled-components';
+import COLORS from '../../../constants/colors-config';
+import { pxToRem } from '../../../helpers/utils/typography';
+import { ScreenConfig } from '../../../constants/screen-config';
+import { Grid, GridCol } from '../../../components/grid/grid';
+import { Container } from '../../../components/grid/container';
+import { GUTTER } from '../../../constants/grid-config';
+var Context = createContext({
+  asideSize: 'default'
+});
+var StyledSideGrid = styled.div.withConfig({
+  displayName: "side-grid__StyledSideGrid",
+  componentId: "sc-1hedjcg-0"
+})(["@media (min-width:", "){background:linear-gradient( to right,", " 0%,", " 50%,", " 50%,", " 100% );}.k-SideGrid__content{background-color:", ";padding-bottom:", ";@media (min-width:", "){padding-bottom:", ";}}.k-SideGrid__aside{display:none;@media (min-width:", "){display:flex;border-left:", " solid ", ";padding-left:0;padding-right:", ";}}.k-SideGrid__asideContent{display:flex;flex-direction:column;flex:1 1 auto;border-left:", " solid ", ";background-color:", ";}&.k-SideGrid--aside-start{@media (min-width:", "){background:linear-gradient( to left,", " 0%,", " 50%,", " 50%,", " 100% );}.k-SideGrid__row{flex-direction:row-reverse;}.k-SideGrid__aside{border-left:none;border-right:", " solid ", ";padding-left:", ";padding-right:0;}.k-SideGrid__asideContent{border-left:none;border-right:", " solid ", ";}}"], pxToRem(ScreenConfig.M.min), COLORS.background1, COLORS.background1, COLORS.background2, COLORS.background2, COLORS.background1, pxToRem(30), pxToRem(ScreenConfig.M.min), pxToRem(50), pxToRem(ScreenConfig.M.min), pxToRem(GUTTER / 2), COLORS.background1, pxToRem(GUTTER / 2), pxToRem(1), COLORS.line1, COLORS.background2, pxToRem(ScreenConfig.M.min), COLORS.background1, COLORS.background1, COLORS.background2, COLORS.background2, pxToRem(GUTTER / 2), COLORS.background1, pxToRem(GUTTER / 2), pxToRem(1), COLORS.line1);
+export var SideGrid = function SideGrid(_ref) {
+  var children = _ref.children,
+      className = _ref.className,
+      containerClassName = _ref.containerClassName,
+      rowClassName = _ref.rowClassName,
+      asidePosition = _ref.asidePosition,
+      asideSize = _ref.asideSize;
+  var sideGridClassName = classNames('k-SideGrid', className, "k-SideGrid--aside-".concat(asidePosition), "k-SideGrid--aside-".concat(asideSize));
+  return /*#__PURE__*/React.createElement(StyledSideGrid, {
+    className: sideGridClassName
+  }, /*#__PURE__*/React.createElement(Container, {
+    className: classNames('k-SideGrid__container', containerClassName)
+  }, /*#__PURE__*/React.createElement(Grid, {
+    className: classNames('k-SideGrid__row', rowClassName)
+  }, /*#__PURE__*/React.createElement(Context.Provider, {
+    value: {
+      asideSize: asideSize
     }
-  }]);
+  }, children))));
+};
+export var SideGridContent = function SideGridContent(_ref2) {
+  var className = _ref2.className,
+      children = _ref2.children,
+      props = _objectWithoutProperties(_ref2, ["className", "children"]);
 
-  return SideGrid;
-}(Component);
-export var SideGridContent = /*#__PURE__*/function (_Component2) {
-  _inherits(SideGridContent, _Component2);
+  var _useContext = useContext(Context),
+      asideSize = _useContext.asideSize;
 
-  var _super2 = _createSuper(SideGridContent);
+  var contentWidth = function () {
+    switch (asideSize) {
+      case 'large':
+        return 7;
 
-  function SideGridContent() {
-    _classCallCheck(this, SideGridContent);
+      case 'small':
+        return 9;
 
-    return _super2.apply(this, arguments);
-  }
-
-  _createClass(SideGridContent, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement("div", {
-        className: classNames('k-SideGrid__content', this.props.className)
-      }, this.props.children);
+      default:
+        return 8;
     }
-  }]);
+  }();
 
-  return SideGridContent;
-}(Component);
-export var SideGridAside = /*#__PURE__*/function (_Component3) {
-  _inherits(SideGridAside, _Component3);
+  return /*#__PURE__*/React.createElement(GridCol, _extends({
+    col: 12,
+    "col-m": contentWidth,
+    className: classNames('k-SideGrid__content', className)
+  }, props), children);
+};
+export var SideGridAside = function SideGridAside(_ref3) {
+  var className = _ref3.className,
+      children = _ref3.children,
+      contentClassName = _ref3.contentClassName,
+      props = _objectWithoutProperties(_ref3, ["className", "children", "contentClassName"]);
 
-  var _super3 = _createSuper(SideGridAside);
+  var _useContext2 = useContext(Context),
+      asideSize = _useContext2.asideSize;
 
-  function SideGridAside() {
-    _classCallCheck(this, SideGridAside);
+  var sideWidth = function () {
+    switch (asideSize) {
+      case 'large':
+        return 5;
 
-    return _super3.apply(this, arguments);
-  }
+      case 'small':
+        return 3;
 
-  _createClass(SideGridAside, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement("div", {
-        className: classNames('k-SideGrid__aside', this.props.className)
-      }, /*#__PURE__*/React.createElement("div", {
-        className: classNames('k-SideGrid__asideContent', this.props.contentClassName)
-      }, this.props.children));
+      default:
+        return 4;
     }
-  }]);
+  }();
 
-  return SideGridAside;
-}(Component);
+  return /*#__PURE__*/React.createElement(GridCol, _extends({
+    col: 12,
+    "col-m": sideWidth,
+    className: classNames('k-SideGrid__aside', className)
+  }, props), /*#__PURE__*/React.createElement("div", {
+    className: classNames('k-SideGrid__asideContent', contentClassName)
+  }, children));
+};
 SideGrid.defaultProps = {
   className: null,
   containerClassName: null,

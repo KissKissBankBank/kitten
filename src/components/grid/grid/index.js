@@ -15,101 +15,74 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+var _react = _interopRequireDefault(require("react"));
 
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _react = _interopRequireWildcard(require("react"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _typography = require("../../../helpers/utils/typography");
+
 var _screenConfig = require("../../../constants/screen-config");
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+var _gridConfig = require("../../../constants/grid-config");
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+var StyledGrid = _styledComponents.default.div.withConfig({
+  displayName: "grid__StyledGrid",
+  componentId: "l82tx2-0"
+})(["box-sizing:border-box;display:flex;flex-wrap:wrap;margin-right:", ";margin-left:", ";.k-Grid__col{box-sizing:border-box;flex:0 0 auto;padding-right:", ";padding-left:", ";}", " ", ""], (0, _typography.pxToRem)(-_gridConfig.GUTTER / 2), (0, _typography.pxToRem)(-_gridConfig.GUTTER / 2), (0, _typography.pxToRem)(_gridConfig.GUTTER / 2), (0, _typography.pxToRem)(_gridConfig.GUTTER / 2), (0, _toConsumableArray2.default)(Array(_gridConfig.NUM_COLUMNS + 1).keys()).map(function (column) {
+  return (0, _styledComponents.css)([".k-Grid__col--", "{flex-basis:calc((100% / ", ") * ", ");max-width:calc((100% / ", ") * ", ");}.k-Grid__col--offset-", "{margin-left:calc((100% / ", ") * ", ");}"], column, _gridConfig.NUM_COLUMNS, column, _gridConfig.NUM_COLUMNS, column, column, _gridConfig.NUM_COLUMNS, column);
+}), function () {
+  return _screenConfig.ORDERED_SCREEN_SIZES.map(function (media) {
+    return media !== _screenConfig.ORDERED_SCREEN_SIZES[0] && (0, _styledComponents.css)(["@media (min-width:", "){", "}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig[media].min), (0, _toConsumableArray2.default)(Array(_gridConfig.NUM_COLUMNS + 1).keys()).map(function (column) {
+      return (0, _styledComponents.css)([".k-Grid__col--", "{flex-basis:calc((100% / ", ") * ", ");max-width:calc((100% / ", ") * ", ");}.k-Grid__col--offset-", "{margin-left:calc((100% / ", ") * ", ");}"], column + '-' + media.toLowerCase(), _gridConfig.NUM_COLUMNS, column, _gridConfig.NUM_COLUMNS, column, column + '-' + media.toLowerCase(), _gridConfig.NUM_COLUMNS, column);
+    }));
+  });
+});
 
-var Grid = /*#__PURE__*/function (_Component) {
-  (0, _inherits2.default)(Grid, _Component);
-
-  var _super = _createSuper(Grid);
-
-  function Grid() {
-    (0, _classCallCheck2.default)(this, Grid);
-    return _super.apply(this, arguments);
-  }
-
-  (0, _createClass2.default)(Grid, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          className = _this$props.className,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["className"]);
-      var gridClassName = (0, _classnames.default)('k-Grid', className);
-      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
-        className: gridClassName
-      }, others));
-    }
-  }]);
-  return Grid;
-}(_react.Component);
+var Grid = function Grid(_ref) {
+  var className = _ref.className,
+      others = (0, _objectWithoutProperties2.default)(_ref, ["className"]);
+  return /*#__PURE__*/_react.default.createElement(StyledGrid, (0, _extends2.default)({
+    className: (0, _classnames.default)('k-Grid', className)
+  }, others));
+};
 
 exports.Grid = Grid;
 
-var GridCol = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2.default)(GridCol, _React$Component);
+var GridCol = function GridCol(_ref2) {
+  var _classNames2;
 
-  var _super2 = _createSuper(GridCol);
+  var className = _ref2.className,
+      props = (0, _objectWithoutProperties2.default)(_ref2, ["className"]);
+  var col = props.col,
+      offset = props.offset,
+      others = (0, _objectWithoutProperties2.default)(props, ["col", "offset"]);
 
-  function GridCol() {
-    (0, _classCallCheck2.default)(this, GridCol);
-    return _super2.apply(this, arguments);
-  }
+  var classByMediaQuery = function classByMediaQuery() {
+    var classNamesByMediaQuery = Object.keys(_screenConfig.ScreenConfig).map(function (size) {
+      var _classNames;
 
-  (0, _createClass2.default)(GridCol, [{
-    key: "classByMediaQuery",
-    value: function classByMediaQuery() {
-      var props = this.props;
-      var classNamesByMediaQuery = Object.keys(_screenConfig.ScreenConfig).map(function (size) {
-        var _classNames;
+      var mediaQuery = size.toLowerCase();
+      var col = props["col-".concat(mediaQuery)];
+      var offset = props["offset-".concat(mediaQuery)];
+      return (0, _classnames.default)(classNamesByMediaQuery, (_classNames = {}, (0, _defineProperty2.default)(_classNames, "k-Grid__col--".concat(col, "-").concat(mediaQuery), col), (0, _defineProperty2.default)(_classNames, "k-Grid__col--offset-".concat(offset, "-").concat(mediaQuery), !!offset || offset === 0), _classNames));
+    });
+    return classNamesByMediaQuery;
+  }; // Remove unknown props in others.
 
-        var mediaQuery = size.toLowerCase();
-        var col = props["col-".concat(mediaQuery)];
-        var offset = props["offset-".concat(mediaQuery)];
-        return (0, _classnames.default)(classNamesByMediaQuery, (_classNames = {}, (0, _defineProperty2.default)(_classNames, "k-Grid__col--".concat(col, "@").concat(mediaQuery), col), (0, _defineProperty2.default)(_classNames, "k-Grid__col--offset-".concat(offset, "@").concat(mediaQuery), offset), _classNames));
-      });
-      return classNamesByMediaQuery;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _classNames2;
 
-      var _this$props2 = this.props,
-          col = _this$props2.col,
-          offset = _this$props2.offset,
-          className = _this$props2.className,
-          others = (0, _objectWithoutProperties2.default)(_this$props2, ["col", "offset", "className"]);
-      var gridClassNames = (0, _classnames.default)((_classNames2 = {}, (0, _defineProperty2.default)(_classNames2, "k-Grid__col--".concat(col), col), (0, _defineProperty2.default)(_classNames2, "k-Grid__col--offset-".concat(offset), offset), _classNames2), this.classByMediaQuery(), className); // Remove unknown props in others.
-
-      Object.keys(_screenConfig.ScreenConfig).map(function (size) {
-        var mediaQuery = size.toLowerCase();
-        delete others["col-".concat(mediaQuery)];
-        delete others["offset-".concat(mediaQuery)];
-      });
-      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, others, {
-        className: gridClassNames
-      }));
-    }
-  }]);
-  return GridCol;
-}(_react.default.Component);
+  Object.keys(_screenConfig.ScreenConfig).map(function (size) {
+    var mediaQuery = size.toLowerCase();
+    delete others["col-".concat(mediaQuery)];
+    delete others["offset-".concat(mediaQuery)];
+  });
+  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, others, {
+    className: (0, _classnames.default)('k-Grid__col', (_classNames2 = {}, (0, _defineProperty2.default)(_classNames2, "k-Grid__col--".concat(col), col), (0, _defineProperty2.default)(_classNames2, "k-Grid__col--offset-".concat(offset), offset), _classNames2), classByMediaQuery(), className)
+  }));
+};
 
 exports.GridCol = GridCol;
 Grid.defaultProps = {

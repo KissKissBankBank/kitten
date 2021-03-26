@@ -9,10 +9,10 @@ import { CrossIcon } from '../../../components/icons/cross-icon';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { Title } from '../../../components/typography/title';
-import { Paragraph } from '../../../components/typography/paragraph';
+import { Paragraph } from '../../../components/typography/paragraph/next';
 import { CONTAINER_PADDING_THIN } from '../../../constants/grid-config';
 import { ScreenConfig } from '../../../constants/screen-config';
-import { Button } from '../../../components/buttons/button/button';
+import { Button } from '../../../components/buttons/button';
 var borderSize = 2;
 var PopoverContainer = styled.div.withConfig({
   displayName: "simple-popover__PopoverContainer",
@@ -83,7 +83,7 @@ export var SimplePopover = function SimplePopover(_ref2) {
     onClick: onCloseClick,
     type: "button",
     modifier: "hydrogen",
-    micro: true,
+    size: "micro",
     icon: true
   }, /*#__PURE__*/React.createElement(CrossIcon, {
     "aria-hidden": true,
@@ -97,13 +97,13 @@ export var SimplePopover = function SimplePopover(_ref2) {
   }, /*#__PURE__*/React.createElement(Title, {
     id: titleId,
     modifier: "senary",
-    margin: false,
+    noMargin: true,
     tag: "h2"
   }, title)), /*#__PURE__*/React.createElement(Marger, {
     top: ".5",
     bottom: "1"
   }, /*#__PURE__*/React.createElement(Paragraph, {
-    modifier: "quaternary"
+    modifier: "tertiary"
   }, text)), buttons.length > 0 && /*#__PURE__*/React.createElement(ButtonsContainer, {
     top: "3"
   }, buttons.map(function (_ref3, i) {

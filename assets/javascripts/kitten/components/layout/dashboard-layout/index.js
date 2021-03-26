@@ -23,6 +23,7 @@ import {
 
 import { BurgerIcon } from '../../../components/icons/burger-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import { LongArrowIcon } from '../../../components/icons/long-arrow-icon'
 
 import { Flow } from './flow'
 
@@ -54,6 +55,12 @@ const StyledDashboard = styled.div`
   .k-DashboardLayout__backLink:focus {
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
+  }
+  .k-DashboardLayout__backLink:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  .k-DashboardLayout__backLink:focus-visible {
+    outline-color: ${COLORS.primary4};
   }
 
   /* TABLET + MOBILE */
@@ -101,7 +108,10 @@ const StyledDashboard = styled.div`
         padding: ${pxToRem(30)};
         display: flex;
         flex-direction: column;
-        gap: ${pxToRem(30)};
+
+        & > :not(:last-child) {
+          margin-bottom: ${pxToRem(30)};
+        }
 
         .k-DashboardLayout__backLink {
           flex: 0 0 ${pxToRem(40)};
@@ -234,15 +244,17 @@ const StyledDashboard = styled.div`
         position: sticky;
         top: 0;
         overflow: scroll;
-        gap: ${pxToRem(30)};
         padding: ${pxToRem(30)};
+
+        & > :not(:last-child) {
+          margin-bottom: ${pxToRem(30)};
+        }
 
         .k-DashboardLayout__backLink {
           flex: 0 0 auto;
           align-self: start;
           display: inline-flex;
           align-items: center;
-          gap: ${pxToRem(15)};
           color: ${COLORS.background1};
           transition: color .2s ease;
           ${TYPOGRAPHY.fontStyles.regular}
@@ -257,7 +269,12 @@ const StyledDashboard = styled.div`
           &:hover {
             color: ${COLORS.primary1};
           }
+
+          .k-DashboardLayout__backLink__text {
+            margin-left: ${pxToRem(15)};
+          }
         }
+
 
         .k-DashboardLayout__heading {
           flex: 0 1 auto;
@@ -470,10 +487,17 @@ export const DashboardLayout = ({
               backLinkProps.className,
             )}
           >
-            <ArrowIcon
+            <LongArrowIcon
+              aria-hidden
+              className="k-u-hidden@m-down"
               direction="left"
               color={COLORS.background1}
-              version="solid"
+            />
+            <ArrowIcon
+              aria-hidden
+              className="k-u-hidden@l-up"
+              direction="left"
+              color={COLORS.background1}
             />
             <span className="k-DashboardLayout__backLink__text">
               {backLinkProps.children}

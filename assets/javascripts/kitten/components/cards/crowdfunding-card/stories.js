@@ -5,8 +5,6 @@ import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { CrowdfundingCard as CrowdfundingCardComponent } from './index'
-import { CrowdfundingCardWidget as CrowdfundingCardWidgetComponent } from './widget'
-import { KissKissBankBankIcon } from '../../../components/icons/kisskissbankbank-icon'
 import { Text } from '../../../components/typography/text'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { STATE_CHOICES } from './stories/project-state'
@@ -25,27 +23,6 @@ const StoryContainer = ({ children }) => (
   </Container>
 )
 
-const StyledWidgetText = styled(Text)`
-  display: flex;
-  align-items: center;
-`
-
-const StyledWidgetLogo = styled(KissKissBankBankIcon)`
-  margin-left: ${pxToRem(5)};
-`
-
-const WidgetContainerState = () => (
-  <StyledWidgetText
-    size="micro"
-    lineHeight="normal"
-    weight="regular"
-    color="background1"
-  >
-    Sur
-    <StyledWidgetLogo width="80" height="18" />
-  </StyledWidgetText>
-)
-
 export default {
   component: CrowdfundingCard,
   title: 'Cards/CrowdfundingCard',
@@ -60,6 +37,7 @@ export const CrowdfundingCard = () => (
   <StoryContainer>
     <CrowdfundingCardComponent
       href={text('Link', '#')}
+      imageProps={{ alt: '', src: text('Image url', '/kitten.jpg') }}
       ownerTitle={text('Owner title', 'Owner title')}
       ownerDescription={text('Owner description', 'Owner description')}
       loading={boolean('Loading', false)}
@@ -130,29 +108,6 @@ export const CrowdfundingCardWithVideo = () => (
   </StoryContainer>
 )
 
-export const CrowdfundingCardWidget = () => (
-  <StoryContainer>
-    <CrowdfundingCardWidgetComponent
-      href={text('Link', '#')}
-      ownerTitle={text('Owner title', 'Owner title')}
-      ownerDescription={text('Owner description', 'Owner description')}
-      loading={boolean('Loading', false)}
-      stretch={boolean('Stretch', false)}
-      title={text(
-        'Title',
-        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit…',
-      )}
-      dayCounter={text('Day counter', '27 jours restants')}
-      subtitle={text(
-        'Subtitle',
-        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma Aenean massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
-      )}
-      buttonText={text('Button text', 'Contribuer')}
-      state={<WidgetContainerState />}
-    />
-  </StoryContainer>
-)
-
 const options = Object.keys(STATE_CHOICES)
 
 const StyledText = styled(Text)`
@@ -185,14 +140,15 @@ export const LendopolisCrowdfundingCard = () => {
     <StoryContainer>
       <CrowdfundingCardComponent
         href={text('Link', '#')}
+        imageProps={{ alt: '', src: text('Image url', '/kitten.jpg') }}
         ownerTitle={text('Owner title', 'Urbasolar Energy Ocean Indien 6')}
         loading={boolean('Loading', false)}
         stretch={boolean('Stretch', false)}
         cardTitle={text('Title', 'Centrale solaire Urbasolar Le Port')}
         cardSubTitle={text('SubTitle', 'Obligation convertible')}
-        info1={text('Info1', <Info label="maturité" text="48 mois" />)}
-        info2={text('Info2', <Info label="sur 157 000 €" text="157 000 €" />)}
-        info3={text('Info3', <Info label="Taux d'intérêt" text="5,0%" />)}
+        info1={<Info label="maturité" text="48 mois" />}
+        info2={<Info label="sur 157 000 €" text="157 000 €" />}
+        info3={<Info label="Taux d'intérêt" text="5,0%" />}
         progress={number('Progress', 42)}
         widgetState={STATE_CHOICES[widgetState]}
         additionalInfo={'Collecte réservée aux départements : 92, 34, 12, 82'}

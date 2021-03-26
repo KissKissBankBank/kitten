@@ -8,8 +8,7 @@ export var Prev = function Prev(_ref) {
     as: "button",
     className: "k-u-reset-button"
   }, /*#__PURE__*/React.createElement(StyledArrowIcon, {
-    version: "solid",
     direction: "left",
-    fill: "#fff"
+    color: "#fff"
   }), /*#__PURE__*/React.createElement(StyledPrevText, null, children));
 };

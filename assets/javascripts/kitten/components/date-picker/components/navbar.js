@@ -51,14 +51,14 @@ export class Navbar extends Component {
           onClick={() => onPreviousClick()}
           left
         >
-          <ArrowIcon version="solid" color={iconColor} direction="left" />
+          <ArrowIcon color={iconColor} direction="left" />
         </StyledArrowIcon>
         <StyledArrowIcon
           aria-label={labels.nextMonth}
           onClick={() => onNextClick()}
           right
         >
-          <ArrowIcon version="solid" color={iconColor} />
+          <ArrowIcon color={iconColor} />
         </StyledArrowIcon>
       </div>
     )

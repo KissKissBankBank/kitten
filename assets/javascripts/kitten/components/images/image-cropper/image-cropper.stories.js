@@ -7,9 +7,17 @@ export default {
 }
 
 export const Default = args => {
-  return <ImageCropper {...args} />
+  return (
+    <div className="k-u-margin-vertical-quadruple k-u-margin-horizontal-quadruple">
+      <ImageCropper {...args} />
+    </div>
+  )
 }
 
 export const WithImage = () => {
-  return <ImageCropper imageSrc="/steven.jpg" fileName="Steven" />
+  return (
+    <div className="k-u-margin-vertical-quadruple k-u-margin-horizontal-quadruple">
+      <ImageCropper imageSrc="/kitten.jpg" fileName="Steven" />
+    </div>
+  )
 }

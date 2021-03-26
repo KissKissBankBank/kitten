@@ -1,21 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ArrowIcon /> by default (deprecated) matches the snapshot 1`] = `
-<svg
-  className="k-ArrowIcon k-ArrowIcon--right"
-  height="5.64"
-  viewBox="0 0 6 6"
-  width="8.48"
-  xmlns="http://www.w3.org/2000/svg"
->
-  
-  <path
-    d="M6 0H0v6h2V2h4z"
-  />
-</svg>
-`;
-
-exports[`<ArrowIcon /> with the version prop by default matches the snapshot 1`] = `
+exports[`<ArrowIcon /> default props matches the snapshot 1`] = `
 <svg
   className=""
   fill="#222"
@@ -36,7 +21,7 @@ exports[`<ArrowIcon /> with the version prop by default matches the snapshot 1`]
 </svg>
 `;
 
-exports[`<ArrowIcon /> with the version prop when disabled matches the snapshot 1`] = `
+exports[`<ArrowIcon /> when disabled matches the snapshot 1`] = `
 <svg
   className=""
   fill="#fff"
@@ -57,7 +42,7 @@ exports[`<ArrowIcon /> with the version prop when disabled matches the snapshot 
 </svg>
 `;
 
-exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to \`bottom\` matches the snapshot 1`] = `
+exports[`<ArrowIcon /> with the prop \`direction\` set to \`bottom\` matches the snapshot 1`] = `
 <svg
   className=""
   fill="#222"
@@ -78,7 +63,7 @@ exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to 
 </svg>
 `;
 
-exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to \`left\` matches the snapshot 1`] = `
+exports[`<ArrowIcon /> with the prop \`direction\` set to \`left\` matches the snapshot 1`] = `
 <svg
   className=""
   fill="#222"
@@ -99,7 +84,7 @@ exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to 
 </svg>
 `;
 
-exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to \`right\` matches the snapshot 1`] = `
+exports[`<ArrowIcon /> with the prop \`direction\` set to \`right\` matches the snapshot 1`] = `
 <svg
   className=""
   fill="#222"

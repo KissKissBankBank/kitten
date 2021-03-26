@@ -77,9 +77,10 @@ const StyledInput = styled.input`
         --input-padding-horizontal: ${pxToRem(30)};
         border-radius: ${pxToRem(8)};
         font-size: ${stepToRem(0)};
-  
+
         /* IE11 */
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        @media screen and (-ms-high-contrast: active),
+          (-ms-high-contrast: none) {
           padding: ${pxToRem(10)} ${pxToRem(30)};
         }
       }
@@ -122,6 +123,12 @@ const StyledInput = styled.input`
     border-color: ${COLORS.line2};
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
+  }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary4};
   }
 
   // DIGITS
@@ -230,11 +237,7 @@ export class TextInput extends PureComponent {
     tag: PropTypes.string,
     valid: PropTypes.bool,
     error: PropTypes.bool,
-    tiny: PropTypes.bool,
-    regular: PropTypes.bool,
-    big: PropTypes.bool,
-    huge: PropTypes.bool,
-    giant: PropTypes.bool,
+    size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
     center: PropTypes.bool,
     disabled: PropTypes.bool,
     name: PropTypes.string,
@@ -246,11 +249,7 @@ export class TextInput extends PureComponent {
     tag: 'input', // or 'textarea'
     valid: false,
     error: false,
-    tiny: false,
-    regular: true,
-    big: false,
-    huge: false,
-    giant: false,
+    size: 'regular',
     center: false,
     disabled: false,
     name: 'text',
@@ -265,11 +264,7 @@ export class TextInput extends PureComponent {
       disabled,
       name,
       digits,
-      tiny,
-      regular,
-      big,
-      huge,
-      giant,
+      size,
       center,
       tag,
       variant,
@@ -326,15 +321,11 @@ export class TextInput extends PureComponent {
             className,
             digitsClass,
             `k-Form-TextInput--${variant}`,
+            `k-Form-TextInput--${size}`,
             {
               'k-Form-TextInput--valid': valid,
               'k-Form-TextInput--error': error,
               'k-Form-TextInput--disabled': disabled,
-              'k-Form-TextInput--tiny': tiny,
-              'k-Form-TextInput--regular': regular,
-              'k-Form-TextInput--big': big,
-              'k-Form-TextInput--huge': huge,
-              'k-Form-TextInput--giant': giant,
               'k-Form-TextInput--alignCenter': center,
             },
           )}

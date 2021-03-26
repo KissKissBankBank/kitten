@@ -2,8 +2,24 @@
 
 exports[`<Title /> by default matches with snapshot 1`] = `
 <h1
-  className="sc-bdVaJa duRKpN"
+  className="sc-bdVaJa cWWsKm k-Title"
+  style={
+    Object {
+      "--Title-css-color": null,
+    }
+  }
+/>
+`;
+
+exports[`<Title /> with props matches with snapshot 1`] = `
+<h3
+  className="sc-bdVaJa dfDOea k-Title k-Title--noMargin k-Title--italic"
+  style={
+    Object {
+      "--Title-css-color": "#555",
+    }
+  }
 >
   Lorem ipsum dolor sit amet…
-</h1>
+</h3>
 `;

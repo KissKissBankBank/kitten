@@ -2,6 +2,9 @@ const path = require('path')
 const kittenPaths = require('../src/config/paths')
 
 module.exports = {
+  core: {
+    builder: 'webpack5',
+  },
   webpackFinal: async config => {
     let alteredConfig = {
       ...config,
@@ -13,19 +16,12 @@ module.exports = {
           kitten: path.join(__dirname, '../assets/javascripts/kitten'),
           icons: path.join(__dirname, '../assets/images/icons'),
         },
+        fallback: {
+          crypto: require.resolve('crypto-browserify'),
+          stream: require.resolve('stream-browserify'),
+        },
       },
     }
-    // alteredConfig.module.rules.push({
-    //   test: /\.(svg|png|jpe?g)$/,
-    //   use: [
-    //     {
-    //       loader: 'file-loader',
-    //       options: {
-    //         name: 'images/[name].[ext]',
-    //       },
-    //     },
-    //   ],
-    // })
     alteredConfig.module.rules.push({
       test: /\.scss$/,
       resolve: {
@@ -37,7 +33,9 @@ module.exports = {
         {
           loader: 'sass-loader',
           options: {
-            includePaths: kittenPaths.getScssPaths(),
+            sassOptions: {
+              includePaths: kittenPaths.getScssPaths(),
+            },
           },
         },
       ],

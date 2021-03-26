@@ -57,7 +57,7 @@ var SocialLinks = function SocialLinks(_ref2) {
       key: link.name,
       "aria-label": link.name,
       href: link.href,
-      modifier: link.name,
+      modifier: "social_".concat(link.name),
       size: "tiny",
       target: "_blank",
       rel: "noopener",

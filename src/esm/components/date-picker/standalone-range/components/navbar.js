@@ -6,12 +6,12 @@ import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import { ArrowIcon } from '../../../../components/icons/arrow-icon';
-import { Button } from '../../../../components/buttons/button/button';
+import { Button } from '../../../../components/buttons/button';
 import { pxToRem } from '../../../../helpers/utils/typography';
 import { Text } from '../../../../components/typography/text';
 var StyledText = styled(Text).withConfig({
@@ -65,7 +65,6 @@ export var Navbar = /*#__PURE__*/function (_PureComponent) {
         },
         icon: true
       }, /*#__PURE__*/React.createElement(ArrowIcon, {
-        version: "solid",
         fill: iconColor,
         direction: "left",
         width: "8",
@@ -77,7 +76,6 @@ export var Navbar = /*#__PURE__*/function (_PureComponent) {
         },
         icon: true
       }, /*#__PURE__*/React.createElement(ArrowIcon, {
-        version: "solid",
         fill: iconColor,
         direction: "right",
         width: "8",

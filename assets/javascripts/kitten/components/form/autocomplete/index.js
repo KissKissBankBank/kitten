@@ -7,7 +7,7 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
 import slugify from 'slugify'
-import { Loader } from '../../loaders/loader'
+import { Loader } from '../../atoms/loader'
 
 const itemHeight = 38
 const maxItemsVisibled = 3
@@ -43,10 +43,16 @@ const Input = styled.input`
     color: ${COLORS.font2};
   }
 
-  :focus {
+  &:focus {
     border-color: ${COLORS.line2};
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
+  }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary4};
   }
 
   ::-ms-clear {
@@ -178,6 +184,12 @@ const Item = styled.li`
   :focus {
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
+  }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary4};
   }
 
   &[aria-selected='true'] {

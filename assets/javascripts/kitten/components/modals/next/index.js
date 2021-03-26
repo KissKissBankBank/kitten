@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import ReactModal from 'react-modal'
 import { CloseButton } from '../../../components/buttons/close-button'
-import { Button } from '../../../components/buttons/button/button'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Button } from '../../../components/buttons/button'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 import { Text } from '../../../components/typography/text'
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -166,15 +166,15 @@ const GlobalStyle = createGlobalStyle`
 
   .k-ModalNext__closeButton--fullSize {
     position: absolute;
-    left: ${pxToRem(20)}
-    top: ${pxToRem(12)}
+    left: ${pxToRem(20)};
+    top: ${pxToRem(12)};
   }
 `
 
 const ModalTitle = ({ children }) => (
   <Title
     modifier="quaternary"
-    margin={false}
+    noMargin
     tag="p"
     className="k-u-margin-bottom-singleHalf--important k-u-align-center"
   >
@@ -184,9 +184,9 @@ const ModalTitle = ({ children }) => (
 
 const ModalParagraph = ({ children, withoutMargin, className, align }) => (
   <StyledParagraph
-    modifier="quaternary"
+    modifier="tertiary"
     style={{ textAlign: align }}
-    margin={false}
+    noMargin
     tag="p"
     className={classNames('k-Modal__paragraph', className, {
       'k-u-margin-bottom-triple': !withoutMargin,
@@ -285,8 +285,7 @@ const InnerModal = ({
   modalProps,
   hasCloseButton,
   maxWidth,
-  big,
-  huge,
+  size,
   isOpen,
   zIndex,
   fullSize,
@@ -294,7 +293,7 @@ const InnerModal = ({
   ...others
 }) => {
   const [{ show }, dispatch] = useContext(ModalContext)
-  const colsOnDesktop = huge ? 10 : big ? 8 : 6
+  const colsOnDesktop = size === 'huge' ? 10 : size === 'big' ? 8 : 6
   const close = () => {
     dispatch(updateState(false))
     if (onClose) {
@@ -411,8 +410,7 @@ Modal.propTypes = {
   fullSize: PropTypes.bool,
   modalProps: PropTypes.object,
   hasCloseButton: PropTypes.bool,
-  big: PropTypes.bool,
-  huge: PropTypes.bool,
+  size: PropTypes.oneOf(['regular', 'big', 'huge']),
   isOpen: PropTypes.bool,
   zIndex: PropTypes.number,
   fullSizeTitle: PropTypes.string,
@@ -426,8 +424,7 @@ Modal.defaultProps = {
   fullSize: false,
   modalProps: {},
   hasCloseButton: true,
-  big: false,
-  huge: false,
+  size: 'regular',
   isOpen: false,
   zIndex: 110,
   fullSizeTitle: '',

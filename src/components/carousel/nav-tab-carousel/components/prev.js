@@ -19,9 +19,8 @@ var Prev = function Prev(_ref) {
     as: "button",
     className: "k-u-reset-button"
   }, /*#__PURE__*/_react.default.createElement(_styledComponents.StyledArrowIcon, {
-    version: "solid",
     direction: "left",
-    fill: "#fff"
+    color: "#fff"
   }), /*#__PURE__*/_react.default.createElement(_styledComponents.StyledPrevText, null, children));
 };
 

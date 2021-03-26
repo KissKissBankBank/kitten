@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { ArrowIcon } from '../../../icons/arrow-icon';
-import { Button } from '../../../../components/buttons/button/button';
+import { Button } from '../../../../components/buttons/button';
 export var Item = function Item(_ref) {
   var children = _ref.children,
       external = _ref.external,
@@ -34,7 +34,6 @@ export var Item = function Item(_ref) {
     "aria-current": isSelected ? 'page' : null
   }), children, external && /*#__PURE__*/React.createElement(ArrowIcon, {
     className: "k-HeaderMenu__item__arrow headerMenuArrowIcon",
-    version: "solid",
     direction: "right"
   })));
 };

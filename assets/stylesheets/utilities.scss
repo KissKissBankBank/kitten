@@ -22,7 +22,6 @@ $k-typography: k-typography-definition((
 
 // Include all utilities.
 @include k-utilities-visually-hidden;
-@include k-utilities-blockAlign;
 @include k-utilities-align-self;
 @include k-utilities-background-color;
 @include k-utilities-border;

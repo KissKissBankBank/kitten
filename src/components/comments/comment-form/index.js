@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -43,39 +43,11 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _typography = require("../../../helpers/utils/typography");
 
+var _templateObject, _templateObject2, _templateObject3;
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _templateObject3() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n      border-right-color: ", ";\n    "]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n      border-color: ", ";\n      color: ", ";\n    "]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n      border-color: ", ";\n      color: ", ";\n      background-color: ", ";\n    "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 var StyledGrid = _styledComponents.default.div.withConfig({
   displayName: "comment-form__StyledGrid",
@@ -95,12 +67,12 @@ var StyledInput = _styledComponents.default.div.withConfig({
 var StyledTextarea = _styledComponents.default.textarea.withConfig({
   displayName: "comment-form__StyledTextarea",
   componentId: "sc-1yidca9-3"
-})(["color:", ";", ";width:100%;overflow-y:hidden;resize:none;box-sizing:border-box;border-width:", ";border-style:solid;border-color:", ";color:", ";padding:", ";font-size:", ";@media (min-width:", "px){font-size:", ";}&:focus{outline:", " solid ", ";outline-offset:", ";border-color:", ";color:", ";}::placeholder{color:", ";}", " ", ""], _colorsConfig.default.font2, _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, _colorsConfig.default.font1, (0, _typography.pxToRem)(30), (0, _typography.stepToRem)(-1), _screenConfig.ScreenConfig.S.min, (0, _typography.stepToRem)(0), _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.line2, _colorsConfig.default.font1, _colorsConfig.default.font2, function (_ref) {
+})(["color:", ";", ";width:100%;overflow-y:hidden;resize:none;box-sizing:border-box;border-width:", ";border-style:solid;border-color:", ";color:", ";padding:", ";font-size:", ";@media (min-width:", "px){font-size:", ";}&:focus{outline:", " solid ", ";outline-offset:", ";border-color:", ";color:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}::placeholder{color:", ";}", " ", ""], _colorsConfig.default.font2, _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, _colorsConfig.default.font1, (0, _typography.pxToRem)(30), (0, _typography.stepToRem)(-1), _screenConfig.ScreenConfig.S.min, (0, _typography.stepToRem)(0), _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.line2, _colorsConfig.default.font1, _colorsConfig.default.primary4, _colorsConfig.default.font2, function (_ref) {
   var isDisabled = _ref.isDisabled;
-  return isDisabled && css(_templateObject(), _colorsConfig.default.line1, _colorsConfig.default.font2, _colorsConfig.default.line1);
+  return isDisabled && css(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n      border-color: ", ";\n      color: ", ";\n      background-color: ", ";\n    "])), _colorsConfig.default.line1, _colorsConfig.default.font2, _colorsConfig.default.line1);
 }, function (_ref2) {
   var error = _ref2.error;
-  return error && css(_templateObject2(), _colorsConfig.default.error3, _colorsConfig.default.error3);
+  return error && css(_templateObject2 || (_templateObject2 = (0, _taggedTemplateLiteral2.default)(["\n      border-color: ", ";\n      color: ", ";\n    "])), _colorsConfig.default.error3, _colorsConfig.default.error3);
 });
 
 var StyledArrow = _styledComponents.default.div.withConfig({
@@ -108,7 +80,7 @@ var StyledArrow = _styledComponents.default.div.withConfig({
   componentId: "sc-1yidca9-4"
 })(["position:absolute;top:", ";display:block;width:0;height:0;border-width:", ";border-style:solid;border-color:transparent;border-right-color:", ";left:-", ";@media (min-width:", "px){top:", ";}", ":focus + &{border-right-color:", ";}", ""], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(10), _colorsConfig.default.line1, (0, _typography.pxToRem)(20), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(35), StyledTextarea, _colorsConfig.default.line2, function (_ref3) {
   var error = _ref3.error;
-  return error && css(_templateObject3(), _colorsConfig.default.error3);
+  return error && css(_templateObject3 || (_templateObject3 = (0, _taggedTemplateLiteral2.default)(["\n      border-right-color: ", ";\n    "])), _colorsConfig.default.error3);
 });
 
 var StyledArrowBefore = _styledComponents.default.span.withConfig({

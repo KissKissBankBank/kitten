@@ -19,7 +19,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _arrowIcon = require("../../../icons/arrow-icon");
 
-var _button = require("../../../../components/buttons/button/button");
+var _button = require("../../../../components/buttons/button");
 
 var Item = function Item(_ref) {
   var children = _ref.children,
@@ -49,7 +49,6 @@ var Item = function Item(_ref) {
     "aria-current": isSelected ? 'page' : null
   }), children, external && /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
     className: "k-HeaderMenu__item__arrow headerMenuArrowIcon",
-    version: "solid",
     direction: "right"
   })));
 };

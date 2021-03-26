@@ -35,9 +35,9 @@ describe('<TextInputWithLimit />', () => {
     })
   })
 
-  describe('with `tiny` prop', () => {
+  describe('with `size` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithLimit tiny />).toJSON()
+      component = renderer.create(<TextInputWithLimit size="tiny" />).toJSON()
     })
 
     it('matches with snapshot', () => {

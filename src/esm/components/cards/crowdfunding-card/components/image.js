@@ -30,14 +30,14 @@ var Image = function Image(_ref) {
     } : null
   }, !loading && videoSources.length == 0 && /*#__PURE__*/React.createElement("img", _extends({}, otherImageProps, {
     alt: alt || '',
-    className: classNames('k-Card__image', 'k-CrowdfundingCard__image__image', otherImageProps.className),
+    className: classNames('k-CrowdfundingCard__image__image', otherImageProps.className),
     style: backgroundColor ? _extends({
       backgroundColor: backgroundColor
     }, otherImageProps.style) : otherImageProps.style
   })), !loading && videoSources.length > 0 && /*#__PURE__*/React.createElement(GifVideo, _extends({
     poster: otherImageProps.src
   }, videoProps, {
-    className: classNames('k-Card__image', 'k-CrowdfundingCard__image__image', videoProps.className),
+    className: classNames('k-CrowdfundingCard__image__image', videoProps.className),
     style: backgroundColor ? _extends({
       backgroundColor: backgroundColor
     }, videoProps.style) : videoProps.style

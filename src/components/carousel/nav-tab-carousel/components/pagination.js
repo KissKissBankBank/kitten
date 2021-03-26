@@ -24,11 +24,11 @@ var _range = require("./../../../../helpers/utils/range");
 var BulletPointStyles = _styledComponents.default.div.withConfig({
   displayName: "pagination__BulletPointStyles",
   componentId: "sc-1thdyq2-0"
-})(["min-width:", ";min-height:", ";margin-left:", ";margin-right:", ";background-color:", ";", " &:focus{outline:", " solid ", ";outline-offset:", ";}"], (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), _colorsConfig.default.background1, function (_ref) {
+})(["min-width:", ";min-height:", ";margin-left:", ";margin-right:", ";background-color:", ";", " &:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}"], (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), _colorsConfig.default.background1, function (_ref) {
   var isSelected = _ref.isSelected,
       activeColor = _ref.activeColor;
   return isSelected && (0, _styledComponents.css)(["background-color:", ";"], activeColor);
-}, _colorsConfig.default.primary3, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2));
+}, _colorsConfig.default.primary3, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary3);
 
 var PaginationStyles = _styledComponents.default.div.withConfig({
   displayName: "pagination__PaginationStyles",

@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 import { Text } from '../../../components/typography/text'
 import classNames from 'classnames'
 import { UploadIcon } from '../../../components/icons/upload-icon'
 import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
 import { CrossCircleIcon } from '../../../components/icons/cross-circle-icon'
 import { ClockCircleIcon } from '../../../components/icons/clock-circle-icon'
-import { Loader } from '../../../components/loaders/loader'
+import { Loader } from '../../../components/atoms/loader'
 import { DocumentIconEmpty } from '../../../components/icons/document-icon-empty'
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
 import { ScreenConfig } from '../../../constants/screen-config'
@@ -30,6 +30,12 @@ const StyledDocumentUploader = styled.div`
   input[type='file']:focus + label {
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
+  }
+  input[type='file']:focus:not(:focus-visible) + label {
+    outline-color: transparent;
+  }
+  input[type='file']:focus-visible + label {
+    outline-color: ${COLORS.primary4};
   }
 
   input[type='file']:focus,
@@ -134,6 +140,12 @@ const StyledDocumentDisplay = styled.div`
     &:focus {
       outline: ${COLORS.primary4} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
     }
 
     &:active {

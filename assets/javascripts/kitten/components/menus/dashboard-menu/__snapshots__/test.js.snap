@@ -32,6 +32,16 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0 .k-DashboardMenu__expandable__title:focus:not(:focus-visible),
+.c0 .k-DashboardMenu__item:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0 .k-DashboardMenu__expandable__title:focus-visible,
+.c0 .k-DashboardMenu__item:focus-visible {
+  outline-color: #0496cc;
+}
+
 .c0 .k-DashboardMenu__list,
 .c0 .k-DashboardMenu__expandable__list {
   margin: 0;
@@ -46,6 +56,14 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__expandable summary:focus {
   outline: #0496cc solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0 .k-DashboardMenu__expandable summary:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0 .k-DashboardMenu__expandable summary:focus-visible {
+  outline-color: #0496cc;
 }
 
 .c0 .k-DashboardMenu__expandable summary::-webkit-details-marker {
@@ -73,7 +91,10 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.625rem;
+}
+
+.c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__list .k-DashboardMenu__itemWrapper:not(:last-child) {
+  margin-bottom: 0.625rem;
 }
 
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,
@@ -87,9 +108,13 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0.625rem;
   padding: 0 0.625rem;
   border-radius: 0.375rem;
+}
+
+.c0 .k-DashboardMenu__iconWrapper,
+.c0 .k-DashboardMenu__expandable__title__text {
+  margin-right: 0.625rem;
 }
 
 .c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,

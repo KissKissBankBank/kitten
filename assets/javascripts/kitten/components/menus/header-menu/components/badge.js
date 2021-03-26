@@ -1,35 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
-import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
+import { Badge as BadgeComponent } from '../../../../components/atoms/badge'
 import COLORS from '../../../../constants/colors-config'
 
-export const Badge = ({
-  children,
-  className,
-  backgroundColor,
-  a11yText,
-  ...props
-}) => {
-  const badgeClassNames = classNames(
-    'k-Badge',
-    'k-Badge--spaced',
-    'k-Badge--no-border',
-    className,
-  )
-
-  return (
-    <span
-      {...props}
-      className={badgeClassNames}
-      aria-hidden="true"
-      style={{ backgroundColor }}
-    >
-      {children}
-      {a11yText && <VisuallyHidden>{a11yText}</VisuallyHidden>}
-    </span>
-  )
-}
+export const Badge = ({ backgroundColor, ...props }) => (
+  <BadgeComponent color={backgroundColor} spaced {...props} />
+)
 
 Badge.propTypes = {
   backgroundColor: PropTypes.string,

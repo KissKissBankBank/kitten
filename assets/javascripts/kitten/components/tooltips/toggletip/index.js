@@ -163,6 +163,14 @@ export const Toggletip = ({
   const [bubbleRightLimit, setBubbleRightLimit] = useState(false)
   const actionElement = useRef(null)
 
+  const {
+    bubbleClassName,
+    bubbleZIndex,
+    bubbleColor,
+    bubbleStyle,
+    ...otherBubbleProps
+  } = bubbleProps
+
   useEffect(() => {
     if (isHover) {
       setOpen(true)
@@ -284,13 +292,12 @@ export const Toggletip = ({
       <span role="status">
         {isOpen && (
           <span
-            {...bubbleProps}
             className={classNames(
               'k-Toggletip__bubble',
               'k-u-weight-light',
               'k-u-size-tiny',
               'k-u-line-height-1-3',
-              bubbleProps.className,
+              bubbleClassName,
               {
                 'k-Toggletip__bubble--left': bubbleOnLeftSide,
                 'k-Toggletip__bubble--lowTop': bubbleLowTop,
@@ -299,10 +306,11 @@ export const Toggletip = ({
               },
             )}
             style={{
-              '--toggletipBubble-zIndex': bubbleProps.zIndex || 1,
-              '--toggletipBubble-color': bubbleProps.color || null,
-              ...bubbleProps.style,
+              '--toggletipBubble-zIndex': bubbleZIndex || 1,
+              '--toggletipBubble-color': bubbleColor || null,
+              ...bubbleStyle,
             }}
+            {...otherBubbleProps}
           >
             {children}
           </span>

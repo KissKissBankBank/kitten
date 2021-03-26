@@ -33,7 +33,7 @@ var _reactTruncate = _interopRequireDefault(require("react-truncate"));
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 var TitleComponent = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TitleComponent, _PureComponent);
@@ -65,8 +65,8 @@ var TitleComponent = /*#__PURE__*/function (_PureComponent) {
         className: "k-CrowdfundingCard__title"
       }, !loading && /*#__PURE__*/_react.default.createElement(_title.Title, (0, _extends2.default)({
         tag: "p",
-        margin: false,
-        className: "k-Card__title k-CrowdfundingCard__title__title"
+        noMargin: true,
+        className: "k-CrowdfundingCard__title__title"
       }, titleProps), titleTruncate && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
         lines: 2,
         className: "k-CrowdfundingCard__noWrap k-u-hidden@s-down"

@@ -12,7 +12,7 @@ export const Prev = ({ children, hoverColor }) => {
       as="button"
       className="k-u-reset-button"
     >
-      <StyledArrowIcon version="solid" direction="left" fill="#fff" />
+      <StyledArrowIcon direction="left" color="#fff" />
       <StyledPrevText>{children}</StyledPrevText>
     </StyledLeftArrowContainer>
   )

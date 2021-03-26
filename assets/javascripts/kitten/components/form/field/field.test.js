@@ -4,7 +4,6 @@ import {
   FieldInputExample,
   FieldPasswordExample,
   FieldRadioButtonSetExample,
-  FieldSelectExample,
   FieldAutocompleteExample,
 } from './field.examples'
 
@@ -20,6 +19,7 @@ describe('<Field />', () => {
             label="Label"
             tooltip="Tooltip"
             tooltipId="tooltip"
+            tooltipProps={{ actionLabel: 'Learn more' }}
             placeholder="Placeholder…"
             tiny={false}
           />,
@@ -42,6 +42,7 @@ describe('<Field />', () => {
             label="Label"
             tooltip="Tooltip"
             tooltipId="tooltip"
+            tooltipProps={{ actionLabel: 'Learn more' }}
             placeholder="Placeholder…"
             error
             errorMessage="Error!"
@@ -65,6 +66,7 @@ describe('<Field />', () => {
             label="Label"
             tooltip="Tooltip"
             tooltipId="tooltip"
+            tooltipProps={{ actionLabel: 'Learn more' }}
             placeholder="Placeholder…"
           />,
         )
@@ -86,6 +88,7 @@ describe('<Field />', () => {
             label="Label"
             tooltip="Tooltip"
             tooltipId="tooltip"
+            tooltipProps={{ actionLabel: 'Learn more' }}
             placeholder="Placeholder…"
             error
             errorMessage="Error!"
@@ -121,30 +124,6 @@ describe('<Field />', () => {
                 text: 'Option C',
                 id: 'option-c',
               },
-            ]}
-          />,
-        )
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with <Field.Select />', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(
-          <FieldSelectExample
-            id="select"
-            tiny={false}
-            label="Label"
-            placeholder="Select…"
-            options={[
-              { value: 'a', label: 'Option A' },
-              { value: 'b', label: 'Option B' },
-              { value: 'c', label: 'Option C' },
             ]}
           />,
         )

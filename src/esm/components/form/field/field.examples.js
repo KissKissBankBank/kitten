@@ -4,6 +4,7 @@ import { Field } from '../field';
 var FieldBase = function FieldBase(_ref) {
   var tooltip = _ref.tooltip,
       tooltipId = _ref.tooltipId,
+      tooltipProps = _ref.tooltipProps,
       label = _ref.label,
       id = _ref.id,
       error = _ref.error,
@@ -14,6 +15,7 @@ var FieldBase = function FieldBase(_ref) {
       htmlFor: id
     },
     tooltip: tooltip,
+    tooltipProps: tooltipProps,
     tooltipId: tooltipId
   }, label), children, error && /*#__PURE__*/React.createElement(Field.ErrorMessage, null, errorMessage));
 };
@@ -23,6 +25,7 @@ export var FieldInputExample = function FieldInputExample(_ref2) {
       label = _ref2.label,
       tooltip = _ref2.tooltip,
       tooltipId = _ref2.tooltipId,
+      tooltipProps = _ref2.tooltipProps,
       placeholder = _ref2.placeholder,
       error = _ref2.error,
       errorMessage = _ref2.errorMessage,
@@ -33,6 +36,7 @@ export var FieldInputExample = function FieldInputExample(_ref2) {
     id: id,
     label: label,
     tooltip: tooltip,
+    tooltipProps: tooltipProps,
     tooltipId: tooltipId,
     error: error,
     errorMessage: errorMessage
@@ -51,6 +55,7 @@ export var FieldPasswordExample = function FieldPasswordExample(_ref3) {
       label = _ref3.label,
       tooltip = _ref3.tooltip,
       tooltipId = _ref3.tooltipId,
+      tooltipProps = _ref3.tooltipProps,
       placeholder = _ref3.placeholder,
       error = _ref3.error,
       errorMessage = _ref3.errorMessage,
@@ -59,6 +64,7 @@ export var FieldPasswordExample = function FieldPasswordExample(_ref3) {
     id: id,
     label: label,
     tooltip: tooltip,
+    tooltipProps: tooltipProps,
     tooltipId: tooltipId,
     error: error,
     errorMessage: errorMessage
@@ -77,6 +83,7 @@ export var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref
       label = _ref4.label,
       tooltip = _ref4.tooltip,
       tooltipId = _ref4.tooltipId,
+      tooltipProps = _ref4.tooltipProps,
       items = _ref4.items,
       error = _ref4.error,
       errorMessage = _ref4.errorMessage;
@@ -84,6 +91,7 @@ export var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref
     id: id,
     label: label,
     tooltip: tooltip,
+    tooltipProps: tooltipProps,
     tooltipId: tooltipId,
     error: error,
     errorMessage: errorMessage
@@ -93,44 +101,22 @@ export var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref
     error: error
   }));
 };
-export var FieldSelectExample = function FieldSelectExample(_ref5) {
+export var FieldAutocompleteExample = function FieldAutocompleteExample(_ref5) {
   var id = _ref5.id,
       label = _ref5.label,
       tooltip = _ref5.tooltip,
       tooltipId = _ref5.tooltipId,
+      tooltipProps = _ref5.tooltipProps,
       placeholder = _ref5.placeholder,
-      options = _ref5.options,
       error = _ref5.error,
-      errorMessage = _ref5.errorMessage;
+      errorMessage = _ref5.errorMessage,
+      items = _ref5.items,
+      tiny = _ref5.tiny;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,
     tooltip: tooltip,
-    tooltipId: tooltipId,
-    error: error,
-    errorMessage: errorMessage
-  }, /*#__PURE__*/React.createElement(Field.Select, {
-    id: id,
-    name: "select",
-    placeholder: placeholder,
-    options: options,
-    error: error
-  }));
-};
-export var FieldAutocompleteExample = function FieldAutocompleteExample(_ref6) {
-  var id = _ref6.id,
-      label = _ref6.label,
-      tooltip = _ref6.tooltip,
-      tooltipId = _ref6.tooltipId,
-      placeholder = _ref6.placeholder,
-      error = _ref6.error,
-      errorMessage = _ref6.errorMessage,
-      items = _ref6.items,
-      tiny = _ref6.tiny;
-  return /*#__PURE__*/React.createElement(FieldBase, {
-    id: id,
-    label: label,
-    tooltip: tooltip,
+    tooltipProps: tooltipProps,
     tooltipId: tooltipId,
     error: error,
     errorMessage: errorMessage

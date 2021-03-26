@@ -29,7 +29,7 @@ var _typography = require("../../../helpers/utils/typography");
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 var StyledArrowIcon = _styledComponents.default.div.withConfig({
   displayName: "navbar__StyledArrowIcon",
@@ -70,7 +70,6 @@ var Navbar = /*#__PURE__*/function (_Component) {
         },
         left: true
       }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-        version: "solid",
         color: iconColor,
         direction: "left"
       })), /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
@@ -80,7 +79,6 @@ var Navbar = /*#__PURE__*/function (_Component) {
         },
         right: true
       }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-        version: "solid",
         color: iconColor
       })));
     }

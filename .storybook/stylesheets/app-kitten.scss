@@ -1,12 +1,3 @@
-// Kitten library
-@import 'kitten';
-
-// Configuration
-@import 'kitten/config';
-
-// Components instanciation
-@import 'kitten/components';
-
 // Import all utilities
 @import '../../assets/stylesheets/utilities';
 
@@ -15,6 +6,7 @@
 // Custom styles for stories
 
 @import 'custom/flex';
+@import 'custom/background';
 
 // Custom styles for StoryBook iFrame.
 body, body.sb-show-main.sb-main-padded {

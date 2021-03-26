@@ -4,6 +4,707 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [3.0.0] - 2021-03-26
+
+Breaking changes:
+
+- Remove `StyleGuide` app.
+- Remove `Karl` stories & components.
+- Remove SCSS mixins.
+- Reorganize components.
+- Remove all `@kisskissbankbank/kitten/src/next` exports.
+- Remove all SASS component mixins, helpers, definitions and schemas that are not used.
+- Remove the following deprecated components:
+  - `ArticleCard`
+  - `Button` (`buttons/button`, replaced with `Button` (`buttons/button/button`))
+  - `ButtonImageWithText`
+  - `ButtonImageWithTextAndBadge`
+  - `CallToActionPopover`
+  - `Comment` from `form/comment` (replaced by `comments/comment`)
+  - `CommentAvatar` from `form/comment-avatar` (replaced by `comments/comment-avatar`)
+  - `CommentForm` from `form/comment-form` (replaced by `comments/comment-form`)
+  - `ContributionCard`
+  - `CrowdfundingCardWidget`
+  - `DeprecatedArrowIcon`
+  - `DonationCard`
+  - `Dropdown`
+  - `DropdownButton`
+  - `ExternalRichLink`
+  - `FormAmountAndCurrency`
+  - `FormPhoneNumber`
+  - `FormRow`
+  - `Header` (replaced by `HeaderNav`)
+  - `HeaderLogo` (replaced by `HeaderNav`)
+  - `HeaderTitles` (replaced by `HeaderNav`)
+  - `HeaderTour`
+  - `HorizontalNav`
+  - `ImageWithCaption`
+  - `LegoGrid`
+  - `LinkBox/deprecated`
+  - `LoanSimulator`
+  - `MarkdownPage`
+  - `NavList`
+  - `NavTabCarousel` (deprecated duplicate from `carousels/tab-bar-carousel`)
+  - `Paragraph` (replaced by `Next` `Paragraph`, see beta.14)
+  - `PhoneDropdown`
+  - `Popover`
+  - `ProjectCard`
+  - `ProjectCreatorCard`
+  - `ProjectSimilarCard`
+  - `QuestionMarkWithTooltip`
+  - `RewardCard` (replaced by `BackingCard`)
+  - `RewardCardLegacy`
+  - `RichTextInput`
+  - `Search`
+  - `SelectWithState` (replaced by `DropdownSelect`)
+  - `SimilarProjectsCard`
+  - `SimpleUploader`
+  - `Slider` (replaced by `RangeSlider`)
+  - `SliderBar`
+  - `SliderTooltip`
+  - `SliderWithTooltipAndPower`
+  - `StaticTooltip`
+  - `Switch` (replaced by `ToggleSwitch`)
+  - `TabBar`
+  - `TagList`
+  - `TextInputAndSelect`
+  - `TextInputWithUnitForm`
+  - `Tooltip`
+  - `TooltipNew`
+  - `Tour`
+  - `TourPopover`
+  - `TourStep`
+  - `Uploader`
+  - `UserMenu`
+- Remove the following deprecated HOCs:
+  - `card`
+  - `withTooltip`
+- Remove  default export for the following components:
+  - `Dropdown`
+  - `DropdownButton`
+  - `LinkBox`
+- Remove `sliderKeyDownHandler` helper.
+- Depreciate `Stepper` in favour of `Next` `Stepper`.
+- Replace `Paragraph` with `Next` `Paragraph` (see beta.14).
+- `ArrowIcon` now defaults to `solid` version.
+- Remove `k-u-blockAlign-*` utilities in favor of `k-u-align-self-*`.
+- Remplace prop `margin` with `noMargin` on the following components:
+  - `Paragraph`
+  - `Title`
+- Remove size props (`giant`, `huge`, `regular`, `big`, `tiny`) on the following components:
+  - `BulletList`
+  - `Button`
+  - `ModalNext`
+  - `TagButton`
+  - `TextInput`
+  - `TextInputWithUnit`
+- Remove unused props on `Dropdown`.
+
+Features:
+
+- Add `LongArrowIcon` component.
+- Add the following Logo components:
+  - `MaisonDeCrowdfundingLogo`
+  - `MicrodonLogo`
+  - `GoodeedLogo`
+  - `KkbbCoLogo`
+- Add missing components, helpers and constants to ESM exports.
+- Convert the following components to CSS-in-JS:
+  - `AvatarWithTextAndBadge`
+  - `Badge`
+  - `BulletList`
+  - `ButtonIcon`
+  - `ButtonImage`
+  - `ButtonQuestionMarkIcon`
+  - `CloseButton`
+  - `DevGrid`
+  - `FacebookButtonIcon`
+  - `FacebookButtonIconWords`
+  - `FormAction`
+  - `Grid`
+  - `HeaderNav`
+  - `IconBadge`
+  - `ImageCropper`
+  - `InformationBox`
+  - `InstagramButtonIcon`
+  - `Label`
+  - `Line`
+  - `Line`
+  - `LinkedinButtonIcon`,
+  - `LinkedinButtonIconWords`
+  - `LinkList`
+  - `Loader`
+  - `LoaderWithParagraph`
+  - `LocationInput`
+  - `PinterestButtonIcon`
+  - `ResponsiveIframeContainer`
+  - `Row`
+  - `SideGrid`
+  - `SideLayout`
+  - `SimpleCard`
+  - `Stepper`
+  - `StepperIcon*`
+  - `SupTitle`
+  - `Title`
+  - `TwitterButtonIcon`
+  - `TwitterButtonIconWords`
+  - `VerticalStroke`
+  - `YoutubeButtonIcon`
+- Update & refactor the following components:
+  - `Text`
+  - `Marger`
+- Add `onChange` to `ToggleSwitch` API.
+- Add `tooltipProps` prop to `Field/Label` component.
+- Add `StepperIcon` component with `state` prop.
+- Add `empty` prop to `IconBadge`.
+- Add `warning`, `neutral` and `none` values to `StatusWithBullet` `statusType` prop.
+- Add `size` and `weight` props to `StatusWithBullet`.
+- `statusMessage` prop is no longer required, you can now use `children` alternatively in `StatusWithBullet`.
+- Add `hoverable` prop to `AvatarWithTextAndBadge`.
+- Deprecate `textClassName` prop in favor of `className` on `AvatarWithTextAndBadge.Text`.
+- Add explicit utility class `k-u-pointer-events-none` to `k-utilities-event` mixin.
+- Add `size` prop to the following components:
+  - `AvatarWithTextAndBadge.Image`
+  - `BulletList`
+  - `Button`
+  - `ModalNext`
+  - `TagButton`
+  - `TextInput`
+  - `TextInputWithButton`
+  - `TextInputWithUnit`
+- Add `playerButtonSize` prop to `SimpleCard`.
+- Add `rounded` prop to Button component.
+- Add `social_facebook`, `social_twitter`, `social_linkedin`, `social_instagram`,
+  `social_youtube`, `social_pinterest` modifiers to Button component.
+- Add `InstagramButtonIconWords` component.
+- Add `type="button"` to Button by default.
+- Add `ModalNext` export for `modals/next`.
+- Add deprecation warning on `Modal` (`modals/modal`).
+- Add `loadingText` prop to `LocationInput`.
+
+Fixes:
+
+- Fix `InformationBox` style.
+- Fix gap bug on Safari for the following components:
+  - `BackingCard`
+  - `DashboardLayout.Flow`
+  - `DashboardLayout`
+  - `DashboardMenu`
+  - `ImageCropper`
+  - `Loader`
+  - `LoaderWithParagraph`
+- Add DOM check to `DevGrid`.
+- Add width to `StickyContainer` in `HeaderNav`.
+- Use wrapper and relative positioning for a `Badge` with `Icon` prop.
+- Fix Lodash imports on `DropdownPhoneSelect`.
+- Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
+- Revert default value for `Title` margin.
+- Fix console error in `Accordion` when closing pane.
+- Fix ellipsis for children of `AvaratWithTextAndBadge`.
+- Fix alignment on `HeaderNav` `UserMenuButton`.
+- Fix `GridCol` offset class for `0` value.
+- Fix dropdown list position on `LocationInput`.
+- Remove console message on `LocationInput`.
+- Limit focus outline display to keyboard navigation.
+- Fix `HorizontalTimeline` `className` property name.
+- Use `CustomEvent` instead of `event-emitter` on `Dropdown`.
+
+## [3.0.0-beta.25] - 2021-03-26
+
+Fix:
+
+- Fix item classes transmission on `BulletList`.
+
+## [3.0.0-beta.24] - 2021-03-25
+
+Fix:
+
+- Fix SCSS imports
+
+## [3.0.0-beta.23] - 2021-03-25
+
+Breaking change:
+
+- Remove all SASS component mixins, helpers, definitions and schemas that are not used.
+
+Feature:
+
+- Add `loadingText` prop to `LocationInput`.
+
+Fixes:
+
+- Fix dropdown list position on `LocationInput`.
+- Remove console message on `LocationInput`.
+
+## [3.0.0-beta.22] - 2021-03-25
+
+Rollback:
+
+- Version: `"react-cropper": "2.1.1"`
+
+## [3.0.0-beta.21] - 2021-03-25
+
+Breaking Change:
+
+- Remove `RichTextInput` component.
+
+Fix:
+
+- Limit focus outline display to keyboard navigation.
+
+Revert:
+
+- Fix: Replace `ResizeObserver` with `window.resize` on `Carousel`. (beta.20)
+
+## [3.0.0-beta.20] - 2021-03-23
+
+Breaking Change:
+
+- Breaking change: Remove all `@kisskissbankbank/kitten/src/next` exports.
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Button*`
+  - `k-LocationInput`
+  - `k-TagButton`
+- Remove size props (`giant`, `huge`, `regular`, `big`, `tiny`) on the following components:
+  - `Button`
+  - `ModalNext`
+  - `TagButton`
+- Remove the following deprecated components:
+  - `Button` (`buttons/button`, replaced with `Button` (`buttons/button/button`))
+  - `ButtonImageWithText`
+  - `ButtonImageWithTextAndBadge`
+
+Features:
+
+- Refactor the following components to CSS-in-JS:
+  - `ButtonIcon`
+  - `ButtonImage`
+  - `ButtonQuestionMarkIcon`
+  - `CloseButton`
+  - `FacebookButtonIcon`
+  - `FacebookButtonIconWords`
+  - `InstagramButtonIcon`
+  - `LinkedinButtonIcon`,
+  - `LinkedinButtonIconWords`
+  - `LocationInput`
+  - `PinterestButtonIcon`
+  - `TwitterButtonIcon`
+  - `TwitterButtonIconWords`
+  - `YoutubeButtonIcon`
+- Add `size` prop to the following components:
+  - `Button`
+  - `ModalNext`
+  - `TagButton`
+- Add `rounded` prop to Button component.
+- Add `social_facebook`, `social_twitter`, `social_linkedin`, `social_instagram`,
+  `social_youtube`, `social_pinterest` modifiers to Button component.
+- Add `InstagramButtonIconWords` component.
+- Add `type="button"` to Button by default.
+- Add `ModalNext` export for `modals/next`.
+- Add deprecation warning on `Modal` (`modals/modal`).
+
+Fixes:
+
+- Fix `HorizontalTimeline` `className` property name.
+- Replace `ResizeObserver` with `window.resize` on `Carousel`.
+- Use `CustomEvent` instead of `event-emitter` on `Dropdown`.
+
+## [3.0.0-beta.19] - 2021-03-19
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Dropdown`
+  - `k-PlatformSwitch`
+  - `k-UserMenu`
+- Move the following components:
+  - `Dropdown` -> `components/navigation/header-menu/components`
+  - `DropdownButton` -> `components/navigation/header-menu/components`
+- Remove default export for `Dropdown` and `DropdownButton`.
+- Remove unused props for `Dropdown`.
+
+Features:
+
+- Add the following Logo components:
+  - `MaisonDeCrowdfundingLogo`
+  - `MicrodonLogo`
+  - `GoodeedLogo`
+  - `KkbbCoLogo`
+- Add missing exports to ESM exports.
+
+## [3.0.0-beta.18] - 2021-03-18
+
+Fix:
+
+- Fix bug caused by adding `getScssPaths` in ESM export.
+
+## [3.0.0-beta.17] - 2021-03-18
+
+Breaking changes:
+
+- Delete the following deprecated components:
+  - `HorizontalNav`
+  - `MarkdownPage`
+  - `TabBar`
+- Delete the following deprecated SCSS mixins:
+  - `k-BulletList`
+  - `k-Card`
+  - `k-HorizontalNav`
+  - `k-Label`
+  - `k-TabBar`
+- Convert and move the following component to CSS-in-JS:
+  - `BulletList`
+- Remove size props (`giant`, `huge`, `regular`, `big`, `tiny`) on the following components:
+  - `BulletList`
+  - `TextInput`
+  - `TextInputWithUnit`
+- Delete `card` HOC.
+
+Features:
+
+- Add `size` prop to the following components:
+  - `BulletList`
+  - `TextInput`
+  - `TextInputWithButton`
+  - `TextInputWithUnit`
+- Refactor the following components to CSS-in-JS:
+  - `Label`
+  - `SimpleCard`
+- Add `playerButtonSize` prop to `SimpleCard`.
+- Add missing exports to ESM exports.
+
+## [3.0.0-beta.16] - 2021-03-15
+
+Breaking changes:
+
+- Delete the following deprecated components:
+  - `SelectWithState` (replaced by `DropdownSelect`)
+  - `FormAmountAndCurrency`
+  - `FormPhoneNumber`
+  - `TextInputAndSelect`
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-ResponsiveIframeContainer`
+  - `k-Select`
+
+Feature:
+
+- Refactor `ResponsiveIframeContainer` to CSS-in-JS
+
+Fixes:
+
+- Fix error in `Accordion` when closing pane.
+- Fix ellipsis for children of `AvaratWithTextAndBadge`.
+- Fix alignment on `HeaderNav` `UserMenuButton`.
+- Fix `GridCol` offset class for `0` value.
+
+## [3.0.0-beta.15] - 2021-03-12
+
+Fix:
+
+- Revert default value for `Title` margin.
+
+(Release `2.124.0`)
+
+## [3.0.0-beta.14] - 2021-03-12
+
+Breaking changes:
+
+- Delete the following deprecated components:
+  - `DonationCard`
+  - `TextInputWithUnitForm`
+- `Paragraph` is replaced with `Next` `Paragraph`.
+- Move `StatusWithBullet` to `atoms`.
+
+Features:
+
+- Refactor `AvatarWithTextAndBadge` to CSS-in-JS.
+- Add `LongArrowIcon` component.
+- Add `warning`, `neutral` and `none` values to `StatusWithBullet` `statusType` prop.
+- Add `size` and `weight` props to `StatusWithBullet`.
+- `statusMessage` prop is no longer required, you can now use `children` alternatively in `StatusWithBullet`.
+- Add `hoverable` prop to `AvatarWithTextAndBadge`.
+- Add `size` prop to `AvatarWithTextAndBadge.Image`.
+- Deprecate `textClassName` prop in favor of `className` on `AvatarWithTextAndBadge.Text`.
+- Add explicit utility class `k-u-pointer-events-none` to `k-utilities-event` mixin.
+
+Fix:
+
+- Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
+
+## [3.0.0-beta.13] - 2021-03-11
+
+- Revert back to `beta.11` changes, keep fix.
+
+## [3.0.0-beta.12] - 2021-03-11
+
+- Revert all `beta.11` changes, except:
+  - Delete buggy `useFlexGapCheck`.
+
+## [3.0.0-beta.11] - 2021-03-11
+
+Breaking changes:
+
+- Delete buggy `useFlexGapCheck`.
+- Delete the following deprecated components:
+  - `Paragraph` (replaced by `Next` `Paragraph`, see beta.14)
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Title`
+  - `k-Paragraph` (see beta.14)
+  - `k-Row`
+  - `k-Grid`
+  - `k-grid` and `k-grid-col*` helpers
+  - `k-Footer`
+  - `k-FormAction`
+  - `k-Line`
+- Remplace prop `margin` with `noMargin` on `Title`.
+- Remplace prop `margin` with `noMargin` on `Paragraph`.
+
+Features:
+
+- Convert the following component to CSS-in-JS:
+  - `Title`
+  - `Row`
+  - `Grid`
+  - `FormAction`
+  - `Line`
+
+## [3.0.0-beta.10] - 2021-03-10
+
+Fix:
+
+- Fix Lodash imports on `DropdownPhoneSelect`.
+
+(Release `2.123.3`)
+
+## [3.0.0-beta.9] - 2021-03-03
+
+(Release `2.123.2`)
+
+## [3.0.0-beta.8] - 2021-03-01
+
+Breaking changes:
+
+- Depreciate `Stepper` in favour of `Next` `Stepper`.
+- Delete the following deprecated SCSS mixins and styles:
+  - `k-Stepper`
+  - `k-Stepper__icon`
+- Convert `StepperIcon*` to CSS-in-JS and move to `atoms`.
+
+Features:
+
+- Convert deprecated `Stepper` to CSS-in-JS.
+- Add `StepperIcon` component with `state` prop.
+- Add `empty` prop to `IconBadge`.
+
+Fix:
+
+- Add DOM check to `useFlexGapCheck`.
+
+## [3.0.0-beta.7] - 2021-03-01
+
+Feature:
+
+- Add `AdaptableGridCol` to ESM export.
+
+Fixes:
+
+- Add DOM check to `DevGrid`.
+- Add width to `StickyContainer` in `HeaderNav`.
+- Use wrapper and relative positioning for a `Badge` with `Icon` prop.
+
+## [3.0.0-beta.6] - 2021-03-01
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-Line`
+  - `k-LinkBox`
+  - `k-SideGrid`
+  - `k-StaticTooltip`
+  - `k-Tooltip`
+  - `k-TooltipNew`
+  - `k-VerticalGrid`
+- Delete the following deprecated components:
+  - `LinkBox/deprecated`
+  - `QuestionMarkWithTooltip`
+  - `StaticTooltip`
+  - `Tooltip`
+  - `TooltipNew`
+- Remove `withTooltip` HOC.
+- Remove `LinkBox` default export.
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+  - `Line`
+  - `SideGrid`
+  - `SideLayout`
+- Make `Marger` a function instead of a React.Component.
+- Add `tooltipProps` prop to `Field/Label` component.
+- Add `useFlexGapCheck` hook for flexbox `gap` feature detection.
+
+Fixes:
+
+- Fix `InformationBox` style.
+- Fix gap bug on Safari for the following components:
+  - `BackingCard`
+  - `DashboardLayout.Flow`
+  - `DashboardLayout`
+  - `DashboardMenu`
+  - `ImageCropper`
+  - `Loader`
+  - `LoaderWithParagraph`
+
+## [3.0.0-beta.5] - 2021-02-25
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-Cropper`
+  - `k-DevBreakpoints`
+  - `k-DevGrid`
+  - `k-Loader`
+  - `k-LoaderWithParagraph`
+- Convert and move the following components to CSS-in-JS:
+  - `Loader`
+  - `LoaderWithParagraph`
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+
+  - `DevGrid`
+  - `ImageCropper`
+
+- Breaking change: convert `LocationInput` to CSS-in-JS.
+- Breaking change: remove `k-LocationInput` mixin.
+
+## [3.0.0-beta.4] - 2021-02-22
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-Badge`
+  - `k-Header`
+  - `k-IconBadge`
+  - `k-ImageWithCaption`
+  - `k-InformationBox`
+  - `k-PhoneDropdown`
+  - `k-Separator`
+  - `k-separatorBase`
+  - `k-VerticalSeparator`
+  - `k-VerticalStroke`
+- Delete the following deprecated components:
+  - `Comment` from `form/comment`
+    (replaced by `comments/comment`)
+  - `CommentAvatar` from `form/comment-avatar`
+    (replaced by `comments/comment-avatar`)
+  - `CommentForm` from `form/comment-form`
+    (replaced by `comments/comment-form`)
+  - `Dropdown`
+  - `DropdownButton`
+  - `Header` (replaced by `HeaderNav`)
+  - `HeaderLogo` (replaced by `HeaderNav`)
+  - `HeaderTitles` (replaced by `HeaderNav`)
+  - `ImageWithCaption`
+  - `NavList`
+  - `PhoneDropdown`
+  - `Switch` (replaced by `ToggleSwitch`)
+  - `UserMenu`
+- Convert and move the following components to CSS-in-JS:
+  - `Badge`
+  - `IconBadge`
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+  - `InformationBox`
+  - `VerticalStroke`
+- Add `onChange` to `ToggleSwitch` API.
+
+## [3.0.0-beta.3] - 2021-02-19
+
+Breaking changes:
+
+- Delete the following deprecated SCSS mixins:
+  - `k-FormRow`
+  - `k-HeaderNav`
+  - `k-LinkList`
+  - `k-LoanSimulator`
+  - `k-SearchInput`
+  - `k-SimpleUploader`
+  - `k-Slider`
+  - `k-SliderTooltip`
+  - `k-SupTitle`
+- Delete the following deprecated components:
+  - `FormRow`
+  - `LoanSimulator`
+  - `NavTabCarousel` (deprecated duplicate from `carousels/tab-bar-carousel`)
+  - `RewardCard` (replaced by `BackingCard`)
+  - `Search`
+  - `SimpleUploader`
+  - `Slider` (replaced by `RangeSlider`)
+  - `SliderBar`
+  - `SliderTooltip`
+  - `SliderWithTooltipAndPower`
+  - `Uploader`
+- Delete `sliderKeyDownHandler` helper.
+
+Features:
+
+- Convert the following components to CSS-in-JS:
+  - `HeaderNav`
+  - `LinkList`
+  - `SupTitle`
+- Update `Text` component.
+- Add `parseHtml` helper to ESM build.
+
+## [3.0.0-beta.2] - 2021-02-15
+
+Breaking changes:
+
+- `ArrowIcon` now defaults to `solid` version.
+- Remove `k-u-blockAlign-*` utilities in favor of `k-u-align-self-*`.
+- Delete the following deprecated SCSS mixins:
+  - `k-Alert`
+  - `k-ExternalRichLink`
+  - `k-HeaderTour`
+  - `k-Popover`
+  - `k-TagList`
+  - `k-Tour`
+- Delete the following deprecated components:
+  - `CallToActionPopover`
+  - `DeprecatedArrowIcon`
+  - `ExternalRichLink`
+  - `HeaderTour`
+  - `Popover`
+  - `TagList`
+  - `Tour`
+  - `TourPopover`
+  - `TourStep`
+
+## [3.0.0-beta.1] - 2021-02-08
+
+Breaking changes:
+
+- Remove `StyleGuide` app.
+- Remove `Karl` stories & components.
+- Delete the following deprecated SCSS mixins:
+  - `k-LegoGrid`
+  - `k-ProjectCard`
+  - `k-ProjectCreatorCard`
+  - `k-ProjectSimilarCard`
+- Delete the following deprecated components:
+  - `ArticleCard`
+  - `ContributionCard`
+  - `CrowdfundingCardWidget`
+  - `LegoGrid`
+  - `ProjectCard`
+  - `ProjectCreatorCard`
+  - `ProjectSimilarCard`
+  - `RewardCardLegacy`
+  - `SimilarProjectsCard`
+
 ## [2.125.0] - 2021-03-15
 
 Feature:
@@ -44,7 +745,7 @@ Fix:
 
 Feature:
 
--  Add `PeopleIcon`, `StatsIcon` and `SpeechBubbleIcon`.
+- Add `PeopleIcon`, `StatsIcon` and `SpeechBubbleIcon`.
 
 Fixes:
 

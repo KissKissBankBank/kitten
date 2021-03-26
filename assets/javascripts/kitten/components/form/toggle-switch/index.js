@@ -58,6 +58,12 @@ const StyledSwitch = styled.button`
       border-color: ${COLORS.primary1};
     }
   }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary4};
+  }
 
   .k-ToggleSwitch__circle {
     position: absolute;
@@ -152,9 +158,15 @@ export const ToggleSwitch = ({
   locked,
   reverseOrder,
   switchProps,
+  onChange,
   ...others
 }) => {
   const [isPressed, setPressedState] = useState(isChecked)
+
+  const handleClick = () => {
+    onChange && onChange(!isPressed)
+    setPressedState(current => !current)
+  }
 
   return (
     <StyledSwitchContainer
@@ -163,12 +175,13 @@ export const ToggleSwitch = ({
       {...others}
     >
       <StyledSwitch
-        onClick={() => setPressedState(!isPressed)}
+        onClick={handleClick}
         type="button"
         id={id}
         disabled={disabled || locked}
         aria-pressed={isPressed}
         aria-label={isLabelVisible ? null : label}
+        aria-labelledby={isLabelVisible ? `${id}_label` : null}
         checkedColor={checkedColor}
         defaultColor={defaultColor}
         disabledColor={disabledColor}
@@ -183,7 +196,8 @@ export const ToggleSwitch = ({
 
       {isLabelVisible && (
         <StyledLabel
-          for={id}
+          htmlFor={id}
+          id={`${id}_label`}
           disabledColor={disabledColor}
           big={big}
           {...labelProps}
@@ -207,6 +221,7 @@ ToggleSwitch.defaultProps = {
   label: 'switch',
   locked: false,
   reverseOrder: false,
+  onChange: () => {},
 }
 
 ToggleSwitch.propTypes = {
@@ -222,4 +237,5 @@ ToggleSwitch.propTypes = {
   label: PropTypes.string,
   locked: PropTypes.bool,
   reverseOrder: PropTypes.bool,
+  onChange: PropTypes.func,
 }

@@ -35,7 +35,7 @@ var _title = require("../../../components/typography/title");
 
 var _text = require("../../../components/typography/text");
 
-var _paragraph = require("../../../components/typography/paragraph");
+var _next = require("../../../components/typography/paragraph/next");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
@@ -51,7 +51,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 var garbageButtonKeyframes = (0, _styledComponents.keyframes)(["0%{opacity:1;}100%{opacity:0;height:0;}"]);
 var borderWidth = 2;
@@ -142,7 +142,7 @@ var CartRewardCard = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/_react.default.createElement(_title.Title, {
         italic: true,
         modifier: "quinary",
-        margin: false,
+        noMargin: true,
         tag: titleTag
       }, titleAmount)), subtitle && /*#__PURE__*/_react.default.createElement("div", {
         className: "k-u-margin-bottom-single k-u-margin-top-double"
@@ -153,10 +153,10 @@ var CartRewardCard = /*#__PURE__*/function (_Component) {
         className: (0, _classnames.default)('k-u-margin-bottom-double', 'k-u-margin-top-double', {
           'k-u-margin-top-single@xs-down': !subtitle
         })
-      }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
+      }, /*#__PURE__*/_react.default.createElement(_next.Paragraph, {
         tag: descriptionTag,
-        margin: false,
-        modifier: "quaternary"
+        noMargin: true,
+        modifier: "tertiary"
       }, textDescription, description)), this.renderBottomContent());
     }
   }, {

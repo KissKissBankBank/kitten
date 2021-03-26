@@ -27,7 +27,11 @@ var _dropdownSelectWithInput = require("../../../components/form/dropdown-select
 
 var _CountryData2 = _interopRequireDefault(require("./data/CountryData.js"));
 
-var _lodash = require("lodash");
+var _memoize = _interopRequireDefault(require("lodash/memoize"));
+
+var _reduce = _interopRequireDefault(require("lodash/reduce"));
+
+var _startsWith = _interopRequireDefault(require("lodash/startsWith"));
 
 var _usePreviousHook = require("../../../helpers/utils/use-previous-hook");
 
@@ -78,7 +82,7 @@ var formatNumber = function formatNumber(text, country) {
     return text;
   }
 
-  var formattedObject = (0, _lodash.reduce)(pattern, function (acc, character) {
+  var formattedObject = (0, _reduce.default)(pattern, function (acc, character) {
     if (acc.remainingText.length === 0) {
       return acc;
     }
@@ -135,13 +139,13 @@ var getOptions = function getOptions(_ref2) {
   return options;
 };
 
-var guessSelectedCountry = (0, _lodash.memoize)(function (inputNumber, country, onlyCountries) {
+var guessSelectedCountry = (0, _memoize.default)(function (inputNumber, country, onlyCountries) {
   var secondBestGuess = onlyCountries.find(function (o) {
     return o.iso2 == country;
   });
   if (inputNumber.trim() === '') return secondBestGuess;
   var bestGuess = onlyCountries.reduce(function (selectedCountry, country) {
-    if ((0, _lodash.startsWith)(inputNumber, country.dialCode)) {
+    if ((0, _startsWith.default)(inputNumber, country.dialCode)) {
       if (country.dialCode.length > selectedCountry.dialCode.length) {
         return country;
       }
@@ -290,7 +294,7 @@ var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
     var countryGuess;
 
     if (inputNumber.length > 1) {
-      if ((0, _lodash.startsWith)(inputNumber, '0') && !(0, _lodash.startsWith)(inputNumber, '00')) {
+      if ((0, _startsWith.default)(inputNumber, '0') && !(0, _startsWith.default)(inputNumber, '00')) {
         // French mobile phone number
         countryGuess = getCountryObjectFromIso(assumeCountry, onlyCountries);
         inputNumber = inputNumber.slice(1);

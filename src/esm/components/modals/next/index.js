@@ -3,15 +3,7 @@ import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutPr
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
 
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n\n  body.k-ModalNext__body--open {\n    overflow: hidden;\n  }\n\n  .k-ModalNext__content {\n    position: relative;\n    background-color: ", ";\n    box-sizing: border-box;\n    transform: scale(0.94);\n    margin-right: ", ";\n    margin-left: ", ";\n    padding: ", " ", ";\n    width: calc(100vw ", ");\n    ", ";\n\n    @media (min-width: ", ") {\n      margin: auto;\n      padding: ", " ", ";\n      width: calc((100vw - ", ") + (", " * 11))\n    }\n\n    @media (min-width: ", ") {\n      padding: ", " ", ";\n      ", "\n    }\n\n    @media (min-width: ", ") {\n    ", "\n    }\n  }\n\n  .k-ModalNext__close {\n    position: absolute;\n    top: 0;\n    right: ", ";\n    @media (min-width: ", ") {\n      right: ", ";\n  }\n\n    button {\n      margin: 0;\n    }\n  }\n\n  .k-ModalNext__overlay {\n    position: fixed;\n    overflow: scroll;\n    display: flex;\n    flex-direction: column;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    opacity: 0;\n    background-color: rgba(34, 34, 34, .8);\n    &::before ,\n    &::after {\n      content:'';\n      flex:1;\n      min-height: ", ";\n\n      @media (min-width: ", ") {\n        min-height: ", ";\n      }\n      ", "\n    }\n    ", "\n  }\n\n  .k-ModalNext__overlay--afterOpen {\n    transition: opacity .3s ease;\n    opacity: 1;\n  }\n  .k-ModalNext--afterOpen {\n    transition: opacity .3s ease, transform .3s ease;\n    transform: scale(1);\n    opacity: 1;\n  }\n\n  .k-ModalNext__overlay--beforeClose {\n    opacity: 0;\n  }\n  .k-ModalNext--beforeClose {\n    transition: opacity .3s ease, transform .5s ease;\n    transform: scale(1.06);\n    opacity: 0;\n  }\n\n  .k-ModalNext__title--fullSize {\n    position: sticky;\n    top:0;\n    width: 100vw;\n    text-align: center;\n    margin-left: ", ";\n    box-sizing: border-box;\n    background-color: ", ";\n    padding: ", " ", ";\n    border-bottom: ", " solid ", ";\n    margin-bottom: ", ";\n  }\n\n  .k-ModalNext__closeButton--fullSize {\n    position: absolute;\n    left: ", "\n    top: ", "\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
+var _templateObject;
 
 import React, { useEffect, createContext, useReducer, useContext } from 'react';
 import ReactDOM from 'react-dom';
@@ -19,8 +11,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactModal from 'react-modal';
 import { CloseButton } from '../../../components/buttons/close-button';
-import { Button } from '../../../components/buttons/button/button';
-import { Paragraph } from '../../../components/typography/paragraph';
+import { Button } from '../../../components/buttons/button';
+import { Paragraph } from '../../../components/typography/paragraph/next';
 import { Text } from '../../../components/typography/text';
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { pxToRem } from '../../../helpers/utils/typography';
@@ -36,7 +28,7 @@ var StyledParagraph = styled(Paragraph).withConfig({
   displayName: "next__StyledParagraph",
   componentId: "sc-6re6vo-0"
 })(["font-size:", ";@media (min-width:", "){font-size:", ";}"], pxToRem(12), pxToRem(ScreenConfig.S.min), pxToRem(14));
-var GlobalStyle = createGlobalStyle(_templateObject(), COLORS.background1, pxToRem(20), pxToRem(20), pxToRem(50), pxToRem(30), pxToRem(20), function (props) {
+var GlobalStyle = createGlobalStyle(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n\n  body.k-ModalNext__body--open {\n    overflow: hidden;\n  }\n\n  .k-ModalNext__content {\n    position: relative;\n    background-color: ", ";\n    box-sizing: border-box;\n    transform: scale(0.94);\n    margin-right: ", ";\n    margin-left: ", ";\n    padding: ", " ", ";\n    width: calc(100vw ", ");\n    ", ";\n\n    @media (min-width: ", ") {\n      margin: auto;\n      padding: ", " ", ";\n      width: calc((100vw - ", ") + (", " * 11))\n    }\n\n    @media (min-width: ", ") {\n      padding: ", " ", ";\n      ", "\n    }\n\n    @media (min-width: ", ") {\n    ", "\n    }\n  }\n\n  .k-ModalNext__close {\n    position: absolute;\n    top: 0;\n    right: ", ";\n    @media (min-width: ", ") {\n      right: ", ";\n  }\n\n    button {\n      margin: 0;\n    }\n  }\n\n  .k-ModalNext__overlay {\n    position: fixed;\n    overflow: scroll;\n    display: flex;\n    flex-direction: column;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    opacity: 0;\n    background-color: rgba(34, 34, 34, .8);\n    &::before ,\n    &::after {\n      content:'';\n      flex:1;\n      min-height: ", ";\n\n      @media (min-width: ", ") {\n        min-height: ", ";\n      }\n      ", "\n    }\n    ", "\n  }\n\n  .k-ModalNext__overlay--afterOpen {\n    transition: opacity .3s ease;\n    opacity: 1;\n  }\n  .k-ModalNext--afterOpen {\n    transition: opacity .3s ease, transform .3s ease;\n    transform: scale(1);\n    opacity: 1;\n  }\n\n  .k-ModalNext__overlay--beforeClose {\n    opacity: 0;\n  }\n  .k-ModalNext--beforeClose {\n    transition: opacity .3s ease, transform .5s ease;\n    transform: scale(1.06);\n    opacity: 0;\n  }\n\n  .k-ModalNext__title--fullSize {\n    position: sticky;\n    top:0;\n    width: 100vw;\n    text-align: center;\n    margin-left: ", ";\n    box-sizing: border-box;\n    background-color: ", ";\n    padding: ", " ", ";\n    border-bottom: ", " solid ", ";\n    margin-bottom: ", ";\n  }\n\n  .k-ModalNext__closeButton--fullSize {\n    position: absolute;\n    left: ", ";\n    top: ", ";\n  }\n"])), COLORS.background1, pxToRem(20), pxToRem(20), pxToRem(50), pxToRem(30), pxToRem(20), function (props) {
   return props.fullSize && css(["padding-top:0 !important;min-width:100vw !important;margin:0 !important;"]);
 }, pxToRem(ScreenConfig.S.min), pxToRem(80), oneGridCol, pxToRem(paddingPlusGutters), pxToRem(GUTTER), pxToRem(ScreenConfig.L.min), pxToRem(80), oneGridCol, function (props) {
   return css(["width:calc( ((100vw - ", ") / 12 + ", ") * ", " - ", " );"], pxToRem(paddingPlusGutters), pxToRem(GUTTER), props.cols, pxToRem(GUTTER));
@@ -52,7 +44,7 @@ var ModalTitle = function ModalTitle(_ref) {
   var children = _ref.children;
   return /*#__PURE__*/React.createElement(Title, {
     modifier: "quaternary",
-    margin: false,
+    noMargin: true,
     tag: "p",
     className: "k-u-margin-bottom-singleHalf--important k-u-align-center"
   }, children);
@@ -64,11 +56,11 @@ var ModalParagraph = function ModalParagraph(_ref2) {
       className = _ref2.className,
       align = _ref2.align;
   return /*#__PURE__*/React.createElement(StyledParagraph, {
-    modifier: "quaternary",
+    modifier: "tertiary",
     style: {
       textAlign: align
     },
-    margin: false,
+    noMargin: true,
     tag: "p",
     className: classNames('k-Modal__paragraph', className, {
       'k-u-margin-bottom-triple': !withoutMargin,
@@ -160,20 +152,19 @@ var InnerModal = function InnerModal(_ref5) {
       modalProps = _ref5.modalProps,
       hasCloseButton = _ref5.hasCloseButton,
       maxWidth = _ref5.maxWidth,
-      big = _ref5.big,
-      huge = _ref5.huge,
+      size = _ref5.size,
       isOpen = _ref5.isOpen,
       zIndex = _ref5.zIndex,
       fullSize = _ref5.fullSize,
       fullSizeTitle = _ref5.fullSizeTitle,
-      others = _objectWithoutProperties(_ref5, ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "big", "huge", "isOpen", "zIndex", "fullSize", "fullSizeTitle"]);
+      others = _objectWithoutProperties(_ref5, ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "size", "isOpen", "zIndex", "fullSize", "fullSizeTitle"]);
 
   var _useContext3 = useContext(ModalContext),
       _useContext4 = _slicedToArray(_useContext3, 2),
       show = _useContext4[0].show,
       dispatch = _useContext4[1];
 
-  var colsOnDesktop = huge ? 10 : big ? 8 : 6;
+  var colsOnDesktop = size === 'huge' ? 10 : size === 'big' ? 8 : 6;
 
   var close = function close() {
     dispatch(updateState(false));
@@ -281,8 +272,7 @@ Modal.propTypes = {
   fullSize: PropTypes.bool,
   modalProps: PropTypes.object,
   hasCloseButton: PropTypes.bool,
-  big: PropTypes.bool,
-  huge: PropTypes.bool,
+  size: PropTypes.oneOf(['regular', 'big', 'huge']),
   isOpen: PropTypes.bool,
   zIndex: PropTypes.number,
   fullSizeTitle: PropTypes.string
@@ -295,8 +285,7 @@ Modal.defaultProps = {
   fullSize: false,
   modalProps: {},
   hasCloseButton: true,
-  big: false,
-  huge: false,
+  size: 'regular',
   isOpen: false,
   zIndex: 110,
   fullSizeTitle: ''

@@ -56,6 +56,12 @@ export const StyledRightArrowContainer = styled.div`
     outline: ${COLORS.primary3} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
   }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary3};
+  }
 `
 
 export const StyledLeftArrowContainer = styled.div`
@@ -71,6 +77,12 @@ export const StyledLeftArrowContainer = styled.div`
   &:focus {
     outline: ${COLORS.primary3} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
+  }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary3};
   }
 `
 

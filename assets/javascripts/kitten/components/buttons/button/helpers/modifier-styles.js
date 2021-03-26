@@ -204,6 +204,12 @@ export const modifierStyles = modifier => {
       outline: ${COLORS.primary4} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(2)};
     }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
 
     &:disabled {
       border-color: ${COLORS.line2};

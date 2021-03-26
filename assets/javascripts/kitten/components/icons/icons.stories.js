@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { ArrowIcon } from './arrow-icon'
+import { LongArrowIcon } from './long-arrow-icon'
 import { BancontactIcon } from './bancontact-icon'
 import { BubbleIcon } from './bubble-icon'
 import { BurgerIcon } from './burger-icon/index'
@@ -235,16 +236,28 @@ export const AllIcons = () => {
 
       <Group title="ArrowIcon">
         <IconContainer suffix='direction="top"'>
-          <ArrowIcon version="solid" color={colorInput} direction="top" />
+          <ArrowIcon color={colorInput} direction="top" />
         </IconContainer>
         <IconContainer suffix='direction="bottom"'>
-          <ArrowIcon version="solid" color={colorInput} direction="bottom" />
+          <ArrowIcon color={colorInput} direction="bottom" />
         </IconContainer>
         <IconContainer suffix='direction="left"'>
-          <ArrowIcon version="solid" color={colorInput} direction="left" />
+          <ArrowIcon color={colorInput} direction="left" />
         </IconContainer>
         <IconContainer suffix='direction="right"'>
-          <ArrowIcon version="solid" color={colorInput} direction="right" />
+          <ArrowIcon color={colorInput} direction="right" />
+        </IconContainer>
+        <IconContainer suffix='direction="top"'>
+          <LongArrowIcon color={colorInput} direction="top" />
+        </IconContainer>
+        <IconContainer suffix='direction="bottom"'>
+          <LongArrowIcon color={colorInput} direction="bottom" />
+        </IconContainer>
+        <IconContainer suffix='direction="left"'>
+          <LongArrowIcon color={colorInput} direction="left" />
+        </IconContainer>
+        <IconContainer suffix='direction="right"'>
+          <LongArrowIcon color={colorInput} direction="right" />
         </IconContainer>
       </Group>
 
