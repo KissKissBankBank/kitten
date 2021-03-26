@@ -67,6 +67,7 @@ export const BulletList = ({ items, size, className, ...others }) => {
       className={classNames(
         'k-BulletList',
         `k-BulletList--${size}`,
+        className,
       )}
       {...others}
     >
