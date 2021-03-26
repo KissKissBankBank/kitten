@@ -15,9 +15,9 @@ describe('<BulletList />', () => {
             items={[
               { key: '1', item: 'Dis Manibus', id: '1' },
               { key: '2', item: 'Calpurnia Felicla' },
-              { key: '3', item: 'Germulio coniugi' },
+              { key: '3', item: 'Germulio Niugi', className:'customItemClass' },
             ]}
-            aria-hidden="true"
+            className="customListClass"
           />,
         )
         .toJSON()
