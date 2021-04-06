@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add all sizes to `DropdownSelect`.
+- Fix: Fix styles on `DropdownSelect`.
+
 ## [3.0.0] - 2021-03-26
 
 Breaking changes:
