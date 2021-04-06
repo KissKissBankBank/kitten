@@ -1,7 +1,6 @@
 import React from 'react'
 import { boolean, select } from '@storybook/addon-knobs'
 import { Accordeon } from './index'
-import { SelectWithState } from '../form/select-with-state'
 import { DropdownSelect } from '../form/dropdown-select'
 
 export default {

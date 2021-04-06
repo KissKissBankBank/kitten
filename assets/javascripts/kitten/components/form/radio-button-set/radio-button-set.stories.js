@@ -2,7 +2,6 @@ import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { RadioButtonSet } from './index'
-import { createGlobalStyle } from 'styled-components'
 import {
   GUTTER,
   pxToRem,

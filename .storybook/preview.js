@@ -2,7 +2,7 @@ import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 import './stylesheets/app-kitten.scss'
 import React from 'react'
-import DevGridDecorator from './decorators/dev-grid'
+import { DevGridDecorator } from './decorators/dev-grid'
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
 import { themes } from '@storybook/theming'
 
