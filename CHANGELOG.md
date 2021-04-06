@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add all sizes to `DropdownSelect`.
 - Fix: Fix styles on `DropdownSelect`.
+- Feature: - Add `variant` prop to `LocationInput`, defaults to `andromeda`.
 
 ## [3.0.0] - 2021-03-26
 

@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { LocationInput } from './index'
-import { text } from '@storybook/addon-knobs'
+import { text, select } from '@storybook/addon-knobs'
 
 export default {
   title: 'Form/LocationInput',
   component: LocationInput,
+}
+
+const variantOptions = {
+  Andromeda: 'andromeda',
+  Orion: 'orion',
 }
 
 export const Default = () => {
@@ -46,6 +51,7 @@ export const Default = () => {
       <LocationInput
         onChange={e => console.warn(e)}
         onSelect={e => console.warn(e)}
+        variant={select('Variant', variantOptions, 'andromeda')}
       />
       😺😸😹😻😼😽🙀😿😾
     </>
