@@ -54,6 +54,12 @@ const StyledLocationInput = styled.div`
         opacity: 1;
       }
     }
+
+    // VARIANT
+
+    &.k-LocationInput__input--orion {
+      border-radius: ${pxToRem(4)};
+    }
   }
 
   .k-LocationInput__autocomplete {
@@ -123,6 +129,7 @@ export const LocationInput = ({
   inputProps,
   name,
   loadingText,
+  variant,
   ...others
 }) => {
   const [address, updateAddress] = useState(defaultValue)
@@ -161,6 +168,7 @@ export const LocationInput = ({
               className: classNames(
                 'k-LocationInput__input',
                 inputProps?.className,
+                `k-LocationInput__input--${variant}`,
               ),
             })}
           />
@@ -206,6 +214,7 @@ LocationInput.defaultProps = {
   inputProps: {},
   name: 'location-input',
   loadingText: 'Loading...',
+  variant: 'andromeda',
 }
 
 LocationInput.propTypes = {
@@ -215,4 +224,5 @@ LocationInput.propTypes = {
   inputProps: PropTypes.object,
   name: PropTypes.string,
   loadingText: PropTypes.string,
+  variant: PropTypes.string,
 }
