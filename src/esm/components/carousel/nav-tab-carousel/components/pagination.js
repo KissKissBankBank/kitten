@@ -7,11 +7,11 @@ import { createRangeFromZeroTo } from './../../../../helpers/utils/range';
 var BulletPointStyles = styled.div.withConfig({
   displayName: "pagination__BulletPointStyles",
   componentId: "sc-1thdyq2-0"
-})(["min-width:", ";min-height:", ";margin-left:", ";margin-right:", ";background-color:", ";", " &:focus{outline:", " solid ", ";outline-offset:", ";}"], pxToRem(6), pxToRem(6), pxToRem(4), pxToRem(4), COLORS.background1, function (_ref) {
+})(["min-width:", ";min-height:", ";margin-left:", ";margin-right:", ";background-color:", ";", " &:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}"], pxToRem(6), pxToRem(6), pxToRem(4), pxToRem(4), COLORS.background1, function (_ref) {
   var isSelected = _ref.isSelected,
       activeColor = _ref.activeColor;
   return isSelected && css(["background-color:", ";"], activeColor);
-}, COLORS.primary3, pxToRem(2), pxToRem(2));
+}, COLORS.primary3, pxToRem(2), pxToRem(2), COLORS.primary3);
 var PaginationStyles = styled.div.withConfig({
   displayName: "pagination__PaginationStyles",
   componentId: "sc-1thdyq2-1"

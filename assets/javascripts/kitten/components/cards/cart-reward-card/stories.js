@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { text } from '@storybook/addon-knobs'
 import { CartRewardCard } from './index'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 
 export default {
   component: CartRewardCard,

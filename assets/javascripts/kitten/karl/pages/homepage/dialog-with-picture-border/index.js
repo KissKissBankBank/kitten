@@ -10,7 +10,7 @@ import {
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
 } from '../../../../constants/grid-config'
-import { Button } from '../../../../components/buttons/button/button'
+import { Button } from '../../../../components/buttons/button'
 import { cssPropertyDistributor } from '../../../../helpers/dom/css-property-distributor'
 import domElementHelper from '../../../../helpers/dom/element-helper'
 

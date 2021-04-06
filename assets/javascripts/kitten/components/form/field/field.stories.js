@@ -4,7 +4,6 @@ import {
   FieldInputExample,
   FieldPasswordExample,
   FieldRadioButtonSetExample,
-  FieldSelectExample,
   FieldAutocompleteExample,
 } from './field.examples'
 
@@ -26,6 +25,7 @@ export const WithInput = () => {
       tiny={boolean('Tiny', false)}
       label={text('Label', 'Label')}
       tooltip={text('Tooltip', null)}
+      tooltipProps={{ actionLabel: 'Learn more' }}
       tooltipId={text('Tooltip ID', 'tooltip')}
       placeholder={text('Placeholder', 'Placeholder…')}
       error={boolean('Error?', false)}
@@ -43,6 +43,7 @@ export const WithPassword = () => {
       tiny={boolean('Tiny', false)}
       label={text('Label', 'Label')}
       tooltip={text('Tooltip', null)}
+      tooltipProps={{ actionLabel: 'Learn more' }}
       tooltipId={text('Tooltip ID', 'tooltip')}
       placeholder={text('Placeholder', 'Placeholder…')}
       error={boolean('Error?', false)}
@@ -58,6 +59,7 @@ export const WithRadioButtons = () => {
       tiny={boolean('Tiny', false)}
       label={text('Label', 'Label')}
       tooltip={text('Tooltip', null)}
+      tooltipProps={{ actionLabel: 'Learn more' }}
       tooltipId={text('Tooltip ID', 'tooltip')}
       items={[
         {
@@ -80,26 +82,6 @@ export const WithRadioButtons = () => {
   )
 }
 
-export const WithSelect = () => {
-  return (
-    <FieldSelectExample
-      id={text('ID', 'select')}
-      tiny={boolean('Tiny', false)}
-      label={text('Label', 'Label')}
-      tooltip={text('Tooltip', null)}
-      tooltipId={text('Tooltip ID', 'tooltip')}
-      placeholder={text('Placeholder', 'Select…')}
-      options={[
-        { value: 'a', label: text('Option A', 'Option A') },
-        { value: 'b', label: text('Option B', 'Option B') },
-        { value: 'c', label: text('Option C', 'Option C') },
-      ]}
-      error={boolean('Error?', false)}
-      errorMessage={text('Error', 'Error message…')}
-    />
-  )
-}
-
 export const WithAutocomplete = () => {
   return (
     <FieldAutocompleteExample
@@ -107,6 +89,7 @@ export const WithAutocomplete = () => {
       tiny={boolean('Tiny', false)}
       label={text('Label', 'Label')}
       tooltip={text('Tooltip', null)}
+      tooltipProps={{ actionLabel: 'Learn more' }}
       tooltipId={text('Tooltip ID', 'tooltip')}
       placeholder={text('Placeholder', 'Select…')}
       items={[

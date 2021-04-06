@@ -12,6 +12,7 @@ import {
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
 } from '../../../constants/grid-config'
+import { StatusWithBullet } from '../../../components/atoms/status-with-bullet'
 
 const ListTableStyles = createGlobalStyle`
   .customCol_1 {
@@ -328,7 +329,9 @@ export const Default = () => (
 
           <ListTable.Col className="customCol_4">72&nbsp;€</ListTable.Col>
 
-          <ListTable.Col className="customCol_5">● Validé</ListTable.Col>
+          <ListTable.Col className="customCol_5">
+            <StatusWithBullet statusType="success">Valid</StatusWithBullet>
+          </ListTable.Col>
 
           <ListTable.Col className="customCol_6">Livraison</ListTable.Col>
 
@@ -391,7 +394,9 @@ export const Default = () => (
 
           <ListTable.Col className="customCol_4">72&nbsp;€</ListTable.Col>
 
-          <ListTable.Col className="customCol_5">● Validé</ListTable.Col>
+          <ListTable.Col className="customCol_5">
+            <StatusWithBullet statusType="warning">Invalid</StatusWithBullet>
+          </ListTable.Col>
 
           <ListTable.Col className="customCol_6">Livraison</ListTable.Col>
 

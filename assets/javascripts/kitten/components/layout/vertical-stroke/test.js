@@ -1,56 +1,70 @@
 import React from 'react'
-import { VerticalStroke } from '../../../components/layout/vertical-stroke'
+import renderer from 'react-test-renderer'
+import 'jest-styled-components'
+import { VerticalStroke } from './'
 
 describe('<VerticalStroke />', () => {
-  describe('by default', () => {
-    const verticalStroke = shallow(<VerticalStroke />)
+  let component
 
-    it('renders a <span />', () => {
-      expect(verticalStroke.is('span')).toBe(true)
+  describe('by default', () => {
+    beforeEach(() => {
+      component = renderer.create(<VerticalStroke />).toJSON()
     })
 
-    it('has a good class', () => {
-      expect(verticalStroke.hasClass('k-VerticalStroke')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('with className prop', () => {
-    const verticalStroke = shallow(<VerticalStroke className="custom__class" />)
+    beforeEach(() => {
+      component = renderer
+        .create(<VerticalStroke className="custom__class" />)
+        .toJSON()
+    })
 
-    it('has a good class', () => {
-      expect(verticalStroke.hasClass('custom__class')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('with size="tiny" prop', () => {
-    const verticalStroke = shallow(<VerticalStroke size="tiny" />)
+    beforeEach(() => {
+      component = renderer.create(<VerticalStroke size="tiny" />).toJSON()
+    })
 
-    it('has a good class', () => {
-      expect(verticalStroke.hasClass('k-VerticalStroke--tiny')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('with size="default" prop', () => {
-    const verticalStroke = shallow(<VerticalStroke size="default" />)
+    beforeEach(() => {
+      component = renderer.create(<VerticalStroke size="default" />).toJSON()
+    })
 
-    it('has a good class', () => {
-      expect(verticalStroke.hasClass('k-VerticalStroke--default')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('with size="big" prop', () => {
-    const verticalStroke = shallow(<VerticalStroke size="big" />)
+    beforeEach(() => {
+      component = renderer.create(<VerticalStroke size="big" />).toJSON()
+    })
 
-    it('has a good class', () => {
-      expect(verticalStroke.hasClass('k-VerticalStroke--big')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('with size="huge" prop', () => {
-    const verticalStroke = shallow(<VerticalStroke size="huge" />)
+    beforeEach(() => {
+      component = renderer.create(<VerticalStroke size="huge" />).toJSON()
+    })
 
-    it('has a good class', () => {
-      expect(verticalStroke.hasClass('k-VerticalStroke--huge')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 })

@@ -1,7 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
-import LinkBox from './../link-box';
+import { LinkBox } from './../link-box';
 import { LinkBoxIllustration } from './../../../components/illustrations/link-box-illustration';
 import { Text } from './../../../components/typography/text';
 export var DocLinkBox = function DocLinkBox(_ref) {

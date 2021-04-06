@@ -6,12 +6,12 @@ import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 import React, { PureComponent } from 'react';
 import styled, { css, keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
-import { Button } from '../../../components/buttons/button/button';
+import { Button } from '../../../components/buttons/button';
 import { ArrowIcon } from '../../../components/icons/arrow-icon';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem } from '../../../helpers/utils/typography';
@@ -48,10 +48,10 @@ export var ExpandBoardButton = /*#__PURE__*/function (_PureComponent) {
           onClick = _this$props.onClick,
           ariaId = _this$props.ariaId,
           borderRadius = _this$props.borderRadius,
-          big = _this$props.big;
+          size = _this$props.size;
       var defaultExpandChildren = expandChildren ? expandChildren : children;
       return /*#__PURE__*/React.createElement(StyledButton, {
-        big: big,
+        size: size,
         modifier: "helium",
         disabled: disabled,
         "aria-expanded": expanded,
@@ -75,7 +75,7 @@ ExpandBoardButton.propTypes = {
   expanded: PropTypes.bool,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
-  big: PropTypes.bool,
+  size: PropTypes.string,
   borderRadius: PropTypes.number
 };
 ExpandBoardButton.defaultProps = {
@@ -85,7 +85,7 @@ ExpandBoardButton.defaultProps = {
   onClick: function onClick() {},
   ariaId: '',
   borderRadius: 0,
-  big: true
+  size: 'big'
 };
 export var ExpandBoardContent = /*#__PURE__*/function (_PureComponent2) {
   _inherits(ExpandBoardContent, _PureComponent2);

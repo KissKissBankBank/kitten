@@ -30,12 +30,17 @@ export const StyledList = styled.ul`
     &:focus {
       outline-offset: ${pxToRem(-3)};
     }
-
     &:hover,
     &:focus {
       color: ${COLORS.primary1};
       background-color: var(--headerMenu-background-colors-hover);
       transition: color 0.2s, background-color 0.4s;
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
     }
   }
 

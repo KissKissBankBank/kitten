@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
-import PropTypes from 'prop-types'
 import classNames from 'classnames'
-
+import PropTypes from 'prop-types'
 import { StickyContainer } from '../../../components/grid/sticky-container'
 import { Button } from './components/button'
 import { Logo } from './components/logo'
@@ -24,8 +23,8 @@ import domEvents, {
   DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
   DROPDOWN_LAST_FOCUS_REACHED_EVENT,
   TOGGLE_DROPDOWN_EVENT,
+  dispatchEvent,
 } from '../../../helpers/dom/events'
-import emitter from '../../../helpers/utils/emitter'
 import { DROPDOWN_ANIMATED_DELAY } from '../../../constants/dropdown-config'
 import { usePrevious } from '../../../helpers/utils/use-previous-hook'
 
@@ -49,12 +48,12 @@ const HeaderNav = ({
   const previousStickyState = usePrevious(stickyState)
 
   const focusDropdown = ({ detail: dropdown }) => {
-    emitter.emit(TOGGLE_DROPDOWN_EVENT, false)
+    dispatchEvent(TOGGLE_DROPDOWN_EVENT, { nextExpandedState: false })()
     dropdown.focus()
   }
 
   const focusElementNextToDropdown = ({ detail: dropdown }) => {
-    emitter.emit(TOGGLE_DROPDOWN_EVENT, false)
+    dispatchEvent(TOGGLE_DROPDOWN_EVENT, { nextExpandedState: false })()
 
     if (!headerRef.current) return
 
@@ -158,8 +157,11 @@ const HeaderNav = ({
         <StickyContainer
           ref={stickyContainerRef}
           isSticky={stickyState}
-          className="k-HeaderNav__stickyContainer"
           {...stickyProps}
+          className={classNames(
+            'k-HeaderNav__stickyContainer',
+            stickyProps?.className,
+          )}
         >
           <nav ref={headerRef} role="banner" id={id} className="k-HeaderNav">
             <QuickAccessLink

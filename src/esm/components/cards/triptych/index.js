@@ -2,10 +2,10 @@ import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import debounce from 'lodash/fp/debounce';
 import { Grid, GridCol } from '../../../components/grid/grid';
 import { VerticalStroke } from '../../../components/layout/vertical-stroke';
 import { ScreenConfig } from '../../../constants/screen-config';
-import { debounce } from '../../../helpers/utils/debounce';
 import { pxToRem } from '../../../helpers/utils/typography';
 import styled from 'styled-components';
 var strokeHeight = 80;
@@ -45,16 +45,16 @@ export var Triptych = function Triptych(_ref3) {
   };
 
   var debounceUpdateMargin = function debounceUpdateMargin() {
-    return debounce(updateSecondCardMargin, 200);
+    return debounce(200)(updateSecondCardMargin);
   };
 
   useEffect(function () {
     debounceUpdateMargin();
-    window.addEventListener('resize', debounceUpdateMargin());
-    window.addEventListener('load', debounceUpdateMargin());
+    window.addEventListener('resize', debounceUpdateMargin);
+    window.addEventListener('load', debounceUpdateMargin);
     return function () {
-      window.removeEventListener('resize', debounceUpdateMargin());
-      window.removeEventListener('load', debounceUpdateMargin());
+      window.removeEventListener('resize', debounceUpdateMargin);
+      window.removeEventListener('load', debounceUpdateMargin);
     };
   }, []);
   return /*#__PURE__*/React.createElement(StyledTriptych, {

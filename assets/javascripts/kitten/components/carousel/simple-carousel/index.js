@@ -37,6 +37,12 @@ const StyledContainer = styled.div`
       outline: ${COLORS.primary3} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(2)};
     }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary3};
+    }
   }
 `
 const StyledPagination = styled.div`
@@ -66,6 +72,12 @@ const StyledPaginationButton = styled.button`
   &:focus {
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
+  }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary4};
   }
 
   &[aria-selected='true'] {

@@ -15,6 +15,10 @@ export default {
 }
 
 export const Default = () => {
+  const handleChange = e => {
+    console.warn(e)
+  }
+
   return (
     <ToggleSwitch
       id="toggle-switch"
@@ -24,6 +28,7 @@ export const Default = () => {
       isLabelVisible={boolean('isLabelVisible', true)}
       reverseOrder={boolean('reverseOrder', false)}
       locked={boolean('Locked?', false)}
+      onChange={handleChange}
     />
   )
 }

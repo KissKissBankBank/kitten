@@ -9,108 +9,120 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.SideGridAside = exports.SideGridContent = exports.SideGrid = void 0;
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _string = require("../../../helpers/utils/string");
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+var _typography = require("../../../helpers/utils/typography");
 
-var SideGrid = /*#__PURE__*/function (_Component) {
-  (0, _inherits2.default)(SideGrid, _Component);
+var _screenConfig = require("../../../constants/screen-config");
 
-  var _super = _createSuper(SideGrid);
+var _grid = require("../../../components/grid/grid");
 
-  function SideGrid() {
-    (0, _classCallCheck2.default)(this, SideGrid);
-    return _super.apply(this, arguments);
-  }
+var _container = require("../../../components/grid/container");
 
-  (0, _createClass2.default)(SideGrid, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          className = _this$props.className,
-          containerClassName = _this$props.containerClassName,
-          rowClassName = _this$props.rowClassName;
-      var _this$props2 = this.props,
-          asidePosition = _this$props2.asidePosition,
-          asideSize = _this$props2.asideSize;
-      asidePosition = _string.stringUtils.upcaseFirst(asidePosition);
-      asideSize = _string.stringUtils.upcaseFirst(asideSize);
-      var sideGridClassName = (0, _classnames.default)('k-SideGrid', className, "k-SideGrid--aside".concat(asidePosition), "k-SideGrid--aside".concat(asideSize));
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: sideGridClassName
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: (0, _classnames.default)('k-SideGrid__container', containerClassName)
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: (0, _classnames.default)('k-SideGrid__row', rowClassName)
-      }, this.props.children)));
+var _gridConfig = require("../../../constants/grid-config");
+
+var Context = (0, _react.createContext)({
+  asideSize: 'default'
+});
+
+var StyledSideGrid = _styledComponents.default.div.withConfig({
+  displayName: "side-grid__StyledSideGrid",
+  componentId: "sc-1hedjcg-0"
+})(["@media (min-width:", "){background:linear-gradient( to right,", " 0%,", " 50%,", " 50%,", " 100% );}.k-SideGrid__content{background-color:", ";padding-bottom:", ";@media (min-width:", "){padding-bottom:", ";}}.k-SideGrid__aside{display:none;@media (min-width:", "){display:flex;border-left:", " solid ", ";padding-left:0;padding-right:", ";}}.k-SideGrid__asideContent{display:flex;flex-direction:column;flex:1 1 auto;border-left:", " solid ", ";background-color:", ";}&.k-SideGrid--aside-start{@media (min-width:", "){background:linear-gradient( to left,", " 0%,", " 50%,", " 50%,", " 100% );}.k-SideGrid__row{flex-direction:row-reverse;}.k-SideGrid__aside{border-left:none;border-right:", " solid ", ";padding-left:", ";padding-right:0;}.k-SideGrid__asideContent{border-left:none;border-right:", " solid ", ";}}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.background2, _colorsConfig.default.background2, _colorsConfig.default.background1, (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(_gridConfig.GUTTER / 2), _colorsConfig.default.background1, (0, _typography.pxToRem)(_gridConfig.GUTTER / 2), (0, _typography.pxToRem)(1), _colorsConfig.default.line1, _colorsConfig.default.background2, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.background2, _colorsConfig.default.background2, (0, _typography.pxToRem)(_gridConfig.GUTTER / 2), _colorsConfig.default.background1, (0, _typography.pxToRem)(_gridConfig.GUTTER / 2), (0, _typography.pxToRem)(1), _colorsConfig.default.line1);
+
+var SideGrid = function SideGrid(_ref) {
+  var children = _ref.children,
+      className = _ref.className,
+      containerClassName = _ref.containerClassName,
+      rowClassName = _ref.rowClassName,
+      asidePosition = _ref.asidePosition,
+      asideSize = _ref.asideSize;
+  var sideGridClassName = (0, _classnames.default)('k-SideGrid', className, "k-SideGrid--aside-".concat(asidePosition), "k-SideGrid--aside-".concat(asideSize));
+  return /*#__PURE__*/_react.default.createElement(StyledSideGrid, {
+    className: sideGridClassName
+  }, /*#__PURE__*/_react.default.createElement(_container.Container, {
+    className: (0, _classnames.default)('k-SideGrid__container', containerClassName)
+  }, /*#__PURE__*/_react.default.createElement(_grid.Grid, {
+    className: (0, _classnames.default)('k-SideGrid__row', rowClassName)
+  }, /*#__PURE__*/_react.default.createElement(Context.Provider, {
+    value: {
+      asideSize: asideSize
     }
-  }]);
-  return SideGrid;
-}(_react.Component);
+  }, children))));
+};
 
 exports.SideGrid = SideGrid;
 
-var SideGridContent = /*#__PURE__*/function (_Component2) {
-  (0, _inherits2.default)(SideGridContent, _Component2);
+var SideGridContent = function SideGridContent(_ref2) {
+  var className = _ref2.className,
+      children = _ref2.children,
+      props = (0, _objectWithoutProperties2.default)(_ref2, ["className", "children"]);
 
-  var _super2 = _createSuper(SideGridContent);
+  var _useContext = (0, _react.useContext)(Context),
+      asideSize = _useContext.asideSize;
 
-  function SideGridContent() {
-    (0, _classCallCheck2.default)(this, SideGridContent);
-    return _super2.apply(this, arguments);
-  }
+  var contentWidth = function () {
+    switch (asideSize) {
+      case 'large':
+        return 7;
 
-  (0, _createClass2.default)(SideGridContent, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: (0, _classnames.default)('k-SideGrid__content', this.props.className)
-      }, this.props.children);
+      case 'small':
+        return 9;
+
+      default:
+        return 8;
     }
-  }]);
-  return SideGridContent;
-}(_react.Component);
+  }();
+
+  return /*#__PURE__*/_react.default.createElement(_grid.GridCol, (0, _extends2.default)({
+    col: 12,
+    "col-m": contentWidth,
+    className: (0, _classnames.default)('k-SideGrid__content', className)
+  }, props), children);
+};
 
 exports.SideGridContent = SideGridContent;
 
-var SideGridAside = /*#__PURE__*/function (_Component3) {
-  (0, _inherits2.default)(SideGridAside, _Component3);
+var SideGridAside = function SideGridAside(_ref3) {
+  var className = _ref3.className,
+      children = _ref3.children,
+      contentClassName = _ref3.contentClassName,
+      props = (0, _objectWithoutProperties2.default)(_ref3, ["className", "children", "contentClassName"]);
 
-  var _super3 = _createSuper(SideGridAside);
+  var _useContext2 = (0, _react.useContext)(Context),
+      asideSize = _useContext2.asideSize;
 
-  function SideGridAside() {
-    (0, _classCallCheck2.default)(this, SideGridAside);
-    return _super3.apply(this, arguments);
-  }
+  var sideWidth = function () {
+    switch (asideSize) {
+      case 'large':
+        return 5;
 
-  (0, _createClass2.default)(SideGridAside, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: (0, _classnames.default)('k-SideGrid__aside', this.props.className)
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: (0, _classnames.default)('k-SideGrid__asideContent', this.props.contentClassName)
-      }, this.props.children));
+      case 'small':
+        return 3;
+
+      default:
+        return 4;
     }
-  }]);
-  return SideGridAside;
-}(_react.Component);
+  }();
+
+  return /*#__PURE__*/_react.default.createElement(_grid.GridCol, (0, _extends2.default)({
+    col: 12,
+    "col-m": sideWidth,
+    className: (0, _classnames.default)('k-SideGrid__aside', className)
+  }, props), /*#__PURE__*/_react.default.createElement("div", {
+    className: (0, _classnames.default)('k-SideGrid__asideContent', contentClassName)
+  }, children));
+};
 
 exports.SideGridAside = SideGridAside;
 SideGrid.defaultProps = {

@@ -23,7 +23,7 @@ const Item = ({ numItem }) => (
 
     <Marger top="3" bottom="3" style={{ padding: '0 40px' }}>
       <Marger bottom="2">
-        <Title modifier="senary" margin={false} style={{ color: '#FFF' }}>
+        <Title modifier="senary" noMargin style={{ color: '#FFF' }}>
           Title {numItem}
         </Title>
       </Marger>
@@ -33,7 +33,7 @@ const Item = ({ numItem }) => (
       </Marger>
 
       <Marger top="3" bottom="3">
-        <Paragraph modifier="tertiary" margin={false} style={{ color: '#FFF' }}>
+        <Paragraph modifier="secondary" noMargin style={{ color: '#FFF' }}>
           Parapraph {numItem}
         </Paragraph>
       </Marger>

@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { ArrowIcon } from '../../../icons/arrow-icon';
-import { Button } from '../../../../components/buttons/button/button';
+import { Button } from '../../../../components/buttons/button';
 export var Item = function Item(_ref) {
   var children = _ref.children,
       external = _ref.external,

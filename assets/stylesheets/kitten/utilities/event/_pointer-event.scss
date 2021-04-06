@@ -12,6 +12,7 @@
 ///
 
 @mixin k-utilities-event {
+  .k-u-pointer-events-none,
   .k-u-avoid-click {
     pointer-events: none;
 

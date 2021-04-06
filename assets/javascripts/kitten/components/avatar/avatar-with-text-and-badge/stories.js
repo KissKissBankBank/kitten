@@ -1,6 +1,6 @@
 import React from 'react'
 import { AvatarWithTextAndBadge } from './index'
-import { text, color } from '@storybook/addon-knobs'
+import { text, color, number, boolean, select } from '@storybook/addon-knobs'
 import { Text } from '../../../components/typography/text'
 
 export default {
@@ -15,59 +15,38 @@ export default {
   ],
 }
 
-export const WithAvatar = args => (
-  <AvatarWithTextAndBadge {...args}>
+export const Default = () => (
+  <AvatarWithTextAndBadge>
     <AvatarWithTextAndBadge.Image
-      src={text('Image src', 'https://via.placeholder.com/40x40.png')}
-      alt={text('Image Alt', 'Avatar')}
-    >
-      <AvatarWithTextAndBadge.Badge
-        a11yText={text('Accessibility Badge text', '2 notifications')}
-        children={text('Badge value', '2')}
-      />
-    </AvatarWithTextAndBadge.Image>
-
-    <AvatarWithTextAndBadge.Text
-      textClassName="k-u-hidden@xxs-down"
-      withEllipsisOverflow={true}
-    >
-      <Text
-        lineHeight="normal"
-        weight="regular"
-        children={text('Text', 'Jean Charles Édouard')}
-      />
-    </AvatarWithTextAndBadge.Text>
-  </AvatarWithTextAndBadge>
-)
-
-export const WithText = args => (
-  <AvatarWithTextAndBadge {...args}>
-    <AvatarWithTextAndBadge.Image
-      text={text('', 'JC')}
+      alt={text('Avatar alt', 'Avatar')}
+      size={select('Avatar size', ['regular', 'big'], 'regular')}
+      src={boolean('Avatar has image', true) && '/kitten.jpg'}
+      text={text('Avatar Text', 'JC')}
       backgroundColor={color('Avatar background color', '#002e7d')}
-      textColor={color('Text color', '#fff')}
+      textColor={color('Avatar text color', '#fff')}
     >
-      <AvatarWithTextAndBadge.Badge
-        a11yText={text('Accessibility Badge text', '2 notifications')}
-        children={text('Badge value', '2')}
-        backgroundColor={color('Badge color', '#19b4fa')}
-      />
+      {number('Badge value (0 to hide)', 2) > 0 && (
+        <AvatarWithTextAndBadge.Badge
+          a11yText="2 notifications"
+          children={number('Badge value (0 to hide)', 2)}
+        />
+      )}
     </AvatarWithTextAndBadge.Image>
 
     <AvatarWithTextAndBadge.Text
-      textClassName="k-u-hidden@xxs-down"
+      className="k-u-hidden@xxs-down"
       withEllipsisOverflow={true}
     >
-      <Text lineHeight="normal" weight="regular">
-        Jean Charles Édouard
-      </Text>
-      <br />
-      <Text weight="light">
-        <Text className="k-u-weight-light k-u-hidden@xs-down">
-          Solde&nbsp;:
-        </Text>{' '}
-        24&nbsp;093,39&nbsp;€
-      </Text>
+      {text('Text', 'Jean Charles Édouard')}
+      {boolean('Second line of text', false) && (
+        <>
+          <br />
+          <Text weight="light" size="tiny">
+            <span className="k-u-hidden@xs-down">Solde&nbsp;:</span>{' '}
+            24&nbsp;093,39&nbsp;€
+          </Text>
+        </>
+      )}
     </AvatarWithTextAndBadge.Text>
   </AvatarWithTextAndBadge>
 )

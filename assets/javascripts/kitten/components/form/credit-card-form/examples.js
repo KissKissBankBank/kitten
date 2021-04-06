@@ -14,12 +14,8 @@ export const DefaultExample = () => {
 }
 
 export const CustomExample = () => {
-  const handleChange = values => {
-    console.warn('Values:', values)
-  }
-
   return (
-    <CreditCardForm onChange={handleChange}>
+    <CreditCardForm>
       <Number />
       <Expiry />
       <Cvc />

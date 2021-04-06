@@ -2,7 +2,7 @@ import React from 'react'
 import { text, number, boolean } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../grid/grid'
 import { Video } from './index'
-import { Loader } from '../../loaders/loader'
+import { Loader } from '../../atoms/loader'
 
 export const Default = () => (
   <Video

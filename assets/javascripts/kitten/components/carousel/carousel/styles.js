@@ -6,7 +6,7 @@ import {
   CONTAINER_PADDING_MOBILE,
   GUTTER,
 } from '../../../constants/grid-config'
-import ColorsConfig from '../../../constants/colors-config'
+import COLORS from '../../../constants/colors-config'
 
 export const OUTLINE_PLUS_OFFSET = 4
 
@@ -227,10 +227,10 @@ export const StyledCarouselContainer = styled.div`
       width: ${pxToRem(6)};
       height: ${pxToRem(6)};
       margin: ${pxToRem(2)};
-      background-color: ${ColorsConfig.font2};
+      background-color: ${COLORS.font2};
 
       &.k-Carousel__pagination__square--isActive {
-        background-color: ${ColorsConfig.font1};
+        background-color: ${COLORS.font1};
       }
     }
   }
@@ -291,10 +291,10 @@ export const StyledCarouselContainer = styled.div`
       margin-left: ${pxToRem(4)};
       margin-right: ${pxToRem(4)};
       border-radius: ${pxToRem(4)};
-      background-color: ${ColorsConfig.font1};
+      background-color: ${COLORS.font1};
 
       &.k-Carousel__pageControl__pageDot--isVisible {
-        background-color: ${ColorsConfig.primary2};
+        background-color: ${COLORS.primary2};
       }
     }
 
@@ -320,8 +320,14 @@ export const StyledCarouselContainer = styled.div`
   .k-Carousel__inner {
     margin: ${pxToRem(-4)};
     &:focus {
-      outline: ${ColorsConfig.primary4} solid ${pxToRem(2)};
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(-2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
     }
 
     display: grid;
@@ -449,8 +455,14 @@ export const StyledCarouselContainer = styled.div`
     }
     .k-Carousel__page__item > a {
       &:focus {
-        outline: ${ColorsConfig.primary4} solid ${pxToRem(2)};
+        outline: ${COLORS.primary4} solid ${pxToRem(2)};
         outline-offset: ${pxToRem(2)};
+      }
+      &:focus:not(:focus-visible) {
+        outline-color: transparent;
+      }
+      &:focus-visible {
+        outline-color: ${COLORS.primary4};
       }
     }
 

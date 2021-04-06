@@ -50,6 +50,14 @@ exports[`<SearchInput /> Basic search input matches with snapshot 1`] = `
   outline-offset: 0.125rem;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
+}
+
 @media (min-width:640px) {
   .c0 {
     font-size: 3rem;
@@ -118,6 +126,14 @@ exports[`<SearchInput /> Search input with attributes matches with snapshot 1`] 
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: #bae8fd;
 }
 
 @media (min-width:640px) {

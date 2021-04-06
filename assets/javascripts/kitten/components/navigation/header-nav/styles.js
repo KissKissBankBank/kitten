@@ -13,6 +13,10 @@ export const StyledHeader = styled.header`
   position: relative;
   z-index: var(--HeaderNav-zIndex);
 
+  .k-HeaderNav__stickyContainer {
+    width: 100%;
+  }
+
   &.k-HeaderNav--menuIsExpanded {
     z-index: var(--HeaderNav-zIndex-openMenu);
 
@@ -30,7 +34,7 @@ export const StyledHeader = styled.header`
     align-items: center;
     overflow: hidden;
     padding-left: ${pxToRem(10)};
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     box-sizing: border-box;
 
@@ -63,6 +67,12 @@ export const StyledHeader = styled.header`
 
       outline-width: ${pxToRem(2)};
       outline-style: solid;
+      outline-color: ${COLORS.primary4};
+    }
+    *:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    *:focus-visible {
       outline-color: ${COLORS.primary4};
     }
   }
@@ -116,17 +126,15 @@ export const StyledHeader = styled.header`
     height: 100%;
     display: flex;
 
-    .text--withEllipsis {
-      text-overflow: ellipsis;
+    .k-Avatar__text.k-Avatar__text--hasEllipsis {
       max-width: ${pxToRem(145)};
-      white-space: nowrap;
-      overflow: hidden;
     }
   }
 
   .k-HeaderNav__UserMenuButton {
-    display: flex;
     align-self: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     height: 100%;
     padding: 0 ${pxToRem(40)};
@@ -139,7 +147,7 @@ export const StyledHeader = styled.header`
       border-color: ${COLORS.background3};
     }
 
-    .is-expanded & {
+    .k-Dropdown--isExpanded & {
       &,
       &:hover {
         background-color: ${COLORS.background1};
@@ -224,5 +232,39 @@ export const StyledHeader = styled.header`
       border-color: currentColor;
       color: ${COLORS.primary1};
     }
+  }
+
+  .k-Dropdown {
+    display: flex;
+  }
+
+  .k-Dropdown__content {
+    position: absolute;
+    top: 0;
+    z-index: 20;
+    min-width: ${pxToRem(200)};
+    margin-top: ${pxToRem(-10)};
+    visibility: hidden;
+    opacity: 0;
+    transition: margin 0.2s, visibility 0.2s, opacity 0.2s;
+    /* Max-height is needed to allow scroll on menu.
+       The 100% is equal to the header height. */
+    max-height: calc(100vh - 100%);
+    box-shadow: 0 ${pxToRem(3)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      min-width: 0;
+      width: 100% !important;
+      left: 0 !important;
+      right: 0 !important;
+    }
+  }
+
+  .k-Dropdown--isExpanded .k-Dropdown__content {
+    margin-top: 0;
+    visibility: visible;
+    opacity: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 `

@@ -1,76 +1,121 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AvatarWithTextAndBadge /> with avatar should match with snapshot 1`] = `
+exports[`<AvatarWithTextAndBadge /> with multiple lines and badge should match with snapshot 1`] = `
 <div
-  className="k-ButtonImageWithText k-u-avoid-click"
-  imageProps={
-    Object {
-      "alt": "Default image",
-      "src": "https://via.placeholder.com/40x40.png",
+  className="sc-bwzfXH fUWdyG k-Avatar__wrapper"
+>
+  <div
+    className="k-Avatar k-Avatar--big"
+    style={
+      Object {
+        "--Avatar-height": undefined,
+        "--Avatar-width": undefined,
+        "--k-Avatar-background-color": "rgba(0,0,0,.8)",
+        "--k-Avatar-color": "white",
+      }
     }
-  }
-  notifications="5"
-  text="Jean-Luc"
-/>
+  >
+    <span
+      className="k-Avatar__imageWrapper"
+    >
+      <img
+        alt="Alt text"
+        className="k-Avatar__image"
+        src="/kitten.jg"
+      />
+    </span>
+    <span
+      aria-label="2 notifications"
+      className="sc-bdVaJa ednBsT k-Badge k-Avatar__badge"
+      style={
+        Object {
+          "--Badge-background-color": "#19b4fa",
+        }
+      }
+    >
+      2
+    </span>
+  </div>
+  <span
+    className="k-Avatar__text k-u-hidden@xxs-down k-Avatar__text--hasEllipsis"
+  >
+    Long Text
+    <br />
+    <span>
+      <span
+        className="k-u-hidden@xs-down"
+      >
+        Solde :
+      </span>
+       
+      24 093,39 €
+    </span>
+  </span>
+</div>
 `;
 
-exports[`<AvatarWithTextAndBadge /> without avatar should match with snapshot 1`] = `
+exports[`<AvatarWithTextAndBadge /> with simple props and avatar should match with snapshot 1`] = `
 <div
-  className="k-ButtonImageWithText k-u-avoid-click"
-  imageProps={
-    Object {
-      "backgroundColor": "#002e7d",
-      "text": <Text
-        className={null}
-        color={null}
-        cssColor={null}
-        decoration={null}
-        fontStyle={null}
-        lineHeight={null}
-        setting={null}
-        size="micro"
-        tag="span"
-        transform={null}
-        weight="bold"
-      >
-        JC
-      </Text>,
+  className="sc-bwzfXH fUWdyG k-Avatar__wrapper"
+>
+  <div
+    className="k-Avatar k-Avatar--regular"
+    style={
+      Object {
+        "--Avatar-height": undefined,
+        "--Avatar-width": undefined,
+        "--k-Avatar-background-color": "#0496cc",
+        "--k-Avatar-color": "#fff",
+      }
     }
-  }
-  notifications="2"
-  subText={
-    <Text
-      className={null}
-      color={null}
-      cssColor={null}
-      decoration={null}
-      fontStyle={null}
-      lineHeight={null}
-      setting={null}
-      size={null}
-      tag="span"
-      transform={null}
-      weight="light"
+  >
+    <span
+      className="k-Avatar__imageWrapper"
     >
-      Solde : 1 000,97 €
-    </Text>
-  }
-  text={
-    <Text
-      className={null}
-      color={null}
-      cssColor={null}
-      decoration={null}
-      fontStyle={null}
-      lineHeight="normal"
-      setting={null}
-      size={null}
-      tag="span"
-      transform={null}
-      weight="bold"
+      <img
+        alt="Alt text"
+        className="k-Avatar__image"
+        src="/kitten.jpg"
+      />
+    </span>
+  </div>
+  <span
+    className="k-Avatar__text"
+  >
+    Simple Text
+  </span>
+</div>
+`;
+
+exports[`<AvatarWithTextAndBadge /> with simple props and no avatar image should match with snapshot 1`] = `
+<div
+  className="sc-bwzfXH fUWdyG k-Avatar__wrapper"
+>
+  <div
+    className="k-Avatar k-Avatar--regular"
+    style={
+      Object {
+        "--Avatar-height": undefined,
+        "--Avatar-width": undefined,
+        "--k-Avatar-background-color": "rgba(0,0,0,.8)",
+        "--k-Avatar-color": "white",
+      }
+    }
+  >
+    <span
+      className="k-Avatar__imageWrapper"
     >
-      Jean Charles
-    </Text>
-  }
-/>
+      <span
+        className="k-Avatar__noImage"
+      >
+        ST
+      </span>
+    </span>
+  </div>
+  <span
+    className="k-Avatar__text"
+  >
+    Simple Text
+  </span>
+</div>
 `;

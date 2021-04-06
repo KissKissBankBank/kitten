@@ -4,7 +4,7 @@ import { boolean } from '@storybook/addon-knobs'
 import { Marger } from '../../layout/marger'
 import { Text } from '../../../components/typography/text'
 import { ButtonGroup } from '../../../components/buttons/button-group'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 import { Field } from '../../../components/form/field'
 import { ArrowContainer } from '../../../components/layout/arrow-container'
 import { BulletList } from '../../../components/lists/bullet-list'
@@ -158,7 +158,7 @@ export const RewardEditionKissKissCode = () => {
               <Marger top="2" bottom="3">
                 <ArrowContainer position="top" color={COLORS.primary5}>
                   <BulletList
-                    small
+                    size="tiny"
                     items={[
                       {
                         key: '1',

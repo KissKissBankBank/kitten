@@ -25,8 +25,6 @@ var _error = require("./components/error");
 
 var _radioButtonSet = require("./components/radio-button-set");
 
-var _select = require("./components/select");
-
 var _checkbox = require("./components/checkbox");
 
 var _password = require("./components/password");
@@ -35,7 +33,7 @@ var _autocomplete = require("./components/autocomplete");
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 var Field = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Field, _Component);
@@ -67,7 +65,6 @@ exports.Field = Field;
 Field.Label = _label.FieldLabel;
 Field.Input = _input.FieldInput;
 Field.RadioButtonSet = _radioButtonSet.FieldRadioButtonSet;
-Field.Select = _select.FieldSelect;
 Field.Checkbox = _checkbox.FieldCheckbox;
 Field.ErrorMessage = _error.FieldError;
 Field.Password = _password.FieldPassword;

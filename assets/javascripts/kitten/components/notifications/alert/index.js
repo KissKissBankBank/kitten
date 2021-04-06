@@ -45,6 +45,12 @@ const AlertWrapper = styled.div`
       outline: ${COLORS.background1} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(-4)};
     }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
   }
 
   a {

@@ -13,14 +13,18 @@ export default {
   ],
 }
 
-export const Default = args => (
-  <div>
-    <ImageCropper {...args} />
-  </div>
-)
+export const Default = args => {
+  return (
+    <div>
+      <ImageCropper {...args} />
+    </div>
+  )
+}
 
-export const WithImage = () => (
-  <div>
-    <ImageCropper imageSrc="/steven.jpg" fileName="Steven" />
-  </div>
-)
+export const WithImage = () => {
+  return (
+    <div>
+      <ImageCropper imageSrc="/kitten.jpg" fileName="Steven" />
+    </div>
+  )
+}

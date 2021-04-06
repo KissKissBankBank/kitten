@@ -27,11 +27,7 @@ import { TextInput } from '@kisskissbankbank/kitten'
 #### Size
 
 ```js
-<TextInput tiny />
-<TextInput regular />
-<TextInput big />
-<TextInput huge />
-<TextInput giant />
+<TextInput size="…" />
 ```
 
 #### Alignment
@@ -61,4 +57,12 @@ import { TextInput } from '@kisskissbankbank/kitten'
   <TextInput digits={2} />
   <TextInput digits={6} />
   <TextInput digits={12} />
+```
+
+### Exception
+
+You can only use `size="big"` with `variant="orion"`.
+
+```js
+  <TextInput variant="orion= size="big" />
 ```

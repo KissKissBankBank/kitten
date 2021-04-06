@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Line/> should match snapshot with default behavior 1`] = `
+<div
+  className="sc-bdVaJa elQzvA k-Line"
+>
+  <div
+    className="k-Line__item"
+  >
+    Item 1
+  </div>
+  <div
+    className="k-Line__item"
+  >
+    Item 2
+  </div>
+  <div
+    className="k-Line__item"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`<Line/> should match snapshot with props 1`] = `
+<div
+  className="sc-bdVaJa elQzvA k-Line custom-class"
+>
+  <div
+    className="k-Line__item custom-class"
+  >
+    Item 1
+  </div>
+  <p>
+    Item 2
+  </p>
+  <div
+    className="k-Line__item"
+  >
+    Item 3
+  </div>
+</div>
+`;

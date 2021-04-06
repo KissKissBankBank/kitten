@@ -32,7 +32,7 @@ describe('<SimplePopover />', () => {
               {
                 label: 'J’ai compris',
                 modifier: 'hydrogen',
-                tiny: true,
+                size: 'tiny',
                 clickOptions: {
                   closeOnClick: true,
                 },
@@ -40,7 +40,7 @@ describe('<SimplePopover />', () => {
               {
                 label: 'Mes préférences',
                 modifier: 'helium',
-                tiny: true,
+                size: 'tiny',
                 onClick: () => {},
               },
             ]}

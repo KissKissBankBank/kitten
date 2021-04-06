@@ -42,8 +42,8 @@ class TitleComponent extends PureComponent {
         {!loading && (
           <Title
             tag="p"
-            margin={false}
-            className="k-Card__title k-CrowdfundingCard__title__title"
+            noMargin
+            className="k-CrowdfundingCard__title__title"
             {...titleProps}
           >
             {titleTruncate && (

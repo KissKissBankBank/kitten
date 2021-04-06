@@ -21,6 +21,8 @@ var _default = {
   // Semi Light Grey
   line2: '#d8d8d8',
   // Grey
+  line3: '#2d2d2d',
+  // Extra semi dark grey, not used for text
   primary1: '#19b4fa',
   // Primary
   primary2: '#05a8e6',

@@ -139,6 +139,18 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   outline-offset: 0.125rem;
 }
 
+.c1 [role='button']:focus:not(:focus-visible),
+.c1 a:focus:not(:focus-visible),
+.c1 button:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c1 [role='button']:focus-visible,
+.c1 a:focus-visible,
+.c1 button:focus-visible {
+  outline-color: #bae8fd;
+}
+
 .c1 li:not(:last-of-type) {
   margin: 0 !important;
 }
@@ -798,6 +810,18 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c1 button:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c1 [role='button']:focus:not(:focus-visible),
+.c1 a:focus:not(:focus-visible),
+.c1 button:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c1 [role='button']:focus-visible,
+.c1 a:focus-visible,
+.c1 button:focus-visible {
+  outline-color: #bae8fd;
 }
 
 .c1 li:not(:last-of-type) {

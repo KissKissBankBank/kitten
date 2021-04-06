@@ -7,6 +7,14 @@ const tagOptions = {
   Textarea: 'textarea',
 }
 
+const sizeOptions = {
+  Tiny: 'tiny',
+  Regular: 'regular',
+  Big: 'big',
+  Huge: 'huge',
+  Giant: 'giant',
+}
+
 const variantOptions = {
   Andromeda: 'andromeda',
   Orion: 'orion',
@@ -19,11 +27,7 @@ export const Default = () => (
     valid={boolean('Valid', false)}
     error={boolean('Error', false)}
     disabled={boolean('Disabled', false)}
-    tiny={boolean('Tiny', false)}
-    regular={boolean('Regular', true)}
-    big={boolean('Big', false)}
-    huge={boolean('Huge', false)}
-    giant={boolean('Giant', false)}
+    size={select('Size', sizeOptions, 'regular')}
     center={boolean('Center', false)}
     placeholder={text('Placeholder', 'Les props sont transmises')}
     digits={number('Digits', 12)}

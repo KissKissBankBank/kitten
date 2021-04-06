@@ -15,9 +15,9 @@ var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/sli
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var _classnames = _interopRequireDefault(require("classnames"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _stickyContainer = require("../../../components/grid/sticky-container");
 
@@ -48,8 +48,6 @@ var _quickAccessLink = require("./components/quick-access-link");
 var _a11y = require("../../../helpers/dom/a11y");
 
 var _events = _interopRequireWildcard(require("../../../helpers/dom/events"));
-
-var _emitter = _interopRequireDefault(require("../../../helpers/utils/emitter"));
 
 var _dropdownConfig = require("../../../constants/dropdown-config");
 
@@ -92,17 +90,17 @@ var HeaderNav = function HeaderNav(_ref) {
 
   var focusDropdown = function focusDropdown(_ref2) {
     var dropdown = _ref2.detail;
-
-    _emitter.default.emit(_events.TOGGLE_DROPDOWN_EVENT, false);
-
+    (0, _events.dispatchEvent)(_events.TOGGLE_DROPDOWN_EVENT, {
+      nextExpandedState: false
+    })();
     dropdown.focus();
   };
 
   var focusElementNextToDropdown = function focusElementNextToDropdown(_ref3) {
     var dropdown = _ref3.detail;
-
-    _emitter.default.emit(_events.TOGGLE_DROPDOWN_EVENT, false);
-
+    (0, _events.dispatchEvent)(_events.TOGGLE_DROPDOWN_EVENT, {
+      nextExpandedState: false
+    })();
     if (!headerRef.current) return;
     setTimeout(function () {
       var focusableElements = (0, _a11y.getFocusableElementsFrom)(headerRef.current);
@@ -184,9 +182,10 @@ var HeaderNav = function HeaderNav(_ref) {
     })
   }, /*#__PURE__*/_react.default.createElement(_stickyContainer.StickyContainer, (0, _extends2.default)({
     ref: stickyContainerRef,
-    isSticky: stickyState,
-    className: "k-HeaderNav__stickyContainer"
-  }, stickyProps), /*#__PURE__*/_react.default.createElement("nav", {
+    isSticky: stickyState
+  }, stickyProps, {
+    className: (0, _classnames.default)('k-HeaderNav__stickyContainer', stickyProps === null || stickyProps === void 0 ? void 0 : stickyProps.className)
+  }), /*#__PURE__*/_react.default.createElement("nav", {
     ref: headerRef,
     role: "banner",
     id: id,

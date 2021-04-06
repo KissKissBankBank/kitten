@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { SimplePopover } from './index'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 
 export default {
   title: 'Popovers/SimplePopover',

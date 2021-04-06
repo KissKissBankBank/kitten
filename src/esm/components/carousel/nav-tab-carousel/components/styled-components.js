@@ -24,11 +24,11 @@ export var LeftEmptyContainer = styled.div.withConfig({
 export var StyledRightArrowContainer = styled.div.withConfig({
   displayName: "styled-components__StyledRightArrowContainer",
   componentId: "jws9qo-2"
-})(["", " ", " &:focus,&:active,&:hover{transform:translate(", ");", "}&:focus{outline:", " solid ", ";outline-offset:", ";}"], rightContainer, sharedStyledArrowIcons, pxToRem(8), sharedHoverStyledArrowIcons, COLORS.primary3, pxToRem(2), pxToRem(2));
+})(["", " ", " &:focus,&:active,&:hover{transform:translate(", ");", "}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}"], rightContainer, sharedStyledArrowIcons, pxToRem(8), sharedHoverStyledArrowIcons, COLORS.primary3, pxToRem(2), pxToRem(2), COLORS.primary3);
 export var StyledLeftArrowContainer = styled.div.withConfig({
   displayName: "styled-components__StyledLeftArrowContainer",
   componentId: "jws9qo-3"
-})(["", " ", " &:focus,&:active,&:hover{transform:translate(-", ");", "}&:focus{outline:", " solid ", ";outline-offset:", ";}"], leftContainer, sharedStyledArrowIcons, pxToRem(8), sharedHoverStyledArrowIcons, COLORS.primary3, pxToRem(2), pxToRem(2));
+})(["", " ", " &:focus,&:active,&:hover{transform:translate(-", ");", "}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}"], leftContainer, sharedStyledArrowIcons, pxToRem(8), sharedHoverStyledArrowIcons, COLORS.primary3, pxToRem(2), pxToRem(2), COLORS.primary3);
 export var StyledArrowIcon = styled(ArrowIcon).withConfig({
   displayName: "styled-components__StyledArrowIcon",
   componentId: "jws9qo-4"

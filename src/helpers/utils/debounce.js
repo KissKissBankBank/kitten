@@ -5,14 +5,11 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.debounce = exports.useDebounce = void 0;
+exports.useDebounce = void 0;
 
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = require("react");
-
-var _arguments = arguments,
-    _this = void 0;
 
 var useDebounce = function useDebounce(value, msDelay) {
   var _useState = (0, _react.useState)(value),
@@ -32,17 +29,3 @@ var useDebounce = function useDebounce(value, msDelay) {
 };
 
 exports.useDebounce = useDebounce;
-
-var debounce = function debounce(fn, msDelay) {
-  var inDebounce;
-  return function () {
-    var context = _this;
-    var args = _arguments;
-    clearTimeout(inDebounce);
-    inDebounce = setTimeout(function () {
-      return fn.apply(context, args);
-    }, msDelay);
-  };
-};
-
-exports.debounce = debounce;

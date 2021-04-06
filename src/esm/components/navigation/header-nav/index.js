@@ -1,8 +1,8 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import React, { useState, useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import { StickyContainer } from '../../../components/grid/sticky-container';
 import { Button } from './components/button';
 import { Logo } from './components/logo';
@@ -17,8 +17,7 @@ import { Logged } from './components/logged';
 import { Hidden } from './components/hidden';
 import { QuickAccessLink } from './components/quick-access-link';
 import { getFocusableElementsFrom, keyboardNavigation } from '../../../helpers/dom/a11y';
-import domEvents, { DROPDOWN_FIRST_FOCUS_REACHED_EVENT, DROPDOWN_LAST_FOCUS_REACHED_EVENT, TOGGLE_DROPDOWN_EVENT } from '../../../helpers/dom/events';
-import emitter from '../../../helpers/utils/emitter';
+import domEvents, { DROPDOWN_FIRST_FOCUS_REACHED_EVENT, DROPDOWN_LAST_FOCUS_REACHED_EVENT, TOGGLE_DROPDOWN_EVENT, dispatchEvent } from '../../../helpers/dom/events';
 import { DROPDOWN_ANIMATED_DELAY } from '../../../constants/dropdown-config';
 import { usePrevious } from '../../../helpers/utils/use-previous-hook';
 import { StyledHeader } from './styles';
@@ -58,13 +57,17 @@ var HeaderNav = function HeaderNav(_ref) {
 
   var focusDropdown = function focusDropdown(_ref2) {
     var dropdown = _ref2.detail;
-    emitter.emit(TOGGLE_DROPDOWN_EVENT, false);
+    dispatchEvent(TOGGLE_DROPDOWN_EVENT, {
+      nextExpandedState: false
+    })();
     dropdown.focus();
   };
 
   var focusElementNextToDropdown = function focusElementNextToDropdown(_ref3) {
     var dropdown = _ref3.detail;
-    emitter.emit(TOGGLE_DROPDOWN_EVENT, false);
+    dispatchEvent(TOGGLE_DROPDOWN_EVENT, {
+      nextExpandedState: false
+    })();
     if (!headerRef.current) return;
     setTimeout(function () {
       var focusableElements = getFocusableElementsFrom(headerRef.current);
@@ -146,9 +149,10 @@ var HeaderNav = function HeaderNav(_ref) {
     })
   }, /*#__PURE__*/React.createElement(StickyContainer, _extends({
     ref: stickyContainerRef,
-    isSticky: stickyState,
-    className: "k-HeaderNav__stickyContainer"
-  }, stickyProps), /*#__PURE__*/React.createElement("nav", {
+    isSticky: stickyState
+  }, stickyProps, {
+    className: classNames('k-HeaderNav__stickyContainer', stickyProps === null || stickyProps === void 0 ? void 0 : stickyProps.className)
+  }), /*#__PURE__*/React.createElement("nav", {
     ref: headerRef,
     role: "banner",
     id: id,

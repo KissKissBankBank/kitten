@@ -8,7 +8,7 @@ import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
@@ -21,7 +21,7 @@ import { VisuallyHidden } from '../../../accessibility/visually-hidden';
 var StyledButton = styled.button.withConfig({
   displayName: "like-button__StyledButton",
   componentId: "wk7ovs-0"
-})(["display:inline-flex;align-items:center;justify-content:center;position:relative;height:", ";padding:0 ", ";border:", " solid ", ";background-color:", ";", ";font-size:", ";color:", ";text-decoration:none;appareance:none;box-sizing:border-box;&:focus{outline:", " solid ", ";outline-offset:", ";}&[aria-pressed='true']{svg{fill:", ";}}", ""], pxToRem(40), pxToRem(15), pxToRem(2), COLORS.line1, COLORS.background1, TYPOGRAPHY.fontStyles.regular, pxToRem(12), COLORS.font1, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.error, function (_ref) {
+})(["display:inline-flex;align-items:center;justify-content:center;position:relative;height:", ";padding:0 ", ";border:", " solid ", ";background-color:", ";", ";font-size:", ";color:", ";text-decoration:none;appareance:none;box-sizing:border-box;&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&[aria-pressed='true']{svg{fill:", ";}}", ""], pxToRem(40), pxToRem(15), pxToRem(2), COLORS.line1, COLORS.background1, TYPOGRAPHY.fontStyles.regular, pxToRem(12), COLORS.font1, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, COLORS.error, function (_ref) {
   var as = _ref.as,
       onClick = _ref.onClick;
   return (as === 'a' || onClick) && css(["cursor:pointer;:hover{svg{fill:", ";}}:focus,:active{border-color:", ";}"], COLORS.error, COLORS.line2);

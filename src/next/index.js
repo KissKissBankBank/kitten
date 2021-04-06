@@ -30,16 +30,16 @@ Object.defineProperty(exports, "Carousel", {
 Object.defineProperty(exports, "Paragraph", {
   enumerable: true,
   get: function get() {
-    return _next2.Paragraph;
+    return _paragraph.Paragraph;
   }
 });
 
 var _next = require("../components/modals/next");
 
-var _stepper = require("../components/steppers/next/stepper");
+var _stepper = require("../components/steppers/stepper");
 
 var _button = require("../components/buttons/button/button");
 
-var _carousel = require("../components/carousel/carousel/carousel");
+var _carousel = require("../components/carousel/carousel");
 
-var _next2 = require("../components/typography/paragraph/next");
+var _paragraph = require("../components/typography/paragraph");

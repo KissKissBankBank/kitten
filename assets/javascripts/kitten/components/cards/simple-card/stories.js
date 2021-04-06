@@ -19,12 +19,15 @@ export const Default = () => {
     <SimpleCard
       href="#"
       imageProps={{
-        src: text('Image src', 'https://placehold.it/200x200/caf4fe/caf4fe'),
+        src: text('Image src', '/kitten.jpg'),
       }}
       title={text('Title', 'Title')}
       subtitle={text('Subtitle', 'Subtitle')}
       paragraph={text('Paragraph', 'Paragraph')}
-      withPlayerButtonOnImage={boolean('With player button on image?', true)}
+      withPlayerButtonOnImage={boolean(
+        'With player button on image?',
+        true,
+      )}
     />
   )
 }

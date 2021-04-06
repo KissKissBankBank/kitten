@@ -4,6 +4,7 @@ import { Field } from '../field'
 const FieldBase = ({
   tooltip,
   tooltipId,
+  tooltipProps,
   label,
   id,
   error,
@@ -14,6 +15,7 @@ const FieldBase = ({
     <Field.Label
       labelProps={{ htmlFor: id }}
       tooltip={tooltip}
+      tooltipProps={tooltipProps}
       tooltipId={tooltipId}
     >
       {label}
@@ -29,6 +31,7 @@ export const FieldInputExample = ({
   label,
   tooltip,
   tooltipId,
+  tooltipProps,
   placeholder,
   error,
   errorMessage,
@@ -40,6 +43,7 @@ export const FieldInputExample = ({
     id={id}
     label={label}
     tooltip={tooltip}
+    tooltipProps={tooltipProps}
     tooltipId={tooltipId}
     error={error}
     errorMessage={errorMessage}
@@ -61,6 +65,7 @@ export const FieldPasswordExample = ({
   label,
   tooltip,
   tooltipId,
+  tooltipProps,
   placeholder,
   error,
   errorMessage,
@@ -70,6 +75,7 @@ export const FieldPasswordExample = ({
     id={id}
     label={label}
     tooltip={tooltip}
+    tooltipProps={tooltipProps}
     tooltipId={tooltipId}
     error={error}
     errorMessage={errorMessage}
@@ -91,6 +97,7 @@ export const FieldRadioButtonSetExample = ({
   label,
   tooltip,
   tooltipId,
+  tooltipProps,
   items,
   error,
   errorMessage,
@@ -99,6 +106,7 @@ export const FieldRadioButtonSetExample = ({
     id={id}
     label={label}
     tooltip={tooltip}
+    tooltipProps={tooltipProps}
     tooltipId={tooltipId}
     error={error}
     errorMessage={errorMessage}
@@ -107,39 +115,12 @@ export const FieldRadioButtonSetExample = ({
   </FieldBase>
 )
 
-export const FieldSelectExample = ({
-  id,
-  label,
-  tooltip,
-  tooltipId,
-  placeholder,
-  options,
-  error,
-  errorMessage,
-}) => (
-  <FieldBase
-    id={id}
-    label={label}
-    tooltip={tooltip}
-    tooltipId={tooltipId}
-    error={error}
-    errorMessage={errorMessage}
-  >
-    <Field.Select
-      id={id}
-      name="select"
-      placeholder={placeholder}
-      options={options}
-      error={error}
-    />
-  </FieldBase>
-)
-
 export const FieldAutocompleteExample = ({
   id,
   label,
   tooltip,
   tooltipId,
+  tooltipProps,
   placeholder,
   error,
   errorMessage,
@@ -150,6 +131,7 @@ export const FieldAutocompleteExample = ({
     id={id}
     label={label}
     tooltip={tooltip}
+    tooltipProps={tooltipProps}
     tooltipId={tooltipId}
     error={error}
     errorMessage={errorMessage}

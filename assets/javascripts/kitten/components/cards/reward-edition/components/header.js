@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
-import { Button } from '../../../../components/buttons/button/button'
+import { Button } from '../../../../components/buttons/button'
 import { GarbageIcon } from '../../../../components/icons/garbage-icon'
 
 const borderWidth = pxToRem(2)
@@ -44,7 +44,7 @@ export const Header = ({
         type="button"
         aria-label={garbageButtonA11yText}
         modifier="hydrogen"
-        micro
+        size="micro"
         icon
         className="k-RewardEdition__Header__Button"
       >
