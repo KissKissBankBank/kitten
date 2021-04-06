@@ -127,7 +127,6 @@ const StyledTagButton = styled.button`
       color: ${COLORS.background1};
     }
   }
-
   &.k-Buttons__tagButton--carbon {
     color: ${COLORS.font1};
     border-color: ${COLORS.background1};
