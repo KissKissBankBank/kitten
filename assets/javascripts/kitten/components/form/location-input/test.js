@@ -16,6 +16,7 @@ describe('<LocationInput />', () => {
           id="location-input-test"
           name="location-input"
           className="custom-wrapper-class-name"
+          variant="andromeda"
           onChange={e => console.warn(e)}
           onSelect={e => console.warn(e)}
           defaultValue="Paris, France"

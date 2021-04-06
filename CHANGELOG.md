@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Fix `TagButton` style.
+- Feature: - Add `variant` prop to `LocationInput`, defaults to `andromeda`.
 
 ## [3.0.0] - 2021-03-26
 
