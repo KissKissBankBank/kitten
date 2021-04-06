@@ -57,9 +57,6 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 
 .c0:disabled {
   cursor: not-allowed;
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
 }
 
 .c0 >:nth-child(n) {
@@ -130,6 +127,13 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   background-color: #fff;
 }
 
+.c0.k-Buttons__tagButton--helium:disabled,
+.c0.k-Buttons__tagButton--hydrogen:disabled {
+  background-color: #d8d8d8;
+  border-color: #d8d8d8;
+  color: #fff;
+}
+
 .c0.k-Buttons__tagButton--carbon {
   color: #222;
   border-color: #fff;
@@ -147,6 +151,12 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
+}
+
+.c0.k-Buttons__tagButton--carbon:disabled {
+  background-color: #d8d8d8;
+  border-color: #d8d8d8;
+  color: #fff;
 }
 
 .c0.k-Buttons__tagButton--selected {
@@ -248,9 +258,6 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
 
 .c0:disabled {
   cursor: not-allowed;
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
 }
 
 .c0 >:nth-child(n) {
@@ -321,6 +328,13 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   background-color: #fff;
 }
 
+.c0.k-Buttons__tagButton--helium:disabled,
+.c0.k-Buttons__tagButton--hydrogen:disabled {
+  background-color: #d8d8d8;
+  border-color: #d8d8d8;
+  color: #fff;
+}
+
 .c0.k-Buttons__tagButton--carbon {
   color: #222;
   border-color: #fff;
@@ -338,6 +352,12 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
+}
+
+.c0.k-Buttons__tagButton--carbon:disabled {
+  background-color: #d8d8d8;
+  border-color: #d8d8d8;
+  color: #fff;
 }
 
 .c0.k-Buttons__tagButton--selected {
@@ -439,9 +459,6 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
 
 .c0:disabled {
   cursor: not-allowed;
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
 }
 
 .c0 >:nth-child(n) {
@@ -512,6 +529,13 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   background-color: #fff;
 }
 
+.c0.k-Buttons__tagButton--helium:disabled,
+.c0.k-Buttons__tagButton--hydrogen:disabled {
+  background-color: #d8d8d8;
+  border-color: #d8d8d8;
+  color: #fff;
+}
+
 .c0.k-Buttons__tagButton--carbon {
   color: #222;
   border-color: #fff;
@@ -529,6 +553,12 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
+}
+
+.c0.k-Buttons__tagButton--carbon:disabled {
+  background-color: #d8d8d8;
+  border-color: #d8d8d8;
+  color: #fff;
 }
 
 .c0.k-Buttons__tagButton--selected {
@@ -630,9 +660,6 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 
 .c0:disabled {
   cursor: not-allowed;
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
 }
 
 .c0 >:nth-child(n) {
@@ -703,6 +730,13 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   background-color: #fff;
 }
 
+.c0.k-Buttons__tagButton--helium:disabled,
+.c0.k-Buttons__tagButton--hydrogen:disabled {
+  background-color: #d8d8d8;
+  border-color: #d8d8d8;
+  color: #fff;
+}
+
 .c0.k-Buttons__tagButton--carbon {
   color: #222;
   border-color: #fff;
@@ -720,6 +754,12 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
+}
+
+.c0.k-Buttons__tagButton--carbon:disabled {
+  background-color: #d8d8d8;
+  border-color: #d8d8d8;
+  color: #fff;
 }
 
 .c0.k-Buttons__tagButton--selected {
@@ -837,9 +877,6 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 
 .c0:disabled {
   cursor: not-allowed;
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
 }
 
 .c0 >:nth-child(n) {
@@ -910,6 +947,13 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   background-color: #fff;
 }
 
+.c0.k-Buttons__tagButton--helium:disabled,
+.c0.k-Buttons__tagButton--hydrogen:disabled {
+  background-color: #d8d8d8;
+  border-color: #d8d8d8;
+  color: #fff;
+}
+
 .c0.k-Buttons__tagButton--carbon {
   color: #222;
   border-color: #fff;
@@ -927,6 +971,12 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
+}
+
+.c0.k-Buttons__tagButton--carbon:disabled {
+  background-color: #d8d8d8;
+  border-color: #d8d8d8;
+  color: #fff;
 }
 
 .c0.k-Buttons__tagButton--selected {

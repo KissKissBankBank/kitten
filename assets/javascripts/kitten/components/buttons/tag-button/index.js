@@ -49,11 +49,8 @@ const StyledTagButton = styled.button`
     border-radius: ${pxToRem(8)};
   }
 
-  :disabled {
+  &:disabled {
     cursor: not-allowed;
-    background-color: ${COLORS.line2};
-    border-color: ${COLORS.line2};
-    color: ${COLORS.background1};
   }
 
   > :nth-child(n) {
@@ -113,20 +110,24 @@ const StyledTagButton = styled.button`
     color: ${COLORS.font1};
     border-color: ${COLORS.line1};
     background-color: ${COLORS.background1};
-
     &:hover,
     &:focus {
       color: ${COLORS.background1};
       border-color: ${COLORS.primary2};
       background-color: ${COLORS.primary2};
     }
-
     &:active {
       color: ${COLORS.primary2};
       border-color: ${COLORS.primary2};
       background-color: ${COLORS.background1};
     }
+    &:disabled {
+      background-color: ${COLORS.line2};
+      border-color: ${COLORS.line2};
+      color: ${COLORS.background1};
+    }
   }
+
   &.k-Buttons__tagButton--carbon {
     color: ${COLORS.font1};
     border-color: ${COLORS.background1};
@@ -141,6 +142,11 @@ const StyledTagButton = styled.button`
       color: ${COLORS.primary1};
       border-color: ${COLORS.background1};
       background-color: ${COLORS.background1};
+    }
+    &:disabled {
+      background-color: ${COLORS.line2};
+      border-color: ${COLORS.line2};
+      color: ${COLORS.background1};
     }
   }
   &.k-Buttons__tagButton--selected {
