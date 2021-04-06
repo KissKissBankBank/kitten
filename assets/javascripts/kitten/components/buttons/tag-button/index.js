@@ -51,6 +51,9 @@ const StyledTagButton = styled.button`
 
   :disabled {
     cursor: not-allowed;
+    background-color: ${COLORS.line2};
+    border-color: ${COLORS.line2};
+    color: ${COLORS.background1};
   }
 
   > :nth-child(n) {
