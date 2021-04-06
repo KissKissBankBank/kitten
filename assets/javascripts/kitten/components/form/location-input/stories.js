@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { LocationInput } from './index'
 import { text, select } from '@storybook/addon-knobs'
-import { Container } from '../../grid/container'
 
 export default {
   title: 'Form/LocationInput',
@@ -48,13 +47,13 @@ export const Default = () => {
   if (!googleMapsReady) return <p>Loading</p>
 
   return (
-    <Container>
+    <>
       <LocationInput
         onChange={e => console.warn(e)}
         onSelect={e => console.warn(e)}
         variant={select('Variant', variantOptions, 'andromeda')}
       />
       😺😸😹😻😼😽🙀😿😾
-    </Container>
+    </>
   )
 }

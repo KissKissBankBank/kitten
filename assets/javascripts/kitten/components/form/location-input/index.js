@@ -224,5 +224,5 @@ LocationInput.propTypes = {
   inputProps: PropTypes.object,
   name: PropTypes.string,
   loadingText: PropTypes.string,
-  variant: PropTypes.string,
+  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }
