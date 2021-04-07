@@ -41,7 +41,7 @@ export const WithInput = () => {
         errorMessage={text('Error', 'Error message…')}
         limit={number('Limit', undefined)}
         unit={text('Unit', undefined)}
-        noMargin={boolean('No margin', false)}
+        noMargin={boolean('No margin only on Input', false)}
       />
     </StoryGrid>
   )
