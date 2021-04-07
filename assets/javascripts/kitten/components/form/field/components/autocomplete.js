@@ -1,9 +1,8 @@
 import React from 'react'
-import { Marger } from '../../../layout/marger'
 import { Autocomplete } from '../../../form/autocomplete'
 
 export const FieldAutocomplete = props => (
-  <Marger top="1">
+  <div className="k-u-margin-top-single">
     <Autocomplete {...props} />
-  </Marger>
+  </div>
 )

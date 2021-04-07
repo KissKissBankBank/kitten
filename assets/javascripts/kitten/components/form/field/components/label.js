@@ -1,58 +1,54 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import { Marger } from '../../../layout/marger'
 import { Label } from '../../../form/label'
 import { Toggletip } from '../../../tooltips/toggletip'
 import { Line } from '../../../layout/line'
 
-export class FieldLabel extends Component {
-  static propTypes = {
-    link: PropTypes.node,
-    tooltip: PropTypes.string,
-    labelProps: PropTypes.object,
-    tooltipProps: PropTypes.object,
-  }
+export const FieldLabel = ({
+  children,
+  tooltip,
+  tooltipId,
+  tooltipProps,
+  labelProps,
+  link,
+  ...others
+}) => {
 
-  static defaultProps = {
-    tooltip: null,
-    labelProps: {},
-  }
+  return (
+    <div className="k-u-margin-bottom-single" {...others}>
+      <Line style={{ lineHeight: 1 }}>
+        <Line.Item>
+          <Label {...labelProps} size={labelProps.size || 'micro'}>
+            {children}
+          </Label>
+        </Line.Item>
 
-  render() {
-    const {
-      children,
-      tooltip,
-      tooltipId,
-      tooltipProps,
-      labelProps,
-      link,
-      ...others
-    } = this.props
-
-    return (
-      <Marger bottom="1" {...others}>
-        <Line style={{ lineHeight: 1 }}>
+        {tooltip && (
           <Line.Item>
-            <Label {...labelProps} size={labelProps.size || 'micro'}>
-              {children}
-            </Label>
+            <Toggletip
+              id={tooltipId}
+              bubbleProps={{ zIndex: 2 }}
+              {...tooltipProps}
+            >
+              {tooltip}
+            </Toggletip>
           </Line.Item>
+        )}
 
-          {tooltip && (
-            <Line.Item>
-              <Toggletip
-                id={tooltipId}
-                bubbleProps={{ zIndex: 2 }}
-                {...tooltipProps}
-              >
-                {tooltip}
-              </Toggletip>
-            </Line.Item>
-          )}
+        {link && <Line.Item>{link}</Line.Item>}
+      </Line>
+    </div>
+  )
+}
 
-          {link && <Line.Item>{link}</Line.Item>}
-        </Line>
-      </Marger>
-    )
-  }
+FieldLabel.propTypes = {
+  link: PropTypes.node,
+  tooltip: PropTypes.string,
+  labelProps: PropTypes.object,
+  tooltipProps: PropTypes.object,
+}
+
+FieldLabel.defaultProps = {
+  tooltip: null,
+  labelProps: {},
 }

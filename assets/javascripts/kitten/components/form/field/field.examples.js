@@ -38,6 +38,7 @@ export const FieldInputExample = ({
   limit,
   unit,
   tiny,
+  noMargin,
 }) => (
   <FieldBase
     id={id}
@@ -56,6 +57,7 @@ export const FieldInputExample = ({
       name="field"
       placeholder={placeholder}
       error={error}
+      noMargin={noMargin}
     />
   </FieldBase>
 )
