@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-
 import { StickyContainer } from '../../../components/grid/sticky-container'
 import { Button } from './components/button'
 import { Logo } from './components/logo'

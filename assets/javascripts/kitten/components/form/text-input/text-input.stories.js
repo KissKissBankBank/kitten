@@ -33,3 +33,11 @@ export const Default = () => (
     digits={number('Digits', 12)}
   />
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      <Story />
+    </div>
+  ),
+]

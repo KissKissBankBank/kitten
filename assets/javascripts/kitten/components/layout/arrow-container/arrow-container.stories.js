@@ -27,3 +27,11 @@ export const Default = () => (
     </Text>
   </ArrowContainer>
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      <Story />
+    </div>
+  ),
+]

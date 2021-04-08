@@ -16,4 +16,11 @@ export const Default = () => {
 export default {
   title: 'Meters/CounterBlock',
   component: CounterBlock,
+  decorators: [
+    Story => (
+      <div className="story-Container">
+        <Story />
+      </div>
+    ),
+  ],
 }

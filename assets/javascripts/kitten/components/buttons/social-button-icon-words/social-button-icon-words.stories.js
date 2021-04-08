@@ -5,39 +5,35 @@ import {
   InstagramButtonIconWords,
   LinkedinButtonIconWords,
 } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
 
 export default {
   component: SocialButtonIconWords,
   title: 'Buttons/SocialButtonIconWords',
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      <Grid>{children}</Grid>
-    </Marger>
-  </Container>
-)
-
 export const SocialButtonIconWords = () => (
-  <StoryContainer>
-    <GridCol col-s="6" col-l="3">
+  <>
+    <div>
       <FacebookButtonIconWords fluid>Facebook</FacebookButtonIconWords>
-    </GridCol>
+    </div>
 
-    <GridCol col-s="6" col-l="3">
+    <div>
       <TwitterButtonIconWords fluid>Twitter</TwitterButtonIconWords>
-    </GridCol>
+    </div>
 
-    <GridCol col-s="6" col-l="3">
+    <div>
       <InstagramButtonIconWords fluid>Instagram</InstagramButtonIconWords>
-    </GridCol>
+    </div>
 
-    <GridCol col-s="6" col-l="3">
+    <div>
       <LinkedinButtonIconWords fluid>Linkedin</LinkedinButtonIconWords>
-    </GridCol>
-  </StoryContainer>
+    </div>
+  </>
 )

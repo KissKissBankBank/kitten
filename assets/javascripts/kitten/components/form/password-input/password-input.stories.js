@@ -17,3 +17,10 @@ export const Default = () => (
 )
 
 Default.storyName = 'Password input'
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      <Story />
+    </div>
+  ),
+]

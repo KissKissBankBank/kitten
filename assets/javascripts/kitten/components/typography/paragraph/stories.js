@@ -18,6 +18,13 @@ export default {
     component: Paragraph,
     componentSubtitle: 'List of Paragraph',
   },
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const DefaultProp = () => (
@@ -39,7 +46,7 @@ export const DefaultProp = () => (
 )
 
 export const Modifier = () => (
-  <>
+  <div>
     <Text weight="bold">Primary</Text>
     <br />
     <Text size="micro">• Desktop version - 20px</Text>
@@ -141,7 +148,7 @@ export const Modifier = () => (
         scrambled it to make a type specimen book…
       </Paragraph>
     </Marger>
-  </>
+  </div>
 )
 
 export const Italic = () => (

@@ -1,8 +1,6 @@
 import React from 'react'
 import { select } from '@storybook/addon-knobs'
-import { Container } from '../../../components/grid/container'
 import { Timeline } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
 
 export default {
   component: Timeline,
@@ -10,6 +8,13 @@ export default {
   parameters: {
     component: Timeline,
   },
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 const itemHeightChoices = {
@@ -18,15 +23,12 @@ const itemHeightChoices = {
 }
 
 export const Default = () => (
-  <Container>
-    <Grid className="k-u-margin-top-quadruple k-u-margin-bottom-quadruple">
-      <GridCol offset="1" col="6">
-        <Timeline itemHeight={select('itemHeight', itemHeightChoices, 'large')}>
-          <span>foo</span>
-          <span>bar</span>
-          <span>baz</span>
-        </Timeline>
-      </GridCol>
-    </Grid>
-  </Container>
+  <>
+    <div></div>
+    <Timeline itemHeight={select('itemHeight', itemHeightChoices, 'large')}>
+      <span>foo</span>
+      <span>bar</span>
+      <span>baz</span>
+    </Timeline>
+  </>
 )

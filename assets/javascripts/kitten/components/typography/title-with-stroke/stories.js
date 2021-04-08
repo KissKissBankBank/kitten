@@ -1,8 +1,6 @@
 import React from 'react'
 import { text, boolean, select, color } from '@storybook/addon-knobs'
 import { TitleWithStroke } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
 import { Text } from '../../typography/text'
 import COLORS from '../../../constants/colors-config'
 
@@ -29,26 +27,29 @@ export default {
     component: TitleWithStroke,
     componentSubtitle: 'List of TitleWithStroke',
   },
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const DefaultProps = () => (
-  <Container>
-    <Marger top="4">
-      <TitleWithStroke
-        modifier={select('Modifier', modifierOptions, 'primary')}
-        italic={boolean('Italic', false)}
-        align={select('Align', alignOptions, 'left')}
-        cssColor={color('cssColor', COLORS.font1)}
-      >
-        {text('Title', 'Lorem ipsum dolor sit amet')}
-      </TitleWithStroke>
-    </Marger>
-  </Container>
+  <TitleWithStroke
+    modifier={select('Modifier', modifierOptions, 'primary')}
+    italic={boolean('Italic', false)}
+    align={select('Align', alignOptions, 'left')}
+    cssColor={color('cssColor', COLORS.font1)}
+  >
+    {text('Title', 'Lorem ipsum dolor sit amet')}
+  </TitleWithStroke>
 )
 
 export const Modifier = () => (
-  <>
-    <Marger>
+  <div>
+    <div>
       <Text weight="bold">Primary</Text>
       <br />
       <Text size="micro">• Desktop version - 64px</Text>
@@ -56,23 +57,23 @@ export const Modifier = () => (
       <TitleWithStroke modifier="primary">
         Lorem ipsum dolor sit amet…
       </TitleWithStroke>
-      <Marger top="1">
+      <p className="k-u-margin-top-single">
         <Text size="micro">• Tablet version - 48px</Text>
         <br />
         <TitleWithStroke modifier="secondary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-      </Marger>
-      <Marger top="1">
+      </p>
+      <p className="k-u-margin-top-single">
         <Text size="micro">• Mobile version - 36px</Text>
         <br />
         <TitleWithStroke modifier="tertiary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-      </Marger>
-    </Marger>
+      </p>
+    </div>
 
-    <Marger top="7">
+    <div className="k-u-margin-top-septuple">
       <Text weight="bold">Secondary</Text>
       <br />
       <Text size="micro">• Desktop version - 48px</Text>
@@ -80,23 +81,23 @@ export const Modifier = () => (
       <TitleWithStroke modifier="secondary">
         Lorem ipsum dolor sit amet…
       </TitleWithStroke>
-      <Marger top="1">
+      <p className="k-u-margin-top-single">
         <Text size="micro">• Tablet version - 36px</Text>
         <br />
         <TitleWithStroke modifier="tertiary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-      </Marger>
-      <Marger top="1">
+      </p>
+      <p className="k-u-margin-top-single">
         <Text size="micro">• Mobile version - 32px</Text>
         <br />
         <TitleWithStroke modifier="quaternary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-      </Marger>
-    </Marger>
+      </p>
+    </div>
 
-    <Marger top="7">
+    <div className="k-u-margin-top-septuple">
       <Text weight="bold">Tertiary</Text>
       <br />
       <Text size="micro">• Desktop version - 36px</Text>
@@ -104,23 +105,23 @@ export const Modifier = () => (
       <TitleWithStroke modifier="tertiary">
         Lorem ipsum dolor sit amet…
       </TitleWithStroke>
-      <Marger top="1">
+      <p className="k-u-margin-top-single">
         <Text size="micro">• Tablet version - 32px</Text>
         <br />
         <TitleWithStroke modifier="quaternary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-      </Marger>
-      <Marger top="1">
+      </p>
+      <p className="k-u-margin-top-single">
         <Text size="micro">• Mobile version - 28px</Text>
         <br />
         <TitleWithStroke modifier="quinary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-      </Marger>
-    </Marger>
+      </p>
+    </div>
 
-    <Marger top="7">
+    <div className="k-u-margin-top-septuple">
       <Text weight="bold">Quaternary</Text>
       <br />
       <Text size="micro">• Desktop version - 32px</Text>
@@ -128,23 +129,23 @@ export const Modifier = () => (
       <TitleWithStroke modifier="quaternary">
         Lorem ipsum dolor sit amet…
       </TitleWithStroke>
-      <Marger top="1">
+      <p className="k-u-margin-top-single">
         <Text size="micro">• Tablet version - 28px</Text>
         <br />
         <TitleWithStroke modifier="quinary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-      </Marger>
-      <Marger top="1">
+      </p>
+      <p className="k-u-margin-top-single">
         <Text size="micro">• Mobile version - 24px</Text>
         <br />
         <TitleWithStroke modifier="senary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-      </Marger>
-    </Marger>
+      </p>
+    </div>
 
-    <Marger top="7">
+    <div className="k-u-margin-top-septuple">
       <Text weight="bold">Quinary</Text>
       <br />
       <Text size="micro">• Desktop version - 28px</Text>
@@ -152,23 +153,23 @@ export const Modifier = () => (
       <TitleWithStroke modifier="quinary">
         Lorem ipsum dolor sit amet…
       </TitleWithStroke>
-      <Marger top="1">
+      <p className="k-u-margin-top-single">
         <Text size="micro">• Tablet version - 24px</Text>
         <br />
         <TitleWithStroke modifier="senary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-      </Marger>
-      <Marger top="1">
+      </p>
+      <p className="k-u-margin-top-single">
         <Text size="micro">• Mobile version - 20px</Text>
         <br />
         <TitleWithStroke modifier="septenary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-      </Marger>
-    </Marger>
+      </p>
+    </div>
 
-    <Marger top="7">
+    <div className="k-u-margin-top-septuple">
       <Text weight="bold">Senary</Text>
       <br />
       <Text size="micro">• Desktop version - 24px</Text>
@@ -176,23 +177,23 @@ export const Modifier = () => (
       <TitleWithStroke modifier="senary">
         Lorem ipsum dolor sit amet…
       </TitleWithStroke>
-      <Marger top="1">
+      <p className="k-u-margin-top-single">
         <Text size="micro">• Tablet version - 20px</Text>
         <br />
         <TitleWithStroke modifier="septenary">
           Lorem ipsum dolor sit amet…
         </TitleWithStroke>
-      </Marger>
-      <Marger top="1">
+      </p>
+      <p className="k-u-margin-top-single">
         <Text size="micro">• Mobile version - 18px</Text>
         <br />
         <Text size="big" weight="bold">
           Lorem ipsum dolor sit amet…
         </Text>
-      </Marger>
-    </Marger>
+      </p>
+    </div>
 
-    <Marger top="7">
+    <div className="k-u-margin-top-septuple">
       <Text weight="bold">Septenary</Text>
       <br />
       <Text size="micro">• Desktop version - 20px</Text>
@@ -200,22 +201,22 @@ export const Modifier = () => (
       <TitleWithStroke modifier="septenary">
         Lorem ipsum dolor sit amet…
       </TitleWithStroke>
-      <Marger top="1">
+      <p className="k-u-margin-top-single">
         <Text size="micro">• Tablet version - 18px</Text>
         <br />
         <Text size="big" weight="bold">
           Lorem ipsum dolor sit amet…
         </Text>
-      </Marger>
-      <Marger top="1">
+      </p>
+      <p className="k-u-margin-top-single">
         <Text size="micro">• Mobile version - 16px</Text>
         <br />
         <Text size="default" weight="bold">
           Lorem ipsum dolor sit amet…
         </Text>
-      </Marger>
-    </Marger>
-  </>
+      </p>
+    </div>
+  </div>
 )
 
 export const AlignCenter = () => (

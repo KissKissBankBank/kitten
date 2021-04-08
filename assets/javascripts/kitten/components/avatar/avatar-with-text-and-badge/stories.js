@@ -6,6 +6,13 @@ import { Text } from '../../../components/typography/text'
 export default {
   title: 'Avatar/AvatarWithTextAndBadge',
   component: AvatarWithTextAndBadge,
+  decorators: [
+    Story => (
+      <div className="story-Container">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const Default = () => (

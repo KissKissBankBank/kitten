@@ -21,3 +21,11 @@ export const Default = () => (
     placeholder={text('Les props sont transmises', 'Les props sont transmises')}
   />
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      <Story />
+    </div>
+  ),
+]

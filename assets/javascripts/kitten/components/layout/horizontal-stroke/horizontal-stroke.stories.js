@@ -31,3 +31,11 @@ export const Default = () => (
     style={object('Style object', { backgroundColor: '#333' })}
   />
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid">
+      <Story />
+    </div>
+  ),
+]

@@ -11,17 +11,23 @@ const sizeOptions = {
 }
 
 export const Default = () => (
-  <div className="k-u-margin-vertical-quadruple k-u-margin-horizontal-auto">
-    <TextInputWithUnit
-      valid={boolean('Valid', false)}
-      disabled={boolean('Disabled', false)}
-      size={select('Size', sizeOptions, 'regular')}
-      center={boolean('Center', false)}
-      error={boolean('Error', false)}
-      unit={text('Unit', '€')}
-      unitWord={text('UnitWord', null)}
-      digits={number('Digits', null)}
-      variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
-    />
-  </div>
+  <TextInputWithUnit
+    valid={boolean('Valid', false)}
+    disabled={boolean('Disabled', false)}
+    size={select('Size', sizeOptions, 'regular')}
+    center={boolean('Center', false)}
+    error={boolean('Error', false)}
+    unit={text('Unit', '€')}
+    unitWord={text('UnitWord', null)}
+    digits={number('Digits', null)}
+    variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
+  />
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      <Story />
+    </div>
+  ),
+]

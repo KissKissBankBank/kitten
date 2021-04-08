@@ -19,6 +19,13 @@ const ExampleText = styled(Text)`
 export default {
   title: 'List/List',
   component: List,
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const SimpleList = () => {

@@ -153,3 +153,15 @@ export const CustomFunctions = () => {
     />
   )
 }
+
+export default {
+  component: DocumentManager,
+  title: 'Box/DocumentManager',
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
+}

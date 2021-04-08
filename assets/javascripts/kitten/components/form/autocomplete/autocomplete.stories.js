@@ -1,8 +1,5 @@
 import React from 'react'
 import { optionsKnob, text, boolean } from '@storybook/addon-knobs'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
 import { Autocomplete } from './index'
 import { Field } from '../../form/field'
 import { LocationIcon } from '../../icons/location-icon'
@@ -127,68 +124,64 @@ const items = [
   'York Chocolate',
 ]
 
-const StoryGrid = ({ children }) => (
-  <Container>
-    <Grid>
-      <GridCol col-l="3">
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
-  </Container>
-)
-
 export const Default = () => (
-  <StoryGrid>
-    <Field>
-      <Field.Label labelProps={{ htmlFor: 'autocomplete' }}>
-        Choose your kitten:
-      </Field.Label>
+  <Field>
+    <Field.Label labelProps={{ htmlFor: 'autocomplete' }}>
+      Choose your kitten:
+    </Field.Label>
 
-      <Autocomplete
-        id="autocomplete"
-        name="autocomplete"
-        placeholder="Search a kitten…"
-        isLoading={boolean('isLoading', false)}
-        noResultMessage={text('noResultMessage', undefined)}
-        shouldShowNoResultMessage={boolean('shouldShowNoResultMessage', true)}
-        items={items}
-      />
+    <Autocomplete
+      id="autocomplete"
+      name="autocomplete"
+      placeholder="Search a kitten…"
+      isLoading={boolean('isLoading', false)}
+      noResultMessage={text('noResultMessage', undefined)}
+      shouldShowNoResultMessage={boolean('shouldShowNoResultMessage', true)}
+      items={items}
+    />
 
-      <p>🐱 🐱 🐱 🐱 🐱</p>
-    </Field>
-  </StoryGrid>
+    <p>🐱 🐱 🐱 🐱 🐱</p>
+  </Field>
 )
 
 export const WithIcon = () => (
-  <StoryGrid>
-    <Field>
-      <Field.Label labelProps={{ htmlFor: 'autocomplete' }}>
-        Choose your kitten:
-      </Field.Label>
+  <Field>
+    <Field.Label labelProps={{ htmlFor: 'autocomplete' }}>
+      Choose your kitten:
+    </Field.Label>
 
-      <Autocomplete
-        id="autocomplete"
-        name="autocomplete"
-        placeholder="Search a kitten…"
-        isLoading={boolean('isLoading', false)}
-        icon={<LocationIcon />}
-        noResultMessage={text('noResultMessage', undefined)}
-        shouldShowNoResultMessage={boolean('shouldShowNoResultMessage', true)}
-        iconPosition={optionsKnob(
-          'iconPosition',
-          {
-            left: 'left',
-            right: 'right',
-          },
-          'left',
-          { display: 'inline-radio' },
-        )}
-        items={items}
-      />
+    <Autocomplete
+      id="autocomplete"
+      name="autocomplete"
+      placeholder="Search a kitten…"
+      isLoading={boolean('isLoading', false)}
+      icon={<LocationIcon />}
+      noResultMessage={text('noResultMessage', undefined)}
+      shouldShowNoResultMessage={boolean('shouldShowNoResultMessage', true)}
+      iconPosition={optionsKnob(
+        'iconPosition',
+        {
+          left: 'left',
+          right: 'right',
+        },
+        'left',
+        { display: 'inline-radio' },
+      )}
+      items={items}
+    />
 
-      <p>🐱 🐱 🐱 🐱 🐱</p>
-    </Field>
-  </StoryGrid>
+    <p>🐱 🐱 🐱 🐱 🐱</p>
+  </Field>
 )
+
+export default {
+  component: Field,
+  title: 'Form/Autocomplete',
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid">
+        <Story />
+      </div>
+    ),
+  ],
+}

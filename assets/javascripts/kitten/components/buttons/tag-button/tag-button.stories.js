@@ -29,3 +29,15 @@ export const WithIcon = () => (
     <VisaIcon />
   </TagButton>
 )
+
+export default {
+  component: TagButton,
+  title: 'Buttons/TagButton',
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--thin">
+        <Story />
+      </div>
+    ),
+  ],
+}

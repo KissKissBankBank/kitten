@@ -30,3 +30,11 @@ export const Default = () => (
     </LinkBox.Text>
   </LinkBox>
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      <Story />
+    </div>
+  ),
+]

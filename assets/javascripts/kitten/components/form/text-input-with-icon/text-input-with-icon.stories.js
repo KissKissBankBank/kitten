@@ -16,3 +16,11 @@ export const Default = () => (
     icon={<SearchIcon aria-label="Search icon" width="15" height="15" />}
   />
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      <Story />
+    </div>
+  ),
+]

@@ -11,6 +11,13 @@ export default {
     component: Text,
     componentSubtitle: 'List of Text',
   },
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 const colorOptions = {
@@ -60,7 +67,7 @@ export const DefaultProp = () => (
 )
 
 export const Size = () => (
-  <>
+  <div>
     <Text size="micro">• size="huge"</Text>
     <br />
     <Text size="huge">Lorem ipsum dolor sit amet…</Text>
@@ -84,11 +91,11 @@ export const Size = () => (
       <br />
       <Text size="micro">Lorem ipsum dolor sit amet…</Text>
     </Marger>
-  </>
+  </div>
 )
 
 export const Color = () => (
-  <>
+  <div>
     <Text size="micro">• color="font1"</Text>
     <br />
     <Text color="font1">Lorem ipsum dolor sit amet…</Text>
@@ -119,11 +126,11 @@ export const Color = () => (
       <br />
       <Text color="valid">Lorem ipsum dolor sit amet…</Text>
     </Marger>
-  </>
+  </div>
 )
 
 export const FontStyle = () => (
-  <>
+  <div>
     <Text size="micro">• fontStyle="normal"</Text>
     <br />
     <Text fontStyle="normal">Lorem ipsum dolor sit amet…</Text>
@@ -132,11 +139,11 @@ export const FontStyle = () => (
       <br />
       <Text fontStyle="italic">Lorem ipsum dolor sit amet…</Text>
     </Marger>
-  </>
+  </div>
 )
 
 export const Weight = () => (
-  <>
+  <div>
     <Text size="micro">• weight="light" - font-weight: 400, Maax Regular</Text>
     <br />
     <Text weight="light">Lorem ipsum dolor sit amet…</Text>
@@ -152,21 +159,21 @@ export const Weight = () => (
       <br />
       <Text weight="bold">Lorem ipsum dolor sit amet…</Text>
     </Marger>
-  </>
+  </div>
 )
 
 export const Decoration = () => (
-  <>
+  <div>
     <Text size="micro">• decoration="underline"</Text>
     <br />
     <Text decoration="underline">Lorem ipsum dolor sit amet…</Text>
-  </>
+  </div>
 )
 
 export const Transform = () => (
-  <>
+  <div>
     <Text size="micro">• transform="uppercase"</Text>
     <br />
     <Text transform="uppercase">Lorem ipsum dolor sit amet…</Text>
-  </>
+  </div>
 )

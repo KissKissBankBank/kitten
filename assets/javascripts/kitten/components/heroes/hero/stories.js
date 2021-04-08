@@ -9,6 +9,13 @@ export default {
   parameters: {
     component: Hero,
   },
+  decorators: [
+    Story => (
+      <div className="story-Container">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const Default = () => (

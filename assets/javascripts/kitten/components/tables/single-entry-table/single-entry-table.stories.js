@@ -31,3 +31,11 @@ export const Default = () => (
     </SingleEntryTable.Body>
   </SingleEntryTable>
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container">
+      <Story />
+    </div>
+  ),
+]

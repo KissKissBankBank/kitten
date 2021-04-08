@@ -6,6 +6,13 @@ import { Loader } from '../../../components/atoms/loader'
 export default {
   component: BasicUploader,
   title: 'Uploaders/BasicUploader',
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const StatusReady = args => (

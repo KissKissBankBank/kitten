@@ -1,20 +1,17 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { text } from '@storybook/addon-knobs'
 import { BackerCard } from './index'
-import { Container } from '../../../components/grid/container'
-import { Grid, GridCol } from '../../../components/grid/grid'
-import { Marger } from '../../../components/layout/marger'
 import { Text } from '../../../components/typography/text'
 
 const Description = () => (
-  <Fragment>
+  <>
     Lorem{' '}
     <Text color="primary1" weight="regular">
       ipsum
     </Text>{' '}
     dolor sit amet, <br />
     <Text weight="regular">consectetur adipiscing elit</Text>…
-  </Fragment>
+  </>
 )
 
 export default {
@@ -22,15 +19,9 @@ export default {
   component: BackerCard,
   decorators: [
     Story => (
-      <Marger top="4">
-        <Container>
-          <Grid>
-            <GridCol col="3">
-              <Story />
-            </GridCol>
-          </Grid>
-        </Container>
-      </Marger>
+      <div className="story-Container story-Grid story-Grid--thin">
+        <Story />
+      </div>
     ),
   ],
 }

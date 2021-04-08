@@ -7,6 +7,13 @@ import { CheckedCircleIcon } from '../../icons/checked-circle-icon'
 export default {
   title: 'Layout/IconContainer',
   component: IconContainer,
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const Default = () => (

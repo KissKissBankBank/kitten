@@ -7,47 +7,43 @@ import {
   YoutubeButtonIcon,
   PinterestButtonIcon,
 } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
 
 export default {
   component: SocialButtonIcon,
   title: 'Buttons/SocialButtonIcon',
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--thin">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      <Grid>{children}</Grid>
-    </Marger>
-  </Container>
-)
-
 export const SocialButtonIcon = () => (
-  <StoryContainer>
-    <GridCol col-s="3" col-l="2">
+  <>
+    <div>
       <FacebookButtonIcon>Facebook</FacebookButtonIcon>
-    </GridCol>
+    </div>
 
-    <GridCol col-s="3" col-l="2">
+    <div>
       <TwitterButtonIcon>Twitter</TwitterButtonIcon>
-    </GridCol>
+    </div>
 
-    <GridCol col-s="3" col-l="2">
+    <div>
       <InstagramButtonIcon>Instagram</InstagramButtonIcon>
-    </GridCol>
+    </div>
 
-    <GridCol col-s="3" col-l="2">
+    <div>
       <LinkedinButtonIcon>Linkedin</LinkedinButtonIcon>
-    </GridCol>
+    </div>
 
-    <GridCol col-s="3" col-l="2">
+    <div>
       <YoutubeButtonIcon>Youtube</YoutubeButtonIcon>
-    </GridCol>
+    </div>
 
-    <GridCol col-s="3" col-l="2">
+    <div>
       <PinterestButtonIcon>Pinterest</PinterestButtonIcon>
-    </GridCol>
-  </StoryContainer>
+    </div>
+  </>
 )

@@ -22,3 +22,10 @@ export const Default = () => (
 )
 
 Default.storyName = 'Text input with limit'
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      <Story />
+    </div>
+  ),
+]

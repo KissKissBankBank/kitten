@@ -11,3 +11,11 @@ export const Default = () => (
     disabled={boolean('Disable component?', false)}
   />
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container">
+      <Story />
+    </div>
+  ),
+]
