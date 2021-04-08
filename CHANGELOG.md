@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove warning about `fill-rule` on `PepoleIcon`.
 - Fix: Fix `TagButton` style.
 - Feature: Add all sizes to `DropdownSelect`.
 - Fix: Fix styles on `DropdownSelect`.
