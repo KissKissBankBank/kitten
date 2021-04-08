@@ -30,7 +30,7 @@ Array [
       </div>
     </div>
     <div
-      className="sc-htoDjs ilRsJp k-FieldInput sc-bdVaJa iaWybd k-u-margin-top-single"
+      className="k-FieldInput sc-bdVaJa iaWybd k-u-margin-top-single"
     >
       <input
         autoComplete="cc-number"
@@ -78,7 +78,7 @@ Array [
       </div>
     </div>
     <div
-      className="sc-htoDjs ilRsJp k-FieldInput k-u-margin-top-single"
+      className="k-FieldInput k-u-margin-top-single"
     >
       <input
         autoComplete="cc-exp"
@@ -131,7 +131,7 @@ Array [
       </div>
     </div>
     <div
-      className="sc-htoDjs ilRsJp k-FieldInput k-u-margin-top-single"
+      className="k-FieldInput k-u-margin-top-single"
     >
       <input
         autoComplete="cc-csc"
