@@ -68,8 +68,10 @@ const StyledDropdownSelectWithInput = styled.div`
     ${TYPOGRAPHY.fontStyles.light}
     color: ${COLORS.font1};
     margin: 0 ${pxToRem(15)} 0 ${pxToRem(40)};
+    font-size: ${pxToRem(-2)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
+      font-size: ${pxToRem(-1)};
       margin-left: ${pxToRem(60)};
     }
   }
@@ -77,8 +79,13 @@ const StyledDropdownSelectWithInput = styled.div`
   .k-Form-DropdownSelectWithInput__content--selectedItem {
     background: ${COLORS.primary5};
     border-radius: ${pxToRem(4)};
-    padding: 0 ${pxToRem(15)};
-    height: ${pxToRem(46)};
+    padding: 0 ${pxToRem(10)};
+    height: ${pxToRem(40)};
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      padding: 0 ${pxToRem(15)};
+      height: ${pxToRem(46)};
+    }
   }
 
   .k-Form-DropdownSelectWithInput__placeholder {
@@ -87,7 +94,7 @@ const StyledDropdownSelectWithInput = styled.div`
   }
 
   .k-Form-DropdownSelectWithInput__content__icon {
-    margin-right: ${pxToRem(15)};
+    margin-right: ${pxToRem(10)};
     display: flex;
     align-items: center;
 
@@ -103,7 +110,20 @@ const StyledDropdownSelectWithInput = styled.div`
     svg[stroke], svg [stroke] {
       stroke: currentColor;
     }
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      margin-right: ${pxToRem(15)};
+    }
   }
+
+  &.k-Form-DropdownSelectWithInput--hideIconOnMobile {
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      .k-Form-DropdownSelectWithInput__content__icon {
+        display: none;
+      }
+    }
+  }
+
 
   .k-Form-DropdownSelectWithInput__button__arrowBox {
     position: absolute;
@@ -144,18 +164,23 @@ const StyledDropdownSelectWithInput = styled.div`
   .k-Form-DropdownSelectWithInput__input {
     display: none;
     ${TYPOGRAPHY.fontStyles.light}
+    font-size: ${stepToRem(-1)};
     color: ${COLORS.font1};
-    font-size: ${stepToRem(0)};
     appearance: none;
     padding: 0;
     border: none;
     background-color: transparent;
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      font-size: ${stepToRem(0)};
+    }
   }
 
   .k-Form-DropdownSelectWithInput__list {
     box-sizing: border-box;
     position: absolute;
-    z-index: 1;
+    z-index: 1000;
+    z-index: var(--menu-z-index, 1000);
     width: 100%;
     max-height: ${pxToRem(310)};
     padding: 0;
@@ -176,18 +201,26 @@ const StyledDropdownSelectWithInput = styled.div`
       border: ${pxToRem(2)} solid ${COLORS.line1};
       border-top: 0;
     }
+
     &:focus {
-      outline: none;
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
     }
   }
 
   .k-Form-DropdownSelectWithInput__item {
     display: flex;
     align-items: center;
-
     transition: background-color .2s ease;
     box-sizing: border-box;
     padding: ${pxToRem(15)};
+    color: ${COLORS.font1};
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-1)};
     user-select: none;
@@ -207,8 +240,9 @@ const StyledDropdownSelectWithInput = styled.div`
       color: ${COLORS.font2};
     }
   }
+
   .k-Form-DropdownSelectWithInput__item__icon {
-    margin-right: ${pxToRem(20)};
+    margin-right: ${pxToRem(10)};
     min-width: ${pxToRem(20)};
     display: flex;
     align-items: center;
@@ -217,6 +251,10 @@ const StyledDropdownSelectWithInput = styled.div`
     svg {
       display: block;
       max-width:100%;
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      margin-right: ${pxToRem(20)};
     }
   }
 
@@ -229,11 +267,22 @@ const StyledDropdownSelectWithInput = styled.div`
     .k-Form-DropdownSelectWithInput__container,
     .k-Form-DropdownSelectWithInput__list {
       border-color: ${COLORS.line2};
+      }
+
+    .k-Form-DropdownSelectWithInput__button:focus,
+    .k-Form-DropdownSelectWithInput__input:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(-2)};
+    }
+    .k-Form-DropdownSelectWithInput__button:focus:not(:focus-visible),
+    .k-Form-DropdownSelectWithInput__input:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    .k-Form-DropdownSelectWithInput__button:focus-visible,
+    .k-Form-DropdownSelectWithInput__input:focus-visible {
+      outline-color: ${COLORS.primary4};
     }
 
-    button, input {
-      outline: none;
-    }
   }
 
   &.k-Form-DropdownSelectWithInput--error .k-Form-DropdownSelectWithInput__input,
@@ -325,6 +374,8 @@ export const DropdownSelectWithInput = ({
   openOnLoad,
   deactivateDropdown,
   className,
+  menuZIndex,
+  hideIconOnMobile,
 }) => {
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
@@ -407,7 +458,9 @@ export const DropdownSelectWithInput = ({
         'k-Form-DropdownSelectWithInput--valid': valid,
         'k-Form-DropdownSelectWithInput--disabled': disabled,
         'k-Form-DropdownSelectWithInput--noDropdown': deactivateDropdown,
+        'k-Form-DropdownSelectWithInput--hideIconOnMobile': hideIconOnMobile,
       })}
+      style={{ '--menu-z-index': menuZIndex }}
     >
       <Label
         className={classNames(
@@ -459,10 +512,7 @@ export const DropdownSelectWithInput = ({
               className="k-Form-DropdownSelectWithInput__button__arrowBox"
               aria-hidden
             >
-              <ArrowIcon
-                version="solid"
-                direction={isOpen ? 'top' : 'bottom'}
-              />
+              <ArrowIcon direction={isOpen ? 'top' : 'bottom'} />
             </span>
           )}
           <span className="k-Form-DropdownSelectWithInput__button__statusBadges">
@@ -555,6 +605,8 @@ DropdownSelectWithInput.defaultProps = {
   highlightOptionBox: true,
   openOnLoad: false,
   deactivateDropdown: false,
+  menuZIndex: 1000,
+  hideIconOnMobile: false,
 }
 
 DropdownSelectWithInput.propTypes = {
@@ -576,4 +628,6 @@ DropdownSelectWithInput.propTypes = {
   highlightOptionBox: PropTypes.bool,
   openOnLoad: PropTypes.bool,
   deactivateDropdown: PropTypes.bool,
+  menuZIndex: PropTypes.number,
+  hideIconOnMobile: PropTypes.bool,
 }

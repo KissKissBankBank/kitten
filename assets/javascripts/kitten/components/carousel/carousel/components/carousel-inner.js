@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import ResizeObserver from 'resize-observer-polyfill'
 import { domElementHelper } from '../../../../helpers/dom/element-helper'
 import { CarouselPage } from './carousel-page'
@@ -8,6 +8,8 @@ import { usePrevious } from '../../../../helpers/utils/use-previous-hook'
 if (domElementHelper.canUseDom()) {
   require('smoothscroll-polyfill').polyfill()
 }
+
+let isTouched = false
 
 // inspired by https://github.com/cferdinandi/scrollStop
 const scrollStop = callback => {
@@ -61,12 +63,12 @@ export const CarouselInner = ({
   onResizeInner,
   pagesClassName,
   viewedPages,
+  pageClickText,
 }) => {
-  const [isTouched, setTouchState] = useState(false)
   const carouselInner = useRef(null)
   const previousIndexPageVisible = usePrevious(currentPageIndex)
 
-  let observer
+  let resizeObserver
 
   const onResizeObserve = ([entry]) => {
     const innerWidth = entry.contentRect.width
@@ -74,13 +76,13 @@ export const CarouselInner = ({
   }
 
   useEffect(() => {
-    observer = new ResizeObserver(onResizeObserve)
+    resizeObserver = new ResizeObserver(onResizeObserve)
 
-    return () => observer.disconnect()
+    return () => resizeObserver.disconnect()
   }, [])
 
   useEffect(() => {
-    carouselInner.current && observer.observe(carouselInner.current)
+    carouselInner.current && resizeObserver.observe(carouselInner.current)
   }, [carouselInner])
 
   useEffect(() => {
@@ -141,12 +143,21 @@ export const CarouselInner = ({
     document.activeElement.blur()
   }
 
+  const handleKeyDown = e => {
+    if (e.key === 'ArrowRight') {
+      goToPage(currentPageIndex + 1)
+    } else if (e.key === 'ArrowLeft') {
+      goToPage(currentPageIndex - 1)
+    }
+  }
+
   return (
     <div
       ref={carouselInner}
       onScroll={handleInnerScroll}
-      onTouchStart={() => setTouchState(true)}
-      onTouchEnd={() => setTouchState(false)}
+      onTouchStart={() => (isTouched = true)}
+      onTouchEnd={() => (isTouched = false)}
+      onKeyDown={handleKeyDown}
       className="k-Carousel__inner"
     >
       {[...Array(numberOfPages).keys()].map(index => {
@@ -156,6 +167,8 @@ export const CarouselInner = ({
         return (
           <div
             key={index}
+            role="button"
+            aria-label={pageClickText(index + 1)}
             onClick={handlePageClick(index)}
             className={classNames(
               'k-Carousel__inner__pageContainer',
@@ -172,6 +185,7 @@ export const CarouselInner = ({
               isActivePage={isActivePage}
               pageItems={getDataForPage(items, index, numberOfItemsPerPage)}
               numberOfItemsPerPage={numberOfItemsPerPage}
+              goToCurrentPage={() => goToPage(index)}
             />
           </div>
         )

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text, boolean, number } from '@storybook/addon-knobs'
 import { DropdownSelectWithInput } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
 
@@ -70,6 +70,7 @@ export const Default = () => {
           }}
           resetOnBackspace={boolean('resetOnBackspace', false)}
           highlightOptionBox={boolean('highlightOptionBox', true)}
+          hideIconOnMobile={boolean('hideIconOnMobile', false)}
         />
         <p>
           Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
@@ -108,6 +109,8 @@ export const DeactivatedDropdown = () => {
           defaultSelectedValue="facebook"
           deactivateDropdown
           className="k-u-margin-bottom-triple"
+          menuZIndex={number('menuZIndex', 1000)}
+          hideIconOnMobile={boolean('hideIconOnMobile', false)}
         />
         <DropdownSelectWithInput
           id={text('id', 'dropdown-select')}
@@ -122,6 +125,8 @@ export const DeactivatedDropdown = () => {
           defaultSelectedValue="twitter"
           deactivateDropdown
           className="k-u-margin-bottom-triple"
+          menuZIndex={number('menuZIndex', 1000)}
+          hideIconOnMobile={boolean('hideIconOnMobile', false)}
         />
         <DropdownSelectWithInput
           id={text('id', 'dropdown-select')}
@@ -136,6 +141,8 @@ export const DeactivatedDropdown = () => {
           defaultSelectedValue="instagram"
           deactivateDropdown
           className="k-u-margin-bottom-triple"
+          menuZIndex={number('menuZIndex', 1000)}
+          hideIconOnMobile={boolean('hideIconOnMobile', false)}
         />
       </GridCol>
     </Grid>

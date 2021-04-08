@@ -1521,6 +1521,158 @@ exports[`<HorizontalStroke /> with height via \`customSize\` matches with snapsh
 />
 `;
 
+exports[`<HorizontalStroke /> with string type width via \`customSize\` matches with snapshot 1`] = `
+.c0 {
+  border: none;
+  background: #222;
+}
+
+.c0.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
+}
+
+.c0.k-HorizontalStroke--size--tiny {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
+.c0.k-HorizontalStroke--size--default {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--huge {
+  width: 6.25rem;
+  height: 0.375rem;
+}
+
+.c0.k-HorizontalStroke--modifier--primary {
+  width: 2.5rem;
+  height: 0.375rem;
+}
+
+.c0.k-HorizontalStroke--modifier--secondary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--modifier--tertiary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--modifier--quaternary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--modifier--quinary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--modifier--senary {
+  width: 0;
+  height: 0;
+}
+
+.c0.k-HorizontalStroke--modifier--septenary {
+  width: 0;
+  height: 0;
+}
+
+@media (min-width:40rem) {
+  .c0.k-HorizontalStroke--modifier--primary {
+    width: 3.125rem;
+    height: 0.375rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--secondary {
+    width: 2.5rem;
+    height: 0.375rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--tertiary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--quaternary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--quinary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--senary {
+    width: 0;
+    height: 0;
+  }
+
+  .c0.k-HorizontalStroke--modifier--septenary {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0.k-HorizontalStroke--modifier--primary {
+    width: 3.125rem;
+    height: 0.375rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--secondary {
+    width: 3.125rem;
+    height: 0.375rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--tertiary {
+    width: 2.5rem;
+    height: 0.375rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--quaternary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--quinary {
+    width: 0;
+    height: 0;
+  }
+
+  .c0.k-HorizontalStroke--modifier--senary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--septenary {
+    width: 0;
+    height: 0;
+  }
+}
+
+<div
+  className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
+  color="#222"
+  style={
+    Object {
+      "height": undefined,
+      "width": "100%",
+    }
+  }
+/>
+`;
+
 exports[`<HorizontalStroke /> with width and height via \`customSize\` matches with snapshot 1`] = `
 .c0 {
   border: none;

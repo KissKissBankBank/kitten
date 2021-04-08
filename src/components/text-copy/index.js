@@ -44,7 +44,7 @@ var StyledButton = (0, _styledComponents.default)(function (_ref) {
 }).withConfig({
   displayName: "text-copy__StyledButton",
   componentId: "sc-1ikj7bl-0"
-})(["", ";font-size:", ";line-height:1.3;flex:1 0 auto;outline:none;appearance:none;cursor:pointer;padding:0 ", ";border-radius:0;align-self:stretch;box-sizing:border-box;", ";"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(30), function (_ref2) {
+})(["", ";font-size:", ";line-height:1.3;flex:1 0 auto;appearance:none;cursor:pointer;padding:0 ", ";border-radius:0;align-self:stretch;box-sizing:border-box;", ";"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(30), function (_ref2) {
   var buttonModifier = _ref2.buttonModifier;
   return (0, _modifierStyles.modifierStyles)(buttonModifier);
 });

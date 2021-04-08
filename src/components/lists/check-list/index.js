@@ -23,10 +23,12 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _typography = require("./../../../helpers/utils/typography");
 
+var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
+
 var List = _styledComponents.default.ul.withConfig({
   displayName: "check-list__List",
   componentId: "sc-1berzg4-0"
-})(["display:inline-flex;flex-direction:column;padding:0;margin:0;.k-CheckList__item{list-style-type:none;display:flex;align-items:stretch;margin-bottom:", ";color:", ";font-size:", ";line-height:1.2;.strike{text-decoration:line-through;}&:before{content:'\u25CF';color:", ";padding-right:", ";}&:last-child{margin-bottom:0;}}.k-CheckList__item--done{&:before{color:", ";}}"], (0, _typography.pxToRem)(10), _colorsConfig.default.font1, (0, _typography.stepToRem)(-1), _colorsConfig.default.line2, (0, _typography.pxToRem)(10), _colorsConfig.default.valid);
+})(["display:inline-flex;flex-direction:column;padding:0;margin:0;.k-CheckList__item{", ";list-style-type:none;display:flex;align-items:stretch;margin-bottom:", ";color:", ";font-size:", ";line-height:1.2;.strike{text-decoration:line-through;}&:before{content:'\u25CF';color:", ";padding-right:", ";}&:last-child{margin-bottom:0;}}.k-CheckList__item--done{&:before{color:", ";}}"], _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(10), _colorsConfig.default.font1, (0, _typography.stepToRem)(-1), _colorsConfig.default.line2, (0, _typography.pxToRem)(10), _colorsConfig.default.valid);
 
 var a11yProps = function a11yProps(a11yText, done) {
   return {

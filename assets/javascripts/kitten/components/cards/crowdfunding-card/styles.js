@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
@@ -10,13 +10,48 @@ const loadingKeyframes = keyframes`
   to { transform: translateX(100%) }
 `
 
-export const StyledCrowdfundingCard = styled(
-  ({ imageContainerRatio, ...props }) => <div {...props} />,
-)`
+const mobileStyles = css`
   position: relative;
   padding-bottom: ${pxToRem(5)};
   overflow: hidden;
   display: block;
+  background: ${COLORS.background1};
+  color: ${COLORS.font1};
+
+  &[href] {
+    text-decoration: inherit;
+    color: inherit;
+
+    .k-CrowdfundingCard__image__image {
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .k-CrowdfundingCard__title__title {
+      transition: color 0.4s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      .k-CrowdfundingCard__image__image {
+        transform: scale(1.07);
+      }
+
+      .k-CrowdfundingCard__title__title {
+        color: ${COLORS.primary1};
+      }
+    }
+  }
+
+  &[href]:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
+  &[href]:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &[href]:focus-visible {
+    outline-color: ${COLORS.primary4};
+  }
 
   .k-CrowdfundingCard__paddedContainer {
     padding: 0 ${COMPONENT_GUTTER};
@@ -29,9 +64,6 @@ export const StyledCrowdfundingCard = styled(
   .k-CrowdfundingCard__image__imageContainer {
     overflow: hidden;
     position: relative;
-    padding-top: calc(
-      (${({ imageContainerRatio }) => imageContainerRatio}) * 100%
-    );
 
     & > .k-CrowdfundingCard__image__image {
       display: block;
@@ -58,16 +90,11 @@ export const StyledCrowdfundingCard = styled(
   }
 
   .k-CrowdfundingCard__image__ownerContainer {
-    display: inline-flex;
-    align-items: center;
+    display: none;
     position: relative;
     top: 0;
     margin-top: ${pxToRem(-30)};
     background-color: ${COLORS.background1};
-
-    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-      display: none;
-    }
   }
 
   .k-CrowdfundingCard__title {
@@ -75,18 +102,10 @@ export const StyledCrowdfundingCard = styled(
     padding: 0;
     line-height: 1;
     margin-top: ${pxToRem(10)};
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      padding: 0 ${COMPONENT_GUTTER};
-    }
   }
 
   .k-CrowdfundingCard__title__title {
     font-size: ${stepToRem(-1)};
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      font-size: ${stepToRem(2)};
-    }
   }
 
   .k-CrowdfundingCard__title__loadingElement {
@@ -104,14 +123,6 @@ export const StyledCrowdfundingCard = styled(
 
   .k-CrowdfundingCard__subtitle__container {
     display: none;
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      display: flex;
-      align-items: center;
-      line-height: 1;
-      padding: 0 ${COMPONENT_GUTTER};
-      margin-top: ${pxToRem(10)};
-    }
   }
 
   .k-CrowdfundingCard__subtitle__subtitleText {
@@ -130,10 +141,6 @@ export const StyledCrowdfundingCard = styled(
     overflow: hidden;
     display: flex;
     margin-top: ${pxToRem(10)};
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      padding: 0 ${COMPONENT_GUTTER};
-    }
 
     > * {
       overflow: hidden;
@@ -159,20 +166,11 @@ export const StyledCrowdfundingCard = styled(
     flex-wrap: wrap;
     padding: 0;
     line-height: 1;
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      margin-top: ${pxToRem(20)};
-      padding: 0 ${COMPONENT_GUTTER};
-    }
   }
 
   .k-CrowdfundingCard__informations__infoContainer {
     margin-right: ${pxToRem(15)};
     margin-bottom: ${pxToRem(5)};
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      margin-right: ${pxToRem(20)};
-    }
 
     &:last-child {
       margin-right: 0;
@@ -204,11 +202,6 @@ export const StyledCrowdfundingCard = styled(
     padding: 0;
     margin-top: ${pxToRem(5)};
     margin-bottom: ${pxToRem(10)};
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      padding: 0 ${COMPONENT_GUTTER};
-      margin-bottom: ${pxToRem(20)};
-    }
   }
 
   .k-CrowdfundingCard__progressBar__progress {
@@ -216,6 +209,7 @@ export const StyledCrowdfundingCard = styled(
   }
 
   .k-CrowdfundingCard__progressBar__percent {
+    display: none;
     flex-shrink: 0;
     margin-left: calc(2 * ${COMPONENT_GUTTER});
   }
@@ -235,30 +229,6 @@ export const StyledCrowdfundingCard = styled(
     );
     animation: x 1s linear infinite;
     animation-name: ${loadingKeyframes};
-  }
-
-  /* Widget-specific styles */
-
-  &.k-CrowdfundingCardWidget {
-    .k-CrowdfundingCard__titleAndDesc {
-      margin-top: ${pxToRem(5)};
-    }
-
-    .k-CrowdfundingCard__titleWrapper {
-      display: flex;
-    }
-
-    .k-CrowdfundingCard__title {
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        padding: 0 ${COMPONENT_GUTTER} 0 0;
-      }
-    }
-
-    .k-CrowdfundingCard__title__dayCounter {
-      line-height: 1;
-      margin-left: calc(2 * ${COMPONENT_GUTTER});
-      margin-top: ${pxToRem(10)};
-    }
   }
 
   /* isLoading */
@@ -305,10 +275,6 @@ export const StyledCrowdfundingCard = styled(
 
   &.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
     min-height: ${pxToRem(50)};
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      min-height: ${pxToRem(75)};
-    }
   }
 
   /* isStretched */
@@ -324,5 +290,131 @@ export const StyledCrowdfundingCard = styled(
       flex-grow: 1;
       flex-shrink: 0;
     }
+  }
+
+  .k-CrowdfundingCard__state {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    background-color: ${COLORS.background1};
+    padding: ${COMPONENT_GUTTER};
+    line-height: 1;
+  }
+
+  .k-CrowdfundingCard__widgetState {
+    display: flex;
+    position: absolute;
+    background: ${COLORS.font1};
+    border-radius: ${pxToRem(25)};
+    margin: ${pxToRem(10)} ${pxToRem(10)} 0 0;
+    right: 0;
+    top: 0;
+    padding: ${pxToRem(10)} ${pxToRem(20)};
+  }
+`
+
+const tabletStyles = css`
+  .k-CrowdfundingCard__image__ownerContainer {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .k-CrowdfundingCard__title {
+    padding: 0 ${COMPONENT_GUTTER};
+  }
+
+  .k-CrowdfundingCard__title__title {
+    font-size: ${stepToRem(2)};
+  }
+
+  .k-CrowdfundingCard__subtitle__container {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    padding: 0 ${COMPONENT_GUTTER};
+    margin-top: ${pxToRem(10)};
+  }
+
+  .k-CrowdfundingCard__additionalInfo {
+    padding: 0 ${COMPONENT_GUTTER};
+  }
+
+  .k-CrowdfundingCard__informations {
+    margin-top: ${pxToRem(20)};
+    padding: 0 ${COMPONENT_GUTTER};
+  }
+
+  .k-CrowdfundingCard__informations__infoContainer {
+    margin-right: ${pxToRem(20)};
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .k-CrowdfundingCard__progressBar {
+    padding: 0 ${COMPONENT_GUTTER};
+    margin-bottom: ${pxToRem(20)};
+  }
+
+  .k-CrowdfundingCard__progressBar__percent {
+    display: inherit;
+  }
+
+  &.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
+    min-height: ${pxToRem(75)};
+  }
+
+  .k-CrowdfundingCard__state {
+    display: inline-flex;
+    align-items: center;
+  }
+`
+
+const desktopStyles = css``
+
+export const StyledCrowdfundingCard = styled(
+  ({ imageContainerRatio, forceVersion, ...props }) => <div {...props} />,
+)`
+  ${({ forceVersion }) => {
+    return (() => {
+      switch (forceVersion) {
+        case 'desktop':
+          return css`
+            ${mobileStyles};
+            ${tabletStyles};
+            ${desktopStyles};
+          `
+        case 'tablet':
+          return css`
+            ${mobileStyles};
+            ${tabletStyles};
+          `
+        case 'mobile':
+          return css`
+            ${mobileStyles};
+          `
+        default:
+          return css`
+            ${mobileStyles};
+
+            @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+              ${tabletStyles};
+            }
+
+            @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+              ${desktopStyles};
+            }
+          `
+      }
+    })()
+  }}
+
+  .k-CrowdfundingCard__image__imageContainer {
+    /* When IE11 depreciates, replace prop with CSS custom property */
+    padding-top: calc(
+      (${({ imageContainerRatio }) => imageContainerRatio}) * 100%
+    );
   }
 `

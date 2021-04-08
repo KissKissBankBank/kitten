@@ -9,6 +9,7 @@ import Subtitle from './components/subtitle';
 import Informations from './components/informations';
 import ProgressBar from './components/progress';
 import State from './components/state';
+import CardButton from './components/button';
 import classNames from 'classnames';
 import { StyledCrowdfundingCard } from './styles';
 import { Text } from '../../../components/typography/text';
@@ -40,7 +41,9 @@ export var CrowdfundingCard = function CrowdfundingCard(_ref) {
       videoProps = _ref.videoProps,
       videoSources = _ref.videoSources,
       widgetState = _ref.widgetState,
-      others = _objectWithoutProperties(_ref, ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "imageContainerRatio", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "videoProps", "videoSources", "widgetState"]);
+      buttonText = _ref.buttonText,
+      forceVersion = _ref.forceVersion,
+      others = _objectWithoutProperties(_ref, ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "imageContainerRatio", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "videoProps", "videoSources", "widgetState", "buttonText", "forceVersion"]);
 
   var removeCurrentFocus = function removeCurrentFocus() {
     document.activeElement.blur();
@@ -74,7 +77,8 @@ export var CrowdfundingCard = function CrowdfundingCard(_ref) {
       'k-CrowdfundingCard--isLoading': loading,
       'k-CrowdfundingCard--isStretched': stretch
     }),
-    href: href
+    href: href,
+    forceVersion: forceVersion
   }), /*#__PURE__*/React.createElement(Image, {
     ownerTitle: ownerTitle,
     ownerDescription: ownerDescription,
@@ -109,6 +113,9 @@ export var CrowdfundingCard = function CrowdfundingCard(_ref) {
     progress: progress,
     progressColor: progressColor,
     loading: loading
+  }), buttonText && /*#__PURE__*/React.createElement(CardButton, {
+    text: buttonText,
+    loading: loading
   }), /*#__PURE__*/React.createElement(State, {
     state: state,
     widgetState: widgetState,
@@ -121,11 +128,15 @@ CrowdfundingCard.propTypes = {
   href: PropTypes.string,
   titlesMinHeight: PropTypes.bool,
   stretch: PropTypes.bool,
-  imageContainerRatio: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  imageContainerRatio: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  buttonText: PropTypes.string,
+  forceVersion: PropTypes.oneOf(['mobile', 'tablet', 'desktop'])
 };
 CrowdfundingCard.defaultProps = {
   href: null,
   titlesMinHeight: true,
   stretch: false,
-  imageContainerRatio: 10 / 16
+  imageContainerRatio: 10 / 16,
+  buttonText: null,
+  forceVersion: null
 };

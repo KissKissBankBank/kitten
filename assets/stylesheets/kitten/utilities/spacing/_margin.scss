@@ -331,7 +331,7 @@
     @include k-u-margin('bottom', $name, $size);
     @include k-u-margin('left', $name, $size);
     @include k-u-margin('right', $name, $size);
-    @include k-u-margin-multiple('vertical', ('left', 'right'), $name, $size);
-    @include k-u-margin-multiple('horizontal', ('top', 'bottom'), $name, $size);
+    @include k-u-margin-multiple('vertical', ('top', 'bottom'), $name, $size);
+    @include k-u-margin-multiple('horizontal', ('left', 'right'), $name, $size);
   }
 }

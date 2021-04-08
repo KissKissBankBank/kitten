@@ -16,6 +16,7 @@ export const Default = () => (
     })}
     distance={number('Distance', 20)}
     centered={boolean('Centered?', false)}
+    distanceAsPercentage={boolean('distanceAsPercentage?', false)}
     shadow={boolean('Shadow?', false)}
     borderRadius={number('Border radius', 0)}
     borderColor={color('Border color', COLORS.line1)}

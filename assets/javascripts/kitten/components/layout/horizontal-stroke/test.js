@@ -94,6 +94,18 @@ describe('<HorizontalStroke />', () => {
     })
   })
 
+  describe('with string type width via `customSize`', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<HorizontalStroke customSize={{ width: '100%' }} />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with width and height via `customSize`', () => {
     beforeEach(() => {
       component = renderer

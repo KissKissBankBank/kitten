@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import React from 'react';
-import { Button } from '../../../components/buttons/button/button';
+import { Button } from '../../../components/buttons/button';
 import { FacebookIcon } from '../../../components/icons/facebook-icon';
 import { TwitterIcon } from '../../../components/icons/twitter-icon';
 import { LinkedinIcon } from '../../../components/icons/linkedin-icon';
@@ -13,8 +13,7 @@ export var FacebookButtonIcon = function FacebookButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/React.createElement(FacebookIcon, {
     width: "14",
-    height: "14",
-    title: "Facebook"
+    height: "14"
   }));
 };
 export var TwitterButtonIcon = function TwitterButtonIcon(props) {
@@ -23,8 +22,7 @@ export var TwitterButtonIcon = function TwitterButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/React.createElement(TwitterIcon, {
     width: "15",
-    height: "15",
-    title: "Twitter"
+    height: "15"
   }));
 };
 export var LinkedinButtonIcon = function LinkedinButtonIcon(props) {
@@ -33,8 +31,7 @@ export var LinkedinButtonIcon = function LinkedinButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/React.createElement(LinkedinIcon, {
     width: "12",
-    height: "12",
-    title: "LinkedIn"
+    height: "12"
   }));
 };
 export var InstagramButtonIcon = function InstagramButtonIcon(props) {
@@ -43,8 +40,7 @@ export var InstagramButtonIcon = function InstagramButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/React.createElement(InstagramIcon, {
     width: "16",
-    height: "16",
-    title: "Instagram"
+    height: "16"
   }));
 };
 export var YoutubeButtonIcon = function YoutubeButtonIcon(props) {
@@ -53,8 +49,7 @@ export var YoutubeButtonIcon = function YoutubeButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/React.createElement(YoutubeIcon, {
     width: "16",
-    height: "16",
-    title: "YouTube"
+    height: "16"
   }));
 };
 export var PinterestButtonIcon = function PinterestButtonIcon(props) {
@@ -63,7 +58,6 @@ export var PinterestButtonIcon = function PinterestButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/React.createElement(PinterestIcon, {
     width: "16",
-    height: "16",
-    title: "Pinterest"
+    height: "16"
   }));
 };

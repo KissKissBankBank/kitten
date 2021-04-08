@@ -9,6 +9,10 @@ export default {
 }
 
 export const Default = () => {
+  const handleChange = e => {
+    console.warn(e)
+  }
+
   return (
     <Grid style={{ marginTop: '5em' }}>
       <GridCol offset="1" col="6">
@@ -20,6 +24,7 @@ export const Default = () => {
           isLabelVisible={boolean('isLabelVisible', true)}
           reverseOrder={boolean('reverseOrder', false)}
           locked={boolean('Locked?', false)}
+          onChange={handleChange}
         />
       </GridCol>
     </Grid>

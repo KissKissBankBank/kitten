@@ -7,7 +7,7 @@ import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
@@ -46,8 +46,8 @@ var TitleComponent = /*#__PURE__*/function (_PureComponent) {
         className: "k-CrowdfundingCard__title"
       }, !loading && /*#__PURE__*/React.createElement(Title, _extends({
         tag: "p",
-        margin: false,
-        className: "k-Card__title k-CrowdfundingCard__title__title"
+        noMargin: true,
+        className: "k-CrowdfundingCard__title__title"
       }, titleProps), titleTruncate && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Truncate, {
         lines: 2,
         className: "k-CrowdfundingCard__noWrap k-u-hidden@s-down"

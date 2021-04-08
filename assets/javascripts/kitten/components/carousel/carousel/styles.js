@@ -6,7 +6,9 @@ import {
   CONTAINER_PADDING_MOBILE,
   GUTTER,
 } from '../../../constants/grid-config'
-import ColorsConfig from '../../../constants/colors-config'
+import COLORS from '../../../constants/colors-config'
+
+export const OUTLINE_PLUS_OFFSET = 4
 
 // STYLE HELPERS
 
@@ -225,10 +227,10 @@ export const StyledCarouselContainer = styled.div`
       width: ${pxToRem(6)};
       height: ${pxToRem(6)};
       margin: ${pxToRem(2)};
-      background-color: ${ColorsConfig.font2};
+      background-color: ${COLORS.font2};
 
       &.k-Carousel__pagination__square--isActive {
-        background-color: ${ColorsConfig.font1};
+        background-color: ${COLORS.font1};
       }
     }
   }
@@ -266,6 +268,11 @@ export const StyledCarouselContainer = styled.div`
 
     .k-Carousel__pagination__button {
       margin: ${pxToRem(1)};
+      position: relative;
+
+      &:focus {
+        z-index: 1;
+      }
     }
   }
 
@@ -284,10 +291,10 @@ export const StyledCarouselContainer = styled.div`
       margin-left: ${pxToRem(4)};
       margin-right: ${pxToRem(4)};
       border-radius: ${pxToRem(4)};
-      background-color: ${ColorsConfig.font1};
+      background-color: ${COLORS.font1};
 
       &.k-Carousel__pageControl__pageDot--isVisible {
-        background-color: ${ColorsConfig.primary2};
+        background-color: ${COLORS.primary2};
       }
     }
 
@@ -311,20 +318,37 @@ export const StyledCarouselContainer = styled.div`
   // Carousel Inner
 
   .k-Carousel__inner {
+    margin: ${pxToRem(-4)};
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(-2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
+
     display: grid;
     grid-template-columns: repeat(${({ numberOfPages }) =>
       numberOfPages}, 100%);
 
-    grid-gap: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
+    grid-gap: ${pxToRem(
+      CONTAINER_PADDING_MOBILE / 2 - OUTLINE_PLUS_OFFSET * 2,
+    )};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      grid-gap: ${pxToRem(CONTAINER_PADDING / 2)};
+      grid-gap: ${pxToRem(CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2)};
     }
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       grid-gap: ${({ baseItemMarginBetween }) =>
-        pxToRem(baseItemMarginBetween)};
+        pxToRem(baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2)};
     }
+
+    /* Fix bug IE11 ResizeObserver, to trigger a first resize */
+    min-height: 1;
 
     overflow-x: scroll;
     scroll-behavior: smooth;
@@ -332,10 +356,9 @@ export const StyledCarouselContainer = styled.div`
     -ms-over-flow-style: none;
     /* mandatory to combine scroll with this property on iOS */
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: mandatory;
-    /* Fix bug IE11 ResizeObserver, to trigger a first resize */
-    min-height: 1;
-
+    scroll-snap-type: x mandatory;
+    /* Hide scrollbar on Firefox. */
+    scrollbar-width: none;
     /* hide scrollbar on Chrome and Safari */
     &::-webkit-scrollbar {
       display: none;
@@ -343,10 +366,14 @@ export const StyledCarouselContainer = styled.div`
 
     .k-Carousel__inner__pageContainer {
       width: 100%;
-      scroll-snap-align: center;
+      scroll-snap-align: start;
 
       &:not(.k-Carousel__inner__pageContainer--isActivePage) {
         cursor: pointer;
+
+        .k-Carousel__page__item > * {
+          pointer-events: none;
+        }
       }
     }
 
@@ -381,20 +408,23 @@ export const StyledCarouselContainer = styled.div`
   }
 
   &.k-Carousel--showOtherPages .k-Carousel__inner {
-    padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
-    scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+    margin: 0 !important;
+    padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE - OUTLINE_PLUS_OFFSET)};
+    scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE - OUTLINE_PLUS_OFFSET)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      padding: 0 ${pxToRem(CONTAINER_PADDING)};
-      scroll-padding: ${pxToRem(CONTAINER_PADDING)};
+      padding: 0 ${pxToRem(CONTAINER_PADDING - OUTLINE_PLUS_OFFSET)};
+      scroll-padding: ${pxToRem(CONTAINER_PADDING - OUTLINE_PLUS_OFFSET)};
     }
 
     .k-Carousel__inner__pageContainer {
       &:last-child {
-        padding-right: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+        padding-right: ${pxToRem(
+          CONTAINER_PADDING_MOBILE - OUTLINE_PLUS_OFFSET,
+        )};
 
         @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-          padding-right: ${pxToRem(CONTAINER_PADDING)};
+          padding-right: ${pxToRem(CONTAINER_PADDING - OUTLINE_PLUS_OFFSET)};
         }
       }
     }
@@ -407,18 +437,33 @@ export const StyledCarouselContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(${({ numberOfItemsPerPage }) =>
       numberOfItemsPerPage}, 1fr);
-    grid-gap: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
+    grid-gap: ${pxToRem(
+      CONTAINER_PADDING_MOBILE / 2 - OUTLINE_PLUS_OFFSET * 2,
+    )};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      grid-gap: ${pxToRem(CONTAINER_PADDING / 2)};
+      grid-gap: ${pxToRem(CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2)};
     }
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       grid-gap: ${({ baseItemMarginBetween }) =>
-        pxToRem(baseItemMarginBetween)};
+        pxToRem(baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2)};
     }
 
     .k-Carousel__page__item {
       overflow: hidden;
+      padding: ${pxToRem(OUTLINE_PLUS_OFFSET)};
+    }
+    .k-Carousel__page__item > a {
+      &:focus {
+        outline: ${COLORS.primary4} solid ${pxToRem(2)};
+        outline-offset: ${pxToRem(2)};
+      }
+      &:focus:not(:focus-visible) {
+        outline-color: transparent;
+      }
+      &:focus-visible {
+        outline-color: ${COLORS.primary4};
+      }
     }
 
     /* IE11 support */

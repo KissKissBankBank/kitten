@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from '../../../../components/buttons/button/button';
+import { Button } from '../../../../components/buttons/button';
 
 var CardButton = function CardButton(_ref) {
   var text = _ref.text,
@@ -8,9 +8,11 @@ var CardButton = function CardButton(_ref) {
   return /*#__PURE__*/React.createElement("div", {
     className: "k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   }, !loading && /*#__PURE__*/React.createElement(Button, {
+    type: "button",
     fluid: true,
     modifier: "helium"
   }, text), loading && /*#__PURE__*/React.createElement(Button, {
+    type: "button",
     fluid: true,
     className: "k-CrowdfundingCard__cardButton__loadingButton"
   }));

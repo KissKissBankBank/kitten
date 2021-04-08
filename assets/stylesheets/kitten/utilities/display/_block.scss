@@ -1,0 +1,84 @@
+/// Utilities to display items as block according to media-queries.
+///
+/// @group display
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-block;
+///
+/// @example html
+///
+///   <div class="k-u-block">…</div>
+///
+///   <div class="k-u-block@xxs-down">…</div>
+///   <div class="k-u-block@xs-down">…</div>
+///   <div class="k-u-block@s-down">…</div>
+///   <div class="k-u-block@m-down">…</div>
+///   <div class="k-u-block@l-down">…</div>
+///
+///   <div class="k-u-block@xs-up">…</div>
+///   <div class="k-u-block@s-up">…</div>
+///   <div class="k-u-block@m-up">…</div>
+///   <div class="k-u-block@l-up">…</div>
+///   <div class="k-u-block@xl-up">…</div>
+///
+///   <div class="k-u-block--important">…</div>
+///
+///   <div class="k-u-block@xxs-down--important">…</div>
+///   <div class="k-u-block@xs-down--important">…</div>
+///   <div class="k-u-block@s-down--important">…</div>
+///   <div class="k-u-block@m-down--important">…</div>
+///   <div class="k-u-block@l-down--important">…</div>
+///
+///   <div class="k-u-block@xs-up--important">…</div>
+///   <div class="k-u-block@s-up--important">…</div>
+///   <div class="k-u-block@m-up--important">…</div>
+///   <div class="k-u-block@l-up--important">…</div>
+///   <div class="k-u-block@xl-up--important">…</div>
+
+@mixin k-utilities-block {
+  .k-u-block {
+    display: block;
+
+    &--important {
+      display: block !important;
+    }
+  }
+
+  @each $name, $query in $k-media-queries {
+
+    @if $name != "xl" {
+      .k-u-block\@#{$name}-down {
+        @include k-media-max($name) {
+          display: block;
+
+          &--important {
+            display: block !important;
+          }
+        }
+      }
+    }
+
+    @if $name != "xxs" {
+      .k-u-block\@#{$name}-up {
+        @include k-media-min($name) {
+          display: block;
+
+          &--important {
+            display: block !important;
+          }
+        }
+      }
+    }
+
+    .k-u-block\@#{$name} {
+      @include k-media-within($name) {
+        display: block;
+
+        &--important {
+          display: block !important;
+        }
+      }
+    }
+  }
+}

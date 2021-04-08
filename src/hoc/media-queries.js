@@ -33,7 +33,7 @@ var _screenConfig = require("../constants/screen-config");
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 var viewPortTable = {
   viewportIsMobile: _screenConfig.SCREEN_SIZE_XS,
@@ -54,18 +54,16 @@ var withMediaQueries = function withMediaQueries(hocProps) {
 exports.withMediaQueries = withMediaQueries;
 
 var mediaQueries = function mediaQueries(WrappedComponent) {
-  var _temp;
-
   var hocProps = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  return _temp = /*#__PURE__*/function (_Component) {
-    (0, _inherits2.default)(_temp, _Component);
+  return /*#__PURE__*/function (_Component) {
+    (0, _inherits2.default)(_class2, _Component);
 
-    var _super = _createSuper(_temp);
+    var _super = _createSuper(_class2);
 
-    function _temp(props) {
+    function _class2(props) {
       var _this;
 
-      (0, _classCallCheck2.default)(this, _temp);
+      (0, _classCallCheck2.default)(this, _class2);
       _this = _super.call(this, props);
 
       _this.setExposedMethods = function (wrappedComponentInstance) {
@@ -83,7 +81,7 @@ var mediaQueries = function mediaQueries(WrappedComponent) {
       return _this;
     }
 
-    (0, _createClass2.default)(_temp, [{
+    (0, _createClass2.default)(_class2, [{
       key: "isInvalidProp",
       value: function isInvalidProp(prop) {
         return typeof hocProps[prop] === 'boolean' && !viewPortTable[prop] || !['boolean', 'string'].includes((0, _typeof2.default)(hocProps[prop]));
@@ -150,8 +148,8 @@ var mediaQueries = function mediaQueries(WrappedComponent) {
         }, this.props, this.state));
       }
     }]);
-    return _temp;
-  }(_react.Component), _temp;
+    return _class2;
+  }(_react.Component);
 };
 
 exports.mediaQueries = mediaQueries;

@@ -15,7 +15,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _button = require("../../../components/buttons/button/button");
+var _button = require("../../../components/buttons/button");
 
 var _typography = require("../../../helpers/utils/typography");
 

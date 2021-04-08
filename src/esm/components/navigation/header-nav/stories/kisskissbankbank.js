@@ -71,6 +71,15 @@ var InnerUserMenu = function InnerUserMenu() {
   }, "Mon espace personnel"), /*#__PURE__*/React.createElement(HeaderMenu.Item, {
     href: "#"
   }, "Mes projets"), /*#__PURE__*/React.createElement(HeaderMenu.Item, {
+    size: "tiny",
+    href: "#"
+  }, "Gluten Mag"), /*#__PURE__*/React.createElement(HeaderMenu.Item, {
+    size: "tiny",
+    href: "#"
+  }, "Kallix \u2014 Mobilier de bureau pour le t\xE9l\xE9travail"), /*#__PURE__*/React.createElement(HeaderMenu.Item, {
+    size: "tiny",
+    href: "#"
+  }, "Mon premier court-m\xE9trage"), /*#__PURE__*/React.createElement(HeaderMenu.Item, {
     href: "#"
   }, "Mes contributions"), /*#__PURE__*/React.createElement(HeaderMenu.Item, {
     href: "#"

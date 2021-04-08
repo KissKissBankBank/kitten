@@ -1,0 +1,53 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+
+<Meta title="Documentation/CSS Utilities/Display/Inline block" />
+
+# Cursor
+
+Display utilities to display an element as an inline block.
+
+## Source
+
+[`assets/stylesheets/kitten/utilities/display/_inline-block.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/display/_inline-block.scss)
+
+## Usage
+
+Utility to display items as inline-blocks according to media-queries.
+Can be used with the [hidden](?path=/docs/documentation-css-utilities-display-hidden--page) utility.
+
+The class name has the form `k-u-inlineBlock`.
+
+**For better effect with the Hidden utility, when not using the utilities.css stylesheet, the `k-utilities-block` and `k-utilities-inline-block` mixins have to be imported after the `k-utilities-hidden` util.**
+
+```scss
+@include k-utilities-hidden;
+@include k-utilities-block;
+@include k-utilities-inline-block;
+```
+
+## Examples
+
+<Canvas>
+<ul>
+  <li>
+    <span className="k-u-inlineBlock">
+      I'm always displayed
+    </span>
+  </li>
+  <li>
+    <span className="k-u-hidden k-u-inlineBlock@xs-down">
+      I'm displayed at and below XS
+    </span>
+  </li>
+  <li>
+    <span className="k-u-hidden k-u-inlineBlock@s-up">
+      I'm displayed at and above S
+    </span>
+  </li>
+  <li>
+    <span className="k-u-hidden k-u-inlineBlock@xs-down k-u-inlineBlock@l-up">
+      I'm displayed at and below XS and at and above L
+    </span>
+  </li>
+</ul>
+</Canvas>

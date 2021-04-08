@@ -1,0 +1,53 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Helpers/Typography (pxToRem & stepToRem)" />
+
+# Typography helpers
+
+The `pxToRem()` and `stepToRem()` JS helpers help you convert sizes to `rem`.
+
+## Source
+
+[`assets/javascripts/kitten/helpers/utils/typography.js`](https://github.com/KissKissBankBank/kitten/blob/master/assets/javascripts/kitten/helpers/utils/typography.js)
+
+## Using
+
+### Import
+
+```
+import { pxToRem, stepToRem } from '@kisskissbankbank/kitten'
+```
+
+### Usage
+
+**Defining anything that are not font sizes**:
+`pxToRem()` will convert pixel values (passed as `int`) to `rem` values.
+The calculation is based on the `TYPOGRAPHY.root` size setting, wich is `16px`.
+
+**Defining font sizes only**:
+`stepToRem()` will convert a step on the modular scale (passed as `int`) to `rem` values.
+The calculation is based on the `TYPOGRAPHY.scaleMultiplier` setting, which is `1.125`. The default step value is `0` (`16px`), values can be negative.
+
+Learn more about [Modular Scales](https://www.modularscale.com/),
+Kitten uses [modularscale-js](https://github.com/modularscale/modularscale-js).
+
+### Examples
+
+#### `pxToRem()`
+
+```js
+>> pxToRem(8)
+<- '.5rem'
+>> pxToRem(32)
+<- '2rem'
+```
+
+#### `stepToRem()`
+
+```js
+>> stepToRem(4)
+<- '1.601806640625rem'
+>> stepToRem(-2)
+<- '0.7901234567901234rem'
+```
+

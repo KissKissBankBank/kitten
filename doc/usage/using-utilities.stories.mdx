@@ -5,9 +5,8 @@ import { Meta } from '@storybook/addon-docs/blocks'
 # Using Utilities
 
 The CSS utilities are class names that can be used for very basic styling.
-
-**When to use it?** You should use these utilities when your HTML element does
-not have more than 3 lines of CSS to style it.
+These utility classes _are used by React Components_.
+Kitten will not work properly without these utility classes.
 
 ## Importing
 
@@ -16,6 +15,34 @@ not have more than 3 lines of CSS to style it.
 ```
 
 ## Using the utilities
+
+**When to use it?** You should use these utilities if you would need no more
+than 3 lines of CSS to style your HTML element.
+
+For example, instead of writing
+
+```js
+const FooBar = styled(props => (
+  <div {...props}>
+    Foo, bar, baz.
+  </div>)
+)`
+  @media (min-width: 768px) {
+    margin-top: 10px;
+  }
+`
+```
+
+you should write
+
+```js
+const FooBar = props => (
+  <div {...props} className="k-u-margin-top-single@s-up">
+    Foo, bar, baz.
+  </div>
+)
+```
+
 
 ### Media Queries
 

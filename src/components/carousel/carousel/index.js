@@ -35,7 +35,7 @@ var _mediaQueries = require("../../../hoc/media-queries");
 
 var _gridConfig = require("../../../constants/grid-config");
 
-var _button = require("../../../components/buttons/button/button");
+var _button = require("../../../components/buttons/button");
 
 var _arrowIcon = require("../../../components/icons/arrow-icon");
 
@@ -51,7 +51,7 @@ var _styles = require("./styles");
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 var getDataLength = function getDataLength(_ref) {
   var data = _ref.data,
@@ -98,9 +98,9 @@ var checkPageLoop = function checkPageLoop(numberOfPages, newPage) {
 exports.checkPageLoop = checkPageLoop;
 
 var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess) {
-  if (viewportIsXSOrLess) return _gridConfig.CONTAINER_PADDING_MOBILE / 2;
-  if (viewportIsMOrLess) return _gridConfig.CONTAINER_PADDING / 2;
-  return baseItemMarginBetween;
+  if (viewportIsXSOrLess) return _gridConfig.CONTAINER_PADDING_MOBILE / 2 - _styles.OUTLINE_PLUS_OFFSET * 2;
+  if (viewportIsMOrLess) return _gridConfig.CONTAINER_PADDING / 2 - _styles.OUTLINE_PLUS_OFFSET * 2;
+  return baseItemMarginBetween - _styles.OUTLINE_PLUS_OFFSET * 2;
 };
 
 var CarouselBase = /*#__PURE__*/function (_Component) {
@@ -184,8 +184,9 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
     };
 
     _this.goToPage = function (indexPageToGo) {
+      var loop = _this.props.loop;
       var numberOfPages = _this.state.numberOfPages;
-      var newPage = checkPage(numberOfPages, indexPageToGo);
+      var newPage = loop ? checkPageLoop(numberOfPages, indexPageToGo) : checkPage(numberOfPages, indexPageToGo);
 
       _this.viewedPages.add(newPage);
 
@@ -203,7 +204,8 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           viewportIsXSOrLess = _this$props2.viewportIsXSOrLess,
           viewportIsMOrLess = _this$props2.viewportIsMOrLess,
           pagesClassName = _this$props2.pagesClassName,
-          exportVisibilityProps = _this$props2.exportVisibilityProps;
+          exportVisibilityProps = _this$props2.exportVisibilityProps,
+          pageClickText = _this$props2.pageClickText;
       var _this$state3 = _this.state,
           currentPageIndex = _this$state3.currentPageIndex,
           numberOfItemsPerPage = _this$state3.numberOfItemsPerPage,
@@ -231,7 +233,8 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         numberOfPages: numberOfPages,
         onResizeInner: _this.onResizeInner,
         pagesClassName: pagesClassName,
-        viewedPages: _this.viewedPages
+        viewedPages: _this.viewedPages,
+        pageClickText: pageClickText
       });
     };
 
@@ -280,6 +283,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Carousel__pagination__buttonContainer"
       }, /*#__PURE__*/_react.default.createElement(_button.Button, {
+        type: "button",
         className: "k-Carousel__pagination__button",
         icon: true,
         modifier: "beryllium",
@@ -287,10 +291,10 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         onClick: _this.goPrevPage,
         disabled: !loop && (currentPageIndex < 1 || numberOfPages < 1)
       }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, loop && (currentPageIndex < 1 || numberOfPages < 1) ? lastButtonText : prevButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-        version: "solid",
         direction: "left",
         "aria-hidden": true
       })), /*#__PURE__*/_react.default.createElement(_button.Button, {
+        type: "button",
         className: "k-Carousel__pagination__button",
         icon: true,
         modifier: "beryllium",
@@ -298,7 +302,6 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         onClick: _this.goNextPage,
         disabled: !loop && currentPageIndex >= numberOfPages - 1
       }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, loop && currentPageIndex >= numberOfPages - 1 ? firstButtonText : nextButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-        version: "solid",
         direction: "right",
         "aria-hidden": true
       }))), showPageSquares && /*#__PURE__*/_react.default.createElement("div", {
@@ -382,6 +385,9 @@ CarouselBase.defaultProps = {
   },
   prevButtonText: 'Previous items',
   nextButtonText: 'Next items',
+  pageClickText: function pageClickText(page) {
+    return "Page ".concat(page);
+  },
   firstButtonText: 'First items',
   lastButtonText: 'Last items',
   showPageSquares: false,
@@ -412,6 +418,7 @@ CarouselBase.propTypes = {
   }),
   prevButtonText: _propTypes.default.string,
   nextButtonText: _propTypes.default.string,
+  pageClickText: _propTypes.default.func,
   tinyButtons: _propTypes.default.bool,
   firstButtonText: _propTypes.default.string,
   lastButtonText: _propTypes.default.string,

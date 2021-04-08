@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react'
+import classNames from 'classnames'
 import Cropper from 'react-cropper'
 import getOr from 'lodash/fp/getOr'
-import { Marger } from '../../../components/layout/marger'
-import { Grid, GridCol } from '../../../components/grid/grid'
 import { Label } from '../../../components/form/label'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 import { BasicUploader } from '../../../components/uploaders/basic-uploader'
-import { Slider } from '../../../components/form/slider'
+import { RangeSlider } from '../../../components/form/range-slider'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
+import { StyledCropper } from './styles'
 
 export const ImageCropper = ({
   imageSrc,
@@ -25,6 +25,7 @@ export const ImageCropper = ({
   description,
   cropperInfo,
   sliderTitle,
+  className,
 }) => {
   const cropperContainerRef = useRef(null)
   const cropperRef = useRef(null)
@@ -37,7 +38,7 @@ export const ImageCropper = ({
   const [cropperInstance, setCropperInstance] = useState(null)
   const [sliderMin, setSliderMin] = useState(0)
   const [sliderMax, setSliderMax] = useState(100)
-  const [sliderValue, setSliderValue] = useState(0)
+  const [initialSliderValue, setInitialSliderValue] = useState(0)
   const [uploadedFile, setUploadedFile] = useState(null)
   const [resultData, setResultData] = useState(null)
 
@@ -51,7 +52,7 @@ export const ImageCropper = ({
       const max = sliderMax + ratio
       setSliderMin(min)
       setSliderMax(max)
-      setSliderValue(min)
+      setInitialSliderValue(min)
     }
   }, [getOr(null)('imageData.naturalWidth')(cropperInstance)])
   const setCropperSize = () => {
@@ -92,122 +93,132 @@ export const ImageCropper = ({
   }, [resultData, fileNameState, uploadedFile])
   const dragMode = disabled || !isCropEnabled ? 'none' : 'move'
   return (
-    <>
-      <Marger bottom="1.5">
-        <Label size="tiny">{label}</Label>
-      </Marger>
+    <StyledCropper className={classNames('k-UploadAndCropper', className)}>
+      <Label
+        size="tiny"
+        htmlFor={name}
+        className="k-u-margin-bottom-singleHalf"
+      >
+        {label}
+      </Label>
 
-      <Marger top="1.5" bottom="1">
-        <BasicUploader
-          id={name}
-          fileName={fileNameState}
-          buttonText={buttonLabel}
-          disabled={disabled}
-          errorText={errorText}
-          status={status}
-          fileInputProps={{ accept: acceptedFiles }}
-          onUpload={e => {
-            try {
-              const file = e.currentTarget.files[0]
-              setUploadedFile(file)
-              if (file.size > maxSize) {
-                setStatus('error')
-                setErrorText(uploaderErrorLabel)
-              } else {
-                const reader = new FileReader()
-                reader.onload = event => {
-                  setImageSrc(event.target.result)
-                  setFileName(file.name)
-                }
-                reader.readAsDataURL(file)
-              }
-            } catch (e) {
+      <BasicUploader
+        id={name}
+        className="k-u-margin-top-singleHalf k-u-margin-bottom-single"
+        fileName={fileNameState}
+        buttonText={buttonLabel}
+        disabled={disabled}
+        errorText={errorText}
+        status={status}
+        fileInputProps={{ accept: acceptedFiles }}
+        onUpload={e => {
+          try {
+            const file = e.currentTarget.files[0]
+            setUploadedFile(file)
+            if (file.size > maxSize) {
               setStatus('error')
               setErrorText(uploaderErrorLabel)
+            } else {
+              const reader = new FileReader()
+              reader.onload = event => {
+                setImageSrc(event.target.result)
+                setFileName(file.name)
+              }
+              reader.readAsDataURL(file)
             }
-          }}
-          onCancel={() => {
-            setImageSrc(imageSrc)
-            setFileName(fileName)
-            setErrorText('')
-            setUploadedFile(null)
+          } catch (e) {
+            setStatus('error')
+            setErrorText(uploaderErrorLabel)
+          }
+        }}
+        onCancel={() => {
+          setImageSrc(imageSrc)
+          setFileName(fileName)
+          setErrorText('')
+          setUploadedFile(null)
 
-            onChange({
-              value: null,
-              name: null,
-              file: null,
-            })
-          }}
-        />
-      </Marger>
+          onChange({
+            value: null,
+            name: null,
+            file: null,
+          })
+        }}
+      />
+      <Paragraph modifier="tertiary" noMargin className="k-u-margin-top-single">
+        {description}
+      </Paragraph>
+      <div
+        className="k-Cropper__wrapper k-u-margin-top-double"
+        aria-live="polite"
+      >
+        {imageSrcState && (
+          <>
+            <div
+              ref={cropperContainerRef}
+              className="k-Cropper__wrapper__cropper"
+            >
+              {cropperWidth && cropperHeight && (
+                <Cropper
+                  onInitialized={instance => {
+                    setCropperInstance(instance)
+                  }}
+                  ref={cropperRef}
+                  className="k-Cropper"
+                  src={imageSrcState}
+                  style={styles}
+                  initialAspectRatio={aspectRatio}
+                  viewMode={3}
+                  guides={false}
+                  modal={false}
+                  autoCropArea={1}
+                  cropBoxMovable={false}
+                  cropBoxResizable={false}
+                  toggleDragModeOnDblclick={false}
+                  zoomOnTouch={false}
+                  zoomOnWheel={false}
+                  dragMode={dragMode}
+                  crop={result => {
+                    setResultData(result)
+                  }}
+                />
+              )}
+            </div>
 
-      <Marger top="1">
-        <Paragraph modifier="quaternary" margin={false}>
-          {description}
-        </Paragraph>
-      </Marger>
-
-      {imageSrcState && (
-        <Grid>
-          <GridCol col="12" col-m="6">
-            <Marger top="2">
-              <div ref={cropperContainerRef}>
-                {cropperWidth && cropperHeight && (
-                  <Cropper
-                    onInitialized={instance => {
-                      setCropperInstance(instance)
-                    }}
-                    ref={cropperRef}
-                    className="k-Cropper"
-                    src={imageSrcState}
-                    style={styles}
-                    initialAspectRatio={aspectRatio}
-                    viewMode={3}
-                    guides={false}
-                    modal={false}
-                    autoCropArea={1}
-                    cropBoxMovable={false}
-                    cropBoxResizable={false}
-                    toggleDragModeOnDblclick={false}
-                    zoomOnTouch={false}
-                    zoomOnWheel={false}
-                    dragMode={dragMode}
-                    crop={result => {
-                      setResultData(result)
-                    }}
-                  />
-                )}
-              </div>
-            </Marger>
-          </GridCol>
-
-          {isCropEnabled && !disabled && (
-            <GridCol col="12" col-m="6">
-              <Marger top="2" bottom="1.5">
-                <Paragraph modifier="quaternary" margin={false}>
+            {isCropEnabled && !disabled && (
+              <div className="k-Cropper__wrapper__slider">
+                <Paragraph
+                  modifier="tertiary"
+                  noMargin
+                  className="k-u-margin-bottom-singleHalf"
+                >
                   {cropperInfo}
                 </Paragraph>
-              </Marger>
-              <Marger top="1.5" bottom="1">
-                <Label size="micro">{sliderTitle}</Label>
-              </Marger>
-              <Marger top="1">
-                <Slider
+                <Label
+                  size="micro"
+                  htmlFor="zoomSlider"
+                  className="k-u-margin-top-singleHalf k-u-margin-bottom-single"
+                >
+                  {sliderTitle}
+                </Label>
+                <RangeSlider
+                  id="zoomSlider"
                   name="zoom"
                   min={sliderMin}
                   max={sliderMax}
-                  value={sliderValue}
-                  onChange={value => {
-                    setSliderValue(value)
-                    cropperInstance.zoomTo(value / 100)
+                  step="any"
+                  initialValue={initialSliderValue}
+                  onChange={event => {
+                    const value = event.target.value
+                    cropperInstance && cropperInstance.zoomTo(value / 100)
                   }}
+                  className="k-u-margin-top-single"
                 />
-              </Marger>
-            </GridCol>
-          )}
-        </Grid>
-      )}
-    </>
+              </div>
+            )}
+          </>
+        )}
+      </div>
+    </StyledCropper>
   )
 }
 

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ResponsiveIframeContainer /> with custom props matches with snapshot 1`] = `
+<div
+  className="sc-bdVaJa idZNko k-ResponsiveIframeContainer"
+  style={
+    Object {
+      "--ResponsiveImageContainer-ratio": "56.25%",
+    }
+  }
+>
+  <img />
+</div>
+`;
+
+exports[`<ResponsiveIframeContainer /> with default props matches with snapshot 1`] = `
+<div
+  className="sc-bdVaJa idZNko k-ResponsiveIframeContainer"
+  style={
+    Object {
+      "--ResponsiveImageContainer-ratio": "67.5%",
+    }
+  }
+>
+  <iframe />
+</div>
+`;

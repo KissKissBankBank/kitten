@@ -12,11 +12,11 @@
 
 @mixin k-utilities-reset-button {
   .k-u-reset-button {
-  /**
-  * https://fvsch.com/styling-buttons/#reset
-  * Reset button styles.
-  * It takes a bit of work to achieve a neutral look.
-  */
+    /**
+    * https://fvsch.com/styling-buttons/#reset
+    * Reset button styles.
+    * It takes a bit of work to achieve a neutral look.
+    */
     margin: 0;
     padding: 0;
     border: none;
@@ -26,5 +26,10 @@
     /* show a hand cursor on hover; some argue that we
     should keep the default arrow cursor for buttons */
     cursor: pointer;
+
+    &:focus {
+      outline: map-get($k-colors, 'primary-4') solid k-px-to-rem(2px);
+      outline-offset: k-px-to-rem(2px);
+    }
   }
 }

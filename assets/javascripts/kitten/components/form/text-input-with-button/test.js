@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { TextInputWithButton } from './index'
-import { Loader } from '../../../components/loaders/loader'
+import { Loader } from '../../../components/atoms/loader'
 
 describe('<TextInputWithButton />', () => {
   let component
@@ -81,29 +81,9 @@ describe('<TextInputWithButton />', () => {
     })
   })
 
-  describe('with tiny prop', () => {
+  describe('with size prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithButton tiny />).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with huge prop', () => {
-    beforeEach(() => {
-      component = renderer.create(<TextInputWithButton huge />).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with giant prop', () => {
-    beforeEach(() => {
-      component = renderer.create(<TextInputWithButton giant />).toJSON()
+      component = renderer.create(<TextInputWithButton size="tiny" />).toJSON()
     })
 
     it('matches with snapshot', () => {

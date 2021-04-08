@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem } from '../../../helpers/utils/typography';
+import classNames from 'classnames';
 
 var getDashLength = function getDashLength(radius) {
   return 2 * Math.PI * radius;
@@ -28,7 +29,7 @@ var rotateAnimate = function rotateAnimate(_ref2) {
 var StyledMeterCircle = styled.circle.withConfig({
   displayName: "progress-ring__StyledMeterCircle",
   componentId: "ysg5f3-0"
-})(["stroke-linecap:butt;stroke-dasharray:", ";stroke-dashoffset:", ";transform:rotate(-90deg);transform-origin:", ";animation:", " 1.4s ease-out;"], function (_ref3) {
+})(["stroke-linecap:butt;stroke-dasharray:", ";stroke-dashoffset:", ";transform:rotate(-90deg);transform-origin:", ";animation:", " ", "s ease-out;&.k-Meters__ProgressRing--orion{stroke-linecap:round;}"], function (_ref3) {
   var r = _ref3.r;
   return getDashLength(r);
 }, function (_ref4) {
@@ -42,13 +43,19 @@ var StyledMeterCircle = styled.circle.withConfig({
   var cx = _ref5.cx,
       cy = _ref5.cy;
   return "".concat(pxToRem(cx), " ").concat(pxToRem(cy));
-}, rotateAnimate);
-export var ProgressRing = function ProgressRing(_ref6) {
-  var color = _ref6.color,
-      value = _ref6.value,
-      width = _ref6.width,
-      strokeWidth = _ref6.strokeWidth,
-      others = _objectWithoutProperties(_ref6, ["color", "value", "width", "strokeWidth"]);
+}, rotateAnimate, function (_ref6) {
+  var animationSpeed = _ref6.animationSpeed;
+  return animationSpeed;
+});
+export var ProgressRing = function ProgressRing(_ref7) {
+  var color = _ref7.color,
+      value = _ref7.value,
+      width = _ref7.width,
+      strokeWidth = _ref7.strokeWidth,
+      variant = _ref7.variant,
+      className = _ref7.className,
+      animationSpeed = _ref7.animationSpeed,
+      others = _objectWithoutProperties(_ref7, ["color", "value", "width", "strokeWidth", "variant", "className", "animationSpeed"]);
 
   var circleX = width / 2;
   var circleY = width / 2;
@@ -72,9 +79,11 @@ export var ProgressRing = function ProgressRing(_ref6) {
     cy: circleY,
     r: radius,
     strokeWidth: strokeWidth,
+    animationSpeed: animationSpeed,
     fill: "transparent",
     stroke: color,
-    progressValue: progressValue
+    progressValue: progressValue,
+    className: classNames('k-Meters__ProgressRing', className, "k-Meters__ProgressRing--".concat(variant))
   }));
 };
 ProgressRing.defaultProps = {
@@ -82,7 +91,9 @@ ProgressRing.defaultProps = {
   value: '',
   width: 50,
   radius: null,
-  strokeWidth: 5
+  strokeWidth: 5,
+  variant: 'andromeda',
+  animationSpeed: 1.4
 };
 ProgressRing.propTypes = {
   /**
@@ -108,5 +119,7 @@ ProgressRing.propTypes = {
   /**
     Width of circle (stroke)
   */
-  strokeWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  strokeWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  variant: PropTypes.oneOf(['andromeda', 'orion']),
+  animationSpeed: PropTypes.number
 };

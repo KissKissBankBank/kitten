@@ -7,29 +7,11 @@ import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConst
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
 
+var _templateObject, _templateObject2;
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  .k-Modal__overlay {\n    opacity: 0;\n  }\n  .k-Modal__content {\n    opacity: 0;\n    transform: scale(.94);\n  }\n\n  .k-Modal__overlay--afterOpen {\n    transition: opacity .3s ease;\n    opacity: 1;\n  }\n  .k-Modal--afterOpen {\n    transition: opacity .3s ease, transform .3s ease;\n    transform: scale(1);\n    opacity: 1;\n  }\n\n  .k-Modal__overlay--beforeClose {\n    opacity: 0;\n  }\n  .k-Modal--beforeClose {\n    transition: opacity .3s ease, transform .5s ease;\n    transform: scale(1.06);\n    opacity: 0;\n  }\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  body.k-Modal__body--open {\n    overflow: hidden;\n  }\n\n  .k-Modal__content {\n    position: relative;\n    max-height: calc(100% - ", " * 2);\n    max-width: calc(100vw - ", " * 2);\n\n    background-color: ", ";\n    text-align: center;\n    padding-left: ", ";\n    padding-right: ", ";\n\n    outline: none;\n    box-sizing: border-box;\n    overflow: scroll;\n\n    @media (min-width: ", ") {\n      max-width: ", ";\n      padding-left: ", ";\n      padding-right: ", ";\n    }\n  }\n\n  .k-Modal__close {\n    position: absolute;\n    top: 0;\n    right: ", ";\n\n    button {\n      margin: 0;\n    }\n  }\n\n  .k-Modal__close--fixed {\n    position: fixed;\n  }\n\n  .k-Modal__overlay {\n    position: fixed;\n    z-index: 10;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n    background-color: rgba(34, 34, 34, .9);\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -41,8 +23,8 @@ import { createGlobalStyle } from 'styled-components';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../constants/screen-config';
 import COLORS from '../../../constants/colors-config';
-var GlobalStyle = createGlobalStyle(_templateObject(), pxToRem(20), pxToRem(20), COLORS.background1, pxToRem(60), pxToRem(60), pxToRem(ScreenConfig.M.min), pxToRem(690), pxToRem(110), pxToRem(110), pxToRem(30));
-var AnimatedGlobalStyle = createGlobalStyle(_templateObject2());
+var GlobalStyle = createGlobalStyle(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  body.k-Modal__body--open {\n    overflow: hidden;\n  }\n\n  .k-Modal__content {\n    position: relative;\n    max-height: calc(100% - ", " * 2);\n    max-width: calc(100vw - ", " * 2);\n\n    background-color: ", ";\n    text-align: center;\n    padding-left: ", ";\n    padding-right: ", ";\n\n    box-sizing: border-box;\n    overflow: scroll;\n\n    @media (min-width: ", ") {\n      max-width: ", ";\n      padding-left: ", ";\n      padding-right: ", ";\n    }\n  }\n\n  .k-Modal__close {\n    position: absolute;\n    top: 0;\n    right: ", ";\n\n    button {\n      margin: 0;\n    }\n  }\n\n  .k-Modal__close--fixed {\n    position: fixed;\n  }\n\n  .k-Modal__overlay {\n    position: fixed;\n    z-index: 10;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n    background-color: rgba(34, 34, 34, .9);\n  }\n"])), pxToRem(20), pxToRem(20), COLORS.background1, pxToRem(60), pxToRem(60), pxToRem(ScreenConfig.M.min), pxToRem(690), pxToRem(110), pxToRem(110), pxToRem(30));
+var AnimatedGlobalStyle = createGlobalStyle(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  .k-Modal__overlay {\n    opacity: 0;\n  }\n  .k-Modal__content {\n    opacity: 0;\n    transform: scale(.94);\n  }\n\n  .k-Modal__overlay--afterOpen {\n    transition: opacity .3s ease;\n    opacity: 1;\n  }\n  .k-Modal--afterOpen {\n    transition: opacity .3s ease, transform .3s ease;\n    transform: scale(1);\n    opacity: 1;\n  }\n\n  .k-Modal__overlay--beforeClose {\n    opacity: 0;\n  }\n  .k-Modal--beforeClose {\n    transition: opacity .3s ease, transform .5s ease;\n    transform: scale(1.06);\n    opacity: 0;\n  }\n"])));
 export var Modal = /*#__PURE__*/function (_Component) {
   _inherits(Modal, _Component);
 
@@ -82,6 +64,11 @@ export var Modal = /*#__PURE__*/function (_Component) {
   }
 
   _createClass(Modal, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      console.warn('The Modal component on `modals/modal` will be deprecated in favor of `ModalNext`.');
+    }
+  }, {
     key: "renderCloseModal",
     value: function renderCloseModal() {
       var closeButtonLabel = this.props.closeButtonLabel;

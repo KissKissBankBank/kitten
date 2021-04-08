@@ -14,6 +14,7 @@ import {
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
 } from '../../../constants/grid-config'
+import { StatusWithBullet } from '../../../components/atoms/status-with-bullet'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -251,7 +252,7 @@ const ToggleableTable = styled(ListTable)`
 `
 
 export const Default = () => (
-  <div className="k-u-margin-top-quintuple k-u-margin-bottom-quintuple">
+  <>
     <ListTableStyles />
     <ListTable id="CustomListTable">
       <ListTable.Header
@@ -338,7 +339,9 @@ export const Default = () => (
 
           <ListTable.Col className="customCol_4">72&nbsp;€</ListTable.Col>
 
-          <ListTable.Col className="customCol_5">● Validé</ListTable.Col>
+          <ListTable.Col className="customCol_5">
+            <StatusWithBullet statusType="success">Valid</StatusWithBullet>
+          </ListTable.Col>
 
           <ListTable.Col className="customCol_6">Livraison</ListTable.Col>
 
@@ -401,7 +404,9 @@ export const Default = () => (
 
           <ListTable.Col className="customCol_4">72&nbsp;€</ListTable.Col>
 
-          <ListTable.Col className="customCol_5">● Validé</ListTable.Col>
+          <ListTable.Col className="customCol_5">
+            <StatusWithBullet statusType="warning">Invalid</StatusWithBullet>
+          </ListTable.Col>
 
           <ListTable.Col className="customCol_6">Livraison</ListTable.Col>
 
@@ -415,7 +420,7 @@ export const Default = () => (
         </ListTable.Row>
       </ListTable.Body>
     </ListTable>
-  </div>
+  </>
 )
 
 export const Toggleable = () => {
@@ -452,10 +457,7 @@ export const Toggleable = () => {
               aria-controls="toggleableListTable"
             >
               Voir les détails
-              <ArrowIcon
-                direction={displayed ? 'top' : 'bottom'}
-                version="solid"
-              />
+              <ArrowIcon direction={displayed ? 'top' : 'bottom'} />
             </ToggleButton>
           </Col>
         </HeaderRow>

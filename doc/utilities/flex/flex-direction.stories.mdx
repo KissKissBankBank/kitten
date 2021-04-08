@@ -1,0 +1,87 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+
+<Meta title="Documentation/CSS Utilities/Flex/Flex direction" />
+
+# Flex direction
+
+Flex direction utility to be used with a flexbox container, like `k-u-flex` or `k-u-flex-inline`.
+
+## Source
+
+[`assets/stylesheets/kitten/utilities/flex/_flex-direction.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/flex/_flex-direction.scss)
+
+## Usage
+
+Utilities to set items direction according to media-queries.
+
+The class name has the form `k-u-flex-direction-{value}`
+
+Accepts values:
+
+- `row`
+- `rowReverse`
+- `column`
+- `columnReverse`
+
+## Examples
+
+`k-u-flex-direction-row`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex k-u-flex-direction-row">
+  <p>
+    First block item
+  </p>
+  <p>
+    Second block item
+  </p>
+  <p>
+    Third block item
+  </p>
+</div>
+</Canvas>
+
+`k-u-flex-direction-rowReverse`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex k-u-flex-direction-rowReverse">
+  <p>
+    First block item
+  </p>
+  <p>
+    Second block item
+  </p>
+  <p>
+    Third block item
+  </p>
+</div>
+</Canvas>
+
+`k-u-flex-direction-column`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex k-u-flex-direction-column">
+  <p>
+    First block item
+  </p>
+  <p>
+    Second block item
+  </p>
+  <p>
+    Third block item
+  </p>
+</div>
+</Canvas>
+
+`k-u-flex-direction-columnReverse`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex k-u-flex-direction-columnReverse">
+  <p>
+    First block item
+  </p>
+  <p>
+    Second block item
+  </p>
+  <p>
+    Third block item
+  </p>
+</div>
+</Canvas>
+

@@ -45,10 +45,17 @@ const StyledTextarea = styled.textarea`
     font-size: ${stepToRem(0)};
   }
 
-  :focus {
-    outline: none;
+  &:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
     border-color: ${COLORS.line2};
     color: ${COLORS.font1};
+  }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary4};
   }
 
   ::placeholder {

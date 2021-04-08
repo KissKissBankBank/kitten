@@ -51,8 +51,8 @@ HorizontalStroke.propTypes = {
   size: PropTypes.oneOf(['micro', 'tiny', 'default', 'big', 'huge']),
   modifier: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary', 'septenary']),
   customSize: PropTypes.shape({
-    width: PropTypes.number,
-    height: PropTypes.number
+    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    height: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   }),
   color: PropTypes.string
 };

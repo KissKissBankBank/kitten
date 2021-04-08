@@ -15,6 +15,8 @@ export default {
   // Semi Light Grey
   line2: '#d8d8d8',
   // Grey
+  line3: '#2d2d2d',
+  // Extra semi dark grey, not used for text
   primary1: '#19b4fa',
   // Primary
   primary2: '#05a8e6',
@@ -33,6 +35,8 @@ export default {
   // Semi Light Green
   valid: '#61d079',
   // Green
+  valid1: 'hsl(133, 54%, 94%)',
+  // Green Light
   error: '#ff0046',
   // Red
   error2: '#ffe5ec',
@@ -40,6 +44,8 @@ export default {
   error3: '#ffb2c7',
   // Semi Light Red
   orange: '#ff7800',
+  orange1: '#fff2e7',
+  // Orange light
   warning: '#8a6d3b',
   warning2: '#fcf8e3'
 };

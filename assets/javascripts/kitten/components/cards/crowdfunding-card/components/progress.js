@@ -42,7 +42,7 @@ class ProgressBar extends PureComponent {
           weight="regular"
           size="micro"
           color="font1"
-          className="k-CrowdfundingCard__progressBar__percent k-u-hidden@s-down"
+          className="k-CrowdfundingCard__progressBar__percent"
         >
           {loading && (
             <span className="k-CrowdfundingCard__progressBar__loadingPercent" />

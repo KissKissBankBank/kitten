@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 import { modifierStyles } from '../../../components/buttons/button/helpers/modifier-styles'
 import { Text } from '../../../components/typography/text'
 import classNames from 'classnames'
@@ -13,7 +13,7 @@ import { CrossCircleIcon } from '../../../components/icons/cross-circle-icon'
 import { ClockCircleIcon } from '../../../components/icons/clock-circle-icon'
 import { CrossIcon } from '../../../components/icons/cross-icon'
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
-import { Loader } from '../../../components/loaders/loader'
+import { Loader } from '../../../components/atoms/loader'
 
 const StyledBasicUploader = styled.div`
   input[type='file'] {
@@ -31,11 +31,19 @@ const StyledBasicUploader = styled.div`
     background-color: ${COLORS.primary2};
     border-color: ${COLORS.primary2};
     color: ${COLORS.background1};
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
 
     svg,
     path {
       fill: ${COLORS.background1};
     }
+  }
+  input[type='file']:focus:not(:focus-visible) + label {
+    outline-color: transparent;
+  }
+  input[type='file']:focus-visible + label {
+    outline-color: ${COLORS.primary4};
   }
 
   &:not(.k-BasicUploader--loading) {
@@ -70,6 +78,17 @@ const StyledBasicUploader = styled.div`
     justify-content: center;
     align-items: center;
     ${modifierStyles('beryllium')}
+
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
   }
 `
 

@@ -7,11 +7,10 @@ import {
   checkPage,
   checkPageLoop,
 } from './index'
-import {
-  ProjectCard,
-  MIN_WIDTH as projectCardMinWidth,
-  MARGIN_BETWEEN as projectCardMarginBetween,
-} from '../../../components/cards/project-card'
+import { CrowdfundingCard } from '../../../components/cards/crowdfunding-card'
+
+const projectCardMinWidth = 280
+const projectCardMarginBetween = 40
 
 const createMockMediaMatcher = matches => () => ({
   matches,
@@ -21,7 +20,44 @@ const createMockMediaMatcher = matches => () => ({
 
 describe('<Carousel />', () => {
   let originalMatchMedia
-  const data = [{ title: 'A' }]
+  const data = [
+    {
+      href: 'https://kitten.kisskissbankbank.com/',
+      ownerTitle: 'A Owner title',
+      ownerDescription: 'A Owner description',
+      imageProps: { src: '#image', alt: '' },
+      avatarProps: { src: '#image', alt: '' },
+      state: 'Lorem ipsum…',
+      loading: false,
+      title: 'A Lorem ipsum…',
+      subTitle: 'A Sed ut perspiciatis unde omnis iste natus error Lorem',
+      titleTruncate: true,
+      subTitleTruncate: true,
+      info1: 'Lorem ipsum…',
+      info2: 'Lorem ipsum…',
+      info3: 'Lorem ipsum…',
+      progress: 100,
+      stretch: true,
+    },
+    {
+      href: 'https://kitten.kisskissbankbank.com/',
+      ownerTitle: 'B Owner title',
+      ownerDescription: 'B Owner description',
+      imageProps: { src: '#image', alt: '' },
+      avatarProps: { src: '#image', alt: '' },
+      state: 'Lorem ipsum…',
+      loading: false,
+      title: 'B Lorem ipsum…',
+      subTitle: 'B Sed ut perspiciatis unde omnis iste natus error Lorem',
+      titleTruncate: true,
+      subTitleTruncate: true,
+      info1: 'Lorem ipsum…',
+      info2: 'Lorem ipsum…',
+      info3: 'Lorem ipsum…',
+      progress: 42,
+      stretch: true,
+    },
+  ]
 
   beforeEach(() => {
     originalMatchMedia = window.matchMedia
@@ -41,7 +77,7 @@ describe('<Carousel />', () => {
           tinyButtons={false}
         >
           {data.map((item, index) => (
-            <ProjectCard title={item.title} key={index} />
+            <CrowdfundingCard {...item} key={index} />
           ))}
         </Carousel>,
       )
@@ -62,7 +98,7 @@ describe('<Carousel />', () => {
           loop={true}
         >
           {data.map((item, index) => (
-            <ProjectCard title={item.title} key={index} />
+            <CrowdfundingCard {...item} key={index} />
           ))}
         </Carousel>,
       )
@@ -83,7 +119,7 @@ describe('<Carousel />', () => {
           exportVisibilityProps
         >
           {data.map((item, index) => (
-            <ProjectCard title={item.title} key={index} />
+            <CrowdfundingCard {...item} key={index} />
           ))}
         </Carousel>,
       )
@@ -104,7 +140,7 @@ describe('<Carousel />', () => {
           itemsPerPage={5}
         >
           {data.map((item, index) => (
-            <ProjectCard title={item.title} key={index} />
+            <CrowdfundingCard {...item} key={index} />
           ))}
         </Carousel>,
       )
@@ -125,7 +161,7 @@ describe('<Carousel />', () => {
           pagesClassName="custom-class"
         >
           {data.map((item, index) => (
-            <ProjectCard title={item.title} key={index} />
+            <CrowdfundingCard {...item} key={index} />
           ))}
         </Carousel>,
       )
@@ -149,7 +185,7 @@ describe('<Carousel />', () => {
           baseItemMarginBetween={projectCardMarginBetween}
           data={[{ title: 'A' }]}
           renderItem={({ item }) => {
-            return <ProjectCard title={item.title} />
+            return <CrowdfundingCard {...item} />
           }}
         />,
       )
@@ -174,7 +210,7 @@ describe('<Carousel />', () => {
           data={[{ title: 'A' }]}
           withoutLeftOffset={true}
           renderItem={({ item }) => {
-            return <ProjectCard title={item.title} />
+            return <CrowdfundingCard {...item} />
           }}
         />,
       )
@@ -198,7 +234,7 @@ describe('<Carousel />', () => {
           baseItemMarginBetween={projectCardMarginBetween}
           data={[{ title: 'A' }]}
           renderItem={({ item }) => {
-            return <ProjectCard title={item.title} />
+            return <CrowdfundingCard {...item} />
           }}
         />,
       )

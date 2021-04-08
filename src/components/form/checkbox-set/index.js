@@ -38,7 +38,8 @@ var CheckboxSet = function CheckboxSet(_ref) {
       error = _ref.error,
       label = _ref.label,
       children = _ref.children,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["items", "disabled", "className", "name", "error", "label", "children"]);
+      variant = _ref.variant,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["items", "disabled", "className", "name", "error", "label", "children", "variant"]);
   return /*#__PURE__*/_react.default.createElement(StyledCheckboxSet, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Form-CheckboxSet', className),
     disabled: disabled
@@ -53,6 +54,7 @@ var CheckboxSet = function CheckboxSet(_ref) {
       id: id,
       error: error,
       name: name,
+      variant: variant,
       key: id
     }, itemProps, {
       className: (0, _classnames.default)('k-Form-CheckboxSet__checkbox', className)
@@ -71,7 +73,8 @@ CheckboxSet.propTypes = {
     defaultChecked: _propTypes.default.bool,
     children: _propTypes.default.node
   })),
-  disabled: _propTypes.default.bool
+  disabled: _propTypes.default.bool,
+  variant: _propTypes.default.oneOf(['andromeda', 'orion'])
 };
 CheckboxSet.defaultProps = {
   name: 'checkboxSet',
@@ -84,5 +87,6 @@ CheckboxSet.defaultProps = {
     id: 'myCheckbox' // Replace by a real value
 
   }],
-  disabled: false
+  disabled: false,
+  variant: 'andromeda'
 };

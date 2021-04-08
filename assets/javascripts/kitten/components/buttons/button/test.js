@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
-import { Button } from './button'
+import { Button } from './index'
 
 describe('<Button />', () => {
   let component
@@ -16,9 +16,15 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with `tiny` prop', () => {
+  describe('with `tag` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<Button tiny>MyButton</Button>).toJSON()
+      component = renderer
+        .create(
+          <Button tag="a" href="#helloWorld">
+            MyButton
+          </Button>,
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -26,29 +32,11 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with `big` prop', () => {
+  describe('with `size` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<Button big>MyButton</Button>).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with `huge` prop', () => {
-    beforeEach(() => {
-      component = renderer.create(<Button huge>MyButton</Button>).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with `giant` prop', () => {
-    beforeEach(() => {
-      component = renderer.create(<Button giant>MyButton</Button>).toJSON()
+      component = renderer
+        .create(<Button size="tiny">MyButton</Button>)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -133,7 +121,7 @@ describe('<Button />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button icon micro>
+          <Button icon size="micro">
             !
           </Button>,
         )
@@ -149,7 +137,7 @@ describe('<Button />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button icon tiny>
+          <Button icon size="tiny">
             !
           </Button>,
         )
@@ -165,7 +153,7 @@ describe('<Button />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button icon big>
+          <Button icon size="big">
             !
           </Button>,
         )
@@ -181,7 +169,7 @@ describe('<Button />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button icon huge>
+          <Button icon size="huge">
             !
           </Button>,
         )
@@ -197,7 +185,7 @@ describe('<Button />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button icon giant>
+          <Button icon size="giant">
             !
           </Button>,
         )

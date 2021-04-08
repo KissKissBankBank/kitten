@@ -24,7 +24,6 @@ const GlobalStyle = createGlobalStyle`
     padding-left: ${pxToRem(60)};
     padding-right: ${pxToRem(60)};
 
-    outline: none;
     box-sizing: border-box;
     overflow: scroll;
 
@@ -97,6 +96,12 @@ const AnimatedGlobalStyle = createGlobalStyle`
 export class Modal extends Component {
   state = {
     showModal: false,
+  }
+
+  componentDidMount() {
+    console.warn(
+      'The Modal component on `modals/modal` will be deprecated in favor of `ModalNext`.',
+    )
   }
 
   open = () => {

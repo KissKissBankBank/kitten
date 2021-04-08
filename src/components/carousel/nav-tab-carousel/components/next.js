@@ -15,9 +15,10 @@ var Next = function Next(_ref) {
   var children = _ref.children,
       hoverColor = _ref.hoverColor;
   return /*#__PURE__*/_react.default.createElement(_styledComponents.StyledRightArrowContainer, {
-    hoverColor: hoverColor
+    hoverColor: hoverColor,
+    as: "button",
+    className: "k-u-reset-button"
   }, /*#__PURE__*/_react.default.createElement(_styledComponents.StyledNextText, null, children), /*#__PURE__*/_react.default.createElement(_styledComponents.StyledArrowIcon, {
-    version: "solid",
     fill: "#fff"
   }));
 };

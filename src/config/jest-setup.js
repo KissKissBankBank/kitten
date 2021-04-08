@@ -6,9 +6,8 @@ var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWild
 
 var _enzyme = _interopRequireWildcard(require("enzyme"));
 
-var _enzymeAdapterReact = _interopRequireDefault(require("enzyme-adapter-react-16"));
+var _enzymeAdapterReact = _interopRequireDefault(require("@wojtekmaj/enzyme-adapter-react-17"));
 
-// React 16 Enzyme adapter
 _enzyme.default.configure({
   adapter: new _enzymeAdapterReact.default()
 }); // Make Enzyme functions available in all test files without importing

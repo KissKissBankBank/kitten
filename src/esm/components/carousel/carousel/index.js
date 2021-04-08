@@ -8,7 +8,7 @@ import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 import React, { Component, Fragment } from 'react';
 import deprecated from 'prop-types-extra/lib/deprecated';
@@ -16,13 +16,13 @@ import PropTypes from 'prop-types';
 import { createRangeFromZeroTo } from '../../../helpers/utils/range';
 import { withMediaQueries } from '../../../hoc/media-queries';
 import { CONTAINER_PADDING, CONTAINER_PADDING_MOBILE } from '../../../constants/grid-config';
-import { Button } from '../../../components/buttons/button/button';
+import { Button } from '../../../components/buttons/button';
 import { ArrowIcon } from '../../../components/icons/arrow-icon';
 import { CarouselInner } from './components/carousel-inner';
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden';
 import classNames from 'classnames';
 import { Grid, GridCol } from '../../../components/grid/grid';
-import { StyledCarouselContainer } from './styles';
+import { StyledCarouselContainer, OUTLINE_PLUS_OFFSET } from './styles';
 
 var getDataLength = function getDataLength(_ref) {
   var data = _ref.data,
@@ -58,9 +58,9 @@ export var checkPageLoop = function checkPageLoop(numberOfPages, newPage) {
 };
 
 var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess) {
-  if (viewportIsXSOrLess) return CONTAINER_PADDING_MOBILE / 2;
-  if (viewportIsMOrLess) return CONTAINER_PADDING / 2;
-  return baseItemMarginBetween;
+  if (viewportIsXSOrLess) return CONTAINER_PADDING_MOBILE / 2 - OUTLINE_PLUS_OFFSET * 2;
+  if (viewportIsMOrLess) return CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2;
+  return baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2;
 };
 
 var CarouselBase = /*#__PURE__*/function (_Component) {
@@ -144,8 +144,9 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
     };
 
     _this.goToPage = function (indexPageToGo) {
+      var loop = _this.props.loop;
       var numberOfPages = _this.state.numberOfPages;
-      var newPage = checkPage(numberOfPages, indexPageToGo);
+      var newPage = loop ? checkPageLoop(numberOfPages, indexPageToGo) : checkPage(numberOfPages, indexPageToGo);
 
       _this.viewedPages.add(newPage);
 
@@ -163,7 +164,8 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           viewportIsXSOrLess = _this$props2.viewportIsXSOrLess,
           viewportIsMOrLess = _this$props2.viewportIsMOrLess,
           pagesClassName = _this$props2.pagesClassName,
-          exportVisibilityProps = _this$props2.exportVisibilityProps;
+          exportVisibilityProps = _this$props2.exportVisibilityProps,
+          pageClickText = _this$props2.pageClickText;
       var _this$state3 = _this.state,
           currentPageIndex = _this$state3.currentPageIndex,
           numberOfItemsPerPage = _this$state3.numberOfItemsPerPage,
@@ -191,7 +193,8 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         numberOfPages: numberOfPages,
         onResizeInner: _this.onResizeInner,
         pagesClassName: pagesClassName,
-        viewedPages: _this.viewedPages
+        viewedPages: _this.viewedPages,
+        pageClickText: pageClickText
       });
     };
 
@@ -240,6 +243,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/React.createElement("div", {
         className: "k-Carousel__pagination__buttonContainer"
       }, /*#__PURE__*/React.createElement(Button, {
+        type: "button",
         className: "k-Carousel__pagination__button",
         icon: true,
         modifier: "beryllium",
@@ -247,10 +251,10 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         onClick: _this.goPrevPage,
         disabled: !loop && (currentPageIndex < 1 || numberOfPages < 1)
       }, /*#__PURE__*/React.createElement(VisuallyHidden, null, loop && (currentPageIndex < 1 || numberOfPages < 1) ? lastButtonText : prevButtonText), /*#__PURE__*/React.createElement(ArrowIcon, {
-        version: "solid",
         direction: "left",
         "aria-hidden": true
       })), /*#__PURE__*/React.createElement(Button, {
+        type: "button",
         className: "k-Carousel__pagination__button",
         icon: true,
         modifier: "beryllium",
@@ -258,7 +262,6 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         onClick: _this.goNextPage,
         disabled: !loop && currentPageIndex >= numberOfPages - 1
       }, /*#__PURE__*/React.createElement(VisuallyHidden, null, loop && currentPageIndex >= numberOfPages - 1 ? firstButtonText : nextButtonText), /*#__PURE__*/React.createElement(ArrowIcon, {
-        version: "solid",
         direction: "right",
         "aria-hidden": true
       }))), showPageSquares && /*#__PURE__*/React.createElement("div", {
@@ -343,6 +346,9 @@ CarouselBase.defaultProps = {
   },
   prevButtonText: 'Previous items',
   nextButtonText: 'Next items',
+  pageClickText: function pageClickText(page) {
+    return "Page ".concat(page);
+  },
   firstButtonText: 'First items',
   lastButtonText: 'Last items',
   showPageSquares: false,
@@ -373,6 +379,7 @@ CarouselBase.propTypes = {
   }),
   prevButtonText: PropTypes.string,
   nextButtonText: PropTypes.string,
+  pageClickText: PropTypes.func,
   tinyButtons: PropTypes.bool,
   firstButtonText: PropTypes.string,
   lastButtonText: PropTypes.string,

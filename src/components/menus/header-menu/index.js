@@ -7,53 +7,44 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.HeaderMenu = void 0;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+
 var _react = _interopRequireDefault(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _classnames = _interopRequireDefault(require("classnames"));
 
 var _item = require("./components/item");
 
 var _badge = require("./components/badge");
 
-var _context = require("./components/context");
+var _styles = require("./styles");
 
-var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
-
-var _typography = require("../../../helpers/utils/typography");
-
-var borderStyle = "".concat((0, _typography.pxToRem)(1), " solid ").concat(_colorsConfig.default.line1);
-
-var List = _styledComponents.default.ul.withConfig({
-  displayName: "header-menu__List",
-  componentId: "i1nt9v-0"
-})(["margin:0;padding:0;list-style:none;border-left:", ";border-right:", ";"], function (_ref) {
-  var noBorder = _ref.noBorder;
-  return noBorder ? 0 : borderStyle;
-}, function (_ref2) {
-  var noBorder = _ref2.noBorder;
-  return noBorder ? 0 : borderStyle;
-});
-
-var HeaderMenu = function HeaderMenu(_ref3) {
-  var backgroundColors = _ref3.backgroundColors,
-      borderSide = _ref3.borderSide,
-      borderSideOnHover = _ref3.borderSideOnHover,
-      largeItem = _ref3.largeItem,
-      noBorder = _ref3.noBorder,
-      children = _ref3.children;
-  return /*#__PURE__*/_react.default.createElement(_context.Context.Provider, {
-    value: {
-      backgroundColors: backgroundColors,
-      borderSide: borderSide,
-      borderSideOnHover: borderSideOnHover,
-      largeItem: largeItem,
-      noBorder: noBorder
-    }
-  }, /*#__PURE__*/_react.default.createElement(List, {
-    noBorder: noBorder
-  }, children));
+var HeaderMenu = function HeaderMenu(_ref) {
+  var backgroundColors = _ref.backgroundColors,
+      borderSide = _ref.borderSide,
+      borderSideOnHover = _ref.borderSideOnHover,
+      largeItem = _ref.largeItem,
+      noBorder = _ref.noBorder,
+      className = _ref.className,
+      style = _ref.style,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "style"]);
+  return /*#__PURE__*/_react.default.createElement(_styles.StyledList, (0, _extends2.default)({
+    className: (0, _classnames.default)('k-HeaderMenu', className, {
+      'k-HeaderMenu--hasBorders': !noBorder,
+      'k-HeaderMenu--hasBorderOnSide': !!borderSide,
+      'k-HeaderMenu--hasBorderOnSide-left': borderSide === 'left',
+      'k-HeaderMenu--hasBorderOnSide-right': borderSide === 'right',
+      'k-HeaderMenu--hasBorderOnSideOnHover': borderSideOnHover,
+      'k-HeaderMenu--hasBigItems': largeItem
+    }),
+    style: (0, _extends2.default)({}, style, {
+      '--headerMenu-background-colors-hover': backgroundColors === null || backgroundColors === void 0 ? void 0 : backgroundColors.hover
+    })
+  }, props));
 };
 
 exports.HeaderMenu = HeaderMenu;

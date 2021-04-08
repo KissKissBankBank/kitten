@@ -19,6 +19,7 @@ const StyledAccordeon = styled.div`
     margin-top: ${pxToRem(15)};
   }
 
+
   .k-Accordeon__header {
     display: block;
 
@@ -35,12 +36,17 @@ const StyledAccordeon = styled.div`
     background-color: transparent;
     cursor: pointer;
     text-align: left;
-  }
 
-  .k-Accordeon__header:focus,
-  .k-Accordeon__header:focus + .k-Accordeon__content {
-    outline: none;
-    border-color: ${COLORS.primary1};
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
   }
 
   .k-Accordeon__content {
@@ -115,6 +121,10 @@ const StyledAccordeon = styled.div`
   }
 
   &.k-Accordeon--orion {
+    .k-Accordeon__item {
+      border-radius: ${pxToRem(6)};
+    }
+
     .k-Accordeon__header {
       position: relative;
       padding: ${pxToRem(25)} ${pxToRem(30 + 10 + 10)} ${pxToRem(25)} ${pxToRem(
@@ -206,7 +216,7 @@ export const Accordeon = ({
 
     setSelectedItem(newItem)
 
-    onChange(items[newItem].props.id || `${id}-${newItem}`)
+    onChange(items[newItem]?.props?.id || `${id}-${newItem}`)
   }
 
   const context = {

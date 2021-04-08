@@ -40,7 +40,8 @@ export const Number = ({
   const ccIconSvg = getIconSvgStringByType(ccType.type)
 
   const handleChange = ({ value }) => {
-    setInputValues({ number: value, type: ccType.type })
+    const { type } = getCreditCardType(value)
+    setInputValues({ number: value, type })
   }
 
   return (

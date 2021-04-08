@@ -6,10 +6,11 @@ import styled from 'styled-components';
 import COLORS from './../../../constants/colors-config';
 import classNames from 'classnames';
 import { pxToRem, stepToRem } from './../../../helpers/utils/typography';
+import TYPOGRAPHY from '../../../constants/typography-config';
 var List = styled.ul.withConfig({
   displayName: "check-list__List",
   componentId: "sc-1berzg4-0"
-})(["display:inline-flex;flex-direction:column;padding:0;margin:0;.k-CheckList__item{list-style-type:none;display:flex;align-items:stretch;margin-bottom:", ";color:", ";font-size:", ";line-height:1.2;.strike{text-decoration:line-through;}&:before{content:'\u25CF';color:", ";padding-right:", ";}&:last-child{margin-bottom:0;}}.k-CheckList__item--done{&:before{color:", ";}}"], pxToRem(10), COLORS.font1, stepToRem(-1), COLORS.line2, pxToRem(10), COLORS.valid);
+})(["display:inline-flex;flex-direction:column;padding:0;margin:0;.k-CheckList__item{", ";list-style-type:none;display:flex;align-items:stretch;margin-bottom:", ";color:", ";font-size:", ";line-height:1.2;.strike{text-decoration:line-through;}&:before{content:'\u25CF';color:", ";padding-right:", ";}&:last-child{margin-bottom:0;}}.k-CheckList__item--done{&:before{color:", ";}}"], TYPOGRAPHY.fontStyles.light, pxToRem(10), COLORS.font1, stepToRem(-1), COLORS.line2, pxToRem(10), COLORS.valid);
 
 var a11yProps = function a11yProps(a11yText, done) {
   return {

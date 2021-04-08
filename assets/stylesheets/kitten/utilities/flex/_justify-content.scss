@@ -1,0 +1,92 @@
+/// Block alignment utilities, with FlexBox.
+///
+/// @group align
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-justify-content;
+///
+/// @example html
+///
+///   <div class="k-u-flex-justifyContent-center@xxs-down">…</div>
+///   <div class="k-u-flex-justifyContent-center@xs-down">…</div>
+///   <div class="k-u-flex-justifyContent-center@s-down">…</div>
+///   <div class="k-u-flex-justifyContent-center@m-down">…</div>
+///   <div class="k-u-flex-justifyContent-center@l-down">…</div>
+///
+///   <div class="k-u-flex-justifyContent-center@xs-up">…</div>
+///   <div class="k-u-flex-justifyContent-center@s-up">…</div>
+///   <div class="k-u-flex-justifyContent-center@m-up">…</div>
+///   <div class="k-u-flex-justifyContent-center@l-up">…</div>
+///   <div class="k-u-flex-justifyContent-center@xl-up">…</div>
+///
+///   <div class="k-u-flex-justifyContent-center">…</div>
+///   <div class="k-u-flex-justifyContent-start">…</div>
+///   <div class="k-u-flex-justifyContent-end">…</div>
+///
+///   <div class="k-u-flex-justifyContent-center@xxs-down--important">…</div>
+///   <div class="k-u-flex-justifyContent-center@xs-down--important">…</div>
+///   <div class="k-u-flex-justifyContent-center@s-down--important">…</div>
+///   <div class="k-u-flex-justifyContent-center@m-down--important">…</div>
+///   <div class="k-u-flex-justifyContent-center@l-down--important">…</div>
+///
+///   <div class="k-u-flex-justifyContent-center@xs-up--important">…</div>
+///   <div class="k-u-flex-justifyContent-center@s-up--important">…</div>
+///   <div class="k-u-flex-justifyContent-center@m-up--important">…</div>
+///   <div class="k-u-flex-justifyContent-center@l-up--important">…</div>
+///   <div class="k-u-flex-justifyContent-center@xl-up--important">…</div>
+///
+///   <div class="k-u-flex-justifyContent-center--important">…</div>
+///   <div class="k-u-flex-justifyContent-start--important">…</div>
+///   <div class="k-u-flex-justifyContent-end--important">…</div>
+
+@mixin k-u-flex-justifyContent($position, $align) {
+  $value: $align;
+
+  .k-u-flex-justifyContent-#{$position} {
+    justify-content: $value;
+
+    &--important {
+      justify-content: $value !important;
+    }
+  }
+
+  @each $name, $query in $k-media-queries {
+    @if $name != "xl" {
+      .k-u-flex-justifyContent-#{$position}\@#{$name}-down {
+        @include k-media-max($name) {
+          justify-content: $value;
+
+          &--important {
+            justify-content: $value !important;
+          }
+        }
+      }
+    }
+
+    @if $name != "xxs" {
+      .k-u-flex-justifyContent-#{$position}\@#{$name}-up {
+        @include k-media-min($name) {
+          justify-content: $value;
+
+          &--important {
+            justify-content: $value !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin k-utilities-justify-content {
+  @include k-u-flex-justifyContent('normal', center);
+  @include k-u-flex-justifyContent('center', center);
+  @include k-u-flex-justifyContent('start', flex-start);
+  @include k-u-flex-justifyContent('end', flex-end);
+  @include k-u-flex-justifyContent('left', left);
+  @include k-u-flex-justifyContent('right', right);
+  @include k-u-flex-justifyContent('sa', space-around);
+  @include k-u-flex-justifyContent('sb', space-between);
+  @include k-u-flex-justifyContent('se', space-evenly);
+  @include k-u-flex-justifyContent('stretch', stretch);
+}

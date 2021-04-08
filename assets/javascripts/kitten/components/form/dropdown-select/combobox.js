@@ -2,13 +2,25 @@ import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useCombobox } from 'downshift'
 import COLORS from '../../../constants/colors-config'
-import { Label } from '../../../components/form/label'
+import { Label } from '../label'
 import classNames from 'classnames'
-import { WarningCircleIcon } from '../../../components/icons/warning-circle-icon'
-import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
-import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import { WarningCircleIcon } from '../../icons/warning-circle-icon'
+import { CheckedCircleIcon } from '../../icons/checked-circle-icon'
+import { ArrowIcon } from '../../icons/arrow-icon'
 import find from 'lodash/fp/find'
+import flow from 'lodash/fp/flow'
+import uniqBy from 'lodash/fp/uniqBy'
+import filter from 'lodash/fp/filter'
+import isEmpty from 'lodash/isEmpty'
+import isObject from 'lodash/fp/isObject'
 import { StyledDropdown } from './styles'
+
+const getLabelToFilter = item => {
+  if (item.searchableLabel || isObject(item.label)) {
+    return item.searchableLabel || ''
+  }
+  return item.label || ''
+}
 
 export const DropdownCombobox = ({
   labelText,
@@ -33,6 +45,8 @@ export const DropdownCombobox = ({
   onMenuClose,
   onMenuOpen,
   openOnLoad,
+  uniqLabelOnSearch,
+  menuZIndex,
 }) => {
   const [flattenedOptions, setFlattenedOptions] = useState([])
   const [filteredOptions, setFilteredOptions] = useState([])
@@ -51,11 +65,15 @@ export const DropdownCombobox = ({
   }
 
   const onInputValueChange = changes => {
-    const newItemsList = flattenedOptions.filter(item => {
-      return item.value
-        .toLowerCase()
-        .startsWith(changes.inputValue.toLowerCase())
-    })
+    const newItemsList = flow(
+      filter(item => {
+        const label = getLabelToFilter(item)
+        return label.toLowerCase().startsWith(changes.inputValue.toLowerCase())
+      }),
+      !isEmpty(changes.inputValue) && uniqLabelOnSearch
+        ? uniqBy('label')
+        : item => item,
+    )(flattenedOptions)
 
     setFilteredOptions(newItemsList)
     onInputChange({ value: changes.inputValue, changes })
@@ -79,6 +97,7 @@ export const DropdownCombobox = ({
     getMenuProps,
     highlightedIndex,
     getItemProps,
+    openMenu,
   } = useCombobox({
     id: `${id}_element`,
     inputId: id,
@@ -134,6 +153,7 @@ export const DropdownCombobox = ({
           'k-Form-Dropdown--disabled': disabled,
         },
       )}
+      style={{ '--menu-z-index': menuZIndex }}
     >
       <Label
         className={classNames(
@@ -152,6 +172,8 @@ export const DropdownCombobox = ({
           className="k-Form-DropdownCombobox__input"
           placeholder={placeholder}
           disabled={disabled}
+          onFocus={() => !isOpen && openMenu()}
+          onClick={() => !isOpen && openMenu()}
           {...getInputProps()}
         />
         <button
@@ -230,6 +252,7 @@ DropdownCombobox.defaultProps = {
   onMenuClose: () => {},
   onMenuOpen: () => {},
   openOnLoad: false,
+  menuZIndex: 1000,
 }
 
 DropdownCombobox.propTypes = {
@@ -251,4 +274,5 @@ DropdownCombobox.propTypes = {
   onMenuClose: PropTypes.func,
   onMenuOpen: PropTypes.func,
   openOnLoad: PropTypes.bool,
+  menuZIndex: PropTypes.number,
 }

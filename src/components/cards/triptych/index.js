@@ -17,13 +17,13 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _debounce = _interopRequireDefault(require("lodash/fp/debounce"));
+
 var _grid = require("../../../components/grid/grid");
 
 var _verticalStroke = require("../../../components/layout/vertical-stroke");
 
 var _screenConfig = require("../../../constants/screen-config");
-
-var _debounce = require("../../../helpers/utils/debounce");
 
 var _typography = require("../../../helpers/utils/typography");
 
@@ -66,16 +66,16 @@ var Triptych = function Triptych(_ref3) {
   };
 
   var debounceUpdateMargin = function debounceUpdateMargin() {
-    return (0, _debounce.debounce)(updateSecondCardMargin, 200);
+    return (0, _debounce.default)(200)(updateSecondCardMargin);
   };
 
   (0, _react.useEffect)(function () {
     debounceUpdateMargin();
-    window.addEventListener('resize', debounceUpdateMargin());
-    window.addEventListener('load', debounceUpdateMargin());
+    window.addEventListener('resize', debounceUpdateMargin);
+    window.addEventListener('load', debounceUpdateMargin);
     return function () {
-      window.removeEventListener('resize', debounceUpdateMargin());
-      window.removeEventListener('load', debounceUpdateMargin());
+      window.removeEventListener('resize', debounceUpdateMargin);
+      window.removeEventListener('load', debounceUpdateMargin);
     };
   }, []);
   return /*#__PURE__*/_react.default.createElement(StyledTriptych, {

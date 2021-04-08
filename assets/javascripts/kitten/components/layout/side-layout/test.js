@@ -1,34 +1,32 @@
 import React from 'react'
-import { SideLayout } from '../../../components/layout/side-layout'
+import { SideLayout } from './index'
+import renderer from 'react-test-renderer'
+import 'jest-styled-components'
 
 describe('<SideLayout />', () => {
-  describe('by default', () => {
-    const component = mount(
-      <SideLayout className="myAwesomeClass">…</SideLayout>,
-    )
+  let component
 
-    it('renders a <div class="myAwesomeClass" />', () => {
-      expect(component.hasClass('myAwesomeClass')).toBe(true)
+  describe('by default', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<SideLayout className="ClassName">Foobar</SideLayout>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('with sidebar prop', () => {
-    const component = mount(
-      <SideLayout sidebar="Sidebar content">…</SideLayout>,
-    )
-
-    const sideGridAside = component.find('.k-SideGrid__aside')
-
-    it('has a sidebar content', () => {
-      expect(sideGridAside.text()).toBe('Sidebar content')
+    beforeEach(() => {
+      component = renderer
+        .create(<SideLayout sidebar="Sidebar content">Foobar</SideLayout>)
+        .toJSON()
     })
-  })
 
-  describe('with children', () => {
-    const component = mount(<SideLayout>Lorem ipsum…</SideLayout>)
-
-    it('has a content', () => {
-      expect(component.text()).toBe('Lorem ipsum…')
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 })

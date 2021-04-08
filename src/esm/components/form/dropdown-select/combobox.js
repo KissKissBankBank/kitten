@@ -4,13 +4,27 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useCombobox } from 'downshift';
 import COLORS from '../../../constants/colors-config';
-import { Label } from '../../../components/form/label';
+import { Label } from '../label';
 import classNames from 'classnames';
-import { WarningCircleIcon } from '../../../components/icons/warning-circle-icon';
-import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon';
-import { ArrowIcon } from '../../../components/icons/arrow-icon';
+import { WarningCircleIcon } from '../../icons/warning-circle-icon';
+import { CheckedCircleIcon } from '../../icons/checked-circle-icon';
+import { ArrowIcon } from '../../icons/arrow-icon';
 import find from 'lodash/fp/find';
+import flow from 'lodash/fp/flow';
+import uniqBy from 'lodash/fp/uniqBy';
+import filter from 'lodash/fp/filter';
+import isEmpty from 'lodash/isEmpty';
+import isObject from 'lodash/fp/isObject';
 import { StyledDropdown } from './styles';
+
+var getLabelToFilter = function getLabelToFilter(item) {
+  if (item.searchableLabel || isObject(item.label)) {
+    return item.searchableLabel || '';
+  }
+
+  return item.label || '';
+};
+
 export var DropdownCombobox = function DropdownCombobox(_ref) {
   var labelText = _ref.labelText,
       comboboxButtonLabelText = _ref.comboboxButtonLabelText,
@@ -33,7 +47,9 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       onInputChange = _ref.onInputChange,
       onMenuClose = _ref.onMenuClose,
       onMenuOpen = _ref.onMenuOpen,
-      openOnLoad = _ref.openOnLoad;
+      openOnLoad = _ref.openOnLoad,
+      uniqLabelOnSearch = _ref.uniqLabelOnSearch,
+      menuZIndex = _ref.menuZIndex;
 
   var _useState = useState([]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -66,9 +82,12 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
   };
 
   var onInputValueChange = function onInputValueChange(changes) {
-    var newItemsList = flattenedOptions.filter(function (item) {
-      return item.value.toLowerCase().startsWith(changes.inputValue.toLowerCase());
-    });
+    var newItemsList = flow(filter(function (item) {
+      var label = getLabelToFilter(item);
+      return label.toLowerCase().startsWith(changes.inputValue.toLowerCase());
+    }), !isEmpty(changes.inputValue) && uniqLabelOnSearch ? uniqBy('label') : function (item) {
+      return item;
+    })(flattenedOptions);
     setFilteredOptions(newItemsList);
     onInputChange({
       value: changes.inputValue,
@@ -105,7 +124,8 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       getInputProps = _useCombobox.getInputProps,
       getMenuProps = _useCombobox.getMenuProps,
       highlightedIndex = _useCombobox.highlightedIndex,
-      getItemProps = _useCombobox.getItemProps;
+      getItemProps = _useCombobox.getItemProps,
+      openMenu = _useCombobox.openMenu;
 
   useEffect(function () {
     getLabelProps && labelPropsGetter(getLabelProps);
@@ -137,7 +157,10 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
       'k-Form-Dropdown--disabled': disabled
-    })
+    }),
+    style: {
+      '--menu-z-index': menuZIndex
+    }
   }, /*#__PURE__*/React.createElement(Label, _extends({
     className: classNames('k-Form-Dropdown__label', 'k-u-margin-bottom-single', {
       'k-Form-Dropdown__label--isHidden': hideLabel
@@ -147,7 +170,13 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
   }, getComboboxProps()), /*#__PURE__*/React.createElement("input", _extends({
     className: "k-Form-DropdownCombobox__input",
     placeholder: placeholder,
-    disabled: disabled
+    disabled: disabled,
+    onFocus: function onFocus() {
+      return !isOpen && openMenu();
+    },
+    onClick: function onClick() {
+      return !isOpen && openMenu();
+    }
   }, getInputProps())), /*#__PURE__*/React.createElement("button", _extends({
     className: "k-Form-DropdownCombobox__arrowButton",
     type: "button",
@@ -203,7 +232,8 @@ DropdownCombobox.defaultProps = {
   onInputChange: function onInputChange() {},
   onMenuClose: function onMenuClose() {},
   onMenuOpen: function onMenuOpen() {},
-  openOnLoad: false
+  openOnLoad: false,
+  menuZIndex: 1000
 };
 DropdownCombobox.propTypes = {
   id: PropTypes.string.isRequired,
@@ -223,5 +253,6 @@ DropdownCombobox.propTypes = {
   onInputChange: PropTypes.func,
   onMenuClose: PropTypes.func,
   onMenuOpen: PropTypes.func,
-  openOnLoad: PropTypes.bool
+  openOnLoad: PropTypes.bool,
+  menuZIndex: PropTypes.number
 };

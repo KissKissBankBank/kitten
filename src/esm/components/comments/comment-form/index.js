@@ -5,39 +5,11 @@ import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConst
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
 
+var _templateObject, _templateObject2, _templateObject3;
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n      border-right-color: ", ";\n    "]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n      border-color: ", ";\n      color: ", ";\n    "]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n      border-color: ", ";\n      color: ", ";\n      background-color: ", ";\n    "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
@@ -65,19 +37,19 @@ var StyledInput = styled.div.withConfig({
 var StyledTextarea = styled.textarea.withConfig({
   displayName: "comment-form__StyledTextarea",
   componentId: "sc-1yidca9-3"
-})(["color:", ";", ";width:100%;overflow-y:hidden;resize:none;box-sizing:border-box;border-width:", ";border-style:solid;border-color:", ";color:", ";padding:", ";font-size:", ";@media (min-width:", "px){font-size:", ";}:focus{outline:none;border-color:", ";color:", ";}::placeholder{color:", ";}", " ", ""], COLORS.font2, TYPOGRAPHY.fontStyles.light, pxToRem(2), COLORS.line1, COLORS.font1, pxToRem(30), stepToRem(-1), ScreenConfig.S.min, stepToRem(0), COLORS.line2, COLORS.font1, COLORS.font2, function (_ref) {
+})(["color:", ";", ";width:100%;overflow-y:hidden;resize:none;box-sizing:border-box;border-width:", ";border-style:solid;border-color:", ";color:", ";padding:", ";font-size:", ";@media (min-width:", "px){font-size:", ";}&:focus{outline:", " solid ", ";outline-offset:", ";border-color:", ";color:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}::placeholder{color:", ";}", " ", ""], COLORS.font2, TYPOGRAPHY.fontStyles.light, pxToRem(2), COLORS.line1, COLORS.font1, pxToRem(30), stepToRem(-1), ScreenConfig.S.min, stepToRem(0), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.line2, COLORS.font1, COLORS.primary4, COLORS.font2, function (_ref) {
   var isDisabled = _ref.isDisabled;
-  return isDisabled && css(_templateObject(), COLORS.line1, COLORS.font2, COLORS.line1);
+  return isDisabled && css(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n      border-color: ", ";\n      color: ", ";\n      background-color: ", ";\n    "])), COLORS.line1, COLORS.font2, COLORS.line1);
 }, function (_ref2) {
   var error = _ref2.error;
-  return error && css(_templateObject2(), COLORS.error3, COLORS.error3);
+  return error && css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n      border-color: ", ";\n      color: ", ";\n    "])), COLORS.error3, COLORS.error3);
 });
 var StyledArrow = styled.div.withConfig({
   displayName: "comment-form__StyledArrow",
   componentId: "sc-1yidca9-4"
 })(["position:absolute;top:", ";display:block;width:0;height:0;border-width:", ";border-style:solid;border-color:transparent;border-right-color:", ";left:-", ";@media (min-width:", "px){top:", ";}", ":focus + &{border-right-color:", ";}", ""], pxToRem(20), pxToRem(10), COLORS.line1, pxToRem(20), ScreenConfig.S.min, pxToRem(35), StyledTextarea, COLORS.line2, function (_ref3) {
   var error = _ref3.error;
-  return error && css(_templateObject3(), COLORS.error3);
+  return error && css(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n      border-right-color: ", ";\n    "])), COLORS.error3);
 });
 var StyledArrowBefore = styled.span.withConfig({
   displayName: "comment-form__StyledArrowBefore",

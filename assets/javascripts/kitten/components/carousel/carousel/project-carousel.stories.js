@@ -10,7 +10,7 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 
 export default {
   component: Default,
-  title: 'Carousel/ProjectCarousel',
+  title: 'Carousels/Carousel/ProjectCarousel',
   parameters: {
     component: Default,
   },
@@ -120,6 +120,13 @@ export const Default = () => (
       paginationPosition={object('paginationPosition', paginationPosition)}
       showPageSquares={boolean('showPageSquares', false)}
       loop={boolean('loop', false)}
+      hidePaginationOnMobile={boolean('hidePaginationOnMobile', false)}
+      hidePagination={boolean('hidePagination', false)}
+      showOtherPages={boolean('showOtherPages', false)}
+      preferCompletePaginationOnMobile={boolean(
+        'preferCompletePaginationOnMobile',
+        false,
+      )}
     >
       {data.map(item => (
         <CrowdfundingCard
@@ -143,7 +150,7 @@ export const Default = () => (
           cardTitle={item.title}
           cardSubTitle="Custom subtitle"
           titlesMinHeight
-          progress="84"
+          progress={84}
           state="Custom state"
         />
       ))}
@@ -161,6 +168,13 @@ export const WithSpecificColNumber = () => (
       paginationPosition={object('paginationPosition', paginationPosition)}
       showPageSquares={boolean('showPageSquares', false)}
       loop={boolean('loop', false)}
+      hidePaginationOnMobile={boolean('hidePaginationOnMobile', false)}
+      hidePagination={boolean('hidePagination', false)}
+      showOtherPages={boolean('showOtherPages', false)}
+      preferCompletePaginationOnMobile={boolean(
+        'preferCompletePaginationOnMobile',
+        false,
+      )}
     >
       {data.map(item => (
         <CrowdfundingCard
@@ -184,7 +198,7 @@ export const WithSpecificColNumber = () => (
           cardTitle={item.title}
           cardSubTitle="Custom subtitle"
           titlesMinHeight
-          progress="84"
+          progress={84}
           state="Custom state"
         />
       ))}
@@ -221,7 +235,7 @@ export const InNestedGrid = () => (
           cardTitle={item.title}
           cardSubTitle="Custom subtitle"
           titlesMinHeight
-          progress="84"
+          progress={84}
           state="Custom state"
         />
       ))}
@@ -262,7 +276,7 @@ export const InLegacyGrid = () => (
           cardTitle={item.title}
           cardSubTitle="Custom subtitle"
           titlesMinHeight
-          progress="84"
+          progress={84}
           state="Custom state"
         />
       )}
@@ -309,7 +323,7 @@ const CardComponent = ({ item, hasPageBeenViewed, isActivePage }) => (
     cardTitle={item.title}
     cardSubTitle={isActivePage ? 'Is active page' : 'Inactive page'}
     titlesMinHeight
-    progress="84"
+    progress={84}
     state="Custom state"
   />
 )

@@ -42,6 +42,7 @@ export const CheckboxSet = ({
   error,
   label,
   children,
+  variant,
   ...props
 }) => (
   <StyledCheckboxSet
@@ -60,6 +61,7 @@ export const CheckboxSet = ({
         id={id}
         error={error}
         name={name}
+        variant={variant}
         key={id}
         {...itemProps}
         className={classNames('k-Form-CheckboxSet__checkbox', className)}
@@ -81,6 +83,7 @@ CheckboxSet.propTypes = {
     }),
   ),
   disabled: PropTypes.bool,
+  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }
 
 CheckboxSet.defaultProps = {
@@ -96,4 +99,5 @@ CheckboxSet.defaultProps = {
     },
   ],
   disabled: false,
+  variant: 'andromeda',
 }

@@ -8,10 +8,7 @@ export default {
 }
 
 export const Default = () => (
-  <ScrollableContainer
-    backgroundColor={COLORS.line1}
-    style={{ backgroundColor: COLORS.line1 }}
-  >
+  <ScrollableContainer style={{ backgroundColor: COLORS.line1 }}>
     <div style={{ height: '100px', lineHeight: '100px' }}>
       {'🚗 '.repeat(100)}
     </div>

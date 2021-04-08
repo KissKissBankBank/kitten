@@ -9,7 +9,7 @@ import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 import React, { Component } from 'react';
 import { createMatchMediaMax, createMatchMedia } from '../helpers/utils/media-queries';
@@ -29,18 +29,16 @@ export var withMediaQueries = function withMediaQueries(hocProps) {
   };
 };
 export var mediaQueries = function mediaQueries(WrappedComponent) {
-  var _temp;
-
   var hocProps = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  return _temp = /*#__PURE__*/function (_Component) {
-    _inherits(_temp, _Component);
+  return /*#__PURE__*/function (_Component) {
+    _inherits(_class2, _Component);
 
-    var _super = _createSuper(_temp);
+    var _super = _createSuper(_class2);
 
-    function _temp(props) {
+    function _class2(props) {
       var _this;
 
-      _classCallCheck(this, _temp);
+      _classCallCheck(this, _class2);
 
       _this = _super.call(this, props);
 
@@ -59,7 +57,7 @@ export var mediaQueries = function mediaQueries(WrappedComponent) {
       return _this;
     }
 
-    _createClass(_temp, [{
+    _createClass(_class2, [{
       key: "isInvalidProp",
       value: function isInvalidProp(prop) {
         return typeof hocProps[prop] === 'boolean' && !viewPortTable[prop] || !['boolean', 'string'].includes(_typeof(hocProps[prop]));
@@ -127,6 +125,6 @@ export var mediaQueries = function mediaQueries(WrappedComponent) {
       }
     }]);
 
-    return _temp;
-  }(Component), _temp;
+    return _class2;
+  }(Component);
 };

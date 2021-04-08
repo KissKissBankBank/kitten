@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import ReactModal from 'react-modal'
 import { CloseButton } from '../../../components/buttons/close-button'
-import { Button } from '../../../components/buttons/button/button'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Button } from '../../../components/buttons/button'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 import { Text } from '../../../components/typography/text'
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -40,12 +40,11 @@ const GlobalStyle = createGlobalStyle`
   body.k-ModalNext__body--open {
     overflow: hidden;
   }
-  
+
   .k-ModalNext__content {
     position: relative;
     background-color: ${COLORS.background1};
     box-sizing: border-box;
-    outline: none;
     transform: scale(0.94);
     margin-right: ${pxToRem(20)};
     margin-left: ${pxToRem(20)};
@@ -58,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
         min-width: 100vw !important;
         margin: 0 !important;
       `};
-  
+
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       margin: auto;
       padding: ${pxToRem(80)} ${oneGridCol};
@@ -66,7 +65,7 @@ const GlobalStyle = createGlobalStyle`
   GUTTER,
 )} * 11))
     }
-  
+
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       padding: ${pxToRem(80)} ${oneGridCol};
       ${props => css`
@@ -76,7 +75,7 @@ const GlobalStyle = createGlobalStyle`
         );
       `}
     }
-    
+
     @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
     ${props => css`
       width: ${pxToRem(
@@ -100,7 +99,7 @@ const GlobalStyle = createGlobalStyle`
       margin: 0;
     }
   }
-  
+
   .k-ModalNext__overlay {
     position: fixed;
     overflow: scroll;
@@ -111,7 +110,7 @@ const GlobalStyle = createGlobalStyle`
     right: 0;
     bottom: 0;
     opacity: 0;
-    background-color: rgba(34, 34, 34, .8);    
+    background-color: rgba(34, 34, 34, .8);
     &::before ,
     &::after {
       content:'';
@@ -132,7 +131,7 @@ const GlobalStyle = createGlobalStyle`
         z-index: ${props.zIndex};
       `}
   }
-  
+
   .k-ModalNext__overlay--afterOpen {
     transition: opacity .3s ease;
     opacity: 1;
@@ -151,7 +150,7 @@ const GlobalStyle = createGlobalStyle`
     transform: scale(1.06);
     opacity: 0;
   }
-  
+
   .k-ModalNext__title--fullSize {
     position: sticky;
     top:0;
@@ -164,18 +163,18 @@ const GlobalStyle = createGlobalStyle`
     border-bottom: ${pxToRem(2)} solid ${COLORS.line1};
     margin-bottom: ${pxToRem(50)};
   }
-  
+
   .k-ModalNext__closeButton--fullSize {
     position: absolute;
-    left: ${pxToRem(20)}
-    top: ${pxToRem(12)}
-  } 
+    left: ${pxToRem(20)};
+    top: ${pxToRem(12)};
+  }
 `
 
 const ModalTitle = ({ children }) => (
   <Title
     modifier="quaternary"
-    margin={false}
+    noMargin
     tag="p"
     className="k-u-margin-bottom-singleHalf--important k-u-align-center"
   >
@@ -185,9 +184,9 @@ const ModalTitle = ({ children }) => (
 
 const ModalParagraph = ({ children, withoutMargin, className, align }) => (
   <StyledParagraph
-    modifier="quaternary"
+    modifier="tertiary"
     style={{ textAlign: align }}
-    margin={false}
+    noMargin
     tag="p"
     className={classNames('k-Modal__paragraph', className, {
       'k-u-margin-bottom-triple': !withoutMargin,
@@ -286,8 +285,7 @@ const InnerModal = ({
   modalProps,
   hasCloseButton,
   maxWidth,
-  big,
-  huge,
+  size,
   isOpen,
   zIndex,
   fullSize,
@@ -295,7 +293,7 @@ const InnerModal = ({
   ...others
 }) => {
   const [{ show }, dispatch] = useContext(ModalContext)
-  const colsOnDesktop = huge ? 10 : big ? 8 : 6
+  const colsOnDesktop = size === 'huge' ? 10 : size === 'big' ? 8 : 6
   const close = () => {
     dispatch(updateState(false))
     if (onClose) {
@@ -412,8 +410,7 @@ Modal.propTypes = {
   fullSize: PropTypes.bool,
   modalProps: PropTypes.object,
   hasCloseButton: PropTypes.bool,
-  big: PropTypes.bool,
-  huge: PropTypes.bool,
+  size: PropTypes.oneOf(['regular', 'big', 'huge']),
   isOpen: PropTypes.bool,
   zIndex: PropTypes.number,
   fullSizeTitle: PropTypes.string,
@@ -427,8 +424,7 @@ Modal.defaultProps = {
   fullSize: false,
   modalProps: {},
   hasCloseButton: true,
-  big: false,
-  huge: false,
+  size: 'regular',
   isOpen: false,
   zIndex: 110,
   fullSizeTitle: '',

@@ -6,7 +6,7 @@ import { GarbageIcon } from '../../../components/icons/garbage-icon'
 import { ButtonIcon } from '../../../components/buttons/button-icon'
 import { Title } from '../../../components/typography/title'
 import { Text } from '../../../components/typography/text'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/typography/paragraph/next'
 import COLORS from '../../../constants/colors-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
@@ -170,7 +170,7 @@ export class CartRewardCard extends Component {
             'k-u-margin-bottom-single@xs-down': !subtitle,
           })}
         >
-          <Title italic modifier="quinary" margin={false} tag={titleTag}>
+          <Title italic modifier="quinary" noMargin tag={titleTag}>
             {titleAmount}
           </Title>
         </div>
@@ -192,7 +192,7 @@ export class CartRewardCard extends Component {
             },
           )}
         >
-          <Paragraph tag={descriptionTag} margin={false} modifier="quaternary">
+          <Paragraph tag={descriptionTag} noMargin modifier="tertiary">
             {textDescription}
             {description}
           </Paragraph>

@@ -7,11 +7,11 @@ var gradientWidth = 20;
 export var StyledContainer = styled(Container).withConfig({
   displayName: "styled__StyledContainer",
   componentId: "d41exg-0"
-})(["position:relative;padding-left:0;padding-right:0;overflow:scroll;"]);
+})(["position:relative;padding-left:0;padding-right:0;width:100%;"]);
 export var scrollableContainerStyle = function scrollableContainerStyle(_ref) {
   _objectDestructuringEmpty(_ref);
 
-  return css(["display:flex;white-space:nowrap;overflow-x:auto;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}&:before,&:after{content:'';display:block;position:absolute;top:0;bottom:0;pointer-events:none;touch-action:none;}", " ", ""], function (_ref2) {
+  return css(["display:flex;white-space:nowrap;overflow-x:auto;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}scrollbar-width:none;&:before,&:after{content:'';display:block;position:absolute;top:0;bottom:0;pointer-events:none;touch-action:none;}", " ", ""], function (_ref2) {
     var displayLeftGradient = _ref2.displayLeftGradient,
         shadowColor = _ref2.shadowColor;
     return displayLeftGradient && css(["&:before{left:0;width:", ";background-image:linear-gradient( to right,", ",", " );}"], pxToRem(gradientWidth), hexToRgba(shadowColor, 1), hexToRgba(shadowColor, 0));

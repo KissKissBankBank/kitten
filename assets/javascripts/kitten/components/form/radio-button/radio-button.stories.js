@@ -25,6 +25,7 @@ export const Default = () => (
         large={boolean('Large', false)}
         largeContent={boolean('LargeContent', false)}
         text={text('Text', 'RadioButton Label')}
+        size={select('Size', { regular: 'regular', big: 'big' }, 'regular')}
         variant={select(
           'Variant',
           { andromeda: 'andromeda', orion: 'orion' },
@@ -49,6 +50,7 @@ export const Default = () => (
           { andromeda: 'andromeda', orion: 'orion' },
           'andromeda',
         )}
+        size={select('Size', { regular: 'regular', big: 'big' }, 'regular')}
         design={select('Design', { disc: 'disc', check: 'check' }, 'radio')}
       >
         {text('Content', '')}
@@ -68,6 +70,7 @@ export const Default = () => (
           { andromeda: 'andromeda', orion: 'orion' },
           'andromeda',
         )}
+        size={select('Size', { regular: 'regular', big: 'big' }, 'regular')}
         design={select('Design', { disc: 'disc', check: 'check' }, 'radio')}
       >
         {text('Content', '')}

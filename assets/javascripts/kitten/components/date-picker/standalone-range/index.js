@@ -22,7 +22,6 @@ const StyledDatePicker = styled.div`
     min-width: calc(7 * ${tinyCellSize} + 2 * ${tinyDayPickerPadding});
     margin-top: ${pxToRem(18)};
     box-shadow: none;
-    outline: none;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       min-width: calc(7 * ${cellSize} + 2 * ${dayPickerPadding});
@@ -53,7 +52,6 @@ const StyledDatePicker = styled.div`
   .DayPicker {
     font-size: ${stepToRem(-1)};
     ${TYPOGRAPHY.fontStyles.light}
-    outline: none;
     border: none;
 
     .DayPicker-Month {
@@ -82,7 +80,6 @@ const StyledDatePicker = styled.div`
       vertical-align: middle;
       box-sizing: border-box;
       font-size: ${stepToRem(-2)};
-      outline: none;
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         width: ${cellSize};
@@ -126,6 +123,14 @@ const StyledDatePicker = styled.div`
             `}
             outline-offset: 0;
           }
+          &:focus:not(:focus-visible) {
+            outline-color: transparent;
+          }
+          &:focus-visible {
+            ${({ styles }) => css`
+              outline-color: ${styles.day.focus.color};
+            `}
+          }
 
           /* START AND END STYLES */
           &.DayPicker-Day--start, &.DayPicker-Day--end {
@@ -149,6 +154,14 @@ const StyledDatePicker = styled.div`
               `}
               outline-offset: calc(${borderSize} / -2);
               z-index: 25;
+            }
+            &:focus:not(:focus-visible) {
+              outline-color: transparent;
+            }
+            &:focus-visible {
+              ${({ styles }) => css`
+                outline-color: ${styles.day.focus.color};
+              `}
             }
           }
         }

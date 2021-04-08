@@ -50,12 +50,15 @@ const StyledCheckbox = styled.div`
     transition: border-color .2s, background-color .2s;
 
     &:focus {
-      outline: none;
       border-color: ${COLORS.primary1};
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
     }
-
-    &:checked:focus {
-      box-shadow: 0 0 ${pxToRem(3)} ${COLORS.primary1};
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary1};
     }
 
     &:checked,
@@ -98,6 +101,10 @@ const StyledCheckbox = styled.div`
     }
   }
 
+  &.k-Form-Checkbox--orion .k-Form-Checkbox__input {
+    border-radius: ${pxToRem(4)};
+  }
+
   .k-Form-Checkbox__link,
   label a {
     ${TYPOGRAPHY.fontStyles.regular}
@@ -133,6 +140,7 @@ export const Checkbox = ({
   onLabelClick,
   indeterminate,
   label,
+  variant,
   ...inputProps
 }) => {
   const inputElement = useRef(null)
@@ -145,10 +153,15 @@ export const Checkbox = ({
 
   return (
     <StyledCheckbox
-      className={classNames('k-Form-Checkbox', className, {
-        'k-Form-Checkbox--error': error,
-        'k-Form-Checkbox--disabled': disabled,
-      })}
+      className={classNames(
+        'k-Form-Checkbox',
+        `k-Form-Checkbox--${variant}`,
+        {
+          'k-Form-Checkbox--error': error,
+          'k-Form-Checkbox--disabled': disabled,
+        },
+        className,
+      )}
     >
       <input
         ref={inputElement}
@@ -213,6 +226,7 @@ Checkbox.defaultProps = {
   indeterminate: false,
   error: false,
   disabled: false,
+  variant: 'andromeda',
 }
 
 Checkbox.propTypes = {
@@ -223,4 +237,5 @@ Checkbox.propTypes = {
   id: PropTypes.string.isRequired,
   children: PropTypes.node,
   label: PropTypes.string,
+  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }

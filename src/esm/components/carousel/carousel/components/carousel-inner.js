@@ -1,6 +1,6 @@
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 import { domElementHelper } from '../../../../helpers/dom/element-helper';
 import { CarouselPage } from './carousel-page';
@@ -9,8 +9,9 @@ import { usePrevious } from '../../../../helpers/utils/use-previous-hook';
 
 if (domElementHelper.canUseDom()) {
   require('smoothscroll-polyfill').polyfill();
-} // inspired by https://github.com/cferdinandi/scrollStop
+}
 
+var isTouched = false; // inspired by https://github.com/cferdinandi/scrollStop
 
 var scrollStop = function scrollStop(callback) {
   if (!callback) return;
@@ -56,16 +57,11 @@ export var CarouselInner = function CarouselInner(_ref) {
       numberOfPages = _ref.numberOfPages,
       onResizeInner = _ref.onResizeInner,
       pagesClassName = _ref.pagesClassName,
-      viewedPages = _ref.viewedPages;
-
-  var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      isTouched = _useState2[0],
-      setTouchState = _useState2[1];
-
+      viewedPages = _ref.viewedPages,
+      pageClickText = _ref.pageClickText;
   var carouselInner = useRef(null);
   var previousIndexPageVisible = usePrevious(currentPageIndex);
-  var observer;
+  var resizeObserver;
 
   var onResizeObserve = function onResizeObserve(_ref2) {
     var _ref3 = _slicedToArray(_ref2, 1),
@@ -76,13 +72,13 @@ export var CarouselInner = function CarouselInner(_ref) {
   };
 
   useEffect(function () {
-    observer = new ResizeObserver(onResizeObserve);
+    resizeObserver = new ResizeObserver(onResizeObserve);
     return function () {
-      return observer.disconnect();
+      return resizeObserver.disconnect();
     };
   }, []);
   useEffect(function () {
-    carouselInner.current && observer.observe(carouselInner.current);
+    carouselInner.current && resizeObserver.observe(carouselInner.current);
   }, [carouselInner]);
   useEffect(function () {
     if (currentPageIndex !== previousIndexPageVisible) {
@@ -134,21 +130,32 @@ export var CarouselInner = function CarouselInner(_ref) {
     };
   };
 
+  var handleKeyDown = function handleKeyDown(e) {
+    if (e.key === 'ArrowRight') {
+      goToPage(currentPageIndex + 1);
+    } else if (e.key === 'ArrowLeft') {
+      goToPage(currentPageIndex - 1);
+    }
+  };
+
   return /*#__PURE__*/React.createElement("div", {
     ref: carouselInner,
     onScroll: handleInnerScroll,
     onTouchStart: function onTouchStart() {
-      return setTouchState(true);
+      return isTouched = true;
     },
     onTouchEnd: function onTouchEnd() {
-      return setTouchState(false);
+      return isTouched = false;
     },
+    onKeyDown: handleKeyDown,
     className: "k-Carousel__inner"
   }, _toConsumableArray(Array(numberOfPages).keys()).map(function (index) {
     var isActivePage = currentPageIndex === index;
     var hasPageBeenViewed = viewedPages.has(index);
     return /*#__PURE__*/React.createElement("div", {
       key: index,
+      role: "button",
+      "aria-label": pageClickText(index + 1),
       onClick: handlePageClick(index),
       className: classNames('k-Carousel__inner__pageContainer', pagesClassName, {
         'k-Carousel__inner__pageContainer--isActivePage': isActivePage,
@@ -159,7 +166,10 @@ export var CarouselInner = function CarouselInner(_ref) {
       hasPageBeenViewed: hasPageBeenViewed,
       isActivePage: isActivePage,
       pageItems: getDataForPage(items, index, numberOfItemsPerPage),
-      numberOfItemsPerPage: numberOfItemsPerPage
+      numberOfItemsPerPage: numberOfItemsPerPage,
+      goToCurrentPage: function goToCurrentPage() {
+        return goToPage(index);
+      }
     }));
   }));
 };

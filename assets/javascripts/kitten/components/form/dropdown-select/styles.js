@@ -33,7 +33,6 @@ export const StyledDropdown = styled.div`
 
     font-size: ${stepToRem(-1)};
     text-align: left;
-    outline: none;
 
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -88,7 +87,14 @@ export const StyledDropdown = styled.div`
     font-size: inherit;
 
     &:focus {
-      outline: none;
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(-4)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
     }
     &:disabled {
       background-color: ${COLORS.line1};
@@ -100,7 +106,6 @@ export const StyledDropdown = styled.div`
     background-color: ${COLORS.background1};
     font-size: ${stepToRem(-1)};
     text-align: left;
-    outline: none;
     display: flex;
   }
   .k-Form-DropdownCombobox__arrowButton__arrowBox {
@@ -111,7 +116,8 @@ export const StyledDropdown = styled.div`
   .k-Form-Dropdown__list {
     box-sizing: border-box;
     position: absolute;
-    z-index: 1;
+    z-index: 1000;
+    z-index: var(--menu-z-index, 1000);
     width: 100%;
     max-height: ${pxToRem(250)};
     padding: 0;
@@ -125,7 +131,14 @@ export const StyledDropdown = styled.div`
       border-top: 0;
     }
     &:focus {
-      outline: none;
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
     }
   }
 
@@ -134,9 +147,13 @@ export const StyledDropdown = styled.div`
     box-sizing: border-box;
     padding: ${pxToRem(15)};
     min-height: ${pxToRem(50)};
+    color: ${COLORS.font1};
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-1)};
     user-select: none;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
 
     &[aria-selected="true"] {
       background-color: ${COLORS.background3};
@@ -159,6 +176,16 @@ export const StyledDropdown = styled.div`
     .k-Form-Dropdown__list {
       border-color: ${COLORS.line2};
     }
+  }
+  .k-Form-DropdownSelect__button:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
+  .k-Form-DropdownSelect__button:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  .k-Form-DropdownSelect__button:focus-visible {
+    outline-color: ${COLORS.primary4};
   }
 
   &.k-Form-Dropdown--error {
@@ -212,7 +239,8 @@ export const StyledDropdown = styled.div`
   }
 
 
-  /* SIZES */
+  /* VARIANT: ANDROMEDA */
+
   &.k-Form-Dropdown--andromeda {
     .k-Form-DropdownCombobox,
     .k-Form-DropdownSelect__button {
@@ -230,6 +258,7 @@ export const StyledDropdown = styled.div`
       border-left: inherit;
     }
 
+    /* ANDROMEDA SIZES */
 
     &.k-Form-Dropdown--tiny {
       .k-Form-DropdownCombobox,
@@ -372,41 +401,26 @@ export const StyledDropdown = styled.div`
   }
 
 
-  /* ORION */
+  /* VARIANT: ORION */
 
   &.k-Form-Dropdown--orion {
     .k-Form-DropdownCombobox,
     .k-Form-DropdownSelect__button {
-      height: ${pxToRem(60)};
-      border-radius: ${pxToRem(6)};
+      height: ${pxToRem(50)};
+      border-radius: ${pxToRem(4)};
       padding-right: ${pxToRem(10)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        height: ${pxToRem(70)};
-        border-radius: ${pxToRem(8)};
-        padding-right: ${pxToRem(20)};
-      }
-
-    }
-
-    &.k-Form-Dropdown--isOpen {
-      .k-Form-DropdownCombobox,
-      .k-Form-DropdownSelect__button {
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0;
-        }
     }
 
     .k-Form-DropdownSelect__button__arrowBox {
-      left: ${pxToRem(20)};
+      left: ${pxToRem(17)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
-        left: ${pxToRem(30)};
+        left: ${pxToRem(20)};
       }
     }
     .k-Form-DropdownCombobox__arrowButton {
       padding: 0;
-      width: ${pxToRem(40)};
+      width: ${pxToRem(35)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         width: ${pxToRem(50)};
@@ -414,6 +428,7 @@ export const StyledDropdown = styled.div`
     }
     .k-Form-DropdownCombobox__arrowButton__arrowBox {
       margin-left: ${pxToRem(6)};
+
       @media (min-width: ${ScreenConfig.S.min}px) {
         margin-left: ${pxToRem(16)};
       }
@@ -421,21 +436,13 @@ export const StyledDropdown = styled.div`
 
     .k-Form-DropdownCombobox__input,
     .k-Form-DropdownSelect__content {
-      margin-left: ${pxToRem(20 + 10)};
+      margin-left: ${pxToRem(14 + 10)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-left: ${pxToRem(30 + 10)};
+        margin-left: ${pxToRem(20 + 10)};
       }
     }
 
-    .k-Form-DropdownCombobox__statusBadges,
-    .k-Form-DropdownSelect__button__statusBadges {
-      right: ${pxToRem(10)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        right: ${pxToRem(20)};
-      }
-    }
 
     .k-Form-Dropdown__list {
       box-shadow: 0 ${pxToRem(5)} ${pxToRem(5)} 0 rgba(0, 0, 0, 0.1);
@@ -453,13 +460,117 @@ export const StyledDropdown = styled.div`
       padding-bottom: ${pxToRem(8)};
     }
 
-    &.k-Form-Dropdown--error .k-Form-DropdownSelect__button,
-    &.k-Form-Dropdown--valid .k-Form-DropdownSelect__button {
-      padding-right: ${pxToRem(10 + 10 + 24 + 10)};
+    .k-Form-DropdownCombobox__statusBadges,
+    .k-Form-DropdownSelect__button__statusBadges {
+      right: ${pxToRem(10)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
-        padding-right: ${pxToRem(20 + 10 + 24 + 10)};
+        right: ${pxToRem(15)};
       }
+    }
+    &.k-Form-Dropdown--error .k-Form-DropdownSelect__button,
+    &.k-Form-Dropdown--valid .k-Form-DropdownSelect__button {
+      padding-right: ${pxToRem(10 + 24 + 10)};
+
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        padding-right: ${pxToRem(10 + 24 + 15)};
+      }
+    }
+
+    &.k-Form-Dropdown--tiny {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button {
+        height: ${pxToRem(40)};
+        padding-right: ${pxToRem(10)};
+      }
+
+      .k-Form-DropdownSelect__button__arrowBox {
+        left: ${pxToRem(15)};
+      }
+      .k-Form-DropdownCombobox__input,
+      .k-Form-DropdownSelect__content {
+        margin-left: ${pxToRem(15 + 5)};
+      }
+
+      .k-Form-DropdownCombobox__statusBadges,
+      .k-Form-DropdownSelect__button__statusBadges {
+        right: ${pxToRem(10)};
+
+        svg {
+          width: ${pxToRem(20)};
+          height: ${pxToRem(20)};
+        }
+      }
+      &.k-Form-Dropdown--error .k-Form-DropdownSelect__button,
+      &.k-Form-Dropdown--valid .k-Form-DropdownSelect__button {
+        padding-right: ${pxToRem(10 + 24 + 10)};
+      }
+    }
+
+    &.k-Form-Dropdown--big,
+    &.k-Form-Dropdown--huge,
+    &.k-Form-Dropdown--giant {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button {
+        height: ${pxToRem(60)};
+        border-radius: ${pxToRem(6)};
+        padding-right: ${pxToRem(15)};
+
+        @media (min-width: ${ScreenConfig.S.min}px) {
+          height: ${pxToRem(70)};
+          border-radius: ${pxToRem(8)};
+          padding-right: ${pxToRem(20)};
+        }
+      }
+      &.k-Form-Dropdown--error .k-Form-DropdownSelect__button,
+      &.k-Form-Dropdown--valid .k-Form-DropdownSelect__button {
+        padding-right: ${pxToRem(10 + 24 + 10)};
+
+        @media (min-width: ${ScreenConfig.S.min}px) {
+          padding-right: ${pxToRem(10 + 24 + 20)};
+        }
+      }
+
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        .k-Form-DropdownSelect__button__arrowBox {
+          left: ${pxToRem(30)};
+        }
+
+        .k-Form-DropdownCombobox__input,
+        .k-Form-DropdownSelect__content {
+          margin-left: ${pxToRem(30 + 10)};
+        }
+
+        .k-Form-DropdownCombobox__statusBadges,
+        .k-Form-DropdownSelect__button__statusBadges {
+          right: ${pxToRem(20)};
+        }
+      }
+    }
+
+    &.k-Form-Dropdown--huge {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button {
+        @media (min-width: ${ScreenConfig.S.min}px) {
+          height: ${pxToRem(80)};
+        }
+      }
+    }
+    &.k-Form-Dropdown--giant {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button {
+        @media (min-width: ${ScreenConfig.S.min}px) {
+          height: ${pxToRem(90)};
+        }
+      }
+    }
+
+    &.k-Form-Dropdown--isOpen {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
     }
   }
 `

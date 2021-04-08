@@ -17,6 +17,17 @@ const BulletPointStyles = styled.div`
     css`
       background-color: ${activeColor};
     `}
+
+  &:focus {
+    outline: ${COLORS.primary3} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary3};
+  }
 `
 
 const PaginationStyles = styled.div`
@@ -39,7 +50,9 @@ export const Pagination = ({ activeIndex, links, totalIndex, activeColor }) => {
             href={link}
             key={index}
             isSelected={activeIndex === index + 1}
+            aria-current={activeIndex === index + 1}
             activeColor={activeColor}
+            tabIndex="0"
           />
         ))}
       {hasNoLinks &&
@@ -47,7 +60,9 @@ export const Pagination = ({ activeIndex, links, totalIndex, activeColor }) => {
           <BulletPointStyles
             key={index}
             isSelected={activeIndex === index + 1}
+            aria-current={activeIndex === index + 1}
             activeColor={activeColor}
+            tabIndex="0"
           />
         ))}
     </PaginationStyles>

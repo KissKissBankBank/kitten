@@ -6,7 +6,7 @@ import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
@@ -16,7 +16,7 @@ import { GarbageIcon } from '../../../components/icons/garbage-icon';
 import { ButtonIcon } from '../../../components/buttons/button-icon';
 import { Title } from '../../../components/typography/title';
 import { Text } from '../../../components/typography/text';
-import { Paragraph } from '../../../components/typography/paragraph';
+import { Paragraph } from '../../../components/typography/paragraph/next';
 import COLORS from '../../../constants/colors-config';
 import { ScreenConfig } from '../../../constants/screen-config';
 import { domElementHelper } from '../../../helpers/dom/element-helper';
@@ -109,7 +109,7 @@ export var CartRewardCard = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/React.createElement(Title, {
         italic: true,
         modifier: "quinary",
-        margin: false,
+        noMargin: true,
         tag: titleTag
       }, titleAmount)), subtitle && /*#__PURE__*/React.createElement("div", {
         className: "k-u-margin-bottom-single k-u-margin-top-double"
@@ -122,8 +122,8 @@ export var CartRewardCard = /*#__PURE__*/function (_Component) {
         })
       }, /*#__PURE__*/React.createElement(Paragraph, {
         tag: descriptionTag,
-        margin: false,
-        modifier: "quaternary"
+        noMargin: true,
+        modifier: "tertiary"
       }, textDescription, description)), this.renderBottomContent());
     }
   }, {

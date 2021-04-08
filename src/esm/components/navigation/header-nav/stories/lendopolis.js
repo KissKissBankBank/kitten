@@ -101,7 +101,8 @@ var InnerAnonymousMenu = function InnerAnonymousMenu() {
 
 export var LendopolisHeaderNavStory = function LendopolisHeaderNavStory(_ref) {
   var isLogged = _ref.isLogged,
-      isFixed = _ref.isFixed;
+      isFixed = _ref.isFixed,
+      stickyProps = _ref.stickyProps;
 
   var _useState = useState(null),
       _useState2 = _slicedToArray(_useState, 2),
@@ -130,7 +131,8 @@ export var LendopolisHeaderNavStory = function LendopolisHeaderNavStory(_ref) {
       href: '#view',
       text: 'Aller au contenu',
       zIndex: 300
-    }
+    },
+    stickyProps: stickyProps
   }, /*#__PURE__*/React.createElement(HeaderNav.BurgerMenu, {
     dropdownContentWidth: pxToRem(burgerMenuWidth)
   }, /*#__PURE__*/React.createElement(InnerBurgerMenu, null)), /*#__PURE__*/React.createElement(HeaderNav.Logo, {

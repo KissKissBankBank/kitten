@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import TYPOGRAPHY from './../../../../constants/typography-config'
+import COLORS from './../../../../constants/colors-config'
 import { pxToRem } from './../../../../helpers/utils/typography'
 import { ArrowIcon } from './../../../icons/arrow-icon'
 
@@ -45,9 +46,21 @@ export const StyledRightArrowContainer = styled.div`
   ${rightContainer}
   ${sharedStyledArrowIcons}
 
+  &:focus,
+  &:active,
   &:hover {
     transform: translate(${pxToRem(8)});
     ${sharedHoverStyledArrowIcons}
+  }
+  &:focus {
+    outline: ${COLORS.primary3} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary3};
   }
 `
 
@@ -55,9 +68,21 @@ export const StyledLeftArrowContainer = styled.div`
   ${leftContainer}
   ${sharedStyledArrowIcons}
 
+  &:focus,
+  &:active,
   &:hover {
     transform: translate(-${pxToRem(8)});
     ${sharedHoverStyledArrowIcons}
+  }
+  &:focus {
+    outline: ${COLORS.primary3} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &:focus-visible {
+    outline-color: ${COLORS.primary3};
   }
 `
 

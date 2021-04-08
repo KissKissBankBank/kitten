@@ -11,10 +11,10 @@ const modifierOptions = {
 
 export const Default = () => (
   <TagButton
-    tiny={boolean('Tiny', false)}
-    big={boolean('Big', false)}
     modifier={select('Modifier', modifierOptions, 'hydrogen')}
+    size={select('Size', ['tiny', 'regular', 'big', 'huge'], 'regular')}
     selected={boolean('Select', false)}
+    variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
   >
     {(text, ('Text', 'MyTag'))}
   </TagButton>
@@ -22,8 +22,7 @@ export const Default = () => (
 
 export const WithIcon = () => (
   <TagButton
-    tiny={boolean('Tiny', false)}
-    big={boolean('Big', false)}
+    size={select('Size', ['tiny', 'regular', 'big', 'huge'], 'regular')}
     selected={boolean('Select', false)}
     icon={boolean('Icon', false)}
   >

@@ -6,6 +6,7 @@ const Actions = styled.div`
   display: flex;
 
   > * {
+    position: relative;
     margin-left: -${pxToRem(2)};
   }
 
@@ -17,13 +18,16 @@ const Actions = styled.div`
     }
   }
 
-  > :hover:not(:disabled),
-  > :focus:not(:disabled) {
+  > :hover:not(:disabled) {
     z-index: 1;
   }
 
   .is-selected {
     z-index: 2;
+  }
+
+  > :focus:not(:disabled) {
+    z-index: 3;
   }
 `
 

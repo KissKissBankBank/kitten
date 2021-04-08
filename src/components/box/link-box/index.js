@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.LinkBox = void 0;
+exports.LinkBox = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -17,30 +17,15 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styles = require("./styles");
 
-var _deprecated = require("../../../helpers/utils/deprecated");
-
-var _deprecated2 = require("./deprecated");
-
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _arrowIcon = require("../../../components/icons/arrow-icon");
-
-var deprecatedKeys = ['displayIcon', 'text', 'textTag', 'titleTag', 'viewportIsMobile', 'linkProps'];
 
 var LinkBox = function LinkBox(_ref) {
   var className = _ref.className,
       href = _ref.href,
       isExternal = _ref.isExternal,
       props = (0, _objectWithoutProperties2.default)(_ref, ["className", "href", "isExternal"]);
-
-  if ((0, _deprecated.hasDeprecatedProps)(deprecatedKeys)(props)) {
-    return /*#__PURE__*/_react.default.createElement(_deprecated2.DeprecatedLinkBox, (0, _extends2.default)({
-      href: href,
-      isExternal: isExternal,
-      className: (0, _classnames.default)(className, (props.linkProps || {}).className)
-    }, props));
-  }
-
   var target = isExternal ? {
     target: '_blank',
     rel: 'noopener'
@@ -53,7 +38,6 @@ var LinkBox = function LinkBox(_ref) {
   }, props.children, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-LinkBox__arrow"
   }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-    version: "solid",
     height: "10",
     width: "10"
   }))));
@@ -75,7 +59,7 @@ LinkBox.Text = function (_ref3) {
       className = _ref3.className,
       props = (0, _objectWithoutProperties2.default)(_ref3, ["children", "className"]);
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, props, {
-    className: (0, _classnames.default)('k-u-margin-top-double', 'k-u-margin-bottom-double', 'k-LinkBox__textContainer', className)
+    className: (0, _classnames.default)('k-LinkBox__textContainer', className)
   }), children);
 };
 
@@ -87,7 +71,4 @@ LinkBox.propTypes = {
 LinkBox.defaultProps = {
   href: '#',
   isExternal: false
-}; // DEPRECATED: do not use default export.
-
-var _default = LinkBox;
-exports.default = _default;
+};

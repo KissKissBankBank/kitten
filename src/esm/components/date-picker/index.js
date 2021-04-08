@@ -8,7 +8,7 @@ import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 import React, { Component } from 'react'; // Doc available here: http://react-day-picker.js.org/docs/getting-started
 
@@ -29,7 +29,7 @@ var fontSize = css(["font-size:", "rem;"], TYPOGRAPHY.fontSize / TYPOGRAPHY.scal
 var StyledDatePicker = styled.div.withConfig({
   displayName: "date-picker__StyledDatePicker",
   componentId: "snpu98-0"
-})(["box-sizing:border-box;.DayPickerInput-Overlay{box-shadow:none;margin-top:18px;outline:none;min-width:calc(7 * ", " + 2 * ", ");@media (min-width:", "px){min-width:calc(7 * ", " + 2 * ", ");}&:before{content:'';width:0;height:0;border-left:", " solid transparent;border-right:", " solid transparent;", " position:absolute;top:-", ";left:", ";}}.DayPicker-Caption{text-align:center;height:", ";margin:-", " -", " 0;overflow:hidden;@media (min-width:", "px){margin:-", " -", " 0;}", " & div{padding:", " 0;margin:0 ", ";", "}}.DayPicker-Weekday{", " ", "}.DayPicker-Weekday,.DayPicker-Day{padding:0;width:", ";height:", ";vertical-align:middle;box-sizing:border-box;", " outline:none;@media (min-width:", "px){width:", ";height:", ";}}.DayPicker-Day{", " border-radius:0;&.DayPicker-Day--outside{border:0;}}.DayPicker-Day--today{", " ", "}.DayPicker-Day--selected{&:not(.DayPicker-Day--disabled){&:not(.DayPicker-Day--outside){", " &:hover{", "}}}}.DayPicker-Day--disabled{", "}.DayPicker-Month{margin:0;}.DayPicker-wrapper{padding:0 ", " ", " ", ";outline:none;@media (min-width:", "px){padding:0 ", " ", " ", ";}}.DayPicker{", " ", " outline:none;", " &:not(.DayPicker--interactionDisabled){.DayPicker-Day{&:not(.DayPicker-Day--disabled){&:not(.DayPicker-Day--selected){&:not(.DayPicker-Day--outside){&:hover{", " ", "}}}}}}}"], tinyCellSize, tinyDayPickerPadding, ScreenConfig.S.min, cellSize, dayPickerPadding, pxToRem(9), pxToRem(9), function (_ref) {
+})(["box-sizing:border-box;.DayPickerInput-Overlay{box-shadow:none;margin-top:18px;min-width:calc(7 * ", " + 2 * ", ");@media (min-width:", "px){min-width:calc(7 * ", " + 2 * ", ");}&:before{content:'';width:0;height:0;border-left:", " solid transparent;border-right:", " solid transparent;", " position:absolute;top:-", ";left:", ";}}.DayPicker-Caption{text-align:center;height:", ";margin:-", " -", " 0;overflow:hidden;@media (min-width:", "px){margin:-", " -", " 0;}", " & div{padding:", " 0;margin:0 ", ";", "}}.DayPicker-Weekday{", " ", "}.DayPicker-Weekday,.DayPicker-Day{padding:0;width:", ";height:", ";vertical-align:middle;box-sizing:border-box;", " @media (min-width:", "px){width:", ";height:", ";}}.DayPicker-Day{", " border-radius:0;&.DayPicker-Day--outside{border:0;}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}}.DayPicker-Day--today{", " ", "}.DayPicker-Day--selected{&:not(.DayPicker-Day--disabled){&:not(.DayPicker-Day--outside){", " &:hover{", "}}}}.DayPicker-Day--disabled{", "}.DayPicker-Month{margin:0;}.DayPicker-wrapper{padding:0 ", " ", " ", ";@media (min-width:", "px){padding:0 ", " ", " ", ";}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}}.DayPicker{", " ", " ", " &:not(.DayPicker--interactionDisabled){.DayPicker-Day{&:not(.DayPicker-Day--disabled){&:not(.DayPicker-Day--selected){&:not(.DayPicker-Day--outside){&:hover{", " ", "}}}}}}}"], tinyCellSize, tinyDayPickerPadding, ScreenConfig.S.min, cellSize, dayPickerPadding, pxToRem(9), pxToRem(9), function (_ref) {
   var styles = _ref.styles;
   return css(["border-bottom:", " solid ", ";"], pxToRem(8), styles.header.backgroundColor);
 }, pxToRem(8), pxToRem(15), pxToRem(70), pxToRem(2), pxToRem(22), ScreenConfig.S.min, pxToRem(2), pxToRem(32), function (_ref2) {
@@ -41,7 +41,7 @@ var StyledDatePicker = styled.div.withConfig({
 }, tinyCellSize, tinyCellSize, fontSize, ScreenConfig.S.min, cellSize, cellSize, function (_ref4) {
   var styles = _ref4.styles;
   return css(["border:solid ", " ", ";"], styles.borderColor, borderSize);
-}, TYPOGRAPHY.fontStyles.regular, function (_ref5) {
+}, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, TYPOGRAPHY.fontStyles.regular, function (_ref5) {
   var styles = _ref5.styles;
   return css(["color:", ";"], styles.day.today.color);
 }, function (_ref6) {
@@ -53,7 +53,7 @@ var StyledDatePicker = styled.div.withConfig({
 }, function (_ref8) {
   var styles = _ref8.styles;
   return css(["color:", ";"], styles.day.disabled.color);
-}, tinyDayPickerPadding, tinyDayPickerPadding, tinyDayPickerPadding, ScreenConfig.S.min, dayPickerPadding, dayPickerPadding, dayPickerPadding, fontSize, TYPOGRAPHY.fontStyles.light, function (_ref9) {
+}, tinyDayPickerPadding, tinyDayPickerPadding, tinyDayPickerPadding, ScreenConfig.S.min, dayPickerPadding, dayPickerPadding, dayPickerPadding, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, fontSize, TYPOGRAPHY.fontStyles.light, function (_ref9) {
   var styles = _ref9.styles;
   return css(["border:solid ", " ", ";"], styles.borderColor, borderSize);
 }, TYPOGRAPHY.fontStyles.light, function (_ref10) {

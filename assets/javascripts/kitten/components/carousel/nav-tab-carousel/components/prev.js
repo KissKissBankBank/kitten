@@ -7,8 +7,12 @@ import {
 
 export const Prev = ({ children, hoverColor }) => {
   return (
-    <StyledLeftArrowContainer hoverColor={hoverColor}>
-      <StyledArrowIcon version="solid" direction="left" fill="#fff" />
+    <StyledLeftArrowContainer
+      hoverColor={hoverColor}
+      as="button"
+      className="k-u-reset-button"
+    >
+      <StyledArrowIcon direction="left" color="#fff" />
       <StyledPrevText>{children}</StyledPrevText>
     </StyledLeftArrowContainer>
   )

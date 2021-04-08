@@ -25,7 +25,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _arrowIcon = require("../../../../components/icons/arrow-icon");
 
-var _button = require("../../../../components/buttons/button/button");
+var _button = require("../../../../components/buttons/button");
 
 var _typography = require("../../../../helpers/utils/typography");
 
@@ -33,7 +33,7 @@ var _text = require("../../../../components/typography/text");
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 var StyledText = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "navbar__StyledText",
@@ -88,7 +88,6 @@ var Navbar = /*#__PURE__*/function (_PureComponent) {
         },
         icon: true
       }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-        version: "solid",
         fill: iconColor,
         direction: "left",
         width: "8",
@@ -100,7 +99,6 @@ var Navbar = /*#__PURE__*/function (_PureComponent) {
         },
         icon: true
       }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-        version: "solid",
         fill: iconColor,
         direction: "right",
         width: "8",

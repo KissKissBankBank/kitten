@@ -18,15 +18,22 @@ export const Step = ({
   className,
   variant,
   bridge,
+  onClick,
   ...other
 }) => {
   return (
     <StyledItem
       className={classNames('k-Steppers--VerticalStepper__item', {
         'k-Steppers--VerticalStepper__item--hasActiveLine': success,
+        'k-Steppers--VerticalStepper__item--bridge': bridge,
       })}
     >
-      <StyledLink as={other.href ? 'a' : 'span'} {...other} variant={variant}>
+      <StyledLink
+        as={other.href && !disabled ? 'a' : 'span'}
+        onClick={disabled ? null : onClick}
+        {...other}
+        variant={variant}
+      >
         <Status
           success={success}
           valid={valid}
@@ -60,22 +67,48 @@ const StyledItem = styled.li`
 
   &:first-of-type {
     margin-top: 0;
+    padding-top: 0;
   }
   &:last-of-type {
     margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  [role='button']:focus,
+  a:focus,
+  button:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
+  [role='button']:focus:not(:focus-visible),
+  a:focus:not(:focus-visible),
+  button:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  [role='button']:focus-visible,
+  a:focus-visible,
+  button:focus-visible {
+    outline-color: ${COLORS.primary4};
   }
 
   li:not(:last-of-type) {
     margin: 0 !important;
+
     &::after {
       display: none;
     }
+  }
+
+  &.k-Steppers--VerticalStepper__item--bridge {
+    padding: ${pxToRem(8)} 0;
   }
 `
 
 const StyledLink = styled.a`
   display: inline-flex;
   align-items: center;
+  padding-right: ${pxToRem(10)};
+
   ${({ as, onClick }) =>
     (as === 'a' || onClick) &&
     css`

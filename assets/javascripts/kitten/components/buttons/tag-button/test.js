@@ -17,19 +17,11 @@ describe('<TagButton />', () => {
     })
   })
 
-  describe('with `tiny` prop', () => {
+  describe('with `size="huge"` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TagButton tiny>MyButton</TagButton>).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with `big` prop', () => {
-    beforeEach(() => {
-      component = renderer.create(<TagButton big>MyButton</TagButton>).toJSON()
+      component = renderer
+        .create(<TagButton size="huge">MyButton</TagButton>)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {

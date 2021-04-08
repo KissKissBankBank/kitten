@@ -2,24 +2,16 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden';
+import { Badge as BadgeComponent } from '../../../../components/atoms/badge';
 import COLORS from '../../../../constants/colors-config';
 export var Badge = function Badge(_ref) {
-  var children = _ref.children,
-      className = _ref.className,
-      backgroundColor = _ref.backgroundColor,
-      a11yText = _ref.a11yText,
-      props = _objectWithoutProperties(_ref, ["children", "className", "backgroundColor", "a11yText"]);
+  var backgroundColor = _ref.backgroundColor,
+      props = _objectWithoutProperties(_ref, ["backgroundColor"]);
 
-  var badgeClassNames = classNames('k-Badge', 'k-Badge--spaced', 'k-Badge--no-border', className);
-  return /*#__PURE__*/React.createElement("span", _extends({}, props, {
-    className: badgeClassNames,
-    "aria-hidden": "true",
-    style: {
-      backgroundColor: backgroundColor
-    }
-  }), children, a11yText && /*#__PURE__*/React.createElement(VisuallyHidden, null, a11yText));
+  return /*#__PURE__*/React.createElement(BadgeComponent, _extends({
+    color: backgroundColor,
+    spaced: true
+  }, props));
 };
 Badge.propTypes = {
   backgroundColor: PropTypes.string,

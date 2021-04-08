@@ -17,7 +17,6 @@ const StyledButton = styled(({ buttonModifier, ...others }) => (
   font-size: ${stepToRem(-1)};
   line-height: 1.3;
   flex: 1 0 auto;
-  outline: none;
   appearance: none;
   cursor: pointer;
   padding: 0 ${pxToRem(30)};

@@ -8,7 +8,7 @@ import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
@@ -21,7 +21,7 @@ import classNames from 'classnames';
 var StyledInput = styled.input.withConfig({
   displayName: "text-input__StyledInput",
   componentId: "sc-11wej6v-0"
-})(["--input-padding-horizontal:", ";--input-border-width:", ";font-size:", ";line-height:1em;", ";box-sizing:border-box;border-width:", ";border-width:var(--input-border-width);border-style:solid;border-radius:0;width:100%;appearance:none;background-color:", ";color:", ";border-color:", ";outline:none;::placeholder{color:", ";}height:", ";&.k-Form-TextInput--tiny{height:", ";}&.k-Form-TextInput--huge{height:", ";@media (min-width:", "px){height:", ";font-size:", ";}}&.k-Form-TextInput--giant{height:", ";@media (min-width:", "px){height:", ";font-size:", ";}}padding:", " ", ";padding:", " var(--input-padding-horizontal);&.k-Form-TextInput--orion{border-radius:", ";height:", ";@media (min-width:", "px){--input-padding-horizontal:", ";border-radius:", ";height:", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){padding:", " ", ";}}}&.k-Form-TextInput--alignCenter{text-align:center;}:disabled{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;}&.k-Form-TextInput--valid{color:", ";border-color:", ";}&.k-Form-TextInput--error{color:", ";border-color:", ";}&:invalid{box-shadow:none;outline:none;color:", ";border-color:", ";}&:focus{outline:none;color:", ";border-color:", ";}&.k-Form-TextInput-hasDigits{width:calc( var(--input-content-width) * 1ch + (2 * (var(--input-padding-horizontal) + var(--input-border-width))) );}&.k-Form-TextInput-hasDigits_2{text-align:center;}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){&.k-Form-TextInput-hasDigits_2{text-align:center;width:calc(2em + ", ");&.k-Form-TextInput--orion{width:calc(2em + ", ");@media (min-width:", "px){width:calc(2em + ", ");}}}&.k-Form-TextInput-hasDigits_4{width:calc(4em + ", ");&.k-Form-TextInput--orion{width:calc(4em + ", ");@media (min-width:", "px){width:calc(4em + ", ");}}}&.k-Form-TextInput-hasDigits_12{width:calc(12em + ", ");&.k-Form-TextInput--orion{width:calc(12em + ", ");@media (min-width:", "px){width:calc(12em + ", ");}}}}"], pxToRem(15), pxToRem(2), stepToRem(-1), TYPOGRAPHY.fontStyles.light, pxToRem(2), COLORS.background1, COLORS.font1, COLORS.line1, COLORS.font2, pxToRem(50), pxToRem(40), pxToRem(70), ScreenConfig.M.min, pxToRem(80), stepToRem(0), pxToRem(70), ScreenConfig.M.min, pxToRem(90), stepToRem(0), pxToRem(10), pxToRem(15), pxToRem(10), pxToRem(6), pxToRem(60), ScreenConfig.M.min, pxToRem(30), pxToRem(8), pxToRem(70), stepToRem(0), pxToRem(10), pxToRem(30), COLORS.font2, COLORS.line1, COLORS.line1, COLORS.tertiary2, COLORS.tertiary2, COLORS.error3, COLORS.error3, COLORS.error3, COLORS.error3, COLORS.font1, COLORS.line2, pxToRem(2 * (10 + 2)), pxToRem(2 * (15 + 2)), ScreenConfig.M.min, pxToRem(2 * (30 + 2)), pxToRem(2 * (10 + 2)), pxToRem(2 * (15 + 2)), ScreenConfig.M.min, pxToRem(2 * (30 + 2)), pxToRem(2 * (10 + 2)), pxToRem(2 * (15 + 2)), ScreenConfig.M.min, pxToRem(2 * (30 + 2)));
+})(["--input-padding-horizontal:", ";--input-border-width:", ";font-size:", ";line-height:1em;", ";box-sizing:border-box;border-width:", ";border-width:var(--input-border-width);border-style:solid;border-radius:0;width:100%;appearance:none;background-color:", ";color:", ";border-color:", ";::placeholder{color:", ";}&.k-Form-TextInput--tiny{height:", ";}&.k-Form-TextInput--regular{height:", ";}&.k-Form-TextInput--huge{height:", ";@media (min-width:", "px){height:", ";font-size:", ";}}&.k-Form-TextInput--giant{height:", ";@media (min-width:", "px){height:", ";font-size:", ";}}padding:", " ", ";padding:", " var(--input-padding-horizontal);&.k-Form-TextInput--orion{&.k-Form-TextInput--regular{border-radius:", ";height:", ";}&.k-Form-TextInput--big{border-radius:", ";height:", ";@media (min-width:", "px){height:", ";--input-padding-horizontal:", ";border-radius:", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){padding:", " ", ";}}}}&.k-Form-TextInput--alignCenter{text-align:center;}:disabled{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;}&.k-Form-TextInput--valid{color:", ";border-color:", ";}&.k-Form-TextInput--error{color:", ";border-color:", ";}&:invalid{box-shadow:none;color:", ";border-color:", ";}&:focus{color:", ";border-color:", ";outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&.k-Form-TextInput-hasDigits{width:calc( var(--input-content-width) * 1ch + (2 * (var(--input-padding-horizontal) + var(--input-border-width))) );}&.k-Form-TextInput-hasDigits_2{text-align:center;}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){&.k-Form-TextInput-hasDigits_2{text-align:center;width:calc(2em + ", ");&.k-Form-TextInput--orion{width:calc(2em + ", ");@media (min-width:", "px){width:calc(2em + ", ");}}}&.k-Form-TextInput-hasDigits_4{width:calc(4em + ", ");&.k-Form-TextInput--orion{width:calc(4em + ", ");@media (min-width:", "px){width:calc(4em + ", ");}}}&.k-Form-TextInput-hasDigits_12{width:calc(12em + ", ");&.k-Form-TextInput--orion{width:calc(12em + ", ");@media (min-width:", "px){width:calc(12em + ", ");}}}}"], pxToRem(15), pxToRem(2), stepToRem(-1), TYPOGRAPHY.fontStyles.light, pxToRem(2), COLORS.background1, COLORS.font1, COLORS.line1, COLORS.font2, pxToRem(40), pxToRem(50), pxToRem(70), ScreenConfig.M.min, pxToRem(80), stepToRem(0), pxToRem(70), ScreenConfig.M.min, pxToRem(90), stepToRem(0), pxToRem(10), pxToRem(15), pxToRem(10), pxToRem(4), pxToRem(50), pxToRem(6), pxToRem(60), ScreenConfig.M.min, pxToRem(70), pxToRem(30), pxToRem(8), stepToRem(0), pxToRem(10), pxToRem(30), COLORS.font2, COLORS.line1, COLORS.line1, COLORS.tertiary2, COLORS.tertiary2, COLORS.error3, COLORS.error3, COLORS.error3, COLORS.error3, COLORS.font1, COLORS.line2, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, pxToRem(2 * (10 + 2)), pxToRem(2 * (15 + 2)), ScreenConfig.M.min, pxToRem(2 * (30 + 2)), pxToRem(2 * (10 + 2)), pxToRem(2 * (15 + 2)), ScreenConfig.M.min, pxToRem(2 * (30 + 2)), pxToRem(2 * (10 + 2)), pxToRem(2 * (15 + 2)), ScreenConfig.M.min, pxToRem(2 * (30 + 2)));
 var StyledTextareaContainer = styled.div.withConfig({
   displayName: "text-input__StyledTextareaContainer",
   componentId: "sc-11wej6v-1"
@@ -48,15 +48,13 @@ export var TextInput = /*#__PURE__*/function (_PureComponent) {
           disabled = _this$props.disabled,
           name = _this$props.name,
           digits = _this$props.digits,
-          tiny = _this$props.tiny,
-          huge = _this$props.huge,
-          giant = _this$props.giant,
+          size = _this$props.size,
           center = _this$props.center,
           tag = _this$props.tag,
           variant = _this$props.variant,
           className = _this$props.className,
           style = _this$props.style,
-          others = _objectWithoutProperties(_this$props, ["valid", "error", "disabled", "name", "digits", "tiny", "huge", "giant", "center", "tag", "variant", "className", "style"]);
+          others = _objectWithoutProperties(_this$props, ["valid", "error", "disabled", "name", "digits", "size", "center", "tag", "variant", "className", "style"]);
 
       var digitsClass = !!digits ? "k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_".concat(digits) : null;
 
@@ -69,13 +67,11 @@ export var TextInput = /*#__PURE__*/function (_PureComponent) {
           },
           as: "textarea",
           disabled: disabled,
+          name: name,
           className: classNames('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--".concat(variant), {
             'k-Form-TextInput--valid': valid,
             'k-Form-TextInput--error': error,
             'k-Form-TextInput--disabled': disabled,
-            'k-Form-TextInput--tiny': tiny,
-            'k-Form-TextInput--huge': huge,
-            'k-Form-TextInput--giant': giant,
             'k-Form-TextInput--alignCenter': center
           }),
           style: !!digits ? _extends({
@@ -91,13 +87,10 @@ export var TextInput = /*#__PURE__*/function (_PureComponent) {
           },
           disabled: disabled,
           name: name,
-          className: classNames('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--".concat(variant), {
+          className: classNames('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--".concat(variant), "k-Form-TextInput--".concat(size), {
             'k-Form-TextInput--valid': valid,
             'k-Form-TextInput--error': error,
             'k-Form-TextInput--disabled': disabled,
-            'k-Form-TextInput--tiny': tiny,
-            'k-Form-TextInput--huge': huge,
-            'k-Form-TextInput--giant': giant,
             'k-Form-TextInput--alignCenter': center
           }),
           style: !!digits ? _extends({
@@ -114,9 +107,7 @@ TextInput.propTypes = {
   tag: PropTypes.string,
   valid: PropTypes.bool,
   error: PropTypes.bool,
-  tiny: PropTypes.bool,
-  huge: PropTypes.bool,
-  giant: PropTypes.bool,
+  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
   center: PropTypes.bool,
   disabled: PropTypes.bool,
   name: PropTypes.string,
@@ -128,9 +119,7 @@ TextInput.defaultProps = {
   // or 'textarea'
   valid: false,
   error: false,
-  tiny: false,
-  huge: false,
-  giant: false,
+  size: 'regular',
   center: false,
   disabled: false,
   name: 'text',

@@ -30,13 +30,7 @@ var DefaultExample = function DefaultExample() {
 exports.DefaultExample = DefaultExample;
 
 var CustomExample = function CustomExample() {
-  var handleChange = function handleChange(values) {
-    console.warn('Values:', values);
-  };
-
-  return /*#__PURE__*/_react.default.createElement(_index.CreditCardForm, {
-    onChange: handleChange
-  }, /*#__PURE__*/_react.default.createElement(Number, null), /*#__PURE__*/_react.default.createElement(Expiry, null), /*#__PURE__*/_react.default.createElement(Cvc, null));
+  return /*#__PURE__*/_react.default.createElement(_index.CreditCardForm, null, /*#__PURE__*/_react.default.createElement(Number, null), /*#__PURE__*/_react.default.createElement(Expiry, null), /*#__PURE__*/_react.default.createElement(Cvc, null));
 };
 
 exports.CustomExample = CustomExample;

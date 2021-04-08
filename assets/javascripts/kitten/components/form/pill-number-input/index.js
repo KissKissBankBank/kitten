@@ -5,7 +5,8 @@ import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import domElementHelper from '../../../helpers/dom/element-helper'
+import { nativeInputValueSetter } from '../../../helpers/dom/native-input-value-setter'
+import { createEvent } from '../../../helpers/dom/create-event'
 
 const StyledPillNumberInput = styled.div`
   display: inline-flex;
@@ -18,7 +19,7 @@ const StyledPillNumberInput = styled.div`
   border-radius: ${pxToRem(20)};
   transition: border-color .2s ease;
 
-  &:focus-within, &:hover {
+  &:hover {
     border-color: ${COLORS.line2};
   }
 
@@ -38,7 +39,14 @@ const StyledPillNumberInput = styled.div`
     text-align: center;
 
     &:focus {
-      outline: none;
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
     }
 
     &:disabled {
@@ -81,11 +89,6 @@ const StyledPillNumberInput = styled.div`
   }
 `
 
-const nativeInputValueSetter =
-  domElementHelper.canUseDom() &&
-  Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value')
-    .set
-
 export const PillNumberInput = ({
   onChange = () => {},
   value = 1,
@@ -102,7 +105,7 @@ export const PillNumberInput = ({
 }) => {
   const inputRef = useRef(null)
   const [currentValue, setCurrentValue] = useState(value)
-  const changeEvent = new Event('change', { bubbles: true })
+  const changeEvent = createEvent('change')
 
   const handleKeyDown = keyDownEvent => {
     if (keyDownEvent.key === 'ArrowUp' && inputRef.current.value < max) {
