@@ -12,6 +12,7 @@ Features:
 - Add `variant` prop to `LocationInput`, defaults to `andromeda`.
 
 Fixes:
+
 - Remove warning about `fill-rule` on `PepoleIcon`.
 - Fix `TagButton` style.
 - Fix styles on `DropdownSelect`.
