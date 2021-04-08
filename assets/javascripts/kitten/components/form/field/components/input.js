@@ -1,17 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { TextInput } from '../../../form/text-input'
 import { TextInputWithLimit } from '../../../form/text-input-with-limit'
 import { TextInputWithUnit } from '../../../form/text-input-with-unit'
-
-const StyledFieldInput = styled.div`
-  &.k-FieldInput--noMargin {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-`
 
 export const FieldInput = ({
   limit,
@@ -32,15 +24,14 @@ export const FieldInput = ({
   }
 
   return (
-    <StyledFieldInput
+    <div
       className={classNames('k-FieldInput',
         className, 
-        { 'k-FieldInput--noMargin': noMargin },
-        "k-u-margin-top-single",
+        { 'k-u-margin-top-single': !noMargin },
       )}
     >
       <Input {...props} />
-    </StyledFieldInput>
+    </div>
   )
 }
 
