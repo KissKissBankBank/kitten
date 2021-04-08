@@ -13,7 +13,7 @@ import TYPOGRAPHY from '../../../constants/typography-config';
 var StyledLocationInput = styled.div.withConfig({
   displayName: "location-input__StyledLocationInput",
   componentId: "sc-1aqtnfv-0"
-})(["position:relative;width:100%;.k-LocationInput__input{", " font-size:", ";line-height:1.3;position:relative;display:block;box-sizing:border-box;padding:0 ", " 0 ", ";width:100%;height:", ";background:", ";border:", " solid ", ";border-radius:0;color:", ";transition:color .2s,border-color .2s;&::placeholder{color:", ";}&:focus{color:", ";border-color:", ";outline:", " solid ", ";outline-offset:", ";}&:disabled{border-color:", ";background-color:", ";color:", ";cursor:not-allowed;&::placeholder{opacity:1;}}}.k-LocationInput__autocomplete{box-sizing:border-box;background-color:", ";border:", " solid ", ";border-top:0;position:absolute;z-index:1000;z-index:var(--menu-z-index,1000);width:100%;overflow-y:scroll;&:empty{border:0;}}.k-LocationInput__autocompleteItem,.k-LocationInput__autocompleteItem--active{padding:0 ", ";height:", ";display:flex;align-items:center;font-size:", ";cursor:pointer;color:", ";}.k-LocationInput__autocompleteItem--active{background-color:", ";}.k-LocationInput__autocompleteItem__mainText{", " margin-left:", ";color:", ";}.k-LocationInput__autocompleteItem__secondaryText{", " margin-left:1ch;}.k-LocationInput__loading{padding-left:", ";color:", ";}.k-LocationInput__icon{position:absolute;z-index:1;top:", ";left:", ";}"], TYPOGRAPHY.fontStyles.light, stepToRem(-1), pxToRem(15), pxToRem(35), pxToRem(50), COLORS.background1, pxToRem(2), COLORS.line1, COLORS.font1, COLORS.font2, COLORS.font1, COLORS.line2, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.line1, COLORS.line1, COLORS.font2, COLORS.background1, pxToRem(2), COLORS.line1, pxToRem(12), pxToRem(50), stepToRem(-1), COLORS.font1, COLORS.background3, TYPOGRAPHY.fontStyles.light, pxToRem(20), COLORS.font1, TYPOGRAPHY.fontStyles.light, pxToRem(20), COLORS.font2, pxToRem(15), pxToRem(15)); // Make sure you include a script to the Google Maps places API.
+})(["position:relative;width:100%;.k-LocationInput__input{", " font-size:", ";line-height:1.3;position:relative;display:block;box-sizing:border-box;padding:0 ", " 0 ", ";width:100%;height:", ";background:", ";border:", " solid ", ";border-radius:0;color:", ";transition:color .2s,border-color .2s;&::placeholder{color:", ";}&:focus{color:", ";border-color:", ";outline:", " solid ", ";outline-offset:", ";}&:disabled{border-color:", ";background-color:", ";color:", ";cursor:not-allowed;&::placeholder{opacity:1;}}&.k-LocationInput__input--orion{border-radius:", ";}}.k-LocationInput__autocomplete{box-sizing:border-box;background-color:", ";border:", " solid ", ";border-top:0;position:absolute;z-index:1000;z-index:var(--menu-z-index,1000);width:100%;overflow-y:scroll;&:empty{border:0;}}.k-LocationInput__autocompleteItem,.k-LocationInput__autocompleteItem--active{padding:0 ", ";height:", ";display:flex;align-items:center;font-size:", ";cursor:pointer;color:", ";}.k-LocationInput__autocompleteItem--active{background-color:", ";}.k-LocationInput__autocompleteItem__mainText{", " margin-left:", ";color:", ";}.k-LocationInput__autocompleteItem__secondaryText{", " margin-left:1ch;}.k-LocationInput__loading{padding-left:", ";color:", ";}.k-LocationInput__icon{position:absolute;z-index:1;top:", ";left:", ";}"], TYPOGRAPHY.fontStyles.light, stepToRem(-1), pxToRem(15), pxToRem(35), pxToRem(50), COLORS.background1, pxToRem(2), COLORS.line1, COLORS.font1, COLORS.font2, COLORS.font1, COLORS.line2, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.line1, COLORS.line1, COLORS.font2, pxToRem(4), COLORS.background1, pxToRem(2), COLORS.line1, pxToRem(12), pxToRem(50), stepToRem(-1), COLORS.font1, COLORS.background3, TYPOGRAPHY.fontStyles.light, pxToRem(20), COLORS.font1, TYPOGRAPHY.fontStyles.light, pxToRem(20), COLORS.font2, pxToRem(15), pxToRem(15)); // Make sure you include a script to the Google Maps places API.
 // For example:
 //   <script src="https://maps.googleapis.com/maps/api/js?key=…&libraries=places"></script>
 
@@ -24,7 +24,8 @@ export var LocationInput = function LocationInput(_ref) {
       inputProps = _ref.inputProps,
       name = _ref.name,
       loadingText = _ref.loadingText,
-      others = _objectWithoutProperties(_ref, ["onChange", "onSelect", "defaultValue", "inputProps", "name", "loadingText"]);
+      variant = _ref.variant,
+      others = _objectWithoutProperties(_ref, ["onChange", "onSelect", "defaultValue", "inputProps", "name", "loadingText", "variant"]);
 
   var _useState = useState(defaultValue),
       _useState2 = _slicedToArray(_useState, 2),
@@ -68,7 +69,7 @@ export var LocationInput = function LocationInput(_ref) {
     }, /*#__PURE__*/React.createElement("div", {
       className: "k-LocationInput__icon"
     }, /*#__PURE__*/React.createElement(LocationIcon, null)), /*#__PURE__*/React.createElement("input", getInputProps(_extends({}, inputProps, {
-      className: classNames('k-LocationInput__input', inputProps === null || inputProps === void 0 ? void 0 : inputProps.className)
+      className: classNames('k-LocationInput__input', inputProps === null || inputProps === void 0 ? void 0 : inputProps.className, "k-LocationInput__input--".concat(variant))
     }))), /*#__PURE__*/React.createElement("div", {
       className: "k-LocationInput__autocomplete"
     }, loading && /*#__PURE__*/React.createElement("div", {
@@ -93,7 +94,8 @@ LocationInput.defaultProps = {
   defaultValue: '',
   inputProps: {},
   name: 'location-input',
-  loadingText: 'Loading...'
+  loadingText: 'Loading...',
+  variant: 'andromeda'
 };
 LocationInput.propTypes = {
   onChange: PropTypes.func,
@@ -101,5 +103,6 @@ LocationInput.propTypes = {
   defaultValue: PropTypes.string,
   inputProps: PropTypes.object,
   name: PropTypes.string,
-  loadingText: PropTypes.string
+  loadingText: PropTypes.string,
+  variant: PropTypes.oneOf(['andromeda', 'orion'])
 };
