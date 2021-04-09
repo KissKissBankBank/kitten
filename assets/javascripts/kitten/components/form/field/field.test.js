@@ -22,6 +22,7 @@ describe('<Field />', () => {
             tooltipProps={{ actionLabel: 'Learn more' }}
             placeholder="Placeholder…"
             tiny={false}
+            noMargin={false}
           />,
         )
         .toJSON()

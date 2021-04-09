@@ -1,23 +1,10 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import { Marger } from '../../../layout/marger'
 import { Label } from '../../../form/label'
 import { Toggletip } from '../../../tooltips/toggletip'
 import { Line } from '../../../layout/line'
 
 export class FieldLabel extends Component {
-  static propTypes = {
-    link: PropTypes.node,
-    tooltip: PropTypes.string,
-    labelProps: PropTypes.object,
-    tooltipProps: PropTypes.object,
-  }
-
-  static defaultProps = {
-    tooltip: null,
-    labelProps: {},
-  }
-
   render() {
     const {
       children,
@@ -30,7 +17,7 @@ export class FieldLabel extends Component {
     } = this.props
 
     return (
-      <Marger bottom="1" {...others}>
+      <div className="k-u-margin-bottom-single" {...others}>
         <Line style={{ lineHeight: 1 }}>
           <Line.Item>
             <Label {...labelProps} size={labelProps.size || 'micro'}>
@@ -52,7 +39,19 @@ export class FieldLabel extends Component {
 
           {link && <Line.Item>{link}</Line.Item>}
         </Line>
-      </Marger>
+      </div>
     )
   }
+}
+
+FieldLabel.propTypes = {
+  link: PropTypes.node,
+  tooltip: PropTypes.string,
+  labelProps: PropTypes.object,
+  tooltipProps: PropTypes.object,
+}
+
+FieldLabel.defaultProps = {
+  tooltip: null,
+  labelProps: {},
 }

@@ -3,10 +3,10 @@
 exports[`<Field /> with <Field.Autocomplete /> matches with snapshot 1`] = `
 Array [
   <div
-    className="sc-bdVaJa hOgMxB"
+    className="k-u-margin-bottom-single"
   >
     <div
-      className="sc-bxivhb iPIptC k-Line"
+      className="sc-htpNat cEJbdw k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -17,7 +17,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
+          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
           htmlFor="autocomplete"
           onClick={[Function]}
         >
@@ -27,10 +27,10 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-bdVaJa ggQxmM"
+    className="k-u-margin-top-single"
   >
     <div
-      className="sc-jTzLTM cIolCp"
+      className="sc-VigVT cfOvOR"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-fjdhpX hcrKga"
+        className="sc-jTzLTM dNqgXb"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -55,10 +55,10 @@ Array [
 exports[`<Field /> with <Field.Input /> in error matches with snapshot 1`] = `
 Array [
   <div
-    className="sc-bdVaJa hOgMxB"
+    className="k-u-margin-bottom-single"
   >
     <div
-      className="sc-bxivhb iPIptC k-Line"
+      className="sc-htpNat cEJbdw k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -69,7 +69,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
+          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -80,7 +80,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-htpNat qekvb k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -124,10 +124,10 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-bdVaJa ggQxmM"
+    className="k-FieldInput k-u-margin-top-single"
   >
     <input
-      className="sc-ifAKCX bBVDCc k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
+      className="sc-bxivhb bLoDOQ k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -135,10 +135,10 @@ Array [
     />
   </div>,
   <div
-    className="sc-bdVaJa ggQxmM"
+    className="k-u-margin-top-single"
   >
     <p
-      className="sc-htoDjs bZzhDu k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-gzVnrw ibZhkv k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -154,10 +154,10 @@ Array [
 exports[`<Field /> with <Field.Input /> matches with snapshot 1`] = `
 Array [
   <div
-    className="sc-bdVaJa hOgMxB"
+    className="k-u-margin-bottom-single"
   >
     <div
-      className="sc-bxivhb iPIptC k-Line"
+      className="sc-htpNat cEJbdw k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -168,7 +168,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
+          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -179,7 +179,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-htpNat qekvb k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -223,10 +223,10 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-bdVaJa ggQxmM"
+    className="k-FieldInput k-u-margin-top-single"
   >
     <input
-      className="sc-ifAKCX bBVDCc k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
+      className="sc-bxivhb bLoDOQ k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
       disabled={false}
       id="input"
       name="field"
@@ -239,10 +239,10 @@ Array [
 exports[`<Field /> with <Field.Password /> in error matches with snapshot 1`] = `
 Array [
   <div
-    className="sc-bdVaJa hOgMxB"
+    className="k-u-margin-bottom-single"
   >
     <div
-      className="sc-bxivhb iPIptC k-Line"
+      className="sc-htpNat cEJbdw k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -253,7 +253,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
+          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -264,7 +264,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-htpNat qekvb k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -308,13 +308,13 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-bdVaJa ggQxmM"
+    className="k-u-margin-top-single"
   >
     <div
-      className="sc-gqjmRU cbiifr k-Form-PasswordInput"
+      className="sc-gZMcBi fLBnrA k-Form-PasswordInput"
     >
       <input
-        className="sc-ifAKCX bBVDCc k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
+        className="sc-bxivhb bLoDOQ k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -348,10 +348,10 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-bdVaJa ggQxmM"
+    className="k-u-margin-top-single"
   >
     <p
-      className="sc-htoDjs bZzhDu k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-gzVnrw ibZhkv k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -367,10 +367,10 @@ Array [
 exports[`<Field /> with <Field.Password /> matches with snapshot 1`] = `
 Array [
   <div
-    className="sc-bdVaJa hOgMxB"
+    className="k-u-margin-bottom-single"
   >
     <div
-      className="sc-bxivhb iPIptC k-Line"
+      className="sc-htpNat cEJbdw k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -381,7 +381,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
+          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -392,7 +392,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-htpNat qekvb k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -436,13 +436,13 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-bdVaJa ggQxmM"
+    className="k-u-margin-top-single"
   >
     <div
-      className="sc-gqjmRU cbiifr k-Form-PasswordInput"
+      className="sc-gZMcBi fLBnrA k-Form-PasswordInput"
     >
       <input
-        className="sc-ifAKCX bBVDCc k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+        className="sc-bxivhb bLoDOQ k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"
@@ -481,10 +481,10 @@ Array [
 exports[`<Field /> with <Field.RadioButtonSet /> matches with snapshot 1`] = `
 Array [
   <div
-    className="sc-bdVaJa hOgMxB"
+    className="k-u-margin-bottom-single"
   >
     <div
-      className="sc-bxivhb iPIptC k-Line"
+      className="sc-htpNat cEJbdw k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -495,7 +495,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bwzfXH brSdQO k-Label k-Label--micro"
+          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
           htmlFor="option-a"
           onClick={[Function]}
         >
@@ -505,17 +505,17 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-bdVaJa ggQxmM"
+    className="k-u-margin-top-single"
   >
     <fieldset
-      className="sc-iwsKbI dGyjnX k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
+      className="sc-dnqmqq fsRQlI k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
       disabled={false}
     >
       <div
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-dnqmqq kULSdo k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-htoDjs hbNPwM k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -537,7 +537,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-dnqmqq kULSdo k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-htoDjs hbNPwM k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -558,7 +558,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-dnqmqq kULSdo k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-htoDjs hbNPwM k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
