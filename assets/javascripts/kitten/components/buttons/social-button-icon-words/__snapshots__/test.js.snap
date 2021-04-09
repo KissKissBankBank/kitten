@@ -341,22 +341,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
@@ -724,22 +708,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -1133,22 +1101,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
@@ -1537,22 +1489,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
@@ -1920,22 +1856,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -2313,22 +2233,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
@@ -2701,22 +2605,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
@@ -3084,22 +2972,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 

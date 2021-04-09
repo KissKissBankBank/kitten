@@ -4,8 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Enable `size` prop on `Button` with Orion variant.
 - Feature: Add `noMargin` prop to `FieldInput` component.
-- Fix: Set default value for `Dropdown` options on level 2
+- Fix: Set default value for `Dropdown` options on level 2.
 
 ## [3.1.0] - 2021-04-08
 
