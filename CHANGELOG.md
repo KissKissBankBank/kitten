@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Set default value for `Dropdown` options on level 2
+
 ## [3.1.0] - 2021-04-08
 
 Features:
