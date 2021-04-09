@@ -389,22 +389,6 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c2.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c2.k-Button--orion {
     border-radius: 0.5rem;
   }
 }

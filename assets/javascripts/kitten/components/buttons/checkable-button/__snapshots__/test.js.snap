@@ -401,22 +401,6 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
@@ -832,22 +816,6 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -1273,22 +1241,6 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
@@ -1691,22 +1643,6 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -2127,22 +2063,6 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 

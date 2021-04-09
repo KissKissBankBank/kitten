@@ -115,8 +115,6 @@ const StyledButton = styled.button`
   }
 
   &.k-Button--orion {
-    ${() => BIG}
-
     border-radius: ${pxToRem(6)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {

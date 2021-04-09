@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Enable `size` prop on `Button` with Orion variant.
+
 ## [3.1.0] - 2021-04-08
 
 Features:

@@ -1450,22 +1450,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 
 @media (min-width:40rem) {
   .c3.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c3.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c3.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
@@ -2525,22 +2509,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 
 @media (min-width:40rem) {
   .c3.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c3.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c3.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
@@ -3449,22 +3417,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c4.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c4.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c4.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
