@@ -26,11 +26,15 @@ export const FieldInput = ({
   return (
     <div
       className={classNames('k-FieldInput',
-        className, 
+        className,
         { 'k-u-margin-top-single': !noMargin },
       )}
     >
-      <Input {...props} />
+      <Input
+        limit={limit}
+        unit={unit}
+        {...props}
+      />
     </div>
   )
 }

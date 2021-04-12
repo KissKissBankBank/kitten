@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Recover missing props on `Field.Input`.
+
 ## [3.2.0] - 2021-04-12
 
 Features:
