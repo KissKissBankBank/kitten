@@ -335,6 +335,7 @@ export const StyledDropdown = styled.div`
       .k-Form-DropdownSelect__button {
         height: ${pxToRem(70)};
         padding-right: ${pxToRem(50 + 10)};
+        font-size: ${stepToRem(0)};
       }
 
       .k-Form-DropdownCombobox__arrowButton {
@@ -357,7 +358,7 @@ export const StyledDropdown = styled.div`
         }
       }
 
-      @media (min-width: ${ScreenConfig.S.min}px) {
+      @media (min-width: ${ScreenConfig.M.min}px) {
         .k-Form-DropdownCombobox,
         .k-Form-DropdownSelect__button {
           padding-right: ${pxToRem(60 + 10)};
@@ -551,16 +552,18 @@ export const StyledDropdown = styled.div`
     &.k-Form-Dropdown--huge {
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
-        @media (min-width: ${ScreenConfig.S.min}px) {
+        @media (min-width: ${ScreenConfig.M.min}px) {
           height: ${pxToRem(80)};
+          font-size: ${stepToRem(0)};
         }
       }
     }
     &.k-Form-Dropdown--giant {
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
-        @media (min-width: ${ScreenConfig.S.min}px) {
+        @media (min-width: ${ScreenConfig.M.min}px) {
           height: ${pxToRem(90)};
+          font-size: ${stepToRem(0)};
         }
       }
     }
