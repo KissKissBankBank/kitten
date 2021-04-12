@@ -404,10 +404,6 @@ export const StyledDropdown = styled.div`
     .k-Form-DropdownCombobox__arrowButton {
       padding: 0;
       width: ${pxToRem(35)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        width: ${pxToRem(50)};
-      }
     }
     .k-Form-DropdownCombobox__arrowButton__arrowBox {
       margin-left: ${pxToRem(6)};
@@ -417,12 +413,16 @@ export const StyledDropdown = styled.div`
       }
     }
 
+    .k-Form-DropdownCombobox__input {
+      padding: 0 ${pxToRem(5)};
+    }
+
     .k-Form-DropdownCombobox__input,
     .k-Form-DropdownSelect__content {
-      margin-left: ${pxToRem(14 + 10)};
+      margin-left: ${pxToRem(24 + 10)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-left: ${pxToRem(20 + 10)};
+        margin-left: ${pxToRem(30 + 10)};
       }
     }
 
@@ -472,7 +472,7 @@ export const StyledDropdown = styled.div`
       }
       .k-Form-DropdownCombobox__input,
       .k-Form-DropdownSelect__content {
-        margin-left: ${pxToRem(15 + 5)};
+        margin-left: ${pxToRem(25 + 5)};
       }
 
       .k-Form-DropdownCombobox__statusBadges,
@@ -505,6 +505,7 @@ export const StyledDropdown = styled.div`
           padding-right: ${pxToRem(20)};
         }
       }
+
       &.k-Form-Dropdown--error .k-Form-DropdownSelect__button,
       &.k-Form-Dropdown--valid .k-Form-DropdownSelect__button {
         padding-right: ${pxToRem(10 + 24 + 10)};
@@ -518,10 +519,12 @@ export const StyledDropdown = styled.div`
         .k-Form-DropdownSelect__button__arrowBox {
           left: ${pxToRem(30)};
         }
-
+        .k-Form-DropdownCombobox__arrowButton {
+          width: ${pxToRem(50)};
+        }
         .k-Form-DropdownCombobox__input,
         .k-Form-DropdownSelect__content {
-          margin-left: ${pxToRem(30 + 10)};
+          margin-left: ${pxToRem(40 + 10)};
         }
 
         .k-Form-DropdownCombobox__statusBadges,
