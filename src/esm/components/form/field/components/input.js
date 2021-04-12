@@ -1,3 +1,4 @@
+import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
 import classNames from 'classnames';
@@ -26,7 +27,10 @@ export var FieldInput = function FieldInput(_ref) {
     className: classNames('k-FieldInput', className, {
       'k-u-margin-top-single': !noMargin
     })
-  }, /*#__PURE__*/React.createElement(Input, props));
+  }, /*#__PURE__*/React.createElement(Input, _extends({
+    limit: limit,
+    unit: unit
+  }, props)));
 };
 FieldInput.propTypes = {
   limit: PropTypes.number,
