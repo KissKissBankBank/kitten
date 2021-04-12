@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `DropdownSelect combobox` outline style.
 - Fix: On `DropdownSelect combobox`, display full list of options on menu open.
 - Fix: Propagate `className` on `DropdownSelect` and `DropdownSelect combobox`.
 - Fix: Fix styles on `DropdownSelect`.
