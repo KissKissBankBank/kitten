@@ -319,13 +319,13 @@ const FlowExample = ({ isSidebarOpen }) => (
         Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
         ridiculus mus.
       </Title>
-      <p>
+      <p className="k-u-weight-light">
         Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
         dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel
         augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel
         augue laoreet rutrum faucibus dolor auctor.
       </p>
-      <p>
+      <p className="k-u-weight-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis,
         est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
         sem nec elit. Sed posuere consectetur est at lobortis. Lorem ipsum dolor
@@ -333,7 +333,7 @@ const FlowExample = ({ isSidebarOpen }) => (
         varius blandit sit amet non magna. Etiam porta sem malesuada magna
         mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
-      <p>
+      <p className="k-u-weight-light">
         Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio,
         dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus
         magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel
@@ -342,14 +342,14 @@ const FlowExample = ({ isSidebarOpen }) => (
         amet non magna. Cum sociis natoque penatibus et magnis dis parturient
         montes, nascetur ridiculus mus.
       </p>
-      <p>
+      <p className="k-u-weight-light">
         Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
         risus varius blandit sit amet non magna. Maecenas sed diam eget risus
         varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed
         consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
         venenatis vestibulum.
       </p>
-      <p>
+      <p className="k-u-weight-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo
         quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
         Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna
@@ -358,7 +358,7 @@ const FlowExample = ({ isSidebarOpen }) => (
         est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
         sem nec elit.
       </p>
-      <p>
+      <p className="k-u-weight-light">
         Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio,
         dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus
         magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel
@@ -367,14 +367,14 @@ const FlowExample = ({ isSidebarOpen }) => (
         amet non magna. Cum sociis natoque penatibus et magnis dis parturient
         montes, nascetur ridiculus mus.
       </p>
-      <p>
+      <p className="k-u-weight-light">
         Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
         risus varius blandit sit amet non magna. Maecenas sed diam eget risus
         varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed
         consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
         venenatis vestibulum.
       </p>
-      <p>
+      <p className="k-u-weight-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo
         quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
         Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna
@@ -399,26 +399,27 @@ const FlowExample = ({ isSidebarOpen }) => (
           Side content in Paragraph
         </DashboardLayout.Flow.AsideCard.Paragraph>
         <DashboardLayout.Flow.AsideCard.List>
-          <li>Side content in List (item 1)</li>
-          <li>Side content in List (item 2)</li>
+          <li className="k-u-weight-light">Side content in List (item 1)</li>
+          <li className="k-u-weight-light">Side content in List (item 2)</li>
         </DashboardLayout.Flow.AsideCard.List>
       </DashboardLayout.Flow.AsideCard>
     </DashboardLayout.Flow.Aside>
     <DashboardLayout.Flow.Nav>
-      <Button
-        modifier="hydrogen"
-        variant="orion"
-        big
-        type="button"
-        disabled={boolean('loading', false)}
-      >
-        Back
-      </Button>
-
+      {boolean('Show 2 buttons', true) &&
+        <Button
+          modifier="hydrogen"
+          variant="orion"
+          size="big"
+          type="button"
+          disabled={boolean('loading', false)}
+        >
+          Back
+        </Button>
+      }
       <Button
         modifier="helium"
         variant="orion"
-        big
+        size="big"
         type="button"
         disabled={boolean('loading', false)}
       >

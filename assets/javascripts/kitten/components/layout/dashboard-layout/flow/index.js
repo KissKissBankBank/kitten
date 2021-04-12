@@ -89,10 +89,13 @@ const StyledFlow = styled.div`
       }
     }
 
-    & > * {
+    & > *:not(:first-child:last-child) {
       min-width: 0;
       max-width: ${pxToRem(180)};
       flex: 1 1 ${pxToRem(180)};
+    }
+    & > *:first-child:last-child {
+      flex: 1 0 100%;
     }
   }
 

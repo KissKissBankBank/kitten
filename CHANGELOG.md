@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Button on `DashboardLayout.Flow.Nav` is full size when alone.
 - Fix: Enable `size` prop on `Button` with Orion variant.
 - Feature: Add `noMargin` prop to `FieldInput` component.
 - Fix: Set default value for `Dropdown` options on level 2.
