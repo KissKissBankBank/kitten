@@ -236,6 +236,197 @@ Array [
 ]
 `;
 
+exports[`<Field /> with <Field.Input limit /> matches with snapshot 1`] = `
+Array [
+  <div
+    className="k-u-margin-bottom-single"
+  >
+    <div
+      className="sc-htpNat cEJbdw k-Line"
+      style={
+        Object {
+          "lineHeight": 1,
+        }
+      }
+    >
+      <div
+        className="k-Line__item"
+      >
+        <label
+          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          htmlFor="input"
+          onClick={[Function]}
+        >
+          Label
+        </label>
+      </div>
+      <div
+        className="k-Line__item"
+      >
+        <span
+          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
+          id="tooltip"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "--toggletipAction-left": undefined,
+              "--toggletipAction-top": undefined,
+            }
+          }
+        >
+          <button
+            aria-label="Learn more"
+            className="k-Toggletip__action k-u-reset-button"
+            onBlur={[Function]}
+            onClick={[Function]}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
+            type="button"
+          >
+            <svg
+              fill="#fff"
+              height={10}
+              viewBox="0 0 6 10"
+              width={6}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              
+              <path
+                d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
+              />
+            </svg>
+          </button>
+          <span
+            role="status"
+          />
+        </span>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="k-FieldInput k-u-margin-top-single"
+  >
+    <div
+      className="sc-EHOje iVlWKE k-Form-TextInputWithLimit"
+    >
+      <input
+        className="sc-bxivhb bLoDOQ k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+        defaultValue=""
+        disabled={false}
+        id="input"
+        name="field"
+        onChange={[Function]}
+        placeholder="Placeholder…"
+      />
+      <div
+        className="k-Form-TextInputWithLimit__limitNumber"
+      >
+        80
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`<Field /> with <Field.Input unit /> matches with snapshot 1`] = `
+Array [
+  <div
+    className="k-u-margin-bottom-single"
+  >
+    <div
+      className="sc-htpNat cEJbdw k-Line"
+      style={
+        Object {
+          "lineHeight": 1,
+        }
+      }
+    >
+      <div
+        className="k-Line__item"
+      >
+        <label
+          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          htmlFor="input"
+          onClick={[Function]}
+        >
+          Label
+        </label>
+      </div>
+      <div
+        className="k-Line__item"
+      >
+        <span
+          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
+          id="tooltip"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "--toggletipAction-left": undefined,
+              "--toggletipAction-top": undefined,
+            }
+          }
+        >
+          <button
+            aria-label="Learn more"
+            className="k-Toggletip__action k-u-reset-button"
+            onBlur={[Function]}
+            onClick={[Function]}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
+            type="button"
+          >
+            <svg
+              fill="#fff"
+              height={10}
+              viewBox="0 0 6 10"
+              width={6}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              
+              <path
+                d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
+              />
+            </svg>
+          </button>
+          <span
+            role="status"
+          />
+        </span>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="k-FieldInput k-u-margin-top-single"
+  >
+    <div
+      className="sc-bZQynM eODkLs k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
+    >
+      <input
+        className="sc-bxivhb bLoDOQ k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+        disabled={false}
+        id="input"
+        name="field"
+        placeholder="Placeholder…"
+        type="number"
+      />
+      <span
+        className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--regular"
+      >
+        €
+      </span>
+    </div>
+  </div>,
+]
+`;
+
 exports[`<Field /> with <Field.Password /> in error matches with snapshot 1`] = `
 Array [
   <div
