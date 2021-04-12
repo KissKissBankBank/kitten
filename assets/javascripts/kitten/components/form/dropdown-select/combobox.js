@@ -47,6 +47,7 @@ export const DropdownCombobox = ({
   openOnLoad,
   uniqLabelOnSearch,
   menuZIndex,
+  className,
 }) => {
   const [flattenedOptions, setFlattenedOptions] = useState([])
   const [filteredOptions, setFilteredOptions] = useState([])
@@ -149,6 +150,7 @@ export const DropdownCombobox = ({
         'k-Form-Dropdown',
         `k-Form-Dropdown--${variant}`,
         `k-Form-Dropdown--${size}`,
+        className,
         {
           'k-Form-Dropdown--isOpen': isOpen > 0,
           'k-Form-Dropdown--error': error,
