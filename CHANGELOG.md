@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: On `DropdownSelect combobox`, display full list of options on menu open.
+
 ## [3.2.0] - 2021-04-12
 
 Features:

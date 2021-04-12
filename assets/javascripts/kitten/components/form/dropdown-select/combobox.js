@@ -80,7 +80,10 @@ export const DropdownCombobox = ({
   }
 
   const onIsOpenChange = changes => {
-    if (changes.isOpen) return onMenuOpen({ changes })
+    if (changes.isOpen) {
+      flattenedOptions && setFilteredOptions(flattenedOptions)
+      return onMenuOpen({ changes })
+    }
 
     return onMenuClose({
       changes,
