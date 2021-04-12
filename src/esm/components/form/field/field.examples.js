@@ -31,7 +31,8 @@ export var FieldInputExample = function FieldInputExample(_ref2) {
       errorMessage = _ref2.errorMessage,
       limit = _ref2.limit,
       unit = _ref2.unit,
-      tiny = _ref2.tiny;
+      tiny = _ref2.tiny,
+      noMargin = _ref2.noMargin;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,
@@ -47,7 +48,8 @@ export var FieldInputExample = function FieldInputExample(_ref2) {
     unit: unit,
     name: "field",
     placeholder: placeholder,
-    error: error
+    error: error,
+    noMargin: noMargin
   }));
 };
 export var FieldPasswordExample = function FieldPasswordExample(_ref3) {

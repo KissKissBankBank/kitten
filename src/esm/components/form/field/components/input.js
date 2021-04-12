@@ -1,29 +1,40 @@
+import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { Marger } from '../../../layout/marger';
 import { TextInput } from '../../../form/text-input';
 import { TextInputWithLimit } from '../../../form/text-input-with-limit';
 import { TextInputWithUnit } from '../../../form/text-input-with-unit';
-export var FieldInput = function FieldInput(props) {
+export var FieldInput = function FieldInput(_ref) {
+  var limit = _ref.limit,
+      unit = _ref.unit,
+      noMargin = _ref.noMargin,
+      className = _ref.className,
+      props = _objectWithoutProperties(_ref, ["limit", "unit", "noMargin", "className"]);
+
   var Input = TextInput;
 
-  if (props.limit) {
+  if (limit) {
     Input = TextInputWithLimit;
   }
 
-  if (props.unit) {
+  if (unit) {
     Input = TextInputWithUnit;
   }
 
-  return /*#__PURE__*/React.createElement(Marger, {
-    top: "1"
+  return /*#__PURE__*/React.createElement("div", {
+    className: classNames('k-FieldInput', className, {
+      'k-u-margin-top-single': !noMargin
+    })
   }, /*#__PURE__*/React.createElement(Input, props));
 };
 FieldInput.propTypes = {
   limit: PropTypes.number,
-  unit: PropTypes.string
+  unit: PropTypes.string,
+  noMargin: PropTypes.bool
 };
 FieldInput.defaultProps = {
   limit: undefined,
-  unit: undefined
+  unit: undefined,
+  noMargin: false
 };
