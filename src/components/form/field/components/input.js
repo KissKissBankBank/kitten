@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.FieldInput = void 0;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireDefault(require("react"));
@@ -41,7 +43,10 @@ var FieldInput = function FieldInput(_ref) {
     className: (0, _classnames.default)('k-FieldInput', className, {
       'k-u-margin-top-single': !noMargin
     })
-  }, /*#__PURE__*/_react.default.createElement(Input, props));
+  }, /*#__PURE__*/_react.default.createElement(Input, (0, _extends2.default)({
+    limit: limit,
+    unit: unit
+  }, props)));
 };
 
 exports.FieldInput = FieldInput;

@@ -61,7 +61,8 @@ var DropdownSelect = function DropdownSelect(_ref) {
       onMenuClose = props.onMenuClose,
       onMenuOpen = props.onMenuOpen,
       openOnLoad = props.openOnLoad,
-      menuZIndex = props.menuZIndex;
+      menuZIndex = props.menuZIndex,
+      className = props.className;
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,
@@ -133,7 +134,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
     getLabelProps && labelPropsGetter(getLabelProps);
   }, [getLabelProps]);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledDropdown, {
-    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), {
+    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), className, {
       'k-Form-Dropdown--isOpen': isOpen,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,

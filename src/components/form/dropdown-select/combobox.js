@@ -77,7 +77,8 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       onMenuOpen = _ref.onMenuOpen,
       openOnLoad = _ref.openOnLoad,
       uniqLabelOnSearch = _ref.uniqLabelOnSearch,
-      menuZIndex = _ref.menuZIndex;
+      menuZIndex = _ref.menuZIndex,
+      className = _ref.className;
 
   var _useState = (0, _react.useState)([]),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -124,9 +125,13 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
   };
 
   var onIsOpenChange = function onIsOpenChange(changes) {
-    if (changes.isOpen) return onMenuOpen({
-      changes: changes
-    });
+    if (changes.isOpen) {
+      flattenedOptions && setFilteredOptions(flattenedOptions);
+      return onMenuOpen({
+        changes: changes
+      });
+    }
+
     return onMenuClose({
       changes: changes,
       hasNoResult: filteredOptions.length === 0
@@ -180,7 +185,7 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     setFlattenedOptions(flatOptions);
   }, [options]);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledDropdown, {
-    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), {
+    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), className, {
       'k-Form-Dropdown--isOpen': isOpen > 0,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,

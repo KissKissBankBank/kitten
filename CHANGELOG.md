@@ -4,11 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `DropdownSelect combobox` outline style.
-- Fix: On `DropdownSelect combobox`, display full list of options on menu open.
-- Fix: Propagate `className` on `DropdownSelect` and `DropdownSelect combobox`.
-- Fix: Fix styles on `DropdownSelect`.
-- Fix: Recover missing props on `Field.Input`.
+## [3.2.1] - 2021-04-12
+
+Fixes:
+
+- Fix style bugs on `DropdownSelect`.
+- On `DropdownSelect combobox`, display full list of options on menu open.
+- Propagate `className` on `DropdownSelect` and `DropdownSelect combobox`.
+- Recover missing props on `Field.Input`.
 
 ## [3.2.0] - 2021-04-12
 
