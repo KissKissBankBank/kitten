@@ -73,8 +73,6 @@ var DropdownSelect = function DropdownSelect(_ref) {
     return item ? String(item.label) : '';
   };
 
-  var initialSelectedItem = (0, _find.default)(['value', defaultSelectedValue])(options);
-
   var onSelectedItemChange = function onSelectedItemChange(changes) {
     onChange(changes.selectedItem);
     onInputChange({
@@ -84,7 +82,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
   // of options with a `level` of 1, 2 or null.
 
 
-  var flattenedOptions = function flattenedOptions() {
+  var flattenedOptions = function () {
     var flatOptions = [];
     options.map(function (option) {
       if (option.children) {
@@ -99,7 +97,9 @@ var DropdownSelect = function DropdownSelect(_ref) {
       }
     });
     return flatOptions;
-  };
+  }();
+
+  var initialSelectedItem = (0, _find.default)(['value', defaultSelectedValue])(flattenedOptions);
 
   var onIsOpenChange = function onIsOpenChange(changes) {
     if (changes.isOpen) return onMenuOpen({
@@ -113,7 +113,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
   var _useSelect = (0, _downshift.useSelect)({
     id: "".concat(id, "_element"),
     toggleButtonId: id,
-    items: flattenedOptions(),
+    items: flattenedOptions,
     getA11ySelectionMessage: getA11ySelectionMessage,
     itemToString: itemToString,
     initialSelectedItem: initialSelectedItem,
@@ -172,7 +172,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
     "aria-label": a11yStatusValid
   }))), /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({
     className: "k-Form-Dropdown__list"
-  }, getMenuProps()), isOpen && flattenedOptions().map(function (item, index) {
+  }, getMenuProps()), isOpen && flattenedOptions.map(function (item, index) {
     return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
       className: (0, _classnames.default)('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_".concat(item.level || 1), {
         'k-Form-Dropdown__item--higlighted': highlightedIndex === index
