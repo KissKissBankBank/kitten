@@ -36,6 +36,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     onMenuOpen,
     openOnLoad,
     menuZIndex,
+    className,
   } = props
 
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
@@ -109,6 +110,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
         'k-Form-Dropdown',
         `k-Form-Dropdown--${variant}`,
         `k-Form-Dropdown--${size}`,
+        className,
         {
           'k-Form-Dropdown--isOpen': isOpen,
           'k-Form-Dropdown--error': error,
