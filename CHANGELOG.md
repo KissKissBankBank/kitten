@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: On `DashboardLayout`, use events to hide Flow.Aside mobile modal button.
+- Feature: On `DashboardLayout`, add the following events when menu is open/closed:
+  - `DASHBOARD_HIDE_CONTENT_EVENT`
+  - `DASHBOARD_SHOW_CONTENT_EVENT`
+
 ## [3.2.1] - 2021-04-12
 
 Fixes:

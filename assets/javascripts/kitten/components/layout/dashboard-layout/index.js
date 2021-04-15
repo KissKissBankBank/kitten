@@ -20,6 +20,11 @@ import {
   getReactElementsByType,
   getReactElementsWithoutTypeArray,
 } from '../../../helpers/react/react-elements'
+import {
+  DASHBOARD_HIDE_CONTENT_EVENT,
+  DASHBOARD_SHOW_CONTENT_EVENT,
+  dispatchEvent
+} from '../../../helpers/dom/events'
 
 import { BurgerIcon } from '../../../components/icons/burger-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
@@ -405,6 +410,8 @@ export const DashboardLayout = ({
   useEffect(() => {
     if (sideBarElement && contentElement) {
       if (isOpen) {
+        dispatchEvent(DASHBOARD_HIDE_CONTENT_EVENT)()
+
         sideBarElement?.current?.focus()
 
         window.addEventListener('keydown', handleKeyDown)
@@ -424,6 +431,7 @@ export const DashboardLayout = ({
       }
 
       if (!isOpen) {
+        dispatchEvent(DASHBOARD_SHOW_CONTENT_EVENT)()
         contentElement?.current?.focus()
       }
     }
