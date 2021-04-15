@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix props propagation in `ToggleTip` bubble.
+- Fix `ToggleTip` first coordinates update.
+
 ## [3.2.1] - 2021-04-12
 
 Fixes:
