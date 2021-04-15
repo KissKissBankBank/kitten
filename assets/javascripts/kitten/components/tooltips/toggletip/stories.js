@@ -31,7 +31,6 @@ export const MultipleToggletips = () => (
       <Toggletip
         actionLabel="Sample label"
         id="Toggletip-top"
-        place="left"
         bubbleProps={{
           className: 'k-u-color-background1 k-u-weight-regular',
           color: COLORS.primary1,
@@ -56,7 +55,6 @@ export const MultipleToggletips = () => (
         modifier="warning"
         actionLabel="Sample label"
         id="Toggletip-center"
-        place="right"
         bubbleProps={{
           zIndex: 500,
         }}
@@ -84,7 +82,6 @@ export const MultipleToggletips = () => (
         modifier="disabled"
         actionLabel="Sample label"
         id="Toggletip-bottom"
-        place="right"
       >
         This is a text for the last toggletip.
         {boolean('Long Text', false) && (
