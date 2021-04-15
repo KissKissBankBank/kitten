@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import throttle from 'lodash/throttle'
 import styled from 'styled-components'
+import { domElementHelper } from '../../../helpers/dom/element-helper'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
@@ -164,10 +165,10 @@ export const Toggletip = ({
   const actionElement = useRef(null)
 
   const {
-    bubbleClassName,
-    bubbleZIndex,
-    bubbleColor,
-    bubbleStyle,
+    className: bubbleClassName,
+    zIndex: bubbleZIndex,
+    color: bubbleColor,
+    style: bubbleStyle,
     ...otherBubbleProps
   } = bubbleProps
 
@@ -182,9 +183,11 @@ export const Toggletip = ({
   }, [isHover, hasBeenClicked])
 
   useEffect(() => {
+    if (!domElementHelper.canUseDom()) return
+
     document.addEventListener('click', handleOutsideClick)
     document.addEventListener('keydown', handleKeydownEscape)
-    document.addEventListener('DOMContentLoaded', updateCoordinates)
+    window.addEventListener('DOMContentLoaded', updateCoordinates)
     window.addEventListener('resize', throttleUpdateCoordinates)
 
     const bubbleElement = actionElement.current?.nextElementSibling?.children[0]
@@ -197,10 +200,18 @@ export const Toggletip = ({
     return () => {
       document.removeEventListener('click', handleOutsideClick)
       document.removeEventListener('keydown', handleKeydownEscape)
-      document.removeEventListener('DOMContentLoaded', updateCoordinates)
+      window.removeEventListener('DOMContentLoaded', updateCoordinates)
       window.removeEventListener('resize', throttleUpdateCoordinates)
     }
   }, [isOpen])
+
+  useEffect(() => {
+    if (!domElementHelper.canUseDom()) return
+
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+      updateCoordinates()
+    }
+  }, [])
 
   const updateCoordinates = () => {
     if (!actionElement.current) return
@@ -225,7 +236,7 @@ export const Toggletip = ({
     setBubbleRightLimit(shouldDisplayBubbleRightLimit)
   }
 
-  const throttleUpdateCoordinates = throttle(updateCoordinates, 50)
+  const throttleUpdateCoordinates = throttle(updateCoordinates, 100)
 
   const handleOutsideClick = event => {
     if (actionElement.current !== event.target) {
