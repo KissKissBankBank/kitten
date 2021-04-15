@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix `DropdownSelect` arrow position.
+
 ## [3.2.1] - 2021-04-12
 
 Fixes:

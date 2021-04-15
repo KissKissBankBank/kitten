@@ -416,7 +416,7 @@ export const StyledDropdown = styled.div`
       left: ${pxToRem(17)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
-        left: ${pxToRem(20)};
+        left: ${pxToRem(21)};
       }
     }
     .k-Form-DropdownCombobox__arrowButton {
@@ -431,12 +431,9 @@ export const StyledDropdown = styled.div`
       }
     }
 
-    .k-Form-DropdownCombobox__input {
-      padding: 0 ${pxToRem(5)};
-    }
-
     .k-Form-DropdownCombobox__input,
     .k-Form-DropdownSelect__content {
+      padding: 0 ${pxToRem(5)};
       margin-left: ${pxToRem(24 + 10)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
