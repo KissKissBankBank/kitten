@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix props propagation in `ToggleTip` bubble.
+- Fix `ToggleTip` first coordinates update.
 - Feature: On `DashboardLayout`, use events to hide Flow.Aside mobile modal button.
 - Feature: On `DashboardLayout`, add the following events when menu is open/closed:
   - `DASHBOARD_HIDE_CONTENT_EVENT`
