@@ -36,6 +36,10 @@ export const TOGGLE_DROPDOWN_EVENT = `${DROPDOWN_EVENT}:toggle:trigger`
 export const DROPDOWN_FIRST_FOCUS_REACHED_EVENT = `${DROPDOWN_EVENT}:${FOCUS_EVENT}:firstElementReached`
 export const DROPDOWN_LAST_FOCUS_REACHED_EVENT = `${DROPDOWN_EVENT}:${FOCUS_EVENT}:lastElementReached`
 
+// DashboardLayout events
+export const DASHBOARD_HIDE_CONTENT_EVENT = 'dashboard:content:hide'
+export const DASHBOARD_SHOW_CONTENT_EVENT = 'dashboard:content:show'
+
 export const dispatchEvent = (eventName, detail) => (root = window) =>
   detail
     ? root.dispatchEvent(new CustomEvent(eventName, { detail }))
