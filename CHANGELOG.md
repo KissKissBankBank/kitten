@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix `DropdownSelect` arrow position.
 - Fix props propagation in `ToggleTip` bubble.
 - Fix `ToggleTip` first coordinates update.
 - Feature: Add all sizes to `DropdownSelect`.
