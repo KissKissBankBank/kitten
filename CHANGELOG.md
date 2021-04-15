@@ -4,14 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `checkPosition` prop to `CheckableButton`, defaults to `bottom`.
-- Fix `DropdownSelect` arrow position.
-- Fix props propagation in `ToggleTip` bubble.
-- Fix `ToggleTip` first coordinates update.
-- Feature: On `DashboardLayout`, use events to hide Flow.Aside mobile modal button.
-- Feature: On `DashboardLayout`, add the following events when menu is open/closed:
+## [3.3.0] - 2021-04-15
+
+Features:
+
+- `CheckableButton`: Add `checkPosition` prop, defaults to `bottom`.
+- `DashboardLayout`: use events to hide Flow.Aside mobile modal button.
+- `DashboardLayout`: add the following events when menu is open/closed:
   - `DASHBOARD_HIDE_CONTENT_EVENT`
   - `DASHBOARD_SHOW_CONTENT_EVENT`
+
+Fixes:
+
+- `DropdownSelect`: fix arrow position.
+- `ToggleTip`: fix props propagation in bubble.
+- `ToggleTip`: fix first coordinates update.
 
 ## [3.2.1] - 2021-04-12
 

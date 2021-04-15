@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import throttle from 'lodash/throttle';
 import styled from 'styled-components';
+import { domElementHelper } from '../../../helpers/dom/element-helper';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../constants/screen-config';
 import COLORS from '../../../constants/colors-config';
@@ -82,11 +83,11 @@ export var Toggletip = function Toggletip(_ref2) {
 
   var actionElement = useRef(null);
 
-  var bubbleClassName = bubbleProps.bubbleClassName,
-      bubbleZIndex = bubbleProps.bubbleZIndex,
-      bubbleColor = bubbleProps.bubbleColor,
-      bubbleStyle = bubbleProps.bubbleStyle,
-      otherBubbleProps = _objectWithoutProperties(bubbleProps, ["bubbleClassName", "bubbleZIndex", "bubbleColor", "bubbleStyle"]);
+  var bubbleClassName = bubbleProps.className,
+      bubbleZIndex = bubbleProps.zIndex,
+      bubbleColor = bubbleProps.color,
+      bubbleStyle = bubbleProps.style,
+      otherBubbleProps = _objectWithoutProperties(bubbleProps, ["className", "zIndex", "color", "style"]);
 
   useEffect(function () {
     if (isHover) {
@@ -100,9 +101,10 @@ export var Toggletip = function Toggletip(_ref2) {
   useEffect(function () {
     var _actionElement$curren, _actionElement$curren2;
 
+    if (!domElementHelper.canUseDom()) return;
     document.addEventListener('click', handleOutsideClick);
     document.addEventListener('keydown', handleKeydownEscape);
-    document.addEventListener('DOMContentLoaded', updateCoordinates);
+    window.addEventListener('DOMContentLoaded', updateCoordinates);
     window.addEventListener('resize', throttleUpdateCoordinates);
     var bubbleElement = (_actionElement$curren = actionElement.current) === null || _actionElement$curren === void 0 ? void 0 : (_actionElement$curren2 = _actionElement$curren.nextElementSibling) === null || _actionElement$curren2 === void 0 ? void 0 : _actionElement$curren2.children[0];
     var bubbleElementCoords = (bubbleElement === null || bubbleElement === void 0 ? void 0 : bubbleElement.getBoundingClientRect()) || {};
@@ -111,10 +113,17 @@ export var Toggletip = function Toggletip(_ref2) {
     return function () {
       document.removeEventListener('click', handleOutsideClick);
       document.removeEventListener('keydown', handleKeydownEscape);
-      document.removeEventListener('DOMContentLoaded', updateCoordinates);
+      window.removeEventListener('DOMContentLoaded', updateCoordinates);
       window.removeEventListener('resize', throttleUpdateCoordinates);
     };
   }, [isOpen]);
+  useEffect(function () {
+    if (!domElementHelper.canUseDom()) return;
+
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+      updateCoordinates();
+    }
+  }, []);
 
   var updateCoordinates = function updateCoordinates() {
     if (!actionElement.current) return;
@@ -130,7 +139,7 @@ export var Toggletip = function Toggletip(_ref2) {
     setBubbleRightLimit(shouldDisplayBubbleRightLimit);
   };
 
-  var throttleUpdateCoordinates = throttle(updateCoordinates, 50);
+  var throttleUpdateCoordinates = throttle(updateCoordinates, 100);
 
   var handleOutsideClick = function handleOutsideClick(event) {
     if (actionElement.current !== event.target) {

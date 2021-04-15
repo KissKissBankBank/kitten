@@ -41,6 +41,8 @@ var _mediaQueries = require("../../../helpers/utils/media-queries");
 
 var _reactElements = require("../../../helpers/react/react-elements");
 
+var _events = require("../../../helpers/dom/events");
+
 var _burgerIcon = require("../../../components/icons/burger-icon");
 
 var _arrowIcon = require("../../../components/icons/arrow-icon");
@@ -125,6 +127,7 @@ var DashboardLayout = function DashboardLayout(_ref) {
       if (isOpen) {
         var _sideBarElement$curre;
 
+        (0, _events.dispatchEvent)(_events.DASHBOARD_HIDE_CONTENT_EVENT)();
         sideBarElement === null || sideBarElement === void 0 ? void 0 : (_sideBarElement$curre = sideBarElement.current) === null || _sideBarElement$curre === void 0 ? void 0 : _sideBarElement$curre.focus();
         window.addEventListener('keydown', handleKeyDown);
         contentElement.current.addEventListener('click', handleMainClick);
@@ -141,6 +144,7 @@ var DashboardLayout = function DashboardLayout(_ref) {
       if (!isOpen) {
         var _contentElement$curre;
 
+        (0, _events.dispatchEvent)(_events.DASHBOARD_SHOW_CONTENT_EVENT)();
         contentElement === null || contentElement === void 0 ? void 0 : (_contentElement$curre = contentElement.current) === null || _contentElement$curre === void 0 ? void 0 : _contentElement$curre.focus();
       }
     }

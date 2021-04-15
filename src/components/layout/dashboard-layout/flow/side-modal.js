@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -9,7 +11,9 @@ exports.MobileAside = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _react = _interopRequireDefault(require("react"));
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
+var _react = _interopRequireWildcard(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
@@ -33,6 +37,8 @@ var _crossIcon = require("../../../../components/icons/cross-icon");
 
 var _lightbulbIllustration = require("../../../../components/illustrations/lightbulb-illustration");
 
+var _events = require("../../../../helpers/dom/events");
+
 var Wrapper = _styledComponents.default.div.withConfig({
   displayName: "side-modal__Wrapper",
   componentId: "qfidgo-0"
@@ -41,8 +47,30 @@ var Wrapper = _styledComponents.default.div.withConfig({
 var MobileAsideComponent = function MobileAsideComponent(_ref) {
   var children = _ref.children,
       openLabel = _ref.openLabel,
-      closeLabel = _ref.closeLabel,
-      shouldHideButton = _ref.shouldHideButton;
+      closeLabel = _ref.closeLabel;
+
+  var _useState = (0, _react.useState)(false),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      shouldHideButton = _useState2[0],
+      setButtonAsHidden = _useState2[1];
+
+  (0, _react.useEffect)(function () {
+    if (!_elementHelper.domElementHelper.canUseDom()) return;
+    window.addEventListener(_events.DASHBOARD_HIDE_CONTENT_EVENT, hideButton);
+    window.addEventListener(_events.DASHBOARD_SHOW_CONTENT_EVENT, showButton);
+    return function () {
+      window.removeEventListener(_events.DASHBOARD_HIDE_CONTENT_EVENT, hideButton);
+      window.removeEventListener(_events.DASHBOARD_SHOW_CONTENT_EVENT, showButton);
+    };
+  }, []);
+
+  var hideButton = function hideButton() {
+    setButtonAsHidden(true);
+  };
+
+  var showButton = function showButton() {
+    setButtonAsHidden(false);
+  };
 
   var _useModal = (0, _useModal2.useModal)({
     id: 'DashboardLayout-sideModal',
