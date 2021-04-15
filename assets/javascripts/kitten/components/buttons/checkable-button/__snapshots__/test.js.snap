@@ -195,13 +195,36 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 .c1::after {
   content: '';
-  position: absolute;
+  box-sizing: border-box;
+  border-radius: 50%;
   width: 1.25rem;
   height: 1.25rem;
-  bottom: -0.6875rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  width: var(--CheckableButton-radius);
+  height: var(--CheckableButton-radius);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+}
+
+.c1.k-CheckableButton--bottom::after,
+.c1.k-CheckableButton--left[aria-checked]::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom.k-Button--copper::after,
+.c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom:disabled::after,
+.c1.k-CheckableButton--left[aria-checked]:disabled::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom::after {
+  position: absolute;
+  bottom: -0.6875rem;
+  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -214,13 +237,93 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   transform: scale(0);
 }
 
-.c1[aria-checked]::after {
+.c1.k-CheckableButton--bottom[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   -webkit-transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
+}
+
+.c1.k-CheckableButton--left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-left: 0;
+}
+
+.c1.k-CheckableButton--left::after {
+  margin: 0 0.9375rem;
+  margin: 0 var(--CheckableButton-checkMargin);
+  border: 0.125rem solid #d8d8d8;
+  background-color: #fff;
+  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
+  transition: border-color 0.2s ease,background 0.2s ease;
+}
+
+.c1.k-CheckableButton--left[aria-checked]::after {
+  border-color: #19b4fa;
+  background-color: #19b4fa;
+}
+
+.c1.k-CheckableButton--left.k-Button--copper::after {
+  border-color: #ff0046;
+  background-color: #fff;
+}
+
+.c1.k-CheckableButton--left:disabled::after {
+  border-color: #fff;
+  background-color: #d8d8d8;
+}
+
+.c1.k-Button--micro,
+.c1.k-Button--tiny {
+  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-checkMargin: 0.625rem;
+}
+
+.c1.k-Button--regular {
+  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-checkMargin: 0.9375rem;
+}
+
+.c1.k-Button--big,
+.c1.k-Button--huge,
+.c1.k-Button--giant {
+  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-checkMargin: 1.25rem;
+}
+
+.c1.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #19b4fa;
+}
+
+.c1.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+  color: #05a8e6;
 }
 
 .c1:focus {
@@ -233,19 +336,6 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 .c1:focus-visible {
   outline-color: #bae8fd;
-}
-
-.c1:hover:not(:disabled),
-.c1:focus:not(:disabled) {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
-}
-
-.c1:active:not(:disabled) {
-  border-color: #05a8e6;
-  background-color: #fff;
-  color: #05a8e6;
 }
 
 .c1[aria-checked]:focus {
@@ -407,7 +497,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 <button
   aria-checked={null}
-  className="c0 k-Button c1 k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--hydrogen k-Button--andromeda"
   disabled={false}
   style={
     Object {
@@ -615,13 +705,36 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c1::after {
   content: '';
-  position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
-  bottom: -0.8125rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  width: var(--CheckableButton-radius);
+  height: var(--CheckableButton-radius);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+}
+
+.c1.k-CheckableButton--bottom::after,
+.c1.k-CheckableButton--left[aria-checked]::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom.k-Button--copper::after,
+.c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom:disabled::after,
+.c1.k-CheckableButton--left[aria-checked]:disabled::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom::after {
+  position: absolute;
+  bottom: -0.6875rem;
+  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -634,13 +747,93 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   transform: scale(0);
 }
 
-.c1[aria-checked]::after {
+.c1.k-CheckableButton--bottom[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   -webkit-transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
+}
+
+.c1.k-CheckableButton--left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-left: 0;
+}
+
+.c1.k-CheckableButton--left::after {
+  margin: 0 0.9375rem;
+  margin: 0 var(--CheckableButton-checkMargin);
+  border: 0.125rem solid #d8d8d8;
+  background-color: #fff;
+  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
+  transition: border-color 0.2s ease,background 0.2s ease;
+}
+
+.c1.k-CheckableButton--left[aria-checked]::after {
+  border-color: #19b4fa;
+  background-color: #19b4fa;
+}
+
+.c1.k-CheckableButton--left.k-Button--copper::after {
+  border-color: #ff0046;
+  background-color: #fff;
+}
+
+.c1.k-CheckableButton--left:disabled::after {
+  border-color: #fff;
+  background-color: #d8d8d8;
+}
+
+.c1.k-Button--micro,
+.c1.k-Button--tiny {
+  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-checkMargin: 0.625rem;
+}
+
+.c1.k-Button--regular {
+  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-checkMargin: 0.9375rem;
+}
+
+.c1.k-Button--big,
+.c1.k-Button--huge,
+.c1.k-Button--giant {
+  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-checkMargin: 1.25rem;
+}
+
+.c1.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #19b4fa;
+}
+
+.c1.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+  color: #05a8e6;
 }
 
 .c1:focus {
@@ -653,19 +846,6 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c1:focus-visible {
   outline-color: #bae8fd;
-}
-
-.c1:hover:not(:disabled),
-.c1:focus:not(:disabled) {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
-}
-
-.c1:active:not(:disabled) {
-  border-color: #05a8e6;
-  background-color: #fff;
-  color: #05a8e6;
 }
 
 .c1[aria-checked]:focus {
@@ -827,7 +1007,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-Button--big k-Button--lithium k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--big k-Button--lithium k-Button--andromeda"
   disabled={false}
   style={
     Object {
@@ -1035,13 +1215,36 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 .c1::after {
   content: '';
-  position: absolute;
+  box-sizing: border-box;
+  border-radius: 50%;
   width: 1.25rem;
   height: 1.25rem;
-  bottom: -0.6875rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  width: var(--CheckableButton-radius);
+  height: var(--CheckableButton-radius);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+}
+
+.c1.k-CheckableButton--bottom::after,
+.c1.k-CheckableButton--left[aria-checked]::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom.k-Button--copper::after,
+.c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom:disabled::after,
+.c1.k-CheckableButton--left[aria-checked]:disabled::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom::after {
+  position: absolute;
+  bottom: -0.6875rem;
+  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -1054,13 +1257,93 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   transform: scale(0);
 }
 
-.c1[aria-checked]::after {
+.c1.k-CheckableButton--bottom[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   -webkit-transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
+}
+
+.c1.k-CheckableButton--left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-left: 0;
+}
+
+.c1.k-CheckableButton--left::after {
+  margin: 0 0.9375rem;
+  margin: 0 var(--CheckableButton-checkMargin);
+  border: 0.125rem solid #d8d8d8;
+  background-color: #fff;
+  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
+  transition: border-color 0.2s ease,background 0.2s ease;
+}
+
+.c1.k-CheckableButton--left[aria-checked]::after {
+  border-color: #19b4fa;
+  background-color: #19b4fa;
+}
+
+.c1.k-CheckableButton--left.k-Button--copper::after {
+  border-color: #ff0046;
+  background-color: #fff;
+}
+
+.c1.k-CheckableButton--left:disabled::after {
+  border-color: #fff;
+  background-color: #d8d8d8;
+}
+
+.c1.k-Button--micro,
+.c1.k-Button--tiny {
+  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-checkMargin: 0.625rem;
+}
+
+.c1.k-Button--regular {
+  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-checkMargin: 0.9375rem;
+}
+
+.c1.k-Button--big,
+.c1.k-Button--huge,
+.c1.k-Button--giant {
+  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-checkMargin: 1.25rem;
+}
+
+.c1.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #19b4fa;
+}
+
+.c1.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+  color: #05a8e6;
 }
 
 .c1:focus {
@@ -1073,19 +1356,6 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 .c1:focus-visible {
   outline-color: #bae8fd;
-}
-
-.c1:hover:not(:disabled),
-.c1:focus:not(:disabled) {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
-}
-
-.c1:active:not(:disabled) {
-  border-color: #05a8e6;
-  background-color: #fff;
-  color: #05a8e6;
 }
 
 .c1[aria-checked]:focus {
@@ -1247,7 +1517,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-Button--regular k-Button--lithium k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--lithium k-Button--andromeda"
   disabled={true}
   style={
     Object {
@@ -1455,13 +1725,36 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 .c1::after {
   content: '';
-  position: absolute;
+  box-sizing: border-box;
+  border-radius: 50%;
   width: 1.25rem;
   height: 1.25rem;
-  bottom: -0.6875rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  width: var(--CheckableButton-radius);
+  height: var(--CheckableButton-radius);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+}
+
+.c1.k-CheckableButton--bottom::after,
+.c1.k-CheckableButton--left[aria-checked]::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom.k-Button--copper::after,
+.c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom:disabled::after,
+.c1.k-CheckableButton--left[aria-checked]:disabled::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom::after {
+  position: absolute;
+  bottom: -0.6875rem;
+  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -1474,13 +1767,93 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   transform: scale(0);
 }
 
-.c1[aria-checked]::after {
+.c1.k-CheckableButton--bottom[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   -webkit-transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
+}
+
+.c1.k-CheckableButton--left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-left: 0;
+}
+
+.c1.k-CheckableButton--left::after {
+  margin: 0 0.9375rem;
+  margin: 0 var(--CheckableButton-checkMargin);
+  border: 0.125rem solid #d8d8d8;
+  background-color: #fff;
+  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
+  transition: border-color 0.2s ease,background 0.2s ease;
+}
+
+.c1.k-CheckableButton--left[aria-checked]::after {
+  border-color: #19b4fa;
+  background-color: #19b4fa;
+}
+
+.c1.k-CheckableButton--left.k-Button--copper::after {
+  border-color: #ff0046;
+  background-color: #fff;
+}
+
+.c1.k-CheckableButton--left:disabled::after {
+  border-color: #fff;
+  background-color: #d8d8d8;
+}
+
+.c1.k-Button--micro,
+.c1.k-Button--tiny {
+  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-checkMargin: 0.625rem;
+}
+
+.c1.k-Button--regular {
+  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-checkMargin: 0.9375rem;
+}
+
+.c1.k-Button--big,
+.c1.k-Button--huge,
+.c1.k-Button--giant {
+  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-checkMargin: 1.25rem;
+}
+
+.c1.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #19b4fa;
+}
+
+.c1.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+  color: #05a8e6;
 }
 
 .c1:focus {
@@ -1654,7 +2027,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-Button--regular k-Button--copper k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--copper k-Button--andromeda"
   disabled={false}
   style={
     Object {
@@ -1862,13 +2235,36 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c1::after {
   content: '';
-  position: absolute;
-  width: 0.9375rem;
-  height: 0.9375rem;
-  bottom: -0.53125rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  width: var(--CheckableButton-radius);
+  height: var(--CheckableButton-radius);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+}
+
+.c1.k-CheckableButton--bottom::after,
+.c1.k-CheckableButton--left[aria-checked]::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom.k-Button--copper::after,
+.c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom:disabled::after,
+.c1.k-CheckableButton--left[aria-checked]:disabled::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom::after {
+  position: absolute;
+  bottom: -0.6875rem;
+  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -1881,13 +2277,93 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   transform: scale(0);
 }
 
-.c1[aria-checked]::after {
+.c1.k-CheckableButton--bottom[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   -webkit-transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
+}
+
+.c1.k-CheckableButton--left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-left: 0;
+}
+
+.c1.k-CheckableButton--left::after {
+  margin: 0 0.9375rem;
+  margin: 0 var(--CheckableButton-checkMargin);
+  border: 0.125rem solid #d8d8d8;
+  background-color: #fff;
+  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
+  transition: border-color 0.2s ease,background 0.2s ease;
+}
+
+.c1.k-CheckableButton--left[aria-checked]::after {
+  border-color: #19b4fa;
+  background-color: #19b4fa;
+}
+
+.c1.k-CheckableButton--left.k-Button--copper::after {
+  border-color: #ff0046;
+  background-color: #fff;
+}
+
+.c1.k-CheckableButton--left:disabled::after {
+  border-color: #fff;
+  background-color: #d8d8d8;
+}
+
+.c1.k-Button--micro,
+.c1.k-Button--tiny {
+  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-checkMargin: 0.625rem;
+}
+
+.c1.k-Button--regular {
+  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-checkMargin: 0.9375rem;
+}
+
+.c1.k-Button--big,
+.c1.k-Button--huge,
+.c1.k-Button--giant {
+  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-checkMargin: 1.25rem;
+}
+
+.c1.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #19b4fa;
+}
+
+.c1.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+  color: #05a8e6;
 }
 
 .c1:focus {
@@ -1900,19 +2376,6 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c1:focus-visible {
   outline-color: #bae8fd;
-}
-
-.c1:hover:not(:disabled),
-.c1:focus:not(:disabled) {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
-}
-
-.c1:active:not(:disabled) {
-  border-color: #05a8e6;
-  background-color: #fff;
-  color: #05a8e6;
 }
 
 .c1[aria-checked]:focus {
@@ -2074,7 +2537,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-Button--tiny k-Button--lithium k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--tiny k-Button--lithium k-Button--andromeda"
   disabled={false}
   style={
     Object {

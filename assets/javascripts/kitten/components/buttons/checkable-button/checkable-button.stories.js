@@ -19,15 +19,16 @@ export const IsCheckable = () => {
                 ['micro', 'tiny', 'regular', 'big', 'huge', 'giant'],
                 'regular',
               )}
-              giant={boolean('Giant', false)}
+              variant={select('Variant', ['andromeda','orion'], 'andromeda')}
+              checkPosition={select('Check Position', ['bottom','left'], 'bottom')}
               disabled={boolean('Disabled', false)}
               error={boolean('Error', false)}
               isChecked={boolean('Checked', false)}
             >
               <span>{text('Text', 'MyButton')}</span>
             </CheckableButton>
-            <p>
-              <small>Button controlled by the "Checked" knob</small>
+            <p className="k-u-weight-light k-u-size-micro">
+              Button controlled by the "Checked" knob
             </p>
           </GridCol>
           <GridCol col={4}>
@@ -37,7 +38,8 @@ export const IsCheckable = () => {
                 ['micro', 'tiny', 'regular', 'big', 'huge', 'giant'],
                 'regular',
               )}
-              giant={boolean('Giant', false)}
+              variant={select('Variant', ['andromeda','orion'], 'andromeda')}
+              checkPosition={select('Check Position', ['bottom','left'], 'bottom')}
               disabled={boolean('Disabled', false)}
               error={boolean('Error', false)}
               isChecked={buttonIsChecked}
@@ -45,8 +47,8 @@ export const IsCheckable = () => {
             >
               <span>{text('Text', 'MyButton')}</span>
             </CheckableButton>
-            <p>
-              <small>Clickable button</small>
+            <p className="k-u-weight-light k-u-size-micro">
+              Clickable button
             </p>
           </GridCol>
         </Grid>

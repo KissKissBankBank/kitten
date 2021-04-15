@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `checkPosition` prop to `CheckableButton`, defaults to `bottom`.
 - Fix `DropdownSelect` arrow position.
 - Fix props propagation in `ToggleTip` bubble.
 - Fix `ToggleTip` first coordinates update.
