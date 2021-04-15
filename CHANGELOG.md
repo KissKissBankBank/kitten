@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix `DropdownSelect` arrow position.
 - Fix props propagation in `ToggleTip` bubble.
 - Fix `ToggleTip` first coordinates update.
 - Feature: On `DashboardLayout`, use events to hide Flow.Aside mobile modal button.
