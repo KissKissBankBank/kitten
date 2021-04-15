@@ -1745,6 +1745,18 @@ Object.defineProperty(exports, "DROPDOWN_LAST_FOCUS_REACHED_EVENT", {
     return _events.DROPDOWN_LAST_FOCUS_REACHED_EVENT;
   }
 });
+Object.defineProperty(exports, "DASHBOARD_HIDE_CONTENT_EVENT", {
+  enumerable: true,
+  get: function get() {
+    return _events.DASHBOARD_HIDE_CONTENT_EVENT;
+  }
+});
+Object.defineProperty(exports, "DASHBOARD_SHOW_CONTENT_EVENT", {
+  enumerable: true,
+  get: function get() {
+    return _events.DASHBOARD_SHOW_CONTENT_EVENT;
+  }
+});
 Object.defineProperty(exports, "dispatchEvent", {
   enumerable: true,
   get: function get() {

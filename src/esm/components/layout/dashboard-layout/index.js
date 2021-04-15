@@ -14,6 +14,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import { useMedia } from '../../../helpers/utils/use-media-query';
 import { getMinQuery } from '../../../helpers/utils/media-queries';
 import { getReactElementsByType, getReactElementsWithoutTypeArray } from '../../../helpers/react/react-elements';
+import { DASHBOARD_HIDE_CONTENT_EVENT, DASHBOARD_SHOW_CONTENT_EVENT, dispatchEvent } from '../../../helpers/dom/events';
 import { BurgerIcon } from '../../../components/icons/burger-icon';
 import { ArrowIcon } from '../../../components/icons/arrow-icon';
 import { LongArrowIcon } from '../../../components/icons/long-arrow-icon';
@@ -92,6 +93,7 @@ export var DashboardLayout = function DashboardLayout(_ref) {
       if (isOpen) {
         var _sideBarElement$curre;
 
+        dispatchEvent(DASHBOARD_HIDE_CONTENT_EVENT)();
         sideBarElement === null || sideBarElement === void 0 ? void 0 : (_sideBarElement$curre = sideBarElement.current) === null || _sideBarElement$curre === void 0 ? void 0 : _sideBarElement$curre.focus();
         window.addEventListener('keydown', handleKeyDown);
         contentElement.current.addEventListener('click', handleMainClick);
@@ -108,6 +110,7 @@ export var DashboardLayout = function DashboardLayout(_ref) {
       if (!isOpen) {
         var _contentElement$curre;
 
+        dispatchEvent(DASHBOARD_SHOW_CONTENT_EVENT)();
         contentElement === null || contentElement === void 0 ? void 0 : (_contentElement$curre = contentElement.current) === null || _contentElement$curre === void 0 ? void 0 : _contentElement$curre.focus();
       }
     }

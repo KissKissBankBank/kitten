@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.dispatchEvent = exports.DROPDOWN_LAST_FOCUS_REACHED_EVENT = exports.DROPDOWN_FIRST_FOCUS_REACHED_EVENT = exports.TOGGLE_DROPDOWN_EVENT = exports.DROPDOWN_EVENT = exports.A11Y_LAST_FOCUS_REACHED_EVENT = exports.A11Y_FIRST_FOCUS_REACHED_EVENT = exports.FOCUS_EVENT = exports.A11Y_EVENT = exports.domEvents = void 0;
+exports.default = exports.dispatchEvent = exports.DASHBOARD_SHOW_CONTENT_EVENT = exports.DASHBOARD_HIDE_CONTENT_EVENT = exports.DROPDOWN_LAST_FOCUS_REACHED_EVENT = exports.DROPDOWN_FIRST_FOCUS_REACHED_EVENT = exports.TOGGLE_DROPDOWN_EVENT = exports.DROPDOWN_EVENT = exports.A11Y_LAST_FOCUS_REACHED_EVENT = exports.A11Y_FIRST_FOCUS_REACHED_EVENT = exports.FOCUS_EVENT = exports.A11Y_EVENT = exports.domEvents = void 0;
 
 /**
  * @module '../../helpers/dom/events'
@@ -47,8 +47,13 @@ var TOGGLE_DROPDOWN_EVENT = "".concat(DROPDOWN_EVENT, ":toggle:trigger");
 exports.TOGGLE_DROPDOWN_EVENT = TOGGLE_DROPDOWN_EVENT;
 var DROPDOWN_FIRST_FOCUS_REACHED_EVENT = "".concat(DROPDOWN_EVENT, ":").concat(FOCUS_EVENT, ":firstElementReached");
 exports.DROPDOWN_FIRST_FOCUS_REACHED_EVENT = DROPDOWN_FIRST_FOCUS_REACHED_EVENT;
-var DROPDOWN_LAST_FOCUS_REACHED_EVENT = "".concat(DROPDOWN_EVENT, ":").concat(FOCUS_EVENT, ":lastElementReached");
+var DROPDOWN_LAST_FOCUS_REACHED_EVENT = "".concat(DROPDOWN_EVENT, ":").concat(FOCUS_EVENT, ":lastElementReached"); // DashboardLayout events
+
 exports.DROPDOWN_LAST_FOCUS_REACHED_EVENT = DROPDOWN_LAST_FOCUS_REACHED_EVENT;
+var DASHBOARD_HIDE_CONTENT_EVENT = 'dashboard:content:hide';
+exports.DASHBOARD_HIDE_CONTENT_EVENT = DASHBOARD_HIDE_CONTENT_EVENT;
+var DASHBOARD_SHOW_CONTENT_EVENT = 'dashboard:content:show';
+exports.DASHBOARD_SHOW_CONTENT_EVENT = DASHBOARD_SHOW_CONTENT_EVENT;
 
 var dispatchEvent = function dispatchEvent(eventName, detail) {
   return function () {
