@@ -203,6 +203,7 @@ const StyledTextareaContainer = styled.div`
     &.k-Form-TextInput--orion {
       padding: ${pxToRem(21)} ${pxToRem(15)} 0;
       min-height: ${pxToRem(60)};
+      border-radius: ${pxToRem(4)};
 
       @media (min-width: ${ScreenConfig.M.min}px) {
         padding: ${pxToRem(25)} ${pxToRem(30)} 0;
@@ -282,7 +283,6 @@ export class TextInput extends PureComponent {
         <StyledTextareaContainer
           className={classNames(
             'k-Form-TextInput__textareaContainer',
-            `k-Form-TextInput__textareaContainer--${variant}`,
           )}
         >
           <StyledInput
