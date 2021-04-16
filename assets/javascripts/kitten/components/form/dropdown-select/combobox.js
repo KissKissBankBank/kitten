@@ -48,6 +48,8 @@ export const DropdownCombobox = ({
   uniqLabelOnSearch,
   menuZIndex,
   className,
+  value,
+  onBlur,
 }) => {
   const [flattenedOptions, setFlattenedOptions] = useState([])
   const [filteredOptions, setFilteredOptions] = useState([])
@@ -59,6 +61,8 @@ export const DropdownCombobox = ({
   const itemToString = item => (item ? String(item.label) : '')
 
   const initialSelectedItem = find(['value', defaultSelectedValue])(options)
+
+  const selectedItemByValue = find(['value', value])(flattenedOptions)
 
   const onSelectedItemChange = changes => {
     onChange(changes.selectedItem)
@@ -102,6 +106,7 @@ export const DropdownCombobox = ({
     highlightedIndex,
     getItemProps,
     openMenu,
+    inputValue,
   } = useCombobox({
     id: `${id}_element`,
     inputId: id,
@@ -112,7 +117,16 @@ export const DropdownCombobox = ({
     onSelectedItemChange,
     onInputValueChange,
     onIsOpenChange,
+    onStateChange: props => {
+      if (props.type === useCombobox.stateChangeTypes.InputChange) {
+        onChange(find(['label', props.inputValue])(flattenedOptions))
+      }
+      if (props.type === useCombobox.stateChangeTypes.InputBlur) {
+        onBlur(find(['label', inputValue])(flattenedOptions))
+      }
+    },
     initialIsOpen: openOnLoad,
+    ...(selectedItemByValue && { selectedItem: selectedItemByValue }),
   })
 
   useEffect(() => {
@@ -186,7 +200,7 @@ export const DropdownCombobox = ({
           type="button"
           aria-label={comboboxButtonLabelText}
           disabled={disabled}
-          {...getToggleButtonProps()}
+          {...getToggleButtonProps({ onBlur: console.log })}
         >
           <span
             className="k-Form-DropdownCombobox__arrowButton__arrowBox"
@@ -253,6 +267,7 @@ DropdownCombobox.defaultProps = {
   a11yStatusValid: 'Valid',
   a11ySelectionMessageDisplayer: item => `${item} is now selected.`,
   onChange: () => {},
+  onBlur: () => {},
   onInputChange: () => {},
   onMenuClose: () => {},
   onMenuOpen: () => {},

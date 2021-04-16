@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { text, boolean, select, number } from '@storybook/addon-knobs'
 import { DropdownSelect } from './index'
+import { Button } from '../../../index'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { ArrowIcon } from '../../icons/arrow-icon'
 import { Text } from '../../typography/text'
@@ -168,5 +169,27 @@ export const WithComponentsForLabel = () => {
         />
       </GridCol>
     </Grid>
+  )
+}
+
+export const ControlledInput = () => {
+  const [value, setValue] = useState('felt')
+  return (
+    <>
+      <DropdownSelect
+        combobox={true}
+        options={options}
+        value={value}
+        defaultSelectedValue="focus"
+        onChange={console.log}
+        onBlur={console.log}
+      />
+      <Button
+        className="k-u-margin-top-single"
+        onClick={() => setValue('cannondale')}
+      >
+        Change Value
+      </Button>
+    </>
   )
 }

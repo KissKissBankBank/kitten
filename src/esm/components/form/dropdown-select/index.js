@@ -38,7 +38,8 @@ export var DropdownSelect = function DropdownSelect(_ref) {
       onMenuOpen = props.onMenuOpen,
       openOnLoad = props.openOnLoad,
       menuZIndex = props.menuZIndex,
-      className = props.className;
+      className = props.className,
+      value = props.value;
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,
@@ -77,6 +78,7 @@ export var DropdownSelect = function DropdownSelect(_ref) {
   }();
 
   var initialSelectedItem = find(['value', defaultSelectedValue])(flattenedOptions);
+  var selectedItemByValue = find(['value', value])(flattenedOptions);
 
   var onIsOpenChange = function onIsOpenChange(changes) {
     if (changes.isOpen) return onMenuOpen({
@@ -87,7 +89,7 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     });
   };
 
-  var _useSelect = useSelect({
+  var _useSelect = useSelect(_extends({
     id: "".concat(id, "_element"),
     toggleButtonId: id,
     items: flattenedOptions,
@@ -97,7 +99,9 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     onSelectedItemChange: onSelectedItemChange,
     onIsOpenChange: onIsOpenChange,
     initialIsOpen: openOnLoad
-  }),
+  }, selectedItemByValue && {
+    selectedItem: selectedItemByValue
+  })),
       isOpen = _useSelect.isOpen,
       selectedItem = _useSelect.selectedItem,
       getToggleButtonProps = _useSelect.getToggleButtonProps,

@@ -37,6 +37,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     openOnLoad,
     menuZIndex,
     className,
+    value,
   } = props
 
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
@@ -73,6 +74,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
   const initialSelectedItem = find(['value', defaultSelectedValue])(
     flattenedOptions,
   )
+  const selectedItemByValue = find(['value', value])(flattenedOptions)
 
   const onIsOpenChange = changes => {
     if (changes.isOpen) return onMenuOpen({ changes })
@@ -98,6 +100,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     onSelectedItemChange,
     onIsOpenChange,
     initialIsOpen: openOnLoad,
+    ...(selectedItemByValue && { selectedItem: selectedItemByValue }),
   })
 
   useEffect(() => {
