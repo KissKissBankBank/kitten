@@ -174,6 +174,17 @@ export const WithComponentsForLabel = () => {
 
 export const ControlledInput = () => {
   const [value, setValue] = useState('felt')
+
+  const getRandomOption = () => {
+    const enabledOptions = options.map((option) => {
+      if (!option.disabled) return option
+    })
+
+    const randomOption = enabledOptions[Math.floor(Math.random() * enabledOptions.length)]
+
+    return randomOption.value
+  }
+
   return (
     <>
       <DropdownSelect
@@ -192,7 +203,7 @@ export const ControlledInput = () => {
       />
       <Button
         className="k-u-margin-top-single"
-        onClick={() => setValue('cannondale')}
+        onClick={() => setValue(getRandomOption)}
       >
         Change Value
       </Button>
