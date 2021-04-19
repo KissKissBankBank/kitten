@@ -177,12 +177,18 @@ export const ControlledInput = () => {
   return (
     <>
       <DropdownSelect
+        id="ControlledInput"
         combobox={true}
         options={options}
         value={value}
         defaultSelectedValue="focus"
-        onChange={console.log}
-        onBlur={console.log}
+        onChange={(e) => {
+          console.log('onChange', e)
+          if (!e) return
+
+          setValue(e.value)
+        }}
+        onBlur={(e) => console.log('onBlur', e)}
       />
       <Button
         className="k-u-margin-top-single"
