@@ -18,6 +18,7 @@ const getCircleIcon = color =>
 
 const StyledCheckableButton = styled(Button)`
   &::after {
+    flex-shrink: 0;
     content: '';
     box-sizing: border-box;
     border-radius: 50%;
@@ -71,6 +72,7 @@ const StyledCheckableButton = styled(Button)`
     flex-direction: row-reverse;
     justify-content: flex-end;
     padding-left: 0;
+    text-align: left;
 
     &::after {
       margin: 0 ${pxToRem(15)};
