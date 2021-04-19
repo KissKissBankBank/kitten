@@ -62,7 +62,7 @@ export const DropdownCombobox = ({
 
   const initialSelectedItem = find(['value', defaultSelectedValue])(options)
 
-  const selectedItemByValue = find(['value', value])(flattenedOptions)
+  const selectedItemByValue = find(['value', value])(flattenedOptions) || undefined
 
   const onSelectedItemChange = changes => {
     onChange(changes.selectedItem)
@@ -96,6 +96,26 @@ export const DropdownCombobox = ({
     })
   }
 
+  const stateReducer = (state, actionAndChanges) => {
+    const { type, changes } = actionAndChanges
+console.log(actionAndChanges)
+    switch (type) {
+      case useCombobox.stateChangeTypes.InputChange:
+        onChange(find(['label', changes.inputValue])(flattenedOptions))
+
+        return changes
+      case useCombobox.stateChangeTypes.InputBlur:
+        onBlur(find(['label', changes.inputValue])(flattenedOptions))
+
+        return {
+          ...changes,
+          // inputValue: props.initialSelectedItem.value,
+        }
+      default:
+        return changes // otherwise business as usual.
+    }
+  }
+
   const {
     isOpen,
     getToggleButtonProps,
@@ -117,16 +137,9 @@ export const DropdownCombobox = ({
     onSelectedItemChange,
     onInputValueChange,
     onIsOpenChange,
-    onStateChange: props => {
-      if (props.type === useCombobox.stateChangeTypes.InputChange) {
-        onChange(find(['label', props.inputValue])(flattenedOptions))
-      }
-      if (props.type === useCombobox.stateChangeTypes.InputBlur) {
-        onBlur(find(['label', inputValue])(flattenedOptions))
-      }
-    },
+    stateReducer,
     initialIsOpen: openOnLoad,
-    ...(selectedItemByValue && { selectedItem: selectedItemByValue }),
+    selectedItem: selectedItemByValue,
   })
 
   useEffect(() => {
@@ -200,7 +213,7 @@ export const DropdownCombobox = ({
           type="button"
           aria-label={comboboxButtonLabelText}
           disabled={disabled}
-          {...getToggleButtonProps({ onBlur: console.log })}
+          {...getToggleButtonProps()}
         >
           <span
             className="k-Form-DropdownCombobox__arrowButton__arrowBox"
@@ -248,7 +261,7 @@ export const DropdownCombobox = ({
             ))
           ) : (
             <li className="k-Form-Dropdown__item" disabled>
-              {noResultText}
+              {noResultText || 'No result'}
             </li>
           ))}
       </ul>
