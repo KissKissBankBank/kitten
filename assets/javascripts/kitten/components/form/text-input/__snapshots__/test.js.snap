@@ -86,7 +86,7 @@ exports[`<TextInput /> with \`valid\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`variant\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdVaJa cjMkbU k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
+  className="sc-bdVaJa cjMkbU k-Form-TextInput k-Form-TextInput--orion k-Form-TextInput--regular"
   disabled={false}
   name="text"
 />
