@@ -4,16 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix `DropdownSelect` arrow position.
-- Fix props propagation in `ToggleTip` bubble.
-- Fix `ToggleTip` first coordinates update.
-- Feature: Add all sizes to `DropdownSelect`.
-- Fix: Fix styles on `DropdownSelect`.
-- Fix: Fix `DropdownSelect combobox` outline style.
-- Fix: On `DropdownSelect combobox`, display full list of options on menu open.
-- Fix: Propagate `className` on `DropdownSelect` and `DropdownSelect combobox`.
-- Fix: Fix styles on `DropdownSelect`.
-- Feature : `DropdownSelect`: Add `onBlur` and `value` (controlled select) props.
+## [2.126.0] - 2021-04-20
+
+Features:
+
+- `DropdownSelect`: Add `onBlur` and `value` (controlled select) props.
+- `DropdownSelect`: Add all sizes.
+
+Fixes:
+
+- `ToggleTip`: fix props propagation in bubble.
+- `DropdownSelect`: fix arrow position.
+- `ToggleTip`: fix first coordinates update.
+- `DropdownSelect`: Fix styles.
+- `DropdownSelect combobox`: display full list of options on menu open.
+- `DropdownSelect`/`DropdownSelect combobox`: propagate `className`.
 
 ## [2.125.0] - 2021-03-15
 

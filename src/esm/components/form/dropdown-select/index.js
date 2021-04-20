@@ -33,11 +33,14 @@ export var DropdownSelect = function DropdownSelect(_ref) {
       a11ySelectionMessageDisplayer = props.a11ySelectionMessageDisplayer,
       defaultSelectedValue = props.defaultSelectedValue,
       onChange = props.onChange,
+      onBlur = props.onBlur,
       onInputChange = props.onInputChange,
       onMenuClose = props.onMenuClose,
       onMenuOpen = props.onMenuOpen,
       openOnLoad = props.openOnLoad,
-      menuZIndex = props.menuZIndex;
+      menuZIndex = props.menuZIndex,
+      className = props.className,
+      value = props.value;
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,
@@ -49,8 +52,6 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     return item ? String(item.label) : '';
   };
 
-  var initialSelectedItem = find(['value', defaultSelectedValue])(options);
-
   var onSelectedItemChange = function onSelectedItemChange(changes) {
     onChange(changes.selectedItem);
     onInputChange({
@@ -60,7 +61,7 @@ export var DropdownSelect = function DropdownSelect(_ref) {
   // of options with a `level` of 1, 2 or null.
 
 
-  var flattenedOptions = function flattenedOptions() {
+  var flattenedOptions = function () {
     var flatOptions = [];
     options.map(function (option) {
       if (option.children) {
@@ -75,28 +76,36 @@ export var DropdownSelect = function DropdownSelect(_ref) {
       }
     });
     return flatOptions;
-  };
+  }();
+
+  var initialSelectedItem = find(['value', defaultSelectedValue])(flattenedOptions);
+  var selectedItemByValue = find(['value', value])(flattenedOptions);
 
   var onIsOpenChange = function onIsOpenChange(changes) {
     if (changes.isOpen) return onMenuOpen({
       changes: changes
     });
+    setTimeout(function () {
+      return onBlur(changes.selectedItem);
+    }, 0);
     return onMenuClose({
       changes: changes
     });
   };
 
-  var _useSelect = useSelect({
+  var _useSelect = useSelect(_extends({
     id: "".concat(id, "_element"),
     toggleButtonId: id,
-    items: flattenedOptions(),
+    items: flattenedOptions,
     getA11ySelectionMessage: getA11ySelectionMessage,
     itemToString: itemToString,
     initialSelectedItem: initialSelectedItem,
     onSelectedItemChange: onSelectedItemChange,
     onIsOpenChange: onIsOpenChange,
     initialIsOpen: openOnLoad
-  }),
+  }, selectedItemByValue && {
+    selectedItem: selectedItemByValue
+  })),
       isOpen = _useSelect.isOpen,
       selectedItem = _useSelect.selectedItem,
       getToggleButtonProps = _useSelect.getToggleButtonProps,
@@ -109,7 +118,7 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     getLabelProps && labelPropsGetter(getLabelProps);
   }, [getLabelProps]);
   return /*#__PURE__*/React.createElement(StyledDropdown, {
-    className: classNames('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), {
+    className: classNames('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), className, {
       'k-Form-Dropdown--isOpen': isOpen,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
@@ -148,7 +157,7 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     "aria-label": a11yStatusValid
   }))), /*#__PURE__*/React.createElement("ul", _extends({
     className: "k-Form-Dropdown__list"
-  }, getMenuProps()), isOpen && flattenedOptions().map(function (item, index) {
+  }, getMenuProps()), isOpen && flattenedOptions.map(function (item, index) {
     return /*#__PURE__*/React.createElement("li", _extends({
       className: classNames('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_".concat(item.level || 1), {
         'k-Form-Dropdown__item--higlighted': highlightedIndex === index
