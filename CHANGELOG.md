@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature : `DropdownSelect`: Add `onBlur` and `value` (controlled select) props.
 - Fix: `Button`: Add invisible padding for better multiline spacing.
 - Fix: `CheckableButton`: Fix styles for `checkPosition=left`.
 - Fix: `CheckableButton`: Add specific styles to `variant=orion`.
