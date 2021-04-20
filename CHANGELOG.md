@@ -4,11 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature : `DropdownSelect`: Add `onBlur` and `value` (controlled select) props.
-- Fix: `Button`: Add invisible padding for better multiline spacing.
-- Fix: `CheckableButton`: Fix styles for `checkPosition=left`.
-- Fix: `CheckableButton`: Add specific styles to `variant=orion`.
-- Fix: `Field.Input`: Recover missing style.
+## [3.4.0] - 2021-04-20
+
+Feature :
+
+- `DropdownSelect`: Add `onBlur` and `value` (controlled select) props.
+
+Fix:
+
+- `Button`: Add invisible padding for better multiline spacing.
+- `CheckableButton`: Fix styles for `checkPosition=left`.
+- `CheckableButton`: Add specific styles to `variant=orion`.
+- `Field.Input`: Recover missing style.
 
 ## [3.3.0] - 2021-04-15
 
