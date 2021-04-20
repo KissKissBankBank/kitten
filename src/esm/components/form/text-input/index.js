@@ -25,7 +25,7 @@ var StyledInput = styled.input.withConfig({
 var StyledTextareaContainer = styled.div.withConfig({
   displayName: "text-input__StyledTextareaContainer",
   componentId: "sc-11wej6v-1"
-})(["position:relative;display:flex;textarea.k-Form-TextInput{height:initial;resize:vertical;line-height:1.3;&:disabled{resize:none;}padding-bottom:0;&.k-Form-TextInput--orion{padding:", " ", " 0;min-height:", ";@media (min-width:", "px){padding:", " ", " 0;min-height:", ";}}}.k-Form-TextInput__textareaGradient{position:absolute;left:", ";right:", ";bottom:", ";height:", ";background-image:linear-gradient( to bottom,rgba(255,255,255,0),", " );pointer-events:none;textarea.k-Form-TextInput:disabled + &{display:none;}}"], pxToRem(21), pxToRem(15), pxToRem(60), ScreenConfig.M.min, pxToRem(25), pxToRem(30), pxToRem(70), pxToRem(10), pxToRem(10), pxToRem(3), pxToRem(10), COLORS.background1);
+})(["position:relative;display:flex;textarea.k-Form-TextInput{height:initial;resize:vertical;line-height:1.3;&:disabled{resize:none;}padding-bottom:0;&.k-Form-TextInput--orion{padding:", " ", " 0;min-height:", ";border-radius:", ";@media (min-width:", "px){padding:", " ", " 0;min-height:", ";}}}.k-Form-TextInput__textareaGradient{position:absolute;left:", ";right:", ";bottom:", ";height:", ";background-image:linear-gradient( to bottom,rgba(255,255,255,0),", " );pointer-events:none;textarea.k-Form-TextInput:disabled + &{display:none;}}"], pxToRem(21), pxToRem(15), pxToRem(60), pxToRem(4), ScreenConfig.M.min, pxToRem(25), pxToRem(30), pxToRem(70), pxToRem(10), pxToRem(10), pxToRem(3), pxToRem(10), COLORS.background1);
 export var TextInput = /*#__PURE__*/function (_PureComponent) {
   _inherits(TextInput, _PureComponent);
 
@@ -60,7 +60,7 @@ export var TextInput = /*#__PURE__*/function (_PureComponent) {
 
       if (tag === 'textarea') {
         return /*#__PURE__*/React.createElement(StyledTextareaContainer, {
-          className: classNames('k-Form-TextInput__textareaContainer', "k-Form-TextInput__textareaContainer--".concat(variant))
+          className: classNames('k-Form-TextInput__textareaContainer')
         }, /*#__PURE__*/React.createElement(StyledInput, _extends({
           ref: function ref(input) {
             return _this.input = input;
