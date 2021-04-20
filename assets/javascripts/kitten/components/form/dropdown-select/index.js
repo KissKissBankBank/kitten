@@ -31,6 +31,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     a11ySelectionMessageDisplayer,
     defaultSelectedValue,
     onChange,
+    onBlur,
     onInputChange,
     onMenuClose,
     onMenuOpen,
@@ -78,7 +79,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
 
   const onIsOpenChange = changes => {
     if (changes.isOpen) return onMenuOpen({ changes })
-
+    setTimeout(() => onBlur(changes.selectedItem), 0)
     return onMenuClose({ changes })
   }
 

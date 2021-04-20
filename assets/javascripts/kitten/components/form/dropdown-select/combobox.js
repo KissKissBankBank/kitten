@@ -62,7 +62,7 @@ export const DropdownCombobox = ({
 
   const initialSelectedItem = find(['value', defaultSelectedValue])(options)
 
-  const selectedItemByValue = find(['value', value])(flattenedOptions) || undefined
+  const selectedItemByValue = find(['value', value])(flattenedOptions) || null
 
   const onSelectedItemChange = changes => {
     onChange(changes.selectedItem)
@@ -96,26 +96,6 @@ export const DropdownCombobox = ({
     })
   }
 
-  const stateReducer = (state, actionAndChanges) => {
-    const { type, changes } = actionAndChanges
-console.log(actionAndChanges)
-    switch (type) {
-      case useCombobox.stateChangeTypes.InputChange:
-        onChange(find(['label', changes.inputValue])(flattenedOptions))
-
-        return changes
-      case useCombobox.stateChangeTypes.InputBlur:
-        onBlur(find(['label', changes.inputValue])(flattenedOptions))
-
-        return {
-          ...changes,
-          // inputValue: props.initialSelectedItem.value,
-        }
-      default:
-        return changes // otherwise business as usual.
-    }
-  }
-
   const {
     isOpen,
     getToggleButtonProps,
@@ -137,7 +117,6 @@ console.log(actionAndChanges)
     onSelectedItemChange,
     onInputValueChange,
     onIsOpenChange,
-    stateReducer,
     initialIsOpen: openOnLoad,
     selectedItem: selectedItemByValue,
   })
@@ -206,7 +185,11 @@ console.log(actionAndChanges)
           disabled={disabled}
           onFocus={() => !isOpen && openMenu()}
           onClick={() => !isOpen && openMenu()}
-          {...getInputProps()}
+          {...getInputProps({
+            onBlur: () => {
+              onBlur(find(['label', inputValue])(flattenedOptions) || null)
+            },
+          })}
         />
         <button
           className="k-Form-DropdownCombobox__arrowButton"

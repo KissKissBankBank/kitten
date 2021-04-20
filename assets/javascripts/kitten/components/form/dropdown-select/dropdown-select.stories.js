@@ -176,11 +176,12 @@ export const ControlledInput = () => {
   const [value, setValue] = useState('felt')
 
   const getRandomOption = () => {
-    const enabledOptions = options.map((option) => {
+    const enabledOptions = options.map(option => {
       if (!option.disabled) return option
     })
 
-    const randomOption = enabledOptions[Math.floor(Math.random() * enabledOptions.length)]
+    const randomOption =
+      enabledOptions[Math.floor(Math.random() * enabledOptions.length)]
 
     return randomOption.value
   }
@@ -193,17 +194,17 @@ export const ControlledInput = () => {
         options={options}
         value={value}
         defaultSelectedValue="focus"
-        onChange={(e) => {
+        onChange={e => {
           console.log('onChange', e)
           if (!e) return
 
           setValue(e.value)
         }}
-        onBlur={(e) => console.log('onBlur', e)}
+        onBlur={e => console.log('onBlur', e)}
       />
       <Button
         className="k-u-margin-top-single"
-        onClick={() => setValue(getRandomOption)}
+        onClick={() => setValue(getRandomOption())}
       >
         Change Value
       </Button>
