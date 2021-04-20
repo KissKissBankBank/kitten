@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Recover missing style on `Field.Input`.
+- Feature : `DropdownSelect`: Add `onBlur` and `value` (controlled select) props
 
 ## [3.3.0] - 2021-04-15
 
