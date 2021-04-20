@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: On `DropdownSelect combobox`, display full list of options on menu open.
 - Fix: Propagate `className` on `DropdownSelect` and `DropdownSelect combobox`.
 - Fix: Fix styles on `DropdownSelect`.
+- Feature : `DropdownSelect`: Add `onBlur` and `value` (controlled select) props.
 
 ## [2.125.0] - 2021-03-15
 
