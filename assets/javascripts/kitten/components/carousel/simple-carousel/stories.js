@@ -7,7 +7,7 @@ import { HorizontalStroke } from '../../layout/horizontal-stroke'
 import { Button } from '../../buttons/button'
 
 export default {
-  title: 'Carousel/SimpleCarousel',
+  title: 'Carousels/SimpleCarousel',
   component: SimpleCarousel,
 }
 
