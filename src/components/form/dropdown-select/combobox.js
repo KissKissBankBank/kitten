@@ -78,7 +78,9 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       openOnLoad = _ref.openOnLoad,
       uniqLabelOnSearch = _ref.uniqLabelOnSearch,
       menuZIndex = _ref.menuZIndex,
-      className = _ref.className;
+      className = _ref.className,
+      value = _ref.value,
+      _onBlur = _ref.onBlur;
 
   var _useState = (0, _react.useState)([]),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -101,6 +103,7 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
   };
 
   var initialSelectedItem = (0, _find.default)(['value', defaultSelectedValue])(options);
+  var selectedItemByValue = (0, _find.default)(['value', value])(flattenedOptions) || null;
 
   var onSelectedItemChange = function onSelectedItemChange(changes) {
     onChange(changes.selectedItem);
@@ -148,7 +151,8 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     onSelectedItemChange: onSelectedItemChange,
     onInputValueChange: onInputValueChange,
     onIsOpenChange: onIsOpenChange,
-    initialIsOpen: openOnLoad
+    initialIsOpen: openOnLoad,
+    selectedItem: selectedItemByValue
   }),
       isOpen = _useCombobox.isOpen,
       getToggleButtonProps = _useCombobox.getToggleButtonProps,
@@ -158,7 +162,8 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       getMenuProps = _useCombobox.getMenuProps,
       highlightedIndex = _useCombobox.highlightedIndex,
       getItemProps = _useCombobox.getItemProps,
-      openMenu = _useCombobox.openMenu;
+      openMenu = _useCombobox.openMenu,
+      inputValue = _useCombobox.inputValue;
 
   (0, _react.useEffect)(function () {
     getLabelProps && labelPropsGetter(getLabelProps);
@@ -210,7 +215,11 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     onClick: function onClick() {
       return !isOpen && openMenu();
     }
-  }, getInputProps())), /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
+  }, getInputProps({
+    onBlur: function onBlur() {
+      _onBlur((0, _find.default)(['label', inputValue])(flattenedOptions) || null);
+    }
+  }))), /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
     className: "k-Form-DropdownCombobox__arrowButton",
     type: "button",
     "aria-label": comboboxButtonLabelText,
@@ -247,7 +256,7 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
   }) : /*#__PURE__*/_react.default.createElement("li", {
     className: "k-Form-Dropdown__item",
     disabled: true
-  }, noResultText))));
+  }, noResultText || 'No result'))));
 };
 
 exports.DropdownCombobox = DropdownCombobox;
@@ -264,6 +273,7 @@ DropdownCombobox.defaultProps = {
     return "".concat(item, " is now selected.");
   },
   onChange: function onChange() {},
+  onBlur: function onBlur() {},
   onInputChange: function onInputChange() {},
   onMenuClose: function onMenuClose() {},
   onMenuOpen: function onMenuOpen() {},

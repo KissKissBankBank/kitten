@@ -33,6 +33,7 @@ export var DropdownSelect = function DropdownSelect(_ref) {
       a11ySelectionMessageDisplayer = props.a11ySelectionMessageDisplayer,
       defaultSelectedValue = props.defaultSelectedValue,
       onChange = props.onChange,
+      onBlur = props.onBlur,
       onInputChange = props.onInputChange,
       onMenuClose = props.onMenuClose,
       onMenuOpen = props.onMenuOpen,
@@ -84,6 +85,9 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     if (changes.isOpen) return onMenuOpen({
       changes: changes
     });
+    setTimeout(function () {
+      return onBlur(changes.selectedItem);
+    }, 0);
     return onMenuClose({
       changes: changes
     });
