@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Recover missing style on `Field.Input`.
-- Feature : `DropdownSelect`: Add `onBlur` and `value` (controlled select) props
+- Feature : `DropdownSelect`: Add `onBlur` and `value` (controlled select) props.
+- Fix: `Button`: Add invisible padding for better multiline spacing.
+- Fix: `CheckableButton`: Fix styles for `checkPosition=left`.
+- Fix: `CheckableButton`: Add specific styles to `variant=orion`.
+- Fix: `Field.Input`: Recover missing style.
 
 ## [3.3.0] - 2021-04-15
 

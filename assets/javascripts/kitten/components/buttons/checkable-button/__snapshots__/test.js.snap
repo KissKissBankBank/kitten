@@ -29,7 +29,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -83,27 +83,27 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -194,6 +194,9 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 }
 
 .c1::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   content: '';
   box-sizing: border-box;
   border-radius: 50%;
@@ -259,6 +262,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding-left: 0;
+  text-align: left;
 }
 
 .c1.k-CheckableButton--left::after {
@@ -303,43 +307,79 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   --CheckableButton-checkMargin: 1.25rem;
 }
 
-.c1.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--hydrogen:not(:disabled):hover,
-.c1.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--hydrogen:not(:disabled):focus {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
   border-color: #bae8fd;
   background-color: #fff;
   color: #19b4fa;
 }
 
-.c1.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
-.c1.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
   border-color: #bae8fd;
 }
 
-.c1.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--hydrogen:not(:disabled):active {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
   border-color: #05a8e6;
   background-color: #fff;
   color: #05a8e6;
 }
 
-.c1:focus {
+.c1.k-Button--andromeda:focus {
   outline-offset: -0.125rem;
 }
 
-.c1:focus:not(:focus-visible) {
+.c1.k-Button--andromeda:focus:not(:focus-visible) {
   outline-color: transparent;
 }
 
-.c1:focus-visible {
+.c1.k-Button--andromeda:focus-visible {
   outline-color: #bae8fd;
 }
 
-.c1[aria-checked]:focus {
+.c1.k-Button--andromeda[aria-checked]:focus {
   outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
+  color: #19b4fa;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #eee;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
+  border-color: #19b4fa;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+}
+
+.c1.k-Button--orion[aria-checked]:focus {
   border-color: #19b4fa;
 }
 
@@ -375,7 +415,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -392,7 +432,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -408,7 +448,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -539,7 +579,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
@@ -593,27 +633,27 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -704,6 +744,9 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 }
 
 .c1::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   content: '';
   box-sizing: border-box;
   border-radius: 50%;
@@ -769,6 +812,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding-left: 0;
+  text-align: left;
 }
 
 .c1.k-CheckableButton--left::after {
@@ -813,43 +857,79 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   --CheckableButton-checkMargin: 1.25rem;
 }
 
-.c1.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--hydrogen:not(:disabled):hover,
-.c1.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--hydrogen:not(:disabled):focus {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
   border-color: #bae8fd;
   background-color: #fff;
   color: #19b4fa;
 }
 
-.c1.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
-.c1.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
   border-color: #bae8fd;
 }
 
-.c1.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--hydrogen:not(:disabled):active {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
   border-color: #05a8e6;
   background-color: #fff;
   color: #05a8e6;
 }
 
-.c1:focus {
+.c1.k-Button--andromeda:focus {
   outline-offset: -0.125rem;
 }
 
-.c1:focus:not(:focus-visible) {
+.c1.k-Button--andromeda:focus:not(:focus-visible) {
   outline-color: transparent;
 }
 
-.c1:focus-visible {
+.c1.k-Button--andromeda:focus-visible {
   outline-color: #bae8fd;
 }
 
-.c1[aria-checked]:focus {
+.c1.k-Button--andromeda[aria-checked]:focus {
   outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
+  color: #19b4fa;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #eee;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
+  border-color: #19b4fa;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+}
+
+.c1.k-Button--orion[aria-checked]:focus {
   border-color: #19b4fa;
 }
 
@@ -885,7 +965,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -902,7 +982,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -918,7 +998,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -1049,7 +1129,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
@@ -1103,27 +1183,27 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -1214,6 +1294,9 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 }
 
 .c1::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   content: '';
   box-sizing: border-box;
   border-radius: 50%;
@@ -1279,6 +1362,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding-left: 0;
+  text-align: left;
 }
 
 .c1.k-CheckableButton--left::after {
@@ -1323,43 +1407,79 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   --CheckableButton-checkMargin: 1.25rem;
 }
 
-.c1.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--hydrogen:not(:disabled):hover,
-.c1.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--hydrogen:not(:disabled):focus {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
   border-color: #bae8fd;
   background-color: #fff;
   color: #19b4fa;
 }
 
-.c1.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
-.c1.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
   border-color: #bae8fd;
 }
 
-.c1.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--hydrogen:not(:disabled):active {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
   border-color: #05a8e6;
   background-color: #fff;
   color: #05a8e6;
 }
 
-.c1:focus {
+.c1.k-Button--andromeda:focus {
   outline-offset: -0.125rem;
 }
 
-.c1:focus:not(:focus-visible) {
+.c1.k-Button--andromeda:focus:not(:focus-visible) {
   outline-color: transparent;
 }
 
-.c1:focus-visible {
+.c1.k-Button--andromeda:focus-visible {
   outline-color: #bae8fd;
 }
 
-.c1[aria-checked]:focus {
+.c1.k-Button--andromeda[aria-checked]:focus {
   outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
+  color: #19b4fa;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #eee;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
+  border-color: #19b4fa;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+}
+
+.c1.k-Button--orion[aria-checked]:focus {
   border-color: #19b4fa;
 }
 
@@ -1395,7 +1515,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -1412,7 +1532,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -1428,7 +1548,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -1559,7 +1679,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #ffb2c7;
   background-color: #fff;
@@ -1613,27 +1733,27 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -1724,6 +1844,9 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 }
 
 .c1::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   content: '';
   box-sizing: border-box;
   border-radius: 50%;
@@ -1789,6 +1912,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding-left: 0;
+  text-align: left;
 }
 
 .c1.k-CheckableButton--left::after {
@@ -1833,43 +1957,79 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   --CheckableButton-checkMargin: 1.25rem;
 }
 
-.c1.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--hydrogen:not(:disabled):hover,
-.c1.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--hydrogen:not(:disabled):focus {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
   border-color: #bae8fd;
   background-color: #fff;
   color: #19b4fa;
 }
 
-.c1.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
-.c1.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
   border-color: #bae8fd;
 }
 
-.c1.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--hydrogen:not(:disabled):active {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
   border-color: #05a8e6;
   background-color: #fff;
   color: #05a8e6;
 }
 
-.c1:focus {
+.c1.k-Button--andromeda:focus {
   outline-offset: -0.125rem;
 }
 
-.c1:focus:not(:focus-visible) {
+.c1.k-Button--andromeda:focus:not(:focus-visible) {
   outline-color: transparent;
 }
 
-.c1:focus-visible {
+.c1.k-Button--andromeda:focus-visible {
   outline-color: #bae8fd;
 }
 
-.c1[aria-checked]:focus {
+.c1.k-Button--andromeda[aria-checked]:focus {
   outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
+  color: #19b4fa;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #eee;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
+  border-color: #19b4fa;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+}
+
+.c1.k-Button--orion[aria-checked]:focus {
   border-color: #19b4fa;
 }
 
@@ -1905,7 +2065,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -1922,7 +2082,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -1938,7 +2098,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -2069,7 +2229,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
@@ -2123,27 +2283,27 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -2234,6 +2394,9 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 .c1::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   content: '';
   box-sizing: border-box;
   border-radius: 50%;
@@ -2299,6 +2462,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding-left: 0;
+  text-align: left;
 }
 
 .c1.k-CheckableButton--left::after {
@@ -2343,43 +2507,79 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   --CheckableButton-checkMargin: 1.25rem;
 }
 
-.c1.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--hydrogen:not(:disabled):hover,
-.c1.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--hydrogen:not(:disabled):focus {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
   border-color: #bae8fd;
   background-color: #fff;
   color: #19b4fa;
 }
 
-.c1.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
-.c1.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
   border-color: #bae8fd;
 }
 
-.c1.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--hydrogen:not(:disabled):active {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
   border-color: #05a8e6;
   background-color: #fff;
   color: #05a8e6;
 }
 
-.c1:focus {
+.c1.k-Button--andromeda:focus {
   outline-offset: -0.125rem;
 }
 
-.c1:focus:not(:focus-visible) {
+.c1.k-Button--andromeda:focus:not(:focus-visible) {
   outline-color: transparent;
 }
 
-.c1:focus-visible {
+.c1.k-Button--andromeda:focus-visible {
   outline-color: #bae8fd;
 }
 
-.c1[aria-checked]:focus {
+.c1.k-Button--andromeda[aria-checked]:focus {
   outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
+  color: #19b4fa;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #eee;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
+  border-color: #19b4fa;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+}
+
+.c1.k-Button--orion[aria-checked]:focus {
   border-color: #19b4fa;
 }
 
@@ -2415,7 +2615,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -2432,7 +2632,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -2448,7 +2648,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
