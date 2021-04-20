@@ -25,7 +25,7 @@ export const IsCheckable = () => {
               error={boolean('Error', false)}
               isChecked={boolean('Checked', false)}
             >
-              <span>{text('Text', 'MyButton')}</span>
+              {text('Text', 'MyButton')}
             </CheckableButton>
             <p className="k-u-weight-light k-u-size-micro">
               Button controlled by the "Checked" knob
@@ -45,7 +45,7 @@ export const IsCheckable = () => {
               isChecked={buttonIsChecked}
               onClick={() => changeButtonState(!buttonIsChecked)}
             >
-              <span>{text('Text', 'MyButton')}</span>
+              {text('Text', 'MyButton')}
             </CheckableButton>
             <p className="k-u-weight-light k-u-size-micro">
               Clickable button

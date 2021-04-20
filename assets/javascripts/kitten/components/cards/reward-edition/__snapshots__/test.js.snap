@@ -29,7 +29,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -83,27 +83,27 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 .c2.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c2.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c2.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c2.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c2.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -273,7 +273,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   .c2.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -290,7 +290,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -306,7 +306,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
