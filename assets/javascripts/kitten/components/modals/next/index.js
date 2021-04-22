@@ -511,13 +511,15 @@ const InnerModal = ({
           {(headerTitle || fullSizeTitle) ? (
             <div className="k-ModalNext__header">
               <div className="k-ModalNext__header__closeButton">
-                <CloseButton
-                  modifier="hydrogen"
-                  onClick={close}
-                  variant={variant}
-                  size={variant === 'orion' ? 'regular' : 'micro'}
-                  closeButtonLabel={closeButtonLabel}
-                />
+                {hasCloseButton &&
+                  <CloseButton
+                    modifier="hydrogen"
+                    onClick={close}
+                    variant={variant}
+                    size={variant === 'orion' ? 'regular' : 'micro'}
+                    closeButtonLabel={closeButtonLabel}
+                  />
+                }
               </div>
 
               <div className="k-ModalNext__header__title">

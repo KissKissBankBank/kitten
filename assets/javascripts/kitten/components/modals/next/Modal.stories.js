@@ -53,6 +53,7 @@ export const OneButton = () => (
     size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
     variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
     zIndex={number('Overlay z-index', 110)}
+    headerTitle={text('headerTitle', null)}
   >
     {() => (
       <>
@@ -72,6 +73,7 @@ export const TwoButton = () => (
     hasCloseButton={boolean('Has close button', true)}
     size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
     variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
+    headerTitle={text('headerTitle', null)}
   >
     {() => (
       <>
