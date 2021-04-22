@@ -226,16 +226,17 @@ export const ComplexWithOrion = () => (
   <Modal
     trigger={<Button modifier="helium">Open</Button>}
     variant="orion"
-    headerTitle={OrionHeaderTitle}
+    headerTitle={<OrionHeaderTitle />}
     headerActions={OrionHeaderActions}
     size={select('Size', ['regular', 'big', 'huge', 'giant'], 'giant')}
+    variant={select('Variant', ['andromeda', 'orion', 'orion'])}
   >
     {() => (
       <>
         <Modal.Block className="k-u-background-color-background3">
           {text('content', paragraphContainer)}
         </Modal.Block>
-        <Modal.Paragraph>
+        <Modal.Paragraph align="left">
           {text('content', paragraphContainer)}
         </Modal.Paragraph>
       </>
