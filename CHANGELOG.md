@@ -4,10 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Modal/Next`: Add `Modal.Block` subcomponent.
-- Feature: `Modal/Next`: Add `variant` prop, defaults to `andromeda`.
-- Feature: `Modal/Next`: Add `giant` size prop.
-- Feature: `Modal/Next`: Add `headerActions` and `headerTitle` props.
+## [3.5.0] - 2021-04-23
+
+Features:
+
+- `Modal/Next`: Add `Modal.Block` subcomponent.
+- `Modal/Next`: Add `variant` prop, defaults to `andromeda`.
+- `Modal/Next`: Add `headerActions` and `headerTitle` props.
+- `Modal/Next`: Add `giant` size value.
 
 ## [3.4.0] - 2021-04-20
 
