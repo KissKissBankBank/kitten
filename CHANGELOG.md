@@ -10,8 +10,8 @@ Features:
 
 - `Modal/Next`: Add `Modal.Block` subcomponent.
 - `Modal/Next`: Add `variant` prop, defaults to `andromeda`.
-- `Modal/Next`: Add `giant` size prop.
 - `Modal/Next`: Add `headerActions` and `headerTitle` props.
+- `Modal/Next`: Add `giant` size value.
 
 ## [3.4.0] - 2021-04-20
 
