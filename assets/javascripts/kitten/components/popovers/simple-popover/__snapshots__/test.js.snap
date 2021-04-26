@@ -24,8 +24,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   font-weight: 600;
   color: #222;
   color: var(--Title-css-color);
-  font-size: 1.125rem;
-  line-height: 1.2;
 }
 
 .c5.k-Title--noMargin {
@@ -37,11 +35,44 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   font-style: italic;
 }
 
+.c5.k-Title--primary {
+  font-size: 2.2806973457336426rem;
+  line-height: 1.2;
+}
+
+.c5.k-Title--secondary {
+  font-size: 2.0272865295410156rem;
+  line-height: 1.2;
+}
+
+.c5.k-Title--tertiary {
+  font-size: 1.802032470703125rem;
+  line-height: 1.2;
+}
+
+.c5.k-Title--quaternary {
+  font-size: 1.601806640625rem;
+  line-height: 1.2;
+}
+
+.c5.k-Title--quinary {
+  font-size: 1.265625rem;
+  line-height: 1.2;
+}
+
+.c5.k-Title--senary {
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+.c5.k-Title--septenary {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
 .c7 {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-size: 0.7901234567901234rem;
-  line-height: 1.6;
 }
 
 .c7.k-Paragraph--noMargin {
@@ -55,6 +86,26 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 .c7.k-Paragraph--italic {
   font-style: italic;
+}
+
+.c7.k-Paragraph--primary {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.c7.k-Paragraph--secondary {
+  font-size: 0.8888888888888888rem;
+  line-height: 1.6;
+}
+
+.c7.k-Paragraph--tertiary {
+  font-size: 0.7901234567901234rem;
+  line-height: 1.6;
+}
+
+.c7.k-Paragraph--quaternary {
+  font-size: 0.7901234567901234rem;
+  line-height: 1.6;
 }
 
 .c1 {
@@ -505,26 +556,134 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media (min-width:40rem) {
-  .c5 {
+  .c5.k-Title--primary {
+    font-size: 2.8865075781941414rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c5.k-Title--primary {
+    font-size: 4.109890672858455rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c5.k-Title--secondary {
+    font-size: 2.2806973457336426rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c5.k-Title--secondary {
+    font-size: 2.8865075781941414rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c5.k-Title--tertiary {
+    font-size: 2.0272865295410156rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c5.k-Title--tertiary {
+    font-size: 2.2806973457336426rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c5.k-Title--quaternary {
+    font-size: 1.802032470703125rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c5.k-Title--quaternary {
+    font-size: 2.0272865295410156rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c5.k-Title--quinary {
+    font-size: 1.601806640625rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c5.k-Title--quinary {
+    font-size: 1.802032470703125rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c5.k-Title--senary {
     font-size: 1.265625rem;
   }
 }
 
 @media (min-width:67.5rem) {
-  .c5 {
+  .c5.k-Title--senary {
     font-size: 1.601806640625rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c7 {
+  .c5.k-Title--septenary {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c5.k-Title--septenary {
+    font-size: 1.265625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c7.k-Paragraph--primary {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c7.k-Paragraph--primary {
+    font-size: 1.265625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c7.k-Paragraph--secondary {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c7.k-Paragraph--secondary {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c7.k-Paragraph--tertiary {
     font-size: 0.8888888888888888rem;
   }
 }
 
 @media (min-width:67.5rem) {
-  .c7 {
+  .c7.k-Paragraph--tertiary {
     font-size: 0.8888888888888888rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c7.k-Paragraph--quaternary {
+    font-size: 0.7901234567901234rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c7.k-Paragraph--quaternary {
+    font-size: 0.7901234567901234rem;
   }
 }
 
@@ -899,7 +1058,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c4"
     >
       <h2
-        className="c5 k-Title k-Title--noMargin"
+        className="c5 k-Title k-Title--senary k-Title--noMargin"
         id="popover-title"
         style={
           Object {
@@ -914,7 +1073,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c6"
     >
       <p
-        className="c7 k-Paragraph"
+        className="c7 k-Paragraph k-Paragraph--tertiary"
       >
         Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. 
       </p>
@@ -971,8 +1130,6 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   font-weight: 600;
   color: #222;
   color: var(--Title-css-color);
-  font-size: 1.125rem;
-  line-height: 1.2;
 }
 
 .c4.k-Title--noMargin {
@@ -984,11 +1141,44 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   font-style: italic;
 }
 
+.c4.k-Title--primary {
+  font-size: 2.2806973457336426rem;
+  line-height: 1.2;
+}
+
+.c4.k-Title--secondary {
+  font-size: 2.0272865295410156rem;
+  line-height: 1.2;
+}
+
+.c4.k-Title--tertiary {
+  font-size: 1.802032470703125rem;
+  line-height: 1.2;
+}
+
+.c4.k-Title--quaternary {
+  font-size: 1.601806640625rem;
+  line-height: 1.2;
+}
+
+.c4.k-Title--quinary {
+  font-size: 1.265625rem;
+  line-height: 1.2;
+}
+
+.c4.k-Title--senary {
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+.c4.k-Title--septenary {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
 .c6 {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-size: 0.7901234567901234rem;
-  line-height: 1.6;
 }
 
 .c6.k-Paragraph--noMargin {
@@ -1002,6 +1192,26 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 
 .c6.k-Paragraph--italic {
   font-style: italic;
+}
+
+.c6.k-Paragraph--primary {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.c6.k-Paragraph--secondary {
+  font-size: 0.8888888888888888rem;
+  line-height: 1.6;
+}
+
+.c6.k-Paragraph--tertiary {
+  font-size: 0.7901234567901234rem;
+  line-height: 1.6;
+}
+
+.c6.k-Paragraph--quaternary {
+  font-size: 0.7901234567901234rem;
+  line-height: 1.6;
 }
 
 .c1 {
@@ -1239,26 +1449,134 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c4 {
+  .c4.k-Title--primary {
+    font-size: 2.8865075781941414rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c4.k-Title--primary {
+    font-size: 4.109890672858455rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c4.k-Title--secondary {
+    font-size: 2.2806973457336426rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c4.k-Title--secondary {
+    font-size: 2.8865075781941414rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c4.k-Title--tertiary {
+    font-size: 2.0272865295410156rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c4.k-Title--tertiary {
+    font-size: 2.2806973457336426rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c4.k-Title--quaternary {
+    font-size: 1.802032470703125rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c4.k-Title--quaternary {
+    font-size: 2.0272865295410156rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c4.k-Title--quinary {
+    font-size: 1.601806640625rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c4.k-Title--quinary {
+    font-size: 1.802032470703125rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c4.k-Title--senary {
     font-size: 1.265625rem;
   }
 }
 
 @media (min-width:67.5rem) {
-  .c4 {
+  .c4.k-Title--senary {
     font-size: 1.601806640625rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c6 {
+  .c4.k-Title--septenary {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c4.k-Title--septenary {
+    font-size: 1.265625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c6.k-Paragraph--primary {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c6.k-Paragraph--primary {
+    font-size: 1.265625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c6.k-Paragraph--secondary {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c6.k-Paragraph--secondary {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c6.k-Paragraph--tertiary {
     font-size: 0.8888888888888888rem;
   }
 }
 
 @media (min-width:67.5rem) {
-  .c6 {
+  .c6.k-Paragraph--tertiary {
     font-size: 0.8888888888888888rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c6.k-Paragraph--quaternary {
+    font-size: 0.7901234567901234rem;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c6.k-Paragraph--quaternary {
+    font-size: 0.7901234567901234rem;
   }
 }
 
@@ -1458,7 +1776,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
       className="c3"
     >
       <h2
-        className="c4 k-Title k-Title--noMargin"
+        className="c4 k-Title k-Title--senary k-Title--noMargin"
         id="popover-title"
         style={
           Object {
@@ -1473,7 +1791,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
       className="c5"
     >
       <p
-        className="c6 k-Paragraph"
+        className="c6 k-Paragraph k-Paragraph--tertiary"
       >
         
       </p>
