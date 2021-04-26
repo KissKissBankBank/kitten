@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Paragraph`: unify modifier styles in one rule and expose modifier-specific class.
+- Feature: `Title`: unify modifier styles in one rule using common title modifiers and expose modifier-specific class.
+- Feature: `TitleWithStroke`: set color with CSS Custom Props and expose modifier-specific class.
+
+
 ## [3.5.0] - 2021-04-23
 
 Features:
