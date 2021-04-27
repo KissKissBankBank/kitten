@@ -13,7 +13,7 @@ export var DropdownButton = forwardRef(function (_ref, dropdownButtonRef) {
     ref: dropdownButtonRef,
     id: id,
     type: "button",
-    className: classNames('k-Dropdown__button', className),
+    className: classNames('k-Dropdown__button', 'k-u-reset-button', className),
     "aria-haspopup": "true",
     "aria-expanded": isExpanded
   }, rest));

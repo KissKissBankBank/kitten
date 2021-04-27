@@ -977,16 +977,22 @@ Object.defineProperty(exports, "titleModifierStyles", {
     return _titleModifierStyles.titleModifierStyles;
   }
 });
-Object.defineProperty(exports, "paragraphModifierStyles", {
+Object.defineProperty(exports, "titleModifiersNames", {
   enumerable: true,
   get: function get() {
-    return _modifierStyles2.modifierStyles;
+    return _titleModifierStyles.titleModifiersNames;
   }
 });
 Object.defineProperty(exports, "titleHelperModifierStyles", {
   enumerable: true,
   get: function get() {
-    return _modifierStyles3.modifierStyles;
+    return _titleModifierStyles.titleHelperModifierStyles;
+  }
+});
+Object.defineProperty(exports, "paragraphModifierStyles", {
+  enumerable: true,
+  get: function get() {
+    return _modifierStyles2.modifierStyles;
   }
 });
 Object.defineProperty(exports, "BasicUploader", {
@@ -2183,8 +2189,6 @@ var _titleWithStroke = require("./components/typography/title-with-stroke");
 var _titleModifierStyles = require("./components/typography/common/title-modifier-styles");
 
 var _modifierStyles2 = require("./components/typography/paragraph/helpers/modifier-styles");
-
-var _modifierStyles3 = require("./components/typography/title/helpers/modifier-styles");
 
 var _basicUploader = require("./components/uploaders/basic-uploader");
 

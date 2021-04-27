@@ -4,11 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Paragraph`: unify modifier styles in one rule and expose modifier-specific class.
-- Feature: `Title`: unify modifier styles in one rule using common title modifiers and expose modifier-specific class.
-- Feature: `TitleWithStroke`: set color with CSS Custom Props and expose modifier-specific class.
-- Fix: `DashboardLayout`: Fix columns widths.
-- Fix: `HeaderNav`: Fix default dropdown button styles.
+## [3.6.0] - 2021-04-27
+
+Features:
+
+- `Paragraph`: unify modifier styles in one rule and expose modifier-specific class.
+- `Title`: unify modifier styles in one rule using common title modifiers and expose modifier-specific class.
+- `TitleWithStroke`: set color with CSS Custom Props and expose modifier-specific class.
+
+Fixes:
+
+- `DashboardLayout`: Fix columns widths.
+- `HeaderNav`: Fix default dropdown button styles.
 
 ## [3.5.0] - 2021-04-23
 
