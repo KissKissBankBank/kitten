@@ -19,7 +19,7 @@ var ButtonIcon = function ButtonIcon(props) {
   })), /*#__PURE__*/React.createElement(VisuallyHidden, null, "Menu"));
 };
 
-var buttonClassNames = classNames('k-Dropdown__button', 'k-ButtonIcon', 'k-ButtonIcon--tiny');
+var buttonClassNames = classNames('k-ButtonIcon', 'k-ButtonIcon--tiny');
 export var BurgerMenu = function BurgerMenu(_ref) {
   var children = _ref.children,
       dropdownContentWidth = _ref.dropdownContentWidth,

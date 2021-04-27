@@ -28,7 +28,7 @@ var DropdownButton = (0, _react.forwardRef)(function (_ref, dropdownButtonRef) {
     ref: dropdownButtonRef,
     id: id,
     type: "button",
-    className: (0, _classnames.default)('k-Dropdown__button', className),
+    className: (0, _classnames.default)('k-Dropdown__button', 'k-u-reset-button', className),
     "aria-haspopup": "true",
     "aria-expanded": isExpanded
   }, rest));
