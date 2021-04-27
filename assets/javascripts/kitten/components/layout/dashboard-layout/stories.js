@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { select, boolean } from '@storybook/addon-knobs'
+import { select, boolean, number } from '@storybook/addon-knobs'
 
 import { DashboardLayout } from './index'
 
@@ -63,16 +63,29 @@ const HelpBox = styled.div`
 `
 
 export default {
-  title: 'Layout/DashboardLayout',
+  title: 'WIP',
   component: DashboardLayout,
 }
 
-export const Default = () => {
-  const selectedView = select(
-    'content_type',
-    ['flow', 'dashboard', 'table'],
-    'flow',
-  )
+export const ProjectAdminLayout = () => {
+  const col1Percent = number('1. Menu %', null)
+  const col1PercentValue = (col1Percent && col1Percent > 0) ? `${col1Percent}vw` : 'auto'
+
+  const col2Percent = number('2. Marge gauche %', null)
+  const col2PercentValue = (col1Percent && col2Percent > 0) ? `${col2Percent}vw` : 'auto'
+
+  const col3Percent = number('3. Contenu %', null)
+  const col3PercentValue = (col1Percent && col3Percent > 0) ? `${col3Percent}vw` : 'auto'
+
+  const col4Percent = number('4. Gouttière %', null)
+  const col4PercentValue = (col1Percent && col4Percent > 0) ? `${col4Percent}vw` : 'auto'
+
+  const col5Percent = number('5. Aide %', null)
+  const col5PercentValue = (col1Percent && col5Percent > 0) ? `${col5Percent}vw` : 'auto'
+
+  const col6Percent = number('6. Marge droite %', null)
+  const col6PercentValue = (col1Percent && col6Percent > 0) ? `${col6Percent}vw` : 'auto'
+
 
   return (
     <DashboardLayout
@@ -85,7 +98,15 @@ export const Default = () => {
         closeLabel: 'Fermer le menu',
       }}
       quickAccessLinkText="Accéder au contenu"
-      fullHeightContent={selectedView === 'flow'}
+      fullHeightContent
+      style={{
+        '--col1': col1PercentValue,
+        '--col2': col2PercentValue,
+        '--col3': col3PercentValue,
+        '--col4': col4PercentValue,
+        '--col5': col5PercentValue,
+        '--col6': col6PercentValue,
+      }}
     >
       <DashboardLayout.Header>
         <AvatarWithTextAndBadge>
@@ -103,11 +124,7 @@ export const Default = () => {
               as="span"
               weight="light"
               size="micro"
-              statusType={select(
-                'Status type',
-                ['danger', 'success', 'warning', 'neutral', 'none'],
-                'success',
-              )}
+              statusType='success'
             >
               Prêt a être partagé avec un texte long pour tester l’ellipse
             </StatusWithBullet>
@@ -119,77 +136,49 @@ export const Default = () => {
           return (
             <DashboardMenu>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=dashboard&viewMode=story"
-                isActive={
-                  window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=dashboard&viewMode=story'
-                }
+                href="#"
                 icon={() => <HomeIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
               >
                 Accueil
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story"
-                isActive={
-                  window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story'
-                }
+                href="#"
                 icon={() => <PeopleIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
               >
                 Contributeurs
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story&custom=a"
-                isActive={
-                  window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story&custom=a'
-                }
+                href="#"
                 icon={() => <TagIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
               >
                 Contreparties
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=b"
-                isActive={
-                  window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=b'
-                }
+                href="#"
                 icon={() => <FilterIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
               >
                 Paramètres
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story"
-                isActive={
-                  window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story'
-                }
+                href="#"
                 icon={() => <FileIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
               >
                 Page Projet
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story"
-                isActive={
-                  window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story'
-                }
+                href="#"
                 icon={() => <StatsIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
               >
                 Statistiques
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story&custom=1"
-                isActive={
-                  window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story&custom=1'
-                }
+                href="#"
                 icon={() => <LoudspeakerIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
               >
@@ -200,42 +189,26 @@ export const Default = () => {
                 icon={() => <ShieldIcon color="currentColor" />}
               >
                 <DashboardMenu.Item
-                  href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=1"
-                  isActive={
-                    window.location.search ===
-                    '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=1'
-                  }
+                  href="#"
                   onClick={() => closeSideBar()}
                 >
                   Destinataire des fonds
                 </DashboardMenu.Item>
                 <DashboardMenu.Item
-                  href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=2"
-                  isActive={
-                    window.location.search ===
-                    '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=2'
-                  }
+                  href="#"
                   onClick={() => closeSideBar()}
                 >
                   Confirmation d'identité
                 </DashboardMenu.Item>
                 <DashboardMenu.Item
-                  href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=3"
-                  isActive={
-                    window.location.search ===
-                    '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=3'
-                  }
+                  href="#"
                   onClick={() => closeSideBar()}
                 >
                   Documents justificatifs
                 </DashboardMenu.Item>
               </DashboardMenu.Expandable>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=4"
-                isActive={
-                  window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=4'
-                }
+                href="#"
                 icon={() => <SpeechBubbleIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
               >
@@ -252,59 +225,42 @@ export const Default = () => {
 
             <AvatarWithTextAndBadge.Text>
               <Text weight="bold" color="background1" size="tiny">
-                Besoin d’aide ?
+                Pourcentage
               </Text>
               <br />
-              <Text weight="bold" color="primary1" size="tiny">
-                Contacter votre coach
+              <Text weight="light" color="background1" size="tiny">
+                  {
+                    (col1Percent || 0) +
+                    (col2Percent || 0) +
+                    (col3Percent || 0) +
+                    (col4Percent || 0) +
+                    (col5Percent || 0) +
+                    (col6Percent || 0)
+                  } % ont été remplis
+
+              </Text>
+              <br />
+              <Text weight="light" color="background1" size="tiny">
+                  reste {
+                    100 - (
+                    (col1Percent || 0) +
+                    (col2Percent || 0) +
+                    (col3Percent || 0) +
+                    (col4Percent || 0) +
+                    (col5Percent || 0) +
+                    (col6Percent || 0))
+                  } % à remplir
+
               </Text>
             </AvatarWithTextAndBadge.Text>
           </AvatarWithTextAndBadge>
         </HelpBox>
       </DashboardLayout.SideFooter>
 
-      {selectedView === 'flow' && <FlowExample />}
-      {selectedView === 'dashboard' && <DashExample />}
-      {selectedView === 'table' && <TableExample />}
+      <FlowExample />
     </DashboardLayout>
   )
 }
-
-const DashExample = () => (
-  <>
-    <div
-      className="k-u-flex k-u-flex-direction-column@m-down k-u-flex-alignItems-start k-u-flex-justifyContent-sb k-u-margin-bottom-triple"
-      style={{ '--gap': '30px' }}
-    >
-      <Title modifier="quinary" className="k-u-margin-none">
-        Curabitur blandit tempus porttitor.
-      </Title>
-      <Button borderRadius={6}>
-        <GlobeIcon width="16" height="16" />
-        <span>Voir ma page projet</span>
-      </Button>
-    </div>
-    <CardHolder>
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </CardHolder>
-  </>
-)
-
-const TableExample = () => (
-  <>
-    <Title
-      modifier="quinary"
-      className="k-u-margin-none k-u-margin-bottom-triple"
-    >
-      Curabitur blandit tempus porttitor.
-    </Title>
-    <div className="k-DashboardLayout__fullWidth">
-      <Table />
-    </div>
-  </>
-)
 
 const FlowExample = () => (
   <DashboardLayout.Flow loading={boolean('loading', false)}>
@@ -381,25 +337,29 @@ const FlowExample = () => (
         sem nec elit.
       </p>
     </DashboardLayout.Flow.Content>
-    <DashboardLayout.Flow.Aside
-      mobileAsideProps={{
-        openLabel: 'Open help',
-        closeLabel: 'Close help',
-      }}
-    >
-      <DashboardLayout.Flow.AsideCard>
-        <DashboardLayout.Flow.AsideCard.Title>
-          Side content in Title
-        </DashboardLayout.Flow.AsideCard.Title>
-        <DashboardLayout.Flow.AsideCard.Paragraph>
-          Side content in Paragraph
-        </DashboardLayout.Flow.AsideCard.Paragraph>
-        <DashboardLayout.Flow.AsideCard.List>
-          <li className="k-u-weight-light">Side content in List (item 1)</li>
-          <li className="k-u-weight-light">Side content in List (item 2)</li>
-        </DashboardLayout.Flow.AsideCard.List>
-      </DashboardLayout.Flow.AsideCard>
-    </DashboardLayout.Flow.Aside>
+
+    {boolean('Montrer l’aide', true) &&
+      <DashboardLayout.Flow.Aside
+        mobileAsideProps={{
+          openLabel: 'Open help',
+          closeLabel: 'Close help',
+        }}
+      >
+        <DashboardLayout.Flow.AsideCard>
+          <DashboardLayout.Flow.AsideCard.Title>
+            Side content in Title
+          </DashboardLayout.Flow.AsideCard.Title>
+          <DashboardLayout.Flow.AsideCard.Paragraph>
+            Side content in Paragraph
+          </DashboardLayout.Flow.AsideCard.Paragraph>
+          <DashboardLayout.Flow.AsideCard.List>
+            <li className="k-u-weight-light">Side content in List (item 1)</li>
+            <li className="k-u-weight-light">Side content in List (item 2)</li>
+          </DashboardLayout.Flow.AsideCard.List>
+        </DashboardLayout.Flow.AsideCard>
+      </DashboardLayout.Flow.Aside>
+    }
+
     <DashboardLayout.Flow.Nav>
       {boolean('Show 2 buttons', true) &&
         <Button
@@ -423,15 +383,4 @@ const FlowExample = () => (
       </Button>
     </DashboardLayout.Flow.Nav>
   </DashboardLayout.Flow>
-)
-
-const FlowStoryContainer = styled.div`
-  width: 75%;
-  margin: 0 auto;
-`
-
-export const Flow = () => (
-  <FlowStoryContainer>
-    <FlowExample />
-  </FlowStoryContainer>
 )
