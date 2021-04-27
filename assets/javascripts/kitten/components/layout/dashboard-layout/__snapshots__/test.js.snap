@@ -321,8 +321,8 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
     min-height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto;
-    grid-template-columns: 4fr 3fr;
-    gap: 0 calc(100% * 4 / 3 * 0.1);
+    grid-template-columns: 1fr 20vw;
+    gap: 0 5vw;
   }
 }
 
@@ -821,8 +821,8 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
     min-height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto;
-    grid-template-columns: 4fr 3fr;
-    gap: 0 calc(100% * 4 / 3 * 0.1);
+    grid-template-columns: 1fr 20vw;
+    gap: 0 5vw;
   }
 }
 
@@ -1301,7 +1301,7 @@ button:hover .c1 {
 
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout {
-    grid-template-columns: 25% 1fr;
+    grid-template-columns: 25vw 1fr;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
@@ -1394,8 +1394,8 @@ button:hover .c1 {
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main > *:not(.k-DashboardLayout__fullWidth) {
-    margin-left: 10%;
-    margin-right: 15%;
+    margin-left: 7.5vw;
+    margin-right: 7.5vw;
   }
 }
 
