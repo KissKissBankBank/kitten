@@ -51,7 +51,7 @@ exports[`<ImageCropper /> matches with snapshot 1`] = `
     </label>
   </div>
   <p
-    className="sc-bwzfXH byuKHQ k-Paragraph k-u-margin-top-single k-Paragraph--noMargin"
+    className="sc-bwzfXH ggISLb k-Paragraph k-u-margin-top-single k-Paragraph--tertiary k-Paragraph--noMargin"
   >
     Lorem ipsum…
   </p>
