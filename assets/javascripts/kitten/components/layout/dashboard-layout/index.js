@@ -240,7 +240,7 @@ const StyledDashboard = styled.div`
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     .k-DashboardLayout {
-      grid-template-columns: 25% 1fr;
+      grid-template-columns: var(--col1) 1fr;
 
       .k-DashboardLayout__sideWrapper {
         display: flex;
@@ -306,8 +306,8 @@ const StyledDashboard = styled.div`
           }
 
           > *:not(.k-DashboardLayout__fullWidth) {
-            margin-left: 10%;
-            margin-right: 15%;
+            margin-left: var(--col2);
+            margin-right: var(--col6);
           }
         }
       }
@@ -317,7 +317,7 @@ const StyledDashboard = styled.div`
   /* SUPER DESKTOP */
   @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
     .k-DashboardLayout {
-      grid-template-columns: ${pxToRem(385)} 1fr;
+      grid-template-columns: var(--col1) 1fr;
     }
   }
 
@@ -359,6 +359,7 @@ export const DashboardLayout = ({
   buttonProps,
   quickAccessLinkText,
   fullHeightContent,
+  style,
   ...props
 }) => {
   const [isOpen, setOpen] = useState(false)
@@ -473,7 +474,7 @@ export const DashboardLayout = ({
   }
 
   return (
-    <StyledDashboard className="k-DashboardLayout__wrapper">
+    <StyledDashboard className="k-DashboardLayout__wrapper" style={style}>
       <div
         className={classNames('k-DashboardLayout', props.className, {
           'k-DashboardLayout--isOpen': isOpen,
