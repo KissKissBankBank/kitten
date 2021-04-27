@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `DashboardLayout`: Fix columns widths.
+
 ## [3.5.0] - 2021-04-23
 
 Features:
