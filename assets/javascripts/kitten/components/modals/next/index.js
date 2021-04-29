@@ -34,6 +34,10 @@ const oneGridCol = `calc((100vw - ${pxToRem(
   paddingPlusGutters,
 )}) / 12 + ${pxToRem(GUTTER)})`
 
+const oneGridColXl = `calc((${pxToRem(CONTAINER_MAX_WIDTH)} - ${pxToRem(
+  paddingPlusGutters,
+)}) / 12 + ${pxToRem(GUTTER)})`
+
 const StyledParagraph = styled(Paragraph)`
   font-size: ${pxToRem(12)};
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -106,6 +110,21 @@ const GlobalStyle = createGlobalStyle`
       margin: 0 !important;
     }
 
+    &.k-ModalNext__content--customContentCols {
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        --Modal-contentCols: var(--Modal-contentCols--s, var(--Modal-contentCols--default, 4));
+      }
+      @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+        --Modal-contentCols: var(--Modal-contentCols--m);
+      }
+      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+        --Modal-contentCols: var(--Modal-contentCols--l);
+      }
+      @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
+        --Modal-contentCols: var(--Modal-contentCols--xl);
+      }
+    }
+
     .k-ModalNext__header {
       position: sticky;
       top: 0;
@@ -164,6 +183,10 @@ const GlobalStyle = createGlobalStyle`
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         padding: 0 calc(var(--Modal-contentMargin) * ${oneGridCol}) ${pxToRem(80)};
+      }
+
+      @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
+        padding: 0 calc(var(--Modal-contentMargin) * ${oneGridColXl}) ${pxToRem(80)};
       }
 
       & > *:not(.k-ModalNext__block):first-child {
@@ -242,8 +265,6 @@ const GlobalStyle = createGlobalStyle`
         border-radius: 0;
       }
     }
-
-
   }
 
 
@@ -444,6 +465,7 @@ const InnerModal = ({
   variant,
   headerTitle,
   headerActions,
+  contentCols,
   ...others
 }) => {
   const [{ show }, dispatch] = useContext(ModalContext)
@@ -463,6 +485,13 @@ const InnerModal = ({
     dispatch(updateState(isOpen))
   }, [isOpen])
 
+  let customStyle = {}
+  if (contentCols.length !== {}) {
+    for (const [key, value] of Object.entries(contentCols)) {
+      customStyle[`--Modal-contentCols--${key}`] = value
+    }
+  }
+
   const ModalPortal = ReactDOM.createPortal(
     <>
       <GlobalStyle zIndex={zIndex} />
@@ -476,6 +505,7 @@ const InnerModal = ({
             `k-ModalNext__content--${variant}`,
             {
               'k-ModalNext__content--fullSize': fullSize,
+              'k-ModalNext__content--customContentCols': contentCols.length !== {},
             }
           ),
           afterOpen: 'k-ModalNext--afterOpen',
@@ -505,6 +535,7 @@ const InnerModal = ({
         onRequestClose={close}
         contentLabel={label}
         bodyOpenClassName="k-ModalNext__body--open"
+        style={{ content: customStyle }}
         {...modalProps}
       >
         <>
@@ -602,6 +633,7 @@ Modal.propTypes = {
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   headerTitle: PropTypes.node,
   headerActions: PropTypes.func,
+  contentCols: PropTypes.object,
 }
 
 Modal.defaultProps = {
@@ -619,6 +651,7 @@ Modal.defaultProps = {
   variant: 'andromeda',
   headerTitle: null,
   headerActions: () => {},
+  contentCols: {},
 }
 
 Modal.Title = ModalTitle
