@@ -2,6 +2,10 @@ import styled from 'styled-components'
 import { ScreenConfig } from '../../../constants/screen-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
+import {
+  CONTAINER_PADDING,
+  CONTAINER_PADDING_THIN,
+} from '../../../constants/grid-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import {
   MOBILE_HEADER_HEIGHT,
@@ -33,7 +37,6 @@ export const StyledHeader = styled.header`
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding-left: ${pxToRem(10)};
     width: 100%;
     overflow: hidden;
     box-sizing: border-box;
@@ -50,10 +53,6 @@ export const StyledHeader = styled.header`
       @media (min-width: ${ScreenConfig.L.min}px) {
         height: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
       }
-    }
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      padding-left: ${pxToRem(20)};
     }
 
     &,
@@ -80,6 +79,20 @@ export const StyledHeader = styled.header`
   .k-HeaderNav--inactiveBackground .k-HeaderNav,
   .k-HeaderNav--inactiveBackground .quickAccessLink {
     background-color: ${COLORS.background3};
+  }
+
+  .k-HeaderNav__BurgerMenu__button {
+    padding: 0 ${pxToRem(10)} 0 ${pxToRem(CONTAINER_PADDING_THIN)};
+    height: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      padding: 0 ${pxToRem(15)} 0 ${pxToRem(CONTAINER_PADDING)};
+      height: ${pxToRem(TABLET_HEADER_HEIGHT)};
+    }
+
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      height: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
+    }
   }
 
   .k-HeaderNav-Logo {
