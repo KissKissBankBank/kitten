@@ -245,3 +245,30 @@ export const ComplexWithOrion = () => (
     )}
   </Modal>
 )
+
+export const CustomContentCols = () => (
+  <Modal
+    trigger={<Button modifier="helium">Open</Button>}
+    hasCloseButton={boolean('Has close button', true)}
+    size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
+    variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
+    zIndex={number('Overlay z-index', 110)}
+    headerTitle={text('headerTitle', null)}
+    contentCols={{
+      xxs: 12,
+      s: 10,
+      l: 8,
+      xl: 6,
+    }}
+  >
+    {() => (
+      <>
+        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
+        <Modal.Actions>
+          <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
+        </Modal.Actions>
+      </>
+    )}
+  </Modal>
+)

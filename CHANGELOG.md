@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Modal/Next`: Add `contentCols` prop, to specify content col number at breakpoints `S` and above. Accepts `default`, `s`, `m`, `l`, `xl` keys, with number values.
 - Fix: `HeaderNav`: Fix burger menu button dimensions and improve affordance.
 - Fix: Replace occurences of `CONTAINER_PADDING_MOBILE` with `CONTAINER_PADDING_THIN`.
 
