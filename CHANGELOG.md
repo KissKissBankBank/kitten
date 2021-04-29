@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Replace occurences of `CONTAINER_PADDING_MOBILE` with `CONTAINER_PADDING_THIN`.
+
 ## [3.6.0] - 2021-04-27
 
 Features:

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { Container } from '../../../components/grid/container';
 import { Grid, GridCol } from '../../../components/grid/grid';
 import { ScreenConfig } from '../../../constants/screen-config';
-import { NUM_COLUMNS, CONTAINER_PADDING, CONTAINER_PADDING_MOBILE } from '../../../constants/grid-config';
+import { NUM_COLUMNS, CONTAINER_PADDING, CONTAINER_PADDING_THIN } from '../../../constants/grid-config';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem } from '../../../helpers/utils/typography';
 import classNames from 'classnames';
@@ -32,7 +32,7 @@ var StyledHero = styled(function (_ref) {
 }, function (_ref5) {
   var backgroundColor = _ref5.backgroundColor;
   return backgroundColor;
-}, pxToRem(ScreenConfig.M.max), pxToRem(CONTAINER_PADDING * 2), pxToRem(-CONTAINER_PADDING), pxToRem(ScreenConfig.XS.max), pxToRem(CONTAINER_PADDING_MOBILE * 2), pxToRem(-CONTAINER_PADDING_MOBILE), pxToRem(ScreenConfig.M.max), 8 / NUM_COLUMNS * 100 + 'vw', pxToRem(ScreenConfig.XS.max), pxToRem(-CONTAINER_PADDING_MOBILE), pxToRem(ScreenConfig.M.max), 10 / NUM_COLUMNS * 100 + '%', pxToRem(ScreenConfig.XS.max), 5 / NUM_COLUMNS * 100 + '%', pxToRem(ScreenConfig.M.max), 8 / NUM_COLUMNS * 100 + 'vw', 2 / NUM_COLUMNS * 100 + '%', pxToRem(ScreenConfig.XS.max), pxToRem(ScreenConfig.XS.max), pxToRem(-CONTAINER_PADDING_MOBILE), 11 / NUM_COLUMNS * 100 + '%', pxToRem(ScreenConfig.M.max), 12 / NUM_COLUMNS * 100 + '%', pxToRem(ScreenConfig.XS.max), pxToRem(-CONTAINER_PADDING / 2), pxToRem(ScreenConfig.L.min), 1 / 2 / NUM_COLUMNS * 100 + 'vw');
+}, pxToRem(ScreenConfig.M.max), pxToRem(CONTAINER_PADDING * 2), pxToRem(-CONTAINER_PADDING), pxToRem(ScreenConfig.XS.max), pxToRem(CONTAINER_PADDING_THIN * 2), pxToRem(-CONTAINER_PADDING_THIN), pxToRem(ScreenConfig.M.max), 8 / NUM_COLUMNS * 100 + 'vw', pxToRem(ScreenConfig.XS.max), pxToRem(-CONTAINER_PADDING_THIN), pxToRem(ScreenConfig.M.max), 10 / NUM_COLUMNS * 100 + '%', pxToRem(ScreenConfig.XS.max), 5 / NUM_COLUMNS * 100 + '%', pxToRem(ScreenConfig.M.max), 8 / NUM_COLUMNS * 100 + 'vw', 2 / NUM_COLUMNS * 100 + '%', pxToRem(ScreenConfig.XS.max), pxToRem(ScreenConfig.XS.max), pxToRem(-CONTAINER_PADDING_THIN), 11 / NUM_COLUMNS * 100 + '%', pxToRem(ScreenConfig.M.max), 12 / NUM_COLUMNS * 100 + '%', pxToRem(ScreenConfig.XS.max), pxToRem(-CONTAINER_PADDING / 2), pxToRem(ScreenConfig.L.min), 1 / 2 / NUM_COLUMNS * 100 + 'vw');
 export var Hero = function Hero(_ref6) {
   var direction = _ref6.direction,
       tiny = _ref6.tiny,
