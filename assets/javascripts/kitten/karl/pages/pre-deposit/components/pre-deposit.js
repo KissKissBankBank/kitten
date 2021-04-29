@@ -12,7 +12,7 @@ import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import {
   CONTAINER_PADDING,
-  CONTAINER_PADDING_MOBILE,
+  CONTAINER_PADDING_THIN,
 } from '../../../../constants/grid-config'
 import COLORS from '../../../../constants/colors-config'
 
@@ -46,8 +46,8 @@ const StyledPreDeposit = styled.div`
       @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
         padding-top: ${pxToRem(40)};
         padding-bottom: ${pxToRem(40)};
-        padding-right: ${pxToRem(CONTAINER_PADDING_MOBILE)};
-        padding-left: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+        padding-right: ${pxToRem(CONTAINER_PADDING_THIN)};
+        padding-left: ${pxToRem(CONTAINER_PADDING_THIN)};
       }
     }
   }

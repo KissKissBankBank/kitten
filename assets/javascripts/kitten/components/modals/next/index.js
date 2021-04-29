@@ -18,7 +18,7 @@ import { Title } from '../../typography/title'
 import COLORS from '../../../constants/colors-config'
 import {
   CONTAINER_PADDING,
-  CONTAINER_PADDING_MOBILE,
+  CONTAINER_PADDING_THIN,
   GUTTER,
   CONTAINER_MAX_WIDTH,
 } from '../../../constants/grid-config'
@@ -58,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     transform: scale(0.94);
     margin: auto;
-    width: calc(100vw - ${pxToRem(2 * CONTAINER_PADDING_MOBILE)});
+    width: calc(100vw - ${pxToRem(2 * CONTAINER_PADDING_THIN)});
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       width: calc(100vw - ${pxToRem(2 * CONTAINER_PADDING)})
@@ -113,8 +113,8 @@ const GlobalStyle = createGlobalStyle`
       gap: ${GUTTER};
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
-      padding-left: ${pxToRem(CONTAINER_PADDING_MOBILE)};
-      padding-right: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+      padding-left: ${pxToRem(CONTAINER_PADDING_THIN)};
+      padding-right: ${pxToRem(CONTAINER_PADDING_THIN)};
       background-color: ${COLORS.background1};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -160,7 +160,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .k-ModalNext__main {
-      padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)} ${pxToRem(50)};
+      padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)} ${pxToRem(50)};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         padding: 0 calc(var(--Modal-contentMargin) * ${oneGridCol}) ${pxToRem(80)};
@@ -176,10 +176,10 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .k-ModalNext__block {
-      margin-left: -${pxToRem(CONTAINER_PADDING_MOBILE)};
-      margin-right: -${pxToRem(CONTAINER_PADDING_MOBILE)};
-      padding-left: ${pxToRem(CONTAINER_PADDING_MOBILE)};
-      padding-right: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+      margin-left: -${pxToRem(CONTAINER_PADDING_THIN)};
+      margin-right: -${pxToRem(CONTAINER_PADDING_THIN)};
+      padding-left: ${pxToRem(CONTAINER_PADDING_THIN)};
+      padding-right: ${pxToRem(CONTAINER_PADDING_THIN)};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         margin-left: calc(-1 * var(--Modal-contentMargin) * ${oneGridCol});

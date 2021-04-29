@@ -11,7 +11,7 @@ import { Carousel } from '../../../components/carousel/carousel'
 import { ScreenConfig, SCREEN_SIZE_M } from '../../../constants/screen-config'
 import {
   CONTAINER_PADDING,
-  CONTAINER_PADDING_MOBILE,
+  CONTAINER_PADDING_THIN,
 } from '../../../constants/grid-config'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { CrowdfundingCard } from '../../../components/cards/crowdfunding-card'
@@ -35,7 +35,7 @@ const StyledThanks = styled.div`
     }
 
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-      margin-right: ${pxToRem(-CONTAINER_PADDING_MOBILE)};
+      margin-right: ${pxToRem(-CONTAINER_PADDING_THIN)};
     }
   }
 
@@ -72,7 +72,7 @@ const StyledThanks = styled.div`
     }
 
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-      right: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+      right: ${pxToRem(CONTAINER_PADDING_THIN)};
     }
   }
 
