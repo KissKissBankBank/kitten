@@ -1301,6 +1301,7 @@ button:hover .c1 {
 
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout {
+    --DashboardLayout-main-margin: 7.5vw;
     grid-template-columns: 25vw 1fr;
   }
 
@@ -1394,8 +1395,8 @@ button:hover .c1 {
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main > *:not(.k-DashboardLayout__fullWidth) {
-    margin-left: 7.5vw;
-    margin-right: 7.5vw;
+    margin-left: var(--DashboardLayout-main-margin);
+    margin-right: var(--DashboardLayout-main-margin);
   }
 }
 
