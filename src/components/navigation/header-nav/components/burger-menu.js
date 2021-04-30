@@ -39,7 +39,7 @@ var ButtonIcon = function ButtonIcon(props) {
   })), /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, "Menu"));
 };
 
-var buttonClassNames = (0, _classnames.default)('k-ButtonIcon', 'k-ButtonIcon--tiny');
+var buttonClassNames = (0, _classnames.default)('k-HeaderNav__BurgerMenu__button', 'k-ButtonIcon', 'k-ButtonIcon--tiny');
 
 var BurgerMenu = function BurgerMenu(_ref) {
   var children = _ref.children,

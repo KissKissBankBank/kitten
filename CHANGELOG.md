@@ -4,10 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `DashboardLayout`: use `--DashboardLayout-main-margin` for main margin on Desktop.
-- Feature: `Modal/Next`: Add `contentCols` prop, to specify content col number at breakpoints `S` and above. Accepts `default`, `s`, `m`, `l`, `xl` keys, with number values.
-- Fix: `HeaderNav`: Fix burger menu button dimensions and improve affordance.
-- Fix: Replace occurences of `CONTAINER_PADDING_MOBILE` with `CONTAINER_PADDING_THIN`.
+## [3.7.0] - 2021-04-30
+
+Feature:
+
+-  `Modal/Next`: Add `contentCols` prop, to specify content col number at breakpoints `S` and above. Accepts `default`, `s`, `m`, `l`, `xl` keys, with number values.
+
+Fixes:
+
+- `DashboardLayout`: use `--DashboardLayout-main-margin` for main margin on Desktop.
+- `HeaderNav`: Fix burger menu button dimensions and improve affordance.
+- Replace occurences of `CONTAINER_PADDING_MOBILE` with `CONTAINER_PADDING_THIN`.
 
 ## [3.6.0] - 2021-04-27
 
