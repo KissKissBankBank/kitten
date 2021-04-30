@@ -240,6 +240,7 @@ const StyledDashboard = styled.div`
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     .k-DashboardLayout {
+      --DashboardLayout-main-margin: 7.5vw;
       grid-template-columns: 25vw 1fr;
 
       .k-DashboardLayout__sideWrapper {
@@ -306,8 +307,8 @@ const StyledDashboard = styled.div`
           }
 
           > *:not(.k-DashboardLayout__fullWidth) {
-            margin-left: 7.5vw;
-            margin-right: 7.5vw;
+            margin-left: var(--DashboardLayout-main-margin);
+            margin-right: var(--DashboardLayout-main-margin);
           }
         }
       }
