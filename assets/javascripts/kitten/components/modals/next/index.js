@@ -120,6 +120,7 @@ const GlobalStyle = createGlobalStyle`
 
     .k-ModalNext__header {
       position: sticky;
+      z-index: var(--Modal-headerZIndex);
       top: 0;
       display: grid;
       gap: ${GUTTER};
@@ -134,11 +135,6 @@ const GlobalStyle = createGlobalStyle`
         padding-left: ${pxToRem(CONTAINER_PADDING)};
         padding-right: ${pxToRem(CONTAINER_PADDING)};
       }
-
-      ${props =>
-        css`
-          z-index: ${props.zIndex};
-        `}
 
       .k-ModalNext__header__closeButton {
         text-align: left;
@@ -486,6 +482,7 @@ const InnerModal = ({
   headerTitle,
   headerActions,
   contentCols,
+  headerZIndex,
   ...others
 }) => {
   const [{ show }, dispatch] = useContext(ModalContext)
@@ -505,7 +502,9 @@ const InnerModal = ({
     dispatch(updateState(isOpen))
   }, [isOpen])
 
-  let customStyle = {}
+  let customStyle = {
+    '--Modal-headerZIndex': headerZIndex,
+  }
   if (contentCols.length !== {}) {
     for (const [key, value] of Object.entries(contentCols)) {
       customStyle[`--Modal-contentCols--${key}`] = value
@@ -658,6 +657,7 @@ Modal.propTypes = {
   headerTitle: PropTypes.node,
   headerActions: PropTypes.func,
   contentCols: PropTypes.object,
+  headerZIndex: PropTypes.number,
 }
 
 Modal.defaultProps = {
@@ -676,6 +676,7 @@ Modal.defaultProps = {
   headerTitle: null,
   headerActions: () => {},
   contentCols: {},
+  headerZIndex: 10,
 }
 
 Modal.Title = ModalTitle
