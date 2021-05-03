@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Modal/Next`: Fix negative margin calculation for `Modal.Block` at `XL`.
+
 ## [3.7.0] - 2021-04-30
 
 Feature:
