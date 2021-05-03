@@ -264,6 +264,9 @@ export const CustomContentCols = () => (
     {() => (
       <>
         <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Block className="k-u-background-color-background3">
+          {text('content', paragraphContainer)}
+        </Modal.Block>
         <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
         <Modal.Actions>
           <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
