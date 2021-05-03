@@ -4,13 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Modal/Next`: Add `headerZIndex` prop to apply a `zIndex` to the `header`.
 - Fix: `Modal/Next`: Fix negative margin calculation for `Modal.Block` at `XL`.
 
 ## [3.7.0] - 2021-04-30
 
 Feature:
 
--  `Modal/Next`: Add `contentCols` prop, to specify content col number at breakpoints `S` and above. Accepts `default`, `s`, `m`, `l`, `xl` keys, with number values.
+- `Modal/Next`: Add `contentCols` prop, to specify content col number at breakpoints `S` and above. Accepts `default`, `s`, `m`, `l`, `xl` keys, with number values.
 
 Fixes:
 
@@ -178,7 +179,7 @@ Breaking changes:
 - Remove the following deprecated HOCs:
   - `card`
   - `withTooltip`
-- Remove  default export for the following components:
+- Remove default export for the following components:
   - `Dropdown`
   - `DropdownButton`
   - `LinkBox`

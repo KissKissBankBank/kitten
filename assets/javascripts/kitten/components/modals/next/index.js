@@ -6,10 +6,7 @@ import classNames from 'classnames'
 import ReactModal from 'react-modal'
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { CloseButton } from '../../../components/buttons/close-button'
-import {
-  Button,
-  ICON_TINY,
-} from '../../../components/buttons/button'
+import { Button, ICON_TINY } from '../../../components/buttons/button'
 import { Paragraph } from '../../../components/typography/paragraph/next'
 import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -23,10 +20,6 @@ import {
   CONTAINER_MAX_WIDTH,
 } from '../../../constants/grid-config'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
-import {
-  getReactElementsByType,
-  getReactElementsWithoutType,
-} from '../../../helpers/react/react-elements'
 
 const paddingPlusGutters = 2 * CONTAINER_PADDING + 11 * GUTTER
 
@@ -127,6 +120,7 @@ const GlobalStyle = createGlobalStyle`
 
     .k-ModalNext__header {
       position: sticky;
+      z-index: var(--Modal-headerZIndex);
       top: 0;
       display: grid;
       gap: ${GUTTER};
@@ -182,11 +176,15 @@ const GlobalStyle = createGlobalStyle`
       padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)} ${pxToRem(50)};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        padding: 0 calc(var(--Modal-contentMargin) * ${oneGridCol}) ${pxToRem(80)};
+        padding: 0 calc(var(--Modal-contentMargin) * ${oneGridCol}) ${pxToRem(
+  80,
+)};
       }
 
       @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
-        padding: 0 calc(var(--Modal-contentMargin) * ${oneGridColXl}) ${pxToRem(80)};
+        padding: 0 calc(var(--Modal-contentMargin) * ${oneGridColXl}) ${pxToRem(
+  80,
+)};
       }
 
       & > *:not(.k-ModalNext__block):first-child {
@@ -393,11 +391,23 @@ ModalParagraph.defaultProps = {
   align: 'center',
 }
 
-const Actions = props => <div {...props} className={classNames('k-ModalNext__actions', props.className)} />
+const Actions = props => (
+  <div
+    {...props}
+    className={classNames('k-ModalNext__actions', props.className)}
+  />
+)
 
-const ModalButton = props => <Button big fluid {...props} className={classNames('k-ModalNext__buttons', props.className)} />
+const ModalButton = props => (
+  <Button
+    big
+    fluid
+    {...props}
+    className={classNames('k-ModalNext__buttons', props.className)}
+  />
+)
 
-const Block = (props) => (
+const Block = props => (
   <div
     {...props}
     className={classNames(props.className, 'k-ModalNext__block')}
@@ -472,6 +482,7 @@ const InnerModal = ({
   headerTitle,
   headerActions,
   contentCols,
+  headerZIndex,
   ...others
 }) => {
   const [{ show }, dispatch] = useContext(ModalContext)
@@ -491,7 +502,9 @@ const InnerModal = ({
     dispatch(updateState(isOpen))
   }, [isOpen])
 
-  let customStyle = {}
+  let customStyle = {
+    '--Modal-headerZIndex': headerZIndex,
+  }
   if (contentCols.length !== {}) {
     for (const [key, value] of Object.entries(contentCols)) {
       customStyle[`--Modal-contentCols--${key}`] = value
@@ -511,8 +524,9 @@ const InnerModal = ({
             `k-ModalNext__content--${variant}`,
             {
               'k-ModalNext__content--fullSize': fullSize,
-              'k-ModalNext__content--customContentCols': contentCols.length !== {},
-            }
+              'k-ModalNext__content--customContentCols':
+                contentCols.length !== {},
+            },
           ),
           afterOpen: 'k-ModalNext--afterOpen',
           beforeClose: 'k-ModalNext--beforeClose',
@@ -524,7 +538,7 @@ const InnerModal = ({
             `k-ModalNext__overlay--${variant}`,
             {
               'k-ModalNext__overlay--fullSize': fullSize,
-            }
+            },
           ),
           afterOpen: 'k-ModalNext__overlay--afterOpen',
           beforeClose: 'k-ModalNext__overlay--beforeClose',
@@ -545,10 +559,10 @@ const InnerModal = ({
         {...modalProps}
       >
         <>
-          {(headerTitle || fullSizeTitle) ? (
+          {headerTitle || fullSizeTitle ? (
             <div className="k-ModalNext__header">
               <div className="k-ModalNext__header__closeButton">
-                {hasCloseButton &&
+                {hasCloseButton && (
                   <CloseButton
                     modifier="hydrogen"
                     onClick={close}
@@ -556,11 +570,13 @@ const InnerModal = ({
                     size={variant === 'orion' ? 'regular' : 'micro'}
                     closeButtonLabel={closeButtonLabel}
                   />
-                }
+                )}
               </div>
 
               <div className="k-ModalNext__header__title">
-                {headerTitle ? headerTitle : (
+                {headerTitle ? (
+                  headerTitle
+                ) : (
                   <Text size="tiny" color="font1" weight="regular">
                     {fullSizeTitle}
                   </Text>
@@ -573,26 +589,27 @@ const InnerModal = ({
                   close: () => dispatch(updateState(false)),
                 })}
               </div>
-
             </div>
-          ) : hasCloseButton && (
-            <div className="k-ModalNext__closeButton">
-              <CloseButton
-                style={{ position: 'fixed' }}
-                className="k-u-hidden@s-up k-u-margin-none"
-                modifier="hydrogen"
-                onClick={close}
-                size="micro"
-                closeButtonLabel={closeButtonLabel}
-              />
-              <CloseButton
-                style={{ position: 'fixed' }}
-                className="k-u-hidden@xs-down k-u-margin-none"
-                modifier="hydrogen"
-                onClick={close}
-                closeButtonLabel={closeButtonLabel}
-              />
-            </div>
+          ) : (
+            hasCloseButton && (
+              <div className="k-ModalNext__closeButton">
+                <CloseButton
+                  style={{ position: 'fixed' }}
+                  className="k-u-hidden@s-up k-u-margin-none"
+                  modifier="hydrogen"
+                  onClick={close}
+                  size="micro"
+                  closeButtonLabel={closeButtonLabel}
+                />
+                <CloseButton
+                  style={{ position: 'fixed' }}
+                  className="k-u-hidden@xs-down k-u-margin-none"
+                  modifier="hydrogen"
+                  onClick={close}
+                  closeButtonLabel={closeButtonLabel}
+                />
+              </div>
+            )
           )}
           <div class="k-ModalNext__main">
             {children({
@@ -640,6 +657,7 @@ Modal.propTypes = {
   headerTitle: PropTypes.node,
   headerActions: PropTypes.func,
   contentCols: PropTypes.object,
+  headerZIndex: PropTypes.number,
 }
 
 Modal.defaultProps = {
@@ -658,6 +676,7 @@ Modal.defaultProps = {
   headerTitle: null,
   headerActions: () => {},
   contentCols: {},
+  headerZIndex: 10,
 }
 
 Modal.Title = ModalTitle
