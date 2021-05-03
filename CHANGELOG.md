@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Modal/Next`: Apply `zIndex` prop to `header`.
+- Feature: `Modal/Next`: Add `headerZIndex` prop to apply a `zIndex` to the `header`.
 - Fix: `Modal/Next`: Fix negative margin calculation for `Modal.Block` at `XL`.
 
 ## [3.7.0] - 2021-04-30
