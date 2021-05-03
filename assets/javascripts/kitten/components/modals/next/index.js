@@ -210,6 +210,12 @@ const GlobalStyle = createGlobalStyle`
         padding-left: ${pxToRem(CONTAINER_PADDING)};
         padding-right: ${pxToRem(CONTAINER_PADDING)};
       }
+      @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
+        margin-left: calc(-1 * var(--Modal-contentMargin) * ${oneGridColXl});
+        margin-right: calc(-1 * var(--Modal-contentMargin) * ${oneGridColXl});
+        padding-left: ${pxToRem(CONTAINER_PADDING)};
+        padding-right: ${pxToRem(CONTAINER_PADDING)};
+      }
     }
   }
 
