@@ -177,14 +177,14 @@ const GlobalStyle = createGlobalStyle`
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         padding: 0 calc(var(--Modal-contentMargin) * ${oneGridCol}) ${pxToRem(
-          80,
-        )};
+  80,
+)};
       }
 
       @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
         padding: 0 calc(var(--Modal-contentMargin) * ${oneGridColXl}) ${pxToRem(
-          80,
-        )};
+  80,
+)};
       }
 
       & > *:not(.k-ModalNext__block):first-child {
