@@ -15,7 +15,7 @@ import deprecated from 'prop-types-extra/lib/deprecated';
 import PropTypes from 'prop-types';
 import { createRangeFromZeroTo } from '../../../helpers/utils/range';
 import { withMediaQueries } from '../../../hoc/media-queries';
-import { CONTAINER_PADDING, CONTAINER_PADDING_MOBILE } from '../../../constants/grid-config';
+import { CONTAINER_PADDING, CONTAINER_PADDING_THIN } from '../../../constants/grid-config';
 import { Button } from '../../../components/buttons/button';
 import { ArrowIcon } from '../../../components/icons/arrow-icon';
 import { CarouselInner } from './components/carousel-inner';
@@ -58,7 +58,7 @@ export var checkPageLoop = function checkPageLoop(numberOfPages, newPage) {
 };
 
 var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess) {
-  if (viewportIsXSOrLess) return CONTAINER_PADDING_MOBILE / 2 - OUTLINE_PLUS_OFFSET * 2;
+  if (viewportIsXSOrLess) return CONTAINER_PADDING_THIN / 2 - OUTLINE_PLUS_OFFSET * 2;
   if (viewportIsMOrLess) return CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2;
   return baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2;
 };

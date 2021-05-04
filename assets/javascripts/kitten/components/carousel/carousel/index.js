@@ -5,7 +5,7 @@ import { createRangeFromZeroTo } from '../../../helpers/utils/range'
 import { withMediaQueries } from '../../../hoc/media-queries'
 import {
   CONTAINER_PADDING,
-  CONTAINER_PADDING_MOBILE,
+  CONTAINER_PADDING_THIN,
 } from '../../../constants/grid-config'
 import { Button } from '../../../components/buttons/button'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
@@ -73,7 +73,7 @@ const getMarginBetweenAccordingToViewport = (
   viewportIsMOrLess,
 ) => {
   if (viewportIsXSOrLess)
-    return CONTAINER_PADDING_MOBILE / 2 - OUTLINE_PLUS_OFFSET * 2
+    return CONTAINER_PADDING_THIN / 2 - OUTLINE_PLUS_OFFSET * 2
   if (viewportIsMOrLess) return CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2
 
   return baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2

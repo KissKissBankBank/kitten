@@ -67,8 +67,10 @@ export default {
   component: Modal,
 }
 
-export const Default = () => (
+export const OldModal = () => (
   <Marger top="2">
+    <p className="k-u-weight-light">This Modal will be deprecated in the future.</p>
+
     <Modal
       closeButtonLabel="Fermer"
       trigger={<StoryButton children={text('bouton', 'open')} />}

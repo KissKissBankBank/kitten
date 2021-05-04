@@ -25,8 +25,8 @@ const StyledFlow = styled.div`
     min-height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto;
-    grid-template-columns: 4fr 3fr;
-    gap: 0 calc(100% * 4 / 3 * 0.1); /* 10% of the parent element */
+    grid-template-columns: 1fr 20vw;
+    gap: 0 5vw;
   }
 
   &:not(.k-DashboardLayout__flow--isLoading) {

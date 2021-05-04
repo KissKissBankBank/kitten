@@ -2,31 +2,28 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import classNames from 'classnames';
 import COLORS from '../../../constants/colors-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
-import { modifierStyles } from './helpers/modifier-styles';
+import { titleModifierStyles, titleModifiersNames } from '../common/title-modifier-styles';
 var StyledTitle = styled.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-46lshq-0"
-})(["--Title-css-color:", ";", ";color:", ";color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], COLORS.font1, TYPOGRAPHY.fontStyles.bold, COLORS.font1, function (_ref) {
-  var modifier = _ref.modifier;
-  return modifierStyles(modifier);
-});
-export var Title = function Title(_ref2) {
-  var modifier = _ref2.modifier,
-      tag = _ref2.tag,
-      noMargin = _ref2.noMargin,
-      italic = _ref2.italic,
-      cssColor = _ref2.cssColor,
-      className = _ref2.className,
-      other = _objectWithoutProperties(_ref2, ["modifier", "tag", "noMargin", "italic", "cssColor", "className"]);
+})(["--Title-css-color:", ";", ";color:", ";color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], COLORS.font1, TYPOGRAPHY.fontStyles.bold, COLORS.font1, titleModifierStyles('&.k-Title'));
+export var Title = function Title(_ref) {
+  var modifier = _ref.modifier,
+      tag = _ref.tag,
+      noMargin = _ref.noMargin,
+      italic = _ref.italic,
+      cssColor = _ref.cssColor,
+      className = _ref.className,
+      other = _objectWithoutProperties(_ref, ["modifier", "tag", "noMargin", "italic", "cssColor", "className"]);
 
   return /*#__PURE__*/React.createElement(StyledTitle, _extends({
     as: tag,
     modifier: modifier,
-    className: classNames('k-Title', className, {
+    className: classNames('k-Title', className, "k-Title--".concat(modifier), {
       'k-Title--noMargin': noMargin,
       'k-Title--italic': italic
     }),
@@ -48,7 +45,7 @@ Title.propTypes = {
   /**
     Title have seven modifiers. With different size depending on the device (desktop, tablet and mobile)
   */
-  modifier: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary', 'septenary']),
+  modifier: PropTypes.oneOf(titleModifiersNames),
 
   /**
     Remove default margins of `title` attribut.
