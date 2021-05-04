@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `Modal/Next`: Add `tag` prop on `Modal.Paragraph`.
 - Fix: `Modal/Next`: Fix `customContentCols` class condition.
+- Fix: `Modal/Next`: Remove `className` console error.
 
 ## [3.8.0] - 2021-05-04
 
