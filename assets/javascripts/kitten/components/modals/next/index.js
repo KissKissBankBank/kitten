@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import classNames from 'classnames'
 import ReactModal from 'react-modal'
+import isEmpty from 'lodash/fp/isEmpty'
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { CloseButton } from '../../../components/buttons/close-button'
 import { Button, ICON_TINY } from '../../../components/buttons/button'
@@ -507,7 +508,7 @@ const InnerModal = ({
   let customStyle = {
     '--Modal-headerZIndex': headerZIndex,
   }
-  if (contentCols !== {}) {
+  if (!isEmpty(contentCols)) {
     for (const [key, value] of Object.entries(contentCols)) {
       customStyle[`--Modal-contentCols--${key}`] = value
     }
@@ -526,8 +527,7 @@ const InnerModal = ({
             `k-ModalNext__content--${variant}`,
             {
               'k-ModalNext__content--fullSize': fullSize,
-              'k-ModalNext__content--customContentCols':
-                contentCols !== {},
+              'k-ModalNext__content--customContentCols': !isEmpty(contentCols),
             },
           ),
           afterOpen: 'k-ModalNext--afterOpen',
@@ -613,7 +613,7 @@ const InnerModal = ({
               </div>
             )
           )}
-          <div class="k-ModalNext__main">
+          <div className="k-ModalNext__main">
             {children({
               open: () => dispatch(updateState(true)),
               close: () => dispatch(updateState(false)),
