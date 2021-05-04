@@ -1029,6 +1029,7 @@ button:hover .c1 {
 .c0 .k-DashboardLayout {
   min-height: 100vh;
   display: grid;
+  background-color: #fff;
 }
 
 .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
