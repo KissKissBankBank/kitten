@@ -18,6 +18,7 @@ const getCircleIcon = color =>
 
 const StyledCheckableButton = styled(Button)`
   &::after {
+    flex-shrink: 0;
     content: '';
     box-sizing: border-box;
     border-radius: 50%;
@@ -71,6 +72,7 @@ const StyledCheckableButton = styled(Button)`
     flex-direction: row-reverse;
     justify-content: flex-end;
     padding-left: 0;
+    text-align: left;
 
     &::after {
       margin: 0 ${pxToRem(15)};
@@ -113,41 +115,81 @@ const StyledCheckableButton = styled(Button)`
     --CheckableButton-checkMargin: ${pxToRem(20)};
   }
 
-  &.k-Button--lithium,
-  &.k-Button--hydrogen {
-    &:not(:disabled) {
-      &:hover,
-      &:focus {
-        border-color: ${COLORS.primary4};
-        background-color: ${COLORS.background1};
-        color: ${COLORS.primary1};
-
-        &:not([aria-checked])::after {
+  &.k-Button--andromeda {
+    &.k-Button--lithium,
+    &.k-Button--hydrogen {
+      &:not(:disabled) {
+        &:hover,
+        &:focus {
           border-color: ${COLORS.primary4};
+          background-color: ${COLORS.background1};
+          color: ${COLORS.primary1};
+
+          &:not([aria-checked])::after {
+            border-color: ${COLORS.primary4};
+          }
+        }
+
+        &:active {
+          border-color: ${COLORS.primary2};
+          background-color: ${COLORS.background1};
+          color: ${COLORS.primary2};
         }
       }
+    }
 
-      &:active {
-        border-color: ${COLORS.primary2};
-        background-color: ${COLORS.background1};
-        color: ${COLORS.primary2};
-      }
+    &:focus {
+      outline-offset: ${pxToRem(-2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
+
+    &[aria-checked]:focus {
+      outline: ${COLORS.primary1} solid ${pxToRem(2)};
+      border-color: ${COLORS.primary1};
+      color: ${COLORS.primary1};
     }
   }
 
-  &:focus {
-    outline-offset: ${pxToRem(-2)};
-  }
-  &:focus:not(:focus-visible) {
-    outline-color: transparent;
-  }
-  &:focus-visible {
-    outline-color: ${COLORS.primary4};
-  }
+  &.k-Button--orion {
+    &.k-Button--lithium,
+    &.k-Button--hydrogen {
+      &:not(:disabled) {
+        &:hover {
+          border-color: ${COLORS.primary4};
+          background-color: ${COLORS.background1};
+          color: ${COLORS.font1};
 
-  &[aria-checked]:focus {
-    outline: ${COLORS.primary1} solid ${pxToRem(2)};
-    border-color: ${COLORS.primary1};
+          &:not([aria-checked])::after {
+            border-color: ${COLORS.primary4};
+          }
+        }
+
+        &:focus {
+          border-color: ${COLORS.line1};
+          background-color: ${COLORS.background1};
+          color: ${COLORS.font1};
+        }
+
+        &[aria-checked] {
+          border-color: ${COLORS.primary1};
+          color: ${COLORS.font1}
+        }
+
+        &:active {
+          border-color: ${COLORS.primary2};
+          background-color: ${COLORS.background1};
+        }
+      }
+    }
+
+    &[aria-checked]:focus {
+      border-color: ${COLORS.primary1};
+    }
   }
 `
 

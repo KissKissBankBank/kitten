@@ -227,9 +227,12 @@ export { Text } from './components/typography/text'
 export { Title } from './components/typography/title'
 export { TitleWithStroke } from './components/typography/title-with-stroke'
 
-export { titleModifierStyles } from './components/typography/common/title-modifier-styles'
+export {
+  titleModifierStyles,
+  titleModifiersNames,
+  titleHelperModifierStyles,
+} from './components/typography/common/title-modifier-styles'
 export { modifierStyles as paragraphModifierStyles } from './components/typography/paragraph/helpers/modifier-styles'
-export { modifierStyles as titleHelperModifierStyles } from './components/typography/title/helpers/modifier-styles'
 
 // Uploaders
 export { BasicUploader } from './components/uploaders/basic-uploader'

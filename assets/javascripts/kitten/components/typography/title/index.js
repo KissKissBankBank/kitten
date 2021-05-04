@@ -1,10 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import { modifierStyles } from './helpers/modifier-styles'
+import {
+  titleModifierStyles,
+  titleModifiersNames
+} from '../common/title-modifier-styles'
 
 const StyledTitle = styled.span`
   --Title-css-color: ${COLORS.font1};
@@ -23,7 +26,7 @@ const StyledTitle = styled.span`
     font-style: italic;
   }
 
-  ${({ modifier }) => modifierStyles(modifier)}
+  ${titleModifierStyles('&.k-Title')}
 `
 
 export const Title = ({
@@ -39,9 +42,11 @@ export const Title = ({
     <StyledTitle
       as={tag}
       modifier={modifier}
-      className={classNames('k-Title', className, {
-        'k-Title--noMargin': noMargin,
-        'k-Title--italic': italic,
+      className={classNames('k-Title', className,
+        `k-Title--${modifier}`,
+        {
+          'k-Title--noMargin': noMargin,
+          'k-Title--italic': italic,
       })}
       style={{ '--Title-css-color': cssColor }}
       {...other}
@@ -62,15 +67,7 @@ Title.propTypes = {
   /**
     Title have seven modifiers. With different size depending on the device (desktop, tablet and mobile)
   */
-  modifier: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'tertiary',
-    'quaternary',
-    'quinary',
-    'senary',
-    'septenary',
-  ]),
+  modifier: PropTypes.oneOf(titleModifiersNames),
   /**
     Remove default margins of `title` attribut.
   */

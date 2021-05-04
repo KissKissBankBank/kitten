@@ -7,7 +7,7 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import {
   NUM_COLUMNS,
   CONTAINER_PADDING,
-  CONTAINER_PADDING_MOBILE,
+  CONTAINER_PADDING_THIN,
 } from '../../../constants/grid-config'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -59,8 +59,8 @@ const StyledHero = styled(
     }
 
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-      width: calc(100% + ${pxToRem(CONTAINER_PADDING_MOBILE * 2)});
-      margin-left: ${pxToRem(-CONTAINER_PADDING_MOBILE)};
+      width: calc(100% + ${pxToRem(CONTAINER_PADDING_THIN * 2)});
+      margin-left: ${pxToRem(-CONTAINER_PADDING_THIN)};
     }
   }
 
@@ -74,7 +74,7 @@ const StyledHero = styled(
 
     .k-Hero__content {
       @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-        margin-left: ${pxToRem(-CONTAINER_PADDING_MOBILE)};
+        margin-left: ${pxToRem(-CONTAINER_PADDING_THIN)};
       }
     }
 
@@ -104,7 +104,7 @@ const StyledHero = styled(
 
     .k-Hero__content {
       @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-        margin-right: ${pxToRem(-CONTAINER_PADDING_MOBILE)};
+        margin-right: ${pxToRem(-CONTAINER_PADDING_THIN)};
       }
     }
 

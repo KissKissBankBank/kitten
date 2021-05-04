@@ -51,7 +51,7 @@ var StyledInput = _styledComponents.default.input.withConfig({
 var StyledTextareaContainer = _styledComponents.default.div.withConfig({
   displayName: "text-input__StyledTextareaContainer",
   componentId: "sc-11wej6v-1"
-})(["position:relative;display:flex;textarea.k-Form-TextInput{height:initial;resize:vertical;line-height:1.3;&:disabled{resize:none;}padding-bottom:0;&.k-Form-TextInput--orion{padding:", " ", " 0;min-height:", ";@media (min-width:", "px){padding:", " ", " 0;min-height:", ";}}}.k-Form-TextInput__textareaGradient{position:absolute;left:", ";right:", ";bottom:", ";height:", ";background-image:linear-gradient( to bottom,rgba(255,255,255,0),", " );pointer-events:none;textarea.k-Form-TextInput:disabled + &{display:none;}}"], (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(60), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(25), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(10), _colorsConfig.default.background1);
+})(["position:relative;display:flex;textarea.k-Form-TextInput{height:initial;resize:vertical;line-height:1.3;&:disabled{resize:none;}padding-bottom:0;&.k-Form-TextInput--orion{padding:", " ", " 0;min-height:", ";border-radius:", ";@media (min-width:", "px){padding:", " ", " 0;min-height:", ";}}}.k-Form-TextInput__textareaGradient{position:absolute;left:", ";right:", ";bottom:", ";height:", ";background-image:linear-gradient( to bottom,rgba(255,255,255,0),", " );pointer-events:none;textarea.k-Form-TextInput:disabled + &{display:none;}}"], (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(4), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(25), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(10), _colorsConfig.default.background1);
 
 var TextInput = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TextInput, _PureComponent);
@@ -85,7 +85,7 @@ var TextInput = /*#__PURE__*/function (_PureComponent) {
 
       if (tag === 'textarea') {
         return /*#__PURE__*/_react.default.createElement(StyledTextareaContainer, {
-          className: (0, _classnames.default)('k-Form-TextInput__textareaContainer', "k-Form-TextInput__textareaContainer--".concat(variant))
+          className: (0, _classnames.default)('k-Form-TextInput__textareaContainer')
         }, /*#__PURE__*/_react.default.createElement(StyledInput, (0, _extends2.default)({
           ref: function ref(input) {
             return _this.input = input;

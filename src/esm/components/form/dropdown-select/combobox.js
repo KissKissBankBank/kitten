@@ -50,7 +50,9 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       openOnLoad = _ref.openOnLoad,
       uniqLabelOnSearch = _ref.uniqLabelOnSearch,
       menuZIndex = _ref.menuZIndex,
-      className = _ref.className;
+      className = _ref.className,
+      value = _ref.value,
+      _onBlur = _ref.onBlur;
 
   var _useState = useState([]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -73,6 +75,7 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
   };
 
   var initialSelectedItem = find(['value', defaultSelectedValue])(options);
+  var selectedItemByValue = find(['value', value])(flattenedOptions) || null;
 
   var onSelectedItemChange = function onSelectedItemChange(changes) {
     onChange(changes.selectedItem);
@@ -120,7 +123,8 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
     onSelectedItemChange: onSelectedItemChange,
     onInputValueChange: onInputValueChange,
     onIsOpenChange: onIsOpenChange,
-    initialIsOpen: openOnLoad
+    initialIsOpen: openOnLoad,
+    selectedItem: selectedItemByValue
   }),
       isOpen = _useCombobox.isOpen,
       getToggleButtonProps = _useCombobox.getToggleButtonProps,
@@ -130,7 +134,8 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       getMenuProps = _useCombobox.getMenuProps,
       highlightedIndex = _useCombobox.highlightedIndex,
       getItemProps = _useCombobox.getItemProps,
-      openMenu = _useCombobox.openMenu;
+      openMenu = _useCombobox.openMenu,
+      inputValue = _useCombobox.inputValue;
 
   useEffect(function () {
     getLabelProps && labelPropsGetter(getLabelProps);
@@ -182,7 +187,11 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
     onClick: function onClick() {
       return !isOpen && openMenu();
     }
-  }, getInputProps())), /*#__PURE__*/React.createElement("button", _extends({
+  }, getInputProps({
+    onBlur: function onBlur() {
+      _onBlur(find(['label', inputValue])(flattenedOptions) || null);
+    }
+  }))), /*#__PURE__*/React.createElement("button", _extends({
     className: "k-Form-DropdownCombobox__arrowButton",
     type: "button",
     "aria-label": comboboxButtonLabelText,
@@ -219,7 +228,7 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
   }) : /*#__PURE__*/React.createElement("li", {
     className: "k-Form-Dropdown__item",
     disabled: true
-  }, noResultText))));
+  }, noResultText || 'No result'))));
 };
 DropdownCombobox.defaultProps = {
   hideLabel: false,
@@ -234,6 +243,7 @@ DropdownCombobox.defaultProps = {
     return "".concat(item, " is now selected.");
   },
   onChange: function onChange() {},
+  onBlur: function onBlur() {},
   onInputChange: function onInputChange() {},
   onMenuClose: function onMenuClose() {},
   onMenuOpen: function onMenuOpen() {},

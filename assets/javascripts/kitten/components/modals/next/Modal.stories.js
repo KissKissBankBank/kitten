@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { text, boolean, number, select } from '@storybook/addon-knobs'
 import { Modal } from './index'
 import { Button } from '../../../components/buttons/button'
+import { SaveIcon } from '../../../components/icons/save-icon'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -34,7 +35,7 @@ const paragraphContainer = `
 `
 
 export default {
-  title: 'Modals/NEXT/Modal',
+  title: 'Modals/Modal/Next',
   component: Modal,
   subcomponents: {
     Title: Modal.Title,
@@ -49,8 +50,10 @@ export const OneButton = () => (
   <Modal
     trigger={<Button modifier="helium">Open</Button>}
     hasCloseButton={boolean('Has close button', true)}
-    size={select('Size', ['regular', 'big', 'huge'], 'regular')}
+    size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
+    variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
     zIndex={number('Overlay z-index', 110)}
+    headerTitle={text('headerTitle', null)}
   >
     {() => (
       <>
@@ -68,7 +71,9 @@ export const TwoButton = () => (
   <Modal
     trigger={<Button modifier="helium">Open</Button>}
     hasCloseButton={boolean('Has close button', true)}
-    size={select('Size', ['regular', 'big', 'huge'], 'regular')}
+    size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
+    variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
+    headerTitle={text('headerTitle', null)}
   >
     {() => (
       <>
@@ -93,7 +98,8 @@ export const WithState = () => {
       <Modal
         isOpen={showModal}
         hasCloseButton={boolean('Has close button', true)}
-        size={select('Size', ['regular', 'big', 'huge'], 'regular')}
+        size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
+        variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
         onClose={() => updateModalState(false)}
       >
         {() => (
@@ -143,8 +149,9 @@ export const Multi = () => {
 export const WithoutButton = () => (
   <Modal
     trigger={<Button modifier="helium">Open</Button>}
-    size={select('Size', ['regular', 'big', 'huge'], 'regular')}
+    size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
     zIndex={number('Overlay z-index', 110)}
+    variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
   >
     {() => (
       <>
@@ -162,8 +169,9 @@ export const FullSize = () => (
     trigger={<Button modifier="helium">Open</Button>}
     hasCloseButton={boolean('Has close button', true)}
     zIndex={number('Overlay z-index', 110)}
-    fullSizeTitle="Lorem ipsum dolor sit consectetuer"
-    fullSize={boolean('Has full size', true)}
+    variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
+    fullSizeTitle={text('fullSizeTitle', 'Lorem ipsum dolor sit consectetuer')}
+    fullSize
   >
     {() => (
       <>
@@ -171,6 +179,95 @@ export const FullSize = () => (
         <Modal.Paragraph>
           {text('content', `${paragraphContainer} ${paragraphContainer}`)}
         </Modal.Paragraph>
+        <Modal.Actions>
+          <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
+        </Modal.Actions>
+      </>
+    )}
+  </Modal>
+)
+
+const OrionHeaderTitle = () => {
+  return (
+    <p>
+      <strong>Hello world !</strong>
+      <br />
+      Hey
+    </p>
+  )
+}
+const OrionHeaderActions = ({close}) => (
+  <>
+    <Button
+      className="k-u-hidden@xs-down--important"
+      variant="orion"
+      modifier="helium"
+      type="button"
+      onClick={close}
+    >
+      <span>
+        <SaveIcon width="16" />
+      </span>
+      <span>Sauvegarder</span>
+    </Button>
+    <Button
+      className="k-u-hidden@s-up--important"
+      icon
+      variant="orion"
+      modifier="helium"
+      type="button"
+      onClick={close}
+      aria-label="Sauvegarder"
+    >
+      <SaveIcon width="16" />
+    </Button>
+  </>
+)
+
+export const ComplexWithOrion = () => (
+  <Modal
+    trigger={<Button modifier="helium">Open</Button>}
+    variant="orion"
+    headerTitle={<OrionHeaderTitle />}
+    headerActions={OrionHeaderActions}
+    size={select('Size', ['regular', 'big', 'huge', 'giant'], 'giant')}
+    variant={select('Variant', ['andromeda', 'orion', 'orion'])}
+  >
+    {() => (
+      <>
+        <Modal.Block className="k-u-background-color-background3">
+          {text('content', paragraphContainer)}
+        </Modal.Block>
+        <Modal.Paragraph align="left">
+          {text('content', paragraphContainer)}
+        </Modal.Paragraph>
+      </>
+    )}
+  </Modal>
+)
+
+export const CustomContentCols = () => (
+  <Modal
+    trigger={<Button modifier="helium">Open</Button>}
+    hasCloseButton={boolean('Has close button', true)}
+    size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
+    variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
+    zIndex={number('Overlay z-index', 110)}
+    headerTitle={text('headerTitle', null)}
+    contentCols={{
+      xxs: 12,
+      s: 10,
+      l: 8,
+      xl: 6,
+    }}
+  >
+    {() => (
+      <>
+        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Block className="k-u-background-color-background3">
+          {text('content', paragraphContainer)}
+        </Modal.Block>
+        <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
         <Modal.Actions>
           <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
         </Modal.Actions>

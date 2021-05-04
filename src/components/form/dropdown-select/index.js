@@ -57,12 +57,14 @@ var DropdownSelect = function DropdownSelect(_ref) {
       a11ySelectionMessageDisplayer = props.a11ySelectionMessageDisplayer,
       defaultSelectedValue = props.defaultSelectedValue,
       onChange = props.onChange,
+      onBlur = props.onBlur,
       onInputChange = props.onInputChange,
       onMenuClose = props.onMenuClose,
       onMenuOpen = props.onMenuOpen,
       openOnLoad = props.openOnLoad,
       menuZIndex = props.menuZIndex,
-      className = props.className;
+      className = props.className,
+      value = props.value;
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,
@@ -101,17 +103,21 @@ var DropdownSelect = function DropdownSelect(_ref) {
   }();
 
   var initialSelectedItem = (0, _find.default)(['value', defaultSelectedValue])(flattenedOptions);
+  var selectedItemByValue = (0, _find.default)(['value', value])(flattenedOptions);
 
   var onIsOpenChange = function onIsOpenChange(changes) {
     if (changes.isOpen) return onMenuOpen({
       changes: changes
     });
+    setTimeout(function () {
+      return onBlur(changes.selectedItem);
+    }, 0);
     return onMenuClose({
       changes: changes
     });
   };
 
-  var _useSelect = (0, _downshift.useSelect)({
+  var _useSelect = (0, _downshift.useSelect)((0, _extends2.default)({
     id: "".concat(id, "_element"),
     toggleButtonId: id,
     items: flattenedOptions,
@@ -121,7 +127,9 @@ var DropdownSelect = function DropdownSelect(_ref) {
     onSelectedItemChange: onSelectedItemChange,
     onIsOpenChange: onIsOpenChange,
     initialIsOpen: openOnLoad
-  }),
+  }, selectedItemByValue && {
+    selectedItem: selectedItemByValue
+  })),
       isOpen = _useSelect.isOpen,
       selectedItem = _useSelect.selectedItem,
       getToggleButtonProps = _useSelect.getToggleButtonProps,

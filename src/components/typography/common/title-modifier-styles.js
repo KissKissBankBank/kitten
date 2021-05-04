@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.titleModifierStyles = exports.titleModifiers = void 0;
+exports.titleHelperModifierStyles = exports.titleModifierStyles = exports.titleModifiers = exports.titleModifiersNames = void 0;
 
 var _styledComponents = require("styled-components");
 
@@ -11,6 +11,8 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../constants/screen-config");
 
+var titleModifiersNames = ['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary', 'septenary'];
+exports.titleModifiersNames = titleModifiersNames;
 var titleModifiers = [{
   name: 'primary',
   fontStepOnMobile: 7,
@@ -50,13 +52,19 @@ var titleModifiers = [{
 exports.titleModifiers = titleModifiers;
 
 var titleModifierStyles = function titleModifierStyles(prefix) {
-  return (0, _styledComponents.css)(["", " @media (min-width:", "){", "}@media (min-width:", "){", "}"], titleModifiers.map(function (key) {
-    return (0, _styledComponents.css)(["", "{font-size:", ";line-height:1.2;}"], "".concat(prefix, "--").concat(key.name), (0, _typography.stepToRem)(key.fontStepOnMobile));
-  }), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), titleModifiers.map(function (key) {
-    return (0, _styledComponents.css)(["", "{font-size:", ";}"], "".concat(prefix, "--").concat(key.name), (0, _typography.stepToRem)(key.fontStepOnTablet));
-  }), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), titleModifiers.map(function (key) {
-    return (0, _styledComponents.css)(["", "{font-size:", ";}"], "".concat(prefix, "--").concat(key.name), (0, _typography.stepToRem)(key.fontStepOnDesktop));
+  return (0, _styledComponents.css)(["", ""], titleModifiers.map(function (key, index) {
+    return (0, _styledComponents.css)(["", "{font-size:", ";line-height:1.2;@media (min-width:", "){font-size:", ";}@media (min-width:", "){font-size:", ";}}"], "".concat(prefix, "--").concat(titleModifiersNames[index]), (0, _typography.stepToRem)(key.fontStepOnMobile), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.stepToRem)(key.fontStepOnTablet), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.stepToRem)(key.fontStepOnDesktop));
   }));
 };
 
 exports.titleModifierStyles = titleModifierStyles;
+
+var titleHelperModifierStyles = function titleHelperModifierStyles(modifier) {
+  var modifierIndex = findIndex(function (item) {
+    return modifier === item;
+  })(titleModifiersNames);
+  var modifierDefinitions = titleModifiersNames[modifierIndex];
+  return (0, _styledComponents.css)(["font-size:", ";line-height:1.2;@media (min-width:", "){font-size:", ";}@media (min-width:", "){font-size:", ";}"], (0, _typography.stepToRem)(modifierDefinitions.fontStepOnMobile), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.stepToRem)(modifierDefinitions.fontStepOnTablet), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.stepToRem)(modifierDefinitions.fontStepOnDesktop));
+};
+
+exports.titleHelperModifierStyles = titleHelperModifierStyles;
