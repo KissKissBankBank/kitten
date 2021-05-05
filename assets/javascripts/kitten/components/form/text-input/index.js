@@ -96,7 +96,7 @@ const StyledInput = styled.input`
   // STATES
 
   :disabled {
-    color: ${COLORS.font2};
+    color: ${COLORS.font1};
     border-color: ${COLORS.line1};
     background-color: ${COLORS.line1};
     cursor: not-allowed;
