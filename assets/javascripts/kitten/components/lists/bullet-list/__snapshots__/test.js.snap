@@ -30,29 +30,29 @@ exports[`<BulletList /> default matches with snapshot 1`] = `
   content: '';
 }
 
-.c0 .k-BulletList__item--tiny .k-BulletList__item {
+.c0.k-BulletList--tiny .k-BulletList__item {
   font-size: 0.7901234567901234rem;
 }
 
-.c0 .k-BulletList__item--tiny .k-BulletList__item:before {
+.c0.k-BulletList--tiny .k-BulletList__item:before {
   width: 0.25rem;
   height: 0.25rem;
 }
 
-.c0 .k-BulletList__item--regular .k-BulletList__item {
+.c0.k-BulletList--regular .k-BulletList__item {
   font-size: 0.8888888888888888rem;
 }
 
-.c0 .k-BulletList__item--large .k-BulletList__item {
+.c0.k-BulletList--large .k-BulletList__item {
   font-size: 1rem;
 }
 
-.c0 .k-BulletList__item--big .k-BulletList__item {
+.c0.k-BulletList--big .k-BulletList__item {
   font-size: 1.125rem;
   margin: 0.625rem 0;
 }
 
-.c0 .k-BulletList__item--huge .k-BulletList__item {
+.c0.k-BulletList--huge .k-BulletList__item {
   font-size: 1.265625rem;
   margin: 0.625rem 0;
 }
