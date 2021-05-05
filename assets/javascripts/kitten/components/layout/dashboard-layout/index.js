@@ -51,6 +51,7 @@ const StyledDashboard = styled.div`
   .k-DashboardLayout {
     min-height: 100vh;
     display: grid;
+    background-color: ${COLORS.background1};
 
     .k-DashboardLayout__sideWrapper {
       background-color: ${COLORS.font1};
