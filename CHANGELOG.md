@@ -12,6 +12,7 @@ Feature:
 
 Fixes:
 
+- `k-BulletList`: Fix styles.
 - `Modal/Next`: Remove `className` console error.
 - `Modal/Next`: Fix `customContentCols` class condition.
 - `DashboardLayout`: Fix `DashboardLayout` background color.
