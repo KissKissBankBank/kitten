@@ -11,9 +11,9 @@ exports.Modal = exports.updateState = void 0;
 
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
 
@@ -28,6 +28,8 @@ var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecate
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _reactModal = _interopRequireDefault(require("react-modal"));
+
+var _isEmpty = _interopRequireDefault(require("lodash/fp/isEmpty"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
@@ -80,19 +82,18 @@ var ModalParagraph = function ModalParagraph(_ref2) {
   var children = _ref2.children,
       withoutMargin = _ref2.withoutMargin,
       className = _ref2.className,
-      align = _ref2.align;
-  return /*#__PURE__*/_react.default.createElement(StyledParagraph, {
+      align = _ref2.align,
+      tag = _ref2.tag,
+      props = (0, _objectWithoutProperties2.default)(_ref2, ["children", "withoutMargin", "className", "align", "tag"]);
+  return /*#__PURE__*/_react.default.createElement(StyledParagraph, (0, _extends2.default)({
     modifier: "tertiary",
-    style: {
-      textAlign: align
-    },
     noMargin: true,
-    tag: "p",
-    className: (0, _classnames.default)('k-ModalNext__paragraph', className, {
+    tag: tag || 'p',
+    className: (0, _classnames.default)('k-ModalNext__paragraph', className, "k-u-align-".concat(align), {
       'k-u-margin-bottom-triple': !withoutMargin,
       'k-u-margin-bottom-quadruple@s-up': !withoutMargin
     })
-  }, children);
+  }, props), children);
 };
 
 ModalParagraph.propTypes = {
@@ -226,7 +227,7 @@ var InnerModal = function InnerModal(_ref5) {
     '--Modal-headerZIndex': headerZIndex
   };
 
-  if (contentCols.length !== {}) {
+  if (!(0, _isEmpty.default)(contentCols)) {
     for (var _i = 0, _Object$entries = Object.entries(contentCols); _i < _Object$entries.length; _i++) {
       var _Object$entries$_i = (0, _slicedToArray2.default)(_Object$entries[_i], 2),
           key = _Object$entries$_i[0],
@@ -244,7 +245,7 @@ var InnerModal = function InnerModal(_ref5) {
     className: {
       base: (0, _classnames.default)('k-ModalNext__content', "k-ModalNext__content--".concat(size), "k-ModalNext__content--".concat(variant), {
         'k-ModalNext__content--fullSize': fullSize,
-        'k-ModalNext__content--customContentCols': contentCols.length !== {}
+        'k-ModalNext__content--customContentCols': !(0, _isEmpty.default)(contentCols)
       }),
       afterOpen: 'k-ModalNext--afterOpen',
       beforeClose: 'k-ModalNext--beforeClose'
@@ -317,7 +318,7 @@ var InnerModal = function InnerModal(_ref5) {
     onClick: close,
     closeButtonLabel: closeButtonLabel
   })), /*#__PURE__*/_react.default.createElement("div", {
-    class: "k-ModalNext__main"
+    className: "k-ModalNext__main"
   }, children({
     open: function open() {
       return dispatch(updateState(true));

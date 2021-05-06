@@ -4,11 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix styles for `k-BulletList`.
-- Fix: `DashboardLayout`: Fix `DashboardLayout` background color.
-- Feature: `Modal/Next`: Add `tag` prop on `Modal.Paragraph`.
-- Fix: `Modal/Next`: Remove `className` console error.
-- Fix: `Modal/Next`: Fix `customContentCols` class condition.
+## [3.9.0] - 2021-05-06
+
+Feature:
+
+- `Modal/Next`: Add `tag` prop on `Modal.Paragraph`.
+
+Fixes:
+
+- `k-BulletList`: Fix styles.
+- `Modal/Next`: Remove `className` console error.
+- `Modal/Next`: Fix `customContentCols` class condition.
+- `DashboardLayout`: Fix `DashboardLayout` background color.
 
 ## [3.8.0] - 2021-05-04
 
