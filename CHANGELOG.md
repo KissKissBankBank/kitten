@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `TextInput`: Fix `TextInput` set the placeholder color to disabled.
+- Fix: `TextInput`: Set the placeholder color to disabled.
 - Fix: `DashboardLayout`: Fix `DashboardLayout` background color.
 - Feature: `Modal/Next`: Add `tag` prop on `Modal.Paragraph`.
 - Fix: `Modal/Next`: Remove `className` console error.
