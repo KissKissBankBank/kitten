@@ -167,7 +167,7 @@ const StyledDropdownSelectWithInput = styled.div`
     font-size: ${stepToRem(-1)};
     color: ${COLORS.font1};
     appearance: none;
-    padding: 0 ${pxToRem(7)};
+    padding: 0 ${pxToRem(5 + 2)};
     border: none;
     background-color: transparent;
 
