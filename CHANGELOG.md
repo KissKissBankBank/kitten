@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `DropdownSelectWithInput`: Fix input padding.
+
 ## [3.9.0] - 2021-05-06
 
 Feature:

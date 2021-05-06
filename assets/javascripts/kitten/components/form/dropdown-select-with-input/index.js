@@ -67,7 +67,7 @@ const StyledDropdownSelectWithInput = styled.div`
     align-items: center;
     ${TYPOGRAPHY.fontStyles.light}
     color: ${COLORS.font1};
-    margin: 0 ${pxToRem(15)} 0 ${pxToRem(40)};
+    margin: 0 ${pxToRem(10)} 0 ${pxToRem(40)};
     font-size: ${pxToRem(-2)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
@@ -167,7 +167,7 @@ const StyledDropdownSelectWithInput = styled.div`
     font-size: ${stepToRem(-1)};
     color: ${COLORS.font1};
     appearance: none;
-    padding: 0;
+    padding: 0 ${pxToRem(7)};
     border: none;
     background-color: transparent;
 
