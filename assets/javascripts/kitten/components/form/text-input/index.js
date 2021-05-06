@@ -96,10 +96,14 @@ const StyledInput = styled.input`
   // STATES
 
   :disabled {
-    color: ${COLORS.font1};
+    color: ${COLORS.font2};
     border-color: ${COLORS.line1};
     background-color: ${COLORS.line1};
     cursor: not-allowed;
+
+    ::placeholder {
+      color: ${COLORS.line3};
+    }
   }
 
   &.k-Form-TextInput--valid {
