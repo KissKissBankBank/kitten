@@ -14,6 +14,7 @@ export const UserMenu = ({
   dropdownContentWidth,
   padding,
   closeEvents,
+  hasArrow,
   ...props
 }) => {
   const userDropdownRef = useRef(null)
@@ -26,8 +27,10 @@ export const UserMenu = ({
   })[0]
 
   const buttonClassName = classNames(
-    'k-HeaderNav__UserMenuButton',
-    { 'k-HeaderNav__UserMenuButton--nopadding': !padding },
+    'k-HeaderNav__UserMenuButton', {
+      'k-HeaderNav__UserMenuButton--hasArrow': hasArrow,
+      'k-HeaderNav__UserMenuButton--nopadding': !padding,
+    },
     props.className,
   )
 
@@ -44,6 +47,7 @@ export const UserMenu = ({
           closeOnOuterClick
           dropdownContent={navigation}
           dropdownContentWidth={dropdownContentWidth}
+          hasArrow={hasArrow}
           keepInitialButtonAction
           onToggle={callOnToggle}
           positionedHorizontallyWith={getElementById(getButtonId(id))}
@@ -63,12 +67,14 @@ UserMenu.propTypes = {
   ]),
   padding: PropTypes.bool,
   closeEvents: PropTypes.arrayOf(PropTypes.string),
+  hasArrow: PropTypes.bool,
 }
 
 UserMenu.defaultProps = {
   dropdownContentWidth: null,
   padding: true,
   closeEvents: [],
+  hasArrow: false,
 }
 
 UserMenu.Button = ({ children }) => <>{children}</>

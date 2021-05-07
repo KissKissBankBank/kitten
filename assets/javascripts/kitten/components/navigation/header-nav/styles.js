@@ -73,6 +73,10 @@ export const StyledHeader = styled.header`
     background-color: ${COLORS.background3};
   }
 
+  .k-Dropdown {
+    align-self: stretch;
+  }
+
   .k-HeaderNav__BurgerMenu__button {
     padding: 0 ${pxToRem(10)} 0 ${pxToRem(CONTAINER_PADDING_THIN)};
     height: 100%;
