@@ -12,7 +12,7 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
     Label
   </legend>
   <div
-    className="sc-bwzfXH hmdfLh k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
+    className="sc-bwzfXH hhhtmW k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -30,7 +30,7 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bwzfXH hmdfLh k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
+    className="sc-bwzfXH hhhtmW k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -47,7 +47,7 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bwzfXH hmdfLh k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
+    className="sc-bwzfXH hhhtmW k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -78,7 +78,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
     Label test
   </legend>
   <div
-    className="sc-bwzfXH hmdfLh k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
+    className="sc-bwzfXH hhhtmW k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -96,7 +96,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bwzfXH hmdfLh k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
+    className="sc-bwzfXH hhhtmW k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -113,7 +113,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bwzfXH hmdfLh k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
+    className="sc-bwzfXH hhhtmW k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -143,7 +143,7 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
     </h1>
   </legend>
   <div
-    className="sc-bwzfXH hmdfLh k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
+    className="sc-bwzfXH hhhtmW k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -161,7 +161,7 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bwzfXH hmdfLh k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
+    className="sc-bwzfXH hhhtmW k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -178,7 +178,7 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bwzfXH hmdfLh k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
+    className="sc-bwzfXH hhhtmW k-Form-Checkbox k-Form-Checkbox--andromeda k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"

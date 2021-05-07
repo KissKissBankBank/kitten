@@ -127,8 +127,12 @@ const StyledLabel = styled.label`
   transition: color ${transitionDuration} ease;
   cursor: pointer;
 
-  ::selection { background: transparent; }
-  ::-moz-selection { background: transparent; }
+  ::selection {
+    background: transparent;
+  }
+  ::-moz-selection {
+    background: transparent;
+  }
 
   ${StyledSwitchContainer}:hover & {
     color: ${COLORS.primary1};

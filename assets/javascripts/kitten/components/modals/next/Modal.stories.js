@@ -196,7 +196,7 @@ const OrionHeaderTitle = () => {
     </p>
   )
 }
-const OrionHeaderActions = ({close}) => (
+const OrionHeaderActions = ({ close }) => (
   <>
     <Button
       className="k-u-hidden@xs-down--important"

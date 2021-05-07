@@ -208,7 +208,10 @@ export const Toggletip = ({
   useEffect(() => {
     if (!domElementHelper.canUseDom()) return
 
-    if (document.readyState === "complete" || document.readyState === "interactive") {
+    if (
+      document.readyState === 'complete' ||
+      document.readyState === 'interactive'
+    ) {
       updateCoordinates()
     }
   }, [])

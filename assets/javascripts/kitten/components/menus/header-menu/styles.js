@@ -80,7 +80,6 @@ export const StyledList = styled.ul`
     &::before {
       display: none;
     }
-
   }
 
   .k-HeaderMenu__item--hasButton {
@@ -106,7 +105,6 @@ export const StyledList = styled.ul`
     }
   }
 
-
   &.k-HeaderMenu--hasBorderOnSide-left .k-HeaderMenu__item__link::before {
     left: ${pxToRem(-1)};
   }
@@ -114,7 +112,6 @@ export const StyledList = styled.ul`
   &.k-HeaderMenu--hasBorderOnSide-right .k-HeaderMenu__item__link::before {
     right: ${pxToRem(-1)};
   }
-
 
   &.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link {
     &:hover,
@@ -150,7 +147,7 @@ export const StyledList = styled.ul`
     }
 
     & + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
-        padding-top: ${pxToRem(5)};
+      padding-top: ${pxToRem(5)};
     }
   }
 
@@ -174,7 +171,9 @@ export const StyledList = styled.ul`
     color: ${COLORS.primary1};
   }
 
-  &.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link::before {
+  &.k-HeaderMenu--hasBorderOnSide
+    .k-HeaderMenu__item--isSelected
+    .k-HeaderMenu__item__link::before {
     width: ${pxToRem(4)};
     background-color: ${COLORS.primary1};
   }

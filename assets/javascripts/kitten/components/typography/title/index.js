@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import {
   titleModifierStyles,
-  titleModifiersNames
+  titleModifiersNames,
 } from '../common/title-modifier-styles'
 
 const StyledTitle = styled.span`
@@ -42,11 +42,9 @@ export const Title = ({
     <StyledTitle
       as={tag}
       modifier={modifier}
-      className={classNames('k-Title', className,
-        `k-Title--${modifier}`,
-        {
-          'k-Title--noMargin': noMargin,
-          'k-Title--italic': italic,
+      className={classNames('k-Title', className, `k-Title--${modifier}`, {
+        'k-Title--noMargin': noMargin,
+        'k-Title--italic': italic,
       })}
       style={{ '--Title-css-color': cssColor }}
       {...other}

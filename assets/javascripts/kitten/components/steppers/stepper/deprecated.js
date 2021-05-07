@@ -59,7 +59,6 @@ const StyledStepper = styled.nav`
         margin-bottom: 0;
       }
     }
-
   }
   .k-Stepper__list--alignStart .k-Stepper__item {
     margin: 0 ${pxToRem(20)} ${pxToRem((20 / 3) * 2)} 0;
@@ -80,7 +79,7 @@ const StyledStepper = styled.nav`
     text-decoration: none;
     cursor: pointer;
 
-    transition: .2s color;
+    transition: 0.2s color;
 
     &:hover {
       color: ${COLORS.primary1};

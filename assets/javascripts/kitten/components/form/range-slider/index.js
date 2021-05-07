@@ -11,8 +11,8 @@ import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledRangeSlider = styled.div`
   --range-thumb-position: calc(
-      ${pxToRem(20)} + var(--range-input-ratio) * (100% - (2 * ${pxToRem(20)}))
-    );
+    ${pxToRem(20)} + var(--range-input-ratio) * (100% - (2 * ${pxToRem(20)}))
+  );
   position: relative;
 
   &::before,
@@ -144,7 +144,6 @@ const StyledRangeSlider = styled.div`
     --range-thumb-position: calc(
       ${pxToRem(25)} + var(--range-input-ratio) * (100% - (2 * ${pxToRem(25)}))
     );
-
 
     &::before,
     &::after {

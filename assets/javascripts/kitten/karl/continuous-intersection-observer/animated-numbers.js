@@ -70,7 +70,7 @@ const NumberSpan = styled.span`
 
 const LegendBox = styled.span`
   display: block;
-  transition: transform .3s ease-in-out, opacity .3s ease;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease;
   ${({ transitionDelay, visibleElement }) => {
     if (transitionDelay && visibleElement === 'target') {
       return css`
@@ -81,20 +81,19 @@ const LegendBox = styled.span`
 
   transform: translateX(
     ${({ visibleElement }) => {
-      if (visibleElement === 'target') {
-        return '0'
-      }
-      if (visibleElement === 'after') {
-        return pxToRem(-100)
-      }
-      return pxToRem(100)
-    }});
+    if (visibleElement === 'target') {
+      return '0'
+    }
+    if (visibleElement === 'after') {
+      return pxToRem(-100)
+    }
+    return pxToRem(100)
+  }});
 
-  opacity:
-    ${({ visibleElement }) => {
-      if (visibleElement === 'target') return 1
-      return 0
-    }};
+  opacity: ${({ visibleElement }) => {
+    if (visibleElement === 'target') return 1
+    return 0
+  }};
 `
 
 const AnimatedNumberItem = ({
