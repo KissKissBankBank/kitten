@@ -23,12 +23,13 @@ const StyledNavBar = styled.div`
     display: flex;
     justify-content: center;
 
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}){
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       padding: 0 ${pxToRem(CONTAINER_PADDING)};
     }
 
-    &::before, &::after {
-      content: "";
+    &::before,
+    &::after {
+      content: '';
       flex-grow: 1;
     }
   }
@@ -45,7 +46,7 @@ const StyledNavBar = styled.div`
   .k-NavBar__listItem + .k-NavBar__listItem {
     margin-left: ${pxToRem(25)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}){
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       margin-left: ${pxToRem(50)};
     }
   }
@@ -58,16 +59,15 @@ const StyledNavBar = styled.div`
     text-decoration: none;
     text-align: center;
 
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     position: relative;
     color: ${({ colors }) => colors.link || COLORS.font1};
-    border-bottom: ${pxToRem(4)} solid ${({ colors }) =>
-  colors.border || 'transparent'};
-    transition: color .2s, border-color .2s;
+    border-bottom: ${pxToRem(4)} solid
+      ${({ colors }) => colors.border || 'transparent'};
+    transition: color 0.2s, border-color 0.2s;
     cursor: pointer;
 
     &:hover {
@@ -87,13 +87,13 @@ const StyledNavBar = styled.div`
     }
 
     &:focus,
-    &[aria-current="page"] {
+    &[aria-current='page'] {
       border-color: ${({ colors }) => colors.activeBorder || COLORS.primary1};
       color: ${({ colors }) => colors.activeLink || COLORS.primary1};
       border-width: ${pxToRem(4)};
     }
 
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}){
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       height: ${pxToRem(80)};
     }
   }
@@ -101,7 +101,7 @@ const StyledNavBar = styled.div`
   &.k-NavBar--big .k-NavBar__link {
     height: ${pxToRem(80)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}){
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       height: ${pxToRem(100)};
     }
   }

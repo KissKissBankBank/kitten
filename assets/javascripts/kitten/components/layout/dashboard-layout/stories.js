@@ -99,11 +99,11 @@ export const Default = () => {
       quickAccessLinkText="Accéder au contenu"
       fullHeightContent={selectedView === 'flow'}
     >
-      {boolean('Display SiteHeader', true) &&
+      {boolean('Display SiteHeader', true) && (
         <DashboardLayout.SiteHeader className="k-u-hidden@m-down">
           <SiteHeaderComponent />
         </DashboardLayout.SiteHeader>
-      }
+      )}
 
       <DashboardLayout.Header>
         <AvatarWithTextAndBadge>
@@ -419,7 +419,7 @@ const FlowExample = () => (
       </DashboardLayout.Flow.AsideCard>
     </DashboardLayout.Flow.Aside>
     <DashboardLayout.Flow.Nav>
-      {boolean('Show 2 buttons', true) &&
+      {boolean('Show 2 buttons', true) && (
         <Button
           modifier="hydrogen"
           variant="orion"
@@ -429,7 +429,7 @@ const FlowExample = () => (
         >
           Back
         </Button>
-      }
+      )}
       <Button
         modifier="helium"
         variant="orion"
@@ -467,94 +467,89 @@ const SiteHeaderComponent = () => {
   }, [windowWidth])
 
   return (
-      <HeaderNav
-        id={HEADER_NAV_ID}
-        isLogged={true}
-        isFixed="always"
-        quickAccessProps={{
-          href: '#mainContent',
-          text: 'Aller au contenu principal',
-          zIndex: 300,
-        }}
-        size="small"
-      >
-        <HeaderNav.Logo href="#">
-          <KissKissBankBankLogo height="25" className="k-u-margin-left-double" />
-        </HeaderNav.Logo>
+    <HeaderNav
+      id={HEADER_NAV_ID}
+      isLogged={true}
+      isFixed="always"
+      quickAccessProps={{
+        href: '#mainContent',
+        text: 'Aller au contenu principal',
+        zIndex: 300,
+      }}
+      size="small"
+    >
+      <HeaderNav.Logo href="#">
+        <KissKissBankBankLogo height="25" className="k-u-margin-left-double" />
+      </HeaderNav.Logo>
 
-        <HeaderNav.Right>
-          <HeaderNav.Logged>
-            <HeaderNav.UserMenu dropdownContentWidth={userMenuWidth} hasArrow>
-              <HeaderNav.UserMenu.Button>
-                <AvatarWithTextAndBadge>
-                  <AvatarWithTextAndBadge.Image src="https://via.placeholder.com/40x40.png">
-                    <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
-                  </AvatarWithTextAndBadge.Image>
+      <HeaderNav.Right>
+        <HeaderNav.Logged>
+          <HeaderNav.UserMenu dropdownContentWidth={userMenuWidth} hasArrow>
+            <HeaderNav.UserMenu.Button>
+              <AvatarWithTextAndBadge>
+                <AvatarWithTextAndBadge.Image src="https://via.placeholder.com/40x40.png">
+                  <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
+                </AvatarWithTextAndBadge.Image>
 
-                  <AvatarWithTextAndBadge.Text
-                    className="k-u-hidden@xs-down"
-                    withEllipsisOverflow={true}
-                  >
-                    <Text lineHeight="normal" weight="regular">
-                      Jean Charles Édouard
-                    </Text>
-                  </AvatarWithTextAndBadge.Text>
-                </AvatarWithTextAndBadge>
-              </HeaderNav.UserMenu.Button>
-
-              <HeaderNav.UserMenu.Navigation>
-                <HeaderMenu
-                  noBorder
-                  borderSide={false}
-                  backgroundColors={{
-                    hover: COLORS.background1,
-                  }}
+                <AvatarWithTextAndBadge.Text
+                  className="k-u-hidden@xs-down"
+                  withEllipsisOverflow={true}
                 >
-                  <HeaderMenu.Item href="#">Mon espace personnel</HeaderMenu.Item>
-                  <HeaderMenu.Item href="#">Mes projets</HeaderMenu.Item>
-                  <HeaderMenu.Item size="tiny" href="#">
-                    Gluten Mag
-                  </HeaderMenu.Item>
-                  <HeaderMenu.Item size="tiny" href="#">
-                    Kallix — Mobilier de bureau pour le télétravail
-                  </HeaderMenu.Item>
-                  <HeaderMenu.Item size="tiny" href="#">
-                    Mon premier court-métrage
-                  </HeaderMenu.Item>
-                  <HeaderMenu.Item href="#">Mes contributions</HeaderMenu.Item>
-                  <HeaderMenu.Item href="#">Mes messages</HeaderMenu.Item>
-                  <HeaderMenu.Item href="#">Modifier mon profil</HeaderMenu.Item>
-                  <HeaderMenu.Item button modifier="helium" href="#">
-                    Mon projet en cours
-                  </HeaderMenu.Item>
-                  <HeaderMenu.Item
-                    href="#"
-                    className="k-u-background-color-background3--important"
-                  >
-                    Déconnexion
-                  </HeaderMenu.Item>
-                </HeaderMenu>
-              </HeaderNav.UserMenu.Navigation>
-            </HeaderNav.UserMenu>
-          </HeaderNav.Logged>
+                  <Text lineHeight="normal" weight="regular">
+                    Jean Charles Édouard
+                  </Text>
+                </AvatarWithTextAndBadge.Text>
+              </AvatarWithTextAndBadge>
+            </HeaderNav.UserMenu.Button>
 
-          <HeaderNav.LoggedOut>
-            <HeaderNav.Button
-              icon={
-                <>
-                  🐱
-                </>
-              }
-              backgroundColor={COLORS.primary1}
-              backgroundColorHover={COLORS.primary2}
-              color={COLORS.background1}
-              text="Se connecter / S'inscrire"
-              href="#"
-              hiddenText={{ max: 'xs' }}
-            />
-          </HeaderNav.LoggedOut>
-        </HeaderNav.Right>
-      </HeaderNav>
+            <HeaderNav.UserMenu.Navigation>
+              <HeaderMenu
+                noBorder
+                borderSide={false}
+                backgroundColors={{
+                  hover: COLORS.background1,
+                }}
+              >
+                <HeaderMenu.Item href="#">Mon espace personnel</HeaderMenu.Item>
+                <HeaderMenu.Item href="#">Mes projets</HeaderMenu.Item>
+                <HeaderMenu.Item size="tiny" href="#">
+                  Gluten Mag
+                </HeaderMenu.Item>
+                <HeaderMenu.Item size="tiny" href="#">
+                  Kallix — Mobilier de bureau pour le télétravail
+                </HeaderMenu.Item>
+                <HeaderMenu.Item size="tiny" href="#">
+                  Mon premier court-métrage
+                </HeaderMenu.Item>
+                <HeaderMenu.Item href="#">Mes contributions</HeaderMenu.Item>
+                <HeaderMenu.Item href="#">Mes messages</HeaderMenu.Item>
+                <HeaderMenu.Item href="#">Modifier mon profil</HeaderMenu.Item>
+                <HeaderMenu.Item button modifier="helium" href="#">
+                  Mon projet en cours
+                </HeaderMenu.Item>
+                <HeaderMenu.Item
+                  href="#"
+                  className="k-u-background-color-background3--important"
+                >
+                  Déconnexion
+                </HeaderMenu.Item>
+              </HeaderMenu>
+            </HeaderNav.UserMenu.Navigation>
+          </HeaderNav.UserMenu>
+        </HeaderNav.Logged>
 
+        <HeaderNav.LoggedOut>
+          <HeaderNav.Button
+            icon={<>🐱</>}
+            backgroundColor={COLORS.primary1}
+            backgroundColorHover={COLORS.primary2}
+            color={COLORS.background1}
+            text="Se connecter / S'inscrire"
+            href="#"
+            hiddenText={{ max: 'xs' }}
+          />
+        </HeaderNav.LoggedOut>
+      </HeaderNav.Right>
+    </HeaderNav>
   )
 }

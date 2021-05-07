@@ -1,16 +1,7 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import COLORS from '../../../../constants/colors-config'
-import TYPOGRAPHY from '../../../../constants/typography-config'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import {
-  MOBILE_HEADER_HEIGHT,
-  TABLET_HEADER_HEIGHT,
-  DESKTOP_HEADER_HEIGHT,
-} from '../config'
-import { ScreenConfig } from '../../../../constants/screen-config'
 import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
 
 export const Button = ({
@@ -41,7 +32,7 @@ export const Button = ({
       buttonProps = { type: 'button' }
     } else {
       ButtonComponent = as
-      buttonProps = { }
+      buttonProps = {}
     }
   } else if (type === 'button') {
     ButtonComponent = 'button'
@@ -61,22 +52,18 @@ export const Button = ({
         '--HeaderMenu-Button-backgroundColorHover': backgroundColorHover,
         '--HeaderMenu-Button-color': color,
         '--HeaderMenu-Button-colorHover': colorHover,
-        ...style
+        ...style,
       }}
     >
-      {text && (
-        <span className={textClassName} />
-      )}
+      {text && <span className={textClassName} />}
 
       {icon &&
         React.cloneElement(icon, {
           'aria-hidden': true,
-      })}
+        })}
       {icon && a11yText && <VisuallyHidden>{a11yText}</VisuallyHidden>}
 
-      {text && (
-        <span className={textClassName}>{text}</span>
-      )}
+      {text && <span className={textClassName}>{text}</span>}
     </ButtonComponent>
   )
 }

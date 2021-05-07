@@ -27,7 +27,8 @@ export const UserMenu = ({
   })[0]
 
   const buttonClassName = classNames(
-    'k-HeaderNav__UserMenuButton', {
+    'k-HeaderNav__UserMenuButton',
+    {
       'k-HeaderNav__UserMenuButton--hasArrow': hasArrow,
       'k-HeaderNav__UserMenuButton--nopadding': !padding,
     },

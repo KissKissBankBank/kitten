@@ -37,7 +37,8 @@ export const StyledDashboard = styled.div`
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     .k-DashboardLayout__siteHeader {
-      &, & ~ .k-DashboardLayout {
+      &,
+      & ~ .k-DashboardLayout {
         --dashboardLayout-siteHeaderHeight: ${pxToRem(65)};
       }
     }
@@ -109,7 +110,7 @@ export const StyledDashboard = styled.div`
         transition: transform 0.3s ease-in-out;
 
         .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before {
-          opacity: .8;
+          opacity: 0.8;
           background-color: ${COLORS.font1};
           pointer-events: all;
         }
@@ -176,7 +177,7 @@ export const StyledDashboard = styled.div`
           flex: 1 0 auto;
 
           &::before {
-            content: "";
+            content: '';
             position: absolute;
             top: 0;
             left: ${pxToRem(-2)};
@@ -186,7 +187,8 @@ export const StyledDashboard = styled.div`
             opacity: 0;
             pointer-events: none;
             z-index: 100;
-            transition: background-color .2s ease-in-out, opacity .2s ease-in-out;
+            transition: background-color 0.2s ease-in-out,
+              opacity 0.2s ease-in-out;
           }
 
           &:not(.k-DashboardLayout__main--fullHeight) {
@@ -311,14 +313,15 @@ export const StyledDashboard = styled.div`
     line-height: 1;
     font-size: ${stepToRem(1)};
     text-decoration: none;
-    transition: opacity .2s ease, left .2s ease;
+    transition: opacity 0.2s ease, left 0.2s ease;
     transition-delay: 0, 0;
     opacity: 0;
 
-    &:focus, &:active {
+    &:focus,
+    &:active {
       left: 0;
       opacity: 1;
-      transition-delay: 0, .2s;
+      transition-delay: 0, 0.2s;
       outline: ${pxToRem(2)} solid ${COLORS.primary4};
     }
   }
@@ -333,7 +336,7 @@ export const StyledDashboard = styled.div`
     display: flex;
     align-items: center;
     color: ${COLORS.background1};
-    transition: color .2s ease, background-color .2s ease;
+    transition: color 0.2s ease, background-color 0.2s ease;
     ${TYPOGRAPHY.fontStyles.regular}
     font-size: ${stepToRem(-1)};
     line-height: 1.2;
@@ -351,6 +354,4 @@ export const StyledDashboard = styled.div`
       margin-left: ${pxToRem(15)};
     }
   }
-
-
 `

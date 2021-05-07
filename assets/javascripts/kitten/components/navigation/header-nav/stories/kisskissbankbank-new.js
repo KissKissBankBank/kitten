@@ -10,7 +10,6 @@ import { AvatarWithTextAndBadge } from '../../../../components/avatar/avatar-wit
 import domElementHelper from '../../../../helpers/dom/element-helper'
 import { useWindowWidth } from '../../../../helpers/utils/use-window-width-hook'
 import { useDeepCompareEffect } from '../../../../helpers/utils/use-deep-compare-effect-hook'
-import { ArrowIcon } from '../../../../components/icons/arrow-icon'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 const getElementById = id => document.getElementById(id)
@@ -85,7 +84,11 @@ const Navigation = () => (
   </>
 )
 
-export const KissKissBankBankHeaderNavStoryNew = ({ isLogged, isFixed, size }) => {
+export const KissKissBankBankHeaderNavStoryNew = ({
+  isLogged,
+  isFixed,
+  size,
+}) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const [userMenuWidth, setUserMenuWidth] = useState(null)
   const windowWidth = useWindowWidth()

@@ -121,8 +121,12 @@ export const StyledHeader = styled.header`
       outline-color: ${COLORS.primary4};
     }
 
-    &:hover, &:focus {
-      color: var(--HeaderMenu-Button-colorHover, var(--HeaderMenu-Button-color));
+    &:hover,
+    &:focus {
+      color: var(
+        --HeaderMenu-Button-colorHover,
+        var(--HeaderMenu-Button-color)
+      );
       background-color: var(--HeaderMenu-Button-backgroundColorHover);
     }
 

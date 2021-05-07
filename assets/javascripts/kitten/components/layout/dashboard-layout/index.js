@@ -14,12 +14,11 @@ import {
 import {
   DASHBOARD_HIDE_CONTENT_EVENT,
   DASHBOARD_SHOW_CONTENT_EVENT,
-  dispatchEvent
+  dispatchEvent,
 } from '../../../helpers/dom/events'
 
 import { BurgerIcon } from '../../../components/icons/burger-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
-import { LongArrowIcon } from '../../../components/icons/long-arrow-icon'
 
 import { Flow } from './flow'
 
@@ -161,7 +160,6 @@ export const DashboardLayout = ({
           'k-DashboardLayout--isOpen': isOpen,
         })}
       >
-
         <div
           ref={sideBarElement}
           tabIndex={-1}
@@ -283,12 +281,7 @@ const Header = ({
   )
 }
 
-const SiteHeader = ({
-  className,
-  children,
-  tag = 'div',
-  ...props
-}) => {
+const SiteHeader = ({ className, children, tag = 'div', ...props }) => {
   const SiteHeaderComponent = tag
 
   return (
