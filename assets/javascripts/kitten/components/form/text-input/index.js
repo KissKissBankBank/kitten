@@ -100,6 +100,10 @@ const StyledInput = styled.input`
     border-color: ${COLORS.line1};
     background-color: ${COLORS.line1};
     cursor: not-allowed;
+
+    ::placeholder {
+      color: ${COLORS.line3};
+    }
   }
 
   &.k-Form-TextInput--valid {

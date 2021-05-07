@@ -14,6 +14,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `colorHover`
   - `colorActive`
 - Feature: `DashboardLayout`: Add `DashboardLayout.SiteHeader` component.
+- Fix: `TextInput`: Set the placeholder color to disabled.
+- Fix: `DropdownSelectWithInput`: Fix input padding.
 
 ## [3.9.0] - 2021-05-06
 
