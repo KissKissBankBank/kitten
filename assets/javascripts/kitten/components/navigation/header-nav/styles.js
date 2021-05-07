@@ -97,6 +97,40 @@ export const StyledHeader = styled.header`
     }
   }
 
+  .k-HeaderNav__Button {
+    ${TYPOGRAPHY.fontStyles.regular}
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: ${pxToRem(10)};
+    height: 100%;
+    font-size: ${stepToRem(-1)};
+    color: var(--HeaderMenu-Button-color);
+    background-color: var(--HeaderMenu-Button-backgroundColor);
+    text-decoration: none;
+
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(-4)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
+
+    &:hover, &:focus {
+      color: var(--HeaderMenu-Button-colorHover, var(--HeaderMenu-Button-color));
+      background-color: var(--HeaderMenu-Button-backgroundColorHover);
+    }
+
+    .k-HeaderNav__Button__text:first-child {
+      margin-right: ${pxToRem(-10)}; /* gap compensation */
+    }
+  }
+
   .k-HeaderNav--right,
   .k-HeaderNav--centered {
     display: flex;
@@ -141,7 +175,6 @@ export const StyledHeader = styled.header`
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding: 0 ${pxToRem(40)};
     border: 0;
     font-size: ${stepToRem(-1)};
     line-height: normal;
@@ -166,7 +199,7 @@ export const StyledHeader = styled.header`
       align-self: center;
     }
 
-    @media (max-width: ${ScreenConfig.XXS.max}) {
+    @media (max-width: ${ScreenConfig.S.max}) {
       padding: 0 ${pxToRem(15)};
     }
 
