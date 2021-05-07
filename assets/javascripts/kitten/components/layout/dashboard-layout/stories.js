@@ -401,7 +401,7 @@ const FlowExample = () => (
       </DashboardLayout.Flow.AsideCard>
     </DashboardLayout.Flow.Aside>
     <DashboardLayout.Flow.Nav>
-      {boolean('Show 2 buttons', true) &&
+      {boolean('Show 2 buttons', true) && (
         <Button
           modifier="hydrogen"
           variant="orion"
@@ -411,7 +411,7 @@ const FlowExample = () => (
         >
           Back
         </Button>
-      }
+      )}
       <Button
         modifier="helium"
         variant="orion"

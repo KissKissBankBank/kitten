@@ -9,6 +9,4 @@ export default {
   },
 }
 
-export const Homepage = () => (
-  <HomePage />
-)
+export const Homepage = () => <HomePage />

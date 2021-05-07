@@ -93,7 +93,6 @@ const StyledDatePicker = styled.div`
       `}
       border-radius: 0;
 
-
       &.DayPicker-Day--today {
         ${TYPOGRAPHY.fontStyles.regular}
         ${({ styles }) => css`
@@ -106,7 +105,8 @@ const StyledDatePicker = styled.div`
 
         &:not(.DayPicker-Day--outside):not(.DayPicker-Day--disabled) {
           /* REGULAR STYLES */
-          &, &:hover {
+          &,
+          &:hover {
             ${({ styles }) => css`
               z-index: 15;
               background-color: ${styles.day.selected.backgroundColor};
@@ -133,8 +133,10 @@ const StyledDatePicker = styled.div`
           }
 
           /* START AND END STYLES */
-          &.DayPicker-Day--start, &.DayPicker-Day--end {
-            &, &:hover {
+          &.DayPicker-Day--start,
+          &.DayPicker-Day--end {
+            &,
+            &:hover {
               ${({ styles }) => css`
                 border: ${styles.day.selectedStartAndEnd.backgroundColor}
                   ${borderSize};

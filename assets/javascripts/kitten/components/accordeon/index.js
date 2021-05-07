@@ -19,7 +19,6 @@ const StyledAccordeon = styled.div`
     margin-top: ${pxToRem(15)};
   }
 
-
   .k-Accordeon__header {
     display: block;
 
@@ -89,7 +88,7 @@ const StyledAccordeon = styled.div`
   @media (prefers-reduced-motion: reduce) {
     &.k-Accordeon--isAnimated {
       .k-Accordeon__header,
-      .k-Accordeon__content{
+      .k-Accordeon__content {
         transition: none !important;
       }
     }
@@ -127,9 +126,8 @@ const StyledAccordeon = styled.div`
 
     .k-Accordeon__header {
       position: relative;
-      padding: ${pxToRem(25)} ${pxToRem(30 + 10 + 10)} ${pxToRem(25)} ${pxToRem(
-  30,
-)};
+      padding: ${pxToRem(25)} ${pxToRem(30 + 10 + 10)} ${pxToRem(25)}
+        ${pxToRem(30)};
       ${TYPOGRAPHY.fontStyles.regular}
 
       min-height: ${pxToRem(50)};

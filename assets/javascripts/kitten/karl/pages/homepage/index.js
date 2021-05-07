@@ -55,7 +55,7 @@ const StyledHomePage = styled.div`
     text-decoration: none;
     ${TYPOGRAPHY.fontStyles.regular}
     color: ${COLORS.font1};
-    transition: color .4s ease;
+    transition: color 0.4s ease;
 
     span {
       font-size: ${stepToRem(-2)};
@@ -70,13 +70,13 @@ const StyledHomePage = styled.div`
     &:hover,
     &:focus,
     &:active {
-      color: ${COLORS.primary2}
+      color: ${COLORS.primary2};
     }
 
     svg {
       vertical-align: center;
       fill: currentColor;
-      transition: fill .4s ease;
+      transition: fill 0.4s ease;
     }
   }
 `

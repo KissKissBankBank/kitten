@@ -25,8 +25,10 @@ export const Default = () => {
     const existingScript = document.getElementById('googlePlacesScript')
     if (!existingScript) {
       const script = document.createElement('script')
-      script.src =
-        `https://maps.googleapis.com/maps/api/js?key=${text('GOOGLE_PLACES_API_KEY', 'YOUR_KEY')}&libraries=places`
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${text(
+        'GOOGLE_PLACES_API_KEY',
+        'YOUR_KEY',
+      )}&libraries=places`
       script.id = 'googleMaps'
       document.body.appendChild(script)
 

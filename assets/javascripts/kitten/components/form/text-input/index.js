@@ -285,9 +285,7 @@ export class TextInput extends PureComponent {
     if (tag === 'textarea') {
       return (
         <StyledTextareaContainer
-          className={classNames(
-            'k-Form-TextInput__textareaContainer',
-          )}
+          className={classNames('k-Form-TextInput__textareaContainer')}
         >
           <StyledInput
             ref={input => (this.input = input)}

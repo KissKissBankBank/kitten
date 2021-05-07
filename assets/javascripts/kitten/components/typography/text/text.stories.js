@@ -24,7 +24,7 @@ const colorOptions = {
 
 const decorationOptions = { underline: 'underline', none: 'none' }
 
-const lineHeightOptions = { normal: 'normal', '1': '1', '1.3': '1.3' }
+const lineHeightOptions = { normal: 'normal', 1: '1', 1.3: '1.3' }
 
 const sizeOptions = {
   huge: 'huge',

@@ -18,10 +18,10 @@ const StyledNumberFormat = styled(({ iconSvg, ...others }) => (
   ${({ iconSvg }) =>
     iconSvg &&
     css`
-    background: transparent no-repeat;
-    background-image: url("data:image/svg+xml,${iconSvg}");
-    background-position: calc(100% - ${pxToRem(5)}) center;
-  `}
+      background: transparent no-repeat;
+      background-image: url('data:image/svg+xml,${iconSvg}');
+      background-position: calc(100% - ${pxToRem(5)}) center;
+    `}
 `
 
 export const Number = ({

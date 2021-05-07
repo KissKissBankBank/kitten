@@ -20,14 +20,15 @@ const StyledQuickNav = styled.a`
   line-height: 1;
   font-size: ${pxToRem(16)};
   text-decoration: none;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   transition-delay: 0, 0;
   opacity: 0;
 
-  &:focus, &:active {
+  &:focus,
+  &:active {
     left: 0;
     opacity: 1;
-    transition-delay: 0, .2s;
+    transition-delay: 0, 0.2s;
     outline: ${pxToRem(5)} auto -webkit-focus-ring-color;
   }
 `

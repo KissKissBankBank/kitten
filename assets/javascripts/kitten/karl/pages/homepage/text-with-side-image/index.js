@@ -57,21 +57,21 @@ const StyledTextWithSideImage = styled(Grid)`
 
     &::before {
       position: absolute;
-      content: "";
+      content: '';
       display: block;
       width: ${pxToRem(bulletSize)};
       height: ${pxToRem(bulletSize)};
       border-radius: 100%;
-      top: calc(.8 * ${stepToRem(0)});
+      top: calc(0.8 * ${stepToRem(0)});
       left: ${pxToRem(-5 - bulletSize)};
       background-color: ${COLORS.font1};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        top: calc(.8 * ${stepToRem(1)});
+        top: calc(0.8 * ${stepToRem(1)});
         left: ${pxToRem(-10 - bulletSize)};
       }
       @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        top: calc(.8 * ${stepToRem(2)});
+        top: calc(0.8 * ${stepToRem(2)});
       }
     }
 

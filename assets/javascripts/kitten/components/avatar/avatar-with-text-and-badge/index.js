@@ -83,7 +83,8 @@ const StyledWrapper = styled.div`
   }
 
   .k-Avatar__text--hasEllipsis {
-    &, & * {
+    &,
+    & * {
       max-width: 100%;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -112,18 +113,19 @@ const StyledWrapper = styled.div`
     height: var(--Avatar-height);
   }
 
-  a&, button&,
+  a&,
+  button&,
   &.k-Avatar__wrapper--isHoverable {
     cursor: pointer;
 
     .k-Avatar {
       opacity: 1;
-      transition: opacity .2s;
+      transition: opacity 0.2s;
     }
 
     &:hover .k-Avatar,
     &:focus .k-Avatar {
-      opacity: .8;
+      opacity: 0.8;
     }
   }
 `
