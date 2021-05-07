@@ -19,7 +19,7 @@ const weightOptions = {
 }
 
 export default {
-  title: 'Links/Link-list',
+  title: 'Links/LinkList',
   component: LinkList,
 }
 
