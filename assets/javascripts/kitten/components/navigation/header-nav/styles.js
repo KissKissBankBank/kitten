@@ -188,7 +188,6 @@ export const StyledHeader = styled.header`
       --UserMenu-Button-backgroundColor,
       ${COLORS.background3}
     );
-    transition: background-color 0.2s ease;
 
     .k-Badge {
       border-color: ${COLORS.background3};
@@ -202,7 +201,7 @@ export const StyledHeader = styled.header`
     .k-Avatar__text {
       color: ${COLORS.font1};
       color: var(--UserMenu-Button-color, ${COLORS.font1});
-      transition: color 0.2s ease;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
 
     .k-Avatar {
