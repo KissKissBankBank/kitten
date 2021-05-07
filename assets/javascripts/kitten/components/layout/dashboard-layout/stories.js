@@ -107,7 +107,17 @@ export const Default = () => {
 
       <DashboardLayout.Header>
         <AvatarWithTextAndBadge>
-          <AvatarWithTextAndBadge.Image src="/kitten.jpg" alt="" size="big" />
+          <AvatarWithTextAndBadge.Image
+            className="k-u-hidden@l-up"
+            src="/kitten.jpg"
+            alt=""
+          />
+          <AvatarWithTextAndBadge.Image
+            className="k-u-hidden@m-down"
+            src="/kitten.jpg"
+            alt=""
+            size="big"
+          />
 
           <AvatarWithTextAndBadge.Text
             withEllipsisOverflow
@@ -492,7 +502,7 @@ const SiteHeaderComponent = () => {
               backgroundColorActive={COLORS.line1}
             >
               <AvatarWithTextAndBadge>
-                <AvatarWithTextAndBadge.Image src="https://via.placeholder.com/40x40.png">
+                <AvatarWithTextAndBadge.Image src="/kitten.jpg">
                   <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
                 </AvatarWithTextAndBadge.Image>
 

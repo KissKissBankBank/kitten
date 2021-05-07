@@ -164,7 +164,7 @@ export const KissKissBankBankHeaderNavStoryNew = ({
               colorActive={COLORS.font1}
             >
               <AvatarWithTextAndBadge>
-                <AvatarWithTextAndBadge.Image src="https://via.placeholder.com/40x40.png">
+                <AvatarWithTextAndBadge.Image src="/kitten.jpg">
                   <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
                 </AvatarWithTextAndBadge.Image>
 
