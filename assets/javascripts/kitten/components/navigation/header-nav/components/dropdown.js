@@ -27,6 +27,7 @@ export const Dropdown = React.forwardRef(
       buttonContentOnCollapsed,
       buttonContentOnExpanded,
       buttonId,
+      buttonStyles,
       className,
       closeEvents,
       closeOnOuterClick,
@@ -316,12 +317,14 @@ export const Dropdown = React.forwardRef(
               id={buttonId}
               isExpanded={isExpandedState}
               onClick={handleButtonClick}
+              style={{...buttonStyles}}
             >
               {button}
               {hasArrow && (
                 <ArrowIcon
                   direction={isExpandedState ? 'top' : 'bottom'}
                   className="k-u-margin-left-single k-u-hidden@xs-down"
+                  color="currentColor"
                 />
               )}
             </DropdownButton>
@@ -332,6 +335,7 @@ export const Dropdown = React.forwardRef(
                 <ArrowIcon
                   direction={isExpandedState ? 'top' : 'bottom'}
                   className="k-u-margin-left-single k-u-hidden@xs-down"
+                  color="currentColor"
                 />
               )}
             </>

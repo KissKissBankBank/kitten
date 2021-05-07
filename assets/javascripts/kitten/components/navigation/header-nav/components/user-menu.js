@@ -14,7 +14,7 @@ export const UserMenu = ({
   dropdownContentWidth,
   padding,
   closeEvents,
-  hasArrow,
+  buttonProps,
   ...props
 }) => {
   const userDropdownRef = useRef(null)
@@ -25,6 +25,25 @@ export const UserMenu = ({
     children,
     type: UserMenu.Navigation,
   })[0]
+
+  const {
+    hasArrow,
+    backgroundColor,
+    backgroundColorHover,
+    backgroundColorActive,
+    color,
+    colorHover,
+    colorActive,
+  } = button.props
+
+  const buttonStyles = {
+    '--UserMenu-Button-backgroundColor': backgroundColor,
+    '--UserMenu-Button-backgroundColorHover': backgroundColorHover,
+    '--UserMenu-Button-backgroundColorActive': backgroundColorActive,
+    '--UserMenu-Button-color': color,
+    '--UserMenu-Button-colorHover': colorHover,
+    '--UserMenu-Button-colorActive': colorActive,
+  }
 
   const buttonClassName = classNames(
     'k-HeaderNav__UserMenuButton',
@@ -42,6 +61,7 @@ export const UserMenu = ({
           {...props}
           button={button}
           buttonClassName={buttonClassName}
+          buttonStyles={buttonStyles}
           buttonId={getButtonId(id)}
           className={DROPDOWN_CLASS}
           closeEvents={[CLOSE_EVENT, ...closeEvents]}

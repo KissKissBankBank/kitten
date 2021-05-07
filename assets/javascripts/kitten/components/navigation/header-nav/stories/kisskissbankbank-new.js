@@ -153,8 +153,16 @@ export const KissKissBankBankHeaderNavStoryNew = ({
         />
 
         <HeaderNav.Logged>
-          <HeaderNav.UserMenu dropdownContentWidth={userMenuWidth} hasArrow>
-            <HeaderNav.UserMenu.Button>
+          <HeaderNav.UserMenu dropdownContentWidth={userMenuWidth}>
+            <HeaderNav.UserMenu.Button
+              hasArrow
+              backgroundColor={COLORS.background1}
+              backgroundColorHover={COLORS.line1}
+              backgroundColorActive={COLORS.line1}
+              color={COLORS.font1}
+              colorHover={COLORS.primary1}
+              colorActive={COLORS.font1}
+            >
               <AvatarWithTextAndBadge>
                 <AvatarWithTextAndBadge.Image src="https://via.placeholder.com/40x40.png">
                   <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
