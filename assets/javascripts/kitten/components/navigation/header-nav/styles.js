@@ -40,19 +40,11 @@ export const StyledHeader = styled.header`
     width: 100%;
     overflow: hidden;
     box-sizing: border-box;
+    background: ${COLORS.background1};
 
-    &,
     .quickAccessLink {
-      height: ${pxToRem(MOBILE_HEADER_HEIGHT)};
       background: ${COLORS.background1};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        height: ${pxToRem(TABLET_HEADER_HEIGHT)};
-      }
-
-      @media (min-width: ${ScreenConfig.L.min}px) {
-        height: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
-      }
+      height: 100%;
     }
 
     &,
@@ -83,15 +75,10 @@ export const StyledHeader = styled.header`
 
   .k-HeaderNav__BurgerMenu__button {
     padding: 0 ${pxToRem(10)} 0 ${pxToRem(CONTAINER_PADDING_THIN)};
-    height: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+    height: 100%;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       padding: 0 ${pxToRem(15)} 0 ${pxToRem(CONTAINER_PADDING)};
-      height: ${pxToRem(TABLET_HEADER_HEIGHT)};
-    }
-
-    @media (min-width: ${ScreenConfig.L.min}px) {
-      height: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
     }
   }
 
@@ -193,6 +180,10 @@ export const StyledHeader = styled.header`
     }
   }
 
+  .k-HeaderNav__UserMenuButton--hasArrow {
+    padding-right: ${pxToRem(30)};
+  }
+
   .k-HeaderNav__UserMenuButton--nopadding {
     padding: 0;
   }
@@ -216,7 +207,6 @@ export const StyledHeader = styled.header`
     display: flex;
     align-items: center;
 
-    padding: 0 ${pxToRem(40)};
     border-top: ${pxToRem(4)} solid transparent;
 
     ${TYPOGRAPHY.fontStyles.regular};
@@ -247,6 +237,81 @@ export const StyledHeader = styled.header`
     }
   }
 
+  /* SIZES */
+  &.k-HeaderNav--small .k-HeaderNav {
+    height: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+
+    .k-HeaderNav__UserMenuButton {
+      padding: 0 ${pxToRem(15)};
+    }
+    .k-HeaderNav-nav__item {
+      padding: 0 ${pxToRem(15)};
+    }
+
+    .k-HeaderNav__Button--hasIcon {
+      min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+    }
+
+    .k-HeaderNav__Button--hasText {
+      .k-HeaderNav__Button__text {
+        &:first-child {
+          margin-left: ${pxToRem(15)};
+        }
+        &:last-child {
+          margin-right: ${pxToRem(15)};
+        }
+      }
+    }
+  }
+
+  &.k-HeaderNav--regular .k-HeaderNav {
+    height: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      height: ${pxToRem(TABLET_HEADER_HEIGHT)};
+    }
+
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      height: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
+    }
+
+    .k-HeaderNav__UserMenuButton {
+      padding: 0 ${pxToRem(40)};
+    }
+    .k-HeaderNav-nav__item {
+      padding: 0 ${pxToRem(40)};
+    }
+
+    .k-HeaderNav__Button--hasIcon {
+      min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        min-width: ${pxToRem(TABLET_HEADER_HEIGHT)};
+      }
+
+      @media (min-width: ${ScreenConfig.L.min}px) {
+        min-width: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
+      }
+    }
+
+    .k-HeaderNav__Button__text:first-child {
+      margin-left: ${pxToRem(30)};
+
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        margin-left: ${pxToRem(40)};
+      }
+    }
+
+    .k-HeaderNav__Button__text:last-child {
+      margin-right: ${pxToRem(30)};
+
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        margin-right: ${pxToRem(40)};
+      }
+    }
+  }
+
+  /* DROPDOWN */
   .k-Dropdown {
     display: flex;
   }
