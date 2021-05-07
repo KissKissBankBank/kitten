@@ -90,7 +90,7 @@ export const Default = () => {
     <DashboardLayout
       backLinkProps={{
         href: '#',
-        children: 'Retour',
+        children: 'Retour au site',
       }}
       buttonProps={{
         openLabel: 'Ouvrir le menu',

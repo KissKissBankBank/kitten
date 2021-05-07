@@ -68,6 +68,10 @@ const StyledDashboard = styled.div`
       display: block;
       height: var(--dashboardLayout-siteHeaderHeight);
       background: ${COLORS.background1};
+
+      & ~ .k-DashboardLayout .k-DashboardLayout__backLink {
+        display: none;
+      }
     }
   }
 
@@ -111,8 +115,7 @@ const StyledDashboard = styled.div`
       transform: translateX(calc(-1 * ${SIX_COLS} - ${pxToRem(2)}));
       transition: transform 0.3s ease-in-out;
 
-      .k-DashboardLayout__heading__button__text,
-      .k-DashboardLayout__backLink__text {
+      .k-DashboardLayout__heading__button__text {
         clip: rect(0 0 0 0);
         clip-path: inset(100%);
         height: ${pxToRem(1)};
@@ -143,18 +146,6 @@ const StyledDashboard = styled.div`
 
         & > :not(:last-child) {
           margin-bottom: ${pxToRem(30)};
-        }
-
-        .k-DashboardLayout__backLink {
-          flex: 0 0 ${pxToRem(40)};
-          width: ${pxToRem(40)};
-          height: ${pxToRem(40)};
-          background-color: ${COLORS.line3};
-          border-radius: ${pxToRem(6)};
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: background-color .2s ease;
         }
 
         .k-DashboardLayout__heading {
@@ -283,32 +274,6 @@ const StyledDashboard = styled.div`
           margin-bottom: ${pxToRem(30)};
         }
 
-        .k-DashboardLayout__backLink {
-          flex: 0 0 auto;
-          align-self: start;
-          display: inline-flex;
-          align-items: center;
-          color: ${COLORS.background1};
-          transition: color .2s ease;
-          ${TYPOGRAPHY.fontStyles.regular}
-          font-size: ${stepToRem(-1)};
-          line-height: 1.2;
-          text-decoration: none;
-
-          svg {
-            fill: currentColor;
-          }
-
-          &:hover {
-            color: ${COLORS.primary1};
-          }
-
-          .k-DashboardLayout__backLink__text {
-            margin-left: ${pxToRem(15)};
-          }
-        }
-
-
         .k-DashboardLayout__heading {
           flex: 0 1 auto;
         }
@@ -379,6 +344,37 @@ const StyledDashboard = styled.div`
       outline: ${pxToRem(2)} solid ${COLORS.primary4};
     }
   }
+
+  .k-DashboardLayout__backLink {
+    flex: 0 0 ${pxToRem(40)};
+    align-self: start;
+    height: ${pxToRem(40)};
+    padding: 0 ${pxToRem(15)};
+    background-color: ${COLORS.line3};
+    border-radius: ${pxToRem(6)};
+    display: flex;
+    align-items: center;
+    color: ${COLORS.background1};
+    transition: color .2s ease, background-color .2s ease;
+    ${TYPOGRAPHY.fontStyles.regular}
+    font-size: ${stepToRem(-1)};
+    line-height: 1.2;
+    text-decoration: none;
+
+    svg {
+      fill: currentColor;
+    }
+
+    &:hover {
+      color: ${COLORS.primary1};
+    }
+
+    .k-DashboardLayout__backLink__text {
+      margin-left: ${pxToRem(15)};
+    }
+  }
+
+
 `
 
 export const DashboardLayout = ({
@@ -531,15 +527,8 @@ export const DashboardLayout = ({
               backLinkProps.className,
             )}
           >
-            <LongArrowIcon
-              aria-hidden
-              className="k-u-hidden@m-down"
-              direction="left"
-              color={COLORS.background1}
-            />
             <ArrowIcon
               aria-hidden
-              className="k-u-hidden@l-up"
               direction="left"
               color={COLORS.background1}
             />
