@@ -23,7 +23,6 @@ export const StyledLinkBox = styled.a`
     outline-color: ${COLORS.primary4};
   }
 
-
   .k-LinkBox__link {
     display: flex;
     min-height: ${pxToRem(90)};

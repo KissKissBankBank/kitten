@@ -1,4 +1,3 @@
-import React from 'react'
 import { BusinessTakeover as BusinessTakeoverTemplate } from './business-takeover'
 import { FranchiseCreation as FranchiseCreationTemplate } from './franchise-creation'
 import { SmbsDevelopment as SmbsDevelopmentTemplate } from './smbs-development'

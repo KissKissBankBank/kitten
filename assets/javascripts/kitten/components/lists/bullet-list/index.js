@@ -64,21 +64,14 @@ const StyledBulletList = styled.ul`
 export const BulletList = ({ items, size, className, ...others }) => {
   return (
     <StyledBulletList
-      className={classNames(
-        'k-BulletList',
-        `k-BulletList--${size}`,
-        className,
-      )}
+      className={classNames('k-BulletList', `k-BulletList--${size}`, className)}
       {...others}
     >
       {items.map(({ item, key, ...itemOthers }) => (
         <li
           key={key}
           {...itemOthers}
-          className={classNames(
-            'k-BulletList__item',
-            itemOthers.className,
-          )}
+          className={classNames('k-BulletList__item', itemOthers.className)}
         >
           {item}
         </li>

@@ -82,7 +82,9 @@ export const titleModifierStyles = prefix => css`
 `
 
 export const titleHelperModifierStyles = modifier => {
-  const modifierIndex = findIndex(item => modifier === item)(titleModifiersNames)
+  const modifierIndex = findIndex(item => modifier === item)(
+    titleModifiersNames,
+  )
   const modifierDefinitions = titleModifiersNames[modifierIndex]
 
   return css`

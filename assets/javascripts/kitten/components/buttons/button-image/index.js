@@ -36,7 +36,6 @@ const StyledButtonImage = styled.button`
     outline-color: ${COLORS.primary4};
   }
 
-
   &.k-ButtonImage--tiny {
     width: ${pxToRem(30)};
     height: ${pxToRem(30)};

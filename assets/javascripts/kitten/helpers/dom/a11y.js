@@ -45,7 +45,7 @@ export const keyboardNavigation = (
   } = {},
 ) => {
   const currentElementIndex = elements.indexOf(document.activeElement)
-  const lastElementIndex = elements.length - 1
+  // const lastElementIndex = elements.length - 1
 
   if (currentElementIndex < 0) {
     return {

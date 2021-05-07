@@ -5,14 +5,7 @@ import { TextInput } from '../../../form/text-input'
 import { TextInputWithLimit } from '../../../form/text-input-with-limit'
 import { TextInputWithUnit } from '../../../form/text-input-with-unit'
 
-export const FieldInput = ({
-  limit,
-  unit,
-  noMargin,
-  className,
-  ...props
-}) => {
-
+export const FieldInput = ({ limit, unit, noMargin, className, ...props }) => {
   let Input = TextInput
 
   if (limit) {
@@ -25,16 +18,11 @@ export const FieldInput = ({
 
   return (
     <div
-      className={classNames('k-FieldInput',
-        className,
-        { 'k-u-margin-top-single': !noMargin },
-      )}
+      className={classNames('k-FieldInput', className, {
+        'k-u-margin-top-single': !noMargin,
+      })}
     >
-      <Input
-        limit={limit}
-        unit={unit}
-        {...props}
-      />
+      <Input limit={limit} unit={unit} {...props} />
     </div>
   )
 }

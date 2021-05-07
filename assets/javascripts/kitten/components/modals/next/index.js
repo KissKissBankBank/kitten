@@ -369,17 +369,27 @@ const ModalTitle = ({ children }) => (
   </Title>
 )
 
-const ModalParagraph = ({ children, withoutMargin, className, align, tag, ...props }) => (
+const ModalParagraph = ({
+  children,
+  withoutMargin,
+  className,
+  align,
+  tag,
+  ...props
+}) => (
   <StyledParagraph
     modifier="tertiary"
     noMargin
     tag={tag || 'p'}
-    className={classNames('k-ModalNext__paragraph', className,
+    className={classNames(
+      'k-ModalNext__paragraph',
+      className,
       `k-u-align-${align}`,
       {
-      'k-u-margin-bottom-triple': !withoutMargin,
-      'k-u-margin-bottom-quadruple@s-up': !withoutMargin,
-    })}
+        'k-u-margin-bottom-triple': !withoutMargin,
+        'k-u-margin-bottom-quadruple@s-up': !withoutMargin,
+      },
+    )}
     {...props}
   >
     {children}

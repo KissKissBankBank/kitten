@@ -195,12 +195,12 @@ export const ControlledInput = () => {
         value={value}
         defaultSelectedValue="focus"
         onChange={e => {
-          console.log('onChange', e)
+          console.warn('onChange', e)
           if (!e) return
 
           setValue(e.value)
         }}
-        onBlur={e => console.log('onBlur', e)}
+        onBlur={e => console.warn('onBlur', e)}
       />
       <Button
         className="k-u-margin-top-single"

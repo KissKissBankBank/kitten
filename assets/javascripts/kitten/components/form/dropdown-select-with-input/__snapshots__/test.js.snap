@@ -2,7 +2,7 @@
 
 exports[`<DropdownSelectWithInput /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bwzfXH hITxTM k-Form-DropdownSelectWithInput k-Form-DropdownSelectWithInput--isOpen"
+  className="sc-bwzfXH jzSPYH k-Form-DropdownSelectWithInput k-Form-DropdownSelectWithInput--isOpen"
   style={
     Object {
       "--menu-z-index": 1000,

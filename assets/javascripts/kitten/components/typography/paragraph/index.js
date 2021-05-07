@@ -23,11 +23,14 @@ const StyledParagraph = styled.p`
     font-style: italic;
   }
 
-  ${() => modifierList.map((modifier) => css`
-    &.k-Paragraph--${modifier} {
-      ${() => modifierStyles(modifier)}
-    }
-  `)}
+  ${() =>
+    modifierList.map(
+      modifier => css`
+        &.k-Paragraph--${modifier} {
+          ${() => modifierStyles(modifier)}
+        }
+      `,
+    )}
 `
 
 export const Paragraph = ({
@@ -43,13 +46,16 @@ export const Paragraph = ({
     <StyledParagraph
       as={tag}
       modifier={modifier}
-      className={classNames('k-Paragraph', className,
+      className={classNames(
+        'k-Paragraph',
+        className,
         `k-Paragraph--${modifier}`,
         {
-        'k-Paragraph--noMargin': noMargin,
-        'k-Paragraph--normalLineHeight': normalLineHeight,
-        'k-Paragraph--italic': italic,
-      })}
+          'k-Paragraph--noMargin': noMargin,
+          'k-Paragraph--normalLineHeight': normalLineHeight,
+          'k-Paragraph--italic': italic,
+        },
+      )}
       {...other}
     />
   )
