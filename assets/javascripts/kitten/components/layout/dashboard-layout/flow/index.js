@@ -107,7 +107,7 @@ const StyledFlow = styled.div`
 
   .k-DashboardLayout__flow__aside__content {
     position: sticky;
-    top: ${pxToRem(80)};
+    top: calc(${pxToRem(80)} + var(--dashboardLayout-siteHeaderHeight, 0));
     padding-bottom: ${pxToRem(40)};
 
     svg {

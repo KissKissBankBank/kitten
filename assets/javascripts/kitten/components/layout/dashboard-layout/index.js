@@ -41,6 +41,8 @@ const SIX_COLS = `(${ALL_COLS} / 2 + ${pxToRem(
 )})`
 
 const StyledDashboard = styled.div`
+  --dashboardLayout-siteHeaderHeight: 0px;
+
   position: relative;
   overscroll-behavior: none;
 
@@ -48,8 +50,32 @@ const StyledDashboard = styled.div`
     box-sizing: border-box;
   }
 
+  .k-DashboardLayout__siteHeader {
+    &,
+    & ~ .k-DashboardLayout__quickAccessLink {
+      display: none;
+    }
+  }
+
+  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    .k-DashboardLayout__siteHeader {
+      &, & ~ .k-DashboardLayout {
+        --dashboardLayout-siteHeaderHeight: ${pxToRem(65)};
+      }
+    }
+
+    .k-DashboardLayout__siteHeader {
+      display: block;
+      height: var(--dashboardLayout-siteHeaderHeight);
+      background: ${COLORS.background1};
+    }
+  }
+
   .k-DashboardLayout {
-    min-height: 100vh;
+    min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
+
     display: grid;
     background-color: ${COLORS.background1};
 
@@ -109,7 +135,7 @@ const StyledDashboard = styled.div`
       }
 
       .k-DashboardLayout__sideWrapper {
-        height: 100vh;
+        height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
         overflow-y: scroll;
         padding: ${pxToRem(30)};
         display: flex;
@@ -152,8 +178,8 @@ const StyledDashboard = styled.div`
         .k-DashboardLayout__heading {
           padding-left: ${pxToRem(CONTAINER_PADDING)};
           padding-right: ${pxToRem(CONTAINER_PADDING)};
-          height: ${pxToRem(80)};
-          flex: 0 0 ${pxToRem(80)};
+          height: ${pxToRem(65)};
+          flex: 0 0 ${pxToRem(65)};
           display: flex;
           align-items: center;
 
@@ -247,9 +273,9 @@ const StyledDashboard = styled.div`
       .k-DashboardLayout__sideWrapper {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
         position: sticky;
-        top: 0;
+        top: var(--dashboardLayout-siteHeaderHeight);
         overflow: scroll;
         padding: ${pxToRem(30)};
 
@@ -476,14 +502,22 @@ export const DashboardLayout = ({
 
   return (
     <StyledDashboard className="k-DashboardLayout__wrapper">
+      {renderComponentChildrenArray(
+        getReactElementsByType({
+          children: children,
+          type: SiteHeader,
+        }),
+      )}
+      <a className="k-DashboardLayout__quickAccessLink" href="#main">
+        {quickAccessLinkText}
+      </a>
+
       <div
         className={classNames('k-DashboardLayout', props.className, {
           'k-DashboardLayout--isOpen': isOpen,
         })}
       >
-        <a className="k-DashboardLayout__quickAccessLink" href="#main">
-          {quickAccessLinkText}
-        </a>
+
         <div
           ref={sideBarElement}
           tabIndex={-1}
@@ -564,7 +598,7 @@ export const DashboardLayout = ({
             {renderComponentArray(
               getReactElementsWithoutTypeArray({
                 children,
-                typeArray: [Header, SideContent, SideFooter],
+                typeArray: [SiteHeader, Header, SideContent, SideFooter],
               }),
             )}
           </main>
@@ -612,6 +646,24 @@ const Header = ({
   )
 }
 
+const SiteHeader = ({
+  className,
+  children,
+  tag = 'div',
+  ...props
+}) => {
+  const SiteHeaderComponent = tag
+
+  return (
+    <SiteHeaderComponent
+      className={classNames('k-DashboardLayout__siteHeader', className)}
+      {...props}
+    >
+      {children}
+    </SiteHeaderComponent>
+  )
+}
+
 const SideContent = ({ className, ...props }) => (
   <section
     className={classNames('k-DashboardLayout__navigation', className)}
@@ -645,6 +697,7 @@ Header.propTypes = {
   isOpen: PropTypes.bool,
 }
 
+DashboardLayout.SiteHeader = SiteHeader
 DashboardLayout.Header = Header
 DashboardLayout.SideContent = SideContent
 DashboardLayout.SideFooter = SideFooter

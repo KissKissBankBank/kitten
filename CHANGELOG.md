@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `HeaderNav`: Add `size` prop, accepts `regular` and `small`.
 - Feature: `HeaderNav.UserMenu`: Add `hasArrow` boolean prop.
+- Feature: `DashboardLayout`: Add `DashboardLayout.SiteHeader` component.
 
 ## [3.9.0] - 2021-05-06
 

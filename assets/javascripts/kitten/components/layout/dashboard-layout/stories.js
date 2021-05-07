@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { select, boolean } from '@storybook/addon-knobs'
 
@@ -24,9 +24,21 @@ import {
   PeopleIcon,
   StatsIcon,
   SpeechBubbleIcon,
+  HeaderNav,
+  HeaderMenu,
+  KissKissBankBankLogo,
+  domElementHelper,
 } from '../../..'
 
 import { Default as Table } from '../../tables/list-table/list-table.stories.js'
+
+import { useWindowWidth } from '../../../helpers/utils/use-window-width-hook'
+import { useDeepCompareEffect } from '../../../helpers/utils/use-deep-compare-effect-hook'
+
+const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
+const getElementById = id => document.getElementById(id)
+const getComputedWidthElement = id =>
+  domElementHelper.getComputedWidth(getElementById(id))
 
 const CardHolder = styled.div`
   display: grid;
@@ -87,6 +99,12 @@ export const Default = () => {
       quickAccessLinkText="Accéder au contenu"
       fullHeightContent={selectedView === 'flow'}
     >
+      {boolean('Display SiteHeader', true) &&
+        <DashboardLayout.SiteHeader className="k-u-hidden@m-down">
+          <SiteHeaderComponent />
+        </DashboardLayout.SiteHeader>
+      }
+
       <DashboardLayout.Header>
         <AvatarWithTextAndBadge>
           <AvatarWithTextAndBadge.Image src="/kitten.jpg" alt="" size="big" />
@@ -435,3 +453,108 @@ export const Flow = () => (
     <FlowExample />
   </FlowStoryContainer>
 )
+
+const SiteHeaderComponent = () => {
+  const [userMenuWidth, setUserMenuWidth] = useState(null)
+  const windowWidth = useWindowWidth()
+
+  useDeepCompareEffect(() => {
+    setTimeout(() => {
+      setUserMenuWidth(
+        getComputedWidthElement(`${HEADER_NAV_ID}UserMenu`) || '0',
+      )
+    }, 100)
+  }, [windowWidth])
+
+  return (
+      <HeaderNav
+        id={HEADER_NAV_ID}
+        isLogged={true}
+        isFixed="always"
+        quickAccessProps={{
+          href: '#mainContent',
+          text: 'Aller au contenu principal',
+          zIndex: 300,
+        }}
+        size="small"
+      >
+        <HeaderNav.Logo href="#">
+          <KissKissBankBankLogo height="25" className="k-u-margin-left-double" />
+        </HeaderNav.Logo>
+
+        <HeaderNav.Right>
+          <HeaderNav.Logged>
+            <HeaderNav.UserMenu dropdownContentWidth={userMenuWidth} hasArrow>
+              <HeaderNav.UserMenu.Button>
+                <AvatarWithTextAndBadge>
+                  <AvatarWithTextAndBadge.Image src="https://via.placeholder.com/40x40.png">
+                    <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
+                  </AvatarWithTextAndBadge.Image>
+
+                  <AvatarWithTextAndBadge.Text
+                    className="k-u-hidden@xs-down"
+                    withEllipsisOverflow={true}
+                  >
+                    <Text lineHeight="normal" weight="regular">
+                      Jean Charles Édouard
+                    </Text>
+                  </AvatarWithTextAndBadge.Text>
+                </AvatarWithTextAndBadge>
+              </HeaderNav.UserMenu.Button>
+
+              <HeaderNav.UserMenu.Navigation>
+                <HeaderMenu
+                  noBorder
+                  borderSide={false}
+                  backgroundColors={{
+                    hover: COLORS.background1,
+                  }}
+                >
+                  <HeaderMenu.Item href="#">Mon espace personnel</HeaderMenu.Item>
+                  <HeaderMenu.Item href="#">Mes projets</HeaderMenu.Item>
+                  <HeaderMenu.Item size="tiny" href="#">
+                    Gluten Mag
+                  </HeaderMenu.Item>
+                  <HeaderMenu.Item size="tiny" href="#">
+                    Kallix — Mobilier de bureau pour le télétravail
+                  </HeaderMenu.Item>
+                  <HeaderMenu.Item size="tiny" href="#">
+                    Mon premier court-métrage
+                  </HeaderMenu.Item>
+                  <HeaderMenu.Item href="#">Mes contributions</HeaderMenu.Item>
+                  <HeaderMenu.Item href="#">Mes messages</HeaderMenu.Item>
+                  <HeaderMenu.Item href="#">Modifier mon profil</HeaderMenu.Item>
+                  <HeaderMenu.Item button modifier="helium" href="#">
+                    Mon projet en cours
+                  </HeaderMenu.Item>
+                  <HeaderMenu.Item
+                    href="#"
+                    className="k-u-background-color-background3--important"
+                  >
+                    Déconnexion
+                  </HeaderMenu.Item>
+                </HeaderMenu>
+              </HeaderNav.UserMenu.Navigation>
+            </HeaderNav.UserMenu>
+          </HeaderNav.Logged>
+
+          <HeaderNav.LoggedOut>
+            <HeaderNav.Button
+              icon={
+                <>
+                  🐱
+                </>
+              }
+              backgroundColor={COLORS.primary1}
+              backgroundColorHover={COLORS.primary2}
+              color={COLORS.background1}
+              text="Se connecter / S'inscrire"
+              href="#"
+              hiddenText={{ max: 'xs' }}
+            />
+          </HeaderNav.LoggedOut>
+        </HeaderNav.Right>
+      </HeaderNav>
+
+  )
+}
