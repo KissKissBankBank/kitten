@@ -184,15 +184,22 @@ export const StyledHeader = styled.header`
     font-size: ${stepToRem(-1)};
     line-height: normal;
     background-color: ${COLORS.background3};
-    background-color: var(--UserMenu-Button-backgroundColor, ${COLORS.background3});
+    background-color: var(
+      --UserMenu-Button-backgroundColor,
+      ${COLORS.background3}
+    );
     transition: background-color 0.2s ease;
 
     .k-Badge {
       border-color: ${COLORS.background3};
-      border-color: var(--UserMenu-Button-backgroundColor, ${COLORS.background3});
+      border-color: var(
+        --UserMenu-Button-backgroundColor,
+        ${COLORS.background3}
+      );
     }
 
-    &, .k-Avatar__text {
+    &,
+    .k-Avatar__text {
       color: ${COLORS.font1};
       color: var(--UserMenu-Button-color, ${COLORS.font1});
       transition: color 0.2s ease;
@@ -209,14 +216,21 @@ export const StyledHeader = styled.header`
     &:hover {
       cursor: pointer;
       background-color: ${COLORS.line1};
-      background-color: var(--UserMenu-Button-backgroundColorHover, ${COLORS.line1});
+      background-color: var(
+        --UserMenu-Button-backgroundColorHover,
+        ${COLORS.line1}
+      );
 
       .k-Badge {
         border-color: ${COLORS.line1};
-        border-color: var(--UserMenu-Button-backgroundColorHover, ${COLORS.line1});
+        border-color: var(
+          --UserMenu-Button-backgroundColorHover,
+          ${COLORS.line1}
+        );
       }
 
-      &, .k-Avatar__text {
+      &,
+      .k-Avatar__text {
         color: ${COLORS.font1};
         color: var(--UserMenu-Button-colorHover, ${COLORS.font1});
       }
@@ -227,14 +241,21 @@ export const StyledHeader = styled.header`
     &,
     &:hover {
       background-color: ${COLORS.background1};
-      background-color: var(--UserMenu-Button-backgroundColorActive, ${COLORS.background1});
+      background-color: var(
+        --UserMenu-Button-backgroundColorActive,
+        ${COLORS.background1}
+      );
 
       .k-Badge {
         border-color: ${COLORS.background1};
-        border-color: var(--UserMenu-Button-backgroundColorActive, ${COLORS.background1});
+        border-color: var(
+          --UserMenu-Button-backgroundColorActive,
+          ${COLORS.background1}
+        );
       }
 
-      &, .k-Avatar__text {
+      &,
+      .k-Avatar__text {
         color: ${COLORS.font1};
         color: var(--UserMenu-Button-colorActive, ${COLORS.font1});
       }

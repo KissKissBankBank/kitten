@@ -317,7 +317,7 @@ export const Dropdown = React.forwardRef(
               id={buttonId}
               isExpanded={isExpandedState}
               onClick={handleButtonClick}
-              style={{...buttonStyles}}
+              style={{ ...buttonStyles }}
             >
               {button}
               {hasArrow && (
