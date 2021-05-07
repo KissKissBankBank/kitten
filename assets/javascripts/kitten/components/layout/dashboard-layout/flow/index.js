@@ -22,7 +22,7 @@ const StyledFlow = styled.div`
   min-height: 100%;
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    min-height: 100vh;
+    min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-columns: 1fr 20vw;
