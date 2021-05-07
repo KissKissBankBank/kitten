@@ -10,8 +10,9 @@ import { ScreenConfig } from '../../../constants/screen-config'
 const StyledRadioButton = styled.div`
   margin: ${pxToRem(10)} 0;
 
-  &, & * {
-    transition: all .2s ease;
+  &,
+  & * {
+    transition: all 0.2s ease;
   }
 
   /* label block */
@@ -41,7 +42,7 @@ const StyledRadioButton = styled.div`
     border: ${pxToRem(2)} solid ${COLORS.line1};
     border-radius: 50%;
 
-    transition: border .2s, background .2s;
+    transition: border 0.2s, background 0.2s;
   }
 
   /* Hide input */
@@ -59,10 +60,12 @@ const StyledRadioButton = styled.div`
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
   }
-  .k-Form-RadioButton__input:focus:not(:focus-visible) + .k-Form-RadioButton__label::before {
+  .k-Form-RadioButton__input:focus:not(:focus-visible)
+    + .k-Form-RadioButton__label::before {
     outline-color: transparent;
   }
-  .k-Form-RadioButton__input:focus-visible + .k-Form-RadioButton__label::before {
+  .k-Form-RadioButton__input:focus-visible
+    + .k-Form-RadioButton__label::before {
     outline-color: ${COLORS.primary4};
   }
 
@@ -76,7 +79,8 @@ const StyledRadioButton = styled.div`
     .k-Form-RadioButton__label::before {
       border-color: ${COLORS.error3};
     }
-    .k-Form-RadioButton__input:checked:not(:disabled) + .k-Form-RadioButton__label::before {
+    .k-Form-RadioButton__input:checked:not(:disabled)
+      + .k-Form-RadioButton__label::before {
       border-color: ${COLORS.error};
     }
   }
@@ -91,7 +95,6 @@ const StyledRadioButton = styled.div`
     & + .k-Form-RadioButton__label::before {
       background-color: ${COLORS.line1};
       border-color: ${COLORS.line2};
-
     }
     &:checked + .k-Form-RadioButton__label::before {
       background-color: ${COLORS.background1};
@@ -252,7 +255,9 @@ const StyledRadioButton = styled.div`
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 8' width='11' height='8' fill='%23fff' %3E%3Cpath d='M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z' /%3E%3C/svg%3E");
     }
 
-    &.k-Form-RadioButton--error .k-Form-RadioButton__input:checked:not(:disabled) + .k-Form-RadioButton__label::before {
+    &.k-Form-RadioButton--error
+      .k-Form-RadioButton__input:checked:not(:disabled)
+      + .k-Form-RadioButton__label::before {
       background-color: ${COLORS.error};
     }
 

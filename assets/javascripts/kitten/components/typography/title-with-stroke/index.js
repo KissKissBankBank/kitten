@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
 import {
@@ -62,12 +62,15 @@ export const TitleWithStroke = ({
 
   return (
     <StyledTitleWithStroke
-      className={classNames('k-TitleWithStroke', className,
+      className={classNames(
+        'k-TitleWithStroke',
+        className,
         `k-TitleWithStroke--${modifier}`,
         `k-TitleWithStroke--align-${align}`,
         {
-        'k-TitleWithStroke--italic': italic,
-      })}
+          'k-TitleWithStroke--italic': italic,
+        },
+      )}
       style={{ '--TitleWithStroke-css-color': cssColor }}
       {...other}
     >

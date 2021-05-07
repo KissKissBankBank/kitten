@@ -69,7 +69,9 @@ export default {
 
 export const OldModal = () => (
   <Marger top="2">
-    <p className="k-u-weight-light">This Modal will be deprecated in the future.</p>
+    <p className="k-u-weight-light">
+      This Modal will be deprecated in the future.
+    </p>
 
     <Modal
       closeButtonLabel="Fermer"

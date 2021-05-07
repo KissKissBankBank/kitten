@@ -13,20 +13,21 @@ const StyledHorizontalTimeline = styled.dl`
   margin: 0;
   white-space: initial;
 
-  grid-template-columns: [col-start] repeat(var(--HorizontalTimeline-columnsCount), 1fr) [col-end] ${pxToRem(
-    18,
-  )};
+  grid-template-columns:
+    [col-start] repeat(var(--HorizontalTimeline-columnsCount), 1fr)
+    [col-end] ${pxToRem(18)};
   grid-template-rows: 1fr [row-center] ${pxToRem(14)} [row-center-end] 1fr;
 
   grid-gap: ${pxToRem(10)} 0;
 
-  .k-HorizontalTimeline__year, .k-HorizontalTimeline__block {
+  .k-HorizontalTimeline__year,
+  .k-HorizontalTimeline__block {
     padding: 0;
     margin: 0;
   }
 
   .k-HorizontalTimeline__year:nth-of-type(even),
-  .k-HorizontalTimeline__block:nth-of-type(odd){
+  .k-HorizontalTimeline__block:nth-of-type(odd) {
     grid-row: 1 / span 1;
     align-self: end;
   }
@@ -85,7 +86,7 @@ const StyledHorizontalTimeline = styled.dl`
 
   .k-HorizontalTimeline__block:nth-of-type(even)::before,
   .k-HorizontalTimeline__block:nth-of-type(odd)::after {
-    content: "";
+    content: '';
     display: block;
     height: ${pxToRem(20)};
     width: ${pxToRem(2)};
@@ -122,7 +123,7 @@ const StyledHorizontalTimeline = styled.dl`
   .k-HorizontalTimeline__ellipsis,
   .k-HorizontalTimeline__ellipsis::before,
   .k-HorizontalTimeline__ellipsis::after {
-    content: "";
+    content: '';
     background-color: ${COLORS.primary4};
     height: ${pxToRem(4)};
     width: ${pxToRem(4)};

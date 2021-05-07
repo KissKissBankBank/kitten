@@ -37,7 +37,6 @@ const StyledDropdownSelectWithInput = styled.div`
     }
   }
 
-
   .k-Form-DropdownSelectWithInput__label--isHidden:not(:focus):not(:active) {
     clip: rect(0 0 0 0);
     clip-path: inset(100%);
@@ -67,7 +66,7 @@ const StyledDropdownSelectWithInput = styled.div`
     align-items: center;
     ${TYPOGRAPHY.fontStyles.light}
     color: ${COLORS.font1};
-    margin: 0 ${pxToRem(15)} 0 ${pxToRem(40)};
+    margin: 0 ${pxToRem(10)} 0 ${pxToRem(40)};
     font-size: ${pxToRem(-2)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
@@ -104,10 +103,12 @@ const StyledDropdownSelectWithInput = styled.div`
       max-height: ${pxToRem(17)};
     }
 
-    svg[fill], svg [fill] {
+    svg[fill],
+    svg [fill] {
       fill: currentColor;
     }
-    svg[stroke], svg [stroke] {
+    svg[stroke],
+    svg [stroke] {
       stroke: currentColor;
     }
 
@@ -123,7 +124,6 @@ const StyledDropdownSelectWithInput = styled.div`
       }
     }
   }
-
 
   .k-Form-DropdownSelectWithInput__button__arrowBox {
     position: absolute;
@@ -167,7 +167,7 @@ const StyledDropdownSelectWithInput = styled.div`
     font-size: ${stepToRem(-1)};
     color: ${COLORS.font1};
     appearance: none;
-    padding: 0;
+    padding: 0 ${pxToRem(5 + 2)};
     border: none;
     background-color: transparent;
 
@@ -217,7 +217,7 @@ const StyledDropdownSelectWithInput = styled.div`
   .k-Form-DropdownSelectWithInput__item {
     display: flex;
     align-items: center;
-    transition: background-color .2s ease;
+    transition: background-color 0.2s ease;
     box-sizing: border-box;
     padding: ${pxToRem(15)};
     color: ${COLORS.font1};
@@ -232,7 +232,7 @@ const StyledDropdownSelectWithInput = styled.div`
       min-height: ${pxToRem(50)};
     }
 
-    &[aria-selected="true"] {
+    &[aria-selected='true'] {
       background-color: ${COLORS.background3};
     }
 
@@ -250,7 +250,7 @@ const StyledDropdownSelectWithInput = styled.div`
 
     svg {
       display: block;
-      max-width:100%;
+      max-width: 100%;
     }
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -267,7 +267,7 @@ const StyledDropdownSelectWithInput = styled.div`
     .k-Form-DropdownSelectWithInput__container,
     .k-Form-DropdownSelectWithInput__list {
       border-color: ${COLORS.line2};
-      }
+    }
 
     .k-Form-DropdownSelectWithInput__button:focus,
     .k-Form-DropdownSelectWithInput__input:focus {
@@ -282,11 +282,12 @@ const StyledDropdownSelectWithInput = styled.div`
     .k-Form-DropdownSelectWithInput__input:focus-visible {
       outline-color: ${COLORS.primary4};
     }
-
   }
 
-  &.k-Form-DropdownSelectWithInput--error .k-Form-DropdownSelectWithInput__input,
-  &.k-Form-DropdownSelectWithInput--valid .k-Form-DropdownSelectWithInput__input {
+  &.k-Form-DropdownSelectWithInput--error
+    .k-Form-DropdownSelectWithInput__input,
+  &.k-Form-DropdownSelectWithInput--valid
+    .k-Form-DropdownSelectWithInput__input {
     padding-right: ${pxToRem(24 + 10)};
   }
 
@@ -322,7 +323,7 @@ const StyledDropdownSelectWithInput = styled.div`
   }
 
   &.k-Form-DropdownSelectWithInput--isOpen {
-    .k-Form-DropdownSelectWithInput__container{
+    .k-Form-DropdownSelectWithInput__container {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }

@@ -17,13 +17,14 @@ const StyledPillNumberInput = styled.div`
   padding: 0 ${pxToRem(10)};
   border: 2px solid ${COLORS.line1};
   border-radius: ${pxToRem(20)};
-  transition: border-color .2s ease;
+  transition: border-color 0.2s ease;
 
   &:hover {
     border-color: ${COLORS.line2};
   }
 
-  &, & * {
+  &,
+  & * {
     box-sizing: border-box;
   }
 
@@ -68,7 +69,7 @@ const StyledPillNumberInput = styled.div`
     cursor: pointer;
 
     svg {
-      transition: fill .2s ease;
+      transition: fill 0.2s ease;
     }
 
     &:hover svg {

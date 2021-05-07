@@ -26,7 +26,7 @@ const StyledCheckbox = styled.div`
   .k-Form-Checkbox__label {
     flex-basis: calc(100% - ${pxToRem(20 + 10)});
     cursor: pointer;
-    transition: color .2s;
+    transition: color 0.2s;
     ${TYPOGRAPHY.fontStyles.light}
 
     &:active {
@@ -47,7 +47,7 @@ const StyledCheckbox = styled.div`
     background-color: ${COLORS.background1};
     border: ${pxToRem(2)} solid ${COLORS.line1};
     cursor: pointer;
-    transition: border-color .2s, background-color .2s;
+    transition: border-color 0.2s, background-color 0.2s;
 
     &:focus {
       border-color: ${COLORS.primary1};
@@ -110,7 +110,7 @@ const StyledCheckbox = styled.div`
     ${TYPOGRAPHY.fontStyles.regular}
     color: ${COLORS.primary1};
     text-decoration: none;
-    transition: color .2s;
+    transition: color 0.2s;
 
     &:hover {
       color: ${COLORS.primary3};

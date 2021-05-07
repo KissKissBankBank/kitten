@@ -100,6 +100,10 @@ const StyledInput = styled.input`
     border-color: ${COLORS.line1};
     background-color: ${COLORS.line1};
     cursor: not-allowed;
+
+    ::placeholder {
+      color: ${COLORS.line3};
+    }
   }
 
   &.k-Form-TextInput--valid {
@@ -281,9 +285,7 @@ export class TextInput extends PureComponent {
     if (tag === 'textarea') {
       return (
         <StyledTextareaContainer
-          className={classNames(
-            'k-Form-TextInput__textareaContainer',
-          )}
+          className={classNames('k-Form-TextInput__textareaContainer')}
         >
           <StyledInput
             ref={input => (this.input = input)}

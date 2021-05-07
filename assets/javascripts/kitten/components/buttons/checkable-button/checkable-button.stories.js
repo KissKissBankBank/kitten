@@ -19,8 +19,12 @@ export const IsCheckable = () => {
                 ['micro', 'tiny', 'regular', 'big', 'huge', 'giant'],
                 'regular',
               )}
-              variant={select('Variant', ['andromeda','orion'], 'andromeda')}
-              checkPosition={select('Check Position', ['bottom','left'], 'bottom')}
+              variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
+              checkPosition={select(
+                'Check Position',
+                ['bottom', 'left'],
+                'bottom',
+              )}
               disabled={boolean('Disabled', false)}
               error={boolean('Error', false)}
               isChecked={boolean('Checked', false)}
@@ -38,8 +42,12 @@ export const IsCheckable = () => {
                 ['micro', 'tiny', 'regular', 'big', 'huge', 'giant'],
                 'regular',
               )}
-              variant={select('Variant', ['andromeda','orion'], 'andromeda')}
-              checkPosition={select('Check Position', ['bottom','left'], 'bottom')}
+              variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
+              checkPosition={select(
+                'Check Position',
+                ['bottom', 'left'],
+                'bottom',
+              )}
               disabled={boolean('Disabled', false)}
               error={boolean('Error', false)}
               isChecked={buttonIsChecked}
@@ -47,9 +55,7 @@ export const IsCheckable = () => {
             >
               {text('Text', 'MyButton')}
             </CheckableButton>
-            <p className="k-u-weight-light k-u-size-micro">
-              Clickable button
-            </p>
+            <p className="k-u-weight-light k-u-size-micro">Clickable button</p>
           </GridCol>
         </Grid>
       </Container>

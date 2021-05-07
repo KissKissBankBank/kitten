@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Button } from '../../../components/buttons/button'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { checkedCircleIconAsString } from '../../icons/checked-circle-icon'
 import { encodeSvgString } from '../../../helpers/utils/encode-svg'
 import COLORS from '../../../constants/colors-config'
@@ -33,7 +33,6 @@ const StyledCheckableButton = styled(Button)`
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
-
   }
 
   &.k-CheckableButton--bottom,
@@ -177,7 +176,7 @@ const StyledCheckableButton = styled(Button)`
 
         &[aria-checked] {
           border-color: ${COLORS.primary1};
-          color: ${COLORS.font1}
+          color: ${COLORS.font1};
         }
 
         &:active {
@@ -193,7 +192,14 @@ const StyledCheckableButton = styled(Button)`
   }
 `
 
-export const CheckableButton = ({ checkPosition, isChecked, className, children, error, ...props }) => {
+export const CheckableButton = ({
+  checkPosition,
+  isChecked,
+  className,
+  children,
+  error,
+  ...props
+}) => {
   const checkedModifier = (() => {
     switch (true) {
       case error:

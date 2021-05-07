@@ -142,23 +142,19 @@ const Wrapper = styled.div`
   }
 `
 
-const MobileAsideComponent = ({
-  children,
-  openLabel,
-  closeLabel,
-}) => {
+const MobileAsideComponent = ({ children, openLabel, closeLabel }) => {
   const [shouldHideButton, setButtonAsHidden] = useState(false)
 
   useEffect(() => {
-    if(!domElementHelper.canUseDom()) return
+    if (!domElementHelper.canUseDom()) return
 
     window.addEventListener(DASHBOARD_HIDE_CONTENT_EVENT, hideButton)
     window.addEventListener(DASHBOARD_SHOW_CONTENT_EVENT, showButton)
 
-    return (() => {
+    return () => {
       window.removeEventListener(DASHBOARD_HIDE_CONTENT_EVENT, hideButton)
       window.removeEventListener(DASHBOARD_SHOW_CONTENT_EVENT, showButton)
-    })
+    }
   }, [])
 
   const hideButton = () => {

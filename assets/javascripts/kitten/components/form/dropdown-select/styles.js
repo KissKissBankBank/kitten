@@ -112,7 +112,6 @@ export const StyledDropdown = styled.div`
     line-height: 0;
   }
 
-
   .k-Form-Dropdown__list {
     box-sizing: border-box;
     position: absolute;
@@ -143,7 +142,7 @@ export const StyledDropdown = styled.div`
   }
 
   .k-Form-Dropdown__item {
-    transition: background-color .2s ease;
+    transition: background-color 0.2s ease;
     box-sizing: border-box;
     padding: ${pxToRem(15)};
     min-height: ${pxToRem(50)};
@@ -155,7 +154,7 @@ export const StyledDropdown = styled.div`
     display: flex;
     align-items: center;
 
-    &[aria-selected="true"] {
+    &[aria-selected='true'] {
       background-color: ${COLORS.background3};
     }
 
@@ -237,7 +236,6 @@ export const StyledDropdown = styled.div`
       color: ${COLORS.font2};
     }
   }
-
 
   /* VARIANT: ANDROMEDA */
 
@@ -376,7 +374,6 @@ export const StyledDropdown = styled.div`
           right: ${pxToRem(60 + 10)};
         }
 
-
         &.k-Form-Dropdown--error,
         &.k-Form-Dropdown--valid {
           .k-Form-DropdownCombobox,
@@ -400,7 +397,6 @@ export const StyledDropdown = styled.div`
       }
     }
   }
-
 
   /* VARIANT: ORION */
 
@@ -440,7 +436,6 @@ export const StyledDropdown = styled.div`
         margin-left: ${pxToRem(30 + 10)};
       }
     }
-
 
     .k-Form-Dropdown__list {
       box-shadow: 0 ${pxToRem(5)} ${pxToRem(5)} 0 rgba(0, 0, 0, 0.1);
@@ -571,9 +566,9 @@ export const StyledDropdown = styled.div`
     &.k-Form-Dropdown--isOpen {
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0;
-        }
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
     }
   }
 `

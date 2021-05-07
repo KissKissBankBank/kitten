@@ -1,6 +1,6 @@
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
 
 var _templateObject;
@@ -11,6 +11,7 @@ import PropTypes from 'prop-types';
 import deprecated from 'prop-types-extra/lib/deprecated';
 import classNames from 'classnames';
 import ReactModal from 'react-modal';
+import isEmpty from 'lodash/fp/isEmpty';
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { CloseButton } from '../../../components/buttons/close-button';
 import { Button, ICON_TINY } from '../../../components/buttons/button';
@@ -49,19 +50,19 @@ var ModalParagraph = function ModalParagraph(_ref2) {
   var children = _ref2.children,
       withoutMargin = _ref2.withoutMargin,
       className = _ref2.className,
-      align = _ref2.align;
-  return /*#__PURE__*/React.createElement(StyledParagraph, {
+      align = _ref2.align,
+      tag = _ref2.tag,
+      props = _objectWithoutProperties(_ref2, ["children", "withoutMargin", "className", "align", "tag"]);
+
+  return /*#__PURE__*/React.createElement(StyledParagraph, _extends({
     modifier: "tertiary",
-    style: {
-      textAlign: align
-    },
     noMargin: true,
-    tag: "p",
-    className: classNames('k-ModalNext__paragraph', className, {
+    tag: tag || 'p',
+    className: classNames('k-ModalNext__paragraph', className, "k-u-align-".concat(align), {
       'k-u-margin-bottom-triple': !withoutMargin,
       'k-u-margin-bottom-quadruple@s-up': !withoutMargin
     })
-  }, children);
+  }, props), children);
 };
 
 ModalParagraph.propTypes = {
@@ -193,7 +194,7 @@ var InnerModal = function InnerModal(_ref5) {
     '--Modal-headerZIndex': headerZIndex
   };
 
-  if (contentCols.length !== {}) {
+  if (!isEmpty(contentCols)) {
     for (var _i = 0, _Object$entries = Object.entries(contentCols); _i < _Object$entries.length; _i++) {
       var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
           key = _Object$entries$_i[0],
@@ -211,7 +212,7 @@ var InnerModal = function InnerModal(_ref5) {
     className: {
       base: classNames('k-ModalNext__content', "k-ModalNext__content--".concat(size), "k-ModalNext__content--".concat(variant), {
         'k-ModalNext__content--fullSize': fullSize,
-        'k-ModalNext__content--customContentCols': contentCols.length !== {}
+        'k-ModalNext__content--customContentCols': !isEmpty(contentCols)
       }),
       afterOpen: 'k-ModalNext--afterOpen',
       beforeClose: 'k-ModalNext--beforeClose'
@@ -284,7 +285,7 @@ var InnerModal = function InnerModal(_ref5) {
     onClick: close,
     closeButtonLabel: closeButtonLabel
   })), /*#__PURE__*/React.createElement("div", {
-    class: "k-ModalNext__main"
+    className: "k-ModalNext__main"
   }, children({
     open: function open() {
       return dispatch(updateState(true));

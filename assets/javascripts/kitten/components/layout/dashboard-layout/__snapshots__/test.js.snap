@@ -1068,8 +1068,8 @@ button:hover .c1 {
   font-size: 1.125rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: opacity .2s ease,left .2s ease;
-  transition: opacity .2s ease,left .2s ease;
+  -webkit-transition: opacity 0.2s ease,left 0.2s ease;
+  transition: opacity 0.2s ease,left 0.2s ease;
   -webkit-transition-delay: 0,0;
   transition-delay: 0,0;
   opacity: 0;
@@ -1079,8 +1079,8 @@ button:hover .c1 {
 .c0 .k-DashboardLayout__quickAccessLink:active {
   left: 0;
   opacity: 1;
-  -webkit-transition-delay: 0,.2s;
-  transition-delay: 0,.2s;
+  -webkit-transition-delay: 0,0.2s;
+  transition-delay: 0,0.2s;
   outline: 0.125rem solid #bae8fd;
 }
 
@@ -1126,7 +1126,7 @@ button:hover .c1 {
   }
 
   .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before {
-    opacity: .8;
+    opacity: 0.8;
     background-color: #222;
     pointer-events: all;
   }
@@ -1168,8 +1168,8 @@ button:hover .c1 {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-transition: background-color .2s ease;
-    transition: background-color .2s ease;
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {
@@ -1250,7 +1250,7 @@ button:hover .c1 {
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: -0.125rem;
@@ -1260,8 +1260,8 @@ button:hover .c1 {
     opacity: 0;
     pointer-events: none;
     z-index: 100;
-    -webkit-transition: background-color .2s ease-in-out,opacity .2s ease-in-out;
-    transition: background-color .2s ease-in-out,opacity .2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out,opacity 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out,opacity 0.2s ease-in-out;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
@@ -1342,8 +1342,8 @@ button:hover .c1 {
     -ms-flex-align: center;
     align-items: center;
     color: #fff;
-    -webkit-transition: color .2s ease;
-    transition: color .2s ease;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
     font-family: Maax,Helvetica,Arial,sans-serif;
     font-weight: 500;
     font-size: 0.8888888888888888rem;
