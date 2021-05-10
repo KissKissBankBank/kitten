@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Header } from './header'
 import { Content } from './content'
-import { getReactElementsByType } from '../../../helpers/react/react-elements'
+import { getReactElementsByType } from '../../../../../helpers/react/react-elements'
 
 export const Item = ({ children, id, index }) => {
   const header = getReactElementsByType({ children, type: Header })

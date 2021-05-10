@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Button from './button'
-import { Details } from '../../../components/details'
+import { Details } from '../../../components/molecules/expand/details'
 import { ParagraphIcon } from '../../../components/graphics/icons/paragraph-icon'
 import { Title1Icon } from '../../../components/graphics/icons/title-1-icon'
 import { Title2Icon } from '../../../components/graphics/icons/title-2-icon'

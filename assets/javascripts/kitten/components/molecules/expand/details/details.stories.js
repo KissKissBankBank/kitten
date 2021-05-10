@@ -1,11 +1,13 @@
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
 import { Details } from './index'
-import { Container } from '../grid/container'
-import { Grid, GridCol } from '../grid/grid'
-import { Text } from '../atoms/typography/text'
+import {
+  Container,
+  Grid, GridCol,
+  Text,
+  COLORS,
+} from '../../../..'
 import styled from 'styled-components'
-import COLORS from '../../constants/colors-config'
 
 const Link = styled(Text)`
   transition: color 0.4s;

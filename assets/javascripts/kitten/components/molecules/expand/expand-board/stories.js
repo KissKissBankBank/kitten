@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { text, number, boolean } from '@storybook/addon-knobs'
-import { ExpandBoard } from '../../../components/expandable/expand-board'
-import { ExpandBoardWithButtonItemList } from '../../../components/expandable/expand-board/examples'
-import { Grid, GridCol } from '../../../components/grid/grid'
-import COLORS from '../../../constants/colors-config'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { ExpandBoard } from './index'
+import { ExpandBoardWithButtonItemList } from './examples'
+import {
+  Grid,
+  GridCol,
+  COLORS,
+  pxToRem,
+} from '../../../..'
 
 const StyledContainer = styled.div`
   margin: ${pxToRem(30)};
@@ -36,7 +39,7 @@ const radiusBottomBorderRange = {
 
 export default {
   component: ExpandBoard,
-  title: 'Expandable/ExpandBoard',
+  title: 'Molecules/Expand/ExpandBoard',
 }
 
 export const Default = () => (
@@ -52,7 +55,7 @@ export const Default = () => (
             {text('Button text', 'KissKissBankBank & Co')}
           </ExpandBoard.Button>
           <ExpandBoard.Content>
-            <div className="ExpandBoardStory__content">
+            <div className="ExpandBoardStory__content k-u-weight-light">
               {text(
                 'Board content',
                 `KissKissBankBank et 1 483 037 KissBankers vous aident à

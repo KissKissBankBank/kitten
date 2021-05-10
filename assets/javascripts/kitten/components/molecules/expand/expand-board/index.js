@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
 import styled, { css, keyframes } from 'styled-components'
 import PropTypes from 'prop-types'
-import { Button } from '../../../components/buttons/button'
-import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon'
-import COLORS from '../../../constants/colors-config'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { Button } from '../../../../components/buttons/button'
+import { ArrowIcon } from '../../../../components/graphics/icons/arrow-icon'
+import COLORS from '../../../../constants/colors-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
 
 const StyledButton = styled(Button)`
   width: 100%;

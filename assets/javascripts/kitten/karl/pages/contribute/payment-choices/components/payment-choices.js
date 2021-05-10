@@ -19,7 +19,7 @@ import { GiropayIcon } from '../../../../../components/graphics/icons/giropay-ic
 import { PaymentButton } from './payment-button'
 import Cart from '../../common/cart/cart'
 import { pxToRem } from '../../../../../helpers/utils/typography'
-import { Accordeon } from '../../../../../components/accordeon'
+import { Accordeon } from '../../../../../components/molecules/expand/accordeon'
 import { RadioButton } from '../../../../../components/form/radio-button'
 import { Field } from '../../../../../components/form/field'
 

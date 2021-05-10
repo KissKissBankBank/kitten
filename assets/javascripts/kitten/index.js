@@ -6,7 +6,7 @@
 export { VisuallyHidden } from './components/accessibility/visually-hidden'
 
 // Accordeon
-export { Accordeon } from './components/accordeon'
+export { Accordeon } from './components/molecules/expand/accordeon'
 
 // Atoms
 export { Badge } from './components/atoms/badge'
@@ -86,13 +86,13 @@ export { DatePicker } from './components/date-picker'
 export { StandaloneRangeDatePicker } from './components/date-picker/standalone-range'
 
 // Details
-export { Details } from './components/details'
+export { Details } from './components/molecules/expand/details'
 
 // Dev
 export { DevGrid } from './components/dev/dev-grid'
 
 // Expandable
-export { ExpandBoard } from './components/expandable/expand-board'
+export { ExpandBoard } from './components/molecules/expand/expand-board'
 
 // Form
 export { Autocomplete } from './components/form/autocomplete'

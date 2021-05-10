@@ -1,9 +1,11 @@
 import React, { PureComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { ExpandBoard } from 'kitten/components/expandable/expand-board'
-import { List } from 'kitten/components/lists/list'
-import { Text } from 'kitten/components/atoms/typography/text'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { ExpandBoard } from './index'
+import {
+  List,
+  Text,
+  pxToRem,
+} from '../../../..'
 
 const fadeInAnimation = () =>
   keyframes`
@@ -133,6 +135,7 @@ export class ExpandBoardWithButtonItemList extends PureComponent {
                       tag="small"
                       color={item.disabled ? 'font2' : 'font1'}
                       size="micro"
+                      weight="light"
                     >
                       {item.availability}
                     </Text>

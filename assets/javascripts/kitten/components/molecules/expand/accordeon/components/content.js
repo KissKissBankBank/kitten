@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useContext } from 'react'
 import { Context } from './context'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { pxToRem } from '../../../../../helpers/utils/typography'
 
 export const Content = ({ id, children, index }) => {
   const [maxHeight, setMaxHeight] = useState(0)
