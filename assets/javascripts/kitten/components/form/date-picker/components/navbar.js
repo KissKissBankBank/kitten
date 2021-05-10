@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
-import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { ArrowIcon } from '../../../../components/graphics/icons/arrow-icon'
+import { pxToRem } from '../../../../helpers/utils/typography'
 
 const StyledArrowIcon = styled.div`
   width: ${pxToRem(70)};

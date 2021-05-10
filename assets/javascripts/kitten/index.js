@@ -91,10 +91,6 @@ export { CommentAvatar } from './components/comments/comment-avatar'
 export { CommentForm } from './components/comments/comment-form'
 export { Comment } from './components/comments/comment'
 
-// Date-picker
-export { DatePicker } from './components/date-picker'
-export { StandaloneRangeDatePicker } from './components/date-picker/standalone-range'
-
 // Dev
 export { DevGrid } from './components/dev/dev-grid'
 
@@ -103,6 +99,7 @@ export { Autocomplete } from './components/form/autocomplete'
 export { Checkbox } from './components/form/checkbox'
 export { CheckboxSet } from './components/form/checkbox-set'
 export { CreditCardForm } from './components/form/credit-card-form'
+export { DatePicker } from './components/form/date-picker'
 export { DropdownPhoneSelect } from './components/form/dropdown-phone-select'
 export { DropdownSelect } from './components/form/dropdown-select'
 export { DropdownSelectWithInput } from './components/form/dropdown-select-with-input'
@@ -115,6 +112,7 @@ export { PillNumberInput } from './components/form/pill-number-input'
 export { RadioButton } from './components/form/radio-button'
 export { RadioButtonSet } from './components/form/radio-button-set'
 export { RangeSlider } from './components/form/range-slider'
+export { StandaloneRangeDatePicker } from './components/form/standalone-range-date-picker'
 export { TextInput } from './components/form/text-input'
 export { TextInputWithButton } from './components/form/text-input-with-button'
 export { TextInputWithLimit } from './components/form/text-input-with-limit'

@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 // Doc available here: http://react-day-picker.js.org/docs/getting-started
 import DayPickerInput from 'react-day-picker/DayPickerInput'
 import styled, { css } from 'styled-components'
-import COLORS from '../../constants/colors-config'
-import TYPOGRAPHY from '../../constants/typography-config'
-import { TextInputWithUnit as TextInputWithUnitBase } from '../../components/form/text-input-with-unit'
-import { pxToRem } from '../../helpers/utils/typography'
-import { ScreenConfig } from '../../constants/screen-config'
+import COLORS from '../../../constants/colors-config'
+import TYPOGRAPHY from '../../../constants/typography-config'
+import { TextInputWithUnit as TextInputWithUnitBase } from '../../../components/form/text-input-with-unit'
+import { pxToRem } from '../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../constants/screen-config'
 import { Navbar } from './components/navbar'
 
 const borderSize = pxToRem(2)
