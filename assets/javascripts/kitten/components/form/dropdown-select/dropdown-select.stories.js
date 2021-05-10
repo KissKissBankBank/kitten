@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { text, boolean, select, number } from '@storybook/addon-knobs'
 import { DropdownSelect } from './index'
 import { Button } from '../../../index'
-import { Grid, GridCol } from '../../../components/grid/grid'
+import { Grid, GridCol } from '../../../components/structure/grid'
 import { ArrowIcon } from '../../graphics/icons/arrow-icon'
 import { Text } from '../../atoms/typography/text'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { color, select } from '@storybook/addon-knobs'
 import { NavBar } from './index'
-import { ScrollableContainer } from '../../../components/grid/scrollable-container'
+import { ScrollableContainer } from '../../../components/structure/scrollable-container'
 import COLORS from '../../../constants/colors-config'
 
 const modifierTypes = {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from '../../grid/container'
+import { Container } from '../../structure/container'
 import { Triptych } from './index'
 import { VerticalCardWithAction } from '../../cards/vertical-card-with-action'
 import { Title } from '../../atoms/typography/title'

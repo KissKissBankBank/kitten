@@ -1,8 +1,8 @@
 import React from 'react'
 import { text, object } from '@storybook/addon-knobs'
-import { Container } from '../../../components/grid/container'
+import { Container } from '../../../components/structure/container'
 import { EmbedPlayer } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
+import { Grid, GridCol } from '../../../components/structure/grid'
 
 export const Default = () => (
   <Container>

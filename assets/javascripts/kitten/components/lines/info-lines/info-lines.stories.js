@@ -1,7 +1,7 @@
 import React from 'react'
 import { boolean, color } from '@storybook/addon-knobs'
 import { InfoLines } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
+import { Grid, GridCol } from '../../../components/structure/grid'
 
 export const Default = () => (
   <Grid style={{ marginTop: '5em' }}>

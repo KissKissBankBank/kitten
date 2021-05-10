@@ -1,7 +1,7 @@
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
 import ShippingAddress from './components/shipping-address'
-import { Marger } from '../../../../components/layout/marger'
+import { Marger } from '../../../../components/structure/marger'
 
 export default {
   title: 'pages/Contribute/ShippingAddress',

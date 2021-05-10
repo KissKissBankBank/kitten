@@ -1,7 +1,7 @@
 import React from 'react'
 import { select, boolean } from '@storybook/addon-knobs'
 import { LinkList } from './index'
-import { Grid, GridCol } from '../../grid/grid'
+import { Grid, GridCol } from '../../structure/grid'
 
 const colorOptions = {
   Light: 'light',

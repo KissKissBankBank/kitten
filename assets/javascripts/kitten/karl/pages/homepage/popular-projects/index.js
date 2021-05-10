@@ -1,7 +1,7 @@
 import React from 'react'
 import { CrowdfundingCard } from '../../../../components/cards/crowdfunding-card'
 import { Carousel } from '../../../../components/carousel/carousel/carousel'
-import { Container } from '../../../../components/grid/container'
+import { Container } from '../../../../components/structure/container'
 import { mediaQueries } from '../../../../hoc/media-queries'
 import { Text } from '../../../../components/atoms/typography/text'
 

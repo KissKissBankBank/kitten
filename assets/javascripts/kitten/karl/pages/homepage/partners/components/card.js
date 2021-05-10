@@ -5,7 +5,7 @@ import { pxToRem, stepToRem } from '../../../../../helpers/utils/typography'
 import { Title } from '../../../../../components/atoms/typography/title'
 import { Text } from '../../../../../components/atoms/typography/text'
 import { ScreenConfig } from '../../../../../constants/screen-config'
-import { GridCol } from '../../../../../components/grid/grid'
+import { GridCol } from '../../../../../components/structure/grid'
 import classNames from 'classnames'
 
 const StyledCard = styled.article`

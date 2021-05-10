@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Text } from '../../../atoms/typography/text'
-import { Marger } from '../../../layout/marger'
+import { Marger } from '../../../structure/marger'
 
 export const TeamCardTitle = ({ children, subTitle }) => (
   <Marger top="2">

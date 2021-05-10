@@ -1,8 +1,8 @@
 import React from 'react'
 import { select } from '@storybook/addon-knobs'
-import { Container } from '../../../components/grid/container'
+import { Container } from '../../../components/structure/container'
 import { Timeline } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
+import { Grid, GridCol } from '../../../components/structure/grid'
 
 export default {
   component: Timeline,

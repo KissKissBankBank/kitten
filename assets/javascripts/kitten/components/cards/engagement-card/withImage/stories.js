@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { text, number } from '@storybook/addon-knobs'
 import { EngagementCardWithImage } from './index'
-import { Marger } from '../../../../components/layout/marger'
-import { Container } from '../../../../components/grid/container'
+import { Marger } from '../../../../components/structure/marger'
+import { Container } from '../../../../components/structure/container'
 import { pxToRem } from '../../../../helpers/utils/typography'
 
 const StyledEngagementCardWithImage = styled(EngagementCardWithImage)`

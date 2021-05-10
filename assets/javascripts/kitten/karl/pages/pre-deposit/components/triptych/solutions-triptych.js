@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container } from '../../../../../components/grid/container'
-import { Grid, GridCol } from '../../../../../components/grid/grid'
+import { Container } from '../../../../../components/structure/container'
+import { Grid, GridCol } from '../../../../../components/structure/grid'
 import { Title } from '../../../../../components/atoms/typography/title'
 import { CardWithButton } from './card-with-button'
 import { Triptych } from '../../../../../components/cards/triptych'

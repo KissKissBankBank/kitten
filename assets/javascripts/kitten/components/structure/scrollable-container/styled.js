@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { Container } from '../../../components/grid/container'
+import { Container } from '../../../components/structure/container'
 import { hexToRgba } from '../../../helpers/utils/hex-to-rgba'
 
 const gradientWidth = 20

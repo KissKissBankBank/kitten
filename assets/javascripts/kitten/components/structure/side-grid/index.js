@@ -4,8 +4,8 @@ import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
-import { Grid, GridCol } from '../../../components/grid/grid'
-import { Container } from '../../../components/grid/container'
+import { Grid, GridCol } from '../../../components/structure/grid'
+import { Container } from '../../../components/structure/container'
 import { GUTTER } from '../../../constants/grid-config'
 
 const Context = createContext({

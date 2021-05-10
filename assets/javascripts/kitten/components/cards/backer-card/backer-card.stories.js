@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 import { text } from '@storybook/addon-knobs'
 import { BackerCard } from './index'
-import { Container } from '../../../components/grid/container'
-import { Grid, GridCol } from '../../../components/grid/grid'
-import { Marger } from '../../../components/layout/marger'
+import { Container } from '../../../components/structure/container'
+import { Grid, GridCol } from '../../../components/structure/grid'
+import { Marger } from '../../../components/structure/marger'
 import { Text } from '../../../components/atoms/typography/text'
 
 const Description = () => (

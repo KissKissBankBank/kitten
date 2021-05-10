@@ -10,7 +10,7 @@ import {
   CONTAINER_PADDING,
 } from '../../../../constants/grid-config'
 import { EmbedPlayer } from '../../../../components/media/embed-player'
-import { Grid, GridCol } from '../../../../components/grid/grid'
+import { Grid, GridCol } from '../../../../components/structure/grid'
 
 const StyledVideo = styled(Grid)`
   align-items: center;

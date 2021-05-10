@@ -1,7 +1,7 @@
 import React from 'react'
 import { text, object, boolean } from '@storybook/addon-knobs'
 import { CommentForm } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
+import { Grid, GridCol } from '../../../components/structure/grid'
 import { CheckedCircleIcon } from '../../../components/graphics/icons/checked-circle-icon'
 
 export const Default = () => (

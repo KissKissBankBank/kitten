@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { text, number, select, color, boolean } from '@storybook/addon-knobs'
 import { ClickableCard } from './index'
-import { Container } from '../../../components/grid/container'
+import { Container } from '../../../components/structure/container'
 import { Text } from '../../../components/atoms/typography/text'
 import COLORS from '../../../constants/colors-config'
-import { Grid, GridCol } from '../../grid/grid'
+import { Grid, GridCol } from '../../structure/grid'
 
 export default {
   component: Default,

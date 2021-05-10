@@ -1,8 +1,8 @@
 import React from 'react'
 import { text, object, select } from '@storybook/addon-knobs'
 import { VerticalCardWithAction } from './index'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
+import { Container } from '../../structure/container'
+import { Grid, GridCol } from '../../structure/grid'
 
 const buttonModifierOptions = {
   Hydrogen: 'hydrogen',

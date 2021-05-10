@@ -1,6 +1,6 @@
 import React from 'react'
 import { DoubleEntryTable } from './index'
-import { Container } from '../../grid/container'
+import { Container } from '../../structure/container'
 
 export const Default = () => (
   <Container className="k-u-margin-top-decuple k-u-margin-bottom-decuple">

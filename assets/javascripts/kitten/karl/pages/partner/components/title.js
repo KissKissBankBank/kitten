@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
-import { Marger } from '../../../../components/layout/marger'
-import { Container } from '../../../../components/grid/container'
-import { Grid, GridCol } from '../../../../components/grid/grid'
+import { Marger } from '../../../../components/structure/marger'
+import { Container } from '../../../../components/structure/container'
+import { Grid, GridCol } from '../../../../components/structure/grid'
 import { Title as KittenTitle } from '../../../../components/atoms/typography/title'
 import {
   HorizontalStroke,

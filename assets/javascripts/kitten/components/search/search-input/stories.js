@@ -1,7 +1,7 @@
 import React from 'react'
 import { SearchInput } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
+import { Marger } from '../../structure/marger'
+import { Container } from '../../structure/container'
 
 const StoryContainer = ({ children }) => (
   <Container>

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container } from '../../../../components/grid/container'
+import { Container } from '../../../../components/structure/container'
 import { EngagementCardWithImage } from '../../../../components/cards/engagement-card/withImage'
 import { Carousel } from '../../../../components/carousel/carousel/carousel'
 import { GUTTER } from '../../../../constants/grid-config'

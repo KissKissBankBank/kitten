@@ -1,4 +1,4 @@
-import { Container } from '../grid/container'
+import { Container } from '../structure/container'
 import { Marger } from '../..'
 import React from 'react'
 import { text, boolean } from '@storybook/addon-knobs'

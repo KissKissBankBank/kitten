@@ -1,9 +1,9 @@
 import React from 'react'
 import { text, boolean } from '@storybook/addon-knobs'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
+import { Container } from '../../structure/container'
+import { Grid, GridCol } from '../../structure/grid'
 import { TeamCard } from './index'
-import { Marger } from '../../layout/marger'
+import { Marger } from '../../structure/marger'
 
 export default {
   component: TeamCard,

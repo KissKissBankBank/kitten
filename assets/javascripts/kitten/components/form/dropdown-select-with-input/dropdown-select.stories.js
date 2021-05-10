@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { text, boolean, number } from '@storybook/addon-knobs'
 import { DropdownSelectWithInput } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
+import { Grid, GridCol } from '../../../components/structure/grid'
 
 import { FacebookIcon } from '../../../components/graphics/icons/facebook-icon'
 import { TwitterIcon } from '../../../components/graphics/icons/twitter-icon'

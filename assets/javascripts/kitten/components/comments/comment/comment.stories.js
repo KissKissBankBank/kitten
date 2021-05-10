@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { text, object, boolean } from '@storybook/addon-knobs'
 import { Comment } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
+import { Grid, GridCol } from '../../../components/structure/grid'
 import { CheckedCircleIcon } from '../../../components/graphics/icons/checked-circle-icon'
 
 const CommentExample = props => {

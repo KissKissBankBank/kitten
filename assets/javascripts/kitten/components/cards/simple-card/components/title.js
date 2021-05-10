@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { parseHtml } from '../../../../helpers/utils/parser'
 import { Title as TitleComponent } from '../../../../components/atoms/typography/title'
-import { Marger } from '../../../../components/layout/marger'
+import { Marger } from '../../../../components/structure/marger'
 
 export const Title = ({ title, titleProps }) => {
   return (

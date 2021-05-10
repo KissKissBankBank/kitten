@@ -1,7 +1,7 @@
 import React from 'react'
 import { select } from '@storybook/addon-knobs'
 import { BulletList } from './index'
-import { Container } from '../../grid/container'
+import { Container } from '../../structure/container'
 
 const sizeOptions = {
   Tiny: 'tiny',

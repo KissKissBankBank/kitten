@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 
-import { Container } from '../../../../components/grid/container'
-import { Grid } from '../../../../components/grid/grid'
+import { Container } from '../../../../components/structure/container'
+import { Grid } from '../../../../components/structure/grid'
 
 import { ThanksHeader } from './components/thanks-header'
 import { ThanksComment } from './components/thanks-comment'

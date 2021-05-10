@@ -1,8 +1,8 @@
 import React from 'react'
 import { text, number, boolean } from '@storybook/addon-knobs'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
+import { Marger } from '../../structure/marger'
+import { Container } from '../../structure/container'
+import { Grid, GridCol } from '../../structure/grid'
 import { Video } from './index'
 import { Loader } from '../../atoms/loader'
 

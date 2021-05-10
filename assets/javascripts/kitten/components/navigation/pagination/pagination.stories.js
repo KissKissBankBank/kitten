@@ -1,8 +1,8 @@
 import React from 'react'
 import { boolean, select } from '@storybook/addon-knobs'
 import { Pagination } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
-import { Container } from '../../../components/grid/container'
+import { Grid, GridCol } from '../../../components/structure/grid'
+import { Container } from '../../../components/structure/container'
 
 const alignOptions = {
   None: null,

@@ -4,9 +4,9 @@ import { CrowdfundingCard } from '../../../components/cards/crowdfunding-card'
 import { Carousel as LegacyCarousel } from './index'
 import { Carousel as NextCarousel } from './carousel'
 import { CONTAINER_PADDING } from '../../../constants/grid-config'
-import { Marger } from '../../../components/layout/marger'
-import { Container } from '../../../components/grid/container'
-import { Grid, GridCol } from '../../../components/grid/grid'
+import { Marger } from '../../../components/structure/marger'
+import { Container } from '../../../components/structure/container'
+import { Grid, GridCol } from '../../../components/structure/grid'
 
 export default {
   component: Default,

@@ -5,10 +5,8 @@
 // Accessibility
 export { VisuallyHidden } from './components/accessibility/visually-hidden'
 
-// Accordeon
-export { Accordeon } from './components/molecules/expand/accordeon'
-
 // Atoms
+export { AvatarWithTextAndBadge } from './components/atoms/avatar-with-text-and-badge'
 export { Badge } from './components/atoms/badge'
 export { IconBadge } from './components/atoms/icon-badge'
 export { Loader } from './components/atoms/loader'
@@ -22,8 +20,20 @@ export {
 } from './components/atoms/stepper-icon'
 export { Tag } from './components/atoms/tag'
 
-// Avatar
-export { AvatarWithTextAndBadge } from './components/atoms/avatar-with-text-and-badge'
+// Atoms/Typography
+export { Paragraph } from './components/atoms/typography/paragraph'
+export { SupTitle } from './components/atoms/typography/sup-title'
+export { Text } from './components/atoms/typography/text'
+export { Title } from './components/atoms/typography/title'
+export { TitleWithStroke } from './components/atoms/typography/title-with-stroke'
+
+export {
+  titleModifierStyles,
+  titleModifiersNames,
+  titleHelperModifierStyles,
+} from './components/atoms/typography/common/title-modifier-styles'
+export { modifierStyles as paragraphModifierStyles } from './components/atoms/typography/paragraph/helpers/modifier-styles'
+
 
 // Box
 export { DocLinkBox } from './components/box/doc-link-box'
@@ -85,14 +95,8 @@ export { Comment } from './components/comments/comment'
 export { DatePicker } from './components/date-picker'
 export { StandaloneRangeDatePicker } from './components/date-picker/standalone-range'
 
-// Details
-export { Details } from './components/molecules/expand/details'
-
 // Dev
 export { DevGrid } from './components/dev/dev-grid'
-
-// Expandable
-export { ExpandBoard } from './components/molecules/expand/expand-board'
 
 // Form
 export { Autocomplete } from './components/form/autocomplete'
@@ -117,136 +121,9 @@ export { TextInputWithLimit } from './components/form/text-input-with-limit'
 export { TextInputWithUnit } from './components/form/text-input-with-unit'
 export { ToggleSwitch } from './components/form/toggle-switch'
 
-// Grid
-export { Container } from './components/grid/container'
-export { ScrollableContainer } from './components/grid/scrollable-container'
-export { Grid, GridCol } from './components/grid/grid'
-export { Row } from './components/grid/row'
-export { SideGrid } from './components/grid/side-grid'
-export { StickyContainer } from './components/grid/sticky-container'
-export {
-  AdaptableGrid,
-  AdaptableGridCol,
-} from './components/grid/adaptable-grid'
+// Graphics
 
-// Heroes
-export { Hero } from './components/heroes/hero'
-
-// Images
-export { ImageCropper } from './components/images/image-cropper'
-
-// Layout
-export { ArrowContainer } from './components/layout/arrow-container'
-export { DashboardLayout } from './components/layout/dashboard-layout'
-export { IconContainer } from './components/layout/icon-container'
-export { HorizontalStroke } from './components/layout/horizontal-stroke'
-export { Line } from './components/layout/line'
-export { Marger } from './components/layout/marger'
-export { ResponsiveIframeContainer } from './components/layout/responsive-iframe-container'
-export { Separator } from './components/layout/separator'
-export { SideLayout } from './components/layout/side-layout'
-export { VerticalStroke } from './components/layout/vertical-stroke'
-
-export {
-  strokeModifierStyles,
-  strokeModifierStylesWithoutMargin,
-} from './components/layout/horizontal-stroke/common/stroke-modifier-styles'
-
-// Lines
-export { InfoLines } from './components/lines/info-lines'
-
-// Links
-export { LinkList } from './components/links/link-list'
-
-// Lists
-export { IconList } from './components/lists/icon-list'
-export { BulletList } from './components/lists/bullet-list'
-export { List } from './components/lists/list'
-export { CheckList } from './components/lists/check-list'
-export { Timeline } from './components/lists/timeline'
-export { HorizontalTimeline } from './components/lists/horizontal-timeline'
-
-//Logos
-export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'
-export { LendopolisLogo } from './components/graphics/logos/lendopolis-logo'
-export { GoodeedLogo } from './components/graphics/logos/goodeedlogo'
-export { MaisonDeCrowdfundingLogo } from './components/graphics/logos/mdc'
-export { MicrodonLogo } from './components/graphics/logos/microdonlogo'
-export { KkbbCoLogo } from './components/graphics/logos/kkbb-co'
-
-// Menus
-export { DashboardMenu } from './components/menus/dashboard-menu'
-export { HeaderMenu } from './components/menus/header-menu'
-
-// Meters
-export { CounterBlock } from './components/meters/counter-block'
-export { Progress } from './components/meters/progress'
-export { ProgressRing } from './components/meters/progress-ring'
-
-// Modals
-export { Modal } from './components/modals/modal'
-export { Modal as ModalNext } from './components/modals/next'
-export { Overlay } from './components/modals/overlay'
-
-// Navigation
-export { default as HeaderNav } from './components/navigation/header-nav'
-export { Pagination } from './components/navigation/pagination'
-export { NavBar } from './components/navigation/nav-bar'
-
-// Notifications
-export { Alert } from './components/notifications/alert'
-
-// Popovers
-export { SimplePopover } from './components/popovers/simple-popover'
-
-// Search
-export { SearchInput } from './components/search/search-input'
-
-// Steppers
-export { VerticalStepper } from './components/steppers/vertical-stepper'
-export { Stepper } from './components/steppers/stepper'
-
-// Tables
-export { DoubleEntryTable } from './components/tables/double-entry-table'
-export { ListTable } from './components/tables/list-table'
-export { SingleEntryTable } from './components/tables/single-entry-table'
-
-// Text Copy
-export { TextCopy } from './components/text-copy'
-
-// Tooltips
-export { Toggletip } from './components/tooltips/toggletip'
-
-// Tours
-export { HighlightHalo } from './components/tours/highlight-halo'
-
-// Typography
-export { Paragraph } from './components/atoms/typography/paragraph'
-export { SupTitle } from './components/atoms/typography/sup-title'
-export { Text } from './components/atoms/typography/text'
-export { Title } from './components/atoms/typography/title'
-export { TitleWithStroke } from './components/atoms/typography/title-with-stroke'
-
-export {
-  titleModifierStyles,
-  titleModifiersNames,
-  titleHelperModifierStyles,
-} from './components/atoms/typography/common/title-modifier-styles'
-export { modifierStyles as paragraphModifierStyles } from './components/atoms/typography/paragraph/helpers/modifier-styles'
-
-// Uploaders
-export { BasicUploader } from './components/uploaders/basic-uploader'
-export { DocumentManager } from './components/uploaders/document-manager'
-
-// Videos
-export { Video } from './components/videos/video'
-export { GifVideo } from './components/videos/gif-video'
-export { EmbedPlayer } from './components/videos/embed-player'
-
-// -----
-// ICONS
-// -----
-
+// Graphics/Icons
 export { AlignCenterIcon } from './components/graphics/icons/align-center-icon'
 export { AlignLeftIcon } from './components/graphics/icons/align-left-icon'
 export { AlignRightIcon } from './components/graphics/icons/align-right-icon'
@@ -342,6 +219,126 @@ export { ShieldIcon } from './components/graphics/icons/shield-icon'
 export { PeopleIcon } from './components/graphics/icons/people-icon'
 export { StatsIcon } from './components/graphics/icons/stats-icon'
 export { SpeechBubbleIcon } from './components/graphics/icons/speech-bubble-icon'
+
+// Graphics/Logos
+export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'
+export { LendopolisLogo } from './components/graphics/logos/lendopolis-logo'
+export { GoodeedLogo } from './components/graphics/logos/goodeedlogo'
+export { MaisonDeCrowdfundingLogo } from './components/graphics/logos/mdc'
+export { MicrodonLogo } from './components/graphics/logos/microdonlogo'
+export { KkbbCoLogo } from './components/graphics/logos/kkbb-co'
+
+// Heroes
+export { Hero } from './components/heroes/hero'
+
+// Images
+export { ImageCropper } from './components/images/image-cropper'
+
+// Layout
+export { ArrowContainer } from './components/layout/arrow-container'
+export { IconContainer } from './components/layout/icon-container'
+export { HorizontalStroke } from './components/layout/horizontal-stroke'
+export { Line } from './components/layout/line'
+export { ResponsiveIframeContainer } from './components/layout/responsive-iframe-container'
+export { Separator } from './components/layout/separator'
+export { VerticalStroke } from './components/layout/vertical-stroke'
+
+export {
+  strokeModifierStyles,
+  strokeModifierStylesWithoutMargin,
+} from './components/layout/horizontal-stroke/common/stroke-modifier-styles'
+
+// Lines
+export { InfoLines } from './components/lines/info-lines'
+
+// Links
+export { LinkList } from './components/links/link-list'
+
+// Lists
+export { IconList } from './components/lists/icon-list'
+export { BulletList } from './components/lists/bullet-list'
+export { List } from './components/lists/list'
+export { CheckList } from './components/lists/check-list'
+export { Timeline } from './components/lists/timeline'
+export { HorizontalTimeline } from './components/lists/horizontal-timeline'
+
+// Molecules
+
+// Molecules/Expand
+export { Accordeon } from './components/molecules/expand/accordeon'
+export { Details } from './components/molecules/expand/details'
+export { ExpandBoard } from './components/molecules/expand/expand-board'
+
+// Menus
+export { DashboardMenu } from './components/menus/dashboard-menu'
+export { HeaderMenu } from './components/menus/header-menu'
+
+// Meters
+export { CounterBlock } from './components/meters/counter-block'
+export { Progress } from './components/meters/progress'
+export { ProgressRing } from './components/meters/progress-ring'
+
+// Modals
+export { Modal } from './components/modals/modal'
+export { Modal as ModalNext } from './components/modals/next'
+export { Overlay } from './components/modals/overlay'
+
+// Navigation
+export { default as HeaderNav } from './components/navigation/header-nav'
+export { Pagination } from './components/navigation/pagination'
+export { NavBar } from './components/navigation/nav-bar'
+
+// Notifications
+export { Alert } from './components/notifications/alert'
+
+// Popovers
+export { SimplePopover } from './components/popovers/simple-popover'
+
+// Search
+export { SearchInput } from './components/search/search-input'
+
+// Steppers
+export { VerticalStepper } from './components/steppers/vertical-stepper'
+export { Stepper } from './components/steppers/stepper'
+
+// Tables
+export { DoubleEntryTable } from './components/tables/double-entry-table'
+export { ListTable } from './components/tables/list-table'
+export { SingleEntryTable } from './components/tables/single-entry-table'
+
+// Text Copy
+export { TextCopy } from './components/text-copy'
+
+// Tooltips
+export { Toggletip } from './components/tooltips/toggletip'
+
+// Tours
+export { HighlightHalo } from './components/tours/highlight-halo'
+
+// Uploaders
+export { BasicUploader } from './components/uploaders/basic-uploader'
+export { DocumentManager } from './components/uploaders/document-manager'
+
+// Videos
+export { Video } from './components/videos/video'
+export { GifVideo } from './components/videos/gif-video'
+export { EmbedPlayer } from './components/videos/embed-player'
+
+// Structure
+export {
+  AdaptableGrid,
+  AdaptableGridCol,
+} from './components/structure/adaptable-grid'
+export { Container } from './components/structure/container'
+export { DashboardLayout } from './components/structure/dashboard-layout'
+export { Grid, GridCol } from './components/structure/grid'
+export { Marger } from './components/structure/marger'
+export { Row } from './components/structure/row'
+export { ScrollableContainer } from './components/structure/scrollable-container'
+export { SideGrid } from './components/structure/side-grid'
+export { SideLayout } from './components/structure/side-layout'
+export { StickyContainer } from './components/structure/sticky-container'
+
 
 // ---------
 // CONSTANTS

@@ -5,7 +5,7 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import { Title } from '../../../../components/atoms/typography/title'
 import { Carousel } from '../../../../components/carousel/carousel/carousel'
 import { mediaQueries } from '../../../../hoc/media-queries'
-import { Grid, GridCol } from '../../../../components/grid/grid'
+import { Grid, GridCol } from '../../../../components/structure/grid'
 import classNames from 'classnames'
 
 const StyledPartners = styled.div`

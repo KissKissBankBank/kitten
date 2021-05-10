@@ -1,9 +1,9 @@
 import React from 'react'
 import { text, object, select, boolean } from '@storybook/addon-knobs'
 import { VerticalCard } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
+import { Marger } from '../../structure/marger'
+import { Container } from '../../structure/container'
+import { Grid, GridCol } from '../../structure/grid'
 
 const textAlign = {
   Left: 'left',
