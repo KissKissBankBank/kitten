@@ -1,10 +1,10 @@
 import React from 'react'
 import { AvatarWithTextAndBadge } from './index'
 import { text, color, number, boolean, select } from '@storybook/addon-knobs'
-import { Text } from '../../../components/atoms/typography/text'
+import { Text } from '../../..'
 
 export default {
-  title: 'Avatar/AvatarWithTextAndBadge',
+  title: 'Atoms/AvatarWithTextAndBadge',
   component: AvatarWithTextAndBadge,
 }
 

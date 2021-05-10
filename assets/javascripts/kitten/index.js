@@ -23,7 +23,7 @@ export {
 export { Tag } from './components/atoms/tag'
 
 // Avatar
-export { AvatarWithTextAndBadge } from './components/avatar/avatar-with-text-and-badge'
+export { AvatarWithTextAndBadge } from './components/atoms/avatar-with-text-and-badge'
 
 // Box
 export { DocLinkBox } from './components/box/doc-link-box'

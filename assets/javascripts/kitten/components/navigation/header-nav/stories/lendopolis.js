@@ -5,7 +5,7 @@ import { KissKissBankBankLogo } from '../../../../components/graphics/logos/kiss
 import { HeaderMenu } from '../../../../components/menus/header-menu'
 import COLORS from '../../../../constants/colors-config'
 import { Text } from '../../../../components/atoms/typography/text'
-import { AvatarWithTextAndBadge } from '../../../../components/avatar/avatar-with-text-and-badge'
+import { AvatarWithTextAndBadge } from '../../../../components/atoms/avatar-with-text-and-badge'
 import { LoginIcon } from '../../../../components/graphics/icons/login-icon'
 import domElementHelper from '../../../../helpers/dom/element-helper'
 import { pxToRem } from '../../../../helpers/utils/typography'
