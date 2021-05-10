@@ -226,9 +226,6 @@ export { MaisonDeCrowdfundingLogo } from './components/graphics/logos/mdc'
 export { MicrodonLogo } from './components/graphics/logos/microdonlogo'
 export { KkbbCoLogo } from './components/graphics/logos/kkbb-co'
 
-// Images
-export { ImageCropper } from './components/images/image-cropper'
-
 // Layout
 export { ArrowContainer } from './components/layout/arrow-container'
 export { IconContainer } from './components/layout/icon-container'
@@ -258,15 +255,17 @@ export { Timeline } from './components/lists/timeline'
 export { HorizontalTimeline } from './components/lists/horizontal-timeline'
 
 // Molecules
+export { SearchInput } from './components/molecules/search-input'
 
 // Molecules/Expand
 export { Accordeon } from './components/molecules/expand/accordeon'
 export { Details } from './components/molecules/expand/details'
 export { ExpandBoard } from './components/molecules/expand/expand-board'
 
-// Menus
-export { DashboardMenu } from './components/menus/dashboard-menu'
-export { HeaderMenu } from './components/menus/header-menu'
+// Molecules/Upload
+export { BasicUploader } from './components/molecules/upload/basic-uploader'
+export { DocumentManager } from './components/molecules/upload/document-manager'
+export { ImageCropper } from './components/molecules/upload/image-cropper'
 
 // Meters
 export { CounterBlock } from './components/meters/counter-block'
@@ -278,22 +277,19 @@ export { Modal } from './components/modals/modal'
 export { Modal as ModalNext } from './components/modals/next'
 export { Overlay } from './components/modals/overlay'
 
-// Navigation
-export { default as HeaderNav } from './components/navigation/header-nav'
-export { Pagination } from './components/navigation/pagination'
-export { NavBar } from './components/navigation/nav-bar'
-
 // Notifications
 export { Alert } from './components/notifications/alert'
 
 // Organisms
+export { DashboardMenu } from './components/organisms/dashboard-menu'
+export { HeaderMenu } from './components/organisms/header-menu'
+export { default as HeaderNav } from './components/organisms/header-nav'
 export { Hero } from './components/organisms/hero'
+export { NavBar } from './components/organisms/nav-bar'
+export { Pagination } from './components/organisms/pagination'
 
 // Popovers
 export { SimplePopover } from './components/popovers/simple-popover'
-
-// Search
-export { SearchInput } from './components/search/search-input'
 
 // Steppers
 export { VerticalStepper } from './components/steppers/vertical-stepper'
@@ -312,10 +308,6 @@ export { Toggletip } from './components/tooltips/toggletip'
 
 // Tours
 export { HighlightHalo } from './components/tours/highlight-halo'
-
-// Uploaders
-export { BasicUploader } from './components/uploaders/basic-uploader'
-export { DocumentManager } from './components/uploaders/document-manager'
 
 // Videos
 export { Video } from './components/videos/video'
@@ -407,7 +399,7 @@ export {
   MOBILE_HEADER_HEIGHT,
   TABLET_HEADER_HEIGHT,
   DESKTOP_HEADER_HEIGHT,
-} from './components/navigation/header-nav/config'
+} from './components/organisms/header-nav/config'
 
 // -------
 // HELPERS

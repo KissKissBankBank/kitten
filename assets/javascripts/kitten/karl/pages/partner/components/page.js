@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { HeaderNav } from '../../../../components/navigation/header-nav'
+import { HeaderNav } from '../../../../components/organisms/header-nav'
 import TextWithVideo from './text-with-video'
 import TextWithIconsList from './text-with-icon-list'
 import TextWithImages from './text-with-images'
