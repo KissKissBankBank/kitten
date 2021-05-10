@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { BurgerIcon } from '../../../../components/icons/burger-icon'
+import { BurgerIcon } from '../../../../components/graphics/icons/burger-icon'
 import { Dropdown } from './dropdown'
 import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
 import COLORS from '../../../../constants/colors-config'

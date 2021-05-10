@@ -5,7 +5,7 @@ import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { Autocomplete } from './index'
 import { Field } from '../../form/field'
-import { LocationIcon } from '../../icons/location-icon'
+import { LocationIcon } from '../../graphics/icons/location-icon'
 
 const items = [
   'Abyssinian',

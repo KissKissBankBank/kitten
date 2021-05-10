@@ -2,7 +2,7 @@ import React from 'react'
 import { IconContainer } from './index'
 import { color, number, select, text } from '@storybook/addon-knobs'
 import COLORS from '../../../constants/colors-config'
-import { CheckedCircleIcon } from '../../icons/checked-circle-icon'
+import { CheckedCircleIcon } from '../../graphics/icons/checked-circle-icon'
 
 export default {
   title: 'Layout/IconContainer',

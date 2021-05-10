@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { CommentForm } from './index'
-import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
+import { CheckedCircleIcon } from '../../../components/graphics/icons/checked-circle-icon'
 
 const createMockMediaMatcher = matches => () => ({
   matches,

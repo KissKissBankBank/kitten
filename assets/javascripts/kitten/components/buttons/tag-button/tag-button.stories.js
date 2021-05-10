@@ -1,7 +1,7 @@
 import React from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { TagButton } from './index'
-import { VisaIcon } from '../../icons/visa-icon'
+import { VisaIcon } from '../../graphics/icons/visa-icon'
 
 const modifierOptions = {
   Hydrogen: 'hydrogen',

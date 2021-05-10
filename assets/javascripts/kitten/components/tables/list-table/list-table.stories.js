@@ -7,7 +7,7 @@ import { Container } from '../../grid/container'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { ArrowIcon } from '../../icons/arrow-icon'
+import { ArrowIcon } from '../../graphics/icons/arrow-icon'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import {

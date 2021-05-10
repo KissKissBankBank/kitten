@@ -7,7 +7,7 @@ import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Marger } from '../../../../components/layout/marger'
 import { Text } from '../../../../components/atoms/typography/text'
 import { stepToRem } from '../../../../helpers/utils/typography'
-import { CheckedCircleIcon } from '../../../../components/icons/checked-circle-icon'
+import { CheckedCircleIcon } from '../../../../components/graphics/icons/checked-circle-icon'
 
 const ActionLinks = styled(({ children, className }) => {
   return (

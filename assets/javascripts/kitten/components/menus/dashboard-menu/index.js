@@ -7,7 +7,7 @@ import find from 'lodash/fp/find'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon'
 
 const StyledDashboardMenu = styled.nav`
   color: ${COLORS.font2};

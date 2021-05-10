@@ -5,7 +5,7 @@ import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/atoms/typography/text'
 import { Button } from '../../../../components/buttons/button'
-import { GarbageIcon } from '../../../../components/icons/garbage-icon'
+import { GarbageIcon } from '../../../../components/graphics/icons/garbage-icon'
 
 const borderWidth = pxToRem(2)
 const borderColor = COLORS.line1

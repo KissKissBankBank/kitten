@@ -4,7 +4,7 @@ import { boolean } from '@storybook/addon-knobs'
 import { Carousel } from './carousel'
 import { Container } from '../../../components/grid/container'
 import { EngagementCard } from '../../../components/cards/engagement-card'
-import { PhoneIllustration } from '../../../components/illustrations/phone-illustration'
+import { PhoneIllustration } from '../../../components/graphics/illustrations/phone-illustration'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 

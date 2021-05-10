@@ -26,9 +26,9 @@ import {
   dispatchEvent,
 } from '../../../helpers/dom/events'
 
-import { BurgerIcon } from '../../../components/icons/burger-icon'
-import { ArrowIcon } from '../../../components/icons/arrow-icon'
-import { LongArrowIcon } from '../../../components/icons/long-arrow-icon'
+import { BurgerIcon } from '../../../components/graphics/icons/burger-icon'
+import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon'
+import { LongArrowIcon } from '../../../components/graphics/icons/long-arrow-icon'
 
 import { Flow } from './flow'
 

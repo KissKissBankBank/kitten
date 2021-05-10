@@ -4,7 +4,7 @@ import { HeaderMenu } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
-import { LendopolisLogo } from '../../logos/lendopolis-logo'
+import { LendopolisLogo } from '../../graphics/logos/lendopolis-logo'
 
 const StoryGrid = ({ children }) => (
   <Container>

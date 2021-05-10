@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 import { IconList } from './index'
-import { LockIcon } from '../../icons/lock-icon'
+import { LockIcon } from '../../graphics/icons/lock-icon'
 import { Text } from '../../atoms/typography/text'
 
 describe('<IconList />', () => {

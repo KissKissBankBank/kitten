@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import { ArrowIcon } from '../../../icons/arrow-icon'
+import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
 import { Button } from '../../../../components/buttons/button'
 
 export const Item = ({

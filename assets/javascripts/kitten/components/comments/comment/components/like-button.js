@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
-import { HeartIcon } from '../../../../components/icons/heart-icon'
+import { HeartIcon } from '../../../../components/graphics/icons/heart-icon'
 import COLORS from '../../../../constants/colors-config'
 import { VisuallyHidden } from '../../../accessibility/visually-hidden'
 

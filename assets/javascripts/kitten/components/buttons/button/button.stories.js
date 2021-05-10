@@ -4,9 +4,9 @@ import { Button } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
-import { HeartIcon } from '../../icons/heart-icon'
+import { HeartIcon } from '../../graphics/icons/heart-icon'
 import { Badge } from '../../..'
-import { Cart } from '../../icons/cart'
+import { Cart } from '../../graphics/icons/cart'
 
 const svgSizeRange = {
   range: true,

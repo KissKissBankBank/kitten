@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StyledLinkBox } from './styles'
 import classNames from 'classnames'
-import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon'
 
 export const LinkBox = ({ className, href, isExternal, ...props }) => {
   const target = isExternal ? { target: '_blank', rel: 'noopener' } : {}

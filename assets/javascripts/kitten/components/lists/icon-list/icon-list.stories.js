@@ -1,7 +1,7 @@
 import React from 'react'
 import { IconList } from './index'
 import { Text } from '../../atoms/typography/text'
-import { LockIcon } from '../../icons/lock-icon'
+import { LockIcon } from '../../graphics/icons/lock-icon'
 
 export const Default = () => (
   <IconList>

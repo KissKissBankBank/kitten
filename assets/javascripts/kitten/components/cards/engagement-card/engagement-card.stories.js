@@ -6,8 +6,8 @@ import { Container } from '../../grid/container'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { Marger } from '../../layout/marger'
-import { KissKissBankBankIcon } from '../../../components/icons/kisskissbankbank-icon'
-import { PhoneIllustration } from '../../../components/illustrations/phone-illustration'
+import { KissKissBankBankIcon } from '../../../components/graphics/icons/kisskissbankbank-icon'
+import { PhoneIllustration } from '../../../components/graphics/illustrations/phone-illustration'
 
 const StyledEngagementCard = styled(EngagementCard)`
   display: flex;

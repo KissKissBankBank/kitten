@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
-import { ArrowIcon } from '../../../../components/icons/arrow-icon'
+import { ArrowIcon } from '../../../../components/graphics/icons/arrow-icon'
 import { Button } from '../../../../components/buttons/button'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/atoms/typography/text'

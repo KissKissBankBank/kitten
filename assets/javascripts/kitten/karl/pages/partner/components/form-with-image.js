@@ -12,7 +12,7 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import { Field } from '../../../../components/form/field'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
-import { CheckedCircleIcon } from '../../../../components/icons/checked-circle-icon'
+import { CheckedCircleIcon } from '../../../../components/graphics/icons/checked-circle-icon'
 
 const StyledImage = styled.div`
   height: ${pxToRem(800)};

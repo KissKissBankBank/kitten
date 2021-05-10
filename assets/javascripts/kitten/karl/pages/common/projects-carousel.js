@@ -13,7 +13,7 @@ import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
 } from '../../../constants/grid-config'
-import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon'
 import { CrowdfundingCard } from '../../../components/cards/crowdfunding-card'
 import { withMediaQueries } from '../../../hoc/media-queries'
 import { pxToRem } from '../../../helpers/utils/typography'

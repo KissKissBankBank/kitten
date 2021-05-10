@@ -1,11 +1,11 @@
 import React from 'react'
 import { Button } from '../../../components/buttons/button'
-import { FacebookIcon } from '../../../components/icons/facebook-icon'
-import { TwitterIcon } from '../../../components/icons/twitter-icon'
-import { LinkedinIcon } from '../../../components/icons/linkedin-icon'
-import { InstagramIcon } from '../../../components/icons/instagram-icon'
-import { YoutubeIcon } from '../../../components/icons/youtube-icon'
-import { PinterestIcon } from '../../../components/icons/pinterest-icon'
+import { FacebookIcon } from '../../../components/graphics/icons/facebook-icon'
+import { TwitterIcon } from '../../../components/graphics/icons/twitter-icon'
+import { LinkedinIcon } from '../../../components/graphics/icons/linkedin-icon'
+import { InstagramIcon } from '../../../components/graphics/icons/instagram-icon'
+import { YoutubeIcon } from '../../../components/graphics/icons/youtube-icon'
+import { PinterestIcon } from '../../../components/graphics/icons/pinterest-icon'
 
 export const FacebookButtonIcon = props => (
   <Button {...props} modifier="social_facebook" icon>

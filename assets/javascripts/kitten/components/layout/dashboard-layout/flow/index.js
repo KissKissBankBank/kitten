@@ -7,7 +7,7 @@ import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
-import { LightbulbIllustration as Lightbulb } from '../../../../components/illustrations/lightbulb-illustration'
+import { LightbulbIllustration as Lightbulb } from '../../../../components/graphics/illustrations/lightbulb-illustration'
 import { Loader } from '../../../../components/atoms/loader'
 import { getReactElementsWithoutType } from '../../../../helpers/react/react-elements'
 

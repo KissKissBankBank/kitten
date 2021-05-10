@@ -8,7 +8,7 @@ import {
   CONTAINER_PADDING_THIN,
 } from '../../../constants/grid-config'
 import { Button } from '../../../components/buttons/button'
-import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon'
 import { CarouselInner } from './components/carousel-inner'
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
 import classNames from 'classnames'

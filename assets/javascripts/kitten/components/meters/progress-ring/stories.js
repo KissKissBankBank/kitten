@@ -7,8 +7,8 @@ import { Container } from '../../grid/container'
 import { Text } from '../../../components/atoms/typography/text'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
-import { RocketCircleIcon } from '../../../components/icons/rocket-circle-icon'
+import { CheckedCircleIcon } from '../../../components/graphics/icons/checked-circle-icon'
+import { RocketCircleIcon } from '../../../components/graphics/icons/rocket-circle-icon'
 import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledContainer = styled.div`

@@ -4,7 +4,7 @@ import { ButtonIcon } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
-import { QuestionMarkIcon } from '../../../components/icons/question-mark-icon'
+import { QuestionMarkIcon } from '../../../components/graphics/icons/question-mark-icon'
 
 export default {
   component: ButtonIcon,

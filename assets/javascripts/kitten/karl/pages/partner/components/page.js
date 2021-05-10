@@ -7,7 +7,7 @@ import Title from './title'
 import TextWithImage from './text-with-image'
 import Triptych from './triptych'
 import FormWithImage from './form-with-image'
-import { KissKissBankBankLogo } from '../../../../components/logos/kisskissbankbanklogo'
+import { KissKissBankBankLogo } from '../../../../components/graphics/logos/kisskissbankbanklogo'
 
 const PartnerPage = () => (
   <Fragment>

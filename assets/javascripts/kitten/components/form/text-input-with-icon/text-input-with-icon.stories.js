@@ -1,7 +1,7 @@
 import React from 'react'
 import { boolean, text, select } from '@storybook/addon-knobs'
 import { TextInputWithIcon } from './index'
-import { SearchIcon } from '../../../components/icons/search-icon'
+import { SearchIcon } from '../../../components/graphics/icons/search-icon'
 
 const variantOptions = {
   Andromeda: 'andromeda',

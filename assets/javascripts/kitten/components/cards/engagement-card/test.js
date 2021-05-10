@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { EngagementCard } from './index'
-import { KissKissBankBankIcon } from '../../../components/icons/kisskissbankbank-icon'
+import { KissKissBankBankIcon } from '../../../components/graphics/icons/kisskissbankbank-icon'
 
 describe('<EngagementCard />', () => {
   let component

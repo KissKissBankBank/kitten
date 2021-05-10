@@ -14,7 +14,7 @@ import { Grid, GridCol } from '../../grid/grid'
 import { RewardEdition } from './index'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { EditIcon } from '../../../components/icons/edit-icon'
+import { EditIcon } from '../../../components/graphics/icons/edit-icon'
 
 const StoryContainer = ({ children }) => (
   <Container>

@@ -1,5 +1,5 @@
 import { IconContainer } from './'
-import { CheckedCircleIcon } from '../../icons/checked-circle-icon'
+import { CheckedCircleIcon } from '../../graphics/icons/checked-circle-icon'
 import renderer from 'react-test-renderer'
 import React from 'react'
 

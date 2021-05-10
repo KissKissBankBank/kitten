@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { text, boolean, number, select } from '@storybook/addon-knobs'
 import { Modal } from './index'
 import { Button } from '../../../components/buttons/button'
-import { SaveIcon } from '../../../components/icons/save-icon'
+import { SaveIcon } from '../../../components/graphics/icons/save-icon'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem

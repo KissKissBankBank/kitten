@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { ButtonIcon } from '../../../buttons/button-icon'
-import { PhoneIcon } from '../../../icons/phone-icon'
+import { PhoneIcon } from '../../../graphics/icons/phone-icon'
 import COLORS from '../../../../constants/colors-config'
 import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'

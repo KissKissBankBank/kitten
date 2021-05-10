@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { LinkBox } from './index'
-import { FlashCircleIcon } from '../../icons/flash-circle-icon'
+import { FlashCircleIcon } from '../../graphics/icons/flash-circle-icon'
 
 describe('<LinkBox />', () => {
   let component
