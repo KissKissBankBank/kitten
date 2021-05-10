@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from '../../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../../components/grid/grid'
-import { Title } from '../../../../../components/typography/title'
+import { Title } from '../../../../../components/atoms/typography/title'
 import { CardWithButton } from './card-with-button'
 import { Triptych } from '../../../../../components/cards/triptych'
 import COLORS from '../../../../../constants/colors-config'

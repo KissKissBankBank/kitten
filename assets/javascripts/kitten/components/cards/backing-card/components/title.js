@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Text } from '../../../typography/text'
+import { Text } from '../../../atoms/typography/text'
 import { HorizontalStroke } from '../../../layout/horizontal-stroke'
 
 export const Title = ({ className, textSize, strokeSize, ...props }) => {

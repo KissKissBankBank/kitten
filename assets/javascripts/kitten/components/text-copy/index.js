@@ -6,7 +6,7 @@ import COLORS from '../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../helpers/utils/typography'
 import { CopyIcon } from '../icons/copy-icon'
 import { ArrowContainer } from '../layout/arrow-container'
-import { Text } from '../typography/text'
+import { Text } from '../atoms/typography/text'
 import { VisuallyHidden } from '../accessibility/visually-hidden'
 import { modifierStyles } from '../../components/buttons/button/helpers/modifier-styles'
 

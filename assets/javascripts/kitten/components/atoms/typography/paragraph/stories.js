@@ -1,8 +1,7 @@
 import React from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { Paragraph } from './index'
-import { Text } from '../../../components/typography/text'
-import { Marger } from '../../layout/marger'
+import { Marger, Text } from '../../../..'
 
 const modifierOptions = {
   Primary: 'primary',
@@ -13,7 +12,7 @@ const modifierOptions = {
 
 export default {
   component: Paragraph,
-  title: 'Typography/Paragraph',
+  title: 'Atoms/Typography/Paragraph',
   parameters: {
     component: Paragraph,
     componentSubtitle: 'List of Paragraph',

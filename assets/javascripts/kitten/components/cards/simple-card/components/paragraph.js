@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Text } from '../../../../components/typography/text'
+import { Text } from '../../../../components/atoms/typography/text'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import { parseHtml } from '../../../../helpers/utils/parser'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { boolean, number } from '@storybook/addon-knobs'
 import { List } from './index'
-import { Text } from '../../typography/text'
+import { Text } from '../../atoms/typography/text'
 import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 

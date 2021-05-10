@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Text } from '../../../../components/typography/text'
+import { Text } from '../../../../components/atoms/typography/text'
 import { ButtonImage } from '../../../../components/buttons/button-image'
 import COLORS from '../../../../constants/colors-config'
 import classNames from 'classnames'

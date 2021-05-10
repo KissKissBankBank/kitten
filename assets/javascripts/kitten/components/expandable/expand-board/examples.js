@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { ExpandBoard } from 'kitten/components/expandable/expand-board'
 import { List } from 'kitten/components/lists/list'
-import { Text } from 'kitten/components/typography/text'
+import { Text } from 'kitten/components/atoms/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const fadeInAnimation = () =>

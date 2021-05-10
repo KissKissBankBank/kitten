@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { ButtonImage } from '../../../components/buttons/button-image'
-import { Text } from '../../../components/typography/text'
+import { Text } from '../../../components/atoms/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 

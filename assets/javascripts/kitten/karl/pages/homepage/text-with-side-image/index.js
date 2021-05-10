@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { TitleWithStroke } from '../../../../components/typography/title-with-stroke'
+import { TitleWithStroke } from '../../../../components/atoms/typography/title-with-stroke'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { Grid, GridCol } from '../../../../components/grid/grid'

@@ -3,7 +3,7 @@ import HeaderNav from '../index'
 import { KissKissBankBankLogo } from '../../../../components/logos/kisskissbankbanklogo'
 import { SearchIcon } from '../../../../components/icons/search-icon'
 import COLORS from '../../../../constants/colors-config'
-import { Text } from '../../../../components/typography/text'
+import { Text } from '../../../../components/atoms/typography/text'
 import { parseHtml } from '../../../../helpers/utils/parser'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'

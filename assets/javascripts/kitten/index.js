@@ -221,18 +221,18 @@ export { Toggletip } from './components/tooltips/toggletip'
 export { HighlightHalo } from './components/tours/highlight-halo'
 
 // Typography
-export { Paragraph } from './components/typography/paragraph'
-export { SupTitle } from './components/typography/sup-title'
-export { Text } from './components/typography/text'
-export { Title } from './components/typography/title'
-export { TitleWithStroke } from './components/typography/title-with-stroke'
+export { Paragraph } from './components/atoms/typography/paragraph'
+export { SupTitle } from './components/atoms/typography/sup-title'
+export { Text } from './components/atoms/typography/text'
+export { Title } from './components/atoms/typography/title'
+export { TitleWithStroke } from './components/atoms/typography/title-with-stroke'
 
 export {
   titleModifierStyles,
   titleModifiersNames,
   titleHelperModifierStyles,
-} from './components/typography/common/title-modifier-styles'
-export { modifierStyles as paragraphModifierStyles } from './components/typography/paragraph/helpers/modifier-styles'
+} from './components/atoms/typography/common/title-modifier-styles'
+export { modifierStyles as paragraphModifierStyles } from './components/atoms/typography/paragraph/helpers/modifier-styles'
 
 // Uploaders
 export { BasicUploader } from './components/uploaders/basic-uploader'

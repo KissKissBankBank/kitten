@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { Text } from '../../../../components/typography/text'
-import { Title } from '../../../../components/typography/title'
+import { Text } from '../../../../components/atoms/typography/text'
+import { Title } from '../../../../components/atoms/typography/title'
 import Truncate from 'react-truncate'
 
 class TitleComponent extends PureComponent {

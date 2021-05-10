@@ -1,8 +1,8 @@
 import React from 'react'
 import { text, boolean } from '@storybook/addon-knobs'
 import { Button } from '../../../components/buttons/button'
-import { Title } from '../../../components/typography/title'
-import { Paragraph } from '../../../components/typography/paragraph/next'
+import { Title } from '../../../components/atoms/typography/title'
+import { Paragraph } from '../../../components/atoms/typography/paragraph/next'
 import { Modal } from '../../../components/modals/modal'
 import { Marger } from '../../../components/layout/marger'
 

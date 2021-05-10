@@ -2,7 +2,7 @@ import React from 'react'
 import { VerticalStepper } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
-import { Text } from '../../typography/text'
+import { Text } from '../../atoms/typography/text'
 
 const StoryContainer = ({ children }) => (
   <Container>

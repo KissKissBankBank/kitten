@@ -2,7 +2,7 @@ import React from 'react'
 import { Container } from '../../grid/container'
 import { Triptych } from './index'
 import { VerticalCardWithAction } from '../../cards/vertical-card-with-action'
-import { Title } from '../../typography/title'
+import { Title } from '../../atoms/typography/title'
 
 export default {
   component: Triptych,

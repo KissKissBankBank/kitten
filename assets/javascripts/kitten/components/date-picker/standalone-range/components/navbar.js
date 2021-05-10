@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { ArrowIcon } from '../../../../components/icons/arrow-icon'
 import { Button } from '../../../../components/buttons/button'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { Text } from '../../../../components/typography/text'
+import { Text } from '../../../../components/atoms/typography/text'
 
 const StyledText = styled(Text)`
   margin-top: 0;

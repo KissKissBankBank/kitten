@@ -1,7 +1,7 @@
 import React from 'react'
 import { color, text, number, select, boolean } from '@storybook/addon-knobs'
 import { ArrowContainer } from './index'
-import { Text } from '../../typography/text'
+import { Text } from '../../atoms/typography/text'
 import COLORS from '../../../constants/colors-config'
 
 export const Default = () => (

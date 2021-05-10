@@ -3,7 +3,7 @@ import { boolean } from '@storybook/addon-knobs'
 import { Details } from './index'
 import { Container } from '../grid/container'
 import { Grid, GridCol } from '../grid/grid'
-import { Text } from '../typography/text'
+import { Text } from '../atoms/typography/text'
 import styled from 'styled-components'
 import COLORS from '../../constants/colors-config'
 

@@ -2,9 +2,9 @@ import React from 'react'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/grid/container'
-import { Paragraph } from '../../../../components/typography/paragraph'
+import { Paragraph } from '../../../../components/atoms/typography/paragraph'
 import { Button } from '../../../../components/buttons/button'
-import { Title } from '../../../../components/typography/title'
+import { Title } from '../../../../components/atoms/typography/title'
 import COLORS from '../../../../constants/colors-config'
 
 const HeaderWithBackground = ({ backgroundImage }) => (

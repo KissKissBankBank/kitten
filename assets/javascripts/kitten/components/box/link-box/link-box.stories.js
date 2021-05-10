@@ -2,7 +2,7 @@ import React from 'react'
 import { LinkBox } from './index'
 import { text, boolean } from '@storybook/addon-knobs'
 import { FlashCircleIcon } from '../../icons/flash-circle-icon'
-import { Text } from '../../typography/text'
+import { Text } from '../../atoms/typography/text'
 import COLORS from '../../../constants/colors-config'
 
 export const Default = () => (

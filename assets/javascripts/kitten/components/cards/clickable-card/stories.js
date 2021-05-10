@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { text, number, select, color, boolean } from '@storybook/addon-knobs'
 import { ClickableCard } from './index'
 import { Container } from '../../../components/grid/container'
-import { Text } from '../../../components/typography/text'
+import { Text } from '../../../components/atoms/typography/text'
 import COLORS from '../../../constants/colors-config'
 import { Grid, GridCol } from '../../grid/grid'
 

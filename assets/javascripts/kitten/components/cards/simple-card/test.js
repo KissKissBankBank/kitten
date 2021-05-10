@@ -1,8 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { SimpleCard } from './index'
-import { Title } from '../../../components/typography/title'
-import { Text } from '../../../components/typography/text'
+import { Title } from '../../../components/atoms/typography/title'
+import { Text } from '../../../components/atoms/typography/text'
 
 describe('<SimpleCard />', () => {
   let component

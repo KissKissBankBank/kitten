@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Card } from './components/card'
-import { Title } from '../../../../components/typography/title'
+import { Title } from '../../../../components/atoms/typography/title'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Carousel } from '../../../../components/carousel/carousel/carousel'
 import { pxToRem } from '../../../../helpers/utils/typography'

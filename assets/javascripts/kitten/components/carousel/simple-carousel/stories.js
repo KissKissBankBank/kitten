@@ -1,8 +1,8 @@
 import React from 'react'
 import { SimpleCarousel } from './index'
 import { Marger } from '../../layout/marger'
-import { Title } from '../../typography/title'
-import { Paragraph } from '../../typography/paragraph/next'
+import { Title } from '../../atoms/typography/title'
+import { Paragraph } from '../../atoms/typography/paragraph/next'
 import { HorizontalStroke } from '../../layout/horizontal-stroke'
 import { Button } from '../../buttons/button'
 

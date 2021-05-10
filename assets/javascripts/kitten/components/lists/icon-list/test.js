@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 import { IconList } from './index'
 import { LockIcon } from '../../icons/lock-icon'
-import { Text } from '../../typography/text'
+import { Text } from '../../atoms/typography/text'
 
 describe('<IconList />', () => {
   let component

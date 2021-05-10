@@ -6,7 +6,7 @@ import { pxToRem } from '../../../../../helpers/utils/typography'
 import { GridCol } from '../../../../../components/grid/grid'
 import { Marger } from '../../../../../components/layout/marger'
 
-import { Text } from '../../../../../components/typography/text'
+import { Text } from '../../../../../components/atoms/typography/text'
 
 import { TextInput } from '../../../../../components/form/text-input'
 import { Button } from '../../../../../components/buttons/button'

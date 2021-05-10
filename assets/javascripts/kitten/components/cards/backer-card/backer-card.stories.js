@@ -4,7 +4,7 @@ import { BackerCard } from './index'
 import { Container } from '../../../components/grid/container'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { Marger } from '../../../components/layout/marger'
-import { Text } from '../../../components/typography/text'
+import { Text } from '../../../components/atoms/typography/text'
 
 const Description = () => (
   <Fragment>

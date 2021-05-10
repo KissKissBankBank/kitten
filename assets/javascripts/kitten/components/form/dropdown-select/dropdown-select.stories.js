@@ -4,7 +4,7 @@ import { DropdownSelect } from './index'
 import { Button } from '../../../index'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { ArrowIcon } from '../../icons/arrow-icon'
-import { Text } from '../../typography/text'
+import { Text } from '../../atoms/typography/text'
 
 export default {
   component: DropdownSelect,

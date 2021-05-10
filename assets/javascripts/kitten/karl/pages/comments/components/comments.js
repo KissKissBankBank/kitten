@@ -5,7 +5,7 @@ import { Comment } from '../../../../components/comments/comment'
 import { CommentForm } from '../../../../components/comments/comment-form'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Marger } from '../../../../components/layout/marger'
-import { Text } from '../../../../components/typography/text'
+import { Text } from '../../../../components/atoms/typography/text'
 import { stepToRem } from '../../../../helpers/utils/typography'
 import { CheckedCircleIcon } from '../../../../components/icons/checked-circle-icon'
 

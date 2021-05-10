@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
-import COLORS from '../../../constants/colors-config'
-import TYPOGRAPHY from '../../../constants/typography-config'
+import COLORS from '../../../../constants/colors-config'
+import TYPOGRAPHY from '../../../../constants/typography-config'
 import {
   titleModifierStyles,
   titleModifiersNames,
