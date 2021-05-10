@@ -226,9 +226,6 @@ export { MaisonDeCrowdfundingLogo } from './components/graphics/logos/mdc'
 export { MicrodonLogo } from './components/graphics/logos/microdonlogo'
 export { KkbbCoLogo } from './components/graphics/logos/kkbb-co'
 
-// Heroes
-export { Hero } from './components/heroes/hero'
-
 // Images
 export { ImageCropper } from './components/images/image-cropper'
 
@@ -288,6 +285,9 @@ export { NavBar } from './components/navigation/nav-bar'
 
 // Notifications
 export { Alert } from './components/notifications/alert'
+
+// Organisms
+export { Hero } from './components/organisms/hero'
 
 // Popovers
 export { SimplePopover } from './components/popovers/simple-popover'
