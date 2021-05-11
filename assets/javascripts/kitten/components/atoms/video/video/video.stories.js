@@ -1,12 +1,7 @@
 import React from 'react'
 import { text, number, boolean } from '@storybook/addon-knobs'
 import { Video } from './index'
-import {
-  Marger,
-  Container,
-  Grid, GridCol,
-  Loader,
-} from '../../../..'
+import { Marger, Container, Grid, GridCol, Loader } from '../../../..'
 
 export const Default = () => (
   <Video

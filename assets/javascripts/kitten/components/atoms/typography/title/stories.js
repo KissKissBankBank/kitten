@@ -1,12 +1,7 @@
 import React from 'react'
 import { text, boolean, select, color } from '@storybook/addon-knobs'
 import { Title } from './index'
-import {
-  COLORS,
-  Marger,
-  Container,
-  Text,
-} from '../../../..'
+import { COLORS, Marger, Container, Text } from '../../../..'
 
 const modifierOptions = {
   Primary: 'primary',

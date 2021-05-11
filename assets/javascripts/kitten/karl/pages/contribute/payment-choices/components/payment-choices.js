@@ -4,7 +4,8 @@ import { PaymentButton } from './payment-button'
 import Cart from '../../common/cart/cart'
 import {
   Container,
-  Grid, GridCol,
+  Grid,
+  GridCol,
   Marger,
   Title,
   Paragraph,

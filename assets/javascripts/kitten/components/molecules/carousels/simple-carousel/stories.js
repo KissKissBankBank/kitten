@@ -1,12 +1,6 @@
 import React from 'react'
 import { SimpleCarousel } from './index'
-import {
-  Marger,
-  Title,
-  Paragraph,
-  HorizontalStroke,
-  Button,
-} from '../../../..'
+import { Marger, Title, Paragraph, HorizontalStroke, Button } from '../../../..'
 
 export default {
   title: 'Molecules/Carousels/SimpleCarousel',

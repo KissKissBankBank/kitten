@@ -1,10 +1,6 @@
 import React from 'react'
 import { CloseButton } from './index'
-import {
-  Marger,
-Container,
-Grid, GridCol,
-} from '../../../..'
+import { Marger, Container, Grid, GridCol } from '../../../..'
 
 export default {
   component: CloseButton,

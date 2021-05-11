@@ -1,11 +1,7 @@
 import React from 'react'
 import { text, boolean } from '@storybook/addon-knobs'
 import { TeamCard } from './index'
-import {
-  Container,
-  Grid, GridCol,
-  Marger,
-} from '../../../..'
+import { Container, Grid, GridCol, Marger } from '../../../..'
 
 export default {
   component: TeamCard,

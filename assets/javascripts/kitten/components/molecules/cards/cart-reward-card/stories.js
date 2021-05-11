@@ -1,11 +1,7 @@
 import React, { useRef } from 'react'
 import { text } from '@storybook/addon-knobs'
 import { CartRewardCard } from './index'
-import {
-  Container,
-  Grid, GridCol,
-  Button,
-} from '../../../..'
+import { Container, Grid, GridCol, Button } from '../../../..'
 
 export default {
   component: CartRewardCard,

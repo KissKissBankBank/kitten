@@ -5,9 +5,11 @@ import { CrowdfundingCard as CrowdfundingCardComponent } from './index'
 import {
   Marger,
   Container,
-  Grid, GridCol,
+  Grid,
+  GridCol,
   Text,
-  pxToRem, stepToRem,
+  pxToRem,
+  stepToRem,
   ScreenConfig,
   parseHtml,
 } from '../../../..'

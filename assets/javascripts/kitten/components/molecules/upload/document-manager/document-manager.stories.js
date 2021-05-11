@@ -6,7 +6,7 @@ import {
   DocumentIconEmpty,
   DocumentIconHouse,
   DocumentIconPerson,
-  usePrevious
+  usePrevious,
 } from '../../../..'
 
 export const StatusReady = () => (

@@ -7,7 +7,8 @@ import {
   FlashCircleIcon,
   LockIcon,
   COLORS,
-  pxToRem, stepToRem,
+  pxToRem,
+  stepToRem,
 } from '../../../../..'
 
 const StateContainer = styled.span`

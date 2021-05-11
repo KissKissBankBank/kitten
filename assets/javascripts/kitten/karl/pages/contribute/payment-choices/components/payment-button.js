@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import {
-pxToRem,
-TagButton as TagButtonBase,
-COLORS,
-} from '../../../../..'
+import { pxToRem, TagButton as TagButtonBase, COLORS } from '../../../../..'
 
 // TODO: Move in Kitten component.
 

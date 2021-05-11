@@ -3,12 +3,7 @@ import styled from 'styled-components'
 import { text, number, boolean } from '@storybook/addon-knobs'
 import { ExpandBoard } from './index'
 import { ExpandBoardWithButtonItemList } from './examples'
-import {
-  Grid,
-  GridCol,
-  COLORS,
-  pxToRem,
-} from '../../../..'
+import { Grid, GridCol, COLORS, pxToRem } from '../../../..'
 
 const StyledContainer = styled.div`
   margin: ${pxToRem(30)};

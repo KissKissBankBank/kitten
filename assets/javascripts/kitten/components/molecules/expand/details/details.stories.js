@@ -1,12 +1,7 @@
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
 import { Details } from './index'
-import {
-  Container,
-  Grid, GridCol,
-  Text,
-  COLORS,
-} from '../../../..'
+import { Container, Grid, GridCol, Text, COLORS } from '../../../..'
 import styled from 'styled-components'
 
 const Link = styled(Text)`

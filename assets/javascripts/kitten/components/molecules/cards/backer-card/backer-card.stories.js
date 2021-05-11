@@ -1,12 +1,7 @@
 import React, { Fragment } from 'react'
 import { text } from '@storybook/addon-knobs'
 import { BackerCard } from './index'
-import {
-Container,
-Grid, GridCol,
-Marger,
-Text,
-} from '../../../..'
+import { Container, Grid, GridCol, Marger, Text } from '../../../..'
 
 const Description = () => (
   <Fragment>

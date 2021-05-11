@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { CheckableButton } from './index'
-import {
-Marger,
-Container,
-Grid, GridCol,
-} from '../../../..'
+import { Marger, Container, Grid, GridCol } from '../../../..'
 
 export const IsCheckable = () => {
   const [buttonIsChecked, changeButtonState] = useState(true)

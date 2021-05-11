@@ -2,11 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { text, number } from '@storybook/addon-knobs'
 import { EngagementCardWithImage } from './index'
-import {
-  Marger,
-  Container,
-  pxToRem,
-} from '../../../..'
+import { Marger, Container, pxToRem } from '../../../..'
 
 const StyledEngagementCardWithImage = styled(EngagementCardWithImage)`
   width: ${pxToRem(200)};

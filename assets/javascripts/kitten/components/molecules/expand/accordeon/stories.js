@@ -1,11 +1,7 @@
 import React from 'react'
 import { boolean, select } from '@storybook/addon-knobs'
 import { Accordeon } from './index'
-import {
-  Marger,
-  Container,
-  DropdownSelect,
-} from '../../../..'
+import { Marger, Container, DropdownSelect } from '../../../..'
 
 const StoryContainer = ({ children }) => (
   <Container>

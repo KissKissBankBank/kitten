@@ -1,11 +1,7 @@
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
 import { ButtonGroup } from './index'
-import {
-  Marger,
-  Container,
-  Grid, GridCol,
-} from '../../../..'
+import { Marger, Container, Grid, GridCol } from '../../../..'
 
 const StoryContainer = ({ children }) => (
   <Container>

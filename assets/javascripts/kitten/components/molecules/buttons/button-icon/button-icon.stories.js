@@ -1,12 +1,7 @@
 import React from 'react'
 import { select } from '@storybook/addon-knobs'
 import { ButtonIcon } from './index'
-import {
-  Marger,
-Container,
-Grid, GridCol,
-QuestionMarkIcon,
-} from '../../../..'
+import { Marger, Container, Grid, GridCol, QuestionMarkIcon } from '../../../..'
 
 export default {
   component: ButtonIcon,

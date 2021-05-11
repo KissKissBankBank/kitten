@@ -1,12 +1,7 @@
 import React from 'react'
 import { select, boolean } from '@storybook/addon-knobs'
 import { HeaderMenu } from './index'
-import {
-  Marger,
-  Container,
-  Grid, GridCol,
-  LendopolisLogo,
-} from '../../../'
+import { Marger, Container, Grid, GridCol, LendopolisLogo } from '../../../'
 
 const StoryGrid = ({ children }) => (
   <Container>

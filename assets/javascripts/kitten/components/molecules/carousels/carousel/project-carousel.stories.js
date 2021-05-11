@@ -6,7 +6,8 @@ import {
   CONTAINER_PADDING,
   Marger,
   Container,
-  Grid, GridCol
+  Grid,
+  GridCol,
 } from '../../../..'
 
 export default {

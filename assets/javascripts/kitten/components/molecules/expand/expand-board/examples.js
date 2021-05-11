@@ -1,11 +1,7 @@
 import React, { PureComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { ExpandBoard } from './index'
-import {
-  List,
-  Text,
-  pxToRem,
-} from '../../../..'
+import { List, Text, pxToRem } from '../../../..'
 
 const fadeInAnimation = () =>
   keyframes`

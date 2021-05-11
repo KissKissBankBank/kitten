@@ -1,11 +1,7 @@
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
 import { GifVideo } from './index'
-import {
-  Marger,
-  Container,
-  Grid, GridCol,
-} from '../../../..'
+import { Marger, Container, Grid, GridCol } from '../../../..'
 
 export default {
   component: GifVideo,

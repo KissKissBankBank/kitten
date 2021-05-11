@@ -1,7 +1,7 @@
 import React from 'react'
 import { text, boolean, color } from '@storybook/addon-knobs'
 import { SimpleCard } from './index'
-import { Container,  Grid, GridCol, Marger } from '../../../..'
+import { Container, Grid, GridCol, Marger } from '../../../..'
 
 export default {
   title: 'Molecules/Cards/SimpleCard',

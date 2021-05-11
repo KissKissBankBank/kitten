@@ -1,12 +1,7 @@
 import React, { useState } from 'react'
 import { text, number, select, color, boolean } from '@storybook/addon-knobs'
 import { ClickableCard } from './index'
-import {
-Container,
-Text,
-COLORS,
-Grid, GridCol,
-} from '../../../..'
+import { Container, Text, COLORS, Grid, GridCol } from '../../../..'
 
 export default {
   component: Default,

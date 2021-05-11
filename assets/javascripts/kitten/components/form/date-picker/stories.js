@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 import { DatePicker } from './index'
 import { date, text, object, array } from '@storybook/addon-knobs'
-import {
-  Container,
-  Marger,
-  COLORS,
-} from '../../..'
+import { Container, Marger, COLORS } from '../../..'
 
 const StoryContainer = ({ children }) => (
   <Container>

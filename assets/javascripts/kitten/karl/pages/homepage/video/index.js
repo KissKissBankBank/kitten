@@ -3,16 +3,16 @@ import styled from 'styled-components'
 import {
   TitleWithStroke,
   Paragraph,
-  pxToRem, stepToRem,
+  pxToRem,
+  stepToRem,
   COLORS,
   ScreenConfig,
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
   EmbedPlayer,
-  Grid, GridCol,
+  Grid,
+  GridCol,
 } from '../../../..'
-
-
 
 const StyledVideo = styled(Grid)`
   align-items: center;

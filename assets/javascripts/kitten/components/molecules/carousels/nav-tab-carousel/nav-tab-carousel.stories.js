@@ -1,12 +1,7 @@
 import React from 'react'
 import { text, number, color, array } from '@storybook/addon-knobs'
 import { NavTabCarousel } from './index'
-import {
-  Marger,
-  Container,
-  Grid, GridCol,
-  COLORS,
-} from '../../../..'
+import { Marger, Container, Grid, GridCol, COLORS } from '../../../..'
 
 const StoryGrid = ({ children }) => (
   <Container>

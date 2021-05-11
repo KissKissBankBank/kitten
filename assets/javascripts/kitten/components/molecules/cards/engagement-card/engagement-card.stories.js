@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { text, color } from '@storybook/addon-knobs'
 import { EngagementCard } from './index'
 import {
-Container,
-pxToRem,
-ScreenConfig,
-Marger,
-KissKissBankBankIcon,
-PhoneIllustration,
+  Container,
+  pxToRem,
+  ScreenConfig,
+  Marger,
+  KissKissBankBankIcon,
+  PhoneIllustration,
 } from '../../../..'
 
 const StyledEngagementCard = styled(EngagementCard)`

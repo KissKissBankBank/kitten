@@ -7,11 +7,7 @@ import {
   YoutubeButtonIcon,
   PinterestButtonIcon,
 } from './index'
-import {
-Marger,
-Container,
-Grid, GridCol,
-} from '../../../..'
+import { Marger, Container, Grid, GridCol } from '../../../..'
 
 export default {
   component: SocialButtonIcon,
