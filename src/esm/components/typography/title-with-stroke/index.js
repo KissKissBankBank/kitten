@@ -3,7 +3,7 @@ import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutPr
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import COLORS from '../../../constants/colors-config';
 import { titleModifierStyles, titleModifiersNames } from '../common/title-modifier-styles';

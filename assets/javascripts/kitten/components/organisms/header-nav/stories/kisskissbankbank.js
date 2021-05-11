@@ -153,7 +153,7 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
           <HeaderNav.UserMenu dropdownContentWidth={userMenuWidth}>
             <HeaderNav.UserMenu.Button>
               <AvatarWithTextAndBadge>
-                <AvatarWithTextAndBadge.Image src="https://via.placeholder.com/40x40.png">
+                <AvatarWithTextAndBadge.Image src="/kitten.jpg">
                   <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
                 </AvatarWithTextAndBadge.Image>
 

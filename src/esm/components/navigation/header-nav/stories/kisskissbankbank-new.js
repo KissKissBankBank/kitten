@@ -104,9 +104,10 @@ var Navigation = function Navigation() {
   }, "D\xE9couvrez les projets"));
 };
 
-export var KissKissBankBankHeaderNavStory = function KissKissBankBankHeaderNavStory(_ref) {
+export var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNavStoryNew(_ref) {
   var isLogged = _ref.isLogged,
-      isFixed = _ref.isFixed;
+      isFixed = _ref.isFixed,
+      size = _ref.size;
 
   var _useState = useState(null),
       _useState2 = _slicedToArray(_useState, 2),
@@ -136,7 +137,8 @@ export var KissKissBankBankHeaderNavStory = function KissKissBankBankHeaderNavSt
       href: '#mainContent',
       text: 'Aller au contenu principal',
       zIndex: 300
-    }
+    },
+    size: size
   }, /*#__PURE__*/React.createElement(HeaderNav.BurgerMenu, null, /*#__PURE__*/React.createElement(InnerBurgerMenu, {
     dropdownContentWidth: burgerMenuWidth
   })), /*#__PURE__*/React.createElement(HeaderNav.Logo, {
@@ -155,7 +157,7 @@ export var KissKissBankBankHeaderNavStory = function KissKissBankBankHeaderNavSt
       height: "14",
       color: COLORS.font1
     }),
-    backgroundColor: COLORS.background3,
+    backgroundColor: COLORS.background1,
     backgroundColorHover: COLORS.line1,
     color: COLORS.font1,
     text: "Rechercher",
@@ -165,10 +167,18 @@ export var KissKissBankBankHeaderNavStory = function KissKissBankBankHeaderNavSt
     }
   }), /*#__PURE__*/React.createElement(HeaderNav.Logged, null, /*#__PURE__*/React.createElement(HeaderNav.UserMenu, {
     dropdownContentWidth: userMenuWidth
-  }, /*#__PURE__*/React.createElement(HeaderNav.UserMenu.Button, null, /*#__PURE__*/React.createElement(AvatarWithTextAndBadge, null, /*#__PURE__*/React.createElement(AvatarWithTextAndBadge.Image, {
+  }, /*#__PURE__*/React.createElement(HeaderNav.UserMenu.Button, {
+    hasArrow: true,
+    backgroundColor: COLORS.background1,
+    backgroundColorHover: COLORS.line1,
+    backgroundColorActive: COLORS.line1,
+    color: COLORS.font1,
+    colorHover: COLORS.primary1,
+    colorActive: COLORS.font1
+  }, /*#__PURE__*/React.createElement(AvatarWithTextAndBadge, null, /*#__PURE__*/React.createElement(AvatarWithTextAndBadge.Image, {
     src: "/kitten.jpg"
   }, /*#__PURE__*/React.createElement(AvatarWithTextAndBadge.Badge, null, "2")), /*#__PURE__*/React.createElement(AvatarWithTextAndBadge.Text, {
-    textClassName: "k-u-hidden@xs-down",
+    className: "k-u-hidden@xs-down",
     withEllipsisOverflow: true
   }, /*#__PURE__*/React.createElement(Text, {
     lineHeight: "normal",

@@ -92,6 +92,7 @@ import { TagIcon } from './tag-icon'
 import { PeopleIcon } from './people-icon'
 import { StatsIcon } from './stats-icon'
 import { SpeechBubbleIcon } from './speech-bubble-icon'
+import { HourglassIcon } from './hourglass-icon'
 import { FlagIcon, flagList } from './flag-icon'
 import flagFile from 'icons/flags.png'
 
@@ -361,6 +362,7 @@ export const AllIcons = () => {
         <IconContainer children={<PeopleIcon color={colorInput} />} />
         <IconContainer children={<StatsIcon color={colorInput} />} />
         <IconContainer children={<SpeechBubbleIcon color={colorInput} />} />
+        <IconContainer children={<HourglassIcon color={colorInput} />} />
       </Group>
       <Group title="Country flag icons">
         {flagList.map(country => (

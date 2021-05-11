@@ -6,8 +6,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breaking Change: Move component files around.
 - Feature: `Text`: Add default value 'light' to `weight` prop.
-- Fix: `TextInput`: Set the placeholder color to disabled.
-- Fix: `DropdownSelectWithInput`: Fix input padding.
+
+## [3.10.0] - 2021-05-11
+
+Features:
+
+- `HeaderNav`: Add `size` prop, accepts `regular` and `small`.
+- `HeaderNav.UserMenu.Button`: Add `hasArrow` boolean prop.
+- `HeaderNav.UserMenu.Button`: Add the following color props:
+  - `backgroundColor`
+  - `backgroundColorHover`
+  - `backgroundColorActive`
+  - `color`
+  - `colorHover`
+  - `colorActive`
+- `DashboardLayout`: Add `DashboardLayout.SiteHeader` component.
+- Add `HourglassIcon` component.
+
+Fixes:
+
+- `TextInput`: Set the placeholder color to disabled.
+- `DropdownSelectWithInput`: Fix input padding.
 
 ## [3.9.0] - 2021-05-06
 

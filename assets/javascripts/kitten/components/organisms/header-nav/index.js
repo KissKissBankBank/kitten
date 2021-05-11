@@ -39,6 +39,7 @@ const HeaderNav = ({
   quickAccessProps,
   stickyProps,
   zIndexConfig,
+  size,
 }) => {
   const [isMenuExpanded, setMenuExpanded] = useState(false)
   const [menuExpandBy, setMenuExpandBy] = useState(null)
@@ -150,7 +151,7 @@ const HeaderNav = ({
           '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu,
         }}
         zIndex={zIndexConfig}
-        className={classNames('k-HeaderNav__wrapper', {
+        className={classNames('k-HeaderNav__wrapper', `k-HeaderNav--${size}`, {
           'k-HeaderNav--menuIsExpanded': isMenuExpanded,
           'k-HeaderNav--inactiveBackground': isBackgroundInactive,
         })}
@@ -204,6 +205,7 @@ HeaderNav.propTypes = {
     header: PropTypes.number,
     headerWithOpenMenu: PropTypes.number,
   }),
+  size: PropTypes.oneOf(['small', 'regular']),
 }
 
 HeaderNav.defaultProps = {
@@ -216,6 +218,7 @@ HeaderNav.defaultProps = {
     header: 1,
     headerWithOpenMenu: 3,
   },
+  size: 'regular',
 }
 
 export default HeaderNav
