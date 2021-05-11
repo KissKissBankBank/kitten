@@ -237,6 +237,7 @@ export {
 } from './components/layout/horizontal-stroke/common/stroke-modifier-styles'
 
 // Molecules
+export { Alert } from './components/molecules/alert'
 export { BulletList } from './components/molecules/bullet-list'
 export { CheckList } from './components/molecules/check-list'
 export { CommentAvatar } from './components/molecules/comment-block/comment-avatar'
@@ -275,9 +276,6 @@ export { ProgressRing } from './components/atoms/progress-ring'
 export { Modal } from './components/modals/modal'
 export { Modal as ModalNext } from './components/modals/next'
 export { Overlay } from './components/modals/overlay'
-
-// Notifications
-export { Alert } from './components/notifications/alert'
 
 // Organisms
 export { DashboardMenu } from './components/organisms/dashboard-menu'
