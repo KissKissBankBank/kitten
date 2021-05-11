@@ -26,7 +26,7 @@ var _typography = require("../../../../helpers/utils/typography");
 var StyledQuickNav = _styledComponents.default.a.withConfig({
   displayName: "quick-access-link__StyledQuickNav",
   componentId: "sc-88k1zh-0"
-})(["position:absolute;display:inline-flex;align-items:center;left:-100%;top:0;z-index:", ";padding:0 ", ";background-color:", ";border-right:", " solid ", ";", " color:", ";line-height:1;font-size:", ";text-decoration:none;transition:all .2s ease;transition-delay:0,0;opacity:0;&:focus,&:active{left:0;opacity:1;transition-delay:0,.2s;outline:", " auto -webkit-focus-ring-color;}"], function (_ref) {
+})(["position:absolute;display:inline-flex;align-items:center;left:-100%;top:0;z-index:", ";padding:0 ", ";background-color:", ";border-right:", " solid ", ";", " color:", ";line-height:1;font-size:", ";text-decoration:none;transition:all 0.2s ease;transition-delay:0,0;opacity:0;&:focus,&:active{left:0;opacity:1;transition-delay:0,0.2s;outline:", " auto -webkit-focus-ring-color;}"], function (_ref) {
   var zIndex = _ref.zIndex;
   return zIndex;
 }, (0, _typography.pxToRem)(30), _colorsConfig.default.background1, (0, _typography.pxToRem)(1), _colorsConfig.default.line1, _typographyConfig.default.fontStyles.regular, _colorsConfig.default.font1, (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(5));

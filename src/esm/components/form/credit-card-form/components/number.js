@@ -16,7 +16,7 @@ var StyledNumberFormat = styled(function (_ref) {
   componentId: "sc-1a38wzf-0"
 })(["padding-right:", ";", ""], pxToRem(45), function (_ref2) {
   var iconSvg = _ref2.iconSvg;
-  return iconSvg && css(["background:transparent no-repeat;background-image:url(\"data:image/svg+xml,", "\");background-position:calc(100% - ", ") center;"], iconSvg, pxToRem(5));
+  return iconSvg && css(["background:transparent no-repeat;background-image:url('data:image/svg+xml,", "');background-position:calc(100% - ", ") center;"], iconSvg, pxToRem(5));
 });
 export var Number = function Number(_ref3) {
   var label = _ref3.label,

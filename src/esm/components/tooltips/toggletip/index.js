@@ -120,7 +120,7 @@ export var Toggletip = function Toggletip(_ref2) {
   useEffect(function () {
     if (!domElementHelper.canUseDom()) return;
 
-    if (document.readyState === "complete" || document.readyState === "interactive") {
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
       updateCoordinates();
     }
   }, []);

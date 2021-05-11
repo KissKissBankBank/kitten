@@ -7,7 +7,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.KissKissBankBankHeaderNavStory = void 0;
+exports.KissKissBankBankHeaderNavStoryNew = void 0;
 
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
@@ -128,9 +128,10 @@ var Navigation = function Navigation() {
   }, "D\xE9couvrez les projets"));
 };
 
-var KissKissBankBankHeaderNavStory = function KissKissBankBankHeaderNavStory(_ref) {
+var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNavStoryNew(_ref) {
   var isLogged = _ref.isLogged,
-      isFixed = _ref.isFixed;
+      isFixed = _ref.isFixed,
+      size = _ref.size;
 
   var _useState = (0, _react.useState)(null),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -160,7 +161,8 @@ var KissKissBankBankHeaderNavStory = function KissKissBankBankHeaderNavStory(_re
       href: '#mainContent',
       text: 'Aller au contenu principal',
       zIndex: 300
-    }
+    },
+    size: size
   }, /*#__PURE__*/_react.default.createElement(_index.default.BurgerMenu, null, /*#__PURE__*/_react.default.createElement(InnerBurgerMenu, {
     dropdownContentWidth: burgerMenuWidth
   })), /*#__PURE__*/_react.default.createElement(_index.default.Logo, {
@@ -179,7 +181,7 @@ var KissKissBankBankHeaderNavStory = function KissKissBankBankHeaderNavStory(_re
       height: "14",
       color: _colorsConfig.default.font1
     }),
-    backgroundColor: _colorsConfig.default.background3,
+    backgroundColor: _colorsConfig.default.background1,
     backgroundColorHover: _colorsConfig.default.line1,
     color: _colorsConfig.default.font1,
     text: "Rechercher",
@@ -189,10 +191,18 @@ var KissKissBankBankHeaderNavStory = function KissKissBankBankHeaderNavStory(_re
     }
   }), /*#__PURE__*/_react.default.createElement(_index.default.Logged, null, /*#__PURE__*/_react.default.createElement(_index.default.UserMenu, {
     dropdownContentWidth: userMenuWidth
-  }, /*#__PURE__*/_react.default.createElement(_index.default.UserMenu.Button, null, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge, null, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge.Image, {
+  }, /*#__PURE__*/_react.default.createElement(_index.default.UserMenu.Button, {
+    hasArrow: true,
+    backgroundColor: _colorsConfig.default.background1,
+    backgroundColorHover: _colorsConfig.default.line1,
+    backgroundColorActive: _colorsConfig.default.line1,
+    color: _colorsConfig.default.font1,
+    colorHover: _colorsConfig.default.primary1,
+    colorActive: _colorsConfig.default.font1
+  }, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge, null, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge.Image, {
     src: "/kitten.jpg"
   }, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge.Badge, null, "2")), /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge.Text, {
-    textClassName: "k-u-hidden@xs-down",
+    className: "k-u-hidden@xs-down",
     withEllipsisOverflow: true
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     lineHeight: "normal",
@@ -212,4 +222,4 @@ var KissKissBankBankHeaderNavStory = function KissKissBankBankHeaderNavStory(_re
   }))));
 };
 
-exports.KissKissBankBankHeaderNavStory = KissKissBankBankHeaderNavStory;
+exports.KissKissBankBankHeaderNavStoryNew = KissKissBankBankHeaderNavStoryNew;

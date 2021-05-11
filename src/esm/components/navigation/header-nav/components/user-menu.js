@@ -15,7 +15,8 @@ export var UserMenu = function UserMenu(_ref) {
       dropdownContentWidth = _ref.dropdownContentWidth,
       padding = _ref.padding,
       closeEvents = _ref.closeEvents,
-      props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth", "padding", "closeEvents"]);
+      buttonProps = _ref.buttonProps,
+      props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth", "padding", "closeEvents", "buttonProps"]);
 
   var userDropdownRef = useRef(null);
 
@@ -37,7 +38,24 @@ export var UserMenu = function UserMenu(_ref) {
     children: children,
     type: UserMenu.Navigation
   })[0];
+  var _button$props = button.props,
+      hasArrow = _button$props.hasArrow,
+      backgroundColor = _button$props.backgroundColor,
+      backgroundColorHover = _button$props.backgroundColorHover,
+      backgroundColorActive = _button$props.backgroundColorActive,
+      color = _button$props.color,
+      colorHover = _button$props.colorHover,
+      colorActive = _button$props.colorActive;
+  var buttonStyles = {
+    '--UserMenu-Button-backgroundColor': backgroundColor,
+    '--UserMenu-Button-backgroundColorHover': backgroundColorHover,
+    '--UserMenu-Button-backgroundColorActive': backgroundColorActive,
+    '--UserMenu-Button-color': color,
+    '--UserMenu-Button-colorHover': colorHover,
+    '--UserMenu-Button-colorActive': colorActive
+  };
   var buttonClassName = classNames('k-HeaderNav__UserMenuButton', {
+    'k-HeaderNav__UserMenuButton--hasArrow': hasArrow,
     'k-HeaderNav__UserMenuButton--nopadding': !padding
   }, props.className);
   return /*#__PURE__*/React.createElement(Context.Consumer, null, function (_ref2) {
@@ -46,12 +64,14 @@ export var UserMenu = function UserMenu(_ref) {
     return /*#__PURE__*/React.createElement(Dropdown, _extends({}, props, {
       button: button,
       buttonClassName: buttonClassName,
+      buttonStyles: buttonStyles,
       buttonId: getButtonId(id),
       className: DROPDOWN_CLASS,
       closeEvents: [CLOSE_EVENT].concat(_toConsumableArray(closeEvents)),
       closeOnOuterClick: true,
       dropdownContent: navigation,
       dropdownContentWidth: dropdownContentWidth,
+      hasArrow: hasArrow,
       keepInitialButtonAction: true,
       onToggle: callOnToggle,
       positionedHorizontallyWith: getElementById(getButtonId(id)),
@@ -64,12 +84,14 @@ export var UserMenu = function UserMenu(_ref) {
 UserMenu.propTypes = {
   dropdownContentWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   padding: PropTypes.bool,
-  closeEvents: PropTypes.arrayOf(PropTypes.string)
+  closeEvents: PropTypes.arrayOf(PropTypes.string),
+  hasArrow: PropTypes.bool
 };
 UserMenu.defaultProps = {
   dropdownContentWidth: null,
   padding: true,
-  closeEvents: []
+  closeEvents: [],
+  hasArrow: false
 };
 
 UserMenu.Button = function (_ref3) {
