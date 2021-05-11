@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import COLORS from '../../../constants/colors-config'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import TYPOGRAPHY from '../../../constants/typography-config'
-import { hexToRgba as rgba } from '../../../helpers/utils/hex-to-rgba'
-import { ScreenConfig } from '../../../constants/screen-config'
+import COLORS from '../../../../constants/colors-config'
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import TYPOGRAPHY from '../../../../constants/typography-config'
+import { hexToRgba as rgba } from '../../../../helpers/utils/hex-to-rgba'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 export const Styles = styled.div`
   position: relative;

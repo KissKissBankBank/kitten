@@ -12,6 +12,8 @@ export { HighlightHalo } from './components/atoms/highlight-halo'
 export { IconBadge } from './components/atoms/icon-badge'
 export { Loader } from './components/atoms/loader'
 export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph'
+export { Progress } from './components/atoms/progress'
+export { ProgressRing } from './components/atoms/progress-ring'
 export { StatusWithBullet } from './components/atoms/status-with-bullet'
 export {
   StepperIcon,
@@ -34,6 +36,10 @@ export {
   titleHelperModifierStyles,
 } from './components/atoms/typography/common/title-modifier-styles'
 export { modifierStyles as paragraphModifierStyles } from './components/atoms/typography/paragraph/helpers/modifier-styles'
+
+// Atoms/Videos
+export { Video } from './components/atoms/video/video'
+export { GifVideo } from './components/atoms/video/gif-video'
 
 // Buttons
 export { Button } from './components/buttons/button'
@@ -267,17 +273,13 @@ export { BasicUploader } from './components/molecules/upload/basic-uploader'
 export { DocumentManager } from './components/molecules/upload/document-manager'
 export { ImageCropper } from './components/molecules/upload/image-cropper'
 
-// Meters
-export { CounterBlock } from './components/organisms/counter-block'
-export { Progress } from './components/atoms/progress'
-export { ProgressRing } from './components/atoms/progress-ring'
-
 // Modals
 export { Modal } from './components/modals/modal'
 export { Modal as ModalNext } from './components/modals/next'
 export { Overlay } from './components/modals/overlay'
 
 // Organisms
+export { CounterBlock } from './components/organisms/counter-block'
 export { DashboardMenu } from './components/organisms/dashboard-menu'
 export { HeaderMenu } from './components/organisms/header-menu'
 export { default as HeaderNav } from './components/organisms/header-nav'
@@ -286,23 +288,19 @@ export { HorizontalTimeline } from './components/organisms/horizontal-timeline'
 export { IconList } from './components/organisms/icon-list'
 export { NavBar } from './components/organisms/nav-bar'
 export { Pagination } from './components/organisms/pagination'
+export { Stepper } from './components/organisms/stepper'
 export { Timeline } from './components/organisms/timeline'
+export { VerticalStepper } from './components/organisms/vertical-stepper'
+
+// Organisms/Tables
+export { DoubleEntryTable } from './components/organisms/tables/double-entry-table'
+export { ListTable } from './components/organisms/tables/list-table'
+export { SingleEntryTable } from './components/organisms/tables/single-entry-table'
+
 
 // Popovers
 export { SimplePopover } from './components/popovers/simple-popover'
 
-// Steppers
-export { VerticalStepper } from './components/steppers/vertical-stepper'
-export { Stepper } from './components/steppers/stepper'
-
-// Tables
-export { DoubleEntryTable } from './components/tables/double-entry-table'
-export { ListTable } from './components/tables/list-table'
-export { SingleEntryTable } from './components/tables/single-entry-table'
-
-// Videos
-export { Video } from './components/atoms/video/video'
-export { GifVideo } from './components/atoms/video/gif-video'
 
 // Structure
 export {

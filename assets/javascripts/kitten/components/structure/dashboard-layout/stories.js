@@ -26,7 +26,7 @@ import {
   SpeechBubbleIcon,
 } from '../../..'
 
-import { Default as Table } from '../../tables/list-table/list-table.stories.js'
+import { Default as Table } from '../../organisms/tables/list-table/list-table.stories.js'
 
 const CardHolder = styled.div`
   display: grid;

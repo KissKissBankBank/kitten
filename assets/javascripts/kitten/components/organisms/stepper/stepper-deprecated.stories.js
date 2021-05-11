@@ -13,7 +13,7 @@ const StoryContainer = ({ children }) => (
 )
 
 export default {
-  title: 'Steppers/Stepper (deprecated)',
+  title: 'Organisms/Stepper (deprecated)',
   component: Stepper,
 }
 

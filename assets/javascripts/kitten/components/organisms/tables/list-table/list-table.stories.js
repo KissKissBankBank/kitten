@@ -2,19 +2,19 @@ import React, { useState } from 'react'
 import styled, { css, createGlobalStyle } from 'styled-components'
 import { select } from '@storybook/addon-knobs'
 import { ListTable } from './index'
-import { Marger } from '../../structure/marger'
-import { Container } from '../../structure/container'
-import { ScreenConfig } from '../../../constants/screen-config'
-import { VisuallyHidden } from '../../accessibility/visually-hidden'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { ArrowIcon } from '../../graphics/icons/arrow-icon'
-import COLORS from '../../../constants/colors-config'
-import TYPOGRAPHY from '../../../constants/typography-config'
 import {
+  Marger,
+  Container,
+  ScreenConfig,
+  VisuallyHidden,
+  pxToRem, stepToRem,
+  ArrowIcon,
+  COLORS,
+  TYPOGRAPHY,
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
-} from '../../../constants/grid-config'
-import { StatusWithBullet } from '../../../components/atoms/status-with-bullet'
+  StatusWithBullet,
+} from '../../../..'
 
 const StoryContainer = ({ children }) => (
   <Container>

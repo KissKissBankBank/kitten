@@ -1,12 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
-import COLORS from '../../../constants/colors-config'
-import { ScreenConfig } from '../../../constants/screen-config'
+import COLORS from '../../../../constants/colors-config'
+import { ScreenConfig } from '../../../../constants/screen-config'
 import {
   CONTAINER_MAX_WIDTH,
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
-} from '../../../constants/grid-config'
-import { pxToRem } from '../../../helpers/utils/typography'
+} from '../../../../constants/grid-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
 
 export const ListTableStyles = createGlobalStyle`
   section.k-ListTable,
