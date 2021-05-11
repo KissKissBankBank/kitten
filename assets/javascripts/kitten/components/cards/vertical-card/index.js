@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Marger } from '../../../components/structure/marger'
 import { Title } from '../../../components/atoms/typography/title'
 import { Paragraph } from '../../../components/atoms/typography/paragraph/next'
-import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
+import { HorizontalStroke } from '../../../components/atoms/horizontal-stroke'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 

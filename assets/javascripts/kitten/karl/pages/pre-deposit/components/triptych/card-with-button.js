@@ -4,7 +4,7 @@ import { Title } from '../../../../../components/atoms/typography/title'
 import { Text } from '../../../../../components/atoms/typography/text'
 import { Paragraph } from '../../../../../components/atoms/typography/paragraph'
 import { parseHtml } from '../../../../../helpers/utils/parser'
-import { HorizontalStroke } from '../../../../../components/layout/horizontal-stroke'
+import { HorizontalStroke } from '../../../../../components/atoms/horizontal-stroke'
 import COLORS from '../../../../../constants/colors-config'
 
 export const CardWithButton = ({

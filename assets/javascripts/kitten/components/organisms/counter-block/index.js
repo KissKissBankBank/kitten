@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Title } from '../../../components/atoms/typography/title'
 import { Text } from '../../../components/atoms/typography/text'
 import { Marger } from '../../../components/structure/marger'
-import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
+import { HorizontalStroke } from '../../../components/atoms/horizontal-stroke'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 

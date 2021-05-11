@@ -7,7 +7,7 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import { Title } from '../../../components/atoms/typography/title'
-import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
+import { HorizontalStroke } from '../../../components/atoms/horizontal-stroke'
 import { parseHtml } from '../../../helpers/utils/parser'
 import { titleModifiers } from '../../../components/atoms/typography/common/title-modifier-styles'
 

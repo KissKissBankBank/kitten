@@ -6,7 +6,7 @@ import { Container } from '../../structure/container'
 import { Grid, GridCol } from '../../structure/grid'
 
 export default {
-  title: 'Layout/VerticalStroke',
+  title: 'Atoms/VerticalStroke',
   component: VerticalStroke,
 }
 

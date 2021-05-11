@@ -8,7 +8,7 @@ import {
   HorizontalStroke,
   DEFAULT,
   BIG,
-} from '../../../../components/layout/horizontal-stroke'
+} from '../../../../components/atoms/horizontal-stroke'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 

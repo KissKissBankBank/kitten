@@ -218,15 +218,14 @@ export { MicrodonLogo } from './components/graphics/logos/microdonlogo'
 export { KkbbCoLogo } from './components/graphics/logos/kkbb-co'
 
 // Layout
-export { HorizontalStroke } from './components/layout/horizontal-stroke'
-export { Line } from './components/layout/line'
-export { Separator } from './components/layout/separator'
-export { VerticalStroke } from './components/layout/vertical-stroke'
+export { HorizontalStroke } from './components/atoms/horizontal-stroke'
+export { Separator } from './components/atoms/separator'
+export { VerticalStroke } from './components/atoms/vertical-stroke'
 
 export {
   strokeModifierStyles,
   strokeModifierStylesWithoutMargin,
-} from './components/layout/horizontal-stroke/common/stroke-modifier-styles'
+} from './components/atoms/horizontal-stroke/common/stroke-modifier-styles'
 
 // Molecules
 export { Alert } from './components/molecules/alert'
@@ -237,6 +236,7 @@ export { CommentForm } from './components/molecules/comment-block/comment-form'
 export { Comment } from './components/molecules/comment-block/comment'
 export { EmbedPlayer } from './components/molecules/embed/embed-player'
 export { InfoLines } from './components/molecules/info-lines'
+export { Line } from './components/molecules/line'
 export { LinkList } from './components/molecules/link-list'
 export { List } from './components/molecules/list'
 export { ResponsiveIframeContainer } from './components/molecules/embed/responsive-iframe-container'
@@ -386,7 +386,7 @@ export {
   DEFAULT as HORIZONTAL_STROKE_STYLE_DEFAULT,
   BIG as HORIZONTAL_STROKE_STYLE_BIG,
   HUGE as HORIZONTAL_STROKE_STYLE_HUGE,
-} from './components/layout/horizontal-stroke'
+} from './components/atoms/horizontal-stroke'
 export {
   MOBILE_HEADER_HEIGHT,
   TABLET_HEADER_HEIGHT,

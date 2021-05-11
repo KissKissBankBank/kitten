@@ -2,7 +2,7 @@ import React from 'react'
 import { Line } from './index'
 
 export default {
-  title: 'Layout/Line',
+  title: 'Molecules/Line',
   component: Line,
 }
 

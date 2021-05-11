@@ -25,8 +25,8 @@ export const Default = () => (
     size={select('Size', sizeOptions, 'default')}
     modifier={select('Modifier', modifierOptions)}
     customSize={{
-      width: number('Width', null),
-      height: number('Height', null),
+      width: number('Width', ''),
+      height: number('Height', ''),
     }}
     style={object('Style object', { backgroundColor: '#333' })}
   />

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Text } from '../../../../components/atoms/typography/text'
-import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
+import { HorizontalStroke } from '../../../../components/atoms/horizontal-stroke'
 import { parseHtml } from '../../../../helpers/utils/parser'
 
 export const Paragraph = ({ paragraph }) => {

@@ -3,7 +3,7 @@ import { Container } from '../../../../../components/structure/container'
 import { Grid, GridCol } from '../../../../../components/structure/grid'
 import { Marger } from '../../../../../components/structure/marger'
 import { Title } from '../../../../../components/atoms/typography/title'
-import { HorizontalStroke } from '../../../../../components/layout/horizontal-stroke'
+import { HorizontalStroke } from '../../../../../components/atoms/horizontal-stroke'
 import Form from './form'
 import Cart from '../../common/cart/cart'
 

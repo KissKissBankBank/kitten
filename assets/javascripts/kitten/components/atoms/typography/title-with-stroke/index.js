@@ -8,7 +8,7 @@ import {
   titleModifierStyles,
   titleModifiersNames,
 } from '../common/title-modifier-styles'
-import { strokeModifierStyles } from '../../../layout/horizontal-stroke/common/stroke-modifier-styles'
+import { strokeModifierStyles } from '../../../atoms/horizontal-stroke/common/stroke-modifier-styles'
 
 const StyledTitleWithStroke = styled.div`
   --TitleWithStroke-css-color: ${COLORS.font1};

@@ -12,7 +12,7 @@ import {
   Video,
   Loader,
 } from '../../../../index'
-import { DEFAULT, BIG } from '../../../../components/layout/horizontal-stroke'
+import { DEFAULT, BIG } from '../../../../components/atoms/horizontal-stroke'
 import { FLUID } from '../../../../components/buttons/button'
 import {
   CONTAINER_PADDING,

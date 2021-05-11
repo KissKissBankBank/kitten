@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Marger } from '../../../../../components/structure/marger'
 import { Title } from '../../../../../components/atoms/typography/title'
-import { HorizontalStroke } from '../../../../../components/layout/horizontal-stroke'
+import { HorizontalStroke } from '../../../../../components/atoms/horizontal-stroke'
 import { pxToRem } from '../../../../../helpers/utils/typography'
 import CartItem from './cart-item'
 
