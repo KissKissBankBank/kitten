@@ -8,6 +8,7 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 // Atoms
 export { AvatarWithTextAndBadge } from './components/atoms/avatar-with-text-and-badge'
 export { Badge } from './components/atoms/badge'
+export { HighlightHalo } from './components/atoms/highlight-halo'
 export { IconBadge } from './components/atoms/icon-badge'
 export { Loader } from './components/atoms/loader'
 export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph'
@@ -299,12 +300,9 @@ export { DoubleEntryTable } from './components/tables/double-entry-table'
 export { ListTable } from './components/tables/list-table'
 export { SingleEntryTable } from './components/tables/single-entry-table'
 
-// Tours
-export { HighlightHalo } from './components/tours/highlight-halo'
-
 // Videos
-export { Video } from './components/videos/video'
-export { GifVideo } from './components/videos/gif-video'
+export { Video } from './components/atoms/video/video'
+export { GifVideo } from './components/atoms/video/gif-video'
 
 // Structure
 export {

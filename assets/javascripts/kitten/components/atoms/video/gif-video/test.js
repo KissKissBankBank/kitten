@@ -9,7 +9,7 @@ describe('<GifVideo />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <GifVideo poster="https://d3v4jsc54141g1.cloudfront.net/videos/maker/detailed_description_poster.jpg" />,
+          <GifVideo poster="https://d3v4jsc54141g1.cloudfront.net/atoms/video/maker/detailed_description_poster.jpg" />,
         )
         .toJSON()
     })
@@ -23,13 +23,13 @@ describe('<GifVideo />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <GifVideo poster="https://d3v4jsc54141g1.cloudfront.net/videos/maker/detailed_description_poster.jpg">
+          <GifVideo poster="https://d3v4jsc54141g1.cloudfront.net/atoms/video/maker/detailed_description_poster.jpg">
             <source
-              src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm"
+              src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
               type="video/webm"
             />
             <source
-              src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4"
+              src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.mp4"
               type="video/mp4"
             />
           </GifVideo>,

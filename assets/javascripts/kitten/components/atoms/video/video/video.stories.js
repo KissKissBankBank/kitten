@@ -1,10 +1,12 @@
 import React from 'react'
 import { text, number, boolean } from '@storybook/addon-knobs'
-import { Marger } from '../../structure/marger'
-import { Container } from '../../structure/container'
-import { Grid, GridCol } from '../../structure/grid'
 import { Video } from './index'
-import { Loader } from '../../atoms/loader'
+import {
+  Marger,
+  Container,
+  Grid, GridCol,
+  Loader,
+} from '../../../..'
 
 export const Default = () => (
   <Video
@@ -14,7 +16,7 @@ export const Default = () => (
     muted
     src={text(
       'Src',
-      'https://d3v4jsc54141g1.cloudfront.net/videos/home/home_v2.mp4',
+      'https://d3v4jsc54141g1.cloudfront.net/atoms/video/home/home_v2.mp4',
     )}
     poster={text(
       'Poster',

@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { Video } from './index'
-import { Loader } from '../../atoms/loader'
+import { Loader } from '../../../atoms/loader'
 
 describe('<Video />', () => {
   let component
@@ -25,8 +25,8 @@ describe('<Video />', () => {
             playsInline
             loop
             muted
-            src="https://d3v4jsc54141g1.cloudfront.net/videos/home/home_v2.mp4"
-            poster="https://d3v4jsc54141g1.cloudfront.net/videos/maker/detailed_description_poster.jpg"
+            src="https://d3v4jsc54141g1.cloudfront.net/atoms/video/home/home_v2.mp4"
+            poster="https://d3v4jsc54141g1.cloudfront.net/atoms/video/maker/detailed_description_poster.jpg"
           >
             <Video.Loader>
               <Loader />

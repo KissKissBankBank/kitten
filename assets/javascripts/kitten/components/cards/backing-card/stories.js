@@ -114,11 +114,11 @@ export const Video = () => {
             <BackingCard.Image>
               <GifVideo poster="/kitten.jpg">
                 <source
-                  src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm"
+                  src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
                   type="video/webm"
                 />
                 <source
-                  src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4"
+                  src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.mp4"
                   type="video/mp4"
                 />
               </GifVideo>
@@ -315,11 +315,11 @@ export const InACarouselComponent = () => {
           <BackingCard.Image>
             <GifVideo poster="/kitten.jpg">
               <source
-                src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm"
+                src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
                 type="video/webm"
               />
               <source
-                src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4"
+                src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.mp4"
                 type="video/mp4"
               />
             </GifVideo>
@@ -518,11 +518,11 @@ export const InACarouselComponent = () => {
           <BackingCard.Image>
             <GifVideo poster="/kitten.jpg">
               <source
-                src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm"
+                src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
                 type="video/webm"
               />
               <source
-                src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4"
+                src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.mp4"
                 type="video/mp4"
               />
             </GifVideo>

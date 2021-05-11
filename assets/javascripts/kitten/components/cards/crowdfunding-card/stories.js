@@ -95,12 +95,12 @@ export const CrowdfundingCardWithVideo = () => (
       videoSources={[
         {
           src:
-            'https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm',
+            'https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm',
           type: 'video/webm',
         },
         {
           src:
-            'https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4',
+            'https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.mp4',
           type: 'video/mp4',
         },
       ]}

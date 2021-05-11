@@ -1,13 +1,15 @@
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
-import { Marger } from '../../structure/marger'
-import { Container } from '../../structure/container'
-import { Grid, GridCol } from '../../structure/grid'
 import { GifVideo } from './index'
+import {
+  Marger,
+  Container,
+  Grid, GridCol,
+} from '../../../..'
 
 export default {
   component: GifVideo,
-  title: 'Videos/GifVideo',
+  title: 'Atoms/Video/GifVideo',
 }
 
 export const Default = () => (
@@ -16,11 +18,11 @@ export const Default = () => (
     poster="https://source.unsplash.com/random/900x400/?kitten"
   >
     <source
-      src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm"
+      src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
       type="video/webm"
     />
     <source
-      src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4"
+      src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.mp4"
       type="video/mp4"
     />
   </GifVideo>

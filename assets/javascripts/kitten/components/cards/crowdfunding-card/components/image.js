@@ -4,7 +4,7 @@ import { Text } from '../../../../components/atoms/typography/text'
 import { ButtonImage } from '../../../../components/buttons/button-image'
 import COLORS from '../../../../constants/colors-config'
 import classNames from 'classnames'
-import { GifVideo } from '../../../../components/videos/gif-video'
+import { GifVideo } from '../../../../components/atoms/video/gif-video'
 
 const Image = ({
   imageContainerBackground,

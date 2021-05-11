@@ -70,7 +70,7 @@ const TextWithVideo = () => (
               playsInline
               loop
               muted
-              src="https://d3v4jsc54141g1.cloudfront.net/videos/home/home_v2.mp4"
+              src="https://d3v4jsc54141g1.cloudfront.net/atoms/video/home/home_v2.mp4"
             >
               <Video.Loader>
                 <Loader />
