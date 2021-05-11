@@ -23,7 +23,7 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="sc-bdVaJa bDWFJH k-Form-Checkbox__label"
+      className="sc-bdVaJa bDWFJH k-u-weight-light k-Form-Checkbox__label"
       htmlFor="option-a"
     >
       Option A
@@ -40,7 +40,7 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="sc-bdVaJa bDWFJH k-Form-Checkbox__label"
+      className="sc-bdVaJa bDWFJH k-u-weight-light k-Form-Checkbox__label"
       htmlFor="option-b"
     >
       Option B
@@ -57,7 +57,7 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="sc-bdVaJa bDWFJH k-Form-Checkbox__label"
+      className="sc-bdVaJa bDWFJH k-u-weight-light k-Form-Checkbox__label"
       htmlFor="option-c"
     >
       Option C
@@ -89,7 +89,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="sc-bdVaJa bDWFJH k-Form-Checkbox__label"
+      className="sc-bdVaJa bDWFJH k-u-weight-light k-Form-Checkbox__label"
       htmlFor="option-a"
     >
       Option A
@@ -106,7 +106,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="sc-bdVaJa bDWFJH k-Form-Checkbox__label"
+      className="sc-bdVaJa bDWFJH k-u-weight-light k-Form-Checkbox__label"
       htmlFor="option-b"
     >
       Option B
@@ -123,7 +123,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="sc-bdVaJa bDWFJH k-Form-Checkbox__label"
+      className="sc-bdVaJa bDWFJH k-u-weight-light k-Form-Checkbox__label"
       htmlFor="option-c"
     >
       Option C
@@ -154,7 +154,7 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="sc-bdVaJa bDWFJH k-Form-Checkbox__label"
+      className="sc-bdVaJa bDWFJH k-u-weight-light k-Form-Checkbox__label"
       htmlFor="option-a"
     >
       Option A
@@ -171,7 +171,7 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="sc-bdVaJa bDWFJH k-Form-Checkbox__label"
+      className="sc-bdVaJa bDWFJH k-u-weight-light k-Form-Checkbox__label"
       htmlFor="option-b"
     >
       Option B
@@ -188,7 +188,7 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="sc-bdVaJa bDWFJH k-Form-Checkbox__label"
+      className="sc-bdVaJa bDWFJH k-u-weight-light k-Form-Checkbox__label"
       htmlFor="option-c"
     >
       Option C

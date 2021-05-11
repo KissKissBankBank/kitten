@@ -15,7 +15,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       <a
         aria-disabled={false}
         aria-label="Previous page"
-        className="sc-bdVaJa bDWFJH Pagination__Link"
+        className="sc-bdVaJa bDWFJH k-u-weight-light Pagination__Link"
         href="#9"
         onClick={[Function]}
         tabIndex={null}
@@ -130,7 +130,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       <a
         aria-disabled={false}
         aria-label="Next page"
-        className="sc-bdVaJa bDWFJH Pagination__Link"
+        className="sc-bdVaJa bDWFJH k-u-weight-light Pagination__Link"
         href="#11"
         onClick={[Function]}
         tabIndex={null}

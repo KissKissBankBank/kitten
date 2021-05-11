@@ -406,7 +406,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
     className="c1"
   >
     <span
-      className="k-RewardEdition__Header__Amount"
+      className="k-u-weight-light k-RewardEdition__Header__Amount"
     >
       Header
     </span>

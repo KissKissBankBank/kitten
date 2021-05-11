@@ -24,7 +24,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-hzDkRC hwqbRD k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-Rmtcm fXNzEy k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -50,7 +50,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-kAzzGY glJTSD k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-jzJRlG kRhHYl k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -121,7 +121,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-bRBYWo cOzqBE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-csuQGl iEIVf k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -155,7 +155,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-hzDkRC hwqbRD k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-Rmtcm fXNzEy k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -181,7 +181,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-kAzzGY glJTSD k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-jzJRlG kRhHYl k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -252,7 +252,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-bRBYWo eoPFrl k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-csuQGl dtUTdX k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -315,7 +315,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-hzDkRC hwqbRD k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-Rmtcm fXNzEy k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -341,7 +341,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-kAzzGY glJTSD k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-jzJRlG kRhHYl k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -412,7 +412,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-bRBYWo cOzqBE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-csuQGl iEIVf k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -446,7 +446,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-hzDkRC hwqbRD k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-Rmtcm fXNzEy k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -472,7 +472,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-kAzzGY glJTSD k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-jzJRlG kRhHYl k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -543,7 +543,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-bRBYWo eoPFrl k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-csuQGl dtUTdX k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -614,7 +614,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-hzDkRC hwqbRD k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
+                className="sc-Rmtcm fXNzEy k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
                 href={null}
                 onClick={[Function]}
                 title="A"
@@ -644,7 +644,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                       className="k-u-margin-top-single"
                     >
                       <span
-                        className="sc-kAzzGY glJTSD k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                        className="sc-jzJRlG kRhHYl k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                       >
                         <img
                           alt=""
@@ -684,7 +684,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                     aria-valuemax={100}
                     aria-valuemin={0}
                     aria-valuenow={0}
-                    className="sc-bRBYWo fPgjjs k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                    className="sc-csuQGl imgJsr k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                     role="progressbar"
                   >
                     <div
@@ -753,7 +753,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-hzDkRC hwqbRD k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
+                className="sc-Rmtcm fXNzEy k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
                 href={null}
                 onClick={[Function]}
                 title="A"
@@ -783,7 +783,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                       className="k-u-margin-top-single"
                     >
                       <span
-                        className="sc-kAzzGY glJTSD k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                        className="sc-jzJRlG kRhHYl k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                       >
                         <img
                           alt=""
@@ -823,7 +823,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                     aria-valuemax={100}
                     aria-valuemin={0}
                     aria-valuenow={0}
-                    className="sc-bRBYWo fPgjjs k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                    className="sc-csuQGl imgJsr k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                     role="progressbar"
                   >
                     <div
@@ -892,7 +892,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-hzDkRC hwqbRD k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
+                className="sc-Rmtcm fXNzEy k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
                 href={null}
                 onClick={[Function]}
                 title="A"
@@ -922,7 +922,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                       className="k-u-margin-top-single"
                     >
                       <span
-                        className="sc-kAzzGY glJTSD k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                        className="sc-jzJRlG kRhHYl k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                       >
                         <img
                           alt=""
@@ -962,7 +962,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                     aria-valuemax={100}
                     aria-valuemin={0}
                     aria-valuenow={0}
-                    className="sc-bRBYWo fPgjjs k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                    className="sc-csuQGl imgJsr k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                     role="progressbar"
                   >
                     <div
@@ -1025,7 +1025,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-hzDkRC hwqbRD k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-Rmtcm fXNzEy k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -1051,7 +1051,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-kAzzGY glJTSD k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-jzJRlG kRhHYl k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -1122,7 +1122,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-bRBYWo cOzqBE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-csuQGl iEIVf k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -1156,7 +1156,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-hzDkRC hwqbRD k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-Rmtcm fXNzEy k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -1182,7 +1182,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-kAzzGY glJTSD k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-jzJRlG kRhHYl k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -1253,7 +1253,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-bRBYWo eoPFrl k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-csuQGl dtUTdX k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -1316,7 +1316,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-hzDkRC hwqbRD k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-Rmtcm fXNzEy k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -1342,7 +1342,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-kAzzGY glJTSD k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-jzJRlG kRhHYl k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -1413,7 +1413,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-bRBYWo cOzqBE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-csuQGl iEIVf k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -1447,7 +1447,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-hzDkRC hwqbRD k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-Rmtcm fXNzEy k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -1473,7 +1473,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-kAzzGY glJTSD k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-jzJRlG kRhHYl k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -1544,7 +1544,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-bRBYWo eoPFrl k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-csuQGl dtUTdX k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -1613,7 +1613,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-hzDkRC hwqbRD k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-Rmtcm fXNzEy k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -1639,7 +1639,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-kAzzGY glJTSD k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-jzJRlG kRhHYl k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -1710,7 +1710,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-bRBYWo cOzqBE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-csuQGl iEIVf k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div
@@ -1744,7 +1744,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <a
-            className="sc-hzDkRC hwqbRD k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            className="sc-Rmtcm fXNzEy k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
             href="https://kitten.kisskissbankbank.com/"
             onClick={[Function]}
             onFocus={[Function]}
@@ -1770,7 +1770,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-kAzzGY glJTSD k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-jzJRlG kRhHYl k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -1841,7 +1841,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-bRBYWo eoPFrl k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+                className="sc-csuQGl dtUTdX k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
                 role="progressbar"
               >
                 <div

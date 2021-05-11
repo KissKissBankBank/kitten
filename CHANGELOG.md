@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Text`: Add default value 'light' to `weight` prop.
 - Fix: `TextInput`: Set the placeholder color to disabled.
 - Fix: `DropdownSelectWithInput`: Fix input padding.
 
