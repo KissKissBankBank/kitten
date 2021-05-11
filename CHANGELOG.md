@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `HourglassIcon` component.
 - Fix: `TextInput`: Set the placeholder color to disabled.
 - Fix: `DropdownSelectWithInput`: Fix input padding.
 
