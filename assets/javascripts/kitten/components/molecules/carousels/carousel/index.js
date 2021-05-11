@@ -1,18 +1,18 @@
 import React, { Component, Fragment } from 'react'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import PropTypes from 'prop-types'
-import { createRangeFromZeroTo } from '../../../helpers/utils/range'
-import { withMediaQueries } from '../../../hoc/media-queries'
+import { createRangeFromZeroTo } from '../../../../helpers/utils/range'
+import { withMediaQueries } from '../../../../hoc/media-queries'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
-} from '../../../constants/grid-config'
-import { Button } from '../../../components/buttons/button'
-import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon'
+} from '../../../../constants/grid-config'
+import { Button } from '../../../../components/buttons/button'
+import { ArrowIcon } from '../../../../components/graphics/icons/arrow-icon'
 import { CarouselInner } from './components/carousel-inner'
-import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
+import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
 import classNames from 'classnames'
-import { Grid, GridCol } from '../../../components/structure/grid'
+import { Grid, GridCol } from '../../../../components/structure/grid'
 
 import { StyledCarouselContainer, OUTLINE_PLUS_OFFSET } from './styles'
 

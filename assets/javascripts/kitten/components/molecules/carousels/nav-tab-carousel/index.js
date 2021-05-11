@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import { Prev } from './components/prev'
 import { Next } from './components/next'
 import { Pagination } from './components/pagination'
-import COLORS from './../../../constants/colors-config'
-import { getReactElementsByType } from './../../../helpers/react/react-elements'
-import { pxToRem } from './../../../helpers/utils/typography'
+import COLORS from '../../../../constants/colors-config'
+import { getReactElementsByType } from '../../../../helpers/react/react-elements'
+import { pxToRem } from '../../../../helpers/utils/typography'
 import {
   LeftEmptyContainer,
   RightEmptyContainer,

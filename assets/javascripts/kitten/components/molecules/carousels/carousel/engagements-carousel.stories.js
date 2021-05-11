@@ -1,16 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import { boolean } from '@storybook/addon-knobs'
-import { Carousel } from './carousel'
-import { Container } from '../../../components/structure/container'
-import { EngagementCard } from '../../../components/cards/engagement-card'
-import { PhoneIllustration } from '../../../components/graphics/illustrations/phone-illustration'
-import { pxToRem } from '../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../constants/screen-config'
+import { Carousel } from './index'
+import {
+  ScreenConfig,
+  Container,
+  EngagementCard,
+  PhoneIllustration,
+  pxToRem,
+} from '../../../..'
 
 export default {
   component: Default,
-  title: 'Carousels/Carousel/EngagementsCarousel',
+  title: 'Molecules/Carousels/Carousel/EngagementsCarousel',
   parameters: {
     component: Default,
   },

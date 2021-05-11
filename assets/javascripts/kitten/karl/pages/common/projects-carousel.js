@@ -7,7 +7,7 @@ import { Title } from '../../../components/atoms/typography/title'
 import { Text } from '../../../components/atoms/typography/text'
 import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
 import { Button } from '../../../components/buttons/button'
-import { Carousel } from '../../../components/carousel/carousel'
+import { Carousel } from '../../../components/molecules/carousels/carousel'
 import { ScreenConfig, SCREEN_SIZE_M } from '../../../constants/screen-config'
 import {
   CONTAINER_PADDING,

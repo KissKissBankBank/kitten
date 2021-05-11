@@ -1,16 +1,17 @@
 import React from 'react'
 import { number, object, boolean } from '@storybook/addon-knobs'
-import { CrowdfundingCard } from '../../../components/cards/crowdfunding-card'
-import { Carousel as LegacyCarousel } from './index'
-import { Carousel as NextCarousel } from './carousel'
-import { CONTAINER_PADDING } from '../../../constants/grid-config'
-import { Marger } from '../../../components/structure/marger'
-import { Container } from '../../../components/structure/container'
-import { Grid, GridCol } from '../../../components/structure/grid'
+import { Carousel } from './index'
+import {
+  CrowdfundingCard,
+  CONTAINER_PADDING,
+  Marger,
+  Container,
+  Grid, GridCol
+} from '../../../..'
 
 export default {
   component: Default,
-  title: 'Carousels/Carousel/ProjectCarousel',
+  title: 'Molecules/Carousels/Carousel/ProjectCarousel',
   parameters: {
     component: Default,
   },
@@ -113,7 +114,7 @@ const paginationPosition = {
 
 export const Default = () => (
   <StoryContainer>
-    <NextCarousel
+    <Carousel
       tinyButtons={boolean('Button tiny size', false)}
       itemMinWidth={number('itemMinWidth', 280)}
       baseItemMarginBetween={number('baseItemMarginBetween', CONTAINER_PADDING)}
@@ -154,13 +155,13 @@ export const Default = () => (
           state="Custom state"
         />
       ))}
-    </NextCarousel>
+    </Carousel>
   </StoryContainer>
 )
 
 export const WithSpecificColNumber = () => (
   <StoryContainer>
-    <NextCarousel
+    <Carousel
       tinyButtons={boolean('Button tiny size', false)}
       itemMinWidth={0}
       itemsPerPage={number('itemsPerPage', 1)}
@@ -202,13 +203,13 @@ export const WithSpecificColNumber = () => (
           state="Custom state"
         />
       ))}
-    </NextCarousel>
+    </Carousel>
   </StoryContainer>
 )
 
 export const InNestedGrid = () => (
   <InNestedGridStoryContainer>
-    <NextCarousel
+    <Carousel
       itemMinWidth={number('itemMinWidth', 280)}
       baseItemMarginBetween={number('baseItemMarginBetween', CONTAINER_PADDING)}
       paginationPosition={object('paginationPosition', paginationPosition)}
@@ -239,13 +240,13 @@ export const InNestedGrid = () => (
           state="Custom state"
         />
       ))}
-    </NextCarousel>
+    </Carousel>
   </InNestedGridStoryContainer>
 )
 
 export const InLegacyGrid = () => (
   <LegacyStoryContainer>
-    <LegacyCarousel
+    <Carousel
       withoutLeftOffset={boolean('Without left offset', false)}
       tinyButtons={boolean('Button tiny size', false)}
       itemMinWidth={number('itemMinWidth', 280)}
@@ -286,7 +287,7 @@ export const InLegacyGrid = () => (
 
 export const WithPassedProps = () => (
   <StoryContainer>
-    <NextCarousel
+    <Carousel
       tinyButtons={boolean('Button tiny size', false)}
       itemMinWidth={number('itemMinWidth', 280)}
       baseItemMarginBetween={number('baseItemMarginBetween', CONTAINER_PADDING)}
@@ -298,7 +299,7 @@ export const WithPassedProps = () => (
       {data.map(item => (
         <CardComponent item={item} key={`CrowdfundingCard${item.title}`} />
       ))}
-    </NextCarousel>
+    </Carousel>
   </StoryContainer>
 )
 

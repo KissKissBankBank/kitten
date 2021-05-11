@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import COLORS from './../../../../constants/colors-config'
-import { pxToRem } from './../../../../helpers/utils/typography'
-import { createRangeFromZeroTo } from './../../../../helpers/utils/range'
+import COLORS from '../../../../../constants/colors-config'
+import { pxToRem } from '../../../../../helpers/utils/typography'
+import { createRangeFromZeroTo } from '../../../../../helpers/utils/range'
 
 const BulletPointStyles = styled.div`
   min-width: ${pxToRem(6)};

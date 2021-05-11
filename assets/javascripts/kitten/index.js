@@ -81,11 +81,6 @@ export { CrowdfundingCard } from './components/cards/crowdfunding-card'
 export { EngagementCard } from './components/cards/engagement-card'
 export { EngagementCardWithImage } from './components/cards/engagement-card/withImage'
 
-// Carousel
-export { Carousel } from './components/carousel/carousel'
-export { NavTabCarousel } from './components/carousel/nav-tab-carousel'
-export { SimpleCarousel } from './components/carousel/simple-carousel'
-
 // Dev
 export { DevGrid } from './components/dev/dev-grid'
 
@@ -213,6 +208,13 @@ export { PeopleIcon } from './components/graphics/icons/people-icon'
 export { StatsIcon } from './components/graphics/icons/stats-icon'
 export { SpeechBubbleIcon } from './components/graphics/icons/speech-bubble-icon'
 
+// Graphics/Illustrations
+export { LightbulbIllustration } from './components/graphics/illustrations/lightbulb-illustration'
+export { LinkBoxIllustration } from './components/graphics/illustrations/link-box-illustration'
+export { LoudspeakerIllustration } from './components/graphics/illustrations/loudspeaker-illustration'
+export { MixIllustration } from './components/graphics/illustrations/mix-illustration'
+export { PhoneIllustration } from './components/graphics/illustrations/phone-illustration'
+
 // Graphics/Logos
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'
 export { LendopolisLogo } from './components/graphics/logos/lendopolis-logo'
@@ -234,9 +236,6 @@ export {
   strokeModifierStylesWithoutMargin,
 } from './components/layout/horizontal-stroke/common/stroke-modifier-styles'
 
-// Lines
-export { InfoLines } from './components/molecules/info-lines'
-
 // Molecules
 export { BulletList } from './components/molecules/bullet-list'
 export { CheckList } from './components/molecules/check-list'
@@ -244,12 +243,18 @@ export { CommentAvatar } from './components/molecules/comment-block/comment-avat
 export { CommentForm } from './components/molecules/comment-block/comment-form'
 export { Comment } from './components/molecules/comment-block/comment'
 export { EmbedPlayer } from './components/molecules/embed/embed-player'
+export { InfoLines } from './components/molecules/info-lines'
 export { LinkList } from './components/molecules/link-list'
 export { List } from './components/molecules/list'
 export { ResponsiveIframeContainer } from './components/molecules/embed/responsive-iframe-container'
 export { SearchInput } from './components/molecules/search-input'
 export { TextCopy } from './components/molecules/text-copy'
 export { Toggletip } from './components/molecules/toggletip'
+
+// Molecules/Carousels
+export { Carousel } from './components/molecules/carousels/carousel'
+export { NavTabCarousel } from './components/molecules/carousels/nav-tab-carousel'
+export { SimpleCarousel } from './components/molecules/carousels/simple-carousel'
 
 // Molecules/Expand
 export { Accordeon } from './components/molecules/expand/accordeon'
@@ -377,7 +382,7 @@ export {
   ICON_HUGE as BUTTON_STYLE_ICON_HUGE,
   ICON_GIANT as BUTTON_STYLE_ICON_GIANT,
 } from './components/buttons/button'
-export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/carousel/carousel/styles'
+export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/molecules/carousels/carousel/styles'
 export {
   MICRO as HORIZONTAL_STROKE_STYLE_MICRO,
   TINY as HORIZONTAL_STROKE_STYLE_TINY,

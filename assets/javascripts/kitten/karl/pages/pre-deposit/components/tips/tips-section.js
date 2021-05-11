@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, GridCol } from '../../../../../components/structure/grid'
 import { Container } from '../../../../../components/structure/container'
 import { parseHtml } from '../../../../../helpers/utils/parser'
-import { SimpleCarousel } from '../.././../../../components/carousel/simple-carousel'
+import { SimpleCarousel } from '../.././../../../components/molecules/carousels/simple-carousel'
 import { Tip } from './tip'
 import COLORS from '../../../../../constants/colors-config'
 

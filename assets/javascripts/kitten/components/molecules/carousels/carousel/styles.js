@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components'
-import { pxToRem } from '../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../constants/screen-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../../constants/screen-config'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
   GUTTER,
-} from '../../../constants/grid-config'
-import COLORS from '../../../constants/colors-config'
+} from '../../../../constants/grid-config'
+import COLORS from '../../../../constants/colors-config'
 
 export const OUTLINE_PLUS_OFFSET = 4
 

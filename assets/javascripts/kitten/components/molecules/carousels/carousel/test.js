@@ -7,7 +7,7 @@ import {
   checkPage,
   checkPageLoop,
 } from './index'
-import { CrowdfundingCard } from '../../../components/cards/crowdfunding-card'
+import { CrowdfundingCard } from '../../../..'
 
 const projectCardMinWidth = 280
 const projectCardMarginBetween = 40
