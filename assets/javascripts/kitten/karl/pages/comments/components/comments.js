@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container } from '../../../../components/structure/container'
-import { Comment } from '../../../../components/comments/comment'
-import { CommentForm } from '../../../../components/comments/comment-form'
-import { Grid, GridCol } from '../../../../components/structure/grid'
-import { Marger } from '../../../../components/structure/marger'
-import { Text } from '../../../../components/atoms/typography/text'
-import { stepToRem } from '../../../../helpers/utils/typography'
-import { CheckedCircleIcon } from '../../../../components/graphics/icons/checked-circle-icon'
+import {
+  Container,
+  Comment,
+  CommentForm,
+  Grid, GridCol,
+  Marger,
+  Text,
+  stepToRem,
+  CheckedCircleIcon,
+} from '../../../..'
 
 const ActionLinks = styled(({ children, className }) => {
   return (

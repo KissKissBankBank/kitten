@@ -4,7 +4,7 @@ import { Container } from '../../../../components/structure/container'
 import { Marger } from '../../../../components/structure/marger'
 import { TitleWithStroke } from '../../../../components/atoms/typography/title-with-stroke'
 import { Text } from '../../../../components/atoms/typography/text'
-import { BulletList } from '../../../../components/lists/bullet-list'
+import { BulletList } from '../../../../components/molecules/bullet-list'
 import { Button } from '../../../../components/buttons/button'
 
 const KeySection = () => (

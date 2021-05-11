@@ -8,7 +8,7 @@ import { Text } from '../../../../components/atoms/typography/text'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import { Button, FLUID } from '../../../../components/buttons/button'
 import { ScreenConfig } from '../../../../constants/screen-config'
-import { IconList } from '../../../../components/lists/icon-list'
+import { IconList } from '../../../../components/organisms/icon-list'
 
 const StyledGrid = styled(Grid)`
   align-items: center;

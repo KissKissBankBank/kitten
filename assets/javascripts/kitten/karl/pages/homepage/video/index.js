@@ -1,16 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import { TitleWithStroke } from '../../../../components/atoms/typography/title-with-stroke'
-import { Paragraph } from '../../../../components/atoms/typography/paragraph'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import COLORS from '../../../../constants/colors-config'
-import { ScreenConfig } from '../../../../constants/screen-config'
 import {
+  TitleWithStroke,
+  Paragraph,
+  pxToRem, stepToRem,
+  COLORS,
+  ScreenConfig,
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
-} from '../../../../constants/grid-config'
-import { EmbedPlayer } from '../../../../components/media/embed-player'
-import { Grid, GridCol } from '../../../../components/structure/grid'
+  EmbedPlayer,
+  Grid, GridCol,
+} from '../../../..'
+
+
 
 const StyledVideo = styled(Grid)`
   align-items: center;

@@ -86,11 +86,6 @@ export { Carousel } from './components/carousel/carousel'
 export { NavTabCarousel } from './components/carousel/nav-tab-carousel'
 export { SimpleCarousel } from './components/carousel/simple-carousel'
 
-// Comment
-export { CommentAvatar } from './components/comments/comment-avatar'
-export { CommentForm } from './components/comments/comment-form'
-export { Comment } from './components/comments/comment'
-
 // Dev
 export { DevGrid } from './components/dev/dev-grid'
 
@@ -231,7 +226,6 @@ export { ArrowContainer } from './components/layout/arrow-container'
 export { IconContainer } from './components/layout/icon-container'
 export { HorizontalStroke } from './components/layout/horizontal-stroke'
 export { Line } from './components/layout/line'
-export { ResponsiveIframeContainer } from './components/layout/responsive-iframe-container'
 export { Separator } from './components/layout/separator'
 export { VerticalStroke } from './components/layout/vertical-stroke'
 
@@ -241,21 +235,21 @@ export {
 } from './components/layout/horizontal-stroke/common/stroke-modifier-styles'
 
 // Lines
-export { InfoLines } from './components/lines/info-lines'
-
-// Links
-export { LinkList } from './components/links/link-list'
-
-// Lists
-export { IconList } from './components/lists/icon-list'
-export { BulletList } from './components/lists/bullet-list'
-export { List } from './components/lists/list'
-export { CheckList } from './components/lists/check-list'
-export { Timeline } from './components/lists/timeline'
-export { HorizontalTimeline } from './components/lists/horizontal-timeline'
+export { InfoLines } from './components/molecules/info-lines'
 
 // Molecules
+export { BulletList } from './components/molecules/bullet-list'
+export { CheckList } from './components/molecules/check-list'
+export { CommentAvatar } from './components/molecules/comment-block/comment-avatar'
+export { CommentForm } from './components/molecules/comment-block/comment-form'
+export { Comment } from './components/molecules/comment-block/comment'
+export { EmbedPlayer } from './components/molecules/embed/embed-player'
+export { LinkList } from './components/molecules/link-list'
+export { List } from './components/molecules/list'
+export { ResponsiveIframeContainer } from './components/molecules/embed/responsive-iframe-container'
 export { SearchInput } from './components/molecules/search-input'
+export { TextCopy } from './components/molecules/text-copy'
+export { Toggletip } from './components/molecules/toggletip'
 
 // Molecules/Expand
 export { Accordeon } from './components/molecules/expand/accordeon'
@@ -268,9 +262,9 @@ export { DocumentManager } from './components/molecules/upload/document-manager'
 export { ImageCropper } from './components/molecules/upload/image-cropper'
 
 // Meters
-export { CounterBlock } from './components/meters/counter-block'
-export { Progress } from './components/meters/progress'
-export { ProgressRing } from './components/meters/progress-ring'
+export { CounterBlock } from './components/organisms/counter-block'
+export { Progress } from './components/atoms/progress'
+export { ProgressRing } from './components/atoms/progress-ring'
 
 // Modals
 export { Modal } from './components/modals/modal'
@@ -285,8 +279,11 @@ export { DashboardMenu } from './components/organisms/dashboard-menu'
 export { HeaderMenu } from './components/organisms/header-menu'
 export { default as HeaderNav } from './components/organisms/header-nav'
 export { Hero } from './components/organisms/hero'
+export { HorizontalTimeline } from './components/organisms/horizontal-timeline'
+export { IconList } from './components/organisms/icon-list'
 export { NavBar } from './components/organisms/nav-bar'
 export { Pagination } from './components/organisms/pagination'
+export { Timeline } from './components/organisms/timeline'
 
 // Popovers
 export { SimplePopover } from './components/popovers/simple-popover'
@@ -300,19 +297,12 @@ export { DoubleEntryTable } from './components/tables/double-entry-table'
 export { ListTable } from './components/tables/list-table'
 export { SingleEntryTable } from './components/tables/single-entry-table'
 
-// Text Copy
-export { TextCopy } from './components/text-copy'
-
-// Tooltips
-export { Toggletip } from './components/tooltips/toggletip'
-
 // Tours
 export { HighlightHalo } from './components/tours/highlight-halo'
 
 // Videos
 export { Video } from './components/videos/video'
 export { GifVideo } from './components/videos/gif-video'
-export { EmbedPlayer } from './components/videos/embed-player'
 
 // Structure
 export {
