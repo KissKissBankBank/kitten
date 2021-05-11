@@ -1,3 +1,4 @@
+import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import React, { useState, useEffect, useRef } from 'react';
 import has from 'lodash/fp/has';
@@ -10,17 +11,20 @@ import { useWindowWidth } from '../../../../helpers/utils/use-window-width-hook'
 import domEvents, { TOGGLE_DROPDOWN_EVENT, DROPDOWN_FIRST_FOCUS_REACHED_EVENT, DROPDOWN_LAST_FOCUS_REACHED_EVENT, dispatchEvent } from '../../../../helpers/dom/events';
 import { getFocusableElementsFrom, keyboardNavigation } from '../../../../helpers/dom/a11y';
 import { DROPDOWN_ANIMATED_DELAY } from '../../../../constants/dropdown-config';
+import { ArrowIcon } from '../../../../components/icons/arrow-icon';
 export var Dropdown = React.forwardRef(function (_ref, dropdownRef) {
   var button = _ref.button,
       buttonClassName = _ref.buttonClassName,
       buttonContentOnCollapsed = _ref.buttonContentOnCollapsed,
       buttonContentOnExpanded = _ref.buttonContentOnExpanded,
       buttonId = _ref.buttonId,
+      buttonStyles = _ref.buttonStyles,
       className = _ref.className,
       closeEvents = _ref.closeEvents,
       closeOnOuterClick = _ref.closeOnOuterClick,
       dropdownContent = _ref.dropdownContent,
       dropdownContentWidth = _ref.dropdownContentWidth,
+      hasArrow = _ref.hasArrow,
       isExpanded = _ref.isExpanded,
       keepInitialButtonAction = _ref.keepInitialButtonAction,
       onPositionUpdate = _ref.onPositionUpdate,
@@ -283,8 +287,17 @@ export var Dropdown = React.forwardRef(function (_ref, dropdownRef) {
     className: buttonClassName,
     id: buttonId,
     isExpanded: isExpandedState,
-    onClick: handleButtonClick
-  }, button) : button), !button && /*#__PURE__*/React.createElement(DropdownButton, {
+    onClick: handleButtonClick,
+    style: _extends({}, buttonStyles)
+  }, button, hasArrow && /*#__PURE__*/React.createElement(ArrowIcon, {
+    direction: isExpandedState ? 'top' : 'bottom',
+    className: "k-u-margin-left-single k-u-hidden@xs-down",
+    color: "currentColor"
+  })) : /*#__PURE__*/React.createElement(React.Fragment, null, button, hasArrow && /*#__PURE__*/React.createElement(ArrowIcon, {
+    direction: isExpandedState ? 'top' : 'bottom',
+    className: "k-u-margin-left-single k-u-hidden@xs-down",
+    color: "currentColor"
+  }))), !button && /*#__PURE__*/React.createElement(DropdownButton, {
     ref: dropdownButtonRef,
     className: buttonClassName,
     id: buttonId,

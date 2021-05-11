@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -15,108 +13,74 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireDefault(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
-var _typographyConfig = _interopRequireDefault(require("../../../../constants/typography-config"));
-
-var _typography = require("../../../../helpers/utils/typography");
-
-var _config = require("../config");
-
-var _screenConfig = require("../../../../constants/screen-config");
-
-var _mediaQueries = require("../../../../helpers/utils/media-queries");
-
 var _visuallyHidden = require("../../../../components/accessibility/visually-hidden");
 
-var horizontalPadding = (0, _styledComponents.css)(["padding-left:", ";padding-right:", ";@media (min-width:", "px){padding-left:", ";padding-right:", ";}"], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40));
-
-var StyledLink = _styledComponents.default.a.withConfig({
-  displayName: "button__StyledLink",
-  componentId: "k3u2iw-0"
-})(["", " box-sizing:border-box;display:flex;align-items:center;justify-content:center;height:100%;font-size:", ";color:", ";background-color:", ";text-decoration:none;&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}", " &:hover,&:focus{color:", ";background-color:", ";}"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), function (_ref) {
-  var color = _ref.color;
-  return color;
-}, function (_ref2) {
-  var backgroundColor = _ref2.backgroundColor;
-  return backgroundColor;
-}, _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(-4), _colorsConfig.default.primary4, function (_ref3) {
-  var textShownFromMediaQuery = _ref3.textShownFromMediaQuery,
-      icon = _ref3.icon,
-      text = _ref3.text;
-
-  if (icon && !text) {
-    return (0, _styledComponents.css)(["width:", ";height:", ";@media (min-width:", "px){width:", ";height:", ";}@media (min-width:", "px){width:", ";height:", ";}"], (0, _typography.pxToRem)(_config.MOBILE_HEADER_HEIGHT), (0, _typography.pxToRem)(_config.MOBILE_HEADER_HEIGHT), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(_config.TABLET_HEADER_HEIGHT), (0, _typography.pxToRem)(_config.TABLET_HEADER_HEIGHT), _screenConfig.ScreenConfig.L.min, (0, _typography.pxToRem)(_config.DESKTOP_HEADER_HEIGHT), (0, _typography.pxToRem)(_config.DESKTOP_HEADER_HEIGHT));
-  }
-
-  if (!textShownFromMediaQuery) return (0, _styledComponents.css)(["width:inherit;", " @media (min-width:", "px){min-width:", ";}"], horizontalPadding, _screenConfig.ScreenConfig.L.min, (0, _typography.pxToRem)(200));
-  var defaultWidthForLowerScreenSize = textShownFromMediaQuery.min && (0, _styledComponents.css)(["@media (", "){", " width:inherit;}@media (min-width:", "px){min-width:", ";}"], textShownFromMediaQuery.min, horizontalPadding, _screenConfig.ScreenConfig.L.min, (0, _typography.pxToRem)(200));
-  var defaultWidthForUpperScreenSize = textShownFromMediaQuery.max && (0, _styledComponents.css)(["@media (", "){", " width:inherit;}@media (min-width:", "px){min-width:", ";}"], textShownFromMediaQuery.max, horizontalPadding, _screenConfig.ScreenConfig.L.min, (0, _typography.pxToRem)(200));
-  return (0, _styledComponents.css)(["padding:0;width:", ";@media (min-width:", "px){width:", ";}@media (min-width:", "px){width:", ";}", " ", ""], (0, _typography.pxToRem)(_config.MOBILE_HEADER_HEIGHT), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(_config.TABLET_HEADER_HEIGHT), _screenConfig.ScreenConfig.L.min, (0, _typography.pxToRem)(_config.DESKTOP_HEADER_HEIGHT), defaultWidthForLowerScreenSize, defaultWidthForUpperScreenSize);
-}, function (_ref4) {
-  var colorHover = _ref4.colorHover,
-      color = _ref4.color;
-  return colorHover || color;
-}, function (_ref5) {
-  var backgroundColorHover = _ref5.backgroundColorHover;
-  return backgroundColorHover;
-});
-
-var Button = function Button(_ref6) {
-  var a11yText = _ref6.a11yText,
-      icon = _ref6.icon,
-      backgroundColor = _ref6.backgroundColor,
-      backgroundColorHover = _ref6.backgroundColorHover,
-      color = _ref6.color,
-      colorHover = _ref6.colorHover,
-      text = _ref6.text,
-      href = _ref6.href,
-      type = _ref6.type,
-      _ref6$hiddenText = _ref6.hiddenText;
-  _ref6$hiddenText = _ref6$hiddenText === void 0 ? {} : _ref6$hiddenText;
-  var min = _ref6$hiddenText.min,
-      max = _ref6$hiddenText.max,
-      as = _ref6.as,
-      others = (0, _objectWithoutProperties2.default)(_ref6, ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as"]);
-  var previousScreenSize = min && (0, _mediaQueries.getScreenSizeFrom)('previous')(min);
-  var nextScreenSize = max && (0, _mediaQueries.getScreenSizeFrom)('next')(max);
+var Button = function Button(_ref) {
+  var a11yText = _ref.a11yText,
+      icon = _ref.icon,
+      backgroundColor = _ref.backgroundColor,
+      backgroundColorHover = _ref.backgroundColorHover,
+      color = _ref.color,
+      colorHover = _ref.colorHover,
+      text = _ref.text,
+      href = _ref.href,
+      type = _ref.type,
+      _ref$hiddenText = _ref.hiddenText;
+  _ref$hiddenText = _ref$hiddenText === void 0 ? {} : _ref$hiddenText;
+  var min = _ref$hiddenText.min,
+      max = _ref$hiddenText.max,
+      as = _ref.as,
+      style = _ref.style,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style"]);
   var hiddenMin = min ? "k-u-hidden@".concat(min, "-up--important") : '';
   var hiddenMax = max ? "k-u-hidden@".concat(max, "-down--important") : '';
-  var singleRightMargin = 'k-u-margin-right-single';
-  var marginLeftMin = min ? "".concat(singleRightMargin, "@").concat(previousScreenSize.toLowerCase(), "-down--important") : '';
-  var marginLeftMax = max ? "".concat(singleRightMargin, "@").concat(nextScreenSize.toLowerCase(), "-up--important") : '';
-  var textClassName = "".concat(hiddenMin, " ").concat(hiddenMax).trim();
-  var iconClassName = "".concat(marginLeftMin, " ").concat(marginLeftMax).trim();
-  var mediaQuery = (min || max) && {
-    min: min && "max-width: ".concat(_screenConfig.ScreenConfig[previousScreenSize].max, "px"),
-    max: max && "min-width: ".concat(_screenConfig.ScreenConfig[nextScreenSize].min, "px")
-  };
-  var buttonProps = as ? {
-    as: as
-  } : type === 'button' ? {
-    as: 'button',
-    type: type
-  } : {
+  var textClassName = "k-HeaderNav__Button__text ".concat(hiddenMin, " ").concat(hiddenMax).trim();
+  var ButtonComponent = 'a';
+  var buttonProps = {
     href: href
   };
-  return /*#__PURE__*/_react.default.createElement(StyledLink, (0, _extends2.default)({}, others, buttonProps, {
-    backgroundColor: backgroundColor,
-    backgroundColorHover: backgroundColorHover,
-    color: color,
-    colorHover: colorHover,
-    textShownFromMediaQuery: mediaQuery,
-    icon: icon,
-    text: text
-  }), icon && _react.default.cloneElement(icon, {
-    className: iconClassName,
-    'aria-hidden': true
-  }), text && textClassName ? /*#__PURE__*/_react.default.createElement("span", {
+
+  if (!!as) {
+    if (as === 'button') {
+      ButtonComponent = as;
+      buttonProps = {
+        type: 'button'
+      };
+    } else {
+      ButtonComponent = as;
+      buttonProps = {};
+    }
+  } else if (type === 'button') {
+    ButtonComponent = 'button';
+    buttonProps = {
+      type: type
+    };
+  }
+
+  return /*#__PURE__*/_react.default.createElement(ButtonComponent, (0, _extends2.default)({}, props, buttonProps, {
+    className: (0, _classnames.default)('k-HeaderNav__Button', {
+      'k-HeaderNav__Button--hasIcon': !!icon,
+      'k-HeaderNav__Button--hasText': !!text
+    }),
+    style: (0, _extends2.default)({
+      '--HeaderMenu-Button-backgroundColor': backgroundColor,
+      '--HeaderMenu-Button-backgroundColorHover': backgroundColorHover,
+      '--HeaderMenu-Button-color': color,
+      '--HeaderMenu-Button-colorHover': colorHover
+    }, style)
+  }), text && /*#__PURE__*/_react.default.createElement("span", {
     className: textClassName
-  }, text) : text, a11yText && /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, a11yText));
+  }), icon && _react.default.cloneElement(icon, {
+    'aria-hidden': true
+  }), icon && a11yText && /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, a11yText), text && /*#__PURE__*/_react.default.createElement("span", {
+    className: textClassName
+  }, text));
 };
 
 exports.Button = Button;

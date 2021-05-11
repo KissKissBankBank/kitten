@@ -144,7 +144,7 @@ var Toggletip = function Toggletip(_ref2) {
   (0, _react.useEffect)(function () {
     if (!_elementHelper.domElementHelper.canUseDom()) return;
 
-    if (document.readyState === "complete" || document.readyState === "interactive") {
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
       updateCoordinates();
     }
   }, []);

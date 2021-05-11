@@ -62,7 +62,8 @@ var HeaderNav = function HeaderNav(_ref) {
       isLogged = _ref.isLogged,
       quickAccessProps = _ref.quickAccessProps,
       stickyProps = _ref.stickyProps,
-      zIndexConfig = _ref.zIndexConfig;
+      zIndexConfig = _ref.zIndexConfig,
+      size = _ref.size;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -176,7 +177,7 @@ var HeaderNav = function HeaderNav(_ref) {
       '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu
     },
     zIndex: zIndexConfig,
-    className: (0, _classnames.default)('k-HeaderNav__wrapper', {
+    className: (0, _classnames.default)('k-HeaderNav__wrapper', "k-HeaderNav--".concat(size), {
       'k-HeaderNav--menuIsExpanded': isMenuExpanded,
       'k-HeaderNav--inactiveBackground': isBackgroundInactive
     })
@@ -220,7 +221,8 @@ HeaderNav.propTypes = {
   zIndexConfig: _propTypes.default.shape({
     header: _propTypes.default.number,
     headerWithOpenMenu: _propTypes.default.number
-  })
+  }),
+  size: _propTypes.default.oneOf(['small', 'regular'])
 };
 HeaderNav.defaultProps = {
   id: 'kkbbAndCoHeaderNav',
@@ -231,7 +233,8 @@ HeaderNav.defaultProps = {
   zIndexConfig: {
     header: 1,
     headerWithOpenMenu: 3
-  }
+  },
+  size: 'regular'
 };
 var _default = HeaderNav;
 exports.default = _default;

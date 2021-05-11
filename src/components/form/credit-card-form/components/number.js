@@ -34,7 +34,7 @@ var StyledNumberFormat = (0, _styledComponents.default)(function (_ref) {
   componentId: "sc-1a38wzf-0"
 })(["padding-right:", ";", ""], (0, _typography.pxToRem)(45), function (_ref2) {
   var iconSvg = _ref2.iconSvg;
-  return iconSvg && (0, _styledComponents.css)(["background:transparent no-repeat;background-image:url(\"data:image/svg+xml,", "\");background-position:calc(100% - ", ") center;"], iconSvg, (0, _typography.pxToRem)(5));
+  return iconSvg && (0, _styledComponents.css)(["background:transparent no-repeat;background-image:url('data:image/svg+xml,", "');background-position:calc(100% - ", ") center;"], iconSvg, (0, _typography.pxToRem)(5));
 });
 
 var Number = function Number(_ref3) {
