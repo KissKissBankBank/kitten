@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 import HeaderNav from '../index'
-import { LendopolisLogo } from '../../../../components/logos/lendopolis-logo'
-import { KissKissBankBankLogo } from '../../../../components/logos/kisskissbankbanklogo'
-import { HeaderMenu } from '../../../../components/menus/header-menu'
-import { SearchIcon } from '../../../../components/icons/search-icon'
-import COLORS from '../../../../constants/colors-config'
-import { Text } from '../../../../components/typography/text'
-import { AvatarWithTextAndBadge } from '../../../../components/avatar/avatar-with-text-and-badge'
-import domElementHelper from '../../../../helpers/dom/element-helper'
-import { useWindowWidth } from '../../../../helpers/utils/use-window-width-hook'
-import { useDeepCompareEffect } from '../../../../helpers/utils/use-deep-compare-effect-hook'
+import {
+  LendopolisLogo,
+  KissKissBankBankLogo,
+  HeaderMenu,
+  SearchIcon,
+  COLORS,
+  Text,
+  AvatarWithTextAndBadge,
+  domElementHelper,
+  useWindowWidth,
+  useDeepCompareEffect,
+} from '../../../..'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 const getElementById = id => document.getElementById(id)
