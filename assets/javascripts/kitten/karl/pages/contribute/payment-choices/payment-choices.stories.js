@@ -1,7 +1,7 @@
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
 import PaymentChoices from './components/payment-choices'
-import { Marger } from '../../../../components/structure/marger'
+import { Marger } from '../../../..'
 
 export default {
   title: 'pages/Contribute/PaymentChoices',

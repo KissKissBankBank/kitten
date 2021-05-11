@@ -5,7 +5,7 @@ import { Marger } from '../../../../components/structure/marger'
 import { TitleWithStroke } from '../../../../components/atoms/typography/title-with-stroke'
 import { Text } from '../../../../components/atoms/typography/text'
 import { BulletList } from '../../../../components/molecules/bullet-list'
-import { Button } from '../../../../components/buttons/button'
+import { Button } from '../../../../components/molecules/buttons/button'
 
 const KeySection = () => (
   <Container className="PreDeposit__keySection">

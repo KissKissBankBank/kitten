@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
-import { Button } from '../../../../components/buttons/button'
+import { Button } from '../../../../components/molecules/buttons/button'
 
 export const Item = ({
   children,

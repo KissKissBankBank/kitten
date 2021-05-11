@@ -39,7 +39,7 @@ const CommentsPage = () => (
         <Marger top="5" bottom="5">
           <CommentForm
             avatarImgProps={{
-              src: 'https://placehold.it/80x80/caf4fe/caf4fe',
+              src: '/kitten.jpg',
               alt: '',
             }}
             placeholder="Laisser un commentaire sur le projet"
@@ -50,7 +50,7 @@ const CommentsPage = () => (
         <Marger top="5">
           <Comment
             avatarImgProps={{
-              src: 'https://placehold.it/80x80/caf4fe/caf4fe',
+              src: '/kitten.jpg',
               alt: '',
             }}
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."

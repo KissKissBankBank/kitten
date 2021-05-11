@@ -12,7 +12,7 @@ const StoryContainer = ({ children }) => (
 )
 
 export default {
-  title: 'Search/SearchInput',
+  title: 'Molecules/SearchInput',
   component: SearchInput,
 }
 

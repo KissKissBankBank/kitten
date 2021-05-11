@@ -1,5 +1,5 @@
 import React from 'react'
-import { CrowdfundingCard } from '../../../../components/cards/crowdfunding-card'
+import { CrowdfundingCard } from '../../../../components/molecules/cards/crowdfunding-card'
 import { Carousel } from '../../../../components/molecules/carousels/carousel'
 import { Container } from '../../../../components/structure/container'
 import { mediaQueries } from '../../../../hoc/media-queries'

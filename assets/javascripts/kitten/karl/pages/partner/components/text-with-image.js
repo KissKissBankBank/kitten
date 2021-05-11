@@ -11,7 +11,7 @@ import {
   FLUID,
   DEFAULT,
   BIG,
-} from '../../../../components/buttons/button'
+} from '../../../../components/molecules/buttons/button'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 

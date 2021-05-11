@@ -3,7 +3,7 @@ import { Grid, GridCol } from '../../../../components/structure/grid'
 import { Container } from '../../../../components/structure/container'
 import { Title } from '../../../../components/atoms/typography/title'
 import { Paragraph } from '../../../../components/atoms/typography/paragraph'
-import { Button } from '../../../../components/buttons/button'
+import { Button } from '../../../../components/molecules/buttons/button'
 import { Timeline } from '../../../../components/organisms/timeline'
 import COLORS from '../../../../constants/colors-config'
 

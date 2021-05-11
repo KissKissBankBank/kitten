@@ -9,7 +9,7 @@ import { Marger } from '../../../../../components/structure/marger'
 
 import { Text } from '../../../../../components/atoms/typography/text'
 
-import { Button } from '../../../../../components/buttons/button'
+import { Button } from '../../../../../components/molecules/buttons/button'
 
 import { FacebookIconWithBackground } from '../../../../../components/graphics/icons/facebook-icon-with-background'
 import { TwitterIcon } from '../../../../../components/graphics/icons/twitter-icon'

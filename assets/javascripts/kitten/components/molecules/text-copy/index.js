@@ -8,7 +8,7 @@ import { CopyIcon } from '../../graphics/icons/copy-icon'
 import { ArrowContainer } from '../../molecules/boxes/arrow-container'
 import { Text } from '../../atoms/typography/text'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
-import { modifierStyles } from '../../../components/buttons/button/helpers/modifier-styles'
+import { modifierStyles } from '../../../components/molecules/buttons/button/helpers/modifier-styles'
 
 const StyledButton = styled(({ buttonModifier, ...others }) => (
   <button {...others} />

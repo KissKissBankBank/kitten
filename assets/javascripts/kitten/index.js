@@ -9,11 +9,13 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 export { AvatarWithTextAndBadge } from './components/atoms/avatar-with-text-and-badge'
 export { Badge } from './components/atoms/badge'
 export { HighlightHalo } from './components/atoms/highlight-halo'
+export { HorizontalStroke } from './components/atoms/horizontal-stroke'
 export { IconBadge } from './components/atoms/icon-badge'
 export { Loader } from './components/atoms/loader'
 export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph'
 export { Progress } from './components/atoms/progress'
 export { ProgressRing } from './components/atoms/progress-ring'
+export { Separator } from './components/atoms/separator'
 export { StatusWithBullet } from './components/atoms/status-with-bullet'
 export {
   StepperIcon,
@@ -22,6 +24,12 @@ export {
   StepperIconValidated,
 } from './components/atoms/stepper-icon'
 export { Tag } from './components/atoms/tag'
+export { VerticalStroke } from './components/atoms/vertical-stroke'
+
+export {
+  strokeModifierStyles,
+  strokeModifierStylesWithoutMargin,
+} from './components/atoms/horizontal-stroke/common/stroke-modifier-styles'
 
 // Atoms/Typography
 export { Paragraph } from './components/atoms/typography/paragraph'
@@ -40,47 +48,6 @@ export { modifierStyles as paragraphModifierStyles } from './components/atoms/ty
 // Atoms/Videos
 export { Video } from './components/atoms/video/video'
 export { GifVideo } from './components/atoms/video/gif-video'
-
-// Buttons
-export { Button } from './components/buttons/button'
-export { ButtonIcon } from './components/buttons/button-icon'
-export { ButtonGroup } from './components/buttons/button-group'
-export { ButtonImage } from './components/buttons/button-image'
-export { ButtonQuestionMarkIcon } from './components/buttons/button-question-mark-icon'
-export { CloseButton } from './components/buttons/close-button'
-export {
-  FacebookButtonIconWords,
-  TwitterButtonIconWords,
-  LinkedinButtonIconWords,
-  InstagramButtonIconWords,
-} from './components/buttons/social-button-icon-words'
-export {
-  FacebookButtonIcon,
-  TwitterButtonIcon,
-  LinkedinButtonIcon,
-  InstagramButtonIcon,
-  YoutubeButtonIcon,
-  PinterestButtonIcon,
-} from './components/buttons/social-button-icon'
-export { TagButton } from './components/buttons/tag-button'
-export { CheckableButton } from './components/buttons/checkable-button'
-
-export { modifierStyles as buttonModifierStyles } from './components/buttons/button/helpers/modifier-styles'
-
-// Cards
-export { SimpleCard } from './components/cards/simple-card'
-export { BackerCard } from './components/cards/backer-card'
-export { BackingCard } from './components/cards/backing-card'
-export { CartRewardCard } from './components/cards/cart-reward-card'
-export { RewardEdition } from './components/cards/reward-edition'
-export { TeamCard } from './components/cards/team-card'
-export { Triptych } from './components/cards/triptych'
-export { VerticalCardWithAction } from './components/cards/vertical-card-with-action'
-export { VerticalCard } from './components/cards/vertical-card'
-export { ClickableCard } from './components/cards/clickable-card'
-export { CrowdfundingCard } from './components/cards/crowdfunding-card'
-export { EngagementCard } from './components/cards/engagement-card'
-export { EngagementCardWithImage } from './components/cards/engagement-card/withImage'
 
 // Dev
 export { DevGrid } from './components/dev/dev-grid'
@@ -224,16 +191,6 @@ export { MaisonDeCrowdfundingLogo } from './components/graphics/logos/mdc'
 export { MicrodonLogo } from './components/graphics/logos/microdonlogo'
 export { KkbbCoLogo } from './components/graphics/logos/kkbb-co'
 
-// Layout
-export { HorizontalStroke } from './components/atoms/horizontal-stroke'
-export { Separator } from './components/atoms/separator'
-export { VerticalStroke } from './components/atoms/vertical-stroke'
-
-export {
-  strokeModifierStyles,
-  strokeModifierStylesWithoutMargin,
-} from './components/atoms/horizontal-stroke/common/stroke-modifier-styles'
-
 // Molecules
 export { Alert } from './components/molecules/alert'
 export { BulletList } from './components/molecules/bullet-list'
@@ -246,8 +203,12 @@ export { InfoLines } from './components/molecules/info-lines'
 export { Line } from './components/molecules/line'
 export { LinkList } from './components/molecules/link-list'
 export { List } from './components/molecules/list'
+export { Modal } from './components/molecules/modal'
+export { Modal as ModalNext } from './components/molecules/modal-next'
+export { Overlay } from './components/molecules/overlay'
 export { ResponsiveIframeContainer } from './components/molecules/embed/responsive-iframe-container'
 export { SearchInput } from './components/molecules/search-input'
+export { SimplePopover } from './components/molecules/simple-popover'
 export { TextCopy } from './components/molecules/text-copy'
 export { Toggletip } from './components/molecules/toggletip'
 
@@ -257,6 +218,47 @@ export { DocLinkBox } from './components/molecules/boxes/doc-link-box'
 export { IconContainer } from './components/molecules/boxes/icon-container'
 export { InformationBox } from './components/molecules/boxes/information-box'
 export { LinkBox } from './components/molecules/boxes/link-box'
+
+// Molecules/Buttons
+export { Button } from './components/molecules/buttons/button'
+export { ButtonIcon } from './components/molecules/buttons/button-icon'
+export { ButtonGroup } from './components/molecules/buttons/button-group'
+export { ButtonImage } from './components/molecules/buttons/button-image'
+export { ButtonQuestionMarkIcon } from './components/molecules/buttons/button-question-mark-icon'
+export { CheckableButton } from './components/molecules/buttons/checkable-button'
+export { CloseButton } from './components/molecules/buttons/close-button'
+export {
+  FacebookButtonIconWords,
+  TwitterButtonIconWords,
+  LinkedinButtonIconWords,
+  InstagramButtonIconWords,
+} from './components/molecules/buttons/social-button-icon-words'
+export {
+  FacebookButtonIcon,
+  TwitterButtonIcon,
+  LinkedinButtonIcon,
+  InstagramButtonIcon,
+  YoutubeButtonIcon,
+  PinterestButtonIcon,
+} from './components/molecules/buttons/social-button-icon'
+export { TagButton } from './components/molecules/buttons/tag-button'
+
+export { modifierStyles as buttonModifierStyles } from './components/molecules/buttons/button/helpers/modifier-styles'
+
+// Molecules/Cards
+export { BackerCard } from './components/molecules/cards/backer-card'
+export { BackingCard } from './components/molecules/cards/backing-card'
+export { CartRewardCard } from './components/molecules/cards/cart-reward-card'
+export { ClickableCard } from './components/molecules/cards/clickable-card'
+export { CrowdfundingCard } from './components/molecules/cards/crowdfunding-card'
+export { EngagementCard } from './components/molecules/cards/engagement-card'
+export { EngagementCardWithImage } from './components/molecules/cards/engagement-card-with-image'
+export { RewardEdition } from './components/molecules/cards/reward-edition'
+export { SimpleCard } from './components/molecules/cards/simple-card'
+export { TeamCard } from './components/molecules/cards/team-card'
+export { Triptych } from './components/molecules/cards/triptych'
+export { VerticalCard } from './components/molecules/cards/vertical-card'
+export { VerticalCardWithAction } from './components/molecules/cards/vertical-card-with-action'
 
 // Molecules/Carousels
 export { Carousel } from './components/molecules/carousels/carousel'
@@ -272,11 +274,6 @@ export { ExpandBoard } from './components/molecules/expand/expand-board'
 export { BasicUploader } from './components/molecules/upload/basic-uploader'
 export { DocumentManager } from './components/molecules/upload/document-manager'
 export { ImageCropper } from './components/molecules/upload/image-cropper'
-
-// Modals
-export { Modal } from './components/modals/modal'
-export { Modal as ModalNext } from './components/modals/next'
-export { Overlay } from './components/modals/overlay'
 
 // Organisms
 export { CounterBlock } from './components/organisms/counter-block'
@@ -296,11 +293,6 @@ export { VerticalStepper } from './components/organisms/vertical-stepper'
 export { DoubleEntryTable } from './components/organisms/tables/double-entry-table'
 export { ListTable } from './components/organisms/tables/list-table'
 export { SingleEntryTable } from './components/organisms/tables/single-entry-table'
-
-
-// Popovers
-export { SimplePopover } from './components/popovers/simple-popover'
-
 
 // Structure
 export {
@@ -374,7 +366,7 @@ export {
   ICON_BIG as BUTTON_STYLE_ICON_BIG,
   ICON_HUGE as BUTTON_STYLE_ICON_HUGE,
   ICON_GIANT as BUTTON_STYLE_ICON_GIANT,
-} from './components/buttons/button'
+} from './components/molecules/buttons/button'
 export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/molecules/carousels/carousel/styles'
 export {
   MICRO as HORIZONTAL_STROKE_STYLE_MICRO,

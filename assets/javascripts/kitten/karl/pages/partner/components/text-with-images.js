@@ -5,7 +5,7 @@ import { Container } from '../../../../components/structure/container'
 import { Grid, GridCol } from '../../../../components/structure/grid'
 import { Title } from '../../../../components/atoms/typography/title'
 import { Text } from '../../../../components/atoms/typography/text'
-import { Button } from '../../../../components/buttons/button'
+import { Button } from '../../../../components/molecules/buttons/button'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 

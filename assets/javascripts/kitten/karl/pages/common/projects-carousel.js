@@ -6,7 +6,7 @@ import { Marger } from '../../../components/structure/marger'
 import { Title } from '../../../components/atoms/typography/title'
 import { Text } from '../../../components/atoms/typography/text'
 import { HorizontalStroke } from '../../../components/atoms/horizontal-stroke'
-import { Button } from '../../../components/buttons/button'
+import { Button } from '../../../components/molecules/buttons/button'
 import { Carousel } from '../../../components/molecules/carousels/carousel'
 import { ScreenConfig, SCREEN_SIZE_M } from '../../../constants/screen-config'
 import {
@@ -14,7 +14,7 @@ import {
   CONTAINER_PADDING_THIN,
 } from '../../../constants/grid-config'
 import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon'
-import { CrowdfundingCard } from '../../../components/cards/crowdfunding-card'
+import { CrowdfundingCard } from '../../../components/molecules/cards/crowdfunding-card'
 import { withMediaQueries } from '../../../hoc/media-queries'
 import { pxToRem } from '../../../helpers/utils/typography'
 import styled from 'styled-components'

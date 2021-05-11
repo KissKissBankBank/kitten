@@ -6,7 +6,7 @@ import { Grid, GridCol } from '../../../../components/structure/grid'
 import { Title } from '../../../../components/atoms/typography/title'
 import { Text } from '../../../../components/atoms/typography/text'
 import { HorizontalStroke } from '../../../../components/atoms/horizontal-stroke'
-import { Button, FLUID } from '../../../../components/buttons/button'
+import { Button, FLUID } from '../../../../components/molecules/buttons/button'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { IconList } from '../../../../components/organisms/icon-list'
 

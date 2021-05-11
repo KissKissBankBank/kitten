@@ -3,7 +3,7 @@ import { Container } from '../../../../../components/structure/container'
 import { Grid, GridCol } from '../../../../../components/structure/grid'
 import { Title } from '../../../../../components/atoms/typography/title'
 import { CardWithButton } from './card-with-button'
-import { Triptych } from '../../../../../components/cards/triptych'
+import { Triptych } from '../../../../../components/molecules/cards/triptych'
 import COLORS from '../../../../../constants/colors-config'
 
 const SolutionsTriptych = () => (

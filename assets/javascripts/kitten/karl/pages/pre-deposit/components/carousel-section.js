@@ -5,7 +5,7 @@ import { Marger } from '../../../../components/structure/marger'
 import { Title } from '../../../../components/atoms/typography/title'
 import { HorizontalStroke } from '../../../../components/atoms/horizontal-stroke'
 import { Carousel } from '../../../../components/molecules/carousels/carousel'
-import { SimpleCard } from '../../../../components/cards/simple-card'
+import { SimpleCard } from '../../../../components/molecules/cards/simple-card'
 import { SCREEN_SIZE_M } from '../../../../constants/screen-config'
 import classNames from 'classnames'
 

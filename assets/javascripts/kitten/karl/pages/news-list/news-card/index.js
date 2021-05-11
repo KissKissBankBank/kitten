@@ -4,10 +4,10 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 import { GarbageIcon } from '../../../../components/graphics/icons/garbage-icon'
 import { EditIcon } from '../../../../components/graphics/icons/edit-icon'
-import { ButtonIcon } from '../../../../components/buttons/button-icon'
+import { ButtonIcon } from '../../../../components/molecules/buttons/button-icon'
 import { Title } from '../../../../components/atoms/typography/title'
 import { Text } from '../../../../components/atoms/typography/text'
-import { Button } from '../../../../components/buttons/button'
+import { Button } from '../../../../components/molecules/buttons/button'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
 const borderWidth = 2

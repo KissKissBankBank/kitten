@@ -9,7 +9,7 @@ import { Marger } from '../../../../../components/structure/marger'
 import { Text } from '../../../../../components/atoms/typography/text'
 
 import { TextInput } from '../../../../../components/form/text-input'
-import { Button } from '../../../../../components/buttons/button'
+import { Button } from '../../../../../components/molecules/buttons/button'
 
 const PageSubTitles = styled(Text)`
   font-size: ${pxToRem(20)};
