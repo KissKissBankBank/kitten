@@ -4,6 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `HeaderNav`: Add `size` prop, accepts `regular` and `small`.
+- Feature: `HeaderNav.UserMenu.Button`: Add `hasArrow` boolean prop.
+- Feature: `HeaderNav.UserMenu.Button`: Add the following color props:
+  - `backgroundColor`
+  - `backgroundColorHover`
+  - `backgroundColorActive`
+  - `color`
+  - `colorHover`
+  - `colorActive`
+- Feature: `DashboardLayout`: Add `DashboardLayout.SiteHeader` component.
 - Feature: Add `HourglassIcon` component.
 - Fix: `TextInput`: Set the placeholder color to disabled.
 - Fix: `DropdownSelectWithInput`: Fix input padding.

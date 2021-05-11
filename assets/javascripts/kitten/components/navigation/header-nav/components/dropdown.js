@@ -17,6 +17,7 @@ import {
   keyboardNavigation,
 } from '../../../../helpers/dom/a11y'
 import { DROPDOWN_ANIMATED_DELAY } from '../../../../constants/dropdown-config'
+import { ArrowIcon } from '../../../../components/icons/arrow-icon'
 
 export const Dropdown = React.forwardRef(
   (
@@ -26,11 +27,13 @@ export const Dropdown = React.forwardRef(
       buttonContentOnCollapsed,
       buttonContentOnExpanded,
       buttonId,
+      buttonStyles,
       className,
       closeEvents,
       closeOnOuterClick,
       dropdownContent,
       dropdownContentWidth,
+      hasArrow,
       isExpanded,
       keepInitialButtonAction,
       onPositionUpdate,
@@ -314,11 +317,28 @@ export const Dropdown = React.forwardRef(
               id={buttonId}
               isExpanded={isExpandedState}
               onClick={handleButtonClick}
+              style={{ ...buttonStyles }}
             >
               {button}
+              {hasArrow && (
+                <ArrowIcon
+                  direction={isExpandedState ? 'top' : 'bottom'}
+                  className="k-u-margin-left-single k-u-hidden@xs-down"
+                  color="currentColor"
+                />
+              )}
             </DropdownButton>
           ) : (
-            button
+            <>
+              {button}
+              {hasArrow && (
+                <ArrowIcon
+                  direction={isExpandedState ? 'top' : 'bottom'}
+                  className="k-u-margin-left-single k-u-hidden@xs-down"
+                  color="currentColor"
+                />
+              )}
+            </>
           ))}
 
         {!button && (

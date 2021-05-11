@@ -1,126 +1,8 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import COLORS from '../../../../constants/colors-config'
-import TYPOGRAPHY from '../../../../constants/typography-config'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import {
-  MOBILE_HEADER_HEIGHT,
-  TABLET_HEADER_HEIGHT,
-  DESKTOP_HEADER_HEIGHT,
-} from '../config'
-import { ScreenConfig } from '../../../../constants/screen-config'
-import { getScreenSizeFrom } from '../../../../helpers/utils/media-queries'
 import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
-
-const horizontalPadding = css`
-  padding-left: ${pxToRem(30)};
-  padding-right: ${pxToRem(30)};
-
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    padding-left: ${pxToRem(40)};
-    padding-right: ${pxToRem(40)};
-  }
-`
-
-const StyledLink = styled.a`
-  ${TYPOGRAPHY.fontStyles.regular}
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: ${stepToRem(-1)};
-  color: ${({ color }) => color};
-  background-color: ${({ backgroundColor }) => backgroundColor};
-  text-decoration: none;
-
-  &:focus {
-    outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(-4)};
-  }
-  &:focus:not(:focus-visible) {
-    outline-color: transparent;
-  }
-  &:focus-visible {
-    outline-color: ${COLORS.primary4};
-  }
-
-  ${({ textShownFromMediaQuery, icon, text }) => {
-    if (icon && !text) {
-      return css`
-        width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
-        height: ${pxToRem(MOBILE_HEADER_HEIGHT)};
-
-        @media (min-width: ${ScreenConfig.S.min}px) {
-          width: ${pxToRem(TABLET_HEADER_HEIGHT)};
-          height: ${pxToRem(TABLET_HEADER_HEIGHT)};
-        }
-
-        @media (min-width: ${ScreenConfig.L.min}px) {
-          width: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
-          height: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
-        }
-      `
-    }
-
-    if (!textShownFromMediaQuery)
-      return css`
-        width: inherit;
-        ${horizontalPadding}
-
-        @media (min-width: ${ScreenConfig.L.min}px) {
-          min-width: ${pxToRem(200)};
-        }
-      `
-
-    const defaultWidthForLowerScreenSize =
-      textShownFromMediaQuery.min &&
-      css`
-        @media (${textShownFromMediaQuery.min}) {
-          ${horizontalPadding}
-          width: inherit;
-        }
-
-        @media (min-width: ${ScreenConfig.L.min}px) {
-          min-width: ${pxToRem(200)};
-        }
-      `
-
-    const defaultWidthForUpperScreenSize =
-      textShownFromMediaQuery.max &&
-      css`
-        @media (${textShownFromMediaQuery.max}) {
-          ${horizontalPadding}
-          width: inherit;
-        }
-
-        @media (min-width: ${ScreenConfig.L.min}px) {
-          min-width: ${pxToRem(200)};
-        }
-      `
-    return css`
-      padding: 0;
-      width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        width: ${pxToRem(TABLET_HEADER_HEIGHT)};
-      }
-
-      @media (min-width: ${ScreenConfig.L.min}px) {
-        width: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
-      }
-
-      ${defaultWidthForLowerScreenSize}
-      ${defaultWidthForUpperScreenSize}
-    `
-  }}
-
-  &:hover, &:focus {
-    color: ${({ colorHover, color }) => colorHover || color};
-    background-color: ${({ backgroundColorHover }) => backgroundColorHover};
-  }
-`
 
 export const Button = ({
   a11yText,
@@ -134,58 +16,55 @@ export const Button = ({
   type,
   hiddenText: { min, max } = {},
   as,
-  ...others
+  style,
+  ...props
 }) => {
-  const previousScreenSize = min && getScreenSizeFrom('previous')(min)
-  const nextScreenSize = max && getScreenSizeFrom('next')(max)
   const hiddenMin = min ? `k-u-hidden@${min}-up--important` : ''
   const hiddenMax = max ? `k-u-hidden@${max}-down--important` : ''
-  const singleRightMargin = 'k-u-margin-right-single'
-  const marginLeftMin = min
-    ? `${singleRightMargin}@${previousScreenSize.toLowerCase()}-down--important`
-    : ''
-  const marginLeftMax = max
-    ? `${singleRightMargin}@${nextScreenSize.toLowerCase()}-up--important`
-    : ''
-  const textClassName = `${hiddenMin} ${hiddenMax}`.trim()
-  const iconClassName = `${marginLeftMin} ${marginLeftMax}`.trim()
-  const mediaQuery = (min || max) && {
-    min: min && `max-width: ${ScreenConfig[previousScreenSize].max}px`,
-    max: max && `min-width: ${ScreenConfig[nextScreenSize].min}px`,
+  const textClassName = `k-HeaderNav__Button__text ${hiddenMin} ${hiddenMax}`.trim()
+
+  let ButtonComponent = 'a'
+  let buttonProps = { href }
+
+  if (!!as) {
+    if (as === 'button') {
+      ButtonComponent = as
+      buttonProps = { type: 'button' }
+    } else {
+      ButtonComponent = as
+      buttonProps = {}
+    }
+  } else if (type === 'button') {
+    ButtonComponent = 'button'
+    buttonProps = { type }
   }
 
-  const buttonProps = as
-    ? { as }
-    : type === 'button'
-    ? { as: 'button', type }
-    : { href }
-
   return (
-    <StyledLink
-      {...others}
+    <ButtonComponent
+      {...props}
       {...buttonProps}
-      backgroundColor={backgroundColor}
-      backgroundColorHover={backgroundColorHover}
-      color={color}
-      colorHover={colorHover}
-      textShownFromMediaQuery={mediaQuery}
-      icon={icon}
-      text={text}
+      className={classNames('k-HeaderNav__Button', {
+        'k-HeaderNav__Button--hasIcon': !!icon,
+        'k-HeaderNav__Button--hasText': !!text,
+      })}
+      style={{
+        '--HeaderMenu-Button-backgroundColor': backgroundColor,
+        '--HeaderMenu-Button-backgroundColorHover': backgroundColorHover,
+        '--HeaderMenu-Button-color': color,
+        '--HeaderMenu-Button-colorHover': colorHover,
+        ...style,
+      }}
     >
+      {text && <span className={textClassName} />}
+
       {icon &&
         React.cloneElement(icon, {
-          className: iconClassName,
           'aria-hidden': true,
         })}
+      {icon && a11yText && <VisuallyHidden>{a11yText}</VisuallyHidden>}
 
-      {text && textClassName ? (
-        <span className={textClassName}>{text}</span>
-      ) : (
-        text
-      )}
-
-      {a11yText && <VisuallyHidden>{a11yText}</VisuallyHidden>}
-    </StyledLink>
+      {text && <span className={textClassName}>{text}</span>}
+    </ButtonComponent>
   )
 }
 

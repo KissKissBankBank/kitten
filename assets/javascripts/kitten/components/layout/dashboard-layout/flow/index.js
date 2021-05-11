@@ -22,7 +22,7 @@ const StyledFlow = styled.div`
   min-height: 100%;
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    min-height: 100vh;
+    min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-columns: 1fr 20vw;
@@ -107,7 +107,7 @@ const StyledFlow = styled.div`
 
   .k-DashboardLayout__flow__aside__content {
     position: sticky;
-    top: ${pxToRem(80)};
+    top: calc(${pxToRem(80)} + var(--dashboardLayout-siteHeaderHeight, 0));
     padding-bottom: ${pxToRem(40)};
 
     svg {

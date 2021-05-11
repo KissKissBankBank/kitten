@@ -14,6 +14,7 @@ export const UserMenu = ({
   dropdownContentWidth,
   padding,
   closeEvents,
+  buttonProps,
   ...props
 }) => {
   const userDropdownRef = useRef(null)
@@ -25,9 +26,31 @@ export const UserMenu = ({
     type: UserMenu.Navigation,
   })[0]
 
+  const {
+    hasArrow,
+    backgroundColor,
+    backgroundColorHover,
+    backgroundColorActive,
+    color,
+    colorHover,
+    colorActive,
+  } = button.props
+
+  const buttonStyles = {
+    '--UserMenu-Button-backgroundColor': backgroundColor,
+    '--UserMenu-Button-backgroundColorHover': backgroundColorHover,
+    '--UserMenu-Button-backgroundColorActive': backgroundColorActive,
+    '--UserMenu-Button-color': color,
+    '--UserMenu-Button-colorHover': colorHover,
+    '--UserMenu-Button-colorActive': colorActive,
+  }
+
   const buttonClassName = classNames(
     'k-HeaderNav__UserMenuButton',
-    { 'k-HeaderNav__UserMenuButton--nopadding': !padding },
+    {
+      'k-HeaderNav__UserMenuButton--hasArrow': hasArrow,
+      'k-HeaderNav__UserMenuButton--nopadding': !padding,
+    },
     props.className,
   )
 
@@ -38,12 +61,14 @@ export const UserMenu = ({
           {...props}
           button={button}
           buttonClassName={buttonClassName}
+          buttonStyles={buttonStyles}
           buttonId={getButtonId(id)}
           className={DROPDOWN_CLASS}
           closeEvents={[CLOSE_EVENT, ...closeEvents]}
           closeOnOuterClick
           dropdownContent={navigation}
           dropdownContentWidth={dropdownContentWidth}
+          hasArrow={hasArrow}
           keepInitialButtonAction
           onToggle={callOnToggle}
           positionedHorizontallyWith={getElementById(getButtonId(id))}
@@ -63,12 +88,14 @@ UserMenu.propTypes = {
   ]),
   padding: PropTypes.bool,
   closeEvents: PropTypes.arrayOf(PropTypes.string),
+  hasArrow: PropTypes.bool,
 }
 
 UserMenu.defaultProps = {
   dropdownContentWidth: null,
   padding: true,
   closeEvents: [],
+  hasArrow: false,
 }
 
 UserMenu.Button = ({ children }) => <>{children}</>

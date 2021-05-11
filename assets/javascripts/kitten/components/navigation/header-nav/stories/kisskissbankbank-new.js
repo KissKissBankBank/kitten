@@ -84,7 +84,11 @@ const Navigation = () => (
   </>
 )
 
-export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
+export const KissKissBankBankHeaderNavStoryNew = ({
+  isLogged,
+  isFixed,
+  size,
+}) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const [userMenuWidth, setUserMenuWidth] = useState(null)
   const windowWidth = useWindowWidth()
@@ -115,6 +119,7 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
         text: 'Aller au contenu principal',
         zIndex: 300,
       }}
+      size={size}
     >
       <HeaderNav.BurgerMenu>
         <InnerBurgerMenu dropdownContentWidth={burgerMenuWidth} />
@@ -139,7 +144,7 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
       <HeaderNav.Right>
         <HeaderNav.Button
           icon={<SearchIcon width="14" height="14" color={COLORS.font1} />}
-          backgroundColor={COLORS.background3}
+          backgroundColor={COLORS.background1}
           backgroundColorHover={COLORS.line1}
           color={COLORS.font1}
           text="Rechercher"
@@ -149,14 +154,22 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
 
         <HeaderNav.Logged>
           <HeaderNav.UserMenu dropdownContentWidth={userMenuWidth}>
-            <HeaderNav.UserMenu.Button>
+            <HeaderNav.UserMenu.Button
+              hasArrow
+              backgroundColor={COLORS.background1}
+              backgroundColorHover={COLORS.line1}
+              backgroundColorActive={COLORS.line1}
+              color={COLORS.font1}
+              colorHover={COLORS.primary1}
+              colorActive={COLORS.font1}
+            >
               <AvatarWithTextAndBadge>
                 <AvatarWithTextAndBadge.Image src="/kitten.jpg">
                   <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
                 </AvatarWithTextAndBadge.Image>
 
                 <AvatarWithTextAndBadge.Text
-                  textClassName="k-u-hidden@xs-down"
+                  className="k-u-hidden@xs-down"
                   withEllipsisOverflow={true}
                 >
                   <Text lineHeight="normal" weight="regular">
