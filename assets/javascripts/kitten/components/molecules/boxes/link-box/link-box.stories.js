@@ -1,9 +1,11 @@
 import React from 'react'
 import { LinkBox } from './index'
 import { text, boolean } from '@storybook/addon-knobs'
-import { FlashCircleIcon } from '../../graphics/icons/flash-circle-icon'
-import { Text } from '../../atoms/typography/text'
-import COLORS from '../../../constants/colors-config'
+import {
+  FlashCircleIcon,
+  Text,
+  COLORS,
+} from '../../../..'
 
 export const Default = () => (
   <LinkBox

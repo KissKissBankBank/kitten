@@ -7,7 +7,7 @@ import {
   Grid,
   GridCol,
   Title,
-} from '../../../index'
+} from '../../..'
 
 export default {
   title: 'Structure/SideLayout',

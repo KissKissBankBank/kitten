@@ -1,7 +1,7 @@
 import React from 'react'
 import { LinkBox } from './../link-box'
-import { LinkBoxIllustration } from './../../../components/graphics/illustrations/link-box-illustration'
-import { Text } from './../../../components/atoms/typography/text'
+import { LinkBoxIllustration } from '../../../../components/graphics/illustrations/link-box-illustration'
+import { Text } from '../../../../components/atoms/typography/text'
 
 export const DocLinkBox = ({ isExternal, href, title, text, ...props }) => {
   return (

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import COLORS from '../../../constants/colors-config'
-import { ScreenConfig } from '../../../constants/screen-config'
-import { pxToRem } from '../../../helpers/utils/typography'
+import COLORS from '../../../../constants/colors-config'
+import { ScreenConfig } from '../../../../constants/screen-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
 
 export const StyledLinkBox = styled.a`
   display: flex;

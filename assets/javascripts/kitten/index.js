@@ -34,12 +34,6 @@ export {
 } from './components/atoms/typography/common/title-modifier-styles'
 export { modifierStyles as paragraphModifierStyles } from './components/atoms/typography/paragraph/helpers/modifier-styles'
 
-
-// Box
-export { DocLinkBox } from './components/box/doc-link-box'
-export { InformationBox } from './components/box/information-box'
-export { LinkBox } from './components/box/link-box'
-
 // Buttons
 export { Button } from './components/buttons/button'
 export { ButtonIcon } from './components/buttons/button-icon'
@@ -224,8 +218,6 @@ export { MicrodonLogo } from './components/graphics/logos/microdonlogo'
 export { KkbbCoLogo } from './components/graphics/logos/kkbb-co'
 
 // Layout
-export { ArrowContainer } from './components/layout/arrow-container'
-export { IconContainer } from './components/layout/icon-container'
 export { HorizontalStroke } from './components/layout/horizontal-stroke'
 export { Line } from './components/layout/line'
 export { Separator } from './components/layout/separator'
@@ -251,6 +243,13 @@ export { ResponsiveIframeContainer } from './components/molecules/embed/responsi
 export { SearchInput } from './components/molecules/search-input'
 export { TextCopy } from './components/molecules/text-copy'
 export { Toggletip } from './components/molecules/toggletip'
+
+// Molecules/Boxes
+export { ArrowContainer } from './components/molecules/boxes/arrow-container'
+export { DocLinkBox } from './components/molecules/boxes/doc-link-box'
+export { IconContainer } from './components/molecules/boxes/icon-container'
+export { InformationBox } from './components/molecules/boxes/information-box'
+export { LinkBox } from './components/molecules/boxes/link-box'
 
 // Molecules/Carousels
 export { Carousel } from './components/molecules/carousels/carousel'

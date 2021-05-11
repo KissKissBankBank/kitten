@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import COLORS from '../../../constants/colors-config'
-import { pxToRem } from '../../../helpers/utils/typography'
+import COLORS from '../../../../constants/colors-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 

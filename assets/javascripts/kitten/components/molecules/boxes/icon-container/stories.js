@@ -1,11 +1,10 @@
 import React from 'react'
 import { IconContainer } from './index'
 import { color, number, select, text } from '@storybook/addon-knobs'
-import COLORS from '../../../constants/colors-config'
-import { CheckedCircleIcon } from '../../graphics/icons/checked-circle-icon'
+import { CheckedCircleIcon, COLORS } from '../../../..'
 
 export default {
-  title: 'Layout/IconContainer',
+  title: 'Molecules/Boxes/IconContainer',
   component: IconContainer,
 }
 

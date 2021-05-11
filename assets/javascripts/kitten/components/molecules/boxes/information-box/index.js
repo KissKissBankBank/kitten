@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
 
-import { Title } from '../../../components/atoms/typography/title'
-import COLORS from '../../../constants/colors-config'
-import TYPOGRAPHY from '../../../constants/typography-config'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { Title } from '../../../../components/atoms/typography/title'
+import COLORS from '../../../../constants/colors-config'
+import TYPOGRAPHY from '../../../../constants/typography-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
 
 const StyledInformationBox = styled.div`
   &.k-InformationBox {

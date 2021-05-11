@@ -1,7 +1,6 @@
 import React from 'react'
 import { DocLinkBox } from './index'
-import { Marger } from '../../structure/marger'
-import { Container } from '../../structure/container'
+import { Marger, Container} from '../../../..'
 import { text, boolean } from '@storybook/addon-knobs'
 
 export const Default = () => (
