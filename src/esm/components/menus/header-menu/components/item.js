@@ -2,6 +2,7 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
 import PropTypes from 'prop-types';
+import deprecated from 'prop-types-extra/lib/deprecated';
 import classNames from 'classnames';
 import { ArrowIcon } from '../../../icons/arrow-icon';
 import { Button } from '../../../../components/buttons/button';
@@ -13,8 +14,11 @@ export var Item = function Item(_ref) {
       button = _ref.button,
       size = _ref.size,
       isSelected = _ref.isSelected,
-      other = _objectWithoutProperties(_ref, ["children", "external", "liProps", "modifier", "button", "size", "isSelected"]);
+      as = _ref.as,
+      tag = _ref.tag,
+      other = _objectWithoutProperties(_ref, ["children", "external", "liProps", "modifier", "button", "size", "isSelected", "as", "tag"]);
 
+  var Component = as || tag;
   return /*#__PURE__*/React.createElement("li", _extends({
     role: "menuitem"
   }, liProps, {
@@ -24,12 +28,13 @@ export var Item = function Item(_ref) {
       'k-HeaderMenu__item--hasButton': button,
       'k-HeaderMenu__item--light': modifier === 'light'
     })
-  }), button ? /*#__PURE__*/React.createElement(Button, _extends({}, other, {
-    className: classNames('k-HeaderMenu__item__button', other.className),
-    as: "a",
+  }), button ? /*#__PURE__*/React.createElement(Button, _extends({
     modifier: modifier,
     fluid: true
-  }), children) : /*#__PURE__*/React.createElement("a", _extends({}, other, {
+  }, other, {
+    className: classNames('k-HeaderMenu__item__button', other.className),
+    as: as
+  }), children) : /*#__PURE__*/React.createElement(Component, _extends({}, other, {
     className: classNames('k-HeaderMenu__item__link', other.className),
     "aria-current": isSelected ? 'page' : null
   }), children, external && /*#__PURE__*/React.createElement(ArrowIcon, {
@@ -44,7 +49,9 @@ Item.propTypes = {
   isSelected: PropTypes.bool,
   liProps: PropTypes.object,
   modifier: PropTypes.oneOf([null, undefined, 'light', 'default', 'hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked']),
-  size: PropTypes.oneOf(['normal', 'tiny', 'big'])
+  size: PropTypes.oneOf(['normal', 'tiny', 'big']),
+  as: deprecated(PropTypes.string, 'Please use `tag` instead.'),
+  tag: PropTypes.string
 };
 Item.defaultProps = {
   external: false,
@@ -53,5 +60,6 @@ Item.defaultProps = {
   href: null,
   isSelected: false,
   liProps: {},
-  size: 'normal'
+  size: 'normal',
+  tag: 'a'
 };
