@@ -7,6 +7,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking Change: Move component files around.
 - Feature: `Text`: Add default value 'light' to `weight` prop.
 
+## [3.11.0] - 2021-05-14
+
+Feature:
+
+- `HeaderMenu`: Add `tag` (and deprecated `as`) props to `HeaderMenu.Item`.
+
+Fix:
+
+- `HeaderMenu`: Fix focus styles.
+
 ## [3.10.0] - 2021-05-11
 
 Features:
