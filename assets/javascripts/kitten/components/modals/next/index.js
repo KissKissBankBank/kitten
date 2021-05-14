@@ -104,6 +104,13 @@ const GlobalStyle = createGlobalStyle`
       margin: 0 !important;
     }
 
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      &.k-ModalNext__content--fullSizeOnMobile {
+        min-width: 100vw !important;
+        margin: 0 !important;
+      }
+    }
+
     &.k-ModalNext__content--customContentCols {
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         --Modal-contentCols: var(--Modal-contentCols--s, var(--Modal-contentCols--default, 4));
@@ -124,8 +131,8 @@ const GlobalStyle = createGlobalStyle`
       z-index: var(--Modal-headerZIndex);
       top: 0;
       display: grid;
-      gap: ${GUTTER};
-      grid-template-columns: 1fr auto 1fr;
+      gap: ${pxToRem(GUTTER)};
+      grid-template-columns: 1fr calc(100% - 2 * (${pxToRem(GUTTER + 40)})) 1fr;
       align-items: center;
       padding-left: ${pxToRem(CONTAINER_PADDING_THIN)};
       padding-right: ${pxToRem(CONTAINER_PADDING_THIN)};
@@ -153,7 +160,8 @@ const GlobalStyle = createGlobalStyle`
     .k-ModalNext__closeButton {
       position: absolute;
       top: 0;
-      right: ${pxToRem(40)};
+      right: ${pxToRem(30)};
+
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         right: ${pxToRem(50)};
       }
@@ -162,6 +170,7 @@ const GlobalStyle = createGlobalStyle`
     .k-ModalNext__actions {
       display: flex;
       flex-direction: column;
+      background-color: ${COLORS.background1};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         gap: ${pxToRem(GUTTER)};
@@ -170,6 +179,17 @@ const GlobalStyle = createGlobalStyle`
 
       .k-Button {
         margin-top: ${pxToRem(20)};
+      }
+
+      &.k-ModalNext__actions--sticky {
+        position: sticky;
+        bottom: 0;
+      }
+      @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+        &.k-ModalNext__actions--stickyOnMobile {
+          position: sticky;
+          bottom: 0;
+        }
       }
     }
 
@@ -235,7 +255,17 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
-    border-radius: ${pxToRem(12)};
+
+    &:not(.k-ModalNext__content--fullSize) {
+      border-radius: ${pxToRem(12)};
+    }
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      &.k-ModalNext__content--fullSizeOnMobile {
+        border-radius: 0 !important;
+      }
+    }
+
+
 
     .k-ModalNext__header {
       border-top-left-radius: ${pxToRem(12)};
@@ -331,6 +361,19 @@ const GlobalStyle = createGlobalStyle`
       }
     }
 
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      &.k-ModalNext__overlay--fullSizeOnMobile {
+        .k-ModalNext__content {
+          flex: 1;
+        }
+
+        &::before, &::after {
+          min-height: 0 !important;
+          flex: 0 !important;
+        }
+      }
+    }
+
     ${props =>
       css`
         z-index: ${props.zIndex};
@@ -404,10 +447,24 @@ ModalParagraph.defaultProps = {
   align: 'center',
 }
 
-const Actions = props => (
+const Actions = ({
+  className,
+  sticky,
+  stickyOnMobile,
+  ...props
+}) => (
   <div
+    className={
+      classNames(
+        'k-ModalNext__actions',
+        className,
+        {
+          'k-ModalNext__actions--sticky': sticky,
+          'k-ModalNext__actions--stickyOnMobile': stickyOnMobile,
+        }
+      )
+    }
     {...props}
-    className={classNames('k-ModalNext__actions', props.className)}
   />
 )
 
@@ -490,6 +547,7 @@ const InnerModal = ({
   isOpen,
   zIndex,
   fullSize,
+  fullSizeOnMobile,
   fullSizeTitle,
   variant,
   headerTitle,
@@ -537,6 +595,7 @@ const InnerModal = ({
             `k-ModalNext__content--${variant}`,
             {
               'k-ModalNext__content--fullSize': fullSize,
+              'k-ModalNext__content--fullSizeOnMobile': fullSizeOnMobile,
               'k-ModalNext__content--customContentCols': !isEmpty(contentCols),
             },
           ),
@@ -550,6 +609,7 @@ const InnerModal = ({
             `k-ModalNext__overlay--${variant}`,
             {
               'k-ModalNext__overlay--fullSize': fullSize,
+              'k-ModalNext__overlay--fullSizeOnMobile': fullSizeOnMobile,
             },
           ),
           afterOpen: 'k-ModalNext__overlay--afterOpen',
@@ -607,7 +667,7 @@ const InnerModal = ({
               <div className="k-ModalNext__closeButton">
                 <CloseButton
                   style={{ position: 'fixed' }}
-                  className="k-u-hidden@s-up k-u-margin-none"
+                  className="k-u-hidden@s-up--important k-u-margin-none"
                   modifier="hydrogen"
                   onClick={close}
                   size="micro"
@@ -615,7 +675,7 @@ const InnerModal = ({
                 />
                 <CloseButton
                   style={{ position: 'fixed' }}
-                  className="k-u-hidden@xs-down k-u-margin-none"
+                  className="k-u-hidden@xs-down--important k-u-margin-none"
                   modifier="hydrogen"
                   onClick={close}
                   closeButtonLabel={closeButtonLabel}
@@ -659,6 +719,7 @@ Modal.propTypes = {
   describedby: PropTypes.string,
   closeButtonLabel: PropTypes.string,
   fullSize: PropTypes.bool,
+  fullSizeOnMobile: PropTypes.bool,
   modalProps: PropTypes.object,
   hasCloseButton: PropTypes.bool,
   size: PropTypes.oneOf(['regular', 'big', 'huge', 'giant']),
@@ -678,12 +739,12 @@ Modal.defaultProps = {
   describedby: '',
   closeButtonLabel: 'Fermer',
   fullSize: false,
+  fullSizeOnMobile: false,
   modalProps: {},
   hasCloseButton: true,
   size: 'regular',
   isOpen: false,
   zIndex: 110,
-  fullSizeTitle: '',
   variant: 'andromeda',
   headerTitle: null,
   headerActions: () => {},

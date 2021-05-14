@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Modal/Next`: Add `fullSizeOnMobile` prop, defaults to false.
+- Feature: `Modal/Next`: Add `sticky` and `stickyOnMobile` props to `Actions`.
+
 ## [3.11.0] - 2021-05-14
 
 Feature:

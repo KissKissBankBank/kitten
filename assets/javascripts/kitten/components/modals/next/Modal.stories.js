@@ -54,12 +54,16 @@ export const OneButton = () => (
     variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
     zIndex={number('Overlay z-index', 110)}
     headerTitle={text('headerTitle', null)}
+    fullSizeOnMobile={boolean('Full size on Mobile', false)}
   >
     {() => (
       <>
         <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
         <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
-        <Modal.Actions>
+        <Modal.Actions
+          sticky={boolean('Actions sticky', false)}
+          stickyOnMobile={boolean('Actions sticky on Mobile only', false)}
+        >
           <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
         </Modal.Actions>
       </>
@@ -74,6 +78,7 @@ export const TwoButton = () => (
     size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
     variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
     headerTitle={text('headerTitle', null)}
+    fullSizeOnMobile={boolean('Full size on Mobile', false)}
   >
     {() => (
       <>
