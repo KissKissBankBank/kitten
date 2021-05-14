@@ -13,50 +13,55 @@ export const Item = ({
   button,
   size,
   isSelected,
+  as,
   ...other
-}) => (
-  <li
-    role="menuitem"
-    {...liProps}
-    className={classNames(
-      'k-HeaderMenu__item',
-      liProps.className,
-      `k-HeaderMenu__item--${size}`,
-      {
-        'k-HeaderMenu__item--external': external,
-        'k-HeaderMenu__item--isSelected': isSelected,
-        'k-HeaderMenu__item--hasButton': button,
-        'k-HeaderMenu__item--light': modifier === 'light',
-      },
-    )}
-  >
-    {button ? (
-      <Button
-        {...other}
-        className={classNames('k-HeaderMenu__item__button', other.className)}
-        as="a"
-        modifier={modifier}
-        fluid
-      >
-        {children}
-      </Button>
-    ) : (
-      <a
-        {...other}
-        className={classNames('k-HeaderMenu__item__link', other.className)}
-        aria-current={isSelected ? 'page' : null}
-      >
-        {children}
-        {external && (
-          <ArrowIcon
-            className="k-HeaderMenu__item__arrow headerMenuArrowIcon"
-            direction="right"
-          />
-        )}
-      </a>
-    )}
-  </li>
-)
+}) => {
+  const Component = as
+
+  return (
+    <li
+      role="menuitem"
+      {...liProps}
+      className={classNames(
+        'k-HeaderMenu__item',
+        liProps.className,
+        `k-HeaderMenu__item--${size}`,
+        {
+          'k-HeaderMenu__item--external': external,
+          'k-HeaderMenu__item--isSelected': isSelected,
+          'k-HeaderMenu__item--hasButton': button,
+          'k-HeaderMenu__item--light': modifier === 'light',
+        },
+      )}
+    >
+      {button ? (
+        <Button
+          modifier={modifier}
+          fluid
+          {...other}
+          className={classNames('k-HeaderMenu__item__button', other.className)}
+          as={as}
+        >
+          {children}
+        </Button>
+      ) : (
+        <Component
+          {...other}
+          className={classNames('k-HeaderMenu__item__link', other.className)}
+          aria-current={isSelected ? 'page' : null}
+        >
+          {children}
+          {external && (
+            <ArrowIcon
+              className="k-HeaderMenu__item__arrow headerMenuArrowIcon"
+              direction="right"
+            />
+          )}
+        </Component>
+      )}
+    </li>
+  )
+}
 
 Item.propTypes = {
   external: PropTypes.bool,
@@ -79,6 +84,7 @@ Item.propTypes = {
     'checked',
   ]),
   size: PropTypes.oneOf(['normal', 'tiny', 'big']),
+  as: PropTypes.string,
 }
 
 Item.defaultProps = {
@@ -89,4 +95,5 @@ Item.defaultProps = {
   isSelected: false,
   liProps: {},
   size: 'normal',
+  as: 'a',
 }
