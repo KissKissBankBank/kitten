@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import deprecated from 'prop-types-extra/lib/deprecated'
 import classNames from 'classnames'
 
 import { ArrowIcon } from '../../../icons/arrow-icon'
@@ -14,9 +15,10 @@ export const Item = ({
   size,
   isSelected,
   as,
+  tag,
   ...other
 }) => {
-  const Component = as
+  const Component = as || tag
 
   return (
     <li
@@ -84,7 +86,8 @@ Item.propTypes = {
     'checked',
   ]),
   size: PropTypes.oneOf(['normal', 'tiny', 'big']),
-  as: PropTypes.string,
+  as: deprecated(PropTypes.string, 'Please use `tag` instead.'),
+  tag: PropTypes.string,
 }
 
 Item.defaultProps = {
@@ -95,5 +98,5 @@ Item.defaultProps = {
   isSelected: false,
   liProps: {},
   size: 'normal',
-  as: 'a',
+  tag: 'a',
 }

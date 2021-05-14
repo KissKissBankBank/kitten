@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `HeaderMenu`: Add `as` prop to `HeaderMenu.Item`.
+- Feature: `HeaderMenu`: Add `tag` (and deprecated `as`) props to `HeaderMenu.Item`.
 - Fix: `HeaderMenu`: Fix focus styles.
 
 ## [3.10.0] - 2021-05-11
