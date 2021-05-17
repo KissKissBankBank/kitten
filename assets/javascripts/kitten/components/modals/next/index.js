@@ -139,7 +139,7 @@ const GlobalStyle = createGlobalStyle`
       height: var(--Modal-headerHeight);
       display: grid;
       gap: ${pxToRem(GUTTER)};
-      grid-template-columns: 1fr calc(100% - 2 * (${pxToRem(GUTTER + 40)})) 1fr;
+      grid-template-columns: 1fr auto 1fr;
       align-items: center;
       padding-left: ${pxToRem(CONTAINER_PADDING_THIN)};
       padding-right: ${pxToRem(CONTAINER_PADDING_THIN)};
@@ -151,14 +151,17 @@ const GlobalStyle = createGlobalStyle`
       }
 
       .k-ModalNext__header__closeButton {
+        min-width: ${pxToRem(40)};
         text-align: left;
       }
 
       .k-ModalNext__header__title {
+        min-width: ${pxToRem(40)};
         text-align: center;
       }
 
       .k-ModalNext__header__actions {
+        min-width: ${pxToRem(40)};
         text-align: right;
       }
     }
