@@ -2,11 +2,17 @@
 
 exports[`<LinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa izpJqv"
+  className="sc-bdVaJa EidnJ"
   href="#"
 >
   <div
-    className="k-LinkBox__link"
+    className="k-LinkBox__link k-LinkBox__link--andromeda"
+    style={
+      Object {
+        "--k-LinkBox-background-color": "#fff",
+        "--k-LinkBox-text-color": null,
+      }
+    }
   >
     <div
       className="k-LinkBox__arrow"
@@ -36,13 +42,19 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa izpJqv"
+  className="sc-bdVaJa EidnJ"
   href="#foobar"
   rel="noopener"
   target="_blank"
 >
   <div
-    className="k-LinkBox__link"
+    className="k-LinkBox__link k-LinkBox__link--andromeda"
+    style={
+      Object {
+        "--k-LinkBox-background-color": "#fff",
+        "--k-LinkBox-text-color": null,
+      }
+    }
   >
     <div
       className="k-LinkBox__icon"
@@ -66,6 +78,53 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         />
       </svg>
     </div>
+    <div
+      className="k-LinkBox__textContainer"
+    >
+      foobar
+    </div>
+    <div
+      className="k-LinkBox__arrow"
+    >
+      <svg
+        className=""
+        fill="#222"
+        height="10"
+        style={
+          Object {
+            "transform": "rotate(90deg)",
+          }
+        }
+        viewBox="0 0 8.48 5.64"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+        <path
+          d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+        />
+      </svg>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`<LinkBox /> with variant prop matches with snapshot 1`] = `
+<a
+  className="sc-bdVaJa EidnJ"
+  href="#foobar"
+  rel="noopener"
+  target="_blank"
+>
+  <div
+    className="k-LinkBox__link k-LinkBox__link--orion"
+    style={
+      Object {
+        "--k-LinkBox-background-color": "#fff",
+        "--k-LinkBox-text-color": null,
+      }
+    }
+  >
     <div
       className="k-LinkBox__textContainer"
     >

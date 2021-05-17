@@ -2,11 +2,17 @@
 
 exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa izpJqv"
+  className="sc-bdVaJa EidnJ"
   href="#"
 >
   <div
-    className="k-LinkBox__link"
+    className="k-LinkBox__link k-LinkBox__link--andromeda"
+    style={
+      Object {
+        "--k-LinkBox-background-color": "#fff",
+        "--k-LinkBox-text-color": null,
+      }
+    }
   >
     <div
       className="k-LinkBox__icon"
@@ -95,13 +101,19 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa izpJqv"
+  className="sc-bdVaJa EidnJ"
   href="#foobar"
   rel="noopener"
   target="_blank"
 >
   <div
-    className="k-LinkBox__link"
+    className="k-LinkBox__link k-LinkBox__link--andromeda"
+    style={
+      Object {
+        "--k-LinkBox-background-color": "#fff",
+        "--k-LinkBox-text-color": null,
+      }
+    }
   >
     <div
       className="k-LinkBox__icon"

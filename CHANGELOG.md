@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `LinkBox`: 
+  - Add `orion` variant.
+  - Add `backgroundColor` and `textColor` prop to `Background` and `Text` component.
+
 - Feature: Add new color: `font3`.
 
 ## [3.11.0] - 2021-05-14
