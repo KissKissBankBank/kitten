@@ -103,16 +103,16 @@ const GlobalStyle = createGlobalStyle`
       }
     }
     &.k-ModalNext__content--fullSize {
-      min-width: 100vw !important;
+      min-width: 100vw;
       height: 100%;
-      margin: 0 !important;
+      margin: 0;
     }
 
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
       &.k-ModalNext__content--fullSizeOnMobile {
-        min-width: 100vw !important;
+        min-width: 100vw;
         height: 100%;
-        margin: 0 !important;
+        margin: 0;
       }
     }
 
