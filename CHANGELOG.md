@@ -4,6 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new color: `font3`.
+
+## [3.11.0] - 2021-05-14
+
+Feature:
+
+- `HeaderMenu`: Add `tag` (and deprecated `as`) props to `HeaderMenu.Item`.
+
+Fix:
+
+- `HeaderMenu`: Fix focus styles.
+
 ## [3.10.0] - 2021-05-11
 
 Features:

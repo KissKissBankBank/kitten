@@ -3,18 +3,13 @@ import { select, boolean } from '@storybook/addon-knobs'
 import { HeaderMenu } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
 import { LendopolisLogo } from '../../logos/lendopolis-logo'
 
 const StoryGrid = ({ children }) => (
   <Container>
-    <Grid>
-      <GridCol col="3">
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
+    <Marger top="5" bottom="5" style={{ width: '100%', maxWidth: '250px' }}>
+      {children}
+    </Marger>
   </Container>
 )
 
@@ -48,6 +43,12 @@ export const Default = () => {
         </HeaderMenu.Item>
         <HeaderMenu.Item external href="#">
           Item 5
+        </HeaderMenu.Item>
+        <HeaderMenu.Item as="button" type="button">
+          Item as button
+        </HeaderMenu.Item>
+        <HeaderMenu.Item button href="#">
+          Item with button prop
         </HeaderMenu.Item>
       </HeaderMenu>
     </StoryGrid>
