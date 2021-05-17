@@ -50,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
     --Modal-wrapperMaxWidth: 100vw;
     --Modal-contentCols: 4;
     --Modal-contentMargin: 1;
-    --Modal-headerHeight: 0;
+    --Modal-headerHeight: 0px;
 
     position: relative;
     background-color: ${COLORS.background1};
