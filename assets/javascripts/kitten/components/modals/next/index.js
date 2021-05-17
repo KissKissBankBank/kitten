@@ -681,7 +681,7 @@ const InnerModal = ({
               </div>
 
               <div className="k-ModalNext__header__actions">
-                {headerActions({
+                {headerActions && headerActions({
                   open: () => dispatch(updateState(true)),
                   close: () => dispatch(updateState(false)),
                 })}
@@ -772,7 +772,7 @@ Modal.defaultProps = {
   zIndex: 110,
   variant: 'andromeda',
   headerTitle: null,
-  headerActions: () => {},
+  headerActions: null,
   contentCols: {},
   headerZIndex: 10,
 }
