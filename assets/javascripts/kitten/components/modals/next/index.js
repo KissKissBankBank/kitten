@@ -321,6 +321,10 @@ const GlobalStyle = createGlobalStyle`
 
     &:not(.k-ModalNext__content--fullSize) {
       border-radius: ${pxToRem(12)};
+
+      .k-ModalNext__closeButton .k-Button {
+        border-top-right-radius: ${pxToRem(12)};
+      }
     }
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
       &.k-ModalNext__content--fullSizeOnMobile {
