@@ -146,7 +146,6 @@ const GlobalStyle = createGlobalStyle`
       background-color: ${COLORS.background1};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        height: ${pxToRem(100)};
         padding-left: ${pxToRem(CONTAINER_PADDING)};
         padding-right: ${pxToRem(CONTAINER_PADDING)};
       }
@@ -201,22 +200,18 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .k-ModalNext__main {
-      padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)} ${pxToRem(50)};
       flex: 1 0 auto;
       display: flex;
       flex-direction: column;
       box-sizing: border-box;
+      padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        padding: 0 calc(var(--Modal-contentMargin) * ${oneGridCol}) ${pxToRem(
-  80,
-)};
+        padding: 0 calc(var(--Modal-contentMargin) * ${oneGridCol});
       }
 
       @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
-        padding: 0 calc(var(--Modal-contentMargin) * ${oneGridColXl}) ${pxToRem(
-  80,
-)};
+        padding: 0 calc(var(--Modal-contentMargin) * ${oneGridColXl});
       }
 
       & > *:not(.k-ModalNext__block):first-child {
@@ -234,6 +229,18 @@ const GlobalStyle = createGlobalStyle`
       & > :nth-last-child(2) {
         flex-grow: 1;
       }
+
+      & > *:last-child {
+        margin-bottom: ${pxToRem(50)};
+
+        @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+          margin-bottom: ${pxToRem(80)};
+        }
+      }
+    }
+
+    .k-ModalNext__header ~ .k-ModalNext__main > *:not(.k-ModalNext__block):first-child {
+      margin-top: 0;
     }
 
     .k-ModalNext__block {
@@ -255,6 +262,28 @@ const GlobalStyle = createGlobalStyle`
         padding-right: ${pxToRem(CONTAINER_PADDING)};
       }
     }
+
+    .k-ModalNext__actions.k-ModalNext__actions--fullSize {
+      margin-left: -${pxToRem(CONTAINER_PADDING_THIN)};
+      margin-right: -${pxToRem(CONTAINER_PADDING_THIN)};
+      margin-bottom: 0;
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        margin-left: calc(-1 * var(--Modal-contentMargin) * ${oneGridCol});
+        margin-right: calc(-1 * var(--Modal-contentMargin) * ${oneGridCol});
+      }
+      @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
+        margin-left: calc(-1 * var(--Modal-contentMargin) * ${oneGridColXl});
+        margin-right: calc(-1 * var(--Modal-contentMargin) * ${oneGridColXl});
+      }
+    }
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      .k-ModalNext__actions.k-ModalNext__actions--fullSizeOnMobile {
+        margin-left: -${pxToRem(CONTAINER_PADDING_THIN)};
+        margin-right: -${pxToRem(CONTAINER_PADDING_THIN)};
+        margin-bottom: 0;
+      }
+    }
   }
 
   /* ANDROMEDA STYLES */
@@ -262,7 +291,13 @@ const GlobalStyle = createGlobalStyle`
   .k-ModalNext__content--andromeda {
     .k-ModalNext__header {
       border-bottom: ${pxToRem(2)} solid ${COLORS.line1};
-      margin-bottom: ${pxToRem(50)}
+      margin-bottom: ${pxToRem(50)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        padding-left: ${pxToRem(CONTAINER_PADDING)};
+        padding-right: ${pxToRem(CONTAINER_PADDING)};
+      }
+    }
 
     &.k-ModalNext__content--hasHeader {
       --Modal-headerHeight: ${pxToRem(60)};
@@ -479,6 +514,8 @@ const Actions = ({
   className,
   sticky,
   stickyOnMobile,
+  fullSize,
+  fullSizeOnMobile,
   ...props
 }) => (
   <div
@@ -489,6 +526,8 @@ const Actions = ({
         {
           'k-ModalNext__actions--sticky': sticky,
           'k-ModalNext__actions--stickyOnMobile': stickyOnMobile,
+          'k-ModalNext__actions--fullSize': fullSize,
+          'k-ModalNext__actions--fullSizeOnMobile': fullSizeOnMobile,
         }
       )
     }
