@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new color: `font3`.
+
 ## [3.11.0] - 2021-05-14
 
 Feature:
