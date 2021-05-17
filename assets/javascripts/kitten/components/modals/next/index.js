@@ -50,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
     --Modal-wrapperMaxWidth: 100vw;
     --Modal-contentCols: 4;
     --Modal-contentMargin: 1;
+    --Modal-headerHeight: 0;
 
     position: relative;
     background-color: ${COLORS.background1};
@@ -57,6 +58,8 @@ const GlobalStyle = createGlobalStyle`
     transform: scale(0.94);
     margin: auto;
     width: calc(100vw - ${pxToRem(2 * CONTAINER_PADDING_THIN)});
+    display: flex;
+    flex-direction: column;
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       width: calc(100vw - ${pxToRem(2 * CONTAINER_PADDING)})
@@ -101,12 +104,14 @@ const GlobalStyle = createGlobalStyle`
     }
     &.k-ModalNext__content--fullSize {
       min-width: 100vw !important;
+      height: 100%;
       margin: 0 !important;
     }
 
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
       &.k-ModalNext__content--fullSizeOnMobile {
         min-width: 100vw !important;
+        height: 100%;
         margin: 0 !important;
       }
     }
@@ -127,9 +132,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .k-ModalNext__header {
+      flex: 0 0 auto;
       position: sticky;
       z-index: var(--Modal-headerZIndex);
       top: 0;
+      height: var(--Modal-headerHeight);
       display: grid;
       gap: ${pxToRem(GUTTER)};
       grid-template-columns: 1fr calc(100% - 2 * (${pxToRem(GUTTER + 40)})) 1fr;
@@ -195,6 +202,10 @@ const GlobalStyle = createGlobalStyle`
 
     .k-ModalNext__main {
       padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)} ${pxToRem(50)};
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         padding: 0 calc(var(--Modal-contentMargin) * ${oneGridCol}) ${pxToRem(
@@ -214,6 +225,14 @@ const GlobalStyle = createGlobalStyle`
         @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
           margin-top: ${pxToRem(80)};
         }
+      }
+
+      & > * {
+        flex: 0 0 auto;
+      }
+
+      & > :nth-last-child(2) {
+        flex-grow: 1;
       }
     }
 
@@ -242,9 +261,11 @@ const GlobalStyle = createGlobalStyle`
 
   .k-ModalNext__content--andromeda {
     .k-ModalNext__header {
-      height: ${pxToRem(60)};
       border-bottom: ${pxToRem(2)} solid ${COLORS.line1};
       margin-bottom: ${pxToRem(50)}
+
+    &.k-ModalNext__content--hasHeader {
+      --Modal-headerHeight: ${pxToRem(60)};
     }
   }
 
@@ -265,16 +286,17 @@ const GlobalStyle = createGlobalStyle`
       }
     }
 
+    &.k-ModalNext__content--hasHeader {
+      --Modal-headerHeight: ${pxToRem(80)};
 
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        --Modal-headerHeight: ${pxToRem(100)};
+      }
+    }
 
     .k-ModalNext__header {
       border-top-left-radius: ${pxToRem(12)};
       border-top-right-radius: ${pxToRem(12)};
-      height: ${pxToRem(80)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        height: ${pxToRem(100)};
-      }
 
       .k-Button {
         @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
@@ -582,6 +604,8 @@ const InnerModal = ({
     }
   }
 
+  const shouldDisplayHeader = !!headerTitle || !!fullSizeTitle || !!headerActions
+
   const ModalPortal = ReactDOM.createPortal(
     <>
       <GlobalStyle zIndex={zIndex} />
@@ -594,6 +618,7 @@ const InnerModal = ({
             `k-ModalNext__content--${size}`,
             `k-ModalNext__content--${variant}`,
             {
+              'k-ModalNext__content--hasHeader': shouldDisplayHeader,
               'k-ModalNext__content--fullSize': fullSize,
               'k-ModalNext__content--fullSizeOnMobile': fullSizeOnMobile,
               'k-ModalNext__content--customContentCols': !isEmpty(contentCols),
@@ -631,7 +656,7 @@ const InnerModal = ({
         {...modalProps}
       >
         <>
-          {headerTitle || fullSizeTitle ? (
+          {shouldDisplayHeader ? (
             <div className="k-ModalNext__header">
               <div className="k-ModalNext__header__closeButton">
                 {hasCloseButton && (
