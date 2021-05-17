@@ -383,8 +383,14 @@ const GlobalStyle = createGlobalStyle`
       }
     }
 
+    &.k-ModalNext__overlay--fullSize {
+      background: white;
+    }
+
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
       &.k-ModalNext__overlay--fullSizeOnMobile {
+        background: white;
+
         .k-ModalNext__content {
           flex: 1;
         }
