@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `HeaderNav`: Add styles to bottom border, defaults to `'shadow'`.
 - Feature: Add `boron` modifier to Button component.
 - Feature: Add new color: `font3`.
 
