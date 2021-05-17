@@ -66,6 +66,18 @@ export const modifierStyles = modifier => {
       activeColor = COLORS.error
       break
 
+    case 'boron':
+      borderColor = COLORS.line1
+      backgroundColor = COLORS.font1
+      color = COLORS.background1
+      hoverBorderColor = 'currentColor'
+      hoverBgColor = COLORS.line3
+      hoverColor = COLORS.background1
+      activeBorderColor = 'currentColor'
+      activeBgColor = COLORS.line3
+      activeColor = COLORS.font2
+      break
+
     /* Social modifiers */
     case 'social_facebook':
       borderColor = '#3b5998'
