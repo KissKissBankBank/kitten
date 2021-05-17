@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { text, boolean, number, select } from '@storybook/addon-knobs'
 import { Modal } from './index'
-import { Button } from '../../../components/buttons/button'
-import { SaveIcon } from '../../../components/icons/save-icon'
+import { Button, Text, SaveIcon } from '../../..'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -46,90 +45,76 @@ export default {
   },
 }
 
-export const OneButton = () => (
-  <Modal
-    trigger={<Button modifier="helium">Open</Button>}
-    hasCloseButton={boolean('Has close button', true)}
-    size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
-    variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
-    zIndex={number('Overlay z-index', 110)}
-    headerTitle={text('headerTitle', null)}
-  >
-    {() => (
-      <>
-        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
-        <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
-        <Modal.Actions>
-          <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
-        </Modal.Actions>
-      </>
-    )}
-  </Modal>
-)
+const buttonSelectionChoices = {
+  'None': 0,
+  'One button': 1,
+  'Two with Close': 2,
+}
 
-export const TwoButton = () => (
-  <Modal
-    trigger={<Button modifier="helium">Open</Button>}
-    hasCloseButton={boolean('Has close button', true)}
-    size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
-    variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
-    headerTitle={text('headerTitle', null)}
-  >
-    {() => (
-      <>
-        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
-        <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
-        <Modal.Actions>
-          <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
-          <Modal.Button modifier="oxygen">Action 2 Button</Modal.Button>
-        </Modal.Actions>
-      </>
-    )}
-  </Modal>
-)
+export const Default = () => {
+  const buttonSelection = select('Display Buttons', buttonSelectionChoices, 1)
 
-export const WithState = () => {
+  return (
+    <Modal
+      trigger={<Button modifier="helium">Open</Button>}
+      hasCloseButton={boolean('Has header close button', true)}
+      size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
+      variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
+      zIndex={number('Overlay z-index', 110)}
+      headerTitle={text('headerTitle', null)}
+      fullSizeOnMobile={boolean('Full size on Mobile', false)}
+    >
+      {() => (
+        <>
+          <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+          <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
+          <Modal.Actions
+            sticky={boolean('Actions sticky', false)}
+            stickyOnMobile={boolean('Actions sticky on Mobile only', false)}
+            fullSize={boolean('Actions fullSize', false)}
+            fullSizeOnMobile={boolean('Actions fullSize on Mobile only', false)}
+          >
+            {buttonSelection > 0 &&
+              <Modal.Button modifier="helium">Modal.Button</Modal.Button>
+            }
+            {buttonSelection > 1 &&
+              <Modal.CloseButton modifier="hydrogen">Modal.CloseButton</Modal.CloseButton>
+            }
+          </Modal.Actions>
+        </>
+      )}
+    </Modal>
+  )
+}
+
+export const Controlled = () => {
   const [showModal, updateModalState] = useState(false)
   return (
     <>
       <Button modifier="helium" onClick={() => updateModalState(!showModal)}>
         Open
       </Button>
+      <Text tag="p" weight="light">
+        The modal is controlled through a state that controls the <code>isOpen</code> prop.
+      </Text>
       <Modal
         isOpen={showModal}
-        hasCloseButton={boolean('Has close button', true)}
-        size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
-        variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
+        hasCloseButton={true}
         onClose={() => updateModalState(false)}
       >
         {() => (
           <>
             <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
             <Modal.Paragraph>
-              {text('content', paragraphContainer)}
+              {paragraphContainer}
             </Modal.Paragraph>
             <Modal.Actions>
-              <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
+              <Modal.Button modifier="helium">Modal.Button</Modal.Button>
             </Modal.Actions>
           </>
         )}
       </Modal>
     </>
-  )
-}
-
-export const WithCloseButton = () => {
-  return (
-    <Modal trigger={<Button modifier="helium">Open</Button>}>
-      {() => (
-        <>
-          <Modal.Title>Modal</Modal.Title>
-          <Modal.Actions>
-            <Modal.CloseButton>Close it !</Modal.CloseButton>
-          </Modal.Actions>
-        </>
-      )}
-    </Modal>
   )
 }
 
@@ -146,38 +131,26 @@ export const Multi = () => {
   )
 }
 
-export const WithoutButton = () => (
-  <Modal
-    trigger={<Button modifier="helium">Open</Button>}
-    size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
-    zIndex={number('Overlay z-index', 110)}
-    variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
-  >
-    {() => (
-      <>
-        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
-        <Modal.Paragraph withoutMargin>
-          {text('content', paragraphContainer)}
-        </Modal.Paragraph>
-      </>
-    )}
-  </Modal>
-)
-
 export const FullSize = () => (
   <Modal
     trigger={<Button modifier="helium">Open</Button>}
     hasCloseButton={boolean('Has close button', true)}
-    zIndex={number('Overlay z-index', 110)}
     variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
     fullSizeTitle={text('fullSizeTitle', 'Lorem ipsum dolor sit consectetuer')}
     fullSize
   >
     {() => (
       <>
-        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Title>This modal is full sized</Modal.Title>
         <Modal.Paragraph>
-          {text('content', `${paragraphContainer} ${paragraphContainer}`)}
+          The display of a header depends on the <code>fullSizeTitle</code>{' '}
+          prop.
+        </Modal.Paragraph>
+        <Modal.Paragraph>
+          {paragraphContainer}
+        </Modal.Paragraph>
+        <Modal.Paragraph>
+          {paragraphContainer}
         </Modal.Paragraph>
         <Modal.Actions>
           <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
@@ -231,12 +204,13 @@ export const ComplexWithOrion = () => (
     headerTitle={<OrionHeaderTitle />}
     headerActions={OrionHeaderActions}
     size={select('Size', ['regular', 'big', 'huge', 'giant'], 'giant')}
-    variant={select('Variant', ['andromeda', 'orion', 'orion'])}
   >
     {() => (
       <>
         <Modal.Block className="k-u-background-color-background3">
-          {text('content', paragraphContainer)}
+          <Text weight="light" tag="p" className="k-u-margin-vertical-triple">
+            {text('content', paragraphContainer)}
+          </Text>
         </Modal.Block>
         <Modal.Paragraph align="left">
           {text('content', paragraphContainer)}
@@ -246,7 +220,7 @@ export const ComplexWithOrion = () => (
   </Modal>
 )
 
-export const CustomContentCols = () => (
+export const CustomInnerSize = () => (
   <Modal
     trigger={<Button modifier="helium">Open</Button>}
     hasCloseButton={boolean('Has close button', true)}
@@ -263,13 +237,17 @@ export const CustomContentCols = () => (
   >
     {() => (
       <>
-        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
         <Modal.Block className="k-u-background-color-background3">
-          {text('content', paragraphContainer)}
+          <Text weight="light" tag="p" className="k-u-margin-vertical-triple">
+            This Modal has the following inner size, defined by <code>contentCols</code> prop:
+            <br />
+            <code>{'{ xxs: 12, s: 10, l: 8, xl: 6 }'}</code>
+
+          </Text>
         </Modal.Block>
         <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
         <Modal.Actions>
-          <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
+          <Modal.CloseButton modifier="helium">Modal.CloseButton</Modal.CloseButton>
         </Modal.Actions>
       </>
     )}

@@ -7,7 +7,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `LinkBox`: 
   - Add `orion` variant.
   - Add `backgroundColor` and `textColor` prop to `Background` and `Text` component.
-
+- Feature: `Modal/Next`: Add `fullSizeOnMobile` prop, defaults to false.
+- Feature: `Modal/Next`: Add the following props to `Modal.Actions`:
+  - `sticky`
+  - `stickyOnMobile`
+  - `fullSize`
+  - `fullSizeOnMobile`
+- Feature: `Modal/Next`: Deprecate `withoutMargin` prop on `Modal.Paragraph` in favor of `noMargin`.
+- Feature: Add `boron` modifier to Button component.
 - Feature: Add new color: `font3`.
 
 ## [3.11.0] - 2021-05-14

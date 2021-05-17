@@ -41,6 +41,7 @@ const modifierOptions = {
   Oxygen: 'oxygen',
   Checked: 'checked',
   Copper: 'copper',
+  Boron: 'boron',
   Social_facebook: 'social_facebook',
   Social_twitter: 'social_twitter',
   Social_linkedin: 'social_linkedin',
