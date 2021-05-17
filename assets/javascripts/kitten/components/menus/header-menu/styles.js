@@ -9,11 +9,15 @@ export const StyledList = styled.ul`
 
   margin: 0;
   padding: 0;
+  border: none;
   list-style: none;
 
   .k-HeaderMenu__item__link {
     display: block;
     position: relative;
+    width: 100%;
+    text-align: left;
+    border: none;
     height: ${pxToRem(50)};
     box-sizing: border-box;
 
@@ -27,14 +31,17 @@ export const StyledList = styled.ul`
     font-size: ${pxToRem(14)};
     text-decoration: none;
 
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.4s;
+
     &:focus {
-      outline-offset: ${pxToRem(-3)};
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(-1)};
     }
     &:hover,
     &:focus {
       color: ${COLORS.primary1};
       background-color: var(--headerMenu-background-colors-hover);
-      transition: color 0.2s, background-color 0.4s;
     }
     &:focus:not(:focus-visible) {
       outline-color: transparent;
@@ -182,7 +189,7 @@ export const StyledList = styled.ul`
     border-left: ${pxToRem(1)} solid ${COLORS.line1};
     border-right: ${pxToRem(1)} solid ${COLORS.line1};
 
-    .k-HeaderMenu__item__link {
+    .k-HeaderMenu__item {
       border-bottom: ${pxToRem(1)} solid ${COLORS.line1};
     }
   }
