@@ -287,6 +287,10 @@ const GlobalStyle = createGlobalStyle`
         margin-bottom: 0;
       }
     }
+
+    .k-ModalNext__main__title {
+      margin-bottom:
+    }
   }
 
   /* ANDROMEDA STYLES */
@@ -467,12 +471,17 @@ const GlobalStyle = createGlobalStyle`
 
 `
 
-const ModalTitle = ({ children }) => (
+const ModalTitle = ({ children, className, ...props }) => (
   <Title
     modifier="quaternary"
     noMargin
     tag="p"
-    className="k-u-margin-bottom-singleHalf--important k-u-align-center"
+    className={classNames(
+      'k-ModalNext__main__title',
+      className,
+      'k-u-align-center',
+    )}
+    {...props}
   >
     {children}
   </Title>
@@ -491,12 +500,12 @@ const ModalParagraph = ({
     noMargin
     tag={tag || 'p'}
     className={classNames(
-      'k-ModalNext__paragraph',
+      'k-ModalNext__main__paragraph',
       className,
       `k-u-align-${align}`,
       {
-        'k-u-margin-bottom-triple': !withoutMargin,
-        'k-u-margin-bottom-quadruple@s-up': !withoutMargin,
+        'k-u-margin-bottom-triple': !withoutMargin || !noMargin,
+        'k-u-margin-bottom-quadruple@s-up': !withoutMargin || !noMargin,
       },
     )}
     {...props}
@@ -506,10 +515,13 @@ const ModalParagraph = ({
 )
 
 ModalParagraph.propTypes = {
+  withoutMargin: deprecated(PropTypes.bool, 'Please use `noMargin` instead'),
+  noMargin: PropTypes.bool,
   align: PropTypes.oneOf(['center', 'left', 'right', 'justify']),
 }
 
 ModalParagraph.defaultProps = {
+  noMargin: false,
   align: 'center',
 }
 
