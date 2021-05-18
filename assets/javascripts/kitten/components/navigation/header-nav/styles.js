@@ -12,6 +12,7 @@ import {
   TABLET_HEADER_HEIGHT,
   DESKTOP_HEADER_HEIGHT,
 } from './config'
+import { hexToRgba } from '../../../helpers/utils/hex-to-rgba.js'
 
 export const StyledHeader = styled.header`
   position: relative;
@@ -36,7 +37,7 @@ export const StyledHeader = styled.header`
   }
   &.k-HeaderNav--border {
     .k-Spacer + .k-HeaderNav__stickyContainer {
-      border-bottom: 1px solid ${COLORS.line1};
+      box-shadow: 0 ${pxToRem(1)} 0 rgba(0, 0, 0, 0.08);
     }
   }
 
