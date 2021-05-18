@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `LinkBox`: 
+- Fix: `Modal/Next`: Fix `Modal.Button` style when alone inside a `fullSize` Action.
+- Feature: `LinkBox`:
   - Add `orion` variant.
   - Add `backgroundColor` and `textColor` prop to `Background` and `Text` component.
 
