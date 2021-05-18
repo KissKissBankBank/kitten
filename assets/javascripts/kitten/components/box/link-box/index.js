@@ -27,8 +27,8 @@ export const LinkBox = ({
         )}
         style={{
           ...style,
-          '--k-LinkBox-background-color': backgroundColor,
-          '--k-LinkBox-text-color': textColor,
+          '--LinkBox-background-color': backgroundColor,
+          '--LinkBox-text-color': textColor,
         }}
       >
         {props.children}

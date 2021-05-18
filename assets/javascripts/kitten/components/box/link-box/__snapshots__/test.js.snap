@@ -2,15 +2,15 @@
 
 exports[`<LinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa pQBUF"
+  className="sc-bdVaJa bVAtuB"
   href="#"
 >
   <div
     className="k-LinkBox__link k-LinkBox__link--andromeda"
     style={
       Object {
-        "--k-LinkBox-background-color": "#fff",
-        "--k-LinkBox-text-color": null,
+        "--LinkBox-background-color": "#fff",
+        "--LinkBox-text-color": null,
       }
     }
   >
@@ -42,7 +42,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa pQBUF"
+  className="sc-bdVaJa bVAtuB"
   href="#foobar"
   rel="noopener"
   target="_blank"
@@ -51,8 +51,8 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
     className="k-LinkBox__link k-LinkBox__link--andromeda"
     style={
       Object {
-        "--k-LinkBox-background-color": "#fff",
-        "--k-LinkBox-text-color": null,
+        "--LinkBox-background-color": "#fff",
+        "--LinkBox-text-color": null,
       }
     }
   >
@@ -111,7 +111,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 
 exports[`<LinkBox /> with variant prop matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa pQBUF"
+  className="sc-bdVaJa bVAtuB"
   href="#foobar"
   rel="noopener"
   target="_blank"
@@ -120,8 +120,8 @@ exports[`<LinkBox /> with variant prop matches with snapshot 1`] = `
     className="k-LinkBox__link k-LinkBox__link--orion"
     style={
       Object {
-        "--k-LinkBox-background-color": "#fff",
-        "--k-LinkBox-text-color": null,
+        "--LinkBox-background-color": "#fff",
+        "--LinkBox-text-color": null,
       }
     }
   >
