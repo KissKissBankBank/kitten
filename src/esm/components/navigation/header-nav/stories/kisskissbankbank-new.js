@@ -107,7 +107,8 @@ var Navigation = function Navigation() {
 export var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNavStoryNew(_ref) {
   var isLogged = _ref.isLogged,
       isFixed = _ref.isFixed,
-      size = _ref.size;
+      size = _ref.size,
+      borderStyle = _ref.borderStyle;
 
   var _useState = useState(null),
       _useState2 = _slicedToArray(_useState, 2),
@@ -138,7 +139,8 @@ export var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNa
       text: 'Aller au contenu principal',
       zIndex: 300
     },
-    size: size
+    size: size,
+    borderStyle: borderStyle
   }, /*#__PURE__*/React.createElement(HeaderNav.BurgerMenu, null, /*#__PURE__*/React.createElement(InnerBurgerMenu, {
     dropdownContentWidth: burgerMenuWidth
   })), /*#__PURE__*/React.createElement(HeaderNav.Logo, {
