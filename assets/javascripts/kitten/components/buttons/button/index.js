@@ -416,6 +416,7 @@ Button.propTypes = {
     'carbon',
     'oxygen',
     'copper',
+    'boron',
     'social_facebook',
     'social_twitter',
     'social_linkedin',
