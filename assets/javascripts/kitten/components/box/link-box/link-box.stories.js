@@ -46,7 +46,7 @@ export const WithVariant = () => (
           href={text('Href', '#anchor')}
           isExternal={boolean('External?', false)}
           variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
-          backgroundColor={color('Background color', '#ff820f')}
+          backgroundColor={color('Background color', '#fef1e7')}
           textColor={color('Textcolor', '#222')}
         >
           <LinkBox.Text>

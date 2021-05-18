@@ -94,7 +94,8 @@ export const StyledLinkBox = styled.a`
     border: ${pxToRem(2)} solid var(--k-LinkBox-background-color);
 
     &:hover {
-      background-color: ${COLORS.background2};
+      background-color: var(--k-LinkBox-background-color);
+      border: ${pxToRem(2)} solid var(--k-LinkBox-background-color);
 
       .k-LinkBox__arrow {
         transform: translate(${pxToRem(5)}, ${pxToRem(0)});
@@ -103,11 +104,12 @@ export const StyledLinkBox = styled.a`
 
     &:active {
       background-color: var(--k-LinkBox-background-color);
+      border: ${pxToRem(2)} solid var(--k-LinkBox-background-color);
     }
 
     .k-LinkBox__arrow {
       padding-left: ${pxToRem(20)};
-      padding-right: ${pxToRem(20)};
+      padding-right: ${pxToRem(18)};
     }
 
     .k-LinkBox__textContainer {
