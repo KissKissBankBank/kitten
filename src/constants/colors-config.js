@@ -9,6 +9,8 @@ var _default = {
   // Dark Grey
   font2: '#b8b8b8',
   // Semi Dark Grey
+  font3: '#949494',
+  // Extra semi dark grey, used for text
   background1: '#fff',
   // White
   background2: '#fbfbfb',

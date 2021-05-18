@@ -30,7 +30,8 @@ var HeaderNav = function HeaderNav(_ref) {
       quickAccessProps = _ref.quickAccessProps,
       stickyProps = _ref.stickyProps,
       zIndexConfig = _ref.zIndexConfig,
-      size = _ref.size;
+      size = _ref.size,
+      borderStyle = _ref.borderStyle;
 
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -144,7 +145,7 @@ var HeaderNav = function HeaderNav(_ref) {
       '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu
     },
     zIndex: zIndexConfig,
-    className: classNames('k-HeaderNav__wrapper', "k-HeaderNav--".concat(size), {
+    className: classNames('k-HeaderNav__wrapper', "k-HeaderNav--".concat(size), "k-HeaderNav--".concat(borderStyle), {
       'k-HeaderNav--menuIsExpanded': isMenuExpanded,
       'k-HeaderNav--inactiveBackground': isBackgroundInactive
     })
@@ -189,7 +190,8 @@ HeaderNav.propTypes = {
     header: PropTypes.number,
     headerWithOpenMenu: PropTypes.number
   }),
-  size: PropTypes.oneOf(['small', 'regular'])
+  size: PropTypes.oneOf(['small', 'regular']),
+  borderStyle: PropTypes.oneOf(['none', 'shadow', 'border'])
 };
 HeaderNav.defaultProps = {
   id: 'kkbbAndCoHeaderNav',
@@ -201,6 +203,7 @@ HeaderNav.defaultProps = {
     header: 1,
     headerWithOpenMenu: 3
   },
-  size: 'regular'
+  size: 'regular',
+  borderStyle: 'shadow'
 };
 export default HeaderNav;
