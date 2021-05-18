@@ -88,6 +88,7 @@ export const KissKissBankBankHeaderNavStoryNew = ({
   isLogged,
   isFixed,
   size,
+  borderStyle,
 }) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const [userMenuWidth, setUserMenuWidth] = useState(null)
@@ -120,6 +121,7 @@ export const KissKissBankBankHeaderNavStoryNew = ({
         zIndex: 300,
       }}
       size={size}
+      borderStyle={borderStyle}
     >
       <HeaderNav.BurgerMenu>
         <InnerBurgerMenu dropdownContentWidth={burgerMenuWidth} />

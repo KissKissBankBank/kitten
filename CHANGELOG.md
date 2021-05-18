@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `HeaderNav`: Add styles to bottom border, defaults to `'shadow'`.
 - Feature: `Modal/Next`: Add `fullSizeOnMobile` prop, defaults to false.
 - Feature: `Modal/Next`: Add the following props to `Modal.Actions`:
   - `sticky`

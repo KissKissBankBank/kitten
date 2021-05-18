@@ -28,6 +28,7 @@ import {
   HeaderMenu,
   KissKissBankBankLogo,
   domElementHelper,
+  PasswordIcon,
 } from '../../..'
 
 import { Default as Table } from '../../tables/list-table/list-table.stories.js'
@@ -63,15 +64,6 @@ const CardHolder = styled.div`
       padding: ${pxToRem(30)};
     }
   }
-`
-
-const HelpBox = styled.div`
-  height: ${pxToRem(80)};
-  background-color: rgb(255, 255, 255, 0.05);
-  padding: 0 ${pxToRem(20)};
-  display: flex;
-  align-items: center;
-  border-radius: ${pxToRem(8)};
 `
 
 export default {
@@ -274,21 +266,10 @@ export const Default = () => {
         }}
       </DashboardLayout.SideContent>
       <DashboardLayout.SideFooter>
-        <HelpBox>
-          <AvatarWithTextAndBadge as="a" href="#">
-            <AvatarWithTextAndBadge.Image src="/kitten.jpg" alt="" />
-
-            <AvatarWithTextAndBadge.Text>
-              <Text weight="bold" color="background1" size="tiny">
-                Besoin d’aide ?
-              </Text>
-              <br />
-              <Text weight="bold" color="primary1" size="tiny">
-                Contacter votre coach
-              </Text>
-            </AvatarWithTextAndBadge.Text>
-          </AvatarWithTextAndBadge>
-        </HelpBox>
+        <Button modifier="boron" fluid variant="orion">
+          <PasswordIcon />
+          <span>Voir ma page projet</span>
+        </Button>
       </DashboardLayout.SideFooter>
 
       {selectedView === 'flow' && <FlowExample />}
@@ -487,6 +468,7 @@ const SiteHeaderComponent = () => {
         zIndex: 300,
       }}
       size="small"
+      borderStyle="border"
     >
       <HeaderNav.Logo href="#">
         <KissKissBankBankLogo height="25" className="k-u-margin-left-double" />
