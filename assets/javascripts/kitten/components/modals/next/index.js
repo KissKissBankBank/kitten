@@ -50,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
     --Modal-wrapperMaxWidth: 100vw;
     --Modal-contentCols: 4;
     --Modal-contentMargin: 1;
+    --Modal-headerHeight: 0px;
 
     position: relative;
     background-color: ${COLORS.background1};
@@ -57,6 +58,8 @@ const GlobalStyle = createGlobalStyle`
     transform: scale(0.94);
     margin: auto;
     width: calc(100vw - ${pxToRem(2 * CONTAINER_PADDING_THIN)});
+    display: flex;
+    flex-direction: column;
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       width: calc(100vw - ${pxToRem(2 * CONTAINER_PADDING)})
@@ -100,8 +103,17 @@ const GlobalStyle = createGlobalStyle`
       }
     }
     &.k-ModalNext__content--fullSize {
-      min-width: 100vw !important;
-      margin: 0 !important;
+      min-width: 100vw;
+      height: 100%;
+      margin: 0;
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      &.k-ModalNext__content--fullSizeOnMobile {
+        min-width: 100vw;
+        height: 100%;
+        margin: 0;
+      }
     }
 
     &.k-ModalNext__content--customContentCols {
@@ -120,11 +132,13 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .k-ModalNext__header {
+      flex: 0 0 auto;
       position: sticky;
       z-index: var(--Modal-headerZIndex);
       top: 0;
+      height: var(--Modal-headerHeight);
       display: grid;
-      gap: ${GUTTER};
+      gap: ${pxToRem(GUTTER)};
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
       padding-left: ${pxToRem(CONTAINER_PADDING_THIN)};
@@ -132,20 +146,22 @@ const GlobalStyle = createGlobalStyle`
       background-color: ${COLORS.background1};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        height: ${pxToRem(100)};
         padding-left: ${pxToRem(CONTAINER_PADDING)};
         padding-right: ${pxToRem(CONTAINER_PADDING)};
       }
 
       .k-ModalNext__header__closeButton {
+        min-width: ${pxToRem(40)};
         text-align: left;
       }
 
       .k-ModalNext__header__title {
+        min-width: ${pxToRem(40)};
         text-align: center;
       }
 
       .k-ModalNext__header__actions {
+        min-width: ${pxToRem(40)};
         text-align: right;
       }
     }
@@ -153,7 +169,8 @@ const GlobalStyle = createGlobalStyle`
     .k-ModalNext__closeButton {
       position: absolute;
       top: 0;
-      right: ${pxToRem(40)};
+      right: ${pxToRem(30)};
+
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         right: ${pxToRem(50)};
       }
@@ -162,6 +179,7 @@ const GlobalStyle = createGlobalStyle`
     .k-ModalNext__actions {
       display: flex;
       flex-direction: column;
+      background-color: ${COLORS.background1};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         gap: ${pxToRem(GUTTER)};
@@ -171,21 +189,32 @@ const GlobalStyle = createGlobalStyle`
       .k-Button {
         margin-top: ${pxToRem(20)};
       }
+
+      &.k-ModalNext__actions--sticky {
+        position: sticky;
+        bottom: 0;
+      }
+      @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+        &.k-ModalNext__actions--stickyOnMobile {
+          position: sticky;
+          bottom: 0;
+        }
+      }
     }
 
     .k-ModalNext__main {
-      padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)} ${pxToRem(50)};
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        padding: 0 calc(var(--Modal-contentMargin) * ${oneGridCol}) ${pxToRem(
-  80,
-)};
+        padding: 0 calc(var(--Modal-contentMargin) * ${oneGridCol});
       }
 
       @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
-        padding: 0 calc(var(--Modal-contentMargin) * ${oneGridColXl}) ${pxToRem(
-  80,
-)};
+        padding: 0 calc(var(--Modal-contentMargin) * ${oneGridColXl});
       }
 
       & > *:not(.k-ModalNext__block):first-child {
@@ -195,6 +224,26 @@ const GlobalStyle = createGlobalStyle`
           margin-top: ${pxToRem(80)};
         }
       }
+
+      & > * {
+        flex: 0 0 auto;
+      }
+
+      & > :nth-last-child(2) {
+        flex-grow: 1;
+      }
+
+      & > *:last-child {
+        margin-bottom: ${pxToRem(50)};
+
+        @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+          margin-bottom: ${pxToRem(80)};
+        }
+      }
+    }
+
+    .k-ModalNext__header ~ .k-ModalNext__main > *:not(.k-ModalNext__block):first-child {
+      margin-top: 0;
     }
 
     .k-ModalNext__block {
@@ -216,15 +265,49 @@ const GlobalStyle = createGlobalStyle`
         padding-right: ${pxToRem(CONTAINER_PADDING)};
       }
     }
+
+    .k-ModalNext__actions.k-ModalNext__actions--fullSize {
+      margin-left: -${pxToRem(CONTAINER_PADDING_THIN)};
+      margin-right: -${pxToRem(CONTAINER_PADDING_THIN)};
+      margin-bottom: 0;
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        margin-left: calc(-1 * var(--Modal-contentMargin) * ${oneGridCol});
+        margin-right: calc(-1 * var(--Modal-contentMargin) * ${oneGridCol});
+      }
+      @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
+        margin-left: calc(-1 * var(--Modal-contentMargin) * ${oneGridColXl});
+        margin-right: calc(-1 * var(--Modal-contentMargin) * ${oneGridColXl});
+      }
+    }
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      .k-ModalNext__actions.k-ModalNext__actions--fullSizeOnMobile {
+        margin-left: -${pxToRem(CONTAINER_PADDING_THIN)};
+        margin-right: -${pxToRem(CONTAINER_PADDING_THIN)};
+        margin-bottom: 0;
+      }
+    }
+
+    .k-ModalNext__main__title {
+      margin-bottom:
+    }
   }
 
   /* ANDROMEDA STYLES */
 
   .k-ModalNext__content--andromeda {
     .k-ModalNext__header {
-      height: ${pxToRem(60)};
       border-bottom: ${pxToRem(2)} solid ${COLORS.line1};
-      margin-bottom: ${pxToRem(50)}
+      margin-bottom: ${pxToRem(50)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        padding-left: ${pxToRem(CONTAINER_PADDING)};
+        padding-right: ${pxToRem(CONTAINER_PADDING)};
+      }
+    }
+
+    &.k-ModalNext__content--hasHeader {
+      --Modal-headerHeight: ${pxToRem(60)};
     }
   }
 
@@ -235,16 +318,31 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
-    border-radius: ${pxToRem(12)};
+
+    &:not(.k-ModalNext__content--fullSize) {
+      border-radius: ${pxToRem(12)};
+
+      .k-ModalNext__closeButton .k-Button {
+        border-top-right-radius: ${pxToRem(12)};
+      }
+    }
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      &.k-ModalNext__content--fullSizeOnMobile {
+        border-radius: 0 !important;
+      }
+    }
+
+    &.k-ModalNext__content--hasHeader {
+      --Modal-headerHeight: ${pxToRem(80)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        --Modal-headerHeight: ${pxToRem(100)};
+      }
+    }
 
     .k-ModalNext__header {
       border-top-left-radius: ${pxToRem(12)};
       border-top-right-radius: ${pxToRem(12)};
-      height: ${pxToRem(80)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        height: ${pxToRem(100)};
-      }
 
       .k-Button {
         @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
@@ -331,6 +429,25 @@ const GlobalStyle = createGlobalStyle`
       }
     }
 
+    &.k-ModalNext__overlay--fullSize {
+      background: white;
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      &.k-ModalNext__overlay--fullSizeOnMobile {
+        background: white;
+
+        .k-ModalNext__content {
+          flex: 1;
+        }
+
+        &::before, &::after {
+          min-height: 0 !important;
+          flex: 0 !important;
+        }
+      }
+    }
+
     ${props =>
       css`
         z-index: ${props.zIndex};
@@ -358,12 +475,17 @@ const GlobalStyle = createGlobalStyle`
 
 `
 
-const ModalTitle = ({ children }) => (
+const ModalTitle = ({ children, className, ...props }) => (
   <Title
     modifier="quaternary"
     noMargin
     tag="p"
-    className="k-u-margin-bottom-singleHalf--important k-u-align-center"
+    className={classNames(
+      'k-ModalNext__main__title',
+      className,
+      'k-u-align-center',
+    )}
+    {...props}
   >
     {children}
   </Title>
@@ -382,12 +504,12 @@ const ModalParagraph = ({
     noMargin
     tag={tag || 'p'}
     className={classNames(
-      'k-ModalNext__paragraph',
+      'k-ModalNext__main__paragraph',
       className,
       `k-u-align-${align}`,
       {
-        'k-u-margin-bottom-triple': !withoutMargin,
-        'k-u-margin-bottom-quadruple@s-up': !withoutMargin,
+        'k-u-margin-bottom-triple': !withoutMargin || !noMargin,
+        'k-u-margin-bottom-quadruple@s-up': !withoutMargin || !noMargin,
       },
     )}
     {...props}
@@ -397,17 +519,38 @@ const ModalParagraph = ({
 )
 
 ModalParagraph.propTypes = {
+  withoutMargin: deprecated(PropTypes.bool, 'Please use `noMargin` instead'),
+  noMargin: PropTypes.bool,
   align: PropTypes.oneOf(['center', 'left', 'right', 'justify']),
 }
 
 ModalParagraph.defaultProps = {
+  noMargin: false,
   align: 'center',
 }
 
-const Actions = props => (
+const Actions = ({
+  className,
+  sticky,
+  stickyOnMobile,
+  fullSize,
+  fullSizeOnMobile,
+  ...props
+}) => (
   <div
+    className={
+      classNames(
+        'k-ModalNext__actions',
+        className,
+        {
+          'k-ModalNext__actions--sticky': sticky,
+          'k-ModalNext__actions--stickyOnMobile': stickyOnMobile,
+          'k-ModalNext__actions--fullSize': fullSize,
+          'k-ModalNext__actions--fullSizeOnMobile': fullSizeOnMobile,
+        }
+      )
+    }
     {...props}
-    className={classNames('k-ModalNext__actions', props.className)}
   />
 )
 
@@ -490,6 +633,7 @@ const InnerModal = ({
   isOpen,
   zIndex,
   fullSize,
+  fullSizeOnMobile,
   fullSizeTitle,
   variant,
   headerTitle,
@@ -524,6 +668,8 @@ const InnerModal = ({
     }
   }
 
+  const shouldDisplayHeader = !!headerTitle || !!fullSizeTitle || !!headerActions
+
   const ModalPortal = ReactDOM.createPortal(
     <>
       <GlobalStyle zIndex={zIndex} />
@@ -536,7 +682,9 @@ const InnerModal = ({
             `k-ModalNext__content--${size}`,
             `k-ModalNext__content--${variant}`,
             {
+              'k-ModalNext__content--hasHeader': shouldDisplayHeader,
               'k-ModalNext__content--fullSize': fullSize,
+              'k-ModalNext__content--fullSizeOnMobile': fullSizeOnMobile,
               'k-ModalNext__content--customContentCols': !isEmpty(contentCols),
             },
           ),
@@ -550,6 +698,7 @@ const InnerModal = ({
             `k-ModalNext__overlay--${variant}`,
             {
               'k-ModalNext__overlay--fullSize': fullSize,
+              'k-ModalNext__overlay--fullSizeOnMobile': fullSizeOnMobile,
             },
           ),
           afterOpen: 'k-ModalNext__overlay--afterOpen',
@@ -571,7 +720,7 @@ const InnerModal = ({
         {...modalProps}
       >
         <>
-          {headerTitle || fullSizeTitle ? (
+          {shouldDisplayHeader ? (
             <div className="k-ModalNext__header">
               <div className="k-ModalNext__header__closeButton">
                 {hasCloseButton && (
@@ -596,7 +745,7 @@ const InnerModal = ({
               </div>
 
               <div className="k-ModalNext__header__actions">
-                {headerActions({
+                {headerActions && headerActions({
                   open: () => dispatch(updateState(true)),
                   close: () => dispatch(updateState(false)),
                 })}
@@ -607,7 +756,7 @@ const InnerModal = ({
               <div className="k-ModalNext__closeButton">
                 <CloseButton
                   style={{ position: 'fixed' }}
-                  className="k-u-hidden@s-up k-u-margin-none"
+                  className="k-u-hidden@s-up--important k-u-margin-none"
                   modifier="hydrogen"
                   onClick={close}
                   size="micro"
@@ -615,7 +764,7 @@ const InnerModal = ({
                 />
                 <CloseButton
                   style={{ position: 'fixed' }}
-                  className="k-u-hidden@xs-down k-u-margin-none"
+                  className="k-u-hidden@xs-down--important k-u-margin-none"
                   modifier="hydrogen"
                   onClick={close}
                   closeButtonLabel={closeButtonLabel}
@@ -659,6 +808,7 @@ Modal.propTypes = {
   describedby: PropTypes.string,
   closeButtonLabel: PropTypes.string,
   fullSize: PropTypes.bool,
+  fullSizeOnMobile: PropTypes.bool,
   modalProps: PropTypes.object,
   hasCloseButton: PropTypes.bool,
   size: PropTypes.oneOf(['regular', 'big', 'huge', 'giant']),
@@ -678,15 +828,15 @@ Modal.defaultProps = {
   describedby: '',
   closeButtonLabel: 'Fermer',
   fullSize: false,
+  fullSizeOnMobile: false,
   modalProps: {},
   hasCloseButton: true,
   size: 'regular',
   isOpen: false,
   zIndex: 110,
-  fullSizeTitle: '',
   variant: 'andromeda',
   headerTitle: null,
-  headerActions: () => {},
+  headerActions: null,
   contentCols: {},
   headerZIndex: 10,
 }
