@@ -12,15 +12,14 @@ const StoryContainer = ({ children }) => (
 )
 
 export default {
-  title: 'Steppers/VerticalLoader',
-  component: VerticalLoader,
+  title: 'Steppers/VerticalProgress',
+  component: VerticalProgress,
 }
 
 export const Default = () => {
   return (
     <StoryContainer>
       <VerticalProgress/>
-        
     </StoryContainer>
   )
 }
