@@ -6,9 +6,9 @@ import COLORS from '../../../../constants/colors-config'
 import { LongArrowIcon } from '../../../../components/icons/long-arrow-icon'
 import { CheckedIcon } from '../../../../components/icons/checked-icon'
 import { HourglassIcon } from '../../../../components/icons/hourglass-icon'
-
+import classNames from 'classnames'
+ 
 const STATUS_SIZE = 30
-const ICON_COLOR = COLORS.background1
 
 const StyledWrapper = styled.div`
 
@@ -27,24 +27,17 @@ const StyledWrapper = styled.div`
 
     background-color: ${COLORS.background1};
 
-    ${TYPOGRAPHY.fontStyles.regular};
-    font-size: ${pxToRem(18)};
-
     &.k-Steppers--VerticalProgress__status--actions {
       background-color: ${COLORS.orange};
-      color: ${ICON_COLOR}
     }
     &.k-Steppers--VerticalProgress__status--waiting {
       background-color: ${COLORS.font3};
-      color: ${ICON_COLOR}
     }
     &.k-Steppers--VerticalProgress__status--publish {
       background-color: ${COLORS.line3};
-      color: ${ICON_COLOR}
     }
     &.k-Steppers--VerticalProgress__status--valid {
       background-color: ${COLORS.primary1};
-      color: ${ICON_COLOR}
     }
   }
 `
@@ -57,7 +50,7 @@ export class Status extends Component {
       publish,
       valid,
       ...other
-    } = this.prop
+    } = this.props
 
     return (
       <StyledWrapper className="k-Steppers--VerticalProgress__wrapper">
@@ -82,13 +75,13 @@ export class Status extends Component {
   iconByStatus = () => {
     const { actions, waiting, publish, valid } = this.props
 
-    if (actions) return <LongArrowIcon direction="right" />
+    if (actions) return <LongArrowIcon color={COLORS.background1} direction="right" />
 
-    if (waiting) return <HourglassIcon width="10" title={null} />
+    if (waiting) return <HourglassIcon color={COLORS.background1} width="10" title={null} />
 
     if (publish) return <CheckedIcon width="10" title={null} />
 
-    if (valid) return <LongArrowIcon direction="right" />
+    if (valid) return <LongArrowIcon color={COLORS.background1} direction="right" />
 
     return null
   }

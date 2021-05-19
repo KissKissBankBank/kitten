@@ -19,7 +19,10 @@ export default {
 export const Default = () => {
   return (
     <StoryContainer>
-      <VerticalProgress/>
+      <VerticalProgress>
+        <VerticalProgress.Step actions></VerticalProgress.Step>
+        <VerticalProgress.Title actions>Brouillon</VerticalProgress.Title>
+      </VerticalProgress>
     </StoryContainer>
   )
 }
