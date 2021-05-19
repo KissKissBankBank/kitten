@@ -4,22 +4,24 @@ import { stepToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import classNames from 'classnames'
 import COLORS from '../../../../constants/colors-config'
+import { STATUS_CLASSNAME } from '../index'
 
 const StyledTitle = styled.p`
   margin: 0;
   ${TYPOGRAPHY.fontStyles.bold};
   font-size: ${stepToRem(1)};
+  padding-left: 0;
 
-  &.k-Steppers--VerticalProgress__title--actions {
+  &.k-VerticalProgress--title__actions {
     color: ${COLORS.orange};
   }
-  &.k-Steppers--VerticalProgress__title--waiting {
+  &.k-VerticalProgress--title__waiting {
     color: ${COLORS.font3};
   }
-  &.k-Steppers--VerticalProgress__title--publish {
+  &.k-VerticalProgress--title__publish {
     color: ${COLORS.line3};
   }
-  &.k-Steppers--VerticalProgress__title--valid {
+  &.k-VerticalProgress--title__valid {
     color: ${COLORS.primary1};
   }
 `
@@ -37,12 +39,13 @@ export const Title = ({
     <StyledTitle 
       {...other}
       className={classNames(
-        'k-Steppers--VerticalProgress__title',
+        STATUS_CLASSNAME,
+        'k-VerticalProgress--title',
         {
-          'k-Steppers--VerticalProgress__title--actions': actions,
-          'k-Steppers--VerticalProgress__title--waiting': waiting,
-          'k-Steppers--VerticalProgress__title--publish': publish,
-          'k-Steppers--VerticalProgress__title--valid': valid,
+          'k-VerticalProgress--title__actions': actions,
+          'k-VerticalProgress--title__waiting': waiting,
+          'k-VerticalProgress--title__publish': publish,
+          'k-VerticalProgress--title__valid': valid,
         },
       )}
     >

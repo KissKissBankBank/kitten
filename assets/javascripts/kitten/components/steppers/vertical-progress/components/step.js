@@ -2,8 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
 import { Status } from './status'
+import classNames from 'classnames'
 
 const StyledItem = styled.li`
   padding: ${pxToRem(15)} 0;
@@ -25,10 +27,15 @@ const StyledItem = styled.li`
     }
   }
 
-  .k-Steppers--VerticalProgress__itemContainer {
+  .k-VerticalProgress--itemContainer {
     display: inline-flex;
-    align-items: center;
     padding-right: ${pxToRem(10)};
+  }
+
+  .k-VerticalProgress--step__content {
+    @media (max-width: ${ScreenConfig.M.max}px) {
+      padding-left: ${pxToRem(30)};
+    }
   }
 `
 
@@ -38,13 +45,12 @@ export const Step = ({
   publish,
   valid,
   statusProps,
-  titleProps,
   children,
   ...other
 }) => {
   return (
-    <StyledItem className="k-Steppers--VerticalProgress__item">
-      <div className="k-Steppers--VerticalProgress__itemContainer" {...other}>
+    <StyledItem className="k-VerticalProgress--item">
+      <div className="k-VerticalProgress--itemContainer" {...other}>
 
         <Status
           actions={actions}
@@ -53,10 +59,13 @@ export const Step = ({
           valid={valid}
           {...statusProps}
         />
-        <div className="k-Steppers--VerticalProgress__step--content">
+        <div 
+          className={classNames(
+            'k-VerticalProgress--step__content',
+          )}
+        >
           {children}
         </div>
-
       </div>
     </StyledItem>
   )

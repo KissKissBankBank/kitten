@@ -7,12 +7,16 @@ import { LongArrowIcon } from '../../../../components/icons/long-arrow-icon'
 import { CheckedIcon } from '../../../../components/icons/checked-icon'
 import { HourglassIcon } from '../../../../components/icons/hourglass-icon'
 import classNames from 'classnames'
- 
+import { Title } from './title'
+import { STATUS_CLASSNAME } from '../index'
+
 const STATUS_SIZE = 30
 
 const StyledWrapper = styled.div`
+  display: flex;
+  flex: 1;
 
-  .k-Steppers--VerticalProgress__status {
+  .k-VerticalProgress--status {
     flex-shrink: 0;
 
     display: flex;
@@ -27,16 +31,16 @@ const StyledWrapper = styled.div`
 
     background-color: ${COLORS.background1};
 
-    &.k-Steppers--VerticalProgress__status--actions {
+    &.k-VerticalProgress--status__actions {
       background-color: ${COLORS.orange};
     }
-    &.k-Steppers--VerticalProgress__status--waiting {
+    &.k-VerticalProgress--status__waiting {
       background-color: ${COLORS.font3};
     }
-    &.k-Steppers--VerticalProgress__status--publish {
+    &.k-VerticalProgress--status__publish {
       background-color: ${COLORS.line3};
     }
-    &.k-Steppers--VerticalProgress__status--valid {
+    &.k-VerticalProgress--status__valid {
       background-color: ${COLORS.primary1};
     }
   }
@@ -49,25 +53,37 @@ export class Status extends Component {
       waiting,
       publish,
       valid,
+      title,
+      titleProps,
       ...other
     } = this.props
 
     return (
-      <StyledWrapper className="k-Steppers--VerticalProgress__wrapper">
+      <StyledWrapper>
         <span
           {...other}
           className={classNames(
-            'k-Steppers--VerticalProgress__status',
+            STATUS_CLASSNAME,
+            'k-VerticalProgress--status',
             {
-              'k-Steppers--VerticalProgress__status--actions': actions,
-              'k-Steppers--VerticalProgress__status--waiting': waiting,
-              'k-Steppers--VerticalProgress__status--publish': publish,
-              'k-Steppers--VerticalProgress__status--valid': valid,
+              'k-VerticalProgress--status__actions': actions,
+              'k-VerticalProgress--status__waiting': waiting,
+              'k-VerticalProgress--status__publish': publish,
+              'k-VerticalProgress--status__valid': valid,
             },
           )}
         >
           {this.iconByStatus() || children}
         </span>
+        <Title 
+          actions={actions}
+          waiting={waiting}
+          publish={publish}
+          valid={valid}
+          {...titleProps}
+        >
+          Toto
+        </Title>
       </StyledWrapper>
     )
   }
@@ -92,6 +108,7 @@ Status.propTypes = {
   waiting: PropTypes.bool,
   publish: PropTypes.bool,
   valid: PropTypes.bool,
+  title: PropTypes.string,
 
 }
 
