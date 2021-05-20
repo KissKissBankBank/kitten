@@ -4,10 +4,9 @@ import styled from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { Status } from './status'
-import classNames from 'classnames'
 
 const StyledItem = styled.li`
-  margin: ${pxToRem(15)} 0 ${pxToRem(20)} 0;
+  margin: ${pxToRem(15)} 0 ${pxToRem(25)} 0;
 
   &:first-of-type {
     margin-top: 0;
@@ -48,6 +47,7 @@ export const Step = ({
   valid,
   disabled,
   statusProps,
+  progressTitle,
   children,
   ...other
 }) => {
@@ -61,13 +61,10 @@ export const Step = ({
           publish={publish}
           valid={valid}
           disabled={disabled}
+          progressTitle={progressTitle}
           {...statusProps}
         />
-        <div 
-          className={classNames(
-            'k-VerticalProgress--step__content',
-          )}
-        >
+        <div className="k-VerticalProgress--step__content">
           {children}
         </div>
       </div>

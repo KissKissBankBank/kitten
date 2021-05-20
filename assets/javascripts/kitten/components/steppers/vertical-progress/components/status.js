@@ -62,7 +62,7 @@ export class Status extends Component {
       publish,
       valid,
       disabled,
-      state,
+      progressTitle,
       titleProps,
       ...other
     } = this.props
@@ -92,7 +92,7 @@ export class Status extends Component {
           disabled={disabled}
           {...titleProps}
         >
-          toto
+          {progressTitle}
         </Title>
       </StyledWrapper>
     )
@@ -121,7 +121,7 @@ Status.propTypes = {
   publish: PropTypes.bool,
   valid: PropTypes.bool,
   disabled: PropTypes.bool,
-  state: PropTypes.string,
+  progressTitle: PropTypes.string,
 
 }
 
@@ -131,5 +131,5 @@ Status.defaultProps = {
   publish: false,
   valid: false,
   disabled: false,
-  state: '',
+  progressTitle: '',
 }

@@ -23,7 +23,7 @@ export const Default = () => {
   return (
     <StoryContainer>
       <VerticalProgress>
-        <VerticalProgress.Step actions state="Brouillon">
+        <VerticalProgress.Step actions progressTitle="Brouillon">
           <div className="k-u-margin-top-singleHalf k-u-margin-bottom-double">
             <Text weight="light" size="tiny" lineHeight="normal">
               Une fois les informations suivantes renseignées, vous pourrez envoyer votre projet 
@@ -36,6 +36,7 @@ export const Default = () => {
             backgroundColor="#fef1e7"
             textColor="#222"
             className="k-u-margin-bottom-noneHalf"
+            href="#"
           >
             <LinkBox.Text>
               <Text size="tiny" weight="light" lineHeight="normal">
@@ -50,6 +51,7 @@ export const Default = () => {
             backgroundColor="#fef1e7"
             textColor="#222"
             className="k-u-margin-bottom-noneHalf"
+            href="#"
           >
             <LinkBox.Text>
               <Text size="tiny" weight="light" lineHeight="normal">
@@ -62,6 +64,7 @@ export const Default = () => {
             variant="orion" 
             backgroundColor="#fef1e7"
             textColor="#222"
+            href="#"
           >
             <LinkBox.Text>
               <Text size="tiny" weight="light" lineHeight="normal">
@@ -71,8 +74,8 @@ export const Default = () => {
           </LinkBox>
         </VerticalProgress.Step>
         
-        <VerticalProgress.Step waiting state="En cours de vérification">
-          <div className="k-u-margin-top-singleHalf k-u-margin-bottom-double">
+        <VerticalProgress.Step waiting progressTitle="En cours de vérification">
+          <div className="k-u-margin-top-singleHalf">
             <Text weight="light" size="tiny" lineHeight="normal">
               Votre coach est en train de parcourir votre projet. Il le validera ou vous enverra 
               ses suggestions d'améliorations par mail sous 2 jours ouvrés maximum.
@@ -80,8 +83,8 @@ export const Default = () => {
           </div>
         </VerticalProgress.Step>
 
-        <VerticalProgress.Step valid state="Prêt à être partagé">
-          <div className="k-u-margin-top-singleHalf k-u-margin-bottom-double">
+        <VerticalProgress.Step valid progressTitle="Prêt à être partagé">
+          <div className="k-u-margin-top-singleHalf">
             <Text weight="light" size="tiny" lineHeight="normal">
               Partagez au plus vite votre projet à un coach pour recevoir des conseils 
               pour améliorer votre campagne par mail.
@@ -92,9 +95,9 @@ export const Default = () => {
           </div>
         </VerticalProgress.Step>
 
-        <VerticalProgress.Step disabled state="Partager avec mon coach" />
-        <VerticalProgress.Step disabled state="Partager avec mon coach" />
-        <VerticalProgress.Step disabled state="Partager avec mon coach" />
+        <VerticalProgress.Step disabled progressTitle="Partager avec mon coach" />
+        <VerticalProgress.Step disabled progressTitle="Finaliser" />
+        <VerticalProgress.Step disabled progressTitle="Publier" />
 
       </VerticalProgress>
     </StoryContainer>
