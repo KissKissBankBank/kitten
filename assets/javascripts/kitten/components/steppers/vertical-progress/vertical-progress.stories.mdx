@@ -1,0 +1,31 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './vertical-progress.stories.js'
+import { VerticalProgress } from './index'
+
+<Meta title="Steppers/Vertical-progress" component={VerticalProgress} />
+
+# VerticalProgress
+
+## Import
+
+```js
+import { VerticalProgress } from '@kisskissbankbank/kitten'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="VerticalProgress" story={stories.Default} />
+</Canvas>
+
+#### Default
+
+```js
+  <VerticalProgress>
+    <VerticalProgress.Step statusType="actions" progressTitle="Item 1" />
+    <VerticalProgress.Step statusType="waiting" progressTitle="Item 2" />
+    <VerticalProgress.Step statusType="publish" progressTitle="Item 3" />
+    <VerticalProgress.Step statusType="valid" progressTitle="Item 4" />
+    <VerticalProgress.Step statusType="disabled" progressTitle="Item 5" />
+</VerticalProgress>
+```
