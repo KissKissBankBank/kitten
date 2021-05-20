@@ -29,7 +29,47 @@ import {
   KissKissBankBankLogo,
   domElementHelper,
   PasswordIcon,
+  DropdownSelectWithInput,
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  InstagramIcon,
+  YoutubeIcon,
 } from '../../..'
+
+const options = [
+  {
+    value: 'facebook',
+    label: 'https://www.facebook.com/',
+    icon: <FacebookIcon width="8" height="15" />,
+  },
+  {
+    value: 'twitter',
+    label: 'https://www.twitter.com/',
+    icon: <TwitterIcon width="15" height="14" />,
+  },
+  {
+    value: 'linkedin',
+    label: 'https://www.linkedin.com/',
+    icon: <LinkedinIcon width="14" height="14" />,
+  },
+  {
+    value: 'instagram',
+    label: 'https://www.instagram.com/',
+    icon: <InstagramIcon width="17" height="17" />,
+  },
+  {
+    value: 'youtube',
+    label: 'https://www.youtube.com/',
+    icon: <YoutubeIcon width="17" height="12" />,
+  },
+  {
+    value: 'website',
+    label: 'https://www.…',
+    icon: <GlobeIcon width="16" height="16" />,
+  },
+]
+
 
 import { Default as Table } from '../../tables/list-table/list-table.stories.js'
 
@@ -331,6 +371,16 @@ const FlowExample = () => (
         augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel
         augue laoreet rutrum faucibus dolor auctor.
       </p>
+      <DropdownSelectWithInput
+          id="DropdownSelectWithInput"
+          hideLabel
+          labelText="Facebook"
+          options={options}
+          highlightOptionBox
+          defaultSelectedValue="facebook"
+          deactivateDropdown
+          className="k-u-margin-bottom-triple"
+      />
       <p className="k-u-weight-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis,
         est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
