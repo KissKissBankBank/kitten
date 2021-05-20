@@ -7,166 +7,167 @@ import { Meta } from '@storybook/addon-docs/blocks';
 ## v3.0.0
 
 | Component                   | Grouped Styles  | Documentation  | Stories | Styled-Component(only) | Variant |
-| --------------------------- | :--------: | :------------: | :-----: | :--------------------: | :-----: |
-| **A11Y**                    |            |                |         |                        |         |
-| • VisuallyHidden            |   ✅       |  ✅            |   ✅    | ❌                    |   ❌    |
-| **Atoms**                   |            |                |         |                        |         |
-| • Badge                     |   ✅       |       ❌       |  ✅     |    ❌                 |   ❌    |
-| • IconBadge                 |   ✅       |       ❌       |  ✅     |    ❌                 |   ❌    |
-| • Loader                    |   ✅       |       ❌       |  ✅     |    ❌                 |   ❌    |
-|•  LoaderWithParagraph       |   ✅       |       ❌       |  ✅     |    ❌                 |   ❌    |
-| • StatusWithBullet          |   ✅       |      ✅        |   ✅    |      ❌               |  ❌     |
-| • StepperIcon               |   ❌       |     ❌         |  ✅     |    ❌                 |  ❌     |
-| • Tag                       |   ✅       |     ❌         |  ✅     |    ❌                 |  ❌     |
-| **Avatar**                  |            |                |          |                       |         |
-| • AvatarWithTextAndBadge    |   ✅       |     ❌         |   ✅    |        ❌             |   ❌    |
-| **Box**                     |            |                |          |                       |         |
-| • DocLinkBox (LinkBox)      |            |     ✅         |   ✅     |                       |         |
-| • InformationBox            |   ✅       |       ❌       |    ✅    |                       |     ❌  |
-| • LinkBox                   |   ✅       |       ✅       |   ✅     |                       |    ❌   |
-| **Buttons**                 |            |                |           |                       |         |
-| • Button                    |   ✅       |        ✅      |    ✅    |                       |     ✅  |
-| • ButtonGroup               |   ✅       |    ✅          |   ✅     |                       |     ❌  |
-| • ButtonIcon                |   ✅       |       ❌       |   ✅     |                       |     ✅  |
-| • ButtonImage               |   ✅       |       ✅       |   ✅     |                       |     ❌   |
-| • ButtonQuestionMarkIcon    |            |       ❌       |    ✅    |                       |   ❌     |
-| • CheckableButton           |   ❌       |        ✅      |     ✅    |                       |   ❌    |
-| • CloseButton               |            |         ❌     |      ✅   |                       |    ❌   |
-| • SocialButtonIcon          |            |        ❌      |      ✅   |                       |   ❌    |
-| • SocialButtonIconWords     |            |        ❌      |      ✅   |                       |   ❌    |
-| • TagButton                 |   ✅       |    ✅         |      ✅    |                      |     ✅   |
-| **Cards**                   |            |                |            |                      |          |
-| • BackerCard                |    ❌      |    ❌          |     ✅     |         ✅           |   ❌    |
-| • BackingCard               |   ✅       |      ❌        |     ✅     |                      |   ❌    |
-| • CartRewardCard            |   ✅       |      ❌        |     ✅     |                      |   ❌    |
-| • ClickableCard             |   ✅       |      ❌        |      ✅    |                      |   ❌    |
-| • CrowdfundingCard          |   ✅       |      ❌        |      ✅    |                      |     ❌  |
-| • EngagementCard            |   ❌       |        ✅      |      ✅    |          ✅          |    ❌   |
-| • EngagementCardWithImage   |    ❌      |     ❌         |       ✅   |             ✅       |  ❌     |
-| • RewardEdition             |            |       ❌       |      ✅    |           ✅         |    ❌   |
-| • SimpleCard                |   ✅       |       ❌       |     ✅     |                      |  ❌     |
-| • TeamCard                  |   ✅       |       ❌       |       ✅   |                      |  ❌     |
-| • Triptych                  |   ✅       |       ❌       |    ✅      |                      |   ❌    |
-| • VerticalCard              |   ❌       |        ✅      |     ✅     |        ✅            |   ❌    |
-| • VerticalCardWithAction    |   ✅       |       ✅       |     ✅     |                      |    ❌   |
-| **Carousels**               |            |                |             |                      |         |
-| • Carousel                  |   ✅       |     ❌         |   ✅       |                      |     ❌  |
-| • SimpleCarousel            |   ✅       |     ❌         |    ✅      |                      |    ❌   |
-| • NavTabCarousel            |            |      ❌        |      ✅    |        ✅            |     ❌  |
-| **Comments**                |            |                |             |                      |         |
-| • Comment                   |            |        ✅      |    ✅      |      ✅              |    ❌   |
-| • Form                      |            |        ✅      |      ✅    |        ✅            |     ❌  |
-| **Expandable**              |            |                |            |                       |         |
-| • Accordeon                 |   ✅       |                |   ✅       |                      |      ✅ |
-| • Details                   |            |     ✅         |    ✅      |                      |    ❌   |
-| • ExpandBoard               |            |                |     ✅     |         ✅           |    ❌   |
-| **Form**                    |            |                |            |                       |         |
-| • Autocomplete              |            |       ✅       |    ✅      |       ✅             |  ❌     |
-| • Checkox                   |            |       ❌       |      ✅    |            ✅        |  ❌     |
-| • CheckoxSet                |   ✅       |     ❌         |     ✅     |                      |     ✅  |
-| • CreditCardForm            |            |      ❌        |      ✅    |                       |    ❌  |
-| • DatePicker                |            |                |            |                       |         |
-| • DropdowPhoneSelect        |            |       ❌       |    ✅     |                        |   ❌    |
-| • DropdownSelect            |   ✅       |       ❌       |    ✅     |                        |   ✅    |
-| • DropdownSelectWithInput   |   ✅       |      ❌        |    ✅     |                        |  ❌     |
-| • Field                     |            |       ❌       |    ✅     |                        |         |
-| • FormActions               |   ✅       |      ❌        |   ✅      |                        |  ❌     |
-| • Label                     |   ✅       |     ❌         |   ✅      |                        |   ❌    |
-| • LocationInput             |   ✅       |     ❌         |   ✅      |                        |    ✅   |
-| • PasswordInput             |   ✅       |      ✅        |   ✅      |                        |      ❌ |
-| • PillNumberInput           |   ✅       |     ✅         |   ✅      |                        |    ❌   |
-| • RadioButton               |   ✅       |     ✅         |  ✅       |                        |    ✅   |
-| • RadioButtonSet            |   ✅       |     ❌         |    ✅     |                        |    ✅   |
-| • RangeSlider               |   ✅       |      ❌        |    ✅     |                        |    ❌   |
-| • StadaloneRangeDatePicker  |   ✅       |      ✅        |   ✅      |                        |    ❌   |
-| • TextInput                 |   ✅       |      ✅        |    ✅     |                        |    ✅   |
-| • TextInputWithButton       |   ✅       |       ✅       |    ✅     |                        |    ❌   |
-| • TextInputWithIcon         |   ✅       |       ✅       |     ✅    |                        |    ❌   |
-| • TextInputWithLimit        |   ✅       |       ✅       |    ✅     |                        |    ❌   |
-| • TextInputWithLimit        |   ✅       |       ✅       |    ✅     |                        |         |
-| • TextInputWithUnit         |   ✅       |      ✅        |     ✅    |                        |    ✅   |
-| • ToggleSwitch               |   ❌       |     ❌         |    ✅     |       ✅               |    ❌   |
-| **Grid**                    |            |                |            |                        |         |
-| • AdaptableGrid             |            |    ✅          |    ✅     |        ✅              |    ❌   |
-| • Container                 |            |     ❌         |    ✅     |           ✅           |    ❌   |
-| • Grid                      |   ✅       |      ❌        |  ✅       |                        |   ❌    |
-| • Row                       |   ✅       |      ❌        |   ✅      |                        |   ❌    |
-| • ScrollableContainer       |            |      ❌        |     ✅    |         ✅             |  ❌     |
-| • SideGrid                  |   ✅       |      ❌        |    ✅     |                        |    ❌   |
-| • StickyContainer           |   ✅       |       ✅       |   ✅      |                        |    ❌   |
-| **Heroes**                  |            |                |            |                        |         |
-| • Hero                      |   ✅       |     ❌         |    ✅     |                        |   ❌    |
-| **Icons**                   |            |                |            |                       |          |
-| • ArrowIcon                 |            |     ❌         |    ✅     |                        |   ❌    |
-| • BurgerIcon                |            |    ❌          |    ✅     |        ✅              |   ❌    |
-| • FilterIcon                |            |     ❌         |    ✅     |                        |   ❌    |
-| • LongArrowIcon             |            |                |    ✅     |                        |    ❌   |
-| **Images**                  |            |                |           |                        |         |
-| • Cropper                   |   ✅       |      ❌        |     ✅    |                        |   ❌    |
-| **Layout**                  |            |                |            |                        |         |
-| • ArrowContainer            |   ✅       |        ✅      |    ✅     |                        |    ❌   |
-| • DashboardLayout           |   ✅       |        ❌      |      ✅   |                        |  ❌     |
-| • HorizontalStroke          |   ✅       |         ✅     |    ✅     |                        |    ❌   |
-| • IconContainer             |   ❌       |       ❌       |      ✅   |            ✅          |  ❌     |
-| • Line                      |   ✅       |     ❌         |     ✅    |                        |    ❌   |
-| • Marger                    |            |                |     ✅     |                        |    ❌   |
-| • ResponsiveIframeContainer |   ✅       |     ❌         |    ✅      |                        |  ❌    |
-| • Separator                 |   ✅       |      ❌        |    ✅      |                        |   ❌   |
-| • SideLayout                |   ✅       |      ❌        |     ✅     |                        |   ❌   |
-| • VerticalStroke            |   ✅       |      ❌        |     ✅     |                        |   ❌   |
-| **Lines**                   |            |                |             |                       |         |
-| • InfoLine                  |  ❌        |       ✅       |     ✅     |      ✅                |   ❌   |
-| **Links**                   |            |                |             |                        |        |
-| • LinkList                  |   ✅       |      ✅        |    ✅      |                        |    ❌  |
-| **Lists**                   |            |                |             |                        |        |
-| • BulletList                |   ✅       |       ✅       |    ✅      |                        |   ❌    |
-| • CheckList                 |   ✅       |       ✅       |     ✅     |                        |   ❌    |
-| • HorizontalTimeline        |   ✅       |       ❌       |     ✅     |                        |   ❌    |
-| • IconList                  |    ❌      |         ✅     |     ✅     |    ✅                  |   ❌    |
-| • List                      |    ❌      |      ❌        |      ✅    |       ✅               |   ❌    |
-| • Timeline                  |   ✅       |      ❌        |    ✅      |                        |   ❌    |
-| **Meterts**                 |            |                 |            |                        |         |
-| • CounterBlock              |    ❌      |      ❌        |   ✅       |     ✅                 |   ❌    |
-| • Progress                  |   ✅       |     ❌         |    ✅      |                        |     ✅  |
-| • ProgressRing              |            |     ❌         |      ✅    |                        |     ✅  |
-| **Modals**                  |            |                |             |                        |         |
-| • Modal                     |   ✅       |      ❌        |    ✅      |                        |  ❌     |
-| • Next                      |   ✅       |      ❌        |     ✅     |                        |    ✅   |
-| • Overlay                   |            |       ❌       |     ✅     |                        |    ❌   |
-| **Navigation**              |            |                |             |                        |         |
-| • HeaderNav                 |   ✅       |       ❌       |    ✅      |                        |   ❌    |
-| • NavBar                    |   ✅       |       ✅       |   ✅       |                        |     ❌  |
-| • Pagination                |   ✅       |        ✅      |     ✅     |                        |     ❌  |
-| **Notifications**           |            |                |             |                        |         |
-| • Alert                     |   ✅       |      ❌        |    ✅      |                        |   ❌    |
-| **Popovers**                |            |                |             |                        |         |
-| • SimplePopover             |            |     ❌         |      ✅    |      ❌                |    ❌   |
-| **Search**                  |            |                |     ✅     |                        |         |
-| • SearchInput               |            |     ❌         |            |                        |   ❌    |
-| **Steppers**                |            |                |            |                        |         |
-| • Stepper                   |            |       ❌       |     ✅     |      ✅                |   ❌    |
-| • VerticalStepper           |            |      ❌        |     ✅     |        ✅              |     ✅  |
-| **Tables**                  |            |                |             |                        |         |
-| • DoubleEntryTable          |   ✅       |       ✅       |     ✅     |                        |   ❌    |
-| • ListTable                 |   ✅       |       ✅       |     ✅     |                        |   ❌    |
-| • SingleEntryTable          |   ✅       |        ✅      |    ✅      |                        |   ❌    |
-| **TextCopy**                |            |                |             |                        |         |
-| • TextCopy                  |            |     ❌         |    ✅      |       ✅               |    ❌   |
-| **Toolips**                 |            |                |            |                        |          |
-| • Toggletip                 |   ✅       |     ❌        |      ✅    |                        | ❌       |
-| **Typography**              |            |                |            |                        |          |
-| • Paragraph                 |   ✅       |      ❌        |     ✅     |                        |   ❌    |
-| • SupTitle                  |            |      ✅        |     ✅     |                        |   ❌    |
-| • Text                      |   ✅       |      ❌        |     ✅     |                        |  ❌     |
-| • Title                     |   ✅       |       ❌       |     ✅     |                        |    ❌   |
-| • TitleWithStroke           |   ✅       |       ❌       |     ✅     |                        |    ❌   |
-| **Uploaders**               |            |                |            |                        |          |
-| • BasicUploader             |   ✅       |      ❌        |     ✅     |                        |   ❌    |
-| • DocumentManager           |   ✅       |      ✅        |    ✅      |                        |    ❌    |
-| **Videos**                  |            |                |             |                        |         |
-| • EmbedPlayer               |   ✅       |       ✅       |   ✅       |                        |    ❌    |
-| • GifVideo                  |            |       ❌       |     ✅     |                        |   ❌     |
-| • Video                     |   ✅       |        ✅     |     ✅     |                        |     ❌    |
+| --------------------------- | :-------------: | :------------: | :-----: | :--------------------: | :-----: |
+| **A11Y**                    |                 |                |         |                        |         |
+| • VisuallyHidden            |   ✅            |  ✅            |   ✅    | ❌                    |   ❌    |
+| **Atoms**                   |                 |                |         |                        |         |
+| • Badge                     |   ✅            |       ❌       |  ✅     |    ❌                 |   ❌    |
+| • IconBadge                 |   ✅            |       ❌       |  ✅     |    ❌                 |   ❌    |
+| • Loader                    |   ✅            |       ❌       |  ✅     |    ❌                 |   ❌    |
+|•  LoaderWithParagraph       |   ✅            |       ❌       |  ✅     |    ❌                 |   ❌    |
+| • StatusWithBullet          |   ✅            |      ✅        |   ✅    |      ❌               |  ❌     |
+| • StepperIcon               |   ❌            |     ❌         |  ✅     |    ❌                 |  ❌     |
+| • Tag                       |   ✅            |     ❌         |  ✅     |    ❌                 |  ❌     |
+| **Avatar**                  |                 |                |          |                       |         |
+| • AvatarWithTextAndBadge    |   ✅            |     ❌         |   ✅    |        ❌             |   ❌    |
+| **Box**                     |                 |                |          |                       |         |
+| • DocLinkBox (LinkBox)      |                 |     ✅         |   ✅     |                       |         |
+| • InformationBox            |   ✅            |       ❌       |    ✅    |                       |     ❌  |
+| • LinkBox                   |   ✅            |       ✅       |   ✅     |                       |    ❌   |
+| **Buttons**                 |                 |                |           |                       |         |
+| • Button                    |   ✅            |        ✅      |    ✅    |                       |     ✅  |
+| • ButtonGroup               |   ✅            |    ✅          |   ✅     |                       |     ❌  |
+| • ButtonIcon                |   ✅            |       ❌       |   ✅     |                       |     ✅  |
+| • ButtonImage               |   ✅            |       ✅       |   ✅     |                       |     ❌   |
+| • ButtonQuestionMarkIcon    |                 |       ❌       |    ✅    |                       |   ❌     |
+| • CheckableButton           |   ❌            |        ✅      |     ✅    |                       |   ❌    |
+| • CloseButton               |                 |         ❌     |      ✅   |                       |    ❌   |
+| • SocialButtonIcon          |                 |        ❌      |      ✅   |                       |   ❌    |
+| • SocialButtonIconWords     |                 |        ❌      |      ✅   |                       |   ❌    |
+| • TagButton                 |   ✅            |    ✅         |      ✅    |                      |     ✅   |
+| **Cards**                   |                 |                |            |                      |          |
+| • BackerCard                |    ❌           |    ❌          |     ✅     |         ✅           |   ❌    |
+| • BackingCard               |   ✅            |      ❌        |     ✅     |                      |   ❌    |
+| • CartRewardCard            |   ✅            |      ❌        |     ✅     |                      |   ❌    |
+| • ClickableCard             |   ✅            |      ❌        |      ✅    |                      |   ❌    |
+| • CrowdfundingCard          |   ✅            |      ❌        |      ✅    |                      |     ❌  |
+| • EngagementCard            |   ❌            |        ✅      |      ✅    |          ✅          |    ❌   |
+| • EngagementCardWithImage   |    ❌           |     ❌         |       ✅   |             ✅       |  ❌     |
+| • RewardEdition             |                 |       ❌       |      ✅    |           ✅         |    ❌   |
+| • SimpleCard                |   ✅            |       ❌       |     ✅     |                      |  ❌     |
+| • TeamCard                  |   ✅            |       ❌       |       ✅   |                      |  ❌     |
+| • Triptych                  |   ✅            |       ❌       |    ✅      |                      |   ❌    |
+| • VerticalCard              |   ❌            |        ✅      |     ✅     |        ✅            |   ❌    |
+| • VerticalCardWithAction    |   ✅            |       ✅       |     ✅     |                      |    ❌   |
+| **Carousels**               |                 |                |             |                      |         |
+| • Carousel                  |   ✅            |     ❌         |   ✅       |                      |     ❌  |
+| • SimpleCarousel            |   ✅            |     ❌         |    ✅      |                      |    ❌   |
+| • NavTabCarousel            |                 |      ❌        |      ✅    |        ✅            |     ❌  |
+| **Comments**                |                 |                |             |                      |         |
+| • Comment                   |                 |        ✅      |    ✅      |      ✅              |    ❌   |
+| • Form                      |                 |        ✅      |      ✅    |        ✅            |     ❌  |
+| **Expandable**              |                 |                |            |                       |         |
+| • Accordeon                 |   ✅            |                |   ✅       |                      |      ✅ |
+| • Details                   |                 |     ✅         |    ✅      |                      |    ❌   |
+| • ExpandBoard               |                 |                |     ✅     |         ✅           |    ❌   |
+| **Form**                    |                 |                |            |                       |         |
+| • Autocomplete              |                 |       ✅       |    ✅      |       ✅             |  ❌     |
+| • Checkox                   |                 |       ❌       |      ✅    |            ✅        |  ❌     |
+| • CheckoxSet                |   ✅            |     ❌         |     ✅     |                      |     ✅  |
+| • CreditCardForm            |                 |      ❌        |      ✅    |                       |    ❌  |
+| • DatePicker                |                 |                |            |                       |         |
+| • DropdowPhoneSelect        |                 |       ❌       |    ✅     |                        |   ❌    |
+| • DropdownSelect            |   ✅            |       ❌       |    ✅     |                        |   ✅    |
+| • DropdownSelectWithInput   |   ✅            |      ❌        |    ✅     |                        |  ❌     |
+| • Field                     |                 |       ❌       |    ✅     |                        |         |
+| • FormActions               |   ✅            |      ❌        |   ✅      |                        |  ❌     |
+| • Label                     |   ✅            |     ❌         |   ✅      |                        |   ❌    |
+| • LocationInput             |   ✅            |     ❌         |   ✅      |                        |    ✅   |
+| • PasswordInput             |   ✅            |      ✅        |   ✅      |                        |      ❌ |
+| • PillNumberInput           |   ✅            |     ✅         |   ✅      |                        |    ❌   |
+| • RadioButton               |   ✅            |     ✅         |  ✅       |                        |    ✅   |
+| • RadioButtonSet            |   ✅            |     ❌         |    ✅     |                        |    ✅   |
+| • RangeSlider               |   ✅            |      ❌        |    ✅     |                        |    ❌   |
+| • StadaloneRangeDatePicker  |   ✅            |      ✅        |   ✅      |                        |    ❌   |
+| • TextInput                 |   ✅            |      ✅        |    ✅     |                        |    ✅   |
+| • TextInputWithButton       |   ✅            |       ✅       |    ✅     |                        |    ❌   |
+| • TextInputWithIcon         |   ✅            |       ✅       |     ✅    |                        |    ❌   |
+| • TextInputWithLimit        |   ✅            |       ✅       |    ✅     |                        |    ❌   |
+| • TextInputWithLimit        |   ✅            |       ✅       |    ✅     |                        |         |
+| • TextInputWithUnit         |   ✅            |      ✅        |     ✅    |                        |    ✅   |
+| • ToggleSwitch               |   ❌            |     ❌         |    ✅     |       ✅               |    ❌   |
+| **Grid**                    |                 |                |            |                        |         |
+| • AdaptableGrid             |                 |    ✅          |    ✅     |        ✅              |    ❌   |
+| • Container                 |                 |     ❌         |    ✅     |           ✅           |    ❌   |
+| • Grid                      |   ✅            |      ❌        |  ✅       |                        |   ❌    |
+| • Row                       |   ✅            |      ❌        |   ✅      |                        |   ❌    |
+| • ScrollableContainer       |                 |      ❌        |     ✅    |         ✅             |  ❌     |
+| • SideGrid                  |   ✅            |      ❌        |    ✅     |                        |    ❌   |
+| • StickyContainer           |   ✅            |       ✅       |   ✅      |                        |    ❌   |
+| **Heroes**                  |                 |                |            |                        |         |
+| • Hero                      |   ✅            |     ❌         |    ✅     |                        |   ❌    |
+| **Icons**                   |                 |                |            |                       |          |
+| • ArrowIcon                 |                 |     ❌         |    ✅     |                        |   ❌    |
+| • BurgerIcon                |                 |    ❌          |    ✅     |        ✅              |   ❌    |
+| • FilterIcon                |                 |     ❌         |    ✅     |                        |   ❌    |
+| • LongArrowIcon             |                 |                |    ✅     |                        |    ❌   |
+| **Images**                  |                 |                |           |                        |         |
+| • Cropper                   |   ✅            |      ❌        |     ✅    |                        |   ❌    |
+| **Layout**                  |                 |                |            |                        |         |
+| • ArrowContainer            |   ✅            |        ✅      |    ✅     |                        |    ❌   |
+| • DashboardLayout           |   ✅            |        ❌      |      ✅   |                        |  ❌     |
+| • HorizontalStroke          |   ✅            |         ✅     |    ✅     |                        |    ❌   |
+| • IconContainer             |   ❌            |       ❌       |      ✅   |            ✅          |  ❌     |
+| • Line                      |   ✅            |     ❌         |     ✅    |                        |    ❌   |
+| • Marger                    |                 |                |     ✅     |                        |    ❌   |
+| • ResponsiveIframeContainer |   ✅            |     ❌         |    ✅      |                        |  ❌    |
+| • Separator                 |   ✅            |      ❌        |    ✅      |                        |   ❌   |
+| • SideLayout                |   ✅            |      ❌        |     ✅     |                        |   ❌   |
+| • VerticalStroke            |   ✅            |      ❌        |     ✅     |                        |   ❌   |
+| **Lines**                   |                 |                |             |                       |         |
+| • InfoLine                  |  ❌             |       ✅       |     ✅     |      ✅                |   ❌   |
+| **Links**                   |                 |                |             |                        |        |
+| • LinkList                  |   ✅            |      ✅        |    ✅      |                        |    ❌  |
+| **Lists**                   |                 |                |             |                        |        |
+| • BulletList                |   ✅            |       ✅       |    ✅      |                        |   ❌    |
+| • CheckList                 |   ✅            |       ✅       |     ✅     |                        |   ❌    |
+| • HorizontalTimeline        |   ✅            |       ❌       |     ✅     |                        |   ❌    |
+| • IconList                  |    ❌           |         ✅     |     ✅     |    ✅                  |   ❌    |
+| • List                      |    ❌           |      ❌        |      ✅    |       ✅               |   ❌    |
+| • Timeline                  |   ✅            |      ❌        |    ✅      |                        |   ❌    |
+| **Meterts**                 |                 |                 |            |                        |         |
+| • CounterBlock              |    ❌           |      ❌        |   ✅       |     ✅                 |   ❌    |
+| • Progress                  |   ✅            |     ❌         |    ✅      |                        |     ✅  |
+| • ProgressRing              |                 |     ❌         |      ✅    |                        |     ✅  |
+| **Modals**                  |                 |                |             |                        |         |
+| • Modal                     |   ✅            |      ❌        |    ✅      |                        |  ❌     |
+| • Next                      |   ✅            |      ❌        |     ✅     |                        |    ✅   |
+| • Overlay                   |                 |       ❌       |     ✅     |                        |    ❌   |
+| **Navigation**              |                 |                |             |                        |         |
+| • HeaderNav                 |   ✅            |       ❌       |    ✅      |                        |   ❌    |
+| • NavBar                    |   ✅            |       ✅       |   ✅       |                        |     ❌  |
+| • Pagination                |   ✅            |        ✅      |     ✅     |                        |     ❌  |
+| **Notifications**           |                 |                |             |                        |         |
+| • Alert                     |   ✅            |      ❌        |    ✅      |                        |   ❌    |
+| **Popovers**                |                 |                |             |                        |         |
+| • SimplePopover             |                 |     ❌         |      ✅    |      ❌                |    ❌   |
+| **Search**                  |                 |                |     ✅     |                        |         |
+| • SearchInput               |                 |     ❌         |            |                        |   ❌    |
+| **Steppers**                |                 |                |            |                        |         |
+| • Stepper                   |                 |       ❌       |     ✅     |      ✅                |   ❌    |
+| • VerticalProgress          |     ✅          |      ✅        |     ✅     |                        |    ❌   |
+| • VerticalStepper           |     ✅          |      ❌        |     ✅     |                        |     ✅  |
+| **Tables**                  |                 |                |             |                        |         |
+| • DoubleEntryTable          |   ✅            |       ✅       |     ✅     |                        |   ❌    |
+| • ListTable                 |   ✅            |       ✅       |     ✅     |                        |   ❌    |
+| • SingleEntryTable          |   ✅            |        ✅      |    ✅      |                        |   ❌    |
+| **TextCopy**                |                 |                |             |                        |         |
+| • TextCopy                  |                 |     ❌         |    ✅      |       ✅               |    ❌   |
+| **Toolips**                 |                 |                |            |                        |          |
+| • Toggletip                 |   ✅            |     ❌        |      ✅    |                        | ❌       |
+| **Typography**              |                 |                |            |                        |          |
+| • Paragraph                 |   ✅            |      ❌        |     ✅     |                        |   ❌    |
+| • SupTitle                  |                 |      ✅        |     ✅     |                        |   ❌    |
+| • Text                      |   ✅            |      ❌        |     ✅     |                        |  ❌     |
+| • Title                     |   ✅            |       ❌       |     ✅     |                        |    ❌   |
+| • TitleWithStroke           |   ✅            |       ❌       |     ✅     |                        |    ❌   |
+| **Uploaders**               |                 |                |            |                        |          |
+| • BasicUploader             |   ✅            |      ❌        |     ✅     |                        |   ❌    |
+| • DocumentManager           |   ✅            |      ✅        |    ✅      |                        |    ❌    |
+| **Videos**                  |                 |                |             |                        |         |
+| • EmbedPlayer               |   ✅            |       ✅       |   ✅       |                        |    ❌    |
+| • GifVideo                  |                 |       ❌       |     ✅     |                        |   ❌     |
+| • Video                     |   ✅            |        ✅     |     ✅     |                        |     ❌    |
       
 
 **Legend**
