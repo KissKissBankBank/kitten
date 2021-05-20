@@ -12,7 +12,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
       role="tablist"
     >
       <li
-        className="sc-htpNat gCSuHe k-VerticalProgress--item"
+        className="sc-htpNat epuTkg k-VerticalProgress--item"
       >
         <div
           className="k-VerticalProgress--itemContainer"
@@ -54,7 +54,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </div>
       </li>
       <li
-        className="sc-htpNat gCSuHe k-VerticalProgress--item"
+        className="sc-htpNat epuTkg k-VerticalProgress--item"
       >
         <div
           className="k-VerticalProgress--itemContainer"
@@ -89,7 +89,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </div>
       </li>
       <li
-        className="sc-htpNat gCSuHe k-VerticalProgress--item"
+        className="sc-htpNat epuTkg k-VerticalProgress--item"
       >
         <div
           className="k-VerticalProgress--itemContainer"
@@ -131,7 +131,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </div>
       </li>
       <li
-        className="sc-htpNat gCSuHe k-VerticalProgress--item"
+        className="sc-htpNat epuTkg k-VerticalProgress--item"
       >
         <div
           className="k-VerticalProgress--itemContainer"
