@@ -122,7 +122,6 @@ Status.propTypes = {
   valid: PropTypes.bool,
   disabled: PropTypes.bool,
   progressTitle: PropTypes.string,
-
 }
 
 Status.defaultProps = {

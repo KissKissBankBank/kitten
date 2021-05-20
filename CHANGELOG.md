@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `VerticalProgress`: New component.
 - Fix: `Modal/Next`: Fix `Modal.Button` style when alone inside a `fullSize` Action.
 - Fix: `Dropdown`: Add default value for `onBlur` prop (`() => {}`).
 - Feature: `LinkBox`:
