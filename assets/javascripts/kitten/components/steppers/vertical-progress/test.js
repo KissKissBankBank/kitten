@@ -10,10 +10,26 @@ describe('<VerticalStepper />', () => {
       component = renderer
         .create(
           <VerticalProgress>
-            <VerticalProgress.Step actions progressTitle="Brouillon" />
-            <VerticalProgress.Step waiting progressTitle="En cours de vérification" />
-            <VerticalProgress.Step valid progressTitle="Prêt à être partagé" />
-            <VerticalProgress.Step disabled progressTitle="Partager avec mon coach" />
+            <VerticalProgress.Step 
+              statusType="actions"
+              progressTitle="Brouillon"
+            />
+            <VerticalProgress.Step
+              statusType="waiting"
+              progressTitle="En cours de vérification"
+            />
+            <VerticalProgress.Step
+              statusType="publish"
+              progressTitle="Partagé à mon coach"
+            />
+            <VerticalProgress.Step
+              statusType="valid"
+              progressTitle="Prêt à être partagé"
+            />
+            <VerticalProgress.Step
+              statusType="disabled"
+              progressTitle="Partager avec mon coach"
+            />
           </VerticalProgress>
         )
         .toJSON()

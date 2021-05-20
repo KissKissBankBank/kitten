@@ -2,160 +2,171 @@
 
 exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb hnPHNR"
+  className="sc-htpNat gvafPJ"
 >
   <nav
     className="k-VerticalProgress"
   >
     <ul
-      className="k-VerticalProgress--list"
+      className="k-VerticalProgress__list"
       role="tablist"
     >
       <li
-        className="sc-htpNat epuTkg k-VerticalProgress--item"
+        className="sc-bwzfXH bihtVf k-VerticalProgress__item"
       >
         <div
-          className="k-VerticalProgress--itemContainer"
+          className="sc-bdVaJa bCgAFt k-VerticalProgress__status k-VerticalProgress__status--actions"
         >
-          <div
-            className="sc-bwzfXH lcttgh"
+          <span
+            className="k-VerticalProgress__icon"
           >
-            <span
-              className="k-VerticalProgress--status k-VerticalProgress--status__actions"
-            >
-              <svg
-                className=""
-                fill="#fff"
-                height="10"
-                style={
-                  Object {
-                    "transform": "rotate(180deg)",
-                  }
+            <svg
+              className=""
+              fill="#fff"
+              height="10"
+              style={
+                Object {
+                  "transform": "rotate(180deg)",
                 }
-                viewBox="0 0 12 10"
-                width="12"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                
-                <path
-                  d="M4.243.757l1.414 1.415-1.829 1.827L12 4v2H3.828l1.829 1.828-1.414 1.415L0 5 4.243.757z"
-                />
-              </svg>
-            </span>
-            <p
-              className="sc-bdVaJa kPMTgu k-VerticalProgress--title k-VerticalProgress--title__actions"
+              }
+              viewBox="0 0 12 10"
+              width="12"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              Brouillon
-            </p>
-          </div>
-          <div
-            className="k-VerticalProgress--step__content"
-          />
-        </div>
-      </li>
-      <li
-        className="sc-htpNat epuTkg k-VerticalProgress--item"
-      >
-        <div
-          className="k-VerticalProgress--itemContainer"
-        >
-          <div
-            className="sc-bwzfXH lcttgh"
-          >
-            <span
-              className="k-VerticalProgress--status k-VerticalProgress--status__waiting"
-            >
-              <svg
-                height="12"
-                viewBox="0 0 7 12"
-                width="10"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.5002-.0003v3.107l-2.263 2.643 2.263 2.644v3.106h-6.5v-3.106l2.263-2.644-2.263-2.643v-3.107h6.5zm-3.25 6.904l-1.75 2.044v1.052l.422-.001.974-.974a.5011.5011 0 01.638-.058l.069.058.974.974.423.001v-1.051l-1.75-2.045zm1.75-5.404h-3.5v1.052l.676.789c.01-.001.02-.001.031-.001h2.053l.061.004.679-.793v-1.051z"
-                  fill="#fff"
-                />
-              </svg>
-            </span>
-            <p
-              className="sc-bdVaJa kPMTgu k-VerticalProgress--title k-VerticalProgress--title__waiting"
-            >
-              En cours de vérification
-            </p>
-          </div>
-          <div
-            className="k-VerticalProgress--step__content"
-          />
-        </div>
-      </li>
-      <li
-        className="sc-htpNat epuTkg k-VerticalProgress--item"
-      >
-        <div
-          className="k-VerticalProgress--itemContainer"
-        >
-          <div
-            className="sc-bwzfXH lcttgh"
-          >
-            <span
-              className="k-VerticalProgress--status k-VerticalProgress--status__valid"
-            >
-              <svg
-                className=""
-                fill="#fff"
-                height="10"
-                style={
-                  Object {
-                    "transform": "rotate(180deg)",
-                  }
-                }
-                viewBox="0 0 12 10"
-                width="12"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                
-                <path
-                  d="M4.243.757l1.414 1.415-1.829 1.827L12 4v2H3.828l1.829 1.828-1.414 1.415L0 5 4.243.757z"
-                />
-              </svg>
-            </span>
-            <p
-              className="sc-bdVaJa kPMTgu k-VerticalProgress--title k-VerticalProgress--title__valid"
-            >
-              Prêt à être partagé
-            </p>
-          </div>
-          <div
-            className="k-VerticalProgress--step__content"
-          />
-        </div>
-      </li>
-      <li
-        className="sc-htpNat epuTkg k-VerticalProgress--item"
-      >
-        <div
-          className="k-VerticalProgress--itemContainer"
-        >
-          <div
-            className="sc-bwzfXH lcttgh"
-          >
-            <span
-              className="k-VerticalProgress--status k-VerticalProgress--status__disabled"
-            >
-              <span
-                color="#fff"
+              
+              <path
+                d="M4.243.757l1.414 1.415-1.829 1.827L12 4v2H3.828l1.829 1.828-1.414 1.415L0 5 4.243.757z"
               />
-            </span>
-            <p
-              className="sc-bdVaJa kPMTgu k-VerticalProgress--title k-VerticalProgress--title__disabled"
-            >
-              Partager avec mon coach
-            </p>
-          </div>
-          <div
-            className="k-VerticalProgress--step__content"
-          />
+            </svg>
+          </span>
+          <p
+            className="k-VerticalProgress__title"
+          >
+            Brouillon
+          </p>
         </div>
+        <div
+          className="k-VerticalProgress__step--content"
+        />
+      </li>
+      <li
+        className="sc-bwzfXH bihtVf k-VerticalProgress__item"
+      >
+        <div
+          className="sc-bdVaJa bCgAFt k-VerticalProgress__status k-VerticalProgress__status--waiting"
+        >
+          <span
+            className="k-VerticalProgress__icon"
+          >
+            <svg
+              height="12"
+              viewBox="0 0 7 12"
+              width="10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.5002-.0003v3.107l-2.263 2.643 2.263 2.644v3.106h-6.5v-3.106l2.263-2.644-2.263-2.643v-3.107h6.5zm-3.25 6.904l-1.75 2.044v1.052l.422-.001.974-.974a.5011.5011 0 01.638-.058l.069.058.974.974.423.001v-1.051l-1.75-2.045zm1.75-5.404h-3.5v1.052l.676.789c.01-.001.02-.001.031-.001h2.053l.061.004.679-.793v-1.051z"
+                fill="#fff"
+              />
+            </svg>
+          </span>
+          <p
+            className="k-VerticalProgress__title"
+          >
+            En cours de vérification
+          </p>
+        </div>
+        <div
+          className="k-VerticalProgress__step--content"
+        />
+      </li>
+      <li
+        className="sc-bwzfXH bihtVf k-VerticalProgress__item"
+      >
+        <div
+          className="sc-bdVaJa bCgAFt k-VerticalProgress__status k-VerticalProgress__status--publish"
+        >
+          <span
+            className="k-VerticalProgress__icon"
+          >
+            <svg
+              fill="#fff"
+              height="8"
+              viewBox="0 0 11 8"
+              width="10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
+              />
+            </svg>
+          </span>
+          <p
+            className="k-VerticalProgress__title"
+          >
+            Partagé à mon coach
+          </p>
+        </div>
+        <div
+          className="k-VerticalProgress__step--content"
+        />
+      </li>
+      <li
+        className="sc-bwzfXH bihtVf k-VerticalProgress__item"
+      >
+        <div
+          className="sc-bdVaJa bCgAFt k-VerticalProgress__status k-VerticalProgress__status--valid"
+        >
+          <span
+            className="k-VerticalProgress__icon"
+          >
+            <svg
+              className=""
+              fill="#fff"
+              height="10"
+              style={
+                Object {
+                  "transform": "rotate(180deg)",
+                }
+              }
+              viewBox="0 0 12 10"
+              width="12"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              
+              <path
+                d="M4.243.757l1.414 1.415-1.829 1.827L12 4v2H3.828l1.829 1.828-1.414 1.415L0 5 4.243.757z"
+              />
+            </svg>
+          </span>
+          <p
+            className="k-VerticalProgress__title"
+          >
+            Prêt à être partagé
+          </p>
+        </div>
+        <div
+          className="k-VerticalProgress__step--content"
+        />
+      </li>
+      <li
+        className="sc-bwzfXH bihtVf k-VerticalProgress__item"
+      >
+        <div
+          className="sc-bdVaJa bCgAFt k-VerticalProgress__status k-VerticalProgress__status--disabled"
+        >
+          <span
+            className="k-VerticalProgress__icon"
+          />
+          <p
+            className="k-VerticalProgress__title"
+          >
+            Partager avec mon coach
+          </p>
+        </div>
+        <div
+          className="k-VerticalProgress__step--content"
+        />
       </li>
     </ul>
   </nav>

@@ -19,7 +19,7 @@ const StyledContainer = styled.div`
     padding: 0;
   }
 
-  .k-VerticalProgress--list {
+  .k-VerticalProgress__list {
     margin: 0;
     padding: 0;
 
@@ -33,7 +33,7 @@ const StyledContainer = styled.div`
       z-index: -1;
 
       content: '';
-      border-left: ${pxToRem(2)} dashed ${COLORS.line1};
+      border-left: ${pxToRem(2)} dotted ${COLORS.line1};
     }
   }
 `
@@ -44,7 +44,7 @@ export const VerticalProgress = ({ children, ...props }) => {
       <nav className="k-VerticalProgress">
         <ul
           role="tablist"
-          className="k-VerticalProgress--list"
+          className="k-VerticalProgress__list"
           {...props}
         >
           {children}

@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
@@ -7,6 +6,9 @@ import { Status } from './status'
 
 const StyledItem = styled.li`
   margin: ${pxToRem(15)} 0 ${pxToRem(25)} 0;
+  display: flex;
+  flex-direction: column;
+  padding-right: ${pxToRem(10)};
 
   &:first-of-type {
     margin-top: 0;
@@ -25,13 +27,7 @@ const StyledItem = styled.li`
     }
   }
 
-  .k-VerticalProgress--itemContainer {
-    display: inline-flex;
-    flex-wrap: wrap;
-    padding-right: ${pxToRem(10)};
-  }
-
-  .k-VerticalProgress--step__content {
+  .k-VerticalProgress__step--content {
     padding-left:  ${pxToRem(50)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
@@ -41,49 +37,22 @@ const StyledItem = styled.li`
 `
 
 export const Step = ({
-  actions,
-  waiting,
-  publish,
-  valid,
-  disabled,
+  statusType,
   statusProps,
   progressTitle,
   children,
   ...other
 }) => {
   return (
-    <StyledItem className="k-VerticalProgress--item">
-      <div className="k-VerticalProgress--itemContainer" {...other}>
-
-        <Status
-          actions={actions}
-          waiting={waiting}
-          publish={publish}
-          valid={valid}
-          disabled={disabled}
-          progressTitle={progressTitle}
-          {...statusProps}
-        />
-        <div className="k-VerticalProgress--step__content">
-          {children}
-        </div>
+    <StyledItem className="k-VerticalProgress__item" {...other}>
+      <Status
+        statusType={statusType}
+        progressTitle={progressTitle}
+        {...statusProps}
+      />
+      <div className="k-VerticalProgress__step--content">
+        {children}
       </div>
     </StyledItem>
   )
-}
-
-Step.protTypes = {
-  actions: PropTypes.bool,
-  waiting: PropTypes.bool,
-  publish: PropTypes.bool,
-  valid: PropTypes.bool,
-  disabled: PropTypes.bool,
-}
-
-Step.defaultProps = {
-  actions: false,
-  waiting: false,
-  publish: false,
-  valid: false,
-  disabled: false,
 }
