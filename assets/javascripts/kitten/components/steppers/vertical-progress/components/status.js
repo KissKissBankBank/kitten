@@ -8,7 +8,6 @@ import { CheckedIcon } from '../../../../components/icons/checked-icon'
 import { HourglassIcon } from '../../../../components/icons/hourglass-icon'
 import classNames from 'classnames'
 import { Title } from './title'
-import { STATUS_CLASSNAME } from '../index'
 
 const STATUS_SIZE = 30
 
@@ -26,6 +25,7 @@ const StyledWrapper = styled.div`
     width: ${pxToRem(STATUS_SIZE)};
     height: ${pxToRem(STATUS_SIZE)};
     border-radius: ${pxToRem(STATUS_SIZE)};
+    border: ${pxToRem(2)} solid ${COLORS.background1};
     box-sizing: border-box;
     margin-right: ${pxToRem(20)};
 
@@ -33,15 +33,23 @@ const StyledWrapper = styled.div`
 
     &.k-VerticalProgress--status__actions {
       background-color: ${COLORS.orange};
+      border-color: ${COLORS.orange};
     }
     &.k-VerticalProgress--status__waiting {
       background-color: ${COLORS.font3};
+      border-color: ${COLORS.font3};
     }
     &.k-VerticalProgress--status__publish {
       background-color: ${COLORS.line3};
+      border-color: ${COLORS.line3};
     }
     &.k-VerticalProgress--status__valid {
       background-color: ${COLORS.primary1};
+      border-color: ${COLORS.primary1};
+    }
+    &.k-VerticalProgress--status__disabled {
+      border-color: ${COLORS.line1};
+      background-color: ${COLORS.background1};
     }
   }
 `
@@ -53,7 +61,8 @@ export class Status extends Component {
       waiting,
       publish,
       valid,
-      title,
+      disabled,
+      state,
       titleProps,
       ...other
     } = this.props
@@ -63,13 +72,13 @@ export class Status extends Component {
         <span
           {...other}
           className={classNames(
-            STATUS_CLASSNAME,
             'k-VerticalProgress--status',
             {
               'k-VerticalProgress--status__actions': actions,
               'k-VerticalProgress--status__waiting': waiting,
               'k-VerticalProgress--status__publish': publish,
               'k-VerticalProgress--status__valid': valid,
+              'k-VerticalProgress--status__disabled': disabled,
             },
           )}
         >
@@ -80,16 +89,17 @@ export class Status extends Component {
           waiting={waiting}
           publish={publish}
           valid={valid}
+          disabled={disabled}
           {...titleProps}
         >
-          Toto
+          toto
         </Title>
       </StyledWrapper>
     )
   }
 
   iconByStatus = () => {
-    const { actions, waiting, publish, valid } = this.props
+    const { actions, waiting, publish, valid, disabled } = this.props
 
     if (actions) return <LongArrowIcon color={COLORS.background1} direction="right" />
 
@@ -98,6 +108,8 @@ export class Status extends Component {
     if (publish) return <CheckedIcon width="10" title={null} />
 
     if (valid) return <LongArrowIcon color={COLORS.background1} direction="right" />
+  
+    if (disabled) return <span color={COLORS.background1}  />
 
     return null
   }
@@ -108,7 +120,8 @@ Status.propTypes = {
   waiting: PropTypes.bool,
   publish: PropTypes.bool,
   valid: PropTypes.bool,
-  title: PropTypes.string,
+  disabled: PropTypes.bool,
+  state: PropTypes.string,
 
 }
 
@@ -117,4 +130,6 @@ Status.defaultProps = {
   waiting: false,
   publish: false,
   valid: false,
+  disabled: false,
+  state: '',
 }

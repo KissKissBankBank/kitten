@@ -3,16 +3,16 @@ import styled from 'styled-components'
 import { Step } from './components/step'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
-import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 
-// export const STEP_CLASSNAME = 'VerticalProgress--step'
-export const STATUS_CLASSNAME = 'VerticalProgress--status'
-
 const StyledContainer = styled.div`
-   border: ${pxToRem(2)} solid ${COLORS.line1};
-   padding: ${pxToRem(30)};
-   border-radius: ${pxToRem(8)};
+  border: ${pxToRem(2)} solid ${COLORS.line1};
+  padding: ${pxToRem(15)};
+  border-radius: ${pxToRem(8)};
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    padding: ${pxToRem(30)};
+  }
 
   .k-VerticalProgress {
     position: relative;
