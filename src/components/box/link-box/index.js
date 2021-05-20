@@ -21,11 +21,17 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _arrowIcon = require("../../../components/icons/arrow-icon");
 
+var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
+
 var LinkBox = function LinkBox(_ref) {
   var className = _ref.className,
       href = _ref.href,
       isExternal = _ref.isExternal,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "href", "isExternal"]);
+      variant = _ref.variant,
+      backgroundColor = _ref.backgroundColor,
+      textColor = _ref.textColor,
+      style = _ref.style,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "href", "isExternal", "variant", "backgroundColor", "textColor", "style"]);
   var target = isExternal ? {
     target: '_blank',
     rel: 'noopener'
@@ -34,7 +40,11 @@ var LinkBox = function LinkBox(_ref) {
     href: href,
     className: className
   }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "k-LinkBox__link"
+    className: (0, _classnames.default)('k-LinkBox__link', className, "k-LinkBox__link--".concat(variant)),
+    style: (0, _extends2.default)({}, style, {
+      '--LinkBox-background-color': backgroundColor,
+      '--LinkBox-text-color': textColor
+    })
   }, props.children, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-LinkBox__arrow"
   }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
@@ -66,9 +76,15 @@ LinkBox.Text = function (_ref3) {
 LinkBox.propTypes = {
   href: _propTypes.default.string,
   isExternal: _propTypes.default.bool,
-  linkProps: _propTypes.default.object
+  linkProps: _propTypes.default.object,
+  variant: _propTypes.default.oneOf(['andromeda', 'orion']),
+  backgroundColor: _propTypes.default.string,
+  textColor: _propTypes.default.string
 };
 LinkBox.defaultProps = {
   href: '#',
-  isExternal: false
+  isExternal: false,
+  variant: 'andromeda',
+  backgroundColor: _colorsConfig.default.background1,
+  textColor: null
 };

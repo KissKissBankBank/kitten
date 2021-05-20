@@ -211,6 +211,7 @@ DropdownSelect.defaultProps = {
     return "".concat(item, " is now selected.");
   },
   onChange: function onChange() {},
+  onBlur: function onBlur() {},
   onInputChange: function onInputChange() {},
   onMenuClose: function onMenuClose() {},
   onMenuOpen: function onMenuOpen() {},
@@ -232,6 +233,7 @@ DropdownSelect.propTypes = {
   a11yStatusValid: _propTypes.default.string,
   a11ySelectionMessageDisplayer: _propTypes.default.func,
   onChange: _propTypes.default.func,
+  onBlur: _propTypes.default.func,
   onInputChange: _propTypes.default.func,
   onMenuClose: _propTypes.default.func,
   onMenuOpen: _propTypes.default.func,
