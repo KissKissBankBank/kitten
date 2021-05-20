@@ -74,6 +74,8 @@ export const Default = () => {
           </LinkBox>
         </VerticalProgress.Step>
         
+        <VerticalProgress.Step publish progressTitle="Partagé à mon coach" />
+          
         <VerticalProgress.Step waiting progressTitle="En cours de vérification">
           <div className="k-u-margin-top-singleHalf">
             <Text weight="light" size="tiny" lineHeight="normal">
