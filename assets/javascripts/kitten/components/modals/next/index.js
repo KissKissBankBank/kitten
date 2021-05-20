@@ -279,12 +279,20 @@ const GlobalStyle = createGlobalStyle`
         margin-left: calc(-1 * var(--Modal-contentMargin) * ${oneGridColXl});
         margin-right: calc(-1 * var(--Modal-contentMargin) * ${oneGridColXl});
       }
+
+      .k-Button--orion:first-child:last-child {
+        border-radius: 0;
+      }
     }
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
       .k-ModalNext__actions.k-ModalNext__actions--fullSizeOnMobile {
         margin-left: -${pxToRem(CONTAINER_PADDING_THIN)};
         margin-right: -${pxToRem(CONTAINER_PADDING_THIN)};
         margin-bottom: 0;
+
+        .k-Button--orion:first-child:last-child {
+          border-radius: 0;
+        }
       }
     }
 
