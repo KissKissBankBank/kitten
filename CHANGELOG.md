@@ -4,12 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `VerticalProgress`: New component.
-- Fix: `Modal/Next`: Fix `Modal.Button` style when alone inside a `fullSize` Action.
-- Fix: `Dropdown`: Add default value for `onBlur` prop (`() => {}`).
-- Feature: `LinkBox`:
+## [3.13.0] - 2021-05-20
+
+Features:
+
+- `VerticalProgress`: New component.
+- `LinkBox`:
   - Add `orion` variant.
   - Add `backgroundColor` and `textColor` prop to `Background` and `Text` component.
+
+Fixes:
+
+- `Modal/Next`: Fix `Modal.Button` style when alone inside a `fullSize` Action.
+- `Dropdown`: Add default value for `onBlur` prop (`() => {}`).
 
 ## [3.12.0] - 2021-05-18
 
