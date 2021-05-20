@@ -203,6 +203,7 @@ export { SimplePopover } from './components/popovers/simple-popover'
 export { SearchInput } from './components/search/search-input'
 
 // Steppers
+export { VerticalProgress } from './components/steppers/vertical-progress'
 export { VerticalStepper } from './components/steppers/vertical-stepper'
 export { Stepper } from './components/steppers/stepper'
 
