@@ -893,6 +893,12 @@ Object.defineProperty(exports, "SearchInput", {
     return _searchInput.SearchInput;
   }
 });
+Object.defineProperty(exports, "VerticalProgress", {
+  enumerable: true,
+  get: function get() {
+    return _verticalProgress.VerticalProgress;
+  }
+});
 Object.defineProperty(exports, "VerticalStepper", {
   enumerable: true,
   get: function get() {
@@ -2159,6 +2165,8 @@ var _alert = require("./components/notifications/alert");
 var _simplePopover = require("./components/popovers/simple-popover");
 
 var _searchInput = require("./components/search/search-input");
+
+var _verticalProgress = require("./components/steppers/vertical-progress");
 
 var _verticalStepper = require("./components/steppers/vertical-stepper");
 
