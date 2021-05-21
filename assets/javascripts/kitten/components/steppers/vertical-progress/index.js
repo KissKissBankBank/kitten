@@ -30,7 +30,6 @@ const StyledContainer = styled.div`
       top: 0;
       bottom: 0;
       left: ${pxToRem(14)};
-      z-index: -1;
 
       content: '';
       border-left: ${pxToRem(2)} dotted ${COLORS.line1};

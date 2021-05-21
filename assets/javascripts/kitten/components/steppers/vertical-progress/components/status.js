@@ -14,6 +14,7 @@ const STATUS_SIZE = 30
 const StyledWrapper = styled.div`
   display: flex;
   flex: 1;
+  z-index: 0;
 
 
   &.k-VerticalProgress__status--actions {
