@@ -85,6 +85,7 @@ Item.propTypes = {
     'copper',
     'checked',
     'boron',
+    'neon',
   ]),
   size: PropTypes.oneOf(['normal', 'tiny', 'big']),
   as: deprecated(PropTypes.string, 'Please use `tag` instead.'),
