@@ -180,7 +180,7 @@ Button.propTypes = {
   icon: _propTypes.default.bool,
   rounded: _propTypes.default.bool,
   size: _propTypes.default.oneOf(['nano', 'micro', 'tiny', 'big', 'huge', 'giant', 'regular']),
-  modifier: _propTypes.default.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'boron', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube', 'social_pinterest']),
+  modifier: _propTypes.default.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'boron', 'neon', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube', 'social_pinterest']),
   variant: _propTypes.default.oneOf(['andromeda', 'orion'])
 };
 Button.defaultProps = {
