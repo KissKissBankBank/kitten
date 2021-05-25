@@ -10,6 +10,7 @@ class ProgressBar extends PureComponent {
     progress: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
     progressColor: PropTypes.string,
     loading: PropTypes.bool,
+    progressLabel: PropTypes.string.isRequired,
   }
 
   static defaultProps = {
@@ -19,7 +20,7 @@ class ProgressBar extends PureComponent {
   }
 
   render() {
-    const { progress, progressColor, loading } = this.props
+    const { progress, progressColor, loading, progressLabel } = this.props
 
     if (progress === false) return null
 
@@ -36,6 +37,7 @@ class ProgressBar extends PureComponent {
           rampProps={{
             style: { height: '4px' },
           }}
+          aria-label={progressLabel}
         />
 
         <Text

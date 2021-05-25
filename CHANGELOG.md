@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `CrowdfundingCard`: Add `progressLabel` prop.
+
 ## [3.14.0] - 2021-05-25
 
 Features:
@@ -16,7 +18,7 @@ Fix:
 - `VerticalProgress`: Fix `z-index` value.
 
 ## [3.13.1] - 2021-05-20
- 
+
 Fixes:
 
 - `VerticalProgress` : Export component.
