@@ -170,7 +170,7 @@ const HeaderNav = ({
             stickyProps?.className,
           )}
         >
-          <nav ref={headerRef} role="banner" id={id} className="k-HeaderNav">
+          <nav ref={headerRef} id={id} className="k-HeaderNav">
             <QuickAccessLink
               className="quickAccessLink"
               {...quickAccessProps}

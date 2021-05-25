@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `HeaderNav`: Fix accessibility error.
 - Feature: `CrowdfundingCard`: Add `progressLabel` prop.
 
 ## [3.14.0] - 2021-05-25
