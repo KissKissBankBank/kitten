@@ -82,11 +82,11 @@ export const modifierStyles = modifier => {
       borderColor = COLORS.orange
       backgroundColor = COLORS.orange
       color = COLORS.background1
-      hoverBorderColor = '#f57905'
-      hoverBgColor = '#f57905'
+      hoverBorderColor = COLORS.orange2
+      hoverBgColor = COLORS.orange2
       hoverColor = COLORS.background1
-      activeBorderColor = '#eb6e00'
-      activeBgColor = '#eb6e00'
+      activeBorderColor = COLORS.orange3
+      activeBgColor = COLORS.orange3
       activeColor = COLORS.background1
       break
 

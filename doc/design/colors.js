@@ -38,6 +38,8 @@ const sass = {
 
   'orange': '#ff7800',
   'orange1': 'rgba(255, 130, 15, .1)', // Orange light
+  'orange2': '#f57905', // Orange semi dark
+  'orange3': '#eb6e00', // Orange dark
 
   'red-light-mdc': '#ffebe0',
   'red-mdc': '#ff0000',
