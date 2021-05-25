@@ -4,11 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `HeaderNav`: Fix accessibility error.
 - Fix: `VerticalProgress`: Fix `z-index` value.
 - Feature: Add `neon` modifier to Button component.
 
 ## [3.13.1] - 2021-05-20
- 
+
 Fixes:
 - `VerticalProgress` : Export component.
 - `DashboardLayout`: Specify size for `DashboardLayout.Flow` content column.
