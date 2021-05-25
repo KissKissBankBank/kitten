@@ -32,6 +32,8 @@ export default {
 
   orange: '#ff7800',
   orange1: '#fff2e7', // Orange light
+  orange2: '#f57905', // Orange semi dark
+  orange3: '#eb6e00', // Orange dark
 
   warning: '#8a6d3b',
   warning2: '#fcf8e3',

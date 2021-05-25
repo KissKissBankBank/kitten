@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `orange2` and `orange3` to colors config.
 - Fix: `VerticalProgress`: Fix `z-index` value.
 - Feature: Add `neon` modifier to Button component.
 
