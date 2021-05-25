@@ -76,6 +76,18 @@ export var modifierStyles = function modifierStyles(modifier) {
       activeColor = COLORS.font2;
       break;
 
+    case 'neon':
+      borderColor = COLORS.orange;
+      backgroundColor = COLORS.orange;
+      color = COLORS.background1;
+      hoverBorderColor = '#f57905';
+      hoverBgColor = '#f57905';
+      hoverColor = COLORS.background1;
+      activeBorderColor = '#eb6e00';
+      activeBgColor = '#eb6e00';
+      activeColor = COLORS.background1;
+      break;
+
     /* Social modifiers */
 
     case 'social_facebook':

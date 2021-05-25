@@ -88,6 +88,18 @@ var modifierStyles = function modifierStyles(modifier) {
       activeColor = _colorsConfig.default.font2;
       break;
 
+    case 'neon':
+      borderColor = _colorsConfig.default.orange;
+      backgroundColor = _colorsConfig.default.orange;
+      color = _colorsConfig.default.background1;
+      hoverBorderColor = '#f57905';
+      hoverBgColor = '#f57905';
+      hoverColor = _colorsConfig.default.background1;
+      activeBorderColor = '#eb6e00';
+      activeBgColor = '#eb6e00';
+      activeColor = _colorsConfig.default.background1;
+      break;
+
     /* Social modifiers */
 
     case 'social_facebook':

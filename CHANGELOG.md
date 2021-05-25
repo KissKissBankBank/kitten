@@ -4,12 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `VerticalProgress`: Fix `z-index` value.
-- Feature: Add `neon` modifier to Button component.
+## [3.14.0] - 2021-05-25
+
+Feature:
+
+- Add `neon` modifier to Button component.
+
+Fix:
+
+- `VerticalProgress`: Fix `z-index` value.
+
 
 ## [3.13.1] - 2021-05-20
  
 Fixes:
+
 - `VerticalProgress` : Export component.
 - `DashboardLayout`: Specify size for `DashboardLayout.Flow` content column.
 
