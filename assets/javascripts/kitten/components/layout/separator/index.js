@@ -14,12 +14,10 @@ export const Separator = styled(({ darker, className, ...props }) => {
 
   return <hr className={separatorClassName} {...props} />
 })`
-  &.k-Separator {
-    margin: 0;
-    border: none;
-    background: ${COLORS.line1};
-    height: ${pxToRem(1)};
-  }
+  margin: 0;
+  border: none;
+  background: ${COLORS.line1};
+  height: ${pxToRem(1)};
 
   &.k-Separator--darker {
     background: ${COLORS.line2};
