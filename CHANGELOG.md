@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Features:
 
 - Add `orange2` and `orange3` to colors config.
-- Add `neon` modifier to Button component.
+- `Button`: Add `neon` modifier.
 
 Fix:
 
