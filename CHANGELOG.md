@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Feature: Add `neon` modifier to Button component.
+- Fix: `VerticalProgress`: Fix `z-index` value.
+- Feature: Add `neon` modifier to Button component.
 
 ## [3.13.1] - 2021-05-20
  
