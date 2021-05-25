@@ -35,6 +35,7 @@ import {
   LinkedinIcon,
   InstagramIcon,
   YoutubeIcon,
+  Alert,
 } from '../../..'
 
 const options = [
@@ -311,6 +312,12 @@ export const Default = () => {
           <span>Voir ma page projet</span>
         </Button>
       </DashboardLayout.SideFooter>
+
+      {boolean('Display Alert', false) && (
+        <DashboardLayout.Alert closeButton error>
+          Voilà une alerte
+        </DashboardLayout.Alert>
+      )}
 
       {selectedView === 'flow' && <FlowExample />}
       {selectedView === 'dashboard' && <DashExample />}
