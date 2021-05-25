@@ -4,12 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `CrowdfundingCard`: Add `progressLabel` prop.
 - Feature: Add `orange2` and `orange3` to colors config.
 - Fix: `VerticalProgress`: Fix `z-index` value.
 - Feature: Add `neon` modifier to Button component.
 
 ## [3.13.1] - 2021-05-20
- 
+
 Fixes:
 - `VerticalProgress` : Export component.
 - `DashboardLayout`: Specify size for `DashboardLayout.Flow` content column.
