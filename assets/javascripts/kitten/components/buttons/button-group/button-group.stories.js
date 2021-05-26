@@ -1,9 +1,14 @@
 import React from 'react'
-import { boolean } from '@storybook/addon-knobs'
+import { boolean, select } from '@storybook/addon-knobs'
 import { ButtonGroup } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
+
+const variantOptions = {
+  Andromeda: 'andromeda',
+  Orion: 'orion',
+}
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -16,6 +21,11 @@ const StoryContainer = ({ children }) => (
     </Grid>
   </Container>
 )
+
+export default {
+  title: 'Buttons/ButtonGroup',
+  component: ButtonGroup,
+}
 
 export const Default = () => (
   <StoryContainer>
@@ -30,4 +40,20 @@ export const Default = () => (
       <ButtonGroup.Button>Button3</ButtonGroup.Button>
     </ButtonGroup>
   </StoryContainer>
+)
+
+export const WithVariant = () => (
+  <StoryContainer>
+  <ButtonGroup 
+    variant={select('Variant', variantOptions, 'orion')}
+    aria-label="Button label"
+  >
+    <ButtonGroup.Button active>
+      Button1
+    </ButtonGroup.Button>
+    <ButtonGroup.Button active={boolean('active', false)}>
+      Button2
+    </ButtonGroup.Button>
+  </ButtonGroup>
+</StoryContainer>
 )

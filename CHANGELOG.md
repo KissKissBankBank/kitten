@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ButtonGroup` : Add `orion` variant.
 - Fix: `Separator`: Reduce specificity of the styles.
 - Fix: `HeaderNav`: Fix accessibility error.
 - Feature: `CrowdfundingCard`: Add `progressLabel` prop.
