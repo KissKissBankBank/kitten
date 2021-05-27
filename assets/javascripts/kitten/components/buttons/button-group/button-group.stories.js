@@ -22,11 +22,6 @@ const StoryContainer = ({ children }) => (
   </Container>
 )
 
-export default {
-  title: 'Buttons/ButtonGroup',
-  component: ButtonGroup,
-}
-
 export const Default = () => (
   <StoryContainer>
     <ButtonGroup aria-label="Button label">
@@ -44,16 +39,16 @@ export const Default = () => (
 
 export const WithVariant = () => (
   <StoryContainer>
-  <ButtonGroup 
-    variant={select('Variant', variantOptions, 'orion')}
-    aria-label="Button label"
-  >
-    <ButtonGroup.Button active>
-      Button1
-    </ButtonGroup.Button>
-    <ButtonGroup.Button active={boolean('active', false)}>
-      Button2
-    </ButtonGroup.Button>
-  </ButtonGroup>
-</StoryContainer>
+    <ButtonGroup 
+      variant={select('Variant', variantOptions, 'orion')}
+      aria-label="Button label"
+    >
+      <ButtonGroup.Button>
+        Button1
+      </ButtonGroup.Button>
+      <ButtonGroup.Button active={boolean('active', false)}>
+        Button2
+      </ButtonGroup.Button>
+    </ButtonGroup>
+  </StoryContainer>
 )

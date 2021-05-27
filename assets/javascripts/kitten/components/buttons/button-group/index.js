@@ -71,7 +71,6 @@ const StyledButtonGroup = styled.div`
       &:last-child {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        border-left-color: ${COLORS.primary1};
       }
     }
   }
@@ -81,23 +80,17 @@ export const ButtonGroup = ({ className, variant, ...props }) => (
   <StyledButtonGroup
     role="group"
     {...props}
-    className={
-      classNames(
-        'k-ButtonGroup',
-        className,
-        `k-ButtonGroup--${variant}`
-      )}
+    className={classNames(
+      'k-ButtonGroup',
+      className,
+      `k-ButtonGroup--${variant}`
+    )}
   />
 )
 
-const ButtonGroupButton = ({
-  className,
-  active,
-  ...props
-}) => (
+const ButtonGroupButton = ({ className, active, ...props }) => (
   <Button
     {...props}
-    modifier="hydrogen"
     className={classNames(
       'k-ButtonGroup__button',
       className, 
