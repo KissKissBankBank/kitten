@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Button`: Fix `boron` variant border color.
+- Add `line4` color to colors config & refactor.
 - Fix: `DashboardMenu`: Fix list items spacing.
 - Feature: `DropdownSelectWithInput`: Add `size` prop, defaults to `normal`, inherited by `DropdownPhoneSelect`.
 - Feature: `Icons`: Add the following icons:
