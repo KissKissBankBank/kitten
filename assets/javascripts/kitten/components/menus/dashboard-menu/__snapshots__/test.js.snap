@@ -97,6 +97,10 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   margin-bottom: 0.625rem;
 }
 
+.c0 .k-DashboardMenu__list >:not(:last-child) {
+  margin-bottom: 0.125rem;
+}
+
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item {
   display: -webkit-box;
