@@ -10,45 +10,57 @@ const variantOptions = {
   Orion: 'orion',
 }
 
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Grid>
-      <GridCol>
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
-  </Container>
+export const Default = () => (
+  <ButtonGroup aria-label="Button label">
+    <ButtonGroup.Button>Button1</ButtonGroup.Button>
+    <ButtonGroup.Button
+      modifier={boolean('active', false) ? 'helium' : 'hydrogen'}
+      active={boolean('active', false)}
+    >
+      Button2
+    </ButtonGroup.Button>
+    <ButtonGroup.Button>Button3</ButtonGroup.Button>
+  </ButtonGroup>
 )
 
-export const Default = () => (
-  <StoryContainer>
-    <ButtonGroup aria-label="Button label">
-      <ButtonGroup.Button>Button1</ButtonGroup.Button>
-      <ButtonGroup.Button
-        modifier={boolean('active', false) ? 'helium' : 'hydrogen'}
-        active={boolean('active', false)}
-      >
-        Button2
-      </ButtonGroup.Button>
-      <ButtonGroup.Button>Button3</ButtonGroup.Button>
-    </ButtonGroup>
-  </StoryContainer>
-)
+Default.decorators = [
+  Story => (
+    <Marger top="4" bottom="4">
+      <Container>
+        <Grid>
+          <GridCol>
+            <Story />
+          </GridCol>
+        </Grid>
+      </Container>
+    </Marger>
+  ),
+]
 
 export const WithVariant = () => (
-  <StoryContainer>
-    <ButtonGroup 
-      variant={select('Variant', variantOptions, 'orion')}
-      aria-label="Button label"
-    >
-      <ButtonGroup.Button>
-        Button1
-      </ButtonGroup.Button>
-      <ButtonGroup.Button active={boolean('active', false)}>
-        Button2
-      </ButtonGroup.Button>
-    </ButtonGroup>
-  </StoryContainer>
+  <ButtonGroup 
+    variant={select('Variant', variantOptions, 'orion')}
+    aria-label="Button label"
+  >
+    <ButtonGroup.Button>
+      Button1
+    </ButtonGroup.Button>
+    <ButtonGroup.Button active={boolean('active', false)}>
+      Button2
+    </ButtonGroup.Button>
+  </ButtonGroup>
 )
+
+WithVariant.decorators = [
+  Story => (
+    <Marger top="4" bottom="4">
+      <Container>
+        <Grid>
+          <GridCol>
+            <Story />
+          </GridCol>
+        </Grid>
+      </Container>
+    </Marger>
+  ),
+]

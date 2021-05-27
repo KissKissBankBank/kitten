@@ -108,5 +108,5 @@ ButtonGroup.propTypes = {
 
 ButtonGroup.defaultProps = {
   variant: 'andromeda',
-  // active: false,
+  active: false,
 }
