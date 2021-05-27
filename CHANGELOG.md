@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Icons`:
-  - Add `LockOutlineIcon`, `RefundIcon` and `ShieldCheckIcon` components.
+- Feature: `DropdownSelectWithInput`: Add `size` prop, defaults to `normal`, inherited by `DropdownPhoneSelect`.
+- Feature: `Icons`: Add the following icons:
+  - `LockOutlineIcon`
+  - `RefundIcon`
+  - `ShieldCheckIcon`
 - Feature: `DashboardLayout`: Add `Alert` subcomponent.
 - Fix: `Separator`: Reduce specificity of the styles.
 - Fix: `HeaderNav`: Fix accessibility error.
