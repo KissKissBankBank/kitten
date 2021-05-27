@@ -18,11 +18,6 @@ const weightOptions = {
   Light: 'light',
 }
 
-export default {
-  title: 'Links/LinkList',
-  component: LinkList,
-}
-
 export const SimpleList = () => {
   return (
     <LinkList
