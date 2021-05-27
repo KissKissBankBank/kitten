@@ -72,13 +72,19 @@ $k-fonts: (
 // Colors
 
 $k-colors: (
-  'font-1': #222, // Dark Grey
-  'font-2': #b8b8b8, // Semi Dark Grey
-  'background-1': #fff, // White
-  'background-2': #fbfbfb, // Extra Light Grey
-  'background-3': #f6f6f6, // Light Grey
-  'line-1': #eee, // Semi Light Grey
-  'line-2': #d8d8d8, // Grey
+  'font-1': '#222', // Dark Grey
+  'font-2': '#b8b8b8', // Semi Dark Grey
+  'font-3': '#949494', // Extra semi dark grey, used for text
+
+  'background-1': '#fff', // White
+  'background-2': '#fbfbfb', // Extra Light Grey
+  'background-3': '#f6f6f6', // Light Grey
+
+  'line-1': '#eee', // Semi Light Grey
+  'line-2': '#d8d8d8', // Grey
+  'line-3': '#2d2d2d', // Extra semi dark grey, not used for text
+
+  'grey-1': '#636363', // Medium grey used for text or not
 
   'primary-1': #19b4fa, // Primary
   'primary-2': #05a8e6, // Semi Dark Primary
