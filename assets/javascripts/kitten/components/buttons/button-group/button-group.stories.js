@@ -4,6 +4,7 @@ import { ButtonGroup } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
+import { PayPalIcon } from '../../icons/paypal-icon'
 
 const variantOptions = {
   Andromeda: 'andromeda',
@@ -46,7 +47,7 @@ export const WithVariant = () => (
       Button1
     </ButtonGroup.Button>
     <ButtonGroup.Button active={boolean('active', false)}>
-      Button2
+      <PayPalIcon icon />
     </ButtonGroup.Button>
   </ButtonGroup>
 )
