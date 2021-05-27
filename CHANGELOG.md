@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `Icons`:
-  - Add `LockIconNext`, `RefundIcon` and `ShieldCheckIcon` components.
+  - Add `LockOutlineIcon`, `RefundIcon` and `ShieldCheckIcon` components.
 - Fix: `Separator`: Reduce specificity of the styles.
 - Fix: `HeaderNav`: Fix accessibility error.
 - Feature: `CrowdfundingCard`: Add `progressLabel` prop.

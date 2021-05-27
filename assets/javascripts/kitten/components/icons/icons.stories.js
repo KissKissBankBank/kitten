@@ -57,7 +57,7 @@ import { LinkIcon } from './link-icon'
 import { ListIcon } from './list-icon'
 import { LocationIcon } from './location-icon'
 import { LockIcon } from './lock-icon'
-import { LockIconNext } from './lock-icon-next'
+import { LockOutlineIcon } from './lock-outline-icon'
 import { LoudspeakerIcon } from './loudspeaker-icon'
 import { MaestroIcon } from './maestro-icon'
 import { MasterCardIcon } from './mastercard-icon'
@@ -287,7 +287,7 @@ export const AllIcons = () => {
       <Group title="Other icons">
         <IconContainer children={<GarbageIcon color={colorInput} />} />
         <IconContainer children={<LockIcon color={colorInput} />} />
-        <IconContainer children={<LockIconNext color={colorInput} />} />
+        <IconContainer children={<LockOutlineIcon color={colorInput} />} />
         <IconContainer children={<SearchIcon color={colorInput} />} />
         <IconContainer children={<WaitingIcon color={colorInput} />} />
         <IconContainer children={<WarningIcon color={colorInput} />} />

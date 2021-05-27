@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const LockIconNext = ({ color, title, ...props }) => (
+export const LockOutlineIcon = ({ color, title, ...props }) => (
   <svg
     width="21"
     height="24"
     viewBox="0 0 21 24"
     xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
     {title && <title>{title}</title>}
     <path 
@@ -20,12 +21,12 @@ export const LockIconNext = ({ color, title, ...props }) => (
   </svg>
 )
 
-LockIconNext.propTypes = {
+LockOutlineIcon.propTypes = {
   color: PropTypes.string,
   title: PropTypes.string,
 }
 
-LockIconNext.defaultProps = {
+LockOutlineIcon.defaultProps = {
   color: '#949494',
   title: '',
 }
