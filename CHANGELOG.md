@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `RadioButton`: Update `disabled` status style.
 - Feature: `RangeSlider`: Add `disabled` prop, defaults to false.
 - Fix: `CrowdfundingCard`: Remove console warning when progress is not displayed.
 - Fix: Fix badly formatted SASS colors.
