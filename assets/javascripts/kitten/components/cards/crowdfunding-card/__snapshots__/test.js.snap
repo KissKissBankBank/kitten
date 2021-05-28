@@ -623,6 +623,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     className="k-CrowdfundingCard__progressBar"
   >
     <div
+      aria-label="Crowdfunding progress"
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
@@ -1593,6 +1594,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
     className="k-CrowdfundingCard__progressBar"
   >
     <div
+      aria-label="Crowdfunding progress"
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
@@ -2576,6 +2578,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
     className="k-CrowdfundingCard__progressBar"
   >
     <div
+      aria-label="Crowdfunding progress"
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
@@ -3577,6 +3580,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     className="k-CrowdfundingCard__progressBar"
   >
     <div
+      aria-label="Crowdfunding progress"
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}

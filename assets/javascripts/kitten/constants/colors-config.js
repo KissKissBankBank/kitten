@@ -13,6 +13,8 @@ export default {
   line2: '#d8d8d8', // Grey
   line3: '#2d2d2d', // Extra semi dark grey, not used for text
 
+  grey1: '#636363', // Medium grey used for text or not
+
   primary1: '#19b4fa', // Primary
   primary2: '#05a8e6', // Semi Dark Primary
   primary3: '#0496cc', // Dark Primary

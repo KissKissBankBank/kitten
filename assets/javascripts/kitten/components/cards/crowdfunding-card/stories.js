@@ -36,6 +36,7 @@ export default {
 export const CrowdfundingCard = () => (
   <StoryContainer>
     <CrowdfundingCardComponent
+      progressLabel="Crowdfunding progress"
       href={text('Link', '#')}
       imageProps={{ alt: '', src: text('Image url', '/kitten.jpg') }}
       ownerTitle={text('Owner title', 'Owner title')}

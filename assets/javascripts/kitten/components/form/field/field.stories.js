@@ -31,7 +31,7 @@ export const WithInput = () => {
     <StoryGrid>
       <FieldInputExample
         id={text('ID', 'input')}
-        tiny={boolean('Tiny', false)}
+        size={boolean('Tiny', false) ? 'tiny' : null}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
         tooltipProps={{ actionLabel: 'Learn more' }}
@@ -52,7 +52,7 @@ export const WithPassword = () => {
     <StoryGrid>
       <FieldPasswordExample
         id={text('ID', 'input')}
-        tiny={boolean('Tiny', false)}
+        size={boolean('Tiny', false) ? 'tiny' : null}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
         tooltipProps={{ actionLabel: 'Learn more' }}
@@ -70,7 +70,7 @@ export const WithRadioButtons = () => {
     <StoryGrid>
       <FieldRadioButtonSetExample
         id={text('ID', 'option-a')}
-        tiny={boolean('Tiny', false)}
+        size={boolean('Tiny', false) ? 'tiny' : null}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
         tooltipProps={{ actionLabel: 'Learn more' }}
@@ -102,7 +102,7 @@ export const WithAutocomplete = () => {
     <StoryGrid>
       <FieldAutocompleteExample
         id={text('ID', 'select')}
-        tiny={boolean('Tiny', false)}
+        size={boolean('Tiny', false) ? 'tiny' : null}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
         tooltipProps={{ actionLabel: 'Learn more' }}

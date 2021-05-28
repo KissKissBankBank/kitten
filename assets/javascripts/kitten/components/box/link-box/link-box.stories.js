@@ -7,11 +7,6 @@ import COLORS from '../../../constants/colors-config'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 
-export default {
-  title: 'Box/LinkBox',
-  component: LinkBox,
-}
-
 export const Default = () => (
   <LinkBox
     href={text('Href', '#anchor')}

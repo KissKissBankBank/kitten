@@ -28,6 +28,7 @@ describe('<CrowdfundingCard />', () => {
       component = renderer
         .create(
           <CrowdfundingCard
+            progressLabel="Crowdfunding progress"
             ownerTitle="Owner title"
             ownerDescription="Owner description"
             imageProps={{ src: '#image', alt: '' }}
@@ -60,6 +61,7 @@ describe('<CrowdfundingCard />', () => {
       component = renderer
         .create(
           <CrowdfundingCard
+            progressLabel="Crowdfunding progress"
             ownerTitle="Owner title"
             ownerDescription="Owner description"
             imageProps={{ src: '#image', alt: '' }}
@@ -98,6 +100,7 @@ describe('<CrowdfundingCard />', () => {
       component = renderer
         .create(
           <CrowdfundingCard
+            progressLabel="Crowdfunding progress"
             ownerTitle="Owner title"
             ownerDescription="Owner description"
             imageProps={{ src: '#image', alt: '' }}
@@ -128,6 +131,7 @@ describe('<CrowdfundingCard />', () => {
       component = renderer
         .create(
           <CrowdfundingCard
+            progressLabel="Crowdfunding progress"
             ownerTitle="Owner title"
             ownerDescription="Owner description"
             imageProps={{ src: '#image', alt: '' }}
