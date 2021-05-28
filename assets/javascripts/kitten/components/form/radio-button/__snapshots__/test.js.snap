@@ -80,6 +80,10 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   border-color: #ff0046;
 }
 
+.c0 .k-Form-RadioButton__input:disabled {
+  cursor: not-allowed;
+}
+
 .c0 .k-Form-RadioButton__input:disabled + .k-Form-RadioButton__label {
   border-color: #d8d8d8;
 }
