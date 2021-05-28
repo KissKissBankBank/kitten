@@ -33,26 +33,43 @@ const StyledInput = styled.input`
 
   &.k-Form-TextInput--tiny {
     height: ${pxToRem(40)};
+    min-height: ${pxToRem(40)};
   }
 
   &.k-Form-TextInput--regular {
     height: ${pxToRem(50)};
+    min-height: ${pxToRem(50)};
+  }
+
+  &.k-Form-TextInput--big {
+    height: ${pxToRem(60)};
+    min-height: ${pxToRem(60)};
+
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      height: ${pxToRem(70)};
+      min-height: ${pxToRem(70)};
+      font-size: ${stepToRem(0)};
+    }
   }
 
   &.k-Form-TextInput--huge {
     height: ${pxToRem(70)};
+    min-height: ${pxToRem(70)};
 
     @media (min-width: ${ScreenConfig.M.min}px) {
       height: ${pxToRem(80)};
+      min-height: ${pxToRem(80)};
       font-size: ${stepToRem(0)};
     }
   }
 
   &.k-Form-TextInput--giant {
     height: ${pxToRem(70)};
+    min-height: ${pxToRem(70)};
 
     @media (min-width: ${ScreenConfig.M.min}px) {
       height: ${pxToRem(90)};
+      min-height: ${pxToRem(90)};
       font-size: ${stepToRem(0)};
     }
   }
@@ -63,17 +80,17 @@ const StyledInput = styled.input`
   padding: ${pxToRem(10)} var(--input-padding-horizontal);
 
   &.k-Form-TextInput--orion {
+    &.k-Form-TextInput--tiny,
     &.k-Form-TextInput--regular {
       border-radius: ${pxToRem(4)};
-      height: ${pxToRem(50)};
     }
 
-    &.k-Form-TextInput--big {
+    &.k-Form-TextInput--big,
+    &.k-Form-TextInput--huge,
+    &.k-Form-TextInput--giant {
       border-radius: ${pxToRem(6)};
-      height: ${pxToRem(60)};
 
       @media (min-width: ${ScreenConfig.M.min}px) {
-        height: ${pxToRem(70)};
         --input-padding-horizontal: ${pxToRem(30)};
         border-radius: ${pxToRem(8)};
         font-size: ${stepToRem(0)};
@@ -205,21 +222,53 @@ const StyledTextareaContainer = styled.div`
     padding-bottom: 0;
 
     &.k-Form-TextInput--orion {
-      padding: ${pxToRem(21)} ${pxToRem(15)} 0;
-      min-height: ${pxToRem(60)};
-      border-radius: ${pxToRem(4)};
-
-      @media (min-width: ${ScreenConfig.M.min}px) {
-        padding: ${pxToRem(25)} ${pxToRem(30)} 0;
-        min-height: ${pxToRem(70)};
+      &.k-Form-TextInput--tiny {
+        padding-top: ${pxToRem(9)};
+        padding-bottom: ${pxToRem(9)};
       }
+
+      &.k-Form-TextInput--regular {
+        padding-top: ${pxToRem(14)};
+        padding-bottom: ${pxToRem(14)};
+      }
+
+      &.k-Form-TextInput--big {
+        padding-top: ${pxToRem(18)};
+        padding-bottom: ${pxToRem(18)};
+
+        @media (min-width: ${ScreenConfig.M.min}px) {
+          padding-top: ${pxToRem(21)};
+          padding-bottom: ${pxToRem(21)};
+        }
+      }
+
+      &.k-Form-TextInput--huge {
+        padding-top: ${pxToRem(21)};
+        padding-bottom: ${pxToRem(21)};
+
+        @media (min-width: ${ScreenConfig.M.min}px) {
+          padding-top: ${pxToRem(27)};
+          padding-bottom: ${pxToRem(27)};
+        }
+      }
+
+      &.k-Form-TextInput--giant {
+        padding-top: ${pxToRem(21)};
+        padding-bottom: ${pxToRem(21)};
+
+        @media (min-width: ${ScreenConfig.M.min}px) {
+          padding-top: ${pxToRem(32)};
+          padding-bottom: ${pxToRem(32)};
+        }
+      }
+
     }
   }
 
   .k-Form-TextInput__textareaGradient {
     position: absolute;
     left: ${pxToRem(10)};
-    right: ${pxToRem(10)};
+    right: ${pxToRem(2)};
     bottom: ${pxToRem(3)};
     height: ${pxToRem(10)};
 
@@ -297,6 +346,7 @@ export class TextInput extends PureComponent {
               className,
               digitsClass,
               `k-Form-TextInput--${variant}`,
+              `k-Form-TextInput--${size}`,
               {
                 'k-Form-TextInput--valid': valid,
                 'k-Form-TextInput--error': error,

@@ -89,6 +89,10 @@ const StyledDashboardMenu = styled.nav`
     }
   }
 
+  .k-DashboardMenu__list > :not(:last-child) {
+    margin-bottom: ${pxToRem(2)};
+  }
+
   .k-DashboardMenu__list
     > li
     > .k-DashboardMenu__expandable

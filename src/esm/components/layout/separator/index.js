@@ -20,7 +20,7 @@ export var Separator = styled(function (_ref) {
 }).withConfig({
   displayName: "separator__Separator",
   componentId: "sc-1dgi38g-0"
-})(["&.k-Separator{margin:0;border:none;background:", ";height:", ";}&.k-Separator--darker{background:", ";}"], COLORS.line1, pxToRem(1), COLORS.line2);
+})(["margin:0;border:none;background:", ";height:", ";&.k-Separator--darker{background:", ";}"], COLORS.line1, pxToRem(1), COLORS.line2);
 Separator.propTypes = {
   darker: PropTypes.bool
 };

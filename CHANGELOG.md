@@ -5,12 +5,28 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `ButtonGroup` : Add `orion` variant.
-- Feature: `Icons`:
-  - Add `LockOutlineIcon`, `RefundIcon` and `ShieldCheckIcon` components.
-- Feature: `DashboardLayout`: Add `Alert` subcomponent.
-- Fix: `Separator`: Reduce specificity of the styles.
-- Fix: `HeaderNav`: Fix accessibility error.
-- Feature: `CrowdfundingCard`: Add `progressLabel` prop.
+
+## [3.15.0] - 2021-05-28
+
+Features:
+
+- Add `grey1` color to colors config & refactor.
+- Add the following icon components:
+  - `LockOutlineIcon`
+  - `RefundIcon`
+  - `ShieldCheckIcon`
+- `DashboardLayout`: Add `Alert` subcomponent.
+- `DropdownSelectWithInput`: Add `size` prop, defaults to `normal`, inherited by `DropdownPhoneSelect`.
+- `CrowdfundingCard`: Add `progressLabel` prop.
+
+Fixes:
+
+- `TextInput`: Fix padding on `orion` variant.
+- `Button`: Fix `boron` variant border color.
+- `DashboardMenu`: Fix list items spacing.
+- `Separator`: Reduce specificity of the styles.
+- `HeaderNav`: Fix accessibility error.
+>>>>>>> origin
 
 ## [3.14.0] - 2021-05-25
 

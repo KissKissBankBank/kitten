@@ -65,7 +65,7 @@ export var modifierStyles = function modifierStyles(modifier) {
       break;
 
     case 'boron':
-      borderColor = COLORS.line1;
+      borderColor = COLORS.grey1;
       backgroundColor = COLORS.font1;
       color = COLORS.background1;
       hoverBorderColor = 'currentColor';
