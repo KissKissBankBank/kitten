@@ -14,11 +14,6 @@ const StoryContainer = ({ children }) => (
   </Container>
 )
 
-export default {
-  title: 'Steppers/VerticalProgress',
-  component: VerticalProgress,
-}
-
 export const Default = () => {
   return (
     <StoryContainer>

@@ -4,6 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TextInput`: Fix padding on `orion` variant.
+- Fix: `Button`: Fix `boron` variant border color.
+- Add `line4` color to colors config & refactor.
+- Fix: `DashboardMenu`: Fix list items spacing.
+- Feature: `DropdownSelectWithInput`: Add `size` prop, defaults to `normal`, inherited by `DropdownPhoneSelect`.
+- Feature: `Icons`: Add the following icons:
+  - `LockOutlineIcon`
+  - `RefundIcon`
+  - `ShieldCheckIcon`
+- Feature: `DashboardLayout`: Add `Alert` subcomponent.
+- Fix: `Separator`: Reduce specificity of the styles.
+- Fix: `HeaderNav`: Fix accessibility error.
+- Feature: `CrowdfundingCard`: Add `progressLabel` prop.
+
 ## [3.14.0] - 2021-05-25
 
 Features:
@@ -16,7 +30,7 @@ Fix:
 - `VerticalProgress`: Fix `z-index` value.
 
 ## [3.13.1] - 2021-05-20
- 
+
 Fixes:
 
 - `VerticalProgress` : Export component.
