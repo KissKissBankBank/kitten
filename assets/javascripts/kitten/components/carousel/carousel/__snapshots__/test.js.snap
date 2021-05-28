@@ -681,31 +681,6 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                   
                   
                 </div>
-                <div
-                  className="k-CrowdfundingCard__progressBar"
-                >
-                  <div
-                    aria-valuemax={100}
-                    aria-valuemin={0}
-                    aria-valuenow={0}
-                    className="sc-htoDjs dkTMcT k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
-                    role="progressbar"
-                  >
-                    <div
-                      className="k-Meters-Progress__ramp"
-                      style={
-                        Object {
-                          "height": "4px",
-                        }
-                      }
-                    />
-                  </div>
-                  <span
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
-                  >
-                    0 %
-                  </span>
-                </div>
                 
                 
               </div>
@@ -820,31 +795,6 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                   
                   
                 </div>
-                <div
-                  className="k-CrowdfundingCard__progressBar"
-                >
-                  <div
-                    aria-valuemax={100}
-                    aria-valuemin={0}
-                    aria-valuenow={0}
-                    className="sc-htoDjs dkTMcT k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
-                    role="progressbar"
-                  >
-                    <div
-                      className="k-Meters-Progress__ramp"
-                      style={
-                        Object {
-                          "height": "4px",
-                        }
-                      }
-                    />
-                  </div>
-                  <span
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
-                  >
-                    0 %
-                  </span>
-                </div>
                 
                 
               </div>
@@ -958,31 +908,6 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                   
                   
                   
-                </div>
-                <div
-                  className="k-CrowdfundingCard__progressBar"
-                >
-                  <div
-                    aria-valuemax={100}
-                    aria-valuemin={0}
-                    aria-valuenow={0}
-                    className="sc-htoDjs dkTMcT k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
-                    role="progressbar"
-                  >
-                    <div
-                      className="k-Meters-Progress__ramp"
-                      style={
-                        Object {
-                          "height": "4px",
-                        }
-                      }
-                    />
-                  </div>
-                  <span
-                    className="sc-bxivhb bUZGRr k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
-                  >
-                    0 %
-                  </span>
                 </div>
                 
                 
