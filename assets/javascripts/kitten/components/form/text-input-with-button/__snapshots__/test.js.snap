@@ -2,7 +2,7 @@
 
 exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gsBjov k-Form-TextInputWithButton"
+  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
 >
   <input
     className="sc-bdVaJa cjAhxx k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
@@ -21,7 +21,7 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gsBjov k-Form-TextInputWithButton"
+  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
 >
   <input
     className="sc-bdVaJa cjAhxx k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
@@ -41,7 +41,7 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
 
 exports[`<TextInputWithButton /> with component inside button value matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gsBjov k-Form-TextInputWithButton"
+  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
 >
   <input
     className="sc-bdVaJa cjAhxx k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
@@ -100,7 +100,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
 
 exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gsBjov k-Form-TextInputWithButton"
+  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
 >
   <input
     className="sc-bdVaJa cjAhxx k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--disabled"
@@ -119,7 +119,7 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
 
 exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gsBjov k-Form-TextInputWithButton"
+  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
 >
   <input
     className="sc-bdVaJa cjAhxx k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
@@ -138,7 +138,7 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gsBjov k-Form-TextInputWithButton"
+  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
 >
   <input
     className="sc-bdVaJa cjAhxx k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
@@ -159,7 +159,7 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gsBjov k-Form-TextInputWithButton"
+  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
 >
   <input
     className="sc-bdVaJa cjAhxx k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--tiny"
@@ -178,7 +178,7 @@ exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gsBjov k-Form-TextInputWithButton"
+  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
 >
   <input
     className="sc-bdVaJa cjAhxx k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--valid"

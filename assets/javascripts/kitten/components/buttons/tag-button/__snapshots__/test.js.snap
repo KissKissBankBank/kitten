@@ -801,6 +801,7 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   type="button"
 >
   <svg
+    className="k-ColorSvg"
     viewBox="0 0 732 224.43"
     width="36"
     xmlns="http://www.w3.org/2000/svg"

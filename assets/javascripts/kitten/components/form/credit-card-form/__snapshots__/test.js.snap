@@ -30,7 +30,7 @@ Array [
       </div>
     </div>
     <div
-      className="k-FieldInput sc-bdVaJa dUVxCq k-u-margin-top-single"
+      className="k-FieldInput sc-bdVaJa jtFJJk k-u-margin-top-single"
     >
       <input
         autoComplete="cc-number"
@@ -169,7 +169,7 @@ Array [
     </label>
     <input
       autoComplete="cc-number"
-      className="sc-bdVaJa dUVxCq"
+      className="sc-bdVaJa jtFJJk"
       id="frmCCNum"
       inputMode="numeric"
       name="cardnumber"

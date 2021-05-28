@@ -1,11 +1,13 @@
 import React from 'react'
+import classNames from 'classnames'
 
-export const IdealIcon = props => (
+export const IdealIcon = ({className, ...props}) => (
   <svg
     width="33"
     height="28"
     viewBox="0 0 33 28"
     xmlns="http://www.w3.org/2000/svg"
+    className={classNames('k-ColorSvg', className)}
     {...props}
   >
     <title>Ideal</title>

@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import classNames from 'classnames'
 
 const StyledDocumentIcon = styled.svg`
   path.kiss-DocumentIcon__shadow {
@@ -18,12 +19,14 @@ const StyledDocumentIcon = styled.svg`
     fill: #000 !important;
   }
 `
-export const DocumentIconEmpty = ({ children, title, ...props }) => (
+
+export const DocumentIconEmpty = ({ className, children, title, ...props }) => (
   <StyledDocumentIcon
     width="25"
     height="33"
     viewBox="0 0 25 33"
     xmlns="http://www.w3.org/2000/svg"
+    className={classNames('k-ColorSvg', className)}
     {...props}
   >
     {title && <title>{title}</title>}
