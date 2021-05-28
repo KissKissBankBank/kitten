@@ -1,11 +1,17 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
-export var SofortIcon = function SofortIcon(props) {
+import classNames from 'classnames';
+export var SofortIcon = function SofortIcon(_ref) {
+  var className = _ref.className,
+      props = _objectWithoutProperties(_ref, ["className"]);
+
   return /*#__PURE__*/React.createElement("svg", _extends({
     width: "55",
     height: "10",
     viewBox: "0 0 55 10",
-    xmlns: "http://www.w3.org/2000/svg"
+    xmlns: "http://www.w3.org/2000/svg",
+    className: classNames('k-ColorSvg', className)
   }, props), /*#__PURE__*/React.createElement("title", null, "Sofort"), /*#__PURE__*/React.createElement("g", {
     fill: "#E5782B",
     fillRule: "evenodd"

@@ -1,11 +1,17 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
-export var BancontactIcon = function BancontactIcon(props) {
+import classNames from 'classnames';
+export var BancontactIcon = function BancontactIcon(_ref) {
+  var className = _ref.className,
+      props = _objectWithoutProperties(_ref, ["className"]);
+
   return /*#__PURE__*/React.createElement("svg", _extends({
     width: "46",
     height: "28",
     viewBox: "0 0 46 28",
-    xmlns: "http://www.w3.org/2000/svg"
+    xmlns: "http://www.w3.org/2000/svg",
+    className: classNames('k-ColorSvg', className)
   }, props), /*#__PURE__*/React.createElement("title", null, "Bancontact"), /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
