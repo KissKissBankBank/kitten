@@ -156,7 +156,6 @@ var HeaderNav = function HeaderNav(_ref) {
     className: classNames('k-HeaderNav__stickyContainer', stickyProps === null || stickyProps === void 0 ? void 0 : stickyProps.className)
   }), /*#__PURE__*/React.createElement("nav", {
     ref: headerRef,
-    role: "banner",
     id: id,
     className: "k-HeaderNav"
   }, /*#__PURE__*/React.createElement(QuickAccessLink, _extends({

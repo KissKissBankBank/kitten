@@ -36,7 +36,7 @@ var Separator = (0, _styledComponents.default)(function (_ref) {
 }).withConfig({
   displayName: "separator__Separator",
   componentId: "sc-1dgi38g-0"
-})(["&.k-Separator{margin:0;border:none;background:", ";height:", ";}&.k-Separator--darker{background:", ";}"], _colorsConfig.default.line1, (0, _typography.pxToRem)(1), _colorsConfig.default.line2);
+})(["margin:0;border:none;background:", ";height:", ";&.k-Separator--darker{background:", ";}"], _colorsConfig.default.line1, (0, _typography.pxToRem)(1), _colorsConfig.default.line2);
 exports.Separator = Separator;
 Separator.propTypes = {
   darker: _propTypes.default.bool
