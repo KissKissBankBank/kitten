@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix badly formatted SASS colors.
 - Fix: `Button`: Color icons will not be styled by Button SVG styles.
 
 ## [3.15.0] - 2021-05-28
