@@ -91,7 +91,7 @@ const StyledRadioButton = styled.div`
     cursor: not-allowed;
 
     & + .k-Form-RadioButton__label {
-      border-color: ${COLORS.line2};      
+      border-color: ${COLORS.line2};
     }
 
     & + .k-Form-RadioButton__label::before {
