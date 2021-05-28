@@ -44,7 +44,6 @@ const StyledButtonGroup = styled.div`
   &.k-ButtonGroup--orion {
     .k-ButtonGroup__button {
       border-radius: ${pxToRem(4)};
-
       color: ${COLORS.font1};
       border-color: ${COLORS.line1};
       background-color: ${COLORS.background1};
