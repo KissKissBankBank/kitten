@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TextInput`: Fix padding on `orion` variant.
 - Fix: `Button`: Fix `boron` variant border color.
 - Add `line4` color to colors config & refactor.
 - Fix: `DashboardMenu`: Fix list items spacing.
