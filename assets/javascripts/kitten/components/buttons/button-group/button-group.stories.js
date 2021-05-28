@@ -47,7 +47,7 @@ export const WithVariant = () => (
       Button1
     </ButtonGroup.Button>
     <ButtonGroup.Button active={boolean('active', false)}>
-      <PayPalIcon icon />
+      <PayPalIcon/>
     </ButtonGroup.Button>
   </ButtonGroup>
 )

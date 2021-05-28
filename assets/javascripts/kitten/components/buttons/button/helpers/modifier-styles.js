@@ -158,14 +158,9 @@ export const modifierStyles = modifier => {
     color: ${color};
 
     svg,
-    path,
-    :not(.k-Svg-hasButton) {
+    path {
       fill: currentColor;
       transition: fill 0.2s;
-    }
-
-    svg.k-Svg-hasButton {
-      fill: unset;
     }
 
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
