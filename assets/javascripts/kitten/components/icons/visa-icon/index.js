@@ -1,10 +1,12 @@
 import React from 'react'
+import classNames from 'classnames'
 
-export const VisaIcon = props => (
+export const VisaIcon = ({className, ...props}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 732 224.43"
     width="36"
+    className={classNames('k-ColorSvg', className)}
     {...props}
   >
     <title>Visa</title>

@@ -1,11 +1,13 @@
 import React from 'react'
+import classNames from 'classnames'
 
-export const MaestroIcon = props => (
+export const MaestroIcon = ({className, ...props}) => (
   <svg
     width="39"
     height="30"
     viewBox="0 0 39 30"
     xmlns="http://www.w3.org/2000/svg"
+    className={classNames('k-ColorSvg', className)}
     {...props}
   >
     <title>Maestro</title>
