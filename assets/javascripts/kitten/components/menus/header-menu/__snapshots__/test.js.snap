@@ -396,8 +396,8 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c1 svg,
-.c1 path {
+.c1 svg:not(.k-ColorSvg),
+.c1 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;

@@ -157,10 +157,11 @@ export const modifierStyles = modifier => {
     background-color: ${backgroundColor};
     color: ${color};
 
-    svg,
-    path {
-      fill: currentColor;
-      transition: fill 0.2s;
+    svg:not(.k-ColorSvg) {
+      &, path {
+        fill: currentColor;
+        transition: fill 0.2s;
+      }
     }
 
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;

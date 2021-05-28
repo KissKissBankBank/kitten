@@ -1,11 +1,13 @@
 import React from 'react'
+import classNames from 'classnames'
 
-export const BancontactIcon = props => (
+export const BancontactIcon = ({className, ...props}) => (
   <svg
     width="46"
     height="28"
     viewBox="0 0 46 28"
     xmlns="http://www.w3.org/2000/svg"
+    className={classNames('k-ColorSvg', className)}
     {...props}
   >
     <title>Bancontact</title>

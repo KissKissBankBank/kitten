@@ -1,12 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
-export const PayPalIcon = () => (
+export const PayPalIcon = ({className, ...props}) => (
   <svg
     width="53"
     height="14"
     viewBox="0 0 53 14"
     xmlns="http://www.w3.org/2000/svg"
+    className={classNames('k-ColorSvg', className)}
     {...props}
   >
     <title>PayPal</title>
@@ -22,7 +23,3 @@ export const PayPalIcon = () => (
     </g>
   </svg>
 )
-
-PayPalIcon.propTypes = {
-  icon: PropTypes.bool,
-}
