@@ -54,5 +54,4 @@ export const WithVariant = () => (
       </GridCol>
     </Grid>
   </Container>
-
 )
