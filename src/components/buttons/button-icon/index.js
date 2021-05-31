@@ -44,7 +44,8 @@ var ButtonIcon = function ButtonIcon(_ref2) {
       'k-ButtonIcon--withoutHover': withoutHover,
       'k-ButtonIcon--verticalArrow': verticalArrow
     }),
-    size: size
+    size: size,
+    tag: tag
   }, others, {
     icon: true
   }));

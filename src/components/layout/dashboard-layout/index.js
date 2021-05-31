@@ -39,8 +39,6 @@ var _burgerIcon = require("../../../components/icons/burger-icon");
 
 var _arrowIcon = require("../../../components/icons/arrow-icon");
 
-var _alert = require("../../../components/notifications/alert");
-
 var _flow = require("./flow");
 
 var _styles = require("./styles");
@@ -226,7 +224,7 @@ var DashboardLayout = function DashboardLayout(_ref) {
     })
   }), renderComponentChildrenArray((0, _reactElements.getReactElementsByType)({
     children: children,
-    type: Alert
+    type: Alerts
   })), /*#__PURE__*/_react.default.createElement("main", {
     className: (0, _classnames.default)('k-DashboardLayout__main', {
       'k-DashboardLayout__main--fullHeight': fullHeightContent
@@ -234,7 +232,7 @@ var DashboardLayout = function DashboardLayout(_ref) {
     id: "main"
   }, renderComponentArray((0, _reactElements.getReactElementsWithoutTypeArray)({
     children: children,
-    typeArray: [SiteHeader, Header, SideContent, SideFooter, Alert]
+    typeArray: [SiteHeader, Header, SideContent, SideFooter, Alerts]
   }))))));
 };
 
@@ -295,11 +293,11 @@ var SideFooter = function SideFooter(_ref6) {
   }, props));
 };
 
-var Alert = function Alert(_ref7) {
+var Alerts = function Alerts(_ref7) {
   var className = _ref7.className,
       props = (0, _objectWithoutProperties2.default)(_ref7, ["className"]);
-  return /*#__PURE__*/_react.default.createElement(_alert.Alert, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-DashboardLayout__alert', 'k-DashboardLayout__fullWidth', className)
+  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
+    className: (0, _classnames.default)('k-DashboardLayout__alerts', 'k-DashboardLayout__fullWidth', className)
   }, props));
 };
 
@@ -325,4 +323,4 @@ DashboardLayout.Header = Header;
 DashboardLayout.SideContent = SideContent;
 DashboardLayout.SideFooter = SideFooter;
 DashboardLayout.Flow = _flow.Flow;
-DashboardLayout.Alert = Alert;
+DashboardLayout.Alerts = Alerts;

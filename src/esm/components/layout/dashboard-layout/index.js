@@ -13,7 +13,6 @@ import { getReactElementsByType, getReactElementsWithoutTypeArray } from '../../
 import { DASHBOARD_HIDE_CONTENT_EVENT, DASHBOARD_SHOW_CONTENT_EVENT, dispatchEvent } from '../../../helpers/dom/events';
 import { BurgerIcon } from '../../../components/icons/burger-icon';
 import { ArrowIcon } from '../../../components/icons/arrow-icon';
-import { Alert as AlertComponent } from '../../../components/notifications/alert';
 import { Flow } from './flow';
 import { StyledDashboard } from './styles';
 export var DashboardLayout = function DashboardLayout(_ref) {
@@ -197,7 +196,7 @@ export var DashboardLayout = function DashboardLayout(_ref) {
     })
   }), renderComponentChildrenArray(getReactElementsByType({
     children: children,
-    type: Alert
+    type: Alerts
   })), /*#__PURE__*/React.createElement("main", {
     className: classNames('k-DashboardLayout__main', {
       'k-DashboardLayout__main--fullHeight': fullHeightContent
@@ -205,7 +204,7 @@ export var DashboardLayout = function DashboardLayout(_ref) {
     id: "main"
   }, renderComponentArray(getReactElementsWithoutTypeArray({
     children: children,
-    typeArray: [SiteHeader, Header, SideContent, SideFooter, Alert]
+    typeArray: [SiteHeader, Header, SideContent, SideFooter, Alerts]
   }))))));
 };
 
@@ -267,12 +266,12 @@ var SideFooter = function SideFooter(_ref6) {
   }, props));
 };
 
-var Alert = function Alert(_ref7) {
+var Alerts = function Alerts(_ref7) {
   var className = _ref7.className,
       props = _objectWithoutProperties(_ref7, ["className"]);
 
-  return /*#__PURE__*/React.createElement(AlertComponent, _extends({
-    className: classNames('k-DashboardLayout__alert', 'k-DashboardLayout__fullWidth', className)
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: classNames('k-DashboardLayout__alerts', 'k-DashboardLayout__fullWidth', className)
   }, props));
 };
 
@@ -298,4 +297,4 @@ DashboardLayout.Header = Header;
 DashboardLayout.SideContent = SideContent;
 DashboardLayout.SideFooter = SideFooter;
 DashboardLayout.Flow = Flow;
-DashboardLayout.Alert = Alert;
+DashboardLayout.Alerts = Alerts;
