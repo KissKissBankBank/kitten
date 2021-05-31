@@ -81,7 +81,7 @@ exports[`<ButtonIcon /> size prop matches with snapshot 1`] = `
 `;
 
 exports[`<ButtonIcon /> tag prop matches with snapshot 1`] = `
-<button
+<span
   className="sc-bdVaJa bAkRSz k-Button sc-bwzfXH IDiCi k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
@@ -93,11 +93,11 @@ exports[`<ButtonIcon /> tag prop matches with snapshot 1`] = `
   <svg
     className="k-ButtonIcon__svg"
   />
-</button>
+</span>
 `;
 
 exports[`<ButtonIcon /> with tag="a" and no href matches with snapshot 1`] = `
-<button
+<a
   className="sc-bdVaJa bAkRSz k-Button sc-bwzfXH IDiCi k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
@@ -109,11 +109,11 @@ exports[`<ButtonIcon /> with tag="a" and no href matches with snapshot 1`] = `
   <svg
     className="k-ButtonIcon__svg"
   />
-</button>
+</a>
 `;
 
 exports[`<ButtonIcon /> with tag="a" href="foo" matches with snapshot 1`] = `
-<button
+<a
   className="sc-bdVaJa bAkRSz k-Button sc-bwzfXH IDiCi k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
   href="foo"
   style={
@@ -126,7 +126,7 @@ exports[`<ButtonIcon /> with tag="a" href="foo" matches with snapshot 1`] = `
   <svg
     className="k-ButtonIcon__svg"
   />
-</button>
+</a>
 `;
 
 exports[`<ButtonIcon /> without children matches with snapshot 1`] = `
