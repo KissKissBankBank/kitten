@@ -4,9 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `DashboardLayout`: Replace `Alert` subcomponent with `Alerts` wrapper.
-- Fix: `ButtonIcon`: Fix `tag` transmission.
-- Fix: `TeamCard`: Fix buttons sizes.
+## [3.17.0] - 2021-05-31
+
+Feature:
+
+- `DashboardLayout`: Replace `Alert` subcomponent with `Alerts` wrapper.
+
+Fix:
+
+- `ButtonIcon`: Fix `tag` transmission.
+- `TeamCard`: Fix buttons sizes.
 
 ## [3.16.0] - 2021-05-28
 
