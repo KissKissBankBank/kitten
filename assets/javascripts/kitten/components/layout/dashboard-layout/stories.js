@@ -313,10 +313,15 @@ export const Default = () => {
         </Button>
       </DashboardLayout.SideFooter>
 
-      {boolean('Display Alert', false) && (
-        <DashboardLayout.Alert closeButton error>
-          Voilà une alerte
-        </DashboardLayout.Alert>
+      {boolean('Display Alerts', false) && (
+        <DashboardLayout.Alerts>
+          <Alert closeButton info>
+            Voilà une info
+          </Alert>
+          <Alert closeButton error>
+            Voilà une alerte
+          </Alert>
+        </DashboardLayout.Alerts>
       )}
 
       {selectedView === 'flow' && <FlowExample />}

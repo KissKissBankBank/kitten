@@ -1017,91 +1017,6 @@ button:hover .c1 {
   transition: transform 0.2s ease-out,fill 0.15s;
 }
 
-.c2 {
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  position: relative;
-  overflow: hidden;
-  background-color: #e8f7fe;
-  color: #19b4fa;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c2 .k-Alert__text {
-  padding: 0.8125rem 1.25rem;
-  -webkit-flex: 1 0 0;
-  -ms-flex: 1 0 0;
-  flex: 1 0 0;
-  font-size: 0.8888888888888888rem;
-}
-
-.c2 .k-Alert__button {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.c2 .k-Alert__button svg,
-.c2 .k-Alert__button svg path {
-  -webkit-transition: fill 0.2s ease;
-  transition: fill 0.2s ease;
-}
-
-.c2 .k-Alert__button:focus {
-  outline: #fff solid 0.125rem;
-  outline-offset: -0.25rem;
-}
-
-.c2 .k-Alert__button:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c2 .k-Alert__button:focus-visible {
-  outline-color: #bae8fd;
-}
-
-.c2 a {
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  -webkit-letter-spacing: .01rem;
-  -moz-letter-spacing: .01rem;
-  -ms-letter-spacing: .01rem;
-  letter-spacing: .01rem;
-  font-weight: 600;
-  color: inherit;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c2.k-Alert--success {
-  color: #61d079;
-  background-color: #effaf1;
-}
-
-.c2.k-Alert--error {
-  color: #ff0046;
-  background-color: #ffe5ec;
-}
-
-.c2.k-Alert--warning {
-  color: #8a6d3b;
-  background-color: #fcf8e3;
-}
-
-.c2.k-Alert--shouldHide {
-  pointer-events: none;
-  -webkit-animation: ggXszE 0.4s cubic-bezier(0.895,0.03,0.685,0.22) forwards;
-  animation: ggXszE 0.4s cubic-bezier(0.895,0.03,0.685,0.22) forwards;
-}
-
 .c0 {
   --dashboardLayout-siteHeaderHeight: 0px;
   position: relative;
@@ -1216,18 +1131,6 @@ button:hover .c1 {
 
 .c0 .k-DashboardLayout__backLink .k-DashboardLayout__backLink__text {
   margin-left: 0.9375rem;
-}
-
-@media (min-width:40rem) {
-  .c2 .k-Alert__text {
-    text-align: center;
-  }
-}
-
-@media (min-width:40rem) {
-  .c2.k-Alert--hasCloseButton .k-Alert__text {
-    margin-left: 3.125rem;
-  }
 }
 
 @media (min-width:67.5rem) {
@@ -1627,14 +1530,9 @@ button:hover .c1 {
         Header content
       </header>
       <div
-        className="c2 k-Alert k-DashboardLayout__alert k-DashboardLayout__fullWidth"
-        role="alert"
+        className="k-DashboardLayout__alerts k-DashboardLayout__fullWidth"
       >
-        <div
-          className="k-Alert__text"
-        >
-          Alert!
-        </div>
+        Alert!
       </div>
       <main
         className="k-DashboardLayout__main"

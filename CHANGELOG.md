@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DashboardLayout`: Replace `Alert` subcomponent with `Alerts` wrapper.
 - Fix: `ButtonIcon`: Fix `tag` transmission.
 - Fix: `TeamCard`: Fix buttons sizes.
 
