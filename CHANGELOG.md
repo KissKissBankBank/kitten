@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `ButtonIcon`: Fix `tag` transmission.
+- Fix: `TeamCard`: Fix buttons sizes.
+
 ## [3.16.0] - 2021-05-28
 
 Features:
