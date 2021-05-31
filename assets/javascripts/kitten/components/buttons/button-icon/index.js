@@ -48,6 +48,7 @@ export const ButtonIcon = ({
       'k-ButtonIcon--verticalArrow': verticalArrow,
     })}
     size={size}
+    tag={tag}
     {...others}
     icon
   />
