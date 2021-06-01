@@ -13,6 +13,8 @@ const StyledSummary = styled.div`
   position: relative;
   display: inline-flex;
   width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
   
   .kiss-Summary__close {
     position: absolute;
@@ -24,14 +26,11 @@ const StyledSummary = styled.div`
   
   .kiss-Summary__img {
     position: absolute;
-    display: flex;
     top: 0;
     left: 0;
     height: 100%;
     width: ${pxToRem(140)};
     object-fit: cover;
-    object-position: center center;
-    text-align: center;
   }
 
   .kiss-Summary__container {

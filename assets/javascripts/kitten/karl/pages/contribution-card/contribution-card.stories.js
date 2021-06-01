@@ -6,7 +6,7 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 export const Default = () => (
   <Container>
     <Grid>
-      <GridCol col="6">
+      <GridCol col="7">
         <Summary />
       </GridCol>
     </Grid>
