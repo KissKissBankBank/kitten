@@ -289,34 +289,6 @@ const StyledDropdownSelectWithInput = styled.div`
     }
   }
 
-  &.k-Form-DropdownSelectWithInput--isOpen {
-    .k-Form-DropdownSelectWithInput__container {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-  }
-
-  &.k-Form-DropdownSelectWithInput--hasItemSelected {
-    .k-Form-DropdownSelectWithInput__button {
-      flex: 0 0 auto;
-    }
-
-    .k-Form-DropdownSelectWithInput__input {
-      flex: 1 0 auto;
-      display: inline-block;
-    }
-  }
-
-  &.k-Form-DropdownSelectWithInput--noDropdown {
-    .k-Form-DropdownSelectWithInput__content {
-      margin: 0 ${pxToRem(10)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-left: ${pxToRem(10)};
-      }
-    }
-  }
-
 
   /* SIZES */
 
@@ -335,6 +307,12 @@ const StyledDropdownSelectWithInput = styled.div`
       border-radius: ${pxToRem(2)};
       height: ${pxToRem(28)};
     }
+
+    &.k-Form-DropdownSelectWithInput--noDropdown {
+      .k-Form-DropdownSelectWithInput__content {
+        margin: 0 ${pxToRem(4)};
+      }
+    }
   }
 
   &.k-Form-DropdownSelectWithInput--normal{
@@ -351,6 +329,13 @@ const StyledDropdownSelectWithInput = styled.div`
     .k-Form-DropdownSelectWithInput__content--selectedItem {
       border-radius: ${pxToRem(2)};
       height: ${pxToRem(36)};
+    }
+
+
+    &.k-Form-DropdownSelectWithInput--noDropdown {
+      .k-Form-DropdownSelectWithInput__content {
+        margin: 0 ${pxToRem(5)};
+      }
     }
   }
 
@@ -372,6 +357,12 @@ const StyledDropdownSelectWithInput = styled.div`
     .k-Form-DropdownSelectWithInput__content--selectedItem {
       border-radius: ${pxToRem(4)};
       height: ${pxToRem(40)};
+    }
+
+    &.k-Form-DropdownSelectWithInput--noDropdown {
+      .k-Form-DropdownSelectWithInput__content {
+        margin: 0 ${pxToRem(10)};
+      }
     }
   }
 
@@ -397,15 +388,15 @@ const StyledDropdownSelectWithInput = styled.div`
       .k-Form-DropdownSelectWithInput__button__statusBadges {
         right: ${pxToRem(20)};
       }
-      .k-Form-DropdownSelectWithInput__content--selectedItem {
-        padding: 0 ${pxToRem(15)};
-        height: ${pxToRem(46)};
-      }
     }
 
     &.k-Form-DropdownSelectWithInput--big {
       .k-Form-DropdownSelectWithInput__container {
         height: ${pxToRem(70)};
+      }
+      .k-Form-DropdownSelectWithInput__content--selectedItem {
+        padding: 0 ${pxToRem(15)};
+        height: ${pxToRem(46)};
       }
     }
 
@@ -413,12 +404,39 @@ const StyledDropdownSelectWithInput = styled.div`
       .k-Form-DropdownSelectWithInput__container {
         height: ${pxToRem(80)};
       }
+      .k-Form-DropdownSelectWithInput__content--selectedItem {
+        padding: 0 ${pxToRem(15)};
+        height: ${pxToRem(53)};
+      }
     }
 
     &.k-Form-DropdownSelectWithInput--giant {
       .k-Form-DropdownSelectWithInput__container {
         height: ${pxToRem(90)};
       }
+      .k-Form-DropdownSelectWithInput__content--selectedItem {
+        padding: 0 ${pxToRem(15)};
+        height: ${pxToRem(64)};
+      }
+    }
+  }
+
+
+  &.k-Form-DropdownSelectWithInput--isOpen {
+    .k-Form-DropdownSelectWithInput__container {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &.k-Form-DropdownSelectWithInput--hasItemSelected {
+    .k-Form-DropdownSelectWithInput__button {
+      flex: 0 0 auto;
+    }
+
+    .k-Form-DropdownSelectWithInput__input {
+      flex: 1 0 auto;
+      display: inline-block;
     }
   }
 `
