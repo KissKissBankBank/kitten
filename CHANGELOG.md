@@ -3,7 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-
+- Feature: `ContributionCard`: Add new component.
 - Fix: `ButtonIcon`: Fix `tag` transmission.
 - Fix: `TeamCard`: Fix buttons sizes.
 
