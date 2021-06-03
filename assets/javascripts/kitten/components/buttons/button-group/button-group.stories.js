@@ -39,15 +39,13 @@ Default.decorators = [
 ]
 
 export const WithVariant = () => (
-  <ButtonGroup 
+  <ButtonGroup
     variant={select('Variant', variantOptions, 'orion')}
     aria-label="Button label"
   >
-    <ButtonGroup.Button>
-      Button1
-    </ButtonGroup.Button>
+    <ButtonGroup.Button>Button1</ButtonGroup.Button>
     <ButtonGroup.Button active={boolean('active', false)}>
-      <PayPalIcon/>
+      <PayPalIcon />
     </ButtonGroup.Button>
   </ButtonGroup>
 )

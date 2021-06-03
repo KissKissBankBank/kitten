@@ -261,7 +261,6 @@ const StyledTextareaContainer = styled.div`
           padding-bottom: ${pxToRem(32)};
         }
       }
-
     }
   }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export const MaestroIcon = ({className, ...props}) => (
+export const MaestroIcon = ({ className, ...props }) => (
   <svg
     width="39"
     height="30"

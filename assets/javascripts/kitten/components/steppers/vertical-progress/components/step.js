@@ -28,7 +28,7 @@ const StyledItem = styled.li`
   }
 
   .k-VerticalProgress__step--content {
-    padding-left:  ${pxToRem(50)};
+    padding-left: ${pxToRem(50)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       padding-left: ${pxToRem(82)};
@@ -50,9 +50,7 @@ export const Step = ({
         progressTitle={progressTitle}
         {...statusProps}
       />
-      <div className="k-VerticalProgress__step--content">
-        {children}
-      </div>
+      <div className="k-VerticalProgress__step--content">{children}</div>
     </StyledItem>
   )
 }

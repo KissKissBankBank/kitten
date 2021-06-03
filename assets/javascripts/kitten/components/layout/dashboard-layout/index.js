@@ -228,7 +228,8 @@ export const DashboardLayout = ({
             getReactElementsByType({
               children: children,
               type: Alerts,
-            }))}
+            }),
+          )}
 
           <main
             className={classNames('k-DashboardLayout__main', {
@@ -239,7 +240,13 @@ export const DashboardLayout = ({
             {renderComponentArray(
               getReactElementsWithoutTypeArray({
                 children,
-                typeArray: [SiteHeader, Header, SideContent, SideFooter, Alerts],
+                typeArray: [
+                  SiteHeader,
+                  Header,
+                  SideContent,
+                  SideFooter,
+                  Alerts,
+                ],
               }),
             )}
           </main>
@@ -319,7 +326,7 @@ const Alerts = ({ className, ...props }) => (
     className={classNames(
       'k-DashboardLayout__alerts',
       'k-DashboardLayout__fullWidth',
-      className
+      className,
     )}
     {...props}
   />

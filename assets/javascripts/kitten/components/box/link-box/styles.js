@@ -6,7 +6,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 export const StyledLinkBox = styled.a`
   /* IE11 defaults */
   color: ${COLORS.font1};
-  
+
   display: flex;
   color: var(--LinkBox-text-color);
   text-decoration: none;
@@ -29,7 +29,7 @@ export const StyledLinkBox = styled.a`
   .k-LinkBox__link {
     /* IE11 defaults */
     background-color: ${COLORS.background1};
-   
+
     display: flex;
     min-height: ${pxToRem(90)};
     width: 100%;

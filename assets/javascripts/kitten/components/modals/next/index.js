@@ -546,18 +546,12 @@ const Actions = ({
   ...props
 }) => (
   <div
-    className={
-      classNames(
-        'k-ModalNext__actions',
-        className,
-        {
-          'k-ModalNext__actions--sticky': sticky,
-          'k-ModalNext__actions--stickyOnMobile': stickyOnMobile,
-          'k-ModalNext__actions--fullSize': fullSize,
-          'k-ModalNext__actions--fullSizeOnMobile': fullSizeOnMobile,
-        }
-      )
-    }
+    className={classNames('k-ModalNext__actions', className, {
+      'k-ModalNext__actions--sticky': sticky,
+      'k-ModalNext__actions--stickyOnMobile': stickyOnMobile,
+      'k-ModalNext__actions--fullSize': fullSize,
+      'k-ModalNext__actions--fullSizeOnMobile': fullSizeOnMobile,
+    })}
     {...props}
   />
 )
@@ -676,7 +670,8 @@ const InnerModal = ({
     }
   }
 
-  const shouldDisplayHeader = !!headerTitle || !!fullSizeTitle || !!headerActions
+  const shouldDisplayHeader =
+    !!headerTitle || !!fullSizeTitle || !!headerActions
 
   const ModalPortal = ReactDOM.createPortal(
     <>
@@ -753,10 +748,11 @@ const InnerModal = ({
               </div>
 
               <div className="k-ModalNext__header__actions">
-                {headerActions && headerActions({
-                  open: () => dispatch(updateState(true)),
-                  close: () => dispatch(updateState(false)),
-                })}
+                {headerActions &&
+                  headerActions({
+                    open: () => dispatch(updateState(true)),
+                    close: () => dispatch(updateState(false)),
+                  })}
               </div>
             </div>
           ) : (

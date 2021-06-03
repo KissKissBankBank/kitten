@@ -289,7 +289,6 @@ const StyledDropdownSelectWithInput = styled.div`
     }
   }
 
-
   /* SIZES */
 
   &.k-Form-DropdownSelectWithInput--tiny {
@@ -315,7 +314,7 @@ const StyledDropdownSelectWithInput = styled.div`
     }
   }
 
-  &.k-Form-DropdownSelectWithInput--normal{
+  &.k-Form-DropdownSelectWithInput--normal {
     .k-Form-DropdownSelectWithInput__container {
       height: ${pxToRem(50)};
       border-radius: ${pxToRem(4)};
@@ -330,7 +329,6 @@ const StyledDropdownSelectWithInput = styled.div`
       border-radius: ${pxToRem(2)};
       height: ${pxToRem(36)};
     }
-
 
     &.k-Form-DropdownSelectWithInput--noDropdown {
       .k-Form-DropdownSelectWithInput__content {
@@ -420,7 +418,6 @@ const StyledDropdownSelectWithInput = styled.div`
       }
     }
   }
-
 
   &.k-Form-DropdownSelectWithInput--isOpen {
     .k-Form-DropdownSelectWithInput__container {
@@ -543,17 +540,20 @@ export const DropdownSelectWithInput = ({
 
   return (
     <StyledDropdownSelectWithInput
-      className={classNames('k-Form-DropdownSelectWithInput', className,
+      className={classNames(
+        'k-Form-DropdownSelectWithInput',
+        className,
         `k-Form-DropdownSelectWithInput--${size}`,
         {
-        'k-Form-DropdownSelectWithInput--isOpen': isOpen,
-        'k-Form-DropdownSelectWithInput--hasItemSelected': !!selectedItem,
-        'k-Form-DropdownSelectWithInput--error': error,
-        'k-Form-DropdownSelectWithInput--valid': valid,
-        'k-Form-DropdownSelectWithInput--disabled': disabled,
-        'k-Form-DropdownSelectWithInput--noDropdown': deactivateDropdown,
-        'k-Form-DropdownSelectWithInput--hideIconOnMobile': hideIconOnMobile,
-      })}
+          'k-Form-DropdownSelectWithInput--isOpen': isOpen,
+          'k-Form-DropdownSelectWithInput--hasItemSelected': !!selectedItem,
+          'k-Form-DropdownSelectWithInput--error': error,
+          'k-Form-DropdownSelectWithInput--valid': valid,
+          'k-Form-DropdownSelectWithInput--disabled': disabled,
+          'k-Form-DropdownSelectWithInput--noDropdown': deactivateDropdown,
+          'k-Form-DropdownSelectWithInput--hideIconOnMobile': hideIconOnMobile,
+        },
+      )}
       style={{ '--menu-z-index': menuZIndex }}
     >
       <Label

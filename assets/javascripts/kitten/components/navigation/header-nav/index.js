@@ -152,13 +152,14 @@ const HeaderNav = ({
           '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu,
         }}
         zIndex={zIndexConfig}
-        className={classNames('k-HeaderNav__wrapper',
+        className={classNames(
+          'k-HeaderNav__wrapper',
           `k-HeaderNav--${size}`,
           `k-HeaderNav--${borderStyle}`,
           {
             'k-HeaderNav--menuIsExpanded': isMenuExpanded,
             'k-HeaderNav--inactiveBackground': isBackgroundInactive,
-          }
+          },
         )}
       >
         <StickyContainer
