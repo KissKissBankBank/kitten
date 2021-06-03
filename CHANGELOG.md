@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `ImageCropper`: Use default Label size.
+
 ## [3.17.1] - 2021-06-03
 
 Fixes:
