@@ -6,11 +6,12 @@ import styled from 'styled-components';
 import classNames from 'classnames';
 import domElementHelper from '../../../helpers/dom/element-helper';
 import TYPOGRAPHY from '../../../constants/typography-config';
-import { stepToRem } from '../../../helpers/utils/typography';
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
+import { ScreenConfig } from '../../../constants/screen-config';
 var StyledLabel = styled.label.withConfig({
   displayName: "label__StyledLabel",
   componentId: "l6ih7y-0"
-})(["display:block;", " cursor:pointer;&.k-Label--tiny{line-height:1.3;font-size:", ";}&.k-Label--micro{line-height:1.3;font-size:", ";}&.k-Label--withoutPointerEvents{pointer-events:none;}"], TYPOGRAPHY.fontStyles.regular, stepToRem(0), stepToRem(-1));
+})(["display:block;", " cursor:pointer;font-size:", ";@media (min-width:", "){font-size:", ";}&.k-Label--tiny{line-height:1.3;font-size:", ";}&.k-Label--micro{line-height:1.3;font-size:", ";}&.k-Label--withoutPointerEvents{pointer-events:none;}"], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), pxToRem(ScreenConfig.S.min), stepToRem(0), stepToRem(0), stepToRem(-1));
 export var Label = function Label(_ref) {
   var tag = _ref.tag,
       className = _ref.className,
