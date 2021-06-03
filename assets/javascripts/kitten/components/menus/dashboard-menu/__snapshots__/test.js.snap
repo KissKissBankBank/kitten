@@ -83,7 +83,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__list {
-  padding: 0 2.5rem 1.25rem 3.75rem;
+  padding: 0 0.625rem 1.25rem 3.75rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
