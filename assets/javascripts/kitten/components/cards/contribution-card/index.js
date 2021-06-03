@@ -11,6 +11,8 @@ import {
   Description,
   PillNumber,
   Amount,
+  Input,
+  Action,
 } from './components'
 
 export const ContributionCard = ({
@@ -91,6 +93,8 @@ ContributionCard.Title = Title
 ContributionCard.Description= Description
 ContributionCard.PillNumber = PillNumber
 ContributionCard.Amount = Amount
+ContributionCard.Input = Input
+ContributionCard.Action = Action
 
 ContributionCard.defaultProps = {
   show: true,

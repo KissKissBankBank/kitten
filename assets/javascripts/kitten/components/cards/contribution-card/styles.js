@@ -85,11 +85,7 @@ export const StyledContributionCard = styled.article`
       }
     }
     svg {
-      width: ${pxToRem(31)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        width: ${pxToRem(45)};
-      }
+      width: 100%;
     }
   }
   
@@ -109,7 +105,7 @@ export const StyledContributionCard = styled.article`
   }
 
   .k-ContributionCard__gridWrapper {
-    max-width: 100%;
+    width: 100%;
     display: grid;
     padding: ${pxToRem(20)} ${pxToRem(30)} ${pxToRem(20)} ${pxToRem(40)};
     align-items: center;
@@ -130,11 +126,11 @@ export const StyledContributionCard = styled.article`
     @media (min-width: ${ScreenConfig.S.min}px) {
       padding: ${pxToRem(20)} ${pxToRem(60)} ${pxToRem(20)} ${pxToRem(30)};
 
-      grid-gap: 0 ${pxToRem(30)};
+      grid-gap: 0 ${pxToRem(10)};
       grid-template-columns: ${pxToRem(240)} 1fr 1fr;
       grid-template-rows: 1fr;
       grid-template-areas:
-      "cc-text cc-pill cc-amount";
+        "cc-text cc-pill cc-amount";
 
       ${'' /* -ms-grid-columns: ${pxToRem(240)} ${pxToRem(30)} 1fr 1fr;
       -ms-grid-rows: 1fr auto; */}
@@ -165,8 +161,15 @@ export const StyledContributionCard = styled.article`
     grid-area: cc-pill;
     place-self: center start;
   }
-
+  .k-ContributionCard__input {
+    grid-area: cc-pill;
+    place-self: center start;
+  }
   .k-ContributionCard__amount {
+    grid-area: cc-amount;
+    place-self: center end;
+  }
+  .k-ContributionCard__action {
     grid-area: cc-amount;
     place-self: center end;
   }

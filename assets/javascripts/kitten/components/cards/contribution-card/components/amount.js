@@ -2,7 +2,6 @@ import React from 'react'
 import classNames from 'classnames'
 import { Text } from '../../../../components/typography/text'
 
-
 export const Amount = props => {
   return (
     <Text
