@@ -5,12 +5,18 @@ import classNames from 'classnames'
 
 import domElementHelper from '../../../helpers/dom/element-helper'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import { stepToRem } from '../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledLabel = styled.label`
   display: block;
   ${TYPOGRAPHY.fontStyles.regular}
   cursor: pointer;
+  font-size: ${stepToRem(-1)};
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    font-size: ${stepToRem(0)};
+  }
 
   &.k-Label--tiny {
     line-height: 1.3;
