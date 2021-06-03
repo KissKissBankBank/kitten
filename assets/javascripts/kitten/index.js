@@ -133,6 +133,9 @@ export {
 // Heroes
 export { Hero } from './components/heroes/hero'
 
+// Illustrations 
+export { RocketIllustration } from './components/illustrations/rocket-illustration'
+
 // Images
 export { ImageCropper } from './components/images/image-cropper'
 

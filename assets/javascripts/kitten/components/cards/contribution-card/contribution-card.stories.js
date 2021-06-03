@@ -1,6 +1,12 @@
 import React from 'react'
 import { ContributionCard } from './index'
 import { Container } from '../../../components/grid/container'
+import { RocketIllustration } from '../../../components/illustrations/rocket-illustration'
+
+export default {
+  title: 'Cards/Contribution-card',
+  component: ContributionCard,
+}
 
 export const Default = () => (
   <Container>
@@ -22,7 +28,20 @@ export const Default = () => (
   </Container>
 )
 
-export default {
-  title: 'Cards/Contribution-card',
-  component: ContributionCard,
-}
+export const PetitPlus = () => (
+  <Container>
+    <ContributionCard borderStyle="dashed" closeButton={false}>
+      <ContributionCard.Image>
+        <RocketIllustration width={45} height={81} />
+      </ContributionCard.Image>
+
+      <ContributionCard.Title>
+        Un petit plus pour 900 care
+        <ContributionCard.Description>
+          Donnez encore plus de chances à ce projet de voir le jour.
+        </ContributionCard.Description>
+      </ContributionCard.Title>
+      
+    </ContributionCard>
+  </Container>
+)

@@ -10,7 +10,6 @@ export const PillNumber = ({ value, min, max, ...props }) => {
       max={max}
       className={classNames(
         'k-ContributionCard__pillNumber',
-        'k-u-margin-right@s-up',
         props.className,
       )}
       {...props}

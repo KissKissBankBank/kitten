@@ -1,7 +1,6 @@
   
 import styled, { keyframes } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
-import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 
@@ -11,24 +10,13 @@ const fadeOut = keyframes`
 `
 
 export const StyledContributionCard = styled.article`
-  --contributionCard--border-width: ${pxToRem(2)};
-  --contributionCard--border-radius: ${pxToRem(8)};
-  --contributionCard--grid-col: repeat(auto-fit, minmax(${pxToRem(120)}, 1fr));
-  --contributionCard--border-color: ${COLORS.line1};
-
 
   /* CARD STYLE */
 
   max-width: 100%;
-  border: var(--contributionCard--border-width) solid
-    var(--contributionCard--border-color);
-  border-radius: var(--contributionCard--border-radius);
-  border: ${pxToRem(2)} solid ${COLORS.line1};
-
   position: relative;
   display: flex;
   flex-direction: row;
-
   overflow: hidden;
   box-sizing: border-box;
   
@@ -36,7 +24,20 @@ export const StyledContributionCard = styled.article`
     max-width: ${pxToRem(670)};
   }
 
-/* IMAGE */
+  /* IE11 defaults */
+  border-width: ${pxToRem(2)};
+  border-style: solid;
+  border-color: ${COLORS.line1};
+  border-radius: ${pxToRem(8)};
+
+  border-width: var(--contributionCard--border-width);
+  border-style: var(--contributionCard--border-style);
+  border-color: var(--contributionCard--border-color);
+  border-radius: var(--contributionCard--border-radius);
+  
+
+  /* IMAGE */
+
   .k-ContributionCard__imageWrapper {
     flex: 0 0 ${pxToRem(80)};
     top: ${pxToRem(20)};
@@ -50,6 +51,11 @@ export const StyledContributionCard = styled.article`
     overflow: hidden;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
+     
+      /* IE11 defaults */
+      border-top-left-radius: ${pxToRem(8)};
+      border-bottom-left-radius: ${pxToRem(8)};
+
       border-top-left-radius: var(--contributionCard--border-radius);
       border-bottom-left-radius: var(--contributionCard--border-radius);
         
@@ -63,15 +69,26 @@ export const StyledContributionCard = styled.article`
       position: absolute;
       width: ${pxToRem(80)};
   
-    
       @media (min-width: ${ScreenConfig.S.min}px) {
         object-fit: cover;
         object-position: center center;
         width: ${pxToRem(140)};
         height: 100%;
+        transition: transform 0.2s ease-in-out;
+
+        /* IE11 default */
+        border-top-left-radius: ${pxToRem(8)};
+        border-bottom-left-radius: ${pxToRem(8)};
+
         border-top-left-radius: var(--contributionCard--border-radius);
         border-bottom-left-radius: var(--contributionCard--border-radius);
-        transition: transform 0.2s ease-in-out;
+      }
+    }
+    svg {
+      width: ${pxToRem(31)};
+
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        width: ${pxToRem(45)};
       }
     }
   }
@@ -98,7 +115,7 @@ export const StyledContributionCard = styled.article`
     align-items: center;
     justify-self: center;
 
-    grid-gap: ${pxToRem(20)} auto;
+    grid-gap: ${pxToRem(20)} 0;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 
@@ -113,7 +130,7 @@ export const StyledContributionCard = styled.article`
     @media (min-width: ${ScreenConfig.S.min}px) {
       padding: ${pxToRem(20)} ${pxToRem(60)} ${pxToRem(20)} ${pxToRem(30)};
 
-      grid-gap: auto ${pxToRem(30)};
+      grid-gap: 0 ${pxToRem(30)};
       grid-template-columns: ${pxToRem(240)} 1fr 1fr;
       grid-template-rows: 1fr;
       grid-template-areas:
@@ -131,7 +148,7 @@ export const StyledContributionCard = styled.article`
 
   /* SUBCOMPONENTS */
 
-  .k-ContributionCard__subSummary {
+  .k-ContributionCard__title {
     grid-area: cc-text;
 
     font-size: ${stepToRem(-1)};
