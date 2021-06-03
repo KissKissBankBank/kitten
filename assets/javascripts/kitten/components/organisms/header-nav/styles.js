@@ -29,8 +29,15 @@ export const StyledHeader = styled.header`
     }
   }
 
-  .k-Spacer + .k-HeaderNav__stickyContainer {
-    box-shadow: 0 ${pxToRem(2)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
+  &.k-HeaderNav--shadow {
+    .k-Spacer + .k-HeaderNav__stickyContainer {
+      box-shadow: 0 ${pxToRem(2)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
+    }
+  }
+  &.k-HeaderNav--border {
+    .k-Spacer + .k-HeaderNav__stickyContainer {
+      box-shadow: 0 ${pxToRem(1)} 0 rgba(0, 0, 0, 0.08);
+    }
   }
 
   .k-HeaderNav {

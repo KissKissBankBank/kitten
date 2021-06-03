@@ -17,7 +17,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="autocomplete"
           onClick={[Function]}
         >
@@ -69,7 +69,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -127,7 +127,7 @@ Array [
     className="k-FieldInput k-u-margin-top-single"
   >
     <input
-      className="sc-bxivhb LZUsb k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
+      className="sc-bxivhb hmOsQm k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -168,7 +168,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -226,7 +226,7 @@ Array [
     className="k-FieldInput k-u-margin-top-single"
   >
     <input
-      className="sc-bxivhb LZUsb k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
+      className="sc-bxivhb hmOsQm k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
       disabled={false}
       id="input"
       name="field"
@@ -253,7 +253,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -314,7 +314,7 @@ Array [
       className="sc-EHOje iVlWKE k-Form-TextInputWithLimit"
     >
       <input
-        className="sc-bxivhb LZUsb k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+        className="sc-bxivhb hmOsQm k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
         defaultValue=""
         disabled={false}
         id="input"
@@ -349,7 +349,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -410,7 +410,7 @@ Array [
       className="sc-bZQynM eODkLs k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
     >
       <input
-        className="sc-bxivhb LZUsb k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+        className="sc-bxivhb hmOsQm k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"
@@ -444,7 +444,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -505,7 +505,7 @@ Array [
       className="sc-gZMcBi fLBnrA k-Form-PasswordInput"
     >
       <input
-        className="sc-bxivhb LZUsb k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
+        className="sc-bxivhb hmOsQm k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -572,7 +572,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -633,7 +633,7 @@ Array [
       className="sc-gZMcBi fLBnrA k-Form-PasswordInput"
     >
       <input
-        className="sc-bxivhb LZUsb k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+        className="sc-bxivhb hmOsQm k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"
@@ -686,7 +686,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="option-a"
           onClick={[Function]}
         >
@@ -706,7 +706,7 @@ Array [
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-htoDjs cgBYjd k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-htoDjs ELILf k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -728,7 +728,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-htoDjs cgBYjd k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-htoDjs ELILf k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -749,7 +749,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-htoDjs cgBYjd k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-htoDjs ELILf k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc k-Form-RadioButton--regular"
         >
           <input
             className="k-Form-RadioButton__input"

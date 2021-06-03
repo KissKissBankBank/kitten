@@ -893,6 +893,12 @@ Object.defineProperty(exports, "SearchInput", {
     return _searchInput.SearchInput;
   }
 });
+Object.defineProperty(exports, "VerticalProgress", {
+  enumerable: true,
+  get: function get() {
+    return _verticalProgress.VerticalProgress;
+  }
+});
 Object.defineProperty(exports, "VerticalStepper", {
   enumerable: true,
   get: function get() {
@@ -1361,6 +1367,12 @@ Object.defineProperty(exports, "LockIcon", {
     return _lockIcon.LockIcon;
   }
 });
+Object.defineProperty(exports, "LockOutlineIcon", {
+  enumerable: true,
+  get: function get() {
+    return _lockOutlineIcon.LockOutlineIcon;
+  }
+});
 Object.defineProperty(exports, "LoginIcon", {
   enumerable: true,
   get: function get() {
@@ -1425,6 +1437,12 @@ Object.defineProperty(exports, "QuestionMarkIcon", {
   enumerable: true,
   get: function get() {
     return _questionMarkIcon.QuestionMarkIcon;
+  }
+});
+Object.defineProperty(exports, "RefundIcon", {
+  enumerable: true,
+  get: function get() {
+    return _refundIcon.RefundIcon;
   }
 });
 Object.defineProperty(exports, "RocketCircleIcon", {
@@ -1581,6 +1599,12 @@ Object.defineProperty(exports, "ShieldIcon", {
   enumerable: true,
   get: function get() {
     return _shieldIcon.ShieldIcon;
+  }
+});
+Object.defineProperty(exports, "ShieldCheckIcon", {
+  enumerable: true,
+  get: function get() {
+    return _shieldCheckIcon.ShieldCheckIcon;
   }
 });
 Object.defineProperty(exports, "PeopleIcon", {
@@ -2160,6 +2184,8 @@ var _simplePopover = require("./components/popovers/simple-popover");
 
 var _searchInput = require("./components/search/search-input");
 
+var _verticalProgress = require("./components/steppers/vertical-progress");
+
 var _verticalStepper = require("./components/steppers/vertical-stepper");
 
 var _stepper = require("./components/steppers/stepper");
@@ -2310,6 +2336,8 @@ var _locationIcon = require("./components/icons/location-icon");
 
 var _lockIcon = require("./components/icons/lock-icon");
 
+var _lockOutlineIcon = require("./components/icons/lock-outline-icon");
+
 var _loginIcon = require("./components/icons/login-icon");
 
 var _maestroIcon = require("./components/icons/maestro-icon");
@@ -2331,6 +2359,8 @@ var _phoneIcon = require("./components/icons/phone-icon");
 var _pinterestIcon = require("./components/icons/pinterest-icon");
 
 var _questionMarkIcon = require("./components/icons/question-mark-icon");
+
+var _refundIcon = require("./components/icons/refund-icon");
 
 var _rocketCircleIcon = require("./components/icons/rocket-circle-icon");
 
@@ -2383,6 +2413,8 @@ var _fileIcon = require("./components/icons/file-icon");
 var _loudspeakerIcon = require("./components/icons/loudspeaker-icon");
 
 var _shieldIcon = require("./components/icons/shield-icon");
+
+var _shieldCheckIcon = require("./components/icons/shield-check-icon");
 
 var _peopleIcon = require("./components/icons/people-icon");
 

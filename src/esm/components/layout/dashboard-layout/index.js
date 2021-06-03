@@ -194,14 +194,17 @@ export var DashboardLayout = function DashboardLayout(_ref) {
       onClick: handleButtonClick,
       'aria-expanded': isOpen ? isOpen : null
     })
-  }), /*#__PURE__*/React.createElement("main", {
+  }), renderComponentChildrenArray(getReactElementsByType({
+    children: children,
+    type: Alerts
+  })), /*#__PURE__*/React.createElement("main", {
     className: classNames('k-DashboardLayout__main', {
       'k-DashboardLayout__main--fullHeight': fullHeightContent
     }),
     id: "main"
   }, renderComponentArray(getReactElementsWithoutTypeArray({
     children: children,
-    typeArray: [SiteHeader, Header, SideContent, SideFooter]
+    typeArray: [SiteHeader, Header, SideContent, SideFooter, Alerts]
   }))))));
 };
 
@@ -263,6 +266,15 @@ var SideFooter = function SideFooter(_ref6) {
   }, props));
 };
 
+var Alerts = function Alerts(_ref7) {
+  var className = _ref7.className,
+      props = _objectWithoutProperties(_ref7, ["className"]);
+
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: classNames('k-DashboardLayout__alerts', 'k-DashboardLayout__fullWidth', className)
+  }, props));
+};
+
 DashboardLayout.propTypes = {
   backLinkProps: PropTypes.object,
   buttonProps: PropTypes.shape({
@@ -285,3 +297,4 @@ DashboardLayout.Header = Header;
 DashboardLayout.SideContent = SideContent;
 DashboardLayout.SideFooter = SideFooter;
 DashboardLayout.Flow = Flow;
+DashboardLayout.Alerts = Alerts;

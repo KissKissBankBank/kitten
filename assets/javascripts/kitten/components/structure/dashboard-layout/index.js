@@ -224,6 +224,13 @@ export const DashboardLayout = ({
             },
           )}
 
+          {renderComponentChildrenArray(
+            getReactElementsByType({
+              children: children,
+              type: Alerts,
+            }),
+          )}
+
           <main
             className={classNames('k-DashboardLayout__main', {
               'k-DashboardLayout__main--fullHeight': fullHeightContent,
@@ -233,7 +240,13 @@ export const DashboardLayout = ({
             {renderComponentArray(
               getReactElementsWithoutTypeArray({
                 children,
-                typeArray: [SiteHeader, Header, SideContent, SideFooter],
+                typeArray: [
+                  SiteHeader,
+                  Header,
+                  SideContent,
+                  SideFooter,
+                  Alerts,
+                ],
               }),
             )}
           </main>
@@ -308,6 +321,17 @@ const SideFooter = ({ className, ...props }) => (
   />
 )
 
+const Alerts = ({ className, ...props }) => (
+  <div
+    className={classNames(
+      'k-DashboardLayout__alerts',
+      'k-DashboardLayout__fullWidth',
+      className,
+    )}
+    {...props}
+  />
+)
+
 DashboardLayout.propTypes = {
   backLinkProps: PropTypes.object,
   buttonProps: PropTypes.shape({
@@ -332,3 +356,4 @@ DashboardLayout.Header = Header
 DashboardLayout.SideContent = SideContent
 DashboardLayout.SideFooter = SideFooter
 DashboardLayout.Flow = Flow
+DashboardLayout.Alerts = Alerts

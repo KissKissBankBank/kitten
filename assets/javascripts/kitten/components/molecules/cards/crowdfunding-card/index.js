@@ -41,6 +41,7 @@ export const CrowdfundingCard = ({
   widgetState,
   buttonText,
   forceVersion,
+  progressLabel,
   ...others
 }) => {
   const removeCurrentFocus = () => {
@@ -117,11 +118,14 @@ export const CrowdfundingCard = ({
         info3={info3}
         loading={loading}
       />
-      <ProgressBar
-        progress={progress}
-        progressColor={progressColor}
-        loading={loading}
-      />
+      {progress && (
+        <ProgressBar
+          progress={progress}
+          progressColor={progressColor}
+          loading={loading}
+          progressLabel={progressLabel}
+        />
+      )}
       {buttonText && <CardButton text={buttonText} loading={loading} />}
       <State state={state} widgetState={widgetState} loading={loading} />
 
@@ -140,6 +144,7 @@ CrowdfundingCard.propTypes = {
   ]),
   buttonText: PropTypes.string,
   forceVersion: PropTypes.oneOf(['mobile', 'tablet', 'desktop']),
+  progressLabel: PropTypes.string,
 }
 
 CrowdfundingCard.defaultProps = {

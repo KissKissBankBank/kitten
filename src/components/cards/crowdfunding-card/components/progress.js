@@ -51,7 +51,8 @@ var ProgressBar = /*#__PURE__*/function (_PureComponent) {
       var _this$props = this.props,
           progress = _this$props.progress,
           progressColor = _this$props.progressColor,
-          loading = _this$props.loading;
+          loading = _this$props.loading,
+          progressLabel = _this$props.progressLabel;
       if (progress === false) return null;
       var progressValue = loading ? 65 : parseInt(progress, 10);
       return /*#__PURE__*/_react.default.createElement("div", {
@@ -66,7 +67,8 @@ var ProgressBar = /*#__PURE__*/function (_PureComponent) {
           style: {
             height: '4px'
           }
-        }
+        },
+        "aria-label": progressLabel
       }), /*#__PURE__*/_react.default.createElement(_text.Text, {
         weight: "regular",
         size: "micro",
@@ -83,7 +85,8 @@ var ProgressBar = /*#__PURE__*/function (_PureComponent) {
 ProgressBar.propTypes = {
   progress: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.bool]),
   progressColor: _propTypes.default.string,
-  loading: _propTypes.default.bool
+  loading: _propTypes.default.bool,
+  progressLabel: _propTypes.default.string.isRequired
 };
 ProgressBar.defaultProps = {
   progress: 0,

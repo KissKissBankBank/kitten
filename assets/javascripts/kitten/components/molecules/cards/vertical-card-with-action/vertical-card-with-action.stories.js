@@ -12,6 +12,8 @@ const buttonModifierOptions = {
   Oxygen: 'oxygen',
   Checked: 'checked',
   Copper: 'copper',
+  Boron: 'boron',
+  Neon: 'neon',
 }
 
 export const Default = () => (

@@ -40,6 +40,7 @@ const HeaderNav = ({
   stickyProps,
   zIndexConfig,
   size,
+  borderStyle,
 }) => {
   const [isMenuExpanded, setMenuExpanded] = useState(false)
   const [menuExpandBy, setMenuExpandBy] = useState(null)
@@ -151,10 +152,15 @@ const HeaderNav = ({
           '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu,
         }}
         zIndex={zIndexConfig}
-        className={classNames('k-HeaderNav__wrapper', `k-HeaderNav--${size}`, {
-          'k-HeaderNav--menuIsExpanded': isMenuExpanded,
-          'k-HeaderNav--inactiveBackground': isBackgroundInactive,
-        })}
+        className={classNames(
+          'k-HeaderNav__wrapper',
+          `k-HeaderNav--${size}`,
+          `k-HeaderNav--${borderStyle}`,
+          {
+            'k-HeaderNav--menuIsExpanded': isMenuExpanded,
+            'k-HeaderNav--inactiveBackground': isBackgroundInactive,
+          },
+        )}
       >
         <StickyContainer
           ref={stickyContainerRef}
@@ -165,7 +171,7 @@ const HeaderNav = ({
             stickyProps?.className,
           )}
         >
-          <nav ref={headerRef} role="banner" id={id} className="k-HeaderNav">
+          <nav ref={headerRef} id={id} className="k-HeaderNav">
             <QuickAccessLink
               className="quickAccessLink"
               {...quickAccessProps}
@@ -206,6 +212,7 @@ HeaderNav.propTypes = {
     headerWithOpenMenu: PropTypes.number,
   }),
   size: PropTypes.oneOf(['small', 'regular']),
+  borderStyle: PropTypes.oneOf(['none', 'shadow', 'border']),
 }
 
 HeaderNav.defaultProps = {
@@ -219,6 +226,7 @@ HeaderNav.defaultProps = {
     headerWithOpenMenu: 3,
   },
   size: 'regular',
+  borderStyle: 'shadow',
 }
 
 export default HeaderNav

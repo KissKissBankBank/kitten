@@ -154,8 +154,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -511,8 +511,8 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -869,8 +869,8 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -1227,8 +1227,8 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -1585,8 +1585,8 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -1943,8 +1943,8 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -2302,8 +2302,8 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -2660,8 +2660,8 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -3018,8 +3018,8 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -3376,8 +3376,8 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -3734,8 +3734,8 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -4092,8 +4092,8 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -4450,8 +4450,8 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -4808,8 +4808,8 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -5171,8 +5171,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -5529,8 +5529,8 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -5887,8 +5887,8 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;

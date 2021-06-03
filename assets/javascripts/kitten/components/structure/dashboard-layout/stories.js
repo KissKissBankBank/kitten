@@ -28,12 +28,54 @@ import {
   HeaderMenu,
   KissKissBankBankLogo,
   domElementHelper,
+  PasswordIcon,
+  DropdownSelectWithInput,
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  InstagramIcon,
+  YoutubeIcon,
+  Alert,
 } from '../../..'
 
 import { Default as Table } from '../../organisms/tables/list-table/list-table.stories.js'
 
 import { useWindowWidth } from '../../../helpers/utils/use-window-width-hook'
 import { useDeepCompareEffect } from '../../../helpers/utils/use-deep-compare-effect-hook'
+
+const options = [
+  {
+    value: 'facebook',
+    label: 'https://www.facebook.com/',
+    icon: <FacebookIcon width="8" height="15" />,
+  },
+  {
+    value: 'twitter',
+    label: 'https://www.twitter.com/',
+    icon: <TwitterIcon width="15" height="14" />,
+  },
+  {
+    value: 'linkedin',
+    label: 'https://www.linkedin.com/',
+    icon: <LinkedinIcon width="14" height="14" />,
+  },
+  {
+    value: 'instagram',
+    label: 'https://www.instagram.com/',
+    icon: <InstagramIcon width="17" height="17" />,
+  },
+  {
+    value: 'youtube',
+    label: 'https://www.youtube.com/',
+    icon: <YoutubeIcon width="17" height="12" />,
+  },
+  {
+    value: 'website',
+    label: 'https://www.…',
+    icon: <GlobeIcon width="16" height="16" />,
+  },
+]
+
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 const getElementById = id => document.getElementById(id)
@@ -63,15 +105,6 @@ const CardHolder = styled.div`
       padding: ${pxToRem(30)};
     }
   }
-`
-
-const HelpBox = styled.div`
-  height: ${pxToRem(80)};
-  background-color: rgb(255, 255, 255, 0.05);
-  padding: 0 ${pxToRem(20)};
-  display: flex;
-  align-items: center;
-  border-radius: ${pxToRem(8)};
 `
 
 export default {
@@ -274,22 +307,22 @@ export const Default = () => {
         }}
       </DashboardLayout.SideContent>
       <DashboardLayout.SideFooter>
-        <HelpBox>
-          <AvatarWithTextAndBadge as="a" href="#">
-            <AvatarWithTextAndBadge.Image src="/kitten.jpg" alt="" />
-
-            <AvatarWithTextAndBadge.Text>
-              <Text weight="bold" color="background1" size="tiny">
-                Besoin d’aide ?
-              </Text>
-              <br />
-              <Text weight="bold" color="primary1" size="tiny">
-                Contacter votre coach
-              </Text>
-            </AvatarWithTextAndBadge.Text>
-          </AvatarWithTextAndBadge>
-        </HelpBox>
+        <Button modifier="boron" fluid variant="orion">
+          <PasswordIcon />
+          <span>Voir ma page projet</span>
+        </Button>
       </DashboardLayout.SideFooter>
+
+      {boolean('Display Alerts', false) && (
+        <DashboardLayout.Alerts>
+          <Alert closeButton info>
+            Voilà une info
+          </Alert>
+          <Alert closeButton error>
+            Voilà une alerte
+          </Alert>
+        </DashboardLayout.Alerts>
+      )}
 
       {selectedView === 'flow' && <FlowExample />}
       {selectedView === 'dashboard' && <DashExample />}
@@ -350,6 +383,16 @@ const FlowExample = () => (
         augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel
         augue laoreet rutrum faucibus dolor auctor.
       </p>
+      <DropdownSelectWithInput
+        id="DropdownSelectWithInput"
+        hideLabel
+        labelText="Facebook"
+        options={options}
+        highlightOptionBox
+        defaultSelectedValue="facebook"
+        deactivateDropdown
+        className="k-u-margin-bottom-triple"
+      />
       <p className="k-u-weight-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis,
         est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
@@ -487,6 +530,7 @@ const SiteHeaderComponent = () => {
         zIndex: 300,
       }}
       size="small"
+      borderStyle="border"
     >
       <HeaderNav.Logo href="#">
         <KissKissBankBankLogo height="25" className="k-u-margin-left-double" />

@@ -9,14 +9,21 @@ exports.SofortIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+
 var _react = _interopRequireDefault(require("react"));
 
-var SofortIcon = function SofortIcon(props) {
+var _classnames = _interopRequireDefault(require("classnames"));
+
+var SofortIcon = function SofortIcon(_ref) {
+  var className = _ref.className,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["className"]);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     width: "55",
     height: "10",
     viewBox: "0 0 55 10",
-    xmlns: "http://www.w3.org/2000/svg"
+    xmlns: "http://www.w3.org/2000/svg",
+    className: (0, _classnames.default)('k-ColorSvg', className)
   }, props), /*#__PURE__*/_react.default.createElement("title", null, "Sofort"), /*#__PURE__*/_react.default.createElement("g", {
     fill: "#E5782B",
     fillRule: "evenodd"

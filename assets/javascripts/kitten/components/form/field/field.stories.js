@@ -1,5 +1,5 @@
 import React from 'react'
-import { text, number, boolean } from '@storybook/addon-knobs'
+import { text, number, boolean, select } from '@storybook/addon-knobs'
 import {
   FieldInputExample,
   FieldPasswordExample,
@@ -31,7 +31,7 @@ export const WithInput = () => {
     <StoryGrid>
       <FieldInputExample
         id={text('ID', 'input')}
-        tiny={boolean('Tiny', false)}
+        size={boolean('Tiny', false) ? 'tiny' : null}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
         tooltipProps={{ actionLabel: 'Learn more' }}
@@ -42,6 +42,7 @@ export const WithInput = () => {
         limit={number('Limit', undefined)}
         unit={text('Unit', undefined)}
         noMargin={boolean('No margin only on Input', false)}
+        variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
       />
     </StoryGrid>
   )
@@ -52,7 +53,7 @@ export const WithPassword = () => {
     <StoryGrid>
       <FieldPasswordExample
         id={text('ID', 'input')}
-        tiny={boolean('Tiny', false)}
+        size={boolean('Tiny', false) ? 'tiny' : null}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
         tooltipProps={{ actionLabel: 'Learn more' }}
@@ -60,6 +61,7 @@ export const WithPassword = () => {
         placeholder={text('Placeholder', 'Placeholder…')}
         error={boolean('Error?', false)}
         errorMessage={text('Error', 'Error message…')}
+        variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
       />
     </StoryGrid>
   )
@@ -70,7 +72,7 @@ export const WithRadioButtons = () => {
     <StoryGrid>
       <FieldRadioButtonSetExample
         id={text('ID', 'option-a')}
-        tiny={boolean('Tiny', false)}
+        size={boolean('Tiny', false) ? 'tiny' : null}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
         tooltipProps={{ actionLabel: 'Learn more' }}
@@ -92,6 +94,7 @@ export const WithRadioButtons = () => {
         ]}
         error={boolean('Error?', false)}
         errorMessage={text('Error', 'Error message…')}
+        variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
       />
     </StoryGrid>
   )
@@ -102,7 +105,7 @@ export const WithAutocomplete = () => {
     <StoryGrid>
       <FieldAutocompleteExample
         id={text('ID', 'select')}
-        tiny={boolean('Tiny', false)}
+        size={boolean('Tiny', false) ? 'tiny' : null}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
         tooltipProps={{ actionLabel: 'Learn more' }}
@@ -122,6 +125,7 @@ export const WithAutocomplete = () => {
         ]}
         error={boolean('Error?', false)}
         errorMessage={text('Error', 'Error message…')}
+        variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
       />
     </StoryGrid>
   )

@@ -77,7 +77,13 @@ export const TeamCardButtonWithTooltip = ({
       <span className="k-TeamCardButtonWithTooltip__tooltipArrow" />
     </span>
 
-    <ButtonIcon modifier="hydrogen" className="k-ButtonIcon--phone" tag="span">
+    <ButtonIcon
+      size="tiny"
+      modifier="hydrogen"
+      className="k-ButtonIcon--phone"
+      tag="span"
+      aria-label={phoneNumber}
+    >
       <PhoneIcon className="k-ButtonIcon__svg" />
     </ButtonIcon>
   </StyledTeamCardButtonWithTooltip>

@@ -6,6 +6,114 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breaking Change: Move component files around.
 - Feature: `Text`: Add default value 'light' to `weight` prop.
+- Fix: `TextInputWithUnit`: Fix `variant` propagation.
+
+## [3.17.2] - 2021-06-03
+
+Fix:
+
+- `ImageCropper`: Use default Label size.
+
+## [3.17.1] - 2021-06-03
+
+Fixes:
+
+- `DropdownSelectWithInput`: Fix selected item margin when dropdownDisabled.
+- `Label`: Update mobile styles.
+- `DashboardMenu`: Fix expandable list padding.
+
+## [3.17.0] - 2021-05-31
+
+Feature:
+
+- `DashboardLayout`: Replace `Alert` subcomponent with `Alerts` wrapper.
+
+Fix:
+
+- `ButtonIcon`: Fix `tag` transmission.
+- `TeamCard`: Fix buttons sizes.
+
+## [3.16.0] - 2021-05-28
+
+Features:
+
+- `ButtonGroup` : Add `orion` variant.
+- `RangeSlider`: Add `disabled` prop, defaults to false.
+
+Fixes:
+
+- `Button`: Color icons will not be styled by Button SVG styles.
+- `CrowdfundingCard`: Remove console warning when progress is not displayed.
+- `RadioButton`: Update `disabled` status style.
+- Fix badly formatted SASS colors.
+
+## [3.15.0] - 2021-05-28
+
+Features:
+
+- Add `grey1` color to colors config & refactor.
+- Add the following icon components:
+  - `LockOutlineIcon`
+  - `RefundIcon`
+  - `ShieldCheckIcon`
+- `DashboardLayout`: Add `Alert` subcomponent.
+- `DropdownSelectWithInput`: Add `size` prop, defaults to `normal`, inherited by `DropdownPhoneSelect`.
+- `CrowdfundingCard`: Add `progressLabel` prop.
+
+Fixes:
+
+- `TextInput`: Fix padding on `orion` variant.
+- `Button`: Fix `boron` variant border color.
+- `DashboardMenu`: Fix list items spacing.
+- `Separator`: Reduce specificity of the styles.
+- `HeaderNav`: Fix accessibility error.
+
+## [3.14.0] - 2021-05-25
+
+Features:
+
+- Add `orange2` and `orange3` to colors config.
+- `Button`: Add `neon` modifier.
+
+Fix:
+
+- `VerticalProgress`: Fix `z-index` value.
+
+## [3.13.1] - 2021-05-20
+
+Fixes:
+
+- `VerticalProgress` : Export component.
+- `DashboardLayout`: Specify size for `DashboardLayout.Flow` content column.
+
+## [3.13.0] - 2021-05-20
+
+Features:
+
+- `VerticalProgress`: New component.
+- `LinkBox`:
+  - Add `orion` variant.
+  - Add `backgroundColor` and `textColor` prop to `Background` and `Text` component.
+
+Fixes:
+
+- `Modal/Next`: Fix `Modal.Button` style when alone inside a `fullSize` Action.
+- `Dropdown`: Add default value for `onBlur` prop (`() => {}`).
+
+## [3.12.0] - 2021-05-18
+
+Features:
+
+- `HeaderNav`: Add styles to bottom border, defaults to `'shadow'`.
+- `Modal/Next`: Add `fullSizeOnMobile` prop, defaults to false.
+- `Modal/Next`: Add the following props to `Modal.Actions`:
+  - `sticky`
+  - `stickyOnMobile`
+  - `fullSize`
+  - `fullSizeOnMobile`
+- `Modal/Next`: Deprecate `withoutMargin` prop on `Modal.Paragraph` in favor of `noMargin`.
+- Add `boron` modifier to Button component.
+- Add new color: `font3`.
 
 ## [3.11.0] - 2021-05-14
 

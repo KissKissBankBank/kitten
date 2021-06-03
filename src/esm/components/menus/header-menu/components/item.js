@@ -48,7 +48,7 @@ Item.propTypes = {
   href: PropTypes.string,
   isSelected: PropTypes.bool,
   liProps: PropTypes.object,
-  modifier: PropTypes.oneOf([null, undefined, 'light', 'default', 'hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked']),
+  modifier: PropTypes.oneOf([null, undefined, 'light', 'default', 'hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked', 'boron', 'neon']),
   size: PropTypes.oneOf(['normal', 'tiny', 'big']),
   as: deprecated(PropTypes.string, 'Please use `tag` instead.'),
   tag: PropTypes.string

@@ -35,4 +35,20 @@ describe('<LinkBox />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with variant prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <LinkBox href="#foobar" isExternal variant="orion">
+            <LinkBox.Text>foobar</LinkBox.Text>
+          </LinkBox>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })

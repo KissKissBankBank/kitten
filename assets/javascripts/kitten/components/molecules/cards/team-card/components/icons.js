@@ -13,6 +13,10 @@ const StyledTeamCardIcons = styled.div`
   margin-top: ${pxToRem(15)};
   display: flex;
 
+  > * {
+    flex-shrink: 0;
+  }
+
   .k-TeamCardIcons__buttonIcon:not(:last-child) {
     margin-right: ${pxToRem(15)};
   }
@@ -36,6 +40,7 @@ export const TeamCardIcons = ({
     <StyledTeamCardIcons>
       {email && (
         <ButtonIcon
+          size="tiny"
           tag="a"
           href={`mailto:${email}`}
           modifier="hydrogen"
@@ -71,10 +76,10 @@ const SocialLinks = ({ links = [] }) => (
           aria-label={link.name}
           href={link.href}
           modifier={`social_${link.name}`}
-          size="tiny"
           target="_blank"
           rel="noopener"
           className="k-TeamCardIcons__buttonIcon"
+          size="tiny"
         >
           {link.name === 'linkedin' && (
             <LinkedinIcon aria-hidden className="k-ButtonIcon__svg" />

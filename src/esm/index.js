@@ -148,6 +148,7 @@ export { SimplePopover } from './components/popovers/simple-popover'; // Search
 
 export { SearchInput } from './components/search/search-input'; // Steppers
 
+export { VerticalProgress } from './components/steppers/vertical-progress';
 export { VerticalStepper } from './components/steppers/vertical-stepper';
 export { Stepper } from './components/steppers/stepper'; // Tables
 
@@ -233,6 +234,7 @@ export { LinkIcon } from './components/icons/link-icon';
 export { ListIcon } from './components/icons/list-icon';
 export { LocationIcon } from './components/icons/location-icon';
 export { LockIcon } from './components/icons/lock-icon';
+export { LockOutlineIcon } from './components/icons/lock-outline-icon';
 export { LoginIcon } from './components/icons/login-icon';
 export { MaestroIcon } from './components/icons/maestro-icon';
 export { MasterCardIcon } from './components/icons/mastercard-icon';
@@ -244,6 +246,7 @@ export { PayPalIcon } from './components/icons/paypal-icon';
 export { PhoneIcon } from './components/icons/phone-icon';
 export { PinterestIcon } from './components/icons/pinterest-icon';
 export { QuestionMarkIcon } from './components/icons/question-mark-icon';
+export { RefundIcon } from './components/icons/refund-icon';
 export { RocketCircleIcon } from './components/icons/rocket-circle-icon';
 export { RocketIcon } from './components/icons/rocket-icon';
 export { SaveIcon } from './components/icons/save-icon';
@@ -270,6 +273,7 @@ export { TagIcon } from './components/icons/tag-icon';
 export { FileIcon } from './components/icons/file-icon';
 export { LoudspeakerIcon } from './components/icons/loudspeaker-icon';
 export { ShieldIcon } from './components/icons/shield-icon';
+export { ShieldCheckIcon } from './components/icons/shield-check-icon';
 export { PeopleIcon } from './components/icons/people-icon';
 export { StatsIcon } from './components/icons/stats-icon';
 export { SpeechBubbleIcon } from './components/icons/speech-bubble-icon'; // ---------

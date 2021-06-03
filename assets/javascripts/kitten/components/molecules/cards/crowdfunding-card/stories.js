@@ -40,6 +40,7 @@ export default {
 export const CrowdfundingCard = () => (
   <StoryContainer>
     <CrowdfundingCardComponent
+      progressLabel="Crowdfunding progress"
       href={text('Link', '#')}
       imageProps={{ alt: '', src: text('Image url', '/kitten.jpg') }}
       ownerTitle={text('Owner title', 'Owner title')}
@@ -59,7 +60,7 @@ export const CrowdfundingCard = () => (
       info3={text('Info3', 'Lorem ipsum…')}
       progress={number('Progress', 42)}
       state={text('State', 'Lorem ipsum…')}
-      buttonText={text('Button text', null)}
+      buttonText={text('Button text', '')}
       forceVersion={select(
         'Version',
         {
@@ -153,7 +154,7 @@ export const LendopolisCrowdfundingCard = () => {
         info1={<Info label="maturité" text="48 mois" />}
         info2={<Info label="sur 157 000 €" text="157 000 €" />}
         info3={<Info label="Taux d'intérêt" text="5,0%" />}
-        progress={number('Progress', 42)}
+        progress={false}
         widgetState={STATE_CHOICES[widgetState]}
         additionalInfo={'Collecte réservée aux départements : 92, 34, 12, 82'}
         title="Aller sur la collecte …"

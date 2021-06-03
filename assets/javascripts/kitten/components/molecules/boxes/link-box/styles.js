@@ -4,8 +4,11 @@ import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 
 export const StyledLinkBox = styled.a`
-  display: flex;
+  /* IE11 defaults */
   color: ${COLORS.font1};
+
+  display: flex;
+  color: var(--LinkBox-text-color);
   text-decoration: none;
 
   &:focus {
@@ -24,12 +27,15 @@ export const StyledLinkBox = styled.a`
   }
 
   .k-LinkBox__link {
+    /* IE11 defaults */
+    background-color: ${COLORS.background1};
+
     display: flex;
     min-height: ${pxToRem(90)};
     width: 100%;
     box-sizing: border-box;
     color: ${COLORS.font1};
-    background-color: ${COLORS.background1};
+    background-color: var(--LinkBox-background-color);
     border: ${pxToRem(2)} solid ${COLORS.line1};
     border-radius: ${pxToRem(4)};
     transition: background-color 0.2s ease;
@@ -72,6 +78,45 @@ export const StyledLinkBox = styled.a`
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       padding-left: ${pxToRem(30)};
       padding-right: ${pxToRem(32)};
+    }
+  }
+
+  // VARIANT
+
+  .k-LinkBox__link--orion {
+    /* IE11 defaults */
+    background-color: ${COLORS.background1};
+    border: ${pxToRem(2)} solid ${COLORS.background1};
+
+    min-height: ${pxToRem(60)};
+    padding-top: ${pxToRem(7)};
+    padding-bottom: ${pxToRem(7)};
+    border-radius: ${pxToRem(8)};
+    background-color: var(--LinkBox-background-color);
+    border: ${pxToRem(2)} solid var(--LinkBox-background-color);
+
+    &:hover {
+      background-color: var(--LinkBox-background-color);
+      border: ${pxToRem(2)} solid var(--LinkBox-background-color);
+
+      .k-LinkBox__arrow {
+        transform: translate(${pxToRem(5)}, ${pxToRem(0)});
+      }
+    }
+
+    &:active {
+      background-color: var(--LinkBox-background-color);
+      border: ${pxToRem(2)} solid var(--LinkBox-background-color);
+    }
+
+    .k-LinkBox__arrow {
+      padding-left: ${pxToRem(20)};
+      padding-right: ${pxToRem(18)};
+    }
+
+    .k-LinkBox__textContainer {
+      margin: 0 0 0 ${pxToRem(20)};
+      color: var(--LinkBox-text-color);
     }
   }
 `

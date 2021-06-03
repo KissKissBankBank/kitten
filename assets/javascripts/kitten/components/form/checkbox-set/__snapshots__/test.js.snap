@@ -6,7 +6,7 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
   disabled={false}
 >
   <legend
-    className="sc-htpNat dAYfV k-Label k-Form-CheckboxSet__label k-Label--normal"
+    className="sc-htpNat dvPVIL k-Label k-Form-CheckboxSet__label k-Label--normal"
     onClick={[Function]}
   >
     Label
@@ -72,7 +72,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
   disabled={false}
 >
   <legend
-    className="sc-htpNat dAYfV k-Label k-Form-CheckboxSet__label k-Label--normal"
+    className="sc-htpNat dvPVIL k-Label k-Form-CheckboxSet__label k-Label--normal"
     onClick={[Function]}
   >
     Label test

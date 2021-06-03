@@ -5,11 +5,17 @@ import COLORS from '../../assets/javascripts/kitten/constants/colors-config'
 const sass = {
   'font-1': '#222', // Dark Grey
   'font-2': '#b8b8b8', // Semi Dark Grey
+  'font-3': '#949494', // Extra semi dark grey, used for text
+
   'background-1': '#fff', // White
   'background-2': '#fbfbfb', // Extra Light Grey
   'background-3': '#f6f6f6', // Light Grey
+
   'line-1': '#eee', // Semi Light Grey
   'line-2': '#d8d8d8', // Grey
+  'line-3': '#2d2d2d', // Extra semi dark grey, not used for text
+
+  'grey-1': '#636363', // Medium grey used for text or not
 
   'primary-1': '#19b4fa', // Primary
   'primary-2': '#05a8e6', // Semi Dark Primary
@@ -30,14 +36,16 @@ const sass = {
   'tertiary-3': '#4ae191',
 
   'valid': '#61d079', // Green
-  'valid1': 'rgba(97, 208, 121, .1)', // Green Light
+  'valid1': 'hsl(133, 54%, 94%)', // Green Light
 
   'error': '#ff0046', // Red
   'error-2': '#ffe5ec', // Light Red
   'error-3': '#ffb2c7', // Semi Light Red
 
   'orange': '#ff7800',
-  'orange1': 'rgba(255, 130, 15, .1)', // Orange light
+  'orange1': '#fff2e7', // Orange light
+  'orange2': '#f57905', // Orange semi dark
+  'orange3': '#eb6e00', // Orange dark
 
   'red-light-mdc': '#ffebe0',
   'red-mdc': '#ff0000',

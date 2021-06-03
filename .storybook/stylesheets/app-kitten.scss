@@ -12,3 +12,7 @@
 body, body.sb-show-main.sb-main-padded {
   padding: 0;
 }
+
+html {
+  overscroll-behavior: none;
+}

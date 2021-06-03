@@ -43,6 +43,11 @@ export const Default = () => {
           value={text('value', '+33 1 23 45 67 89')}
           locale={select('locale', ['fr', 'en', 'nl'], 'fr')}
           flagsUrl={flagFile}
+          size={select(
+            'size',
+            ['tiny', 'normal', 'big', 'huge', 'giant'],
+            'normal',
+          )}
         />
         <p>
           Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
@@ -85,6 +90,11 @@ export const WithoutValues = () => {
           }}
           locale={select('locale', ['fr', 'en', 'nl'], 'fr')}
           flagsUrl={flagFile}
+          size={select(
+            'size',
+            ['tiny', 'normal', 'big', 'huge', 'giant'],
+            'normal',
+          )}
         />
       </GridCol>
     </Grid>

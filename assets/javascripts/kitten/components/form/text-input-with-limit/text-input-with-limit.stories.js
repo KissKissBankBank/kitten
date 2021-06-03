@@ -7,6 +7,14 @@ const variantOptions = {
   Orion: 'orion',
 }
 
+const sizeOptions = {
+  Tiny: 'tiny',
+  Regular: 'regular',
+  Big: 'big',
+  Huge: 'huge',
+  Giant: 'giant',
+}
+
 const tagOptions = {
   Input: 'input',
   Textarea: 'textarea',
@@ -18,6 +26,7 @@ export const Default = () => (
     tag={select('Tag', tagOptions, 'input')}
     variant={select('Variant', variantOptions, 'andromeda')}
     limit={number('Limit', 80)}
+    size={select('Size', sizeOptions, 'regular')}
   />
 )
 

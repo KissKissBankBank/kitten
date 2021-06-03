@@ -88,6 +88,8 @@ const StyledRadioButton = styled.div`
   /* Disabled */
 
   .k-Form-RadioButton__input:disabled {
+    cursor: not-allowed;
+
     & + .k-Form-RadioButton__label {
       border-color: ${COLORS.line2};
     }

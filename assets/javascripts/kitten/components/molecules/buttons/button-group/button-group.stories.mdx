@@ -15,7 +15,7 @@ import { ButtonGroup } from '@kisskissbankbank/kitten'
 ## Usage
 
 <Canvas>
-  <Story name="ButtonGroup" story={stories.Default} />
+  <Story name="Default" story={stories.Default} />
 </Canvas>
 
 #### Default
@@ -26,4 +26,17 @@ import { ButtonGroup } from '@kisskissbankbank/kitten'
   <ButtonGroup.Button active>Button2</ButtonGroup.Button>
   <ButtonGroup.Button>Button3</ButtonGroup.Button>
 </ButtonGroup>
+```
+
+#### With variant
+
+<Canvas>
+  <Story name="WithVariant" story={stories.WithVariant} />
+</Canvas>
+
+```js
+  <ButtonGroup variant="orion">
+    <ButtonGroup.Button>Button1</ButtonGroup.Button>
+    <ButtonGroup.Button active>Button2</ButtonGroup.Button>
+  </ButtonGroup>
 ```

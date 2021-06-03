@@ -5,11 +5,16 @@ import PropTypes from 'prop-types';
 import { StyledLinkBox } from './styles';
 import classNames from 'classnames';
 import { ArrowIcon } from '../../../components/icons/arrow-icon';
+import COLORS from '../../../constants/colors-config';
 export var LinkBox = function LinkBox(_ref) {
   var className = _ref.className,
       href = _ref.href,
       isExternal = _ref.isExternal,
-      props = _objectWithoutProperties(_ref, ["className", "href", "isExternal"]);
+      variant = _ref.variant,
+      backgroundColor = _ref.backgroundColor,
+      textColor = _ref.textColor,
+      style = _ref.style,
+      props = _objectWithoutProperties(_ref, ["className", "href", "isExternal", "variant", "backgroundColor", "textColor", "style"]);
 
   var target = isExternal ? {
     target: '_blank',
@@ -19,7 +24,11 @@ export var LinkBox = function LinkBox(_ref) {
     href: href,
     className: className
   }), /*#__PURE__*/React.createElement("div", {
-    className: "k-LinkBox__link"
+    className: classNames('k-LinkBox__link', className, "k-LinkBox__link--".concat(variant)),
+    style: _extends({}, style, {
+      '--LinkBox-background-color': backgroundColor,
+      '--LinkBox-text-color': textColor
+    })
   }, props.children, /*#__PURE__*/React.createElement("div", {
     className: "k-LinkBox__arrow"
   }, /*#__PURE__*/React.createElement(ArrowIcon, {
@@ -51,9 +60,15 @@ LinkBox.Text = function (_ref3) {
 LinkBox.propTypes = {
   href: PropTypes.string,
   isExternal: PropTypes.bool,
-  linkProps: PropTypes.object
+  linkProps: PropTypes.object,
+  variant: PropTypes.oneOf(['andromeda', 'orion']),
+  backgroundColor: PropTypes.string,
+  textColor: PropTypes.string
 };
 LinkBox.defaultProps = {
   href: '#',
-  isExternal: false
+  isExternal: false,
+  variant: 'andromeda',
+  backgroundColor: COLORS.background1,
+  textColor: null
 };

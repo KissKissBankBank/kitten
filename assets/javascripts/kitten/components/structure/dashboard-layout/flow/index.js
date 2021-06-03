@@ -25,7 +25,7 @@ const StyledFlow = styled.div`
     min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
     display: grid;
     grid-template-rows: 1fr auto;
-    grid-template-columns: 1fr 20vw;
+    grid-template-columns: 35vw 20vw;
     gap: 0 5vw;
   }
 
