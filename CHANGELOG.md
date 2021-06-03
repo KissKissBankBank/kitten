@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TextInputWithUnit`: Fix `variant` propagation.
+
 ## [3.17.2] - 2021-06-03
 
 Fix:

@@ -37,8 +37,9 @@ export const FieldInputExample = ({
   errorMessage,
   limit,
   unit,
-  tiny,
+  size,
   noMargin,
+  variant,
 }) => (
   <FieldBase
     id={id}
@@ -51,13 +52,14 @@ export const FieldInputExample = ({
   >
     <Field.Input
       id={id}
-      tiny={tiny}
+      size={size}
       limit={limit}
       unit={unit}
       name="field"
       placeholder={placeholder}
       error={error}
       noMargin={noMargin}
+      variant={variant}
     />
   </FieldBase>
 )
@@ -71,7 +73,8 @@ export const FieldPasswordExample = ({
   placeholder,
   error,
   errorMessage,
-  tiny,
+  variant,
+  size,
 }) => (
   <FieldBase
     id={id}
@@ -84,12 +87,13 @@ export const FieldPasswordExample = ({
   >
     <Field.Password
       id={id}
-      tiny={tiny}
+      size={size}
       name="field"
       iconLabel="Show password"
       hiddenIconLabel="Hide password"
       placeholder={placeholder}
       error={error}
+      variant={variant}
     />
   </FieldBase>
 )
@@ -103,6 +107,7 @@ export const FieldRadioButtonSetExample = ({
   items,
   error,
   errorMessage,
+  variant,
 }) => (
   <FieldBase
     id={id}
@@ -113,7 +118,9 @@ export const FieldRadioButtonSetExample = ({
     error={error}
     errorMessage={errorMessage}
   >
-    <Field.RadioButtonSet name="radio" items={items} error={error} />
+    <Field.RadioButtonSet name="radio" items={items} error={error}
+      variant={variant}
+    />
   </FieldBase>
 )
 
@@ -127,7 +134,8 @@ export const FieldAutocompleteExample = ({
   error,
   errorMessage,
   items,
-  tiny,
+  size,
+  variant,
 }) => (
   <FieldBase
     id={id}
@@ -140,11 +148,12 @@ export const FieldAutocompleteExample = ({
   >
     <Field.Autocomplete
       id={id}
-      tiny={tiny}
+      size={size}
       name="field"
       placeholder={placeholder}
       error={error}
       items={items}
+      variant={variant}
     />
   </FieldBase>
 )
