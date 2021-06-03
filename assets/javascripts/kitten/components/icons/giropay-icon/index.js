@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export const GiropayIcon = ({className, ...props}) => (
+export const GiropayIcon = ({ className, ...props }) => (
   <svg
     width="47"
     height="20"

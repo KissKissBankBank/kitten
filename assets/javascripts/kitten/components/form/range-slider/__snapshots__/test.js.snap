@@ -2,7 +2,7 @@
 
 exports[`<RangeSlider /> should match its disabled snapshot with disabled props 1`] = `
 <div
-  className="sc-bdVaJa bWqbgp k-RangeSlider k-RangeSlider--disabled"
+  className="sc-bdVaJa eOaogP k-RangeSlider k-RangeSlider--disabled"
   style={
     Object {
       "--range-input-ratio": 0,
@@ -23,7 +23,7 @@ exports[`<RangeSlider /> should match its disabled snapshot with disabled props 
 
 exports[`<RangeSlider /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa bWqbgp k-RangeSlider"
+  className="sc-bdVaJa eOaogP k-RangeSlider"
   style={
     Object {
       "--range-input-ratio": 0,

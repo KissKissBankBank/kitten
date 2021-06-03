@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export const MasterCardIcon = ({className, ...props}) => (
+export const MasterCardIcon = ({ className, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 340.53 264.89"

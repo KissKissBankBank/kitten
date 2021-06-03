@@ -71,7 +71,6 @@ const options = [
   },
 ]
 
-
 import { Default as Table } from '../../tables/list-table/list-table.stories.js'
 
 import { useWindowWidth } from '../../../helpers/utils/use-window-width-hook'
@@ -384,14 +383,14 @@ const FlowExample = () => (
         augue laoreet rutrum faucibus dolor auctor.
       </p>
       <DropdownSelectWithInput
-          id="DropdownSelectWithInput"
-          hideLabel
-          labelText="Facebook"
-          options={options}
-          highlightOptionBox
-          defaultSelectedValue="facebook"
-          deactivateDropdown
-          className="k-u-margin-bottom-triple"
+        id="DropdownSelectWithInput"
+        hideLabel
+        labelText="Facebook"
+        options={options}
+        highlightOptionBox
+        defaultSelectedValue="facebook"
+        deactivateDropdown
+        className="k-u-margin-bottom-triple"
       />
       <p className="k-u-weight-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis,

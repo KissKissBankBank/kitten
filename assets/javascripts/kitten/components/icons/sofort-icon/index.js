@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export const SofortIcon = ({className, ...props}) => (
+export const SofortIcon = ({ className, ...props }) => (
   <svg
     width="55"
     height="10"

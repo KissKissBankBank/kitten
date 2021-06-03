@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export const IdealIcon = ({className, ...props}) => (
+export const IdealIcon = ({ className, ...props }) => (
   <svg
     width="33"
     height="28"

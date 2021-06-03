@@ -41,11 +41,7 @@ export const VerticalProgress = ({ children, ...props }) => {
   return (
     <StyledContainer>
       <nav className="k-VerticalProgress">
-        <ul
-          role="tablist"
-          className="k-VerticalProgress__list"
-          {...props}
-        >
+        <ul role="tablist" className="k-VerticalProgress__list" {...props}>
           {children}
         </ul>
       </nav>

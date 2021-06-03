@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export const CbIcon = ({className, ...props}) => (
+export const CbIcon = ({ className, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 2051.48 845.02"

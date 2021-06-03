@@ -12,7 +12,6 @@ import {
   TABLET_HEADER_HEIGHT,
   DESKTOP_HEADER_HEIGHT,
 } from './config'
-import { hexToRgba } from '../../../helpers/utils/hex-to-rgba.js'
 
 export const StyledHeader = styled.header`
   position: relative;
