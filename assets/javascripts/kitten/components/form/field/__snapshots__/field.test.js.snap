@@ -17,7 +17,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="autocomplete"
           onClick={[Function]}
         >
@@ -69,7 +69,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -168,7 +168,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -253,7 +253,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -349,7 +349,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -444,7 +444,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -572,7 +572,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -686,7 +686,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa iGKbZH k-Label k-Label--micro"
+          className="sc-bdVaJa cioPrE k-Label k-Label--normal"
           htmlFor="option-a"
           onClick={[Function]}
         >

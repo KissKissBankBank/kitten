@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Label`: Update mobile styles.
 - Fix: `DashboardMenu`: Fix expandable list padding.
 
 ## [3.17.0] - 2021-05-31

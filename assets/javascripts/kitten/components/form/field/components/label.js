@@ -20,7 +20,7 @@ export class FieldLabel extends Component {
       <div className="k-u-margin-bottom-single" {...others}>
         <Line style={{ lineHeight: 1 }}>
           <Line.Item>
-            <Label {...labelProps} size={labelProps.size || 'micro'}>
+            <Label {...labelProps}>
               {children}
             </Label>
           </Line.Item>
