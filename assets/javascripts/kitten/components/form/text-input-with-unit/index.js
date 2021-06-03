@@ -82,8 +82,7 @@ const StyledTextInputWithUnit = styled.div`
 
   &.k-Form-TextInputWithUnit--orion {
     .k-Form-TextInputWithUnit__input {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+      border-right: none;
     }
     .k-Form-TextInputWithUnit__unit {
       border-top-right-radius: ${pxToRem(4)};
@@ -124,6 +123,7 @@ export const TextInputWithUnit = ({
         ref={input}
         {...others}
         size={size}
+        variant={variant}
         className={classNames('k-Form-TextInputWithUnit__input', className)}
       />
       <span
