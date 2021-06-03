@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `DropdownSelectWithInput`: Fix selected item margin when dropdownDisabled.
+- Fix: `DashboardMenu`: Fix expandable list padding.
 
 ## [3.17.0] - 2021-05-31
 

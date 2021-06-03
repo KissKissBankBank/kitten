@@ -79,7 +79,7 @@ const StyledDashboardMenu = styled.nav`
     background-color: ${COLORS.line3};
 
     .k-DashboardMenu__expandable__list {
-      padding: 0 ${pxToRem(40)} ${pxToRem(20)} ${pxToRem(60)};
+      padding: 0 ${pxToRem(10)} ${pxToRem(20)} ${pxToRem(60)};
       display: flex;
       flex-direction: column;
 
