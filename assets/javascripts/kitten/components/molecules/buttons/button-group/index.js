@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Button } from '../../../../components/molecules/buttons/button'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import COLORS from '../../../constants/colors-config'
+import COLORS from '../../../../constants/colors-config'
 import classNames from 'classnames'
 
 const borderRadius = pxToRem(4)

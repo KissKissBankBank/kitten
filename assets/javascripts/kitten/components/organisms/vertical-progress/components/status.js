@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import COLORS from '../../../../constants/colors-config'
-import { LongArrowIcon } from '../../../../components/icons/long-arrow-icon'
-import { CheckedIcon } from '../../../../components/icons/checked-icon'
-import { HourglassIcon } from '../../../../components/icons/hourglass-icon'
+import { LongArrowIcon } from '../../../../components/graphics/icons/long-arrow-icon'
+import { CheckedIcon } from '../../../../components/graphics/icons/checked-icon'
+import { HourglassIcon } from '../../../../components/graphics/icons/hourglass-icon'
 import classNames from 'classnames'
 
 const STATUS_SIZE = 30

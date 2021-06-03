@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { StyledLinkBox } from './styles'
 import classNames from 'classnames'
 import { ArrowIcon } from '../../../../components/graphics/icons/arrow-icon'
-import COLORS from '../../../constants/colors-config'
+import COLORS from '../../../../constants/colors-config'
 
 export const LinkBox = ({
   className,

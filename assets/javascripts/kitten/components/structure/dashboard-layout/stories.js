@@ -76,7 +76,6 @@ const options = [
   },
 ]
 
-
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 const getElementById = id => document.getElementById(id)
 const getComputedWidthElement = id =>

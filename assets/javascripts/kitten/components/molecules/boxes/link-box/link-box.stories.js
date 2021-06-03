@@ -1,6 +1,13 @@
 import React from 'react'
 import { LinkBox } from './index'
-import { FlashCircleIcon, Text, COLORS, Container, Grid, GridCol } from '../../../..'
+import {
+  FlashCircleIcon,
+  Text,
+  COLORS,
+  Container,
+  Grid,
+  GridCol,
+} from '../../../..'
 import { text, boolean, color, select } from '@storybook/addon-knobs'
 
 export const Default = () => (
