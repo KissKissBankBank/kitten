@@ -95,7 +95,6 @@ export const ImageCropper = ({
   return (
     <StyledCropper className={classNames('k-UploadAndCropper', className)}>
       <Label
-        size="tiny"
         htmlFor={name}
         className="k-u-margin-bottom-singleHalf"
       >
