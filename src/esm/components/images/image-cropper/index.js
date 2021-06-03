@@ -141,7 +141,6 @@ export var ImageCropper = function ImageCropper(_ref) {
   return /*#__PURE__*/React.createElement(StyledCropper, {
     className: classNames('k-UploadAndCropper', className)
   }, /*#__PURE__*/React.createElement(Label, {
-    size: "tiny",
     htmlFor: name,
     className: "k-u-margin-bottom-singleHalf"
   }, label), /*#__PURE__*/React.createElement(BasicUploader, {
