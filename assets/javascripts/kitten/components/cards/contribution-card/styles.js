@@ -117,7 +117,7 @@ export const StyledContributionCard = styled.article`
 
     grid-gap: ${pxToRem(20)} ${pxToRem(10)};
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
 
     grid-template-areas:
       "cc-text cc-text"
@@ -129,7 +129,7 @@ export const StyledContributionCard = styled.article`
       padding-left: ${pxToRem(30)};
 
       grid-gap: 0 ${pxToRem(10)};
-      grid-template-columns: ${pxToRem(240)} 1fr 1fr;
+      grid-template-columns: ${pxToRem(240)} ${pxToRem(85)} 1fr;
       grid-template-rows: 1fr;
       grid-template-areas:
         "cc-text cc-input cc-action";
@@ -153,36 +153,50 @@ export const StyledContributionCard = styled.article`
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       font-size: ${stepToRem(0)};
-      margin-right: ${pxToRem(60)};
       margin-top: 0;
+      margin-right: 0;
     }
   }
 
   .k-ContributionCard__pillNumber {
     grid-area: cc-input;
-    place-self: center start;
-  }
-  .k-ContributionCard__input {
-    grid-area: cc-input;
-    place-self: center start;
+    place-self: flex-start center;
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      place-self: center flex-start;
+    }
   }
   .k-ContributionCard__amount {
     margin-right: ${pxToRem(30)};
+    margin-top: ${pxToRem(5)};
     grid-area: cc-action;
-    place-self: center end;
+    place-self: flex-start center;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       margin-right: ${pxToRem(60)};
+      place-self: center flex-end;
+      margin-top: 0;
+    }
+  }
+
+  /* PETIT PLUS */
+
+  .k-ContributionCard__input {
+    grid-area: cc-input;
+    place-self: flex-start center;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      place-self: center flex-start;
     }
   }
   .k-ContributionCard__action {
     margin-right: ${pxToRem(20)};
     grid-area: cc-action;
-    place-self: center end;
+    place-self: flex-start center;
     min-width: auto;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       margin-right: ${pxToRem(30)};
+      place-self: center flex-end;
     }
   }
 
@@ -192,7 +206,7 @@ export const StyledContributionCard = styled.article`
     margin-bottom: 0;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
-      margin-right: ${pxToRem(30)};
+      margin-right: 0;
     }
   }
 `
