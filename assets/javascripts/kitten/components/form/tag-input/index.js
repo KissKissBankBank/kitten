@@ -10,7 +10,6 @@ import { CrossIcon } from '../../../components/icons/cross-icon'
 
 const StyledWrapper = styled.div`
   font-size: ${stepToRem(-1)};
-  line-height: 1em;
   box-sizing: border-box;
   border-width: ${pxToRem(2)};
   border-style: solid;
@@ -32,6 +31,8 @@ const StyledWrapper = styled.div`
     padding: 0;
     margin: 0;
     order: 1;
+    max-width: 100%;
+    overflow: hidden;
   }
   .k-Form-TagList__inputItem {
     flex: 1 0 auto;
@@ -41,11 +42,17 @@ const StyledWrapper = styled.div`
     width: 100%;
     height: 100%;
     display: block;
-    line-height: normal;
+    line-height: 1.3;
+    padding: ${pxToRem(2)} 0;
     ${TYPOGRAPHY.fontStyles.light};
 
     ::placeholder {
       color: ${COLORS.font2};
+    }
+
+    &:empty::before {
+      color: ${COLORS.font2};
+      content: attr(aria-placeholder);
     }
 
     :focus {
@@ -62,8 +69,8 @@ const StyledWrapper = styled.div`
 
   .k-Form-TagList__tag {
     ${TYPOGRAPHY.fontStyles.regular};
-    padding: 0 ${pxToRem(2)} 0 ${pxToRem(5)};
-    line-height: 1.7;
+    padding: ${pxToRem(2)} ${pxToRem(2)} ${pxToRem(3)} ${pxToRem(5)};
+    line-height: 1.3;
   }
 
   .k-Form-TagList__button {
@@ -94,7 +101,7 @@ const StyledWrapper = styled.div`
   }
 `
 
-export const TagInput = ({ onChange, className, id, addEventKeys, removeEventKeys, initialItemsList }) => {
+export const TagInput = ({ placeholder, onChange, className, id, addEventKeys, removeEventKeys, initialItemsList }) => {
   const [itemsList, setItemList] = useState([...initialItemsList])
   const [lastRemoved, setLastRemoved] = useState(null)
   const inputEl = useRef(null)
@@ -173,6 +180,7 @@ export const TagInput = ({ onChange, className, id, addEventKeys, removeEventKey
             contentEditable
             role="textbox"
             aria-describedby={`${id}-legend`}
+            aria-placeholder={placeholder}
             onKeyDown={onKeyDown}
             className="k-Form-TagList__input"
           />
@@ -208,4 +216,15 @@ TagInput.defaultProps = {
   initialItemsList: [],
   addEventKeys: ['Enter', ','],
   removeEventKeys: ['Backspace'],
+  placeholder: '',
+  onChange: () => {},
+}
+
+TagInput.propTypes = {
+  id: PropTypes.string.isRequired,
+  initialItemsList: PropTypes.arrayOf(PropTypes.string),
+  addEventKeys: PropTypes.arrayOf(PropTypes.string),
+  removeEventKeys: PropTypes.arrayOf(PropTypes.string),
+  placeholder: PropTypes.string,
+  onChange: PropTypes.func,
 }

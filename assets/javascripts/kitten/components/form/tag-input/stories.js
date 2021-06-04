@@ -19,8 +19,10 @@ export const Default = () => {
   return (
   <Container>
     <TagInput
+      id="TagInput"
       onChange={(list) => setTagList(list)}
       initialItemsList={['Black', 'Blue', 'Green and magenta']}
+      placeholder="Placeholder…"
     />
     <p>
       {tagList.join(', ')}
