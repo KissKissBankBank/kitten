@@ -167,12 +167,12 @@ export const TagInput = ({ onChange, className, id, addEventKeys, removeEventKey
       >
         Pressez les touches Entrée ou Virgule après avoir écrit le nom d'un élément pour l'ajouter à la liste.
       </p>
-      <ul className="k-Form-TagList__list">
+      <ul className="k-Form-TagList__list" aria-live="polite" aria-relevant="additions removals">
         <li className="k-Form-TagList__item k-Form-TagList__inputItem">
           <input
             ref={inputEl}
             type="text"
-            aria-labelledby={`${id}-legend`}
+            aria-describedby={`${id}-legend`}
             onKeyDown={onKeyDown}
             id={id}
             className="k-Form-TagList__input"
