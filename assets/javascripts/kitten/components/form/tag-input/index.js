@@ -18,12 +18,12 @@ const StyledWrapper = styled.div`
   border-radius: 0;
   width: 100%;
   border-color: ${COLORS.line1};
-  padding: ${pxToRem(5)} var(--input-padding-horizontal, ${pxToRem(15)});
+  padding: var(--tagInput-padding-vertical, ${pxToRem(10)}) var(--tagInput-padding-horizontal, ${pxToRem(10)});
 
   .k-Form-TagList__list {
     display: flex;
     flex-wrap: wrap;
-    gap: ${pxToRem(5)};
+    gap: ${pxToRem(8)};
     list-style: none;
     padding: 0;
     margin: 0;
@@ -43,8 +43,8 @@ const StyledWrapper = styled.div`
     width: 100%;
     height: 100%;
     display: block;
-    line-height: 1.3;
-    padding: ${pxToRem(2)} 0;
+    line-height: 1;
+    padding: ${pxToRem(6)} 0;
     ${TYPOGRAPHY.fontStyles.light};
     cursor: text;
 
@@ -66,13 +66,13 @@ const StyledWrapper = styled.div`
     display: flex;
     color: ${COLORS.background1};
     background-color: ${COLORS.primary1};
-    border-radius: ${pxToRem(3)};
+    border-radius: ${pxToRem(4)};
   }
 
   .k-Form-TagList__tag {
     ${TYPOGRAPHY.fontStyles.regular};
-    padding: ${pxToRem(2)} ${pxToRem(2)} ${pxToRem(3)} ${pxToRem(6)};
-    line-height: 1.3;
+    padding: ${pxToRem(6)} ${pxToRem(2)} ${pxToRem(6)} ${pxToRem(6)};
+    line-height: 1;
   }
 
   .k-Form-TagList__button {
@@ -81,7 +81,7 @@ const StyledWrapper = styled.div`
     padding: 0;
     background-color: transparent;
     color: ${COLORS.background1};
-    padding: 0 ${pxToRem(8)} 0 ${pxToRem(6)};
+    padding: 0 ${pxToRem(12)} 0 ${pxToRem(10)};
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -112,13 +112,14 @@ const StyledWrapper = styled.div`
     }
 
     .k-Form-TagList__tag {
-      padding-right: ${pxToRem(5)};
+      padding-right: ${pxToRem(8)};
     }
   }
 
   // Sizes
 
   &.k-Form-TagList--tiny {
+    --tagInput-padding-vertical: ${pxToRem(5)};
     min-height: ${pxToRem(40)};
   }
 
@@ -167,7 +168,7 @@ const StyledWrapper = styled.div`
       border-radius: ${pxToRem(6)};
 
       @media (min-width: ${ScreenConfig.M.min}px) {
-        --input-padding-horizontal: ${pxToRem(30)};
+        --tagInput-padding-horizontal: ${pxToRem(30)};
         border-radius: ${pxToRem(8)};
         font-size: ${stepToRem(0)};
       }
