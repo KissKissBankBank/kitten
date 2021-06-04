@@ -40,24 +40,16 @@ const StyledWrapper = styled.div`
   .k-Form-TagList__input {
     width: 100%;
     height: 100%;
+    display: block;
+    line-height: normal;
     ${TYPOGRAPHY.fontStyles.light};
-    appearance: none;
-    border: 0;
-    background-color: ${COLORS.background1};
-    color: ${COLORS.font1};
 
     ::placeholder {
       color: ${COLORS.font2};
     }
 
-    &:focus {
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    }
-    &:focus:not(:focus-visible) {
+    :focus {
       outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
     }
   }
 
@@ -70,7 +62,7 @@ const StyledWrapper = styled.div`
 
   .k-Form-TagList__tag {
     ${TYPOGRAPHY.fontStyles.regular};
-    padding: 0 0 0 ${pxToRem(5)};
+    padding: 0 ${pxToRem(2)} 0 ${pxToRem(5)};
     line-height: 1.7;
   }
 
@@ -80,13 +72,12 @@ const StyledWrapper = styled.div`
     padding: 0;
     background-color: transparent;
     color: ${COLORS.background1};
-    padding: 0 ${pxToRem(8)};
+    padding: 0 ${pxToRem(8)} 0 ${pxToRem(6)};
     display: flex;
     align-items: center;
 
     &:focus {
       outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
     }
     &:focus:not(:focus-visible) {
       outline-color: transparent;
@@ -94,6 +85,12 @@ const StyledWrapper = styled.div`
     &:focus-visible {
       outline-color: ${COLORS.primary4};
     }
+  }
+
+
+  &:focus-within {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 `
 
@@ -128,18 +125,19 @@ export const TagInput = ({ onChange, className, id, addEventKeys, removeEventKey
   }, [itemsList])
 
   const onKeyDown = (event) => {
+    console.log(event)
     if (addEventKeys.includes(event.key)) {
       event.preventDefault()
-      const val = event.target.value.trim()
+      const val = event.target.innerText.trim()
 
       if (val.length === 0) return
       if (itemsList.includes(val)) return
 
       addValueToList(val)
-      event.target.value = ''
+      event.target.innerText = ''
     }
 
-    if (removeEventKeys.includes(event.key) && event.target.value.length === 0) {
+    if (removeEventKeys.includes(event.key) && event.target.innerText.length === 0) {
       event.preventDefault()
       removeLastValueFromList()
     }
@@ -149,7 +147,7 @@ export const TagInput = ({ onChange, className, id, addEventKeys, removeEventKey
     }
 
     if(event.key.length === 1 || event.key === 'Backspace') {
-      event.target.size = event.target.value.length + 1
+      event.target.size = event.target.innerText.length + 1
     }
   }
 
@@ -169,14 +167,14 @@ export const TagInput = ({ onChange, className, id, addEventKeys, removeEventKey
       </p>
       <ul className="k-Form-TagList__list" aria-live="polite" aria-relevant="additions removals">
         <li className="k-Form-TagList__item k-Form-TagList__inputItem">
-          <input
+          <span
             ref={inputEl}
-            type="text"
+            id={id}
+            contentEditable
+            role="textbox"
             aria-describedby={`${id}-legend`}
             onKeyDown={onKeyDown}
-            id={id}
             className="k-Form-TagList__input"
-            size="1"
           />
         </li>
         {itemsList.map(item => {
