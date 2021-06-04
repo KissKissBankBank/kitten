@@ -173,7 +173,6 @@ const StyledWrapper = styled.div`
       }
     }
   }
-
 `
 
 export const TagInput = ({
@@ -249,12 +248,14 @@ export const TagInput = ({
 
   return (
     <StyledWrapper
-      className={classNames('k-Form-TagList', className,
+      className={classNames(
+        'k-Form-TagList',
+        className,
         `k-Form-TagList--${size}`,
         `k-Form-TagList--${variant}`,
         {
           'k-Form-TagList--disabled': disabled,
-        }
+        },
       )}
       onClick={focusInputEl}
     >

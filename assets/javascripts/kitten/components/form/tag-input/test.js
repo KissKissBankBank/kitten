@@ -23,8 +23,8 @@ describe('<TagInput />', () => {
           helpMessage="Press Enter or Comma to add an item."
           size="huge"
           variant="orion"
-          addEventKeys={["Enter", ",", "Space"]}
-          removeEventKeys={["e", "^", "Backspace"]}
+          addEventKeys={['Enter', ',', 'Space']}
+          removeEventKeys={['e', '^', 'Backspace']}
           initialItemsList={['Black', 'Blue', 'Green and magenta']}
           placeholder="OK"
         />,

@@ -29,7 +29,11 @@ export const Default = () => {
             ? 'This input is disabled.'
             : 'Press Enter or comma to add an item to the list.'
         }
-        size={select('size', ['tiny', 'regular', 'big', 'huge', 'giant'], 'regular')}
+        size={select(
+          'size',
+          ['tiny', 'regular', 'big', 'huge', 'giant'],
+          'regular',
+        )}
         variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
       />
       <p className="k-u-weight-light">List: {tagList.join(', ')}</p>
