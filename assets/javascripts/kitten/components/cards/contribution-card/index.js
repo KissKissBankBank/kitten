@@ -99,7 +99,7 @@ ContributionCard.Action = Action
 ContributionCard.defaultProps = {
   show: true,
   closeButton: true,
-  closeButtonLabel: "Close",
+  closeButtonLabel: 'Close',
   borderColor: COLORS.line1,
   borderRadius: 8,
   borderStyle: 'solid' ,

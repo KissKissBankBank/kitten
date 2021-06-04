@@ -160,16 +160,15 @@ export const StyledContributionCard = styled.article`
 
   .k-ContributionCard__pillNumber {
     grid-area: cc-input;
-    place-self: flex-start center;
+    place-self:  center flex-start;
     @media (min-width: ${ScreenConfig.S.min}px) {
       place-self: center flex-start;
     }
   }
   .k-ContributionCard__amount {
     margin-right: ${pxToRem(30)};
-    margin-top: ${pxToRem(5)};
     grid-area: cc-action;
-    place-self: flex-start center;
+    place-self: center center;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       margin-right: ${pxToRem(60)};

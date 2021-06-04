@@ -11,7 +11,6 @@ export const Input = props => {
       )}
       {...props}
       variant="orion"
-      unit="€"
     />
   )
 }

@@ -41,8 +41,8 @@ export const Default = () => (
           </ContributionCard.Description>
         </ContributionCard.Title>
         
-        <ContributionCard.Input />
-        <ContributionCard.Action>Ajouter</ContributionCard.Action>
+        <ContributionCard.Input unit="€" />
+        <ContributionCard.Action disabled>Ajouter</ContributionCard.Action>
       </ContributionCard>
     </Container>
   </>
