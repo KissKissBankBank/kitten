@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TagInput /> should match its disabled snapshot with disabled props 1`] = `
+<div
+  className="sc-bdVaJa cGnanG k-Form-TagList k-Form-TagList--disabled"
+  onClick={[Function]}
+>
+  <p
+    className="k-u-a11y-visuallyHidden"
+    id="test-slider-input-legend"
+  >
+    This list input is disabled.
+  </p>
+  <ul
+    className="k-Form-TagList__list"
+  />
+  <ul
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions removals"
+    className="k-u-a11y-visuallyHidden"
+  />
+</div>
+`;
+
+exports[`<TagInput /> should match its snapshot with props 1`] = `
+<div
+  className="sc-bdVaJa cGnanG k-Form-TagList"
+  onClick={[Function]}
+>
+  <p
+    className="k-u-a11y-visuallyHidden"
+    id="test-slider-input-legend"
+  >
+    Press Enter or Comma to add an item.
+  </p>
+  <ul
+    className="k-Form-TagList__list"
+  >
+    <li
+      className="k-Form-TagList__item k-Form-TagList__inputItem"
+    >
+      <span
+        aria-describedby="test-slider-input-legend"
+        aria-placeholder=""
+        className="k-Form-TagList__input"
+        contentEditable={true}
+        id="test-slider-input"
+        onKeyDown={[Function]}
+        role="textbox"
+      />
+    </li>
+  </ul>
+  <ul
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions removals"
+    className="k-u-a11y-visuallyHidden"
+  />
+</div>
+`;
