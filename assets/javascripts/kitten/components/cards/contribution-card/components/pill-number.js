@@ -4,12 +4,12 @@ import { PillNumberInput } from '../../../../components/form/pill-number-input'
 
 export const PillNumber = props => {
   return (
-    <PillNumberInput 
+    <PillNumberInput
+      {...props}
       className={classNames(
         'k-ContributionCard__pillNumber',
         props.className,
       )}
-      {...props}
     />
   )
 }

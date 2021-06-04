@@ -8,11 +8,11 @@ export const Amount = props => {
       color="font1"
       weight="bold"
       size="huge"
+      {...props}
       className={classNames(
         'k-ContributionCard__amount',
         props.className,
       )}
-      {...props}
     />
   )
 }

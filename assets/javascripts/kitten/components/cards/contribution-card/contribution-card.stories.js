@@ -28,7 +28,7 @@ export const Default = () => (
       </ContributionCard>
     </Container>
 
-      <Container>
+    <Container>
       <ContributionCard borderStyle="dashed" closeButton={false}>
         <ContributionCard.Image>
           <RocketIllustration width={45} height={81} />

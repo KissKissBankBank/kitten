@@ -9,11 +9,11 @@ export const Description = props => {
       color="font1"
       weight="light"
       size="micro"
+      {...props}
       className={classNames(
         'k-ContributionCard__description',
         props.className,
       )}
-      {...props}
     />
   )
 }

@@ -18,10 +18,6 @@ export const StyledContributionCard = styled.article`
   flex-direction: row;
   overflow: hidden;
   box-sizing: border-box;
-  
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    max-width: ${pxToRem(670)};
-  }
 
   /* IE11 defaults */
   border-width: ${pxToRem(2)};
@@ -129,7 +125,7 @@ export const StyledContributionCard = styled.article`
       padding-left: ${pxToRem(30)};
 
       grid-gap: 0 ${pxToRem(10)};
-      grid-template-columns: ${pxToRem(240)} ${pxToRem(85)} 1fr;
+      grid-template-columns: auto ${pxToRem(85)} ${pxToRem(150)};
       grid-template-rows: 1fr;
       grid-template-areas:
         "cc-text cc-input cc-action";

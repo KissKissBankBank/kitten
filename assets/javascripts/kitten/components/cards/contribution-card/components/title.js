@@ -7,11 +7,11 @@ export const Title = props => {
     <Text
       color="font1"
       weight="bold"
+      {...props}
       className={classNames(
         'k-ContributionCard__title',
         props.className,
       )}
-      {...props}
     />
   )
 }
