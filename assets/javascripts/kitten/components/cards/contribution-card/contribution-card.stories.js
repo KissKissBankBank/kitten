@@ -10,7 +10,7 @@ export default {
 
 export const Default = () => (
   <>
-    <Container>
+    <Container className="k-u-margin-bottom-quadruple">
       <ContributionCard>
         <ContributionCard.Image>
           <img src="/kitten.jpg" alt="" />

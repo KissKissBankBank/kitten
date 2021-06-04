@@ -11,7 +11,6 @@ export const Action = props => {
       )}
       borderRadius={4}
       modifier="helium"
-      style={{ minWidth: 'auto' }}
       {...props}
     />
   )

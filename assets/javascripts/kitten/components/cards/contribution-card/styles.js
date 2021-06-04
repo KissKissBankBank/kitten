@@ -1,4 +1,3 @@
-  
 import styled, { keyframes } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
@@ -43,11 +42,7 @@ export const StyledContributionCard = styled.article`
     top: ${pxToRem(20)};
     left: ${pxToRem(20)};
     position: relative;
-
     max-width: calc(100% + 2 * var(--contributionCard--border-width));
-    ${'' /* margin: calc(-1 * var(--contributionCard--border-width))
-      calc(-1 * var(--contributionCard--border-width)) 0; */}
-    
     overflow: hidden;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
@@ -59,6 +54,8 @@ export const StyledContributionCard = styled.article`
       border-top-left-radius: var(--contributionCard--border-radius);
       border-bottom-left-radius: var(--contributionCard--border-radius);
         
+      display: flex;
+      align-items: center;
       flex: 0 0 ${pxToRem(140)};
       top: 0;
       left: 0;
@@ -85,7 +82,11 @@ export const StyledContributionCard = styled.article`
       }
     }
     svg {
-      width: 100%;
+      width: 80%;
+
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        width: 100%;
+      }
     }
   }
   
@@ -107,33 +108,31 @@ export const StyledContributionCard = styled.article`
   .k-ContributionCard__gridWrapper {
     width: 100%;
     display: grid;
-    padding: ${pxToRem(20)} ${pxToRem(30)} ${pxToRem(20)} ${pxToRem(40)};
+    padding-top: ${pxToRem(20)};
+    padding-bottom: ${pxToRem(20)};
+    padding-left:${pxToRem(40)};
     align-items: center;
+    align-content: flex-start;
     justify-self: center;
 
-    grid-gap: ${pxToRem(20)} 0;
+    grid-gap: ${pxToRem(20)} ${pxToRem(10)};
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 
     grid-template-areas:
       "cc-text cc-text"
-      "cc-pill cc-amount";
+      "cc-input cc-action";
 
-    ${'' /* -ms-grid-columns: 1fr auto 1fr;
-    -ms-grid-rows: 1fr ${pxToRem(20)} 1fr; */}
-
- 
     @media (min-width: ${ScreenConfig.S.min}px) {
-      padding: ${pxToRem(20)} ${pxToRem(60)} ${pxToRem(20)} ${pxToRem(30)};
+      padding-top: ${pxToRem(20)};
+      padding-bottom: ${pxToRem(20)};
+      padding-left: ${pxToRem(30)};
 
       grid-gap: 0 ${pxToRem(10)};
       grid-template-columns: ${pxToRem(240)} 1fr 1fr;
       grid-template-rows: 1fr;
       grid-template-areas:
-        "cc-text cc-pill cc-amount";
-
-      ${'' /* -ms-grid-columns: ${pxToRem(240)} ${pxToRem(30)} 1fr 1fr;
-      -ms-grid-rows: 1fr auto; */}
+        "cc-text cc-input cc-action";
     }
   }
 
@@ -146,31 +145,54 @@ export const StyledContributionCard = styled.article`
 
   .k-ContributionCard__title {
     grid-area: cc-text;
-
     font-size: ${stepToRem(-1)};
     line-height: ${pxToRem(16)};
-
     place-self: center start;
+    margin-right: ${pxToRem(30)};
+    margin-top: ${pxToRem(10)};
 
-    @media (min-width: ${ScreenConfig.XS.min}px) {
+    @media (min-width: ${ScreenConfig.S.min}px) {
       font-size: ${stepToRem(0)};
+      margin-right: ${pxToRem(60)};
+      margin-top: 0;
     }
   }
 
   .k-ContributionCard__pillNumber {
-    grid-area: cc-pill;
+    grid-area: cc-input;
     place-self: center start;
   }
   .k-ContributionCard__input {
-    grid-area: cc-pill;
+    grid-area: cc-input;
     place-self: center start;
   }
   .k-ContributionCard__amount {
-    grid-area: cc-amount;
+    margin-right: ${pxToRem(30)};
+    grid-area: cc-action;
     place-self: center end;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      margin-right: ${pxToRem(60)};
+    }
   }
   .k-ContributionCard__action {
-    grid-area: cc-amount;
+    margin-right: ${pxToRem(20)};
+    grid-area: cc-action;
     place-self: center end;
+    min-width: auto;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      margin-right: ${pxToRem(30)};
+    }
+  }
+
+  .k-ContributionCard__description {
+    margin-right: ${pxToRem(20)};
+    margin-top: ${pxToRem(5)};
+    margin-bottom: 0;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      margin-right: ${pxToRem(30)};
+    }
   }
 `

@@ -11,7 +11,6 @@ export const Description = props => {
       size="micro"
       className={classNames(
         'k-ContributionCard__description',
-        'k-u-margin-top-noneHalf',
         props.className,
       )}
       {...props}
