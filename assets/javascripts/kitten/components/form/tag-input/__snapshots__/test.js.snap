@@ -2,7 +2,7 @@
 
 exports[`<TagInput /> should match its disabled snapshot with disabled props 1`] = `
 <div
-  className="sc-bdVaJa cFKtH k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda k-Form-TagList--disabled"
+  className="sc-bdVaJa hFTCHa k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda k-Form-TagList--disabled"
   onClick={[Function]}
 >
   <p
@@ -25,7 +25,7 @@ exports[`<TagInput /> should match its disabled snapshot with disabled props 1`]
 
 exports[`<TagInput /> should match its snapshot 1`] = `
 <div
-  className="sc-bdVaJa cFKtH k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda"
+  className="sc-bdVaJa hFTCHa k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda"
   onClick={[Function]}
 >
   <p
@@ -62,7 +62,7 @@ exports[`<TagInput /> should match its snapshot 1`] = `
 
 exports[`<TagInput /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa cFKtH k-Form-TagList k-Form-TagList--huge k-Form-TagList--orion"
+  className="sc-bdVaJa hFTCHa k-Form-TagList k-Form-TagList--huge k-Form-TagList--orion"
   onClick={[Function]}
 >
   <p
@@ -108,7 +108,7 @@ exports[`<TagInput /> should match its snapshot with props 1`] = `
            de la liste.
         </span>
         <svg
-          fill="#fff"
+          fill="currentColor"
           height={8}
           viewBox="0 0 8 8"
           width={8}
@@ -144,7 +144,7 @@ exports[`<TagInput /> should match its snapshot with props 1`] = `
            de la liste.
         </span>
         <svg
-          fill="#fff"
+          fill="currentColor"
           height={8}
           viewBox="0 0 8 8"
           width={8}
@@ -180,7 +180,7 @@ exports[`<TagInput /> should match its snapshot with props 1`] = `
            de la liste.
         </span>
         <svg
-          fill="#fff"
+          fill="currentColor"
           height={8}
           viewBox="0 0 8 8"
           width={8}

@@ -64,14 +64,17 @@ const StyledWrapper = styled.div`
 
   .k-Form-TagList__tagItem {
     display: flex;
-    color: ${COLORS.background1};
-    background-color: ${COLORS.primary1};
+    color: ${COLORS.text1};
+    background-color: ${COLORS.primary5};
     border-radius: ${pxToRem(4)};
+    height: var(--tagInput-tag-height, ${pxToRem(30)});
+    align-items: center;
+    transition: color 0.2s ease, background-color 0.2s ease;
   }
 
   .k-Form-TagList__tag {
     ${TYPOGRAPHY.fontStyles.regular};
-    padding: ${pxToRem(6)} ${pxToRem(2)} ${pxToRem(6)} ${pxToRem(6)};
+    padding: 0 ${pxToRem(2)} 0.3em ${pxToRem(10)};
     line-height: 1;
   }
 
@@ -80,8 +83,9 @@ const StyledWrapper = styled.div`
     border: 0;
     padding: 0;
     background-color: transparent;
-    color: ${COLORS.background1};
+    color: inherit;
     padding: 0 ${pxToRem(12)} 0 ${pxToRem(10)};
+    align-self: stretch;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -103,6 +107,14 @@ const StyledWrapper = styled.div`
     outline-offset: ${pxToRem(2)};
   }
 
+  &:hover,
+  &:focus-within {
+    .k-Form-TagList__tagItem {
+      color: ${COLORS.background1};
+      background-color: ${COLORS.primary1};
+    }
+  }
+
   &.k-Form-TagList--disabled {
     cursor: not-allowed;
 
@@ -119,16 +131,19 @@ const StyledWrapper = styled.div`
   // Sizes
 
   &.k-Form-TagList--tiny {
-    --tagInput-padding-vertical: ${pxToRem(5)};
+    --tagInput-padding-vertical: ${pxToRem(4)};
+    --tagInput-tag-height: ${pxToRem(24)};
     min-height: ${pxToRem(40)};
   }
 
   &.k-Form-TagList--regular {
+    --tagInput-padding-vertical: ${pxToRem(5)};
     min-height: ${pxToRem(50)};
   }
 
   &.k-Form-TagList--big {
     min-height: ${pxToRem(60)};
+    --tagInput-tag-height: ${pxToRem(32)};
 
     @media (min-width: ${ScreenConfig.M.min}px) {
       min-height: ${pxToRem(70)};
@@ -138,6 +153,7 @@ const StyledWrapper = styled.div`
 
   &.k-Form-TagList--huge {
     min-height: ${pxToRem(70)};
+    --tagInput-tag-height: ${pxToRem(36)};
 
     @media (min-width: ${ScreenConfig.M.min}px) {
       min-height: ${pxToRem(80)};
@@ -147,6 +163,7 @@ const StyledWrapper = styled.div`
 
   &.k-Form-TagList--giant {
     min-height: ${pxToRem(70)};
+    --tagInput-tag-height: ${pxToRem(40)};
 
     @media (min-width: ${ScreenConfig.M.min}px) {
       min-height: ${pxToRem(90)};
@@ -294,7 +311,7 @@ export const TagInput = ({
                   <span className="k-u-a11y-visuallyHidden">
                     Retirer {item} de la liste.
                   </span>
-                  <CrossIcon color={COLORS.background1} />
+                  <CrossIcon color="currentColor" />
                 </button>
               )}
             </li>
