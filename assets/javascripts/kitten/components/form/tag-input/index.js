@@ -43,6 +43,7 @@ const StyledWrapper = styled.div`
     line-height: 1.3;
     padding: ${pxToRem(2)} 0;
     ${TYPOGRAPHY.fontStyles.light};
+    cursor: text;
 
     ::placeholder {
       color: ${COLORS.font2};
@@ -96,6 +97,19 @@ const StyledWrapper = styled.div`
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
   }
+
+  &.k-Form-TagList--disabled {
+    cursor: not-allowed;
+
+    .k-Form-TagList__tagItem {
+      color: ${COLORS.font2};
+      background-color: ${COLORS.line1};
+    }
+
+    .k-Form-TagList__tag {
+      padding-right: ${pxToRem(5)};
+    }
+  }
 `
 
 export const TagInput = ({
@@ -106,12 +120,14 @@ export const TagInput = ({
   addEventKeys,
   removeEventKeys,
   initialItemsList,
+  helpMessage,
+  disabled,
 }) => {
   const [itemsList, setItemList] = useState([...initialItemsList])
   const [lastRemoved, setLastRemoved] = useState(null)
   const inputEl = useRef(null)
 
-  const focusInputEl = () => inputEl?.current?.focus()
+  const focusInputEl = () => !disabled && inputEl?.current?.focus()
 
   const addValueToList = value => {
     setItemList(currentList => [...currentList, value])
@@ -167,30 +183,29 @@ export const TagInput = ({
 
   return (
     <StyledWrapper
-      className={classNames('k-Form-TagList', className)}
+      className={classNames('k-Form-TagList', className, {
+        'k-Form-TagList--disabled': disabled,
+      })}
       onClick={focusInputEl}
     >
       <p className="k-u-a11y-visuallyHidden" id={`${id}-legend`}>
-        Pressez les touches Entrée ou Virgule après avoir écrit le nom d'un
-        élément pour l'ajouter à la liste.
+        {helpMessage}
       </p>
-      <ul
-        className="k-Form-TagList__list"
-        aria-live="polite"
-        aria-relevant="additions removals"
-      >
-        <li className="k-Form-TagList__item k-Form-TagList__inputItem">
-          <span
-            ref={inputEl}
-            id={id}
-            contentEditable
-            role="textbox"
-            aria-describedby={`${id}-legend`}
-            aria-placeholder={placeholder}
-            onKeyDown={onKeyDown}
-            className="k-Form-TagList__input"
-          />
-        </li>
+      <ul className="k-Form-TagList__list">
+        {!disabled && (
+          <li className="k-Form-TagList__item k-Form-TagList__inputItem">
+            <span
+              ref={inputEl}
+              id={id}
+              contentEditable
+              role="textbox"
+              aria-describedby={`${id}-legend`}
+              aria-placeholder={placeholder}
+              onKeyDown={onKeyDown}
+              className="k-Form-TagList__input"
+            />
+          </li>
+        )}
         {itemsList.map(item => {
           return (
             <li
@@ -198,18 +213,30 @@ export const TagInput = ({
               className="k-Form-TagList__item k-Form-TagList__tagItem"
             >
               <span className="k-Form-TagList__tag">{item}</span>
-              <button
-                className="k-Form-TagList__button"
-                type="button"
-                onClick={() => removeValueFromList(item)}
-              >
-                <span className="k-u-a11y-visuallyHidden">
-                  Retirer {item} de la liste.
-                </span>
-                <CrossIcon color={COLORS.background1} />
-              </button>
+              {!disabled && (
+                <button
+                  className="k-Form-TagList__button"
+                  type="button"
+                  onClick={() => removeValueFromList(item)}
+                >
+                  <span className="k-u-a11y-visuallyHidden">
+                    Retirer {item} de la liste.
+                  </span>
+                  <CrossIcon color={COLORS.background1} />
+                </button>
+              )}
             </li>
           )
+        })}
+      </ul>
+      <ul
+        className="k-u-a11y-visuallyHidden"
+        aria-live="polite"
+        aria-atomic="true"
+        aria-relevant="additions removals"
+      >
+        {itemsList.map(item => {
+          return <li key={`visuallyHidden-${item}`}>{item}</li>
         })}
       </ul>
     </StyledWrapper>
@@ -222,6 +249,7 @@ TagInput.defaultProps = {
   removeEventKeys: ['Backspace'],
   placeholder: '',
   onChange: () => {},
+  disabled: false,
 }
 
 TagInput.propTypes = {
@@ -231,4 +259,6 @@ TagInput.propTypes = {
   removeEventKeys: PropTypes.arrayOf(PropTypes.string),
   placeholder: PropTypes.string,
   onChange: PropTypes.func,
+  disabled: PropTypes.bool,
+  helpMessage: PropTypes.node.isRequired,
 }

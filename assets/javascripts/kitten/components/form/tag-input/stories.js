@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { boolean } from '@storybook/addon-knobs'
 import { TagInput } from './index'
 
 const Container = styled.div`
-  max-width: 300px;
+  max-width: 650px;
   margin: 30px auto;
 `
 
@@ -22,8 +23,14 @@ export const Default = () => {
         onChange={list => setTagList(list)}
         initialItemsList={['Black', 'Blue', 'Green and magenta']}
         placeholder="Placeholder…"
+        disabled={boolean('Disabled', false)}
+        helpMessage={
+          boolean('Disabled', false)
+            ? 'This input is disabled.'
+            : 'Press Enter or comma to add an item to the list.'
+        }
       />
-      <p>{tagList.join(', ')}</p>
+      <p className="k-u-weight-light">List: {tagList.join(', ')}</p>
     </Container>
   )
 }
