@@ -6,8 +6,11 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { CrossIcon } from '../../../components/icons/cross-icon'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledWrapper = styled.div`
+  display: flex;
+  align-items: center;
   font-size: ${stepToRem(-1)};
   box-sizing: border-box;
   border-width: ${pxToRem(2)};
@@ -15,7 +18,7 @@ const StyledWrapper = styled.div`
   border-radius: 0;
   width: 100%;
   border-color: ${COLORS.line1};
-  padding: ${pxToRem(5)};
+  padding: ${pxToRem(5)} var(--input-padding-horizontal, ${pxToRem(15)});
 
   .k-Form-TagList__list {
     display: flex;
@@ -63,12 +66,12 @@ const StyledWrapper = styled.div`
     display: flex;
     color: ${COLORS.background1};
     background-color: ${COLORS.primary1};
-    border-radius: ${pxToRem(2)};
+    border-radius: ${pxToRem(3)};
   }
 
   .k-Form-TagList__tag {
     ${TYPOGRAPHY.fontStyles.regular};
-    padding: ${pxToRem(2)} ${pxToRem(2)} ${pxToRem(3)} ${pxToRem(5)};
+    padding: ${pxToRem(2)} ${pxToRem(2)} ${pxToRem(3)} ${pxToRem(6)};
     line-height: 1.3;
   }
 
@@ -81,9 +84,11 @@ const StyledWrapper = styled.div`
     padding: 0 ${pxToRem(8)} 0 ${pxToRem(6)};
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     &:focus {
       outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(-2)};
     }
     &:focus:not(:focus-visible) {
       outline-color: transparent;
@@ -110,6 +115,65 @@ const StyledWrapper = styled.div`
       padding-right: ${pxToRem(5)};
     }
   }
+
+  // Sizes
+
+  &.k-Form-TagList--tiny {
+    min-height: ${pxToRem(40)};
+  }
+
+  &.k-Form-TagList--regular {
+    min-height: ${pxToRem(50)};
+  }
+
+  &.k-Form-TagList--big {
+    min-height: ${pxToRem(60)};
+
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      min-height: ${pxToRem(70)};
+      font-size: ${stepToRem(0)};
+    }
+  }
+
+  &.k-Form-TagList--huge {
+    min-height: ${pxToRem(70)};
+
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      min-height: ${pxToRem(80)};
+      font-size: ${stepToRem(0)};
+    }
+  }
+
+  &.k-Form-TagList--giant {
+    min-height: ${pxToRem(70)};
+
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      min-height: ${pxToRem(90)};
+      font-size: ${stepToRem(0)};
+    }
+  }
+
+  // VARIANTS
+
+  &.k-Form-TagList--orion {
+    &.k-Form-TagList--tiny,
+    &.k-Form-TagList--regular {
+      border-radius: ${pxToRem(4)};
+    }
+
+    &.k-Form-TagList--big,
+    &.k-Form-TagList--huge,
+    &.k-Form-TagList--giant {
+      border-radius: ${pxToRem(6)};
+
+      @media (min-width: ${ScreenConfig.M.min}px) {
+        --input-padding-horizontal: ${pxToRem(30)};
+        border-radius: ${pxToRem(8)};
+        font-size: ${stepToRem(0)};
+      }
+    }
+  }
+
 `
 
 export const TagInput = ({
@@ -122,6 +186,8 @@ export const TagInput = ({
   initialItemsList,
   helpMessage,
   disabled,
+  size,
+  variant,
 }) => {
   const [itemsList, setItemList] = useState([...initialItemsList])
   const [lastRemoved, setLastRemoved] = useState(null)
@@ -183,9 +249,13 @@ export const TagInput = ({
 
   return (
     <StyledWrapper
-      className={classNames('k-Form-TagList', className, {
-        'k-Form-TagList--disabled': disabled,
-      })}
+      className={classNames('k-Form-TagList', className,
+        `k-Form-TagList--${size}`,
+        `k-Form-TagList--${variant}`,
+        {
+          'k-Form-TagList--disabled': disabled,
+        }
+      )}
       onClick={focusInputEl}
     >
       <p className="k-u-a11y-visuallyHidden" id={`${id}-legend`}>
@@ -250,6 +320,8 @@ TagInput.defaultProps = {
   placeholder: '',
   onChange: () => {},
   disabled: false,
+  size: 'regular',
+  variant: 'andromeda',
 }
 
 TagInput.propTypes = {
@@ -261,4 +333,6 @@ TagInput.propTypes = {
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
   helpMessage: PropTypes.node.isRequired,
+  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
+  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }
