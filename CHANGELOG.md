@@ -6,9 +6,32 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `RocketIllustration`: Add new component.
 - Feature: `ContributionCard`: Add new component.
+- Fix: `TextInputWithUnit`: Fix `variant` propagation.
 
-- Fix: `ButtonIcon`: Fix `tag` transmission.
-- Fix: `TeamCard`: Fix buttons sizes.
+## [3.17.2] - 2021-06-03
+
+Fix:
+
+- `ImageCropper`: Use default Label size.
+
+## [3.17.1] - 2021-06-03
+
+Fixes:
+
+- `DropdownSelectWithInput`: Fix selected item margin when dropdownDisabled.
+- `Label`: Update mobile styles.
+- `DashboardMenu`: Fix expandable list padding.
+
+## [3.17.0] - 2021-05-31
+
+Feature:
+
+- `DashboardLayout`: Replace `Alert` subcomponent with `Alerts` wrapper.
+
+Fix:
+
+- `ButtonIcon`: Fix `tag` transmission.
+- `TeamCard`: Fix buttons sizes.
 
 ## [3.16.0] - 2021-05-28
 

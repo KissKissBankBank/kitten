@@ -46,8 +46,8 @@ export const WithVariant = () => (
         >
           <LinkBox.Text>
             <Text size="tiny" weight="light" lineHeight="normal">
-              <strong>Paramètres -</strong> Titre du projet, Catégorie principale, 
-              Montant de  l’objectif, Type d’objectif …
+              <strong>Paramètres -</strong> Titre du projet, Catégorie
+              principale, Montant de l’objectif, Type d’objectif …
             </Text>
           </LinkBox.Text>
         </LinkBox>

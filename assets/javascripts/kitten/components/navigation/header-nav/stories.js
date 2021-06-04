@@ -48,7 +48,11 @@ export const KissKissBankBankNew = () => (
       isLogged={boolean('Is logged', false)}
       isFixed={boolean('Is fixed', false)}
       size={select('Size', ['regular', 'small'], 'regular')}
-      borderStyle={select('BorderStyle', ['none', 'shadow', 'border'], 'border')}
+      borderStyle={select(
+        'BorderStyle',
+        ['none', 'shadow', 'border'],
+        'border',
+      )}
     />
   </Container>
 )

@@ -63,7 +63,7 @@ describe('<DashboardLayout />', () => {
               Side content
             </DashboardLayout.SideContent>
             <DashboardLayout.SideFooter>Side footer</DashboardLayout.SideFooter>
-            <DashboardLayout.Alert>Alert!</DashboardLayout.Alert>
+            <DashboardLayout.Alerts>Alert!</DashboardLayout.Alerts>
 
             <p>Main content</p>
           </DashboardLayout>,

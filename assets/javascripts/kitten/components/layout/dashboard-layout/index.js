@@ -19,7 +19,6 @@ import {
 
 import { BurgerIcon } from '../../../components/icons/burger-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
-import { Alert as AlertComponent } from '../../../components/notifications/alert'
 
 import { Flow } from './flow'
 
@@ -228,8 +227,9 @@ export const DashboardLayout = ({
           {renderComponentChildrenArray(
             getReactElementsByType({
               children: children,
-              type: Alert,
-            }))}
+              type: Alerts,
+            }),
+          )}
 
           <main
             className={classNames('k-DashboardLayout__main', {
@@ -240,7 +240,13 @@ export const DashboardLayout = ({
             {renderComponentArray(
               getReactElementsWithoutTypeArray({
                 children,
-                typeArray: [SiteHeader, Header, SideContent, SideFooter, Alert],
+                typeArray: [
+                  SiteHeader,
+                  Header,
+                  SideContent,
+                  SideFooter,
+                  Alerts,
+                ],
               }),
             )}
           </main>
@@ -315,12 +321,12 @@ const SideFooter = ({ className, ...props }) => (
   />
 )
 
-const Alert = ({ className, ...props }) => (
-  <AlertComponent
+const Alerts = ({ className, ...props }) => (
+  <div
     className={classNames(
-      'k-DashboardLayout__alert',
+      'k-DashboardLayout__alerts',
       'k-DashboardLayout__fullWidth',
-      className
+      className,
     )}
     {...props}
   />
@@ -350,4 +356,4 @@ DashboardLayout.Header = Header
 DashboardLayout.SideContent = SideContent
 DashboardLayout.SideFooter = SideFooter
 DashboardLayout.Flow = Flow
-DashboardLayout.Alert = Alert
+DashboardLayout.Alerts = Alerts

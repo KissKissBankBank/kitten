@@ -158,7 +158,8 @@ export const modifierStyles = modifier => {
     color: ${color};
 
     svg:not(.k-ColorSvg) {
-      &, path {
+      &,
+      path {
         fill: currentColor;
         transition: fill 0.2s;
       }

@@ -64,9 +64,7 @@ var FieldLabel = /*#__PURE__*/function (_Component) {
         style: {
           lineHeight: 1
         }
-      }, /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({}, labelProps, {
-        size: labelProps.size || 'micro'
-      }), children)), tooltip && /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_toggletip.Toggletip, (0, _extends2.default)({
+      }, /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_label.Label, labelProps, children)), tooltip && /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_toggletip.Toggletip, (0, _extends2.default)({
         id: tooltipId,
         bubbleProps: {
           zIndex: 2

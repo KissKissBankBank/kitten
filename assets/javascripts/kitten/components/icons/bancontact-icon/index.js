@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export const BancontactIcon = ({className, ...props}) => (
+export const BancontactIcon = ({ className, ...props }) => (
   <svg
     width="46"
     height="28"
