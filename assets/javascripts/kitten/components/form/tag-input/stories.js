@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { number, select, boolean } from '@storybook/addon-knobs'
 import { TagInput } from './index'
 
 const Container = styled.div`
@@ -17,15 +16,14 @@ export const Default = () => {
   const [tagList, setTagList] = useState([])
 
   return (
-  <Container>
-    <TagInput
-      id="TagInput"
-      onChange={(list) => setTagList(list)}
-      initialItemsList={['Black', 'Blue', 'Green and magenta']}
-      placeholder="Placeholder…"
-    />
-    <p>
-      {tagList.join(', ')}
-    </p>
-  </Container>
-)}
+    <Container>
+      <TagInput
+        id="TagInput"
+        onChange={list => setTagList(list)}
+        initialItemsList={['Black', 'Blue', 'Green and magenta']}
+        placeholder="Placeholder…"
+      />
+      <p>{tagList.join(', ')}</p>
+    </Container>
+  )
+}

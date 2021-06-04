@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import { ScreenConfig } from '../../../constants/screen-config'
 import { CrossIcon } from '../../../components/icons/cross-icon'
 
 const StyledWrapper = styled.div`
@@ -25,7 +24,6 @@ const StyledWrapper = styled.div`
     list-style: none;
     padding: 0;
     margin: 0;
-
   }
   .k-Form-TagList__item {
     padding: 0;
@@ -94,14 +92,21 @@ const StyledWrapper = styled.div`
     }
   }
 
-
   &:focus-within {
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
   }
 `
 
-export const TagInput = ({ placeholder, onChange, className, id, addEventKeys, removeEventKeys, initialItemsList }) => {
+export const TagInput = ({
+  placeholder,
+  onChange,
+  className,
+  id,
+  addEventKeys,
+  removeEventKeys,
+  initialItemsList,
+}) => {
   const [itemsList, setItemList] = useState([...initialItemsList])
   const [lastRemoved, setLastRemoved] = useState(null)
   const inputEl = useRef(null)
@@ -109,17 +114,17 @@ export const TagInput = ({ placeholder, onChange, className, id, addEventKeys, r
   const focusInputEl = () => inputEl?.current?.focus()
 
   const addValueToList = value => {
-    setItemList(currentList => ([...currentList, value]))
+    setItemList(currentList => [...currentList, value])
   }
 
-  const removeLastValueFromList = value => {
+  const removeLastValueFromList = () => {
     setLastRemoved(itemsList[itemsList.length - 1])
-    setItemList(currentList => (currentList.slice(0, -1)))
+    setItemList(currentList => currentList.slice(0, -1))
   }
 
   const removeValueFromList = value => {
     setLastRemoved(value)
-    setItemList(currentList => currentList.filter((item) => item !== value))
+    setItemList(currentList => currentList.filter(item => item !== value))
   }
 
   const undoRemove = () => {
@@ -131,8 +136,7 @@ export const TagInput = ({ placeholder, onChange, className, id, addEventKeys, r
     onChange(itemsList)
   }, [itemsList])
 
-  const onKeyDown = (event) => {
-    console.log(event)
+  const onKeyDown = event => {
     if (addEventKeys.includes(event.key)) {
       event.preventDefault()
       const val = event.target.innerText.trim()
@@ -144,35 +148,37 @@ export const TagInput = ({ placeholder, onChange, className, id, addEventKeys, r
       event.target.innerText = ''
     }
 
-    if (removeEventKeys.includes(event.key) && event.target.innerText.length === 0) {
+    if (
+      removeEventKeys.includes(event.key) &&
+      event.target.innerText.length === 0
+    ) {
       event.preventDefault()
       removeLastValueFromList()
     }
 
-    if (event.key === "z" && (event.ctrlKey || event.metaKey)) {
+    if (event.key === 'z' && (event.ctrlKey || event.metaKey)) {
       undoRemove()
     }
 
-    if(event.key.length === 1 || event.key === 'Backspace') {
+    if (event.key.length === 1 || event.key === 'Backspace') {
       event.target.size = event.target.innerText.length + 1
     }
   }
 
-  return(
+  return (
     <StyledWrapper
-      className={classNames(
-        'k-Form-TagList',
-        className,
-      )}
+      className={classNames('k-Form-TagList', className)}
       onClick={focusInputEl}
     >
-      <p
-        className="k-u-a11y-visuallyHidden"
-        id={`${id}-legend`}
-      >
-        Pressez les touches Entrée ou Virgule après avoir écrit le nom d'un élément pour l'ajouter à la liste.
+      <p className="k-u-a11y-visuallyHidden" id={`${id}-legend`}>
+        Pressez les touches Entrée ou Virgule après avoir écrit le nom d'un
+        élément pour l'ajouter à la liste.
       </p>
-      <ul className="k-Form-TagList__list" aria-live="polite" aria-relevant="additions removals">
+      <ul
+        className="k-Form-TagList__list"
+        aria-live="polite"
+        aria-relevant="additions removals"
+      >
         <li className="k-Form-TagList__item k-Form-TagList__inputItem">
           <span
             ref={inputEl}
@@ -197,9 +203,7 @@ export const TagInput = ({ placeholder, onChange, className, id, addEventKeys, r
                 type="button"
                 onClick={() => removeValueFromList(item)}
               >
-                <span
-                  className="k-u-a11y-visuallyHidden"
-                >
+                <span className="k-u-a11y-visuallyHidden">
                   Retirer {item} de la liste.
                 </span>
                 <CrossIcon color={COLORS.background1} />
