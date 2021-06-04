@@ -46,7 +46,7 @@ export default {
 }
 
 const buttonSelectionChoices = {
-  'None': 0,
+  None: 0,
   'One button': 1,
   'Two with Close': 2,
 }
@@ -67,19 +67,23 @@ export const Default = () => {
       {() => (
         <>
           <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
-          <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
+          <Modal.Paragraph>
+            {text('content', paragraphContainer)}
+          </Modal.Paragraph>
           <Modal.Actions
             sticky={boolean('Actions sticky', false)}
             stickyOnMobile={boolean('Actions sticky on Mobile only', false)}
             fullSize={boolean('Actions fullSize', false)}
             fullSizeOnMobile={boolean('Actions fullSize on Mobile only', false)}
           >
-            {buttonSelection > 0 &&
+            {buttonSelection > 0 && (
               <Modal.Button modifier="helium">Modal.Button</Modal.Button>
-            }
-            {buttonSelection > 1 &&
-              <Modal.CloseButton modifier="hydrogen">Modal.CloseButton</Modal.CloseButton>
-            }
+            )}
+            {buttonSelection > 1 && (
+              <Modal.CloseButton modifier="hydrogen">
+                Modal.CloseButton
+              </Modal.CloseButton>
+            )}
           </Modal.Actions>
         </>
       )}
@@ -95,7 +99,8 @@ export const Controlled = () => {
         Open
       </Button>
       <Text tag="p" weight="light">
-        The modal is controlled through a state that controls the <code>isOpen</code> prop.
+        The modal is controlled through a state that controls the{' '}
+        <code>isOpen</code> prop.
       </Text>
       <Modal
         isOpen={showModal}
@@ -105,9 +110,7 @@ export const Controlled = () => {
         {() => (
           <>
             <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
-            <Modal.Paragraph>
-              {paragraphContainer}
-            </Modal.Paragraph>
+            <Modal.Paragraph>{paragraphContainer}</Modal.Paragraph>
             <Modal.Actions>
               <Modal.Button modifier="helium">Modal.Button</Modal.Button>
             </Modal.Actions>
@@ -146,12 +149,8 @@ export const FullSize = () => (
           The display of a header depends on the <code>fullSizeTitle</code>{' '}
           prop.
         </Modal.Paragraph>
-        <Modal.Paragraph>
-          {paragraphContainer}
-        </Modal.Paragraph>
-        <Modal.Paragraph>
-          {paragraphContainer}
-        </Modal.Paragraph>
+        <Modal.Paragraph>{paragraphContainer}</Modal.Paragraph>
+        <Modal.Paragraph>{paragraphContainer}</Modal.Paragraph>
         <Modal.Actions>
           <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
         </Modal.Actions>
@@ -239,15 +238,17 @@ export const CustomInnerSize = () => (
       <>
         <Modal.Block className="k-u-background-color-background3">
           <Text weight="light" tag="p" className="k-u-margin-vertical-triple">
-            This Modal has the following inner size, defined by <code>contentCols</code> prop:
+            This Modal has the following inner size, defined by{' '}
+            <code>contentCols</code> prop:
             <br />
             <code>{'{ xxs: 12, s: 10, l: 8, xl: 6 }'}</code>
-
           </Text>
         </Modal.Block>
         <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
         <Modal.Actions>
-          <Modal.CloseButton modifier="helium">Modal.CloseButton</Modal.CloseButton>
+          <Modal.CloseButton modifier="helium">
+            Modal.CloseButton
+          </Modal.CloseButton>
         </Modal.Actions>
       </>
     )}

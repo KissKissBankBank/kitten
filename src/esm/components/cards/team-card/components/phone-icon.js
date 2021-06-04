@@ -18,7 +18,8 @@ export var TeamCardPhoneIcon = function TeamCardPhoneIcon(_ref) {
     tag: "a",
     href: "tel:".concat(phoneNumber),
     modifier: "hydrogen",
-    className: classNames('k-ButtonIcon--phone', 'k-u-hidden@s-up', className),
+    size: "tiny",
+    className: classNames('k-ButtonIcon--phone', 'k-u-hidden@s-up--important', className),
     "aria-label": buttonLabel
   }, /*#__PURE__*/React.createElement(PhoneIcon, {
     "aria-hidden": true,
@@ -26,7 +27,7 @@ export var TeamCardPhoneIcon = function TeamCardPhoneIcon(_ref) {
   })), /*#__PURE__*/React.createElement(TeamCardButtonWithTooltip, _extends({
     phoneNumber: phoneNumber,
     tooltipColor: tooltipColor,
-    className: className,
+    className: classNames('k-u-hidden@xs-down--important', className),
     "aria-label": buttonLabel
   }, props)));
 };

@@ -16,13 +16,12 @@ const StyledWrapper = styled.div`
   flex: 1;
   z-index: 0;
 
-
   &.k-VerticalProgress__status--actions {
     .k-VerticalProgress__icon {
       background-color: ${COLORS.orange};
       border-color: ${COLORS.orange};
     }
-    .k-VerticalProgress__title{
+    .k-VerticalProgress__title {
       color: ${COLORS.orange};
     }
   }
@@ -97,15 +96,18 @@ export const Status = ({
   children,
   ...other
 }) => {
-
   const iconByStatus = (() => {
     switch (statusType) {
       case 'actions':
         return <LongArrowIcon color={COLORS.background1} direction="right" />
       case 'waiting':
-        return <HourglassIcon color={COLORS.background1} width="10" title={null} />
+        return (
+          <HourglassIcon color={COLORS.background1} width="10" title={null} />
+        )
       case 'publish':
-        return <CheckedIcon color={COLORS.background1} width="10" title={null} />
+        return (
+          <CheckedIcon color={COLORS.background1} width="10" title={null} />
+        )
       case 'valid':
         return <LongArrowIcon color={COLORS.background1} direction="right" />
       case 'disabled':
@@ -116,21 +118,16 @@ export const Status = ({
   })()
 
   return (
-    <StyledWrapper 
+    <StyledWrapper
       className={classNames(
         'k-VerticalProgress__status',
         `k-VerticalProgress__status--${statusType}`,
       )}
     >
-      <span
-        {...other}
-        className="k-VerticalProgress__icon">
+      <span {...other} className="k-VerticalProgress__icon">
         {iconByStatus || children}
       </span>
-      <p
-        className="k-VerticalProgress__title"
-        {...titleProps}
-      >
+      <p className="k-VerticalProgress__title" {...titleProps}>
         {progressTitle}
       </p>
     </StyledWrapper>

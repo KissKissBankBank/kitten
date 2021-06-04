@@ -160,7 +160,7 @@ const StyledRangeSlider = styled.div`
       background: ${COLORS.line2};
     }
     .k-RangeSlider__rangeThumbText {
-      color: ${COLORS.font2}
+      color: ${COLORS.font2};
     }
   }
 
@@ -262,7 +262,13 @@ export const RangeSlider = ({
       })}
       {...wrapperProps}
     >
-      <input disabled={disabled} ref={inputEl} type="range" onChange={handleChange} {...props} />
+      <input
+        disabled={disabled}
+        ref={inputEl}
+        type="range"
+        onChange={handleChange}
+        {...props}
+      />
       {rangeThumbText && (
         <span className="k-RangeSlider__rangeThumbText">{rangeThumbText}</span>
       )}

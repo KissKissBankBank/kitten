@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export const PayPalIcon = ({className, ...props}) => (
+export const PayPalIcon = ({ className, ...props }) => (
   <svg
     width="53"
     height="14"

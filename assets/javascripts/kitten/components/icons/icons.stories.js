@@ -76,7 +76,7 @@ import { RocketIcon } from './rocket-icon'
 import { SaveIcon } from './save-icon'
 import { SearchIcon } from './search-icon'
 import { ShieldIcon } from './shield-icon'
-import { ShieldCheckIcon } from './shield-check-icon' 
+import { ShieldCheckIcon } from './shield-check-icon'
 import { SofortIcon } from './sofort-icon'
 import { SpeechBubbleIcon } from './speech-bubble-icon'
 import { StarIcon } from './star-icon'
@@ -371,7 +371,6 @@ export const AllIcons = () => {
         <IconContainer children={<SpeechBubbleIcon color={colorInput} />} />
         <IconContainer children={<HourglassIcon color={colorInput} />} />
         <IconContainer children={<RefundIcon color={colorInput} />} />
-
       </Group>
       <Group title="Country flag icons">
         {flagList.map(country => (

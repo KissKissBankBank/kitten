@@ -10,7 +10,7 @@ describe('<VerticalStepper />', () => {
       component = renderer
         .create(
           <VerticalProgress>
-            <VerticalProgress.Step 
+            <VerticalProgress.Step
               statusType="actions"
               progressTitle="Brouillon"
             />
@@ -30,11 +30,11 @@ describe('<VerticalStepper />', () => {
               statusType="disabled"
               progressTitle="Partager avec mon coach"
             />
-          </VerticalProgress>
+          </VerticalProgress>,
         )
         .toJSON()
     })
-  
+
     it('matches with snapshot', () => {
       expect(component).toMatchSnapshot()
     })

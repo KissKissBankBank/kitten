@@ -13,7 +13,7 @@ import deprecated from 'prop-types-extra/lib/deprecated';
 var StyledTeamCardIcons = styled.div.withConfig({
   displayName: "icons__StyledTeamCardIcons",
   componentId: "s658h-0"
-})(["margin-top:", ";display:flex;.k-TeamCardIcons__buttonIcon:not(:last-child){margin-right:", ";}"], pxToRem(15), pxToRem(15));
+})(["margin-top:", ";display:flex;> *{flex-shrink:0;}.k-TeamCardIcons__buttonIcon:not(:last-child){margin-right:", ";}"], pxToRem(15), pxToRem(15));
 export var TeamCardIcons = function TeamCardIcons(_ref) {
   var email = _ref.email,
       phoneNumber = _ref.phoneNumber,
@@ -31,6 +31,7 @@ export var TeamCardIcons = function TeamCardIcons(_ref) {
   };
 
   return /*#__PURE__*/React.createElement(StyledTeamCardIcons, null, email && /*#__PURE__*/React.createElement(ButtonIcon, {
+    size: "tiny",
     tag: "a",
     href: "mailto:".concat(email),
     modifier: "hydrogen",
@@ -58,10 +59,10 @@ var SocialLinks = function SocialLinks(_ref2) {
       "aria-label": link.name,
       href: link.href,
       modifier: "social_".concat(link.name),
-      size: "tiny",
       target: "_blank",
       rel: "noopener",
-      className: "k-TeamCardIcons__buttonIcon"
+      className: "k-TeamCardIcons__buttonIcon",
+      size: "tiny"
     }, link.name === 'linkedin' && /*#__PURE__*/React.createElement(LinkedinIcon, {
       "aria-hidden": true,
       className: "k-ButtonIcon__svg"

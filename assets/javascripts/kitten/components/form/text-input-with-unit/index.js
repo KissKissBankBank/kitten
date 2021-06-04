@@ -124,6 +124,7 @@ export const TextInputWithUnit = ({
         {...others}
         size={size}
         className={classNames('k-Form-TextInputWithUnit__input', className)}
+        variant={variant}
       />
       <span
         className={classNames(

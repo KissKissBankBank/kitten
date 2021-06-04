@@ -1,5 +1,5 @@
 import React from 'react'
-import { text, number, boolean } from '@storybook/addon-knobs'
+import { text, number, boolean, select } from '@storybook/addon-knobs'
 import {
   FieldInputExample,
   FieldPasswordExample,
@@ -42,6 +42,7 @@ export const WithInput = () => {
         limit={number('Limit', undefined)}
         unit={text('Unit', undefined)}
         noMargin={boolean('No margin only on Input', false)}
+        variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
       />
     </StoryGrid>
   )
@@ -60,6 +61,7 @@ export const WithPassword = () => {
         placeholder={text('Placeholder', 'Placeholder…')}
         error={boolean('Error?', false)}
         errorMessage={text('Error', 'Error message…')}
+        variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
       />
     </StoryGrid>
   )
@@ -92,6 +94,7 @@ export const WithRadioButtons = () => {
         ]}
         error={boolean('Error?', false)}
         errorMessage={text('Error', 'Error message…')}
+        variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
       />
     </StoryGrid>
   )
@@ -122,6 +125,7 @@ export const WithAutocomplete = () => {
         ]}
         error={boolean('Error?', false)}
         errorMessage={text('Error', 'Error message…')}
+        variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
       />
     </StoryGrid>
   )
