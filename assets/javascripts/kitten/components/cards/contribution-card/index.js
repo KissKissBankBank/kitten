@@ -23,6 +23,7 @@ export const ContributionCard = ({
   style,
   borderWidth,
   borderRadius,
+  imageBorderRadius,
   borderColor,
   borderStyle,
   closeButton,
@@ -55,6 +56,7 @@ export const ContributionCard = ({
         ...style,
         '--contributionCard--border-width': pxToRem(borderWidth),
         '--contributionCard--border-radius': pxToRem(borderRadius),
+        '--contributionCard--image-border-radius': pxToRem(imageBorderRadius),
         '--contributionCard--border-color': borderColor,
         '--contributionCard--border-style': borderStyle,
       }}
@@ -104,6 +106,7 @@ ContributionCard.defaultProps = {
   borderRadius: 8,
   borderStyle: 'solid' ,
   borderWidth: 2,
+  imageBorderRadius: 5,
 }
 
 ContributionCard.propTypes = {
@@ -114,4 +117,5 @@ ContributionCard.propTypes = {
   borderRadius: PropTypes.string,
   borderStyle: PropTypes.string,
   borderWidth: PropTypes.string,
+  imageBorderRadius: PropTypes.string,
 }

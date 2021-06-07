@@ -29,8 +29,10 @@ export const StyledContributionCard = styled.article`
   border-style: var(--contributionCard--border-style);
   border-color: var(--contributionCard--border-color);
   border-radius: var(--contributionCard--border-radius);
-  
 
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    height: ${pxToRem(110)};
+  }
   /* IMAGE */
 
   .k-ContributionCard__imageWrapper {
@@ -44,11 +46,11 @@ export const StyledContributionCard = styled.article`
     @media (min-width: ${ScreenConfig.S.min}px) {
      
       /* IE11 defaults */
-      border-top-left-radius: ${pxToRem(8)};
-      border-bottom-left-radius: ${pxToRem(8)};
+      border-top-left-radius: ${pxToRem(5)};
+      border-bottom-left-radius: ${pxToRem(5)};
 
-      border-top-left-radius: var(--contributionCard--border-radius);
-      border-bottom-left-radius: var(--contributionCard--border-radius);
+      border-top-left-radius: var(--contributionCard--image-border-radius);
+      border-bottom-left-radius: var(--contributionCard--image-border-radius);
         
       display: flex;
       align-items: center;
@@ -70,11 +72,11 @@ export const StyledContributionCard = styled.article`
         transition: transform 0.2s ease-in-out;
 
         /* IE11 default */
-        border-top-left-radius: ${pxToRem(8)};
-        border-bottom-left-radius: ${pxToRem(8)};
+        border-top-left-radius: ${pxToRem(5)};
+        border-bottom-left-radius: ${pxToRem(5)};
 
-        border-top-left-radius: var(--contributionCard--border-radius);
-        border-bottom-left-radius: var(--contributionCard--border-radius);
+        border-top-left-radius: var(--contributionCard--image-border-radius);
+        border-bottom-left-radius: var(--contributionCard--image-border-radius);
       }
     }
     svg {
