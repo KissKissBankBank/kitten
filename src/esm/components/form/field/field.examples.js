@@ -31,8 +31,9 @@ export var FieldInputExample = function FieldInputExample(_ref2) {
       errorMessage = _ref2.errorMessage,
       limit = _ref2.limit,
       unit = _ref2.unit,
-      tiny = _ref2.tiny,
-      noMargin = _ref2.noMargin;
+      size = _ref2.size,
+      noMargin = _ref2.noMargin,
+      variant = _ref2.variant;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,
@@ -43,13 +44,14 @@ export var FieldInputExample = function FieldInputExample(_ref2) {
     errorMessage: errorMessage
   }, /*#__PURE__*/React.createElement(Field.Input, {
     id: id,
-    tiny: tiny,
+    size: size,
     limit: limit,
     unit: unit,
     name: "field",
     placeholder: placeholder,
     error: error,
-    noMargin: noMargin
+    noMargin: noMargin,
+    variant: variant
   }));
 };
 export var FieldPasswordExample = function FieldPasswordExample(_ref3) {
@@ -61,7 +63,8 @@ export var FieldPasswordExample = function FieldPasswordExample(_ref3) {
       placeholder = _ref3.placeholder,
       error = _ref3.error,
       errorMessage = _ref3.errorMessage,
-      tiny = _ref3.tiny;
+      variant = _ref3.variant,
+      size = _ref3.size;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,
@@ -72,12 +75,13 @@ export var FieldPasswordExample = function FieldPasswordExample(_ref3) {
     errorMessage: errorMessage
   }, /*#__PURE__*/React.createElement(Field.Password, {
     id: id,
-    tiny: tiny,
+    size: size,
     name: "field",
     iconLabel: "Show password",
     hiddenIconLabel: "Hide password",
     placeholder: placeholder,
-    error: error
+    error: error,
+    variant: variant
   }));
 };
 export var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref4) {
@@ -88,7 +92,8 @@ export var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref
       tooltipProps = _ref4.tooltipProps,
       items = _ref4.items,
       error = _ref4.error,
-      errorMessage = _ref4.errorMessage;
+      errorMessage = _ref4.errorMessage,
+      variant = _ref4.variant;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,
@@ -100,7 +105,8 @@ export var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref
   }, /*#__PURE__*/React.createElement(Field.RadioButtonSet, {
     name: "radio",
     items: items,
-    error: error
+    error: error,
+    variant: variant
   }));
 };
 export var FieldAutocompleteExample = function FieldAutocompleteExample(_ref5) {
@@ -113,7 +119,8 @@ export var FieldAutocompleteExample = function FieldAutocompleteExample(_ref5) {
       error = _ref5.error,
       errorMessage = _ref5.errorMessage,
       items = _ref5.items,
-      tiny = _ref5.tiny;
+      size = _ref5.size,
+      variant = _ref5.variant;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,
@@ -124,10 +131,11 @@ export var FieldAutocompleteExample = function FieldAutocompleteExample(_ref5) {
     errorMessage: errorMessage
   }, /*#__PURE__*/React.createElement(Field.Autocomplete, {
     id: id,
-    tiny: tiny,
+    size: size,
     name: "field",
     placeholder: placeholder,
     error: error,
-    items: items
+    items: items,
+    variant: variant
   }));
 };
