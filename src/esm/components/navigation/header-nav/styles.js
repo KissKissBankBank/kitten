@@ -5,7 +5,6 @@ import COLORS from '../../../constants/colors-config';
 import { CONTAINER_PADDING, CONTAINER_PADDING_THIN } from '../../../constants/grid-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import { MOBILE_HEADER_HEIGHT, TABLET_HEADER_HEIGHT, DESKTOP_HEADER_HEIGHT } from './config';
-import { hexToRgba } from '../../../helpers/utils/hex-to-rgba.js';
 export var StyledHeader = styled.header.withConfig({
   displayName: "styles__StyledHeader",
   componentId: "sc-139x0k8-0"
