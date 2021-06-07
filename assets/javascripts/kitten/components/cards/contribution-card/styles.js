@@ -189,11 +189,22 @@ export const StyledContributionCard = styled.article`
     place-self: flex-start center;
     min-width: auto;
 
+    border-color: ${COLORS.primary1};
+    background-color: ${COLORS.primary1};
+    color: ${COLORS.background1};
+
     @media (min-width: ${ScreenConfig.S.min}px) {
       margin-right: ${pxToRem(30)};
       place-self: center flex-end;
     }
   }
+
+  > .k-ContributionCard__input--isEmpty + .k-ContributionCard__action {
+      cursor: not-allowed;
+      border-color: ${COLORS.line2};
+      background-color: ${COLORS.line2};
+      color: ${COLORS.background1};
+    }
 
   .k-ContributionCard__description {
     margin-right: ${pxToRem(20)};
