@@ -150,7 +150,6 @@ export const LendopolisCrowdfundingCard = () => {
         info1={<Info label="maturité" text="48 mois" />}
         info2={<Info label="sur 157 000 €" text="157 000 €" />}
         info3={<Info label="Taux d'intérêt" text="5,0%" />}
-        progress={false}
         widgetState={STATE_CHOICES[widgetState]}
         additionalInfo={'Collecte réservée aux départements : 92, 34, 12, 82'}
         title="Aller sur la collecte …"
