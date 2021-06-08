@@ -8,7 +8,6 @@ export const Action = ({ className, ...props}) => {
       borderRadius={4}
       type="submit"
       {...props}
-      className={className}
       className={classNames(
         'k-ContributionCard__action',
         props.className,

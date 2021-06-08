@@ -185,6 +185,7 @@ export const StyledContributionCard = styled.article`
       place-self: center flex-start;
     }
   }
+
   .k-ContributionCard__action {
     margin-right: ${pxToRem(20)};
     grid-area: cc-action;
@@ -201,12 +202,12 @@ export const StyledContributionCard = styled.article`
     }
   }
 
-  > .k-ContributionCard__input--isEmpty + .k-ContributionCard__action {
-      cursor: not-allowed;
-      border-color: ${COLORS.line2};
-      background-color: ${COLORS.line2};
-      color: ${COLORS.background1};
-    }
+  .k-ContributionCard__input--isEmpty + .k-ContributionCard__action {
+    cursor: not-allowed;
+    border-color: ${COLORS.line2};
+    background-color: ${COLORS.line2};
+    color: ${COLORS.background1};
+  }
 
   .k-ContributionCard__description {
     margin-right: ${pxToRem(20)};
