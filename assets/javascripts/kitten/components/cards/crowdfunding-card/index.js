@@ -118,14 +118,12 @@ export const CrowdfundingCard = ({
         info3={info3}
         loading={loading}
       />
-      {progress !== null && (
-        <ProgressBar
-          progress={progress}
-          progressColor={progressColor}
-          loading={loading}
-          progressLabel={progressLabel}
-        />
-      )}
+      <ProgressBar
+        progress={progress}
+        progressColor={progressColor}
+        loading={loading}
+        progressLabel={progressLabel}
+      />
       {buttonText && <CardButton text={buttonText} loading={loading} />}
       <State state={state} widgetState={widgetState} loading={loading} />
 
