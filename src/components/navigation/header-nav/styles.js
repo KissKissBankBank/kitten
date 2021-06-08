@@ -21,8 +21,6 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _config = require("./config");
 
-var _hexToRgba = require("../../../helpers/utils/hex-to-rgba.js");
-
 var StyledHeader = _styledComponents.default.header.withConfig({
   displayName: "styles__StyledHeader",
   componentId: "sc-139x0k8-0"

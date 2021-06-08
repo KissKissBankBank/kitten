@@ -33,7 +33,8 @@ export var TextInputWithUnit = function TextInputWithUnit(_ref) {
     ref: input
   }, others, {
     size: size,
-    className: classNames('k-Form-TextInputWithUnit__input', className)
+    className: classNames('k-Form-TextInputWithUnit__input', className),
+    variant: variant
   })), /*#__PURE__*/React.createElement("span", {
     className: classNames('k-Form-TextInputWithUnit__unit', "k-Form-TextInputWithUnit__unit--".concat(size), {
       'k-Form-TextInputWithUnit__unit--valid': valid,
