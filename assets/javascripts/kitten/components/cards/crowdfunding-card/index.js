@@ -118,7 +118,7 @@ export const CrowdfundingCard = ({
         info3={info3}
         loading={loading}
       />
-      {progress && (
+      {progress !== null && (
         <ProgressBar
           progress={progress}
           progressColor={progressColor}
@@ -145,6 +145,10 @@ CrowdfundingCard.propTypes = {
   buttonText: PropTypes.string,
   forceVersion: PropTypes.oneOf(['mobile', 'tablet', 'desktop']),
   progressLabel: PropTypes.string,
+  progress: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
 }
 
 CrowdfundingCard.defaultProps = {
@@ -154,4 +158,5 @@ CrowdfundingCard.defaultProps = {
   imageContainerRatio: 10 / 16,
   buttonText: null,
   forceVersion: null,
+  progress: null,
 }

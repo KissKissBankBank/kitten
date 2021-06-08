@@ -22,7 +22,7 @@ class ProgressBar extends PureComponent {
   render() {
     const { progress, progressColor, loading, progressLabel } = this.props
 
-    if (progress === false) return null
+    if (progress === false || progress === null) return null
 
     const progressValue = loading ? 65 : parseInt(progress, 10)
 
