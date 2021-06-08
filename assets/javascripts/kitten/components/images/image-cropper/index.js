@@ -81,10 +81,10 @@ export const ImageCropper = ({
   useEffect(() => {
     if (fileNameState && resultData) {
       onChange({
-        value: resultData.target.src,
-        base: getOr(resultData.srcElement.src)('originalTarget.src')(
-          resultData,
-        ),
+        value: cropperInstance
+        ? cropperInstance.getCroppedCanvas().toDataURL()
+        : '',
+        base: resultData?.target?.src || '',
         name: fileNameState,
         file: uploadedFile,
         cropperData: resultData.detail,
