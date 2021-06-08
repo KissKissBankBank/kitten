@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import { Button } from '../../../../components/buttons/button'
 
-export const Action = ({ className, ...props}) => {
+export const Action = props => {
   return (
     <Button
       borderRadius={4}

@@ -114,8 +114,8 @@ ContributionCard.propTypes = {
   closeButton: PropTypes.bool,
   closeButtonLabel: PropTypes.string,
   borderColor: PropTypes.string,
-  borderRadius: PropTypes.string,
+  borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   borderStyle: PropTypes.string,
-  borderWidth: PropTypes.string,
-  imageBorderRadius: PropTypes.string,
+  borderWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  imageBorderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }

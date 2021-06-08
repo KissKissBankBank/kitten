@@ -10,7 +10,7 @@ export const Input = props => {
     <TextInputWithUnit
       wrapperProps={{
         className: classNames(
-          { 'k-ContributionCard__input--isEmpty': isInputEmpty },
+          { 'k-ContributionCard__inputWrapper--isEmpty': isInputEmpty },
         ),
       }}
       variant="orion"

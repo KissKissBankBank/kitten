@@ -3,7 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-
+- Feature: `TextInputWithUnit`: Add `wrapperProps`. 
 - Feature: `RocketIllustration`: Add new component.
 - Feature: `ContributionCard`: Add new component.
 - Fix: `TextInputWithUnit`: Fix `variant` propagation.

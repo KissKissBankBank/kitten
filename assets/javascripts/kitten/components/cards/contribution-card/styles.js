@@ -202,7 +202,7 @@ export const StyledContributionCard = styled.article`
     }
   }
 
-  .k-ContributionCard__input--isEmpty + .k-ContributionCard__action {
+  .k-ContributionCard__inputWrapper--isEmpty + .k-ContributionCard__action {
     cursor: not-allowed;
     border-color: ${COLORS.line2};
     background-color: ${COLORS.line2};

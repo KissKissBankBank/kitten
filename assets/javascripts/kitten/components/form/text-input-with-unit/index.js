@@ -111,15 +111,16 @@ export const TextInputWithUnit = ({
   const input = useRef(null)
 
   return (
-    <StyledTextInputWithUnit   
+    <StyledTextInputWithUnit
+      {...wrapperProps}  
       className={classNames(
         'k-Form-TextInputWithUnit',
         `k-Form-TextInputWithUnit--${variant}`,
+        wrapperProps.className,
         {
           'k-Form-TextInputWithUnit--hasDigits': !!digits,
         },
       )}
-      {...wrapperProps}
     >
       <TextInput
         ref={input}
