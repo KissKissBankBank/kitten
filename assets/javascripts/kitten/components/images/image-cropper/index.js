@@ -82,7 +82,9 @@ export const ImageCropper = ({
     if (fileNameState && resultData) {
       onChange({
         value: resultData?.target?.src || '',
-        base: resultData?.target?.src || '',
+        base: getOr(resultData?.srcElement?.src)('originalTarget.src')(
+          resultData,
+        ),
         name: fileNameState,
         file: uploadedFile,
         cropperData: resultData.detail,
