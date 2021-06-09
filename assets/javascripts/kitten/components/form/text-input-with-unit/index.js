@@ -81,8 +81,15 @@ const StyledTextInputWithUnit = styled.div`
   }
 
   &.k-Form-TextInputWithUnit--orion {
+    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border-radius: ${pxToRem(4)};
+  
+    .k-Form-TextInputWithUnit__input,
+    .k-Form-TextInputWithUnit__unit {
+      border: none;
+    }
     .k-Form-TextInputWithUnit__input {
-      border-right: none;
+      padding-right: 0;
     }
     .k-Form-TextInputWithUnit__unit {
       border-top-right-radius: ${pxToRem(4)};
@@ -113,6 +120,7 @@ export const TextInputWithUnit = ({
   return (
     <StyledTextInputWithUnit
       {...wrapperProps}
+      variant={variant}
       className={classNames(
         'k-Form-TextInputWithUnit',
         `k-Form-TextInputWithUnit--${variant}`,
@@ -126,7 +134,16 @@ export const TextInputWithUnit = ({
         ref={input}
         {...others}
         size={size}
-        className={classNames('k-Form-TextInputWithUnit__input', className)}
+        className={classNames(
+          'k-Form-TextInputWithUnit__input',
+          {
+            'k-Form-TextInputWithUnit__input--valid': valid,
+            'k-Form-TextInputWithUnit__input--error': error,
+            'k-Form-TextInputWithUnit__input--disabled': disabled,
+            'k-Form-TextInputWithUnit__input--hasUnitWord': !!unitWord,
+          },
+          className
+        )}
         variant={variant}
       />
       <span
