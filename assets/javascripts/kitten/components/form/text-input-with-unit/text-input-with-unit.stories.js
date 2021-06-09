@@ -25,7 +25,7 @@ export const Default = () => (
           unit={text('Unit', '€')}
           unitWord={text('UnitWord', null)}
           digits={number('Digits', null)}
-          variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
+          variant={select('Variant', ['andromeda', 'orion'], 'orion')}
         />
       </GridCol>
     </Grid>

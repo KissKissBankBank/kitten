@@ -81,7 +81,7 @@ const StyledTextInputWithUnit = styled.div`
   }
 
   &.k-Form-TextInputWithUnit--orion {
-    border: ${pxToRem(2)} solid ${COLORS.line1};
+    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.line1};
     border-radius: ${pxToRem(4)};
   
     .k-Form-TextInputWithUnit__input,
