@@ -30,32 +30,4 @@ describe('<ContributionCard />', () => {
       expect(component).toMatchSnapshot()
     })
   })
-  
-  describe('with PetitPlus', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(
-          <ContributionCard borderStyle="dashed" closeButton={false}>
-            <ContributionCard.Image>
-              <img src="/kitten.jpg" alt="" />
-            </ContributionCard.Image>
-    
-            <ContributionCard.Title>
-              Un petit plus pour 900 care
-              <ContributionCard.Description>
-                Donnez encore plus de chances à ce projet de voir le jour.
-              </ContributionCard.Description>
-            </ContributionCard.Title>
-            
-            <ContributionCard.Input unit="€" />
-            <ContributionCard.Action>Ajouter</ContributionCard.Action>
-          </ContributionCard>,
-        )
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
 })

@@ -64,7 +64,7 @@ exports[`<ContributionCard /> default matches with snapshot 1`] = `
         aria-hidden="true"
         className="k-PillNumberInput__minusButton"
         data-button="minus"
-        disabled={false}
+        disabled={true}
         onClick={[Function]}
         tabIndex="-1"
       >
@@ -80,9 +80,9 @@ exports[`<ContributionCard /> default matches with snapshot 1`] = `
         </svg>
       </button>
       <input
-        aria-valuemax={99}
+        aria-valuemax={100}
         aria-valuemin={0}
-        aria-valuenow={1}
+        aria-valuenow={0}
         className="k-PillNumberInput__input"
         disabled={false}
         inputMode="numeric"
@@ -123,5 +123,3 @@ exports[`<ContributionCard /> default matches with snapshot 1`] = `
   </div>
 </article>
 `;
-
-exports[`<ContributionCard /> with PetitPlus matches with snapshot 1`] = `undefined`;
