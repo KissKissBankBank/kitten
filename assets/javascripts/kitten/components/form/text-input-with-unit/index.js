@@ -82,8 +82,7 @@ const StyledTextInputWithUnit = styled.div`
 
   &.k-Form-TextInputWithUnit--orion {
     .k-Form-TextInputWithUnit__input {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+      border-right: none;
     }
     .k-Form-TextInputWithUnit__unit {
       border-top-right-radius: ${pxToRem(4)};
@@ -106,15 +105,18 @@ export const TextInputWithUnit = ({
   valid,
   error,
   disabled,
+  wrapperProps,
   ...others
 }) => {
   const input = useRef(null)
 
   return (
     <StyledTextInputWithUnit
+      {...wrapperProps}
       className={classNames(
         'k-Form-TextInputWithUnit',
         `k-Form-TextInputWithUnit--${variant}`,
+        wrapperProps.className,
         {
           'k-Form-TextInputWithUnit--hasDigits': !!digits,
         },
@@ -156,6 +158,7 @@ TextInputWithUnit.propTypes = {
   digits: PropTypes.number,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
+  wrapperProps: PropTypes.object,
 }
 
 TextInputWithUnit.defaultProps = {
@@ -169,4 +172,5 @@ TextInputWithUnit.defaultProps = {
   disabled: false,
   digits: null,
   variant: 'andromeda',
+  wrapperProps: {},
 }
