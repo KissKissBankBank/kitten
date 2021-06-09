@@ -25,11 +25,3 @@ export const Input = props => {
     />
   )
 }
-
-Input.propTypes = {
-  value: PropTypes.string,
-}
-
-Input.defaultProps = {
-  value: null,
-}

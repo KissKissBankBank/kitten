@@ -123,3 +123,5 @@ exports[`<ContributionCard /> default matches with snapshot 1`] = `
   </div>
 </article>
 `;
+
+exports[`<ContributionCard /> with PetitPlus matches with snapshot 1`] = `undefined`;
