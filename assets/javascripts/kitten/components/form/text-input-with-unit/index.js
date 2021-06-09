@@ -112,19 +112,16 @@ export const TextInputWithUnit = ({
   valid,
   error,
   disabled,
-  wrapperProps,
   ...others
 }) => {
   const input = useRef(null)
 
   return (
     <StyledTextInputWithUnit
-      {...wrapperProps}
       variant={variant}
       className={classNames(
         'k-Form-TextInputWithUnit',
         `k-Form-TextInputWithUnit--${variant}`,
-        wrapperProps.className,
         {
           'k-Form-TextInputWithUnit--hasDigits': !!digits,
         },
@@ -166,7 +163,6 @@ TextInputWithUnit.propTypes = {
   digits: PropTypes.number,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
-  wrapperProps: PropTypes.object,
 }
 
 TextInputWithUnit.defaultProps = {
@@ -180,5 +176,4 @@ TextInputWithUnit.defaultProps = {
   disabled: false,
   digits: null,
   variant: 'andromeda',
-  wrapperProps: {},
 }
