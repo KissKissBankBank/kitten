@@ -26,6 +26,7 @@ export const ImageCropper = ({
   cropperInfo,
   sliderTitle,
   className,
+  buttonProps,
 }) => {
   const cropperContainerRef = useRef(null)
   const cropperRef = useRef(null)
@@ -154,6 +155,7 @@ export const ImageCropper = ({
             file: null,
           })
         }}
+        buttonProps={buttonProps}
       />
       <Paragraph modifier="tertiary" noMargin className="k-u-margin-top-single">
         {description}
@@ -240,7 +242,7 @@ ImageCropper.defaultProps = {
   name: 'picture',
   imageSrc: null,
   fileName: null,
-  uploaderErrorLabel: 'You have an error on upload.',
+  uploaderErrorLabel: 'There was an error on upload.',
   aspectRatio: 16 / 9,
   maxSize: 5 * 1024 * 1024, // 5 Mo.
   acceptedFiles: '.jpg,.jpeg,.gif,.png',
@@ -252,4 +254,5 @@ ImageCropper.defaultProps = {
   disabled: false,
   isCropEnabled: true,
   onChange: _fileData => {},
+  buttonProps: {},
 }
