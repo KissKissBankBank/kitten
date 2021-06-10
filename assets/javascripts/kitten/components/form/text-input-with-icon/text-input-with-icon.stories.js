@@ -15,6 +15,7 @@ export const Default = () => (
     variant={select('Variant', variantOptions, 'andromeda')}
     icon={<SearchIcon aria-label="Search icon" width="15" height="15" />}
     iconPosition={select('iconPosition', ['left', 'right'], 'left')}
+    size={select('Size', ['tiny', 'regular', 'big', 'huge', 'giant'], 'regular')}
   />
 )
 
@@ -42,6 +43,7 @@ export const Validation = () => {
       valid={select('State', ['none', 'loading', 'valid', 'error'], 'none') === 'valid'}
       error={select('State', ['none', 'loading', 'valid', 'error'], 'none') === 'error'}
       accessibilityLabel={select('State', ['none', 'loading', 'valid', 'error'], 'none') === 'loading' && "Loading"}
+      size={select('Size', ['tiny', 'regular', 'big', 'huge', 'giant'], 'regular')}
     />
   )
 }
