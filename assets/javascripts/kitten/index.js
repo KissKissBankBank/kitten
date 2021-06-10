@@ -133,7 +133,7 @@ export {
 // Heroes
 export { Hero } from './components/heroes/hero'
 
-// Illustrations 
+// Illustrations
 export { RocketIllustration } from './components/illustrations/rocket-illustration'
 
 // Images

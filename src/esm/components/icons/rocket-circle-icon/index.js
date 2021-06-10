@@ -8,6 +8,7 @@ import { pxToRem } from '../../../helpers/utils/typography';
 import COLORS from '../../../constants/colors-config';
 import { ScreenConfig } from '../../../constants/screen-config';
 import deprecated from 'prop-types-extra/lib/deprecated';
+import classNames from 'classnames';
 var StyledRocketCircle = styled.div.withConfig({
   displayName: "rocket-circle-icon__StyledRocketCircle",
   componentId: "paapmm-0"
@@ -51,7 +52,8 @@ export var RocketCircleIcon = function RocketCircleIcon(_ref10) {
       rocketHeightMobile = _ref10.rocketHeightMobile,
       rocketColor = _ref10.rocketColor,
       rocketTitle = _ref10.rocketTitle,
-      others = _objectWithoutProperties(_ref10, ["color", "bgColor", "circleColor", "circleWidth", "circleWidthMobile", "rocketWidth", "rocketWidthMobile", "rocketHeight", "rocketHeightMobile", "rocketColor", "rocketTitle"]);
+      className = _ref10.className,
+      others = _objectWithoutProperties(_ref10, ["color", "bgColor", "circleColor", "circleWidth", "circleWidthMobile", "rocketWidth", "rocketWidthMobile", "rocketHeight", "rocketHeightMobile", "rocketColor", "rocketTitle", "className"]);
 
   return /*#__PURE__*/React.createElement(StyledRocketCircle, _extends({
     circleWidth: circleWidth,
@@ -60,7 +62,8 @@ export var RocketCircleIcon = function RocketCircleIcon(_ref10) {
     rocketWidth: rocketWidth,
     rocketHeight: rocketHeight,
     rocketHeightMobile: rocketHeightMobile,
-    rocketWidthMobile: rocketWidthMobile
+    rocketWidthMobile: rocketWidthMobile,
+    className: classNames('k-ColorSvg', className)
   }, others), /*#__PURE__*/React.createElement(RocketIcon, {
     color: color,
     title: rocketTitle,
