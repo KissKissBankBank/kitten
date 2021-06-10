@@ -53,7 +53,7 @@ var ProgressBar = /*#__PURE__*/function (_PureComponent) {
           progressColor = _this$props.progressColor,
           loading = _this$props.loading,
           progressLabel = _this$props.progressLabel;
-      if (progress === false) return null;
+      if (progress === false || progress === null) return null;
       var progressValue = loading ? 65 : parseInt(progress, 10);
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-CrowdfundingCard__progressBar"

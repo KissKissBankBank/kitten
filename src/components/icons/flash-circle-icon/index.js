@@ -21,6 +21,8 @@ var _ratio = require("../../../helpers/utils/ratio");
 
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var DEFAULT_WIDTH = 20;
 var DEFAULT_HEIGHT = 20;
 
@@ -32,7 +34,8 @@ var FlashCircleIcon = function FlashCircleIcon(_ref) {
       width = _ref.width,
       height = _ref.height,
       title = _ref.title,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["bgColor", "color", "circleColor", "flashColor", "width", "height", "title"]);
+      className = _ref.className,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["bgColor", "color", "circleColor", "flashColor", "width", "height", "title", "className"]);
   var computed = (0, _ratio.computeFromRatio)({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
@@ -43,7 +46,8 @@ var FlashCircleIcon = function FlashCircleIcon(_ref) {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20",
     width: computed.width,
-    height: computed.height
+    height: computed.height,
+    className: (0, _classnames.default)('k-ColorSvg', className)
   }, props), title && /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("circle", {
     fill: circleColor || bgColor,
     cx: "10",

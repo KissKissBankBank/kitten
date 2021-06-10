@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
-export const ClockIcon = ({ color, bgColor, title, ...props }) => (
+export const ClockIcon = ({ className, color, bgColor, title, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 11 11"
     width="10"
     height="10"
+    className={classNames('k-ColorSvg', className)}
     {...props}
   >
     {title && <title>{title}</title>}

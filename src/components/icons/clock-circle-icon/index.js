@@ -17,14 +17,18 @@ var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecate
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var ClockCircleIcon = function ClockCircleIcon(_ref) {
   var color = _ref.color,
       bgColor = _ref.bgColor,
       circleColor = _ref.circleColor,
       clockColor = _ref.clockColor,
       title = _ref.title,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "bgColor", "circleColor", "clockColor", "title"]);
+      className = _ref.className,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "bgColor", "circleColor", "clockColor", "title", "className"]);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
+    className: (0, _classnames.default)('k-ColorSvg', className),
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
   }, props), title && /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("circle", {

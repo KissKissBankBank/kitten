@@ -185,6 +185,7 @@ export { LinkBoxIllustration } from './components/graphics/illustrations/link-bo
 export { LoudspeakerIllustration } from './components/graphics/illustrations/loudspeaker-illustration'
 export { MixIllustration } from './components/graphics/illustrations/mix-illustration'
 export { PhoneIllustration } from './components/graphics/illustrations/phone-illustration'
+export { RocketIllustration } from './components/illustrations/rocket-illustration'
 
 // Graphics/Logos
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'
@@ -253,6 +254,7 @@ export { BackerCard } from './components/molecules/cards/backer-card'
 export { BackingCard } from './components/molecules/cards/backing-card'
 export { CartRewardCard } from './components/molecules/cards/cart-reward-card'
 export { ClickableCard } from './components/molecules/cards/clickable-card'
+export { ContributionCard } from './components/cards/contribution-card'
 export { CrowdfundingCard } from './components/molecules/cards/crowdfunding-card'
 export { EngagementCard } from './components/molecules/cards/engagement-card'
 export { EngagementCardWithImage } from './components/molecules/cards/engagement-card-with-image'

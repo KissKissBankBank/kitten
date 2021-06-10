@@ -6,7 +6,36 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breaking Change: Move component files around.
 - Feature: `Text`: Add default value 'light' to `weight` prop.
-- Fix: `TextInputWithUnit`: Fix `variant` propagation.
+
+## [3.18.0] - 2021-06-10
+
+Features:
+
+- `TextCopy`: Add `variant` prop, defaults to 'andromeda'.
+- `TextInputWithIcon`: Add `iconPosition` prop, defaults to `left`.
+- `ImageCropper`: Add `buttonProps` prop to be passed on to `BasicUploader`.
+- `TextInputWithUnit`: Add `wrapperProps` and update styles.
+- `RocketIllustration`: Add new component.
+- `ContributionCard`: Add new component.
+
+Fixes:
+
+- `CrowdfundingCard`: Fix progress when value equals 0.
+- Add Color SVG utility class on colored icons so they are not re-colored:
+  - `CheckedCircleIcon`
+  - `ClockCircleIcon`
+  - `ClockIcon`
+  - `CrossCircleIcon`
+  - `FlashCircleIcon`
+  - `RocketCircleIcon`
+  - `WarningCircleIcon`
+- `ImageCropper`: Return cropped image source value.
+
+## [3.17.3] - 2021-06-07
+
+Fix:
+
+- `TextInputWithUnit`: Fix `variant` propagation.
 
 ## [3.17.2] - 2021-06-03
 
@@ -1403,7 +1432,7 @@ Features:
   - `ClockIcon`
   - `CrossCircleIcon`
   - `FlashCircleIcon`
-  - `StyledRocketCircle`
+  - `RocketCircleIcon`
   - `WarningCircleIcon`
 - Add `color` props to:
   - `Cart`

@@ -80,10 +80,7 @@ const StyledInput = styled.input`
   padding: ${pxToRem(10)} var(--input-padding-horizontal);
 
   &.k-Form-TextInput--orion {
-    &.k-Form-TextInput--tiny,
-    &.k-Form-TextInput--regular {
-      border-radius: ${pxToRem(4)};
-    }
+    border-radius: ${pxToRem(4)};
 
     &.k-Form-TextInput--big,
     &.k-Form-TextInput--huge,

@@ -1,7 +1,7 @@
 import { Container } from '../../structure/container'
 import { Marger } from '../../..'
 import React from 'react'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text, boolean, select } from '@storybook/addon-knobs'
 import { TextCopy } from './index'
 
 const StoryContainer = ({ children }) => (
@@ -21,10 +21,11 @@ export const Default = () => {
   return (
     <StoryContainer>
       <TextCopy
-        textToCopy={text('Other text to Copy', undefined)}
-        alertMessage={text('Alert Message', 'Copied link !')}
-        forceOneLine={boolean('Force one line', false)}
-        buttonText={text('button text', 'Je suis button !')}
+        textToCopy={text('textToCopy', undefined)}
+        alertMessage={text('alertMessage', 'Copied link !')}
+        forceOneLine={boolean('forceOneLine', false)}
+        buttonText={text('buttonText', 'Je suis button !')}
+        variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
       >
         {text('Text', 'My text to copy on click')}
       </TextCopy>

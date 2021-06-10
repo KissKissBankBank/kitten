@@ -1,31 +1,14 @@
 import React, { useRef, useCallback, useState, useEffect } from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import styled, { keyframes, css } from 'styled-components'
-import TYPOGRAPHY from '../../../constants/typography-config'
+import styled, { keyframes } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { pxToRem } from '../../../helpers/utils/typography'
 import { CopyIcon } from '../../graphics/icons/copy-icon'
 import { ArrowContainer } from '../../molecules/boxes/arrow-container'
 import { Text } from '../../atoms/typography/text'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
-import { modifierStyles } from '../../../components/molecules/buttons/button/helpers/modifier-styles'
-
-const StyledButton = styled(({ buttonModifier, ...others }) => (
-  <button {...others} />
-))`
-  ${TYPOGRAPHY.fontStyles.regular};
-  font-size: ${stepToRem(-1)};
-  line-height: 1.3;
-  flex: 1 0 auto;
-  appearance: none;
-  cursor: pointer;
-  padding: 0 ${pxToRem(30)};
-  border-radius: 0;
-  align-self: stretch;
-  box-sizing: border-box;
-
-  ${({ buttonModifier }) => modifierStyles(buttonModifier)};
-`
+import { Button } from '../../components/molecules/buttons/button/'
 
 const fadeInAndOut = keyframes`
   0%, 100% {
@@ -36,61 +19,91 @@ const fadeInAndOut = keyframes`
   }
 `
 
-const Wrapper = styled(({ buttonText, ...others }) => <div {...others} />)`
+const Wrapper = styled.button`
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  ${({ buttonText }) =>
-    !buttonText &&
-    css`
-      border: ${pxToRem(2)} solid ${COLORS.line1};
-      background-color: ${COLORS.background1};
-    `}
-`
-
-const StyledText = styled(
-  ({ buttonText, forceOneLine, className, children, ...others }) => (
-    <Text className={className} {...others}>
-      {children}
-    </Text>
-  ),
-)`
-  padding: ${pxToRem(10)} ${pxToRem(15)};
   width: 100%;
 
-  ${({ buttonText }) =>
-    buttonText &&
-    css`
-      border: ${pxToRem(2)} solid ${COLORS.line1};
-      background-color: ${COLORS.background1};
-      border-right: 0;
-    `}
+  .k-TextCopy__text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    line-height: 1.2;
+    text-align: left;
 
-  ${({ forceOneLine }) =>
-    forceOneLine &&
-    css`
+    span {
+      max-height: calc(2 * 1.2 * 1em);
       overflow: hidden;
-      white-space: nowrap;
-    `}
-`
+      text-overflow: ellipsis;
+    }
 
-const IconWrapper = styled.div`
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  padding: ${pxToRem(10)};
-  border-left: ${pxToRem(2)} solid ${COLORS.line1};
-  align-self: stretch;
-  box-sizing: border-box;
-`
+    &.k-TextCopy__text--forceOneLine {
+      overflow: hidden;
 
-const StyledArrowContainer = styled(ArrowContainer)`
-  position: absolute;
-  left: 0;
-  bottom: -${pxToRem(50)};
-  animation: 3s ${fadeInAndOut} ease-out;
+      span {
+        max-width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .k-TextCopy__buttonTextButton {
+    min-width: 0;
+    flex: 1 0 auto;
+    padding: 0 ${pxToRem(15)};
+    align-self: stretch;
+    box-sizing: border-box;
+  }
+
+  .k-TextCopy__iconButton {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding: ${pxToRem(10)};
+    border: ${pxToRem(2)} solid ${COLORS.line1};
+    align-self: stretch;
+    box-sizing: border-box;
+  }
+
+  .k-TextCopy__tooltip {
+    position: absolute;
+    left: 0;
+    bottom: -${pxToRem(50)};
+    animation: 3s ${fadeInAndOut} ease-out;
+  }
+
+  &.k-TextCopy--andromeda {
+    .k-TextCopy__text {
+      border-right: 0;
+    }
+  }
+
+  &.k-TextCopy--orion {
+    gap: ${pxToRem(5)};
+
+    &:hover {
+      .k-Button {
+        border-color: ${COLORS.primary2};
+        background-color: ${COLORS.primary2};
+      }
+    }
+
+    &:active {
+      .k-Button {
+        border-color: ${COLORS.primary3};
+        background-color: ${COLORS.primary3};
+      }
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      flex-direction: column;
+    }
+
+    .k-Button.k-Button--orion {
+      border-radius: ${pxToRem(4)};
+    }
+  }
 `
 
 export const TextCopy = ({
@@ -101,98 +114,97 @@ export const TextCopy = ({
   forceOneLine,
   buttonText,
   buttonModifier,
+  variant,
 }) => {
-  const [shouldShowMessage, isMessageShown] = useState(false)
-  const textRef = useRef(null)
-  const selectText = useCallback(() => {
-    const range = document.createRange()
-    range.selectNode(textRef.current)
-    window.getSelection().addRange(range)
-  })
+  const [isMessageVisible, setMessageVisibility] = useState(false)
+  const textElement = useRef(null)
+
   useEffect(() => {
     let hideTimeout
-    if (shouldShowMessage) {
-      hideTimeout = setTimeout(() => isMessageShown(false), 3000)
+    if (isMessageVisible) {
+      hideTimeout = setTimeout(() => setMessageVisibility(false), 3000)
     }
     return () => clearTimeout(hideTimeout)
-  }, [shouldShowMessage])
-  const copyText = useCallback(() => {
-    isMessageShown(false)
-    if (textToCopy) {
-      const el = document.createElement('textarea')
-      el.value = textToCopy
-      document.body.appendChild(el)
-      el.select()
-      document.execCommand('copy')
-      document.body.removeChild(el)
-      const range = document.createRange()
-      range.selectNode(textRef.current)
-      window.getSelection().addRange(range)
+  }, [isMessageVisible])
+
+  const copyToClipboard = text => {
+    if (!navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text)
     } else {
-      selectText()
-      document.execCommand('copy')
+      // IE11
+      const hiddenElement = document.createElement('textarea')
+      hiddenElement.style.position = 'absolute'
+      hiddenElement.style.opacity = 0
+      hiddenElement.value = text
+      document.body.appendChild(hiddenElement)
+      hiddenElement.select()
+      return new Promise((res, rej) => {
+        document.execCommand('copy') ? res() : rej()
+        document.body.removeChild(hiddenElement)
+      })
     }
-    setTimeout(() => isMessageShown(true), 1)
+  }
+
+  const copyText = useCallback(() => {
+    setMessageVisibility(false)
+
+    const copyableText = textToCopy || textElement?.current?.innerText || ''
+
+    copyToClipboard(copyableText).then(() => {
+      setTimeout(() => setMessageVisibility(true), 1)
+    })
+
+    const range = document.createRange()
+    range.selectNode(textElement.current)
+    window.getSelection().addRange(range)
   })
 
-  const Action = ({ copyText, buttonText, buttonModifier, buttonProps }) => (
-    <>
-      {!buttonText && (
-        <IconWrapper aria-hidden={true} onClick={copyText}>
-          <CopyIcon />
-        </IconWrapper>
-      )}
-
-      {buttonText && (
-        <StyledButton
-          type="button"
-          buttonModifier={buttonModifier}
-          onClick={copyText}
-          aria-label={copyText}
-          {...buttonProps}
-        >
-          {buttonText}
-        </StyledButton>
-      )}
-    </>
-  )
-
   return (
-    <>
-      <Wrapper buttonText={buttonText}>
-        {description && <VisuallyHidden>{description}</VisuallyHidden>}
-        <StyledText
-          weight="light"
-          size="micro"
-          lineHeight="normal"
-          forceOneLine={forceOneLine}
-          onClick={selectText}
-          buttonText={buttonText}
+    <Wrapper
+      className={classNames(
+        'k-TextCopy',
+        'k-u-reset-button',
+        `k-TextCopy--${variant}`,
+      )}
+      type="button"
+      onClick={copyText}
+    >
+      {description && <VisuallyHidden>{description}</VisuallyHidden>}
+      <TextInput
+        as="div"
+        className={classNames('k-TextCopy__text', 'k-u-reset-button', {
+          'k-TextCopy__text--forceOneLine': forceOneLine,
+        })}
+        variant={variant}
+      >
+        <span ref={textElement}>{children}</span>
+      </TextInput>
+
+      <Button
+        as="span"
+        modifier={!!buttonText ? buttonModifier : 'hydrogen'}
+        className="k-TextCopy__buttonTextButton"
+        variant={variant}
+        icon={!buttonText}
+      >
+        {!!buttonText ? buttonText : <CopyIcon />}
+      </Button>
+
+      {alertMessage && isMessageVisible && (
+        <ArrowContainer
+          color={COLORS.primary1}
+          position="top"
+          padding={10}
+          centered
+          role="alert"
+          className="k-TextCopy__tooltip"
         >
-          <span ref={textRef}>{children}</span>
-        </StyledText>
-
-        <Action
-          copyText={copyText}
-          buttonText={buttonText}
-          buttonModifier={buttonModifier}
-        />
-
-        {alertMessage && shouldShowMessage && (
-          <StyledArrowContainer
-            color={COLORS.primary1}
-            position="top"
-            padding={10}
-            centered
-            role="alert"
-          >
-            <Text color="background1" weight="light" size="micro">
-              {alertMessage}
-            </Text>
-          </StyledArrowContainer>
-        )}
-      </Wrapper>
-    </>
+          <Text color="background1" weight="light" size="micro">
+            {alertMessage}
+          </Text>
+        </ArrowContainer>
+      )}
+    </Wrapper>
   )
 }
 
