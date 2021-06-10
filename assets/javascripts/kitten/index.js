@@ -186,7 +186,7 @@ export { LinkBoxIllustration } from './components/graphics/illustrations/link-bo
 export { LoudspeakerIllustration } from './components/graphics/illustrations/loudspeaker-illustration'
 export { MixIllustration } from './components/graphics/illustrations/mix-illustration'
 export { PhoneIllustration } from './components/graphics/illustrations/phone-illustration'
-export { RocketIllustration } from './components/illustrations/rocket-illustration'
+export { RocketIllustration } from './components/graphics/illustrations/rocket-illustration'
 
 // Graphics/Logos
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'
