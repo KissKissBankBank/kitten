@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `CrowdfundingCard`: Fix progress when value equals 0.
+- Feature: `TextInputWithIcon`: Add `iconPosition` prop, defaults to `left`.
 
 ## [3.17.3] - 2021-06-07
 

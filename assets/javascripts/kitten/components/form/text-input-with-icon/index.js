@@ -10,17 +10,12 @@ import classNames from 'classnames'
 const StyledTextInputWithIcon = styled.div`
   position: relative;
 
-  .k-Form-TextInputWithIcon__input {
-    padding-left: ${pxToRem(50)};
-  }
-
   .k-Form-TextInputWithIcon__icon {
     display: flex;
     position: absolute;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    left: 0;
     top: 0;
     width: ${pxToRem(50)};
     height: 100%;
@@ -36,20 +31,50 @@ const StyledTextInputWithIcon = styled.div`
       }
     }
   }
+  &.k-Form-TextInputWithIcon--icon_left {
+    .k-Form-TextInputWithIcon__input {
+      padding-left: ${pxToRem(50)};
+    }
+
+    .k-Form-TextInputWithIcon__icon {
+      left: 0;
+    }
+  }
+  &.k-Form-TextInputWithIcon--icon_right {
+    .k-Form-TextInputWithIcon__input {
+      padding-right: ${pxToRem(50)};
+    }
+
+    .k-Form-TextInputWithIcon__icon {
+      right: 0;
+    }
+  }
 `
 
 export const TextInputWithIcon = ({
   disabled,
   icon,
+  iconPosition,
   accessibilityLabel,
+  id,
   ...others
 }) => {
   return (
-    <StyledTextInputWithIcon className="k-Form-TextInputWithIcon">
+    <StyledTextInputWithIcon
+      className={classNames(
+        'k-Form-TextInputWithIcon',
+        `k-Form-TextInputWithIcon--icon_${iconPosition}`,
+
+      )}
+    >
       {accessibilityLabel && (
-        <VisuallyHidden>{accessibilityLabel}</VisuallyHidden>
+        <VisuallyHidden
+          id={`${id}__iconLabel`}
+        >{accessibilityLabel}</VisuallyHidden>
       )}
       <TextInput
+        id={id}
+        aria-labelledby={accessibilityLabel ? `${id}__iconLabel` : null}
         {...others}
         className={classNames(
           'k-Form-TextInputWithIcon__input',
@@ -73,9 +98,11 @@ TextInputWithIcon.propTypes = {
   disabled: PropTypes.bool,
   accessibilityLabel: PropTypes.string,
   icon: PropTypes.node.isRequired,
+  iconPosition: PropTypes.oneOf(['left', 'right']),
 }
 
 TextInputWithIcon.defaultProps = {
   accessibilityLabel: '',
   disabled: false,
+  iconPosition: 'left',
 }
