@@ -27,6 +27,8 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var StyledRocketCircle = _styledComponents.default.div.withConfig({
   displayName: "rocket-circle-icon__StyledRocketCircle",
   componentId: "paapmm-0"
@@ -71,7 +73,8 @@ var RocketCircleIcon = function RocketCircleIcon(_ref10) {
       rocketHeightMobile = _ref10.rocketHeightMobile,
       rocketColor = _ref10.rocketColor,
       rocketTitle = _ref10.rocketTitle,
-      others = (0, _objectWithoutProperties2.default)(_ref10, ["color", "bgColor", "circleColor", "circleWidth", "circleWidthMobile", "rocketWidth", "rocketWidthMobile", "rocketHeight", "rocketHeightMobile", "rocketColor", "rocketTitle"]);
+      className = _ref10.className,
+      others = (0, _objectWithoutProperties2.default)(_ref10, ["color", "bgColor", "circleColor", "circleWidth", "circleWidthMobile", "rocketWidth", "rocketWidthMobile", "rocketHeight", "rocketHeightMobile", "rocketColor", "rocketTitle", "className"]);
   return /*#__PURE__*/_react.default.createElement(StyledRocketCircle, (0, _extends2.default)({
     circleWidth: circleWidth,
     circleWidthMobile: circleWidthMobile,
@@ -79,7 +82,8 @@ var RocketCircleIcon = function RocketCircleIcon(_ref10) {
     rocketWidth: rocketWidth,
     rocketHeight: rocketHeight,
     rocketHeightMobile: rocketHeightMobile,
-    rocketWidthMobile: rocketWidthMobile
+    rocketWidthMobile: rocketWidthMobile,
+    className: (0, _classnames.default)('k-ColorSvg', className)
   }, others), /*#__PURE__*/_react.default.createElement(_rocketIcon.RocketIcon, {
     color: color,
     title: rocketTitle,

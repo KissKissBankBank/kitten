@@ -4,13 +4,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `TextInputWithUnit`: Add `wrapperProps` and update styles. 
-- Feature: `RocketIllustration`: Add new component.
-- Feature: `ContributionCard`: Add new component.
-- Fix: `CrowdfundingCard`: Fix progress when value equals 0.
-- Feature: `TextCopy`: Add `variant` prop, defaults to 'andromeda'.
-- Feature: `TextInputWithIcon`: Add `iconPosition` prop, defaults to `left`.
-- Fix: Add Color SVG utility class on colored icons so they are not re-colored:
+
+## [3.18.0] - 2021-06-10
+
+Features:
+
+- `TextCopy`: Add `variant` prop, defaults to 'andromeda'.
+- `TextInputWithIcon`: Add `iconPosition` prop, defaults to `left`.
+- `ImageCropper`: Add `buttonProps` prop to be passed on to `BasicUploader`.
+- `TextInputWithUnit`: Add `wrapperProps` and update styles.
+- `RocketIllustration`: Add new component.
+- `ContributionCard`: Add new component.
+
+Fixes:
+
+- `CrowdfundingCard`: Fix progress when value equals 0.
+- Add Color SVG utility class on colored icons so they are not re-colored:
   - `CheckedCircleIcon`
   - `ClockCircleIcon`
   - `ClockIcon`
@@ -18,8 +27,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `FlashCircleIcon`
   - `RocketCircleIcon`
   - `WarningCircleIcon`
-- Fix: `ImageCropper`: Return cropped image source value.
-- Feature: `ImageCropper`: Add `buttonProps` prop to be passed on to `BasicUploader`.
+- `ImageCropper`: Return cropped image source value.
 
 ## [3.17.3] - 2021-06-07
 

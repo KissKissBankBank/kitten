@@ -47,11 +47,12 @@ var ImageCropper = function ImageCropper(_ref) {
       description = _ref.description,
       cropperInfo = _ref.cropperInfo,
       sliderTitle = _ref.sliderTitle,
-      className = _ref.className;
+      className = _ref.className,
+      buttonProps = _ref.buttonProps;
   var cropperContainerRef = (0, _react.useRef)(null);
   var cropperRef = (0, _react.useRef)(null);
 
-  var _useState = (0, _react.useState)(imageSrc),
+  var _useState = (0, _react.useState)(undefined),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
       imageSrcState = _useState2[0],
       setImageSrc = _useState2[1];
@@ -112,7 +113,14 @@ var ImageCropper = function ImageCropper(_ref) {
       setResultData = _useState24[1];
 
   (0, _react.useEffect)(function () {
-    if (cropperInstance && cropperInstance.imageData.naturalWidth) {
+    if (!imageSrcState && imageSrc) {
+      setImageSrc(imageSrc);
+    }
+  }, [imageSrc, imageSrcState]);
+  (0, _react.useEffect)(function () {
+    var _cropperInstance$imag;
+
+    if (cropperInstance && cropperInstance !== null && cropperInstance !== void 0 && (_cropperInstance$imag = cropperInstance.imageData) !== null && _cropperInstance$imag !== void 0 && _cropperInstance$imag.naturalWidth) {
       var imageData = cropperInstance.imageData;
       var naturalWidth = imageData.naturalWidth;
       var width = imageData.width;
@@ -123,7 +131,7 @@ var ImageCropper = function ImageCropper(_ref) {
       setSliderMax(max);
       setInitialSliderValue(min);
     }
-  }, [(0, _getOr.default)(null)('imageData.naturalWidth')(cropperInstance)]);
+  }, [cropperInstance]);
 
   var setCropperSize = function setCropperSize() {
     if (cropperContainerRef) {
@@ -151,15 +159,18 @@ var ImageCropper = function ImageCropper(_ref) {
   };
   (0, _react.useEffect)(function () {
     if (fileNameState && resultData) {
+      var _resultData$target, _resultData$srcElemen;
+
       onChange({
-        value: resultData.target.src,
-        base: (0, _getOr.default)(resultData.srcElement.src)('originalTarget.src')(resultData),
+        value: (resultData === null || resultData === void 0 ? void 0 : (_resultData$target = resultData.target) === null || _resultData$target === void 0 ? void 0 : _resultData$target.src) || '',
+        base: (0, _getOr.default)(resultData === null || resultData === void 0 ? void 0 : (_resultData$srcElemen = resultData.srcElement) === null || _resultData$srcElemen === void 0 ? void 0 : _resultData$srcElemen.src)('originalTarget.src')(resultData),
         name: fileNameState,
         file: uploadedFile,
-        cropperData: resultData.detail
+        cropperData: resultData.detail,
+        croppedImageSrc: cropperInstance ? cropperInstance.getCroppedCanvas().toDataURL() : ''
       });
     }
-  }, [resultData, fileNameState, uploadedFile]);
+  }, [resultData, fileNameState, uploadedFile, cropperInstance, onChange]);
   var dragMode = disabled || !isCropEnabled ? 'none' : 'move';
   return /*#__PURE__*/_react.default.createElement(_styles.StyledCropper, {
     className: (0, _classnames.default)('k-UploadAndCropper', className)
@@ -210,7 +221,8 @@ var ImageCropper = function ImageCropper(_ref) {
         name: null,
         file: null
       });
-    }
+    },
+    buttonProps: buttonProps
   }), /*#__PURE__*/_react.default.createElement(_next.Paragraph, {
     modifier: "tertiary",
     noMargin: true,
@@ -221,7 +233,7 @@ var ImageCropper = function ImageCropper(_ref) {
   }, imageSrcState && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     ref: cropperContainerRef,
     className: "k-Cropper__wrapper__cropper"
-  }, cropperWidth && cropperHeight && /*#__PURE__*/_react.default.createElement(_reactCropper.default, {
+  }, cropperWidth && cropperHeight && cropperWidth > 0 && cropperHeight > 0 && /*#__PURE__*/_react.default.createElement(_reactCropper.default, {
     onInitialized: function onInitialized(instance) {
       setCropperInstance(instance);
     },
@@ -273,7 +285,7 @@ ImageCropper.defaultProps = {
   name: 'picture',
   imageSrc: null,
   fileName: null,
-  uploaderErrorLabel: 'You have an error on upload.',
+  uploaderErrorLabel: 'There was an error on upload.',
   aspectRatio: 16 / 9,
   maxSize: 5 * 1024 * 1024,
   // 5 Mo.
@@ -285,5 +297,6 @@ ImageCropper.defaultProps = {
   description: 'Lorem ipsum…',
   disabled: false,
   isCropEnabled: true,
-  onChange: function onChange(_fileData) {}
+  onChange: function onChange(_fileData) {},
+  buttonProps: {}
 };
