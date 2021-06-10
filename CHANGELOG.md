@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `FlashCircleIcon`
   - `RocketCircleIcon`
   - `WarningCircleIcon`
+- Fix: `ImageCropper`: Return cropped image source value.
 
 ## [3.17.3] - 2021-06-07
 
