@@ -46,4 +46,22 @@ describe('<TextInputWithIcon />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with disabled prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <TextInputWithIcon
+            valid
+            icon={<SearchIcon />}
+            iconPosition="right"
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
