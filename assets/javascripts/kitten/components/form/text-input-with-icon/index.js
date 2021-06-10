@@ -20,7 +20,7 @@ const StyledTextInputWithIcon = styled.div`
     width: ${pxToRem(50)};
     height: 100%;
 
-    &.k-Form-TextInputWithIcon__icon--disabled > svg {
+    &.k-Form-TextInputWithIcon__icon--disabled > svg:not(.k-ColorSvg) {
       &[stroke]:not([stroke='none']),
       & [stroke]:not([stroke='none']) {
         stroke: ${COLORS.font2};
