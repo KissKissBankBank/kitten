@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `CrowdfundingCard`: Fix progress when value equals 0.
 - Feature: `TextInputWithIcon`: Add `iconPosition` prop, defaults to `left`.
+- Fix: Add Color SVG utility class on colored icons so they are not re-colored:
+  - `CheckedCircleIcon`
+  - `ClockCircleIcon`
+  - `ClockIcon`
+  - `CrossCircleIcon`
+  - `FlashCircleIcon`
+  - `RocketCircleIcon`
+  - `WarningCircleIcon`
 
 ## [3.17.3] - 2021-06-07
 
@@ -1408,7 +1416,7 @@ Features:
   - `ClockIcon`
   - `CrossCircleIcon`
   - `FlashCircleIcon`
-  - `StyledRocketCircle`
+  - `RocketCircleIcon`
   - `WarningCircleIcon`
 - Add `color` props to:
   - `Cart`
