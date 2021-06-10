@@ -39,7 +39,7 @@ const StyledTextInputWithUnit = styled.div`
     height: 100%;
     align-items: center;
     justify-content: center;
-    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border-left: ${pxToRem(2)} solid ${COLORS.line1};
     border-radius: 0;
     box-sizing: border-box;
     color: ${COLORS.font1};
@@ -115,7 +115,6 @@ export const TextInputWithUnit = ({
 
   return (
     <StyledTextInputWithUnit
-      variant={variant}
       className={classNames(
         'k-Form-TextInputWithUnit',
         `k-Form-TextInputWithUnit--${variant}`,
@@ -128,10 +127,7 @@ export const TextInputWithUnit = ({
         ref={input}
         {...others}
         size={size}
-        className={classNames(
-          'k-Form-TextInputWithUnit__input',
-          others.className,
-        )}
+        className={classNames('k-Form-TextInputWithUnit__input', className)}
         variant={variant}
       />
       <span
