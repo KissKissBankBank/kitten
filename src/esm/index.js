@@ -82,6 +82,7 @@ export { RadioButtonSet } from './components/form/radio-button-set';
 export { RangeSlider } from './components/form/range-slider';
 export { TextInput } from './components/form/text-input';
 export { TextInputWithButton } from './components/form/text-input-with-button';
+export { TextInputWithIcon } from './components/form/text-input-with-icon';
 export { TextInputWithLimit } from './components/form/text-input-with-limit';
 export { TextInputWithUnit } from './components/form/text-input-with-unit';
 export { ToggleSwitch } from './components/form/toggle-switch'; // Grid
@@ -94,7 +95,7 @@ export { SideGrid } from './components/grid/side-grid';
 export { StickyContainer } from './components/grid/sticky-container';
 export { AdaptableGrid, AdaptableGridCol } from './components/grid/adaptable-grid'; // Heroes
 
-export { Hero } from './components/heroes/hero'; // Illustrations 
+export { Hero } from './components/heroes/hero'; // Illustrations
 
 export { RocketIllustration } from './components/illustrations/rocket-illustration'; // Images
 

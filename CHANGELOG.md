@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `TextInputWithIcon` to ESM exports.
+## [3.18.1] - 2021-06-10
+
+Fix:
+
+- Add `TextInputWithIcon` to ESM exports.
 
 ## [3.18.0] - 2021-06-10
 
