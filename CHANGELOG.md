@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TextInputWithUnit`: Update styles.
 - Fix: `CrowdfundingCard`: Fix progress when value equals 0.
 - Feature: `TextCopy`: Add `variant` prop, defaults to 'andromeda'.
 - Feature: `TextInputWithIcon`: Add `iconPosition` prop, defaults to `left`.
