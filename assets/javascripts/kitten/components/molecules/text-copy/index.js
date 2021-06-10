@@ -3,12 +3,14 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
+import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { CopyIcon } from '../../graphics/icons/copy-icon'
 import { ArrowContainer } from '../../molecules/boxes/arrow-container'
 import { Text } from '../../atoms/typography/text'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
-import { Button } from '../../molecules/buttons/button/'
+import { Button } from '../../molecules/buttons/button'
+import { TextInput } from '../../form/text-input'
 
 const fadeInAndOut = keyframes`
   0%, 100% {
