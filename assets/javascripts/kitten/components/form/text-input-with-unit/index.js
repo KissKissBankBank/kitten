@@ -8,7 +8,7 @@ import COLORS from '../../../constants/colors-config'
 import classNames from 'classnames'
 
 const StyledTextInputWithUnit = styled.div`
-  display: flex;
+  position: relative;
   width: 1%;
 
   &:not(.k-Form-TextInputWithUnit--hasDigits) {
@@ -16,6 +16,8 @@ const StyledTextInputWithUnit = styled.div`
   }
 
   .k-Form-TextInputWithUnit__input {
+    padding-right: ${pxToRem(50)};
+  
     &[type='number'] {
       appearance: textfield;
 
@@ -29,11 +31,15 @@ const StyledTextInputWithUnit = styled.div`
 
   .k-Form-TextInputWithUnit__unit {
     display: flex;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: ${pxToRem(42)};
+    height: 100%;
     align-items: center;
     justify-content: center;
-    background-color: ${COLORS.background1};
     border: ${pxToRem(2)} solid ${COLORS.line1};
-    border-left: 0;
     border-radius: 0;
     box-sizing: border-box;
     color: ${COLORS.font1};
@@ -81,23 +87,14 @@ const StyledTextInputWithUnit = styled.div`
   }
 
   &.k-Form-TextInputWithUnit--orion {
-    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.line1};
-    border-radius: ${pxToRem(4)};
-  
-    .k-Form-TextInputWithUnit__input,
+    .k-Form-TextInputWithUnit__input {
+      border-radius: ${pxToRem(4)};
+      padding-right: ${pxToRem(42)};
+      
+    }
     .k-Form-TextInputWithUnit__unit {
       border: none;
-    }
-    .k-Form-TextInputWithUnit__input {
-      padding-right: 0;
-    }
-    .k-Form-TextInputWithUnit__unit {
-      border-top-right-radius: ${pxToRem(4)};
-      border-bottom-right-radius: ${pxToRem(4)};
-    }
-    .k-Form-TextInputWithUnit__unit--big {
-      border-top-right-radius: ${pxToRem(8)};
-      border-bottom-right-radius: ${pxToRem(8)};
+      padding: 0;
     }
   }
 `
@@ -131,7 +128,10 @@ export const TextInputWithUnit = ({
         ref={input}
         {...others}
         size={size}
-        className={classNames('k-Form-TextInputWithUnit__input', className)}
+        className={classNames(
+          'k-Form-TextInputWithUnit__input',
+          others.className,
+        )}
         variant={variant}
       />
       <span
