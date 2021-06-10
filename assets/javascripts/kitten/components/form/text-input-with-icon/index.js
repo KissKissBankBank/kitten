@@ -64,13 +64,12 @@ export const TextInputWithIcon = ({
       className={classNames(
         'k-Form-TextInputWithIcon',
         `k-Form-TextInputWithIcon--icon_${iconPosition}`,
-
       )}
     >
       {accessibilityLabel && (
-        <VisuallyHidden
-          id={`${id}__iconLabel`}
-        >{accessibilityLabel}</VisuallyHidden>
+        <VisuallyHidden id={`${id}__iconLabel`}>
+          {accessibilityLabel}
+        </VisuallyHidden>
       )}
       <TextInput
         id={id}

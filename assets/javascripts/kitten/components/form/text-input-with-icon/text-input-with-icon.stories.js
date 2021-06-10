@@ -1,7 +1,13 @@
 import React from 'react'
 import { boolean, text, select } from '@storybook/addon-knobs'
 import { TextInputWithIcon } from './index'
-import { SearchIcon, CheckedCircleIcon, WarningCircleIcon, Loader, COLORS } from '../../..'
+import {
+  SearchIcon,
+  CheckedCircleIcon,
+  WarningCircleIcon,
+  Loader,
+  COLORS,
+} from '../../..'
 
 const variantOptions = {
   Andromeda: 'andromeda',
@@ -15,19 +21,33 @@ export const Default = () => (
     variant={select('Variant', variantOptions, 'andromeda')}
     icon={<SearchIcon aria-label="Search icon" width="15" height="15" />}
     iconPosition={select('iconPosition', ['left', 'right'], 'left')}
-    size={select('Size', ['tiny', 'regular', 'big', 'huge', 'giant'], 'regular')}
+    size={select(
+      'Size',
+      ['tiny', 'regular', 'big', 'huge', 'giant'],
+      'regular',
+    )}
   />
 )
 
 export const Validation = () => {
   const IconComponent = () => {
-    switch(select('State', ['none', 'loading', 'valid', 'error'], 'none')) {
+    switch (select('State', ['none', 'loading', 'valid', 'error'], 'none')) {
       case 'loading':
-        return (<Loader />)
+        return <Loader />
       case 'valid':
-        return (<CheckedCircleIcon bgColor={COLORS.valid} color={COLORS.background1} />)
+        return (
+          <CheckedCircleIcon
+            bgColor={COLORS.valid}
+            color={COLORS.background1}
+          />
+        )
       case 'error':
-        return (<WarningCircleIcon bgColor={COLORS.error} color={COLORS.background1} />)
+        return (
+          <WarningCircleIcon
+            bgColor={COLORS.error}
+            color={COLORS.background1}
+          />
+        )
       default:
         return null
     }
@@ -40,10 +60,23 @@ export const Validation = () => {
       variant={select('Variant', variantOptions, 'andromeda')}
       icon={<IconComponent />}
       iconPosition="right"
-      valid={select('State', ['none', 'loading', 'valid', 'error'], 'none') === 'valid'}
-      error={select('State', ['none', 'loading', 'valid', 'error'], 'none') === 'error'}
-      accessibilityLabel={select('State', ['none', 'loading', 'valid', 'error'], 'none') === 'loading' && "Loading"}
-      size={select('Size', ['tiny', 'regular', 'big', 'huge', 'giant'], 'regular')}
+      valid={
+        select('State', ['none', 'loading', 'valid', 'error'], 'none') ===
+        'valid'
+      }
+      error={
+        select('State', ['none', 'loading', 'valid', 'error'], 'none') ===
+        'error'
+      }
+      accessibilityLabel={
+        select('State', ['none', 'loading', 'valid', 'error'], 'none') ===
+          'loading' && 'Loading'
+      }
+      size={select(
+        'Size',
+        ['tiny', 'regular', 'big', 'huge', 'giant'],
+        'regular',
+      )}
     />
   )
 }

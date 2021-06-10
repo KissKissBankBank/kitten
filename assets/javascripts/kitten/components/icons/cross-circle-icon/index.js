@@ -5,7 +5,6 @@ import { computeFromRatio } from '../../../helpers/utils/ratio'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import classNames from 'classnames'
 
-
 const DEFAULT_WIDTH = 20
 const DEFAULT_HEIGHT = 20
 

@@ -3,7 +3,6 @@ import deprecated from 'prop-types-extra/lib/deprecated'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-
 export const ClockCircleIcon = ({
   color,
   bgColor,

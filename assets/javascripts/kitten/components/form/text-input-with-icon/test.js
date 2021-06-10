@@ -50,7 +50,13 @@ describe('<TextInputWithIcon />', () => {
   describe('with disabled prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(<TextInputWithIcon valid icon={<SearchIcon />} iconPosition="right" />)
+        .create(
+          <TextInputWithIcon
+            valid
+            icon={<SearchIcon />}
+            iconPosition="right"
+          />,
+        )
         .toJSON()
     })
 
