@@ -2,7 +2,7 @@
 
 exports[`<TextCopy /> should match snapshot 1`] = `
 <button
-  className="sc-EHOje gqElvD k-TextCopy k-u-reset-button k-TextCopy--undefined"
+  className="sc-EHOje hQnwvz k-TextCopy k-u-reset-button k-TextCopy--undefined"
   onClick={[Function]}
   type="button"
 >
@@ -42,7 +42,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
 
 exports[`<TextCopy /> should match snapshot with button text 1`] = `
 <button
-  className="sc-EHOje gqElvD k-TextCopy k-u-reset-button k-TextCopy--undefined"
+  className="sc-EHOje hQnwvz k-TextCopy k-u-reset-button k-TextCopy--undefined"
   onClick={[Function]}
   type="button"
 >
@@ -76,7 +76,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
 
 exports[`<TextCopy /> should match snapshot with description 1`] = `
 <button
-  className="sc-EHOje gqElvD k-TextCopy k-u-reset-button k-TextCopy--undefined"
+  className="sc-EHOje hQnwvz k-TextCopy k-u-reset-button k-TextCopy--undefined"
   onClick={[Function]}
   type="button"
 >
@@ -121,7 +121,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
 
 exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
 <button
-  className="sc-EHOje gqElvD k-TextCopy k-u-reset-button k-TextCopy--undefined"
+  className="sc-EHOje hQnwvz k-TextCopy k-u-reset-button k-TextCopy--undefined"
   onClick={[Function]}
   type="button"
 >
@@ -166,7 +166,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
 
 exports[`<TextCopy /> should match snapshot with variant etc. 1`] = `
 <button
-  className="sc-EHOje gqElvD k-TextCopy k-u-reset-button k-TextCopy--orion"
+  className="sc-EHOje hQnwvz k-TextCopy k-u-reset-button k-TextCopy--orion"
   onClick={[Function]}
   type="button"
 >

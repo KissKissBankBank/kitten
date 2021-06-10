@@ -86,6 +86,13 @@ const Wrapper = styled.button`
 
     &:hover {
       .k-Button {
+        border-color: ${COLORS.primary2};
+        background-color: ${COLORS.primary2};
+      }
+    }
+
+    &:active {
+      .k-Button {
         border-color: ${COLORS.primary3};
         background-color: ${COLORS.primary3};
       }
