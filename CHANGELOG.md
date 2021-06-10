@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `ContributionCard`: Add new component.
 
 - Fix: `CrowdfundingCard`: Fix progress when value equals 0.
+- Fix: `ImageCropper`: Return cropped image source value.
 
 ## [3.17.3] - 2021-06-07
 
