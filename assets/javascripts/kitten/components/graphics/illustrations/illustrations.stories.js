@@ -55,7 +55,7 @@ const IllustrationWrapper = styled(({ className, children, name }) => {
   }
 `
 
-export const AllLogos = () => {
+export const AllIllustrations = () => {
   return (
     <Wrapper>
       <Group>
@@ -86,4 +86,4 @@ export const AllLogos = () => {
   )
 }
 
-export default { title: 'Graphics/Illustrations/List' }
+export default { title: 'Graphics/Illustrations' }

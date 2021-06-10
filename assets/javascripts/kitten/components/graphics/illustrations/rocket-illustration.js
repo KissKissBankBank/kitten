@@ -3,12 +3,15 @@ import React from 'react'
 export const RocketIllustration = props => {
   return (
     <svg viewBox="0 0 800 800" width={800} height={800} {...props}>
-      <style
-        dangerouslySetInnerHTML={{
-          __html:
-            '.st3{fill:#83dafc}.st4{fill:#ffebe0}.st14{fill:red}.st15{opacity:.1}.st16{fill:#19b4fa}',
-        }}
-      />
+      <style>
+        {`
+          .st3{fill:#83dafc}
+          .st4{fill:#ffebe0}
+          .st14{fill:red}
+          .st15{opacity:.1}
+          .st16{fill:#19b4fa}
+        `}
+      </style>
       <defs>
         <circle id="SVGID_1_" cx={400} cy={400} r={400} />
       </defs>
