@@ -1,8 +1,7 @@
 import React from 'react'
 import { boolean, text, number, select } from '@storybook/addon-knobs'
 import { TextInputWithUnit } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
-import { Container } from '../../../components/grid/container'
+import { Grid, GridCol, Container } from '../../..'
 
 const sizeOptions = {
   Tiny: 'tiny',

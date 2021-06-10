@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Button } from '../../../../components/buttons/button'
+import { Button } from '../../../../../components/molecules/buttons/button'
 
 export const Action = props => {
   return (

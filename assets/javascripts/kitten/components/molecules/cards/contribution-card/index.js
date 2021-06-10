@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState }  from 'react'
-import { CloseButton } from '../../../components/buttons/close-button'
+import { CloseButton } from '../../../../components/molecules/buttons/close-button'
 import { StyledContributionCard } from './styles'
 import classNames from 'classnames'
-import COLORS from '../../../constants/colors-config'
+import COLORS from '../../../../constants/colors-config'
 import PropTypes from 'prop-types'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { pxToRem } from '../../../../helpers/utils/typography'
 import {
   Image,
   Title,

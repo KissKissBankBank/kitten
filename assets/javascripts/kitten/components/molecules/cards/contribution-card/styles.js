@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components'
-import COLORS from '../../../constants/colors-config'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../constants/screen-config'
+import COLORS from '../../../../constants/colors-config'
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const fadeOut = keyframes`
 0% { opacity: 1; }

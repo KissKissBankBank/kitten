@@ -1,17 +1,16 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Text } from '../../../../components/typography/text'
+import { Text } from '../../../../../components/atoms/typography/text'
 
-export const Description = props => {
+export const Amount = props => {
   return (
     <Text
-      tag="p"
       color="font1"
-      weight="light"
-      size="micro"
+      weight="bold"
+      size="huge"
       {...props}
       className={classNames(
-        'k-ContributionCard__description',
+        'k-ContributionCard__amount',
         props.className,
       )}
     />

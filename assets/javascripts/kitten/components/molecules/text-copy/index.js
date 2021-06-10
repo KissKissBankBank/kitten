@@ -8,7 +8,7 @@ import { CopyIcon } from '../../graphics/icons/copy-icon'
 import { ArrowContainer } from '../../molecules/boxes/arrow-container'
 import { Text } from '../../atoms/typography/text'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
-import { Button } from '../../components/molecules/buttons/button/'
+import { Button } from '../../molecules/buttons/button/'
 
 const fadeInAndOut = keyframes`
   0%, 100% {

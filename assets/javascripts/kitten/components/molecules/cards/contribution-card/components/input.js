@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { TextInputWithUnit } from '../../../form/text-input-with-unit'
+import { TextInputWithUnit } from '../../../../form/text-input-with-unit'
 
 export const Input = props => {
   const [isInputEmpty, setEmptyInput] = useState(true)

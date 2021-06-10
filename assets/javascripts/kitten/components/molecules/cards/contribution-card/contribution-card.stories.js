@@ -1,8 +1,6 @@
 import React from 'react'
 import { ContributionCard } from './index'
-import { Container } from '../../../components/grid/container'
-import { Marger } from '../../../components/layout/marger'
-import { RocketIllustration } from '../../../components/illustrations/rocket-illustration'
+import { Container, Marger, RocketIllustration } from '../../../..'
 
 const StoryContainer = ({ children }) => (
   <Container>
