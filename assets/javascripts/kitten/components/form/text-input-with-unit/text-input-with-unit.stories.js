@@ -15,7 +15,7 @@ const sizeOptions = {
 export const Default = () => (
   <Container className="k-u-margin-vertical-quadruple k-u-margin-horizontal-auto">
     <Grid>
-      <GridCol col="2">
+      <GridCol col="6">
         <TextInputWithUnit
           valid={boolean('Valid', false)}
           disabled={boolean('Disabled', false)}
