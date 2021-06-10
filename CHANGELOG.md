@@ -7,6 +7,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking Change: Move component files around.
 - Feature: `Text`: Add default value 'light' to `weight` prop.
 
+## [3.18.1] - 2021-06-10
+
+Fix:
+
+- Add `TextInputWithIcon` to ESM exports.
+
 ## [3.18.0] - 2021-06-10
 
 Features:

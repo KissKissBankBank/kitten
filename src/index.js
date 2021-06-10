@@ -545,6 +545,12 @@ Object.defineProperty(exports, "TextInputWithButton", {
     return _textInputWithButton.TextInputWithButton;
   }
 });
+Object.defineProperty(exports, "TextInputWithIcon", {
+  enumerable: true,
+  get: function get() {
+    return _textInputWithIcon.TextInputWithIcon;
+  }
+});
 Object.defineProperty(exports, "TextInputWithLimit", {
   enumerable: true,
   get: function get() {
@@ -2095,6 +2101,8 @@ var _rangeSlider = require("./components/form/range-slider");
 var _textInput = require("./components/form/text-input");
 
 var _textInputWithButton = require("./components/form/text-input-with-button");
+
+var _textInputWithIcon = require("./components/form/text-input-with-icon");
 
 var _textInputWithLimit = require("./components/form/text-input-with-limit");
 
