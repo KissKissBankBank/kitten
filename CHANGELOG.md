@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `CrowdfundingCard`: Fix progress when value equals 0.
 - Feature: `TextCopy`: Add `variant` prop, defaults to 'andromeda'.
+- Fix: `ImageCropper`: Return cropped image source value.
 
 ## [3.17.3] - 2021-06-07
 
