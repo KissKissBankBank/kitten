@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `CrowdfundingCard`: Fix progress when value equals 0.
 - Fix: `ImageCropper`: Return cropped image source value.
+- Feature: `ImageCropper`: Add `buttonProps` prop to be passed on to `BasicUploader`.
 
 ## [3.17.3] - 2021-06-07
 

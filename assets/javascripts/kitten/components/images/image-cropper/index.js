@@ -26,6 +26,7 @@ export const ImageCropper = ({
   cropperInfo,
   sliderTitle,
   className,
+  buttonProps,
 }) => {
   const cropperContainerRef = useRef(null)
   const cropperRef = useRef(null)
@@ -154,6 +155,7 @@ export const ImageCropper = ({
             file: null,
           })
         }}
+        buttonProps={buttonProps}
       />
       <Paragraph modifier="tertiary" noMargin className="k-u-margin-top-single">
         {description}
@@ -252,4 +254,5 @@ ImageCropper.defaultProps = {
   disabled: false,
   isCropEnabled: true,
   onChange: _fileData => {},
+  buttonProps: {},
 }

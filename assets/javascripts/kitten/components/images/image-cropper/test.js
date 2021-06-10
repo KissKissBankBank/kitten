@@ -4,7 +4,11 @@ import renderer from 'react-test-renderer'
 
 describe('<ImageCropper />', () => {
   it('matches with snapshot', () => {
-    const component = renderer.create(<ImageCropper name="cropper" />).toJSON()
+    const component = renderer
+      .create(
+        <ImageCropper name="cropper" buttonProps={{ variant: 'orion' }} />,
+      )
+      .toJSON()
     expect(component).toMatchSnapshot()
   })
 })
