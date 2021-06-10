@@ -6,6 +6,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 import deprecated from 'prop-types-extra/lib/deprecated'
+import classNames from 'classnames'
 
 const StyledRocketCircle = styled.div`
   display: flex;
@@ -46,6 +47,7 @@ export const RocketCircleIcon = ({
   rocketHeightMobile,
   rocketColor,
   rocketTitle,
+  className,
   ...others
 }) => (
   <StyledRocketCircle
@@ -56,6 +58,7 @@ export const RocketCircleIcon = ({
     rocketHeight={rocketHeight}
     rocketHeightMobile={rocketHeightMobile}
     rocketWidthMobile={rocketWidthMobile}
+    className={classNames('k-ColorSvg', className)}
     {...others}
   >
     <RocketIcon

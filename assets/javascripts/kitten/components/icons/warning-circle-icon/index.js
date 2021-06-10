@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import COLORS from '../../../constants/colors-config'
 import { computeFromRatio } from '../../../helpers/utils/ratio'
 import deprecated from 'prop-types-extra/lib/deprecated'
+import classNames from 'classnames'
 
 const DEFAULT_WIDTH = 20
 const DEFAULT_HEIGHT = 20
@@ -15,6 +16,7 @@ export const WarningCircleIcon = ({
   width,
   height,
   title,
+  className,
   ...props
 }) => {
   const computed = computeFromRatio({
@@ -30,6 +32,7 @@ export const WarningCircleIcon = ({
       viewBox="0 0 20 20"
       width={computed.width}
       height={computed.height}
+      className={classNames('k-ColorSvg', className)}
       {...props}
     >
       {title && <title>{title}</title>}
