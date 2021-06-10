@@ -1,21 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextCopy /> should match snapshot 1`] = `
-<div
-  className="sc-bxivhb jnalPG"
+<button
+  className="sc-EHOje hQnwvz k-TextCopy k-u-reset-button k-TextCopy--undefined"
+  onClick={[Function]}
+  type="button"
 >
-  <span
-    className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-micro k-u-weight-light sc-ifAKCX JcGon"
-    onClick={[Function]}
+  <div
+    className="sc-htpNat eiKyFO k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    disabled={false}
+    name="text"
   >
     <span>
       Text To Copy
     </span>
-  </span>
-  <div
-    aria-hidden={true}
-    className="sc-EHOje dwKMm"
-    onClick={[Function]}
+  </div>
+  <span
+    className="sc-ifAKCX dJRJMu k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+    style={
+      Object {
+        "--border-radius": 0,
+      }
+    }
+    type="button"
   >
     <svg
       height="22"
@@ -29,59 +36,72 @@ exports[`<TextCopy /> should match snapshot 1`] = `
         fill="#000"
       />
     </svg>
-  </div>
-</div>
+  </span>
+</button>
 `;
 
 exports[`<TextCopy /> should match snapshot with button text 1`] = `
-<div
-  className="sc-bxivhb iGiqAw"
+<button
+  className="sc-EHOje hQnwvz k-TextCopy k-u-reset-button k-TextCopy--undefined"
+  onClick={[Function]}
+  type="button"
 >
   <span
     className="k-u-a11y-visuallyHidden"
   >
     This is a description
   </span>
-  <span
-    className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-micro k-u-weight-light sc-ifAKCX ivCvQq"
-    onClick={[Function]}
+  <div
+    className="sc-htpNat eiKyFO k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    disabled={false}
+    name="text"
   >
     <span>
       Text To Copy
     </span>
-  </span>
-  <button
-    aria-label={[Function]}
-    className="sc-htpNat gmIEnJ"
-    onClick={[Function]}
+  </div>
+  <span
+    className="sc-ifAKCX hudtkk k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--andromeda"
+    style={
+      Object {
+        "--border-radius": 0,
+      }
+    }
     type="button"
   >
     Button text
-  </button>
-</div>
+  </span>
+</button>
 `;
 
 exports[`<TextCopy /> should match snapshot with description 1`] = `
-<div
-  className="sc-bxivhb jnalPG"
+<button
+  className="sc-EHOje hQnwvz k-TextCopy k-u-reset-button k-TextCopy--undefined"
+  onClick={[Function]}
+  type="button"
 >
   <span
     className="k-u-a11y-visuallyHidden"
   >
     This is a description
   </span>
-  <span
-    className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-micro k-u-weight-light sc-ifAKCX JcGon"
-    onClick={[Function]}
+  <div
+    className="sc-htpNat eiKyFO k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    disabled={false}
+    name="text"
   >
     <span>
       Text To Copy
     </span>
-  </span>
-  <div
-    aria-hidden={true}
-    className="sc-EHOje dwKMm"
-    onClick={[Function]}
+  </div>
+  <span
+    className="sc-ifAKCX dJRJMu k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+    style={
+      Object {
+        "--border-radius": 0,
+      }
+    }
+    type="button"
   >
     <svg
       height="22"
@@ -95,31 +115,38 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
         fill="#000"
       />
     </svg>
-  </div>
-</div>
+  </span>
+</button>
 `;
 
 exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
-<div
-  className="sc-bxivhb jnalPG"
+<button
+  className="sc-EHOje hQnwvz k-TextCopy k-u-reset-button k-TextCopy--undefined"
+  onClick={[Function]}
+  type="button"
 >
   <span
     className="k-u-a11y-visuallyHidden"
   >
     This is a description
   </span>
-  <span
-    className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-micro k-u-weight-light sc-ifAKCX etcZRR"
-    onClick={[Function]}
+  <div
+    className="sc-htpNat eiKyFO k-Form-TextInput k-TextCopy__text k-u-reset-button k-TextCopy__text--forceOneLine k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    disabled={false}
+    name="text"
   >
     <span>
       Text To Copy
     </span>
-  </span>
-  <div
-    aria-hidden={true}
-    className="sc-EHOje dwKMm"
-    onClick={[Function]}
+  </div>
+  <span
+    className="sc-ifAKCX dJRJMu k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+    style={
+      Object {
+        "--border-radius": 0,
+      }
+    }
+    type="button"
   >
     <svg
       height="22"
@@ -133,6 +160,40 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
         fill="#000"
       />
     </svg>
+  </span>
+</button>
+`;
+
+exports[`<TextCopy /> should match snapshot with variant etc. 1`] = `
+<button
+  className="sc-EHOje hQnwvz k-TextCopy k-u-reset-button k-TextCopy--orion"
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="k-u-a11y-visuallyHidden"
+  >
+    This is a description
+  </span>
+  <div
+    className="sc-htpNat eiKyFO k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--orion k-Form-TextInput--regular"
+    disabled={false}
+    name="text"
+  >
+    <span>
+      Text To Copy
+    </span>
   </div>
-</div>
+  <span
+    className="sc-ifAKCX hudtkk k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--orion"
+    style={
+      Object {
+        "--border-radius": 0,
+      }
+    }
+    type="button"
+  >
+    Button text
+  </span>
+</button>
 `;
