@@ -4,14 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+
+- `ImageCropper`: Add `onUpload` prop, called when uploading a new file.
+
+Fixes:
+
 - Fix: `DashboardLayout`: Remove horizontal scroll between 1440px and 1550px.
+- Fix: `ImageCropper`: Fix behaviour of component, breaking when uploading a file.
 
 ## [3.18.1] - 2021-06-10
 
 Fix:
 
 - Add `TextInputWithIcon` to ESM exports.
-
 ## [3.18.0] - 2021-06-10
 
 Features:
