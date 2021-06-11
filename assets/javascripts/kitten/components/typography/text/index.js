@@ -1,15 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
-
-const StyledText = styled.span`
-  ${({ cssColor }) =>
-    cssColor &&
-    css`
-      color: ${cssColor};
-    `}
-`
 
 export const Text = ({
   className,
@@ -21,10 +12,14 @@ export const Text = ({
   size,
   fontStyle,
   tag,
+  as,
   transform,
   weight,
+  style,
   ...others
 }) => {
+  const Tag = as || tag
+
   const textClassName = classNames(
     {
       // Color.
@@ -71,7 +66,7 @@ export const Text = ({
     className,
   )
 
-  return <StyledText as={tag} {...others} className={textClassName} />
+  return <Tag {...others} className={textClassName} style={cssColor ? {color: cssColor, ...style} : style} />
 }
 
 Text.propTypes = {
@@ -139,5 +134,5 @@ Text.defaultProps = {
   fontStyle: null,
   tag: 'span',
   transform: null,
-  weight: null,
+  weight: 'light',
 }

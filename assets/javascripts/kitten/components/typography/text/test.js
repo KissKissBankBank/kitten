@@ -39,6 +39,18 @@ describe('<Text />', () => {
     })
   })
 
+  describe('with cssColor and custom style', () => {
+    let component
+
+    beforeEach(() => {
+      component = renderer.create(<Text cssColor="#F00" style={{ fontWeight: 'bold' }} />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with className prop', () => {
     const component = shallow(<Text className="custom__class" />)
 

@@ -2,18 +2,30 @@
 
 exports[`<Text /> by default matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa bDWFJH"
+  className="k-u-weight-light"
 />
 `;
 
 exports[`<Text /> with as prop matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa bDWFJH"
+  className="k-u-weight-light"
+/>
+`;
+
+exports[`<Text /> with cssColor and custom style matches with snapshot 1`] = `
+<span
+  className="k-u-weight-light"
+  style={
+    Object {
+      "color": "#F00",
+      "fontWeight": "bold",
+    }
+  }
 />
 `;
 
 exports[`<Text /> with tag prop matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa bDWFJH"
+  className="k-u-weight-light"
 />
 `;

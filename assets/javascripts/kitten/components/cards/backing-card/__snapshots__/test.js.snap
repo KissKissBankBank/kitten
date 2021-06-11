@@ -36,7 +36,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
     className="k-BackingCard__gridWrapper"
   >
     <span
-      className="sc-ifAKCX eTJBHR k-Tag k-BackingCard__headingTag k-BackingCard__drawer k-Tag--info"
+      className="sc-bxivhb hxhzRb k-Tag k-BackingCard__headingTag k-BackingCard__drawer k-Tag--info"
     >
       <svg
         fill="#222"
@@ -56,13 +56,13 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
       className="k-BackingCard__titleWrapper k-BackingCard__drawer"
     >
       <h3
-        className="sc-bwzfXH uTxCW k-u-line-height-1 k-u-size-default k-u-weight-bold k-BackingCard__title k-u-margin-none"
+        className="k-u-line-height-1 k-u-size-default k-u-weight-bold k-BackingCard__title k-u-margin-none"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
       </h3>
     </div>
     <p
-      className="sc-bwzfXH uTxCW k-u-line-height-1 k-u-weight-bold k-BackingCard__amount k-BackingCard__drawer"
+      className="k-u-line-height-1 k-u-weight-bold k-BackingCard__amount k-BackingCard__drawer"
     >
       65 €
     </p>
@@ -70,13 +70,13 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
       className="k-BackingCard__info k-u-size-tiny k-u-line-height-normal k-BackingCard__halfDrawer"
     >
       <span
-        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BackingCard__info__legend"
+        className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BackingCard__info__legend"
       >
         Prix de livraison :
       </span>
        
       <span
-        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-light k-BackingCard__info__value"
+        className="k-u-line-height-normal k-u-size-tiny k-u-weight-light k-BackingCard__info__value"
       >
         5 € (en France)
       </span>
@@ -85,13 +85,13 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
       className="k-BackingCard__info k-u-size-tiny k-u-line-height-normal k-BackingCard__halfDrawer"
     >
       <span
-        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BackingCard__info__legend"
+        className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BackingCard__info__legend"
       >
         Livraison estimée :
       </span>
        
       <span
-        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-light k-BackingCard__info__value"
+        className="k-u-line-height-normal k-u-size-tiny k-u-weight-light k-BackingCard__info__value"
       >
         Janvier 2022
       </span>
@@ -128,7 +128,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
       className="k-BackingCard__tagList k-BackingCard__drawer"
     >
       <li
-        className="sc-ifAKCX eTJBHR k-Tag k-Tag--info"
+        className="sc-bxivhb hxhzRb k-Tag k-Tag--info"
       >
         <strong
           className="k-u-weight-regular"
@@ -138,7 +138,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
          contributeurs
       </li>
       <li
-        className="sc-ifAKCX eTJBHR k-Tag k-Tag--info"
+        className="sc-bxivhb hxhzRb k-Tag k-Tag--info"
       >
         <strong
           className="k-u-weight-regular"
@@ -150,7 +150,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
     </ul>
   </div>
   <button
-    className="sc-bxivhb eKasGr k-Button k-BackingCard__button k-BackingCard__drawer k-Button--regular k-Button--helium k-Button--andromeda k-Button--hasBorderRadius"
+    className="sc-htpNat gCTkTZ k-Button k-BackingCard__button k-BackingCard__drawer k-Button--regular k-Button--helium k-Button--andromeda k-Button--hasBorderRadius"
     disabled={true}
     style={
       Object {
