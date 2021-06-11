@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `DashboardLayout`: Remove horizontal scroll between 1440px and 1550px.
+
 ## [3.18.1] - 2021-06-10
 
 Fix:
