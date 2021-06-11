@@ -43,7 +43,9 @@ describe('<Text />', () => {
     let component
 
     beforeEach(() => {
-      component = renderer.create(<Text cssColor="#F00" style={{ fontWeight: 'bold' }} />).toJSON()
+      component = renderer
+        .create(<Text cssColor="#F00" style={{ fontWeight: 'bold' }} />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {

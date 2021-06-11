@@ -66,7 +66,13 @@ export const Text = ({
     className,
   )
 
-  return <Tag {...others} className={textClassName} style={cssColor ? {color: cssColor, ...style} : style} />
+  return (
+    <Tag
+      {...others}
+      className={textClassName}
+      style={cssColor ? { color: cssColor, ...style } : style}
+    />
+  )
 }
 
 Text.propTypes = {
