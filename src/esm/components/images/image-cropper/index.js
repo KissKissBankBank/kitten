@@ -20,6 +20,7 @@ export var ImageCropper = function ImageCropper(_ref) {
       maxSize = _ref.maxSize,
       acceptedFiles = _ref.acceptedFiles,
       onChange = _ref.onChange,
+      _onUpload = _ref.onUpload,
       buttonLabel = _ref.buttonLabel,
       uploaderErrorLabel = _ref.uploaderErrorLabel,
       description = _ref.description,
@@ -30,7 +31,7 @@ export var ImageCropper = function ImageCropper(_ref) {
   var cropperContainerRef = useRef(null);
   var cropperRef = useRef(null);
 
-  var _useState = useState(undefined),
+  var _useState = useState(imageSrc),
       _useState2 = _slicedToArray(_useState, 2),
       imageSrcState = _useState2[0],
       setImageSrc = _useState2[1];
@@ -90,12 +91,7 @@ export var ImageCropper = function ImageCropper(_ref) {
       resultData = _useState24[0],
       setResultData = _useState24[1];
 
-  useEffect(function () {
-    if (!imageSrcState && imageSrc) {
-      setImageSrc(imageSrc);
-    }
-  }, [imageSrc, imageSrcState]);
-  useEffect(function () {
+  var handleCalculateSliderValues = function handleCalculateSliderValues() {
     var _cropperInstance$imag;
 
     if (cropperInstance && cropperInstance !== null && cropperInstance !== void 0 && (_cropperInstance$imag = cropperInstance.imageData) !== null && _cropperInstance$imag !== void 0 && _cropperInstance$imag.naturalWidth) {
@@ -109,10 +105,14 @@ export var ImageCropper = function ImageCropper(_ref) {
       setSliderMax(max);
       setInitialSliderValue(min);
     }
-  }, [cropperInstance]);
+  };
+
+  useEffect(function () {
+    handleCalculateSliderValues();
+  }, [getOr(null)('imageData.naturalWidth')(cropperInstance)]);
 
   var setCropperSize = function setCropperSize() {
-    if (cropperContainerRef) {
+    if (cropperContainerRef !== null && cropperContainerRef !== void 0 && cropperContainerRef.current) {
       var width = domElementHelper.getComputedWidth(cropperContainerRef.current);
       var height = width / aspectRatio;
       setCropperWidth(width);
@@ -136,7 +136,7 @@ export var ImageCropper = function ImageCropper(_ref) {
   };
   useEffect(function () {
     if (fileNameState && resultData) {
-      var _resultData$target, _resultData$srcElemen;
+      var _resultData$target, _resultData$srcElemen, _cropperInstance$getC;
 
       onChange({
         value: (resultData === null || resultData === void 0 ? void 0 : (_resultData$target = resultData.target) === null || _resultData$target === void 0 ? void 0 : _resultData$target.src) || '',
@@ -144,10 +144,10 @@ export var ImageCropper = function ImageCropper(_ref) {
         name: fileNameState,
         file: uploadedFile,
         cropperData: resultData.detail,
-        croppedImageSrc: cropperInstance ? cropperInstance.getCroppedCanvas().toDataURL() : ''
+        croppedImageSrc: cropperInstance ? cropperInstance === null || cropperInstance === void 0 ? void 0 : (_cropperInstance$getC = cropperInstance.getCroppedCanvas()) === null || _cropperInstance$getC === void 0 ? void 0 : _cropperInstance$getC.toDataURL() : ''
       });
     }
-  }, [resultData, fileNameState, uploadedFile, cropperInstance, onChange]);
+  }, [resultData, fileNameState, uploadedFile]);
   var dragMode = disabled || !isCropEnabled ? 'none' : 'move';
   return /*#__PURE__*/React.createElement(StyledCropper, {
     className: classNames('k-UploadAndCropper', className)
@@ -179,6 +179,8 @@ export var ImageCropper = function ImageCropper(_ref) {
           reader.onload = function (event) {
             setImageSrc(event.target.result);
             setFileName(file.name);
+            handleCalculateSliderValues();
+            cropperInstance === null || cropperInstance === void 0 ? void 0 : cropperInstance.reset();
           };
 
           reader.readAsDataURL(file);
@@ -187,8 +189,13 @@ export var ImageCropper = function ImageCropper(_ref) {
         setStatus('error');
         setErrorText(uploaderErrorLabel);
       }
+
+      if (_onUpload) {
+        _onUpload(e);
+      }
     },
     onCancel: function onCancel() {
+      cropperInstance === null || cropperInstance === void 0 ? void 0 : cropperInstance.reset();
       setImageSrc(imageSrc);
       setFileName(fileName);
       setErrorText('');
@@ -210,7 +217,7 @@ export var ImageCropper = function ImageCropper(_ref) {
   }, imageSrcState && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
     ref: cropperContainerRef,
     className: "k-Cropper__wrapper__cropper"
-  }, cropperWidth && cropperHeight && cropperWidth > 0 && cropperHeight > 0 && /*#__PURE__*/React.createElement(Cropper, {
+  }, /*#__PURE__*/React.createElement(Cropper, {
     onInitialized: function onInitialized(instance) {
       setCropperInstance(instance);
     },
@@ -273,5 +280,6 @@ ImageCropper.defaultProps = {
   disabled: false,
   isCropEnabled: true,
   onChange: function onChange(_fileData) {},
+  onUpload: function onUpload() {},
   buttonProps: {}
 };
