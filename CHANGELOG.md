@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Text`: Fix `cssColor` bug and remove Styled Component dependency.
+- Feature: `Text`: Add `light` as default for `weight` prop.
 - Fix: `TextInputWithUnit`: Fix disabled state and `unitWord` styles.
 
 ## [3.19.0] - 2021-06-11

@@ -53,12 +53,12 @@ exports[`<ContributionCard /> default matches with snapshot 1`] = `
     className="k-ContributionCard__gridWrapper"
   >
     <span
-      className="sc-htpNat KtFsv k-u-color-font1 k-u-weight-bold k-ContributionCard__title"
+      className="k-u-color-font1 k-u-weight-bold k-ContributionCard__title"
     >
       Lorem ipsum dolor sit amet, consectetuer adipiscing ligula eget dolor eget dolor.eget dolor.eget dolor.
     </span>
     <div
-      className="sc-bxivhb dYTwiO k-PillNumberInput k-ContributionCard__pillNumber"
+      className="sc-htpNat bgRshg k-PillNumberInput k-ContributionCard__pillNumber"
     >
       <button
         aria-hidden="true"
@@ -116,7 +116,7 @@ exports[`<ContributionCard /> default matches with snapshot 1`] = `
       </button>
     </div>
     <span
-      className="sc-htpNat KtFsv k-u-color-font1 k-u-size-huge k-u-weight-bold k-ContributionCard__amount"
+      className="k-u-color-font1 k-u-size-huge k-u-weight-bold k-ContributionCard__amount"
     >
       1005 €
     </span>
