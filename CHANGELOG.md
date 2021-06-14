@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TextInputWithUnit`: Fix disabled state and `unitWord` styles.
+
 ## [3.19.0] - 2021-06-11
 
 Features:
