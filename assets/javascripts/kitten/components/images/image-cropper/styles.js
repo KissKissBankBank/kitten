@@ -338,4 +338,9 @@ export const StyledCropper = styled.div`
       cursor: not-allowed;
     }
   }
+
+  &.k-UploadAndCropper--disabled .k-Cropper img {
+    filter: grayscale(100%);
+    opacity: 0.3;
+  }
 `

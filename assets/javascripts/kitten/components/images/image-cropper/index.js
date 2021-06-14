@@ -109,7 +109,9 @@ export const ImageCropper = ({
   const dragMode = disabled || !isCropEnabled ? 'none' : 'move'
 
   return (
-    <StyledCropper className={classNames('k-UploadAndCropper', className)}>
+    <StyledCropper className={classNames('k-UploadAndCropper', className, {
+      'k-UploadAndCropper--disabled': disabled,
+    })}>
       <Label htmlFor={name} className="k-u-margin-bottom-singleHalf">
         {label}
       </Label>
