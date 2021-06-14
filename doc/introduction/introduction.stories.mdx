@@ -1,5 +1,6 @@
 import { Meta } from '@storybook/addon-docs/blocks'
-import { TitleWithStroke, Paragraph, Hero } from '../../assets/javascripts/kitten'
+import { TitleWithStroke, Paragraph, Hero } from '../../assets/javascripts/kitten'
+import packageInfo from '../../package.json'
 
 <Meta title="Documentation/Introduction" />
 
@@ -22,10 +23,12 @@ import { TitleWithStroke, Paragraph, Hero } from '../../assets/javascripts/kitt
   </Paragraph>
 
   <Paragraph modifier="tertiary">
-    It is a components library based on Sass (soon to be deprecated) and React.
+    It is a components library based on React, along with Sass utility classes.
   </Paragraph>
 
   <Paragraph modifier="tertiary">
-    The source is available on <a className="k-u-link--important k-u-link-primary1--important" href="https://github.com/KissKissBankBank/kitten/">GitHub: kitten</a>
+    Latest version: <strong className="k-u-weight-bold--important">{packageInfo.version}</strong>
+    <br/>
+    Homepage: <a className="k-u-link--important k-u-link-primary1--important k-u-weight-bold--important" href={packageInfo.homepage}>GitHub: kitten</a>
   </Paragraph>
 </Hero>
