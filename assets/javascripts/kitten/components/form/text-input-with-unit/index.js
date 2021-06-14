@@ -17,7 +17,7 @@ const StyledTextInputWithUnit = styled.div`
 
   .k-Form-TextInputWithUnit__input {
     padding-right: ${pxToRem(50)};
-  
+
     &[type='number'] {
       appearance: textfield;
 
@@ -33,10 +33,10 @@ const StyledTextInputWithUnit = styled.div`
     display: flex;
     z-index: 1;
     position: absolute;
-    right: 0;
-    top: 0;
-    width: ${pxToRem(42)};
-    height: 100%;
+    right: ${pxToRem(2)};
+    top: ${pxToRem(2)};
+    bottom: ${pxToRem(2)};
+    min-width: ${pxToRem(42)};
     align-items: center;
     justify-content: center;
     border-left: ${pxToRem(2)} solid ${COLORS.line1};
@@ -47,6 +47,7 @@ const StyledTextInputWithUnit = styled.div`
     transition: all 0.2s;
     font-size: ${stepToRem(0)};
     ${TYPOGRAPHY.fontStyles.regular};
+    background-color: ${COLORS.background1};
 
     &.k-Form-TextInputWithUnit__unit--valid {
       border-color: ${COLORS.tertiary2};
@@ -93,7 +94,6 @@ const StyledTextInputWithUnit = styled.div`
     }
     .k-Form-TextInputWithUnit__unit {
       border: none;
-      padding: 0;
     }
   }
 `
@@ -115,7 +115,7 @@ export const TextInputWithUnit = ({
 
   return (
     <StyledTextInputWithUnit
-      {...wrapperProps}  
+      {...wrapperProps}
       className={classNames(
         'k-Form-TextInputWithUnit',
         `k-Form-TextInputWithUnit--${variant}`,
@@ -128,6 +128,9 @@ export const TextInputWithUnit = ({
       <TextInput
         ref={input}
         {...others}
+        valid={valid}
+        error={error}
+        disabled={disabled}
         size={size}
         className={classNames('k-Form-TextInputWithUnit__input', className)}
         variant={variant}
@@ -140,7 +143,7 @@ export const TextInputWithUnit = ({
             'k-Form-TextInputWithUnit__unit--valid': valid,
             'k-Form-TextInputWithUnit__unit--error': error,
             'k-Form-TextInputWithUnit__unit--disabled': disabled,
-            'k-Form-TextInputWithUnit__unit--hasUnitWord': !!unitWord,
+            'k-Form-TextInputWithUnit__unit--hasUnitWord': !unit && !!unitWord,
           },
         )}
       >
