@@ -92,20 +92,13 @@ export const useDropdown = ({ dropdownProps, buttonProps, menuProps }) => {
   }
 
   const returnedButtonProps = {
+    ...buttonProps,
     ref: dropdownButtonRef,
     id: buttonProps.id,
     'aria-controls': menuProps.id,
     isExpanded: isDropdownExpanded,
     onClick: handleButtonClick,
     className: classNames('k-HeaderNavDropdown__button', buttonProps.className),
-    style: {
-      '--UserMenu-Button-backgroundColor': buttonProps.backgroundColor,
-      '--UserMenu-Button-backgroundColorHover': buttonProps.backgroundColorHover,
-      '--UserMenu-Button-backgroundColorActive': buttonProps.backgroundColorActive,
-      '--UserMenu-Button-color': buttonProps.color,
-      '--UserMenu-Button-colorHover': buttonProps.colorHover,
-      '--UserMenu-Button-colorActive': buttonProps.colorActive,
-    },
   }
 
   const returnedWidth = dropdownProps.dropdownContentWidth === NaN
@@ -113,6 +106,7 @@ export const useDropdown = ({ dropdownProps, buttonProps, menuProps }) => {
     : dropdownProps.dropdownContentWidth
 
   const returnedMenuProps = {
+    ...menuProps,
     ref: dropdownContentRef,
     id: menuProps.id,
     className: classNames(
@@ -121,6 +115,7 @@ export const useDropdown = ({ dropdownProps, buttonProps, menuProps }) => {
       `k-HeaderNavDropdown__menu--is-${dropdownProps.side || 'left'}`
     ),
     style: {
+      ...menuProps.style,
       width: returnedWidth,
     },
     'aria-hidden': !isDropdownExpanded,

@@ -49,7 +49,6 @@ export const UserMenuNext = ({
       ...props
     },
     buttonProps: {
-      ...buttonChild.props,
       className: classNames(
         'k-HeaderNav__UserMenuButton',
         buttonChild.props.className,
@@ -58,6 +57,14 @@ export const UserMenuNext = ({
         },
       ),
       id: `${id}__UserMenu__Button`,
+      style: {
+        '--UserMenu-Button-backgroundColor': buttonProps.backgroundColor,
+        '--UserMenu-Button-backgroundColorHover': buttonProps.backgroundColorHover,
+        '--UserMenu-Button-backgroundColorActive': buttonProps.backgroundColorActive,
+        '--UserMenu-Button-color': buttonProps.color,
+        '--UserMenu-Button-colorHover': buttonProps.colorHover,
+        '--UserMenu-Button-colorActive': buttonProps.colorActive,
+      },
     },
     menuProps: {
       ...menuChild.props,
