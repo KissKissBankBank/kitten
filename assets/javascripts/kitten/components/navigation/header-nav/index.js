@@ -6,8 +6,10 @@ import { StickyContainer } from '../../../components/grid/sticky-container'
 import { Button } from './components/button'
 import { Logo } from './components/logo'
 import { BurgerMenu } from './components/burger-menu'
+import { BurgerMenuNext } from './components/burger-menu-next'
 import { Nav } from './components/nav'
 import { UserMenu } from './components/user-menu'
+import { UserMenuNext } from './components/user-menu-next'
 import { Context } from './components/context'
 import { Right } from './components/right'
 import { Centered } from './components/centered'
@@ -187,8 +189,10 @@ const HeaderNav = ({
 HeaderNav.Button = Button
 HeaderNav.Logo = Logo
 HeaderNav.BurgerMenu = BurgerMenu
+HeaderNav.BurgerMenuNext = BurgerMenuNext
 HeaderNav.Nav = Nav
 HeaderNav.UserMenu = UserMenu
+HeaderNav.UserMenuNext = UserMenuNext
 HeaderNav.Right = Right
 HeaderNav.Centered = Centered
 HeaderNav.LoggedOut = LoggedOut
