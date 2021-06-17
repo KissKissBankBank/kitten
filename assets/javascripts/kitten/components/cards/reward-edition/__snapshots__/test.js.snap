@@ -2,20 +2,23 @@
 
 exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 .c2 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -27,15 +30,6 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
 .c2:disabled {
@@ -47,15 +41,6 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c2 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c2 >:last-child {
-  margin-right: 0;
-}
-
 .c2:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -69,81 +54,63 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c2.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c2.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c2.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c2.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c2.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c2.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c2.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c2.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c2.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c2.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c2.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c2.k-Button--fluid {
-  min-width: initial;
+.c2.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c2.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c2.k-Button--rounded {
@@ -154,40 +121,561 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c2 svg:not(.k-ColorSvg),
-.c2 svg:not(.k-ColorSvg) path {
+.c2.k-Button--hydrogen {
+  border: 0.125rem solid #eee;
+  background-color: #fff;
+  color: #222;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2.k-Button--hydrogen svg:not(.k-ColorSvg),
+.c2.k-Button--hydrogen svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
 
-.c2:hover,
-.c2:focus {
+.c2.k-Button--hydrogen:hover,
+.c2.k-Button--hydrogen:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c2:active {
+.c2.k-Button--hydrogen:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c2:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
+.c2.k-Button--hydrogen:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
 }
 
-.c2:focus:not(:focus-visible) {
-  outline-color: transparent;
+.c2.k-Button--helium {
+  border: 0.125rem solid #19b4fa;
+  background-color: #19b4fa;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c2:focus-visible {
-  outline-color: #bae8fd;
+.c2.k-Button--helium svg:not(.k-ColorSvg),
+.c2.k-Button--helium svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
-.c2:disabled {
+.c2.k-Button--helium:hover,
+.c2.k-Button--helium:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
+  color: #fff;
+}
+
+.c2.k-Button--helium:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
+.c2.k-Button--helium:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2.k-Button--lithium {
+  border: 0.125rem solid #bae8fd;
+  background-color: #fff;
+  color: #19b4fa;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2.k-Button--lithium svg:not(.k-ColorSvg),
+.c2.k-Button--lithium svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c2.k-Button--lithium:hover,
+.c2.k-Button--lithium:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
+  color: #fff;
+}
+
+.c2.k-Button--lithium:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
+.c2.k-Button--lithium:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2.k-Button--beryllium {
+  border: 0.125rem solid #222;
+  background-color: #222;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2.k-Button--beryllium svg:not(.k-ColorSvg),
+.c2.k-Button--beryllium svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c2.k-Button--beryllium:hover,
+.c2.k-Button--beryllium:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
+  color: #fff;
+}
+
+.c2.k-Button--beryllium:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
+.c2.k-Button--beryllium:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2.k-Button--carbon {
+  border: 0.125rem solid #fff;
+  background-color: #fff;
+  color: #222;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2.k-Button--carbon svg:not(.k-ColorSvg),
+.c2.k-Button--carbon svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c2.k-Button--carbon:hover,
+.c2.k-Button--carbon:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
+  color: #fff;
+}
+
+.c2.k-Button--carbon:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
+.c2.k-Button--carbon:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2.k-Button--oxygen {
+  border: 0.125rem dashed #bae8fd;
+  background-color: #fff;
+  color: #19b4fa;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2.k-Button--oxygen svg:not(.k-ColorSvg),
+.c2.k-Button--oxygen svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c2.k-Button--oxygen:hover,
+.c2.k-Button--oxygen:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
+  color: #fff;
+}
+
+.c2.k-Button--oxygen:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
+.c2.k-Button--oxygen:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2.k-Button--copper {
+  border: 0.125rem solid #ffb2c7;
+  background-color: #fff;
+  color: #ff0046;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2.k-Button--copper svg:not(.k-ColorSvg),
+.c2.k-Button--copper svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c2.k-Button--copper:hover,
+.c2.k-Button--copper:focus {
+  border-color: currentColor;
+  background-color: #fff;
+  color: #ff0046;
+}
+
+.c2.k-Button--copper:active {
+  border-color: currentColor;
+  background-color: #fff;
+  color: #ff0046;
+}
+
+.c2.k-Button--copper:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2.k-Button--boron {
+  border: 0.125rem solid #636363;
+  background-color: #222;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2.k-Button--boron svg:not(.k-ColorSvg),
+.c2.k-Button--boron svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c2.k-Button--boron:hover,
+.c2.k-Button--boron:focus {
+  border-color: currentColor;
+  background-color: #2d2d2d;
+  color: #fff;
+}
+
+.c2.k-Button--boron:active {
+  border-color: currentColor;
+  background-color: #2d2d2d;
+  color: #b8b8b8;
+}
+
+.c2.k-Button--boron:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2.k-Button--neon {
+  border: 0.125rem solid #ff7800;
+  background-color: #ff7800;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2.k-Button--neon svg:not(.k-ColorSvg),
+.c2.k-Button--neon svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c2.k-Button--neon:hover,
+.c2.k-Button--neon:focus {
+  border-color: #f57905;
+  background-color: #f57905;
+  color: #fff;
+}
+
+.c2.k-Button--neon:active {
+  border-color: #eb6e00;
+  background-color: #eb6e00;
+  color: #fff;
+}
+
+.c2.k-Button--neon:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2.k-Button--iron {
+  border: 0.125rem solid #ff0046;
+  background-color: #ff0046;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2.k-Button--iron svg:not(.k-ColorSvg),
+.c2.k-Button--iron svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c2.k-Button--iron:hover,
+.c2.k-Button--iron:focus {
+  border-color: #d8043e;
+  background-color: #d8043e;
+  color: #fff;
+}
+
+.c2.k-Button--iron:active {
+  border-color: #a8002e;
+  background-color: #a8002e;
+  color: #fff;
+}
+
+.c2.k-Button--iron:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2.k-Button--social_facebook {
+  border: 0.125rem solid #3b5998;
+  background-color: #3b5998;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2.k-Button--social_facebook svg:not(.k-ColorSvg),
+.c2.k-Button--social_facebook svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c2.k-Button--social_facebook:hover,
+.c2.k-Button--social_facebook:focus {
+  border-color: #2c4a89;
+  background-color: #2c4a89;
+  color: #fff;
+}
+
+.c2.k-Button--social_facebook:active {
+  border-color: #1d3b7a;
+  background-color: #1d3b7a;
+  color: #fff;
+}
+
+.c2.k-Button--social_facebook:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2.k-Button--social_twitter {
+  border: 0.125rem solid #55acee;
+  background-color: #55acee;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2.k-Button--social_twitter svg:not(.k-ColorSvg),
+.c2.k-Button--social_twitter svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c2.k-Button--social_twitter:hover,
+.c2.k-Button--social_twitter:focus {
+  border-color: #469ddf;
+  background-color: #469ddf;
+  color: #fff;
+}
+
+.c2.k-Button--social_twitter:active {
+  border-color: #388ed0;
+  background-color: #388ed0;
+  color: #fff;
+}
+
+.c2.k-Button--social_twitter:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2.k-Button--social_linkedin {
+  border: 0.125rem solid #00669e;
+  background-color: #00669e;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2.k-Button--social_linkedin svg:not(.k-ColorSvg),
+.c2.k-Button--social_linkedin svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c2.k-Button--social_linkedin:hover,
+.c2.k-Button--social_linkedin:focus {
+  border-color: #00578f;
+  background-color: #00578f;
+  color: #fff;
+}
+
+.c2.k-Button--social_linkedin:active {
+  border-color: #004880;
+  background-color: #004880;
+  color: #fff;
+}
+
+.c2.k-Button--social_linkedin:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2.k-Button--social_instagram {
+  border: 0.125rem solid #3b5998;
+  background-color: #3b5998;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background 0.2s,color 0.2s;
+  transition: background 0.2s,color 0.2s;
+  border: 0 !important;
+  background-repeat: no-repeat;
+  background-image: radial-gradient( farthest-side at 32% 100%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82% ),linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);
+  background-size: 160% 100%;
+  background-position: center;
+}
+
+.c2.k-Button--social_instagram svg:not(.k-ColorSvg),
+.c2.k-Button--social_instagram svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c2.k-Button--social_instagram:hover,
+.c2.k-Button--social_instagram:focus {
+  background-image: radial-gradient( farthest-side at 32% 100%,#f0d26e 0%,#f0be5a 10%,#eb8228 28%,#dc3232 42%,transparent 82% ),linear-gradient(135deg,#143cc8 12%,#b42daf 58%);
+}
+
+.c2.k-Button--social_instagram:active {
+  background-image: radial-gradient( farthest-side at 32% 100%,#e1c35f 0%,#e1af4b 10%,#dc7319 28%,#cd2323 42%,transparent 82% ),linear-gradient(135deg,#052db9 12%,#a51ea0 58%);
+}
+
+.c2.k-Button--social_instagram:hover,
+.c2.k-Button--social_instagram:focus {
+  border-color: #2c4a89;
+  background-color: #2c4a89;
+  color: #fff;
+}
+
+.c2.k-Button--social_instagram:active {
+  border-color: #1d3b7a;
+  background-color: #1d3b7a;
+  color: #fff;
+}
+
+.c2.k-Button--social_instagram:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2.k-Button--social_youtube {
+  border: 0.125rem solid #ff0000;
+  background-color: #ff0000;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2.k-Button--social_youtube svg:not(.k-ColorSvg),
+.c2.k-Button--social_youtube svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c2.k-Button--social_youtube:hover,
+.c2.k-Button--social_youtube:focus {
+  border-color: #f00000;
+  background-color: #f00000;
+  color: #fff;
+}
+
+.c2.k-Button--social_youtube:active {
+  border-color: #e10000;
+  background-color: #e10000;
+  color: #fff;
+}
+
+.c2.k-Button--social_youtube:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2.k-Button--social_pinterest {
+  border: 0.125rem solid #bd081c;
+  background-color: #bd081c;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2.k-Button--social_pinterest svg:not(.k-ColorSvg),
+.c2.k-Button--social_pinterest svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c2.k-Button--social_pinterest:hover,
+.c2.k-Button--social_pinterest:focus {
+  border-color: #ae000d;
+  background-color: #ae000d;
+  color: #fff;
+}
+
+.c2.k-Button--social_pinterest:active {
+  border-color: #9f0000;
+  background-color: #9f0000;
+  color: #fff;
+}
+
+.c2.k-Button--social_pinterest:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -241,149 +729,55 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   border-color: #eee;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c2.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c2.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c2.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c2.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c2.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c2[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c2[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c2[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c2[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -412,10 +806,10 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
     </span>
     <button
       aria-label="Delete"
-      className="c2 k-Button k-RewardEdition__Header__Button k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="c2 k-Button k-RewardEdition__Header__Button k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
       style={
         Object {
-          "--border-radius": 0,
+          "--Button-border-radius": 0,
         }
       }
       type="button"

@@ -7,12 +7,12 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
   <button
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
-    className="sc-bdVaJa kkKDJG k-Button sc-bwzfXH dEAqqy k-Button--big k-Button--helium k-Button--andromeda"
+    className="sc-bdVaJa jzWGLa k-Button sc-bwzfXH dEAqqy k-Button--big k-Button--helium k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none"
     disabled={false}
     onClick={[Function]}
     style={
       Object {
-        "--border-radius": 0,
+        "--Button-border-radius": 0,
       }
     }
     type="button"
@@ -49,12 +49,12 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
   <button
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
-    className="sc-bdVaJa kkKDJG k-Button sc-bwzfXH dEAqqy k-Button--big k-Button--helium k-Button--andromeda"
+    className="sc-bdVaJa jzWGLa k-Button sc-bwzfXH dEAqqy k-Button--big k-Button--helium k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none"
     disabled={true}
     onClick={[Function]}
     style={
       Object {
-        "--border-radius": 0,
+        "--Button-border-radius": 0,
       }
     }
     type="button"
