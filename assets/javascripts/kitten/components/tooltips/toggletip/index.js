@@ -87,7 +87,8 @@ const StyledWrapper = styled.span`
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       border-radius: ${pxToRem(8)};
       position: absolute;
-      top: calc(var(--toggletipAction-size) / 2);
+      top: 50%;
+      transform: translateY(-50%);
       left: calc(100% + ${pxToRem(20)});
       transform: translateY(-50%);
       min-width: ${pxToRem(220)};
@@ -285,13 +286,15 @@ export const Toggletip = ({
       onMouseLeave={() => setHoverState(false)}
       {...props}
     >
-      {targetElement ? (
-        React.isValidElement(targetElement) &&
-        React.cloneElement(targetElement, {
-          ...actionProps,
-          'aria-label': actionLabel,
-          ref: actionElement,
-        })
+      {targetElement && React.isValidElement(targetElement) ? (
+        <button
+          {...actionProps}
+          ref={actionElement}
+          aria-label={actionLabel}
+          className="k-u-reset-button"
+        >
+          {targetElement}
+        </button>
       ) : (
         <button
           {...actionProps}
