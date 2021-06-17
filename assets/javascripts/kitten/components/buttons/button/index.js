@@ -210,13 +210,7 @@ const StyledButton = styled.button`
 
   /* MODIFIERS */
 
-  ${buttonModifiers.map(
-    modifier => css`
-      &.k-Button--${modifier} {
-        ${modifierStyles(modifier)}
-      }
-    `,
-  )}
+  ${({modifier}) => modifierStyles(modifier)}
 `
 
 // const ForwardedButtonComponent = forwardRef((props, ref) => {
@@ -279,6 +273,7 @@ export const Button = ({
       style={{ '--Button-border-radius': pxToRem(borderRadius) }}
       type="button"
       as={tag}
+      modifier={modifier}
       {...props}
     >
       {children}

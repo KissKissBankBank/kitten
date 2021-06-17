@@ -16,7 +16,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
     </span>
   </div>
   <span
-    className="sc-bxivhb bvQzbS k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+    className="sc-bxivhb kxfeCW k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
     style={
       Object {
         "--Button-border-radius": 0,
@@ -61,7 +61,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
     </span>
   </div>
   <span
-    className="sc-bxivhb bvQzbS k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none"
+    className="sc-bxivhb cxlayc k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none"
     style={
       Object {
         "--Button-border-radius": 0,
@@ -95,7 +95,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
     </span>
   </div>
   <span
-    className="sc-bxivhb bvQzbS k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+    className="sc-bxivhb kxfeCW k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
     style={
       Object {
         "--Button-border-radius": 0,
@@ -140,7 +140,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
     </span>
   </div>
   <span
-    className="sc-bxivhb bvQzbS k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+    className="sc-bxivhb kxfeCW k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
     style={
       Object {
         "--Button-border-radius": 0,
@@ -185,7 +185,7 @@ exports[`<TextCopy /> should match snapshot with variant etc. 1`] = `
     </span>
   </div>
   <span
-    className="sc-bxivhb bvQzbS k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+    className="sc-bxivhb cxlayc k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
     style={
       Object {
         "--Button-border-radius": 0,
