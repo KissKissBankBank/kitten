@@ -45,19 +45,21 @@ export const buttonSizes = [
 export const buttonVariants = ['andromeda', 'orion']
 
 const StyledButton = styled.button`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-
   box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: ${pxToRem(10)};
 
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${stepToRem(-1)};
   color: ${COLORS.font1};
   line-height: 1.3;
   text-decoration: none;
-  min-height: var(--Button-dimension);
 
   appearance: none;
   cursor: pointer;
@@ -68,15 +70,6 @@ const StyledButton = styled.button`
 
   &:hover {
     text-decoration: none;
-  }
-
-  > :nth-child(n) {
-    margin-right: ${pxToRem(10)};
-    text-align: left;
-  }
-
-  > :last-child {
-    margin-right: 0;
   }
 
   &:focus {
@@ -91,30 +84,31 @@ const StyledButton = styled.button`
   }
 
   /* SIZES */
+
   &.k-Button--nano {
     --Button-dimension: ${pxToRem(20)};
     --Button-min-width: ${pxToRem(100)};
+    --Button-padding: 0 ${pxToRem(6)};
     font-size: ${stepToRem(-2)};
-    padding: 0 ${pxToRem(6)};
   }
 
   &.k-Button--micro {
     --Button-dimension: ${pxToRem(30)};
     --Button-min-width: ${pxToRem(130)};
+    --Button-padding: ${pxToRem(5)} ${pxToRem(10)};
     font-size: ${stepToRem(-2)};
-    padding: ${pxToRem(5)} ${pxToRem(10)};
   }
 
   &.k-Button--tiny {
     --Button-dimension: ${pxToRem(40)};
     --Button-min-width: ${pxToRem(160)};
-    padding: ${pxToRem(7)} ${pxToRem(20)};
+    --Button-padding: ${pxToRem(7)} ${pxToRem(20)};
   }
 
   &.k-Button--regular {
     --Button-dimension: ${pxToRem(50)};
     --Button-min-width: ${pxToRem(200)};
-    padding: ${pxToRem(10)} ${pxToRem(30)};
+    --Button-padding: ${pxToRem(10)} ${pxToRem(30)};
   }
 
   &.k-Button--big {
@@ -123,52 +117,77 @@ const StyledButton = styled.button`
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       --Button-min-width: ${pxToRem(220)};
       --Button-dimension: ${pxToRem(70)};
+      --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
       font-size: ${stepToRem(0)};
-      padding: ${pxToRem(10)} ${pxToRem(40)};
     }
   }
 
   &.k-Button--huge {
     --Button-dimension: ${pxToRem(70)};
-    padding: ${pxToRem(10)} ${pxToRem(10)};
+    --Button-padding: ${pxToRem(10)} ${pxToRem(10)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       --Button-min-width: ${pxToRem(220)};
       --Button-dimension: ${pxToRem(80)};
+      --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
       font-size: ${stepToRem(0)};
-      padding: ${pxToRem(10)} ${pxToRem(40)};
     }
   }
 
   &.k-Button--giant {
     --Button-dimension: ${pxToRem(70)};
-    padding: ${pxToRem(10)} ${pxToRem(10)};
+    --Button-padding: ${pxToRem(10)} ${pxToRem(10)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       --Button-min-width: ${pxToRem(220)};
       --Button-dimension: ${pxToRem(90)};
       font-size: ${stepToRem(0)};
-      padding: ${pxToRem(10)} ${pxToRem(40)};
+      --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
     }
   }
 
-  &.k-Button--min-width {
+  /* BESPOKE FIT */
+
+  &.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
     min-width: var(--Button-min-width);
   }
 
-  &.k-Button--icon {
+  &.k-Button--fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  &.k-Button--fluid {
+  &.k-Button--fit-fluid {
     width: 100%;
   }
 
-  &.k-Button--min-width {
-    min-width: var(--Button-min-width);
+  /* BESPOKE FIT for mobile */
+
+  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+    &[class*="k-Button--mobile-fit"]:not(.k-Button--mobile-fit-none) {
+      min-width: initial !important;
+      padding: var(--Button-padding);
+      width: initial;
+      height: initial;
+      width: initial;
+
+      &.k-Button--mobile-fit-min-width {
+        min-width: var(--Button-min-width) !important;
+      }
+
+      &.k-Button--mobile-fit-icon {
+        padding: 0;
+        overflow: hidden;
+        width: var(--Button-dimension);
+        height: var(--Button-dimension);
+      }
+
+      &.k-Button--mobile-fit-fluid {
+        width: 100%;
+      }
+    }
   }
 
   /* BORDER RADIUS */
@@ -188,6 +207,8 @@ const StyledButton = styled.button`
       border-radius: ${pxToRem(8)};
     }
   }
+
+  /* MODIFIERS */
 
   ${buttonModifiers.map((modifier) => css`
     &.k-Button--${modifier} {
@@ -244,11 +265,11 @@ export const Button = ({
         `k-Button--${actualSize}`,
         `k-Button--${modifier}`,
         `k-Button--${variant}`,
-        `k-Button--${fit}`,
-        `k-Button--mobile-${mobileFit || 'none'}`,
+        `k-Button--fit-${fit}`,
+        `k-Button--mobile-fit-${mobileFit || 'none'}`,
         {
-          'k-Button--fluid': fluid,
-          'k-Button--icon': icon && !fluid,
+          'k-Button--fit-fluid': fluid && !icon,
+          'k-Button--fit-icon': icon && !fluid,
           'k-Button--rounded': rounded,
           'k-Button--hasBorderRadius': borderRadius > 0,
         },
