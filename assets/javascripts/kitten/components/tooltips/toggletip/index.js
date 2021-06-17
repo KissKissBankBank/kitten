@@ -290,6 +290,7 @@ export const Toggletip = ({
         <button
           {...actionProps}
           ref={actionElement}
+          type="button"
           aria-label={actionLabel}
           className="k-u-reset-button"
         >
