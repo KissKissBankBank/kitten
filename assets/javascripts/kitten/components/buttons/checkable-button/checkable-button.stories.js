@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { CheckableButton } from './index'
+import { buttonSizes, buttonVariants } from '../../buttons/button'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
@@ -16,10 +17,10 @@ export const IsCheckable = () => {
             <CheckableButton
               size={select(
                 'Size',
-                ['micro', 'tiny', 'regular', 'big', 'huge', 'giant'],
+                buttonSizes,
                 'regular',
               )}
-              variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
+              variant={select('Variant', buttonVariants, 'andromeda')}
               checkPosition={select(
                 'Check Position',
                 ['bottom', 'left'],
@@ -39,10 +40,10 @@ export const IsCheckable = () => {
             <CheckableButton
               size={select(
                 'Size',
-                ['micro', 'tiny', 'regular', 'big', 'huge', 'giant'],
+                buttonSizes,
                 'regular',
               )}
-              variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
+              variant={select('Variant', buttonVariants, 'andromeda')}
               checkPosition={select(
                 'Check Position',
                 ['bottom', 'left'],
