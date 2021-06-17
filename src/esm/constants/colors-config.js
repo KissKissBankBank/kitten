@@ -47,6 +47,10 @@ export default {
   // Light Red
   error3: '#ffb2c7',
   // Semi Light Red
+  error4: '#d8043e',
+  // Semi Dark Red
+  error5: '#a8002e',
+  // Dark Red
   orange: '#ff7800',
   orange1: '#fff2e7',
   // Orange light

@@ -32,7 +32,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 var StyledTextInputWithUnit = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-unit__StyledTextInputWithUnit",
   componentId: "gjmccx-0"
-})(["position:relative;width:1%;&:not(.k-Form-TextInputWithUnit--hasDigits){width:100%;}.k-Form-TextInputWithUnit__input{padding-right:", ";&[type='number']{appearance:textfield;&::-webkit-inner-spin-button,&::-webkit-outer-spin-button{margin:0;appearance:none;}}}.k-Form-TextInputWithUnit__unit{display:flex;z-index:1;position:absolute;right:0;top:0;width:", ";height:100%;align-items:center;justify-content:center;border-left:", " solid ", ";border-radius:0;box-sizing:border-box;color:", ";white-space:nowrap;transition:all 0.2s;font-size:", ";", ";&.k-Form-TextInputWithUnit__unit--valid{border-color:", ";color:", ";}&.k-Form-TextInputWithUnit__unit--error{border-color:", ";color:", ";}&.k-Form-TextInputWithUnit__unit--disabled{color:", ";background-color:", ";}&.k-Form-TextInputWithUnit__unit--tiny{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--regular{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--big,&.k-Form-TextInputWithUnit__unit--huge{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--giant{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--hasUnitWord{font-size:", ";}}&:focus-within{.k-Form-TextInputWithUnit__unit{border-color:", ";color:", ";}}&.k-Form-TextInputWithUnit--orion{.k-Form-TextInputWithUnit__input{border-radius:", ";padding-right:", ";}.k-Form-TextInputWithUnit__unit{border:none;padding:0;}}"], (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(42), (0, _typography.pxToRem)(2), _colorsConfig.default.line1, _colorsConfig.default.font1, (0, _typography.stepToRem)(0), _typographyConfig.default.fontStyles.regular, _colorsConfig.default.tertiary2, _colorsConfig.default.valid, _colorsConfig.default.error3, _colorsConfig.default.error, _colorsConfig.default.font2, _colorsConfig.default.line1, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(25), (0, _typography.stepToRem)(-1), _colorsConfig.default.line2, _colorsConfig.default.font1, (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(42));
+})(["position:relative;width:1%;&:not(.k-Form-TextInputWithUnit--hasDigits){width:100%;}.k-Form-TextInputWithUnit__input{padding-right:", ";&[type='number']{appearance:textfield;&::-webkit-inner-spin-button,&::-webkit-outer-spin-button{margin:0;appearance:none;}}}.k-Form-TextInputWithUnit__unit{display:flex;z-index:1;position:absolute;right:", ";top:", ";bottom:", ";min-width:", ";align-items:center;justify-content:center;border-left:", " solid ", ";border-radius:0;box-sizing:border-box;color:", ";white-space:nowrap;transition:all 0.2s;font-size:", ";", ";background-color:", ";&.k-Form-TextInputWithUnit__unit--valid{border-color:", ";color:", ";}&.k-Form-TextInputWithUnit__unit--error{border-color:", ";color:", ";}&.k-Form-TextInputWithUnit__unit--disabled{color:", ";background-color:", ";}&.k-Form-TextInputWithUnit__unit--tiny{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--regular{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--big,&.k-Form-TextInputWithUnit__unit--huge{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--giant{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--hasUnitWord{font-size:", ";}}&:focus-within{.k-Form-TextInputWithUnit__unit{border-color:", ";color:", ";}}&.k-Form-TextInputWithUnit--orion{.k-Form-TextInputWithUnit__input{border-radius:", ";padding-right:", ";}.k-Form-TextInputWithUnit__unit{border:none;}}"], (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(42), (0, _typography.pxToRem)(2), _colorsConfig.default.line1, _colorsConfig.default.font1, (0, _typography.stepToRem)(0), _typographyConfig.default.fontStyles.regular, _colorsConfig.default.background1, _colorsConfig.default.tertiary2, _colorsConfig.default.valid, _colorsConfig.default.error3, _colorsConfig.default.error, _colorsConfig.default.font2, _colorsConfig.default.line1, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(25), (0, _typography.stepToRem)(-1), _colorsConfig.default.line2, _colorsConfig.default.font1, (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(42));
 
 var TextInputWithUnit = function TextInputWithUnit(_ref) {
   var unit = _ref.unit,
@@ -54,6 +54,9 @@ var TextInputWithUnit = function TextInputWithUnit(_ref) {
   }), /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({
     ref: input
   }, others, {
+    valid: valid,
+    error: error,
+    disabled: disabled,
     size: size,
     className: (0, _classnames.default)('k-Form-TextInputWithUnit__input', className),
     variant: variant
@@ -62,7 +65,7 @@ var TextInputWithUnit = function TextInputWithUnit(_ref) {
       'k-Form-TextInputWithUnit__unit--valid': valid,
       'k-Form-TextInputWithUnit__unit--error': error,
       'k-Form-TextInputWithUnit__unit--disabled': disabled,
-      'k-Form-TextInputWithUnit__unit--hasUnitWord': !!unitWord
+      'k-Form-TextInputWithUnit__unit--hasUnitWord': !unit && !!unitWord
     })
   }, unit || unitWord));
 };

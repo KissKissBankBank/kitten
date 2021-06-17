@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -19,29 +17,22 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
-
-var StyledText = _styledComponents.default.span.withConfig({
-  displayName: "text__StyledText",
-  componentId: "sc-1jqe2sw-0"
-})(["", ""], function (_ref) {
-  var cssColor = _ref.cssColor;
-  return cssColor && (0, _styledComponents.css)(["color:", ";"], cssColor);
-});
-
-var Text = function Text(_ref2) {
-  var className = _ref2.className,
-      color = _ref2.color,
-      cssColor = _ref2.cssColor,
-      decoration = _ref2.decoration,
-      lineHeight = _ref2.lineHeight,
-      setting = _ref2.setting,
-      size = _ref2.size,
-      fontStyle = _ref2.fontStyle,
-      tag = _ref2.tag,
-      transform = _ref2.transform,
-      weight = _ref2.weight,
-      others = (0, _objectWithoutProperties2.default)(_ref2, ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "transform", "weight"]);
+var Text = function Text(_ref) {
+  var className = _ref.className,
+      color = _ref.color,
+      cssColor = _ref.cssColor,
+      decoration = _ref.decoration,
+      lineHeight = _ref.lineHeight,
+      setting = _ref.setting,
+      size = _ref.size,
+      fontStyle = _ref.fontStyle,
+      tag = _ref.tag,
+      as = _ref.as,
+      transform = _ref.transform,
+      weight = _ref.weight,
+      style = _ref.style,
+      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "as", "transform", "weight", "style"]);
+  var Tag = as || tag;
   var textClassName = (0, _classnames.default)({
     // Color.
     'k-u-color-font1': color == 'font1',
@@ -78,10 +69,11 @@ var Text = function Text(_ref2) {
     'k-u-weight-regular': weight == 'regular',
     'k-u-weight-bold': weight == 'bold'
   }, className);
-  return /*#__PURE__*/_react.default.createElement(StyledText, (0, _extends2.default)({
-    as: tag
-  }, others, {
-    className: textClassName
+  return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({}, others, {
+    className: textClassName,
+    style: cssColor ? (0, _extends2.default)({
+      color: cssColor
+    }, style) : style
   }));
 };
 
@@ -143,5 +135,5 @@ Text.defaultProps = {
   fontStyle: null,
   tag: 'span',
   transform: null,
-  weight: null
+  weight: 'light'
 };
