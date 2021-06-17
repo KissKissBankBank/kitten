@@ -9,6 +9,25 @@ import { modifierStyles } from './helpers/modifier-styles'
 import { ScreenConfig } from '../../../constants/screen-config'
 import classNames from 'classnames'
 
+export const buttonModifiers = [
+  'hydrogen',
+  'helium',
+  'lithium',
+  'beryllium',
+  'carbon',
+  'oxygen',
+  'copper',
+  'boron',
+  'neon',
+  'iron',
+  'social_facebook',
+  'social_twitter',
+  'social_linkedin',
+  'social_instagram',
+  'social_youtube',
+  'social_pinterest',
+]
+
 const StyledButton = styled.button`
   display: inline-flex;
   align-items: center;
@@ -22,6 +41,7 @@ const StyledButton = styled.button`
   color: ${COLORS.font1};
   line-height: 1.3;
   text-decoration: none;
+  min-height: var(--Button-dimension);
 
   appearance: none;
   cursor: pointer;
@@ -54,64 +74,95 @@ const StyledButton = styled.button`
     outline-color: ${COLORS.primary4};
   }
 
-  /* BORDER RADIUS */
-
-  &.k-Button--hasBorderRadius {
-    border-radius: var(--border-radius);
-  }
-
   /* SIZES */
-
-  ${() => DEFAULT}
-
   &.k-Button--nano {
-    ${() => NANO}
+    --Button-dimension: ${pxToRem(20)};
+    --Button-min-width: ${pxToRem(100)};
+    font-size: ${stepToRem(-2)};
+    padding: 0 ${pxToRem(6)};
   }
+
   &.k-Button--micro {
-    ${() => MICRO}
+    --Button-dimension: ${pxToRem(30)};
+    --Button-min-width: ${pxToRem(130)};
+    font-size: ${stepToRem(-2)};
+    padding: ${pxToRem(5)} ${pxToRem(10)};
   }
+
   &.k-Button--tiny {
-    ${() => TINY}
+    --Button-dimension: ${pxToRem(40)};
+    --Button-min-width: ${pxToRem(160)};
+    padding: ${pxToRem(7)} ${pxToRem(20)};
   }
+
+  &.k-Button--regular {
+    --Button-dimension: ${pxToRem(50)};
+    --Button-min-width: ${pxToRem(200)};
+    padding: ${pxToRem(10)} ${pxToRem(30)};
+  }
+
   &.k-Button--big {
-    ${() => BIG}
+    --Button-dimension: ${pxToRem(50)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      --Button-min-width: ${pxToRem(220)};
+      --Button-dimension: ${pxToRem(70)};
+      font-size: ${stepToRem(0)};
+      padding: ${pxToRem(10)} ${pxToRem(40)};
+    }
   }
+
   &.k-Button--huge {
-    ${() => HUGE}
+    --Button-dimension: ${pxToRem(70)};
+    padding: ${pxToRem(10)} ${pxToRem(10)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      --Button-min-width: ${pxToRem(220)};
+      --Button-dimension: ${pxToRem(80)};
+      font-size: ${stepToRem(0)};
+      padding: ${pxToRem(10)} ${pxToRem(40)};
+    }
   }
+
   &.k-Button--giant {
-    ${() => GIANT}
+    --Button-dimension: ${pxToRem(70)};
+    padding: ${pxToRem(10)} ${pxToRem(10)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      --Button-min-width: ${pxToRem(220)};
+      --Button-dimension: ${pxToRem(90)};
+      font-size: ${stepToRem(0)};
+      padding: ${pxToRem(10)} ${pxToRem(40)};
+    }
   }
 
-  &.k-Button--hasIcon:not(.k-Button--fluid) {
-    ${() => ICON}
+  &.k-Button--min-width {
+    min-width: var(--Button-min-width);
+  }
 
-    &.k-Button--nano {
-      ${() => ICON_NANO}
-    }
-    &.k-Button--micro {
-      ${() => ICON_MICRO}
-    }
-    &.k-Button--tiny {
-      ${() => ICON_TINY}
-    }
-    &.k-Button--big {
-      ${() => ICON_BIG}
-    }
-    &.k-Button--huge {
-      ${() => ICON_HUGE}
-    }
-    &.k-Button--giant {
-      ${() => ICON_GIANT}
-    }
+  &.k-Button--icon {
+    padding: 0;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
 
   &.k-Button--fluid {
-    ${() => FLUID}
+    width: 100%;
+  }
+
+  &.k-Button--min-width {
+    min-width: var(--Button-min-width);
+  }
+
+  /* BORDER RADIUS */
+
+  &.k-Button--hasBorderRadius {
+    border-radius: var(--Button-border-radius);
   }
 
   &.k-Button--rounded {
-    ${() => ROUNDED}
+    border-radius: 50%;
   }
 
   &.k-Button--orion {
@@ -122,7 +173,11 @@ const StyledButton = styled.button`
     }
   }
 
-  ${({ modifier }) => modifierStyles(modifier)}
+  ${buttonModifiers.map((modifier) => css`
+    &.k-Button--${modifier} {
+      ${modifierStyles(modifier)}
+    }
+  `)}
 `
 
 export const FLUID = css`
