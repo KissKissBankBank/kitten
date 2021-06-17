@@ -1,8 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Toggletip /> CustomTargetElement matches with snapshot 1`] = `
+<span
+  className="sc-bdVaJa fRSZzu k-Toggletip k-Toggletip--info"
+  id="Toggletip-demo"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  style={
+    Object {
+      "--toggletipAction-left": undefined,
+      "--toggletipAction-top": undefined,
+    }
+  }
+>
+  <button
+    aria-label="Sample label"
+    className="k-u-reset-button"
+    type="button"
+  >
+    <p
+      className="k-u-weight-bold"
+    >
+      This is the target of my tooltip
+    </p>
+  </button>
+  <span
+    role="status"
+  />
+</span>
+`;
+
 exports[`<Toggletip /> Default matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa tSArF k-Toggletip k-Toggletip--info"
+  className="sc-bdVaJa fRSZzu k-Toggletip k-Toggletip--info"
   id="Toggletip-demo"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -46,7 +76,7 @@ exports[`<Toggletip /> Default matches with snapshot 1`] = `
 
 exports[`<Toggletip /> With props matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa tSArF k-Toggletip k-Toggletip--warning"
+  className="sc-bdVaJa fRSZzu k-Toggletip k-Toggletip--warning"
   id="Toggletip-demo"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
