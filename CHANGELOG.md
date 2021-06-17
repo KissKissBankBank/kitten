@@ -8,6 +8,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `Text`: Add `light` as default for `weight` prop.
 - Fix: `TextInputWithUnit`: Fix disabled state and `unitWord` styles.
 - Feature: `HeaderMenu`: Add `BurgerMenuNext` and `UserMenuNext` subcomponents.
+- Feature: Add `error4` and `error5` to colors config.
+- Feature: `Button`: Add `iron` modifier.
 
 ## [3.19.0] - 2021-06-11
 
