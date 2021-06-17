@@ -58,12 +58,12 @@ export const UserMenuNext = ({
       ),
       id: `${id}__UserMenu__Button`,
       style: {
-        '--UserMenu-Button-backgroundColor': buttonProps.backgroundColor,
-        '--UserMenu-Button-backgroundColorHover': buttonProps.backgroundColorHover,
-        '--UserMenu-Button-backgroundColorActive': buttonProps.backgroundColorActive,
-        '--UserMenu-Button-color': buttonProps.color,
-        '--UserMenu-Button-colorHover': buttonProps.colorHover,
-        '--UserMenu-Button-colorActive': buttonProps.colorActive,
+        '--UserMenu-Button-backgroundColor': buttonChild.props.backgroundColor,
+        '--UserMenu-Button-backgroundColorHover': buttonChild.props.backgroundColorHover,
+        '--UserMenu-Button-backgroundColorActive': buttonChild.props.backgroundColorActive,
+        '--UserMenu-Button-color': buttonChild.props.color,
+        '--UserMenu-Button-colorHover': buttonChild.props.colorHover,
+        '--UserMenu-Button-colorActive': buttonChild.props.colorActive,
       },
     },
     menuProps: {
