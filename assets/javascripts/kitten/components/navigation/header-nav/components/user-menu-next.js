@@ -41,40 +41,35 @@ export const UserMenuNext = ({
     menuProps,
     isDropdownExpanded,
   } = useDropdown({
-    dropdownProps: {
-      dropdownContentWidth,
-      callOnToggle,
-      dropdownAnchorSide,
-      closeEvents: [CLOSE_EVENT, ...closeEvents],
-      ...props
-    },
-    buttonProps: {
-      className: classNames(
-        'k-HeaderNav__UserMenuButton',
-        buttonChild.props.className,
-        {
-          'k-HeaderNav__UserMenuButton--hasArrow': buttonChild.props.hasArrow,
-        },
-      ),
-      id: `${id}__UserMenu__Button`,
-      style: {
-        '--UserMenu-Button-backgroundColor': buttonChild.props.backgroundColor,
-        '--UserMenu-Button-backgroundColorHover': buttonChild.props.backgroundColorHover,
-        '--UserMenu-Button-backgroundColorActive': buttonChild.props.backgroundColorActive,
-        '--UserMenu-Button-color': buttonChild.props.color,
-        '--UserMenu-Button-colorHover': buttonChild.props.colorHover,
-        '--UserMenu-Button-colorActive': buttonChild.props.colorActive,
-      },
-    },
-    menuProps: {
-      ...menuChild.props,
-      id: `${id}__UserMenu__Menu`,
-    },
+    dropdownContentWidth,
+    callOnToggle,
+    dropdownAnchorSide,
+    closeEvents: [CLOSE_EVENT, ...closeEvents],
+    buttonId: `${id}__UserMenu__Button`,
+    menuId: `${id}__UserMenu__Menu`,
   })
 
   return (
     <div {...dropdownProps}>
-      <DropdownButton {...buttonProps}>
+      <DropdownButton
+        {...buttonProps}
+        style={{
+          '--UserMenu-Button-backgroundColor': buttonChild.props.backgroundColor,
+          '--UserMenu-Button-backgroundColorHover': buttonChild.props.backgroundColorHover,
+          '--UserMenu-Button-backgroundColorActive': buttonChild.props.backgroundColorActive,
+          '--UserMenu-Button-color': buttonChild.props.color,
+          '--UserMenu-Button-colorHover': buttonChild.props.colorHover,
+          '--UserMenu-Button-colorActive': buttonChild.props.colorActive,
+        }}
+        className={classNames(
+          'k-HeaderNav__UserMenuButton',
+          buttonChild.props.className,
+          buttonProps.className,
+          {
+            'k-HeaderNav__UserMenuButton--hasArrow': buttonChild.props.hasArrow,
+          }
+        )}
+      >
         {cloneElement(buttonChild)}
         {buttonChild.props.hasArrow && (
           <ArrowIcon

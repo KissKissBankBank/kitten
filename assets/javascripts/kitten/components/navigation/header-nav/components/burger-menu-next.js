@@ -21,29 +21,25 @@ export const BurgerMenuNext = ({ children, dropdownContentWidth, ...props }) => 
     menuProps,
     isDropdownExpanded,
   } = useDropdown({
-    dropdownProps: {
-      dropdownContentWidth,
-      callOnToggle,
-      dropdownAnchorSide: 'left',
-      closeEvents: [CLOSE_EVENT],
-      ...props
-    },
-    buttonProps: {
-      className: classNames(
-        'k-HeaderNav__BurgerMenu__button',
-        'k-ButtonIcon',
-        'k-ButtonIcon--tiny',
-      ),
-      id: `${id}PlateformMenu`,
-    },
-    menuProps: {
-      id: `${id}PlateformMenu__content`,
-    },
+    dropdownContentWidth,
+    callOnToggle,
+    dropdownAnchorSide: 'left',
+    closeEvents: [CLOSE_EVENT],
+    buttonId: `${id}PlateformMenu`,
+    menuId: `${id}PlateformMenu__content`,
   })
 
   return (
     <div {...dropdownProps}>
-      <DropdownButton {...buttonProps}>
+      <DropdownButton
+        {...buttonProps}
+        className={classNames(
+          buttonProps.className,
+          'k-HeaderNav__BurgerMenu__button',
+          'k-ButtonIcon',
+          'k-ButtonIcon--tiny',
+        )}
+      >
         {isDropdownExpanded ?(
           <BurgerIcon
             isActive

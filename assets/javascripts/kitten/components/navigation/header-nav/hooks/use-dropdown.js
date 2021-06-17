@@ -14,12 +14,20 @@ import domEvents, {
   dispatchEvent,
 } from '../../../../helpers/dom/events'
 
-export const useDropdown = ({ dropdownProps, buttonProps, menuProps }) => {
+export const useDropdown = ({
+  dropdownContentWidth,
+  dropdownAnchorSide,
+  callOnToggle,
+  closeEvents,
+  isExpanded,
+  buttonId,
+  menuId,
+}) => {
   const dropdownRef = useRef(null)
   const dropdownContentRef = useRef(null)
   const dropdownButtonRef = useRef(null)
 
-  const [isDropdownExpanded, setDropdownExpandedState] = useState(dropdownProps.isExpanded || false)
+  const [isDropdownExpanded, setDropdownExpandedState] = useState(!!isExpanded)
 
   const handleButtonClick = () => {
     setDropdownExpandedState((currentValue) => !currentValue)
@@ -51,9 +59,9 @@ export const useDropdown = ({ dropdownProps, buttonProps, menuProps }) => {
   }
 
   useEffect(() => {
-    dropdownProps.callOnToggle({
+    callOnToggle({
       isExpanded: isDropdownExpanded,
-      expandBy: isDropdownExpanded ? buttonProps.id : null,
+      expandBy: isDropdownExpanded ? buttonId : null,
     })
 
     if (!isDropdownExpanded) return
@@ -61,8 +69,8 @@ export const useDropdown = ({ dropdownProps, buttonProps, menuProps }) => {
     document.addEventListener('click', handleClickOutside)
     document.addEventListener('keydown', handleKeydown)
 
-    if (dropdownProps.closeEvents) {
-      dropdownProps.closeEvents.forEach(ev => {
+    if (closeEvents) {
+      closeEvents.forEach(ev => {
         window.addEventListener(ev, closeDropdown)
       })
     }
@@ -71,15 +79,15 @@ export const useDropdown = ({ dropdownProps, buttonProps, menuProps }) => {
       document.removeEventListener('click', handleClickOutside)
       document.removeEventListener('keydown', handleKeydown)
 
-      if (dropdownProps.closeEvents) {
-        dropdownProps.closeEvents.forEach(ev => {
+      if (closeEvents) {
+        closeEvents.forEach(ev => {
           window.removeEventListener(ev, closeDropdown)
         })
       }
     }
   }, [isDropdownExpanded])
 
-  const returnedDropdownProps = {
+  const dropdownProps = {
     ref: dropdownRef,
     'aria-live': 'polite',
     className: classNames(
@@ -87,44 +95,39 @@ export const useDropdown = ({ dropdownProps, buttonProps, menuProps }) => {
       {
         'k-HeaderNavDropdown--isExpanded': isDropdownExpanded,
       },
-      dropdownProps.className,
     )
   }
 
-  const returnedButtonProps = {
-    ...buttonProps,
+  const buttonProps = {
     ref: dropdownButtonRef,
-    id: buttonProps.id,
-    'aria-controls': menuProps.id,
+    id: buttonId,
+    'aria-controls': menuId,
     isExpanded: isDropdownExpanded,
     onClick: handleButtonClick,
-    className: classNames('k-HeaderNavDropdown__button', buttonProps.className),
+    className: 'k-HeaderNavDropdown__button',
   }
 
-  const returnedWidth = dropdownProps.dropdownContentWidth === NaN
+  const returnedWidth = dropdownContentWidth === NaN
     ? null
-    : dropdownProps.dropdownContentWidth
+    : dropdownContentWidth
 
-  const returnedMenuProps = {
-    ...menuProps,
+  const menuProps = {
     ref: dropdownContentRef,
-    id: menuProps.id,
+    id: menuId,
     className: classNames(
       'k-HeaderNavDropdown__menu',
-      menuProps.className,
-      `k-HeaderNavDropdown__menu--is-${dropdownProps.side || 'left'}`
+      `k-HeaderNavDropdown__menu--is-${dropdownAnchorSide || 'left'}`
     ),
     style: {
-      ...menuProps.style,
       width: returnedWidth,
     },
     'aria-hidden': !isDropdownExpanded,
   }
 
   return {
-    dropdownProps: returnedDropdownProps,
-    buttonProps: returnedButtonProps,
-    menuProps: returnedMenuProps,
+    dropdownProps,
+    buttonProps,
+    menuProps,
     isDropdownExpanded,
   }
 }
