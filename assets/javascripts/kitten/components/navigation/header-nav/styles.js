@@ -46,9 +46,11 @@ export const StyledHeader = styled.header`
     width: 100%;
     box-sizing: border-box;
     background: ${COLORS.background1};
+    transition: background-color 0.2s ease;
 
     .quickAccessLink {
       background: ${COLORS.background1};
+      transition: background-color 0.2s ease;
       height: 100%;
     }
 
@@ -73,8 +75,9 @@ export const StyledHeader = styled.header`
     }
   }
 
-  .k-HeaderNav--inactiveBackground .k-HeaderNav,
-  .k-HeaderNav--inactiveBackground .quickAccessLink {
+  &.k-HeaderNav--inactiveBackground .k-HeaderNav,
+  &.k-HeaderNav--inactiveBackground .k-HeaderNav__Button,
+  &.k-HeaderNav--inactiveBackground .quickAccessLink {
     background-color: ${COLORS.background3};
   }
 
@@ -87,7 +90,34 @@ export const StyledHeader = styled.header`
     }
   }
 
-  .k-HeaderNav-Logo {
+  .k-HeaderNav__QuickAccessLink {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    left: -100%;
+    top: 0;
+    z-index: var(--HeaderNav_quickAccessLink_zIndex, 2);
+    padding: 0 ${pxToRem(30)};
+    background-color: ${COLORS.background1};
+    border-right: ${pxToRem(1)} solid ${COLORS.line1};
+    ${TYPOGRAPHY.fontStyles.regular}
+    color: ${COLORS.font1};
+    line-height: 1;
+    font-size: ${pxToRem(16)};
+    text-decoration: none;
+    transition: all 0.2s ease;
+    transition-delay: 0, 0;
+    opacity: 0;
+
+    &:focus,
+    &:active {
+      left: 0;
+      opacity: 1;
+      transition-delay: 0, 0.2s;
+    }
+  }
+
+  .k-HeaderNav__Logo {
     padding: ${pxToRem(10)};
     display: flex;
     align-items: center;
