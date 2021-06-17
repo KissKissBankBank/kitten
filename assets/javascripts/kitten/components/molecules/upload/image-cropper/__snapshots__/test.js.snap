@@ -22,7 +22,7 @@ exports[`<ImageCropper /> matches with empty snapshot 1`] = `
       type="file"
     />
     <label
-      className="sc-htpNat fOtbbz k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-fluid"
+      className="sc-htpNat iWDkSs k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-fluid"
       htmlFor="cropper"
       style={
         Object {
@@ -84,7 +84,7 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
       type="file"
     />
     <label
-      className="sc-htpNat fOtbbz k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-fluid"
+      className="sc-htpNat iWDkSs k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-fluid"
       htmlFor="cropper"
       style={
         Object {
