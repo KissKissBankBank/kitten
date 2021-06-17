@@ -54,12 +54,12 @@ export const UserMenuNext = ({
       <DropdownButton
         {...buttonProps}
         style={{
-          '--UserMenu-Button-backgroundColor': buttonChild.props.backgroundColor,
-          '--UserMenu-Button-backgroundColorHover': buttonChild.props.backgroundColorHover,
-          '--UserMenu-Button-backgroundColorActive': buttonChild.props.backgroundColorActive,
-          '--UserMenu-Button-color': buttonChild.props.color,
-          '--UserMenu-Button-colorHover': buttonChild.props.colorHover,
-          '--UserMenu-Button-colorActive': buttonChild.props.colorActive,
+          '--UserMenu-Button-backgroundColor': buttonChild.props.backgroundColor || null,
+          '--UserMenu-Button-backgroundColorHover': buttonChild.props.backgroundColorHover || null,
+          '--UserMenu-Button-backgroundColorActive': buttonChild.props.backgroundColorActive || null,
+          '--UserMenu-Button-color': buttonChild.props.color || null,
+          '--UserMenu-Button-colorHover': buttonChild.props.colorHover || null,
+          '--UserMenu-Button-colorActive': buttonChild.props.colorActive || null,
         }}
         className={classNames(
           'k-HeaderNav__UserMenuButton',
