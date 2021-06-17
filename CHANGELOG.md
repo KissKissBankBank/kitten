@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Button`: Add `fit` and `mobileFit` props, default to `min-width` and `null`.
+- Feature: `Button`: Refactor CSS Styles.
+
 ## [4.0.0] - 2021-07-22
 
 Breaking Changes:
