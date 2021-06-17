@@ -12,7 +12,7 @@ exports[`<ImageCropper /> matches with empty snapshot 1`] = `
     Lorem ipsum…
   </label>
   <div
-    className="sc-ifAKCX eZQOng k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
+    className="sc-ifAKCX wXQNw k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
   >
     <input
       accept=".jpg,.jpeg,.gif,.png"
@@ -22,11 +22,11 @@ exports[`<ImageCropper /> matches with empty snapshot 1`] = `
       type="file"
     />
     <label
-      className="sc-htpNat dVnnwM k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+      className="sc-htpNat fOtbbz k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-fluid"
       htmlFor="cropper"
       style={
         Object {
-          "--border-radius": 0,
+          "--Button-border-radius": 0,
         }
       }
       type="button"
@@ -74,7 +74,7 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
     Lorem ipsum…
   </label>
   <div
-    className="sc-ifAKCX eZQOng k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
+    className="sc-ifAKCX wXQNw k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
   >
     <input
       accept=".jpg,.jpeg,.gif,.png"
@@ -84,11 +84,11 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
       type="file"
     />
     <label
-      className="sc-htpNat dVnnwM k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fluid"
+      className="sc-htpNat fOtbbz k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-fluid"
       htmlFor="cropper"
       style={
         Object {
-          "--border-radius": 0,
+          "--Button-border-radius": 0,
         }
       }
       type="button"
