@@ -285,25 +285,35 @@ export const Toggletip = ({
       onMouseLeave={() => setHoverState(false)}
       {...props}
     >
-      <button
-        {...actionProps}
-        className={classNames(
-          'k-Toggletip__action',
-          'k-u-reset-button',
-          actionProps.className,
-        )}
-        type="button"
-        aria-label={actionLabel}
-        onClick={handleClick}
-        onBlur={() => setOpen(false)}
-        ref={actionElement}
-        style={{
-          '--toggletipAction-color': actionProps.color || null,
-          ...actionProps.style,
-        }}
-      >
-        {targetElement || <ButtonIcon modifier={modifier} />}
-      </button>
+      {targetElement ? (
+        React.isValidElement(targetElement) &&
+        React.cloneElement(targetElement, {
+          ...actionProps,
+          'aria-label': actionLabel,
+          ref: actionElement,
+        })
+      ) : (
+        <button
+          {...actionProps}
+          className={classNames(
+            'k-Toggletip__action',
+            'k-u-reset-button',
+            actionProps.className,
+          )}
+          type="button"
+          aria-label={actionLabel}
+          onClick={handleClick}
+          onBlur={() => setOpen(false)}
+          ref={actionElement}
+          style={{
+            '--toggletipAction-color': actionProps.color || null,
+            ...actionProps.style,
+          }}
+        >
+          <ButtonIcon modifier={modifier} />
+        </button>
+      )}
+
       <span role="status">
         {isOpen && (
           <span
