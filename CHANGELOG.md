@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `TextInputWithUnit`: Fix disabled state and `unitWord` styles.
 - Feature: Add `error4` and `error5` to colors config.
 - Feature: `Button`: Add `iron` modifier.
-- Feature: `ToggleTip`: Add `triggerElement` prop
+- Feature: `ToggleTip`: Add `targetElement` prop
 
 ## [3.19.0] - 2021-06-11
 

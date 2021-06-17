@@ -153,7 +153,7 @@ export const Toggletip = ({
   actionLabel,
   actionProps,
   bubbleProps,
-  triggerElement,
+  targetElement,
   ...props
 }) => {
   const [isHover, setHoverState] = useState(false)
@@ -302,7 +302,7 @@ export const Toggletip = ({
           ...actionProps.style,
         }}
       >
-        {triggerElement || <ButtonIcon modifier={modifier} />}
+        {targetElement || <ButtonIcon modifier={modifier} />}
       </button>
       <span role="status">
         {isOpen && (
@@ -339,7 +339,7 @@ Toggletip.defaultProps = {
   modifier: 'info',
   actionProps: {},
   bubbleProps: {},
-  triggerElement: undefined,
+  targetElement: undefined,
 }
 
 Toggletip.propTypes = {
@@ -353,9 +353,9 @@ Toggletip.propTypes = {
   actionLabel: PropTypes.string.isRequired,
   actionProps: PropTypes.object,
   bubbleProps: PropTypes.object,
-  triggerElement: PropTypes.oneOf([
+  targetElement: PropTypes.oneOf([
     PropTypes.element,
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.element),
+    PropTypes.arrayOf(PropTypes.node),
   ]),
 }
