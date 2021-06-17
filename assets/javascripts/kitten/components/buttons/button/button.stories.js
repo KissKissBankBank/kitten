@@ -1,6 +1,13 @@
 import React from 'react'
 import { text, boolean, number, radios, select } from '@storybook/addon-knobs'
-import { Button, buttonModifiers } from './index'
+import {
+  Button,
+  buttonModifiers,
+  buttonFitOptions,
+  buttonMobileFitOptions,
+  buttonSizes,
+  buttonVariants,
+} from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
@@ -28,37 +35,16 @@ const svgPositionOptions = {
   Right: 'right',
 }
 
-const variantOptions = {
-  Andromeda: 'andromeda',
-  Orion: 'orion',
-}
-
-const sizeOptions = {
-  Nano: 'nano',
-  Micro: 'micro',
-  Tiny: 'tiny',
-  Regular: 'regular',
-  Big: 'big',
-  Huge: 'huge',
-  Giant: 'giant',
-}
-
-const fitOptions = [
-  'icon',
-  'min-width',
-  'content',
-  'fluid',
-]
-
 export const WithText = () => (
   <Button
-    size={select('Size', sizeOptions, 'regular')}
+    size={select('Size', buttonSizes, 'regular')}
     fluid={boolean('Fluid', false)}
     modifier={select('Modifier', buttonModifiers, 'hydrogen')}
-    variant={select('Variant', variantOptions, 'andromeda')}
+    variant={select('Variant', buttonVariants, 'andromeda')}
     disabled={boolean('Disabled', false)}
     borderRadius={number('Border radius', 0, radiusBorderRange)}
-    fit={select('fit', fitOptions, 'min-width')}
+    fit={select('fit', buttonFitOptions, 'min-width')}
+    mobileFit={select('mobileFit', buttonMobileFitOptions, null)}
   >
     {text('Text', 'MyButton')}
   </Button>
@@ -80,14 +66,15 @@ WithText.decorators = [
 
 export const WithIcon = () => (
   <Button
-    size={select('Size', sizeOptions, 'regular')}
+    size={select('Size', buttonSizes, 'regular')}
     rounded={boolean('Rounded', false)}
     modifier={select('Modifier', buttonModifiers, 'hydrogen')}
-    variant={select('Variant', variantOptions, 'andromeda')}
+    variant={select('Variant', buttonVariants, 'andromeda')}
     fluid={boolean('Fluid', false)}
     disabled={boolean('Disabled', false)}
     borderRadius={number('Border radius', 0, radiusBorderRange)}
-    fit={select('fit', fitOptions, 'min-width')}
+    fit={select('fit', buttonFitOptions, 'min-width')}
+    mobileFit={select('mobileFit', buttonMobileFitOptions, null)}
     icon
   >
     <HeartIcon
@@ -113,14 +100,15 @@ WithIcon.decorators = [
 
 export const WithColorIcon = () => (
   <Button
-    size={select('Size', sizeOptions, 'regular')}
+    size={select('Size', buttonSizes, 'regular')}
     rounded={boolean('Rounded', false)}
     modifier={select('Modifier', buttonModifiers, 'hydrogen')}
-    variant={select('Variant', variantOptions, 'andromeda')}
+    variant={select('Variant', buttonVariants, 'andromeda')}
     fluid={boolean('Fluid', false)}
     disabled={boolean('Disabled', false)}
     borderRadius={number('Border radius', 0, radiusBorderRange)}
-    fit={select('fit', fitOptions, 'min-width')}
+    fit={select('fit', buttonFitOptions, 'min-width')}
+    mobileFit={select('mobileFit', buttonMobileFitOptions, null)}
   >
     <PayPalIcon />
   </Button>
@@ -144,13 +132,14 @@ export const WithTextAndIcon = () => {
   const iconPosition = radios('Icon position', svgPositionOptions, 'left')
   return (
     <Button
-      size={select('Size', sizeOptions, 'regular')}
+      size={select('Size', buttonSizes, 'regular')}
       fluid={boolean('Fluid', false)}
       modifier={select('Modifier', buttonModifiers, 'hydrogen')}
-      variant={select('Variant', variantOptions, 'andromeda')}
+      variant={select('Variant', buttonVariants, 'andromeda')}
       disabled={boolean('Disabled', false)}
       borderRadius={number('Border radius', 0, radiusBorderRange)}
-      fit={select('fit', fitOptions, 'min-width')}
+      fit={select('fit', buttonFitOptions, 'min-width')}
+      mobileFit={select('mobileFit', buttonMobileFitOptions, null)}
     >
       {iconPosition === 'left' && (
         <HeartIcon
@@ -186,9 +175,9 @@ WithTextAndIcon.decorators = [
 
 export const WithBadge = () => (
   <Button
-    size={select('Size', sizeOptions, 'regular')}
+    size={select('Size', buttonSizes, 'regular')}
     modifier={select('Modifier', buttonModifiers, 'helium')}
-    variant={select('Variant', variantOptions, 'andromeda')}
+    variant={select('Variant', buttonVariants, 'andromeda')}
     disabled={boolean('Disabled', false)}
   >
     <span>{text('Text', 'MyButton')}</span>

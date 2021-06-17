@@ -28,6 +28,22 @@ export const buttonModifiers = [
   'social_pinterest',
 ]
 
+export const buttonFitOptions = ['icon', 'min-width', 'content', 'fluid']
+
+export const buttonMobileFitOptions = [null, ...buttonFitOptions]
+
+export const buttonSizes = [
+  'nano',
+  'micro',
+  'tiny',
+  'big',
+  'huge',
+  'giant',
+  'regular',
+]
+
+export const buttonVariants = ['andromeda', 'orion']
+
 const StyledButton = styled.button`
   display: inline-flex;
   align-items: center;
@@ -259,30 +275,11 @@ Button.propTypes = {
   fluid: PropTypes.bool,
   icon: PropTypes.bool,
   rounded: PropTypes.bool,
-  size: PropTypes.oneOf([
-    'nano',
-    'micro',
-    'tiny',
-    'big',
-    'huge',
-    'giant',
-    'regular',
-  ]),
-  fit: PropTypes.oneOf([
-    'icon',
-    'min-width',
-    'content',
-    'fluid',
-  ]),
-  mobileFit: PropTypes.oneOf([
-    null,
-    'icon',
-    'min-width',
-    'content',
-    'fluid',
-  ]),
+  size: PropTypes.oneOf(buttonSizes),
+  fit: PropTypes.oneOf(buttonFitOptions),
+  mobileFit: PropTypes.oneOf(buttonMobileFitOptions),
   modifier: PropTypes.oneOf(buttonModifiers),
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
+  variant: PropTypes.oneOf(buttonVariants),
 }
 Button.defaultProps = {
   tag: 'button',
