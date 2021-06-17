@@ -1,6 +1,6 @@
 import React from 'react'
 import { text, boolean, number, radios, select } from '@storybook/addon-knobs'
-import { Button } from './index'
+import { Button, buttonModifiers } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
@@ -33,26 +33,6 @@ const variantOptions = {
   Orion: 'orion',
 }
 
-const modifierOptions = {
-  Hydrogen: 'hydrogen',
-  Helium: 'helium',
-  Lithium: 'lithium',
-  Beryllium: 'beryllium',
-  Carbon: 'carbon',
-  Oxygen: 'oxygen',
-  Checked: 'checked',
-  Copper: 'copper',
-  Boron: 'boron',
-  Neon: 'neon',
-  Iron: 'iron',
-  Social_facebook: 'social_facebook',
-  Social_twitter: 'social_twitter',
-  Social_linkedin: 'social_linkedin',
-  Social_instagram: 'social_instagram',
-  Social_youtube: 'social_youtube',
-  Social_pinterest: 'social_pinterest',
-}
-
 const sizeOptions = {
   Nano: 'nano',
   Micro: 'micro',
@@ -63,14 +43,22 @@ const sizeOptions = {
   Giant: 'giant',
 }
 
+const fitOptions = [
+  'icon',
+  'min-width',
+  'content',
+  'fluid',
+]
+
 export const WithText = () => (
   <Button
     size={select('Size', sizeOptions, 'regular')}
     fluid={boolean('Fluid', false)}
-    modifier={select('Modifier', modifierOptions, 'hydrogen')}
+    modifier={select('Modifier', buttonModifiers, 'hydrogen')}
     variant={select('Variant', variantOptions, 'andromeda')}
     disabled={boolean('Disabled', false)}
     borderRadius={number('Border radius', 0, radiusBorderRange)}
+    fit={select('fit', fitOptions, 'min-width')}
   >
     {text('Text', 'MyButton')}
   </Button>
@@ -94,11 +82,12 @@ export const WithIcon = () => (
   <Button
     size={select('Size', sizeOptions, 'regular')}
     rounded={boolean('Rounded', false)}
-    modifier={select('Modifier', modifierOptions, 'hydrogen')}
+    modifier={select('Modifier', buttonModifiers, 'hydrogen')}
     variant={select('Variant', variantOptions, 'andromeda')}
     fluid={boolean('Fluid', false)}
     disabled={boolean('Disabled', false)}
     borderRadius={number('Border radius', 0, radiusBorderRange)}
+    fit={select('fit', fitOptions, 'min-width')}
     icon
   >
     <HeartIcon
@@ -126,11 +115,12 @@ export const WithColorIcon = () => (
   <Button
     size={select('Size', sizeOptions, 'regular')}
     rounded={boolean('Rounded', false)}
-    modifier={select('Modifier', modifierOptions, 'hydrogen')}
+    modifier={select('Modifier', buttonModifiers, 'hydrogen')}
     variant={select('Variant', variantOptions, 'andromeda')}
     fluid={boolean('Fluid', false)}
     disabled={boolean('Disabled', false)}
     borderRadius={number('Border radius', 0, radiusBorderRange)}
+    fit={select('fit', fitOptions, 'min-width')}
   >
     <PayPalIcon />
   </Button>
@@ -156,10 +146,11 @@ export const WithTextAndIcon = () => {
     <Button
       size={select('Size', sizeOptions, 'regular')}
       fluid={boolean('Fluid', false)}
-      modifier={select('Modifier', modifierOptions, 'hydrogen')}
+      modifier={select('Modifier', buttonModifiers, 'hydrogen')}
       variant={select('Variant', variantOptions, 'andromeda')}
       disabled={boolean('Disabled', false)}
       borderRadius={number('Border radius', 0, radiusBorderRange)}
+      fit={select('fit', fitOptions, 'min-width')}
     >
       {iconPosition === 'left' && (
         <HeartIcon
@@ -196,7 +187,7 @@ WithTextAndIcon.decorators = [
 export const WithBadge = () => (
   <Button
     size={select('Size', sizeOptions, 'regular')}
-    modifier={select('Modifier', modifierOptions, 'helium')}
+    modifier={select('Modifier', buttonModifiers, 'helium')}
     variant={select('Variant', variantOptions, 'andromeda')}
     disabled={boolean('Disabled', false)}
   >

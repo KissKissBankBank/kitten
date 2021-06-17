@@ -139,10 +139,6 @@ export const DEFAULT = css`
   min-height: ${pxToRem(50)};
   padding: ${pxToRem(10)} ${pxToRem(30)};
   font-size: ${stepToRem(-1)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(200)};
-    height: ${pxToRem(50)};
-  }
 `
 
 export const NANO = css`
@@ -150,10 +146,6 @@ export const NANO = css`
   min-height: ${pxToRem(20)};
   padding: 0 ${pxToRem(6)};
   font-size: ${stepToRem(-2)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(100)};
-    height: ${pxToRem(20)};
-  }
 `
 
 export const MICRO = css`
@@ -161,10 +153,6 @@ export const MICRO = css`
   min-height: ${pxToRem(30)};
   padding: ${pxToRem(5)} ${pxToRem(10)};
   font-size: ${stepToRem(-2)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(100)};
-    height: ${pxToRem(20)};
-  }
 `
 
 export const TINY = css`
@@ -172,10 +160,6 @@ export const TINY = css`
   min-height: ${pxToRem(40)};
   padding: ${pxToRem(7)} ${pxToRem(20)};
   font-size: ${stepToRem(-1)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(160)};
-    height: ${pxToRem(40)};
-  }
 `
 
 export const BIG = css`
@@ -184,13 +168,6 @@ export const BIG = css`
     min-height: ${pxToRem(70)};
     padding: ${pxToRem(10)} ${pxToRem(40)};
     font-size: ${stepToRem(0)};
-  }
-  @media screen and (min-width: ${pxToRem(
-      ScreenConfig.S.min,
-    )}) and (-ms-high-contrast: active),
-    (-ms-high-contrast: none) {
-    width: ${pxToRem(220)};
-    height: ${pxToRem(70)};
   }
 `
 
@@ -205,13 +182,6 @@ export const HUGE = css`
     font-size: ${stepToRem(0)};
     padding: ${pxToRem(10)} ${pxToRem(40)};
   }
-  @media screen and (min-width: ${pxToRem(
-      ScreenConfig.M.min,
-    )}) and (-ms-high-contrast: active),
-    (-ms-high-contrast: none) {
-    width: ${pxToRem(220)};
-    height: ${pxToRem(80)};
-  }
 `
 
 export const GIANT = css`
@@ -225,13 +195,6 @@ export const GIANT = css`
     font-size: ${stepToRem(0)};
     padding: ${pxToRem(10)} ${pxToRem(40)};
   }
-  @media screen and (min-width: ${pxToRem(
-      ScreenConfig.M.min,
-    )}) and (-ms-high-contrast: active),
-    (-ms-high-contrast: none) {
-    width: ${pxToRem(220)};
-    height: ${pxToRem(90)};
-  }
 `
 
 export const ICON = css`
@@ -240,35 +203,21 @@ export const ICON = css`
   width: ${pxToRem(50)};
   height: ${pxToRem(50)};
   padding: 0;
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(50)};
-    min-width: 0;
-    min-height: 0;
-  }
 `
 
 export const ICON_NANO = css`
   width: ${pxToRem(20)};
   height: ${pxToRem(20)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(20)};
-  }
 `
 
 export const ICON_MICRO = css`
   width: ${pxToRem(30)};
   height: ${pxToRem(30)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(30)};
-  }
 `
 
 export const ICON_TINY = css`
   width: ${pxToRem(40)};
   height: ${pxToRem(40)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(40)};
-  }
 `
 
 export const ICON_BIG = css`
@@ -278,12 +227,6 @@ export const ICON_BIG = css`
     padding: 0;
     width: ${pxToRem(70)};
     height: ${pxToRem(70)};
-  }
-  @media screen and (min-width: ${pxToRem(
-      ScreenConfig.S.min,
-    )}) and (-ms-high-contrast: active),
-    (-ms-high-contrast: none) {
-    width: ${pxToRem(70)};
   }
 `
 
@@ -297,12 +240,6 @@ export const ICON_HUGE = css`
     width: ${pxToRem(80)};
     height: ${pxToRem(80)};
   }
-  @media screen and (min-width: ${pxToRem(
-      ScreenConfig.M.min,
-    )}) and (-ms-high-contrast: active),
-    (-ms-high-contrast: none) {
-    width: ${pxToRem(80)};
-  }
 `
 
 export const ICON_GIANT = css`
@@ -314,12 +251,6 @@ export const ICON_GIANT = css`
     min-width: initial;
     width: ${pxToRem(90)};
     height: ${pxToRem(90)};
-  }
-  @media screen and (min-width: ${pxToRem(
-      ScreenConfig.M.min,
-    )}) and (-ms-high-contrast: active),
-    (-ms-high-contrast: none) {
-    width: ${pxToRem(90)};
   }
 `
 
@@ -338,6 +269,8 @@ export const Button = ({
   icon,
   borderRadius,
   tag,
+  fit,
+  mobileFit,
   ...props
 }) => {
   const actualSize = (() => {
@@ -369,15 +302,16 @@ export const Button = ({
         `k-Button--${actualSize}`,
         `k-Button--${modifier}`,
         `k-Button--${variant}`,
+        `k-Button--${fit}`,
+        `k-Button--mobile-${mobileFit || 'none'}`,
         {
           'k-Button--fluid': fluid,
-          'k-Button--hasIcon': icon,
+          'k-Button--icon': icon && !fluid,
           'k-Button--rounded': rounded,
           'k-Button--hasBorderRadius': borderRadius > 0,
         },
       )}
-      style={{ '--border-radius': pxToRem(borderRadius) }}
-      modifier={modifier}
+      style={{ '--Button-border-radius': pxToRem(borderRadius) }}
       type="button"
       as={tag}
       {...props}
@@ -408,24 +342,20 @@ Button.propTypes = {
     'giant',
     'regular',
   ]),
-  modifier: PropTypes.oneOf([
-    'hydrogen',
-    'helium',
-    'lithium',
-    'beryllium',
-    'carbon',
-    'oxygen',
-    'copper',
-    'boron',
-    'neon',
-    'iron',
-    'social_facebook',
-    'social_twitter',
-    'social_linkedin',
-    'social_instagram',
-    'social_youtube',
-    'social_pinterest',
+  fit: PropTypes.oneOf([
+    'icon',
+    'min-width',
+    'content',
+    'fluid',
   ]),
+  mobileFit: PropTypes.oneOf([
+    null,
+    'icon',
+    'min-width',
+    'content',
+    'fluid',
+  ]),
+  modifier: PropTypes.oneOf(buttonModifiers),
   variant: PropTypes.oneOf(['andromeda', 'orion']),
 }
 Button.defaultProps = {
@@ -437,4 +367,6 @@ Button.defaultProps = {
   size: 'regular',
   modifier: 'hydrogen',
   variant: 'andromeda',
+  fit: 'min-width',
+  mobileFit: null,
 }
