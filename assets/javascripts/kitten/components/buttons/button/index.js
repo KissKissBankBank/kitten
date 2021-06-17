@@ -166,7 +166,7 @@ const StyledButton = styled.button`
   /* BESPOKE FIT for mobile */
 
   @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-    &[class*="k-Button--mobile-fit"]:not(.k-Button--mobile-fit-none) {
+    &[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
       min-width: initial !important;
       padding: var(--Button-padding);
       width: initial;
@@ -210,11 +210,13 @@ const StyledButton = styled.button`
 
   /* MODIFIERS */
 
-  ${buttonModifiers.map((modifier) => css`
-    &.k-Button--${modifier} {
-      ${modifierStyles(modifier)}
-    }
-  `)}
+  ${buttonModifiers.map(
+    modifier => css`
+      &.k-Button--${modifier} {
+        ${modifierStyles(modifier)}
+      }
+    `,
+  )}
 `
 
 // const ForwardedButtonComponent = forwardRef((props, ref) => {
