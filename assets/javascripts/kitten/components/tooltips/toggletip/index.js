@@ -286,7 +286,7 @@ export const Toggletip = ({
       onMouseLeave={() => setHoverState(false)}
       {...props}
     >
-      {targetElement && React.isValidElement(targetElement) ? (
+      {!!targetElement && React.isValidElement(targetElement) ? (
         <button
           {...actionProps}
           ref={actionElement}
@@ -353,7 +353,7 @@ Toggletip.defaultProps = {
   modifier: 'info',
   actionProps: {},
   bubbleProps: {},
-  targetElement: undefined,
+  targetElement: null,
 }
 
 Toggletip.propTypes = {
