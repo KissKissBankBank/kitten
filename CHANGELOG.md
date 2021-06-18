@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: `Utilities`: Generalization of `!important` on all utilities.
+
 ## [3.20.0] - 2021-06-17
 
 Features:
