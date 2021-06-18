@@ -22,7 +22,7 @@ export const TeamCardPhoneIcon = ({
         size="tiny"
         className={classNames(
           'k-ButtonIcon--phone',
-          'k-u-hidden@s-up--important',
+          'k-u-hidden@s-up',
           className,
         )}
         aria-label={buttonLabel}
@@ -33,7 +33,7 @@ export const TeamCardPhoneIcon = ({
       <TeamCardButtonWithTooltip
         phoneNumber={phoneNumber}
         tooltipColor={tooltipColor}
-        className={classNames('k-u-hidden@xs-down--important', className)}
+        className={classNames('k-u-hidden@xs-down', className)}
         aria-label={buttonLabel}
         {...props}
       />

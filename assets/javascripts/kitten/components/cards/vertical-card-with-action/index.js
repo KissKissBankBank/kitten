@@ -46,7 +46,7 @@ export const VerticalCardWithAction = ({
         tag={titleTag}
         noMargin
         className={classNames('k-u-align-center', {
-          'k-u-margin-bottom-singleHalf--important': !!description,
+          'k-u-margin-bottom-singleHalf': !!description,
         })}
       >
         {title}
@@ -56,7 +56,7 @@ export const VerticalCardWithAction = ({
           modifier="tertiary"
           tag={descriptionTag}
           noMargin
-          className="k-u-align-center k-u-margin-top-singleHalf--important"
+          className="k-u-align-center k-u-margin-top-singleHalf"
         >
           {description}
         </Paragraph>
