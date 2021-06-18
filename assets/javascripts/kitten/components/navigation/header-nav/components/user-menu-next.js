@@ -19,6 +19,8 @@ export const UserMenuNext = ({
   dropdownContentWidth,
   closeEvents,
   dropdownAnchorSide,
+  className,
+  padding,
   ...props
 }) => {
   const getElementById = id => () => document.getElementById(id)
@@ -50,7 +52,13 @@ export const UserMenuNext = ({
   })
 
   return (
-    <div {...dropdownProps}>
+    <div
+      {...dropdownProps}
+      className={classNames(
+        className,
+        dropdownProps.className,
+      )}
+    >
       <DropdownButton
         {...buttonProps}
         style={{
@@ -67,6 +75,7 @@ export const UserMenuNext = ({
           buttonProps.className,
           {
             'k-HeaderNav__UserMenuButton--hasArrow': buttonChild.props.hasArrow,
+            'k-HeaderNav__UserMenuButton--nopadding': !padding,
           }
         )}
       >
