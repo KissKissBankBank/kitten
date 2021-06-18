@@ -128,103 +128,19 @@
 ///   <div class="k-u-margin-vertical-nonupleHalf">…</div>
 ///   <div class="k-u-margin-vertical-decuple">…</div>
 ///   <div class="k-u-margin-vertical-none">…</div>
-///
-///   <div class="k-u-margin-none--important">…</div>
-///
-///   <div class="k-u-margin-top-single--important">…</div>
-///
-///   <div class="k-u-margin-top-single@xxs-down--important">…</div>
-///   <div class="k-u-margin-top-single@xs-down--important">…</div>
-///   <div class="k-u-margin-top-single@s-down--important">…</div>
-///   <div class="k-u-margin-top-single@m-down--important">…</div>
-///   <div class="k-u-margin-top-single@l-down--important">…</div>
-///
-///   <div class="k-u-margin-top-single@xs-up--important">…</div>
-///   <div class="k-u-margin-top-single@s-up--important">…</div>
-///   <div class="k-u-margin-top-single@m-up--important">…</div>
-///   <div class="k-u-margin-top-single@l-up--important">…</div>
-///   <div class="k-u-margin-top-single@xl-up--important">…</div>
-///
-///   <div class="k-u-margin-bottom-single--important">…</div>
-///   <div class="k-u-margin-bottom-double--important">…</div>
-///   <div class="k-u-margin-bottom-triple--important">…</div>
-///   <div class="k-u-margin-bottom-quadruple--important">…</div>
-///   <div class="k-u-margin-bottom-quintuple--important">…</div>
-///   <div class="k-u-margin-bottom-sextuple--important">…</div>
-///   <div class="k-u-margin-bottom-septuple--important">…</div>
-///   <div class="k-u-margin-bottom-octuple--important">…</div>
-///   <div class="k-u-margin-bottom-nonuple--important">…</div>
-///   <div class="k-u-margin-bottom-decuple--important">…</div>
-///   <div class="k-u-margin-bottom-none--important">…</div>
-///
-///   <div class="k-u-margin-left-single--important">…</div>
-///   <div class="k-u-margin-left-double--important">…</div>
-///   <div class="k-u-margin-left-triple--important">…</div>
-///   <div class="k-u-margin-left-quadruple--important">…</div>
-///   <div class="k-u-margin-left-quintuple--important">…</div>
-///   <div class="k-u-margin-left-sextuple--important">…</div>
-///   <div class="k-u-margin-left-septuple--important">…</div>
-///   <div class="k-u-margin-left-octuple--important">…</div>
-///   <div class="k-u-margin-left-nonuple--important">…</div>
-///   <div class="k-u-margin-left-decuple--important">…</div>
-///   <div class="k-u-margin-left-none--important">…</div>
-///
-///   <div class="k-u-margin-right-single--important">…</div>
-///   <div class="k-u-margin-right-double--important">…</div>
-///   <div class="k-u-margin-right-triple--important">…</div>
-///   <div class="k-u-margin-right-quadruple--important">…</div>
-///   <div class="k-u-margin-right-quintuple--important">…</div>
-///   <div class="k-u-margin-right-sextuple--important">…</div>
-///   <div class="k-u-margin-right-septuple--important">…</div>
-///   <div class="k-u-margin-right-octuple--important">…</div>
-///   <div class="k-u-margin-right-nonuple--important">…</div>
-///   <div class="k-u-margin-right-decuple--important">…</div>
-///   <div class="k-u-margin-right-none--important">…</div>
-///
-///   <div class="k-u-margin-horizontal-single--important">…</div>
-///   <div class="k-u-margin-horizontal-double--important">…</div>
-///   <div class="k-u-margin-horizontal-triple--important">…</div>
-///   <div class="k-u-margin-horizontal-quadruple--important">…</div>
-///   <div class="k-u-margin-horizontal-quintuple--important">…</div>
-///   <div class="k-u-margin-horizontal-sextuple--important">…</div>
-///   <div class="k-u-margin-horizontal-septuple--important">…</div>
-///   <div class="k-u-margin-horizontal-octuple--important">…</div>
-///   <div class="k-u-margin-horizontal-nonuple--important">…</div>
-///   <div class="k-u-margin-horizontal-decuple--important">…</div>
-///   <div class="k-u-margin-horizontal-none--important">…</div>
-///
-///   <div class="k-u-margin-vertical-single--important">…</div>
-///   <div class="k-u-margin-vertical-double--important">…</div>
-///   <div class="k-u-margin-vertical-triple--important">…</div>
-///   <div class="k-u-margin-vertical-quadruple--important">…</div>
-///   <div class="k-u-margin-vertical-quintuple--important">…</div>
-///   <div class="k-u-margin-vertical-sextuple--important">…</div>
-///   <div class="k-u-margin-vertical-septuple--important">…</div>
-///   <div class="k-u-margin-vertical-octuple--important">…</div>
-///   <div class="k-u-margin-vertical-nonuple--important">…</div>
-///   <div class="k-u-margin-vertical-decuple--important">…</div>
-///   <div class="k-u-margin-vertical-none--important">…</div>
 
 @mixin k-u-margin($position, $slug, $size) {
   $value: k-px-to-rem($size);
 
   .k-u-margin-#{$position}-#{$slug} {
-    margin-#{$position}: $value;
-
-    &--important {
-      margin-#{$position}: $value !important;
-    }
+    margin-#{$position}: $value !important;
   }
 
   @each $name, $query in $k-media-queries {
     @if $name != "xl" {
       .k-u-margin-#{$position}-#{$slug}\@#{$name}-down {
         @include k-media-max($name) {
-          margin-#{$position}: $value;
-
-          &--important {
-            margin-#{$position}: $value !important;
-          }
+          margin-#{$position}: $value !important;
         }
       }
     }
@@ -232,11 +148,7 @@
     @if $name != "xxs" {
       .k-u-margin-#{$position}-#{$slug}\@#{$name}-up {
         @include k-media-min($name) {
-          margin-#{$position}: $value;
-
-          &--important {
-            margin-#{$position}: $value !important;
-          }
+          margin-#{$position}: $value !important;
         }
       }
     }
@@ -248,12 +160,7 @@
 
   .k-u-margin-#{$position}-#{$slug} {
     @each $attr in $attributes {
-      margin-#{$attr}: $value;
-    }
-    &--important {
-      @each $attr in $attributes {
-        margin-#{$attr}: $value !important;
-      }
+      margin-#{$attr}: $value !important;
     }
   }
 
@@ -262,13 +169,7 @@
       .k-u-margin-#{$position}-#{$slug}\@#{$name}-down {
         @include k-media-max($name) {
           @each $attr in $attributes {
-            margin-#{$attr}: $value;
-          }
-
-          &--important {
-            @each $attr in $attributes {
-              margin-#{$attr}: $value !important;
-            }
+            margin-#{$attr}: $value !important;
           }
         }
       }
@@ -278,13 +179,7 @@
       .k-u-margin-#{$position}-#{$slug}\@#{$name}-up {
         @include k-media-min($name) {
           @each $attr in $attributes {
-            margin-#{$attr}: $value;
-          }
-
-          &--important {
-            @each $attr in $attributes {
-              margin-#{$attr}: $value !important;
-            }
+            margin-#{$attr}: $value !important;
           }
         }
       }
@@ -294,11 +189,7 @@
 
 @mixin k-utilities-margin {
   .k-u-margin-none {
-    margin: 0;
-
-    &--important {
-      margin: 0 !important;
-    }
+    margin: 0 !important;
   }
 
   $k-sizes: (

@@ -26,42 +26,18 @@
 ///   <div class="k-u-alignSelf-start">…</div>
 ///   <div class="k-u-alignSelf-end">…</div>
 ///
-///   <div class="k-u-alignSelf-center@xxs-down--important">…</div>
-///   <div class="k-u-alignSelf-center@xs-down--important">…</div>
-///   <div class="k-u-alignSelf-center@s-down--important">…</div>
-///   <div class="k-u-alignSelf-center@m-down--important">…</div>
-///   <div class="k-u-alignSelf-center@l-down--important">…</div>
-///
-///   <div class="k-u-alignSelf-center@xs-up--important">…</div>
-///   <div class="k-u-alignSelf-center@s-up--important">…</div>
-///   <div class="k-u-alignSelf-center@m-up--important">…</div>
-///   <div class="k-u-alignSelf-center@l-up--important">…</div>
-///   <div class="k-u-alignSelf-center@xl-up--important">…</div>
-///
-///   <div class="k-u-alignSelf-center--important">…</div>
-///   <div class="k-u-alignSelf-start--important">…</div>
-///   <div class="k-u-alignSelf-end--important">…</div>
-
 @mixin k-u-alignSelf($position, $align) {
   $value: $align;
 
   .k-u-alignSelf-#{$position} {
-    align-self: $value;
-
-    &--important {
-      align-self: $value !important;
-    }
+    align-self: $value !important;
   }
 
   @each $name, $query in $k-media-queries {
     @if $name != "xl" {
       .k-u-alignSelf-#{$position}\@#{$name}-down {
         @include k-media-max($name) {
-          align-self: $value;
-
-          &--important {
-            align-self: $value !important;
-          }
+          align-self: $value !important;
         }
       }
     }
@@ -69,11 +45,7 @@
     @if $name != "xxs" {
       .k-u-alignSelf-#{$position}\@#{$name}-up {
         @include k-media-min($name) {
-          align-self: $value;
-
-          &--important {
-            align-self: $value !important;
-          }
+          align-self: $value !important;
         }
       }
     }
