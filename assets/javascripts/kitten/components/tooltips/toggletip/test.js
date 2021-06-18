@@ -21,6 +21,30 @@ describe('<Toggletip />', () => {
     })
   })
 
+  describe('CustomTargetElement', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Toggletip
+            targetElement={
+              <p className="k-u-weight-bold">
+                This is the target of my tooltip
+              </p>
+            }
+            actionLabel="Sample label"
+            id="Toggletip-demo"
+          >
+            This is the content of the Toggletip
+          </Toggletip>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('With props', () => {
     beforeEach(() => {
       component = renderer
