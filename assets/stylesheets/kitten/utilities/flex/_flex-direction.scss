@@ -31,29 +31,41 @@
   .k-u-flex-direction-#{$position} {
     flex-direction: $value !important;
   }
+}
 
-  @each $name, $query in $k-media-queries {
-    @if $name != "xl" {
-      .k-u-flex-direction-#{$position}\@#{$name}-down {
-        @include k-media-max($name) {
-          flex-direction: $value !important;
-        }
-      }
-    }
+@mixin k-utilities-flex-direction {
+  $k-variants: (
+    row: row,
+    rowReverse: row-reverse,
+    column: column,
+    columnReverse: column-reverse,
+  );
 
-    @if $name != "xxs" {
-      .k-u-flex-direction-#{$position}\@#{$name}-up {
-        @include k-media-min($name) {
-          flex-direction: $value !important;
+  @each $variant_name, $attribute in $k-variants {
+    @include k-u-flex-direction($variant_name, $attribute);
+  }
+
+  @each $mq_name, $query in reverse($k-media-queries) {
+    $addendum: \@#{$mq_name}-down;
+
+    @if $mq_name != "xl" {
+      @include k-media-max($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-flex-direction($variant_name + $addendum, $attribute);
         }
       }
     }
   }
-}
 
-@mixin k-utilities-flex-direction {
-  @include k-u-flex-direction('row', row);
-  @include k-u-flex-direction('rowReverse', row-reverse);
-  @include k-u-flex-direction('column', column);
-  @include k-u-flex-direction('columnReverse', column-reverse);
+  @each $mq_name, $query in $k-media-queries {
+    $addendum: \@#{$mq_name}-up;
+
+    @if $mq_name != "xxs" {
+      @include k-media-min($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-flex-direction($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
 }

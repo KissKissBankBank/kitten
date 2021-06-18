@@ -30,30 +30,42 @@
   .k-u-flex-alignItems-#{$position} {
     align-items: $value !important;
   }
+}
 
-  @each $name, $query in $k-media-queries {
-    @if $name != "xl" {
-      .k-u-flex-alignItems-#{$position}\@#{$name}-down {
-        @include k-media-max($name) {
-          align-items: $value !important;
-        }
-      }
-    }
+@mixin k-utilities-align-items {
+  $k-variants: (
+    normal: normal,
+    stretch: stretch,
+    center: center,
+    start: flex-start,
+    end: flex-end,
+  );
 
-    @if $name != "xxs" {
-      .k-u-flex-alignItems-#{$position}\@#{$name}-up {
-        @include k-media-min($name) {
-          align-items: $value !important;
+  @each $variant_name, $attribute in $k-variants {
+    @include k-u-flex-alignItems($variant_name, $attribute);
+  }
+
+  @each $mq_name, $query in reverse($k-media-queries) {
+    $addendum: \@#{$mq_name}-down;
+
+    @if $mq_name != "xl" {
+      @include k-media-max($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-flex-alignItems($variant_name + $addendum, $attribute);
         }
       }
     }
   }
-}
 
-@mixin k-utilities-align-items {
-  @include k-u-flex-alignItems('normal', normal);
-  @include k-u-flex-alignItems('stretch', stretch);
-  @include k-u-flex-alignItems('center', center);
-  @include k-u-flex-alignItems('start', flex-start);
-  @include k-u-flex-alignItems('end', flex-end);
+  @each $mq_name, $query in $k-media-queries {
+    $addendum: \@#{$mq_name}-up;
+
+    @if $mq_name != "xxs" {
+      @include k-media-min($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-flex-alignItems($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
 }

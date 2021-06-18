@@ -27,8 +27,7 @@
     display: inline-block !important;
   }
 
-  @each $name, $query in $k-media-queries {
-
+  @each $name, $query in reverse($k-media-queries) {
     @if $name != "xl" {
       .k-u-inlineBlock\@#{$name}-down {
         @include k-media-max($name) {
@@ -36,7 +35,9 @@
         }
       }
     }
+  }
 
+  @each $name, $query in $k-media-queries {
     @if $name != "xxs" {
       .k-u-inlineBlock\@#{$name}-up {
         @include k-media-min($name) {

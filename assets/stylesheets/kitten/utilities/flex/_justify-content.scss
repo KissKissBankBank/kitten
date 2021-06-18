@@ -24,41 +24,53 @@
 ///   <div class="k-u-flex-justifyContent-start">…</div>
 ///   <div class="k-u-flex-justifyContent-end">…</div>
 
-@mixin k-u-flex-justifyContent($position, $align) {
+@mixin k-u-flex-jc($position, $align) {
   $value: $align;
 
   .k-u-flex-justifyContent-#{$position} {
     justify-content: $value !important;
   }
+}
 
-  @each $name, $query in $k-media-queries {
-    @if $name != "xl" {
-      .k-u-flex-justifyContent-#{$position}\@#{$name}-down {
-        @include k-media-max($name) {
-          justify-content: $value !important;
-        }
-      }
-    }
+@mixin k-utilities-justify-content {
+  $k-variants: (
+    normal: center,
+    center: center,
+    start: flex-start,
+    end: flex-end,
+    left: left,
+    right: right,
+    sa: space-around,
+    sb: space-between,
+    se: space-evenly,
+    stretch: stretch,
+  );
 
-    @if $name != "xxs" {
-      .k-u-flex-justifyContent-#{$position}\@#{$name}-up {
-        @include k-media-min($name) {
-          justify-content: $value !important;
+  @each $variant_name, $attribute in $k-variants {
+    @include k-u-flex-jc($variant_name, $attribute);
+  }
+
+  @each $mq_name, $query in reverse($k-media-queries) {
+    $addendum: \@#{$mq_name}-down;
+
+    @if $mq_name != "xl" {
+      @include k-media-max($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-flex-jc($variant_name + $addendum, $attribute);
         }
       }
     }
   }
-}
 
-@mixin k-utilities-justify-content {
-  @include k-u-flex-justifyContent('normal', center);
-  @include k-u-flex-justifyContent('center', center);
-  @include k-u-flex-justifyContent('start', flex-start);
-  @include k-u-flex-justifyContent('end', flex-end);
-  @include k-u-flex-justifyContent('left', left);
-  @include k-u-flex-justifyContent('right', right);
-  @include k-u-flex-justifyContent('sa', space-around);
-  @include k-u-flex-justifyContent('sb', space-between);
-  @include k-u-flex-justifyContent('se', space-evenly);
-  @include k-u-flex-justifyContent('stretch', stretch);
+  @each $mq_name, $query in $k-media-queries {
+    $addendum: \@#{$mq_name}-up;
+
+    @if $mq_name != "xxs" {
+      @include k-media-min($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-flex-jc($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
 }

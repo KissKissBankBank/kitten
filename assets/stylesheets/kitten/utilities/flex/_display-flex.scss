@@ -20,7 +20,7 @@
     display: inline-flex !important;
   }
 
-  @each $name, $query in $k-media-queries {
+  @each $name, $query in reverse($k-media-queries) {
     @if $name != "xl" {
       .k-u-flex\@#{$name}-down {
         @include k-media-max($name) {
@@ -34,7 +34,9 @@
         }
       }
     }
+  }
 
+  @each $name, $query in $k-media-queries {
     @if $name != "xxs" {
       .k-u-flex\@#{$name}-up {
         @include k-media-min($name) {
