@@ -298,7 +298,7 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__UserMenuButton--nopadding {
-    padding: 0;
+    padding: 0 !important;
   }
 
   .k-HeaderNav-nav--center {
