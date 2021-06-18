@@ -87,7 +87,7 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-htpNat dVnnwM k-Button sc-bxivhb fVJshV k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up--important k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="sc-htpNat dVnnwM k-Button sc-bxivhb fVJshV k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
       href="tel:06 00 00 00 00"
       style={
         Object {
@@ -111,7 +111,7 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-ifAKCX fdTzCw k-u-hidden@xs-down--important k-TeamCardIcons__buttonIcon"
+      className="sc-ifAKCX fdTzCw k-u-hidden@xs-down k-TeamCardIcons__buttonIcon"
       href="tel:06 00 00 00 00"
     >
       <span

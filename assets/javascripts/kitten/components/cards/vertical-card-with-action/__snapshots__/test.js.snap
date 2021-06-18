@@ -65,7 +65,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
     className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
   >
     <h1
-      className="sc-bdVaJa eYhATS k-Title k-u-align-center k-u-margin-bottom-singleHalf--important k-Title--senary k-Title--noMargin"
+      className="sc-bdVaJa eYhATS k-Title k-u-align-center k-u-margin-bottom-singleHalf k-Title--senary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
@@ -75,7 +75,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
       Custom title
     </h1>
     <p
-      className="sc-bwzfXH ggISLb k-Paragraph k-u-align-center k-u-margin-top-singleHalf--important k-Paragraph--tertiary k-Paragraph--noMargin"
+      className="sc-bwzfXH ggISLb k-Paragraph k-u-align-center k-u-margin-top-singleHalf k-Paragraph--tertiary k-Paragraph--noMargin"
     >
       Custom text
     </p>
