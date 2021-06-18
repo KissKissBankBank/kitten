@@ -297,8 +297,14 @@ export const StyledHeader = styled.header`
     padding-right: ${pxToRem(30)};
   }
 
-  .k-HeaderNav__UserMenuButton--nopadding {
+  .k-HeaderNav__UserMenuButton--noPadding {
     padding: 0 !important;
+  }
+
+  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+    .k-HeaderNav__UserMenuButton--noPaddingMobile {
+      padding: 0 !important;
+    }
   }
 
   .k-HeaderNav-nav--center {
@@ -361,7 +367,8 @@ export const StyledHeader = styled.header`
       padding: 0 ${pxToRem(15)};
     }
 
-    .k-HeaderNav__Button--hasIcon {
+    .k-Dropdown__button,
+    .k-HeaderNav__Button {
       min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
     }
 
@@ -395,7 +402,8 @@ export const StyledHeader = styled.header`
       padding: 0 ${pxToRem(40)};
     }
 
-    .k-HeaderNav__Button--hasIcon {
+    .k-Dropdown__button,
+    .k-HeaderNav__Button {
       min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {

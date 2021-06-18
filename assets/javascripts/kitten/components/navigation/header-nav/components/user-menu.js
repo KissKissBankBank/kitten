@@ -55,7 +55,7 @@ export const UserMenu = ({
     'k-HeaderNav__UserMenuButton',
     {
       'k-HeaderNav__UserMenuButton--hasArrow': hasArrow,
-      'k-HeaderNav__UserMenuButton--nopadding': !padding,
+      'k-HeaderNav__UserMenuButton--noPadding': !padding,
     },
   )
 
