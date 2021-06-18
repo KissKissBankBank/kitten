@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking Change: `Utilities`: Generalization of `!important` on all utilities.
+- Feature: `Utilities`: Add `k-u-flex-gap` and `k-u-flex-wrap` utility classes.
 
 ## [3.20.0] - 2021-06-17
 
