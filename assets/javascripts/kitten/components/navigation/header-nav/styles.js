@@ -497,9 +497,9 @@ export const StyledHeader = styled.header`
       }
 
       @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-        position: fixed;
+        position: absolute;
         min-width: 0;
-        width: 100% !important;
+        width: 100vw !important;
         left: 0 !important;
         right: 0 !important;
       }
