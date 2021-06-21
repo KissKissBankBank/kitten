@@ -43,9 +43,7 @@ export const StyledHeader = styled.header`
   .k-HeaderNav {
     display: flex;
     align-items: center;
-    overflow: hidden;
     width: 100%;
-    overflow: hidden;
     box-sizing: border-box;
     background: ${COLORS.background1};
 
@@ -78,10 +76,6 @@ export const StyledHeader = styled.header`
   .k-HeaderNav--inactiveBackground .k-HeaderNav,
   .k-HeaderNav--inactiveBackground .quickAccessLink {
     background-color: ${COLORS.background3};
-  }
-
-  .k-Dropdown {
-    align-self: stretch;
   }
 
   .k-HeaderNav__BurgerMenu__button {
@@ -243,6 +237,7 @@ export const StyledHeader = styled.header`
     }
   }
 
+  .k-HeaderNav__UserMenuButton[aria-expanded='true'],
   .k-Dropdown--isExpanded .k-HeaderNav__UserMenuButton {
     &,
     &:hover {
@@ -273,7 +268,7 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__UserMenuButton--nopadding {
-    padding: 0;
+    padding: 0 !important;
   }
 
   .k-HeaderNav-nav--center {
@@ -402,6 +397,7 @@ export const StyledHeader = styled.header`
   /* DROPDOWN */
   .k-Dropdown {
     display: flex;
+    align-self: stretch;
   }
 
   .k-Dropdown__content {
@@ -432,5 +428,51 @@ export const StyledHeader = styled.header`
     opacity: 1;
     overflow-x: hidden;
     overflow-y: scroll;
+  }
+
+  /* DROPDOWN */
+  .k-HeaderNavDropdown {
+    position: relative;
+    align-self: stretch;
+
+    .k-HeaderNavDropdown__menu {
+      position: absolute;
+      top: 100%;
+      z-index: 20;
+      min-width: max(${pxToRem(200)}, 100%);
+      /* Max-height is needed to allow scroll on menu.
+         The 100% is equal to the button height. */
+      max-height: calc(100vh - 100%);
+      box-shadow: 0 ${pxToRem(3)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
+      transition: margin 0.2s, visibility 0.2s, opacity 0.2s;
+
+      margin-top: ${pxToRem(-10)};
+      visibility: hidden;
+      opacity: 0;
+
+      &.k-HeaderNavDropdown__menu--is-left {
+        left: 0;
+      }
+
+      &.k-HeaderNavDropdown__menu--is-right {
+        right: 0;
+      }
+
+      @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+        position: fixed;
+        min-width: 0;
+        width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+      }
+    }
+
+    &.k-HeaderNavDropdown--isExpanded .k-HeaderNavDropdown__menu {
+      margin-top: 0;
+      visibility: visible;
+      opacity: 1;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
   }
 `

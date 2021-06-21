@@ -11,6 +11,7 @@ export const DropdownButton = forwardRef(
         type="button"
         className={classNames(
           'k-Dropdown__button',
+          'k-HeaderNavDropdown__button',
           'k-u-reset-button',
           className,
         )}
