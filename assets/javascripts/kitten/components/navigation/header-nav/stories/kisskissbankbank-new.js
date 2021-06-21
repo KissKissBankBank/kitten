@@ -91,7 +91,6 @@ export const KissKissBankBankHeaderNavStoryNew = ({
   borderStyle,
 }) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
-  const [userMenuWidth, setUserMenuWidth] = useState(null)
   const windowWidth = useWindowWidth()
 
   useDeepCompareEffect(() => {
@@ -100,14 +99,6 @@ export const KissKissBankBankHeaderNavStoryNew = ({
         getComputedWidthElement(`${HEADER_NAV_ID}PlateformMenu`) +
         getComputedWidthElement(`${HEADER_NAV_ID}Logo`),
     )
-
-    if (isLogged) {
-      setTimeout(() => {
-        setUserMenuWidth(
-          getComputedWidthElement(`${HEADER_NAV_ID}UserMenu`) || '0',
-        )
-      }, 100)
-    }
   }, [isLogged, windowWidth])
 
   return (
@@ -123,9 +114,9 @@ export const KissKissBankBankHeaderNavStoryNew = ({
       size={size}
       borderStyle={borderStyle}
     >
-      <HeaderNav.BurgerMenu>
-        <InnerBurgerMenu dropdownContentWidth={burgerMenuWidth} />
-      </HeaderNav.BurgerMenu>
+      <HeaderNav.BurgerMenuNext dropdownContentWidth={burgerMenuWidth}>
+        <InnerBurgerMenu />
+      </HeaderNav.BurgerMenuNext>
 
       <HeaderNav.Logo href="#">
         <HeaderNav.Hidden min="xs">
@@ -155,8 +146,8 @@ export const KissKissBankBankHeaderNavStoryNew = ({
         />
 
         <HeaderNav.Logged>
-          <HeaderNav.UserMenu dropdownContentWidth={userMenuWidth}>
-            <HeaderNav.UserMenu.Button
+          <HeaderNav.UserMenuNext dropdownAnchorSide="right">
+            <HeaderNav.UserMenuNext.Button
               hasArrow
               backgroundColor={COLORS.background1}
               backgroundColorHover={COLORS.line1}
@@ -179,12 +170,12 @@ export const KissKissBankBankHeaderNavStoryNew = ({
                   </Text>
                 </AvatarWithTextAndBadge.Text>
               </AvatarWithTextAndBadge>
-            </HeaderNav.UserMenu.Button>
+            </HeaderNav.UserMenuNext.Button>
 
-            <HeaderNav.UserMenu.Navigation>
+            <HeaderNav.UserMenuNext.Navigation>
               <InnerUserMenu />
-            </HeaderNav.UserMenu.Navigation>
-          </HeaderNav.UserMenu>
+            </HeaderNav.UserMenuNext.Navigation>
+          </HeaderNav.UserMenuNext>
         </HeaderNav.Logged>
 
         <HeaderNav.LoggedOut>

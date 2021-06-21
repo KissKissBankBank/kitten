@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `HeaderMenu`: Add `BurgerMenuNext` and `UserMenuNext` subcomponents.
 - Fix: `Modal/Next`: Fix modal content height for decrepit versions of Safari.
 
 ## [3.20.0] - 2021-06-17
