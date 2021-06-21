@@ -23,6 +23,7 @@
   "author": "KissKissBankBank & Co",
   "homepage": "https://github.com/KissKissBankBank/kitten#readme",
   "dependencies": {
+    "@storybook/addon-controls": "^6.2.9",
     "bowser": "^2.11.0",
     "classnames": "^2.2.6",
     "credit-card-type": "^9.1.0",
@@ -61,6 +62,7 @@
     "@storybook/addon-a11y": "6.2.8",
     "@storybook/addon-actions": "6.2.8",
     "@storybook/addon-docs": "6.2.8",
+    "@storybook/addon-essentials": "6.2.9",
     "@storybook/addon-knobs": "6.2.8",
     "@storybook/addon-links": "6.2.8",
     "@storybook/addon-measure": "1.2.4",
