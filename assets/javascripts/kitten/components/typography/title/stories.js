@@ -34,9 +34,10 @@ const argTypes = {
     description: 'Use `font-style: italic`.',
     control: { type: 'boolean'},
   },
-};
+}
 
 const args = {
+  tag: 'h1',
   modifier: 'primary',
   noMargin: false,
   italic: false,
@@ -48,7 +49,7 @@ export const Default = ({
   noMargin,
   italic,
   cssColor,
-  ...rest
+  ...props
 }) => (
   <Container>
    <Marger top="4">
@@ -56,8 +57,8 @@ export const Default = ({
          modifier={modifier}
          italic={italic}
          noMargin={noMargin}
-         cssColor={COLORS.error}
-         {...rest}
+         cssColor={COLORS.font1}
+         {...props}
        >
         Lorem ipsum dolor sit amet
        </Title>
@@ -66,14 +67,13 @@ export const Default = ({
 );
 
 Default.args = args;
-
 Default.parameters = {
   docs: {
     description: {
       story: "By default, the content is centered.",
     },
   },
-};
+}
 Default.argTypes = argTypes;
 
 export const WithoutMargin = Default.bind({});
