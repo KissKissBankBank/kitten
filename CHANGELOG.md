@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `HeaderMenu`: Add `BurgerMenuNext` and `UserMenuNext` subcomponents.
 - Fix: `Modal/Next`: Fix modal content height for decrepit versions of Safari.
+- Fix: `VerticalCard`: Fix `description` PropType to node, allowing HTML parsing.
 - Fix: `CrowdfundingCard`: Fix `progress` PropTypes, allowing boolean values.
 - Fix: `Carousel`: Fix `Button` tiny size prop.
 
