@@ -4,12 +4,35 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `Text`: Fix `cssColor` bug and remove Styled Component dependency.
-- Feature: `Text`: Add `light` as default for `weight` prop.
-- Fix: `TextInputWithUnit`: Fix disabled state and `unitWord` styles.
-- Feature: `HeaderMenu`: Add `BurgerMenuNext` and `UserMenuNext` subcomponents.
-- Feature: Add `error4` and `error5` to colors config.
-- Feature: `Button`: Add `iron` modifier.
+- Feature: `HeaderMenu`: Improve accessibility.
+- Feature: `HeaderNav.UserMenuNext`: Add `mobilePadding` prop.
+
+## [3.21.0] - 2021-06-21
+
+Feature:
+
+- `HeaderNav`: Add `BurgerMenuNext` and `UserMenuNext` subcomponents.
+
+Fixes:
+
+- `Modal/Next`: Fix modal content height for decrepit versions of Safari.
+- `VerticalCard`: Fix `description` PropType to node, allowing HTML parsing.
+- `CrowdfundingCard`: Fix `progress` PropTypes, allowing boolean values.
+- `Carousel`: Fix `Button` tiny size prop.
+
+## [3.20.0] - 2021-06-17
+
+Features:
+
+- Add `error4` and `error5` to colors config.
+- `Text`: Add `light` as default for `weight` prop.
+- `Button`: Add `iron` modifier.
+- `ToggleTip`: Add `targetElement` prop.
+
+Fixes:
+
+- `Text`: Fix `cssColor` bug and remove Styled Component dependency.
+- `TextInputWithUnit`: Fix disabled state and `unitWord` styles.
 
 ## [3.19.0] - 2021-06-11
 

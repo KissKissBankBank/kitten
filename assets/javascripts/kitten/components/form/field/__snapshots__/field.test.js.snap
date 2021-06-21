@@ -80,7 +80,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH jmwuBi k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -179,7 +179,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH jmwuBi k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -264,7 +264,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH jmwuBi k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -360,7 +360,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH jmwuBi k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -455,7 +455,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH jmwuBi k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -583,7 +583,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-bwzfXH hHOegD k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH jmwuBi k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}

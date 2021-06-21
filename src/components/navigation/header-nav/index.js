@@ -27,9 +27,13 @@ var _logo = require("./components/logo");
 
 var _burgerMenu = require("./components/burger-menu");
 
+var _burgerMenuNext = require("./components/burger-menu-next");
+
 var _nav = require("./components/nav");
 
 var _userMenu = require("./components/user-menu");
+
+var _userMenuNext = require("./components/user-menu-next");
 
 var _context = require("./components/context");
 
@@ -199,8 +203,10 @@ var HeaderNav = function HeaderNav(_ref) {
 HeaderNav.Button = _button.Button;
 HeaderNav.Logo = _logo.Logo;
 HeaderNav.BurgerMenu = _burgerMenu.BurgerMenu;
+HeaderNav.BurgerMenuNext = _burgerMenuNext.BurgerMenuNext;
 HeaderNav.Nav = _nav.Nav;
 HeaderNav.UserMenu = _userMenu.UserMenu;
+HeaderNav.UserMenuNext = _userMenuNext.UserMenuNext;
 HeaderNav.Right = _right.Right;
 HeaderNav.Centered = _centered.Centered;
 HeaderNav.LoggedOut = _loggedOut.LoggedOut;

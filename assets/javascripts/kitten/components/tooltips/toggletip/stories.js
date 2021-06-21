@@ -25,6 +25,26 @@ export const Default = () => {
   )
 }
 
+export const CustomTargetElement = () => {
+  return (
+    <div className="k-u-margin-vertical-octuple k-u-margin-horizontal-quadruple">
+      <Toggletip
+        actionLabel="Sample label"
+        id="Toggletip-demo"
+        modifier={select(
+          'Modifier',
+          ['info', 'warning', 'error', 'success', 'disabled'],
+          'info',
+        )}
+        children={text('Text', 'The text of my Toggletip.')}
+        targetElement={
+          <p className="k-u-weight-bold">This is the target of my tooltip</p>
+        }
+      />
+    </div>
+  )
+}
+
 export const MultipleToggletips = () => (
   <div className="k-u-margin-vertical-quadruple k-u-margin-horizontal-quadruple">
     <div className="k-u-margin-bottom-quadruple">
