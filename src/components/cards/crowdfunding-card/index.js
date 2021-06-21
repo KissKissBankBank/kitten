@@ -70,7 +70,8 @@ var CrowdfundingCard = function CrowdfundingCard(_ref) {
       widgetState = _ref.widgetState,
       buttonText = _ref.buttonText,
       forceVersion = _ref.forceVersion,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "imageContainerRatio", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "videoProps", "videoSources", "widgetState", "buttonText", "forceVersion"]);
+      progressLabel = _ref.progressLabel,
+      others = (0, _objectWithoutProperties2.default)(_ref, ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "imageContainerRatio", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "videoProps", "videoSources", "widgetState", "buttonText", "forceVersion", "progressLabel"]);
 
   var removeCurrentFocus = function removeCurrentFocus() {
     document.activeElement.blur();
@@ -139,7 +140,8 @@ var CrowdfundingCard = function CrowdfundingCard(_ref) {
   }), /*#__PURE__*/_react.default.createElement(_progress.default, {
     progress: progress,
     progressColor: progressColor,
-    loading: loading
+    loading: loading,
+    progressLabel: progressLabel
   }), buttonText && /*#__PURE__*/_react.default.createElement(_button.default, {
     text: buttonText,
     loading: loading
@@ -159,7 +161,9 @@ CrowdfundingCard.propTypes = {
   stretch: _propTypes.default.bool,
   imageContainerRatio: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
   buttonText: _propTypes.default.string,
-  forceVersion: _propTypes.default.oneOf(['mobile', 'tablet', 'desktop'])
+  forceVersion: _propTypes.default.oneOf(['mobile', 'tablet', 'desktop']),
+  progressLabel: _propTypes.default.string,
+  progress: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number])
 };
 CrowdfundingCard.defaultProps = {
   href: null,
@@ -167,5 +171,6 @@ CrowdfundingCard.defaultProps = {
   stretch: false,
   imageContainerRatio: 10 / 16,
   buttonText: null,
-  forceVersion: null
+  forceVersion: null,
+  progress: null
 };

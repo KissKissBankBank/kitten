@@ -4,10 +4,326 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `TagButton` style.
-- Feature: Add all sizes to `DropdownSelect`.
-- Fix: Fix styles on `DropdownSelect`.
-- Feature: - Add `variant` prop to `LocationInput`, defaults to `andromeda`.
+- Fix: `Modal/Next`: Fix modal content height for decrepit versions of Safari.
+
+## [3.20.0] - 2021-06-17
+
+Features:
+
+- Add `error4` and `error5` to colors config.
+- `Text`: Add `light` as default for `weight` prop.
+- `Button`: Add `iron` modifier.
+- `ToggleTip`: Add `targetElement` prop.
+
+Fixes:
+
+- `Text`: Fix `cssColor` bug and remove Styled Component dependency.
+- `TextInputWithUnit`: Fix disabled state and `unitWord` styles.
+
+## [3.19.0] - 2021-06-11
+
+Features:
+
+- `ImageCropper`: Add `onUpload` prop, called when uploading a new file.
+
+Fixes:
+
+- `DashboardLayout`: Remove horizontal scroll between 1440px and 1550px.
+- `ImageCropper`: Fix behaviour of component, breaking when uploading a file.
+
+## [3.18.1] - 2021-06-10
+
+Fix:
+
+- Add `TextInputWithIcon` to ESM exports.
+
+## [3.18.0] - 2021-06-10
+
+Features:
+
+- `TextCopy`: Add `variant` prop, defaults to 'andromeda'.
+- `TextInputWithIcon`: Add `iconPosition` prop, defaults to `left`.
+- `ImageCropper`: Add `buttonProps` prop to be passed on to `BasicUploader`.
+- `TextInputWithUnit`: Add `wrapperProps` and update styles.
+- `RocketIllustration`: Add new component.
+- `ContributionCard`: Add new component.
+
+Fixes:
+
+- `CrowdfundingCard`: Fix progress when value equals 0.
+- Add Color SVG utility class on colored icons so they are not re-colored:
+  - `CheckedCircleIcon`
+  - `ClockCircleIcon`
+  - `ClockIcon`
+  - `CrossCircleIcon`
+  - `FlashCircleIcon`
+  - `RocketCircleIcon`
+  - `WarningCircleIcon`
+- `ImageCropper`: Return cropped image source value.
+
+## [3.17.3] - 2021-06-07
+
+Fix:
+
+- `TextInputWithUnit`: Fix `variant` propagation.
+
+## [3.17.2] - 2021-06-03
+
+Fix:
+
+- `ImageCropper`: Use default Label size.
+
+## [3.17.1] - 2021-06-03
+
+Fixes:
+
+- `DropdownSelectWithInput`: Fix selected item margin when dropdownDisabled.
+- `Label`: Update mobile styles.
+- `DashboardMenu`: Fix expandable list padding.
+
+## [3.17.0] - 2021-05-31
+
+Feature:
+
+- `DashboardLayout`: Replace `Alert` subcomponent with `Alerts` wrapper.
+
+Fix:
+
+- `ButtonIcon`: Fix `tag` transmission.
+- `TeamCard`: Fix buttons sizes.
+
+## [3.16.0] - 2021-05-28
+
+Features:
+
+- `ButtonGroup` : Add `orion` variant.
+- `RangeSlider`: Add `disabled` prop, defaults to false.
+
+Fixes:
+
+- `Button`: Color icons will not be styled by Button SVG styles.
+- `CrowdfundingCard`: Remove console warning when progress is not displayed.
+- `RadioButton`: Update `disabled` status style.
+- Fix badly formatted SASS colors.
+
+## [3.15.0] - 2021-05-28
+
+Features:
+
+- Add `grey1` color to colors config & refactor.
+- Add the following icon components:
+  - `LockOutlineIcon`
+  - `RefundIcon`
+  - `ShieldCheckIcon`
+- `DashboardLayout`: Add `Alert` subcomponent.
+- `DropdownSelectWithInput`: Add `size` prop, defaults to `normal`, inherited by `DropdownPhoneSelect`.
+- `CrowdfundingCard`: Add `progressLabel` prop.
+
+Fixes:
+
+- `TextInput`: Fix padding on `orion` variant.
+- `Button`: Fix `boron` variant border color.
+- `DashboardMenu`: Fix list items spacing.
+- `Separator`: Reduce specificity of the styles.
+- `HeaderNav`: Fix accessibility error.
+
+## [3.14.0] - 2021-05-25
+
+Features:
+
+- Add `orange2` and `orange3` to colors config.
+- `Button`: Add `neon` modifier.
+
+Fix:
+
+- `VerticalProgress`: Fix `z-index` value.
+
+## [3.13.1] - 2021-05-20
+
+Fixes:
+
+- `VerticalProgress` : Export component.
+- `DashboardLayout`: Specify size for `DashboardLayout.Flow` content column.
+
+## [3.13.0] - 2021-05-20
+
+Features:
+
+- `VerticalProgress`: New component.
+- `LinkBox`:
+  - Add `orion` variant.
+  - Add `backgroundColor` and `textColor` prop to `Background` and `Text` component.
+
+Fixes:
+
+- `Modal/Next`: Fix `Modal.Button` style when alone inside a `fullSize` Action.
+- `Dropdown`: Add default value for `onBlur` prop (`() => {}`).
+
+## [3.12.0] - 2021-05-18
+
+Features:
+
+- `HeaderNav`: Add styles to bottom border, defaults to `'shadow'`.
+- `Modal/Next`: Add `fullSizeOnMobile` prop, defaults to false.
+- `Modal/Next`: Add the following props to `Modal.Actions`:
+  - `sticky`
+  - `stickyOnMobile`
+  - `fullSize`
+  - `fullSizeOnMobile`
+- `Modal/Next`: Deprecate `withoutMargin` prop on `Modal.Paragraph` in favor of `noMargin`.
+- Add `boron` modifier to Button component.
+- Add new color: `font3`.
+
+## [3.11.0] - 2021-05-14
+
+Feature:
+
+- `HeaderMenu`: Add `tag` (and deprecated `as`) props to `HeaderMenu.Item`.
+
+Fix:
+
+- `HeaderMenu`: Fix focus styles.
+
+## [3.10.0] - 2021-05-11
+
+Features:
+
+- `HeaderNav`: Add `size` prop, accepts `regular` and `small`.
+- `HeaderNav.UserMenu.Button`: Add `hasArrow` boolean prop.
+- `HeaderNav.UserMenu.Button`: Add the following color props:
+  - `backgroundColor`
+  - `backgroundColorHover`
+  - `backgroundColorActive`
+  - `color`
+  - `colorHover`
+  - `colorActive`
+- `DashboardLayout`: Add `DashboardLayout.SiteHeader` component.
+- Add `HourglassIcon` component.
+
+Fixes:
+
+- `TextInput`: Set the placeholder color to disabled.
+- `DropdownSelectWithInput`: Fix input padding.
+
+## [3.9.0] - 2021-05-06
+
+Feature:
+
+- `Modal/Next`: Add `tag` prop on `Modal.Paragraph`.
+
+Fixes:
+
+- `k-BulletList`: Fix styles.
+- `Modal/Next`: Remove `className` console error.
+- `Modal/Next`: Fix `customContentCols` class condition.
+- `DashboardLayout`: Fix `DashboardLayout` background color.
+
+## [3.8.0] - 2021-05-04
+
+Feature:
+
+- `Modal/Next`: Add `headerZIndex` prop to apply a `zIndex` to the `header`.
+
+Fix:
+
+- `Modal/Next`: Fix negative margin calculation for `Modal.Block` at `XL`.
+
+## [3.7.0] - 2021-04-30
+
+Feature:
+
+- `Modal/Next`: Add `contentCols` prop, to specify content col number at breakpoints `S` and above. Accepts `default`, `s`, `m`, `l`, `xl` keys, with number values.
+
+Fixes:
+
+- `DashboardLayout`: use `--DashboardLayout-main-margin` for main margin on Desktop.
+- `HeaderNav`: Fix burger menu button dimensions and improve affordance.
+- Replace occurences of `CONTAINER_PADDING_MOBILE` with `CONTAINER_PADDING_THIN`.
+
+## [3.6.0] - 2021-04-27
+
+Features:
+
+- `Paragraph`: unify modifier styles in one rule and expose modifier-specific class.
+- `Title`: unify modifier styles in one rule using common title modifiers and expose modifier-specific class.
+- `TitleWithStroke`: set color with CSS Custom Props and expose modifier-specific class.
+
+Fixes:
+
+- `DashboardLayout`: Fix columns widths.
+- `HeaderNav`: Fix default dropdown button styles.
+
+## [3.5.0] - 2021-04-23
+
+Features:
+
+- `Modal/Next`: Add `Modal.Block` subcomponent.
+- `Modal/Next`: Add `variant` prop, defaults to `andromeda`.
+- `Modal/Next`: Add `headerActions` and `headerTitle` props.
+- `Modal/Next`: Add `giant` size value.
+
+## [3.4.0] - 2021-04-20
+
+Feature :
+
+- `DropdownSelect`: Add `onBlur` and `value` (controlled select) props.
+
+Fix:
+
+- `Button`: Add invisible padding for better multiline spacing.
+- `CheckableButton`: Fix styles for `checkPosition=left`.
+- `CheckableButton`: Add specific styles to `variant=orion`.
+- `Field.Input`: Recover missing style.
+
+## [3.3.0] - 2021-04-15
+
+Features:
+
+- `CheckableButton`: Add `checkPosition` prop, defaults to `bottom`.
+- `DashboardLayout`: use events to hide Flow.Aside mobile modal button.
+- `DashboardLayout`: add the following events when menu is open/closed:
+  - `DASHBOARD_HIDE_CONTENT_EVENT`
+  - `DASHBOARD_SHOW_CONTENT_EVENT`
+
+Fixes:
+
+- `DropdownSelect`: fix arrow position.
+- `ToggleTip`: fix props propagation in bubble.
+- `ToggleTip`: fix first coordinates update.
+
+## [3.2.1] - 2021-04-12
+
+Fixes:
+
+- Fix style bugs on `DropdownSelect`.
+- On `DropdownSelect combobox`, display full list of options on menu open.
+- Propagate `className` on `DropdownSelect` and `DropdownSelect combobox`.
+- Recover missing props on `Field.Input`.
+
+## [3.2.0] - 2021-04-12
+
+Features:
+
+- Button on `DashboardLayout.Flow.Nav` is full size when alone.
+- Add `noMargin` prop to `FieldInput` component.
+
+Fixes:
+
+- Enable `size` prop on `Button` with Orion variant.
+- Set default value for `Dropdown` options on level 2.
+
+## [3.1.0] - 2021-04-08
+
+Features:
+
+- Add all sizes to `DropdownSelect`.
+- Add `variant` prop to `LocationInput`, defaults to `andromeda`.
+
+Fixes:
+
+- Remove warning about `fill-rule` on `PepoleIcon`.
+- Fix `TagButton` style.
+- Fix styles on `DropdownSelect`.
 
 ## [3.0.0] - 2021-03-26
 
@@ -84,7 +400,7 @@ Breaking changes:
 - Remove the following deprecated HOCs:
   - `card`
   - `withTooltip`
-- Remove  default export for the following components:
+- Remove default export for the following components:
   - `Dropdown`
   - `DropdownButton`
   - `LinkBox`
@@ -1146,7 +1462,7 @@ Features:
   - `ClockIcon`
   - `CrossCircleIcon`
   - `FlashCircleIcon`
-  - `StyledRocketCircle`
+  - `RocketCircleIcon`
   - `WarningCircleIcon`
 - Add `color` props to:
   - `Cart`

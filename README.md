@@ -33,20 +33,15 @@ $ npm install @kisskissbankbank/kitten
 
 ## Usage
 
-### CSS components
+### CSS utilities
 
-Import `kitten` and the components your want to use in your application:
+CSS Utilities are classe that can be used for very basic styling. These utility classes *are used by React Components*. Kitten will not work properly without these utility classes.
 
 ```scss
-@import 'kitten';
-
-@include k-Button;
+@import '@kisskissbankbank/kitten/src/stylesheets/utilities';
 ```
 
-You can define your own font families, typography settings and colors by overriding the
-the `$k-fonts`, `$k-typography` and `$k-colors` options. Check out the
-[default config](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/_default-config.scss)
-for an example.
+[Look at the doc to know if/when to use it.](https://kitten.vercel.app/?path=/story/documentation-usage-using-utilities--page)
 
 ### React components
 
@@ -56,7 +51,7 @@ You can render React components directly in your js bundle:
 import { SimpleCard } from '@kisskissbankbank/kitten'
 
 ReactDOM.render(
-  <SimpleCard ...props/>,
+  <SimpleCard {...props} />,
   document.getElementById('main')
 )
 ```
@@ -90,7 +85,7 @@ To launch storybook locally:
 bin/start
 ```
 
-The page http://localhost:6006 will be displayed automatically.
+The page http://localhost:6006 will be opened automatically.
 
 ### Component testing
 
@@ -173,7 +168,3 @@ Once the pull request is accepted:
 ```sh
 bin/publish with-storybook
 ```
-
-- Update
-  [our private project kanban](https://github.com/orgs/KissKissBankBank/projects/5):
-  move cards that are released from `done` column to `released` column.

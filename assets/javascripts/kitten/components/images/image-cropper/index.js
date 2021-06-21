@@ -20,12 +20,14 @@ export const ImageCropper = ({
   maxSize,
   acceptedFiles,
   onChange,
+  onUpload,
   buttonLabel,
   uploaderErrorLabel,
   description,
   cropperInfo,
   sliderTitle,
   className,
+  buttonProps,
 }) => {
   const cropperContainerRef = useRef(null)
   const cropperRef = useRef(null)
@@ -42,21 +44,27 @@ export const ImageCropper = ({
   const [uploadedFile, setUploadedFile] = useState(null)
   const [resultData, setResultData] = useState(null)
 
-  useEffect(() => {
-    if (cropperInstance && cropperInstance.imageData.naturalWidth) {
+  const handleCalculateSliderValues = () => {
+    if (cropperInstance && cropperInstance?.imageData?.naturalWidth) {
       const imageData = cropperInstance.imageData
       const naturalWidth = imageData.naturalWidth
       const width = imageData.width
       const ratio = (width / naturalWidth) * 100
       const min = sliderMin + ratio
       const max = sliderMax + ratio
+
       setSliderMin(min)
       setSliderMax(max)
       setInitialSliderValue(min)
     }
+  }
+
+  useEffect(() => {
+    handleCalculateSliderValues()
   }, [getOr(null)('imageData.naturalWidth')(cropperInstance)])
+
   const setCropperSize = () => {
-    if (cropperContainerRef) {
+    if (cropperContainerRef?.current) {
       const width = domElementHelper.getComputedWidth(
         cropperContainerRef.current,
       )
@@ -71,34 +79,38 @@ export const ImageCropper = ({
     window.addEventListener('resize', setCropperSize)
     return () => window.removeEventListener('resize', setCropperSize)
   }, [])
+
   useEffect(() => {
     setCropperSize()
   }, [imageSrcState])
+
   const styles = {
     width: cropperWidth,
     height: cropperHeight,
   }
+
   useEffect(() => {
     if (fileNameState && resultData) {
       onChange({
-        value: resultData.target.src,
-        base: getOr(resultData.srcElement.src)('originalTarget.src')(
+        value: resultData?.target?.src || '',
+        base: getOr(resultData?.srcElement?.src)('originalTarget.src')(
           resultData,
         ),
         name: fileNameState,
         file: uploadedFile,
         cropperData: resultData.detail,
+        croppedImageSrc: cropperInstance
+          ? cropperInstance?.getCroppedCanvas()?.toDataURL()
+          : '',
       })
     }
   }, [resultData, fileNameState, uploadedFile])
+
   const dragMode = disabled || !isCropEnabled ? 'none' : 'move'
+
   return (
     <StyledCropper className={classNames('k-UploadAndCropper', className)}>
-      <Label
-        size="tiny"
-        htmlFor={name}
-        className="k-u-margin-bottom-singleHalf"
-      >
+      <Label htmlFor={name} className="k-u-margin-bottom-singleHalf">
         {label}
       </Label>
 
@@ -123,6 +135,8 @@ export const ImageCropper = ({
               reader.onload = event => {
                 setImageSrc(event.target.result)
                 setFileName(file.name)
+                handleCalculateSliderValues()
+                cropperInstance?.reset()
               }
               reader.readAsDataURL(file)
             }
@@ -130,8 +144,13 @@ export const ImageCropper = ({
             setStatus('error')
             setErrorText(uploaderErrorLabel)
           }
+
+          if (onUpload) {
+            onUpload(e)
+          }
         }}
         onCancel={() => {
+          cropperInstance?.reset()
           setImageSrc(imageSrc)
           setFileName(fileName)
           setErrorText('')
@@ -143,6 +162,7 @@ export const ImageCropper = ({
             file: null,
           })
         }}
+        buttonProps={buttonProps}
       />
       <Paragraph modifier="tertiary" noMargin className="k-u-margin-top-single">
         {description}
@@ -157,31 +177,29 @@ export const ImageCropper = ({
               ref={cropperContainerRef}
               className="k-Cropper__wrapper__cropper"
             >
-              {cropperWidth && cropperHeight && (
-                <Cropper
-                  onInitialized={instance => {
-                    setCropperInstance(instance)
-                  }}
-                  ref={cropperRef}
-                  className="k-Cropper"
-                  src={imageSrcState}
-                  style={styles}
-                  initialAspectRatio={aspectRatio}
-                  viewMode={3}
-                  guides={false}
-                  modal={false}
-                  autoCropArea={1}
-                  cropBoxMovable={false}
-                  cropBoxResizable={false}
-                  toggleDragModeOnDblclick={false}
-                  zoomOnTouch={false}
-                  zoomOnWheel={false}
-                  dragMode={dragMode}
-                  crop={result => {
-                    setResultData(result)
-                  }}
-                />
-              )}
+              <Cropper
+                onInitialized={instance => {
+                  setCropperInstance(instance)
+                }}
+                ref={cropperRef}
+                className="k-Cropper"
+                src={imageSrcState}
+                style={styles}
+                initialAspectRatio={aspectRatio}
+                viewMode={3}
+                guides={false}
+                modal={false}
+                autoCropArea={1}
+                cropBoxMovable={false}
+                cropBoxResizable={false}
+                toggleDragModeOnDblclick={false}
+                zoomOnTouch={false}
+                zoomOnWheel={false}
+                dragMode={dragMode}
+                crop={result => {
+                  setResultData(result)
+                }}
+              />
             </div>
 
             {isCropEnabled && !disabled && (
@@ -226,7 +244,7 @@ ImageCropper.defaultProps = {
   name: 'picture',
   imageSrc: null,
   fileName: null,
-  uploaderErrorLabel: 'You have an error on upload.',
+  uploaderErrorLabel: 'There was an error on upload.',
   aspectRatio: 16 / 9,
   maxSize: 5 * 1024 * 1024, // 5 Mo.
   acceptedFiles: '.jpg,.jpeg,.gif,.png',
@@ -238,4 +256,6 @@ ImageCropper.defaultProps = {
   disabled: false,
   isCropEnabled: true,
   onChange: _fileData => {},
+  onUpload: () => {},
+  buttonProps: {},
 }

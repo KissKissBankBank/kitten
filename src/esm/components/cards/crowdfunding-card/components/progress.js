@@ -32,8 +32,9 @@ var ProgressBar = /*#__PURE__*/function (_PureComponent) {
       var _this$props = this.props,
           progress = _this$props.progress,
           progressColor = _this$props.progressColor,
-          loading = _this$props.loading;
-      if (progress === false) return null;
+          loading = _this$props.loading,
+          progressLabel = _this$props.progressLabel;
+      if (progress === false || progress === null) return null;
       var progressValue = loading ? 65 : parseInt(progress, 10);
       return /*#__PURE__*/React.createElement("div", {
         className: "k-CrowdfundingCard__progressBar"
@@ -47,7 +48,8 @@ var ProgressBar = /*#__PURE__*/function (_PureComponent) {
           style: {
             height: '4px'
           }
-        }
+        },
+        "aria-label": progressLabel
       }), /*#__PURE__*/React.createElement(Text, {
         weight: "regular",
         size: "micro",
@@ -65,7 +67,8 @@ var ProgressBar = /*#__PURE__*/function (_PureComponent) {
 ProgressBar.propTypes = {
   progress: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
   progressColor: PropTypes.string,
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
+  progressLabel: PropTypes.string.isRequired
 };
 ProgressBar.defaultProps = {
   progress: 0,

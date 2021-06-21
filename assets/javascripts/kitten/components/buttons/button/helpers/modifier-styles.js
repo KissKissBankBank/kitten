@@ -66,6 +66,42 @@ export const modifierStyles = modifier => {
       activeColor = COLORS.error
       break
 
+    case 'boron':
+      borderColor = COLORS.grey1
+      backgroundColor = COLORS.font1
+      color = COLORS.background1
+      hoverBorderColor = 'currentColor'
+      hoverBgColor = COLORS.line3
+      hoverColor = COLORS.background1
+      activeBorderColor = 'currentColor'
+      activeBgColor = COLORS.line3
+      activeColor = COLORS.font2
+      break
+
+    case 'neon':
+      borderColor = COLORS.orange
+      backgroundColor = COLORS.orange
+      color = COLORS.background1
+      hoverBorderColor = COLORS.orange2
+      hoverBgColor = COLORS.orange2
+      hoverColor = COLORS.background1
+      activeBorderColor = COLORS.orange3
+      activeBgColor = COLORS.orange3
+      activeColor = COLORS.background1
+      break
+
+    case 'iron':
+      borderColor = COLORS.error
+      backgroundColor = COLORS.error
+      color = COLORS.background1
+      hoverBorderColor = COLORS.error4
+      hoverBgColor = COLORS.error4
+      hoverColor = COLORS.background1
+      activeBorderColor = COLORS.error5
+      activeBgColor = COLORS.error5
+      activeColor = COLORS.background1
+      break
+
     /* Social modifiers */
     case 'social_facebook':
       borderColor = '#3b5998'
@@ -133,10 +169,12 @@ export const modifierStyles = modifier => {
     background-color: ${backgroundColor};
     color: ${color};
 
-    svg,
-    path {
-      fill: currentColor;
-      transition: fill 0.2s;
+    svg:not(.k-ColorSvg) {
+      &,
+      path {
+        fill: currentColor;
+        transition: fill 0.2s;
+      }
     }
 
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;

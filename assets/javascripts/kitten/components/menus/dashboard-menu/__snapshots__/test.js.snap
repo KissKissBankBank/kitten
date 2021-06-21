@@ -15,8 +15,8 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   font-size: 0.8888888888888888rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color .2s ease,background-color .2s ease;
-  transition: color .2s ease,background-color .2s ease;
+  -webkit-transition: color 0.2s ease,background-color 0.2s ease;
+  transition: color 0.2s ease,background-color 0.2s ease;
 }
 
 .c0 .k-DashboardMenu__expandable__title:focus,
@@ -83,7 +83,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__list {
-  padding: 0 2.5rem 1.25rem 3.75rem;
+  padding: 0 0.625rem 1.25rem 3.75rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -95,6 +95,10 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 
 .c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__list .k-DashboardMenu__itemWrapper:not(:last-child) {
   margin-bottom: 0.625rem;
+}
+
+.c0 .k-DashboardMenu__list >:not(:last-child) {
+  margin-bottom: 0.125rem;
 }
 
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,
@@ -127,7 +131,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 
 .c0 .k-DashboardMenu__expandable[open] .k-DashboardMenu__expandable__title,
 .c0 .k-DashboardMenu__expandable--hasActiveInside .k-DashboardMenu__expandable__title,
-.c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item[aria-current="page"] {
+.c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item[aria-current='page'] {
   color: #fff;
   background-color: #2d2d2d;
 }
@@ -140,7 +144,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 
 .c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item:hover,
 .c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item:focus,
-.c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item[aria-current="page"] {
+.c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item[aria-current='page'] {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: #fff;
@@ -170,8 +174,8 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 
 .c0 .k-DashboardMenu__iconWrapper svg[fill],
 .c0 .k-DashboardMenu__iconWrapper svg d[fill] {
-  -webkit-transition: fill .2s ease-in-out;
-  transition: fill .2s ease-in-out;
+  -webkit-transition: fill 0.2s ease-in-out;
+  transition: fill 0.2s ease-in-out;
 }
 
 .c0 .k-DashboardMenu__expandable__title__arrow {
@@ -184,9 +188,9 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__expandable__title__arrow svg {
   display: block;
   fill: currentColor;
-  -webkit-transition: -webkit-transform .2s ease-in-out;
-  -webkit-transition: transform .2s ease-in-out;
-  transition: transform .2s ease-in-out;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .c0 [open] .k-DashboardMenu__expandable__title__arrow svg {

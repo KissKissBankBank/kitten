@@ -44,8 +44,7 @@ var keyboardNavigation = function keyboardNavigation(elements) {
   } : _ref$events,
       triggeredElement = _ref.triggeredElement;
 
-  var currentElementIndex = elements.indexOf(document.activeElement);
-  var lastElementIndex = elements.length - 1;
+  var currentElementIndex = elements.indexOf(document.activeElement); // const lastElementIndex = elements.length - 1
 
   if (currentElementIndex < 0) {
     return {

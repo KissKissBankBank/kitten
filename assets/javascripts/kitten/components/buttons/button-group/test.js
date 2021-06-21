@@ -23,4 +23,22 @@ describe('<ButtonGroup />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with variant prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ButtonGroup variant="orion">
+            <ButtonGroup.Button>Button1</ButtonGroup.Button>
+            <ButtonGroup.Button active>Button2</ButtonGroup.Button>
+            <ButtonGroup.Button>Button3</ButtonGroup.Button>
+          </ButtonGroup>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })

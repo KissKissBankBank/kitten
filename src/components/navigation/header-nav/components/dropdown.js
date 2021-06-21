@@ -9,6 +9,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Dropdown = void 0;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = _interopRequireWildcard(require("react"));
@@ -33,17 +35,21 @@ var _a11y = require("../../../../helpers/dom/a11y");
 
 var _dropdownConfig = require("../../../../constants/dropdown-config");
 
+var _arrowIcon = require("../../../../components/icons/arrow-icon");
+
 var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
   var button = _ref.button,
       buttonClassName = _ref.buttonClassName,
       buttonContentOnCollapsed = _ref.buttonContentOnCollapsed,
       buttonContentOnExpanded = _ref.buttonContentOnExpanded,
       buttonId = _ref.buttonId,
+      buttonStyles = _ref.buttonStyles,
       className = _ref.className,
       closeEvents = _ref.closeEvents,
       closeOnOuterClick = _ref.closeOnOuterClick,
       dropdownContent = _ref.dropdownContent,
       dropdownContentWidth = _ref.dropdownContentWidth,
+      hasArrow = _ref.hasArrow,
       isExpanded = _ref.isExpanded,
       keepInitialButtonAction = _ref.keepInitialButtonAction,
       onPositionUpdate = _ref.onPositionUpdate,
@@ -306,8 +312,17 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
     className: buttonClassName,
     id: buttonId,
     isExpanded: isExpandedState,
-    onClick: handleButtonClick
-  }, button) : button), !button && /*#__PURE__*/_react.default.createElement(_dropdownButton.DropdownButton, {
+    onClick: handleButtonClick,
+    style: (0, _extends2.default)({}, buttonStyles)
+  }, button, hasArrow && /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+    direction: isExpandedState ? 'top' : 'bottom',
+    className: "k-u-margin-left-single k-u-hidden@xs-down",
+    color: "currentColor"
+  })) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, button, hasArrow && /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+    direction: isExpandedState ? 'top' : 'bottom',
+    className: "k-u-margin-left-single k-u-hidden@xs-down",
+    color: "currentColor"
+  }))), !button && /*#__PURE__*/_react.default.createElement(_dropdownButton.DropdownButton, {
     ref: dropdownButtonRef,
     className: buttonClassName,
     id: buttonId,

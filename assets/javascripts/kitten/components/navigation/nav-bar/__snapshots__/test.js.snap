@@ -26,7 +26,7 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
 
 .c0 .k-NavBar__nav::before,
 .c0 .k-NavBar__nav::after {
-  content: "";
+  content: '';
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -78,8 +78,8 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
   position: relative;
   color: #00f;
   border-bottom: 0.25rem solid transparent;
-  -webkit-transition: color .2s,border-color .2s;
-  transition: color .2s,border-color .2s;
+  -webkit-transition: color 0.2s,border-color 0.2s;
+  transition: color 0.2s,border-color 0.2s;
   cursor: pointer;
 }
 
@@ -103,7 +103,7 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
 }
 
 .c0 .k-NavBar__link:focus,
-.c0 .k-NavBar__link[aria-current="page"] {
+.c0 .k-NavBar__link[aria-current='page'] {
   border-color: rgba(128,0,128,.5);
   color: #808;
   border-width: 0.25rem;
@@ -221,7 +221,7 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
 
 .c0 .k-NavBar__nav::before,
 .c0 .k-NavBar__nav::after {
-  content: "";
+  content: '';
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -273,8 +273,8 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
   position: relative;
   color: #222;
   border-bottom: 0.25rem solid transparent;
-  -webkit-transition: color .2s,border-color .2s;
-  transition: color .2s,border-color .2s;
+  -webkit-transition: color 0.2s,border-color 0.2s;
+  transition: color 0.2s,border-color 0.2s;
   cursor: pointer;
 }
 
@@ -298,7 +298,7 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
 }
 
 .c0 .k-NavBar__link:focus,
-.c0 .k-NavBar__link[aria-current="page"] {
+.c0 .k-NavBar__link[aria-current='page'] {
   border-color: #19b4fa;
   color: #19b4fa;
   border-width: 0.25rem;
@@ -416,7 +416,7 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
 
 .c0 .k-NavBar__nav::before,
 .c0 .k-NavBar__nav::after {
-  content: "";
+  content: '';
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -468,8 +468,8 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
   position: relative;
   color: #222;
   border-bottom: 0.25rem solid transparent;
-  -webkit-transition: color .2s,border-color .2s;
-  transition: color .2s,border-color .2s;
+  -webkit-transition: color 0.2s,border-color 0.2s;
+  transition: color 0.2s,border-color 0.2s;
   cursor: pointer;
 }
 
@@ -493,7 +493,7 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
 }
 
 .c0 .k-NavBar__link:focus,
-.c0 .k-NavBar__link[aria-current="page"] {
+.c0 .k-NavBar__link[aria-current='page'] {
   border-color: #19b4fa;
   color: #19b4fa;
   border-width: 0.25rem;

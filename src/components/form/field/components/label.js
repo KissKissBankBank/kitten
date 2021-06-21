@@ -27,8 +27,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _marger = require("../../../layout/marger");
-
 var _label = require("../../../form/label");
 
 var _toggletip = require("../../../tooltips/toggletip");
@@ -60,15 +58,13 @@ var FieldLabel = /*#__PURE__*/function (_Component) {
           labelProps = _this$props.labelProps,
           link = _this$props.link,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link"]);
-      return /*#__PURE__*/_react.default.createElement(_marger.Marger, (0, _extends2.default)({
-        bottom: "1"
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
+        className: "k-u-margin-bottom-single"
       }, others), /*#__PURE__*/_react.default.createElement(_line.Line, {
         style: {
           lineHeight: 1
         }
-      }, /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({}, labelProps, {
-        size: labelProps.size || 'micro'
-      }), children)), tooltip && /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_toggletip.Toggletip, (0, _extends2.default)({
+      }, /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_label.Label, labelProps, children)), tooltip && /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_toggletip.Toggletip, (0, _extends2.default)({
         id: tooltipId,
         bubbleProps: {
           zIndex: 2

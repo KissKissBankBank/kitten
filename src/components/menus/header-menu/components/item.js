@@ -15,6 +15,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
+
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _arrowIcon = require("../../../icons/arrow-icon");
@@ -29,7 +31,10 @@ var Item = function Item(_ref) {
       button = _ref.button,
       size = _ref.size,
       isSelected = _ref.isSelected,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["children", "external", "liProps", "modifier", "button", "size", "isSelected"]);
+      as = _ref.as,
+      tag = _ref.tag,
+      other = (0, _objectWithoutProperties2.default)(_ref, ["children", "external", "liProps", "modifier", "button", "size", "isSelected", "as", "tag"]);
+  var Component = as || tag;
   return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
     role: "menuitem"
   }, liProps, {
@@ -39,12 +44,13 @@ var Item = function Item(_ref) {
       'k-HeaderMenu__item--hasButton': button,
       'k-HeaderMenu__item--light': modifier === 'light'
     })
-  }), button ? /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, other, {
-    className: (0, _classnames.default)('k-HeaderMenu__item__button', other.className),
-    as: "a",
+  }), button ? /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
     modifier: modifier,
     fluid: true
-  }), children) : /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({}, other, {
+  }, other, {
+    className: (0, _classnames.default)('k-HeaderMenu__item__button', other.className),
+    as: as
+  }), children) : /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({}, other, {
     className: (0, _classnames.default)('k-HeaderMenu__item__link', other.className),
     "aria-current": isSelected ? 'page' : null
   }), children, external && /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
@@ -60,8 +66,10 @@ Item.propTypes = {
   href: _propTypes.default.string,
   isSelected: _propTypes.default.bool,
   liProps: _propTypes.default.object,
-  modifier: _propTypes.default.oneOf([null, undefined, 'light', 'default', 'hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked']),
-  size: _propTypes.default.oneOf(['normal', 'tiny', 'big'])
+  modifier: _propTypes.default.oneOf([null, undefined, 'light', 'default', 'hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked', 'boron', 'neon', 'iron']),
+  size: _propTypes.default.oneOf(['normal', 'tiny', 'big']),
+  as: (0, _deprecated.default)(_propTypes.default.string, 'Please use `tag` instead.'),
+  tag: _propTypes.default.string
 };
 Item.defaultProps = {
   external: false,
@@ -70,5 +78,6 @@ Item.defaultProps = {
   href: null,
   isSelected: false,
   liProps: {},
-  size: 'normal'
+  size: 'normal',
+  tag: 'a'
 };

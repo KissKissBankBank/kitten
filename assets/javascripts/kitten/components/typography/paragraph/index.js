@@ -1,9 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { modifierStyles } from './helpers/modifier-styles'
+
+const modifierList = ['primary', 'secondary', 'tertiary', 'quaternary']
 
 const StyledParagraph = styled.p`
   ${TYPOGRAPHY.fontStyles.light};
@@ -21,7 +23,14 @@ const StyledParagraph = styled.p`
     font-style: italic;
   }
 
-  ${({ modifier }) => modifierStyles(modifier)}
+  ${() =>
+    modifierList.map(
+      modifier => css`
+        &.k-Paragraph--${modifier} {
+          ${() => modifierStyles(modifier)}
+        }
+      `,
+    )}
 `
 
 export const Paragraph = ({
@@ -37,11 +46,16 @@ export const Paragraph = ({
     <StyledParagraph
       as={tag}
       modifier={modifier}
-      className={classNames('k-Paragraph', className, {
-        'k-Paragraph--noMargin': noMargin,
-        'k-Paragraph--normalLineHeight': normalLineHeight,
-        'k-Paragraph--italic': italic,
-      })}
+      className={classNames(
+        'k-Paragraph',
+        className,
+        `k-Paragraph--${modifier}`,
+        {
+          'k-Paragraph--noMargin': noMargin,
+          'k-Paragraph--normalLineHeight': normalLineHeight,
+          'k-Paragraph--italic': italic,
+        },
+      )}
       {...other}
     />
   )
@@ -60,7 +74,7 @@ Paragraph.propTypes = {
   /**
     Title have seven modifiers. With different size depending on the device (`desktop`, `tablet` and `mobile`).
   */
-  modifier: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+  modifier: PropTypes.oneOf(modifierList),
   /**
     Remove default margins of `title` attribut.
   */

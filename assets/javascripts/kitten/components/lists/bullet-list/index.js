@@ -33,7 +33,7 @@ const StyledBulletList = styled.ul`
     }
   }
 
-  .k-BulletList__item--tiny .k-BulletList__item {
+  &.k-BulletList--tiny .k-BulletList__item {
     font-size: ${stepToRem(-2)};
 
     &:before {
@@ -42,20 +42,20 @@ const StyledBulletList = styled.ul`
     }
   }
 
-  .k-BulletList__item--regular .k-BulletList__item {
+  &.k-BulletList--regular .k-BulletList__item {
     font-size: ${stepToRem(-1)};
   }
 
-  .k-BulletList__item--large .k-BulletList__item {
+  &.k-BulletList--large .k-BulletList__item {
     font-size: ${stepToRem(0)};
   }
 
-  .k-BulletList__item--big .k-BulletList__item {
+  &.k-BulletList--big .k-BulletList__item {
     font-size: ${stepToRem(1)};
     margin: ${pxToRem(10)} 0;
   }
 
-  .k-BulletList__item--huge .k-BulletList__item {
+  &.k-BulletList--huge .k-BulletList__item {
     font-size: ${stepToRem(2)};
     margin: ${pxToRem(10)} 0;
   }
@@ -64,21 +64,14 @@ const StyledBulletList = styled.ul`
 export const BulletList = ({ items, size, className, ...others }) => {
   return (
     <StyledBulletList
-      className={classNames(
-        'k-BulletList',
-        `k-BulletList--${size}`,
-        className,
-      )}
+      className={classNames('k-BulletList', `k-BulletList--${size}`, className)}
       {...others}
     >
       {items.map(({ item, key, ...itemOthers }) => (
         <li
           key={key}
           {...itemOthers}
-          className={classNames(
-            'k-BulletList__item',
-            itemOthers.className,
-          )}
+          className={classNames('k-BulletList__item', itemOthers.className)}
         >
           {item}
         </li>

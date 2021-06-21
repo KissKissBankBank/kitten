@@ -3,6 +3,8 @@ export default {
   // Dark Grey
   font2: '#b8b8b8',
   // Semi Dark Grey
+  font3: '#949494',
+  // Extra semi dark grey, used for text
   background1: '#fff',
   // White
   background2: '#fbfbfb',
@@ -17,6 +19,8 @@ export default {
   // Grey
   line3: '#2d2d2d',
   // Extra semi dark grey, not used for text
+  grey1: '#636363',
+  // Medium grey used for text or not
   primary1: '#19b4fa',
   // Primary
   primary2: '#05a8e6',
@@ -43,9 +47,17 @@ export default {
   // Light Red
   error3: '#ffb2c7',
   // Semi Light Red
+  error4: '#d8043e',
+  // Semi Dark Red
+  error5: '#a8002e',
+  // Dark Red
   orange: '#ff7800',
   orange1: '#fff2e7',
   // Orange light
+  orange2: '#f57905',
+  // Orange semi dark
+  orange3: '#eb6e00',
+  // Orange dark
   warning: '#8a6d3b',
   warning2: '#fcf8e3'
 };

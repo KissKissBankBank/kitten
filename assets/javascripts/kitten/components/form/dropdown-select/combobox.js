@@ -47,6 +47,9 @@ export const DropdownCombobox = ({
   openOnLoad,
   uniqLabelOnSearch,
   menuZIndex,
+  className,
+  value,
+  onBlur,
 }) => {
   const [flattenedOptions, setFlattenedOptions] = useState([])
   const [filteredOptions, setFilteredOptions] = useState([])
@@ -58,6 +61,8 @@ export const DropdownCombobox = ({
   const itemToString = item => (item ? String(item.label) : '')
 
   const initialSelectedItem = find(['value', defaultSelectedValue])(options)
+
+  const selectedItemByValue = find(['value', value])(flattenedOptions) || null
 
   const onSelectedItemChange = changes => {
     onChange(changes.selectedItem)
@@ -80,7 +85,10 @@ export const DropdownCombobox = ({
   }
 
   const onIsOpenChange = changes => {
-    if (changes.isOpen) return onMenuOpen({ changes })
+    if (changes.isOpen) {
+      flattenedOptions && setFilteredOptions(flattenedOptions)
+      return onMenuOpen({ changes })
+    }
 
     return onMenuClose({
       changes,
@@ -98,6 +106,7 @@ export const DropdownCombobox = ({
     highlightedIndex,
     getItemProps,
     openMenu,
+    inputValue,
   } = useCombobox({
     id: `${id}_element`,
     inputId: id,
@@ -109,6 +118,7 @@ export const DropdownCombobox = ({
     onInputValueChange,
     onIsOpenChange,
     initialIsOpen: openOnLoad,
+    selectedItem: selectedItemByValue,
   })
 
   useEffect(() => {
@@ -146,6 +156,7 @@ export const DropdownCombobox = ({
         'k-Form-Dropdown',
         `k-Form-Dropdown--${variant}`,
         `k-Form-Dropdown--${size}`,
+        className,
         {
           'k-Form-Dropdown--isOpen': isOpen > 0,
           'k-Form-Dropdown--error': error,
@@ -174,7 +185,11 @@ export const DropdownCombobox = ({
           disabled={disabled}
           onFocus={() => !isOpen && openMenu()}
           onClick={() => !isOpen && openMenu()}
-          {...getInputProps()}
+          {...getInputProps({
+            onBlur: () => {
+              onBlur(find(['label', inputValue])(flattenedOptions) || null)
+            },
+          })}
         />
         <button
           className="k-Form-DropdownCombobox__arrowButton"
@@ -229,7 +244,7 @@ export const DropdownCombobox = ({
             ))
           ) : (
             <li className="k-Form-Dropdown__item" disabled>
-              {noResultText}
+              {noResultText || 'No result'}
             </li>
           ))}
       </ul>
@@ -248,6 +263,7 @@ DropdownCombobox.defaultProps = {
   a11yStatusValid: 'Valid',
   a11ySelectionMessageDisplayer: item => `${item} is now selected.`,
   onChange: () => {},
+  onBlur: () => {},
   onInputChange: () => {},
   onMenuClose: () => {},
   onMenuOpen: () => {},

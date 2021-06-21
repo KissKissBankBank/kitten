@@ -1,12 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
-import TYPOGRAPHY from '../../../constants/typography-config'
-import { titleModifierStyles } from '../common/title-modifier-styles'
-import { strokeModifierStyles } from '../../layout/horizontal-stroke/common/stroke-modifier-styles'
 import classNames from 'classnames'
+import styled from 'styled-components'
+import TYPOGRAPHY from '../../../constants/typography-config'
+import COLORS from '../../../constants/colors-config'
+import {
+  titleModifierStyles,
+  titleModifiersNames,
+} from '../common/title-modifier-styles'
+import { strokeModifierStyles } from '../../layout/horizontal-stroke/common/stroke-modifier-styles'
 
 const StyledTitleWithStroke = styled.div`
+  --TitleWithStroke-css-color: ${COLORS.font1};
+
+  color: ${COLORS.font1}; /* IE11 */
+  color: var(--TitleWithStroke-css-color);
+
   &.k-TitleWithStroke--align-left {
     text-align: left;
   }
@@ -37,12 +46,6 @@ const StyledTitleWithStroke = styled.div`
   }
 
   ${strokeModifierStyles('.k-TitleWithStroke__stroke')}
-
-  ${({ cssColor }) =>
-    cssColor &&
-    css`
-      color: ${cssColor};
-    `}
 `
 
 export const TitleWithStroke = ({
@@ -59,19 +62,31 @@ export const TitleWithStroke = ({
 
   return (
     <StyledTitleWithStroke
-      className={classNames(className, `k-TitleWithStroke--align-${align}`, {
-        'k-TitleWithStroke--italic': italic,
-      })}
-      cssColor={cssColor}
+      className={classNames(
+        'k-TitleWithStroke',
+        className,
+        `k-TitleWithStroke--${modifier}`,
+        `k-TitleWithStroke--align-${align}`,
+        {
+          'k-TitleWithStroke--italic': italic,
+        },
+      )}
+      style={{ '--TitleWithStroke-css-color': cssColor }}
       {...other}
     >
       <TitleComponent
-        className={`k-TitleWithStroke__title k-TitleWithStroke__title--${modifier}`}
+        className={classNames(
+          'k-TitleWithStroke__title',
+          `k-TitleWithStroke__title--${modifier}`,
+        )}
       >
         {children}
       </TitleComponent>
       <span
-        className={`k-TitleWithStroke__stroke k-TitleWithStroke__stroke--${modifier}`}
+        className={classNames(
+          'k-TitleWithStroke__stroke',
+          `k-TitleWithStroke__stroke--${modifier}`,
+        )}
       />
     </StyledTitleWithStroke>
   )
@@ -94,15 +109,7 @@ TitleWithStroke.propTypes = {
     TitleWithStroke has seven modifiers,
     with different sizes depending on the device (desktop, tablet and mobile).
   */
-  modifier: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'tertiary',
-    'quaternary',
-    'quinary',
-    'senary',
-    'septenary',
-  ]),
+  modifier: PropTypes.oneOf(titleModifiersNames),
   /**
     Align title and stroke.
   */

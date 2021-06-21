@@ -16,14 +16,17 @@ const StyledDashboardMenu = styled.nav`
 
   .k-DashboardMenu__expandable__title,
   .k-DashboardMenu__item {
-    &, &:visited, &:link {
+    &,
+    &:visited,
+    &:link {
       color: ${COLORS.font2};
       font-size: ${stepToRem(-1)};
       text-decoration: none;
-      transition: color .2s ease, background-color .2s ease;
+      transition: color 0.2s ease, background-color 0.2s ease;
     }
 
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       background-color: ${COLORS.line3} !important;
     }
     &:focus {
@@ -76,7 +79,7 @@ const StyledDashboardMenu = styled.nav`
     background-color: ${COLORS.line3};
 
     .k-DashboardMenu__expandable__list {
-      padding: 0 ${pxToRem(40)} ${pxToRem(20)} ${pxToRem(60)};
+      padding: 0 ${pxToRem(10)} ${pxToRem(20)} ${pxToRem(60)};
       display: flex;
       flex-direction: column;
 
@@ -86,7 +89,14 @@ const StyledDashboardMenu = styled.nav`
     }
   }
 
-  .k-DashboardMenu__list > li > .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,
+  .k-DashboardMenu__list > :not(:last-child) {
+    margin-bottom: ${pxToRem(2)};
+  }
+
+  .k-DashboardMenu__list
+    > li
+    > .k-DashboardMenu__expandable
+    .k-DashboardMenu__expandable__title,
   .k-DashboardMenu__list > li > .k-DashboardMenu__item {
     display: flex;
     height: ${pxToRem(50)};
@@ -108,8 +118,9 @@ const StyledDashboardMenu = styled.nav`
     cursor: pointer;
   }
   .k-DashboardMenu__expandable[open] .k-DashboardMenu__expandable__title,
-  .k-DashboardMenu__expandable--hasActiveInside .k-DashboardMenu__expandable__title,
-  .k-DashboardMenu__list > li > .k-DashboardMenu__item[aria-current="page"] {
+  .k-DashboardMenu__expandable--hasActiveInside
+    .k-DashboardMenu__expandable__title,
+  .k-DashboardMenu__list > li > .k-DashboardMenu__item[aria-current='page'] {
     color: ${COLORS.background1};
     background-color: ${COLORS.line3};
   }
@@ -118,8 +129,9 @@ const StyledDashboardMenu = styled.nav`
     ${TYPOGRAPHY.fontStyles.light}
     line-height: ${pxToRem(18)};
 
-    &:hover, &:focus,
-    &[aria-current="page"] {
+    &:hover,
+    &:focus,
+    &[aria-current='page'] {
       ${TYPOGRAPHY.fontStyles.regular}
       color: ${COLORS.background1};
     }
@@ -138,8 +150,9 @@ const StyledDashboardMenu = styled.nav`
       max-width: ${pxToRem(25)};
       max-height: ${pxToRem(25)};
 
-      &[fill], d[fill] {
-        transition: fill .2s ease-in-out;
+      &[fill],
+      d[fill] {
+        transition: fill 0.2s ease-in-out;
       }
     }
   }
@@ -151,7 +164,7 @@ const StyledDashboardMenu = styled.nav`
     svg {
       display: block;
       fill: currentColor;
-      transition: transform .2s ease-in-out;
+      transition: transform 0.2s ease-in-out;
     }
   }
 

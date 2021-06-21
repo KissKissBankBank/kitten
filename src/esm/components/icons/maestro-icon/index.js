@@ -1,11 +1,17 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
-export var MaestroIcon = function MaestroIcon(props) {
+import classNames from 'classnames';
+export var MaestroIcon = function MaestroIcon(_ref) {
+  var className = _ref.className,
+      props = _objectWithoutProperties(_ref, ["className"]);
+
   return /*#__PURE__*/React.createElement("svg", _extends({
     width: "39",
     height: "30",
     viewBox: "0 0 39 30",
-    xmlns: "http://www.w3.org/2000/svg"
+    xmlns: "http://www.w3.org/2000/svg",
+    className: classNames('k-ColorSvg', className)
   }, props), /*#__PURE__*/React.createElement("title", null, "Maestro"), /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "nonzero"

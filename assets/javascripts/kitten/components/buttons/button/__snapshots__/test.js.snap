@@ -29,7 +29,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -83,27 +83,27 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -154,8 +154,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -225,7 +225,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -242,7 +242,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -258,7 +258,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -336,22 +336,6 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -402,7 +386,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -456,27 +440,27 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -527,8 +511,8 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -598,7 +582,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -615,7 +599,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -631,7 +615,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -709,22 +693,6 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -776,7 +744,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -830,27 +798,27 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -901,8 +869,8 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -972,7 +940,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -989,7 +957,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -1005,7 +973,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -1088,22 +1056,6 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
@@ -1150,7 +1102,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem dashed #bae8fd;
   background-color: #fff;
@@ -1204,27 +1156,27 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -1275,8 +1227,8 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -1346,7 +1298,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -1363,7 +1315,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -1379,7 +1331,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -1457,22 +1409,6 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -1524,7 +1460,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -1578,27 +1514,27 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -1649,8 +1585,8 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -1720,7 +1656,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -1737,7 +1673,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -1753,7 +1689,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -1831,22 +1767,6 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -1898,7 +1818,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -1952,27 +1872,27 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -2023,8 +1943,8 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -2094,7 +2014,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -2111,7 +2031,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -2127,7 +2047,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -2205,22 +2125,6 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -2273,7 +2177,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -2327,27 +2231,27 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -2398,8 +2302,8 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -2469,7 +2373,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -2486,7 +2390,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -2502,7 +2406,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -2580,22 +2484,6 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -2647,7 +2535,7 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -2701,27 +2589,27 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -2772,8 +2660,8 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -2843,7 +2731,7 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -2860,7 +2748,7 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -2876,7 +2764,7 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -2954,22 +2842,6 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -3021,7 +2893,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -3075,27 +2947,27 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -3146,8 +3018,8 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -3217,7 +3089,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -3234,7 +3106,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -3250,7 +3122,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -3328,22 +3200,6 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -3395,7 +3251,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -3449,27 +3305,27 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -3520,8 +3376,8 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -3591,7 +3447,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -3608,7 +3464,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -3624,7 +3480,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -3702,22 +3558,6 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -3769,7 +3609,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -3823,27 +3663,27 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -3894,8 +3734,8 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -3965,7 +3805,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -3982,7 +3822,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -3998,7 +3838,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -4076,22 +3916,6 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -4143,7 +3967,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -4197,27 +4021,27 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -4268,8 +4092,8 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -4339,7 +4163,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -4356,7 +4180,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -4372,7 +4196,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -4450,22 +4274,6 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -4517,7 +4325,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -4571,27 +4379,27 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -4642,8 +4450,8 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -4713,7 +4521,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -4730,7 +4538,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -4746,7 +4554,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -4824,22 +4632,6 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -4891,7 +4683,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -4945,27 +4737,27 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -5016,8 +4808,8 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -5087,7 +4879,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -5104,7 +4896,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -5120,7 +4912,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -5198,22 +4990,6 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -5270,7 +5046,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -5324,27 +5100,27 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -5395,8 +5171,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -5466,7 +5242,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -5483,7 +5259,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -5499,7 +5275,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -5577,22 +5353,6 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -5644,7 +5404,7 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -5698,27 +5458,27 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -5769,8 +5529,8 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -5840,7 +5600,7 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -5857,7 +5617,7 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -5873,7 +5633,7 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -5951,22 +5711,6 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 
@@ -6018,7 +5762,7 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -6072,27 +5816,27 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -6143,8 +5887,8 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -6214,7 +5958,7 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -6231,7 +5975,7 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -6247,7 +5991,7 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -6325,22 +6069,6 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
 @media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
     width: 5.625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
   }
 }
 

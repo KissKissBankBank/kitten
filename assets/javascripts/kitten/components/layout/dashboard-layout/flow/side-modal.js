@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
@@ -11,6 +11,10 @@ import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { CrossIcon } from '../../../../components/icons/cross-icon'
 import { LightbulbIllustration as Lightbulb } from '../../../../components/illustrations/lightbulb-illustration'
+import {
+  DASHBOARD_HIDE_CONTENT_EVENT,
+  DASHBOARD_SHOW_CONTENT_EVENT,
+} from '../../../../helpers/dom/events'
 
 const Wrapper = styled.div`
   position: fixed;
@@ -138,12 +142,28 @@ const Wrapper = styled.div`
   }
 `
 
-const MobileAsideComponent = ({
-  children,
-  openLabel,
-  closeLabel,
-  shouldHideButton,
-}) => {
+const MobileAsideComponent = ({ children, openLabel, closeLabel }) => {
+  const [shouldHideButton, setButtonAsHidden] = useState(false)
+
+  useEffect(() => {
+    if (!domElementHelper.canUseDom()) return
+
+    window.addEventListener(DASHBOARD_HIDE_CONTENT_EVENT, hideButton)
+    window.addEventListener(DASHBOARD_SHOW_CONTENT_EVENT, showButton)
+
+    return () => {
+      window.removeEventListener(DASHBOARD_HIDE_CONTENT_EVENT, hideButton)
+      window.removeEventListener(DASHBOARD_SHOW_CONTENT_EVENT, showButton)
+    }
+  }, [])
+
+  const hideButton = () => {
+    setButtonAsHidden(true)
+  }
+  const showButton = () => {
+    setButtonAsHidden(false)
+  }
+
   const { show, buttonProps, modalProps, wrapperProps, closeAction } = useModal(
     {
       id: 'DashboardLayout-sideModal',

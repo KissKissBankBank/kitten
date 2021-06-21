@@ -7,8 +7,8 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
 
 .c0,
 .c0 * {
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .c0 .k-Form-RadioButton__label {
@@ -44,8 +44,8 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   background-color: #fff;
   border: 0.125rem solid #eee;
   border-radius: 50%;
-  -webkit-transition: border .2s,background .2s;
-  transition: border .2s,background .2s;
+  -webkit-transition: border 0.2s,background 0.2s;
+  transition: border 0.2s,background 0.2s;
 }
 
 .c0 .k-Form-RadioButton__input {
@@ -78,6 +78,10 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
 
 .c0.k-Form-RadioButton--error .k-Form-RadioButton__input:checked:not(:disabled) + .k-Form-RadioButton__label::before {
   border-color: #ff0046;
+}
+
+.c0 .k-Form-RadioButton__input:disabled {
+  cursor: not-allowed;
 }
 
 .c0 .k-Form-RadioButton__input:disabled + .k-Form-RadioButton__label {

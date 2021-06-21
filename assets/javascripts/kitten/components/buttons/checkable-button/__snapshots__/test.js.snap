@@ -29,7 +29,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
@@ -83,27 +83,27 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -154,8 +154,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -194,14 +194,40 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 }
 
 .c1::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   content: '';
-  position: absolute;
+  box-sizing: border-box;
+  border-radius: 50%;
   width: 1.25rem;
   height: 1.25rem;
-  bottom: -0.6875rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  width: var(--CheckableButton-radius);
+  height: var(--CheckableButton-radius);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+}
+
+.c1.k-CheckableButton--bottom::after,
+.c1.k-CheckableButton--left[aria-checked]::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom.k-Button--copper::after,
+.c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom:disabled::after,
+.c1.k-CheckableButton--left[aria-checked]:disabled::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom::after {
+  position: absolute;
+  bottom: -0.6875rem;
+  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -214,7 +240,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   transform: scale(0);
 }
 
-.c1[aria-checked]::after {
+.c1.k-CheckableButton--bottom[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -223,33 +249,137 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
 }
 
-.c1:focus {
-  outline-offset: -0.125rem;
+.c1.k-CheckableButton--left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-left: 0;
+  text-align: left;
 }
 
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
+.c1.k-CheckableButton--left::after {
+  margin: 0 0.9375rem;
+  margin: 0 var(--CheckableButton-checkMargin);
+  border: 0.125rem solid #d8d8d8;
+  background-color: #fff;
+  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
+  transition: border-color 0.2s ease,background 0.2s ease;
 }
 
-.c1:focus-visible {
-  outline-color: #bae8fd;
+.c1.k-CheckableButton--left[aria-checked]::after {
+  border-color: #19b4fa;
+  background-color: #19b4fa;
 }
 
-.c1:hover:not(:disabled),
-.c1:focus:not(:disabled) {
+.c1.k-CheckableButton--left.k-Button--copper::after {
+  border-color: #ff0046;
+  background-color: #fff;
+}
+
+.c1.k-CheckableButton--left:disabled::after {
+  border-color: #fff;
+  background-color: #d8d8d8;
+}
+
+.c1.k-Button--micro,
+.c1.k-Button--tiny {
+  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-checkMargin: 0.625rem;
+}
+
+.c1.k-Button--regular {
+  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-checkMargin: 0.9375rem;
+}
+
+.c1.k-Button--big,
+.c1.k-Button--huge,
+.c1.k-Button--giant {
+  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-checkMargin: 1.25rem;
+}
+
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
   border-color: #bae8fd;
   background-color: #fff;
   color: #19b4fa;
 }
 
-.c1:active:not(:disabled) {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
   border-color: #05a8e6;
   background-color: #fff;
   color: #05a8e6;
 }
 
-.c1[aria-checked]:focus {
+.c1.k-Button--andromeda:focus {
+  outline-offset: -0.125rem;
+}
+
+.c1.k-Button--andromeda:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c1.k-Button--andromeda:focus-visible {
+  outline-color: #bae8fd;
+}
+
+.c1.k-Button--andromeda[aria-checked]:focus {
   outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
+  color: #19b4fa;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #eee;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
+  border-color: #19b4fa;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+}
+
+.c1.k-Button--orion[aria-checked]:focus {
   border-color: #19b4fa;
 }
 
@@ -285,7 +415,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -302,7 +432,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -318,7 +448,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -401,29 +531,13 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
 
 <button
   aria-checked={null}
-  className="c0 k-Button c1 k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--hydrogen k-Button--andromeda"
   disabled={false}
   style={
     Object {
@@ -465,7 +579,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
@@ -519,27 +633,27 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -590,8 +704,8 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -630,14 +744,40 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 }
 
 .c1::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   content: '';
-  position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
-  bottom: -0.8125rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  width: var(--CheckableButton-radius);
+  height: var(--CheckableButton-radius);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+}
+
+.c1.k-CheckableButton--bottom::after,
+.c1.k-CheckableButton--left[aria-checked]::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom.k-Button--copper::after,
+.c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom:disabled::after,
+.c1.k-CheckableButton--left[aria-checked]:disabled::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom::after {
+  position: absolute;
+  bottom: -0.6875rem;
+  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -650,7 +790,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   transform: scale(0);
 }
 
-.c1[aria-checked]::after {
+.c1.k-CheckableButton--bottom[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -659,33 +799,137 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
 }
 
-.c1:focus {
-  outline-offset: -0.125rem;
+.c1.k-CheckableButton--left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-left: 0;
+  text-align: left;
 }
 
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
+.c1.k-CheckableButton--left::after {
+  margin: 0 0.9375rem;
+  margin: 0 var(--CheckableButton-checkMargin);
+  border: 0.125rem solid #d8d8d8;
+  background-color: #fff;
+  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
+  transition: border-color 0.2s ease,background 0.2s ease;
 }
 
-.c1:focus-visible {
-  outline-color: #bae8fd;
+.c1.k-CheckableButton--left[aria-checked]::after {
+  border-color: #19b4fa;
+  background-color: #19b4fa;
 }
 
-.c1:hover:not(:disabled),
-.c1:focus:not(:disabled) {
+.c1.k-CheckableButton--left.k-Button--copper::after {
+  border-color: #ff0046;
+  background-color: #fff;
+}
+
+.c1.k-CheckableButton--left:disabled::after {
+  border-color: #fff;
+  background-color: #d8d8d8;
+}
+
+.c1.k-Button--micro,
+.c1.k-Button--tiny {
+  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-checkMargin: 0.625rem;
+}
+
+.c1.k-Button--regular {
+  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-checkMargin: 0.9375rem;
+}
+
+.c1.k-Button--big,
+.c1.k-Button--huge,
+.c1.k-Button--giant {
+  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-checkMargin: 1.25rem;
+}
+
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
   border-color: #bae8fd;
   background-color: #fff;
   color: #19b4fa;
 }
 
-.c1:active:not(:disabled) {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
   border-color: #05a8e6;
   background-color: #fff;
   color: #05a8e6;
 }
 
-.c1[aria-checked]:focus {
+.c1.k-Button--andromeda:focus {
+  outline-offset: -0.125rem;
+}
+
+.c1.k-Button--andromeda:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c1.k-Button--andromeda:focus-visible {
+  outline-color: #bae8fd;
+}
+
+.c1.k-Button--andromeda[aria-checked]:focus {
   outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
+  color: #19b4fa;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #eee;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
+  border-color: #19b4fa;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+}
+
+.c1.k-Button--orion[aria-checked]:focus {
   border-color: #19b4fa;
 }
 
@@ -721,7 +965,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -738,7 +982,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -754,7 +998,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -837,29 +1081,13 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-Button--big k-Button--lithium k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--big k-Button--lithium k-Button--andromeda"
   disabled={false}
   style={
     Object {
@@ -901,7 +1129,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
@@ -955,27 +1183,27 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -1026,8 +1254,8 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -1066,14 +1294,40 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 }
 
 .c1::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   content: '';
-  position: absolute;
+  box-sizing: border-box;
+  border-radius: 50%;
   width: 1.25rem;
   height: 1.25rem;
-  bottom: -0.6875rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  width: var(--CheckableButton-radius);
+  height: var(--CheckableButton-radius);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+}
+
+.c1.k-CheckableButton--bottom::after,
+.c1.k-CheckableButton--left[aria-checked]::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom.k-Button--copper::after,
+.c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom:disabled::after,
+.c1.k-CheckableButton--left[aria-checked]:disabled::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom::after {
+  position: absolute;
+  bottom: -0.6875rem;
+  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -1086,7 +1340,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   transform: scale(0);
 }
 
-.c1[aria-checked]::after {
+.c1.k-CheckableButton--bottom[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -1095,33 +1349,137 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
 }
 
-.c1:focus {
-  outline-offset: -0.125rem;
+.c1.k-CheckableButton--left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-left: 0;
+  text-align: left;
 }
 
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
+.c1.k-CheckableButton--left::after {
+  margin: 0 0.9375rem;
+  margin: 0 var(--CheckableButton-checkMargin);
+  border: 0.125rem solid #d8d8d8;
+  background-color: #fff;
+  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
+  transition: border-color 0.2s ease,background 0.2s ease;
 }
 
-.c1:focus-visible {
-  outline-color: #bae8fd;
+.c1.k-CheckableButton--left[aria-checked]::after {
+  border-color: #19b4fa;
+  background-color: #19b4fa;
 }
 
-.c1:hover:not(:disabled),
-.c1:focus:not(:disabled) {
+.c1.k-CheckableButton--left.k-Button--copper::after {
+  border-color: #ff0046;
+  background-color: #fff;
+}
+
+.c1.k-CheckableButton--left:disabled::after {
+  border-color: #fff;
+  background-color: #d8d8d8;
+}
+
+.c1.k-Button--micro,
+.c1.k-Button--tiny {
+  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-checkMargin: 0.625rem;
+}
+
+.c1.k-Button--regular {
+  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-checkMargin: 0.9375rem;
+}
+
+.c1.k-Button--big,
+.c1.k-Button--huge,
+.c1.k-Button--giant {
+  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-checkMargin: 1.25rem;
+}
+
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
   border-color: #bae8fd;
   background-color: #fff;
   color: #19b4fa;
 }
 
-.c1:active:not(:disabled) {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
   border-color: #05a8e6;
   background-color: #fff;
   color: #05a8e6;
 }
 
-.c1[aria-checked]:focus {
+.c1.k-Button--andromeda:focus {
+  outline-offset: -0.125rem;
+}
+
+.c1.k-Button--andromeda:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c1.k-Button--andromeda:focus-visible {
+  outline-color: #bae8fd;
+}
+
+.c1.k-Button--andromeda[aria-checked]:focus {
   outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
+  color: #19b4fa;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #eee;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
+  border-color: #19b4fa;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+}
+
+.c1.k-Button--orion[aria-checked]:focus {
   border-color: #19b4fa;
 }
 
@@ -1157,7 +1515,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -1174,7 +1532,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -1190,7 +1548,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -1273,29 +1631,13 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-Button--regular k-Button--lithium k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--lithium k-Button--andromeda"
   disabled={true}
   style={
     Object {
@@ -1337,7 +1679,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #ffb2c7;
   background-color: #fff;
@@ -1391,27 +1733,27 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -1462,8 +1804,8 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -1502,14 +1844,40 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 }
 
 .c1::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   content: '';
-  position: absolute;
+  box-sizing: border-box;
+  border-radius: 50%;
   width: 1.25rem;
   height: 1.25rem;
-  bottom: -0.6875rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  width: var(--CheckableButton-radius);
+  height: var(--CheckableButton-radius);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+}
+
+.c1.k-CheckableButton--bottom::after,
+.c1.k-CheckableButton--left[aria-checked]::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom.k-Button--copper::after,
+.c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom:disabled::after,
+.c1.k-CheckableButton--left[aria-checked]:disabled::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom::after {
+  position: absolute;
+  bottom: -0.6875rem;
+  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -1522,7 +1890,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   transform: scale(0);
 }
 
-.c1[aria-checked]::after {
+.c1.k-CheckableButton--bottom[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -1531,20 +1899,137 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
 }
 
-.c1:focus {
+.c1.k-CheckableButton--left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-left: 0;
+  text-align: left;
+}
+
+.c1.k-CheckableButton--left::after {
+  margin: 0 0.9375rem;
+  margin: 0 var(--CheckableButton-checkMargin);
+  border: 0.125rem solid #d8d8d8;
+  background-color: #fff;
+  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
+  transition: border-color 0.2s ease,background 0.2s ease;
+}
+
+.c1.k-CheckableButton--left[aria-checked]::after {
+  border-color: #19b4fa;
+  background-color: #19b4fa;
+}
+
+.c1.k-CheckableButton--left.k-Button--copper::after {
+  border-color: #ff0046;
+  background-color: #fff;
+}
+
+.c1.k-CheckableButton--left:disabled::after {
+  border-color: #fff;
+  background-color: #d8d8d8;
+}
+
+.c1.k-Button--micro,
+.c1.k-Button--tiny {
+  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-checkMargin: 0.625rem;
+}
+
+.c1.k-Button--regular {
+  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-checkMargin: 0.9375rem;
+}
+
+.c1.k-Button--big,
+.c1.k-Button--huge,
+.c1.k-Button--giant {
+  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-checkMargin: 1.25rem;
+}
+
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #19b4fa;
+}
+
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+  color: #05a8e6;
+}
+
+.c1.k-Button--andromeda:focus {
   outline-offset: -0.125rem;
 }
 
-.c1:focus:not(:focus-visible) {
+.c1.k-Button--andromeda:focus:not(:focus-visible) {
   outline-color: transparent;
 }
 
-.c1:focus-visible {
+.c1.k-Button--andromeda:focus-visible {
   outline-color: #bae8fd;
 }
 
-.c1[aria-checked]:focus {
+.c1.k-Button--andromeda[aria-checked]:focus {
   outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
+  color: #19b4fa;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #eee;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
+  border-color: #19b4fa;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+}
+
+.c1.k-Button--orion[aria-checked]:focus {
   border-color: #19b4fa;
 }
 
@@ -1580,7 +2065,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -1597,7 +2082,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -1613,7 +2098,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -1696,29 +2181,13 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-Button--regular k-Button--copper k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--copper k-Button--andromeda"
   disabled={false}
   style={
     Object {
@@ -1760,7 +2229,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   cursor: pointer;
   min-width: 12.5rem;
   min-height: 3.125rem;
-  padding: 0 1.875rem;
+  padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
@@ -1814,27 +2283,27 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c0.k-Button--micro {
   min-width: 8.125rem;
   min-height: 1.875rem;
-  padding: 0 0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
   min-width: 10rem;
   min-height: 2.5rem;
-  padding: 0 1.25rem;
+  padding: 0.4375rem 1.25rem;
   font-size: 0.8888888888888888rem;
 }
 
 .c0.k-Button--huge {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
-  padding: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--hasIcon:not(.k-Button--fluid) {
@@ -1885,8 +2354,8 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-.c0 svg,
-.c0 path {
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
@@ -1925,14 +2394,40 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 .c1::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   content: '';
-  position: absolute;
-  width: 0.9375rem;
-  height: 0.9375rem;
-  bottom: -0.53125rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  width: var(--CheckableButton-radius);
+  height: var(--CheckableButton-radius);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+}
+
+.c1.k-CheckableButton--bottom::after,
+.c1.k-CheckableButton--left[aria-checked]::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom.k-Button--copper::after,
+.c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom:disabled::after,
+.c1.k-CheckableButton--left[aria-checked]:disabled::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom::after {
+  position: absolute;
+  bottom: -0.6875rem;
+  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -1945,7 +2440,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   transform: scale(0);
 }
 
-.c1[aria-checked]::after {
+.c1.k-CheckableButton--bottom[aria-checked]::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -1954,33 +2449,137 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
 }
 
-.c1:focus {
-  outline-offset: -0.125rem;
+.c1.k-CheckableButton--left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-left: 0;
+  text-align: left;
 }
 
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
+.c1.k-CheckableButton--left::after {
+  margin: 0 0.9375rem;
+  margin: 0 var(--CheckableButton-checkMargin);
+  border: 0.125rem solid #d8d8d8;
+  background-color: #fff;
+  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
+  transition: border-color 0.2s ease,background 0.2s ease;
 }
 
-.c1:focus-visible {
-  outline-color: #bae8fd;
+.c1.k-CheckableButton--left[aria-checked]::after {
+  border-color: #19b4fa;
+  background-color: #19b4fa;
 }
 
-.c1:hover:not(:disabled),
-.c1:focus:not(:disabled) {
+.c1.k-CheckableButton--left.k-Button--copper::after {
+  border-color: #ff0046;
+  background-color: #fff;
+}
+
+.c1.k-CheckableButton--left:disabled::after {
+  border-color: #fff;
+  background-color: #d8d8d8;
+}
+
+.c1.k-Button--micro,
+.c1.k-Button--tiny {
+  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-checkMargin: 0.625rem;
+}
+
+.c1.k-Button--regular {
+  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-checkMargin: 0.9375rem;
+}
+
+.c1.k-Button--big,
+.c1.k-Button--huge,
+.c1.k-Button--giant {
+  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-checkMargin: 1.25rem;
+}
+
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
   border-color: #bae8fd;
   background-color: #fff;
   color: #19b4fa;
 }
 
-.c1:active:not(:disabled) {
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
   border-color: #05a8e6;
   background-color: #fff;
   color: #05a8e6;
 }
 
-.c1[aria-checked]:focus {
+.c1.k-Button--andromeda:focus {
+  outline-offset: -0.125rem;
+}
+
+.c1.k-Button--andromeda:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c1.k-Button--andromeda:focus-visible {
+  outline-color: #bae8fd;
+}
+
+.c1.k-Button--andromeda[aria-checked]:focus {
   outline: #19b4fa solid 0.125rem;
+  border-color: #19b4fa;
+  color: #19b4fa;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
+  border-color: #bae8fd;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
+  border-color: #bae8fd;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
+  border-color: #eee;
+  background-color: #fff;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
+  border-color: #19b4fa;
+  color: #222;
+}
+
+.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
+.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
+  border-color: #05a8e6;
+  background-color: #fff;
+}
+
+.c1.k-Button--orion[aria-checked]:focus {
   border-color: #19b4fa;
 }
 
@@ -2016,7 +2615,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   .c0.k-Button--big {
     min-width: 13.75rem;
     min-height: 4.375rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
     font-size: 1rem;
   }
 }
@@ -2033,7 +2632,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -2049,7 +2648,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
     min-width: 13.75rem;
     min-height: 5.625rem;
     font-size: 1rem;
-    padding: 0 2.5rem;
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -2132,29 +2731,13 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--orion {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion {
     border-radius: 0.5rem;
   }
 }
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-Button--tiny k-Button--lithium k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--tiny k-Button--lithium k-Button--andromeda"
   disabled={false}
   style={
     Object {

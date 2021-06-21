@@ -49,17 +49,13 @@ export const EngagementCardWithImage = ({
 }) => {
   return (
     <StyledContainer
-        {...others}
-        as={href ? 'a' : 'div'}
-        href={href}
-        isActive={isActive}
-      >
+      {...others}
+      as={href ? 'a' : 'div'}
+      href={href}
+      isActive={isActive}
+    >
       <StyledCard>
-        <StyledImage
-          src={backgroundImage}
-          alt=""
-          imageHeight={imageHeight}
-        />
+        <StyledImage src={backgroundImage} alt="" imageHeight={imageHeight} />
       </StyledCard>
       <StyledText
         size="micro"

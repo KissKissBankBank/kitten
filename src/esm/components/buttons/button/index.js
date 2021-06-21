@@ -13,7 +13,7 @@ import classNames from 'classnames';
 var StyledButton = styled.button.withConfig({
   displayName: "button__StyledButton",
   componentId: "sc-1i7fxxs-0"
-})(["display:inline-flex;align-items:center;justify-content:center;position:relative;box-sizing:border-box;", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appearance:none;cursor:pointer;&:disabled{cursor:not-allowed;}&:hover{text-decoration:none;}>:nth-child(n){margin-right:", ";text-align:left;}>:last-child{margin-right:0;}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&.k-Button--hasBorderRadius{border-radius:var(--border-radius);}", " &.k-Button--nano{", "}&.k-Button--micro{", "}&.k-Button--tiny{", "}&.k-Button--big{", "}&.k-Button--huge{", "}&.k-Button--giant{", "}&.k-Button--hasIcon:not(.k-Button--fluid){", " &.k-Button--nano{", "}&.k-Button--micro{", "}&.k-Button--tiny{", "}&.k-Button--big{", "}&.k-Button--huge{", "}&.k-Button--giant{", "}}&.k-Button--fluid{", "}&.k-Button--rounded{", "}&.k-Button--orion{", " border-radius:", ";@media (min-width:", "){border-radius:", ";}}", ""], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), COLORS.font1, pxToRem(10), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, function () {
+})(["display:inline-flex;align-items:center;justify-content:center;position:relative;box-sizing:border-box;", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appearance:none;cursor:pointer;&:disabled{cursor:not-allowed;}&:hover{text-decoration:none;}>:nth-child(n){margin-right:", ";text-align:left;}>:last-child{margin-right:0;}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&.k-Button--hasBorderRadius{border-radius:var(--border-radius);}", " &.k-Button--nano{", "}&.k-Button--micro{", "}&.k-Button--tiny{", "}&.k-Button--big{", "}&.k-Button--huge{", "}&.k-Button--giant{", "}&.k-Button--hasIcon:not(.k-Button--fluid){", " &.k-Button--nano{", "}&.k-Button--micro{", "}&.k-Button--tiny{", "}&.k-Button--big{", "}&.k-Button--huge{", "}&.k-Button--giant{", "}}&.k-Button--fluid{", "}&.k-Button--rounded{", "}&.k-Button--orion{border-radius:", ";@media (min-width:", "){border-radius:", ";}}", ""], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), COLORS.font1, pxToRem(10), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, function () {
   return DEFAULT;
 }, function () {
   return NANO;
@@ -45,21 +45,19 @@ var StyledButton = styled.button.withConfig({
   return FLUID;
 }, function () {
   return ROUNDED;
-}, function () {
-  return BIG;
 }, pxToRem(6), pxToRem(ScreenConfig.S.min), pxToRem(8), function (_ref) {
   var modifier = _ref.modifier;
   return modifierStyles(modifier);
 });
 export var FLUID = css(["min-width:initial;width:100%;"]);
 export var ROUNDED = css(["border-radius:50%;"]);
-export var DEFAULT = css(["min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(200), pxToRem(50), pxToRem(30), stepToRem(-1), pxToRem(200), pxToRem(50));
+export var DEFAULT = css(["min-width:", ";min-height:", ";padding:", " ", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(200), pxToRem(50), pxToRem(10), pxToRem(30), stepToRem(-1), pxToRem(200), pxToRem(50));
 export var NANO = css(["min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(100), pxToRem(20), pxToRem(6), stepToRem(-2), pxToRem(100), pxToRem(20));
-export var MICRO = css(["min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(130), pxToRem(30), pxToRem(10), stepToRem(-2), pxToRem(100), pxToRem(20));
-export var TINY = css(["min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(160), pxToRem(40), pxToRem(20), stepToRem(-1), pxToRem(160), pxToRem(40));
-export var BIG = css(["@media (min-width:", "){min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(ScreenConfig.S.min), pxToRem(220), pxToRem(70), pxToRem(40), stepToRem(0), pxToRem(ScreenConfig.S.min), pxToRem(220), pxToRem(70));
-export var HUGE = css(["min-height:", ";font-size:", ";padding:0 ", ";@media (min-width:", "px){min-width:", ";min-height:", ";font-size:", ";padding:0 ", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(70), stepToRem(-1), pxToRem(10), ScreenConfig.M.min, pxToRem(220), pxToRem(80), stepToRem(0), pxToRem(40), pxToRem(ScreenConfig.M.min), pxToRem(220), pxToRem(80));
-export var GIANT = css(["min-height:", ";font-size:", ";padding:0 ", ";@media (min-width:", "px){min-width:", ";min-height:", ";font-size:", ";padding:0 ", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(70), stepToRem(-1), pxToRem(10), ScreenConfig.M.min, pxToRem(220), pxToRem(90), stepToRem(0), pxToRem(40), pxToRem(ScreenConfig.M.min), pxToRem(220), pxToRem(90));
+export var MICRO = css(["min-width:", ";min-height:", ";padding:", " ", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(130), pxToRem(30), pxToRem(5), pxToRem(10), stepToRem(-2), pxToRem(100), pxToRem(20));
+export var TINY = css(["min-width:", ";min-height:", ";padding:", " ", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(160), pxToRem(40), pxToRem(7), pxToRem(20), stepToRem(-1), pxToRem(160), pxToRem(40));
+export var BIG = css(["@media (min-width:", "){min-width:", ";min-height:", ";padding:", " ", ";font-size:", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(ScreenConfig.S.min), pxToRem(220), pxToRem(70), pxToRem(10), pxToRem(40), stepToRem(0), pxToRem(ScreenConfig.S.min), pxToRem(220), pxToRem(70));
+export var HUGE = css(["min-height:", ";font-size:", ";padding:", " ", ";@media (min-width:", "px){min-width:", ";min-height:", ";font-size:", ";padding:", " ", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(70), stepToRem(-1), pxToRem(10), pxToRem(10), ScreenConfig.M.min, pxToRem(220), pxToRem(80), stepToRem(0), pxToRem(10), pxToRem(40), pxToRem(ScreenConfig.M.min), pxToRem(220), pxToRem(80));
+export var GIANT = css(["min-height:", ";font-size:", ";padding:", " ", ";@media (min-width:", "px){min-width:", ";min-height:", ";font-size:", ";padding:", " ", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(70), stepToRem(-1), pxToRem(10), pxToRem(10), ScreenConfig.M.min, pxToRem(220), pxToRem(90), stepToRem(0), pxToRem(10), pxToRem(40), pxToRem(ScreenConfig.M.min), pxToRem(220), pxToRem(90));
 export var ICON = css(["min-width:initial;min-height:initial;width:", ";height:", ";padding:0;@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";min-width:0;min-height:0;}"], pxToRem(50), pxToRem(50), pxToRem(50));
 export var ICON_NANO = css(["width:", ";height:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], pxToRem(20), pxToRem(20), pxToRem(20));
 export var ICON_MICRO = css(["width:", ";height:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], pxToRem(30), pxToRem(30), pxToRem(30));
@@ -139,7 +137,7 @@ Button.propTypes = {
   icon: PropTypes.bool,
   rounded: PropTypes.bool,
   size: PropTypes.oneOf(['nano', 'micro', 'tiny', 'big', 'huge', 'giant', 'regular']),
-  modifier: PropTypes.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube', 'social_pinterest']),
+  modifier: PropTypes.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'boron', 'neon', 'iron', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube', 'social_pinterest']),
   variant: PropTypes.oneOf(['andromeda', 'orion'])
 };
 Button.defaultProps = {

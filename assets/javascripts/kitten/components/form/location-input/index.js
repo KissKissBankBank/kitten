@@ -30,7 +30,7 @@ const StyledLocationInput = styled.div`
     border-radius: 0;
     color: ${COLORS.font1};
 
-    transition: color .2s, border-color .2s;
+    transition: color 0.2s, border-color 0.2s;
 
     &::placeholder {
       color: ${COLORS.font2};
@@ -174,11 +174,10 @@ export const LocationInput = ({
           />
           <div className="k-LocationInput__autocomplete">
             {loading && (
-              <div
-                className="k-LocationInput__loading k-LocationInput__autocompleteItem"
-              >
+              <div className="k-LocationInput__loading k-LocationInput__autocompleteItem">
                 {loadingText}
-              </div>)}
+              </div>
+            )}
             {suggestions.map(suggestion => {
               const className = suggestion.active
                 ? 'k-LocationInput__autocompleteItem--active'

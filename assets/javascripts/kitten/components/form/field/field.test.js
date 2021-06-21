@@ -22,6 +22,51 @@ describe('<Field />', () => {
             tooltipProps={{ actionLabel: 'Learn more' }}
             placeholder="Placeholder…"
             tiny={false}
+            noMargin={false}
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with <Field.Input unit />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <FieldInputExample
+            id="input"
+            label="Label"
+            tooltip="Tooltip"
+            tooltipId="tooltip"
+            tooltipProps={{ actionLabel: 'Learn more' }}
+            placeholder="Placeholder…"
+            unit="€"
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with <Field.Input limit />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <FieldInputExample
+            id="input"
+            label="Label"
+            tooltip="Tooltip"
+            tooltipId="tooltip"
+            tooltipProps={{ actionLabel: 'Learn more' }}
+            placeholder="Placeholder…"
+            limit={80}
           />,
         )
         .toJSON()

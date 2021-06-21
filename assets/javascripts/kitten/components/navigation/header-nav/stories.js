@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { boolean, text } from '@storybook/addon-knobs'
+import { boolean, text, select } from '@storybook/addon-knobs'
 import { LendopolisHeaderNavStory } from './stories/lendopolis'
 import { KissKissBankBankHeaderNavStory } from './stories/kisskissbankbank'
+import { KissKissBankBankHeaderNavStoryNew } from './stories/kisskissbankbank-new'
 import { MinimalistHeaderNavStory } from './stories/minimalist'
 
 const Container = styled.div`
@@ -37,6 +38,21 @@ export const KissKissBankBank = () => (
     <KissKissBankBankHeaderNavStory
       isLogged={boolean('Is logged', false)}
       isFixed={boolean('Is fixed', false)}
+    />
+  </Container>
+)
+
+export const KissKissBankBankNew = () => (
+  <Container whiteBg={boolean('White bg', false)}>
+    <KissKissBankBankHeaderNavStoryNew
+      isLogged={boolean('Is logged', false)}
+      isFixed={boolean('Is fixed', false)}
+      size={select('Size', ['regular', 'small'], 'regular')}
+      borderStyle={select(
+        'BorderStyle',
+        ['none', 'shadow', 'border'],
+        'border',
+      )}
     />
   </Container>
 )

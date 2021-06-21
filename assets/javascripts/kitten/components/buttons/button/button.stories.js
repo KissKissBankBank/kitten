@@ -5,6 +5,7 @@ import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { HeartIcon } from '../../icons/heart-icon'
+import { PayPalIcon } from '../../icons/paypal-icon'
 import { Badge } from '../../..'
 import { Cart } from '../../icons/cart'
 
@@ -41,6 +42,9 @@ const modifierOptions = {
   Oxygen: 'oxygen',
   Checked: 'checked',
   Copper: 'copper',
+  Boron: 'boron',
+  Neon: 'neon',
+  Iron: 'iron',
   Social_facebook: 'social_facebook',
   Social_twitter: 'social_twitter',
   Social_linkedin: 'social_linkedin',
@@ -105,6 +109,34 @@ export const WithIcon = () => (
 )
 
 WithIcon.decorators = [
+  Story => (
+    <Marger top="4" bottom="4">
+      <Container>
+        <Grid>
+          <GridCol>
+            <Story />
+          </GridCol>
+        </Grid>
+      </Container>
+    </Marger>
+  ),
+]
+
+export const WithColorIcon = () => (
+  <Button
+    size={select('Size', sizeOptions, 'regular')}
+    rounded={boolean('Rounded', false)}
+    modifier={select('Modifier', modifierOptions, 'hydrogen')}
+    variant={select('Variant', variantOptions, 'andromeda')}
+    fluid={boolean('Fluid', false)}
+    disabled={boolean('Disabled', false)}
+    borderRadius={number('Border radius', 0, radiusBorderRange)}
+  >
+    <PayPalIcon />
+  </Button>
+)
+
+WithColorIcon.decorators = [
   Story => (
     <Marger top="4" bottom="4">
       <Container>

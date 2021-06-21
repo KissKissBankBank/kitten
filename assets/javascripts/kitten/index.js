@@ -61,6 +61,7 @@ export { SimpleCard } from './components/cards/simple-card'
 export { BackerCard } from './components/cards/backer-card'
 export { BackingCard } from './components/cards/backing-card'
 export { CartRewardCard } from './components/cards/cart-reward-card'
+export { ContributionCard } from './components/cards/contribution-card'
 export { RewardEdition } from './components/cards/reward-edition'
 export { TeamCard } from './components/cards/team-card'
 export { Triptych } from './components/cards/triptych'
@@ -113,6 +114,7 @@ export { RadioButtonSet } from './components/form/radio-button-set'
 export { RangeSlider } from './components/form/range-slider'
 export { TextInput } from './components/form/text-input'
 export { TextInputWithButton } from './components/form/text-input-with-button'
+export { TextInputWithIcon } from './components/form/text-input-with-icon'
 export { TextInputWithLimit } from './components/form/text-input-with-limit'
 export { TextInputWithUnit } from './components/form/text-input-with-unit'
 export { ToggleSwitch } from './components/form/toggle-switch'
@@ -131,6 +133,9 @@ export {
 
 // Heroes
 export { Hero } from './components/heroes/hero'
+
+// Illustrations
+export { RocketIllustration } from './components/illustrations/rocket-illustration'
 
 // Images
 export { ImageCropper } from './components/images/image-cropper'
@@ -203,6 +208,7 @@ export { SimplePopover } from './components/popovers/simple-popover'
 export { SearchInput } from './components/search/search-input'
 
 // Steppers
+export { VerticalProgress } from './components/steppers/vertical-progress'
 export { VerticalStepper } from './components/steppers/vertical-stepper'
 export { Stepper } from './components/steppers/stepper'
 
@@ -227,9 +233,12 @@ export { Text } from './components/typography/text'
 export { Title } from './components/typography/title'
 export { TitleWithStroke } from './components/typography/title-with-stroke'
 
-export { titleModifierStyles } from './components/typography/common/title-modifier-styles'
+export {
+  titleModifierStyles,
+  titleModifiersNames,
+  titleHelperModifierStyles,
+} from './components/typography/common/title-modifier-styles'
 export { modifierStyles as paragraphModifierStyles } from './components/typography/paragraph/helpers/modifier-styles'
-export { modifierStyles as titleHelperModifierStyles } from './components/typography/title/helpers/modifier-styles'
 
 // Uploaders
 export { BasicUploader } from './components/uploaders/basic-uploader'
@@ -299,6 +308,7 @@ export { LinkIcon } from './components/icons/link-icon'
 export { ListIcon } from './components/icons/list-icon'
 export { LocationIcon } from './components/icons/location-icon'
 export { LockIcon } from './components/icons/lock-icon'
+export { LockOutlineIcon } from './components/icons/lock-outline-icon'
 export { LoginIcon } from './components/icons/login-icon'
 export { MaestroIcon } from './components/icons/maestro-icon'
 export { MasterCardIcon } from './components/icons/mastercard-icon'
@@ -310,6 +320,7 @@ export { PayPalIcon } from './components/icons/paypal-icon'
 export { PhoneIcon } from './components/icons/phone-icon'
 export { PinterestIcon } from './components/icons/pinterest-icon'
 export { QuestionMarkIcon } from './components/icons/question-mark-icon'
+export { RefundIcon } from './components/icons/refund-icon'
 export { RocketCircleIcon } from './components/icons/rocket-circle-icon'
 export { RocketIcon } from './components/icons/rocket-icon'
 export { SaveIcon } from './components/icons/save-icon'
@@ -336,6 +347,7 @@ export { TagIcon } from './components/icons/tag-icon'
 export { FileIcon } from './components/icons/file-icon'
 export { LoudspeakerIcon } from './components/icons/loudspeaker-icon'
 export { ShieldIcon } from './components/icons/shield-icon'
+export { ShieldCheckIcon } from './components/icons/shield-check-icon'
 export { PeopleIcon } from './components/icons/people-icon'
 export { StatsIcon } from './components/icons/stats-icon'
 export { SpeechBubbleIcon } from './components/icons/speech-bubble-icon'
@@ -377,6 +389,8 @@ export {
   TOGGLE_DROPDOWN_EVENT,
   DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
   DROPDOWN_LAST_FOCUS_REACHED_EVENT,
+  DASHBOARD_HIDE_CONTENT_EVENT,
+  DASHBOARD_SHOW_CONTENT_EVENT,
 } from './helpers/dom/events'
 
 // Constants from Components

@@ -32,7 +32,10 @@ export var A11Y_LAST_FOCUS_REACHED_EVENT = "".concat(A11Y_EVENT, ":").concat(FOC
 export var DROPDOWN_EVENT = 'dropdown';
 export var TOGGLE_DROPDOWN_EVENT = "".concat(DROPDOWN_EVENT, ":toggle:trigger");
 export var DROPDOWN_FIRST_FOCUS_REACHED_EVENT = "".concat(DROPDOWN_EVENT, ":").concat(FOCUS_EVENT, ":firstElementReached");
-export var DROPDOWN_LAST_FOCUS_REACHED_EVENT = "".concat(DROPDOWN_EVENT, ":").concat(FOCUS_EVENT, ":lastElementReached");
+export var DROPDOWN_LAST_FOCUS_REACHED_EVENT = "".concat(DROPDOWN_EVENT, ":").concat(FOCUS_EVENT, ":lastElementReached"); // DashboardLayout events
+
+export var DASHBOARD_HIDE_CONTENT_EVENT = 'dashboard:content:hide';
+export var DASHBOARD_SHOW_CONTENT_EVENT = 'dashboard:content:show';
 export var dispatchEvent = function dispatchEvent(eventName, detail) {
   return function () {
     var root = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : window;

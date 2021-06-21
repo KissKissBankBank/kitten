@@ -112,7 +112,6 @@ export const StyledDropdown = styled.div`
     line-height: 0;
   }
 
-
   .k-Form-Dropdown__list {
     box-sizing: border-box;
     position: absolute;
@@ -143,7 +142,7 @@ export const StyledDropdown = styled.div`
   }
 
   .k-Form-Dropdown__item {
-    transition: background-color .2s ease;
+    transition: background-color 0.2s ease;
     box-sizing: border-box;
     padding: ${pxToRem(15)};
     min-height: ${pxToRem(50)};
@@ -155,7 +154,7 @@ export const StyledDropdown = styled.div`
     display: flex;
     align-items: center;
 
-    &[aria-selected="true"] {
+    &[aria-selected='true'] {
       background-color: ${COLORS.background3};
     }
 
@@ -237,7 +236,6 @@ export const StyledDropdown = styled.div`
       color: ${COLORS.font2};
     }
   }
-
 
   /* VARIANT: ANDROMEDA */
 
@@ -335,6 +333,7 @@ export const StyledDropdown = styled.div`
       .k-Form-DropdownSelect__button {
         height: ${pxToRem(70)};
         padding-right: ${pxToRem(50 + 10)};
+        font-size: ${stepToRem(0)};
       }
 
       .k-Form-DropdownCombobox__arrowButton {
@@ -357,7 +356,7 @@ export const StyledDropdown = styled.div`
         }
       }
 
-      @media (min-width: ${ScreenConfig.S.min}px) {
+      @media (min-width: ${ScreenConfig.M.min}px) {
         .k-Form-DropdownCombobox,
         .k-Form-DropdownSelect__button {
           padding-right: ${pxToRem(60 + 10)};
@@ -374,7 +373,6 @@ export const StyledDropdown = styled.div`
         .k-Form-DropdownSelect__button__statusBadges {
           right: ${pxToRem(60 + 10)};
         }
-
 
         &.k-Form-Dropdown--error,
         &.k-Form-Dropdown--valid {
@@ -400,7 +398,6 @@ export const StyledDropdown = styled.div`
     }
   }
 
-
   /* VARIANT: ORION */
 
   &.k-Form-Dropdown--orion {
@@ -415,16 +412,12 @@ export const StyledDropdown = styled.div`
       left: ${pxToRem(17)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
-        left: ${pxToRem(20)};
+        left: ${pxToRem(21)};
       }
     }
     .k-Form-DropdownCombobox__arrowButton {
       padding: 0;
       width: ${pxToRem(35)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        width: ${pxToRem(50)};
-      }
     }
     .k-Form-DropdownCombobox__arrowButton__arrowBox {
       margin-left: ${pxToRem(6)};
@@ -436,13 +429,13 @@ export const StyledDropdown = styled.div`
 
     .k-Form-DropdownCombobox__input,
     .k-Form-DropdownSelect__content {
-      margin-left: ${pxToRem(14 + 10)};
+      padding: 0 ${pxToRem(5)};
+      margin-left: ${pxToRem(24 + 10)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-left: ${pxToRem(20 + 10)};
+        margin-left: ${pxToRem(30 + 10)};
       }
     }
-
 
     .k-Form-Dropdown__list {
       box-shadow: 0 ${pxToRem(5)} ${pxToRem(5)} 0 rgba(0, 0, 0, 0.1);
@@ -489,7 +482,7 @@ export const StyledDropdown = styled.div`
       }
       .k-Form-DropdownCombobox__input,
       .k-Form-DropdownSelect__content {
-        margin-left: ${pxToRem(15 + 5)};
+        margin-left: ${pxToRem(25 + 5)};
       }
 
       .k-Form-DropdownCombobox__statusBadges,
@@ -522,6 +515,7 @@ export const StyledDropdown = styled.div`
           padding-right: ${pxToRem(20)};
         }
       }
+
       &.k-Form-Dropdown--error .k-Form-DropdownSelect__button,
       &.k-Form-Dropdown--valid .k-Form-DropdownSelect__button {
         padding-right: ${pxToRem(10 + 24 + 10)};
@@ -535,10 +529,12 @@ export const StyledDropdown = styled.div`
         .k-Form-DropdownSelect__button__arrowBox {
           left: ${pxToRem(30)};
         }
-
+        .k-Form-DropdownCombobox__arrowButton {
+          width: ${pxToRem(50)};
+        }
         .k-Form-DropdownCombobox__input,
         .k-Form-DropdownSelect__content {
-          margin-left: ${pxToRem(30 + 10)};
+          margin-left: ${pxToRem(40 + 10)};
         }
 
         .k-Form-DropdownCombobox__statusBadges,
@@ -551,16 +547,18 @@ export const StyledDropdown = styled.div`
     &.k-Form-Dropdown--huge {
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
-        @media (min-width: ${ScreenConfig.S.min}px) {
+        @media (min-width: ${ScreenConfig.M.min}px) {
           height: ${pxToRem(80)};
+          font-size: ${stepToRem(0)};
         }
       }
     }
     &.k-Form-Dropdown--giant {
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
-        @media (min-width: ${ScreenConfig.S.min}px) {
+        @media (min-width: ${ScreenConfig.M.min}px) {
           height: ${pxToRem(90)};
+          font-size: ${stepToRem(0)};
         }
       }
     }
@@ -568,9 +566,9 @@ export const StyledDropdown = styled.div`
     &.k-Form-Dropdown--isOpen {
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0;
-        }
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
     }
   }
 `

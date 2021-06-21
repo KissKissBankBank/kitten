@@ -2,11 +2,17 @@
 
 exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa izpJqv"
+  className="sc-bdVaJa bVAtuB"
   href="#"
 >
   <div
-    className="k-LinkBox__link"
+    className="k-LinkBox__link k-LinkBox__link--andromeda"
+    style={
+      Object {
+        "--LinkBox-background-color": "#fff",
+        "--LinkBox-text-color": null,
+      }
+    }
   >
     <div
       className="k-LinkBox__icon"
@@ -61,10 +67,10 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
       className="k-LinkBox__textContainer"
     >
       <span
-        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+        className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
       />
       <span
-        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-micro k-u-weight-light"
+        className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
       />
     </div>
     <div
@@ -95,13 +101,19 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa izpJqv"
+  className="sc-bdVaJa bVAtuB"
   href="#foobar"
   rel="noopener"
   target="_blank"
 >
   <div
-    className="k-LinkBox__link"
+    className="k-LinkBox__link k-LinkBox__link--andromeda"
+    style={
+      Object {
+        "--LinkBox-background-color": "#fff",
+        "--LinkBox-text-color": null,
+      }
+    }
   >
     <div
       className="k-LinkBox__icon"
@@ -156,12 +168,12 @@ exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
       className="k-LinkBox__textContainer"
     >
       <span
-        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+        className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
       >
         title
       </span>
       <span
-        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-micro k-u-weight-light"
+        className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
       >
         text
       </span>

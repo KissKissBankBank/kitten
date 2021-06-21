@@ -3,7 +3,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import {
   CONTAINER_PADDING,
-  CONTAINER_PADDING_MOBILE,
+  CONTAINER_PADDING_THIN,
   GUTTER,
 } from '../../../constants/grid-config'
 import COLORS from '../../../constants/colors-config'
@@ -115,7 +115,6 @@ const buttonsPositionStyle = mediaQuery => ({ paginationPosition }) => {
 // Styled component
 
 export const StyledCarouselContainer = styled.div`
-
   &.k-Carousel:not(.k-LegacyCarousel) {
     display: flex;
     ${flexContainerdirectionStyle('default')}
@@ -157,14 +156,14 @@ export const StyledCarouselContainer = styled.div`
       }
 
       .k-Carousel__inner {
-        padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
-        scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+        padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
+        scroll-padding: ${pxToRem(CONTAINER_PADDING_THIN)};
 
         &::after {
           content: '';
           display: block;
           flex-shrink: 0;
-          width: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+          width: ${pxToRem(CONTAINER_PADDING_THIN)};
         }
 
         @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -184,7 +183,6 @@ export const StyledCarouselContainer = styled.div`
       }
     }
   }
-
 
   .k-Carousel__pagination {
     display: flex;
@@ -276,14 +274,13 @@ export const StyledCarouselContainer = styled.div`
     }
   }
 
-
   .k-Carousel__pageControl {
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: relative;
-    padding-top: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
-    padding-bottom: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
+    padding-top: ${pxToRem(CONTAINER_PADDING_THIN / 2)};
+    padding-bottom: ${pxToRem(CONTAINER_PADDING_THIN / 2)};
 
     .k-Carousel__pageControl__pageDot {
       width: ${pxToRem(8)};
@@ -300,16 +297,16 @@ export const StyledCarouselContainer = styled.div`
 
     .k-Carousel__pageControl__controlButton {
       position: absolute;
-      top: ${pxToRem(CONTAINER_PADDING_MOBILE / 4)};
-      bottom: ${pxToRem(CONTAINER_PADDING_MOBILE / 4)};
+      top: ${pxToRem(CONTAINER_PADDING_THIN / 4)};
+      bottom: ${pxToRem(CONTAINER_PADDING_THIN / 4)};
       -webkit-tap-highlight-color: transparent;
 
       &.k-Carousel__pageControl__controlButton--prev {
-        left: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+        left: ${pxToRem(CONTAINER_PADDING_THIN)};
         right: 50%;
       }
       &.k-Carousel__pageControl__controlButton--next {
-        right: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+        right: ${pxToRem(CONTAINER_PADDING_THIN)};
         left: 50%;
       }
     }
@@ -331,12 +328,12 @@ export const StyledCarouselContainer = styled.div`
     }
 
     display: grid;
-    grid-template-columns: repeat(${({ numberOfPages }) =>
-      numberOfPages}, 100%);
+    grid-template-columns: repeat(
+      ${({ numberOfPages }) => numberOfPages},
+      100%
+    );
 
-    grid-gap: ${pxToRem(
-      CONTAINER_PADDING_MOBILE / 2 - OUTLINE_PLUS_OFFSET * 2,
-    )};
+    grid-gap: ${pxToRem(CONTAINER_PADDING_THIN / 2 - OUTLINE_PLUS_OFFSET * 2)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       grid-gap: ${pxToRem(CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2)};
@@ -379,19 +376,18 @@ export const StyledCarouselContainer = styled.div`
 
     /* IE11 support */
     display: -ms-grid;
-    -ms-grid-columns: (100% ${pxToRem(CONTAINER_PADDING_MOBILE / 2)})[${({
-  numberOfPages,
-}) => numberOfPages - 1}] 100%;
+    -ms-grid-columns: (100% ${pxToRem(CONTAINER_PADDING_THIN / 2)}) [
+      ${({ numberOfPages }) => numberOfPages - 1}] 100%;
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      -ms-grid-columns: (100% ${pxToRem(CONTAINER_PADDING / 2)})[${({
-  numberOfPages,
-}) => numberOfPages - 1}] 100%;
+      -ms-grid-columns: (100% ${pxToRem(CONTAINER_PADDING / 2)}) [
+        ${({ numberOfPages }) => numberOfPages - 1}] 100%;
     }
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      -ms-grid-columns: (100% ${({ baseItemMarginBetween }) =>
-        pxToRem(baseItemMarginBetween)})[${({ numberOfPages }) =>
-  numberOfPages - 1}] 100%;
+      -ms-grid-columns: (
+          100% ${({ baseItemMarginBetween }) => pxToRem(baseItemMarginBetween)}
+        )
+        [ ${({ numberOfPages }) => numberOfPages - 1}] 100%;
     }
 
     .k-Carousel__inner__pageContainer {
@@ -409,8 +405,8 @@ export const StyledCarouselContainer = styled.div`
 
   &.k-Carousel--showOtherPages .k-Carousel__inner {
     margin: 0 !important;
-    padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE - OUTLINE_PLUS_OFFSET)};
-    scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE - OUTLINE_PLUS_OFFSET)};
+    padding: 0 ${pxToRem(CONTAINER_PADDING_THIN - OUTLINE_PLUS_OFFSET)};
+    scroll-padding: ${pxToRem(CONTAINER_PADDING_THIN - OUTLINE_PLUS_OFFSET)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       padding: 0 ${pxToRem(CONTAINER_PADDING - OUTLINE_PLUS_OFFSET)};
@@ -419,9 +415,7 @@ export const StyledCarouselContainer = styled.div`
 
     .k-Carousel__inner__pageContainer {
       &:last-child {
-        padding-right: ${pxToRem(
-          CONTAINER_PADDING_MOBILE - OUTLINE_PLUS_OFFSET,
-        )};
+        padding-right: ${pxToRem(CONTAINER_PADDING_THIN - OUTLINE_PLUS_OFFSET)};
 
         @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
           padding-right: ${pxToRem(CONTAINER_PADDING - OUTLINE_PLUS_OFFSET)};
@@ -430,16 +424,15 @@ export const StyledCarouselContainer = styled.div`
     }
   }
 
-
   // Carousel Page
 
   .k-Carousel__page {
     display: grid;
-    grid-template-columns: repeat(${({ numberOfItemsPerPage }) =>
-      numberOfItemsPerPage}, 1fr);
-    grid-gap: ${pxToRem(
-      CONTAINER_PADDING_MOBILE / 2 - OUTLINE_PLUS_OFFSET * 2,
-    )};
+    grid-template-columns: repeat(
+      ${({ numberOfItemsPerPage }) => numberOfItemsPerPage},
+      1fr
+    );
+    grid-gap: ${pxToRem(CONTAINER_PADDING_THIN / 2 - OUTLINE_PLUS_OFFSET * 2)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       grid-gap: ${pxToRem(CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2)};
@@ -471,7 +464,7 @@ export const StyledCarouselContainer = styled.div`
     -ms-grid-columns: ${({ numberOfItemsPerPage }) =>
       numberOfItemsPerPage > 1
         ? css`
-    (1fr ${pxToRem(CONTAINER_PADDING_MOBILE / 2)})[${
+    (1fr ${pxToRem(CONTAINER_PADDING_THIN / 2)})[${
             numberOfItemsPerPage - 1
           }] 1fr;
     `

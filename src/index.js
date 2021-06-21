@@ -311,6 +311,12 @@ Object.defineProperty(exports, "CartRewardCard", {
     return _cartRewardCard.CartRewardCard;
   }
 });
+Object.defineProperty(exports, "ContributionCard", {
+  enumerable: true,
+  get: function get() {
+    return _contributionCard.ContributionCard;
+  }
+});
 Object.defineProperty(exports, "RewardEdition", {
   enumerable: true,
   get: function get() {
@@ -539,6 +545,12 @@ Object.defineProperty(exports, "TextInputWithButton", {
     return _textInputWithButton.TextInputWithButton;
   }
 });
+Object.defineProperty(exports, "TextInputWithIcon", {
+  enumerable: true,
+  get: function get() {
+    return _textInputWithIcon.TextInputWithIcon;
+  }
+});
 Object.defineProperty(exports, "TextInputWithLimit", {
   enumerable: true,
   get: function get() {
@@ -615,6 +627,12 @@ Object.defineProperty(exports, "Hero", {
   enumerable: true,
   get: function get() {
     return _hero.Hero;
+  }
+});
+Object.defineProperty(exports, "RocketIllustration", {
+  enumerable: true,
+  get: function get() {
+    return _rocketIllustration.RocketIllustration;
   }
 });
 Object.defineProperty(exports, "ImageCropper", {
@@ -893,6 +911,12 @@ Object.defineProperty(exports, "SearchInput", {
     return _searchInput.SearchInput;
   }
 });
+Object.defineProperty(exports, "VerticalProgress", {
+  enumerable: true,
+  get: function get() {
+    return _verticalProgress.VerticalProgress;
+  }
+});
 Object.defineProperty(exports, "VerticalStepper", {
   enumerable: true,
   get: function get() {
@@ -977,16 +1001,22 @@ Object.defineProperty(exports, "titleModifierStyles", {
     return _titleModifierStyles.titleModifierStyles;
   }
 });
-Object.defineProperty(exports, "paragraphModifierStyles", {
+Object.defineProperty(exports, "titleModifiersNames", {
   enumerable: true,
   get: function get() {
-    return _modifierStyles2.modifierStyles;
+    return _titleModifierStyles.titleModifiersNames;
   }
 });
 Object.defineProperty(exports, "titleHelperModifierStyles", {
   enumerable: true,
   get: function get() {
-    return _modifierStyles3.modifierStyles;
+    return _titleModifierStyles.titleHelperModifierStyles;
+  }
+});
+Object.defineProperty(exports, "paragraphModifierStyles", {
+  enumerable: true,
+  get: function get() {
+    return _modifierStyles2.modifierStyles;
   }
 });
 Object.defineProperty(exports, "BasicUploader", {
@@ -1355,6 +1385,12 @@ Object.defineProperty(exports, "LockIcon", {
     return _lockIcon.LockIcon;
   }
 });
+Object.defineProperty(exports, "LockOutlineIcon", {
+  enumerable: true,
+  get: function get() {
+    return _lockOutlineIcon.LockOutlineIcon;
+  }
+});
 Object.defineProperty(exports, "LoginIcon", {
   enumerable: true,
   get: function get() {
@@ -1419,6 +1455,12 @@ Object.defineProperty(exports, "QuestionMarkIcon", {
   enumerable: true,
   get: function get() {
     return _questionMarkIcon.QuestionMarkIcon;
+  }
+});
+Object.defineProperty(exports, "RefundIcon", {
+  enumerable: true,
+  get: function get() {
+    return _refundIcon.RefundIcon;
   }
 });
 Object.defineProperty(exports, "RocketCircleIcon", {
@@ -1575,6 +1617,12 @@ Object.defineProperty(exports, "ShieldIcon", {
   enumerable: true,
   get: function get() {
     return _shieldIcon.ShieldIcon;
+  }
+});
+Object.defineProperty(exports, "ShieldCheckIcon", {
+  enumerable: true,
+  get: function get() {
+    return _shieldCheckIcon.ShieldCheckIcon;
   }
 });
 Object.defineProperty(exports, "PeopleIcon", {
@@ -1743,6 +1791,18 @@ Object.defineProperty(exports, "DROPDOWN_LAST_FOCUS_REACHED_EVENT", {
   enumerable: true,
   get: function get() {
     return _events.DROPDOWN_LAST_FOCUS_REACHED_EVENT;
+  }
+});
+Object.defineProperty(exports, "DASHBOARD_HIDE_CONTENT_EVENT", {
+  enumerable: true,
+  get: function get() {
+    return _events.DASHBOARD_HIDE_CONTENT_EVENT;
+  }
+});
+Object.defineProperty(exports, "DASHBOARD_SHOW_CONTENT_EVENT", {
+  enumerable: true,
+  get: function get() {
+    return _events.DASHBOARD_SHOW_CONTENT_EVENT;
   }
 });
 Object.defineProperty(exports, "dispatchEvent", {
@@ -1964,6 +2024,8 @@ var _backingCard = require("./components/cards/backing-card");
 
 var _cartRewardCard = require("./components/cards/cart-reward-card");
 
+var _contributionCard = require("./components/cards/contribution-card");
+
 var _rewardEdition = require("./components/cards/reward-edition");
 
 var _teamCard = require("./components/cards/team-card");
@@ -2040,6 +2102,8 @@ var _textInput = require("./components/form/text-input");
 
 var _textInputWithButton = require("./components/form/text-input-with-button");
 
+var _textInputWithIcon = require("./components/form/text-input-with-icon");
+
 var _textInputWithLimit = require("./components/form/text-input-with-limit");
 
 var _textInputWithUnit = require("./components/form/text-input-with-unit");
@@ -2061,6 +2125,8 @@ var _stickyContainer = require("./components/grid/sticky-container");
 var _adaptableGrid = require("./components/grid/adaptable-grid");
 
 var _hero = require("./components/heroes/hero");
+
+var _rocketIllustration = require("./components/illustrations/rocket-illustration");
 
 var _imageCropper = require("./components/images/image-cropper");
 
@@ -2142,6 +2208,8 @@ var _simplePopover = require("./components/popovers/simple-popover");
 
 var _searchInput = require("./components/search/search-input");
 
+var _verticalProgress = require("./components/steppers/vertical-progress");
+
 var _verticalStepper = require("./components/steppers/vertical-stepper");
 
 var _stepper = require("./components/steppers/stepper");
@@ -2171,8 +2239,6 @@ var _titleWithStroke = require("./components/typography/title-with-stroke");
 var _titleModifierStyles = require("./components/typography/common/title-modifier-styles");
 
 var _modifierStyles2 = require("./components/typography/paragraph/helpers/modifier-styles");
-
-var _modifierStyles3 = require("./components/typography/title/helpers/modifier-styles");
 
 var _basicUploader = require("./components/uploaders/basic-uploader");
 
@@ -2294,6 +2360,8 @@ var _locationIcon = require("./components/icons/location-icon");
 
 var _lockIcon = require("./components/icons/lock-icon");
 
+var _lockOutlineIcon = require("./components/icons/lock-outline-icon");
+
 var _loginIcon = require("./components/icons/login-icon");
 
 var _maestroIcon = require("./components/icons/maestro-icon");
@@ -2315,6 +2383,8 @@ var _phoneIcon = require("./components/icons/phone-icon");
 var _pinterestIcon = require("./components/icons/pinterest-icon");
 
 var _questionMarkIcon = require("./components/icons/question-mark-icon");
+
+var _refundIcon = require("./components/icons/refund-icon");
 
 var _rocketCircleIcon = require("./components/icons/rocket-circle-icon");
 
@@ -2367,6 +2437,8 @@ var _fileIcon = require("./components/icons/file-icon");
 var _loudspeakerIcon = require("./components/icons/loudspeaker-icon");
 
 var _shieldIcon = require("./components/icons/shield-icon");
+
+var _shieldCheckIcon = require("./components/icons/shield-check-icon");
 
 var _peopleIcon = require("./components/icons/people-icon");
 

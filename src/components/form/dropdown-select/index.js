@@ -57,11 +57,14 @@ var DropdownSelect = function DropdownSelect(_ref) {
       a11ySelectionMessageDisplayer = props.a11ySelectionMessageDisplayer,
       defaultSelectedValue = props.defaultSelectedValue,
       onChange = props.onChange,
+      onBlur = props.onBlur,
       onInputChange = props.onInputChange,
       onMenuClose = props.onMenuClose,
       onMenuOpen = props.onMenuOpen,
       openOnLoad = props.openOnLoad,
-      menuZIndex = props.menuZIndex;
+      menuZIndex = props.menuZIndex,
+      className = props.className,
+      value = props.value;
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,
@@ -73,8 +76,6 @@ var DropdownSelect = function DropdownSelect(_ref) {
     return item ? String(item.label) : '';
   };
 
-  var initialSelectedItem = (0, _find.default)(['value', defaultSelectedValue])(options);
-
   var onSelectedItemChange = function onSelectedItemChange(changes) {
     onChange(changes.selectedItem);
     onInputChange({
@@ -84,7 +85,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
   // of options with a `level` of 1, 2 or null.
 
 
-  var flattenedOptions = function flattenedOptions() {
+  var flattenedOptions = function () {
     var flatOptions = [];
     options.map(function (option) {
       if (option.children) {
@@ -99,28 +100,36 @@ var DropdownSelect = function DropdownSelect(_ref) {
       }
     });
     return flatOptions;
-  };
+  }();
+
+  var initialSelectedItem = (0, _find.default)(['value', defaultSelectedValue])(flattenedOptions);
+  var selectedItemByValue = (0, _find.default)(['value', value])(flattenedOptions);
 
   var onIsOpenChange = function onIsOpenChange(changes) {
     if (changes.isOpen) return onMenuOpen({
       changes: changes
     });
+    setTimeout(function () {
+      return onBlur(changes.selectedItem);
+    }, 0);
     return onMenuClose({
       changes: changes
     });
   };
 
-  var _useSelect = (0, _downshift.useSelect)({
+  var _useSelect = (0, _downshift.useSelect)((0, _extends2.default)({
     id: "".concat(id, "_element"),
     toggleButtonId: id,
-    items: flattenedOptions(),
+    items: flattenedOptions,
     getA11ySelectionMessage: getA11ySelectionMessage,
     itemToString: itemToString,
     initialSelectedItem: initialSelectedItem,
     onSelectedItemChange: onSelectedItemChange,
     onIsOpenChange: onIsOpenChange,
     initialIsOpen: openOnLoad
-  }),
+  }, selectedItemByValue && {
+    selectedItem: selectedItemByValue
+  })),
       isOpen = _useSelect.isOpen,
       selectedItem = _useSelect.selectedItem,
       getToggleButtonProps = _useSelect.getToggleButtonProps,
@@ -133,7 +142,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
     getLabelProps && labelPropsGetter(getLabelProps);
   }, [getLabelProps]);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledDropdown, {
-    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), {
+    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), className, {
       'k-Form-Dropdown--isOpen': isOpen,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
@@ -172,7 +181,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
     "aria-label": a11yStatusValid
   }))), /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({
     className: "k-Form-Dropdown__list"
-  }, getMenuProps()), isOpen && flattenedOptions().map(function (item, index) {
+  }, getMenuProps()), isOpen && flattenedOptions.map(function (item, index) {
     return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
       className: (0, _classnames.default)('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_".concat(item.level || 1), {
         'k-Form-Dropdown__item--higlighted': highlightedIndex === index
@@ -202,6 +211,7 @@ DropdownSelect.defaultProps = {
     return "".concat(item, " is now selected.");
   },
   onChange: function onChange() {},
+  onBlur: function onBlur() {},
   onInputChange: function onInputChange() {},
   onMenuClose: function onMenuClose() {},
   onMenuOpen: function onMenuOpen() {},
@@ -223,6 +233,7 @@ DropdownSelect.propTypes = {
   a11yStatusValid: _propTypes.default.string,
   a11ySelectionMessageDisplayer: _propTypes.default.func,
   onChange: _propTypes.default.func,
+  onBlur: _propTypes.default.func,
   onInputChange: _propTypes.default.func,
   onMenuClose: _propTypes.default.func,
   onMenuOpen: _propTypes.default.func,

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import throttle from 'lodash/throttle'
 import styled from 'styled-components'
+import { domElementHelper } from '../../../helpers/dom/element-helper'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
@@ -86,7 +87,8 @@ const StyledWrapper = styled.span`
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       border-radius: ${pxToRem(8)};
       position: absolute;
-      top: calc(var(--toggletipAction-size) / 2);
+      top: 50%;
+      transform: translateY(-50%);
       left: calc(100% + ${pxToRem(20)});
       transform: translateY(-50%);
       min-width: ${pxToRem(220)};
@@ -152,6 +154,7 @@ export const Toggletip = ({
   actionLabel,
   actionProps,
   bubbleProps,
+  targetElement,
   ...props
 }) => {
   const [isHover, setHoverState] = useState(false)
@@ -164,10 +167,10 @@ export const Toggletip = ({
   const actionElement = useRef(null)
 
   const {
-    bubbleClassName,
-    bubbleZIndex,
-    bubbleColor,
-    bubbleStyle,
+    className: bubbleClassName,
+    zIndex: bubbleZIndex,
+    color: bubbleColor,
+    style: bubbleStyle,
     ...otherBubbleProps
   } = bubbleProps
 
@@ -182,9 +185,11 @@ export const Toggletip = ({
   }, [isHover, hasBeenClicked])
 
   useEffect(() => {
+    if (!domElementHelper.canUseDom()) return
+
     document.addEventListener('click', handleOutsideClick)
     document.addEventListener('keydown', handleKeydownEscape)
-    document.addEventListener('DOMContentLoaded', updateCoordinates)
+    window.addEventListener('DOMContentLoaded', updateCoordinates)
     window.addEventListener('resize', throttleUpdateCoordinates)
 
     const bubbleElement = actionElement.current?.nextElementSibling?.children[0]
@@ -197,10 +202,21 @@ export const Toggletip = ({
     return () => {
       document.removeEventListener('click', handleOutsideClick)
       document.removeEventListener('keydown', handleKeydownEscape)
-      document.removeEventListener('DOMContentLoaded', updateCoordinates)
+      window.removeEventListener('DOMContentLoaded', updateCoordinates)
       window.removeEventListener('resize', throttleUpdateCoordinates)
     }
   }, [isOpen])
+
+  useEffect(() => {
+    if (!domElementHelper.canUseDom()) return
+
+    if (
+      document.readyState === 'complete' ||
+      document.readyState === 'interactive'
+    ) {
+      updateCoordinates()
+    }
+  }, [])
 
   const updateCoordinates = () => {
     if (!actionElement.current) return
@@ -225,7 +241,7 @@ export const Toggletip = ({
     setBubbleRightLimit(shouldDisplayBubbleRightLimit)
   }
 
-  const throttleUpdateCoordinates = throttle(updateCoordinates, 50)
+  const throttleUpdateCoordinates = throttle(updateCoordinates, 100)
 
   const handleOutsideClick = event => {
     if (actionElement.current !== event.target) {
@@ -270,25 +286,38 @@ export const Toggletip = ({
       onMouseLeave={() => setHoverState(false)}
       {...props}
     >
-      <button
-        {...actionProps}
-        className={classNames(
-          'k-Toggletip__action',
-          'k-u-reset-button',
-          actionProps.className,
-        )}
-        type="button"
-        aria-label={actionLabel}
-        onClick={handleClick}
-        onBlur={() => setOpen(false)}
-        ref={actionElement}
-        style={{
-          '--toggletipAction-color': actionProps.color || null,
-          ...actionProps.style,
-        }}
-      >
-        <ButtonIcon modifier={modifier} />
-      </button>
+      {!!targetElement && React.isValidElement(targetElement) ? (
+        <button
+          {...actionProps}
+          ref={actionElement}
+          type="button"
+          aria-label={actionLabel}
+          className="k-u-reset-button"
+        >
+          {targetElement}
+        </button>
+      ) : (
+        <button
+          {...actionProps}
+          className={classNames(
+            'k-Toggletip__action',
+            'k-u-reset-button',
+            actionProps.className,
+          )}
+          type="button"
+          aria-label={actionLabel}
+          onClick={handleClick}
+          onBlur={() => setOpen(false)}
+          ref={actionElement}
+          style={{
+            '--toggletipAction-color': actionProps.color || null,
+            ...actionProps.style,
+          }}
+        >
+          <ButtonIcon modifier={modifier} />
+        </button>
+      )}
+
       <span role="status">
         {isOpen && (
           <span
@@ -324,6 +353,7 @@ Toggletip.defaultProps = {
   modifier: 'info',
   actionProps: {},
   bubbleProps: {},
+  targetElement: null,
 }
 
 Toggletip.propTypes = {
@@ -337,4 +367,9 @@ Toggletip.propTypes = {
   actionLabel: PropTypes.string.isRequired,
   actionProps: PropTypes.object,
   bubbleProps: PropTypes.object,
+  targetElement: PropTypes.oneOf([
+    PropTypes.element,
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]),
 }

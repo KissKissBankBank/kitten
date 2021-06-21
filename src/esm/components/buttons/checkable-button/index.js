@@ -3,15 +3,12 @@ import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutPr
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '../../../components/buttons/button';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { checkedCircleIconAsString } from '../../icons/checked-circle-icon';
 import { encodeSvgString } from '../../../helpers/utils/encode-svg';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem } from '../../../helpers/utils/typography';
-
-var checkedCircleIconStyle = function checkedCircleIconStyle(size) {
-  return css(["width:", ";height:", ";bottom:-", ";"], pxToRem(size), pxToRem(size), pxToRem(size / 2 + 1));
-};
+import classNames from 'classnames';
 
 var getCircleIcon = function getCircleIcon(color) {
   return encodeSvgString(checkedCircleIconAsString({
@@ -23,34 +20,14 @@ var getCircleIcon = function getCircleIcon(color) {
 var StyledCheckableButton = styled(Button).withConfig({
   displayName: "checkable-button__StyledCheckableButton",
   componentId: "b6e3u-0"
-})(["&::after{content:'';position:absolute;", " ", " background-repeat:no-repeat;background-position:50% 50%;opacity:0;transform-origin:50% 50%;transition:opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);transform:scale(0);}&[aria-checked]::after{opacity:1;transform:scale(1);transition-timing-function:ease,cubic-bezier(0.2,2,0.7,1);}&:focus{outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}", " &[aria-checked]:focus{outline:", " solid ", ";border-color:", ";}"], function (_ref) {
-  var size = _ref.size;
-  if (size === 'tiny') return checkedCircleIconStyle(15);
-  if (size === 'big') return checkedCircleIconStyle(24);
-  return checkedCircleIconStyle(20);
-}, function (_ref2) {
-  var modifier = _ref2.modifier,
-      disabled = _ref2.disabled;
-  var color = COLORS.primary1;
-
-  if (modifier === 'copper') {
-    color = COLORS.error;
-  }
-
-  if (disabled) {
-    color = COLORS.line2;
-  }
-
-  return css(["background-image:url(", ");"], getCircleIcon(color));
-}, pxToRem(-2), COLORS.primary4, function (_ref3) {
-  var modifier = _ref3.modifier;
-  return modifier !== 'copper' && css([":hover:not(:disabled),:focus:not(:disabled){border-color:", ";background-color:", ";color:", ";}:active:not(:disabled){border-color:", ";background-color:", ";color:", ";}"], COLORS.primary4, COLORS.background1, COLORS.primary1, COLORS.primary2, COLORS.background1, COLORS.primary2);
-}, COLORS.primary1, pxToRem(2), COLORS.primary1);
-export var CheckableButton = function CheckableButton(_ref4) {
-  var isChecked = _ref4.isChecked,
-      children = _ref4.children,
-      error = _ref4.error,
-      props = _objectWithoutProperties(_ref4, ["isChecked", "children", "error"]);
+})(["&::after{flex-shrink:0;content:'';box-sizing:border-box;border-radius:50%;width:", ";height:", ";width:var(--CheckableButton-radius);height:var(--CheckableButton-radius);background-repeat:no-repeat;background-position:50% 50%;background-size:var(--CheckableButton-radius) var(--CheckableButton-radius);}&.k-CheckableButton--bottom,&.k-CheckableButton--left[aria-checked]{&::after{background-image:url(", ");}&.k-Button--copper::after{background-image:url(", ");}&:disabled::after{background-image:url(", ");}}&.k-CheckableButton--bottom{&::after{position:absolute;bottom:-", ";bottom:calc((var(--CheckableButton-radius) / 2 + ", ") * -1);opacity:0;transform-origin:50% 50%;transition:opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);transform:scale(0);}&[aria-checked]::after{opacity:1;transform:scale(1);transition-timing-function:ease,cubic-bezier(0.2,2,0.7,1);}}&.k-CheckableButton--left{display:flex;flex-direction:row-reverse;justify-content:flex-end;padding-left:0;text-align:left;&::after{margin:0 ", ";margin:0 var(--CheckableButton-checkMargin);border:", " solid ", ";background-color:", ";transition:border-color 0.2s ease,background 0.2s ease;}&[aria-checked]::after{border-color:", ";background-color:", ";}&.k-Button--copper::after{border-color:", ";background-color:", ";}&:disabled::after{border-color:", ";background-color:", ";}}&.k-Button--micro,&.k-Button--tiny{--CheckableButton-radius:", ";--CheckableButton-checkMargin:", ";}&.k-Button--regular{--CheckableButton-radius:", ";--CheckableButton-checkMargin:", ";}&.k-Button--big,&.k-Button--huge,&.k-Button--giant{--CheckableButton-radius:", ";--CheckableButton-checkMargin:", ";}&.k-Button--andromeda{&.k-Button--lithium,&.k-Button--hydrogen{&:not(:disabled){&:hover,&:focus{border-color:", ";background-color:", ";color:", ";&:not([aria-checked])::after{border-color:", ";}}&:active{border-color:", ";background-color:", ";color:", ";}}}&:focus{outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&[aria-checked]:focus{outline:", " solid ", ";border-color:", ";color:", ";}}&.k-Button--orion{&.k-Button--lithium,&.k-Button--hydrogen{&:not(:disabled){&:hover{border-color:", ";background-color:", ";color:", ";&:not([aria-checked])::after{border-color:", ";}}&:focus{border-color:", ";background-color:", ";color:", ";}&[aria-checked]{border-color:", ";color:", ";}&:active{border-color:", ";background-color:", ";}}}&[aria-checked]:focus{border-color:", ";}}"], pxToRem(20), pxToRem(20), getCircleIcon(COLORS.primary1), getCircleIcon(COLORS.error), getCircleIcon(COLORS.line2), pxToRem(20 / 2 + 1), pxToRem(1), pxToRem(15), pxToRem(2), COLORS.line2, COLORS.background1, COLORS.primary1, COLORS.primary1, COLORS.error, COLORS.background1, COLORS.background1, COLORS.line2, pxToRem(15), pxToRem(10), pxToRem(20), pxToRem(15), pxToRem(24), pxToRem(20), COLORS.primary4, COLORS.background1, COLORS.primary1, COLORS.primary4, COLORS.primary2, COLORS.background1, COLORS.primary2, pxToRem(-2), COLORS.primary4, COLORS.primary1, pxToRem(2), COLORS.primary1, COLORS.primary1, COLORS.primary4, COLORS.background1, COLORS.font1, COLORS.primary4, COLORS.line1, COLORS.background1, COLORS.font1, COLORS.primary1, COLORS.font1, COLORS.primary2, COLORS.background1, COLORS.primary1);
+export var CheckableButton = function CheckableButton(_ref) {
+  var checkPosition = _ref.checkPosition,
+      isChecked = _ref.isChecked,
+      className = _ref.className,
+      children = _ref.children,
+      error = _ref.error,
+      props = _objectWithoutProperties(_ref, ["checkPosition", "isChecked", "className", "children", "error"]);
 
   var checkedModifier = function () {
     switch (true) {
@@ -65,7 +42,9 @@ export var CheckableButton = function CheckableButton(_ref4) {
     }
   }();
 
-  return /*#__PURE__*/React.createElement(StyledCheckableButton, _extends({}, props, {
+  return /*#__PURE__*/React.createElement(StyledCheckableButton, _extends({
+    className: classNames('k-CheckableButton', className, "k-CheckableButton--".concat(checkPosition))
+  }, props, {
     "aria-checked": isChecked || null,
     modifier: checkedModifier
   }), children);
@@ -73,10 +52,12 @@ export var CheckableButton = function CheckableButton(_ref4) {
 CheckableButton.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.bool,
-  isChecked: PropTypes.bool
+  isChecked: PropTypes.bool,
+  checkPosition: PropTypes.oneOf(['bottom', 'left'])
 };
 CheckableButton.defaultProps = {
   disabled: false,
   error: false,
-  isChecked: false
+  isChecked: false,
+  checkPosition: 'bottom'
 };

@@ -11,8 +11,8 @@ import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledRangeSlider = styled.div`
   --range-thumb-position: calc(
-      ${pxToRem(20)} + var(--range-input-ratio) * (100% - (2 * ${pxToRem(20)}))
-    );
+    ${pxToRem(20)} + var(--range-input-ratio) * (100% - (2 * ${pxToRem(20)}))
+  );
   position: relative;
 
   &::before,
@@ -107,6 +107,21 @@ const StyledRangeSlider = styled.div`
     &:active::-webkit-slider-thumb {
       background-color: ${COLORS.primary2};
     }
+
+    &:disabled::-moz-range-track {
+      cursor: not-allowed;
+    }
+    &:disabled::-webkit-slider-runnable-track {
+      cursor: not-allowed;
+    }
+    &:disabled::-moz-range-thumb {
+      background-color: ${COLORS.line2};
+      cursor: not-allowed;
+    }
+    &:disabled::-webkit-slider-thumb {
+      background-color: ${COLORS.line2};
+      cursor: not-allowed;
+    }
   }
 
   .k-RangeSlider__rangeThumbText {
@@ -140,11 +155,19 @@ const StyledRangeSlider = styled.div`
     }
   }
 
+  &.k-RangeSlider--disabled {
+    &::after {
+      background: ${COLORS.line2};
+    }
+    .k-RangeSlider__rangeThumbText {
+      color: ${COLORS.font2};
+    }
+  }
+
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     --range-thumb-position: calc(
       ${pxToRem(25)} + var(--range-input-ratio) * (100% - (2 * ${pxToRem(25)}))
     );
-
 
     &::before,
     &::after {
@@ -197,6 +220,7 @@ const StyledRangeSlider = styled.div`
 `
 
 export const RangeSlider = ({
+  disabled,
   onChange,
   initialValue,
   wrapperProps,
@@ -209,11 +233,11 @@ export const RangeSlider = ({
   const changeEvent = createEvent('change')
 
   useEffect(() => {
-    inputEl &&
+    inputEl?.current &&
       nativeInputValueSetter &&
       nativeInputValueSetter.call(inputEl.current, initialValue)
 
-    inputEl && inputEl.current.dispatchEvent(changeEvent)
+    inputEl?.current && inputEl.current.dispatchEvent(changeEvent)
   }, [initialValue, inputEl])
 
   const getRatioFrom = value => {
@@ -230,6 +254,7 @@ export const RangeSlider = ({
     <StyledRangeSlider
       style={{ '--range-input-ratio': inputRatio }}
       className={classNames('k-RangeSlider', {
+        'k-RangeSlider--disabled': disabled,
         'k-RangeSlider--rangeThumbText-top':
           rangeThumbText && rangeThumbPosition === 'top',
         'k-RangeSlider--rangeThumbText-bottom':
@@ -237,7 +262,13 @@ export const RangeSlider = ({
       })}
       {...wrapperProps}
     >
-      <input ref={inputEl} type="range" onChange={handleChange} {...props} />
+      <input
+        disabled={disabled}
+        ref={inputEl}
+        type="range"
+        onChange={handleChange}
+        {...props}
+      />
       {rangeThumbText && (
         <span className="k-RangeSlider__rangeThumbText">{rangeThumbText}</span>
       )}
@@ -246,6 +277,7 @@ export const RangeSlider = ({
 }
 
 RangeSlider.propTypes = {
+  disabled: PropTypes.bool,
   initialValue: PropTypes.number,
   min: PropTypes.number,
   max: PropTypes.number,
@@ -258,6 +290,7 @@ RangeSlider.propTypes = {
 }
 
 RangeSlider.defaultProps = {
+  disabled: false,
   initialValue: 0,
   min: 0,
   max: 100,

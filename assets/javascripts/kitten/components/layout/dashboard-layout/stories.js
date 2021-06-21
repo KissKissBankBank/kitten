@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { select, boolean } from '@storybook/addon-knobs'
 
@@ -24,9 +24,62 @@ import {
   PeopleIcon,
   StatsIcon,
   SpeechBubbleIcon,
+  HeaderNav,
+  HeaderMenu,
+  KissKissBankBankLogo,
+  domElementHelper,
+  PasswordIcon,
+  DropdownSelectWithInput,
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  InstagramIcon,
+  YoutubeIcon,
+  Alert,
 } from '../../..'
 
+const options = [
+  {
+    value: 'facebook',
+    label: 'https://www.facebook.com/',
+    icon: <FacebookIcon width="8" height="15" />,
+  },
+  {
+    value: 'twitter',
+    label: 'https://www.twitter.com/',
+    icon: <TwitterIcon width="15" height="14" />,
+  },
+  {
+    value: 'linkedin',
+    label: 'https://www.linkedin.com/',
+    icon: <LinkedinIcon width="14" height="14" />,
+  },
+  {
+    value: 'instagram',
+    label: 'https://www.instagram.com/',
+    icon: <InstagramIcon width="17" height="17" />,
+  },
+  {
+    value: 'youtube',
+    label: 'https://www.youtube.com/',
+    icon: <YoutubeIcon width="17" height="12" />,
+  },
+  {
+    value: 'website',
+    label: 'https://www.…',
+    icon: <GlobeIcon width="16" height="16" />,
+  },
+]
+
 import { Default as Table } from '../../tables/list-table/list-table.stories.js'
+
+import { useWindowWidth } from '../../../helpers/utils/use-window-width-hook'
+import { useDeepCompareEffect } from '../../../helpers/utils/use-deep-compare-effect-hook'
+
+const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
+const getElementById = id => document.getElementById(id)
+const getComputedWidthElement = id =>
+  domElementHelper.getComputedWidth(getElementById(id))
 
 const CardHolder = styled.div`
   display: grid;
@@ -53,15 +106,6 @@ const CardHolder = styled.div`
   }
 `
 
-const HelpBox = styled.div`
-  height: ${pxToRem(80)};
-  background-color: rgb(255, 255, 255, 0.05);
-  padding: 0 ${pxToRem(20)};
-  display: flex;
-  align-items: center;
-  border-radius: ${pxToRem(8)};
-`
-
 export default {
   title: 'Layout/DashboardLayout',
   component: DashboardLayout,
@@ -78,7 +122,7 @@ export const Default = () => {
     <DashboardLayout
       backLinkProps={{
         href: '#',
-        children: 'Retour',
+        children: 'Retour au site',
       }}
       buttonProps={{
         openLabel: 'Ouvrir le menu',
@@ -87,9 +131,25 @@ export const Default = () => {
       quickAccessLinkText="Accéder au contenu"
       fullHeightContent={selectedView === 'flow'}
     >
+      {boolean('Display SiteHeader', true) && (
+        <DashboardLayout.SiteHeader className="k-u-hidden@m-down">
+          <SiteHeaderComponent />
+        </DashboardLayout.SiteHeader>
+      )}
+
       <DashboardLayout.Header>
         <AvatarWithTextAndBadge>
-          <AvatarWithTextAndBadge.Image src="/kitten.jpg" alt="" size="big" />
+          <AvatarWithTextAndBadge.Image
+            className="k-u-hidden@l-up"
+            src="/kitten.jpg"
+            alt=""
+          />
+          <AvatarWithTextAndBadge.Image
+            className="k-u-hidden@m-down"
+            src="/kitten.jpg"
+            alt=""
+            size="big"
+          />
 
           <AvatarWithTextAndBadge.Text
             withEllipsisOverflow
@@ -246,27 +306,24 @@ export const Default = () => {
         }}
       </DashboardLayout.SideContent>
       <DashboardLayout.SideFooter>
-        <HelpBox>
-          <AvatarWithTextAndBadge as="a" href="#">
-            <AvatarWithTextAndBadge.Image src="/kitten.jpg" alt="" />
-
-            <AvatarWithTextAndBadge.Text>
-              <Text weight="bold" color="background1" size="tiny">
-                Besoin d’aide ?
-              </Text>
-              <br />
-              <Text weight="bold" color="primary1" size="tiny">
-                Contacter votre coach
-              </Text>
-            </AvatarWithTextAndBadge.Text>
-          </AvatarWithTextAndBadge>
-        </HelpBox>
+        <Button modifier="boron" fluid variant="orion">
+          <PasswordIcon />
+          <span>Voir ma page projet</span>
+        </Button>
       </DashboardLayout.SideFooter>
 
-      {({ isSidebarOpen }) => {
-        if (selectedView !== 'flow') return null
-        return <FlowExample isSidebarOpen={isSidebarOpen} />
-      }}
+      {boolean('Display Alerts', false) && (
+        <DashboardLayout.Alerts>
+          <Alert closeButton info>
+            Voilà une info
+          </Alert>
+          <Alert closeButton error>
+            Voilà une alerte
+          </Alert>
+        </DashboardLayout.Alerts>
+      )}
+
+      {selectedView === 'flow' && <FlowExample />}
       {selectedView === 'dashboard' && <DashExample />}
       {selectedView === 'table' && <TableExample />}
     </DashboardLayout>
@@ -309,7 +366,7 @@ const TableExample = () => (
   </>
 )
 
-const FlowExample = ({ isSidebarOpen }) => (
+const FlowExample = () => (
   <DashboardLayout.Flow loading={boolean('loading', false)}>
     <DashboardLayout.Flow.Content>
       <Title
@@ -319,13 +376,23 @@ const FlowExample = ({ isSidebarOpen }) => (
         Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
         ridiculus mus.
       </Title>
-      <p>
+      <p className="k-u-weight-light">
         Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
         dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel
         augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel
         augue laoreet rutrum faucibus dolor auctor.
       </p>
-      <p>
+      <DropdownSelectWithInput
+        id="DropdownSelectWithInput"
+        hideLabel
+        labelText="Facebook"
+        options={options}
+        highlightOptionBox
+        defaultSelectedValue="facebook"
+        deactivateDropdown
+        className="k-u-margin-bottom-triple"
+      />
+      <p className="k-u-weight-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis,
         est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
         sem nec elit. Sed posuere consectetur est at lobortis. Lorem ipsum dolor
@@ -333,7 +400,7 @@ const FlowExample = ({ isSidebarOpen }) => (
         varius blandit sit amet non magna. Etiam porta sem malesuada magna
         mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
-      <p>
+      <p className="k-u-weight-light">
         Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio,
         dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus
         magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel
@@ -342,14 +409,14 @@ const FlowExample = ({ isSidebarOpen }) => (
         amet non magna. Cum sociis natoque penatibus et magnis dis parturient
         montes, nascetur ridiculus mus.
       </p>
-      <p>
+      <p className="k-u-weight-light">
         Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
         risus varius blandit sit amet non magna. Maecenas sed diam eget risus
         varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed
         consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
         venenatis vestibulum.
       </p>
-      <p>
+      <p className="k-u-weight-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo
         quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
         Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna
@@ -358,7 +425,7 @@ const FlowExample = ({ isSidebarOpen }) => (
         est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
         sem nec elit.
       </p>
-      <p>
+      <p className="k-u-weight-light">
         Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio,
         dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus
         magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel
@@ -367,14 +434,14 @@ const FlowExample = ({ isSidebarOpen }) => (
         amet non magna. Cum sociis natoque penatibus et magnis dis parturient
         montes, nascetur ridiculus mus.
       </p>
-      <p>
+      <p className="k-u-weight-light">
         Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
         risus varius blandit sit amet non magna. Maecenas sed diam eget risus
         varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed
         consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
         venenatis vestibulum.
       </p>
-      <p>
+      <p className="k-u-weight-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo
         quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
         Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna
@@ -388,7 +455,6 @@ const FlowExample = ({ isSidebarOpen }) => (
       mobileAsideProps={{
         openLabel: 'Open help',
         closeLabel: 'Close help',
-        shouldHideButton: isSidebarOpen,
       }}
     >
       <DashboardLayout.Flow.AsideCard>
@@ -399,26 +465,27 @@ const FlowExample = ({ isSidebarOpen }) => (
           Side content in Paragraph
         </DashboardLayout.Flow.AsideCard.Paragraph>
         <DashboardLayout.Flow.AsideCard.List>
-          <li>Side content in List (item 1)</li>
-          <li>Side content in List (item 2)</li>
+          <li className="k-u-weight-light">Side content in List (item 1)</li>
+          <li className="k-u-weight-light">Side content in List (item 2)</li>
         </DashboardLayout.Flow.AsideCard.List>
       </DashboardLayout.Flow.AsideCard>
     </DashboardLayout.Flow.Aside>
     <DashboardLayout.Flow.Nav>
-      <Button
-        modifier="hydrogen"
-        variant="orion"
-        big
-        type="button"
-        disabled={boolean('loading', false)}
-      >
-        Back
-      </Button>
-
+      {boolean('Show 2 buttons', true) && (
+        <Button
+          modifier="hydrogen"
+          variant="orion"
+          size="big"
+          type="button"
+          disabled={boolean('loading', false)}
+        >
+          Back
+        </Button>
+      )}
       <Button
         modifier="helium"
         variant="orion"
-        big
+        size="big"
         type="button"
         disabled={boolean('loading', false)}
       >
@@ -438,3 +505,109 @@ export const Flow = () => (
     <FlowExample />
   </FlowStoryContainer>
 )
+
+const SiteHeaderComponent = () => {
+  const [userMenuWidth, setUserMenuWidth] = useState(null)
+  const windowWidth = useWindowWidth()
+
+  useDeepCompareEffect(() => {
+    setTimeout(() => {
+      setUserMenuWidth(
+        getComputedWidthElement(`${HEADER_NAV_ID}UserMenu`) || '0',
+      )
+    }, 100)
+  }, [windowWidth])
+
+  return (
+    <HeaderNav
+      id={HEADER_NAV_ID}
+      isLogged={true}
+      isFixed="always"
+      quickAccessProps={{
+        href: '#mainContent',
+        text: 'Aller au contenu principal',
+        zIndex: 300,
+      }}
+      size="small"
+      borderStyle="border"
+    >
+      <HeaderNav.Logo href="#">
+        <KissKissBankBankLogo height="25" className="k-u-margin-left-double" />
+      </HeaderNav.Logo>
+
+      <HeaderNav.Right>
+        <HeaderNav.Logged>
+          <HeaderNav.UserMenu dropdownContentWidth={userMenuWidth}>
+            <HeaderNav.UserMenu.Button
+              hasArrow
+              backgroundColor={COLORS.background1}
+              backgroundColorHover={COLORS.line1}
+              backgroundColorActive={COLORS.line1}
+            >
+              <AvatarWithTextAndBadge>
+                <AvatarWithTextAndBadge.Image src="/kitten.jpg">
+                  <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
+                </AvatarWithTextAndBadge.Image>
+
+                <AvatarWithTextAndBadge.Text
+                  className="k-u-hidden@xs-down"
+                  withEllipsisOverflow={true}
+                >
+                  <Text lineHeight="normal" weight="regular">
+                    Jean Charles Édouard
+                  </Text>
+                </AvatarWithTextAndBadge.Text>
+              </AvatarWithTextAndBadge>
+            </HeaderNav.UserMenu.Button>
+
+            <HeaderNav.UserMenu.Navigation>
+              <HeaderMenu
+                noBorder
+                borderSide={false}
+                backgroundColors={{
+                  hover: COLORS.background1,
+                }}
+              >
+                <HeaderMenu.Item href="#">Mon espace personnel</HeaderMenu.Item>
+                <HeaderMenu.Item href="#">Mes projets</HeaderMenu.Item>
+                <HeaderMenu.Item size="tiny" href="#">
+                  Gluten Mag
+                </HeaderMenu.Item>
+                <HeaderMenu.Item size="tiny" href="#">
+                  Kallix — Mobilier de bureau pour le télétravail
+                </HeaderMenu.Item>
+                <HeaderMenu.Item size="tiny" href="#">
+                  Mon premier court-métrage
+                </HeaderMenu.Item>
+                <HeaderMenu.Item href="#">Mes contributions</HeaderMenu.Item>
+                <HeaderMenu.Item href="#">Mes messages</HeaderMenu.Item>
+                <HeaderMenu.Item href="#">Modifier mon profil</HeaderMenu.Item>
+                <HeaderMenu.Item button modifier="helium" href="#">
+                  Mon projet en cours
+                </HeaderMenu.Item>
+                <HeaderMenu.Item
+                  href="#"
+                  className="k-u-background-color-background3--important"
+                >
+                  Déconnexion
+                </HeaderMenu.Item>
+              </HeaderMenu>
+            </HeaderNav.UserMenu.Navigation>
+          </HeaderNav.UserMenu>
+        </HeaderNav.Logged>
+
+        <HeaderNav.LoggedOut>
+          <HeaderNav.Button
+            icon={<>🐱</>}
+            backgroundColor={COLORS.primary1}
+            backgroundColorHover={COLORS.primary2}
+            color={COLORS.background1}
+            text="Se connecter / S'inscrire"
+            href="#"
+            hiddenText={{ max: 'xs' }}
+          />
+        </HeaderNav.LoggedOut>
+      </HeaderNav.Right>
+    </HeaderNav>
+  )
+}

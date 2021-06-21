@@ -98,7 +98,7 @@ var checkPageLoop = function checkPageLoop(numberOfPages, newPage) {
 exports.checkPageLoop = checkPageLoop;
 
 var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess) {
-  if (viewportIsXSOrLess) return _gridConfig.CONTAINER_PADDING_MOBILE / 2 - _styles.OUTLINE_PLUS_OFFSET * 2;
+  if (viewportIsXSOrLess) return _gridConfig.CONTAINER_PADDING_THIN / 2 - _styles.OUTLINE_PLUS_OFFSET * 2;
   if (viewportIsMOrLess) return _gridConfig.CONTAINER_PADDING / 2 - _styles.OUTLINE_PLUS_OFFSET * 2;
   return baseItemMarginBetween - _styles.OUTLINE_PLUS_OFFSET * 2;
 };

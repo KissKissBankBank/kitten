@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { text, boolean, select, number } from '@storybook/addon-knobs'
 import { DropdownSelect } from './index'
+import { Button } from '../../../index'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { ArrowIcon } from '../../icons/arrow-icon'
 import { Text } from '../../typography/text'
@@ -168,5 +169,45 @@ export const WithComponentsForLabel = () => {
         />
       </GridCol>
     </Grid>
+  )
+}
+
+export const ControlledInput = () => {
+  const [value, setValue] = useState('felt')
+
+  const getRandomOption = () => {
+    const enabledOptions = options.map(option => {
+      if (!option.disabled) return option
+    })
+
+    const randomOption =
+      enabledOptions[Math.floor(Math.random() * enabledOptions.length)]
+
+    return randomOption.value
+  }
+
+  return (
+    <>
+      <DropdownSelect
+        id="ControlledInput"
+        combobox={true}
+        options={options}
+        value={value}
+        defaultSelectedValue="focus"
+        onChange={e => {
+          console.warn('onChange', e)
+          if (!e) return
+
+          setValue(e.value)
+        }}
+        onBlur={e => console.warn('onBlur', e)}
+      />
+      <Button
+        className="k-u-margin-top-single"
+        onClick={() => setValue(getRandomOption())}
+      >
+        Change Value
+      </Button>
+    </>
   )
 }

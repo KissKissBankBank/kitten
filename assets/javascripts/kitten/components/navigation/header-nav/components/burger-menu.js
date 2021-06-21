@@ -23,7 +23,7 @@ const ButtonIcon = props => (
 )
 
 const buttonClassNames = classNames(
-  'k-Dropdown__button',
+  'k-HeaderNav__BurgerMenu__button',
   'k-ButtonIcon',
   'k-ButtonIcon--tiny',
 )

@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
-import React from 'react';
+import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -11,6 +12,7 @@ import { ScreenConfig } from '../../../../constants/screen-config';
 import { pxToRem } from '../../../../helpers/utils/typography';
 import { CrossIcon } from '../../../../components/icons/cross-icon';
 import { LightbulbIllustration as Lightbulb } from '../../../../components/illustrations/lightbulb-illustration';
+import { DASHBOARD_HIDE_CONTENT_EVENT, DASHBOARD_SHOW_CONTENT_EVENT } from '../../../../helpers/dom/events';
 var Wrapper = styled.div.withConfig({
   displayName: "side-modal__Wrapper",
   componentId: "qfidgo-0"
@@ -19,8 +21,30 @@ var Wrapper = styled.div.withConfig({
 var MobileAsideComponent = function MobileAsideComponent(_ref) {
   var children = _ref.children,
       openLabel = _ref.openLabel,
-      closeLabel = _ref.closeLabel,
-      shouldHideButton = _ref.shouldHideButton;
+      closeLabel = _ref.closeLabel;
+
+  var _useState = useState(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      shouldHideButton = _useState2[0],
+      setButtonAsHidden = _useState2[1];
+
+  useEffect(function () {
+    if (!domElementHelper.canUseDom()) return;
+    window.addEventListener(DASHBOARD_HIDE_CONTENT_EVENT, hideButton);
+    window.addEventListener(DASHBOARD_SHOW_CONTENT_EVENT, showButton);
+    return function () {
+      window.removeEventListener(DASHBOARD_HIDE_CONTENT_EVENT, hideButton);
+      window.removeEventListener(DASHBOARD_SHOW_CONTENT_EVENT, showButton);
+    };
+  }, []);
+
+  var hideButton = function hideButton() {
+    setButtonAsHidden(true);
+  };
+
+  var showButton = function showButton() {
+    setButtonAsHidden(false);
+  };
 
   var _useModal = useModal({
     id: 'DashboardLayout-sideModal',

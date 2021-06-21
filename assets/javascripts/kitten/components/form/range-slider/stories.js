@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { number, select } from '@storybook/addon-knobs'
+import { number, select, boolean } from '@storybook/addon-knobs'
 import { RangeSlider } from './index'
 
 const Container = styled.div`
@@ -16,6 +16,7 @@ export default {
 export const Default = () => (
   <Container>
     <RangeSlider
+      disabled={boolean('disabled', false)}
       min={number('min', 0)}
       max={number('max', 100)}
       step={number('step', 1)}
@@ -30,6 +31,7 @@ export const WithRangeThumbText = () => {
   return (
     <Container>
       <RangeSlider
+        disabled={boolean('disabled', false)}
         min={number('min', 0)}
         max={number('max', 100)}
         step={number('step', 1)}

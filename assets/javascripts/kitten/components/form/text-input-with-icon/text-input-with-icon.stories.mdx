@@ -10,6 +10,10 @@ import { TextInputWithIcon } from './index'
   <Story name="Example" story={stories.Default} />
 </Canvas>
 
+<Canvas>
+  <Story name="Example with validation" story={stories.Validation} />
+</Canvas>
+
 ## Import
 
 ```js
@@ -20,13 +24,13 @@ import { TextInputWithIcon } from '@kisskissbankbank/kitten'
 
 #### Default
 
-```js
+```jsx
 <TextInputWithIcon />
 ```
 
 #### Size
 
-```js
+```jsx
 <TextInputWithIcon size="tiny" />
 ```
 
@@ -34,7 +38,7 @@ import { TextInputWithIcon } from '@kisskissbankbank/kitten'
 
 ### Default props from `TextInput`
 
-```js
+```jsx
 <TextInputWithIcon valid />
 <TextInputWithIcon error />
 <TextInputWithIcon disabled />
@@ -42,8 +46,12 @@ import { TextInputWithIcon } from '@kisskissbankbank/kitten'
 
 ### With icon
 
-```js
-<TextInputWithIcon>
-  <MyIcon />
-<TextInputWithIcon>
+```jsx
+<TextInputWithIcon icon={<MyIcon />}>
+```
+
+### Icon position
+
+```jsx
+<TextInputWithIcon icon={<MyIcon />} iconPosition="right">
 ```

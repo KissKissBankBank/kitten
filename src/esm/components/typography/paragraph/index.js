@@ -1,31 +1,35 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { modifierStyles } from './helpers/modifier-styles';
+var modifierList = ['primary', 'secondary', 'tertiary', 'quaternary'];
 var StyledParagraph = styled.p.withConfig({
   displayName: "paragraph__StyledParagraph",
   componentId: "sc-1qoa9gz-0"
-})(["", ";&.k-Paragraph--noMargin{margin-top:0;margin-bottom:0;}&.k-Paragraph--normalLineHeight{line-height:normal;}&.k-Paragraph--italic{font-style:italic;}", ""], TYPOGRAPHY.fontStyles.light, function (_ref) {
-  var modifier = _ref.modifier;
-  return modifierStyles(modifier);
+})(["", ";&.k-Paragraph--noMargin{margin-top:0;margin-bottom:0;}&.k-Paragraph--normalLineHeight{line-height:normal;}&.k-Paragraph--italic{font-style:italic;}", ""], TYPOGRAPHY.fontStyles.light, function () {
+  return modifierList.map(function (modifier) {
+    return css(["&.k-Paragraph--", "{", "}"], modifier, function () {
+      return modifierStyles(modifier);
+    });
+  });
 });
-export var Paragraph = function Paragraph(_ref2) {
-  var tag = _ref2.tag,
-      modifier = _ref2.modifier,
-      noMargin = _ref2.noMargin,
-      normalLineHeight = _ref2.normalLineHeight,
-      italic = _ref2.italic,
-      className = _ref2.className,
-      other = _objectWithoutProperties(_ref2, ["tag", "modifier", "noMargin", "normalLineHeight", "italic", "className"]);
+export var Paragraph = function Paragraph(_ref) {
+  var tag = _ref.tag,
+      modifier = _ref.modifier,
+      noMargin = _ref.noMargin,
+      normalLineHeight = _ref.normalLineHeight,
+      italic = _ref.italic,
+      className = _ref.className,
+      other = _objectWithoutProperties(_ref, ["tag", "modifier", "noMargin", "normalLineHeight", "italic", "className"]);
 
   return /*#__PURE__*/React.createElement(StyledParagraph, _extends({
     as: tag,
     modifier: modifier,
-    className: classNames('k-Paragraph', className, {
+    className: classNames('k-Paragraph', className, "k-Paragraph--".concat(modifier), {
       'k-Paragraph--noMargin': noMargin,
       'k-Paragraph--normalLineHeight': normalLineHeight,
       'k-Paragraph--italic': italic
@@ -45,7 +49,7 @@ Paragraph.propTypes = {
   /**
     Title have seven modifiers. With different size depending on the device (`desktop`, `tablet` and `mobile`).
   */
-  modifier: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+  modifier: PropTypes.oneOf(modifierList),
 
   /**
     Remove default margins of `title` attribut.

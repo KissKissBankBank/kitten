@@ -31,11 +31,14 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     a11ySelectionMessageDisplayer,
     defaultSelectedValue,
     onChange,
+    onBlur,
     onInputChange,
     onMenuClose,
     onMenuOpen,
     openOnLoad,
     menuZIndex,
+    className,
+    value,
   } = props
 
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
@@ -44,8 +47,6 @@ export const DropdownSelect = ({ combobox, ...props }) => {
 
   const itemToString = item => (item ? String(item.label) : '')
 
-  const initialSelectedItem = find(['value', defaultSelectedValue])(options)
-
   const onSelectedItemChange = changes => {
     onChange(changes.selectedItem)
     onInputChange({ value: changes.selectedItem })
@@ -53,7 +54,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
 
   // Turns a hierarchy of options with `children` into a flat array
   // of options with a `level` of 1, 2 or null.
-  const flattenedOptions = () => {
+  const flattenedOptions = (function () {
     const flatOptions = []
 
     options.map(option => {
@@ -69,13 +70,16 @@ export const DropdownSelect = ({ combobox, ...props }) => {
         flatOptions.push(option)
       }
     })
-
     return flatOptions
-  }
+  })()
+  const initialSelectedItem = find(['value', defaultSelectedValue])(
+    flattenedOptions,
+  )
+  const selectedItemByValue = find(['value', value])(flattenedOptions)
 
   const onIsOpenChange = changes => {
     if (changes.isOpen) return onMenuOpen({ changes })
-
+    setTimeout(() => onBlur(changes.selectedItem), 0)
     return onMenuClose({ changes })
   }
 
@@ -90,13 +94,14 @@ export const DropdownSelect = ({ combobox, ...props }) => {
   } = useSelect({
     id: `${id}_element`,
     toggleButtonId: id,
-    items: flattenedOptions(),
+    items: flattenedOptions,
     getA11ySelectionMessage,
     itemToString,
     initialSelectedItem,
     onSelectedItemChange,
     onIsOpenChange,
     initialIsOpen: openOnLoad,
+    ...(selectedItemByValue && { selectedItem: selectedItemByValue }),
   })
 
   useEffect(() => {
@@ -109,6 +114,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
         'k-Form-Dropdown',
         `k-Form-Dropdown--${variant}`,
         `k-Form-Dropdown--${size}`,
+        className,
         {
           'k-Form-Dropdown--isOpen': isOpen,
           'k-Form-Dropdown--error': error,
@@ -168,7 +174,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
       </button>
       <ul className="k-Form-Dropdown__list" {...getMenuProps()}>
         {isOpen &&
-          flattenedOptions().map((item, index) => (
+          flattenedOptions.map((item, index) => (
             <li
               className={classNames(
                 'k-Form-Dropdown__item',
@@ -202,6 +208,7 @@ DropdownSelect.defaultProps = {
   a11yStatusValid: 'Valid',
   a11ySelectionMessageDisplayer: item => `${item} is now selected.`,
   onChange: () => {},
+  onBlur: () => {},
   onInputChange: () => {},
   onMenuClose: () => {},
   onMenuOpen: () => {},
@@ -224,6 +231,7 @@ DropdownSelect.propTypes = {
   a11yStatusValid: PropTypes.string,
   a11ySelectionMessageDisplayer: PropTypes.func,
   onChange: PropTypes.func,
+  onBlur: PropTypes.func,
   onInputChange: PropTypes.func,
   onMenuClose: PropTypes.func,
   onMenuOpen: PropTypes.func,

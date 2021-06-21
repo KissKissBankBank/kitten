@@ -40,6 +40,42 @@ describe('<DashboardLayout />', () => {
     })
   })
 
+  describe('with Header and Alert', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <DashboardLayout
+            backLinkProps={{
+              href: '#',
+              children: 'Custom backLink text',
+            }}
+            buttonProps={{
+              openLabel: 'Custom open label',
+              closeLabel: 'Custom close label',
+            }}
+            quickAccessLinkText="Custom quick access link text"
+          >
+            <DashboardLayout.SiteHeader>
+              Header content
+            </DashboardLayout.SiteHeader>
+            <DashboardLayout.Header>Header content</DashboardLayout.Header>
+            <DashboardLayout.SideContent>
+              Side content
+            </DashboardLayout.SideContent>
+            <DashboardLayout.SideFooter>Side footer</DashboardLayout.SideFooter>
+            <DashboardLayout.Alerts>Alert!</DashboardLayout.Alerts>
+
+            <p>Main content</p>
+          </DashboardLayout>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('<DefaultLayout.Flow />', () => {
     beforeEach(() => {
       component = renderer

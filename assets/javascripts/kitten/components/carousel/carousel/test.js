@@ -38,6 +38,7 @@ describe('<Carousel />', () => {
       info3: 'Lorem ipsum…',
       progress: 100,
       stretch: true,
+      progressLabel: 'Crowdfunding progress',
     },
     {
       href: 'https://kitten.kisskissbankbank.com/',
@@ -56,6 +57,7 @@ describe('<Carousel />', () => {
       info3: 'Lorem ipsum…',
       progress: 42,
       stretch: true,
+      progressLabel: 'Crowdfunding progress',
     },
   ]
 

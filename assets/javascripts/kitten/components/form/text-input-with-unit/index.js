@@ -8,7 +8,7 @@ import COLORS from '../../../constants/colors-config'
 import classNames from 'classnames'
 
 const StyledTextInputWithUnit = styled.div`
-  display: flex;
+  position: relative;
   width: 1%;
 
   &:not(.k-Form-TextInputWithUnit--hasDigits) {
@@ -16,6 +16,8 @@ const StyledTextInputWithUnit = styled.div`
   }
 
   .k-Form-TextInputWithUnit__input {
+    padding-right: ${pxToRem(50)};
+
     &[type='number'] {
       appearance: textfield;
 
@@ -29,11 +31,15 @@ const StyledTextInputWithUnit = styled.div`
 
   .k-Form-TextInputWithUnit__unit {
     display: flex;
+    z-index: 1;
+    position: absolute;
+    right: ${pxToRem(2)};
+    top: ${pxToRem(2)};
+    bottom: ${pxToRem(2)};
+    min-width: ${pxToRem(42)};
     align-items: center;
     justify-content: center;
-    background-color: ${COLORS.background1};
-    border: ${pxToRem(2)} solid ${COLORS.line1};
-    border-left: 0;
+    border-left: ${pxToRem(2)} solid ${COLORS.line1};
     border-radius: 0;
     box-sizing: border-box;
     color: ${COLORS.font1};
@@ -41,6 +47,7 @@ const StyledTextInputWithUnit = styled.div`
     transition: all 0.2s;
     font-size: ${stepToRem(0)};
     ${TYPOGRAPHY.fontStyles.regular};
+    background-color: ${COLORS.background1};
 
     &.k-Form-TextInputWithUnit__unit--valid {
       border-color: ${COLORS.tertiary2};
@@ -82,16 +89,11 @@ const StyledTextInputWithUnit = styled.div`
 
   &.k-Form-TextInputWithUnit--orion {
     .k-Form-TextInputWithUnit__input {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+      border-radius: ${pxToRem(4)};
+      padding-right: ${pxToRem(42)};
     }
     .k-Form-TextInputWithUnit__unit {
-      border-top-right-radius: ${pxToRem(4)};
-      border-bottom-right-radius: ${pxToRem(4)};
-    }
-    .k-Form-TextInputWithUnit__unit--big {
-      border-top-right-radius: ${pxToRem(8)};
-      border-bottom-right-radius: ${pxToRem(8)};
+      border: none;
     }
   }
 `
@@ -106,15 +108,18 @@ export const TextInputWithUnit = ({
   valid,
   error,
   disabled,
+  wrapperProps,
   ...others
 }) => {
   const input = useRef(null)
 
   return (
     <StyledTextInputWithUnit
+      {...wrapperProps}
       className={classNames(
         'k-Form-TextInputWithUnit',
         `k-Form-TextInputWithUnit--${variant}`,
+        wrapperProps.className,
         {
           'k-Form-TextInputWithUnit--hasDigits': !!digits,
         },
@@ -123,8 +128,12 @@ export const TextInputWithUnit = ({
       <TextInput
         ref={input}
         {...others}
+        valid={valid}
+        error={error}
+        disabled={disabled}
         size={size}
         className={classNames('k-Form-TextInputWithUnit__input', className)}
+        variant={variant}
       />
       <span
         className={classNames(
@@ -134,7 +143,7 @@ export const TextInputWithUnit = ({
             'k-Form-TextInputWithUnit__unit--valid': valid,
             'k-Form-TextInputWithUnit__unit--error': error,
             'k-Form-TextInputWithUnit__unit--disabled': disabled,
-            'k-Form-TextInputWithUnit__unit--hasUnitWord': !!unitWord,
+            'k-Form-TextInputWithUnit__unit--hasUnitWord': !unit && !!unitWord,
           },
         )}
       >
@@ -155,6 +164,7 @@ TextInputWithUnit.propTypes = {
   digits: PropTypes.number,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
+  wrapperProps: PropTypes.object,
 }
 
 TextInputWithUnit.defaultProps = {
@@ -168,4 +178,5 @@ TextInputWithUnit.defaultProps = {
   disabled: false,
   digits: null,
   variant: 'andromeda',
+  wrapperProps: {},
 }

@@ -22,21 +22,12 @@ const StyledDropdownSelectWithInput = styled.div`
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 0 ${pxToRem(10 + 10)} 0 0;
+    padding: 0 ${pxToRem(10)} 0 0;
     margin: 0;
     border: ${pxToRem(2)} solid ${COLORS.line1};
     background-color: ${COLORS.background1};
     font-size: ${stepToRem(-1)};
-
-    height: ${pxToRem(60)};
-    border-radius: ${pxToRem(6)};
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      height: ${pxToRem(70)};
-      border-radius: ${pxToRem(8)};
-    }
   }
-
 
   .k-Form-DropdownSelectWithInput__label--isHidden:not(:focus):not(:active) {
     clip: rect(0 0 0 0);
@@ -67,25 +58,16 @@ const StyledDropdownSelectWithInput = styled.div`
     align-items: center;
     ${TYPOGRAPHY.fontStyles.light}
     color: ${COLORS.font1};
-    margin: 0 ${pxToRem(15)} 0 ${pxToRem(40)};
     font-size: ${pxToRem(-2)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       font-size: ${pxToRem(-1)};
-      margin-left: ${pxToRem(60)};
     }
   }
 
   .k-Form-DropdownSelectWithInput__content--selectedItem {
     background: ${COLORS.primary5};
-    border-radius: ${pxToRem(4)};
     padding: 0 ${pxToRem(10)};
-    height: ${pxToRem(40)};
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      padding: 0 ${pxToRem(15)};
-      height: ${pxToRem(46)};
-    }
   }
 
   .k-Form-DropdownSelectWithInput__placeholder {
@@ -104,15 +86,13 @@ const StyledDropdownSelectWithInput = styled.div`
       max-height: ${pxToRem(17)};
     }
 
-    svg[fill], svg [fill] {
+    svg[fill],
+    svg [fill] {
       fill: currentColor;
     }
-    svg[stroke], svg [stroke] {
+    svg[stroke],
+    svg [stroke] {
       stroke: currentColor;
-    }
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      margin-right: ${pxToRem(15)};
     }
   }
 
@@ -124,7 +104,6 @@ const StyledDropdownSelectWithInput = styled.div`
     }
   }
 
-
   .k-Form-DropdownSelectWithInput__button__arrowBox {
     position: absolute;
     top: 0;
@@ -132,11 +111,7 @@ const StyledDropdownSelectWithInput = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    left: ${pxToRem(20)};
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      left: ${pxToRem(30)};
-    }
+    left: ${pxToRem(15)};
   }
 
   .k-Form-DropdownSelectWithInput__button__statusBadges {
@@ -151,10 +126,6 @@ const StyledDropdownSelectWithInput = styled.div`
 
     right: ${pxToRem(10)};
 
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      right: ${pxToRem(20)};
-    }
-
     svg {
       width: ${pxToRem(24)};
       height: ${pxToRem(24)};
@@ -167,13 +138,9 @@ const StyledDropdownSelectWithInput = styled.div`
     font-size: ${stepToRem(-1)};
     color: ${COLORS.font1};
     appearance: none;
-    padding: 0;
+    padding: 0 ${pxToRem(5 + 2)};
     border: none;
     background-color: transparent;
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      font-size: ${stepToRem(0)};
-    }
   }
 
   .k-Form-DropdownSelectWithInput__list {
@@ -217,7 +184,7 @@ const StyledDropdownSelectWithInput = styled.div`
   .k-Form-DropdownSelectWithInput__item {
     display: flex;
     align-items: center;
-    transition: background-color .2s ease;
+    transition: background-color 0.2s ease;
     box-sizing: border-box;
     padding: ${pxToRem(15)};
     color: ${COLORS.font1};
@@ -232,7 +199,7 @@ const StyledDropdownSelectWithInput = styled.div`
       min-height: ${pxToRem(50)};
     }
 
-    &[aria-selected="true"] {
+    &[aria-selected='true'] {
       background-color: ${COLORS.background3};
     }
 
@@ -250,7 +217,7 @@ const StyledDropdownSelectWithInput = styled.div`
 
     svg {
       display: block;
-      max-width:100%;
+      max-width: 100%;
     }
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -267,7 +234,7 @@ const StyledDropdownSelectWithInput = styled.div`
     .k-Form-DropdownSelectWithInput__container,
     .k-Form-DropdownSelectWithInput__list {
       border-color: ${COLORS.line2};
-      }
+    }
 
     .k-Form-DropdownSelectWithInput__button:focus,
     .k-Form-DropdownSelectWithInput__input:focus {
@@ -282,11 +249,12 @@ const StyledDropdownSelectWithInput = styled.div`
     .k-Form-DropdownSelectWithInput__input:focus-visible {
       outline-color: ${COLORS.primary4};
     }
-
   }
 
-  &.k-Form-DropdownSelectWithInput--error .k-Form-DropdownSelectWithInput__input,
-  &.k-Form-DropdownSelectWithInput--valid .k-Form-DropdownSelectWithInput__input {
+  &.k-Form-DropdownSelectWithInput--error
+    .k-Form-DropdownSelectWithInput__input,
+  &.k-Form-DropdownSelectWithInput--valid
+    .k-Form-DropdownSelectWithInput__input {
     padding-right: ${pxToRem(24 + 10)};
   }
 
@@ -321,8 +289,138 @@ const StyledDropdownSelectWithInput = styled.div`
     }
   }
 
+  /* SIZES */
+
+  &.k-Form-DropdownSelectWithInput--tiny {
+    .k-Form-DropdownSelectWithInput__container {
+      height: ${pxToRem(40)};
+      border-radius: ${pxToRem(4)};
+    }
+    .k-Form-DropdownSelectWithInput__button__arrowBox {
+      left: ${pxToRem(15 + 2)};
+    }
+    .k-Form-DropdownSelectWithInput__content {
+      margin: 0 ${pxToRem(5)} 0 ${pxToRem(40)};
+    }
+    .k-Form-DropdownSelectWithInput__content--selectedItem {
+      border-radius: ${pxToRem(2)};
+      height: ${pxToRem(28)};
+    }
+
+    &.k-Form-DropdownSelectWithInput--noDropdown {
+      .k-Form-DropdownSelectWithInput__content {
+        margin: 0 ${pxToRem(4)};
+      }
+    }
+  }
+
+  &.k-Form-DropdownSelectWithInput--normal {
+    .k-Form-DropdownSelectWithInput__container {
+      height: ${pxToRem(50)};
+      border-radius: ${pxToRem(4)};
+    }
+    .k-Form-DropdownSelectWithInput__button__arrowBox {
+      left: ${pxToRem(15 + 2)};
+    }
+    .k-Form-DropdownSelectWithInput__content {
+      margin: 0 ${pxToRem(5)} 0 ${pxToRem(40)};
+    }
+    .k-Form-DropdownSelectWithInput__content--selectedItem {
+      border-radius: ${pxToRem(2)};
+      height: ${pxToRem(36)};
+    }
+
+    &.k-Form-DropdownSelectWithInput--noDropdown {
+      .k-Form-DropdownSelectWithInput__content {
+        margin: 0 ${pxToRem(5)};
+      }
+    }
+  }
+
+  &.k-Form-DropdownSelectWithInput--big,
+  &.k-Form-DropdownSelectWithInput--huge,
+  &.k-Form-DropdownSelectWithInput--giant {
+    .k-Form-DropdownSelectWithInput__container {
+      height: ${pxToRem(60)};
+      border-radius: ${pxToRem(6)};
+      padding: 0 ${pxToRem(10 + 10)} 0 0;
+    }
+
+    .k-Form-DropdownSelectWithInput__button__arrowBox {
+      left: ${pxToRem(20)};
+    }
+    .k-Form-DropdownSelectWithInput__content {
+      margin: 0 ${pxToRem(10)} 0 ${pxToRem(40)};
+    }
+    .k-Form-DropdownSelectWithInput__content--selectedItem {
+      border-radius: ${pxToRem(4)};
+      height: ${pxToRem(40)};
+    }
+
+    &.k-Form-DropdownSelectWithInput--noDropdown {
+      .k-Form-DropdownSelectWithInput__content {
+        margin: 0 ${pxToRem(10)};
+      }
+    }
+  }
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    &.k-Form-DropdownSelectWithInput--big,
+    &.k-Form-DropdownSelectWithInput--huge,
+    &.k-Form-DropdownSelectWithInput--giant {
+      .k-Form-DropdownSelectWithInput__container {
+        border-radius: ${pxToRem(8)};
+      }
+      .k-Form-DropdownSelectWithInput__input {
+        font-size: ${stepToRem(0)};
+      }
+      .k-Form-DropdownSelectWithInput__button__arrowBox {
+        left: ${pxToRem(30)};
+      }
+      .k-Form-DropdownSelectWithInput__content {
+        margin-left: ${pxToRem(60)};
+      }
+      .k-Form-DropdownSelectWithInput__content__icon {
+        margin-right: ${pxToRem(15)};
+      }
+      .k-Form-DropdownSelectWithInput__button__statusBadges {
+        right: ${pxToRem(20)};
+      }
+    }
+
+    &.k-Form-DropdownSelectWithInput--big {
+      .k-Form-DropdownSelectWithInput__container {
+        height: ${pxToRem(70)};
+      }
+      .k-Form-DropdownSelectWithInput__content--selectedItem {
+        padding: 0 ${pxToRem(15)};
+        height: ${pxToRem(46)};
+      }
+    }
+
+    &.k-Form-DropdownSelectWithInput--huge {
+      .k-Form-DropdownSelectWithInput__container {
+        height: ${pxToRem(80)};
+      }
+      .k-Form-DropdownSelectWithInput__content--selectedItem {
+        padding: 0 ${pxToRem(15)};
+        height: ${pxToRem(53)};
+      }
+    }
+
+    &.k-Form-DropdownSelectWithInput--giant {
+      .k-Form-DropdownSelectWithInput__container {
+        height: ${pxToRem(90)};
+      }
+      .k-Form-DropdownSelectWithInput__content--selectedItem {
+        padding: 0 ${pxToRem(15)};
+        height: ${pxToRem(64)};
+      }
+    }
+  }
+
   &.k-Form-DropdownSelectWithInput--isOpen {
-    .k-Form-DropdownSelectWithInput__container{
+    .k-Form-DropdownSelectWithInput__container {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
@@ -336,16 +434,6 @@ const StyledDropdownSelectWithInput = styled.div`
     .k-Form-DropdownSelectWithInput__input {
       flex: 1 0 auto;
       display: inline-block;
-    }
-  }
-
-  &.k-Form-DropdownSelectWithInput--noDropdown {
-    .k-Form-DropdownSelectWithInput__content {
-      margin: 0 ${pxToRem(10)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-left: ${pxToRem(10)};
-      }
     }
   }
 `
@@ -376,6 +464,7 @@ export const DropdownSelectWithInput = ({
   className,
   menuZIndex,
   hideIconOnMobile,
+  size,
 }) => {
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
@@ -451,15 +540,20 @@ export const DropdownSelectWithInput = ({
 
   return (
     <StyledDropdownSelectWithInput
-      className={classNames('k-Form-DropdownSelectWithInput', className, {
-        'k-Form-DropdownSelectWithInput--isOpen': isOpen,
-        'k-Form-DropdownSelectWithInput--hasItemSelected': !!selectedItem,
-        'k-Form-DropdownSelectWithInput--error': error,
-        'k-Form-DropdownSelectWithInput--valid': valid,
-        'k-Form-DropdownSelectWithInput--disabled': disabled,
-        'k-Form-DropdownSelectWithInput--noDropdown': deactivateDropdown,
-        'k-Form-DropdownSelectWithInput--hideIconOnMobile': hideIconOnMobile,
-      })}
+      className={classNames(
+        'k-Form-DropdownSelectWithInput',
+        className,
+        `k-Form-DropdownSelectWithInput--${size}`,
+        {
+          'k-Form-DropdownSelectWithInput--isOpen': isOpen,
+          'k-Form-DropdownSelectWithInput--hasItemSelected': !!selectedItem,
+          'k-Form-DropdownSelectWithInput--error': error,
+          'k-Form-DropdownSelectWithInput--valid': valid,
+          'k-Form-DropdownSelectWithInput--disabled': disabled,
+          'k-Form-DropdownSelectWithInput--noDropdown': deactivateDropdown,
+          'k-Form-DropdownSelectWithInput--hideIconOnMobile': hideIconOnMobile,
+        },
+      )}
       style={{ '--menu-z-index': menuZIndex }}
     >
       <Label
@@ -607,6 +701,7 @@ DropdownSelectWithInput.defaultProps = {
   deactivateDropdown: false,
   menuZIndex: 1000,
   hideIconOnMobile: false,
+  size: 'normal',
 }
 
 DropdownSelectWithInput.propTypes = {
@@ -630,4 +725,5 @@ DropdownSelectWithInput.propTypes = {
   deactivateDropdown: PropTypes.bool,
   menuZIndex: PropTypes.number,
   hideIconOnMobile: PropTypes.bool,
+  size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge', 'giant']),
 }

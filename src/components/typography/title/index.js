@@ -23,28 +23,25 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
-var _modifierStyles = require("./helpers/modifier-styles");
+var _titleModifierStyles = require("../common/title-modifier-styles");
 
 var StyledTitle = _styledComponents.default.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-46lshq-0"
-})(["--Title-css-color:", ";", ";color:", ";color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], _colorsConfig.default.font1, _typographyConfig.default.fontStyles.bold, _colorsConfig.default.font1, function (_ref) {
-  var modifier = _ref.modifier;
-  return (0, _modifierStyles.modifierStyles)(modifier);
-});
+})(["--Title-css-color:", ";", ";color:", ";color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], _colorsConfig.default.font1, _typographyConfig.default.fontStyles.bold, _colorsConfig.default.font1, (0, _titleModifierStyles.titleModifierStyles)('&.k-Title'));
 
-var Title = function Title(_ref2) {
-  var modifier = _ref2.modifier,
-      tag = _ref2.tag,
-      noMargin = _ref2.noMargin,
-      italic = _ref2.italic,
-      cssColor = _ref2.cssColor,
-      className = _ref2.className,
-      other = (0, _objectWithoutProperties2.default)(_ref2, ["modifier", "tag", "noMargin", "italic", "cssColor", "className"]);
+var Title = function Title(_ref) {
+  var modifier = _ref.modifier,
+      tag = _ref.tag,
+      noMargin = _ref.noMargin,
+      italic = _ref.italic,
+      cssColor = _ref.cssColor,
+      className = _ref.className,
+      other = (0, _objectWithoutProperties2.default)(_ref, ["modifier", "tag", "noMargin", "italic", "cssColor", "className"]);
   return /*#__PURE__*/_react.default.createElement(StyledTitle, (0, _extends2.default)({
     as: tag,
     modifier: modifier,
-    className: (0, _classnames.default)('k-Title', className, {
+    className: (0, _classnames.default)('k-Title', className, "k-Title--".concat(modifier), {
       'k-Title--noMargin': noMargin,
       'k-Title--italic': italic
     }),
@@ -68,7 +65,7 @@ Title.propTypes = {
   /**
     Title have seven modifiers. With different size depending on the device (desktop, tablet and mobile)
   */
-  modifier: _propTypes.default.oneOf(['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary', 'septenary']),
+  modifier: _propTypes.default.oneOf(_titleModifierStyles.titleModifiersNames),
 
   /**
     Remove default margins of `title` attribut.

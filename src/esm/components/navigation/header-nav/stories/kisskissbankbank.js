@@ -166,7 +166,7 @@ export var KissKissBankBankHeaderNavStory = function KissKissBankBankHeaderNavSt
   }), /*#__PURE__*/React.createElement(HeaderNav.Logged, null, /*#__PURE__*/React.createElement(HeaderNav.UserMenu, {
     dropdownContentWidth: userMenuWidth
   }, /*#__PURE__*/React.createElement(HeaderNav.UserMenu.Button, null, /*#__PURE__*/React.createElement(AvatarWithTextAndBadge, null, /*#__PURE__*/React.createElement(AvatarWithTextAndBadge.Image, {
-    src: "https://via.placeholder.com/40x40.png"
+    src: "/kitten.jpg"
   }, /*#__PURE__*/React.createElement(AvatarWithTextAndBadge.Badge, null, "2")), /*#__PURE__*/React.createElement(AvatarWithTextAndBadge.Text, {
     textClassName: "k-u-hidden@xs-down",
     withEllipsisOverflow: true

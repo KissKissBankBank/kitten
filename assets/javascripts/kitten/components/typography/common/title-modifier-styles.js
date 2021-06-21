@@ -2,6 +2,16 @@ import { css } from 'styled-components'
 import { stepToRem, pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 
+export const titleModifiersNames = [
+  'primary',
+  'secondary',
+  'tertiary',
+  'quaternary',
+  'quinary',
+  'senary',
+  'septenary',
+]
+
 export const titleModifiers = [
   {
     name: 'primary',
@@ -54,32 +64,39 @@ export const titleModifiers = [
 ]
 
 export const titleModifierStyles = prefix => css`
-  ${titleModifiers.map(key => {
+  ${titleModifiers.map((key, index) => {
     return css`
-      ${`${prefix}--${key.name}`} {
+      ${`${prefix}--${titleModifiersNames[index]}`} {
         font-size: ${stepToRem(key.fontStepOnMobile)};
         line-height: 1.2;
+
+        @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+          font-size: ${stepToRem(key.fontStepOnTablet)};
+        }
+        @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+          font-size: ${stepToRem(key.fontStepOnDesktop)};
+        }
       }
     `
   })}
-
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    ${titleModifiers.map(key => {
-      return css`
-        ${`${prefix}--${key.name}`} {
-          font-size: ${stepToRem(key.fontStepOnTablet)};
-        }
-      `
-    })}
-  }
-
-  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    ${titleModifiers.map(key => {
-      return css`
-        ${`${prefix}--${key.name}`} {
-          font-size: ${stepToRem(key.fontStepOnDesktop)};
-        }
-      `
-    })}
-  }
 `
+
+export const titleHelperModifierStyles = modifier => {
+  const modifierIndex = findIndex(item => modifier === item)(
+    titleModifiersNames,
+  )
+  const modifierDefinitions = titleModifiersNames[modifierIndex]
+
+  return css`
+    font-size: ${stepToRem(modifierDefinitions.fontStepOnMobile)};
+    line-height: 1.2;
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      font-size: ${stepToRem(modifierDefinitions.fontStepOnTablet)};
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      font-size: ${stepToRem(modifierDefinitions.fontStepOnDesktop)};
+    }
+  `
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { text, boolean, number } from '@storybook/addon-knobs'
+import { text, boolean, number, select } from '@storybook/addon-knobs'
 import { DropdownSelectWithInput } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
 
@@ -71,6 +71,11 @@ export const Default = () => {
           resetOnBackspace={boolean('resetOnBackspace', false)}
           highlightOptionBox={boolean('highlightOptionBox', true)}
           hideIconOnMobile={boolean('hideIconOnMobile', false)}
+          size={select(
+            'size',
+            ['tiny', 'normal', 'big', 'huge', 'giant'],
+            'normal',
+          )}
         />
         <p>
           Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
@@ -111,6 +116,11 @@ export const DeactivatedDropdown = () => {
           className="k-u-margin-bottom-triple"
           menuZIndex={number('menuZIndex', 1000)}
           hideIconOnMobile={boolean('hideIconOnMobile', false)}
+          size={select(
+            'size',
+            ['tiny', 'normal', 'big', 'huge', 'giant'],
+            'normal',
+          )}
         />
         <DropdownSelectWithInput
           id={text('id', 'dropdown-select')}
@@ -127,6 +137,11 @@ export const DeactivatedDropdown = () => {
           className="k-u-margin-bottom-triple"
           menuZIndex={number('menuZIndex', 1000)}
           hideIconOnMobile={boolean('hideIconOnMobile', false)}
+          size={select(
+            'size',
+            ['tiny', 'normal', 'big', 'huge', 'giant'],
+            'normal',
+          )}
         />
         <DropdownSelectWithInput
           id={text('id', 'dropdown-select')}
@@ -143,6 +158,11 @@ export const DeactivatedDropdown = () => {
           className="k-u-margin-bottom-triple"
           menuZIndex={number('menuZIndex', 1000)}
           hideIconOnMobile={boolean('hideIconOnMobile', false)}
+          size={select(
+            'size',
+            ['tiny', 'normal', 'big', 'huge', 'giant'],
+            'normal',
+          )}
         />
       </GridCol>
     </Grid>

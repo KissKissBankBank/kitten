@@ -12,7 +12,6 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Marger } from '../../../layout/marger';
 import { Label } from '../../../form/label';
 import { Toggletip } from '../../../tooltips/toggletip';
 import { Line } from '../../../layout/line';
@@ -39,15 +38,13 @@ export var FieldLabel = /*#__PURE__*/function (_Component) {
           link = _this$props.link,
           others = _objectWithoutProperties(_this$props, ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link"]);
 
-      return /*#__PURE__*/React.createElement(Marger, _extends({
-        bottom: "1"
+      return /*#__PURE__*/React.createElement("div", _extends({
+        className: "k-u-margin-bottom-single"
       }, others), /*#__PURE__*/React.createElement(Line, {
         style: {
           lineHeight: 1
         }
-      }, /*#__PURE__*/React.createElement(Line.Item, null, /*#__PURE__*/React.createElement(Label, _extends({}, labelProps, {
-        size: labelProps.size || 'micro'
-      }), children)), tooltip && /*#__PURE__*/React.createElement(Line.Item, null, /*#__PURE__*/React.createElement(Toggletip, _extends({
+      }, /*#__PURE__*/React.createElement(Line.Item, null, /*#__PURE__*/React.createElement(Label, labelProps, children)), tooltip && /*#__PURE__*/React.createElement(Line.Item, null, /*#__PURE__*/React.createElement(Toggletip, _extends({
         id: tooltipId,
         bubbleProps: {
           zIndex: 2

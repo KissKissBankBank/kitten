@@ -22,11 +22,11 @@ const StyledFlow = styled.div`
   min-height: 100%;
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    min-height: 100vh;
+    min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
     display: grid;
     grid-template-rows: 1fr auto;
-    grid-template-columns: 4fr 3fr;
-    gap: 0 calc(100% * 4 / 3 * 0.1); /* 10% of the parent element */
+    grid-template-columns: 35vw 20vw;
+    gap: 0 5vw;
   }
 
   &:not(.k-DashboardLayout__flow--isLoading) {
@@ -89,10 +89,13 @@ const StyledFlow = styled.div`
       }
     }
 
-    & > * {
+    & > *:not(:first-child:last-child) {
       min-width: 0;
       max-width: ${pxToRem(180)};
       flex: 1 1 ${pxToRem(180)};
+    }
+    & > *:first-child:last-child {
+      flex: 1 0 100%;
     }
   }
 
@@ -104,7 +107,7 @@ const StyledFlow = styled.div`
 
   .k-DashboardLayout__flow__aside__content {
     position: sticky;
-    top: ${pxToRem(80)};
+    top: calc(${pxToRem(80)} + var(--dashboardLayout-siteHeaderHeight, 0));
     padding-bottom: ${pxToRem(40)};
 
     svg {

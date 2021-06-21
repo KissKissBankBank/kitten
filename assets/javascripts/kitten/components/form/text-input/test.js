@@ -35,16 +35,6 @@ describe('<TextInput />', () => {
     })
   })
 
-  describe('with `tiny` prop', () => {
-    beforeEach(() => {
-      component = renderer.create(<TextInput tiny />).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
   describe('with `size` prop', () => {
     beforeEach(() => {
       component = renderer.create(<TextInput size="regular" />).toJSON()
@@ -100,6 +90,16 @@ describe('<TextInput />', () => {
       component = renderer
         .create(<TextInput tag="textarea" name="message" />)
         .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `variant` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInput variant="orion" />).toJSON()
     })
 
     it('matches with snapshot', () => {

@@ -115,8 +115,6 @@ const StyledButton = styled.button`
   }
 
   &.k-Button--orion {
-    ${() => BIG}
-
     border-radius: ${pxToRem(6)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -139,7 +137,7 @@ export const ROUNDED = css`
 export const DEFAULT = css`
   min-width: ${pxToRem(200)};
   min-height: ${pxToRem(50)};
-  padding: 0 ${pxToRem(30)};
+  padding: ${pxToRem(10)} ${pxToRem(30)};
   font-size: ${stepToRem(-1)};
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     width: ${pxToRem(200)};
@@ -161,7 +159,7 @@ export const NANO = css`
 export const MICRO = css`
   min-width: ${pxToRem(130)};
   min-height: ${pxToRem(30)};
-  padding: 0 ${pxToRem(10)};
+  padding: ${pxToRem(5)} ${pxToRem(10)};
   font-size: ${stepToRem(-2)};
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     width: ${pxToRem(100)};
@@ -172,7 +170,7 @@ export const MICRO = css`
 export const TINY = css`
   min-width: ${pxToRem(160)};
   min-height: ${pxToRem(40)};
-  padding: 0 ${pxToRem(20)};
+  padding: ${pxToRem(7)} ${pxToRem(20)};
   font-size: ${stepToRem(-1)};
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     width: ${pxToRem(160)};
@@ -184,7 +182,7 @@ export const BIG = css`
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     min-width: ${pxToRem(220)};
     min-height: ${pxToRem(70)};
-    padding: 0 ${pxToRem(40)};
+    padding: ${pxToRem(10)} ${pxToRem(40)};
     font-size: ${stepToRem(0)};
   }
   @media screen and (min-width: ${pxToRem(
@@ -199,13 +197,13 @@ export const BIG = css`
 export const HUGE = css`
   min-height: ${pxToRem(70)};
   font-size: ${stepToRem(-1)};
-  padding: 0 ${pxToRem(10)};
+  padding: ${pxToRem(10)} ${pxToRem(10)};
 
   @media (min-width: ${ScreenConfig.M.min}px) {
     min-width: ${pxToRem(220)};
     min-height: ${pxToRem(80)};
     font-size: ${stepToRem(0)};
-    padding: 0 ${pxToRem(40)};
+    padding: ${pxToRem(10)} ${pxToRem(40)};
   }
   @media screen and (min-width: ${pxToRem(
       ScreenConfig.M.min,
@@ -219,13 +217,13 @@ export const HUGE = css`
 export const GIANT = css`
   min-height: ${pxToRem(70)};
   font-size: ${stepToRem(-1)};
-  padding: 0 ${pxToRem(10)};
+  padding: ${pxToRem(10)} ${pxToRem(10)};
 
   @media (min-width: ${ScreenConfig.M.min}px) {
     min-width: ${pxToRem(220)};
     min-height: ${pxToRem(90)};
     font-size: ${stepToRem(0)};
-    padding: 0 ${pxToRem(40)};
+    padding: ${pxToRem(10)} ${pxToRem(40)};
   }
   @media screen and (min-width: ${pxToRem(
       ScreenConfig.M.min,
@@ -418,6 +416,9 @@ Button.propTypes = {
     'carbon',
     'oxygen',
     'copper',
+    'boron',
+    'neon',
+    'iron',
     'social_facebook',
     'social_twitter',
     'social_linkedin',

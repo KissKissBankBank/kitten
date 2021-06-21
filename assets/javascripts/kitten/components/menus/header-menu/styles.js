@@ -9,11 +9,15 @@ export const StyledList = styled.ul`
 
   margin: 0;
   padding: 0;
+  border: none;
   list-style: none;
 
   .k-HeaderMenu__item__link {
     display: block;
     position: relative;
+    width: 100%;
+    text-align: left;
+    border: none;
     height: ${pxToRem(50)};
     box-sizing: border-box;
 
@@ -27,14 +31,17 @@ export const StyledList = styled.ul`
     font-size: ${pxToRem(14)};
     text-decoration: none;
 
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.4s;
+
     &:focus {
-      outline-offset: ${pxToRem(-3)};
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(-1)};
     }
     &:hover,
     &:focus {
       color: ${COLORS.primary1};
       background-color: var(--headerMenu-background-colors-hover);
-      transition: color 0.2s, background-color 0.4s;
     }
     &:focus:not(:focus-visible) {
       outline-color: transparent;
@@ -80,7 +87,6 @@ export const StyledList = styled.ul`
     &::before {
       display: none;
     }
-
   }
 
   .k-HeaderMenu__item--hasButton {
@@ -106,7 +112,6 @@ export const StyledList = styled.ul`
     }
   }
 
-
   &.k-HeaderMenu--hasBorderOnSide-left .k-HeaderMenu__item__link::before {
     left: ${pxToRem(-1)};
   }
@@ -114,7 +119,6 @@ export const StyledList = styled.ul`
   &.k-HeaderMenu--hasBorderOnSide-right .k-HeaderMenu__item__link::before {
     right: ${pxToRem(-1)};
   }
-
 
   &.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link {
     &:hover,
@@ -150,7 +154,7 @@ export const StyledList = styled.ul`
     }
 
     & + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
-        padding-top: ${pxToRem(5)};
+      padding-top: ${pxToRem(5)};
     }
   }
 
@@ -174,7 +178,9 @@ export const StyledList = styled.ul`
     color: ${COLORS.primary1};
   }
 
-  &.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link::before {
+  &.k-HeaderMenu--hasBorderOnSide
+    .k-HeaderMenu__item--isSelected
+    .k-HeaderMenu__item__link::before {
     width: ${pxToRem(4)};
     background-color: ${COLORS.primary1};
   }
@@ -183,7 +189,7 @@ export const StyledList = styled.ul`
     border-left: ${pxToRem(1)} solid ${COLORS.line1};
     border-right: ${pxToRem(1)} solid ${COLORS.line1};
 
-    .k-HeaderMenu__item__link {
+    .k-HeaderMenu__item {
       border-bottom: ${pxToRem(1)} solid ${COLORS.line1};
     }
   }
