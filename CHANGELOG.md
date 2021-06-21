@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `Modal/Next`: Fix modal content height for decrepit versions of Safari.
+- Fix: `VerticalCard`: Fix `description` PropType to node, allowing HTML parsing.
 
 ## [3.20.0] - 2021-06-17
 
