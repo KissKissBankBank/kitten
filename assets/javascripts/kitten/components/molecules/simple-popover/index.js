@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Marger } from '../../../components/structure/marger'
+import { Marger } from '../../../components/layout/marger'
 import { CrossIcon } from '../../../components/graphics/icons/cross-icon'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'

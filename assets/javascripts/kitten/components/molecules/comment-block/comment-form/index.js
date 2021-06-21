@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Marger } from '../../../../components/structure/marger'
+import { Marger } from '../../../../components/layout/marger'
 import { CommentAvatar } from '../../../../components/molecules/comment-block/comment-avatar'
 import { Button } from '../../../../components/molecules/buttons/button'
 import { Text } from '../../../../components/atoms/typography/text'

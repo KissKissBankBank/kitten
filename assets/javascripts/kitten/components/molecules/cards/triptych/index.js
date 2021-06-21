@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import debounce from 'lodash/fp/debounce'
-import { Grid, GridCol } from '../../../../components/structure/grid'
+import { Grid, GridCol } from '../../../../components/layout/grid'
 import { VerticalStroke } from '../../../../components/atoms/vertical-stroke'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'

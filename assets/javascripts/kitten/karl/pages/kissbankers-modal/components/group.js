@@ -7,7 +7,7 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 import {
   AdaptableGrid as Grid,
   AdaptableGridCol as GridCol,
-} from '../../../../components/structure/adaptable-grid'
+} from '../../../../components/layout/adaptable-grid'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
 const StyledContainer = styled.article`

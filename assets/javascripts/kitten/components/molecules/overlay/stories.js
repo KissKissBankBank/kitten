@@ -1,7 +1,7 @@
 import React from 'react'
 import { Overlay } from './index'
-import { Marger } from '../../structure/marger'
-import { Container } from '../../structure/container'
+import { Marger } from '../../layout/marger'
+import { Container } from '../../layout/container'
 import { Button } from '../../molecules/buttons/button'
 
 const TOGGLE_EVENT = 'event:toggle'

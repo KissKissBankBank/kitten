@@ -1,6 +1,6 @@
 import React from 'react'
 import { select } from '@storybook/addon-knobs'
-import {} from '../../../components/structure/container'
+import {} from '../../../components/layout/container'
 import { Timeline } from './index'
 import { Container, Grid, GridCol } from '../../..'
 

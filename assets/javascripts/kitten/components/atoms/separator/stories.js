@@ -1,9 +1,9 @@
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
 import { Separator } from './'
-import { Marger } from '../../structure/marger'
-import { Container } from '../../structure/container'
-import { Grid, GridCol } from '../../structure/grid'
+import { Marger } from '../../layout/marger'
+import { Container } from '../../layout/container'
+import { Grid, GridCol } from '../../layout/grid'
 
 export default {
   title: 'Atoms/Separator',

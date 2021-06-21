@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import { Container } from '../../../structure/container'
+import { Container } from '../../../layout/container'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { VisuallyHidden } from '../../../accessibility/visually-hidden'
 

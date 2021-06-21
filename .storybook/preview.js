@@ -20,7 +20,7 @@ export const parameters = {
         'Helpers',
         'Accessibility',
         'Graphics',
-        'Structure',
+        'Layout',
         'Atoms',
         'Form',
         'Molecules',

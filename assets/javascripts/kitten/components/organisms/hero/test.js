@@ -1,6 +1,6 @@
 import React from 'react'
 import { Hero } from './index'
-import { Container } from '../../../components/structure/container'
+import { Container } from '../../../components/layout/container'
 import renderer from 'react-test-renderer'
 
 describe('<Hero />', () => {

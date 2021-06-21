@@ -1,4 +1,4 @@
-import { Container } from '../../structure/container'
+import { Container } from '../../layout/container'
 import { Text } from '../../atoms/typography/text'
 import React from 'react'
 import { select } from '@storybook/addon-knobs'

@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 import { pxToRem } from '../../../../../helpers/utils/typography'
 
-import { GridCol } from '../../../../../components/structure/grid'
-import { Marger } from '../../../../../components/structure/marger'
+import { GridCol } from '../../../../../components/layout/grid'
+import { Marger } from '../../../../../components/layout/marger'
 
 import { Text } from '../../../../../components/atoms/typography/text'
 

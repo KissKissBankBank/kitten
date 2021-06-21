@@ -1,8 +1,8 @@
 import React from 'react'
 import { number, color } from '@storybook/addon-knobs'
 import { HighlightHalo } from './index'
-import { Marger } from '../../structure/marger'
-import { Container } from '../../structure/container'
+import { Marger } from '../../layout/marger'
+import { Container } from '../../layout/container'
 import COLORS from '../../../constants/colors-config'
 
 const StoryContainer = ({ children }) => (

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { NewsBlock } from './components/news-block'
-import { Container } from '../../../../components/structure/container'
+import { Container } from '../../../../components/layout/container'
 import { Title } from '../../../../components/atoms/typography/title'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'

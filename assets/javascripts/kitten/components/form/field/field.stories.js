@@ -6,9 +6,9 @@ import {
   FieldRadioButtonSetExample,
   FieldAutocompleteExample,
 } from './field.examples'
-import { Marger } from '../../structure/marger'
-import { Container } from '../../structure/container'
-import { Grid, GridCol } from '../../structure/grid'
+import { Marger } from '../../layout/marger'
+import { Container } from '../../layout/container'
+import { Grid, GridCol } from '../../layout/grid'
 
 const StoryGrid = ({ children }) => (
   <Container>

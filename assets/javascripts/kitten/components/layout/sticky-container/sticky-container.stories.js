@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { StickyContainer } from './index'
-import { Container } from '../../../components/structure/container'
+import { Container } from '../../../components/layout/container'
 import COLORS from '../../../constants/colors-config'
 import { createRangeFromZeroTo } from '../../../helpers/utils/range'
 

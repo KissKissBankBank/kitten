@@ -1,4 +1,4 @@
-import { Container } from '../../structure/container'
+import { Container } from '../../layout/container'
 import { Marger } from '../../..'
 import React from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'

@@ -12,7 +12,7 @@ import { ArrowIcon } from '../../../../components/graphics/icons/arrow-icon'
 import { CarouselInner } from './components/carousel-inner'
 import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
 import classNames from 'classnames'
-import { Grid, GridCol } from '../../../../components/structure/grid'
+import { Grid, GridCol } from '../../../../components/layout/grid'
 
 import { StyledCarouselContainer, OUTLINE_PLUS_OFFSET } from './styles'
 

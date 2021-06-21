@@ -3,7 +3,7 @@ import { ScrollableContainer } from './index'
 import COLORS from '../../../constants/colors-config'
 
 export default {
-  title: 'Structure/ScrollableContainer',
+  title: 'Layout/ScrollableContainer',
   component: ScrollableContainer,
 }
 

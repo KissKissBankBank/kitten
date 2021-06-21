@@ -1,8 +1,8 @@
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
 import { Stepper } from './index'
-import { Marger } from '../../structure/marger'
-import { Container } from '../../structure/container'
+import { Marger } from '../../layout/marger'
+import { Container } from '../../layout/container'
 
 const StoryContainer = ({ children }) => (
   <Container>

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
-import { StickyContainer } from '../../../components/structure/sticky-container'
+import { StickyContainer } from '../../../components/layout/sticky-container'
 import { Button } from './components/button'
 import { Logo } from './components/logo'
 import { BurgerMenu } from './components/burger-menu'

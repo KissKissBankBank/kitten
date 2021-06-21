@@ -305,16 +305,16 @@ export { SingleEntryTable } from './components/organisms/tables/single-entry-tab
 export {
   AdaptableGrid,
   AdaptableGridCol,
-} from './components/structure/adaptable-grid'
-export { Container } from './components/structure/container'
-export { DashboardLayout } from './components/structure/dashboard-layout'
-export { Grid, GridCol } from './components/structure/grid'
-export { Marger } from './components/structure/marger'
-export { Row } from './components/structure/row'
-export { ScrollableContainer } from './components/structure/scrollable-container'
-export { SideGrid } from './components/structure/side-grid'
-export { SideLayout } from './components/structure/side-layout'
-export { StickyContainer } from './components/structure/sticky-container'
+} from './components/layout/adaptable-grid'
+export { Container } from './components/layout/container'
+export { DashboardLayout } from './components/layout/dashboard-layout'
+export { Grid, GridCol } from './components/layout/grid'
+export { Marger } from './components/layout/marger'
+export { Row } from './components/layout/row'
+export { ScrollableContainer } from './components/layout/scrollable-container'
+export { SideGrid } from './components/layout/side-grid'
+export { SideLayout } from './components/layout/side-layout'
+export { StickyContainer } from './components/layout/sticky-container'
 
 // ---------
 // CONSTANTS

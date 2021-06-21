@@ -10,7 +10,7 @@ import {
 } from '../../..'
 
 export default {
-  title: 'Structure/SideLayout',
+  title: 'Layout/SideLayout',
   component: SideLayout,
 }
 

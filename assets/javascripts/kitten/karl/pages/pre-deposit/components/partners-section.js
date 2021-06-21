@@ -1,6 +1,6 @@
 import React from 'react'
-import { Grid, GridCol } from '../../../../components/structure/grid'
-import { Container } from '../../../../components/structure/container'
+import { Grid, GridCol } from '../../../../components/layout/grid'
+import { Container } from '../../../../components/layout/container'
 import { Title } from '../../../../components/atoms/typography/title'
 
 const PartnersSection = () => (

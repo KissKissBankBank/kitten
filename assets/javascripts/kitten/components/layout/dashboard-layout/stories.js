@@ -107,7 +107,7 @@ const CardHolder = styled.div`
 `
 
 export default {
-  title: 'Structure/DashboardLayout',
+  title: 'Layout/DashboardLayout',
   component: DashboardLayout,
 }
 

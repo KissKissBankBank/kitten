@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import { Marger } from '../../../../components/structure/marger'
+import { Marger } from '../../../../components/layout/marger'
 import { Title } from '../../../../components/atoms/typography/title'
 import { Paragraph } from '../../../../components/atoms/typography/paragraph/next'
 import { HorizontalStroke } from '../../../../components/atoms/horizontal-stroke'

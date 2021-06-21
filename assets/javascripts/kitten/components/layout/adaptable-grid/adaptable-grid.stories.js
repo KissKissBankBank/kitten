@@ -1,7 +1,7 @@
 import React from 'react'
 import { text } from '@storybook/addon-knobs'
 import { AdaptableGrid, AdaptableGridCol } from './index'
-import { Container } from '../../../components/structure/container'
+import { Container } from '../../../components/layout/container'
 
 export const Default = () => (
   <Container>

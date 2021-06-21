@@ -1,7 +1,7 @@
 import React from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { DropdownPhoneSelect } from './index'
-import { Grid, GridCol } from '../../../components/structure/grid'
+import { Grid, GridCol } from '../../../components/layout/grid'
 import flagFile from 'icons/flags.png'
 
 export default {

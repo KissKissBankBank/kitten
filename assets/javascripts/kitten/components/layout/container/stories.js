@@ -3,7 +3,7 @@ import { Container } from './index'
 import COLORS from '../../../constants/colors-config'
 
 export default {
-  title: 'Structure/Container',
+  title: 'Layout/Container',
   component: Container,
 }
 

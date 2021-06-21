@@ -3,7 +3,7 @@ import { SimpleTemplate } from './simple-templates'
 import { Title } from '../../../components/atoms/typography/title'
 import { Paragraph } from '../../../components/atoms/typography/paragraph'
 import { BulletList } from '../../../components/molecules/bullet-list'
-import { Marger } from '../../../components/structure/marger'
+import { Marger } from '../../../components/layout/marger'
 import { withMediaQueries } from '../../../hoc/media-queries'
 
 class SmbsDevelopmentBase extends Component {

@@ -1,7 +1,7 @@
 import React from 'react'
 import HorizontalCard from './components/horizontal-card'
 
-import { Container } from '../../../components/structure/container'
+import { Container } from '../../../components/layout/container'
 import { Title } from '../../../components/atoms/typography/title'
 import { Text } from '../../../components/atoms/typography/text'
 import { ToggleSwitch } from '../../../components/form/toggle-switch'

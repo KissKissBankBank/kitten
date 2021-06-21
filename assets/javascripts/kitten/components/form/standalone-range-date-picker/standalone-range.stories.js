@@ -1,8 +1,8 @@
 import React from 'react'
 import { StandaloneRangeDatePicker } from './index'
 import { date, text, object, array, number } from '@storybook/addon-knobs'
-import { Container } from '../../../components/structure/container'
-import { Marger } from '../../../components/structure/marger'
+import { Container } from '../../../components/layout/container'
+import { Marger } from '../../../components/layout/marger'
 import COLORS from '../../../constants/colors-config'
 
 const StoryContainer = ({ children }) => (

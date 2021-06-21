@@ -1,7 +1,7 @@
 import React from 'react'
 import { text, select } from '@storybook/addon-knobs'
 import { StatusWithBullet } from './index'
-import { Grid, GridCol } from '../../../components/structure/grid'
+import { Grid, GridCol } from '../../../components/layout/grid'
 
 export const Default = () => (
   <StatusWithBullet

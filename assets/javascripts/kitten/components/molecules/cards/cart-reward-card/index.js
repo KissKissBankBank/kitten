@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled, { keyframes } from 'styled-components'
 import PropTypes from 'prop-types'
-import { Marger } from '../../../../components/structure/marger'
+import { Marger } from '../../../../components/layout/marger'
 import { GarbageIcon } from '../../../../components/graphics/icons/garbage-icon'
 import { ButtonIcon } from '../../../../components/molecules/buttons/button-icon'
 import { Title } from '../../../../components/atoms/typography/title'

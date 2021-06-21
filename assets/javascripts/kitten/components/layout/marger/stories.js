@@ -13,7 +13,7 @@ const StyledStory = styled.div`
 `
 
 export default {
-  title: 'Structure/Marger',
+  title: 'Layout/Marger',
   component: Marger,
 }
 

@@ -4,7 +4,7 @@ import { Button } from '../../../components/molecules/buttons/button'
 import { Title } from '../../../components/atoms/typography/title'
 import { Paragraph } from '../../../components/atoms/typography/paragraph/next'
 import { Modal } from '../../../components/molecules/modal'
-import { Marger } from '../../../components/structure/marger'
+import { Marger } from '../../../components/layout/marger'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem

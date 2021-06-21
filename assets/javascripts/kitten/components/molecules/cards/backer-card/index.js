@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { Marger } from '../../../../components/structure/marger'
+import { Marger } from '../../../../components/layout/marger'
 import { Text } from '../../../../components/atoms/typography/text'
 import { ButtonImage } from '../../../../components/molecules/buttons/button-image'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Marger } from '../../../../../components/structure/marger'
+import { Marger } from '../../../../../components/layout/marger'
 import { Title } from '../../../../../components/atoms/typography/title'
 import { Text } from '../../../../../components/atoms/typography/text'
 import { Paragraph } from '../../../../../components/atoms/typography/paragraph'
