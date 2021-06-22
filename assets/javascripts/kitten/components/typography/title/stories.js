@@ -27,7 +27,11 @@ const argTypes = {
   cssColor: {
     name: 'cssColor',
     description: 'Specify a color (use a CSS color string).',
-    control: {type: 'color', presetColor: '#eee'},
+    control: {
+      type: 'color',
+      presetColors:['#eee'], 
+    },
+      
   },
   italic: {
     name: 'italic',
