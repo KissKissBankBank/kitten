@@ -8,6 +8,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { UploadIcon } from '../../../components/icons/upload-icon'
 import { CrossIcon } from '../../../components/icons/cross-icon'
 import { CloseButton } from '../../../components/buttons/close-button'
+import { ImageCropper } from './components/image-cropper'
 
 const CROP_WIDTH = 125
 
@@ -107,9 +108,13 @@ const StyledImageDropUploader = styled.div`
     width: ${pxToRem(CROP_WIDTH)};
     height: var(--ImageDropUploader-cropHeight, ${pxToRem(CROP_WIDTH)});
     overflow: hidden;
+    position: relative;
 
-    img {
+    /* img {
       display: block;
+    } */
+    img {
+      position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -129,6 +134,8 @@ const StyledImageDropUploader = styled.div`
 
 const getCropHeight = (ratio) => (CROP_WIDTH / ratio)
 
+const { innerHeight, innerWidth } = window
+
 export const ImageDropUploader = ({
   id,
   buttonTitle = '',
@@ -142,6 +149,8 @@ export const ImageDropUploader = ({
   status = 'ready',
   cancelButtonText = '',
   cropRatio = 16 / 10,
+  initialValue = '',
+  onChange = () => {},
 }) => {
   const [internalStatus, setInternalStatus] = useState(status)
   useEffect(() => setInternalStatus(status), [status])
@@ -151,11 +160,17 @@ export const ImageDropUploader = ({
 
   const [isDraggingOver, setDraggingOver] = useState(false)
   const [imageRawData, setImageRawData] = useState(null)
-  const [imageDataURL, setImageDataURL] = useState('')
+  const [imageDataURL, setImageDataURL] = useState(initialValue)
 
   const [isCropDragging, setCropDragging] = useState(false)
   const [mouseMovePos, setMouseMovePos] = useState({x: 0, y: 0})
   const [cropperImagePos, setCropperImagePos] = useState({x: 0, y: 0})
+
+  useEffect(() => {
+    if (initialValue !== '') {
+      setInternalStatus('manage')
+    }
+  }, [initialValue])
 
   const handleDragEnter = (e) => {
     e.preventDefault()
@@ -183,7 +198,6 @@ export const ImageDropUploader = ({
   }
 
   const onFileInputChange = (e) => {
-    console.log(e)
     setInternalStatus('manage')
     const image = e.target.files[0]
     setImageRawData(image)
@@ -205,47 +219,24 @@ export const ImageDropUploader = ({
     }
   }, [imageRawData])
 
-  const handleCropperDown = (e) => {
-    setCropDragging(true)
-  }
-  const handleCropperUp = (e) => {
-    setCropDragging(false)
-  }
-  const handleCropperMove = (e) => {
-    if(!isCropDragging) return
-
-    e.preventDefault()
-    e.stopPropagation()
-
-    const currentMousePosition = {
-      x: e.pageX - e.target.getBoundingClientRect().left,
-      y: e.pageY - e.target.getBoundingClientRect().top,
-    }
-    const oldMousePos = mouseMovePos
-
-    const movement = {
-      x: currentMousePosition.x - oldMousePos.x,
-      y: currentMousePosition.y - oldMousePos.y,
-    }
-
-    const currentImageStyles = window.getComputedStyle(e.target)
-    const currentImagePosPx = currentImageStyles['object-position'].split(' ')
-    const currentImagePos = currentImagePosPx.map((pos) => parseInt(pos, 10))
-
-
-    console.log(currentMousePosition, oldMousePos, movement, currentImagePos)
-
-    setCropperImagePos({
-      x: `${currentImagePos[0] + movement.x}px`,
-      y: `${currentImagePos[1] + movement.y}px`,
+  const handleCropperChange = (cropperData) => {
+    onChange({
+      value: imageDataURL,
+      name: imageRawData.name,
+      file: imageRawData,
+      cropperData: cropperData,
+      // value: resultData?.target?.src || '',
+      // base: getOr(resultData?.srcElement?.src)('originalTarget.src')(
+      //   resultData,
+      // ),
+      // name: fileNameState,
+      // file: uploadedFile,
+      // cropperData: resultData.detail,
+      // croppedImageSrc: cropperInstance
+      //   ? cropperInstance?.getCroppedCanvas()?.toDataURL()
+      //   : '',
     })
-    setMouseMovePos(currentMousePosition)
   }
-
-  useEffect(() => {
-    console.log(cropperImagePos)
-  }, [cropperImagePos])
-
 
   return (
     <StyledImageDropUploader
@@ -295,23 +286,14 @@ export const ImageDropUploader = ({
 
       {internalStatus === 'manage' && (
         <div className="k-ImageDropUploader__manager">
-          <div
+          <ImageCropper
             className="k-ImageDropUploader__manager__cropper"
             style={{
               '--ImageDropUploader-cropHeight': pxToRem(getCropHeight(cropRatio))
             }}
-          >
-            <img
-              src={imageDataURL}
-              onMouseMove={handleCropperMove}
-              onMouseDown={handleCropperDown}
-              onMouseUp={handleCropperUp}
-              style={{
-                '--ImageDropUploader-cropX': cropperImagePos.x,
-                '--ImageDropUploader-cropY': cropperImagePos.y,
-              }}
-            />
-          </div>
+            src={imageDataURL}
+            onChange={handleCropperChange}
+          />
           <div className="k-ImageDropUploader__manager__content">
             <div className="k-ImageDropUploader__manager__title">
               {managerTitle}
@@ -349,4 +331,6 @@ ImageDropUploader.propTypes = {
   onUpload: PropTypes.func,
   status: PropTypes.oneOf(['ready', 'error', 'manage']),
   statusText: PropTypes.string,
+  initialValue: PropTypes.string,
+  onChange: PropTypes.func,
 }
