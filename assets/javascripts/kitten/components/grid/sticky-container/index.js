@@ -96,10 +96,6 @@ const StickyContainerBase = (
     }
   }, [scrollDirectionDown, scrollDirectionUp])
 
-  if (isSticky === 'never') {
-    return children
-  }
-
   const setSticky = () => {
     setStuckState(true)
   }
@@ -114,6 +110,14 @@ const StickyContainerBase = (
 
   const setUnsticky = () => {
     setStuckState(false)
+  }
+
+  if (isSticky === 'never') {
+    return (
+      <>
+        {children}
+      </>
+    )
   }
 
   const isOriginalContainerOutOfViewport = () => {
