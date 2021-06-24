@@ -217,7 +217,7 @@ export const ImageDropUploader = ({
   const handleCropperChange = cropperData => {
     onChange({
       value: imageDataURL,
-      name: imageRawData.name,
+      name: imageRawData?.name,
       file: imageRawData,
       cropperData: cropperData,
       // value: resultData?.target?.src || '',
