@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `StickyContainer`: Add `"never"` value for `isSticky` prop.
 - Feature: `HeaderMenu`: Improve accessibility.
 - Feature: `HeaderNav.UserMenuNext`: Add `mobilePadding` prop.
 
