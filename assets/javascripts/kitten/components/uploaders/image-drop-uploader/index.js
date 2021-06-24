@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
@@ -6,7 +6,6 @@ import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { UploadIcon } from '../../../components/icons/upload-icon'
-import { CrossIcon } from '../../../components/icons/cross-icon'
 import { CloseButton } from '../../../components/buttons/close-button'
 import { ImageCropper } from './components/image-cropper'
 
@@ -35,7 +34,7 @@ const StyledImageDropUploader = styled.div`
     outline-color: ${COLORS.primary4};
   }
 
-/*   &:not(.k-ImageDropUploader--loading) {
+  /*   &:not(.k-ImageDropUploader--loading) {
     input[type='file']:disabled + label {
       border-color: ${COLORS.line2};
       background-color: ${COLORS.line2};
@@ -118,12 +117,14 @@ const StyledImageDropUploader = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: var(--ImageDropUploader-cropX, 0) var(--ImageDropUploader-cropY, 0);
+      object-position: var(--ImageDropUploader-cropX, 0)
+        var(--ImageDropUploader-cropY, 0);
       pointer-events: none;
       -moz-user-select: none;
     }
   }
-  .k-ImageDropUploader__manager__content {}
+  .k-ImageDropUploader__manager__content {
+  }
   .k-ImageDropUploader__manager__cancelButton {
     position: absolute;
     top: ${pxToRem(-2)};
@@ -132,9 +133,7 @@ const StyledImageDropUploader = styled.div`
   }
 `
 
-const getCropHeight = (ratio) => (CROP_WIDTH / ratio)
-
-const { innerHeight, innerWidth } = window
+const getCropHeight = ratio => CROP_WIDTH / ratio
 
 export const ImageDropUploader = ({
   id,
@@ -162,31 +161,27 @@ export const ImageDropUploader = ({
   const [imageRawData, setImageRawData] = useState(null)
   const [imageDataURL, setImageDataURL] = useState(initialValue)
 
-  const [isCropDragging, setCropDragging] = useState(false)
-  const [mouseMovePos, setMouseMovePos] = useState({x: 0, y: 0})
-  const [cropperImagePos, setCropperImagePos] = useState({x: 0, y: 0})
-
   useEffect(() => {
     if (initialValue !== '') {
       setInternalStatus('manage')
     }
   }, [initialValue])
 
-  const handleDragEnter = (e) => {
+  const handleDragEnter = e => {
     e.preventDefault()
     e.stopPropagation()
     setDraggingOver(true)
   }
-  const handleDragLeave = (e) => {
+  const handleDragLeave = e => {
     e.preventDefault()
     e.stopPropagation()
     setDraggingOver(false)
   }
-  const handleDragOver = (e) => {
+  const handleDragOver = e => {
     e.preventDefault()
     e.stopPropagation()
   }
-  const handleDrop = (e) => {
+  const handleDrop = e => {
     e.preventDefault()
     e.stopPropagation()
 
@@ -197,7 +192,7 @@ export const ImageDropUploader = ({
     setImageRawData(image)
   }
 
-  const onFileInputChange = (e) => {
+  const onFileInputChange = e => {
     setInternalStatus('manage')
     const image = e.target.files[0]
     setImageRawData(image)
@@ -219,7 +214,7 @@ export const ImageDropUploader = ({
     }
   }, [imageRawData])
 
-  const handleCropperChange = (cropperData) => {
+  const handleCropperChange = cropperData => {
     onChange({
       value: imageDataURL,
       name: imageRawData.name,
@@ -240,13 +235,9 @@ export const ImageDropUploader = ({
 
   return (
     <StyledImageDropUploader
-      className={classNames(
-        'k-ImageDropUploader',
-        classNames,
-        {
-          'k-ImageDropUploader--isDraggingOver': isDraggingOver,
-        }
-      )}
+      className={classNames('k-ImageDropUploader', className, {
+        'k-ImageDropUploader--isDraggingOver': isDraggingOver,
+      })}
     >
       {internalStatus === 'ready' && (
         <>
@@ -289,7 +280,9 @@ export const ImageDropUploader = ({
           <ImageCropper
             className="k-ImageDropUploader__manager__cropper"
             style={{
-              '--ImageDropUploader-cropHeight': pxToRem(getCropHeight(cropRatio))
+              '--ImageDropUploader-cropHeight': pxToRem(
+                getCropHeight(cropRatio),
+              ),
             }}
             src={imageDataURL}
             onChange={handleCropperChange}
