@@ -46,4 +46,16 @@ describe('<StickyContainer />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('never sticky', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<StickyContainer isSticky="never" />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
