@@ -146,7 +146,7 @@ export const KissKissBankBankHeaderNavStoryNew = ({
         />
 
         <HeaderNav.Logged>
-          <HeaderNav.UserMenuNext dropdownAnchorSide="right">
+          <HeaderNav.UserMenuNext dropdownAnchorSide="right" mobilePadding={false}>
             <HeaderNav.UserMenuNext.Button
               hasArrow
               backgroundColor={COLORS.background1}
@@ -156,7 +156,7 @@ export const KissKissBankBankHeaderNavStoryNew = ({
               colorHover={COLORS.primary1}
               colorActive={COLORS.font1}
             >
-              <AvatarWithTextAndBadge>
+              <AvatarWithTextAndBadge className="k-u-margin-left-single@xs-down">
                 <AvatarWithTextAndBadge.Image src="/kitten.jpg">
                   <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
                 </AvatarWithTextAndBadge.Image>
