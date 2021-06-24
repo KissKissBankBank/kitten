@@ -21,6 +21,7 @@ export const UserMenuNext = ({
   dropdownAnchorSide,
   className,
   padding,
+  mobilePadding,
   ...props
 }) => {
   const getElementById = id => () => document.getElementById(id)
@@ -75,7 +76,8 @@ export const UserMenuNext = ({
           buttonProps.className,
           {
             'k-HeaderNav__UserMenuButton--hasArrow': buttonChild.props.hasArrow,
-            'k-HeaderNav__UserMenuButton--nopadding': !padding,
+            'k-HeaderNav__UserMenuButton--noPadding': !padding,
+            'k-HeaderNav__UserMenuButton--noPaddingMobile': !mobilePadding,
           }
         )}
       >
@@ -102,6 +104,7 @@ UserMenuNext.propTypes = {
     PropTypes.string,
   ]),
   padding: PropTypes.bool,
+  mobilePadding: PropTypes.bool,
   closeEvents: PropTypes.arrayOf(PropTypes.string),
   hasArrow: PropTypes.bool,
   dropdownAnchorSide: PropTypes.oneOf(['left', 'right']),
@@ -110,6 +113,7 @@ UserMenuNext.propTypes = {
 UserMenuNext.defaultProps = {
   dropdownContentWidth: null,
   padding: true,
+  mobilePadding: true,
   closeEvents: [],
   hasArrow: false,
   dropdownAnchorSide: 'left',

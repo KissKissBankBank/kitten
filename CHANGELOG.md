@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `HeaderMenu`: Improve accessibility.
+- Feature: `HeaderNav.UserMenuNext`: Add `mobilePadding` prop.
+
 ## [3.21.0] - 2021-06-21
 
 Feature:
