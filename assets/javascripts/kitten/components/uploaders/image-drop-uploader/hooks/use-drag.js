@@ -65,6 +65,37 @@ export const useDrag = ({startingPosition, imageDimensions}) => {
     }
   }
 
+  const handleKeyUp = (event) => {
+    let direction = {x: 0, y: 0}
+
+    switch(event.key) {
+      case 'ArrowLeft':
+        direction.x = -1
+        break
+      case 'ArrowRight':
+        direction.x = 1
+        break
+      case 'ArrowUp':
+        direction.y = -1
+        break
+      case 'ArrowDown':
+        direction.y = 1
+        break
+    }
+
+    if(event.shiftKey) {
+      direction = {x: direction.x * 10, y: direction.y * 10}
+    }
+
+    const destination = getDestination({
+      x: lastTranslation.x + direction.x,
+      y: lastTranslation.y + direction.y,
+    })
+
+    setTranslation(destination)
+    setLastTranslation(destination)
+  }
+
   const getDestination = ({x, y}) => {
     let destinationX = x
     let destinationY = y
@@ -90,6 +121,7 @@ export const useDrag = ({startingPosition, imageDimensions}) => {
   }
 
   return {
+    isDragging,
     liveImagePosition: {
       x: translation.x,
       y: translation.y,
@@ -103,6 +135,8 @@ export const useDrag = ({startingPosition, imageDimensions}) => {
       onMouseMove: handleMouseMove,
       onMouseLeave: handleMouseMove,
       onMouseUp: handleMouseUp,
+      onKeyUp: handleKeyUp,
+      tabIndex: 0,
     }
   }
 }

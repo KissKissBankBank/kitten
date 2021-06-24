@@ -131,6 +131,25 @@ const StyledImageDropUploader = styled.div`
     right: ${pxToRem(-2)};
     border-top-right-radius: ${pxToRem(8)};
   }
+
+  .k-ImageDropUploader-imageCropper {
+    cursor: grab;
+
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
+
+    &.k-ImageDropUploader-imageCropper--isDragging {
+      cursor: grabbing;
+    }
+  }
 `
 
 const getCropHeight = ratio => CROP_WIDTH / ratio
@@ -286,8 +305,13 @@ export const ImageDropUploader = ({
             }}
             src={imageDataURL}
             onChange={handleCropperChange}
+            id={`${id}-cropper`}
+            aria-describedby={`${id}-cropper-description`}
           />
-          <div className="k-ImageDropUploader__manager__content">
+          <div
+            className="k-ImageDropUploader__manager__content"
+            id={`${id}-cropper-description`}
+          >
             <div className="k-ImageDropUploader__manager__title">
               {managerTitle}
             </div>

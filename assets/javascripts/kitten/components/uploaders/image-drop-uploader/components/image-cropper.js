@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import classNames from 'classnames'
 import { useDrag } from '../hooks/use-drag'
 import { usePrevious } from '../../../../helpers/utils/use-previous-hook'
 
@@ -6,6 +7,7 @@ export const ImageCropper = ({
   src,
   onChange,
   startingPosition = null,
+  className,
   ...props
 }) => {
   const [imageDimensions, setImageDimensions] = useState(null)
@@ -14,6 +16,7 @@ export const ImageCropper = ({
     cropZoneProps,
     imagePosition,
     liveImagePosition,
+    isDragging,
   } = useDrag({
     startingPosition,
     imageDimensions,
@@ -77,6 +80,11 @@ export const ImageCropper = ({
     <div
       {...props}
       {...cropZoneProps}
+      className={classNames(
+        'k-ImageDropUploader-imageCropper',
+        className,
+        {'k-ImageDropUploader-imageCropper--isDragging': isDragging}
+      )}
     >
       <img
         alt=""
