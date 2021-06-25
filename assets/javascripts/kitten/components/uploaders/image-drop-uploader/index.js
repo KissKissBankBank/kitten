@@ -226,7 +226,7 @@ export const ImageDropUploader = ({
   const handleDragEnter = e => {
     e.preventDefault()
     e.stopPropagation()
-    if(!isDraggedFileListValid(e)) return
+    if (!isDraggedFileListValid(e)) return
 
     setDraggingOver(true)
     setError(false)
@@ -250,7 +250,7 @@ export const ImageDropUploader = ({
     setDraggingOver(false)
     setError(false)
 
-    if(!isDraggedFileListValid(e)) return
+    if (!isDraggedFileListValid(e)) return
 
     setInternalStatus('manage')
 
@@ -288,7 +288,7 @@ export const ImageDropUploader = ({
     onUpload({
       value: reader.result,
       name: imageRawData?.name || null,
-      file: imageRawData || null
+      file: imageRawData || null,
     })
   }, [imageRawData])
 

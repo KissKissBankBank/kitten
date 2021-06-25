@@ -5,6 +5,7 @@ exports[`<ImageDropUploader /> should match snapshot 1`] = `
   className="sc-bwzfXH eOMoCx k-ImageDropUploader"
 >
   <input
+    accept="image/jpeg, image/png, image/gif, image/webp"
     aria-describedby={null}
     disabled={false}
     id="ImageDropUploader"
@@ -140,6 +141,7 @@ exports[`<ImageDropUploader /> should match snapshot with props 1`] = `
   className="sc-bwzfXH eOMoCx k-ImageDropUploader"
 >
   <input
+    accept="image/jpeg, image/png, image/gif, image/webp"
     aria-describedby={null}
     aria-label="Hello World!"
     disabled={false}
@@ -189,6 +191,7 @@ exports[`<ImageDropUploader /> should match snapshot with props 2`] = `
   className="sc-bwzfXH eOMoCx k-ImageDropUploader k-ImageDropUploader--disabled"
 >
   <input
+    accept="image/jpeg, image/png, image/gif, image/webp"
     aria-describedby={null}
     aria-label="Hello World!"
     disabled={true}
