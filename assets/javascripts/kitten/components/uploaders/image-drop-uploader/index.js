@@ -181,25 +181,30 @@ const getCropHeight = ratio => CROP_WIDTH / ratio
 
 export const ImageDropUploader = ({
   id,
-  buttonTitle = '',
-  buttonText = '',
-  className = '',
-  fileInputProps = {},
+  acceptedFileSize = 2 * 1024 * 1024,
+  acceptedMimeTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'],
   buttonProps = {},
-  managerTitle = '',
-  managerText = '',
-  disabled = false,
-  status = 'ready',
+  buttonText = '',
+  buttonTitle = '',
   canCancel = true,
   cancelButtonText = '',
+  className = '',
   cropRatio = 16 / 10,
-  initialValue = '',
-  initialCrop = null,
-  onChange = () => {},
-  onCancel = () => {},
-  onUpload = () => {},
+  disabled = false,
   error = false,
   errorMessage = null,
+  fileInputProps = {},
+  initialCrop = null,
+  initialValue = '',
+  managerText = '',
+  managerTitle = '',
+  onCancel = () => {},
+  onChange = () => {},
+  onUpload = () => {},
+  quantityErrorText = '',
+  sizeErrorText = '',
+  status = 'ready',
+  typeErrorText = '',
 }) => {
   const [internalStatus, setInternalStatus] = useState(status)
   useEffect(() => setInternalStatus(status), [status])
@@ -209,6 +214,8 @@ export const ImageDropUploader = ({
   const [imageDataURL, setImageDataURL] = useState(initialValue)
   const [cropperData, setCropperData] = useState({})
   const [internalInitialCrop, setInternalInitialCrop] = useState(initialCrop)
+  const [isError, setError] = useState(error)
+  const [internalErrorMessage, setErrorMessage] = useState(errorMessage)
 
   useEffect(() => {
     if (initialValue !== '') {
@@ -219,22 +226,32 @@ export const ImageDropUploader = ({
   const handleDragEnter = e => {
     e.preventDefault()
     e.stopPropagation()
+    if(!isDraggedFileListValid(e)) return
+
     setDraggingOver(true)
+    setError(false)
   }
   const handleDragLeave = e => {
     e.preventDefault()
     e.stopPropagation()
+
     setDraggingOver(false)
+    setError(false)
   }
   const handleDragOver = e => {
     e.preventDefault()
     e.stopPropagation()
   }
+
   const handleDrop = e => {
     e.preventDefault()
     e.stopPropagation()
 
     setDraggingOver(false)
+    setError(false)
+
+    if(!isDraggedFileListValid(e)) return
+
     setInternalStatus('manage')
 
     const image = e.dataTransfer.files[0]
@@ -259,7 +276,9 @@ export const ImageDropUploader = ({
 
   useEffect(() => {
     if (!imageRawData) return
+    if (!isSelectedImageValid(imageRawData)) return
 
+    setError(false)
     const reader = new FileReader()
     reader.readAsDataURL(imageRawData)
     reader.onloadend = () => {
@@ -274,6 +293,8 @@ export const ImageDropUploader = ({
   }, [imageRawData])
 
   useEffect(() => {
+    if (imageRawData && !isSelectedImageValid(imageRawData)) return
+
     onChange({
       value: imageDataURL,
       name: imageRawData?.name || null,
@@ -296,11 +317,39 @@ export const ImageDropUploader = ({
     setCropperData(exportedCropperData)
   }
 
+  const isDraggedFileListValid = event => {
+    if (!acceptedMimeTypes.includes(event.dataTransfer.items[0].type)) {
+      setError(true)
+      setInternalStatus('ready')
+      setErrorMessage(typeErrorText)
+      return false
+    }
+    if (event.dataTransfer.items.length > 1) {
+      setError(true)
+      setInternalStatus('ready')
+      setErrorMessage(quantityErrorText)
+      return false
+    }
+
+    return true
+  }
+
+  const isSelectedImageValid = file => {
+    if (file.size > acceptedFileSize) {
+      setError(true)
+      setInternalStatus('ready')
+      setErrorMessage(sizeErrorText)
+      return false
+    }
+
+    return true
+  }
+
   return (
     <StyledImageDropUploader
       className={classNames('k-ImageDropUploader', className, {
         'k-ImageDropUploader--isDraggingOver': isDraggingOver,
-        'k-ImageDropUploader--error': error,
+        'k-ImageDropUploader--error': isError,
         'k-ImageDropUploader--disabled': disabled,
       })}
     >
@@ -313,8 +362,9 @@ export const ImageDropUploader = ({
             onChange={onFileInputChange}
             disabled={disabled}
             aria-describedby={
-              error && errorMessage ? `${id}-error-description` : null
+              isError && internalErrorMessage ? `${id}-error-description` : null
             }
+            accept={acceptedMimeTypes.join(', ')}
           />
           <label
             {...buttonProps}
@@ -382,7 +432,7 @@ export const ImageDropUploader = ({
         </div>
       )}
 
-      {error && errorMessage && (
+      {isError && internalErrorMessage && (
         <Text
           id={`${id}-error-description`}
           as="p"
@@ -391,7 +441,7 @@ export const ImageDropUploader = ({
           weight="bold"
           className="k-u-margin-top-noneHalf"
         >
-          {errorMessage}
+          {internalErrorMessage}
         </Text>
       )}
     </StyledImageDropUploader>
@@ -400,21 +450,27 @@ export const ImageDropUploader = ({
 
 ImageDropUploader.propTypes = {
   id: PropTypes.string.isRequired,
+  acceptedFileSize: PropTypes.number,
+  acceptedMimeTypes: PropTypes.array,
   buttonProps: PropTypes.object,
-  buttonTitle: PropTypes.node,
   buttonText: PropTypes.node,
-  managerTitle: PropTypes.node,
-  managerText: PropTypes.node,
+  buttonTitle: PropTypes.node,
   canCancel: PropTypes.bool,
   cancelButtonText: PropTypes.string,
-  disabled: PropTypes.bool,
-  fileInputProps: PropTypes.object,
-  onCancel: PropTypes.func,
-  onUpload: PropTypes.func,
   cropRatio: PropTypes.number,
-  status: PropTypes.oneOf(['ready', 'error', 'manage']),
-  initialValue: PropTypes.string,
-  onChange: PropTypes.func,
+  disabled: PropTypes.bool,
   error: PropTypes.bool,
   errorMessage: PropTypes.node,
+  fileInputProps: PropTypes.object,
+  initialCrop: PropTypes.object,
+  initialValue: PropTypes.string,
+  managerText: PropTypes.node,
+  managerTitle: PropTypes.node,
+  onCancel: PropTypes.func,
+  onChange: PropTypes.func,
+  onUpload: PropTypes.func,
+  quantityErrorText: PropTypes.node,
+  sizeErrorText: PropTypes.node,
+  status: PropTypes.oneOf(['ready', 'error', 'manage']),
+  typeErrorText: PropTypes.node,
 }
