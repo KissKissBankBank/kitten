@@ -181,7 +181,7 @@ const getCropHeight = ratio => CROP_WIDTH / ratio
 
 export const ImageDropUploader = ({
   id,
-  acceptedFileSize = 2 * 1024 * 1024,
+  acceptedFileSize = 5 * 1024 * 1024,
   acceptedMimeTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'],
   buttonProps = {},
   buttonText = '',
