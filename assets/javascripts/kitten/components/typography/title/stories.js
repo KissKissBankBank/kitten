@@ -2,7 +2,6 @@ import React from 'react'
 import { Title } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
-import COLORS from '../../../constants/colors-config'
 
 const argTypes = {
   modifier: {
@@ -27,11 +26,7 @@ const argTypes = {
   cssColor: {
     name: 'cssColor',
     description: 'Specify a color (use a CSS color string).',
-    control: {
-      type: 'color',
-      presetColors:['#eee'], 
-    },
-      
+    control: 'color',
   },
   italic: {
     name: 'italic',
@@ -61,7 +56,7 @@ export const Default = ({
          modifier={modifier}
          italic={italic}
          noMargin={noMargin}
-         cssColor={COLORS.font1}
+         cssColor={cssColor}
          {...props}
        >
         Lorem ipsum dolor sit amet
