@@ -66,13 +66,6 @@ export const Default = ({
 );
 
 Default.args = args;
-Default.parameters = {
-  docs: {
-    description: {
-      story: "By default, the content is centered.",
-    },
-  },
-}
 Default.argTypes = argTypes;
 
 export const WithoutMargin = Default.bind({});
