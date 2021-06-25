@@ -23,7 +23,7 @@ describe('<ImageDropUploader />', () => {
           cancelButtonText="Cancel"
           fileInputProps={{ 'aria-label': 'Hello World!' }}
           initialValue="/hello.jpg"
-          cropRatio={16/9}
+          cropRatio={16 / 9}
         />,
       )
       .toJSON()

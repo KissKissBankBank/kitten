@@ -302,7 +302,9 @@ export const ImageDropUploader = ({
             id={id}
             onChange={onFileInputChange}
             disabled={disabled}
-            aria-describedby={error && errorMessage && `${id}-error-description` || null}
+            aria-describedby={
+              error && errorMessage ? `${id}-error-description` : null
+            }
           />
           <label
             {...buttonProps}
@@ -358,7 +360,7 @@ export const ImageDropUploader = ({
               {managerText}
             </div>
           </div>
-          {canCancel &&
+          {canCancel && (
             <CloseButton
               className="k-ImageDropUploader__manager__cancelButton"
               onClick={!disabled ? handleCancelClick : null}
@@ -366,7 +368,7 @@ export const ImageDropUploader = ({
               size="micro"
               closeButtonLabel={cancelButtonText}
             />
-          }
+          )}
         </div>
       )}
 
