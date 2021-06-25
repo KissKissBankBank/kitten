@@ -115,20 +115,9 @@ export var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNa
       burgerMenuWidth = _useState2[0],
       setBurgerMenuWidth = _useState2[1];
 
-  var _useState3 = useState(null),
-      _useState4 = _slicedToArray(_useState3, 2),
-      userMenuWidth = _useState4[0],
-      setUserMenuWidth = _useState4[1];
-
   var windowWidth = useWindowWidth();
   useDeepCompareEffect(function () {
     setBurgerMenuWidth(getComputedLeft("".concat(HEADER_NAV_ID, "PlateformMenu")) + getComputedWidthElement("".concat(HEADER_NAV_ID, "PlateformMenu")) + getComputedWidthElement("".concat(HEADER_NAV_ID, "Logo")));
-
-    if (isLogged) {
-      setTimeout(function () {
-        setUserMenuWidth(getComputedWidthElement("".concat(HEADER_NAV_ID, "UserMenu")) || '0');
-      }, 100);
-    }
   }, [isLogged, windowWidth]);
   return /*#__PURE__*/React.createElement(HeaderNav, {
     id: HEADER_NAV_ID,
@@ -141,9 +130,9 @@ export var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNa
     },
     size: size,
     borderStyle: borderStyle
-  }, /*#__PURE__*/React.createElement(HeaderNav.BurgerMenu, null, /*#__PURE__*/React.createElement(InnerBurgerMenu, {
+  }, /*#__PURE__*/React.createElement(HeaderNav.BurgerMenuNext, {
     dropdownContentWidth: burgerMenuWidth
-  })), /*#__PURE__*/React.createElement(HeaderNav.Logo, {
+  }, /*#__PURE__*/React.createElement(InnerBurgerMenu, null)), /*#__PURE__*/React.createElement(HeaderNav.Logo, {
     href: "#"
   }, /*#__PURE__*/React.createElement(HeaderNav.Hidden, {
     min: "xs"
@@ -167,9 +156,9 @@ export var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNa
     hiddenText: {
       max: 'm'
     }
-  }), /*#__PURE__*/React.createElement(HeaderNav.Logged, null, /*#__PURE__*/React.createElement(HeaderNav.UserMenu, {
-    dropdownContentWidth: userMenuWidth
-  }, /*#__PURE__*/React.createElement(HeaderNav.UserMenu.Button, {
+  }), /*#__PURE__*/React.createElement(HeaderNav.Logged, null, /*#__PURE__*/React.createElement(HeaderNav.UserMenuNext, {
+    dropdownAnchorSide: "right"
+  }, /*#__PURE__*/React.createElement(HeaderNav.UserMenuNext.Button, {
     hasArrow: true,
     backgroundColor: COLORS.background1,
     backgroundColorHover: COLORS.line1,
@@ -185,7 +174,7 @@ export var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNa
   }, /*#__PURE__*/React.createElement(Text, {
     lineHeight: "normal",
     weight: "regular"
-  }, "Jean Charles \xC9douard")))), /*#__PURE__*/React.createElement(HeaderNav.UserMenu.Navigation, null, /*#__PURE__*/React.createElement(InnerUserMenu, null)))), /*#__PURE__*/React.createElement(HeaderNav.LoggedOut, null, /*#__PURE__*/React.createElement(HeaderNav.Button, {
+  }, "Jean Charles \xC9douard")))), /*#__PURE__*/React.createElement(HeaderNav.UserMenuNext.Navigation, null, /*#__PURE__*/React.createElement(InnerUserMenu, null)))), /*#__PURE__*/React.createElement(HeaderNav.LoggedOut, null, /*#__PURE__*/React.createElement(HeaderNav.Button, {
     icon: /*#__PURE__*/React.createElement(HeaderNav.Hidden, {
       min: "s"
     }, /*#__PURE__*/React.createElement(SearchIcon, null)),

@@ -6,6 +6,7 @@ import React, {
   forwardRef,
 } from 'react'
 import styled, { css } from 'styled-components'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import throttle from 'lodash/throttle'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -15,17 +16,15 @@ const StyledStickyContainer = styled.div`
   transition-duration: 0.2s;
   transition-timing-function: ease;
 
-  ${({ isSticky }) =>
-    isSticky === 'always' &&
-    css`
-      position: fixed;
-    `}
+  &.k-StickyContainer--alwaysSticky {
+    position: fixed;
+  }
 
   ${({ stickyContainerStyleProps }) => stickyContainerStyleProps}
 `
 
 const StyledSpacer = styled.div`
-  height: ${({ containerHeight }) => pxToRem(containerHeight)};
+  height: var(--StickyContainer-height, 0);
   flex: 0 0 auto;
 `
 
@@ -62,7 +61,7 @@ function useScrollDirection() {
 }
 
 const StickyContainerBase = (
-  { children, top, bottom, isSticky, ...other },
+  { children, className, top, bottom, isSticky, ...other },
   ref,
 ) => {
   const currentStickyContainer = useRef(null)
@@ -78,6 +77,25 @@ const StickyContainerBase = (
     setUnsticky,
   }))
 
+  useEffect(() => {
+    const currentContainerHeight = currentStickyContainer.current
+      ? currentStickyContainer.current.clientHeight
+      : 0
+    setContainerHeight(currentContainerHeight)
+  }, []) // [] makes that Effect fire on Component mount only
+
+  useEffect(() => {
+    if (['always', 'never'].includes(isSticky)) return
+
+    if (shouldUnstickContainer()) {
+      setUnsticky()
+    } else if (shouldStickContainer()) {
+      setSticky()
+    } else if (shouldUnstickContainerWithTransition()) {
+      setUnstickyWithTransition()
+    }
+  }, [scrollDirectionDown, scrollDirectionUp])
+
   const setSticky = () => {
     setStuckState(true)
   }
@@ -92,6 +110,14 @@ const StickyContainerBase = (
 
   const setUnsticky = () => {
     setStuckState(false)
+  }
+
+  if (isSticky === 'never') {
+    return (
+      <>
+        {children}
+      </>
+    )
   }
 
   const isOriginalContainerOutOfViewport = () => {
@@ -139,25 +165,6 @@ const StickyContainerBase = (
     )
   }
 
-  useEffect(() => {
-    const currentContainerHeight = currentStickyContainer.current
-      ? currentStickyContainer.current.clientHeight
-      : 0
-    setContainerHeight(currentContainerHeight)
-  }, []) // [] makes that Effect fire on Component mount only
-
-  useEffect(() => {
-    if (isSticky === 'always') return
-
-    if (shouldUnstickContainer()) {
-      setUnsticky()
-    } else if (shouldStickContainer()) {
-      setSticky()
-    } else if (shouldUnstickContainerWithTransition()) {
-      setUnstickyWithTransition()
-    }
-  }, [scrollDirectionDown, scrollDirectionUp])
-
   const stickyContainerStyleProps = () => {
     const position = stuck ? 'fixed' : 'static'
 
@@ -195,11 +202,17 @@ const StickyContainerBase = (
   return (
     <>
       {(stuck || isSticky === 'always') && (
-        <StyledSpacer className="k-Spacer" containerHeight={containerHeight} />
+        <StyledSpacer
+          className="k-Spacer"
+          style={{'--StickyContainer-height': containerHeight}}
+        />
       )}
       <StyledStickyContainer
         ref={currentStickyContainer}
         stickyContainerStyleProps={stickyContainerStyleProps}
+        className={classNames('k-StickyContainer', className, {
+          'k-StickyContainer--alwaysSticky': isSticky === 'always',
+          })}
         isSticky={isSticky}
         {...other}
       >
@@ -214,5 +227,5 @@ export const StickyContainer = forwardRef(StickyContainerBase)
 StickyContainer.propTypes = {
   top: PropTypes.number,
   bottom: PropTypes.number,
-  isSticky: PropTypes.oneOf(['topOnScrollUp', 'bottomOnScrollDown', 'always']),
+  isSticky: PropTypes.oneOf(['topOnScrollUp', 'bottomOnScrollDown', 'always', 'never']),
 }
