@@ -23,6 +23,8 @@ export const StatusReady = () => (
     managerTitle="Frame your image"
     managerText="You can move your image around the frame"
     onChange={e => console.warn(e)}
+    onCancel={e => console.warn(e)}
+    onUpload={e => console.warn(e)}
     disabled={boolean('Disabled?', false)}
     error={boolean('Error?', false)}
     errorMessage={text('ErrorMessage', null)}
@@ -47,6 +49,8 @@ export const StatusManage = () => (
     initialValue="/kitten.jpg"
     initialCrop={{ height: 592, width: 948, x: 0, y: 265 }}
     onChange={e => console.warn(e)}
+    onCancel={e => console.warn(e)}
+    onUpload={e => console.warn(e)}
     disabled={boolean('Disabled?', false)}
     error={boolean('Error?', false)}
     errorMessageMessage={text('ErrorMessage', null)}

@@ -196,6 +196,8 @@ export const ImageDropUploader = ({
   initialValue = '',
   initialCrop = null,
   onChange = () => {},
+  onCancel = () => {},
+  onUpload = () => {},
   error = false,
   errorMessage = null,
 }) => {
@@ -251,6 +253,8 @@ export const ImageDropUploader = ({
     setCropperData({})
     setInternalInitialCrop(null)
     setInternalStatus('ready')
+
+    onCancel(true)
   }
 
   useEffect(() => {
@@ -261,6 +265,12 @@ export const ImageDropUploader = ({
     reader.onloadend = () => {
       setImageDataURL(reader.result)
     }
+
+    onUpload({
+      value: reader.result,
+      name: imageRawData?.name || null,
+      file: imageRawData || null
+    })
   }, [imageRawData])
 
   useEffect(() => {
