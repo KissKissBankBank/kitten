@@ -6,11 +6,22 @@ import { usePrevious } from '../../../../helpers/utils/use-previous-hook'
 export const ImageCropper = ({
   src,
   onChange,
-  startingPosition = null,
   className,
+  initialCrop,
+  disabled,
   ...props
 }) => {
   const [imageDimensions, setImageDimensions] = useState(null)
+  const [scaledInitialCrop, setScaledInitialCrop] = useState(null)
+
+  useEffect(() => {
+    if (!initialCrop || !imageDimensions) return
+
+    setScaledInitialCrop({
+      x: -1 * Math.round(initialCrop.x / imageDimensions.scaleRatio),
+      y: -1 * Math.round(initialCrop.y / imageDimensions.scaleRatio),
+    })
+  }, [imageDimensions, initialCrop])
 
   const {
     cropZoneProps,
@@ -18,9 +29,11 @@ export const ImageCropper = ({
     liveImagePosition,
     isDragging,
   } = useDrag({
-    startingPosition,
+    startingPosition: scaledInitialCrop,
     imageDimensions,
+    disabled,
   })
+
   const previousImagePosition = usePrevious(imagePosition)
 
   useEffect(() => {
@@ -34,7 +47,12 @@ export const ImageCropper = ({
       height: Math.round(imageDimensions.containedSize.height * imageDimensions.scaleRatio),
     }
 
-    onChange({cropValue, imagePosition})
+    const cropPercent = {
+      x: Math.abs(imagePosition.x) * 100 / Math.abs(imageDimensions.containedSize.width - imageDimensions.scaledSize.width || 1),
+      y: Math.abs(imagePosition.y) * 100 / Math.abs(imageDimensions.containedSize.height - imageDimensions.scaledSize.height || 1),
+    }
+
+    onChange({cropValue, imagePosition, cropPercent})
   }, [imagePosition])
 
   const getRatio = (size) => (size.height / size.width)

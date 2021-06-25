@@ -7,6 +7,7 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { UploadIcon } from '../../../components/icons/upload-icon'
 import { CloseButton } from '../../../components/buttons/close-button'
+import { Text } from '../../../components/typography/text'
 import { ImageCropper } from './components/image-cropper'
 
 const CROP_WIDTH = 125
@@ -72,12 +73,39 @@ const StyledImageDropUploader = styled.div`
       border-color: ${COLORS.primary4};
     }
   }
-  input[type='file']:active + .k-ImageDropUploader__button {
+
+  input[type='file']:active:not(:disabled) + .k-ImageDropUploader__button {
     border-color: ${COLORS.primary1};
   }
   &.k-ImageDropUploader--isDraggingOver .k-ImageDropUploader__button {
     border-color: ${COLORS.primary1};
     border-style: solid;
+  }
+
+  &.k-ImageDropUploader--error {
+    .k-ImageDropUploader__button,
+    .k-ImageDropUploader__manager {
+      border-color: ${COLORS.error2};
+      border-style: solid;
+    }
+  }
+
+  &.k-ImageDropUploader--disabled {
+    .k-ImageDropUploader__button,
+    .k-ImageDropUploader__manager {
+      border-color: ${COLORS.line2};
+      background-color: ${COLORS.background2};
+      color: ${COLORS.font2};
+      cursor: not-allowed;
+    }
+    .k-ImageDropUploader__manager__cropper {
+      pointer-events: none;
+      background-color: ${COLORS.background2};
+
+      img {
+        filter: grayscale(1) opacity(0.4);
+      }
+    }
   }
 
   .k-ImageDropUploader__button__title,
@@ -109,9 +137,6 @@ const StyledImageDropUploader = styled.div`
     overflow: hidden;
     position: relative;
 
-    /* img {
-      display: block;
-    } */
     img {
       position: absolute;
       width: 100%;
@@ -165,20 +190,23 @@ export const ImageDropUploader = ({
   managerText = '',
   disabled = false,
   status = 'ready',
+  canCancel = true,
   cancelButtonText = '',
   cropRatio = 16 / 10,
   initialValue = '',
+  initialCrop = null,
   onChange = () => {},
+  error = false,
+  errorMessage = null,
 }) => {
   const [internalStatus, setInternalStatus] = useState(status)
   useEffect(() => setInternalStatus(status), [status])
 
-  const [internalDisabled, setInternalDisabled] = useState(disabled)
-  useEffect(() => setInternalDisabled(disabled), [disabled])
-
   const [isDraggingOver, setDraggingOver] = useState(false)
   const [imageRawData, setImageRawData] = useState(null)
   const [imageDataURL, setImageDataURL] = useState(initialValue)
+  const [cropperData, setCropperData] = useState({})
+  const [internalInitialCrop, setInternalInitialCrop] = useState(initialCrop)
 
   useEffect(() => {
     if (initialValue !== '') {
@@ -220,6 +248,8 @@ export const ImageDropUploader = ({
   const handleCancelClick = () => {
     setImageRawData(null)
     setImageDataURL('')
+    setCropperData({})
+    setInternalInitialCrop(null)
     setInternalStatus('ready')
   }
 
@@ -233,7 +263,7 @@ export const ImageDropUploader = ({
     }
   }, [imageRawData])
 
-  const handleCropperChange = cropperData => {
+  useEffect(() => {
     onChange({
       value: imageDataURL,
       name: imageRawData?.name || null,
@@ -250,12 +280,18 @@ export const ImageDropUploader = ({
       //   ? cropperInstance?.getCroppedCanvas()?.toDataURL()
       //   : '',
     })
+  }, [imageDataURL, cropperData, imageRawData])
+
+  const handleCropperChange = exportedCropperData => {
+    setCropperData(exportedCropperData)
   }
 
   return (
     <StyledImageDropUploader
       className={classNames('k-ImageDropUploader', className, {
         'k-ImageDropUploader--isDraggingOver': isDraggingOver,
+        'k-ImageDropUploader--error': error,
+        'k-ImageDropUploader--disabled': disabled,
       })}
     >
       {internalStatus === 'ready' && (
@@ -265,7 +301,8 @@ export const ImageDropUploader = ({
             type="file"
             id={id}
             onChange={onFileInputChange}
-            disabled={internalDisabled}
+            disabled={disabled}
+            aria-describedby={error && errorMessage && `${id}-error-description` || null}
           />
           <label
             {...buttonProps}
@@ -307,6 +344,8 @@ export const ImageDropUploader = ({
             onChange={handleCropperChange}
             id={`${id}-cropper`}
             aria-describedby={`${id}-cropper-description`}
+            initialCrop={internalInitialCrop}
+            disabled={disabled}
           />
           <div
             className="k-ImageDropUploader__manager__content"
@@ -319,13 +358,29 @@ export const ImageDropUploader = ({
               {managerText}
             </div>
           </div>
-          <CloseButton
-            className="k-ImageDropUploader__manager__cancelButton"
-            onClick={handleCancelClick}
-            size="micro"
-            closeButtonLabel={cancelButtonText}
-          />
+          {canCancel &&
+            <CloseButton
+              className="k-ImageDropUploader__manager__cancelButton"
+              onClick={!disabled ? handleCancelClick : null}
+              disabled={disabled}
+              size="micro"
+              closeButtonLabel={cancelButtonText}
+            />
+          }
         </div>
+      )}
+
+      {error && errorMessage && (
+        <Text
+          id={`${id}-error-description`}
+          as="p"
+          size="micro"
+          color="error"
+          weight="bold"
+          className="k-u-margin-top-noneHalf"
+        >
+          {errorMessage}
+        </Text>
       )}
     </StyledImageDropUploader>
   )
@@ -341,13 +396,13 @@ ImageDropUploader.propTypes = {
   canCancel: PropTypes.bool,
   cancelButtonText: PropTypes.string,
   disabled: PropTypes.bool,
-  errorText: PropTypes.string,
   fileInputProps: PropTypes.object,
-  fileName: PropTypes.string,
   onCancel: PropTypes.func,
   onUpload: PropTypes.func,
+  cropRatio: PropTypes.number,
   status: PropTypes.oneOf(['ready', 'error', 'manage']),
-  statusText: PropTypes.string,
   initialValue: PropTypes.string,
   onChange: PropTypes.func,
+  error: PropTypes.bool,
+  errorMessage: PropTypes.node,
 }

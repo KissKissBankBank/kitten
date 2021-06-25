@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export const useDrag = ({startingPosition, imageDimensions}) => {
+export const useDrag = ({startingPosition, imageDimensions, disabled}) => {
   const [isDragging, setDragging] = useState(false)
   const [origin, setOrigin] = useState({ x: 0, y: 0 })
   const [translation, setTranslation] = useState({ x: 0, y: 0})
@@ -10,8 +10,8 @@ export const useDrag = ({startingPosition, imageDimensions}) => {
     if(!imageDimensions) return
 
     if (startingPosition) {
-      setTranslation(startingPosition)
-      setLastTranslation(startingPosition)
+      setTranslation(getDestination(startingPosition))
+      setLastTranslation(getDestination(startingPosition))
     } else {
       const destination = getDestination({
         x: Math.round((imageDimensions.containedSize.width - imageDimensions.scaledSize.width) / 2),
@@ -118,6 +118,21 @@ export const useDrag = ({startingPosition, imageDimensions}) => {
       x: destinationX,
       y: destinationY,
     })
+  }
+
+  if (disabled) {
+    return {
+      liveImagePosition: {
+        x: translation.x,
+        y: translation.y,
+      },
+      imagePosition: {
+        x: lastTranslation.x,
+        y: lastTranslation.y,
+      },
+      cropZoneProps: {},
+      isDragging: false,
+    }
   }
 
   return {
