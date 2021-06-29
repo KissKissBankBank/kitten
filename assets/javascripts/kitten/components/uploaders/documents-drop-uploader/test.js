@@ -11,9 +11,7 @@ describe('<DocumentsDropUploader />', () => {
   })
   it('should match snapshot without props', () => {
     const component = renderer
-      .create(
-        <DocumentsDropUploader id="DocumentsDropUploader" />,
-      )
+      .create(<DocumentsDropUploader id="DocumentsDropUploader" />)
       .toJSON()
     expect(component).toMatchSnapshot()
   })

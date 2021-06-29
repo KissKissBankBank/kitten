@@ -15,10 +15,25 @@ export const StatusReady = () => (
     managerText="Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
     onChange={e => console.warn('onChange', e)}
     disabled={boolean('Disabled?', false)}
-    status={boolean('Error?', false) ? 'error' : select("Status", ['ready', 'manage', 'wait', 'accepted', 'denied', 'error'])}
+    status={
+      boolean('Error?', false)
+        ? 'error'
+        : select('Status', [
+            'ready',
+            'manage',
+            'wait',
+            'accepted',
+            'denied',
+            'error',
+          ])
+    }
     errorMessage={text('ErrorMessage', null)}
     typeErrorText={e => `File ${e} is not the right file type`}
     sizeErrorText={e => `File ${e} is too large`}
+    waitMessage="This operation can take up to 48 hours"
+    deniedMessage="Your documents are not valid"
+    retryActionMessage="Click to load another document"
+    removeActionMessage={e => `Click to remove ${e}`}
   />
 )
 
@@ -31,9 +46,24 @@ export const StatusManage = () => (
     initialValue={[{ name: 'kitten.jpg' }]}
     onChange={e => console.warn('onChange', e)}
     disabled={boolean('Disabled?', false)}
-    status={boolean('Error?', false) ? 'error' : select("Status", ['ready', 'manage', 'wait', 'accepted', 'denied', 'error'])}
+    status={
+      boolean('Error?', false)
+        ? 'error'
+        : select('Status', [
+            'ready',
+            'manage',
+            'wait',
+            'accepted',
+            'denied',
+            'error',
+          ])
+    }
     errorMessageMessage={text('ErrorMessage', null)}
     typeErrorText={e => `File ${e} is not the right file type`}
     sizeErrorText={e => `File ${e} is too large`}
+    waitMessage="This operation can take up to 48 hours"
+    deniedMessage="Your documents are not valid"
+    retryActionMessage="Click to load another document"
+    removeActionMessage={e => `Click to remove ${e}`}
   />
 )

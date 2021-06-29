@@ -13,8 +13,6 @@ import { ClockCircleIcon } from '../../../components/icons/clock-circle-icon'
 import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
 import { CrossCircleIcon } from '../../../components/icons/cross-circle-icon'
 
-const CROP_WIDTH = 125
-
 const StyledDocumentsDropUploader = styled.div`
   input[type='file'] {
     border: 0;
@@ -51,13 +49,12 @@ const StyledDocumentsDropUploader = styled.div`
   align-items: flex-start;
   gap: ${pxToRem(35)};
 
-  transition: border-color .2s ease;
+  transition: border-color 0.2s ease;
 
   .k-DrocumentDropUploader__icon {
     margin-top: ${pxToRem(15)};
     margin-left: ${pxToRem(15)};
   }
-
 
   .k-DocumentsDropUploader__button {
     position: absolute;
@@ -105,12 +102,19 @@ const StyledDocumentsDropUploader = styled.div`
 
   .k-DocumentsDropUploader__fileList {
     margin: 0;
-    padding: ${pxToRem(10)} 0;
+    padding: 0;
     list-style: none;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     gap: ${pxToRem(5)};
+  }
+
+  &.k-DocumentsDropUploader--manage,
+  &.k-DocumentsDropUploader--error {
+    .k-DocumentsDropUploader__fileList {
+      padding: ${pxToRem(10)} 0;
+    }
   }
 
   .k-DocumentsDropUploader__file {
@@ -136,6 +140,32 @@ const StyledDocumentsDropUploader = styled.div`
     text-overflow: ellipsis;
     display: inline-block;
   }
+
+  &.k-DocumentsDropUploader--wait,
+  &.k-DocumentsDropUploader--accepted,
+  &.k-DocumentsDropUploader--denied {
+    .k-DrocumentDropUploader__icon {
+      margin-top: 0;
+      align-self: center;
+    }
+  }
+
+  &.k-DocumentsDropUploader--wait {
+    border: 0;
+    background-color: ${COLORS.line1};
+  }
+
+  &.k-DocumentsDropUploader--accepted {
+    border: 0;
+    background-color: ${COLORS.valid1};
+  }
+
+  &.k-DocumentsDropUploader--denied {
+    border: 0;
+    background-color: ${COLORS.error2};
+  }
+
+
 `
 
 const StyledErrorList = styled.ul`
@@ -164,22 +194,26 @@ export const DocumentsDropUploader = ({
   managerText = '',
   managerTitle = '',
   onChange = () => {},
-  sizeErrorText = (i) => i,
+  sizeErrorText = i => i,
   status = 'ready',
-  typeErrorText = (i) => i,
+  typeErrorText = i => i,
   waitMessage = '',
   deniedMessage = '',
-  retryText = '',
+  retryActionMessage = '',
+  removeActionMessage = i => i,
 }) => {
   const [internalStatus, setInternalStatus] = useState(status)
   useEffect(() => setInternalStatus(status), [status])
 
   const [isDraggingOver, setDraggingOver] = useState(false)
   const [fileList, setFileList] = useState(initialValue)
-  const [internalErrorMessageList, setErrorMessageList] = useState([errorMessageList])
+  const [internalErrorMessageList, setErrorMessageList] = useState([
+    errorMessageList,
+  ])
 
   useEffect(() => {
     if (initialValue.length === 0) return
+    if (['wait', 'accepted', 'denied'].includes(internalStatus)) return
 
     setInternalStatus('manage')
   }, [initialValue])
@@ -227,12 +261,16 @@ export const DocumentsDropUploader = ({
     onChange(fileList)
 
     if (fileList.length === 0) return setInternalStatus(status)
+    if (['wait', 'accepted', 'denied'].includes(internalStatus)) return
 
     setInternalStatus('manage')
 
-    fileList.forEach((file) => {
+    fileList.forEach(file => {
       if ('File' in window && file instanceof File) {
-        if (acceptedMimeTypes.length > 0 && !acceptedMimeTypes.includes(file.type)) {
+        if (
+          acceptedMimeTypes.length > 0 &&
+          !acceptedMimeTypes.includes(file.type)
+        ) {
           setErrorMessageList(current => [...current, typeErrorText(file.name)])
           setInternalStatus('error')
         }
@@ -253,8 +291,8 @@ export const DocumentsDropUploader = ({
     setFileList(currentList => {
       const newList = [...currentList]
 
-      files.forEach((file) => {
-        if(currentList.indexOf(file) === -1) {
+      files.forEach(file => {
+        if (currentList.indexOf(file) === -1) {
           newList.push(file)
         }
       })
@@ -263,20 +301,28 @@ export const DocumentsDropUploader = ({
     })
   }
 
+  const retryAction = () => {
+    setErrorMessageList([])
+    setFileList([])
+    setInternalStatus('manage')
+  }
+
   return (
     <>
       <StyledDocumentsDropUploader
-        className={classNames('k-DocumentsDropUploader', className,
+        className={classNames(
+          'k-DocumentsDropUploader',
+          className,
           `k-DocumentsDropUploader--${internalStatus}`,
           {
-          'k-DocumentsDropUploader--isDraggingOver': isDraggingOver,
-          'k-DocumentsDropUploader--disabled': disabled,
-        })}
+            'k-DocumentsDropUploader--isDraggingOver': isDraggingOver,
+            'k-DocumentsDropUploader--disabled': disabled,
+          },
+        )}
         onDragEnter={handleDragEnter}
         onDragLeave={handleDragLeave}
         onDragOver={handleDragOver}
         onDrop={handleDrop}
-
       >
         <div className="k-DrocumentDropUploader__icon">
           {['manage', 'ready', 'error'].includes(internalStatus) && (
@@ -293,7 +339,7 @@ export const DocumentsDropUploader = ({
           {internalStatus === 'accepted' && (
             <CheckedCircleIcon
               color={COLORS.background1}
-              bgColor={COLORS.success}
+              bgColor={COLORS.valid}
               width={22}
               height={22}
             />
@@ -312,39 +358,66 @@ export const DocumentsDropUploader = ({
           className="k-DocumentsDropUploader__content"
           id={`${id}-cropper-description`}
         >
-          <div className="k-DocumentsDropUploader__title">
-            {managerTitle}
-          </div>
+          <div className="k-DocumentsDropUploader__title">{managerTitle}</div>
 
           {['ready', 'error'].includes(internalStatus) && (
-            <div className="k-DocumentsDropUploader__text">
-              {managerText}
-            </div>
+            <div className="k-DocumentsDropUploader__text">{managerText}</div>
           )}
 
-          {fileList.length > 0 &&(
+          {fileList.length > 0 && (
             <ul className="k-DocumentsDropUploader__fileList">
-              {fileList.map((file, index) => (
-                <Tag
-                  key={file.name + index}
-                  as="li"
-                  className="k-DocumentsDropUploader__file"
-                >
-                  <span className="k-DocumentsDropUploader__file__text">
-                    {file.name}
-                  </span>
-                  <button
-                    className="k-DocumentsDropUploader__file__button k-u-reset-button"
-                    type="button"
-                    onClick={() => removeFilesFromList(file)}
-                  >
-                    <span className="k-u-a11y-visuallyHidden">
-                      Retirer {file.name} de la liste.
-                    </span>
-                    <CrossIcon color="currentColor" />
-                  </button>
-                </Tag>
-              ))}
+              {['error', 'manage'].includes(internalStatus) && (
+                <>
+                  {fileList.map((file, index) => (
+                    <Tag
+                      key={file.name + index}
+                      as="li"
+                      className="k-DocumentsDropUploader__file"
+                    >
+                      <span className="k-DocumentsDropUploader__file__text">
+                        {file.name}
+                      </span>
+                      <button
+                        className="k-DocumentsDropUploader__file__button k-u-reset-button"
+                        type="button"
+                        onClick={() => removeFilesFromList(file)}
+                      >
+                        <span className="k-u-a11y-visuallyHidden">
+                          {removeActionMessage(file.name)}
+                        </span>
+                        <CrossIcon color="currentColor" />
+                      </button>
+                    </Tag>
+                  ))}
+                </>
+              )}
+              {['wait', 'accepted', 'denied'].includes(internalStatus) && (
+                <>
+                  {fileList.map((file, index) => (
+                    <Text
+                      key={file.name + index}
+                      as="li"
+                      className="k-DocumentsDropUploader__fileName"
+                      size="micro"
+                      weight="light"
+                    >
+                      {file.name}
+                      {file.canBeRemoved && (
+                        <button
+                          className="k-DocumentsDropUploader__fileName__button k-u-reset-button"
+                          type="button"
+                          onClick={() => removeFilesFromList(file)}
+                        >
+                          <span className="k-u-a11y-visuallyHidden">
+                            {removeActionMessage(file.name)}
+                          </span>
+                          <CrossIcon color="currentColor" />
+                        </button>
+                      )}
+                    </Text>
+                  ))}
+                </>
+              )}
             </ul>
           )}
 
@@ -355,7 +428,9 @@ export const DocumentsDropUploader = ({
             onChange={onFileInputChange}
             disabled={disabled}
             aria-describedby={
-              internalStatus === 'error' && internalErrorMessageList ? `${id}-error-description` : null
+              internalStatus === 'error' && internalErrorMessageList
+                ? `${id}-error-description`
+                : null
             }
             accept={acceptedMimeTypes.join(', ')}
             multiple={true}
@@ -368,6 +443,7 @@ export const DocumentsDropUploader = ({
               children={labelText}
             />
           )}
+
           {['manage', 'error'].includes(internalStatus) && (
             <Text
               tag="label"
@@ -381,8 +457,23 @@ export const DocumentsDropUploader = ({
             </Text>
           )}
 
-        </div>
+          {internalStatus === 'denied' && (
+            <>
+              <Text weight="regular">
+                {deniedMessage}
+              </Text>
+              <Text className="k-u-reset-button" weight="regular" color={error} type="button" onClick={retryAction}>
+                {retryActionMessage}
+              </Text>
+            </>
+          )}
 
+          {internalStatus === 'wait' && (
+            <Text weight="regular">
+              {waitMessage}
+            </Text>
+          )}
+        </div>
       </StyledDocumentsDropUploader>
 
       {internalStatus === 'error' && internalErrorMessageList.length > 0 && (
@@ -423,6 +514,13 @@ DocumentsDropUploader.propTypes = {
   onChange: PropTypes.func,
   quantityErrorText: PropTypes.node,
   sizeErrorText: PropTypes.func,
-  status: PropTypes.oneOf(['ready', 'error', 'manage', 'wait', 'accepted', 'denied']),
+  status: PropTypes.oneOf([
+    'ready',
+    'error',
+    'manage',
+    'wait',
+    'accepted',
+    'denied',
+  ]),
   typeErrorText: PropTypes.func,
 }
