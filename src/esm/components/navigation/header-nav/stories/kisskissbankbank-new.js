@@ -157,7 +157,8 @@ export var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNa
       max: 'm'
     }
   }), /*#__PURE__*/React.createElement(HeaderNav.Logged, null, /*#__PURE__*/React.createElement(HeaderNav.UserMenuNext, {
-    dropdownAnchorSide: "right"
+    dropdownAnchorSide: "right",
+    mobilePadding: false
   }, /*#__PURE__*/React.createElement(HeaderNav.UserMenuNext.Button, {
     hasArrow: true,
     backgroundColor: COLORS.background1,
@@ -166,7 +167,9 @@ export var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNa
     color: COLORS.font1,
     colorHover: COLORS.primary1,
     colorActive: COLORS.font1
-  }, /*#__PURE__*/React.createElement(AvatarWithTextAndBadge, null, /*#__PURE__*/React.createElement(AvatarWithTextAndBadge.Image, {
+  }, /*#__PURE__*/React.createElement(AvatarWithTextAndBadge, {
+    className: "k-u-margin-left-single@xs-down"
+  }, /*#__PURE__*/React.createElement(AvatarWithTextAndBadge.Image, {
     src: "/kitten.jpg"
   }, /*#__PURE__*/React.createElement(AvatarWithTextAndBadge.Badge, null, "2")), /*#__PURE__*/React.createElement(AvatarWithTextAndBadge.Text, {
     className: "k-u-hidden@xs-down",
