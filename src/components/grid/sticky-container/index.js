@@ -197,7 +197,7 @@ var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, (stuck || isSticky === 'always') && /*#__PURE__*/_react.default.createElement(StyledSpacer, {
     className: "k-Spacer",
     style: {
-      '--StickyContainer-height': containerHeight
+      '--StickyContainer-height': (0, _typography.pxToRem)(containerHeight)
     }
   }), /*#__PURE__*/_react.default.createElement(StyledStickyContainer, (0, _extends2.default)({
     ref: currentStickyContainer,
