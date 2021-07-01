@@ -64,6 +64,9 @@ const StyledImageDropUploader = styled.div`
 
     text-align: center;
     color: ${COLORS.font1};
+    cursor: pointer;
+
+    transition: border-color 0.2s ease, color 0.2s ease;
 
     > * {
       pointer-events: none;
@@ -71,14 +74,17 @@ const StyledImageDropUploader = styled.div`
 
     &:hover {
       border-color: ${COLORS.primary4};
+      color: ${COLORS.primary1};
     }
   }
 
   input[type='file']:active:not(:disabled) + .k-ImageDropUploader__button {
     border-color: ${COLORS.primary1};
+    color: ${COLORS.primary1};
   }
   &.k-ImageDropUploader--isDraggingOver .k-ImageDropUploader__button {
     border-color: ${COLORS.primary1};
+    color: ${COLORS.primary1};
     border-style: solid;
   }
 
@@ -386,7 +392,7 @@ export const ImageDropUploader = ({
             <span className="k-ImageDropUploader__button__title">
               {buttonTitle}
             </span>
-            <span className="k-ImageDropUploader__button__text">
+            <span className="k-ImageDropUploader__button__text k-u-color-font1">
               {buttonText}
             </span>
           </label>
