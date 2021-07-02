@@ -7,7 +7,7 @@ export default {
   title: 'Uploaders/DocumentsDropUploader',
 }
 
-export const StatusReady = () => (
+export const Default = () => (
   <DocumentsDropUploader
     id="DocumentsDropUploader"
     labelText="Add a document"
@@ -26,7 +26,7 @@ export const StatusReady = () => (
   />
 )
 
-export const StatusManage = () => (
+export const Manage = () => (
   <DocumentsDropUploader
     id="DocumentsDropUploader"
     labelText="Add a document"
@@ -48,27 +48,6 @@ export const StatusManage = () => (
             'error',
           ])
     }
-    errorMessageMessage={text('ErrorMessage', null)}
-    typeErrorText={e => `File ${e} is not the right file type`}
-    sizeErrorText={e => `File ${e} is too large`}
-    removeActionMessage={e => `Click to remove ${e}`}
-  />
-)
-
-export const StatusDenied = () => (
-  <DocumentsDropUploader
-    id="DocumentsDropUploader"
-    labelText="Add a document"
-    managerTitle="Upload your ID documents"
-    managerText="Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
-    initialValue={[
-      { name: 'kitten_valid.jpg' },
-      { name: 'kitten_invalid.jpg' },
-    ]}
-    onChange={e => console.warn('onChange', e)}
-    onError={e => console.warn('onError', e)}
-    disabled={boolean('Disabled?', false)}
-    status="deniad"
     errorMessageMessage={text('ErrorMessage', null)}
     typeErrorText={e => `File ${e} is not the right file type`}
     sizeErrorText={e => `File ${e} is too large`}
