@@ -42,7 +42,8 @@ var UserMenuNext = function UserMenuNext(_ref) {
       dropdownAnchorSide = _ref.dropdownAnchorSide,
       className = _ref.className,
       padding = _ref.padding,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "dropdownContentWidth", "closeEvents", "dropdownAnchorSide", "className", "padding"]);
+      mobilePadding = _ref.mobilePadding,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "dropdownContentWidth", "closeEvents", "dropdownAnchorSide", "className", "padding", "mobilePadding"]);
 
   var getElementById = function getElementById(id) {
     return function () {
@@ -89,7 +90,8 @@ var UserMenuNext = function UserMenuNext(_ref) {
     },
     className: (0, _classnames.default)('k-HeaderNav__UserMenuButton', buttonChild.props.className, buttonProps.className, {
       'k-HeaderNav__UserMenuButton--hasArrow': buttonChild.props.hasArrow,
-      'k-HeaderNav__UserMenuButton--nopadding': !padding
+      'k-HeaderNav__UserMenuButton--noPadding': !padding,
+      'k-HeaderNav__UserMenuButton--noPaddingMobile': !mobilePadding
     })
   }), (0, _react.cloneElement)(buttonChild), buttonChild.props.hasArrow && /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
     direction: isDropdownExpanded ? 'top' : 'bottom',
@@ -102,6 +104,7 @@ exports.UserMenuNext = UserMenuNext;
 UserMenuNext.propTypes = {
   dropdownContentWidth: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   padding: _propTypes.default.bool,
+  mobilePadding: _propTypes.default.bool,
   closeEvents: _propTypes.default.arrayOf(_propTypes.default.string),
   hasArrow: _propTypes.default.bool,
   dropdownAnchorSide: _propTypes.default.oneOf(['left', 'right'])
@@ -109,6 +112,7 @@ UserMenuNext.propTypes = {
 UserMenuNext.defaultProps = {
   dropdownContentWidth: null,
   padding: true,
+  mobilePadding: true,
   closeEvents: [],
   hasArrow: false,
   dropdownAnchorSide: 'left'

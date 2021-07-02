@@ -204,7 +204,7 @@ const StickyContainerBase = (
       {(stuck || isSticky === 'always') && (
         <StyledSpacer
           className="k-Spacer"
-          style={{'--StickyContainer-height': containerHeight}}
+          style={{'--StickyContainer-height': pxToRem(containerHeight)}}
         />
       )}
       <StyledStickyContainer
