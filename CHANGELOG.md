@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DocumentsStatusBox`: Add component.
+- Feature: `DocumentsDropUploader`: Add component.
+
 ## [3.22.1] - 2021-07-01
 
 Fix:
