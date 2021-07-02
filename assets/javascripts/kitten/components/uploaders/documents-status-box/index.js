@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
-import TYPOGRAPHY from '../../../constants/typography-config'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { UploadIcon } from '../../../components/icons/upload-icon'
-import { CrossIcon } from '../../../components/icons/cross-icon'
+import { pxToRem } from '../../../helpers/utils/typography'
 import { Text } from '../../../components/typography/text'
-import { Tag } from '../../../components/atoms/tag'
 import { ClockCircleIcon } from '../../../components/icons/clock-circle-icon'
 import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
 import { CrossCircleIcon } from '../../../components/icons/cross-circle-icon'
@@ -46,7 +42,6 @@ const StyledDocumentsStatusBox = styled.div`
     background-color: ${COLORS.error2};
   }
 `
-
 
 export const DocumentsStatusBox = ({
   className,
@@ -92,9 +87,7 @@ export const DocumentsStatusBox = ({
         )}
       </div>
 
-      <div
-        className="k-DocumentsStatusBox__content"
-      >
+      <div className="k-DocumentsStatusBox__content">
         <Text
           as="p"
           className="k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-single"
@@ -153,11 +146,7 @@ export const DocumentsStatusBox = ({
 DocumentsStatusBox.propTypes = {
   title: PropTypes.node,
   message: PropTypes.node,
-  status: PropTypes.oneOf([
-    'wait',
-    'accepted',
-    'denied',
-  ]),
+  status: PropTypes.oneOf(['wait', 'accepted', 'denied']),
   retryAction: PropTypes.func,
   fileList: PropTypes.array,
 }

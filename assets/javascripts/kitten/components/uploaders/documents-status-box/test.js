@@ -4,9 +4,7 @@ import { DocumentsStatusBox } from './index'
 
 describe('<DocumentsStatusBox />', () => {
   it('should match empty snapshot', () => {
-    const component = renderer
-      .create(<DocumentsStatusBox />)
-      .toJSON()
+    const component = renderer.create(<DocumentsStatusBox />).toJSON()
     expect(component).toMatchSnapshot()
   })
   it('should match wait snapshot', () => {
@@ -16,7 +14,8 @@ describe('<DocumentsStatusBox />', () => {
           fileList={['kitten_document_1.jpg', 'kitten_document_2.jpg']}
           title="Documents status: awaiting confirmation"
           message="This process can take up to two days"
-        />)
+        />,
+      )
       .toJSON()
     expect(component).toMatchSnapshot()
   })
@@ -26,7 +25,8 @@ describe('<DocumentsStatusBox />', () => {
         <DocumentsStatusBox
           fileList={['kitten_document_1.jpg', 'kitten_document_2.jpg']}
           title="Document status: accepted"
-        />)
+        />,
+      )
       .toJSON()
     expect(component).toMatchSnapshot()
   })
@@ -39,7 +39,8 @@ describe('<DocumentsStatusBox />', () => {
           message="The document was incorrect"
           retryAction={() => {}}
           retryActionMessage="Click to retry uploading a document"
-        />)
+        />,
+      )
       .toJSON()
     expect(component).toMatchSnapshot()
   })
