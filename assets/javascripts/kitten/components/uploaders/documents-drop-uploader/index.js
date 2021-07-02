@@ -9,9 +9,6 @@ import { UploadIcon } from '../../../components/icons/upload-icon'
 import { CrossIcon } from '../../../components/icons/cross-icon'
 import { Text } from '../../../components/typography/text'
 import { Tag } from '../../../components/atoms/tag'
-import { ClockCircleIcon } from '../../../components/icons/clock-circle-icon'
-import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
-import { CrossCircleIcon } from '../../../components/icons/cross-circle-icon'
 
 const StyledDocumentsDropUploader = styled.div`
   border-radius: ${pxToRem(8)};
@@ -310,33 +307,7 @@ export const DocumentsDropUploader = ({
         onDrop={handleDrop}
       >
         <div className="k-DrocumentDropUploader__icon">
-          {['manage', 'ready', 'error'].includes(internalStatus) && (
-            <UploadIcon color="currentColor" />
-          )}
-          {internalStatus === 'wait' && (
-            <ClockCircleIcon
-              color={COLORS.background1}
-              bgColor={COLORS.font1}
-              width={22}
-              height={22}
-            />
-          )}
-          {internalStatus === 'accepted' && (
-            <CheckedCircleIcon
-              color={COLORS.background1}
-              bgColor={COLORS.valid}
-              width={22}
-              height={22}
-            />
-          )}
-          {internalStatus === 'denied' && (
-            <CrossCircleIcon
-              color={COLORS.background1}
-              bgColor={COLORS.error}
-              width={22}
-              height={22}
-            />
-          )}
+          <UploadIcon color="currentColor" />
         </div>
 
         <div
