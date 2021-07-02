@@ -244,19 +244,25 @@ export const DocumentsDropUploader = ({
         ) {
           setErrorMessageList(current => [...current, typeErrorText(file.name)])
           setInternalStatus('error')
-          setErrorList(current => [...current, {
-            file,
-            error: typeErrorText(file.name)
-          }])
+          setErrorList(current => [
+            ...current,
+            {
+              file,
+              error: typeErrorText(file.name),
+            },
+          ])
         }
 
         if (!!acceptedFileSize && file.size > acceptedFileSize) {
           setErrorMessageList(current => [...current, sizeErrorText(file.name)])
           setInternalStatus('error')
-          setErrorList(current => [...current, {
-            file,
-            error: typeErrorText(file.name)
-          }])
+          setErrorList(current => [
+            ...current,
+            {
+              file,
+              error: typeErrorText(file.name),
+            },
+          ])
         }
       }
     })
@@ -409,24 +415,26 @@ export const DocumentsDropUploader = ({
         </div>
       </StyledDocumentsDropUploader>
 
-      {displayErrors && internalStatus === 'error' && internalErrorMessageList.length > 0 && (
-        <StyledErrorList
-          className="k-DocumentsDropUploader__errorList"
-          id={`${id}-error-description`}
-        >
-          {internalErrorMessageList.map(errorMsg => (
-            <Text
-              key={errorMsg}
-              as="li"
-              size="micro"
-              color="error"
-              weight="bold"
-            >
-              {errorMsg}
-            </Text>
-          ))}
-        </StyledErrorList>
-      )}
+      {displayErrors &&
+        internalStatus === 'error' &&
+        internalErrorMessageList.length > 0 && (
+          <StyledErrorList
+            className="k-DocumentsDropUploader__errorList"
+            id={`${id}-error-description`}
+          >
+            {internalErrorMessageList.map(errorMsg => (
+              <Text
+                key={errorMsg}
+                as="li"
+                size="micro"
+                color="error"
+                weight="bold"
+              >
+                {errorMsg}
+              </Text>
+            ))}
+          </StyledErrorList>
+        )}
     </>
   )
 }
@@ -447,11 +455,7 @@ DocumentsDropUploader.propTypes = {
   onChange: PropTypes.func,
   quantityErrorText: PropTypes.node,
   sizeErrorText: PropTypes.func,
-  status: PropTypes.oneOf([
-    'ready',
-    'error',
-    'manage',
-  ]),
+  status: PropTypes.oneOf(['ready', 'error', 'manage']),
   typeErrorText: PropTypes.func,
   onError: PropTypes.func,
   displayErrors: PropTypes.bool,
