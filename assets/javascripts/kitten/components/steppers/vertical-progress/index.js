@@ -8,20 +8,17 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 
 const StyledContainer = styled.div`
-  border: ${pxToRem(2)} solid ${COLORS.line1};
-  padding: ${pxToRem(15)};
-  border-radius: ${pxToRem(8)};
+  &:not(.k-VerticalProgress__wrapper--withoutBorder) {
+    border: ${pxToRem(2)} solid ${COLORS.line1};
+    padding: ${pxToRem(15)};
+    border-radius: ${pxToRem(8)};
 
-  &.k-VerticalProgress__withoutBorder {
-    border: none;
-    padding: 0;
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      padding: ${pxToRem(30)};
+    }
   }
 
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    padding: ${pxToRem(30)};
-  }
-
-  .k-VerticalProgress__nav {
+  .k-VerticalProgress {
     position: relative;
     padding: 0;
   }
@@ -47,11 +44,11 @@ const StyledContainer = styled.div`
 export const VerticalProgress = ({ children, withoutBorder, ...props }) => {
   return (
     <StyledContainer className={classNames(
-      "k-VerticalProgress",
-      {'k-VerticalProgress__withoutBorder': withoutBorder}
+      "k-VerticalProgress__wrapper",
+      {'k-VerticalProgress__wrapper--withoutBorder': withoutBorder}
     )}
     >
-      <nav className="k-VerticalProgress__nav">
+      <nav className="k-VerticalProgress">
         <ul role="tablist" className="k-VerticalProgress__list" {...props}>
           {children}
         </ul>
