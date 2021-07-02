@@ -8,7 +8,7 @@ import { VerticalProgress } from './index'
 
 ## Import
 
-```js
+```jsx
 import { VerticalProgress } from '@kisskissbankbank/kitten'
 ```
 
@@ -20,7 +20,7 @@ import { VerticalProgress } from '@kisskissbankbank/kitten'
 
 #### Default
 
-```js
+```jsx
   <VerticalProgress>
     <VerticalProgress.Step statusType="actions" progressTitle="Item 1" />
     <VerticalProgress.Step statusType="waiting" progressTitle="Item 2" />
@@ -28,4 +28,12 @@ import { VerticalProgress } from '@kisskissbankbank/kitten'
     <VerticalProgress.Step statusType="valid" progressTitle="Item 4" />
     <VerticalProgress.Step statusType="disabled" progressTitle="Item 5" />
 </VerticalProgress>
+```
+
+### WithoutBorder
+
+```jsx
+  <VerticalProgress withoutBorder>
+    <VerticalProgress.Step />
+  <VerticalProgress>
 ```
