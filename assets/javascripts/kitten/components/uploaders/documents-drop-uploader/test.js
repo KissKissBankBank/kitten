@@ -28,6 +28,7 @@ describe('<DocumentsDropUploader />', () => {
           initialValue={[{ name: 'kitten.jpg' }]}
           typeErrorText={e => `File ${e} is not the right file type`}
           sizeErrorText={e => `File ${e} is too large`}
+          removeActionMessage={e => `Remove ${e} from the list`}
         />,
       )
       .toJSON()
@@ -44,6 +45,7 @@ describe('<DocumentsDropUploader />', () => {
           initialValue={[{ name: 'kitten.jpg' }]}
           typeErrorText={e => `File ${e} is not the right file type`}
           sizeErrorText={e => `File ${e} is too large`}
+          removeActionMessage={e => `Remove ${e} from the list`}
         />,
       )
       .toJSON()

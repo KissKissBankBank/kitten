@@ -14,6 +14,21 @@ import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon
 import { CrossCircleIcon } from '../../../components/icons/cross-circle-icon'
 
 const StyledDocumentsDropUploader = styled.div`
+  border-radius: ${pxToRem(8)};
+  padding: ${pxToRem(20)};
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  border: ${pxToRem(2)} solid ${COLORS.line1};
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: ${pxToRem(35)};
+
+  transition: border-color 0.2s ease;
+
   input[type='file'] {
     border: 0;
     clip-path: inset(100%);
@@ -36,21 +51,6 @@ const StyledDocumentsDropUploader = styled.div`
     outline-color: ${COLORS.primary4};
   }
 
-  border-radius: ${pxToRem(8)};
-  padding: ${pxToRem(20)};
-  width: 100%;
-  position: relative;
-  box-sizing: border-box;
-  border: ${pxToRem(2)} solid ${COLORS.line1};
-  position: relative;
-
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: ${pxToRem(35)};
-
-  transition: border-color 0.2s ease;
-
   .k-DrocumentDropUploader__icon {
     margin-top: ${pxToRem(15)};
     margin-left: ${pxToRem(15)};
@@ -59,20 +59,19 @@ const StyledDocumentsDropUploader = styled.div`
   .k-DocumentsDropUploader__button {
     position: absolute;
     z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: ${pxToRem(-2)};
+    left: ${pxToRem(-2)};
+    right: ${pxToRem(-2)};
+    bottom: ${pxToRem(-2)};
     color: transparent;
     cursor: pointer;
+    border: ${pxToRem(2)} solid transparent;
+    transition: border-color 0.2s ease;
+    border-radius: ${pxToRem(8)};
   }
 
   &.k-DocumentsDropUploader--ready:hover {
     border-color: ${COLORS.primary4};
-  }
-  input[type='file']:active:not(:disabled) + .k-DocumentsDropUploader__button,
-  &.k-DocumentsDropUploader--isDraggingOver {
-    border-color: ${COLORS.primary1};
   }
 
   &.k-DocumentsDropUploader--error {
@@ -84,6 +83,11 @@ const StyledDocumentsDropUploader = styled.div`
     background-color: ${COLORS.background2};
     color: ${COLORS.font2};
     cursor: not-allowed;
+  }
+
+  input[type='file']:active:not(:disabled) + .k-DocumentsDropUploader__button,
+  &.k-DocumentsDropUploader--isDraggingOver {
+    border-color: ${COLORS.primary1};
   }
 
   .k-DocumentsDropUploader__content {
@@ -140,32 +144,6 @@ const StyledDocumentsDropUploader = styled.div`
     text-overflow: ellipsis;
     display: inline-block;
   }
-
-  &.k-DocumentsDropUploader--wait,
-  &.k-DocumentsDropUploader--accepted,
-  &.k-DocumentsDropUploader--denied {
-    .k-DrocumentDropUploader__icon {
-      margin-top: 0;
-      align-self: center;
-    }
-  }
-
-  &.k-DocumentsDropUploader--wait {
-    border: 0;
-    background-color: ${COLORS.line1};
-  }
-
-  &.k-DocumentsDropUploader--accepted {
-    border: 0;
-    background-color: ${COLORS.valid1};
-  }
-
-  &.k-DocumentsDropUploader--denied {
-    border: 0;
-    background-color: ${COLORS.error2};
-  }
-
-
 `
 
 const StyledErrorList = styled.ul`
@@ -197,53 +175,46 @@ export const DocumentsDropUploader = ({
   sizeErrorText = i => i,
   status = 'ready',
   typeErrorText = i => i,
-  waitMessage = '',
-  deniedMessage = '',
-  retryActionMessage = '',
   removeActionMessage = i => i,
+  onError = () => {},
+  displayErrors = true,
 }) => {
   const [internalStatus, setInternalStatus] = useState(status)
   useEffect(() => setInternalStatus(status), [status])
 
   const [isDraggingOver, setDraggingOver] = useState(false)
   const [fileList, setFileList] = useState(initialValue)
+  const [errorList, setErrorList] = useState([])
   const [internalErrorMessageList, setErrorMessageList] = useState([
     errorMessageList,
   ])
 
   useEffect(() => {
     if (initialValue.length === 0) return
-    if (['wait', 'accepted', 'denied'].includes(internalStatus)) return
 
     setInternalStatus('manage')
   }, [initialValue])
 
   const handleDragEnter = e => {
-    if (!['manage', 'ready', 'error'].includes(internalStatus)) return
-
     e.preventDefault()
     e.stopPropagation()
 
     setDraggingOver(true)
   }
   const handleDragLeave = e => {
-    if (!['manage', 'ready', 'error'].includes(internalStatus)) return
-
     e.preventDefault()
     e.stopPropagation()
 
     setDraggingOver(false)
   }
   const handleDragOver = e => {
-    if (!['manage', 'ready', 'error'].includes(internalStatus)) return
-
     e.preventDefault()
     e.stopPropagation()
+
+    setDraggingOver(true)
   }
 
   const handleDrop = e => {
-    if (!['manage', 'ready', 'error'].includes(internalStatus)) return
-
     e.preventDefault()
     e.stopPropagation()
 
@@ -258,10 +229,10 @@ export const DocumentsDropUploader = ({
 
   useEffect(() => {
     setErrorMessageList([])
+    setErrorList([])
     onChange(fileList)
 
     if (fileList.length === 0) return setInternalStatus(status)
-    if (['wait', 'accepted', 'denied'].includes(internalStatus)) return
 
     setInternalStatus('manage')
 
@@ -273,15 +244,29 @@ export const DocumentsDropUploader = ({
         ) {
           setErrorMessageList(current => [...current, typeErrorText(file.name)])
           setInternalStatus('error')
+          setErrorList(current => [...current, {
+            file,
+            error: typeErrorText(file.name)
+          }])
         }
 
         if (!!acceptedFileSize && file.size > acceptedFileSize) {
           setErrorMessageList(current => [...current, sizeErrorText(file.name)])
           setInternalStatus('error')
+          setErrorList(current => [...current, {
+            file,
+            error: typeErrorText(file.name)
+          }])
         }
       }
     })
   }, [fileList])
+
+  useEffect(() => {
+    if (!errorList) return
+
+    onError(errorList)
+  }, [errorList])
 
   const removeFilesFromList = file => {
     setFileList(currentList => currentList.filter(item => item !== file))
@@ -299,12 +284,6 @@ export const DocumentsDropUploader = ({
 
       return newList
     })
-  }
-
-  const retryAction = () => {
-    setErrorMessageList([])
-    setFileList([])
-    setInternalStatus('manage')
   }
 
   return (
@@ -391,33 +370,6 @@ export const DocumentsDropUploader = ({
                   ))}
                 </>
               )}
-              {['wait', 'accepted', 'denied'].includes(internalStatus) && (
-                <>
-                  {fileList.map((file, index) => (
-                    <Text
-                      key={file.name + index}
-                      as="li"
-                      className="k-DocumentsDropUploader__fileName"
-                      size="micro"
-                      weight="light"
-                    >
-                      {file.name}
-                      {file.canBeRemoved && (
-                        <button
-                          className="k-DocumentsDropUploader__fileName__button k-u-reset-button"
-                          type="button"
-                          onClick={() => removeFilesFromList(file)}
-                        >
-                          <span className="k-u-a11y-visuallyHidden">
-                            {removeActionMessage(file.name)}
-                          </span>
-                          <CrossIcon color="currentColor" />
-                        </button>
-                      )}
-                    </Text>
-                  ))}
-                </>
-              )}
             </ul>
           )}
 
@@ -436,15 +388,13 @@ export const DocumentsDropUploader = ({
             multiple={true}
           />
 
-          {internalStatus === 'ready' && (
+          {internalStatus === 'ready' ? (
             <label
               htmlFor={id}
               className="k-DocumentsDropUploader__button"
               children={labelText}
             />
-          )}
-
-          {['manage', 'error'].includes(internalStatus) && (
+          ) : (
             <Text
               tag="label"
               htmlFor={id}
@@ -456,27 +406,10 @@ export const DocumentsDropUploader = ({
               {labelText}
             </Text>
           )}
-
-          {internalStatus === 'denied' && (
-            <>
-              <Text weight="regular">
-                {deniedMessage}
-              </Text>
-              <Text className="k-u-reset-button" weight="regular" color={error} type="button" onClick={retryAction}>
-                {retryActionMessage}
-              </Text>
-            </>
-          )}
-
-          {internalStatus === 'wait' && (
-            <Text weight="regular">
-              {waitMessage}
-            </Text>
-          )}
         </div>
       </StyledDocumentsDropUploader>
 
-      {internalStatus === 'error' && internalErrorMessageList.length > 0 && (
+      {displayErrors && internalStatus === 'error' && internalErrorMessageList.length > 0 && (
         <StyledErrorList
           className="k-DocumentsDropUploader__errorList"
           id={`${id}-error-description`}
@@ -508,7 +441,7 @@ DocumentsDropUploader.propTypes = {
   errorMessageList: PropTypes.node,
   fileInputProps: PropTypes.object,
   initialCrop: PropTypes.object,
-  initialValue: PropTypes.string,
+  initialValue: PropTypes.array,
   managerText: PropTypes.node,
   managerTitle: PropTypes.node,
   onChange: PropTypes.func,
@@ -518,9 +451,8 @@ DocumentsDropUploader.propTypes = {
     'ready',
     'error',
     'manage',
-    'wait',
-    'accepted',
-    'denied',
   ]),
   typeErrorText: PropTypes.func,
+  onError: PropTypes.func,
+  displayErrors: PropTypes.bool,
 }

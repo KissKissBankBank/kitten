@@ -14,26 +14,15 @@ export const StatusReady = () => (
     managerTitle="Upload your ID documents"
     managerText="Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
     onChange={e => console.warn('onChange', e)}
+    onError={e => console.warn('onError', e)}
     disabled={boolean('Disabled?', false)}
-    status={
-      boolean('Error?', false)
-        ? 'error'
-        : select('Status', [
-            'ready',
-            'manage',
-            'wait',
-            'accepted',
-            'denied',
-            'error',
-          ])
-    }
+    status={select('Status', ['ready', 'manage', 'error'], 'ready')}
     errorMessage={text('ErrorMessage', null)}
     typeErrorText={e => `File ${e} is not the right file type`}
     sizeErrorText={e => `File ${e} is too large`}
-    waitMessage="This operation can take up to 48 hours"
-    deniedMessage="Your documents are not valid"
-    retryActionMessage="Click to load another document"
     removeActionMessage={e => `Click to remove ${e}`}
+    acceptedMimeTypes={['image/jpeg']}
+    acceptedFileSize={1 * 1024 * 1024}
   />
 )
 
@@ -45,6 +34,7 @@ export const StatusManage = () => (
     managerText="Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
     initialValue={[{ name: 'kitten.jpg' }]}
     onChange={e => console.warn('onChange', e)}
+    onError={e => console.warn('onError', e)}
     disabled={boolean('Disabled?', false)}
     status={
       boolean('Error?', false)
@@ -61,9 +51,6 @@ export const StatusManage = () => (
     errorMessageMessage={text('ErrorMessage', null)}
     typeErrorText={e => `File ${e} is not the right file type`}
     sizeErrorText={e => `File ${e} is too large`}
-    waitMessage="This operation can take up to 48 hours"
-    deniedMessage="Your documents are not valid"
-    retryActionMessage="Click to load another document"
     removeActionMessage={e => `Click to remove ${e}`}
   />
 )
@@ -79,17 +66,12 @@ export const StatusDenied = () => (
       { name: 'kitten_invalid.jpg' },
     ]}
     onChange={e => console.warn('onChange', e)}
+    onError={e => console.warn('onError', e)}
     disabled={boolean('Disabled?', false)}
     status="deniad"
     errorMessageMessage={text('ErrorMessage', null)}
     typeErrorText={e => `File ${e} is not the right file type`}
     sizeErrorText={e => `File ${e} is too large`}
-    acceptedTitle="Your document was accepted"
-    waitTitle="This operation can take up to 48 hours"
-    waitMessage="This operation can take up to 48 hours"
-    deniedTitle="Some documents are not valid"
-    deniedMessage="Your documents are not valid"
-    retryActionMessage="Click to load another document"
     removeActionMessage={e => `Click to remove ${e}`}
   />
 )
