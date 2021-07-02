@@ -46,7 +46,7 @@ const StyledContainer = styled.div`
 
 export const VerticalProgress = ({ children, withoutBorder, ...props }) => {
   return (
-    <StyledContainer className={ classNames(
+    <StyledContainer className={classNames(
       "k-VerticalProgress",
       {'k-VerticalProgress__withoutBorder': withoutBorder}
     )}
