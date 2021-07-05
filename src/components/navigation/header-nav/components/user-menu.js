@@ -77,7 +77,7 @@ var UserMenu = function UserMenu(_ref) {
   };
   var buttonClassName = (0, _classnames.default)('k-HeaderNav__UserMenuButton', {
     'k-HeaderNav__UserMenuButton--hasArrow': hasArrow,
-    'k-HeaderNav__UserMenuButton--nopadding': !padding
+    'k-HeaderNav__UserMenuButton--noPadding': !padding
   });
   return /*#__PURE__*/_react.default.createElement(_context.Context.Consumer, null, function (_ref2) {
     var id = _ref2.id,

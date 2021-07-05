@@ -1,17 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Context } from './context'
 import classNames from 'classnames'
 
-export const Logo = ({ className = '', children, ...props }) => (
-  <Context.Consumer>
-    {({ id }) => (
-      <a
-        {...props}
-        id={`${id}Logo`}
-        className={classNames('k-HeaderNav-Logo', className)}
-      >
-        {children}
-      </a>
-    )}
-  </Context.Consumer>
-)
+export const Logo = ({ className = '', children, ...props }) => {
+  const { id } = useContext(Context)
+
+  return (
+    <a
+      {...props}
+      id={`${id}Logo`}
+      className={classNames('k-HeaderNav__Logo', className)}
+    >
+      {children}
+    </a>
+  )
+}

@@ -52,76 +52,6 @@ const HeaderNav = ({
   const headerRef = useRef(null)
   const previousStickyState = usePrevious(stickyState)
 
-  const focusDropdown = ({ detail: dropdown }) => {
-    dispatchEvent(TOGGLE_DROPDOWN_EVENT, { nextExpandedState: false })()
-    dropdown.focus()
-  }
-
-  const focusElementNextToDropdown = ({ detail: dropdown }) => {
-    dispatchEvent(TOGGLE_DROPDOWN_EVENT, { nextExpandedState: false })()
-
-    if (!headerRef.current) return
-
-    setTimeout(() => {
-      const focusableElements = getFocusableElementsFrom(headerRef.current)
-
-      if (focusableElements.length < 1) return
-
-      const currentElementIndex = focusableElements.indexOf(dropdown)
-      const nextElement = focusableElements[currentElementIndex + 1] || dropdown
-
-      nextElement.focus()
-    }, DROPDOWN_ANIMATED_DELAY)
-  }
-
-  useEffect(() => {
-    if (!headerRef.current) return
-
-    headerRef.current.addEventListener('keydown', handleKeyboardNavigation)
-    window.addEventListener(DROPDOWN_FIRST_FOCUS_REACHED_EVENT, focusDropdown)
-    window.addEventListener(
-      DROPDOWN_LAST_FOCUS_REACHED_EVENT,
-      focusElementNextToDropdown,
-    )
-
-    return () => {
-      if (!headerRef.current) return
-
-      headerRef.current.removeEventListener('keydown', handleKeyboardNavigation)
-      window.removeEventListener(
-        DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
-        focusDropdown,
-      )
-      window.removeEventListener(
-        DROPDOWN_LAST_FOCUS_REACHED_EVENT,
-        focusElementNextToDropdown,
-      )
-    }
-  }, [isMenuExpanded])
-
-  const { keyboard } = domEvents
-
-  const isArrowKeyCode = keycode =>
-    [keyboard.left, keyboard.up, keyboard.right, keyboard.down].includes(
-      keycode,
-    )
-
-  const handleKeyboardNavigation = event => {
-    if (isArrowKeyCode(event.keyCode)) {
-      event.preventDefault()
-
-      const focusableElements = getFocusableElementsFrom(headerRef.current)
-      const kbdNav = keyboardNavigation(focusableElements)
-
-      if ([keyboard.right, keyboard.tab].includes(event.keyCode)) {
-        return kbdNav.next()
-      }
-      if (event.keyCode === keyboard.left || keyboard.shiftTab(event)) {
-        return kbdNav.prev()
-      }
-    }
-  }
-
   const callOnToggle = ({ isExpanded, expandBy }) => {
     if (!isExpanded && previousStickyState === 'always') {
       stickyContainerRef.current.setSticky()
@@ -174,10 +104,7 @@ const HeaderNav = ({
           )}
         >
           <nav ref={headerRef} id={id} className="k-HeaderNav">
-            <QuickAccessLink
-              className="quickAccessLink"
-              {...quickAccessProps}
-            />
+            <QuickAccessLink {...quickAccessProps} />
             {children}
           </nav>
         </StickyContainer>
