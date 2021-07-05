@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ImageDropUploader`: Add component.
 - Feature: `VerticalProgress` : Add `withoutBorder` prop.
 
 ## [3.22.1] - 2021-07-01
