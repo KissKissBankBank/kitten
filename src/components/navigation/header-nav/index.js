@@ -94,66 +94,9 @@ var HeaderNav = function HeaderNav(_ref) {
   var headerRef = (0, _react.useRef)(null);
   var previousStickyState = (0, _usePreviousHook.usePrevious)(stickyState);
 
-  var focusDropdown = function focusDropdown(_ref2) {
-    var dropdown = _ref2.detail;
-    (0, _events.dispatchEvent)(_events.TOGGLE_DROPDOWN_EVENT, {
-      nextExpandedState: false
-    })();
-    dropdown.focus();
-  };
-
-  var focusElementNextToDropdown = function focusElementNextToDropdown(_ref3) {
-    var dropdown = _ref3.detail;
-    (0, _events.dispatchEvent)(_events.TOGGLE_DROPDOWN_EVENT, {
-      nextExpandedState: false
-    })();
-    if (!headerRef.current) return;
-    setTimeout(function () {
-      var focusableElements = (0, _a11y.getFocusableElementsFrom)(headerRef.current);
-      if (focusableElements.length < 1) return;
-      var currentElementIndex = focusableElements.indexOf(dropdown);
-      var nextElement = focusableElements[currentElementIndex + 1] || dropdown;
-      nextElement.focus();
-    }, _dropdownConfig.DROPDOWN_ANIMATED_DELAY);
-  };
-
-  (0, _react.useEffect)(function () {
-    if (!headerRef.current) return;
-    headerRef.current.addEventListener('keydown', handleKeyboardNavigation);
-    window.addEventListener(_events.DROPDOWN_FIRST_FOCUS_REACHED_EVENT, focusDropdown);
-    window.addEventListener(_events.DROPDOWN_LAST_FOCUS_REACHED_EVENT, focusElementNextToDropdown);
-    return function () {
-      if (!headerRef.current) return;
-      headerRef.current.removeEventListener('keydown', handleKeyboardNavigation);
-      window.removeEventListener(_events.DROPDOWN_FIRST_FOCUS_REACHED_EVENT, focusDropdown);
-      window.removeEventListener(_events.DROPDOWN_LAST_FOCUS_REACHED_EVENT, focusElementNextToDropdown);
-    };
-  }, [isMenuExpanded]);
-  var keyboard = _events.default.keyboard;
-
-  var isArrowKeyCode = function isArrowKeyCode(keycode) {
-    return [keyboard.left, keyboard.up, keyboard.right, keyboard.down].includes(keycode);
-  };
-
-  var handleKeyboardNavigation = function handleKeyboardNavigation(event) {
-    if (isArrowKeyCode(event.keyCode)) {
-      event.preventDefault();
-      var focusableElements = (0, _a11y.getFocusableElementsFrom)(headerRef.current);
-      var kbdNav = (0, _a11y.keyboardNavigation)(focusableElements);
-
-      if ([keyboard.right, keyboard.tab].includes(event.keyCode)) {
-        return kbdNav.next();
-      }
-
-      if (event.keyCode === keyboard.left || keyboard.shiftTab(event)) {
-        return kbdNav.prev();
-      }
-    }
-  };
-
-  var callOnToggle = function callOnToggle(_ref4) {
-    var isExpanded = _ref4.isExpanded,
-        expandBy = _ref4.expandBy;
+  var callOnToggle = function callOnToggle(_ref2) {
+    var isExpanded = _ref2.isExpanded,
+        expandBy = _ref2.expandBy;
 
     if (!isExpanded && previousStickyState === 'always') {
       stickyContainerRef.current.setSticky();
@@ -195,9 +138,7 @@ var HeaderNav = function HeaderNav(_ref) {
     ref: headerRef,
     id: id,
     className: "k-HeaderNav"
-  }, /*#__PURE__*/_react.default.createElement(_quickAccessLink.QuickAccessLink, (0, _extends2.default)({
-    className: "quickAccessLink"
-  }, quickAccessProps)), children))));
+  }, /*#__PURE__*/_react.default.createElement(_quickAccessLink.QuickAccessLink, quickAccessProps), children))));
 };
 
 HeaderNav.Button = _button.Button;
