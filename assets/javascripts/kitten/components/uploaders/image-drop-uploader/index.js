@@ -35,21 +35,6 @@ const StyledImageDropUploader = styled.div`
     outline-color: ${COLORS.primary4};
   }
 
-  /*   &:not(.k-ImageDropUploader--loading) {
-    input[type='file']:disabled + label {
-      border-color: ${COLORS.line2};
-      background-color: ${COLORS.line2};
-      color: ${COLORS.background1};
-      pointer-events: none;
-
-      svg,
-      path {
-        fill: ${COLORS.background1};
-      }
-    }
-  }
- */
-
   .k-ImageDropUploader__button {
     box-sizing: border-box;
     display: flex;
@@ -101,7 +86,7 @@ const StyledImageDropUploader = styled.div`
     .k-ImageDropUploader__manager {
       border-color: ${COLORS.line2};
       background-color: ${COLORS.background2};
-      color: ${COLORS.font2};
+      color: ${COLORS.font3};
       cursor: not-allowed;
     }
     .k-ImageDropUploader__manager__cropper {
@@ -392,7 +377,13 @@ export const ImageDropUploader = ({
             <span className="k-ImageDropUploader__button__title">
               {buttonTitle}
             </span>
-            <span className="k-ImageDropUploader__button__text k-u-color-font1">
+            <span className={classNames(
+              'k-ImageDropUploader__button__text',
+              {
+                'k-u-color-font1': !disabled,
+                'k-u-color-font2': disabled,
+              }
+              )}>
               {buttonText}
             </span>
           </label>
