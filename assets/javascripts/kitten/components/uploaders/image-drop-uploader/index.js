@@ -377,13 +377,12 @@ export const ImageDropUploader = ({
             <span className="k-ImageDropUploader__button__title">
               {buttonTitle}
             </span>
-            <span className={classNames(
-              'k-ImageDropUploader__button__text',
-              {
+            <span
+              className={classNames('k-ImageDropUploader__button__text', {
                 'k-u-color-font1': !disabled,
                 'k-u-color-font2': disabled,
-              }
-              )}>
+              })}
+            >
               {buttonText}
             </span>
           </label>
