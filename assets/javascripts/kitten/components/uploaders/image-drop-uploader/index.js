@@ -86,7 +86,7 @@ const StyledImageDropUploader = styled.div`
     .k-ImageDropUploader__manager {
       border-color: ${COLORS.line2};
       background-color: ${COLORS.background2};
-      color: ${COLORS.font3};
+      color: ${COLORS.grey1};
       cursor: not-allowed;
     }
     .k-ImageDropUploader__manager__cropper {
