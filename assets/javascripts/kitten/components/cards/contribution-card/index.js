@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState }  from 'react'
+import React, { useRef } from 'react'
 import { CloseButton } from '../../../components/buttons/close-button'
 import { StyledContributionCard } from './styles'
 import classNames from 'classnames'
@@ -27,31 +27,16 @@ export const ContributionCard = ({
   borderColor,
   borderStyle,
   closeButton,
+  onClose,
   ...props
 }) => {
-
-  const [isTrashed, trashIt] = useState(false)
-  const [isMounted, setMounted] = useState(true)
   const contributionRef = useRef(null)
 
-  useEffect(() => {
-    let clearDelayBeforeTrash
-    if (!isMounted) {
-      clearDelayBeforeTrash = setTimeout(() => {
-        trashIt(true)
-        onAfterClose()
-      }, 400)
-    }
-    return () => clearTimeout(clearDelayBeforeTrash)
-  }, [isMounted])
+  if (!show) return null
 
-  if (isTrashed || !show) return null
-  
   return (
     <StyledContributionCard
-      className={classNames('k-ContributionCard', className, {
-        'k-contributionCard--shouldHide': !isMounted,
-      })}
+      className={classNames('k-ContributionCard', className)}
       style={{
         ...style,
         '--contributionCard--border-width': pxToRem(borderWidth),
@@ -64,27 +49,25 @@ export const ContributionCard = ({
       role="dialog"
       {...props}
     >
-     {closeButton && (
-      <CloseButton 
-        className="k-ContributionCard__close" 
-        size="micro" 
-        closeButtonLabel={closeButtonLabel}
-        onClick={() => setMounted(false)}
-      />
-     )}
-      
+      {closeButton && (
+        <CloseButton
+          className="k-ContributionCard__close"
+          size="micro"
+          closeButtonLabel={closeButtonLabel}
+          onClick={onClose}
+        />
+      )}
+
       {React.Children.map(children, child => {
         if (!child) return null
         return child.props.__TYPE === 'Image' ? child : null
       })}
 
       <div className="k-ContributionCard__gridWrapper">
-
         {React.Children.map(children, child => {
           if (!child) return null
           return ['Image'].includes(child.props.__TYPE) ? null : child
         })}
- 
       </div>
     </StyledContributionCard>
   )
@@ -92,7 +75,7 @@ export const ContributionCard = ({
 
 ContributionCard.Image = Image
 ContributionCard.Title = Title
-ContributionCard.Description= Description
+ContributionCard.Description = Description
 ContributionCard.PillNumber = PillNumber
 ContributionCard.Amount = Amount
 ContributionCard.Input = Input
@@ -104,15 +87,17 @@ ContributionCard.defaultProps = {
   closeButtonLabel: 'Close',
   borderColor: COLORS.line1,
   borderRadius: 8,
-  borderStyle: 'solid' ,
+  borderStyle: 'solid',
   borderWidth: 2,
   imageBorderRadius: 5,
+  onClose: () => null,
 }
 
 ContributionCard.propTypes = {
   show: PropTypes.bool,
   closeButton: PropTypes.bool,
   closeButtonLabel: PropTypes.string,
+  onClose: PropTypes.func,
   borderColor: PropTypes.string,
   borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   borderStyle: PropTypes.string,
