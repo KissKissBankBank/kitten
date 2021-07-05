@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `VerticalProgress` : Add `withoutBorder` prop.
+- Feature: `ContributionCard` : Add `onClose` prop.
 
 ## [3.22.1] - 2021-07-01
 
