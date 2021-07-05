@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
@@ -50,12 +49,4 @@ export const Title = ({
       {...other}
     />
   )
-}
-
-Title.propTypes = {
-  tag: PropTypes.string,
-  modifier: PropTypes.oneOf(titleModifiersNames),
-  noMargin: PropTypes.bool,
-  cssColor: PropTypes.string,
-  italic: PropTypes.bool,
 }

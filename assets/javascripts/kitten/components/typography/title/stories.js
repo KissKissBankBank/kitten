@@ -1,6 +1,5 @@
 import React from 'react'
 import { Title } from './index'
-import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 
 const argTypes = {
@@ -26,7 +25,7 @@ const argTypes = {
   cssColor: {
     name: 'cssColor',
     description: 'Specify a color (use a CSS color string).',
-    control: 'color',
+    control: {type: 'color'},
   },
   italic: {
     name: 'italic',
@@ -51,7 +50,7 @@ export const Default = ({
   ...props
 }) => (
   <Container>
-   <Marger top="4">
+   <div class="k-u-margin-top-quadruple">
        <Title
          modifier={modifier}
          italic={italic}
@@ -61,7 +60,7 @@ export const Default = ({
        >
         Lorem ipsum dolor sit amet
        </Title>
-     </Marger>
+     </div>
    </Container>
 );
 
