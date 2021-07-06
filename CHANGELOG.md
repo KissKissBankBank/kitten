@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `DocumentsStatusBox`: Add component.
 - Feature: `DocumentsDropUploader`: Add component.
+- Feature: `TagInput`: Add component.
 - Feature: `ImageDropUploader`: Add component.
 - Feature: `VerticalProgress` : Add `withoutBorder` prop.
 - Feature: `ContributionCard` : Add `onClose` prop and delete `closeButton` prop.
