@@ -47,6 +47,29 @@ const StyledTagButton = styled.button`
 
   &.k-Buttons__tagButton--orion {
     border-radius: ${pxToRem(8)};
+
+    .k-Buttons__tagButton--
+    background-color: ${COLORS.background1};
+    border-color:  ${COLORS.line1};
+    color: ${COLORS.font1};
+
+    &:hover,
+    &:focus {
+      border-color: ${COLORS.primary4};
+      background-color: ${COLORS.background1};
+      color: ${COLORS.font1};
+    }
+
+    &:active {
+      background-color: ${COLORS.primary5};
+      border-color: ${COLORS.primary1};
+      color: ${COLORS.font1};
+    }
+
+    &:disabled {
+      border-color: ${COLORS.line1};
+      background-color: ${COLORS.line1};
+    }
   }
 
   &:disabled {
