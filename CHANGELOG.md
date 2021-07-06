@@ -5,7 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `VerticalProgress` : Add `withoutBorder` prop.
-
+- Feature: `ContributionCard` : Add `isInputValid` prop.
+ 
 ## [3.22.1] - 2021-07-01
 
 Fix:
