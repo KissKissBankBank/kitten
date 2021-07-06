@@ -21,14 +21,12 @@ export const Default = () => {
         </ContributionCard.Image>
 
         <ContributionCard.Title>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing ligula eget dolor 
+          Lorem ipsum dolor sit amet, consectetuer adipiscing ligula eget dolor
           eget dolor.eget dolor.eget dolor.
         </ContributionCard.Title>
 
         <ContributionCard.PillNumber value={0} min={0} max={100} />
-        <ContributionCard.Amount>
-          1005&nbsp;€
-        </ContributionCard.Amount>
+        <ContributionCard.Amount>1005&nbsp;€</ContributionCard.Amount>
       </ContributionCard>
     </StoryContainer>
   )
@@ -39,18 +37,18 @@ export const PetitPlus = () => {
     <StoryContainer>
       <ContributionCard borderStyle="dashed" closeButton={false}>
         <ContributionCard.Image>
-            <RocketIllustration width={45} height={81} />
-          </ContributionCard.Image>
+          <RocketIllustration width={45} height={81} />
+        </ContributionCard.Image>
 
-          <ContributionCard.Title>
-            Un petit plus pour 900 care
-            <ContributionCard.Description>
-              Donnez encore plus de chances à ce projet de voir le jour.
-            </ContributionCard.Description>
-          </ContributionCard.Title>
-          
-          <ContributionCard.Input unit="€" valid />
-          <ContributionCard.Action isInputValid>Ajouter</ContributionCard.Action>
+        <ContributionCard.Title>
+          Un petit plus pour 900 care
+          <ContributionCard.Description>
+            Donnez encore plus de chances à ce projet de voir le jour.
+          </ContributionCard.Description>
+        </ContributionCard.Title>
+
+        <ContributionCard.Input unit="€" valid />
+        <ContributionCard.Action isInputValid>Ajouter</ContributionCard.Action>
       </ContributionCard>
     </StoryContainer>
   )
