@@ -169,9 +169,21 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   margin-top: 0.1875rem;
 }
 
-.c0.k-Form-RadioButton--orion .k-Form-RadioButton__input:checked:not(:disabled) + .k-Form-RadioButton__label,
+.c0.k-Form-RadioButton--orion .k-Form-RadioButton__input:hover:not(:disabled) + .k-Form-RadioButton__label {
+  border-color: #bae8fd;
+}
+
 .c0.k-Form-RadioButton--orion .k-Form-RadioButton__input:focus:not(:disabled) + .k-Form-RadioButton__label {
   border-color: #19b4fa;
+}
+
+.c0.k-Form-RadioButton--orion .k-Form-RadioButton__input:active:not(:disabled) + .k-Form-RadioButton__label {
+  border-color: #19b4fa;
+}
+
+.c0.k-Form-RadioButton--orion .k-Form-RadioButton__input:checked:not(:disabled) + .k-Form-RadioButton__label {
+  border-color: #19b4fa;
+  background-color: #e8f7fe;
 }
 
 .c0.k-Form-RadioButton--orion.k-Form-RadioButton--error .k-Form-RadioButton__input:not(:disabled) + .k-Form-RadioButton__label {
