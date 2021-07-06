@@ -243,6 +243,7 @@ export { modifierStyles as paragraphModifierStyles } from './components/typograp
 // Uploaders
 export { BasicUploader } from './components/uploaders/basic-uploader'
 export { DocumentManager } from './components/uploaders/document-manager'
+export { ImageDropUploader } from './components/uploaders/image-drop-uploader'
 
 // Videos
 export { Video } from './components/videos/video'
