@@ -1,17 +1,21 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import classNames from 'classnames'
 import { Step } from './components/step'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 
 const StyledContainer = styled.div`
-  border: ${pxToRem(2)} solid ${COLORS.line1};
-  padding: ${pxToRem(15)};
-  border-radius: ${pxToRem(8)};
+  &:not(.k-VerticalProgress__wrapper--withoutBorder) {
+    border: ${pxToRem(2)} solid ${COLORS.line1};
+    padding: ${pxToRem(15)};
+    border-radius: ${pxToRem(8)};
 
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    padding: ${pxToRem(30)};
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      padding: ${pxToRem(30)};
+    }
   }
 
   .k-VerticalProgress {
@@ -37,9 +41,13 @@ const StyledContainer = styled.div`
   }
 `
 
-export const VerticalProgress = ({ children, ...props }) => {
+export const VerticalProgress = ({ children, withoutBorder, ...props }) => {
   return (
-    <StyledContainer>
+    <StyledContainer className={classNames(
+      "k-VerticalProgress__wrapper",
+      {'k-VerticalProgress__wrapper--withoutBorder': withoutBorder}
+    )}
+    >
       <nav className="k-VerticalProgress">
         <ul role="tablist" className="k-VerticalProgress__list" {...props}>
           {children}
@@ -47,6 +55,14 @@ export const VerticalProgress = ({ children, ...props }) => {
       </nav>
     </StyledContainer>
   )
+}
+
+VerticalProgress.propTypes = {
+  withoutBorder: PropTypes.bool,
+}
+
+VerticalProgress.defaultProps = {
+  withoutBorder: false,
 }
 
 VerticalProgress.Step = Step
