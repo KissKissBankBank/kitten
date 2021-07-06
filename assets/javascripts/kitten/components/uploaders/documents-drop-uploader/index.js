@@ -67,7 +67,7 @@ const StyledDocumentsDropUploader = styled.div`
     border-radius: ${pxToRem(8)};
   }
 
-  &.k-DocumentsDropUploader--ready:hover {
+  &.k-DocumentsDropUploader--ready:hover:not(.k-DocumentsDropUploader--disabled) {
     border-color: ${COLORS.primary4};
   }
 
@@ -79,11 +79,14 @@ const StyledDocumentsDropUploader = styled.div`
     border-color: ${COLORS.line2};
     background-color: ${COLORS.background2};
     color: ${COLORS.font2};
-    cursor: not-allowed;
+
+    &, .k-DocumentsDropUploader__button {
+      cursor: not-allowed;
+    }
   }
 
   input[type='file']:active:not(:disabled) + .k-DocumentsDropUploader__button,
-  &.k-DocumentsDropUploader--isDraggingOver {
+  &.k-DocumentsDropUploader--isDraggingOver:not(.k-DocumentsDropUploader--disabled) {
     border-color: ${COLORS.primary1};
   }
 
@@ -195,18 +198,21 @@ export const DocumentsDropUploader = ({
   const handleDragEnter = e => {
     e.preventDefault()
     e.stopPropagation()
+    if (disabled) return
 
     setDraggingOver(true)
   }
   const handleDragLeave = e => {
     e.preventDefault()
     e.stopPropagation()
+    if (disabled) return
 
     setDraggingOver(false)
   }
   const handleDragOver = e => {
     e.preventDefault()
     e.stopPropagation()
+    if (disabled) return
 
     setDraggingOver(true)
   }
@@ -214,6 +220,7 @@ export const DocumentsDropUploader = ({
   const handleDrop = e => {
     e.preventDefault()
     e.stopPropagation()
+    if (disabled) return
 
     setDraggingOver(false)
 
