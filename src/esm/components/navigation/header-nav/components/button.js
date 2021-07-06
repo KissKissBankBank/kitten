@@ -22,7 +22,8 @@ export var Button = function Button(_ref) {
       max = _ref$hiddenText.max,
       as = _ref.as,
       style = _ref.style,
-      props = _objectWithoutProperties(_ref, ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style"]);
+      className = _ref.className,
+      props = _objectWithoutProperties(_ref, ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style", "className"]);
 
   var hiddenMin = min ? "k-u-hidden@".concat(min, "-up--important") : '';
   var hiddenMax = max ? "k-u-hidden@".concat(max, "-down--important") : '';
@@ -50,7 +51,7 @@ export var Button = function Button(_ref) {
   }
 
   return /*#__PURE__*/React.createElement(ButtonComponent, _extends({}, props, buttonProps, {
-    className: classNames('k-HeaderNav__Button', {
+    className: classNames('k-HeaderNav__Button', className, {
       'k-HeaderNav__Button--hasIcon': !!icon,
       'k-HeaderNav__Button--hasText': !!text
     }),

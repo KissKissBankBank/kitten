@@ -110,7 +110,7 @@ export var CrowdfundingCard = function CrowdfundingCard(_ref) {
     info2: info2,
     info3: info3,
     loading: loading
-  }), progress && /*#__PURE__*/React.createElement(ProgressBar, {
+  }), /*#__PURE__*/React.createElement(ProgressBar, {
     progress: progress,
     progressColor: progressColor,
     loading: loading,
@@ -133,7 +133,8 @@ CrowdfundingCard.propTypes = {
   imageContainerRatio: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   buttonText: PropTypes.string,
   forceVersion: PropTypes.oneOf(['mobile', 'tablet', 'desktop']),
-  progressLabel: PropTypes.string
+  progressLabel: PropTypes.string,
+  progress: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool])
 };
 CrowdfundingCard.defaultProps = {
   href: null,
@@ -141,5 +142,6 @@ CrowdfundingCard.defaultProps = {
   stretch: false,
   imageContainerRatio: 10 / 16,
   buttonText: null,
-  forceVersion: null
+  forceVersion: null,
+  progress: null
 };

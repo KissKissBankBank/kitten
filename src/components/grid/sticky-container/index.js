@@ -19,6 +19,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _throttle = _interopRequireDefault(require("lodash/throttle"));
@@ -28,21 +30,15 @@ var _typography = require("../../../helpers/utils/typography");
 var StyledStickyContainer = _styledComponents.default.div.withConfig({
   displayName: "sticky-container__StyledStickyContainer",
   componentId: "trwgvt-0"
-})(["will-change:transform;transition-duration:0.2s;transition-timing-function:ease;", " ", ""], function (_ref) {
-  var isSticky = _ref.isSticky;
-  return isSticky === 'always' && (0, _styledComponents.css)(["position:fixed;"]);
-}, function (_ref2) {
-  var stickyContainerStyleProps = _ref2.stickyContainerStyleProps;
+})(["will-change:transform;transition-duration:0.2s;transition-timing-function:ease;&.k-StickyContainer--alwaysSticky{position:fixed;}", ""], function (_ref) {
+  var stickyContainerStyleProps = _ref.stickyContainerStyleProps;
   return stickyContainerStyleProps;
 });
 
 var StyledSpacer = _styledComponents.default.div.withConfig({
   displayName: "sticky-container__StyledSpacer",
   componentId: "trwgvt-1"
-})(["height:", ";flex:0 0 auto;"], function (_ref3) {
-  var containerHeight = _ref3.containerHeight;
-  return (0, _typography.pxToRem)(containerHeight);
-});
+})(["height:var(--StickyContainer-height,0);flex:0 0 auto;"]);
 
 function useScrollDirection() {
   // Returns an array with booleans:
@@ -78,12 +74,13 @@ function useScrollDirection() {
   return [difference > 0, difference < 0];
 }
 
-var StickyContainerBase = function StickyContainerBase(_ref4, ref) {
-  var children = _ref4.children,
-      top = _ref4.top,
-      bottom = _ref4.bottom,
-      isSticky = _ref4.isSticky,
-      other = (0, _objectWithoutProperties2.default)(_ref4, ["children", "top", "bottom", "isSticky"]);
+var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
+  var children = _ref2.children,
+      className = _ref2.className,
+      top = _ref2.top,
+      bottom = _ref2.bottom,
+      isSticky = _ref2.isSticky,
+      other = (0, _objectWithoutProperties2.default)(_ref2, ["children", "className", "top", "bottom", "isSticky"]);
   var currentStickyContainer = (0, _react.useRef)(null);
 
   var _useState3 = (0, _react.useState)(false),
@@ -112,6 +109,22 @@ var StickyContainerBase = function StickyContainerBase(_ref4, ref) {
       setUnsticky: setUnsticky
     };
   });
+  (0, _react.useEffect)(function () {
+    var currentContainerHeight = currentStickyContainer.current ? currentStickyContainer.current.clientHeight : 0;
+    setContainerHeight(currentContainerHeight);
+  }, []); // [] makes that Effect fire on Component mount only
+
+  (0, _react.useEffect)(function () {
+    if (['always', 'never'].includes(isSticky)) return;
+
+    if (shouldUnstickContainer()) {
+      setUnsticky();
+    } else if (shouldStickContainer()) {
+      setSticky();
+    } else if (shouldUnstickContainerWithTransition()) {
+      setUnstickyWithTransition();
+    }
+  }, [scrollDirectionDown, scrollDirectionUp]);
 
   var setSticky = function setSticky() {
     setStuckState(true);
@@ -128,6 +141,10 @@ var StickyContainerBase = function StickyContainerBase(_ref4, ref) {
   var setUnsticky = function setUnsticky() {
     setStuckState(false);
   };
+
+  if (isSticky === 'never') {
+    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, children);
+  }
 
   var isOriginalContainerOutOfViewport = function isOriginalContainerOutOfViewport() {
     if (isSticky === 'topOnScrollUp') {
@@ -162,23 +179,6 @@ var StickyContainerBase = function StickyContainerBase(_ref4, ref) {
     return scrollDirectionDown && isSticky === 'topOnScrollUp' || scrollDirectionUp && isSticky === 'bottomOnScrollDown';
   };
 
-  (0, _react.useEffect)(function () {
-    var currentContainerHeight = currentStickyContainer.current ? currentStickyContainer.current.clientHeight : 0;
-    setContainerHeight(currentContainerHeight);
-  }, []); // [] makes that Effect fire on Component mount only
-
-  (0, _react.useEffect)(function () {
-    if (isSticky === 'always') return;
-
-    if (shouldUnstickContainer()) {
-      setUnsticky();
-    } else if (shouldStickContainer()) {
-      setSticky();
-    } else if (shouldUnstickContainerWithTransition()) {
-      setUnstickyWithTransition();
-    }
-  }, [scrollDirectionDown, scrollDirectionUp]);
-
   var stickyContainerStyleProps = function stickyContainerStyleProps() {
     var position = stuck ? 'fixed' : 'static';
 
@@ -196,10 +196,15 @@ var StickyContainerBase = function StickyContainerBase(_ref4, ref) {
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, (stuck || isSticky === 'always') && /*#__PURE__*/_react.default.createElement(StyledSpacer, {
     className: "k-Spacer",
-    containerHeight: containerHeight
+    style: {
+      '--StickyContainer-height': (0, _typography.pxToRem)(containerHeight)
+    }
   }), /*#__PURE__*/_react.default.createElement(StyledStickyContainer, (0, _extends2.default)({
     ref: currentStickyContainer,
     stickyContainerStyleProps: stickyContainerStyleProps,
+    className: (0, _classnames.default)('k-StickyContainer', className, {
+      'k-StickyContainer--alwaysSticky': isSticky === 'always'
+    }),
     isSticky: isSticky
   }, other), children));
 };
@@ -209,5 +214,5 @@ exports.StickyContainer = StickyContainer;
 StickyContainer.propTypes = {
   top: _propTypes.default.number,
   bottom: _propTypes.default.number,
-  isSticky: _propTypes.default.oneOf(['topOnScrollUp', 'bottomOnScrollDown', 'always'])
+  isSticky: _propTypes.default.oneOf(['topOnScrollUp', 'bottomOnScrollDown', 'always', 'never'])
 };

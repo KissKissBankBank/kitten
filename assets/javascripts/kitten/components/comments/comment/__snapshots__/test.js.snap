@@ -2,18 +2,19 @@
 
 exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
 <div
-  className="sc-gZMcBi fAqsa"
+  className="sc-iwsKbI ghJpUv"
 >
   <div
-    className="sc-bxivhb eVBmAO"
+    className="sc-htpNat jOCivv"
   >
     <div
-      className="sc-ifAKCX dXFfMI"
+      className="sc-bxivhb cdaogt"
     >
       <div
-        className="sc-bZQynM fVSzgU"
+        className="sc-EHOje qrHlx"
       >
         <svg
+          className="k-ColorSvg"
           height="25"
           viewBox="0 0 20 20"
           width="25"
@@ -32,7 +33,7 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
         </svg>
       </div>
       <span
-        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
+        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX jFoXrH"
       >
         <img
           alt="Image alt"
@@ -42,37 +43,37 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
       </span>
     </div>
     <span
-      className="sc-htpNat KtFsv k-u-color-font1 k-u-size-micro k-u-weight-light"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-light"
     >
       Custom date
     </span>
   </div>
   <span
-    className="sc-gqjmRU hZQwhG"
+    className="sc-gZMcBi hxoBK"
   >
     <div
-      className="sc-VigVT layygq"
+      className="sc-gqjmRU cyDemO"
     >
       <div
         className="sc-bdVaJa hOgMxB"
       >
         <span
-          className="sc-htpNat KtFsv k-u-color-font1 k-u-size-tiny k-u-weight-regular"
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
         >
           Custom name
         </span>
       </div>
       <div
-        className="sc-jTzLTM cCewLx"
+        className="sc-VigVT efojrA"
       >
         <span
-          className="sc-htpNat KtFsv k-u-color-font1 k-u-weight-light sc-dnqmqq lkFWeM"
+          className="k-u-color-font1 k-u-weight-light sc-htoDjs gPUvVR"
         >
           Custom text
         </span>
       </div>
       <span
-        className="sc-iwsKbI kvzWsf"
+        className="sc-dnqmqq cigwiU"
       />
     </div>
     
@@ -82,16 +83,16 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
 
 exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
 <div
-  className="sc-gZMcBi fAqsa"
+  className="sc-iwsKbI ghJpUv"
 >
   <div
-    className="sc-bxivhb eVBmAO"
+    className="sc-htpNat jOCivv"
   >
     <div
-      className="sc-ifAKCX dXFfMI"
+      className="sc-bxivhb cdaogt"
     >
       <span
-        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
+        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX jFoXrH"
       >
         <img
           alt="Image alt"
@@ -101,44 +102,44 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
       </span>
     </div>
     <span
-      className="sc-htpNat KtFsv k-u-color-font1 k-u-size-micro k-u-weight-light"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-light"
     >
       Custom date
     </span>
   </div>
   <span
-    className="sc-gqjmRU hZQwhG"
+    className="sc-gZMcBi hxoBK"
   >
     <div
-      className="sc-VigVT layygq"
+      className="sc-gqjmRU cyDemO"
     >
       <div
         className="sc-bdVaJa hOgMxB"
       >
         <span
-          className="sc-htpNat KtFsv k-u-color-font1 k-u-size-tiny k-u-weight-regular"
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
         >
           Custom name
         </span>
       </div>
       <div
-        className="sc-jTzLTM cCewLx"
+        className="sc-VigVT efojrA"
       >
         <span
-          className="sc-htpNat KtFsv k-u-color-font1 k-u-weight-light sc-dnqmqq lkFWeM"
+          className="k-u-color-font1 k-u-weight-light sc-htoDjs gPUvVR"
         >
           Custom text
         </span>
       </div>
       <span
-        className="sc-iwsKbI kvzWsf"
+        className="sc-dnqmqq cigwiU"
       />
     </div>
     <div
       className="sc-bdVaJa tEHAm"
     >
       <div
-        className="sc-htpNat KtFsv k-u-color-font1 k-u-size-micro k-u-weight-bold sc-fjdhpX fNnJaH"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-bold sc-jTzLTM fSqnUK"
       >
         <div>
           <a
@@ -170,16 +171,16 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
 
 exports[`<Comment /> should match its empty snapshot 1`] = `
 <div
-  className="sc-gZMcBi fAqsa"
+  className="sc-iwsKbI ghJpUv"
 >
   <div
-    className="sc-bxivhb eVBmAO"
+    className="sc-htpNat jOCivv"
   >
     <div
-      className="sc-ifAKCX dXFfMI"
+      className="sc-bxivhb cdaogt"
     >
       <span
-        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
+        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX jFoXrH"
       >
         <img
           alt="Image alt"
@@ -189,51 +190,51 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
       </span>
     </div>
     <span
-      className="sc-htpNat KtFsv k-u-color-font1 k-u-size-micro k-u-weight-light"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-light"
     >
       Custom date
     </span>
   </div>
   <span
-    className="sc-gqjmRU hZQwhG"
+    className="sc-gZMcBi hxoBK"
   >
     <div
-      className="sc-VigVT layygq"
+      className="sc-gqjmRU cyDemO"
     >
       <div
         className="sc-bdVaJa hOgMxB"
       >
         <span
-          className="sc-htpNat KtFsv k-u-color-font1 k-u-size-tiny k-u-weight-regular"
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
         >
           Custom name
         </span>
       </div>
       <div
-        className="sc-jTzLTM cypeDI"
+        className="sc-VigVT eWLelC"
       >
         <span
-          className="sc-htpNat KtFsv k-u-color-font1 k-u-weight-light sc-dnqmqq lkFWeM"
+          className="k-u-color-font1 k-u-weight-light sc-htoDjs gPUvVR"
         >
           Custom text
         </span>
       </div>
       <span
-        className="sc-iwsKbI kvzWsf"
+        className="sc-dnqmqq cigwiU"
       />
     </div>
     <div
-      className="sc-jzJRlG dllbll"
+      className="sc-fjdhpX jfYGMe"
     >
       <button
         aria-pressed="true"
-        className="sc-gzVnrw ppGk"
+        className="sc-bZQynM jUlRfb"
         role="button"
       >
         
         <svg
           aria-hidden="true"
-          className="sc-htoDjs kBkodc"
+          className="sc-gzVnrw cYyNLJ"
           fill="#222"
           focusable="false"
           viewBox="0 0 14 12"

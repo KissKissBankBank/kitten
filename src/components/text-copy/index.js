@@ -11,19 +11,17 @@ exports.TextCopy = void 0;
 
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-
 var _react = _interopRequireWildcard(require("react"));
+
+var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
-var _typographyConfig = _interopRequireDefault(require("../../constants/typography-config"));
-
 var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
+
+var _screenConfig = require("../../constants/screen-config");
 
 var _typography = require("../../helpers/utils/typography");
 
@@ -33,161 +31,111 @@ var _arrowContainer = require("../layout/arrow-container");
 
 var _text = require("../typography/text");
 
+var _textInput = require("../form/text-input");
+
 var _visuallyHidden = require("../accessibility/visually-hidden");
 
-var _modifierStyles = require("../../components/buttons/button/helpers/modifier-styles");
+var _button = require("../../components/buttons/button/");
 
-var StyledButton = (0, _styledComponents.default)(function (_ref) {
-  var buttonModifier = _ref.buttonModifier,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["buttonModifier"]);
-  return /*#__PURE__*/_react.default.createElement("button", others);
-}).withConfig({
-  displayName: "text-copy__StyledButton",
-  componentId: "sc-1ikj7bl-0"
-})(["", ";font-size:", ";line-height:1.3;flex:1 0 auto;appearance:none;cursor:pointer;padding:0 ", ";border-radius:0;align-self:stretch;box-sizing:border-box;", ";"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(30), function (_ref2) {
-  var buttonModifier = _ref2.buttonModifier;
-  return (0, _modifierStyles.modifierStyles)(buttonModifier);
-});
 var fadeInAndOut = (0, _styledComponents.keyframes)(["0%,100%{opacity:0;}10%,90%{opacity:1;}"]);
-var Wrapper = (0, _styledComponents.default)(function (_ref3) {
-  var buttonText = _ref3.buttonText,
-      others = (0, _objectWithoutProperties2.default)(_ref3, ["buttonText"]);
-  return /*#__PURE__*/_react.default.createElement("div", others);
-}).withConfig({
+
+var Wrapper = _styledComponents.default.button.withConfig({
   displayName: "text-copy__Wrapper",
-  componentId: "sc-1ikj7bl-1"
-})(["position:relative;display:flex;align-items:center;justify-content:space-between;", ""], function (_ref4) {
-  var buttonText = _ref4.buttonText;
-  return !buttonText && (0, _styledComponents.css)(["border:", " solid ", ";background-color:", ";"], (0, _typography.pxToRem)(2), _colorsConfig.default.line1, _colorsConfig.default.background1);
-});
-var StyledText = (0, _styledComponents.default)(function (_ref5) {
-  var buttonText = _ref5.buttonText,
-      forceOneLine = _ref5.forceOneLine,
-      className = _ref5.className,
-      children = _ref5.children,
-      others = (0, _objectWithoutProperties2.default)(_ref5, ["buttonText", "forceOneLine", "className", "children"]);
-  return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
-    className: className
-  }, others), children);
-}).withConfig({
-  displayName: "text-copy__StyledText",
-  componentId: "sc-1ikj7bl-2"
-})(["padding:", " ", ";width:100%;", " ", ""], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), function (_ref6) {
-  var buttonText = _ref6.buttonText;
-  return buttonText && (0, _styledComponents.css)(["border:", " solid ", ";background-color:", ";border-right:0;"], (0, _typography.pxToRem)(2), _colorsConfig.default.line1, _colorsConfig.default.background1);
-}, function (_ref7) {
-  var forceOneLine = _ref7.forceOneLine;
-  return forceOneLine && (0, _styledComponents.css)(["overflow:hidden;white-space:nowrap;"]);
-});
+  componentId: "sc-1ikj7bl-0"
+})(["position:relative;display:flex;width:100%;.k-TextCopy__text{display:flex;align-items:center;justify-content:flex-start;line-height:1.2;text-align:left;span{max-height:calc(2 * 1.2 * 1em);overflow:hidden;text-overflow:ellipsis;}&.k-TextCopy__text--forceOneLine{overflow:hidden;span{max-width:100%;white-space:nowrap;text-overflow:ellipsis;}}}.k-TextCopy__buttonTextButton{min-width:0;flex:1 0 auto;padding:0 ", ";align-self:stretch;box-sizing:border-box;}.k-TextCopy__iconButton{display:flex;cursor:pointer;align-items:center;padding:", ";border:", " solid ", ";align-self:stretch;box-sizing:border-box;}.k-TextCopy__tooltip{position:absolute;left:0;bottom:-", ";animation:3s ", " ease-out;}&.k-TextCopy--andromeda{.k-TextCopy__text{border-right:0;}}&.k-TextCopy--orion{gap:", ";&:hover{.k-Button{border-color:", ";background-color:", ";}}&:active{.k-Button{border-color:", ";background-color:", ";}}@media (max-width:", "){flex-direction:column;}.k-Button.k-Button--orion{border-radius:", ";}}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(50), fadeInAndOut, (0, _typography.pxToRem)(5), _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.primary3, _colorsConfig.default.primary3, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.XS.max), (0, _typography.pxToRem)(4));
 
-var IconWrapper = _styledComponents.default.div.withConfig({
-  displayName: "text-copy__IconWrapper",
-  componentId: "sc-1ikj7bl-3"
-})(["display:flex;cursor:pointer;align-items:center;padding:", ";border-left:", " solid ", ";align-self:stretch;box-sizing:border-box;"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(2), _colorsConfig.default.line1);
-
-var StyledArrowContainer = (0, _styledComponents.default)(_arrowContainer.ArrowContainer).withConfig({
-  displayName: "text-copy__StyledArrowContainer",
-  componentId: "sc-1ikj7bl-4"
-})(["position:absolute;left:0;bottom:-", ";animation:3s ", " ease-out;"], (0, _typography.pxToRem)(50), fadeInAndOut);
-
-var TextCopy = function TextCopy(_ref8) {
-  var children = _ref8.children,
-      textToCopy = _ref8.textToCopy,
-      alertMessage = _ref8.alertMessage,
-      description = _ref8.description,
-      forceOneLine = _ref8.forceOneLine,
-      buttonText = _ref8.buttonText,
-      buttonModifier = _ref8.buttonModifier;
+var TextCopy = function TextCopy(_ref) {
+  var children = _ref.children,
+      textToCopy = _ref.textToCopy,
+      alertMessage = _ref.alertMessage,
+      description = _ref.description,
+      forceOneLine = _ref.forceOneLine,
+      buttonText = _ref.buttonText,
+      buttonModifier = _ref.buttonModifier,
+      variant = _ref.variant;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      shouldShowMessage = _useState2[0],
-      isMessageShown = _useState2[1];
+      isMessageVisible = _useState2[0],
+      setMessageVisibility = _useState2[1];
 
-  var textRef = (0, _react.useRef)(null);
-  var selectText = (0, _react.useCallback)(function () {
-    var range = document.createRange();
-    range.selectNode(textRef.current);
-    window.getSelection().addRange(range);
-  });
+  var textElement = (0, _react.useRef)(null);
   (0, _react.useEffect)(function () {
     var hideTimeout;
 
-    if (shouldShowMessage) {
+    if (isMessageVisible) {
       hideTimeout = setTimeout(function () {
-        return isMessageShown(false);
+        return setMessageVisibility(false);
       }, 3000);
     }
 
     return function () {
       return clearTimeout(hideTimeout);
     };
-  }, [shouldShowMessage]);
-  var copyText = (0, _react.useCallback)(function () {
-    isMessageShown(false);
+  }, [isMessageVisible]);
 
-    if (textToCopy) {
-      var el = document.createElement('textarea');
-      el.value = textToCopy;
-      document.body.appendChild(el);
-      el.select();
-      document.execCommand('copy');
-      document.body.removeChild(el);
-      var range = document.createRange();
-      range.selectNode(textRef.current);
-      window.getSelection().addRange(range);
+  var copyToClipboard = function copyToClipboard(text) {
+    if (!navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
     } else {
-      selectText();
-      document.execCommand('copy');
+      // IE11
+      var hiddenElement = document.createElement('textarea');
+      hiddenElement.style.position = 'absolute';
+      hiddenElement.style.opacity = 0;
+      hiddenElement.value = text;
+      document.body.appendChild(hiddenElement);
+      hiddenElement.select();
+      return new Promise(function (res, rej) {
+        document.execCommand('copy') ? res() : rej();
+        document.body.removeChild(hiddenElement);
+      });
     }
-
-    setTimeout(function () {
-      return isMessageShown(true);
-    }, 1);
-  });
-
-  var Action = function Action(_ref9) {
-    var copyText = _ref9.copyText,
-        buttonText = _ref9.buttonText,
-        buttonModifier = _ref9.buttonModifier,
-        buttonProps = _ref9.buttonProps;
-    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !buttonText && /*#__PURE__*/_react.default.createElement(IconWrapper, {
-      "aria-hidden": true,
-      onClick: copyText
-    }, /*#__PURE__*/_react.default.createElement(_copyIcon.CopyIcon, null)), buttonText && /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
-      type: "button",
-      buttonModifier: buttonModifier,
-      onClick: copyText,
-      "aria-label": copyText
-    }, buttonProps), buttonText));
   };
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(Wrapper, {
-    buttonText: buttonText
-  }, description && /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, description), /*#__PURE__*/_react.default.createElement(StyledText, {
-    weight: "light",
-    size: "micro",
-    lineHeight: "normal",
-    forceOneLine: forceOneLine,
-    onClick: selectText,
-    buttonText: buttonText
+  var copyText = (0, _react.useCallback)(function () {
+    var _textElement$current;
+
+    setMessageVisibility(false);
+    var copyableText = textToCopy || (textElement === null || textElement === void 0 ? void 0 : (_textElement$current = textElement.current) === null || _textElement$current === void 0 ? void 0 : _textElement$current.innerText) || '';
+    copyToClipboard(copyableText).then(function () {
+      setTimeout(function () {
+        return setMessageVisibility(true);
+      }, 1);
+    });
+    var range = document.createRange();
+    range.selectNode(textElement.current);
+    window.getSelection().addRange(range);
+  });
+  return /*#__PURE__*/_react.default.createElement(Wrapper, {
+    className: (0, _classnames.default)('k-TextCopy', 'k-u-reset-button', "k-TextCopy--".concat(variant)),
+    type: "button",
+    onClick: copyText
+  }, description && /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, description), /*#__PURE__*/_react.default.createElement(_textInput.TextInput, {
+    as: "div",
+    className: (0, _classnames.default)('k-TextCopy__text', 'k-u-reset-button', {
+      'k-TextCopy__text--forceOneLine': forceOneLine
+    }),
+    variant: variant
   }, /*#__PURE__*/_react.default.createElement("span", {
-    ref: textRef
-  }, children)), /*#__PURE__*/_react.default.createElement(Action, {
-    copyText: copyText,
-    buttonText: buttonText,
-    buttonModifier: buttonModifier
-  }), alertMessage && shouldShowMessage && /*#__PURE__*/_react.default.createElement(StyledArrowContainer, {
+    ref: textElement
+  }, children)), /*#__PURE__*/_react.default.createElement(_button.Button, {
+    as: "span",
+    modifier: !!buttonText ? buttonModifier : 'hydrogen',
+    className: "k-TextCopy__buttonTextButton",
+    variant: variant,
+    icon: !buttonText
+  }, !!buttonText ? buttonText : /*#__PURE__*/_react.default.createElement(_copyIcon.CopyIcon, null)), alertMessage && isMessageVisible && /*#__PURE__*/_react.default.createElement(_arrowContainer.ArrowContainer, {
     color: _colorsConfig.default.primary1,
     position: "top",
     padding: 10,
     centered: true,
-    role: "alert"
+    role: "alert",
+    className: "k-TextCopy__tooltip"
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     color: "background1",
     weight: "light",
     size: "micro"
-  }, alertMessage))));
+  }, alertMessage)));
 };
 
 exports.TextCopy = TextCopy;

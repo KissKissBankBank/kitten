@@ -36,6 +36,7 @@ export { SimpleCard } from './components/cards/simple-card';
 export { BackerCard } from './components/cards/backer-card';
 export { BackingCard } from './components/cards/backing-card';
 export { CartRewardCard } from './components/cards/cart-reward-card';
+export { ContributionCard } from './components/cards/contribution-card';
 export { RewardEdition } from './components/cards/reward-edition';
 export { TeamCard } from './components/cards/team-card';
 export { Triptych } from './components/cards/triptych';
@@ -81,6 +82,7 @@ export { RadioButtonSet } from './components/form/radio-button-set';
 export { RangeSlider } from './components/form/range-slider';
 export { TextInput } from './components/form/text-input';
 export { TextInputWithButton } from './components/form/text-input-with-button';
+export { TextInputWithIcon } from './components/form/text-input-with-icon';
 export { TextInputWithLimit } from './components/form/text-input-with-limit';
 export { TextInputWithUnit } from './components/form/text-input-with-unit';
 export { ToggleSwitch } from './components/form/toggle-switch'; // Grid
@@ -93,7 +95,9 @@ export { SideGrid } from './components/grid/side-grid';
 export { StickyContainer } from './components/grid/sticky-container';
 export { AdaptableGrid, AdaptableGridCol } from './components/grid/adaptable-grid'; // Heroes
 
-export { Hero } from './components/heroes/hero'; // Images
+export { Hero } from './components/heroes/hero'; // Illustrations
+
+export { RocketIllustration } from './components/illustrations/rocket-illustration'; // Images
 
 export { ImageCropper } from './components/images/image-cropper'; // Layout
 

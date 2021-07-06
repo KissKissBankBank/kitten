@@ -61,6 +61,7 @@ export { SimpleCard } from './components/cards/simple-card'
 export { BackerCard } from './components/cards/backer-card'
 export { BackingCard } from './components/cards/backing-card'
 export { CartRewardCard } from './components/cards/cart-reward-card'
+export { ContributionCard } from './components/cards/contribution-card'
 export { RewardEdition } from './components/cards/reward-edition'
 export { TeamCard } from './components/cards/team-card'
 export { Triptych } from './components/cards/triptych'
@@ -114,6 +115,7 @@ export { RangeSlider } from './components/form/range-slider'
 export { TagInput } from './components/form/tag-input'
 export { TextInput } from './components/form/text-input'
 export { TextInputWithButton } from './components/form/text-input-with-button'
+export { TextInputWithIcon } from './components/form/text-input-with-icon'
 export { TextInputWithLimit } from './components/form/text-input-with-limit'
 export { TextInputWithUnit } from './components/form/text-input-with-unit'
 export { ToggleSwitch } from './components/form/toggle-switch'
@@ -132,6 +134,9 @@ export {
 
 // Heroes
 export { Hero } from './components/heroes/hero'
+
+// Illustrations
+export { RocketIllustration } from './components/illustrations/rocket-illustration'
 
 // Images
 export { ImageCropper } from './components/images/image-cropper'
@@ -239,6 +244,7 @@ export { modifierStyles as paragraphModifierStyles } from './components/typograp
 // Uploaders
 export { BasicUploader } from './components/uploaders/basic-uploader'
 export { DocumentManager } from './components/uploaders/document-manager'
+export { ImageDropUploader } from './components/uploaders/image-drop-uploader'
 
 // Videos
 export { Video } from './components/videos/video'

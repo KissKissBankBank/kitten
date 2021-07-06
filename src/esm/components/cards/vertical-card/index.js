@@ -87,7 +87,7 @@ VerticalCard.propTypes = {
   }).isRequired,
   title: PropTypes.string.isRequired,
   titleTag: PropTypes.string,
-  description: PropTypes.string,
+  description: PropTypes.node,
   descriptionTag: PropTypes.string,
   withTitleStroke: PropTypes.bool,
   textAlign: PropTypes.oneOf(['left', 'center', 'right'])

@@ -11,16 +11,23 @@ import classNames from 'classnames';
 var StyledTextInputWithIcon = styled.div.withConfig({
   displayName: "text-input-with-icon__StyledTextInputWithIcon",
   componentId: "rvt8kr-0"
-})(["position:relative;.k-Form-TextInputWithIcon__input{padding-left:", ";}.k-Form-TextInputWithIcon__icon{display:flex;position:absolute;align-items:center;justify-content:center;z-index:1;left:0;top:0;width:", ";height:100%;&.k-Form-TextInputWithIcon__icon--disabled > svg{&[stroke]:not([stroke='none']),& [stroke]:not([stroke='none']){stroke:", ";}&[fill]:not([fill='none']),& [fill]:not([fill='none']){fill:", ";}}}"], pxToRem(50), pxToRem(50), COLORS.font2, COLORS.font2);
+})(["position:relative;.k-Form-TextInputWithIcon__icon{display:flex;position:absolute;align-items:center;justify-content:center;z-index:1;top:0;width:", ";height:100%;&.k-Form-TextInputWithIcon__icon--disabled > svg:not(.k-ColorSvg){&[stroke]:not([stroke='none']),& [stroke]:not([stroke='none']){stroke:", ";}&[fill]:not([fill='none']),& [fill]:not([fill='none']){fill:", ";}}}&.k-Form-TextInputWithIcon--icon_left{.k-Form-TextInputWithIcon__input{padding-left:", ";}.k-Form-TextInputWithIcon__icon{left:0;}}&.k-Form-TextInputWithIcon--icon_right{.k-Form-TextInputWithIcon__input{padding-right:", ";}.k-Form-TextInputWithIcon__icon{right:0;}}"], pxToRem(50), COLORS.font2, COLORS.font2, pxToRem(50), pxToRem(50));
 export var TextInputWithIcon = function TextInputWithIcon(_ref) {
   var disabled = _ref.disabled,
       icon = _ref.icon,
+      iconPosition = _ref.iconPosition,
       accessibilityLabel = _ref.accessibilityLabel,
-      others = _objectWithoutProperties(_ref, ["disabled", "icon", "accessibilityLabel"]);
+      id = _ref.id,
+      others = _objectWithoutProperties(_ref, ["disabled", "icon", "iconPosition", "accessibilityLabel", "id"]);
 
   return /*#__PURE__*/React.createElement(StyledTextInputWithIcon, {
-    className: "k-Form-TextInputWithIcon"
-  }, accessibilityLabel && /*#__PURE__*/React.createElement(VisuallyHidden, null, accessibilityLabel), /*#__PURE__*/React.createElement(TextInput, _extends({}, others, {
+    className: classNames('k-Form-TextInputWithIcon', "k-Form-TextInputWithIcon--icon_".concat(iconPosition))
+  }, accessibilityLabel && /*#__PURE__*/React.createElement(VisuallyHidden, {
+    id: "".concat(id, "__iconLabel")
+  }, accessibilityLabel), /*#__PURE__*/React.createElement(TextInput, _extends({
+    id: id,
+    "aria-labelledby": accessibilityLabel ? "".concat(id, "__iconLabel") : null
+  }, others, {
     className: classNames('k-Form-TextInputWithIcon__input', others.className),
     disabled: disabled
   })), /*#__PURE__*/React.createElement("span", {
@@ -33,9 +40,11 @@ export var TextInputWithIcon = function TextInputWithIcon(_ref) {
 TextInputWithIcon.propTypes = {
   disabled: PropTypes.bool,
   accessibilityLabel: PropTypes.string,
-  icon: PropTypes.node.isRequired
+  icon: PropTypes.node.isRequired,
+  iconPosition: PropTypes.oneOf(['left', 'right'])
 };
 TextInputWithIcon.defaultProps = {
   accessibilityLabel: '',
-  disabled: false
+  disabled: false,
+  iconPosition: 'left'
 };

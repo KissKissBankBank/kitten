@@ -15,16 +15,20 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var ClockIcon = function ClockIcon(_ref) {
-  var color = _ref.color,
+  var className = _ref.className,
+      color = _ref.color,
       bgColor = _ref.bgColor,
       title = _ref.title,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "bgColor", "title"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "color", "bgColor", "title"]);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 11 11",
     width: "10",
-    height: "10"
+    height: "10",
+    className: (0, _classnames.default)('k-ColorSvg', className)
   }, props), title && /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("circle", {
     cx: "5.5",
     cy: "5.5",

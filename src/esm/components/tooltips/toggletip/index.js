@@ -16,7 +16,7 @@ import { WarningIcon } from '../../../components/icons/warning-icon';
 var StyledWrapper = styled.span.withConfig({
   displayName: "toggletip__StyledWrapper",
   componentId: "f1inv4-0"
-})(["--toggletipAction-size:", ";position:relative;display:inline-block;&,&.k-Toggletip--info{--toggletipAction-color:", ";--toggletipBubble-color:", ";}&.k-Toggletip--warning{--toggletipAction-color:", ";--toggletipBubble-color:", ";}&.k-Toggletip--error{--toggletipAction-color:", ";--toggletipBubble-color:", ";}&.k-Toggletip--success{--toggletipAction-color:", ";--toggletipBubble-color:", ";}&.k-Toggletip--disabled{--toggletipAction-color:", ";--toggletipBubble-color:", ";}.k-Toggletip__action{position:relative;background-color:var(--toggletipAction-color);width:var(--toggletipAction-size);height:var(--toggletipAction-size);border-radius:50%;}.k-Toggletip__bubble{--toggletipBubble-arrowMainPosition:", ";z-index:var(--toggletipBubble-zIndex);box-sizing:border-box;padding:", ";background-color:var(--toggletipBubble-color);text-align:left;&:after{content:'';position:absolute;display:block;width:0;height:0;border:", " solid transparent;}@media (max-width:", "){border-radius:", ";position:absolute;top:calc(var(--toggletipAction-size) + ", ");left:calc( -1 * var(--toggletipAction-left) + ", " );width:calc(100vw - ", ");&:after{top:var(--toggletipBubble-arrowMainPosition);left:calc( var(--toggletipAction-left) - ", " - ", " + (var(--toggletipAction-size) / 2) );border-bottom-color:var(--toggletipBubble-color);}}@media (min-width:", "){border-radius:", ";position:absolute;top:calc(var(--toggletipAction-size) / 2);left:calc(100% + ", ");transform:translateY(-50%);min-width:", ";max-width:", ";width:max-content;&.k-Toggletip__bubble--rightLimit{max-width:calc( 100vw - var(--toggletipAction-left) - ", " - var(--toggletipAction-size) );}&:after{left:var(--toggletipBubble-arrowMainPosition);top:calc(50% - ", ");border-right-color:var(--toggletipBubble-color);}&.k-Toggletip__bubble--lowTop{top:calc( -1 * var(--toggletipAction-top) + ", " );transform:none;&:after{top:calc( var(--toggletipAction-top) - ", " - ", " + (var(--toggletipAction-size) / 2) );}}&.k-Toggletip__bubble--left{left:initial;right:calc(100% + ", ");&:after{left:initial;right:var(--toggletipBubble-arrowMainPosition);border-right-color:transparent;border-left-color:var(--toggletipBubble-color);}}}}"], pxToRem(24), COLORS.primary1, COLORS.primary4, COLORS.orange, COLORS.orange1, COLORS.error, COLORS.error2, COLORS.valid, COLORS.valid1, COLORS.font2, COLORS.line1, pxToRem(-2 * 10), pxToRem(12), pxToRem(10), pxToRem(ScreenConfig.XS.max), pxToRem(6), pxToRem(20), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN * 2), pxToRem(CONTAINER_PADDING_THIN), pxToRem(10), pxToRem(ScreenConfig.S.min), pxToRem(8), pxToRem(20), pxToRem(220), pxToRem(440), pxToRem(CONTAINER_PADDING_THIN + 20), pxToRem(10), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), pxToRem(10), pxToRem(20));
+})(["--toggletipAction-size:", ";position:relative;display:inline-block;&,&.k-Toggletip--info{--toggletipAction-color:", ";--toggletipBubble-color:", ";}&.k-Toggletip--warning{--toggletipAction-color:", ";--toggletipBubble-color:", ";}&.k-Toggletip--error{--toggletipAction-color:", ";--toggletipBubble-color:", ";}&.k-Toggletip--success{--toggletipAction-color:", ";--toggletipBubble-color:", ";}&.k-Toggletip--disabled{--toggletipAction-color:", ";--toggletipBubble-color:", ";}.k-Toggletip__action{position:relative;background-color:var(--toggletipAction-color);width:var(--toggletipAction-size);height:var(--toggletipAction-size);border-radius:50%;}.k-Toggletip__bubble{--toggletipBubble-arrowMainPosition:", ";z-index:var(--toggletipBubble-zIndex);box-sizing:border-box;padding:", ";background-color:var(--toggletipBubble-color);text-align:left;&:after{content:'';position:absolute;display:block;width:0;height:0;border:", " solid transparent;}@media (max-width:", "){border-radius:", ";position:absolute;top:calc(var(--toggletipAction-size) + ", ");left:calc( -1 * var(--toggletipAction-left) + ", " );width:calc(100vw - ", ");&:after{top:var(--toggletipBubble-arrowMainPosition);left:calc( var(--toggletipAction-left) - ", " - ", " + (var(--toggletipAction-size) / 2) );border-bottom-color:var(--toggletipBubble-color);}}@media (min-width:", "){border-radius:", ";position:absolute;top:50%;transform:translateY(-50%);left:calc(100% + ", ");transform:translateY(-50%);min-width:", ";max-width:", ";width:max-content;&.k-Toggletip__bubble--rightLimit{max-width:calc( 100vw - var(--toggletipAction-left) - ", " - var(--toggletipAction-size) );}&:after{left:var(--toggletipBubble-arrowMainPosition);top:calc(50% - ", ");border-right-color:var(--toggletipBubble-color);}&.k-Toggletip__bubble--lowTop{top:calc( -1 * var(--toggletipAction-top) + ", " );transform:none;&:after{top:calc( var(--toggletipAction-top) - ", " - ", " + (var(--toggletipAction-size) / 2) );}}&.k-Toggletip__bubble--left{left:initial;right:calc(100% + ", ");&:after{left:initial;right:var(--toggletipBubble-arrowMainPosition);border-right-color:transparent;border-left-color:var(--toggletipBubble-color);}}}}"], pxToRem(24), COLORS.primary1, COLORS.primary4, COLORS.orange, COLORS.orange1, COLORS.error, COLORS.error2, COLORS.valid, COLORS.valid1, COLORS.font2, COLORS.line1, pxToRem(-2 * 10), pxToRem(12), pxToRem(10), pxToRem(ScreenConfig.XS.max), pxToRem(6), pxToRem(20), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN * 2), pxToRem(CONTAINER_PADDING_THIN), pxToRem(10), pxToRem(ScreenConfig.S.min), pxToRem(8), pxToRem(20), pxToRem(220), pxToRem(440), pxToRem(CONTAINER_PADDING_THIN + 20), pxToRem(10), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), pxToRem(10), pxToRem(20));
 
 var ButtonIcon = function ButtonIcon(_ref) {
   var modifier = _ref.modifier;
@@ -44,7 +44,8 @@ export var Toggletip = function Toggletip(_ref2) {
       actionLabel = _ref2.actionLabel,
       actionProps = _ref2.actionProps,
       bubbleProps = _ref2.bubbleProps,
-      props = _objectWithoutProperties(_ref2, ["modifier", "style", "className", "children", "actionLabel", "actionProps", "bubbleProps"]);
+      targetElement = _ref2.targetElement,
+      props = _objectWithoutProperties(_ref2, ["modifier", "style", "className", "children", "actionLabel", "actionProps", "bubbleProps", "targetElement"]);
 
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -176,7 +177,12 @@ export var Toggletip = function Toggletip(_ref2) {
     onMouseLeave: function onMouseLeave() {
       return setHoverState(false);
     }
-  }, props), /*#__PURE__*/React.createElement("button", _extends({}, actionProps, {
+  }, props), !!targetElement && React.isValidElement(targetElement) ? /*#__PURE__*/React.createElement("button", _extends({}, actionProps, {
+    ref: actionElement,
+    type: "button",
+    "aria-label": actionLabel,
+    className: "k-u-reset-button"
+  }), targetElement) : /*#__PURE__*/React.createElement("button", _extends({}, actionProps, {
     className: classNames('k-Toggletip__action', 'k-u-reset-button', actionProps.className),
     type: "button",
     "aria-label": actionLabel,
@@ -207,11 +213,13 @@ export var Toggletip = function Toggletip(_ref2) {
 Toggletip.defaultProps = {
   modifier: 'info',
   actionProps: {},
-  bubbleProps: {}
+  bubbleProps: {},
+  targetElement: null
 };
 Toggletip.propTypes = {
   modifier: PropTypes.oneOf(['info', 'warning', 'error', 'success', 'disabled']),
   actionLabel: PropTypes.string.isRequired,
   actionProps: PropTypes.object,
-  bubbleProps: PropTypes.object
+  bubbleProps: PropTypes.object,
+  targetElement: PropTypes.oneOf([PropTypes.element, PropTypes.node, PropTypes.arrayOf(PropTypes.node)])
 };

@@ -5,7 +5,99 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `TagInput`: Add component.
-- Fix: `TextInputWithUnit`: Fix `variant` propagation.
+- Feature: `ImageDropUploader`: Add component.
+- Feature: `VerticalProgress` : Add `withoutBorder` prop.
+- Feature: `ContributionCard` : Add `onClose` prop and delete `closeButton` prop.
+- Feature: `RadioButton` : Modify `focus`, `active`, `hover` and `checked` states.
+- Feature: `GiftIcon` : Update icon.
+
+## [3.22.1] - 2021-07-01
+
+Fix:
+
+- `StickyContainer`: Fix spacer height definition.
+
+## [3.22.0] - 2021-07-01
+
+Features:
+
+- `StickyContainer`: Add `"never"` value for `isSticky` prop.
+- `HeaderMenu`: Improve accessibility.
+- `HeaderNav.UserMenuNext`: Add `mobilePadding` prop.
+
+## [3.21.0] - 2021-06-21
+
+Feature:
+
+- `HeaderNav`: Add `BurgerMenuNext` and `UserMenuNext` subcomponents.
+
+Fixes:
+
+- `Modal/Next`: Fix modal content height for decrepit versions of Safari.
+- `VerticalCard`: Fix `description` PropType to node, allowing HTML parsing.
+- `CrowdfundingCard`: Fix `progress` PropTypes, allowing boolean values.
+- `Carousel`: Fix `Button` tiny size prop.
+
+## [3.20.0] - 2021-06-17
+
+Features:
+
+- Add `error4` and `error5` to colors config.
+- `Text`: Add `light` as default for `weight` prop.
+- `Button`: Add `iron` modifier.
+- `ToggleTip`: Add `targetElement` prop.
+
+Fixes:
+
+- `Text`: Fix `cssColor` bug and remove Styled Component dependency.
+- `TextInputWithUnit`: Fix disabled state and `unitWord` styles.
+
+## [3.19.0] - 2021-06-11
+
+Features:
+
+- `ImageCropper`: Add `onUpload` prop, called when uploading a new file.
+
+Fixes:
+
+- `DashboardLayout`: Remove horizontal scroll between 1440px and 1550px.
+- `ImageCropper`: Fix behaviour of component, breaking when uploading a file.
+
+## [3.18.1] - 2021-06-10
+
+Fix:
+
+- Add `TextInputWithIcon` to ESM exports.
+
+## [3.18.0] - 2021-06-10
+
+Features:
+
+- `TextCopy`: Add `variant` prop, defaults to 'andromeda'.
+- `TextInputWithIcon`: Add `iconPosition` prop, defaults to `left`.
+- `ImageCropper`: Add `buttonProps` prop to be passed on to `BasicUploader`.
+- `TextInputWithUnit`: Add `wrapperProps` and update styles.
+- `RocketIllustration`: Add new component.
+- `ContributionCard`: Add new component.
+
+Fixes:
+
+- `CrowdfundingCard`: Fix progress when value equals 0.
+- Add Color SVG utility class on colored icons so they are not re-colored:
+  - `CheckedCircleIcon`
+  - `ClockCircleIcon`
+  - `ClockIcon`
+  - `CrossCircleIcon`
+  - `FlashCircleIcon`
+  - `RocketCircleIcon`
+  - `WarningCircleIcon`
+- `ImageCropper`: Return cropped image source value.
+
+## [3.17.3] - 2021-06-07
+
+Fix:
+
+- `TextInputWithUnit`: Fix `variant` propagation.
 
 ## [3.17.2] - 2021-06-03
 
@@ -1402,7 +1494,7 @@ Features:
   - `ClockIcon`
   - `CrossCircleIcon`
   - `FlashCircleIcon`
-  - `StyledRocketCircle`
+  - `RocketCircleIcon`
   - `WarningCircleIcon`
 - Add `color` props to:
   - `Cart`
