@@ -34,7 +34,7 @@ describe('<DocumentsDropUploader />', () => {
       .toJSON()
     expect(component).toMatchSnapshot()
   })
-  it('should match snapshot without props', () => {
+  it('should match snapshot with many props', () => {
     const component = renderer
       .create(
         <DocumentsDropUploader
@@ -43,6 +43,41 @@ describe('<DocumentsDropUploader />', () => {
           managerTitle="Upload your ID documents"
           managerText="Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
           initialValue={[{ name: 'kitten.jpg' }]}
+          typeErrorText={e => `File ${e} is not the right file type`}
+          sizeErrorText={e => `File ${e} is too large`}
+          removeActionMessage={e => `Remove ${e} from the list`}
+        />,
+      )
+      .toJSON()
+    expect(component).toMatchSnapshot()
+  })
+  it('should match snapshot disabled', () => {
+    const component = renderer
+      .create(
+        <DocumentsDropUploader
+          id="DocumentsDropUploader"
+          labelText="Add a document"
+          managerTitle="Upload your ID documents"
+          managerText="Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+          disabled
+          typeErrorText={e => `File ${e} is not the right file type`}
+          sizeErrorText={e => `File ${e} is too large`}
+          removeActionMessage={e => `Remove ${e} from the list`}
+        />,
+      )
+      .toJSON()
+    expect(component).toMatchSnapshot()
+  })
+  it('should match snapshot disabled', () => {
+    const component = renderer
+      .create(
+        <DocumentsDropUploader
+          id="DocumentsDropUploader"
+          labelText="Add a document"
+          managerTitle="Upload your ID documents"
+          managerText="Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+          initialValue={[{ name: 'kitten.jpg' }]}
+          disabled
           typeErrorText={e => `File ${e} is not the right file type`}
           sizeErrorText={e => `File ${e} is too large`}
           removeActionMessage={e => `Remove ${e} from the list`}
