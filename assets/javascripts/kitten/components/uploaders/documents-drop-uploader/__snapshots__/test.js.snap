@@ -2,7 +2,7 @@
 
 exports[`<DocumentsDropUploader /> should match snapshot 1`] = `
 <div
-  className="sc-bwzfXH bkVkXu k-DocumentsDropUploader k-DocumentsDropUploader--ready"
+  className="sc-bwzfXH fJRRrS k-DocumentsDropUploader k-DocumentsDropUploader--ready"
   onDragEnter={[Function]}
   onDragLeave={[Function]}
   onDragOver={[Function]}
@@ -60,7 +60,7 @@ exports[`<DocumentsDropUploader /> should match snapshot 1`] = `
 exports[`<DocumentsDropUploader /> should match snapshot with error 1`] = `
 Array [
   <div
-    className="sc-bwzfXH bkVkXu k-DocumentsDropUploader k-DocumentsDropUploader--error"
+    className="sc-bwzfXH fJRRrS k-DocumentsDropUploader k-DocumentsDropUploader--error"
     onDragEnter={[Function]}
     onDragLeave={[Function]}
     onDragOver={[Function]}
@@ -169,7 +169,7 @@ Array [
 
 exports[`<DocumentsDropUploader /> should match snapshot without props 1`] = `
 <div
-  className="sc-bwzfXH bkVkXu k-DocumentsDropUploader k-DocumentsDropUploader--ready"
+  className="sc-bwzfXH fJRRrS k-DocumentsDropUploader k-DocumentsDropUploader--ready"
   onDragEnter={[Function]}
   onDragLeave={[Function]}
   onDragOver={[Function]}
@@ -226,7 +226,7 @@ exports[`<DocumentsDropUploader /> should match snapshot without props 1`] = `
 
 exports[`<DocumentsDropUploader /> should match snapshot without props 2`] = `
 <div
-  className="sc-bwzfXH bkVkXu k-DocumentsDropUploader k-DocumentsDropUploader--manage"
+  className="sc-bwzfXH fJRRrS k-DocumentsDropUploader k-DocumentsDropUploader--manage"
   onDragEnter={[Function]}
   onDragLeave={[Function]}
   onDragOver={[Function]}

@@ -80,7 +80,8 @@ const StyledDocumentsDropUploader = styled.div`
     background-color: ${COLORS.background2};
     color: ${COLORS.font2};
 
-    &, .k-DocumentsDropUploader__button {
+    &,
+    .k-DocumentsDropUploader__button {
       cursor: not-allowed;
     }
   }
