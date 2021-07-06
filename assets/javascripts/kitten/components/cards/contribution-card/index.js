@@ -26,7 +26,6 @@ export const ContributionCard = ({
   imageBorderRadius,
   borderColor,
   borderStyle,
-  closeButton,
   onClose,
   ...props
 }) => {
@@ -49,7 +48,7 @@ export const ContributionCard = ({
       role="dialog"
       {...props}
     >
-      {closeButton && (
+      {onClose && (
         <CloseButton
           className="k-ContributionCard__close"
           size="micro"
@@ -83,19 +82,17 @@ ContributionCard.Action = Action
 
 ContributionCard.defaultProps = {
   show: true,
-  closeButton: true,
   closeButtonLabel: 'Close',
   borderColor: COLORS.line1,
   borderRadius: 8,
   borderStyle: 'solid',
   borderWidth: 2,
   imageBorderRadius: 5,
-  onClose: () => null,
+  onClose: undefined,
 }
 
 ContributionCard.propTypes = {
   show: PropTypes.bool,
-  closeButton: PropTypes.bool,
   closeButtonLabel: PropTypes.string,
   onClose: PropTypes.func,
   borderColor: PropTypes.string,
