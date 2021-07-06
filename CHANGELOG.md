@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `TagInput`: Add component.
 - Fix: `TextInputWithUnit`: Fix `variant` propagation.
 
 ## [3.17.2] - 2021-06-03
