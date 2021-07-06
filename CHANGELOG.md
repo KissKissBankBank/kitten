@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `VerticalProgress` : Add `withoutBorder` prop.
 - Feature: `ContributionCard` : Add `onClose` prop and delete `closeButton` prop.
+- Feature: `RadioButton` : Modify `focus`, `active`, `hover` and `checked` states.
 
 ## [3.22.1] - 2021-07-01
 
