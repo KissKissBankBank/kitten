@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ImageDropUploader`: Add component.
 - Feature: `VerticalProgress` : Add `withoutBorder` prop.
 - Feature: `ContributionCard` : Add `onClose` prop and delete `closeButton` prop.
 - Feature: `RadioButton` : Modify `focus`, `active`, `hover` and `checked` states.
