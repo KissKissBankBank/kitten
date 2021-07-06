@@ -5,7 +5,7 @@ import { Button } from '../../../../components/buttons/button'
 import { CheckedCircleIcon } from '../../../icons/checked-circle-icon'
 import COLORS from '../../../../constants/colors-config'
 
-export const Action = ({ isInputValid, ...props }) => {
+export const Action = ({ isInputValid, title, ...props }) => {
 
   return (
     <>
@@ -23,6 +23,7 @@ export const Action = ({ isInputValid, ...props }) => {
         <CheckedCircleIcon
           bgColor={COLORS.valid}
           color={COLORS.background1}
+          title={title}
         />
       )}
     </>
@@ -31,8 +32,10 @@ export const Action = ({ isInputValid, ...props }) => {
 
 Action.defaultProps = {
   isInputValid: false,
+  title: "",
 }
 
 Action.propTypes = {
   isInputValid: PropTypes.bool,
+  title: PropTypes.string,
 }
