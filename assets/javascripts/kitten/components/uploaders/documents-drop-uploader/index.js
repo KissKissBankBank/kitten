@@ -341,16 +341,18 @@ export const DocumentsDropUploader = ({
                       <span className="k-DocumentsDropUploader__file__text">
                         {file.name}
                       </span>
-                      <button
-                        className="k-DocumentsDropUploader__file__button k-u-reset-button"
-                        type="button"
-                        onClick={() => removeFilesFromList(file)}
-                      >
-                        <span className="k-u-a11y-visuallyHidden">
-                          {removeActionMessage(file.name)}
-                        </span>
-                        <CrossIcon color="currentColor" />
-                      </button>
+                      {!disabled && (
+                        <button
+                          className="k-DocumentsDropUploader__file__button k-u-reset-button"
+                          type="button"
+                          onClick={() => removeFilesFromList(file)}
+                        >
+                          <span className="k-u-a11y-visuallyHidden">
+                            {removeActionMessage(file.name)}
+                          </span>
+                          <CrossIcon color="currentColor" />
+                        </button>
+                      )}
                     </Tag>
                   ))}
                 </>
@@ -373,7 +375,7 @@ export const DocumentsDropUploader = ({
             multiple={true}
           />
 
-          {internalStatus === 'ready' ? (
+          {(disabled || internalStatus === 'ready') ? (
             <label
               htmlFor={id}
               className="k-DocumentsDropUploader__button"
