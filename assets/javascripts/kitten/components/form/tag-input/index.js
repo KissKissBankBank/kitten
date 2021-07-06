@@ -18,9 +18,11 @@ const StyledWrapper = styled.div`
   border-radius: 0;
   width: 100%;
   border-color: ${COLORS.line1};
-  padding: var(--tagInput-padding-vertical, ${pxToRem(10)}) var(--tagInput-padding-horizontal, ${pxToRem(10)});
+  padding: var(--tagInput-padding-vertical, ${pxToRem(10)})
+    var(--tagInput-padding-horizontal, ${pxToRem(10)});
 
   .k-Form-TagList__list {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: ${pxToRem(8)};
@@ -38,23 +40,24 @@ const StyledWrapper = styled.div`
   .k-Form-TagList__inputItem {
     flex: 1 0 auto;
     order: 2;
+
+    &:last-of-type .k-Form-TagList__input:empty::before {
+      content: attr(aria-placeholder);
+    }
   }
   .k-Form-TagList__input {
     width: 100%;
     height: 100%;
+    min-width: ${pxToRem(20)};
     display: block;
     line-height: 1;
-    padding: ${pxToRem(6)} 0;
+    padding: ${pxToRem(7)} 0 ${pxToRem(6)};
     ${TYPOGRAPHY.fontStyles.light};
     cursor: text;
 
-    ::placeholder {
-      color: ${COLORS.font2};
-    }
-
     &:empty::before {
       color: ${COLORS.font2};
-      content: attr(aria-placeholder);
+      content: ' ';
     }
 
     :focus {
@@ -70,11 +73,16 @@ const StyledWrapper = styled.div`
     height: var(--tagInput-tag-height, ${pxToRem(30)});
     align-items: center;
     transition: color 0.2s ease, background-color 0.2s ease;
+    cursor: default;
+
+    &:hover {
+      background-color: ${COLORS.primary4};
+    }
   }
 
   .k-Form-TagList__tag {
     ${TYPOGRAPHY.fontStyles.regular};
-    padding: 0 ${pxToRem(2)} 0.3em ${pxToRem(10)};
+    padding: 0 ${pxToRem(2)} 0.15em ${pxToRem(10)};
     line-height: 1;
   }
 
@@ -105,14 +113,6 @@ const StyledWrapper = styled.div`
   &:focus-within {
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
-  }
-
-  &:hover,
-  &:focus-within {
-    .k-Form-TagList__tagItem {
-      color: ${COLORS.background1};
-      background-color: ${COLORS.primary1};
-    }
   }
 
   &.k-Form-TagList--disabled {
