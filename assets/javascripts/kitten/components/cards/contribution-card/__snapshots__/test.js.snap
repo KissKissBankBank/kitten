@@ -2,7 +2,7 @@
 
 exports[`<ContributionCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bwzfXH hUBlec k-ContributionCard"
+  className="sc-bwzfXH hoOisa k-ContributionCard"
   role="dialog"
   style={
     Object {
