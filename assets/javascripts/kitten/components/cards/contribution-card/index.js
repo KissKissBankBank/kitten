@@ -50,7 +50,7 @@ export const ContributionCard = ({
   return (
     <StyledContributionCard
       className={classNames('k-ContributionCard', className, {
-        'k-contributionCard--shouldHide': !isMounted,
+        'k-ContributionCard--shouldHide': !isMounted,
       })}
       style={{
         ...style,

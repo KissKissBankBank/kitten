@@ -49,8 +49,8 @@ export const PetitPlus = () => {
             </ContributionCard.Description>
           </ContributionCard.Title>
           
-          <ContributionCard.Input unit="€" />
-          <ContributionCard.Action>Ajouter</ContributionCard.Action>
+          <ContributionCard.Input unit="€" valid />
+          <ContributionCard.Action isInputValid>Ajouter</ContributionCard.Action>
       </ContributionCard>
     </StoryContainer>
   )
