@@ -21,8 +21,7 @@ export const Default = () => {
         </ContributionCard.Image>
 
         <ContributionCard.Title>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing ligula eget dolor
-          eget dolor.eget dolor.eget dolor.
+          Lorem ipsum dolor sit amet.
         </ContributionCard.Title>
 
         <ContributionCard.PillNumber value={0} min={0} max={100} />
@@ -35,7 +34,7 @@ export const Default = () => {
 export const PetitPlus = () => {
   return (
     <StoryContainer>
-      <ContributionCard borderStyle="dashed" closeButton={false}>
+      <ContributionCard borderStyle="dashed">
         <ContributionCard.Image>
           <RocketIllustration width={45} height={81} />
         </ContributionCard.Image>
@@ -47,8 +46,8 @@ export const PetitPlus = () => {
           </ContributionCard.Description>
         </ContributionCard.Title>
 
-        <ContributionCard.Input unit="€" valid />
-        <ContributionCard.Action isInputValid>Ajouter</ContributionCard.Action>
+        <ContributionCard.Input unit="€" />
+        <ContributionCard.Action>Ajouter</ContributionCard.Action>
       </ContributionCard>
     </StoryContainer>
   )
