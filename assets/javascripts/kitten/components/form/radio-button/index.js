@@ -181,10 +181,28 @@ const StyledRadioButton = styled.div`
       margin-top: ${pxToRem(3)};
     }
 
-    .k-Form-RadioButton__input:checked:not(:disabled),
+    .k-Form-RadioButton__input:hover:not(:disabled) {
+      & + .k-Form-RadioButton__label {
+        border-color: ${COLORS.primary4};
+      }
+    }
+
     .k-Form-RadioButton__input:focus:not(:disabled) {
       & + .k-Form-RadioButton__label {
         border-color: ${COLORS.primary1};
+      }
+    }
+
+    .k-Form-RadioButton__input:active:not(:disabled) {
+      & + .k-Form-RadioButton__label {
+        border-color: ${COLORS.primary1};
+      }
+    }
+
+    .k-Form-RadioButton__input:checked:not(:disabled) {
+      & + .k-Form-RadioButton__label {
+        border-color: ${COLORS.primary1};
+        background-color: ${COLORS.primary5};
       }
     }
 

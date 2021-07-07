@@ -200,6 +200,10 @@ export const StyledContributionCard = styled.article`
       margin-right: ${pxToRem(30)};
       place-self: center flex-end;
     }
+
+    &.k-ContributionCard__actionHide {
+      display: none;
+    }
   }
 
   .k-ContributionCard__inputWrapper--isEmpty + .k-ContributionCard__action {

@@ -4,7 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `VerticalProgress` : Add `withoutBorder` prop.
+## [3.23.0] - 2021-07-06
+
+Features:
+
+- `DocumentsDropUploader`: Add component.
+- `DocumentsStatusBox`: Add component.
+- `ImageDropUploader`: Add component.
+- `TagInput`: Add component.
+- `ContributionCard`: Add `isInputValid` prop.
+- `ContributionCard`: Add `onClose` prop and delete `closeButton` prop.
+- `GiftIcon`: Update icon.
+- `RadioButton`: Modify `focus`, `active`, `hover` and `checked` states.
+- `VerticalProgress`: Add `withoutBorder` prop.
 
 ## [3.22.1] - 2021-07-01
 
