@@ -99,9 +99,9 @@ export const ImageCropper = ({
       {...props}
       {...cropZoneProps}
       className={classNames(
-        'k-ImageDropUploader-imageCropper',
+        'k-ImageDropUploader__imageCropper',
         className,
-        {'k-ImageDropUploader-imageCropper--isDragging': isDragging}
+        {'k-ImageDropUploader__imageCropper--isDragging': isDragging}
       )}
     >
       <img
