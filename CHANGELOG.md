@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Use `gap` on Flex containers whenever feasible.
+
 ## [3.25.0] - 2021-07-08
 
 Feature:
