@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `TagButton` Update styles.
 - Fix: `ImageDropUploader`: Update image URL on `initialValue` prop change.
 - Fix: `ImageDropUploader`: Disable text select on cropper drag.
 - Feature: `ImageDropUploader`: Add `canCrop` prop, defaults to `true`.
