@@ -8,6 +8,7 @@ import { LongArrowIcon } from '../../../../components/icons/long-arrow-icon'
 import { CheckedIcon } from '../../../../components/icons/checked-icon'
 import { HourglassIcon } from '../../../../components/icons/hourglass-icon'
 import classNames from 'classnames'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const STATUS_SIZE = 30
 
@@ -84,8 +85,12 @@ const StyledWrapper = styled.div`
   .k-VerticalProgress__title {
     margin: 0;
     ${TYPOGRAPHY.fontStyles.bold};
-    font-size: ${stepToRem(1)};
+    font-size: ${stepToRem(0)};
     align-self: center;
+
+    @media (min-width: ${ScreenConfig.S.min}px) { 
+      font-size: ${stepToRem(1)};
+    }
   }
 `
 

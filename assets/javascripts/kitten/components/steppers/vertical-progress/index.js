@@ -12,6 +12,7 @@ const StyledContainer = styled.div`
     border: ${pxToRem(2)} solid ${COLORS.line1};
     padding: ${pxToRem(15)};
     border-radius: ${pxToRem(8)};
+    max-width: ${pxToRem(400)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       padding: ${pxToRem(30)};
@@ -41,10 +42,11 @@ const StyledContainer = styled.div`
   }
 `
 
-export const VerticalProgress = ({ children, withoutBorder, ...props }) => {
+export const VerticalProgress = ({ children, withoutBorder, className, ...props }) => {
   return (
     <StyledContainer className={classNames(
       "k-VerticalProgress__wrapper",
+      className,
       {'k-VerticalProgress__wrapper--withoutBorder': withoutBorder}
     )}
     >
