@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `parseHtml`: We sanitize by default the markup with an option `parseHtml(value, { sanitize: false })` to disable it.
+## [3.25.0] - 2021-07-08
+
+Feature:
+ 
+- `parseHtml`: We sanitize by default the markup with an option `parseHtml(value, { sanitize: false })` to disable it.
 
 ## [3.24.0] - 2021-07-08
 
