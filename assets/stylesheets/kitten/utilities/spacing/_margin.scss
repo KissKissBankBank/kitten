@@ -170,12 +170,12 @@
   );
 
   $k-variants: (
+    vertical: ('top', 'bottom'),
+    horizontal: ('left', 'right'),
     top: ('top'),
     bottom: ('bottom'),
     left: ('left'),
     right: ('right'),
-    vertical: ('top', 'bottom'),
-    horizontal: ('left', 'right'),
   );
 
   @each $variant_name, $attribute in $k-variants {
