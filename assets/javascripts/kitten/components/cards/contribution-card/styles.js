@@ -14,8 +14,7 @@ export const StyledContributionCard = styled.article`
 
   max-width: 100%;
   position: relative;
-  display: flex;
-  flex-direction: row;
+  display: block;
   overflow: hidden;
   box-sizing: border-box;
 
@@ -32,16 +31,16 @@ export const StyledContributionCard = styled.article`
 
   @media (min-width: ${ScreenConfig.S.min}px) {
     height: ${pxToRem(110)};
+    display: flex;
   }
   /* IMAGE */
 
   .k-ContributionCard__imageWrapper {
-    flex: 0 0 ${pxToRem(80)};
-    top: ${pxToRem(20)};
-    left: ${pxToRem(20)};
+    flex: 0 0 100%;
     position: relative;
     max-width: calc(100% + 2 * var(--contributionCard--border-width));
     overflow: hidden;
+    padding-top: calc(1 / ( 16 / 10 ) * 100%);
 
     @media (min-width: ${ScreenConfig.S.min}px) {
      
@@ -55,20 +54,22 @@ export const StyledContributionCard = styled.article`
       display: flex;
       align-items: center;
       flex: 0 0 ${pxToRem(140)};
-      top: 0;
-      left: 0;
+      padding-top: 0;
     }
 
     img,
     figure {
+      display: block;
       position: absolute;
-      width: ${pxToRem(80)};
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      top: 0;
+      left: 0;
   
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        object-fit: cover;
-        object-position: center center;
+      @media (min-width: ${ScreenConfig.S.min}px) {    
         width: ${pxToRem(140)};
-        height: 100%;
         transition: transform 0.2s ease-in-out;
 
         /* IE11 default */
@@ -104,11 +105,8 @@ export const StyledContributionCard = styled.article`
   }
 
   .k-ContributionCard__gridWrapper {
-    width: 100%;
     display: grid;
-    padding-top: ${pxToRem(20)};
-    padding-bottom: ${pxToRem(20)};
-    padding-left:${pxToRem(40)};
+    padding: ${pxToRem(20)};
     align-items: center;
     align-content: flex-start;
     justify-self: center;
@@ -122,6 +120,7 @@ export const StyledContributionCard = styled.article`
       "cc-input cc-action";
 
     @media (min-width: ${ScreenConfig.S.min}px) {
+      width: 100%;
       padding-top: ${pxToRem(20)};
       padding-bottom: ${pxToRem(20)};
       padding-left: ${pxToRem(30)};
@@ -146,13 +145,10 @@ export const StyledContributionCard = styled.article`
     font-size: ${stepToRem(-1)};
     line-height: ${pxToRem(16)};
     place-self: center start;
-    margin-right: ${pxToRem(30)};
-    margin-top: ${pxToRem(10)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       font-size: ${stepToRem(0)};
       margin-top: 0;
-      margin-right: 0;
     }
   }
 
@@ -164,13 +160,11 @@ export const StyledContributionCard = styled.article`
     }
   }
   .k-ContributionCard__amount {
-    margin-right: ${pxToRem(30)};
     grid-area: cc-action;
-    place-self: center center;
+    place-self: center flex-end;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
-      margin-right: ${pxToRem(60)};
-      place-self: center flex-end;
+      margin-right: ${pxToRem(40)};
       margin-top: 0;
     }
   }
@@ -187,7 +181,6 @@ export const StyledContributionCard = styled.article`
   }
 
   .k-ContributionCard__action {
-    margin-right: ${pxToRem(20)};
     grid-area: cc-action;
     place-self: flex-start center;
     min-width: auto;
@@ -214,12 +207,7 @@ export const StyledContributionCard = styled.article`
   }
 
   .k-ContributionCard__description {
-    margin-right: ${pxToRem(20)};
     margin-top: ${pxToRem(5)};
     margin-bottom: 0;
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      margin-right: 0;
-    }
   }
 `
