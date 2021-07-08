@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `ImageDropUploader`: Update image URL on `initialValue` prop change.
+- Fix: `ImageDropUploader`: Disable text select on cropper drag.
 
 ## [3.23.0] - 2021-07-06
 

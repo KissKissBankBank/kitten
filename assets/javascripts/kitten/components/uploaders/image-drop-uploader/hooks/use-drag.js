@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { pauseEvent } from '../utils/pause-event'
 
 export const useDrag = ({startingPosition, imageDimensions, disabled}) => {
   const [isDragging, setDragging] = useState(false)
@@ -22,7 +23,10 @@ export const useDrag = ({startingPosition, imageDimensions, disabled}) => {
     }
   }, [startingPosition, imageDimensions])
 
-  const handleMouseDown = ({ clientX, clientY, target }) => {
+  const handleMouseDown = e => {
+    pauseEvent(e)
+    const { clientX, clientY, target } = e
+
     if (!isDragging) {
       const rect = target.getBoundingClientRect()
       setDragging(true)
@@ -33,7 +37,10 @@ export const useDrag = ({startingPosition, imageDimensions, disabled}) => {
     }
   }
 
-  const handleMouseMove = ({ clientX, clientY, target }) => {
+  const handleMouseMove = e => {
+    pauseEvent(e)
+    const { clientX, clientY, target } = e
+
     if (isDragging) {
       const rect = target.getBoundingClientRect()
 

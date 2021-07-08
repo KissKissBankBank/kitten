@@ -217,28 +217,24 @@ export const ImageDropUploader = ({
   }, [initialValue])
 
   const handleDragEnter = e => {
-    e.preventDefault()
-    e.stopPropagation()
+    pauseEvent(e)
     if (!isDraggedFileListValid(e)) return
 
     setDraggingOver(true)
     setError(false)
   }
   const handleDragLeave = e => {
-    e.preventDefault()
-    e.stopPropagation()
+    pauseEvent(e)
 
     setDraggingOver(false)
     setError(false)
   }
   const handleDragOver = e => {
-    e.preventDefault()
-    e.stopPropagation()
+    pauseEvent(e)
   }
 
   const handleDrop = e => {
-    e.preventDefault()
-    e.stopPropagation()
+    pauseEvent(e)
 
     setDraggingOver(false)
     setError(false)
