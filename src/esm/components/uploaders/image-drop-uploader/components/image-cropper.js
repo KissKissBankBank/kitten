@@ -104,8 +104,8 @@ export var ImageCropper = function ImageCropper(_ref) {
   };
 
   return /*#__PURE__*/React.createElement("div", _extends({}, props, cropZoneProps, {
-    className: classNames('k-ImageDropUploader-imageCropper', className, {
-      'k-ImageDropUploader-imageCropper--isDragging': isDragging
+    className: classNames('k-ImageDropUploader__imageCropper', className, {
+      'k-ImageDropUploader__imageCropper--isDragging': isDragging
     })
   }), /*#__PURE__*/React.createElement("img", {
     alt: "",

@@ -4,11 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `VerticalProgress`: Update styles.
-- Feature: `TagButton` Update styles.
-- Fix: `ImageDropUploader`: Update image URL on `initialValue` prop change.
-- Fix: `ImageDropUploader`: Disable text select on cropper drag.
-- Feature: `ImageDropUploader`: Add `canCrop` prop, defaults to `true`.
+## [3.25.0] - 2021-07-08
+
+Feature:
+ 
+- `parseHtml`: We sanitize by default the markup with an option `parseHtml(value, { sanitize: false })` to disable it.
+
+## [3.24.0] - 2021-07-08
+
+Feature:
+
+- `ImageDropUploader`: Add `canCrop` prop, defaults to `true`.
+
+Fixes: 
+
+- `VerticalProgress`: Update styles.
+- `TagButton` Update styles.
+- `ImageDropUploader`: Update image URL on `initialValue` prop change.
+- `ImageDropUploader`: Disable text select on cropper drag.
 
 ## [3.23.1] - 2021-07-08
 
