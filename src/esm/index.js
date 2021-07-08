@@ -80,6 +80,7 @@ export { PillNumberInput } from './components/form/pill-number-input';
 export { RadioButton } from './components/form/radio-button';
 export { RadioButtonSet } from './components/form/radio-button-set';
 export { RangeSlider } from './components/form/range-slider';
+export { TagInput } from './components/form/tag-input';
 export { TextInput } from './components/form/text-input';
 export { TextInputWithButton } from './components/form/text-input-with-button';
 export { TextInputWithIcon } from './components/form/text-input-with-icon';
@@ -175,7 +176,10 @@ export { titleModifierStyles, titleModifiersNames, titleHelperModifierStyles } f
 export { modifierStyles as paragraphModifierStyles } from './components/typography/paragraph/helpers/modifier-styles'; // Uploaders
 
 export { BasicUploader } from './components/uploaders/basic-uploader';
-export { DocumentManager } from './components/uploaders/document-manager'; // Videos
+export { DocumentManager } from './components/uploaders/document-manager';
+export { DocumentsDropUploader } from './components/uploaders/documents-drop-uploader';
+export { DocumentsStatusBox } from './components/uploaders/documents-status-box';
+export { ImageDropUploader } from './components/uploaders/image-drop-uploader'; // Videos
 
 export { Video } from './components/videos/video';
 export { GifVideo } from './components/videos/gif-video';

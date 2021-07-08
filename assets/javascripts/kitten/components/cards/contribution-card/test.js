@@ -1,7 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { ContributionCard } from './index'
-import { RocketIllustration } from '../../../components/illustrations/rocket-illustration'
 
 describe('<ContributionCard />', () => {
   let component

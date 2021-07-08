@@ -28,7 +28,6 @@ var _reactElements = require("../../../../helpers/react/react-elements");
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var namespace = 'kkbbAndCo';
-var DROPDOWN_CLASS = "".concat(namespace, "-UserMenu k-HeaderNav__UserMenu");
 var CLOSE_EVENT = "".concat(namespace, ":userMenu:close");
 
 var UserMenu = function UserMenu(_ref) {
@@ -37,7 +36,8 @@ var UserMenu = function UserMenu(_ref) {
       padding = _ref.padding,
       closeEvents = _ref.closeEvents,
       buttonProps = _ref.buttonProps,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "dropdownContentWidth", "padding", "closeEvents", "buttonProps"]);
+      className = _ref.className,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "dropdownContentWidth", "padding", "closeEvents", "buttonProps", "className"]);
   var userDropdownRef = (0, _react.useRef)(null);
 
   var getElementById = function getElementById(id) {
@@ -66,6 +66,7 @@ var UserMenu = function UserMenu(_ref) {
       color = _button$props.color,
       colorHover = _button$props.colorHover,
       colorActive = _button$props.colorActive;
+  var dropdownClassName = (0, _classnames.default)('k-HeaderNav__UserMenu', "".concat(namespace, "-UserMenu"), className);
   var buttonStyles = {
     '--UserMenu-Button-backgroundColor': backgroundColor,
     '--UserMenu-Button-backgroundColorHover': backgroundColorHover,
@@ -76,8 +77,8 @@ var UserMenu = function UserMenu(_ref) {
   };
   var buttonClassName = (0, _classnames.default)('k-HeaderNav__UserMenuButton', {
     'k-HeaderNav__UserMenuButton--hasArrow': hasArrow,
-    'k-HeaderNav__UserMenuButton--nopadding': !padding
-  }, props.className);
+    'k-HeaderNav__UserMenuButton--noPadding': !padding
+  });
   return /*#__PURE__*/_react.default.createElement(_context.Context.Consumer, null, function (_ref2) {
     var id = _ref2.id,
         callOnToggle = _ref2.callOnToggle;
@@ -86,7 +87,7 @@ var UserMenu = function UserMenu(_ref) {
       buttonClassName: buttonClassName,
       buttonStyles: buttonStyles,
       buttonId: getButtonId(id),
-      className: DROPDOWN_CLASS,
+      className: dropdownClassName,
       closeEvents: [CLOSE_EVENT].concat((0, _toConsumableArray2.default)(closeEvents)),
       closeOnOuterClick: true,
       dropdownContent: navigation,

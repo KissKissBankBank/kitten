@@ -55,5 +55,6 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',
     '@storybook/addon-docs',
+    '@storybook/addon-measure',
   ],
 }

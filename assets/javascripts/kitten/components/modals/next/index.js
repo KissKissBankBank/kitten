@@ -52,6 +52,7 @@ const GlobalStyle = createGlobalStyle`
     --Modal-contentMargin: 1;
     --Modal-headerHeight: 0px;
 
+    flex: 1 0 auto;
     position: relative;
     background-color: ${COLORS.background1};
     box-sizing: border-box;

@@ -146,6 +146,7 @@ CrowdfundingCard.propTypes = {
   progress: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
+    PropTypes.bool,
   ]),
 }
 

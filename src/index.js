@@ -533,6 +533,12 @@ Object.defineProperty(exports, "RangeSlider", {
     return _rangeSlider.RangeSlider;
   }
 });
+Object.defineProperty(exports, "TagInput", {
+  enumerable: true,
+  get: function get() {
+    return _tagInput.TagInput;
+  }
+});
 Object.defineProperty(exports, "TextInput", {
   enumerable: true,
   get: function get() {
@@ -1029,6 +1035,24 @@ Object.defineProperty(exports, "DocumentManager", {
   enumerable: true,
   get: function get() {
     return _documentManager.DocumentManager;
+  }
+});
+Object.defineProperty(exports, "DocumentsDropUploader", {
+  enumerable: true,
+  get: function get() {
+    return _documentsDropUploader.DocumentsDropUploader;
+  }
+});
+Object.defineProperty(exports, "DocumentsStatusBox", {
+  enumerable: true,
+  get: function get() {
+    return _documentsStatusBox.DocumentsStatusBox;
+  }
+});
+Object.defineProperty(exports, "ImageDropUploader", {
+  enumerable: true,
+  get: function get() {
+    return _imageDropUploader.ImageDropUploader;
   }
 });
 Object.defineProperty(exports, "Video", {
@@ -2098,6 +2122,8 @@ var _radioButtonSet = require("./components/form/radio-button-set");
 
 var _rangeSlider = require("./components/form/range-slider");
 
+var _tagInput = require("./components/form/tag-input");
+
 var _textInput = require("./components/form/text-input");
 
 var _textInputWithButton = require("./components/form/text-input-with-button");
@@ -2243,6 +2269,12 @@ var _modifierStyles2 = require("./components/typography/paragraph/helpers/modifi
 var _basicUploader = require("./components/uploaders/basic-uploader");
 
 var _documentManager = require("./components/uploaders/document-manager");
+
+var _documentsDropUploader = require("./components/uploaders/documents-drop-uploader");
+
+var _documentsStatusBox = require("./components/uploaders/documents-status-box");
+
+var _imageDropUploader = require("./components/uploaders/image-drop-uploader");
 
 var _video = require("./components/videos/video");
 

@@ -134,7 +134,7 @@ CrowdfundingCard.propTypes = {
   buttonText: PropTypes.string,
   forceVersion: PropTypes.oneOf(['mobile', 'tablet', 'desktop']),
   progressLabel: PropTypes.string,
-  progress: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  progress: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool])
 };
 CrowdfundingCard.defaultProps = {
   href: null,

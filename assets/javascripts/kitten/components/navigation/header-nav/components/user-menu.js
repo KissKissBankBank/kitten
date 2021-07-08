@@ -6,7 +6,6 @@ import { getReactElementsByType } from '../../../../helpers/react/react-elements
 import classNames from 'classnames'
 
 const namespace = 'kkbbAndCo'
-const DROPDOWN_CLASS = `${namespace}-UserMenu k-HeaderNav__UserMenu`
 const CLOSE_EVENT = `${namespace}:userMenu:close`
 
 export const UserMenu = ({
@@ -15,6 +14,7 @@ export const UserMenu = ({
   padding,
   closeEvents,
   buttonProps,
+  className,
   ...props
 }) => {
   const userDropdownRef = useRef(null)
@@ -36,6 +36,12 @@ export const UserMenu = ({
     colorActive,
   } = button.props
 
+  const dropdownClassName = classNames(
+    'k-HeaderNav__UserMenu',
+    `${namespace}-UserMenu`,
+    className,
+  )
+
   const buttonStyles = {
     '--UserMenu-Button-backgroundColor': backgroundColor,
     '--UserMenu-Button-backgroundColorHover': backgroundColorHover,
@@ -49,9 +55,8 @@ export const UserMenu = ({
     'k-HeaderNav__UserMenuButton',
     {
       'k-HeaderNav__UserMenuButton--hasArrow': hasArrow,
-      'k-HeaderNav__UserMenuButton--nopadding': !padding,
+      'k-HeaderNav__UserMenuButton--noPadding': !padding,
     },
-    props.className,
   )
 
   return (
@@ -63,7 +68,7 @@ export const UserMenu = ({
           buttonClassName={buttonClassName}
           buttonStyles={buttonStyles}
           buttonId={getButtonId(id)}
-          className={DROPDOWN_CLASS}
+          className={dropdownClassName}
           closeEvents={[CLOSE_EVENT, ...closeEvents]}
           closeOnOuterClick
           dropdownContent={navigation}

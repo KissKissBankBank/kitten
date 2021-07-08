@@ -287,7 +287,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         className: "k-Carousel__pagination__button",
         icon: true,
         modifier: "beryllium",
-        tiny: tinyButtons,
+        size: tinyButtons ? 'tiny' : null,
         onClick: _this.goPrevPage,
         disabled: !loop && (currentPageIndex < 1 || numberOfPages < 1)
       }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, loop && (currentPageIndex < 1 || numberOfPages < 1) ? lastButtonText : prevButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
@@ -298,7 +298,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         className: "k-Carousel__pagination__button",
         icon: true,
         modifier: "beryllium",
-        tiny: tinyButtons,
+        size: tinyButtons ? 'tiny' : null,
         onClick: _this.goNextPage,
         disabled: !loop && currentPageIndex >= numberOfPages - 1
       }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, loop && currentPageIndex >= numberOfPages - 1 ? firstButtonText : nextButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {

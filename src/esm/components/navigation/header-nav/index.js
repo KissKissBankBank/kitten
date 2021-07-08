@@ -7,8 +7,10 @@ import { StickyContainer } from '../../../components/grid/sticky-container';
 import { Button } from './components/button';
 import { Logo } from './components/logo';
 import { BurgerMenu } from './components/burger-menu';
+import { BurgerMenuNext } from './components/burger-menu-next';
 import { Nav } from './components/nav';
 import { UserMenu } from './components/user-menu';
+import { UserMenuNext } from './components/user-menu-next';
 import { Context } from './components/context';
 import { Right } from './components/right';
 import { Centered } from './components/centered';
@@ -57,66 +59,9 @@ var HeaderNav = function HeaderNav(_ref) {
   var headerRef = useRef(null);
   var previousStickyState = usePrevious(stickyState);
 
-  var focusDropdown = function focusDropdown(_ref2) {
-    var dropdown = _ref2.detail;
-    dispatchEvent(TOGGLE_DROPDOWN_EVENT, {
-      nextExpandedState: false
-    })();
-    dropdown.focus();
-  };
-
-  var focusElementNextToDropdown = function focusElementNextToDropdown(_ref3) {
-    var dropdown = _ref3.detail;
-    dispatchEvent(TOGGLE_DROPDOWN_EVENT, {
-      nextExpandedState: false
-    })();
-    if (!headerRef.current) return;
-    setTimeout(function () {
-      var focusableElements = getFocusableElementsFrom(headerRef.current);
-      if (focusableElements.length < 1) return;
-      var currentElementIndex = focusableElements.indexOf(dropdown);
-      var nextElement = focusableElements[currentElementIndex + 1] || dropdown;
-      nextElement.focus();
-    }, DROPDOWN_ANIMATED_DELAY);
-  };
-
-  useEffect(function () {
-    if (!headerRef.current) return;
-    headerRef.current.addEventListener('keydown', handleKeyboardNavigation);
-    window.addEventListener(DROPDOWN_FIRST_FOCUS_REACHED_EVENT, focusDropdown);
-    window.addEventListener(DROPDOWN_LAST_FOCUS_REACHED_EVENT, focusElementNextToDropdown);
-    return function () {
-      if (!headerRef.current) return;
-      headerRef.current.removeEventListener('keydown', handleKeyboardNavigation);
-      window.removeEventListener(DROPDOWN_FIRST_FOCUS_REACHED_EVENT, focusDropdown);
-      window.removeEventListener(DROPDOWN_LAST_FOCUS_REACHED_EVENT, focusElementNextToDropdown);
-    };
-  }, [isMenuExpanded]);
-  var keyboard = domEvents.keyboard;
-
-  var isArrowKeyCode = function isArrowKeyCode(keycode) {
-    return [keyboard.left, keyboard.up, keyboard.right, keyboard.down].includes(keycode);
-  };
-
-  var handleKeyboardNavigation = function handleKeyboardNavigation(event) {
-    if (isArrowKeyCode(event.keyCode)) {
-      event.preventDefault();
-      var focusableElements = getFocusableElementsFrom(headerRef.current);
-      var kbdNav = keyboardNavigation(focusableElements);
-
-      if ([keyboard.right, keyboard.tab].includes(event.keyCode)) {
-        return kbdNav.next();
-      }
-
-      if (event.keyCode === keyboard.left || keyboard.shiftTab(event)) {
-        return kbdNav.prev();
-      }
-    }
-  };
-
-  var callOnToggle = function callOnToggle(_ref4) {
-    var isExpanded = _ref4.isExpanded,
-        expandBy = _ref4.expandBy;
+  var callOnToggle = function callOnToggle(_ref2) {
+    var isExpanded = _ref2.isExpanded,
+        expandBy = _ref2.expandBy;
 
     if (!isExpanded && previousStickyState === 'always') {
       stickyContainerRef.current.setSticky();
@@ -158,16 +103,16 @@ var HeaderNav = function HeaderNav(_ref) {
     ref: headerRef,
     id: id,
     className: "k-HeaderNav"
-  }, /*#__PURE__*/React.createElement(QuickAccessLink, _extends({
-    className: "quickAccessLink"
-  }, quickAccessProps)), children))));
+  }, /*#__PURE__*/React.createElement(QuickAccessLink, quickAccessProps), children))));
 };
 
 HeaderNav.Button = Button;
 HeaderNav.Logo = Logo;
 HeaderNav.BurgerMenu = BurgerMenu;
+HeaderNav.BurgerMenuNext = BurgerMenuNext;
 HeaderNav.Nav = Nav;
 HeaderNav.UserMenu = UserMenu;
+HeaderNav.UserMenuNext = UserMenuNext;
 HeaderNav.Right = Right;
 HeaderNav.Centered = Centered;
 HeaderNav.LoggedOut = LoggedOut;

@@ -40,6 +40,30 @@ export const AlwaysSticky = () => (
   </Container>
 )
 
+export const NeverSticky = () => (
+  <Container>
+    <div
+      style={{
+        minHeight: '1200px',
+        backgroundColor: COLORS.line1,
+        position: 'relative',
+      }}
+    >
+      <StickyContainer isSticky="never">
+        <div
+          style={{
+            fontSize: '40px',
+            lineHeight: '40px',
+          }}
+        >
+          🐈
+        </div>
+      </StickyContainer>
+      <BlockContent />
+    </div>
+  </Container>
+)
+
 export const StickyTopOnScrollUp = () => {
   const component = useRef(null)
 
