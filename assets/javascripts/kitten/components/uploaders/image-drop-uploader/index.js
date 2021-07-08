@@ -212,6 +212,8 @@ export const ImageDropUploader = ({
     if (initialValue !== '') {
       setInternalStatus('manage')
     }
+
+    setImageDataURL(initialValue)
   }, [initialValue])
 
   const handleDragEnter = e => {
