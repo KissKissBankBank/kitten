@@ -122,8 +122,8 @@ var ImageCropper = function ImageCropper(_ref) {
   };
 
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, props, cropZoneProps, {
-    className: (0, _classnames.default)('k-ImageDropUploader-imageCropper', className, {
-      'k-ImageDropUploader-imageCropper--isDragging': isDragging
+    className: (0, _classnames.default)('k-ImageDropUploader__imageCropper', className, {
+      'k-ImageDropUploader__imageCropper--isDragging': isDragging
     })
   }), /*#__PURE__*/_react.default.createElement("img", {
     alt: "",
