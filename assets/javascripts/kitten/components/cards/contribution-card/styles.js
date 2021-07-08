@@ -15,7 +15,6 @@ export const StyledContributionCard = styled.article`
   max-width: 100%;
   position: relative;
   display: block;
-  flex-direction: row;
   overflow: hidden;
   box-sizing: border-box;
 
@@ -41,7 +40,7 @@ export const StyledContributionCard = styled.article`
     position: relative;
     max-width: calc(100% + 2 * var(--contributionCard--border-width));
     overflow: hidden;
-    padding-top: 62.5%;
+    padding-top: calc(1 / ( 16 / 10 ) * 100%);
 
     @media (min-width: ${ScreenConfig.S.min}px) {
      
