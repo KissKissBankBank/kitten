@@ -42,13 +42,17 @@ const StyledContainer = styled.div`
   }
 `
 
-export const VerticalProgress = ({ children, withoutBorder, className, ...props }) => {
+export const VerticalProgress = ({
+  children,
+  withoutBorder,
+  className,
+  ...props
+}) => {
   return (
-    <StyledContainer className={classNames(
-      "k-VerticalProgress__wrapper",
-      className,
-      {'k-VerticalProgress__wrapper--withoutBorder': withoutBorder}
-    )}
+    <StyledContainer
+      className={classNames('k-VerticalProgress__wrapper', className, {
+        'k-VerticalProgress__wrapper--withoutBorder': withoutBorder,
+      })}
     >
       <nav className="k-VerticalProgress">
         <ul role="tablist" className="k-VerticalProgress__list" {...props}>

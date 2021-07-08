@@ -88,7 +88,7 @@ const StyledWrapper = styled.div`
     font-size: ${stepToRem(0)};
     align-self: center;
 
-    @media (min-width: ${ScreenConfig.S.min}px) { 
+    @media (min-width: ${ScreenConfig.S.min}px) {
       font-size: ${stepToRem(1)};
     }
   }
