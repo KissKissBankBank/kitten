@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import classNames from 'classnames'
 import { useDrag } from '../hooks/use-drag'
 import { usePrevious } from '../../../../helpers/utils/use-previous-hook'
@@ -38,26 +38,44 @@ export const ImageCropper = ({
 
   useEffect(() => {
     if (!imageDimensions) return
-    if (previousImagePosition?.x === imagePosition.x && previousImagePosition?.y === imagePosition.y) return
+    if (
+      previousImagePosition?.x === imagePosition.x &&
+      previousImagePosition?.y === imagePosition.y
+    )
+      return
 
     const cropValue = {
       x: Math.round(Math.abs(imagePosition.x * imageDimensions.scaleRatio)),
       y: Math.round(Math.abs(imagePosition.y * imageDimensions.scaleRatio)),
-      width: Math.round(imageDimensions.containedSize.width * imageDimensions.scaleRatio),
-      height: Math.round(imageDimensions.containedSize.height * imageDimensions.scaleRatio),
+      width: Math.round(
+        imageDimensions.containedSize.width * imageDimensions.scaleRatio,
+      ),
+      height: Math.round(
+        imageDimensions.containedSize.height * imageDimensions.scaleRatio,
+      ),
     }
 
     const cropPercent = {
-      x: Math.abs(imagePosition.x) * 100 / Math.abs(imageDimensions.containedSize.width - imageDimensions.scaledSize.width || 1),
-      y: Math.abs(imagePosition.y) * 100 / Math.abs(imageDimensions.containedSize.height - imageDimensions.scaledSize.height || 1),
+      x:
+        (Math.abs(imagePosition.x) * 100) /
+        Math.abs(
+          imageDimensions.containedSize.width -
+            imageDimensions.scaledSize.width || 1,
+        ),
+      y:
+        (Math.abs(imagePosition.y) * 100) /
+        Math.abs(
+          imageDimensions.containedSize.height -
+            imageDimensions.scaledSize.height || 1,
+        ),
     }
 
-    onChange({cropValue, imagePosition, cropPercent})
+    onChange({ cropValue, imagePosition, cropPercent })
   }, [imagePosition])
 
-  const getRatio = (size) => (size.height / size.width)
+  const getRatio = size => size.height / size.width
 
-  const handleImageLoad = (e) => {
+  const handleImageLoad = e => {
     const naturalSize = {
       width: e.target.naturalWidth,
       height: e.target.naturalHeight,
@@ -98,11 +116,9 @@ export const ImageCropper = ({
     <div
       {...props}
       {...cropZoneProps}
-      className={classNames(
-        'k-ImageDropUploader__imageCropper',
-        className,
-        {'k-ImageDropUploader__imageCropper--isDragging': isDragging}
-      )}
+      className={classNames('k-ImageDropUploader__imageCropper', className, {
+        'k-ImageDropUploader__imageCropper--isDragging': isDragging,
+      })}
     >
       <img
         alt=""
