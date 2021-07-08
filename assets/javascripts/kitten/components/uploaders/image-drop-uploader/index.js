@@ -409,9 +409,7 @@ export const ImageDropUploader = ({
             />
           ) : (
             <div
-              className={classNames(
-                'k-ImageDropUploader__manager__cropper',
-              )}
+              className="k-ImageDropUploader__manager__cropper"
               style={{
                 '--ImageDropUploader-cropHeight': pxToRem(
                   getCropHeight(cropRatio),
