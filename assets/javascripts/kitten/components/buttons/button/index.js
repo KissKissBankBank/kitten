@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
@@ -210,7 +210,7 @@ const StyledButton = styled.button`
 
   /* MODIFIERS */
 
-  ${({modifier}) => modifierStyles(modifier)}
+  ${({ modifier }) => modifierStyles(modifier)}
 `
 
 // const ForwardedButtonComponent = forwardRef((props, ref) => {
