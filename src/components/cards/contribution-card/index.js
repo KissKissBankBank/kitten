@@ -11,8 +11,6 @@ exports.ContributionCard = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireWildcard(require("react"));
@@ -42,39 +40,12 @@ var ContributionCard = function ContributionCard(_ref) {
       imageBorderRadius = _ref.imageBorderRadius,
       borderColor = _ref.borderColor,
       borderStyle = _ref.borderStyle,
-      closeButton = _ref.closeButton,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderWidth", "borderRadius", "imageBorderRadius", "borderColor", "borderStyle", "closeButton"]);
-
-  var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isTrashed = _useState2[0],
-      trashIt = _useState2[1];
-
-  var _useState3 = (0, _react.useState)(true),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      isMounted = _useState4[0],
-      setMounted = _useState4[1];
-
+      onClose = _ref.onClose,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderWidth", "borderRadius", "imageBorderRadius", "borderColor", "borderStyle", "onClose"]);
   var contributionRef = (0, _react.useRef)(null);
-  (0, _react.useEffect)(function () {
-    var clearDelayBeforeTrash;
-
-    if (!isMounted) {
-      clearDelayBeforeTrash = setTimeout(function () {
-        trashIt(true);
-        onAfterClose();
-      }, 400);
-    }
-
-    return function () {
-      return clearTimeout(clearDelayBeforeTrash);
-    };
-  }, [isMounted]);
-  if (isTrashed || !show) return null;
+  if (!show) return null;
   return /*#__PURE__*/_react.default.createElement(_styles.StyledContributionCard, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-ContributionCard', className, {
-      'k-contributionCard--shouldHide': !isMounted
-    }),
+    className: (0, _classnames.default)('k-ContributionCard', className),
     style: (0, _extends2.default)({}, style, {
       '--contributionCard--border-width': (0, _typography.pxToRem)(borderWidth),
       '--contributionCard--border-radius': (0, _typography.pxToRem)(borderRadius),
@@ -84,13 +55,11 @@ var ContributionCard = function ContributionCard(_ref) {
     }),
     ref: contributionRef,
     role: "dialog"
-  }, props), closeButton && /*#__PURE__*/_react.default.createElement(_closeButton.CloseButton, {
+  }, props), onClose && /*#__PURE__*/_react.default.createElement(_closeButton.CloseButton, {
     className: "k-ContributionCard__close",
     size: "micro",
     closeButtonLabel: closeButtonLabel,
-    onClick: function onClick() {
-      return setMounted(false);
-    }
+    onClick: onClose
   }), _react.default.Children.map(children, function (child) {
     if (!child) return null;
     return child.props.__TYPE === 'Image' ? child : null;
@@ -112,18 +81,18 @@ ContributionCard.Input = _components.Input;
 ContributionCard.Action = _components.Action;
 ContributionCard.defaultProps = {
   show: true,
-  closeButton: true,
   closeButtonLabel: 'Close',
   borderColor: _colorsConfig.default.line1,
   borderRadius: 8,
   borderStyle: 'solid',
   borderWidth: 2,
-  imageBorderRadius: 5
+  imageBorderRadius: 5,
+  onClose: undefined
 };
 ContributionCard.propTypes = {
   show: _propTypes.default.bool,
-  closeButton: _propTypes.default.bool,
   closeButtonLabel: _propTypes.default.string,
+  onClose: _propTypes.default.func,
   borderColor: _propTypes.default.string,
   borderRadius: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   borderStyle: _propTypes.default.string,

@@ -6,6 +6,48 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breaking Change: `Utilities`: Generalization of `!important` on all utilities.
 - Feature: `Utilities`: Add `k-u-flex-gap` and `k-u-flex-wrap` utility classes.
+- Fix: `ContributionCard`: Update styles.
+
+## [3.23.0] - 2021-07-06
+
+Features:
+
+- `DocumentsDropUploader`: Add component.
+- `DocumentsStatusBox`: Add component.
+- `ImageDropUploader`: Add component.
+- `TagInput`: Add component.
+- `ContributionCard`: Add `isInputValid` prop.
+- `ContributionCard`: Add `onClose` prop and delete `closeButton` prop.
+- `GiftIcon`: Update icon.
+- `RadioButton`: Modify `focus`, `active`, `hover` and `checked` states.
+- `VerticalProgress`: Add `withoutBorder` prop.
+
+## [3.22.1] - 2021-07-01
+
+Fix:
+
+- `StickyContainer`: Fix spacer height definition.
+
+## [3.22.0] - 2021-07-01
+
+Features:
+
+- `StickyContainer`: Add `"never"` value for `isSticky` prop.
+- `HeaderMenu`: Improve accessibility.
+- `HeaderNav.UserMenuNext`: Add `mobilePadding` prop.
+
+## [3.21.0] - 2021-06-21
+
+Feature:
+
+- `HeaderNav`: Add `BurgerMenuNext` and `UserMenuNext` subcomponents.
+
+Fixes:
+
+- `Modal/Next`: Fix modal content height for decrepit versions of Safari.
+- `VerticalCard`: Fix `description` PropType to node, allowing HTML parsing.
+- `CrowdfundingCard`: Fix `progress` PropTypes, allowing boolean values.
+- `Carousel`: Fix `Button` tiny size prop.
 
 ## [3.20.0] - 2021-06-17
 

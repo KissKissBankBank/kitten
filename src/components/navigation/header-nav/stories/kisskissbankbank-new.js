@@ -139,20 +139,9 @@ var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNavStoryN
       burgerMenuWidth = _useState2[0],
       setBurgerMenuWidth = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(null),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      userMenuWidth = _useState4[0],
-      setUserMenuWidth = _useState4[1];
-
   var windowWidth = (0, _useWindowWidthHook.useWindowWidth)();
   (0, _useDeepCompareEffectHook.useDeepCompareEffect)(function () {
     setBurgerMenuWidth(getComputedLeft("".concat(HEADER_NAV_ID, "PlateformMenu")) + getComputedWidthElement("".concat(HEADER_NAV_ID, "PlateformMenu")) + getComputedWidthElement("".concat(HEADER_NAV_ID, "Logo")));
-
-    if (isLogged) {
-      setTimeout(function () {
-        setUserMenuWidth(getComputedWidthElement("".concat(HEADER_NAV_ID, "UserMenu")) || '0');
-      }, 100);
-    }
   }, [isLogged, windowWidth]);
   return /*#__PURE__*/_react.default.createElement(_index.default, {
     id: HEADER_NAV_ID,
@@ -165,9 +154,9 @@ var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNavStoryN
     },
     size: size,
     borderStyle: borderStyle
-  }, /*#__PURE__*/_react.default.createElement(_index.default.BurgerMenu, null, /*#__PURE__*/_react.default.createElement(InnerBurgerMenu, {
+  }, /*#__PURE__*/_react.default.createElement(_index.default.BurgerMenuNext, {
     dropdownContentWidth: burgerMenuWidth
-  })), /*#__PURE__*/_react.default.createElement(_index.default.Logo, {
+  }, /*#__PURE__*/_react.default.createElement(InnerBurgerMenu, null)), /*#__PURE__*/_react.default.createElement(_index.default.Logo, {
     href: "#"
   }, /*#__PURE__*/_react.default.createElement(_index.default.Hidden, {
     min: "xs"
@@ -191,9 +180,10 @@ var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNavStoryN
     hiddenText: {
       max: 'm'
     }
-  }), /*#__PURE__*/_react.default.createElement(_index.default.Logged, null, /*#__PURE__*/_react.default.createElement(_index.default.UserMenu, {
-    dropdownContentWidth: userMenuWidth
-  }, /*#__PURE__*/_react.default.createElement(_index.default.UserMenu.Button, {
+  }), /*#__PURE__*/_react.default.createElement(_index.default.Logged, null, /*#__PURE__*/_react.default.createElement(_index.default.UserMenuNext, {
+    dropdownAnchorSide: "right",
+    mobilePadding: false
+  }, /*#__PURE__*/_react.default.createElement(_index.default.UserMenuNext.Button, {
     hasArrow: true,
     backgroundColor: _colorsConfig.default.background1,
     backgroundColorHover: _colorsConfig.default.line1,
@@ -201,7 +191,9 @@ var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNavStoryN
     color: _colorsConfig.default.font1,
     colorHover: _colorsConfig.default.primary1,
     colorActive: _colorsConfig.default.font1
-  }, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge, null, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge.Image, {
+  }, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge, {
+    className: "k-u-margin-left-single@xs-down"
+  }, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge.Image, {
     src: "/kitten.jpg"
   }, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge.Badge, null, "2")), /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge.Text, {
     className: "k-u-hidden@xs-down",
@@ -209,7 +201,7 @@ var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNavStoryN
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     lineHeight: "normal",
     weight: "regular"
-  }, "Jean Charles \xC9douard")))), /*#__PURE__*/_react.default.createElement(_index.default.UserMenu.Navigation, null, /*#__PURE__*/_react.default.createElement(InnerUserMenu, null)))), /*#__PURE__*/_react.default.createElement(_index.default.LoggedOut, null, /*#__PURE__*/_react.default.createElement(_index.default.Button, {
+  }, "Jean Charles \xC9douard")))), /*#__PURE__*/_react.default.createElement(_index.default.UserMenuNext.Navigation, null, /*#__PURE__*/_react.default.createElement(InnerUserMenu, null)))), /*#__PURE__*/_react.default.createElement(_index.default.LoggedOut, null, /*#__PURE__*/_react.default.createElement(_index.default.Button, {
     icon: /*#__PURE__*/_react.default.createElement(_index.default.Hidden, {
       min: "s"
     }, /*#__PURE__*/_react.default.createElement(_searchIcon.SearchIcon, null)),

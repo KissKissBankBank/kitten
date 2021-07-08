@@ -17,6 +17,7 @@ export const Button = ({
   hiddenText: { min, max } = {},
   as,
   style,
+  className,
   ...props
 }) => {
   const hiddenMin = min ? `k-u-hidden@${min}-up` : ''
@@ -43,7 +44,9 @@ export const Button = ({
     <ButtonComponent
       {...props}
       {...buttonProps}
-      className={classNames('k-HeaderNav__Button', {
+      className={classNames('k-HeaderNav__Button',
+        className,
+        {
         'k-HeaderNav__Button--hasIcon': !!icon,
         'k-HeaderNav__Button--hasText': !!text,
       })}
