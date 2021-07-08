@@ -73,6 +73,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   display: flex;
   height: 0.3125rem;
   line-height: 1;
+  gap: 0.125rem;
 }
 
 .c1 .k-Loader__circle {
@@ -98,10 +99,6 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 .c1 .k-Loader__circle:nth-child(3) {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
-}
-
-.c1 .k-Loader__circle:not(:last-child) {
-  margin-right: 0.125rem;
 }
 
 .c2 {
@@ -182,10 +179,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 1.25rem 0;
-}
-
-.c0 .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
-  margin-right: 1.25rem;
+  gap: 1.25rem;
 }
 
 .c0 .k-DashboardLayout__flow__nav__actionsContainer > *:not(:first-child:last-child) {
@@ -354,12 +348,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout__flow__nav__actionsContainer {
     margin: 1.875rem 0;
-  }
-}
-
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
-    margin-right: 2.5rem;
+    gap: 2.5rem;
   }
 }
 
@@ -573,6 +562,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   display: flex;
   height: 0.3125rem;
   line-height: 1;
+  gap: 0.125rem;
 }
 
 .c1 .k-Loader__circle {
@@ -598,10 +588,6 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 .c1 .k-Loader__circle:nth-child(3) {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
-}
-
-.c1 .k-Loader__circle:not(:last-child) {
-  margin-right: 0.125rem;
 }
 
 .c2 {
@@ -682,10 +668,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 1.25rem 0;
-}
-
-.c0 .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
-  margin-right: 1.25rem;
+  gap: 1.25rem;
 }
 
 .c0 .k-DashboardLayout__flow__nav__actionsContainer > *:not(:first-child:last-child) {
@@ -854,12 +837,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout__flow__nav__actionsContainer {
     margin: 1.875rem 0;
-  }
-}
-
-@media (min-width:67.5rem) {
-  .c0 .k-DashboardLayout__flow__nav__actionsContainer >:not(:last-child) {
-    margin-right: 2.5rem;
+    gap: 2.5rem;
   }
 }
 
@@ -1098,6 +1076,7 @@ button:hover .c1 {
   -webkit-align-self: start;
   -ms-flex-item-align: start;
   align-self: start;
+  gap: 0.9375rem;
   height: 2.5rem;
   padding: 0 0.9375rem;
   background-color: #2d2d2d;
@@ -1127,10 +1106,6 @@ button:hover .c1 {
 
 .c0 .k-DashboardLayout__backLink:hover {
   color: #19b4fa;
-}
-
-.c0 .k-DashboardLayout__backLink .k-DashboardLayout__backLink__text {
-  margin-left: 0.9375rem;
 }
 
 @media (min-width:67.5rem) {
@@ -1207,10 +1182,7 @@ button:hover .c1 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-
-  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper >:not(:last-child) {
-    margin-bottom: 1.875rem;
+    gap: 1.875rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {
@@ -1361,10 +1333,7 @@ button:hover .c1 {
     top: var(--dashboardLayout-siteHeaderHeight);
     overflow: scroll;
     padding: 1.875rem;
-  }
-
-  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper >:not(:last-child) {
-    margin-bottom: 1.875rem;
+    gap: 1.875rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {
@@ -1639,6 +1608,7 @@ button:hover .c1 {
   -webkit-align-self: start;
   -ms-flex-item-align: start;
   align-self: start;
+  gap: 0.9375rem;
   height: 2.5rem;
   padding: 0 0.9375rem;
   background-color: #2d2d2d;
@@ -1668,10 +1638,6 @@ button:hover .c1 {
 
 .c0 .k-DashboardLayout__backLink:hover {
   color: #19b4fa;
-}
-
-.c0 .k-DashboardLayout__backLink .k-DashboardLayout__backLink__text {
-  margin-left: 0.9375rem;
 }
 
 @media (min-width:67.5rem) {
@@ -1748,10 +1714,7 @@ button:hover .c1 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-
-  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper >:not(:last-child) {
-    margin-bottom: 1.875rem;
+    gap: 1.875rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {
@@ -1902,10 +1865,7 @@ button:hover .c1 {
     top: var(--dashboardLayout-siteHeaderHeight);
     overflow: scroll;
     padding: 1.875rem;
-  }
-
-  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper >:not(:last-child) {
-    margin-bottom: 1.875rem;
+    gap: 1.875rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {

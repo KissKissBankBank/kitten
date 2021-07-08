@@ -2,7 +2,7 @@
 
 exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`] = `
 <div
-  className="sc-EHOje jRbWYX"
+  className="sc-EHOje eSBJfI"
 >
   
   
@@ -57,7 +57,7 @@ Array [
     </span>
   </div>,
   <div
-    className="sc-EHOje jRbWYX"
+    className="sc-EHOje eSBJfI"
   >
     <a
       aria-label="E-mail"

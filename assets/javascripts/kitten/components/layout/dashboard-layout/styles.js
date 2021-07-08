@@ -122,10 +122,7 @@ export const StyledDashboard = styled.div`
         padding: ${pxToRem(30)};
         display: flex;
         flex-direction: column;
-
-        & > :not(:last-child) {
-          margin-bottom: ${pxToRem(30)};
-        }
+        gap: ${pxToRem(30)};
 
         .k-DashboardLayout__heading {
           display: none;
@@ -249,10 +246,7 @@ export const StyledDashboard = styled.div`
         top: var(--dashboardLayout-siteHeaderHeight);
         overflow: scroll;
         padding: ${pxToRem(30)};
-
-        & > :not(:last-child) {
-          margin-bottom: ${pxToRem(30)};
-        }
+        gap: ${pxToRem(30)};
 
         .k-DashboardLayout__heading {
           flex: 0 1 auto;
@@ -322,6 +316,7 @@ export const StyledDashboard = styled.div`
   .k-DashboardLayout__backLink {
     flex: 0 0 ${pxToRem(40)};
     align-self: start;
+    gap: ${pxToRem(15)};
     height: ${pxToRem(40)};
     padding: 0 ${pxToRem(15)};
     background-color: ${COLORS.line3};
@@ -341,10 +336,6 @@ export const StyledDashboard = styled.div`
 
     &:hover {
       color: ${COLORS.primary1};
-    }
-
-    .k-DashboardLayout__backLink__text {
-      margin-left: ${pxToRem(15)};
     }
   }
 `

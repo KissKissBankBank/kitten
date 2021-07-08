@@ -6,10 +6,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 const StyledLine = styled.div`
   display: flex;
   align-items: center;
-
-  .k-Line__item:not(:last-child) {
-    margin-right: ${pxToRem(10)};
-  }
+  gap: ${pxToRem(10)};
 `
 
 export const Line = props => {
