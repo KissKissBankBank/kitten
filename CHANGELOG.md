@@ -6,11 +6,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `Button`: Add `fit` and `mobileFit` props, default to `min-width` and `null`.
 - Feature: `Button`: Refactor CSS Styles.
-- Fix: `VerticalProgress`: Update styles.
-- Feature: `TagButton` Update styles.
-- Fix: `ImageDropUploader`: Update image URL on `initialValue` prop change.
-- Fix: `ImageDropUploader`: Disable text select on cropper drag.
-- Feature: `ImageDropUploader`: Add `canCrop` prop, defaults to `true`.
 
 ## [3.23.1] - 2021-07-08
 
