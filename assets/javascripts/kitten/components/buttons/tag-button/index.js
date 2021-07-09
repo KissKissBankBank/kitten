@@ -60,7 +60,8 @@ const StyledTagButton = styled.button`
         color: ${COLORS.font1};
       }
 
-      &:active {
+      &:active,
+      &.k-Buttons__tagButton--selected {
         background-color: ${COLORS.primary5};
         border-color: ${COLORS.primary1};
         color: ${COLORS.font1};
