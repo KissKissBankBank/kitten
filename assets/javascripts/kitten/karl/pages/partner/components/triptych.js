@@ -4,9 +4,10 @@ import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/layout/container'
 import { Title } from '../../../../components/atoms/typography/title'
 import { Text } from '../../../../components/atoms/typography/text'
-import { Button, FLUID } from '../../../../components/molecules/buttons/button'
 import { Triptych as KittenTriptych } from '../../../../components/molecules/cards/triptych'
 import { Grid, GridCol } from '../../../../components/layout/grid'
+import { Button } from '../../../../components/molecules/buttons/button'
+import { FLUID } from '../../../../components/molecules/buttons/button/standalone-styles'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
 const StyledButton = styled(props => <Button as="a" {...props} />)`
