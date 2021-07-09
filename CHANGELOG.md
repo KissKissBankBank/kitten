@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `parseHtml`: Return empty string if we cannot use dom.
+## [3.25.2] - 2021-07-09
+
+Fix: 
+
+- `parseHtml`: Return empty string if we cannot use dom.
 
 ## [3.25.1] - 2021-07-09
 
