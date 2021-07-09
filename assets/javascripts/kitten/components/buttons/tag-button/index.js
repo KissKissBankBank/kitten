@@ -60,18 +60,23 @@ const StyledTagButton = styled.button`
         color: ${COLORS.font1};
       }
 
-      &:active,
-      &.k-Buttons__tagButton--selected {
-        background-color: ${COLORS.primary5};
+      &:active {
+        background-color: ${COLORS.background1};
         border-color: ${COLORS.primary1};
         color: ${COLORS.font1};
       }
-
+      
       &:disabled {
         cursor: not-allowed;
         border-color: ${COLORS.line1};
         background-color: ${COLORS.line1};
         color: ${COLORS.font3};
+      }
+
+      &.k-Buttons__tagButton--selected {
+        background-color: ${COLORS.primary5};
+        border-color: ${COLORS.primary1};
+        color: ${COLORS.font1};
       }
     }
   }
