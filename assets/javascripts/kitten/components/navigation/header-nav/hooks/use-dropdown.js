@@ -1,18 +1,5 @@
-import React, {
-  cloneElement,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from 'react'
+import { useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
-
-import domEvents, {
-  TOGGLE_DROPDOWN_EVENT,
-  DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
-  DROPDOWN_LAST_FOCUS_REACHED_EVENT,
-  dispatchEvent,
-} from '../../../../helpers/dom/events'
 
 export const useDropdown = ({
   dropdownContentWidth,
@@ -30,7 +17,7 @@ export const useDropdown = ({
   const [isDropdownExpanded, setDropdownExpandedState] = useState(!!isExpanded)
 
   const handleButtonClick = () => {
-    setDropdownExpandedState((currentValue) => !currentValue)
+    setDropdownExpandedState(currentValue => !currentValue)
   }
 
   const closeDropdown = () => {
@@ -45,10 +32,13 @@ export const useDropdown = ({
     if (e.key === 'Tab') {
       // Wait 5ms for the activeElement to change
       setTimeout(() => {
-        if (dropdownRef.current
-          && !dropdownRef.current.contains(document.activeElement)) {
+        if (
+          dropdownRef.current &&
+          !dropdownRef.current.contains(document.activeElement)
+        ) {
           closeDropdown()
-        }}, 5)
+        }
+      }, 5)
     }
   }
 
@@ -90,12 +80,9 @@ export const useDropdown = ({
   const dropdownProps = {
     ref: dropdownRef,
     'aria-live': 'polite',
-    className: classNames(
-      'k-HeaderNavDropdown',
-      {
-        'k-HeaderNavDropdown--isExpanded': isDropdownExpanded,
-      },
-    )
+    className: classNames('k-HeaderNavDropdown', {
+      'k-HeaderNavDropdown--isExpanded': isDropdownExpanded,
+    }),
   }
 
   const buttonProps = {
@@ -107,16 +94,15 @@ export const useDropdown = ({
     className: 'k-HeaderNavDropdown__button',
   }
 
-  const returnedWidth = dropdownContentWidth === NaN
-    ? null
-    : dropdownContentWidth
+  const returnedWidth =
+    dropdownContentWidth === NaN ? null : dropdownContentWidth
 
   const menuProps = {
     ref: dropdownContentRef,
     id: menuId,
     className: classNames(
       'k-HeaderNavDropdown__menu',
-      `k-HeaderNavDropdown__menu--is-${dropdownAnchorSide || 'left'}`
+      `k-HeaderNavDropdown__menu--is-${dropdownAnchorSide || 'left'}`,
     ),
     style: {
       width: returnedWidth,

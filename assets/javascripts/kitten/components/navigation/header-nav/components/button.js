@@ -44,9 +44,7 @@ export const Button = ({
     <ButtonComponent
       {...props}
       {...buttonProps}
-      className={classNames('k-HeaderNav__Button',
-        className,
-        {
+      className={classNames('k-HeaderNav__Button', className, {
         'k-HeaderNav__Button--hasIcon': !!icon,
         'k-HeaderNav__Button--hasText': !!text,
       })}

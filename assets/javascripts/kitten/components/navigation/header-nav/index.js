@@ -18,17 +18,6 @@ import { Logged } from './components/logged'
 import { Hidden } from './components/hidden'
 import { QuickAccessLink } from './components/quick-access-link'
 
-import {
-  getFocusableElementsFrom,
-  keyboardNavigation,
-} from '../../../helpers/dom/a11y'
-import domEvents, {
-  DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
-  DROPDOWN_LAST_FOCUS_REACHED_EVENT,
-  TOGGLE_DROPDOWN_EVENT,
-  dispatchEvent,
-} from '../../../helpers/dom/events'
-import { DROPDOWN_ANIMATED_DELAY } from '../../../constants/dropdown-config'
 import { usePrevious } from '../../../helpers/utils/use-previous-hook'
 
 import { StyledHeader } from './styles'
