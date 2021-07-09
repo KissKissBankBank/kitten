@@ -2,20 +2,23 @@
 
 exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -27,10 +30,6 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -47,15 +46,6 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -69,81 +59,63 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -174,168 +146,61 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -346,10 +211,10 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_facebook k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_facebook k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -371,20 +236,23 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 
 exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -396,10 +264,6 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -416,15 +280,6 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -438,81 +293,63 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -543,168 +380,61 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   color: #fff;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -715,10 +445,10 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_facebook k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--social_facebook k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -740,20 +470,23 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 
 exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -765,10 +498,6 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -792,15 +521,6 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -814,81 +534,63 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -928,168 +630,61 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -1100,10 +695,10 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_instagram k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_instagram k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -1125,20 +720,23 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 
 exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1150,10 +748,6 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -1177,15 +771,6 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -1199,81 +784,63 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -1313,168 +880,61 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   color: #fff;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -1485,10 +945,10 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_instagram k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--social_instagram k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -1510,20 +970,23 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
 
 exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1535,10 +998,6 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #00669e;
   background-color: #00669e;
   color: #fff;
@@ -1555,15 +1014,6 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -1577,81 +1027,63 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -1682,168 +1114,61 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -1854,10 +1179,10 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_linkedin k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_linkedin k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -1879,20 +1204,23 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 
 exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1904,10 +1232,6 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #00669e;
   background-color: #00669e;
   color: #fff;
@@ -1924,15 +1248,6 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -1946,81 +1261,63 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -2051,168 +1348,61 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   color: #fff;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -2223,10 +1413,10 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_linkedin k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--social_linkedin k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -2248,20 +1438,23 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 
 exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -2273,10 +1466,6 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #bd081c;
   background-color: #bd081c;
   color: #fff;
@@ -2293,15 +1482,6 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -2315,81 +1495,63 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -2420,168 +1582,61 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -2592,10 +1647,10 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_pinterest k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_pinterest k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -2617,20 +1672,23 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
 
 exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -2642,10 +1700,6 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #bd081c;
   background-color: #bd081c;
   color: #fff;
@@ -2662,15 +1716,6 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -2684,81 +1729,63 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -2789,168 +1816,61 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
   color: #fff;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -2961,10 +1881,10 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_pinterest k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--social_pinterest k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -2986,20 +1906,23 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
 
 exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -3011,10 +1934,6 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #55acee;
   background-color: #55acee;
   color: #fff;
@@ -3031,15 +1950,6 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -3053,81 +1963,63 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -3158,168 +2050,61 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -3330,10 +2115,10 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_twitter k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_twitter k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -3355,20 +2140,23 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 
 exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -3380,10 +2168,6 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #55acee;
   background-color: #55acee;
   color: #fff;
@@ -3400,15 +2184,6 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -3422,81 +2197,63 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -3527,168 +2284,61 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   color: #fff;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -3699,10 +2349,10 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_twitter k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--social_twitter k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -3724,20 +2374,23 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 
 exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -3749,10 +2402,6 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #ff0000;
   background-color: #ff0000;
   color: #fff;
@@ -3769,15 +2418,6 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -3791,81 +2431,63 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -3896,168 +2518,61 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -4068,10 +2583,10 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_youtube k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_youtube k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -4093,20 +2608,23 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 
 exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -4118,10 +2636,6 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #ff0000;
   background-color: #ff0000;
   color: #fff;
@@ -4138,15 +2652,6 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -4160,81 +2665,63 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -4265,168 +2752,61 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   color: #fff;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -4437,10 +2817,10 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_youtube k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--social_youtube k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
