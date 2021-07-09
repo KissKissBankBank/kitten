@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button, ICON } from '../../../components/molecules/buttons/button'
-import { modifierStyles } from '../../../components/molecules/buttons/button/helpers/modifier-styles'
+import { Button } from '../../../components/buttons/button'
+import { ICON } from '../../../components/buttons/button/standalone-styles'
+import { modifierStyles } from '../../../components/buttons/button/helpers/modifier-styles'
 import COLORS from '../../../constants/colors-config'
 
-export default styled(({ tag, ...props }) => <Button as={tag} {...props} />)`
-  ${ICON};
+export default styled(({ tag, ...props }) => <Button as={tag} fit="icon" {...props} />)`
   ${modifierStyles('hydrogen')};
 
   // Lithium modifier.
