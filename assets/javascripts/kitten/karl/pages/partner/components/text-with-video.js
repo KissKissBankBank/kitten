@@ -13,7 +13,7 @@ import {
   Loader,
 } from '../../../../index'
 import { DEFAULT, BIG } from '../../../../components/layout/horizontal-stroke'
-import { FLUID } from '../../../../components/buttons/button'
+import { FLUID } from '../../../../components/buttons/button/standalone-styles'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,

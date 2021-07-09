@@ -6,12 +6,12 @@ import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Title } from '../../../../components/typography/title'
 import { Paragraph } from '../../../../components/typography/paragraph'
 import { Text } from '../../../../components/typography/text'
+import { Button } from '../../../../components/buttons/button'
 import {
-  Button,
   FLUID,
   DEFAULT,
   BIG,
-} from '../../../../components/buttons/button'
+} from '../../../../components/buttons/button/standalone-styles'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
