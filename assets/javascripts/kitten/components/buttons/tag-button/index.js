@@ -50,7 +50,7 @@ const StyledTagButton = styled.button`
 
     &.k-Buttons__tagButton--hydrogen {
       background-color: ${COLORS.background1};
-      border-color:  ${COLORS.line1};
+      border-color: ${COLORS.line1};
       color: ${COLORS.font1};
 
       &:hover,
@@ -65,7 +65,7 @@ const StyledTagButton = styled.button`
         border-color: ${COLORS.primary1};
         color: ${COLORS.font1};
       }
-      
+
       &:disabled {
         cursor: not-allowed;
         border-color: ${COLORS.line1};
