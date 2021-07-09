@@ -23,4 +23,18 @@ describe('parseHtml()', () => {
 
     expect(parsedHtml).toBe('FooBar <3')
   })
+
+  it('sanitize HTML by default', () => {
+    const html = "<iframe/src='javascript:alert(document.cookie)'>"
+    const parsedHtml = parseHtml(html)
+
+    expect(parsedHtml).toBeUndefined()
+  })
+
+  it('not sanitize HTML if options set to false', () => {
+    const html = "<iframe/src='javascript:alert(document.cookie)'>"
+    const parsedHtml = parseHtml(html, { sanitize: false })
+
+    expect(parsedHtml).not.toBeUndefined()
+  })
 })

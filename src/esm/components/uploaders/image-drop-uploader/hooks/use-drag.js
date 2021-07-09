@@ -1,5 +1,6 @@
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import { useState, useEffect } from 'react';
+import { pauseEvent } from '../utils/pause-event';
 export var useDrag = function useDrag(_ref) {
   var startingPosition = _ref.startingPosition,
       imageDimensions = _ref.imageDimensions,
@@ -50,10 +51,11 @@ export var useDrag = function useDrag(_ref) {
     }
   }, [startingPosition, imageDimensions]);
 
-  var handleMouseDown = function handleMouseDown(_ref2) {
-    var clientX = _ref2.clientX,
-        clientY = _ref2.clientY,
-        target = _ref2.target;
+  var handleMouseDown = function handleMouseDown(e) {
+    pauseEvent(e);
+    var clientX = e.clientX,
+        clientY = e.clientY,
+        target = e.target;
 
     if (!isDragging) {
       var rect = target.getBoundingClientRect();
@@ -65,10 +67,11 @@ export var useDrag = function useDrag(_ref) {
     }
   };
 
-  var handleMouseMove = function handleMouseMove(_ref3) {
-    var clientX = _ref3.clientX,
-        clientY = _ref3.clientY,
-        target = _ref3.target;
+  var handleMouseMove = function handleMouseMove(e) {
+    pauseEvent(e);
+    var clientX = e.clientX,
+        clientY = e.clientY,
+        target = e.target;
 
     if (isDragging) {
       var rect = target.getBoundingClientRect();
@@ -142,9 +145,9 @@ export var useDrag = function useDrag(_ref) {
     setLastTranslation(destination);
   };
 
-  var getDestination = function getDestination(_ref4) {
-    var x = _ref4.x,
-        y = _ref4.y;
+  var getDestination = function getDestination(_ref2) {
+    var x = _ref2.x,
+        y = _ref2.y;
     var destinationX = x;
     var destinationY = y;
 

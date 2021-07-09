@@ -49,12 +49,10 @@ module.exports = {
     '../doc/**/*.stories.@(js|mdx)',
   ],
   addons: [
+    '@storybook/addon-essentials',
     '@storybook/addon-links',
     '@storybook/addon-knobs',
-    '@storybook/addon-actions',
     '@storybook/addon-a11y',
-    '@storybook/addon-viewport',
-    '@storybook/addon-docs',
     '@storybook/addon-measure',
   ],
 }
