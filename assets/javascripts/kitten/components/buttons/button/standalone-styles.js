@@ -3,6 +3,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 
 export const FLUID = css`
+  --Button-min-width: initial;
   min-width: initial;
   width: 100%;
 `
@@ -12,6 +13,7 @@ export const ROUNDED = css`
 `
 
 export const DEFAULT = css`
+  --Button-min-width: ${pxToRem(200)};
   min-width: ${pxToRem(200)};
   min-height: ${pxToRem(50)};
   padding: ${pxToRem(10)} ${pxToRem(30)};
@@ -19,6 +21,7 @@ export const DEFAULT = css`
 `
 
 export const NANO = css`
+  --Button-min-width: ${pxToRem(100)};
   min-width: ${pxToRem(100)};
   min-height: ${pxToRem(20)};
   padding: 0 ${pxToRem(6)};
@@ -26,6 +29,7 @@ export const NANO = css`
 `
 
 export const MICRO = css`
+  --Button-min-width: ${pxToRem(130)};
   min-width: ${pxToRem(130)};
   min-height: ${pxToRem(30)};
   padding: ${pxToRem(5)} ${pxToRem(10)};
@@ -33,6 +37,7 @@ export const MICRO = css`
 `
 
 export const TINY = css`
+  --Button-min-width: ${pxToRem(160)};
   min-width: ${pxToRem(160)};
   min-height: ${pxToRem(40)};
   padding: ${pxToRem(7)} ${pxToRem(20)};
@@ -41,6 +46,7 @@ export const TINY = css`
 
 export const BIG = css`
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    --Button-min-width: ${pxToRem(220)};
     min-width: ${pxToRem(220)};
     min-height: ${pxToRem(70)};
     padding: ${pxToRem(10)} ${pxToRem(40)};
@@ -54,6 +60,7 @@ export const HUGE = css`
   padding: ${pxToRem(10)} ${pxToRem(10)};
 
   @media (min-width: ${ScreenConfig.M.min}px) {
+    --Button-min-width: ${pxToRem(220)};
     min-width: ${pxToRem(220)};
     min-height: ${pxToRem(80)};
     font-size: ${stepToRem(0)};
@@ -67,6 +74,7 @@ export const GIANT = css`
   padding: ${pxToRem(10)} ${pxToRem(10)};
 
   @media (min-width: ${ScreenConfig.M.min}px) {
+    --Button-min-width: ${pxToRem(220)};
     min-width: ${pxToRem(220)};
     min-height: ${pxToRem(90)};
     font-size: ${stepToRem(0)};
@@ -75,6 +83,7 @@ export const GIANT = css`
 `
 
 export const ICON = css`
+  --Button-min-width: initial;
   min-width: initial;
   min-height: initial;
   width: ${pxToRem(50)};
@@ -99,6 +108,7 @@ export const ICON_TINY = css`
 
 export const ICON_BIG = css`
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    --Button-min-width: 0;
     min-width: 0;
     min-height: 0;
     padding: 0;
@@ -108,11 +118,13 @@ export const ICON_BIG = css`
 `
 
 export const ICON_HUGE = css`
+  --Button-min-width: initial;
   min-width: initial;
   width: ${pxToRem(70)};
   height: ${pxToRem(70)};
 
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    --Button-min-width: initial;
     min-width: initial;
     width: ${pxToRem(80)};
     height: ${pxToRem(80)};
@@ -120,11 +132,13 @@ export const ICON_HUGE = css`
 `
 
 export const ICON_GIANT = css`
+  --Button-min-width: initial;
   min-width: initial;
   width: ${pxToRem(70)};
   height: ${pxToRem(70)};
 
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    --Button-min-width: initial;
     min-width: initial;
     width: ${pxToRem(90)};
     height: ${pxToRem(90)};
