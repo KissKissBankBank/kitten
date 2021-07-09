@@ -7,6 +7,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `Button`: Add `fit` and `mobileFit` props, default to `min-width` and `null`.
 - Feature: `Button`: Refactor CSS Styles.
 
+## [3.25.1] - 2021-07-09
+
+Fix:
+
+- `VerticalProgress`: Remove `max-width` on `k-VerticalProgress__wrapper`.
+
 ## [3.25.0] - 2021-07-08
 
 Feature:

@@ -11,7 +11,7 @@ import COLORS from '../../../constants/colors-config';
 var StyledContainer = styled.div.withConfig({
   displayName: "vertical-progress__StyledContainer",
   componentId: "sc-4vkdj5-0"
-})(["&:not(.k-VerticalProgress__wrapper--withoutBorder){border:", " solid ", ";padding:", ";border-radius:", ";max-width:", ";@media (min-width:", "px){padding:", ";}}.k-VerticalProgress{position:relative;padding:0;}.k-VerticalProgress__list{margin:0;padding:0;list-style:none;:before{position:absolute;top:0;bottom:0;left:", ";content:'';border-left:", " dotted ", ";}}"], pxToRem(2), COLORS.line1, pxToRem(15), pxToRem(8), pxToRem(400), ScreenConfig.S.min, pxToRem(30), pxToRem(14), pxToRem(2), COLORS.line1);
+})(["&:not(.k-VerticalProgress__wrapper--withoutBorder){border:", " solid ", ";padding:", ";border-radius:", ";@media (min-width:", "px){padding:", ";}}.k-VerticalProgress{position:relative;padding:0;}.k-VerticalProgress__list{margin:0;padding:0;list-style:none;:before{position:absolute;top:0;bottom:0;left:", ";content:'';border-left:", " dotted ", ";}}"], pxToRem(2), COLORS.line1, pxToRem(15), pxToRem(8), ScreenConfig.S.min, pxToRem(30), pxToRem(14), pxToRem(2), COLORS.line1);
 export var VerticalProgress = function VerticalProgress(_ref) {
   var children = _ref.children,
       withoutBorder = _ref.withoutBorder,
