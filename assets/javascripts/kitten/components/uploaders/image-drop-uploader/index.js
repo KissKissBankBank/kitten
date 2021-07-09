@@ -141,6 +141,9 @@ const StyledImageDropUploader = styled.div`
     }
   }
   .k-ImageDropUploader__manager__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .k-ImageDropUploader__manager__cancelButton {
     position: absolute;
