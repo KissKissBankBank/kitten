@@ -1,7 +1,6 @@
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import React, { cloneElement, useContext, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
-import domEvents, { TOGGLE_DROPDOWN_EVENT, DROPDOWN_FIRST_FOCUS_REACHED_EVENT, DROPDOWN_LAST_FOCUS_REACHED_EVENT, dispatchEvent } from '../../../../helpers/dom/events';
 export var useDropdown = function useDropdown(_ref) {
   var dropdownContentWidth = _ref.dropdownContentWidth,
       dropdownAnchorSide = _ref.dropdownAnchorSide,

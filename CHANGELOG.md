@@ -4,12 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `ImageDropUploader`: vertically center description text.
-- Fix: `TagButton`: Update styles.
-- Fix: `HeaderNav`: Fix user menu position on mobile.
-- Fix: `ContributionCard`: Fix image dimensions on desktop.
-- Fix: `ContributionCard`: Fix accessibility.
-- Feature: `ContributionCard`: Add `largeInput` prop.
+## [3.26.0] - 2021-07-12
+
+Feature:
+
+- `ContributionCard`: Add `largeInput` prop.
+
+Fixes:
+
+- `ContributionCard`: Fix accessibility.
+- `ContributionCard`: Fix image ratio on desktop.
+- `HeaderNav`: Fix user menu position on mobile.
+- `ImageDropUploader`: Vertically center description text.
+- `TagButton`: Update styles.
 
 ## [3.25.2] - 2021-07-09
 

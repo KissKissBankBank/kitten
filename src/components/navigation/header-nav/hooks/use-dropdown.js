@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -11,11 +9,9 @@ exports.useDropdown = void 0;
 
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = require("react");
 
 var _classnames = _interopRequireDefault(require("classnames"));
-
-var _events = _interopRequireWildcard(require("../../../../helpers/dom/events"));
 
 var useDropdown = function useDropdown(_ref) {
   var dropdownContentWidth = _ref.dropdownContentWidth,
