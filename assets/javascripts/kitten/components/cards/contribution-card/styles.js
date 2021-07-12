@@ -32,11 +32,16 @@ export const StyledContributionCard = styled.article`
     height: calc(${pxToRem(100)} + 2 * var(--contributionCard--border-width));
     display: flex;
   }
+
   /* IMAGE */
 
   .k-ContributionCard__imageWrapper {
     position: relative;
     overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media (max-width: ${ScreenConfig.XS.max}px) {
       padding-top: calc(5 / 8 * 100%);
@@ -84,8 +89,6 @@ export const StyledContributionCard = styled.article`
     padding: ${pxToRem(20)};
     align-items: center;
     align-content: flex-start;
-    justify-self: center;
-
     grid-gap: ${pxToRem(20)} ${pxToRem(10)};
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto;
@@ -96,10 +99,6 @@ export const StyledContributionCard = styled.article`
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: 100%;
-      padding-top: ${pxToRem(20)};
-      padding-bottom: ${pxToRem(20)};
-      padding-left: ${pxToRem(30)};
-
       grid-gap: 0 ${pxToRem(10)};
       grid-template-columns: auto ${pxToRem(85)} ${pxToRem(150)};
       grid-template-rows: 1fr;
@@ -109,11 +108,7 @@ export const StyledContributionCard = styled.article`
         grid-template-columns: auto ${pxToRem(102)} ${pxToRem(150)};
       }
     }
-  }
 
-  /* IE 11 */
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    display: -ms-grid;
   }
 
   /* SUBCOMPONENTS */
