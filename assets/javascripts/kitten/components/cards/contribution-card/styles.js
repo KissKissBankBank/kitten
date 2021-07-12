@@ -104,6 +104,10 @@ export const StyledContributionCard = styled.article`
       grid-template-columns: auto ${pxToRem(85)} ${pxToRem(150)};
       grid-template-rows: 1fr;
       grid-template-areas: 'cc-text cc-input cc-action';
+
+      &.k-ContributionCard__gridWrapper--largeInput {
+        grid-template-columns: auto ${pxToRem(102)} ${pxToRem(150)};
+      }
     }
   }
 

@@ -27,6 +27,7 @@ export const ContributionCard = ({
   borderColor,
   borderStyle,
   onClose,
+  largeInput,
   ...props
 }) => {
   if (!show) return null
@@ -58,7 +59,9 @@ export const ContributionCard = ({
         return child.props.__TYPE === 'Image' ? child : null
       })}
 
-      <div className="k-ContributionCard__gridWrapper">
+      <div className={classNames('k-ContributionCard__gridWrapper', {
+        'k-ContributionCard__gridWrapper--largeInput': largeInput,
+      })}>
         {React.Children.map(children, child => {
           if (!child) return null
           return ['Image'].includes(child.props.__TYPE) ? null : child
@@ -85,6 +88,7 @@ ContributionCard.defaultProps = {
   borderWidth: 2,
   imageBorderRadius: 5,
   onClose: undefined,
+  largeInput: false,
 }
 
 ContributionCard.propTypes = {
@@ -96,4 +100,5 @@ ContributionCard.propTypes = {
   borderStyle: PropTypes.string,
   borderWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   imageBorderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  largeInput: PropTypes.bool,
 }

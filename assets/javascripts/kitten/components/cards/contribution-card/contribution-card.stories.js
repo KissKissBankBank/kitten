@@ -34,8 +34,8 @@ export const Default = () => {
 export const PetitPlus = () => {
   return (
     <StoryContainer>
-      <ContributionCard borderStyle="dashed">
-        <ContributionCard.Image>
+      <ContributionCard borderStyle="dashed" largeInput>
+        <ContributionCard.Image className="k-u-hidden@xs-down">
           <RocketIllustration width={45} height={81} />
         </ContributionCard.Image>
 
