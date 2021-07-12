@@ -54,7 +54,7 @@ export const BackingCard = ({
         )}
       </div>
 
-      {buttonChild && cloneElement(buttonChild)}
+      {buttonChild && cloneElement(buttonChild, { disabled })}
     </StyledBackingCard>
   )
 }

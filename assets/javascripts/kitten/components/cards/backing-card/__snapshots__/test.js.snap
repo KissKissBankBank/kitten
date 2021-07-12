@@ -160,6 +160,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
   </div>
   <button
     className="sc-htpNat gCTkTZ k-Button k-BackingCard__button k-BackingCard__drawer k-Button--regular k-Button--helium k-Button--andromeda k-Button--hasBorderRadius"
+    disabled={true}
     style={
       Object {
         "--border-radius": "0.25rem",
