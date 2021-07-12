@@ -85,20 +85,21 @@ export const StyledContributionCard = styled.article`
   }
 
   .k-ContributionCard__gridWrapper {
-    display: grid;
     padding: ${pxToRem(20)};
+
+    display: grid;
     align-items: center;
     align-content: flex-start;
     grid-gap: ${pxToRem(20)} ${pxToRem(10)};
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto;
-
     grid-template-areas:
       'cc-text cc-text'
       'cc-input cc-action';
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: 100%;
+
       grid-gap: 0 ${pxToRem(10)};
       grid-template-columns: auto ${pxToRem(85)} ${pxToRem(150)};
       grid-template-rows: 1fr;
@@ -128,11 +129,8 @@ export const StyledContributionCard = styled.article`
   .k-ContributionCard__pillNumber {
     grid-area: cc-input;
     place-self: center flex-start;
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      place-self: center flex-start;
-    }
   }
+
   .k-ContributionCard__amount {
     grid-area: cc-action;
     place-self: center flex-end;
@@ -159,10 +157,6 @@ export const StyledContributionCard = styled.article`
     place-self: flex-start center;
     min-width: auto;
 
-    border-color: ${COLORS.primary1};
-    background-color: ${COLORS.primary1};
-    color: ${COLORS.background1};
-
     @media (min-width: ${ScreenConfig.S.min}px) {
       margin-right: ${pxToRem(30)};
       place-self: center flex-end;
@@ -171,13 +165,6 @@ export const StyledContributionCard = styled.article`
     &.k-ContributionCard__actionHide {
       display: none;
     }
-  }
-
-  .k-ContributionCard__inputWrapper--isEmpty + .k-ContributionCard__action {
-    cursor: not-allowed;
-    border-color: ${COLORS.line2};
-    background-color: ${COLORS.line2};
-    color: ${COLORS.background1};
   }
 
   .k-ContributionCard__description {

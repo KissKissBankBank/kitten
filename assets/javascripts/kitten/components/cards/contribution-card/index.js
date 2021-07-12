@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CloseButton } from '../../../components/buttons/close-button'
 import { StyledContributionCard } from './styles'
 import classNames from 'classnames'
@@ -14,6 +14,7 @@ import {
   Input,
   Action,
 } from './components'
+import { Context } from './context'
 
 export const ContributionCard = ({
   className,
@@ -30,6 +31,7 @@ export const ContributionCard = ({
   largeInput,
   ...props
 }) => {
+  const [isInputEmpty, setEmptyInput] = useState(true)
   if (!show) return null
 
   return (
@@ -62,10 +64,12 @@ export const ContributionCard = ({
       <div className={classNames('k-ContributionCard__gridWrapper', {
         'k-ContributionCard__gridWrapper--largeInput': largeInput,
       })}>
-        {React.Children.map(children, child => {
-          if (!child) return null
-          return ['Image'].includes(child.props.__TYPE) ? null : child
-        })}
+        <Context.Provider value={{ isInputEmpty, setEmptyInput }}>
+          {React.Children.map(children, child => {
+            if (!child) return null
+            return ['Image'].includes(child.props.__TYPE) ? null : child
+          })}
+        </Context.Provider>
       </div>
     </StyledContributionCard>
   )

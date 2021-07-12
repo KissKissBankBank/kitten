@@ -1,27 +1,28 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { TextInputWithUnit } from '../../../form/text-input-with-unit'
+import { Context } from '../context'
 
 export const Input = ({ valid, onChange, className, ...props }) => {
-  const [isInputEmpty, setEmptyInput] = useState(true)
-
   return (
-    <TextInputWithUnit
-      wrapperProps={{
-        className: classNames('k-ContributionCard__inputWrapper', {
-          'k-ContributionCard__inputWrapper--isEmpty': isInputEmpty,
-        }),
-      }}
-      variant="orion"
-      valid={valid}
-      className={classNames('k-ContributionCard__input', className)}
-      onChange={event => {
-        setEmptyInput(event.target?.value?.length === 0)
-        onChange(event)
-      }}
-      {...props}
-    />
+    <Context.Consumer>
+      {({ isInputEmpty, setEmptyInput }) => (
+        <TextInputWithUnit
+          wrapperProps={{
+            className: 'k-ContributionCard__inputWrapper',
+          }}
+          variant="orion"
+          valid={valid}
+          className={classNames('k-ContributionCard__input', className)}
+          onChange={event => {
+            setEmptyInput(event.target?.value?.length === 0)
+            onChange(event)
+          }}
+          {...props}
+        />
+      )}
+    </Context.Consumer>
   )
 }
 
