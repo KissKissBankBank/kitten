@@ -9,7 +9,10 @@ export const Image = props => {
   return (
     <div
       {...cleanProps}
-      className={classNames('k-ContributionCard__imageWrapper', props.className)}
+      className={classNames(
+        'k-ContributionCard__imageWrapper',
+        props.className,
+      )}
     />
   )
 }
