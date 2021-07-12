@@ -15,10 +15,11 @@ var StyledContainer = styled.div.withConfig({
 export var VerticalProgress = function VerticalProgress(_ref) {
   var children = _ref.children,
       withoutBorder = _ref.withoutBorder,
-      props = _objectWithoutProperties(_ref, ["children", "withoutBorder"]);
+      className = _ref.className,
+      props = _objectWithoutProperties(_ref, ["children", "withoutBorder", "className"]);
 
   return /*#__PURE__*/React.createElement(StyledContainer, {
-    className: classNames("k-VerticalProgress__wrapper", {
+    className: classNames('k-VerticalProgress__wrapper', className, {
       'k-VerticalProgress__wrapper--withoutBorder': withoutBorder
     })
   }, /*#__PURE__*/React.createElement("nav", {

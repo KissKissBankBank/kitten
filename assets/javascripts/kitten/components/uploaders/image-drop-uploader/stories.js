@@ -32,6 +32,7 @@ export const StatusReady = () => (
     typeErrorText="Wrong file type"
     sizeErrorText="File too larg"
     quantityErrorText="Too many files"
+    canCrop={boolean('canCrop', true)}
   />
 )
 
@@ -61,6 +62,7 @@ export const StatusManage = () => (
     typeErrorText="Wrong file type"
     sizeErrorText="File too larg"
     quantityErrorText="Too many files"
+    canCrop={boolean('canCrop', true)}
   />
 )
 
@@ -102,6 +104,7 @@ export const WithDistantImage = () => {
             typeErrorText="Wrong file type"
             sizeErrorText="File too larg"
             quantityErrorText="Too many files"
+            canCrop={boolean('canCrop', true)}
           />
         </GridCol>
         <GridCol col-l="3" offset-l="2">

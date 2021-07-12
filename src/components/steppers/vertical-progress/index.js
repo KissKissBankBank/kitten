@@ -35,9 +35,10 @@ var StyledContainer = _styledComponents.default.div.withConfig({
 var VerticalProgress = function VerticalProgress(_ref) {
   var children = _ref.children,
       withoutBorder = _ref.withoutBorder,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "withoutBorder"]);
+      className = _ref.className,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "withoutBorder", "className"]);
   return /*#__PURE__*/_react.default.createElement(StyledContainer, {
-    className: (0, _classnames.default)("k-VerticalProgress__wrapper", {
+    className: (0, _classnames.default)('k-VerticalProgress__wrapper', className, {
       'k-VerticalProgress__wrapper--withoutBorder': withoutBorder
     })
   }, /*#__PURE__*/_react.default.createElement("nav", {

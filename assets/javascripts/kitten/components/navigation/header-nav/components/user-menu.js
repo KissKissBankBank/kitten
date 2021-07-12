@@ -51,13 +51,10 @@ export const UserMenu = ({
     '--UserMenu-Button-colorActive': colorActive,
   }
 
-  const buttonClassName = classNames(
-    'k-HeaderNav__UserMenuButton',
-    {
-      'k-HeaderNav__UserMenuButton--hasArrow': hasArrow,
-      'k-HeaderNav__UserMenuButton--noPadding': !padding,
-    },
-  )
+  const buttonClassName = classNames('k-HeaderNav__UserMenuButton', {
+    'k-HeaderNav__UserMenuButton--hasArrow': hasArrow,
+    'k-HeaderNav__UserMenuButton--noPadding': !padding,
+  })
 
   return (
     <Context.Consumer>

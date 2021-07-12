@@ -11,11 +11,12 @@ import { UploadIcon } from '../../../components/icons/upload-icon';
 import { CloseButton } from '../../../components/buttons/close-button';
 import { Text } from '../../../components/typography/text';
 import { ImageCropper } from './components/image-cropper';
+import { pauseEvent } from './utils/pause-event';
 var CROP_WIDTH = 125;
 var StyledImageDropUploader = styled.div.withConfig({
   displayName: "image-drop-uploader__StyledImageDropUploader",
   componentId: "sc-1dd9ieg-0"
-})(["input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{outline:", " solid ", ";outline-offset:", ";}input[type='file']:focus:not(:focus-visible) + label{outline-color:transparent;}input[type='file']:focus-visible + label{outline-color:", ";}.k-ImageDropUploader__button{box-sizing:border-box;display:flex;width:100%;padding:", ";border-radius:", ";border:", " dashed ", ";flex-direction:column;align-items:center;gap:", ";text-align:center;color:", ";cursor:pointer;transition:border-color 0.2s ease,color 0.2s ease;> *{pointer-events:none;}&:hover{border-color:", ";color:", ";}}input[type='file']:active:not(:disabled) + .k-ImageDropUploader__button{border-color:", ";color:", ";}&.k-ImageDropUploader--isDraggingOver .k-ImageDropUploader__button{border-color:", ";color:", ";border-style:solid;}&.k-ImageDropUploader--error{.k-ImageDropUploader__button,.k-ImageDropUploader__manager{border-color:", ";border-style:solid;}}&.k-ImageDropUploader--disabled{.k-ImageDropUploader__button,.k-ImageDropUploader__manager{border-color:", ";background-color:", ";color:", ";cursor:not-allowed;}.k-ImageDropUploader__manager__cropper{pointer-events:none;background-color:", ";img{filter:grayscale(1) opacity(0.4);}}}.k-ImageDropUploader__button__title,.k-ImageDropUploader__manager__title{", " font-size:", ";}.k-ImageDropUploader__button__text,.k-ImageDropUploader__manager__text{", " font-size:", ";}.k-ImageDropUploader__manager{border-radius:", ";padding:", " ", " ", " ", ";width:100%;position:relative;box-sizing:border-box;border:", " solid ", ";display:flex;gap:", ";}.k-ImageDropUploader__manager__cropper{background-color:", ";width:", ";height:var(--ImageDropUploader-cropHeight,", ");overflow:hidden;position:relative;img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:var(--ImageDropUploader-cropX,0) var(--ImageDropUploader-cropY,0);pointer-events:none;-moz-user-select:none;}}.k-ImageDropUploader__manager__content{}.k-ImageDropUploader__manager__cancelButton{position:absolute;top:", ";right:", ";border-top-right-radius:", ";}.k-ImageDropUploader-imageCropper{cursor:grab;&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&.k-ImageDropUploader-imageCropper--isDragging{cursor:grabbing;}}"], COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, pxToRem(15), pxToRem(8), pxToRem(2), COLORS.line1, pxToRem(10), COLORS.font1, COLORS.primary4, COLORS.primary1, COLORS.primary1, COLORS.primary1, COLORS.primary1, COLORS.primary1, COLORS.error2, COLORS.line2, COLORS.background2, COLORS.grey1, COLORS.background2, TYPOGRAPHY.fontStyles.regular, stepToRem(-1), TYPOGRAPHY.fontStyles.light, stepToRem(-2), pxToRem(8), pxToRem(15), pxToRem(45), pxToRem(15), pxToRem(15), pxToRem(2), COLORS.line1, pxToRem(15), COLORS.primary4, pxToRem(CROP_WIDTH), pxToRem(CROP_WIDTH), pxToRem(-2), pxToRem(-2), pxToRem(8), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4);
+})(["input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{outline:", " solid ", ";outline-offset:", ";}input[type='file']:focus:not(:focus-visible) + label{outline-color:transparent;}input[type='file']:focus-visible + label{outline-color:", ";}.k-ImageDropUploader__button{box-sizing:border-box;display:flex;width:100%;padding:", ";border-radius:", ";border:", " dashed ", ";flex-direction:column;align-items:center;gap:", ";text-align:center;color:", ";cursor:pointer;transition:border-color 0.2s ease,color 0.2s ease;> *{pointer-events:none;}&:hover{border-color:", ";color:", ";}}input[type='file']:active:not(:disabled) + .k-ImageDropUploader__button{border-color:", ";color:", ";}&.k-ImageDropUploader--isDraggingOver .k-ImageDropUploader__button{border-color:", ";color:", ";border-style:solid;}&.k-ImageDropUploader--error{.k-ImageDropUploader__button,.k-ImageDropUploader__manager{border-color:", ";border-style:solid;}}&.k-ImageDropUploader--disabled{.k-ImageDropUploader__button,.k-ImageDropUploader__manager{border-color:", ";background-color:", ";color:", ";cursor:not-allowed;}.k-ImageDropUploader__manager__cropper{pointer-events:none;background-color:", ";img{filter:grayscale(1) opacity(0.4);}}}.k-ImageDropUploader__button__title,.k-ImageDropUploader__manager__title{", " font-size:", ";}.k-ImageDropUploader__button__text,.k-ImageDropUploader__manager__text{", " font-size:", ";}.k-ImageDropUploader__manager{border-radius:", ";padding:", " ", " ", " ", ";width:100%;position:relative;box-sizing:border-box;border:", " solid ", ";display:flex;gap:", ";}.k-ImageDropUploader__manager__cropper{background-color:", ";width:", ";height:var(--ImageDropUploader-cropHeight,", ");overflow:hidden;position:relative;img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:var(--ImageDropUploader-cropX,0) var(--ImageDropUploader-cropY,0);pointer-events:none;-moz-user-select:none;}}.k-ImageDropUploader__manager__content{align-self:center;}.k-ImageDropUploader__manager__cancelButton{position:absolute;top:", ";right:", ";border-top-right-radius:", ";}.k-ImageDropUploader__imageCropper{cursor:grab;&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&.k-ImageDropUploader__imageCropper--isDragging{cursor:grabbing;}}"], COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, pxToRem(15), pxToRem(8), pxToRem(2), COLORS.line1, pxToRem(10), COLORS.font1, COLORS.primary4, COLORS.primary1, COLORS.primary1, COLORS.primary1, COLORS.primary1, COLORS.primary1, COLORS.error2, COLORS.line2, COLORS.background2, COLORS.grey1, COLORS.background2, TYPOGRAPHY.fontStyles.regular, stepToRem(-1), TYPOGRAPHY.fontStyles.light, stepToRem(-2), pxToRem(8), pxToRem(15), pxToRem(45), pxToRem(15), pxToRem(15), pxToRem(2), COLORS.line1, pxToRem(15), COLORS.primary4, pxToRem(CROP_WIDTH), pxToRem(CROP_WIDTH), pxToRem(-2), pxToRem(-2), pxToRem(8), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4);
 
 var getCropHeight = function getCropHeight(ratio) {
   return CROP_WIDTH / ratio;
@@ -39,6 +40,8 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
       cancelButtonText = _ref$cancelButtonText === void 0 ? '' : _ref$cancelButtonText,
       _ref$className = _ref.className,
       className = _ref$className === void 0 ? '' : _ref$className,
+      _ref$canCrop = _ref.canCrop,
+      canCrop = _ref$canCrop === void 0 ? true : _ref$canCrop,
       _ref$cropRatio = _ref.cropRatio,
       cropRatio = _ref$cropRatio === void 0 ? 16 / 10 : _ref$cropRatio,
       _ref$disabled = _ref.disabled,
@@ -120,31 +123,29 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
     if (initialValue !== '') {
       setInternalStatus('manage');
     }
+
+    setImageDataURL(initialValue);
   }, [initialValue]);
 
   var handleDragEnter = function handleDragEnter(e) {
-    e.preventDefault();
-    e.stopPropagation();
+    pauseEvent(e);
     if (!isDraggedFileListValid(e)) return;
     setDraggingOver(true);
     setError(false);
   };
 
   var handleDragLeave = function handleDragLeave(e) {
-    e.preventDefault();
-    e.stopPropagation();
+    pauseEvent(e);
     setDraggingOver(false);
     setError(false);
   };
 
   var handleDragOver = function handleDragOver(e) {
-    e.preventDefault();
-    e.stopPropagation();
+    pauseEvent(e);
   };
 
   var handleDrop = function handleDrop(e) {
-    e.preventDefault();
-    e.stopPropagation();
+    pauseEvent(e);
     setDraggingOver(false);
     setError(false);
     if (!isDraggedFileListValid(e)) return;
@@ -271,7 +272,7 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
     })
   }, buttonText))), internalStatus === 'manage' && /*#__PURE__*/React.createElement("div", {
     className: "k-ImageDropUploader__manager"
-  }, /*#__PURE__*/React.createElement(ImageCropper, {
+  }, canCrop ? /*#__PURE__*/React.createElement(ImageCropper, {
     className: "k-ImageDropUploader__manager__cropper",
     style: {
       '--ImageDropUploader-cropHeight': pxToRem(getCropHeight(cropRatio))
@@ -282,7 +283,19 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
     "aria-describedby": "".concat(id, "-cropper-description"),
     initialCrop: internalInitialCrop,
     disabled: disabled
-  }), /*#__PURE__*/React.createElement("div", {
+  }) : /*#__PURE__*/React.createElement("div", {
+    className: "k-ImageDropUploader__manager__cropper",
+    style: {
+      '--ImageDropUploader-cropHeight': pxToRem(getCropHeight(cropRatio))
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    alt: "",
+    src: imageDataURL,
+    style: {
+      '--ImageDropUploader-cropX': '50%',
+      '--ImageDropUploader-cropY': '50%'
+    }
+  })), /*#__PURE__*/React.createElement("div", {
     className: "k-ImageDropUploader__manager__content",
     id: "".concat(id, "-cropper-description")
   }, /*#__PURE__*/React.createElement("div", {
@@ -312,6 +325,7 @@ ImageDropUploader.propTypes = {
   buttonText: PropTypes.node,
   buttonTitle: PropTypes.node,
   canCancel: PropTypes.bool,
+  canCrop: PropTypes.bool,
   cancelButtonText: PropTypes.string,
   cropRatio: PropTypes.number,
   disabled: PropTypes.bool,

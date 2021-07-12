@@ -32,7 +32,6 @@ var _useDropdown2 = require("../hooks/use-dropdown");
 var _arrowIcon = require("../../../../components/icons/arrow-icon");
 
 var namespace = 'kkbbAndCo';
-var DROPDOWN_CLASS = "".concat(namespace, "-UserMenuNext k-HeaderNav__UserMenuNext");
 var CLOSE_EVENT = "".concat(namespace, ":userMenu:close");
 
 var UserMenuNext = function UserMenuNext(_ref) {
@@ -44,12 +43,6 @@ var UserMenuNext = function UserMenuNext(_ref) {
       padding = _ref.padding,
       mobilePadding = _ref.mobilePadding,
       props = (0, _objectWithoutProperties2.default)(_ref, ["children", "dropdownContentWidth", "closeEvents", "dropdownAnchorSide", "className", "padding", "mobilePadding"]);
-
-  var getElementById = function getElementById(id) {
-    return function () {
-      return document.getElementById(id);
-    };
-  };
 
   var _useContext = (0, _react.useContext)(_context.Context),
       id = _useContext.id,
@@ -77,7 +70,7 @@ var UserMenuNext = function UserMenuNext(_ref) {
       menuProps = _useDropdown.menuProps,
       isDropdownExpanded = _useDropdown.isDropdownExpanded;
 
-  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, dropdownProps, {
+  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, dropdownProps, props, {
     className: (0, _classnames.default)(className, dropdownProps.className)
   }), /*#__PURE__*/_react.default.createElement(_dropdownButton.DropdownButton, (0, _extends2.default)({}, buttonProps, {
     style: {
