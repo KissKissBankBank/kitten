@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Use `gap` on Flex containers whenever feasible.
 - Breaking Change: `Utilities`: Generalization of `!important` on all utilities.
 - Feature: `Utilities`: Add `k-u-flex-gap` and `k-u-flex-wrap` utility classes.
 - Fix: `Title`: Style fixes (line-height and letter-spacing).
