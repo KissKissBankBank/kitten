@@ -15,7 +15,7 @@ const StoryContainer = ({ children }) => (
 export const Default = () => {
   return (
     <StoryContainer>
-      <ContributionCard>
+      <ContributionCard onClose={() => {}}>
         <ContributionCard.Image>
           <img src="/kitten.jpg" alt="" />
         </ContributionCard.Image>
