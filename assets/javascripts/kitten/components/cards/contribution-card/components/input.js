@@ -7,7 +7,7 @@ import { Context } from '../context'
 export const Input = ({ valid, onChange, className, ...props }) => {
   return (
     <Context.Consumer>
-      {({ isInputEmpty, setEmptyInput }) => (
+      {({ setEmptyInput }) => (
         <TextInputWithUnit
           wrapperProps={{
             className: 'k-ContributionCard__inputWrapper',

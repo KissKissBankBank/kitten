@@ -61,9 +61,11 @@ export const ContributionCard = ({
         return child.props.__TYPE === 'Image' ? child : null
       })}
 
-      <div className={classNames('k-ContributionCard__gridWrapper', {
-        'k-ContributionCard__gridWrapper--largeInput': largeInput,
-      })}>
+      <div
+        className={classNames('k-ContributionCard__gridWrapper', {
+          'k-ContributionCard__gridWrapper--largeInput': largeInput,
+        })}
+      >
         <Context.Provider value={{ isInputEmpty, setEmptyInput }}>
           {React.Children.map(children, child => {
             if (!child) return null

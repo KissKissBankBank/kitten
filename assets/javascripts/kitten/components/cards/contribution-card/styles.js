@@ -3,11 +3,6 @@ import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 
-const fadeOut = keyframes`
-0% { opacity: 1; }
-100% { opacity: 0; }
-`
-
 export const StyledContributionCard = styled.article`
   /* CARD STYLE */
 
@@ -109,7 +104,6 @@ export const StyledContributionCard = styled.article`
         grid-template-columns: auto ${pxToRem(102)} ${pxToRem(150)};
       }
     }
-
   }
 
   /* SUBCOMPONENTS */
