@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { CloseButton } from '../../../components/buttons/close-button'
 import { StyledContributionCard } from './styles'
 import classNames from 'classnames'
@@ -29,8 +29,6 @@ export const ContributionCard = ({
   onClose,
   ...props
 }) => {
-  const contributionRef = useRef(null)
-
   if (!show) return null
 
   return (
@@ -44,8 +42,6 @@ export const ContributionCard = ({
         '--contributionCard--border-color': borderColor,
         '--contributionCard--border-style': borderStyle,
       }}
-      ref={contributionRef}
-      role="dialog"
       {...props}
     >
       {onClose && (
