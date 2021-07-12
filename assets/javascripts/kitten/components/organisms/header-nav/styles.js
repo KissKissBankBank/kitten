@@ -43,14 +43,14 @@ export const StyledHeader = styled.header`
   .k-HeaderNav {
     display: flex;
     align-items: center;
-    overflow: hidden;
     width: 100%;
-    overflow: hidden;
     box-sizing: border-box;
     background: ${COLORS.background1};
+    transition: background-color 0.2s ease;
 
     .quickAccessLink {
       background: ${COLORS.background1};
+      transition: background-color 0.2s ease;
       height: 100%;
     }
 
@@ -75,13 +75,10 @@ export const StyledHeader = styled.header`
     }
   }
 
-  .k-HeaderNav--inactiveBackground .k-HeaderNav,
-  .k-HeaderNav--inactiveBackground .quickAccessLink {
+  &.k-HeaderNav--inactiveBackground .k-HeaderNav,
+  &.k-HeaderNav--inactiveBackground .k-HeaderNav__Button,
+  &.k-HeaderNav--inactiveBackground .quickAccessLink {
     background-color: ${COLORS.background3};
-  }
-
-  .k-Dropdown {
-    align-self: stretch;
   }
 
   .k-HeaderNav__BurgerMenu__button {
@@ -93,7 +90,34 @@ export const StyledHeader = styled.header`
     }
   }
 
-  .k-HeaderNav-Logo {
+  .k-HeaderNav__QuickAccessLink {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    left: -100%;
+    top: 0;
+    z-index: var(--HeaderNav_quickAccessLink_zIndex, 2);
+    padding: 0 ${pxToRem(30)};
+    background-color: ${COLORS.background1};
+    border-right: ${pxToRem(1)} solid ${COLORS.line1};
+    ${TYPOGRAPHY.fontStyles.regular}
+    color: ${COLORS.font1};
+    line-height: 1;
+    font-size: ${pxToRem(16)};
+    text-decoration: none;
+    transition: all 0.2s ease;
+    transition-delay: 0, 0;
+    opacity: 0;
+
+    &:focus,
+    &:active {
+      left: 0;
+      opacity: 1;
+      transition-delay: 0, 0.2s;
+    }
+  }
+
+  .k-HeaderNav__Logo {
     padding: ${pxToRem(10)};
     display: flex;
     align-items: center;
@@ -243,6 +267,7 @@ export const StyledHeader = styled.header`
     }
   }
 
+  .k-HeaderNav__UserMenuButton[aria-expanded='true'],
   .k-Dropdown--isExpanded .k-HeaderNav__UserMenuButton {
     &,
     &:hover {
@@ -272,8 +297,14 @@ export const StyledHeader = styled.header`
     padding-right: ${pxToRem(30)};
   }
 
-  .k-HeaderNav__UserMenuButton--nopadding {
-    padding: 0;
+  .k-HeaderNav__UserMenuButton--noPadding {
+    padding: 0 !important;
+  }
+
+  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+    .k-HeaderNav__UserMenuButton--noPaddingMobile {
+      padding: 0 !important;
+    }
   }
 
   .k-HeaderNav-nav--center {
@@ -336,7 +367,8 @@ export const StyledHeader = styled.header`
       padding: 0 ${pxToRem(15)};
     }
 
-    .k-HeaderNav__Button--hasIcon {
+    .k-Dropdown__button,
+    .k-HeaderNav__Button {
       min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
     }
 
@@ -370,7 +402,8 @@ export const StyledHeader = styled.header`
       padding: 0 ${pxToRem(40)};
     }
 
-    .k-HeaderNav__Button--hasIcon {
+    .k-Dropdown__button,
+    .k-HeaderNav__Button {
       min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
@@ -402,6 +435,7 @@ export const StyledHeader = styled.header`
   /* DROPDOWN */
   .k-Dropdown {
     display: flex;
+    align-self: stretch;
   }
 
   .k-Dropdown__content {
@@ -432,5 +466,58 @@ export const StyledHeader = styled.header`
     opacity: 1;
     overflow-x: hidden;
     overflow-y: scroll;
+  }
+
+  /* DROPDOWN */
+  .k-HeaderNavDropdown {
+    align-self: stretch;
+
+    .k-HeaderNavDropdown__menu {
+      position: absolute;
+      top: 100%;
+      z-index: 20;
+      /* Max-height is needed to allow scroll on menu.
+         The 100% is equal to the button height. */
+      max-height: calc(100vh - 100%);
+      box-shadow: 0 ${pxToRem(3)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
+      transition: margin 0.2s, visibility 0.2s, opacity 0.2s;
+
+      margin-top: ${pxToRem(-10)};
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      .k-HeaderNavDropdown__menu {
+        min-width: 100vw;
+        max-width: 100vw;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      position: relative;
+
+      .k-HeaderNavDropdown__menu {
+        min-width: max(${pxToRem(200)}, 100%);
+
+        &.k-HeaderNavDropdown__menu--is-left {
+          left: 0;
+        }
+
+        &.k-HeaderNavDropdown__menu--is-right {
+          right: 0;
+        }
+      }
+    }
+
+    &.k-HeaderNavDropdown--isExpanded .k-HeaderNavDropdown__menu {
+      margin-top: 0;
+      visibility: visible;
+      opacity: 1;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
   }
 `

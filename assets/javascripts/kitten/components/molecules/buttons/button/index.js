@@ -418,6 +418,7 @@ Button.propTypes = {
     'copper',
     'boron',
     'neon',
+    'iron',
     'social_facebook',
     'social_twitter',
     'social_linkedin',

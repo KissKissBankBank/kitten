@@ -239,7 +239,7 @@ export const StyledDashboard = styled.div`
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     .k-DashboardLayout {
       --DashboardLayout-main-margin: 7.5vw;
-      grid-template-columns: 25vw 1fr;
+      grid-template-columns: min(${pxToRem(384)}, 25vw) 1fr;
 
       .k-DashboardLayout__sideWrapper {
         display: flex;
@@ -284,13 +284,6 @@ export const StyledDashboard = styled.div`
           }
         }
       }
-    }
-  }
-
-  /* SUPER DESKTOP */
-  @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
-    .k-DashboardLayout {
-      grid-template-columns: ${pxToRem(385)} 1fr;
     }
   }
 

@@ -1344,7 +1344,7 @@ button:hover .c1 {
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout {
     --DashboardLayout-main-margin: 7.5vw;
-    grid-template-columns: 25vw 1fr;
+    grid-template-columns: min(24rem,25vw) 1fr;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
@@ -1401,12 +1401,6 @@ button:hover .c1 {
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main > *:not(.k-DashboardLayout__fullWidth) {
     margin-left: var(--DashboardLayout-main-margin);
     margin-right: var(--DashboardLayout-main-margin);
-  }
-}
-
-@media (min-width:90rem) {
-  .c0 .k-DashboardLayout {
-    grid-template-columns: 24.0625rem 1fr;
   }
 }
 
@@ -1891,7 +1885,7 @@ button:hover .c1 {
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout {
     --DashboardLayout-main-margin: 7.5vw;
-    grid-template-columns: 25vw 1fr;
+    grid-template-columns: min(24rem,25vw) 1fr;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
@@ -1948,12 +1942,6 @@ button:hover .c1 {
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main > *:not(.k-DashboardLayout__fullWidth) {
     margin-left: var(--DashboardLayout-main-margin);
     margin-right: var(--DashboardLayout-main-margin);
-  }
-}
-
-@media (min-width:90rem) {
-  .c0 .k-DashboardLayout {
-    grid-template-columns: 24.0625rem 1fr;
   }
 }
 

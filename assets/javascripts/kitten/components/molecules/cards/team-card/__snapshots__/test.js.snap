@@ -2,13 +2,13 @@
 
 exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM elGGRU"
+  className="sc-EHOje jRbWYX"
 >
   
   
   <a
     aria-label="linkedin"
-    className="sc-bxivhb emZnqt k-Button sc-ifAKCX cmwmYw k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_linkedin k-Button--andromeda k-Button--hasIcon"
+    className="sc-htpNat gtRvfy k-Button sc-bxivhb fVJshV k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_linkedin k-Button--andromeda k-Button--hasIcon"
     href="https://www.linkedin.com"
     rel="noopener"
     style={
@@ -38,30 +38,30 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
 exports[`<TeamCard /> with some props matches with snapshot 1`] = `
 Array [
   <div
-    className="sc-htpNat fLLWtn k-u-margin-bottom-double"
+    className="sc-bwzfXH cnBWiK k-u-margin-bottom-double"
     title="Title"
   />,
   <div
-    className="sc-bwzfXH kRhUjH"
+    className="sc-bdVaJa jtfdLD"
   >
     <span
-      className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-default k-u-weight-bold"
+      className="k-u-color-font1 k-u-size-default k-u-weight-bold"
     >
       Lorem Ipsum
     </span>
     <br />
     <span
-      className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-light"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-light"
     >
       Consectetur
     </span>
   </div>,
   <div
-    className="sc-bZQynM elGGRU"
+    className="sc-EHOje jRbWYX"
   >
     <a
       aria-label="E-mail"
-      className="sc-bxivhb dFgkKo k-Button sc-ifAKCX cmwmYw k-ButtonIcon k-ButtonIcon--phone k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="sc-htpNat dVnnwM k-Button sc-bxivhb fVJshV k-ButtonIcon k-ButtonIcon--phone k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
       href="mailto:example@kisskissbankbank.com"
       style={
         Object {
@@ -87,7 +87,7 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-bxivhb dFgkKo k-Button sc-ifAKCX cmwmYw k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up--important k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="sc-htpNat dVnnwM k-Button sc-bxivhb fVJshV k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up--important k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
       href="tel:06 00 00 00 00"
       style={
         Object {
@@ -111,7 +111,7 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-EHOje hqFnkx k-u-hidden@xs-down--important k-TeamCardIcons__buttonIcon"
+      className="sc-ifAKCX fdTzCw k-u-hidden@xs-down--important k-TeamCardIcons__buttonIcon"
       href="tel:06 00 00 00 00"
     >
       <span
@@ -124,7 +124,7 @@ Array [
       </span>
       <span
         aria-label="06 00 00 00 00"
-        className="sc-bxivhb dFgkKo k-Button sc-ifAKCX cmwmYw k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+        className="sc-htpNat dVnnwM k-Button sc-bxivhb fVJshV k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
         style={
           Object {
             "--border-radius": 0,
@@ -147,7 +147,7 @@ Array [
     </a>
     <a
       aria-label="linkedin"
-      className="sc-bxivhb emZnqt k-Button sc-ifAKCX cmwmYw k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_linkedin k-Button--andromeda k-Button--hasIcon"
+      className="sc-htpNat gtRvfy k-Button sc-bxivhb fVJshV k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_linkedin k-Button--andromeda k-Button--hasIcon"
       href="https://www.linkedin.com"
       rel="noopener"
       style={
@@ -173,7 +173,7 @@ Array [
     </a>
     <a
       aria-label="twitter"
-      className="sc-bxivhb jFhuRf k-Button sc-ifAKCX cmwmYw k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_twitter k-Button--andromeda k-Button--hasIcon"
+      className="sc-htpNat fTwlFd k-Button sc-bxivhb fVJshV k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_twitter k-Button--andromeda k-Button--hasIcon"
       href="https://www.twitter.com"
       rel="noopener"
       style={

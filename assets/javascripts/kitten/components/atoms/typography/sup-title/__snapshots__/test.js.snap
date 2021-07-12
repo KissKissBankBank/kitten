@@ -2,7 +2,8 @@
 
 exports[`<SupTitle /> by default matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-transform-uppercase k-u-weight-bold"
+  className="k-u-size-tiny k-u-transform-uppercase k-u-weight-bold"
+  lineHeigth="normal"
 >
   Lorem ipsun
 </span>

@@ -100,6 +100,18 @@ var modifierStyles = function modifierStyles(modifier) {
       activeColor = _colorsConfig.default.background1;
       break;
 
+    case 'iron':
+      borderColor = _colorsConfig.default.error;
+      backgroundColor = _colorsConfig.default.error;
+      color = _colorsConfig.default.background1;
+      hoverBorderColor = _colorsConfig.default.error4;
+      hoverBgColor = _colorsConfig.default.error4;
+      hoverColor = _colorsConfig.default.background1;
+      activeBorderColor = _colorsConfig.default.error5;
+      activeBgColor = _colorsConfig.default.error5;
+      activeColor = _colorsConfig.default.background1;
+      break;
+
     /* Social modifiers */
 
     case 'social_facebook':

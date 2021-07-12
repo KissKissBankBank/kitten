@@ -2,7 +2,7 @@
 
 exports[`<ImageCropper /> matches with empty snapshot 1`] = `
 <div
-  className="sc-gzVnrw czXvaz k-UploadAndCropper"
+  className="sc-bZQynM bqJTVP k-UploadAndCropper"
 >
   <label
     className="sc-bdVaJa cioPrE k-Label k-u-margin-bottom-singleHalf k-Label--normal"
@@ -12,7 +12,7 @@ exports[`<ImageCropper /> matches with empty snapshot 1`] = `
     Lorem ipsum…
   </label>
   <div
-    className="sc-EHOje hOolMu k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
+    className="sc-ifAKCX eZQOng k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
   >
     <input
       accept=".jpg,.jpeg,.gif,.png"
@@ -64,7 +64,7 @@ exports[`<ImageCropper /> matches with empty snapshot 1`] = `
 
 exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
 <div
-  className="sc-gzVnrw czXvaz k-UploadAndCropper"
+  className="sc-bZQynM bqJTVP k-UploadAndCropper"
 >
   <label
     className="sc-bdVaJa cioPrE k-Label k-u-margin-bottom-singleHalf k-Label--normal"
@@ -74,7 +74,7 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
     Lorem ipsum…
   </label>
   <div
-    className="sc-EHOje hOolMu k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
+    className="sc-ifAKCX eZQOng k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
   >
     <input
       accept=".jpg,.jpeg,.gif,.png"
@@ -123,7 +123,28 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
   >
     <div
       className="k-Cropper__wrapper__cropper"
-    />
+    >
+      <div
+        className="k-Cropper"
+        style={
+          Object {
+            "height": 0,
+            "width": 0,
+          }
+        }
+      >
+        <img
+          alt="picture"
+          src="/kitten.jpg"
+          style={
+            Object {
+              "maxWidth": "100%",
+              "opacity": 0,
+            }
+          }
+        />
+      </div>
+    </div>
     <div
       className="k-Cropper__wrapper__slider"
     >
@@ -140,7 +161,7 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
         Zoom…
       </label>
       <div
-        className="sc-bZQynM ksjLCO k-RangeSlider"
+        className="sc-EHOje kqHbFs k-RangeSlider"
         style={
           Object {
             "--range-input-ratio": 0,

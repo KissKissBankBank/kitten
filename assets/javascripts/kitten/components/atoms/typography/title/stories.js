@@ -1,16 +1,94 @@
 import React from 'react'
-import { text, boolean, select, color } from '@storybook/addon-knobs'
 import { Title } from './index'
-import { COLORS, Marger, Container, Text } from '../../../..'
+import { Container } from '../../../..'
 
-const modifierOptions = {
-  Primary: 'primary',
-  Secondary: 'secondary',
-  Tertiary: 'tertiary',
-  Quaternary: 'quaternary',
-  Quinary: 'quinary',
-  Senary: 'senary',
-  Septenary: 'septenary',
+const argTypes = {
+  modifier: {
+    name: 'modifier',
+    description: 'Title have seven modifiers. With different size depending on the device (desktop, tablet and mobile)',
+    options: [
+      'primary',
+      'secondary',
+      'tertiary',
+      'quaternary',
+      'quinary',
+      'senary',
+      'septenary',
+    ],
+    control: {type: 'select'},
+  },
+  noMargin: {
+    name: 'noMargin',
+    description: 'Remove default margins of `title` attribut.',
+    control: {type: 'boolean'},
+  },
+  cssColor: {
+    name: 'cssColor',
+    description: 'Specify a color (use a CSS color string).',
+    control: {type: 'color'},
+  },
+  italic: {
+    name: 'italic',
+    description: 'Use `font-style: italic`.',
+    control: { type: 'boolean'},
+  },
+}
+
+const args = {
+  tag: 'h1',
+  modifier: 'primary',
+  noMargin: false,
+  italic: false,
+  cssColor: null,
+}
+
+export const Default = ({
+  modifier,
+  noMargin,
+  italic,
+  cssColor,
+  ...props
+}) => (
+  <Container>
+   <div class="k-u-margin-top-quadruple">
+       <Title
+         modifier={modifier}
+         italic={italic}
+         noMargin={noMargin}
+         cssColor={cssColor}
+         {...props}
+       >
+        Lorem ipsum dolor sit amet
+       </Title>
+     </div>
+   </Container>
+);
+
+Default.args = args;
+Default.argTypes = argTypes;
+
+export const WithoutMargin = Default.bind({});
+WithoutMargin.args = {
+  ...Default.args,
+  noMargin: true,
+}
+
+WithoutMargin.parameters = {
+  docs: {
+    description: {
+      story: "Without margin"
+    }
+  }
+}
+
+export const WithItalic = Default.bind({});
+WithItalic.args = {...Default.args, italic: true};
+WithItalic.parameters = {
+  docs: {
+    description: {
+      story: "With italic style"
+    }
+  }
 }
 
 export default {
@@ -20,167 +98,6 @@ export default {
     component: Title,
     componentSubtitle: 'List of Title',
   },
+  args,
+  argTypes,
 }
-
-export const DefaultProps = () => (
-  <Container>
-    <Marger top="4">
-      <Title
-        modifier={select('Modifier', modifierOptions, 'primary')}
-        italic={boolean('Italic', false)}
-        noMargin={boolean('No margin', false)}
-        cssColor={color('cssColor', COLORS.font1)}
-      >
-        {text('Title', 'Lorem ipsum dolor sit amet')}
-      </Title>
-    </Marger>
-  </Container>
-)
-
-export const Modifier = () => (
-  <>
-    <Marger>
-      <Text weight="bold">Primary</Text>
-      <br />
-      <Text size="micro">• Desktop version - 64px</Text>
-      <br />
-      <Title modifier="primary">Lorem ipsum dolor sit amet…</Title>
-      <Marger top="1">
-        <Text size="micro">• Tablet version - 48px</Text>
-        <br />
-        <Title modifier="secondary">Lorem ipsum dolor sit amet…</Title>
-      </Marger>
-      <Marger top="1">
-        <Text size="micro">• Mobile version - 36px</Text>
-        <br />
-        <Title modifier="tertiary">Lorem ipsum dolor sit amet…</Title>
-      </Marger>
-    </Marger>
-
-    <Marger top="7">
-      <Text weight="bold">Secondary</Text>
-      <br />
-      <Text size="micro">• Desktop version - 48px</Text>
-      <br />
-      <Title modifier="secondary">Lorem ipsum dolor sit amet…</Title>
-      <Marger top="1">
-        <Text size="micro">• Tablet version - 36px</Text>
-        <br />
-        <Title modifier="tertiary">Lorem ipsum dolor sit amet…</Title>
-      </Marger>
-      <Marger top="1">
-        <Text size="micro">• Mobile version - 32px</Text>
-        <br />
-        <Title modifier="quaternary">Lorem ipsum dolor sit amet…</Title>
-      </Marger>
-    </Marger>
-
-    <Marger top="7">
-      <Text weight="bold">Tertiary</Text>
-      <br />
-      <Text size="micro">• Desktop version - 36px</Text>
-      <br />
-      <Title modifier="tertiary">Lorem ipsum dolor sit amet…</Title>
-      <Marger top="1">
-        <Text size="micro">• Tablet version - 32px</Text>
-        <br />
-        <Title modifier="quaternary">Lorem ipsum dolor sit amet…</Title>
-      </Marger>
-      <Marger top="1">
-        <Text size="micro">• Mobile version - 28px</Text>
-        <br />
-        <Title modifier="quinary">Lorem ipsum dolor sit amet…</Title>
-      </Marger>
-    </Marger>
-
-    <Marger top="7">
-      <Text weight="bold">Quaternary</Text>
-      <br />
-      <Text size="micro">• Desktop version - 32px</Text>
-      <br />
-      <Title modifier="quaternary">Lorem ipsum dolor sit amet…</Title>
-      <Marger top="1">
-        <Text size="micro">• Tablet version - 28px</Text>
-        <br />
-        <Title modifier="quinary">Lorem ipsum dolor sit amet…</Title>
-      </Marger>
-      <Marger top="1">
-        <Text size="micro">• Mobile version - 24px</Text>
-        <br />
-        <Title modifier="senary">Lorem ipsum dolor sit amet…</Title>
-      </Marger>
-    </Marger>
-
-    <Marger top="7">
-      <Text weight="bold">Quinary</Text>
-      <br />
-      <Text size="micro">• Desktop version - 28px</Text>
-      <br />
-      <Title modifier="quinary">Lorem ipsum dolor sit amet…</Title>
-      <Marger top="1">
-        <Text size="micro">• Tablet version - 24px</Text>
-        <br />
-        <Title modifier="senary">Lorem ipsum dolor sit amet…</Title>
-      </Marger>
-      <Marger top="1">
-        <Text size="micro">• Mobile version - 20px</Text>
-        <br />
-        <Title modifier="septenary">Lorem ipsum dolor sit amet…</Title>
-      </Marger>
-    </Marger>
-
-    <Marger top="7">
-      <Text weight="bold">Senary</Text>
-      <br />
-      <Text size="micro">• Desktop version - 24px</Text>
-      <br />
-      <Title modifier="senary">Lorem ipsum dolor sit amet…</Title>
-      <Marger top="1">
-        <Text size="micro">• Tablet version - 20px</Text>
-        <br />
-        <Title modifier="septenary">Lorem ipsum dolor sit amet…</Title>
-      </Marger>
-      <Marger top="1">
-        <Text size="micro">• Mobile version - 18px</Text>
-        <br />
-        <Text size="big" weight="bold">
-          Lorem ipsum dolor sit amet…
-        </Text>
-      </Marger>
-    </Marger>
-
-    <Marger top="7">
-      <Text weight="bold">Septenary</Text>
-      <br />
-      <Text size="micro">• Desktop version - 20px</Text>
-      <br />
-      <Title modifier="septenary">Lorem ipsum dolor sit amet…</Title>
-      <Marger top="1">
-        <Text size="micro">• Tablet version - 18px</Text>
-        <br />
-        <Text size="big" weight="bold">
-          Lorem ipsum dolor sit amet…
-        </Text>
-      </Marger>
-      <Marger top="1">
-        <Text size="micro">• Mobile version - 16px</Text>
-        <br />
-        <Text size="default" weight="bold">
-          Lorem ipsum dolor sit amet…
-        </Text>
-      </Marger>
-    </Marger>
-  </>
-)
-
-export const WithoutMargin = () => (
-  <Title modifier="primary" noMargin>
-    Lorem ipsum dolor sit amet…
-  </Title>
-)
-
-export const Italic = () => (
-  <Title modifier="primary" italic>
-    Lorem ipsum dolor sit amet…
-  </Title>
-)

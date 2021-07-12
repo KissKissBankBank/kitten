@@ -47,6 +47,7 @@ const modifierOptions = {
   Copper: 'copper',
   Boron: 'boron',
   Neon: 'neon',
+  Iron: 'iron',
   Social_facebook: 'social_facebook',
   Social_twitter: 'social_twitter',
   Social_linkedin: 'social_linkedin',

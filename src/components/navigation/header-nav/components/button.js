@@ -37,7 +37,8 @@ var Button = function Button(_ref) {
       max = _ref$hiddenText.max,
       as = _ref.as,
       style = _ref.style,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style"]);
+      className = _ref.className,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style", "className"]);
   var hiddenMin = min ? "k-u-hidden@".concat(min, "-up--important") : '';
   var hiddenMax = max ? "k-u-hidden@".concat(max, "-down--important") : '';
   var textClassName = "k-HeaderNav__Button__text ".concat(hiddenMin, " ").concat(hiddenMax).trim();
@@ -64,7 +65,7 @@ var Button = function Button(_ref) {
   }
 
   return /*#__PURE__*/_react.default.createElement(ButtonComponent, (0, _extends2.default)({}, props, buttonProps, {
-    className: (0, _classnames.default)('k-HeaderNav__Button', {
+    className: (0, _classnames.default)('k-HeaderNav__Button', className, {
       'k-HeaderNav__Button--hasIcon': !!icon,
       'k-HeaderNav__Button--hasText': !!text
     }),

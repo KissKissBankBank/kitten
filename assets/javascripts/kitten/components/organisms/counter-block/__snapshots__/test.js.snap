@@ -2,10 +2,10 @@
 
 exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX hzwTIL"
+  className="sc-bxivhb dlmdLq"
 >
   <div
-    className="sc-htpNat cFMsPG"
+    className="sc-bwzfXH eHjVoH"
   >
     <p
       className="sc-bdVaJa eYhATS k-Title k-Title--tertiary k-Title--noMargin"
@@ -19,13 +19,13 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     </p>
   </div>
   <div
-    className="sc-EHOje fPtIOk"
+    className="sc-ifAKCX bXMjAs"
   >
     <div
-      className="sc-bZQynM esQqxf k-u-hidden@m-down"
+      className="sc-EHOje hOqxns k-u-hidden@m-down"
     >
       <div
-        className="sc-bxivhb gmqSjE k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
+        className="sc-htpNat tODhy k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
         color="#222"
         style={
           Object {
@@ -36,15 +36,15 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       />
     </div>
     <p
-      className="sc-bwzfXH uTxCW k-u-style-italic k-u-weight-bold styledText"
+      className="k-u-style-italic k-u-weight-bold styledText"
     >
       13 106
     </p>
     <div
-      className="sc-bZQynM esQqxf k-u-hidden@m-down"
+      className="sc-EHOje hOqxns k-u-hidden@m-down"
     >
       <div
-        className="sc-bxivhb gmqSjE k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
+        className="sc-htpNat tODhy k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
         color="#222"
         style={
           Object {
@@ -56,10 +56,10 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="sc-htpNat afnDk"
+    className="sc-bwzfXH dVnEBe"
   >
     <p
-      className="sc-bwzfXH uTxCW k-u-size-huge k-u-style-italic k-u-weight-light styledSubTitle"
+      className="k-u-size-huge k-u-style-italic k-u-weight-light styledSubTitle"
     >
       bar
     </p>

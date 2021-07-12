@@ -62,20 +62,8 @@ Title.defaultProps = {
 
 Title.propTypes = {
   tag: PropTypes.string,
-  /**
-    Title have seven modifiers. With different size depending on the device (desktop, tablet and mobile)
-  */
   modifier: PropTypes.oneOf(titleModifiersNames),
-  /**
-    Remove default margins of `title` attribut.
-  */
   noMargin: PropTypes.bool,
-  /**
-    Specify a color (use a CSS color string).
-  */
   cssColor: PropTypes.string,
-  /**
-    Use `font-style: italic`.
-  */
   italic: PropTypes.bool,
 }

@@ -5,7 +5,123 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking Change: Move component files around.
-- Feature: `Text`: Add default value 'light' to `weight` prop.
+
+## [3.26.0] - 2021-07-12
+
+Feature:
+
+- `ContributionCard`: Add `largeInput` prop.
+
+Fixes:
+
+- `ContributionCard`: Fix accessibility.
+- `ContributionCard`: Fix image ratio on desktop.
+- `HeaderNav`: Fix user menu position on mobile.
+- `ImageDropUploader`: Vertically center description text.
+- `TagButton`: Update styles.
+
+## [3.25.2] - 2021-07-09
+
+Fix:
+
+- `parseHtml`: Return empty string if we cannot use dom.
+
+## [3.25.1] - 2021-07-09
+
+Fix:
+
+- `VerticalProgress`: Remove `max-width` on `k-VerticalProgress__wrapper`.
+
+## [3.25.0] - 2021-07-08
+
+Feature:
+
+- `parseHtml`: We sanitize by default the markup with an option `parseHtml(value, { sanitize: false })` to disable it.
+
+## [3.24.0] - 2021-07-08
+
+Feature:
+
+- `ImageDropUploader`: Add `canCrop` prop, defaults to `true`.
+
+Fixes:
+
+- `VerticalProgress`: Update styles.
+- `TagButton` Update styles.
+- `ImageDropUploader`: Update image URL on `initialValue` prop change.
+- `ImageDropUploader`: Disable text select on cropper drag.
+
+## [3.23.1] - 2021-07-08
+
+Fix:
+
+- `ContributionCard`: Update styles.
+
+## [3.23.0] - 2021-07-06
+
+Features:
+
+- `DocumentsDropUploader`: Add component.
+- `DocumentsStatusBox`: Add component.
+- `ImageDropUploader`: Add component.
+- `TagInput`: Add component.
+- `ContributionCard`: Add `isInputValid` prop.
+- `ContributionCard`: Add `onClose` prop and delete `closeButton` prop.
+- `GiftIcon`: Update icon.
+- `RadioButton`: Modify `focus`, `active`, `hover` and `checked` states.
+- `VerticalProgress`: Add `withoutBorder` prop.
+
+## [3.22.1] - 2021-07-01
+
+Fix:
+
+- `StickyContainer`: Fix spacer height definition.
+
+## [3.22.0] - 2021-07-01
+
+Features:
+
+- `StickyContainer`: Add `"never"` value for `isSticky` prop.
+- `HeaderMenu`: Improve accessibility.
+- `HeaderNav.UserMenuNext`: Add `mobilePadding` prop.
+
+## [3.21.0] - 2021-06-21
+
+Feature:
+
+- `HeaderNav`: Add `BurgerMenuNext` and `UserMenuNext` subcomponents.
+
+Fixes:
+
+- `Modal/Next`: Fix modal content height for decrepit versions of Safari.
+- `VerticalCard`: Fix `description` PropType to node, allowing HTML parsing.
+- `CrowdfundingCard`: Fix `progress` PropTypes, allowing boolean values.
+- `Carousel`: Fix `Button` tiny size prop.
+
+## [3.20.0] - 2021-06-17
+
+Features:
+
+- Add `error4` and `error5` to colors config.
+- `Text`: Add `light` as default for `weight` prop.
+- `Button`: Add `iron` modifier.
+- `ToggleTip`: Add `targetElement` prop.
+
+Fixes:
+
+- `Text`: Fix `cssColor` bug and remove Styled Component dependency.
+- `TextInputWithUnit`: Fix disabled state and `unitWord` styles.
+
+## [3.19.0] - 2021-06-11
+
+Features:
+
+- `ImageCropper`: Add `onUpload` prop, called when uploading a new file.
+
+Fixes:
+
+- `DashboardLayout`: Remove horizontal scroll between 1440px and 1550px.
+- `ImageCropper`: Fix behaviour of component, breaking when uploading a file.
 
 ## [3.18.1] - 2021-06-10
 

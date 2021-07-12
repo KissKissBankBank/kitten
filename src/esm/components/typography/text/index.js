@@ -3,28 +3,23 @@ import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutPr
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
-var StyledText = styled.span.withConfig({
-  displayName: "text__StyledText",
-  componentId: "sc-1jqe2sw-0"
-})(["", ""], function (_ref) {
-  var cssColor = _ref.cssColor;
-  return cssColor && css(["color:", ";"], cssColor);
-});
-export var Text = function Text(_ref2) {
-  var className = _ref2.className,
-      color = _ref2.color,
-      cssColor = _ref2.cssColor,
-      decoration = _ref2.decoration,
-      lineHeight = _ref2.lineHeight,
-      setting = _ref2.setting,
-      size = _ref2.size,
-      fontStyle = _ref2.fontStyle,
-      tag = _ref2.tag,
-      transform = _ref2.transform,
-      weight = _ref2.weight,
-      others = _objectWithoutProperties(_ref2, ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "transform", "weight"]);
+export var Text = function Text(_ref) {
+  var className = _ref.className,
+      color = _ref.color,
+      cssColor = _ref.cssColor,
+      decoration = _ref.decoration,
+      lineHeight = _ref.lineHeight,
+      setting = _ref.setting,
+      size = _ref.size,
+      fontStyle = _ref.fontStyle,
+      tag = _ref.tag,
+      as = _ref.as,
+      transform = _ref.transform,
+      weight = _ref.weight,
+      style = _ref.style,
+      others = _objectWithoutProperties(_ref, ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "as", "transform", "weight", "style"]);
 
+  var Tag = as || tag;
   var textClassName = classNames({
     // Color.
     'k-u-color-font1': color == 'font1',
@@ -61,10 +56,11 @@ export var Text = function Text(_ref2) {
     'k-u-weight-regular': weight == 'regular',
     'k-u-weight-bold': weight == 'bold'
   }, className);
-  return /*#__PURE__*/React.createElement(StyledText, _extends({
-    as: tag
-  }, others, {
-    className: textClassName
+  return /*#__PURE__*/React.createElement(Tag, _extends({}, others, {
+    className: textClassName,
+    style: cssColor ? _extends({
+      color: cssColor
+    }, style) : style
   }));
 };
 Text.propTypes = {
@@ -124,5 +120,5 @@ Text.defaultProps = {
   fontStyle: null,
   tag: 'span',
   transform: null,
-  weight: null
+  weight: 'light'
 };

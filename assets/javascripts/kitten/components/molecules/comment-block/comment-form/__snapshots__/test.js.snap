@@ -2,16 +2,16 @@
 
 exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`] = `
 <div
-  className="sc-htoDjs jsaOOI"
+  className="sc-gzVnrw kCbSGM"
 >
   <div
-    className="sc-bxivhb eVBmAO"
+    className="sc-htpNat jOCivv"
   >
     <div
-      className="sc-ifAKCX dXFfMI"
+      className="sc-bxivhb cdaogt"
     >
       <div
-        className="sc-bZQynM fVSzgU"
+        className="sc-EHOje qrHlx"
       >
         <svg
           className="k-ColorSvg"
@@ -33,7 +33,7 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         </svg>
       </div>
       <span
-        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
+        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX jFoXrH"
       >
         <img
           alt="Image alt"
@@ -44,17 +44,17 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
     </div>
   </div>
   <div
-    className="sc-dnqmqq edtGeW"
+    className="sc-htoDjs dnHiPG"
   >
     <div
-      className="sc-iwsKbI jpDFaK"
+      className="sc-dnqmqq igAaxS"
     >
       <textarea
         aria-describedby=""
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="sc-gZMcBi fLjKTd"
+        className="sc-iwsKbI cZEqwZ"
         defaultValue=""
         disabled={false}
         id={null}
@@ -63,10 +63,10 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         rows="1"
       />
       <div
-        className="sc-gqjmRU laqAat"
+        className="sc-gZMcBi inrZDX"
       >
         <span
-          className="sc-VigVT gHjKnO"
+          className="sc-gqjmRU TPpbB"
         />
       </div>
     </div>
@@ -74,7 +74,7 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
       className="sc-bdVaJa bNTSMG"
     >
       <span
-        className="sc-htpNat KtFsv k-u-color-error k-u-size-micro k-u-weight-regular"
+        className="k-u-color-error k-u-size-micro k-u-weight-regular"
         id=""
       >
         Cum sociis natoque penatibus et magnis
@@ -86,16 +86,16 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
 
 exports[`<CommentForm /> should match its empty snapshot 1`] = `
 <div
-  className="sc-htoDjs jsaOOI"
+  className="sc-gzVnrw kCbSGM"
 >
   <div
-    className="sc-bxivhb eVBmAO"
+    className="sc-htpNat jOCivv"
   >
     <div
-      className="sc-ifAKCX dXFfMI"
+      className="sc-bxivhb cdaogt"
     >
       <span
-        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-EHOje gZpgHE"
+        className="sc-bwzfXH uCWaF k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX jFoXrH"
       >
         <img
           alt="Image alt"
@@ -106,17 +106,17 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
     </div>
   </div>
   <div
-    className="sc-dnqmqq edtGeW"
+    className="sc-htoDjs dnHiPG"
   >
     <div
-      className="sc-iwsKbI jpDFaK"
+      className="sc-dnqmqq igAaxS"
     >
       <textarea
         aria-describedby=""
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="sc-gZMcBi fLjKTd"
+        className="sc-iwsKbI cZEqwZ"
         defaultValue=""
         disabled={false}
         id="custom-textarea-id"
@@ -125,10 +125,10 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         rows="1"
       />
       <div
-        className="sc-gqjmRU laqAat"
+        className="sc-gZMcBi inrZDX"
       >
         <span
-          className="sc-VigVT gHjKnO"
+          className="sc-gqjmRU TPpbB"
         />
       </div>
     </div>
@@ -136,7 +136,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       className="sc-bdVaJa bNTSMG"
     >
       <span
-        className="sc-htpNat KtFsv k-u-color-error k-u-size-micro k-u-weight-regular"
+        className="k-u-color-error k-u-size-micro k-u-weight-regular"
         id=""
       >
         Cum sociis natoque penatibus et magnis

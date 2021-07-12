@@ -19,7 +19,7 @@ const StoryContainer = ({ children }) => (
 export const Default = () => {
   return (
     <StoryContainer>
-      <VerticalProgress>
+      <VerticalProgress withoutBorder>
         <VerticalProgress.Step statusType="actions" progressTitle="Brouillon">
           <div className="k-u-margin-top-singleHalf k-u-margin-bottom-double">
             <Text weight="light" size="tiny" lineHeight="normal">

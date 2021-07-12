@@ -6,8 +6,10 @@ import { StickyContainer } from '../../../components/layout/sticky-container'
 import { Button } from './components/button'
 import { Logo } from './components/logo'
 import { BurgerMenu } from './components/burger-menu'
+import { BurgerMenuNext } from './components/burger-menu-next'
 import { Nav } from './components/nav'
 import { UserMenu } from './components/user-menu'
+import { UserMenuNext } from './components/user-menu-next'
 import { Context } from './components/context'
 import { Right } from './components/right'
 import { Centered } from './components/centered'
@@ -16,17 +18,6 @@ import { Logged } from './components/logged'
 import { Hidden } from './components/hidden'
 import { QuickAccessLink } from './components/quick-access-link'
 
-import {
-  getFocusableElementsFrom,
-  keyboardNavigation,
-} from '../../../helpers/dom/a11y'
-import domEvents, {
-  DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
-  DROPDOWN_LAST_FOCUS_REACHED_EVENT,
-  TOGGLE_DROPDOWN_EVENT,
-  dispatchEvent,
-} from '../../../helpers/dom/events'
-import { DROPDOWN_ANIMATED_DELAY } from '../../../constants/dropdown-config'
 import { usePrevious } from '../../../helpers/utils/use-previous-hook'
 
 import { StyledHeader } from './styles'
@@ -49,76 +40,6 @@ const HeaderNav = ({
   const stickyContainerRef = useRef(null)
   const headerRef = useRef(null)
   const previousStickyState = usePrevious(stickyState)
-
-  const focusDropdown = ({ detail: dropdown }) => {
-    dispatchEvent(TOGGLE_DROPDOWN_EVENT, { nextExpandedState: false })()
-    dropdown.focus()
-  }
-
-  const focusElementNextToDropdown = ({ detail: dropdown }) => {
-    dispatchEvent(TOGGLE_DROPDOWN_EVENT, { nextExpandedState: false })()
-
-    if (!headerRef.current) return
-
-    setTimeout(() => {
-      const focusableElements = getFocusableElementsFrom(headerRef.current)
-
-      if (focusableElements.length < 1) return
-
-      const currentElementIndex = focusableElements.indexOf(dropdown)
-      const nextElement = focusableElements[currentElementIndex + 1] || dropdown
-
-      nextElement.focus()
-    }, DROPDOWN_ANIMATED_DELAY)
-  }
-
-  useEffect(() => {
-    if (!headerRef.current) return
-
-    headerRef.current.addEventListener('keydown', handleKeyboardNavigation)
-    window.addEventListener(DROPDOWN_FIRST_FOCUS_REACHED_EVENT, focusDropdown)
-    window.addEventListener(
-      DROPDOWN_LAST_FOCUS_REACHED_EVENT,
-      focusElementNextToDropdown,
-    )
-
-    return () => {
-      if (!headerRef.current) return
-
-      headerRef.current.removeEventListener('keydown', handleKeyboardNavigation)
-      window.removeEventListener(
-        DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
-        focusDropdown,
-      )
-      window.removeEventListener(
-        DROPDOWN_LAST_FOCUS_REACHED_EVENT,
-        focusElementNextToDropdown,
-      )
-    }
-  }, [isMenuExpanded])
-
-  const { keyboard } = domEvents
-
-  const isArrowKeyCode = keycode =>
-    [keyboard.left, keyboard.up, keyboard.right, keyboard.down].includes(
-      keycode,
-    )
-
-  const handleKeyboardNavigation = event => {
-    if (isArrowKeyCode(event.keyCode)) {
-      event.preventDefault()
-
-      const focusableElements = getFocusableElementsFrom(headerRef.current)
-      const kbdNav = keyboardNavigation(focusableElements)
-
-      if ([keyboard.right, keyboard.tab].includes(event.keyCode)) {
-        return kbdNav.next()
-      }
-      if (event.keyCode === keyboard.left || keyboard.shiftTab(event)) {
-        return kbdNav.prev()
-      }
-    }
-  }
 
   const callOnToggle = ({ isExpanded, expandBy }) => {
     if (!isExpanded && previousStickyState === 'always') {
@@ -172,10 +93,7 @@ const HeaderNav = ({
           )}
         >
           <nav ref={headerRef} id={id} className="k-HeaderNav">
-            <QuickAccessLink
-              className="quickAccessLink"
-              {...quickAccessProps}
-            />
+            <QuickAccessLink {...quickAccessProps} />
             {children}
           </nav>
         </StickyContainer>
@@ -187,8 +105,10 @@ const HeaderNav = ({
 HeaderNav.Button = Button
 HeaderNav.Logo = Logo
 HeaderNav.BurgerMenu = BurgerMenu
+HeaderNav.BurgerMenuNext = BurgerMenuNext
 HeaderNav.Nav = Nav
 HeaderNav.UserMenu = UserMenu
+HeaderNav.UserMenuNext = UserMenuNext
 HeaderNav.Right = Right
 HeaderNav.Centered = Centered
 HeaderNav.LoggedOut = LoggedOut

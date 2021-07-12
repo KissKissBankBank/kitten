@@ -87,7 +87,8 @@ const StyledWrapper = styled.span`
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       border-radius: ${pxToRem(8)};
       position: absolute;
-      top: calc(var(--toggletipAction-size) / 2);
+      top: 50%;
+      transform: translateY(-50%);
       left: calc(100% + ${pxToRem(20)});
       transform: translateY(-50%);
       min-width: ${pxToRem(220)};
@@ -153,6 +154,7 @@ export const Toggletip = ({
   actionLabel,
   actionProps,
   bubbleProps,
+  targetElement,
   ...props
 }) => {
   const [isHover, setHoverState] = useState(false)
@@ -284,25 +286,38 @@ export const Toggletip = ({
       onMouseLeave={() => setHoverState(false)}
       {...props}
     >
-      <button
-        {...actionProps}
-        className={classNames(
-          'k-Toggletip__action',
-          'k-u-reset-button',
-          actionProps.className,
-        )}
-        type="button"
-        aria-label={actionLabel}
-        onClick={handleClick}
-        onBlur={() => setOpen(false)}
-        ref={actionElement}
-        style={{
-          '--toggletipAction-color': actionProps.color || null,
-          ...actionProps.style,
-        }}
-      >
-        <ButtonIcon modifier={modifier} />
-      </button>
+      {!!targetElement && React.isValidElement(targetElement) ? (
+        <button
+          {...actionProps}
+          ref={actionElement}
+          type="button"
+          aria-label={actionLabel}
+          className="k-u-reset-button"
+        >
+          {targetElement}
+        </button>
+      ) : (
+        <button
+          {...actionProps}
+          className={classNames(
+            'k-Toggletip__action',
+            'k-u-reset-button',
+            actionProps.className,
+          )}
+          type="button"
+          aria-label={actionLabel}
+          onClick={handleClick}
+          onBlur={() => setOpen(false)}
+          ref={actionElement}
+          style={{
+            '--toggletipAction-color': actionProps.color || null,
+            ...actionProps.style,
+          }}
+        >
+          <ButtonIcon modifier={modifier} />
+        </button>
+      )}
+
       <span role="status">
         {isOpen && (
           <span
@@ -338,6 +353,7 @@ Toggletip.defaultProps = {
   modifier: 'info',
   actionProps: {},
   bubbleProps: {},
+  targetElement: null,
 }
 
 Toggletip.propTypes = {
@@ -351,4 +367,9 @@ Toggletip.propTypes = {
   actionLabel: PropTypes.string.isRequired,
   actionProps: PropTypes.object,
   bubbleProps: PropTypes.object,
+  targetElement: PropTypes.oneOf([
+    PropTypes.element,
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]),
 }
