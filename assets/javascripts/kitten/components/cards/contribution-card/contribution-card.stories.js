@@ -15,7 +15,7 @@ const StoryContainer = ({ children }) => (
 export const Default = () => {
   return (
     <StoryContainer>
-      <ContributionCard>
+      <ContributionCard onClose={() => {}}>
         <ContributionCard.Image>
           <img src="/kitten.jpg" alt="" />
         </ContributionCard.Image>
@@ -34,8 +34,8 @@ export const Default = () => {
 export const PetitPlus = () => {
   return (
     <StoryContainer>
-      <ContributionCard borderStyle="dashed">
-        <ContributionCard.Image>
+      <ContributionCard borderStyle="dashed" largeInput>
+        <ContributionCard.Image className="k-u-hidden@xs-down">
           <RocketIllustration width={45} height={81} />
         </ContributionCard.Image>
 
