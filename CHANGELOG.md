@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Title`: Style fixes (line-height and letter-spacing).
+
 ## [3.26.0] - 2021-07-12
 
 Feature:
