@@ -10,7 +10,6 @@ import { DropdownButton } from './dropdown-button';
 import { useDropdown } from '../hooks/use-dropdown';
 import { ArrowIcon } from '../../../../components/icons/arrow-icon';
 var namespace = 'kkbbAndCo';
-var DROPDOWN_CLASS = "".concat(namespace, "-UserMenuNext k-HeaderNav__UserMenuNext");
 var CLOSE_EVENT = "".concat(namespace, ":userMenu:close");
 export var UserMenuNext = function UserMenuNext(_ref) {
   var children = _ref.children,
@@ -21,12 +20,6 @@ export var UserMenuNext = function UserMenuNext(_ref) {
       padding = _ref.padding,
       mobilePadding = _ref.mobilePadding,
       props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth", "closeEvents", "dropdownAnchorSide", "className", "padding", "mobilePadding"]);
-
-  var getElementById = function getElementById(id) {
-    return function () {
-      return document.getElementById(id);
-    };
-  };
 
   var _useContext = useContext(Context),
       id = _useContext.id,
@@ -54,7 +47,7 @@ export var UserMenuNext = function UserMenuNext(_ref) {
       menuProps = _useDropdown.menuProps,
       isDropdownExpanded = _useDropdown.isDropdownExpanded;
 
-  return /*#__PURE__*/React.createElement("div", _extends({}, dropdownProps, {
+  return /*#__PURE__*/React.createElement("div", _extends({}, dropdownProps, props, {
     className: classNames(className, dropdownProps.className)
   }), /*#__PURE__*/React.createElement(DropdownButton, _extends({}, buttonProps, {
     style: {

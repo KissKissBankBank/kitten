@@ -49,12 +49,6 @@ var _hidden = require("./components/hidden");
 
 var _quickAccessLink = require("./components/quick-access-link");
 
-var _a11y = require("../../../helpers/dom/a11y");
-
-var _events = _interopRequireWildcard(require("../../../helpers/dom/events"));
-
-var _dropdownConfig = require("../../../constants/dropdown-config");
-
 var _usePreviousHook = require("../../../helpers/utils/use-previous-hook");
 
 var _styles = require("./styles");
