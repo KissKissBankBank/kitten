@@ -10,6 +10,9 @@ describe('<BackingCard />', () => {
     const component = renderer
       .create(
         <BackingCard>
+          <BackingCard.Title>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+          </BackingCard.Title>
           <BackingCard.Description>Custom description</BackingCard.Description>
         </BackingCard>,
       )
