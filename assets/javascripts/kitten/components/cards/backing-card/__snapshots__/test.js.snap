@@ -8,6 +8,15 @@ exports[`<BackingCard /> default matches with snapshot 1`] = `
     className="k-BackingCard__gridWrapper"
   >
     <div
+      className="k-BackingCard__titleWrapper k-BackingCard__drawer"
+    >
+      <h3
+        className="k-u-line-height-1 k-u-size-default k-u-weight-bold k-BackingCard__title k-u-margin-none"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+      </h3>
+    </div>
+    <div
       className="k-BackingCard__descriptionWrapper k-BackingCard__drawer k-BackingCard__drawer--extensible"
     >
       <div
