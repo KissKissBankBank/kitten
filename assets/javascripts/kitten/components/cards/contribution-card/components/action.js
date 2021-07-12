@@ -6,7 +6,6 @@ import { CheckedCircleIcon } from '../../../icons/checked-circle-icon'
 import COLORS from '../../../../constants/colors-config'
 
 export const Action = ({ isInputValid, title, ...props }) => {
-
   return (
     <>
       <Button
@@ -32,7 +31,7 @@ export const Action = ({ isInputValid, title, ...props }) => {
 
 Action.defaultProps = {
   isInputValid: false,
-  title: "",
+  title: '',
 }
 
 Action.propTypes = {

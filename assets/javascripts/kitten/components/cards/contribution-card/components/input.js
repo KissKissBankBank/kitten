@@ -9,7 +9,7 @@ export const Input = ({ valid, onChange, className, ...props }) => {
   return (
     <TextInputWithUnit
       wrapperProps={{
-        className: classNames({
+        className: classNames('k-ContributionCard__inputWrapper', {
           'k-ContributionCard__inputWrapper--isEmpty': isInputEmpty,
         }),
       }}
