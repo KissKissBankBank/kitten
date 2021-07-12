@@ -146,7 +146,10 @@ export const KissKissBankBankHeaderNavStoryNew = ({
         />
 
         <HeaderNav.Logged>
-          <HeaderNav.UserMenuNext dropdownAnchorSide="right" mobilePadding={false}>
+          <HeaderNav.UserMenuNext
+            dropdownAnchorSide="right"
+            mobilePadding={false}
+          >
             <HeaderNav.UserMenuNext.Button
               hasArrow
               backgroundColor={COLORS.background1}

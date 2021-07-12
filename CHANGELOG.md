@@ -5,10 +5,71 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `Title`: Style fixes (line-height and letter-spacing).
-- Feature: `ImageDropUploader`: Add component.
-- Feature: `VerticalProgress` : Add `withoutBorder` prop.
-- Feature: `ContributionCard` : Add `onClose` prop and delete `closeButton` prop.
-- Feature: `RadioButton` : Modify `focus`, `active`, `hover` and `checked` states.
+
+## [3.26.0] - 2021-07-12
+
+Feature:
+
+- `ContributionCard`: Add `largeInput` prop.
+
+Fixes:
+
+- `ContributionCard`: Fix accessibility.
+- `ContributionCard`: Fix image ratio on desktop.
+- `HeaderNav`: Fix user menu position on mobile.
+- `ImageDropUploader`: Vertically center description text.
+- `TagButton`: Update styles.
+
+## [3.25.2] - 2021-07-09
+
+Fix: 
+
+- `parseHtml`: Return empty string if we cannot use dom.
+
+## [3.25.1] - 2021-07-09
+
+Fix:
+
+- `VerticalProgress`: Remove `max-width` on `k-VerticalProgress__wrapper`.
+
+## [3.25.0] - 2021-07-08
+
+Feature:
+ 
+- `parseHtml`: We sanitize by default the markup with an option `parseHtml(value, { sanitize: false })` to disable it.
+
+## [3.24.0] - 2021-07-08
+
+Feature:
+
+- `ImageDropUploader`: Add `canCrop` prop, defaults to `true`.
+
+Fixes: 
+
+- `VerticalProgress`: Update styles.
+- `TagButton` Update styles.
+- `ImageDropUploader`: Update image URL on `initialValue` prop change.
+- `ImageDropUploader`: Disable text select on cropper drag.
+
+## [3.23.1] - 2021-07-08
+
+Fix:
+
+- `ContributionCard`: Update styles.
+
+## [3.23.0] - 2021-07-06
+
+Features:
+
+- `DocumentsDropUploader`: Add component.
+- `DocumentsStatusBox`: Add component.
+- `ImageDropUploader`: Add component.
+- `TagInput`: Add component.
+- `ContributionCard`: Add `isInputValid` prop.
+- `ContributionCard`: Add `onClose` prop and delete `closeButton` prop.
+- `GiftIcon`: Update icon.
+- `RadioButton`: Modify `focus`, `active`, `hover` and `checked` states.
+- `VerticalProgress`: Add `withoutBorder` prop.
 
 ## [3.22.1] - 2021-07-01
 

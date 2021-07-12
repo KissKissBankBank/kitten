@@ -9,6 +9,7 @@ import { UploadIcon } from '../../../components/icons/upload-icon'
 import { CloseButton } from '../../../components/buttons/close-button'
 import { Text } from '../../../components/typography/text'
 import { ImageCropper } from './components/image-cropper'
+import { pauseEvent } from './utils/pause-event'
 
 const CROP_WIDTH = 125
 
@@ -140,6 +141,7 @@ const StyledImageDropUploader = styled.div`
     }
   }
   .k-ImageDropUploader__manager__content {
+    align-self: center;
   }
   .k-ImageDropUploader__manager__cancelButton {
     position: absolute;
@@ -148,7 +150,7 @@ const StyledImageDropUploader = styled.div`
     border-top-right-radius: ${pxToRem(8)};
   }
 
-  .k-ImageDropUploader-imageCropper {
+  .k-ImageDropUploader__imageCropper {
     cursor: grab;
 
     &:focus {
@@ -162,7 +164,7 @@ const StyledImageDropUploader = styled.div`
       outline-color: ${COLORS.primary4};
     }
 
-    &.k-ImageDropUploader-imageCropper--isDragging {
+    &.k-ImageDropUploader__imageCropper--isDragging {
       cursor: grabbing;
     }
   }
@@ -180,6 +182,7 @@ export const ImageDropUploader = ({
   canCancel = true,
   cancelButtonText = '',
   className = '',
+  canCrop = true,
   cropRatio = 16 / 10,
   disabled = false,
   error = false,
@@ -212,31 +215,29 @@ export const ImageDropUploader = ({
     if (initialValue !== '') {
       setInternalStatus('manage')
     }
+
+    setImageDataURL(initialValue)
   }, [initialValue])
 
   const handleDragEnter = e => {
-    e.preventDefault()
-    e.stopPropagation()
+    pauseEvent(e)
     if (!isDraggedFileListValid(e)) return
 
     setDraggingOver(true)
     setError(false)
   }
   const handleDragLeave = e => {
-    e.preventDefault()
-    e.stopPropagation()
+    pauseEvent(e)
 
     setDraggingOver(false)
     setError(false)
   }
   const handleDragOver = e => {
-    e.preventDefault()
-    e.stopPropagation()
+    pauseEvent(e)
   }
 
   const handleDrop = e => {
-    e.preventDefault()
-    e.stopPropagation()
+    pauseEvent(e)
 
     setDraggingOver(false)
     setError(false)
@@ -391,20 +392,40 @@ export const ImageDropUploader = ({
 
       {internalStatus === 'manage' && (
         <div className="k-ImageDropUploader__manager">
-          <ImageCropper
-            className="k-ImageDropUploader__manager__cropper"
-            style={{
-              '--ImageDropUploader-cropHeight': pxToRem(
-                getCropHeight(cropRatio),
-              ),
-            }}
-            src={imageDataURL}
-            onChange={handleCropperChange}
-            id={`${id}-cropper`}
-            aria-describedby={`${id}-cropper-description`}
-            initialCrop={internalInitialCrop}
-            disabled={disabled}
-          />
+          {canCrop ? (
+            <ImageCropper
+              className="k-ImageDropUploader__manager__cropper"
+              style={{
+                '--ImageDropUploader-cropHeight': pxToRem(
+                  getCropHeight(cropRatio),
+                ),
+              }}
+              src={imageDataURL}
+              onChange={handleCropperChange}
+              id={`${id}-cropper`}
+              aria-describedby={`${id}-cropper-description`}
+              initialCrop={internalInitialCrop}
+              disabled={disabled}
+            />
+          ) : (
+            <div
+              className="k-ImageDropUploader__manager__cropper"
+              style={{
+                '--ImageDropUploader-cropHeight': pxToRem(
+                  getCropHeight(cropRatio),
+                ),
+              }}
+            >
+              <img
+                alt=""
+                src={imageDataURL}
+                style={{
+                  '--ImageDropUploader-cropX': '50%',
+                  '--ImageDropUploader-cropY': '50%',
+                }}
+              />
+            </div>
+          )}
           <div
             className="k-ImageDropUploader__manager__content"
             id={`${id}-cropper-description`}
@@ -452,6 +473,7 @@ ImageDropUploader.propTypes = {
   buttonText: PropTypes.node,
   buttonTitle: PropTypes.node,
   canCancel: PropTypes.bool,
+  canCrop: PropTypes.bool,
   cancelButtonText: PropTypes.string,
   cropRatio: PropTypes.number,
   disabled: PropTypes.bool,

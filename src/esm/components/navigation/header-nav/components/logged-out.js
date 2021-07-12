@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { Context } from './context';
 export var LoggedOut = function LoggedOut(_ref) {
   var children = _ref.children;

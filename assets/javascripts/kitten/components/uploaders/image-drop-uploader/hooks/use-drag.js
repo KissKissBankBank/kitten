@@ -1,28 +1,40 @@
 import { useState, useEffect } from 'react'
+import { pauseEvent } from '../utils/pause-event'
 
-export const useDrag = ({startingPosition, imageDimensions, disabled}) => {
+export const useDrag = ({ startingPosition, imageDimensions, disabled }) => {
   const [isDragging, setDragging] = useState(false)
   const [origin, setOrigin] = useState({ x: 0, y: 0 })
-  const [translation, setTranslation] = useState({ x: 0, y: 0})
-  const [lastTranslation, setLastTranslation] = useState({ x: 0, y: 0})
+  const [translation, setTranslation] = useState({ x: 0, y: 0 })
+  const [lastTranslation, setLastTranslation] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
-    if(!imageDimensions) return
+    if (!imageDimensions) return
 
     if (startingPosition) {
       setTranslation(getDestination(startingPosition))
       setLastTranslation(getDestination(startingPosition))
     } else {
       const destination = getDestination({
-        x: Math.round((imageDimensions.containedSize.width - imageDimensions.scaledSize.width) / 2),
-        y: Math.round((imageDimensions.containedSize.height - imageDimensions.scaledSize.height) / 2),
+        x: Math.round(
+          (imageDimensions.containedSize.width -
+            imageDimensions.scaledSize.width) /
+            2,
+        ),
+        y: Math.round(
+          (imageDimensions.containedSize.height -
+            imageDimensions.scaledSize.height) /
+            2,
+        ),
       })
       setTranslation(destination)
       setLastTranslation(destination)
     }
   }, [startingPosition, imageDimensions])
 
-  const handleMouseDown = ({ clientX, clientY, target }) => {
+  const handleMouseDown = e => {
+    pauseEvent(e)
+    const { clientX, clientY, target } = e
+
     if (!isDragging) {
       const rect = target.getBoundingClientRect()
       setDragging(true)
@@ -33,22 +45,27 @@ export const useDrag = ({startingPosition, imageDimensions, disabled}) => {
     }
   }
 
-  const handleMouseMove = ({ clientX, clientY, target }) => {
+  const handleMouseMove = e => {
+    pauseEvent(e)
+    const { clientX, clientY, target } = e
+
     if (isDragging) {
       const rect = target.getBoundingClientRect()
 
-      if (clientX - rect.left < 0
-        || clientX - rect.left > rect.width
-        || clientY - rect.top < 0
-        || clientY - rect.top > rect.height) {
+      if (
+        clientX - rect.left < 0 ||
+        clientX - rect.left > rect.width ||
+        clientY - rect.top < 0 ||
+        clientY - rect.top > rect.height
+      ) {
         setDragging(false)
         setLastTranslation({ x: translation.x, y: translation.y })
         return
       }
 
       const destination = getDestination({
-        x: (clientX - rect.left) - origin.x,
-        y: (clientY - rect.top) - origin.y,
+        x: clientX - rect.left - origin.x,
+        y: clientY - rect.top - origin.y,
       })
 
       setTranslation({
@@ -65,10 +82,10 @@ export const useDrag = ({startingPosition, imageDimensions, disabled}) => {
     }
   }
 
-  const handleKeyUp = (event) => {
-    let direction = {x: 0, y: 0}
+  const handleKeyUp = event => {
+    let direction = { x: 0, y: 0 }
 
-    switch(event.key) {
+    switch (event.key) {
       case 'ArrowLeft':
         direction.x = -1
         break
@@ -83,8 +100,8 @@ export const useDrag = ({startingPosition, imageDimensions, disabled}) => {
         break
     }
 
-    if(event.shiftKey) {
-      direction = {x: direction.x * 10, y: direction.y * 10}
+    if (event.shiftKey) {
+      direction = { x: direction.x * 10, y: direction.y * 10 }
     }
 
     const destination = getDestination({
@@ -96,7 +113,7 @@ export const useDrag = ({startingPosition, imageDimensions, disabled}) => {
     setLastTranslation(destination)
   }
 
-  const getDestination = ({x, y}) => {
+  const getDestination = ({ x, y }) => {
     let destinationX = x
     let destinationY = y
 
@@ -107,17 +124,41 @@ export const useDrag = ({startingPosition, imageDimensions, disabled}) => {
       destinationY = 0
     }
 
-    if (-1 * Math.round(imageDimensions.scaledSize.width - imageDimensions.containedSize.width) > x) {
-      destinationX = -1 * Math.round(imageDimensions.scaledSize.width - imageDimensions.containedSize.width)
+    if (
+      -1 *
+        Math.round(
+          imageDimensions.scaledSize.width -
+            imageDimensions.containedSize.width,
+        ) >
+      x
+    ) {
+      destinationX =
+        -1 *
+        Math.round(
+          imageDimensions.scaledSize.width -
+            imageDimensions.containedSize.width,
+        )
     }
-    if (-1 * Math.round(imageDimensions.scaledSize.height - imageDimensions.containedSize.height) > y) {
-      destinationY = -1 * Math.round(imageDimensions.scaledSize.height - imageDimensions.containedSize.height)
+    if (
+      -1 *
+        Math.round(
+          imageDimensions.scaledSize.height -
+            imageDimensions.containedSize.height,
+        ) >
+      y
+    ) {
+      destinationY =
+        -1 *
+        Math.round(
+          imageDimensions.scaledSize.height -
+            imageDimensions.containedSize.height,
+        )
     }
 
-    return({
+    return {
       x: destinationX,
       y: destinationY,
-    })
+    }
   }
 
   if (disabled) {
@@ -152,6 +193,6 @@ export const useDrag = ({startingPosition, imageDimensions, disabled}) => {
       onMouseUp: handleMouseUp,
       onKeyUp: handleKeyUp,
       tabIndex: 0,
-    }
+    },
   }
 }

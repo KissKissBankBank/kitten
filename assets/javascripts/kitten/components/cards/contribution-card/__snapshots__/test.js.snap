@@ -2,8 +2,7 @@
 
 exports[`<ContributionCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bwzfXH hUBlec k-ContributionCard"
-  role="dialog"
+  className="sc-bwzfXH hRjpLU k-ContributionCard"
   style={
     Object {
       "--contributionCard--border-color": "#eee",

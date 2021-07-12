@@ -6,10 +6,7 @@ export const PillNumber = props => {
   return (
     <PillNumberInput
       {...props}
-      className={classNames(
-        'k-ContributionCard__pillNumber',
-        props.className,
-      )}
+      className={classNames('k-ContributionCard__pillNumber', props.className)}
     />
   )
 }
