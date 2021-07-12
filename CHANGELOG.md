@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `ImageDropUploader`: vertically center description text.
 - Fix: `HeaderNav`: Fix user menu position on mobile.
 
 ## [3.25.2] - 2021-07-09
