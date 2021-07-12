@@ -9,7 +9,6 @@ const fadeOut = keyframes`
 `
 
 export const StyledContributionCard = styled.article`
-
   /* CARD STYLE */
 
   max-width: 100%;
@@ -30,56 +29,37 @@ export const StyledContributionCard = styled.article`
   border-radius: var(--contributionCard--border-radius);
 
   @media (min-width: ${ScreenConfig.S.min}px) {
-    height: ${pxToRem(110)};
+    height: calc(${pxToRem(100)} + 2 * var(--contributionCard--border-width));
     display: flex;
   }
   /* IMAGE */
 
   .k-ContributionCard__imageWrapper {
-    flex: 0 0 100%;
     position: relative;
-    max-width: calc(100% + 2 * var(--contributionCard--border-width));
     overflow: hidden;
-    padding-top: calc(1 / ( 16 / 10 ) * 100%);
+
+    @media (max-width: ${ScreenConfig.XS.max}px) {
+      padding-top: calc(5 / 8 * 100%);
+    }
 
     @media (min-width: ${ScreenConfig.S.min}px) {
-     
-      /* IE11 defaults */
-      border-top-left-radius: ${pxToRem(5)};
-      border-bottom-left-radius: ${pxToRem(5)};
-
-      border-top-left-radius: var(--contributionCard--image-border-radius);
-      border-bottom-left-radius: var(--contributionCard--image-border-radius);
-        
-      display: flex;
-      align-items: center;
-      flex: 0 0 ${pxToRem(140)};
-      padding-top: 0;
+      flex: 0 0 ${pxToRem(160)};
     }
 
     img,
     figure {
       display: block;
       position: absolute;
-      width: 100%;
-      height: 100%;
       object-fit: cover;
       object-position: center center;
       top: 0;
       left: 0;
-  
-      @media (min-width: ${ScreenConfig.S.min}px) {    
-        width: ${pxToRem(140)};
-        transition: transform 0.2s ease-in-out;
-
-        /* IE11 default */
-        border-top-left-radius: ${pxToRem(5)};
-        border-bottom-left-radius: ${pxToRem(5)};
-
-        border-top-left-radius: var(--contributionCard--image-border-radius);
-        border-bottom-left-radius: var(--contributionCard--image-border-radius);
-      }
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
     }
+
     svg {
       width: 80%;
 
@@ -88,7 +68,7 @@ export const StyledContributionCard = styled.article`
       }
     }
   }
-  
+
   /* STRUCTURE */
 
   .k-ContributionCard__close {
@@ -97,11 +77,6 @@ export const StyledContributionCard = styled.article`
     top: 0;
     border-right: none;
     border-top: none;
-    
-    &.k-ContributionCard__shouldHide {
-      pointer-events: none;
-      animation: ${fadeOut} 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
-    }
   }
 
   .k-ContributionCard__gridWrapper {
@@ -116,8 +91,8 @@ export const StyledContributionCard = styled.article`
     grid-template-rows: 1fr auto;
 
     grid-template-areas:
-      "cc-text cc-text"
-      "cc-input cc-action";
+      'cc-text cc-text'
+      'cc-input cc-action';
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: 100%;
@@ -128,8 +103,7 @@ export const StyledContributionCard = styled.article`
       grid-gap: 0 ${pxToRem(10)};
       grid-template-columns: auto ${pxToRem(85)} ${pxToRem(150)};
       grid-template-rows: 1fr;
-      grid-template-areas:
-        "cc-text cc-input cc-action";
+      grid-template-areas: 'cc-text cc-input cc-action';
     }
   }
 
@@ -154,7 +128,8 @@ export const StyledContributionCard = styled.article`
 
   .k-ContributionCard__pillNumber {
     grid-area: cc-input;
-    place-self:  center flex-start;
+    place-self: center flex-start;
+
     @media (min-width: ${ScreenConfig.S.min}px) {
       place-self: center flex-start;
     }
