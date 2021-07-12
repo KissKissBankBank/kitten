@@ -141,6 +141,7 @@ const StyledImageDropUploader = styled.div`
     }
   }
   .k-ImageDropUploader__manager__content {
+    align-self: center;
   }
   .k-ImageDropUploader__manager__cancelButton {
     position: absolute;
@@ -405,7 +406,6 @@ export const ImageDropUploader = ({
               aria-describedby={`${id}-cropper-description`}
               initialCrop={internalInitialCrop}
               disabled={disabled}
-              canCrop={canCrop}
             />
           ) : (
             <div

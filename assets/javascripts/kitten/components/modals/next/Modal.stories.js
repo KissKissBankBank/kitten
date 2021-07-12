@@ -171,7 +171,7 @@ const OrionHeaderTitle = () => {
 const OrionHeaderActions = ({ close }) => (
   <>
     <Button
-      className="k-u-hidden@xs-down--important"
+      className="k-u-hidden@xs-down"
       variant="orion"
       modifier="helium"
       type="button"
@@ -183,7 +183,7 @@ const OrionHeaderActions = ({ close }) => (
       <span>Sauvegarder</span>
     </Button>
     <Button
-      className="k-u-hidden@s-up--important"
+      className="k-u-hidden@s-up"
       icon
       variant="orion"
       modifier="helium"

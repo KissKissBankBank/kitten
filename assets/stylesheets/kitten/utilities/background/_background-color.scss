@@ -13,51 +13,25 @@
 ///   <span class="k-u-background-color-background3">…</span>
 ///   <span class="k-u-background-color-primary5">…</span>
 ///   <span class="k-u-background-color-primary6">…</span>
-///
-///   <span class="k-u-background-color-background1--important">…</span>
-///   <span class="k-u-background-color-background2--important">…</span>
-///   <span class="k-u-background-color-background3--important">…</span>
-///   <span class="k-u-background-color-primary5--important">…</span>
-///   <span class="k-u-background-color-primary6--important">…</span>
 
 @mixin k-utilities-background-color {
   .k-u-background-color-background1 {
-    background-color: map-get($k-colors, 'background-1');
-
-    &--important {
-      background-color: map-get($k-colors, 'background-1') !important;
-    }
+    background-color: map-get($k-colors, 'background-1') !important;
   }
 
   .k-u-background-color-background2 {
-    background-color: map-get($k-colors, 'background-2');
-
-    &--important {
-      background-color: map-get($k-colors, 'background-2') !important;
-    }
+    background-color: map-get($k-colors, 'background-2') !important;
   }
 
   .k-u-background-color-background3 {
-    background-color: map-get($k-colors, 'background-3');
-
-    &--important {
-      background-color: map-get($k-colors, 'background-3') !important;
-    }
+    background-color: map-get($k-colors, 'background-3') !important;
   }
 
   .k-u-background-color-primary5 {
-    background-color: map-get($k-colors, 'primary-5');
-
-    &--important {
-      background-color: map-get($k-colors, 'primary-5') !important;
-    }
+    background-color: map-get($k-colors, 'primary-5') !important;
   }
 
   .k-u-background-color-primary6 {
-    background-color: map-get($k-colors, 'primary-6');
-
-    &--important {
-      background-color: map-get($k-colors, 'primary-6') !important;
-    }
+    background-color: map-get($k-colors, 'primary-6') !important;
   }
 }

@@ -5,6 +5,29 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Use `gap` on Flex containers whenever feasible.
+- Breaking Change: `Utilities`: Generalization of `!important` on all utilities.
+- Feature: `Utilities`: Add `k-u-flex-gap` and `k-u-flex-wrap` utility classes.
+- Fix: `Title`: Style fixes (line-height and letter-spacing).
+
+## [3.26.0] - 2021-07-12
+
+Feature:
+
+- `ContributionCard`: Add `largeInput` prop.
+
+Fixes:
+
+- `ContributionCard`: Fix accessibility.
+- `ContributionCard`: Fix image ratio on desktop.
+- `HeaderNav`: Fix user menu position on mobile.
+- `ImageDropUploader`: Vertically center description text.
+- `TagButton`: Update styles.
+
+## [3.25.2] - 2021-07-09
+
+Fix:
+
+- `parseHtml`: Return empty string if we cannot use dom.
 
 ## [3.25.1] - 2021-07-09
 
@@ -15,7 +38,7 @@ Fix:
 ## [3.25.0] - 2021-07-08
 
 Feature:
- 
+
 - `parseHtml`: We sanitize by default the markup with an option `parseHtml(value, { sanitize: false })` to disable it.
 
 ## [3.24.0] - 2021-07-08
@@ -24,7 +47,7 @@ Feature:
 
 - `ImageDropUploader`: Add `canCrop` prop, defaults to `true`.
 
-Fixes: 
+Fixes:
 
 - `VerticalProgress`: Update styles.
 - `TagButton` Update styles.

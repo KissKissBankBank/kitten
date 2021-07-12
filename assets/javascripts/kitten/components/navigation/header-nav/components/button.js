@@ -20,8 +20,8 @@ export const Button = ({
   className,
   ...props
 }) => {
-  const hiddenMin = min ? `k-u-hidden@${min}-up--important` : ''
-  const hiddenMax = max ? `k-u-hidden@${max}-down--important` : ''
+  const hiddenMin = min ? `k-u-hidden@${min}-up` : ''
+  const hiddenMax = max ? `k-u-hidden@${max}-down` : ''
   const textClassName = `k-HeaderNav__Button__text ${hiddenMin} ${hiddenMax}`.trim()
 
   let ButtonComponent = 'a'
@@ -44,9 +44,7 @@ export const Button = ({
     <ButtonComponent
       {...props}
       {...buttonProps}
-      className={classNames('k-HeaderNav__Button',
-        className,
-        {
+      className={classNames('k-HeaderNav__Button', className, {
         'k-HeaderNav__Button--hasIcon': !!icon,
         'k-HeaderNav__Button--hasText': !!text,
       })}

@@ -10,10 +10,7 @@ export const Description = props => {
       weight="light"
       size="micro"
       {...props}
-      className={classNames(
-        'k-ContributionCard__description',
-        props.className,
-      )}
+      className={classNames('k-ContributionCard__description', props.className)}
     />
   )
 }
