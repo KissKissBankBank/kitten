@@ -67,12 +67,12 @@ const InnerUserMenu = () => (
     <HeaderMenu.Item href="#">
       Mon espace personnel
       <HeaderMenu.Badge a11yText="2 notifications">2</HeaderMenu.Badge>
-      <div className="k-u-hidden@xs-up--important k-u-margin-top-noneHalf">
+      <div className="k-u-hidden@xs-up k-u-margin-top-noneHalf">
         <Text weight="light">Solde&nbsp;: 24&nbsp;093,39&nbsp;€</Text>
       </div>
     </HeaderMenu.Item>
     <HeaderMenu.Item
-      className="k-u-background-color-background3--important"
+      className="k-u-background-color-background3"
       href="#"
     >
       Déconnexion

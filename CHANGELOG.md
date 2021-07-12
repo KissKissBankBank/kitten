@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: `Utilities`: Generalization of `!important` on all utilities.
+- Feature: `Utilities`: Add `k-u-flex-gap` and `k-u-flex-wrap` utility classes.
 - Fix: `Title`: Style fixes (line-height and letter-spacing).
 
 ## [3.26.0] - 2021-07-12
@@ -22,7 +24,7 @@ Fixes:
 
 ## [3.25.2] - 2021-07-09
 
-Fix: 
+Fix:
 
 - `parseHtml`: Return empty string if we cannot use dom.
 
@@ -35,7 +37,7 @@ Fix:
 ## [3.25.0] - 2021-07-08
 
 Feature:
- 
+
 - `parseHtml`: We sanitize by default the markup with an option `parseHtml(value, { sanitize: false })` to disable it.
 
 ## [3.24.0] - 2021-07-08
@@ -44,7 +46,7 @@ Feature:
 
 - `ImageDropUploader`: Add `canCrop` prop, defaults to `true`.
 
-Fixes: 
+Fixes:
 
 - `VerticalProgress`: Update styles.
 - `TagButton` Update styles.

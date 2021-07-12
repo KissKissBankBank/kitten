@@ -153,7 +153,7 @@ export const Default = () => {
 
           <AvatarWithTextAndBadge.Text
             withEllipsisOverflow
-            className="k-u-color-background1--important"
+            className="k-u-color-background1"
           >
             <Text lineHeight="normal" weight="regular">
               T-shirts brodés Free Boobs Club
@@ -587,7 +587,7 @@ const SiteHeaderComponent = () => {
                 </HeaderMenu.Item>
                 <HeaderMenu.Item
                   href="#"
-                  className="k-u-background-color-background3--important"
+                  className="k-u-background-color-background3"
                 >
                   Déconnexion
                 </HeaderMenu.Item>
