@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TagButton`: Update styles.
 - Fix: `HeaderNav`: Fix user menu position on mobile.
 - Fix: `ContributionCard`: Fix image dimensions on desktop.
 - Fix: `ContributionCard`: Fix accessibility.
