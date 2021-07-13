@@ -1,6 +1,6 @@
 import React from 'react'
 import { Video } from './index'
-import { Container } from '../../../../components/grid/container'
+import { Container } from '../../../../components/layout/container'
 
 export default {
   component: Video,

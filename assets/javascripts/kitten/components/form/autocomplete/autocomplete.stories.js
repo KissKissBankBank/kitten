@@ -1,11 +1,11 @@
 import React from 'react'
 import { optionsKnob, text, boolean } from '@storybook/addon-knobs'
 import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
+import { Container } from '../../layout/container'
+import { Grid, GridCol } from '../../layout/grid'
 import { Autocomplete } from './index'
 import { Field } from '../../form/field'
-import { LocationIcon } from '../../icons/location-icon'
+import { LocationIcon } from '../../graphics/icons/location-icon'
 
 const items = [
   'Abyssinian',

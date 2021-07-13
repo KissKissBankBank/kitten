@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import classNames from 'classnames'
 import PlacesAutocomplete, { geocodeByPlaceId } from 'react-places-autocomplete'
 
-import { LocationIcon } from '../../../components/icons/location-icon'
+import { LocationIcon } from '../../../components/graphics/icons/location-icon'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'

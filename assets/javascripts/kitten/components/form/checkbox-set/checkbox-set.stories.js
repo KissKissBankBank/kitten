@@ -1,7 +1,7 @@
 import React from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { CheckboxSet } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
+import { Grid, GridCol } from '../../../components/layout/grid'
 
 export default {
   component: CheckboxSet,

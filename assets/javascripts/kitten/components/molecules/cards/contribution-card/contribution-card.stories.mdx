@@ -1,0 +1,50 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './contribution-card.stories.js'
+import { ContributionCard } from './index'
+
+<Meta title="Molecules/Cards/ContributionCard" component={ContributionCard} />
+
+# ContributionCard
+
+## Import
+
+```js
+import { ContributionCard } from '@kisskissbankbank/kitten'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="Default" story={stories.Default} />
+</Canvas>
+
+
+## Import
+#### Default
+
+```js
+<ContributionCard>
+  <ContributionCard.Image />
+  <ContributionCard.Title />
+  <ContributionCard.PillNumber />
+  <ContributionCard.Amount />
+</ContributionCard>
+```
+
+<Canvas>
+  <Story name="PetitPlus" story={stories.PetitPlus} />
+</Canvas>
+
+
+## Import
+#### PetitPlus
+
+```js
+<ContributionCard>
+  <ContributionCard.Image />
+  <ContributionCard.Title />
+  <ContributionCard.Description />
+  <ContributionCard.Input />
+  <ContributionCard.Action />
+</ContributionCard>
+```

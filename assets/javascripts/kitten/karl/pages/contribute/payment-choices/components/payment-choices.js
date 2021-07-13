@@ -1,27 +1,30 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Container } from '../../../../../components/grid/container'
-import { Grid, GridCol } from '../../../../../components/grid/grid'
-import { Marger } from '../../../../../components/layout/marger'
-import { Title } from '../../../../../components/typography/title'
-import { Paragraph } from '../../../../../components/typography/paragraph'
-import { Text } from '../../../../../components/typography/text'
-import { HorizontalStroke } from '../../../../../components/layout/horizontal-stroke'
-import { Button } from '../../../../../components/buttons/button'
-import { VisaIcon } from '../../../../../components/icons/visa-icon'
-import { MasterCardIcon } from '../../../../../components/icons/mastercard-icon'
-import { MaestroIcon } from '../../../../../components/icons/maestro-icon'
-import { BancontactIcon } from '../../../../../components/icons/bancontact-icon'
-import { IdealIcon } from '../../../../../components/icons/ideal-icon'
-import { SofortIcon } from '../../../../../components/icons/sofort-icon'
-import { PayPalIcon } from '../../../../../components/icons/paypal-icon'
-import { GiropayIcon } from '../../../../../components/icons/giropay-icon'
 import { PaymentButton } from './payment-button'
 import Cart from '../../common/cart/cart'
-import { pxToRem } from '../../../../../helpers/utils/typography'
-import { Accordeon } from '../../../../../components/accordeon'
-import { RadioButton } from '../../../../../components/form/radio-button'
-import { Field } from '../../../../../components/form/field'
+import {
+  Container,
+  Grid,
+  GridCol,
+  Marger,
+  Title,
+  Paragraph,
+  Text,
+  HorizontalStroke,
+  Button,
+  VisaIcon,
+  MasterCardIcon,
+  MaestroIcon,
+  BancontactIcon,
+  IdealIcon,
+  SofortIcon,
+  PayPalIcon,
+  GiropayIcon,
+  pxToRem,
+  Accordeon,
+  RadioButton,
+  Field,
+} from '../../../../..'
 
 const HeaderDisplayStyled = styled.div`
   display: flex;

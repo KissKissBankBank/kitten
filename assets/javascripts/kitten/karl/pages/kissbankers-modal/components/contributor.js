@@ -7,7 +7,7 @@ import { containerStyles, titleStyles } from './styles'
 import {
   AdaptableGrid as Grid,
   AdaptableGridCol as GridCol,
-} from '../../../../components/grid/adaptable-grid'
+} from '../../../../components/layout/adaptable-grid'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 

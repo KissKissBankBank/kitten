@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Grid, GridCol } from '../../../../../components/grid/grid'
+import { Grid, GridCol } from '../../../../../components/layout/grid'
 import { Marger } from '../../../../../components/layout/marger'
-import { Button } from '../../../../../components/buttons/button'
+import { Button } from '../../../../../components/molecules/buttons/button'
 import { Field } from '../../../../../components/form/field'
 
 class Form extends Component {

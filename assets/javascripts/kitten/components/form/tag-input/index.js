@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import { CrossIcon } from '../../../components/icons/cross-icon'
+import { CrossIcon } from '../../../components/graphics/icons/cross-icon'
 import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledWrapper = styled.div`

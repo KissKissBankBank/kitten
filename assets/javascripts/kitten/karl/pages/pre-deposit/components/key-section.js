@@ -1,11 +1,11 @@
 import React from 'react'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { Container } from '../../../../components/grid/container'
+import { Grid, GridCol } from '../../../../components/layout/grid'
+import { Container } from '../../../../components/layout/container'
 import { Marger } from '../../../../components/layout/marger'
-import { TitleWithStroke } from '../../../../components/typography/title-with-stroke'
-import { Text } from '../../../../components/typography/text'
-import { BulletList } from '../../../../components/lists/bullet-list'
-import { Button } from '../../../../components/buttons/button'
+import { TitleWithStroke } from '../../../../components/atoms/typography/title-with-stroke'
+import { Text } from '../../../../components/atoms/typography/text'
+import { BulletList } from '../../../../components/molecules/bullet-list'
+import { Button } from '../../../../components/molecules/buttons/button'
 
 const KeySection = () => (
   <Container className="PreDeposit__keySection">

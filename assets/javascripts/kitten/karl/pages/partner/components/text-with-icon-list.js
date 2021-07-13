@@ -1,14 +1,14 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
 import { Marger } from '../../../../components/layout/marger'
-import { Container } from '../../../../components/grid/container'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { Title } from '../../../../components/typography/title'
-import { Text } from '../../../../components/typography/text'
-import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
-import { Button, FLUID } from '../../../../components/buttons/button'
+import { Container } from '../../../../components/layout/container'
+import { Grid, GridCol } from '../../../../components/layout/grid'
+import { Title } from '../../../../components/atoms/typography/title'
+import { Text } from '../../../../components/atoms/typography/text'
+import { HorizontalStroke } from '../../../../components/atoms/horizontal-stroke'
+import { Button, FLUID } from '../../../../components/molecules/buttons/button'
 import { ScreenConfig } from '../../../../constants/screen-config'
-import { IconList } from '../../../../components/lists/icon-list'
+import { IconList } from '../../../../components/organisms/icon-list'
 
 const StyledGrid = styled(Grid)`
   align-items: center;

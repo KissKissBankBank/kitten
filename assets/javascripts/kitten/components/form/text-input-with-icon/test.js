@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { TextInputWithIcon } from './index'
-import { SearchIcon } from '../../../components/icons/search-icon'
+import { SearchIcon } from '../../../components/graphics/icons/search-icon'
 
 describe('<TextInputWithIcon />', () => {
   let component

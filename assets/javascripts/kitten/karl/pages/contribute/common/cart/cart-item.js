@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Marger } from '../../../../../components/layout/marger'
-import { Title } from '../../../../../components/typography/title'
-import { Text } from '../../../../../components/typography/text'
+import { Title } from '../../../../../components/atoms/typography/title'
+import { Text } from '../../../../../components/atoms/typography/text'
 import { pxToRem } from '../../../../../helpers/utils/typography'
 
 class CartItem extends Component {

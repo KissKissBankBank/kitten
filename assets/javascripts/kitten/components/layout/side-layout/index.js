@@ -6,7 +6,7 @@ import {
   SideGrid,
   SideGridContent,
   SideGridAside,
-} from '../../../components/grid/side-grid'
+} from '../../../components/layout/side-grid'
 import domElementHelper from '../../../helpers/dom/element-helper'
 
 const StyledSideLayout = styled(SideGrid)`

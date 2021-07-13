@@ -1,6 +1,6 @@
 import React from 'react'
 import { boolean, text } from '@storybook/addon-knobs'
-import { Grid, GridCol } from '../../../components/grid/grid'
+import { Grid, GridCol } from '../../../components/layout/grid'
 import { ToggleSwitch } from './index'
 
 export default {

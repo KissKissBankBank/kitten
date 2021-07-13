@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
 import { Loader } from '../../../components/atoms/loader'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Paragraph } from '../../../components/atoms/typography/paragraph'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../helpers/utils/typography'
 

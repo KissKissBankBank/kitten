@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { text, boolean, select, number } from '@storybook/addon-knobs'
 import { DropdownSelect } from './index'
 import { Button } from '../../../index'
-import { Grid, GridCol } from '../../../components/grid/grid'
-import { ArrowIcon } from '../../icons/arrow-icon'
-import { Text } from '../../typography/text'
+import { Grid, GridCol } from '../../../components/layout/grid'
+import { ArrowIcon } from '../../graphics/icons/arrow-icon'
+import { Text } from '../../atoms/typography/text'
 
 export default {
   component: DropdownSelect,

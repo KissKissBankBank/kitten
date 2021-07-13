@@ -1,14 +1,14 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
 import { Marger } from '../../../../components/layout/marger'
-import { Container } from '../../../../components/grid/container'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { Title as KittenTitle } from '../../../../components/typography/title'
+import { Container } from '../../../../components/layout/container'
+import { Grid, GridCol } from '../../../../components/layout/grid'
+import { Title as KittenTitle } from '../../../../components/atoms/typography/title'
 import {
   HorizontalStroke,
   DEFAULT,
   BIG,
-} from '../../../../components/layout/horizontal-stroke'
+} from '../../../../components/atoms/horizontal-stroke'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Badge } from './index'
-import { Cart } from '../../icons/cart'
+import { Cart } from '../../graphics/icons/cart'
 import renderer from 'react-test-renderer'
 
 describe('<Badge />', () => {

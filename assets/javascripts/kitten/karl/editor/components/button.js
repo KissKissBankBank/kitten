@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button, ICON } from '../../../components/buttons/button'
-import { modifierStyles } from '../../../components/buttons/button/helpers/modifier-styles'
+import { Button, ICON } from '../../../components/molecules/buttons/button'
+import { modifierStyles } from '../../../components/molecules/buttons/button/helpers/modifier-styles'
 import COLORS from '../../../constants/colors-config'
 
 export default styled(({ tag, ...props }) => <Button as={tag} {...props} />)`

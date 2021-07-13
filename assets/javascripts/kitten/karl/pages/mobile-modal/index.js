@@ -6,12 +6,12 @@ import React, {
   useImperativeHandle,
 } from 'react'
 import PropTypes from 'prop-types'
-import { Modal } from '../../../components/modals/modal'
+import { Modal } from '../../../components/molecules/modal'
 import styled, { createGlobalStyle } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
-import { CloseButton } from '../../../components/buttons/close-button'
+import { CloseButton } from '../../../components/molecules/buttons/close-button'
 
 const ModalProperties = createContext({})
 

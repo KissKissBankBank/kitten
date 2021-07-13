@@ -2,7 +2,7 @@ import React from 'react'
 import { select, boolean } from '@storybook/addon-knobs'
 import styled from 'styled-components'
 import { IconBadge } from './index'
-import { StarIcon } from '../../../components/icons/star-icon'
+import { StarIcon } from '../../../components/graphics/icons/star-icon'
 import COLORS from '../../../constants/colors-config'
 
 const Container = styled.div`

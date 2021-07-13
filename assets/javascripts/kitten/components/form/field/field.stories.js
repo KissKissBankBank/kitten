@@ -7,8 +7,8 @@ import {
   FieldAutocompleteExample,
 } from './field.examples'
 import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
+import { Container } from '../../layout/container'
+import { Grid, GridCol } from '../../layout/grid'
 
 const StoryGrid = ({ children }) => (
   <Container>
