@@ -12,7 +12,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-bottom-double"
       >
         <h2
-          className="sc-cSHVUG iQAFDk k-Title k-Title--secondary k-Title--noMargin"
+          className="sc-jzJRlG ePtZub k-Title k-Title--secondary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
@@ -47,7 +47,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
         >
           <h1
-            className="sc-cSHVUG iQAFDk k-Title k-u-align-center k-Title--senary k-Title--noMargin"
+            className="sc-jzJRlG ePtZub k-Title k-u-align-center k-Title--senary k-Title--noMargin"
             style={
               Object {
                 "--Title-css-color": null,
@@ -62,7 +62,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-u-margin-top-triple k-u-align-center"
         >
           <button
-            className="sc-fAjcbJ bInQqb k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
+            className="sc-eqIVtm ilDxfW k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
             href={null}
             onClick={null}
             style={
@@ -97,7 +97,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-cSHVUG iQAFDk k-Title k-u-align-center k-u-margin-bottom-singleHalf--important k-Title--senary k-Title--noMargin"
+          className="sc-jzJRlG ePtZub k-Title k-u-align-center k-u-margin-bottom-singleHalf--important k-Title--senary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
@@ -116,7 +116,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="sc-fAjcbJ bInQqb k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
+          className="sc-eqIVtm ilDxfW k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
           href={null}
           onClick={null}
           style={
@@ -150,7 +150,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-cSHVUG iQAFDk k-Title k-u-align-center k-Title--senary k-Title--noMargin"
+          className="sc-jzJRlG ePtZub k-Title k-u-align-center k-Title--senary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
@@ -165,7 +165,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="sc-fAjcbJ bInQqb k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
+          className="sc-eqIVtm ilDxfW k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
           href={null}
           onClick={null}
           style={
