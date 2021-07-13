@@ -2,7 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-export const QuickAccessLink = ({ text, href, zIndex, style, className, ...props }) => (
+export const QuickAccessLink = ({
+  text,
+  href,
+  zIndex,
+  style,
+  className,
+  ...props
+}) => (
   <a
     {...props}
     href={href}
@@ -10,7 +17,8 @@ export const QuickAccessLink = ({ text, href, zIndex, style, className, ...props
     style={{
       ...style,
       '--HeaderNav_quickAccessLink_zIndex': zIndex,
-    }}>
+    }}
+  >
     {text}
   </a>
 )

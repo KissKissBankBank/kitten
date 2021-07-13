@@ -470,14 +470,12 @@ export const StyledHeader = styled.header`
 
   /* DROPDOWN */
   .k-HeaderNavDropdown {
-    position: relative;
     align-self: stretch;
 
     .k-HeaderNavDropdown__menu {
       position: absolute;
       top: 100%;
       z-index: 20;
-      min-width: max(${pxToRem(200)}, 100%);
       /* Max-height is needed to allow scroll on menu.
          The 100% is equal to the button height. */
       max-height: calc(100vh - 100%);
@@ -487,21 +485,30 @@ export const StyledHeader = styled.header`
       margin-top: ${pxToRem(-10)};
       visibility: hidden;
       opacity: 0;
+    }
 
-      &.k-HeaderNavDropdown__menu--is-left {
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      .k-HeaderNavDropdown__menu {
+        min-width: 100vw;
+        max-width: 100vw;
         left: 0;
-      }
-
-      &.k-HeaderNavDropdown__menu--is-right {
         right: 0;
       }
+    }
 
-      @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-        position: absolute;
-        min-width: 0;
-        width: 100vw !important;
-        left: 0 !important;
-        right: 0 !important;
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      position: relative;
+
+      .k-HeaderNavDropdown__menu {
+        min-width: max(${pxToRem(200)}, 100%);
+
+        &.k-HeaderNavDropdown__menu--is-left {
+          left: 0;
+        }
+
+        &.k-HeaderNavDropdown__menu--is-right {
+          right: 0;
+        }
       }
     }
 

@@ -50,7 +50,7 @@ const StyledTagButton = styled.button`
 
     &.k-Buttons__tagButton--hydrogen {
       background-color: ${COLORS.background1};
-      border-color:  ${COLORS.line1};
+      border-color: ${COLORS.line1};
       color: ${COLORS.font1};
 
       &:hover,
@@ -61,7 +61,7 @@ const StyledTagButton = styled.button`
       }
 
       &:active {
-        background-color: ${COLORS.primary5};
+        background-color: ${COLORS.background1};
         border-color: ${COLORS.primary1};
         color: ${COLORS.font1};
       }
@@ -71,6 +71,12 @@ const StyledTagButton = styled.button`
         border-color: ${COLORS.line1};
         background-color: ${COLORS.line1};
         color: ${COLORS.font3};
+      }
+
+      &.k-Buttons__tagButton--selected {
+        background-color: ${COLORS.primary5};
+        border-color: ${COLORS.primary1};
+        color: ${COLORS.font1};
       }
     }
   }

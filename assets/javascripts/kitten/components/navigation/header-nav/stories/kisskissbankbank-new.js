@@ -68,7 +68,7 @@ const InnerUserMenu = () => (
     </HeaderMenu.Item>
     <HeaderMenu.Item
       href="#"
-      className="k-u-background-color-background3--important"
+      className="k-u-background-color-background3"
     >
       Déconnexion
     </HeaderMenu.Item>
@@ -146,7 +146,10 @@ export const KissKissBankBankHeaderNavStoryNew = ({
         />
 
         <HeaderNav.Logged>
-          <HeaderNav.UserMenuNext dropdownAnchorSide="right" mobilePadding={false}>
+          <HeaderNav.UserMenuNext
+            dropdownAnchorSide="right"
+            mobilePadding={false}
+          >
             <HeaderNav.UserMenuNext.Button
               hasArrow
               backgroundColor={COLORS.background1}

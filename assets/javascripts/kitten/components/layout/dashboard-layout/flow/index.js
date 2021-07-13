@@ -76,17 +76,11 @@ const StyledFlow = styled.div`
     align-items: center;
     justify-content: space-between;
     margin: ${pxToRem(20)} 0;
+    gap: ${pxToRem(20)};
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       margin: ${pxToRem(30)} 0;
-    }
-
-    & > :not(:last-child) {
-      margin-right: ${pxToRem(20)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        margin-right: ${pxToRem(40)};
-      }
+      gap: ${pxToRem(40)};
     }
 
     & > *:not(:first-child:last-child) {

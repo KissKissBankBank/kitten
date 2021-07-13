@@ -8,10 +8,7 @@ export const Title = props => {
       color="font1"
       weight="bold"
       {...props}
-      className={classNames(
-        'k-ContributionCard__title',
-        props.className,
-      )}
+      className={classNames('k-ContributionCard__title', props.className)}
     />
   )
 }

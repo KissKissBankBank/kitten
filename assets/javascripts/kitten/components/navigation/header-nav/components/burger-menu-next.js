@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { BurgerIcon } from '../../../../components/icons/burger-icon'
-import { Dropdown } from './dropdown'
 import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
 import COLORS from '../../../../constants/colors-config'
 import { Context } from './context'
@@ -9,10 +8,14 @@ import { useDropdown } from '../hooks/use-dropdown'
 import { DropdownButton } from './dropdown-button'
 
 const namespace = 'kkbbAndCo'
-const DROPDOWN_CLASS = `${namespace}-PlatformMenu`
 const CLOSE_EVENT = `${namespace}:platformMenu:close`
 
-export const BurgerMenuNext = ({ children, dropdownContentWidth, ...props }) => {
+export const BurgerMenuNext = ({
+  children,
+  dropdownContentWidth,
+  className,
+  ...props
+}) => {
   const { id, callOnToggle } = useContext(Context)
 
   const {
@@ -30,7 +33,11 @@ export const BurgerMenuNext = ({ children, dropdownContentWidth, ...props }) => 
   })
 
   return (
-    <div {...dropdownProps}>
+    <div
+      {...dropdownProps}
+      {...props}
+      className={classNames(className, dropdownProps.className)}
+    >
       <DropdownButton
         {...buttonProps}
         className={classNames(
@@ -40,14 +47,14 @@ export const BurgerMenuNext = ({ children, dropdownContentWidth, ...props }) => 
           'k-ButtonIcon--tiny',
         )}
       >
-        {isDropdownExpanded ?(
+        {isDropdownExpanded ? (
           <BurgerIcon
             isActive
             hoverColor={COLORS.font1}
             className="k-ButtonIcon__svg"
             aria-hidden="true"
           />
-        ):(
+        ) : (
           <BurgerIcon
             isAnimatedOnHover
             hoverColor={COLORS.font1}
@@ -58,9 +65,7 @@ export const BurgerMenuNext = ({ children, dropdownContentWidth, ...props }) => 
         <VisuallyHidden>Menu</VisuallyHidden>
       </DropdownButton>
 
-      <div {...menuProps}>
-        {children}
-      </div>
+      <div {...menuProps}>{children}</div>
     </div>
   )
 }

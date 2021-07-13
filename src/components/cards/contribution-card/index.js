@@ -11,6 +11,8 @@ exports.ContributionCard = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireWildcard(require("react"));
@@ -29,6 +31,8 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _components = require("./components");
 
+var _context = require("./context");
+
 var ContributionCard = function ContributionCard(_ref) {
   var className = _ref.className,
       closeButtonLabel = _ref.closeButtonLabel,
@@ -41,8 +45,14 @@ var ContributionCard = function ContributionCard(_ref) {
       borderColor = _ref.borderColor,
       borderStyle = _ref.borderStyle,
       onClose = _ref.onClose,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderWidth", "borderRadius", "imageBorderRadius", "borderColor", "borderStyle", "onClose"]);
-  var contributionRef = (0, _react.useRef)(null);
+      largeInput = _ref.largeInput,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderWidth", "borderRadius", "imageBorderRadius", "borderColor", "borderStyle", "onClose", "largeInput"]);
+
+  var _useState = (0, _react.useState)(true),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      isInputEmpty = _useState2[0],
+      setEmptyInput = _useState2[1];
+
   if (!show) return null;
   return /*#__PURE__*/_react.default.createElement(_styles.StyledContributionCard, (0, _extends2.default)({
     className: (0, _classnames.default)('k-ContributionCard', className),
@@ -52,9 +62,7 @@ var ContributionCard = function ContributionCard(_ref) {
       '--contributionCard--image-border-radius': (0, _typography.pxToRem)(imageBorderRadius),
       '--contributionCard--border-color': borderColor,
       '--contributionCard--border-style': borderStyle
-    }),
-    ref: contributionRef,
-    role: "dialog"
+    })
   }, props), onClose && /*#__PURE__*/_react.default.createElement(_closeButton.CloseButton, {
     className: "k-ContributionCard__close",
     size: "micro",
@@ -64,11 +72,18 @@ var ContributionCard = function ContributionCard(_ref) {
     if (!child) return null;
     return child.props.__TYPE === 'Image' ? child : null;
   }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "k-ContributionCard__gridWrapper"
+    className: (0, _classnames.default)('k-ContributionCard__gridWrapper', {
+      'k-ContributionCard__gridWrapper--largeInput': largeInput
+    })
+  }, /*#__PURE__*/_react.default.createElement(_context.Context.Provider, {
+    value: {
+      isInputEmpty: isInputEmpty,
+      setEmptyInput: setEmptyInput
+    }
   }, _react.default.Children.map(children, function (child) {
     if (!child) return null;
     return ['Image'].includes(child.props.__TYPE) ? null : child;
-  })));
+  }))));
 };
 
 exports.ContributionCard = ContributionCard;
@@ -87,7 +102,8 @@ ContributionCard.defaultProps = {
   borderStyle: 'solid',
   borderWidth: 2,
   imageBorderRadius: 5,
-  onClose: undefined
+  onClose: undefined,
+  largeInput: false
 };
 ContributionCard.propTypes = {
   show: _propTypes.default.bool,
@@ -97,5 +113,6 @@ ContributionCard.propTypes = {
   borderRadius: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   borderStyle: _propTypes.default.string,
   borderWidth: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
-  imageBorderRadius: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
+  imageBorderRadius: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
+  largeInput: _propTypes.default.bool
 };

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useState, cloneElement } from 'react'
 import { CloseButton } from '../../../components/buttons/close-button'
 import { StyledContributionCard } from './styles'
 import classNames from 'classnames'
@@ -14,6 +14,11 @@ import {
   Input,
   Action,
 } from './components'
+import { Context } from './context'
+import {
+  getReactElementsByType,
+  getReactElementsWithoutType,
+} from '../../../helpers/react/react-elements'
 
 export const ContributionCard = ({
   className,
@@ -27,10 +32,19 @@ export const ContributionCard = ({
   borderColor,
   borderStyle,
   onClose,
+  largeInput,
   ...props
 }) => {
-  const contributionRef = useRef(null)
+  const imageChild = getReactElementsByType({
+    children,
+    type: ContributionCard.Image,
+  })[0]
+  const wrappedChildren = getReactElementsWithoutType({
+    children,
+    type: ContributionCard.Image,
+  })
 
+  const [isInputEmpty, setEmptyInput] = useState(true)
   if (!show) return null
 
   return (
@@ -44,8 +58,6 @@ export const ContributionCard = ({
         '--contributionCard--border-color': borderColor,
         '--contributionCard--border-style': borderStyle,
       }}
-      ref={contributionRef}
-      role="dialog"
       {...props}
     >
       {onClose && (
@@ -57,16 +69,18 @@ export const ContributionCard = ({
         />
       )}
 
-      {React.Children.map(children, child => {
-        if (!child) return null
-        return child.props.__TYPE === 'Image' ? child : null
-      })}
+      {imageChild && cloneElement(imageChild)}
 
-      <div className="k-ContributionCard__gridWrapper">
-        {React.Children.map(children, child => {
-          if (!child) return null
-          return ['Image'].includes(child.props.__TYPE) ? null : child
+      <div
+        className={classNames('k-ContributionCard__gridWrapper', {
+          'k-ContributionCard__gridWrapper--largeInput': largeInput,
         })}
+      >
+        <Context.Provider value={{ isInputEmpty, setEmptyInput }}>
+          {wrappedChildren.map((item, index) =>
+            cloneElement(item, { key: `ContributionCard-${index}` }),
+          )}
+        </Context.Provider>
       </div>
     </StyledContributionCard>
   )
@@ -89,6 +103,7 @@ ContributionCard.defaultProps = {
   borderWidth: 2,
   imageBorderRadius: 5,
   onClose: undefined,
+  largeInput: false,
 }
 
 ContributionCard.propTypes = {
@@ -100,4 +115,5 @@ ContributionCard.propTypes = {
   borderStyle: PropTypes.string,
   borderWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   imageBorderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  largeInput: PropTypes.bool,
 }

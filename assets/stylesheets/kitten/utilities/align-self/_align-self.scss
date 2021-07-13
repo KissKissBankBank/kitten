@@ -26,64 +26,48 @@
 ///   <div class="k-u-alignSelf-start">…</div>
 ///   <div class="k-u-alignSelf-end">…</div>
 ///
-///   <div class="k-u-alignSelf-center@xxs-down--important">…</div>
-///   <div class="k-u-alignSelf-center@xs-down--important">…</div>
-///   <div class="k-u-alignSelf-center@s-down--important">…</div>
-///   <div class="k-u-alignSelf-center@m-down--important">…</div>
-///   <div class="k-u-alignSelf-center@l-down--important">…</div>
-///
-///   <div class="k-u-alignSelf-center@xs-up--important">…</div>
-///   <div class="k-u-alignSelf-center@s-up--important">…</div>
-///   <div class="k-u-alignSelf-center@m-up--important">…</div>
-///   <div class="k-u-alignSelf-center@l-up--important">…</div>
-///   <div class="k-u-alignSelf-center@xl-up--important">…</div>
-///
-///   <div class="k-u-alignSelf-center--important">…</div>
-///   <div class="k-u-alignSelf-start--important">…</div>
-///   <div class="k-u-alignSelf-end--important">…</div>
-
 @mixin k-u-alignSelf($position, $align) {
   $value: $align;
 
   .k-u-alignSelf-#{$position} {
-    align-self: $value;
-
-    &--important {
-      align-self: $value !important;
-    }
-  }
-
-  @each $name, $query in $k-media-queries {
-    @if $name != "xl" {
-      .k-u-alignSelf-#{$position}\@#{$name}-down {
-        @include k-media-max($name) {
-          align-self: $value;
-
-          &--important {
-            align-self: $value !important;
-          }
-        }
-      }
-    }
-
-    @if $name != "xxs" {
-      .k-u-alignSelf-#{$position}\@#{$name}-up {
-        @include k-media-min($name) {
-          align-self: $value;
-
-          &--important {
-            align-self: $value !important;
-          }
-        }
-      }
-    }
+    align-self: $value !important;
   }
 }
 
 @mixin k-utilities-align-self {
-  @include k-u-alignSelf('center', center);
-  @include k-u-alignSelf('end', flex-end);
-  @include k-u-alignSelf('normal', normal);
-  @include k-u-alignSelf('start', flex-start);
-  @include k-u-alignSelf('stretch', stretch);
+  $k-variants: (
+    center: center,
+    end: flex-end,
+    normal: normal,
+    start: flex-start,
+    stretch: stretch,
+  );
+
+  @each $variant_name, $attribute in $k-variants {
+    @include k-u-alignSelf($variant_name, $attribute);
+  }
+
+  @each $mq_name, $query in reverse($k-media-queries) {
+    $addendum: \@#{$mq_name}-down;
+
+    @if $mq_name != "xl" {
+      @include k-media-max($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-alignSelf($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
+
+  @each $mq_name, $query in $k-media-queries {
+    $addendum: \@#{$mq_name}-up;
+
+    @if $mq_name != "xxs" {
+      @include k-media-min($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-alignSelf($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
 }

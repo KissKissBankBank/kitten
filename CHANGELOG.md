@@ -6,6 +6,31 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `Button`: Add `fit` and `mobileFit` props, default to `min-width` and `null`.
 - Feature: `Button`: Refactor CSS Styles.
+- Fix: Use `getReactElements` utils on `BakingCard` and `ContributionCard`.
+- Fix: Use `gap` on Flex containers whenever feasible.
+- Breaking Change: `Utilities`: Generalization of `!important` on all utilities.
+- Feature: `Utilities`: Add `k-u-flex-gap` and `k-u-flex-wrap` utility classes.
+- Fix: `Title`: Style fixes (line-height and letter-spacing).
+
+## [3.26.0] - 2021-07-12
+
+Feature:
+
+- `ContributionCard`: Add `largeInput` prop.
+
+Fixes:
+
+- `ContributionCard`: Fix accessibility.
+- `ContributionCard`: Fix image ratio on desktop.
+- `HeaderNav`: Fix user menu position on mobile.
+- `ImageDropUploader`: Vertically center description text.
+- `TagButton`: Update styles.
+
+## [3.25.2] - 2021-07-09
+
+Fix:
+
+- `parseHtml`: Return empty string if we cannot use dom.
 
 ## [3.25.1] - 2021-07-09
 

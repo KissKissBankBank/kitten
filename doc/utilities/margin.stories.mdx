@@ -17,7 +17,7 @@ These CSS utilities are complemented with the [`margin()` JS helper](?path=/stor
 The reset margin utility is `k-u-margin-none`.
 
 The basic structure of a margin utility class is
-`k-u-margin-(direction)-(value)[@(media query)][--important]`.
+`k-u-margin-(direction)-(value)[@(media query)]`.
 Here are some examples:
 
 ```
@@ -26,8 +26,7 @@ Here are some examples:
 <div class="k-u-margin-left-tripleHalf">…</div>
 <div class="k-u-margin-horizontal-sextuple">…</div>
 <div class="k-u-margin-vertical-noneHalf@l-up">…</div>
-<div class="k-u-margin-bottom-septuple--important">…</div>
-<div class="k-u-margin-horizontal-quintupleHalf@xxs-down--important">…</div>
+<div class="k-u-margin-horizontal-quintupleHalf@xxs-down">…</div>
 ```
 
 ### `direction`
@@ -72,8 +71,3 @@ Here are some examples:
 
 `media query` is optional and follows the general scheme described in
 [Using Utilities: Media Queries](?path=/story/documentation-usage-using-utilities--page#media-queries)
-
-### `--important`
-
-`--important` is optional, and will only add `!important` at the end of the rule.
-See [Using Utilities: important](?path=/story/documentation-usage-using-utilities--page#important)

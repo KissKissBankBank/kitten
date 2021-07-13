@@ -9,15 +9,9 @@
 /// @example html
 ///
 ///     <p class="k-u-font-setting-tnum">…</p>
-///
-///     <p class="k-u-font-setting-tnum--important">…</p>
 
 @mixin k-utilities-font-feature-settings {
   .k-u-font-setting-tnum {
-    font-feature-settings: "tnum";
-
-    &--important {
-      font-feature-settings: "tnum" !important;
-    }
+    font-feature-settings: "tnum" !important;
   }
 }

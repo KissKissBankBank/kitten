@@ -11,6 +11,8 @@ var _htmlToReact = _interopRequireDefault(require("html-to-react"));
 
 var _dompurify = _interopRequireDefault(require("dompurify"));
 
+var _elementHelper = require("../dom/element-helper");
+
 // We add a span to make parseHtml works with strings.
 var parseHtml = function parseHtml(value) {
   var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
@@ -21,7 +23,7 @@ var parseHtml = function parseHtml(value) {
   var clean = typeof value === 'string' ? value.replace('<3', '&lt;3') : value;
 
   if (options.sanitize) {
-    clean = _dompurify.default.sanitize(clean);
+    clean = _elementHelper.domElementHelper.canUseDom() ? _dompurify.default.sanitize(clean) : '';
   }
 
   return new _htmlToReact.default.Parser().parse("<span>".concat(clean, "</span>")).props.children;

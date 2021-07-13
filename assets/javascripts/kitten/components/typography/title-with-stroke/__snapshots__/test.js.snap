@@ -2,7 +2,7 @@
 
 exports[`<TitleWithStroke /> with default props matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa eYdOOF k-TitleWithStroke k-TitleWithStroke--primary k-TitleWithStroke--align-left"
+  className="sc-bdVaJa egVVyb k-TitleWithStroke k-TitleWithStroke--primary k-TitleWithStroke--align-left"
   style={
     Object {
       "--TitleWithStroke-css-color": null,
@@ -22,7 +22,7 @@ exports[`<TitleWithStroke /> with default props matches with snapshot 1`] = `
 
 exports[`<TitleWithStroke /> with more props matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa eYdOOF k-TitleWithStroke k-TitleWithStroke--tertiary k-TitleWithStroke--align-center k-TitleWithStroke--italic"
+  className="sc-bdVaJa egVVyb k-TitleWithStroke k-TitleWithStroke--tertiary k-TitleWithStroke--align-center k-TitleWithStroke--italic"
   style={
     Object {
       "--TitleWithStroke-css-color": "#444",

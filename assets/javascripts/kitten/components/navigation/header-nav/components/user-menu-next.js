@@ -1,7 +1,4 @@
-import React, {
-  cloneElement,
-  useContext,
-} from 'react'
+import React, { cloneElement, useContext } from 'react'
 import PropTypes from 'prop-types'
 import { Context } from './context'
 import { getReactElementsByType } from '../../../../helpers/react/react-elements'
@@ -11,7 +8,6 @@ import { useDropdown } from '../hooks/use-dropdown'
 import { ArrowIcon } from '../../../../components/icons/arrow-icon'
 
 const namespace = 'kkbbAndCo'
-const DROPDOWN_CLASS = `${namespace}-UserMenuNext k-HeaderNav__UserMenuNext`
 const CLOSE_EVENT = `${namespace}:userMenu:close`
 
 export const UserMenuNext = ({
@@ -24,8 +20,6 @@ export const UserMenuNext = ({
   mobilePadding,
   ...props
 }) => {
-  const getElementById = id => () => document.getElementById(id)
-
   const { id, callOnToggle } = useContext(Context)
 
   const buttonChild = getReactElementsByType({
@@ -55,20 +49,22 @@ export const UserMenuNext = ({
   return (
     <div
       {...dropdownProps}
-      className={classNames(
-        className,
-        dropdownProps.className,
-      )}
+      {...props}
+      className={classNames(className, dropdownProps.className)}
     >
       <DropdownButton
         {...buttonProps}
         style={{
-          '--UserMenu-Button-backgroundColor': buttonChild.props.backgroundColor || null,
-          '--UserMenu-Button-backgroundColorHover': buttonChild.props.backgroundColorHover || null,
-          '--UserMenu-Button-backgroundColorActive': buttonChild.props.backgroundColorActive || null,
+          '--UserMenu-Button-backgroundColor':
+            buttonChild.props.backgroundColor || null,
+          '--UserMenu-Button-backgroundColorHover':
+            buttonChild.props.backgroundColorHover || null,
+          '--UserMenu-Button-backgroundColorActive':
+            buttonChild.props.backgroundColorActive || null,
           '--UserMenu-Button-color': buttonChild.props.color || null,
           '--UserMenu-Button-colorHover': buttonChild.props.colorHover || null,
-          '--UserMenu-Button-colorActive': buttonChild.props.colorActive || null,
+          '--UserMenu-Button-colorActive':
+            buttonChild.props.colorActive || null,
         }}
         className={classNames(
           'k-HeaderNav__UserMenuButton',
@@ -78,7 +74,7 @@ export const UserMenuNext = ({
             'k-HeaderNav__UserMenuButton--hasArrow': buttonChild.props.hasArrow,
             'k-HeaderNav__UserMenuButton--noPadding': !padding,
             'k-HeaderNav__UserMenuButton--noPaddingMobile': !mobilePadding,
-          }
+          },
         )}
       >
         {cloneElement(buttonChild)}
@@ -91,9 +87,7 @@ export const UserMenuNext = ({
         )}
       </DropdownButton>
 
-      <div {...menuProps}>
-        {cloneElement(menuChild)}
-      </div>
+      <div {...menuProps}>{cloneElement(menuChild)}</div>
     </div>
   )
 }

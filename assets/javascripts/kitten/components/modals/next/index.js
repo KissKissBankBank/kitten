@@ -762,7 +762,7 @@ const InnerModal = ({
               <div className="k-ModalNext__closeButton">
                 <CloseButton
                   style={{ position: 'fixed' }}
-                  className="k-u-hidden@s-up--important k-u-margin-none"
+                  className="k-u-hidden@s-up k-u-margin-none"
                   modifier="hydrogen"
                   onClick={close}
                   size="micro"
@@ -770,7 +770,7 @@ const InnerModal = ({
                 />
                 <CloseButton
                   style={{ position: 'fixed' }}
-                  className="k-u-hidden@xs-down--important k-u-margin-none"
+                  className="k-u-hidden@xs-down k-u-margin-none"
                   modifier="hydrogen"
                   onClick={close}
                   closeButtonLabel={closeButtonLabel}

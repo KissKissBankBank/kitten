@@ -34,6 +34,8 @@ $k-typography: k-typography-definition((
 @include k-utilities-justify-content;
 @include k-utilities-align-items;
 @include k-utilities-flex-direction;
+@include k-utilities-flex-wrap;
+@include k-utilities-flex-gap;
 @include k-utilities-responsive;
 @include k-utilities-link;
 @include k-utilities-reset-button;

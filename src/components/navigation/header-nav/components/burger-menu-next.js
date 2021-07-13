@@ -17,8 +17,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _burgerIcon = require("../../../../components/icons/burger-icon");
 
-var _dropdown = require("./dropdown");
-
 var _visuallyHidden = require("../../../../components/accessibility/visually-hidden");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
@@ -32,13 +30,13 @@ var _useDropdown2 = require("../hooks/use-dropdown");
 var _dropdownButton = require("./dropdown-button");
 
 var namespace = 'kkbbAndCo';
-var DROPDOWN_CLASS = "".concat(namespace, "-PlatformMenu");
 var CLOSE_EVENT = "".concat(namespace, ":platformMenu:close");
 
 var BurgerMenuNext = function BurgerMenuNext(_ref) {
   var children = _ref.children,
       dropdownContentWidth = _ref.dropdownContentWidth,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "dropdownContentWidth"]);
+      className = _ref.className,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "dropdownContentWidth", "className"]);
 
   var _useContext = (0, _react.useContext)(_context.Context),
       id = _useContext.id,
@@ -57,7 +55,9 @@ var BurgerMenuNext = function BurgerMenuNext(_ref) {
       menuProps = _useDropdown.menuProps,
       isDropdownExpanded = _useDropdown.isDropdownExpanded;
 
-  return /*#__PURE__*/_react.default.createElement("div", dropdownProps, /*#__PURE__*/_react.default.createElement(_dropdownButton.DropdownButton, (0, _extends2.default)({}, buttonProps, {
+  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, dropdownProps, props, {
+    className: (0, _classnames.default)(className, dropdownProps.className)
+  }), /*#__PURE__*/_react.default.createElement(_dropdownButton.DropdownButton, (0, _extends2.default)({}, buttonProps, {
     className: (0, _classnames.default)(buttonProps.className, 'k-HeaderNav__BurgerMenu__button', 'k-ButtonIcon', 'k-ButtonIcon--tiny')
   }), isDropdownExpanded ? /*#__PURE__*/_react.default.createElement(_burgerIcon.BurgerIcon, {
     isActive: true,

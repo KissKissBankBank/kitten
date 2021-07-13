@@ -9,10 +9,7 @@ export const Amount = props => {
       weight="bold"
       size="huge"
       {...props}
-      className={classNames(
-        'k-ContributionCard__amount',
-        props.className,
-      )}
+      className={classNames('k-ContributionCard__amount', props.className)}
     />
   )
 }
