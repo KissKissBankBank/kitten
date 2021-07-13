@@ -16,7 +16,7 @@ import {
 import {
   getReactElementsByType,
   getReactElementsWithoutTypeArray,
-} from '../../../helpers/react/react-elements'
+} from '../../../../helpers/react/react-elements'
 
 export const BackingCard = ({
   children,

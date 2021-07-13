@@ -18,7 +18,7 @@ import { Context } from './context'
 import {
   getReactElementsByType,
   getReactElementsWithoutType,
-} from '../../../helpers/react/react-elements'
+} from '../../../../helpers/react/react-elements'
 
 export const ContributionCard = ({
   className,
