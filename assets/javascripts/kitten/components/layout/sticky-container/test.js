@@ -50,11 +50,7 @@ describe('<StickyContainer />', () => {
   describe('never sticky', () => {
     beforeEach(() => {
       component = renderer
-        .create(
-          <StickyContainer isSticky="never">
-            test
-          </StickyContainer>
-        )
+        .create(<StickyContainer isSticky="never">test</StickyContainer>)
         .toJSON()
     })
 

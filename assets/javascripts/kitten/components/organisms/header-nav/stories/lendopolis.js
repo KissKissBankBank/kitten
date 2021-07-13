@@ -73,10 +73,7 @@ const InnerUserMenu = () => (
         <Text weight="light">Solde&nbsp;: 24&nbsp;093,39&nbsp;€</Text>
       </div>
     </HeaderMenu.Item>
-    <HeaderMenu.Item
-      className="k-u-background-color-background3"
-      href="#"
-    >
+    <HeaderMenu.Item className="k-u-background-color-background3" href="#">
       Déconnexion
     </HeaderMenu.Item>
   </HeaderMenu>

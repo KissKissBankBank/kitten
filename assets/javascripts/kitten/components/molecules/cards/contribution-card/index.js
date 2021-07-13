@@ -1,4 +1,4 @@
-import React, { useState, cloneElement }  from 'react'
+import React, { useState, cloneElement } from 'react'
 import { CloseButton } from '../../../../components/molecules/buttons/close-button'
 import { StyledContributionCard } from './styles'
 import classNames from 'classnames'
