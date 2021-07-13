@@ -17,9 +17,7 @@ const StyledTeamCardIcons = styled.div`
     flex-shrink: 0;
   }
 
-  .k-TeamCardIcons__buttonIcon:not(:last-child) {
-    margin-right: ${pxToRem(15)};
-  }
+  gap: ${pxToRem(15)};
 `
 
 export const TeamCardIcons = ({

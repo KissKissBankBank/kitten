@@ -82,15 +82,14 @@ const StyledDashboardMenu = styled.nav`
       padding: 0 ${pxToRem(10)} ${pxToRem(20)} ${pxToRem(60)};
       display: flex;
       flex-direction: column;
-
-      .k-DashboardMenu__itemWrapper:not(:last-child) {
-        margin-bottom: ${pxToRem(10)};
-      }
+      gap: ${pxToRem(10)};
     }
   }
 
-  .k-DashboardMenu__list > :not(:last-child) {
-    margin-bottom: ${pxToRem(2)};
+  .k-DashboardMenu__list {
+    display: flex;
+    flex-direction: column;
+    gap: ${pxToRem(2)};
   }
 
   .k-DashboardMenu__list
@@ -101,6 +100,7 @@ const StyledDashboardMenu = styled.nav`
     display: flex;
     height: ${pxToRem(50)};
     align-items: center;
+    gap: ${pxToRem(10)};
     padding: 0 ${pxToRem(10)};
     border-radius: ${pxToRem(6)};
   }

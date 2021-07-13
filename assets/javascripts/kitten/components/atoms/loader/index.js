@@ -11,6 +11,7 @@ const StyledLoader = styled.div`
   display: flex;
   height: ${pxToRem(BULLET_SIZE)};
   line-height: 1;
+  gap: ${pxToRem(2)};
 
   .k-Loader__circle {
     width: ${pxToRem(BULLET_SIZE)};
@@ -31,10 +32,6 @@ const StyledLoader = styled.div`
 
     &:nth-child(3) {
       animation-delay: 0s;
-    }
-
-    &:not(:last-child) {
-      margin-right: ${pxToRem(2)};
     }
   }
 

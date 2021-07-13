@@ -37,37 +37,65 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 .c5.k-Title--primary {
   font-size: 2.2806973457336426rem;
-  line-height: 1.2;
+  -webkit-letter-spacing: -0.02em;
+  -moz-letter-spacing: -0.02em;
+  -ms-letter-spacing: -0.02em;
+  letter-spacing: -0.02em;
+  line-height: calc(1em + 0.25rem);
 }
 
 .c5.k-Title--secondary {
   font-size: 2.0272865295410156rem;
-  line-height: 1.2;
+  -webkit-letter-spacing: -0.02em;
+  -moz-letter-spacing: -0.02em;
+  -ms-letter-spacing: -0.02em;
+  letter-spacing: -0.02em;
+  line-height: calc(1em + 0.25rem);
 }
 
 .c5.k-Title--tertiary {
   font-size: 1.802032470703125rem;
-  line-height: 1.2;
+  -webkit-letter-spacing: -0.015em;
+  -moz-letter-spacing: -0.015em;
+  -ms-letter-spacing: -0.015em;
+  letter-spacing: -0.015em;
+  line-height: calc(1em + 0.25rem);
 }
 
 .c5.k-Title--quaternary {
   font-size: 1.601806640625rem;
-  line-height: 1.2;
+  -webkit-letter-spacing: -0.015em;
+  -moz-letter-spacing: -0.015em;
+  -ms-letter-spacing: -0.015em;
+  letter-spacing: -0.015em;
+  line-height: calc(1em + 0.125rem);
 }
 
 .c5.k-Title--quinary {
   font-size: 1.265625rem;
-  line-height: 1.2;
+  -webkit-letter-spacing: -0.01em;
+  -moz-letter-spacing: -0.01em;
+  -ms-letter-spacing: -0.01em;
+  letter-spacing: -0.01em;
+  line-height: calc(1em + 0.125rem);
 }
 
 .c5.k-Title--senary {
   font-size: 1.125rem;
-  line-height: 1.2;
+  -webkit-letter-spacing: -0.01em;
+  -moz-letter-spacing: -0.01em;
+  -ms-letter-spacing: -0.01em;
+  letter-spacing: -0.01em;
+  line-height: calc(1em + 0.125rem);
 }
 
 .c5.k-Title--septenary {
   font-size: 1rem;
-  line-height: 1.2;
+  -webkit-letter-spacing: -0.01em;
+  -moz-letter-spacing: -0.01em;
+  -ms-letter-spacing: -0.01em;
+  letter-spacing: -0.01em;
+  line-height: calc(1em + 0.125rem);
 }
 
 .c7 {
@@ -558,84 +586,154 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 @media (min-width:40rem) {
   .c5.k-Title--primary {
     font-size: 2.8865075781941414rem;
+    -webkit-letter-spacing: -0.02em;
+    -moz-letter-spacing: -0.02em;
+    -ms-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    line-height: 1em;
   }
 }
 
 @media (min-width:67.5rem) {
   .c5.k-Title--primary {
     font-size: 4.109890672858455rem;
+    -webkit-letter-spacing: -0.02em;
+    -moz-letter-spacing: -0.02em;
+    -ms-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    line-height: 1em;
   }
 }
 
 @media (min-width:40rem) {
   .c5.k-Title--secondary {
     font-size: 2.2806973457336426rem;
+    -webkit-letter-spacing: -0.02em;
+    -moz-letter-spacing: -0.02em;
+    -ms-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    line-height: calc(1em + 0.25rem);
   }
 }
 
 @media (min-width:67.5rem) {
   .c5.k-Title--secondary {
     font-size: 2.8865075781941414rem;
+    -webkit-letter-spacing: -0.02em;
+    -moz-letter-spacing: -0.02em;
+    -ms-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    line-height: 1em;
   }
 }
 
 @media (min-width:40rem) {
   .c5.k-Title--tertiary {
     font-size: 2.0272865295410156rem;
+    -webkit-letter-spacing: -0.02em;
+    -moz-letter-spacing: -0.02em;
+    -ms-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    line-height: calc(1em + 0.25rem);
   }
 }
 
 @media (min-width:67.5rem) {
   .c5.k-Title--tertiary {
     font-size: 2.2806973457336426rem;
+    -webkit-letter-spacing: -0.02em;
+    -moz-letter-spacing: -0.02em;
+    -ms-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    line-height: calc(1em + 0.25rem);
   }
 }
 
 @media (min-width:40rem) {
   .c5.k-Title--quaternary {
     font-size: 1.802032470703125rem;
+    -webkit-letter-spacing: -0.015em;
+    -moz-letter-spacing: -0.015em;
+    -ms-letter-spacing: -0.015em;
+    letter-spacing: -0.015em;
+    line-height: calc(1em + 0.25rem);
   }
 }
 
 @media (min-width:67.5rem) {
   .c5.k-Title--quaternary {
     font-size: 2.0272865295410156rem;
+    -webkit-letter-spacing: -0.02em;
+    -moz-letter-spacing: -0.02em;
+    -ms-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    line-height: calc(1em + 0.25rem);
   }
 }
 
 @media (min-width:40rem) {
   .c5.k-Title--quinary {
     font-size: 1.601806640625rem;
+    -webkit-letter-spacing: -0.015em;
+    -moz-letter-spacing: -0.015em;
+    -ms-letter-spacing: -0.015em;
+    letter-spacing: -0.015em;
+    line-height: calc(1em + 0.125rem);
   }
 }
 
 @media (min-width:67.5rem) {
   .c5.k-Title--quinary {
     font-size: 1.802032470703125rem;
+    -webkit-letter-spacing: -0.015em;
+    -moz-letter-spacing: -0.015em;
+    -ms-letter-spacing: -0.015em;
+    letter-spacing: -0.015em;
+    line-height: calc(1em + 0.25rem);
   }
 }
 
 @media (min-width:40rem) {
   .c5.k-Title--senary {
     font-size: 1.265625rem;
+    -webkit-letter-spacing: -0.01em;
+    -moz-letter-spacing: -0.01em;
+    -ms-letter-spacing: -0.01em;
+    letter-spacing: -0.01em;
+    line-height: calc(1em + 0.125rem);
   }
 }
 
 @media (min-width:67.5rem) {
   .c5.k-Title--senary {
     font-size: 1.601806640625rem;
+    -webkit-letter-spacing: -0.015em;
+    -moz-letter-spacing: -0.015em;
+    -ms-letter-spacing: -0.015em;
+    letter-spacing: -0.015em;
+    line-height: calc(1em + 0.125rem);
   }
 }
 
 @media (min-width:40rem) {
   .c5.k-Title--septenary {
     font-size: 1.125rem;
+    -webkit-letter-spacing: -0.01em;
+    -moz-letter-spacing: -0.01em;
+    -ms-letter-spacing: -0.01em;
+    letter-spacing: -0.01em;
+    line-height: calc(1em + 0.125rem);
   }
 }
 
 @media (min-width:67.5rem) {
   .c5.k-Title--septenary {
     font-size: 1.265625rem;
+    -webkit-letter-spacing: -0.01em;
+    -moz-letter-spacing: -0.01em;
+    -ms-letter-spacing: -0.01em;
+    letter-spacing: -0.01em;
+    line-height: calc(1em + 0.125rem);
   }
 }
 
@@ -1143,37 +1241,65 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 
 .c4.k-Title--primary {
   font-size: 2.2806973457336426rem;
-  line-height: 1.2;
+  -webkit-letter-spacing: -0.02em;
+  -moz-letter-spacing: -0.02em;
+  -ms-letter-spacing: -0.02em;
+  letter-spacing: -0.02em;
+  line-height: calc(1em + 0.25rem);
 }
 
 .c4.k-Title--secondary {
   font-size: 2.0272865295410156rem;
-  line-height: 1.2;
+  -webkit-letter-spacing: -0.02em;
+  -moz-letter-spacing: -0.02em;
+  -ms-letter-spacing: -0.02em;
+  letter-spacing: -0.02em;
+  line-height: calc(1em + 0.25rem);
 }
 
 .c4.k-Title--tertiary {
   font-size: 1.802032470703125rem;
-  line-height: 1.2;
+  -webkit-letter-spacing: -0.015em;
+  -moz-letter-spacing: -0.015em;
+  -ms-letter-spacing: -0.015em;
+  letter-spacing: -0.015em;
+  line-height: calc(1em + 0.25rem);
 }
 
 .c4.k-Title--quaternary {
   font-size: 1.601806640625rem;
-  line-height: 1.2;
+  -webkit-letter-spacing: -0.015em;
+  -moz-letter-spacing: -0.015em;
+  -ms-letter-spacing: -0.015em;
+  letter-spacing: -0.015em;
+  line-height: calc(1em + 0.125rem);
 }
 
 .c4.k-Title--quinary {
   font-size: 1.265625rem;
-  line-height: 1.2;
+  -webkit-letter-spacing: -0.01em;
+  -moz-letter-spacing: -0.01em;
+  -ms-letter-spacing: -0.01em;
+  letter-spacing: -0.01em;
+  line-height: calc(1em + 0.125rem);
 }
 
 .c4.k-Title--senary {
   font-size: 1.125rem;
-  line-height: 1.2;
+  -webkit-letter-spacing: -0.01em;
+  -moz-letter-spacing: -0.01em;
+  -ms-letter-spacing: -0.01em;
+  letter-spacing: -0.01em;
+  line-height: calc(1em + 0.125rem);
 }
 
 .c4.k-Title--septenary {
   font-size: 1rem;
-  line-height: 1.2;
+  -webkit-letter-spacing: -0.01em;
+  -moz-letter-spacing: -0.01em;
+  -ms-letter-spacing: -0.01em;
+  letter-spacing: -0.01em;
+  line-height: calc(1em + 0.125rem);
 }
 
 .c6 {
@@ -1451,84 +1577,154 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 @media (min-width:40rem) {
   .c4.k-Title--primary {
     font-size: 2.8865075781941414rem;
+    -webkit-letter-spacing: -0.02em;
+    -moz-letter-spacing: -0.02em;
+    -ms-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    line-height: 1em;
   }
 }
 
 @media (min-width:67.5rem) {
   .c4.k-Title--primary {
     font-size: 4.109890672858455rem;
+    -webkit-letter-spacing: -0.02em;
+    -moz-letter-spacing: -0.02em;
+    -ms-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    line-height: 1em;
   }
 }
 
 @media (min-width:40rem) {
   .c4.k-Title--secondary {
     font-size: 2.2806973457336426rem;
+    -webkit-letter-spacing: -0.02em;
+    -moz-letter-spacing: -0.02em;
+    -ms-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    line-height: calc(1em + 0.25rem);
   }
 }
 
 @media (min-width:67.5rem) {
   .c4.k-Title--secondary {
     font-size: 2.8865075781941414rem;
+    -webkit-letter-spacing: -0.02em;
+    -moz-letter-spacing: -0.02em;
+    -ms-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    line-height: 1em;
   }
 }
 
 @media (min-width:40rem) {
   .c4.k-Title--tertiary {
     font-size: 2.0272865295410156rem;
+    -webkit-letter-spacing: -0.02em;
+    -moz-letter-spacing: -0.02em;
+    -ms-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    line-height: calc(1em + 0.25rem);
   }
 }
 
 @media (min-width:67.5rem) {
   .c4.k-Title--tertiary {
     font-size: 2.2806973457336426rem;
+    -webkit-letter-spacing: -0.02em;
+    -moz-letter-spacing: -0.02em;
+    -ms-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    line-height: calc(1em + 0.25rem);
   }
 }
 
 @media (min-width:40rem) {
   .c4.k-Title--quaternary {
     font-size: 1.802032470703125rem;
+    -webkit-letter-spacing: -0.015em;
+    -moz-letter-spacing: -0.015em;
+    -ms-letter-spacing: -0.015em;
+    letter-spacing: -0.015em;
+    line-height: calc(1em + 0.25rem);
   }
 }
 
 @media (min-width:67.5rem) {
   .c4.k-Title--quaternary {
     font-size: 2.0272865295410156rem;
+    -webkit-letter-spacing: -0.02em;
+    -moz-letter-spacing: -0.02em;
+    -ms-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    line-height: calc(1em + 0.25rem);
   }
 }
 
 @media (min-width:40rem) {
   .c4.k-Title--quinary {
     font-size: 1.601806640625rem;
+    -webkit-letter-spacing: -0.015em;
+    -moz-letter-spacing: -0.015em;
+    -ms-letter-spacing: -0.015em;
+    letter-spacing: -0.015em;
+    line-height: calc(1em + 0.125rem);
   }
 }
 
 @media (min-width:67.5rem) {
   .c4.k-Title--quinary {
     font-size: 1.802032470703125rem;
+    -webkit-letter-spacing: -0.015em;
+    -moz-letter-spacing: -0.015em;
+    -ms-letter-spacing: -0.015em;
+    letter-spacing: -0.015em;
+    line-height: calc(1em + 0.25rem);
   }
 }
 
 @media (min-width:40rem) {
   .c4.k-Title--senary {
     font-size: 1.265625rem;
+    -webkit-letter-spacing: -0.01em;
+    -moz-letter-spacing: -0.01em;
+    -ms-letter-spacing: -0.01em;
+    letter-spacing: -0.01em;
+    line-height: calc(1em + 0.125rem);
   }
 }
 
 @media (min-width:67.5rem) {
   .c4.k-Title--senary {
     font-size: 1.601806640625rem;
+    -webkit-letter-spacing: -0.015em;
+    -moz-letter-spacing: -0.015em;
+    -ms-letter-spacing: -0.015em;
+    letter-spacing: -0.015em;
+    line-height: calc(1em + 0.125rem);
   }
 }
 
 @media (min-width:40rem) {
   .c4.k-Title--septenary {
     font-size: 1.125rem;
+    -webkit-letter-spacing: -0.01em;
+    -moz-letter-spacing: -0.01em;
+    -ms-letter-spacing: -0.01em;
+    letter-spacing: -0.01em;
+    line-height: calc(1em + 0.125rem);
   }
 }
 
 @media (min-width:67.5rem) {
   .c4.k-Title--septenary {
     font-size: 1.265625rem;
+    -webkit-letter-spacing: -0.01em;
+    -moz-letter-spacing: -0.01em;
+    -ms-letter-spacing: -0.01em;
+    letter-spacing: -0.01em;
+    line-height: calc(1em + 0.125rem);
   }
 }
 

@@ -1,0 +1,77 @@
+/// Flex spacing utilities, with FlexBox.
+///
+/// @group flex
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-flex-gap;
+///
+/// @example html
+///
+///   <div class="k-u-flex-gap-single@xxs-down">…</div>
+///   <div class="k-u-flex-gap-single@xs-down">…</div>
+///   <div class="k-u-flex-gap-single@s-down">…</div>
+///   <div class="k-u-flex-gap-single@m-down">…</div>
+///   <div class="k-u-flex-gap-single@l-down">…</div>
+///
+///   <div class="k-u-flex-gap-single@xs-up">…</div>
+///   <div class="k-u-flex-gap-single@s-up">…</div>
+///   <div class="k-u-flex-gap-single@m-up">…</div>
+///   <div class="k-u-flex-gap-single@l-up">…</div>
+///   <div class="k-u-flex-gap-single@xl-up">…</div>
+///
+///   <div class="k-u-flex-gap-none">…</div>
+///   <div class="k-u-flex-gap-single">…</div>
+///   <div class="k-u-flex-gap-triple">…</div>
+
+@mixin k-u-flex-gap($name, $gap) {
+  $value: k-px-to-rem($gap);
+
+  .k-u-flex-gap-#{$name} {
+    gap: $value !important;
+  }
+}
+
+@mixin k-utilities-flex-gap {
+  $k-sizes: (
+    none: 0,
+    noneHalf: 5px,
+    single: 10px,
+    singleHalf: 15px,
+    double: 20px,
+    doubleHalf: 25px,
+    triple: 30px,
+    tripleHalf: 35px,
+    quadruple: 40px,
+    quadrupleHalf: 45px,
+    quintuple: 50px,
+  );
+
+  @each $size_name, $size_value in $k-sizes {
+    @include k-u-flex-gap($size_name, $size_value);
+  }
+
+  @each $mq_name, $query in reverse($k-media-queries) {
+    $addendum: \@#{$mq_name}-down;
+
+    @if $mq_name != "xl" {
+      @include k-media-max($mq_name) {
+        @each $size_name, $size_value in $k-sizes {
+          @include k-u-flex-gap($size_name + $addendum, $size_value);
+        }
+      }
+    }
+  }
+
+  @each $mq_name, $query in $k-media-queries {
+    $addendum: \@#{$mq_name}-up;
+
+    @if $mq_name != "xxs" {
+      @include k-media-min($mq_name) {
+        @each $size_name, $size_value in $k-sizes {
+          @include k-u-flex-gap($size_name + $addendum, $size_value);
+        }
+      }
+    }
+  }
+}

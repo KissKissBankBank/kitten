@@ -68,7 +68,7 @@ const InnerUserMenu = () => (
     </HeaderMenu.Item>
     <HeaderMenu.Item
       href="#"
-      className="k-u-background-color-background3--important"
+      className="k-u-background-color-background3"
     >
       Déconnexion
     </HeaderMenu.Item>

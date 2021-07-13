@@ -13,6 +13,10 @@ import {
   HeadingTag,
   Description,
 } from './components'
+import {
+  getReactElementsByType,
+  getReactElementsWithoutTypeArray,
+} from '../../../helpers/react/react-elements'
 
 export const BackingCard = ({
   children,
@@ -21,6 +25,19 @@ export const BackingCard = ({
   hasBorder,
   ...props
 }) => {
+  const imageChild = getReactElementsByType({
+    children,
+    type: BackingCard.Image,
+  })[0]
+  const buttonChild = getReactElementsByType({
+    children,
+    type: BackingCard.Button,
+  })[0]
+  const wrappedChildren = getReactElementsWithoutTypeArray({
+    children,
+    typeArray: [BackingCard.Button, BackingCard.Image],
+  })
+
   return (
     <StyledBackingCard
       {...props}
@@ -29,24 +46,15 @@ export const BackingCard = ({
         'k-BackingCard--hasBorder': hasBorder,
       })}
     >
-      {React.Children.map(children, child => {
-        if (!child) return null
-        return child.props.__TYPE === 'Image' ? child : null
-      })}
+      {imageChild && cloneElement(imageChild)}
 
       <div className="k-BackingCard__gridWrapper">
-        {React.Children.map(children, child => {
-          if (!child) return null
-          return ['Image', 'Button'].includes(child.props.__TYPE) ? null : child
-        })}
+        {wrappedChildren && wrappedChildren.map((item, index) =>
+          cloneElement(item, { key: `BackingCard-${index}` }),
+        )}
       </div>
 
-      {React.Children.map(children, child => {
-        if (!child) return null
-        return child.props.__TYPE === 'Button'
-          ? cloneElement(child, { disabled })
-          : null
-      })}
+      {buttonChild && cloneElement(buttonChild, { disabled })}
     </StyledBackingCard>
   )
 }
