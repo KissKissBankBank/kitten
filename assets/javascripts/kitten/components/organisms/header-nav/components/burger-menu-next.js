@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { BurgerIcon } from '../../../../components/icons/burger-icon'
+import { BurgerIcon } from '../../../../components/graphics/icons/burger-icon'
 import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
 import COLORS from '../../../../constants/colors-config'
 import { Context } from './context'

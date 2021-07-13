@@ -4,7 +4,7 @@ import { text, select } from '@storybook/addon-knobs'
 
 export default {
   component: DocumentsStatusBox,
-  title: 'Uploaders/DocumentsStatusBox',
+  title: 'Molecules/Upload/DocumentsStatusBox',
 }
 
 export const Default = () => (

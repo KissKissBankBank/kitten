@@ -36,12 +36,11 @@ import {
   InstagramIcon,
   YoutubeIcon,
   Alert,
+  useWindowWidth,
+  useDeepCompareEffect,
 } from '../../..'
 
 import { Default as Table } from '../../organisms/tables/list-table/list-table.stories.js'
-
-import { useWindowWidth } from '../../../helpers/utils/use-window-width-hook'
-import { useDeepCompareEffect } from '../../../helpers/utils/use-deep-compare-effect-hook'
 
 const options = [
   {

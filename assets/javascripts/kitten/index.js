@@ -39,6 +39,7 @@ export { Title } from './components/atoms/typography/title'
 export { TitleWithStroke } from './components/atoms/typography/title-with-stroke'
 
 export {
+  titleModifiers,
   titleModifierStyles,
   titleModifiersNames,
   titleHelperModifierStyles,
@@ -281,6 +282,9 @@ export { ExpandBoard } from './components/molecules/expand/expand-board'
 export { BasicUploader } from './components/molecules/upload/basic-uploader'
 export { DocumentManager } from './components/molecules/upload/document-manager'
 export { ImageCropper } from './components/molecules/upload/image-cropper'
+export { ImageDropUploader } from './components/molecules/upload/image-drop-uploader'
+export { DocumentsDropUploader } from './components/molecules/upload/documents-drop-uploader'
+export { DocumentsStatusBox } from './components/molecules/upload/documents-status-box'
 
 // Organisms
 export { CounterBlock } from './components/organisms/counter-block'
@@ -412,7 +416,18 @@ export { useWindowWidth } from './helpers/utils/use-window-width-hook'
 export { dispatchEvent } from './helpers/dom/events'
 export { stringUtils, upcaseFirst } from './helpers/utils/string'
 export { hexToRgba } from './helpers/utils/hex-to-rgba'
-
+export {
+  getMinQuery,
+  getMaxQuery,
+  getJoinedQueries,
+  createMatchMedia,
+  createMatchMediaMin,
+  createMatchMediaMax,
+  createMatchMediaWithin,
+  getScreenSizeFrom,
+} from './helpers/utils/media-queries'
+export { useMedia } from './helpers/utils/use-media-query'
+export { useDeepCompareEffect } from './helpers/utils/use-deep-compare-effect-hook'
 // ---
 // HOC
 // ---

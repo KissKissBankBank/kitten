@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import classNames from 'classnames'
 import { useDrag } from '../hooks/use-drag'
-import { usePrevious } from '../../../../helpers/utils/use-previous-hook'
+import { usePrevious } from '../../../../../helpers/utils/use-previous-hook'
 
 export const ImageCropper = ({
   src,

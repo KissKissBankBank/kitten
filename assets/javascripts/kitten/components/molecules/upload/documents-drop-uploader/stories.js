@@ -4,7 +4,7 @@ import { boolean, text, select } from '@storybook/addon-knobs'
 
 export default {
   component: DocumentsDropUploader,
-  title: 'Uploaders/DocumentsDropUploader',
+  title: 'Molecules/Upload/DocumentsDropUploader',
 }
 
 export const Default = () => (

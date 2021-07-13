@@ -30,8 +30,8 @@ export const GoodeedLogo = ({ color, width, height, ...props }) => {
       <title>Goodeed</title>
       <defs>
         <linearGradient x1="100%" y1="76.906%" x2="0%" y2="0%" id="a">
-          <stop stop-color="#53B1E7" offset="0%" />
-          <stop stop-color="#75D6FF" offset="100%" />
+          <stop stopColor="#53B1E7" offset="0%" />
+          <stop stopColor="#75D6FF" offset="100%" />
         </linearGradient>
       </defs>
       <path

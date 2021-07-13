@@ -5,7 +5,7 @@ import { getReactElementsByType } from '../../../../helpers/react/react-elements
 import classNames from 'classnames'
 import { DropdownButton } from './dropdown-button'
 import { useDropdown } from '../hooks/use-dropdown'
-import { ArrowIcon } from '../../../../components/icons/arrow-icon'
+import { ArrowIcon } from '../../../../components/graphics/icons/arrow-icon'
 
 const namespace = 'kkbbAndCo'
 const CLOSE_EVENT = `${namespace}:userMenu:close`

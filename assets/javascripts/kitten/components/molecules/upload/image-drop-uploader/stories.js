@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { ImageDropUploader } from './index'
 import { boolean, text } from '@storybook/addon-knobs'
-import { BackingCard, Grid, GridCol, Tag, Container } from '../../..'
+import { BackingCard, Grid, GridCol, Tag, Container } from '../../../..'
 
 export default {
   component: ImageDropUploader,
-  title: 'Uploaders/ImageDropUploader',
+  title: 'Molecules/Upload/ImageDropUploader',
 }
 
 export const StatusReady = () => (
