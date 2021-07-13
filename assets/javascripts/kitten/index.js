@@ -3,9 +3,13 @@
 // ----------
 
 // Accessibility
+// -------------
+
 export { VisuallyHidden } from './components/accessibility/visually-hidden'
 
 // Atoms
+// -----
+
 export { AvatarWithTextAndBadge } from './components/atoms/avatar-with-text-and-badge'
 export { Badge } from './components/atoms/badge'
 export { HighlightHalo } from './components/atoms/highlight-halo'
@@ -37,7 +41,6 @@ export { SupTitle } from './components/atoms/typography/sup-title'
 export { Text } from './components/atoms/typography/text'
 export { Title } from './components/atoms/typography/title'
 export { TitleWithStroke } from './components/atoms/typography/title-with-stroke'
-
 export {
   titleModifiers,
   titleModifierStyles,
@@ -51,9 +54,13 @@ export { Video } from './components/atoms/video/video'
 export { GifVideo } from './components/atoms/video/gif-video'
 
 // Dev
+// ---
+
 export { DevGrid } from './components/dev/dev-grid'
 
 // Form
+// ----
+
 export { Autocomplete } from './components/form/autocomplete'
 export { Checkbox } from './components/form/checkbox'
 export { CheckboxSet } from './components/form/checkbox-set'
@@ -81,6 +88,7 @@ export { TextInputWithUnit } from './components/form/text-input-with-unit'
 export { ToggleSwitch } from './components/form/toggle-switch'
 
 // Graphics
+// --------
 
 // Graphics/Icons
 export { AlignCenterIcon } from './components/graphics/icons/align-center-icon'
@@ -198,7 +206,26 @@ export { MaisonDeCrowdfundingLogo } from './components/graphics/logos/mdc'
 export { MicrodonLogo } from './components/graphics/logos/microdonlogo'
 export { KkbbCoLogo } from './components/graphics/logos/kkbb-co'
 
+// Layout
+// ------
+
+export {
+  AdaptableGrid,
+  AdaptableGridCol,
+} from './components/layout/adaptable-grid'
+export { Container } from './components/layout/container'
+export { DashboardLayout } from './components/layout/dashboard-layout'
+export { Grid, GridCol } from './components/layout/grid'
+export { Marger } from './components/layout/marger'
+export { Row } from './components/layout/row'
+export { ScrollableContainer } from './components/layout/scrollable-container'
+export { SideGrid } from './components/layout/side-grid'
+export { SideLayout } from './components/layout/side-layout'
+export { StickyContainer } from './components/layout/sticky-container'
+
 // Molecules
+// ---------
+
 export { Alert } from './components/molecules/alert'
 export { BulletList } from './components/molecules/bullet-list'
 export { CheckList } from './components/molecules/check-list'
@@ -287,6 +314,8 @@ export { DocumentsDropUploader } from './components/molecules/upload/documents-d
 export { DocumentsStatusBox } from './components/molecules/upload/documents-status-box'
 
 // Organisms
+// ---------
+
 export { CounterBlock } from './components/organisms/counter-block'
 export { DashboardMenu } from './components/organisms/dashboard-menu'
 export { HeaderMenu } from './components/organisms/header-menu'
@@ -305,21 +334,6 @@ export { VerticalStepper } from './components/organisms/vertical-stepper'
 export { DoubleEntryTable } from './components/organisms/tables/double-entry-table'
 export { ListTable } from './components/organisms/tables/list-table'
 export { SingleEntryTable } from './components/organisms/tables/single-entry-table'
-
-// Structure
-export {
-  AdaptableGrid,
-  AdaptableGridCol,
-} from './components/layout/adaptable-grid'
-export { Container } from './components/layout/container'
-export { DashboardLayout } from './components/layout/dashboard-layout'
-export { Grid, GridCol } from './components/layout/grid'
-export { Marger } from './components/layout/marger'
-export { Row } from './components/layout/row'
-export { ScrollableContainer } from './components/layout/scrollable-container'
-export { SideGrid } from './components/layout/side-grid'
-export { SideLayout } from './components/layout/side-layout'
-export { StickyContainer } from './components/layout/sticky-container'
 
 // ---------
 // CONSTANTS
@@ -347,7 +361,6 @@ export { default as TYPOGRAPHY } from './constants/typography-config'
 export { DROPDOWN_ANIMATED_DELAY } from './constants/dropdown-config'
 
 // Constants from Helpers
-
 export {
   domEvents,
   A11Y_EVENT,
@@ -363,7 +376,6 @@ export {
 } from './helpers/dom/events'
 
 // Constants from Components
-
 export {
   FLUID as BUTTON_STYLE_FLUID,
   DEFAULT as BUTTON_STYLE_DEFAULT,
@@ -403,6 +415,8 @@ export { nativeInputValueSetter } from './helpers/dom/native-input-value-setter'
 export {
   getReactElementsByType,
   getReactElementsWithoutType,
+  getReactElementsByTypeArray,
+  getReactElementsWithoutTypeArray,
 } from './helpers/react/react-elements'
 export { default as useContinuousIntersectionObserver } from './helpers/utils/continuous-intersection-hook'
 export { default as useIntersectionObserver } from './helpers/utils/intersection-hook'
@@ -428,9 +442,10 @@ export {
 } from './helpers/utils/media-queries'
 export { useMedia } from './helpers/utils/use-media-query'
 export { useDeepCompareEffect } from './helpers/utils/use-deep-compare-effect-hook'
+
 // ---
 // HOC
 // ---
 
-export { default as withLazy } from './hoc/with-lazy'
 export { withMediaQueries, mediaQueries } from './hoc/media-queries'
+export { default as withLazy } from './hoc/with-lazy'
