@@ -1,0 +1,69 @@
+/// Flex wrapping utilities, with FlexBox.
+///
+/// @group flex
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-flex-wrap;
+///
+/// @example html
+///
+///   <div class="k-u-flex-wrap-wrap@xxs-down">…</div>
+///   <div class="k-u-flex-wrap-wrap@xs-down">…</div>
+///   <div class="k-u-flex-wrap-wrap@s-down">…</div>
+///   <div class="k-u-flex-wrap-wrap@m-down">…</div>
+///   <div class="k-u-flex-wrap-wrap@l-down">…</div>
+///
+///   <div class="k-u-flex-wrap-wrap@xs-up">…</div>
+///   <div class="k-u-flex-wrap-wrap@s-up">…</div>
+///   <div class="k-u-flex-wrap-wrap@m-up">…</div>
+///   <div class="k-u-flex-wrap-wrap@l-up">…</div>
+///   <div class="k-u-flex-wrap-wrap@xl-up">…</div>
+///
+///   <div class="k-u-flex-wrap-nowrap">…</div>
+///   <div class="k-u-flex-wrap-wrap">…</div>
+///   <div class="k-u-flex-wrap-reverse">…</div>
+
+@mixin k-u-flex-wrap($position, $wrap) {
+  $value: $wrap;
+
+  .k-u-flex-wrap-#{$position} {
+    flex-wrap: $value !important;
+  }
+}
+
+@mixin k-utilities-flex-wrap {
+  $k-variants: (
+    nowrap: nowrap,
+    wrap: wrap,
+    reverse: wrap-reverse,
+  );
+
+  @each $variant_name, $attribute in $k-variants {
+    @include k-u-flex-wrap($variant_name, $attribute);
+  }
+
+  @each $mq_name, $query in reverse($k-media-queries) {
+    $addendum: \@#{$mq_name}-down;
+
+    @if $mq_name != "xl" {
+      @include k-media-max($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-flex-wrap($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
+
+  @each $mq_name, $query in $k-media-queries {
+    $addendum: \@#{$mq_name}-up;
+
+    @if $mq_name != "xxs" {
+      @include k-media-min($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-flex-wrap($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
+}

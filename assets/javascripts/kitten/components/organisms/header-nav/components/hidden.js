@@ -2,8 +2,8 @@ import React from 'react'
 import classNames from 'classnames'
 
 export const Hidden = ({ min, max, children }) => {
-  const hiddenMin = min ? `k-u-hidden@${min}-up--important` : ''
-  const hiddenMax = max ? `k-u-hidden@${max}-down--important` : ''
+  const hiddenMin = min ? `k-u-hidden@${min}-up` : ''
+  const hiddenMax = max ? `k-u-hidden@${max}-down` : ''
 
   return (
     <>

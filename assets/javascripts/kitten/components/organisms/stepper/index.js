@@ -38,15 +38,10 @@ const List = styled.ul`
 const ItemWrapper = styled.li`
   display: flex;
   align-items: center;
-
-  :not(:last-child) {
-    margin-right: ${pxToRem(25)};
-  }
+  gap: ${pxToRem(25)};
 
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    :not(:last-child) {
-      margin-right: ${pxToRem(50)};
-    }
+    gap: ${pxToRem(50)};
   }
 
   .k-Stepper__icon {

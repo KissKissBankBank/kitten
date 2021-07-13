@@ -75,7 +75,7 @@ export const Video = () => {
           modifier="senary"
           tag="h2"
           align="center"
-          className="k-u-margin-top-triple k-u-margin-top-quadruple@s-up k-u-margin-top-none@l-up--important"
+          className="k-u-margin-top-triple k-u-margin-top-quadruple@s-up k-u-margin-top-none@l-up"
         >
           Maecenas sed diam eget risus varius blandit sit amet non magna.
         </TitleWithStroke>

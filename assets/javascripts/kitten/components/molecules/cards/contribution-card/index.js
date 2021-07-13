@@ -1,4 +1,4 @@
-import React, { useState }  from 'react'
+import React, { useState, cloneElement }  from 'react'
 import { CloseButton } from '../../../../components/molecules/buttons/close-button'
 import { StyledContributionCard } from './styles'
 import classNames from 'classnames'
@@ -15,6 +15,10 @@ import {
   Action,
 } from './components'
 import { Context } from './context'
+import {
+  getReactElementsByType,
+  getReactElementsWithoutType,
+} from '../../../helpers/react/react-elements'
 
 export const ContributionCard = ({
   className,
@@ -31,6 +35,15 @@ export const ContributionCard = ({
   largeInput,
   ...props
 }) => {
+  const imageChild = getReactElementsByType({
+    children,
+    type: ContributionCard.Image,
+  })[0]
+  const wrappedChildren = getReactElementsWithoutType({
+    children,
+    type: ContributionCard.Image,
+  })
+
   const [isInputEmpty, setEmptyInput] = useState(true)
   if (!show) return null
 
@@ -56,10 +69,7 @@ export const ContributionCard = ({
         />
       )}
 
-      {React.Children.map(children, child => {
-        if (!child) return null
-        return child.props.__TYPE === 'Image' ? child : null
-      })}
+      {imageChild && cloneElement(imageChild)}
 
       <div
         className={classNames('k-ContributionCard__gridWrapper', {
@@ -67,10 +77,9 @@ export const ContributionCard = ({
         })}
       >
         <Context.Provider value={{ isInputEmpty, setEmptyInput }}>
-          {React.Children.map(children, child => {
-            if (!child) return null
-            return ['Image'].includes(child.props.__TYPE) ? null : child
-          })}
+          {wrappedChildren.map((item, index) =>
+            cloneElement(item, { key: `ContributionCard-${index}` }),
+          )}
         </Context.Provider>
       </div>
     </StyledContributionCard>

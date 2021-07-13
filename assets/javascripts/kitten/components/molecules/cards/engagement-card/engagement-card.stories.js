@@ -62,7 +62,7 @@ export const Default = () => (
         </li>
         <li>
           <StyledEngagementCard
-            className="k-u-hidden@s-down--important"
+            className="k-u-hidden@s-down"
             href="#"
             icon={<KissKissBankBankIcon height="25" />}
             backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
@@ -73,7 +73,7 @@ export const Default = () => (
         </li>
         <li>
           <StyledEngagementCard
-            className="k-u-hidden@s-down--important"
+            className="k-u-hidden@s-down"
             href="#"
             icon={<KissKissBankBankIcon height="25" />}
             backgroundColor={(color, ('backgroundColor', '#caf4fe'))}

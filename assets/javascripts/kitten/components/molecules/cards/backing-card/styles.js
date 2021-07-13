@@ -129,13 +129,10 @@ export const StyledBackingCard = styled.article`
     justify-self: start;
     display: flex;
     align-items: center;
+    gap: ${pxToRem(10)};
 
     color: ${COLORS.primary1};
     ${TYPOGRAPHY.fontStyles.regular}
-
-    svg {
-      margin-right: ${pxToRem(10)};
-    }
 
     svg,
     path {
@@ -171,10 +168,7 @@ export const StyledBackingCard = styled.article`
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-
-    & > :not(:last-child) {
-      margin-right: ${pxToRem(10)};
-    }
+    gap: ${pxToRem(10)};
   }
 
   &.k-BackingCard--disabled {
