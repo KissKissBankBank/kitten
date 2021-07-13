@@ -49,9 +49,10 @@ export const BackingCard = ({
       {imageChild && cloneElement(imageChild)}
 
       <div className="k-BackingCard__gridWrapper">
-        {wrappedChildren && wrappedChildren.map((item, index) =>
-          cloneElement(item, { key: `BackingCard-${index}` }),
-        )}
+        {wrappedChildren &&
+          wrappedChildren.map((item, index) =>
+            cloneElement(item, { key: `BackingCard-${index}` }),
+          )}
       </div>
 
       {buttonChild && cloneElement(buttonChild, { disabled })}

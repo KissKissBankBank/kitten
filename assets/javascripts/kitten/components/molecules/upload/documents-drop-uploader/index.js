@@ -375,7 +375,7 @@ export const DocumentsDropUploader = ({
             multiple={true}
           />
 
-          {(disabled || internalStatus === 'ready') ? (
+          {disabled || internalStatus === 'ready' ? (
             <label
               htmlFor={id}
               className="k-DocumentsDropUploader__button"

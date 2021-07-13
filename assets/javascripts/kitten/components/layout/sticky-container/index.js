@@ -113,11 +113,7 @@ const StickyContainerBase = (
   }
 
   if (isSticky === 'never') {
-    return (
-      <>
-        {children}
-      </>
-    )
+    return <>{children}</>
   }
 
   const isOriginalContainerOutOfViewport = () => {
@@ -204,7 +200,7 @@ const StickyContainerBase = (
       {(stuck || isSticky === 'always') && (
         <StyledSpacer
           className="k-Spacer"
-          style={{'--StickyContainer-height': pxToRem(containerHeight)}}
+          style={{ '--StickyContainer-height': pxToRem(containerHeight) }}
         />
       )}
       <StyledStickyContainer
@@ -212,7 +208,7 @@ const StickyContainerBase = (
         stickyContainerStyleProps={stickyContainerStyleProps}
         className={classNames('k-StickyContainer', className, {
           'k-StickyContainer--alwaysSticky': isSticky === 'always',
-          })}
+        })}
         isSticky={isSticky}
         {...other}
       >
@@ -227,5 +223,10 @@ export const StickyContainer = forwardRef(StickyContainerBase)
 StickyContainer.propTypes = {
   top: PropTypes.number,
   bottom: PropTypes.number,
-  isSticky: PropTypes.oneOf(['topOnScrollUp', 'bottomOnScrollDown', 'always', 'never']),
+  isSticky: PropTypes.oneOf([
+    'topOnScrollUp',
+    'bottomOnScrollDown',
+    'always',
+    'never',
+  ]),
 }

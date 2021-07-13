@@ -1,12 +1,6 @@
 import React from 'react'
 import { VerticalProgress } from './index'
-import {
-  Marger,
-  Container,
-  Text,
-  LinkBox,
-  Button,
-} from '../../..'
+import { Marger, Container, Text, LinkBox, Button } from '../../..'
 
 const StoryContainer = ({ children }) => (
   <Container>

@@ -68,10 +68,7 @@ const InnerUserMenu = () => (
     <HeaderMenu.Item button modifier="helium" href="#">
       Mon projet en cours
     </HeaderMenu.Item>
-    <HeaderMenu.Item
-      href="#"
-      className="k-u-background-color-background3"
-    >
+    <HeaderMenu.Item href="#" className="k-u-background-color-background3">
       Déconnexion
     </HeaderMenu.Item>
   </HeaderMenu>

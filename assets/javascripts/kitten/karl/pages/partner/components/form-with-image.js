@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {
   Marger,
   Container,
-  Grid, GridCol,
+  Grid,
+  GridCol,
   Title,
   Text,
   HorizontalStroke,
@@ -59,10 +60,7 @@ const SuccessMessage = styled.div`
 `
 
 const FormWithImage = () => (
-  <Marger
-    top={{ default: 8, fromS: 10 }}
-    bottom={{ default: 8, fromS: 10 }}
-  >
+  <Marger top={{ default: 8, fromS: 10 }} bottom={{ default: 8, fromS: 10 }}>
     <Container>
       <Grid>
         <GridCol col-l="6" className="k-u-hidden@m-down">
@@ -140,9 +138,7 @@ const FormWithImage = () => (
 
           <Marger bottom="4">
             <Field>
-              <Field.Label>
-                Dites nous en plus si vous souhaitez
-              </Field.Label>
+              <Field.Label>Dites nous en plus si vous souhaitez</Field.Label>
 
               <Field.Input
                 tag="textarea"
@@ -180,8 +176,8 @@ const FormWithImage = () => (
               color="font1"
               style={{ margin: 0 }}
             >
-              Merci d'avoir pensé à KissKissBankBank. Nous avons bien reçu
-              votre demande et nous vous re-contactons dans les 72 heures.
+              Merci d'avoir pensé à KissKissBankBank. Nous avons bien reçu votre
+              demande et nous vous re-contactons dans les 72 heures.
             </Text>
           </SuccessMessage>
         </GridCol>
