@@ -29,6 +29,7 @@ export const ContributionCard = ({
   borderStyle,
   onClose,
   largeInput,
+  largeTitle,
   ...props
 }) => {
   const [isInputEmpty, setEmptyInput] = useState(true)
@@ -95,6 +96,7 @@ ContributionCard.defaultProps = {
   imageBorderRadius: 5,
   onClose: undefined,
   largeInput: false,
+  largeTitle: false,
 }
 
 ContributionCard.propTypes = {
@@ -107,4 +109,5 @@ ContributionCard.propTypes = {
   borderWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   imageBorderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   largeInput: PropTypes.bool,
+  largeTitle: PropTypes.bool,
 }
