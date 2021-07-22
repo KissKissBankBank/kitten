@@ -20,6 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `display/inline-block`
   - `flex/display-flex`
 - Feature: `Utilities`: Add `display` utility to replace `k-u-block`, etc.
+- Fix: `ModalNext`: Fix sizing of Modal content.
 
 ## [3.26.0] - 2021-07-12
 
