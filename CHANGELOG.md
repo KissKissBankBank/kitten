@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `ModalNext`: Fix sizing of Modal content.
+
 ## [4.0.0] - 2021-07-22
 
 Breaking Changes:
@@ -16,6 +18,7 @@ Breaking Changes:
   - `display/hidden`
   - `display/inline-block`
   - `flex/display-flex`
+- Feature: `Utilities`: Add `display` utility to replace `k-u-block`, etc.
 
 Features:
 

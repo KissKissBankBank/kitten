@@ -398,8 +398,8 @@ const GlobalStyle = createGlobalStyle`
       &:not(.k-ModalNext__overlay--fullSize) {
         &::before,
         &::after {
-          content:'';
-          flex:1;
+          content: '';
+          flex: 1 1 33%;
           min-height: ${pxToRem(50)};
 
           @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -413,8 +413,8 @@ const GlobalStyle = createGlobalStyle`
       &:not(.k-ModalNext__overlay--giant):not(.k-ModalNext__overlay--fullSize) {
         &::before,
         &::after {
-          content:'';
-          flex:1;
+          content: '';
+          flex: 1 1 33%;
           min-height: ${pxToRem(50)};
 
           @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
@@ -426,8 +426,8 @@ const GlobalStyle = createGlobalStyle`
         &::before,
         &::after {
           @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-            content:'';
-            flex:1;
+            content: '';
+            flex: 1 1 33%;
             min-height: ${pxToRem(50)};
           }
 
