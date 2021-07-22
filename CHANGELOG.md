@@ -13,6 +13,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Use `getReactElements` utils on `BakingCard` and `ContributionCard`.
 - Fix: Use `gap` on Flex containers whenever feasible.
 - Fix: `Title`: Style fixes (line-height and letter-spacing).
+- Breaking Change: `Utilities`: Deprecate the following utilities:
+  - `display/block`
+  - `display/hidden`
+  - `display/inline-block`
+  - `flex/display-flex`
+- Feature: `Utilities`: Add `display` utility to replace `k-u-block`, etc.
 
 ## [3.26.0] - 2021-07-12
 
