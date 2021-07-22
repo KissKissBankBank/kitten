@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Use `getReactElements` utils on `BakingCard` and `ContributionCard`.
 - Fix: Use `gap` on Flex containers whenever feasible.
 - Fix: `Title`: Style fixes (line-height and letter-spacing).
+- Fix: `getReactElements` utils: Add child existence verification.
 - Breaking Change: `Utilities`: Deprecate the following utilities:
   - `display/block`
   - `display/hidden`
