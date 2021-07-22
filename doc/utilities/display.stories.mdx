@@ -1,0 +1,87 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+
+<Meta title="Documentation/CSS Utilities/Display/display" />
+
+# Display
+
+Display utilities.
+
+## Source
+
+[`assets/stylesheets/kitten/utilities/display/_display.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/display/_display.scss)
+
+## Usage
+
+Utility to set the items `display` property according to media-queries.
+
+Accepted classes:
+
+- **`k-u-block`** (`display: block;`)
+- **`k-u-inlineBlock`** (`display: inline-block;`)
+- **`k-u-inline`** (`display: inline;`)
+- **`k-u-flex`** (`display: flex;`)
+- **`k-u-inlineFlex`** (`display: inline-flex;`)
+- **`k-u-grid`** (`display: grid;`)
+- **`k-u-inlineGrid`** (`display: inline-grid;`)
+- **`k-u-contents`** (`display: contents;`)
+- **`k-u-hidden`** (`display: none;`)
+
+
+## Examples
+
+`k-u-block` with `k-u-hidden`
+<Canvas>
+<ul>
+  <li>
+    <span className="k-u-block">
+      I'm always displayed
+    </span>
+  </li>
+  <li>
+    <span className="k-u-hidden k-u-block@xs-down">
+      I'm displayed at and below XS
+    </span>
+  </li>
+  <li>
+    <span className="k-u-hidden k-u-block@s-up">
+      I'm displayed at and above S
+    </span>
+  </li>
+  <li>
+    <span className="k-u-block k-u-hidden@s-up k-u-block@l-up">
+      I'm displayed at and below XS and at and above L
+    </span>
+  </li>
+</ul>
+</Canvas>
+
+
+`k-u-flex`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex">
+  <p>
+    First block item
+  </p>
+  <p>
+    Second block item
+  </p>
+  <p>
+    Third block item
+  </p>
+</div>
+</Canvas>
+
+`k-u-inlineFlex`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-inlineFlex">
+  <p>
+    First block item
+  </p>
+  <p>
+    Second block item
+  </p>
+  <p>
+    Third block item
+  </p>
+</div>
+</Canvas>

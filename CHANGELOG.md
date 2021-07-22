@@ -10,6 +10,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking Change: `Utilities`: Generalization of `!important` on all utilities.
 - Feature: `Utilities`: Add `k-u-flex-gap` and `k-u-flex-wrap` utility classes.
 - Fix: `Title`: Style fixes (line-height and letter-spacing).
+- Breaking Change: `Utilities`: Deprecate the following utilities:
+  - `block`
+  - `hidden`
+  - `inline-block`
+  - `flex`
+- Feature: `Utilities`: Add `display` utility to replace `k-u-block`, etc.
 
 ## [3.26.0] - 2021-07-12
 
