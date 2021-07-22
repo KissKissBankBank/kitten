@@ -1,0 +1,16 @@
+import React from 'react'
+import { ScrollableContainer } from './index'
+import COLORS from '../../../constants/colors-config'
+
+export default {
+  title: 'Layout/ScrollableContainer',
+  component: ScrollableContainer,
+}
+
+export const Default = () => (
+  <ScrollableContainer style={{ backgroundColor: COLORS.line1 }}>
+    <div style={{ height: '100px', lineHeight: '100px' }}>
+      {'🚗 '.repeat(100)}
+    </div>
+  </ScrollableContainer>
+)

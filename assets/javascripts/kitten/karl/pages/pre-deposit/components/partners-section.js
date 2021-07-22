@@ -1,7 +1,7 @@
 import React from 'react'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { Container } from '../../../../components/grid/container'
-import { Title } from '../../../../components/typography/title'
+import { Grid, GridCol } from '../../../../components/layout/grid'
+import { Container } from '../../../../components/layout/container'
+import { Title } from '../../../../components/atoms/typography/title'
 
 const PartnersSection = () => (
   <Container className="PreDeposit__partners k-u-margin-top-octuple k-u-margin-top-decuple@l-up">

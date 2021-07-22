@@ -1,17 +1,17 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
 import { Marger } from '../../../../components/layout/marger'
-import { Container } from '../../../../components/grid/container'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { Title } from '../../../../components/typography/title'
-import { Paragraph } from '../../../../components/typography/paragraph'
-import { Text } from '../../../../components/typography/text'
+import { Container } from '../../../../components/layout/container'
+import { Grid, GridCol } from '../../../../components/layout/grid'
+import { Title } from '../../../../components/atoms/typography/title'
+import { Paragraph } from '../../../../components/atoms/typography/paragraph'
+import { Text } from '../../../../components/atoms/typography/text'
 import {
   Button,
   FLUID,
   DEFAULT,
   BIG,
-} from '../../../../components/buttons/button'
+} from '../../../../components/molecules/buttons/button'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 

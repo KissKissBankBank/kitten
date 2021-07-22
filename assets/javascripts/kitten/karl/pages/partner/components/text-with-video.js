@@ -12,8 +12,8 @@ import {
   Video,
   Loader,
 } from '../../../../index'
-import { DEFAULT, BIG } from '../../../../components/layout/horizontal-stroke'
-import { FLUID } from '../../../../components/buttons/button'
+import { DEFAULT, BIG } from '../../../../components/atoms/horizontal-stroke'
+import { FLUID } from '../../../../components/molecules/buttons/button'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
@@ -70,7 +70,7 @@ const TextWithVideo = () => (
               playsInline
               loop
               muted
-              src="https://d3v4jsc54141g1.cloudfront.net/videos/home/home_v2.mp4"
+              src="https://d3v4jsc54141g1.cloudfront.net/atoms/video/home/home_v2.mp4"
             >
               <Video.Loader>
                 <Loader />
