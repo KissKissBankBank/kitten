@@ -15,9 +15,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _arrowIcon = require("../../../components/icons/arrow-icon");
+var _arrowIcon = require("../../../components/graphics/icons/arrow-icon");
 
-var _checkedIcon = require("../../../components/icons/checked-icon");
+var _checkedIcon = require("../../../components/graphics/icons/checked-icon");
 
 var _iconBadge = require("../../../components/atoms/icon-badge");
 

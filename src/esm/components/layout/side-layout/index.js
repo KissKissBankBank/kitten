@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import styled from 'styled-components';
 import Bowser from 'bowser';
-import { SideGrid, SideGridContent, SideGridAside } from '../../../components/grid/side-grid';
+import { SideGrid, SideGridContent, SideGridAside } from '../../../components/layout/side-grid';
 import domElementHelper from '../../../helpers/dom/element-helper';
 var StyledSideLayout = styled(SideGrid).withConfig({
   displayName: "side-layout__StyledSideLayout",

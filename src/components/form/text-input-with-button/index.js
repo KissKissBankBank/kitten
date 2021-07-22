@@ -27,7 +27,7 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var _modifierStyles = require("../../../components/buttons/button/helpers/modifier-styles");
+var _modifierStyles = require("../../../components/molecules/buttons/button/helpers/modifier-styles");
 
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 

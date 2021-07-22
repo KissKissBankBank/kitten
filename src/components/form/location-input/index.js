@@ -25,7 +25,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _reactPlacesAutocomplete = _interopRequireWildcard(require("react-places-autocomplete"));
 
-var _locationIcon = require("../../../components/icons/location-icon");
+var _locationIcon = require("../../../components/graphics/icons/location-icon");
 
 var _typography = require("../../../helpers/utils/typography");
 
