@@ -27,7 +27,7 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
-var _crossIcon = require("../../../components/icons/cross-icon");
+var _crossIcon = require("../../../components/graphics/icons/cross-icon");
 
 var _screenConfig = require("../../../constants/screen-config");
 

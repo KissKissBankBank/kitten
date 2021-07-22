@@ -21,15 +21,15 @@ var _creditCardType = _interopRequireWildcard(require("credit-card-type"));
 
 var _server = require("react-dom/server");
 
-var _cbIcon = require("../../../icons/cb-icon");
+var _cbIcon = require("../../../graphics/icons/cb-icon");
 
-var _visaIcon = require("../../../icons/visa-icon");
+var _visaIcon = require("../../../graphics/icons/visa-icon");
 
-var _mastercardIcon = require("../../../icons/mastercard-icon");
+var _mastercardIcon = require("../../../graphics/icons/mastercard-icon");
 
-var _maestroIcon = require("../../../icons/maestro-icon");
+var _maestroIcon = require("../../../graphics/icons/maestro-icon");
 
-var _bancontactIcon = require("../../../icons/bancontact-icon");
+var _bancontactIcon = require("../../../graphics/icons/bancontact-icon");
 
 _creditCardType.default.addCard({
   niceType: 'Bancontact',

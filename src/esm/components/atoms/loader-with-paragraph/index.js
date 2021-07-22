@@ -4,13 +4,13 @@ import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
 import { Loader } from '../../../components/atoms/loader';
-import { Paragraph } from '../../../components/typography/paragraph';
+import { Paragraph } from '../../../components/atoms/typography/paragraph';
 import PropTypes from 'prop-types';
 import { pxToRem } from '../../../helpers/utils/typography';
 var StyledLoaderWithParagraph = styled.div.withConfig({
   displayName: "loader-with-paragraph__StyledLoaderWithParagraph",
   componentId: "sc-1a44voe-0"
-})(["display:flex;align-items:center;&.k-LoaderWithParagraph--top{.k-LoaderWithParagraph__loader{margin-bottom:", ";}flex-direction:column;}&.k-LoaderWithParagraph--bottom{.k-LoaderWithParagraph__loader{margin-top:", ";}flex-direction:column-reverse;}&.k-LoaderWithParagraph--left{.k-LoaderWithParagraph__loader{margin-right:", ";}flex-direction:row;}&.k-LoaderWithParagraph--right{.k-LoaderWithParagraph__loader{margin-left:", ";}flex-direction:row-reverse;}"], pxToRem(10), pxToRem(10), pxToRem(10), pxToRem(10));
+})(["display:flex;align-items:center;gap:", ";&.k-LoaderWithParagraph--top{flex-direction:column;}&.k-LoaderWithParagraph--bottom{flex-direction:column-reverse;}&.k-LoaderWithParagraph--left{flex-direction:row;}&.k-LoaderWithParagraph--right{flex-direction:row-reverse;}"], pxToRem(10));
 export var LoaderWithParagraph = function LoaderWithParagraph(_ref) {
   var className = _ref.className,
       loaderPosition = _ref.loaderPosition,

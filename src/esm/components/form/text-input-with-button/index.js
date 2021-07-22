@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import COLORS from '../../../constants/colors-config';
-import { modifierStyles } from '../../../components/buttons/button/helpers/modifier-styles';
+import { modifierStyles } from '../../../components/molecules/buttons/button/helpers/modifier-styles';
 import deprecated from 'prop-types-extra/lib/deprecated';
 var StyledTextInputWithButton = styled.div.withConfig({
   displayName: "text-input-with-button__StyledTextInputWithButton",

@@ -13,7 +13,7 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireDefault(require("react"));
 
-var _text = require("../../../typography/text");
+var _text = require("../../../atoms/typography/text");
 
 var FieldError = function FieldError(_ref) {
   var children = _ref.children,

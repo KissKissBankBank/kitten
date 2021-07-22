@@ -2,8 +2,8 @@ import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutPr
 import _extends from "@babel/runtime/helpers/esm/extends";
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ArrowIcon } from '../../../components/icons/arrow-icon';
-import { CheckedIcon } from '../../../components/icons/checked-icon';
+import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon';
+import { CheckedIcon } from '../../../components/graphics/icons/checked-icon';
 import { IconBadge } from '../../../components/atoms/icon-badge';
 export var StepperIconDefault = function StepperIconDefault(props) {
   return /*#__PURE__*/React.createElement(StepperIcon, _extends({}, props, {

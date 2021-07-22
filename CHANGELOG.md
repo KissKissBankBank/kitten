@@ -4,22 +4,30 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking Change: Move component files around.
-- Breaking Change: Delete `CONTAINER_PADDING_MOBILE`.
-- Fix: Use `getReactElements` utils on `BakingCard` and `ContributionCard`.
-- Fix: Use `gap` on Flex containers whenever feasible.
-- Breaking Change: `Utilities`: Generalization of `!important` on all utilities.
-- Feature: `Utilities`: Add `k-u-flex-gap` and `k-u-flex-wrap` utility classes.
-- Fix: Use `getReactElements` utils on `BakingCard` and `ContributionCard`.
-- Fix: Use `gap` on Flex containers whenever feasible.
-- Fix: `Title`: Style fixes (line-height and letter-spacing).
-- Fix: `getReactElements` utils: Add child existence verification.
-- Breaking Change: `Utilities`: Deprecate the following utilities:
+## [4.0.0] - 2021-07-22
+
+Breaking Changes:
+
+- Move component files for a better organization based on Atomic principles.
+- Delete deprecated `CONTAINER_PADDING_MOBILE`.
+- `Utilities`: Generalization of `!important` on all utilities.
+- `Utilities`: Deprecate the following utilities:
   - `display/block`
   - `display/hidden`
   - `display/inline-block`
   - `flex/display-flex`
-- Feature: `Utilities`: Add `display` utility to replace `k-u-block`, etc.
+
+Features:
+
+- `Utilities`: Add `k-u-flex-gap` and `k-u-flex-wrap` utility classes.
+- `Utilities`: Add `display` utility to replace `k-u-block`, etc.
+
+Fixes:
+
+- Use `getReactElements` utils on `BakingCard` and `ContributionCard`.
+- Use `gap` on Flex containers whenever feasible.
+- `Title`: Style fixes (line-height and letter-spacing).
+- `getReactElements` utils: Add child existence verification.
 
 ## [3.26.0] - 2021-07-12
 
