@@ -9,13 +9,13 @@ export const getReactElementsWithoutType = ({ children, type }) =>
   React.Children.toArray(children).filter(child => child && child.type !== type)
 
 export const getReactElementsByTypeArray = ({ children, typeArray }) => {
-  return filter(child => child && (typeArray.includes(child.type) || isFunction(child)))(
-    children,
-  )
+  return filter(
+    child => child && (typeArray.includes(child.type) || isFunction(child)),
+  )(children)
 }
 
 export const getReactElementsWithoutTypeArray = ({ children, typeArray }) => {
-  return filter(child => child && (!typeArray.includes(child.type) || isFunction(child)))(
-    children,
-  )
+  return filter(
+    child => child && (!typeArray.includes(child.type) || isFunction(child)),
+  )(children)
 }
