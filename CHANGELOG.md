@@ -4,6 +4,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: Move component files around.
+- Breaking Change: Delete `CONTAINER_PADDING_MOBILE`.
+- Fix: Use `getReactElements` utils on `BakingCard` and `ContributionCard`.
+- Fix: Use `gap` on Flex containers whenever feasible.
+- Breaking Change: `Utilities`: Generalization of `!important` on all utilities.
+- Feature: `Utilities`: Add `k-u-flex-gap` and `k-u-flex-wrap` utility classes.
+- Fix: Use `getReactElements` utils on `BakingCard` and `ContributionCard`.
+- Fix: Use `gap` on Flex containers whenever feasible.
+- Fix: `Title`: Style fixes (line-height and letter-spacing).
+- Fix: `getReactElements` utils: Add child existence verification.
+- Breaking Change: `Utilities`: Deprecate the following utilities:
+  - `display/block`
+  - `display/hidden`
+  - `display/inline-block`
+  - `flex/display-flex`
+- Feature: `Utilities`: Add `display` utility to replace `k-u-block`, etc.
+
 ## [3.26.0] - 2021-07-12
 
 Feature:
@@ -20,7 +37,7 @@ Fixes:
 
 ## [3.25.2] - 2021-07-09
 
-Fix: 
+Fix:
 
 - `parseHtml`: Return empty string if we cannot use dom.
 
@@ -33,7 +50,7 @@ Fix:
 ## [3.25.0] - 2021-07-08
 
 Feature:
- 
+
 - `parseHtml`: We sanitize by default the markup with an option `parseHtml(value, { sanitize: false })` to disable it.
 
 ## [3.24.0] - 2021-07-08
@@ -42,7 +59,7 @@ Feature:
 
 - `ImageDropUploader`: Add `canCrop` prop, defaults to `true`.
 
-Fixes: 
+Fixes:
 
 - `VerticalProgress`: Update styles.
 - `TagButton` Update styles.

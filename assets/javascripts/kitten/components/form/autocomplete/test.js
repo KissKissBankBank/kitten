@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 import { Autocomplete } from './index'
-import { LocationIcon } from '../../icons/location-icon'
+import { LocationIcon } from '../../graphics/icons/location-icon'
 
 const items = [
   'Abyssin',

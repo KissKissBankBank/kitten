@@ -1,16 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import { TitleWithStroke } from '../../../../components/typography/title-with-stroke'
-import { Paragraph } from '../../../../components/typography/paragraph'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import COLORS from '../../../../constants/colors-config'
-import { ScreenConfig } from '../../../../constants/screen-config'
 import {
+  TitleWithStroke,
+  Paragraph,
+  pxToRem,
+  stepToRem,
+  COLORS,
+  ScreenConfig,
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
-} from '../../../../constants/grid-config'
-import { EmbedPlayer } from '../../../../components/media/embed-player'
-import { Grid, GridCol } from '../../../../components/grid/grid'
+  EmbedPlayer,
+  Grid,
+  GridCol,
+} from '../../../..'
 
 const StyledVideo = styled(Grid)`
   align-items: center;
@@ -73,7 +75,7 @@ export const Video = () => {
           modifier="senary"
           tag="h2"
           align="center"
-          className="k-u-margin-top-triple k-u-margin-top-quadruple@s-up k-u-margin-top-none@l-up--important"
+          className="k-u-margin-top-triple k-u-margin-top-quadruple@s-up k-u-margin-top-none@l-up"
         >
           Maecenas sed diam eget risus varius blandit sit amet non magna.
         </TitleWithStroke>

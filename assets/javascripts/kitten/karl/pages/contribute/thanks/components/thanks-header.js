@@ -5,10 +5,10 @@ import { pxToRem } from '../../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../../constants/screen-config'
 import COLORS from '../../../../../constants/colors-config'
 
-import { GridCol } from '../../../../../components/grid/grid'
+import { GridCol } from '../../../../../components/layout/grid'
 import { Marger } from '../../../../../components/layout/marger'
 
-import { Text } from '../../../../../components/typography/text'
+import { Text } from '../../../../../components/atoms/typography/text'
 
 const FlexTitleContainer = styled.div`
   display: flex;

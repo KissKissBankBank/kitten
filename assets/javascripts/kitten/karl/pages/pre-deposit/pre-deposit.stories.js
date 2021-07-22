@@ -1,3 +1,4 @@
+import React from 'react'
 import PreDeposit from './components/pre-deposit'
 
 export default {

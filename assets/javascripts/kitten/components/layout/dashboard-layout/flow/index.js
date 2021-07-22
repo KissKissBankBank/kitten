@@ -6,8 +6,8 @@ import classNames from 'classnames'
 import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
-import { LightbulbIllustration as Lightbulb } from '../../../../components/illustrations/lightbulb-illustration'
+import { HorizontalStroke } from '../../../../components/atoms/horizontal-stroke'
+import { LightbulbIllustration as Lightbulb } from '../../../../components/graphics/illustrations/lightbulb-illustration'
 import { Loader } from '../../../../components/atoms/loader'
 import { getReactElementsWithoutType } from '../../../../helpers/react/react-elements'
 
@@ -76,17 +76,11 @@ const StyledFlow = styled.div`
     align-items: center;
     justify-content: space-between;
     margin: ${pxToRem(20)} 0;
+    gap: ${pxToRem(20)};
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       margin: ${pxToRem(30)} 0;
-    }
-
-    & > :not(:last-child) {
-      margin-right: ${pxToRem(20)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        margin-right: ${pxToRem(40)};
-      }
+      gap: ${pxToRem(40)};
     }
 
     & > *:not(:first-child:last-child) {
