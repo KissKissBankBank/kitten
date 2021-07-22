@@ -31,7 +31,11 @@ export const WithInput = () => {
     <StoryGrid>
       <FieldInputExample
         id={text('ID', 'input')}
-        size={select('Size', ['tiny', 'regular', 'big', 'huge', 'giant'], 'regular')}
+        size={select(
+          'Size',
+          ['tiny', 'regular', 'big', 'huge', 'giant'],
+          'regular',
+        )}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
         tooltipProps={{ actionLabel: 'Learn more' }}

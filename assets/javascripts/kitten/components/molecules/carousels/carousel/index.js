@@ -268,7 +268,7 @@ class CarouselBase extends Component {
             className="k-Carousel__pagination__button"
             icon
             modifier="beryllium"
-            size={tinyButtons? 'tiny': null}
+            size={tinyButtons ? 'tiny' : null}
             onClick={this.goPrevPage}
             disabled={!loop && (currentPageIndex < 1 || numberOfPages < 1)}
           >

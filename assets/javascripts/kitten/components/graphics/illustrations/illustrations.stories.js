@@ -33,7 +33,9 @@ const IllustrationWrapper = styled(({ className, children, name }) => {
   return (
     <div className={className}>
       <div className="svgWrapper">{children}</div>
-      <Text size="micro" className="k-u-margin-top-double" as="p">{name}</Text>
+      <Text size="micro" className="k-u-margin-top-double" as="p">
+        {name}
+      </Text>
     </div>
   )
 })`
