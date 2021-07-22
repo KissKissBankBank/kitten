@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking Change: `Utilities`: Generalization of `!important` on all utilities.
 - Feature: `Utilities`: Add `k-u-flex-gap` and `k-u-flex-wrap` utility classes.
 - Fix: `Title`: Style fixes (line-height and letter-spacing).
+- Fix: `getReactElements` utils: Add child existence verification.
 
 ## [3.26.0] - 2021-07-12
 

@@ -44,9 +44,11 @@ export const Default = () => {
             disabled={boolean('Disabled', false)}
             hasBorder={boolean('Has border', true)}
           >
-            <BackingCard.Image>
-              <img src="/kitten.jpg" alt="" />
-            </BackingCard.Image>
+            {boolean('has image', true) && (
+              <BackingCard.Image>
+                <img src="/kitten.jpg" alt="" />
+              </BackingCard.Image>
+            )}
             <BackingCard.HeadingTag icon="star" text="Star reward" />
             <BackingCard.Title>
               Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
@@ -94,7 +96,9 @@ export const Default = () => {
                 <strong className="k-u-weight-regular">2/6</strong> disponibles
               </Tag>
             </BackingCard.TagList>
-            <BackingCard.Button>Je soutiens</BackingCard.Button>
+            {boolean('has button', true) && (
+              <BackingCard.Button>Je soutiens</BackingCard.Button>
+            )}
           </BackingCard>
         </GridCol>
       </Grid>

@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Button as KittenButton } from '../../../buttons/button/button'
+import { Button as KittenButton } from '../../../buttons/button'
 
 export const Button = ({ className, ...props }) => (
   <KittenButton
