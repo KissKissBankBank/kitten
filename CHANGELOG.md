@@ -4,11 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: Move component files around.
 - Breaking Change: Delete `CONTAINER_PADDING_MOBILE`.
 - Fix: Use `getReactElements` utils on `BakingCard` and `ContributionCard`.
 - Fix: Use `gap` on Flex containers whenever feasible.
 - Breaking Change: `Utilities`: Generalization of `!important` on all utilities.
 - Feature: `Utilities`: Add `k-u-flex-gap` and `k-u-flex-wrap` utility classes.
+- Fix: Use `getReactElements` utils on `BakingCard` and `ContributionCard`.
+- Fix: Use `gap` on Flex containers whenever feasible.
 - Fix: `Title`: Style fixes (line-height and letter-spacing).
 
 ## [3.26.0] - 2021-07-12

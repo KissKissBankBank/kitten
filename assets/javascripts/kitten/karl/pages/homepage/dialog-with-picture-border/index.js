@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { TitleWithStroke } from '../../../../components/typography/title-with-stroke'
-import { Paragraph } from '../../../../components/typography/paragraph'
+import { TitleWithStroke } from '../../../../components/atoms/typography/title-with-stroke'
+import { Paragraph } from '../../../../components/atoms/typography/paragraph'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import {
@@ -10,7 +10,7 @@ import {
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
 } from '../../../../constants/grid-config'
-import { Button } from '../../../../components/buttons/button'
+import { Button } from '../../../../components/molecules/buttons/button'
 import { cssPropertyDistributor } from '../../../../helpers/dom/css-property-distributor'
 import domElementHelper from '../../../../helpers/dom/element-helper'
 

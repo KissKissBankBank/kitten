@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { Container } from '../../../../../components/grid/container'
-import { Grid, GridCol } from '../../../../../components/grid/grid'
+import { Container } from '../../../../../components/layout/container'
+import { Grid, GridCol } from '../../../../../components/layout/grid'
 import { Marger } from '../../../../../components/layout/marger'
-import { Title } from '../../../../../components/typography/title'
-import { HorizontalStroke } from '../../../../../components/layout/horizontal-stroke'
+import { Title } from '../../../../../components/atoms/typography/title'
+import { HorizontalStroke } from '../../../../../components/atoms/horizontal-stroke'
 import Form from './form'
 import Cart from '../../common/cart/cart'
 

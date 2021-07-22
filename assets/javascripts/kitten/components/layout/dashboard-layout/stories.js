@@ -36,7 +36,11 @@ import {
   InstagramIcon,
   YoutubeIcon,
   Alert,
+  useWindowWidth,
+  useDeepCompareEffect,
 } from '../../..'
+
+import { Default as Table } from '../../organisms/tables/list-table/list-table.stories.js'
 
 const options = [
   {
@@ -70,11 +74,6 @@ const options = [
     icon: <GlobeIcon width="16" height="16" />,
   },
 ]
-
-import { Default as Table } from '../../tables/list-table/list-table.stories.js'
-
-import { useWindowWidth } from '../../../helpers/utils/use-window-width-hook'
-import { useDeepCompareEffect } from '../../../helpers/utils/use-deep-compare-effect-hook'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 const getElementById = id => document.getElementById(id)
