@@ -21,7 +21,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _textInput = require("../../../components/form/text-input");
 
-var _passwordIcon = require("../../../components/icons/password-icon");
+var _passwordIcon = require("../../../components/graphics/icons/password-icon");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 

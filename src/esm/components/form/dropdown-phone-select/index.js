@@ -15,7 +15,7 @@ import reduce from 'lodash/reduce';
 import startsWith from 'lodash/startsWith';
 import { usePrevious } from '../../../helpers/utils/use-previous-hook';
 import locale_fr from './data/lang/fr';
-import { FlagIcon } from '../../../components/icons/flag-icon';
+import { FlagIcon } from '../../../components/graphics/icons/flag-icon';
 
 var removeCountryCodeFromFormat = function removeCountryCodeFromFormat(format) {
   return format.replace(/\+[.]+\s/gi, '');

@@ -19,7 +19,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _bowser = _interopRequireDefault(require("bowser"));
 
-var _sideGrid = require("../../../components/grid/side-grid");
+var _sideGrid = require("../../../components/layout/side-grid");
 
 var _elementHelper = _interopRequireDefault(require("../../../helpers/dom/element-helper"));
 

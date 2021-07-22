@@ -19,7 +19,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _loader = require("../../../components/atoms/loader");
 
-var _paragraph = require("../../../components/typography/paragraph");
+var _paragraph = require("../../../components/atoms/typography/paragraph");
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -28,7 +28,7 @@ var _typography = require("../../../helpers/utils/typography");
 var StyledLoaderWithParagraph = _styledComponents.default.div.withConfig({
   displayName: "loader-with-paragraph__StyledLoaderWithParagraph",
   componentId: "sc-1a44voe-0"
-})(["display:flex;align-items:center;&.k-LoaderWithParagraph--top{.k-LoaderWithParagraph__loader{margin-bottom:", ";}flex-direction:column;}&.k-LoaderWithParagraph--bottom{.k-LoaderWithParagraph__loader{margin-top:", ";}flex-direction:column-reverse;}&.k-LoaderWithParagraph--left{.k-LoaderWithParagraph__loader{margin-right:", ";}flex-direction:row;}&.k-LoaderWithParagraph--right{.k-LoaderWithParagraph__loader{margin-left:", ";}flex-direction:row-reverse;}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10));
+})(["display:flex;align-items:center;gap:", ";&.k-LoaderWithParagraph--top{flex-direction:column;}&.k-LoaderWithParagraph--bottom{flex-direction:column-reverse;}&.k-LoaderWithParagraph--left{flex-direction:row;}&.k-LoaderWithParagraph--right{flex-direction:row-reverse;}"], (0, _typography.pxToRem)(10));
 
 var LoaderWithParagraph = function LoaderWithParagraph(_ref) {
   var className = _ref.className,
