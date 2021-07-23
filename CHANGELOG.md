@@ -4,13 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `ContributionCard`: Various fixes.
-- Fix: `ModalNext`: Fix sizing of Modal content.
-- Fix: `Modal`: Remove deprecation `console.warn` in tests and test add for deprecation message.
-- Fix: `DashboardLayout/Flow`: Add gradient to Navigation.
-- Fix: `DashboardLayout/Flow`: Handle Navigation button display.
-- Fix: `ToggleTip`: Remove console warning in tests.
-- Fix: `BackingCard`: Ensure that the image is always contained in the card border.
+## [4.0.1] - 2021-07-23
+
+- `ContributionCard`: Various fixes.
+- `ModalNext`: Fix sizing of Modal content.
+- `DashboardLayout/Flow`: Add gradient to Navigation.
+- `DashboardLayout/Flow`: Handle Navigation button display.
+- `BackingCard`: Ensure that the image is always contained in the card border.
+- `ToggleTip`: Remove console warning in tests.
+- `Modal`: Remove deprecation `console.warn` in tests and test add for deprecation message.
 
 ## [4.0.0] - 2021-07-22
 
