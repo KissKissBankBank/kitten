@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { Card } from './components/card'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { Title } from '../../../../components/typography/title'
-import { Carousel } from '../../../../components/carousel/carousel/carousel'
+import { Title } from '../../../../components/atoms/typography/title'
+import { Carousel } from '../../../../components/molecules/carousels/carousel'
 import { mediaQueries } from '../../../../hoc/media-queries'
-import { Grid, GridCol } from '../../../../components/grid/grid'
+import { Grid, GridCol } from '../../../../components/layout/grid'
 import classNames from 'classnames'
 
 const StyledPartners = styled.div`

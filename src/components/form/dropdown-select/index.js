@@ -23,11 +23,11 @@ var _label = require("../../../components/form/label");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _warningCircleIcon = require("../../../components/icons/warning-circle-icon");
+var _warningCircleIcon = require("../../../components/graphics/icons/warning-circle-icon");
 
-var _checkedCircleIcon = require("../../../components/icons/checked-circle-icon");
+var _checkedCircleIcon = require("../../../components/graphics/icons/checked-circle-icon");
 
-var _arrowIcon = require("../../../components/icons/arrow-icon");
+var _arrowIcon = require("../../../components/graphics/icons/arrow-icon");
 
 var _find = _interopRequireDefault(require("lodash/fp/find"));
 

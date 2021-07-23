@@ -1,6 +1,6 @@
 import React from 'react'
 import { TextWithSideImage } from './index'
-import { Container } from '../../../../components/grid/container'
+import { Container } from '../../../../components/layout/container'
 
 export default {
   component: TextWithSideImage,

@@ -13,8 +13,8 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Label } from '../../../form/label';
-import { Toggletip } from '../../../tooltips/toggletip';
-import { Line } from '../../../layout/line';
+import { Toggletip } from '../../../molecules/toggletip';
+import { Line } from '../../../molecules/line';
 export var FieldLabel = /*#__PURE__*/function (_Component) {
   _inherits(FieldLabel, _Component);
 

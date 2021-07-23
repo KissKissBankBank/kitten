@@ -29,9 +29,9 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _label = require("../../../form/label");
 
-var _toggletip = require("../../../tooltips/toggletip");
+var _toggletip = require("../../../molecules/toggletip");
 
-var _line = require("../../../layout/line");
+var _line = require("../../../molecules/line");
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 

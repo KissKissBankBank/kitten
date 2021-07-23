@@ -1,0 +1,77 @@
+/// Display utilities, with Media Queries.
+///
+/// @group display
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-display;
+///
+/// @example html
+///
+///   <div class="k-u-flex@xxs-down">…</div>
+///   <div class="k-u-flex@xs-down">…</div>
+///   <div class="k-u-flex@s-down">…</div>
+///   <div class="k-u-flex@m-down">…</div>
+///   <div class="k-u-flex@l-down">…</div>
+///
+///   <div class="k-u-hidden@xs-up">…</div>
+///   <div class="k-u-hidden@s-up">…</div>
+///   <div class="k-u-hidden@m-up">…</div>
+///   <div class="k-u-hidden@l-up">…</div>
+///   <div class="k-u-hidden@xl-up">…</div>
+///
+///   <div class="k-u-block">…</div>
+///   <div class="k-u-inlineBlock">…</div>
+///   <div class="k-u-inline">…</div>
+///   <div class="k-u-inlineFlex">…</div>
+///   <div class="k-u-grid">…</div>
+///   <div class="k-u-inlineGrid">…</div>
+///   <div class="k-u-contents">…</div>
+
+@mixin k-u-display($property, $value) {
+  .k-u-#{$property} {
+    display: $value !important;
+  }
+}
+
+@mixin k-utilities-display {
+  $k-variants: (
+    block: block,
+    inlineBlock: inline-block,
+    inline: inline,
+    flex: flex,
+    inlineFlex: inline-flex,
+    grid: grid,
+    inlineGrid: inline-grid,
+    contents: contents,
+    hidden: none,
+  );
+
+  @each $variant_name, $attribute in $k-variants {
+    @include k-u-display($variant_name, $attribute);
+  }
+
+  @each $mq_name, $query in reverse($k-media-queries) {
+    $addendum: \@#{$mq_name}-down;
+
+    @if $mq_name != "xl" {
+      @include k-media-max($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-display($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
+
+  @each $mq_name, $query in $k-media-queries {
+    $addendum: \@#{$mq_name}-up;
+
+    @if $mq_name != "xxs" {
+      @include k-media-min($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-display($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
+}

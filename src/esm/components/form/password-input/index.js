@@ -4,7 +4,7 @@ import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutPr
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { TextInput } from '../../../components/form/text-input';
-import { PasswordIcon } from '../../../components/icons/password-icon';
+import { PasswordIcon } from '../../../components/graphics/icons/password-icon';
 import COLORS from '../../../constants/colors-config';
 import PropTypes from 'prop-types';
 import { pxToRem } from '../../../helpers/utils/typography';

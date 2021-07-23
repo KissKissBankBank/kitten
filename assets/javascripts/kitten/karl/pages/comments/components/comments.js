@@ -1,13 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container } from '../../../../components/grid/container'
-import { Comment } from '../../../../components/comments/comment'
-import { CommentForm } from '../../../../components/comments/comment-form'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { Marger } from '../../../../components/layout/marger'
-import { Text } from '../../../../components/typography/text'
-import { stepToRem } from '../../../../helpers/utils/typography'
-import { CheckedCircleIcon } from '../../../../components/icons/checked-circle-icon'
+import {
+  Container,
+  Comment,
+  CommentForm,
+  Grid,
+  GridCol,
+  Marger,
+  Text,
+  stepToRem,
+  CheckedCircleIcon,
+} from '../../../..'
 
 const ActionLinks = styled(({ children, className }) => {
   return (
@@ -37,7 +40,7 @@ const CommentsPage = () => (
         <Marger top="5" bottom="5">
           <CommentForm
             avatarImgProps={{
-              src: 'https://placehold.it/80x80/caf4fe/caf4fe',
+              src: '/kitten.jpg',
               alt: '',
             }}
             placeholder="Laisser un commentaire sur le projet"
@@ -48,7 +51,7 @@ const CommentsPage = () => (
         <Marger top="5">
           <Comment
             avatarImgProps={{
-              src: 'https://placehold.it/80x80/caf4fe/caf4fe',
+              src: '/kitten.jpg',
               alt: '',
             }}
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."

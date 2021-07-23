@@ -27,7 +27,7 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _lockIcon = require("../../../components/icons/lock-icon");
+var _lockIcon = require("../../../components/graphics/icons/lock-icon");
 
 var transitionDuration = '.15s';
 var switchWidth = 60;

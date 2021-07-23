@@ -1,0 +1,60 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks'
+import * as stories from './checkable-button.stories.js'
+import { CheckableButton } from './index'
+
+<Meta title="Molecules/Buttons/Checkable Button" component={CheckableButton} />
+
+# CheckableButton
+
+<Story story={stories.IsCheckable} />
+
+## Import
+
+```js
+import { CheckableButton } from '@kisskissbankbank/kitten'
+```
+
+## Usage
+#### Default
+
+```js
+<CheckableButton>MyCheckableButton</CheckableButton>
+```
+
+#### Size
+
+```js
+<CheckableButton size="big">MyCheckableButton</CheckableButton>
+```
+
+#### Display
+
+```js
+<CheckableButton fluid>MyCheckableButton</CheckableButton>
+```
+
+#### With borderRadius
+
+```js
+<CheckableButton borderRadius={4}>
+  <MyCheckableButton />
+</CheckableButton>
+```
+
+#### Checked state
+
+```js
+<CheckableButton isChecked>MyCheckableButton</CheckableButton>
+```
+
+#### Error
+
+```js
+<CheckableButton error>MyCheckableButton</CheckableButton>
+```
+
+#### Disabled
+
+```js
+<CheckableButton disabled>MyCheckableButton</CheckableButton>
+````

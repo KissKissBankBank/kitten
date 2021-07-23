@@ -10,7 +10,7 @@ import { Label } from '../../../components/form/label';
 var StyledRadioButtonSet = styled.fieldset.withConfig({
   displayName: "radio-button-set__StyledRadioButtonSet",
   componentId: "sc-1bde3vb-0"
-})(["margin:0;padding:0;border:0;display:flex;flex-direction:column;line-height:1.3rem;& > legend{padding:0;}.k-Form-RadioButtonSet__label{margin-bottom:", ";}.k-Form-RadioButtonSet__radioButton{margin:", " 0;&:first-of-type{margin-top:0;}&:last-of-type{margin-bottom:0;}}"], pxToRem(10), pxToRem(5));
+})(["margin:0;padding:0;border:0;line-height:1.3rem;& > legend{padding:0;}.k-Form-RadioButtonSet__label{margin-bottom:", ";}.k-Form-RadioButtonSet__radioContainer{display:flex;flex-direction:column;gap:", " 0;}"], pxToRem(10), pxToRem(5));
 export var RadioButtonSet = function RadioButtonSet(_ref) {
   var items = _ref.items,
       disabled = _ref.disabled,
