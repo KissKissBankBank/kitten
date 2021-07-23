@@ -68,6 +68,20 @@ const StyledFlow = styled.div`
       bottom: 0;
       position: sticky;
       z-index: 1;
+
+      &::before {
+        position: absolute;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 1)
+        );
+        content: '';
+        top: ${pxToRem(-20)};
+        left: 0;
+        right: 0;
+        height: ${pxToRem(20)};
+      }
     }
   }
 
@@ -79,7 +93,7 @@ const StyledFlow = styled.div`
     gap: ${pxToRem(20)};
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      margin: ${pxToRem(30)} 0;
+      margin: ${pxToRem(20)} 0 ${pxToRem(30)};
       gap: ${pxToRem(40)};
     }
 
@@ -135,11 +149,6 @@ const Nav = ({ className, children, ...props }) => {
       {...props}
       className={classNames('k-DashboardLayout__flow__nav', className)}
     >
-      <HorizontalStroke
-        size="tiny"
-        customSize={{ width: '100%' }}
-        color={COLORS.line1}
-      />
       <div className="k-DashboardLayout__flow__nav__actionsContainer">
         {children}
       </div>
