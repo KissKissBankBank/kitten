@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `ContributionCard`: Various fixes.
 - Fix: `ModalNext`: Fix sizing of Modal content.
+- Fix: `Modal`: Remove deprecation `console.warn` in tests and test add for deprecation message.
 
 ## [4.0.0] - 2021-07-22
 
