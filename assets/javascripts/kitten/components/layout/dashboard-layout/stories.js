@@ -38,6 +38,7 @@ import {
   Alert,
   useWindowWidth,
   useDeepCompareEffect,
+  TextCopy,
 } from '../../..'
 
 import { Default as Table } from '../../organisms/tables/list-table/list-table.stories.js'
@@ -399,6 +400,13 @@ const FlowExample = () => (
         varius blandit sit amet non magna. Etiam porta sem malesuada magna
         mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
+      <TextCopy
+        variant="orion"
+        buttonText="Copier l’URL"
+        textToCopy="https://www.kisskissbankbank.com/fr/projects/test-de-campagne-par-joachim/?secret-reward=hileo6"
+      >
+        https://www.kisskissbankbank.com/fr/projects/test-de-campagne-par-joachim/?secret-reward=hileo6
+      </TextCopy>
       <p className="k-u-weight-light">
         Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio,
         dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus
