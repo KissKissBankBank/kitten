@@ -1,6 +1,6 @@
 import React from 'react'
 import { ContributionCard } from './index'
-import { Grid, Container, Marger, RocketIllustration, COLORS } from '../../../..'
+import { Container, Marger, RocketIllustration, COLORS } from '../../../..'
 
 const argTypes = {
   show: {
@@ -77,12 +77,8 @@ export default {
   decorators: [
     Story => (
       <Marger top="4">
-        <Container>
-          <Grid>
-            <GridCol>
-              <Story />
-            </GridCol>
-          </Grid>
+        <Container className="k-u-margin-vertical-quadruple">
+          <Story />
         </Container>
       </Marger>
     ),
