@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TextCopy`: Fix WebKit sizing bug.
+
 ## [4.0.1] - 2021-07-23
 
 - `ContributionCard`: Various fixes.

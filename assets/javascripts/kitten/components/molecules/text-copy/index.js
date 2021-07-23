@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { ScreenConfig } from '../../../constants/screen-config'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { CopyIcon } from '../../graphics/icons/copy-icon'
 import { ArrowContainer } from '../../molecules/boxes/arrow-container'
 import { Text } from '../../atoms/typography/text'
@@ -30,23 +30,19 @@ const Wrapper = styled.button`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    line-height: 1.2;
+    line-height: calc(1.15 * ${stepToRem(-1)});
     text-align: left;
+    overflow: hidden;
 
     span {
-      max-height: calc(2 * 1.2 * 1em);
+      max-width: 100%;
+      max-height: calc(2 * 1.15 * ${stepToRem(-1)});
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
-    &.k-TextCopy__text--forceOneLine {
-      overflow: hidden;
-
-      span {
-        max-width: 100%;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
+    &.k-TextCopy__text--forceOneLine span {
+      white-space: nowrap;
     }
   }
 
