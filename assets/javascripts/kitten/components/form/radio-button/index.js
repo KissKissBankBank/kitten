@@ -206,6 +206,26 @@ const StyledRadioButton = styled.div`
       }
     }
 
+    /* Disabled */
+
+    .k-Form-RadioButton__input:disabled {
+      & + .k-Form-RadioButton__label {
+        border-color: ${COLORS.line1};
+        color: ${COLORS.font2};
+      }
+    }
+
+    .k-Form-RadioButton__input:checked:disabled {
+      & + .k-Form-RadioButton__label {
+        border-color: ${COLORS.font2};
+        color: ${COLORS.grey1};
+
+        ::before {
+          border-color: ${COLORS.font2};
+        }
+      }
+    }
+
     &.k-Form-RadioButton--error {
       .k-Form-RadioButton__input:not(:disabled) + .k-Form-RadioButton__label {
         border-color: ${COLORS.error3};
