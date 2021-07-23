@@ -367,7 +367,7 @@ Toggletip.propTypes = {
   actionLabel: PropTypes.string.isRequired,
   actionProps: PropTypes.object,
   bubbleProps: PropTypes.object,
-  targetElement: PropTypes.oneOf([
+  targetElement: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),

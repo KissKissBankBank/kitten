@@ -65,13 +65,12 @@ export const StyledBackingCard = styled.article`
   /* SUBCOMPONENTS */
 
   .k-BackingCard__imageWrapper {
-    max-width: calc(100% + 2 * var(--backingCard--border-width));
-    margin: calc(-1 * var(--backingCard--border-width))
-      calc(-1 * var(--backingCard--border-width)) 0;
-    border-top-left-radius: var(--backingCard--border-radius);
-    border-top-right-radius: var(--backingCard--border-radius);
+    max-width: 100%;
+    margin: 0;
+    border-top-left-radius: calc(var(--backingCard--border-radius) - var(--backingCard--border-width));
+    border-top-right-radius: calc(var(--backingCard--border-radius) - var(--backingCard--border-width));
     position: relative;
-    padding-top: calc((5 / 8) * 100%);
+    padding-top: calc((5 / 8) * 100%); /* ratio: 16/10 */
     overflow: hidden;
 
     img,
@@ -84,8 +83,6 @@ export const StyledBackingCard = styled.article`
       height: 100%;
       object-fit: cover;
       object-position: center center;
-      border-top-left-radius: var(--backingCard--border-radius);
-      border-top-right-radius: var(--backingCard--border-radius);
       transition: transform 0.2s ease-in-out;
     }
   }

@@ -8,6 +8,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `ModalNext`: Fix sizing of Modal content.
 - Fix: `DashboardLayout/Flow`: Add gradient to Navigation.
 - Fix: `DashboardLayout/Flow`: Handle Navigation button display.
+- Fix: `ToggleTip`: Remove console warning in tests.
+- Fix: `BackingCard`: Ensure that the image is always contained in the card border.
 
 ## [4.0.0] - 2021-07-22
 
