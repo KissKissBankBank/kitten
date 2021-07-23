@@ -83,27 +83,30 @@ const StyledFlow = styled.div`
         height: ${pxToRem(20)};
       }
     }
+
   }
 
   .k-DashboardLayout__flow__nav__actionsContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
     margin: ${pxToRem(20)} 0;
     gap: ${pxToRem(20)};
+    grid-template-columns: repeat(2, 1fr);
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       margin: ${pxToRem(20)} 0 ${pxToRem(30)};
       gap: ${pxToRem(40)};
     }
 
-    & > *:not(:first-child:last-child) {
-      min-width: 0;
+    & > * {
+      min-width: 0 !important;
       max-width: ${pxToRem(180)};
-      flex: 1 1 ${pxToRem(180)};
+      width: 100%;
+    }
+    & > *:last-child {
+      justify-self: end;
     }
     & > *:first-child:last-child {
-      flex: 1 0 100%;
+      grid-column: 1 / span 2;
     }
   }
 
