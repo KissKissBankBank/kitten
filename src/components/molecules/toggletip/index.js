@@ -247,5 +247,5 @@ Toggletip.propTypes = {
   actionLabel: _propTypes.default.string.isRequired,
   actionProps: _propTypes.default.object,
   bubbleProps: _propTypes.default.object,
-  targetElement: _propTypes.default.oneOf([_propTypes.default.element, _propTypes.default.node, _propTypes.default.arrayOf(_propTypes.default.node)])
+  targetElement: _propTypes.default.oneOfType([_propTypes.default.element, _propTypes.default.node, _propTypes.default.arrayOf(_propTypes.default.node)])
 };

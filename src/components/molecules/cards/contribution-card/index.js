@@ -48,7 +48,8 @@ var ContributionCard = function ContributionCard(_ref) {
       borderStyle = _ref.borderStyle,
       onClose = _ref.onClose,
       largeInput = _ref.largeInput,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderWidth", "borderRadius", "imageBorderRadius", "borderColor", "borderStyle", "onClose", "largeInput"]);
+      largeTitle = _ref.largeTitle,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderWidth", "borderRadius", "imageBorderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"]);
   var imageChild = (0, _reactElements.getReactElementsByType)({
     children: children,
     type: ContributionCard.Image
@@ -111,7 +112,8 @@ ContributionCard.defaultProps = {
   borderWidth: 2,
   imageBorderRadius: 5,
   onClose: undefined,
-  largeInput: false
+  largeInput: false,
+  largeTitle: false
 };
 ContributionCard.propTypes = {
   show: _propTypes.default.bool,
@@ -122,5 +124,6 @@ ContributionCard.propTypes = {
   borderStyle: _propTypes.default.string,
   borderWidth: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   imageBorderRadius: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
-  largeInput: _propTypes.default.bool
+  largeInput: _propTypes.default.bool,
+  largeTitle: _propTypes.default.bool
 };
