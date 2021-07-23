@@ -23,7 +23,7 @@ export const StyledContributionCard = styled.article`
   border-color: var(--contributionCard--border-color);
   border-radius: var(--contributionCard--border-radius);
 
-  @media (min-width: ${ScreenConfig.S.min}px) {
+  @media (min-width: ${ScreenConfig.M.min}px) {
     height: calc(${pxToRem(100)} + 2 * var(--contributionCard--border-width));
     display: flex;
   }
@@ -38,12 +38,12 @@ export const StyledContributionCard = styled.article`
     align-items: center;
     justify-content: center;
 
-    @media (max-width: ${ScreenConfig.XS.max}px) {
-      padding-top: calc(5 / 8 * 100%);
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      flex: 0 0 ${pxToRem(160)};
     }
 
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      flex: 0 0 ${pxToRem(160)};
+    @media (max-width: ${ScreenConfig.S.max}px) {
+      padding-top: calc(5 / 8 * 100%);
     }
 
     img,
@@ -63,7 +63,7 @@ export const StyledContributionCard = styled.article`
     svg {
       width: 80%;
 
-      @media (min-width: ${ScreenConfig.S.min}px) {
+      @media (min-width: ${ScreenConfig.M.min}px) {
         width: 100%;
       }
     }
@@ -88,17 +88,13 @@ export const StyledContributionCard = styled.article`
     grid-gap: ${pxToRem(20)} ${pxToRem(10)};
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto;
-    grid-template-areas:
-      'cc-text cc-text'
-      'cc-input cc-action';
 
-    @media (min-width: ${ScreenConfig.S.min}px) {
+    @media (min-width: ${ScreenConfig.M.min}px) {
       width: 100%;
 
       grid-gap: 0 ${pxToRem(10)};
       grid-template-columns: auto ${pxToRem(85)} ${pxToRem(150)};
       grid-template-rows: 1fr;
-      grid-template-areas: 'cc-text cc-input cc-action';
 
       &.k-ContributionCard__gridWrapper--largeInput {
         grid-template-columns: auto ${pxToRem(102)} ${pxToRem(150)};
@@ -109,55 +105,54 @@ export const StyledContributionCard = styled.article`
   /* SUBCOMPONENTS */
 
   .k-ContributionCard__title {
-    grid-area: cc-text;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+
     font-size: ${stepToRem(-1)};
     line-height: ${pxToRem(16)};
     place-self: center start;
 
-    @media (min-width: ${ScreenConfig.S.min}px) {
+    @media (min-width: ${ScreenConfig.M.min}px) {
       font-size: ${stepToRem(0)};
       margin-top: 0;
+
+      :not(.k-ContributionCard__title--large) {
+        grid-column: 1;
+      }
     }
   }
 
   .k-ContributionCard__pillNumber {
-    grid-area: cc-input;
     place-self: center flex-start;
   }
 
   .k-ContributionCard__amount {
-    grid-area: cc-action;
     place-self: center flex-end;
 
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      margin-right: ${pxToRem(40)};
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      margin-right: ${pxToRem(10)};
       margin-top: 0;
+      place-self: center center;
     }
   }
 
   /* PETIT PLUS */
 
   .k-ContributionCard__input {
-    grid-area: cc-input;
     place-self: flex-start center;
 
-    @media (min-width: ${ScreenConfig.S.min}px) {
+    @media (min-width: ${ScreenConfig.M.min}px) {
       place-self: center flex-start;
     }
   }
 
   .k-ContributionCard__action {
-    grid-area: cc-action;
     place-self: flex-start center;
     min-width: auto;
 
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      margin-right: ${pxToRem(30)};
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      margin-right: ${pxToRem(10)};
       place-self: center flex-end;
-    }
-
-    &.k-ContributionCard__actionHide {
-      display: none;
     }
   }
 

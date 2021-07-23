@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `ContributionCard`: Various fixes.
 - Fix: `ModalNext`: Fix sizing of Modal content.
 
 ## [4.0.0] - 2021-07-22
