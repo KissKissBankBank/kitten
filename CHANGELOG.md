@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `ContributionCard`: Various fixes.
 - Fix: `ModalNext`: Fix sizing of Modal content.
 - Fix: `BackingCard`: Ensure that the image is always contained in the card border.
 
