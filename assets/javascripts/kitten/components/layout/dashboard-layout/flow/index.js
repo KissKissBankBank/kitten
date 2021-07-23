@@ -68,28 +68,45 @@ const StyledFlow = styled.div`
       bottom: 0;
       position: sticky;
       z-index: 1;
+
+      &::before {
+        position: absolute;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 1)
+        );
+        content: '';
+        top: ${pxToRem(-20)};
+        left: 0;
+        right: 0;
+        height: ${pxToRem(20)};
+      }
     }
+
   }
 
   .k-DashboardLayout__flow__nav__actionsContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
     margin: ${pxToRem(20)} 0;
     gap: ${pxToRem(20)};
+    grid-template-columns: repeat(2, 1fr);
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      margin: ${pxToRem(30)} 0;
+      margin: ${pxToRem(20)} 0 ${pxToRem(30)};
       gap: ${pxToRem(40)};
     }
 
-    & > *:not(:first-child:last-child) {
-      min-width: 0;
+    & > * {
+      min-width: 0 !important;
       max-width: ${pxToRem(180)};
-      flex: 1 1 ${pxToRem(180)};
+      width: 100%;
+    }
+    & > *:last-child {
+      justify-self: end;
     }
     & > *:first-child:last-child {
-      flex: 1 0 100%;
+      grid-column: 1 / span 2;
     }
   }
 
@@ -135,11 +152,6 @@ const Nav = ({ className, children, ...props }) => {
       {...props}
       className={classNames('k-DashboardLayout__flow__nav', className)}
     >
-      <HorizontalStroke
-        size="tiny"
-        customSize={{ width: '100%' }}
-        color={COLORS.line1}
-      />
       <div className="k-DashboardLayout__flow__nav__actionsContainer">
         {children}
       </div>
