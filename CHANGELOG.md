@@ -8,6 +8,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [4.0.1] - 2021-07-23
 
+Fixes:
+
 - `ContributionCard`: Various fixes.
 - `ModalNext`: Fix sizing of Modal content.
 - `DashboardLayout/Flow`: Add gradient to Navigation.
