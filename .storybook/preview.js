@@ -2,9 +2,9 @@ import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 import './stylesheets/app-kitten.scss'
 import React from 'react'
-import GridDecorator from './decorators/grid'
+import { DevGridDecorator } from './decorators/dev-grid'
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
-import { themes } from '@storybook/theming';
+import { themes } from '@storybook/theming'
 
 export const parameters = {
   docs: {
@@ -14,19 +14,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: [
-        'Documentation',
-        ['Introduction', 'Usage', 'Design'],
-        'Helpers',
-        'Accessibility',
-        'Graphics',
-        'Layout',
-        'Atoms',
-        'Form',
-        'Molecules',
-        'Organisms',
-        'Pages',
-      ],
+      order: ['Documentation', ['Introduction', 'Usage', 'Design'], 'Helpers'],
       method: 'alphabetical',
     },
   },
@@ -34,8 +22,8 @@ export const parameters = {
 
 export const decorators = [
   Story => (
-    <GridDecorator>
+    <DevGridDecorator>
       <Story />
-    </GridDecorator>
+    </DevGridDecorator>
   ),
 ]
