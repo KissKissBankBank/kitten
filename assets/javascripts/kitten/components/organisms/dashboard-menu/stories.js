@@ -17,6 +17,13 @@ import {
 export default {
   title: 'Organisms/DashboardMenu',
   component: DashboardMenu,
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const Default = () => (

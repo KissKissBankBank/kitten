@@ -14,6 +14,13 @@ const StoryGrid = ({ children }) => (
 export default {
   title: 'Organisms/HeaderMenu',
   component: HeaderMenu,
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export const Default = () => {

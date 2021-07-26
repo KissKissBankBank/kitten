@@ -29,3 +29,11 @@ export const Default = () => (
     </IconList.Item>
   </IconList>
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      <Story />
+    </div>
+  ),
+]

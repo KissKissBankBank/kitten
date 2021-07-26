@@ -67,8 +67,12 @@ export const StyledBackingCard = styled.article`
   .k-BackingCard__imageWrapper {
     max-width: 100%;
     margin: 0;
-    border-top-left-radius: calc(var(--backingCard--border-radius) - var(--backingCard--border-width));
-    border-top-right-radius: calc(var(--backingCard--border-radius) - var(--backingCard--border-width));
+    border-top-left-radius: calc(
+      var(--backingCard--border-radius) - var(--backingCard--border-width)
+    );
+    border-top-right-radius: calc(
+      var(--backingCard--border-radius) - var(--backingCard--border-width)
+    );
     position: relative;
     padding-top: calc((5 / 8) * 100%); /* ratio: 16/10 */
     overflow: hidden;

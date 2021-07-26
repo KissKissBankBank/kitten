@@ -3,8 +3,6 @@ import styled, { css, createGlobalStyle } from 'styled-components'
 import { select } from '@storybook/addon-knobs'
 import { ListTable } from './index'
 import {
-  Marger,
-  Container,
   ScreenConfig,
   VisuallyHidden,
   pxToRem,
@@ -16,14 +14,6 @@ import {
   CONTAINER_PADDING,
   StatusWithBullet,
 } from '../../../..'
-
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      {children}
-    </Marger>
-  </Container>
-)
 
 const ListTableStyles = createGlobalStyle`
   .customCol_1 {
@@ -427,170 +417,176 @@ export const Default = () => (
 export const Toggleable = () => {
   const [displayed, setDisplayState] = useState(false)
   return (
-    <StoryContainer>
-      <ToggleableTable id="CustomToggleableTable">
-        <HeaderRow
-          className="customHeaderClass"
-          listProps={{ className: 'customListClass' }}
+    <ToggleableTable id="CustomToggleableTable">
+      <HeaderRow
+        className="customHeaderClass"
+        listProps={{ className: 'customListClass' }}
+      >
+        <Col width={defaultHeaderColWidth}>
+          <CellWithLabelValue thead label="Projets" value="4" />
+        </Col>
+        <Col width={defaultHeaderColWidth}>
+          <CellWithLabelValue thead label="Montant investi" value="1 000 €" />
+        </Col>
+        <Col width={defaultHeaderColWidth}>
+          <CellWithLabelValue thead label="TRI cible" value="3 %" />
+        </Col>
+        <Col
+          align="right"
+          width={{
+            default: '100%',
+            fromXs: '50%',
+            fromS: '25%',
+            fromL: '40%',
+          }}
         >
-          <Col width={defaultHeaderColWidth}>
-            <CellWithLabelValue thead label="Projets" value="4" />
-          </Col>
-          <Col width={defaultHeaderColWidth}>
-            <CellWithLabelValue thead label="Montant investi" value="1 000 €" />
-          </Col>
-          <Col width={defaultHeaderColWidth}>
-            <CellWithLabelValue thead label="TRI cible" value="3 %" />
-          </Col>
-          <Col
-            align="right"
-            width={{
-              default: '100%',
-              fromXs: '50%',
-              fromS: '25%',
-              fromL: '40%',
-            }}
+          <ToggleButton
+            type="button"
+            onClick={() => setDisplayState(!displayed)}
+            aria-expanded={displayed}
+            aria-controls="toggleableListTable"
           >
-            <ToggleButton
-              type="button"
-              onClick={() => setDisplayState(!displayed)}
-              aria-expanded={displayed}
-              aria-controls="toggleableListTable"
-            >
-              Voir les détails
-              <ArrowIcon direction={displayed ? 'top' : 'bottom'} />
-            </ToggleButton>
-          </Col>
-        </HeaderRow>
-        {displayed && (
-          <ListTable.Body id="toggleableListTable">
-            <Row>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Photosol Invest 2"
-                  value="Centrale solaire Parc du Petit Prince"
-                />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="Montant investi" value="200 €" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="TRI cible" value="3 %" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Horizon d'investissement"
-                  value="5 ans"
-                />
-              </Col>
-              <Col width={defaultActionColWidth}>
-                <p className="nowrap">
-                  <a className={linkclassNames} href="#">
-                    Page projet
-                  </a>
-                  <br />
-                  <a className={linkclassNames} href="#">
-                    Attestation de propriété
-                  </a>
-                </p>
-              </Col>
-            </Row>
-            <Row>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Urba 133"
-                  value="Centrale solaire Urbasolar Istres"
-                />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="Montant investi" value="300 €" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="TRI cible" value="3 %" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Horizon d'investissement"
-                  value="5 ans"
-                />
-              </Col>
-              <Col width={defaultActionColWidth}>
-                <p className="nowrap">
-                  <a className={linkclassNames} href="#">
-                    Page projet
-                  </a>
-                  <br />
-                  <a className={linkclassNames} href="#">
-                    Attestation de propriété
-                  </a>
-                </p>
-              </Col>
-            </Row>
-            <Row>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Photosol Invest 2"
-                  value="Centrale solaire Parc du Petit Prince"
-                />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="Montant investi" value="200 €" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="TRI cible" value="3 %" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Horizon d'investissement"
-                  value="5 ans"
-                />
-              </Col>
-              <Col width={defaultActionColWidth}>
-                <p className="nowrap">
-                  <a className={linkclassNames} href="#">
-                    Page projet
-                  </a>
-                  <br />
-                  <a className={linkclassNames} href="#">
-                    Attestation de propriété
-                  </a>
-                </p>
-              </Col>
-            </Row>
-            <Row>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Urba 133"
-                  value="Centrale solaire Urbasolar Istres"
-                />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="Montant investi" value="300 €" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="TRI cible" value="3 %" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Horizon d'investissement"
-                  value="5 ans"
-                />
-              </Col>
-              <Col width={defaultActionColWidth}>
-                <p className="nowrap">
-                  <a className={linkclassNames} href="#">
-                    Page projet
-                  </a>
-                  <br />
-                  <a className={linkclassNames} href="#">
-                    Attestation de propriété
-                  </a>
-                </p>
-              </Col>
-            </Row>
-          </ListTable.Body>
-        )}
-      </ToggleableTable>
-    </StoryContainer>
+            Voir les détails
+            <ArrowIcon direction={displayed ? 'top' : 'bottom'} />
+          </ToggleButton>
+        </Col>
+      </HeaderRow>
+      {displayed && (
+        <ListTable.Body id="toggleableListTable">
+          <Row>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue
+                label="Photosol Invest 2"
+                value="Centrale solaire Parc du Petit Prince"
+              />
+            </Col>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue label="Montant investi" value="200 €" />
+            </Col>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue label="TRI cible" value="3 %" />
+            </Col>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue
+                label="Horizon d'investissement"
+                value="5 ans"
+              />
+            </Col>
+            <Col width={defaultActionColWidth}>
+              <p className="nowrap">
+                <a className={linkclassNames} href="#">
+                  Page projet
+                </a>
+                <br />
+                <a className={linkclassNames} href="#">
+                  Attestation de propriété
+                </a>
+              </p>
+            </Col>
+          </Row>
+          <Row>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue
+                label="Urba 133"
+                value="Centrale solaire Urbasolar Istres"
+              />
+            </Col>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue label="Montant investi" value="300 €" />
+            </Col>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue label="TRI cible" value="3 %" />
+            </Col>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue
+                label="Horizon d'investissement"
+                value="5 ans"
+              />
+            </Col>
+            <Col width={defaultActionColWidth}>
+              <p className="nowrap">
+                <a className={linkclassNames} href="#">
+                  Page projet
+                </a>
+                <br />
+                <a className={linkclassNames} href="#">
+                  Attestation de propriété
+                </a>
+              </p>
+            </Col>
+          </Row>
+          <Row>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue
+                label="Photosol Invest 2"
+                value="Centrale solaire Parc du Petit Prince"
+              />
+            </Col>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue label="Montant investi" value="200 €" />
+            </Col>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue label="TRI cible" value="3 %" />
+            </Col>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue
+                label="Horizon d'investissement"
+                value="5 ans"
+              />
+            </Col>
+            <Col width={defaultActionColWidth}>
+              <p className="nowrap">
+                <a className={linkclassNames} href="#">
+                  Page projet
+                </a>
+                <br />
+                <a className={linkclassNames} href="#">
+                  Attestation de propriété
+                </a>
+              </p>
+            </Col>
+          </Row>
+          <Row>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue
+                label="Urba 133"
+                value="Centrale solaire Urbasolar Istres"
+              />
+            </Col>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue label="Montant investi" value="300 €" />
+            </Col>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue label="TRI cible" value="3 %" />
+            </Col>
+            <Col width={defaultColWidth}>
+              <CellWithLabelValue
+                label="Horizon d'investissement"
+                value="5 ans"
+              />
+            </Col>
+            <Col width={defaultActionColWidth}>
+              <p className="nowrap">
+                <a className={linkclassNames} href="#">
+                  Page projet
+                </a>
+                <br />
+                <a className={linkclassNames} href="#">
+                  Attestation de propriété
+                </a>
+              </p>
+            </Col>
+          </Row>
+        </ListTable.Body>
+      )}
+    </ToggleableTable>
   )
 }
+
+Toggleable.decorators = [
+  Story => (
+    <div className="story-Container">
+      <Story />
+    </div>
+  ),
+]
