@@ -2,7 +2,7 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [unreleased]
+## [4.0.2]
 
 - Fix: `TextCopy`: Fix WebKit sizing bug.
 - Fix: `RadioButtonSet`: Fix dimensions.

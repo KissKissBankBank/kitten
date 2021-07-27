@@ -135,9 +135,9 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
   };
 
   useEffect(function () {
+    var isValid = true;
     setErrorMessageList([]);
     setErrorList([]);
-    onChange(fileList);
     if (fileList.length === 0) return setInternalStatus(status);
     setInternalStatus('manage');
     fileList.forEach(function (file) {
@@ -153,6 +153,7 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
               error: typeErrorText(file.name)
             }]);
           });
+          isValid = false;
         }
 
         if (!!acceptedFileSize && file.size > acceptedFileSize) {
@@ -163,15 +164,17 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
           setErrorList(function (current) {
             return [].concat(_toConsumableArray(current), [{
               file: file,
-              error: typeErrorText(file.name)
+              error: sizeErrorText(file.name)
             }]);
           });
+          isValid = false;
         }
       }
     });
+    if (isValid) onChange(fileList);
   }, [fileList]);
   useEffect(function () {
-    if (!errorList) return;
+    if (errorList.length === 0) return;
     onError(errorList);
   }, [errorList]);
 
