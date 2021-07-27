@@ -162,9 +162,9 @@ var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
   };
 
   (0, _react.useEffect)(function () {
+    var isValid = true;
     setErrorMessageList([]);
     setErrorList([]);
-    onChange(fileList);
     if (fileList.length === 0) return setInternalStatus(status);
     setInternalStatus('manage');
     fileList.forEach(function (file) {
@@ -180,6 +180,7 @@ var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
               error: typeErrorText(file.name)
             }]);
           });
+          isValid = false;
         }
 
         if (!!acceptedFileSize && file.size > acceptedFileSize) {
@@ -190,15 +191,17 @@ var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
           setErrorList(function (current) {
             return [].concat((0, _toConsumableArray2.default)(current), [{
               file: file,
-              error: typeErrorText(file.name)
+              error: sizeErrorText(file.name)
             }]);
           });
+          isValid = false;
         }
       }
     });
+    if (isValid) onChange(fileList);
   }, [fileList]);
   (0, _react.useEffect)(function () {
-    if (!errorList) return;
+    if (errorList.length === 0) return;
     onError(errorList);
   }, [errorList]);
 

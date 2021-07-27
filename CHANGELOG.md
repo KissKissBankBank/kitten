@@ -4,9 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `TextCopy`: Fix WebKit sizing bug.
-- Fix: `RadioButtonSet`: Fix dimensions.
-- Fix: `DocumentsDropUploader`: Fix onChange and onError event.
+## [4.0.2] - 2021-07-27
+
+Fixes:
+
+- `TextCopy`: Fix WebKit sizing bug.
+- `RadioButtonSet`: Fix dimensions.
+- `DocumentsDropUploader`: Fix onChange and onError event.
 
 ## [4.0.1] - 2021-07-23
 
