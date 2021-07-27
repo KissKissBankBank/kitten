@@ -9,3 +9,11 @@ export const Default = () => (
     <HeartIcon width={16} height={16} aria-hidden={true} focusable={false} />
   </Button>
 )
+
+Default.decorators = [
+  Story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      <Story />
+    </div>
+  ),
+]
