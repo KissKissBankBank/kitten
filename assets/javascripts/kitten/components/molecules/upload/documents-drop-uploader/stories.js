@@ -21,7 +21,7 @@ export const Default = () => (
     typeErrorText={e => `File ${e} is not the right file type`}
     sizeErrorText={e => `File ${e} is too large`}
     removeActionMessage={e => `Click to remove ${e}`}
-    acceptedMimeTypes={['image/jpeg']}
+    acceptedMimeTypes={['image/jpeg', 'image/png']}
     acceptedFileSize={1 * 1024 * 1024}
   />
 )

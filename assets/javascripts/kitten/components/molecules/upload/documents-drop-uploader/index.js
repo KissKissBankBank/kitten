@@ -233,9 +233,9 @@ export const DocumentsDropUploader = ({
   }
 
   useEffect(() => {
+    let isValid = true
     setErrorMessageList([])
     setErrorList([])
-    onChange(fileList)
 
     if (fileList.length === 0) return setInternalStatus(status)
 
@@ -256,6 +256,7 @@ export const DocumentsDropUploader = ({
               error: typeErrorText(file.name),
             },
           ])
+          isValid = false
         }
 
         if (!!acceptedFileSize && file.size > acceptedFileSize) {
@@ -265,16 +266,18 @@ export const DocumentsDropUploader = ({
             ...current,
             {
               file,
-              error: typeErrorText(file.name),
+              error: sizeErrorText(file.name),
             },
           ])
+          isValid = false
         }
       }
     })
+    if (isValid) onChange(fileList)
   }, [fileList])
 
   useEffect(() => {
-    if (!errorList) return
+    if (errorList.length === 0) return
 
     onError(errorList)
   }, [errorList])
