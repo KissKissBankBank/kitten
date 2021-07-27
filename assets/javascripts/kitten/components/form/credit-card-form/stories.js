@@ -14,6 +14,6 @@ export default {
   ],
 }
 
-export const Default = (args) => (<DefaultExample {...args} />)
+export const Default = args => <DefaultExample {...args} />
 
-export const withCustomComponents = (args) => (<CustomExample {...args} />)
+export const withCustomComponents = args => <CustomExample {...args} />

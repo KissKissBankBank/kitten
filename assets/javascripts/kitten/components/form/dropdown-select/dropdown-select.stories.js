@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import { text, boolean, select, number } from '@storybook/addon-knobs'
 import { DropdownSelect } from './index'
 import { Button } from '../../../index'
-import { Grid, GridCol } from '../../../components/layout/grid'
 import { ArrowIcon } from '../../graphics/icons/arrow-icon'
 import { Text } from '../../atoms/typography/text'
 
@@ -52,15 +50,15 @@ export default {
     },
     combobox: {
       name: 'combobox',
-      control: {type: 'boolean'},
+      control: { type: 'boolean' },
     },
     hideLabel: {
       name: 'hideLabel',
-      control: {type: 'boolean'},
+      control: { type: 'boolean' },
     },
     options: {
       name: 'options',
-      control: {type: 'object' },
+      control: { type: 'object' },
     },
     placeholder: {
       name: 'placeholder',
@@ -72,12 +70,12 @@ export default {
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' }
+      control: { type: 'inline-radio' },
     },
     size: {
       name: 'size',
       options: ['tiny', 'normal', 'big', 'huge', 'giant'],
-      control: { type: 'select' }
+      control: { type: 'select' },
     },
     a11yStatusError: {
       name: 'a11yStatusError',
@@ -107,23 +105,23 @@ export default {
     },
     openOnLoad: {
       name: 'openOnLoad',
-      control: {type: 'boolean'},
+      control: { type: 'boolean' },
     },
     uniqLabelOnSearch: {
       name: 'uniqLabelOnSearch',
-      control: {type: 'boolean'},
+      control: { type: 'boolean' },
     },
     menuZIndex: {
       name: 'menuZIndex',
-      control: {type: 'number'}
+      control: { type: 'number' },
     },
     comboboxButtonLabelText: {
       name: 'comboboxButtonLabelText',
-      control: {type: 'text'}
+      control: { type: 'text' },
     },
     noResultText: {
       name: 'noResultText',
-      control: {type: 'text'}
+      control: { type: 'text' },
     },
   },
   args: {
@@ -140,11 +138,10 @@ export default {
     comboboxButtonLabelText: 'label',
     noResultText: 'No results',
     menuZIndex: 1000,
-
-  }
+  },
 }
 
-export const Default = (args) => {
+export const Default = args => {
   const [labelProps, setLabelProps] = useState(null)
 
   return (
@@ -159,8 +156,8 @@ export const Default = (args) => {
       <p>
         Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
         Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque
-        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        Etiam porta sem malesuada magna mollis euismod.
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam
+        porta sem malesuada magna mollis euismod.
       </p>
       <p>labelPropsGetter props:</p>
       <ul>
@@ -175,7 +172,7 @@ export const Default = (args) => {
   )
 }
 
-export const WithDuplicateValue = (args) => {
+export const WithDuplicateValue = args => {
   return (
     <DropdownSelect
       {...args}
@@ -189,7 +186,7 @@ export const WithDuplicateValue = (args) => {
   )
 }
 
-export const WithComponentsForLabel = (args) => {
+export const WithComponentsForLabel = args => {
   return (
     <DropdownSelect
       {...args}
@@ -221,7 +218,7 @@ export const WithComponentsForLabel = (args) => {
   )
 }
 
-export const ControlledInput = (args) => {
+export const ControlledInput = args => {
   const [value, setValue] = useState('felt')
 
   const getRandomOption = () => {
@@ -250,11 +247,7 @@ export const ControlledInput = (args) => {
         }}
         onBlur={e => console.warn('onBlur', e)}
       />
-      <Button
-        onClick={() => setValue(getRandomOption())}
-      >
-        Change Value
-      </Button>
+      <Button onClick={() => setValue(getRandomOption())}>Change Value</Button>
     </>
   )
 }

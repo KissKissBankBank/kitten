@@ -122,36 +122,28 @@ const items = [
   'York Chocolate',
 ]
 
-export const Default = (args) => (
-    <Field>
-      <Field.Label labelProps={{ htmlFor: 'autocomplete' }}>
-        Choose your kitten:
-      </Field.Label>
+export const Default = args => (
+  <Field>
+    <Field.Label labelProps={{ htmlFor: 'autocomplete' }}>
+      Choose your kitten:
+    </Field.Label>
 
-      <Autocomplete
-        id="autocomplete"
-        placeholder="Search a kitten…"
-        {...args}
-      />
+    <Autocomplete id="autocomplete" placeholder="Search a kitten…" {...args} />
 
-      <p>🐱 🐱 🐱 🐱 🐱</p>
-    </Field>
+    <p>🐱 🐱 🐱 🐱 🐱</p>
+  </Field>
 )
 
-export const WithIcon = (args) => (
-    <Field>
-      <Field.Label labelProps={{ htmlFor: 'autocomplete' }}>
-        Choose your kitten:
-      </Field.Label>
+export const WithIcon = args => (
+  <Field>
+    <Field.Label labelProps={{ htmlFor: 'autocomplete' }}>
+      Choose your kitten:
+    </Field.Label>
 
-      <Autocomplete
-        id="autocomplete"
-        placeholder="Search a kitten…"
-        {...args}
-      />
+    <Autocomplete id="autocomplete" placeholder="Search a kitten…" {...args} />
 
-      <p>🐱 🐱 🐱 🐱 🐱</p>
-    </Field>
+    <p>🐱 🐱 🐱 🐱 🐱</p>
+  </Field>
 )
 
 const storyDecorator = Story => (
@@ -181,7 +173,7 @@ const args = {
 const argTypes = {
   name: {
     name: 'name',
-    control: { type: 'text'},
+    control: { type: 'text' },
   },
   items: {
     name: 'items',
@@ -197,7 +189,7 @@ const argTypes = {
   iconPosition: {
     name: 'iconPosition',
     options: ['left', 'right'],
-    control: { type: 'inline-radio' }
+    control: { type: 'inline-radio' },
   },
   updateSuggestionsStrategy: {
     name: 'updateSuggestionsStrategy',
@@ -206,25 +198,21 @@ const argTypes = {
     name: 'noResultMessage',
     control: { type: 'text' },
   },
-  shouldShowNoResultMessage:{
+  shouldShowNoResultMessage: {
     name: 'shouldShowNoResultMessage',
     control: { type: 'boolean' },
   },
   onChange: {
     name: 'onChange',
-
   },
   onBlur: {
     name: 'onBlur',
-
   },
   onKeyDown: {
     name: 'onKeyDown',
-
   },
   onSelect: {
     name: 'onSelect',
-
   },
   isLoading: {
     name: 'isLoading',
@@ -238,4 +226,4 @@ Default.args = args
 
 WithIcon.decorators = [storyDecorator]
 WithIcon.argTypes = argTypes
-WithIcon.args = {...args, icon: <LocationIcon />}
+WithIcon.args = { ...args, icon: <LocationIcon /> }

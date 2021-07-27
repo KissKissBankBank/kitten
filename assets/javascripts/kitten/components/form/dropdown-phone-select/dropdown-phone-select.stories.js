@@ -1,5 +1,4 @@
 import React from 'react'
-import { text, boolean, select } from '@storybook/addon-knobs'
 import { DropdownPhoneSelect } from './index'
 import flagFile from 'icons/flags.png'
 
@@ -51,95 +50,91 @@ export default {
   argTypes: {
     id: {
       name: 'id',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     error: {
       name: 'error',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     valid: {
       name: 'valid',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     hideLabel: {
       name: 'hideLabel',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     labelText: {
       name: 'labelText',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     resetOnBackspace: {
       name: 'resetOnBackspace',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     highlightOptionBox: {
       name: 'highlightOptionBox',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     placeholder: {
       name: 'placeholder',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     phoneProps: {
       name: 'phoneProps',
-      control: { type: 'object' }
+      control: { type: 'object' },
     },
     locale: {
       name: 'locale',
       options: ['fr', 'en', 'nl'],
-      control: { type: 'inline-radio' }
+      control: { type: 'inline-radio' },
     },
     flagsUrl: {
       name: 'flagsUrl',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     size: {
       name: 'size',
       options: ['tiny', 'normal', 'big', 'huge', 'giant'],
-      control: { type: 'select' }
+      control: { type: 'select' },
     },
     defaultCountry: {
       name: 'defaultCountry',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     value: {
       name: 'value',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     inputProps: {
       name: 'inputProps',
-      control: { type: 'object' }
+      control: { type: 'object' },
     },
     assumeCountry: {
       name: 'assumeCountry',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
-  }
+  },
 }
 
-export const Default = (args) => {
+export const Default = args => {
   return (
     <div>
-        <DropdownPhoneSelect
-          {...{...args, value: '+33 1 23 45 67 89'}}
-        />
-        <p>
-          Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-          Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Etiam porta sem malesuada magna mollis euismod.
-        </p>
+      <DropdownPhoneSelect {...{ ...args, value: '+33 1 23 45 67 89' }} />
+      <p>
+        Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+        Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam
+        porta sem malesuada magna mollis euismod.
+      </p>
     </div>
   )
 }
 
-export const WithoutValues = (args) => {
-  return (
-    <DropdownPhoneSelect {...args}/>
-  )
+export const WithoutValues = args => {
+  return <DropdownPhoneSelect {...args} />
 }

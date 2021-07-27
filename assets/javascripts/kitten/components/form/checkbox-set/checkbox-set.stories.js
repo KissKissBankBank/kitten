@@ -1,5 +1,4 @@
 import React from 'react'
-import { text, boolean, select } from '@storybook/addon-knobs'
 import { CheckboxSet } from './index'
 
 export default {
@@ -40,32 +39,30 @@ export default {
   argTypes: {
     name: {
       name: 'name',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     label: {
       name: 'label',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     items: {
       name: 'items',
-      control: { type: 'object' }
+      control: { type: 'object' },
     },
     error: {
       name: 'error',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' }
+      control: { type: 'inline-radio' },
     },
   },
 }
 
-export const Default = (args) => (
-  <CheckboxSet {...args} />
-)
+export const Default = args => <CheckboxSet {...args} />

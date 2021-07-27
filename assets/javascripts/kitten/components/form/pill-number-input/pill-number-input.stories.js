@@ -1,10 +1,7 @@
 import React from 'react'
-import { number, boolean } from '@storybook/addon-knobs'
 import { PillNumberInput } from './index'
 
-export const Default = (args) => (
-  <PillNumberInput {...args} />
-)
+export const Default = args => <PillNumberInput {...args} />
 
 Default.decorators = [
   Story => (

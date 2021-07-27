@@ -77,16 +77,16 @@ export default {
   },
   argTypes: {
     selectedDay: {
-      name: 'selectedDay'
+      name: 'selectedDay',
     },
     locale: {
-      name: 'locale'
+      name: 'locale',
     },
     weekDays: {
-      name: 'weekDays'
+      name: 'weekDays',
     },
     months: {
-      name: 'months'
+      name: 'months',
     },
     previousMonth: {
       name: 'previousMonth',
@@ -99,24 +99,20 @@ export default {
     styles: {
       name: 'styles',
       control: {
-        type: 'object'
-      }
+        type: 'object',
+      },
     },
     datePickerProps: {
       name: 'datePickerProps',
       control: {
-        type: 'object'
-      }
+        type: 'object',
+      },
     },
-  }
+  },
 }
 
-export const WithTextInputWithUnit = (args) => (
-  <DatePicker {...args}/>
-)
+export const WithTextInputWithUnit = args => <DatePicker {...args} />
 
-export const WithCustomInput = (args) => (
-  <DatePicker {...args}>
-    {CustomInput}
-  </DatePicker>
+export const WithCustomInput = args => (
+  <DatePicker {...args}>{CustomInput}</DatePicker>
 )

@@ -21,24 +21,24 @@ export default {
     },
     defaultValue: {
       name: 'defaultValue',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     inputProps: {
       name: 'inputProps',
-      control: { type: 'object' }
+      control: { type: 'object' },
     },
     name: {
       name: 'name',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     loadingText: {
       name: 'loadingText',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' }
+      control: { type: 'inline-radio' },
     },
   },
   args: {
@@ -49,10 +49,10 @@ export default {
     name: 'location-input',
     loadingText: 'Loading',
     variant: 'andromeda',
-  }
+  },
 }
 
-export const Default = (args) => {
+export const Default = args => {
   const [googleMapsReady, setGoogleMapsReadiness] = useState(false)
 
   useEffect(() => {

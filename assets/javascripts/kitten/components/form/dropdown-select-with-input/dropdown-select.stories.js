@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { text, boolean, number, select } from '@storybook/addon-knobs'
 import { DropdownSelectWithInput } from './index'
-import { Grid, GridCol } from '../../../components/layout/grid'
 
 import { FacebookIcon } from '../../../components/graphics/icons/facebook-icon'
 import { TwitterIcon } from '../../../components/graphics/icons/twitter-icon'
@@ -86,8 +85,8 @@ export const Default = () => {
       <p>
         Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
         Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque
-        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        Etiam porta sem malesuada magna mollis euismod.
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam
+        porta sem malesuada magna mollis euismod.
       </p>
       <p>labelPropsGetter props:</p>
       <ul>
@@ -105,69 +104,69 @@ export const Default = () => {
 export const DeactivatedDropdown = () => {
   return (
     <>
-        <DropdownSelectWithInput
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={true}
-          labelText="Facebook"
-          options={options}
-          resetOnBackspace={boolean('resetOnBackspace', false)}
-          highlightOptionBox={boolean('highlightOptionBox', true)}
-          defaultSelectedValue="facebook"
-          deactivateDropdown
-          className="k-u-margin-bottom-triple"
-          menuZIndex={number('menuZIndex', 1000)}
-          hideIconOnMobile={boolean('hideIconOnMobile', false)}
-          size={select(
-            'size',
-            ['tiny', 'normal', 'big', 'huge', 'giant'],
-            'normal',
-          )}
-        />
-        <DropdownSelectWithInput
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={true}
-          labelText="Twitter"
-          options={options}
-          resetOnBackspace={boolean('resetOnBackspace', false)}
-          highlightOptionBox={boolean('highlightOptionBox', true)}
-          defaultSelectedValue="twitter"
-          deactivateDropdown
-          className="k-u-margin-bottom-triple"
-          menuZIndex={number('menuZIndex', 1000)}
-          hideIconOnMobile={boolean('hideIconOnMobile', false)}
-          size={select(
-            'size',
-            ['tiny', 'normal', 'big', 'huge', 'giant'],
-            'normal',
-          )}
-        />
-        <DropdownSelectWithInput
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={true}
-          labelText="Instagram"
-          options={options}
-          resetOnBackspace={boolean('resetOnBackspace', false)}
-          highlightOptionBox={boolean('highlightOptionBox', true)}
-          defaultSelectedValue="instagram"
-          deactivateDropdown
-          className="k-u-margin-bottom-triple"
-          menuZIndex={number('menuZIndex', 1000)}
-          hideIconOnMobile={boolean('hideIconOnMobile', false)}
-          size={select(
-            'size',
-            ['tiny', 'normal', 'big', 'huge', 'giant'],
-            'normal',
-          )}
-        />
-      </>
+      <DropdownSelectWithInput
+        id={text('id', 'dropdown-select')}
+        error={boolean('error', false)}
+        valid={boolean('valid', false)}
+        disabled={boolean('disabled', false)}
+        hideLabel={true}
+        labelText="Facebook"
+        options={options}
+        resetOnBackspace={boolean('resetOnBackspace', false)}
+        highlightOptionBox={boolean('highlightOptionBox', true)}
+        defaultSelectedValue="facebook"
+        deactivateDropdown
+        className="k-u-margin-bottom-triple"
+        menuZIndex={number('menuZIndex', 1000)}
+        hideIconOnMobile={boolean('hideIconOnMobile', false)}
+        size={select(
+          'size',
+          ['tiny', 'normal', 'big', 'huge', 'giant'],
+          'normal',
+        )}
+      />
+      <DropdownSelectWithInput
+        id={text('id', 'dropdown-select')}
+        error={boolean('error', false)}
+        valid={boolean('valid', false)}
+        disabled={boolean('disabled', false)}
+        hideLabel={true}
+        labelText="Twitter"
+        options={options}
+        resetOnBackspace={boolean('resetOnBackspace', false)}
+        highlightOptionBox={boolean('highlightOptionBox', true)}
+        defaultSelectedValue="twitter"
+        deactivateDropdown
+        className="k-u-margin-bottom-triple"
+        menuZIndex={number('menuZIndex', 1000)}
+        hideIconOnMobile={boolean('hideIconOnMobile', false)}
+        size={select(
+          'size',
+          ['tiny', 'normal', 'big', 'huge', 'giant'],
+          'normal',
+        )}
+      />
+      <DropdownSelectWithInput
+        id={text('id', 'dropdown-select')}
+        error={boolean('error', false)}
+        valid={boolean('valid', false)}
+        disabled={boolean('disabled', false)}
+        hideLabel={true}
+        labelText="Instagram"
+        options={options}
+        resetOnBackspace={boolean('resetOnBackspace', false)}
+        highlightOptionBox={boolean('highlightOptionBox', true)}
+        defaultSelectedValue="instagram"
+        deactivateDropdown
+        className="k-u-margin-bottom-triple"
+        menuZIndex={number('menuZIndex', 1000)}
+        hideIconOnMobile={boolean('hideIconOnMobile', false)}
+        size={select(
+          'size',
+          ['tiny', 'normal', 'big', 'huge', 'giant'],
+          'normal',
+        )}
+      />
+    </>
   )
 }

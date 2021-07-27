@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { text, select } from '@storybook/addon-knobs'
 import { Label } from './index'
 
 export default {
@@ -15,16 +14,16 @@ export default {
   argTypes: {
     focusId: {
       name: 'focusId',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     size: {
       name: 'size',
       options: [null, undefined, 'normal', 'tiny', 'micro'],
-      control: { type: 'select' }
+      control: { type: 'select' },
     },
     withoutPointerEvents: {
       name: 'withoutPointerEvents',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
   },
   args: {
@@ -32,7 +31,7 @@ export default {
     focusId: null,
     size: 'normal',
     withoutPointerEvents: false,
-  }
+  },
 }
 
 const FocusableComponent = styled.div`
@@ -53,18 +52,13 @@ const FocusableComponent = styled.div`
   }
 `
 
-export const Default = (args) => (
-    <Label {...args} />
-)
+export const Default = args => <Label {...args} />
 
 Default.storyName = 'Label'
 
-export const WithFocusId = (args) => (
+export const WithFocusId = args => (
   <>
-    <Label
-      {...args}
-      focusId="focusable-component"
-    />
+    <Label {...args} focusId="focusable-component" />
     <FocusableComponent id="focusable-component" tabIndex="0">
       <span className="k-u-color-primary1 k-u-weight-bold k-u-background-color-primary5 focused">
         😸 Focused
