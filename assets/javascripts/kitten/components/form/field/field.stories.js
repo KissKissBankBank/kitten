@@ -6,29 +6,23 @@ import {
   FieldRadioButtonSetExample,
   FieldAutocompleteExample,
 } from './field.examples'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../layout/container'
-import { Grid, GridCol } from '../../layout/grid'
-
-const StoryGrid = ({ children }) => (
-  <Container>
-    <Grid>
-      <GridCol col="6">
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
-  </Container>
-)
 
 export default {
   title: 'Form/Field',
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <div>
+          <Story />
+        </div>
+      </div>
+    ),
+  ],
+
 }
 
 export const WithInput = () => {
   return (
-    <StoryGrid>
       <FieldInputExample
         id={text('ID', 'input')}
         size={select(
@@ -48,13 +42,11 @@ export const WithInput = () => {
         noMargin={boolean('No margin only on Input', false)}
         variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
       />
-    </StoryGrid>
   )
 }
 
 export const WithPassword = () => {
   return (
-    <StoryGrid>
       <FieldPasswordExample
         id={text('ID', 'input')}
         size={boolean('Tiny', false) ? 'tiny' : null}
@@ -67,13 +59,11 @@ export const WithPassword = () => {
         errorMessage={text('Error', 'Error message…')}
         variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
       />
-    </StoryGrid>
   )
 }
 
 export const WithRadioButtons = () => {
   return (
-    <StoryGrid>
       <FieldRadioButtonSetExample
         id={text('ID', 'option-a')}
         size={boolean('Tiny', false) ? 'tiny' : null}
@@ -100,13 +90,11 @@ export const WithRadioButtons = () => {
         errorMessage={text('Error', 'Error message…')}
         variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
       />
-    </StoryGrid>
   )
 }
 
 export const WithAutocomplete = () => {
   return (
-    <StoryGrid>
       <FieldAutocompleteExample
         id={text('ID', 'select')}
         size={boolean('Tiny', false) ? 'tiny' : null}
@@ -131,6 +119,5 @@ export const WithAutocomplete = () => {
         errorMessage={text('Error', 'Error message…')}
         variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
       />
-    </StoryGrid>
   )
 }

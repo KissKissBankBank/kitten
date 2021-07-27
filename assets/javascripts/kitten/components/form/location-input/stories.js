@@ -1,18 +1,58 @@
 import React, { useState, useEffect } from 'react'
 import { LocationInput } from './index'
-import { text, select } from '@storybook/addon-knobs'
+import { text } from '@storybook/addon-knobs'
 
 export default {
   title: 'Form/LocationInput',
   component: LocationInput,
+  decorators: [
+    Story => (
+      <div className="story-Container">
+        <Story />
+      </div>
+    ),
+  ],
+  argTypes: {
+    onChange: {
+      name: 'onChange',
+    },
+    onSelect: {
+      name: 'onSelect',
+    },
+    defaultValue: {
+      name: 'defaultValue',
+      control: { type: 'text' }
+    },
+    inputProps: {
+      name: 'inputProps',
+      control: { type: 'object' }
+    },
+    name: {
+      name: 'name',
+      control: { type: 'text' }
+    },
+    loadingText: {
+      name: 'loadingText',
+      control: { type: 'text' }
+    },
+    variant: {
+      name: 'variant',
+      options: ['andromeda', 'orion'],
+      control: { type: 'inline-radio' }
+    },
+  },
+  args: {
+    onChange: e => console.warn(e),
+    onSelect: e => console.warn(e),
+    defaultValue: '',
+    inputProps: {},
+    name: 'location-input',
+    loadingText: 'Loading',
+    variant: 'andromeda',
+  }
 }
 
-const variantOptions = {
-  Andromeda: 'andromeda',
-  Orion: 'orion',
-}
-
-export const Default = () => {
+export const Default = (args) => {
   const [googleMapsReady, setGoogleMapsReadiness] = useState(false)
 
   useEffect(() => {
@@ -50,11 +90,7 @@ export const Default = () => {
 
   return (
     <>
-      <LocationInput
-        onChange={e => console.warn(e)}
-        onSelect={e => console.warn(e)}
-        variant={select('Variant', variantOptions, 'andromeda')}
-      />
+      <LocationInput {...args} />
       😺😸😹😻😼😽🙀😿😾
     </>
   )

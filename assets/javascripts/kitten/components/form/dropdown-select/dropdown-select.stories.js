@@ -6,14 +6,6 @@ import { Grid, GridCol } from '../../../components/layout/grid'
 import { ArrowIcon } from '../../graphics/icons/arrow-icon'
 import { Text } from '../../atoms/typography/text'
 
-export default {
-  component: DropdownSelect,
-  title: 'Form/DropdownSelect',
-  parameters: {
-    component: DropdownSelect,
-  },
-}
-
 const options = [
   {
     value: 'bianchi',
@@ -36,143 +28,200 @@ const options = [
   },
 ]
 
-export const Default = () => {
+export default {
+  component: DropdownSelect,
+  title: 'Form/DropdownSelect',
+  parameters: {
+    component: DropdownSelect,
+  },
+  decorators: [
+    Story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Story />
+      </div>
+    ),
+  ],
+  argTypes: {
+    id: {
+      name: 'id',
+      control: { type: 'text' },
+    },
+    labelText: {
+      name: 'labelText',
+      control: { type: 'text' },
+    },
+    combobox: {
+      name: 'combobox',
+      control: {type: 'boolean'},
+    },
+    hideLabel: {
+      name: 'hideLabel',
+      control: {type: 'boolean'},
+    },
+    options: {
+      name: 'options',
+      control: {type: 'object' },
+    },
+    placeholder: {
+      name: 'placeholder',
+      control: { type: 'text' },
+    },
+    labelPropsGetter: {
+      name: 'labelPropsGetter',
+    },
+    variant: {
+      name: 'variant',
+      options: ['andromeda', 'orion'],
+      control: { type: 'inline-radio' }
+    },
+    size: {
+      name: 'size',
+      options: ['tiny', 'normal', 'big', 'huge', 'giant'],
+      control: { type: 'select' }
+    },
+    a11yStatusError: {
+      name: 'a11yStatusError',
+      control: { type: 'text' },
+    },
+    a11yStatusValid: {
+      name: 'a11yStatusValid',
+      control: { type: 'text' },
+    },
+    a11ySelectionMessageDisplayer: {
+      name: 'a11ySelectionMessageDisplayer',
+    },
+    onChange: {
+      name: 'onChange',
+    },
+    onBlur: {
+      name: 'onBlur',
+    },
+    onInputChange: {
+      name: 'onInputChange',
+    },
+    onMenuClose: {
+      name: 'onMenuClose',
+    },
+    onMenuOpen: {
+      name: 'onMenuOpen',
+    },
+    openOnLoad: {
+      name: 'openOnLoad',
+      control: {type: 'boolean'},
+    },
+    uniqLabelOnSearch: {
+      name: 'uniqLabelOnSearch',
+      control: {type: 'boolean'},
+    },
+    menuZIndex: {
+      name: 'menuZIndex',
+      control: {type: 'number'}
+    },
+    comboboxButtonLabelText: {
+      name: 'comboboxButtonLabelText',
+      control: {type: 'text'}
+    },
+    noResultText: {
+      name: 'noResultText',
+      control: {type: 'text'}
+    },
+  },
+  args: {
+    id: 'dropdown-select',
+    error: false,
+    valid: false,
+    disabled: false,
+    hideLabel: false,
+    combobox: false,
+    labelText: 'label',
+    options: options,
+    size: 'normal',
+    variant: 'andromeda',
+    comboboxButtonLabelText: 'label',
+    noResultText: 'No results',
+    menuZIndex: 1000,
+
+  }
+}
+
+export const Default = (args) => {
   const [labelProps, setLabelProps] = useState(null)
 
   return (
-    <Grid>
-      <GridCol offset="1" col="8">
-        <DropdownSelect
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={boolean('hide label?', false)}
-          combobox={boolean('combobox?', false)}
-          labelText={text('LabelText', 'label')}
-          options={options}
-          labelPropsGetter={passedLabelProps => {
-            passedLabelProps && setLabelProps(passedLabelProps())
-          }}
-          size={select(
-            'size',
-            ['tiny', 'normal', 'big', 'huge', 'giant'],
-            'normal',
-          )}
-          variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
-          defaultSelectedValue="focus"
-          comboboxButtonLabelText={text('Buton aria-label', 'label')}
-          noResultText={text('No results text', 'No results')}
-          menuZIndex={number('menuZIndex', 1000)}
-        />
-        <p>
-          Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-          Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Etiam porta sem malesuada magna mollis euismod.
-        </p>
-        <p>labelPropsGetter props:</p>
-        <ul>
-          {labelProps &&
-            Object.keys(labelProps).map(prop => (
-              <li key={prop}>
-                {prop}: {labelProps[prop]}
-              </li>
-            ))}
-        </ul>
-      </GridCol>
-    </Grid>
+    <div>
+      <DropdownSelect
+        {...args}
+        labelPropsGetter={passedLabelProps => {
+          passedLabelProps && setLabelProps(passedLabelProps())
+        }}
+        defaultSelectedValue="focus"
+      />
+      <p>
+        Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+        Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Etiam porta sem malesuada magna mollis euismod.
+      </p>
+      <p>labelPropsGetter props:</p>
+      <ul>
+        {labelProps &&
+          Object.keys(labelProps).map(prop => (
+            <li key={prop}>
+              {prop}: {labelProps[prop]}
+            </li>
+          ))}
+      </ul>
+    </div>
   )
 }
 
-export const WithDuplicateValue = () => {
+export const WithDuplicateValue = (args) => {
   return (
-    <Grid>
-      <GridCol offset="1" col="8">
-        <DropdownSelect
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={boolean('hide label?', false)}
-          combobox={true}
-          labelText={text('LabelText', 'label')}
-          options={[
-            { value: 'france', label: 'France' },
-            { value: 'france', label: 'France' },
-            { value: 'irlande', label: 'Irlande' },
-          ]}
-          size={select(
-            'size',
-            ['tiny', 'normal', 'big', 'huge', 'giant'],
-            'normal',
-          )}
-          variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
-          defaultSelectedValue="focus"
-          comboboxButtonLabelText={text('Buton aria-label', 'label')}
-          noResultText={text('No results text', 'No results')}
-          uniqLabelOnSearch={boolean('uniqLabelOnSearch', false)}
-          menuZIndex={number('menuZIndex', 1000)}
-        />
-      </GridCol>
-    </Grid>
+    <DropdownSelect
+      {...args}
+      combobox={true}
+      options={[
+        { value: 'france', label: 'France' },
+        { value: 'france', label: 'France' },
+        { value: 'irlande', label: 'Irlande' },
+      ]}
+    />
   )
 }
 
-export const WithComponentsForLabel = () => {
+export const WithComponentsForLabel = (args) => {
   return (
-    <Grid>
-      <GridCol offset="1" col="8">
-        <DropdownSelect
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={boolean('hide label?', false)}
-          combobox={true}
-          labelText={text('LabelText', 'label')}
-          options={[
-            {
-              value: 'France',
-              searchableLabel: 'France',
-              label: (
-                <>
-                  <ArrowIcon direction="left" />
-                  <Text weight="bold">Un titre de la France</Text>
-                  Une explication du label
-                </>
-              ),
-            },
-            {
-              value: 'Espagne',
-              searchableLabel: 'Espagne',
-              label: (
-                <>
-                  <ArrowIcon direction="left" />
-                  <Text weight="bold">Un titre de l'Espagne</Text>
-                  Une explication du label
-                </>
-              ),
-            },
-          ]}
-          size={select(
-            'size',
-            ['tiny', 'normal', 'big', 'huge', 'giant'],
-            'normal',
-          )}
-          variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
-          defaultSelectedValue="focus"
-          comboboxButtonLabelText={text('Buton aria-label', 'label')}
-          noResultText={text('No results text', 'No results')}
-          uniqLabelOnSearch={boolean('uniqLabelOnSearch', false)}
-          menuZIndex={number('menuZIndex', 1000)}
-        />
-      </GridCol>
-    </Grid>
+    <DropdownSelect
+      {...args}
+      options={[
+        {
+          value: 'France',
+          searchableLabel: 'France',
+          label: (
+            <>
+              <ArrowIcon direction="right" />
+              <Text weight="bold">Un titre de la France</Text>
+              Une explication du label
+            </>
+          ),
+        },
+        {
+          value: 'Espagne',
+          searchableLabel: 'Espagne',
+          label: (
+            <>
+              <ArrowIcon direction="right" />
+              <Text weight="bold">Un titre de l'Espagne</Text>
+              Une explication du label
+            </>
+          ),
+        },
+      ]}
+    />
   )
 }
 
-export const ControlledInput = () => {
+export const ControlledInput = (args) => {
   const [value, setValue] = useState('felt')
 
   const getRandomOption = () => {
@@ -189,11 +238,10 @@ export const ControlledInput = () => {
   return (
     <>
       <DropdownSelect
-        id="ControlledInput"
-        combobox={true}
-        options={options}
+        {...args}
+        combobox
+        hideLabel
         value={value}
-        defaultSelectedValue="focus"
         onChange={e => {
           console.warn('onChange', e)
           if (!e) return
@@ -203,7 +251,6 @@ export const ControlledInput = () => {
         onBlur={e => console.warn('onBlur', e)}
       />
       <Button
-        className="k-u-margin-top-single"
         onClick={() => setValue(getRandomOption())}
       >
         Change Value

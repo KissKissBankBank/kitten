@@ -5,6 +5,34 @@ import { Label } from './index'
 
 export default {
   title: 'Form/Label',
+  decorators: [
+    Story => (
+      <div className="story-Container">
+        <Story />
+      </div>
+    ),
+  ],
+  argTypes: {
+    focusId: {
+      name: 'focusId',
+      control: { type: 'text' }
+    },
+    size: {
+      name: 'size',
+      options: [null, undefined, 'normal', 'tiny', 'micro'],
+      control: { type: 'select' }
+    },
+    withoutPointerEvents: {
+      name: 'withoutPointerEvents',
+      control: { type: 'boolean' }
+    },
+  },
+  args: {
+    children: 'Label',
+    focusId: null,
+    size: 'normal',
+    withoutPointerEvents: false,
+  }
 }
 
 const FocusableComponent = styled.div`
@@ -25,24 +53,18 @@ const FocusableComponent = styled.div`
   }
 `
 
-export const Default = () => (
-  <div className="k-u-margin-quadruple">
-    <Label size={select('size', ['normal', 'tiny', 'micro'], 'normal')}>
-      {text('children', 'Label')}
-    </Label>
-  </div>
+export const Default = (args) => (
+    <Label {...args} />
 )
 
 Default.storyName = 'Label'
 
-export const WithFocusId = () => (
-  <div className="k-u-margin-quadruple">
+export const WithFocusId = (args) => (
+  <>
     <Label
-      size={select('size', ['normal', 'tiny', 'micro'], 'normal')}
+      {...args}
       focusId="focusable-component"
-    >
-      {text('children', 'Label')}
-    </Label>
+    />
     <FocusableComponent id="focusable-component" tabIndex="0">
       <span className="k-u-color-primary1 k-u-weight-bold k-u-background-color-primary5 focused">
         😸 Focused
@@ -51,7 +73,7 @@ export const WithFocusId = () => (
         😿 Not focused
       </span>
     </FocusableComponent>
-  </div>
+  </>
 )
 
 WithFocusId.storyName = 'with focusId prop'

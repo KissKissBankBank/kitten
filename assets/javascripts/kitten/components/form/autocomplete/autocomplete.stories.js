@@ -1,11 +1,6 @@
 import React from 'react'
-import { optionsKnob, text, boolean } from '@storybook/addon-knobs'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../layout/container'
-import { Grid, GridCol } from '../../layout/grid'
 import { Autocomplete } from './index'
-import { Field } from '../../form/field'
-import { LocationIcon } from '../../graphics/icons/location-icon'
+import { Field, LocationIcon } from '../../..'
 
 const items = [
   'Abyssinian',
@@ -127,20 +122,7 @@ const items = [
   'York Chocolate',
 ]
 
-const StoryGrid = ({ children }) => (
-  <Container>
-    <Grid>
-      <GridCol col-l="3">
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
-  </Container>
-)
-
-export const Default = () => (
-  <StoryGrid>
+export const Default = (args) => (
     <Field>
       <Field.Label labelProps={{ htmlFor: 'autocomplete' }}>
         Choose your kitten:
@@ -148,21 +130,15 @@ export const Default = () => (
 
       <Autocomplete
         id="autocomplete"
-        name="autocomplete"
         placeholder="Search a kitten…"
-        isLoading={boolean('isLoading', false)}
-        noResultMessage={text('noResultMessage', undefined)}
-        shouldShowNoResultMessage={boolean('shouldShowNoResultMessage', true)}
-        items={items}
+        {...args}
       />
 
       <p>🐱 🐱 🐱 🐱 🐱</p>
     </Field>
-  </StoryGrid>
 )
 
-export const WithIcon = () => (
-  <StoryGrid>
+export const WithIcon = (args) => (
     <Field>
       <Field.Label labelProps={{ htmlFor: 'autocomplete' }}>
         Choose your kitten:
@@ -170,25 +146,96 @@ export const WithIcon = () => (
 
       <Autocomplete
         id="autocomplete"
-        name="autocomplete"
         placeholder="Search a kitten…"
-        isLoading={boolean('isLoading', false)}
-        icon={<LocationIcon />}
-        noResultMessage={text('noResultMessage', undefined)}
-        shouldShowNoResultMessage={boolean('shouldShowNoResultMessage', true)}
-        iconPosition={optionsKnob(
-          'iconPosition',
-          {
-            left: 'left',
-            right: 'right',
-          },
-          'left',
-          { display: 'inline-radio' },
-        )}
-        items={items}
+        {...args}
       />
 
       <p>🐱 🐱 🐱 🐱 🐱</p>
     </Field>
-  </StoryGrid>
 )
+
+const storyDecorator = Story => (
+  <div className="story-Container story-Grid story-Grid--large">
+    <div>
+      <Story />
+    </div>
+  </div>
+)
+
+const args = {
+  name: 'autocomplete',
+  items,
+  error: false,
+  icon: null,
+  iconPosition: 'left',
+  updateSuggestionsStrategy: null,
+  noResultMessage: 'No result',
+  shouldShowNoResultMessage: true,
+  onChange: () => {},
+  onBlur: () => {},
+  onKeyDown: () => {},
+  onSelect: () => {},
+  isLoading: false,
+}
+
+const argTypes = {
+  name: {
+    name: 'name',
+    control: { type: 'text'},
+  },
+  items: {
+    name: 'items',
+    control: { type: 'object' },
+  },
+  error: {
+    name: 'error',
+    control: { type: 'boolean' },
+  },
+  icon: {
+    name: 'icon',
+  },
+  iconPosition: {
+    name: 'iconPosition',
+    options: ['left', 'right'],
+    control: { type: 'inline-radio' }
+  },
+  updateSuggestionsStrategy: {
+    name: 'updateSuggestionsStrategy',
+  },
+  noResultMessage: {
+    name: 'noResultMessage',
+    control: { type: 'text' },
+  },
+  shouldShowNoResultMessage:{
+    name: 'shouldShowNoResultMessage',
+    control: { type: 'boolean' },
+  },
+  onChange: {
+    name: 'onChange',
+
+  },
+  onBlur: {
+    name: 'onBlur',
+
+  },
+  onKeyDown: {
+    name: 'onKeyDown',
+
+  },
+  onSelect: {
+    name: 'onSelect',
+
+  },
+  isLoading: {
+    name: 'isLoading',
+    control: { type: 'boolean' },
+  },
+}
+
+Default.decorators = [storyDecorator]
+Default.argTypes = argTypes
+Default.args = args
+
+WithIcon.decorators = [storyDecorator]
+WithIcon.argTypes = argTypes
+WithIcon.args = {...args, icon: <LocationIcon />}

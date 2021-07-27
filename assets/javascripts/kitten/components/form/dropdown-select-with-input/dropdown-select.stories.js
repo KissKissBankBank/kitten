@@ -16,6 +16,13 @@ export default {
   parameters: {
     component: DropdownSelectWithInput,
   },
+  decorators: [
+    Story => (
+      <div className="story-Container">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 const options = [
@@ -55,52 +62,49 @@ export const Default = () => {
   const [labelProps, setLabelProps] = useState(null)
 
   return (
-    <Grid>
-      <GridCol offset="1" col="8">
-        <DropdownSelectWithInput
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={boolean('hide label?', false)}
-          labelText={text('LabelText', 'label')}
-          options={options}
-          labelPropsGetter={passedLabelProps => {
-            passedLabelProps && setLabelProps(passedLabelProps())
-          }}
-          resetOnBackspace={boolean('resetOnBackspace', false)}
-          highlightOptionBox={boolean('highlightOptionBox', true)}
-          hideIconOnMobile={boolean('hideIconOnMobile', false)}
-          size={select(
-            'size',
-            ['tiny', 'normal', 'big', 'huge', 'giant'],
-            'normal',
-          )}
-        />
-        <p>
-          Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-          Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Etiam porta sem malesuada magna mollis euismod.
-        </p>
-        <p>labelPropsGetter props:</p>
-        <ul>
-          {labelProps &&
-            Object.keys(labelProps).map(prop => (
-              <li>
-                {prop}: {labelProps[prop]}
-              </li>
-            ))}
-        </ul>
-      </GridCol>
-    </Grid>
+    <>
+      <DropdownSelectWithInput
+        id={text('id', 'dropdown-select')}
+        error={boolean('error', false)}
+        valid={boolean('valid', false)}
+        disabled={boolean('disabled', false)}
+        hideLabel={boolean('hide label?', false)}
+        labelText={text('LabelText', 'label')}
+        options={options}
+        labelPropsGetter={passedLabelProps => {
+          passedLabelProps && setLabelProps(passedLabelProps())
+        }}
+        resetOnBackspace={boolean('resetOnBackspace', false)}
+        highlightOptionBox={boolean('highlightOptionBox', true)}
+        hideIconOnMobile={boolean('hideIconOnMobile', false)}
+        size={select(
+          'size',
+          ['tiny', 'normal', 'big', 'huge', 'giant'],
+          'normal',
+        )}
+      />
+      <p>
+        Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+        Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Etiam porta sem malesuada magna mollis euismod.
+      </p>
+      <p>labelPropsGetter props:</p>
+      <ul>
+        {labelProps &&
+          Object.keys(labelProps).map(prop => (
+            <li>
+              {prop}: {labelProps[prop]}
+            </li>
+          ))}
+      </ul>
+    </>
   )
 }
 
 export const DeactivatedDropdown = () => {
   return (
-    <Grid>
-      <GridCol offset="1" col="8">
+    <>
         <DropdownSelectWithInput
           id={text('id', 'dropdown-select')}
           error={boolean('error', false)}
@@ -164,7 +168,6 @@ export const DeactivatedDropdown = () => {
             'normal',
           )}
         />
-      </GridCol>
-    </Grid>
+      </>
   )
 }
