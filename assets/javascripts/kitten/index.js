@@ -442,6 +442,7 @@ export {
 } from './helpers/utils/media-queries'
 export { useMedia } from './helpers/utils/use-media-query'
 export { useDeepCompareEffect } from './helpers/utils/use-deep-compare-effect-hook'
+export { createRangeFromZeroTo } from './helpers/utils/range'
 
 // ---
 // HOC

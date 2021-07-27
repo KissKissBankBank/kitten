@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from './index'
-import COLORS from '../../../constants/colors-config'
+import COLORS from '../../..'
 
 export default {
   title: 'Layout/Container',

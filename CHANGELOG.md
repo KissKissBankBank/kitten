@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `TextCopy`: Fix WebKit sizing bug.
+- Feature: Add `createRangeFromZeroTo` to ESM exports.
 
 ## [4.0.1] - 2021-07-23
 

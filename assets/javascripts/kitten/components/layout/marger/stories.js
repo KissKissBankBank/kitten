@@ -1,6 +1,5 @@
 import React from 'react'
 import { Marger } from './index'
-import { number } from '@storybook/addon-knobs'
 import styled from 'styled-components'
 
 const StyledStory = styled.div`
@@ -15,13 +14,24 @@ const StyledStory = styled.div`
 export default {
   title: 'Layout/Marger',
   component: Marger,
+  args: {
+    top: 2,
+    bottom: 2,
+  },
+  argTypes: {
+    top: {
+      name: 'top',
+    },
+    bottom: {
+      name: 'bottom',
+    },
+  },
 }
 
-export const Default = () => (
+export const Default = args => (
   <StyledStory>
-    <Marger top={number('top', 2)} bottom={number('bottom', 2)}>
-      Marger with {number('top', 2) * 10}px top margin and{' '}
-      {number('bottom', 2) * 10}px bottom margin.
+    <Marger {...args}>
+      Marger with {args.top}px top margin and {args.bottom}px bottom margin.
     </Marger>
   </StyledStory>
 )

@@ -1,16 +1,22 @@
 import React from 'react'
 import { Grid, GridCol } from './index'
-import { Container } from '../../..'
 
 export default {
   title: 'Layout/Grid',
   component: Grid,
+  decorators: [
+    Story => (
+      <div className="story-Container">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 const blockClasses = 'k-u-align-center has-overrides color-background'
 
 export const Default = () => (
-  <Container>
+  <>
     <Grid className="k-u-margin-top-double">
       <GridCol col="1">
         <div className={blockClasses}>col="1"</div>
@@ -116,5 +122,5 @@ export const Default = () => (
         <div className={blockClasses}>col-l="4" offset-l="2"</div>
       </GridCol>
     </Grid>
-  </Container>
+  </>
 )
