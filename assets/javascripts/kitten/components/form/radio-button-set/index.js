@@ -24,6 +24,10 @@ const StyledRadioButtonSet = styled.fieldset`
     display: flex;
     flex-direction: column;
     gap: ${pxToRem(5)} 0;
+
+    .k-Form-RadioButtonSet__radioButton.k-Form-RadioButton {
+      margin: 0;
+    }
   }
 `
 
