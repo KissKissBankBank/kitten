@@ -17,6 +17,8 @@ import { LoggedOut } from './components/logged-out'
 import { Logged } from './components/logged'
 import { Hidden } from './components/hidden'
 import { QuickAccessLink } from './components/quick-access-link'
+import { SearchInput } from './components/search-input'
+import { FloatingDropdown } from './components/floating-dropdown'
 
 import { usePrevious } from '../../../helpers/utils/use-previous-hook'
 
@@ -114,6 +116,8 @@ HeaderNav.Centered = Centered
 HeaderNav.LoggedOut = LoggedOut
 HeaderNav.Logged = Logged
 HeaderNav.Hidden = Hidden
+HeaderNav.SearchInput = SearchInput
+HeaderNav.FloatingDropdown = FloatingDropdown
 
 HeaderNav.propTypes = {
   id: PropTypes.string,

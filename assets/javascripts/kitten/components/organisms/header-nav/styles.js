@@ -167,24 +167,33 @@ export const StyledHeader = styled.header`
     }
   }
 
-  .k-HeaderNav--right,
-  .k-HeaderNav--centered {
+  .k-HeaderNav__right,
+  .k-HeaderNav__centered {
     display: flex;
     height: 100%;
     align-items: center;
   }
 
-  .k-HeaderNav--right {
+  .k-HeaderNav__right {
     justify-content: flex-end;
     flex-grow: 1;
+
+    &.k-HeaderNav__right--padded {
+      padding-right: ${pxToRem(15)};
+      gap: ${pxToRem(15)};
+
+      .k-HeaderNav__Button:last-child {
+        margin-right: ${pxToRem(-15)};
+      }
+    }
   }
 
-  .k-HeaderNav--centered {
+  .k-HeaderNav__centered {
     justify-content: center;
     flex-grow: 100;
   }
 
-  .k-HeaderNav--column {
+  .k-HeaderNav__column {
     flex-direction: column;
   }
 
@@ -510,6 +519,7 @@ export const StyledHeader = styled.header`
           right: 0;
         }
       }
+
     }
 
     &.k-HeaderNavDropdown--isExpanded .k-HeaderNavDropdown__menu {
@@ -520,4 +530,102 @@ export const StyledHeader = styled.header`
       overflow-y: scroll;
     }
   }
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    .k-HeaderNav__right--padded .k-HeaderNavDropdown__menu {
+      margin-left: ${pxToRem(-15)};
+      margin-right: ${pxToRem(-15)};
+    }
+  }
+
+  .k-HeaderNav__searchInput {
+    position: relative;
+    flex: 1 0 auto;
+    max-width: min(100%, ${pxToRem(500)});
+    transition: max-width .2s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    > * {
+      flex: 1 0 auto;
+    }
+
+    .k-Form-TextInput {
+      ${TYPOGRAPHY.fontStyles.light};
+      width: 100%;
+    }
+
+    &.k-HeaderNav__searchInput--expanded {
+      max-width: min(100%, ${pxToRem(500)});
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      &.k-HeaderNav__searchInput--mobileInvisible .k-Form-TextInputWithIcon {
+        display: none;
+      }
+      .k-HeaderNav__searchInput__mobileFold {
+        flex: 0 0 auto;
+        padding: ${pxToRem(20)};
+      }
+      &:not(.k-HeaderNav__searchInput--mobileInvisible) {
+        background: ${COLORS.background1};
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      .k-HeaderNav__searchInput__mobileFold {
+        display: none;
+      }
+    }
+  }
+
+  .k-HeaderNav__floatingDropdown {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    background-color: ${COLORS.background1};
+    padding: ${pxToRem(10)};
+
+    z-index: 20;
+
+    margin-top: ${pxToRem(-10)};
+    visibility: hidden;
+    opacity: 0;
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      top: 100%;
+      height: calc(100vh - 100%);
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      top: calc(100% + ${pxToRem(10)});
+
+      box-shadow: 0 ${pxToRem(4)} ${pxToRem(20)} rgba(0, 0, 0, 0.25);
+      border-radius: ${pxToRem(4)};
+      padding: ${pxToRem(20)};
+
+      /* Max-height is needed to allow scroll on menu.
+         The 100% is equal to the button height. */
+      max-height: calc(100vh - (100% + ${pxToRem(20)}));
+      box-shadow: 0 ${pxToRem(3)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
+      transition: margin 0.2s, visibility 0.2s, opacity 0.2s;
+    }
+
+    &.k-HeaderNav__floatingDropdown--visible {
+      margin-top: 0;
+      visibility: visible;
+      opacity: 1;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+  }
+
 `

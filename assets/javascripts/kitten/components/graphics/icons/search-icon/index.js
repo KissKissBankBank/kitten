@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import deprecated from 'prop-types-extra/lib/deprecated'
 
 export const SearchIcon = ({
   iconTitle,
@@ -12,35 +11,14 @@ export const SearchIcon = ({
   height,
   ...props
 }) => (
-  <svg
-    role="img"
-    aria-label={iconTitle || title}
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="-0.7 -0.7 18 18"
-    width={width}
-    height={height}
-    {...props}
-  >
-    {(iconTitle || title) && <title>{iconTitle || title}</title>}
-    <circle
-      cx="7"
-      cy="7"
-      r="7"
-      stroke={color}
-      strokeWidth="1.1"
-      fill="none"
-      {...circleProps}
-    />
-    <path
-      d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z"
-      fill={color}
-      {...pathProps}
-    />
+  <svg aria-label={title} width={width} height={height} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    {(title) && <title>{title}</title>}
+    <path d="M14 14L10.5 10.5" stroke={color} stroke-width="2" stroke-linecap="round" {...pathProps}/>
+    <circle cx="6.3" cy="6.3" r="5.3" stroke={color} stroke-width="2" {...circleProps}/>
   </svg>
 )
 
 SearchIcon.propTypes = {
-  iconTitle: deprecated(PropTypes.string, 'Prefere use `title` prop instead'),
   title: PropTypes.string,
   color: PropTypes.string,
   circleProps: PropTypes.object,
