@@ -21,57 +21,57 @@ export default {
   argTypes: {
     href: {
       name: 'href',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     imageProps: {
       name: 'imageProps',
-      control: { type: 'object' }
+      control: { type: 'object' },
     },
     title: {
       name: 'title',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     titleTag: {
       name: 'titleTag',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     description: {
       name: 'description',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     info: {
       name: 'info',
-      options: [
-        'lastday',
-        'lastdays',
-        'started',
-        'success',
-        'failed'
-      ],
+      options: ['lastday', 'lastdays', 'started', 'success', 'failed'],
       descrition: 'Any node will do, this select shows various possibilities',
-      control: { type: 'select' }
+      control: { type: 'select' },
     },
     progress: {
       name: 'progress',
-      control: { type: 'number' }
+      control: { type: 'number' },
     },
     progressColor: {
       name: 'progressColor',
-      control: { type: 'color' }
+      control: { type: 'color' },
     },
     noProgressOnMobile: {
       name: 'noProgressOnMobile',
-      control: { type: 'boolean' }
-    }
-  }
+      control: { type: 'boolean' },
+    },
+  },
 }
 
-const InfoComponent = ({info}) => {
-  switch(info) {
+const InfoComponent = ({ info }) => {
+  switch (info) {
     case 'lastday':
       return (
         <div className="k-u-flex k-u-flex-alignItems-center">
-          <ClockCircleIcon width="12" height="12" color={COLORS.background1} bgColor={COLORS.primary1} className="k-u-margin-right-noneHalf" />
+          <ClockCircleIcon
+            width="12"
+            height="12"
+            color={COLORS.background1}
+            bgColor={COLORS.primary1}
+            className="k-u-margin-right-noneHalf"
+          />
           <Text weight="regular" size="micro" color="primary1">
             Dernier jour&nbsp;!
           </Text>
@@ -80,7 +80,13 @@ const InfoComponent = ({info}) => {
     case 'lastdays':
       return (
         <div className="k-u-flex k-u-flex-alignItems-center">
-          <ClockCircleIcon width="12" height="12" color={COLORS.background1} bgColor={COLORS.primary1} className="k-u-margin-right-noneHalf" />
+          <ClockCircleIcon
+            width="12"
+            height="12"
+            color={COLORS.background1}
+            bgColor={COLORS.primary1}
+            className="k-u-margin-right-noneHalf"
+          />
           <Text weight="regular" size="micro" color="primary1">
             Derniers jours&nbsp;!
           </Text>
@@ -89,7 +95,13 @@ const InfoComponent = ({info}) => {
     case 'started':
       return (
         <div className="k-u-flex k-u-flex-alignItems-center">
-          <ClockCircleIcon width="12" height="12" color={COLORS.background1} bgColor={COLORS.primary1} className="k-u-margin-right-noneHalf" />
+          <ClockCircleIcon
+            width="12"
+            height="12"
+            color={COLORS.background1}
+            bgColor={COLORS.primary1}
+            className="k-u-margin-right-noneHalf"
+          />
           <Text weight="regular" size="micro" color="font1">
             En cours
           </Text>
@@ -98,7 +110,13 @@ const InfoComponent = ({info}) => {
     case 'success':
       return (
         <div className="k-u-flex k-u-flex-alignItems-center">
-          <CheckedCircleIcon width="12" height="12" color={COLORS.background1} bgColor={COLORS.valid} className="k-u-margin-right-noneHalf" />
+          <CheckedCircleIcon
+            width="12"
+            height="12"
+            color={COLORS.background1}
+            bgColor={COLORS.valid}
+            className="k-u-margin-right-noneHalf"
+          />
           <Text weight="regular" size="micro" color="font1">
             Réussi
           </Text>
@@ -109,9 +127,11 @@ const InfoComponent = ({info}) => {
   }
 }
 
-export const Default = (args) => {
-
+export const Default = args => {
   return (
-    <HorizontalCrowdfundingCard {...args} info={<InfoComponent info={args.info} />} />
+    <HorizontalCrowdfundingCard
+      {...args}
+      info={<InfoComponent info={args.info} />}
+    />
   )
 }

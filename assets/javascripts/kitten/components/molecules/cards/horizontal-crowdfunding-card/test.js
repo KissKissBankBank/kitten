@@ -17,7 +17,7 @@ describe('<HorizontalCrowdfundingCard />', () => {
             noProgressOnMobile
             progress={50}
             progressColor="transparent"
-            info={(<span>Test info</span>)}
+            info={<span>Test info</span>}
           />,
         )
         .toJSON()

@@ -81,7 +81,6 @@ const StyledCard = styled.a`
   .k-HorizontalCrowdfundingCard__info {
     grid-column: 2 / span 1;
     grid-row: 3 / 4;
-
   }
   .k-HorizontalCrowdfundingCard__progress {
     grid-column: 3 / span 1;
@@ -128,37 +127,46 @@ export const HorizontalCrowdfundingCard = ({
   noProgressOnMobile = false,
   ...props
 }) => {
-
   return (
     <StyledCard
       href={href}
-      className={classNames(
-        'k-HorizontalCrowdfundingCard',
-        className,
-        {'k-HorizontalCrowdfundingCard--noProgressOnMobile': noProgressOnMobile},
-      )}
+      className={classNames('k-HorizontalCrowdfundingCard', className, {
+        'k-HorizontalCrowdfundingCard--noProgressOnMobile': noProgressOnMobile,
+      })}
       {...props}
     >
       <div className="k-HorizontalCrowdfundingCard__imageWrapper">
         <img {...imageProps} alt={imageProps.alt || ''} />
       </div>
-      <Text weight="regular" size="tiny" as={titleTag} className="k-HorizontalCrowdfundingCard__title">
+      <Text
+        weight="regular"
+        size="tiny"
+        as={titleTag}
+        className="k-HorizontalCrowdfundingCard__title"
+      >
         {title}
       </Text>
-      <Text as="p" weight="light" size="micro" className="k-HorizontalCrowdfundingCard__description">
+      <Text
+        as="p"
+        weight="light"
+        size="micro"
+        className="k-HorizontalCrowdfundingCard__description"
+      >
         {description}
       </Text>
-      <div className="k-HorizontalCrowdfundingCard__info">
-        {info}
-      </div>
+      <div className="k-HorizontalCrowdfundingCard__info">{info}</div>
       <div className="k-HorizontalCrowdfundingCard__progress">
         <Progress
           value={progress}
           color={progressColor}
-          rampProps={{ style: {height: 4} }}
+          rampProps={{ style: { height: 4 } }}
           className="k-HorizontalCrowdfundingCard__progress__ramp"
         />
-        <Text weight="light" size="micro" className="k-HorizontalCrowdfundingCard__progress__value">
+        <Text
+          weight="light"
+          size="micro"
+          className="k-HorizontalCrowdfundingCard__progress__value"
+        >
           {progress}&nbsp;%
         </Text>
       </div>
