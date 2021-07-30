@@ -215,6 +215,7 @@ export {
 } from './components/layout/adaptable-grid'
 export { Container } from './components/layout/container'
 export { DashboardLayout } from './components/layout/dashboard-layout'
+export { FlexWrapper } from './components/layout/flex-wrapper'
 export { Grid, GridCol } from './components/layout/grid'
 export { Marger } from './components/layout/marger'
 export { Row } from './components/layout/row'
