@@ -17,6 +17,8 @@ import {
   HorizontalCrowdfundingCard,
   ClockCircleIcon,
   CheckedCircleIcon,
+  CLOSE_OVERLAY_EVENT,
+  OPEN_OVERLAY_EVENT,
 } from '../../../..'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
@@ -89,156 +91,120 @@ const Navigation = () => (
   </>
 )
 
-const closeEvent = 'searchInput-overlay-close'
-const openEvent = 'searchInput-overlay-open'
-
 const SearchInput = () => {
-  const [isSearchMenuOpen, openSearchMenu] = useState(false)
-  const inputWrapperRef = useRef(null)
 
-  const handleSearchInputChange = changeEvent => {
-    openSearchMenu(changeEvent.target.value.length > 0)
-  }
-
-  useEffect(() => {
-    window.dispatchEvent(new Event(isSearchMenuOpen ? openEvent : closeEvent))
-    inputWrapperRef?.current.querySelector('#search-input').focus()
-
-    if (isSearchMenuOpen) {
-      inputWrapperRef.current.addEventListener('focusout', handleFocusOut)
-    } else {
-      inputWrapperRef.current.addEventListener('focusin', handleFocusIn)
-    }
-
-    return () => {
-      inputWrapperRef.current.removeEventListener('focusout', handleFocusOut)
-      inputWrapperRef.current.removeEventListener('focusin', handleFocusIn)
-    }
-  }, [isSearchMenuOpen])
-
-  const handleFocusOut = event => {
-    if (
-      !inputWrapperRef.current ||
-      inputWrapperRef.current.contains(event.relatedTarget)
-    )
-      return
-
-    openSearchMenu(false)
-  }
-
-  const handleFocusIn = () => {
-    openSearchMenu(
-      inputWrapperRef.current.querySelector('input').value.length > 0,
+  const handleToggle = event => {
+    window.dispatchEvent(
+      new Event(event.isDropdownExpanded ? OPEN_OVERLAY_EVENT : CLOSE_OVERLAY_EVENT),
     )
   }
 
   return (
     <HeaderNav.SearchInput
-      inputProps={{
-        onChange: handleSearchInputChange,
+      onMenuToggle={handleToggle}
+      searchInputProps={{
         id: 'search-input',
       }}
-      expanded={isSearchMenuOpen}
-      buttonProps={{
+      searchButtonProps={{
         type: 'submit',
         'aria-label': 'Voir les résultats de la recherche',
       }}
-      ref={inputWrapperRef}
-      openSearchMenu={openSearchMenu}
     >
-      <HeaderNav.FloatingDropdown visible={isSearchMenuOpen}>
-        <FlexWrapper gap={5} padding={15}>
-          <HorizontalCrowdfundingCard
-            title="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
-            description="Maecenas sed diam eget risus varius blandit sit amet non magna."
-            progress={37}
-            progressColor={COLORS.primary1}
-            info={
-              <div className="k-u-flex k-u-flex-alignItems-center">
-                <ClockCircleIcon
-                  width="12"
-                  height="12"
-                  color={COLORS.background1}
-                  bgColor={COLORS.primary1}
-                  className="k-u-margin-right-noneHalf"
-                />
-                <Text weight="regular" size="micro" color="primary1">
-                  Dernier jour&nbsp;!
-                </Text>
-              </div>
-            }
-          />
-          <HorizontalCrowdfundingCard
-            title="Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
-            description="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
-            progress={100}
-            progressColor={COLORS.valid}
-            info={
-              <div className="k-u-flex k-u-flex-alignItems-center">
-                <CheckedCircleIcon
-                  width="12"
-                  height="12"
-                  color={COLORS.background1}
-                  bgColor={COLORS.valid}
-                  className="k-u-margin-right-noneHalf"
-                />
-                <Text weight="regular" size="micro" color="font1">
-                  Réussi
-                </Text>
-              </div>
-            }
-          />
-          <HorizontalCrowdfundingCard
-            title="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
-            description="Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
-            progress={21}
-            progressColor={COLORS.primary1}
-            info={
-              <div className="k-u-flex k-u-flex-alignItems-center">
-                <ClockCircleIcon
-                  width="12"
-                  height="12"
-                  color={COLORS.background1}
-                  bgColor={COLORS.primary1}
-                  className="k-u-margin-right-noneHalf"
-                />
-                <Text weight="regular" size="micro">
-                  En cours
-                </Text>
-              </div>
-            }
-          />
-          <HorizontalCrowdfundingCard
-            title="Maecenas sed diam eget risus varius blandit sit amet non magna."
-            description="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
-            progress={60}
-            progressColor={COLORS.primary1}
-            info={
-              <div className="k-u-flex k-u-flex-alignItems-center">
-                <ClockCircleIcon
-                  width="12"
-                  height="12"
-                  color={COLORS.background1}
-                  bgColor={COLORS.primary1}
-                  className="k-u-margin-right-noneHalf"
-                />
-                <Text weight="regular" size="micro">
-                  En cours
-                </Text>
-              </div>
-            }
-          />
-        </FlexWrapper>
+      <FlexWrapper gap={5} padding={15}>
+        <HorizontalCrowdfundingCard
+          title="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+          description="Maecenas sed diam eget risus varius blandit sit amet non magna."
+          progress={37}
+          progressColor={COLORS.primary1}
+          info={
+            <div className="k-u-flex k-u-flex-alignItems-center">
+              <ClockCircleIcon
+                width="12"
+                height="12"
+                color={COLORS.background1}
+                bgColor={COLORS.primary1}
+                className="k-u-margin-right-noneHalf"
+              />
+              <Text weight="regular" size="micro" color="primary1">
+                Dernier jour&nbsp;!
+              </Text>
+            </div>
+          }
+        />
+        <HorizontalCrowdfundingCard
+          title="Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+          description="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
+          progress={100}
+          progressColor={COLORS.valid}
+          info={
+            <div className="k-u-flex k-u-flex-alignItems-center">
+              <CheckedCircleIcon
+                width="12"
+                height="12"
+                color={COLORS.background1}
+                bgColor={COLORS.valid}
+                className="k-u-margin-right-noneHalf"
+              />
+              <Text weight="regular" size="micro" color="font1">
+                Réussi
+              </Text>
+            </div>
+          }
+        />
+        <HorizontalCrowdfundingCard
+          title="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
+          description="Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+          progress={21}
+          progressColor={COLORS.primary1}
+          info={
+            <div className="k-u-flex k-u-flex-alignItems-center">
+              <ClockCircleIcon
+                width="12"
+                height="12"
+                color={COLORS.background1}
+                bgColor={COLORS.primary1}
+                className="k-u-margin-right-noneHalf"
+              />
+              <Text weight="regular" size="micro">
+                En cours
+              </Text>
+            </div>
+          }
+        />
+        <HorizontalCrowdfundingCard
+          title="Maecenas sed diam eget risus varius blandit sit amet non magna."
+          description="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+          progress={60}
+          progressColor={COLORS.primary1}
+          info={
+            <div className="k-u-flex k-u-flex-alignItems-center">
+              <ClockCircleIcon
+                width="12"
+                height="12"
+                color={COLORS.background1}
+                bgColor={COLORS.primary1}
+                className="k-u-margin-right-noneHalf"
+              />
+              <Text weight="regular" size="micro">
+                En cours
+              </Text>
+            </div>
+          }
+        />
+      </FlexWrapper>
 
-        <Button
-          size="tiny"
-          variant="orion"
-          type="submit"
-          className="k-u-margin-bottom-double k-u-margin-horizontal-double"
-        >
-          Voir les résultats de la recherche
-        </Button>
-      </HeaderNav.FloatingDropdown>
+      <Button
+        size="tiny"
+        variant="orion"
+        type="submit"
+        fluid
+        className="k-u-margin-bottom-double k-u-margin-horizontal-double"
+        style={{
+          width: 'calc(100% - 40px)'
+        }}
+      >
+        Voir les résultats de la recherche
+      </Button>
     </HeaderNav.SearchInput>
   )
 }
@@ -264,8 +230,6 @@ export const KissKissBankBankHeaderNavStoryNew = ({
     <>
       <Overlay
         zIndex={1}
-        closeEvent={closeEvent}
-        openEvent={openEvent}
         position="fixed"
       />
 

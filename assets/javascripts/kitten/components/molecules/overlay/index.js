@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
 
+export const CLOSE_OVERLAY_EVENT = 'overlay-close'
+export const OPEN_OVERLAY_EVENT = 'overlay-open'
+
 const StyledOverlay = styled.div`
   left: 0;
   top: 0;
@@ -88,14 +91,14 @@ Overlay.propTypes = {
   toggleEvent: PropTypes.string,
   closeEvent: PropTypes.string,
   openEvent: PropTypes.string,
-  position: PropTypes.oneOf('absolute', 'fixed')
+  position: PropTypes.oneOf(['absolute', 'fixed'])
 }
 
 Overlay.defaultProps = {
   zIndex: 100,
   isActive: false,
   toggleEvent: '',
-  closeEvent: '',
-  openEvent: '',
+  closeEvent: CLOSE_OVERLAY_EVENT,
+  openEvent: OPEN_OVERLAY_EVENT,
   position: 'absolute',
 }

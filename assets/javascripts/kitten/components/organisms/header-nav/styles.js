@@ -519,7 +519,6 @@ export const StyledHeader = styled.header`
           right: 0;
         }
       }
-
     }
 
     &.k-HeaderNavDropdown--isExpanded .k-HeaderNavDropdown__menu {
@@ -540,12 +539,12 @@ export const StyledHeader = styled.header`
 
   .k-HeaderNav__searchInput {
     position: relative;
-    flex: 1 0 auto;
     max-width: min(100%, ${pxToRem(500)});
-    transition: max-width .2s ease;
+    transition: max-width 0.2s ease;
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 
     > * {
       flex: 1 0 auto;
@@ -561,12 +560,18 @@ export const StyledHeader = styled.header`
     }
 
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-      &.k-HeaderNav__searchInput--mobileInvisible .k-Form-TextInputWithIcon {
+      flex: 0 0 auto;
+
+      &.k-HeaderNav__searchInput--mobileInvisible .k-Form-TextInputWithButton {
         display: none;
       }
       .k-HeaderNav__searchInput__mobileFold {
         flex: 0 0 auto;
-        padding: ${pxToRem(20)};
+        padding-left: ${pxToRem(8)};
+        padding-right: ${pxToRem(13)};
+        display: inline-flex;
+        align-items: center;
+        align-self: stretch;
       }
       &:not(.k-HeaderNav__searchInput--mobileInvisible) {
         background: ${COLORS.background1};
@@ -576,9 +581,13 @@ export const StyledHeader = styled.header`
         left: 0;
         right: 0;
         bottom: 0;
+        padding-left: ${pxToRem(20)};
       }
     }
+
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      flex: 1 0 auto;
+
       .k-HeaderNav__searchInput__mobileFold {
         display: none;
       }
@@ -602,8 +611,9 @@ export const StyledHeader = styled.header`
     transition: margin 0.2s, visibility 0.2s, opacity 0.2s;
 
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      position: fixed;
       top: 100%;
-      height: calc(100vh - 100%);
+      max-height: calc(100vh - 100%);
     }
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -617,7 +627,7 @@ export const StyledHeader = styled.header`
       box-shadow: 0 ${pxToRem(3)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
     }
 
-    &.k-HeaderNav__floatingDropdown--visible {
+    &.k-HeaderNav__floatingDropdown--isExpanded {
       margin-top: 0;
       visibility: visible;
       opacity: 1;
@@ -625,5 +635,4 @@ export const StyledHeader = styled.header`
       overflow-y: scroll;
     }
   }
-
 `

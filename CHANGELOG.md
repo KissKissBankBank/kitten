@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `Overlay`: Add `position` prop, defaults to `absolute`.
 - Feature: Add `HorizontalCrowdfundingCard` molecule component.
 - Feature: Add `FlexWrapper` layout component.
+- Feature: `CrossIcon`: Add `size` prop, accepts values `normal` and `big`.
 
 ## [4.0.2] - 2021-07-27
 

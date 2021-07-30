@@ -405,6 +405,10 @@ export {
   TABLET_HEADER_HEIGHT,
   DESKTOP_HEADER_HEIGHT,
 } from './components/organisms/header-nav/config'
+export {
+  CLOSE_OVERLAY_EVENT,
+  OPEN_OVERLAY_EVENT,
+} from './components/molecules/overlay'
 
 // -------
 // HELPERS
