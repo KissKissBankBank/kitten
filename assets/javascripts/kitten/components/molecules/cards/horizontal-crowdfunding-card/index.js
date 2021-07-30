@@ -64,13 +64,19 @@ const StyledCard = styled.a`
     grid-column: 2 / span 2;
     grid-row: 1 / 2;
     margin: 0;
-    line-height: 1;
+    line-height: 1.2;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .k-HorizontalCrowdfundingCard__description {
     grid-column: 2 / span 2;
     grid-row: 2 / 3;
     margin: 0;
     line-height: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .k-HorizontalCrowdfundingCard__info {
     grid-column: 2 / span 1;
