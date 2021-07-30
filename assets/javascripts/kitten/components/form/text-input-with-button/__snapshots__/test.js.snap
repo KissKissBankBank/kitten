@@ -2,10 +2,10 @@
 
 exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
+  className="sc-htpNat PzNji k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
 >
   <input
-    className="sc-bdVaJa gynXzG k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    className="sc-bdVaJa jbXJrM k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
     disabled={false}
     name="text"
   />
@@ -21,10 +21,10 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
+  className="sc-htpNat PzNji k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
 >
   <input
-    className="sc-bdVaJa gynXzG k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    className="sc-bdVaJa jbXJrM k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
     disabled={false}
     name="text"
   />
@@ -41,10 +41,10 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
 
 exports[`<TextInputWithButton /> with component inside button value matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
+  className="sc-htpNat PzNji k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
 >
   <input
-    className="sc-bdVaJa gynXzG k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    className="sc-bdVaJa jbXJrM k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
@@ -100,10 +100,10 @@ exports[`<TextInputWithButton /> with component inside button value matches with
 
 exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
+  className="sc-htpNat PzNji k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
 >
   <input
-    className="sc-bdVaJa gynXzG k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--disabled"
+    className="sc-bdVaJa jbXJrM k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--disabled"
     disabled={true}
     name="text"
   />
@@ -119,10 +119,10 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
 
 exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
+  className="sc-htpNat PzNji k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
 >
   <input
-    className="sc-bdVaJa gynXzG k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
+    className="sc-bdVaJa jbXJrM k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
     disabled={false}
     name="text"
   />
@@ -138,10 +138,10 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
+  className="sc-htpNat PzNji k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
 >
   <input
-    className="sc-bdVaJa gynXzG k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    className="sc-bdVaJa jbXJrM k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
@@ -159,10 +159,10 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
+  className="sc-htpNat PzNji k-Form-TextInputWithButton k-Form-TextInputWithButton--tiny"
 >
   <input
-    className="sc-bdVaJa gynXzG k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--tiny"
+    className="sc-bdVaJa jbXJrM k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--tiny"
     disabled={false}
     name="text"
   />
@@ -178,10 +178,10 @@ exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gTjkEn k-Form-TextInputWithButton"
+  className="sc-htpNat PzNji k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
 >
   <input
-    className="sc-bdVaJa gynXzG k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--valid"
+    className="sc-bdVaJa jbXJrM k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--valid"
     disabled={false}
     name="text"
   />
