@@ -5,12 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `SearchIcon`: Update.
+- Feature: `CrossIcon`: Add `size` prop, accepts values `normal` and `big`.
 - Feature: `TextInput`: Add `rounded` boolean prop, defaults to `false`.
 - Feature: `TextInputWithButton`: Add `inset` prop to place the button inside the input.
 - Feature: `Overlay`: Add `position` prop, defaults to `absolute`.
 - Feature: Add `HorizontalCrowdfundingCard` molecule component.
 - Feature: Add `FlexWrapper` layout component.
-- Feature: `CrossIcon`: Add `size` prop, accepts values `normal` and `big`.
 
 ## [4.0.2] - 2021-07-27
 
