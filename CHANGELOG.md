@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `BackingCard`: Fix text input width.
 - Feature: Add `HorizontalCrowdfundingCard` molecule component.
 - Feature: Add `FlexWrapper` layout component.
 
@@ -16,6 +17,8 @@ Fixes:
 - `DocumentsDropUploader`: Fix onChange and onError event.
 
 ## [4.0.1] - 2021-07-23
+
+Fixes:
 
 - `ContributionCard`: Various fixes.
 - `ModalNext`: Fix sizing of Modal content.

@@ -149,16 +149,6 @@ export const StyledBackingCard = styled.article`
     white-space: nowrap;
   }
 
-  .k-BackingCard__formWrapper {
-    justify-content: space-between;
-
-    .k-Form-TextInputWithUnit .k-Form-TextInputWithUnit__input {
-      width: unset;
-      min-width: 0;
-      flex: 1 1 auto;
-    }
-  }
-
   .k-BackingCard__tagList {
     list-style: none;
     margin: 0;
