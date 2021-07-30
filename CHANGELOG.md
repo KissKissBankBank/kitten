@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `SearchIcon`: Update.
 - Feature: `TextInput`: Add `rounded` boolean prop, defaults to `false`.
-- Feature: `TextInputWithIcon`: Add `buttonProps` prop to use the icon as a button.
+- Feature: `TextInputWithButton`: Add `inset` prop to place the button inside the input.
 - Feature: `Overlay`: Add `position` prop, defaults to `absolute`.
 
 ## [4.0.2] - 2021-07-27

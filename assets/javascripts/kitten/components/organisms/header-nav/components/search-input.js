@@ -1,7 +1,7 @@
 import React, { forwardRef, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { TextInputWithIcon } from '../../../../components/form/text-input-with-icon'
+import { TextInputWithButton } from '../../../../components/form/text-input-with-button'
 import { SearchIcon } from '../../../../components/graphics/icons/search-icon'
 
 export const SearchInput = forwardRef(({ children, className, buttonProps, inputProps, expanded, formProps, openSearchMenu, ...props }, ref) => {
@@ -28,13 +28,13 @@ export const SearchInput = forwardRef(({ children, className, buttonProps, input
       ref={ref}
       {...props}
     >
-      <TextInputWithIcon
+      <TextInputWithButton
         size="tiny"
         rounded
-        icon={<SearchIcon />}
-        iconPosition="right"
+        buttonValue={<SearchIcon />}
         buttonProps={buttonProps}
         autoComplete="off"
+        inset
         {...inputProps}
         className={classNames('k-HeaderNav__searchInput__input', inputProps.className)}
       />

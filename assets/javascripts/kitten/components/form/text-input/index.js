@@ -28,6 +28,8 @@ const StyledInput = styled.input`
   height: var(--input-height);
   min-height: var(--input-height);
 
+  transition: border-color 0.2s ease;
+
   ::placeholder {
     color: ${COLORS.font2};
   }
@@ -135,17 +137,21 @@ const StyledInput = styled.input`
     border-color: ${COLORS.error3};
   }
 
+  &:hover {
+    border-color: ${COLORS.line2};
+  }
+
   &:focus {
     color: ${COLORS.font1};
-    border-color: ${COLORS.line2};
-    outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(2)};
+    border-color: ${COLORS.font2};
+    outline: ${COLORS.font2} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(-2)};
   }
   &:focus:not(:focus-visible) {
     outline-color: transparent;
   }
   &:focus-visible {
-    outline-color: ${COLORS.primary4};
+    outline-color: ${COLORS.font2};
   }
 
   // DIGITS
