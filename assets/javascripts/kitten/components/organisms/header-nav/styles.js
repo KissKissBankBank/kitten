@@ -60,17 +60,17 @@ export const StyledHeader = styled.header`
       box-sizing: border-box;
     }
 
-    *:focus {
+    *:not(input):focus {
       outline-offset: ${pxToRem(-2)};
 
       outline-width: ${pxToRem(2)};
       outline-style: solid;
       outline-color: ${COLORS.primary4};
     }
-    *:focus:not(:focus-visible) {
+    *:not(input):focus:not(:focus-visible) {
       outline-color: transparent;
     }
-    *:focus-visible {
+    *:not(input):focus-visible {
       outline-color: ${COLORS.primary4};
     }
   }
@@ -592,13 +592,14 @@ export const StyledHeader = styled.header`
     right: 0;
 
     background-color: ${COLORS.background1};
-    padding: ${pxToRem(10)};
 
     z-index: 20;
 
     margin-top: ${pxToRem(-10)};
     visibility: hidden;
     opacity: 0;
+
+    transition: margin 0.2s, visibility 0.2s, opacity 0.2s;
 
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
       top: 100%;
@@ -610,13 +611,10 @@ export const StyledHeader = styled.header`
 
       box-shadow: 0 ${pxToRem(4)} ${pxToRem(20)} rgba(0, 0, 0, 0.25);
       border-radius: ${pxToRem(4)};
-      padding: ${pxToRem(20)};
-
       /* Max-height is needed to allow scroll on menu.
          The 100% is equal to the button height. */
       max-height: calc(100vh - (100% + ${pxToRem(20)}));
       box-shadow: 0 ${pxToRem(3)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
-      transition: margin 0.2s, visibility 0.2s, opacity 0.2s;
     }
 
     &.k-HeaderNav__floatingDropdown--visible {

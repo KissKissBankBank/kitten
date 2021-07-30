@@ -12,8 +12,11 @@ import {
   useWindowWidth,
   useDeepCompareEffect,
   Button,
-  LoaderWithParagraph,
   Overlay,
+  FlexWrapper,
+  HorizontalCrowdfundingCard,
+  ClockCircleIcon,
+  CheckedCircleIcon,
 } from '../../../..'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
@@ -93,7 +96,7 @@ const SearchInput = () => {
   const [isSearchMenuOpen, openSearchMenu] = useState(false)
   const inputWrapperRef = useRef(null)
 
-  const handleSearchInputChange = (changeEvent) => {
+  const handleSearchInputChange = changeEvent => {
     openSearchMenu(changeEvent.target.value.length > 0)
   }
 
@@ -114,13 +117,19 @@ const SearchInput = () => {
   }, [isSearchMenuOpen])
 
   const handleFocusOut = event => {
-    if (!inputWrapperRef.current || inputWrapperRef.current.contains(event.relatedTarget)) return
+    if (
+      !inputWrapperRef.current ||
+      inputWrapperRef.current.contains(event.relatedTarget)
+    )
+      return
 
     openSearchMenu(false)
   }
 
-  const handleFocusIn = event => {
-    openSearchMenu(inputWrapperRef.current.querySelector('input').value.length > 0)
+  const handleFocusIn = () => {
+    openSearchMenu(
+      inputWrapperRef.current.querySelector('input').value.length > 0,
+    )
   }
 
   return (
@@ -132,19 +141,101 @@ const SearchInput = () => {
       expanded={isSearchMenuOpen}
       buttonProps={{
         type: 'submit',
-        'aria-label': 'Voir les résultats de la recherche'
+        'aria-label': 'Voir les résultats de la recherche',
       }}
       ref={inputWrapperRef}
       openSearchMenu={openSearchMenu}
     >
       <HeaderNav.FloatingDropdown visible={isSearchMenuOpen}>
-        <LoaderWithParagraph
-          loaderPosition="top"
-          className="k-u-margin-bottom-double k-u-horizontal-auto"
+        <FlexWrapper gap={5} padding={15}>
+          <HorizontalCrowdfundingCard
+            title="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+            description="Maecenas sed diam eget risus varius blandit sit amet non magna."
+            progress={37}
+            progressColor={COLORS.primary1}
+            info={
+              <div className="k-u-flex k-u-flex-alignItems-center">
+                <ClockCircleIcon
+                  width="12"
+                  height="12"
+                  color={COLORS.background1}
+                  bgColor={COLORS.primary1}
+                  className="k-u-margin-right-noneHalf"
+                />
+                <Text weight="regular" size="micro" color="primary1">
+                  Dernier jour&nbsp;!
+                </Text>
+              </div>
+            }
+          />
+          <HorizontalCrowdfundingCard
+            title="Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+            description="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
+            progress={100}
+            progressColor={COLORS.valid}
+            info={
+              <div className="k-u-flex k-u-flex-alignItems-center">
+                <CheckedCircleIcon
+                  width="12"
+                  height="12"
+                  color={COLORS.background1}
+                  bgColor={COLORS.valid}
+                  className="k-u-margin-right-noneHalf"
+                />
+                <Text weight="regular" size="micro" color="font1">
+                  Réussi
+                </Text>
+              </div>
+            }
+          />
+          <HorizontalCrowdfundingCard
+            title="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
+            description="Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+            progress={21}
+            progressColor={COLORS.primary1}
+            info={
+              <div className="k-u-flex k-u-flex-alignItems-center">
+                <ClockCircleIcon
+                  width="12"
+                  height="12"
+                  color={COLORS.background1}
+                  bgColor={COLORS.primary1}
+                  className="k-u-margin-right-noneHalf"
+                />
+                <Text weight="regular" size="micro">
+                  En cours
+                </Text>
+              </div>
+            }
+          />
+          <HorizontalCrowdfundingCard
+            title="Maecenas sed diam eget risus varius blandit sit amet non magna."
+            description="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+            progress={60}
+            progressColor={COLORS.primary1}
+            info={
+              <div className="k-u-flex k-u-flex-alignItems-center">
+                <ClockCircleIcon
+                  width="12"
+                  height="12"
+                  color={COLORS.background1}
+                  bgColor={COLORS.primary1}
+                  className="k-u-margin-right-noneHalf"
+                />
+                <Text weight="regular" size="micro">
+                  En cours
+                </Text>
+              </div>
+            }
+          />
+        </FlexWrapper>
+
+        <Button
+          size="tiny"
+          variant="orion"
+          type="submit"
+          className="k-u-margin-bottom-double k-u-margin-horizontal-double"
         >
-          Chargement
-        </LoaderWithParagraph>
-        <Button size="tiny" fluid variant="orion" type="submit">
           Voir les résultats de la recherche
         </Button>
       </HeaderNav.FloatingDropdown>
@@ -214,10 +305,7 @@ export const KissKissBankBankHeaderNavStoryNew = ({
           <SearchInput />
 
           <HeaderNav.Logged>
-            <HeaderNav.UserMenuNext
-              dropdownAnchorSide="right"
-              padding={false}
-            >
+            <HeaderNav.UserMenuNext dropdownAnchorSide="right" padding={false}>
               <HeaderNav.UserMenuNext.Button
                 hasArrow
                 backgroundColor={COLORS.background1}
@@ -229,7 +317,9 @@ export const KissKissBankBankHeaderNavStoryNew = ({
               >
                 <AvatarWithTextAndBadge className="k-u-margin-left-single@xs-down">
                   <AvatarWithTextAndBadge.Image src="/kitten.jpg">
-                    <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
+                    <AvatarWithTextAndBadge.Badge>
+                      2
+                    </AvatarWithTextAndBadge.Badge>
                   </AvatarWithTextAndBadge.Image>
 
                   <AvatarWithTextAndBadge.Text
