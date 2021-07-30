@@ -12,7 +12,7 @@ const StyledWrapper = styled.div`
 `
 
 const getCSSRule = value => {
-  return typeof(value) === 'number' ? pxToRem(value) : value
+  return typeof value === 'number' ? pxToRem(value) : value
 }
 
 const getRuleFromProp = value => {
@@ -35,30 +35,28 @@ export const FlexWrapper = ({
   let paddingRule = padding ? getRuleFromProp(padding) : null
   let namedPaddingRule = {}
 
-  if (padding && typeof(padding) === 'object' && !Array.isArray(padding)) {
+  if (padding && typeof padding === 'object' && !Array.isArray(padding)) {
     paddingRule = null
 
     Object.entries(padding).forEach(([key, value]) => {
       const cssRule = `padding${key[0].toUpperCase() + key.substring(1)}`
-      namedPaddingRule.[cssRule] = getCSSRule(value)
+      namedPaddingRule[cssRule] = getCSSRule(value)
     })
   }
 
   return (
     <StyledWrapper
-      className={classNames(
-        'k-FlexWrapper',
-        className,
-      )}
+      className={classNames('k-FlexWrapper', className)}
       style={{
         '--flexWrapper-gap': gapRule,
         '--flexWrapper-padding': paddingRule,
         '--flexWrapper-direction': direction,
         ...namedPaddingRule,
-        ...style
+        ...style,
       }}
       {...props}
-    />)
+    />
+  )
 }
 
 FlexWrapper.propTypes = {
@@ -73,8 +71,5 @@ FlexWrapper.propTypes = {
     PropTypes.array,
     PropTypes.object,
   ]),
-  direction: PropTypes.oneOf([
-    'column',
-    'row',
-  ]),
+  direction: PropTypes.oneOf(['column', 'row']),
 }

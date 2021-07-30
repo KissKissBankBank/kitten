@@ -13,17 +13,17 @@ export default {
   argTypes: {
     gap: {
       name: 'gap',
-      control: { type: 'object' }
+      control: { type: 'object' },
     },
     padding: {
       name: 'padding',
-      control: { type: 'object' }
+      control: { type: 'object' },
     },
     direction: {
       name: 'direction',
-      control: { type: 'inline-radio' }
+      control: { type: 'inline-radio' },
     },
-  }
+  },
 }
 
 export const Default = args => {
