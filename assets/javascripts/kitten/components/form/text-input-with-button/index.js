@@ -11,8 +11,6 @@ import deprecated from 'prop-types-extra/lib/deprecated'
 import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledTextInputWithButton = styled.div`
-  display: flex;
-
   .k-Form-TextInputWithButton__button {
     ${TYPOGRAPHY.fontStyles.regular};
     font-size: ${stepToRem(-1)};
@@ -21,7 +19,10 @@ const StyledTextInputWithButton = styled.div`
     appearance: none;
     cursor: pointer;
   }
+
   &:not(.k-Form-TextInputWithButton--insetButton) {
+    display: flex;
+
     .k-Form-TextInputWithButton__input {
       border-right: 0;
     }
@@ -31,21 +32,37 @@ const StyledTextInputWithButton = styled.div`
       padding: 0 ${pxToRem(30)};
       ${({ modifier }) => modifierStyles(modifier)};
     }
+
+    &.k-Form-TextInputWithButton--roudedButton {
+      .k-Form-TextInputWithButton__input {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .k-Form-TextInputWithButton__button {
+        border-top-right-radius: var(--text-input-size);
+        border-bottom-right-radius: var(--text-input-size);
+      }
+
+    }
   }
 
   &.k-Form-TextInputWithButton--insetButton {
     position: relative;
 
     .k-Form-TextInputWithButton__input {
-
+      padding-right: calc(var(--text-input-size) + ${pxToRem(15)});
     }
+
     .k-Form-TextInputWithButton__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: absolute;
       top: ${pxToRem(4)};
       bottom: ${pxToRem(4)};
       right: ${pxToRem(4)};
-      min-width: calc(var(--input-size) - ${pxToRem(4)} * 2);
-      border-radius: var(--input-size);
+      min-width: calc(var(--text-input-size) - ${pxToRem(4)} * 2);
+      border-radius: var(--text-input-button-radius);
 
       border: none;
       background-color: ${COLORS.background1};
@@ -70,53 +87,53 @@ const StyledTextInputWithButton = styled.div`
     }
 
     .k-Form-TextInput--orion + .k-Form-TextInputWithButton__button {
-      --input-size: ${pxToRem(4)};
+      --text-input-button-radius: ${pxToRem(4)};
+    }
 
-      .k-Form-TextInput--big + .k-Form-TextInputWithButton__button,
-      .k-Form-TextInput--huge + .k-Form-TextInputWithButton__button,
-      .k-Form-TextInput--giant + .k-Form-TextInputWithButton__button {
-        --input-size: ${pxToRem(6)};
+    .k-Form-TextInput--big + .k-Form-TextInputWithButton__button,
+    .k-Form-TextInput--huge + .k-Form-TextInputWithButton__button,
+    .k-Form-TextInput--giant + .k-Form-TextInputWithButton__button {
+      --text-input-button-radius: ${pxToRem(6)};
 
-        @media (min-width: ${ScreenConfig.M.min}px) {
-          --input-size: ${pxToRem(8)};
-        }
+      @media (min-width: ${ScreenConfig.M.min}px) {
+        --text-input-button-radius: ${pxToRem(8)};
       }
     }
-    .k-Form-TextInput--rounded {
-        &.k-Form-TextInput--tiny + .k-Form-TextInputWithButton__button {
-          --input-size: ${pxToRem(40)};
-        }
 
-        &.k-Form-TextInput--regular + .k-Form-TextInputWithButton__button {
-          --input-size: ${pxToRem(50)};
-        }
+    &.k-Form-TextInputWithButton--roudedButton {
+      --text-input-button-radius: var(--text-input-size);
+    }
+  }
 
-        &.k-Form-TextInput--big + .k-Form-TextInputWithButton__button {
-          --input-size: ${pxToRem(60)};
+  &.k-Form-TextInputWithButton--tiny {
+    --text-input-size: ${pxToRem(40)};
+  }
 
-          @media (min-width: ${ScreenConfig.M.min}px) {
-            --input-size: ${pxToRem(70)};
-            font-size: ${stepToRem(0)};
-          }
-        }
+  &.k-Form-TextInputWithButton--regular {
+    --text-input-size: ${pxToRem(50)};
+  }
 
-        &.k-Form-TextInput--huge + .k-Form-TextInputWithButton__button {
-          --input-size: ${pxToRem(70)};
+  &.k-Form-TextInputWithButton--big {
+    --text-input-size: ${pxToRem(60)};
 
-          @media (min-width: ${ScreenConfig.M.min}px) {
-            --input-size: ${pxToRem(80)};
-            font-size: ${stepToRem(0)};
-          }
-        }
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      --text-input-size: ${pxToRem(70)};
+    }
+  }
 
-        &.k-Form-TextInput--giant + .k-Form-TextInputWithButton__button {
-          --input-size: ${pxToRem(70)};
+  &.k-Form-TextInputWithButton--huge {
+    --text-input-size: ${pxToRem(70)};
 
-          @media (min-width: ${ScreenConfig.M.min}px) {
-            --input-size: ${pxToRem(90)};
-            font-size: ${stepToRem(0)};
-          }
-        }
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      --text-input-size: ${pxToRem(80)};
+    }
+  }
+
+  &.k-Form-TextInputWithButton--giant {
+    --text-input-size: ${pxToRem(70)};
+
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      --text-input-size: ${pxToRem(90)};
     }
   }
 
@@ -129,11 +146,6 @@ const StyledTextInputWithButton = styled.div`
     cursor: not-allowed;
     background-color: ${COLORS.error};
     border-color: ${COLORS.error};
-
-    input:invalid:not(:focus) + & {
-      background-color: ${COLORS.error};
-      border-color: ${COLORS.error};
-    }
   }
 `
 
@@ -143,6 +155,7 @@ export const TextInputWithButton = ({
   disabled,
   size,
   value,
+  rounded,
   buttonValue,
   modifier,
   buttonProps,
@@ -155,8 +168,10 @@ export const TextInputWithButton = ({
     <StyledTextInputWithButton
       className={classNames(
         'k-Form-TextInputWithButton',
+        `k-Form-TextInputWithButton--${size}`,
         {
           'k-Form-TextInputWithButton--insetButton': inset,
+          'k-Form-TextInputWithButton--roudedButton': rounded,
         },
       )}
       modifier={modifier}
@@ -168,16 +183,19 @@ export const TextInputWithButton = ({
         error={error}
         disabled={disabled}
         size={size}
+        rounded={rounded}
         value={inputValue}
       />
       <button
+        type="button"
         {...buttonProps}
-        className={classNames('k-Form-TextInputWithButton__button', {
+        className={classNames('k-Form-TextInputWithButton__button',
+          buttonProps?.className,
+          {
           'k-Form-TextInputWithButton__button--valid': valid,
           'k-Form-TextInputWithButton__button--error': error,
           'k-Form-TextInputWithButton__button--disabled': disabled,
         })}
-        type="button"
         disabled={disabled}
       >
         {value || buttonValue}
@@ -191,12 +209,13 @@ TextInputWithButton.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   size: PropTypes.string,
+  rounded: PropTypes.bool,
+  inset: PropTypes.bool,
   modifier: PropTypes.string,
   inputValue: PropTypes.string,
   // DEPRECATED: do not use prop `value`. Use `buttonValue` instead.
   value: deprecated(PropTypes.node, 'Use `buttonValue` instead.'),
   buttonValue: PropTypes.node,
-  inset: PropTypes.bool,
 }
 
 TextInputWithButton.defaultProps = {
@@ -205,6 +224,8 @@ TextInputWithButton.defaultProps = {
   disabled: false,
   size: 'regular',
   buttonValue: 'Button',
+  buttonProps: {},
   modifier: 'beryllium',
+  rounded: false,
   inset: false,
 }
