@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { SimpleCarousel } from '../../../..'
+import { SimpleCarousel } from './index'
 
 describe('<SimpleCarousel />', () => {
   const initialWindow = global.window
