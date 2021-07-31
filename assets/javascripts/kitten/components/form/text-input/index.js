@@ -144,14 +144,14 @@ const StyledInput = styled.input`
   &:focus {
     color: ${COLORS.font1};
     border-color: ${COLORS.font2};
-    outline: ${COLORS.font2} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(-2)};
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
   &:focus:not(:focus-visible) {
     outline-color: transparent;
   }
   &:focus-visible {
-    outline-color: ${COLORS.font2};
+    outline-color: ${COLORS.primary4};
   }
 
   // DIGITS
