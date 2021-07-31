@@ -614,6 +614,7 @@ export const StyledHeader = styled.header`
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
       top: 100%;
       max-height: calc(100vh - 100%);
+      max-width: 100vw;
     }
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {

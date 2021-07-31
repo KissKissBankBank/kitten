@@ -38,7 +38,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
       className="sc-EHOje hiLaMt k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion k-ContributionCard__inputWrapper"
     >
       <input
-        className="sc-bxivhb jaAyzs k-Form-TextInput k-Form-TextInputWithUnit__input k-ContributionCard__input k-Form-TextInput--orion k-Form-TextInput--regular"
+        className="sc-bxivhb gkKzsg k-Form-TextInput k-Form-TextInputWithUnit__input k-ContributionCard__input k-Form-TextInput--orion k-Form-TextInput--regular"
         disabled={false}
         name="text"
         onChange={[Function]}
