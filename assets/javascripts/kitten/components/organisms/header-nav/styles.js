@@ -96,6 +96,7 @@ export const StyledHeader = styled.header`
     align-items: center;
     left: -100%;
     top: 0;
+    bottom: 0;
     z-index: var(--HeaderNav_quickAccessLink_zIndex, 2);
     padding: 0 ${pxToRem(30)};
     background-color: ${COLORS.background1};

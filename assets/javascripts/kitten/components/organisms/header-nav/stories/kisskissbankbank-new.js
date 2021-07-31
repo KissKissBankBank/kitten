@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { action } from '@storybook/addon-actions'
 import HeaderNav from '../index'
 import {
   LendopolisLogo,
@@ -94,22 +95,34 @@ const Navigation = () => (
 const SearchInput = () => {
 
   const handleToggle = event => {
+    action('handleToggle')(event)
     window.dispatchEvent(
       new Event(event.isDropdownExpanded ? OPEN_OVERLAY_EVENT : CLOSE_OVERLAY_EVENT),
     )
+  }
+
+  const handleInputChange = event => {
+    action('handleInputChange')(event)
   }
 
   return (
     <HeaderNav.SearchInput
       onMenuToggle={handleToggle}
       searchInputProps={{
-        id: 'search-input',
+        placeholder: 'Rechercher un projet…',
+        'aria-label': 'Rechercher un projet',
+        onChange: handleInputChange,
       }}
       searchButtonProps={{
         type: 'submit',
         'aria-label': 'Voir les résultats de la recherche',
       }}
+      action="#form-action#"
+      method="POST"
     >
+      <p className="k-u-a11y-visuallyHidden">
+        4 résultats ont été trouvés
+      </p>
       <FlexWrapper gap={5} padding={15}>
         <HorizontalCrowdfundingCard
           title="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."

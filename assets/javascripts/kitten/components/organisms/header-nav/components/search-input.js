@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext, useRef } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { TextInputWithButton } from '../../../../components/form/text-input-with-button'
@@ -21,6 +21,7 @@ export const SearchInput = ({
 }) => {
   const { id, callOnToggle } = useContext(Context)
   const [isMobileInvisible, setMobileInvibility] = useState(true)
+  const buttonElement = useRef(null)
 
   const {
     dropdownProps,
@@ -37,7 +38,7 @@ export const SearchInput = ({
     menuId: `${id}__SearchMenu__Menu`,
   })
 
-  const handleClick = () => {
+  const handleFoldButtonClick = () => {
     setMobileInvibility(current => {
       return !current
     })
@@ -55,20 +56,22 @@ export const SearchInput = ({
   }, [isMobileInvisible])
 
   useEffect(() => {
+    buttonElement.current.disabled = !isDropdownExpanded
+
     if (isDropdownExpanded) {
-      dropdownProps?.ref.current?.querySelector('input').focus()
+      dropdownProps?.ref?.current?.querySelector('input').focus()
     } else {
       setMobileInvibility(true)
-      dropdownProps?.ref?.current.addEventListener('focusin', handleFocusIn)
+      dropdownProps?.ref?.current?.addEventListener('focusin', handleFocusIn)
     }
 
     return () => {
-      dropdownProps?.ref?.current.removeEventListener('focusin', handleFocusIn)
+      dropdownProps?.ref?.current?.removeEventListener('focusin', handleFocusIn)
     }
   }, [isDropdownExpanded])
 
   const handleFocusIn = () => {
-    if (dropdownProps?.ref.current.querySelector('input').value.length > 0) {
+    if (dropdownProps?.ref.current?.querySelector('input').value.length > 0) {
       openDropdown()
     }
   }
@@ -76,6 +79,11 @@ export const SearchInput = ({
   useEffect(() => {
     onMenuToggle({ isDropdownExpanded })
   }, [isDropdownExpanded])
+
+  const handleInputChange = event => {
+    inputProps.onChange(event)
+    searchInputProps.onChange(event)
+  }
 
   return (
     <form
@@ -94,11 +102,12 @@ export const SearchInput = ({
         size="tiny"
         rounded
         buttonValue={<SearchIcon />}
-        buttonProps={searchButtonProps}
+        buttonProps={{...searchButtonProps, ref: buttonElement}}
         autoComplete="off"
         inset
         {...searchInputProps}
         {...inputProps}
+        onChange={handleInputChange}
         className={classNames(
           'k-HeaderNav__searchInput__input',
           searchInputProps.className,
@@ -107,7 +116,7 @@ export const SearchInput = ({
       <button
         className="k-u-reset-button k-HeaderNav__searchInput__mobileFold"
         type="button"
-        onClick={handleClick}
+        onClick={handleFoldButtonClick}
       >
         {isMobileInvisible ? <SearchIcon /> : <CrossIcon size="big" />}
       </button>
