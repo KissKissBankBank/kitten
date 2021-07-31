@@ -209,7 +209,7 @@ const StyledInput = styled.input`
 
   /* Prevents zooming on  */
   @media (max-width: ${ScreenConfig.XS.max}px) {
-    font-size: ${pxToRem(0)};
+    font-size: ${stepToRem(0)};
   }
 `
 
