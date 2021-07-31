@@ -12,15 +12,15 @@ exports[`<SearchIcon /> default matches the snapshot 1`] = `
   <path
     d="M14 14L10.5 10.5"
     stroke="#333"
-    stroke-linecap="round"
-    stroke-width="2"
+    strokeLinecap="round"
+    strokeWidth="2"
   />
   <circle
     cx="6.3"
     cy="6.3"
     r="5.3"
     stroke="#333"
-    stroke-width="2"
+    strokeWidth="2"
   />
 </svg>
 `;
@@ -38,8 +38,8 @@ exports[`<SearchIcon /> with some props matches the snapshot 1`] = `
     className="path-class"
     d="M14 14L10.5 10.5"
     stroke="red"
-    stroke-linecap="round"
-    stroke-width="2"
+    strokeLinecap="round"
+    strokeWidth="2"
   />
   <circle
     className="circle-class"
@@ -47,7 +47,7 @@ exports[`<SearchIcon /> with some props matches the snapshot 1`] = `
     cy="6.3"
     r="5.3"
     stroke="red"
-    stroke-width="2"
+    strokeWidth="2"
   />
 </svg>
 `;
@@ -64,15 +64,15 @@ exports[`<SearchIcon /> with some props with no \`title\` matches the snapshot 1
   <path
     d="M14 14L10.5 10.5"
     stroke="#333"
-    stroke-linecap="round"
-    stroke-width="2"
+    strokeLinecap="round"
+    strokeWidth="2"
   />
   <circle
     cx="6.3"
     cy="6.3"
     r="5.3"
     stroke="#333"
-    stroke-width="2"
+    strokeWidth="2"
   />
 </svg>
 `;

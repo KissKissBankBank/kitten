@@ -7,7 +7,7 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
   
   <input
     aria-labelledby={null}
-    className="sc-bdVaJa jbXJrM k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    className="sc-bdVaJa eZWDhR k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
     disabled={false}
     name="text"
   />
@@ -26,15 +26,15 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
       <path
         d="M14 14L10.5 10.5"
         stroke="#333"
-        stroke-linecap="round"
-        stroke-width="2"
+        strokeLinecap="round"
+        strokeWidth="2"
       />
       <circle
         cx="6.3"
         cy="6.3"
         r="5.3"
         stroke="#333"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   </span>
@@ -48,7 +48,7 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
   
   <input
     aria-labelledby={null}
-    className="sc-bdVaJa jbXJrM k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--disabled"
+    className="sc-bdVaJa eZWDhR k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--disabled"
     disabled={true}
     name="text"
   />
@@ -67,15 +67,15 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
       <path
         d="M14 14L10.5 10.5"
         stroke="#333"
-        stroke-linecap="round"
-        stroke-width="2"
+        strokeLinecap="round"
+        strokeWidth="2"
       />
       <circle
         cx="6.3"
         cy="6.3"
         r="5.3"
         stroke="#333"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   </span>
@@ -89,7 +89,7 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 2`] = `
   
   <input
     aria-labelledby={null}
-    className="sc-bdVaJa jbXJrM k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--valid"
+    className="sc-bdVaJa eZWDhR k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--valid"
     disabled={false}
     name="text"
   />
@@ -108,15 +108,15 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 2`] = `
       <path
         d="M14 14L10.5 10.5"
         stroke="#333"
-        stroke-linecap="round"
-        stroke-width="2"
+        strokeLinecap="round"
+        strokeWidth="2"
       />
       <circle
         cx="6.3"
         cy="6.3"
         r="5.3"
         stroke="#333"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   </span>
@@ -130,7 +130,7 @@ exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
   
   <input
     aria-labelledby={null}
-    className="sc-bdVaJa jbXJrM k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    className="sc-bdVaJa eZWDhR k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
@@ -150,15 +150,15 @@ exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
       <path
         d="M14 14L10.5 10.5"
         stroke="#333"
-        stroke-linecap="round"
-        stroke-width="2"
+        strokeLinecap="round"
+        strokeWidth="2"
       />
       <circle
         cx="6.3"
         cy="6.3"
         r="5.3"
         stroke="#333"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   </span>
