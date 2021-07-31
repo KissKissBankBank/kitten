@@ -612,7 +612,6 @@ export const StyledHeader = styled.header`
     transition: margin 0.2s, visibility 0.2s, opacity 0.2s;
 
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-      position: fixed;
       top: 100%;
       max-height: calc(100vh - 100%);
     }
