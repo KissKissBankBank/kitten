@@ -13,8 +13,8 @@ export const SearchIcon = ({
 }) => (
   <svg aria-label={title} width={width} height={height} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     {(title) && <title>{title}</title>}
-    <path d="M14 14L10.5 10.5" stroke={color} stroke-width="2" stroke-linecap="round" {...pathProps}/>
-    <circle cx="6.3" cy="6.3" r="5.3" stroke={color} stroke-width="2" {...circleProps}/>
+    <path d="M14 14L10.5 10.5" stroke={color} strokeWidth="2" strokeLinecap="round" {...pathProps}/>
+    <circle cx="6.3" cy="6.3" r="5.3" stroke={color} strokeWidth="2" {...circleProps}/>
   </svg>
 )
 
