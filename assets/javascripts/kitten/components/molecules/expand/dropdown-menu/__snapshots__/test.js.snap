@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
+.c1 {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);
+  --k-ArrowContainer-arrowMainPosition: calc( var(--k-ArrowContainer-arrowSize) * -2 );
+  --k-ArrowContainer-arrowBorderMainPosition: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
+}
+
+.c1.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c1 .k-ArrowContainer__arrow {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: var(--k-ArrowContainer-arrowSize) solid transparent;
+}
+
+.c1.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+.c1.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: var(--k-ArrowContainer-arrowMainPosition);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-bottom-color: var(--k-ArrowContainer-color);
+}
+
+.c1.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: var(--k-ArrowContainer-arrowBorderMainPosition);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: var(--k-ArrowContainer-arrowMainPosition);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-top-color: var(--k-ArrowContainer-color);
+}
+
+.c1.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: var(--k-ArrowContainer-arrowBorderMainPosition);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-top-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: var(--k-ArrowContainer-arrowMainPosition);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-left-color: var(--k-ArrowContainer-color);
+}
+
+.c1.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: var(--k-ArrowContainer-arrowBorderMainPosition);
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-left-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: var(--k-ArrowContainer-arrowMainPosition);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-right-color: var(--k-ArrowContainer-color);
+}
+
+.c1.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  left: var(--k-ArrowContainer-arrowBorderMainPosition);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c0 .k-DropdownMenu__button {
+  list-style: none;
+  touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  list-style: none;
+}
+
+.c0[open] > .k-DropdownMenu__button::before {
+  content: ' ';
+  cursor: default;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 120;
+}
+
+.c0 .k-DropdownMenu__menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  z-index: 150;
+  position: absolute;
+  left: -0.9375rem;
+  top: calc(100% + 0.9375rem);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.5rem 0 0.625rem;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-name: fQcncg;
+  animation-name: fQcncg;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-transform-origin: 0.9375rem -0.625rem;
+  -ms-transform-origin: 0.9375rem -0.625rem;
+  transform-origin: 0.9375rem -0.625rem;
+}
+
+.c0 .k-DropdownMenu__menu__item {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+  padding: 0.4375rem 0.9375rem;
+  line-height: 1;
+  font-size: 0.8888888888888888rem;
+  text-align: left;
+}
+
+.c0 .k-DropdownMenu__menu__item:hover {
+  color: #19b4fa;
+}
+
+.c0 .k-DropdownMenu__menu__item:active {
+  color: #bae8fd;
+}
+
+.c0 .k-DropdownMenu__menu__item:focus {
+  color: #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: -0.125rem;
+}
+
+.c0 .k-DropdownMenu__menu__item:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0 .k-DropdownMenu__menu__item:focus-visible {
+  outline-color: #bae8fd;
+}
+
+.c0 .k-DropdownMenu__menu__separator {
+  height: 0.125rem;
+  background: #636363;
+  padding: 0;
+  margin: 0.3125rem 0;
+}
+
+<details
+  className="c0 k-DropdownMenu"
+  onKeyDown={[Function]}
+  onToggle={[Function]}
+  role="menu"
+>
+  <summary
+    className="k-DropdownMenu__button"
+  >
+    <span>
+      Open me!
+    </span>
+  </summary>
+  <div
+    className="c1 k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top"
+    style={
+      Object {
+        "--k-ArrowContainer-arrowDistance": "0.625rem",
+        "--k-ArrowContainer-arrowSize": "0.5rem",
+        "--k-ArrowContainer-borderColor": "#eee",
+        "--k-ArrowContainer-borderDistance": 0,
+        "--k-ArrowContainer-borderRadius": "0.25rem",
+        "--k-ArrowContainer-borderSize": "0.5rem",
+        "--k-ArrowContainer-borderWidth": 0,
+        "--k-ArrowContainer-color": "#222",
+        "--k-ArrowContainer-padding": 0,
+      }
+    }
+  >
+    <a
+      className="k-DropdownMenu__menu__item k-DropdownMenu__menu__link"
+      href=""
+      role="menuitem"
+    >
+      Content
+    </a>
+    <div
+      className="k-DropdownMenu__menu__item k-DropdownMenu__menu__separator"
+    />
+    <button
+      className="k-DropdownMenu__menu__item k-DropdownMenu__menu__button k-u-reset-button"
+      role="menuitem"
+      type="button"
+    >
+      Content
+    </button>
+    <span
+      className="k-ArrowContainer__arrow"
+    />
+  </div>
+</details>
+`;

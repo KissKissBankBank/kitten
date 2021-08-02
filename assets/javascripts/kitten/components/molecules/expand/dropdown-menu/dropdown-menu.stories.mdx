@@ -1,0 +1,27 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './dropdown-menu.stories.js'
+import { DropdownMenu } from './index'
+
+<Meta title="Molecules/Expand/DropdownMenu" component={DropdownMenu} />
+
+# DropdownMenu
+
+## Import
+
+```js
+import { DropdownMenu } from '@kisskissbankbank/kitten'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="Default" story={stories.Default} />
+</Canvas>
+
+#### Default
+
+```js
+<DropdownMenu button={ ({ open }) => (…) }>
+  <p>My content</p>
+</DropdownMenu>
+```
