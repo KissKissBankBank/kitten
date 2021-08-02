@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `DropdownMenu` molecule component.
+- Feature: Add `EllipsisIcon` icon.
 
 ## [4.1.0] - 2021-08-02
 

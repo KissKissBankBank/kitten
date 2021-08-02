@@ -28,6 +28,7 @@ import { DotIcon } from './dot-icon'
 import { DoubleArrowIcon } from './double-arrow-icon'
 import { DownloadIcon } from './download-icon'
 import { EditIcon } from './edit-icon'
+import { EllipsisIcon } from './ellipsis-icon'
 import { EmailIcon } from './email-icon'
 import { EmbedIcon } from './embed-icon'
 import { ExportIcon } from './export-icon'
@@ -370,6 +371,7 @@ export const AllIcons = () => {
         <IconContainer children={<SpeechBubbleIcon color={colorInput} />} />
         <IconContainer children={<HourglassIcon color={colorInput} />} />
         <IconContainer children={<RefundIcon color={colorInput} />} />
+        <IconContainer children={<EllipsisIcon color={colorInput} />} />
       </Group>
       <Group title="Country flag icons">
         {flagList.map(country => (
