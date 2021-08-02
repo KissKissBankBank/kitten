@@ -306,6 +306,7 @@ export { SimpleCarousel } from './components/molecules/carousels/simple-carousel
 // Molecules/Expand
 export { Accordeon } from './components/molecules/expand/accordeon'
 export { Details } from './components/molecules/expand/details'
+export { DropdownMenu } from './components/molecules/expand/dropdown-menu'
 export { ExpandBoard } from './components/molecules/expand/expand-board'
 
 // Molecules/Upload

@@ -60,6 +60,18 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   border-top-color: var(--k-ArrowContainer-borderColor);
 }
 
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
 .c1.k-ArrowContainer--right .k-ArrowContainer__arrow {
   right: var(--k-ArrowContainer-arrowMainPosition);
   top: var(--k-ArrowContainer-arrowDistance);
@@ -86,6 +98,18 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   border-right-color: var(--k-ArrowContainer-borderColor);
 }
 
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
 .c0 {
   position: relative;
   display: inline-block;
@@ -99,7 +123,20 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
-  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .c0[open] > .k-DropdownMenu__button::before {
@@ -125,21 +162,38 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   flex-direction: column;
   z-index: 150;
   position: absolute;
-  left: -0.9375rem;
-  top: calc(100% + 0.9375rem);
+  top: calc(50% + 1rem + 0.5rem);
+  left: 50%;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  max-width: 18.75rem;
+  height: auto;
   padding: 0.5rem 0 0.625rem;
   -webkit-animation-duration: 0.15s;
   animation-duration: 0.15s;
-  -webkit-animation-name: fQcncg;
-  animation-name: fQcncg;
+  -webkit-animation-name: bKPByE;
+  animation-name: bKPByE;
   -webkit-animation-timing-function: ease;
   animation-timing-function: ease;
-  -webkit-transform-origin: 0.9375rem -0.625rem;
-  -ms-transform-origin: 0.9375rem -0.625rem;
-  transform-origin: 0.9375rem -0.625rem;
+}
+
+.c0.k-DropdownMenu--left .k-DropdownMenu__menu {
+  -webkit-transform: translateX(calc(-100% + 1.125rem));
+  -ms-transform: translateX(calc(-100% + 1.125rem));
+  transform: translateX(calc(-100% + 1.125rem));
+}
+
+.c0.k-DropdownMenu--center .k-DropdownMenu__menu {
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c0.k-DropdownMenu--right .k-DropdownMenu__menu {
+  -webkit-transform: translateX(calc(-1 * 1.125rem));
+  -ms-transform: translateX(calc(-1 * 1.125rem));
+  transform: translateX(calc(-1 * 1.125rem));
 }
 
 .c0 .k-DropdownMenu__menu__item {
@@ -185,7 +239,7 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
 }
 
 <details
-  className="c0 k-DropdownMenu"
+  className="c0 k-DropdownMenu k-DropdownMenu--left"
   onKeyDown={[Function]}
   onToggle={[Function]}
   role="menu"
@@ -198,7 +252,7 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
     </span>
   </summary>
   <div
-    className="c1 k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top"
+    className="c1 k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top k-ArrowContainer--reverseDistance"
     style={
       Object {
         "--k-ArrowContainer-arrowDistance": "0.625rem",

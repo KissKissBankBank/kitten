@@ -6,15 +6,13 @@ import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 
-const scaleIn = keyframes`
+const opacity = keyframes`
   0% {
     opacity: 0;
-    transform: scale(.8);
   }
   to
   {
     opacity: 1;
-    transform: scale(1);
   }
 `
 
@@ -27,7 +25,11 @@ const StyledDropdownMenu = styled.details`
     touch-callout: none;
     user-select: none;
     cursor: pointer;
-    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &[open] > .k-DropdownMenu__button::before {
@@ -49,17 +51,32 @@ const StyledDropdownMenu = styled.details`
     z-index: 150;
 
     position: absolute;
-    left: ${pxToRem(-15)};
-    top: calc(100% + ${pxToRem(10 + 5)});
+    top: calc(50% + 1rem + ${pxToRem(8)});
+    left: 50%;
     width: max-content;
+    max-width: ${pxToRem(300)};
+    height: auto;
 
     padding: ${pxToRem(8)} 0 ${pxToRem(10)};
 
     animation-duration: 0.15s;
-    animation-name: ${scaleIn};
+    animation-name: ${opacity};
     animation-timing-function: ease;
-    transform-origin: ${pxToRem(15)} ${pxToRem(-10)};
   }
+
+  &.k-DropdownMenu--left .k-DropdownMenu__menu {
+    transform: translateX(calc(-100% + ${pxToRem(10 + 8)}));
+
+  }
+
+  &.k-DropdownMenu--center .k-DropdownMenu__menu {
+    transform: translateX(-50%);
+  }
+
+  &.k-DropdownMenu--right .k-DropdownMenu__menu {
+    transform: translateX(calc(-1 * ${pxToRem(10 + 8)}));
+  }
+
 
   .k-DropdownMenu__menu__item {
     ${TYPOGRAPHY.fontStyles.regular}
@@ -122,6 +139,20 @@ export const DropdownMenu = ({
     onToggle(event, !open)
   }
 
+  const arrowDistanceProps = (() => {
+    switch (menuPosition) {
+      case 'left':
+        return { distance: 10, distanceIsReverse: true }
+
+      case 'center':
+        return { centered: true }
+
+      case 'right':
+      default:
+        return { distance: 10 }
+    }
+  })()
+
   const getSibling = direction => {
     const options = [
       ...detailsElement.current.querySelectorAll(
@@ -149,19 +180,23 @@ export const DropdownMenu = ({
       case 'Escape':
         if (!open) return
 
-        setOpen(false)
+        detailsElement.current?.querySelector('summary')?.click()
         event.preventDefault()
         event.stopPropagation()
         break
       case 'ArrowDown':
-        if (isSummaryFocused && !open) return setOpen(true)
+        if (isSummaryFocused && !open) {
+          document.activeElement?.click()
+        }
 
         getSibling('next')?.focus()
 
         event.preventDefault()
         break
       case 'ArrowUp':
-        if (isSummaryFocused && !open) return setOpen(true)
+        if (isSummaryFocused && !open) {
+          document.activeElement?.click()
+        }
 
         getSibling('prev')?.focus()
 
@@ -187,7 +222,7 @@ export const DropdownMenu = ({
       ref={detailsElement}
       onToggle={handleToggle}
       open={openProp}
-      className={classNames('k-DropdownMenu', className)}
+      className={classNames('k-DropdownMenu', className, `k-DropdownMenu--${menuPosition}`)}
       role="menu"
       onKeyDown={handleKeyDown}
       {...rest}
@@ -197,9 +232,9 @@ export const DropdownMenu = ({
         color={COLORS.font1}
         size={8}
         padding={0}
-        distance={10}
         borderRadius={4}
         position="top"
+        {...arrowDistanceProps}
         {...menuProps}
         className={classNames('k-DropdownMenu__menu', menuProps.className)}
       >
