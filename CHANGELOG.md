@@ -4,10 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `BackingCard`: Fix text input width.
-- Feature: Add `HorizontalCrowdfundingCard` molecule component.
-- Feature: Add `FlexWrapper` layout component.
 - Feature: Add `DropdownMenu` molecule component.
+
+## [4.1.0] - 2021-08-02
+
+Features:
+
+- Add `HorizontalCrowdfundingCard` molecule component.
+- Add `FlexWrapper` layout component.
+
+Fixes:
+
+- `BackingCard`: Fix text input width.
+- `ContributionCard`: Fix close button visibility on mobile.
 
 ## [4.0.2] - 2021-07-27
 
