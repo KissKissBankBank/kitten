@@ -30,6 +30,11 @@ const StyledDropdownMenu = styled.details`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    ::-webkit-details-marker,
+    ::before {
+      display: none;
+    }
   }
 
   &[open] > .k-DropdownMenu__button::before {

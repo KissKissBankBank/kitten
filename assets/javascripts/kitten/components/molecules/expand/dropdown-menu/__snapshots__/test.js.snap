@@ -139,6 +139,11 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   justify-content: center;
 }
 
+.c0 .k-DropdownMenu__button::-webkit-details-marker,
+.c0 .k-DropdownMenu__button::before {
+  display: none;
+}
+
 .c0[open] > .k-DropdownMenu__button::before {
   content: ' ';
   cursor: default;
