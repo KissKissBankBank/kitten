@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `DropdownMenu` molecule component.
 - Feature: Add `EllipsisIcon` icon.
+- Feature: `ArrowContainer`: Add `distanceIsReverse` boolean prop, defaults to `false`.
 
 ## [4.1.0] - 2021-08-02
 
