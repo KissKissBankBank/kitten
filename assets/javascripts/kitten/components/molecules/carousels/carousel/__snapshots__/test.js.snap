@@ -2,7 +2,7 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat icrAws k-Carousel"
+  className="sc-htpNat iwsEro k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -295,7 +295,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="sc-htpNat icrAws k-Carousel"
+  className="sc-htpNat iwsEro k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -590,10 +590,10 @@ exports[`<Carousel /> empty carousel matches with snapshot 1`] = `null`;
 
 exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat iShHPb k-Carousel k-LegacyCarousel"
+  className="sc-htpNat UmMld k-Carousel k-LegacyCarousel"
 >
   <div
-    className="sc-bwzfXH hqtNjR k-Grid"
+    className="sc-bwzfXH elOwrD k-Grid"
   >
     <div
       className="k-Grid__col k-Grid__col--12 k-Grid__col--10-l k-Grid__col--offset-1-l"
@@ -704,10 +704,10 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} matches with snapshot 1`] = `
 <div
-  className="sc-htpNat iShHPb k-Carousel k-LegacyCarousel"
+  className="sc-htpNat UmMld k-Carousel k-LegacyCarousel"
 >
   <div
-    className="sc-bwzfXH hqtNjR k-Grid"
+    className="sc-bwzfXH elOwrD k-Grid"
   >
     <div
       className="k-Grid__col k-Grid__col--12 k-Grid__col--11-l k-Grid__col--offset-0-l"
@@ -818,10 +818,10 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
 
 exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 <div
-  className="sc-htpNat iShHPb k-Carousel k-LegacyCarousel"
+  className="sc-htpNat UmMld k-Carousel k-LegacyCarousel"
 >
   <div
-    className="sc-bwzfXH hqtNjR k-Grid"
+    className="sc-bwzfXH elOwrD k-Grid"
   >
     <div
       className="k-Grid__col k-Grid__col--12 k-Grid__col--10-l k-Grid__col--offset-1-l"
@@ -932,7 +932,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat icrAws k-Carousel"
+  className="sc-htpNat iwsEro k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -1225,7 +1225,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
 
 exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat LzzJz k-Carousel"
+  className="sc-htpNat iQrBEr k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -1524,7 +1524,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 
 exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat icrAws k-Carousel"
+  className="sc-htpNat iwsEro k-Carousel"
 >
   <div
     className="k-Carousel__inner"

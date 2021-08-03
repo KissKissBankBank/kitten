@@ -40,7 +40,7 @@ describe('<Marger />', () => {
         expect(tree).toMatchSnapshot()
         expect(tree).toHaveStyleRule('margin-top', '2.5rem')
         expect(tree).toHaveStyleRule('margin-top', '7.5rem', {
-          media: '(min-width:480px)',
+          media: '(min-width:400px)',
         })
         expect(tree).toHaveStyleRule('margin-top', '1.25rem', {
           media: '(min-width:768px)',
@@ -93,7 +93,7 @@ describe('<Marger />', () => {
         expect(tree).toMatchSnapshot()
         expect(tree).toHaveStyleRule('margin-bottom', '2.5rem')
         expect(tree).toHaveStyleRule('margin-bottom', '7.5rem', {
-          media: '(min-width:480px)',
+          media: '(min-width:400px)',
         })
         expect(tree).toHaveStyleRule('margin-bottom', '1.25rem', {
           media: '(min-width:768px)',
@@ -149,10 +149,10 @@ describe('<Marger />', () => {
 
       expect(tree).toMatchSnapshot()
       expect(tree).toHaveStyleRule('margin-top', '7.5rem', {
-        media: '(min-width:480px)',
+        media: '(min-width:400px)',
       })
       expect(tree).toHaveStyleRule('margin-bottom', '7.5rem', {
-        media: '(min-width:480px)',
+        media: '(min-width:400px)',
       })
       expect(tree).toHaveStyleRule('margin-top', '1.25rem', {
         media: '(min-width:768px)',

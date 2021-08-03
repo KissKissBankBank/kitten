@@ -217,7 +217,7 @@ exports[`<SideGrid /> by default matches with snapshot 1`] = `
   border-right: 0.0625rem solid #eee;
 }
 
-@media (min-width:30rem) {
+@media (min-width:25rem) {
   .c2 .k-Grid__col--0-xs {
     -webkit-flex-basis: calc((100% / 12) * 0);
     -ms-flex-preferred-size: calc((100% / 12) * 0);
@@ -1211,7 +1211,7 @@ exports[`<SideGrid /> with all components matches with snapshot 1`] = `
   border-right: 0.0625rem solid #eee;
 }
 
-@media (min-width:30rem) {
+@media (min-width:25rem) {
   .c2 .k-Grid__col--0-xs {
     -webkit-flex-basis: calc((100% / 12) * 0);
     -ms-flex-preferred-size: calc((100% / 12) * 0);
