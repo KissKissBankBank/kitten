@@ -540,7 +540,6 @@ export const StyledHeader = styled.header`
 
   .k-HeaderNav__searchInput {
     position: relative;
-    max-width: min(100%, ${pxToRem(500)});
     transition: max-width 0.2s ease;
     height: 100%;
     display: flex;
@@ -554,10 +553,6 @@ export const StyledHeader = styled.header`
     .k-Form-TextInput {
       ${TYPOGRAPHY.fontStyles.light};
       width: 100%;
-    }
-
-    &.k-HeaderNav__searchInput--expanded {
-      max-width: min(100%, ${pxToRem(500)});
     }
 
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
@@ -588,6 +583,7 @@ export const StyledHeader = styled.header`
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       flex: 1 0 auto;
+      max-width: min(100%, ${pxToRem(500)});
 
       .k-HeaderNav__searchInput__mobileFold {
         display: none;
