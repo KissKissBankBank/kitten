@@ -242,7 +242,7 @@ exports[`<SideLayout /> by default matches with snapshot 1`] = `
   flex-grow: 1;
 }
 
-@media (min-width:30rem) {
+@media (min-width:25rem) {
   .c3 .k-Grid__col--0-xs {
     -webkit-flex-basis: calc((100% / 12) * 0);
     -ms-flex-preferred-size: calc((100% / 12) * 0);
@@ -1272,7 +1272,7 @@ exports[`<SideLayout /> with sidebar prop matches with snapshot 1`] = `
   flex-grow: 1;
 }
 
-@media (min-width:30rem) {
+@media (min-width:25rem) {
   .c3 .k-Grid__col--0-xs {
     -webkit-flex-basis: calc((100% / 12) * 0);
     -ms-flex-preferred-size: calc((100% / 12) * 0);
