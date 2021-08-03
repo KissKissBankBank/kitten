@@ -17,11 +17,11 @@ export const ORDERED_SCREEN_SIZES = [
 export const ScreenConfig = {
   [SCREEN_SIZE_XXS]: {
     min: null,
-    max: 479,
+    max: 399,
   },
 
   [SCREEN_SIZE_XS]: {
-    min: 480,
+    min: 400,
     max: 639,
   },
 
