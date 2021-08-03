@@ -98,6 +98,10 @@ const StyledCard = styled.a`
       flex: 0 0 ${pxToRem(46)};
       width: ${pxToRem(46)};
     }
+
+    @media (max-width: ${pxToRem(ScreenConfig.XXS.max)}) {
+      display: none;
+    }
   }
 
   @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
