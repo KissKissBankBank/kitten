@@ -36,7 +36,6 @@ export const Default = ({ open, menuPosition }) => (
       >
         <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
         <DropdownMenu.Button>Click this button</DropdownMenu.Button>
-        <DropdownMenu.Separator />
         <DropdownMenu.Link href="#">
           Another last very very very very very very very very very very long
           link
@@ -59,7 +58,6 @@ export const Default = ({ open, menuPosition }) => (
       >
         <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
         <DropdownMenu.Button>Click this button</DropdownMenu.Button>
-        <DropdownMenu.Separator />
         <DropdownMenu.Link href="#">Another last link</DropdownMenu.Link>
       </DropdownMenu>
     </div>
@@ -79,7 +77,6 @@ export const Default = ({ open, menuPosition }) => (
       >
         <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
         <DropdownMenu.Button>Click this button</DropdownMenu.Button>
-        <DropdownMenu.Separator />
         <DropdownMenu.Link href="#">Another last link</DropdownMenu.Link>
       </DropdownMenu>
     </div>
