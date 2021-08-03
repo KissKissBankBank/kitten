@@ -548,7 +548,7 @@ export const StyledHeader = styled.header`
     justify-content: flex-end;
 
     > * {
-      flex: 1 0 auto;
+      flex: 1 1 auto;
     }
 
     .k-Form-TextInput {
