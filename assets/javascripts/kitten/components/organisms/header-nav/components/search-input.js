@@ -61,7 +61,6 @@ export const SearchInput = ({
     if (isDropdownExpanded) {
       dropdownProps?.ref?.current?.querySelector('input').focus()
     } else {
-      setMobileInvibility(true)
       dropdownProps?.ref?.current?.addEventListener('focusin', handleFocusIn)
     }
 
@@ -131,7 +130,7 @@ export const SearchInput = ({
           },
         )}
       >
-        {children}
+        {isDropdownExpanded && children}
       </div>
     </form>
   )
