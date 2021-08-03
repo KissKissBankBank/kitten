@@ -71,7 +71,6 @@ const StyledDropdownMenu = styled.details`
 
   &.k-DropdownMenu--left .k-DropdownMenu__menu {
     transform: translateX(calc(-100% + ${pxToRem(10 + 8)}));
-
   }
 
   &.k-DropdownMenu--center .k-DropdownMenu__menu {
@@ -81,7 +80,6 @@ const StyledDropdownMenu = styled.details`
   &.k-DropdownMenu--right .k-DropdownMenu__menu {
     transform: translateX(calc(-1 * ${pxToRem(10 + 8)}));
   }
-
 
   .k-DropdownMenu__menu__item {
     ${TYPOGRAPHY.fontStyles.regular}
@@ -227,7 +225,11 @@ export const DropdownMenu = ({
       ref={detailsElement}
       onToggle={handleToggle}
       open={openProp}
-      className={classNames('k-DropdownMenu', className, `k-DropdownMenu--${menuPosition}`)}
+      className={classNames(
+        'k-DropdownMenu',
+        className,
+        `k-DropdownMenu--${menuPosition}`,
+      )}
       role="menu"
       onKeyDown={handleKeyDown}
       {...rest}

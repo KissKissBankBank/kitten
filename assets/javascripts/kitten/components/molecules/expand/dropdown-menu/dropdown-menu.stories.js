@@ -1,11 +1,7 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { DropdownMenu } from './index'
-import {
-  Container,
-  COLORS,
-  EllipsisIcon,
-} from '../../../..'
+import { Container, COLORS, EllipsisIcon } from '../../../..'
 import styled from 'styled-components'
 
 const StyledWrapper = styled.div`
@@ -41,7 +37,10 @@ export const Default = ({ open, menuPosition }) => (
         <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
         <DropdownMenu.Button>Click this button</DropdownMenu.Button>
         <DropdownMenu.Separator />
-        <DropdownMenu.Link href="#">Another last very very very very very very very very very very long link</DropdownMenu.Link>
+        <DropdownMenu.Link href="#">
+          Another last very very very very very very very very very very long
+          link
+        </DropdownMenu.Link>
       </DropdownMenu>
     </div>
     <div className="k-u-flex-justifyContent-center">
@@ -85,7 +84,6 @@ export const Default = ({ open, menuPosition }) => (
       </DropdownMenu>
     </div>
   </StyledWrapper>
-
 )
 
 Default.argTypes = {
@@ -95,9 +93,9 @@ Default.argTypes = {
   },
   menuPosition: {
     name: 'menuPosition',
-    options: [ 'left', 'center', 'right'],
+    options: ['left', 'center', 'right'],
     control: { type: 'inline-radio' },
-  }
+  },
 }
 
 Default.args = {
