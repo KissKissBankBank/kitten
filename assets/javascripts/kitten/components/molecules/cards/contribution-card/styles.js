@@ -77,6 +77,7 @@ export const StyledContributionCard = styled.article`
     top: 0;
     border-right: none;
     border-top: none;
+    z-index: 1;
   }
 
   .k-ContributionCard__gridWrapper {

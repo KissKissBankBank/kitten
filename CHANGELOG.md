@@ -10,9 +10,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `TextInputWithButton`: Add `inset` prop to place the button inside the input.
 - Feature: `Overlay`: Add `position` prop, defaults to `absolute`.
 - Feature: `HeaderNav`: Add `SearchInput` sub-component.
-- Fix: `BackingCard`: Fix text input width.
-- Feature: Add `HorizontalCrowdfundingCard` molecule component.
-- Feature: Add `FlexWrapper` layout component.
+- Fix: `HorizontalCrowdfundingCard`: Fix mobile style for `progress`.
+- Feature: Change `XXS`/`XS` boundary to 400px, from 480px.
+
+## [4.1.0] - 2021-08-02
+
+Features:
+
+- Add `HorizontalCrowdfundingCard` molecule component.
+- Add `FlexWrapper` layout component.
+
+Fixes:
+
+- `BackingCard`: Fix text input width.
+- `ContributionCard`: Fix close button visibility on mobile.
 
 ## [4.0.2] - 2021-07-27
 

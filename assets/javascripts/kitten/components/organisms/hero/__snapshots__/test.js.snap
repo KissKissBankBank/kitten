@@ -5,7 +5,7 @@ exports[`<Hero /> by default matches with snapshot 1`] = `
   className="sc-bdVaJa mTdHm sc-htpNat cPkrFg k-Hero k-Hero--direction-left"
 >
   <div
-    className="sc-bwzfXH hqtNjR k-Grid"
+    className="sc-bwzfXH elOwrD k-Grid"
   >
     <div
       className="k-Grid__col k-Grid__col--12 k-Grid__col--10-s k-Grid__col--6-l k-Hero__contentGridCol"
