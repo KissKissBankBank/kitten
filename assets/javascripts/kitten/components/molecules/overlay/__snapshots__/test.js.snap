@@ -9,7 +9,7 @@ exports[`<Overlay /> overlay with \`isActive\` prop and custom class matches wit
   z-index: 100;
   visibility: hidden;
   opacity: 0;
-  background: rgba(34,34,34,0.9);
+  background: rgba(0,0,0,0.4);
   -webkit-transition: visibility 0s ease,opacity 0.2s ease,bottom 0s,right 0s;
   transition: visibility 0s ease,opacity 0.2s ease,bottom 0s,right 0s;
   -webkit-transition-delay: 0.2s,0s,0.2s,0.2s;
@@ -47,7 +47,7 @@ exports[`<Overlay /> overlay with \`isActive\` prop matches with snapshot 1`] = 
   z-index: 100;
   visibility: hidden;
   opacity: 0;
-  background: rgba(34,34,34,0.9);
+  background: rgba(0,0,0,0.4);
   -webkit-transition: visibility 0s ease,opacity 0.2s ease,bottom 0s,right 0s;
   transition: visibility 0s ease,opacity 0.2s ease,bottom 0s,right 0s;
   -webkit-transition-delay: 0.2s,0s,0.2s,0.2s;
@@ -85,7 +85,7 @@ exports[`<Overlay /> simple overlay with zIndex set to 105 matches with snapshot
   z-index: 105;
   visibility: hidden;
   opacity: 0;
-  background: rgba(34,34,34,0.9);
+  background: rgba(0,0,0,0.4);
   -webkit-transition: visibility 0s ease,opacity 0.2s ease,bottom 0s,right 0s;
   transition: visibility 0s ease,opacity 0.2s ease,bottom 0s,right 0s;
   -webkit-transition-delay: 0.2s,0s,0.2s,0.2s;

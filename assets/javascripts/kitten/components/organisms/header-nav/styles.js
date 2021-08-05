@@ -551,6 +551,8 @@ export const StyledHeader = styled.header`
     }
 
     .k-Form-TextInput {
+      text-overflow: ellipsis;
+      overflow: hidden;
       ${TYPOGRAPHY.fontStyles.light};
       width: 100%;
     }
