@@ -557,7 +557,7 @@ export const StyledHeader = styled.header`
       width: 100%;
     }
 
-    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
       flex: 0 0 auto;
 
       &.k-HeaderNav__searchInput--mobileInvisible .k-Form-TextInputWithButton {
@@ -583,7 +583,7 @@ export const StyledHeader = styled.header`
       }
     }
 
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
       flex: 1 0 auto;
       max-width: min(100%, ${pxToRem(500)});
 
@@ -609,13 +609,13 @@ export const StyledHeader = styled.header`
 
     transition: margin 0.2s, visibility 0.2s, opacity 0.2s;
 
-    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
       top: 100%;
       max-height: calc(100vh - 100%);
       max-width: 100vw;
     }
 
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
       top: calc(100% + ${pxToRem(10)});
 
       box-shadow: 0 ${pxToRem(4)} ${pxToRem(20)} rgba(0, 0, 0, 0.25);
