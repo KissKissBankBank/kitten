@@ -9,6 +9,7 @@ import { UploadIcon } from '../../../../components/graphics/icons/upload-icon'
 import { CrossIcon } from '../../../../components/graphics/icons/cross-icon'
 import { Text } from '../../../../components/atoms/typography/text'
 import { Tag } from '../../../../components/atoms/tag'
+import difference from 'lodash/fp/difference'
 
 const StyledDocumentsDropUploader = styled.div`
   border-radius: ${pxToRem(8)};
@@ -186,6 +187,7 @@ export const DocumentsDropUploader = ({
   const [isDraggingOver, setDraggingOver] = useState(false)
   const [fileList, setFileList] = useState(initialValue)
   const [errorList, setErrorList] = useState([])
+  const [fileListWithoutErrors, setFileListWithoutErrors] = useState([])
   const [internalErrorMessageList, setErrorMessageList] = useState([
     errorMessageList,
   ])
@@ -273,14 +275,23 @@ export const DocumentsDropUploader = ({
         }
       }
     })
-    if (isValid) onChange(fileList)
   }, [fileList])
 
   useEffect(() => {
+    setFileListWithoutErrors(
+      difference(fileList)(errorList.map(error => error.file))
+    )
+
     if (errorList.length === 0) return
 
     onError(errorList)
   }, [errorList])
+
+  useEffect(() => {
+    if (fileList.length !== fileListWithoutErrors.length) return
+
+    onChange(fileList)
+  }, [fileListWithoutErrors])
 
   const removeFilesFromList = file => {
     setFileList(currentList => currentList.filter(item => item !== file))
@@ -331,11 +342,11 @@ export const DocumentsDropUploader = ({
             <div className="k-DocumentsDropUploader__text">{managerText}</div>
           )}
 
-          {fileList.length > 0 && (
+          {fileListWithoutErrors.length > 0 && (
             <ul className="k-DocumentsDropUploader__fileList">
               {['error', 'manage'].includes(internalStatus) && (
                 <>
-                  {fileList.map((file, index) => (
+                  {fileListWithoutErrors.map((file, index) => (
                     <Tag
                       key={file.name + index}
                       as="li"
@@ -406,9 +417,9 @@ export const DocumentsDropUploader = ({
             className="k-DocumentsDropUploader__errorList"
             id={`${id}-error-description`}
           >
-            {internalErrorMessageList.map(errorMsg => (
+            {internalErrorMessageList.map((errorMsg, index) => (
               <Text
-                key={errorMsg}
+                key={errorMsg + index}
                 as="li"
                 size="micro"
                 color="error"
