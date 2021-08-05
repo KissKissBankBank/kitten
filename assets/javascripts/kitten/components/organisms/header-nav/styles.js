@@ -627,12 +627,12 @@ export const StyledHeader = styled.header`
     @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
       top: calc(100% + ${pxToRem(10)});
 
-      box-shadow: 0 ${pxToRem(4)} ${pxToRem(20)} rgba(0, 0, 0, 0.25);
-      border-radius: ${pxToRem(4)};
       /* Max-height is needed to allow scroll on menu.
          The 100% is equal to the button height. */
       max-height: calc(100vh - (100% + ${pxToRem(20)}));
+
       box-shadow: 0 ${pxToRem(3)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
+      border-radius: ${pxToRem(8)};
     }
 
     &.k-HeaderNav__floatingDropdown--isExpanded {
