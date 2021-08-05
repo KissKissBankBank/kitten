@@ -288,9 +288,7 @@ export const DocumentsDropUploader = ({
   }, [errorList])
 
   useEffect(() => {
-    if (fileList.length !== fileListWithoutErrors.length) return
-
-    onChange(fileList)
+    onChange(fileListWithoutErrors)
   }, [fileListWithoutErrors])
 
   const removeFilesFromList = file => {
