@@ -606,6 +606,7 @@ export const StyledHeader = styled.header`
 
     left: 0;
     right: 0;
+    min-width: fit-content;
 
     background-color: ${COLORS.background1};
 

@@ -20,6 +20,7 @@ import {
   CheckedCircleIcon,
   CLOSE_OVERLAY_EVENT,
   OPEN_OVERLAY_EVENT,
+  Badge,
 } from '../../../..'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
@@ -88,6 +89,13 @@ const Navigation = () => (
     <HeaderNav.Nav.Item href="#">Lancez votre projet</HeaderNav.Nav.Item>
     <HeaderNav.Nav.Item href="#" className="is-selected">
       Découvrez les projets
+    </HeaderNav.Nav.Item>
+    <HeaderNav.Nav.Item href="#">
+      Carte Cadeau&nbsp;
+      <Badge color={COLORS.primary1} className="k-u-transform-uppercase">
+        Nouveau
+      </Badge>
+
     </HeaderNav.Nav.Item>
   </>
 )
