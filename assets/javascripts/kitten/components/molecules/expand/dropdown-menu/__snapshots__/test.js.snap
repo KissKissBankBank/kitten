@@ -175,30 +175,32 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   max-width: 18.75rem;
   height: auto;
   padding: 0.5rem 0 0.625rem;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
-  -webkit-animation-name: bKPByE;
-  animation-name: bKPByE;
-  -webkit-animation-timing-function: ease;
-  animation-timing-function: ease;
+  -webkit-transform: translateX(calc(-1 * var(--Dropdown-transform)));
+  -ms-transform: translateX(calc(-1 * var(--Dropdown-transform)));
+  transform: translateX(calc(-1 * var(--Dropdown-transform)));
+  -webkit-transform-origin: var(--Dropdown-transform-origin);
+  -ms-transform-origin: var(--Dropdown-transform-origin);
+  transform-origin: var(--Dropdown-transform-origin);
+}
+
+.c0[open] .k-DropdownMenu__menu {
+  -webkit-animation: 0.16s ease dFbfpe;
+  animation: 0.16s ease dFbfpe;
 }
 
 .c0.k-DropdownMenu--left .k-DropdownMenu__menu {
-  -webkit-transform: translateX(calc(-100% + 1.125rem));
-  -ms-transform: translateX(calc(-100% + 1.125rem));
-  transform: translateX(calc(-100% + 1.125rem));
+  --Dropdown-transform: calc(100% - 1.125rem);
+  --Dropdown-transform-origin: var(--Dropdown-transform) -0.5rem;
 }
 
 .c0.k-DropdownMenu--center .k-DropdownMenu__menu {
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  --Dropdown-transform: 50%;
+  --Dropdown-transform-origin: var(--Dropdown-transform) -0.5rem;
 }
 
 .c0.k-DropdownMenu--right .k-DropdownMenu__menu {
-  -webkit-transform: translateX(calc(-1 * 1.125rem));
-  -ms-transform: translateX(calc(-1 * 1.125rem));
-  transform: translateX(calc(-1 * 1.125rem));
+  --Dropdown-transform: 1.125rem;
+  --Dropdown-transform-origin: var(--Dropdown-transform) -0.5rem;
 }
 
 .c0 .k-DropdownMenu__menu__item {
@@ -212,6 +214,8 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   line-height: 1;
   font-size: 0.8888888888888888rem;
   text-align: left;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .c0 .k-DropdownMenu__menu__item:hover {

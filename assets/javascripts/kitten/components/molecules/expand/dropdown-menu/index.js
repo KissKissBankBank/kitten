@@ -6,12 +6,14 @@ import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 
-const opacity = keyframes`
+const zoomInAndOpacity = keyframes`
   0% {
+    transform: translateX(calc(-1 * var(--Dropdown-transform))) scale(.66);
     opacity: 0;
   }
   to
   {
+    transform: translateX(calc(-1 * var(--Dropdown-transform))) scale(1);
     opacity: 1;
   }
 `
@@ -64,21 +66,27 @@ const StyledDropdownMenu = styled.details`
 
     padding: ${pxToRem(8)} 0 ${pxToRem(10)};
 
-    animation-duration: 0.15s;
-    animation-name: ${opacity};
-    animation-timing-function: ease;
+    transform: translateX(calc(-1 * var(--Dropdown-transform)));
+    transform-origin: var(--Dropdown-transform-origin);
+  }
+
+  &[open] .k-DropdownMenu__menu {
+    animation: 0.16s ease ${zoomInAndOpacity};
   }
 
   &.k-DropdownMenu--left .k-DropdownMenu__menu {
-    transform: translateX(calc(-100% + ${pxToRem(10 + 8)}));
+    --Dropdown-transform: calc(100% - ${pxToRem(10 + 8)});
+    --Dropdown-transform-origin: var(--Dropdown-transform) ${pxToRem(-8)};
   }
 
   &.k-DropdownMenu--center .k-DropdownMenu__menu {
-    transform: translateX(-50%);
+    --Dropdown-transform: 50%;
+    --Dropdown-transform-origin: var(--Dropdown-transform) ${pxToRem(-8)};
   }
 
   &.k-DropdownMenu--right .k-DropdownMenu__menu {
-    transform: translateX(calc(-1 * ${pxToRem(10 + 8)}));
+    --Dropdown-transform: ${pxToRem(10 + 8)};
+    --Dropdown-transform-origin: var(--Dropdown-transform) ${pxToRem(-8)};
   }
 
   .k-DropdownMenu__menu__item {
@@ -90,6 +98,7 @@ const StyledDropdownMenu = styled.details`
     line-height: 1;
     font-size: ${stepToRem(-1)};
     text-align: left;
+    transition: color 0.2s ease;
 
     &:hover {
       color: ${COLORS.primary1};
