@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `RewardSummaryCard`: Add new component.
 - Fix: `HorizontalCrowdfundingCard`: Fix mobile style for `progress`.
 - Feature: Change `XXS`/`XS` boundary to 400px, from 480px.
 

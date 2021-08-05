@@ -4,7 +4,14 @@ import classNames from 'classnames'
 import COLORS from '../../../../constants/colors-config'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { Image, Title, Availablity, RewardNumber, Amount } from './components'
+import {
+  Image,
+  Title,
+  TitleTag,
+  Availablity,
+  RewardNumber,
+  Amount,
+} from './components'
 import { Context } from './context'
 import {
   getReactElementsByType,
@@ -15,6 +22,7 @@ export const RewardSummaryCard = ({
   children,
   show,
   style,
+  href,
   className,
   borderWidth,
   borderRadius,
@@ -37,6 +45,7 @@ export const RewardSummaryCard = ({
 
   return (
     <StyledRewardSummaryCard
+      href={href}
       className={classNames('k-RewardSummaryCard', className)}
       style={{
         ...style,
@@ -63,6 +72,7 @@ export const RewardSummaryCard = ({
 
 RewardSummaryCard.Image = Image
 RewardSummaryCard.Title = Title
+RewardSummaryCard.TitleTag = TitleTag
 RewardSummaryCard.Amount = Amount
 RewardSummaryCard.RewardNumber = RewardNumber
 RewardSummaryCard.Availablity = Availablity

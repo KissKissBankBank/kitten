@@ -1,5 +1,6 @@
 export { Image } from './image'
 export { Title } from './title'
+export { TitleTag } from './title-tag'
 export { Amount } from './amount'
 export { Availablity } from './availablity'
 export { RewardNumber } from './reward-number'

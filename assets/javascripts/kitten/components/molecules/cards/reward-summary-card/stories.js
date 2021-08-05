@@ -3,6 +3,10 @@ import { RewardSummaryCard } from './index'
 import { Container, COLORS } from '../../../..'
 
 const argTypes = {
+  href: {
+    name: 'href',
+    control: { type: 'text' },
+  },
   show: {
     name: 'show',
     description: 'If empty return null',
@@ -36,6 +40,7 @@ const argTypes = {
 }
 
 const args = {
+  href: '#',
   show: true,
   borderColor: COLORS.line1,
   borderRadius: 8,
@@ -65,6 +70,7 @@ export default {
 
 export const Default = ({
   show,
+  href,
   borderColor,
   borderRadius,
   borderStyle,
@@ -73,6 +79,7 @@ export const Default = ({
 }) => {
   return (
     <RewardSummaryCard
+      href={href}
       show={show}
       borderColor={borderColor}
       borderRadius={borderRadius}
@@ -85,10 +92,15 @@ export const Default = ({
 
       <RewardSummaryCard.Title>
         Lorem ipsum dolor sit amet.
+        <RewardSummaryCard.TitleTag
+          className="k-u-margin-top-single"
+          icon="star"
+          text="Contrepartie star"
+        />
       </RewardSummaryCard.Title>
 
-      <RewardSummaryCard.Amount>1005&nbsp;€</RewardSummaryCard.Amount>
-      <RewardSummaryCard.RewardNumber>1005</RewardSummaryCard.RewardNumber>
+      <RewardSummaryCard.Amount>10 000&nbsp;€</RewardSummaryCard.Amount>
+      <RewardSummaryCard.RewardNumber>1 468 000</RewardSummaryCard.RewardNumber>
       <RewardSummaryCard.Availablity>Illimitée</RewardSummaryCard.Availablity>
     </RewardSummaryCard>
   )

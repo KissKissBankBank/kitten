@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
+import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
-export const StyledRewardSummaryCard = styled.article`
+export const StyledRewardSummaryCard = styled.a`
   /* CARD STYLE */
 
   max-width: 100%;
@@ -11,6 +12,27 @@ export const StyledRewardSummaryCard = styled.article`
   display: block;
   overflow: hidden;
   box-sizing: border-box;
+  text-decoration: none;
+  background-color: ${COLORS.background1};
+
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+  &[href]:hover {
+    background-color: ${COLORS.background2};
+  }
+  &[href]:active {
+    background-color: ${COLORS.background3};
+  }
+  &[href]:focus {
+    outline: ${COLORS.line1} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(-2)};
+  }
+  &[href]:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+  &[href]:focus-visible {
+    outline-color: ${COLORS.line1};
+  }
 
   /* IE11 defaults */
   border-width: ${pxToRem(2)};
@@ -30,7 +52,7 @@ export const StyledRewardSummaryCard = styled.article`
 
   /* IMAGE */
 
-  .k-RewardSummarynCard__imageWrapper {
+  .k-RewardSummaryCard__imageWrapper {
     position: relative;
     overflow: hidden;
 
@@ -72,7 +94,7 @@ export const StyledRewardSummaryCard = styled.article`
   /* STRUCTURE */
 
   .k-RewardSummaryCard__gridWrapper {
-    padding: ${pxToRem(20)};
+    padding: ${pxToRem(30)};
 
     display: grid;
     align-items: center;
@@ -85,7 +107,9 @@ export const StyledRewardSummaryCard = styled.article`
       width: 100%;
 
       grid-gap: 0 ${pxToRem(10)};
-      grid-template-columns: auto ${pxToRem(85)} ${pxToRem(150)};
+      grid-template-columns: auto ${pxToRem(100)} ${pxToRem(100)} ${pxToRem(
+          150,
+        )};
       grid-template-rows: 1fr;
     }
   }
@@ -95,23 +119,68 @@ export const StyledRewardSummaryCard = styled.article`
   .k-RewardSummaryCard__title {
     grid-column: 1 / span 2;
     grid-row: 1;
+    padding-right: ${pxToRem(30)};
 
     font-size: ${stepToRem(-1)};
     line-height: ${pxToRem(16)};
     place-self: center start;
 
     @media (min-width: ${ScreenConfig.M.min}px) {
+      grid-column: 1;
       font-size: ${stepToRem(0)};
       margin-top: 0;
     }
   }
 
+  .k-RewardSummaryCard__titleTag {
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    gap: ${pxToRem(10)};
+
+    color: ${COLORS.primary1};
+    ${TYPOGRAPHY.fontStyles.regular}
+
+    svg,
+    path {
+      color: inherit;
+
+      &[fill] {
+        fill: currentColor;
+      }
+      &[stroke] {
+        stroke: currentColor;
+      }
+    }
+  }
+
   .k-RewardSummaryCard__amount {
+    place-self: center flex-end;
+
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      margin-right: ${pxToRem(10)};
+      margin-top: 0;
+      place-self: center flex-start;
+    }
   }
 
   .k-RewardSummaryCard__rewardNumber {
+    place-self: center flex-end;
+
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      margin-right: ${pxToRem(10)};
+      margin-top: 0;
+      place-self: center flex-start;
+    }
   }
 
   .k-RewardSummaryCard__availablity {
+    place-self: center flex-end;
+
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      margin-right: ${pxToRem(10)};
+      margin-top: 0;
+      place-self: center flex-start;
+    }
   }
 `

@@ -6,10 +6,10 @@ export const Amount = props => {
   return (
     <Text
       color="font1"
-      weight="bold"
-      size="huge"
+      weight="light"
+      size="tiny"
       {...props}
-      className={classNames('k-ContributionCard__amount', props.className)}
+      className={classNames('k-RewardSummaryCard__amount', props.className)}
     />
   )
 }
