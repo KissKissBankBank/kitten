@@ -218,44 +218,6 @@ Array [
       >
         Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
       </div>
-      <ul
-        className="k-DocumentsDropUploader__fileList"
-      >
-        <li
-          className="sc-bdVaJa lajXQg k-Tag k-DocumentsDropUploader__file k-Tag--info"
-        >
-          <span
-            className="k-DocumentsDropUploader__file__text"
-          >
-            kitten.jpg
-          </span>
-          <button
-            className="k-DocumentsDropUploader__file__button k-u-reset-button"
-            onClick={[Function]}
-            type="button"
-          >
-            <span
-              className="k-u-a11y-visuallyHidden"
-            >
-              Remove kitten.jpg from the list
-            </span>
-            <svg
-              fill="currentColor"
-              height={8}
-              viewBox="0 0 8 8"
-              width={8}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
-              />
-              <path
-                d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
-              />
-            </svg>
-          </button>
-        </li>
-      </ul>
       <input
         accept=""
         aria-describedby="DocumentsDropUploader-error-description"
