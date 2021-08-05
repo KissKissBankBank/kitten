@@ -10,8 +10,6 @@ const StyledRadioButtonSet = styled.fieldset`
   margin: 0;
   padding: 0;
   border: 0;
-  display: flex;
-  flex-direction: column;
   line-height: 1.3rem;
 
   & > legend {
@@ -22,14 +20,13 @@ const StyledRadioButtonSet = styled.fieldset`
     margin-bottom: ${pxToRem(10)};
   }
 
-  .k-Form-RadioButtonSet__radioButton {
-    margin: ${pxToRem(5)} 0;
+  .k-Form-RadioButtonSet__radioContainer {
+    display: flex;
+    flex-direction: column;
+    gap: ${pxToRem(5)} 0;
 
-    &:first-of-type {
-      margin-top: 0;
-    }
-    &:last-of-type {
-      margin-bottom: 0;
+    .k-Form-RadioButtonSet__radioButton.k-Form-RadioButton {
+      margin: 0;
     }
   }
 `

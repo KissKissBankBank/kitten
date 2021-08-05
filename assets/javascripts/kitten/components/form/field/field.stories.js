@@ -7,8 +7,8 @@ import {
   FieldAutocompleteExample,
 } from './field.examples'
 import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
+import { Container } from '../../layout/container'
+import { Grid, GridCol } from '../../layout/grid'
 
 const StoryGrid = ({ children }) => (
   <Container>
@@ -31,7 +31,11 @@ export const WithInput = () => {
     <StoryGrid>
       <FieldInputExample
         id={text('ID', 'input')}
-        size={select('Size', ['tiny', 'regular', 'big', 'huge', 'giant'], 'regular')}
+        size={select(
+          'Size',
+          ['tiny', 'regular', 'big', 'huge', 'giant'],
+          'regular',
+        )}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
         tooltipProps={{ actionLabel: 'Learn more' }}

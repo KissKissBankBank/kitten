@@ -1,7 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
-import { Text } from '../../../typography/text';
+import { Text } from '../../../atoms/typography/text';
 export var FieldError = function FieldError(_ref) {
   var children = _ref.children,
       others = _objectWithoutProperties(_ref, ["children"]);

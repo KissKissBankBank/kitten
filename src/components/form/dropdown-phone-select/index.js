@@ -37,7 +37,7 @@ var _usePreviousHook = require("../../../helpers/utils/use-previous-hook");
 
 var _fr = _interopRequireDefault(require("./data/lang/fr"));
 
-var _flagIcon = require("../../../components/icons/flag-icon");
+var _flagIcon = require("../../../components/graphics/icons/flag-icon");
 
 var _this = void 0;
 

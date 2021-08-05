@@ -1,5 +1,5 @@
 import React from 'react'
-import { Marger } from '../../../../components/layout/marger'
+import { Marger } from '../../../..'
 
 import { ThanksPage } from './thanks'
 

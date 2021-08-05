@@ -4,6 +4,67 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `HorizontalCrowdfundingCard`: Fix mobile style for `progress`.
+- Feature: Change `XXS`/`XS` boundary to 400px, from 480px.
+
+## [4.1.0] - 2021-08-02
+
+Features:
+
+- Add `HorizontalCrowdfundingCard` molecule component.
+- Add `FlexWrapper` layout component.
+
+Fixes:
+
+- `BackingCard`: Fix text input width.
+- `ContributionCard`: Fix close button visibility on mobile.
+
+## [4.0.2] - 2021-07-27
+
+Fixes:
+
+- `TextCopy`: Fix WebKit sizing bug.
+- `RadioButtonSet`: Fix dimensions.
+- `DocumentsDropUploader`: Fix onChange and onError event.
+
+## [4.0.1] - 2021-07-23
+
+Fixes:
+
+- `ContributionCard`: Various fixes.
+- `ModalNext`: Fix sizing of Modal content.
+- `DashboardLayout/Flow`: Add gradient to Navigation.
+- `DashboardLayout/Flow`: Handle Navigation button display.
+- `BackingCard`: Ensure that the image is always contained in the card border.
+- `ToggleTip`: Remove console warning in tests.
+- `Modal`: Remove deprecation `console.warn` in tests and test add for deprecation message.
+
+## [4.0.0] - 2021-07-22
+
+Breaking Changes:
+
+- Move component files for a better organization based on Atomic principles.
+- Delete deprecated `CONTAINER_PADDING_MOBILE`.
+- `Utilities`: Generalization of `!important` on all utilities.
+- `Utilities`: Deprecate the following utilities:
+  - `display/block`
+  - `display/hidden`
+  - `display/inline-block`
+  - `flex/display-flex`
+- Feature: `Utilities`: Add `display` utility to replace `k-u-block`, etc.
+
+Features:
+
+- `Utilities`: Add `k-u-flex-gap` and `k-u-flex-wrap` utility classes.
+- `Utilities`: Add `display` utility to replace `k-u-block`, etc.
+
+Fixes:
+
+- Use `getReactElements` utils on `BakingCard` and `ContributionCard`.
+- Use `gap` on Flex containers whenever feasible.
+- `Title`: Style fixes (line-height and letter-spacing).
+- `getReactElements` utils: Add child existence verification.
+
 ## [3.26.0] - 2021-07-12
 
 Feature:
@@ -20,7 +81,7 @@ Fixes:
 
 ## [3.25.2] - 2021-07-09
 
-Fix: 
+Fix:
 
 - `parseHtml`: Return empty string if we cannot use dom.
 
@@ -33,7 +94,7 @@ Fix:
 ## [3.25.0] - 2021-07-08
 
 Feature:
- 
+
 - `parseHtml`: We sanitize by default the markup with an option `parseHtml(value, { sanitize: false })` to disable it.
 
 ## [3.24.0] - 2021-07-08
@@ -42,7 +103,7 @@ Feature:
 
 - `ImageDropUploader`: Add `canCrop` prop, defaults to `true`.
 
-Fixes: 
+Fixes:
 
 - `VerticalProgress`: Update styles.
 - `TagButton` Update styles.

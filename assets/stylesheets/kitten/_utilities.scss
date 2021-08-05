@@ -14,18 +14,22 @@
 @import './utilities/cursor/cursor';
 
 // Display
-@import './utilities/display/block';
-@import './utilities/display/inline-block';
-@import './utilities/display/hidden';
+@import './utilities/display/display';
+
+@import './utilities/display/block'; // Deprecated
+@import './utilities/display/inline-block'; // Deprecated
+@import './utilities/display/hidden'; // Deprecated
 
 // Event
 @import './utilities/event/pointer-event';
 
 // Flex
-@import './utilities/flex/display-flex';
+@import './utilities/flex/display-flex'; // Deprecated
 @import './utilities/flex/justify-content';
 @import './utilities/flex/align-items';
 @import './utilities/flex/flex-direction';
+@import './utilities/flex/flex-wrap';
+@import './utilities/flex/gap';
 
 // Image
 @import './utilities/image/responsive';

@@ -9,9 +9,9 @@ import TYPOGRAPHY from '../../../constants/typography-config';
 import { ScreenConfig } from '../../../constants/screen-config';
 import { Label } from '../../../components/form/label';
 import classNames from 'classnames';
-import { WarningCircleIcon } from '../../../components/icons/warning-circle-icon';
-import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon';
-import { ArrowIcon } from '../../../components/icons/arrow-icon';
+import { WarningCircleIcon } from '../../../components/graphics/icons/warning-circle-icon';
+import { CheckedCircleIcon } from '../../../components/graphics/icons/checked-circle-icon';
+import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon';
 import find from 'lodash/fp/find';
 var StyledDropdownSelectWithInput = styled.div.withConfig({
   displayName: "dropdown-select-with-input__StyledDropdownSelectWithInput",

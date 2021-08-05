@@ -6,8 +6,8 @@ import classNames from 'classnames'
 import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
-import { LightbulbIllustration as Lightbulb } from '../../../../components/illustrations/lightbulb-illustration'
+import { HorizontalStroke } from '../../../../components/atoms/horizontal-stroke'
+import { LightbulbIllustration as Lightbulb } from '../../../../components/graphics/illustrations/lightbulb-illustration'
 import { Loader } from '../../../../components/atoms/loader'
 import { getReactElementsWithoutType } from '../../../../helpers/react/react-elements'
 
@@ -68,34 +68,45 @@ const StyledFlow = styled.div`
       bottom: 0;
       position: sticky;
       z-index: 1;
-    }
-  }
 
-  .k-DashboardLayout__flow__nav__actionsContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: ${pxToRem(20)} 0;
-
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      margin: ${pxToRem(30)} 0;
-    }
-
-    & > :not(:last-child) {
-      margin-right: ${pxToRem(20)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        margin-right: ${pxToRem(40)};
+      &::before {
+        position: absolute;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 1)
+        );
+        content: '';
+        top: ${pxToRem(-20)};
+        left: 0;
+        right: 0;
+        height: ${pxToRem(20)};
       }
     }
 
-    & > *:not(:first-child:last-child) {
-      min-width: 0;
+  }
+
+  .k-DashboardLayout__flow__nav__actionsContainer {
+    display: grid;
+    margin: ${pxToRem(20)} 0;
+    gap: ${pxToRem(20)};
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      margin: ${pxToRem(20)} 0 ${pxToRem(30)};
+      gap: ${pxToRem(40)};
+    }
+
+    & > * {
+      min-width: 0 !important;
       max-width: ${pxToRem(180)};
-      flex: 1 1 ${pxToRem(180)};
+      width: 100%;
+    }
+    & > *:last-child {
+      justify-self: end;
     }
     & > *:first-child:last-child {
-      flex: 1 0 100%;
+      grid-column: 1 / span 2;
     }
   }
 
@@ -141,11 +152,6 @@ const Nav = ({ className, children, ...props }) => {
       {...props}
       className={classNames('k-DashboardLayout__flow__nav', className)}
     >
-      <HorizontalStroke
-        size="tiny"
-        customSize={{ width: '100%' }}
-        color={COLORS.line1}
-      />
       <div className="k-DashboardLayout__flow__nav__actionsContainer">
         {children}
       </div>

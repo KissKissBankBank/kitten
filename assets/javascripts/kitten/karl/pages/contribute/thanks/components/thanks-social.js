@@ -4,16 +4,16 @@ import styled, { css } from 'styled-components'
 import { pxToRem } from '../../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../../constants/screen-config'
 
-import { GridCol } from '../../../../../components/grid/grid'
+import { GridCol } from '../../../../../components/layout/grid'
 import { Marger } from '../../../../../components/layout/marger'
 
-import { Text } from '../../../../../components/typography/text'
+import { Text } from '../../../../../components/atoms/typography/text'
 
-import { Button } from '../../../../../components/buttons/button'
+import { Button } from '../../../../../components/molecules/buttons/button'
 
-import { FacebookIconWithBackground } from '../../../../../components/icons/facebook-icon-with-background'
-import { TwitterIcon } from '../../../../../components/icons/twitter-icon'
-import { EmailIcon } from '../../../../../components/icons/email-icon'
+import { FacebookIconWithBackground } from '../../../../../components/graphics/icons/facebook-icon-with-background'
+import { TwitterIcon } from '../../../../../components/graphics/icons/twitter-icon'
+import { EmailIcon } from '../../../../../components/graphics/icons/email-icon'
 
 const FlexButtonsContainer = styled.div`
   display: flex;

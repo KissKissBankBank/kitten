@@ -7,7 +7,7 @@ import styled, { css } from 'styled-components';
 import COLORS from '../../../constants/colors-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
-import { LockIcon } from '../../../components/icons/lock-icon';
+import { LockIcon } from '../../../components/graphics/icons/lock-icon';
 var transitionDuration = '.15s';
 var switchWidth = 60;
 var switchHeight = 30;
