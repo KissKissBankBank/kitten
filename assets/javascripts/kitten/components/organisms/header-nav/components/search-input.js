@@ -113,23 +113,24 @@ export const SearchInput = ({
           searchInputProps.className,
         )}
       />
-        {isMobileInvisible ? (
-          <Button
-            icon
-            size="tiny"
-            borderRadius={20}
-            onClick={handleFoldButtonClick}
-          >
-              <SearchIcon />
-          </Button>
-        ) : (
-          <button
-            className="k-u-reset-button k-HeaderNav__searchInput__mobileFold"
-            onClick={handleFoldButtonClick}
-          >
-            <CrossIcon size="big" />
-          </button>
-        )}
+      {isMobileInvisible ? (
+        <Button
+          icon
+          size="tiny"
+          borderRadius={20}
+          onClick={handleFoldButtonClick}
+          className="k-u-hidden@m-up"
+        >
+            <SearchIcon />
+        </Button>
+      ) : (
+        <button
+          className="k-u-reset-button k-HeaderNav__searchInput__mobileFold"
+          onClick={handleFoldButtonClick}
+        >
+          <CrossIcon size="big" />
+        </button>
+      )}
 
       <div
         {...menuProps}
