@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import { TextInputWithButton } from '../../../../components/form/text-input-with-button'
 import { SearchIcon } from '../../../../components/graphics/icons/search-icon'
 import { CrossIcon } from '../../../../components/graphics/icons/cross-icon'
+import { Button } from '../../../../components/molecules/buttons/button'
 import { Context } from './context'
 import { useDropdown } from '../hooks/use-dropdown'
 
@@ -112,13 +113,23 @@ export const SearchInput = ({
           searchInputProps.className,
         )}
       />
-      <button
-        className="k-u-reset-button k-HeaderNav__searchInput__mobileFold"
-        type="button"
-        onClick={handleFoldButtonClick}
-      >
-        {isMobileInvisible ? <SearchIcon /> : <CrossIcon size="big" />}
-      </button>
+        {isMobileInvisible ? (
+          <Button
+            icon
+            size="tiny"
+            borderRadius={20}
+            onClick={handleFoldButtonClick}
+          >
+              <SearchIcon />
+          </Button>
+        ) : (
+          <button
+            className="k-u-reset-button k-HeaderNav__searchInput__mobileFold"
+            onClick={handleFoldButtonClick}
+          >
+            <CrossIcon size="big" />
+          </button>
+        )}
 
       <div
         {...menuProps}
