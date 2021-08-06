@@ -14,6 +14,7 @@ export const Default = () => (
     labelText="Add a document"
     managerTitle="Upload your ID documents"
     managerText="Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+    managerInfo="(Max: 1MB, Formats: JPG, PNG, SVG)"
     onChange={action('onChange')}
     onError={action('onError')}
     disabled={boolean('Disabled?', false)}
@@ -33,21 +34,13 @@ export const Manage = () => (
     labelText="Add a document"
     managerTitle="Upload your ID documents"
     managerText="Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+    managerInfo="(Max: 1MB, Formats: JPG, PNG, SVG)"
     initialValue={[{ name: 'kitten.jpg' }]}
     onChange={action('onChange')}
     onError={action('onError')}
     disabled={boolean('Disabled?', false)}
     status={
-      boolean('Error?', false)
-        ? 'error'
-        : select('Status', [
-            'ready',
-            'manage',
-            'wait',
-            'accepted',
-            'denied',
-            'error',
-          ])
+      boolean('Error?', false) ? 'error' : select('Status', ['ready', 'error'])
     }
     errorMessageMessage={text('ErrorMessage', null)}
     typeErrorText={e => `File ${e} is not the right file type`}
