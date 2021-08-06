@@ -19,6 +19,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `DocumentsDropUploader`: Hide files with errors.
 - Feature: `DocumentsDropUploader`: New `managerInfo` prop.
 - Feature: `DashboardLayout.Flow.Nav`: Add `twoButtons` prop, defaults to false.
+- Feature: `Modal/Next`: Add `headerMessage` prop, with empty defaults.
 
 ## [4.1.0] - 2021-08-02
 
