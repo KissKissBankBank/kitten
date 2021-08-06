@@ -102,11 +102,13 @@ const StyledDocumentsDropUploader = styled.div`
   .k-DocumentsDropUploader__title {
     ${TYPOGRAPHY.fontStyles.regular}
     font-size: ${stepToRem(-1)};
+    line-height: 1;
   }
   .k-DocumentsDropUploader__text,
   .k-DocumentsDropUploader__info {
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-2)};
+    line-height: ${pxToRem(16)};
 
     &:empty {
       display: none;
