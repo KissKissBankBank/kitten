@@ -94,22 +94,32 @@ export const StyledRewardSummaryCard = styled.a`
   /* STRUCTURE */
 
   .k-RewardSummaryCard__gridWrapper {
-    padding: ${pxToRem(30)};
+    padding: ${pxToRem(20)};
 
     display: grid;
     align-items: center;
     align-content: flex-start;
-    grid-gap: ${pxToRem(20)} ${pxToRem(10)};
-    grid-template-columns: 1fr 1fr;
+    grid-gap: ${pxToRem(10)};
+    grid-template-columns: 1fr auto;
     grid-template-rows: 1fr auto;
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
-      width: 100%;
-
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      padding: ${pxToRem(30)};
+      grid-template-columns: ${pxToRem(250)} auto auto auto;
+      grid-template-rows: 1fr;
       grid-gap: 0 ${pxToRem(10)};
-      grid-template-columns: auto ${pxToRem(100)} ${pxToRem(100)} ${pxToRem(
-          150,
-        )};
+    }
+    
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      width: 100%;
+      
+      grid-gap: 0 ${pxToRem(10)};
+      grid-template-columns: 
+        auto
+        ${pxToRem(100)}
+        ${pxToRem(100)}
+        ${pxToRem(150)}
+      ;
       grid-template-rows: 1fr;
     }
   }
@@ -155,32 +165,20 @@ export const StyledRewardSummaryCard = styled.a`
   }
 
   .k-RewardSummaryCard__amount {
-    place-self: center flex-end;
-
-    @media (min-width: ${ScreenConfig.M.min}px) {
-      margin-right: ${pxToRem(10)};
-      margin-top: 0;
-      place-self: center flex-start;
-    }
+    margin-right: ${pxToRem(10)};
+    margin-top: 0;
+    place-self: center flex-start;
   }
 
   .k-RewardSummaryCard__rewardNumber {
-    place-self: center flex-end;
-
-    @media (min-width: ${ScreenConfig.M.min}px) {
-      margin-right: ${pxToRem(10)};
-      margin-top: 0;
-      place-self: center flex-start;
-    }
+    margin-right: ${pxToRem(10)};
+    margin-top: 0;
+    place-self: center flex-start;
   }
 
   .k-RewardSummaryCard__availablity {
-    place-self: center flex-end;
-
-    @media (min-width: ${ScreenConfig.M.min}px) {
-      margin-right: ${pxToRem(10)};
-      margin-top: 0;
-      place-self: center flex-start;
-    }
+    margin-right: ${pxToRem(10)};
+    margin-top: 0;
+    place-self: center flex-start;
   }
 `

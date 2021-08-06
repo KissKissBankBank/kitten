@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text } from '../../../../../components/atoms/typography/text'
+import classNames from 'classnames'
 
 export const RewardNumber = props => {
   return (
@@ -8,7 +9,10 @@ export const RewardNumber = props => {
       weight="light"
       size="tiny"
       {...props}
-      className="k-RewardSummaryCard__rewardNumber"
+      className={classNames(
+        'k-RewardSummaryCard__rewardNumber',
+        'k-u-hidden@s-down',
+      )}
     />
   )
 }
