@@ -72,6 +72,19 @@ const Container = styled.div`
     }
   }
 
+  &.k-ArrowContainer--reverseDistance.k-ArrowContainer--top,
+  &.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom {
+    .k-ArrowContainer__arrow {
+      left: initial;
+      right: var(--k-ArrowContainer-arrowDistance);
+
+      &::before {
+        left: initial;
+        right: calc(var(--k-ArrowContainer-borderSize) * -1);
+      }
+    }
+  }
+
   &.k-ArrowContainer--right .k-ArrowContainer__arrow {
     right: var(--k-ArrowContainer-arrowMainPosition);
     top: var(--k-ArrowContainer-arrowDistance);
@@ -97,6 +110,19 @@ const Container = styled.div`
       border-right-color: var(--k-ArrowContainer-borderColor);
     }
   }
+
+  &.k-ArrowContainer--reverseDistance.k-ArrowContainer--right,
+  &.k-ArrowContainer--reverseDistance.k-ArrowContainer--left {
+    .k-ArrowContainer__arrow {
+      top: initial;
+      bottom: var(--k-ArrowContainer-arrowDistance);
+
+      &::before {
+        top: initial;
+        bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
+      }
+    }
+  }
 `
 
 export const ArrowContainer = ({
@@ -106,6 +132,7 @@ export const ArrowContainer = ({
   size,
   distance,
   distanceAsPercentage,
+  distanceIsReverse,
   position,
   centered,
   padding,
@@ -144,6 +171,7 @@ export const ArrowContainer = ({
         {
           'k-ArrowContainer--hasShadow': shadow,
           'k-ArrowContainer--hasBorder': borderWidth > 0,
+          'k-ArrowContainer--reverseDistance': distanceIsReverse,
         },
       )}
       style={{
@@ -172,6 +200,7 @@ ArrowContainer.propTypes = {
   position: PropTypes.string,
   distance: PropTypes.number,
   distanceAsPercentage: PropTypes.bool,
+  distanceIsReverse: PropTypes.bool,
   centered: PropTypes.bool,
   padding: PropTypes.number,
   shadow: PropTypes.bool,
@@ -186,6 +215,7 @@ ArrowContainer.defaultProps = {
   position: 'left',
   distance: 20,
   distanceAsPercentage: false,
+  distanceIsReverse: false,
   padding: 20,
   centered: false,
   shadow: false,
