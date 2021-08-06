@@ -47,7 +47,7 @@ export const KissKissBankBankNew = () => (
     <KissKissBankBankHeaderNavStoryNew
       isLogged={boolean('Is logged', false)}
       isFixed={boolean('Is fixed', false)}
-      size={select('Size', ['regular', 'small'], 'regular')}
+      size={select('Size', ['regular', 'small'], 'small')}
       borderStyle={select(
         'BorderStyle',
         ['none', 'shadow', 'border'],

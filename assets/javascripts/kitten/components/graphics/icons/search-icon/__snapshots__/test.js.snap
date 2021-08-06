@@ -3,22 +3,18 @@
 exports[`<SearchIcon /> default matches the snapshot 1`] = `
 <svg
   aria-label={null}
+  fill="none"
   height="10"
-  role="img"
-  viewBox="-0.7 -0.7 18 18"
+  viewBox="0 0 15 15"
   width="12"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <circle
-    cx="7"
-    cy="7"
-    fill="none"
-    r="7"
-    stroke="#333"
-    strokeWidth="1.1"
+  <path
+    d="M14.7 13.3l-3.5-3.5a1 1 0 00-1.4 1.4l3.5 3.5a1 1 0 001.4-1.4z"
+    fill="#333"
   />
   <path
-    d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z"
+    d="M6.3 0a6.3 6.3 0 100 12.6A6.3 6.3 0 006.3 0zm0 2a4.3 4.3 0 110 8.6 4.3 4.3 0 010-8.6z"
     fill="#333"
   />
 </svg>
@@ -27,24 +23,20 @@ exports[`<SearchIcon /> default matches the snapshot 1`] = `
 exports[`<SearchIcon /> with some props matches the snapshot 1`] = `
 <svg
   aria-label={null}
+  fill="none"
   height="10"
-  role="img"
-  viewBox="-0.7 -0.7 18 18"
+  viewBox="0 0 15 15"
   width="12"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <circle
-    className="circle-class"
-    cx="7"
-    cy="7"
-    fill="none"
-    r="7"
-    stroke="red"
-    strokeWidth="1.1"
-  />
   <path
     className="path-class"
-    d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z"
+    d="M14.7 13.3l-3.5-3.5a1 1 0 00-1.4 1.4l3.5 3.5a1 1 0 001.4-1.4z"
+    fill="red"
+  />
+  <path
+    className="circle-class"
+    d="M6.3 0a6.3 6.3 0 100 12.6A6.3 6.3 0 006.3 0zm0 2a4.3 4.3 0 110 8.6 4.3 4.3 0 010-8.6z"
     fill="red"
   />
 </svg>
@@ -53,22 +45,18 @@ exports[`<SearchIcon /> with some props matches the snapshot 1`] = `
 exports[`<SearchIcon /> with some props with no \`title\` matches the snapshot 1`] = `
 <svg
   aria-label={null}
+  fill="none"
   height="10"
-  role="img"
-  viewBox="-0.7 -0.7 18 18"
+  viewBox="0 0 15 15"
   width="12"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <circle
-    cx="7"
-    cy="7"
-    fill="none"
-    r="7"
-    stroke="#333"
-    strokeWidth="1.1"
+  <path
+    d="M14.7 13.3l-3.5-3.5a1 1 0 00-1.4 1.4l3.5 3.5a1 1 0 001.4-1.4z"
+    fill="#333"
   />
   <path
-    d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z"
+    d="M6.3 0a6.3 6.3 0 100 12.6A6.3 6.3 0 006.3 0zm0 2a4.3 4.3 0 110 8.6 4.3 4.3 0 010-8.6z"
     fill="#333"
   />
 </svg>
