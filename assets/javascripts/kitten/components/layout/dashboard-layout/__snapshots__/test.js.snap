@@ -102,23 +102,19 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 
 .c0 .k-DashboardLayout__flow__nav__actionsContainer {
   display: grid;
-  margin: 1.25rem 0;
-  gap: 1.25rem;
   grid-template-columns: repeat(2,1fr);
+  gap: 1.25rem;
+  margin: 1.25rem 0;
 }
 
-.c0 .k-DashboardLayout__flow__nav__actionsContainer > * {
+.c0 .k-DashboardLayout__flow__nav__actionsContainer > .k-Button {
   min-width: 0 !important;
   max-width: 11.25rem;
   width: 100%;
 }
 
-.c0 .k-DashboardLayout__flow__nav__actionsContainer > *:last-child {
+.c0 .k-DashboardLayout__flow__nav__actionsContainer > .k-Button:last-child {
   justify-self: end;
-}
-
-.c0 .k-DashboardLayout__flow__nav__actionsContainer > *:first-child:last-child {
-  grid-column: 1 / span 2;
 }
 
 .c0 .k-DashboardLayout__flow__aside__content {
@@ -208,8 +204,16 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout__flow__nav__actionsContainer {
-    margin: 1.25rem 0 1.875rem;
     gap: 2.5rem;
+    margin: 1.25rem 0 1.875rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0 .k-DashboardLayout__flow__nav:not(.k-DashboardLayout__flow__nav--twoButtons) .k-DashboardLayout__flow__nav__actionsContainer > .k-Button {
+    grid-column: 1 / span 2;
+    justify-self: stretch;
+    max-width: 100%;
   }
 }
 
@@ -442,23 +446,19 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 
 .c0 .k-DashboardLayout__flow__nav__actionsContainer {
   display: grid;
-  margin: 1.25rem 0;
-  gap: 1.25rem;
   grid-template-columns: repeat(2,1fr);
+  gap: 1.25rem;
+  margin: 1.25rem 0;
 }
 
-.c0 .k-DashboardLayout__flow__nav__actionsContainer > * {
+.c0 .k-DashboardLayout__flow__nav__actionsContainer > .k-Button {
   min-width: 0 !important;
   max-width: 11.25rem;
   width: 100%;
 }
 
-.c0 .k-DashboardLayout__flow__nav__actionsContainer > *:last-child {
+.c0 .k-DashboardLayout__flow__nav__actionsContainer > .k-Button:last-child {
   justify-self: end;
-}
-
-.c0 .k-DashboardLayout__flow__nav__actionsContainer > *:first-child:last-child {
-  grid-column: 1 / span 2;
 }
 
 .c0 .k-DashboardLayout__flow__aside__content {
@@ -548,8 +548,16 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout__flow__nav__actionsContainer {
-    margin: 1.25rem 0 1.875rem;
     gap: 2.5rem;
+    margin: 1.25rem 0 1.875rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0 .k-DashboardLayout__flow__nav:not(.k-DashboardLayout__flow__nav--twoButtons) .k-DashboardLayout__flow__nav__actionsContainer > .k-Button {
+    grid-column: 1 / span 2;
+    justify-self: stretch;
+    max-width: 100%;
   }
 }
 
