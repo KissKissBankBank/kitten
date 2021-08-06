@@ -31,7 +31,7 @@ exports[`<DocumentsStatusBox /> should match accepted snapshot 1`] = `
     className="k-DocumentsStatusBox__content"
   >
     <p
-      className="k-u-size-tiny k-u-weight-regular k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-single"
+      className="k-u-line-height-1 k-u-size-tiny k-u-weight-regular k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
     >
       Document status: accepted
     </p>
@@ -84,7 +84,7 @@ exports[`<DocumentsStatusBox /> should match denied snapshot 1`] = `
     className="k-DocumentsStatusBox__content"
   >
     <p
-      className="k-u-size-tiny k-u-weight-regular k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-single"
+      className="k-u-line-height-1 k-u-size-tiny k-u-weight-regular k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
     >
       Document status: denied
     </p>
@@ -142,7 +142,7 @@ exports[`<DocumentsStatusBox /> should match empty snapshot 1`] = `
     className="k-DocumentsStatusBox__content"
   >
     <p
-      className="k-u-size-tiny k-u-weight-regular k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-single"
+      className="k-u-line-height-1 k-u-size-tiny k-u-weight-regular k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
     >
       
     </p>
@@ -181,7 +181,7 @@ exports[`<DocumentsStatusBox /> should match wait snapshot 1`] = `
     className="k-DocumentsStatusBox__content"
   >
     <p
-      className="k-u-size-tiny k-u-weight-regular k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-single"
+      className="k-u-line-height-1 k-u-size-tiny k-u-weight-regular k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
     >
       Documents status: awaiting confirmation
     </p>
