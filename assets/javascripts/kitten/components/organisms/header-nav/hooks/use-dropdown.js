@@ -23,7 +23,7 @@ export const useDropdown = ({
     setDropdownExpandedState(currentValue => !currentValue)
   }
 
-  const handleInputChange = (changeEvent) => {
+  const handleInputChange = changeEvent => {
     setDropdownExpandedState(changeEvent.target.value.length > 0)
   }
 

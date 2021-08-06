@@ -191,7 +191,11 @@ export const ComplexWithOrion = () => (
   <Modal
     trigger={<Button modifier="helium">Open</Button>}
     variant="orion"
-    headerTitle={<Text weight="bold" size="giant">Modal title</Text>}
+    headerTitle={
+      <Text weight="bold" size="giant">
+        Modal title
+      </Text>
+    }
     headerActions={OrionHeaderActions}
     headerMessage={
       <Text size="micro" weight="light" cssColor={COLORS.grey1}>

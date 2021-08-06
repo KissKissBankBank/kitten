@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState } from 'react'
 import { action } from '@storybook/addon-actions'
 import HeaderNav from '../index'
 import {
@@ -95,17 +95,17 @@ const Navigation = () => (
       <Badge color={COLORS.primary1} className="k-u-transform-uppercase">
         Nouveau
       </Badge>
-
     </HeaderNav.Nav.Item>
   </>
 )
 
 const SearchInput = () => {
-
   const handleToggle = event => {
     action('handleToggle')(event)
     window.dispatchEvent(
-      new Event(event.isDropdownExpanded ? OPEN_OVERLAY_EVENT : CLOSE_OVERLAY_EVENT),
+      new Event(
+        event.isDropdownExpanded ? OPEN_OVERLAY_EVENT : CLOSE_OVERLAY_EVENT,
+      ),
     )
   }
 
@@ -128,9 +128,7 @@ const SearchInput = () => {
       action="#form-action#"
       method="POST"
     >
-      <p className="k-u-a11y-visuallyHidden">
-        4 résultats ont été trouvés
-      </p>
+      <p className="k-u-a11y-visuallyHidden">4 résultats ont été trouvés</p>
       <FlexWrapper gap={5} padding={15}>
         <HorizontalCrowdfundingCard
           title="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
@@ -221,7 +219,7 @@ const SearchInput = () => {
         fluid
         className="k-u-margin-bottom-double k-u-margin-horizontal-double"
         style={{
-          width: 'calc(100% - 40px)'
+          width: 'calc(100% - 40px)',
         }}
       >
         Voir les résultats de la recherche
@@ -249,10 +247,7 @@ export const KissKissBankBankHeaderNavStoryNew = ({
 
   return (
     <>
-      <Overlay
-        zIndex={1}
-        position="fixed"
-      />
+      <Overlay zIndex={1} position="fixed" />
 
       <HeaderNav
         id={HEADER_NAV_ID}
