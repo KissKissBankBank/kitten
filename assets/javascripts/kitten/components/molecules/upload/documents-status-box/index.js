@@ -90,9 +90,10 @@ export const DocumentsStatusBox = ({
       <div className="k-DocumentsStatusBox__content">
         <Text
           as="p"
-          className="k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-single"
+          className="k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
           weight="regular"
           size="tiny"
+          lineHeight={1}
         >
           {title}
         </Text>

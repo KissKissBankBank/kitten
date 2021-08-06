@@ -60,6 +60,18 @@ exports[`<ArrowContainer /> with \`borderColor\` prop matches with snapshot 1`] 
   border-top-color: var(--k-ArrowContainer-borderColor);
 }
 
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
   right: var(--k-ArrowContainer-arrowMainPosition);
   top: var(--k-ArrowContainer-arrowDistance);
@@ -84,6 +96,18 @@ exports[`<ArrowContainer /> with \`borderColor\` prop matches with snapshot 1`] 
   left: var(--k-ArrowContainer-arrowBorderMainPosition);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
 }
 
 <div
@@ -169,6 +193,18 @@ exports[`<ArrowContainer /> with \`borderRadius\` prop matches with snapshot 1`]
   border-top-color: var(--k-ArrowContainer-borderColor);
 }
 
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
   right: var(--k-ArrowContainer-arrowMainPosition);
   top: var(--k-ArrowContainer-arrowDistance);
@@ -193,6 +229,18 @@ exports[`<ArrowContainer /> with \`borderRadius\` prop matches with snapshot 1`]
   left: var(--k-ArrowContainer-arrowBorderMainPosition);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
 }
 
 <div
@@ -278,6 +326,18 @@ exports[`<ArrowContainer /> with \`borderWidth\` prop matches with snapshot 1`] 
   border-top-color: var(--k-ArrowContainer-borderColor);
 }
 
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
   right: var(--k-ArrowContainer-arrowMainPosition);
   top: var(--k-ArrowContainer-arrowDistance);
@@ -302,6 +362,18 @@ exports[`<ArrowContainer /> with \`borderWidth\` prop matches with snapshot 1`] 
   left: var(--k-ArrowContainer-arrowBorderMainPosition);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
 }
 
 <div
@@ -387,6 +459,18 @@ exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
   border-top-color: var(--k-ArrowContainer-borderColor);
 }
 
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
   right: var(--k-ArrowContainer-arrowMainPosition);
   top: var(--k-ArrowContainer-arrowDistance);
@@ -411,6 +495,18 @@ exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
   left: var(--k-ArrowContainer-arrowBorderMainPosition);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
 }
 
 <div
@@ -496,6 +592,18 @@ exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
   border-top-color: var(--k-ArrowContainer-borderColor);
 }
 
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
   right: var(--k-ArrowContainer-arrowMainPosition);
   top: var(--k-ArrowContainer-arrowDistance);
@@ -520,6 +628,18 @@ exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
   left: var(--k-ArrowContainer-arrowBorderMainPosition);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
 }
 
 <div
@@ -605,6 +725,18 @@ exports[`<ArrowContainer /> with \`distance\` and \`distanceAsPercentage\` prop 
   border-top-color: var(--k-ArrowContainer-borderColor);
 }
 
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
   right: var(--k-ArrowContainer-arrowMainPosition);
   top: var(--k-ArrowContainer-arrowDistance);
@@ -629,6 +761,18 @@ exports[`<ArrowContainer /> with \`distance\` and \`distanceAsPercentage\` prop 
   left: var(--k-ArrowContainer-arrowBorderMainPosition);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
 }
 
 <div
@@ -714,6 +858,18 @@ exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
   border-top-color: var(--k-ArrowContainer-borderColor);
 }
 
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
   right: var(--k-ArrowContainer-arrowMainPosition);
   top: var(--k-ArrowContainer-arrowDistance);
@@ -738,6 +894,18 @@ exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
   left: var(--k-ArrowContainer-arrowBorderMainPosition);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
 }
 
 <div
@@ -823,6 +991,18 @@ exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
   border-top-color: var(--k-ArrowContainer-borderColor);
 }
 
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
   right: var(--k-ArrowContainer-arrowMainPosition);
   top: var(--k-ArrowContainer-arrowDistance);
@@ -847,6 +1027,18 @@ exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
   left: var(--k-ArrowContainer-arrowBorderMainPosition);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
 }
 
 <div
@@ -932,6 +1124,18 @@ exports[`<ArrowContainer /> with \`shadow\` prop matches with snapshot 1`] = `
   border-top-color: var(--k-ArrowContainer-borderColor);
 }
 
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
   right: var(--k-ArrowContainer-arrowMainPosition);
   top: var(--k-ArrowContainer-arrowDistance);
@@ -956,6 +1160,18 @@ exports[`<ArrowContainer /> with \`shadow\` prop matches with snapshot 1`] = `
   left: var(--k-ArrowContainer-arrowBorderMainPosition);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
 }
 
 <div
@@ -1041,6 +1257,18 @@ exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
   border-top-color: var(--k-ArrowContainer-borderColor);
 }
 
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
   right: var(--k-ArrowContainer-arrowMainPosition);
   top: var(--k-ArrowContainer-arrowDistance);
@@ -1065,6 +1293,18 @@ exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
   left: var(--k-ArrowContainer-arrowBorderMainPosition);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
 }
 
 <div
@@ -1150,6 +1390,18 @@ exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
   border-top-color: var(--k-ArrowContainer-borderColor);
 }
 
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
   right: var(--k-ArrowContainer-arrowMainPosition);
   top: var(--k-ArrowContainer-arrowDistance);
@@ -1174,6 +1426,18 @@ exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
   left: var(--k-ArrowContainer-arrowBorderMainPosition);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
 }
 
 <div
@@ -1259,6 +1523,18 @@ exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
   border-top-color: var(--k-ArrowContainer-borderColor);
 }
 
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
   right: var(--k-ArrowContainer-arrowMainPosition);
   top: var(--k-ArrowContainer-arrowDistance);
@@ -1283,6 +1559,18 @@ exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
   left: var(--k-ArrowContainer-arrowBorderMainPosition);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c0.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
 }
 
 <article

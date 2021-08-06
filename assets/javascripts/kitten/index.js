@@ -120,6 +120,7 @@ export { DotIcon } from './components/graphics/icons/dot-icon'
 export { DoubleArrowIcon } from './components/graphics/icons/double-arrow-icon'
 export { DownloadIcon } from './components/graphics/icons/download-icon'
 export { EditIcon } from './components/graphics/icons/edit-icon'
+export { EllipsisIcon } from './components/graphics/icons/ellipsis-icon'
 export { EmailIcon } from './components/graphics/icons/email-icon'
 export { EmbedIcon } from './components/graphics/icons/embed-icon'
 export { ExportIcon } from './components/graphics/icons/export-icon'
@@ -305,6 +306,7 @@ export { SimpleCarousel } from './components/molecules/carousels/simple-carousel
 // Molecules/Expand
 export { Accordeon } from './components/molecules/expand/accordeon'
 export { Details } from './components/molecules/expand/details'
+export { DropdownMenu } from './components/molecules/expand/dropdown-menu'
 export { ExpandBoard } from './components/molecules/expand/expand-board'
 
 // Molecules/Upload
