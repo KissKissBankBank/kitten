@@ -107,6 +107,10 @@ const StyledDocumentsDropUploader = styled.div`
   .k-DocumentsDropUploader__info {
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-2)};
+
+    &:empty {
+      display: none;
+    }
   }
   .k-DocumentsDropUploader__info {
     color: ${COLORS.grey1};

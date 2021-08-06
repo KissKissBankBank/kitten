@@ -6,7 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `HorizontalCrowdfundingCard`: Fix mobile style for `progress`.
 - Feature: Change `XXS`/`XS` boundary to 400px, from 480px.
-- Feature: `DocumentsDropUploader` Hide files with errors.
+- Feature: `DocumentsDropUploader`: Hide files with errors.
+- Feature: `DocumentsDropUploader`: New `managerInfo` prop.
 
 ## [4.1.0] - 2021-08-02
 
