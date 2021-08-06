@@ -22,8 +22,8 @@ var Centered = function Centered(_ref) {
       className = _ref.className,
       display = _ref.display,
       props = (0, _objectWithoutProperties2.default)(_ref, ["children", "className", "display"]);
-  var classNameProps = (0, _classnames.default)('k-HeaderNav--centered', {
-    'k-HeaderNav--column': display === 'column'
+  var classNameProps = (0, _classnames.default)('k-HeaderNav__centered', {
+    'k-HeaderNav__column': display === 'column'
   }, className);
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, props, {
     className: classNameProps

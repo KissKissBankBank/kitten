@@ -49,6 +49,8 @@ var _hidden = require("./components/hidden");
 
 var _quickAccessLink = require("./components/quick-access-link");
 
+var _searchInput = require("./components/search-input");
+
 var _usePreviousHook = require("../../../helpers/utils/use-previous-hook");
 
 var _styles = require("./styles");
@@ -79,11 +81,6 @@ var HeaderNav = function HeaderNav(_ref) {
       stickyState = _useState6[0],
       setStickyState = _useState6[1];
 
-  var _useState7 = (0, _react.useState)(null),
-      _useState8 = (0, _slicedToArray2.default)(_useState7, 2),
-      isBackgroundInactive = _useState8[0],
-      setBackgroundInactive = _useState8[1];
-
   var stickyContainerRef = (0, _react.useRef)(null);
   var headerRef = (0, _react.useRef)(null);
   var previousStickyState = (0, _usePreviousHook.usePrevious)(stickyState);
@@ -103,9 +100,6 @@ var HeaderNav = function HeaderNav(_ref) {
   (0, _react.useEffect)(function () {
     setStickyState(isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp');
   }, [isFixed, isMenuExpanded]);
-  (0, _react.useEffect)(function () {
-    setBackgroundInactive(/UserMenu/.test(menuExpandBy));
-  }, [menuExpandBy]);
   return /*#__PURE__*/_react.default.createElement(_context.Context.Provider, {
     value: {
       isLogged: isLogged,
@@ -120,8 +114,7 @@ var HeaderNav = function HeaderNav(_ref) {
     },
     zIndex: zIndexConfig,
     className: (0, _classnames.default)('k-HeaderNav__wrapper', "k-HeaderNav--".concat(size), "k-HeaderNav--".concat(borderStyle), {
-      'k-HeaderNav--menuIsExpanded': isMenuExpanded,
-      'k-HeaderNav--inactiveBackground': isBackgroundInactive
+      'k-HeaderNav--menuIsExpanded': isMenuExpanded
     })
   }, /*#__PURE__*/_react.default.createElement(_stickyContainer.StickyContainer, (0, _extends2.default)({
     ref: stickyContainerRef,
@@ -147,6 +140,7 @@ HeaderNav.Centered = _centered.Centered;
 HeaderNav.LoggedOut = _loggedOut.LoggedOut;
 HeaderNav.Logged = _logged.Logged;
 HeaderNav.Hidden = _hidden.Hidden;
+HeaderNav.SearchInput = _searchInput.SearchInput;
 HeaderNav.propTypes = {
   id: _propTypes.default.string,
   isFixed: _propTypes.default.bool,

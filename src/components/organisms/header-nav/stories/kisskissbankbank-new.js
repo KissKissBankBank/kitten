@@ -13,6 +13,8 @@ var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/sli
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _addonActions = require("@storybook/addon-actions");
+
 var _index = _interopRequireDefault(require("../index"));
 
 var _ = require("../../../..");
@@ -107,7 +109,122 @@ var Navigation = function Navigation() {
   }, "Lancez votre projet"), /*#__PURE__*/_react.default.createElement(_index.default.Nav.Item, {
     href: "#",
     className: "is-selected"
-  }, "D\xE9couvrez les projets"));
+  }, "D\xE9couvrez les projets"), /*#__PURE__*/_react.default.createElement(_index.default.Nav.Item, {
+    href: "#"
+  }, "Carte Cadeau\xA0", /*#__PURE__*/_react.default.createElement(_.Badge, {
+    color: _.COLORS.primary1,
+    className: "k-u-transform-uppercase"
+  }, "Nouveau")));
+};
+
+var SearchInput = function SearchInput() {
+  var handleToggle = function handleToggle(event) {
+    (0, _addonActions.action)('handleToggle')(event);
+    window.dispatchEvent(new Event(event.isDropdownExpanded ? _.OPEN_OVERLAY_EVENT : _.CLOSE_OVERLAY_EVENT));
+  };
+
+  var handleInputChange = function handleInputChange(event) {
+    (0, _addonActions.action)('handleInputChange')(event);
+  };
+
+  return /*#__PURE__*/_react.default.createElement(_index.default.SearchInput, {
+    onMenuToggle: handleToggle,
+    searchInputProps: {
+      placeholder: 'Rechercher un projet…',
+      'aria-label': 'Rechercher un projet',
+      onChange: handleInputChange
+    },
+    searchButtonProps: {
+      type: 'submit',
+      'aria-label': 'Voir les résultats de la recherche'
+    },
+    action: "#form-action#",
+    method: "POST"
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    className: "k-u-a11y-visuallyHidden"
+  }, "4 r\xE9sultats ont \xE9t\xE9 trouv\xE9s"), /*#__PURE__*/_react.default.createElement(_.FlexWrapper, {
+    gap: 5,
+    padding: 15
+  }, /*#__PURE__*/_react.default.createElement(_.HorizontalCrowdfundingCard, {
+    title: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+    description: "Maecenas sed diam eget risus varius blandit sit amet non magna.",
+    progress: 37,
+    progressColor: _.COLORS.primary1,
+    info: /*#__PURE__*/_react.default.createElement("div", {
+      className: "k-u-flex k-u-flex-alignItems-center"
+    }, /*#__PURE__*/_react.default.createElement(_.ClockCircleIcon, {
+      width: "12",
+      height: "12",
+      color: _.COLORS.background1,
+      bgColor: _.COLORS.primary1,
+      className: "k-u-margin-right-noneHalf"
+    }), /*#__PURE__*/_react.default.createElement(_.Text, {
+      weight: "regular",
+      size: "micro",
+      color: "primary1"
+    }, "Dernier jour\xA0!"))
+  }), /*#__PURE__*/_react.default.createElement(_.HorizontalCrowdfundingCard, {
+    title: "Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
+    description: "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.",
+    progress: 100,
+    progressColor: _.COLORS.valid,
+    info: /*#__PURE__*/_react.default.createElement("div", {
+      className: "k-u-flex k-u-flex-alignItems-center"
+    }, /*#__PURE__*/_react.default.createElement(_.CheckedCircleIcon, {
+      width: "12",
+      height: "12",
+      color: _.COLORS.background1,
+      bgColor: _.COLORS.valid,
+      className: "k-u-margin-right-noneHalf"
+    }), /*#__PURE__*/_react.default.createElement(_.Text, {
+      weight: "regular",
+      size: "micro",
+      color: "font1"
+    }, "R\xE9ussi"))
+  }), /*#__PURE__*/_react.default.createElement(_.HorizontalCrowdfundingCard, {
+    title: "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.",
+    description: "Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
+    progress: 21,
+    progressColor: _.COLORS.primary1,
+    info: /*#__PURE__*/_react.default.createElement("div", {
+      className: "k-u-flex k-u-flex-alignItems-center"
+    }, /*#__PURE__*/_react.default.createElement(_.ClockCircleIcon, {
+      width: "12",
+      height: "12",
+      color: _.COLORS.background1,
+      bgColor: _.COLORS.primary1,
+      className: "k-u-margin-right-noneHalf"
+    }), /*#__PURE__*/_react.default.createElement(_.Text, {
+      weight: "regular",
+      size: "micro"
+    }, "En cours"))
+  }), /*#__PURE__*/_react.default.createElement(_.HorizontalCrowdfundingCard, {
+    title: "Maecenas sed diam eget risus varius blandit sit amet non magna.",
+    description: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+    progress: 60,
+    progressColor: _.COLORS.primary1,
+    info: /*#__PURE__*/_react.default.createElement("div", {
+      className: "k-u-flex k-u-flex-alignItems-center"
+    }, /*#__PURE__*/_react.default.createElement(_.ClockCircleIcon, {
+      width: "12",
+      height: "12",
+      color: _.COLORS.background1,
+      bgColor: _.COLORS.primary1,
+      className: "k-u-margin-right-noneHalf"
+    }), /*#__PURE__*/_react.default.createElement(_.Text, {
+      weight: "regular",
+      size: "micro"
+    }, "En cours"))
+  })), /*#__PURE__*/_react.default.createElement(_.Button, {
+    size: "tiny",
+    variant: "orion",
+    type: "submit",
+    fluid: true,
+    className: "k-u-margin-bottom-double k-u-margin-horizontal-double",
+    style: {
+      width: 'calc(100% - 40px)'
+    }
+  }, "Voir les r\xE9sultats de la recherche"));
 };
 
 var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNavStoryNew(_ref) {
@@ -125,7 +242,10 @@ var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNavStoryN
   (0, _.useDeepCompareEffect)(function () {
     setBurgerMenuWidth(getComputedLeft("".concat(HEADER_NAV_ID, "PlateformMenu")) + getComputedWidthElement("".concat(HEADER_NAV_ID, "PlateformMenu")) + getComputedWidthElement("".concat(HEADER_NAV_ID, "Logo")));
   }, [isLogged, windowWidth]);
-  return /*#__PURE__*/_react.default.createElement(_index.default, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_.Overlay, {
+    zIndex: 1,
+    position: "fixed"
+  }), /*#__PURE__*/_react.default.createElement(_index.default, {
     id: HEADER_NAV_ID,
     isLogged: isLogged,
     isFixed: isFixed,
@@ -148,28 +268,16 @@ var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNavStoryN
     max: "xxs"
   }, /*#__PURE__*/_react.default.createElement(_.KissKissBankBankLogo, null))), /*#__PURE__*/_react.default.createElement(_index.default.Hidden, {
     max: "m"
-  }, /*#__PURE__*/_react.default.createElement(_index.default.Nav, null, /*#__PURE__*/_react.default.createElement(Navigation, null))), /*#__PURE__*/_react.default.createElement(_index.default.Right, null, /*#__PURE__*/_react.default.createElement(_index.default.Button, {
-    icon: /*#__PURE__*/_react.default.createElement(_.SearchIcon, {
-      width: "14",
-      height: "14",
-      color: _.COLORS.font1
-    }),
-    backgroundColor: _.COLORS.background1,
-    backgroundColorHover: _.COLORS.line1,
-    color: _.COLORS.font1,
-    text: "Rechercher",
-    href: "#",
-    hiddenText: {
-      max: 'm'
-    }
-  }), /*#__PURE__*/_react.default.createElement(_index.default.Logged, null, /*#__PURE__*/_react.default.createElement(_index.default.UserMenuNext, {
+  }, /*#__PURE__*/_react.default.createElement(_index.default.Nav, null, /*#__PURE__*/_react.default.createElement(Navigation, null))), /*#__PURE__*/_react.default.createElement(_index.default.Right, {
+    padded: true
+  }, /*#__PURE__*/_react.default.createElement(SearchInput, null), /*#__PURE__*/_react.default.createElement(_index.default.Logged, null, /*#__PURE__*/_react.default.createElement(_index.default.UserMenuNext, {
     dropdownAnchorSide: "right",
-    mobilePadding: false
+    padding: false
   }, /*#__PURE__*/_react.default.createElement(_index.default.UserMenuNext.Button, {
     hasArrow: true,
     backgroundColor: _.COLORS.background1,
-    backgroundColorHover: _.COLORS.line1,
-    backgroundColorActive: _.COLORS.line1,
+    backgroundColorHover: "transparent",
+    backgroundColorActive: "transparent",
     color: _.COLORS.font1,
     colorHover: _.COLORS.primary1,
     colorActive: _.COLORS.font1
@@ -195,7 +303,7 @@ var KissKissBankBankHeaderNavStoryNew = function KissKissBankBankHeaderNavStoryN
     hiddenText: {
       max: 'xs'
     }
-  }))));
+  })))));
 };
 
 exports.KissKissBankBankHeaderNavStoryNew = KissKissBankBankHeaderNavStoryNew;

@@ -1,3 +1,4 @@
+import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
@@ -7,11 +8,18 @@ export var useDropdown = function useDropdown(_ref) {
       callOnToggle = _ref.callOnToggle,
       closeEvents = _ref.closeEvents,
       isExpanded = _ref.isExpanded,
-      buttonId = _ref.buttonId,
-      menuId = _ref.menuId;
+      _ref$buttonId = _ref.buttonId,
+      buttonId = _ref$buttonId === void 0 ? 'button' : _ref$buttonId,
+      _ref$inputId = _ref.inputId,
+      inputId = _ref$inputId === void 0 ? 'input' : _ref$inputId,
+      _ref$menuId = _ref.menuId,
+      menuId = _ref$menuId === void 0 ? 'menu' : _ref$menuId,
+      _ref$dropdownClass = _ref.dropdownClass,
+      dropdownClass = _ref$dropdownClass === void 0 ? 'k-HeaderNavDropdown' : _ref$dropdownClass;
   var dropdownRef = useRef(null);
   var dropdownContentRef = useRef(null);
   var dropdownButtonRef = useRef(null);
+  var dropdownInputRef = useRef(null);
 
   var _useState = useState(!!isExpanded),
       _useState2 = _slicedToArray(_useState, 2),
@@ -22,6 +30,10 @@ export var useDropdown = function useDropdown(_ref) {
     setDropdownExpandedState(function (currentValue) {
       return !currentValue;
     });
+  };
+
+  var handleInputChange = function handleInputChange(changeEvent) {
+    setDropdownExpandedState(changeEvent.target.value.length > 0);
   };
 
   var closeDropdown = function closeDropdown() {
@@ -78,9 +90,7 @@ export var useDropdown = function useDropdown(_ref) {
   var dropdownProps = {
     ref: dropdownRef,
     'aria-live': 'polite',
-    className: classNames('k-HeaderNavDropdown', {
-      'k-HeaderNavDropdown--isExpanded': isDropdownExpanded
-    })
+    className: classNames(dropdownClass, _defineProperty({}, "".concat(dropdownClass, "--isExpanded"), isDropdownExpanded))
   };
   var buttonProps = {
     ref: dropdownButtonRef,
@@ -88,13 +98,20 @@ export var useDropdown = function useDropdown(_ref) {
     'aria-controls': menuId,
     isExpanded: isDropdownExpanded,
     onClick: handleButtonClick,
-    className: 'k-HeaderNavDropdown__button'
+    className: "".concat(dropdownClass, "__button")
+  };
+  var inputProps = {
+    ref: dropdownInputRef,
+    id: inputId,
+    isExpanded: isDropdownExpanded,
+    onChange: handleInputChange,
+    className: "".concat(dropdownClass, "__input")
   };
   var returnedWidth = dropdownContentWidth === NaN ? null : dropdownContentWidth;
   var menuProps = {
     ref: dropdownContentRef,
     id: menuId,
-    className: classNames('k-HeaderNavDropdown__menu', "k-HeaderNavDropdown__menu--is-".concat(dropdownAnchorSide || 'left')),
+    className: classNames("".concat(dropdownClass, "__menu"), "".concat(dropdownClass, "__menu--is-").concat(dropdownAnchorSide || 'left')),
     style: {
       width: returnedWidth
     },
@@ -104,6 +121,13 @@ export var useDropdown = function useDropdown(_ref) {
     dropdownProps: dropdownProps,
     buttonProps: buttonProps,
     menuProps: menuProps,
-    isDropdownExpanded: isDropdownExpanded
+    isDropdownExpanded: isDropdownExpanded,
+    inputProps: inputProps,
+    openDropdown: function openDropdown() {
+      return setDropdownExpandedState(true);
+    },
+    closeDropdown: function closeDropdown() {
+      return setDropdownExpandedState(false);
+    }
   };
 };
