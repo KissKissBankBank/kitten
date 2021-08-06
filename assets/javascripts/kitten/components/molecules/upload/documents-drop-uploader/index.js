@@ -9,7 +9,6 @@ import { UploadIcon } from '../../../../components/graphics/icons/upload-icon'
 import { CrossIcon } from '../../../../components/graphics/icons/cross-icon'
 import { Text } from '../../../../components/atoms/typography/text'
 import { Tag } from '../../../../components/atoms/tag'
-import difference from 'lodash/fp/difference'
 
 const StyledDocumentsDropUploader = styled.div`
   border-radius: ${pxToRem(8)};
@@ -187,7 +186,6 @@ export const DocumentsDropUploader = ({
   const [isDraggingOver, setDraggingOver] = useState(false)
   const [fileList, setFileList] = useState(initialValue)
   const [errorList, setErrorList] = useState([])
-  const [fileListWithoutErrors, setFileListWithoutErrors] = useState([])
   const [internalErrorMessageList, setErrorMessageList] = useState([
     errorMessageList,
   ])
@@ -235,73 +233,75 @@ export const DocumentsDropUploader = ({
   }
 
   useEffect(() => {
-    let isValid = true
-    setErrorMessageList([])
-    setErrorList([])
-
-    if (fileList.length === 0) return setInternalStatus(status)
-
-    setInternalStatus('manage')
-
-    fileList.forEach(file => {
-      if ('File' in window && file instanceof File) {
-        if (
-          acceptedMimeTypes.length > 0 &&
-          !acceptedMimeTypes.includes(file.type)
-        ) {
-          setErrorMessageList(current => [...current, typeErrorText(file.name)])
-          setInternalStatus('error')
-          setErrorList(current => [
-            ...current,
-            {
-              file,
-              error: typeErrorText(file.name),
-            },
-          ])
-          isValid = false
-        }
-
-        if (!!acceptedFileSize && file.size > acceptedFileSize) {
-          setErrorMessageList(current => [...current, sizeErrorText(file.name)])
-          setInternalStatus('error')
-          setErrorList(current => [
-            ...current,
-            {
-              file,
-              error: sizeErrorText(file.name),
-            },
-          ])
-          isValid = false
-        }
+    if (fileList.length === 0) {
+      setInternalStatus(status)
+    } else {
+      if (errorList.length === 0) {
+        setInternalStatus('manage')
+        onChange(fileList)
       }
-    })
+    }
   }, [fileList])
 
   useEffect(() => {
-    setFileListWithoutErrors(
-      difference(fileList)(errorList.map(error => error.file))
-    )
-
-    if (errorList.length === 0) return
-
-    onError(errorList)
+    if (errorList.length !== 0) {
+      onError(errorList)
+    }
   }, [errorList])
-
-  useEffect(() => {
-    onChange(fileListWithoutErrors)
-  }, [fileListWithoutErrors])
 
   const removeFilesFromList = file => {
     setFileList(currentList => currentList.filter(item => item !== file))
   }
 
   const addFilesToList = files => {
+    setErrorMessageList([])
+    setErrorList([])
+
     setFileList(currentList => {
       const newList = [...currentList]
 
       files.forEach(file => {
-        if (currentList.indexOf(file) === -1) {
-          newList.push(file)
+        let isValid = true
+
+        if ('File' in window && file instanceof File) {
+          if (
+            acceptedMimeTypes.length > 0 &&
+            !acceptedMimeTypes.includes(file.type)
+          ) {
+            setErrorMessageList(current => [
+              ...current,
+              typeErrorText(file.name),
+            ])
+            setInternalStatus('error')
+            setErrorList(current => [
+              ...current,
+              {
+                file,
+                error: typeErrorText(file.name),
+              },
+            ])
+            isValid = false
+          }
+
+          if (!!acceptedFileSize && file.size > acceptedFileSize) {
+            setErrorMessageList(current => [
+              ...current,
+              sizeErrorText(file.name),
+            ])
+            setInternalStatus('error')
+            setErrorList(current => [
+              ...current,
+              {
+                file,
+                error: sizeErrorText(file.name),
+              },
+            ])
+            isValid = false
+          }
+
+          if (isValid) {
+            newList.push(file)
+          }
         }
       })
 
@@ -340,11 +340,11 @@ export const DocumentsDropUploader = ({
             <div className="k-DocumentsDropUploader__text">{managerText}</div>
           )}
 
-          {fileListWithoutErrors.length > 0 && (
+          {fileList.length > 0 && (
             <ul className="k-DocumentsDropUploader__fileList">
               {['error', 'manage'].includes(internalStatus) && (
                 <>
-                  {fileListWithoutErrors.map((file, index) => (
+                  {fileList.map((file, index) => (
                     <Tag
                       key={file.name + index}
                       as="li"
