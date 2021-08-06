@@ -19,7 +19,7 @@ const ListStyles = createGlobalStyle`
     display: flex;
     gap: ${pxToRem(15)};
     align-items: center;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition: opacity 0.2s ease;
 
     &.gu-unselectable {
       user-select: none !important;
@@ -35,8 +35,6 @@ const ListStyles = createGlobalStyle`
       margin: 0 !important;
       z-index: 9999 !important;
       opacity: 0.9;
-      transform: rotate(3deg);
-      transform-origin: ${pxToRem(20)} 50%;
     }
 
     &.gu-hide {
