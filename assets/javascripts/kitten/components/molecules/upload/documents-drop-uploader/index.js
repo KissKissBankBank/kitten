@@ -72,7 +72,7 @@ const StyledDocumentsDropUploader = styled.div`
   }
 
   &.k-DocumentsDropUploader--error {
-    border-color: ${COLORS.error2};
+    border-color: ${COLORS.error3};
   }
 
   &.k-DocumentsDropUploader--disabled {
