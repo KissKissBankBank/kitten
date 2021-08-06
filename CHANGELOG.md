@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `DocumentsStatusBox`: Fix style.
 - Feature: Add `DropdownMenu` molecule component.
 - Feature: Add `EllipsisIcon` icon.
 - Feature: `ArrowContainer`: Add `distanceIsReverse` boolean prop, defaults to `false`.
