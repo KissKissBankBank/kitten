@@ -7,17 +7,24 @@ export const useDropdown = ({
   callOnToggle,
   closeEvents,
   isExpanded,
-  buttonId,
-  menuId,
+  buttonId = 'button',
+  inputId = 'input',
+  menuId = 'menu',
+  dropdownClass = 'k-HeaderNavDropdown',
 }) => {
   const dropdownRef = useRef(null)
   const dropdownContentRef = useRef(null)
   const dropdownButtonRef = useRef(null)
+  const dropdownInputRef = useRef(null)
 
   const [isDropdownExpanded, setDropdownExpandedState] = useState(!!isExpanded)
 
   const handleButtonClick = () => {
     setDropdownExpandedState(currentValue => !currentValue)
+  }
+
+  const handleInputChange = (changeEvent) => {
+    setDropdownExpandedState(changeEvent.target.value.length > 0)
   }
 
   const closeDropdown = () => {
@@ -80,8 +87,8 @@ export const useDropdown = ({
   const dropdownProps = {
     ref: dropdownRef,
     'aria-live': 'polite',
-    className: classNames('k-HeaderNavDropdown', {
-      'k-HeaderNavDropdown--isExpanded': isDropdownExpanded,
+    className: classNames(dropdownClass, {
+      [`${dropdownClass}--isExpanded`]: isDropdownExpanded,
     }),
   }
 
@@ -91,7 +98,15 @@ export const useDropdown = ({
     'aria-controls': menuId,
     isExpanded: isDropdownExpanded,
     onClick: handleButtonClick,
-    className: 'k-HeaderNavDropdown__button',
+    className: `${dropdownClass}__button`,
+  }
+
+  const inputProps = {
+    ref: dropdownInputRef,
+    id: inputId,
+    isExpanded: isDropdownExpanded,
+    onChange: handleInputChange,
+    className: `${dropdownClass}__input`,
   }
 
   const returnedWidth =
@@ -101,8 +116,8 @@ export const useDropdown = ({
     ref: dropdownContentRef,
     id: menuId,
     className: classNames(
-      'k-HeaderNavDropdown__menu',
-      `k-HeaderNavDropdown__menu--is-${dropdownAnchorSide || 'left'}`,
+      `${dropdownClass}__menu`,
+      `${dropdownClass}__menu--is-${dropdownAnchorSide || 'left'}`,
     ),
     style: {
       width: returnedWidth,
@@ -115,5 +130,8 @@ export const useDropdown = ({
     buttonProps,
     menuProps,
     isDropdownExpanded,
+    inputProps,
+    openDropdown: () => setDropdownExpandedState(true),
+    closeDropdown: () => setDropdownExpandedState(false),
   }
 }

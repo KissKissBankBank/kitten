@@ -60,17 +60,17 @@ export const StyledHeader = styled.header`
       box-sizing: border-box;
     }
 
-    *:focus {
+    *:not(input):focus {
       outline-offset: ${pxToRem(-2)};
 
       outline-width: ${pxToRem(2)};
       outline-style: solid;
       outline-color: ${COLORS.primary4};
     }
-    *:focus:not(:focus-visible) {
+    *:not(input):focus:not(:focus-visible) {
       outline-color: transparent;
     }
-    *:focus-visible {
+    *:not(input):focus-visible {
       outline-color: ${COLORS.primary4};
     }
   }
@@ -96,6 +96,7 @@ export const StyledHeader = styled.header`
     align-items: center;
     left: -100%;
     top: 0;
+    bottom: 0;
     z-index: var(--HeaderNav_quickAccessLink_zIndex, 2);
     padding: 0 ${pxToRem(30)};
     background-color: ${COLORS.background1};
@@ -167,24 +168,41 @@ export const StyledHeader = styled.header`
     }
   }
 
-  .k-HeaderNav--right,
-  .k-HeaderNav--centered {
+  .k-HeaderNav__right,
+  .k-HeaderNav__centered {
     display: flex;
     height: 100%;
     align-items: center;
   }
 
-  .k-HeaderNav--right {
+  .k-HeaderNav__right {
     justify-content: flex-end;
     flex-grow: 1;
+
+    &.k-HeaderNav__right--padded {
+      padding-right: ${pxToRem(10)};
+      gap: ${pxToRem(10)};
+
+      .k-HeaderNav__Button:last-child {
+        margin-right: ${pxToRem(-10)};
+      }
+      @media (min-width: ${ScreenConfig.S.min}) {
+        padding-right: ${pxToRem(15)};
+        gap: ${pxToRem(15)};
+
+        .k-HeaderNav__Button:last-child {
+          margin-right: ${pxToRem(-15)};
+        }
+      }
+    }
   }
 
-  .k-HeaderNav--centered {
+  .k-HeaderNav__centered {
     justify-content: center;
     flex-grow: 100;
   }
 
-  .k-HeaderNav--column {
+  .k-HeaderNav__column {
     flex-direction: column;
   }
 
@@ -513,6 +531,111 @@ export const StyledHeader = styled.header`
     }
 
     &.k-HeaderNavDropdown--isExpanded .k-HeaderNavDropdown__menu {
+      margin-top: 0;
+      visibility: visible;
+      opacity: 1;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+  }
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    .k-HeaderNav__right--padded .k-HeaderNavDropdown__menu {
+      margin-left: ${pxToRem(-15)};
+      margin-right: ${pxToRem(-15)};
+    }
+  }
+
+  .k-HeaderNav__searchInput {
+    position: relative;
+    transition: max-width 0.2s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    > * {
+      flex: 1 1 auto;
+    }
+
+    .k-Form-TextInput {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      ${TYPOGRAPHY.fontStyles.light};
+      width: 100%;
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      flex: 0 0 auto;
+
+      &.k-HeaderNav__searchInput--mobileInvisible .k-Form-TextInputWithButton {
+        display: none;
+      }
+      .k-HeaderNav__searchInput__mobileFold {
+        flex: 0 0 auto;
+        padding-left: ${pxToRem(8)};
+        padding-right: ${pxToRem(13)};
+        display: inline-flex;
+        align-items: center;
+        align-self: stretch;
+      }
+      &:not(.k-HeaderNav__searchInput--mobileInvisible) {
+        background: ${COLORS.background1};
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-left: ${pxToRem(20)};
+      }
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      flex: 1 0 auto;
+      max-width: min(100%, ${pxToRem(500)});
+
+      .k-HeaderNav__searchInput__mobileFold {
+        display: none;
+      }
+    }
+  }
+
+  .k-HeaderNav__floatingDropdown {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    min-width: fit-content;
+
+    background-color: ${COLORS.background1};
+
+    z-index: 20;
+
+    margin-top: ${pxToRem(-10)};
+    visibility: hidden;
+    opacity: 0;
+
+    transition: margin 0.2s, visibility 0.2s, opacity 0.2s;
+
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      top: 100%;
+      max-height: calc(100vh - 100%);
+      max-width: 100vw;
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      top: calc(100% + ${pxToRem(10)});
+
+      /* Max-height is needed to allow scroll on menu.
+         The 100% is equal to the button height. */
+      max-height: calc(100vh - (100% + ${pxToRem(20)}));
+
+      box-shadow: 0 ${pxToRem(3)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
+      border-radius: ${pxToRem(8)};
+    }
+
+    &.k-HeaderNav__floatingDropdown--isExpanded {
       margin-top: 0;
       visibility: visible;
       opacity: 1;
