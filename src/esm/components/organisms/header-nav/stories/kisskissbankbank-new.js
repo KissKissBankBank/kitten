@@ -1,5 +1,5 @@
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import HeaderNav from '../index';
 import { LendopolisLogo, KissKissBankBankLogo, HeaderMenu, SearchIcon, COLORS, Text, AvatarWithTextAndBadge, domElementHelper, useWindowWidth, useDeepCompareEffect, Button, Overlay, FlexWrapper, HorizontalCrowdfundingCard, ClockCircleIcon, CheckedCircleIcon, CLOSE_OVERLAY_EVENT, OPEN_OVERLAY_EVENT, Badge } from '../../../..';

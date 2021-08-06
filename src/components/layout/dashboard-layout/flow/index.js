@@ -25,8 +25,6 @@ var _screenConfig = require("../../../../constants/screen-config");
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _horizontalStroke = require("../../../../components/atoms/horizontal-stroke");
-
 var _lightbulbIllustration = require("../../../../components/graphics/illustrations/lightbulb-illustration");
 
 var _loader = require("../../../../components/atoms/loader");
