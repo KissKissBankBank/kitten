@@ -12,7 +12,7 @@ import { Tag } from '../../../../components/atoms/tag'
 
 const StyledDocumentsDropUploader = styled.div`
   border-radius: ${pxToRem(8)};
-  padding: ${pxToRem(20)};
+  padding: ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(15)};
   width: 100%;
   position: relative;
   box-sizing: border-box;
@@ -72,13 +72,16 @@ const StyledDocumentsDropUploader = styled.div`
   }
 
   &.k-DocumentsDropUploader--error {
-    border-color: ${COLORS.error2};
+    border-color: ${COLORS.error3};
   }
 
   &.k-DocumentsDropUploader--disabled {
     border-color: ${COLORS.line2};
-    background-color: ${COLORS.background2};
-    color: ${COLORS.font2};
+    color: ${COLORS.font3};
+
+    .k-DocumentsDropUploader__info {
+      color: ${COLORS.font3};
+    }
 
     &,
     .k-DocumentsDropUploader__button {
@@ -99,10 +102,20 @@ const StyledDocumentsDropUploader = styled.div`
   .k-DocumentsDropUploader__title {
     ${TYPOGRAPHY.fontStyles.regular}
     font-size: ${stepToRem(-1)};
+    line-height: 1;
   }
-  .k-DocumentsDropUploader__text {
+  .k-DocumentsDropUploader__text,
+  .k-DocumentsDropUploader__info {
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-2)};
+    line-height: ${pxToRem(16)};
+
+    &:empty {
+      display: none;
+    }
+  }
+  .k-DocumentsDropUploader__info {
+    color: ${COLORS.grey1};
   }
 
   .k-DocumentsDropUploader__fileList {
@@ -113,13 +126,7 @@ const StyledDocumentsDropUploader = styled.div`
     align-items: flex-start;
     flex-direction: column;
     gap: ${pxToRem(5)};
-  }
-
-  &.k-DocumentsDropUploader--manage,
-  &.k-DocumentsDropUploader--error {
-    .k-DocumentsDropUploader__fileList {
-      padding: ${pxToRem(10)} 0;
-    }
+    padding: ${pxToRem(10)} 0;
   }
 
   .k-DocumentsDropUploader__file {
@@ -170,8 +177,9 @@ export const DocumentsDropUploader = ({
   errorMessageList = null,
   fileInputProps = {},
   initialValue = [],
-  managerText = '',
   managerTitle = '',
+  managerText = '',
+  managerInfo = '',
   onChange = () => {},
   sizeErrorText = i => i,
   status = 'ready',
@@ -189,12 +197,6 @@ export const DocumentsDropUploader = ({
   const [internalErrorMessageList, setErrorMessageList] = useState([
     errorMessageList,
   ])
-
-  useEffect(() => {
-    if (initialValue.length === 0) return
-
-    setInternalStatus('manage')
-  }, [initialValue])
 
   const handleDragEnter = e => {
     e.preventDefault()
@@ -233,66 +235,71 @@ export const DocumentsDropUploader = ({
   }
 
   useEffect(() => {
-    let isValid = true
-    setErrorMessageList([])
-    setErrorList([])
-
-    if (fileList.length === 0) return setInternalStatus(status)
-
-    setInternalStatus('manage')
-
-    fileList.forEach(file => {
-      if ('File' in window && file instanceof File) {
-        if (
-          acceptedMimeTypes.length > 0 &&
-          !acceptedMimeTypes.includes(file.type)
-        ) {
-          setErrorMessageList(current => [...current, typeErrorText(file.name)])
-          setInternalStatus('error')
-          setErrorList(current => [
-            ...current,
-            {
-              file,
-              error: typeErrorText(file.name),
-            },
-          ])
-          isValid = false
-        }
-
-        if (!!acceptedFileSize && file.size > acceptedFileSize) {
-          setErrorMessageList(current => [...current, sizeErrorText(file.name)])
-          setInternalStatus('error')
-          setErrorList(current => [
-            ...current,
-            {
-              file,
-              error: sizeErrorText(file.name),
-            },
-          ])
-          isValid = false
-        }
+    if (errorList.length === 0) {
+      if (fileList.length === 0) {
+        setInternalStatus(status)
+      } else {
+        setInternalStatus('ready')
+        onChange(fileList)
       }
-    })
-    if (isValid) onChange(fileList)
-  }, [fileList])
-
-  useEffect(() => {
-    if (errorList.length === 0) return
-
-    onError(errorList)
-  }, [errorList])
+    } else {
+      onError(errorList)
+    }
+  }, [fileList, errorList])
 
   const removeFilesFromList = file => {
     setFileList(currentList => currentList.filter(item => item !== file))
   }
 
   const addFilesToList = files => {
+    setErrorMessageList([])
+    setErrorList([])
+
     setFileList(currentList => {
       const newList = [...currentList]
 
       files.forEach(file => {
-        if (currentList.indexOf(file) === -1) {
-          newList.push(file)
+        let isValid = true
+
+        if ('File' in window && file instanceof File) {
+          if (
+            acceptedMimeTypes.length > 0 &&
+            !acceptedMimeTypes.includes(file.type)
+          ) {
+            setErrorMessageList(current => [
+              ...current,
+              typeErrorText(file.name),
+            ])
+            setInternalStatus('error')
+            setErrorList(current => [
+              ...current,
+              {
+                file,
+                error: typeErrorText(file.name),
+              },
+            ])
+            isValid = false
+          }
+
+          if (!!acceptedFileSize && file.size > acceptedFileSize) {
+            setErrorMessageList(current => [
+              ...current,
+              sizeErrorText(file.name),
+            ])
+            setInternalStatus('error')
+            setErrorList(current => [
+              ...current,
+              {
+                file,
+                error: sizeErrorText(file.name),
+              },
+            ])
+            isValid = false
+          }
+
+          if (isValid) {
+            newList.push(file)
+          }
         }
       })
 
@@ -327,39 +334,39 @@ export const DocumentsDropUploader = ({
         >
           <div className="k-DocumentsDropUploader__title">{managerTitle}</div>
 
-          {['ready', 'error'].includes(internalStatus) && (
-            <div className="k-DocumentsDropUploader__text">{managerText}</div>
+          {fileList.length === 0 && (
+            <>
+              <div className="k-DocumentsDropUploader__text">{managerText}</div>
+
+              <div className="k-DocumentsDropUploader__info">{managerInfo}</div>
+            </>
           )}
 
           {fileList.length > 0 && (
             <ul className="k-DocumentsDropUploader__fileList">
-              {['error', 'manage'].includes(internalStatus) && (
-                <>
-                  {fileList.map((file, index) => (
-                    <Tag
-                      key={file.name + index}
-                      as="li"
-                      className="k-DocumentsDropUploader__file"
+              {fileList.map((file, index) => (
+                <Tag
+                  key={file.name + index}
+                  as="li"
+                  className="k-DocumentsDropUploader__file"
+                >
+                  <span className="k-DocumentsDropUploader__file__text">
+                    {file.name}
+                  </span>
+                  {!disabled && (
+                    <button
+                      className="k-DocumentsDropUploader__file__button k-u-reset-button"
+                      type="button"
+                      onClick={() => removeFilesFromList(file)}
                     >
-                      <span className="k-DocumentsDropUploader__file__text">
-                        {file.name}
+                      <span className="k-u-a11y-visuallyHidden">
+                        {removeActionMessage(file.name)}
                       </span>
-                      {!disabled && (
-                        <button
-                          className="k-DocumentsDropUploader__file__button k-u-reset-button"
-                          type="button"
-                          onClick={() => removeFilesFromList(file)}
-                        >
-                          <span className="k-u-a11y-visuallyHidden">
-                            {removeActionMessage(file.name)}
-                          </span>
-                          <CrossIcon color="currentColor" />
-                        </button>
-                      )}
-                    </Tag>
-                  ))}
-                </>
-              )}
+                      <CrossIcon color="currentColor" />
+                    </button>
+                  )}
+                </Tag>
+              ))}
             </ul>
           )}
 
@@ -378,7 +385,7 @@ export const DocumentsDropUploader = ({
             multiple={true}
           />
 
-          {disabled || internalStatus === 'ready' ? (
+          {disabled || fileList.length === 0 ? (
             <label
               htmlFor={id}
               className="k-DocumentsDropUploader__button"
@@ -406,9 +413,9 @@ export const DocumentsDropUploader = ({
             className="k-DocumentsDropUploader__errorList"
             id={`${id}-error-description`}
           >
-            {internalErrorMessageList.map(errorMsg => (
+            {internalErrorMessageList.map((errorMsg, index) => (
               <Text
-                key={errorMsg}
+                key={errorMsg + index}
                 as="li"
                 size="micro"
                 color="error"
@@ -436,10 +443,11 @@ DocumentsDropUploader.propTypes = {
   initialValue: PropTypes.array,
   managerText: PropTypes.node,
   managerTitle: PropTypes.node,
+  managerInfo: PropTypes.node,
   onChange: PropTypes.func,
   quantityErrorText: PropTypes.node,
   sizeErrorText: PropTypes.func,
-  status: PropTypes.oneOf(['ready', 'error', 'manage']),
+  status: PropTypes.oneOf(['ready', 'error']),
   typeErrorText: PropTypes.func,
   onError: PropTypes.func,
   displayErrors: PropTypes.bool,
