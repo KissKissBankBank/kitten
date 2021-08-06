@@ -109,17 +109,16 @@ export const StyledRewardSummaryCard = styled.a`
       grid-template-rows: 1fr;
       grid-gap: 0 ${pxToRem(10)};
     }
-    
+
     @media (min-width: ${ScreenConfig.L.min}px) {
       width: 100%;
-      
+
       grid-gap: 0 ${pxToRem(10)};
-      grid-template-columns: 
+      grid-template-columns:
         auto
         ${pxToRem(100)}
         ${pxToRem(100)}
-        ${pxToRem(150)}
-      ;
+        ${pxToRem(150)};
       grid-template-rows: 1fr;
     }
   }

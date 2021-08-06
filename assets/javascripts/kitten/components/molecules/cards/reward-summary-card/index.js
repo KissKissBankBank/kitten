@@ -11,6 +11,7 @@ import {
   Availablity,
   RewardNumber,
   Amount,
+  Options,
 } from './components'
 import { Context } from './context'
 import {
@@ -76,6 +77,7 @@ RewardSummaryCard.TitleTag = TitleTag
 RewardSummaryCard.Amount = Amount
 RewardSummaryCard.RewardNumber = RewardNumber
 RewardSummaryCard.Availablity = Availablity
+RewardSummaryCard.Options = Options
 
 RewardSummaryCard.defaultProps = {
   show: true,

@@ -102,6 +102,7 @@ export const Default = ({
       <RewardSummaryCard.Amount>10 000&nbsp;€</RewardSummaryCard.Amount>
       <RewardSummaryCard.RewardNumber>1 468 000</RewardSummaryCard.RewardNumber>
       <RewardSummaryCard.Availablity>Illimitée</RewardSummaryCard.Availablity>
+      <RewardSummaryCard.Options />
     </RewardSummaryCard>
   )
 }
