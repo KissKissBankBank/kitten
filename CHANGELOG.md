@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DragAndDropList`: Add component.
+
 ## [4.2.0] - 2021-08-06
 
 Features:
