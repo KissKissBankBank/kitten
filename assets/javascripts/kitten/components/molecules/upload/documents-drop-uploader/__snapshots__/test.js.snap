@@ -2,7 +2,7 @@
 
 exports[`<DocumentsDropUploader /> should match snapshot 1`] = `
 <div
-  className="sc-bwzfXH fJRRrS k-DocumentsDropUploader k-DocumentsDropUploader--ready"
+  className="sc-bwzfXH cgMRjw k-DocumentsDropUploader k-DocumentsDropUploader--ready"
   onDragEnter={[Function]}
   onDragLeave={[Function]}
   onDragOver={[Function]}
@@ -38,6 +38,11 @@ exports[`<DocumentsDropUploader /> should match snapshot 1`] = `
     >
       
     </div>
+    <div
+      className="k-DocumentsDropUploader__info"
+    >
+      
+    </div>
     <input
       accept=""
       aria-describedby={null}
@@ -59,7 +64,7 @@ exports[`<DocumentsDropUploader /> should match snapshot 1`] = `
 
 exports[`<DocumentsDropUploader /> should match snapshot disabled 1`] = `
 <div
-  className="sc-bwzfXH fJRRrS k-DocumentsDropUploader k-DocumentsDropUploader--ready k-DocumentsDropUploader--disabled"
+  className="sc-bwzfXH cgMRjw k-DocumentsDropUploader k-DocumentsDropUploader--ready k-DocumentsDropUploader--disabled"
   onDragEnter={[Function]}
   onDragLeave={[Function]}
   onDragOver={[Function]}
@@ -95,6 +100,11 @@ exports[`<DocumentsDropUploader /> should match snapshot disabled 1`] = `
     >
       Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
     </div>
+    <div
+      className="k-DocumentsDropUploader__info"
+    >
+      
+    </div>
     <input
       accept=""
       aria-describedby={null}
@@ -116,7 +126,7 @@ exports[`<DocumentsDropUploader /> should match snapshot disabled 1`] = `
 
 exports[`<DocumentsDropUploader /> should match snapshot disabled 2`] = `
 <div
-  className="sc-bwzfXH fJRRrS k-DocumentsDropUploader k-DocumentsDropUploader--manage k-DocumentsDropUploader--disabled"
+  className="sc-bwzfXH cgMRjw k-DocumentsDropUploader k-DocumentsDropUploader--ready k-DocumentsDropUploader--disabled"
   onDragEnter={[Function]}
   onDragLeave={[Function]}
   onDragOver={[Function]}
@@ -182,7 +192,7 @@ exports[`<DocumentsDropUploader /> should match snapshot disabled 2`] = `
 exports[`<DocumentsDropUploader /> should match snapshot with error 1`] = `
 Array [
   <div
-    className="sc-bwzfXH fJRRrS k-DocumentsDropUploader k-DocumentsDropUploader--error"
+    className="sc-bwzfXH cgMRjw k-DocumentsDropUploader k-DocumentsDropUploader--error"
     onDragEnter={[Function]}
     onDragLeave={[Function]}
     onDragOver={[Function]}
@@ -212,11 +222,6 @@ Array [
         className="k-DocumentsDropUploader__title"
       >
         Upload your ID documents
-      </div>
-      <div
-        className="k-DocumentsDropUploader__text"
-      >
-        Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
       </div>
       <ul
         className="k-DocumentsDropUploader__fileList"
@@ -291,7 +296,7 @@ Array [
 
 exports[`<DocumentsDropUploader /> should match snapshot with many props 1`] = `
 <div
-  className="sc-bwzfXH fJRRrS k-DocumentsDropUploader k-DocumentsDropUploader--manage"
+  className="sc-bwzfXH cgMRjw k-DocumentsDropUploader k-DocumentsDropUploader--ready"
   onDragEnter={[Function]}
   onDragLeave={[Function]}
   onDragOver={[Function]}
@@ -386,7 +391,7 @@ exports[`<DocumentsDropUploader /> should match snapshot with many props 1`] = `
 
 exports[`<DocumentsDropUploader /> should match snapshot without props 1`] = `
 <div
-  className="sc-bwzfXH fJRRrS k-DocumentsDropUploader k-DocumentsDropUploader--ready"
+  className="sc-bwzfXH cgMRjw k-DocumentsDropUploader k-DocumentsDropUploader--ready"
   onDragEnter={[Function]}
   onDragLeave={[Function]}
   onDragOver={[Function]}
@@ -419,6 +424,11 @@ exports[`<DocumentsDropUploader /> should match snapshot without props 1`] = `
     </div>
     <div
       className="k-DocumentsDropUploader__text"
+    >
+      
+    </div>
+    <div
+      className="k-DocumentsDropUploader__info"
     >
       
     </div>
