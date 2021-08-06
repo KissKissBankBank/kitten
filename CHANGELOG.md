@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `DropdownMenu` molecule component.
+- Feature: Add `EllipsisIcon` icon.
+- Feature: `ArrowContainer`: Add `distanceIsReverse` boolean prop, defaults to `false`.
 - Fix: `HorizontalCrowdfundingCard`: Fix mobile style for `progress`.
 - Feature: Change `XXS`/`XS` boundary to 400px, from 480px.
 - Feature: `DocumentsDropUploader`: Hide files with errors.
