@@ -752,7 +752,9 @@ const InnerModal = ({
                     variant={variant}
                     size={variant === 'orion' ? 'regular' : 'micro'}
                     closeButtonLabel={closeButtonLabel}
-                    aria-labelledby={!!headerMessage ? 'ModalHeaderMessage' : null}
+                    aria-labelledby={
+                      !!headerMessage ? 'ModalHeaderMessage' : null
+                    }
                   />
                 )}
               </div>
@@ -768,7 +770,10 @@ const InnerModal = ({
               </div>
 
               {!!headerMessage && (
-                <div className="k-ModalNext__header__message" id="ModalHeaderMessage">
+                <div
+                  className="k-ModalNext__header__message"
+                  id="ModalHeaderMessage"
+                >
                   {headerMessage}
                 </div>
               )}

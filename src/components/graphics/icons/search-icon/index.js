@@ -15,8 +15,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
-
 var SearchIcon = function SearchIcon(_ref) {
   var iconTitle = _ref.iconTitle,
       title = _ref.title,
@@ -27,28 +25,23 @@ var SearchIcon = function SearchIcon(_ref) {
       height = _ref.height,
       props = (0, _objectWithoutProperties2.default)(_ref, ["iconTitle", "title", "color", "circleProps", "pathProps", "width", "height"]);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
-    role: "img",
-    "aria-label": iconTitle || title,
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "-0.7 -0.7 18 18",
+    "aria-label": title,
     width: width,
-    height: height
-  }, props), (iconTitle || title) && /*#__PURE__*/_react.default.createElement("title", null, iconTitle || title), /*#__PURE__*/_react.default.createElement("circle", (0, _extends2.default)({
-    cx: "7",
-    cy: "7",
-    r: "7",
-    stroke: color,
-    strokeWidth: "1.1",
-    fill: "none"
-  }, circleProps)), /*#__PURE__*/_react.default.createElement("path", (0, _extends2.default)({
-    d: "M13 11 L17 15 L15.5 16.5 L11.5 12.7z",
-    fill: color
-  }, pathProps)));
+    height: height,
+    viewBox: "0 0 15 15",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, props), title && /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("path", (0, _extends2.default)({
+    fill: color,
+    d: "M14.7 13.3l-3.5-3.5a1 1 0 00-1.4 1.4l3.5 3.5a1 1 0 001.4-1.4z"
+  }, pathProps)), /*#__PURE__*/_react.default.createElement("path", (0, _extends2.default)({
+    fill: color,
+    d: "M6.3 0a6.3 6.3 0 100 12.6A6.3 6.3 0 006.3 0zm0 2a4.3 4.3 0 110 8.6 4.3 4.3 0 010-8.6z"
+  }, circleProps)));
 };
 
 exports.SearchIcon = SearchIcon;
 SearchIcon.propTypes = {
-  iconTitle: (0, _deprecated.default)(_propTypes.default.string, 'Prefere use `title` prop instead'),
   title: _propTypes.default.string,
   color: _propTypes.default.string,
   circleProps: _propTypes.default.object,

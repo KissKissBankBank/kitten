@@ -4,22 +4,29 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `SearchIcon`: Update.
-- Feature: `CrossIcon`: Add `size` prop, accepts values `normal` and `big`.
-- Feature: `TextInput`: Add `rounded` boolean prop, defaults to `false`.
-- Feature: `TextInputWithButton`: Add `inset` prop to place the button inside the input.
-- Feature: `Overlay`: Add `position` prop, defaults to `absolute`.
-- Feature: `HeaderNav`: Add `SearchInput` sub-component.
-- Fix: `DocumentsStatusBox`: Fix style.
-- Feature: Add `DropdownMenu` molecule component.
-- Feature: Add `EllipsisIcon` icon.
-- Feature: `ArrowContainer`: Add `distanceIsReverse` boolean prop, defaults to `false`.
-- Fix: `HorizontalCrowdfundingCard`: Fix mobile style for `progress`.
-- Feature: Change `XXS`/`XS` boundary to 400px, from 480px.
-- Feature: `DocumentsDropUploader`: Hide files with errors.
-- Feature: `DocumentsDropUploader`: New `managerInfo` prop.
-- Feature: `DashboardLayout.Flow.Nav`: Add `twoButtons` prop, defaults to false.
-- Feature: `Modal/Next`: Add `headerMessage` prop, with empty defaults.
+## [4.2.0] - 2021-08-06
+
+Features:
+
+- Change `XXS`/`XS` boundary to 400px, from 480px.
+- Add `DropdownMenu` molecule component.
+- Add `EllipsisIcon` icon.
+- `SearchIcon`: Update to new design.
+- `CrossIcon`: Add `size` prop, accepts values `normal` and `big`.
+- `TextInput`: Add `rounded` boolean prop, defaults to `false`.
+- `TextInputWithButton`: Add `inset` prop to place the button inside the input.
+- `Overlay`: Add `position` prop, defaults to `absolute`.
+- `HeaderNav`: Add `SearchInput` sub-component.
+- `ArrowContainer`: Add `distanceIsReverse` boolean prop, defaults to `false`.
+- `DocumentsDropUploader`: Hide files with errors.
+- `DocumentsDropUploader`: New `managerInfo` prop.
+- `DashboardLayout.Flow.Nav`: Add `twoButtons` prop, defaults to false.
+- `Modal/Next`: Add `headerMessage` prop, with empty defaults.
+
+Fixes:
+
+- `DocumentsStatusBox`: Fix style.
+- `HorizontalCrowdfundingCard`: Fix mobile style for `progress`.
 
 ## [4.1.0] - 2021-08-02
 

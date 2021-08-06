@@ -488,7 +488,11 @@ const FlowExample = () => (
           Back
         </Button>
       ) : (
-        <Text weight="light" className="k-u-hidden@xs-down" style={{ alignSelf: 'center'}}>
+        <Text
+          weight="light"
+          className="k-u-hidden@xs-down"
+          style={{ alignSelf: 'center' }}
+        >
           Message
         </Text>
       )}

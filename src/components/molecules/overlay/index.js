@@ -7,7 +7,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Overlay = void 0;
+exports.Overlay = exports.OPEN_OVERLAY_EVENT = exports.CLOSE_OVERLAY_EVENT = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -35,10 +35,15 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
+var CLOSE_OVERLAY_EVENT = 'overlay-close';
+exports.CLOSE_OVERLAY_EVENT = CLOSE_OVERLAY_EVENT;
+var OPEN_OVERLAY_EVENT = 'overlay-open';
+exports.OPEN_OVERLAY_EVENT = OPEN_OVERLAY_EVENT;
+
 var StyledOverlay = _styledComponents.default.div.withConfig({
   displayName: "overlay__StyledOverlay",
   componentId: "sc-1wmk8kg-0"
-})(["position:absolute;left:0;top:0;right:100%;bottom:100%;z-index:", ";visibility:hidden;opacity:0;background:rgba(34,34,34,0.9);transition:visibility 0s ease,opacity 0.2s ease,bottom 0s,right 0s;transition-delay:0.2s,0s,0.2s,0.2s;&.is-active{right:0;bottom:0;visibility:visible;opacity:1;transition-delay:0s,0s,0s,0s;}"], function (_ref) {
+})(["left:0;top:0;right:100%;bottom:100%;z-index:", ";visibility:hidden;opacity:0;background:rgba(0,0,0,0.4);transition:visibility 0s ease,opacity 0.2s ease,bottom 0s,right 0s;transition-delay:0.2s,0s,0.2s,0.2s;&.k-Overlay--absolute{position:absolute;}&.k-Overlay--fixed{position:fixed;}&.k-Overlay--isActive{right:0;bottom:0;visibility:visible;opacity:1;transition-delay:0s,0s,0s,0s;}"], function (_ref) {
   var zIndex = _ref.zIndex;
   return zIndex;
 });
@@ -98,11 +103,14 @@ var Overlay = /*#__PURE__*/function (_Component) {
       var _this$props = this.props,
           className = _this$props.className,
           zIndex = _this$props.zIndex,
-          other = (0, _objectWithoutProperties2.default)(_this$props, ["className", "zIndex"]);
+          position = _this$props.position,
+          other = (0, _objectWithoutProperties2.default)(_this$props, ["className", "zIndex", "position"]);
       var isActive = this.state.isActive;
       return /*#__PURE__*/_react.default.createElement(StyledOverlay, (0, _extends2.default)({
         zIndex: zIndex,
-        className: (0, _classnames.default)(isActive && 'is-active', className)
+        className: (0, _classnames.default)(className, 'k-Overlay', "k-Overlay--".concat(position), {
+          'k-Overlay--isActive': isActive
+        })
       }, other));
     }
   }]);
@@ -115,12 +123,14 @@ Overlay.propTypes = {
   isActive: _propTypes.default.bool,
   toggleEvent: _propTypes.default.string,
   closeEvent: _propTypes.default.string,
-  openEvent: _propTypes.default.string
+  openEvent: _propTypes.default.string,
+  position: _propTypes.default.oneOf(['absolute', 'fixed'])
 };
 Overlay.defaultProps = {
   zIndex: 100,
   isActive: false,
   toggleEvent: '',
-  closeEvent: '',
-  openEvent: ''
+  closeEvent: CLOSE_OVERLAY_EVENT,
+  openEvent: OPEN_OVERLAY_EVENT,
+  position: 'absolute'
 };

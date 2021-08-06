@@ -4,7 +4,7 @@ import { Modal } from './index'
 
 describe('<Modal />', () => {
   const sandbox = sinon.createSandbox()
-  console.warn = jest.fn();
+  console.warn = jest.fn()
 
   describe('with trigger', () => {
     const component = mount(
@@ -12,7 +12,9 @@ describe('<Modal />', () => {
     )
 
     it('contains the trigger', () => {
-      expect(console.warn).toHaveBeenCalledWith('The Modal component on `modals/modal` will be deprecated in favor of `ModalNext`.');
+      expect(console.warn).toHaveBeenCalledWith(
+        'The Modal component on `modals/modal` will be deprecated in favor of `ModalNext`.',
+      )
       expect(component.find('.trigger-example').exists()).toBe(true)
     })
   })
@@ -21,7 +23,9 @@ describe('<Modal />', () => {
     const component = mount(<Modal className="content-example" />)
 
     it('contains the content', () => {
-      expect(console.warn).toHaveBeenCalledWith('The Modal component on `modals/modal` will be deprecated in favor of `ModalNext`.');
+      expect(console.warn).toHaveBeenCalledWith(
+        'The Modal component on `modals/modal` will be deprecated in favor of `ModalNext`.',
+      )
       expect(component.render().hasClass('content-example')).toBe(true)
       expect(component.render().hasClass('k-Modal')).toBe(true)
     })
@@ -40,7 +44,9 @@ describe('<Modal />', () => {
       })
 
       it('calls onClose prop callback', () => {
-        expect(console.warn).toHaveBeenCalledWith('The Modal component on `modals/modal` will be deprecated in favor of `ModalNext`.');
+        expect(console.warn).toHaveBeenCalledWith(
+          'The Modal component on `modals/modal` will be deprecated in favor of `ModalNext`.',
+        )
         expect(onCloseSpy.calledOnce).toBe(true)
       })
     })

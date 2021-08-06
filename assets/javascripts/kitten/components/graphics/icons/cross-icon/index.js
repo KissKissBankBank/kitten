@@ -14,12 +14,28 @@ export const CrossIcon = ({ color, title, width, height, size, ...props }) => {
     height,
   })
 
-  if(size === 'big') {
+  if (size === 'big') {
     return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M7 7L17 17" stroke={color} strokeWidth="2" strokeLinecap="round"/>
-      <path d="M17 7L7 17" stroke={color} strokeWidth="2" strokeLinecap="round"/>
-    </svg>
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7 7L17 17"
+          stroke={color}
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M17 7L7 17"
+          stroke={color}
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+      </svg>
     )
   }
 
@@ -44,7 +60,7 @@ CrossIcon.prototype = {
   title: PropTypes.string,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  size: PropTypes.oneOf(['normal', 'big'])
+  size: PropTypes.oneOf(['normal', 'big']),
 }
 
 CrossIcon.defaultProps = {
