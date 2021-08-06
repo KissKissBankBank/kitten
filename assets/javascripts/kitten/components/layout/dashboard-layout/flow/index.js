@@ -88,25 +88,33 @@ const StyledFlow = styled.div`
 
   .k-DashboardLayout__flow__nav__actionsContainer {
     display: grid;
-    margin: ${pxToRem(20)} 0;
-    gap: ${pxToRem(20)};
     grid-template-columns: repeat(2, 1fr);
+    gap: ${pxToRem(20)};
+    margin: ${pxToRem(20)} 0;
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      margin: ${pxToRem(20)} 0 ${pxToRem(30)};
       gap: ${pxToRem(40)};
+      margin: ${pxToRem(20)} 0 ${pxToRem(30)};
     }
 
-    & > * {
+    & > .k-Button {
       min-width: 0 !important;
       max-width: ${pxToRem(180)};
       width: 100%;
+
+      &:last-child {
+        justify-self: end;
+      }
     }
-    & > *:last-child {
-      justify-self: end;
-    }
-    & > *:first-child:last-child {
-      grid-column: 1 / span 2;
+  }
+
+  .k-DashboardLayout__flow__nav:not(.k-DashboardLayout__flow__nav--twoButtons) {
+    .k-DashboardLayout__flow__nav__actionsContainer > .k-Button {
+      @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+        grid-column: 1 / span 2;
+        justify-self: stretch;
+        max-width: 100%;
+      }
     }
   }
 
@@ -146,11 +154,13 @@ const Content = ({ className, ...props }) => {
   )
 }
 
-const Nav = ({ className, children, ...props }) => {
+const Nav = ({ className, children, twoButtons = false, ...props }) => {
   return (
     <nav
       {...props}
-      className={classNames('k-DashboardLayout__flow__nav', className)}
+      className={classNames('k-DashboardLayout__flow__nav', className, {
+        'k-DashboardLayout__flow__nav--twoButtons': twoButtons,
+      })}
     >
       <div className="k-DashboardLayout__flow__nav__actionsContainer">
         {children}

@@ -477,22 +477,24 @@ const FlowExample = () => (
         </DashboardLayout.Flow.AsideCard.List>
       </DashboardLayout.Flow.AsideCard>
     </DashboardLayout.Flow.Aside>
-    <DashboardLayout.Flow.Nav>
-      {boolean('Show 2 buttons', true) && (
+    <DashboardLayout.Flow.Nav twoButtons={boolean('Show 2 buttons', false)}>
+      {boolean('Show 2 buttons', false) ? (
         <Button
           modifier="hydrogen"
           variant="orion"
-          size="big"
           type="button"
           disabled={boolean('loading', false)}
         >
           Back
         </Button>
+      ) : (
+        <Text weight="light" className="k-u-hidden@xs-down" style={{ alignSelf: 'center'}}>
+          Message
+        </Text>
       )}
       <Button
         modifier="helium"
         variant="orion"
-        size="big"
         type="button"
         disabled={boolean('loading', false)}
       >
