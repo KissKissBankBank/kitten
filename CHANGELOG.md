@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `DashboardLayout.Flow.Nav`: Fix styles when only one button is displayed.
+## [4.2.1] - 2021-08-19
+
+Fix:
+
+- `DashboardLayout.Flow.Nav`: Fix styles when only a button is displayed.
 
 ## [4.2.0] - 2021-08-06
 
