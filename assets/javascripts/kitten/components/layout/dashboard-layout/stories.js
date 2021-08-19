@@ -487,15 +487,17 @@ const FlowExample = () => (
         >
           Back
         </Button>
-      ) : (
+      ) : boolean('Show unsaved text', false) ? (
         <Text
           weight="light"
+          color="font2"
+          size="tiny"
           className="k-u-hidden@xs-down"
           style={{ alignSelf: 'center' }}
         >
-          Message
+          You have unsaved changes
         </Text>
-      )}
+      ) : null}
       <Button
         modifier="helium"
         variant="orion"

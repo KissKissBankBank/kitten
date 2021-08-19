@@ -117,6 +117,10 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   justify-self: end;
 }
 
+.c0 .k-DashboardLayout__flow__nav__actionsContainer > .k-Button:first-child:last-child {
+  grid-column: 1 / span 2;
+}
+
 .c0 .k-DashboardLayout__flow__aside__content {
   position: -webkit-sticky;
   position: sticky;
@@ -459,6 +463,10 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 
 .c0 .k-DashboardLayout__flow__nav__actionsContainer > .k-Button:last-child {
   justify-self: end;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer > .k-Button:first-child:last-child {
+  grid-column: 1 / span 2;
 }
 
 .c0 .k-DashboardLayout__flow__aside__content {
