@@ -103,6 +103,10 @@ const StyledFlow = styled.div`
       &:last-child {
         justify-self: end;
       }
+
+      &:first-child:last-child {
+        grid-column: 1 / span 2;
+      }
     }
   }
 
