@@ -10,71 +10,84 @@ export default {
   parameters: {
     component: RadioButton,
   },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  args: {
+    onChange: action('change'),
+    error: false,
+    disabled: false,
+    large: false,
+    largeContent: false,
+    text: 'RadioButton label',
+    size: 'regular',
+    variant: 'andromeda',
+    design: 'disc',
+    children: null,
+  },
+  argTypes: {
+    error: {
+      name: 'error',
+      control: { type: 'boolean' },
+    },
+    disabled: {
+      name: 'disabled',
+      control: { type: 'boolean' },
+    },
+    large: {
+      name: 'large',
+      control: { type: 'boolean' },
+    },
+    largeContent: {
+      name: 'largeContent',
+      control: { type: 'boolean' },
+    },
+    text: {
+      name: 'text',
+      control: { type: 'text' },
+    },
+    size: {
+      name: 'size',
+      options: ['regular', 'big'],
+      control: { type: 'inline-radio' },
+    },
+    variant: {
+      name: 'variant',
+      options: ['andromeda', 'orion'],
+      control: { type: 'inline-radio' },
+    },
+    design: {
+      name: 'design',
+      options: ['disc', 'check'],
+      control: { type: 'inline-radio' },
+    },
+    children: {
+      name: 'children',
+      control: { type: 'text' },
+    }
+  }
 }
 
-export const Default = () => (
-  <Grid>
-    <GridCol offset="1" col="8">
-      <RadioButton
-        id="test_1"
-        name="test"
-        onLabelClick={action('label-click')}
-        onChange={action('change')}
-        error={boolean('Error', false)}
-        disabled={boolean('Disabled', false)}
-        large={boolean('Large', false)}
-        largeContent={boolean('LargeContent', false)}
-        text={text('Text', 'RadioButton Label')}
-        size={select('Size', { regular: 'regular', big: 'big' }, 'regular')}
-        variant={select(
-          'Variant',
-          { andromeda: 'andromeda', orion: 'orion' },
-          'andromeda',
-        )}
-        design={select('Design', { disc: 'disc', check: 'check' }, 'radio')}
-      >
-        {text('Content', '')}
-      </RadioButton>
-      <RadioButton
-        id="test_2"
-        name="test"
-        onLabelClick={action('label-click')}
-        onChange={action('change')}
-        error={boolean('Error', false)}
-        disabled={boolean('Disabled', false)}
-        large={boolean('Large', false)}
-        largeContent={boolean('LargeContent', false)}
-        text={text('Text', 'RadioButton Label')}
-        variant={select(
-          'Variant',
-          { andromeda: 'andromeda', orion: 'orion' },
-          'andromeda',
-        )}
-        size={select('Size', { regular: 'regular', big: 'big' }, 'regular')}
-        design={select('Design', { disc: 'disc', check: 'check' }, 'radio')}
-      >
-        {text('Content', '')}
-      </RadioButton>
-      <RadioButton
-        id="test_3"
-        name="test"
-        onLabelClick={action('label-click')}
-        onChange={action('change')}
-        error={boolean('Error', false)}
-        disabled={boolean('Disabled', false)}
-        large={boolean('Large', false)}
-        largeContent={boolean('LargeContent', false)}
-        text={text('Text', 'RadioButton Label')}
-        variant={select(
-          'Variant',
-          { andromeda: 'andromeda', orion: 'orion' },
-          'andromeda',
-        )}
-        size={select('Size', { regular: 'regular', big: 'big' }, 'regular')}
-        design={select('Design', { disc: 'disc', check: 'check' }, 'radio')}
-      >
-        {text('Content', '')}
-      </RadioButton>
-    </GridCol>
-  </Grid>
+export const RadioButtonSet = (args) => (
+  <div>
+    <RadioButton
+      name="test"
+      {...args}
+      id="test_1"
+    />
+    <RadioButton
+      name="test"
+      {...args}
+      id="test_2"
+    />
+    <RadioButton
+      name="test"
+      {...args}
+      id="test_3"
+    />
+  </div>
 )
