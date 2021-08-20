@@ -477,22 +477,30 @@ const FlowExample = () => (
         </DashboardLayout.Flow.AsideCard.List>
       </DashboardLayout.Flow.AsideCard>
     </DashboardLayout.Flow.Aside>
-    <DashboardLayout.Flow.Nav>
-      {boolean('Show 2 buttons', true) && (
+    <DashboardLayout.Flow.Nav twoButtons={boolean('Show 2 buttons', false)}>
+      {boolean('Show 2 buttons', false) ? (
         <Button
           modifier="hydrogen"
           variant="orion"
-          size="big"
           type="button"
           disabled={boolean('loading', false)}
         >
           Back
         </Button>
-      )}
+      ) : boolean('Show unsaved text', false) ? (
+        <Text
+          weight="light"
+          color="font2"
+          size="tiny"
+          className="k-u-hidden@xs-down"
+          style={{ alignSelf: 'center' }}
+        >
+          You have unsaved changes
+        </Text>
+      ) : null}
       <Button
         modifier="helium"
         variant="orion"
-        size="big"
         type="button"
         disabled={boolean('loading', false)}
       >

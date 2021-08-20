@@ -11,9 +11,9 @@ export var SCREEN_SIZE_XL = 'XL';
 export var ORDERED_SCREEN_SIZES = [SCREEN_SIZE_XXS, SCREEN_SIZE_XS, SCREEN_SIZE_S, SCREEN_SIZE_M, SCREEN_SIZE_L, SCREEN_SIZE_XL];
 export var ScreenConfig = (_ScreenConfig = {}, _defineProperty(_ScreenConfig, SCREEN_SIZE_XXS, {
   min: null,
-  max: 479
+  max: 399
 }), _defineProperty(_ScreenConfig, SCREEN_SIZE_XS, {
-  min: 480,
+  min: 400,
   max: 639
 }), _defineProperty(_ScreenConfig, SCREEN_SIZE_S, {
   min: 640,

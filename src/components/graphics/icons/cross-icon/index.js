@@ -27,13 +27,35 @@ var CrossIcon = function CrossIcon(_ref) {
       title = _ref.title,
       width = _ref.width,
       height = _ref.height,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title", "width", "height"]);
+      size = _ref.size,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title", "width", "height", "size"]);
   var computed = (0, _ratio.computeFromRatio)({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
     width: width,
     height: height
   });
+
+  if (size === 'big') {
+    return /*#__PURE__*/_react.default.createElement("svg", {
+      width: "24",
+      height: "24",
+      viewBox: "0 0 24 24",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/_react.default.createElement("path", {
+      d: "M7 7L17 17",
+      stroke: color,
+      strokeWidth: "2",
+      strokeLinecap: "round"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M17 7L7 17",
+      stroke: color,
+      strokeWidth: "2",
+      strokeLinecap: "round"
+    }));
+  }
+
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 8 8",
@@ -52,8 +74,10 @@ CrossIcon.prototype = {
   color: _propTypes.default.string,
   title: _propTypes.default.string,
   width: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
-  height: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
+  height: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
+  size: _propTypes.default.oneOf(['normal', 'big'])
 };
 CrossIcon.defaultProps = {
-  color: _colorsConfig.default.font1
+  color: _colorsConfig.default.font1,
+  size: 'normal'
 };

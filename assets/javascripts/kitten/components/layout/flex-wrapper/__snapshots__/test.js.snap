@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FlexWrapper /> compare array props with snapshot matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--flexWrapper-gap);
+  padding: var(--flexWrapper-padding);
+  -webkit-flex-direction: var(--flexWrapper-direction);
+  -ms-flex-direction: var(--flexWrapper-direction);
+  flex-direction: var(--flexWrapper-direction);
+}
+
+<div
+  className="c0 k-FlexWrapper"
+  style={
+    Object {
+      "--flexWrapper-direction": "column",
+      "--flexWrapper-gap": "0.625rem 20em",
+      "--flexWrapper-padding": "0.625rem 20em",
+    }
+  }
+/>
+`;
+
+exports[`<FlexWrapper /> compare number props with snapshot matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--flexWrapper-gap);
+  padding: var(--flexWrapper-padding);
+  -webkit-flex-direction: var(--flexWrapper-direction);
+  -ms-flex-direction: var(--flexWrapper-direction);
+  flex-direction: var(--flexWrapper-direction);
+}
+
+<div
+  className="c0 k-FlexWrapper"
+  style={
+    Object {
+      "--flexWrapper-direction": "column",
+      "--flexWrapper-gap": "0.625rem",
+      "--flexWrapper-padding": "0.625rem",
+    }
+  }
+/>
+`;
+
+exports[`<FlexWrapper /> compare object props with snapshot matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--flexWrapper-gap);
+  padding: var(--flexWrapper-padding);
+  -webkit-flex-direction: var(--flexWrapper-direction);
+  -ms-flex-direction: var(--flexWrapper-direction);
+  flex-direction: var(--flexWrapper-direction);
+}
+
+<div
+  className="c0 k-FlexWrapper"
+  style={
+    Object {
+      "--flexWrapper-direction": "column",
+      "--flexWrapper-gap": null,
+      "--flexWrapper-padding": null,
+      "paddingLeft": "20em",
+      "paddingTop": "0.625rem",
+    }
+  }
+/>
+`;
+
+exports[`<FlexWrapper /> compare string props with snapshot matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--flexWrapper-gap);
+  padding: var(--flexWrapper-padding);
+  -webkit-flex-direction: var(--flexWrapper-direction);
+  -ms-flex-direction: var(--flexWrapper-direction);
+  flex-direction: var(--flexWrapper-direction);
+}
+
+<div
+  className="c0 k-FlexWrapper"
+  style={
+    Object {
+      "--flexWrapper-direction": "column",
+      "--flexWrapper-gap": "10px",
+      "--flexWrapper-padding": "10px",
+    }
+  }
+/>
+`;
+
+exports[`<FlexWrapper /> compare with snapshot matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--flexWrapper-gap);
+  padding: var(--flexWrapper-padding);
+  -webkit-flex-direction: var(--flexWrapper-direction);
+  -ms-flex-direction: var(--flexWrapper-direction);
+  flex-direction: var(--flexWrapper-direction);
+}
+
+<div
+  className="c0 k-FlexWrapper"
+  style={
+    Object {
+      "--flexWrapper-direction": "row",
+      "--flexWrapper-gap": null,
+      "--flexWrapper-padding": null,
+    }
+  }
+>
+  <span>
+    1
+  </span>
+  <span>
+    2
+  </span>
+  <span>
+    3
+  </span>
+</div>
+`;

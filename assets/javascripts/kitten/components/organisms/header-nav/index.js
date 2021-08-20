@@ -17,6 +17,7 @@ import { LoggedOut } from './components/logged-out'
 import { Logged } from './components/logged'
 import { Hidden } from './components/hidden'
 import { QuickAccessLink } from './components/quick-access-link'
+import { SearchInput } from './components/search-input'
 
 import { usePrevious } from '../../../helpers/utils/use-previous-hook'
 
@@ -36,7 +37,6 @@ const HeaderNav = ({
   const [isMenuExpanded, setMenuExpanded] = useState(false)
   const [menuExpandBy, setMenuExpandBy] = useState(null)
   const [stickyState, setStickyState] = useState(null)
-  const [isBackgroundInactive, setBackgroundInactive] = useState(null)
   const stickyContainerRef = useRef(null)
   const headerRef = useRef(null)
   const previousStickyState = usePrevious(stickyState)
@@ -53,10 +53,6 @@ const HeaderNav = ({
   useEffect(() => {
     setStickyState(isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp')
   }, [isFixed, isMenuExpanded])
-
-  useEffect(() => {
-    setBackgroundInactive(/UserMenu/.test(menuExpandBy))
-  }, [menuExpandBy])
 
   return (
     <Context.Provider
@@ -79,7 +75,6 @@ const HeaderNav = ({
           `k-HeaderNav--${borderStyle}`,
           {
             'k-HeaderNav--menuIsExpanded': isMenuExpanded,
-            'k-HeaderNav--inactiveBackground': isBackgroundInactive,
           },
         )}
       >
@@ -114,6 +109,7 @@ HeaderNav.Centered = Centered
 HeaderNav.LoggedOut = LoggedOut
 HeaderNav.Logged = Logged
 HeaderNav.Hidden = Hidden
+HeaderNav.SearchInput = SearchInput
 
 HeaderNav.propTypes = {
   id: PropTypes.string,

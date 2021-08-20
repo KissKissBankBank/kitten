@@ -79,49 +79,14 @@ var Text = function Text(_ref) {
 
 exports.Text = Text;
 Text.propTypes = {
-  /**
-    Available colors:
-  */
   color: _propTypes.default.oneOf(['font1', 'font2', 'primary1', 'background1', 'error', 'valid']),
-
-  /**
-    Specify a custom color (as a CSS color string).
-  */
   cssColor: _propTypes.default.string,
-
-  /**
-    If `tag="a"`, show underline.
-  */
   decoration: _propTypes.default.oneOf(['underline', 'none']),
-
-  /**
-    `font-feature-settings: 'tnum'` enables tabular (monospace) numerals.
-  **/
   setting: _propTypes.default.oneOf(['tnum']),
-
-  /**
-    `line-height: normal` correspond approximately to 1.2.
-  */
   lineHeight: _propTypes.default.oneOf(['normal', '1', '1.3']),
-
-  /**
-    Available sizes:
-  */
   size: _propTypes.default.oneOf(['giant', 'huge', 'big', 'default', 'tiny', 'micro', 'nano']),
-
-  /**
-    Available font styles (`normal` or `italic`):
-  */
   fontStyle: _propTypes.default.oneOf(['normal', 'italic']),
-
-  /**
-    `text-transform: uppercase`
-  */
   transform: _propTypes.default.oneOf(['uppercase']),
-
-  /**
-    Available font weights (`light`, `regular` or `italic`):
-  */
   weight: _propTypes.default.oneOf(['light', 'regular', 'bold'])
 };
 Text.defaultProps = {

@@ -120,6 +120,7 @@ export { DotIcon } from './components/graphics/icons/dot-icon'
 export { DoubleArrowIcon } from './components/graphics/icons/double-arrow-icon'
 export { DownloadIcon } from './components/graphics/icons/download-icon'
 export { EditIcon } from './components/graphics/icons/edit-icon'
+export { EllipsisIcon } from './components/graphics/icons/ellipsis-icon'
 export { EmailIcon } from './components/graphics/icons/email-icon'
 export { EmbedIcon } from './components/graphics/icons/embed-icon'
 export { ExportIcon } from './components/graphics/icons/export-icon'
@@ -215,6 +216,7 @@ export {
 } from './components/layout/adaptable-grid'
 export { Container } from './components/layout/container'
 export { DashboardLayout } from './components/layout/dashboard-layout'
+export { FlexWrapper } from './components/layout/flex-wrapper'
 export { Grid, GridCol } from './components/layout/grid'
 export { Marger } from './components/layout/marger'
 export { Row } from './components/layout/row'
@@ -288,6 +290,7 @@ export { ContributionCard } from './components/molecules/cards/contribution-card
 export { CrowdfundingCard } from './components/molecules/cards/crowdfunding-card'
 export { EngagementCard } from './components/molecules/cards/engagement-card'
 export { EngagementCardWithImage } from './components/molecules/cards/engagement-card-with-image'
+export { HorizontalCrowdfundingCard } from './components/molecules/cards/horizontal-crowdfunding-card'
 export { RewardEdition } from './components/molecules/cards/reward-edition'
 export { SimpleCard } from './components/molecules/cards/simple-card'
 export { TeamCard } from './components/molecules/cards/team-card'
@@ -303,6 +306,7 @@ export { SimpleCarousel } from './components/molecules/carousels/simple-carousel
 // Molecules/Expand
 export { Accordeon } from './components/molecules/expand/accordeon'
 export { Details } from './components/molecules/expand/details'
+export { DropdownMenu } from './components/molecules/expand/dropdown-menu'
 export { ExpandBoard } from './components/molecules/expand/expand-board'
 
 // Molecules/Upload
@@ -403,6 +407,10 @@ export {
   TABLET_HEADER_HEIGHT,
   DESKTOP_HEADER_HEIGHT,
 } from './components/organisms/header-nav/config'
+export {
+  CLOSE_OVERLAY_EVENT,
+  OPEN_OVERLAY_EVENT,
+} from './components/molecules/overlay'
 
 // -------
 // HELPERS

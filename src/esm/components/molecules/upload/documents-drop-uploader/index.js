@@ -15,7 +15,7 @@ import { Tag } from '../../../../components/atoms/tag';
 var StyledDocumentsDropUploader = styled.div.withConfig({
   displayName: "documents-drop-uploader__StyledDocumentsDropUploader",
   componentId: "sc-1m4qlht-0"
-})(["border-radius:", ";padding:", ";width:100%;position:relative;box-sizing:border-box;border:", " solid ", ";position:relative;display:flex;flex-direction:row;align-items:flex-start;gap:", ";transition:border-color 0.2s ease;input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{outline:", " solid ", ";outline-offset:", ";}input[type='file']:focus:not(:focus-visible) + label{outline-color:transparent;}input[type='file']:focus-visible + label{outline-color:", ";}.k-DrocumentDropUploader__icon{margin-top:", ";margin-left:", ";}.k-DocumentsDropUploader__button{position:absolute;z-index:1;top:", ";left:", ";right:", ";bottom:", ";color:transparent;cursor:pointer;border:", " solid transparent;transition:border-color 0.2s ease;border-radius:", ";}&.k-DocumentsDropUploader--ready:hover:not(.k-DocumentsDropUploader--disabled){border-color:", ";}&.k-DocumentsDropUploader--error{border-color:", ";}&.k-DocumentsDropUploader--disabled{border-color:", ";background-color:", ";color:", ";&,.k-DocumentsDropUploader__button{cursor:not-allowed;}}input[type='file']:active:not(:disabled) + .k-DocumentsDropUploader__button,&.k-DocumentsDropUploader--isDraggingOver:not(.k-DocumentsDropUploader--disabled){border-color:", ";}.k-DocumentsDropUploader__content{display:flex;flex-direction:column;gap:", ";}.k-DocumentsDropUploader__title{", " font-size:", ";}.k-DocumentsDropUploader__text{", " font-size:", ";}.k-DocumentsDropUploader__fileList{margin:0;padding:0;list-style:none;display:flex;align-items:flex-start;flex-direction:column;gap:", ";}&.k-DocumentsDropUploader--manage,&.k-DocumentsDropUploader--error{.k-DocumentsDropUploader__fileList{padding:", " 0;}}.k-DocumentsDropUploader__file{font-weight:500;display:flex;align-items:center;outline-offset:", ";}.k-DocumentsDropUploader__file__button{padding:0 ", ";margin-right:", ";}.k-DocumentsDropUploader__content,.k-DocumentsDropUploader__fileList,.k-DocumentsDropUploader__file,.k-DocumentsDropUploader__file__text{overflow:hidden;max-width:100%;}.k-DocumentsDropUploader__file__text{text-overflow:ellipsis;display:inline-block;}"], pxToRem(8), pxToRem(20), pxToRem(2), COLORS.line1, pxToRem(35), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, pxToRem(15), pxToRem(15), pxToRem(-2), pxToRem(-2), pxToRem(-2), pxToRem(-2), pxToRem(2), pxToRem(8), COLORS.primary4, COLORS.error2, COLORS.line2, COLORS.background2, COLORS.font2, COLORS.primary1, pxToRem(5), TYPOGRAPHY.fontStyles.regular, stepToRem(-1), TYPOGRAPHY.fontStyles.light, stepToRem(-2), pxToRem(5), pxToRem(10), pxToRem(2), pxToRem(10), pxToRem(-10));
+})(["border-radius:", ";padding:", " ", " ", ";width:100%;position:relative;box-sizing:border-box;border:", " solid ", ";position:relative;display:flex;flex-direction:row;align-items:flex-start;gap:", ";transition:border-color 0.2s ease;input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{outline:", " solid ", ";outline-offset:", ";}input[type='file']:focus:not(:focus-visible) + label{outline-color:transparent;}input[type='file']:focus-visible + label{outline-color:", ";}.k-DrocumentDropUploader__icon{margin-top:", ";margin-left:", ";}.k-DocumentsDropUploader__button{position:absolute;z-index:1;top:", ";left:", ";right:", ";bottom:", ";color:transparent;cursor:pointer;border:", " solid transparent;transition:border-color 0.2s ease;border-radius:", ";}&.k-DocumentsDropUploader--ready:hover:not(.k-DocumentsDropUploader--disabled){border-color:", ";}&.k-DocumentsDropUploader--error{border-color:", ";}&.k-DocumentsDropUploader--disabled{border-color:", ";color:", ";.k-DocumentsDropUploader__info{color:", ";}&,.k-DocumentsDropUploader__button{cursor:not-allowed;}}input[type='file']:active:not(:disabled) + .k-DocumentsDropUploader__button,&.k-DocumentsDropUploader--isDraggingOver:not(.k-DocumentsDropUploader--disabled){border-color:", ";}.k-DocumentsDropUploader__content{display:flex;flex-direction:column;gap:", ";}.k-DocumentsDropUploader__title{", " font-size:", ";line-height:1;}.k-DocumentsDropUploader__text,.k-DocumentsDropUploader__info{", " font-size:", ";line-height:", ";&:empty{display:none;}}.k-DocumentsDropUploader__info{color:", ";}.k-DocumentsDropUploader__fileList{margin:0;padding:0;list-style:none;display:flex;align-items:flex-start;flex-direction:column;gap:", ";padding:", " 0;}.k-DocumentsDropUploader__file{font-weight:500;display:flex;align-items:center;outline-offset:", ";}.k-DocumentsDropUploader__file__button{padding:0 ", ";margin-right:", ";}.k-DocumentsDropUploader__content,.k-DocumentsDropUploader__fileList,.k-DocumentsDropUploader__file,.k-DocumentsDropUploader__file__text{overflow:hidden;max-width:100%;}.k-DocumentsDropUploader__file__text{text-overflow:ellipsis;display:inline-block;}"], pxToRem(8), pxToRem(20), pxToRem(20), pxToRem(15), pxToRem(2), COLORS.line1, pxToRem(35), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, pxToRem(15), pxToRem(15), pxToRem(-2), pxToRem(-2), pxToRem(-2), pxToRem(-2), pxToRem(2), pxToRem(8), COLORS.primary4, COLORS.error3, COLORS.line2, COLORS.font3, COLORS.font3, COLORS.primary1, pxToRem(5), TYPOGRAPHY.fontStyles.regular, stepToRem(-1), TYPOGRAPHY.fontStyles.light, stepToRem(-2), pxToRem(16), COLORS.grey1, pxToRem(5), pxToRem(10), pxToRem(2), pxToRem(10), pxToRem(-10));
 var StyledErrorList = styled.ul.withConfig({
   displayName: "documents-drop-uploader__StyledErrorList",
   componentId: "sc-1m4qlht-1"
@@ -38,10 +38,12 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
       fileInputProps = _ref$fileInputProps === void 0 ? {} : _ref$fileInputProps,
       _ref$initialValue = _ref.initialValue,
       initialValue = _ref$initialValue === void 0 ? [] : _ref$initialValue,
-      _ref$managerText = _ref.managerText,
-      managerText = _ref$managerText === void 0 ? '' : _ref$managerText,
       _ref$managerTitle = _ref.managerTitle,
       managerTitle = _ref$managerTitle === void 0 ? '' : _ref$managerTitle,
+      _ref$managerText = _ref.managerText,
+      managerText = _ref$managerText === void 0 ? '' : _ref$managerText,
+      _ref$managerInfo = _ref.managerInfo,
+      managerInfo = _ref$managerInfo === void 0 ? '' : _ref$managerInfo,
       _ref$onChange = _ref.onChange,
       onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
       _ref$sizeErrorText = _ref.sizeErrorText,
@@ -92,11 +94,6 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
       internalErrorMessageList = _useState10[0],
       setErrorMessageList = _useState10[1];
 
-  useEffect(function () {
-    if (initialValue.length === 0) return;
-    setInternalStatus('manage');
-  }, [initialValue]);
-
   var handleDragEnter = function handleDragEnter(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -135,45 +132,17 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
   };
 
   useEffect(function () {
-    setErrorMessageList([]);
-    setErrorList([]);
-    onChange(fileList);
-    if (fileList.length === 0) return setInternalStatus(status);
-    setInternalStatus('manage');
-    fileList.forEach(function (file) {
-      if ('File' in window && file instanceof File) {
-        if (acceptedMimeTypes.length > 0 && !acceptedMimeTypes.includes(file.type)) {
-          setErrorMessageList(function (current) {
-            return [].concat(_toConsumableArray(current), [typeErrorText(file.name)]);
-          });
-          setInternalStatus('error');
-          setErrorList(function (current) {
-            return [].concat(_toConsumableArray(current), [{
-              file: file,
-              error: typeErrorText(file.name)
-            }]);
-          });
-        }
-
-        if (!!acceptedFileSize && file.size > acceptedFileSize) {
-          setErrorMessageList(function (current) {
-            return [].concat(_toConsumableArray(current), [sizeErrorText(file.name)]);
-          });
-          setInternalStatus('error');
-          setErrorList(function (current) {
-            return [].concat(_toConsumableArray(current), [{
-              file: file,
-              error: typeErrorText(file.name)
-            }]);
-          });
-        }
+    if (errorList.length === 0) {
+      if (fileList.length === 0) {
+        setInternalStatus(status);
+      } else {
+        setInternalStatus('ready');
+        onChange(fileList);
       }
-    });
-  }, [fileList]);
-  useEffect(function () {
-    if (!errorList) return;
-    onError(errorList);
-  }, [errorList]);
+    } else {
+      onError(errorList);
+    }
+  }, [fileList, errorList]);
 
   var removeFilesFromList = function removeFilesFromList(file) {
     setFileList(function (currentList) {
@@ -184,12 +153,46 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
   };
 
   var addFilesToList = function addFilesToList(files) {
+    setErrorMessageList([]);
+    setErrorList([]);
     setFileList(function (currentList) {
       var newList = _toConsumableArray(currentList);
 
       files.forEach(function (file) {
-        if (currentList.indexOf(file) === -1) {
-          newList.push(file);
+        var isValid = true;
+
+        if ('File' in window && file instanceof File) {
+          if (acceptedMimeTypes.length > 0 && !acceptedMimeTypes.includes(file.type)) {
+            setErrorMessageList(function (current) {
+              return [].concat(_toConsumableArray(current), [typeErrorText(file.name)]);
+            });
+            setInternalStatus('error');
+            setErrorList(function (current) {
+              return [].concat(_toConsumableArray(current), [{
+                file: file,
+                error: typeErrorText(file.name)
+              }]);
+            });
+            isValid = false;
+          }
+
+          if (!!acceptedFileSize && file.size > acceptedFileSize) {
+            setErrorMessageList(function (current) {
+              return [].concat(_toConsumableArray(current), [sizeErrorText(file.name)]);
+            });
+            setInternalStatus('error');
+            setErrorList(function (current) {
+              return [].concat(_toConsumableArray(current), [{
+                file: file,
+                error: sizeErrorText(file.name)
+              }]);
+            });
+            isValid = false;
+          }
+
+          if (isValid) {
+            newList.push(file);
+          }
         }
       });
       return newList;
@@ -214,11 +217,13 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
     id: "".concat(id, "-cropper-description")
   }, /*#__PURE__*/React.createElement("div", {
     className: "k-DocumentsDropUploader__title"
-  }, managerTitle), ['ready', 'error'].includes(internalStatus) && /*#__PURE__*/React.createElement("div", {
+  }, managerTitle), fileList.length === 0 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
     className: "k-DocumentsDropUploader__text"
-  }, managerText), fileList.length > 0 && /*#__PURE__*/React.createElement("ul", {
+  }, managerText), /*#__PURE__*/React.createElement("div", {
+    className: "k-DocumentsDropUploader__info"
+  }, managerInfo)), fileList.length > 0 && /*#__PURE__*/React.createElement("ul", {
     className: "k-DocumentsDropUploader__fileList"
-  }, ['error', 'manage'].includes(internalStatus) && /*#__PURE__*/React.createElement(React.Fragment, null, fileList.map(function (file, index) {
+  }, fileList.map(function (file, index) {
     return /*#__PURE__*/React.createElement(Tag, {
       key: file.name + index,
       as: "li",
@@ -236,7 +241,7 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
     }, removeActionMessage(file.name)), /*#__PURE__*/React.createElement(CrossIcon, {
       color: "currentColor"
     })));
-  }))), /*#__PURE__*/React.createElement("input", _extends({}, fileInputProps, {
+  })), /*#__PURE__*/React.createElement("input", _extends({}, fileInputProps, {
     type: "file",
     id: id,
     onChange: onFileInputChange,
@@ -244,7 +249,7 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
     "aria-describedby": internalStatus === 'error' && internalErrorMessageList ? "".concat(id, "-error-description") : null,
     accept: acceptedMimeTypes.join(', '),
     multiple: true
-  })), disabled || internalStatus === 'ready' ? /*#__PURE__*/React.createElement("label", {
+  })), disabled || fileList.length === 0 ? /*#__PURE__*/React.createElement("label", {
     htmlFor: id,
     className: "k-DocumentsDropUploader__button",
     children: labelText
@@ -259,9 +264,9 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
   }, "+\xA0"), labelText))), displayErrors && internalStatus === 'error' && internalErrorMessageList.length > 0 && /*#__PURE__*/React.createElement(StyledErrorList, {
     className: "k-DocumentsDropUploader__errorList",
     id: "".concat(id, "-error-description")
-  }, internalErrorMessageList.map(function (errorMsg) {
+  }, internalErrorMessageList.map(function (errorMsg, index) {
     return /*#__PURE__*/React.createElement(Text, {
-      key: errorMsg,
+      key: errorMsg + index,
       as: "li",
       size: "micro",
       color: "error",
@@ -282,10 +287,11 @@ DocumentsDropUploader.propTypes = {
   initialValue: PropTypes.array,
   managerText: PropTypes.node,
   managerTitle: PropTypes.node,
+  managerInfo: PropTypes.node,
   onChange: PropTypes.func,
   quantityErrorText: PropTypes.node,
   sizeErrorText: PropTypes.func,
-  status: PropTypes.oneOf(['ready', 'error', 'manage']),
+  status: PropTypes.oneOf(['ready', 'error']),
   typeErrorText: PropTypes.func,
   onError: PropTypes.func,
   displayErrors: PropTypes.bool

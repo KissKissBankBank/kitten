@@ -165,6 +165,23 @@ const GlobalStyle = createGlobalStyle`
         min-width: ${pxToRem(40)};
         text-align: right;
       }
+
+      .k-ModalNext__header__message {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        left: ${pxToRem(CONTAINER_PADDING_THIN + 40 + 35)};
+
+        &:empty {
+          display: none;
+        }
+
+        @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+          left: ${pxToRem(CONTAINER_PADDING + 40 + 35)};
+        }
+      }
     }
 
     .k-ModalNext__closeButton {
@@ -641,6 +658,7 @@ const InnerModal = ({
   variant,
   headerTitle,
   headerActions,
+  headerMessage,
   contentCols,
   headerZIndex,
   ...others
@@ -734,6 +752,9 @@ const InnerModal = ({
                     variant={variant}
                     size={variant === 'orion' ? 'regular' : 'micro'}
                     closeButtonLabel={closeButtonLabel}
+                    aria-labelledby={
+                      !!headerMessage ? 'ModalHeaderMessage' : null
+                    }
                   />
                 )}
               </div>
@@ -747,6 +768,15 @@ const InnerModal = ({
                   </Text>
                 )}
               </div>
+
+              {!!headerMessage && (
+                <div
+                  className="k-ModalNext__header__message"
+                  id="ModalHeaderMessage"
+                >
+                  {headerMessage}
+                </div>
+              )}
 
               <div className="k-ModalNext__header__actions">
                 {headerActions &&
@@ -823,6 +853,7 @@ Modal.propTypes = {
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   headerTitle: PropTypes.node,
   headerActions: PropTypes.func,
+  headerMessage: PropTypes.node,
   contentCols: PropTypes.object,
   headerZIndex: PropTypes.number,
 }
@@ -842,6 +873,7 @@ Modal.defaultProps = {
   variant: 'andromeda',
   headerTitle: null,
   headerActions: null,
+  headerMessage: null,
   contentCols: {},
   headerZIndex: 10,
 }

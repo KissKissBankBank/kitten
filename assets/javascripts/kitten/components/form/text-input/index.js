@@ -10,6 +10,7 @@ import classNames from 'classnames'
 const StyledInput = styled.input`
   --input-padding-horizontal: ${pxToRem(15)};
   --input-border-width: ${pxToRem(2)};
+  --input-height: ${pxToRem(50)};
 
   font-size: ${stepToRem(-1)};
   line-height: 1em;
@@ -24,6 +25,10 @@ const StyledInput = styled.input`
   background-color: ${COLORS.background1};
   color: ${COLORS.font1};
   border-color: ${COLORS.line1};
+  height: var(--input-height);
+  min-height: var(--input-height);
+
+  transition: border-color 0.2s ease;
 
   ::placeholder {
     color: ${COLORS.font2};
@@ -32,44 +37,36 @@ const StyledInput = styled.input`
   // SIZES
 
   &.k-Form-TextInput--tiny {
-    height: ${pxToRem(40)};
-    min-height: ${pxToRem(40)};
+    --input-height: ${pxToRem(40)};
   }
 
   &.k-Form-TextInput--regular {
-    height: ${pxToRem(50)};
-    min-height: ${pxToRem(50)};
+    --input-height: ${pxToRem(50)};
   }
 
   &.k-Form-TextInput--big {
-    height: ${pxToRem(60)};
-    min-height: ${pxToRem(60)};
+    --input-height: ${pxToRem(60)};
 
     @media (min-width: ${ScreenConfig.M.min}px) {
-      height: ${pxToRem(70)};
-      min-height: ${pxToRem(70)};
+      --input-height: ${pxToRem(70)};
       font-size: ${stepToRem(0)};
     }
   }
 
   &.k-Form-TextInput--huge {
-    height: ${pxToRem(70)};
-    min-height: ${pxToRem(70)};
+    --input-height: ${pxToRem(70)};
 
     @media (min-width: ${ScreenConfig.M.min}px) {
-      height: ${pxToRem(80)};
-      min-height: ${pxToRem(80)};
+      --input-height: ${pxToRem(80)};
       font-size: ${stepToRem(0)};
     }
   }
 
   &.k-Form-TextInput--giant {
-    height: ${pxToRem(70)};
-    min-height: ${pxToRem(70)};
+    --input-height: ${pxToRem(70)};
 
     @media (min-width: ${ScreenConfig.M.min}px) {
-      height: ${pxToRem(90)};
-      min-height: ${pxToRem(90)};
+      --input-height: ${pxToRem(90)};
       font-size: ${stepToRem(0)};
     }
   }
@@ -99,6 +96,10 @@ const StyledInput = styled.input`
         }
       }
     }
+  }
+
+  &.k-Form-TextInput--rounded {
+    border-radius: var(--input-height);
   }
 
   // TEXT
@@ -136,9 +137,13 @@ const StyledInput = styled.input`
     border-color: ${COLORS.error3};
   }
 
+  &:hover {
+    border-color: ${COLORS.line2};
+  }
+
   &:focus {
     color: ${COLORS.font1};
-    border-color: ${COLORS.line2};
+    border-color: ${COLORS.font2};
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
   }
@@ -201,6 +206,11 @@ const StyledInput = styled.input`
       }
     }
   }
+
+  /* Prevents zooming on  */
+  @media (max-width: ${ScreenConfig.XS.max}px) {
+    font-size: ${stepToRem(0)};
+  }
 `
 
 const StyledTextareaContainer = styled.div`
@@ -261,6 +271,10 @@ const StyledTextareaContainer = styled.div`
     }
   }
 
+  &.k-Form-TextInput--rounded {
+    border-radius: var(--input-height);
+  }
+
   .k-Form-TextInput__textareaGradient {
     position: absolute;
     left: ${pxToRem(10)};
@@ -293,6 +307,7 @@ export class TextInput extends PureComponent {
     name: PropTypes.string,
     digits: PropTypes.number,
     variant: PropTypes.string,
+    rounded: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -305,6 +320,7 @@ export class TextInput extends PureComponent {
     name: 'text',
     digits: null,
     variant: 'andromeda',
+    rounded: false,
   }
 
   render() {
@@ -320,6 +336,7 @@ export class TextInput extends PureComponent {
       variant,
       className,
       style,
+      rounded,
       ...others
     } = this.props
 
@@ -348,6 +365,7 @@ export class TextInput extends PureComponent {
                 'k-Form-TextInput--error': error,
                 'k-Form-TextInput--disabled': disabled,
                 'k-Form-TextInput--alignCenter': center,
+                'k-Form-TextInput--rounded': rounded,
               },
             )}
             style={
@@ -375,6 +393,7 @@ export class TextInput extends PureComponent {
               'k-Form-TextInput--error': error,
               'k-Form-TextInput--disabled': disabled,
               'k-Form-TextInput--alignCenter': center,
+              'k-Form-TextInput--rounded': rounded,
             },
           )}
           style={
