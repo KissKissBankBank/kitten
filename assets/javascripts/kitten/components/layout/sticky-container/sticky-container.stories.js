@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { StickyContainer } from './index'
 import { Container, COLORS, createRangeFromZeroTo } from '../../..'
 
-const storyDecorator = Story => (
+const storyDecorator = story => (
   <div
     className="story-Container"
     style={{
@@ -11,7 +11,7 @@ const storyDecorator = Story => (
       position: 'relative',
     }}
   >
-    <Story />
+    {story()}
     <ul>
       {createRangeFromZeroTo(100).map(i => {
         return <li key={i}>🐱</li>

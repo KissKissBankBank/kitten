@@ -6,9 +6,9 @@ export default {
   title: 'Form/LocationInput',
   component: LocationInput,
   decorators: [
-    Story => (
+    story => (
       <div className="story-Container">
-        <Story />
+        {story()}
       </div>
     ),
   ],

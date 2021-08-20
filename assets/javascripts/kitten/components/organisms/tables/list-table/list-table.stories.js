@@ -584,9 +584,9 @@ export const Toggleable = () => {
 }
 
 Toggleable.decorators = [
-  Story => (
+  story => (
     <div className="story-Container">
-      <Story />
+      {story()}
     </div>
   ),
 ]

@@ -4,9 +4,9 @@ import { PillNumberInput } from './index'
 export const Default = args => <PillNumberInput {...args} />
 
 Default.decorators = [
-  Story => (
+  story => (
     <div className="story-Container story-Grid story-Grid--large">
-      <Story />
+      {story()}
     </div>
   ),
 ]

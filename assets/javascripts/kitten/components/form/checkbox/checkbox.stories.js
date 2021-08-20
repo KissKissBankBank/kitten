@@ -9,9 +9,9 @@ export default {
     component: Checkbox,
   },
   decorators: [
-    Story => (
+    story => (
       <div className="story-Container story-Grid">
-        <Story />
+        {story()}
       </div>
     ),
   ],

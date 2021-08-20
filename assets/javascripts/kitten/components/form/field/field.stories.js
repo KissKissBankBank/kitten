@@ -10,10 +10,10 @@ import {
 export default {
   title: 'Form/Field',
   decorators: [
-    Story => (
+    story => (
       <div className="story-Container story-Grid story-Grid--large">
         <div>
-          <Story />
+          {story()}
         </div>
       </div>
     ),

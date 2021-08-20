@@ -22,9 +22,9 @@ export default {
   title: 'Organisms/HeaderNav',
   component: LendopolisHeaderNavStory,
   decorators: [
-    Story => (
+    story => (
       <div className="story-Container story-Grid story-Grid--large">
-        <Story />
+        {story()}
       </div>
     ),
   ],

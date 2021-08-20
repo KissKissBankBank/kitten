@@ -146,10 +146,10 @@ export const WithIcon = args => (
   </Field>
 )
 
-const storyDecorator = Story => (
+const storyDecorator = story => (
   <div className="story-Container story-Grid story-Grid--large">
     <div>
-      <Story />
+      {story()}
     </div>
   </div>
 )

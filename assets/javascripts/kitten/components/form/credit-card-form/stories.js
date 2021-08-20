@@ -6,9 +6,9 @@ export default {
   title: 'Form/CreditCardForm',
   component: CreditCardForm,
   decorators: [
-    Story => (
+    story => (
       <div className="story-Container">
-        <Story />
+        {story()}
       </div>
     ),
   ],

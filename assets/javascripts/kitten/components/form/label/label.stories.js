@@ -5,9 +5,9 @@ import { Label } from './index'
 export default {
   title: 'Form/Label',
   decorators: [
-    Story => (
+    story => (
       <div className="story-Container">
-        <Story />
+        {story()}
       </div>
     ),
   ],

@@ -38,9 +38,9 @@ export default {
   title: 'Form/DatePicker',
   component: DatePicker,
   decorators: [
-    Story => (
+    story => (
       <div className="story-Container">
-        <Story />
+        {story()}
       </div>
     ),
   ],

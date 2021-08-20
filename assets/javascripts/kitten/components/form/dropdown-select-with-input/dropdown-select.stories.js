@@ -16,9 +16,9 @@ export default {
     component: DropdownSelectWithInput,
   },
   decorators: [
-    Story => (
+    story => (
       <div className="story-Container">
-        <Story />
+        {story()}
       </div>
     ),
   ],

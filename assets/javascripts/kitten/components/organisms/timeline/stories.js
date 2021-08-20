@@ -9,9 +9,9 @@ export default {
     component: Timeline,
   },
   decorators: [
-    Story => (
+    story => (
       <div className="story-Container">
-        <Story />
+        {story()}
       </div>
     ),
   ],

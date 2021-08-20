@@ -17,9 +17,9 @@ export const Default = args => (
 )
 
 Default.decorators = [
-  Story => (
+  story => (
     <div className="story-Container">
-      <Story />
+      {story()}
     </div>
   ),
 ]

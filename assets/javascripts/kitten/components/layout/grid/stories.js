@@ -5,9 +5,9 @@ export default {
   title: 'Layout/Grid',
   component: Grid,
   decorators: [
-    Story => (
+    story => (
       <div className="story-Container">
-        <Story />
+        {story()}
       </div>
     ),
   ],

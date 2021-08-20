@@ -33,9 +33,9 @@ export const parameters = {
 }
 
 export const decorators = [
-  Story => (
+  story => (
     <DevGridDecorator>
-      <Story />
+      {story()}
     </DevGridDecorator>
   ),
 ]

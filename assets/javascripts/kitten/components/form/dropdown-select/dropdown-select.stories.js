@@ -33,9 +33,9 @@ export default {
     component: DropdownSelect,
   },
   decorators: [
-    Story => (
+    story => (
       <div className="story-Container story-Grid story-Grid--large">
-        <Story />
+        {story()}
       </div>
     ),
   ],

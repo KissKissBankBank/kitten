@@ -57,9 +57,9 @@ export default {
   title: 'Organisms/CounterBlock',
   component: CounterBlock,
   decorators: [
-    Story => (
+    story => (
       <div className="story-Container">
-        <Story />
+        {story()}
       </div>
     ),
   ],

@@ -6,9 +6,9 @@ export const Default = args => <PasswordInput {...args} />
 Default.storyName = 'Password input'
 
 Default.decorators = [
-  Story => (
+  story => (
     <div className="story-Container story-Grid story-Grid--large">
-      <Story />
+      {story()}
     </div>
   ),
 ]
