@@ -15,13 +15,7 @@ export default {
   parameters: {
     component: DropdownSelectWithInput,
   },
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
 }
 
 const options = [

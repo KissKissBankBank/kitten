@@ -1,11 +1,7 @@
 import React from 'react'
 import { TextInput } from './index'
 
-export const Default = (args) => (
-  <TextInput
-    {...args}
-  />
-)
+export const Default = args => <TextInput {...args} />
 
 Default.decorators = [
   story => (
@@ -54,7 +50,7 @@ Default.argTypes = {
   },
   size: {
     name: 'size',
-    options: ['tiny', 'regular', 'big', 'huge','giant'],
+    options: ['tiny', 'regular', 'big', 'huge', 'giant'],
     control: { type: 'select' },
   },
   center: {

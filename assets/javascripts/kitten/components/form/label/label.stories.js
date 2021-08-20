@@ -4,13 +4,7 @@ import { Label } from './index'
 
 export default {
   title: 'Form/Label',
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
   argTypes: {
     focusId: {
       name: 'focusId',

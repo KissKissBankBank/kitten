@@ -32,10 +32,4 @@ export const Default = () => (
   </SingleEntryTable>
 )
 
-Default.decorators = [
-  story => (
-    <div className="story-Container">
-      {story()}
-    </div>
-  ),
-]
+Default.decorators = [story => <div className="story-Container">{story()}</div>]

@@ -37,13 +37,7 @@ const CustomInput = props => {
 export default {
   title: 'Form/DatePicker',
   component: DatePicker,
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
   args: {
     selectedDay: new Date(),
     locale: 'fr',

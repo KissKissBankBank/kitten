@@ -3,11 +3,7 @@ import { SearchIcon } from '../../../components/graphics/icons/search-icon'
 import { TextInputWithButton } from './index'
 import { Default as TextInputStory } from '../text-input/text-input.stories.js'
 
-export const Default = (args) => (
-  <TextInputWithButton
-    {...args}
-  />
-)
+export const Default = args => <TextInputWithButton {...args} />
 
 Default.decorators = [
   story => (
@@ -29,15 +25,15 @@ Default.argTypes = {
   ...TextInputStory.argTypes,
   inputValue: {
     name: 'inputValue',
-    control: { type: 'text' }
+    control: { type: 'text' },
   },
   buttonValue: {
     name: 'buttonValue',
-    control: { type: 'text' }
+    control: { type: 'text' },
   },
   inset: {
     name: 'inset',
-    control: { type: 'boolean' }
+    control: { type: 'boolean' },
   },
   modifier: {
     name: 'modifier',
@@ -59,6 +55,6 @@ Default.argTypes = {
       'social_youtube',
       'social_pinterest',
     ],
-    control: { type: 'select' }
+    control: { type: 'select' },
   },
 }

@@ -5,13 +5,7 @@ import { Button } from '../../../index'
 export default {
   component: FormActions,
   title: 'Form/FormActions',
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
 }
 
 export const Default = () => {

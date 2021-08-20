@@ -148,9 +148,7 @@ export const WithIcon = args => (
 
 const storyDecorator = story => (
   <div className="story-Container story-Grid story-Grid--large">
-    <div>
-      {story()}
-    </div>
+    <div>{story()}</div>
   </div>
 )
 

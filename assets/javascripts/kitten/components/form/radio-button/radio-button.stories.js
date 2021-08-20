@@ -1,7 +1,6 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { RadioButton } from './index'
-import { Grid, GridCol } from '../../../components/layout/grid'
 
 export default {
   component: RadioButton,
@@ -67,26 +66,14 @@ export default {
     children: {
       name: 'children',
       control: { type: 'text' },
-    }
-  }
+    },
+  },
 }
 
-export const RadioButtonSet = (args) => (
+export const RadioButtonSet = args => (
   <div>
-    <RadioButton
-      name="test"
-      {...args}
-      id="test_1"
-    />
-    <RadioButton
-      name="test"
-      {...args}
-      id="test_2"
-    />
-    <RadioButton
-      name="test"
-      {...args}
-      id="test_3"
-    />
+    <RadioButton name="test" {...args} id="test_1" />
+    <RadioButton name="test" {...args} id="test_2" />
+    <RadioButton name="test" {...args} id="test_3" />
   </div>
 )

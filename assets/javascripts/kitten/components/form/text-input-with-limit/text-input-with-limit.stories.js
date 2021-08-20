@@ -2,9 +2,7 @@ import React from 'react'
 import { TextInputWithLimit } from './index'
 import { Default as TextInputStory } from '../text-input/text-input.stories.js'
 
-export const Default = (args) => (
-  <TextInputWithLimit {...args} />
-)
+export const Default = args => <TextInputWithLimit {...args} />
 
 Default.storyName = 'Text input with limit'
 
@@ -25,6 +23,6 @@ Default.argTypes = {
   ...TextInputStory.argTypes,
   limit: {
     name: 'limit',
-    control: { type: 'number' }
+    control: { type: 'number' },
   },
 }

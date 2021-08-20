@@ -55,11 +55,9 @@ export default {
       name: 'onChange',
       control: { type: 'function' },
     },
-  }
+  },
 }
 
-export const Default = (args) => {
-  return (
-        <ToggleSwitch {...args}/>
-  )
+export const Default = args => {
+  return <ToggleSwitch {...args} />
 }

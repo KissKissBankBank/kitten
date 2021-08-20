@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { StickyContainer } from './index'
-import { Container, COLORS, createRangeFromZeroTo } from '../../..'
+import { COLORS, createRangeFromZeroTo } from '../../..'
 
 const storyDecorator = story => (
   <div

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
 import { TagInput } from './index'
 
 export default {
@@ -65,10 +64,10 @@ export default {
       name: 'removeEventKeys',
       control: { type: 'object' },
     },
-  }
+  },
 }
 
-export const Default = (args) => {
+export const Default = args => {
   const [tagList, setTagList] = useState([])
 
   return (

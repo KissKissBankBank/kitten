@@ -56,13 +56,7 @@ export const Default = args => {
 export default {
   title: 'Organisms/CounterBlock',
   component: CounterBlock,
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
   args: args,
   argTypes: argTypes,
 }

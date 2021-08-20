@@ -8,13 +8,7 @@ export default {
   parameters: {
     component: Timeline,
   },
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
 }
 
 const itemHeightChoices = {

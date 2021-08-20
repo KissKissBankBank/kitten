@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
 import { RangeSlider } from './index'
 import { action } from '@storybook/addon-actions'
 
@@ -51,21 +50,19 @@ export default {
     },
     rangeThumbText: {
       name: 'rangeThumbText',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     rangeThumbPosition: {
       name: 'rangeThumbPosition',
       options: ['top', 'bottom'],
       control: { type: 'inline-radio' },
-    }
-  }
+    },
+  },
 }
 
-export const Default = (args) => (
-  <RangeSlider {...args} />
-)
+export const Default = args => <RangeSlider {...args} />
 
-export const WithRangeThumbText = (args) => {
+export const WithRangeThumbText = args => {
   const [value, setValue] = useState(0)
 
   return (

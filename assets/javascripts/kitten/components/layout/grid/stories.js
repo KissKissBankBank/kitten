@@ -4,13 +4,7 @@ import { Grid, GridCol } from './index'
 export default {
   title: 'Layout/Grid',
   component: Grid,
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
 }
 
 const blockClasses = 'k-u-align-center has-overrides color-background'

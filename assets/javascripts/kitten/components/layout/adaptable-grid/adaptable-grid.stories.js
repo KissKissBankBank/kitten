@@ -16,13 +16,7 @@ export const Default = args => (
   </AdaptableGrid>
 )
 
-Default.decorators = [
-  story => (
-    <div className="story-Container">
-      {story()}
-    </div>
-  ),
-]
+Default.decorators = [story => <div className="story-Container">{story()}</div>]
 
 Default.args = {
   gutter: 20,

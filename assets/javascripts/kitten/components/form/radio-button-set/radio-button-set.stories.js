@@ -1,14 +1,6 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import { RadioButtonSet } from './index'
-import {
-  Grid,
-  GridCol,
-  GUTTER,
-  pxToRem,
-  ScreenConfig,
-  Title,
-} from '../../../index'
 
 const OrionGlobalStyle = createGlobalStyle`
   .k-Form-RadioButtonSet.k-Form-RadioButtonSet__orionGrid .k-Form-RadioButtonSet__radioContainer {
@@ -46,23 +38,23 @@ export default {
   argTypes: {
     id: {
       name: 'id',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     label: {
       name: 'label',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     items: {
       name: 'items',
-      control: { type: 'object' }
+      control: { type: 'object' },
     },
     error: {
       name: 'error',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     size: {
       name: 'size',
@@ -82,7 +74,7 @@ export default {
   },
 }
 
-const defaultArgs =   {
+const defaultArgs = {
   id: 'story-radio-button-set',
   error: false,
   disabled: false,
@@ -91,9 +83,7 @@ const defaultArgs =   {
   size: 'regular',
 }
 
-export const Default = (args) => (
-  <RadioButtonSet {...args} />
-)
+export const Default = args => <RadioButtonSet {...args} />
 
 Default.args = {
   ...defaultArgs,
@@ -111,14 +101,11 @@ Default.args = {
       text: 'Option C',
       id: 'option-c',
     },
-  ]
+  ],
 }
 
-export const OrionGrid = (args) => (
-  <RadioButtonSet
-    className="k-Form-RadioButtonSet__orionGrid"
-    {...args}
-  >
+export const OrionGrid = args => (
+  <RadioButtonSet className="k-Form-RadioButtonSet__orionGrid" {...args}>
     <OrionGlobalStyle />
     <Title modifier="quaternary" className="k-u-margin-bottom-triple">
       Choisissez le montant que vous souhaitez offrir
@@ -158,11 +145,8 @@ OrionGrid.args = {
   variant: 'orion',
 }
 
-export const OrionGridWithLabel = (args) => (
-  <RadioButtonSet
-    className="k-Form-RadioButtonSet__orionGrid"
-    {...args}
-  >
+export const OrionGridWithLabel = args => (
+  <RadioButtonSet className="k-Form-RadioButtonSet__orionGrid" {...args}>
     <OrionGlobalStyle />
   </RadioButtonSet>
 )

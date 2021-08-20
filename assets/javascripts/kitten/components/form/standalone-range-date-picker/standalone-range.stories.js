@@ -3,7 +3,6 @@ import { StandaloneRangeDatePicker } from './index'
 import COLORS from '../../../constants/colors-config'
 import { action } from '@storybook/addon-actions'
 
-
 const today = new Date()
 
 const styles = {
@@ -70,17 +69,9 @@ const months = [
   'Décembre',
 ]
 
-export const Default = (args) => (
-  <StandaloneRangeDatePicker {...args} />
-)
+export const Default = args => <StandaloneRangeDatePicker {...args} />
 
-Default.decorators = [
-  story => (
-    <div className="story-Container">
-      {story()}
-    </div>
-  ),
-]
+Default.decorators = [story => <div className="story-Container">{story()}</div>]
 
 Default.args = {
   selectedDay: today,
@@ -95,7 +86,7 @@ Default.args = {
   firstDayOfWeek: 1,
   initialMonth: today,
   numberOfMonths: 2,
-  onChange: action('onChange')
+  onChange: action('onChange'),
 }
 
 Default.argTypes = {

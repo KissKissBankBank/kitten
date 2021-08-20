@@ -9,11 +9,7 @@ export default {
     component: Checkbox,
   },
   decorators: [
-    story => (
-      <div className="story-Container story-Grid">
-        {story()}
-      </div>
-    ),
+    story => <div className="story-Container story-Grid">{story()}</div>,
   ],
   argTypes: {
     id: {

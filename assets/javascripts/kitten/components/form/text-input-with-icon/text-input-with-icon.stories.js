@@ -9,9 +9,7 @@ import {
   COLORS,
 } from '../../..'
 
-export const Default = (args) => (
-  <TextInputWithIcon {...args} />
-)
+export const Default = args => <TextInputWithIcon {...args} />
 
 Default.decorators = [
   story => (
@@ -32,21 +30,20 @@ Default.argTypes = {
   ...TextInputStory.argTypes,
   icon: {
     name: 'icon',
-    control: { type: 'object' }
+    control: { type: 'object' },
   },
   iconPosition: {
     name: 'iconPosition',
     options: ['left', 'right'],
-    control: { type: 'inline-radio' }
+    control: { type: 'inline-radio' },
   },
   accessibilityLabel: {
     name: 'accessibilityLabel',
-    control: { type: 'text' }
+    control: { type: 'text' },
   },
 }
 
-
-export const Validation = (args) => {
+export const Validation = args => {
   const IconComponent = () => {
     switch (args.state) {
       case 'loading':
@@ -93,6 +90,6 @@ Validation.argTypes = {
   state: {
     name: 'state (story prop)',
     options: ['none', 'loading', 'valid', 'error'],
-    control: { type: 'select'}
-  }
+    control: { type: 'select' },
+  },
 }

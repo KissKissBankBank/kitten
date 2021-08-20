@@ -40,13 +40,7 @@ export default {
   parameters: {
     component: Hero,
   },
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
   args: args,
   argTypes: argTypes,
 }

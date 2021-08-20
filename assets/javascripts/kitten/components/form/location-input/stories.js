@@ -5,13 +5,7 @@ import { text } from '@storybook/addon-knobs'
 export default {
   title: 'Form/LocationInput',
   component: LocationInput,
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
   argTypes: {
     onChange: {
       name: 'onChange',
