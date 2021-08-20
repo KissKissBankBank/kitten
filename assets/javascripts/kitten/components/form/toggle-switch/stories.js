@@ -1,32 +1,65 @@
 import React from 'react'
-import { boolean, text } from '@storybook/addon-knobs'
-import { Grid, GridCol } from '../../../components/layout/grid'
 import { ToggleSwitch } from './index'
+import { action } from '@storybook/addon-actions'
 
 export default {
   component: ToggleSwitch,
   title: 'Form/ToggleSwitch',
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  args: {
+    id: 'toggle-switch',
+    disabled: false,
+    big: false,
+    label: 'ToggleSwitch label',
+    isLabelVisible: true,
+    reverseOrder: false,
+    locked: false,
+    onChange: action('onChange'),
+  },
+  argTypes: {
+    id: {
+      name: 'id',
+      control: { type: 'text' },
+    },
+    disabled: {
+      name: 'disabled',
+      control: { type: 'boolean' },
+    },
+    big: {
+      name: 'big',
+      control: { type: 'boolean' },
+    },
+    label: {
+      name: 'label',
+      control: { type: 'text' },
+    },
+    isLabelVisible: {
+      name: 'isLabelVisible',
+      control: { type: 'boolean' },
+    },
+    reverseOrder: {
+      name: 'reverseOrder',
+      control: { type: 'boolean' },
+    },
+    locked: {
+      name: 'locked',
+      control: { type: 'boolean' },
+    },
+    onChange: {
+      name: 'onChange',
+      control: { type: 'function' },
+    },
+  }
 }
 
-export const Default = () => {
-  const handleChange = e => {
-    console.warn(e)
-  }
-
+export const Default = (args) => {
   return (
-    <Grid style={{ marginTop: '5em' }}>
-      <GridCol offset="1" col="6">
-        <ToggleSwitch
-          id="toggle-switch"
-          disabled={boolean('Disabled', false)}
-          big={boolean('Big', false)}
-          label={text('Label', 'Le label')}
-          isLabelVisible={boolean('isLabelVisible', true)}
-          reverseOrder={boolean('reverseOrder', false)}
-          locked={boolean('Locked?', false)}
-          onChange={handleChange}
-        />
-      </GridCol>
-    </Grid>
+        <ToggleSwitch {...args}/>
   )
 }

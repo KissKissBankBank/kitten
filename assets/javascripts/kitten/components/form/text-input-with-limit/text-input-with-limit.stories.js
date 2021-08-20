@@ -1,33 +1,30 @@
 import React from 'react'
-import { boolean, select, number } from '@storybook/addon-knobs'
 import { TextInputWithLimit } from './index'
+import { Default as TextInputStory } from '../text-input/text-input.stories.js'
 
-const variantOptions = {
-  Andromeda: 'andromeda',
-  Orion: 'orion',
-}
-
-const sizeOptions = {
-  Tiny: 'tiny',
-  Regular: 'regular',
-  Big: 'big',
-  Huge: 'huge',
-  Giant: 'giant',
-}
-
-const tagOptions = {
-  Input: 'input',
-  Textarea: 'textarea',
-}
-
-export const Default = () => (
-  <TextInputWithLimit
-    disabled={boolean('Disabled', false)}
-    tag={select('Tag', tagOptions, 'input')}
-    variant={select('Variant', variantOptions, 'andromeda')}
-    limit={number('Limit', 80)}
-    size={select('Size', sizeOptions, 'regular')}
-  />
+export const Default = (args) => (
+  <TextInputWithLimit {...args} />
 )
 
 Default.storyName = 'Text input with limit'
+
+Default.decorators = [
+  story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      {story()}
+    </div>
+  ),
+]
+
+Default.args = {
+  ...TextInputStory.args,
+  limit: 80,
+}
+
+Default.argTypes = {
+  ...TextInputStory.argTypes,
+  limit: {
+    name: 'limit',
+    control: { type: 'number' }
+  },
+}

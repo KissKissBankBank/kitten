@@ -1,6 +1,5 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
-import { text, boolean, select } from '@storybook/addon-knobs'
 import { RadioButtonSet } from './index'
 import {
   Grid,
@@ -36,128 +35,167 @@ export default {
   parameters: {
     component: RadioButtonSet,
   },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  args: defaultArgs,
+  argTypes: {
+    id: {
+      name: 'id',
+      control: { type: 'text' }
+    },
+    label: {
+      name: 'label',
+      control: { type: 'text' }
+    },
+    items: {
+      name: 'items',
+      control: { type: 'object' }
+    },
+    error: {
+      name: 'error',
+      control: { type: 'boolean' }
+    },
+    disabled: {
+      name: 'disabled',
+      control: { type: 'boolean' }
+    },
+    size: {
+      name: 'size',
+      options: ['regular', 'big'],
+      control: { type: 'inline-radio' },
+    },
+    variant: {
+      name: 'variant',
+      options: ['andromeda', 'orion'],
+      control: { type: 'inline-radio' },
+    },
+    design: {
+      name: 'design',
+      options: ['disc', 'check'],
+      control: { type: 'inline-radio' },
+    },
+  },
 }
 
-export const Default = () => (
-  <Grid>
-    <GridCol offset="1" col="8">
-      <RadioButtonSet
-        id={text('ID', 'story-radio-button-set')}
-        label={text('Label', null)}
-        items={[
-          {
-            text: text('Option A', 'Option A'),
-            id: 'option-a',
-            defaultChecked: true,
-          },
-          {
-            text: text('Option B', 'Option B'),
-            id: 'option-b',
-          },
-          {
-            text: text('Option C', 'Option C'),
-            id: 'option-c',
-          },
-        ]}
-        error={boolean('Error?', false)}
-        disabled={boolean('Disabled', false)}
-        variant={select(
-          'Variant',
-          { andromeda: 'andromeda', orion: 'orion' },
-          'andromeda',
-        )}
-        design={select('design', { disc: 'disc', check: 'check' }, 'disc')}
-      />
-    </GridCol>
-  </Grid>
+const defaultArgs =   {
+  id: 'story-radio-button-set',
+  error: false,
+  disabled: false,
+  variant: 'andromeda',
+  design: 'disc',
+  size: 'regular',
+}
+
+export const Default = (args) => (
+  <RadioButtonSet {...args} />
 )
 
-export const OrionGrid = () => (
-  <Grid>
-    <GridCol offset="1" col="8">
-      <OrionGlobalStyle />
-      <RadioButtonSet
-        className="k-Form-RadioButtonSet__orionGrid"
-        id={text('ID', 'story-radio-button-set')}
-        items={[
-          {
-            text: text('Option A', '25 €'),
-            id: 'option-a',
-            defaultChecked: true,
-          },
-          {
-            text: text('Option B', '50 €'),
-            id: 'option-b',
-          },
-          {
-            text: text('Option C', '100 €'),
-            id: 'option-c',
-          },
-          {
-            text: text('Option D', '200 €'),
-            id: 'option-d',
-          },
-          {
-            text: text('Option E', '500 €'),
-            id: 'option-e',
-          },
-          {
-            text: text('Option F', '1000 €'),
-            id: 'option-f',
-          },
-        ]}
-        error={boolean('Error?', false)}
-        disabled={boolean('Disabled', false)}
-        variant="orion"
-        design={select('design', { disc: 'disc', check: 'check' }, 'disc')}
-      >
-        <Title modifier="quaternary" className="k-u-margin-bottom-triple">
-          Choisissez le montant que vous souhaitez offrir
-        </Title>
-      </RadioButtonSet>
-    </GridCol>
-  </Grid>
+Default.args = {
+  ...defaultArgs,
+  items: [
+    {
+      text: 'Option A',
+      id: 'option-a',
+      defaultChecked: true,
+    },
+    {
+      text: 'Option B',
+      id: 'option-b',
+    },
+    {
+      text: 'Option C',
+      id: 'option-c',
+    },
+  ]
+}
+
+export const OrionGrid = (args) => (
+  <RadioButtonSet
+    className="k-Form-RadioButtonSet__orionGrid"
+    {...args}
+  >
+    <OrionGlobalStyle />
+    <Title modifier="quaternary" className="k-u-margin-bottom-triple">
+      Choisissez le montant que vous souhaitez offrir
+    </Title>
+  </RadioButtonSet>
 )
-export const OrionGridWithLabel = () => (
-  <Grid>
-    <GridCol offset="1" col="8">
-      <OrionGlobalStyle />
-      <RadioButtonSet
-        label="Test de label"
-        className="k-Form-RadioButtonSet__orionGrid"
-        id={text('ID', 'story-radio-button-set')}
-        items={[
-          {
-            text: text('Option A', '25 €'),
-            id: 'option-a',
-            defaultChecked: true,
-          },
-          {
-            text: text('Option B', '50 €'),
-            id: 'option-b',
-          },
-          {
-            text: text('Option C', '100 €'),
-            id: 'option-c',
-          },
-          {
-            text: text('Option D', '200 €'),
-            id: 'option-d',
-          },
-          {
-            text: text('Option E', '500 €'),
-            id: 'option-e',
-          },
-          {
-            text: text('Option F', '1000 €'),
-            id: 'option-f',
-          },
-        ]}
-        error={boolean('Error?', false)}
-        disabled={boolean('Disabled', false)}
-        variant="orion"
-        design={select('design', { disc: 'disc', check: 'check' }, 'disc')}
-      />
-    </GridCol>
-  </Grid>
+
+OrionGrid.args = {
+  ...defaultArgs,
+  items: [
+    {
+      text: '25 €',
+      id: 'option-a',
+      defaultChecked: true,
+    },
+    {
+      text: '50 €',
+      id: 'option-b',
+    },
+    {
+      text: '100 €',
+      id: 'option-c',
+    },
+    {
+      text: '200 €',
+      id: 'option-d',
+    },
+    {
+      text: '500 €',
+      id: 'option-e',
+    },
+    {
+      text: '1000 €',
+      id: 'option-f',
+    },
+  ],
+  variant: 'orion',
+}
+
+export const OrionGridWithLabel = (args) => (
+  <RadioButtonSet
+    className="k-Form-RadioButtonSet__orionGrid"
+    {...args}
+  >
+    <OrionGlobalStyle />
+  </RadioButtonSet>
 )
+
+OrionGridWithLabel.args = {
+  ...defaultArgs,
+  items: [
+    {
+      text: '25 €',
+      id: 'option-a',
+      defaultChecked: true,
+    },
+    {
+      text: '50 €',
+      id: 'option-b',
+    },
+    {
+      text: '100 €',
+      id: 'option-c',
+    },
+    {
+      text: '200 €',
+      id: 'option-d',
+    },
+    {
+      text: '500 €',
+      id: 'option-e',
+    },
+    {
+      text: '1000 €',
+      id: 'option-f',
+    },
+  ],
+  variant: 'orion',
+  label: 'Test de label',
+}
