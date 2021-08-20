@@ -14,7 +14,19 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Documentation', ['Introduction', 'Usage', 'Design'], 'Helpers'],
+      order: [
+        'Documentation',
+        ['Introduction', 'Usage', 'Design'],
+        'Helpers',
+        'Accessibility',
+        'Graphics',
+        'Layout',
+        'Atoms',
+        'Form',
+        'Molecules',
+        'Organisms',
+        'Pages',
+      ],
       method: 'alphabetical',
     },
   },
