@@ -237,21 +237,3 @@ export const ModifierMetrics = () => (
     </Marger>
   </>
 )
-
-export const AlignCenter = () => (
-  <TitleWithStroke modifier="primary" align="center">
-    Lorem ipsum dolor sit amet
-  </TitleWithStroke>
-)
-
-export const AlignRight = () => (
-  <TitleWithStroke modifier="primary" align="right">
-    Lorem ipsum dolor sit amet
-  </TitleWithStroke>
-)
-
-export const Italic = () => (
-  <TitleWithStroke modifier="primary" italic>
-    Lorem ipsum dolor sit amet…
-  </TitleWithStroke>
-)
