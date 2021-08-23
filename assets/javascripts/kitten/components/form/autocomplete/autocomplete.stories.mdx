@@ -1,20 +1,16 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
 import * as stories from './autocomplete.stories.js'
 import { Autocomplete } from './index'
+import { FileUrl } from 'storybook/file-url'
+
 
 <Meta title="Form/Autocomplete" component={Autocomplete} />
 
 # Autocomplete
 
-<Canvas>
-  <Story name="Example" story={stories.Default} />
-</Canvas>
+## Source
 
-## With Icon
-
-<Canvas>
-  <Story name="WithIcon" story={stories.WithIcon} />
-</Canvas>
+<FileUrl filepath={__filename} />
 
 ## Import
 
@@ -24,7 +20,11 @@ import { Autocomplete } from '@kisskissbankbank/kitten'
 
 ## Usage
 
-#### Default
+### Default
+
+<Canvas>
+  <Story name="Default" story={stories.Default} />
+</Canvas>
 
 ```js
 <Autocomplete
@@ -35,6 +35,13 @@ import { Autocomplete } from '@kisskissbankbank/kitten'
   items={ ['foo', 'bar'] }
 />
 ```
+
+### With Icon
+
+<Canvas>
+  <Story name="WithIcon" story={stories.WithIcon} />
+</Canvas>
+
 
 ## Props
 

@@ -1,14 +1,16 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
 import * as stories from './button-image.stories.js'
 import { ButtonImage } from './index'
+import { FileUrl } from 'storybook/file-url'
+
 
 <Meta title="Molecules/Buttons/ButtonImage" component={ButtonImage} />
 
 # ButtonImage
 
-<Canvas>
-  <Story name="Example" story={stories.Default} />
-</Canvas>
+## Source
+
+<FileUrl filepath={__filename} />
 
 ## Import
 
@@ -17,6 +19,10 @@ import { ButtonImage } from '@kisskissbankbank/kitten/src/components/molecules/b
 ```
 
 ## Usage
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
 
 #### Default
 

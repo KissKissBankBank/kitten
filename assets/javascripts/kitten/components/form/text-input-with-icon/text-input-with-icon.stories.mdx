@@ -1,18 +1,16 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
 import * as stories from './text-input-with-icon.stories.js'
 import { TextInputWithIcon } from './index'
+import { FileUrl } from 'storybook/file-url'
+
 
 <Meta title="Form/TextInputWithIcon" component={TextInputWithIcon} />
 
 # TextInputWithIcon
 
-<Canvas>
-  <Story name="Example" story={stories.Default} />
-</Canvas>
+## Source
 
-<Canvas>
-  <Story name="Example with validation" story={stories.Validation} />
-</Canvas>
+<FileUrl filepath={__filename} />
 
 ## Import
 
@@ -21,6 +19,14 @@ import { TextInputWithIcon } from '@kisskissbankbank/kitten'
 ```
 
 ## Usage
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
+
+<Canvas>
+  <Story name="Example with validation" story={stories.Validation} />
+</Canvas>
 
 #### Default
 
