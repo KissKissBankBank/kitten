@@ -6,13 +6,22 @@ import { computeFromRatio } from '../../../../helpers/utils/ratio'
 const DEFAULT_WIDTH = 8
 const DEFAULT_HEIGHT = 8
 
-export const CrossIcon = ({ color, title, width, height, ...props }) => {
+export const CrossIcon = ({ color, title, width, height, size, ...props }) => {
   const computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
     width,
     height,
   })
+
+  if(size === 'big') {
+    return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 7L17 17" stroke={color} strokeWidth="2" strokeLinecap="round"/>
+      <path d="M17 7L7 17" stroke={color} strokeWidth="2" strokeLinecap="round"/>
+    </svg>
+    )
+  }
 
   return (
     <svg
@@ -35,8 +44,10 @@ CrossIcon.prototype = {
   title: PropTypes.string,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  size: PropTypes.oneOf(['normal', 'big'])
 }
 
 CrossIcon.defaultProps = {
   color: COLORS.font1,
+  size: 'normal',
 }

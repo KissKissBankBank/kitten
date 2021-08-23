@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import { action } from '@storybook/addon-actions'
 import HeaderNav from '../index'
 import {
   LendopolisLogo,
@@ -11,6 +12,15 @@ import {
   domElementHelper,
   useWindowWidth,
   useDeepCompareEffect,
+  Button,
+  Overlay,
+  FlexWrapper,
+  HorizontalCrowdfundingCard,
+  ClockCircleIcon,
+  CheckedCircleIcon,
+  CLOSE_OVERLAY_EVENT,
+  OPEN_OVERLAY_EVENT,
+  Badge,
 } from '../../../..'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
@@ -80,8 +90,145 @@ const Navigation = () => (
     <HeaderNav.Nav.Item href="#" className="is-selected">
       Découvrez les projets
     </HeaderNav.Nav.Item>
+    <HeaderNav.Nav.Item href="#">
+      Carte Cadeau&nbsp;
+      <Badge color={COLORS.primary1} className="k-u-transform-uppercase">
+        Nouveau
+      </Badge>
+
+    </HeaderNav.Nav.Item>
   </>
 )
+
+const SearchInput = () => {
+
+  const handleToggle = event => {
+    action('handleToggle')(event)
+    window.dispatchEvent(
+      new Event(event.isDropdownExpanded ? OPEN_OVERLAY_EVENT : CLOSE_OVERLAY_EVENT),
+    )
+  }
+
+  const handleInputChange = event => {
+    action('handleInputChange')(event)
+  }
+
+  return (
+    <HeaderNav.SearchInput
+      onMenuToggle={handleToggle}
+      searchInputProps={{
+        placeholder: 'Rechercher un projet…',
+        'aria-label': 'Rechercher un projet',
+        onChange: handleInputChange,
+      }}
+      searchButtonProps={{
+        type: 'submit',
+        'aria-label': 'Voir les résultats de la recherche',
+      }}
+      action="#form-action#"
+      method="POST"
+    >
+      <p className="k-u-a11y-visuallyHidden">
+        4 résultats ont été trouvés
+      </p>
+      <FlexWrapper gap={5} padding={15}>
+        <HorizontalCrowdfundingCard
+          title="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+          description="Maecenas sed diam eget risus varius blandit sit amet non magna."
+          progress={37}
+          progressColor={COLORS.primary1}
+          info={
+            <div className="k-u-flex k-u-flex-alignItems-center">
+              <ClockCircleIcon
+                width="12"
+                height="12"
+                color={COLORS.background1}
+                bgColor={COLORS.primary1}
+                className="k-u-margin-right-noneHalf"
+              />
+              <Text weight="regular" size="micro" color="primary1">
+                Dernier jour&nbsp;!
+              </Text>
+            </div>
+          }
+        />
+        <HorizontalCrowdfundingCard
+          title="Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+          description="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
+          progress={100}
+          progressColor={COLORS.valid}
+          info={
+            <div className="k-u-flex k-u-flex-alignItems-center">
+              <CheckedCircleIcon
+                width="12"
+                height="12"
+                color={COLORS.background1}
+                bgColor={COLORS.valid}
+                className="k-u-margin-right-noneHalf"
+              />
+              <Text weight="regular" size="micro" color="font1">
+                Réussi
+              </Text>
+            </div>
+          }
+        />
+        <HorizontalCrowdfundingCard
+          title="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
+          description="Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+          progress={21}
+          progressColor={COLORS.primary1}
+          info={
+            <div className="k-u-flex k-u-flex-alignItems-center">
+              <ClockCircleIcon
+                width="12"
+                height="12"
+                color={COLORS.background1}
+                bgColor={COLORS.primary1}
+                className="k-u-margin-right-noneHalf"
+              />
+              <Text weight="regular" size="micro">
+                En cours
+              </Text>
+            </div>
+          }
+        />
+        <HorizontalCrowdfundingCard
+          title="Maecenas sed diam eget risus varius blandit sit amet non magna."
+          description="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+          progress={60}
+          progressColor={COLORS.primary1}
+          info={
+            <div className="k-u-flex k-u-flex-alignItems-center">
+              <ClockCircleIcon
+                width="12"
+                height="12"
+                color={COLORS.background1}
+                bgColor={COLORS.primary1}
+                className="k-u-margin-right-noneHalf"
+              />
+              <Text weight="regular" size="micro">
+                En cours
+              </Text>
+            </div>
+          }
+        />
+      </FlexWrapper>
+
+      <Button
+        size="tiny"
+        variant="orion"
+        type="submit"
+        fluid
+        className="k-u-margin-bottom-double k-u-margin-horizontal-double"
+        style={{
+          width: 'calc(100% - 40px)'
+        }}
+      >
+        Voir les résultats de la recherche
+      </Button>
+    </HeaderNav.SearchInput>
+  )
+}
 
 export const KissKissBankBankHeaderNavStoryNew = ({
   isLogged,
@@ -101,101 +248,99 @@ export const KissKissBankBankHeaderNavStoryNew = ({
   }, [isLogged, windowWidth])
 
   return (
-    <HeaderNav
-      id={HEADER_NAV_ID}
-      isLogged={isLogged}
-      isFixed={isFixed}
-      quickAccessProps={{
-        href: '#mainContent',
-        text: 'Aller au contenu principal',
-        zIndex: 300,
-      }}
-      size={size}
-      borderStyle={borderStyle}
-    >
-      <HeaderNav.BurgerMenuNext dropdownContentWidth={burgerMenuWidth}>
-        <InnerBurgerMenu />
-      </HeaderNav.BurgerMenuNext>
+    <>
+      <Overlay
+        zIndex={1}
+        position="fixed"
+      />
 
-      <HeaderNav.Logo href="#">
-        <HeaderNav.Hidden min="xs">
-          <KissKissBankBankLogo height="25" />
+      <HeaderNav
+        id={HEADER_NAV_ID}
+        isLogged={isLogged}
+        isFixed={isFixed}
+        quickAccessProps={{
+          href: '#mainContent',
+          text: 'Aller au contenu principal',
+          zIndex: 300,
+        }}
+        size={size}
+        borderStyle={borderStyle}
+      >
+        <HeaderNav.BurgerMenuNext dropdownContentWidth={burgerMenuWidth}>
+          <InnerBurgerMenu />
+        </HeaderNav.BurgerMenuNext>
+
+        <HeaderNav.Logo href="#">
+          <HeaderNav.Hidden min="xs">
+            <KissKissBankBankLogo height="25" />
+          </HeaderNav.Hidden>
+
+          <HeaderNav.Hidden max="xxs">
+            <KissKissBankBankLogo />
+          </HeaderNav.Hidden>
+        </HeaderNav.Logo>
+
+        <HeaderNav.Hidden max="m">
+          <HeaderNav.Nav>
+            <Navigation />
+          </HeaderNav.Nav>
         </HeaderNav.Hidden>
 
-        <HeaderNav.Hidden max="xxs">
-          <KissKissBankBankLogo />
-        </HeaderNav.Hidden>
-      </HeaderNav.Logo>
+        <HeaderNav.Right padded>
+          <SearchInput />
 
-      <HeaderNav.Hidden max="m">
-        <HeaderNav.Nav>
-          <Navigation />
-        </HeaderNav.Nav>
-      </HeaderNav.Hidden>
+          <HeaderNav.Logged>
+            <HeaderNav.UserMenuNext dropdownAnchorSide="right" padding={false}>
+              <HeaderNav.UserMenuNext.Button
+                hasArrow
+                backgroundColor={COLORS.background1}
+                backgroundColorHover="transparent"
+                backgroundColorActive="transparent"
+                color={COLORS.font1}
+                colorHover={COLORS.primary1}
+                colorActive={COLORS.font1}
+              >
+                <AvatarWithTextAndBadge className="k-u-margin-left-single@xs-down">
+                  <AvatarWithTextAndBadge.Image src="/kitten.jpg">
+                    <AvatarWithTextAndBadge.Badge>
+                      2
+                    </AvatarWithTextAndBadge.Badge>
+                  </AvatarWithTextAndBadge.Image>
 
-      <HeaderNav.Right>
-        <HeaderNav.Button
-          icon={<SearchIcon width="14" height="14" color={COLORS.font1} />}
-          backgroundColor={COLORS.background1}
-          backgroundColorHover={COLORS.line1}
-          color={COLORS.font1}
-          text="Rechercher"
-          href="#"
-          hiddenText={{ max: 'm' }}
-        />
+                  <AvatarWithTextAndBadge.Text
+                    className="k-u-hidden@xs-down"
+                    withEllipsisOverflow={true}
+                  >
+                    <Text lineHeight="normal" weight="regular">
+                      Jean Charles Édouard
+                    </Text>
+                  </AvatarWithTextAndBadge.Text>
+                </AvatarWithTextAndBadge>
+              </HeaderNav.UserMenuNext.Button>
 
-        <HeaderNav.Logged>
-          <HeaderNav.UserMenuNext
-            dropdownAnchorSide="right"
-            mobilePadding={false}
-          >
-            <HeaderNav.UserMenuNext.Button
-              hasArrow
-              backgroundColor={COLORS.background1}
-              backgroundColorHover={COLORS.line1}
-              backgroundColorActive={COLORS.line1}
-              color={COLORS.font1}
-              colorHover={COLORS.primary1}
-              colorActive={COLORS.font1}
-            >
-              <AvatarWithTextAndBadge className="k-u-margin-left-single@xs-down">
-                <AvatarWithTextAndBadge.Image src="/kitten.jpg">
-                  <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
-                </AvatarWithTextAndBadge.Image>
+              <HeaderNav.UserMenuNext.Navigation>
+                <InnerUserMenu />
+              </HeaderNav.UserMenuNext.Navigation>
+            </HeaderNav.UserMenuNext>
+          </HeaderNav.Logged>
 
-                <AvatarWithTextAndBadge.Text
-                  className="k-u-hidden@xs-down"
-                  withEllipsisOverflow={true}
-                >
-                  <Text lineHeight="normal" weight="regular">
-                    Jean Charles Édouard
-                  </Text>
-                </AvatarWithTextAndBadge.Text>
-              </AvatarWithTextAndBadge>
-            </HeaderNav.UserMenuNext.Button>
-
-            <HeaderNav.UserMenuNext.Navigation>
-              <InnerUserMenu />
-            </HeaderNav.UserMenuNext.Navigation>
-          </HeaderNav.UserMenuNext>
-        </HeaderNav.Logged>
-
-        <HeaderNav.LoggedOut>
-          <HeaderNav.Button
-            icon={
-              <HeaderNav.Hidden min="s">
-                <SearchIcon />
-              </HeaderNav.Hidden>
-            }
-            backgroundColor={COLORS.primary1}
-            backgroundColorHover={COLORS.primary2}
-            color={COLORS.background1}
-            text="Se connecter / S'inscrire"
-            href="#"
-            hiddenText={{ max: 'xs' }}
-          />
-        </HeaderNav.LoggedOut>
-      </HeaderNav.Right>
-    </HeaderNav>
+          <HeaderNav.LoggedOut>
+            <HeaderNav.Button
+              icon={
+                <HeaderNav.Hidden min="s">
+                  <SearchIcon />
+                </HeaderNav.Hidden>
+              }
+              backgroundColor={COLORS.primary1}
+              backgroundColorHover={COLORS.primary2}
+              color={COLORS.background1}
+              text="Se connecter / S'inscrire"
+              href="#"
+              hiddenText={{ max: 'xs' }}
+            />
+          </HeaderNav.LoggedOut>
+        </HeaderNav.Right>
+      </HeaderNav>
+    </>
   )
 }

@@ -19,5 +19,7 @@ export const Default = () => (
     buttonValue={<Loader />}
     inputValue={text('inputValue', 'Une valeur')}
     placeholder={text('Les props sont transmises', 'Les props sont transmises')}
+    inset={boolean('Inset', false)}
+    rounded={boolean('Rounded', false)}
   />
 )
