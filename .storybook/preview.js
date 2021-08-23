@@ -30,6 +30,10 @@ export const parameters = {
       method: 'alphabetical',
     },
   },
+  controls: {
+    expanded: true,
+    sort: 'requiredFirst',
+ },
 }
 
 export const decorators = [

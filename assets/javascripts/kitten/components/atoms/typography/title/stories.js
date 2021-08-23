@@ -1,12 +1,16 @@
 import React from 'react'
 import { Title } from './index'
-import { Container } from '../../../..'
 
 const argTypes = {
+  tag: {
+    name: 'tag',
+    description: 'Changes the title’s element type.',
+    control: { type: 'text' },
+  },
   modifier: {
     name: 'modifier',
     description:
-      'Title have seven modifiers. With different size depending on the device (desktop, tablet and mobile)',
+      'Title has seven modifiers, they define different sizes depending on the device (desktop, tablet and mobile)',
     options: [
       'primary',
       'secondary',
@@ -20,18 +24,22 @@ const argTypes = {
   },
   noMargin: {
     name: 'noMargin',
-    description: 'Remove default margins of `title` attribut.',
+    description: 'Removes the default margins the element.',
     control: { type: 'boolean' },
   },
   cssColor: {
     name: 'cssColor',
-    description: 'Specify a color (use a CSS color string).',
+    description: 'Sets a color from a CSS color string.',
     control: { type: 'color' },
   },
   italic: {
     name: 'italic',
-    description: 'Use `font-style: italic`.',
+    description: 'Adds an underline style.',
     control: { type: 'boolean' },
+  },
+  children: {
+    name: 'children',
+    control: { type: 'text' },
   },
 }
 
@@ -41,23 +49,10 @@ const args = {
   noMargin: false,
   italic: false,
   cssColor: null,
+  children: 'Lorem ipsum dolor sit amet',
 }
 
-export const Default = ({ modifier, noMargin, italic, cssColor, ...props }) => (
-  <Container>
-    <div class="k-u-margin-top-quadruple">
-      <Title
-        modifier={modifier}
-        italic={italic}
-        noMargin={noMargin}
-        cssColor={cssColor}
-        {...props}
-      >
-        Lorem ipsum dolor sit amet
-      </Title>
-    </div>
-  </Container>
-)
+export const Default = props => <Title {...props} />
 
 Default.args = args
 Default.argTypes = argTypes
@@ -93,6 +88,11 @@ export default {
     component: Title,
     componentSubtitle: 'List of Title',
   },
-  args,
-  argTypes,
+  decorators: [
+    story => (
+      <div className="story-Container k-u-flex k-u-flex-direction-column">
+        {story()}
+      </div>
+    ),
+  ],
 }

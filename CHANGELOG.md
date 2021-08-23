@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `createRangeFromZeroTo` to ESM exports.
+- Feature: `IconBadge`: Deprecate `big` and `huge` props.
 
 ## [4.2.1] - 2021-08-19
 

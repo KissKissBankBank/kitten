@@ -106,7 +106,7 @@ Text.defaultProps = {
   className: null,
   color: null,
   cssColor: null,
-  decoration: null,
+  decoration: false,
   lineHeight: null,
   setting: null,
   size: null,
