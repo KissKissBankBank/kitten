@@ -91,7 +91,7 @@ export const Default = ({
       </RewardSummaryCard.Image>
 
       <RewardSummaryCard.Title>
-        Lorem ipsum dolor sit amet.
+        Stickers Free Boobs Club
         <RewardSummaryCard.TitleTag
           className="k-u-margin-top-single"
           icon="star"
