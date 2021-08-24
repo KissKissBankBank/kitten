@@ -30,7 +30,7 @@ Array [
     className="k-u-margin-top-single"
   >
     <div
-      className="sc-gqjmRU gSiJXU"
+      className="sc-gqjmRU fTLKVW k-Form-Autocomplete k-Form-Autocomplete--andromeda"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,8 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-VigVT eSjoKm"
+        className="k-Form-Autocomplete__input"
+        error={false}
         id="autocomplete"
         name="field"
         onBlur={[Function]}
