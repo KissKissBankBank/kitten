@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: Typography: Remove `modular-scale` dependency and logic.
+  All the font sizes previously defined as modular scale step (via `stepToRem`)
+  are now calculated from a table with integer pixel values.
+
 ## [4.2.1] - 2021-08-19
 
 Fix:

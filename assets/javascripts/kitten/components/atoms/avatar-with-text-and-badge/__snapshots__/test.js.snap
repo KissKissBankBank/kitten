@@ -26,7 +26,7 @@ exports[`<AvatarWithTextAndBadge /> with multiple lines and badge should match w
     </span>
     <span
       aria-label="2 notifications"
-      className="sc-bdVaJa ckTSZy k-Badge k-Avatar__badge"
+      className="sc-bdVaJa dREntm k-Badge k-Avatar__badge"
       style={
         Object {
           "--Badge-background-color": "#19b4fa",
