@@ -9,7 +9,7 @@ export const Options = ({ open, ...props }) => {
       <DropdownMenu
         open={open}
         menuPosition="left"
-        button={ ({ open }) => (
+        button={({ open }) => (
           <>
             <EllipsisIcon color={COLORS.font1} />
             <span className="k-u-a11y-visuallyHidden">
@@ -18,7 +18,7 @@ export const Options = ({ open, ...props }) => {
           </>
         )}
         className="k-u-hidden@s-down"
-        { ...props }
+        {...props}
       >
         <DropdownMenu.Link href="#">Editer</DropdownMenu.Link>
         <DropdownMenu.Link href="#">Dupliquer</DropdownMenu.Link>

@@ -105,10 +105,18 @@ export const StyledRewardSummaryCard = styled.a`
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: 100%;
-      padding: ${pxToRem(30)};
+      padding: ${pxToRem(20)} ${pxToRem(30)};
       grid-template-columns: ${pxToRem(250)} auto auto auto auto;
       grid-template-rows: 1fr;
       grid-gap: 0 ${pxToRem(10)};
+      grid-template-areas: 'info amount contribution availablity options';
+
+      ${
+        '' /* &:not(.k-RewardSummaryCard__contribution) {
+        grid-template-areas: 
+          "info amount . availablity options";
+      } */
+      }
     }
 
     @media (min-width: ${ScreenConfig.L.min}px) {
@@ -134,10 +142,11 @@ export const StyledRewardSummaryCard = styled.a`
     line-height: ${pxToRem(16)};
     place-self: center start;
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
+    @media (min-width: ${ScreenConfig.S.min}px) {
       grid-column: 1;
       font-size: ${stepToRem(0)};
       margin-top: 0;
+      grid-area: info;
     }
   }
 
@@ -167,22 +176,38 @@ export const StyledRewardSummaryCard = styled.a`
     margin-right: ${pxToRem(10)};
     margin-top: 0;
     place-self: center flex-start;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      grid-area: amount;
+    }
   }
 
-  .k-RewardSummaryCard__rewardNumber {
+  .k-RewardSummaryCard__contribution {
     margin-right: ${pxToRem(10)};
     margin-top: 0;
     place-self: center flex-start;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      grid-area: contribution;
+    }
   }
 
   .k-RewardSummaryCard__availablity {
     margin-right: ${pxToRem(10)};
     margin-top: 0;
     place-self: center flex-start;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      grid-area: availablity;
+    }
   }
 
   .k-RewardSummaryCard__options {
     z-index: 2;
     place-self: center flex-end;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      grid-area: options;
+    }
   }
 `

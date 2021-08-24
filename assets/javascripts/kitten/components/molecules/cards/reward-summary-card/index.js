@@ -9,7 +9,7 @@ import {
   Title,
   TitleTag,
   Availablity,
-  RewardNumber,
+  Contribution,
   Amount,
   Options,
 } from './components'
@@ -75,7 +75,7 @@ RewardSummaryCard.Image = Image
 RewardSummaryCard.Title = Title
 RewardSummaryCard.TitleTag = TitleTag
 RewardSummaryCard.Amount = Amount
-RewardSummaryCard.RewardNumber = RewardNumber
+RewardSummaryCard.Contribution = Contribution
 RewardSummaryCard.Availablity = Availablity
 RewardSummaryCard.Options = Options
 
