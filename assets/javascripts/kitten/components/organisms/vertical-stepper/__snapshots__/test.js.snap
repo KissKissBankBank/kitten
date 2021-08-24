@@ -234,7 +234,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 .c4.k-Steppers--VerticalStepper__title--orion {
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 0.3125rem;
@@ -265,7 +265,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 .c5 .k-Steppers--VerticalStepper__link--orion {
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
 }
 
 .c5 .k-Steppers--VerticalStepper__link--orion:before {
@@ -379,13 +379,13 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 
 @media (min-width:640px) {
   .c4.k-Steppers--VerticalStepper__title--orion {
-    font-size: 0.8888888888888888rem;
+    font-size: 0.875rem;
   }
 }
 
 @media (min-width:640px) {
   .c5 .k-Steppers--VerticalStepper__link--orion {
-    font-size: 0.8888888888888888rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -907,7 +907,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 }
 
 .c4.k-Steppers--VerticalStepper__title--orion {
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 0.3125rem;
@@ -938,7 +938,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 }
 
 .c5 .k-Steppers--VerticalStepper__link--orion {
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
 }
 
 .c5 .k-Steppers--VerticalStepper__link--orion:before {
@@ -1023,13 +1023,13 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 
 @media (min-width:640px) {
   .c4.k-Steppers--VerticalStepper__title--orion {
-    font-size: 0.8888888888888888rem;
+    font-size: 0.875rem;
   }
 }
 
 @media (min-width:640px) {
   .c5 .k-Steppers--VerticalStepper__link--orion {
-    font-size: 0.8888888888888888rem;
+    font-size: 0.875rem;
   }
 }
 

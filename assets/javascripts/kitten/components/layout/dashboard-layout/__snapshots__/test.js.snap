@@ -55,7 +55,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 .c2 .k-DashboardLayout__flow__sideCard__list li {
   margin-bottom: 0.625rem;
   line-height: 1.375rem;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
 }
 
 .c0 {
@@ -157,7 +157,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 
 @media (min-width:40rem) {
   .c2 .k-DashboardLayout__flow__sideCard__list li {
-    font-size: 0.8888888888888888rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -403,7 +403,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 .c2 .k-DashboardLayout__flow__sideCard__list li {
   margin-bottom: 0.625rem;
   line-height: 1.375rem;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
 }
 
 .c0 {
@@ -505,7 +505,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 
 @media (min-width:40rem) {
   .c2 .k-DashboardLayout__flow__sideCard__list li {
-    font-size: 0.8888888888888888rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -812,7 +812,7 @@ button:hover .c1 {
   transition: color 0.2s ease,background-color 0.2s ease;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   line-height: 1.2;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1344,7 +1344,7 @@ button:hover .c1 {
   transition: color 0.2s ease,background-color 0.2s ease;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   line-height: 1.2;
   -webkit-text-decoration: none;
   text-decoration: none;

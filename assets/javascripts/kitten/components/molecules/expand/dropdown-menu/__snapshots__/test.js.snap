@@ -212,7 +212,7 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   display: block;
   padding: 0.4375rem 0.9375rem;
   line-height: 1;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   text-align: left;
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;

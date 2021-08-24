@@ -20,7 +20,7 @@ exports[`<ToggleSwitch /> with \`big\` prop matches with snapshot 1`] = `
     />
   </button>
   <label
-    className="sc-htpNat gGZSds"
+    className="sc-htpNat dsECwg"
     htmlFor="toggle-switch"
     id="toggle-switch_label"
   >

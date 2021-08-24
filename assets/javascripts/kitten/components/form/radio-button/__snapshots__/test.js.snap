@@ -104,7 +104,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   flex: 1 0 calc(100% - 1.625rem);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -120,7 +120,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
 .c0.k-Form-RadioButton--largeLabel .k-Form-RadioButton__labelText {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 1.265625rem;
+  font-size: 1.25rem;
 }
 
 .c0 .k-Form-RadioButton__labelText--withContents {
@@ -136,7 +136,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   flex: 1 0 calc(100% - 2.25rem);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   line-height: 1.1875rem;
 }
 
@@ -145,7 +145,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
 }
 
 .c0.k-Form-RadioButton--largeContent .k-Form-RadioButton__labelContents {
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Form-RadioButton--orion {
@@ -208,7 +208,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   line-height: 1.25rem;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__label {
@@ -233,7 +233,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
 @media (min-width:640px) {
   .c0 .k-Form-RadioButton__labelContents {
     margin-top: 0.5rem;
-    font-size: 0.8888888888888888rem;
+    font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }

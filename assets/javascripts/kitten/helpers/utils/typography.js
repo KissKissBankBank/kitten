@@ -1,4 +1,3 @@
-import ms from 'modularscale-js'
 import TYPOGRAPHY from '../../constants/typography-config'
 
 export const pxToRem = sizeInPx => {
@@ -9,10 +8,27 @@ export const pxToRem = sizeInPx => {
   return `${parseFloat(sizeInRem)}rem`
 }
 
+const fontSizeScale = {
+  '-3': 11,
+  '-2': 12,
+  '-1': 14,
+   '0': 16,
+   '1': 18,
+   '2': 20,
+   '3': 22,
+   '4': 24,
+   '5': 28,
+   '6': 32,
+   '7': 36,
+   '8': 41,
+   '9': 46,
+  '10': 52,
+  '11': 58,
+  '12': 64,
+  '13': 74,
+  '14': 84,
+}
+
 export const stepToRem = step => {
-  const settings = {
-    base: [1],
-    ratio: TYPOGRAPHY.scaleMultiplier,
-  }
-  return `${parseFloat(ms(step, settings))}rem`
+  return pxToRem(fontSizeScale[step.toString()])
 }

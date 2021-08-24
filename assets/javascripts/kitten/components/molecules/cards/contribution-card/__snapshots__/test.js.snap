@@ -2,7 +2,7 @@
 
 exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
 <article
-  className="sc-bwzfXH jnKMZc k-ContributionCard"
+  className="sc-bwzfXH lpjokL k-ContributionCard"
   style={
     Object {
       "--contributionCard--border-color": "#eee",
@@ -35,10 +35,10 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
       </p>
     </span>
     <div
-      className="sc-EHOje hiLaMt k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion k-ContributionCard__inputWrapper"
+      className="sc-EHOje gIabll k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion k-ContributionCard__inputWrapper"
     >
       <input
-        className="sc-bxivhb gkKzsg k-Form-TextInput k-Form-TextInputWithUnit__input k-ContributionCard__input k-Form-TextInput--orion k-Form-TextInput--regular"
+        className="sc-bxivhb dLDjUk k-Form-TextInput k-Form-TextInputWithUnit__input k-ContributionCard__input k-Form-TextInput--orion k-Form-TextInput--regular"
         disabled={false}
         name="text"
         onChange={[Function]}
@@ -51,7 +51,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
       </span>
     </div>
     <button
-      className="sc-bdVaJa kkKDJG k-Button k-ContributionCard__action k-Button--regular k-Button--helium k-Button--andromeda k-Button--hasBorderRadius"
+      className="sc-bdVaJa ivIjGn k-Button k-ContributionCard__action k-Button--regular k-Button--helium k-Button--andromeda k-Button--hasBorderRadius"
       disabled={true}
       style={
         Object {
@@ -68,7 +68,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
 
 exports[`<ContributionCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bwzfXH jnKMZc k-ContributionCard"
+  className="sc-bwzfXH lpjokL k-ContributionCard"
   style={
     Object {
       "--contributionCard--border-color": "#eee",

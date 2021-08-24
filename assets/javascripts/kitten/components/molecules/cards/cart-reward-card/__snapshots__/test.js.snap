@@ -10,7 +10,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
   >
     <button
       aria-label="Delete"
-      className="sc-bwzfXH drjorK k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="sc-bwzfXH ljNcYG k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
       onClick={[Function]}
       style={
         Object {
@@ -42,7 +42,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
     >
       <h1
-        className="sc-bxivhb dxgSxl k-Title k-Title--quinary k-Title--noMargin k-Title--italic"
+        className="sc-bxivhb cVBpxq k-Title k-Title--quinary k-Title--noMargin k-Title--italic"
         style={
           Object {
             "--Title-css-color": null,
@@ -57,7 +57,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-top-double k-u-margin-top-single@xs-down"
     >
       <p
-        className="sc-ifAKCX fnuyLy k-Paragraph k-Paragraph--tertiary k-Paragraph--noMargin"
+        className="sc-ifAKCX bMHVtG k-Paragraph k-Paragraph--tertiary k-Paragraph--noMargin"
       >
         Custom text description
       </p>
@@ -77,7 +77,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
   >
     <button
       aria-label="Delete"
-      className="sc-bwzfXH drjorK k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="sc-bwzfXH ljNcYG k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
       onClick={[Function]}
       style={
         Object {
@@ -109,7 +109,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
     >
       <h1
-        className="sc-bxivhb dxgSxl k-Title k-Title--quinary k-Title--noMargin k-Title--italic"
+        className="sc-bxivhb cVBpxq k-Title k-Title--quinary k-Title--noMargin k-Title--italic"
         style={
           Object {
             "--Title-css-color": null,
@@ -124,7 +124,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       className="k-u-margin-bottom-double k-u-margin-top-double k-u-margin-top-single@xs-down"
     >
       <p
-        className="sc-ifAKCX fnuyLy k-Paragraph k-Paragraph--tertiary k-Paragraph--noMargin"
+        className="sc-ifAKCX bMHVtG k-Paragraph k-Paragraph--tertiary k-Paragraph--noMargin"
       >
         Custom text description
       </p>
@@ -144,7 +144,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
   >
     <button
       aria-label="Delete"
-      className="sc-bwzfXH drjorK k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="sc-bwzfXH ljNcYG k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
       onClick={[Function]}
       style={
         Object {
@@ -176,7 +176,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-double"
     >
       <Custom title tag
-        className="sc-bxivhb dxgSxl k-Title k-Title--quinary k-Title--noMargin k-Title--italic"
+        className="sc-bxivhb cVBpxq k-Title k-Title--quinary k-Title--noMargin k-Title--italic"
         modifier="quinary"
         style={
           Object {
@@ -200,7 +200,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-top-double"
     >
       <p
-        className="sc-ifAKCX fnuyLy k-Paragraph k-Paragraph--tertiary k-Paragraph--noMargin"
+        className="sc-ifAKCX bMHVtG k-Paragraph k-Paragraph--tertiary k-Paragraph--noMargin"
       >
         Custom text description
       </p>
