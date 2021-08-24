@@ -3,7 +3,6 @@ import { VerticalStepper } from './index'
 import { Text } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
 
-
 export default {
   title: 'Organisms/VerticalStepper',
   component: VerticalStepper,
