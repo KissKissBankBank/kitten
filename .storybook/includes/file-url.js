@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, List } from 'kitten'
+import concat from 'lodash/concat'
 
 const GH_PREFIX = 'https://github.com/KissKissBankBank/kitten/blob/master/'
 
@@ -9,13 +10,7 @@ export const FileUrl = ({filepath, filenames = 'index.js'}) => {
   const ghUrl = `${GH_PREFIX}${pathAsArray.join('/')}/`
   const shortUrl = `${pathAsArray.slice(2).join('/')}/`
 
-  const files = []
-
-  if (typeof(filenames) === 'string') {
-    files.push(filenames)
-  } else if (typeof(filenames) === 'object' && Array.isArray(filenames)) {
-    files.push(...filenames)
-  }
+  const files = concat(filenames)
 
   return (
     <List className="k-u-margin-top-singleHalf k-u-margin-bottom-quadruple">
@@ -27,7 +22,7 @@ export const FileUrl = ({filepath, filenames = 'index.js'}) => {
           weight="regular"
           className="k-u-link k-u-link-primary1 k-u-decoration-underline"
         >
-          {shortUrl}{item}
+          {`${shortUrl}${item}`}
         </Text>
         )
       )}
