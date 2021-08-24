@@ -4,6 +4,11 @@ import { Line } from './index'
 export default {
   title: 'Molecules/Line',
   component: Line,
+  decorators: [story => (
+    <div className="story-Container story-Grid">
+      {story()}
+    </div>
+  )]
 }
 
 export const Default = () => (

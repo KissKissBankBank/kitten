@@ -1,42 +1,88 @@
 import React from 'react'
 import { text, object, boolean } from '@storybook/addon-knobs'
 import { CommentForm } from './index'
-import { CheckedCircleIcon, Grid, GridCol } from '../../../..'
+import { CheckedCircleIcon } from '../../../..'
+import { action } from '@storybook/addon-actions'
 
-export const Default = () => (
+export const Default = ({ showAvatarBadge, ...args}) => (
   <CommentForm
-    avatarImgProps={object('Src/Alt', {
-      src: 'https://placehold.it/80x80/caf4fe/caf4fe',
-      alt: '',
-    })}
-    placeholder={text('placeholder', 'Leave a comment on the project')}
-    commentButton={text('Comment button', 'Comment')}
-    error={boolean('Is error', false)}
-    errorMessage={text(
-      'Error message',
-      'Cum sociis natoque penatibus et magnis',
+    {...args}
+    avatarBadge={showAvatarBadge && (
+      <span aria-label="Owner" role="aside">
+        <CheckedCircleIcon
+          width="25"
+          height="25"
+          circleColor="#19b4fa"
+          checkedColor="#fff"
+        />
+      </span>
     )}
-    avatarBadge={
-      boolean('Avatar badge', false) && (
-        <span aria-label="Owner" role="aside">
-          <CheckedCircleIcon
-            width="25"
-            height="25"
-            circleColor="#19b4fa"
-            checkedColor="#fff"
-          />
-        </span>
-      )
-    }
   />
 )
 
-Default.decorators = [
-  Story => (
-    <Grid style={{ marginTop: '5em' }}>
-      <GridCol offset="1" col="8">
-        <Story />
-      </GridCol>
-    </Grid>
-  ),
-]
+Default.decorators = [story => (
+  <div className="story-Container story-Grid story-Grid--large">
+    {story()}
+  </div>
+)]
+
+Default.args = {
+  avatarImgProps: {
+    src: '/kitten.jpg',
+    alt: '',
+  },
+  placeholder: 'Leave a comment on the project',
+  commentButton: 'Comment',
+  error: false,
+  errorMessage: 'Cum sociis natoque penatibus et magnis',
+  showAvatarBadge: false,
+  onSubmit: action('onSubmit'),
+}
+
+Default.argTypes = {
+  avatarImgProps: {
+    name: 'avatarImgProps',
+    control: { type: 'object' },
+  },
+  placeholder: {
+    name: 'placeholder',
+    control: { type: 'text' },
+  },
+  commentButton: {
+    name: 'commentButton',
+    control: { type: 'text' },
+  },
+  error: {
+    name: 'error',
+    control: { type: 'boolean' },
+  },
+  errorMessage: {
+    name: 'errorMessage',
+    control: { type: 'text' },
+  },
+  isDisabled: {
+    name: 'isDisabled',
+    control: { type: 'boolean' },
+  },
+  showAvatarBadge: {
+    name: 'showAvatarBadge (story prop)',
+    control: { type: 'boolean' },
+  },
+  defaultValue: {
+    name: 'defaultValue',
+    control: { type: 'text' },
+  },
+  commentLabel: {
+    name: 'commentLabel',
+    control: { type: 'text' },
+  },
+  ariaId: {
+    name: 'ariaId',
+    control: { type: 'text' },
+  },
+  avatarBadge: { control: { type: null }},
+  textareaId: {
+    name: 'textareaId',
+    control: { type: 'text' },
+  },
+}

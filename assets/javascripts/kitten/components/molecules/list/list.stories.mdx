@@ -1,0 +1,50 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './list.stories.js'
+import { List } from './index'
+
+<Meta title="Molecules/List" component={List} />
+
+
+# List
+&nbsp;
+
+## Import
+~~~js
+import { List } from '@kisskissbankbank/kitten'
+~~~
+
+## Usage
+&nbsp;
+
+<Canvas>
+  <Story name="SimpleList" story={stories.SimpleList} />
+</Canvas>
+
+### Default
+~~~js
+<List>
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</List>
+~~~
+
+### With ButtonItem
+
+<Canvas>
+  <Story name="ListWithButtonItem" story={stories.ListWithButtonItem} />
+</Canvas>
+
+~~~js
+<List>
+  <List.ButtonItem withTopBorder>
+    Item 1
+  </List.ButtonItem>
+  <List.ButtonItem active hasArrow={false}>
+    Item 2
+  </List.ButtonItem>
+  <List.ButtonItem disabled>
+    Item 3
+  </List.ButtonItem>
+</List>
+~~~

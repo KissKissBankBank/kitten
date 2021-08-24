@@ -15,11 +15,6 @@ const ExampleText = styled(Text)`
   line-height: 1.2;
 `
 
-export default {
-  title: 'Molecules/List',
-  component: List,
-}
-
 export const SimpleList = () => {
   return (
     <List>
@@ -70,3 +65,10 @@ export const ListWithButtonItem = () => {
     </List>
   )
 }
+
+SimpleList.decorators = [story => (
+  <div className="story-Container story-Grid">
+    {story()}
+  </div>
+)]
+ListWithButtonItem.decorators = SimpleList.decorators

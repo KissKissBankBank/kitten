@@ -1,29 +1,94 @@
 import React from 'react'
-import { color, text, number, select, boolean } from '@storybook/addon-knobs'
 import { ArrowContainer } from './index'
 import { Text, COLORS } from '../../../..'
 
-export const Default = () => (
-  <ArrowContainer
-    color={color('Color', COLORS.background3)}
-    size={number('Size', 10)}
-    position={select('Position', {
-      Left: 'left',
-      Top: 'top',
-      Right: 'right',
-      Bottom: 'bottom',
-    })}
-    distance={number('Distance', 20)}
-    centered={boolean('Centered?', false)}
-    distanceAsPercentage={boolean('distanceAsPercentage?', false)}
-    distanceIsReverse={boolean('distanceIsReverse?', false)}
-    shadow={boolean('Shadow?', false)}
-    borderRadius={number('Border radius', 0)}
-    borderColor={color('Border color', COLORS.line1)}
-    borderWidth={number('Border width', 0)}
-  >
+export const Default = ({children, ...args}) => (
+  <ArrowContainer {...args}>
     <Text size="tiny" color="font1" weight="light">
-      {text('Content', 'Play with me!')}
+      {children}
     </Text>
   </ArrowContainer>
 )
+
+Default.decorators = [story => (
+  <div className="story-Container story-Grid story-Grid">
+    <div>{story()}</div>
+  </div>
+)]
+
+Default.args = {
+  color: COLORS.background3,
+  size: 10,
+  position: 'left',
+  distance: 20,
+  centered: false,
+  distanceAsPercentage: false,
+  distanceIsReverse: false,
+  shadow: false,
+  borderRadius: 0,
+  borderColor: COLORS.line1,
+  borderWidth: 0,
+  padding: 20,
+  children: 'Play with me!',
+}
+
+Default.argTypes = {
+  color: {
+    name: 'color',
+    control: { type: 'color' },
+  },
+  size: {
+    name: 'size',
+    control: { type: 'number' },
+  },
+  position: {
+    name: 'position',
+    options: [
+      'left',
+      'top',
+      'right',
+      'bottom',
+    ],
+    control: { type: 'select' },
+  },
+  distance: {
+    name: 'distance',
+    control: { type: 'number' },
+  },
+  centered: {
+    name: 'centered',
+    control: { type: 'boolean' },
+  },
+  distanceAsPercentage: {
+    name: 'distanceAsPercentage',
+    control: { type: 'boolean' },
+  },
+  distanceIsReverse: {
+    name: 'distanceIsReverse',
+    control: { type: 'boolean' },
+  },
+  shadow: {
+    name: 'shadow',
+    control: { type: 'boolean' },
+  },
+  borderRadius: {
+    name: 'borderRadius',
+    control: { type: 'number' },
+  },
+  borderColor: {
+    name: 'borderColor',
+    control: { type: 'color' },
+  },
+  borderWidth: {
+    name: 'borderWidth',
+    control: { type: 'number' },
+  },
+  padding: {
+    name: 'padding',
+    control: { type: 'number' },
+  },
+  children: {
+    name: 'children',
+    control: { type: 'text' },
+  },
+}
