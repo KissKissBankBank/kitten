@@ -13,7 +13,7 @@ export const FileUrl = ({filepath, filenames = 'index.js'}) => {
   const files = concat(filenames)
 
   return (
-    <List className="k-u-margin-top-singleHalf k-u-margin-bottom-quadruple">
+    <List className="k-u-margin-top-singleHalf k-u-margin-bottom-doubleHalf">
       {files.map((item, index) => (
         <Text
           key={`${item}_${index}`}

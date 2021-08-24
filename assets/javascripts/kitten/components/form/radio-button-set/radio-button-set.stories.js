@@ -10,6 +10,7 @@ import {
   ScreenConfig,
   Title,
 } from '../../../index'
+import { DocsPage } from 'storybook/docs-page'
 
 const OrionGlobalStyle = createGlobalStyle`
   .k-Form-RadioButtonSet.k-Form-RadioButtonSet__orionGrid .k-Form-RadioButtonSet__radioContainer {
@@ -34,7 +35,11 @@ export default {
   component: RadioButtonSet,
   title: 'Form/RadioButtonSet',
   parameters: {
-    component: RadioButtonSet,
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="RadioButtonSet" />
+      ),
+    },
   },
 }
 

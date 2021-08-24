@@ -12,6 +12,7 @@ import {
   RocketCircleIcon,
   ScreenConfig,
 } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const StyledContainer = styled.div`
   display: flex;
@@ -47,6 +48,11 @@ export default {
   title: 'Atoms/ProgressRing',
   parameters: {
     component: ProgressRing,
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="ProgressRing" />
+      ),
+    },
   },
 }
 

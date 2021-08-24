@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { number, select, boolean } from '@storybook/addon-knobs'
 import { RangeSlider } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 const Container = styled.div`
   max-width: 300px;
@@ -11,6 +12,11 @@ const Container = styled.div`
 export default {
   title: 'Form/RangeSlider',
   component: RangeSlider,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="RangeSlider" />,
+    },
+  },
 }
 
 export const Default = () => (

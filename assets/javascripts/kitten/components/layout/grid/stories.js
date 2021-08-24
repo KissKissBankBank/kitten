@@ -1,10 +1,18 @@
 import React from 'react'
 import { Grid, GridCol } from './index'
 import { Container } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Layout/Grid',
   component: Grid,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="Grid, GridCol" />
+      ),
+    },
+  },
 }
 
 const blockClasses = 'k-u-align-center has-overrides color-background'

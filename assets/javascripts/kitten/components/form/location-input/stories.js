@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { LocationInput } from './index'
 import { text, select } from '@storybook/addon-knobs'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Form/LocationInput',
   component: LocationInput,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="LocationInput" />
+      ),
+    },
+  },
 }
 
 const variantOptions = {

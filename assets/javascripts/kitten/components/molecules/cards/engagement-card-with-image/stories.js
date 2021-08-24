@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { text, number } from '@storybook/addon-knobs'
 import { EngagementCardWithImage } from './index'
 import { Marger, Container, pxToRem } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const StyledEngagementCardWithImage = styled(EngagementCardWithImage)`
   width: ${pxToRem(200)};
@@ -12,7 +13,14 @@ export default {
   component: EngagementCardWithImage,
   title: 'Molecules/Cards/EngagementCardWithImage',
   parameters: {
-    component: EngagementCardWithImage,
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          importString="EngagementCardWithImage"
+        />
+      ),
+    },
   },
 }
 

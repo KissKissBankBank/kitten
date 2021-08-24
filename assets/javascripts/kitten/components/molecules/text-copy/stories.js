@@ -3,6 +3,7 @@ import { Marger } from '../../..'
 import React from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { TextCopy } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -15,6 +16,11 @@ const StoryContainer = ({ children }) => (
 export default {
   title: 'Molecules/TextCopy',
   component: TextCopy,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="TextCopy" />,
+    },
+  },
 }
 
 export const Default = () => {

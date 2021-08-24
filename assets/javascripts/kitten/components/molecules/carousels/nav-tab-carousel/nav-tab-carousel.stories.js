@@ -2,6 +2,7 @@ import React from 'react'
 import { text, number, color, array } from '@storybook/addon-knobs'
 import { NavTabCarousel } from './index'
 import { Marger, Container, Grid, GridCol, COLORS } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const StoryGrid = ({ children }) => (
   <Container>
@@ -24,6 +25,13 @@ const links = [
 export default {
   title: 'Molecules/Carousels/NavTabCarousel',
   component: NavTabCarousel,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="NavTabCarousel" />
+      ),
+    },
+  },
 }
 
 export const WithLinks = () => {

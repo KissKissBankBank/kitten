@@ -5,12 +5,21 @@ import { Button } from '../../../index'
 import { Grid, GridCol } from '../../../components/layout/grid'
 import { ArrowIcon } from '../../graphics/icons/arrow-icon'
 import { Text } from '../../atoms/typography/text'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: DropdownSelect,
   title: 'Form/DropdownSelect',
   parameters: {
-    component: DropdownSelect,
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={['index.js', 'combobox.js', 'styles.js']}
+          importString="DropdownSelect"
+        />
+      ),
+    },
   },
 }
 

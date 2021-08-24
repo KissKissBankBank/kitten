@@ -2,9 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import { text, select } from '@storybook/addon-knobs'
 import { Label } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Form/Label',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Label" />,
+    },
+  },
 }
 
 const FocusableComponent = styled.div`

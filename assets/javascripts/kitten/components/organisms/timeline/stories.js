@@ -3,12 +3,15 @@ import { select } from '@storybook/addon-knobs'
 import {} from '../../../components/layout/container'
 import { Timeline } from './index'
 import { Container, Grid, GridCol } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Timeline,
   title: 'Organisms/Timeline',
   parameters: {
-    component: Timeline,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Timeline" />,
+    },
   },
 }
 

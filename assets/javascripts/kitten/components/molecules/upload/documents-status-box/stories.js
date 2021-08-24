@@ -1,10 +1,18 @@
 import React from 'react'
 import { DocumentsStatusBox } from './index'
 import { text, select } from '@storybook/addon-knobs'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: DocumentsStatusBox,
   title: 'Molecules/Upload/DocumentsStatusBox',
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="DocumentsStatusBox" />
+      ),
+    },
+  },
 }
 
 export const Default = () => (

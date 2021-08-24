@@ -1,10 +1,21 @@
 import React from 'react'
 import { COLORS, ClockCircleIcon, CheckedCircleIcon, Text } from '../../../..'
 import { HorizontalCrowdfundingCard } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Molecules/Cards/HorizontalCrowdfundingCard',
   component: HorizontalCrowdfundingCard,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          importString="HorizontalCrowdfundingCard"
+        />
+      ),
+    },
+  },
   args: {
     href: '#',
     imageProps: {
