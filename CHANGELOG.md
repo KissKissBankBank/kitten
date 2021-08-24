@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TagInput`: Keep delete button when disabled.
+
 ## [4.2.1] - 2021-08-19
 
 Fix:

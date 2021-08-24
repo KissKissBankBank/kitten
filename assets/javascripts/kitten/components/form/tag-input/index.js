@@ -123,8 +123,8 @@ const StyledWrapper = styled.div`
       background-color: ${COLORS.line1};
     }
 
-    .k-Form-TagList__tag {
-      padding-right: ${pxToRem(8)};
+    .k-Form-TagList__tag, .k-Form-TagList__button {
+      cursor: not-allowed;
     }
   }
 
@@ -302,18 +302,17 @@ export const TagInput = ({
               className="k-Form-TagList__item k-Form-TagList__tagItem"
             >
               <span className="k-Form-TagList__tag">{item}</span>
-              {!disabled && (
-                <button
-                  className="k-Form-TagList__button"
-                  type="button"
-                  onClick={() => removeValueFromList(item)}
-                >
-                  <span className="k-u-a11y-visuallyHidden">
-                    Retirer {item} de la liste.
-                  </span>
-                  <CrossIcon color="currentColor" />
-                </button>
-              )}
+              <button
+                className="k-Form-TagList__button"
+                type="button"
+                disabled={disabled}
+                onClick={() => removeValueFromList(item)}
+              >
+                <span className="k-u-a11y-visuallyHidden">
+                  Retirer {item} de la liste.
+                </span>
+                <CrossIcon color="currentColor" />
+              </button>
             </li>
           )
         })}
