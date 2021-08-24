@@ -1,13 +1,17 @@
 import React from 'react'
 import { TitleWithStroke } from './index'
 import { COLORS, Marger, Text } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: TitleWithStroke,
   title: 'Atoms/Typography/TitleWithStroke',
   parameters: {
-    component: TitleWithStroke,
-    componentSubtitle: 'List of TitleWithStroke',
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="TitleWithStroke" />
+      ),
+    },
   },
   decorators: [story => <div className="story-Container">{story()}</div>],
 }

@@ -1,4 +1,5 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
+import { FileUrl } from 'storybook/file-url'
 import * as stories from './sup-title.stories.js'
 import { SupTitle } from './index'
 
@@ -6,9 +7,14 @@ import { SupTitle } from './index'
 
 # SupTitle
 
+
 <Canvas>
   <Story name="SupTitle" story={stories.Default} />
 </Canvas>
+
+## Source
+
+<FileUrl filepath={__filename} />
 
 ## Import
 

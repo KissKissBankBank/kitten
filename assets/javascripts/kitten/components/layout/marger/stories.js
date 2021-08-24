@@ -1,6 +1,7 @@
 import React from 'react'
 import { Marger } from './index'
 import styled from 'styled-components'
+import { DocsPage } from 'storybook/docs-page'
 
 const StyledStory = styled.div`
   display: flow-root; // displays margin background color
@@ -24,6 +25,11 @@ export default {
     },
     bottom: {
       name: 'bottom',
+    },
+  },
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Marger" />,
     },
   },
 }

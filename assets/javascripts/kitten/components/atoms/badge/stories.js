@@ -1,10 +1,16 @@
 import React from 'react'
 import { Badge } from './index'
 import { COLORS } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Atoms/Badge',
   component: Badge,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Badge" />,
+    },
+  },
   decorators: [
     story => (
       <div className="story-Container story-Grid">

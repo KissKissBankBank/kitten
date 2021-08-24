@@ -1,10 +1,16 @@
 import React from 'react'
 import { COLORS } from '../../..'
 import { Loader } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Atoms/Loader',
   component: Loader,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Loader" />,
+    },
+  },
   decorators: [
     story => (
       <div className="story-Container story-Grid">

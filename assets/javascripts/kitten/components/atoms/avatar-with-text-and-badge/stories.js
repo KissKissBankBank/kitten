@@ -1,10 +1,18 @@
 import React from 'react'
 import { AvatarWithTextAndBadge } from './index'
 import { Text, COLORS } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Atoms/AvatarWithTextAndBadge',
   component: AvatarWithTextAndBadge,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="AvatarWithTextAndBadge" />
+      ),
+    },
+  },
   decorators: [
     story => (
       <div className="story-Container story-Grid">

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { text, boolean, number, select } from '@storybook/addon-knobs'
 import { Modal } from './index'
 import { Button, Text, SaveIcon, COLORS } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -36,6 +37,13 @@ const paragraphContainer = `
 export default {
   title: 'Molecules/Modal/Next',
   component: Modal,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="ModalNext as Modal" />
+      ),
+    },
+  },
   subcomponents: {
     Title: Modal.Title,
     Paragraph: Modal.Paragraph,

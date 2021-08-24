@@ -1,6 +1,7 @@
 import React from 'react'
 import { ContributionCard } from './index'
 import { Container, Marger, RocketIllustration, COLORS } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const argTypes = {
   show: {
@@ -72,7 +73,11 @@ export default {
   component: ContributionCard,
   title: 'Molecules/Cards/ContributionCard',
   parameters: {
-    component: ContributionCard,
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="ContributionCard" />
+      ),
+    },
   },
   decorators: [
     Story => (

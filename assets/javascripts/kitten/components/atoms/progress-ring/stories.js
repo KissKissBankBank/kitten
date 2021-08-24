@@ -1,12 +1,18 @@
 import React from 'react'
 import { ProgressRing } from './index'
 import { Text, COLORS } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: ProgressRing,
   title: 'Atoms/ProgressRing',
   parameters: {
     component: ProgressRing,
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="ProgressRing" />
+      ),
+    },
   },
   decorators: [
     story => (

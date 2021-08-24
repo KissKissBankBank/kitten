@@ -1,10 +1,18 @@
 import React from 'react'
 import { ImageCropper } from './index'
 import { select } from '@storybook/addon-knobs'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Molecules/Upload/ImageCropper',
   component: ImageCropper,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="ImageCropper" />
+      ),
+    },
+  },
 }
 
 export const Default = args => {

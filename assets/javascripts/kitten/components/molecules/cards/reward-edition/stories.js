@@ -18,6 +18,7 @@ import {
   pxToRem,
   EditIcon,
 } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -52,6 +53,13 @@ const StyledIcon = styled(EditIcon)`
 export default {
   title: 'Molecules/Cards/RewardEdition',
   component: RewardEdition,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="RewardEdition" />
+      ),
+    },
+  },
 }
 
 export const Default = () => {

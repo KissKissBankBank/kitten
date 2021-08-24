@@ -1,9 +1,13 @@
 import React from 'react'
 import { Tag } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Atoms/Tag',
   component: Tag,
+  parameters: {
+    docs: { page: () => <DocsPage filepath={__filename} importString="Tag" /> },
+  },
   decorators: [
     story => (
       <div className="story-Container story-Grid">

@@ -9,12 +9,26 @@ import {
   Grid,
   GridCol,
 } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  component: Default,
+  component: Carousel,
   title: 'Molecules/Carousels/Carousel/ProjectCarousel',
   parameters: {
-    component: Default,
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={[
+            'index.js',
+            'styles.js',
+            'components/carousel-inner.js',
+            'components/carousel-page.js',
+          ]}
+          importString="Carousel"
+        />
+      ),
+    },
   },
 }
 

@@ -1,9 +1,15 @@
 import React from 'react'
 import { GifVideo } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: GifVideo,
   title: 'Atoms/Video/GifVideo',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="GifVideo" />,
+    },
+  },
   decorators: [
     story => (
       <div className="story-Container story-Grid story-Grid--thin">

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export const Default = props => <Text {...props} />
 
@@ -7,7 +8,9 @@ export default {
   component: Text,
   title: 'Atoms/Typography/Text',
   parameters: {
-    component: Text,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Text" />,
+    },
   },
   decorators: [
     story => <div className="story-Container story-Grid">{story()}</div>,

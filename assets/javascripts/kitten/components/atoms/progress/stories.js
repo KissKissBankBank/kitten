@@ -1,10 +1,16 @@
 import React from 'react'
 import { Progress } from './index'
 import { COLORS } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Atoms/Progress',
   component: Progress,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Progress" />,
+    },
+  },
   decorators: [
     story => (
       <div className="story-Container story-Grid story-Grid--large">

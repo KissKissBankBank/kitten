@@ -1,9 +1,17 @@
 import React from 'react'
 import { VerticalStroke } from './'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Atoms/VerticalStroke',
   component: VerticalStroke,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="VerticalStroke" />
+      ),
+    },
+  },
   decorators: [
     story => (
       <div className="story-Container story-Grid">

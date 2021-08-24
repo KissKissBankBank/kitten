@@ -2,12 +2,17 @@ import React, { useState } from 'react'
 import { text, number, select, color, boolean } from '@storybook/addon-knobs'
 import { ClickableCard } from './index'
 import { Container, Text, COLORS, Grid, GridCol } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Default,
   title: 'Molecules/Cards/ClickableCard',
   parameters: {
-    component: Default,
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="ClickableCard" />
+      ),
+    },
   },
 }
 

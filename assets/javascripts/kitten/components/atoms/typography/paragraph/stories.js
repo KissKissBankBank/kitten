@@ -1,13 +1,21 @@
 import React from 'react'
 import { Paragraph } from './index'
 import { Marger, Text } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Paragraph,
   title: 'Atoms/Typography/Paragraph',
   parameters: {
-    component: Paragraph,
-    componentSubtitle: 'List of Paragraph',
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={['index.js', 'helpers/modifier-styles.js']}
+          importString="Paragraph"
+        />
+      ),
+    },
   },
   decorators: [
     story => (

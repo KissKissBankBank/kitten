@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { boolean, text, select } from '@storybook/addon-knobs'
+import { HeaderNav } from './index'
 import { LendopolisHeaderNavStory } from './stories/lendopolis'
 import { KissKissBankBankHeaderNavStory } from './stories/kisskissbankbank'
 import { KissKissBankBankHeaderNavStoryNew } from './stories/kisskissbankbank-new'
 import { MinimalistHeaderNavStory } from './stories/minimalist'
+import { DocsPage } from 'storybook/docs-page'
 
 const Container = styled.div`
   height: 400vh;
@@ -20,7 +22,39 @@ const Container = styled.div`
 
 export default {
   title: 'Organisms/HeaderNav',
-  component: LendopolisHeaderNavStory,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={[
+            'index.js',
+            'styles.js',
+            'config.js',
+            'components/burger-menu-next.js',
+            'components/burger-menu.js',
+            'components/button.js',
+            'components/centered.js',
+            'components/context.js',
+            'components/dropdown-button.js',
+            'components/dropdown.js',
+            'components/hidden.js',
+            'components/logged-out.js',
+            'components/logged.js',
+            'components/logo.js',
+            'components/nav.js',
+            'components/quick-access-link.js',
+            'components/right.js',
+            'components/search-input.js',
+            'components/user-menu-next.js',
+            'components/user-menu.js',
+            'hooks/use-dropdown.js',
+          ]}
+          importString="HeaderNav"
+        />
+      ),
+    },
+  },
   decorators: [
     story => (
       <div className="story-Container story-Grid story-Grid--large">
@@ -28,6 +62,7 @@ export default {
       </div>
     ),
   ],
+  component: HeaderNav,
 }
 
 export const Lendopolis = () => (

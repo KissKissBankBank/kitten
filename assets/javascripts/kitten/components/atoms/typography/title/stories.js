@@ -1,6 +1,7 @@
 import React from 'react'
 import { Title } from './index'
 import { Marger, Text } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const argTypes = {
   tag: {
@@ -195,8 +196,9 @@ export default {
   component: Title,
   title: 'Atoms/Typography/Title',
   parameters: {
-    component: Title,
-    componentSubtitle: 'List of Title',
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Title" />,
+    },
   },
   decorators: [
     story => (

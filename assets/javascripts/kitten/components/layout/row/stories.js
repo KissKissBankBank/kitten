@@ -1,12 +1,13 @@
 import React from 'react'
 import { Row } from './index'
 import { Text } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Row,
   title: 'Layout/Row',
   parameters: {
-    component: Row,
+    docs: { page: () => <DocsPage filepath={__filename} importString="Row" /> },
   },
   args: {
     centered: false,

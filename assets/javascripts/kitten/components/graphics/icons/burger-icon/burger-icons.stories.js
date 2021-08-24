@@ -2,6 +2,7 @@ import React from 'react'
 import { boolean, color } from '@storybook/addon-knobs'
 import { BurgerIcon } from './index'
 import { COLORS, Marger, Container } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const StoryGrid = ({ children }) => (
   <Container>
@@ -14,6 +15,11 @@ const StoryGrid = ({ children }) => (
 export default {
   title: 'Graphics/Icons/BurgerIcon',
   component: BurgerIcon,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="BurgerIcon" />,
+    },
+  },
 }
 
 export const Default = () => {

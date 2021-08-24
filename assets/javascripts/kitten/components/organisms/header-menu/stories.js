@@ -2,6 +2,7 @@ import React from 'react'
 import { select, boolean } from '@storybook/addon-knobs'
 import { HeaderMenu } from './index'
 import { Marger, Container, LendopolisLogo } from '../../../'
+import { DocsPage } from 'storybook/docs-page'
 
 const StoryGrid = ({ children }) => (
   <Container>
@@ -14,6 +15,22 @@ const StoryGrid = ({ children }) => (
 export default {
   title: 'Organisms/HeaderMenu',
   component: HeaderMenu,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={[
+            'index.js',
+            'styles.js',
+            'components/badge.js',
+            'components/item.js',
+          ]}
+          importString="HeaderMenu"
+        />
+      ),
+    },
+  },
   decorators: [
     Story => (
       <div className="story-Container story-Grid">

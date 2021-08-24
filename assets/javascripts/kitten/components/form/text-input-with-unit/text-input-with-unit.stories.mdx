@@ -1,14 +1,16 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
 import * as stories from './text-input-with-unit.stories.js'
 import { TextInputWithUnit } from './index'
+import { FileUrl } from 'storybook/file-url'
+
 
 <Meta title="Form/TextInputWithUnit" component={TextInputWithUnit} />
 
 # TextInputWithUnit
 
-<Canvas>
-  <Story name="Example" story={stories.Default} />
-</Canvas>
+## Source
+
+<FileUrl filepath={__filename} />
 
 ## Import
 
@@ -17,6 +19,10 @@ import { TextInputWithUnit } from '@kisskissbankbank/kitten'
 ```
 
 ## Usage
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
 
 #### Default
 

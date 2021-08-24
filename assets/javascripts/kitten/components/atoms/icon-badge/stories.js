@@ -1,10 +1,16 @@
 import React from 'react'
 import { IconBadge } from './index'
 import { StarIcon, COLORS } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Atoms/IconBadge',
   component: IconBadge,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="IconBadge" />,
+    },
+  },
   decorators: [
     story => (
       <div className="story-Container story-Grid">

@@ -2,10 +2,19 @@ import React from 'react'
 import { HighlightHalo } from './index'
 import { COLORS } from '../../..'
 import { action } from '@storybook/addon-actions'
+import { DocsPage } from 'storybook/docs-page'
+
 
 export default {
   title: 'Atoms/HighlightHalo',
   component: HighlightHalo,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="HighlightHalo" />
+      ),
+    },
+  },
   decorators: [
     story => (
       <div className="story-Container">
