@@ -1,14 +1,7 @@
 import React from 'react'
-import { select, boolean } from '@storybook/addon-knobs'
-import styled from 'styled-components'
 import { IconBadge } from './index'
-import { StarIcon } from '../../../components/graphics/icons/star-icon'
-import COLORS from '../../../constants/colors-config'
+import { StarIcon, COLORS } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
-
-const Container = styled.div`
-  padding: 20px;
-`
 
 export default {
   title: 'Atoms/IconBadge',
@@ -18,17 +11,39 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="IconBadge" />,
     },
   },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid">
+        <div>{story()}</div>
+      </div>
+    ),
+  ],
+  args: {
+    disabled: false,
+    valid: false,
+    empty: false,
+    size: 'normal',
+    children: <StarIcon color={COLORS.background1} />,
+  },
+  argTypes: {
+    disabled: {
+      name: 'disabled',
+      control: { type: 'boolean' },
+    },
+    valid: {
+      name: 'valid',
+      control: { type: 'boolean' },
+    },
+    empty: {
+      name: 'empty',
+      control: { type: 'boolean' },
+    },
+    size: {
+      name: 'size',
+      control: { type: 'select' },
+      options: ['tiny', 'normal', 'big', 'huge'],
+    },
+  },
 }
 
-export const Default = () => (
-  <Container>
-    <IconBadge
-      disabled={boolean('disabled', false)}
-      valid={boolean('valid', false)}
-      empty={boolean('empty', false)}
-      size={select('size', ['tiny', 'normal', 'big', 'huge'], 'normal')}
-    >
-      <StarIcon color={COLORS.background1} />
-    </IconBadge>
-  </Container>
-)
+export const Default = args => <IconBadge {...args} />

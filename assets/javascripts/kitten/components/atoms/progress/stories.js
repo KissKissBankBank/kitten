@@ -1,13 +1,7 @@
 import React from 'react'
-import { number, color, select } from '@storybook/addon-knobs'
 import { Progress } from './index'
 import { COLORS } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
-
-const variantOptions = {
-  Andromeda: 'andromeda',
-  Orion: 'orion',
-}
 
 export default {
   title: 'Atoms/Progress',
@@ -17,14 +11,38 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="Progress" />,
     },
   },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <div>{story()}</div>
+      </div>
+    ),
+  ],
+  args: {
+    value: 50,
+    color: COLORS.primary1,
+    rampProps: { style: { height: 6 } },
+    variant: 'andromeda',
+  },
+  argTypes: {
+    value: {
+      name: 'value',
+      control: { type: 'number' },
+    },
+    color: {
+      name: 'color',
+      control: { type: 'color' },
+    },
+    rampProps: {
+      name: 'rampProps',
+      control: { type: 'object' },
+    },
+    variant: {
+      name: 'variant',
+      options: ['andromeda', 'orion'],
+      control: { type: 'select' },
+    },
+  },
 }
 
-export const Default = args => (
-  <Progress
-    {...args}
-    value={number('Value', 50)}
-    color={color('Color', COLORS.primary1)}
-    rampProps={{ style: { height: 6 } }}
-    variant={select('Variant', variantOptions, 'andromeda')}
-  />
-)
+export const Default = args => <Progress {...args} />
