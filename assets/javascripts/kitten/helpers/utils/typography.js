@@ -9,6 +9,7 @@ export const pxToRem = sizeInPx => {
 }
 
 const fontSizeScale = {
+  '-4': 10,
   '-3': 11,
   '-2': 12,
   '-1': 14,
@@ -27,6 +28,8 @@ const fontSizeScale = {
   '12': 64,
   '13': 74,
   '14': 84,
+  '15': 94,
+  '16': 105,
 }
 
 export const stepToRem = step => {
