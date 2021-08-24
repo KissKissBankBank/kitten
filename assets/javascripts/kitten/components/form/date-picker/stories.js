@@ -1,6 +1,7 @@
 import React from 'react'
 import { DatePicker } from './index'
 import { COLORS } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const styles = {
   header: {
@@ -101,6 +102,17 @@ export default {
       control: {
         type: 'object',
       },
+    },
+  },
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={['index.js', 'components/navbar.js']}
+          importString="DatePicker"
+        />
+      ),
     },
   },
 }

@@ -2,10 +2,18 @@ import React, { useState } from 'react'
 import { boolean } from '@storybook/addon-knobs'
 import { BasicUploader } from './index'
 import { Loader } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: BasicUploader,
   title: 'Molecules/Upload/BasicUploader',
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="BasicUploader" />
+      ),
+    },
+  },
 }
 
 export const StatusReady = args => (

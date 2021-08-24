@@ -2,6 +2,7 @@ import React from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { Paragraph } from './index'
 import { Marger, Text } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const modifierOptions = {
   Primary: 'primary',
@@ -14,8 +15,15 @@ export default {
   component: Paragraph,
   title: 'Atoms/Typography/Paragraph',
   parameters: {
-    component: Paragraph,
-    componentSubtitle: 'List of Paragraph',
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={['index.js', 'helpers/modifier-styles.js']}
+          importString="Paragraph"
+        />
+      ),
+    },
   },
 }
 

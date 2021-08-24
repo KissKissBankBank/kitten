@@ -3,6 +3,7 @@ import { DropdownSelect } from './index'
 import { Button } from '../../../index'
 import { ArrowIcon } from '../../graphics/icons/arrow-icon'
 import { Text } from '../../atoms/typography/text'
+import { DocsPage } from 'storybook/docs-page'
 
 const options = [
   {
@@ -30,7 +31,15 @@ export default {
   component: DropdownSelect,
   title: 'Form/DropdownSelect',
   parameters: {
-    component: DropdownSelect,
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={['index.js', 'combobox.js', 'styles.js']}
+          importString="DropdownSelect"
+        />
+      ),
+    },
   },
   decorators: [
     story => (

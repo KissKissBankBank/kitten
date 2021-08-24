@@ -1,11 +1,14 @@
 import React from 'react'
 import { CheckboxSet } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: CheckboxSet,
   title: 'Form/CheckboxSet',
   parameters: {
-    component: CheckboxSet,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="CheckboxSet" />,
+    },
   },
   decorators: [
     story => (

@@ -4,10 +4,18 @@ import { VerticalStroke } from './'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../layout/container'
 import { Grid, GridCol } from '../../layout/grid'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Atoms/VerticalStroke',
   component: VerticalStroke,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="VerticalStroke" />
+      ),
+    },
+  },
 }
 
 export const Default = () => {

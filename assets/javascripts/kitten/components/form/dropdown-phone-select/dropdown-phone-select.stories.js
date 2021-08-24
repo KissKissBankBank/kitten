@@ -1,12 +1,27 @@
 import React from 'react'
 import { DropdownPhoneSelect } from './index'
 import flagFile from 'icons/flags.png'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: DropdownPhoneSelect,
   title: 'Form/DropdownPhoneSelect',
   parameters: {
-    component: DropdownPhoneSelect,
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={[
+            'index.js',
+            'data/CountryData.js',
+            'data/rawCountries.js',
+            'data/rawTerritories.js',
+            'data/lang/fr.js',
+          ]}
+          importString="DropdownPhoneSelect"
+        />
+      ),
+    },
   },
   decorators: [
     story => (

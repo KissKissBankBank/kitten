@@ -1,5 +1,6 @@
 import React from 'react'
 import { CounterBlock } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 const argTypes = {
   title: {
@@ -56,6 +57,13 @@ export const Default = args => {
 export default {
   title: 'Organisms/CounterBlock',
   component: CounterBlock,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="CounterBlock" />
+      ),
+    },
+  },
   decorators: [story => <div className="story-Container">{story()}</div>],
   args: args,
   argTypes: argTypes,

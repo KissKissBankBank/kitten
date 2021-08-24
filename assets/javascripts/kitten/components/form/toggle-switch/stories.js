@@ -1,6 +1,7 @@
 import React from 'react'
 import { ToggleSwitch } from './index'
 import { action } from '@storybook/addon-actions'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: ToggleSwitch,
@@ -54,6 +55,13 @@ export default {
     onChange: {
       name: 'onChange',
       control: { type: 'function' },
+    },
+  },
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="ToggleSwitch" />
+      ),
     },
   },
 }

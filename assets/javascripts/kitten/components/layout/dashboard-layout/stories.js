@@ -42,6 +42,7 @@ import {
 } from '../../..'
 
 import { Default as Table } from '../../organisms/tables/list-table/list-table.stories.js'
+import { DocsPage } from 'storybook/docs-page'
 
 const options = [
   {
@@ -109,6 +110,23 @@ const CardHolder = styled.div`
 export default {
   title: 'Layout/DashboardLayout',
   component: DashboardLayout,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={[
+            'index.js',
+            'styles.js',
+            'flow/index.js',
+            'flow/side-card.js',
+            'flow/side-modal.js',
+          ]}
+          importString="DashboardLayout"
+        />
+      ),
+    },
+  },
 }
 
 export const Default = () => {

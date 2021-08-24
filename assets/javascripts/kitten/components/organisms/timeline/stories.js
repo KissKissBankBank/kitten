@@ -1,12 +1,15 @@
 import React from 'react'
 import { select } from '@storybook/addon-knobs'
 import { Timeline } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Timeline,
   title: 'Organisms/Timeline',
   parameters: {
-    component: Timeline,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Timeline" />,
+    },
   },
   decorators: [story => <div className="story-Container">{story()}</div>],
 }

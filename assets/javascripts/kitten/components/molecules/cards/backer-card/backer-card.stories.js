@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { text } from '@storybook/addon-knobs'
 import { BackerCard } from './index'
 import { Container, Grid, GridCol, Marger, Text } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const Description = () => (
   <Fragment>
@@ -17,6 +18,11 @@ const Description = () => (
 export default {
   title: 'Molecules/Cards/BackerCard',
   component: BackerCard,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="BackerCard" />,
+    },
+  },
   decorators: [
     Story => (
       <Marger top="4">

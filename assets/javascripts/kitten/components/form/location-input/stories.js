@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { LocationInput } from './index'
 import { text } from '@storybook/addon-knobs'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Form/LocationInput',
@@ -43,6 +44,13 @@ export default {
     name: 'location-input',
     loadingText: 'Loading',
     variant: 'andromeda',
+  },
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="LocationInput" />
+      ),
+    },
   },
 }
 

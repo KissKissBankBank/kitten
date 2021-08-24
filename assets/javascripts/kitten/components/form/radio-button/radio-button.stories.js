@@ -1,12 +1,15 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { RadioButton } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: RadioButton,
   title: 'Form/RadioButton',
   parameters: {
-    component: RadioButton,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="RadioButton" />,
+    },
   },
   decorators: [
     story => (

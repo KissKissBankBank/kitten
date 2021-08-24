@@ -8,12 +8,20 @@ import { LinkedinIcon } from '../../../components/graphics/icons/linkedin-icon'
 import { InstagramIcon } from '../../../components/graphics/icons/instagram-icon'
 import { YoutubeIcon } from '../../../components/graphics/icons/youtube-icon'
 import { GlobeIcon } from '../../../components/graphics/icons/globe-icon'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: DropdownSelectWithInput,
   title: 'Form/DropdownSelectWithInput',
   parameters: {
-    component: DropdownSelectWithInput,
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          importString="DropdownSelectWithInput"
+        />
+      ),
+    },
   },
   decorators: [story => <div className="story-Container">{story()}</div>],
 }

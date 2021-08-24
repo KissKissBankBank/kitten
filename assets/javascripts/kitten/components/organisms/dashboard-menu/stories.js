@@ -1,7 +1,5 @@
 import React from 'react'
-
 import { DashboardMenu } from './index'
-
 import {
   HomeIcon,
   TagIcon,
@@ -13,10 +11,18 @@ import {
   StatsIcon,
   SpeechBubbleIcon,
 } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Organisms/DashboardMenu',
   component: DashboardMenu,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="DashboardMenu" />
+      ),
+    },
+  },
   decorators: [
     story => (
       <div className="story-Container story-Grid story-Grid--large">

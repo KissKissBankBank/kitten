@@ -1,12 +1,15 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { Checkbox } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Checkbox,
   title: 'Form/Checkbox',
   parameters: {
-    component: Checkbox,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Checkbox" />,
+    },
   },
   decorators: [
     story => <div className="story-Container story-Grid">{story()}</div>,

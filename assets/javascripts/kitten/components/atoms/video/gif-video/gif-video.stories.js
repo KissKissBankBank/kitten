@@ -2,10 +2,16 @@ import React from 'react'
 import { number } from '@storybook/addon-knobs'
 import { GifVideo } from './index'
 import { Marger, Container, Grid, GridCol } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: GifVideo,
   title: 'Atoms/Video/GifVideo',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="GifVideo" />,
+    },
+  },
 }
 
 export const Default = () => (

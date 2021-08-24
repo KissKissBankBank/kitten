@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { RangeSlider } from './index'
 import { action } from '@storybook/addon-actions'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Form/RangeSlider',
@@ -56,6 +57,11 @@ export default {
       name: 'rangeThumbPosition',
       options: ['top', 'bottom'],
       control: { type: 'inline-radio' },
+    },
+  },
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="RangeSlider" />,
     },
   },
 }

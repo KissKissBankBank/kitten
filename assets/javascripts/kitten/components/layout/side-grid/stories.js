@@ -8,6 +8,7 @@ import {
   GridCol,
   Title,
 } from '../../../index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Layout/SideGrid',
@@ -26,6 +27,11 @@ export default {
       name: 'asideSize',
       options: ['default', 'small', 'large'],
       control: { type: 'select' },
+    },
+  },
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="SideGrid" />,
     },
   },
 }

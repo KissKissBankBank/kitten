@@ -1,6 +1,7 @@
 import React from 'react'
 import { COLORS } from '../../..'
 import { Hero } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 const args = {
   direction: 'left',
@@ -38,7 +39,9 @@ export default {
   component: Hero,
   title: 'Organisms/Hero',
   parameters: {
-    component: Hero,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Hero" />,
+    },
   },
   decorators: [story => <div className="story-Container">{story()}</div>],
   args: args,

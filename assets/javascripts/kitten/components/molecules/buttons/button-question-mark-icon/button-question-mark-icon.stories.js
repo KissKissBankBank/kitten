@@ -1,10 +1,18 @@
 import React from 'react'
 import { ButtonQuestionMarkIcon } from './index'
 import { Marger, Container, Grid, GridCol } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: ButtonQuestionMarkIcon,
   title: 'Molecules/Buttons/ButtonQuestionMarkIcon',
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="ButtonQuestionMarkIcon" />
+      ),
+    },
+  },
 }
 
 const StoryContainer = ({ children }) => (
