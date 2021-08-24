@@ -123,7 +123,8 @@ const StyledWrapper = styled.div`
       background-color: ${COLORS.line1};
     }
 
-    .k-Form-TagList__tag, .k-Form-TagList__button {
+    .k-Form-TagList__tag,
+    .k-Form-TagList__button {
       cursor: not-allowed;
     }
   }
