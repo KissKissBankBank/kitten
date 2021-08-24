@@ -16,7 +16,7 @@ export default {
   component: HeaderMenu,
   decorators: [
     Story => (
-      <div className="story-Container story-Grid story-Grid">
+      <div className="story-Container story-Grid">
         <Story />
       </div>
     ),
