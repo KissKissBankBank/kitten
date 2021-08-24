@@ -1,9 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Label } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Form/Label',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Label" />,
+    },
+  },
   decorators: [story => <div className="story-Container">{story()}</div>],
   argTypes: {
     focusId: {

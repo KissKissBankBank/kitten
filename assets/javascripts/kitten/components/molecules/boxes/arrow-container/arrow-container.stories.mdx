@@ -1,14 +1,16 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
 import * as stories from './arrow-container.stories.js'
 import { ArrowContainer } from './index'
+import { FileUrl } from 'storybook/file-url'
+
 
 <Meta title="Molecules/Boxes/ArrowContainer" component={ArrowContainer} />
 
 # ArrowContainer
 
-<Canvas>
-  <Story name="Example" story={stories.Default} />
-</Canvas>
+## Source
+
+<FileUrl filepath={__filename} />
 
 ## Import
 
@@ -17,6 +19,10 @@ import { ArrowContainer } from '@kisskissbankbank/kitten'
 ```
 
 ## Usage
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
 
 #### Default
 

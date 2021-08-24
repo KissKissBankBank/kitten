@@ -9,6 +9,26 @@ import {
 
 export default {
   title: 'Form/Field',
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={[
+            'index.js',
+            'components/autocomplete.js',
+            'components/checkbox.js',
+            'components/error.js',
+            'components/input.js',
+            'components/label.js',
+            'components/password.js',
+            'components/radio-button-set.js',
+          ]}
+          importString="Field"
+        />
+      ),
+    },
+  },
   decorators: [
     story => (
       <div className="story-Container story-Grid story-Grid--large">

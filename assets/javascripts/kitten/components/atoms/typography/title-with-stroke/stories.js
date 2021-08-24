@@ -1,49 +1,76 @@
 import React from 'react'
-import { text, boolean, select, color } from '@storybook/addon-knobs'
 import { TitleWithStroke } from './index'
-import { COLORS, Marger, Container, Text } from '../../../..'
-
-const modifierOptions = {
-  Primary: 'primary',
-  Secondary: 'secondary',
-  Tertiary: 'tertiary',
-  Quaternary: 'quaternary',
-  Quinary: 'quinary',
-  Senary: 'senary',
-  Septenary: 'septenary',
-}
-
-const alignOptions = {
-  Left: 'left',
-  Center: 'center',
-  Right: 'right',
-}
+import { COLORS, Marger, Text } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: TitleWithStroke,
   title: 'Atoms/Typography/TitleWithStroke',
   parameters: {
-    component: TitleWithStroke,
-    componentSubtitle: 'List of TitleWithStroke',
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="TitleWithStroke" />
+      ),
+    },
+  },
+  decorators: [story => <div className="story-Container">{story()}</div>],
+}
+
+export const Default = args => <TitleWithStroke {...args} />
+
+Default.args = {
+  modifier: 'primary',
+  italic: false,
+  align: 'left',
+  cssColor: COLORS.font1,
+  tag: 'h1',
+  children: 'Lorem ipsum dolor sit amet',
+}
+
+Default.argTypes = {
+  modifier: {
+    name: 'modifier',
+    description:
+      'Title has seven modifiers, they define different sizes depending on the device (desktop, tablet and mobile)',
+    options: [
+      'primary',
+      'secondary',
+      'tertiary',
+      'quaternary',
+      'quinary',
+      'senary',
+      'septenary',
+    ],
+    control: { type: 'select' },
+  },
+  italic: {
+    name: 'italic',
+    description: 'Adds an italic style.',
+    control: { type: 'boolean' },
+  },
+  align: {
+    name: 'align',
+    description: 'Sets the horizontal alignment.',
+    options: ['left', 'center', 'right'],
+    control: { type: 'inline-radio' },
+  },
+  cssColor: {
+    name: 'cssColor',
+    description: 'Sets a color from a CSS color string.',
+    control: { type: 'color' },
+  },
+  tag: {
+    name: 'tag',
+    description: 'Changes the title’s element type.',
+    control: { type: 'text' },
+  },
+  children: {
+    name: 'children',
+    control: { type: 'text' },
   },
 }
 
-export const DefaultProps = () => (
-  <Container>
-    <Marger top="4">
-      <TitleWithStroke
-        modifier={select('Modifier', modifierOptions, 'primary')}
-        italic={boolean('Italic', false)}
-        align={select('Align', alignOptions, 'left')}
-        cssColor={color('cssColor', COLORS.font1)}
-      >
-        {text('Title', 'Lorem ipsum dolor sit amet')}
-      </TitleWithStroke>
-    </Marger>
-  </Container>
-)
-
-export const Modifier = () => (
+export const ModifierMetrics = () => (
   <>
     <Marger>
       <Text weight="bold">Primary</Text>
@@ -213,22 +240,4 @@ export const Modifier = () => (
       </Marger>
     </Marger>
   </>
-)
-
-export const AlignCenter = () => (
-  <TitleWithStroke modifier="primary" align="center">
-    Lorem ipsum dolor sit amet
-  </TitleWithStroke>
-)
-
-export const AlignRight = () => (
-  <TitleWithStroke modifier="primary" align="right">
-    Lorem ipsum dolor sit amet
-  </TitleWithStroke>
-)
-
-export const Italic = () => (
-  <TitleWithStroke modifier="primary" italic>
-    Lorem ipsum dolor sit amet…
-  </TitleWithStroke>
 )

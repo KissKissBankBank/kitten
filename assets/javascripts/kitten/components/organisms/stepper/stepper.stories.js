@@ -1,11 +1,15 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { Stepper, StepperLink, StepperItem } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Stepper,
   title: 'Organisms/Stepper',
   parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Stepper" />,
+    },
     component: Stepper,
     subcomponents: { 'Stepper.Item': StepperItem, 'Stepper.Link': StepperLink },
   },

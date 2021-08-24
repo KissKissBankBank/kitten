@@ -3,6 +3,7 @@ import { boolean } from '@storybook/addon-knobs'
 import { Stepper } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../layout/container'
+import { DocsPage } from 'storybook/docs-page'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -15,6 +16,11 @@ const StoryContainer = ({ children }) => (
 export default {
   title: 'Organisms/Stepper (deprecated)',
   component: Stepper,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Stepper" />,
+    },
+  },
 }
 
 export const Default = () => {

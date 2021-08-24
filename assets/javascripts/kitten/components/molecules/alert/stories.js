@@ -2,10 +2,16 @@ import React from 'react'
 import { Alert } from './'
 import { boolean, text } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Molecules/Alert',
   component: Alert,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Alert" />,
+    },
+  },
   args: {
     show: true,
     error: false,

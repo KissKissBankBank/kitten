@@ -9,12 +9,26 @@ import {
   PhoneIllustration,
   pxToRem,
 } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Default,
   title: 'Molecules/Carousels/Carousel/EngagementsCarousel',
   parameters: {
-    component: Default,
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={[
+            'index.js',
+            'styles.js',
+            'components/carousel-inner.js',
+            'components/carousel-page.js',
+          ]}
+          importString="Carousel"
+        />
+      ),
+    },
   },
 }
 

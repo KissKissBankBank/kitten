@@ -1,12 +1,15 @@
 import React from 'react'
 import { Triptych } from './index'
 import { Container, VerticalCardWithAction, Title } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Triptych,
   title: 'Molecules/Cards/Triptych',
   parameters: {
-    component: Triptych,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Triptych" />,
+    },
   },
 }
 

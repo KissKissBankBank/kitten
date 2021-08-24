@@ -2,12 +2,15 @@ import React from 'react'
 import { text, boolean } from '@storybook/addon-knobs'
 import { TeamCard } from './index'
 import { Container, Grid, GridCol, Marger } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: TeamCard,
   title: 'Molecules/Cards/TeamCard',
   parameters: {
-    component: TeamCard,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="TeamCard" />,
+    },
   },
 }
 

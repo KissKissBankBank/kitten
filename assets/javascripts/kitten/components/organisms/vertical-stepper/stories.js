@@ -1,6 +1,7 @@
 import React from 'react'
 import { VerticalStepper } from './index'
 import { Text } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Organisms/VerticalStepper',
@@ -12,6 +13,13 @@ export default {
       </div>
     ),
   ],
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="VerticalStepper" />
+      ),
+    },
+  },
 }
 
 export const WithOrionVariant = () => {

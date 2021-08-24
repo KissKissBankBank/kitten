@@ -1,9 +1,17 @@
 import React from 'react'
 import { InformationBox } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Molecules/Boxes/InformationBox',
   component: InformationBox,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="InformationBox" />
+      ),
+    },
+  },
 }
 
 export const Default = (args) => {

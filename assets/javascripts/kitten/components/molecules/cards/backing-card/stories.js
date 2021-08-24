@@ -17,6 +17,7 @@ import {
   useMedia,
   getMinQuery,
 } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const StyledCarouselContainer = styled.div`
   margin: 40px 0;
@@ -33,6 +34,11 @@ const StyledCarouselContainer = styled.div`
 export default {
   title: 'Molecules/Cards/BackingCard',
   component: BackingCard,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="BackingCard" />,
+    },
+  },
 }
 
 export const Default = () => {

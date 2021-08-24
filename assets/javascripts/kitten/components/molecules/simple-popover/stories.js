@@ -3,6 +3,7 @@ import { SimplePopover } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../layout/container'
 import { Button } from '../../../components/molecules/buttons/button'
+import { DocsPage } from 'storybook/docs-page'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -15,6 +16,13 @@ const StoryContainer = ({ children }) => (
 export default {
   title: 'Molecules/SimplePopover',
   component: SimplePopover,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="SimplePopover" />
+      ),
+    },
+  },
 }
 
 export const Default = () => {

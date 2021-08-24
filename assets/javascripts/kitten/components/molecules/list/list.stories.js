@@ -3,6 +3,7 @@ import { boolean, number } from '@storybook/addon-knobs'
 import { List } from './index'
 import styled from 'styled-components'
 import { pxToRem, Text } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const ExampleWrapper = styled.div`
   margin: ${pxToRem(16)} 0;
@@ -14,6 +15,21 @@ const ExampleText = styled(Text)`
   padding: 0;
   line-height: 1.2;
 `
+
+export default {
+  title: 'Molecules/List',
+  component: List,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="List" />,
+    },
+  },
+  decorators: [story => (
+    <div className="story-Container story-Grid">
+      {story()}
+    </div>
+  )],
+}
 
 export const SimpleList = () => {
   return (
@@ -65,10 +81,3 @@ export const ListWithButtonItem = () => {
     </List>
   )
 }
-
-SimpleList.decorators = [story => (
-  <div className="story-Container story-Grid">
-    {story()}
-  </div>
-)]
-ListWithButtonItem.decorators = SimpleList.decorators

@@ -1,10 +1,18 @@
 import React from 'react'
 import { IconContainer } from './index'
 import { CheckedCircleIcon, COLORS, Text } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Molecules/Boxes/IconContainer',
   component: IconContainer,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="IconContainer" />
+      ),
+    },
+  },
 }
 
 export const Default = ({children, ...args}) => (

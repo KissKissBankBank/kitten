@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { TagInput } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Form/TagInput',
   component: TagInput,
   parameters: {
-    component: TagInput,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="TagInput" />,
+    },
   },
   decorators: [
     story => (

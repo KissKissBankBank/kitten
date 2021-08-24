@@ -1,24 +1,28 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
 import * as stories from './doc-link-box.stories.js'
 import { DocLinkBox } from './index'
+import { FileUrl } from 'storybook/file-url'
+
 
 <Meta title="Molecules/Boxes/DocLinkBox" component={DocLinkBox} />
 
 # LinkBox
 
-Wrapper for LinkBox.
+## Source
 
-<Canvas>
-  <Story name="DocLinkBox" story={stories.Default} />
-</Canvas>
+<FileUrl filepath={__filename} />
 
 ## Import
+
 ~~~js
 import { DocLinkBox } from '@kisskissbankbank/kitten'
 ~~~
 
 ## Usage
-&nbsp;
+
+<Canvas>
+  <Story name="DocLinkBox" story={stories.Default} />
+</Canvas>
 
 #### Default
 ~~~js
