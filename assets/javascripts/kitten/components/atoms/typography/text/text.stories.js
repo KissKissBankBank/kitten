@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 const argTypes = {
   color: {
@@ -85,7 +86,9 @@ export default {
   component: Text,
   title: 'Typography/Text',
   parameters: {
-    component: Text,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Text" />,
+    },
   },
   args,
   argTypes,

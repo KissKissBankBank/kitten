@@ -1,6 +1,7 @@
 import React from 'react'
 import { text } from '@storybook/addon-knobs'
 import { CounterBlock } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export const Default = () => {
   return (
@@ -16,4 +17,11 @@ export const Default = () => {
 export default {
   title: 'Organisms/CounterBlock',
   component: CounterBlock,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="CounterBlock" />
+      ),
+    },
+  },
 }

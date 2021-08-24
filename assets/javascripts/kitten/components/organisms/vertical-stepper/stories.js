@@ -3,6 +3,7 @@ import { VerticalStepper } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../layout/container'
 import { Text } from '../../atoms/typography/text'
+import { DocsPage } from 'storybook/docs-page'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -15,6 +16,13 @@ const StoryContainer = ({ children }) => (
 export default {
   title: 'Organisms/VerticalStepper',
   component: VerticalStepper,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="VerticalStepper" />
+      ),
+    },
+  },
 }
 
 export const WithOrionVariant = () => {

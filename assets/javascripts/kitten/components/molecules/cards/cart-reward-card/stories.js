@@ -2,12 +2,17 @@ import React, { useRef } from 'react'
 import { text } from '@storybook/addon-knobs'
 import { CartRewardCard } from './index'
 import { Container, Grid, GridCol, Button } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: CartRewardCard,
   title: 'Molecules/Cards/CartRewardCard',
   parameters: {
-    component: CartRewardCard,
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="CartRewardCard" />
+      ),
+    },
   },
 }
 

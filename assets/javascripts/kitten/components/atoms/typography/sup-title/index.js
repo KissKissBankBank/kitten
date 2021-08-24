@@ -4,7 +4,7 @@ import { Text } from '../../../../components/atoms/typography/text'
 export const SupTitle = textProps => (
   <Text
     size="tiny"
-    lineHeigth="normal"
+    lineHeight="normal"
     transform="uppercase"
     weight="bold"
     {...textProps}

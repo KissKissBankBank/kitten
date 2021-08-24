@@ -9,6 +9,7 @@ import {
 import { Marger } from '../../layout/marger'
 import { Container } from '../../layout/container'
 import { Grid, GridCol } from '../../layout/grid'
+import { DocsPage } from 'storybook/docs-page'
 
 const StoryGrid = ({ children }) => (
   <Container>
@@ -24,6 +25,26 @@ const StoryGrid = ({ children }) => (
 
 export default {
   title: 'Form/Field',
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={[
+            'index.js',
+            'components/autocomplete.js',
+            'components/checkbox.js',
+            'components/error.js',
+            'components/input.js',
+            'components/label.js',
+            'components/password.js',
+            'components/radio-button-set.js',
+          ]}
+          importString="Field"
+        />
+      ),
+    },
+  },
 }
 
 export const WithInput = () => {

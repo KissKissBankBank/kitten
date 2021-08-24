@@ -3,10 +3,14 @@ import { Text } from '../../atoms/typography/text'
 import React from 'react'
 import { select } from '@storybook/addon-knobs'
 import { Tag } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Atoms/Tag',
   component: Tag,
+  parameters: {
+    docs: { page: () => <DocsPage filepath={__filename} importString="Tag" /> },
+  },
 }
 
 export const Default = () => {

@@ -14,6 +14,7 @@ import {
   parseHtml,
 } from '../../../..'
 import { STATE_CHOICES } from './stories/project-state'
+import { DocsPage } from 'storybook/docs-page'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -31,9 +32,27 @@ export default {
   component: CrowdfundingCard,
   title: 'Molecules/Cards/CrowdfundingCard',
   parameters: {
-    component: CrowdfundingCard,
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={[
+            'index.js',
+            'styles.js',
+            'components/button.js',
+            'components/image.js',
+            'components/informations.js',
+            'components/progress.js',
+            'components/state.js',
+            'components/subtitle.js',
+            'components/title.js',
+          ]}
+          importString="CrowdfundingCard"
+        />
+      ),
+    },
     componentSubtitle:
-      'The CrowdfundingCardWidget is a container that can expand on click. It can accept any content.',
+      'The CrowdfundingCardWidget is a clickable card that displays info about a crowdfunding campaign.',
   },
 }
 

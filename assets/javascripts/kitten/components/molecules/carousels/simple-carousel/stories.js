@@ -1,10 +1,18 @@
 import React from 'react'
 import { SimpleCarousel } from './index'
 import { Marger, Title, Paragraph, HorizontalStroke, Button } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Molecules/Carousels/SimpleCarousel',
   component: SimpleCarousel,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="SimpleCarousel" />
+      ),
+    },
+  },
 }
 
 const Item = ({ numItem }) => (

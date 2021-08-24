@@ -4,6 +4,7 @@ import { text, number, boolean } from '@storybook/addon-knobs'
 import { ExpandBoard } from './index'
 import { ExpandBoardWithButtonItemList } from './examples'
 import { Grid, GridCol, COLORS, pxToRem } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const StyledContainer = styled.div`
   margin: ${pxToRem(30)};
@@ -35,6 +36,11 @@ const radiusBottomBorderRange = {
 export default {
   component: ExpandBoard,
   title: 'Molecules/Expand/ExpandBoard',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="ExpandBoard" />,
+    },
+  },
 }
 
 export const Default = () => (

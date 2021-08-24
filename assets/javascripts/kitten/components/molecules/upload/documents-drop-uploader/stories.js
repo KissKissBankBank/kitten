@@ -2,10 +2,18 @@ import React from 'react'
 import { DocumentsDropUploader } from './index'
 import { boolean, text, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: DocumentsDropUploader,
   title: 'Molecules/Upload/DocumentsDropUploader',
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="DocumentsDropUploader" />
+      ),
+    },
+  },
 }
 
 export const Default = () => (

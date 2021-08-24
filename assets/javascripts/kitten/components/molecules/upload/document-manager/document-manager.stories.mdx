@@ -1,10 +1,16 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
 import * as stories from './document-manager.stories.js'
 import { DocumentManager } from './index'
+import { FileUrl } from 'storybook/file-url'
+
 
 <Meta title="Molecules/Upload/DocumentManager" component={DocumentManager} />
 
 # DocumentManager
+
+## Source
+
+<FileUrl filepath={__filename} />
 
 ## Import
 
@@ -14,43 +20,43 @@ import { DocumentManager } from '@kisskissbankbank/kitten'
 
 ## Usage
 
-#### Default
+### Default
 
 <Canvas>
   <Story name="StatusReady" story={stories.StatusReady} />
 </Canvas>
 
-#### Status Valid
+### Status Valid
 
 <Canvas>
   <Story name="StatusValid" story={stories.StatusValid} />
 </Canvas>
 
-#### Status Error
+### Status Error
 
 <Canvas>
   <Story name="StatusError" story={stories.StatusError} />
 </Canvas>
 
-#### Status Waiting
+### Status Waiting
 
 <Canvas>
   <Story name="StatusWaiting" story={stories.StatusWaiting} />
 </Canvas>
 
-#### Status Loading
+### Status Loading
 
 <Canvas>
   <Story name="StatusLoading" story={stories.StatusLoading} />
 </Canvas>
 
-#### CustomFileInputProps
+### CustomFileInputProps
 
 <Canvas>
   <Story name="CustomFileInputProps" story={stories.CustomFileInputProps} />
 </Canvas>
 
-#### CustomFunctions
+### CustomFunctions
 
 <Canvas>
   <Story name="CustomFunctions" story={stories.CustomFunctions} />

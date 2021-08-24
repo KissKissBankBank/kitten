@@ -2,10 +2,18 @@ import React, { useState } from 'react'
 import { ImageDropUploader } from './index'
 import { boolean, text } from '@storybook/addon-knobs'
 import { BackingCard, Grid, GridCol, Tag, Container } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: ImageDropUploader,
   title: 'Molecules/Upload/ImageDropUploader',
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="ImageDropUploader" />
+      ),
+    },
+  },
 }
 
 export const StatusReady = () => (

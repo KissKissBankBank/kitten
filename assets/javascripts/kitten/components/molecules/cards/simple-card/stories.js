@@ -2,10 +2,16 @@ import React from 'react'
 import { text, boolean, color } from '@storybook/addon-knobs'
 import { SimpleCard } from './index'
 import { Container, Grid, GridCol, Marger } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Molecules/Cards/SimpleCard',
   component: SimpleCard,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="SimpleCard" />,
+    },
+  },
 }
 
 export const Default = () => {
