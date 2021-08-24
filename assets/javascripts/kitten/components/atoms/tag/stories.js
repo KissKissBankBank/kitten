@@ -6,7 +6,7 @@ export default {
   component: Tag,
   decorators: [
     story => (
-      <div className="story-Container story-Grid story-Grid">
+      <div className="story-Container story-Grid">
         <div>{story()}</div>
       </div>
     ),
