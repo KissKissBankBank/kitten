@@ -3,6 +3,7 @@ import { boolean, number } from '@storybook/addon-knobs'
 import { List } from './index'
 import styled from 'styled-components'
 import { pxToRem, Text } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const ExampleWrapper = styled.div`
   margin: ${pxToRem(16)} 0;
@@ -18,6 +19,11 @@ const ExampleText = styled(Text)`
 export default {
   title: 'Molecules/List',
   component: List,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="List" />,
+    },
+  },
 }
 
 export const SimpleList = () => {

@@ -3,8 +3,9 @@ import 'regenerator-runtime/runtime'
 import './stylesheets/app-kitten.scss'
 import React from 'react'
 import GridDecorator from './decorators/grid'
-import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
+import { DocsPage, DocsContainer } from '@storybook/addon-docs'
 import { themes } from '@storybook/theming';
+import { FileUrl } from 'storybook/file-url'
 
 export const parameters = {
   docs: {

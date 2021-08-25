@@ -18,6 +18,7 @@ import { LoggedOut } from './components/logged-out';
 import { Logged } from './components/logged';
 import { Hidden } from './components/hidden';
 import { QuickAccessLink } from './components/quick-access-link';
+import { SearchInput } from './components/search-input';
 import { usePrevious } from '../../../helpers/utils/use-previous-hook';
 import { StyledHeader } from './styles';
 
@@ -47,11 +48,6 @@ var HeaderNav = function HeaderNav(_ref) {
       stickyState = _useState6[0],
       setStickyState = _useState6[1];
 
-  var _useState7 = useState(null),
-      _useState8 = _slicedToArray(_useState7, 2),
-      isBackgroundInactive = _useState8[0],
-      setBackgroundInactive = _useState8[1];
-
   var stickyContainerRef = useRef(null);
   var headerRef = useRef(null);
   var previousStickyState = usePrevious(stickyState);
@@ -71,9 +67,6 @@ var HeaderNav = function HeaderNav(_ref) {
   useEffect(function () {
     setStickyState(isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp');
   }, [isFixed, isMenuExpanded]);
-  useEffect(function () {
-    setBackgroundInactive(/UserMenu/.test(menuExpandBy));
-  }, [menuExpandBy]);
   return /*#__PURE__*/React.createElement(Context.Provider, {
     value: {
       isLogged: isLogged,
@@ -88,8 +81,7 @@ var HeaderNav = function HeaderNav(_ref) {
     },
     zIndex: zIndexConfig,
     className: classNames('k-HeaderNav__wrapper', "k-HeaderNav--".concat(size), "k-HeaderNav--".concat(borderStyle), {
-      'k-HeaderNav--menuIsExpanded': isMenuExpanded,
-      'k-HeaderNav--inactiveBackground': isBackgroundInactive
+      'k-HeaderNav--menuIsExpanded': isMenuExpanded
     })
   }, /*#__PURE__*/React.createElement(StickyContainer, _extends({
     ref: stickyContainerRef,
@@ -115,6 +107,7 @@ HeaderNav.Centered = Centered;
 HeaderNav.LoggedOut = LoggedOut;
 HeaderNav.Logged = Logged;
 HeaderNav.Hidden = Hidden;
+HeaderNav.SearchInput = SearchInput;
 HeaderNav.propTypes = {
   id: PropTypes.string,
   isFixed: PropTypes.bool,

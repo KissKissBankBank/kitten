@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { DatePicker } from './index'
 import { date, text, object, array } from '@storybook/addon-knobs'
 import { Container, Marger, COLORS } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -74,6 +75,17 @@ class CustomInput extends Component {
 export default {
   title: 'Form/DatePicker',
   component: DatePicker,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={['index.js', 'components/navbar.js']}
+          importString="DatePicker"
+        />
+      ),
+    },
+  },
 }
 
 export const WithTextInputWithUnit = () => {

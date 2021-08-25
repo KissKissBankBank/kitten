@@ -4,6 +4,7 @@ import { HighlightHalo } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../layout/container'
 import COLORS from '../../../constants/colors-config'
+import { DocsPage } from 'storybook/docs-page'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -16,6 +17,13 @@ const StoryContainer = ({ children }) => (
 export default {
   title: 'Atoms/HighlightHalo',
   component: HighlightHalo,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="HighlightHalo" />
+      ),
+    },
+  },
 }
 
 export const Default = () => {

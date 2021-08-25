@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { text, boolean, number, select } from '@storybook/addon-knobs'
 import { Modal } from './index'
-import { Button, Text, SaveIcon } from '../../..'
+import { Button, Text, SaveIcon, COLORS } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -36,6 +37,13 @@ const paragraphContainer = `
 export default {
   title: 'Molecules/Modal/Next',
   component: Modal,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="ModalNext as Modal" />
+      ),
+    },
+  },
   subcomponents: {
     Title: Modal.Title,
     Paragraph: Modal.Paragraph,
@@ -159,15 +167,6 @@ export const FullSize = () => (
   </Modal>
 )
 
-const OrionHeaderTitle = () => {
-  return (
-    <p>
-      <strong>Hello world !</strong>
-      <br />
-      Hey
-    </p>
-  )
-}
 const OrionHeaderActions = ({ close }) => (
   <>
     <Button
@@ -200,8 +199,17 @@ export const ComplexWithOrion = () => (
   <Modal
     trigger={<Button modifier="helium">Open</Button>}
     variant="orion"
-    headerTitle={<OrionHeaderTitle />}
+    headerTitle={
+      <Text weight="bold" size="giant">
+        Modal title
+      </Text>
+    }
     headerActions={OrionHeaderActions}
+    headerMessage={
+      <Text size="micro" weight="light" cssColor={COLORS.grey1}>
+        {text('headerMessage', '')}
+      </Text>
+    }
     size={select('Size', ['regular', 'big', 'huge', 'giant'], 'giant')}
   >
     {() => (

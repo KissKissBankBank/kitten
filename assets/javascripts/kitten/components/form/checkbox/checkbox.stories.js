@@ -3,12 +3,15 @@ import { text, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { Checkbox } from './index'
 import { Grid, GridCol } from '../../../components/layout/grid'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Checkbox,
   title: 'Form/Checkbox',
   parameters: {
-    component: Checkbox,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Checkbox" />,
+    },
   },
 }
 

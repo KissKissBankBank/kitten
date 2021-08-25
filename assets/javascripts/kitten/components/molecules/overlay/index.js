@@ -75,10 +75,14 @@ export class Overlay extends Component {
     return (
       <StyledOverlay
         zIndex={zIndex}
-        className={classNames(className,
-          'k-Overlay', `k-Overlay--${position}`, {
+        className={classNames(
+          className,
+          'k-Overlay',
+          `k-Overlay--${position}`,
+          {
             'k-Overlay--isActive': isActive,
-          })}
+          },
+        )}
         {...other}
       />
     )
@@ -91,7 +95,7 @@ Overlay.propTypes = {
   toggleEvent: PropTypes.string,
   closeEvent: PropTypes.string,
   openEvent: PropTypes.string,
-  position: PropTypes.oneOf(['absolute', 'fixed'])
+  position: PropTypes.oneOf(['absolute', 'fixed']),
 }
 
 Overlay.defaultProps = {

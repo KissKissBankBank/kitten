@@ -102,7 +102,7 @@ export const SearchInput = ({
         size="tiny"
         rounded
         buttonValue={<SearchIcon />}
-        buttonProps={{...searchButtonProps, ref: buttonElement}}
+        buttonProps={{ ...searchButtonProps, ref: buttonElement }}
         autoComplete="off"
         inset
         {...searchInputProps}
@@ -121,7 +121,7 @@ export const SearchInput = ({
           onClick={handleFoldButtonClick}
           className="k-u-hidden@m-up"
         >
-            <SearchIcon />
+          <SearchIcon />
         </Button>
       ) : (
         <button

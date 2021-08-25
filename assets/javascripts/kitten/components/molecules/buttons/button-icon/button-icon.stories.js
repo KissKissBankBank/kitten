@@ -2,10 +2,16 @@ import React from 'react'
 import { select } from '@storybook/addon-knobs'
 import { ButtonIcon } from './index'
 import { Marger, Container, Grid, GridCol, QuestionMarkIcon } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: ButtonIcon,
   title: 'Molecules/Buttons/ButtonIcon',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="ButtonIcon" />,
+    },
+  },
 }
 
 const StoryContainer = ({ children }) => (

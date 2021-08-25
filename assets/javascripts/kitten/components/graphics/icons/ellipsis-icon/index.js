@@ -12,9 +12,9 @@ export const EllipsisIcon = ({ color, title, ...props }) => {
       {...props}
     >
       {title && <title>{title}</title>}
-      <circle cx="2" cy="2" r="2" fill={color}/>
-      <circle cx="8" cy="2" r="2" fill={color}/>
-      <circle cx="14" cy="2" r="2" fill={color}/>
+      <circle cx="2" cy="2" r="2" fill={color} />
+      <circle cx="8" cy="2" r="2" fill={color} />
+      <circle cx="14" cy="2" r="2" fill={color} />
     </svg>
   )
 }

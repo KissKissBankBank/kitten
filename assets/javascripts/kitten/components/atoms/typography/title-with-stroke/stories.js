@@ -2,6 +2,7 @@ import React from 'react'
 import { text, boolean, select, color } from '@storybook/addon-knobs'
 import { TitleWithStroke } from './index'
 import { COLORS, Marger, Container, Text } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const modifierOptions = {
   Primary: 'primary',
@@ -23,8 +24,11 @@ export default {
   component: TitleWithStroke,
   title: 'Atoms/Typography/TitleWithStroke',
   parameters: {
-    component: TitleWithStroke,
-    componentSubtitle: 'List of TitleWithStroke',
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="TitleWithStroke" />
+      ),
+    },
   },
 }
 

@@ -2,10 +2,16 @@ import React from 'react'
 import { text, select, boolean } from '@storybook/addon-knobs'
 import { Toggletip } from './index'
 import COLORS from '../../../constants/colors-config'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Molecules/Toggletip',
   component: Toggletip,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Toggletip" />,
+    },
+  },
 }
 
 export const Default = () => {

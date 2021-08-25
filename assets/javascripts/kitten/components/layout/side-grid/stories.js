@@ -9,10 +9,16 @@ import {
   GridCol,
   Title,
 } from '../../../index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Layout/SideGrid',
   component: SideGrid,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="SideGrid" />,
+    },
+  },
 }
 
 export const Default = () => (

@@ -94,6 +94,7 @@ export { DotIcon } from './components/graphics/icons/dot-icon';
 export { DoubleArrowIcon } from './components/graphics/icons/double-arrow-icon';
 export { DownloadIcon } from './components/graphics/icons/download-icon';
 export { EditIcon } from './components/graphics/icons/edit-icon';
+export { EllipsisIcon } from './components/graphics/icons/ellipsis-icon';
 export { EmailIcon } from './components/graphics/icons/email-icon';
 export { EmbedIcon } from './components/graphics/icons/embed-icon';
 export { ExportIcon } from './components/graphics/icons/export-icon';
@@ -252,6 +253,7 @@ export { SimpleCarousel } from './components/molecules/carousels/simple-carousel
 
 export { Accordeon } from './components/molecules/expand/accordeon';
 export { Details } from './components/molecules/expand/details';
+export { DropdownMenu } from './components/molecules/expand/dropdown-menu';
 export { ExpandBoard } from './components/molecules/expand/expand-board'; // Molecules/Upload
 
 export { BasicUploader } from './components/molecules/upload/basic-uploader';
@@ -293,7 +295,8 @@ export { domEvents, A11Y_EVENT, FOCUS_EVENT, A11Y_FIRST_FOCUS_REACHED_EVENT, A11
 export { FLUID as BUTTON_STYLE_FLUID, DEFAULT as BUTTON_STYLE_DEFAULT, TINY as BUTTON_STYLE_TINY, BIG as BUTTON_STYLE_BIG, HUGE as BUTTON_STYLE_HUGE, GIANT as BUTTON_STYLE_GIANT, ICON as BUTTON_STYLE_ICON, ICON_MICRO as BUTTON_STYLE_ICON_MICRO, ICON_TINY as BUTTON_STYLE_ICON_TINY, ICON_BIG as BUTTON_STYLE_ICON_BIG, ICON_HUGE as BUTTON_STYLE_ICON_HUGE, ICON_GIANT as BUTTON_STYLE_ICON_GIANT } from './components/molecules/buttons/button';
 export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/molecules/carousels/carousel/styles';
 export { MICRO as HORIZONTAL_STROKE_STYLE_MICRO, TINY as HORIZONTAL_STROKE_STYLE_TINY, DEFAULT as HORIZONTAL_STROKE_STYLE_DEFAULT, BIG as HORIZONTAL_STROKE_STYLE_BIG, HUGE as HORIZONTAL_STROKE_STYLE_HUGE } from './components/atoms/horizontal-stroke';
-export { MOBILE_HEADER_HEIGHT, TABLET_HEADER_HEIGHT, DESKTOP_HEADER_HEIGHT } from './components/organisms/header-nav/config'; // -------
+export { MOBILE_HEADER_HEIGHT, TABLET_HEADER_HEIGHT, DESKTOP_HEADER_HEIGHT } from './components/organisms/header-nav/config';
+export { CLOSE_OVERLAY_EVENT, OPEN_OVERLAY_EVENT } from './components/molecules/overlay'; // -------
 // HELPERS
 // -------
 

@@ -27,9 +27,9 @@ var ORDERED_SCREEN_SIZES = [SCREEN_SIZE_XXS, SCREEN_SIZE_XS, SCREEN_SIZE_S, SCRE
 exports.ORDERED_SCREEN_SIZES = ORDERED_SCREEN_SIZES;
 var ScreenConfig = (_ScreenConfig = {}, (0, _defineProperty2.default)(_ScreenConfig, SCREEN_SIZE_XXS, {
   min: null,
-  max: 479
+  max: 399
 }), (0, _defineProperty2.default)(_ScreenConfig, SCREEN_SIZE_XS, {
-  min: 480,
+  min: 400,
   max: 639
 }), (0, _defineProperty2.default)(_ScreenConfig, SCREEN_SIZE_S, {
   min: 640,

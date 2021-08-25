@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.useDropdown = void 0;
 
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = require("react");
@@ -19,11 +21,18 @@ var useDropdown = function useDropdown(_ref) {
       callOnToggle = _ref.callOnToggle,
       closeEvents = _ref.closeEvents,
       isExpanded = _ref.isExpanded,
-      buttonId = _ref.buttonId,
-      menuId = _ref.menuId;
+      _ref$buttonId = _ref.buttonId,
+      buttonId = _ref$buttonId === void 0 ? 'button' : _ref$buttonId,
+      _ref$inputId = _ref.inputId,
+      inputId = _ref$inputId === void 0 ? 'input' : _ref$inputId,
+      _ref$menuId = _ref.menuId,
+      menuId = _ref$menuId === void 0 ? 'menu' : _ref$menuId,
+      _ref$dropdownClass = _ref.dropdownClass,
+      dropdownClass = _ref$dropdownClass === void 0 ? 'k-HeaderNavDropdown' : _ref$dropdownClass;
   var dropdownRef = (0, _react.useRef)(null);
   var dropdownContentRef = (0, _react.useRef)(null);
   var dropdownButtonRef = (0, _react.useRef)(null);
+  var dropdownInputRef = (0, _react.useRef)(null);
 
   var _useState = (0, _react.useState)(!!isExpanded),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -34,6 +43,10 @@ var useDropdown = function useDropdown(_ref) {
     setDropdownExpandedState(function (currentValue) {
       return !currentValue;
     });
+  };
+
+  var handleInputChange = function handleInputChange(changeEvent) {
+    setDropdownExpandedState(changeEvent.target.value.length > 0);
   };
 
   var closeDropdown = function closeDropdown() {
@@ -90,9 +103,7 @@ var useDropdown = function useDropdown(_ref) {
   var dropdownProps = {
     ref: dropdownRef,
     'aria-live': 'polite',
-    className: (0, _classnames.default)('k-HeaderNavDropdown', {
-      'k-HeaderNavDropdown--isExpanded': isDropdownExpanded
-    })
+    className: (0, _classnames.default)(dropdownClass, (0, _defineProperty2.default)({}, "".concat(dropdownClass, "--isExpanded"), isDropdownExpanded))
   };
   var buttonProps = {
     ref: dropdownButtonRef,
@@ -100,13 +111,20 @@ var useDropdown = function useDropdown(_ref) {
     'aria-controls': menuId,
     isExpanded: isDropdownExpanded,
     onClick: handleButtonClick,
-    className: 'k-HeaderNavDropdown__button'
+    className: "".concat(dropdownClass, "__button")
+  };
+  var inputProps = {
+    ref: dropdownInputRef,
+    id: inputId,
+    isExpanded: isDropdownExpanded,
+    onChange: handleInputChange,
+    className: "".concat(dropdownClass, "__input")
   };
   var returnedWidth = dropdownContentWidth === NaN ? null : dropdownContentWidth;
   var menuProps = {
     ref: dropdownContentRef,
     id: menuId,
-    className: (0, _classnames.default)('k-HeaderNavDropdown__menu', "k-HeaderNavDropdown__menu--is-".concat(dropdownAnchorSide || 'left')),
+    className: (0, _classnames.default)("".concat(dropdownClass, "__menu"), "".concat(dropdownClass, "__menu--is-").concat(dropdownAnchorSide || 'left')),
     style: {
       width: returnedWidth
     },
@@ -116,7 +134,14 @@ var useDropdown = function useDropdown(_ref) {
     dropdownProps: dropdownProps,
     buttonProps: buttonProps,
     menuProps: menuProps,
-    isDropdownExpanded: isDropdownExpanded
+    isDropdownExpanded: isDropdownExpanded,
+    inputProps: inputProps,
+    openDropdown: function openDropdown() {
+      return setDropdownExpandedState(true);
+    },
+    closeDropdown: function closeDropdown() {
+      return setDropdownExpandedState(false);
+    }
   };
 };
 

@@ -2,10 +2,18 @@ import React from 'react'
 import { boolean, text } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../../components/layout/grid'
 import { ToggleSwitch } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: ToggleSwitch,
   title: 'Form/ToggleSwitch',
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="ToggleSwitch" />
+      ),
+    },
+  },
 }
 
 export const Default = () => {

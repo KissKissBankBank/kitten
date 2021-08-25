@@ -1,14 +1,16 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
 import * as stories from './horizontal-stroke.stories.js'
 import { HorizontalStroke } from './index'
+import { FileUrl } from 'storybook/file-url'
+
 
 <Meta title="Atoms/HorizontalStroke" component={HorizontalStroke} />
 
 # HorizontalStroke
 
-<Canvas>
-  <Story name="Example" story={stories.Default} />
-</Canvas>
+## Source
+
+<FileUrl filepath={__filename} />
 
 ## Import
 
@@ -16,18 +18,22 @@ import { HorizontalStroke } from './index'
 import { HorizontalStroke } from '@kisskissbankbank/kitten'
 ```
 
-#### Size CSS
+### Size CSS
 
 ```js
 import {
-  TINY,
-  DEFAULT,
-  BIG,
-  HUGE,
+  HORIZONTAL_STROKE_STYLES_TINY,
+  HORIZONTAL_STROKE_STYLES_DEFAULT,
+  HORIZONTAL_STROKE_STYLES_BIG,
+  HORIZONTAL_STROKE_STYLES_HUGE,
 } from '@kisskissbankbank/kitten'
 ```
 
 ## Usage
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
 
 #### Default
 

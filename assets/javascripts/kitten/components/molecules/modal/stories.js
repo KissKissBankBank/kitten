@@ -5,6 +5,7 @@ import { Title } from '../../../components/atoms/typography/title'
 import { Paragraph } from '../../../components/atoms/typography/paragraph/next'
 import { Modal } from '../../../components/molecules/modal'
 import { Marger } from '../../../components/layout/marger'
+import { DocsPage } from 'storybook/docs-page'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -65,6 +66,11 @@ const StoryButton = ({ children }) => (
 export default {
   title: 'Molecules/Modal',
   component: Modal,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Modal" />,
+    },
+  },
 }
 
 export const OldModal = () => (

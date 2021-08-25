@@ -1,12 +1,13 @@
 import React from 'react'
 import { Row } from './index'
 import { boolean } from '@storybook/addon-knobs'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Row,
   title: 'Layout/Row',
   parameters: {
-    component: Row,
+    docs: { page: () => <DocsPage filepath={__filename} importString="Row" /> },
   },
 }
 

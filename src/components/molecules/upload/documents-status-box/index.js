@@ -68,9 +68,10 @@ var DocumentsStatusBox = function DocumentsStatusBox(_ref) {
     className: "k-DocumentsStatusBox__content"
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     as: "p",
-    className: "k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-single",
+    className: "k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf",
     weight: "regular",
-    size: "tiny"
+    size: "tiny",
+    lineHeight: "1"
   }, title), fileList.length > 0 && /*#__PURE__*/_react.default.createElement("ul", {
     className: "k-DocumentsStatusBox__fileList"
   }, fileList.map(function (file, index) {

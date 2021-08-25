@@ -1,6 +1,7 @@
 import React from 'react'
 import { Title } from './index'
 import { Container } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const argTypes = {
   modifier: {
@@ -90,8 +91,9 @@ export default {
   component: Title,
   title: 'Atoms/Typography/Title',
   parameters: {
-    component: Title,
-    componentSubtitle: 'List of Title',
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Title" />,
+    },
   },
   args,
   argTypes,

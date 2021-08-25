@@ -2,7 +2,6 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
 import PropTypes from 'prop-types';
-import deprecated from 'prop-types-extra/lib/deprecated';
 export var SearchIcon = function SearchIcon(_ref) {
   var iconTitle = _ref.iconTitle,
       title = _ref.title,
@@ -14,26 +13,21 @@ export var SearchIcon = function SearchIcon(_ref) {
       props = _objectWithoutProperties(_ref, ["iconTitle", "title", "color", "circleProps", "pathProps", "width", "height"]);
 
   return /*#__PURE__*/React.createElement("svg", _extends({
-    role: "img",
-    "aria-label": iconTitle || title,
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "-0.7 -0.7 18 18",
+    "aria-label": title,
     width: width,
-    height: height
-  }, props), (iconTitle || title) && /*#__PURE__*/React.createElement("title", null, iconTitle || title), /*#__PURE__*/React.createElement("circle", _extends({
-    cx: "7",
-    cy: "7",
-    r: "7",
-    stroke: color,
-    strokeWidth: "1.1",
-    fill: "none"
-  }, circleProps)), /*#__PURE__*/React.createElement("path", _extends({
-    d: "M13 11 L17 15 L15.5 16.5 L11.5 12.7z",
-    fill: color
-  }, pathProps)));
+    height: height,
+    viewBox: "0 0 15 15",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, props), title && /*#__PURE__*/React.createElement("title", null, title), /*#__PURE__*/React.createElement("path", _extends({
+    fill: color,
+    d: "M14.7 13.3l-3.5-3.5a1 1 0 00-1.4 1.4l3.5 3.5a1 1 0 001.4-1.4z"
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+    fill: color,
+    d: "M6.3 0a6.3 6.3 0 100 12.6A6.3 6.3 0 006.3 0zm0 2a4.3 4.3 0 110 8.6 4.3 4.3 0 010-8.6z"
+  }, circleProps)));
 };
 SearchIcon.propTypes = {
-  iconTitle: deprecated(PropTypes.string, 'Prefere use `title` prop instead'),
   title: PropTypes.string,
   color: PropTypes.string,
   circleProps: PropTypes.object,
