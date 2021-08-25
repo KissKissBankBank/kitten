@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `NoImageIcon`: Add new component.
 - Feature: `RewardSummaryCard`: Add new component.
 - Feature: `SearchIcon`: Update.
 - Feature: `CrossIcon`: Add `size` prop, accepts values `normal` and `big`.

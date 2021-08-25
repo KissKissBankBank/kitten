@@ -11,7 +11,7 @@ export const Availablity = props => {
       {...props}
       className={classNames(
         'k-RewardSummaryCard__availablity',
-        'k-u-hidden@s-down',
+        'k-u-hidden@m-down',
       )}
     />
   )

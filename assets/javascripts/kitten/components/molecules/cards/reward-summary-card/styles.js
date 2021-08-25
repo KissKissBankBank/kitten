@@ -48,6 +48,7 @@ export const StyledRewardSummaryCard = styled.a`
   @media (min-width: ${ScreenConfig.M.min}px) {
     height: calc(${pxToRem(100)} + 2 * var(--rewardSummaryCard--border-width));
     display: flex;
+    align-items: center;
   }
 
   /* IMAGE */
@@ -109,13 +110,9 @@ export const StyledRewardSummaryCard = styled.a`
       grid-template-columns: ${pxToRem(250)} auto auto auto auto;
       grid-template-rows: 1fr;
       grid-gap: 0 ${pxToRem(10)};
-      grid-template-areas: 'info amount contribution availablity options';
 
-      ${
-        '' /* &:not(.k-RewardSummaryCard__contribution) {
-        grid-template-areas: 
-          "info amount . availablity options";
-      } */
+      :not(.k-RewardSummaryCard__contribution) {
+        grid-template-columns: ${pxToRem(250)} auto auto auto;
       }
     }
 
@@ -128,6 +125,7 @@ export const StyledRewardSummaryCard = styled.a`
         ${pxToRem(150)}
         auto;
       grid-template-rows: 1fr;
+      grid-template-areas: 'info amount contribution availablity options';
     }
   }
 
@@ -146,6 +144,9 @@ export const StyledRewardSummaryCard = styled.a`
       grid-column: 1;
       font-size: ${stepToRem(0)};
       margin-top: 0;
+    }
+    
+    @media (min-width: ${ScreenConfig.L.min}px) {
       grid-area: info;
     }
   }
@@ -177,7 +178,7 @@ export const StyledRewardSummaryCard = styled.a`
     margin-top: 0;
     place-self: center flex-start;
 
-    @media (min-width: ${ScreenConfig.S.min}px) {
+    @media (min-width: ${ScreenConfig.L.min}px) {
       grid-area: amount;
     }
   }
@@ -187,7 +188,7 @@ export const StyledRewardSummaryCard = styled.a`
     margin-top: 0;
     place-self: center flex-start;
 
-    @media (min-width: ${ScreenConfig.S.min}px) {
+    @media (min-width: ${ScreenConfig.L.min}px) {
       grid-area: contribution;
     }
   }
@@ -197,7 +198,7 @@ export const StyledRewardSummaryCard = styled.a`
     margin-top: 0;
     place-self: center flex-start;
 
-    @media (min-width: ${ScreenConfig.S.min}px) {
+    @media (min-width: ${ScreenConfig.L.min}px) {
       grid-area: availablity;
     }
   }
@@ -206,7 +207,7 @@ export const StyledRewardSummaryCard = styled.a`
     z-index: 2;
     place-self: center flex-end;
 
-    @media (min-width: ${ScreenConfig.S.min}px) {
+    @media (min-width: ${ScreenConfig.L.min}px) {
       grid-area: options;
     }
   }
