@@ -3,6 +3,7 @@ import { boolean } from '@storybook/addon-knobs'
 import { BasicUploader } from './index'
 import { Loader } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
+import { action } from '@storybook/addon-actions'
 
 export default {
   component: BasicUploader,
@@ -14,64 +15,116 @@ export default {
       ),
     },
   },
+  decorators: [story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      {story()}
+    </div>
+  )],
 }
 
-export const StatusReady = args => (
-  <BasicUploader
-    {...args}
-    id="BasicUploader__StatusReady"
-    buttonText="Send document"
-  />
-)
+const args = {
+  id: 'BasicUploader',
+  buttonProps: {},
+  buttonText: 'Send document',
+  canCancel: true,
+  cancelButtonText: 'Cancel',
+  disabled: false,
+  errorText: undefined,
+  fileInputProps: {},
+  fileName: undefined,
+  onCancel: action('onCancel'),
+  onUpload: action('onUpload'),
+  status: 'ready',
+  statusText: undefined,
+}
 
-export const SizeModifiersWithButtonProps = args => (
-  <BasicUploader
-    {...args}
-    id="BasicUploader__StatusReady"
-    buttonProps={{
-      tiny: boolean('Tiny', false),
-      big: boolean('Big', false),
-      huge: boolean('Huge', false),
-      giant: boolean('Giant', false),
-    }}
-    buttonText="Send document"
-  />
-)
+const argTypes = {
+  id: {
+    name: 'id',
+    control: { type: 'text' },
+  },
+  buttonProps: {
+    name: 'buttonProps',
+    control: { type: 'object' },
+  },
+  buttonText: {
+    name: 'buttonText',
+    control: { type: 'text' },
+  },
+  canCancel: {
+    name: 'canCancel',
+    control: { type: 'boolean' },
+  },
+  cancelButtonText: {
+    name: 'cancelButtonText',
+    control: { type: 'text' },
+  },
+  disabled: {
+    name: 'disabled',
+    control: { type: 'boolean' },
+  },
+  errorText: {
+    name: 'errorText',
+    control: { type: 'text' },
+  },
+  fileInputProps: {
+    name: 'fileInputProps',
+    control: { type: 'object' },
+  },
+  fileName: {
+    name: 'fileName',
+    control: { type: 'text' },
+  },
+  onCancel: {
+    name: 'onCancel',
+    control: null,
+  },
+  onUpload: {
+    name: 'onUpload',
+    control: null,
+  },
+  status: {
+    name: 'status',
+    options: ['ready', 'error', 'valid', 'wait', 'loading'],
+    control: { type: 'select' },
+  },
+  statusText: {
+    name: 'statusText',
+    control: { type: 'text' },
+  },
+}
 
-export const OnFormError = args => (
-  <BasicUploader
-    {...args}
-    id="BasicUploader__OnFormError"
-    buttonText="Send document"
-    errorText="Veuillez sélectionner un fichier à envoyer"
-  />
+export const Default = args => (
+  <BasicUploader {...args} />
 )
+Default.args = args
+Default.argTypes = argTypes
 
 export const StatusValid = args => (
   <BasicUploader
     {...args}
-    id="BasicUploader__StatusValid"
-    buttonText="Send document"
-    fileName="document.pdf"
-    status="valid"
-    canCancel={boolean('canCancel', false)}
-    disabled={boolean('disabled', false)}
-    statusText="The document is valid."
   />
 )
+StatusValid.args = {
+  ...args,
+    fileName: 'document.pdf',
+    status: 'valid',
+    statusText: 'The document is valid.'
+}
+StatusValid.argTypes = argTypes
 
 export const StatusError = args => (
   <BasicUploader
     {...args}
-    id="BasicUploader__StatusError"
-    buttonText="Send document"
-    fileName="document.pdf"
-    status="error"
-    canCancel={boolean('canCancel', true)}
-    disabled={boolean('disabled', false)}
-    statusText="The document has been rejected. Please upload another one."
   />
 )
+StatusError.args = {
+  ...args,
+  fileName: 'document.pdf',
+  status: 'error',
+  statusText: 'The document has been rejected. Please upload another one.',
+}
+StatusError.argTypes = argTypes
 
 export const StatusWaiting = args => (
   <BasicUploader
@@ -85,6 +138,14 @@ export const StatusWaiting = args => (
     statusText="The document is awaiting for validation."
   />
 )
+StatusWaiting.args = {
+  ...args,
+  fileName: 'document.pdf',
+  status: 'wait',
+  statusText: 'The document is awaiting for validation.',
+}
+StatusWaiting.argTypes = argTypes
+
 
 export const StatusLoading = args => (
   <BasicUploader
@@ -98,17 +159,31 @@ export const StatusLoading = args => (
     status="loading"
   />
 )
+StatusLoading.args = {
+  ...args,
+  status: 'loading',
+  buttonProps: {
+    size: 'big',
+    modifier: 'helium',
+  }
+}
+StatusLoading.argTypes = argTypes
+
 
 export const CustomFileInputProps = args => (
   <BasicUploader
     {...args}
-    id="BasicUploader__CustomFileInputProps"
-    fileInputProps={{
-      accept: 'image/png, image/jpeg',
-      multiple: true,
-    }}
   />
 )
+CustomFileInputProps.args = {
+  ...args,
+  fileInputProps: {
+    accept: 'image/png, image/jpeg',
+    multiple: true,
+  }
+}
+CustomFileInputProps.argTypes = argTypes
+
 
 export const CustomFunctions = args => {
   const [isLoading, setLoadingState] = useState(false)
@@ -117,7 +192,6 @@ export const CustomFunctions = args => {
   return (
     <BasicUploader
       {...args}
-      id="BasicUploader__CustomFunctions"
       onUpload={event => {
         setLoadingState(true)
         setUploadedFiles(event.currentTarget.files)
@@ -126,7 +200,6 @@ export const CustomFunctions = args => {
         setLoadingState(false)
         setUploadedFiles(null)
       }}
-      buttonText="Send document"
       buttonProps={
         isLoading && {
           modifier: 'helium',
@@ -139,7 +212,9 @@ export const CustomFunctions = args => {
       fileName={
         isLoading && `Currently uploading ${uploadedFiles.length} files`
       }
-      loaderAnimation={isLoading && <Loader />}
     />
   )
 }
+CustomFunctions.args = args
+CustomFunctions.argTypes = argTypes
+
