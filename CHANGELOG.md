@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Modal/Next`: Improve trigger element accessibility.
+- Breaking Change: `Modal/Next`: Improve trigger element accessibility.
 
 ## [4.2.1] - 2021-08-19
 
