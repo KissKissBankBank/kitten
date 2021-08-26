@@ -47,7 +47,23 @@ const argTypes = {
     name: 'hasImage (story prop)',
     description: 'Show/hide image, for story purposes.',
     control: { type: 'boolean' },
-  }
+  },
+  title: {
+    name: 'title',
+    control: { type: 'text' },
+  },
+  amount: {
+    name: 'amount',
+    control: { type: 'text' },
+  },
+  contribution: {
+    name: 'contribution',
+    control: { type: 'text' },
+  },
+  availablity: {
+    name: 'availablity',
+    control: { type: 'text' },
+  },
 }
 
 const args = {
@@ -61,9 +77,16 @@ const args = {
     href: '#',
     as: 'a',
     'aria-label': 'A label for the link',
-    onClick: (e) => {e.preventDefault(); console.log('Clicked');},
+    onClick: e => {
+      e.preventDefault()
+      console.log('Clicked')
+    },
   },
   hasImage: true,
+  title: 'Stickers Free Boobs Club',
+  amount: '10 000€',
+  contribution: '1 468 000',
+  availablity: 'Illimitée',
 }
 
 export default {
@@ -72,54 +95,57 @@ export default {
   parameters: {
     component: RewardSummaryCard,
   },
-  decorators: [story => (
-    <div className="story-Container">
-      {story()}
-    </div>
-  )],
+  decorators: [story => <div className="story-Container">{story()}</div>],
   args,
   argTypes,
 }
 
-export const Default = (args) => {
+export const Default = args => {
   return (
-    <RewardSummaryCard {...args}>
-      {args.hasImage && (
-        <RewardSummaryCard.Image>
-          <img src="/kitten.jpg" alt="" />
-        </RewardSummaryCard.Image>
-      )}
+    <Container>
+      <RewardSummaryCard {...args}>
+        {args.hasImage && (
+          <RewardSummaryCard.Image>
+            <img src="/kitten.jpg" alt="" />
+          </RewardSummaryCard.Image>
+        )}
 
-      <RewardSummaryCard.Title>
-        Stickers Free Boobs Club
+        <RewardSummaryCard.Title>
+          {args.title}
+        </RewardSummaryCard.Title>
+
         <RewardSummaryCard.TitleTag
           className="k-u-margin-top-single"
           icon="star"
           text="Contrepartie star"
         />
-      </RewardSummaryCard.Title>
-
-      <RewardSummaryCard.Amount>10 000&nbsp;€</RewardSummaryCard.Amount>
-      <RewardSummaryCard.Contribution>1 468 000</RewardSummaryCard.Contribution>
-      <RewardSummaryCard.Availablity>Illimitée</RewardSummaryCard.Availablity>
-      <RewardSummaryCard.Options className="k-u-hidden@s-down">
-        <DropdownMenu
-          menuPosition="left"
-          button={({ open }) => (
-            <>
-              <EllipsisIcon color={COLORS.font1} />
-              <span className="k-u-a11y-visuallyHidden">
-                {open ? 'Click to close menu' : 'Click to open menu'}
-              </span>
-            </>
-          )}
-        >
-          <DropdownMenu.Link href="#">Editer</DropdownMenu.Link>
-          <DropdownMenu.Link href="#">Dupliquer</DropdownMenu.Link>
-          <DropdownMenu.Link href="#">Désactiver</DropdownMenu.Link>
-          <DropdownMenu.Button>Supprimer</DropdownMenu.Button>
-        </DropdownMenu>
-      </RewardSummaryCard.Options>
-    </RewardSummaryCard>
+        
+        <RewardSummaryCard.Amount>{args.amount}</RewardSummaryCard.Amount>
+        <RewardSummaryCard.Contribution>
+          {args.contribution}
+        </RewardSummaryCard.Contribution>
+        <RewardSummaryCard.Availablity>
+          {args.availablity}
+        </RewardSummaryCard.Availablity>
+        <RewardSummaryCard.Options>
+          <DropdownMenu
+            menuPosition="left"
+            button={({ open }) => (
+              <>
+                <EllipsisIcon color={COLORS.font1} />
+                <span className="k-u-a11y-visuallyHidden">
+                  {open ? 'Click to close menu' : 'Click to open menu'}
+                </span>
+              </>
+            )}
+          >
+            <DropdownMenu.Link href="#">Editer</DropdownMenu.Link>
+            <DropdownMenu.Link href="#">Dupliquer</DropdownMenu.Link>
+            <DropdownMenu.Link href="#">Désactiver</DropdownMenu.Link>
+            <DropdownMenu.Button>Supprimer</DropdownMenu.Button>
+          </DropdownMenu>
+        </RewardSummaryCard.Options>
+      </RewardSummaryCard>
+    </Container>
   )
 }

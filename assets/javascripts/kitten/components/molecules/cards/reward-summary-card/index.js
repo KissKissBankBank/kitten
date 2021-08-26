@@ -68,7 +68,12 @@ export const RewardSummaryCard = ({
         className={classNames('k-RewardSummaryCard__action', actionClassName)}
         {...action}
       />
-      <div className="k-RewardSummaryCard__imageWrapper">
+
+      <div
+        className={classNames('k-RewardSummaryCard__imageWrapper', {
+          'k-u-hidden@m-down': !imageChild,
+        })}
+      >
         {!!imageChild ? cloneElement(imageChild) : <NoImageIcon />}
       </div>
 

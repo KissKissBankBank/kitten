@@ -95,8 +95,12 @@ export const StyledRewardSummaryCard = styled.div`
       bottom: 0;
       width: 100%;
       height: 100%;
-      border-top-left-radius: calc(var(--rewardSummaryCard--border-radius) - ${pxToRem(2)});
-      border-bottom-left-radius: calc(var(--rewardSummaryCard--border-radius) - ${pxToRem(2)});
+      border-top-left-radius: calc(
+        var(--rewardSummaryCard--border-radius) - ${pxToRem(2)}
+      );
+      border-bottom-left-radius: calc(
+        var(--rewardSummaryCard--border-radius) - ${pxToRem(2)}
+      );
     }
 
     svg {

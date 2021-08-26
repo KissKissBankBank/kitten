@@ -1,10 +1,14 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export const Options = ({className, ...props}) => {
+export const Options = ({ className, ...props }) => {
   return (
     <div
-      className={classNames('k-RewardSummaryCard__options', className)}
+      className={classNames(
+        'k-RewardSummaryCard__options',
+        'k-u-hidden@s-down',
+        className,
+      )}
       {...props}
     />
   )
