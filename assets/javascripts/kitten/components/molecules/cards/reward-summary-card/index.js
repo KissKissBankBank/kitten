@@ -13,7 +13,6 @@ import {
   Amount,
   Options,
 } from './components'
-import { Context } from './context'
 import {
   getReactElementsByType,
   getReactElementsWithoutType,
