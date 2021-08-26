@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { text, boolean, select, number } from '@storybook/addon-knobs'
 import { DropdownSelect } from './index'
 import { Button } from '../../../index'
 import { Grid, GridCol } from '../../layout/grid'
@@ -45,34 +44,35 @@ const options = [
   },
 ]
 
-export const Default = () => {
+const args = {
+  error: false,
+  valid: false,
+  disabled: false,
+  hideLabel: false,
+  combobox: false,
+  labelText: 'label',
+  size: 'normal',
+  variant: 'andromeda',
+  comboboxButtonLabelText: 'label',
+  noResultText: 'No results',
+  menuZIndex: 10000,
+}
+
+export const Default = props => {
   const [labelProps, setLabelProps] = useState(null)
 
   return (
     <Grid>
       <GridCol offset="1" col="8">
         <DropdownSelect
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={boolean('hide label?', false)}
-          combobox={boolean('combobox?', false)}
-          labelText={text('LabelText', 'label')}
+          id="dropdown-select"
+          uncontrolled
           options={options}
           labelPropsGetter={passedLabelProps => {
             passedLabelProps && setLabelProps(passedLabelProps())
           }}
-          size={select(
-            'size',
-            ['tiny', 'normal', 'big', 'huge', 'giant'],
-            'normal',
-          )}
-          variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
           defaultSelectedValue="focus"
-          comboboxButtonLabelText={text('Buton aria-label', 'label')}
-          noResultText={text('No results text', 'No results')}
-          menuZIndex={number('menuZIndex', 1000)}
+          {...props}
         />
         <p>
           Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
@@ -94,52 +94,38 @@ export const Default = () => {
   )
 }
 
-export const WithDuplicateValue = () => {
+Default.args = args
+
+export const WithDuplicateValue = args => {
   return (
     <Grid>
       <GridCol offset="1" col="8">
         <DropdownSelect
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={boolean('hide label?', false)}
-          combobox={true}
-          labelText={text('LabelText', 'label')}
+          {...args}
+          id="dropdown-select-WithDuplicateValue"
+          uncontrolled
           options={[
             { value: 'france', label: 'France' },
             { value: 'france', label: 'France' },
             { value: 'irlande', label: 'Irlande' },
           ]}
-          size={select(
-            'size',
-            ['tiny', 'normal', 'big', 'huge', 'giant'],
-            'normal',
-          )}
-          variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
           defaultSelectedValue="focus"
-          comboboxButtonLabelText={text('Buton aria-label', 'label')}
-          noResultText={text('No results text', 'No results')}
-          uniqLabelOnSearch={boolean('uniqLabelOnSearch', false)}
-          menuZIndex={number('menuZIndex', 1000)}
         />
       </GridCol>
     </Grid>
   )
 }
 
-export const WithComponentsForLabel = () => {
+WithDuplicateValue.args = args
+
+export const WithComponentsForLabel = args => {
   return (
     <Grid>
       <GridCol offset="1" col="8">
         <DropdownSelect
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={boolean('hide label?', false)}
-          combobox={true}
-          labelText={text('LabelText', 'label')}
+          {...args}
+          id="dropdown-select-WithComponentsForLabel"
+          uncontrolled
           options={[
             {
               value: 'France',
@@ -164,22 +150,14 @@ export const WithComponentsForLabel = () => {
               ),
             },
           ]}
-          size={select(
-            'size',
-            ['tiny', 'normal', 'big', 'huge', 'giant'],
-            'normal',
-          )}
-          variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
           defaultSelectedValue="focus"
-          comboboxButtonLabelText={text('Buton aria-label', 'label')}
-          noResultText={text('No results text', 'No results')}
-          uniqLabelOnSearch={boolean('uniqLabelOnSearch', false)}
-          menuZIndex={number('menuZIndex', 1000)}
         />
       </GridCol>
     </Grid>
   )
 }
+
+WithComponentsForLabel.args = args
 
 export const ControlledInput = () => {
   const [value, setValue] = useState('felt')
