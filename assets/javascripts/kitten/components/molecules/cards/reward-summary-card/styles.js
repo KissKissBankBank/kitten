@@ -126,10 +126,6 @@ export const StyledRewardSummaryCard = styled.div`
       grid-template-columns: ${pxToRem(250)} auto auto auto auto;
       grid-template-rows: 1fr;
       grid-gap: 0 ${pxToRem(10)};
-
-      :not(.k-RewardSummaryCard__contribution) {
-        grid-template-columns: ${pxToRem(250)} auto auto auto;
-      }
     }
 
     @media (min-width: ${ScreenConfig.L.min}px) {
