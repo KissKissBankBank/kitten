@@ -1,8 +1,6 @@
 import React from 'react'
 import { RewardSummaryCard } from './index'
-import classNames from 'classnames'
 import { Container, COLORS } from '../../../..'
-import { NoImageIcon } from '../../../../components/graphics/icons/no-image-icon'
 
 const argTypes = {
   href: {
@@ -78,7 +76,6 @@ export const Default = ({
   borderStyle,
   borderWidth,
   imageBorderRadius,
-  image,
 }) => {
   return (
     <RewardSummaryCard
@@ -89,19 +86,10 @@ export const Default = ({
       borderStyle={borderStyle}
       borderWidth={borderWidth}
     >
-      <RewardSummaryCard.Image imageBorderRadius={imageBorderRadius}>
-     
-        {!!image ? (
-          <img src="/kitten.jpg" alt="" {...image} />
-          ) : (
-          <NoImageIcon 
-            className={classNames(
-              'k-RewardSummaryCard__imageWrapper',
-              'k-u-hidden@m-down',
-            )}
-          />
-        )}
-      </RewardSummaryCard.Image>
+      <RewardSummaryCard.Image
+        imageBorderRadius={imageBorderRadius}
+        children={<img src="/kitten.jpg" alt="" />}
+      />
 
       <RewardSummaryCard.Title>
         Stickers Free Boobs Club

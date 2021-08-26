@@ -18,6 +18,7 @@ import {
   getReactElementsByType,
   getReactElementsWithoutType,
 } from '../../../../helpers/react/react-elements'
+import { NoImageIcon } from '../../../../components/graphics/icons/no-image-icon'
 
 export const RewardSummaryCard = ({
   children,
@@ -40,6 +41,12 @@ export const RewardSummaryCard = ({
     children,
     type: RewardSummaryCard.Image,
   })
+
+  const imageElement = getReactElementsByType({
+    children,
+    type: RewardSummaryCard.Image,
+  })
+  const image = imageChild && imageChild[0]
 
   const [isInputEmpty, setEmptyInput] = useState(true)
   if (!show) return null
@@ -66,6 +73,10 @@ export const RewardSummaryCard = ({
             cloneElement(item, { key: `RewardSummaryCard-${index}` }),
           )}
         </Context.Provider>
+
+        <div className="k-RewardSummaryCard__imageWrapper">
+          {!!imageElement ? React.cloneElement(image) : <NoImageIcon />}
+        </div>
       </div>
     </StyledRewardSummaryCard>
   )

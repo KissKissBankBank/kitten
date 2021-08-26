@@ -145,7 +145,7 @@ export const StyledRewardSummaryCard = styled.a`
       font-size: ${stepToRem(0)};
       margin-top: 0;
     }
-    
+
     @media (min-width: ${ScreenConfig.L.min}px) {
       grid-area: info;
     }
