@@ -33,20 +33,15 @@ export const RewardSummaryCard = ({
   borderStyle,
   ...props
 }) => {
-  const imageChild = getReactElementsByType({
+  const imageChildSelector = getReactElementsByType({
     children,
     type: RewardSummaryCard.Image,
-  })[0]
+  })
+  const imageChild = imageChildSelector[0]
   const wrappedChildren = getReactElementsWithoutType({
     children,
     type: RewardSummaryCard.Image,
   })
-
-  const imageElement = getReactElementsByType({
-    children,
-    type: RewardSummaryCard.Image,
-  })
-  const image = imageChild && imageChild[0]
 
   const [isInputEmpty, setEmptyInput] = useState(true)
   if (!show) return null
@@ -65,7 +60,9 @@ export const RewardSummaryCard = ({
       }}
       {...props}
     >
-      {imageChild && cloneElement(imageChild)}
+      <div className="k-RewardSummaryCard__imageWrapper">
+        {imageChildSelector.length > 1 ? cloneElement(imageChild) : <NoImageIcon />}
+      </div>
 
       <div className="k-RewardSummaryCard__gridWrapper">
         <Context.Provider value={{ isInputEmpty, setEmptyInput }}>
@@ -73,10 +70,6 @@ export const RewardSummaryCard = ({
             cloneElement(item, { key: `RewardSummaryCard-${index}` }),
           )}
         </Context.Provider>
-
-        <div className="k-RewardSummaryCard__imageWrapper">
-          {!!imageElement ? React.cloneElement(image) : <NoImageIcon />}
-        </div>
       </div>
     </StyledRewardSummaryCard>
   )

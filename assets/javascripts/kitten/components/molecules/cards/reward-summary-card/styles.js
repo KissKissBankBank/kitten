@@ -57,6 +57,8 @@ export const StyledRewardSummaryCard = styled.a`
     position: relative;
     overflow: hidden;
 
+    align-self: stretch;
+
     display: flex;
     align-items: center;
     justify-content: center;

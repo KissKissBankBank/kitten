@@ -20,7 +20,7 @@ const argTypes = {
   borderRadius: {
     name: 'borderRadius',
     description: 'border radius size',
-    control: { type: 'text', type: 'number' },
+    control: { type: 'number' },
   },
   borderStyle: {
     name: 'borderStyle',
@@ -30,13 +30,18 @@ const argTypes = {
   borderWidth: {
     name: 'borderWidth',
     description: 'border width',
-    control: { type: 'text', type: 'number' },
+    control: { type: 'number' },
   },
   imageBorderRadius: {
     name: 'imageBorderRadius',
     description: 'Image border radius size',
-    control: { type: 'text', type: 'number' },
+    control: { type: 'number' },
   },
+  hasImage: {
+    name: 'hasImage (story prop)',
+    description: 'Show/hide image, for story purposes.',
+    control: { type: 'boolean' },
+  }
 }
 
 const args = {
@@ -47,6 +52,7 @@ const args = {
   borderStyle: 'solid',
   borderWidth: 2,
   imageBorderRadius: 5,
+  hasImage: true,
 }
 
 export default {
@@ -55,20 +61,17 @@ export default {
   parameters: {
     component: RewardSummaryCard,
   },
-  decorators: [
-    Story => (
-      <div className="k-u-margin-top-quadruple">
-        <Container className="k-u-margin-vertical-quadruple">
-          <Story />
-        </Container>
-      </div>
-    ),
-  ],
+  decorators: [story => (
+    <div className="story-Container">
+      {story()}
+    </div>
+  )],
   args,
   argTypes,
 }
 
 export const Default = ({
+  hasImage,
   show,
   href,
   borderColor,
@@ -86,10 +89,9 @@ export const Default = ({
       borderStyle={borderStyle}
       borderWidth={borderWidth}
     >
-      <RewardSummaryCard.Image
-        imageBorderRadius={imageBorderRadius}
-        children={<img src="/kitten.jpg" alt="" />}
-      />
+      <RewardSummaryCard.Image imageBorderRadius={imageBorderRadius}>
+        {hasImage && <img src="/kitten.jpg" alt="" />}
+      </RewardSummaryCard.Image>
 
       <RewardSummaryCard.Title>
         Stickers Free Boobs Club
