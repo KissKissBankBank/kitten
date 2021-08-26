@@ -39,7 +39,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     menuZIndex,
     className,
     value,
-    uncontrolled,
+    controlled,
   } = props
 
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
@@ -102,7 +102,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     onSelectedItemChange,
     onIsOpenChange,
     initialIsOpen: openOnLoad,
-    ...(!uncontrolled && { selectedItem: selectedItemByValue }),
+    ...(controlled && { selectedItem: selectedItemByValue }),
   })
 
   useEffect(() => {
@@ -200,7 +200,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
 DropdownSelect.defaultProps = {
   combobox: false,
   hideLabel: false,
-  uncontrolled: false,
+  controlled: false,
   options: [],
   placeholder: 'Select',
   labelPropsGetter: () => {},
@@ -224,7 +224,7 @@ DropdownSelect.propTypes = {
   labelText: PropTypes.string.isRequired,
   combobox: PropTypes.bool,
   hideLabel: PropTypes.bool,
-  uncontrolled: PropTypes.bool,
+  controlled: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.object),
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,

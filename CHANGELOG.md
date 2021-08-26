@@ -13,7 +13,7 @@ Fix:
 
 Features:
 
-- `DropdownSelect`:Add explicit `uncontrolled` prop. It is controlled by default
+- `DropdownSelect`:Add explicit `controlled` prop. It is uncontrolled by default
 
 ## [4.2.0] - 2021-08-06
 

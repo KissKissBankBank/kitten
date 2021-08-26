@@ -50,7 +50,7 @@ const args = {
   disabled: false,
   hideLabel: false,
   combobox: false,
-  uncontrolled: true,
+  controlled: false,
   labelText: 'label',
   size: 'normal',
   variant: 'andromeda',
@@ -160,7 +160,7 @@ export const WithComponentsForLabel = args => {
 
 WithComponentsForLabel.args = args
 
-export const ControlledInput = () => {
+export const ControlledInput = args => {
   const [value, setValue] = useState('felt')
 
   const getRandomOption = () => {
@@ -178,8 +178,8 @@ export const ControlledInput = () => {
     <>
       <DropdownSelect
         id="ControlledInput"
+        {...args}
         labelText="Controlled Input"
-        combobox={true}
         options={options}
         value={value}
         defaultSelectedValue="focus"
@@ -203,3 +203,5 @@ export const ControlledInput = () => {
     </>
   )
 }
+
+ControlledInput.args = { ...args, controlled: true }
