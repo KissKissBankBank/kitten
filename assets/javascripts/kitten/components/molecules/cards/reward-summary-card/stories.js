@@ -60,6 +60,7 @@ const args = {
   actionProps: {
     href: '#',
     as: 'a',
+    'aria-label': 'A label for the link',
     onClick: (e) => {e.preventDefault(); console.log('Clicked');},
   },
   hasImage: true,
