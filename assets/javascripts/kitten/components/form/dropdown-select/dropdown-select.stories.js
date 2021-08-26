@@ -50,6 +50,7 @@ const args = {
   disabled: false,
   hideLabel: false,
   combobox: false,
+  uncontrolled: true,
   labelText: 'label',
   size: 'normal',
   variant: 'andromeda',
