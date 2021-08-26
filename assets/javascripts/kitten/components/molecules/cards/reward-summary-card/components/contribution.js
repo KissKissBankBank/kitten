@@ -11,7 +11,7 @@ export const Contribution = props => {
       {...props}
       className={classNames(
         'k-RewardSummaryCard__contribution',
-        'k-u-hidden@s-down',
+        props.className,
       )}
     />
   )
