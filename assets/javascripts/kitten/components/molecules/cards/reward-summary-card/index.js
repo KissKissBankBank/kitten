@@ -1,4 +1,4 @@
-import React, { useState, cloneElement } from 'react'
+import React, { cloneElement } from 'react'
 import { StyledRewardSummaryCard } from './styles'
 import classNames from 'classnames'
 import COLORS from '../../../../constants/colors-config'
@@ -43,7 +43,6 @@ export const RewardSummaryCard = ({
     type: RewardSummaryCard.Image,
   })
 
-  const [isInputEmpty, setEmptyInput] = useState(true)
   if (!show) return null
 
   return (
@@ -65,11 +64,9 @@ export const RewardSummaryCard = ({
       </div>
 
       <div className="k-RewardSummaryCard__gridWrapper">
-        <Context.Provider value={{ isInputEmpty, setEmptyInput }}>
-          {wrappedChildren.map((item, index) =>
-            cloneElement(item, { key: `RewardSummaryCard-${index}` }),
-          )}
-        </Context.Provider>
+        {wrappedChildren.map((item, index) =>
+          cloneElement(item, { key: `RewardSummaryCard-${index}` }),
+        )}
       </div>
     </StyledRewardSummaryCard>
   )
