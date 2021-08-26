@@ -4,14 +4,7 @@ import { Marger } from '../../layout/marger'
 import { Container } from '../../layout/container'
 import { Button } from '../../../components/molecules/buttons/button'
 import { DocsPage } from 'storybook/docs-page'
-
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="10" style={{ marginLeft: 60 }}>
-      {children}
-    </Marger>
-  </Container>
-)
+import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Molecules/SimplePopover',
@@ -23,18 +16,23 @@ export default {
       ),
     },
   },
+  decorators: [story => (
+    <div className="story-Container story-Grid">
+      {story()}
+    </div>
+  )],
 }
 
 export const Default = () => {
   const [isVisible, setVisibility] = useState(true)
 
   const closeClick = () => {
-    console.warn('Close or Cancel clicked')
+    action('Close or Cancel Click')()
     setVisibility(false)
   }
 
   return (
-    <StoryContainer>
+    <>
       <SimplePopover
         isVisible={isVisible}
         onCloseClick={closeClick}
@@ -56,7 +54,7 @@ export const Default = () => {
             label: 'OK',
             modifier: 'helium',
             tiny: true,
-            onClick: () => console.warn('Ok clicked'),
+            onClick: action('OK Click'),
           },
         ]}
       />
@@ -64,7 +62,7 @@ export const Default = () => {
       {!isVisible && (
         <Button onClick={() => setVisibility(true)}>Show Popover</Button>
       )}
-    </StoryContainer>
+    </>
   )
 }
 
@@ -72,12 +70,12 @@ export const WithoutIllustration = () => {
   const [isVisible, setVisibility] = useState(true)
 
   const closeClick = () => {
-    console.warn('Close or Cancel clicked')
+    action('Close or Cancel Click')()
     setVisibility(false)
   }
 
   return (
-    <StoryContainer>
+    <>
       <SimplePopover
         isVisible={isVisible}
         onCloseClick={closeClick}
@@ -98,7 +96,7 @@ export const WithoutIllustration = () => {
             label: 'OK',
             modifier: 'helium',
             tiny: true,
-            onClick: () => console.warn('Ok clicked'),
+            onClick: action('Ok Click'),
           },
         ]}
       />
@@ -106,7 +104,7 @@ export const WithoutIllustration = () => {
       {!isVisible && (
         <Button onClick={() => setVisibility(true)}>Show Popover</Button>
       )}
-    </StoryContainer>
+    </>
   )
 }
 
@@ -114,12 +112,12 @@ export const WithoutButtons = () => {
   const [isVisible, setVisibility] = useState(true)
 
   const closeClick = () => {
-    console.warn('Close clicked')
+    action('Close Click')()
     setVisibility(false)
   }
 
   return (
-    <StoryContainer>
+    <>
       <SimplePopover
         isVisible={isVisible}
         onCloseClick={closeClick}
@@ -133,6 +131,6 @@ export const WithoutButtons = () => {
       {!isVisible && (
         <Button onClick={() => setVisibility(true)}>Show Popover</Button>
       )}
-    </StoryContainer>
+    </>
   )
 }
