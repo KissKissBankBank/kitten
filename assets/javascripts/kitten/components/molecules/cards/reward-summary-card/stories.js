@@ -1,6 +1,6 @@
 import React from 'react'
 import { RewardSummaryCard } from './index'
-import { Container, COLORS } from '../../../..'
+import { Container, COLORS, DropdownMenu, EllipsisIcon } from '../../../..'
 
 const argTypes = {
   href: {
@@ -105,7 +105,24 @@ export const Default = ({
       <RewardSummaryCard.Amount>10 000&nbsp;€</RewardSummaryCard.Amount>
       <RewardSummaryCard.Contribution>1 468 000</RewardSummaryCard.Contribution>
       <RewardSummaryCard.Availablity>Illimitée</RewardSummaryCard.Availablity>
-      <RewardSummaryCard.Options />
+      <RewardSummaryCard.Options className="k-u-hidden@s-down">
+        <DropdownMenu
+          menuPosition="left"
+          button={({ open }) => (
+            <>
+              <EllipsisIcon color={COLORS.font1} />
+              <span className="k-u-a11y-visuallyHidden">
+                {open ? 'Click to close menu' : 'Click to open menu'}
+              </span>
+            </>
+          )}
+        >
+          <DropdownMenu.Link href="#">Editer</DropdownMenu.Link>
+          <DropdownMenu.Link href="#">Dupliquer</DropdownMenu.Link>
+          <DropdownMenu.Link href="#">Désactiver</DropdownMenu.Link>
+          <DropdownMenu.Button>Supprimer</DropdownMenu.Button>
+        </DropdownMenu>
+      </RewardSummaryCard.Options>
     </RewardSummaryCard>
   )
 }
