@@ -10,7 +10,6 @@ export const StyledRewardSummaryCard = styled.a`
   max-width: 100%;
   position: relative;
   display: block;
-  overflow: hidden;
   box-sizing: border-box;
   text-decoration: none;
   background-color: ${COLORS.background1};
@@ -83,6 +82,8 @@ export const StyledRewardSummaryCard = styled.a`
       bottom: 0;
       width: 100%;
       height: 100%;
+      border-top-left-radius: calc(var(--rewardSummaryCard--border-radius) - ${pxToRem(2)});
+      border-bottom-left-radius: calc(var(--rewardSummaryCard--border-radius) - ${pxToRem(2)});
     }
 
     svg {

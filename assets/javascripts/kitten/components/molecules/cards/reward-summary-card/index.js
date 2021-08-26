@@ -32,11 +32,10 @@ export const RewardSummaryCard = ({
   borderStyle,
   ...props
 }) => {
-  const imageChildSelector = getReactElementsByType({
+  const imageChild = getReactElementsByType({
     children,
     type: RewardSummaryCard.Image,
-  })
-  const imageChild = imageChildSelector[0]
+  })[0]
   const wrappedChildren = getReactElementsWithoutType({
     children,
     type: RewardSummaryCard.Image,
@@ -59,7 +58,7 @@ export const RewardSummaryCard = ({
       {...props}
     >
       <div className="k-RewardSummaryCard__imageWrapper">
-        {imageChildSelector.length > 1 ? cloneElement(imageChild) : <NoImageIcon />}
+        {!!imageChild ? cloneElement(imageChild) : <NoImageIcon />}
       </div>
 
       <div className="k-RewardSummaryCard__gridWrapper">
