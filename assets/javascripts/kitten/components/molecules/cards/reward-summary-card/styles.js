@@ -4,7 +4,7 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
-export const StyledRewardSummaryCard = styled.a`
+export const StyledRewardSummaryCard = styled.div`
   /* CARD STYLE */
 
   max-width: 100%;
@@ -16,21 +16,11 @@ export const StyledRewardSummaryCard = styled.a`
 
   transition: background-color 0.2s ease, border-color 0.2s ease;
 
-  &[href]:hover {
+  &:hover {
     background-color: ${COLORS.background2};
   }
-  &[href]:active {
+  &:active {
     background-color: ${COLORS.background3};
-  }
-  &[href]:focus {
-    outline: ${COLORS.line1} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(-2)};
-  }
-  &[href]:focus:not(:focus-visible) {
-    outline-color: transparent;
-  }
-  &[href]:focus-visible {
-    outline-color: ${COLORS.line1};
   }
 
   /* IE11 defaults */
@@ -48,6 +38,29 @@ export const StyledRewardSummaryCard = styled.a`
     height: calc(${pxToRem(100)} + 2 * var(--rewardSummaryCard--border-width));
     display: flex;
     align-items: center;
+  }
+
+  /* ACTION */
+
+  .k-RewardSummaryCard__action {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: var(--rewardSummaryCard--border-radius);
+    cursor: pointer;
+
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: 0;
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
   }
 
   /* IMAGE */

@@ -3,10 +3,6 @@ import { RewardSummaryCard } from './index'
 import { Container, COLORS, DropdownMenu, EllipsisIcon } from '../../../..'
 
 const argTypes = {
-  href: {
-    name: 'href',
-    control: { type: 'text' },
-  },
   show: {
     name: 'show',
     description: 'If empty return null',
@@ -37,6 +33,16 @@ const argTypes = {
     description: 'Image border radius size',
     control: { type: 'number' },
   },
+  as: {
+    name: 'as',
+    description: 'HTML element for the Action component',
+    control: { type: 'text' },
+  },
+  actionProps: {
+    name: 'actionProps',
+    description: 'Properties for the Action component',
+    control: { type: 'object' },
+  },
   hasImage: {
     name: 'hasImage (story prop)',
     description: 'Show/hide image, for story purposes.',
@@ -45,13 +51,17 @@ const argTypes = {
 }
 
 const args = {
-  href: '#',
   show: true,
   borderColor: COLORS.line1,
   borderRadius: 8,
   borderStyle: 'solid',
   borderWidth: 2,
   imageBorderRadius: 5,
+  actionProps: {
+    href: '#',
+    as: 'a',
+    onClick: (e) => {e.preventDefault(); console.log('Clicked');},
+  },
   hasImage: true,
 }
 
@@ -70,28 +80,12 @@ export default {
   argTypes,
 }
 
-export const Default = ({
-  hasImage,
-  show,
-  href,
-  borderColor,
-  borderRadius,
-  borderStyle,
-  borderWidth,
-  imageBorderRadius,
-}) => {
+export const Default = (args) => {
   return (
-    <RewardSummaryCard
-      href={href}
-      show={show}
-      borderColor={borderColor}
-      borderRadius={borderRadius}
-      borderStyle={borderStyle}
-      borderWidth={borderWidth}
-    >
       <RewardSummaryCard.Image imageBorderRadius={imageBorderRadius}>
         {hasImage && <img src="/kitten.jpg" alt="" />}
       </RewardSummaryCard.Image>
+    <RewardSummaryCard {...args}>
 
       <RewardSummaryCard.Title>
         Stickers Free Boobs Club

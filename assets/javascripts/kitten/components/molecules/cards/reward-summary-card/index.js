@@ -23,13 +23,13 @@ export const RewardSummaryCard = ({
   children,
   show,
   style,
-  href,
   className,
   borderWidth,
   borderRadius,
   imageBorderRadius,
   borderColor,
   borderStyle,
+  actionProps,
   ...props
 }) => {
   const imageChild = getReactElementsByType({
@@ -41,11 +41,18 @@ export const RewardSummaryCard = ({
     type: RewardSummaryCard.Image,
   })
 
+  const {
+    className: actionClassName,
+    as: actionAs = 'a',
+    ...action
+  } = actionProps
+
+  const ActionElement = actionAs
+
   if (!show) return null
 
   return (
     <StyledRewardSummaryCard
-      href={href}
       className={classNames('k-RewardSummaryCard', className)}
       style={{
         ...style,
@@ -57,6 +64,10 @@ export const RewardSummaryCard = ({
       }}
       {...props}
     >
+      <ActionElement
+        className={classNames('k-RewardSummaryCard__action', actionClassName)}
+        {...action}
+      />
       <div className="k-RewardSummaryCard__imageWrapper">
         {!!imageChild ? cloneElement(imageChild) : <NoImageIcon />}
       </div>
@@ -85,6 +96,7 @@ RewardSummaryCard.defaultProps = {
   borderStyle: 'solid',
   borderWidth: 2,
   imageBorderRadius: 5,
+  actionProps: {},
 }
 
 RewardSummaryCard.propTypes = {
