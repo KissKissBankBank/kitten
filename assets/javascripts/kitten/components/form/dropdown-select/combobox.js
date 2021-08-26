@@ -50,6 +50,7 @@ export const DropdownCombobox = ({
   className,
   value,
   onBlur,
+  uncontrolled,
 }) => {
   const [flattenedOptions, setFlattenedOptions] = useState([])
   const [filteredOptions, setFilteredOptions] = useState([])
@@ -118,7 +119,7 @@ export const DropdownCombobox = ({
     onInputValueChange,
     onIsOpenChange,
     initialIsOpen: openOnLoad,
-    selectedItem: selectedItemByValue,
+    ...(!uncontrolled && { selectedItem: selectedItemByValue }),
   })
 
   useEffect(() => {
@@ -254,6 +255,7 @@ export const DropdownCombobox = ({
 
 DropdownCombobox.defaultProps = {
   hideLabel: false,
+  uncontrolled: false,
   options: [],
   placeholder: 'Select',
   labelPropsGetter: () => {},
@@ -277,6 +279,7 @@ DropdownCombobox.propTypes = {
   comboboxButtonLabelText: PropTypes.string.isRequired,
   noResultText: PropTypes.string.isRequired,
   hideLabel: PropTypes.bool,
+  uncontrolled: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.object),
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,

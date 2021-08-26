@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { text, boolean, select, number } from '@storybook/addon-knobs'
 import { DropdownSelect } from './index'
 import { Button } from '../../../index'
-import { Grid, GridCol } from '../../../components/layout/grid'
+import { Grid, GridCol } from '../../layout/grid'
 import { ArrowIcon } from '../../graphics/icons/arrow-icon'
 import { Text } from '../../atoms/typography/text'
 import { DocsPage } from 'storybook/docs-page'
@@ -199,6 +199,7 @@ export const ControlledInput = () => {
     <>
       <DropdownSelect
         id="ControlledInput"
+        labelText="Controlled Input"
         combobox={true}
         options={options}
         value={value}
@@ -216,6 +217,9 @@ export const ControlledInput = () => {
         onClick={() => setValue(getRandomOption())}
       >
         Change Value
+      </Button>
+      <Button className="k-u-margin-top-single" onClick={() => setValue('')}>
+        Reset Value
       </Button>
     </>
   )
