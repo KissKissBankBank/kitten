@@ -207,10 +207,30 @@ export const StyledRewardSummaryCard = styled.a`
 
   .k-RewardSummaryCard__options {
     z-index: 2;
-    place-self: center flex-end;
+    place-self: stretch flex-end;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    margin: ${pxToRem(-20)} ${pxToRem(-30)};
 
     @media (min-width: ${ScreenConfig.L.min}px) {
       grid-area: options;
+    }
+
+    .k-DropdownMenu .k-DropdownMenu__button {
+      box-sizing: border-box;
+      padding: 0 ${pxToRem(30)};
+
+      &:focus {
+        outline: ${COLORS.primary4} solid ${pxToRem(2)};
+        outline-offset: 0;
+      }
+      &:focus:not(:focus-visible) {
+        outline-color: transparent;
+      }
+      &:focus-visible {
+        outline-color: ${COLORS.primary4};
+      }
     }
   }
 `
