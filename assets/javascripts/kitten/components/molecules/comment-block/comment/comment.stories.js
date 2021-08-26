@@ -3,7 +3,7 @@ import { Comment } from './index'
 import { CheckedCircleIcon } from '../../../..'
 import { action } from '@storybook/addon-actions'
 
-export const Default = ({showAvatarBadge, showBottomNotes, ...args}) => {
+export const Default = ({ showAvatarBadge, showBottomNotes, ...args }) => {
   const [hasLiked, setHasLiked] = useState(false)
 
   const handleClick = () => {
@@ -20,7 +20,8 @@ export const Default = ({showAvatarBadge, showBottomNotes, ...args}) => {
         children: hasLiked ? '101' : '100',
         onClick: handleClick,
       }}
-      avatarBadge={showAvatarBadge && (
+      avatarBadge={
+        showAvatarBadge && (
           <span aria-label="Owner" role="aside">
             <CheckedCircleIcon
               width="25"
@@ -32,7 +33,8 @@ export const Default = ({showAvatarBadge, showBottomNotes, ...args}) => {
           </span>
         )
       }
-      bottomNotes={showBottomNotes && (
+      bottomNotes={
+        showBottomNotes && (
           <div>
             <span>Bottom note #1</span>
             <span>Bottom note #2</span>
@@ -44,14 +46,17 @@ export const Default = ({showAvatarBadge, showBottomNotes, ...args}) => {
   )
 }
 
-Default.decorators = [story => (
-  <div className="story-Container story-Grid story-Grid--large">
-    {story()}
-  </div>
-)]
+Default.decorators = [
+  story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      {story()}
+    </div>
+  ),
+]
 
 Default.args = {
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
+  text:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
   avatarImgProps: {
     src: '/kitten.jpg',
     alt: '',
@@ -100,4 +105,3 @@ Default.argTypes = {
     control: { type: null },
   },
 }
-

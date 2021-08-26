@@ -1,6 +1,5 @@
 import React from 'react'
 import { Alert } from './'
-import { boolean, text } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
 
@@ -18,9 +17,10 @@ export default {
     success: false,
     warning: false,
     closeButton: true,
-    closeButtonLabel: "Close Button label",
+    closeButtonLabel: 'Close Button label',
     onAfterClose: action('onAfterClose'),
-    children: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.'
+    children:
+      'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.',
   },
   argTypes: {
     show: {
@@ -50,21 +50,14 @@ export default {
     children: {
       name: 'children',
       control: { type: 'text' },
-    }
+    },
   },
 }
 
-export const Default = (args) => (
-  <Alert {...args} />
-)
+export const Default = args => <Alert {...args} />
 
-export const WithLink = (args) => (
-  <Alert
-    {...args}
-    show
-    closeButton
-    closeButtonLabel="Close Button Label"
-  >
+export const WithLink = args => (
+  <Alert {...args} show closeButton closeButtonLabel="Close Button Label">
     Bonjour <a href="">clique ici</a>
   </Alert>
 )

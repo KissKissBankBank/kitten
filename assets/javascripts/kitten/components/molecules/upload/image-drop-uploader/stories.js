@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { ImageDropUploader } from './index'
-import { boolean, text } from '@storybook/addon-knobs'
-import { BackingCard, Grid, GridCol, Tag, Container } from '../../../..'
+import { BackingCard, Grid, GridCol, Tag } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 
@@ -24,83 +23,79 @@ export default {
       ),
     },
   },
-  decorators: [story => (
-    <div className="story-Container">
-      {story()}
-    </div>
-  )],
+  decorators: [story => <div className="story-Container">{story()}</div>],
   argTypes: {
     id: {
       name: 'id',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     acceptedFileSize: {
       name: 'acceptedFileSize',
-      control: { type: 'number' }
+      control: { type: 'number' },
     },
     acceptedMimeTypes: {
       name: 'acceptedMimeTypes',
-      control: { type: 'object' }
+      control: { type: 'object' },
     },
     buttonProps: {
       name: 'buttonProps',
-      control: { type: 'object' }
+      control: { type: 'object' },
     },
     buttonText: {
       name: 'buttonText',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     buttonTitle: {
       name: 'buttonTitle',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     canCancel: {
       name: 'canCancel',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     canCrop: {
       name: 'canCrop',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     cancelButtonText: {
       name: 'cancelButtonText',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     cropRatio: {
       name: 'cropRatio',
-      control: { type: 'number' }
+      control: { type: 'number' },
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     error: {
       name: 'error',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     errorMessage: {
       name: 'errorMessage',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     fileInputProps: {
       name: 'fileInputProps',
-      control: { type: 'object' }
+      control: { type: 'object' },
     },
     initialCrop: {
       name: 'initialCrop',
-      control: { type: 'object' }
+      control: { type: 'object' },
     },
     initialValue: {
       name: 'initialValue',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     managerText: {
       name: 'managerText',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     managerTitle: {
       name: 'managerTitle',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     onCancel: {
       name: 'onCancel',
@@ -116,79 +111,70 @@ export default {
     },
     quantityErrorText: {
       name: 'quantityErrorText',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     sizeErrorText: {
       name: 'sizeErrorText',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     status: {
       name: 'status',
       options: ['ready', 'error', 'manage'],
-      control: { type: 'select' }
+      control: { type: 'select' },
     },
     typeErrorText: {
       name: 'typeErrorText',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
-  }
+  },
 }
 
 const args = {
-    id: "ImageDropUploader",
-    acceptedFileSize: 5 * 1024 * 1024,
-    acceptedMimeTypes: [
-      'image/jpeg',
-      'image/png',
-      'image/gif',
-      'image/webp'
-    ],
-    buttonProps: {},
-    buttonTitle: "Upload an image",
-    buttonText: (
-      <>
-        Ratio: 16/10 (800x500px)
-        <br />
-        Max size: 5MB
-        <br />
-        Format: JPG, PNG, GIF
-      </>
-    ),
-    managerTitle: "Frame your image",
-    managerText: "You can move your image around the frame",
-    onChange: action('onChange'),
-    onCancel: action('onCancel'),
-    onUpload: action('onUpload'),
-    disabled: false,
-    error: false,
-    errorMessage: null,
-    typeErrorText: "Wrong file type",
-    sizeErrorText: "File too large",
-    quantityErrorText: "Too many files",
-    cancelButtonText: 'Cancel',
-    cropRatio: 19/10,
-    canCrop: true,
-    canCancel: true,
-    fileInputProps: {},
-    initialCrop: undefined,
-    initialValue: undefined,
+  id: 'ImageDropUploader',
+  acceptedFileSize: 5 * 1024 * 1024,
+  acceptedMimeTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp'],
+  buttonProps: {},
+  buttonTitle: 'Upload an image',
+  buttonText: (
+    <>
+      Ratio: 16/10 (800x500px)
+      <br />
+      Max size: 5MB
+      <br />
+      Format: JPG, PNG, GIF
+    </>
+  ),
+  managerTitle: 'Frame your image',
+  managerText: 'You can move your image around the frame',
+  onChange: action('onChange'),
+  onCancel: action('onCancel'),
+  onUpload: action('onUpload'),
+  disabled: false,
+  error: false,
+  errorMessage: null,
+  typeErrorText: 'Wrong file type',
+  sizeErrorText: 'File too large',
+  quantityErrorText: 'Too many files',
+  cancelButtonText: 'Cancel',
+  cropRatio: 19 / 10,
+  canCrop: true,
+  canCancel: true,
+  fileInputProps: {},
+  initialCrop: undefined,
+  initialValue: undefined,
 }
 
-export const Default = (args) => (
-  <ImageDropUploader {...args} />
-)
+export const Default = args => <ImageDropUploader {...args} />
 Default.args = args
 
-export const StatusManage = (args) => (
-  <ImageDropUploader {...args} />
-)
+export const StatusManage = args => <ImageDropUploader {...args} />
 StatusManage.args = {
   ...args,
-  initialValue:"/kitten.jpg",
-  initialCrop:{ height: 592, width: 948, x: 0, y: 265 },
+  initialValue: '/kitten.jpg',
+  initialCrop: { height: 592, width: 948, x: 0, y: 265 },
 }
 
-export const WithDistantImage = (args) => {
+export const WithDistantImage = args => {
   const [imageUrl, setImageUrl] = useState(null)
   const [imagePosition, setImagePosition] = useState(null)
 
@@ -202,10 +188,7 @@ export const WithDistantImage = (args) => {
   return (
     <Grid>
       <GridCol col-l="6">
-        <ImageDropUploader
-          {...args}
-          onChange={handleChange}
-        />
+        <ImageDropUploader {...args} onChange={handleChange} />
       </GridCol>
       <GridCol col-l="3" offset-l="2">
         <BackingCard>
@@ -269,6 +252,6 @@ export const WithDistantImage = (args) => {
 }
 WithDistantImage.args = {
   ...args,
-  initialValue:"/kitten.jpg",
-  initialCrop:{ height: 592, width: 948, x: 0, y: 265 },
+  initialValue: '/kitten.jpg',
+  initialCrop: { height: 592, width: 948, x: 0, y: 265 },
 }

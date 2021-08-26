@@ -1,26 +1,21 @@
 import React from 'react'
-import { select, boolean } from '@storybook/addon-knobs'
 import { LinkList } from './index'
 
-export const SimpleList = (args) => {
-  return (
-    <LinkList {...args} />
-  )
+export const SimpleList = args => {
+  return <LinkList {...args} />
 }
 
-export const WithDarkBackground = (args) => {
+export const WithDarkBackground = args => {
   return (
     <div className={args.color === 'light' && 'has-overrides dark-background'}>
       <LinkList {...args} />
     </div>
-)
+  )
 }
 
-SimpleList.decorators = [story => (
-  <div className="story-Container story-Grid">
-    {story()}
-  </div>
-)]
+SimpleList.decorators = [
+  story => <div className="story-Container story-Grid">{story()}</div>,
+]
 WithDarkBackground.decorators = SimpleList.decorators
 
 SimpleList.args = {
@@ -48,7 +43,7 @@ SimpleList.argTypes = {
   },
   color: {
     name: 'color',
-    options: ['light','dark'],
+    options: ['light', 'dark'],
     control: { type: 'inline-radio' },
   },
   lineHeight: {
@@ -63,7 +58,7 @@ SimpleList.argTypes = {
   },
   weight: {
     name: 'weight',
-    options: [ 'regular', 'light'],
+    options: ['regular', 'light'],
     control: { type: 'inline-radio' },
   },
 }

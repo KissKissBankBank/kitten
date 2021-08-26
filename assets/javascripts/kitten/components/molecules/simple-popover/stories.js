@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { SimplePopover } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../layout/container'
-import { Button } from '../../../components/molecules/buttons/button'
+import { Button } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 
@@ -16,11 +14,9 @@ export default {
       ),
     },
   },
-  decorators: [story => (
-    <div className="story-Container story-Grid">
-      {story()}
-    </div>
-  )],
+  decorators: [
+    story => <div className="story-Container story-Grid">{story()}</div>,
+  ],
 }
 
 export const Default = () => {

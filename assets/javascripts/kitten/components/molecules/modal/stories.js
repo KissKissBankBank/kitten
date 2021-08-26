@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-  Button,
-  Title,
-  Paragraph,
-  Modal,
-  Marger,
-} from '../../..'
+import { Button, Title, Paragraph, Modal, Marger } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 const paragraphContainer = `
@@ -72,11 +66,9 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="Modal" />,
     },
   },
-  decorators: [story => (
-    <div className="story-Container story-Grid">
-      {story()}
-    </div>
-  )],
+  decorators: [
+    story => <div className="story-Container story-Grid">{story()}</div>,
+  ],
 }
 
 export const OldModal = () => (

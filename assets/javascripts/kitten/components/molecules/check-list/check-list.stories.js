@@ -10,8 +10,6 @@ export const Default = () => (
   </CheckList>
 )
 
-Default.decorators = [story => (
-  <div className="story-Container story-Grid">
-    {story()}
-  </div>
-)]
+Default.decorators = [
+  story => <div className="story-Container story-Grid">{story()}</div>,
+]

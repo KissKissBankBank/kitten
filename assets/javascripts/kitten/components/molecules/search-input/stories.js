@@ -1,7 +1,5 @@
 import React from 'react'
 import { SearchInput } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../layout/container'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -12,11 +10,7 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="SearchInput" />,
     },
   },
-  decorators: [story => (
-    <div className="story-Container">
-      {story()}
-    </div>
-  )],
+  decorators: [story => <div className="story-Container">{story()}</div>],
 }
 
 export const Default = () => (

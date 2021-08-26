@@ -4,7 +4,6 @@ import { COLORS } from '../../..'
 import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
 
-
 export default {
   title: 'Atoms/HighlightHalo',
   component: HighlightHalo,

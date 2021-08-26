@@ -1,7 +1,4 @@
-import { Container } from '../../layout/container'
-import { Marger } from '../../..'
 import React from 'react'
-import { text, boolean, select } from '@storybook/addon-knobs'
 import { TextCopy } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
@@ -13,11 +10,7 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="TextCopy" />,
     },
   },
-  decorators: [story => (
-    <div className="story-Container">
-      {story()}
-    </div>
-  )],
+  decorators: [story => <div className="story-Container">{story()}</div>],
   args: {
     alertMessage: 'Text has been copied!',
     textToCopy: undefined,
@@ -36,12 +29,14 @@ export default {
     },
     textToCopy: {
       name: 'textToCopy',
-      description: 'Specify a text to copy (if not, it will use the value of the children)',
+      description:
+        'Specify a text to copy (if not, it will use the value of the children)',
       control: { type: 'text' },
     },
     description: {
       name: 'description',
-      description: 'Screen-reader-only text description of the component. For accessibility purposes.',
+      description:
+        'Screen-reader-only text description of the component. For accessibility purposes.',
       control: { type: 'text' },
     },
     forceOneLine: {
@@ -86,9 +81,6 @@ export default {
   },
 }
 
-
-export const Default = (args) => {
-  return (
-    <TextCopy {...args}/>
-  )
+export const Default = args => {
+  return <TextCopy {...args} />
 }

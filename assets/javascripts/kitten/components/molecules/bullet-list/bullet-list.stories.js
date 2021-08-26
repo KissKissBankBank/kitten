@@ -1,16 +1,11 @@
 import React from 'react'
 import { BulletList } from './index'
-import { Container } from '../../..'
 
-export const Default = (args) => (
-  <BulletList {...args}/>
-)
+export const Default = args => <BulletList {...args} />
 
-Default.decorators = [story => (
-  <div className="story-Container story-Grid">
-    {story()}
-  </div>
-)]
+Default.decorators = [
+  story => <div className="story-Container story-Grid">{story()}</div>,
+]
 
 Default.args = {
   size: 'regular',
@@ -18,7 +13,7 @@ Default.args = {
     { key: '1', item: 'Dis Manibus' },
     { key: '2', item: 'Calpurnia Felicla' },
     { key: '3', item: 'Germulio coniugi' },
-  ]
+  ],
 }
 
 Default.argTypes = {
@@ -29,6 +24,6 @@ Default.argTypes = {
   },
   items: {
     name: 'items',
-    control: { type: 'object'},
+    control: { type: 'object' },
   },
 }

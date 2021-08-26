@@ -13,32 +13,34 @@ export default {
       ),
     },
   },
-  decorators: [story => (
-    <div className="story-Container story-Grid story-Grid--large">
-      {story()}
-    </div>
-  )],
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
 }
 
 export const Default = args => {
   return (
-      <ImageCropper
-        {...args}
-        buttonProps={{
-          variant: select('Variant', ['andromeda', 'orion'], 'andromeda'),
-        }}
-      />
+    <ImageCropper
+      {...args}
+      buttonProps={{
+        variant: select('Variant', ['andromeda', 'orion'], 'andromeda'),
+      }}
+    />
   )
 }
 
 export const WithImage = () => {
   return (
-      <ImageCropper
-        imageSrc="/kitten.jpg"
-        fileName="Steven Kitten"
-        buttonProps={{
-          variant: select('Variant', ['andromeda', 'orion'], 'andromeda'),
-        }}
-      />
+    <ImageCropper
+      imageSrc="/kitten.jpg"
+      fileName="Steven Kitten"
+      buttonProps={{
+        variant: select('Variant', ['andromeda', 'orion'], 'andromeda'),
+      }}
+    />
   )
 }

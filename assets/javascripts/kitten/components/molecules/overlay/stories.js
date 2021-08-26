@@ -1,8 +1,6 @@
 import React from 'react'
 import { Overlay } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../layout/container'
-import { Button } from '../../molecules/buttons/button'
+import { Button } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 const TOGGLE_EVENT = 'event:toggle'
@@ -21,11 +19,7 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="Overlay" />,
     },
   },
-  decorators: [story => (
-    <div className="story-Container">
-      {story()}
-    </div>
-  )],
+  decorators: [story => <div className="story-Container">{story()}</div>],
   args: {
     zIndex: -1,
     isActive: false,
@@ -33,10 +27,10 @@ export default {
     closeEvent: CLOSE_EVENT,
     openEvent: OPEN_EVENT,
     position: 'absolute',
-  }
+  },
 }
 
-export const Default = (args) => (
+export const Default = args => (
   <>
     <Overlay {...args} />
     <Button onClick={handleToggleClick}>Toggle Overlay</Button>

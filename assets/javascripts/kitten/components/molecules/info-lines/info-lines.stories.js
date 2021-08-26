@@ -1,17 +1,16 @@
 import React from 'react'
-import { boolean, color } from '@storybook/addon-knobs'
 import { InfoLines } from './index'
 import { COLORS } from '../../..'
 
-export const Default = (args) => (
-  <InfoLines {...args}/>
-)
+export const Default = args => <InfoLines {...args} />
 
-Default.decorators = [story => (
-  <div className="story-Container story-Grid story-Grid--large">
-    {story()}
-  </div>
-)]
+Default.decorators = [
+  story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      {story()}
+    </div>
+  ),
+]
 
 Default.args = {
   infos: [
@@ -31,38 +30,38 @@ Default.args = {
 Default.argTypes = {
   infos: {
     name: 'infos',
-    control: { type: 'object'}
+    control: { type: 'object' },
   },
   borderColor: {
     name: 'borderColor',
-    control: { type: 'color'}
+    control: { type: 'color' },
   },
   withBorderRadius: {
     name: 'withBorderRadius',
-    control: { type: 'boolean'}
+    control: { type: 'boolean' },
   },
   withLeftRightBorder: {
     name: 'withLeftRightBorder',
-    control: { type: 'boolean'}
+    control: { type: 'boolean' },
   },
   withoutTopBottomBorder: {
     name: 'withoutTopBottomBorder',
-    control: { type: 'boolean'}
+    control: { type: 'boolean' },
   },
   withoutResponsive: {
     name: 'withoutResponsive',
-    control: { type: 'boolean'}
+    control: { type: 'boolean' },
   },
   descriptionTagList: {
     name: 'descriptionTagList',
-    control: { type: 'text'}
+    control: { type: 'text' },
   },
   titleTagList: {
     name: 'titleTagList',
-    control: { type: 'text'}
+    control: { type: 'text' },
   },
   itemTagList: {
     name: 'itemTagList',
-    control: { type: 'text'}
+    control: { type: 'text' },
   },
 }

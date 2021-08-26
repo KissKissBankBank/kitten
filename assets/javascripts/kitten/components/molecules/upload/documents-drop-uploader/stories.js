@@ -1,6 +1,5 @@
 import React from 'react'
 import { DocumentsDropUploader } from './index'
-import { boolean, text, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
 
@@ -14,31 +13,33 @@ export default {
       ),
     },
   },
-  decorators: [story => (
-    <div className="story-Container story-Grid story-Grid--large">
-      {story()}
-    </div>
-  )],
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
   argTypes: {
     id: {
       name: 'id',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     labelText: {
       name: 'labelText',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     managerTitle: {
       name: 'managerTitle',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     managerText: {
       name: 'managerText',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     managerInfo: {
       name: 'managerInfo',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     onChange: {
       name: 'onChange',
@@ -50,16 +51,16 @@ export default {
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
     },
     status: {
       name: 'status',
       options: ['ready', 'error'],
-      control: { type: 'radio' }
+      control: { type: 'radio' },
     },
     errorMessage: {
       name: 'errorMessage',
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     typeErrorText: {
       name: 'typeErrorText',
@@ -75,21 +76,22 @@ export default {
     },
     acceptedFileSize: {
       name: 'acceptedFileSize',
-      control: { type: 'number' }
+      control: { type: 'number' },
     },
     acceptedMimeTypes: {
       name: 'acceptedMimeTypes',
-      control: { type: 'object' }
+      control: { type: 'object' },
     },
   },
 }
 
 const args = {
-  id: "DocumentsDropUploader",
-  labelText: "Add a document",
-  managerTitle: "Upload your ID documents",
-  managerText: "Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
-  managerInfo: "(Max: 1MB, Formats: JPG, PNG, SVG)",
+  id: 'DocumentsDropUploader',
+  labelText: 'Add a document',
+  managerTitle: 'Upload your ID documents',
+  managerText:
+    'Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.',
+  managerInfo: '(Max: 1MB, Formats: JPG, PNG, SVG)',
   onChange: action('onChange'),
   onError: action('onError'),
   disabled: false,
@@ -102,17 +104,10 @@ const args = {
   acceptedMimeTypes: ['image/jpeg', 'image/png', 'image/svg+xml'],
 }
 
-export const Default = (args) => (
-  <DocumentsDropUploader
-    {...args}
-  />
-)
+export const Default = args => <DocumentsDropUploader {...args} />
 Default.args = args
 
-export const Manage = (args) => (
-  <DocumentsDropUploader
-    {...args}  />
-)
+export const Manage = args => <DocumentsDropUploader {...args} />
 Manage.args = {
   ...args,
   initialValue: [{ name: 'kitten.jpg' }],

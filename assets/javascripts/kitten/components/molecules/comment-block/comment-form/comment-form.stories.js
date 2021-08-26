@@ -1,30 +1,33 @@
 import React from 'react'
-import { text, object, boolean } from '@storybook/addon-knobs'
 import { CommentForm } from './index'
 import { CheckedCircleIcon } from '../../../..'
 import { action } from '@storybook/addon-actions'
 
-export const Default = ({ showAvatarBadge, ...args}) => (
+export const Default = ({ showAvatarBadge, ...args }) => (
   <CommentForm
     {...args}
-    avatarBadge={showAvatarBadge && (
-      <span aria-label="Owner" role="aside">
-        <CheckedCircleIcon
-          width="25"
-          height="25"
-          circleColor="#19b4fa"
-          checkedColor="#fff"
-        />
-      </span>
-    )}
+    avatarBadge={
+      showAvatarBadge && (
+        <span aria-label="Owner" role="aside">
+          <CheckedCircleIcon
+            width="25"
+            height="25"
+            circleColor="#19b4fa"
+            checkedColor="#fff"
+          />
+        </span>
+      )
+    }
   />
 )
 
-Default.decorators = [story => (
-  <div className="story-Container story-Grid story-Grid--large">
-    {story()}
-  </div>
-)]
+Default.decorators = [
+  story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      {story()}
+    </div>
+  ),
+]
 
 Default.args = {
   avatarImgProps: {
@@ -80,7 +83,7 @@ Default.argTypes = {
     name: 'ariaId',
     control: { type: 'text' },
   },
-  avatarBadge: { control: { type: null }},
+  avatarBadge: { control: { type: null } },
   textareaId: {
     name: 'textareaId',
     control: { type: 'text' },

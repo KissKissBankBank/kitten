@@ -1,5 +1,4 @@
 import React from 'react'
-import { text, select, boolean } from '@storybook/addon-knobs'
 import { Toggletip } from './index'
 import COLORS from '../../../constants/colors-config'
 import { DocsPage } from 'storybook/docs-page'
@@ -12,11 +11,7 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="Toggletip" />,
     },
   },
-  decorators: [story => (
-    <div className="story-Container">
-      {story()}
-    </div>
-  )],
+  decorators: [story => <div className="story-Container">{story()}</div>],
 }
 
 const args = {
@@ -51,18 +46,20 @@ const argTypes = {
   },
 }
 
-export const Default = (args) => (<Toggletip {...args}/>)
+export const Default = args => <Toggletip {...args} />
 Default.args = args
 Default.argTypes = argTypes
 
-export const CustomTargetElement = (args) => (<Toggletip {...args} />)
+export const CustomTargetElement = args => <Toggletip {...args} />
 CustomTargetElement.args = {
   ...args,
-  targetElement: (<p className="k-u-weight-bold">This is the trigger of my tooltip</p>)
+  targetElement: (
+    <p className="k-u-weight-bold">This is the trigger of my tooltip</p>
+  ),
 }
 CustomTargetElement.argTypes = argTypes
 
-export const MultipleToggletips = (args) => (
+export const MultipleToggletips = args => (
   <>
     <div className="k-u-margin-bottom-quadruple">
       <Toggletip
@@ -85,11 +82,7 @@ export const MultipleToggletips = (args) => (
       />
     </div>
     <div className="k-u-margin-top-quadruple k-u-align-center">
-      <Toggletip
-        {...args}
-        modifier="disabled"
-        id="Toggletip-bottom"
-      />
+      <Toggletip {...args} modifier="disabled" id="Toggletip-bottom" />
     </div>
   </>
 )
@@ -100,13 +93,13 @@ MultipleToggletips.args = {
       Text{' '}
       <a className="k-u-link k-u-link-font1" href="#">
         with a link
-      </a>.<br />
-      Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor
-      sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac
-      cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
-      justo sit amet risus. Cras justo odio, dapibus ac facilisis in,
-      egestas eget quam. Donec ullamcorper nulla non metus auctor
-      fringilla.
+      </a>
+      .<br />
+      Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit
+      amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus
+      commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
+      risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+      ullamcorper nulla non metus auctor fringilla.
     </>
   ),
 }

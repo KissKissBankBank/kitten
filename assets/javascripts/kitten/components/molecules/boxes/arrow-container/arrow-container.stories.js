@@ -2,7 +2,7 @@ import React from 'react'
 import { ArrowContainer } from './index'
 import { Text, COLORS } from '../../../..'
 
-export const Default = ({children, ...args}) => (
+export const Default = ({ children, ...args }) => (
   <ArrowContainer {...args}>
     <Text size="tiny" color="font1" weight="light">
       {children}
@@ -10,11 +10,13 @@ export const Default = ({children, ...args}) => (
   </ArrowContainer>
 )
 
-Default.decorators = [story => (
-  <div className="story-Container story-Grid story-Grid">
-    <div>{story()}</div>
-  </div>
-)]
+Default.decorators = [
+  story => (
+    <div className="story-Container story-Grid story-Grid">
+      <div>{story()}</div>
+    </div>
+  ),
+]
 
 Default.args = {
   color: COLORS.background3,
@@ -43,12 +45,7 @@ Default.argTypes = {
   },
   position: {
     name: 'position',
-    options: [
-      'left',
-      'top',
-      'right',
-      'bottom',
-    ],
+    options: ['left', 'top', 'right', 'bottom'],
     control: { type: 'select' },
   },
   distance: {

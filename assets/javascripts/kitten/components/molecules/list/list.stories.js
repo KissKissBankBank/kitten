@@ -24,11 +24,9 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="List" />,
     },
   },
-  decorators: [story => (
-    <div className="story-Container story-Grid">
-      {story()}
-    </div>
-  )],
+  decorators: [
+    story => <div className="story-Container story-Grid">{story()}</div>,
+  ],
 }
 
 export const SimpleList = () => {

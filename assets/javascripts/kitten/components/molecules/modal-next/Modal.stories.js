@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { text, boolean, number, select } from '@storybook/addon-knobs'
 import { Modal } from './index'
 import { Button, Text, SaveIcon, COLORS } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
@@ -51,17 +50,9 @@ export default {
     Button: Modal.Button,
     CloseButton: Modal.CloseButton,
   },
-  decorators: [story => (
-    <div className="story-Container story-Grid">
-      {story()}
-    </div>
-  )],
-}
-
-const buttonSelectionChoices = {
-  None: 0,
-  'One button': 1,
-  'Two with Close': 2,
+  decorators: [
+    story => <div className="story-Container story-Grid">{story()}</div>,
+  ],
 }
 
 const args = {
@@ -83,12 +74,14 @@ const argTypes = {
   },
   labelledby: {
     name: 'labelledby',
-    description: 'ID for the element that labels the modal. For accessibility purposes.',
+    description:
+      'ID for the element that labels the modal. For accessibility purposes.',
     control: { type: 'text' },
   },
   describedby: {
     name: 'describedby',
-    description: 'ID for the element that describes the content of the modal. For accessibility purposes.',
+    description:
+      'ID for the element that describes the content of the modal. For accessibility purposes.',
     control: { type: 'text' },
   },
   closeButtonLabel: {
@@ -153,9 +146,8 @@ const argTypes = {
   contentText: {
     name: 'content text (story prop)',
     control: { type: 'text' },
-  }
+  },
 }
-
 
 export const Default = ({
   z_sticky,
@@ -170,9 +162,7 @@ export const Default = ({
     {() => (
       <>
         <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
-        <Modal.Paragraph>
-          {contentText}
-        </Modal.Paragraph>
+        <Modal.Paragraph>{contentText}</Modal.Paragraph>
         <Modal.Actions
           sticky={z_sticky}
           stickyOnMobile={z_stickyOnMobile}
@@ -274,7 +264,7 @@ export const Multi = () => {
   )
 }
 
-export const FullSize = ({contentText, ...args}) => (
+export const FullSize = ({ contentText, ...args }) => (
   <Modal {...args}>
     {() => (
       <>
@@ -302,19 +292,23 @@ FullSize.args = {
 }
 FullSize.argTypes = argTypes
 
-export const ComplexWithOrion = ({contentText, ...args}) => (
+export const ComplexWithOrion = ({ contentText, ...args }) => (
   <Modal {...args}>
     {() => (
       <>
         <Modal.Block className="k-u-background-color-background3">
           <Text weight="light" tag="p" className="k-u-margin-vertical-triple">
-            <span>Inside a <code>Modal.Block</code></span>
+            <span>
+              Inside a <code>Modal.Block</code>
+            </span>
             <br />
             {contentText}
           </Text>
         </Modal.Block>
         <Modal.Paragraph align="left">
-          <span>Inside a <code>Modal.Paragraph</code></span>
+          <span>
+            Inside a <code>Modal.Paragraph</code>
+          </span>
           <br />
           {contentText}
         </Modal.Paragraph>
@@ -365,7 +359,7 @@ ComplexWithOrion.args = {
 }
 ComplexWithOrion.argTypes = argTypes
 
-export const CustomInnerSize = ({contentText, ...args}) => (
+export const CustomInnerSize = ({ contentText, ...args }) => (
   <Modal {...args}>
     {() => (
       <>

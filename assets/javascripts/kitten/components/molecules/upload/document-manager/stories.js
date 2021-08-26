@@ -35,79 +35,78 @@ const args = {
 const argTypes = {
   id: {
     name: 'id',
-    control: { type: 'text' }
+    control: { type: 'text' },
   },
   buttonProps: {
     name: 'buttonProps',
-    control: { type: 'object' }
+    control: { type: 'object' },
   },
   canCancel: {
     name: 'canCancel',
-    control: { type: 'boolean' }
+    control: { type: 'boolean' },
   },
   cancelButtonText: {
     name: 'cancelButtonText',
-    control: { type: 'text' }
+    control: { type: 'text' },
   },
   disabled: {
     name: 'disabled',
-    control: { type: 'boolean' }
+    control: { type: 'boolean' },
   },
   documentIcon: {
     name: 'documentIcon',
-    control: null
+    control: null,
   },
   errorText: {
     name: 'errorText',
-    control: { type: 'text' }
+    control: { type: 'text' },
   },
   fileInputProps: {
     name: 'fileInputProps',
-    control: { type: 'object' }
+    control: { type: 'object' },
   },
   fileName: {
     name: 'fileName',
-    control: { type: 'text' }
+    control: { type: 'text' },
   },
   loaderAnimation: {
     name: 'loaderAnimation',
-    control: null
+    control: null,
   },
   loaderText: {
     name: 'loaderText',
-    control: { type: 'text' }
+    control: { type: 'text' },
   },
   onCancel: {
     name: 'onCancel',
-    control: null
+    control: null,
   },
   onUpload: {
     name: 'onUpload',
-    control: null
+    control: null,
   },
   status: {
     name: 'status',
     options: ['ready', 'error', 'valid', 'wait', 'loading'],
-    control: { type: 'radio' }
+    control: { type: 'radio' },
   },
   displaySubtitle: {
     name: 'subtitle',
-    control: { type: 'text' }
+    control: { type: 'text' },
   },
   displayTitle: {
     name: 'title',
-    control: { type: 'text' }
+    control: { type: 'text' },
   },
   buttonSubtitle: {
     name: 'subtitle',
-    control: { type: 'text' }
+    control: { type: 'text' },
   },
   buttonTitle: {
     name: 'title',
-    control: { type: 'text' }
+    control: { type: 'text' },
   },
 }
-
 
 export default {
   component: DocumentManager,
@@ -119,49 +118,45 @@ export default {
       ),
     },
   },
-  decorators: [story => (
-    <div className="story-Container story-Grid story-Grid--large">
-      {story()}
-    </div>
-  )],
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
   argTypes,
 }
 
-
-export const Default = (args) => (
-  <DocumentManager
-    {...args}
-  />
-)
+export const Default = args => <DocumentManager {...args} />
 Default.args = args
 
-export const StatusValid = (args) => (
-  <DocumentManager
-    {...args}
-  />
-)
+export const StatusValid = args => <DocumentManager {...args} />
 StatusValid.args = {
   ...args,
-  displayTitle: "Recto/Verso de ma pièce d’identité validé le 6 janvier 2020",
-  displaySubtitle: "document.pdf",
-  status: "valid",
+  displayTitle: 'Recto/Verso de ma pièce d’identité validé le 6 janvier 2020',
+  displaySubtitle: 'document.pdf',
+  status: 'valid',
   documentIcon: <DocumentIconPerson />,
 }
 
-export const StatusError = (args) => (
-  <DocumentManager {...args} />
-)
+export const StatusError = args => <DocumentManager {...args} />
 StatusError.args = {
   ...args,
-  buttonTitle: "Upload a document",
-  buttonSubtitle: "Document size must be 2Mb or less.",
-  displayTitle: (<>Extrait KBIS refusé :<br />mauvaise adresse</>),
-  displaySubtitle: "document.pdf",
-  status: "error",
+  buttonTitle: 'Upload a document',
+  buttonSubtitle: 'Document size must be 2Mb or less.',
+  displayTitle: (
+    <>
+      Extrait KBIS refusé :<br />
+      mauvaise adresse
+    </>
+  ),
+  displaySubtitle: 'document.pdf',
+  status: 'error',
   documentIcon: <DocumentIconHouse />,
 }
 
-export const StatusWaiting = (args) => (
+export const StatusWaiting = args => (
   <DocumentManager
     {...args}
     id="DocumentManager__StatusWaiting"
@@ -174,35 +169,26 @@ export const StatusWaiting = (args) => (
 )
 StatusWaiting.args = {
   ...args,
-  displayTitle:"Votre RIB est en cours de validation",
-  displaySubtitle:"document.pdf",
-  status:"wait",
+  displayTitle: 'Votre RIB est en cours de validation',
+  displaySubtitle: 'document.pdf',
+  status: 'wait',
 }
 
-
-export const StatusLoading = (args) => (
-  <DocumentManager
-    {...args}
-  />
-)
+export const StatusLoading = args => <DocumentManager {...args} />
 StatusLoading.args = {
   ...args,
-  buttonProps:{
+  buttonProps: {
     modifier: 'helium',
   },
-  status:"loading",
-  loaderText:"The document is currently loading",
+  status: 'loading',
+  loaderText: 'The document is currently loading',
 }
 
-export const CustomFileInputProps = (args) => (
-  <DocumentManager
-    {...args}
-  />
-)
+export const CustomFileInputProps = args => <DocumentManager {...args} />
 CustomFileInputProps.args = {
   ...args,
-  buttonTitle: "Send document",
-  buttonSubtitle: "Document size must be 2Mb or less.",
+  buttonTitle: 'Send document',
+  buttonSubtitle: 'Document size must be 2Mb or less.',
   fileInputProps: {
     accept: 'image/png, image/jpeg',
     multiple: true,

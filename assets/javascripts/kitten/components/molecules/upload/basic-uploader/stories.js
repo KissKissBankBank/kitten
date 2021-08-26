@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { boolean } from '@storybook/addon-knobs'
 import { BasicUploader } from './index'
-import { Loader } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 
@@ -15,11 +14,13 @@ export default {
       ),
     },
   },
-  decorators: [story => (
-    <div className="story-Container story-Grid story-Grid--large">
-      {story()}
-    </div>
-  )],
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
 }
 
 const args = {
@@ -94,30 +95,20 @@ const argTypes = {
   },
 }
 
-export const Default = args => (
-  <BasicUploader {...args} />
-)
+export const Default = args => <BasicUploader {...args} />
 Default.args = args
 Default.argTypes = argTypes
 
-export const StatusValid = args => (
-  <BasicUploader
-    {...args}
-  />
-)
+export const StatusValid = args => <BasicUploader {...args} />
 StatusValid.args = {
   ...args,
-    fileName: 'document.pdf',
-    status: 'valid',
-    statusText: 'The document is valid.'
+  fileName: 'document.pdf',
+  status: 'valid',
+  statusText: 'The document is valid.',
 }
 StatusValid.argTypes = argTypes
 
-export const StatusError = args => (
-  <BasicUploader
-    {...args}
-  />
-)
+export const StatusError = args => <BasicUploader {...args} />
 StatusError.args = {
   ...args,
   fileName: 'document.pdf',
@@ -146,7 +137,6 @@ StatusWaiting.args = {
 }
 StatusWaiting.argTypes = argTypes
 
-
 export const StatusLoading = args => (
   <BasicUploader
     {...args}
@@ -165,25 +155,19 @@ StatusLoading.args = {
   buttonProps: {
     size: 'big',
     modifier: 'helium',
-  }
+  },
 }
 StatusLoading.argTypes = argTypes
 
-
-export const CustomFileInputProps = args => (
-  <BasicUploader
-    {...args}
-  />
-)
+export const CustomFileInputProps = args => <BasicUploader {...args} />
 CustomFileInputProps.args = {
   ...args,
   fileInputProps: {
     accept: 'image/png, image/jpeg',
     multiple: true,
-  }
+  },
 }
 CustomFileInputProps.argTypes = argTypes
-
 
 export const CustomFunctions = args => {
   const [isLoading, setLoadingState] = useState(false)
@@ -217,4 +201,3 @@ export const CustomFunctions = args => {
 }
 CustomFunctions.args = args
 CustomFunctions.argTypes = argTypes
-
