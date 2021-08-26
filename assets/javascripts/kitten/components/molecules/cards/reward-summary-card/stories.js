@@ -82,10 +82,12 @@ export default {
 
 export const Default = (args) => {
   return (
-      <RewardSummaryCard.Image imageBorderRadius={imageBorderRadius}>
-        {hasImage && <img src="/kitten.jpg" alt="" />}
-      </RewardSummaryCard.Image>
     <RewardSummaryCard {...args}>
+      {args.hasImage && (
+        <RewardSummaryCard.Image>
+          <img src="/kitten.jpg" alt="" />
+        </RewardSummaryCard.Image>
+      )}
 
       <RewardSummaryCard.Title>
         Stickers Free Boobs Club
