@@ -822,7 +822,6 @@ const InnerModal = ({
     <div className={classNames('k-ModalNext', className)} {...others}>
       {trigger && (
         React.cloneElement(trigger, {
-          className: classNames('k-ModalNext__trigger', trigger.props.className),
           onClick: () => dispatch(updateState(true)),
         })
       )}
