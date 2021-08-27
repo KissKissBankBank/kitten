@@ -1,22 +1,88 @@
 import React from 'react'
-import { boolean, color } from '@storybook/addon-knobs'
+import { DocsPage } from 'storybook/docs-page'
 import { InfoLines } from './index'
-import { Grid, GridCol } from '../../..'
+import { COLORS, TextInput, Text, } from '../../..'
 
-export const Default = () => (
-  <Grid style={{ marginTop: '5em' }}>
-    <GridCol offset="1" col="8">
-      <InfoLines
-        withBorderRadius={boolean('with border radius', false)}
-        withLeftRightBorder={boolean('with left right border', false)}
-        withoutTopBottomBorder={boolean('without top bottom border', false)}
-        withoutResponsive={boolean('without responsive', false)}
-        borderColor={color('custom border color', '#eee')}
-        infos={[
-          { key: 'Lorem', value: 'Ipsum', id: 'item-1' },
-          { key: 'Dolor', value: 'Sit amet', id: 'item-2' },
-        ]}
-      />
-    </GridCol>
-  </Grid>
-)
+export default {
+  title: 'Molecules/InfoLines',
+  component: InfoLines,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="InfoLines" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  argTypes: {
+    infos: {
+      name: 'infos',
+      control: { type: 'object' },
+    },
+    borderColor: {
+      name: 'borderColor',
+      control: { type: 'color' },
+    },
+    withBorderRadius: {
+      name: 'withBorderRadius',
+      control: { type: 'boolean' },
+    },
+    withLeftRightBorder: {
+      name: 'withLeftRightBorder',
+      control: { type: 'boolean' },
+    },
+    withoutTopBottomBorder: {
+      name: 'withoutTopBottomBorder',
+      control: { type: 'boolean' },
+    },
+    withoutResponsive: {
+      name: 'withoutResponsive',
+      control: { type: 'boolean' },
+    },
+    descriptionTagList: {
+      name: 'descriptionTagList',
+      control: { type: 'text' },
+    },
+    titleTagList: {
+      name: 'titleTagList',
+      control: { type: 'text' },
+    },
+    itemTagList: {
+      name: 'itemTagList',
+      control: { type: 'text' },
+    },
+  },
+}
+
+
+export const Default = args => <InfoLines {...args} />
+
+export const WithFormComponents = Default.bind({})
+
+const args = {
+  infos: [
+    { key: 'Lorem', value: 'Ipsum', id: 'item-1' },
+    { key: 'Dolor', value: 'Sit amet', id: 'item-2' },
+  ],
+  borderColor: COLORS.line1,
+  withBorderRadius: false,
+  withLeftRightBorder: false,
+  withoutTopBottomBorder: false,
+  withoutResponsive: false,
+  descriptionTagList: 'dl',
+  titleTagList: 'dt',
+  itemTagList: 'dd',
+}
+
+Default.args = args
+WithFormComponents.args = {
+  ...args,
+  infos: [
+    { key: <Text size="tiny">Lorem importString docs size amet</Text>, value: <TextInput name="input-item-1" size="tiny" variant="orion" placeholder="value 1" />, id: 'item-1' },
+    { key: <Text size="tiny">Dolor</Text>, value: <TextInput name="input-item-2" size="tiny" variant="orion" placeholder="value 2" />, id: 'item-2' },
+  ],
+}
