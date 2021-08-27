@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `NoImageIcon`: Add new component.
 - Feature: `RewardSummaryCard`: Add new component.
+- Fix: `TextInput`: Update color styles to enhance accessibility.
 
 ## [4.3.0] - 2021-08-27
 
