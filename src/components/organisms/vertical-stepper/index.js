@@ -33,6 +33,7 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["children", "variant"];
 var STEP_CLASSNAME = 'VerticalStepper__step';
 exports.STEP_CLASSNAME = STEP_CLASSNAME;
 var LINK_CLASSNAME = 'VerticalStepper__link';
@@ -41,7 +42,7 @@ exports.LINK_CLASSNAME = LINK_CLASSNAME;
 var VerticalStepper = function VerticalStepper(_ref) {
   var children = _ref.children,
       variant = _ref.variant,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "variant"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledNav, {
     variant: variant
   }, /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({

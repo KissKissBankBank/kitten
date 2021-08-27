@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["title", "color", "width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
 export var LoginIcon = function LoginIcon(_ref) {
@@ -7,7 +8,7 @@ export var LoginIcon = function LoginIcon(_ref) {
       color = _ref.color,
       width = _ref.width,
       height = _ref.height,
-      props = _objectWithoutProperties(_ref, ["title", "color", "width", "height"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement("svg", _extends({
     role: "img",

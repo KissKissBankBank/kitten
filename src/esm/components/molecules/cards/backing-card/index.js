@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["children", "className", "disabled", "hasBorder"];
 import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -11,7 +12,7 @@ export var BackingCard = function BackingCard(_ref) {
       className = _ref.className,
       disabled = _ref.disabled,
       hasBorder = _ref.hasBorder,
-      props = _objectWithoutProperties(_ref, ["children", "className", "disabled", "hasBorder"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var imageChild = getReactElementsByType({
     children: children,

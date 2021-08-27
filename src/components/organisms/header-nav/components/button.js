@@ -21,6 +21,8 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _visuallyHidden = require("../../../../components/accessibility/visually-hidden");
 
+var _excluded = ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style", "className"];
+
 var Button = function Button(_ref) {
   var a11yText = _ref.a11yText,
       icon = _ref.icon,
@@ -38,7 +40,7 @@ var Button = function Button(_ref) {
       as = _ref.as,
       style = _ref.style,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style", "className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var hiddenMin = min ? "k-u-hidden@".concat(min, "-up") : '';
   var hiddenMax = max ? "k-u-hidden@".concat(max, "-down") : '';
   var textClassName = "k-HeaderNav__Button__text ".concat(hiddenMin, " ").concat(hiddenMax).trim();

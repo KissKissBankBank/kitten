@@ -15,10 +15,12 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _excluded = ["color", "title"];
+
 var InstagramIcon = function InstagramIcon(_ref) {
   var color = _ref.color,
       title = _ref.title,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 70 70",

@@ -25,12 +25,14 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _gifVideo = require("../../../../../components/atoms/video/gif-video");
 
+var _excluded = ["backgroundColor", "alt"];
+
 var Image = function Image(_ref) {
   var imageContainerBackground = _ref.imageContainerBackground,
       _ref$imageProps = _ref.imageProps,
       backgroundColor = _ref$imageProps.backgroundColor,
       alt = _ref$imageProps.alt,
-      otherImageProps = (0, _objectWithoutProperties2.default)(_ref$imageProps, ["backgroundColor", "alt"]),
+      otherImageProps = (0, _objectWithoutProperties2.default)(_ref$imageProps, _excluded),
       videoProps = _ref.videoProps,
       videoSources = _ref.videoSources,
       avatarProps = _ref.avatarProps,

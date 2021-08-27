@@ -23,10 +23,11 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typography = require("../../../helpers/utils/typography");
 
+var _excluded = ["className", "size"];
 var VerticalStroke = (0, _styledComponents.default)(function (_ref) {
   var className = _ref.className,
       size = _ref.size,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "size"]);
+      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var verticalStrokeClassName = (0, _classnames.default)('k-VerticalStroke', {
     'k-VerticalStroke--tiny': size === 'tiny',
     'k-VerticalStroke--default': size === 'default',

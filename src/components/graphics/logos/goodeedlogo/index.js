@@ -17,11 +17,13 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
+var _excluded = ["color", "width", "height"];
+
 var GoodeedLogo = function GoodeedLogo(_ref) {
   var color = _ref.color,
       width = _ref.width,
       height = _ref.height,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "width", "height"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var DEFAULT_WIDTH = 122;
   var DEFAULT_HEIGHT = 22;
   var computed = (0, _ratio.computeFromRatio)({

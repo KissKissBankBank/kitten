@@ -1,6 +1,7 @@
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["options", "children"];
 import React, { useRef, useEffect, useState } from 'react';
 import useContinuousIntersectionObserver from './continuous-intersection-hook';
 import domElementHelper from '../dom/element-helper';
@@ -8,7 +9,7 @@ import domElementHelper from '../dom/element-helper';
 var ContinuousIntersectionObserver = function ContinuousIntersectionObserver(_ref) {
   var options = _ref.options,
       children = _ref.children,
-      props = _objectWithoutProperties(_ref, ["options", "children"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var beforeEl = useRef(null);
   var afterEl = useRef(null);

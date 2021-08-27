@@ -35,6 +35,11 @@ var _sideCard = require("./side-card");
 
 var _sideModal = require("./side-modal");
 
+var _excluded = ["className"],
+    _excluded2 = ["className", "children", "twoButtons"],
+    _excluded3 = ["className", "children", "withoutLight", "mobileAsideProps"],
+    _excluded4 = ["children", "className", "loading", "loaderComponent"];
+
 var StyledFlow = _styledComponents.default.div.withConfig({
   displayName: "flow__StyledFlow",
   componentId: "vmfwfw-0"
@@ -42,7 +47,7 @@ var StyledFlow = _styledComponents.default.div.withConfig({
 
 var Content = function Content(_ref) {
   var className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement("section", (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-DashboardLayout__flow__content', className)
   }));
@@ -53,7 +58,7 @@ var Nav = function Nav(_ref2) {
       children = _ref2.children,
       _ref2$twoButtons = _ref2.twoButtons,
       twoButtons = _ref2$twoButtons === void 0 ? false : _ref2$twoButtons,
-      props = (0, _objectWithoutProperties2.default)(_ref2, ["className", "children", "twoButtons"]);
+      props = (0, _objectWithoutProperties2.default)(_ref2, _excluded2);
   return /*#__PURE__*/_react.default.createElement("nav", (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-DashboardLayout__flow__nav', className, {
       'k-DashboardLayout__flow__nav--twoButtons': twoButtons
@@ -69,7 +74,7 @@ var Aside = function Aside(_ref3) {
       _ref3$withoutLight = _ref3.withoutLight,
       withoutLight = _ref3$withoutLight === void 0 ? false : _ref3$withoutLight,
       mobileAsideProps = _ref3.mobileAsideProps,
-      props = (0, _objectWithoutProperties2.default)(_ref3, ["className", "children", "withoutLight", "mobileAsideProps"]);
+      props = (0, _objectWithoutProperties2.default)(_ref3, _excluded3);
   return /*#__PURE__*/_react.default.createElement("aside", (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-DashboardLayout__flow__aside', className)
   }), /*#__PURE__*/_react.default.createElement(_sideModal.MobileAside, mobileAsideProps, children), /*#__PURE__*/_react.default.createElement("div", {
@@ -82,7 +87,7 @@ var Flow = function Flow(_ref4) {
       className = _ref4.className,
       loading = _ref4.loading,
       loaderComponent = _ref4.loaderComponent,
-      props = (0, _objectWithoutProperties2.default)(_ref4, ["children", "className", "loading", "loaderComponent"]);
+      props = (0, _objectWithoutProperties2.default)(_ref4, _excluded4);
   return /*#__PURE__*/_react.default.createElement(StyledFlow, (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__flow', className, 'k-DashboardLayout__fullHeight', {
       'k-DashboardLayout__flow--isLoading': loading

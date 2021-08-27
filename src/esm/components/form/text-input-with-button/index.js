@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["valid", "error", "disabled", "size", "value", "rounded", "buttonValue", "modifier", "buttonProps", "inputValue", "className", "inset"];
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
@@ -31,7 +32,7 @@ export var TextInputWithButton = React.forwardRef(function (_ref2, ref) {
       inputValue = _ref2.inputValue,
       className = _ref2.className,
       inset = _ref2.inset,
-      others = _objectWithoutProperties(_ref2, ["valid", "error", "disabled", "size", "value", "rounded", "buttonValue", "modifier", "buttonProps", "inputValue", "className", "inset"]);
+      others = _objectWithoutProperties(_ref2, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledTextInputWithButton, {
     className: classNames('k-Form-TextInputWithButton', "k-Form-TextInputWithButton--".concat(size), {

@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["className", "contentClassName", "centered", "light", "dark", "lightTopBorder", "lightBottomBorder", "padded", "children"];
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
@@ -22,7 +23,7 @@ export var Row = function Row(_ref) {
       lightBottomBorder = _ref.lightBottomBorder,
       padded = _ref.padded,
       children = _ref.children,
-      others = _objectWithoutProperties(_ref, ["className", "contentClassName", "centered", "light", "dark", "lightTopBorder", "lightBottomBorder", "padded", "children"]);
+      others = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledRow, _extends({
     className: classNames('k-Row', {

@@ -19,6 +19,7 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
+var _excluded = ["color", "title", "width", "height", "size"];
 var DEFAULT_WIDTH = 8;
 var DEFAULT_HEIGHT = 8;
 
@@ -28,7 +29,7 @@ var CrossIcon = function CrossIcon(_ref) {
       width = _ref.width,
       height = _ref.height,
       size = _ref.size,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title", "width", "height", "size"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var computed = (0, _ratio.computeFromRatio)({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,

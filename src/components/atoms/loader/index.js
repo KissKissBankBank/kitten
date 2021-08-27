@@ -23,6 +23,8 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typography = require("../../../helpers/utils/typography");
 
+var _excluded = ["color"],
+    _excluded2 = ["tag", "className", "color"];
 var BULLET_SIZE = 5;
 
 var StyledLoader = _styledComponents.default.div.withConfig({
@@ -32,7 +34,7 @@ var StyledLoader = _styledComponents.default.div.withConfig({
 
 var Circle = function Circle(_ref) {
   var color = _ref.color,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["color"]);
+      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 ".concat(BULLET_SIZE, " ").concat(BULLET_SIZE),
@@ -48,7 +50,7 @@ var Loader = function Loader(_ref2) {
   var tag = _ref2.tag,
       className = _ref2.className,
       color = _ref2.color,
-      others = (0, _objectWithoutProperties2.default)(_ref2, ["tag", "className", "color"]);
+      others = (0, _objectWithoutProperties2.default)(_ref2, _excluded2);
   return /*#__PURE__*/_react.default.createElement(StyledLoader, (0, _extends2.default)({
     as: tag,
     className: (0, _classnames.default)('k-Loader', className)

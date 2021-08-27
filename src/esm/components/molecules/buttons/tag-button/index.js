@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["children", "modifier", "selected", "tiny", "big", "huge", "icon", "className", "variant", "size", "tag", "as"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -24,7 +25,7 @@ export var TagButton = function TagButton(_ref) {
       size = _ref.size,
       tag = _ref.tag,
       as = _ref.as,
-      others = _objectWithoutProperties(_ref, ["children", "modifier", "selected", "tiny", "big", "huge", "icon", "className", "variant", "size", "tag", "as"]);
+      others = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledTagButton, _extends({
     type: !tag && !as ? 'button' : null,

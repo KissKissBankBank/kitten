@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["phoneNumber", "tooltipColor"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonIcon } from '../../../../molecules/buttons/button-icon';
@@ -23,7 +24,7 @@ var StyledTeamCardButtonWithTooltip = styled.a.withConfig({
 export var TeamCardButtonWithTooltip = function TeamCardButtonWithTooltip(_ref4) {
   var phoneNumber = _ref4.phoneNumber,
       tooltipColor = _ref4.tooltipColor,
-      props = _objectWithoutProperties(_ref4, ["phoneNumber", "tooltipColor"]);
+      props = _objectWithoutProperties(_ref4, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledTeamCardButtonWithTooltip, _extends({
     href: "tel:".concat(phoneNumber),

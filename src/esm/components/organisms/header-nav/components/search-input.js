@@ -2,6 +2,7 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["children", "className", "searchInputProps", "searchButtonProps", "onMenuToggle", "closeEvents"];
 import React, { useState, useEffect, useContext, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -24,7 +25,7 @@ export var SearchInput = function SearchInput(_ref) {
       onMenuToggle = _ref$onMenuToggle === void 0 ? function () {} : _ref$onMenuToggle,
       _ref$closeEvents = _ref.closeEvents,
       closeEvents = _ref$closeEvents === void 0 ? [] : _ref$closeEvents,
-      props = _objectWithoutProperties(_ref, ["children", "className", "searchInputProps", "searchButtonProps", "onMenuToggle", "closeEvents"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var _useContext = useContext(Context),
       id = _useContext.id,

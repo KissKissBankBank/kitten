@@ -1,5 +1,6 @@
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import _extends from "@babel/runtime/helpers/esm/extends";
+var _excluded = ["state"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon';
@@ -22,7 +23,7 @@ export var StepperIconValidated = function StepperIconValidated(props) {
 };
 export var StepperIcon = function StepperIcon(_ref) {
   var state = _ref.state,
-      props = _objectWithoutProperties(_ref, ["state"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   if (state === 'inProgress' || state === 'progress') {
     return /*#__PURE__*/React.createElement(IconBadge, _extends({

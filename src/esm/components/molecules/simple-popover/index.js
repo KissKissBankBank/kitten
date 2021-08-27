@@ -1,6 +1,8 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["isVisible", "onCloseClick", "titleId", "closeButtonLabel", "title", "text", "illustration", "illustrationBackground", "buttons"],
+    _excluded2 = ["label", "clickOptions"];
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -43,7 +45,7 @@ export var SimplePopover = function SimplePopover(_ref2) {
       illustration = _ref2.illustration,
       illustrationBackground = _ref2.illustrationBackground,
       buttons = _ref2.buttons,
-      simplePopoverProps = _objectWithoutProperties(_ref2, ["isVisible", "onCloseClick", "titleId", "closeButtonLabel", "title", "text", "illustration", "illustrationBackground", "buttons"]);
+      simplePopoverProps = _objectWithoutProperties(_ref2, _excluded);
 
   var _useState = useState(true),
       _useState2 = _slicedToArray(_useState, 2),
@@ -109,7 +111,7 @@ export var SimplePopover = function SimplePopover(_ref2) {
   }, buttons.map(function (_ref3, i) {
     var label = _ref3.label,
         clickOptions = _ref3.clickOptions,
-        buttonProps = _objectWithoutProperties(_ref3, ["label", "clickOptions"]);
+        buttonProps = _objectWithoutProperties(_ref3, _excluded2);
 
     var clickHandler = clickOptions && clickOptions.closeOnClick && onCloseClick;
     return /*#__PURE__*/React.createElement(Button, _extends({

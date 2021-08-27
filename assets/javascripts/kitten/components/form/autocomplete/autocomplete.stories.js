@@ -154,6 +154,7 @@ export const Default = () => (
         noResultMessage={text('noResultMessage', undefined)}
         shouldShowNoResultMessage={boolean('shouldShowNoResultMessage', true)}
         items={items}
+        variant="orion"
       />
 
       <p>🐱 🐱 🐱 🐱 🐱</p>
@@ -186,6 +187,7 @@ export const WithIcon = () => (
           { display: 'inline-radio' },
         )}
         items={items}
+        variant="orion"
       />
 
       <p>🐱 🐱 🐱 🐱 🐱</p>

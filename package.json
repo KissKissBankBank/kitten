@@ -1,6 +1,6 @@
 {
   "name": "@kisskissbankbank/kitten",
-  "version": "4.2.1",
+  "version": "4.3.0",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src",
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/KissKissBankBank/kitten.git"
   },
   "engines": {
-    "node": ">=12.x"
+    "node": ">=14.17.5"
   },
   "keywords": [
     "sass",
