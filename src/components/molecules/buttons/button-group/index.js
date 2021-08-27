@@ -25,6 +25,8 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["className", "variant"],
+    _excluded2 = ["className", "active"];
 var borderRadius = (0, _typography.pxToRem)(4);
 var borderSize = (0, _typography.pxToRem)(2);
 
@@ -36,7 +38,7 @@ var StyledButtonGroup = _styledComponents.default.div.withConfig({
 var ButtonGroup = function ButtonGroup(_ref) {
   var className = _ref.className,
       variant = _ref.variant,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "variant"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledButtonGroup, (0, _extends2.default)({
     role: "group"
   }, props, {
@@ -49,7 +51,7 @@ exports.ButtonGroup = ButtonGroup;
 var ButtonGroupButton = function ButtonGroupButton(_ref2) {
   var className = _ref2.className,
       active = _ref2.active,
-      props = (0, _objectWithoutProperties2.default)(_ref2, ["className", "active"]);
+      props = (0, _objectWithoutProperties2.default)(_ref2, _excluded2);
   return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-ButtonGroup__button', className, {
       'k-ButtonGroup__button--isActive': active

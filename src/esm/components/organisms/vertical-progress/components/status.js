@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["statusType", "progressTitle", "titleProps", "children"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -21,7 +22,7 @@ export var Status = function Status(_ref) {
       progressTitle = _ref.progressTitle,
       titleProps = _ref.titleProps,
       children = _ref.children,
-      other = _objectWithoutProperties(_ref, ["statusType", "progressTitle", "titleProps", "children"]);
+      other = _objectWithoutProperties(_ref, _excluded);
 
   var iconByStatus = function () {
     switch (statusType) {

@@ -17,12 +17,14 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _text = require("../../../../atoms/typography/text");
 
+var _excluded = ["legend", "value", "fullWidth"];
+
 var Info = function Info(_ref) {
   var legend = _ref.legend,
       value = _ref.value,
       _ref$fullWidth = _ref.fullWidth,
       fullWidth = _ref$fullWidth === void 0 ? false : _ref$fullWidth,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["legend", "value", "fullWidth"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement("p", (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-BackingCard__info', 'k-u-size-tiny', 'k-u-line-height-normal', props.className, {
       'k-BackingCard__halfDrawer': !fullWidth,

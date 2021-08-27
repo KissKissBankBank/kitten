@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["id", "buttonProps", "buttonSubtitle", "buttonTitle", "canCancel", "cancelButtonText", "canReplace", "disabled", "displaySubtitle", "displayTitle", "documentIcon", "fileInputProps", "loaderAnimation", "loaderText", "onCancel", "onUpload", "replaceButtonText", "status"];
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -96,7 +97,7 @@ export var DocumentManager = function DocumentManager(_ref2) {
       replaceButtonText = _ref2$replaceButtonTe === void 0 ? 'Replace current' : _ref2$replaceButtonTe,
       _ref2$status = _ref2.status,
       status = _ref2$status === void 0 ? 'ready' : _ref2$status,
-      props = _objectWithoutProperties(_ref2, ["id", "buttonProps", "buttonSubtitle", "buttonTitle", "canCancel", "cancelButtonText", "canReplace", "disabled", "displaySubtitle", "displayTitle", "documentIcon", "fileInputProps", "loaderAnimation", "loaderText", "onCancel", "onUpload", "replaceButtonText", "status"]);
+      props = _objectWithoutProperties(_ref2, _excluded);
 
   var _useState = useState(''),
       _useState2 = _slicedToArray(_useState, 2),

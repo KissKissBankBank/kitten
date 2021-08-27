@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["className", "closeButtonLabel", "children", "show", "style", "borderWidth", "borderRadius", "imageBorderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"];
 import React, { useState, cloneElement } from 'react';
 import { CloseButton } from '../../../../components/molecules/buttons/close-button';
 import { StyledContributionCard } from './styles';
@@ -25,7 +26,7 @@ export var ContributionCard = function ContributionCard(_ref) {
       onClose = _ref.onClose,
       largeInput = _ref.largeInput,
       largeTitle = _ref.largeTitle,
-      props = _objectWithoutProperties(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderWidth", "borderRadius", "imageBorderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var imageChild = getReactElementsByType({
     children: children,

@@ -27,6 +27,8 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styled = require("./styled");
 
+var _excluded = ["style"];
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
@@ -46,7 +48,7 @@ var Container = /*#__PURE__*/function (_React$PureComponent) {
     value: function render() {
       var _this$props = this.props,
           style = _this$props.style,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["style"]);
+          others = (0, _objectWithoutProperties2.default)(_this$props, _excluded);
       return /*#__PURE__*/_react.default.createElement(_styled.StyledContainer, (0, _extends2.default)({
         styles: style
       }, others));

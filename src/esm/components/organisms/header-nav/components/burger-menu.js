@@ -1,5 +1,6 @@
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import _extends from "@babel/runtime/helpers/esm/extends";
+var _excluded = ["children", "dropdownContentWidth"];
 import React, { useRef } from 'react';
 import { BurgerIcon } from '../../../../components/graphics/icons/burger-icon';
 import { Dropdown } from './dropdown';
@@ -23,7 +24,7 @@ var buttonClassNames = classNames('k-HeaderNav__BurgerMenu__button', 'k-ButtonIc
 export var BurgerMenu = function BurgerMenu(_ref) {
   var children = _ref.children,
       dropdownContentWidth = _ref.dropdownContentWidth,
-      props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var dropdownComponent = useRef(null);
 

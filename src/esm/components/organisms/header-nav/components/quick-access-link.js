@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["text", "href", "zIndex", "style", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -9,7 +10,7 @@ export var QuickAccessLink = function QuickAccessLink(_ref) {
       zIndex = _ref.zIndex,
       style = _ref.style,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["text", "href", "zIndex", "style", "className"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement("a", _extends({}, props, {
     href: href,

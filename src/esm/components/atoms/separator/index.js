@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["darker", "className"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -9,7 +10,7 @@ import { pxToRem } from '../../../helpers/utils/typography';
 export var Separator = styled(function (_ref) {
   var darker = _ref.darker,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["darker", "className"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var separatorClassName = classNames('k-Separator', {
     'k-Separator--darker': darker

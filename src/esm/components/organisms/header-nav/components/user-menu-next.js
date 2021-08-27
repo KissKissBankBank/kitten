@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["children", "dropdownContentWidth", "closeEvents", "dropdownAnchorSide", "className", "padding", "mobilePadding"];
 import React, { cloneElement, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Context } from './context';
@@ -19,7 +20,7 @@ export var UserMenuNext = function UserMenuNext(_ref) {
       className = _ref.className,
       padding = _ref.padding,
       mobilePadding = _ref.mobilePadding,
-      props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth", "closeEvents", "dropdownAnchorSide", "className", "padding", "mobilePadding"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var _useContext = useContext(Context),
       id = _useContext.id,

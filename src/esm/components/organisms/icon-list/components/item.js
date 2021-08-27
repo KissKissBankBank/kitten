@@ -1,4 +1,5 @@
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["icon", "iconProps", "children"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -11,7 +12,7 @@ export var Item = function Item(_ref) {
   var icon = _ref.icon,
       iconProps = _ref.iconProps,
       children = _ref.children,
-      others = _objectWithoutProperties(_ref, ["icon", "iconProps", "children"]);
+      others = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledItem, others, /*#__PURE__*/React.createElement(Icon, iconProps, icon), /*#__PURE__*/React.createElement(StyledContent, null, children));
 };

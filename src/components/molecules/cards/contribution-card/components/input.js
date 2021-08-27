@@ -21,11 +21,13 @@ var _textInputWithUnit = require("../../../../form/text-input-with-unit");
 
 var _context = require("../context");
 
+var _excluded = ["valid", "onChange", "className"];
+
 var Input = function Input(_ref) {
   var valid = _ref.valid,
       _onChange = _ref.onChange,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["valid", "onChange", "className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_context.Context.Consumer, null, function (_ref2) {
     var setEmptyInput = _ref2.setEmptyInput;
     return /*#__PURE__*/_react.default.createElement(_textInputWithUnit.TextInputWithUnit, (0, _extends2.default)({

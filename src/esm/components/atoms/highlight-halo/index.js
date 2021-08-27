@@ -5,6 +5,7 @@ import _createClass from "@babel/runtime/helpers/esm/createClass";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
+var _excluded = ["onHaloAnimationEnd"];
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -111,7 +112,7 @@ export var HighlightHalo = /*#__PURE__*/function (_Component) {
 
       var _this$props = this.props,
           onHaloAnimationEnd = _this$props.onHaloAnimationEnd,
-          other = _objectWithoutProperties(_this$props, ["onHaloAnimationEnd"]);
+          other = _objectWithoutProperties(_this$props, _excluded);
 
       return /*#__PURE__*/React.createElement(StyledHighlightHalo, _extends({
         highlightHaloAnimation: this.highlightHaloAnimation(),

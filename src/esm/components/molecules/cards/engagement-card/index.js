@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["icon", "backgroundColor", "href", "children", "hoverBorder", "isActive", "as"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -30,7 +31,7 @@ export var EngagementCard = function EngagementCard(_ref2) {
       hoverBorder = _ref2.hoverBorder,
       isActive = _ref2.isActive,
       as = _ref2.as,
-      others = _objectWithoutProperties(_ref2, ["icon", "backgroundColor", "href", "children", "hoverBorder", "isActive", "as"]);
+      others = _objectWithoutProperties(_ref2, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledCard, _extends({}, others, {
     as: href ? 'a' : 'div',

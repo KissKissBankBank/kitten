@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["primaryColor", "secondaryColor", "width", "height", "tiny"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
@@ -9,7 +10,7 @@ export var LendopolisLogo = function LendopolisLogo(_ref) {
       width = _ref.width,
       height = _ref.height,
       tiny = _ref.tiny,
-      props = _objectWithoutProperties(_ref, ["primaryColor", "secondaryColor", "width", "height", "tiny"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var DEFAULT_WIDTH = 150;
   var DEFAULT_HEIGHT = 28;

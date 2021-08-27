@@ -23,6 +23,7 @@ var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecate
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["bgColor", "color", "circleColor", "flashColor", "width", "height", "title", "className"];
 var DEFAULT_WIDTH = 20;
 var DEFAULT_HEIGHT = 20;
 
@@ -35,7 +36,7 @@ var FlashCircleIcon = function FlashCircleIcon(_ref) {
       height = _ref.height,
       title = _ref.title,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["bgColor", "color", "circleColor", "flashColor", "width", "height", "title", "className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var computed = (0, _ratio.computeFromRatio)({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,

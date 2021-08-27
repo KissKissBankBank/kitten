@@ -17,6 +17,8 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _excluded = ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "as", "transform", "weight", "style"];
+
 var Text = function Text(_ref) {
   var className = _ref.className,
       color = _ref.color,
@@ -31,7 +33,7 @@ var Text = function Text(_ref) {
       transform = _ref.transform,
       weight = _ref.weight,
       style = _ref.style,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "as", "transform", "weight", "style"]);
+      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var Tag = as || tag;
   var textClassName = (0, _classnames.default)({
     // Color.

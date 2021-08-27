@@ -25,6 +25,9 @@ var _typography = require("./../../../helpers/utils/typography");
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
+var _excluded = ["children"],
+    _excluded2 = ["done", "children", "a11yText", "className"];
+
 var List = _styledComponents.default.ul.withConfig({
   displayName: "check-list__List",
   componentId: "sc-1om0unj-0"
@@ -38,7 +41,7 @@ var a11yProps = function a11yProps(a11yText, done) {
 
 var CheckList = function CheckList(_ref) {
   var children = _ref.children,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(List, props, children);
 };
 
@@ -49,7 +52,7 @@ CheckList.Item = function (_ref2) {
       children = _ref2.children,
       a11yText = _ref2.a11yText,
       className = _ref2.className,
-      props = (0, _objectWithoutProperties2.default)(_ref2, ["done", "children", "a11yText", "className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref2, _excluded2);
   return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
     className: (0, _classnames.default)('k-CheckList__item', className, {
       'k-CheckList__item--done': done

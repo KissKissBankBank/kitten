@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["backgroundColor", "alt"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Text } from '../../../../../components/atoms/typography/text';
@@ -13,7 +14,7 @@ var Image = function Image(_ref) {
       _ref$imageProps = _ref.imageProps,
       backgroundColor = _ref$imageProps.backgroundColor,
       alt = _ref$imageProps.alt,
-      otherImageProps = _objectWithoutProperties(_ref$imageProps, ["backgroundColor", "alt"]),
+      otherImageProps = _objectWithoutProperties(_ref$imageProps, _excluded),
       videoProps = _ref.videoProps,
       videoSources = _ref.videoSources,
       avatarProps = _ref.avatarProps,

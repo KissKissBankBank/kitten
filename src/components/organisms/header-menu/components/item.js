@@ -23,6 +23,8 @@ var _arrowIcon = require("../../../graphics/icons/arrow-icon");
 
 var _button = require("../../../../components/molecules/buttons/button");
 
+var _excluded = ["children", "external", "liProps", "modifier", "button", "size", "isSelected", "as", "tag"];
+
 var Item = function Item(_ref) {
   var children = _ref.children,
       external = _ref.external,
@@ -33,7 +35,7 @@ var Item = function Item(_ref) {
       isSelected = _ref.isSelected,
       as = _ref.as,
       tag = _ref.tag,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["children", "external", "liProps", "modifier", "button", "size", "isSelected", "as", "tag"]);
+      other = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var Component = as || tag;
   return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
     role: "menuitem"

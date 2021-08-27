@@ -1,5 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["tag"],
+    _excluded2 = ["className", "tag", "withoutHover", "verticalArrow", "size"];
 import React from 'react';
 import classNames from 'classnames';
 import { Button } from '../../../../components/molecules/buttons/button';
@@ -7,7 +9,7 @@ import { pxToRem } from '../../../../helpers/utils/typography';
 import styled from 'styled-components';
 var StyledButton = styled(function (_ref) {
   var tag = _ref.tag,
-      props = _objectWithoutProperties(_ref, ["tag"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(Button, _extends({}, props, {
     as: tag
@@ -22,7 +24,7 @@ export var ButtonIcon = function ButtonIcon(_ref2) {
       withoutHover = _ref2.withoutHover,
       verticalArrow = _ref2.verticalArrow,
       size = _ref2.size,
-      others = _objectWithoutProperties(_ref2, ["className", "tag", "withoutHover", "verticalArrow", "size"]);
+      others = _objectWithoutProperties(_ref2, _excluded2);
 
   return /*#__PURE__*/React.createElement(StyledButton, _extends({
     className: classNames('k-ButtonIcon', className, "k-ButtonIcon--".concat(size), {

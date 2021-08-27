@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -41,6 +41,12 @@ var _text = require("../../../../components/atoms/typography/text");
 
 var _elementHelper = require("../../../../helpers/dom/element-helper");
 
+var _excluded = ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "imageContainerRatio", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "videoProps", "videoSources", "widgetState", "buttonText", "forceVersion", "progressLabel"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var CrowdfundingCard = function CrowdfundingCard(_ref) {
   var additionalInfo = _ref.additionalInfo,
       avatarProps = _ref.avatarProps,
@@ -71,7 +77,7 @@ var CrowdfundingCard = function CrowdfundingCard(_ref) {
       buttonText = _ref.buttonText,
       forceVersion = _ref.forceVersion,
       progressLabel = _ref.progressLabel,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "imageContainerRatio", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "videoProps", "videoSources", "widgetState", "buttonText", "forceVersion", "progressLabel"]);
+      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
 
   var removeCurrentFocus = function removeCurrentFocus() {
     document.activeElement.blur();
@@ -90,11 +96,11 @@ var CrowdfundingCard = function CrowdfundingCard(_ref) {
   (0, _react.useEffect)(function () {
     if (_elementHelper.domElementHelper.canUseDom() && typeof document !== 'undefined' && 'fonts' in document // IE11 Fix, tests `document.fonts.ready.then()`
     ) {
-        document.fonts.ready.then(function () {
-          setTitleTruncate(titleTruncate);
-          setSubTitleTruncate(subTitleTruncate);
-        });
-      }
+      document.fonts.ready.then(function () {
+        setTitleTruncate(titleTruncate);
+        setSubTitleTruncate(subTitleTruncate);
+      });
+    }
   }, []);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledCrowdfundingCard, (0, _extends2.default)({}, others, {
     as: href ? 'a' : 'div',

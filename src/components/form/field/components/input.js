@@ -23,12 +23,14 @@ var _textInputWithLimit = require("../../../form/text-input-with-limit");
 
 var _textInputWithUnit = require("../../../form/text-input-with-unit");
 
+var _excluded = ["limit", "unit", "noMargin", "className"];
+
 var FieldInput = function FieldInput(_ref) {
   var limit = _ref.limit,
       unit = _ref.unit,
       noMargin = _ref.noMargin,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["limit", "unit", "noMargin", "className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var Input = _textInput.TextInput;
 
   if (limit) {

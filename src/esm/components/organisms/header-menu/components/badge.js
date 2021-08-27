@@ -1,12 +1,13 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["backgroundColor"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Badge as BadgeComponent } from '../../../../components/atoms/badge';
 import COLORS from '../../../../constants/colors-config';
 export var Badge = function Badge(_ref) {
   var backgroundColor = _ref.backgroundColor,
-      props = _objectWithoutProperties(_ref, ["backgroundColor"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(BadgeComponent, _extends({
     color: backgroundColor,
