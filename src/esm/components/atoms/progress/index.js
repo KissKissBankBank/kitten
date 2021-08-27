@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["color", "className", "value", "rampProps", "variant", "disabled"];
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -26,7 +27,7 @@ export var Progress = function Progress(_ref3) {
       rampProps = _ref3.rampProps,
       variant = _ref3.variant,
       disabled = _ref3.disabled,
-      others = _objectWithoutProperties(_ref3, ["color", "className", "value", "rampProps", "variant", "disabled"]);
+      others = _objectWithoutProperties(_ref3, _excluded);
 
   var _useState = useState(0),
       _useState2 = _slicedToArray(_useState, 2),

@@ -15,6 +15,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _excluded = ["iconTitle", "title", "color", "circleProps", "pathProps", "width", "height"];
+
 var SearchIcon = function SearchIcon(_ref) {
   var iconTitle = _ref.iconTitle,
       title = _ref.title,
@@ -23,7 +25,7 @@ var SearchIcon = function SearchIcon(_ref) {
       pathProps = _ref.pathProps,
       width = _ref.width,
       height = _ref.height,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["iconTitle", "title", "color", "circleProps", "pathProps", "width", "height"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     "aria-label": title,
     width: width,

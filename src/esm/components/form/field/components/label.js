@@ -5,6 +5,7 @@ import _createClass from "@babel/runtime/helpers/esm/createClass";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
+var _excluded = ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link"];
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -36,7 +37,7 @@ export var FieldLabel = /*#__PURE__*/function (_Component) {
           tooltipProps = _this$props.tooltipProps,
           labelProps = _this$props.labelProps,
           link = _this$props.link,
-          others = _objectWithoutProperties(_this$props, ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link"]);
+          others = _objectWithoutProperties(_this$props, _excluded);
 
       return /*#__PURE__*/React.createElement("div", _extends({
         className: "k-u-margin-bottom-single"

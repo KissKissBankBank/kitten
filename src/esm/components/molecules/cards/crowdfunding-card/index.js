@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "imageContainerRatio", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "videoProps", "videoSources", "widgetState", "buttonText", "forceVersion", "progressLabel"];
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Image from './components/image';
@@ -44,7 +45,7 @@ export var CrowdfundingCard = function CrowdfundingCard(_ref) {
       buttonText = _ref.buttonText,
       forceVersion = _ref.forceVersion,
       progressLabel = _ref.progressLabel,
-      others = _objectWithoutProperties(_ref, ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "imageContainerRatio", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "videoProps", "videoSources", "widgetState", "buttonText", "forceVersion", "progressLabel"]);
+      others = _objectWithoutProperties(_ref, _excluded);
 
   var removeCurrentFocus = function removeCurrentFocus() {
     document.activeElement.blur();
@@ -63,11 +64,11 @@ export var CrowdfundingCard = function CrowdfundingCard(_ref) {
   useEffect(function () {
     if (domElementHelper.canUseDom() && typeof document !== 'undefined' && 'fonts' in document // IE11 Fix, tests `document.fonts.ready.then()`
     ) {
-        document.fonts.ready.then(function () {
-          setTitleTruncate(titleTruncate);
-          setSubTitleTruncate(subTitleTruncate);
-        });
-      }
+      document.fonts.ready.then(function () {
+        setTitleTruncate(titleTruncate);
+        setSubTitleTruncate(subTitleTruncate);
+      });
+    }
   }, []);
   return /*#__PURE__*/React.createElement(StyledCrowdfundingCard, _extends({}, others, {
     as: href ? 'a' : 'div',

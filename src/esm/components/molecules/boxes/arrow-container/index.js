@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["children", "className", "color", "size", "distance", "distanceAsPercentage", "distanceIsReverse", "position", "centered", "padding", "shadow", "borderRadius", "borderColor", "borderWidth", "style"];
 import React from 'react';
 import styled from 'styled-components';
 import COLORS from '../../../../constants/colors-config';
@@ -26,7 +27,7 @@ export var ArrowContainer = function ArrowContainer(_ref) {
       borderColor = _ref.borderColor,
       borderWidth = _ref.borderWidth,
       style = _ref.style,
-      props = _objectWithoutProperties(_ref, ["children", "className", "color", "size", "distance", "distanceAsPercentage", "distanceIsReverse", "position", "centered", "padding", "shadow", "borderRadius", "borderColor", "borderWidth", "style"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var arrowDistance = function () {
     switch (true) {

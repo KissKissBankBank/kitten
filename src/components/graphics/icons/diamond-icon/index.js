@@ -17,10 +17,12 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
+var _excluded = ["title", "color"];
+
 var DiamondIcon = function DiamondIcon(_ref) {
   var title = _ref.title,
       color = _ref.color,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["title", "color"]);
+      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     width: "19",

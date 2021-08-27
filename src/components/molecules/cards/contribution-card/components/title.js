@@ -19,9 +19,11 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _text = require("../../../../../components/atoms/typography/text");
 
+var _excluded = ["largeTitle"];
+
 var Title = function Title(_ref) {
   var largeTitle = _ref.largeTitle,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["largeTitle"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     color: "font1",
     weight: "bold"

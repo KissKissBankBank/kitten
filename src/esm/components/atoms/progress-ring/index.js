@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["color", "value", "width", "strokeWidth", "variant", "className", "animationSpeed"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
@@ -55,7 +56,7 @@ export var ProgressRing = function ProgressRing(_ref7) {
       variant = _ref7.variant,
       className = _ref7.className,
       animationSpeed = _ref7.animationSpeed,
-      others = _objectWithoutProperties(_ref7, ["color", "value", "width", "strokeWidth", "variant", "className", "animationSpeed"]);
+      others = _objectWithoutProperties(_ref7, _excluded);
 
   var circleX = width / 2;
   var circleY = width / 2;

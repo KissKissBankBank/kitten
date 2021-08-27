@@ -1,5 +1,9 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["className"],
+    _excluded2 = ["className"],
+    _excluded3 = ["className"],
+    _excluded4 = ["className"];
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
@@ -15,7 +19,7 @@ var StyledSideCard = styled.div.withConfig({
 
 var Title = function Title(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["className"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(Text, _extends({
     size: "tiny",
@@ -29,7 +33,7 @@ var Title = function Title(_ref) {
 
 var Paragraph = function Paragraph(_ref2) {
   var className = _ref2.className,
-      props = _objectWithoutProperties(_ref2, ["className"]);
+      props = _objectWithoutProperties(_ref2, _excluded2);
 
   return /*#__PURE__*/React.createElement(SideParagraph, _extends({
     modifier: "tertiary",
@@ -40,7 +44,7 @@ var Paragraph = function Paragraph(_ref2) {
 
 var List = function List(_ref3) {
   var className = _ref3.className,
-      props = _objectWithoutProperties(_ref3, ["className"]);
+      props = _objectWithoutProperties(_ref3, _excluded3);
 
   return /*#__PURE__*/React.createElement("ul", _extends({
     className: classNames('k-DashboardLayout__flow__sideCard__list', className)
@@ -49,7 +53,7 @@ var List = function List(_ref3) {
 
 export var SideCard = function SideCard(_ref4) {
   var className = _ref4.className,
-      props = _objectWithoutProperties(_ref4, ["className"]);
+      props = _objectWithoutProperties(_ref4, _excluded4);
 
   return /*#__PURE__*/React.createElement(StyledSideCard, _extends({
     className: classNames('k-DashboardLayout__flow__sideCard', className)

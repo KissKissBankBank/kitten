@@ -17,12 +17,15 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["children", "href", "isSelected", "className"],
+    _excluded2 = ["children", "className"];
+
 var Item = function Item(_ref) {
   var children = _ref.children,
       href = _ref.href,
       isSelected = _ref.isSelected,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "href", "isSelected", "className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var itemClassNames = (0, _classnames.default)('k-HeaderNav-nav__item', {
     'is-selected': isSelected
   }, className);
@@ -45,7 +48,7 @@ Item.proptypes = {
 var Nav = function Nav(_ref2) {
   var children = _ref2.children,
       className = _ref2.className,
-      props = (0, _objectWithoutProperties2.default)(_ref2, ["children", "className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref2, _excluded2);
   return /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({}, props, {
     role: "menubar",
     className: (0, _classnames.default)('k-HeaderNav-nav', className)

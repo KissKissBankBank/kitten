@@ -27,6 +27,8 @@ var _typographyConfig = _interopRequireDefault(require("../../../../constants/ty
 
 var _typography = require("../../../../helpers/utils/typography");
 
+var _excluded = ["title", "titleProps", "children"];
+
 var StyledInformationBox = _styledComponents.default.div.withConfig({
   displayName: "information-box__StyledInformationBox",
   componentId: "cr7cpl-0"
@@ -36,7 +38,7 @@ var InformationBox = function InformationBox(_ref) {
   var title = _ref.title,
       titleProps = _ref.titleProps,
       children = _ref.children,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["title", "titleProps", "children"]);
+      other = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledInformationBox, (0, _extends2.default)({}, other, {
     className: (0, _classnames.default)('k-InformationBox', other.className)
   }), /*#__PURE__*/_react.default.createElement("div", {

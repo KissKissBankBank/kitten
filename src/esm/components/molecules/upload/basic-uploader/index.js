@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["id", "buttonProps", "buttonText", "canCancel", "cancelButtonText", "disabled", "errorText", "fileInputProps", "fileName", "loaderAnimation", "onCancel", "onUpload", "status", "statusText"];
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -50,7 +51,7 @@ export var BasicUploader = function BasicUploader(_ref) {
       status = _ref$status === void 0 ? 'ready' : _ref$status,
       _ref$statusText = _ref.statusText,
       statusText = _ref$statusText === void 0 ? '' : _ref$statusText,
-      props = _objectWithoutProperties(_ref, ["id", "buttonProps", "buttonText", "canCancel", "cancelButtonText", "disabled", "errorText", "fileInputProps", "fileName", "loaderAnimation", "onCancel", "onUpload", "status", "statusText"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var _useState = useState(status),
       _useState2 = _slicedToArray(_useState, 2),

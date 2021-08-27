@@ -25,6 +25,8 @@ var _typographyConfig = _interopRequireDefault(require("../../../../constants/ty
 
 var _titleModifierStyles = require("../common/title-modifier-styles");
 
+var _excluded = ["modifier", "tag", "noMargin", "italic", "cssColor", "className"];
+
 var StyledTitle = _styledComponents.default.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "g1nppx-0"
@@ -37,7 +39,7 @@ var Title = function Title(_ref) {
       italic = _ref.italic,
       cssColor = _ref.cssColor,
       className = _ref.className,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["modifier", "tag", "noMargin", "italic", "cssColor", "className"]);
+      other = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledTitle, (0, _extends2.default)({
     as: tag,
     modifier: modifier,

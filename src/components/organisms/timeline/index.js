@@ -29,6 +29,7 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["children", "itemHeight"];
 var circleSize = 50;
 
 var StyledTimeline = _styledComponents.default.div.withConfig({
@@ -39,7 +40,7 @@ var StyledTimeline = _styledComponents.default.div.withConfig({
 var Timeline = function Timeline(_ref) {
   var children = _ref.children,
       itemHeight = _ref.itemHeight,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "itemHeight"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledTimeline, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Timeline', "k-Timeline--".concat(itemHeight))
   }, props), /*#__PURE__*/_react.default.createElement("span", {

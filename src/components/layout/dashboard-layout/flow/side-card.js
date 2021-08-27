@@ -27,6 +27,11 @@ var _screenConfig = require("../../../../constants/screen-config");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
+var _excluded = ["className"],
+    _excluded2 = ["className"],
+    _excluded3 = ["className"],
+    _excluded4 = ["className"];
+
 var StyledSideCard = _styledComponents.default.div.withConfig({
   displayName: "side-card__StyledSideCard",
   componentId: "s3armu-0"
@@ -34,7 +39,7 @@ var StyledSideCard = _styledComponents.default.div.withConfig({
 
 var Title = function Title(_ref) {
   var className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     size: "tiny",
     tag: "h3",
@@ -47,7 +52,7 @@ var Title = function Title(_ref) {
 
 var Paragraph = function Paragraph(_ref2) {
   var className = _ref2.className,
-      props = (0, _objectWithoutProperties2.default)(_ref2, ["className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref2, _excluded2);
   return /*#__PURE__*/_react.default.createElement(_next.Paragraph, (0, _extends2.default)({
     modifier: "tertiary",
     margin: false,
@@ -57,7 +62,7 @@ var Paragraph = function Paragraph(_ref2) {
 
 var List = function List(_ref3) {
   var className = _ref3.className,
-      props = (0, _objectWithoutProperties2.default)(_ref3, ["className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref3, _excluded3);
   return /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__flow__sideCard__list', className)
   }, props));
@@ -65,7 +70,7 @@ var List = function List(_ref3) {
 
 var SideCard = function SideCard(_ref4) {
   var className = _ref4.className,
-      props = (0, _objectWithoutProperties2.default)(_ref4, ["className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref4, _excluded4);
   return /*#__PURE__*/_react.default.createElement(StyledSideCard, (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__flow__sideCard', className)
   }, props));

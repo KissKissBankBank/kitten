@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["src", "onChange", "className", "initialCrop", "disabled"];
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { useDrag } from '../hooks/use-drag';
@@ -11,7 +12,7 @@ export var ImageCropper = function ImageCropper(_ref) {
       className = _ref.className,
       initialCrop = _ref.initialCrop,
       disabled = _ref.disabled,
-      props = _objectWithoutProperties(_ref, ["src", "onChange", "className", "initialCrop", "disabled"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var _useState = useState(null),
       _useState2 = _slicedToArray(_useState, 2),

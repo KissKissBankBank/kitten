@@ -21,9 +21,11 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _excluded = ["tag"],
+    _excluded2 = ["className", "tag", "withoutHover", "verticalArrow", "size"];
 var StyledButton = (0, _styledComponents.default)(function (_ref) {
   var tag = _ref.tag,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["tag"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, props, {
     as: tag
   }));
@@ -38,7 +40,7 @@ var ButtonIcon = function ButtonIcon(_ref2) {
       withoutHover = _ref2.withoutHover,
       verticalArrow = _ref2.verticalArrow,
       size = _ref2.size,
-      others = (0, _objectWithoutProperties2.default)(_ref2, ["className", "tag", "withoutHover", "verticalArrow", "size"]);
+      others = (0, _objectWithoutProperties2.default)(_ref2, _excluded2);
   return /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
     className: (0, _classnames.default)('k-ButtonIcon', className, "k-ButtonIcon--".concat(size), {
       'k-ButtonIcon--withoutHover': withoutHover,

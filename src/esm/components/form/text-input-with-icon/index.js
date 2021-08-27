@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["disabled", "icon", "iconPosition", "accessibilityLabel", "id"];
 import React from 'react';
 import styled from 'styled-components';
 import { pxToRem } from '../../../helpers/utils/typography';
@@ -18,7 +19,7 @@ export var TextInputWithIcon = function TextInputWithIcon(_ref) {
       iconPosition = _ref.iconPosition,
       accessibilityLabel = _ref.accessibilityLabel,
       id = _ref.id,
-      others = _objectWithoutProperties(_ref, ["disabled", "icon", "iconPosition", "accessibilityLabel", "id"]);
+      others = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledTextInputWithIcon, {
     className: classNames('k-Form-TextInputWithIcon', "k-Form-TextInputWithIcon--icon_".concat(iconPosition))

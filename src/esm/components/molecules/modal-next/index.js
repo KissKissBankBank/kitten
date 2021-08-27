@@ -2,6 +2,11 @@ import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
+var _excluded = ["children", "className"],
+    _excluded2 = ["children", "withoutMargin", "className", "align", "tag"],
+    _excluded3 = ["className", "sticky", "stickyOnMobile", "fullSize", "fullSizeOnMobile"],
+    _excluded4 = ["onClick"],
+    _excluded5 = ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "size", "isOpen", "zIndex", "fullSize", "fullSizeOnMobile", "fullSizeTitle", "variant", "headerTitle", "headerActions", "headerMessage", "contentCols", "headerZIndex"];
 
 var _templateObject;
 
@@ -39,7 +44,7 @@ var GlobalStyle = createGlobalStyle(_templateObject || (_templateObject = _tagge
 var ModalTitle = function ModalTitle(_ref) {
   var children = _ref.children,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["children", "className"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(Title, _extends({
     modifier: "quaternary",
@@ -55,7 +60,7 @@ var ModalParagraph = function ModalParagraph(_ref2) {
       className = _ref2.className,
       align = _ref2.align,
       tag = _ref2.tag,
-      props = _objectWithoutProperties(_ref2, ["children", "withoutMargin", "className", "align", "tag"]);
+      props = _objectWithoutProperties(_ref2, _excluded2);
 
   return /*#__PURE__*/React.createElement(StyledParagraph, _extends({
     modifier: "tertiary",
@@ -84,7 +89,7 @@ var Actions = function Actions(_ref3) {
       stickyOnMobile = _ref3.stickyOnMobile,
       fullSize = _ref3.fullSize,
       fullSizeOnMobile = _ref3.fullSizeOnMobile,
-      props = _objectWithoutProperties(_ref3, ["className", "sticky", "stickyOnMobile", "fullSize", "fullSizeOnMobile"]);
+      props = _objectWithoutProperties(_ref3, _excluded3);
 
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-ModalNext__actions', className, {
@@ -132,7 +137,7 @@ export var updateState = function updateState(show) {
 
 var CloseActionButton = function CloseActionButton(_ref4) {
   var _onClick = _ref4.onClick,
-      props = _objectWithoutProperties(_ref4, ["onClick"]);
+      props = _objectWithoutProperties(_ref4, _excluded4);
 
   var _useContext = useContext(ModalContext),
       _useContext2 = _slicedToArray(_useContext, 2),
@@ -187,7 +192,7 @@ var InnerModal = function InnerModal(_ref6) {
       headerMessage = _ref6.headerMessage,
       contentCols = _ref6.contentCols,
       headerZIndex = _ref6.headerZIndex,
-      others = _objectWithoutProperties(_ref6, ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "size", "isOpen", "zIndex", "fullSize", "fullSizeOnMobile", "fullSizeTitle", "variant", "headerTitle", "headerActions", "headerMessage", "contentCols", "headerZIndex"]);
+      others = _objectWithoutProperties(_ref6, _excluded5);
 
   var _useContext3 = useContext(ModalContext),
       _useContext4 = _slicedToArray(_useContext3, 2),
