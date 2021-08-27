@@ -1,6 +1,8 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["modifier", "style", "className", "children", "actionLabel", "actionProps", "bubbleProps", "targetElement"],
+    _excluded2 = ["className", "zIndex", "color", "style"];
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -45,7 +47,7 @@ export var Toggletip = function Toggletip(_ref2) {
       actionProps = _ref2.actionProps,
       bubbleProps = _ref2.bubbleProps,
       targetElement = _ref2.targetElement,
-      props = _objectWithoutProperties(_ref2, ["modifier", "style", "className", "children", "actionLabel", "actionProps", "bubbleProps", "targetElement"]);
+      props = _objectWithoutProperties(_ref2, _excluded);
 
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -88,7 +90,7 @@ export var Toggletip = function Toggletip(_ref2) {
       bubbleZIndex = bubbleProps.zIndex,
       bubbleColor = bubbleProps.color,
       bubbleStyle = bubbleProps.style,
-      otherBubbleProps = _objectWithoutProperties(bubbleProps, ["className", "zIndex", "color", "style"]);
+      otherBubbleProps = _objectWithoutProperties(bubbleProps, _excluded2);
 
   useEffect(function () {
     if (isHover) {

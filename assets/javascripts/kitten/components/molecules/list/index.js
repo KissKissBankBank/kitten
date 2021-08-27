@@ -43,10 +43,10 @@ export const List = ({
       styles={style}
       radiusValue={radiusValue}
     >
-      {React.Children.map(children, child => {
+      {React.Children.map(children, (child, index) => {
         if (!React.isValidElement(child)) return null
 
-        return <li>{child}</li>
+        return <li key={index}>{child}</li>
       })}
     </StyledList>
   )

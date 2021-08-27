@@ -1,10 +1,16 @@
 import React from 'react'
 import { CloseButton } from './index'
 import { Marger, Container, Grid, GridCol } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: CloseButton,
   title: 'Molecules/Buttons/CloseButton',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="CloseButton" />,
+    },
+  },
 }
 
 const StoryContainer = ({ children }) => (

@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["className", "children", "disabled", "valid", "empty", "big", "huge", "size"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -19,7 +20,7 @@ export var IconBadge = function IconBadge(_ref) {
       big = _ref.big,
       huge = _ref.huge,
       size = _ref.size,
-      others = _objectWithoutProperties(_ref, ["className", "children", "disabled", "valid", "empty", "big", "huge", "size"]);
+      others = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledBadge, _extends({
     className: classNames('k-IconBadge', className, "k-IconBadge--".concat(size), {

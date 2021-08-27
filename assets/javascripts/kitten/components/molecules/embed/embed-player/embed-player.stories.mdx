@@ -1,16 +1,16 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
 import * as stories from './embed-player.stories.js'
 import { EmbedPlayer } from './index'
+import { FileUrl } from 'storybook/file-url'
+
 
 <Meta title="Molecules/Embed/EmbedPlayer" component={EmbedPlayer} />
 
 # EmbedPlayer
 
-## Usage
+## Source
 
-<Canvas>
-  <Story name="Default" story={stories.Default} />
-</Canvas>
+<FileUrl filepath={__filename} />
 
 ## Import
 
@@ -19,6 +19,10 @@ import { EmbedPlayer } from '@kisskissbankbank/kitten'
 ```
 
 ## Usage
+
+<Canvas>
+  <Story name="Default" story={stories.Default} />
+</Canvas>
 
 #### Default
 

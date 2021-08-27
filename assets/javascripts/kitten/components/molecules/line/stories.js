@@ -1,9 +1,15 @@
 import React from 'react'
 import { Line } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Molecules/Line',
   component: Line,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Line" />,
+    },
+  },
 }
 
 export const Default = () => (

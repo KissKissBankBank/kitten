@@ -2,12 +2,15 @@ import React from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { CheckboxSet } from './index'
 import { Grid, GridCol } from '../../../components/layout/grid'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: CheckboxSet,
   title: 'Form/CheckboxSet',
   parameters: {
-    component: CheckboxSet,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="CheckboxSet" />,
+    },
   },
 }
 

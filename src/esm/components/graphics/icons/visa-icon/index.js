@@ -1,10 +1,11 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["className"];
 import React from 'react';
 import classNames from 'classnames';
 export var VisaIcon = function VisaIcon(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["className"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",

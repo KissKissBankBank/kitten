@@ -1,6 +1,8 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["children", "dropdownContentWidth", "padding", "closeEvents", "buttonProps", "className"],
+    _excluded2 = ["children"];
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Dropdown } from './dropdown';
@@ -16,7 +18,7 @@ export var UserMenu = function UserMenu(_ref) {
       closeEvents = _ref.closeEvents,
       buttonProps = _ref.buttonProps,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth", "padding", "closeEvents", "buttonProps", "className"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var userDropdownRef = useRef(null);
 
@@ -102,7 +104,7 @@ UserMenu.Button = function (_ref3) {
 
 UserMenu.Navigation = function (_ref4) {
   var children = _ref4.children,
-      props = _objectWithoutProperties(_ref4, ["children"]);
+      props = _objectWithoutProperties(_ref4, _excluded2);
 
   return /*#__PURE__*/React.createElement("div", props, children);
 };

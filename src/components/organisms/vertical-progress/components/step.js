@@ -21,6 +21,8 @@ var _screenConfig = require("../../../../constants/screen-config");
 
 var _status = require("./status");
 
+var _excluded = ["statusType", "statusProps", "progressTitle", "children"];
+
 var StyledItem = _styledComponents.default.li.withConfig({
   displayName: "step__StyledItem",
   componentId: "sc-1iescn5-0"
@@ -31,7 +33,7 @@ var Step = function Step(_ref) {
       statusProps = _ref.statusProps,
       progressTitle = _ref.progressTitle,
       children = _ref.children,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["statusType", "statusProps", "progressTitle", "children"]);
+      other = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledItem, (0, _extends2.default)({
     className: "k-VerticalProgress__item"
   }, other), /*#__PURE__*/_react.default.createElement(_status.Status, (0, _extends2.default)({

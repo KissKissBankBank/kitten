@@ -1,5 +1,6 @@
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["shadowColor", "children"];
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { StyledContainer, StyledScrollableContainer } from './styled';
@@ -9,7 +10,7 @@ export var ScrollableContainer = function ScrollableContainer(_ref) {
   var _ref$shadowColor = _ref.shadowColor,
       shadowColor = _ref$shadowColor === void 0 ? COLORS.background1 : _ref$shadowColor,
       children = _ref.children,
-      other = _objectWithoutProperties(_ref, ["shadowColor", "children"]);
+      other = _objectWithoutProperties(_ref, _excluded);
 
   var _useState = useState(true),
       _useState2 = _slicedToArray(_useState, 2),

@@ -8,10 +8,16 @@ import {
   GridCol,
   Title,
 } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Layout/SideLayout',
   component: SideLayout,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="SideLayout" />,
+    },
+  },
 }
 
 const Sidebar = () => (

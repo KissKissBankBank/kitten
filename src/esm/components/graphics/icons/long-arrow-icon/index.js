@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["direction", "disabled", "color", "title"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
@@ -8,7 +9,7 @@ export var LongArrowIcon = function LongArrowIcon(_ref) {
       disabled = _ref.disabled,
       color = _ref.color,
       title = _ref.title,
-      others = _objectWithoutProperties(_ref, ["direction", "disabled", "color", "title"]);
+      others = _objectWithoutProperties(_ref, _excluded);
 
   var transform = {
     right: 'rotate(180deg)',

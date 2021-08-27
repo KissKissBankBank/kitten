@@ -17,12 +17,14 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
+var _excluded = ["color1", "color2", "width", "height"];
+
 var MicrodonLogo = function MicrodonLogo(_ref) {
   var color1 = _ref.color1,
       color2 = _ref.color2,
       width = _ref.width,
       height = _ref.height,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["color1", "color2", "width", "height"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var DEFAULT_WIDTH = 339.18;
   var DEFAULT_HEIGHT = 64.02;
   var computed = (0, _ratio.computeFromRatio)({

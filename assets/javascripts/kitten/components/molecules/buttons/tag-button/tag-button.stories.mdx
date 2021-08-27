@@ -1,20 +1,16 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
 import * as stories from './tag-button.stories.js'
 import { TagButton } from './index'
+import { FileUrl } from 'storybook/file-url'
+
 
 <Meta title="Molecules/Buttons/TagButton" component={TagButton} />
 
 # TagButton
 
-<Canvas>
-  <Story name="Example" story={stories.Default} />
-</Canvas>
+## Source
 
-## With Icon
-
-<Canvas>
-  <Story name="WithIcon" story={stories.WithIcon} />
-</Canvas>
+<FileUrl filepath={__filename} />
 
 ## Import
 
@@ -24,34 +20,20 @@ import { TagButton } from '@kisskissbankbank/kitten'
 
 ## Usage
 
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
+
+### With Icon
+
+<Canvas>
+  <Story name="WithIcon" story={stories.WithIcon} />
+</Canvas>
+
 #### Default
 
 ```jsx
 <TagButton>MyTag</TagButton>
-```
-
-#### Size
-
-```jsx
-<TagButton tiny>MyTag</TagButton>
-<TagButton big>MyTag</TagButton>
-<TagButton huge>MyTag</TagButton>
-```
-
-#### Modifier
-
-```jsx
-<TagButton modifier="hydrogen">MyTag</TagButton>
-<TagButton modifier="helium">MyTag</TagButton>
-<TagButton modifier="carbon">MyTag</TagButton>
-```
-
-#### Tag
-
-```jsx
-<TagButton as="a" href="#">
-  MyButton
-</TagButton>
 ```
 
 #### With icon

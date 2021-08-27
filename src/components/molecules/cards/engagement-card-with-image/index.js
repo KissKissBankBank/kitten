@@ -23,6 +23,8 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../../constants/screen-config");
 
+var _excluded = ["backgroundImage", "children", "isActive", "href", "as", "imageHeight"];
+
 var StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "engagement-card-with-image__StyledContainer",
   componentId: "sc-1617mnj-0"
@@ -53,7 +55,7 @@ var EngagementCardWithImage = function EngagementCardWithImage(_ref2) {
       href = _ref2.href,
       as = _ref2.as,
       imageHeight = _ref2.imageHeight,
-      others = (0, _objectWithoutProperties2.default)(_ref2, ["backgroundImage", "children", "isActive", "href", "as", "imageHeight"]);
+      others = (0, _objectWithoutProperties2.default)(_ref2, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledContainer, (0, _extends2.default)({}, others, {
     as: href ? 'a' : 'div',
     href: href,

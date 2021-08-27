@@ -2,12 +2,15 @@ import React from 'react'
 import { COLORS } from '../../..'
 import { Hero } from './index'
 import { text, boolean, color, select } from '@storybook/addon-knobs'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Hero,
   title: 'Organisms/Hero',
   parameters: {
-    component: Hero,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Hero" />,
+    },
   },
 }
 

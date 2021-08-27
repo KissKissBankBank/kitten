@@ -1,10 +1,11 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["color", "title"];
 import React from 'react';
 export var HeartIcon = function HeartIcon(_ref) {
   var color = _ref.color,
       title = _ref.title,
-      props = _objectWithoutProperties(_ref, ["color", "title"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",

@@ -23,10 +23,11 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typography = require("../../../helpers/utils/typography");
 
+var _excluded = ["darker", "className"];
 var Separator = (0, _styledComponents.default)(function (_ref) {
   var darker = _ref.darker,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["darker", "className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var separatorClassName = (0, _classnames.default)('k-Separator', {
     'k-Separator--darker': darker
   }, className);

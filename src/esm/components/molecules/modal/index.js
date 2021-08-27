@@ -6,6 +6,7 @@ import _inherits from "@babel/runtime/helpers/esm/inherits";
 import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
+var _excluded = ["trigger", "content", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "disableOutsideScroll", "modalClassNames", "hasCloseButton", "isAnimated"];
 
 var _templateObject, _templateObject2;
 
@@ -114,7 +115,7 @@ export var Modal = /*#__PURE__*/function (_Component) {
           modalClassNames = _this$props.modalClassNames,
           hasCloseButton = _this$props.hasCloseButton,
           isAnimated = _this$props.isAnimated,
-          others = _objectWithoutProperties(_this$props, ["trigger", "content", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "disableOutsideScroll", "modalClassNames", "hasCloseButton", "isAnimated"]);
+          others = _objectWithoutProperties(_this$props, _excluded);
 
       var triggerClassNames = classNames('k-Modal', className);
       return /*#__PURE__*/React.createElement("div", _extends({

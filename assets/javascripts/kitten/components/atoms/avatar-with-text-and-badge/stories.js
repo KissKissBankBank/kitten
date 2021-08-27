@@ -2,10 +2,18 @@ import React from 'react'
 import { AvatarWithTextAndBadge } from './index'
 import { text, color, number, boolean, select } from '@storybook/addon-knobs'
 import { Text } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Atoms/AvatarWithTextAndBadge',
   component: AvatarWithTextAndBadge,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="AvatarWithTextAndBadge" />
+      ),
+    },
+  },
 }
 
 export const Default = () => (

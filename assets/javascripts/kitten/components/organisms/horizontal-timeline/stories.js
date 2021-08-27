@@ -1,12 +1,17 @@
 import React from 'react'
 import { HorizontalTimeline } from './index'
 import { ScrollableContainer, Container, Text, Grid, GridCol } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: HorizontalTimeline,
   title: 'Organisms/HorizontalTimeline',
   parameters: {
-    component: HorizontalTimeline,
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="HorizontalTimeline" />
+      ),
+    },
   },
 }
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { boolean, select } from '@storybook/addon-knobs'
 import { Accordeon } from './index'
 import { Marger, Container, DropdownSelect } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -14,6 +15,11 @@ const StoryContainer = ({ children }) => (
 export default {
   title: 'Molecules/Expand/Accordeon',
   component: Accordeon,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Accordeon" />,
+    },
+  },
 }
 
 export const Default = () => {

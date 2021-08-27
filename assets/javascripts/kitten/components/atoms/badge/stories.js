@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Badge } from './index'
 import { HeartIcon } from '../../../components/graphics/icons/heart-icon'
 import COLORS from '../../../constants/colors-config'
+import { DocsPage } from 'storybook/docs-page'
 
 const Container = styled.div`
   padding: 20px;
@@ -12,6 +13,11 @@ const Container = styled.div`
 export default {
   title: 'Atoms/Badge',
   component: Badge,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Badge" />,
+    },
+  },
 }
 
 export const Default = () => (

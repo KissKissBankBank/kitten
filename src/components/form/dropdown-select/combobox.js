@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -45,6 +45,10 @@ var _isObject = _interopRequireDefault(require("lodash/fp/isObject"));
 
 var _styles = require("./styles");
 
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var getLabelToFilter = function getLabelToFilter(item) {
   if (item.searchableLabel || (0, _isObject.default)(item.label)) {
     return item.searchableLabel || '';
@@ -80,7 +84,8 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       menuZIndex = _ref.menuZIndex,
       className = _ref.className,
       value = _ref.value,
-      _onBlur = _ref.onBlur;
+      _onBlur = _ref.onBlur,
+      controlled = _ref.controlled;
 
   var _useState = (0, _react.useState)([]),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -141,7 +146,7 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     });
   };
 
-  var _useCombobox = (0, _downshift.useCombobox)({
+  var _useCombobox = (0, _downshift.useCombobox)((0, _extends2.default)({
     id: "".concat(id, "_element"),
     inputId: id,
     items: filteredOptions,
@@ -151,9 +156,10 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     onSelectedItemChange: onSelectedItemChange,
     onInputValueChange: onInputValueChange,
     onIsOpenChange: onIsOpenChange,
-    initialIsOpen: openOnLoad,
+    initialIsOpen: openOnLoad
+  }, controlled && {
     selectedItem: selectedItemByValue
-  }),
+  })),
       isOpen = _useCombobox.isOpen,
       getToggleButtonProps = _useCombobox.getToggleButtonProps,
       getLabelProps = _useCombobox.getLabelProps,
@@ -262,6 +268,7 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
 exports.DropdownCombobox = DropdownCombobox;
 DropdownCombobox.defaultProps = {
   hideLabel: false,
+  controlled: false,
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
@@ -286,6 +293,7 @@ DropdownCombobox.propTypes = {
   comboboxButtonLabelText: _propTypes.default.string.isRequired,
   noResultText: _propTypes.default.string.isRequired,
   hideLabel: _propTypes.default.bool,
+  controlled: _propTypes.default.bool,
   options: _propTypes.default.arrayOf(_propTypes.default.object),
   placeholder: _propTypes.default.string,
   labelPropsGetter: _propTypes.default.func,

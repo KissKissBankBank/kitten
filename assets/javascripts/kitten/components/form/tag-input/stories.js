@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { boolean, select } from '@storybook/addon-knobs'
 import { TagInput } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 const Container = styled.div`
   max-width: 650px;
@@ -11,6 +12,11 @@ const Container = styled.div`
 export default {
   title: 'Form/TagInput',
   component: TagInput,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="TagInput" />,
+    },
+  },
 }
 
 export const Default = () => {

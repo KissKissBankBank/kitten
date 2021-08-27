@@ -17,6 +17,8 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _excluded = ["ratio", "style", "className"];
+
 var StyledWrapper = _styledComponents.default.div.withConfig({
   displayName: "responsive-iframe-container__StyledWrapper",
   componentId: "sc-58i1ok-0"
@@ -26,7 +28,7 @@ var ResponsiveIframeContainer = function ResponsiveIframeContainer(_ref) {
   var ratio = _ref.ratio,
       style = _ref.style,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["ratio", "style", "className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledWrapper, (0, _extends2.default)({
     className: (0, _classnames.default)('k-ResponsiveIframeContainer', className),
     style: (0, _extends2.default)({}, style, {

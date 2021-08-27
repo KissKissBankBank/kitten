@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["name", "iconLabel", "hiddenIconLabel"];
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { TextInput } from '../../../components/form/text-input';
@@ -16,7 +17,7 @@ export var PasswordInput = function PasswordInput(_ref) {
   var name = _ref.name,
       iconLabel = _ref.iconLabel,
       hiddenIconLabel = _ref.hiddenIconLabel,
-      others = _objectWithoutProperties(_ref, ["name", "iconLabel", "hiddenIconLabel"]);
+      others = _objectWithoutProperties(_ref, _excluded);
 
   var _useState = useState(true),
       _useState2 = _slicedToArray(_useState, 2),

@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["children"];
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import merge from 'lodash/fp/merge';
 import { Number } from './components/number';
@@ -21,7 +22,7 @@ export var useFormContext = function useFormContext() {
 };
 export var CreditCardForm = function CreditCardForm(_ref) {
   var children = _ref.children,
-      props = _objectWithoutProperties(_ref, ["children"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var _useState = useState(merge(defaultProps.values)(props.values)),
       _useState2 = _slicedToArray(_useState, 2),

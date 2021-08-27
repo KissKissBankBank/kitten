@@ -6,10 +6,18 @@ import {
   LinkedinButtonIconWords,
 } from './index'
 import { Marger, Container, Grid, GridCol } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: SocialButtonIconWords,
   title: 'Molecules/Buttons/SocialButtonIconWords',
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="SocialButtonIconWords" />
+      ),
+    },
+  },
 }
 
 const StoryContainer = ({ children }) => (

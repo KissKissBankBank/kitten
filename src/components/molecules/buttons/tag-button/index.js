@@ -25,6 +25,8 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["children", "modifier", "selected", "tiny", "big", "huge", "icon", "className", "variant", "size", "tag", "as"];
+
 var StyledTagButton = _styledComponents.default.button.withConfig({
   displayName: "tag-button__StyledTagButton",
   componentId: "sc-1kq5kfr-0"
@@ -43,7 +45,7 @@ var TagButton = function TagButton(_ref) {
       size = _ref.size,
       tag = _ref.tag,
       as = _ref.as,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["children", "modifier", "selected", "tiny", "big", "huge", "icon", "className", "variant", "size", "tag", "as"]);
+      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledTagButton, (0, _extends2.default)({
     type: !tag && !as ? 'button' : null,
     className: (0, _classnames.default)('k-Buttons__tagButton', className, "k-Buttons__tagButton--".concat(modifier), "k-Buttons__tagButton--".concat(variant), "k-Buttons__tagButton--".concat(size), {

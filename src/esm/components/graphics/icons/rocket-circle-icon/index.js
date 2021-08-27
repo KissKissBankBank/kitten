@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["color", "bgColor", "circleColor", "circleWidth", "circleWidthMobile", "rocketWidth", "rocketWidthMobile", "rocketHeight", "rocketHeightMobile", "rocketColor", "rocketTitle", "className"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -53,7 +54,7 @@ export var RocketCircleIcon = function RocketCircleIcon(_ref10) {
       rocketColor = _ref10.rocketColor,
       rocketTitle = _ref10.rocketTitle,
       className = _ref10.className,
-      others = _objectWithoutProperties(_ref10, ["color", "bgColor", "circleColor", "circleWidth", "circleWidthMobile", "rocketWidth", "rocketWidthMobile", "rocketHeight", "rocketHeightMobile", "rocketColor", "rocketTitle", "className"]);
+      others = _objectWithoutProperties(_ref10, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledRocketCircle, _extends({
     circleWidth: circleWidth,

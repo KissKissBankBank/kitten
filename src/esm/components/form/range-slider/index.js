@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["disabled", "onChange", "initialValue", "wrapperProps", "rangeThumbText", "rangeThumbPosition"];
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -22,7 +23,7 @@ export var RangeSlider = function RangeSlider(_ref) {
       wrapperProps = _ref.wrapperProps,
       rangeThumbText = _ref.rangeThumbText,
       rangeThumbPosition = _ref.rangeThumbPosition,
-      props = _objectWithoutProperties(_ref, ["disabled", "onChange", "initialValue", "wrapperProps", "rangeThumbText", "rangeThumbPosition"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var _useState = useState(0),
       _useState2 = _slicedToArray(_useState, 2),

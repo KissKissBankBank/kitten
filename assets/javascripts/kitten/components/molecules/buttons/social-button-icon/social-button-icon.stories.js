@@ -8,10 +8,18 @@ import {
   PinterestButtonIcon,
 } from './index'
 import { Marger, Container, Grid, GridCol } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: SocialButtonIcon,
   title: 'Molecules/Buttons/SocialButtonIcon',
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="SocialButtonIcon" />
+      ),
+    },
+  },
 }
 
 const StoryContainer = ({ children }) => (
