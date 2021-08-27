@@ -578,7 +578,9 @@ const SiteHeaderComponent = () => {
               backgroundColorActive={COLORS.line1}
             >
               <AvatarWithTextAndBadge>
-                <AvatarWithTextAndBadge.Image src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
+                <AvatarWithTextAndBadge.Image
+                  src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
+                >
                   <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
                 </AvatarWithTextAndBadge.Image>
 

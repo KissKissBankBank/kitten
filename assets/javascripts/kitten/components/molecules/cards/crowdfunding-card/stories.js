@@ -61,7 +61,10 @@ export const CrowdfundingCard = () => (
     <CrowdfundingCardComponent
       progressLabel="Crowdfunding progress"
       href={text('Link', '#')}
-      imageProps={{ alt: '', src: text('Image url', `/kitten-${Math.floor(Math.random() * 10)}.jpg`) }}
+      imageProps={{
+        alt: '',
+        src: text('Image url', `/kitten-${Math.floor(Math.random() * 10)}.jpg`),
+      }}
       ownerTitle={text('Owner title', 'Owner title')}
       ownerDescription={text('Owner description', 'Owner description')}
       loading={boolean('Loading', false)}
@@ -164,7 +167,13 @@ export const LendopolisCrowdfundingCard = () => {
     <StoryContainer>
       <CrowdfundingCardComponent
         href={text('Link', '#')}
-        imageProps={{ alt: '', src: text('Image url', `/kitten-${Math.floor(Math.random() * 10)}.jpg`) }}
+        imageProps={{
+          alt: '',
+          src: text(
+            'Image url',
+            `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+          ),
+        }}
         ownerTitle={text('Owner title', 'Urbasolar Energy Ocean Indien 6')}
         loading={boolean('Loading', false)}
         stretch={boolean('Stretch', false)}

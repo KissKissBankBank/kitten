@@ -23,7 +23,10 @@ export const Default = () => {
             <SimpleCard
               href="#"
               imageProps={{
-                src: text('Image src', `/kitten-${Math.floor(Math.random() * 10)}.jpg`),
+                src: text(
+                  'Image src',
+                  `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+                ),
               }}
               title={text('Title', 'Title')}
               subtitle={text('Subtitle', 'Subtitle')}

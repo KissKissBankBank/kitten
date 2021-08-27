@@ -52,7 +52,10 @@ export const Default = () => {
           >
             {boolean('has image', true) && (
               <BackingCard.Image>
-                <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
+                <img
+                  src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
+                  alt=""
+                />
               </BackingCard.Image>
             )}
             <BackingCard.HeadingTag icon="star" text="Star reward" />
@@ -122,7 +125,9 @@ export const Video = () => {
             hasBorder={boolean('Has border', true)}
           >
             <BackingCard.Image>
-              <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
+              <GifVideo
+                poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
+              >
                 <source
                   src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
                   type="video/webm"

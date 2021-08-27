@@ -1,11 +1,8 @@
 import React from 'react'
-import { number, object, boolean } from '@storybook/addon-knobs'
 import { Carousel } from './index'
 import {
   CrowdfundingCard,
   CONTAINER_PADDING,
-  Marger,
-  Container,
   Grid,
   GridCol,
   EngagementCard,
@@ -42,7 +39,6 @@ const args = {
   baseItemMarginBetween: CONTAINER_PADDING,
 }
 
-
 export default {
   component: Carousel,
   title: 'Molecules/Carousels/Carousel',
@@ -62,13 +58,7 @@ export default {
       ),
     },
   },
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
   argTypes: {
     itemMinWidth: { control: 'number' },
     itemsPerPage: { control: 'number' },
@@ -78,10 +68,10 @@ export default {
     showOtherPages: { control: 'boolean' },
     pagesClassName: { control: 'text' },
     preferCompletePaginationOnMobile: { control: 'boolean' },
-    paginationPosition: { control: 'object'},
+    paginationPosition: { control: 'object' },
     prevButtonText: { control: 'text' },
     nextButtonText: { control: 'text' },
-    pageClickText: {control: null },
+    pageClickText: { control: null },
     tinyButtons: { control: 'boolean' },
     firstButtonText: { control: 'text' },
     lastButtonText: { control: 'text' },
@@ -91,7 +81,6 @@ export default {
   },
   args,
 }
-
 
 const data = [
   {
@@ -151,14 +140,11 @@ const data = [
   },
 ]
 
-const paginationPosition = {
-  default: 'bottom',
-  fromL: 'left',
-}
-
-export const Default = (args) => (
+export const Default = args => (
   <Carousel {...args}>
-    {data.map(item => (<CardComponent item={item} />))}
+    {data.map(item => (
+      <CardComponent item={item} />
+    ))}
   </Carousel>
 )
 
@@ -169,13 +155,15 @@ WithSpecificColNumber.args = {
   itemMinWidth: 0,
 }
 
-export const InNestedGrid = (args) => (
+export const InNestedGrid = args => (
   <Grid>
     <GridCol col="10" offset="1">
       <Grid>
         <GridCol col="8" offset="2">
           <Carousel {...args}>
-            {data.map(item => (<CardComponent item={item} />))}
+            {data.map(item => (
+              <CardComponent item={item} />
+            ))}
           </Carousel>
         </GridCol>
       </Grid>
@@ -183,7 +171,7 @@ export const InNestedGrid = (args) => (
   </Grid>
 )
 
-export const WithPassedProps = (args) => (
+export const WithPassedProps = args => (
   <Carousel {...args}>
     {data.map(item => (
       <ViewedCardComponent item={item} key={`CrowdfundingCard${item.title}`} />
@@ -247,8 +235,6 @@ const ViewedCardComponent = ({ item, hasPageBeenViewed, isActivePage }) => (
     state="Custom state"
   />
 )
-
-
 
 const engagementsData = [
   {
@@ -351,7 +337,7 @@ const StyledContainer = styled.div`
   }
 `
 
-export const EngagementsCarousel = (args) => (
+export const EngagementsCarousel = args => (
   <StyledContainer fullWidthBelowScreenSize="S">
     <Carousel {...args}>
       {engagementsData.map(({ bgColor, children }, index) => (
@@ -374,7 +360,6 @@ EngagementsCarousel.args = {
   itemMinWidth: 110,
   hidePaginationOnMobile: true,
   baseItemMarginBetween: 20,
-  paginationPosition:{ default: 'right' },
+  paginationPosition: { default: 'right' },
   showOtherPages: true,
 }
-

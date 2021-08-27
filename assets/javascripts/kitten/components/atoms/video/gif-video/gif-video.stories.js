@@ -20,7 +20,10 @@ export default {
 }
 
 export const Default = () => (
-  <GifVideo style={{ width: '100%' }} poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
+  <GifVideo
+    style={{ width: '100%' }}
+    poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
+  >
     <source
       src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm"
       type="video/webm"
@@ -33,7 +36,10 @@ export const Default = () => (
 )
 
 export const WithUnavailableSources = () => (
-  <GifVideo style={{ width: '100%' }} poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
+  <GifVideo
+    style={{ width: '100%' }}
+    poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
+  >
     <source
       src="https://thisServerDoesNotExist.local/video.webm#BAD_URL"
       type="video/webm"
@@ -46,5 +52,8 @@ export const WithUnavailableSources = () => (
 )
 
 export const WithNoSource = () => (
-  <GifVideo style={{ width: '100%' }} poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+  <GifVideo
+    style={{ width: '100%' }}
+    poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
+  />
 )
