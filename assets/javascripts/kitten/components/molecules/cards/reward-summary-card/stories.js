@@ -1,6 +1,7 @@
 import React from 'react'
 import { RewardSummaryCard } from './index'
 import { Container, COLORS, DropdownMenu, EllipsisIcon } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const argTypes = {
   show: {
@@ -9,19 +10,19 @@ const argTypes = {
     control: { type: 'boolean' },
   },
   title: {
-    name: 'title',
+    name: 'title (story prop)',
     control: { type: 'text' },
   },
   amount: {
-    name: 'amount',
+    name: 'amount (story prop)',
     control: { type: 'text' },
   },
   contribution: {
-    name: 'contribution',
+    name: 'contribution (story prop)',
     control: { type: 'text' },
   },
   availablity: {
-    name: 'availablity',
+    name: 'availablity (story prop)',
     control: { type: 'text' },
   },
   borderColor: {
@@ -64,6 +65,17 @@ const argTypes = {
     description: 'Show/hide image, for story purposes.',
     control: { type: 'boolean' },
   },
+  hasTitleTag: {
+    name: 'hasTitleTag (story prop)',
+    description: 'Show/hide title tag, for story purposes.',
+    control: { type: 'boolean' },
+  },
+  titleTagIcon: {
+    name: 'titleTagIcon (story prop)',
+    description: 'Specify the icon used for the RewardSummaryCard.TitleTag',
+    options: ['star', 'diamond'],
+    control: { type: 'inline-radio' }
+  }
 }
 
 const args = {
@@ -82,11 +94,13 @@ const args = {
       console.log('Clicked')
     },
   },
-  hasImage: true,
   title: 'Stickers Free Boobs Club',
   amount: '10 000€',
   contribution: '1 468 000',
   availablity: 'Illimitée',
+  hasImage: true,
+  hasTitleTag: true,
+  titleTagIcon: 'star',
 }
 
 export default {
@@ -95,35 +109,67 @@ export default {
   parameters: {
     component: RewardSummaryCard,
   },
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={[
+            'index.js',
+            'styles.js',
+            'components/amount.js',
+            'components/availablity.js',
+            'components/contribution.js',
+            'components/image.js',
+            'components/index.js',
+            'components/options.js',
+            'components/title-tag.js',
+            'components/title.js',
+          ]}
+          importString="RewardSummaryCard"
+        />),
+    },
+  },
   decorators: [story => <div className="story-Container">{story()}</div>],
   args,
   argTypes,
 }
 
-export const Default = args => {
+export const Default = ({
+  title,
+  amount,
+  contribution,
+  availablity,
+  titleTagIcon,
+  hasImage,
+  hasTitleTag,
+  ...args
+}) => {
   return (
     <Container>
       <RewardSummaryCard {...args}>
-        {args.hasImage && (
+        {hasImage && (
           <RewardSummaryCard.Image>
             <img src="/kitten.jpg" alt="" />
           </RewardSummaryCard.Image>
         )}
 
-        <RewardSummaryCard.Title>{args.title}</RewardSummaryCard.Title>
+        <RewardSummaryCard.Title>
+          {title}
+          {hasTitleTag &&(
+            <RewardSummaryCard.TitleTag
+              icon={titleTagIcon}
+              text="Contrepartie star"
+            />
+          )}
+        </RewardSummaryCard.Title>
 
-        <RewardSummaryCard.TitleTag
-          className="k-u-margin-top-single"
-          icon="star"
-          text="Contrepartie star"
-        />
-
-        <RewardSummaryCard.Amount>{args.amount}</RewardSummaryCard.Amount>
+        <RewardSummaryCard.Amount>{amount}</RewardSummaryCard.Amount>
         <RewardSummaryCard.Contribution>
-          {args.contribution}
+          {contribution}
         </RewardSummaryCard.Contribution>
         <RewardSummaryCard.Availablity>
-          {args.availablity}
+          {availablity}
         </RewardSummaryCard.Availablity>
         <RewardSummaryCard.Options>
           <DropdownMenu
