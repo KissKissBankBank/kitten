@@ -8,6 +8,22 @@ const argTypes = {
     description: 'If empty return null',
     control: { type: 'boolean' },
   },
+  title: {
+    name: 'title',
+    control: { type: 'text' },
+  },
+  amount: {
+    name: 'amount',
+    control: { type: 'text' },
+  },
+  contribution: {
+    name: 'contribution',
+    control: { type: 'text' },
+  },
+  availablity: {
+    name: 'availablity',
+    control: { type: 'text' },
+  },
   borderColor: {
     name: 'borderColor',
     description: 'border color',
@@ -47,22 +63,6 @@ const argTypes = {
     name: 'hasImage (story prop)',
     description: 'Show/hide image, for story purposes.',
     control: { type: 'boolean' },
-  },
-  title: {
-    name: 'title',
-    control: { type: 'text' },
-  },
-  amount: {
-    name: 'amount',
-    control: { type: 'text' },
-  },
-  contribution: {
-    name: 'contribution',
-    control: { type: 'text' },
-  },
-  availablity: {
-    name: 'availablity',
-    control: { type: 'text' },
   },
 }
 
