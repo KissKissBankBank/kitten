@@ -1,15 +1,19 @@
 import React from 'react'
 import { DocLinkBox } from './index'
+import { DocsPage } from 'storybook/docs-page'
+
+export default {
+  title: 'Molecules/Boxes/DocLinkBox',
+  component: DocLinkBox,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="DocLinkBox" />,
+    },
+  },
+  decorators: [story => <div className="story-Container">{story()}</div>],
+}
 
 export const Default = args => <DocLinkBox {...args} />
-
-Default.decorators = [
-  story => (
-    <div className="story-Container story-Grid story-Grid--large">
-      {story()}
-    </div>
-  ),
-]
 
 Default.args = {
   isExternal: true,

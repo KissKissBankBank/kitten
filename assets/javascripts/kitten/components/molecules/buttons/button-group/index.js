@@ -14,6 +14,7 @@ const StyledButtonGroup = styled.div`
   justify-content: center;
 
   .k-ButtonGroup__button {
+    position: relative;
     z-index: 0;
     min-width: auto;
     width: auto;
@@ -32,12 +33,15 @@ const StyledButtonGroup = styled.div`
       border-bottom-right-radius: ${borderRadius};
     }
 
-    &:active,
-    &:hover,
-    &:focus,
     &.k-ButtonGroup__button--isActive {
       border-radius: ${borderRadius};
       z-index: 1;
+    }
+    &:active,
+    &:hover,
+    &:focus {
+      border-radius: ${borderRadius};
+      z-index: 2;
     }
   }
 
@@ -100,10 +104,8 @@ ButtonGroup.Button = ButtonGroupButton
 
 ButtonGroup.propTypes = {
   variant: PropTypes.oneOf(['andromeda', 'orion']),
-  active: PropTypes.bool,
 }
 
 ButtonGroup.defaultProps = {
   variant: 'andromeda',
-  active: false,
 }
