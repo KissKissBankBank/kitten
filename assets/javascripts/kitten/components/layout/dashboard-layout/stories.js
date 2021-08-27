@@ -137,7 +137,7 @@ export default {
 export const Default = () => {
   const selectedView = select(
     'content_type',
-    ['flow', 'dashboard', 'table'],
+    ['flow', 'dashboard', 'table', 'rewards'],
     'flow',
   )
 
