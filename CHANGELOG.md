@@ -9,6 +9,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Fix:
 
 - `DashboardLayout.Flow.Nav`: Fix styles when only a button is displayed.
+- `DropdownSelect`: Can be controlled.
+
+Features:
+
+- `DropdownSelect`: Add explicit `controlled` prop. It is uncontrolled by default
 
 ## [4.2.0] - 2021-08-06
 
