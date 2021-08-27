@@ -3,6 +3,66 @@ import { action } from '@storybook/addon-actions'
 import { DropdownMenu } from './index'
 import { Container, COLORS, EllipsisIcon } from '../../../..'
 import styled from 'styled-components'
+import { DocsPage } from 'storybook/docs-page'
+
+export default {
+  title: 'Molecules/Expand/DropdownMenu',
+  component: DropdownMenu,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          importString="DropdownMenu"
+        />
+      ),
+    },
+  },
+  decorators: [story => (
+    <div className="story-Container">
+      {story()}
+    </div>
+  )],
+  argTypes: {
+    open: {
+      name: 'open',
+      control: { type: 'boolean' },
+    },
+    menuPosition: {
+      name: 'menuPosition',
+      options: ['left', 'center', 'right'],
+      control: { type: 'inline-radio' },
+    },
+    button: {
+      name: 'button',
+      control: null,
+    },
+    menuprops: {
+      name: 'menuprops',
+      control: { type: 'object' },
+    },
+    onToggle: {
+      name: 'onToggle',
+      control: null,
+    },
+  },
+  args: {
+    open: false,
+    menuPosition: null,
+    button: ({ open }) => (
+          <>
+            <EllipsisIcon color={COLORS.font1} />
+            <span className="k-u-a11y-visuallyHidden">
+              {open ? 'Click to close menu' : 'Click to open menu'}
+            </span>
+          </>
+        ),
+    onToggle:action('on Toggle'),
+  }
+}
+
+
+
 
 const StyledWrapper = styled.div`
   div {
@@ -18,21 +78,12 @@ const StyledWrapper = styled.div`
   }
 `
 
-export const Default = ({ open, menuPosition }) => (
+export const Default = ({ menuPosition, ...args }) => (
   <StyledWrapper>
     <div>
       <DropdownMenu
-        open={open}
+        {...args}
         menuPosition={menuPosition || 'right'}
-        onToggle={action('on Toggle')}
-        button={({ open }) => (
-          <>
-            <EllipsisIcon color={COLORS.font1} />
-            <span className="k-u-a11y-visuallyHidden">
-              {open ? 'Click to close menu' : 'Click to open menu'}
-            </span>
-          </>
-        )}
       >
         <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
         <DropdownMenu.Button>Click this button</DropdownMenu.Button>
@@ -44,16 +95,12 @@ export const Default = ({ open, menuPosition }) => (
     </div>
     <div className="k-u-flex-justifyContent-center">
       <DropdownMenu
-        open={open}
+        {...args}
         menuPosition={menuPosition || 'center'}
-        onToggle={action('on Toggle')}
         button={({ open }) => (
-          <>
-            <EllipsisIcon color={COLORS.font1} />
-            <span className="k-u-a11y-visuallyHidden">
-              {open ? 'Click to close menu' : 'Click to open menu'}
-            </span>
-          </>
+          <span className="k-u-link k-u-link-primary1 k-u-small">
+            {open ? 'close menu' : 'open menu'}
+          </span>
         )}
       >
         <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
@@ -63,17 +110,8 @@ export const Default = ({ open, menuPosition }) => (
     </div>
     <div className="k-u-flex-justifyContent-end">
       <DropdownMenu
-        open={open}
+        {...args}
         menuPosition={menuPosition || 'left'}
-        onToggle={action('on Toggle')}
-        button={({ open }) => (
-          <>
-            <EllipsisIcon color={COLORS.font1} />
-            <span className="k-u-a11y-visuallyHidden">
-              {open ? 'Click to close menu' : 'Click to open menu'}
-            </span>
-          </>
-        )}
       >
         <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
         <DropdownMenu.Button>Click this button</DropdownMenu.Button>
@@ -82,28 +120,3 @@ export const Default = ({ open, menuPosition }) => (
     </div>
   </StyledWrapper>
 )
-
-Default.argTypes = {
-  open: {
-    name: 'open',
-    control: { type: 'boolean' },
-  },
-  menuPosition: {
-    name: 'menuPosition',
-    options: ['left', 'center', 'right'],
-    control: { type: 'inline-radio' },
-  },
-}
-
-Default.args = {
-  open: false,
-  menuPosition: null,
-}
-
-Default.decorators = [
-  Story => (
-    <Container>
-      <Story />
-    </Container>
-  ),
-]
