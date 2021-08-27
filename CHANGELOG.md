@@ -4,11 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Autocomplete`: Add `variant` prop, defaults to `andromeda`.
-- Feature: `DocumentsDropUploader`: Add `hover` style to document tag element.
-- Fix: `TagInput`: Keep delete button when disabled.
-- Fix: `DropdownSelect`: Can be controlled.
-- Feature: `DropdownSelect`: Add explicit `controlled` prop. It is uncontrolled by default
+## [4.3.0] - 2021-08-27
+
+Features:
+
+- `Autocomplete`: Add `variant` prop, defaults to `andromeda`.
+- `DocumentsDropUploader`: Add `hover` style to document tag element.
+- `DropdownSelect`: Add explicit `controlled` prop. It is uncontrolled by default
+
+Fixes: 
+- `TagInput`: Keep delete button when disabled.
+- `DropdownSelect`: Can be controlled.
 
 ## [4.2.1] - 2021-08-19
 
