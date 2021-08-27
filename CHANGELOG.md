@@ -36,7 +36,6 @@ Fixes:
 
 - `DocumentsStatusBox`: Fix style.
 - `HorizontalCrowdfundingCard`: Fix mobile style for `progress`.
->>>>>>> origin
 
 ## [4.1.0] - 2021-08-02
 
