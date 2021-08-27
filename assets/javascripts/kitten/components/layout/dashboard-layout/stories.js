@@ -39,9 +39,14 @@ import {
   useWindowWidth,
   useDeepCompareEffect,
   TextCopy,
+  FlexWrapper,
+  RewardSummaryCard,
+  DropdownMenu,
+  EllipsisIcon,
 } from '../../..'
 
 import { Default as Table } from '../../organisms/tables/list-table/list-table.stories.js'
+import { Default as Reward } from '../../molecules/cards/reward-summary-card/stories.js'
 import { DocsPage } from 'storybook/docs-page'
 
 const options = [
@@ -219,10 +224,10 @@ export const Default = () => {
                 Contributeurs
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story&custom=a"
+                href="?id=layout-dashboardlayout--default&knob-content_type=rewards&viewMode=story&custom=a"
                 isActive={
                   window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story&custom=a'
+                  '?id=layout-dashboardlayout--default&knob-content_type=rewards&viewMode=story&custom=a'
                 }
                 icon={() => <TagIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
@@ -344,6 +349,7 @@ export const Default = () => {
       {selectedView === 'flow' && <FlowExample />}
       {selectedView === 'dashboard' && <DashExample />}
       {selectedView === 'table' && <TableExample />}
+      {selectedView === 'rewards' && <RewardsExample />}
     </DashboardLayout>
   )
 }
@@ -382,6 +388,93 @@ const TableExample = () => (
       <Table />
     </div>
   </>
+)
+
+const RewardsExample = () => (
+  <div>
+    <Title
+      modifier="quinary"
+      className="k-u-margin-none k-u-margin-bottom-triple"
+    >
+      Curabitur blandit tempus porttitor.
+    </Title>
+    <FlexWrapper gap={15}>
+      <RewardSummaryCard>
+        <RewardSummaryCard.Image>
+          <img
+            alt=""
+            src="/kitten.jpg"
+          />
+        </RewardSummaryCard.Image>
+        <RewardSummaryCard.Title>
+          Stickers Free Boobs Club
+          <RewardSummaryCard.TitleTag text="Contrepartie star" />
+        </RewardSummaryCard.Title>
+        <RewardSummaryCard.Amount>
+          10 000€
+        </RewardSummaryCard.Amount>
+        <RewardSummaryCard.Contribution>
+          1 468 000
+        </RewardSummaryCard.Contribution>
+        <RewardSummaryCard.Availablity>
+          Illimitée
+        </RewardSummaryCard.Availablity>
+        <RewardSummaryCard.Options>
+          <DropdownMenu
+            button={() => (<EllipsisIcon color={COLORS.font1} />)}
+            menuPosition="left"
+          >
+            <DropdownMenu.Link href="#">
+              Editer
+            </DropdownMenu.Link>
+            <DropdownMenu.Link href="#">
+              Dupliquer
+            </DropdownMenu.Link>
+            <DropdownMenu.Link href="#">
+              Désactiver
+            </DropdownMenu.Link>
+            <DropdownMenu.Link>
+              Supprimer
+            </DropdownMenu.Link>
+          </DropdownMenu>
+        </RewardSummaryCard.Options>
+      </RewardSummaryCard>
+      <RewardSummaryCard>
+        <RewardSummaryCard.Title>
+          Stickers Free Boobs Club
+          <RewardSummaryCard.TitleTag text="Contrepartie star" />
+        </RewardSummaryCard.Title>
+        <RewardSummaryCard.Amount>
+          10 000€
+        </RewardSummaryCard.Amount>
+        <RewardSummaryCard.Contribution>
+          1 468 000
+        </RewardSummaryCard.Contribution>
+        <RewardSummaryCard.Availablity>
+          Illimitée
+        </RewardSummaryCard.Availablity>
+        <RewardSummaryCard.Options>
+          <DropdownMenu
+            button={() => (<EllipsisIcon color={COLORS.font1} />)}
+            menuPosition="left"
+          >
+            <DropdownMenu.Link href="#">
+              Editer
+            </DropdownMenu.Link>
+            <DropdownMenu.Link href="#">
+              Dupliquer
+            </DropdownMenu.Link>
+            <DropdownMenu.Link href="#">
+              Désactiver
+            </DropdownMenu.Link>
+            <DropdownMenu.Link>
+              Supprimer
+            </DropdownMenu.Link>
+          </DropdownMenu>
+        </RewardSummaryCard.Options>
+      </RewardSummaryCard>
+    </FlexWrapper>
+  </div>
 )
 
 const FlowExample = () => (
@@ -508,7 +601,7 @@ const FlowExample = () => (
       ) : boolean('Show unsaved text', false) ? (
         <Text
           weight="light"
-          color="font2"
+          cssColor={COLORS.font3}
           size="tiny"
           className="k-u-hidden@xs-down"
           style={{ alignSelf: 'center' }}

@@ -2,6 +2,7 @@ import React from 'react'
 import { RewardSummaryCard } from './index'
 import { Container, COLORS, DropdownMenu, EllipsisIcon } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
+import { action } from '@storybook/addon-actions'
 
 const argTypes = {
   show: {
@@ -91,7 +92,7 @@ const args = {
     'aria-label': 'A label for the link',
     onClick: e => {
       e.preventDefault()
-      console.log('Clicked')
+      action('Clicked')()
     },
   },
   title: 'Stickers Free Boobs Club',
