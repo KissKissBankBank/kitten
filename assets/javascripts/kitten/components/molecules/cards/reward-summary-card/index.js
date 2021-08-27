@@ -3,7 +3,6 @@ import { StyledRewardSummaryCard } from './styles'
 import classNames from 'classnames'
 import COLORS from '../../../../constants/colors-config'
 import PropTypes from 'prop-types'
-import { pxToRem } from '../../../../helpers/utils/typography'
 import {
   Image,
   Title,
@@ -22,13 +21,7 @@ import { NoImageIcon } from '../../../../components/graphics/icons/no-image-icon
 export const RewardSummaryCard = ({
   children,
   show,
-  style,
   className,
-  borderWidth,
-  borderRadius,
-  imageBorderRadius,
-  borderColor,
-  borderStyle,
   actionProps,
   ...props
 }) => {
@@ -54,14 +47,6 @@ export const RewardSummaryCard = ({
   return (
     <StyledRewardSummaryCard
       className={classNames('k-RewardSummaryCard', className)}
-      style={{
-        ...style,
-        '--rewardSummaryCard--border-width': pxToRem(borderWidth),
-        '--rewardSummaryCard--border-radius': pxToRem(borderRadius),
-        '--rewardSummaryCard--image-border-radius': pxToRem(imageBorderRadius),
-        '--rewardSummaryCard--border-color': borderColor,
-        '--rewardSummaryCard--border-style': borderStyle,
-      }}
       {...props}
     >
       <ActionElement
@@ -96,19 +81,10 @@ RewardSummaryCard.Options = Options
 
 RewardSummaryCard.defaultProps = {
   show: true,
-  borderColor: COLORS.line1,
-  borderRadius: 8,
-  borderStyle: 'solid',
-  borderWidth: 2,
-  imageBorderRadius: 5,
   actionProps: {},
 }
 
 RewardSummaryCard.propTypes = {
   show: PropTypes.bool,
-  borderColor: PropTypes.string,
-  borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  borderStyle: PropTypes.string,
-  borderWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  imageBorderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  actionProps: PropTypes.object,
 }

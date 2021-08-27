@@ -12,6 +12,7 @@ export const Contribution = props => {
       className={classNames(
         'k-RewardSummaryCard__contribution',
         props.className,
+        'k-u-hidden@xs-down',
       )}
     />
   )

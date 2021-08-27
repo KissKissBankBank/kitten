@@ -1,3 +1,3 @@
 import React from 'react'
 
-export const Image = ({ children }) => <> {children} </>
+export const Image = ({ children }) => <>{children}</>

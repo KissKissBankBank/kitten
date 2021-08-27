@@ -26,31 +26,6 @@ const argTypes = {
     name: 'availablity (story prop)',
     control: { type: 'text' },
   },
-  borderColor: {
-    name: 'borderColor',
-    description: 'border color',
-    control: { type: 'text' },
-  },
-  borderRadius: {
-    name: 'borderRadius',
-    description: 'border radius size',
-    control: { type: 'number' },
-  },
-  borderStyle: {
-    name: 'borderStyle',
-    description: 'border style',
-    control: { type: 'text' },
-  },
-  borderWidth: {
-    name: 'borderWidth',
-    description: 'border width',
-    control: { type: 'number' },
-  },
-  imageBorderRadius: {
-    name: 'imageBorderRadius',
-    description: 'Image border radius size',
-    control: { type: 'number' },
-  },
   as: {
     name: 'as',
     description: 'HTML element for the Action component',

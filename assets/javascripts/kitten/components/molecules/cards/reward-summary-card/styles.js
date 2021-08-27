@@ -5,6 +5,9 @@ import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
 export const StyledRewardSummaryCard = styled.div`
+  --rewardSummaryCard--border-width: ${pxToRem(2)};
+  --rewardSummaryCard--border-radius: ${pxToRem(8)};
+
   /* CARD STYLE */
 
   max-width: 100%;
@@ -23,16 +26,10 @@ export const StyledRewardSummaryCard = styled.div`
     background-color: ${COLORS.background3};
   }
 
-  /* IE11 defaults */
-  border-width: ${pxToRem(2)};
+  border-width: var(--rewardSummaryCard--border-width);
   border-style: solid;
   border-color: ${COLORS.line1};
   border-radius: ${pxToRem(8)};
-
-  border-width: var(--rewardSummaryCard--border-width);
-  border-style: var(--rewardSummaryCard--border-style);
-  border-color: var(--rewardSummaryCard--border-color);
-  border-radius: var(--rewardSummaryCard--border-radius);
 
   @media (min-width: ${ScreenConfig.M.min}px) {
     height: calc(${pxToRem(100)} + 2 * var(--rewardSummaryCard--border-width));
@@ -148,6 +145,8 @@ export const StyledRewardSummaryCard = styled.div`
   /* SUBCOMPONENTS */
 
   .k-RewardSummaryCard__title {
+    max-height: 4rem;
+    text-overflow: ellipsis;
     grid-column: 1 / span 2;
     grid-row: 1;
     padding-right: ${pxToRem(30)};
