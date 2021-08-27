@@ -110,16 +110,14 @@ export const Default = args => {
           </RewardSummaryCard.Image>
         )}
 
-        <RewardSummaryCard.Title>
-          {args.title}
-        </RewardSummaryCard.Title>
+        <RewardSummaryCard.Title>{args.title}</RewardSummaryCard.Title>
 
         <RewardSummaryCard.TitleTag
           className="k-u-margin-top-single"
           icon="star"
           text="Contrepartie star"
         />
-        
+
         <RewardSummaryCard.Amount>{args.amount}</RewardSummaryCard.Amount>
         <RewardSummaryCard.Contribution>
           {args.contribution}

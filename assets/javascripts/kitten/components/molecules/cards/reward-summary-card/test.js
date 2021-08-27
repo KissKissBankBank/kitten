@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { RewardSummaryCard } from './index'
-import { COLORS, DropdownMenu, EllipsisIcon } from '../../../..'
+import { DropdownMenu, EllipsisIcon } from '../../../..'
 
 describe('<BackingCard />', () => {
   let component
@@ -11,14 +11,14 @@ describe('<BackingCard />', () => {
       .create(
         <RewardSummaryCard>
           <RewardSummaryCard.Image>
-              <img src="/kitten.jpg" alt="" />
-            </RewardSummaryCard.Image>
+            <img src="/kitten.jpg" alt="" />
+          </RewardSummaryCard.Image>
 
-            <RewardSummaryCard.Title>
-              Stickers Free Boobs Club
-            </RewardSummaryCard.Title>
+          <RewardSummaryCard.Title>
+            Stickers Free Boobs Club
+          </RewardSummaryCard.Title>
 
-            <RewardSummaryCard.Amount>10 000€</RewardSummaryCard.Amount>
+          <RewardSummaryCard.Amount>10 000€</RewardSummaryCard.Amount>
         </RewardSummaryCard>,
       )
       .toJSON()
@@ -46,7 +46,7 @@ describe('<BackingCard />', () => {
               icon="star"
               text="Contrepartie star"
             />
-            
+
             <RewardSummaryCard.Amount>10 000€</RewardSummaryCard.Amount>
             <RewardSummaryCard.Contribution>
               1 468 000
@@ -55,19 +55,14 @@ describe('<BackingCard />', () => {
               Illimitée
             </RewardSummaryCard.Availablity>
             <RewardSummaryCard.Options>
-              <DropdownMenu
-                menuPosition="left"
-                button={() => (
-                  <EllipsisIcon />
-                )}
-              >
+              <DropdownMenu menuPosition="left" button={() => <EllipsisIcon />}>
                 <DropdownMenu.Link href="#">Editer</DropdownMenu.Link>
                 <DropdownMenu.Link href="#">Dupliquer</DropdownMenu.Link>
                 <DropdownMenu.Link href="#">Désactiver</DropdownMenu.Link>
                 <DropdownMenu.Button>Supprimer</DropdownMenu.Button>
               </DropdownMenu>
             </RewardSummaryCard.Options>
-          </RewardSummaryCard>
+          </RewardSummaryCard>,
         )
         .toJSON()
     })
