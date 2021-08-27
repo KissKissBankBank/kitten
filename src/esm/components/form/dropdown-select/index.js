@@ -1,20 +1,21 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["combobox"];
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useSelect } from 'downshift';
-import { Label } from '../../../components/form/label';
+import { Label } from '../label';
 import classNames from 'classnames';
-import { WarningCircleIcon } from '../../../components/graphics/icons/warning-circle-icon';
-import { CheckedCircleIcon } from '../../../components/graphics/icons/checked-circle-icon';
-import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon';
+import { WarningCircleIcon } from '../../graphics/icons/warning-circle-icon';
+import { CheckedCircleIcon } from '../../graphics/icons/checked-circle-icon';
+import { ArrowIcon } from '../../graphics/icons/arrow-icon';
 import find from 'lodash/fp/find';
 import { DropdownCombobox } from './combobox';
 import { StyledDropdown } from './styles';
 import COLORS from '../../../constants/colors-config';
 export var DropdownSelect = function DropdownSelect(_ref) {
   var combobox = _ref.combobox,
-      props = _objectWithoutProperties(_ref, ["combobox"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   if (combobox) return /*#__PURE__*/React.createElement(DropdownCombobox, props);
   var labelText = props.labelText,
@@ -40,7 +41,8 @@ export var DropdownSelect = function DropdownSelect(_ref) {
       openOnLoad = props.openOnLoad,
       menuZIndex = props.menuZIndex,
       className = props.className,
-      value = props.value;
+      value = props.value,
+      controlled = props.controlled;
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,
@@ -79,7 +81,7 @@ export var DropdownSelect = function DropdownSelect(_ref) {
   }();
 
   var initialSelectedItem = find(['value', defaultSelectedValue])(flattenedOptions);
-  var selectedItemByValue = find(['value', value])(flattenedOptions);
+  var selectedItemByValue = find(['value', value])(flattenedOptions) || null;
 
   var onIsOpenChange = function onIsOpenChange(changes) {
     if (changes.isOpen) return onMenuOpen({
@@ -103,7 +105,7 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     onSelectedItemChange: onSelectedItemChange,
     onIsOpenChange: onIsOpenChange,
     initialIsOpen: openOnLoad
-  }, selectedItemByValue && {
+  }, controlled && {
     selectedItem: selectedItemByValue
   })),
       isOpen = _useSelect.isOpen,
@@ -174,6 +176,7 @@ export var DropdownSelect = function DropdownSelect(_ref) {
 DropdownSelect.defaultProps = {
   combobox: false,
   hideLabel: false,
+  controlled: false,
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
@@ -198,6 +201,7 @@ DropdownSelect.propTypes = {
   labelText: PropTypes.string.isRequired,
   combobox: PropTypes.bool,
   hideLabel: PropTypes.bool,
+  controlled: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.object),
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,

@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -43,13 +43,25 @@ var _flow = require("./flow");
 
 var _styles = require("./styles");
 
+var _excluded = ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent"],
+    _excluded2 = ["className", "hasButton", "buttonProps", "children", "isOpen"],
+    _excluded3 = ["openLabel", "closeLabel"],
+    _excluded4 = ["className", "children", "tag"],
+    _excluded5 = ["className"],
+    _excluded6 = ["className"],
+    _excluded7 = ["className"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var DashboardLayout = function DashboardLayout(_ref) {
   var children = _ref.children,
       backLinkProps = _ref.backLinkProps,
       buttonProps = _ref.buttonProps,
       quickAccessLinkText = _ref.quickAccessLinkText,
       fullHeightContent = _ref.fullHeightContent,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(false),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -244,12 +256,12 @@ var Header = function Header(_ref2) {
       buttonProps = _ref2.buttonProps,
       children = _ref2.children,
       isOpen = _ref2.isOpen,
-      props = (0, _objectWithoutProperties2.default)(_ref2, ["className", "hasButton", "buttonProps", "children", "isOpen"]);
+      props = (0, _objectWithoutProperties2.default)(_ref2, _excluded2);
 
   var _ref3 = buttonProps || {},
       openLabel = _ref3.openLabel,
       closeLabel = _ref3.closeLabel,
-      otherButtonProps = (0, _objectWithoutProperties2.default)(_ref3, ["openLabel", "closeLabel"]);
+      otherButtonProps = (0, _objectWithoutProperties2.default)(_ref3, _excluded3);
 
   return /*#__PURE__*/_react.default.createElement("header", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__heading', className)
@@ -270,7 +282,7 @@ var SiteHeader = function SiteHeader(_ref4) {
       children = _ref4.children,
       _ref4$tag = _ref4.tag,
       tag = _ref4$tag === void 0 ? 'div' : _ref4$tag,
-      props = (0, _objectWithoutProperties2.default)(_ref4, ["className", "children", "tag"]);
+      props = (0, _objectWithoutProperties2.default)(_ref4, _excluded4);
   var SiteHeaderComponent = tag;
   return /*#__PURE__*/_react.default.createElement(SiteHeaderComponent, (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__siteHeader', className)
@@ -279,7 +291,7 @@ var SiteHeader = function SiteHeader(_ref4) {
 
 var SideContent = function SideContent(_ref5) {
   var className = _ref5.className,
-      props = (0, _objectWithoutProperties2.default)(_ref5, ["className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref5, _excluded5);
   return /*#__PURE__*/_react.default.createElement("section", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__navigation', className)
   }, props));
@@ -287,7 +299,7 @@ var SideContent = function SideContent(_ref5) {
 
 var SideFooter = function SideFooter(_ref6) {
   var className = _ref6.className,
-      props = (0, _objectWithoutProperties2.default)(_ref6, ["className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref6, _excluded6);
   return /*#__PURE__*/_react.default.createElement("footer", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__footer', className)
   }, props));
@@ -295,7 +307,7 @@ var SideFooter = function SideFooter(_ref6) {
 
 var Alerts = function Alerts(_ref7) {
   var className = _ref7.className,
-      props = (0, _objectWithoutProperties2.default)(_ref7, ["className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref7, _excluded7);
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__alerts', 'k-DashboardLayout__fullWidth', className)
   }, props));

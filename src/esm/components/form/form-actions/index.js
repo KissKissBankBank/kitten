@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["className", "spreadOutAt"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -14,7 +15,7 @@ var StyledFormActions = styled.div.withConfig({
 export var FormActions = function FormActions(_ref) {
   var className = _ref.className,
       spreadOutAt = _ref.spreadOutAt,
-      others = _objectWithoutProperties(_ref, ["className", "spreadOutAt"]);
+      others = _objectWithoutProperties(_ref, _excluded);
 
   var formActionsClassName = classNames('k-FormActions', className, _defineProperty({}, "k-FormActions--spreadOut-".concat(spreadOutAt), spreadOutAt));
   return /*#__PURE__*/React.createElement(StyledFormActions, _extends({

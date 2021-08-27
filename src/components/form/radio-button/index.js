@@ -27,6 +27,8 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _screenConfig = require("../../../constants/screen-config");
 
+var _excluded = ["className", "id", "children", "inputClassName", "large", "largeContent", "size", "text", "error", "disabled", "variant", "design"];
+
 var StyledRadioButton = _styledComponents.default.div.withConfig({
   displayName: "radio-button__StyledRadioButton",
   componentId: "wb11e0-0"
@@ -45,7 +47,7 @@ var RadioButton = function RadioButton(_ref) {
       disabled = _ref.disabled,
       variant = _ref.variant,
       design = _ref.design,
-      inputProps = (0, _objectWithoutProperties2.default)(_ref, ["className", "id", "children", "inputClassName", "large", "largeContent", "size", "text", "error", "disabled", "variant", "design"]);
+      inputProps = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledRadioButton, {
     className: (0, _classnames.default)('k-Form-RadioButton', className, "k-Form-RadioButton--".concat(variant), "k-Form-RadioButton--".concat(design), "k-Form-RadioButton--".concat(size), {
       'k-Form-RadioButton--error': error,

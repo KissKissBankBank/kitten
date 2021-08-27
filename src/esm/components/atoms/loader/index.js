@@ -1,5 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["color"],
+    _excluded2 = ["tag", "className", "color"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -14,7 +16,7 @@ var StyledLoader = styled.div.withConfig({
 
 var Circle = function Circle(_ref) {
   var color = _ref.color,
-      others = _objectWithoutProperties(_ref, ["color"]);
+      others = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
@@ -31,7 +33,7 @@ export var Loader = function Loader(_ref2) {
   var tag = _ref2.tag,
       className = _ref2.className,
       color = _ref2.color,
-      others = _objectWithoutProperties(_ref2, ["tag", "className", "color"]);
+      others = _objectWithoutProperties(_ref2, _excluded2);
 
   return /*#__PURE__*/React.createElement(StyledLoader, _extends({
     as: tag,

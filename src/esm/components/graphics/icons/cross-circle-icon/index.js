@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["color", "bgColor", "circleColor", "crossColor", "width", "height", "title", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
@@ -17,7 +18,7 @@ export var CrossCircleIcon = function CrossCircleIcon(_ref) {
       height = _ref.height,
       title = _ref.title,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["color", "bgColor", "circleColor", "crossColor", "width", "height", "title", "className"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,

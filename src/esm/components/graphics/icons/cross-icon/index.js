@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["color", "title", "width", "height", "size"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
@@ -12,7 +13,7 @@ export var CrossIcon = function CrossIcon(_ref) {
       width = _ref.width,
       height = _ref.height,
       size = _ref.size,
-      props = _objectWithoutProperties(_ref, ["color", "title", "width", "height", "size"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,

@@ -1,4 +1,5 @@
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["title", "subtitle", "imgProps", "description"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -24,7 +25,7 @@ export var BackerCard = function BackerCard(_ref) {
       subtitle = _ref.subtitle,
       imgProps = _ref.imgProps,
       description = _ref.description,
-      others = _objectWithoutProperties(_ref, ["title", "subtitle", "imgProps", "description"]);
+      others = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledCard, others, /*#__PURE__*/React.createElement(Marger, {
     top: "4",

@@ -27,6 +27,8 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../constants/screen-config");
 
+var _excluded = ["tag", "className", "children", "focusId", "size", "withoutPointerEvents", "htmlFor"];
+
 var StyledLabel = _styledComponents.default.label.withConfig({
   displayName: "label__StyledLabel",
   componentId: "l6ih7y-0"
@@ -40,7 +42,7 @@ var Label = function Label(_ref) {
       size = _ref.size,
       withoutPointerEvents = _ref.withoutPointerEvents,
       htmlFor = _ref.htmlFor,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["tag", "className", "children", "focusId", "size", "withoutPointerEvents", "htmlFor"]);
+      other = (0, _objectWithoutProperties2.default)(_ref, _excluded);
 
   var handleClick = function handleClick(e) {
     if (_elementHelper.default.canUseDom() && focusId) {

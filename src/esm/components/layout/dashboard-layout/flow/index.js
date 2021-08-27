@@ -1,5 +1,9 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["className"],
+    _excluded2 = ["className", "children", "twoButtons"],
+    _excluded3 = ["className", "children", "withoutLight", "mobileAsideProps"],
+    _excluded4 = ["children", "className", "loading", "loaderComponent"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -19,7 +23,7 @@ var StyledFlow = styled.div.withConfig({
 
 var Content = function Content(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["className"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement("section", _extends({}, props, {
     className: classNames('k-DashboardLayout__flow__content', className)
@@ -31,7 +35,7 @@ var Nav = function Nav(_ref2) {
       children = _ref2.children,
       _ref2$twoButtons = _ref2.twoButtons,
       twoButtons = _ref2$twoButtons === void 0 ? false : _ref2$twoButtons,
-      props = _objectWithoutProperties(_ref2, ["className", "children", "twoButtons"]);
+      props = _objectWithoutProperties(_ref2, _excluded2);
 
   return /*#__PURE__*/React.createElement("nav", _extends({}, props, {
     className: classNames('k-DashboardLayout__flow__nav', className, {
@@ -48,7 +52,7 @@ var Aside = function Aside(_ref3) {
       _ref3$withoutLight = _ref3.withoutLight,
       withoutLight = _ref3$withoutLight === void 0 ? false : _ref3$withoutLight,
       mobileAsideProps = _ref3.mobileAsideProps,
-      props = _objectWithoutProperties(_ref3, ["className", "children", "withoutLight", "mobileAsideProps"]);
+      props = _objectWithoutProperties(_ref3, _excluded3);
 
   return /*#__PURE__*/React.createElement("aside", _extends({}, props, {
     className: classNames('k-DashboardLayout__flow__aside', className)
@@ -62,7 +66,7 @@ export var Flow = function Flow(_ref4) {
       className = _ref4.className,
       loading = _ref4.loading,
       loaderComponent = _ref4.loaderComponent,
-      props = _objectWithoutProperties(_ref4, ["children", "className", "loading", "loaderComponent"]);
+      props = _objectWithoutProperties(_ref4, _excluded4);
 
   return /*#__PURE__*/React.createElement(StyledFlow, _extends({
     className: classNames('k-DashboardLayout__flow', className, 'k-DashboardLayout__fullHeight', {

@@ -5,6 +5,7 @@ import _createClass from "@babel/runtime/helpers/esm/createClass";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
+var _excluded = ["children", "containerStyle", "activePaginationColor", "paginationColor", "paginationAlign", "paginationStyle", "bulletStyle"];
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -122,7 +123,7 @@ export var SimpleCarousel = /*#__PURE__*/function (_Component) {
           paginationAlign = _this$props.paginationAlign,
           paginationStyle = _this$props.paginationStyle,
           bulletStyle = _this$props.bulletStyle,
-          others = _objectWithoutProperties(_this$props, ["children", "containerStyle", "activePaginationColor", "paginationColor", "paginationAlign", "paginationStyle", "bulletStyle"]);
+          others = _objectWithoutProperties(_this$props, _excluded);
 
       var _this$state2 = this.state,
           totalPagesCount = _this$state2.totalPagesCount,

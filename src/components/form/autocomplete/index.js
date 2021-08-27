@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -10,6 +10,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.Autocomplete = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
@@ -35,91 +37,41 @@ var _slugify = _interopRequireDefault(require("slugify"));
 
 var _loader = require("../../atoms/loader");
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
+var _excluded = ["className", "items", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage", "variant"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var itemHeight = 38;
 var maxItemsVisibled = 3;
 var borderSize = 2;
 
-var Container = _styledComponents.default.div.withConfig({
-  displayName: "autocomplete__Container",
+var Wrapper = _styledComponents.default.div.withConfig({
+  displayName: "autocomplete__Wrapper",
   componentId: "lfeqwe-0"
-})(["display:flex;position:relative;"]);
+})(["display:flex;position:relative;.k-Form-Autocomplete__input{display:block;width:100%;height:", ";box-sizing:border-box;background:", ";border:", " solid ", ";padding:0 ", ";", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}&:focus{border-color:", ";outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}::-ms-clear{display:none;}}&.k-Form-Autocomplete--error .k-Form-Autocomplete__input{border-color:", ";color:", ";:focus{border-color:", ";color:", ";}}.k-Form-Autocomplete__loader{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;right:0;}.k-Form-Autocomplete__icon{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;}.k-Form-Autocomplete__suggestions{position:absolute;top:", ";left:0;right:0;overflow-y:auto;margin:0;padding:0;background:", ";border:", " solid ", ";border-top:none;list-style:none;height:calc(", " * var(--Autocomplete-suggestions,1));max-height:", ";}.k-Form-Autocomplete__suggestion__item{padding:", " ", ";", ";font-size:", ";line-height:1.3;color:", ";&.k-Form-Autocomplete__suggestion__item--noresult{font-style:italic;}&:not(.k-Form-Autocomplete__suggestion__item--noresult){cursor:pointer;transition:background-color 0.2s;:hover,:focus,:active{background-color:", ";}:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&[aria-selected='true']{background-color:", ";}}}&.k-Form-Autocomplete--hasIcon-left{.k-Form-Autocomplete__input{padding-left:", ";}.k-Form-Autocomplete__icon{left:0;}}&.k-Form-Autocomplete--hasIcon-right{.k-Form-Autocomplete__input{padding-right:", ";}.k-Form-Autocomplete__loader{padding-right:", ";}.k-Form-Autocomplete__icon{right:0;}}&.k-Form-Autocomplete--disabled{.k-Form-Autocomplete__icon{& > svg [stroke]:not([stroke='none']){stroke:", ";}& > svg [fill]:not([fill='none']){fill:", ";}}}&.k-Form-Autocomplete--orion .k-Form-Autocomplete__input{border-radius:", ";}"], (0, _typography.pxToRem)(50), _colorsConfig.default.background1, (0, _typography.pxToRem)(borderSize), _colorsConfig.default.line1, (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.font2, _colorsConfig.default.font2, _colorsConfig.default.line2, _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary4, _colorsConfig.default.error3, _colorsConfig.default.error3, _colorsConfig.default.line2, _colorsConfig.default.font1, (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(50), _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(itemHeight), (0, _typography.pxToRem)(itemHeight * maxItemsVisibled), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.background3, _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary4, _colorsConfig.default.line1, (0, _typography.pxToRem)(45), (0, _typography.pxToRem)(45), (0, _typography.pxToRem)(45), _colorsConfig.default.font2, _colorsConfig.default.font2, (0, _typography.pxToRem)(4));
 
-var Input = _styledComponents.default.input.withConfig({
-  displayName: "autocomplete__Input",
-  componentId: "lfeqwe-1"
-})(["display:block;width:100%;height:", ";box-sizing:border-box;background:", ";border:", " solid ", ";padding:0 ", ";", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}&:focus{border-color:", ";outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}::-ms-clear{display:none;}", " ", ""], (0, _typography.pxToRem)(50), _colorsConfig.default.background1, (0, _typography.pxToRem)(borderSize), _colorsConfig.default.line1, (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.font2, _colorsConfig.default.font2, _colorsConfig.default.line2, _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary4, function (_ref) {
-  var error = _ref.error;
-  return error && (0, _styledComponents.css)(["border-color:", ";color:", ";:focus{border-color:", ";color:", ";}"], _colorsConfig.default.error3, _colorsConfig.default.error3, _colorsConfig.default.line2, _colorsConfig.default.font1);
-}, function (_ref2) {
-  var hasIcon = _ref2.hasIcon,
-      iconPosition = _ref2.iconPosition;
+var Autocomplete = function Autocomplete(_ref) {
+  var _classNames;
 
-  if (!hasIcon) {
-    return false;
-  }
-
-  return iconPosition === 'left' ? (0, _styledComponents.css)(["padding-left:", ";"], (0, _typography.pxToRem)(45)) : (0, _styledComponents.css)(["padding-right:", ";"], (0, _typography.pxToRem)(45));
-});
-
-var StyledLoader = (0, _styledComponents.default)(function (_ref3) {
-  var addRightPadding = _ref3.addRightPadding,
-      others = (0, _objectWithoutProperties2.default)(_ref3, ["addRightPadding"]);
-  return /*#__PURE__*/_react.default.createElement(_loader.Loader, others);
-}).withConfig({
-  displayName: "autocomplete__StyledLoader",
-  componentId: "lfeqwe-2"
-})(["display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;right:0;", ""], (0, _typography.pxToRem)(18), function (_ref4) {
-  var addRightPadding = _ref4.addRightPadding;
-  return addRightPadding && (0, _styledComponents.css)(["padding-right:", ";"], (0, _typography.pxToRem)(45));
-});
-var StyledIcon = (0, _styledComponents.default)(function (_ref5) {
-  var disabled = _ref5.disabled,
-      iconPosition = _ref5.iconPosition,
-      others = (0, _objectWithoutProperties2.default)(_ref5, ["disabled", "iconPosition"]);
-  return /*#__PURE__*/_react.default.createElement("span", others);
-}).withConfig({
-  displayName: "autocomplete__StyledIcon",
-  componentId: "lfeqwe-3"
-})(["display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;left:0;", " ", ""], (0, _typography.pxToRem)(18), function (_ref6) {
-  var disabled = _ref6.disabled;
-  return disabled && (0, _styledComponents.css)(["& > svg [stroke]:not([stroke='none']){stroke:", ";}& > svg [fill]:not([fill='none']){fill:", ";}"], _colorsConfig.default.font2, _colorsConfig.default.font2);
-}, function (_ref7) {
-  var iconPosition = _ref7.iconPosition;
-  return iconPosition === 'right' && (0, _styledComponents.css)(["left:initial;right:0;"]);
-});
-
-var Suggestions = _styledComponents.default.ul.withConfig({
-  displayName: "autocomplete__Suggestions",
-  componentId: "lfeqwe-4"
-})(["position:absolute;top:", ";left:0;right:0;overflow-y:auto;margin:0;padding:0;background:", ";border:", " solid ", ";border-top:none;list-style:none;", ""], (0, _typography.pxToRem)(50), _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, function (_ref8) {
-  var itemsLength = _ref8.itemsLength;
-  return itemsLength > 0 && (0, _styledComponents.css)(["height:", ";"], (0, _typography.pxToRem)(itemHeight * (itemsLength > 2 ? maxItemsVisibled : itemsLength)));
-});
-
-var NoResultItem = _styledComponents.default.li.withConfig({
-  displayName: "autocomplete__NoResultItem",
-  componentId: "lfeqwe-5"
-})(["padding:", " ", ";", ";font-size:", ";font-style:italic;line-height:1.3;color:", ";"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1);
-
-var Item = _styledComponents.default.li.withConfig({
-  displayName: "autocomplete__Item",
-  componentId: "lfeqwe-6"
-})(["padding:", " ", ";", ";font-size:", ";line-height:1.3;color:", ";cursor:pointer;transition:background-color 0.2s;:hover,:focus,:active{background-color:", ";}:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&[aria-selected='true']{background-color:", ";}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.background3, _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary4, _colorsConfig.default.line1);
-
-var Autocomplete = function Autocomplete(_ref9) {
-  var defaultItems = _ref9.items,
-      error = _ref9.error,
-      onChange = _ref9.onChange,
-      onBlur = _ref9.onBlur,
-      onKeyDown = _ref9.onKeyDown,
-      onSelect = _ref9.onSelect,
-      icon = _ref9.icon,
-      iconPosition = _ref9.iconPosition,
-      updateSuggestionsStrategy = _ref9.updateSuggestionsStrategy,
-      isLoading = _ref9.isLoading,
-      noResultMessage = _ref9.noResultMessage,
-      shouldShowNoResultMessage = _ref9.shouldShowNoResultMessage,
-      props = (0, _objectWithoutProperties2.default)(_ref9, ["items", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage"]);
+  var className = _ref.className,
+      defaultItems = _ref.items,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      onKeyDown = _ref.onKeyDown,
+      onSelect = _ref.onSelect,
+      icon = _ref.icon,
+      iconPosition = _ref.iconPosition,
+      updateSuggestionsStrategy = _ref.updateSuggestionsStrategy,
+      isLoading = _ref.isLoading,
+      noResultMessage = _ref.noResultMessage,
+      shouldShowNoResultMessage = _ref.shouldShowNoResultMessage,
+      variant = _ref.variant,
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(defaultItems),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -240,7 +192,9 @@ var Autocomplete = function Autocomplete(_ref9) {
     suggestionsEl.current.scrollTop = value > 0 ? value : 0;
   };
 
-  return /*#__PURE__*/_react.default.createElement(Container, null, /*#__PURE__*/_react.default.createElement(Input, (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement(Wrapper, {
+    className: (0, _classnames.default)('k-Form-Autocomplete', className, "k-Form-Autocomplete--".concat(variant), (_classNames = {}, (0, _defineProperty2.default)(_classNames, "k-Form-Autocomplete--hasIcon-".concat(iconPosition), !!icon), (0, _defineProperty2.default)(_classNames, 'k-Form-Autocomplete--disabled', props.disabled), _classNames))
+  }, /*#__PURE__*/_react.default.createElement("input", (0, _extends2.default)({}, props, {
     error: error,
     ref: inputEl,
     type: "text",
@@ -251,44 +205,50 @@ var Autocomplete = function Autocomplete(_ref9) {
     "aria-owns": "".concat(props.name, "-results"),
     "aria-expanded": showSuggestions && items.length > 0,
     "aria-autocomplete": "both",
-    hasIcon: !!icon,
-    iconPosition: iconPosition,
-    "aria-activedescendant": items[selectedItemIndex] ? (0, _slugify.default)("".concat(items[selectedItemIndex], "-").concat(selectedItemIndex)) : ''
-  })), isLoading && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledLoader, {
-    color: _colorsConfig.default.font2,
-    addRightPadding: icon && iconPosition === 'right'
+    "aria-activedescendant": items[selectedItemIndex] ? (0, _slugify.default)("".concat(items[selectedItemIndex], "-").concat(selectedItemIndex)) : '',
+    className: "k-Form-Autocomplete__input"
+  })), isLoading && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_loader.Loader, {
+    className: "k-Form-Autocomplete__loader",
+    color: _colorsConfig.default.font2
   }), /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, {
     lang: "en"
-  }, "loading")), icon && /*#__PURE__*/_react.default.createElement(StyledIcon, {
-    "aria-hidden": "true",
-    disabled: props.disabled,
-    iconPosition: iconPosition
+  }, "loading")), icon && /*#__PURE__*/_react.default.createElement("span", {
+    className: "k-Form-Autocomplete__icon",
+    "aria-hidden": "true"
   }, _react.default.cloneElement(icon, {
     width: 15,
     height: 15
-  })), showSuggestions && items.length === 0 && noResultMessage && showNoResultMessage && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(Suggestions, {
+  })), showSuggestions && items.length === 0 && noResultMessage && showNoResultMessage && /*#__PURE__*/_react.default.createElement("ul", {
     ref: suggestionsEl,
     id: "".concat(props.name, "-results"),
     role: "listbox",
     tabIndex: "-1",
-    itemsLength: "1"
-  }, /*#__PURE__*/_react.default.createElement(NoResultItem, {
+    style: {
+      '--Autocomplete-suggestions': '1'
+    },
+    className: "k-Form-Autocomplete__suggestions"
+  }, /*#__PURE__*/_react.default.createElement("li", {
+    className: "k-Form-Autocomplete__suggestion__item k-Form-Autocomplete__suggestion__item--noresult",
     role: "option",
     tabIndex: "-1"
-  }, noResultMessage))), showSuggestions && items.length > 0 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(Suggestions, {
+  }, noResultMessage)), showSuggestions && items.length > 0 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("ul", {
     ref: suggestionsEl,
     id: "".concat(props.name, "-results"),
     role: "listbox",
     tabIndex: "-1",
-    itemsLength: items.length
+    style: {
+      '--Autocomplete-suggestions': items.length
+    },
+    className: "k-Form-Autocomplete__suggestions"
   }, items.map(function (item, index) {
-    return /*#__PURE__*/_react.default.createElement(Item, {
+    return /*#__PURE__*/_react.default.createElement("li", {
       key: item + index,
       id: (0, _slugify.default)("".concat(item, "-").concat(index)),
       onClick: handleClickItem(item),
       role: "option",
       "aria-selected": selectedItemIndex === index,
-      tabIndex: "-1"
+      tabIndex: "-1",
+      className: "k-Form-Autocomplete__suggestion__item"
     }, item);
   })), /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, {
     lang: "en",
@@ -310,7 +270,8 @@ Autocomplete.propTypes = {
   onBlur: _propTypes.default.func,
   onKeyDown: _propTypes.default.func,
   onSelect: _propTypes.default.func,
-  isLoading: _propTypes.default.bool
+  isLoading: _propTypes.default.bool,
+  variant: _propTypes.default.oneOf(['andromeda', 'orion'])
 };
 Autocomplete.defaultProps = {
   error: false,
@@ -320,5 +281,6 @@ Autocomplete.defaultProps = {
   onBlur: function onBlur() {},
   onKeyDown: function onKeyDown() {},
   onSelect: function onSelect() {},
-  isLoading: false
+  isLoading: false,
+  variant: 'andromeda'
 };

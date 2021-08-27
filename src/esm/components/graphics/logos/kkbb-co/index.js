@@ -1,12 +1,13 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
 export var KkbbCoLogo = function KkbbCoLogo(_ref) {
   var width = _ref.width,
       height = _ref.height,
-      props = _objectWithoutProperties(_ref, ["width", "height"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var DEFAULT_WIDTH = 399;
   var DEFAULT_HEIGHT = 65;

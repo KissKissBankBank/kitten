@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["statusMessage", "statusType", "bulletProps", "size", "className", "children", "weight"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -19,7 +20,7 @@ export var StatusWithBullet = function StatusWithBullet(_ref) {
       className = _ref.className,
       children = _ref.children,
       weight = _ref.weight,
-      props = _objectWithoutProperties(_ref, ["statusMessage", "statusType", "bulletProps", "size", "className", "children", "weight"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledStatus, _extends({
     className: classNames('k-StatusWithBullet', className, "k-StatusWithBullet--".concat(statusType), "k-StatusWithBullet--".concat(size), "k-StatusWithBullet--".concat(weight))

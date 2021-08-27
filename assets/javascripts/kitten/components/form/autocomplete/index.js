@@ -8,196 +8,187 @@ import COLORS from '../../../constants/colors-config'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
 import slugify from 'slugify'
 import { Loader } from '../../atoms/loader'
+import classNames from 'classnames'
 
 const itemHeight = 38
 const maxItemsVisibled = 3
 const borderSize = 2
 
-const Container = styled.div`
+const Wrapper = styled.div`
   display: flex;
   position: relative;
-`
 
-const Input = styled.input`
-  display: block;
-  width: 100%;
-  height: ${pxToRem(50)};
-  box-sizing: border-box;
 
-  background: ${COLORS.background1};
-  border: ${pxToRem(borderSize)} solid ${COLORS.line1};
-  padding: 0 ${pxToRem(15)};
+  .k-Form-Autocomplete__input {
+    display: block;
+    width: 100%;
+    height: ${pxToRem(50)};
+    box-sizing: border-box;
 
-  ${TYPOGRAPHY.fontStyles.light};
-  font-size: ${stepToRem(-1)};
-  line-height: 1.3;
-  color: ${COLORS.font1};
+    background: ${COLORS.background1};
+    border: ${pxToRem(borderSize)} solid ${COLORS.line1};
+    padding: 0 ${pxToRem(15)};
 
-  transition: border-color 0.4s;
+    ${TYPOGRAPHY.fontStyles.light};
+    font-size: ${stepToRem(-1)};
+    line-height: 1.3;
+    color: ${COLORS.font1};
 
-  ::placeholder {
-    color: ${COLORS.font2};
+    transition: border-color 0.4s;
+
+    ::placeholder {
+      color: ${COLORS.font2};
+    }
+
+    ::-moz-placeholder {
+      color: ${COLORS.font2};
+    }
+
+    &:focus {
+      border-color: ${COLORS.line2};
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
+
+    ::-ms-clear {
+      display: none;
+    }
+
+  }
+  &.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
+    border-color: ${COLORS.error3};
+    color: ${COLORS.error3};
+    :focus {
+      border-color: ${COLORS.line2};
+      color: ${COLORS.font1};
+    }
   }
 
-  ::-moz-placeholder {
-    color: ${COLORS.font2};
+  .k-Form-Autocomplete__loader {
+    display: flex;
+    position: absolute;
+    align-self: center;
+    padding: 0 ${pxToRem(18)};
+    z-index: 1;
+    right: 0;
   }
 
-  &:focus {
-    border-color: ${COLORS.line2};
-    outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(2)};
-  }
-  &:focus:not(:focus-visible) {
-    outline-color: transparent;
-  }
-  &:focus-visible {
-    outline-color: ${COLORS.primary4};
+  .k-Form-Autocomplete__icon {
+    display: flex;
+    position: absolute;
+    align-self: center;
+    padding: 0 ${pxToRem(18)};
+    z-index: 1;
   }
 
-  ::-ms-clear {
-    display: none;
+  .k-Form-Autocomplete__suggestions {
+    position: absolute;
+    top: ${pxToRem(50)};
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+
+    background: ${COLORS.background1};
+    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border-top: none;
+
+    list-style: none;
+
+    height: calc(${pxToRem(itemHeight)} * var(--Autocomplete-suggestions, 1));
+    max-height: ${pxToRem(itemHeight * maxItemsVisibled)};
   }
 
-  ${({ error }) =>
-    error &&
-    css`
-      border-color: ${COLORS.error3};
-      color: ${COLORS.error3};
+  .k-Form-Autocomplete__suggestion__item {
+    padding: ${pxToRem(10)} ${pxToRem(15)};
+
+    ${TYPOGRAPHY.fontStyles.light};
+    font-size: ${stepToRem(-1)};
+
+    line-height: 1.3;
+    color: ${COLORS.font1};
+
+    &.k-Form-Autocomplete__suggestion__item--noresult {
+      font-style: italic;
+    }
+    &:not(.k-Form-Autocomplete__suggestion__item--noresult) {
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      :hover,
+      :focus,
+      :active {
+        background-color: ${COLORS.background3};
+      }
 
       :focus {
-        border-color: ${COLORS.line2};
-        color: ${COLORS.font1};
+        outline: ${COLORS.primary4} solid ${pxToRem(2)};
+        outline-offset: ${pxToRem(2)};
       }
-    `}
+      &:focus:not(:focus-visible) {
+        outline-color: transparent;
+      }
+      &:focus-visible {
+        outline-color: ${COLORS.primary4};
+      }
 
-  ${({ hasIcon, iconPosition }) => {
-    if (!hasIcon) {
-      return false
+      &[aria-selected='true'] {
+        background-color: ${COLORS.line1};
+      }
     }
-    return iconPosition === 'left'
-      ? css`
-          padding-left: ${pxToRem(45)};
-        `
-      : css`
-          padding-right: ${pxToRem(45)};
-        `
-  }}
-`
+  }
 
-const StyledLoader = styled(({ addRightPadding, ...others }) => (
-  <Loader {...others} />
-))`
-  display: flex;
-  position: absolute;
-  align-self: center;
-  padding: 0 ${pxToRem(18)};
-  z-index: 1;
-  right: 0;
-  ${({ addRightPadding }) =>
-    addRightPadding &&
-    css`
+  /* STATES */
+
+  &.k-Form-Autocomplete--hasIcon-left {
+    .k-Form-Autocomplete__input {
+      padding-left: ${pxToRem(45)};
+    }
+    .k-Form-Autocomplete__icon {
+      left: 0;
+    }
+  }
+
+  &.k-Form-Autocomplete--hasIcon-right{
+    .k-Form-Autocomplete__input {
       padding-right: ${pxToRem(45)};
-    `}
-`
+    }
+    .k-Form-Autocomplete__loader {
+      padding-right: ${pxToRem(45)};
+    }
+    .k-Form-Autocomplete__icon {
+      right: 0;
+    }
+  }
 
-const StyledIcon = styled(({ disabled, iconPosition, ...others }) => (
-  <span {...others} />
-))`
-  display: flex;
-  position: absolute;
-  align-self: center;
-  padding: 0 ${pxToRem(18)};
-  z-index: 1;
-  left: 0;
-
-  ${({ disabled }) =>
-    disabled &&
-    css`
+  &.k-Form-Autocomplete--disabled {
+    .k-Form-Autocomplete__icon {
       & > svg [stroke]:not([stroke='none']) {
         stroke: ${COLORS.font2};
       }
       & > svg [fill]:not([fill='none']) {
         fill: ${COLORS.font2};
       }
-    `}
-
-  ${({ iconPosition }) =>
-    iconPosition === 'right' &&
-    css`
-      left: initial;
-      right: 0;
-    `}
-`
-
-const Suggestions = styled.ul`
-  position: absolute;
-  top: ${pxToRem(50)};
-  left: 0;
-  right: 0;
-  overflow-y: auto;
-  margin: 0;
-  padding: 0;
-
-  background: ${COLORS.background1};
-  border: ${pxToRem(2)} solid ${COLORS.line1};
-  border-top: none;
-
-  list-style: none;
-
-  ${({ itemsLength }) =>
-    itemsLength > 0 &&
-    css`
-      height: ${pxToRem(
-        itemHeight * (itemsLength > 2 ? maxItemsVisibled : itemsLength),
-      )};
-    `}
-`
-
-const NoResultItem = styled.li`
-  padding: ${pxToRem(10)} ${pxToRem(15)};
-
-  ${TYPOGRAPHY.fontStyles.light};
-  font-size: ${stepToRem(-1)};
-  font-style: italic;
-  line-height: 1.3;
-  color: ${COLORS.font1};
-`
-
-const Item = styled.li`
-  padding: ${pxToRem(10)} ${pxToRem(15)};
-
-  ${TYPOGRAPHY.fontStyles.light};
-  font-size: ${stepToRem(-1)};
-  line-height: 1.3;
-  color: ${COLORS.font1};
-
-  cursor: pointer;
-  transition: background-color 0.2s;
-
-  :hover,
-  :focus,
-  :active {
-    background-color: ${COLORS.background3};
+    }
   }
 
-  :focus {
-    outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(2)};
-  }
-  &:focus:not(:focus-visible) {
-    outline-color: transparent;
-  }
-  &:focus-visible {
-    outline-color: ${COLORS.primary4};
-  }
+  /* VARIANTS */
 
-  &[aria-selected='true'] {
-    background-color: ${COLORS.line1};
+  &.k-Form-Autocomplete--orion .k-Form-Autocomplete__input {
+    border-radius: ${pxToRem(4)};
   }
 `
+
 
 export const Autocomplete = ({
+  className,
   items: defaultItems,
   error,
   onChange,
@@ -210,6 +201,7 @@ export const Autocomplete = ({
   isLoading,
   noResultMessage,
   shouldShowNoResultMessage,
+  variant,
   ...props
 }) => {
   const [items, setItems] = useState(defaultItems)
@@ -323,8 +315,18 @@ export const Autocomplete = ({
   }
 
   return (
-    <Container>
-      <Input
+    <Wrapper
+      className={classNames(
+        'k-Form-Autocomplete',
+        className,
+        `k-Form-Autocomplete--${variant}`,
+        {
+          [`k-Form-Autocomplete--hasIcon-${iconPosition}`]: !!icon,
+          'k-Form-Autocomplete--disabled': props.disabled,
+        }
+      )}
+    >
+      <input
         {...props}
         error={error}
         ref={inputEl}
@@ -336,81 +338,81 @@ export const Autocomplete = ({
         aria-owns={`${props.name}-results`}
         aria-expanded={showSuggestions && items.length > 0}
         aria-autocomplete="both"
-        hasIcon={!!icon}
-        iconPosition={iconPosition}
         aria-activedescendant={
           items[selectedItemIndex]
             ? slugify(`${items[selectedItemIndex]}-${selectedItemIndex}`)
             : ''
         }
+        className="k-Form-Autocomplete__input"
       />
       {isLoading && (
         <>
-          <StyledLoader
+          <Loader
+            className="k-Form-Autocomplete__loader"
             color={COLORS.font2}
-            addRightPadding={icon && iconPosition === 'right'}
           />
           <VisuallyHidden lang="en">loading</VisuallyHidden>
         </>
       )}
       {icon && (
-        <StyledIcon
-          aria-hidden="true"
-          disabled={props.disabled}
-          iconPosition={iconPosition}
-        >
+        <span className="k-Form-Autocomplete__icon" aria-hidden="true">
           {React.cloneElement(icon, { width: 15, height: 15 })}
-        </StyledIcon>
+        </span>
       )}
 
       {showSuggestions &&
         items.length === 0 &&
         noResultMessage &&
         showNoResultMessage && (
-          <>
-            <Suggestions
-              ref={suggestionsEl}
-              id={`${props.name}-results`}
-              role="listbox"
-              tabIndex="-1"
-              itemsLength="1"
-            >
-              <NoResultItem role="option" tabIndex="-1">
-                {noResultMessage}
-              </NoResultItem>
-            </Suggestions>
-          </>
-        )}
-
-      {showSuggestions && items.length > 0 && (
-        <>
-          <Suggestions
+          <ul
             ref={suggestionsEl}
             id={`${props.name}-results`}
             role="listbox"
             tabIndex="-1"
-            itemsLength={items.length}
+            style={{ '--Autocomplete-suggestions': '1' }}
+            className="k-Form-Autocomplete__suggestions"
+          >
+            <li
+              className="k-Form-Autocomplete__suggestion__item k-Form-Autocomplete__suggestion__item--noresult"
+              role="option"
+              tabIndex="-1"
+            >
+              {noResultMessage}
+            </li>
+          </ul>
+        )}
+
+      {showSuggestions && items.length > 0 && (
+        <>
+          <ul
+            ref={suggestionsEl}
+            id={`${props.name}-results`}
+            role="listbox"
+            tabIndex="-1"
+            style={{ '--Autocomplete-suggestions': items.length }}
+            className="k-Form-Autocomplete__suggestions"
           >
             {items.map((item, index) => (
-              <Item
+              <li
                 key={item + index}
                 id={slugify(`${item}-${index}`)}
                 onClick={handleClickItem(item)}
                 role="option"
                 aria-selected={selectedItemIndex === index}
                 tabIndex="-1"
+                className="k-Form-Autocomplete__suggestion__item"
               >
                 {item}
-              </Item>
+              </li>
             ))}
-          </Suggestions>
+          </ul>
 
           <VisuallyHidden lang="en" aria-live="assertive">
             {items.length} results are available.
           </VisuallyHidden>
         </>
       )}
-    </Container>
+    </Wrapper>
   )
 }
 
@@ -431,6 +433,7 @@ Autocomplete.propTypes = {
   onKeyDown: PropTypes.func,
   onSelect: PropTypes.func,
   isLoading: PropTypes.bool,
+  variant: PropTypes.oneOf(['andromeda', 'orion'])
 }
 
 Autocomplete.defaultProps = {
@@ -442,4 +445,5 @@ Autocomplete.defaultProps = {
   onKeyDown: () => {},
   onSelect: () => {},
   isLoading: false,
+  variant: 'andromeda',
 }

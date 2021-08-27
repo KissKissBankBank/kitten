@@ -30,7 +30,7 @@ Array [
     className="k-u-margin-top-single"
   >
     <div
-      className="sc-gqjmRU gSiJXU"
+      className="sc-gqjmRU fTLKVW k-Form-Autocomplete k-Form-Autocomplete--andromeda"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,8 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-VigVT eSjoKm"
+        className="k-Form-Autocomplete__input"
+        error={false}
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -127,7 +128,7 @@ Array [
     className="k-FieldInput k-u-margin-top-single"
   >
     <input
-      className="sc-bxivhb gkKzsg k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
+      className="sc-bxivhb dFzZWR k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -226,7 +227,7 @@ Array [
     className="k-FieldInput k-u-margin-top-single"
   >
     <input
-      className="sc-bxivhb gkKzsg k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
+      className="sc-bxivhb dFzZWR k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--regular"
       disabled={false}
       id="input"
       name="field"
@@ -314,7 +315,7 @@ Array [
       className="sc-EHOje iVlWKE k-Form-TextInputWithLimit"
     >
       <input
-        className="sc-bxivhb gkKzsg k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+        className="sc-bxivhb dFzZWR k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
         defaultValue=""
         disabled={false}
         id="input"
@@ -410,7 +411,7 @@ Array [
       className="sc-bZQynM kZGvAY k-Form-TextInputWithUnit k-Form-TextInputWithUnit--andromeda"
     >
       <input
-        className="sc-bxivhb gkKzsg k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+        className="sc-bxivhb dFzZWR k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"
@@ -505,7 +506,7 @@ Array [
       className="sc-iwsKbI eZyHBF k-Form-PasswordInput"
     >
       <input
-        className="sc-bxivhb gkKzsg k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
+        className="sc-bxivhb dFzZWR k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -633,7 +634,7 @@ Array [
       className="sc-iwsKbI eZyHBF k-Form-PasswordInput"
     >
       <input
-        className="sc-bxivhb gkKzsg k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+        className="sc-bxivhb dFzZWR k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"

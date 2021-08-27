@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["children", "className", "moreButtonText", "truncateText"];
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -10,7 +11,7 @@ export var Description = function Description(_ref) {
       className = _ref.className,
       moreButtonText = _ref.moreButtonText,
       truncateText = _ref.truncateText,
-      props = _objectWithoutProperties(_ref, ["children", "className", "moreButtonText", "truncateText"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var descriptionElementRef = useRef(null);
 

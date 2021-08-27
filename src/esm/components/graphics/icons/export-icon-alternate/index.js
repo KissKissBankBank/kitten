@@ -1,12 +1,13 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["color", "iconTitle", "title"];
 import React from 'react';
 import PropTypes from 'prop-types';
 export var ExportIconAlternate = function ExportIconAlternate(_ref) {
   var color = _ref.color,
       iconTitle = _ref.iconTitle,
       title = _ref.title,
-      props = _objectWithoutProperties(_ref, ["color", "iconTitle", "title"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement("svg", _extends({
     role: "img",

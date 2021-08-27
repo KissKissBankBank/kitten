@@ -19,6 +19,7 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
+var _excluded = ["color", "title", "width", "height"];
 var DEFAULT_WIDTH = 14;
 var DEFAULT_HEIGHT = 18;
 
@@ -27,7 +28,7 @@ var LockIcon = function LockIcon(_ref) {
       title = _ref.title,
       width = _ref.width,
       height = _ref.height,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title", "width", "height"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var computed = (0, _ratio.computeFromRatio)({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,

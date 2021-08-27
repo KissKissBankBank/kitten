@@ -1,10 +1,11 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["size"];
 import React from 'react';
 import PropTypes from 'prop-types';
 export var LightbulbIllustration = function LightbulbIllustration(_ref) {
   var size = _ref.size,
-      props = _objectWithoutProperties(_ref, ["size"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   if (size === 'small') {
     return /*#__PURE__*/React.createElement("svg", _extends({

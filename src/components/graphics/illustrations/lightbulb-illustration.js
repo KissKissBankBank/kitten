@@ -15,9 +15,11 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _excluded = ["size"];
+
 var LightbulbIllustration = function LightbulbIllustration(_ref) {
   var size = _ref.size,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["size"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
 
   if (size === 'small') {
     return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({

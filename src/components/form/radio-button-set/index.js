@@ -25,6 +25,9 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _label = require("../../../components/form/label");
 
+var _excluded = ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children"],
+    _excluded2 = ["id", "className"];
+
 var StyledRadioButtonSet = _styledComponents.default.fieldset.withConfig({
   displayName: "radio-button-set__StyledRadioButtonSet",
   componentId: "sc-1bde3vb-0"
@@ -40,7 +43,7 @@ var RadioButtonSet = function RadioButtonSet(_ref) {
       design = _ref.design,
       label = _ref.label,
       children = _ref.children,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledRadioButtonSet, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Form-RadioButtonSet', className, "k-Form-RadioButtonSet--".concat(variant)),
     disabled: disabled
@@ -52,7 +55,7 @@ var RadioButtonSet = function RadioButtonSet(_ref) {
   }, items.map(function (_ref2) {
     var id = _ref2.id,
         className = _ref2.className,
-        itemProps = (0, _objectWithoutProperties2.default)(_ref2, ["id", "className"]);
+        itemProps = (0, _objectWithoutProperties2.default)(_ref2, _excluded2);
     return /*#__PURE__*/_react.default.createElement(_radioButton.RadioButton, (0, _extends2.default)({
       id: id,
       variant: variant,

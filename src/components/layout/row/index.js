@@ -27,6 +27,8 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _screenConfig = require("../../../constants/screen-config");
 
+var _excluded = ["className", "contentClassName", "centered", "light", "dark", "lightTopBorder", "lightBottomBorder", "padded", "children"];
+
 var StyledRow = _styledComponents.default.div.withConfig({
   displayName: "row__StyledRow",
   componentId: "aqavk0-0"
@@ -42,7 +44,7 @@ var Row = function Row(_ref) {
       lightBottomBorder = _ref.lightBottomBorder,
       padded = _ref.padded,
       children = _ref.children,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "contentClassName", "centered", "light", "dark", "lightTopBorder", "lightBottomBorder", "padded", "children"]);
+      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledRow, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Row', {
       'k-Row--centered': centered,
