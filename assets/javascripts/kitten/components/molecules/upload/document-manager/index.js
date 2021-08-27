@@ -203,24 +203,24 @@ const IconContainer = ({ status, children }) => {
         <div className="k-DocumentManager__iconContainer__statusIcon">
           {status === 'valid' && (
             <CheckedCircleIcon
-              circleColor={COLORS.valid}
-              checkedColor={COLORS.background1}
+              bgColor={COLORS.valid}
+              color={COLORS.background1}
               width={20}
               height={20}
             />
           )}
           {status === 'error' && (
             <CrossCircleIcon
-              circleColor={COLORS.error}
-              crossColor={COLORS.background1}
+              bgColor={COLORS.error}
+              color={COLORS.background1}
               width={20}
               height={20}
             />
           )}
           {status === 'wait' && (
             <ClockCircleIcon
-              circleColor={COLORS.primary1}
-              clockColor={COLORS.background1}
+              bgColor={COLORS.primary1}
+              color={COLORS.background1}
               width={20}
               height={20}
             />
@@ -458,6 +458,8 @@ DocumentManager.propTypes = {
   onCancel: PropTypes.func,
   onUpload: PropTypes.func,
   status: PropTypes.oneOf(['ready', 'error', 'valid', 'wait', 'loading']),
-  subtitle: PropTypes.node,
-  title: PropTypes.node,
+  displaySubtitle: PropTypes.node,
+  displayTitle: PropTypes.node,
+  buttonSubtitle: PropTypes.node,
+  buttonTitle: PropTypes.node,
 }

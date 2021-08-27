@@ -10,6 +10,9 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="Line" />,
     },
   },
+  decorators: [
+    story => <div className="story-Container story-Grid">{story()}</div>,
+  ],
 }
 
 export const Default = () => (

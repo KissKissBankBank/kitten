@@ -40,7 +40,7 @@ export default {
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'select' },
+      control: { type: 'inline-radio' },
     },
   },
 }
