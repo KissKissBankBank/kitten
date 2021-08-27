@@ -13,6 +13,7 @@ Features:
 - `DropdownSelect`: Add explicit `controlled` prop. It is uncontrolled by default
 
 Fixes: 
+
 - `TagInput`: Keep delete button when disabled.
 - `DropdownSelect`: Can be controlled.
 
