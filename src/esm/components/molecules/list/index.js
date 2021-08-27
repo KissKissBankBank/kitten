@@ -30,9 +30,11 @@ export var List = function List(_ref3) {
     className: classNames('k-List', className),
     styles: style,
     radiusValue: radiusValue
-  }), React.Children.map(children, function (child) {
+  }), React.Children.map(children, function (child, index) {
     if (!React.isValidElement(child)) return null;
-    return /*#__PURE__*/React.createElement("li", null, child);
+    return /*#__PURE__*/React.createElement("li", {
+      key: index
+    }, child);
   }));
 };
 List.ButtonItem = ButtonItem;
