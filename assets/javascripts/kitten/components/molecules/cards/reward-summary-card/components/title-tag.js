@@ -18,7 +18,11 @@ export const TitleTag = ({ text, icon, className, ...props }) => {
 
   return (
     <Tag
-      className={classNames('k-RewardSummaryCard__titleTag', className, 'k-u-margin-top-single')}
+      className={classNames(
+        'k-RewardSummaryCard__titleTag',
+        className,
+        'k-u-margin-top-single',
+      )}
       {...props}
     >
       {iconDisplay}

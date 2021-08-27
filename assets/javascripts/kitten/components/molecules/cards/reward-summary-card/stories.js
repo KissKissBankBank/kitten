@@ -74,8 +74,8 @@ const argTypes = {
     name: 'titleTagIcon (story prop)',
     description: 'Specify the icon used for the RewardSummaryCard.TitleTag',
     options: ['star', 'diamond'],
-    control: { type: 'inline-radio' }
-  }
+    control: { type: 'inline-radio' },
+  },
 }
 
 const args = {
@@ -127,7 +127,8 @@ export default {
             'components/title.js',
           ]}
           importString="RewardSummaryCard"
-        />),
+        />
+      ),
     },
   },
   decorators: [story => <div className="story-Container">{story()}</div>],
@@ -156,7 +157,7 @@ export const Default = ({
 
         <RewardSummaryCard.Title>
           {title}
-          {hasTitleTag &&(
+          {hasTitleTag && (
             <RewardSummaryCard.TitleTag
               icon={titleTagIcon}
               text="Contrepartie star"
