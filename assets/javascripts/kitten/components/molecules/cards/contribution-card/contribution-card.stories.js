@@ -115,7 +115,7 @@ export const Default = ({
       largeInput={largeInput}
     >
       <ContributionCard.Image imageBorderRadius={imageBorderRadius}>
-        <img src="/kitten.jpg" alt="" />
+        <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
       </ContributionCard.Image>
 
       <ContributionCard.Title largeTitle={largeTitle}>

@@ -119,7 +119,8 @@ const StyledCard = styled.a`
 export const HorizontalCrowdfundingCard = ({
   href = '#',
   imageProps = {
-    src: '/kitten.jpg',
+    src: '',
+    alt: '',
   },
   title = '',
   titleTag = 'h3',

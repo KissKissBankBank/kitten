@@ -36,7 +36,7 @@ export const Default = args => {
 export const WithImage = () => {
   return (
     <ImageCropper
-      imageSrc="/kitten.jpg"
+      imageSrc={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
       fileName="Steven Kitten"
       buttonProps={{
         variant: select('Variant', ['andromeda', 'orion'], 'andromeda'),

@@ -47,7 +47,7 @@ export const Default = args => <EmbedPlayer {...args} />
 Default.args = {
   previewProps: {
     thumbnail: {
-      src: '/kitten.jpg',
+      src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
       alt: 'Une image',
     },
   },

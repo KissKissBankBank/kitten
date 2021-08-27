@@ -30,7 +30,7 @@ export default {
     withoutPointerEvents: false,
     withBorder: false,
     img: {
-      src: '/kitten.jpg',
+      src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
       alt: '',
     },
   },

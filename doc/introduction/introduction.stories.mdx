@@ -16,7 +16,7 @@ import packageInfo from '../../package.json'
 
 <Hero
   direction="right"
-  imageSrc="/kitten.jpg"
+  imageSrc={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
 >
   <Paragraph modifier="primary">
     Kitten is the design system used on <a className="k-u-link k-u-link-background1 k-u-weight-regular" href="https://www.kisskissbankbank.com">KissKissBankBank</a> and <a className="k-u-link k-u-link-background1 k-u-weight-regular" href="https://www.lendopolis.com">Lendopolis.com</a>.

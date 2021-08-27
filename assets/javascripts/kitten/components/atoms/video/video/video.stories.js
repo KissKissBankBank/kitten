@@ -9,7 +9,7 @@ export const Default = args => (
     loop
     muted
     src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4"
-    poster="/kitten.jpg"
+    poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
   >
     <Video.Loader>
       <Loader />

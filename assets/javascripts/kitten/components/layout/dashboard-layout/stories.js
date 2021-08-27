@@ -159,12 +159,12 @@ export const Default = () => {
         <AvatarWithTextAndBadge>
           <AvatarWithTextAndBadge.Image
             className="k-u-hidden@l-up"
-            src="/kitten.jpg"
+            src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
             alt=""
           />
           <AvatarWithTextAndBadge.Image
             className="k-u-hidden@m-down"
-            src="/kitten.jpg"
+            src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
             alt=""
             size="big"
           />
@@ -578,7 +578,7 @@ const SiteHeaderComponent = () => {
               backgroundColorActive={COLORS.line1}
             >
               <AvatarWithTextAndBadge>
-                <AvatarWithTextAndBadge.Image src="/kitten.jpg">
+                <AvatarWithTextAndBadge.Image src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
                   <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
                 </AvatarWithTextAndBadge.Image>
 

@@ -98,7 +98,7 @@ export default {
     ),
   ],
   argTypes: argTypes,
-  args: args15,
+  args: args,
 }
 
 export const Default = args => <Button {...args} />

@@ -170,7 +170,7 @@ Default.args = args
 export const StatusManage = args => <ImageDropUploader {...args} />
 StatusManage.args = {
   ...args,
-  initialValue: '/kitten.jpg',
+  initialValue: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   initialCrop: { height: 592, width: 948, x: 0, y: 265 },
 }
 
@@ -252,6 +252,6 @@ export const WithDistantImage = args => {
 }
 WithDistantImage.args = {
   ...args,
-  initialValue: '/kitten.jpg',
+  initialValue: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   initialCrop: { height: 592, width: 948, x: 0, y: 265 },
 }

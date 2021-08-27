@@ -19,7 +19,7 @@ export default {
   args: {
     href: '#',
     imageProps: {
-      src: '/kitten.jpg',
+      src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
     },
     title: 'Nulla vitae elit libero, a pharetra augue.',
     titleTag: 'h3',

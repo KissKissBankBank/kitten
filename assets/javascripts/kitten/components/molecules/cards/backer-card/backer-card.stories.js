@@ -42,7 +42,7 @@ export const Default = () => (
   <BackerCard
     title={text('Backer title', 'Backer name')}
     subtitle={text('Backer subtitle', 'Backer subtitle')}
-    imgProps={{ src: 'https://placeimg.com/80/80/any' }}
+    imgProps={{ src: `/kitten-${Math.floor(Math.random() * 10)}.jpg` }}
     description={<Description />}
   />
 )

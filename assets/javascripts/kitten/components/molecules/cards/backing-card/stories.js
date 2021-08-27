@@ -52,7 +52,7 @@ export const Default = () => {
           >
             {boolean('has image', true) && (
               <BackingCard.Image>
-                <img src="/kitten.jpg" alt="" />
+                <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
               </BackingCard.Image>
             )}
             <BackingCard.HeadingTag icon="star" text="Star reward" />
@@ -122,7 +122,7 @@ export const Video = () => {
             hasBorder={boolean('Has border', true)}
           >
             <BackingCard.Image>
-              <GifVideo poster="/kitten.jpg">
+              <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
                 <source
                   src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
                   type="video/webm"
@@ -224,7 +224,7 @@ export const InACarouselComponent = () => {
       >
         <BackingCard as="button" className="k-u-reset-button">
           <BackingCard.Image id="one_such_ID" className="hellowORLD">
-            <img src="/kitten.jpg" alt="" />
+            <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
           </BackingCard.Image>
           <BackingCard.HeadingTag icon="diamond" text="Diamond reward" />
           <BackingCard.Title>
@@ -323,7 +323,7 @@ export const InACarouselComponent = () => {
 
         <BackingCard as="button" className="k-u-reset-button">
           <BackingCard.Image>
-            <GifVideo poster="/kitten.jpg">
+            <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
               <source
                 src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
                 type="video/webm"
@@ -445,7 +445,7 @@ export const InACarouselComponent = () => {
 
         <BackingCard disabled className="k-u-reset-button">
           <BackingCard.Image>
-            <img src="/kitten.jpg" alt="" />
+            <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
           </BackingCard.Image>
           <BackingCard.HeadingTag icon="star" text="Star reward" />
           <BackingCard.Title>
@@ -526,7 +526,7 @@ export const InACarouselComponent = () => {
 
         <BackingCard disabled className="k-u-reset-button">
           <BackingCard.Image>
-            <GifVideo poster="/kitten.jpg">
+            <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
               <source
                 src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
                 type="video/webm"
