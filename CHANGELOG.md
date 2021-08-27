@@ -4,18 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DocumentsDropUploader`: Add `hover` style to document tag element.
 - Fix: `TagInput`: Keep delete button when disabled.
+- Fix: `DropdownSelect`: Can be controlled.
+- Feature: `DropdownSelect`: Add explicit `controlled` prop. It is uncontrolled by default
 
 ## [4.2.1] - 2021-08-19
 
 Fix:
 
 - `DashboardLayout.Flow.Nav`: Fix styles when only a button is displayed.
-- `DropdownSelect`: Can be controlled.
-
-Features:
-
-- `DropdownSelect`: Add explicit `controlled` prop. It is uncontrolled by default
 
 ## [4.2.0] - 2021-08-06
 
