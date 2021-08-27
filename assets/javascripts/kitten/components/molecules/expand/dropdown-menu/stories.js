@@ -1,7 +1,7 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { DropdownMenu } from './index'
-import { Container, COLORS, EllipsisIcon } from '../../../..'
+import { COLORS, EllipsisIcon } from '../../../..'
 import styled from 'styled-components'
 import { DocsPage } from 'storybook/docs-page'
 
@@ -11,18 +11,11 @@ export default {
   parameters: {
     docs: {
       page: () => (
-        <DocsPage
-          filepath={__filename}
-          importString="DropdownMenu"
-        />
+        <DocsPage filepath={__filename} importString="DropdownMenu" />
       ),
     },
   },
-  decorators: [story => (
-    <div className="story-Container">
-      {story()}
-    </div>
-  )],
+  decorators: [story => <div className="story-Container">{story()}</div>],
   argTypes: {
     open: {
       name: 'open',
@@ -50,19 +43,16 @@ export default {
     open: false,
     menuPosition: null,
     button: ({ open }) => (
-          <>
-            <EllipsisIcon color={COLORS.font1} />
-            <span className="k-u-a11y-visuallyHidden">
-              {open ? 'Click to close menu' : 'Click to open menu'}
-            </span>
-          </>
-        ),
-    onToggle:action('on Toggle'),
-  }
+      <>
+        <EllipsisIcon color={COLORS.font1} />
+        <span className="k-u-a11y-visuallyHidden">
+          {open ? 'Click to close menu' : 'Click to open menu'}
+        </span>
+      </>
+    ),
+    onToggle: action('on Toggle'),
+  },
 }
-
-
-
 
 const StyledWrapper = styled.div`
   div {
@@ -81,10 +71,7 @@ const StyledWrapper = styled.div`
 export const Default = ({ menuPosition, ...args }) => (
   <StyledWrapper>
     <div>
-      <DropdownMenu
-        {...args}
-        menuPosition={menuPosition || 'right'}
-      >
+      <DropdownMenu {...args} menuPosition={menuPosition || 'right'}>
         <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
         <DropdownMenu.Button>Click this button</DropdownMenu.Button>
         <DropdownMenu.Link href="#">
@@ -109,10 +96,7 @@ export const Default = ({ menuPosition, ...args }) => (
       </DropdownMenu>
     </div>
     <div className="k-u-flex-justifyContent-end">
-      <DropdownMenu
-        {...args}
-        menuPosition={menuPosition || 'left'}
-      >
+      <DropdownMenu {...args} menuPosition={menuPosition || 'left'}>
         <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
         <DropdownMenu.Button>Click this button</DropdownMenu.Button>
         <DropdownMenu.Link href="#">Another last link</DropdownMenu.Link>

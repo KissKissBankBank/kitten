@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { text, number, boolean } from '@storybook/addon-knobs'
 import { ExpandBoard } from './index'
-import { Grid, GridCol, COLORS } from '../../../..'
+import { COLORS } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 
@@ -15,13 +14,6 @@ const Styles = styled.div`
   }
 `
 
-const radiusBottomBorderRange = {
-  range: true,
-  min: 0,
-  max: 25,
-  step: 1,
-}
-
 export default {
   component: ExpandBoard,
   title: 'Molecules/Expand/ExpandBoard',
@@ -30,16 +22,19 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="ExpandBoard" />,
     },
   },
-  decorators: [story => (
-    <div className="story-Container story-Grid story-Grid--large">
-      <Styles>{story()}</Styles>
-    </div>
-  )],
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <Styles>{story()}</Styles>
+      </div>
+    ),
+  ],
   argTypes: {
     children: {
       name: 'children',
-      description: 'Children are provided in this story by `ExpandBoard.Button` and `ExpandBoard.Content`',
-      control: null
+      description:
+        'Children are provided in this story by `ExpandBoard.Button` and `ExpandBoard.Content`',
+      control: null,
     },
     animationMaxHeight: {
       name: 'animationMaxHeight',
@@ -103,11 +98,19 @@ export default {
     buttonBorderRadius: 4,
     buttonBig: false,
     buttonChildren: 'KissKissBankBank & Co.',
-    contentChildren: 'KissKissBankBank et 1 483 037 KissBankers vous aident à réaliser vos projets créatifs, associatifs et entrepreneuriaux. Participez à la naissance de projets inspirants.',
-  }
+    contentChildren:
+      'KissKissBankBank et 1 483 037 KissBankers vous aident à réaliser vos projets créatifs, associatifs et entrepreneuriaux. Participez à la naissance de projets inspirants.',
+  },
 }
 
-export const Default = ({contentChildren, buttonChildren, buttonExpandChildren, buttonBorderRadius, buttonBig, ...args}) => (
+export const Default = ({
+  contentChildren,
+  buttonChildren,
+  buttonExpandChildren,
+  buttonBorderRadius,
+  buttonBig,
+  ...args
+}) => (
   <ExpandBoard {...args}>
     <ExpandBoard.Button
       expandChildren={buttonExpandChildren}
