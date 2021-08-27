@@ -5,6 +5,7 @@ import _createClass from "@babel/runtime/helpers/esm/createClass";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
+var _excluded = ["valid", "error", "disabled", "name", "digits", "size", "center", "tag", "variant", "className", "style", "rounded"];
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -55,7 +56,7 @@ export var TextInput = /*#__PURE__*/function (_PureComponent) {
           className = _this$props.className,
           style = _this$props.style,
           rounded = _this$props.rounded,
-          others = _objectWithoutProperties(_this$props, ["valid", "error", "disabled", "name", "digits", "size", "center", "tag", "variant", "className", "style", "rounded"]);
+          others = _objectWithoutProperties(_this$props, _excluded);
 
       var digitsClass = !!digits ? "k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_".concat(digits) : null;
 

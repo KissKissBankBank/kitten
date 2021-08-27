@@ -5,6 +5,7 @@ import _createClass from "@babel/runtime/helpers/esm/createClass";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
+var _excluded = ["children", "valid", "success", "error", "waiting", "disabled", "bridge", "variant"];
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -98,7 +99,7 @@ export var Status = /*#__PURE__*/function (_Component) {
           disabled = _this$props2.disabled,
           bridge = _this$props2.bridge,
           variant = _this$props2.variant,
-          other = _objectWithoutProperties(_this$props2, ["children", "valid", "success", "error", "waiting", "disabled", "bridge", "variant"]);
+          other = _objectWithoutProperties(_this$props2, _excluded);
 
       return /*#__PURE__*/React.createElement(StyledContainerStatus, {
         className: classNames('k-Steppers--VerticalStepper__statusContainer', "k-Steppers--VerticalStepper__statusContainer--".concat(variant))

@@ -21,12 +21,14 @@ var _colorsConfig = _interopRequireDefault(require("../../../../../constants/col
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _excluded = ["styled", "backgroundSource"],
+    _excluded2 = ["src", "title", "style", "className"];
 var imageHeight = 378;
 var imageWidth = 252;
 var StyledTeamCardImage = (0, _styledComponents.default)(function (_ref) {
   var styled = _ref.styled,
       backgroundSource = _ref.backgroundSource,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["styled", "backgroundSource"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement("div", props);
 }).withConfig({
   displayName: "image__StyledTeamCardImage",
@@ -44,7 +46,7 @@ var TeamCardImage = function TeamCardImage(_ref4) {
       title = _ref4.title,
       style = _ref4.style,
       className = _ref4.className,
-      props = (0, _objectWithoutProperties2.default)(_ref4, ["src", "title", "style", "className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref4, _excluded2);
   return /*#__PURE__*/_react.default.createElement(StyledTeamCardImage, (0, _extends2.default)({}, props, {
     backgroundSource: src,
     title: title,

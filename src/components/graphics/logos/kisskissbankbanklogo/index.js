@@ -17,12 +17,14 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
+var _excluded = ["color", "width", "height", "tiny"];
+
 var KissKissBankBankLogo = function KissKissBankBankLogo(_ref) {
   var color = _ref.color,
       width = _ref.width,
       height = _ref.height,
       tiny = _ref.tiny,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "width", "height", "tiny"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var DEFAULT_WIDTH = 134;
   var DEFAULT_HEIGHT = 30;
   var TINY_WIDTH = 32;

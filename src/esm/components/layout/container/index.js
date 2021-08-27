@@ -5,6 +5,7 @@ import _createClass from "@babel/runtime/helpers/esm/createClass";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
+var _excluded = ["style"];
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -29,7 +30,7 @@ export var Container = /*#__PURE__*/function (_React$PureComponent) {
     value: function render() {
       var _this$props = this.props,
           style = _this$props.style,
-          others = _objectWithoutProperties(_this$props, ["style"]);
+          others = _objectWithoutProperties(_this$props, _excluded);
 
       return /*#__PURE__*/React.createElement(StyledContainer, _extends({
         styles: style

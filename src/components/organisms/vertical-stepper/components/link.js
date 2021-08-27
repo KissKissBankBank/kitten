@@ -29,6 +29,8 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _index = require("../index");
 
+var _excluded = ["variant", "className"];
+
 var StyledParagraph = _styledComponents.default.span.withConfig({
   displayName: "link__StyledParagraph",
   componentId: "qm89ct-0"
@@ -37,7 +39,7 @@ var StyledParagraph = _styledComponents.default.span.withConfig({
 var Link = function Link(_ref) {
   var variant = _ref.variant,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["variant", "className"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledParagraph, null, /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)(_index.LINK_CLASSNAME, 'k-Steppers--VerticalStepper__link', "k-Steppers--VerticalStepper__link--".concat(variant), className)
   })));

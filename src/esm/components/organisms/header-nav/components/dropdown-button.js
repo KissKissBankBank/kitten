@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["id", "className", "isExpanded"];
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -7,7 +8,7 @@ export var DropdownButton = forwardRef(function (_ref, dropdownButtonRef) {
   var id = _ref.id,
       className = _ref.className,
       isExpanded = _ref.isExpanded,
-      rest = _objectWithoutProperties(_ref, ["id", "className", "isExpanded"]);
+      rest = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement("button", _extends({
     ref: dropdownButtonRef,

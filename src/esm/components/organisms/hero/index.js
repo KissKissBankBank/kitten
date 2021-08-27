@@ -1,5 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["backgroundColor", "color", "backgroundImage"],
+    _excluded2 = ["direction", "tiny", "imageSrc", "contentBackgroundColor", "contentColor", "children"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -14,7 +16,7 @@ var StyledHero = styled(function (_ref) {
   var backgroundColor = _ref.backgroundColor,
       color = _ref.color,
       backgroundImage = _ref.backgroundImage,
-      props = _objectWithoutProperties(_ref, ["backgroundColor", "color", "backgroundImage"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(Container, props);
 }).withConfig({
@@ -40,7 +42,7 @@ export var Hero = function Hero(_ref6) {
       contentBackgroundColor = _ref6.contentBackgroundColor,
       contentColor = _ref6.contentColor,
       children = _ref6.children,
-      props = _objectWithoutProperties(_ref6, ["direction", "tiny", "imageSrc", "contentBackgroundColor", "contentColor", "children"]);
+      props = _objectWithoutProperties(_ref6, _excluded2);
 
   return /*#__PURE__*/React.createElement(StyledHero, _extends({}, props, {
     className: classNames('k-Hero', props.className, "k-Hero--direction-".concat(direction), {

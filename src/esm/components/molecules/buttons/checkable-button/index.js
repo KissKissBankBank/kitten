@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["checkPosition", "isChecked", "className", "children", "error"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '../../../../components/molecules/buttons/button';
@@ -27,7 +28,7 @@ export var CheckableButton = function CheckableButton(_ref) {
       className = _ref.className,
       children = _ref.children,
       error = _ref.error,
-      props = _objectWithoutProperties(_ref, ["checkPosition", "isChecked", "className", "children", "error"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   var checkedModifier = function () {
     switch (true) {

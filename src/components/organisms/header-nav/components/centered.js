@@ -17,11 +17,13 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["children", "className", "display"];
+
 var Centered = function Centered(_ref) {
   var children = _ref.children,
       className = _ref.className,
       display = _ref.display,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "className", "display"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var classNameProps = (0, _classnames.default)('k-HeaderNav__centered', {
     'k-HeaderNav__column': display === 'column'
   }, className);

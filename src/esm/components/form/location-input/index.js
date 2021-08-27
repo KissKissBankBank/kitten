@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["onChange", "onSelect", "defaultValue", "inputProps", "name", "loadingText", "variant"];
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -25,7 +26,7 @@ export var LocationInput = function LocationInput(_ref) {
       name = _ref.name,
       loadingText = _ref.loadingText,
       variant = _ref.variant,
-      others = _objectWithoutProperties(_ref, ["onChange", "onSelect", "defaultValue", "inputProps", "name", "loadingText", "variant"]);
+      others = _objectWithoutProperties(_ref, _excluded);
 
   var _useState = useState(defaultValue),
       _useState2 = _slicedToArray(_useState, 2),

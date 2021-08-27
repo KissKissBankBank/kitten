@@ -13,10 +13,12 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireDefault(require("react"));
 
+var _excluded = ["color", "title"];
+
 var PasswordIcon = function PasswordIcon(_ref) {
   var color = _ref.color,
       title = _ref.title,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 18 12",

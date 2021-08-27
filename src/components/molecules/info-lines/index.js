@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -32,6 +32,13 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 var _typography = require("../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../constants/screen-config");
+
+var _excluded = ["title", "value", "id", "titleTagList", "itemTagList"],
+    _excluded2 = ["infos", "withBorderRadius", "withLeftRightBorder", "withoutTopBottomBorder", "withoutResponsive", "borderColor", "descriptionTagList", "titleTagList", "itemTagList"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
@@ -79,7 +86,7 @@ var InfoList = function InfoList(_ref6) {
       id = _ref6.id,
       titleTagList = _ref6.titleTagList,
       itemTagList = _ref6.itemTagList,
-      others = (0, _objectWithoutProperties2.default)(_ref6, ["title", "value", "id", "titleTagList", "itemTagList"]);
+      others = (0, _objectWithoutProperties2.default)(_ref6, _excluded);
   return _react.default.Children.toArray( /*#__PURE__*/_react.default.createElement(StyledLine, (0, _extends2.default)({}, others, {
     key: id
   }), /*#__PURE__*/_react.default.createElement(StyledKey, {
@@ -112,7 +119,7 @@ var InfoLines = /*#__PURE__*/function (_PureComponent) {
           descriptionTagList = _this$props.descriptionTagList,
           titleTagList = _this$props.titleTagList,
           itemTagList = _this$props.itemTagList,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["infos", "withBorderRadius", "withLeftRightBorder", "withoutTopBottomBorder", "withoutResponsive", "borderColor", "descriptionTagList", "titleTagList", "itemTagList"]);
+          others = (0, _objectWithoutProperties2.default)(_this$props, _excluded2);
       return /*#__PURE__*/_react.default.createElement(StyledInfoLines, (0, _extends2.default)({}, others, {
         as: descriptionTagList,
         borderColor: borderColor,

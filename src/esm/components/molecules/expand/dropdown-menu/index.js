@@ -2,6 +2,10 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["button", "open", "onToggle", "menuProps", "menuPosition", "children", "className"],
+    _excluded2 = ["href", "className"],
+    _excluded3 = ["type", "className"],
+    _excluded4 = ["className"];
 import React, { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames';
 import styled, { keyframes } from 'styled-components';
@@ -26,7 +30,7 @@ export var DropdownMenu = function DropdownMenu(_ref) {
       menuPosition = _ref$menuPosition === void 0 ? 'left' : _ref$menuPosition,
       children = _ref.children,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, ["button", "open", "onToggle", "menuProps", "menuPosition", "children", "className"]);
+      rest = _objectWithoutProperties(_ref, _excluded);
 
   var _useState = useState(openProp),
       _useState2 = _slicedToArray(_useState, 2),
@@ -148,7 +152,7 @@ DropdownMenu.Link = function (_ref2) {
   var _ref2$href = _ref2.href,
       href = _ref2$href === void 0 ? '' : _ref2$href,
       className = _ref2.className,
-      rest = _objectWithoutProperties(_ref2, ["href", "className"]);
+      rest = _objectWithoutProperties(_ref2, _excluded2);
 
   return /*#__PURE__*/React.createElement("a", _extends({
     href: href,
@@ -161,7 +165,7 @@ DropdownMenu.Button = function (_ref3) {
   var _ref3$type = _ref3.type,
       type = _ref3$type === void 0 ? 'button' : _ref3$type,
       className = _ref3.className,
-      rest = _objectWithoutProperties(_ref3, ["type", "className"]);
+      rest = _objectWithoutProperties(_ref3, _excluded3);
 
   return /*#__PURE__*/React.createElement("button", _extends({
     type: type,
@@ -172,7 +176,7 @@ DropdownMenu.Button = function (_ref3) {
 
 DropdownMenu.Separator = function (_ref4) {
   var className = _ref4.className,
-      rest = _objectWithoutProperties(_ref4, ["className"]);
+      rest = _objectWithoutProperties(_ref4, _excluded4);
 
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-DropdownMenu__menu__item', 'k-DropdownMenu__menu__separator', className)

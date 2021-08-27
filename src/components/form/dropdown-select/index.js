@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -19,15 +19,15 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _downshift = require("downshift");
 
-var _label = require("../../../components/form/label");
+var _label = require("../label");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _warningCircleIcon = require("../../../components/graphics/icons/warning-circle-icon");
+var _warningCircleIcon = require("../../graphics/icons/warning-circle-icon");
 
-var _checkedCircleIcon = require("../../../components/graphics/icons/checked-circle-icon");
+var _checkedCircleIcon = require("../../graphics/icons/checked-circle-icon");
 
-var _arrowIcon = require("../../../components/graphics/icons/arrow-icon");
+var _arrowIcon = require("../../graphics/icons/arrow-icon");
 
 var _find = _interopRequireDefault(require("lodash/fp/find"));
 
@@ -37,9 +37,15 @@ var _styles = require("./styles");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
+var _excluded = ["combobox"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var DropdownSelect = function DropdownSelect(_ref) {
   var combobox = _ref.combobox,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["combobox"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   if (combobox) return /*#__PURE__*/_react.default.createElement(_combobox.DropdownCombobox, props);
   var labelText = props.labelText,
       options = props.options,
@@ -64,7 +70,8 @@ var DropdownSelect = function DropdownSelect(_ref) {
       openOnLoad = props.openOnLoad,
       menuZIndex = props.menuZIndex,
       className = props.className,
-      value = props.value;
+      value = props.value,
+      controlled = props.controlled;
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,
@@ -103,7 +110,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
   }();
 
   var initialSelectedItem = (0, _find.default)(['value', defaultSelectedValue])(flattenedOptions);
-  var selectedItemByValue = (0, _find.default)(['value', value])(flattenedOptions);
+  var selectedItemByValue = (0, _find.default)(['value', value])(flattenedOptions) || null;
 
   var onIsOpenChange = function onIsOpenChange(changes) {
     if (changes.isOpen) return onMenuOpen({
@@ -127,7 +134,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
     onSelectedItemChange: onSelectedItemChange,
     onIsOpenChange: onIsOpenChange,
     initialIsOpen: openOnLoad
-  }, selectedItemByValue && {
+  }, controlled && {
     selectedItem: selectedItemByValue
   })),
       isOpen = _useSelect.isOpen,
@@ -200,6 +207,7 @@ exports.DropdownSelect = DropdownSelect;
 DropdownSelect.defaultProps = {
   combobox: false,
   hideLabel: false,
+  controlled: false,
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
@@ -224,6 +232,7 @@ DropdownSelect.propTypes = {
   labelText: _propTypes.default.string.isRequired,
   combobox: _propTypes.default.bool,
   hideLabel: _propTypes.default.bool,
+  controlled: _propTypes.default.bool,
   options: _propTypes.default.arrayOf(_propTypes.default.object),
   placeholder: _propTypes.default.string,
   labelPropsGetter: _propTypes.default.func,

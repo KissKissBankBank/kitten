@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["isExternal", "href", "title", "text"];
 import React from 'react';
 import { LinkBox } from './../link-box';
 import { LinkBoxIllustration } from '../../../../components/graphics/illustrations/link-box-illustration';
@@ -9,7 +10,7 @@ export var DocLinkBox = function DocLinkBox(_ref) {
       href = _ref.href,
       title = _ref.title,
       text = _ref.text,
-      props = _objectWithoutProperties(_ref, ["isExternal", "href", "title", "text"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(LinkBox, _extends({
     href: href,

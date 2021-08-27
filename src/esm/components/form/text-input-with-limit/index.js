@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["limit", "onChange", "disabled", "value", "defaultValue"];
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { TextInput } from '../../../components/form/text-input';
@@ -19,7 +20,7 @@ export var TextInputWithLimit = function TextInputWithLimit(_ref) {
       disabled = _ref.disabled,
       value = _ref.value,
       defaultValue = _ref.defaultValue,
-      others = _objectWithoutProperties(_ref, ["limit", "onChange", "disabled", "value", "defaultValue"]);
+      others = _objectWithoutProperties(_ref, _excluded);
 
   var _useState = useState(value || defaultValue),
       _useState2 = _slicedToArray(_useState, 1),

@@ -5,6 +5,8 @@ import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConst
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["title", "value", "id", "titleTagList", "itemTagList"],
+    _excluded2 = ["infos", "withBorderRadius", "withLeftRightBorder", "withoutTopBottomBorder", "withoutResponsive", "borderColor", "descriptionTagList", "titleTagList", "itemTagList"];
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -54,7 +56,7 @@ var InfoList = function InfoList(_ref6) {
       id = _ref6.id,
       titleTagList = _ref6.titleTagList,
       itemTagList = _ref6.itemTagList,
-      others = _objectWithoutProperties(_ref6, ["title", "value", "id", "titleTagList", "itemTagList"]);
+      others = _objectWithoutProperties(_ref6, _excluded);
 
   return React.Children.toArray( /*#__PURE__*/React.createElement(StyledLine, _extends({}, others, {
     key: id
@@ -89,7 +91,7 @@ export var InfoLines = /*#__PURE__*/function (_PureComponent) {
           descriptionTagList = _this$props.descriptionTagList,
           titleTagList = _this$props.titleTagList,
           itemTagList = _this$props.itemTagList,
-          others = _objectWithoutProperties(_this$props, ["infos", "withBorderRadius", "withLeftRightBorder", "withoutTopBottomBorder", "withoutResponsive", "borderColor", "descriptionTagList", "titleTagList", "itemTagList"]);
+          others = _objectWithoutProperties(_this$props, _excluded2);
 
       return /*#__PURE__*/React.createElement(StyledInfoLines, _extends({}, others, {
         as: descriptionTagList,

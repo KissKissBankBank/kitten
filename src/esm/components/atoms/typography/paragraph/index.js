@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["tag", "modifier", "noMargin", "normalLineHeight", "italic", "className"];
 import React from 'react';
 import styled, { css } from 'styled-components';
 import classNames from 'classnames';
@@ -24,7 +25,7 @@ export var Paragraph = function Paragraph(_ref) {
       normalLineHeight = _ref.normalLineHeight,
       italic = _ref.italic,
       className = _ref.className,
-      other = _objectWithoutProperties(_ref, ["tag", "modifier", "noMargin", "normalLineHeight", "italic", "className"]);
+      other = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledParagraph, _extends({
     as: tag,

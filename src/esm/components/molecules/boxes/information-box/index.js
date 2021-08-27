@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["title", "titleProps", "children"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -16,7 +17,7 @@ export var InformationBox = function InformationBox(_ref) {
   var title = _ref.title,
       titleProps = _ref.titleProps,
       children = _ref.children,
-      other = _objectWithoutProperties(_ref, ["title", "titleProps", "children"]);
+      other = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledInformationBox, _extends({}, other, {
     className: classNames('k-InformationBox', other.className)

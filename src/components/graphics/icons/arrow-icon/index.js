@@ -17,12 +17,14 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
+var _excluded = ["direction", "disabled", "color", "title"];
+
 var ArrowIcon = function ArrowIcon(_ref) {
   var direction = _ref.direction,
       disabled = _ref.disabled,
       color = _ref.color,
       title = _ref.title,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["direction", "disabled", "color", "title"]);
+      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
   var transform = {
     right: 'rotate(90deg)',
     left: 'rotate(-90deg)',

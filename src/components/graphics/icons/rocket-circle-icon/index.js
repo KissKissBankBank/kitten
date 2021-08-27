@@ -29,6 +29,8 @@ var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecate
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["color", "bgColor", "circleColor", "circleWidth", "circleWidthMobile", "rocketWidth", "rocketWidthMobile", "rocketHeight", "rocketHeightMobile", "rocketColor", "rocketTitle", "className"];
+
 var StyledRocketCircle = _styledComponents.default.div.withConfig({
   displayName: "rocket-circle-icon__StyledRocketCircle",
   componentId: "hjcjwz-0"
@@ -74,7 +76,7 @@ var RocketCircleIcon = function RocketCircleIcon(_ref10) {
       rocketColor = _ref10.rocketColor,
       rocketTitle = _ref10.rocketTitle,
       className = _ref10.className,
-      others = (0, _objectWithoutProperties2.default)(_ref10, ["color", "bgColor", "circleColor", "circleWidth", "circleWidthMobile", "rocketWidth", "rocketWidthMobile", "rocketHeight", "rocketHeightMobile", "rocketColor", "rocketTitle", "className"]);
+      others = (0, _objectWithoutProperties2.default)(_ref10, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledRocketCircle, (0, _extends2.default)({
     circleWidth: circleWidth,
     circleWidthMobile: circleWidthMobile,

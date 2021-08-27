@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+var _excluded = ["color", "bgColor", "circleColor", "clockColor", "title", "className"];
 import React from 'react';
 import deprecated from 'prop-types-extra/lib/deprecated';
 import PropTypes from 'prop-types';
@@ -11,7 +12,7 @@ export var ClockCircleIcon = function ClockCircleIcon(_ref) {
       clockColor = _ref.clockColor,
       title = _ref.title,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["color", "bgColor", "circleColor", "clockColor", "title", "className"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement("svg", _extends({
     className: classNames('k-ColorSvg', className),
