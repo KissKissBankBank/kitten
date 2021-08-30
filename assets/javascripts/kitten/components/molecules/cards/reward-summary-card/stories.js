@@ -22,8 +22,8 @@ const argTypes = {
     name: 'contribution (story prop)',
     control: { type: 'text' },
   },
-  availablity: {
-    name: 'availablity (story prop)',
+  availability: {
+    name: 'availability (story prop)',
     control: { type: 'text' },
   },
   as: {
@@ -73,7 +73,7 @@ const args = {
   title: 'Stickers Free Boobs Club',
   amount: '10 000€',
   contribution: '1 468 000',
-  availablity: 'Illimitée',
+  availability: 'Illimitée',
   hasImage: true,
   hasTitleTag: true,
   titleTagIcon: 'star',
@@ -94,7 +94,7 @@ export default {
             'index.js',
             'styles.js',
             'components/amount.js',
-            'components/availablity.js',
+            'components/availability.js',
             'components/contribution.js',
             'components/image.js',
             'components/index.js',
@@ -116,7 +116,7 @@ export const Default = ({
   title,
   amount,
   contribution,
-  availablity,
+  availability,
   titleTagIcon,
   hasImage,
   hasTitleTag,
@@ -126,6 +126,19 @@ export const Default = ({
 
   return (
     <div ref={ref}>
+      <RewardSummaryCard.TitleBar
+        values={{
+          image: 'Visuel de la contrepartie',
+          title: 'Titre de la contrepartie',
+          amount: 'Montant',
+          contributions: 'Contributions',
+          availability: 'Disponibilités',
+        }}
+        className="k-u-hidden@xs-down k-u-margin-bottom-triple"
+        id="RewardSummaryList"
+        size={size}
+      />
+
       <RewardSummaryCard {...args} size={size}>
         {hasImage && (
           <RewardSummaryCard.Image>
@@ -147,9 +160,9 @@ export const Default = ({
         <RewardSummaryCard.Contribution>
           {contribution}
         </RewardSummaryCard.Contribution>
-        <RewardSummaryCard.Availablity>
-          {availablity}
-        </RewardSummaryCard.Availablity>
+        <RewardSummaryCard.Availability>
+          {availability}
+        </RewardSummaryCard.Availability>
         <RewardSummaryCard.Options>
           <DropdownMenu
             menuPosition="left"
@@ -172,3 +185,19 @@ export const Default = ({
     </div>
   )
 }
+
+export const TitleBar = (args) => (
+  <div>
+    <RewardSummaryCard.TitleBar
+      values={{
+        image: 'Visuel de la contrepartie',
+        title: 'Titre de la contrepartie',
+        amount: 'Montant',
+        contributions: 'Contributions',
+        availability: 'Disponibilités',
+      }}
+      className="k-u-hidden@xs-down"
+      id="RewardSummaryList"
+    />
+  </div>
+  )

@@ -1,8 +1,92 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
+
+const commonStyles = css`
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    display: flex;
+    align-items: center;
+  }
+
+  .k-RewardSummaryCard-Wrapper__imageWrapper {
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      align-self: stretch;
+      flex: 0 0 ${pxToRem(160)};
+    }
+  }
+
+  .k-RewardSummaryCard-Wrapper__gridWrapper {
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      display: grid;
+      align-items: center;
+      align-content: flex-start;
+      width: 100%;
+      padding-left: ${pxToRem(30)};
+      padding-right: ${pxToRem(30)};
+      grid-template-columns:
+        minmax(${pxToRem(250)}, 1fr)
+        ${pxToRem(100)}
+        ${pxToRem(100)}
+        ${pxToRem(150)}
+        ${pxToRem(20)};
+      grid-template-rows: 1fr;
+      grid-template-areas: 'info amount contribution availability options';
+    }
+
+
+    & > [class*="__info"] {
+      grid-area: info;
+    }
+
+
+    & > [class*="__amount"] {
+      grid-area: amount;
+    }
+
+
+    & > [class*="__contribution"] {
+      grid-area: contribution;
+    }
+
+
+    & > [class*="__availability"] {
+      grid-area: availability;
+    }
+
+
+    & > [class*="__options"] {
+      grid-area: options;
+    }
+  }
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    &.k-RewardSummaryCard-Wrapper--medium {
+      .k-RewardSummaryCard-Wrapper__imageWrapper {
+        display: none;
+      }
+    }
+    &.k-RewardSummaryCard-Wrapper--small,
+    &.k-RewardSummaryCard-Wrapper--mobile {
+      .k-RewardSummaryCard-Wrapper__imageWrapper {
+        display: none;
+      }
+      .k-RewardSummaryCard-Wrapper__gridWrapper {
+        grid-template-columns:
+          minmax(${pxToRem(250)}, 1fr)
+          ${pxToRem(100)}
+          ${pxToRem(150)}
+          ${pxToRem(20)};
+        grid-template-areas: 'info amount contribution options';
+
+        & > [class*="__availability"] {
+          display: none;
+        }
+      }
+    }
+  }
+`
 
 export const StyledRewardSummaryCard = styled.div`
   --rewardSummaryCard--border-width: ${pxToRem(2)};
@@ -33,8 +117,6 @@ export const StyledRewardSummaryCard = styled.div`
 
   @media (min-width: ${ScreenConfig.S.min}px) {
     height: calc(${pxToRem(100)} + 2 * var(--rewardSummaryCard--border-width));
-    display: flex;
-    align-items: center;
   }
 
   /* ACTION */
@@ -66,15 +148,9 @@ export const StyledRewardSummaryCard = styled.div`
     position: relative;
     overflow: hidden;
 
-    align-self: stretch;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      flex: 0 0 ${pxToRem(160)};
-    }
 
     @media (max-width: ${ScreenConfig.XS.max}px) {
       padding-top: calc(5 / 8 * 100%);
@@ -120,19 +196,6 @@ export const StyledRewardSummaryCard = styled.div`
     grid-gap: ${pxToRem(10)} 0;
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr auto;
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      width: 100%;
-      padding: ${pxToRem(20)} ${pxToRem(30)};
-      grid-template-columns:
-        minmax(${pxToRem(250)}, 1fr)
-        ${pxToRem(100)}
-        ${pxToRem(100)}
-        ${pxToRem(150)}
-        auto;
-      grid-template-rows: 1fr;
-      grid-template-areas: 'info amount contribution availablity options';
-    }
   }
 
   /* SUBCOMPONENTS */
@@ -152,10 +215,6 @@ export const StyledRewardSummaryCard = styled.div`
       grid-column: 1;
       font-size: ${stepToRem(0)};
       margin-top: 0;
-    }
-
-    @media (min-width: ${ScreenConfig.L.min}px) {
-      grid-area: info;
     }
   }
 
@@ -185,30 +244,18 @@ export const StyledRewardSummaryCard = styled.div`
     margin-right: ${pxToRem(10)};
     margin-top: 0;
     place-self: center flex-start;
-
-    @media (min-width: ${ScreenConfig.L.min}px) {
-      grid-area: amount;
-    }
   }
 
   .k-RewardSummaryCard__contribution {
     margin-right: ${pxToRem(10)};
     margin-top: 0;
     place-self: center flex-start;
-
-    @media (min-width: ${ScreenConfig.L.min}px) {
-      grid-area: contribution;
-    }
   }
 
-  .k-RewardSummaryCard__availablity {
+  .k-RewardSummaryCard__availability {
     margin-right: ${pxToRem(10)};
     margin-top: 0;
     place-self: center flex-start;
-
-    @media (min-width: ${ScreenConfig.L.min}px) {
-      grid-area: availablity;
-    }
   }
 
   .k-RewardSummaryCard__options {
@@ -218,10 +265,6 @@ export const StyledRewardSummaryCard = styled.div`
     align-items: stretch;
     justify-content: stretch;
     margin: ${pxToRem(-20)} ${pxToRem(-30)};
-
-    @media (min-width: ${ScreenConfig.L.min}px) {
-      grid-area: options;
-    }
 
     .k-DropdownMenu .k-DropdownMenu__button {
       box-sizing: border-box;
@@ -240,32 +283,9 @@ export const StyledRewardSummaryCard = styled.div`
     }
   }
 
-  /* SIZES */
+  ${commonStyles}
+`
 
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    &.k-RewardSummaryCard--large {
-    }
-    &.k-RewardSummaryCard--medium {
-      .k-RewardSummaryCard__imageWrapper {
-        display: none;
-      }
-    }
-    &.k-RewardSummaryCard--small,
-    &.k-RewardSummaryCard--mobile {
-      .k-RewardSummaryCard__imageWrapper {
-        display: none;
-      }
-      .k-RewardSummaryCard__gridWrapper {
-        grid-template-columns:
-          minmax(${pxToRem(250)}, 1fr)
-          ${pxToRem(100)}
-          ${pxToRem(150)}
-          auto;
-        grid-template-areas: 'info amount contribution options';
-      }
-      .k-RewardSummaryCard__availablity {
-        display: none;
-      }
-    }
-  }
+export const StyledRewardSummaryTitles = styled.div`
+  ${commonStyles}
 `

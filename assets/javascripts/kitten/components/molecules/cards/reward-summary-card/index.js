@@ -6,10 +6,11 @@ import {
   Image,
   Title,
   TitleTag,
-  Availablity,
+  Availability,
   Contribution,
   Amount,
   Options,
+  TitleBar,
 } from './components'
 import {
   getReactElementsByType,
@@ -49,7 +50,7 @@ export const RewardSummaryCard = ({
       className={classNames(
         'k-RewardSummaryCard',
         className,
-        `k-RewardSummaryCard--${size}`,
+        `k-RewardSummaryCard-Wrapper--${size}`,
       )}
       {...props}
     >
@@ -59,14 +60,14 @@ export const RewardSummaryCard = ({
       />
 
       <div
-        className={classNames('k-RewardSummaryCard__imageWrapper', {
+        className={classNames('k-RewardSummaryCard__imageWrapper', 'k-RewardSummaryCard-Wrapper__imageWrapper', {
           'k-u-hidden@m-down': !imageChild,
         })}
       >
         {!!imageChild ? cloneElement(imageChild) : <NoImageIcon />}
       </div>
 
-      <div className="k-RewardSummaryCard__gridWrapper">
+      <div className="k-RewardSummaryCard__gridWrapper k-RewardSummaryCard-Wrapper__gridWrapper">
         {wrappedChildren.map((item, index) =>
           cloneElement(item, { key: `RewardSummaryCard-${index}` }),
         )}
@@ -82,8 +83,9 @@ RewardSummaryCard.Title = Title
 RewardSummaryCard.TitleTag = TitleTag
 RewardSummaryCard.Amount = Amount
 RewardSummaryCard.Contribution = Contribution
-RewardSummaryCard.Availablity = Availablity
+RewardSummaryCard.Availability = Availability
 RewardSummaryCard.Options = Options
+RewardSummaryCard.TitleBar = TitleBar
 
 RewardSummaryCard.defaultProps = {
   show: true,
