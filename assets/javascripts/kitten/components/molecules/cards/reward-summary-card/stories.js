@@ -146,7 +146,7 @@ export const Default = ({
           </RewardSummaryCard.Image>
         )}
 
-        <RewardSummaryCard.Title>
+        <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
           {title}
           {hasTitleTag && (
             <RewardSummaryCard.TitleTag
@@ -156,11 +156,13 @@ export const Default = ({
           )}
         </RewardSummaryCard.Title>
 
-        <RewardSummaryCard.Amount>{amount}</RewardSummaryCard.Amount>
-        <RewardSummaryCard.Contribution>
+        <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
+          {amount}
+        </RewardSummaryCard.Amount>
+        <RewardSummaryCard.Contribution aria-describedby="RewardSummaryList-contribution">
           {contribution}
         </RewardSummaryCard.Contribution>
-        <RewardSummaryCard.Availability>
+        <RewardSummaryCard.Availability aria-describedby="RewardSummaryList-availability">
           {availability}
         </RewardSummaryCard.Availability>
         <RewardSummaryCard.Options>

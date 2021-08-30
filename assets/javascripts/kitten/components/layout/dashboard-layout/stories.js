@@ -420,15 +420,17 @@ const RewardsExample = () => {
           <RewardSummaryCard.Image>
             <img alt="" src="/kitten.jpg" />
           </RewardSummaryCard.Image>
-          <RewardSummaryCard.Title>
+          <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
             Stickers Free Boobs Club
             <RewardSummaryCard.TitleTag text="Contrepartie star" />
           </RewardSummaryCard.Title>
-          <RewardSummaryCard.Amount>10 000€</RewardSummaryCard.Amount>
-          <RewardSummaryCard.Contribution>
+          <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
+            10 000€
+          </RewardSummaryCard.Amount>
+          <RewardSummaryCard.Contribution aria-describedby="RewardSummaryList-contribution">
             1 468 000
           </RewardSummaryCard.Contribution>
-          <RewardSummaryCard.Availability>
+          <RewardSummaryCard.Availability aria-describedby="RewardSummaryList-availability">
             Illimitée
           </RewardSummaryCard.Availability>
           <RewardSummaryCard.Options>
@@ -444,15 +446,17 @@ const RewardsExample = () => {
           </RewardSummaryCard.Options>
         </RewardSummaryCard>
         <RewardSummaryCard size={size}>
-          <RewardSummaryCard.Title>
+          <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
             Stickers Free Boobs Club
             <RewardSummaryCard.TitleTag text="Contrepartie star" />
           </RewardSummaryCard.Title>
-          <RewardSummaryCard.Amount>10 000€</RewardSummaryCard.Amount>
-          <RewardSummaryCard.Contribution>
+          <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
+            10 000€
+          </RewardSummaryCard.Amount>
+          <RewardSummaryCard.Contribution aria-describedby="RewardSummaryList-contribution">
             1 468 000
           </RewardSummaryCard.Contribution>
-          <RewardSummaryCard.Availability>
+          <RewardSummaryCard.Availability aria-describedby="RewardSummaryList-availability">
             Illimitée
           </RewardSummaryCard.Availability>
           <RewardSummaryCard.Options>
@@ -472,15 +476,17 @@ const RewardsExample = () => {
           <RewardSummaryCard.Image>
             <img alt="" src="/kitten.jpg" />
           </RewardSummaryCard.Image>
-          <RewardSummaryCard.Title>
+          <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
             Stickers Free Boobs Club
             <RewardSummaryCard.TitleTag text="Contrepartie star" />
           </RewardSummaryCard.Title>
-          <RewardSummaryCard.Amount>10 000€</RewardSummaryCard.Amount>
-          <RewardSummaryCard.Contribution>
+          <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
+            10 000€
+          </RewardSummaryCard.Amount>
+          <RewardSummaryCard.Contribution aria-describedby="RewardSummaryList-contribution">
             1 468 000
           </RewardSummaryCard.Contribution>
-          <RewardSummaryCard.Availability>
+          <RewardSummaryCard.Availability aria-describedby="RewardSummaryList-availability">
             Illimitée
           </RewardSummaryCard.Availability>
           <RewardSummaryCard.Options>
@@ -496,15 +502,17 @@ const RewardsExample = () => {
           </RewardSummaryCard.Options>
         </RewardSummaryCard>
         <RewardSummaryCard size={size}>
-          <RewardSummaryCard.Title>
+          <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
             Stickers Free Boobs Club
             <RewardSummaryCard.TitleTag text="Contrepartie star" />
           </RewardSummaryCard.Title>
-          <RewardSummaryCard.Amount>10 000€</RewardSummaryCard.Amount>
-          <RewardSummaryCard.Contribution>
+          <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
+            10 000€
+          </RewardSummaryCard.Amount>
+          <RewardSummaryCard.Contribution aria-describedby="RewardSummaryList-contribution">
             1 468 000
           </RewardSummaryCard.Contribution>
-          <RewardSummaryCard.Availability>
+          <RewardSummaryCard.Availability aria-describedby="RewardSummaryList-availability">
             Illimitée
           </RewardSummaryCard.Availability>
           <RewardSummaryCard.Options>
