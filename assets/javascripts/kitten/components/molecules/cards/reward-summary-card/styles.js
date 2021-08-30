@@ -35,28 +35,23 @@ const commonStyles = css`
       grid-template-areas: 'info amount contribution availability options';
     }
 
-
-    & > [class*="__info"] {
+    & > [class*='__info'] {
       grid-area: info;
     }
 
-
-    & > [class*="__amount"] {
+    & > [class*='__amount'] {
       grid-area: amount;
     }
 
-
-    & > [class*="__contribution"] {
+    & > [class*='__contribution'] {
       grid-area: contribution;
     }
 
-
-    & > [class*="__availability"] {
+    & > [class*='__availability'] {
       grid-area: availability;
     }
 
-
-    & > [class*="__options"] {
+    & > [class*='__options'] {
       grid-area: options;
     }
   }
@@ -80,7 +75,7 @@ const commonStyles = css`
           ${pxToRem(20)};
         grid-template-areas: 'info amount contribution options';
 
-        & > [class*="__availability"] {
+        & > [class*='__availability'] {
           display: none;
         }
       }

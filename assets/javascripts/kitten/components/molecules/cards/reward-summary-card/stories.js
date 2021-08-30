@@ -186,8 +186,8 @@ export const Default = ({
   )
 }
 
-export const TitleBar = (args) => (
-  <div>
+export const TitleBar = args => (
+  <div {...args}>
     <RewardSummaryCard.TitleBar
       values={{
         image: 'Visuel de la contrepartie',
@@ -200,4 +200,4 @@ export const TitleBar = (args) => (
       id="RewardSummaryList"
     />
   </div>
-  )
+)

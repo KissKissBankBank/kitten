@@ -60,9 +60,13 @@ export const RewardSummaryCard = ({
       />
 
       <div
-        className={classNames('k-RewardSummaryCard__imageWrapper', 'k-RewardSummaryCard-Wrapper__imageWrapper', {
-          'k-u-hidden@m-down': !imageChild,
-        })}
+        className={classNames(
+          'k-RewardSummaryCard__imageWrapper',
+          'k-RewardSummaryCard-Wrapper__imageWrapper',
+          {
+            'k-u-hidden@m-down': !imageChild,
+          },
+        )}
       >
         {!!imageChild ? cloneElement(imageChild) : <NoImageIcon />}
       </div>
