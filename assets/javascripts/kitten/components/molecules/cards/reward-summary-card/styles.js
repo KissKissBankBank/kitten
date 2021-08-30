@@ -29,7 +29,7 @@ export const StyledRewardSummaryCard = styled.div`
   border-width: var(--rewardSummaryCard--border-width);
   border-style: solid;
   border-color: ${COLORS.line1};
-  border-radius: ${pxToRem(8)};
+  border-radius: var(--rewardSummaryCard--border-radius));
 
   @media (min-width: ${ScreenConfig.M.min}px) {
     height: calc(${pxToRem(100)} + 2 * var(--rewardSummaryCard--border-width));
@@ -147,6 +147,7 @@ export const StyledRewardSummaryCard = styled.div`
   .k-RewardSummaryCard__title {
     max-height: 4rem;
     text-overflow: ellipsis;
+    overflow: hidden;
     grid-column: 1 / span 2;
     grid-row: 1;
     padding-right: ${pxToRem(30)};
