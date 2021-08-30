@@ -25,9 +25,6 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var _excluded = ["items", "size", "className"],
-    _excluded2 = ["item", "key"];
-
 var StyledBulletList = _styledComponents.default.ul.withConfig({
   displayName: "bullet-list__StyledBulletList",
   componentId: "sc-1odqo0m-0"
@@ -37,13 +34,13 @@ var BulletList = function BulletList(_ref) {
   var items = _ref.items,
       size = _ref.size,
       className = _ref.className,
-      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      others = (0, _objectWithoutProperties2.default)(_ref, ["items", "size", "className"]);
   return /*#__PURE__*/_react.default.createElement(StyledBulletList, (0, _extends2.default)({
     className: (0, _classnames.default)('k-BulletList', "k-BulletList--".concat(size), className)
   }, others), items.map(function (_ref2) {
     var item = _ref2.item,
         key = _ref2.key,
-        itemOthers = (0, _objectWithoutProperties2.default)(_ref2, _excluded2);
+        itemOthers = (0, _objectWithoutProperties2.default)(_ref2, ["item", "key"]);
     return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
       key: key
     }, itemOthers, {

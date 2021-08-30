@@ -33,7 +33,6 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _screenConfig = require("../../../../constants/screen-config");
 
-var _excluded = ["statusType", "progressTitle", "titleProps", "children"];
 var STATUS_SIZE = 30;
 
 var StyledWrapper = _styledComponents.default.div.withConfig({
@@ -46,7 +45,7 @@ var Status = function Status(_ref) {
       progressTitle = _ref.progressTitle,
       titleProps = _ref.titleProps,
       children = _ref.children,
-      other = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      other = (0, _objectWithoutProperties2.default)(_ref, ["statusType", "progressTitle", "titleProps", "children"]);
 
   var iconByStatus = function () {
     switch (statusType) {

@@ -17,12 +17,10 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
-var _excluded = ["width", "height"];
-
 var KkbbCoLogo = function KkbbCoLogo(_ref) {
   var width = _ref.width,
       height = _ref.height,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["width", "height"]);
   var DEFAULT_WIDTH = 399;
   var DEFAULT_HEIGHT = 65;
   var computed = (0, _ratio.computeFromRatio)({

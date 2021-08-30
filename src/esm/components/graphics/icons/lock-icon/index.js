@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["color", "title", "width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
@@ -12,7 +11,7 @@ export var LockIcon = function LockIcon(_ref) {
       title = _ref.title,
       width = _ref.width,
       height = _ref.height,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["color", "title", "width", "height"]);
 
   var computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,

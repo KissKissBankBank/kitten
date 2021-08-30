@@ -3,7 +3,6 @@ import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import _toArray from "@babel/runtime/helpers/esm/toArray";
-var _excluded = ["id", "value", "defaultCountry", "locale", "placeholder", "onChange", "flagsUrl", "assumeCountry", "inputProps"];
 
 var _this = this;
 
@@ -169,7 +168,7 @@ export var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
       flagsUrl = _ref3.flagsUrl,
       assumeCountry = _ref3.assumeCountry,
       inputProps = _ref3.inputProps,
-      props = _objectWithoutProperties(_ref3, _excluded);
+      props = _objectWithoutProperties(_ref3, ["id", "value", "defaultCountry", "locale", "placeholder", "onChange", "flagsUrl", "assumeCountry", "inputProps"]);
 
   // Consts
   var _useState = useState(null),

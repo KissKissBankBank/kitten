@@ -29,9 +29,6 @@ var _gridConfig = require("../../../constants/grid-config");
 
 var _screenConfig = require("../../../constants/screen-config");
 
-var _excluded = ["active", "children", "className", "linkProps"],
-    _excluded2 = ["children", "className", "navProps", "listProps", "colors", "modifier"];
-
 var StyledNavBar = _styledComponents.default.div.withConfig({
   displayName: "nav-bar__StyledNavBar",
   componentId: "ui0yo2-0"
@@ -60,7 +57,7 @@ var NavBarItem = function NavBarItem(_ref7) {
       children = _ref7.children,
       className = _ref7.className,
       linkProps = _ref7.linkProps,
-      props = (0, _objectWithoutProperties2.default)(_ref7, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref7, ["active", "children", "className", "linkProps"]);
   return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-NavBar__listItem', className)
   }), /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
@@ -77,7 +74,7 @@ var NavBar = function NavBar(_ref8) {
       listProps = _ref8.listProps,
       colors = _ref8.colors,
       modifier = _ref8.modifier,
-      props = (0, _objectWithoutProperties2.default)(_ref8, _excluded2);
+      props = (0, _objectWithoutProperties2.default)(_ref8, ["children", "className", "navProps", "listProps", "colors", "modifier"]);
   return /*#__PURE__*/_react.default.createElement(StyledNavBar, (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-NavBar', "k-NavBar--".concat(modifier), className),
     colors: colors

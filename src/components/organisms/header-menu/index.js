@@ -23,8 +23,6 @@ var _badge = require("./components/badge");
 
 var _styles = require("./styles");
 
-var _excluded = ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "style"];
-
 var HeaderMenu = function HeaderMenu(_ref) {
   var backgroundColors = _ref.backgroundColors,
       borderSide = _ref.borderSide,
@@ -33,7 +31,7 @@ var HeaderMenu = function HeaderMenu(_ref) {
       noBorder = _ref.noBorder,
       className = _ref.className,
       style = _ref.style,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "style"]);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledList, (0, _extends2.default)({
     className: (0, _classnames.default)('k-HeaderMenu', className, {
       'k-HeaderMenu--hasBorders': !noBorder,

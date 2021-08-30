@@ -15,11 +15,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _text = require("../../../atoms/typography/text");
 
-var _excluded = ["children"];
-
 var FieldError = function FieldError(_ref) {
   var children = _ref.children,
-      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      others = (0, _objectWithoutProperties2.default)(_ref, ["children"]);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "k-u-margin-top-single"
   }, /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({

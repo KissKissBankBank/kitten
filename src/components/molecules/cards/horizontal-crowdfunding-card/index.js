@@ -29,8 +29,6 @@ var _progress = require("../../../../components/atoms/progress");
 
 var _text = require("../../../../components/atoms/typography/text");
 
-var _excluded = ["href", "imageProps", "title", "titleTag", "description", "info", "progress", "progressColor", "className", "noProgressOnMobile"];
-
 var StyledCard = _styledComponents.default.a.withConfig({
   displayName: "horizontal-crowdfunding-card__StyledCard",
   componentId: "sc-1n362y8-0"
@@ -58,7 +56,7 @@ var HorizontalCrowdfundingCard = function HorizontalCrowdfundingCard(_ref) {
       className = _ref.className,
       _ref$noProgressOnMobi = _ref.noProgressOnMobile,
       noProgressOnMobile = _ref$noProgressOnMobi === void 0 ? false : _ref$noProgressOnMobi,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["href", "imageProps", "title", "titleTag", "description", "info", "progress", "progressColor", "className", "noProgressOnMobile"]);
   return /*#__PURE__*/_react.default.createElement(StyledCard, (0, _extends2.default)({
     href: href,
     className: (0, _classnames.default)('k-HorizontalCrowdfundingCard', className, {

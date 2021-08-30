@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children", "withoutBorder", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -17,7 +16,7 @@ export var VerticalProgress = function VerticalProgress(_ref) {
   var children = _ref.children,
       withoutBorder = _ref.withoutBorder,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["children", "withoutBorder", "className"]);
 
   return /*#__PURE__*/React.createElement(StyledContainer, {
     className: classNames('k-VerticalProgress__wrapper', className, {

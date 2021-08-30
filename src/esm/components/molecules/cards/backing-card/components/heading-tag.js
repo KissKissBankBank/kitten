@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["text", "icon", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -11,7 +10,7 @@ export var HeadingTag = function HeadingTag(_ref) {
   var text = _ref.text,
       icon = _ref.icon,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["text", "icon", "className"]);
 
   var iconDisplay = function () {
     switch (icon) {

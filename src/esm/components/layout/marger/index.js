@@ -1,7 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["top", "bottom", "style"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -13,7 +12,7 @@ export var Marger = function Marger(props) {
   var top = props.top,
       bottom = props.bottom,
       style = props.style,
-      others = _objectWithoutProperties(props, _excluded);
+      others = _objectWithoutProperties(props, ["top", "bottom", "style"]);
 
   var gutter = 10 / TYPOGRAPHY.root;
 

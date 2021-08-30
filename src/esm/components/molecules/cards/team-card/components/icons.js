@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["email", "phoneNumber", "links", "socialLink"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -20,7 +19,7 @@ export var TeamCardIcons = function TeamCardIcons(_ref) {
       phoneNumber = _ref.phoneNumber,
       links = _ref.links,
       socialLink = _ref.socialLink,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["email", "phoneNumber", "links", "socialLink"]);
 
   var getSocialLinks = function getSocialLinks() {
     if (links.length > 0) return links; // handle deprecated `socialLink` prop

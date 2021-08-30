@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["type", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -15,7 +14,7 @@ var StyledTag = styled.span.withConfig({
 export var Tag = function Tag(_ref) {
   var type = _ref.type,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["type", "className"]);
 
   return /*#__PURE__*/React.createElement(StyledTag, _extends({
     className: classNames('k-Tag', className, "k-Tag--".concat(type))

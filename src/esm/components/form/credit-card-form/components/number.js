@@ -1,5 +1,4 @@
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["iconSvg"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -9,7 +8,7 @@ import { pxToRem } from '../../../../helpers/utils/typography';
 import { getCreditCardType, getCreditCardFormat, getIconSvgStringByType } from './helpers';
 var StyledNumberFormat = styled(function (_ref) {
   var iconSvg = _ref.iconSvg,
-      others = _objectWithoutProperties(_ref, _excluded);
+      others = _objectWithoutProperties(_ref, ["iconSvg"]);
 
   return /*#__PURE__*/React.createElement(NumberFormat, others);
 }).withConfig({

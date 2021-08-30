@@ -15,12 +15,10 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _excluded = ["color", "title"];
-
 var Title1Icon = function Title1Icon(_ref) {
   var color = _ref.color,
       title = _ref.title,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title"]);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     width: "14",
     height: "12",

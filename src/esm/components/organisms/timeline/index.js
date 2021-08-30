@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children", "itemHeight"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -18,7 +17,7 @@ var StyledTimeline = styled.div.withConfig({
 export var Timeline = function Timeline(_ref) {
   var children = _ref.children,
       itemHeight = _ref.itemHeight,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["children", "itemHeight"]);
 
   return /*#__PURE__*/React.createElement(StyledTimeline, _extends({
     className: classNames('k-Timeline', "k-Timeline--".concat(itemHeight))

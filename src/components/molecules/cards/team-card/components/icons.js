@@ -31,8 +31,6 @@ var _phoneIcon = require("./phone-icon");
 
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 
-var _excluded = ["email", "phoneNumber", "links", "socialLink"];
-
 var StyledTeamCardIcons = _styledComponents.default.div.withConfig({
   displayName: "icons__StyledTeamCardIcons",
   componentId: "sc-18r7e3-0"
@@ -43,7 +41,7 @@ var TeamCardIcons = function TeamCardIcons(_ref) {
       phoneNumber = _ref.phoneNumber,
       links = _ref.links,
       socialLink = _ref.socialLink,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["email", "phoneNumber", "links", "socialLink"]);
 
   var getSocialLinks = function getSocialLinks() {
     if (links.length > 0) return links; // handle deprecated `socialLink` prop

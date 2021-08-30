@@ -25,8 +25,6 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../../constants/screen-config");
 
-var _excluded = ["tag", "className", "size", "withoutPointerEvents", "withBorder", "img"];
-
 var StyledButtonImage = _styledComponents.default.button.withConfig({
   displayName: "button-image__StyledButtonImage",
   componentId: "sc-78jbm8-0"
@@ -39,7 +37,7 @@ var ButtonImage = function ButtonImage(_ref) {
       withoutPointerEvents = _ref.withoutPointerEvents,
       withBorder = _ref.withBorder,
       img = _ref.img,
-      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      others = (0, _objectWithoutProperties2.default)(_ref, ["tag", "className", "size", "withoutPointerEvents", "withBorder", "img"]);
   return /*#__PURE__*/_react.default.createElement(StyledButtonImage, (0, _extends2.default)({
     as: tag,
     className: (0, _classnames.default)('k-ButtonImage', "k-ButtonImage--".concat(size), {

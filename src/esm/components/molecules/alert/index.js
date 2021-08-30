@@ -1,7 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["className", "show", "error", "success", "warning", "closeButton", "closeButtonLabel", "children", "onAfterClose"];
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
@@ -26,7 +25,7 @@ export var Alert = function Alert(_ref) {
       closeButtonLabel = _ref.closeButtonLabel,
       children = _ref.children,
       onAfterClose = _ref.onAfterClose,
-      others = _objectWithoutProperties(_ref, _excluded);
+      others = _objectWithoutProperties(_ref, ["className", "show", "error", "success", "warning", "closeButton", "closeButtonLabel", "children", "onAfterClose"]);
 
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),

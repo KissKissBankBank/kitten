@@ -31,8 +31,6 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
-var _excluded = ["imageProps", "withPlayerButtonOnImage", "arrowColor", "ariaLabel", "href", "title", "titleProps", "subtitle", "paragraph", "imageContainerRatio", "imageContainerBackground", "className", "playerButtonSize"];
-
 var ContainerStyle = _styledComponents.default.a.withConfig({
   displayName: "simple-card__ContainerStyle",
   componentId: "sc-1u8ubrr-0"
@@ -52,7 +50,7 @@ var SimpleCard = function SimpleCard(_ref) {
       imageContainerBackground = _ref.imageContainerBackground,
       className = _ref.className,
       playerButtonSize = _ref.playerButtonSize,
-      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      others = (0, _objectWithoutProperties2.default)(_ref, ["imageProps", "withPlayerButtonOnImage", "arrowColor", "ariaLabel", "href", "title", "titleProps", "subtitle", "paragraph", "imageContainerRatio", "imageContainerBackground", "className", "playerButtonSize"]);
   return /*#__PURE__*/_react.default.createElement(ContainerStyle, (0, _extends2.default)({
     as: href ? 'a' : 'div'
   }, others, {

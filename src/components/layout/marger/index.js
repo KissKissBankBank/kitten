@@ -27,13 +27,11 @@ var _isStringANumber = _interopRequireDefault(require("is-string-a-number"));
 
 var _string = require("../../../helpers/utils/string");
 
-var _excluded = ["top", "bottom", "style"];
-
 var Marger = function Marger(props) {
   var top = props.top,
       bottom = props.bottom,
       style = props.style,
-      others = (0, _objectWithoutProperties2.default)(props, _excluded);
+      others = (0, _objectWithoutProperties2.default)(props, ["top", "bottom", "style"]);
   var gutter = 10 / _typographyConfig.default.root;
 
   var marginSize = function marginSize(value) {

@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children", "dropdownContentWidth", "className"];
 import React, { useContext } from 'react';
 import { BurgerIcon } from '../../../../components/graphics/icons/burger-icon';
 import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden';
@@ -15,7 +14,7 @@ export var BurgerMenuNext = function BurgerMenuNext(_ref) {
   var children = _ref.children,
       dropdownContentWidth = _ref.dropdownContentWidth,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth", "className"]);
 
   var _useContext = useContext(Context),
       id = _useContext.id,

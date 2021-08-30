@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["className", "margin", "items", "lineHeight", "itemMargin", "color", "weight", "href", "active"];
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
@@ -23,7 +22,7 @@ export var LinkList = function LinkList(_ref) {
       weight = _ref.weight,
       href = _ref.href,
       active = _ref.active,
-      others = _objectWithoutProperties(_ref, _excluded);
+      others = _objectWithoutProperties(_ref, ["className", "margin", "items", "lineHeight", "itemMargin", "color", "weight", "href", "active"]);
 
   return /*#__PURE__*/React.createElement(StyledLinkList, _extends({}, others, {
     className: classNames('k-LinkList', others.className, {

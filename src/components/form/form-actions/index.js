@@ -25,8 +25,6 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../constants/screen-config");
 
-var _excluded = ["className", "spreadOutAt"];
-
 var StyledFormActions = _styledComponents.default.div.withConfig({
   displayName: "form-actions__StyledFormActions",
   componentId: "sc-86ge76-0"
@@ -35,7 +33,7 @@ var StyledFormActions = _styledComponents.default.div.withConfig({
 var FormActions = function FormActions(_ref) {
   var className = _ref.className,
       spreadOutAt = _ref.spreadOutAt,
-      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "spreadOutAt"]);
   var formActionsClassName = (0, _classnames.default)('k-FormActions', className, (0, _defineProperty2.default)({}, "k-FormActions--spreadOut-".concat(spreadOutAt), spreadOutAt));
   return /*#__PURE__*/_react.default.createElement(StyledFormActions, (0, _extends2.default)({
     className: formActionsClassName

@@ -23,7 +23,6 @@ var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecate
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["circleColor", "checkedColor", "color", "bgColor", "title", "width", "height", "className"];
 var DEFAULT_WIDTH = 20;
 var DEFAULT_HEIGHT = 20;
 
@@ -36,7 +35,7 @@ var CheckedCircleIcon = function CheckedCircleIcon(_ref) {
       width = _ref.width,
       height = _ref.height,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["circleColor", "checkedColor", "color", "bgColor", "title", "width", "height", "className"]);
   var computed = (0, _ratio.computeFromRatio)({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,

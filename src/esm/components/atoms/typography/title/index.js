@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["modifier", "tag", "noMargin", "italic", "cssColor", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -19,7 +18,7 @@ export var Title = function Title(_ref) {
       italic = _ref.italic,
       cssColor = _ref.cssColor,
       className = _ref.className,
-      other = _objectWithoutProperties(_ref, _excluded);
+      other = _objectWithoutProperties(_ref, ["modifier", "tag", "noMargin", "italic", "cssColor", "className"]);
 
   return /*#__PURE__*/React.createElement(StyledTitle, _extends({
     as: tag,

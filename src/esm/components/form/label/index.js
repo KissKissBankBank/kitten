@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["tag", "className", "children", "focusId", "size", "withoutPointerEvents", "htmlFor"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -21,7 +20,7 @@ export var Label = function Label(_ref) {
       size = _ref.size,
       withoutPointerEvents = _ref.withoutPointerEvents,
       htmlFor = _ref.htmlFor,
-      other = _objectWithoutProperties(_ref, _excluded);
+      other = _objectWithoutProperties(_ref, ["tag", "className", "children", "focusId", "size", "withoutPointerEvents", "htmlFor"]);
 
   var handleClick = function handleClick(e) {
     if (domElementHelper.canUseDom() && focusId) {

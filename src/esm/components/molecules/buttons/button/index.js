@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children", "modifier", "variant", "size", "className", "rounded", "fluid", "icon", "borderRadius", "tag"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import deprecated from 'prop-types-extra/lib/deprecated';
@@ -80,7 +79,7 @@ export var Button = function Button(_ref2) {
       icon = _ref2.icon,
       borderRadius = _ref2.borderRadius,
       tag = _ref2.tag,
-      props = _objectWithoutProperties(_ref2, _excluded);
+      props = _objectWithoutProperties(_ref2, ["children", "modifier", "variant", "size", "className", "rounded", "fluid", "icon", "borderRadius", "tag"]);
 
   var actualSize = function () {
     switch (true) {

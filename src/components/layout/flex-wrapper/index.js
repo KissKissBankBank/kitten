@@ -25,8 +25,6 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _excluded = ["gap", "padding", "direction", "className", "style"];
-
 var StyledWrapper = _styledComponents.default.div.withConfig({
   displayName: "flex-wrapper__StyledWrapper",
   componentId: "z0vdh1-0"
@@ -55,7 +53,7 @@ var FlexWrapper = function FlexWrapper(_ref) {
       direction = _ref$direction === void 0 ? 'column' : _ref$direction,
       className = _ref.className,
       style = _ref.style,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["gap", "padding", "direction", "className", "style"]);
   var gapRule = gap ? getRuleFromProp(gap) : null;
   var paddingRule = padding ? getRuleFromProp(padding) : null;
   var namedPaddingRule = {};

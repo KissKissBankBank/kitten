@@ -1,7 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["items", "disabled", "className", "name", "error", "label", "children", "variant"],
-    _excluded2 = ["id", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -22,7 +20,7 @@ export var CheckboxSet = function CheckboxSet(_ref) {
       label = _ref.label,
       children = _ref.children,
       variant = _ref.variant,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["items", "disabled", "className", "name", "error", "label", "children", "variant"]);
 
   return /*#__PURE__*/React.createElement(StyledCheckboxSet, _extends({
     className: classNames('k-Form-CheckboxSet', className),
@@ -33,7 +31,7 @@ export var CheckboxSet = function CheckboxSet(_ref) {
   }, label), children && !label && /*#__PURE__*/React.createElement("legend", null, children), items.map(function (_ref2) {
     var id = _ref2.id,
         className = _ref2.className,
-        itemProps = _objectWithoutProperties(_ref2, _excluded2);
+        itemProps = _objectWithoutProperties(_ref2, ["id", "className"]);
 
     return /*#__PURE__*/React.createElement(Checkbox, _extends({
       id: id,

@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["color", "width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
@@ -8,7 +7,7 @@ export var GoodeedLogo = function GoodeedLogo(_ref) {
   var color = _ref.color,
       width = _ref.width,
       height = _ref.height,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["color", "width", "height"]);
 
   var DEFAULT_WIDTH = 122;
   var DEFAULT_HEIGHT = 22;

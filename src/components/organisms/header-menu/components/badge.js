@@ -19,11 +19,9 @@ var _badge = require("../../../../components/atoms/badge");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
-var _excluded = ["backgroundColor"];
-
 var Badge = function Badge(_ref) {
   var backgroundColor = _ref.backgroundColor,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["backgroundColor"]);
   return /*#__PURE__*/_react.default.createElement(_badge.Badge, (0, _extends2.default)({
     color: backgroundColor,
     spaced: true

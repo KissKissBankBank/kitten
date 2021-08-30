@@ -1,7 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children", "disabled", "style", "withTopBorder", "onClick", "onKeyPress", "onFocus", "onBlur", "onMouseEnter", "onMouseLeave", "className", "hasArrow", "active"];
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -30,7 +29,7 @@ export var ButtonItem = function ButtonItem(_ref2) {
       className = _ref2.className,
       hasArrow = _ref2.hasArrow,
       active = _ref2.active,
-      others = _objectWithoutProperties(_ref2, _excluded);
+      others = _objectWithoutProperties(_ref2, ["children", "disabled", "style", "withTopBorder", "onClick", "onKeyPress", "onFocus", "onBlur", "onMouseEnter", "onMouseLeave", "className", "hasArrow", "active"]);
 
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),

@@ -23,13 +23,11 @@ var _diamondIcon = require("../../../../../components/graphics/icons/diamond-ico
 
 var _starIcon = require("../../../../../components/graphics/icons/star-icon");
 
-var _excluded = ["text", "icon", "className"];
-
 var HeadingTag = function HeadingTag(_ref) {
   var text = _ref.text,
       icon = _ref.icon,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["text", "icon", "className"]);
 
   var iconDisplay = function () {
     switch (icon) {

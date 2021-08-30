@@ -1,120 +1,54 @@
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["title", "value", "id", "titleTagList", "itemTagList"],
-    _excluded2 = ["infos", "withBorderRadius", "withLeftRightBorder", "withoutTopBottomBorder", "withoutResponsive", "borderColor", "descriptionTagList", "titleTagList", "itemTagList"];
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
 import React, { PureComponent } from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../constants/screen-config';
-var StyledInfoLines = styled.div.withConfig({
+import COLORS from '../../../constants/colors-config';
+var StyledInfoLines = styled.dl.withConfig({
   displayName: "info-lines__StyledInfoLines",
   componentId: "sc-18qenjp-0"
-})(["", " ", " ", " ", " ", ""], function (_ref) {
-  var borderColor = _ref.borderColor;
-  return borderColor && css(["border-top:", " solid ", ";border-bottom:", " solid ", ";& > * + *{border-top:", " solid ", ";}"], pxToRem(1), borderColor, pxToRem(1), borderColor, pxToRem(1), borderColor);
-}, function (_ref2) {
-  var withBorderRadius = _ref2.withBorderRadius;
-  return withBorderRadius && css(["border-radius:", ";"], pxToRem(8));
-}, function (_ref3) {
-  var withLeftRightBorder = _ref3.withLeftRightBorder,
-      borderColor = _ref3.borderColor;
-  return withLeftRightBorder && borderColor && css(["border-left:", " solid ", ";border-right:", " solid ", ";"], pxToRem(1), borderColor, pxToRem(1), borderColor);
-}, function (_ref4) {
-  var withoutTopBottomBorder = _ref4.withoutTopBottomBorder;
-  return withoutTopBottomBorder && css(["border-top:none;border-bottom:none;"]);
-}, function (_ref5) {
-  var withoutResponsive = _ref5.withoutResponsive;
-  return withoutResponsive && css(["", "{flex-direction:row;}", "{flex:auto;}"], StyledLine, StyledKey);
-});
-var StyledLine = styled.div.withConfig({
-  displayName: "info-lines__StyledLine",
-  componentId: "sc-18qenjp-1"
-})(["flex-direction:column;display:flex;padding:", ";@media (min-width:", "px){flex-direction:row;}"], pxToRem(15), ScreenConfig.M.min);
-var StyledKey = styled.span.withConfig({
-  displayName: "info-lines__StyledKey",
-  componentId: "sc-18qenjp-2"
-})(["@media (min-width:", "px){flex:auto;}"], ScreenConfig.M.min);
-var StyledValue = styled.span.withConfig({
-  displayName: "info-lines__StyledValue",
-  componentId: "sc-18qenjp-3"
-})(["margin:", ";"], pxToRem(0));
+})(["&.k-InfoLines--withBorderRadius{border-radius:", ";}&.k-InfoLines--withLeftRightBorder{border-left:", " solid var(--InfoLines-borderColor);border-right:", " solid var(--InfoLines-borderColor);.k-InfoLines__line{padding:", " ", ";}}&:not(.k-InfoLines--withoutTopBottomBorder){border-top:", " solid var(--InfoLines-borderColor);border-bottom:", " solid var(--InfoLines-borderColor);}.k-InfoLines__line{box-sizing:border-box;display:flex;padding:", " 0;min-height:", ";gap:", " ", ";align-items:center;flex-direction:row;justify-content:space-between;&:not(:first-child){border-top:", " solid var(--InfoLines-borderColor);}}.k-InfoLines__key,.k-InfoLines__value{margin:0;}&:not(.k-InfoLines--withoutResponsive){@media (max-width:", "px){.k-InfoLines__line{align-items:flex-start;flex-direction:column;}.k-InfoLines__key{flex:0;}}}"], pxToRem(8), pxToRem(1), pxToRem(1), pxToRem(10), pxToRem(15), pxToRem(1), pxToRem(1), pxToRem(10), pxToRem(60), pxToRem(5), pxToRem(15), pxToRem(1), ScreenConfig.S.max);
+export var InfoLines = function InfoLines(_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      infos = _ref.infos,
+      withBorderRadius = _ref.withBorderRadius,
+      withLeftRightBorder = _ref.withLeftRightBorder,
+      withoutTopBottomBorder = _ref.withoutTopBottomBorder,
+      withoutResponsive = _ref.withoutResponsive,
+      borderColor = _ref.borderColor,
+      descriptionTagList = _ref.descriptionTagList,
+      titleTagList = _ref.titleTagList,
+      itemTagList = _ref.itemTagList,
+      others = _objectWithoutProperties(_ref, ["className", "style", "infos", "withBorderRadius", "withLeftRightBorder", "withoutTopBottomBorder", "withoutResponsive", "borderColor", "descriptionTagList", "titleTagList", "itemTagList"]);
 
-var InfoList = function InfoList(_ref6) {
-  var title = _ref6.title,
-      value = _ref6.value,
-      id = _ref6.id,
-      titleTagList = _ref6.titleTagList,
-      itemTagList = _ref6.itemTagList,
-      others = _objectWithoutProperties(_ref6, _excluded);
-
-  return React.Children.toArray( /*#__PURE__*/React.createElement(StyledLine, _extends({}, others, {
-    key: id
-  }), /*#__PURE__*/React.createElement(StyledKey, {
-    as: titleTagList
-  }, title), /*#__PURE__*/React.createElement(StyledValue, {
-    as: itemTagList
-  }, value)));
+  var TitleElement = titleTagList;
+  var ItemElement = itemTagList;
+  return /*#__PURE__*/React.createElement(StyledInfoLines, _extends({
+    className: classNames('k-Infolines', className, {
+      'k-InfoLines--withBorderRadius': withBorderRadius,
+      'k-InfoLines--withLeftRightBorder': withLeftRightBorder,
+      'k-InfoLines--withoutTopBottomBorder': withoutTopBottomBorder,
+      'k-InfoLines--withoutResponsive': withoutResponsive
+    }),
+    style: _extends({}, style, {
+      '--InfoLines-borderColor': borderColor
+    }),
+    as: descriptionTagList
+  }, others), infos.map(function (info) {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "k-InfoLines__line",
+      key: info.id || info.key
+    }, /*#__PURE__*/React.createElement(TitleElement, {
+      className: "k-InfoLines__key"
+    }, info.key), /*#__PURE__*/React.createElement(ItemElement, {
+      className: "k-InfoLines__value"
+    }, info.value));
+  }));
 };
-
-export var InfoLines = /*#__PURE__*/function (_PureComponent) {
-  _inherits(InfoLines, _PureComponent);
-
-  var _super = _createSuper(InfoLines);
-
-  function InfoLines() {
-    _classCallCheck(this, InfoLines);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(InfoLines, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          infos = _this$props.infos,
-          withBorderRadius = _this$props.withBorderRadius,
-          withLeftRightBorder = _this$props.withLeftRightBorder,
-          withoutTopBottomBorder = _this$props.withoutTopBottomBorder,
-          withoutResponsive = _this$props.withoutResponsive,
-          borderColor = _this$props.borderColor,
-          descriptionTagList = _this$props.descriptionTagList,
-          titleTagList = _this$props.titleTagList,
-          itemTagList = _this$props.itemTagList,
-          others = _objectWithoutProperties(_this$props, _excluded2);
-
-      return /*#__PURE__*/React.createElement(StyledInfoLines, _extends({}, others, {
-        as: descriptionTagList,
-        borderColor: borderColor,
-        withBorderRadius: withBorderRadius,
-        withLeftRightBorder: withLeftRightBorder,
-        withoutTopBottomBorder: withoutTopBottomBorder,
-        withoutResponsive: withoutResponsive
-      }), infos.map(function (info) {
-        return /*#__PURE__*/React.createElement(InfoList, {
-          key: info.id,
-          title: info.key,
-          value: info.value,
-          id: info.id,
-          titleTagList: titleTagList,
-          itemTagList: itemTagList
-        });
-      }));
-    }
-  }]);
-
-  return InfoLines;
-}(PureComponent);
 InfoLines.propTypes = {
   infos: PropTypes.array.isRequired,
   borderColor: PropTypes.string,
@@ -127,7 +61,7 @@ InfoLines.propTypes = {
   itemTagList: PropTypes.string
 };
 InfoLines.defaultProps = {
-  borderColor: '#eee',
+  borderColor: COLORS.line1,
   withBorderRadius: false,
   withLeftRightBorder: false,
   withoutTopBottomBorder: false,

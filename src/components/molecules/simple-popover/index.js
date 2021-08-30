@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
-var _typeof = require("@babel/runtime/helpers/typeof");
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -39,13 +39,6 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _button = require("../../../components/molecules/buttons/button");
 
-var _excluded = ["isVisible", "onCloseClick", "titleId", "closeButtonLabel", "title", "text", "illustration", "illustrationBackground", "buttons"],
-    _excluded2 = ["label", "clickOptions"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
 var borderSize = 2;
 
 var PopoverContainer = _styledComponents.default.div.withConfig({
@@ -80,7 +73,7 @@ var SimplePopover = function SimplePopover(_ref2) {
       illustration = _ref2.illustration,
       illustrationBackground = _ref2.illustrationBackground,
       buttons = _ref2.buttons,
-      simplePopoverProps = (0, _objectWithoutProperties2.default)(_ref2, _excluded);
+      simplePopoverProps = (0, _objectWithoutProperties2.default)(_ref2, ["isVisible", "onCloseClick", "titleId", "closeButtonLabel", "title", "text", "illustration", "illustrationBackground", "buttons"]);
 
   var _useState = (0, _react.useState)(true),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -146,7 +139,7 @@ var SimplePopover = function SimplePopover(_ref2) {
   }, buttons.map(function (_ref3, i) {
     var label = _ref3.label,
         clickOptions = _ref3.clickOptions,
-        buttonProps = (0, _objectWithoutProperties2.default)(_ref3, _excluded2);
+        buttonProps = (0, _objectWithoutProperties2.default)(_ref3, ["label", "clickOptions"]);
     var clickHandler = clickOptions && clickOptions.closeOnClick && onCloseClick;
     return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
       onClick: clickHandler,

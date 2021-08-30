@@ -1,7 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["poster", "children"];
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 var StyledVideo = styled.video.withConfig({
@@ -11,7 +10,7 @@ var StyledVideo = styled.video.withConfig({
 export var GifVideo = function GifVideo(_ref) {
   var poster = _ref.poster,
       children = _ref.children,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["poster", "children"]);
 
   var videoElement = useRef(null);
 

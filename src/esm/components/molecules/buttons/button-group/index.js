@@ -1,7 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["className", "variant"],
-    _excluded2 = ["className", "active"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -18,7 +16,7 @@ var StyledButtonGroup = styled.div.withConfig({
 export var ButtonGroup = function ButtonGroup(_ref) {
   var className = _ref.className,
       variant = _ref.variant,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["className", "variant"]);
 
   return /*#__PURE__*/React.createElement(StyledButtonGroup, _extends({
     role: "group"
@@ -30,7 +28,7 @@ export var ButtonGroup = function ButtonGroup(_ref) {
 var ButtonGroupButton = function ButtonGroupButton(_ref2) {
   var className = _ref2.className,
       active = _ref2.active,
-      props = _objectWithoutProperties(_ref2, _excluded2);
+      props = _objectWithoutProperties(_ref2, ["className", "active"]);
 
   return /*#__PURE__*/React.createElement(Button, _extends({}, props, {
     className: classNames('k-ButtonGroup__button', className, {

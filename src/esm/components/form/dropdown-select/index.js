@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["combobox"];
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useSelect } from 'downshift';
@@ -15,7 +14,7 @@ import { StyledDropdown } from './styles';
 import COLORS from '../../../constants/colors-config';
 export var DropdownSelect = function DropdownSelect(_ref) {
   var combobox = _ref.combobox,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["combobox"]);
 
   if (combobox) return /*#__PURE__*/React.createElement(DropdownCombobox, props);
   var labelText = props.labelText,

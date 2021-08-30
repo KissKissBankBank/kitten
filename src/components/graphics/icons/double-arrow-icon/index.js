@@ -17,12 +17,10 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
-var _excluded = ["color", "title"];
-
 var DoubleArrowIcon = function DoubleArrowIcon(_ref) {
   var color = _ref.color,
       title = _ref.title,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title"]);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 8.48 15",

@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children", "external", "liProps", "modifier", "button", "size", "isSelected", "as", "tag"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import deprecated from 'prop-types-extra/lib/deprecated';
@@ -17,7 +16,7 @@ export var Item = function Item(_ref) {
       isSelected = _ref.isSelected,
       as = _ref.as,
       tag = _ref.tag,
-      other = _objectWithoutProperties(_ref, _excluded);
+      other = _objectWithoutProperties(_ref, ["children", "external", "liProps", "modifier", "button", "size", "isSelected", "as", "tag"]);
 
   var Component = as || tag;
   return /*#__PURE__*/React.createElement("li", _extends({

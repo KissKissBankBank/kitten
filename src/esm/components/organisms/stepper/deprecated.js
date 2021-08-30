@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["href", "iconType", "linkClassNames", "text"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -37,7 +36,7 @@ export var Stepper = function Stepper(_ref) {
         iconType = _ref2.iconType,
         linkClassNames = _ref2.linkClassNames,
         text = _ref2.text,
-        other = _objectWithoutProperties(_ref2, _excluded);
+        other = _objectWithoutProperties(_ref2, ["href", "iconType", "linkClassNames", "text"]);
 
     var Tag = href ? 'a' : 'span';
     var className = classNames('k-Stepper__link', linkClassNames);

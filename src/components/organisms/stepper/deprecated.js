@@ -29,8 +29,6 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _stepperIcon = require("../../../components/atoms/stepper-icon");
 
-var _excluded = ["href", "iconType", "linkClassNames", "text"];
-
 var StyledStepper = _styledComponents.default.nav.withConfig({
   displayName: "deprecated__StyledStepper",
   componentId: "sc-1napzvl-0"
@@ -59,7 +57,7 @@ var Stepper = function Stepper(_ref) {
         iconType = _ref2.iconType,
         linkClassNames = _ref2.linkClassNames,
         text = _ref2.text,
-        other = (0, _objectWithoutProperties2.default)(_ref2, _excluded);
+        other = (0, _objectWithoutProperties2.default)(_ref2, ["href", "iconType", "linkClassNames", "text"]);
     var Tag = href ? 'a' : 'span';
     var className = (0, _classnames.default)('k-Stepper__link', linkClassNames);
     return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
