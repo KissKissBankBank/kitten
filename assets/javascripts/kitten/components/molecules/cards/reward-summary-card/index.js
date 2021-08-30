@@ -1,7 +1,6 @@
 import React, { cloneElement } from 'react'
 import { StyledRewardSummaryCard } from './styles'
 import classNames from 'classnames'
-import COLORS from '../../../../constants/colors-config'
 import PropTypes from 'prop-types'
 import {
   Image,

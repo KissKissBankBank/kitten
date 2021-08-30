@@ -243,7 +243,8 @@ export const StyledRewardSummaryCard = styled.div`
   /* SIZES */
 
   @media (min-width: ${ScreenConfig.S.min}px) {
-    &.k-RewardSummaryCard--large {}
+    &.k-RewardSummaryCard--large {
+    }
     &.k-RewardSummaryCard--medium {
       .k-RewardSummaryCard__imageWrapper {
         display: none;
@@ -255,12 +256,12 @@ export const StyledRewardSummaryCard = styled.div`
         display: none;
       }
       .k-RewardSummaryCard__gridWrapper {
-          grid-template-columns:
-            minmax(${pxToRem(250)}, 1fr)
-            ${pxToRem(100)}
-            ${pxToRem(150)}
-            auto;
-          grid-template-areas: 'info amount contribution options';
+        grid-template-columns:
+          minmax(${pxToRem(250)}, 1fr)
+          ${pxToRem(100)}
+          ${pxToRem(150)}
+          auto;
+        grid-template-areas: 'info amount contribution options';
       }
       .k-RewardSummaryCard__availablity {
         display: none;

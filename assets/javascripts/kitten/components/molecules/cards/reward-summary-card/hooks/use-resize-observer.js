@@ -1,10 +1,9 @@
 import { useRef, useCallback, useEffect, useState } from 'react'
-import debounce from 'lodash/fp/debounce'
 
 // https://gist.github.com/DominicTobias/c8579667e8a8bd7817c1b4d5b274eb4c
 export const useResizeObserver = () => {
-  if (!"ResizeObserver" in window) {
-    return { }
+  if (!'ResizeObserver' in window) {
+    return {}
   }
 
   const [size, setSize] = useState('large')
@@ -34,12 +33,15 @@ export const useResizeObserver = () => {
         resizeObserver.current.observe(node)
       }
     },
-    [onResize]
+    [onResize],
   )
 
-  useEffect(() => () => {
-    resizeObserver.current.disconnect()
-  }, [])
+  useEffect(
+    () => () => {
+      resizeObserver.current.disconnect()
+    },
+    [],
+  )
 
   return { ref, size }
 }

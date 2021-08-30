@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { RewardSummaryCard, useRewardSummaryCardResizeObserver } from './index'
-import { Container, COLORS, DropdownMenu, EllipsisIcon } from '../../../..'
+import { COLORS, DropdownMenu, EllipsisIcon } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 

@@ -47,7 +47,6 @@ import {
 } from '../../..'
 
 import { Default as Table } from '../../organisms/tables/list-table/list-table.stories.js'
-import { Default as Reward } from '../../molecules/cards/reward-summary-card/stories.js'
 import { DocsPage } from 'storybook/docs-page'
 
 const options = [
@@ -405,18 +404,13 @@ const RewardsExample = () => {
       <FlexWrapper gap={15}>
         <RewardSummaryCard size={size}>
           <RewardSummaryCard.Image>
-            <img
-              alt=""
-              src="/kitten.jpg"
-            />
+            <img alt="" src="/kitten.jpg" />
           </RewardSummaryCard.Image>
           <RewardSummaryCard.Title>
             Stickers Free Boobs Club
             <RewardSummaryCard.TitleTag text="Contrepartie star" />
           </RewardSummaryCard.Title>
-          <RewardSummaryCard.Amount>
-            10 000€
-          </RewardSummaryCard.Amount>
+          <RewardSummaryCard.Amount>10 000€</RewardSummaryCard.Amount>
           <RewardSummaryCard.Contribution>
             1 468 000
           </RewardSummaryCard.Contribution>
@@ -425,21 +419,13 @@ const RewardsExample = () => {
           </RewardSummaryCard.Availablity>
           <RewardSummaryCard.Options>
             <DropdownMenu
-              button={() => (<EllipsisIcon color={COLORS.font1} />)}
+              button={() => <EllipsisIcon color={COLORS.font1} />}
               menuPosition="left"
             >
-              <DropdownMenu.Link href="#">
-                Editer
-              </DropdownMenu.Link>
-              <DropdownMenu.Link href="#">
-                Dupliquer
-              </DropdownMenu.Link>
-              <DropdownMenu.Link href="#">
-                Désactiver
-              </DropdownMenu.Link>
-              <DropdownMenu.Link>
-                Supprimer
-              </DropdownMenu.Link>
+              <DropdownMenu.Link href="#">Editer</DropdownMenu.Link>
+              <DropdownMenu.Link href="#">Dupliquer</DropdownMenu.Link>
+              <DropdownMenu.Link href="#">Désactiver</DropdownMenu.Link>
+              <DropdownMenu.Link>Supprimer</DropdownMenu.Link>
             </DropdownMenu>
           </RewardSummaryCard.Options>
         </RewardSummaryCard>
@@ -448,9 +434,7 @@ const RewardsExample = () => {
             Stickers Free Boobs Club
             <RewardSummaryCard.TitleTag text="Contrepartie star" />
           </RewardSummaryCard.Title>
-          <RewardSummaryCard.Amount>
-            10 000€
-          </RewardSummaryCard.Amount>
+          <RewardSummaryCard.Amount>10 000€</RewardSummaryCard.Amount>
           <RewardSummaryCard.Contribution>
             1 468 000
           </RewardSummaryCard.Contribution>
@@ -459,21 +443,13 @@ const RewardsExample = () => {
           </RewardSummaryCard.Availablity>
           <RewardSummaryCard.Options>
             <DropdownMenu
-              button={() => (<EllipsisIcon color={COLORS.font1} />)}
+              button={() => <EllipsisIcon color={COLORS.font1} />}
               menuPosition="left"
             >
-              <DropdownMenu.Link href="#">
-                Editer
-              </DropdownMenu.Link>
-              <DropdownMenu.Link href="#">
-                Dupliquer
-              </DropdownMenu.Link>
-              <DropdownMenu.Link href="#">
-                Désactiver
-              </DropdownMenu.Link>
-              <DropdownMenu.Link>
-                Supprimer
-              </DropdownMenu.Link>
+              <DropdownMenu.Link href="#">Editer</DropdownMenu.Link>
+              <DropdownMenu.Link href="#">Dupliquer</DropdownMenu.Link>
+              <DropdownMenu.Link href="#">Désactiver</DropdownMenu.Link>
+              <DropdownMenu.Link>Supprimer</DropdownMenu.Link>
             </DropdownMenu>
           </RewardSummaryCard.Options>
         </RewardSummaryCard>
