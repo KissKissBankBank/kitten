@@ -1,6 +1,6 @@
 import React from 'react'
-import { RewardSummaryCard } from './index'
-import { Container, COLORS, DropdownMenu, EllipsisIcon } from '../../../..'
+import { RewardSummaryCard, useRewardSummaryCardResizeObserver } from './index'
+import { COLORS, DropdownMenu, EllipsisIcon } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 
@@ -22,8 +22,8 @@ const argTypes = {
     name: 'contribution (story prop)',
     control: { type: 'text' },
   },
-  availablity: {
-    name: 'availablity (story prop)',
+  availability: {
+    name: 'availability (story prop)',
     control: { type: 'text' },
   },
   as: {
@@ -73,7 +73,7 @@ const args = {
   title: 'Stickers Free Boobs Club',
   amount: '10 000€',
   contribution: '1 468 000',
-  availablity: 'Illimitée',
+  availability: 'Illimitée',
   hasImage: true,
   hasTitleTag: true,
   titleTagIcon: 'star',
@@ -94,7 +94,7 @@ export default {
             'index.js',
             'styles.js',
             'components/amount.js',
-            'components/availablity.js',
+            'components/availability.js',
             'components/contribution.js',
             'components/image.js',
             'components/index.js',
@@ -116,22 +116,37 @@ export const Default = ({
   title,
   amount,
   contribution,
-  availablity,
+  availability,
   titleTagIcon,
   hasImage,
   hasTitleTag,
   ...args
 }) => {
+  const { ref, size } = useRewardSummaryCardResizeObserver()
+
   return (
-    <Container>
-      <RewardSummaryCard {...args}>
+    <div ref={ref}>
+      <RewardSummaryCard.TitleBar
+        values={{
+          image: 'Visuel de la contrepartie',
+          title: 'Titre de la contrepartie',
+          amount: 'Montant',
+          contributions: 'Contributions',
+          availability: 'Disponibilités',
+        }}
+        className="k-u-hidden@xs-down k-u-margin-bottom-triple"
+        id="RewardSummaryList"
+        size={size}
+      />
+
+      <RewardSummaryCard {...args} size={size}>
         {hasImage && (
           <RewardSummaryCard.Image>
             <img src="/kitten.jpg" alt="" />
           </RewardSummaryCard.Image>
         )}
 
-        <RewardSummaryCard.Title>
+        <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
           {title}
           {hasTitleTag && (
             <RewardSummaryCard.TitleTag
@@ -141,13 +156,15 @@ export const Default = ({
           )}
         </RewardSummaryCard.Title>
 
-        <RewardSummaryCard.Amount>{amount}</RewardSummaryCard.Amount>
-        <RewardSummaryCard.Contribution>
+        <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
+          {amount}
+        </RewardSummaryCard.Amount>
+        <RewardSummaryCard.Contribution aria-describedby="RewardSummaryList-contribution">
           {contribution}
         </RewardSummaryCard.Contribution>
-        <RewardSummaryCard.Availablity>
-          {availablity}
-        </RewardSummaryCard.Availablity>
+        <RewardSummaryCard.Availability aria-describedby="RewardSummaryList-availability">
+          {availability}
+        </RewardSummaryCard.Availability>
         <RewardSummaryCard.Options>
           <DropdownMenu
             menuPosition="left"
@@ -167,6 +184,22 @@ export const Default = ({
           </DropdownMenu>
         </RewardSummaryCard.Options>
       </RewardSummaryCard>
-    </Container>
+    </div>
   )
 }
+
+export const TitleBar = args => (
+  <div {...args}>
+    <RewardSummaryCard.TitleBar
+      values={{
+        image: 'Visuel de la contrepartie',
+        title: 'Titre de la contrepartie',
+        amount: 'Montant',
+        contributions: 'Contributions',
+        availability: 'Disponibilités',
+      }}
+      className="k-u-hidden@xs-down"
+      id="RewardSummaryList"
+    />
+  </div>
+)

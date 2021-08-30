@@ -293,7 +293,10 @@ export { EngagementCard } from './components/molecules/cards/engagement-card'
 export { EngagementCardWithImage } from './components/molecules/cards/engagement-card-with-image'
 export { HorizontalCrowdfundingCard } from './components/molecules/cards/horizontal-crowdfunding-card'
 export { RewardEdition } from './components/molecules/cards/reward-edition'
-export { RewardSummaryCard } from './components/molecules/cards/reward-summary-card'
+export {
+  RewardSummaryCard,
+  useRewardSummaryCardResizeObserver,
+} from './components/molecules/cards/reward-summary-card'
 export { SimpleCard } from './components/molecules/cards/simple-card'
 export { TeamCard } from './components/molecules/cards/team-card'
 export { Triptych } from './components/molecules/cards/triptych'

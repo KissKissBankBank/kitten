@@ -1,16 +1,16 @@
 import React, { cloneElement } from 'react'
 import { StyledRewardSummaryCard } from './styles'
 import classNames from 'classnames'
-import COLORS from '../../../../constants/colors-config'
 import PropTypes from 'prop-types'
 import {
   Image,
   Title,
   TitleTag,
-  Availablity,
+  Availability,
   Contribution,
   Amount,
   Options,
+  TitleBar,
 } from './components'
 import {
   getReactElementsByType,
@@ -23,6 +23,7 @@ export const RewardSummaryCard = ({
   show,
   className,
   actionProps,
+  size,
   ...props
 }) => {
   const imageChild = getReactElementsByType({
@@ -46,7 +47,11 @@ export const RewardSummaryCard = ({
 
   return (
     <StyledRewardSummaryCard
-      className={classNames('k-RewardSummaryCard', className)}
+      className={classNames(
+        'k-RewardSummaryCard',
+        className,
+        `k-RewardSummaryCard-Wrapper--${size}`,
+      )}
       {...props}
     >
       <ActionElement
@@ -55,14 +60,18 @@ export const RewardSummaryCard = ({
       />
 
       <div
-        className={classNames('k-RewardSummaryCard__imageWrapper', {
-          'k-u-hidden@m-down': !imageChild,
-        })}
+        className={classNames(
+          'k-RewardSummaryCard__imageWrapper',
+          'k-RewardSummaryCard-Wrapper__imageWrapper',
+          {
+            'k-u-hidden@m-down': !imageChild,
+          },
+        )}
       >
         {!!imageChild ? cloneElement(imageChild) : <NoImageIcon />}
       </div>
 
-      <div className="k-RewardSummaryCard__gridWrapper">
+      <div className="k-RewardSummaryCard__gridWrapper k-RewardSummaryCard-Wrapper__gridWrapper">
         {wrappedChildren.map((item, index) =>
           cloneElement(item, { key: `RewardSummaryCard-${index}` }),
         )}
@@ -71,20 +80,25 @@ export const RewardSummaryCard = ({
   )
 }
 
+export { useResizeObserver as useRewardSummaryCardResizeObserver } from './hooks/use-resize-observer'
+
 RewardSummaryCard.Image = Image
 RewardSummaryCard.Title = Title
 RewardSummaryCard.TitleTag = TitleTag
 RewardSummaryCard.Amount = Amount
 RewardSummaryCard.Contribution = Contribution
-RewardSummaryCard.Availablity = Availablity
+RewardSummaryCard.Availability = Availability
 RewardSummaryCard.Options = Options
+RewardSummaryCard.TitleBar = TitleBar
 
 RewardSummaryCard.defaultProps = {
   show: true,
   actionProps: {},
+  size: 'large',
 }
 
 RewardSummaryCard.propTypes = {
   show: PropTypes.bool,
   actionProps: PropTypes.object,
+  size: PropTypes.oneOf(['large', 'medium', 'small', 'mobile']),
 }
