@@ -19,13 +19,11 @@ var _text = require("../../../../atoms/typography/text");
 
 var _horizontalStroke = require("../../../../atoms/horizontal-stroke");
 
-var _excluded = ["className", "textSize", "strokeSize"];
-
 var Title = function Title(_ref) {
   var className = _ref.className,
       textSize = _ref.textSize,
       strokeSize = _ref.strokeSize,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "textSize", "strokeSize"]);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('k-BackingCard__titleWrapper', 'k-BackingCard__drawer')
   }, /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({

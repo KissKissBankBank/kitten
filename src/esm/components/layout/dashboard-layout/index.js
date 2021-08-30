@@ -1,13 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent"],
-    _excluded2 = ["className", "hasButton", "buttonProps", "children", "isOpen"],
-    _excluded3 = ["openLabel", "closeLabel"],
-    _excluded4 = ["className", "children", "tag"],
-    _excluded5 = ["className"],
-    _excluded6 = ["className"],
-    _excluded7 = ["className"];
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import isFunction from 'lodash/fp/isFunction';
@@ -28,7 +21,7 @@ export var DashboardLayout = function DashboardLayout(_ref) {
       buttonProps = _ref.buttonProps,
       quickAccessLinkText = _ref.quickAccessLinkText,
       fullHeightContent = _ref.fullHeightContent,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent"]);
 
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -221,12 +214,12 @@ var Header = function Header(_ref2) {
       buttonProps = _ref2.buttonProps,
       children = _ref2.children,
       isOpen = _ref2.isOpen,
-      props = _objectWithoutProperties(_ref2, _excluded2);
+      props = _objectWithoutProperties(_ref2, ["className", "hasButton", "buttonProps", "children", "isOpen"]);
 
   var _ref3 = buttonProps || {},
       openLabel = _ref3.openLabel,
       closeLabel = _ref3.closeLabel,
-      otherButtonProps = _objectWithoutProperties(_ref3, _excluded3);
+      otherButtonProps = _objectWithoutProperties(_ref3, ["openLabel", "closeLabel"]);
 
   return /*#__PURE__*/React.createElement("header", _extends({
     className: classNames('k-DashboardLayout__heading', className)
@@ -247,7 +240,7 @@ var SiteHeader = function SiteHeader(_ref4) {
       children = _ref4.children,
       _ref4$tag = _ref4.tag,
       tag = _ref4$tag === void 0 ? 'div' : _ref4$tag,
-      props = _objectWithoutProperties(_ref4, _excluded4);
+      props = _objectWithoutProperties(_ref4, ["className", "children", "tag"]);
 
   var SiteHeaderComponent = tag;
   return /*#__PURE__*/React.createElement(SiteHeaderComponent, _extends({
@@ -257,7 +250,7 @@ var SiteHeader = function SiteHeader(_ref4) {
 
 var SideContent = function SideContent(_ref5) {
   var className = _ref5.className,
-      props = _objectWithoutProperties(_ref5, _excluded5);
+      props = _objectWithoutProperties(_ref5, ["className"]);
 
   return /*#__PURE__*/React.createElement("section", _extends({
     className: classNames('k-DashboardLayout__navigation', className)
@@ -266,7 +259,7 @@ var SideContent = function SideContent(_ref5) {
 
 var SideFooter = function SideFooter(_ref6) {
   var className = _ref6.className,
-      props = _objectWithoutProperties(_ref6, _excluded6);
+      props = _objectWithoutProperties(_ref6, ["className"]);
 
   return /*#__PURE__*/React.createElement("footer", _extends({
     className: classNames('k-DashboardLayout__footer', className)
@@ -275,7 +268,7 @@ var SideFooter = function SideFooter(_ref6) {
 
 var Alerts = function Alerts(_ref7) {
   var className = _ref7.className,
-      props = _objectWithoutProperties(_ref7, _excluded7);
+      props = _objectWithoutProperties(_ref7, ["className"]);
 
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-DashboardLayout__alerts', 'k-DashboardLayout__fullWidth', className)

@@ -1,10 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["firstColWidth", "className"],
-    _excluded2 = ["children", "headerRowProps"],
-    _excluded3 = ["className"],
-    _excluded4 = ["className"],
-    _excluded5 = ["className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -12,7 +7,7 @@ import { Styles } from './styles';
 export var DoubleEntryTable = function DoubleEntryTable(_ref) {
   var firstColWidth = _ref.firstColWidth,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["firstColWidth", "className"]);
 
   return /*#__PURE__*/React.createElement(Styles, {
     className: "DoubleEntryTable__Container",
@@ -27,7 +22,7 @@ export var DoubleEntryTable = function DoubleEntryTable(_ref) {
 DoubleEntryTable.Header = function (_ref2) {
   var children = _ref2.children,
       headerRowProps = _ref2.headerRowProps,
-      others = _objectWithoutProperties(_ref2, _excluded2);
+      others = _objectWithoutProperties(_ref2, ["children", "headerRowProps"]);
 
   return /*#__PURE__*/React.createElement("thead", others, /*#__PURE__*/React.createElement("tr", headerRowProps, children));
 };
@@ -42,7 +37,7 @@ DoubleEntryTable.Row = function (props) {
 
 DoubleEntryTable.Col = function (_ref3) {
   var className = _ref3.className,
-      props = _objectWithoutProperties(_ref3, _excluded3);
+      props = _objectWithoutProperties(_ref3, ["className"]);
 
   return /*#__PURE__*/React.createElement("td", _extends({
     className: classNames('DoubleEntryTable__Column DoubleEntryTable__Column--Col', className)
@@ -51,7 +46,7 @@ DoubleEntryTable.Col = function (_ref3) {
 
 DoubleEntryTable.HeaderCol = function (_ref4) {
   var className = _ref4.className,
-      props = _objectWithoutProperties(_ref4, _excluded4);
+      props = _objectWithoutProperties(_ref4, ["className"]);
 
   return /*#__PURE__*/React.createElement("th", _extends({
     className: classNames('DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol', className),
@@ -61,7 +56,7 @@ DoubleEntryTable.HeaderCol = function (_ref4) {
 
 DoubleEntryTable.TitleCol = function (_ref5) {
   var className = _ref5.className,
-      props = _objectWithoutProperties(_ref5, _excluded5);
+      props = _objectWithoutProperties(_ref5, ["className"]);
 
   return /*#__PURE__*/React.createElement("th", _extends({
     className: classNames('DoubleEntryTable__Column DoubleEntryTable__Column--TitleCol', className),

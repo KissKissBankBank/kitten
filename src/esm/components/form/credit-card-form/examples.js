@@ -1,9 +1,6 @@
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-var _excluded = ["children"],
-    _excluded2 = ["children"],
-    _excluded3 = ["children"];
 import React, { useState } from 'react';
 import { CreditCardForm } from './index';
 import { Field } from '../field';
@@ -34,7 +31,7 @@ var Number = function Number() {
     },
     labelComponent: function labelComponent(_ref) {
       var children = _ref.children,
-          props = _objectWithoutProperties(_ref, _excluded);
+          props = _objectWithoutProperties(_ref, ["children"]);
 
       return /*#__PURE__*/React.createElement(Field.Label, {
         labelProps: props,
@@ -73,7 +70,7 @@ var Expiry = function Expiry() {
     },
     labelComponent: function labelComponent(_ref2) {
       var children = _ref2.children,
-          props = _objectWithoutProperties(_ref2, _excluded2);
+          props = _objectWithoutProperties(_ref2, ["children"]);
 
       return /*#__PURE__*/React.createElement(Field.Label, {
         labelProps: props,
@@ -114,7 +111,7 @@ var Cvc = function Cvc() {
     },
     labelComponent: function labelComponent(_ref3) {
       var children = _ref3.children,
-          props = _objectWithoutProperties(_ref3, _excluded3);
+          props = _objectWithoutProperties(_ref3, ["children"]);
 
       return /*#__PURE__*/React.createElement(Field.Label, {
         labelProps: props,

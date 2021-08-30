@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children", "className", "ellipsisColumns", "style"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -31,7 +30,7 @@ export var HorizontalTimeline = function HorizontalTimeline(_ref2) {
       className = _ref2.className,
       ellipsisColumns = _ref2.ellipsisColumns,
       style = _ref2.style,
-      props = _objectWithoutProperties(_ref2, _excluded);
+      props = _objectWithoutProperties(_ref2, ["children", "className", "ellipsisColumns", "style"]);
 
   var columnsCount = React.Children.count(children);
   return /*#__PURE__*/React.createElement(StyledHorizontalTimeline, _extends({

@@ -25,8 +25,6 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _screenConfig = require("../../../../constants/screen-config");
 
-var _excluded = ["icon", "backgroundColor", "href", "children", "hoverBorder", "isActive", "as"];
-
 var StyledCard = _styledComponents.default.div.withConfig({
   displayName: "engagement-card__StyledCard",
   componentId: "sc-184n7il-0"
@@ -53,7 +51,7 @@ var EngagementCard = function EngagementCard(_ref2) {
       hoverBorder = _ref2.hoverBorder,
       isActive = _ref2.isActive,
       as = _ref2.as,
-      others = (0, _objectWithoutProperties2.default)(_ref2, _excluded);
+      others = (0, _objectWithoutProperties2.default)(_ref2, ["icon", "backgroundColor", "href", "children", "hoverBorder", "isActive", "as"]);
   return /*#__PURE__*/_react.default.createElement(StyledCard, (0, _extends2.default)({}, others, {
     as: href ? 'a' : 'div',
     href: href,

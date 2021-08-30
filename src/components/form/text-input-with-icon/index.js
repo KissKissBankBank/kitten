@@ -27,8 +27,6 @@ var _visuallyHidden = require("../../accessibility/visually-hidden");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["disabled", "icon", "iconPosition", "accessibilityLabel", "id"];
-
 var StyledTextInputWithIcon = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-icon__StyledTextInputWithIcon",
   componentId: "rvt8kr-0"
@@ -40,7 +38,7 @@ var TextInputWithIcon = function TextInputWithIcon(_ref) {
       iconPosition = _ref.iconPosition,
       accessibilityLabel = _ref.accessibilityLabel,
       id = _ref.id,
-      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      others = (0, _objectWithoutProperties2.default)(_ref, ["disabled", "icon", "iconPosition", "accessibilityLabel", "id"]);
   return /*#__PURE__*/_react.default.createElement(StyledTextInputWithIcon, {
     className: (0, _classnames.default)('k-Form-TextInputWithIcon', "k-Form-TextInputWithIcon--icon_".concat(iconPosition))
   }, accessibilityLabel && /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, {

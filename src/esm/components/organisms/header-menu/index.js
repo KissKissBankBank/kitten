@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "style"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -15,7 +14,7 @@ export var HeaderMenu = function HeaderMenu(_ref) {
       noBorder = _ref.noBorder,
       className = _ref.className,
       style = _ref.style,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "style"]);
 
   return /*#__PURE__*/React.createElement(StyledList, _extends({
     className: classNames('k-HeaderMenu', className, {

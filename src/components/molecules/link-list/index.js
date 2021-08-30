@@ -27,8 +27,6 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var _excluded = ["className", "margin", "items", "lineHeight", "itemMargin", "color", "weight", "href", "active"];
-
 var StyledLinkList = _styledComponents.default.ul.withConfig({
   displayName: "link-list__StyledLinkList",
   componentId: "hu9ye6-0"
@@ -44,7 +42,7 @@ var LinkList = function LinkList(_ref) {
       weight = _ref.weight,
       href = _ref.href,
       active = _ref.active,
-      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "margin", "items", "lineHeight", "itemMargin", "color", "weight", "href", "active"]);
   return /*#__PURE__*/_react.default.createElement(StyledLinkList, (0, _extends2.default)({}, others, {
     className: (0, _classnames.default)('k-LinkList', others.className, {
       'k-LinkList--withoutMargin': !margin

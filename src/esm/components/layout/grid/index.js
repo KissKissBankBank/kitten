@@ -2,9 +2,6 @@ import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
-var _excluded = ["className"],
-    _excluded2 = ["className"],
-    _excluded3 = ["col", "offset"];
 import React from 'react';
 import styled, { css } from 'styled-components';
 import classNames from 'classnames';
@@ -25,7 +22,7 @@ var StyledGrid = styled.div.withConfig({
 });
 export var Grid = function Grid(_ref) {
   var className = _ref.className,
-      others = _objectWithoutProperties(_ref, _excluded);
+      others = _objectWithoutProperties(_ref, ["className"]);
 
   return /*#__PURE__*/React.createElement(StyledGrid, _extends({
     className: classNames('k-Grid', className)
@@ -35,11 +32,11 @@ export var GridCol = function GridCol(_ref2) {
   var _classNames2;
 
   var className = _ref2.className,
-      props = _objectWithoutProperties(_ref2, _excluded2);
+      props = _objectWithoutProperties(_ref2, ["className"]);
 
   var col = props.col,
       offset = props.offset,
-      others = _objectWithoutProperties(props, _excluded3);
+      others = _objectWithoutProperties(props, ["col", "offset"]);
 
   var classByMediaQuery = function classByMediaQuery() {
     var classNamesByMediaQuery = Object.keys(ScreenConfig).map(function (size) {

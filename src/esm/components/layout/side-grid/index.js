@@ -1,7 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["className", "children"],
-    _excluded2 = ["className", "children", "contentClassName"];
 import React, { createContext, useContext } from 'react';
 import classNames from 'classnames';
 import styled from 'styled-components';
@@ -41,7 +39,7 @@ export var SideGrid = function SideGrid(_ref) {
 export var SideGridContent = function SideGridContent(_ref2) {
   var className = _ref2.className,
       children = _ref2.children,
-      props = _objectWithoutProperties(_ref2, _excluded);
+      props = _objectWithoutProperties(_ref2, ["className", "children"]);
 
   var _useContext = useContext(Context),
       asideSize = _useContext.asideSize;
@@ -69,7 +67,7 @@ export var SideGridAside = function SideGridAside(_ref3) {
   var className = _ref3.className,
       children = _ref3.children,
       contentClassName = _ref3.contentClassName,
-      props = _objectWithoutProperties(_ref3, _excluded2);
+      props = _objectWithoutProperties(_ref3, ["className", "children", "contentClassName"]);
 
   var _useContext2 = useContext(Context),
       asideSize = _useContext2.asideSize;

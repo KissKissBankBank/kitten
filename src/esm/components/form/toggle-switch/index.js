@@ -1,7 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["activeColor", "big", "checkedColor", "defaultColor", "disabled", "disabledColor", "id", "isChecked", "isLabelVisible", "label", "labelProps", "locked", "reverseOrder", "switchProps", "onChange"];
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -72,7 +71,7 @@ export var ToggleSwitch = function ToggleSwitch(_ref11) {
       reverseOrder = _ref11.reverseOrder,
       switchProps = _ref11.switchProps,
       onChange = _ref11.onChange,
-      others = _objectWithoutProperties(_ref11, _excluded);
+      others = _objectWithoutProperties(_ref11, ["activeColor", "big", "checkedColor", "defaultColor", "disabled", "disabledColor", "id", "isChecked", "isLabelVisible", "label", "labelProps", "locked", "reverseOrder", "switchProps", "onChange"]);
 
   var _useState = useState(isChecked),
       _useState2 = _slicedToArray(_useState, 2),

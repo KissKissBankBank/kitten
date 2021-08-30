@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["color", "width", "height", "tiny"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
@@ -9,7 +8,7 @@ export var KissKissBankBankLogo = function KissKissBankBankLogo(_ref) {
       width = _ref.width,
       height = _ref.height,
       tiny = _ref.tiny,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["color", "width", "height", "tiny"]);
 
   var DEFAULT_WIDTH = 134;
   var DEFAULT_HEIGHT = 30;

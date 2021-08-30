@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["className", "id", "children", "inputClassName", "error", "disabled", "textProps", "onLabelClick", "indeterminate", "label", "variant"];
 import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -25,7 +24,7 @@ export var Checkbox = function Checkbox(_ref) {
       indeterminate = _ref.indeterminate,
       label = _ref.label,
       variant = _ref.variant,
-      inputProps = _objectWithoutProperties(_ref, _excluded);
+      inputProps = _objectWithoutProperties(_ref, ["className", "id", "children", "inputClassName", "error", "disabled", "textProps", "onLabelClick", "indeterminate", "label", "variant"]);
 
   var inputElement = useRef(null);
   useEffect(function () {

@@ -19,14 +19,12 @@ var _linkBoxIllustration = require("../../../../components/graphics/illustration
 
 var _text = require("../../../../components/atoms/typography/text");
 
-var _excluded = ["isExternal", "href", "title", "text"];
-
 var DocLinkBox = function DocLinkBox(_ref) {
   var isExternal = _ref.isExternal,
       href = _ref.href,
       title = _ref.title,
       text = _ref.text,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["isExternal", "href", "title", "text"]);
   return /*#__PURE__*/_react.default.createElement(_linkBox.LinkBox, (0, _extends2.default)({
     href: href,
     isExternal: isExternal

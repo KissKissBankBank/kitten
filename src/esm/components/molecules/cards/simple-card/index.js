@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["imageProps", "withPlayerButtonOnImage", "arrowColor", "ariaLabel", "href", "title", "titleProps", "subtitle", "paragraph", "imageContainerRatio", "imageContainerBackground", "className", "playerButtonSize"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -29,7 +28,7 @@ export var SimpleCard = function SimpleCard(_ref) {
       imageContainerBackground = _ref.imageContainerBackground,
       className = _ref.className,
       playerButtonSize = _ref.playerButtonSize,
-      others = _objectWithoutProperties(_ref, _excluded);
+      others = _objectWithoutProperties(_ref, ["imageProps", "withPlayerButtonOnImage", "arrowColor", "ariaLabel", "href", "title", "titleProps", "subtitle", "paragraph", "imageContainerRatio", "imageContainerBackground", "className", "playerButtonSize"]);
 
   return /*#__PURE__*/React.createElement(ContainerStyle, _extends({
     as: href ? 'a' : 'div'

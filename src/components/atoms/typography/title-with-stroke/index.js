@@ -27,8 +27,6 @@ var _titleModifierStyles = require("../common/title-modifier-styles");
 
 var _strokeModifierStyles = require("../../../atoms/horizontal-stroke/common/stroke-modifier-styles");
 
-var _excluded = ["modifier", "tag", "align", "italic", "className", "children", "cssColor"];
-
 var StyledTitleWithStroke = _styledComponents.default.div.withConfig({
   displayName: "title-with-stroke__StyledTitleWithStroke",
   componentId: "ie3pvx-0"
@@ -42,7 +40,7 @@ var TitleWithStroke = function TitleWithStroke(_ref) {
       className = _ref.className,
       children = _ref.children,
       cssColor = _ref.cssColor,
-      other = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      other = (0, _objectWithoutProperties2.default)(_ref, ["modifier", "tag", "align", "italic", "className", "children", "cssColor"]);
   var TitleComponent = tag;
   return /*#__PURE__*/_react.default.createElement(StyledTitleWithStroke, (0, _extends2.default)({
     className: (0, _classnames.default)('k-TitleWithStroke', className, "k-TitleWithStroke--".concat(modifier), "k-TitleWithStroke--align-".concat(align), {

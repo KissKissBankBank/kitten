@@ -1,13 +1,12 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
 export var MaisonDeCrowdfundingLogo = function MaisonDeCrowdfundingLogo(_ref) {
   var width = _ref.width,
       height = _ref.height,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["width", "height"]);
 
   var DEFAULT_WIDTH = 203.3;
   var DEFAULT_HEIGHT = 46.4;

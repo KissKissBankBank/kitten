@@ -25,8 +25,6 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _excluded = ["statusMessage", "statusType", "bulletProps", "size", "className", "children", "weight"];
-
 var StyledStatus = _styledComponents.default.span.withConfig({
   displayName: "status-with-bullet__StyledStatus",
   componentId: "db70ps-0"
@@ -40,7 +38,7 @@ var StatusWithBullet = function StatusWithBullet(_ref) {
       className = _ref.className,
       children = _ref.children,
       weight = _ref.weight,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["statusMessage", "statusType", "bulletProps", "size", "className", "children", "weight"]);
   return /*#__PURE__*/_react.default.createElement(StyledStatus, (0, _extends2.default)({
     className: (0, _classnames.default)('k-StatusWithBullet', className, "k-StatusWithBullet--".concat(statusType), "k-StatusWithBullet--".concat(size), "k-StatusWithBullet--".concat(weight))
   }, props), /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({

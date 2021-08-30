@@ -29,8 +29,6 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["checkPosition", "isChecked", "className", "children", "error"];
-
 var getCircleIcon = function getCircleIcon(color) {
   return (0, _encodeSvg.encodeSvgString)((0, _checkedCircleIcon.checkedCircleIconAsString)({
     circleColor: color,
@@ -49,7 +47,7 @@ var CheckableButton = function CheckableButton(_ref) {
       className = _ref.className,
       children = _ref.children,
       error = _ref.error,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["checkPosition", "isChecked", "className", "children", "error"]);
 
   var checkedModifier = function () {
     switch (true) {

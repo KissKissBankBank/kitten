@@ -1,8 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["backgroundColor", "borderColor", "children", "disabled", "fluid", "size"],
-    _excluded2 = ["children", "fit", "shape"],
-    _excluded3 = ["children"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -32,7 +29,7 @@ export var ClickableCard = function ClickableCard(_ref5) {
       disabled = _ref5.disabled,
       fluid = _ref5.fluid,
       size = _ref5.size,
-      props = _objectWithoutProperties(_ref5, _excluded);
+      props = _objectWithoutProperties(_ref5, ["backgroundColor", "borderColor", "children", "disabled", "fluid", "size"]);
 
   return /*#__PURE__*/React.createElement(StyledClickableCard, _extends({}, props, {
     className: classNames('k-ClickableCard', 'k-u-reset-button', props.className, {
@@ -49,7 +46,7 @@ var ClickableCardImage = function ClickableCardImage(_ref6) {
   var children = _ref6.children,
       fit = _ref6.fit,
       shape = _ref6.shape,
-      props = _objectWithoutProperties(_ref6, _excluded2);
+      props = _objectWithoutProperties(_ref6, ["children", "fit", "shape"]);
 
   return /*#__PURE__*/React.createElement("span", _extends({}, props, {
     className: classNames('k-ClickableCard__image', props.className, "k-ClickableCard__image--".concat(shape), "k-ClickableCard__image--".concat(fit))
@@ -58,7 +55,7 @@ var ClickableCardImage = function ClickableCardImage(_ref6) {
 
 var ClickableCardContent = function ClickableCardContent(_ref7) {
   var children = _ref7.children,
-      props = _objectWithoutProperties(_ref7, _excluded3);
+      props = _objectWithoutProperties(_ref7, ["children"]);
 
   return /*#__PURE__*/React.createElement("span", _extends({}, props, {
     className: classNames('k-ClickableCard__content', props.className)

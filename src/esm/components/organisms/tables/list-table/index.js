@@ -1,10 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["id", "children", "className"],
-    _excluded2 = ["className", "children", "listProps"],
-    _excluded3 = ["className"],
-    _excluded4 = ["className", "children", "listProps", "isHighlighted"],
-    _excluded5 = ["className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ListTableStyles } from './styles';
@@ -16,7 +11,7 @@ export var ListTable = function ListTable(_ref) {
   var id = _ref.id,
       children = _ref.children,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["id", "children", "className"]);
 
   return /*#__PURE__*/React.createElement(Context.Provider, {
     value: {
@@ -34,7 +29,7 @@ ListTable.Header = function (_ref2) {
       children = _ref2.children,
       _ref2$listProps = _ref2.listProps,
       listProps = _ref2$listProps === void 0 ? {} : _ref2$listProps,
-      others = _objectWithoutProperties(_ref2, _excluded2);
+      others = _objectWithoutProperties(_ref2, ["className", "children", "listProps"]);
 
   return /*#__PURE__*/React.createElement("header", _extends({}, others, {
     className: classNames('k-ListTable__Header', className)
@@ -52,7 +47,7 @@ ListTable.Header = function (_ref2) {
 
 ListTable.Body = function (_ref4) {
   var className = _ref4.className,
-      props = _objectWithoutProperties(_ref4, _excluded3);
+      props = _objectWithoutProperties(_ref4, ["className"]);
 
   return /*#__PURE__*/React.createElement("ul", _extends({}, props, {
     className: classNames('k-ListTable__Body', className)
@@ -67,7 +62,7 @@ ListTable.Row = function (_ref5) {
       listProps = _ref5$listProps === void 0 ? {} : _ref5$listProps,
       _ref5$isHighlighted = _ref5.isHighlighted,
       isHighlighted = _ref5$isHighlighted === void 0 ? false : _ref5$isHighlighted,
-      others = _objectWithoutProperties(_ref5, _excluded4);
+      others = _objectWithoutProperties(_ref5, ["className", "children", "listProps", "isHighlighted"]);
 
   return /*#__PURE__*/React.createElement("li", _extends({}, others, {
     className: classNames('k-ListTable__Row', className, {
@@ -87,7 +82,7 @@ ListTable.Row = function (_ref5) {
 
 ListTable.Col = function (_ref7) {
   var className = _ref7.className,
-      props = _objectWithoutProperties(_ref7, _excluded5);
+      props = _objectWithoutProperties(_ref7, ["className"]);
 
   return /*#__PURE__*/React.createElement("li", _extends({}, props, {
     className: classNames('k-ListTable__Col', className)

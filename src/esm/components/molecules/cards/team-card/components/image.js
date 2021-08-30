@@ -1,7 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["styled", "backgroundSource"],
-    _excluded2 = ["src", "title", "style", "className"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -12,7 +10,7 @@ var imageWidth = 252;
 var StyledTeamCardImage = styled(function (_ref) {
   var styled = _ref.styled,
       backgroundSource = _ref.backgroundSource,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["styled", "backgroundSource"]);
 
   return /*#__PURE__*/React.createElement("div", props);
 }).withConfig({
@@ -30,7 +28,7 @@ export var TeamCardImage = function TeamCardImage(_ref4) {
       title = _ref4.title,
       style = _ref4.style,
       className = _ref4.className,
-      props = _objectWithoutProperties(_ref4, _excluded2);
+      props = _objectWithoutProperties(_ref4, ["src", "title", "style", "className"]);
 
   return /*#__PURE__*/React.createElement(StyledTeamCardImage, _extends({}, props, {
     backgroundSource: src,

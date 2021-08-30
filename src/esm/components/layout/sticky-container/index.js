@@ -1,7 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-var _excluded = ["children", "className", "top", "bottom", "isSticky"];
 import React, { useRef, useState, useEffect, useImperativeHandle, forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import classNames from 'classnames';
@@ -60,7 +59,7 @@ var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
       top = _ref2.top,
       bottom = _ref2.bottom,
       isSticky = _ref2.isSticky,
-      other = _objectWithoutProperties(_ref2, _excluded);
+      other = _objectWithoutProperties(_ref2, ["children", "className", "top", "bottom", "isSticky"]);
 
   var currentStickyContainer = useRef(null);
 

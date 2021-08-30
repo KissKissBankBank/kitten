@@ -1,7 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children"],
-    _excluded2 = ["done", "children", "a11yText", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -22,7 +20,7 @@ var a11yProps = function a11yProps(a11yText, done) {
 
 export var CheckList = function CheckList(_ref) {
   var children = _ref.children,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["children"]);
 
   return /*#__PURE__*/React.createElement(List, props, children);
 };
@@ -32,7 +30,7 @@ CheckList.Item = function (_ref2) {
       children = _ref2.children,
       a11yText = _ref2.a11yText,
       className = _ref2.className,
-      props = _objectWithoutProperties(_ref2, _excluded2);
+      props = _objectWithoutProperties(_ref2, ["done", "children", "a11yText", "className"]);
 
   return /*#__PURE__*/React.createElement("li", _extends({
     className: classNames('k-CheckList__item', className, {

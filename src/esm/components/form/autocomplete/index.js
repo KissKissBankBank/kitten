@@ -2,7 +2,6 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["className", "items", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage", "variant"];
 import React, { useState, useRef, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import isFunction from 'lodash/fp/isFunction';
@@ -38,7 +37,7 @@ export var Autocomplete = function Autocomplete(_ref) {
       noResultMessage = _ref.noResultMessage,
       shouldShowNoResultMessage = _ref.shouldShowNoResultMessage,
       variant = _ref.variant,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["className", "items", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage", "variant"]);
 
   var _useState = useState(defaultItems),
       _useState2 = _slicedToArray(_useState, 2),

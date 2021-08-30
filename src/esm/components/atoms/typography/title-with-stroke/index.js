@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["modifier", "tag", "align", "italic", "className", "children", "cssColor"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -21,7 +20,7 @@ export var TitleWithStroke = function TitleWithStroke(_ref) {
       className = _ref.className,
       children = _ref.children,
       cssColor = _ref.cssColor,
-      other = _objectWithoutProperties(_ref, _excluded);
+      other = _objectWithoutProperties(_ref, ["modifier", "tag", "align", "italic", "className", "children", "cssColor"]);
 
   var TitleComponent = tag;
   return /*#__PURE__*/React.createElement(StyledTitleWithStroke, _extends({

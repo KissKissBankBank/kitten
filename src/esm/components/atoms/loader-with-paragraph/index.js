@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["className", "loaderPosition", "loaderProps", "paragraphProps", "children"];
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
@@ -18,7 +17,7 @@ export var LoaderWithParagraph = function LoaderWithParagraph(_ref) {
       loaderProps = _ref.loaderProps,
       paragraphProps = _ref.paragraphProps,
       children = _ref.children,
-      others = _objectWithoutProperties(_ref, _excluded);
+      others = _objectWithoutProperties(_ref, ["className", "loaderPosition", "loaderProps", "paragraphProps", "children"]);
 
   return /*#__PURE__*/React.createElement(StyledLoaderWithParagraph, _extends({
     className: classNames('k-LoaderWithParagraph', className, "k-LoaderWithParagraph--".concat(loaderPosition))

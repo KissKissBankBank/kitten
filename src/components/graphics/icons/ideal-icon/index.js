@@ -15,11 +15,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["className"];
-
 var IdealIcon = function IdealIcon(_ref) {
   var className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["className"]);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     width: "33",
     height: "28",

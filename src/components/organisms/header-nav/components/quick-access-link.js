@@ -17,15 +17,13 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["text", "href", "zIndex", "style", "className"];
-
 var QuickAccessLink = function QuickAccessLink(_ref) {
   var text = _ref.text,
       href = _ref.href,
       zIndex = _ref.zIndex,
       style = _ref.style,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["text", "href", "zIndex", "style", "className"]);
   return /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({}, props, {
     href: href,
     className: (0, _classnames.default)('k-HeaderNav__QuickAccessLink', className),

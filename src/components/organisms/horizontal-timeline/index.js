@@ -25,8 +25,6 @@ var _typography = require("./../../../helpers/utils/typography");
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
-var _excluded = ["children", "className", "ellipsisColumns", "style"];
-
 var StyledHorizontalTimeline = _styledComponents.default.dl.withConfig({
   displayName: "horizontal-timeline__StyledHorizontalTimeline",
   componentId: "sc-1ylzn2r-0"
@@ -51,7 +49,7 @@ var HorizontalTimeline = function HorizontalTimeline(_ref2) {
       className = _ref2.className,
       ellipsisColumns = _ref2.ellipsisColumns,
       style = _ref2.style,
-      props = (0, _objectWithoutProperties2.default)(_ref2, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref2, ["children", "className", "ellipsisColumns", "style"]);
 
   var columnsCount = _react.default.Children.count(children);
 

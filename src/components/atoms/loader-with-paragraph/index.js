@@ -25,8 +25,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _excluded = ["className", "loaderPosition", "loaderProps", "paragraphProps", "children"];
-
 var StyledLoaderWithParagraph = _styledComponents.default.div.withConfig({
   displayName: "loader-with-paragraph__StyledLoaderWithParagraph",
   componentId: "sc-1a44voe-0"
@@ -38,7 +36,7 @@ var LoaderWithParagraph = function LoaderWithParagraph(_ref) {
       loaderProps = _ref.loaderProps,
       paragraphProps = _ref.paragraphProps,
       children = _ref.children,
-      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "loaderPosition", "loaderProps", "paragraphProps", "children"]);
   return /*#__PURE__*/_react.default.createElement(StyledLoaderWithParagraph, (0, _extends2.default)({
     className: (0, _classnames.default)('k-LoaderWithParagraph', className, "k-LoaderWithParagraph--".concat(loaderPosition))
   }, others), /*#__PURE__*/_react.default.createElement(_loader.Loader, (0, _extends2.default)({

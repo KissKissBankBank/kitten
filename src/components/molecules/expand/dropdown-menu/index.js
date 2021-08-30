@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
-var _typeof = require("@babel/runtime/helpers/typeof");
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -31,15 +31,6 @@ var _typographyConfig = _interopRequireDefault(require("../../../../constants/ty
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _excluded = ["button", "open", "onToggle", "menuProps", "menuPosition", "children", "className"],
-    _excluded2 = ["href", "className"],
-    _excluded3 = ["type", "className"],
-    _excluded4 = ["className"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
 var zoomInAndOpacity = (0, _styledComponents.keyframes)(["0%{transform:translateX(calc(-1 * var(--Dropdown-transform))) scale(.66);opacity:0;}to{transform:translateX(calc(-1 * var(--Dropdown-transform))) scale(1);opacity:1;}"]);
 
 var StyledDropdownMenu = _styledComponents.default.details.withConfig({
@@ -59,7 +50,7 @@ var DropdownMenu = function DropdownMenu(_ref) {
       menuPosition = _ref$menuPosition === void 0 ? 'left' : _ref$menuPosition,
       children = _ref.children,
       className = _ref.className,
-      rest = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      rest = (0, _objectWithoutProperties2.default)(_ref, ["button", "open", "onToggle", "menuProps", "menuPosition", "children", "className"]);
 
   var _useState = (0, _react.useState)(openProp),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -182,7 +173,7 @@ DropdownMenu.Link = function (_ref2) {
   var _ref2$href = _ref2.href,
       href = _ref2$href === void 0 ? '' : _ref2$href,
       className = _ref2.className,
-      rest = (0, _objectWithoutProperties2.default)(_ref2, _excluded2);
+      rest = (0, _objectWithoutProperties2.default)(_ref2, ["href", "className"]);
   return /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
     href: href,
     role: "menuitem",
@@ -194,7 +185,7 @@ DropdownMenu.Button = function (_ref3) {
   var _ref3$type = _ref3.type,
       type = _ref3$type === void 0 ? 'button' : _ref3$type,
       className = _ref3.className,
-      rest = (0, _objectWithoutProperties2.default)(_ref3, _excluded3);
+      rest = (0, _objectWithoutProperties2.default)(_ref3, ["type", "className"]);
   return /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
     type: type,
     role: "menuitem",
@@ -204,7 +195,7 @@ DropdownMenu.Button = function (_ref3) {
 
 DropdownMenu.Separator = function (_ref4) {
   var className = _ref4.className,
-      rest = (0, _objectWithoutProperties2.default)(_ref4, _excluded4);
+      rest = (0, _objectWithoutProperties2.default)(_ref4, ["className"]);
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DropdownMenu__menu__item', 'k-DropdownMenu__menu__separator', className)
   }, rest));
