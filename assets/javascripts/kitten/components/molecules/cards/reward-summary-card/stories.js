@@ -1,5 +1,5 @@
-import React from 'react'
-import { RewardSummaryCard } from './index'
+import React, { useEffect } from 'react'
+import { RewardSummaryCard, useRewardSummaryCardResizeObserver } from './index'
 import { Container, COLORS, DropdownMenu, EllipsisIcon } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
@@ -122,9 +122,11 @@ export const Default = ({
   hasTitleTag,
   ...args
 }) => {
+  const { ref, size } = useRewardSummaryCardResizeObserver()
+
   return (
-    <Container>
-      <RewardSummaryCard {...args}>
+    <div ref={ref}>
+      <RewardSummaryCard {...args} size={size}>
         {hasImage && (
           <RewardSummaryCard.Image>
             <img src="/kitten.jpg" alt="" />
@@ -167,6 +169,6 @@ export const Default = ({
           </DropdownMenu>
         </RewardSummaryCard.Options>
       </RewardSummaryCard>
-    </Container>
+    </div>
   )
 }

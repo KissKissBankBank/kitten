@@ -41,6 +41,7 @@ import {
   TextCopy,
   FlexWrapper,
   RewardSummaryCard,
+  useRewardSummaryCardResizeObserver,
   DropdownMenu,
   EllipsisIcon,
 } from '../../..'
@@ -390,92 +391,96 @@ const TableExample = () => (
   </>
 )
 
-const RewardsExample = () => (
-  <div>
-    <Title
-      modifier="quinary"
-      className="k-u-margin-none k-u-margin-bottom-triple"
-    >
-      Curabitur blandit tempus porttitor.
-    </Title>
-    <FlexWrapper gap={15}>
-      <RewardSummaryCard>
-        <RewardSummaryCard.Image>
-          <img
-            alt=""
-            src="/kitten.jpg"
-          />
-        </RewardSummaryCard.Image>
-        <RewardSummaryCard.Title>
-          Stickers Free Boobs Club
-          <RewardSummaryCard.TitleTag text="Contrepartie star" />
-        </RewardSummaryCard.Title>
-        <RewardSummaryCard.Amount>
-          10 000€
-        </RewardSummaryCard.Amount>
-        <RewardSummaryCard.Contribution>
-          1 468 000
-        </RewardSummaryCard.Contribution>
-        <RewardSummaryCard.Availablity>
-          Illimitée
-        </RewardSummaryCard.Availablity>
-        <RewardSummaryCard.Options>
-          <DropdownMenu
-            button={() => (<EllipsisIcon color={COLORS.font1} />)}
-            menuPosition="left"
-          >
-            <DropdownMenu.Link href="#">
-              Editer
-            </DropdownMenu.Link>
-            <DropdownMenu.Link href="#">
-              Dupliquer
-            </DropdownMenu.Link>
-            <DropdownMenu.Link href="#">
-              Désactiver
-            </DropdownMenu.Link>
-            <DropdownMenu.Link>
-              Supprimer
-            </DropdownMenu.Link>
-          </DropdownMenu>
-        </RewardSummaryCard.Options>
-      </RewardSummaryCard>
-      <RewardSummaryCard>
-        <RewardSummaryCard.Title>
-          Stickers Free Boobs Club
-          <RewardSummaryCard.TitleTag text="Contrepartie star" />
-        </RewardSummaryCard.Title>
-        <RewardSummaryCard.Amount>
-          10 000€
-        </RewardSummaryCard.Amount>
-        <RewardSummaryCard.Contribution>
-          1 468 000
-        </RewardSummaryCard.Contribution>
-        <RewardSummaryCard.Availablity>
-          Illimitée
-        </RewardSummaryCard.Availablity>
-        <RewardSummaryCard.Options>
-          <DropdownMenu
-            button={() => (<EllipsisIcon color={COLORS.font1} />)}
-            menuPosition="left"
-          >
-            <DropdownMenu.Link href="#">
-              Editer
-            </DropdownMenu.Link>
-            <DropdownMenu.Link href="#">
-              Dupliquer
-            </DropdownMenu.Link>
-            <DropdownMenu.Link href="#">
-              Désactiver
-            </DropdownMenu.Link>
-            <DropdownMenu.Link>
-              Supprimer
-            </DropdownMenu.Link>
-          </DropdownMenu>
-        </RewardSummaryCard.Options>
-      </RewardSummaryCard>
-    </FlexWrapper>
-  </div>
-)
+const RewardsExample = () => {
+  const { ref, size } = useRewardSummaryCardResizeObserver()
+
+  return (
+    <div ref={ref}>
+      <Title
+        modifier="quinary"
+        className="k-u-margin-none k-u-margin-bottom-triple"
+      >
+        Curabitur blandit tempus porttitor.
+      </Title>
+      <FlexWrapper gap={15}>
+        <RewardSummaryCard size={size}>
+          <RewardSummaryCard.Image>
+            <img
+              alt=""
+              src="/kitten.jpg"
+            />
+          </RewardSummaryCard.Image>
+          <RewardSummaryCard.Title>
+            Stickers Free Boobs Club
+            <RewardSummaryCard.TitleTag text="Contrepartie star" />
+          </RewardSummaryCard.Title>
+          <RewardSummaryCard.Amount>
+            10 000€
+          </RewardSummaryCard.Amount>
+          <RewardSummaryCard.Contribution>
+            1 468 000
+          </RewardSummaryCard.Contribution>
+          <RewardSummaryCard.Availablity>
+            Illimitée
+          </RewardSummaryCard.Availablity>
+          <RewardSummaryCard.Options>
+            <DropdownMenu
+              button={() => (<EllipsisIcon color={COLORS.font1} />)}
+              menuPosition="left"
+            >
+              <DropdownMenu.Link href="#">
+                Editer
+              </DropdownMenu.Link>
+              <DropdownMenu.Link href="#">
+                Dupliquer
+              </DropdownMenu.Link>
+              <DropdownMenu.Link href="#">
+                Désactiver
+              </DropdownMenu.Link>
+              <DropdownMenu.Link>
+                Supprimer
+              </DropdownMenu.Link>
+            </DropdownMenu>
+          </RewardSummaryCard.Options>
+        </RewardSummaryCard>
+        <RewardSummaryCard size={size}>
+          <RewardSummaryCard.Title>
+            Stickers Free Boobs Club
+            <RewardSummaryCard.TitleTag text="Contrepartie star" />
+          </RewardSummaryCard.Title>
+          <RewardSummaryCard.Amount>
+            10 000€
+          </RewardSummaryCard.Amount>
+          <RewardSummaryCard.Contribution>
+            1 468 000
+          </RewardSummaryCard.Contribution>
+          <RewardSummaryCard.Availablity>
+            Illimitée
+          </RewardSummaryCard.Availablity>
+          <RewardSummaryCard.Options>
+            <DropdownMenu
+              button={() => (<EllipsisIcon color={COLORS.font1} />)}
+              menuPosition="left"
+            >
+              <DropdownMenu.Link href="#">
+                Editer
+              </DropdownMenu.Link>
+              <DropdownMenu.Link href="#">
+                Dupliquer
+              </DropdownMenu.Link>
+              <DropdownMenu.Link href="#">
+                Désactiver
+              </DropdownMenu.Link>
+              <DropdownMenu.Link>
+                Supprimer
+              </DropdownMenu.Link>
+            </DropdownMenu>
+          </RewardSummaryCard.Options>
+        </RewardSummaryCard>
+      </FlexWrapper>
+    </div>
+  )
+}
 
 const FlowExample = () => (
   <DashboardLayout.Flow loading={boolean('loading', false)}>

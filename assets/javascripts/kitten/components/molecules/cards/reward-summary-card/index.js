@@ -23,6 +23,7 @@ export const RewardSummaryCard = ({
   show,
   className,
   actionProps,
+  size,
   ...props
 }) => {
   const imageChild = getReactElementsByType({
@@ -46,7 +47,11 @@ export const RewardSummaryCard = ({
 
   return (
     <StyledRewardSummaryCard
-      className={classNames('k-RewardSummaryCard', className)}
+      className={classNames(
+        'k-RewardSummaryCard',
+        className,
+        `k-RewardSummaryCard--${size}`,
+      )}
       {...props}
     >
       <ActionElement
@@ -71,6 +76,8 @@ export const RewardSummaryCard = ({
   )
 }
 
+export { useResizeObserver as useRewardSummaryCardResizeObserver } from './hooks/use-resize-observer'
+
 RewardSummaryCard.Image = Image
 RewardSummaryCard.Title = Title
 RewardSummaryCard.TitleTag = TitleTag
@@ -82,9 +89,11 @@ RewardSummaryCard.Options = Options
 RewardSummaryCard.defaultProps = {
   show: true,
   actionProps: {},
+  size: 'large',
 }
 
 RewardSummaryCard.propTypes = {
   show: PropTypes.bool,
   actionProps: PropTypes.object,
+  size: PropTypes.oneOf(['large', 'medium', 'small', 'mobile']),
 }

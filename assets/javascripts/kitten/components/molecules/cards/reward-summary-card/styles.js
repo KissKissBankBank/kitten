@@ -31,7 +31,7 @@ export const StyledRewardSummaryCard = styled.div`
   border-color: ${COLORS.line1};
   border-radius: ${pxToRem(8)};
 
-  @media (min-width: ${ScreenConfig.M.min}px) {
+  @media (min-width: ${ScreenConfig.S.min}px) {
     height: calc(${pxToRem(100)} + 2 * var(--rewardSummaryCard--border-width));
     display: flex;
     align-items: center;
@@ -72,11 +72,11 @@ export const StyledRewardSummaryCard = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
+    @media (min-width: ${ScreenConfig.S.min}px) {
       flex: 0 0 ${pxToRem(160)};
     }
 
-    @media (max-width: ${ScreenConfig.S.max}px) {
+    @media (max-width: ${ScreenConfig.XS.max}px) {
       padding-top: calc(5 / 8 * 100%);
     }
 
@@ -117,22 +117,15 @@ export const StyledRewardSummaryCard = styled.div`
     display: grid;
     align-items: center;
     align-content: flex-start;
-    grid-gap: ${pxToRem(10)};
+    grid-gap: ${pxToRem(10)} 0;
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr auto;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: 100%;
       padding: ${pxToRem(20)} ${pxToRem(30)};
-      grid-template-columns: ${pxToRem(250)} auto auto auto auto;
-      grid-template-rows: 1fr;
-      grid-gap: 0 ${pxToRem(10)};
-    }
-
-    @media (min-width: ${ScreenConfig.L.min}px) {
-      grid-gap: 0 ${pxToRem(10)};
       grid-template-columns:
-        auto
+        minmax(${pxToRem(250)}, 1fr)
         ${pxToRem(100)}
         ${pxToRem(100)}
         ${pxToRem(150)}
@@ -243,6 +236,34 @@ export const StyledRewardSummaryCard = styled.div`
       }
       &:focus-visible {
         outline-color: ${COLORS.primary4};
+      }
+    }
+  }
+
+  /* SIZES */
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    &.k-RewardSummaryCard--large {}
+    &.k-RewardSummaryCard--medium {
+      .k-RewardSummaryCard__imageWrapper {
+        display: none;
+      }
+    }
+    &.k-RewardSummaryCard--small,
+    &.k-RewardSummaryCard--mobile {
+      .k-RewardSummaryCard__imageWrapper {
+        display: none;
+      }
+      .k-RewardSummaryCard__gridWrapper {
+          grid-template-columns:
+            minmax(${pxToRem(250)}, 1fr)
+            ${pxToRem(100)}
+            ${pxToRem(150)}
+            auto;
+          grid-template-areas: 'info amount contribution options';
+      }
+      .k-RewardSummaryCard__availablity {
+        display: none;
       }
     }
   }

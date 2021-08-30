@@ -6,7 +6,7 @@ export const Options = ({ className, ...props }) => {
     <div
       className={classNames(
         'k-RewardSummaryCard__options',
-        'k-u-hidden@s-down',
+        'k-u-hidden@xs-down',
         className,
       )}
       {...props}
