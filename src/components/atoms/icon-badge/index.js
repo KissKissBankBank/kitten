@@ -23,8 +23,6 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _excluded = ["className", "children", "disabled", "valid", "empty", "big", "huge", "size"];
-
 var StyledBadge = _styledComponents.default.span.withConfig({
   displayName: "icon-badge__StyledBadge",
   componentId: "sc-1nhhmea-0"
@@ -39,7 +37,7 @@ var IconBadge = function IconBadge(_ref) {
       big = _ref.big,
       huge = _ref.huge,
       size = _ref.size,
-      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "children", "disabled", "valid", "empty", "big", "huge", "size"]);
   return /*#__PURE__*/_react.default.createElement(StyledBadge, (0, _extends2.default)({
     className: (0, _classnames.default)('k-IconBadge', className, "k-IconBadge--".concat(size), {
       'k-IconBadge--disabled': disabled,

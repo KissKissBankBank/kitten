@@ -1,13 +1,12 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["closeButtonLabel", "buttonModifier"];
 import React from 'react';
 import { Button } from '../../../../components/molecules/buttons/button';
 import { CrossIcon } from '../../../../components/graphics/icons/cross-icon';
 export var CloseButton = function CloseButton(_ref) {
   var closeButtonLabel = _ref.closeButtonLabel,
       buttonModifier = _ref.buttonModifier,
-      others = _objectWithoutProperties(_ref, _excluded);
+      others = _objectWithoutProperties(_ref, ["closeButtonLabel", "buttonModifier"]);
 
   return /*#__PURE__*/React.createElement(Button, _extends({
     icon: true,

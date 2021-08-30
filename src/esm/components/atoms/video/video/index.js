@@ -1,7 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["className", "children", "ariaLabel", "autoPlay", "poster", "src"];
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { pxToRem } from '../../../../helpers/utils/typography';
@@ -23,7 +22,7 @@ export var Video = function Video(_ref) {
       autoPlay = _ref.autoPlay,
       poster = _ref.poster,
       src = _ref.src,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["className", "children", "ariaLabel", "autoPlay", "poster", "src"]);
 
   var videoElement = useRef(null);
 

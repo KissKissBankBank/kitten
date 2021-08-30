@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
-var _typeof = require("@babel/runtime/helpers/typeof");
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -39,13 +39,6 @@ var _questionMarkIcon = require("../../../components/graphics/icons/question-mar
 
 var _warningIcon = require("../../../components/graphics/icons/warning-icon");
 
-var _excluded = ["modifier", "style", "className", "children", "actionLabel", "actionProps", "bubbleProps", "targetElement"],
-    _excluded2 = ["className", "zIndex", "color", "style"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
 var StyledWrapper = _styledComponents.default.span.withConfig({
   displayName: "toggletip__StyledWrapper",
   componentId: "sc-662n6t-0"
@@ -78,7 +71,7 @@ var Toggletip = function Toggletip(_ref2) {
       actionProps = _ref2.actionProps,
       bubbleProps = _ref2.bubbleProps,
       targetElement = _ref2.targetElement,
-      props = (0, _objectWithoutProperties2.default)(_ref2, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref2, ["modifier", "style", "className", "children", "actionLabel", "actionProps", "bubbleProps", "targetElement"]);
 
   var _useState = (0, _react.useState)(false),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -120,7 +113,7 @@ var Toggletip = function Toggletip(_ref2) {
       bubbleZIndex = bubbleProps.zIndex,
       bubbleColor = bubbleProps.color,
       bubbleStyle = bubbleProps.style,
-      otherBubbleProps = (0, _objectWithoutProperties2.default)(bubbleProps, _excluded2);
+      otherBubbleProps = (0, _objectWithoutProperties2.default)(bubbleProps, ["className", "zIndex", "color", "style"]);
   (0, _react.useEffect)(function () {
     if (isHover) {
       setOpen(true);

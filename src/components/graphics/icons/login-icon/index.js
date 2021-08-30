@@ -15,14 +15,12 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _excluded = ["title", "color", "width", "height"];
-
 var LoginIcon = function LoginIcon(_ref) {
   var title = _ref.title,
       color = _ref.color,
       width = _ref.width,
       height = _ref.height,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["title", "color", "width", "height"]);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     role: "img",
     "aria-label": title,

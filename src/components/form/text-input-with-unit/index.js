@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
-var _typeof = require("@babel/runtime/helpers/typeof");
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -29,12 +29,6 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["unit", "unitWord", "size", "variant", "digits", "className", "valid", "error", "disabled", "wrapperProps"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
 var StyledTextInputWithUnit = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-unit__StyledTextInputWithUnit",
   componentId: "gjmccx-0"
@@ -51,7 +45,7 @@ var TextInputWithUnit = function TextInputWithUnit(_ref) {
       error = _ref.error,
       disabled = _ref.disabled,
       wrapperProps = _ref.wrapperProps,
-      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      others = (0, _objectWithoutProperties2.default)(_ref, ["unit", "unitWord", "size", "variant", "digits", "className", "valid", "error", "disabled", "wrapperProps"]);
   var input = (0, _react.useRef)(null);
   return /*#__PURE__*/_react.default.createElement(StyledTextInputWithUnit, (0, _extends2.default)({}, wrapperProps, {
     className: (0, _classnames.default)('k-Form-TextInputWithUnit', "k-Form-TextInputWithUnit--".concat(variant), wrapperProps.className, {

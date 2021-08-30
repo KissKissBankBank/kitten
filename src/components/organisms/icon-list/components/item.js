@@ -25,13 +25,11 @@ var _screenConfig = require("../../../../constants/screen-config");
 
 var _icon = require("./icon");
 
-var _excluded = ["icon", "iconProps", "children"];
-
 var Item = function Item(_ref) {
   var icon = _ref.icon,
       iconProps = _ref.iconProps,
       children = _ref.children,
-      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      others = (0, _objectWithoutProperties2.default)(_ref, ["icon", "iconProps", "children"]);
   return /*#__PURE__*/_react.default.createElement(StyledItem, others, /*#__PURE__*/_react.default.createElement(_icon.Icon, iconProps, icon), /*#__PURE__*/_react.default.createElement(StyledContent, null, children));
 };
 

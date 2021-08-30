@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children", "style", "className", "bottomBorderRadiusValue", "withBottomBorderRadius"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import deprecated from 'prop-types-extra/lib/deprecated';
@@ -24,7 +23,7 @@ export var List = function List(_ref3) {
       className = _ref3.className,
       bottomBorderRadiusValue = _ref3.bottomBorderRadiusValue,
       withBottomBorderRadius = _ref3.withBottomBorderRadius,
-      props = _objectWithoutProperties(_ref3, _excluded);
+      props = _objectWithoutProperties(_ref3, ["children", "style", "className", "bottomBorderRadiusValue", "withBottomBorderRadius"]);
 
   var radiusValue = bottomBorderRadiusValue > 0 ? bottomBorderRadiusValue : withBottomBorderRadius;
   return /*#__PURE__*/React.createElement(StyledList, _extends({}, props, {

@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children", "className", "display"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -8,7 +7,7 @@ export var Centered = function Centered(_ref) {
   var children = _ref.children,
       className = _ref.className,
       display = _ref.display,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["children", "className", "display"]);
 
   var classNameProps = classNames('k-HeaderNav__centered', {
     'k-HeaderNav__column': display === 'column'

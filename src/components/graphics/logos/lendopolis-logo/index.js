@@ -17,15 +17,13 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
-var _excluded = ["primaryColor", "secondaryColor", "width", "height", "tiny"];
-
 var LendopolisLogo = function LendopolisLogo(_ref) {
   var primaryColor = _ref.primaryColor,
       secondaryColor = _ref.secondaryColor,
       width = _ref.width,
       height = _ref.height,
       tiny = _ref.tiny,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["primaryColor", "secondaryColor", "width", "height", "tiny"]);
   var DEFAULT_WIDTH = 150;
   var DEFAULT_HEIGHT = 28;
   var computed = (0, _ratio.computeFromRatio)({

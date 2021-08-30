@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["unit", "unitWord", "size", "variant", "digits", "className", "valid", "error", "disabled", "wrapperProps"];
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { TextInput } from '../../../components/form/text-input';
@@ -24,7 +23,7 @@ export var TextInputWithUnit = function TextInputWithUnit(_ref) {
       error = _ref.error,
       disabled = _ref.disabled,
       wrapperProps = _ref.wrapperProps,
-      others = _objectWithoutProperties(_ref, _excluded);
+      others = _objectWithoutProperties(_ref, ["unit", "unitWord", "size", "variant", "digits", "className", "valid", "error", "disabled", "wrapperProps"]);
 
   var input = useRef(null);
   return /*#__PURE__*/React.createElement(StyledTextInputWithUnit, _extends({}, wrapperProps, {

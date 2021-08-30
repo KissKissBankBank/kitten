@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["variant", "className"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -17,7 +16,7 @@ var StyledParagraph = styled.span.withConfig({
 export var Link = function Link(_ref) {
   var variant = _ref.variant,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["variant", "className"]);
 
   return /*#__PURE__*/React.createElement(StyledParagraph, null, /*#__PURE__*/React.createElement("span", _extends({}, props, {
     className: classNames(LINK_CLASSNAME, 'k-Steppers--VerticalStepper__link', "k-Steppers--VerticalStepper__link--".concat(variant), className)

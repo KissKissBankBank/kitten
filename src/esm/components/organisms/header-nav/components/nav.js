@@ -1,7 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children", "href", "isSelected", "className"],
-    _excluded2 = ["children", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -11,7 +9,7 @@ var Item = function Item(_ref) {
       href = _ref.href,
       isSelected = _ref.isSelected,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["children", "href", "isSelected", "className"]);
 
   var itemClassNames = classNames('k-HeaderNav-nav__item', {
     'is-selected': isSelected
@@ -34,7 +32,7 @@ Item.proptypes = {
 export var Nav = function Nav(_ref2) {
   var children = _ref2.children,
       className = _ref2.className,
-      props = _objectWithoutProperties(_ref2, _excluded2);
+      props = _objectWithoutProperties(_ref2, ["children", "className"]);
 
   return /*#__PURE__*/React.createElement("ul", _extends({}, props, {
     role: "menubar",

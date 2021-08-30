@@ -23,8 +23,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["children", "className", "color", "size", "distance", "distanceAsPercentage", "distanceIsReverse", "position", "centered", "padding", "shadow", "borderRadius", "borderColor", "borderWidth", "style"];
-
 var Container = _styledComponents.default.div.withConfig({
   displayName: "arrow-container__Container",
   componentId: "sc-1s1w6zm-0"
@@ -46,7 +44,7 @@ var ArrowContainer = function ArrowContainer(_ref) {
       borderColor = _ref.borderColor,
       borderWidth = _ref.borderWidth,
       style = _ref.style,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "className", "color", "size", "distance", "distanceAsPercentage", "distanceIsReverse", "position", "centered", "padding", "shadow", "borderRadius", "borderColor", "borderWidth", "style"]);
 
   var arrowDistance = function () {
     switch (true) {

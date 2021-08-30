@@ -1,12 +1,11 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["color", "title"];
 import React from 'react';
 import PropTypes from 'prop-types';
 export var StrokeIcon = function StrokeIcon(_ref) {
   var color = _ref.color,
       title = _ref.title,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["color", "title"]);
 
   return /*#__PURE__*/React.createElement("svg", _extends({
     width: "8",

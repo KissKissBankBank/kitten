@@ -27,8 +27,6 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var _excluded = ["children", "withoutBorder", "className"];
-
 var StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "vertical-progress__StyledContainer",
   componentId: "sc-1rbh3oq-0"
@@ -38,7 +36,7 @@ var VerticalProgress = function VerticalProgress(_ref) {
   var children = _ref.children,
       withoutBorder = _ref.withoutBorder,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "withoutBorder", "className"]);
   return /*#__PURE__*/_react.default.createElement(StyledContainer, {
     className: (0, _classnames.default)('k-VerticalProgress__wrapper', className, {
       'k-VerticalProgress__wrapper--withoutBorder': withoutBorder

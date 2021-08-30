@@ -25,14 +25,12 @@ var _colorsConfig = _interopRequireDefault(require("../../../../../constants/col
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["phoneNumber", "tooltipColor", "className", "buttonLabel"];
-
 var TeamCardPhoneIcon = function TeamCardPhoneIcon(_ref) {
   var phoneNumber = _ref.phoneNumber,
       tooltipColor = _ref.tooltipColor,
       className = _ref.className,
       buttonLabel = _ref.buttonLabel,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["phoneNumber", "tooltipColor", "className", "buttonLabel"]);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
     tag: "a",
     href: "tel:".concat(phoneNumber),

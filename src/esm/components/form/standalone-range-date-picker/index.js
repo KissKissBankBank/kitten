@@ -1,7 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["from", "to", "onChange", "styles", "locale", "months", "weekDays", "weekdaysShort", "previousMonth", "disabledDays", "nextMonth", "title", "firstDayOfWeek", "initialMonth", "numberOfMonths"];
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import DayPicker, { DateUtils } from 'react-day-picker';
@@ -75,7 +74,7 @@ export var StandaloneRangeDatePicker = function StandaloneRangeDatePicker(_ref14
       firstDayOfWeek = _ref14.firstDayOfWeek,
       initialMonth = _ref14.initialMonth,
       numberOfMonths = _ref14.numberOfMonths,
-      datePickerProps = _objectWithoutProperties(_ref14, _excluded);
+      datePickerProps = _objectWithoutProperties(_ref14, ["from", "to", "onChange", "styles", "locale", "months", "weekDays", "weekdaysShort", "previousMonth", "disabledDays", "nextMonth", "title", "firstDayOfWeek", "initialMonth", "numberOfMonths"]);
 
   var _useState = useState({
     from: from,

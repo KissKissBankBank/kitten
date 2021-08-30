@@ -33,8 +33,6 @@ var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecate
 
 var _screenConfig = require("../../../constants/screen-config");
 
-var _excluded = ["valid", "error", "disabled", "size", "value", "rounded", "buttonValue", "modifier", "buttonProps", "inputValue", "className", "inset"];
-
 var StyledTextInputWithButton = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-button__StyledTextInputWithButton",
   componentId: "sc-1yqni7d-0"
@@ -56,7 +54,7 @@ var TextInputWithButton = _react.default.forwardRef(function (_ref2, ref) {
       inputValue = _ref2.inputValue,
       className = _ref2.className,
       inset = _ref2.inset,
-      others = (0, _objectWithoutProperties2.default)(_ref2, _excluded);
+      others = (0, _objectWithoutProperties2.default)(_ref2, ["valid", "error", "disabled", "size", "value", "rounded", "buttonValue", "modifier", "buttonProps", "inputValue", "className", "inset"]);
   return /*#__PURE__*/_react.default.createElement(StyledTextInputWithButton, {
     className: (0, _classnames.default)('k-Form-TextInputWithButton', "k-Form-TextInputWithButton--".concat(size), {
       'k-Form-TextInputWithButton--insetButton': inset,

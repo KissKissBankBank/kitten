@@ -19,8 +19,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["color", "bgColor", "circleColor", "clockColor", "title", "className"];
-
 var ClockCircleIcon = function ClockCircleIcon(_ref) {
   var color = _ref.color,
       bgColor = _ref.bgColor,
@@ -28,7 +26,7 @@ var ClockCircleIcon = function ClockCircleIcon(_ref) {
       clockColor = _ref.clockColor,
       title = _ref.title,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "bgColor", "circleColor", "clockColor", "title", "className"]);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     className: (0, _classnames.default)('k-ColorSvg', className),
     xmlns: "http://www.w3.org/2000/svg",

@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
-var _typeof = require("@babel/runtime/helpers/typeof");
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -35,14 +35,6 @@ var _stepperIcon = require("../../../components/atoms/stepper-icon");
 
 var _deprecated2 = require("./deprecated");
 
-var _excluded = ["children", "state"],
-    _excluded2 = ["children", "state", "href", "external", "linkProps"],
-    _excluded3 = ["children", "items"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
 var Wrapper = _styledComponents.default.div.withConfig({
   displayName: "stepper__Wrapper",
   componentId: "kuopc1-0"
@@ -70,7 +62,7 @@ var StepperText = (0, _styledComponents.default)(_text.Text).withConfig({
 var StepperItem = function StepperItem(_ref) {
   var children = _ref.children,
       state = _ref.state,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "state"]);
   return /*#__PURE__*/_react.default.createElement(ItemWrapper, (0, _extends2.default)({
     state: state
   }, props), /*#__PURE__*/_react.default.createElement(StepperText, {
@@ -99,7 +91,7 @@ var StepperLink = function StepperLink(_ref2) {
       href = _ref2.href,
       external = _ref2.external,
       linkProps = _ref2.linkProps,
-      props = (0, _objectWithoutProperties2.default)(_ref2, _excluded2);
+      props = (0, _objectWithoutProperties2.default)(_ref2, ["children", "state", "href", "external", "linkProps"]);
   return /*#__PURE__*/_react.default.createElement(ItemWrapper, (0, _extends2.default)({
     state: state
   }, props), /*#__PURE__*/_react.default.createElement(StepperText, (0, _extends2.default)({
@@ -135,7 +127,7 @@ StepperLink.defaultProps = {
 var Stepper = function Stepper(_ref3) {
   var children = _ref3.children,
       items = _ref3.items,
-      others = (0, _objectWithoutProperties2.default)(_ref3, _excluded3);
+      others = (0, _objectWithoutProperties2.default)(_ref3, ["children", "items"]);
 
   if (!!items) {
     return /*#__PURE__*/_react.default.createElement(_deprecated2.Stepper, (0, _extends2.default)({

@@ -1,5 +1,4 @@
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["imageContainerRatio", "forceVersion"];
 import styled, { keyframes, css } from 'styled-components';
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../../constants/screen-config';
@@ -12,7 +11,7 @@ var desktopStyles = css([""]);
 export var StyledCrowdfundingCard = styled(function (_ref) {
   var imageContainerRatio = _ref.imageContainerRatio,
       forceVersion = _ref.forceVersion,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["imageContainerRatio", "forceVersion"]);
 
   return /*#__PURE__*/React.createElement("div", props);
 }).withConfig({

@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
-var _typeof = require("@babel/runtime/helpers/typeof");
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -30,13 +30,6 @@ var _grid = require("../../../components/layout/grid");
 var _container = require("../../../components/layout/container");
 
 var _gridConfig = require("../../../constants/grid-config");
-
-var _excluded = ["className", "children"],
-    _excluded2 = ["className", "children", "contentClassName"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var Context = (0, _react.createContext)({
   asideSize: 'default'
@@ -73,7 +66,7 @@ exports.SideGrid = SideGrid;
 var SideGridContent = function SideGridContent(_ref2) {
   var className = _ref2.className,
       children = _ref2.children,
-      props = (0, _objectWithoutProperties2.default)(_ref2, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref2, ["className", "children"]);
 
   var _useContext = (0, _react.useContext)(Context),
       asideSize = _useContext.asideSize;
@@ -104,7 +97,7 @@ var SideGridAside = function SideGridAside(_ref3) {
   var className = _ref3.className,
       children = _ref3.children,
       contentClassName = _ref3.contentClassName,
-      props = (0, _objectWithoutProperties2.default)(_ref3, _excluded2);
+      props = (0, _objectWithoutProperties2.default)(_ref3, ["className", "children", "contentClassName"]);
 
   var _useContext2 = (0, _react.useContext)(Context),
       asideSize = _useContext2.asideSize;

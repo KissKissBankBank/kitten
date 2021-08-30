@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["success", "valid", "error", "waiting", "disabled", "statusProps", "children", "className", "variant", "bridge", "onClick"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -21,7 +20,7 @@ export var Step = function Step(_ref) {
       variant = _ref.variant,
       bridge = _ref.bridge,
       onClick = _ref.onClick,
-      other = _objectWithoutProperties(_ref, _excluded);
+      other = _objectWithoutProperties(_ref, ["success", "valid", "error", "waiting", "disabled", "statusProps", "children", "className", "variant", "bridge", "onClick"]);
 
   return /*#__PURE__*/React.createElement(StyledItem, {
     className: classNames('k-Steppers--VerticalStepper__item', {

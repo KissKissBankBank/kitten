@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
-var _typeof = require("@babel/runtime/helpers/typeof");
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -26,12 +26,6 @@ var _typography = require("../../../helpers/utils/typography");
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _strokeModifierStyles = require("./common/stroke-modifier-styles");
-
-var _excluded = ["className", "style", "size", "modifier", "customSize", "color"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var MICRO = (0, _styledComponents.css)(["width:", ";height:", ";"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(2));
 exports.MICRO = MICRO;
@@ -61,7 +55,7 @@ var HorizontalStroke = function HorizontalStroke(_ref2) {
       modifier = _ref2.modifier,
       customSize = _ref2.customSize,
       color = _ref2.color,
-      props = (0, _objectWithoutProperties2.default)(_ref2, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref2, ["className", "style", "size", "modifier", "customSize", "color"]);
 
   var modifierClassName = function modifierClassName() {
     if (!modifier) return "k-HorizontalStroke--size--".concat(size);

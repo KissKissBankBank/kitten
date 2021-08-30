@@ -1,8 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children", "state"],
-    _excluded2 = ["children", "state", "href", "external", "linkProps"],
-    _excluded3 = ["children", "items"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import deprecated from 'prop-types-extra/lib/deprecated';
@@ -37,7 +34,7 @@ var StepperText = styled(Text).withConfig({
 export var StepperItem = function StepperItem(_ref) {
   var children = _ref.children,
       state = _ref.state,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["children", "state"]);
 
   return /*#__PURE__*/React.createElement(ItemWrapper, _extends({
     state: state
@@ -64,7 +61,7 @@ export var StepperLink = function StepperLink(_ref2) {
       href = _ref2.href,
       external = _ref2.external,
       linkProps = _ref2.linkProps,
-      props = _objectWithoutProperties(_ref2, _excluded2);
+      props = _objectWithoutProperties(_ref2, ["children", "state", "href", "external", "linkProps"]);
 
   return /*#__PURE__*/React.createElement(ItemWrapper, _extends({
     state: state
@@ -98,7 +95,7 @@ StepperLink.defaultProps = {
 export var Stepper = function Stepper(_ref3) {
   var children = _ref3.children,
       items = _ref3.items,
-      others = _objectWithoutProperties(_ref3, _excluded3);
+      others = _objectWithoutProperties(_ref3, ["children", "items"]);
 
   if (!!items) {
     return /*#__PURE__*/React.createElement(DeprecatedStepper, _extends({

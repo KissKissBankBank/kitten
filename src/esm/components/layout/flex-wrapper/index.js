@@ -2,7 +2,6 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _typeof from "@babel/runtime/helpers/esm/typeof";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["gap", "padding", "direction", "className", "style"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -36,7 +35,7 @@ export var FlexWrapper = function FlexWrapper(_ref) {
       direction = _ref$direction === void 0 ? 'column' : _ref$direction,
       className = _ref.className,
       style = _ref.style,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["gap", "padding", "direction", "className", "style"]);
 
   var gapRule = gap ? getRuleFromProp(gap) : null;
   var paddingRule = padding ? getRuleFromProp(padding) : null;

@@ -1,7 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["ratio", "previewProps", "iframeHtml", "playButtonLabel", "style", "className"];
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
@@ -28,7 +27,7 @@ export var EmbedPlayer = function EmbedPlayer(_ref) {
       _ref$style = _ref.style,
       mainStyle = _ref$style === void 0 ? void 0 : _ref$style,
       className = _ref.className,
-      others = _objectWithoutProperties(_ref, _excluded);
+      others = _objectWithoutProperties(_ref, ["ratio", "previewProps", "iframeHtml", "playButtonLabel", "style", "className"]);
 
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),

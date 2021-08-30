@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["isInputValid", "title", "className"];
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -12,7 +11,7 @@ export var Action = function Action(_ref) {
   var isInputValid = _ref.isInputValid,
       title = _ref.title,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["isInputValid", "title", "className"]);
 
   var _useContext = useContext(Context),
       isInputEmpty = _useContext.isInputEmpty;

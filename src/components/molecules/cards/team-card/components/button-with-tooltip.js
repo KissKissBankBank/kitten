@@ -25,8 +25,6 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _typography = require("../../../../../helpers/utils/typography");
 
-var _excluded = ["phoneNumber", "tooltipColor"];
-
 var StyledTeamCardButtonWithTooltip = _styledComponents.default.a.withConfig({
   displayName: "button-with-tooltip__StyledTeamCardButtonWithTooltip",
   componentId: "sc-1bi278x-0"
@@ -44,7 +42,7 @@ var StyledTeamCardButtonWithTooltip = _styledComponents.default.a.withConfig({
 var TeamCardButtonWithTooltip = function TeamCardButtonWithTooltip(_ref4) {
   var phoneNumber = _ref4.phoneNumber,
       tooltipColor = _ref4.tooltipColor,
-      props = (0, _objectWithoutProperties2.default)(_ref4, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref4, ["phoneNumber", "tooltipColor"]);
   return /*#__PURE__*/_react.default.createElement(StyledTeamCardButtonWithTooltip, (0, _extends2.default)({
     href: "tel:".concat(phoneNumber),
     tooltipColor: tooltipColor

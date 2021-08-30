@@ -1,7 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children", "col", "offset", "as", "className"];
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
@@ -36,7 +35,7 @@ export var AdaptableGridCol = function AdaptableGridCol(_ref2) {
       offset = _ref2.offset,
       as = _ref2.as,
       className = _ref2.className,
-      other = _objectWithoutProperties(_ref2, _excluded);
+      other = _objectWithoutProperties(_ref2, ["children", "col", "offset", "as", "className"]);
 
   var _useState = useState(null),
       _useState2 = _slicedToArray(_useState, 2),

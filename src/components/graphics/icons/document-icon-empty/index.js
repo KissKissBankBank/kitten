@@ -19,8 +19,6 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["className", "children", "title"];
-
 var StyledDocumentIcon = _styledComponents.default.svg.withConfig({
   displayName: "document-icon-empty__StyledDocumentIcon",
   componentId: "sc-1wxnwfw-0"
@@ -30,7 +28,7 @@ var DocumentIconEmpty = function DocumentIconEmpty(_ref) {
   var className = _ref.className,
       children = _ref.children,
       title = _ref.title,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "children", "title"]);
   return /*#__PURE__*/_react.default.createElement(StyledDocumentIcon, (0, _extends2.default)({
     width: "25",
     height: "33",

@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
-var _typeof = require("@babel/runtime/helpers/typeof");
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -33,14 +33,6 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _arrowIcon = require("../../../components/graphics/icons/arrow-icon");
 
-var _excluded = ["className"],
-    _excluded2 = ["className", "icon", "isActive", "children"],
-    _excluded3 = ["className", "children", "icon", "title"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
 var StyledDashboardMenu = _styledComponents.default.nav.withConfig({
   displayName: "dashboard-menu__StyledDashboardMenu",
   componentId: "xypcm1-0"
@@ -48,7 +40,7 @@ var StyledDashboardMenu = _styledComponents.default.nav.withConfig({
 
 var DashboardMenu = function DashboardMenu(_ref) {
   var className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["className"]);
   return /*#__PURE__*/_react.default.createElement(StyledDashboardMenu, {
     className: (0, _classnames.default)('k-DashboardMenu', className)
   }, /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({
@@ -63,7 +55,7 @@ var Item = function Item(_ref2) {
       icon = _ref2.icon,
       isActive = _ref2.isActive,
       children = _ref2.children,
-      props = (0, _objectWithoutProperties2.default)(_ref2, _excluded2);
+      props = (0, _objectWithoutProperties2.default)(_ref2, ["className", "icon", "isActive", "children"]);
   return /*#__PURE__*/_react.default.createElement("li", {
     className: "k-DashboardMenu__itemWrapper"
   }, /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
@@ -81,7 +73,7 @@ var Expandable = function Expandable(_ref3) {
       children = _ref3.children,
       icon = _ref3.icon,
       title = _ref3.title,
-      props = (0, _objectWithoutProperties2.default)(_ref3, _excluded3);
+      props = (0, _objectWithoutProperties2.default)(_ref3, ["className", "children", "icon", "title"]);
 
   var _useState = (0, _react.useState)(false),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),

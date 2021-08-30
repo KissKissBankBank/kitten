@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["limit", "unit", "noMargin", "className"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -12,7 +11,7 @@ export var FieldInput = function FieldInput(_ref) {
       unit = _ref.unit,
       noMargin = _ref.noMargin,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["limit", "unit", "noMargin", "className"]);
 
   var Input = TextInput;
 

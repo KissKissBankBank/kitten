@@ -25,8 +25,6 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
-var _excluded = ["className", "spaced", "Icon", "a11yText", "color", "withBorder", "style"];
-
 var StyledBadge = _styledComponents.default.span.withConfig({
   displayName: "badge__StyledBadge",
   componentId: "d8v7s7-0"
@@ -40,7 +38,7 @@ var Badge = function Badge(_ref) {
       color = _ref.color,
       withBorder = _ref.withBorder,
       style = _ref.style,
-      others = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "spaced", "Icon", "a11yText", "color", "withBorder", "style"]);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, Icon ? /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Badge__wrapper k-u-flex k-u-flex-alignItems-center"
   }, /*#__PURE__*/_react.default.createElement(Icon, null), /*#__PURE__*/_react.default.createElement(StyledBadge, (0, _extends2.default)({

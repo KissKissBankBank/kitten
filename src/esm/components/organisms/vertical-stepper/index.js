@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["children", "variant"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -17,7 +16,7 @@ export var LINK_CLASSNAME = 'VerticalStepper__link';
 export var VerticalStepper = function VerticalStepper(_ref) {
   var children = _ref.children,
       variant = _ref.variant,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["children", "variant"]);
 
   return /*#__PURE__*/React.createElement(StyledNav, {
     variant: variant

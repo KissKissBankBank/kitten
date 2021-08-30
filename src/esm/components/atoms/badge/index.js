@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["className", "spaced", "Icon", "a11yText", "color", "withBorder", "style"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -20,7 +19,7 @@ export var Badge = function Badge(_ref) {
       color = _ref.color,
       withBorder = _ref.withBorder,
       style = _ref.style,
-      others = _objectWithoutProperties(_ref, _excluded);
+      others = _objectWithoutProperties(_ref, ["className", "spaced", "Icon", "a11yText", "color", "withBorder", "style"]);
 
   return /*#__PURE__*/React.createElement(React.Fragment, null, Icon ? /*#__PURE__*/React.createElement("div", {
     className: "k-Badge__wrapper k-u-flex k-u-flex-alignItems-center"

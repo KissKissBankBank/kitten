@@ -2,7 +2,7 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-var _typeof = require("@babel/runtime/helpers/typeof");
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -53,17 +53,7 @@ var _gridConfig = require("../../../constants/grid-config");
 
 var _elementHelper = require("../../../helpers/dom/element-helper");
 
-var _excluded = ["children", "className"],
-    _excluded2 = ["children", "withoutMargin", "className", "align", "tag"],
-    _excluded3 = ["className", "sticky", "stickyOnMobile", "fullSize", "fullSizeOnMobile"],
-    _excluded4 = ["onClick"],
-    _excluded5 = ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "size", "isOpen", "zIndex", "fullSize", "fullSizeOnMobile", "fullSizeTitle", "variant", "headerTitle", "headerActions", "headerMessage", "contentCols", "headerZIndex"];
-
 var _templateObject;
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var paddingPlusGutters = 2 * _gridConfig.CONTAINER_PADDING + 11 * _gridConfig.GUTTER;
 var oneGridCol = "calc((100vw - ".concat((0, _typography.pxToRem)(paddingPlusGutters), ") / 12 + ").concat((0, _typography.pxToRem)(_gridConfig.GUTTER), ")");
@@ -81,7 +71,7 @@ var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject || (_
 var ModalTitle = function ModalTitle(_ref) {
   var children = _ref.children,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "className"]);
   return /*#__PURE__*/_react.default.createElement(_title.Title, (0, _extends2.default)({
     modifier: "quaternary",
     noMargin: true,
@@ -96,7 +86,7 @@ var ModalParagraph = function ModalParagraph(_ref2) {
       className = _ref2.className,
       align = _ref2.align,
       tag = _ref2.tag,
-      props = (0, _objectWithoutProperties2.default)(_ref2, _excluded2);
+      props = (0, _objectWithoutProperties2.default)(_ref2, ["children", "withoutMargin", "className", "align", "tag"]);
   return /*#__PURE__*/_react.default.createElement(StyledParagraph, (0, _extends2.default)({
     modifier: "tertiary",
     noMargin: true,
@@ -124,7 +114,7 @@ var Actions = function Actions(_ref3) {
       stickyOnMobile = _ref3.stickyOnMobile,
       fullSize = _ref3.fullSize,
       fullSizeOnMobile = _ref3.fullSizeOnMobile,
-      props = (0, _objectWithoutProperties2.default)(_ref3, _excluded3);
+      props = (0, _objectWithoutProperties2.default)(_ref3, ["className", "sticky", "stickyOnMobile", "fullSize", "fullSizeOnMobile"]);
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: (0, _classnames.default)('k-ModalNext__actions', className, {
       'k-ModalNext__actions--sticky': sticky,
@@ -173,7 +163,7 @@ exports.updateState = updateState;
 
 var CloseActionButton = function CloseActionButton(_ref4) {
   var _onClick = _ref4.onClick,
-      props = (0, _objectWithoutProperties2.default)(_ref4, _excluded4);
+      props = (0, _objectWithoutProperties2.default)(_ref4, ["onClick"]);
 
   var _useContext = (0, _react.useContext)(ModalContext),
       _useContext2 = (0, _slicedToArray2.default)(_useContext, 2),
@@ -228,7 +218,7 @@ var InnerModal = function InnerModal(_ref6) {
       headerMessage = _ref6.headerMessage,
       contentCols = _ref6.contentCols,
       headerZIndex = _ref6.headerZIndex,
-      others = (0, _objectWithoutProperties2.default)(_ref6, _excluded5);
+      others = (0, _objectWithoutProperties2.default)(_ref6, ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "size", "isOpen", "zIndex", "fullSize", "fullSizeOnMobile", "fullSizeTitle", "variant", "headerTitle", "headerActions", "headerMessage", "contentCols", "headerZIndex"]);
 
   var _useContext3 = (0, _react.useContext)(ModalContext),
       _useContext4 = (0, _slicedToArray2.default)(_useContext3, 2),

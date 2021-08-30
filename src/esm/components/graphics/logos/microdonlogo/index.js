@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["color1", "color2", "width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
@@ -9,7 +8,7 @@ export var MicrodonLogo = function MicrodonLogo(_ref) {
       color2 = _ref.color2,
       width = _ref.width,
       height = _ref.height,
-      props = _objectWithoutProperties(_ref, _excluded);
+      props = _objectWithoutProperties(_ref, ["color1", "color2", "width", "height"]);
 
   var DEFAULT_WIDTH = 339.18;
   var DEFAULT_HEIGHT = 64.02;

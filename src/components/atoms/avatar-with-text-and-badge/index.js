@@ -31,10 +31,6 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _reactElements = require("../../../helpers/react/react-elements");
 
-var _excluded = ["backgroundColor", "className", "a11yText"],
-    _excluded2 = ["textClassName", "className", "withEllipsisOverflow"],
-    _excluded3 = ["className", "hoverable"];
-
 var StyledWrapper = _styledComponents.default.div.withConfig({
   displayName: "avatar-with-text-and-badge__StyledWrapper",
   componentId: "sc-508gao-0"
@@ -99,7 +95,7 @@ var Badge = function Badge(_ref2) {
   var backgroundColor = _ref2.backgroundColor,
       className = _ref2.className,
       a11yText = _ref2.a11yText,
-      props = (0, _objectWithoutProperties2.default)(_ref2, _excluded);
+      props = (0, _objectWithoutProperties2.default)(_ref2, ["backgroundColor", "className", "a11yText"]);
   return /*#__PURE__*/_react.default.createElement(_badge.Badge, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Avatar__badge', className),
     color: backgroundColor,
@@ -120,7 +116,7 @@ var Text = function Text(_ref3) {
   var textClassName = _ref3.textClassName,
       className = _ref3.className,
       withEllipsisOverflow = _ref3.withEllipsisOverflow,
-      props = (0, _objectWithoutProperties2.default)(_ref3, _excluded2);
+      props = (0, _objectWithoutProperties2.default)(_ref3, ["textClassName", "className", "withEllipsisOverflow"]);
   return /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({
     className: (0, _classnames.default)('k-Avatar__text', textClassName, className, {
       'k-Avatar__text--hasEllipsis': withEllipsisOverflow
@@ -139,7 +135,7 @@ Text.defaultProps = {
 var AvatarWithTextAndBadge = function AvatarWithTextAndBadge(_ref4) {
   var className = _ref4.className,
       hoverable = _ref4.hoverable,
-      props = (0, _objectWithoutProperties2.default)(_ref4, _excluded3);
+      props = (0, _objectWithoutProperties2.default)(_ref4, ["className", "hoverable"]);
   return /*#__PURE__*/_react.default.createElement(StyledWrapper, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Avatar__wrapper', className, {
       'k-Avatar__wrapper--isHoverable': hoverable

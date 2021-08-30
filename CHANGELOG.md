@@ -4,8 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `InfoLines`: Modernize component and update styles.
-- Fix: `TextInput`: Update color styles to enhance accessibility.
+## [4.4.0] - 2021-08-30
+
+Feature:
+
+- `InfoLines`: Modernize component and update styles.
+
+Fix:
+
+- `TextInput`: Update color styles to enhance accessibility.
 
 ## [4.3.0] - 2021-08-27
 

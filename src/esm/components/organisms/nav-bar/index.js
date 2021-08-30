@@ -1,7 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["active", "children", "className", "linkProps"],
-    _excluded2 = ["children", "className", "navProps", "listProps", "colors", "modifier"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -39,7 +37,7 @@ var NavBarItem = function NavBarItem(_ref7) {
       children = _ref7.children,
       className = _ref7.className,
       linkProps = _ref7.linkProps,
-      props = _objectWithoutProperties(_ref7, _excluded);
+      props = _objectWithoutProperties(_ref7, ["active", "children", "className", "linkProps"]);
 
   return /*#__PURE__*/React.createElement("li", _extends({}, props, {
     className: classNames('k-NavBar__listItem', className)
@@ -57,7 +55,7 @@ export var NavBar = function NavBar(_ref8) {
       listProps = _ref8.listProps,
       colors = _ref8.colors,
       modifier = _ref8.modifier,
-      props = _objectWithoutProperties(_ref8, _excluded2);
+      props = _objectWithoutProperties(_ref8, ["children", "className", "navProps", "listProps", "colors", "modifier"]);
 
   return /*#__PURE__*/React.createElement(StyledNavBar, _extends({}, props, {
     className: classNames('k-NavBar', "k-NavBar--".concat(modifier), className),

@@ -1,6 +1,5 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["className", "style", "size", "modifier", "customSize", "color"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -27,7 +26,7 @@ export var HorizontalStroke = function HorizontalStroke(_ref2) {
       modifier = _ref2.modifier,
       customSize = _ref2.customSize,
       color = _ref2.color,
-      props = _objectWithoutProperties(_ref2, _excluded);
+      props = _objectWithoutProperties(_ref2, ["className", "style", "size", "modifier", "customSize", "color"]);
 
   var modifierClassName = function modifierClassName() {
     if (!modifier) return "k-HorizontalStroke--size--".concat(size);
