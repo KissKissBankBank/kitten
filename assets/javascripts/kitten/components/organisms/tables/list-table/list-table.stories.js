@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styled, { css, createGlobalStyle } from 'styled-components'
-import { select } from '@storybook/addon-knobs'
 import { ListTable } from './index'
 import {
   ScreenConfig,
@@ -14,6 +13,24 @@ import {
   CONTAINER_PADDING,
   StatusWithBullet,
 } from '../../../..'
+
+export default {
+  title: 'Organisms/Tables/ListTable',
+  component: ListTable,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="ListTable" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container">
+        {story()}
+      </div>
+    ),
+  ]
+}
+
 
 const ListTableStyles = createGlobalStyle`
   .customCol_1 {

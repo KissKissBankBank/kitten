@@ -5,14 +5,6 @@ import { Marger } from '../../layout/marger'
 import { Container } from '../../layout/container'
 import { DocsPage } from 'storybook/docs-page'
 
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      {children}
-    </Marger>
-  </Container>
-)
-
 export default {
   title: 'Organisms/Stepper (deprecated)',
   component: Stepper,
@@ -21,14 +13,18 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="Stepper" />,
     },
   },
+  decorators: [
+    story => (
+      <div className="story-Container">
+        {story()}
+      </div>
+    ),
+  ]
 }
 
 export const Default = () => {
   return (
-    <StoryContainer>
       <Stepper
-        withAlignStart={boolean('withAlignStart', false)}
-        withTinySpacing={boolean('withTinySpacing', false)}
         items={[
           {
             href: '#',
@@ -56,6 +52,5 @@ export const Default = () => {
           },
         ]}
       />
-    </StoryContainer>
   )
 }

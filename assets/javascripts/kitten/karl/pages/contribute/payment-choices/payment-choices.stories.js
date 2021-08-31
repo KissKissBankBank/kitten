@@ -1,20 +1,24 @@
 import React from 'react'
-import { boolean } from '@storybook/addon-knobs'
 import PaymentChoices from './components/payment-choices'
 import { Marger } from '../../../..'
 
 export default {
   title: 'pages/Contribute/PaymentChoices',
   component: PaymentChoices,
+  args: {
+    onlyPayPal: false,
+    error: false,
+  },
+  argTypes: {
+    onlyPayPal: { control: 'boolean' },
+    error: { control: 'boolean' },
+  }
 }
 
-export const Default = () => {
+export const Default = (args) => {
   return (
     <Marger top="10" bottom="10">
-      <PaymentChoices
-        onlyPayPal={boolean('onlyPayPal?', false)}
-        error={boolean('Error?', false)}
-      />
+      <PaymentChoices {...args}/>
     </Marger>
   )
 }

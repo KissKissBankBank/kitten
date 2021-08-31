@@ -1,23 +1,42 @@
 import React from 'react'
-import { color, select } from '@storybook/addon-knobs'
 import { NavBar } from './index'
 import { COLORS, ScrollableContainer } from '../../..'
 
-const modifierTypes = {
-  Regular: 'regular',
-  Big: 'big',
+export default {
+  title: 'Organisms/NavBar',
+  component: NavBar,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="NavBar" />,
+    },
+  },
+  args: {
+    colors: {
+      background: COLORS.primary6,
+      link: COLORS.font1,
+      border: 'rgba(0,0,0,0)',
+      activeLink: COLORS.primary1,
+      activeBorder: COLORS.primary1,
+    },
+    modifier: 'regular',
+    listProps: {},
+    navProps: {},
+  },
+  argTypes: {
+    colors: {
+      control: 'object'
+    },
+    modifier: {control: 'radio', options: ['regular', 'big']},
+    listProps: {control: 'object'},
+    navProps: {control: 'object'},
+  }
 }
 
-export const Default = () => (
+
+
+export const Default = (args) => (
   <NavBar
-    colors={{
-      background: color('Background', COLORS.primary6),
-      link: color('Link', COLORS.font1),
-      border: color('Border', 'rgba(0,0,0,0)'),
-      activeLink: color('ActiveLink', COLORS.primary1),
-      activeBorder: color('ActiveBorder', COLORS.primary1),
-    }}
-    modifier={select('Modifier', modifierTypes, 'regular')}
+    {...args}
   >
     <NavBar.ListItem linkProps={{ href: '#1' }} active>
       Item 1
@@ -28,8 +47,8 @@ export const Default = () => (
   </NavBar>
 )
 
-export const NestedInsideScrollableContainer = () => (
+export const NestedInsideScrollableContainer = (args) => (
   <ScrollableContainer>
-    <Default />
+    <Default {...args} />
   </ScrollableContainer>
 )

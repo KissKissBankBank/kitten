@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { boolean } from '@storybook/addon-knobs'
 import { BasicUploader } from './index'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
@@ -124,8 +123,6 @@ export const StatusWaiting = args => (
     buttonText="Send document"
     fileName="document.pdf"
     status="wait"
-    canCancel={boolean('canCancel', false)}
-    disabled={boolean('disabled', false)}
     statusText="The document is awaiting for validation."
   />
 )

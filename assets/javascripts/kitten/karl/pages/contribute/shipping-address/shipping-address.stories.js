@@ -1,15 +1,20 @@
 import React from 'react'
-import { boolean } from '@storybook/addon-knobs'
 import ShippingAddress from './components/shipping-address'
 import { Marger } from '../../../../components/layout/marger'
 
 export default {
   title: 'pages/Contribute/ShippingAddress',
   component: ShippingAddress,
+  args: {
+    error: false,
+  },
+  argTypes: {
+    error: { control: 'boolean' },
+  }
 }
 
-export const Default = () => (
+export const Default = (args) => (
   <Marger top="10" bottom="10">
-    <ShippingAddress error={boolean('Show errors?', false)} />
+    <ShippingAddress {...args} />
   </Marger>
 )
