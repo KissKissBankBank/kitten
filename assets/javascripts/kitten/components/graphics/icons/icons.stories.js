@@ -171,11 +171,7 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
   }
 `
 
-export const AllIcons = ({
-  colorInput,
-  bgColorInput,
-}) => {
-
+export const AllIcons = ({ colorInput, bgColorInput }) => {
   return (
     <Container>
       <Group title="Bank">

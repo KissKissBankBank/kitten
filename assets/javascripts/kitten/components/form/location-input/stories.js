@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { LocationInput } from './index'
-import { text } from '@storybook/addon-knobs'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -38,7 +37,7 @@ export default {
     gPlaceApiKey: {
       name: 'gPlaceApiKey (story prop)',
       control: { type: 'text' },
-    }
+    },
   },
   args: {
     onChange: e => console.warn(e),
@@ -59,7 +58,7 @@ export default {
   },
 }
 
-export const Default = ({gPlaceApiKey, ...args}) => {
+export const Default = ({ gPlaceApiKey, ...args }) => {
   const [googleMapsReady, setGoogleMapsReadiness] = useState(false)
 
   useEffect(() => {

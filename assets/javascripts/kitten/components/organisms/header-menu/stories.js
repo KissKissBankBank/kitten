@@ -1,6 +1,6 @@
 import React from 'react'
 import { HeaderMenu } from './index'
-import { Marger, Container, LendopolisLogo } from '../../../'
+import { LendopolisLogo } from '../../../'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -38,19 +38,16 @@ export default {
   },
   argTypes: {
     backgroundColors: { control: 'object' },
-    borderSide: { control: 'radio', options: [ 'left',
- 'right'] },
+    borderSide: { control: 'radio', options: ['left', 'right'] },
     borderSideOnHover: { control: 'boolean' },
     largeItem: { control: 'boolean' },
     noBorder: { control: 'boolean' },
-  }
+  },
 }
 
-export const Default = (args) => {
+export const Default = args => {
   return (
-    <HeaderMenu
-      {...args}
-    >
+    <HeaderMenu {...args}>
       <HeaderMenu.Item href="#">Item 1</HeaderMenu.Item>
       <HeaderMenu.Item href="#" isSelected>
         Item 2 (actif)

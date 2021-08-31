@@ -11,9 +11,7 @@ export default {
   argTypes: {
     inputError: { control: 'boolean' },
     passwordError: { control: 'boolean' },
-  }
+  },
 }
 
-export const Default = ({args}) => (
-  <Login {...args}/>
-)
+export const Default = ({ args }) => <Login {...args} />

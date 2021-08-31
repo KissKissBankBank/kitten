@@ -12,13 +12,13 @@ export default {
   argTypes: {
     onlyPayPal: { control: 'boolean' },
     error: { control: 'boolean' },
-  }
+  },
 }
 
-export const Default = (args) => {
+export const Default = args => {
   return (
     <Marger top="10" bottom="10">
-      <PaymentChoices {...args}/>
+      <PaymentChoices {...args} />
     </Marger>
   )
 }

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import isFunction from 'lodash/fp/isFunction'
 import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
@@ -17,7 +17,6 @@ const borderSize = 2
 const Wrapper = styled.div`
   display: flex;
   position: relative;
-
 
   .k-Form-Autocomplete__input {
     display: block;
@@ -59,7 +58,6 @@ const Wrapper = styled.div`
     ::-ms-clear {
       display: none;
     }
-
   }
   &.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
     border-color: ${COLORS.error3};
@@ -156,7 +154,7 @@ const Wrapper = styled.div`
     }
   }
 
-  &.k-Form-Autocomplete--hasIcon-right{
+  &.k-Form-Autocomplete--hasIcon-right {
     .k-Form-Autocomplete__input {
       padding-right: ${pxToRem(45)};
     }
@@ -185,7 +183,6 @@ const Wrapper = styled.div`
     border-radius: ${pxToRem(4)};
   }
 `
-
 
 export const Autocomplete = ({
   className,
@@ -323,7 +320,7 @@ export const Autocomplete = ({
         {
           [`k-Form-Autocomplete--hasIcon-${iconPosition}`]: !!icon,
           'k-Form-Autocomplete--disabled': props.disabled,
-        }
+        },
       )}
     >
       <input
@@ -433,7 +430,7 @@ Autocomplete.propTypes = {
   onKeyDown: PropTypes.func,
   onSelect: PropTypes.func,
   isLoading: PropTypes.bool,
-  variant: PropTypes.oneOf(['andromeda', 'orion'])
+  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }
 
 Autocomplete.defaultProps = {

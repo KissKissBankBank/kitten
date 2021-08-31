@@ -22,15 +22,8 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="ListTable" />,
     },
   },
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ]
+  decorators: [story => <div className="story-Container">{story()}</div>],
 }
-
 
 const ListTableStyles = createGlobalStyle`
   .customCol_1 {

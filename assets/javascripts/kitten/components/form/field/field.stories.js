@@ -1,5 +1,4 @@
 import React from 'react'
-import { text, number, boolean, select } from '@storybook/addon-knobs'
 import {
   FieldInputExample,
   FieldPasswordExample,
@@ -38,12 +37,8 @@ export default {
   ],
 }
 
-export const WithInput = (args) => {
-  return (
-    <FieldInputExample
-      {...args}
-    />
-  )
+export const WithInput = args => {
+  return <FieldInputExample {...args} />
 }
 WithInput.args = {
   id: 'input',
@@ -61,140 +56,131 @@ WithInput.args = {
   variant: 'andromeda',
 }
 WithInput.argTypes = {
-  id: {control: 'text'},
-  size: {control: 'select', options: ['tiny', 'regular', 'big', 'huge', 'giant'] },
-  label: {control: 'text' },
-  tooltip: {control: 'text' },
-  tooltipProps: {control: 'object'},
-  tooltipId: {control: 'text' },
-  placeholder: {control: 'text' },
-  error: {control: 'boolean' },
-  errorMessage: {control: 'text' },
-  limit: {control: 'number' },
-  unit: {control: 'text' },
-  noMargin: {control: 'boolean' },
-  variant: {control: 'select', options:  ['andromeda', 'orion'] },
+  id: { control: 'text' },
+  size: {
+    control: 'select',
+    options: ['tiny', 'regular', 'big', 'huge', 'giant'],
+  },
+  label: { control: 'text' },
+  tooltip: { control: 'text' },
+  tooltipProps: { control: 'object' },
+  tooltipId: { control: 'text' },
+  placeholder: { control: 'text' },
+  error: { control: 'boolean' },
+  errorMessage: { control: 'text' },
+  limit: { control: 'number' },
+  unit: { control: 'text' },
+  noMargin: { control: 'boolean' },
+  variant: { control: 'select', options: ['andromeda', 'orion'] },
 }
 
-export const WithPassword = (args) => {
-  return (
-    <FieldPasswordExample {...args}
-    />
-  )
+export const WithPassword = args => {
+  return <FieldPasswordExample {...args} />
 }
 WithPassword.args = {
-      id: 'input',
-      size: null,
-      label: 'Label',
-      tooltip: null,
-      tooltipProps: { actionLabel: 'Learn more' },
-      tooltipId: 'tooltip',
-      placeholder: 'Placeholder…',
-      error: false,
-      errorMessage: 'Error message…',
-      variant: 'andromeda',
-
+  id: 'input',
+  size: null,
+  label: 'Label',
+  tooltip: null,
+  tooltipProps: { actionLabel: 'Learn more' },
+  tooltipId: 'tooltip',
+  placeholder: 'Placeholder…',
+  error: false,
+  errorMessage: 'Error message…',
+  variant: 'andromeda',
 }
 WithPassword.argTypes = {
-      id: { control: 'text' },
-      size: { control: 'boolean' },
-      label: { control: 'text' },
-      tooltip: { control: 'text' },
-      tooltipProps: { control: 'object'},
-      tooltipId: { control: 'text' },
-      placeholder: { control: 'text' },
-      error: { control: 'boolean' },
-      errorMessage: { control: 'text' },
-  variant: {control: 'select', options:  ['andromeda', 'orion'] },
-
+  id: { control: 'text' },
+  size: { control: 'boolean' },
+  label: { control: 'text' },
+  tooltip: { control: 'text' },
+  tooltipProps: { control: 'object' },
+  tooltipId: { control: 'text' },
+  placeholder: { control: 'text' },
+  error: { control: 'boolean' },
+  errorMessage: { control: 'text' },
+  variant: { control: 'select', options: ['andromeda', 'orion'] },
 }
 
-export const WithRadioButtons = (args) => {
-  return (
-    <FieldRadioButtonSetExample {...args}
-    />
-  )
+export const WithRadioButtons = args => {
+  return <FieldRadioButtonSetExample {...args} />
 }
 WithRadioButtons.args = {
+  id: 'option-a',
+  size: null,
+  label: 'Label',
+  tooltip: null,
+  tooltipProps: { actionLabel: 'Learn more' },
+  tooltipId: 'tooltip',
+  items: [
+    {
+      text: 'Option A',
       id: 'option-a',
-      size:  null,
-      label:  'Label',
-      tooltip:  null,
-      tooltipProps: { actionLabel: 'Learn more' },
-      tooltipId: 'tooltip',
-      items: [{
-          text: 'Option A',
-          id: 'option-a',
-          defaultChecked: true,
-        },
-        {
-          text: 'Option B',
-          id: 'option-b',
-        },
-        {
-          text: 'Option C',
-          id: 'option-c',
-        },
-      ],
-      error: false,
-      errorMessage: 'Error message…',
-      variant: 'andromeda',
+      defaultChecked: true,
+    },
+    {
+      text: 'Option B',
+      id: 'option-b',
+    },
+    {
+      text: 'Option C',
+      id: 'option-c',
+    },
+  ],
+  error: false,
+  errorMessage: 'Error message…',
+  variant: 'andromeda',
 }
 WithRadioButtons.argTypes = {
-      id: {control: 'text'},
-      size: {control: 'boolean'},
-      label: {control: 'text'},
-      tooltip: {control: 'text'},
-      tooltipProps: { control: 'object'},
-      tooltipId: {control: 'text'},
-      items: {control: 'object'},
-      error: {control: 'boolean'},
-      errorMessage: {control: 'text'},
-  variant: {control: 'select', options:  ['andromeda', 'orion'] },
+  id: { control: 'text' },
+  size: { control: 'boolean' },
+  label: { control: 'text' },
+  tooltip: { control: 'text' },
+  tooltipProps: { control: 'object' },
+  tooltipId: { control: 'text' },
+  items: { control: 'object' },
+  error: { control: 'boolean' },
+  errorMessage: { control: 'text' },
+  variant: { control: 'select', options: ['andromeda', 'orion'] },
 }
 
-export const WithAutocomplete = (args) => {
-  return (
-    <FieldAutocompleteExample {...args}
-    />
-  )
+export const WithAutocomplete = args => {
+  return <FieldAutocompleteExample {...args} />
 }
 WithAutocomplete.args = {
-      id:'select',
-      size:null,
-      label:'Label',
-      tooltip: null,
-      tooltipProps: { actionLabel: 'Learn more' },
-      tooltipId:'tooltip',
-      placeholder:'Select…',
-      items: [
-        'Abyssin',
-        'Anatolien',
-        'Angora turc',
-        'Asian',
-        'Chartreux',
-        'Cymérien',
-        'Mandarin',
-        'Oriental shorthair',
-        'Persan',
-        'Sibérien',
-      ],
-      error:false,
-      errorMessage:'Error message…',
-      variant: 'andromeda',
-
+  id: 'select',
+  size: null,
+  label: 'Label',
+  tooltip: null,
+  tooltipProps: { actionLabel: 'Learn more' },
+  tooltipId: 'tooltip',
+  placeholder: 'Select…',
+  items: [
+    'Abyssin',
+    'Anatolien',
+    'Angora turc',
+    'Asian',
+    'Chartreux',
+    'Cymérien',
+    'Mandarin',
+    'Oriental shorthair',
+    'Persan',
+    'Sibérien',
+  ],
+  error: false,
+  errorMessage: 'Error message…',
+  variant: 'andromeda',
 }
 WithAutocomplete.argTypes = {
-      id: {control: 'text'},
-      size: {control: 'boolean'},
-      label: {control: 'text'},
-      tooltip: {control: 'text'},
-      tooltipProps: { control: 'object'},
-      tooltipId: {control: 'text'},
-      placeholder: {control: 'text'},
-      items: { control: 'object'},
-      error: {control: 'boolean'},
-      errorMessage: {control: 'text'},
-  variant: {control: 'select', options:  ['andromeda', 'orion'] },
-
+  id: { control: 'text' },
+  size: { control: 'boolean' },
+  label: { control: 'text' },
+  tooltip: { control: 'text' },
+  tooltipProps: { control: 'object' },
+  tooltipId: { control: 'text' },
+  placeholder: { control: 'text' },
+  items: { control: 'object' },
+  error: { control: 'boolean' },
+  errorMessage: { control: 'text' },
+  variant: { control: 'select', options: ['andromeda', 'orion'] },
 }

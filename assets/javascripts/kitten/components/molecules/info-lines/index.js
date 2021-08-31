@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
@@ -83,7 +83,7 @@ export const InfoLines = ({
         'k-InfoLines--withoutTopBottomBorder': withoutTopBottomBorder,
         'k-InfoLines--withoutResponsive': withoutResponsive,
       })}
-      style={{...style, '--InfoLines-borderColor': borderColor}}
+      style={{ ...style, '--InfoLines-borderColor': borderColor }}
       as={descriptionTagList}
       {...others}
     >

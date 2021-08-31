@@ -101,9 +101,7 @@ export const Default = ({ largeTitle, ...args }) => {
 export const PetitPlus = (...args) => {
   return (
     <ContributionCard {...args} onClose={null}>
-      <ContributionCard.Image
-        className="k-u-hidden@xs-down"
-      >
+      <ContributionCard.Image className="k-u-hidden@xs-down">
         <RocketIllustration width={45} height={81} />
       </ContributionCard.Image>
 

@@ -24,20 +24,16 @@ export default {
   },
   argTypes: {
     colors: {
-      control: 'object'
+      control: 'object',
     },
-    modifier: {control: 'radio', options: ['regular', 'big']},
-    listProps: {control: 'object'},
-    navProps: {control: 'object'},
-  }
+    modifier: { control: 'radio', options: ['regular', 'big'] },
+    listProps: { control: 'object' },
+    navProps: { control: 'object' },
+  },
 }
 
-
-
-export const Default = (args) => (
-  <NavBar
-    {...args}
-  >
+export const Default = args => (
+  <NavBar {...args}>
     <NavBar.ListItem linkProps={{ href: '#1' }} active>
       Item 1
     </NavBar.ListItem>
@@ -47,7 +43,7 @@ export const Default = (args) => (
   </NavBar>
 )
 
-export const NestedInsideScrollableContainer = (args) => (
+export const NestedInsideScrollableContainer = args => (
   <ScrollableContainer>
     <Default {...args} />
   </ScrollableContainer>

@@ -29,18 +29,14 @@ export default {
     title: '',
   },
   argTypes: {
-    animated: { control: 'boolean'},
-    duration: { control: 'text'},
-    color: { control: 'color'},
-    type: { control: 'text'},
-    name: { control: 'text'},
-    begin: { control: 'text'},
-    title: { control: 'text'},
-  }
-
+    animated: { control: 'boolean' },
+    duration: { control: 'text' },
+    color: { control: 'color' },
+    type: { control: 'text' },
+    name: { control: 'text' },
+    begin: { control: 'text' },
+    title: { control: 'text' },
+  },
 }
 
-export const Default = (args) => (
-      <FilterIcon {...args} />
-  )
-
+export const Default = args => <FilterIcon {...args} />

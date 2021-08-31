@@ -32,7 +32,8 @@ export default {
     cropperInfo: 'Fusce dapibus, tellus ac cursus commodo, tortor mauris.',
     sliderTitle: 'Nullam quis risus eget urna mollis ornare vel eu leo.',
     buttonLabel: 'Lorem ipsum ',
-    description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
+    description:
+      'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
     disabled: false,
     isCropEnabled: true,
     onChange: action('onChange'),
@@ -44,8 +45,8 @@ export default {
     imageSrc: { control: 'text' },
     fileName: { control: 'text' },
     uploaderErrorLabel: { control: 'text' },
-    aspectRatio: { control: 'number'},
-    maxSize: { control: 'number'},
+    aspectRatio: { control: 'number' },
+    maxSize: { control: 'number' },
     acceptedFiles: { control: 'text' },
     label: { control: 'text' },
     cropperInfo: { control: 'text' },
@@ -56,20 +57,15 @@ export default {
     isCropEnabled: { control: 'boolean' },
     onChange: { control: null },
     onUpload: { control: null },
-    buttonProps: { control: 'object'},
-
-  }
+    buttonProps: { control: 'object' },
+  },
 }
 
 export const Default = args => {
-  return (
-    <ImageCropper
-      {...args}
-    />
-  )
+  return <ImageCropper {...args} />
 }
 
-export const WithImage = (args) => {
+export const WithImage = args => {
   return (
     <ImageCropper
       {...args}

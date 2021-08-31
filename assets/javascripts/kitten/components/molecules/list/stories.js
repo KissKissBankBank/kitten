@@ -35,25 +35,25 @@ export default {
   },
   argTypes: {
     bottomBorderRadiusValue: {
-      control: 'number'
+      control: 'number',
     },
     hasArrow: {
       name: 'List.ButtonItem: hasArrow',
-      control: 'boolean'
+      control: 'boolean',
     },
     disabled: {
       name: 'List.ButtonItem: disabled',
-      control: 'boolean'
+      control: 'boolean',
     },
     active: {
       name: 'List.ButtonItem: active',
-      control: 'boolean'
+      control: 'boolean',
     },
     withBottomBorderRadius: {
       description: 'Deprecated, use `bottomBorderRadiusValue`.',
-      control: null
+      control: null,
     },
-  }
+  },
 }
 
 export const SimpleList = () => {
@@ -66,12 +66,7 @@ export const SimpleList = () => {
   )
 }
 
-export const ListWithButtonItem = ({
-  hasArrow,
-  disabled,
-  active,
-  ...args
-}) => {
+export const ListWithButtonItem = ({ hasArrow, disabled, active, ...args }) => {
   return (
     <List {...args}>
       <List.ButtonItem hasArrow={hasArrow} withTopBorder>
@@ -84,11 +79,7 @@ export const ListWithButtonItem = ({
           </Text>
         </ExampleWrapper>
       </List.ButtonItem>
-      <List.ButtonItem
-        hasArrow={hasArrow}
-        disabled={disabled}
-        active={active}
-      >
+      <List.ButtonItem hasArrow={hasArrow} disabled={disabled} active={active}>
         <ExampleWrapper>
           <ExampleText tag="p" weight="regular" size="tiny">
             Taille M

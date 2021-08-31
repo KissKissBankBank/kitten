@@ -10,10 +10,10 @@ export default {
   },
   argTypes: {
     error: { control: 'boolean' },
-  }
+  },
 }
 
-export const Default = (args) => (
+export const Default = args => (
   <Marger top="10" bottom="10">
     <ShippingAddress {...args} />
   </Marger>

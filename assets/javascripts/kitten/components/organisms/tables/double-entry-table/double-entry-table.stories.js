@@ -6,19 +6,17 @@ export default {
   component: DoubleEntryTable,
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="DoubleEntryTable" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="DoubleEntryTable" />
+      ),
     },
   },
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ], args: { firstColWidth: 240 }, argTypes: { firstColWidth: {control: 'number'} }
+  decorators: [story => <div className="story-Container">{story()}</div>],
+  args: { firstColWidth: 240 },
+  argTypes: { firstColWidth: { control: 'number' } },
 }
 
-export const Default = (args) => (
+export const Default = args => (
   <DoubleEntryTable id="DoubleEntryTableStory" {...args}>
     <DoubleEntryTable.Header className="customHeaderClass">
       <DoubleEntryTable.HeaderCol>Header 0</DoubleEntryTable.HeaderCol>

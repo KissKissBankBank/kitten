@@ -15,13 +15,12 @@ export default {
     itemHeight: 'large',
   },
   argTypes: {
-    itemHeight: { control: 'radio', options: ['large',
-'thin',]},
+    itemHeight: { control: 'radio', options: ['large', 'thin'] },
     children: { control: null },
-  }
+  },
 }
 
-export const Default = (args) => (
+export const Default = args => (
   <Timeline {...args}>
     <span>foo</span>
     <span>bar</span>

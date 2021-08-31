@@ -6,30 +6,22 @@ export default {
   component: SingleEntryTable,
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="SingleEntryTable" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="SingleEntryTable" />
+      ),
     },
   },
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
   args: {
     isSliding: false,
   },
   argTypes: {
     isSliding: { control: 'boolean' },
-  }
+  },
 }
 
-
-export const Default = (args) => (
-  <SingleEntryTable
-    id="TestSingleEntryTable"
-    {...args}
-  >
+export const Default = args => (
+  <SingleEntryTable id="TestSingleEntryTable" {...args}>
     <SingleEntryTable.Header className="customHeaderClass">
       {[...Array(8)].map((key, index) => (
         <SingleEntryTable.HeaderCol

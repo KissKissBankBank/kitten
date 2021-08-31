@@ -220,7 +220,7 @@ const argTypes = {
   variant: {
     control: 'inline-radio',
     options: ['andromeda', 'orion'],
-  }
+  },
 }
 
 Default.decorators = [storyDecorator]

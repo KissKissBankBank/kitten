@@ -28,7 +28,7 @@ const options = [
   },
 ]
 
-const argTypes= {
+const argTypes = {
   id: {
     name: 'id',
     control: { type: 'text' },
@@ -113,7 +113,7 @@ const argTypes= {
     control: { type: 'text' },
   },
 }
-const args= {
+const args = {
   id: 'dropdown-select',
   error: false,
   valid: false,
@@ -144,11 +144,7 @@ export default {
     },
   },
   decorators: [
-    story => (
-      <div className="story-Container story-Grid">
-        {story()}
-      </div>
-    ),
+    story => <div className="story-Container story-Grid">{story()}</div>,
   ],
   args,
   argTypes,
@@ -260,14 +256,8 @@ export const ControlledInput = args => {
         }}
         onBlur={action('onBlur')}
       />
-      <Button
-        onClick={() => setValue(getRandomOption())}
-      >
-        Change Value
-      </Button>
-      <Button onClick={() => setValue('')}>
-        Reset Value
-      </Button>
+      <Button onClick={() => setValue(getRandomOption())}>Change Value</Button>
+      <Button onClick={() => setValue('')}>Reset Value</Button>
     </>
   )
 }
