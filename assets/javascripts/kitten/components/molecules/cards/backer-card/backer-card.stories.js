@@ -1,19 +1,6 @@
-import React, { Fragment } from 'react'
-import { text } from '@storybook/addon-knobs'
+import React from 'react'
 import { BackerCard } from './index'
-import { Container, Grid, GridCol, Marger, Text } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
-
-const Description = () => (
-  <Fragment>
-    Lorem{' '}
-    <Text color="primary1" weight="regular">
-      ipsum
-    </Text>{' '}
-    dolor sit amet, <br />
-    <Text weight="regular">consectetur adipiscing elit</Text>…
-  </Fragment>
-)
 
 export default {
   title: 'Molecules/Cards/BackerCard',
@@ -24,25 +11,30 @@ export default {
     },
   },
   decorators: [
-    Story => (
-      <Marger top="4">
-        <Container>
-          <Grid>
-            <GridCol col="3">
-              <Story />
-            </GridCol>
-          </Grid>
-        </Container>
-      </Marger>
+    story => (
+      <div className="story-Container story-Grid story-Grid">{story()}</div>
     ),
   ],
+  argTypes: {
+    title: {
+      control: 'text',
+    },
+    subtitle: {
+      control: 'text',
+    },
+    imgProps: {
+      control: 'object',
+    },
+    description: {
+      control: 'text',
+    },
+  },
+  args: {
+    title: 'Backer name',
+    subtitle: 'Backer subtitle',
+    imgProps: { src: `/kitten-${Math.floor(Math.random() * 10)}.jpg` },
+    description: 'This description can take a React node.',
+  },
 }
 
-export const Default = () => (
-  <BackerCard
-    title={text('Backer title', 'Backer name')}
-    subtitle={text('Backer subtitle', 'Backer subtitle')}
-    imgProps={{ src: `/kitten-${Math.floor(Math.random() * 10)}.jpg` }}
-    description={<Description />}
-  />
-)
+export const Default = args => <BackerCard {...args} />

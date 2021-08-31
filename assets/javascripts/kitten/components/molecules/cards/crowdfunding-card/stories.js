@@ -1,32 +1,76 @@
 import React from 'react'
-import styled from 'styled-components'
-import { text, boolean, number, select } from '@storybook/addon-knobs'
-import { CrowdfundingCard as CrowdfundingCardComponent } from './index'
-import {
-  Marger,
-  Container,
-  Grid,
-  GridCol,
-  Text,
-  pxToRem,
-  stepToRem,
-  ScreenConfig,
-  parseHtml,
-} from '../../../..'
+import { CrowdfundingCard } from './index'
+import { Text, parseHtml } from '../../../..'
 import { STATE_CHOICES } from './stories/project-state'
 import { DocsPage } from 'storybook/docs-page'
 
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Grid>
-      <GridCol col-m="4">
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
-  </Container>
-)
+const args = {
+  additionalInfo: '',
+  avatarProps: {
+    alt: '',
+    src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+  },
+  buttonText: undefined,
+  cardSubTitle: 'Sed ut perspiciatis unde omnis iste natus error Lorem',
+  cardTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
+  forceVersion: '',
+  href: '#',
+  imageContainerBackground: '',
+  imageContainerRatio: 10 / 16,
+  imageProps: { alt: '', src: `/kitten-${Math.floor(Math.random() * 10)}.jpg` },
+  info1: 'Lorem ipsum…',
+  info2: 'Lorem ipsum…',
+  info3: 'Lorem ipsum…',
+  loading: false,
+  ownerDescription: 'Owner description',
+  ownerTitle: 'Owner title',
+  progress: 42,
+  progressColor: '',
+  progressLabel: 'Crowdfunding progress',
+  state: 'Current state',
+  stretch: false,
+  subTitleTruncate: '',
+  titleProps: {},
+  titlesMinHeight: true,
+  titleTruncate: '',
+  videoProps: undefined,
+  videoSources: undefined,
+  widgetState: '',
+}
+
+const argTypes = {
+  additionalInfo: { control: 'text' },
+  avatarProps: { control: 'object' },
+  cardSubTitle: { control: 'text' },
+  cardTitle: { control: 'text' },
+  href: { control: 'text' },
+  imageContainerBackground: { control: 'color' },
+  imageProps: { control: 'object' },
+  info1: { control: 'text' },
+  info2: { control: 'text' },
+  info3: { control: 'text' },
+  loading: { control: 'boolean' },
+  ownerDescription: { control: 'text' },
+  ownerTitle: { control: 'text' },
+  progress: { control: 'number' },
+  progressColor: { control: 'text' },
+  imageContainerRatio: { control: 'number' },
+  state: { control: 'text' },
+  stretch: { control: 'boolean' },
+  subTitleTruncate: { control: 'text' },
+  titleProps: { control: 'object' },
+  titlesMinHeight: { control: 'boolean' },
+  titleTruncate: { control: 'text' },
+  videoProps: { control: 'object' },
+  videoSources: { control: 'object' },
+  widgetState: { control: 'text' },
+  buttonText: { control: 'text' },
+  forceVersion: {
+    control: 'select',
+    options: ['null', 'mobile', 'tablet', 'desktop'],
+  },
+  progressLabel: { control: 'text' },
+}
 
 export default {
   component: CrowdfundingCard,
@@ -54,139 +98,71 @@ export default {
     componentSubtitle:
       'The CrowdfundingCardWidget is a clickable card that displays info about a crowdfunding campaign.',
   },
+  decorators: [
+    story => <div className="story-Container story-Grid">{story()}</div>,
+  ],
+  args,
+  argTypes,
 }
 
-export const CrowdfundingCard = () => (
-  <StoryContainer>
-    <CrowdfundingCardComponent
-      progressLabel="Crowdfunding progress"
-      href={text('Link', '#')}
-      imageProps={{
-        alt: '',
-        src: text('Image url', `/kitten-${Math.floor(Math.random() * 10)}.jpg`),
-      }}
-      ownerTitle={text('Owner title', 'Owner title')}
-      ownerDescription={text('Owner description', 'Owner description')}
-      loading={boolean('Loading', false)}
-      stretch={boolean('Stretch', false)}
-      cardTitle={text(
-        'Title',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
-      )}
-      cardSubTitle={text(
-        'SubTitle',
-        'Sed ut perspiciatis unde omnis iste natus error Lorem',
-      )}
-      info1={text('Info1', 'Lorem ipsum…')}
-      info2={text('Info2', 'Lorem ipsum…')}
-      info3={text('Info3', 'Lorem ipsum…')}
-      progress={number('Progress', 42)}
-      state={text('State', 'Lorem ipsum…')}
-      buttonText={text('Button text', '')}
-      forceVersion={select(
-        'Version',
-        {
-          Default: null,
-          Mobile: 'mobile',
-          Tablet: 'tablet',
-          Desktop: 'desktop',
-        },
-        null,
-      )}
-    />
-  </StoryContainer>
+export const KissKissCrowdfundingCard = args => <CrowdfundingCard {...args} />
+KissKissCrowdfundingCard.args = args
+KissKissCrowdfundingCard.argTypes = argTypes
+
+export const KissKissCrowdfundingCardWithVideo = KissKissCrowdfundingCard.bind(
+  {},
 )
-
-export const CrowdfundingCardWithVideo = () => (
-  <StoryContainer>
-    <CrowdfundingCardComponent
-      href={text('Link', '#')}
-      ownerTitle={text('Owner title', 'Owner title')}
-      ownerDescription={text('Owner description', 'Owner description')}
-      loading={boolean('Loading', false)}
-      stretch={boolean('Stretch', false)}
-      cardTitle={text(
-        'Title',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
-      )}
-      cardSubTitle={text(
-        'SubTitle',
-        'Sed ut perspiciatis unde omnis iste natus error Lorem',
-      )}
-      info1={text('Info1', 'Lorem ipsum…')}
-      info2={text('Info2', 'Lorem ipsum…')}
-      info3={text('Info3', 'Lorem ipsum…')}
-      progress={number('Progress', 42)}
-      state={text('State', 'Lorem ipsum…')}
-      videoProps={{ className: 'videoClass' }}
-      videoSources={[
-        {
-          src:
-            'https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm',
-          type: 'video/webm',
-        },
-        {
-          src:
-            'https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.mp4',
-          type: 'video/mp4',
-        },
-      ]}
-    />
-  </StoryContainer>
-)
-
-const options = Object.keys(STATE_CHOICES)
-
-const StyledText = styled(Text)`
-  display: inline-flex;
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    display: block;
-  }
-`
-
-const InfoContainer = styled.span`
-  font-size: ${stepToRem(-1)};
-  flex-direction: column;
-  display: inline-flex;
-`
+KissKissCrowdfundingCardWithVideo.args = {
+  ...args,
+  imageProps: undefined,
+  videoProps: { className: 'videoClass' },
+  videoSources: [
+    {
+      src:
+        'https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm',
+      type: 'video/webm',
+    },
+    {
+      src:
+        'https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.mp4',
+      type: 'video/mp4',
+    },
+  ],
+}
+KissKissCrowdfundingCardWithVideo.argTypes = argTypes
 
 const Info = ({ label, text }) => (
-  <InfoContainer>
-    <StyledText tag="strong" weight="bold">
+  <span className="k-u-inlineFlex k-u-flex-direction-column">
+    <Text
+      tag="strong"
+      weight="bold"
+      size="tiny"
+      className="k-u-inlineFlex@s-down"
+    >
       {parseHtml(text)}
-    </StyledText>
-    <span>{parseHtml(label)}</span>
-  </InfoContainer>
+    </Text>
+    <Text weight="light" size="tiny">
+      {parseHtml(label)}
+    </Text>
+  </span>
 )
 
-export const LendopolisCrowdfundingCard = () => {
-  const widgetState = select('widget State', options, options[0])
-
-  return (
-    <StoryContainer>
-      <CrowdfundingCardComponent
-        href={text('Link', '#')}
-        imageProps={{
-          alt: '',
-          src: text(
-            'Image url',
-            `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-          ),
-        }}
-        ownerTitle={text('Owner title', 'Urbasolar Energy Ocean Indien 6')}
-        loading={boolean('Loading', false)}
-        stretch={boolean('Stretch', false)}
-        cardTitle={text('Title', 'Centrale solaire Urbasolar Le Port')}
-        cardSubTitle={text('SubTitle', 'Obligation convertible')}
-        info1={<Info label="maturité" text="48 mois" />}
-        info2={<Info label="sur 157 000 €" text="157 000 €" />}
-        info3={<Info label="Taux d'intérêt" text="5,0%" />}
-        widgetState={STATE_CHOICES[widgetState]}
-        additionalInfo={'Collecte réservée aux départements : 92, 34, 12, 82'}
-        title="Aller sur la collecte …"
-        imageContainerRatio={number('ratio', 9 / 16)}
-      />
-    </StoryContainer>
-  )
+export const LendopolisCrowdfundingCard = KissKissCrowdfundingCard.bind({})
+LendopolisCrowdfundingCard.args = {
+  ...args,
+  ownerTitle: 'Urbasolar Energy Ocean Indien 6',
+  cardTitle: 'Centrale solaire Urbasolar Le Port',
+  cardSubTitle: 'Obligation convertible',
+  info1: <Info label="maturité" text="48 mois" />,
+  info2: <Info label="sur 157 000 €" text="157 000 €" />,
+  info3: <Info label="Taux d'intérêt" text="5,0%" />,
+  widgetState: STATE_CHOICES['None'],
+  additionalInfo: 'Collecte réservée aux départements : 92, 34, 12, 82',
+  title: 'Aller sur la collecte …',
+  imageContainerRatio: 9 / 16,
+  state: undefined,
+}
+LendopolisCrowdfundingCard.argTypes = {
+  ...argTypes,
+  widgetState: { control: 'select', options: STATE_CHOICES },
 }
