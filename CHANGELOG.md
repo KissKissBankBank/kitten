@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `IconBadge`: Deprecate `big` and `huge` props.
 - Fix: `EngagementCard`: Remove useless props `hoverBorder` and `isActive`.
 - Fix: `EngagementCardWithImage`: Remove useless prop `isActive`.
+- Fix: `ContributionCard`: Remove useless prop `imageBorderRadius`.
 
 ## [4.2.1] - 2021-08-19
 

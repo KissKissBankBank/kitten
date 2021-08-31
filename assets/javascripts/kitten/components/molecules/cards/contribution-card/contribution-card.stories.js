@@ -35,11 +35,6 @@ const argTypes = {
     description: 'border width',
     control: { type: 'text', type: 'number' },
   },
-  imageBorderRadius: {
-    name: 'ContributionCard.Image: imageBorderRadius',
-    description: 'Image border radius size',
-    control: { type: 'text', type: 'number' },
-  },
   onClose: {
     name: 'close',
     description:
@@ -66,7 +61,6 @@ const args = {
   borderRadius: 8,
   borderStyle: 'solid',
   borderWidth: 2,
-  imageBorderRadius: 5,
   onClose: action('onClose'),
   largeInput: false,
   largeTitle: false,
@@ -87,10 +81,10 @@ export default {
   argTypes,
 }
 
-export const Default = ({ imageBorderRadius, largeTitle, ...args }) => {
+export const Default = ({ largeTitle, ...args }) => {
   return (
     <ContributionCard {...args}>
-      <ContributionCard.Image imageBorderRadius={imageBorderRadius}>
+      <ContributionCard.Image>
         <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
       </ContributionCard.Image>
 
@@ -104,12 +98,11 @@ export const Default = ({ imageBorderRadius, largeTitle, ...args }) => {
   )
 }
 
-export const PetitPlus = ({ imageBorderRadius, ...args }) => {
+export const PetitPlus = (...args) => {
   return (
     <ContributionCard {...args} onClose={null}>
       <ContributionCard.Image
         className="k-u-hidden@xs-down"
-        imageBorderRadius={imageBorderRadius}
       >
         <RocketIllustration width={45} height={81} />
       </ContributionCard.Image>
