@@ -80,7 +80,8 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       menuZIndex = _ref.menuZIndex,
       className = _ref.className,
       value = _ref.value,
-      _onBlur = _ref.onBlur;
+      _onBlur = _ref.onBlur,
+      controlled = _ref.controlled;
 
   var _useState = (0, _react.useState)([]),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -141,7 +142,7 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     });
   };
 
-  var _useCombobox = (0, _downshift.useCombobox)({
+  var _useCombobox = (0, _downshift.useCombobox)((0, _extends2.default)({
     id: "".concat(id, "_element"),
     inputId: id,
     items: filteredOptions,
@@ -151,9 +152,10 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     onSelectedItemChange: onSelectedItemChange,
     onInputValueChange: onInputValueChange,
     onIsOpenChange: onIsOpenChange,
-    initialIsOpen: openOnLoad,
+    initialIsOpen: openOnLoad
+  }, controlled && {
     selectedItem: selectedItemByValue
-  }),
+  })),
       isOpen = _useCombobox.isOpen,
       getToggleButtonProps = _useCombobox.getToggleButtonProps,
       getLabelProps = _useCombobox.getLabelProps,
@@ -262,6 +264,7 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
 exports.DropdownCombobox = DropdownCombobox;
 DropdownCombobox.defaultProps = {
   hideLabel: false,
+  controlled: false,
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
@@ -286,6 +289,7 @@ DropdownCombobox.propTypes = {
   comboboxButtonLabelText: _propTypes.default.string.isRequired,
   noResultText: _propTypes.default.string.isRequired,
   hideLabel: _propTypes.default.bool,
+  controlled: _propTypes.default.bool,
   options: _propTypes.default.arrayOf(_propTypes.default.object),
   placeholder: _propTypes.default.string,
   labelPropsGetter: _propTypes.default.func,

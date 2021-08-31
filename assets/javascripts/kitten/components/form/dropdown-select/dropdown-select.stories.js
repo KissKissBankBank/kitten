@@ -4,6 +4,7 @@ import { Button } from '../../../index'
 import { ArrowIcon } from '../../graphics/icons/arrow-icon'
 import { Text } from '../../atoms/typography/text'
 import { DocsPage } from 'storybook/docs-page'
+import { action } from '@storybook/addon-actions'
 
 const options = [
   {
@@ -245,18 +246,28 @@ export const ControlledInput = args => {
     <>
       <DropdownSelect
         {...args}
-        combobox
         hideLabel
+        id="ControlledInput"
         value={value}
         onChange={e => {
-          console.warn('onChange', e)
+          action('onChange')(e)
           if (!e) return
 
           setValue(e.value)
         }}
-        onBlur={e => console.warn('onBlur', e)}
+        onBlur={action('onBlur')}
       />
-      <Button onClick={() => setValue(getRandomOption())}>Change Value</Button>
+      <Button
+        className="k-u-margin-top-single"
+        onClick={() => setValue(getRandomOption())}
+      >
+        Change Value
+      </Button>
+      <Button className="k-u-margin-top-single" onClick={() => setValue('')}>
+        Reset Value
+      </Button>
     </>
   )
 }
+
+ControlledInput.args = { ...args, controlled: true }

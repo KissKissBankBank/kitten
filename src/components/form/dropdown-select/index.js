@@ -19,15 +19,15 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _downshift = require("downshift");
 
-var _label = require("../../../components/form/label");
+var _label = require("../label");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _warningCircleIcon = require("../../../components/graphics/icons/warning-circle-icon");
+var _warningCircleIcon = require("../../graphics/icons/warning-circle-icon");
 
-var _checkedCircleIcon = require("../../../components/graphics/icons/checked-circle-icon");
+var _checkedCircleIcon = require("../../graphics/icons/checked-circle-icon");
 
-var _arrowIcon = require("../../../components/graphics/icons/arrow-icon");
+var _arrowIcon = require("../../graphics/icons/arrow-icon");
 
 var _find = _interopRequireDefault(require("lodash/fp/find"));
 
@@ -64,7 +64,8 @@ var DropdownSelect = function DropdownSelect(_ref) {
       openOnLoad = props.openOnLoad,
       menuZIndex = props.menuZIndex,
       className = props.className,
-      value = props.value;
+      value = props.value,
+      controlled = props.controlled;
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,
@@ -103,7 +104,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
   }();
 
   var initialSelectedItem = (0, _find.default)(['value', defaultSelectedValue])(flattenedOptions);
-  var selectedItemByValue = (0, _find.default)(['value', value])(flattenedOptions);
+  var selectedItemByValue = (0, _find.default)(['value', value])(flattenedOptions) || null;
 
   var onIsOpenChange = function onIsOpenChange(changes) {
     if (changes.isOpen) return onMenuOpen({
@@ -127,7 +128,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
     onSelectedItemChange: onSelectedItemChange,
     onIsOpenChange: onIsOpenChange,
     initialIsOpen: openOnLoad
-  }, selectedItemByValue && {
+  }, controlled && {
     selectedItem: selectedItemByValue
   })),
       isOpen = _useSelect.isOpen,
@@ -200,6 +201,7 @@ exports.DropdownSelect = DropdownSelect;
 DropdownSelect.defaultProps = {
   combobox: false,
   hideLabel: false,
+  controlled: false,
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
@@ -224,6 +226,7 @@ DropdownSelect.propTypes = {
   labelText: _propTypes.default.string.isRequired,
   combobox: _propTypes.default.bool,
   hideLabel: _propTypes.default.bool,
+  controlled: _propTypes.default.bool,
   options: _propTypes.default.arrayOf(_propTypes.default.object),
   placeholder: _propTypes.default.string,
   labelPropsGetter: _propTypes.default.func,

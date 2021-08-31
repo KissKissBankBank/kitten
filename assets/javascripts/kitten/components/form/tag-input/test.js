@@ -40,6 +40,7 @@ describe('<TagInput />', () => {
           disabled
           id="test-slider-input"
           helpMessage="This list input is disabled."
+          initialItemsList={['Black', 'Blue', 'Green and magenta']}
         />,
       )
       .toJSON()

@@ -360,6 +360,7 @@ export {
   SCREEN_SIZE_XL,
   ORDERED_SCREEN_SIZES,
   ScreenConfig,
+  mq,
 } from './constants/screen-config'
 export { default as TYPOGRAPHY } from './constants/typography-config'
 export { DROPDOWN_ANIMATED_DELAY } from './constants/dropdown-config'

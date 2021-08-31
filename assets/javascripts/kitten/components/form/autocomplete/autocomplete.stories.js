@@ -166,6 +166,7 @@ const args = {
   onKeyDown: () => {},
   onSelect: () => {},
   isLoading: false,
+  variant: 'andromeda',
 }
 
 const argTypes = {
@@ -216,6 +217,10 @@ const argTypes = {
     name: 'isLoading',
     control: { type: 'boolean' },
   },
+  variant: {
+    control: 'inline-radio',
+    options: ['andromeda', 'orion'],
+  }
 }
 
 Default.decorators = [storyDecorator]

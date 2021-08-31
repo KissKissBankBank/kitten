@@ -16,7 +16,7 @@ var _text = require("../../../../components/atoms/typography/text");
 var SupTitle = function SupTitle(textProps) {
   return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     size: "tiny",
-    lineHeigth: "normal",
+    lineHeight: "normal",
     transform: "uppercase",
     weight: "bold"
   }, textProps));

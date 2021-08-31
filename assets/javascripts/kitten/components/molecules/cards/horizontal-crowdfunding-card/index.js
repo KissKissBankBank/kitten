@@ -29,7 +29,8 @@ const StyledCard = styled.a`
   transition: background-color 0.2s ease, border-color 0.2s ease;
 
   &[href]:hover {
-    border-color: ${COLORS.background2};
+    border-color: ${COLORS.line1};
+    background-color: ${COLORS.background2};
   }
 
   &[href]:active {
