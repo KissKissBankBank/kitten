@@ -16,6 +16,13 @@ export default {
       ),
     },
   },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
   args: {
     href: '#',
     imageProps: {

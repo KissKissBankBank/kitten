@@ -44,7 +44,6 @@ export const EngagementCard = ({
   backgroundColor,
   href,
   children,
-  isActive,
   as,
   ...others
 }) => {
@@ -54,7 +53,6 @@ export const EngagementCard = ({
       as={href ? 'a' : 'div'}
       href={href}
       backgroundColor={backgroundColor}
-      isActive={isActive}
     >
       <StyledIcon>{icon}</StyledIcon>
       <StyledText size="micro" weight="regular" color="font1">
@@ -68,11 +66,9 @@ EngagementCard.propTypes = {
   icon: PropTypes.element.isRequired,
   href: PropTypes.string,
   backgroundColor: PropTypes.string,
-  isActive: PropTypes.bool,
 }
 
 EngagementCard.defaultProps = {
   href: '',
   backgroundColor: '',
-  isActive: false,
 }

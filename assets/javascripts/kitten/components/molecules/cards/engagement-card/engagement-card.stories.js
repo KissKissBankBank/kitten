@@ -31,12 +31,10 @@ export default {
     icon: { control: null },
     backgroundColor: { control: 'color' },
     href: { control: 'text' },
-    isActive: { control: 'boolean' },
   },
   args: {
     backgroundColor: COLORS.primary4,
     href: '#',
-    isActive: false,
   },
 }
 
@@ -62,7 +60,7 @@ const StyledStory = styled.div`
 
 export const Default = args => (
   <>
-    <StyledEngagementCard {...args} isActive icon={<PhoneIllustration />}>
+    <StyledEngagementCard {...args} icon={<PhoneIllustration />}>
       Fabrication française
     </StyledEngagementCard>
     <StyledEngagementCard

@@ -6,7 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `createRangeFromZeroTo` to ESM exports.
 - Feature: `IconBadge`: Deprecate `big` and `huge` props.
-- Fix: `EngagementCard`: Remove useless `hoverBorder` prop.
+- Fix: `EngagementCard`: Remove useless props `hoverBorder` and `isActive`.
+- Fix: `EngagementCardWithImage`: Remove useless prop `isActive`.
 
 ## [4.2.1] - 2021-08-19
 
