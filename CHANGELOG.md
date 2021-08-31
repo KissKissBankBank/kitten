@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `HorizontalCrowdfundingCard`: Fix hover styles.
+
 ## [4.4.0] - 2021-08-30
 
 Feature:
