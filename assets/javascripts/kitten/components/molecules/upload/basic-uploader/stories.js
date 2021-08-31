@@ -41,39 +41,39 @@ const args = {
 const argTypes = {
   id: {
     name: 'id',
-    control: { type: 'text' },
+    control: 'text',
   },
   buttonProps: {
     name: 'buttonProps',
-    control: { type: 'object' },
+    control: 'object',
   },
   buttonText: {
     name: 'buttonText',
-    control: { type: 'text' },
+    control: 'text',
   },
   canCancel: {
     name: 'canCancel',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   cancelButtonText: {
     name: 'cancelButtonText',
-    control: { type: 'text' },
+    control: 'text',
   },
   disabled: {
     name: 'disabled',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   errorText: {
     name: 'errorText',
-    control: { type: 'text' },
+    control: 'text',
   },
   fileInputProps: {
     name: 'fileInputProps',
-    control: { type: 'object' },
+    control: 'object',
   },
   fileName: {
     name: 'fileName',
-    control: { type: 'text' },
+    control: 'text',
   },
   onCancel: {
     name: 'onCancel',
@@ -86,11 +86,11 @@ const argTypes = {
   status: {
     name: 'status',
     options: ['ready', 'error', 'valid', 'wait', 'loading'],
-    control: { type: 'select' },
+    control: 'select',
   },
   statusText: {
     name: 'statusText',
-    control: { type: 'text' },
+    control: 'text',
   },
 }
 

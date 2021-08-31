@@ -8,17 +8,17 @@ const argTypes = {
   show: {
     name: 'show',
     description: 'If empty return null',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   closeButtonLabel: {
     name: 'closeButtonLabel',
     description: 'Close button label',
-    control: { type: 'text' },
+    control: 'text',
   },
   borderColor: {
     name: 'borderColor',
     description: 'border color',
-    control: { type: 'text' },
+    control: 'text',
   },
   borderRadius: {
     name: 'borderRadius',
@@ -28,7 +28,7 @@ const argTypes = {
   borderStyle: {
     name: 'borderStyle',
     description: 'border style',
-    control: { type: 'text' },
+    control: 'text',
   },
   borderWidth: {
     name: 'borderWidth',
@@ -39,18 +39,18 @@ const argTypes = {
     name: 'close',
     description:
       'Action when Close button is clicked. If null, no button is displayed.',
-    control: { type: 'func' },
+    control: null,
   },
   largeInput: {
     name: 'largeInput',
     description: 'Should the input be larger?',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   largeTitle: {
     name: 'ContributionCard.Title: largeTitle',
     description:
       'When `ContributionCard.PillNumber` is hidden, the title can be more flex',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
 }
 

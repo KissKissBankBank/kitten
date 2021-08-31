@@ -41,32 +41,32 @@ Default.argTypes = {
       'senary',
       'septenary',
     ],
-    control: { type: 'select' },
+    control: 'select',
   },
   italic: {
     name: 'italic',
     description: 'Adds an italic style.',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   align: {
     name: 'align',
     description: 'Sets the horizontal alignment.',
     options: ['left', 'center', 'right'],
-    control: { type: 'inline-radio' },
+    control: 'inline-radio',
   },
   cssColor: {
     name: 'cssColor',
     description: 'Sets a color from a CSS color string.',
-    control: { type: 'color' },
+    control: 'color',
   },
   tag: {
     name: 'tag',
     description: 'Changes the title’s element type.',
-    control: { type: 'text' },
+    control: 'text',
   },
   children: {
     name: 'children',
-    control: { type: 'text' },
+    control: 'text',
   },
 }
 

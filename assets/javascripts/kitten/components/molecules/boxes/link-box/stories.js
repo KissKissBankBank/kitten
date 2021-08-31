@@ -27,28 +27,28 @@ export default {
   argTypes: {
     href: {
       name: 'href',
-      control: { type: 'text' },
+      control: 'text',
     },
     isExternal: {
       name: 'isExternal',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     linkProps: {
       name: 'linkProps',
-      control: { type: 'object' },
+      control: 'object',
     },
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
     backgroundColor: {
       name: 'backgroundColor',
-      control: { type: 'color' },
+      control: 'color',
     },
     textColor: {
       name: 'textColor',
-      control: { type: 'color' },
+      control: 'color',
     },
   },
 }

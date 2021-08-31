@@ -14,16 +14,16 @@ export default {
   argTypes: {
     focusId: {
       name: 'focusId',
-      control: { type: 'text' },
+      control: 'text',
     },
     size: {
       name: 'size',
       options: [null, undefined, 'normal', 'tiny', 'micro'],
-      control: { type: 'select' },
+      control: 'select',
     },
     withoutPointerEvents: {
       name: 'withoutPointerEvents',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
   },
   args: {

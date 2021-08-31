@@ -23,7 +23,7 @@ export default {
     type: {
       name: 'type',
       options: ['info', 'warning', 'success', 'error', 'disabled'],
-      control: { type: 'radio' },
+      control: 'radio',
     },
   },
 }

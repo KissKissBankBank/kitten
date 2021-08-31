@@ -19,12 +19,12 @@ export default {
   argTypes: {
     open: {
       name: 'open',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     menuPosition: {
       name: 'menuPosition',
       options: ['left', 'center', 'right'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
     button: {
       name: 'button',
@@ -32,7 +32,7 @@ export default {
     },
     menuprops: {
       name: 'menuprops',
-      control: { type: 'object' },
+      control: 'object',
     },
     onToggle: {
       name: 'onToggle',

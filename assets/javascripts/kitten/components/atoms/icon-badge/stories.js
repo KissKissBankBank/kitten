@@ -28,19 +28,19 @@ export default {
   argTypes: {
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     valid: {
       name: 'valid',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     empty: {
       name: 'empty',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     size: {
       name: 'size',
-      control: { type: 'select' },
+      control: 'select',
       options: ['tiny', 'normal', 'big', 'huge'],
     },
   },

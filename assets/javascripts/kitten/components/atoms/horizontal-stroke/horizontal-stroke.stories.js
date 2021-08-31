@@ -23,7 +23,7 @@ Default.argTypes = {
   size: {
     name: 'size',
     options: ['micro', 'tiny', 'default', 'big', 'huge'],
-    control: { type: 'select' },
+    control: 'select',
   },
   modifier: {
     name: 'modifier',
@@ -37,14 +37,14 @@ Default.argTypes = {
       senary: 'senary',
       septenary: 'septenary',
     },
-    control: { type: 'select' },
+    control: 'select',
   },
   customSize: {
     name: 'customSize',
-    control: { type: 'object' },
+    control: 'object',
   },
   color: {
     name: 'color',
-    control: { type: 'color' },
+    control: 'color',
   },
 }

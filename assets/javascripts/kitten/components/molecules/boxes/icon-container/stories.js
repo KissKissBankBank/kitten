@@ -44,26 +44,26 @@ Default.argTypes = {
   position: {
     name: 'position',
     options: ['left', 'top', 'right', 'bottom'],
-    control: { type: 'select' },
+    control: 'select',
   },
   color: {
     name: 'color',
-    control: { type: 'color' },
+    control: 'color',
   },
   iconWidth: {
     name: 'iconWidth',
-    control: { type: 'number' },
+    control: 'number',
   },
   iconHeight: {
     name: 'iconHeight',
-    control: { type: 'number' },
+    control: 'number',
   },
   iconDescription: {
     name: 'iconDescription',
-    control: { type: 'text' },
+    control: 'text',
   },
   children: {
     name: 'children',
-    control: { type: 'text' },
+    control: 'text',
   },
 }

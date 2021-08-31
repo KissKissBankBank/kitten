@@ -20,27 +20,27 @@ export default {
   argTypes: {
     centered: {
       name: 'centered',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     light: {
       name: 'light',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     dark: {
       name: 'dark',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     lightTopBorder: {
       name: 'lightTopBorder',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     lightBottomBorder: {
       name: 'lightBottomBorder',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     padded: {
       name: 'padded',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
   },
 }

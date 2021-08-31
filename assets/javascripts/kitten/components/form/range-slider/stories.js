@@ -27,36 +27,36 @@ export default {
   argTypes: {
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     min: {
       name: 'min',
-      control: { type: 'number' },
+      control: 'number',
     },
     max: {
       name: 'max',
-      control: { type: 'number' },
+      control: 'number',
     },
     step: {
       name: 'step',
-      control: { type: 'number' },
+      control: 'number',
     },
     initialValue: {
       name: 'initialValue',
-      control: { type: 'number' },
+      control: 'number',
     },
     name: {
       name: 'name',
-      control: { type: 'text' },
+      control: 'text',
     },
     rangeThumbText: {
       name: 'rangeThumbText',
-      control: { type: 'text' },
+      control: 'text',
     },
     rangeThumbPosition: {
       name: 'rangeThumbPosition',
       options: ['top', 'bottom'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
   },
   parameters: {

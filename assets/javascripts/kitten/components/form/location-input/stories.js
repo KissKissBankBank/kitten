@@ -15,28 +15,28 @@ export default {
     },
     defaultValue: {
       name: 'defaultValue',
-      control: { type: 'text' },
+      control: 'text',
     },
     inputProps: {
       name: 'inputProps',
-      control: { type: 'object' },
+      control: 'object',
     },
     name: {
       name: 'name',
-      control: { type: 'text' },
+      control: 'text',
     },
     loadingText: {
       name: 'loadingText',
-      control: { type: 'text' },
+      control: 'text',
     },
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
     gPlaceApiKey: {
       name: 'gPlaceApiKey (story prop)',
-      control: { type: 'text' },
+      control: 'text',
     },
   },
   args: {

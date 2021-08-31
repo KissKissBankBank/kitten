@@ -21,39 +21,39 @@ export default {
   argTypes: {
     infos: {
       name: 'infos',
-      control: { type: 'object' },
+      control: 'object',
     },
     borderColor: {
       name: 'borderColor',
-      control: { type: 'color' },
+      control: 'color',
     },
     withBorderRadius: {
       name: 'withBorderRadius',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     withLeftRightBorder: {
       name: 'withLeftRightBorder',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     withoutTopBottomBorder: {
       name: 'withoutTopBottomBorder',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     withoutResponsive: {
       name: 'withoutResponsive',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     descriptionTagList: {
       name: 'descriptionTagList',
-      control: { type: 'text' },
+      control: 'text',
     },
     titleTagList: {
       name: 'titleTagList',
-      control: { type: 'text' },
+      control: 'text',
     },
     itemTagList: {
       name: 'itemTagList',
-      control: { type: 'text' },
+      control: 'text',
     },
   },
 }

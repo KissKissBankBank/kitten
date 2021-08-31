@@ -13,6 +13,6 @@ Default.argTypes = {
   children: {
     name: 'children',
     description: 'Content of the SupTitle',
-    control: { type: 'text' },
+    control: 'text',
   },
 }

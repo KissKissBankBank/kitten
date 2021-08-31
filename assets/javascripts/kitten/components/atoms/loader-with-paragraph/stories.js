@@ -28,20 +28,20 @@ export default {
   argTypes: {
     children: {
       name: 'children',
-      control: { type: 'text' },
+      control: 'text',
     },
     loaderPosition: {
       name: 'loaderPosition',
       options: ['left', 'top', 'right', 'bottom'],
-      control: { type: 'select' },
+      control: 'select',
     },
     loaderProps: {
       name: 'loaderProps',
-      control: { type: 'object' },
+      control: 'object',
     },
     paragraphProps: {
       name: 'paragraphProps',
-      control: { type: 'object' },
+      control: 'object',
     },
   },
 }

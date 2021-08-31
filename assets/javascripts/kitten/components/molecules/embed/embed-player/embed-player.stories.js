@@ -22,11 +22,11 @@ export default {
   argTypes: {
     playButtonLabel: {
       name: 'playButtonLabel',
-      control: { type: 'text' },
+      control: 'text',
     },
     ratio: {
       name: 'ratio',
-      control: { type: 'number' },
+      control: 'number',
     },
     badgeComponent: {
       name: 'badgeComponent',
@@ -34,11 +34,11 @@ export default {
     },
     iframeHtml: {
       name: 'iframeHtml',
-      control: { type: 'text' },
+      control: 'text',
     },
     previewProps: {
       name: 'previewProps',
-      control: { type: 'object' },
+      control: 'object',
     },
   },
 }

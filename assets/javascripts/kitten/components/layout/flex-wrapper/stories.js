@@ -19,15 +19,15 @@ export default {
   argTypes: {
     gap: {
       name: 'gap',
-      control: { type: 'object' },
+      control: 'object',
     },
     padding: {
       name: 'padding',
-      control: { type: 'object' },
+      control: 'object',
     },
     direction: {
       name: 'direction',
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
   },
 }

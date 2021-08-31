@@ -92,60 +92,60 @@ Default.args = {
 Default.argTypes = {
   selectedDay: {
     name: 'selectedDay',
-    control: { type: 'date' },
+    control: 'date',
   },
   locale: {
     name: 'locale',
-    control: { type: 'string' },
+    control: { type: 'text' },
   },
   disabledDays: {
     name: 'disabledDays',
-    control: { type: 'object' },
+    control: 'object',
   },
   weekDays: {
     name: 'weekDays',
-    control: { type: 'object' },
+    control: 'object',
   },
   months: {
     name: 'months',
-    control: { type: 'object' },
+    control: 'object',
   },
   title: {
     name: 'title',
-    control: { type: 'text' },
+    control: 'text',
   },
   previousMonth: {
     name: 'previousMonth',
     description: 'data-label for the previous month button',
-    control: { type: 'text' },
+    control: 'text',
   },
   nextMonth: {
     name: 'nextMonth',
     description: 'data-label for the next month button',
-    control: { type: 'text' },
+    control: 'text',
   },
   styles: {
     name: 'styles',
-    control: { type: 'object' },
+    control: 'object',
   },
   firstDayOfWeek: {
     name: 'firstDayOfWeek',
-    control: { type: 'number' },
+    control: 'number',
   },
   numberOfMonths: {
     name: 'numberOfMonths',
-    control: { type: 'number' },
+    control: 'number',
   },
   initialMonth: {
     name: 'initialMonth',
-    control: { type: 'date' },
+    control: 'date',
   },
   from: {
     name: 'from',
-    control: { type: 'date' },
+    control: 'date',
   },
   to: {
     name: 'to',
-    control: { type: 'date' },
+    control: 'date',
   },
 }

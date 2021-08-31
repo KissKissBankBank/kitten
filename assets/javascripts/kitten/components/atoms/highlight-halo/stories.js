@@ -32,7 +32,7 @@ export default {
   argTypes: {
     haloColor: {
       name: 'haloColor',
-      control: { type: 'color' },
+      control: 'color',
     },
     haloSize: {
       name: 'haloSize',

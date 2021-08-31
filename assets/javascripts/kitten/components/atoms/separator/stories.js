@@ -19,7 +19,7 @@ export default {
   argTypes: {
     darker: {
       name: 'darker',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
   },
 }

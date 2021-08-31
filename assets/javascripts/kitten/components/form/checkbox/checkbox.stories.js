@@ -26,24 +26,24 @@ export default {
     },
     textProps: {
       name: 'textProps',
-      control: { type: 'object' },
+      control: 'object',
     },
     indeterminate: {
       name: 'indeterminate',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     error: {
       name: 'error',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
     onLabelClick: {
       name: 'onLabelClick',

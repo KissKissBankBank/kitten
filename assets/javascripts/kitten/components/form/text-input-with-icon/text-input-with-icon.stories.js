@@ -30,16 +30,16 @@ Default.argTypes = {
   ...TextInputStory.argTypes,
   icon: {
     name: 'icon',
-    control: { type: 'object' },
+    control: 'object',
   },
   iconPosition: {
     name: 'iconPosition',
     options: ['left', 'right'],
-    control: { type: 'inline-radio' },
+    control: 'inline-radio',
   },
   accessibilityLabel: {
     name: 'accessibilityLabel',
-    control: { type: 'text' },
+    control: 'text',
   },
 }
 
@@ -90,6 +90,6 @@ Validation.argTypes = {
   state: {
     name: 'state (story prop)',
     options: ['none', 'loading', 'valid', 'error'],
-    control: { type: 'select' },
+    control: 'select',
   },
 }

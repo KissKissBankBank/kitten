@@ -31,41 +31,41 @@ export default {
   argTypes: {
     id: {
       name: 'id',
-      control: { type: 'text' },
+      control: 'text',
     },
     initialItemsList: {
       name: 'initialItemsList',
-      control: { type: 'object' },
+      control: 'object',
     },
     placeholder: {
       name: 'placeholder',
-      control: { type: 'text' },
+      control: 'text',
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     helpMessage: {
       name: 'helpMessage',
-      control: { type: 'text' },
+      control: 'text',
     },
     size: {
       name: 'size',
       options: ['tiny', 'regular', 'big', 'huge', 'giant'],
-      control: { type: 'select' },
+      control: 'select',
     },
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
     addEventKeys: {
       name: 'addEventKeys',
-      control: { type: 'object' },
+      control: 'object',
     },
     removeEventKeys: {
       name: 'removeEventKeys',
-      control: { type: 'object' },
+      control: 'object',
     },
   },
 }

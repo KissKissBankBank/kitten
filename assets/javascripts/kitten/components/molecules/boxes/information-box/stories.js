@@ -32,14 +32,14 @@ Default.args = {
 Default.argTypes = {
   title: {
     name: 'title',
-    control: { type: 'text' },
+    control: 'text',
   },
   children: {
     name: 'children',
-    control: { type: 'text' },
+    control: 'text',
   },
   titleProps: {
     name: 'titleProps',
-    control: { type: 'object' },
+    control: 'object',
   },
 }

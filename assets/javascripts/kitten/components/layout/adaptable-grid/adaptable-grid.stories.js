@@ -27,15 +27,15 @@ Default.args = {
 Default.argTypes = {
   gutter: {
     name: 'gutter',
-    control: { type: 'number' },
+    control: 'number',
   },
   colNumber: {
     name: 'colNumber',
-    control: { type: 'number' },
+    control: 'number',
   },
   colAlign: {
     name: 'colAlign',
     options: ['left', 'right', 'center'],
-    control: { type: 'select' },
+    control: 'select',
   },
 }

@@ -22,25 +22,25 @@ Default.args = {
 Default.argTypes = {
   statusMessage: {
     name: 'statusMessage',
-    control: { type: 'text' },
+    control: 'text',
   },
   statusType: {
     name: 'statusType',
     options: ['danger', 'success', 'warning', 'neutral', 'none'],
-    control: { type: 'select' },
+    control: 'select',
   },
   size: {
     name: 'size',
     options: ['normal', 'tiny', 'micro'],
-    control: { type: 'select' },
+    control: 'select',
   },
   weight: {
     name: 'weight',
     options: ['light', 'regular', 'bold'],
-    control: { type: 'select' },
+    control: 'select',
   },
   bulletProps: {
     name: 'bulletProps',
-    control: { type: 'object' },
+    control: 'object',
   },
 }

@@ -45,47 +45,47 @@ Default.args = {
 Default.argTypes = {
   avatarImgProps: {
     name: 'avatarImgProps',
-    control: { type: 'object' },
+    control: 'object',
   },
   placeholder: {
     name: 'placeholder',
-    control: { type: 'text' },
+    control: 'text',
   },
   commentButton: {
     name: 'commentButton',
-    control: { type: 'text' },
+    control: 'text',
   },
   error: {
     name: 'error',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   errorMessage: {
     name: 'errorMessage',
-    control: { type: 'text' },
+    control: 'text',
   },
   isDisabled: {
     name: 'isDisabled',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   showAvatarBadge: {
     name: 'showAvatarBadge (story prop)',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   defaultValue: {
     name: 'defaultValue',
-    control: { type: 'text' },
+    control: 'text',
   },
   commentLabel: {
     name: 'commentLabel',
-    control: { type: 'text' },
+    control: 'text',
   },
   ariaId: {
     name: 'ariaId',
-    control: { type: 'text' },
+    control: 'text',
   },
   avatarBadge: { control: { type: null } },
   textareaId: {
     name: 'textareaId',
-    control: { type: 'text' },
+    control: 'text',
   },
 }

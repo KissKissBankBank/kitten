@@ -18,7 +18,7 @@ export default {
     state: {
       name: 'state',
       options: ['default', 'progress', 'inProgress', 'validated', 'valid'],
-      control: { type: 'radio' },
+      control: 'radio',
     },
   },
 }

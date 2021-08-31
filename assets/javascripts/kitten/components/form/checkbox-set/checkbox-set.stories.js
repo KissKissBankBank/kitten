@@ -42,28 +42,28 @@ export default {
   argTypes: {
     name: {
       name: 'name',
-      control: { type: 'text' },
+      control: 'text',
     },
     label: {
       name: 'label',
-      control: { type: 'text' },
+      control: 'text',
     },
     items: {
       name: 'items',
-      control: { type: 'object' },
+      control: 'object',
     },
     error: {
       name: 'error',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
   },
 }
