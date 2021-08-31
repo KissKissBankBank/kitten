@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import { boolean } from '@storybook/addon-knobs'
 import { DocumentManager } from './index'
 import {
   Loader,
@@ -163,7 +162,6 @@ export const StatusWaiting = args => (
     displayTitle="Votre RIB est en cours de validation"
     displaySubtitle="document.pdf"
     status="wait"
-    canCancel={boolean('canCancel', false)}
     documentIcon={<DocumentIconEmpty />}
   />
 )

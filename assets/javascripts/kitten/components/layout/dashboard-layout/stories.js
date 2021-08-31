@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { select, boolean } from '@storybook/addon-knobs'
 
 import { DashboardLayout } from './index'
 
@@ -127,29 +126,47 @@ export default {
       ),
     },
   },
-}
-
-export const Default = () => {
-  const selectedView = select(
-    'content_type',
-    ['flow', 'dashboard', 'table'],
-    'flow',
-  )
-
-  return (
-    <DashboardLayout
-      backLinkProps={{
+  args: {
+    quickAccessLinkText: "Accéder au contenu",
+    backLinkProps: {
         href: '#',
         children: 'Retour au site',
-      }}
-      buttonProps={{
+      },
+    buttonProps: {
         openLabel: 'Ouvrir le menu',
         closeLabel: 'Fermer le menu',
-      }}
-      quickAccessLinkText="Accéder au contenu"
+      },
+    fullHeightContent: undefined,
+    selectedView: 'flow',
+    displayHeader: true,
+    displayAlerts: false,
+    status: 'success',
+    flowProps: {
+      flowLoading: false,
+      flowShowTwoButtons: false,
+      flowShowUnsavedText: false
+    }
+  },
+  argTypes: {
+    quickAccessLinkText: { control: 'text'},
+    backLinkProps: {control: 'object'},
+    buttonProps: {control: 'object'},
+    fullHeightContent: {description:'For the purpose of the story, depends on the type of content', control: 'boolean'},
+    selectedView: { name: 'Selected View (story prop)', control: 'radio', options: ['flow', 'dashboard', 'table']},
+    displayHeader: { name:'displayHeader (story prop)', control: 'boolean'},
+    displayAlerts: { name:'displayAlerts (story prop)', control: 'boolean'},
+    status: { name: 'Project status (story prop)', control: 'radio', options: ['danger', 'success', 'warning', 'neutral', 'none']},
+    flowProps: { name:'Flow Props (story prop)', control: 'object'},
+  }
+}
+
+export const Default = ({flowProps, status,selectedView, displayAlerts, displayHeader, ...args}) => {
+  return (
+    <DashboardLayout
       fullHeightContent={selectedView === 'flow'}
+      {...args}
     >
-      {boolean('Display SiteHeader', true) && (
+      {displayHeader && (
         <DashboardLayout.SiteHeader className="k-u-hidden@m-down">
           <SiteHeaderComponent />
         </DashboardLayout.SiteHeader>
@@ -181,11 +198,7 @@ export const Default = () => {
               as="span"
               weight="light"
               size="micro"
-              statusType={select(
-                'Status type',
-                ['danger', 'success', 'warning', 'neutral', 'none'],
-                'success',
-              )}
+              statusType={status}
             >
               Prêt a être partagé avec un texte long pour tester l’ellipse
             </StatusWithBullet>
@@ -197,10 +210,10 @@ export const Default = () => {
           return (
             <DashboardMenu>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=dashboard&viewMode=story"
+                href="?id=layout-dashboardlayout--default&args=selectedView:dashboard&viewMode=story"
                 isActive={
                   window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=dashboard&viewMode=story'
+                  '?id=layout-dashboardlayout--default&args=selectedView:dashboard&viewMode=story'
                 }
                 icon={() => <HomeIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
@@ -208,10 +221,10 @@ export const Default = () => {
                 Accueil
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story"
+                href="?id=layout-dashboardlayout--default&args=selectedView:table&viewMode=story"
                 isActive={
                   window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story'
+                  '?id=layout-dashboardlayout--default&args=selectedView:table&viewMode=story'
                 }
                 icon={() => <PeopleIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
@@ -219,10 +232,10 @@ export const Default = () => {
                 Contributeurs
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story&custom=a"
+                href="?id=layout-dashboardlayout--default&args=selectedView:table&viewMode=story&custom=a"
                 isActive={
                   window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story&custom=a'
+                  '?id=layout-dashboardlayout--default&args=selectedView:table&viewMode=story&custom=a'
                 }
                 icon={() => <TagIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
@@ -230,10 +243,10 @@ export const Default = () => {
                 Contreparties
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=b"
+                href="?id=layout-dashboardlayout--default&args=selectedView:flow&viewMode=story&custom=b"
                 isActive={
                   window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=b'
+                  '?id=layout-dashboardlayout--default&args=selectedView:flow&viewMode=story&custom=b'
                 }
                 icon={() => <FilterIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
@@ -241,10 +254,10 @@ export const Default = () => {
                 Paramètres
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story"
+                href="?id=layout-dashboardlayout--default&args=selectedView:flow&viewMode=story"
                 isActive={
                   window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story'
+                  '?id=layout-dashboardlayout--default&args=selectedView:flow&viewMode=story'
                 }
                 icon={() => <FileIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
@@ -252,10 +265,10 @@ export const Default = () => {
                 Page Projet
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story"
+                href="?id=layout-dashboardlayout--default&args=selectedView:flow&knob-loading=true&viewMode=story"
                 isActive={
                   window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story'
+                  '?id=layout-dashboardlayout--default&args=selectedView:flow&knob-loading=true&viewMode=story'
                 }
                 icon={() => <StatsIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
@@ -263,10 +276,10 @@ export const Default = () => {
                 Statistiques
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story&custom=1"
+                href="?id=layout-dashboardlayout--default&args=selectedView:flow&knob-loading=true&viewMode=story&custom=1"
                 isActive={
                   window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=flow&knob-loading=true&viewMode=story&custom=1'
+                  '?id=layout-dashboardlayout--default&args=selectedView:flow&knob-loading=true&viewMode=story&custom=1'
                 }
                 icon={() => <LoudspeakerIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
@@ -278,30 +291,30 @@ export const Default = () => {
                 icon={() => <ShieldIcon color="currentColor" />}
               >
                 <DashboardMenu.Item
-                  href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=1"
+                  href="?id=layout-dashboardlayout--default&args=selectedView:flow&viewMode=story&custom=1"
                   isActive={
                     window.location.search ===
-                    '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=1'
+                    '?id=layout-dashboardlayout--default&args=selectedView:flow&viewMode=story&custom=1'
                   }
                   onClick={() => closeSideBar()}
                 >
                   Destinataire des fonds
                 </DashboardMenu.Item>
                 <DashboardMenu.Item
-                  href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=2"
+                  href="?id=layout-dashboardlayout--default&args=selectedView:flow&viewMode=story&custom=2"
                   isActive={
                     window.location.search ===
-                    '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=2'
+                    '?id=layout-dashboardlayout--default&args=selectedView:flow&viewMode=story&custom=2'
                   }
                   onClick={() => closeSideBar()}
                 >
                   Confirmation d'identité
                 </DashboardMenu.Item>
                 <DashboardMenu.Item
-                  href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=3"
+                  href="?id=layout-dashboardlayout--default&args=selectedView:flow&viewMode=story&custom=3"
                   isActive={
                     window.location.search ===
-                    '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=3'
+                    '?id=layout-dashboardlayout--default&args=selectedView:flow&viewMode=story&custom=3'
                   }
                   onClick={() => closeSideBar()}
                 >
@@ -309,10 +322,10 @@ export const Default = () => {
                 </DashboardMenu.Item>
               </DashboardMenu.Expandable>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=4"
+                href="?id=layout-dashboardlayout--default&args=selectedView:flow&viewMode=story&custom=4"
                 isActive={
                   window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=flow&viewMode=story&custom=4'
+                  '?id=layout-dashboardlayout--default&args=selectedView:flow&viewMode=story&custom=4'
                 }
                 icon={() => <SpeechBubbleIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
@@ -330,7 +343,7 @@ export const Default = () => {
         </Button>
       </DashboardLayout.SideFooter>
 
-      {boolean('Display Alerts', false) && (
+      {displayAlerts && (
         <DashboardLayout.Alerts>
           <Alert closeButton info>
             Voilà une info
@@ -341,7 +354,7 @@ export const Default = () => {
         </DashboardLayout.Alerts>
       )}
 
-      {selectedView === 'flow' && <FlowExample />}
+      {selectedView === 'flow' && <FlowExample {...flowProps} />}
       {selectedView === 'dashboard' && <DashExample />}
       {selectedView === 'table' && <TableExample />}
     </DashboardLayout>
@@ -384,8 +397,8 @@ const TableExample = () => (
   </>
 )
 
-const FlowExample = () => (
-  <DashboardLayout.Flow loading={boolean('loading', false)}>
+const FlowExample = ({flowLoading, flowShowTwoButtons, flowShowUnsavedText}) => (
+  <DashboardLayout.Flow loading={flowLoading}>
     <DashboardLayout.Flow.Content>
       <Title
         modifier="quinary"
@@ -495,17 +508,17 @@ const FlowExample = () => (
         </DashboardLayout.Flow.AsideCard.List>
       </DashboardLayout.Flow.AsideCard>
     </DashboardLayout.Flow.Aside>
-    <DashboardLayout.Flow.Nav twoButtons={boolean('Show 2 buttons', false)}>
-      {boolean('Show 2 buttons', false) ? (
+    <DashboardLayout.Flow.Nav twoButtons={flowShowTwoButtons}>
+      {flowShowTwoButtons ? (
         <Button
           modifier="hydrogen"
           variant="orion"
           type="button"
-          disabled={boolean('loading', false)}
+          disabled={flowLoading}
         >
           Back
         </Button>
-      ) : boolean('Show unsaved text', false) ? (
+      ) : flowShowUnsavedText ? (
         <Text
           weight="light"
           color="font2"
@@ -520,7 +533,7 @@ const FlowExample = () => (
         modifier="helium"
         variant="orion"
         type="button"
-        disabled={boolean('loading', false)}
+        disabled={flowLoading}
       >
         Save
       </Button>

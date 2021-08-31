@@ -228,12 +228,7 @@ const SearchInput = () => {
   )
 }
 
-export const KissKissBankBankHeaderNavStoryNew = ({
-  isLogged,
-  isFixed,
-  size,
-  borderStyle,
-}) => {
+export const KissKissBankBankHeaderNavStoryNew = ({isLogged, args}) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const windowWidth = useWindowWidth()
 
@@ -251,15 +246,13 @@ export const KissKissBankBankHeaderNavStoryNew = ({
 
       <HeaderNav
         id={HEADER_NAV_ID}
-        isLogged={isLogged}
-        isFixed={isFixed}
         quickAccessProps={{
           href: '#mainContent',
           text: 'Aller au contenu principal',
           zIndex: 300,
         }}
-        size={size}
-        borderStyle={borderStyle}
+        isLogged={isLogged}
+        {...args}
       >
         <HeaderNav.BurgerMenuNext dropdownContentWidth={burgerMenuWidth}>
           <InnerBurgerMenu />

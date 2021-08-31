@@ -10,10 +10,10 @@ import {
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 
-export const MinimalistHeaderNavStory = ({ text, subText, isFixed }) => (
+export const MinimalistHeaderNavStory = (args) => (
   <HeaderNav
     id={HEADER_NAV_ID}
-    isFixed={isFixed}
+    {...args}
     quickAccessProps={{
       href: '#mainContent',
       text: 'Aller au contenu principal',
