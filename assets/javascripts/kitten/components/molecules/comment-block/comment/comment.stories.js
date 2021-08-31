@@ -58,7 +58,7 @@ Default.args = {
   text:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
   avatarImgProps: {
-    src: '/kitten.jpg',
+    src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
     alt: '',
   },
   commentDate: '2 min',

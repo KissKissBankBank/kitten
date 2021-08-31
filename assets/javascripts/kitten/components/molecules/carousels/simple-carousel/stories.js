@@ -19,7 +19,7 @@ const Item = ({ numItem }) => (
   <>
     <Marger bottom="3">
       <img
-        src={`https://placeimg.com/40${numItem}/40${numItem}/nature`}
+        src={`/kitten-${numItem}.jpg`}
         alt=""
         style={{ display: 'block', width: '100%' }}
       />
@@ -63,6 +63,8 @@ export const Default = () => (
       <Item key="1" numItem="1" />
       <Item key="2" numItem="2" />
       <Item key="3" numItem="3" />
+      <Item key="4" numItem="4" />
+      <Item key="5" numItem="5" />
     </SimpleCarousel>
   </div>
 )

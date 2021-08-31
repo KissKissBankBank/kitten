@@ -34,8 +34,11 @@ const ContainerStyle = styled.a`
     & > .k-SimpleCard__image {
       position: absolute;
       top: 0;
-      height: auto;
-      text-align: center;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: cover;
     }
   }
 

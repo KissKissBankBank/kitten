@@ -1,6 +1,26 @@
 import React from 'react'
 import { ArrowContainer } from './index'
 import { Text, COLORS } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
+
+export default {
+  title: 'Molecules/Boxes/ArrowContainer',
+  component: ArrowContainer,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="ArrowContainer" />
+      ),
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+}
 
 export const Default = ({ children, ...args }) => (
   <ArrowContainer {...args}>
@@ -9,14 +29,6 @@ export const Default = ({ children, ...args }) => (
     </Text>
   </ArrowContainer>
 )
-
-Default.decorators = [
-  story => (
-    <div className="story-Container story-Grid story-Grid">
-      <div>{story()}</div>
-    </div>
-  ),
-]
 
 Default.args = {
   color: COLORS.background3,

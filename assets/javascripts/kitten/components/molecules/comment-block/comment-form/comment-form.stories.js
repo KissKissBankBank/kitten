@@ -31,7 +31,7 @@ Default.decorators = [
 
 Default.args = {
   avatarImgProps: {
-    src: '/kitten.jpg',
+    src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
     alt: '',
   },
   placeholder: 'Leave a comment on the project',

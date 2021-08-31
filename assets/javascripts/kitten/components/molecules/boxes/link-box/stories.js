@@ -1,6 +1,57 @@
 import React from 'react'
 import { LinkBox } from './index'
 import { FlashCircleIcon, Text, COLORS } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
+
+export default {
+  title: 'Molecules/Boxes/LinkBox',
+  component: LinkBox,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={['index.js', 'styles.js']}
+          importString="LinkBox"
+        />
+      ),
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  argTypes: {
+    href: {
+      name: 'href',
+      control: { type: 'text' },
+    },
+    isExternal: {
+      name: 'isExternal',
+      control: { type: 'boolean' },
+    },
+    linkProps: {
+      name: 'linkProps',
+      control: { type: 'object' },
+    },
+    variant: {
+      name: 'variant',
+      options: ['andromeda', 'orion'],
+      control: { type: 'inline-radio' },
+    },
+    backgroundColor: {
+      name: 'backgroundColor',
+      control: { type: 'color' },
+    },
+    textColor: {
+      name: 'textColor',
+      control: { type: 'color' },
+    },
+  },
+}
 
 export const Default = args => (
   <LinkBox {...args}>
@@ -36,15 +87,6 @@ export const WithVariant = args => (
   </LinkBox>
 )
 
-Default.decorators = [
-  story => (
-    <div className="story-Container story-Grid story-Grid--large">
-      {story()}
-    </div>
-  ),
-]
-WithVariant.decorators = Default.decorators
-
 Default.args = {
   href: 'https://www.kisskissbankbank.com',
   isExternal: true,
@@ -58,32 +100,3 @@ WithVariant.args = {
   variant: 'orion',
   backgroundColor: COLORS.orange1,
 }
-
-Default.argTypes = {
-  href: {
-    name: 'href',
-    control: { type: 'text' },
-  },
-  isExternal: {
-    name: 'isExternal',
-    control: { type: 'boolean' },
-  },
-  linkProps: {
-    name: 'linkProps',
-    control: { type: 'object' },
-  },
-  variant: {
-    name: 'variant',
-    options: ['andromeda', 'orion'],
-    control: { type: 'inline-radio' },
-  },
-  backgroundColor: {
-    name: 'backgroundColor',
-    control: { type: 'color' },
-  },
-  textColor: {
-    name: 'textColor',
-    control: { type: 'color' },
-  },
-}
-WithVariant.argTypes = Default.argTypes

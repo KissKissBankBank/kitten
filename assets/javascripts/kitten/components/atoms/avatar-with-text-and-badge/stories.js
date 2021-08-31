@@ -143,7 +143,7 @@ export const Default = ({
     <AvatarWithTextAndBadge.Image
       alt={imageAlt}
       size={imageSize}
-      src={imageIsDisplayed && '/kitten.jpg'}
+      src={imageIsDisplayed && `/kitten-${Math.floor(Math.random() * 10)}.jpg`}
       text={imageText}
       backgroundColor={imageBackgroundColor}
       textColor={imageTextColor}

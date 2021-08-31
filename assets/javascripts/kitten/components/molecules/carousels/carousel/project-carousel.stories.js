@@ -1,19 +1,47 @@
 import React from 'react'
-import { number, object, boolean } from '@storybook/addon-knobs'
 import { Carousel } from './index'
 import {
   CrowdfundingCard,
   CONTAINER_PADDING,
-  Marger,
-  Container,
   Grid,
   GridCol,
+  EngagementCard,
+  PhoneIllustration,
+  pxToRem,
+  ScreenConfig,
 } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
+import styled from 'styled-components'
+
+const args = {
+  itemsPerPage: 0,
+  itemMinWidth: 280,
+  hidePaginationOnMobile: false,
+  hidePagination: false,
+  showOtherPages: false,
+  pagesClassName: '',
+  preferCompletePaginationOnMobile: false,
+  paginationPosition: {
+    default: 'right',
+    fromM: 'bottom',
+  },
+  prevButtonText: 'Previous items',
+  nextButtonText: 'Next items',
+  pageClickText: page => {
+    return `Page ${page}`
+  },
+  firstButtonText: 'First items',
+  lastButtonText: 'Last items',
+  showPageSquares: false,
+  tinyButtons: false,
+  loop: false,
+  exportVisibilityProps: false,
+  baseItemMarginBetween: CONTAINER_PADDING,
+}
 
 export default {
   component: Carousel,
-  title: 'Molecules/Carousels/Carousel/ProjectCarousel',
+  title: 'Molecules/Carousels/Carousel',
   parameters: {
     docs: {
       page: () => (
@@ -30,295 +58,159 @@ export default {
       ),
     },
   },
+  decorators: [story => <div className="story-Container">{story()}</div>],
+  argTypes: {
+    itemMinWidth: { control: 'number' },
+    itemsPerPage: { control: 'number' },
+    baseItemMarginBetween: { control: 'number' },
+    hidePaginationOnMobile: { control: 'boolean' },
+    hidePagination: { control: 'boolean' },
+    showOtherPages: { control: 'boolean' },
+    pagesClassName: { control: 'text' },
+    preferCompletePaginationOnMobile: { control: 'boolean' },
+    paginationPosition: { control: 'object' },
+    prevButtonText: { control: 'text' },
+    nextButtonText: { control: 'text' },
+    pageClickText: { control: null },
+    tinyButtons: { control: 'boolean' },
+    firstButtonText: { control: 'text' },
+    lastButtonText: { control: 'text' },
+    showPageSquares: { control: 'boolean' },
+    loop: { control: 'boolean' },
+    exportVisibilityProps: { control: 'boolean' },
+  },
+  args,
 }
-
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      {children}
-    </Marger>
-  </Container>
-)
-
-const LegacyStoryContainer = ({ children }) => (
-  <Container fullWidthBelowScreenSize="M">
-    <Marger top="5" bottom="5">
-      {children}
-    </Marger>
-  </Container>
-)
-
-const InNestedGridStoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      <Grid>
-        <GridCol col="10" offset="1">
-          <Grid>
-            <GridCol col="8" offset="2">
-              {children}
-            </GridCol>
-          </Grid>
-        </GridCol>
-      </Grid>
-    </Marger>
-  </Container>
-)
 
 const data = [
   {
     title: 'Item A',
-    imageSrc: 'http://placekitten.com/500/300',
-    thumbSrc: 'http://placekitten.com/80/80',
+    imageSrc: '/kitten-1.jpg',
+    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
   {
     title: 'Item B',
-    imageSrc: 'http://placekitten.com/501/301',
-    thumbSrc: 'http://placekitten.com/81/81',
+    imageSrc: '/kitten-2.jpg',
+    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
   {
     title: 'Item C',
-    imageSrc: 'http://placekitten.com/502/302',
-    thumbSrc: 'http://placekitten.com/82/82',
+    imageSrc: '/kitten-3.jpg',
+    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
   {
     title: 'Item D',
-    imageSrc: 'http://placekitten.com/503/303',
-    thumbSrc: 'http://placekitten.com/83/83',
+    imageSrc: '/kitten-4.jpg',
+    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
   {
     title: 'Item E',
-    imageSrc: 'http://placekitten.com/504/304',
-    thumbSrc: 'http://placekitten.com/84/84',
+    imageSrc: '/kitten-5.jpg',
+    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
   {
     title: 'Item F',
-    imageSrc: 'http://placekitten.com/502/302',
-    thumbSrc: 'http://placekitten.com/82/82',
+    imageSrc: '/kitten-6.jpg',
+    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
   {
     title: 'Item G',
-    imageSrc: 'http://placekitten.com/503/303',
-    thumbSrc: 'http://placekitten.com/83/83',
+    imageSrc: '/kitten-7.jpg',
+    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
   {
     title: 'Item H',
-    imageSrc: 'http://placekitten.com/504/304',
-    thumbSrc: 'http://placekitten.com/84/84',
+    imageSrc: '/kitten-8.jpg',
+    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
   {
     title: 'Item I',
-    imageSrc: 'http://placekitten.com/502/302',
-    thumbSrc: 'http://placekitten.com/82/82',
+    imageSrc: '/kitten-9.jpg',
+    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
   {
     title: 'Item J',
-    imageSrc: 'http://placekitten.com/503/303',
-    thumbSrc: 'http://placekitten.com/83/83',
+    imageSrc: '/kitten-0.jpg',
+    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
   {
     title: 'Item K',
-    imageSrc: 'http://placekitten.com/504/304',
-    thumbSrc: 'http://placekitten.com/84/84',
+    imageSrc: '/kitten-1.jpg',
+    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
 ]
 
-const paginationPosition = {
-  default: 'bottom',
-  fromL: 'left',
+export const Default = args => (
+  <Carousel {...args}>
+    {data.map(item => (
+      <CardComponent item={item} />
+    ))}
+  </Carousel>
+)
+
+export const WithSpecificColNumber = Default.bind({})
+WithSpecificColNumber.args = {
+  ...args,
+  itemsPerPage: 2,
+  itemMinWidth: 0,
 }
 
-export const Default = () => (
-  <StoryContainer>
-    <Carousel
-      tinyButtons={boolean('Button tiny size', false)}
-      itemMinWidth={number('itemMinWidth', 280)}
-      baseItemMarginBetween={number('baseItemMarginBetween', CONTAINER_PADDING)}
-      paginationPosition={object('paginationPosition', paginationPosition)}
-      showPageSquares={boolean('showPageSquares', false)}
-      loop={boolean('loop', false)}
-      hidePaginationOnMobile={boolean('hidePaginationOnMobile', false)}
-      hidePagination={boolean('hidePagination', false)}
-      showOtherPages={boolean('showOtherPages', false)}
-      preferCompletePaginationOnMobile={boolean(
-        'preferCompletePaginationOnMobile',
-        false,
-      )}
-    >
-      {data.map(item => (
-        <CrowdfundingCard
-          key={`CrowdfundingCard${item.title}`}
-          href="#"
-          imageProps={{
-            src: item.imageSrc,
-            alt: 'Image alt',
-            backgroundColor: '#d8d8d8',
-            color: '#333',
-          }}
-          avatarProps={{
-            src: item.thumbSrc,
-            alt: 'Avatar alt',
-          }}
-          ownerTitle="Title"
-          ownerDescription="Custom description"
-          titleProps={{
-            tag: 'h4',
-          }}
-          cardTitle={item.title}
-          cardSubTitle="Custom subtitle"
-          titlesMinHeight
-          progress={84}
-          state="Custom state"
-        />
-      ))}
-    </Carousel>
-  </StoryContainer>
+export const InNestedGrid = args => (
+  <Grid>
+    <GridCol col="10" offset="1">
+      <Grid>
+        <GridCol col="8" offset="2">
+          <Carousel {...args}>
+            {data.map(item => (
+              <CardComponent item={item} />
+            ))}
+          </Carousel>
+        </GridCol>
+      </Grid>
+    </GridCol>
+  </Grid>
 )
 
-export const WithSpecificColNumber = () => (
-  <StoryContainer>
-    <Carousel
-      tinyButtons={boolean('Button tiny size', false)}
-      itemMinWidth={0}
-      itemsPerPage={number('itemsPerPage', 1)}
-      baseItemMarginBetween={number('baseItemMarginBetween', CONTAINER_PADDING)}
-      paginationPosition={object('paginationPosition', paginationPosition)}
-      showPageSquares={boolean('showPageSquares', false)}
-      loop={boolean('loop', false)}
-      hidePaginationOnMobile={boolean('hidePaginationOnMobile', false)}
-      hidePagination={boolean('hidePagination', false)}
-      showOtherPages={boolean('showOtherPages', false)}
-      preferCompletePaginationOnMobile={boolean(
-        'preferCompletePaginationOnMobile',
-        false,
-      )}
-    >
-      {data.map(item => (
-        <CrowdfundingCard
-          key={`CrowdfundingCard${item.title}`}
-          href="#"
-          imageProps={{
-            src: item.imageSrc,
-            alt: 'Image alt',
-            backgroundColor: '#d8d8d8',
-            color: '#333',
-          }}
-          avatarProps={{
-            src: item.thumbSrc,
-            alt: 'Avatar alt',
-          }}
-          ownerTitle="Title"
-          ownerDescription="Custom description"
-          titleProps={{
-            tag: 'h4',
-          }}
-          cardTitle={item.title}
-          cardSubTitle="Custom subtitle"
-          titlesMinHeight
-          progress={84}
-          state="Custom state"
-        />
-      ))}
-    </Carousel>
-  </StoryContainer>
+export const WithPassedProps = args => (
+  <Carousel {...args}>
+    {data.map(item => (
+      <ViewedCardComponent item={item} key={`CrowdfundingCard${item.title}`} />
+    ))}
+  </Carousel>
+)
+WithPassedProps.args = {
+  ...args,
+  exportVisibilityProps: true,
+}
+
+const CardComponent = ({ item }) => (
+  <CrowdfundingCard
+    key={`CrowdfundingCard${item.title}`}
+    href="#"
+    imageProps={{
+      src: item.imageSrc,
+      alt: 'Image alt',
+      backgroundColor: '#d8d8d8',
+      color: '#333',
+    }}
+    avatarProps={{
+      src: item.thumbSrc,
+      alt: 'Avatar alt',
+    }}
+    ownerTitle="Title"
+    ownerDescription="Custom description"
+    titleProps={{
+      tag: 'h4',
+    }}
+    cardTitle={item.title}
+    cardSubTitle="Custom subtitle"
+    titlesMinHeight
+    progress={84}
+    state="Custom state"
+  />
 )
 
-export const InNestedGrid = () => (
-  <InNestedGridStoryContainer>
-    <Carousel
-      itemMinWidth={number('itemMinWidth', 280)}
-      baseItemMarginBetween={number('baseItemMarginBetween', CONTAINER_PADDING)}
-      paginationPosition={object('paginationPosition', paginationPosition)}
-    >
-      {data.map(item => (
-        <CrowdfundingCard
-          key={item.title}
-          href="#"
-          imageProps={{
-            src: item.imageSrc,
-            alt: 'Image alt',
-            backgroundColor: '#d8d8d8',
-            color: '#333',
-          }}
-          avatarProps={{
-            src: item.thumbSrc,
-            alt: 'Avatar alt',
-          }}
-          ownerTitle="Title"
-          ownerDescription="Custom description"
-          titleProps={{
-            tag: 'h4',
-          }}
-          cardTitle={item.title}
-          cardSubTitle="Custom subtitle"
-          titlesMinHeight
-          progress={84}
-          state="Custom state"
-        />
-      ))}
-    </Carousel>
-  </InNestedGridStoryContainer>
-)
-
-export const InLegacyGrid = () => (
-  <LegacyStoryContainer>
-    <Carousel
-      withoutLeftOffset={boolean('Without left offset', false)}
-      tinyButtons={boolean('Button tiny size', false)}
-      itemMinWidth={number('itemMinWidth', 280)}
-      baseItemMarginBetween={number('baseItemMarginBetween', CONTAINER_PADDING)}
-      paginationPosition={object('paginationPosition', paginationPosition)}
-      showPageSquares={boolean('showPageSquares', false)}
-      loop={boolean('loop', false)}
-      data={data}
-      renderItem={({ item }) => (
-        <CrowdfundingCard
-          key={item.title}
-          href="#"
-          imageProps={{
-            src: item.imageSrc,
-            alt: 'Image alt',
-            backgroundColor: '#d8d8d8',
-            color: '#333',
-          }}
-          avatarProps={{
-            src: item.thumbSrc,
-            alt: 'Avatar alt',
-          }}
-          ownerTitle="Title"
-          ownerDescription="Custom description"
-          titleProps={{
-            tag: 'h4',
-          }}
-          cardTitle={item.title}
-          cardSubTitle="Custom subtitle"
-          titlesMinHeight
-          progress={84}
-          state="Custom state"
-        />
-      )}
-    />
-  </LegacyStoryContainer>
-)
-
-export const WithPassedProps = () => (
-  <StoryContainer>
-    <Carousel
-      tinyButtons={boolean('Button tiny size', false)}
-      itemMinWidth={number('itemMinWidth', 280)}
-      baseItemMarginBetween={number('baseItemMarginBetween', CONTAINER_PADDING)}
-      paginationPosition={object('paginationPosition', paginationPosition)}
-      showPageSquares={boolean('showPageSquares', false)}
-      loop={boolean('loop', false)}
-      exportVisibilityProps
-    >
-      {data.map(item => (
-        <CardComponent item={item} key={`CrowdfundingCard${item.title}`} />
-      ))}
-    </Carousel>
-  </StoryContainer>
-)
-
-const CardComponent = ({ item, hasPageBeenViewed, isActivePage }) => (
+const ViewedCardComponent = ({ item, hasPageBeenViewed, isActivePage }) => (
   <CrowdfundingCard
     href="#"
     imageProps={{
@@ -343,3 +235,131 @@ const CardComponent = ({ item, hasPageBeenViewed, isActivePage }) => (
     state="Custom state"
   />
 )
+
+const engagementsData = [
+  {
+    bgColor: '#ffebe1',
+    children: 'autoproduction culturelle',
+  },
+  {
+    bgColor: '#8fd9fa',
+    children: 'Autoproduction culturelle',
+  },
+  {
+    bgColor: '#ffebe1',
+    children: 'education',
+  },
+  {
+    bgColor: '#caf4fe',
+    children: 'bio',
+  },
+  {
+    bgColor: '#caf4fe',
+    children: 'Made in france',
+  },
+  {
+    bgColor: '#8fd9fa',
+    children: 'zero-dechet',
+  },
+  {
+    bgColor: '#caf4fe',
+    children: 'bio',
+  },
+  {
+    bgColor: '#caf4fe',
+    children: 'Made in france',
+  },
+  {
+    bgColor: '#8fd9fa',
+    children: 'zero-dechet',
+  },
+  {
+    bgColor: '#ffebe1',
+    children: 'autoproduction culturelle',
+  },
+  {
+    bgColor: '#8fd9fa',
+    children: 'Autoproduction culturelle',
+  },
+  {
+    bgColor: '#ffebe1',
+    children: 'education',
+  },
+  {
+    bgColor: '#caf4fe',
+    children: 'bio',
+  },
+  {
+    bgColor: '#caf4fe',
+    children: 'Made in france',
+  },
+  {
+    bgColor: '#8fd9fa',
+    children: 'zero-dechet',
+  },
+  {
+    bgColor: '#caf4fe',
+    children: 'bio',
+  },
+  {
+    bgColor: '#caf4fe',
+    children: 'Made in france',
+  },
+  {
+    bgColor: '#8fd9fa',
+    children: 'zero-dechet',
+  },
+]
+
+const StyledContainer = styled.div`
+  margin-top: ${pxToRem(20)};
+  box-sizing: border-box;
+
+  .k-Carousel__page__item a {
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .k-Carousel__page:hover > .k-Carousel__page__item a:hover {
+    opacity: 1;
+  }
+
+  .k-Carousel__page:hover > .k-Carousel__page__item a {
+    opacity: 0.5;
+  }
+
+  .EngagementsCarousel__engagementCard {
+    display: flex;
+    height: ${pxToRem(130)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      height: ${pxToRem(140)};
+    }
+  }
+`
+
+export const EngagementsCarousel = args => (
+  <StyledContainer fullWidthBelowScreenSize="S">
+    <Carousel {...args}>
+      {engagementsData.map(({ bgColor, children }, index) => (
+        <EngagementCard
+          key={`card__${index}`}
+          className="EngagementsCarousel__engagementCard"
+          href="#"
+          icon={<PhoneIllustration />}
+          backgroundColor={bgColor}
+          hoverBorder={bgColor}
+        >
+          {children}
+        </EngagementCard>
+      ))}
+    </Carousel>
+  </StyledContainer>
+)
+EngagementsCarousel.args = {
+  ...args,
+  itemMinWidth: 110,
+  hidePaginationOnMobile: true,
+  baseItemMarginBetween: 20,
+  paginationPosition: { default: 'right' },
+  showOtherPages: true,
+}

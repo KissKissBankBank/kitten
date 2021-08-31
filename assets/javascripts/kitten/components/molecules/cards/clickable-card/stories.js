@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { text, number, select, color, boolean } from '@storybook/addon-knobs'
 import { ClickableCard } from './index'
-import { Container, Text, COLORS, Grid, GridCol } from '../../../..'
+import { Text, COLORS } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -14,60 +13,57 @@ export default {
       ),
     },
   },
+  decorators: [
+    story => <div className="story-Container story-Grid">{story()}</div>,
+  ],
+  argTypes: {
+    size: { control: 'number' },
+    disabled: { control: 'boolean' },
+    fluid: { control: 'boolean' },
+    borderColor: { control: 'color' },
+    backgroundColor: { control: 'color' },
+    imageShape: {
+      name: 'ClickableCard.Image: shape',
+      options: ['square', 'circle'],
+      control: 'radio',
+    },
+    imageFit: {
+      name: 'ClickableCard.Image: fit',
+      options: ['cover', 'contain', 'none'],
+      control: 'radio',
+    },
+  },
+  args: {
+    size: 250,
+    disabled: false,
+    fluid: false,
+    borderColor: COLORS.primary1,
+    backgroundColor: COLORS.background2,
+    imageShape: 'circle',
+    imageFit: 'cover',
+  },
 }
 
-const StoryContainer = ({ children }) => (
-  <Container className="k-u-margin-top-quintuple k-u-margin-bottom-quintuple">
-    <Grid>
-      <GridCol col-m="6">{children}</GridCol>
-    </Grid>
-  </Container>
-)
-
-export const Default = () => {
+export const Default = ({ imageShape, imageFit, ...args }) => {
   const [isChecked, setChecked] = useState(false)
   return (
-    <StoryContainer>
-      <ClickableCard
-        size={number('Card size', 250)}
-        disabled={boolean('Is card disabled?', false)}
-        fluid={boolean('Is card fluid?', false)}
-        borderColor={color('Border color', COLORS.primary1)}
-        backgroundColor={color('Background color', COLORS.primary6)}
-        aria-checked={isChecked}
-        onClick={() => setChecked(!isChecked)}
-      >
-        <ClickableCard.Image
-          shape={select(
-            'Image shape',
-            { Square: 'square', Circle: 'circle' },
-            'square',
-          )}
-          fit={select(
-            'Image fit',
-            {
-              Cover: 'cover',
-              Contain: 'contain',
-              None: 'none',
-            },
-            'cover',
-          )}
-        >
-          <img
-            src={text('Image URL', 'https://placekitten.com/200/400')}
-            alt=""
-          />
-        </ClickableCard.Image>
-        <ClickableCard.Content>
-          <Text weight="light" lineHeight="1.3">
-            Kitty McMeow
-          </Text>
-          <br />
-          <Text weight="regular" lineHeight="1.3" color="primary1">
-            @kitty.mcmeow
-          </Text>
-        </ClickableCard.Content>
-      </ClickableCard>
-    </StoryContainer>
+    <ClickableCard
+      {...args}
+      aria-checked={isChecked}
+      onClick={() => setChecked(!isChecked)}
+    >
+      <ClickableCard.Image shape={imageShape} fit={imageFit}>
+        <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
+      </ClickableCard.Image>
+      <ClickableCard.Content>
+        <Text weight="light" lineHeight="1.3">
+          Kitty McMeow
+        </Text>
+        <br />
+        <Text weight="regular" lineHeight="1.3" color="primary1">
+          @kitty.mcmeow
+        </Text>
+      </ClickableCard.Content>
+    </ClickableCard>
   )
 }
