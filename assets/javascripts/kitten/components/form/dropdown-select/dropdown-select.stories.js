@@ -28,6 +28,107 @@ const options = [
   },
 ]
 
+const argTypes= {
+  id: {
+    name: 'id',
+    control: { type: 'text' },
+  },
+  labelText: {
+    name: 'labelText',
+    control: { type: 'text' },
+  },
+  combobox: {
+    name: 'combobox',
+    control: { type: 'boolean' },
+  },
+  hideLabel: {
+    name: 'hideLabel',
+    control: { type: 'boolean' },
+  },
+  options: {
+    name: 'options',
+    control: { type: 'object' },
+  },
+  placeholder: {
+    name: 'placeholder',
+    control: { type: 'text' },
+  },
+  labelPropsGetter: {
+    name: 'labelPropsGetter',
+  },
+  variant: {
+    name: 'variant',
+    options: ['andromeda', 'orion'],
+    control: { type: 'inline-radio' },
+  },
+  size: {
+    name: 'size',
+    options: ['tiny', 'normal', 'big', 'huge', 'giant'],
+    control: { type: 'select' },
+  },
+  a11yStatusError: {
+    name: 'a11yStatusError',
+    control: { type: 'text' },
+  },
+  a11yStatusValid: {
+    name: 'a11yStatusValid',
+    control: { type: 'text' },
+  },
+  a11ySelectionMessageDisplayer: {
+    name: 'a11ySelectionMessageDisplayer',
+  },
+  onChange: {
+    name: 'onChange',
+  },
+  onBlur: {
+    name: 'onBlur',
+  },
+  onInputChange: {
+    name: 'onInputChange',
+  },
+  onMenuClose: {
+    name: 'onMenuClose',
+  },
+  onMenuOpen: {
+    name: 'onMenuOpen',
+  },
+  openOnLoad: {
+    name: 'openOnLoad',
+    control: { type: 'boolean' },
+  },
+  uniqLabelOnSearch: {
+    name: 'uniqLabelOnSearch',
+    control: { type: 'boolean' },
+  },
+  menuZIndex: {
+    name: 'menuZIndex',
+    control: { type: 'number' },
+  },
+  comboboxButtonLabelText: {
+    name: 'comboboxButtonLabelText',
+    control: { type: 'text' },
+  },
+  noResultText: {
+    name: 'noResultText',
+    control: { type: 'text' },
+  },
+}
+const args= {
+  id: 'dropdown-select',
+  error: false,
+  valid: false,
+  disabled: false,
+  hideLabel: false,
+  combobox: false,
+  labelText: 'label',
+  options: options,
+  size: 'normal',
+  variant: 'andromeda',
+  comboboxButtonLabelText: 'label',
+  noResultText: 'No results',
+  menuZIndex: 1000,
+}
+
 export default {
   component: DropdownSelect,
   title: 'Form/DropdownSelect',
@@ -44,111 +145,13 @@ export default {
   },
   decorators: [
     story => (
-      <div className="story-Container story-Grid story-Grid--large">
+      <div className="story-Container story-Grid">
         {story()}
       </div>
     ),
   ],
-  argTypes: {
-    id: {
-      name: 'id',
-      control: { type: 'text' },
-    },
-    labelText: {
-      name: 'labelText',
-      control: { type: 'text' },
-    },
-    combobox: {
-      name: 'combobox',
-      control: { type: 'boolean' },
-    },
-    hideLabel: {
-      name: 'hideLabel',
-      control: { type: 'boolean' },
-    },
-    options: {
-      name: 'options',
-      control: { type: 'object' },
-    },
-    placeholder: {
-      name: 'placeholder',
-      control: { type: 'text' },
-    },
-    labelPropsGetter: {
-      name: 'labelPropsGetter',
-    },
-    variant: {
-      name: 'variant',
-      options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' },
-    },
-    size: {
-      name: 'size',
-      options: ['tiny', 'normal', 'big', 'huge', 'giant'],
-      control: { type: 'select' },
-    },
-    a11yStatusError: {
-      name: 'a11yStatusError',
-      control: { type: 'text' },
-    },
-    a11yStatusValid: {
-      name: 'a11yStatusValid',
-      control: { type: 'text' },
-    },
-    a11ySelectionMessageDisplayer: {
-      name: 'a11ySelectionMessageDisplayer',
-    },
-    onChange: {
-      name: 'onChange',
-    },
-    onBlur: {
-      name: 'onBlur',
-    },
-    onInputChange: {
-      name: 'onInputChange',
-    },
-    onMenuClose: {
-      name: 'onMenuClose',
-    },
-    onMenuOpen: {
-      name: 'onMenuOpen',
-    },
-    openOnLoad: {
-      name: 'openOnLoad',
-      control: { type: 'boolean' },
-    },
-    uniqLabelOnSearch: {
-      name: 'uniqLabelOnSearch',
-      control: { type: 'boolean' },
-    },
-    menuZIndex: {
-      name: 'menuZIndex',
-      control: { type: 'number' },
-    },
-    comboboxButtonLabelText: {
-      name: 'comboboxButtonLabelText',
-      control: { type: 'text' },
-    },
-    noResultText: {
-      name: 'noResultText',
-      control: { type: 'text' },
-    },
-  },
-  args: {
-    id: 'dropdown-select',
-    error: false,
-    valid: false,
-    disabled: false,
-    hideLabel: false,
-    combobox: false,
-    labelText: 'label',
-    options: options,
-    size: 'normal',
-    variant: 'andromeda',
-    comboboxButtonLabelText: 'label',
-    noResultText: 'No results',
-    menuZIndex: 1000,
-  },
+  args,
+  argTypes,
 }
 
 export const Default = args => {
@@ -258,12 +261,11 @@ export const ControlledInput = args => {
         onBlur={action('onBlur')}
       />
       <Button
-        className="k-u-margin-top-single"
         onClick={() => setValue(getRandomOption())}
       >
         Change Value
       </Button>
-      <Button className="k-u-margin-top-single" onClick={() => setValue('')}>
+      <Button onClick={() => setValue('')}>
         Reset Value
       </Button>
     </>
