@@ -10,7 +10,7 @@ import {
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 
-export const MinimalistHeaderNavStory = (args) => (
+export const MinimalistHeaderNavStory = ({ text, subText, ...args }) => (
   <HeaderNav
     id={HEADER_NAV_ID}
     {...args}

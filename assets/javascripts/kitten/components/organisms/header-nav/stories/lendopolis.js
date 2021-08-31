@@ -92,7 +92,7 @@ const InnerAnonymousMenu = () => (
   </HeaderMenu>
 )
 
-export const LendopolisHeaderNavStory = ({isLogged, ...args}) => {
+export const LendopolisHeaderNavStory = ({ isLogged, ...args }) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const [userMenuWidth, setUserMenuWidth] = useState(null)
 

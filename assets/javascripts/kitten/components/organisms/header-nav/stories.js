@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { boolean, text, select } from '@storybook/addon-knobs'
 import { HeaderNav } from './index'
 import { LendopolisHeaderNavStory } from './stories/lendopolis'
 import { KissKissBankBankHeaderNavStory } from './stories/kisskissbankbank'
@@ -21,21 +20,22 @@ const Container = styled.div`
 `
 
 const args = {
-    isLogged: false,
-    isFixed: true,
-    size: 'regular',
-    borderStyle: 'shadow',
-    whiteBg: false,
-  }
+  isLogged: false,
+  isFixed: true,
+  size: 'regular',
+  borderStyle: 'shadow',
+  whiteBg: false,
+}
 const argTypes = {
-    isLogged: {control: 'boolean'},
-    isFixed: {control: 'boolean'},
-    size: {control: 'inline-radio', options: ['regular', 'small'] },
-    borderStyle: {control: 'inline-radio', options: ['none', 'shadow', 'border'] },
-    whiteBg: {name: 'white bagkground (story prop)', control: 'boolean'},
-
-  }
-
+  isLogged: { control: 'boolean' },
+  isFixed: { control: 'boolean' },
+  size: { control: 'inline-radio', options: ['regular', 'small'] },
+  borderStyle: {
+    control: 'inline-radio',
+    options: ['none', 'shadow', 'border'],
+  },
+  whiteBg: { name: 'white bagkground (story prop)', control: 'boolean' },
+}
 
 export default {
   title: 'Organisms/HeaderNav',
@@ -72,58 +72,41 @@ export default {
       ),
     },
   },
-  decorators: [
-    story => (
-      <>
-        {story()}
-      </>
-    ),
-  ],
+  decorators: [story => <>{story()}</>],
   component: HeaderNav,
   args,
   argTypes,
 }
 
-export const Lendopolis = ({whiteBg, stickyProps,...args}) => (
+export const Lendopolis = ({ whiteBg, stickyProps, ...args }) => (
   <Container whiteBg={whiteBg}>
-    <LendopolisHeaderNavStory
-      {...args}
-      stickyProps={stickyProps ? null : {}}
-    />
+    <LendopolisHeaderNavStory {...args} stickyProps={stickyProps ? null : {}} />
   </Container>
 )
 Lendopolis.args = {
   ...args,
-  stickyProps: false
+  stickyProps: false,
 }
 Lendopolis.argTypes = {
   ...argTypes,
-  stickyProps: {control: 'boolean'}
+  stickyProps: { control: 'boolean' },
 }
 
-export const KissKissBankBank = ({whiteBg,...args}) => (
+export const KissKissBankBank = ({ whiteBg, ...args }) => (
   <Container whiteBg={whiteBg}>
-    <KissKissBankBankHeaderNavStory
-      {...args}
-    />
+    <KissKissBankBankHeaderNavStory {...args} />
   </Container>
 )
 
-export const KissKissBankBankNew = ({whiteBg,...args}) => (
+export const KissKissBankBankNew = ({ whiteBg, ...args }) => (
   <Container whiteBg={whiteBg}>
-    <KissKissBankBankHeaderNavStoryNew
-      {...args}
-    />
+    <KissKissBankBankHeaderNavStoryNew {...args} />
   </Container>
 )
 
-export const Minimalist = ({whiteBg,text, subText, ...args}) => (
+export const Minimalist = ({ whiteBg, text, subText, ...args }) => (
   <Container whiteBg={whiteBg}>
-    <MinimalistHeaderNavStory
-      {...args}
-      text={text}
-      subText={subText}
-    />
+    <MinimalistHeaderNavStory {...args} text={text} subText={subText} />
   </Container>
 )
 Minimalist.args = {
@@ -133,6 +116,6 @@ Minimalist.args = {
 }
 Minimalist.argTypes = {
   ...argTypes,
-  text: {control: 'text'},
-  subText: {control: 'text'},
+  text: { control: 'text' },
+  subText: { control: 'text' },
 }

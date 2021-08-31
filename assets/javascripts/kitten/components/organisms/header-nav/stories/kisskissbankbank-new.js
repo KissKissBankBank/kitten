@@ -228,7 +228,7 @@ const SearchInput = () => {
   )
 }
 
-export const KissKissBankBankHeaderNavStoryNew = ({isLogged, args}) => {
+export const KissKissBankBankHeaderNavStoryNew = ({ isLogged, args }) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const windowWidth = useWindowWidth()
 

@@ -83,7 +83,7 @@ const Navigation = () => (
   </>
 )
 
-export const KissKissBankBankHeaderNavStory = ({isLogged, args}) => {
+export const KissKissBankBankHeaderNavStory = ({ isLogged, args }) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const [userMenuWidth, setUserMenuWidth] = useState(null)
   const windowWidth = useWindowWidth()

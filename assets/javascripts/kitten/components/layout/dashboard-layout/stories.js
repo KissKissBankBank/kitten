@@ -127,15 +127,15 @@ export default {
     },
   },
   args: {
-    quickAccessLinkText: "Accéder au contenu",
+    quickAccessLinkText: 'Accéder au contenu',
     backLinkProps: {
-        href: '#',
-        children: 'Retour au site',
-      },
+      href: '#',
+      children: 'Retour au site',
+    },
     buttonProps: {
-        openLabel: 'Ouvrir le menu',
-        closeLabel: 'Fermer le menu',
-      },
+      openLabel: 'Ouvrir le menu',
+      closeLabel: 'Fermer le menu',
+    },
     fullHeightContent: undefined,
     selectedView: 'flow',
     displayHeader: true,
@@ -144,28 +144,44 @@ export default {
     flowProps: {
       flowLoading: false,
       flowShowTwoButtons: false,
-      flowShowUnsavedText: false
-    }
+      flowShowUnsavedText: false,
+    },
   },
   argTypes: {
-    quickAccessLinkText: { control: 'text'},
-    backLinkProps: {control: 'object'},
-    buttonProps: {control: 'object'},
-    fullHeightContent: {description:'For the purpose of the story, depends on the type of content', control: 'boolean'},
-    selectedView: { name: 'Selected View (story prop)', control: 'radio', options: ['flow', 'dashboard', 'table']},
-    displayHeader: { name:'displayHeader (story prop)', control: 'boolean'},
-    displayAlerts: { name:'displayAlerts (story prop)', control: 'boolean'},
-    status: { name: 'Project status (story prop)', control: 'radio', options: ['danger', 'success', 'warning', 'neutral', 'none']},
-    flowProps: { name:'Flow Props (story prop)', control: 'object'},
-  }
+    quickAccessLinkText: { control: 'text' },
+    backLinkProps: { control: 'object' },
+    buttonProps: { control: 'object' },
+    fullHeightContent: {
+      description:
+        'For the purpose of the story, depends on the type of content',
+      control: 'boolean',
+    },
+    selectedView: {
+      name: 'Selected View (story prop)',
+      control: 'radio',
+      options: ['flow', 'dashboard', 'table'],
+    },
+    displayHeader: { name: 'displayHeader (story prop)', control: 'boolean' },
+    displayAlerts: { name: 'displayAlerts (story prop)', control: 'boolean' },
+    status: {
+      name: 'Project status (story prop)',
+      control: 'radio',
+      options: ['danger', 'success', 'warning', 'neutral', 'none'],
+    },
+    flowProps: { name: 'Flow Props (story prop)', control: 'object' },
+  },
 }
 
-export const Default = ({flowProps, status,selectedView, displayAlerts, displayHeader, ...args}) => {
+export const Default = ({
+  flowProps,
+  status,
+  selectedView,
+  displayAlerts,
+  displayHeader,
+  ...args
+}) => {
   return (
-    <DashboardLayout
-      fullHeightContent={selectedView === 'flow'}
-      {...args}
-    >
+    <DashboardLayout fullHeightContent={selectedView === 'flow'} {...args}>
       {displayHeader && (
         <DashboardLayout.SiteHeader className="k-u-hidden@m-down">
           <SiteHeaderComponent />
@@ -397,7 +413,11 @@ const TableExample = () => (
   </>
 )
 
-const FlowExample = ({flowLoading, flowShowTwoButtons, flowShowUnsavedText}) => (
+const FlowExample = ({
+  flowLoading,
+  flowShowTwoButtons,
+  flowShowUnsavedText,
+}) => (
   <DashboardLayout.Flow loading={flowLoading}>
     <DashboardLayout.Flow.Content>
       <Title
