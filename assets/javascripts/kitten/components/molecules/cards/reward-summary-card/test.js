@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import { RewardSummaryCard } from './index'
 import { DropdownMenu, EllipsisIcon } from '../../../..'
 
-describe('<BackingCard />', () => {
+describe('<RewardSummaryCard />', () => {
   let component
 
   describe('default', () => {
@@ -51,9 +51,9 @@ describe('<BackingCard />', () => {
             <RewardSummaryCard.Contribution>
               1 468 000
             </RewardSummaryCard.Contribution>
-            <RewardSummaryCard.Availablity>
+            <RewardSummaryCard.Availability>
               Illimitée
-            </RewardSummaryCard.Availablity>
+            </RewardSummaryCard.Availability>
             <RewardSummaryCard.Options>
               <DropdownMenu menuPosition="left" button={() => <EllipsisIcon />}>
                 <DropdownMenu.Link href="#">Editer</DropdownMenu.Link>

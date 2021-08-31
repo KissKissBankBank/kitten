@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<BackingCard /> default matches with snapshot 1`] = `
+exports[`<RewardSummaryCard /> default matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa dCvwQj k-RewardSummaryCard"
+  className="sc-bdVaJa fwcsWk k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
 >
   <a
     className="k-RewardSummaryCard__action"
   />
   <div
-    className="k-RewardSummaryCard__imageWrapper"
+    className="k-RewardSummaryCard__imageWrapper k-RewardSummaryCard-Wrapper__imageWrapper"
   >
     <img
       alt=""
@@ -16,7 +16,7 @@ exports[`<BackingCard /> default matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="k-RewardSummaryCard__gridWrapper"
+    className="k-RewardSummaryCard__gridWrapper k-RewardSummaryCard-Wrapper__gridWrapper"
   >
     <span
       className="k-u-color-font1 k-u-size-tiny k-u-weight-regular k-RewardSummaryCard__title"
@@ -32,15 +32,15 @@ exports[`<BackingCard /> default matches with snapshot 1`] = `
 </div>
 `;
 
-exports[`<BackingCard /> with some props matches with snapshot 1`] = `
+exports[`<RewardSummaryCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa dCvwQj k-RewardSummaryCard"
+  className="sc-bdVaJa fwcsWk k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
 >
   <a
     className="k-RewardSummaryCard__action"
   />
   <div
-    className="k-RewardSummaryCard__imageWrapper"
+    className="k-RewardSummaryCard__imageWrapper k-RewardSummaryCard-Wrapper__imageWrapper"
   >
     <img
       alt=""
@@ -48,7 +48,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="k-RewardSummaryCard__gridWrapper"
+    className="k-RewardSummaryCard__gridWrapper k-RewardSummaryCard-Wrapper__gridWrapper"
   >
     <span
       className="k-u-color-font1 k-u-size-tiny k-u-weight-regular k-RewardSummaryCard__title"
@@ -56,7 +56,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
       Stickers Free Boobs Club
     </span>
     <span
-      className="sc-bwzfXH bitWtT k-Tag k-RewardSummaryCard__titleTag k-u-margin-top-single k-u-margin-top-single k-Tag--info"
+      className="sc-htpNat eWjJeV k-Tag k-RewardSummaryCard__titleTag k-u-margin-top-single k-u-margin-top-single k-Tag--info"
     >
       <svg
         fill="#222"
@@ -83,15 +83,15 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
       1 468 000
     </span>
     <span
-      className="k-u-color-font1 k-u-size-tiny k-u-weight-light k-RewardSummaryCard__availablity k-u-hidden@xs-down"
+      className="k-u-color-font1 k-u-size-tiny k-u-weight-light k-RewardSummaryCard__availability k-u-hidden@xs-down"
     >
       Illimitée
     </span>
     <div
-      className="k-RewardSummaryCard__options k-u-hidden@s-down"
+      className="k-RewardSummaryCard__options k-u-hidden@xs-down"
     >
       <details
-        className="sc-iqzUVk kLaOvz k-DropdownMenu k-DropdownMenu--left"
+        className="sc-kLIISr dENbPF k-DropdownMenu k-DropdownMenu--left"
         onKeyDown={[Function]}
         onToggle={[Function]}
         role="menu"
@@ -128,7 +128,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
           </svg>
         </summary>
         <div
-          className="sc-hMFtBS jLEnux k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top k-ArrowContainer--reverseDistance"
+          className="sc-esOvli AsmaA k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top k-ArrowContainer--reverseDistance"
           style={
             Object {
               "--k-ArrowContainer-arrowDistance": "0.625rem",
