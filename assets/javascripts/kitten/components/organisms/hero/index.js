@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Container } from '../../../components/layout/container'
 import { Grid, GridCol } from '../../../components/layout/grid'
-import { ScreenConfig, mq } from '../../../constants/screen-config'
+import { mq } from '../../../constants/screen-config'
 import {
   NUM_COLUMNS,
   CONTAINER_PADDING,
