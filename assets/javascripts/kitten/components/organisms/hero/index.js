@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Container } from '../../../components/layout/container'
 import { Grid, GridCol } from '../../../components/layout/grid'
-import { ScreenConfig } from '../../../constants/screen-config'
+import { ScreenConfig, mq } from '../../../constants/screen-config'
 import {
   NUM_COLUMNS,
   CONTAINER_PADDING,
@@ -30,10 +30,10 @@ const StyledHero = styled(
     color: ${({ color }) => color};
     padding: ${pxToRem(100)} ${pxToRem(115)};
 
-    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+    @media ${mq.mobileAndTablet} {
       padding: ${pxToRem(100)} ${pxToRem(85)};
     }
-    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+    @media ${mq.mobile} {
       padding: ${pxToRem(50)} ${pxToRem(20)};
     }
   }
@@ -52,13 +52,13 @@ const StyledHero = styled(
     background-repeat: no-repeat;
     background-position: 50% 50%;
 
-    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+    @media ${mq.mobileAndTablet} {
       width: calc(100% + ${pxToRem(CONTAINER_PADDING * 2)});
       height: 100vw;
       margin-left: ${pxToRem(-CONTAINER_PADDING)};
     }
 
-    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+    @media ${mq.mobile} {
       width: calc(100% + ${pxToRem(CONTAINER_PADDING_THIN * 2)});
       margin-left: ${pxToRem(-CONTAINER_PADDING_THIN)};
     }
@@ -66,24 +66,24 @@ const StyledHero = styled(
 
   &.k-Hero--direction-left {
     .k-Hero__contentGridCol {
-      @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      @media ${mq.mobileAndTablet} {
         padding-top: ${(8 / NUM_COLUMNS) * 100 + 'vw'};
         margin-left: 0;
       }
     }
 
     .k-Hero__content {
-      @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      @media ${mq.mobile} {
         margin-left: ${pxToRem(-CONTAINER_PADDING_THIN)};
       }
     }
 
     .k-Hero__imageGridCol {
-      @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      @media ${mq.mobileAndTablet} {
         margin-left: -${(10 / NUM_COLUMNS) * 100 + '%'};
         padding-bottom: 0;
       }
-      @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      @media ${mq.mobile} {
         margin-left: -100%;
       }
     }
@@ -93,17 +93,17 @@ const StyledHero = styled(
     .k-Hero__contentGridCol {
       margin-left: ${(5 / NUM_COLUMNS) * 100 + '%'};
 
-      @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      @media ${mq.mobileAndTablet} {
         padding-top: ${(8 / NUM_COLUMNS) * 100 + 'vw'};
         margin-left: ${(2 / NUM_COLUMNS) * 100 + '%'};
       }
-      @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      @media ${mq.mobile} {
         margin-left: 0;
       }
     }
 
     .k-Hero__content {
-      @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      @media ${mq.mobile} {
         margin-right: ${pxToRem(-CONTAINER_PADDING_THIN)};
       }
     }
@@ -111,10 +111,10 @@ const StyledHero = styled(
     .k-Hero__imageGridCol {
       margin-left: -${(11 / NUM_COLUMNS) * 100 + '%'};
 
-      @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      @media ${mq.mobileAndTablet} {
         margin-left: -${(12 / NUM_COLUMNS) * 100 + '%'};
       }
-      @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      @media ${mq.mobile} {
         margin-left: -100%;
       }
     }
@@ -125,7 +125,7 @@ const StyledHero = styled(
   }
 
   &.k-Hero--tiny {
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    @media ${mq.desktop} {
       .k-Hero__contentGridCol {
         padding-bottom: ${(1 / 2 / NUM_COLUMNS) * 100 + 'vw'};
       }
