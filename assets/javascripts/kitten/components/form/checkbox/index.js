@@ -227,6 +227,7 @@ Checkbox.defaultProps = {
   error: false,
   disabled: false,
   variant: 'andromeda',
+  onLabelClick: () => {},
 }
 
 Checkbox.propTypes = {
@@ -238,4 +239,5 @@ Checkbox.propTypes = {
   children: PropTypes.node,
   label: PropTypes.string,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
+  onLabelClick: PropTypes.func,
 }

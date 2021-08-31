@@ -5,7 +5,7 @@ import {
   InstagramButtonIconWords,
   LinkedinButtonIconWords,
 } from './index'
-import { Marger, Container, Grid, GridCol } from '../../../..'
+import { Grid, GridCol } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -18,18 +18,11 @@ export default {
       ),
     },
   },
+  decorators: [story => <div className="story-Container">{story()}</div>],
 }
 
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      <Grid>{children}</Grid>
-    </Marger>
-  </Container>
-)
-
 export const SocialButtonIconWords = () => (
-  <StoryContainer>
+  <Grid>
     <GridCol col-s="6" col-l="3">
       <FacebookButtonIconWords fluid>Facebook</FacebookButtonIconWords>
     </GridCol>
@@ -45,5 +38,5 @@ export const SocialButtonIconWords = () => (
     <GridCol col-s="6" col-l="3">
       <LinkedinButtonIconWords fluid>Linkedin</LinkedinButtonIconWords>
     </GridCol>
-  </StoryContainer>
+  </Grid>
 )

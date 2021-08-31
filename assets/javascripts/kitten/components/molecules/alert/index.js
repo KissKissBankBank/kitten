@@ -147,7 +147,6 @@ export const Alert = ({
 }
 
 Alert.propTypes = {
-  className: PropTypes.string,
   show: PropTypes.bool,
   error: PropTypes.bool,
   success: PropTypes.bool,
@@ -158,7 +157,6 @@ Alert.propTypes = {
 }
 
 Alert.defaultProps = {
-  className: null,
   show: true,
   error: false,
   success: false,

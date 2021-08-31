@@ -1,50 +1,61 @@
 import React from 'react'
-import { text, object, select } from '@storybook/addon-knobs'
 import { VerticalCardWithAction } from './index'
-import { Container, Grid, GridCol } from '../../../..'
+import { action } from '@storybook/addon-actions'
 
-const buttonModifierOptions = {
-  Hydrogen: 'hydrogen',
-  Helium: 'helium',
-  Lithium: 'lithium',
-  Beryllium: 'beryllium',
-  Carbon: 'carbon',
-  Oxygen: 'oxygen',
-  Checked: 'checked',
-  Copper: 'copper',
-  Boron: 'boron',
-  Neon: 'neon',
-  Iron: 'iron',
+export default {
+  title: 'Molecules/Cards/VerticalCardWithAction',
+  component: VerticalCardWithAction,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="VerticalCardWithAction" />
+      ),
+    },
+  },
+  decorators: [
+    story => <div className="story-Container story-Grid">{story()}</div>,
+  ],
+  argTypes: {
+    button: { control: 'text' },
+    title: { control: 'text' },
+    buttonModifier: {
+      control: 'select',
+      options: [
+        'hydrogen',
+        'helium',
+        'lithium',
+        'beryllium',
+        'carbon',
+        'oxygen',
+        'checked',
+        'copper',
+        'boron',
+        'neon',
+        'iron',
+      ],
+    },
+    buttonProps: { control: 'object' },
+    description: { control: 'text' },
+    descriptionTag: { control: 'text' },
+    imageProps: { control: 'object' },
+    titleTag: { control: 'text' },
+  },
+  args: {
+    button: 'Butron text',
+    title: 'Custom title',
+    buttonModifier: 'helium',
+    buttonProps: {
+      onClick: action('onClick'),
+    },
+    description:
+      'Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
+    descriptionTag: 'p',
+    imageProps: {
+      alt: '',
+      src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    },
+    titleTag: 'h2',
+  },
 }
 
-export const Default = () => (
-  <Container className="k-u-margin-top-triple k-u-margin-bottom-triple">
-    <Grid>
-      <GridCol col-l="4" col-s="6" col-xs="10" offset-xs="1" col-xxs="12">
-        <VerticalCardWithAction
-          imageProps={object('Src/Alt', {
-            src: 'https://via.placeholder.com/410x230/caf4fe/caf4fe',
-            alt: 'Image alt',
-          })}
-          title={text('Title', 'Custom title')}
-          description={text(
-            'Description',
-            'Lorem ipsum dolor sit amet, consectetur adipisicing ' +
-              'elit, sed do eiusmod tempor incididunt ut labore et ' +
-              'dolore magna aliqua. Ut enim ad minim veniam, quis ' +
-              'nostrud exercitation ullamco laboris nisi ut aliquip.',
-          )}
-          button={text('Button', 'Custom button text')}
-          buttonModifier={select(
-            'ButtonModifier',
-            buttonModifierOptions,
-            'helium',
-          )}
-          buttonProps={object('ButtonProps', {
-            href: 'https://via.placeholder.com/410x230/caf4fe/caf4fe',
-          })}
-        />
-      </GridCol>
-    </Grid>
-  </Container>
-)
+export const Default = args => <VerticalCardWithAction {...args} />

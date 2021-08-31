@@ -1,92 +1,63 @@
 import React, { useRef } from 'react'
 import { StickyContainer } from './index'
-import { Container } from '../../../components/layout/container'
-import COLORS from '../../../constants/colors-config'
-import { createRangeFromZeroTo } from '../../../helpers/utils/range'
+import { COLORS, createRangeFromZeroTo } from '../../..'
 
-const BlockContent = () => {
-  const lines = createRangeFromZeroTo(100)
-
-  return (
+const storyDecorator = story => (
+  <div
+    className="story-Container"
+    style={{
+      minHeight: '1200px',
+      backgroundColor: COLORS.line1,
+      position: 'relative',
+    }}
+  >
+    {story()}
     <ul>
-      {lines.map(i => {
+      {createRangeFromZeroTo(100).map(i => {
         return <li key={i}>🐱</li>
       })}
     </ul>
-  )
-}
-
-export const AlwaysSticky = () => (
-  <Container>
-    <div
-      style={{
-        minHeight: '1200px',
-        backgroundColor: COLORS.line1,
-        position: 'relative',
-      }}
-    >
-      <StickyContainer isSticky="always">
-        <div
-          style={{
-            fontSize: '40px',
-            lineHeight: '40px',
-          }}
-        >
-          🐈
-        </div>
-      </StickyContainer>
-      <BlockContent />
-    </div>
-  </Container>
+  </div>
 )
 
-export const NeverSticky = () => (
-  <Container>
+export const AlwaysSticky = args => (
+  <StickyContainer {...args}>
     <div
       style={{
-        minHeight: '1200px',
-        backgroundColor: COLORS.line1,
-        position: 'relative',
+        fontSize: '40px',
+        lineHeight: '40px',
       }}
     >
-      <StickyContainer isSticky="never">
-        <div
-          style={{
-            fontSize: '40px',
-            lineHeight: '40px',
-          }}
-        >
-          🐈
-        </div>
-      </StickyContainer>
-      <BlockContent />
+      🐈
     </div>
-  </Container>
+  </StickyContainer>
 )
 
-export const StickyTopOnScrollUp = () => {
+export const NeverSticky = args => (
+  <StickyContainer {...args}>
+    <div
+      style={{
+        fontSize: '40px',
+        lineHeight: '40px',
+      }}
+    >
+      🐈
+    </div>
+  </StickyContainer>
+)
+
+export const StickyTopOnScrollUp = args => {
   const component = useRef(null)
 
   return (
-    <Container>
+    <StickyContainer {...args} ref={component}>
       <div
         style={{
-          minHeight: '1200px',
-          backgroundColor: COLORS.line1,
-          position: 'relative',
+          fontSize: '40px',
+          lineHeight: '40px',
         }}
       >
-        <StickyContainer isSticky="topOnScrollUp" top="0" ref={component}>
-          <div
-            style={{
-              fontSize: '40px',
-              lineHeight: '40px',
-            }}
-          >
-            🐈
-          </div>
-        </StickyContainer>
-        <BlockContent />
+        🐈
         <button
           onClick={() => {
             component.current.setSticky()
@@ -102,30 +73,61 @@ export const StickyTopOnScrollUp = () => {
           Unstik me!
         </button>
       </div>
-    </Container>
+    </StickyContainer>
   )
 }
 
-export const StickyBottomOnScrollDown = () => (
-  <Container>
+export const StickyBottomOnScrollDown = args => (
+  <StickyContainer {...args}>
     <div
       style={{
-        minHeight: '1200px',
-        backgroundColor: COLORS.line1,
-        position: 'relative',
+        fontSize: '40px',
+        lineHeight: '40px',
       }}
     >
-      <StickyContainer isSticky="bottomOnScrollDown" bottom="0">
-        <div
-          style={{
-            fontSize: '40px',
-            lineHeight: '40px',
-          }}
-        >
-          🐈
-        </div>
-      </StickyContainer>
-      <BlockContent />
+      🐈
     </div>
-  </Container>
+  </StickyContainer>
 )
+
+const argTypes = {
+  top: {
+    name: 'top',
+    control: { type: 'number' },
+  },
+  bottom: {
+    name: 'bottom',
+    control: { type: 'number' },
+  },
+  isSticky: {
+    name: 'isSticky',
+    options: ['topOnScrollUp', 'bottomOnScrollDown', 'always', 'never'],
+    control: { type: 'select' },
+  },
+}
+
+const args = {
+  top: null,
+  bottom: null,
+  isSticky: 'never',
+}
+
+AlwaysSticky.decorators = [storyDecorator]
+AlwaysSticky.argTypes = argTypes
+AlwaysSticky.args = { ...args, isSticky: 'always' }
+
+NeverSticky.decorators = [storyDecorator]
+NeverSticky.argTypes = argTypes
+NeverSticky.args = { ...args, isSticky: 'never' }
+
+StickyTopOnScrollUp.decorators = [storyDecorator]
+StickyTopOnScrollUp.argTypes = argTypes
+StickyTopOnScrollUp.args = { ...args, isSticky: 'topOnScrollUp', top: 0 }
+
+StickyBottomOnScrollDown.decorators = [storyDecorator]
+StickyBottomOnScrollDown.argTypes = argTypes
+StickyBottomOnScrollDown.args = {
+  ...args,
+  isSticky: 'bottomOnScrollDown',
+  bottom: 0,
+}

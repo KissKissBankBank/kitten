@@ -1,17 +1,64 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
-import { number, select, boolean } from '@storybook/addon-knobs'
 import { RangeSlider } from './index'
+import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
-
-const Container = styled.div`
-  max-width: 300px;
-  margin: 30px auto;
-`
 
 export default {
   title: 'Form/RangeSlider',
   component: RangeSlider,
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  args: {
+    disabled: false,
+    min: 0,
+    max: 100,
+    step: 1,
+    initialValue: 20,
+    name: 'slider',
+    onChange: action('onChange'),
+    rangeThumbText: null,
+    rangeThumbPosition: 'bottom',
+  },
+  argTypes: {
+    disabled: {
+      name: 'disabled',
+      control: { type: 'boolean' },
+    },
+    min: {
+      name: 'min',
+      control: { type: 'number' },
+    },
+    max: {
+      name: 'max',
+      control: { type: 'number' },
+    },
+    step: {
+      name: 'step',
+      control: { type: 'number' },
+    },
+    initialValue: {
+      name: 'initialValue',
+      control: { type: 'number' },
+    },
+    name: {
+      name: 'name',
+      control: { type: 'text' },
+    },
+    rangeThumbText: {
+      name: 'rangeThumbText',
+      control: { type: 'text' },
+    },
+    rangeThumbPosition: {
+      name: 'rangeThumbPosition',
+      options: ['top', 'bottom'],
+      control: { type: 'inline-radio' },
+    },
+  },
   parameters: {
     docs: {
       page: () => <DocsPage filepath={__filename} importString="RangeSlider" />,
@@ -19,41 +66,16 @@ export default {
   },
 }
 
-export const Default = () => (
-  <Container>
-    <RangeSlider
-      disabled={boolean('disabled', false)}
-      min={number('min', 0)}
-      max={number('max', 100)}
-      step={number('step', 1)}
-      initialValue={number('initialValue', 20)}
-      name="slider"
-    />
-  </Container>
-)
-export const WithRangeThumbText = () => {
+export const Default = args => <RangeSlider {...args} />
+
+export const WithRangeThumbText = args => {
   const [value, setValue] = useState(0)
 
   return (
-    <Container>
-      <RangeSlider
-        disabled={boolean('disabled', false)}
-        min={number('min', 0)}
-        max={number('max', 100)}
-        step={number('step', 1)}
-        initialValue={number('initialValue', 20)}
-        onChange={event => setValue(event.target.value)}
-        rangeThumbText={`Value: ${value}`}
-        rangeThumbPosition={select(
-          'rangeThumbPosition',
-          {
-            top: 'top',
-            bottom: 'bottom',
-          },
-          'bottom',
-        )}
-        name="slider"
-      />
-    </Container>
+    <RangeSlider
+      {...args}
+      onChange={event => setValue(event.target.value)}
+      rangeThumbText={`Value: ${value}`}
+    />
   )
 }

@@ -22,6 +22,8 @@ const StyledEmbedPlayer = styled.div`
   .k-EmbedPlayer__thumbnail {
     display: block;
     width: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   .k-EmbedPlayer__embededPlayer {

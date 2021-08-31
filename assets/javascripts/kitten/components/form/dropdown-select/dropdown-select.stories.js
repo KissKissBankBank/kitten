@@ -1,26 +1,10 @@
 import React, { useState } from 'react'
 import { DropdownSelect } from './index'
 import { Button } from '../../../index'
-import { Grid, GridCol } from '../../layout/grid'
 import { ArrowIcon } from '../../graphics/icons/arrow-icon'
 import { Text } from '../../atoms/typography/text'
 import { DocsPage } from 'storybook/docs-page'
-
-export default {
-  component: DropdownSelect,
-  title: 'Form/DropdownSelect',
-  parameters: {
-    docs: {
-      page: () => (
-        <DocsPage
-          filepath={__filename}
-          filenames={['index.js', 'combobox.js', 'styles.js']}
-          importString="DropdownSelect"
-        />
-      ),
-    },
-  },
-}
+import { action } from '@storybook/addon-actions'
 
 const options = [
   {
@@ -44,121 +28,208 @@ const options = [
   },
 ]
 
-const args = {
+const argTypes= {
+  id: {
+    name: 'id',
+    control: { type: 'text' },
+  },
+  labelText: {
+    name: 'labelText',
+    control: { type: 'text' },
+  },
+  combobox: {
+    name: 'combobox',
+    control: { type: 'boolean' },
+  },
+  hideLabel: {
+    name: 'hideLabel',
+    control: { type: 'boolean' },
+  },
+  options: {
+    name: 'options',
+    control: { type: 'object' },
+  },
+  placeholder: {
+    name: 'placeholder',
+    control: { type: 'text' },
+  },
+  labelPropsGetter: {
+    name: 'labelPropsGetter',
+  },
+  variant: {
+    name: 'variant',
+    options: ['andromeda', 'orion'],
+    control: { type: 'inline-radio' },
+  },
+  size: {
+    name: 'size',
+    options: ['tiny', 'normal', 'big', 'huge', 'giant'],
+    control: { type: 'select' },
+  },
+  a11yStatusError: {
+    name: 'a11yStatusError',
+    control: { type: 'text' },
+  },
+  a11yStatusValid: {
+    name: 'a11yStatusValid',
+    control: { type: 'text' },
+  },
+  a11ySelectionMessageDisplayer: {
+    name: 'a11ySelectionMessageDisplayer',
+  },
+  onChange: {
+    name: 'onChange',
+  },
+  onBlur: {
+    name: 'onBlur',
+  },
+  onInputChange: {
+    name: 'onInputChange',
+  },
+  onMenuClose: {
+    name: 'onMenuClose',
+  },
+  onMenuOpen: {
+    name: 'onMenuOpen',
+  },
+  openOnLoad: {
+    name: 'openOnLoad',
+    control: { type: 'boolean' },
+  },
+  uniqLabelOnSearch: {
+    name: 'uniqLabelOnSearch',
+    control: { type: 'boolean' },
+  },
+  menuZIndex: {
+    name: 'menuZIndex',
+    control: { type: 'number' },
+  },
+  comboboxButtonLabelText: {
+    name: 'comboboxButtonLabelText',
+    control: { type: 'text' },
+  },
+  noResultText: {
+    name: 'noResultText',
+    control: { type: 'text' },
+  },
+}
+const args= {
+  id: 'dropdown-select',
   error: false,
   valid: false,
   disabled: false,
   hideLabel: false,
   combobox: false,
-  controlled: false,
   labelText: 'label',
+  options: options,
   size: 'normal',
   variant: 'andromeda',
   comboboxButtonLabelText: 'label',
   noResultText: 'No results',
-  menuZIndex: 10000,
+  menuZIndex: 1000,
 }
 
-export const Default = props => {
+export default {
+  component: DropdownSelect,
+  title: 'Form/DropdownSelect',
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={['index.js', 'combobox.js', 'styles.js']}
+          importString="DropdownSelect"
+        />
+      ),
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid">
+        {story()}
+      </div>
+    ),
+  ],
+  args,
+  argTypes,
+}
+
+export const Default = args => {
   const [labelProps, setLabelProps] = useState(null)
 
   return (
-    <Grid>
-      <GridCol offset="1" col="8">
-        <DropdownSelect
-          id="dropdown-select"
-          uncontrolled
-          options={options}
-          labelPropsGetter={passedLabelProps => {
-            passedLabelProps && setLabelProps(passedLabelProps())
-          }}
-          defaultSelectedValue="focus"
-          {...props}
-        />
-        <p>
-          Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-          Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Etiam porta sem malesuada magna mollis euismod.
-        </p>
-        <p>labelPropsGetter props:</p>
-        <ul>
-          {labelProps &&
-            Object.keys(labelProps).map(prop => (
-              <li key={prop}>
-                {prop}: {labelProps[prop]}
-              </li>
-            ))}
-        </ul>
-      </GridCol>
-    </Grid>
+    <div>
+      <DropdownSelect
+        {...args}
+        labelPropsGetter={passedLabelProps => {
+          passedLabelProps && setLabelProps(passedLabelProps())
+        }}
+        defaultSelectedValue="focus"
+      />
+      <p>
+        Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+        Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam
+        porta sem malesuada magna mollis euismod.
+      </p>
+      <p>labelPropsGetter props:</p>
+      <ul>
+        {labelProps &&
+          Object.keys(labelProps).map(prop => (
+            <li key={prop}>
+              {prop}: {labelProps[prop]}
+            </li>
+          ))}
+      </ul>
+    </div>
   )
 }
-
-Default.args = args
 
 export const WithDuplicateValue = args => {
   return (
-    <Grid>
-      <GridCol offset="1" col="8">
-        <DropdownSelect
-          {...args}
-          id="dropdown-select-WithDuplicateValue"
-          uncontrolled
-          options={[
-            { value: 'france', label: 'France' },
-            { value: 'france', label: 'France' },
-            { value: 'irlande', label: 'Irlande' },
-          ]}
-          defaultSelectedValue="focus"
-        />
-      </GridCol>
-    </Grid>
+    <DropdownSelect
+      {...args}
+      combobox={true}
+      options={[
+        { value: 'france', label: 'France' },
+        { value: 'france', label: 'France' },
+        { value: 'irlande', label: 'Irlande' },
+      ]}
+    />
   )
 }
-
-WithDuplicateValue.args = args
 
 export const WithComponentsForLabel = args => {
   return (
-    <Grid>
-      <GridCol offset="1" col="8">
-        <DropdownSelect
-          {...args}
-          id="dropdown-select-WithComponentsForLabel"
-          uncontrolled
-          options={[
-            {
-              value: 'France',
-              searchableLabel: 'France',
-              label: (
-                <>
-                  <ArrowIcon direction="left" />
-                  <Text weight="bold">Un titre de la France</Text>
-                  Une explication du label
-                </>
-              ),
-            },
-            {
-              value: 'Espagne',
-              searchableLabel: 'Espagne',
-              label: (
-                <>
-                  <ArrowIcon direction="left" />
-                  <Text weight="bold">Un titre de l'Espagne</Text>
-                  Une explication du label
-                </>
-              ),
-            },
-          ]}
-          defaultSelectedValue="focus"
-        />
-      </GridCol>
-    </Grid>
+    <DropdownSelect
+      {...args}
+      options={[
+        {
+          value: 'France',
+          searchableLabel: 'France',
+          label: (
+            <>
+              <ArrowIcon direction="right" />
+              <Text weight="bold">Un titre de la France</Text>
+              Une explication du label
+            </>
+          ),
+        },
+        {
+          value: 'Espagne',
+          searchableLabel: 'Espagne',
+          label: (
+            <>
+              <ArrowIcon direction="right" />
+              <Text weight="bold">Un titre de l'Espagne</Text>
+              Une explication du label
+            </>
+          ),
+        },
+      ]}
+    />
   )
 }
-
-WithComponentsForLabel.args = args
 
 export const ControlledInput = args => {
   const [value, setValue] = useState('felt')
@@ -177,27 +248,24 @@ export const ControlledInput = args => {
   return (
     <>
       <DropdownSelect
-        id="ControlledInput"
         {...args}
-        labelText="Controlled Input"
-        options={options}
+        hideLabel
+        id="ControlledInput"
         value={value}
-        defaultSelectedValue="focus"
         onChange={e => {
-          console.warn('onChange', e)
+          action('onChange')(e)
           if (!e) return
 
           setValue(e.value)
         }}
-        onBlur={e => console.warn('onBlur', e)}
+        onBlur={action('onBlur')}
       />
       <Button
-        className="k-u-margin-top-single"
         onClick={() => setValue(getRandomOption())}
       >
         Change Value
       </Button>
-      <Button className="k-u-margin-top-single" onClick={() => setValue('')}>
+      <Button onClick={() => setValue('')}>
         Reset Value
       </Button>
     </>

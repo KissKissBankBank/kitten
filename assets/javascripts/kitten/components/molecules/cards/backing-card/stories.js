@@ -1,13 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { boolean } from '@storybook/addon-knobs'
 import { BackingCard } from './index'
 import {
   pxToRem,
   ScreenConfig,
   Container,
-  Grid,
-  GridCol,
   Title,
   Tag,
   Carousel,
@@ -20,8 +17,6 @@ import {
 import { DocsPage } from 'storybook/docs-page'
 
 const StyledCarouselContainer = styled.div`
-  margin: 40px 0;
-
   .k-Carousel--showOtherPages .k-Carousel__inner {
     padding: 0 ${pxToRem(80 - 4)} 0 ${pxToRem(20 - 4)};
 
@@ -30,6 +25,20 @@ const StyledCarouselContainer = styled.div`
     }
   }
 `
+
+const argTypes = {
+  disabled: { control: 'boolean' },
+  hasBorder: { control: 'boolean' },
+  truncateText: {
+    name: 'BackingCard.Description: truncate Text',
+    control: 'boolean',
+  },
+}
+const args = {
+  disabled: false,
+  hasBorder: true,
+  truncateText: false,
+}
 
 export default {
   title: 'Molecules/Cards/BackingCard',
@@ -41,152 +50,148 @@ export default {
   },
 }
 
-export const Default = () => {
+export const Default = ({ truncateText, hasImage, hasButton, ...args }) => {
   return (
-    <Container className="k-u-margin-vertical-quadruple">
-      <Grid>
-        <GridCol col="6" col-l="3">
-          <BackingCard
-            disabled={boolean('Disabled', false)}
-            hasBorder={boolean('Has border', true)}
-          >
-            {boolean('has image', true) && (
-              <BackingCard.Image>
-                <img src="/kitten.jpg" alt="" />
-              </BackingCard.Image>
-            )}
-            <BackingCard.HeadingTag icon="star" text="Star reward" />
-            <BackingCard.Title>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-            </BackingCard.Title>
-            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-            <BackingCard.Info
-              legend="Prix de livraison&nbsp;:"
-              value="5&nbsp;€ (en France)"
-            />
-            <BackingCard.Info
-              legend="Livraison estimée&nbsp;:"
-              value="Janvier 2022"
-            />
-            <BackingCard.Description
-              moreButtonText="See more…"
-              truncateText={boolean('Truncate text', false)}
-            >
-              <p className="k-u-margin-none">
-                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-                tellus eget condimentum rhoncus, sem quam semper libero,{' '}
-                <em className="k-u-style-italic">sit amet adipiscing</em> sem
-                neque sed ipsum.
-              </p>
-              <p className="k-u-margin-none">
-                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                tell
-              </p>
-              <p className="k-u-margin-none">
-                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                tell
-              </p>
-              <p className="k-u-margin-none">
-                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                tell
-              </p>
-            </BackingCard.Description>
-            <BackingCard.TagList>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">5</strong> contributeurs
-              </Tag>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">2/6</strong> disponibles
-              </Tag>
-            </BackingCard.TagList>
-            {boolean('has button', true) && (
-              <BackingCard.Button>Je soutiens</BackingCard.Button>
-            )}
-          </BackingCard>
-        </GridCol>
-      </Grid>
-    </Container>
+    <BackingCard {...args}>
+      {hasImage && (
+        <BackingCard.Image>
+          <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
+        </BackingCard.Image>
+      )}
+      <BackingCard.HeadingTag icon="star" text="Star reward" />
+      <BackingCard.Title>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+      </BackingCard.Title>
+      <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+      <BackingCard.Info
+        legend="Prix de livraison&nbsp;:"
+        value="5&nbsp;€ (en France)"
+      />
+      <BackingCard.Info
+        legend="Livraison estimée&nbsp;:"
+        value="Janvier 2022"
+      />
+      <BackingCard.Description
+        moreButtonText="See more…"
+        truncateText={truncateText}
+      >
+        <p className="k-u-weight-light k-u-margin-none">
+          <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+          tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+          <em className="k-u-style-italic">sit amet adipiscing</em> sem neque
+          sed ipsum.
+        </p>
+        <p className="k-u-weight-light k-u-margin-none">
+          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+        </p>
+        <p className="k-u-weight-light k-u-margin-none">
+          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+        </p>
+        <p className="k-u-weight-light k-u-margin-none">
+          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+        </p>
+      </BackingCard.Description>
+      <BackingCard.TagList>
+        <Tag as="li">
+          <strong className="k-u-weight-regular">5</strong> contributeurs
+        </Tag>
+        <Tag as="li">
+          <strong className="k-u-weight-regular">2/6</strong> disponibles
+        </Tag>
+      </BackingCard.TagList>
+      {hasButton && <BackingCard.Button>Je soutiens</BackingCard.Button>}
+    </BackingCard>
   )
+}
+Default.decorators = [
+  story => (
+    <div className="story-Container story-Grid story-Grid">{story()}</div>
+  ),
+]
+Default.argTypes = {
+  ...argTypes,
+  hasImage: { name: 'has Image (story prop)', control: 'boolean' },
+  hasButton: { name: 'has Button (story prop)', control: 'boolean' },
+}
+Default.args = {
+  ...args,
+  hasImage: true,
+  hasButton: true,
 }
 
-export const Video = () => {
+export const Video = ({ truncateText, hasImage, hasButton, ...args }) => {
   return (
-    <Container className="k-u-margin-vertical-quadruple">
-      <Grid>
-        <GridCol col="6" col-l="3">
-          <BackingCard
-            disabled={boolean('Disabled', false)}
-            hasBorder={boolean('Has border', true)}
-          >
-            <BackingCard.Image>
-              <GifVideo poster="/kitten.jpg">
-                <source
-                  src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
-                  type="video/webm"
-                />
-                <source
-                  src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.mp4"
-                  type="video/mp4"
-                />
-              </GifVideo>
-            </BackingCard.Image>
-            <BackingCard.HeadingTag icon="star" text="Star reward" />
-            <BackingCard.Title>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-            </BackingCard.Title>
-            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-            <BackingCard.Info
-              legend="Prix de livraison&nbsp;:"
-              value="5&nbsp;€ (en France)"
-            />
-            <BackingCard.Info
-              legend="Livraison estimée&nbsp;:"
-              value="Janvier 2022"
-            />
-            <BackingCard.Description
-              moreButtonText="See more…"
-              truncateText={boolean('Truncate text', false)}
-            >
-              <p className="k-u-margin-none">
-                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-                tellus eget condimentum rhoncus, sem quam semper libero,{' '}
-                <em className="k-u-style-italic">sit amet adipiscing</em> sem
-                neque sed ipsum.
-              </p>
-              <p className="k-u-margin-none">
-                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                tell
-              </p>
-              <p className="k-u-margin-none">
-                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                tell
-              </p>
-              <p className="k-u-margin-none">
-                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                tell
-              </p>
-            </BackingCard.Description>
-            <BackingCard.TagList>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">5</strong> contributeurs
-              </Tag>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">2/6</strong> disponibles
-              </Tag>
-            </BackingCard.TagList>
-            <BackingCard.Button>Je soutiens</BackingCard.Button>
-          </BackingCard>
-        </GridCol>
-      </Grid>
-    </Container>
+    <BackingCard {...args}>
+      <BackingCard.Image>
+        <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
+          <source
+            src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
+            type="video/webm"
+          />
+          <source
+            src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.mp4"
+            type="video/mp4"
+          />
+        </GifVideo>
+      </BackingCard.Image>
+      <BackingCard.HeadingTag icon="star" text="Star reward" />
+      <BackingCard.Title>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+      </BackingCard.Title>
+      <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+      <BackingCard.Info
+        legend="Prix de livraison&nbsp;:"
+        value="5&nbsp;€ (en France)"
+      />
+      <BackingCard.Info
+        legend="Livraison estimée&nbsp;:"
+        value="Janvier 2022"
+      />
+      <BackingCard.Description
+        moreButtonText="See more…"
+        truncateText={truncateText}
+      >
+        <p className="k-u-weight-light k-u-margin-none">
+          <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+          tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+          <em className="k-u-style-italic">sit amet adipiscing</em> sem neque
+          sed ipsum.
+        </p>
+        <p className="k-u-weight-light k-u-margin-none">
+          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+        </p>
+        <p className="k-u-weight-light k-u-margin-none">
+          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+        </p>
+        <p className="k-u-weight-light k-u-margin-none">
+          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+        </p>
+      </BackingCard.Description>
+      <BackingCard.TagList>
+        <Tag as="li">
+          <strong className="k-u-weight-regular">5</strong> contributeurs
+        </Tag>
+        <Tag as="li">
+          <strong className="k-u-weight-regular">2/6</strong> disponibles
+        </Tag>
+      </BackingCard.TagList>
+      <BackingCard.Button>Je soutiens</BackingCard.Button>
+    </BackingCard>
   )
 }
+Video.decorators = [
+  story => (
+    <div className="story-Container story-Grid story-Grid">{story()}</div>
+  ),
+]
+Video.argTypes = argTypes
+Video.args = args
 
 export const InACarouselComponent = () => {
   const itemMinWidth = useMedia({
@@ -224,7 +229,7 @@ export const InACarouselComponent = () => {
       >
         <BackingCard as="button" className="k-u-reset-button">
           <BackingCard.Image id="one_such_ID" className="hellowORLD">
-            <img src="/kitten.jpg" alt="" />
+            <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
           </BackingCard.Image>
           <BackingCard.HeadingTag icon="diamond" text="Diamond reward" />
           <BackingCard.Title>
@@ -240,23 +245,23 @@ export const InACarouselComponent = () => {
             value="Janvier 2022"
           />
           <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
               tellus eget condimentum rhoncus, sem quam semper libero,{' '}
               <em className="k-u-style-italic">sit amet adipiscing</em> sem
               neque sed ipsum.
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -288,23 +293,23 @@ export const InACarouselComponent = () => {
             value="Janvier 2022"
           />
           <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
               tellus eget condimentum rhoncus, sem quam semper libero,{' '}
               <em className="k-u-style-italic">sit amet adipiscing</em> sem
               neque sed ipsum.
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -323,7 +328,7 @@ export const InACarouselComponent = () => {
 
         <BackingCard as="button" className="k-u-reset-button">
           <BackingCard.Image>
-            <GifVideo poster="/kitten.jpg">
+            <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
               <source
                 src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
                 type="video/webm"
@@ -345,23 +350,23 @@ export const InACarouselComponent = () => {
             value="Janvier 2022"
           />
           <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
               tellus eget condimentum rhoncus, sem quam semper libero,{' '}
               <em className="k-u-style-italic">sit amet adipiscing</em> sem
               neque sed ipsum.
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -390,23 +395,23 @@ export const InACarouselComponent = () => {
             value="Janvier 2022"
           />
           <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
               tellus eget condimentum rhoncus, sem quam semper libero,{' '}
               <em className="k-u-style-italic">sit amet adipiscing</em> sem
               neque sed ipsum.
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -445,7 +450,7 @@ export const InACarouselComponent = () => {
 
         <BackingCard disabled className="k-u-reset-button">
           <BackingCard.Image>
-            <img src="/kitten.jpg" alt="" />
+            <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
           </BackingCard.Image>
           <BackingCard.HeadingTag icon="star" text="Star reward" />
           <BackingCard.Title>
@@ -453,23 +458,23 @@ export const InACarouselComponent = () => {
           </BackingCard.Title>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
               tellus eget condimentum rhoncus, sem quam semper libero,{' '}
               <em className="k-u-style-italic">sit amet adipiscing</em> sem
               neque sed ipsum.
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -492,23 +497,23 @@ export const InACarouselComponent = () => {
           </BackingCard.Title>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
               tellus eget condimentum rhoncus, sem quam semper libero,{' '}
               <em className="k-u-style-italic">sit amet adipiscing</em> sem
               neque sed ipsum.
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -526,7 +531,7 @@ export const InACarouselComponent = () => {
 
         <BackingCard disabled className="k-u-reset-button">
           <BackingCard.Image>
-            <GifVideo poster="/kitten.jpg">
+            <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
               <source
                 src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
                 type="video/webm"
@@ -539,23 +544,23 @@ export const InACarouselComponent = () => {
           </BackingCard.Image>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
               tellus eget condimentum rhoncus, sem quam semper libero,{' '}
               <em className="k-u-style-italic">sit amet adipiscing</em> sem
               neque sed ipsum.
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
@@ -574,23 +579,23 @@ export const InACarouselComponent = () => {
         <BackingCard disabled className="k-u-reset-button">
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
           <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
               tellus eget condimentum rhoncus, sem quam semper libero,{' '}
               <em className="k-u-style-italic">sit amet adipiscing</em> sem
               neque sed ipsum.
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-            <p className="k-u-margin-none">
+            <p className="k-u-weight-light k-u-margin-none">
               Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { text, select } from '@storybook/addon-knobs'
 import { Label } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
@@ -10,6 +9,28 @@ export default {
     docs: {
       page: () => <DocsPage filepath={__filename} importString="Label" />,
     },
+  },
+  decorators: [story => <div className="story-Container">{story()}</div>],
+  argTypes: {
+    focusId: {
+      name: 'focusId',
+      control: { type: 'text' },
+    },
+    size: {
+      name: 'size',
+      options: [null, undefined, 'normal', 'tiny', 'micro'],
+      control: { type: 'select' },
+    },
+    withoutPointerEvents: {
+      name: 'withoutPointerEvents',
+      control: { type: 'boolean' },
+    },
+  },
+  args: {
+    children: 'Label',
+    focusId: null,
+    size: 'normal',
+    withoutPointerEvents: false,
   },
 }
 
@@ -31,24 +52,13 @@ const FocusableComponent = styled.div`
   }
 `
 
-export const Default = () => (
-  <div className="k-u-margin-quadruple">
-    <Label size={select('size', ['normal', 'tiny', 'micro'], 'normal')}>
-      {text('children', 'Label')}
-    </Label>
-  </div>
-)
+export const Default = args => <Label {...args} />
 
 Default.storyName = 'Label'
 
-export const WithFocusId = () => (
-  <div className="k-u-margin-quadruple">
-    <Label
-      size={select('size', ['normal', 'tiny', 'micro'], 'normal')}
-      focusId="focusable-component"
-    >
-      {text('children', 'Label')}
-    </Label>
+export const WithFocusId = args => (
+  <>
+    <Label {...args} focusId="focusable-component" />
     <FocusableComponent id="focusable-component" tabIndex="0">
       <span className="k-u-color-primary1 k-u-weight-bold k-u-background-color-primary5 focused">
         😸 Focused
@@ -57,7 +67,7 @@ export const WithFocusId = () => (
         😿 Not focused
       </span>
     </FocusableComponent>
-  </div>
+  </>
 )
 
 WithFocusId.storyName = 'with focusId prop'
