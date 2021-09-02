@@ -411,7 +411,7 @@ const RewardsExample = () => {
             contributions: 'Contributions',
             availability: 'Disponibilités',
           }}
-          className="k-u-hidden@xs-down k-u-margin-bottom-triple"
+          className="k-u-hidden@xs-down k-u-margin-bottom-double"
           id="RewardSummaryList"
           size={size}
         />

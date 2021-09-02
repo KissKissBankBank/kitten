@@ -40,7 +40,9 @@ const commonStyles = css`
     }
 
     & > [class*='__amount'] {
-      grid-area: amount;
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        grid-area: amount;
+      }
     }
 
     & > [class*='__contribution'] {
@@ -163,7 +165,10 @@ export const StyledRewardSummaryCard = styled.div`
       bottom: 0;
       width: 100%;
       height: 100%;
-      border-radius: calc(
+      border-top-left-radius: calc(
+        var(--rewardSummaryCard--border-radius) - ${pxToRem(2)}
+      );
+      border-top-right-radius: calc(
         var(--rewardSummaryCard--border-radius) - ${pxToRem(2)}
       );
 
@@ -174,6 +179,7 @@ export const StyledRewardSummaryCard = styled.div`
         border-bottom-left-radius: calc(
           var(--rewardSummaryCard--border-radius) - ${pxToRem(2)}
         );
+        border-top-right-radius: 0;
       }
     }
 
