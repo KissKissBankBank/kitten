@@ -149,6 +149,7 @@ export { LocationIcon } from './components/graphics/icons/location-icon'
 export { LockIcon } from './components/graphics/icons/lock-icon'
 export { LockOutlineIcon } from './components/graphics/icons/lock-outline-icon'
 export { LoginIcon } from './components/graphics/icons/login-icon'
+export { NoImageIcon } from './components/graphics/icons/no-image-icon'
 export { MaestroIcon } from './components/graphics/icons/maestro-icon'
 export { MasterCardIcon } from './components/graphics/icons/mastercard-icon'
 export { MenuIcon } from './components/graphics/icons/menu-icon'
@@ -292,6 +293,10 @@ export { EngagementCard } from './components/molecules/cards/engagement-card'
 export { EngagementCardWithImage } from './components/molecules/cards/engagement-card-with-image'
 export { HorizontalCrowdfundingCard } from './components/molecules/cards/horizontal-crowdfunding-card'
 export { RewardEdition } from './components/molecules/cards/reward-edition'
+export {
+  RewardSummaryCard,
+  useRewardSummaryCardResizeObserver,
+} from './components/molecules/cards/reward-summary-card'
 export { SimpleCard } from './components/molecules/cards/simple-card'
 export { TeamCard } from './components/molecules/cards/team-card'
 export { Triptych } from './components/molecules/cards/triptych'

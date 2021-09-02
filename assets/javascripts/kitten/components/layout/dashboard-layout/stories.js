@@ -39,6 +39,11 @@ import {
   useWindowWidth,
   useDeepCompareEffect,
   TextCopy,
+  FlexWrapper,
+  RewardSummaryCard,
+  useRewardSummaryCardResizeObserver,
+  DropdownMenu,
+  EllipsisIcon,
 } from '../../..'
 
 import { Default as Table } from '../../organisms/tables/list-table/list-table.stories.js'
@@ -132,7 +137,7 @@ export default {
 export const Default = () => {
   const selectedView = select(
     'content_type',
-    ['flow', 'dashboard', 'table'],
+    ['flow', 'dashboard', 'table', 'rewards'],
     'flow',
   )
 
@@ -219,10 +224,10 @@ export const Default = () => {
                 Contributeurs
               </DashboardMenu.Item>
               <DashboardMenu.Item
-                href="?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story&custom=a"
+                href="?id=layout-dashboardlayout--default&knob-content_type=rewards&viewMode=story&custom=a"
                 isActive={
                   window.location.search ===
-                  '?id=layout-dashboardlayout--default&knob-content_type=table&viewMode=story&custom=a'
+                  '?id=layout-dashboardlayout--default&knob-content_type=rewards&viewMode=story&custom=a'
                 }
                 icon={() => <TagIcon color="currentColor" />}
                 onClick={() => closeSideBar()}
@@ -344,6 +349,7 @@ export const Default = () => {
       {selectedView === 'flow' && <FlowExample />}
       {selectedView === 'dashboard' && <DashExample />}
       {selectedView === 'table' && <TableExample />}
+      {selectedView === 'rewards' && <RewardsExample />}
     </DashboardLayout>
   )
 }
@@ -383,6 +389,148 @@ const TableExample = () => (
     </div>
   </>
 )
+
+const RewardsExample = () => {
+  const { ref, size } = useRewardSummaryCardResizeObserver()
+
+  return (
+    <div ref={ref}>
+      <Title
+        modifier="quinary"
+        className="k-u-margin-none k-u-margin-bottom-triple"
+      >
+        Curabitur blandit tempus porttitor.
+      </Title>
+
+      <FlexWrapper gap={15}>
+        <RewardSummaryCard.TitleBar
+          values={{
+            image: 'Visuel de la contrepartie',
+            title: 'Titre de la contrepartie',
+            amount: 'Montant',
+            contributions: 'Contributions',
+            availability: 'Disponibilités',
+          }}
+          className="k-u-hidden@xs-down k-u-margin-bottom-double"
+          id="RewardSummaryList"
+          size={size}
+        />
+
+        <RewardSummaryCard size={size}>
+          <RewardSummaryCard.Image>
+            <img alt="" src="/kitten.jpg" />
+          </RewardSummaryCard.Image>
+          <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
+            Stickers Free Boobs Club
+            <RewardSummaryCard.TitleTag text="Contrepartie star" />
+          </RewardSummaryCard.Title>
+          <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
+            10 000€
+          </RewardSummaryCard.Amount>
+          <RewardSummaryCard.Contribution aria-describedby="RewardSummaryList-contribution">
+            1 468 000
+          </RewardSummaryCard.Contribution>
+          <RewardSummaryCard.Availability aria-describedby="RewardSummaryList-availability">
+            Illimitée
+          </RewardSummaryCard.Availability>
+          <RewardSummaryCard.Options>
+            <DropdownMenu
+              button={() => <EllipsisIcon color={COLORS.font1} />}
+              menuPosition="left"
+            >
+              <DropdownMenu.Link href="#">Editer</DropdownMenu.Link>
+              <DropdownMenu.Link href="#">Dupliquer</DropdownMenu.Link>
+              <DropdownMenu.Link href="#">Désactiver</DropdownMenu.Link>
+              <DropdownMenu.Link>Supprimer</DropdownMenu.Link>
+            </DropdownMenu>
+          </RewardSummaryCard.Options>
+        </RewardSummaryCard>
+        <RewardSummaryCard size={size}>
+          <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
+            Stickers Free Boobs Club
+            <RewardSummaryCard.TitleTag text="Contrepartie star" />
+          </RewardSummaryCard.Title>
+          <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
+            10 000€
+          </RewardSummaryCard.Amount>
+          <RewardSummaryCard.Contribution aria-describedby="RewardSummaryList-contribution">
+            1 468 000
+          </RewardSummaryCard.Contribution>
+          <RewardSummaryCard.Availability aria-describedby="RewardSummaryList-availability">
+            Illimitée
+          </RewardSummaryCard.Availability>
+          <RewardSummaryCard.Options>
+            <DropdownMenu
+              button={() => <EllipsisIcon color={COLORS.font1} />}
+              menuPosition="left"
+            >
+              <DropdownMenu.Link href="#">Editer</DropdownMenu.Link>
+              <DropdownMenu.Link href="#">Dupliquer</DropdownMenu.Link>
+              <DropdownMenu.Link href="#">Désactiver</DropdownMenu.Link>
+              <DropdownMenu.Link>Supprimer</DropdownMenu.Link>
+            </DropdownMenu>
+          </RewardSummaryCard.Options>
+        </RewardSummaryCard>
+
+        <RewardSummaryCard size={size}>
+          <RewardSummaryCard.Image>
+            <img alt="" src="/kitten.jpg" />
+          </RewardSummaryCard.Image>
+          <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
+            Stickers Free Boobs Club
+            <RewardSummaryCard.TitleTag text="Contrepartie star" />
+          </RewardSummaryCard.Title>
+          <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
+            10 000€
+          </RewardSummaryCard.Amount>
+          <RewardSummaryCard.Contribution aria-describedby="RewardSummaryList-contribution">
+            1 468 000
+          </RewardSummaryCard.Contribution>
+          <RewardSummaryCard.Availability aria-describedby="RewardSummaryList-availability">
+            Illimitée
+          </RewardSummaryCard.Availability>
+          <RewardSummaryCard.Options>
+            <DropdownMenu
+              button={() => <EllipsisIcon color={COLORS.font1} />}
+              menuPosition="left"
+            >
+              <DropdownMenu.Link href="#">Editer</DropdownMenu.Link>
+              <DropdownMenu.Link href="#">Dupliquer</DropdownMenu.Link>
+              <DropdownMenu.Link href="#">Désactiver</DropdownMenu.Link>
+              <DropdownMenu.Link>Supprimer</DropdownMenu.Link>
+            </DropdownMenu>
+          </RewardSummaryCard.Options>
+        </RewardSummaryCard>
+        <RewardSummaryCard size={size}>
+          <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
+            Stickers Free Boobs Club
+            <RewardSummaryCard.TitleTag text="Contrepartie star" />
+          </RewardSummaryCard.Title>
+          <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
+            10 000€
+          </RewardSummaryCard.Amount>
+          <RewardSummaryCard.Contribution aria-describedby="RewardSummaryList-contribution">
+            1 468 000
+          </RewardSummaryCard.Contribution>
+          <RewardSummaryCard.Availability aria-describedby="RewardSummaryList-availability">
+            Illimitée
+          </RewardSummaryCard.Availability>
+          <RewardSummaryCard.Options>
+            <DropdownMenu
+              button={() => <EllipsisIcon color={COLORS.font1} />}
+              menuPosition="left"
+            >
+              <DropdownMenu.Link href="#">Editer</DropdownMenu.Link>
+              <DropdownMenu.Link href="#">Dupliquer</DropdownMenu.Link>
+              <DropdownMenu.Link href="#">Désactiver</DropdownMenu.Link>
+              <DropdownMenu.Link>Supprimer</DropdownMenu.Link>
+            </DropdownMenu>
+          </RewardSummaryCard.Options>
+        </RewardSummaryCard>
+      </FlexWrapper>
+    </div>
+  )
+}
 
 const FlowExample = () => (
   <DashboardLayout.Flow loading={boolean('loading', false)}>
@@ -508,7 +656,7 @@ const FlowExample = () => (
       ) : boolean('Show unsaved text', false) ? (
         <Text
           weight="light"
-          color="font2"
+          cssColor={COLORS.font3}
           size="tiny"
           className="k-u-hidden@xs-down"
           style={{ alignSelf: 'center' }}

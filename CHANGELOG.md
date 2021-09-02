@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `NoImageIcon`: Add new component.
+- Feature: `RewardSummaryCard`: Add new component.
 - Feature: Add `createRangeFromZeroTo` to ESM exports.
 - Feature: `IconBadge`: Deprecate `big` and `huge` props.
 - Fix: `EngagementCard`: Remove useless props `hoverBorder` and `isActive`.
