@@ -44,29 +44,9 @@ TitleWithStroke.defaultProps = {
   cssColor: null
 };
 TitleWithStroke.propTypes = {
-  /**
-    Specify Title element tag.
-  */
   tag: PropTypes.string,
-
-  /**
-    TitleWithStroke has seven modifiers,
-    with different sizes depending on the device (desktop, tablet and mobile).
-  */
   modifier: PropTypes.oneOf(titleModifiersNames),
-
-  /**
-    Align title and stroke.
-  */
   align: PropTypes.oneOf(['left', 'center', 'right']),
-
-  /**
-    Use `font-style: italic`.
-  */
   italic: PropTypes.bool,
-
-  /**
-    Specify a color (use a CSS color string).
-  */
   cssColor: PropTypes.string
 };

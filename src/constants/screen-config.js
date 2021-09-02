@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ScreenConfig = exports.ORDERED_SCREEN_SIZES = exports.SCREEN_SIZE_XL = exports.SCREEN_SIZE_L = exports.SCREEN_SIZE_M = exports.SCREEN_SIZE_S = exports.SCREEN_SIZE_XS = exports.SCREEN_SIZE_XXS = void 0;
+exports.mq = exports.ScreenConfig = exports.ORDERED_SCREEN_SIZES = exports.SCREEN_SIZE_XL = exports.SCREEN_SIZE_L = exports.SCREEN_SIZE_M = exports.SCREEN_SIZE_S = exports.SCREEN_SIZE_XS = exports.SCREEN_SIZE_XXS = void 0;
 
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
@@ -45,3 +45,11 @@ var ScreenConfig = (_ScreenConfig = {}, (0, _defineProperty2.default)(_ScreenCon
   max: null
 }), _ScreenConfig);
 exports.ScreenConfig = ScreenConfig;
+var mq = {
+  mobile: "(max-width: ".concat(ScreenConfig.XS.max, "px)"),
+  mobileAndTablet: "(max-width: ".concat(ScreenConfig.M.max, "px)"),
+  tablet: "(min-width: ".concat(ScreenConfig.S.min, "px) and (max-width: ").concat(ScreenConfig.M.max, "px)"),
+  tabletAndDesktop: "(min-width: ".concat(ScreenConfig.S.min, "px)"),
+  desktop: "(min-width: ".concat(ScreenConfig.L.min, "px)")
+};
+exports.mq = mq;

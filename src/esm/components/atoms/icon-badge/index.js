@@ -4,6 +4,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import deprecated from 'prop-types-extra/lib/deprecated';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 var StyledBadge = styled.span.withConfig({
@@ -36,13 +37,14 @@ export var IconBadge = function IconBadge(_ref) {
 IconBadge.defaultProps = {
   disabled: false,
   valid: false,
+  empty: false,
   size: 'normal'
 };
 IconBadge.propTypes = {
   disabled: PropTypes.bool,
   valid: PropTypes.bool,
   empty: PropTypes.bool,
-  big: PropTypes.bool,
-  huge: PropTypes.bool,
+  big: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
+  huge: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge'])
 };

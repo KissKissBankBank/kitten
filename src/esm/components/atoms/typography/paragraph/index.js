@@ -45,24 +45,8 @@ Paragraph.defaultProps = {
 };
 Paragraph.propTypes = {
   tag: PropTypes.string,
-
-  /**
-    Title have seven modifiers. With different size depending on the device (`desktop`, `tablet` and `mobile`).
-  */
   modifier: PropTypes.oneOf(modifierList),
-
-  /**
-    Remove default margins of `title` attribut.
-  */
   noMargin: PropTypes.bool,
-
-  /**
-    Line-height normal (1.2).
-  */
   normalLineHeight: PropTypes.bool,
-
-  /**
-    Use `font-style: italic`.
-  */
   italic: PropTypes.bool
 };

@@ -28,16 +28,14 @@ var StyledText = styled(Text).withConfig({
 export var EngagementCardWithImage = function EngagementCardWithImage(_ref2) {
   var backgroundImage = _ref2.backgroundImage,
       children = _ref2.children,
-      isActive = _ref2.isActive,
       href = _ref2.href,
       as = _ref2.as,
       imageHeight = _ref2.imageHeight,
-      others = _objectWithoutProperties(_ref2, ["backgroundImage", "children", "isActive", "href", "as", "imageHeight"]);
+      others = _objectWithoutProperties(_ref2, ["backgroundImage", "children", "href", "as", "imageHeight"]);
 
   return /*#__PURE__*/React.createElement(StyledContainer, _extends({}, others, {
     as: href ? 'a' : 'div',
-    href: href,
-    isActive: isActive
+    href: href
   }), /*#__PURE__*/React.createElement(StyledCard, null, /*#__PURE__*/React.createElement(StyledImage, {
     src: backgroundImage,
     alt: "",
@@ -53,11 +51,9 @@ export var EngagementCardWithImage = function EngagementCardWithImage(_ref2) {
 EngagementCardWithImage.propTypes = {
   href: PropTypes.string,
   backgroundImage: PropTypes.string.isRequired,
-  isActive: PropTypes.bool,
   imageHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };
 EngagementCardWithImage.defaultProps = {
   href: '',
-  isActive: false,
   imageHeight: ''
 };
