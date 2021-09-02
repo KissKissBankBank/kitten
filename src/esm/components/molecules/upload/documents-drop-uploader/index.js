@@ -289,7 +289,6 @@ DocumentsDropUploader.propTypes = {
   managerTitle: PropTypes.node,
   managerInfo: PropTypes.node,
   onChange: PropTypes.func,
-  quantityErrorText: PropTypes.node,
   sizeErrorText: PropTypes.func,
   status: PropTypes.oneOf(['ready', 'error']),
   typeErrorText: PropTypes.func,

@@ -13,13 +13,13 @@ var _react = _interopRequireDefault(require("react"));
 
 var _text = require("../../../../components/atoms/typography/text");
 
-var SupTitle = function SupTitle(textProps) {
+var SupTitle = function SupTitle(props) {
   return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     size: "tiny",
     lineHeight: "normal",
     transform: "uppercase",
     weight: "bold"
-  }, textProps));
+  }, props));
 };
 
 exports.SupTitle = SupTitle;

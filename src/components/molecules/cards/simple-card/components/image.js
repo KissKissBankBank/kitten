@@ -33,7 +33,7 @@ var Image = function Image(_ref) {
       style = _ref.style;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('k-SimpleCard__imageContainer', className, {
-      'k-SimpleCard__imageContainer--ratio': imageContainerRatio
+      'k-SimpleCard__imageContainer--ratio': !!imageContainerRatio
     }),
     style: (0, _extends2.default)({}, style, {
       '--SimpleCard-image-container-background': imageContainerBackground,

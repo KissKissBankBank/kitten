@@ -121,11 +121,11 @@ ExpandBoardContent.defaultProps = {
 };
 
 var growAnimation = function growAnimation() {
-  return keyframes(["0%:{opacity:0;maxHeight:0;}100%:{opacity:1;maxHeight:this.props.animationMaxHeight;}grow;"]);
+  return keyframes(["0%:{opacity:0;max-height:0;}100%:{opacity:1;max-height:var(--ExpandBoard-animationMaxHeight);};"]);
 };
 
 var shrinkAnimation = function shrinkAnimation() {
-  return keyframes(["0%:{opacity:1;maxHeight:this.props.animationMaxHeight;}100%:{opacity:0;maxHeight:0;}schrink;"]);
+  return keyframes(["0%:{opacity:1;max-height:var(--ExpandBoard-animationMaxHeight);}100%:{opacity:0;max-height:0;};"]);
 };
 
 export var ExpandBoard = /*#__PURE__*/function (_PureComponent3) {
@@ -214,6 +214,7 @@ export var ExpandBoard = /*#__PURE__*/function (_PureComponent3) {
 
       if (_this.state.isShrinking) {
         return {
+          '--ExpandBoard-animationMaxHeight': animationMaxHeight,
           maxHeight: animationMaxHeight,
           opacity: 1,
           animationDuration: "".concat(animationShrinkingDuration, "s"),
@@ -226,6 +227,7 @@ export var ExpandBoard = /*#__PURE__*/function (_PureComponent3) {
       }
 
       return {
+        '--ExpandBoard-animationMaxHeight': animationMaxHeight,
         maxHeight: 0,
         opacity: 0,
         animationDuration: '1s',

@@ -123,6 +123,7 @@ export { LocationIcon } from './components/graphics/icons/location-icon';
 export { LockIcon } from './components/graphics/icons/lock-icon';
 export { LockOutlineIcon } from './components/graphics/icons/lock-outline-icon';
 export { LoginIcon } from './components/graphics/icons/login-icon';
+export { NoImageIcon } from './components/graphics/icons/no-image-icon';
 export { MaestroIcon } from './components/graphics/icons/maestro-icon';
 export { MasterCardIcon } from './components/graphics/icons/mastercard-icon';
 export { MenuIcon } from './components/graphics/icons/menu-icon';
@@ -241,6 +242,7 @@ export { EngagementCard } from './components/molecules/cards/engagement-card';
 export { EngagementCardWithImage } from './components/molecules/cards/engagement-card-with-image';
 export { HorizontalCrowdfundingCard } from './components/molecules/cards/horizontal-crowdfunding-card';
 export { RewardEdition } from './components/molecules/cards/reward-edition';
+export { RewardSummaryCard, useRewardSummaryCardResizeObserver } from './components/molecules/cards/reward-summary-card';
 export { SimpleCard } from './components/molecules/cards/simple-card';
 export { TeamCard } from './components/molecules/cards/team-card';
 export { Triptych } from './components/molecules/cards/triptych';
@@ -286,7 +288,7 @@ export { SingleEntryTable } from './components/organisms/tables/single-entry-tab
 
 export { default as COLORS } from './constants/colors-config';
 export { NUM_COLUMNS, CONTAINER_MAX_WIDTH, GUTTER, CONTAINER_PADDING_THIN, CONTAINER_PADDING } from './constants/grid-config';
-export { SCREEN_SIZE_XXS, SCREEN_SIZE_XS, SCREEN_SIZE_S, SCREEN_SIZE_M, SCREEN_SIZE_L, SCREEN_SIZE_XL, ORDERED_SCREEN_SIZES, ScreenConfig } from './constants/screen-config';
+export { SCREEN_SIZE_XXS, SCREEN_SIZE_XS, SCREEN_SIZE_S, SCREEN_SIZE_M, SCREEN_SIZE_L, SCREEN_SIZE_XL, ORDERED_SCREEN_SIZES, ScreenConfig, mq } from './constants/screen-config';
 export { default as TYPOGRAPHY } from './constants/typography-config';
 export { DROPDOWN_ANIMATED_DELAY } from './constants/dropdown-config'; // Constants from Helpers
 
@@ -319,7 +321,8 @@ export { stringUtils, upcaseFirst } from './helpers/utils/string';
 export { hexToRgba } from './helpers/utils/hex-to-rgba';
 export { getMinQuery, getMaxQuery, getJoinedQueries, createMatchMedia, createMatchMediaMin, createMatchMediaMax, createMatchMediaWithin, getScreenSizeFrom } from './helpers/utils/media-queries';
 export { useMedia } from './helpers/utils/use-media-query';
-export { useDeepCompareEffect } from './helpers/utils/use-deep-compare-effect-hook'; // ---
+export { useDeepCompareEffect } from './helpers/utils/use-deep-compare-effect-hook';
+export { createRangeFromZeroTo } from './helpers/utils/range'; // ---
 // HOC
 // ---
 
