@@ -104,7 +104,6 @@ import flagFile from 'icons/flags.png'
 
 import { Text, pxToRem } from '../../..'
 import React from 'react'
-import { color } from '@storybook/addon-knobs'
 import LinkTo from '@storybook/addon-links/react'
 
 const Container = styled.div`
@@ -173,9 +172,10 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
   }
 `
 
-export const AllIcons = () => {
-  const colorInput = color('Main color', '#333')
-  const bgColorInput = color('Background color', '#FFF')
+export const AllIcons = ({
+  colorInput,
+  bgColorInput,
+}) => {
 
   return (
     <Container>
@@ -390,4 +390,14 @@ export const AllIcons = () => {
   )
 }
 
-export default { title: 'Graphics/Icons' }
+export default {
+  title: 'Graphics/Icons',
+  args: {
+    colorInput: '#333',
+    bgColorInput: '#FFF',
+  },
+  argTypes: {
+    colorInput: { control: 'color' },
+    bgColorInput: { control: 'color' },
+  },
+}

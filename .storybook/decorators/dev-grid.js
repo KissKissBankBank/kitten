@@ -1,11 +1,9 @@
 import React from 'react'
 import { DevGrid } from '../../assets/javascripts/kitten/components/dev/dev-grid'
 
-const GridDecorator = ({ children }) => (
+export const DevGridDecorator = ({ children }) => (
   <>
     {children}
     <DevGrid />
   </>
 )
-
-export default GridDecorator

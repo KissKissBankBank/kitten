@@ -22,7 +22,6 @@ const Container = styled.div`
 
 export default {
   title: 'Organisms/HeaderNav',
-  component: HeaderNav,
   parameters: {
     docs: {
       page: () => (
@@ -56,6 +55,14 @@ export default {
       ),
     },
   },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  component: HeaderNav,
 }
 
 export const Lendopolis = () => (

@@ -2,7 +2,7 @@ import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 import './stylesheets/app-kitten.scss'
 import React from 'react'
-import GridDecorator from './decorators/grid'
+import { DevGridDecorator } from './decorators/dev-grid'
 import { DocsPage, DocsContainer } from '@storybook/addon-docs'
 import { themes } from '@storybook/theming';
 import { FileUrl } from 'storybook/file-url'
@@ -31,12 +31,16 @@ export const parameters = {
       method: 'alphabetical',
     },
   },
+  controls: {
+    expanded: true,
+    sort: 'requiredFirst',
+ },
 }
 
 export const decorators = [
-  Story => (
-    <GridDecorator>
-      <Story />
-    </GridDecorator>
+  story => (
+    <DevGridDecorator>
+      {story()}
+    </DevGridDecorator>
   ),
 ]

@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `NoImageIcon`: Add new component.
 - Feature: `RewardSummaryCard`: Add new component.
+- Feature: Add `createRangeFromZeroTo` to ESM exports.
+- Feature: `IconBadge`: Deprecate `big` and `huge` props.
+- Fix: `EngagementCard`: Remove useless props `hoverBorder` and `isActive`.
+- Fix: `EngagementCardWithImage`: Remove useless prop `isActive`.
+- Fix: `ContributionCard`: Remove useless prop `imageBorderRadius`.
+- Feature: Add `mq` media query constant object.
+- Fix: `HorizontalCrowdfundingCard`: Fix hover styles.
 
 ## [4.4.0] - 2021-08-30
 
@@ -25,7 +32,7 @@ Features:
 - `DocumentsDropUploader`: Add `hover` style to document tag element.
 - `DropdownSelect`: Add explicit `controlled` prop. It is uncontrolled by default
 
-Fixes: 
+Fixes:
 
 - `TagInput`: Keep delete button when disabled.
 - `DropdownSelect`: Can be controlled.

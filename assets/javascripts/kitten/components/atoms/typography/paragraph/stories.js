@@ -1,15 +1,7 @@
 import React from 'react'
-import { text, boolean, select } from '@storybook/addon-knobs'
 import { Paragraph } from './index'
 import { Marger, Text } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
-
-const modifierOptions = {
-  Primary: 'primary',
-  Secondary: 'secondary',
-  Tertiary: 'tertiary',
-  Quaternary: 'quaternary',
-}
 
 export default {
   component: Paragraph,
@@ -25,27 +17,63 @@ export default {
       ),
     },
   },
+  decorators: [
+    story => (
+      <div className="story-Container k-u-flex k-u-flex-direction-column">
+        {story()}
+      </div>
+    ),
+  ],
 }
 
-export const DefaultProp = () => (
-  <Paragraph
-    modifier={select('Modifier', modifierOptions, 'primary')}
-    noMargin={boolean('No margin', true)}
-    normalLineHeight={boolean('Normal line height', false)}
-    italic={boolean('Italic', false)}
-  >
-    {text(
-      'Paragraph',
-      'Lorem Ipsum is simply dummy text of the printing and',
-      "typesetting industry. Lorem Ipsum has been the industry's",
-      'standard dummy text ever since the 1500s, when an unknown',
-      'printer took a galley of type and scrambled it to make a type',
-      'specimen book.',
-    )}
-  </Paragraph>
-)
+export const Default = args => <Paragraph {...args} />
 
-export const Modifier = () => (
+Default.args = {
+  modifier: 'primary',
+  noMargin: false,
+  normalLineHeight: false,
+  italic: false,
+  tag: 'p',
+  children:
+    "Paragraph Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book…",
+}
+
+Default.argTypes = {
+  modifier: {
+    name: 'modifier',
+    description:
+      'Paragraphs have 4 modifiers, they define different sizes depending on the device (`desktop`, `tablet` and `mobile`).',
+    options: ['primary', 'secondary', 'tertiary', 'quaternary'],
+    control: { type: 'select' },
+  },
+  noMargin: {
+    name: 'noMargin',
+    description: 'Removes the default margins the element.',
+    control: { type: 'boolean' },
+  },
+  normalLineHeight: {
+    name: 'normalLineHeight',
+    description: 'Defines `line-height` property as `normal` (~1.2).',
+    control: { type: 'boolean' },
+  },
+  italic: {
+    name: 'italic',
+    description: 'Adds an italic style.',
+    control: { type: 'boolean' },
+  },
+  tag: {
+    name: 'tag',
+    description: 'Changes the paragraph’s element type.',
+    control: { type: 'text' },
+  },
+  children: {
+    name: 'children',
+    description: 'Content of the paragraph.',
+    control: { type: 'text' },
+  },
+}
+
+export const ModifierMetrics = () => (
   <>
     <Text weight="bold">Primary</Text>
     <br />
@@ -149,22 +177,4 @@ export const Modifier = () => (
       </Paragraph>
     </Marger>
   </>
-)
-
-export const Italic = () => (
-  <Paragraph italic>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the
-    1500s, when an unknown printer took a galley of type and scrambled it to
-    make a type specimen book…
-  </Paragraph>
-)
-
-export const NormalLineHeight = () => (
-  <Paragraph normalLineHeight>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the
-    1500s, when an unknown printer took a galley of type and scrambled it to
-    make a type specimen book…
-  </Paragraph>
 )

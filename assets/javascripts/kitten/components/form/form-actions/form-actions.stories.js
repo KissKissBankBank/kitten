@@ -11,6 +11,7 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="FormActions" />,
     },
   },
+  decorators: [story => <div className="story-Container">{story()}</div>],
 }
 
 export const Default = () => {

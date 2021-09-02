@@ -1,25 +1,29 @@
 import React from 'react'
-import { select } from '@storybook/addon-knobs'
 import { BulletList } from './index'
-import { Container } from '../../..'
 
-const sizeOptions = {
-  Tiny: 'tiny',
-  Regular: 'regular',
-  Large: 'large',
-  Big: 'big',
-  Huge: 'huge',
+export const Default = args => <BulletList {...args} />
+
+Default.decorators = [
+  story => <div className="story-Container story-Grid">{story()}</div>,
+]
+
+Default.args = {
+  size: 'regular',
+  items: [
+    { key: '1', item: 'Dis Manibus' },
+    { key: '2', item: 'Calpurnia Felicla' },
+    { key: '3', item: 'Germulio coniugi' },
+  ],
 }
 
-export const Default = () => (
-  <Container>
-    <BulletList
-      size={select('Size', sizeOptions, 'regular')}
-      items={[
-        { key: '1', item: 'Dis Manibus' },
-        { key: '2', item: 'Calpurnia Felicla' },
-        { key: '3', item: 'Germulio coniugi' },
-      ]}
-    />
-  </Container>
-)
+Default.argTypes = {
+  size: {
+    name: 'size',
+    options: ['tiny', 'regular', 'large', 'big', 'huge'],
+    control: { type: 'select' },
+  },
+  items: {
+    name: 'items',
+    control: { type: 'object' },
+  },
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import { ScrollableContainer } from './index'
-import COLORS from '../../../constants/colors-config'
+import { COLORS } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -13,10 +13,21 @@ export default {
       ),
     },
   },
+  args: {
+    shadowColor: COLORS.background1,
+  },
+  argTypes: {
+    shadowColor: {
+      name: 'shadowColor',
+      control: {
+        type: 'color',
+      },
+    },
+  },
 }
 
-export const Default = () => (
-  <ScrollableContainer style={{ backgroundColor: COLORS.line1 }}>
+export const Default = args => (
+  <ScrollableContainer {...args} style={{ backgroundColor: COLORS.line1 }}>
     <div style={{ height: '100px', lineHeight: '100px' }}>
       {'🚗 '.repeat(100)}
     </div>

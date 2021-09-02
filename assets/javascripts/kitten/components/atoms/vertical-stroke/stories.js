@@ -1,9 +1,5 @@
 import React from 'react'
-import { select } from '@storybook/addon-knobs'
 import { VerticalStroke } from './'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../layout/container'
-import { Grid, GridCol } from '../../layout/grid'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -16,24 +12,23 @@ export default {
       ),
     },
   },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid">
+        <div>{story()}</div>
+      </div>
+    ),
+  ],
+  args: {
+    size: 'default',
+  },
+  argTypes: {
+    size: {
+      name: 'size',
+      options: ['tiny', 'default', 'big', 'huge'],
+      control: { type: 'radio' },
+    },
+  },
 }
 
-export const Default = () => {
-  return (
-    <Container>
-      <Grid>
-        <GridCol col="3">
-          <Marger top="5" bottom="5">
-            <VerticalStroke
-              size={select(
-                'Size',
-                { Tiny: 'tiny', Default: 'default', Big: 'big', Huge: 'huge' },
-                'default',
-              )}
-            />
-          </Marger>
-        </GridCol>
-      </Grid>
-    </Container>
-  )
-}
+export const Default = args => <VerticalStroke {...args} />

@@ -1,15 +1,38 @@
 import React from 'react'
-import { text, boolean, select } from '@storybook/addon-knobs'
 import { ButtonImage } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
-export const Default = () => (
-  <ButtonImage
-    tag={text('Tag', 'button')}
-    size={select('Size', ['tiny', 'regular', 'big', 'huge'], 'regular')}
-    withoutPointerEvents={boolean('withoutPointerEvents', false)}
-    withBorder={boolean('withBorder', false)}
-    img={{
-      src: 'https://placehold.it/100x100/caf4fe/caf4fe',
-    }}
-  />
-)
+export default {
+  title: 'Molecules/Buttons/ButtonImage',
+  component: ButtonImage,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="ButtonImage" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  argTypes: {
+    tag: { control: 'text' },
+    size: { control: 'radio', options: ['tiny', 'regular', 'big', 'huge'] },
+    withoutPointerEvents: { control: 'boolean' },
+    withBorder: { control: 'boolean' },
+    img: { control: 'object' },
+  },
+  args: {
+    tag: 'button',
+    size: 'regular',
+    withoutPointerEvents: false,
+    withBorder: false,
+    img: {
+      src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+      alt: '',
+    },
+  },
+}
+export const Default = args => <ButtonImage {...args} />

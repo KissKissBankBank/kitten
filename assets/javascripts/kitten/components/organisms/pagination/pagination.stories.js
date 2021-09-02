@@ -114,3 +114,5 @@ export const Default = () => (
     </Grid>
   </Container>
 )
+
+Default.decorators = [story => <div className="story-Container">{story()}</div>]

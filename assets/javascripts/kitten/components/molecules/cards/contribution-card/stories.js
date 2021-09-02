@@ -2,6 +2,7 @@ import React from 'react'
 import { ContributionCard } from './index'
 import { Container, RocketIllustration, COLORS } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
+import { action } from '@storybook/addon-actions'
 
 const argTypes = {
   show: {
@@ -34,24 +35,21 @@ const argTypes = {
     description: 'border width',
     control: { type: 'text', type: 'number' },
   },
-  imageBorderRadius: {
-    name: 'imageBorderRadius',
-    description: 'Image border radius size',
-    control: { type: 'text', type: 'number' },
-  },
   onClose: {
     name: 'close',
-    description: 'close component',
+    description:
+      'Action when Close button is clicked. If null, no button is displayed.',
     control: { type: 'func' },
   },
   largeInput: {
     name: 'largeInput',
-    description: 'When input is more large',
+    description: 'Should the input be larger?',
     control: { type: 'boolean' },
   },
   largeTitle: {
-    name: 'largeTitle',
-    description: 'When `PillNumber` is hide, the title is more flex',
+    name: 'ContributionCard.Title: largeTitle',
+    description:
+      'When `ContributionCard.PillNumber` is hidden, the title can be more flex',
     control: { type: 'boolean' },
   },
 }
@@ -63,8 +61,7 @@ const args = {
   borderRadius: 8,
   borderStyle: 'solid',
   borderWidth: 2,
-  imageBorderRadius: 5,
-  onClose: undefined,
+  onClose: action('onClose'),
   largeInput: false,
   largeTitle: false,
 }
@@ -92,30 +89,11 @@ export default {
   argTypes,
 }
 
-export const Default = ({
-  show,
-  closeButtonLabel,
-  borderColor,
-  borderRadius,
-  borderStyle,
-  borderWidth,
-  imageBorderRadius,
-  largeInput,
-  largeTitle,
-}) => {
+export const Default = ({ largeTitle, ...args }) => {
   return (
-    <ContributionCard
-      onClose={() => {}}
-      show={show}
-      closeButtonLabel={closeButtonLabel}
-      borderColor={borderColor}
-      borderRadius={borderRadius}
-      borderStyle={borderStyle}
-      borderWidth={borderWidth}
-      largeInput={largeInput}
-    >
-      <ContributionCard.Image imageBorderRadius={imageBorderRadius}>
-        <img src="/kitten.jpg" alt="" />
+    <ContributionCard {...args}>
+      <ContributionCard.Image>
+        <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
       </ContributionCard.Image>
 
       <ContributionCard.Title largeTitle={largeTitle}>
@@ -128,27 +106,11 @@ export const Default = ({
   )
 }
 
-export const PetitPlus = ({
-  show,
-  borderColor,
-  borderRadius,
-  borderStyle,
-  borderWidth,
-  imageBorderRadius,
-  largeInput,
-}) => {
+export const PetitPlus = (...args) => {
   return (
-    <ContributionCard
-      borderStyle={borderStyle}
-      show={show}
-      borderColor={borderColor}
-      borderRadius={borderRadius}
-      borderWidth={borderWidth}
-      largeInput={largeInput}
-    >
+    <ContributionCard {...args} onClose={null}>
       <ContributionCard.Image
         className="k-u-hidden@xs-down"
-        imageBorderRadius={imageBorderRadius}
       >
         <RocketIllustration width={45} height={81} />
       </ContributionCard.Image>

@@ -1,27 +1,46 @@
 import React from 'react'
-import { text, select } from '@storybook/addon-knobs'
 import { StatusWithBullet } from './index'
-import { Grid, GridCol } from '../../../components/layout/grid'
 
-export const Default = () => (
-  <StatusWithBullet
-    statusMessage={text('Status message', 'Message')}
-    statusType={select(
-      'Status type',
-      ['danger', 'success', 'warning', 'neutral', 'none'],
-      'success',
-    )}
-    size={select('Size', ['normal', 'tiny', 'micro'], 'tiny')}
-    weight={select('Weight', ['light', 'regular', 'bold'], 'regular')}
-  />
-)
+export const Default = args => <StatusWithBullet {...args} />
 
 Default.decorators = [
-  Story => (
-    <Grid style={{ marginTop: '5em' }}>
-      <GridCol offset="1" col="8">
-        <Story />
-      </GridCol>
-    </Grid>
+  story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      <div>{story()}</div>
+    </div>
   ),
 ]
+
+Default.args = {
+  statusMessage: 'Message',
+  statusType: 'success',
+  size: 'tiny',
+  weight: 'regular',
+  bulletProps: {},
+}
+
+Default.argTypes = {
+  statusMessage: {
+    name: 'statusMessage',
+    control: { type: 'text' },
+  },
+  statusType: {
+    name: 'statusType',
+    options: ['danger', 'success', 'warning', 'neutral', 'none'],
+    control: { type: 'select' },
+  },
+  size: {
+    name: 'size',
+    options: ['normal', 'tiny', 'micro'],
+    control: { type: 'select' },
+  },
+  weight: {
+    name: 'weight',
+    options: ['light', 'regular', 'bold'],
+    control: { type: 'select' },
+  },
+  bulletProps: {
+    name: 'bulletProps',
+    control: { type: 'object' },
+  },
+}
