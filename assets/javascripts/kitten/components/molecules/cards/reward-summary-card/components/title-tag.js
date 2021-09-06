@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Tag } from '../../../../../components/atoms/tag'
-import { DiamondIcon } from '../../../../../components/graphics/icons/diamond-icon'
+import { LockIcon } from '../../../../../components/graphics/icons/lock-icon'
 import { StarIcon } from '../../../../../components/graphics/icons/star-icon'
 
 export const TitleTag = ({ text, icon, className, ...props }) => {
   const iconDisplay = (() => {
     switch (icon) {
-      case 'diamond':
-        return <DiamondIcon width="18" height="20" />
+      case 'lock':
+        return <LockIcon width="14" height="14" />
       case 'star':
       default:
         return <StarIcon width="14" height="13" />
@@ -32,7 +32,7 @@ export const TitleTag = ({ text, icon, className, ...props }) => {
 }
 
 TitleTag.propTypes = {
-  icon: PropTypes.oneOf(['star', 'diamond']),
+  icon: PropTypes.oneOf(['star', 'lock']),
   text: PropTypes.node,
 }
 TitleTag.defaultProps = {
