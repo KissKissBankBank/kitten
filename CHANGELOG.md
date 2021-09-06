@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `RangeSlider`: Turn to be controlled when `value` prop is passed.
+## [4.5.1] - 2021-09-06
+
+Fix:
+
+- `RangeSlider`: Turn to be controlled when `value` prop is passed.
 
 ## [4.5.0] - 2021-09-02
 
