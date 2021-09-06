@@ -79,3 +79,16 @@ export const WithRangeThumbText = args => {
     />
   )
 }
+
+export const Controlled = args => {
+  const [value, setValue] = useState(40)
+  return (
+    <RangeSlider
+      {...args}
+      max={20}
+      min={1}
+      value={value}
+      onChange={event => setValue(event.target.value)}
+    />
+  )
+}
