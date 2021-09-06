@@ -5,6 +5,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styled from 'styled-components';
+import isUndefined from 'lodash/fp/isUndefined';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import COLORS from '../../../constants/colors-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
@@ -22,7 +23,8 @@ export var RangeSlider = function RangeSlider(_ref) {
       wrapperProps = _ref.wrapperProps,
       rangeThumbText = _ref.rangeThumbText,
       rangeThumbPosition = _ref.rangeThumbPosition,
-      props = _objectWithoutProperties(_ref, ["disabled", "onChange", "initialValue", "wrapperProps", "rangeThumbText", "rangeThumbPosition"]);
+      value = _ref.value,
+      props = _objectWithoutProperties(_ref, ["disabled", "onChange", "initialValue", "wrapperProps", "rangeThumbText", "rangeThumbPosition", "value"]);
 
   var _useState = useState(0),
       _useState2 = _slicedToArray(_useState, 2),
@@ -31,7 +33,17 @@ export var RangeSlider = function RangeSlider(_ref) {
 
   var inputEl = useRef(null);
   var changeEvent = createEvent('change');
+  var isControlled = !isUndefined(value);
+  var addProps = isControlled ? {
+    value: value
+  } : {};
   useEffect(function () {
+    if (isControlled) {
+      setInputRatio(getRatioFrom(value));
+    }
+  }, []);
+  useEffect(function () {
+    if (isControlled) return;
     (inputEl === null || inputEl === void 0 ? void 0 : inputEl.current) && nativeInputValueSetter && nativeInputValueSetter.call(inputEl.current, initialValue);
     (inputEl === null || inputEl === void 0 ? void 0 : inputEl.current) && inputEl.current.dispatchEvent(changeEvent);
   }, [initialValue, inputEl]);
@@ -39,7 +51,7 @@ export var RangeSlider = function RangeSlider(_ref) {
   var getRatioFrom = function getRatioFrom(value) {
     var min = props.min,
         max = props.max;
-    return (value - min) / (max - min);
+    return Math.min(1, (value - min) / (max - min));
   };
 
   var handleChange = function handleChange(event) {
@@ -61,7 +73,7 @@ export var RangeSlider = function RangeSlider(_ref) {
     ref: inputEl,
     type: "range",
     onChange: handleChange
-  }, props)), rangeThumbText && /*#__PURE__*/React.createElement("span", {
+  }, props, addProps)), rangeThumbText && /*#__PURE__*/React.createElement("span", {
     className: "k-RangeSlider__rangeThumbText"
   }, rangeThumbText));
 };
