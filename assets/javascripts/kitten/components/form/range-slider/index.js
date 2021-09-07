@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
+import isUndefined from 'lodash/fp/isUndefined'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
@@ -226,13 +227,23 @@ export const RangeSlider = ({
   wrapperProps,
   rangeThumbText,
   rangeThumbPosition,
+  value,
   ...props
 }) => {
   const [inputRatio, setInputRatio] = useState(0)
   const inputEl = useRef(null)
   const changeEvent = createEvent('change')
+  const isControlled = !isUndefined(value)
+  const addProps = isControlled ? { value } : {}
 
   useEffect(() => {
+    if (isControlled) {
+      setInputRatio(getRatioFrom(value))
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isControlled) return
     inputEl?.current &&
       nativeInputValueSetter &&
       nativeInputValueSetter.call(inputEl.current, initialValue)
@@ -242,7 +253,7 @@ export const RangeSlider = ({
 
   const getRatioFrom = value => {
     const { min, max } = props
-    return (value - min) / (max - min)
+    return Math.min(1, (value - min) / (max - min))
   }
 
   const handleChange = event => {
@@ -268,6 +279,7 @@ export const RangeSlider = ({
         type="range"
         onChange={handleChange}
         {...props}
+        {...addProps}
       />
       {rangeThumbText && (
         <span className="k-RangeSlider__rangeThumbText">{rangeThumbText}</span>

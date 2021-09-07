@@ -36,4 +36,20 @@ describe('<RangeSlider />', () => {
 
     expect(tree).toMatchSnapshot()
   })
+
+  it('should set unbounded values when contolled with value', () => {
+    const tree = renderer
+      .create(
+        <RangeSlider
+          name="test-slider-input"
+          value={20}
+          min={1}
+          max={10}
+          step={1}
+        />,
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
 })
