@@ -11,9 +11,11 @@ var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/sli
 
 var _react = require("react");
 
+var _elementHelper = require("../../../../../helpers/dom/element-helper");
+
 // https://gist.github.com/DominicTobias/c8579667e8a8bd7817c1b4d5b274eb4c
 var useResizeObserver = function useResizeObserver() {
-  if (!'ResizeObserver' in window) {
+  if (!_elementHelper.domElementHelper.canUseDom() && !'ResizeObserver' in window) {
     return {};
   }
 

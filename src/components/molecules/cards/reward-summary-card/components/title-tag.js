@@ -19,7 +19,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _tag = require("../../../../../components/atoms/tag");
 
-var _diamondIcon = require("../../../../../components/graphics/icons/diamond-icon");
+var _lockIcon = require("../../../../../components/graphics/icons/lock-icon");
 
 var _starIcon = require("../../../../../components/graphics/icons/star-icon");
 
@@ -31,10 +31,10 @@ var TitleTag = function TitleTag(_ref) {
 
   var iconDisplay = function () {
     switch (icon) {
-      case 'diamond':
-        return /*#__PURE__*/_react.default.createElement(_diamondIcon.DiamondIcon, {
-          width: "18",
-          height: "20"
+      case 'lock':
+        return /*#__PURE__*/_react.default.createElement(_lockIcon.LockIcon, {
+          width: "14",
+          height: "14"
         });
 
       case 'star':
@@ -53,7 +53,7 @@ var TitleTag = function TitleTag(_ref) {
 
 exports.TitleTag = TitleTag;
 TitleTag.propTypes = {
-  icon: _propTypes.default.oneOf(['star', 'diamond']),
+  icon: _propTypes.default.oneOf(['star', 'lock']),
   text: _propTypes.default.node
 };
 TitleTag.defaultProps = {
