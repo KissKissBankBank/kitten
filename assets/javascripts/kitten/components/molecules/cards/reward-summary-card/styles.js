@@ -126,6 +126,7 @@ export const StyledRewardSummaryCard = styled.div`
     bottom: 0;
     border-radius: var(--rewardSummaryCard--border-radius);
     cursor: pointer;
+    z-index: 1;
 
     &:focus {
       outline: ${COLORS.primary4} solid ${pxToRem(2)};
@@ -144,6 +145,7 @@ export const StyledRewardSummaryCard = styled.div`
   .k-RewardSummaryCard__imageWrapper {
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 
     display: flex;
     align-items: center;
