@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Tag } from '../../../../../components/atoms/tag';
-import { DiamondIcon } from '../../../../../components/graphics/icons/diamond-icon';
+import { LockIcon } from '../../../../../components/graphics/icons/lock-icon';
 import { StarIcon } from '../../../../../components/graphics/icons/star-icon';
 export var TitleTag = function TitleTag(_ref) {
   var text = _ref.text,
@@ -14,10 +14,10 @@ export var TitleTag = function TitleTag(_ref) {
 
   var iconDisplay = function () {
     switch (icon) {
-      case 'diamond':
-        return /*#__PURE__*/React.createElement(DiamondIcon, {
-          width: "18",
-          height: "20"
+      case 'lock':
+        return /*#__PURE__*/React.createElement(LockIcon, {
+          width: "14",
+          height: "14"
         });
 
       case 'star':
@@ -34,7 +34,7 @@ export var TitleTag = function TitleTag(_ref) {
   }, props), iconDisplay, text);
 };
 TitleTag.propTypes = {
-  icon: PropTypes.oneOf(['star', 'diamond']),
+  icon: PropTypes.oneOf(['star', 'lock']),
   text: PropTypes.node
 };
 TitleTag.defaultProps = {
