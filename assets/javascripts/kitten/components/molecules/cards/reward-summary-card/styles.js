@@ -74,7 +74,7 @@ const commonStyles = css`
           minmax(${pxToRem(120)}, 1fr)
           ${pxToRem(90)}
           ${pxToRem(90)}
-          auto;
+          ${pxToRem(20)};
         grid-template-areas: 'info amount contribution options';
 
         & > [class*='__availability'] {
