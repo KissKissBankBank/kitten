@@ -64,7 +64,7 @@ export const RewardSummaryCard = ({
           'k-RewardSummaryCard__imageWrapper',
           'k-RewardSummaryCard-Wrapper__imageWrapper',
           {
-            'k-u-hidden@m-down': !imageChild,
+            'k-u-hidden@s-down': !imageChild,
           },
         )}
       >
@@ -100,5 +100,5 @@ RewardSummaryCard.defaultProps = {
 RewardSummaryCard.propTypes = {
   show: PropTypes.bool,
   actionProps: PropTypes.object,
-  size: PropTypes.oneOf(['large', 'medium', 'small', 'mobile']),
+  size: PropTypes.oneOf(['large', 'medium', 'tablet', 'small', 'mobile']),
 }

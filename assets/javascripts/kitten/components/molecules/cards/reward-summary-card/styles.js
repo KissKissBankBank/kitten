@@ -27,9 +27,9 @@ const commonStyles = css`
       padding-right: ${pxToRem(30)};
       grid-template-columns:
         minmax(${pxToRem(250)}, 1fr)
+        ${pxToRem(90)}
         ${pxToRem(100)}
-        ${pxToRem(100)}
-        ${pxToRem(150)}
+        ${pxToRem(90)}
         ${pxToRem(20)};
       grid-template-rows: 1fr;
       grid-template-areas: 'info amount contribution availability options';
@@ -59,7 +59,7 @@ const commonStyles = css`
   }
 
   @media (min-width: ${ScreenConfig.S.min}px) {
-    &.k-RewardSummaryCard-Wrapper--medium {
+    &.k-RewardSummaryCard-Wrapper--tablet {
       .k-RewardSummaryCard-Wrapper__imageWrapper {
         display: none;
       }
@@ -72,8 +72,8 @@ const commonStyles = css`
       .k-RewardSummaryCard-Wrapper__gridWrapper {
         grid-template-columns:
           minmax(${pxToRem(120)}, 1fr)
-          ${pxToRem(100)}
-          ${pxToRem(100)}
+          ${pxToRem(90)}
+          ${pxToRem(90)}
           auto;
         grid-template-areas: 'info amount contribution options';
 
@@ -210,6 +210,7 @@ export const StyledRewardSummaryCard = styled.div`
   /* SUBCOMPONENTS */
 
   .k-RewardSummaryCard__title {
+    display: grid;
     max-height: 4.5rem;
     text-overflow: ellipsis;
     overflow: hidden;
