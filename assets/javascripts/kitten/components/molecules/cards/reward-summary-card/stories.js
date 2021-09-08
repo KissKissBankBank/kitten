@@ -49,7 +49,7 @@ const argTypes = {
   titleTagIcon: {
     name: 'titleTagIcon (story prop)',
     description: 'Specify the icon used for the RewardSummaryCard.TitleTag',
-    options: ['star', 'diamond'],
+    options: ['lock', 'star'],
     control: { type: 'inline-radio' },
   },
 }
@@ -76,7 +76,7 @@ const args = {
   availability: 'Illimitée',
   hasImage: true,
   hasTitleTag: true,
-  titleTagIcon: 'star',
+  titleTagIcon: 'lock',
 }
 
 export default {
