@@ -64,7 +64,7 @@ export const RewardSummaryCard = ({
           'k-RewardSummaryCard__imageWrapper',
           'k-RewardSummaryCard-Wrapper__imageWrapper',
           {
-            'k-u-hidden@xs-down': !imageChild,
+            'k-u-hidden@s-down': !imageChild,
           },
         )}
       >

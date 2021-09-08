@@ -21,7 +21,7 @@ export const useResizeObserver = () => {
       setSize('tablet')
     } else if (width < 700 && width >= 600) {
       setSize('small')
-    } else if (width < 680) {
+    } else if (width < 600) {
       setSize('mobile')
     }
   }, [])
