@@ -2,14 +2,14 @@
 
 exports[`<Grid /> default matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa iLJMHb k-Grid"
+  className="sc-bdVaJa kQWEqa k-Grid"
 />
 `;
 
 exports[`<Grid /> with props matches with snapshot 1`] = `
 <div
   aria-hidden={true}
-  className="sc-bdVaJa iLJMHb k-Grid custom-className"
+  className="sc-bdVaJa kQWEqa k-Grid custom-className"
 >
   <p>
     custom child

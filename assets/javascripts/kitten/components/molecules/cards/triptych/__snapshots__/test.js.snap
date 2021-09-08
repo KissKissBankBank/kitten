@@ -2,7 +2,7 @@
 
 exports[`<Triptych /> with default props matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa iLJMHb k-Grid sc-htpNat cxDGI k-Triptych k-u-align-center"
+  className="sc-bdVaJa kQWEqa k-Grid sc-htpNat cxDGI k-Triptych k-u-align-center"
 >
   <div
     className="k-Grid__col k-Grid__col--12 k-Grid__col--6-m k-Grid__col--offset-0-m k-Grid__col--10-l k-Grid__col--offset-1-l"
