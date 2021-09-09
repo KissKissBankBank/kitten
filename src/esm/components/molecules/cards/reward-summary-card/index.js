@@ -37,7 +37,7 @@ export var RewardSummaryCard = function RewardSummaryCard(_ref) {
     className: classNames('k-RewardSummaryCard__action', actionClassName)
   }, action)), /*#__PURE__*/React.createElement("div", {
     className: classNames('k-RewardSummaryCard__imageWrapper', 'k-RewardSummaryCard-Wrapper__imageWrapper', {
-      'k-u-hidden@m-down': !imageChild
+      'k-u-hidden@s-down': !imageChild
     })
   }, !!imageChild ? cloneElement(imageChild) : /*#__PURE__*/React.createElement(NoImageIcon, null)), /*#__PURE__*/React.createElement("div", {
     className: "k-RewardSummaryCard__gridWrapper k-RewardSummaryCard-Wrapper__gridWrapper"
@@ -64,5 +64,5 @@ RewardSummaryCard.defaultProps = {
 RewardSummaryCard.propTypes = {
   show: PropTypes.bool,
   actionProps: PropTypes.object,
-  size: PropTypes.oneOf(['large', 'medium', 'small', 'mobile'])
+  size: PropTypes.oneOf(['large', 'medium', 'tablet', 'small', 'mobile'])
 };
