@@ -2,7 +2,7 @@
 
 exports[`<RewardSummaryCard /> default matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa bBLdRC k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
+  className="sc-bdVaJa keTJgb k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
 >
   <a
     className="k-RewardSummaryCard__action"
@@ -34,7 +34,7 @@ exports[`<RewardSummaryCard /> default matches with snapshot 1`] = `
 
 exports[`<RewardSummaryCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa bBLdRC k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
+  className="sc-bdVaJa keTJgb k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
 >
   <a
     className="k-RewardSummaryCard__action"
