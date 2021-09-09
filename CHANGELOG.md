@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [4.5.2] - 2021-09-09
+
+Fix:
+
 - `RewardSummaryCard`: Responsive fixes.
 
 ## [4.5.1] - 2021-09-08

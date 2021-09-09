@@ -18,9 +18,11 @@ export var useResizeObserver = function useResizeObserver() {
 
     if (width >= 870) {
       setSize('large');
-    } else if (width < 870 && width >= 720) {
+    } else if (width < 870 && width >= 760) {
       setSize('medium');
-    } else if (width < 720 && width >= 600) {
+    } else if (width < 760 && width >= 700) {
+      setSize('tablet');
+    } else if (width < 700 && width >= 600) {
       setSize('small');
     } else if (width < 600) {
       setSize('mobile');

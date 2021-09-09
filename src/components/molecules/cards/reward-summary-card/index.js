@@ -62,7 +62,7 @@ var RewardSummaryCard = function RewardSummaryCard(_ref) {
     className: (0, _classnames.default)('k-RewardSummaryCard__action', actionClassName)
   }, action)), /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('k-RewardSummaryCard__imageWrapper', 'k-RewardSummaryCard-Wrapper__imageWrapper', {
-      'k-u-hidden@m-down': !imageChild
+      'k-u-hidden@s-down': !imageChild
     })
   }, !!imageChild ? (0, _react.cloneElement)(imageChild) : /*#__PURE__*/_react.default.createElement(_noImageIcon.NoImageIcon, null)), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-RewardSummaryCard__gridWrapper k-RewardSummaryCard-Wrapper__gridWrapper"
@@ -90,5 +90,5 @@ RewardSummaryCard.defaultProps = {
 RewardSummaryCard.propTypes = {
   show: _propTypes.default.bool,
   actionProps: _propTypes.default.object,
-  size: _propTypes.default.oneOf(['large', 'medium', 'small', 'mobile'])
+  size: _propTypes.default.oneOf(['large', 'medium', 'tablet', 'small', 'mobile'])
 };
