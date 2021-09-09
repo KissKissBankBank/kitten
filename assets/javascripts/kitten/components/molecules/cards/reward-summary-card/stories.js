@@ -146,15 +146,18 @@ export const Default = ({
           </RewardSummaryCard.Image>
         )}
 
-        <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
-          {title}
-          {hasTitleTag && (
-            <RewardSummaryCard.TitleTag
-              icon={titleTagIcon}
-              text="Contrepartie star"
-            />
-          )}
-        </RewardSummaryCard.Title>
+          <div style={{ display: 'grid '}}>
+            <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
+              {title}
+            </RewardSummaryCard.Title>
+            
+            {hasTitleTag && (
+              <RewardSummaryCard.TitleTag
+                icon={titleTagIcon}
+                text="Contrepartie star"
+              />
+            )}
+          </div>
 
         <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
           {amount}

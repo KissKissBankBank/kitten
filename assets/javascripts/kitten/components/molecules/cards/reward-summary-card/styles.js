@@ -197,7 +197,7 @@ export const StyledRewardSummaryCard = styled.div`
   /* STRUCTURE */
 
   .k-RewardSummaryCard__gridWrapper {
-    padding: ${pxToRem(20)};
+    padding: ${pxToRem(15)} ${pxToRem(20)};
 
     display: grid;
     align-items: center;
@@ -210,10 +210,13 @@ export const StyledRewardSummaryCard = styled.div`
   /* SUBCOMPONENTS */
 
   .k-RewardSummaryCard__title {
-    display: grid;
-    max-height: 4.5rem;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     overflow: hidden;
+
+    max-height: 4.5rem;
     grid-column: 1 / span 2;
     grid-row: 1;
     padding-right: ${pxToRem(30)};

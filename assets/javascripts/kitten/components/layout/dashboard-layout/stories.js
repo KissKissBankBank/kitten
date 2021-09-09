@@ -420,10 +420,12 @@ const RewardsExample = () => {
           <RewardSummaryCard.Image>
             <img alt="" src="/kitten.jpg" />
           </RewardSummaryCard.Image>
-          <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
-            Stickers Free Boobs Club
+          <div style={{ display: 'grid' }}>
+            <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
+              Stickers Free Boobs Club  Stickers Free Boobs Club  Stickers Free Boobs Club.
+            </RewardSummaryCard.Title>
             <RewardSummaryCard.TitleTag text="Contrepartie star" />
-          </RewardSummaryCard.Title>
+          </div>
           <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
             10 000€
           </RewardSummaryCard.Amount>
@@ -445,11 +447,14 @@ const RewardsExample = () => {
             </DropdownMenu>
           </RewardSummaryCard.Options>
         </RewardSummaryCard>
+
         <RewardSummaryCard size={size}>
-          <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
-            Stickers Free Boobs Club
-            <RewardSummaryCard.TitleTag text="Contrepartie star" />
-          </RewardSummaryCard.Title>
+          <div style={{ display: 'grid' }}>
+            <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
+              Stickers Free Boobs Club
+            </RewardSummaryCard.Title>
+            <RewardSummaryCard.TitleTag text="Contrepartie" />
+          </div>
           <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
             10 000€
           </RewardSummaryCard.Amount>
@@ -476,10 +481,12 @@ const RewardsExample = () => {
           <RewardSummaryCard.Image>
             <img alt="" src="/kitten.jpg" />
           </RewardSummaryCard.Image>
-          <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
-            Stickers Free Boobs Club
+          <div style={{ display: 'grid' }}>
+            <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
+              Stickers Free Boobs Club
+            </RewardSummaryCard.Title>
             <RewardSummaryCard.TitleTag text="Contrepartie star" />
-          </RewardSummaryCard.Title>
+          </div>
           <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
             10 000€
           </RewardSummaryCard.Amount>
@@ -502,10 +509,11 @@ const RewardsExample = () => {
           </RewardSummaryCard.Options>
         </RewardSummaryCard>
         <RewardSummaryCard size={size}>
-          <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
-            Stickers Free Boobs Club
-            <RewardSummaryCard.TitleTag text="Contrepartie star" />
-          </RewardSummaryCard.Title>
+          <div style={{ display: 'grid' }}>
+            <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
+              Stickers Free Boobs Club
+            </RewardSummaryCard.Title>
+          </div>
           <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
             10 000€
           </RewardSummaryCard.Amount>
