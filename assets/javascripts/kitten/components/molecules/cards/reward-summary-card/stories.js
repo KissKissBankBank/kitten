@@ -146,11 +146,10 @@ export const Default = ({
           </RewardSummaryCard.Image>
         )}
 
-          <div style={{ display: 'grid '}}>
+          <div style={{ display: 'grid' }}>
             <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
               {title}
             </RewardSummaryCard.Title>
-            
             {hasTitleTag && (
               <RewardSummaryCard.TitleTag
                 icon={titleTagIcon}
