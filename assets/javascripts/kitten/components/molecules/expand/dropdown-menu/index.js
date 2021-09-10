@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import classNames from 'classnames'
 import styled, { keyframes } from 'styled-components'
 import { ArrowContainer } from '../../../../components/molecules/boxes/arrow-container'
@@ -139,16 +139,10 @@ export const DropdownMenu = ({
   className,
   ...rest
 }) => {
-  const [open, setOpen] = useState(openProp)
   const detailsElement = useRef(null)
 
-  useEffect(() => {
-    setOpen(openProp)
-  }, [openProp])
-
-  const handleToggle = event => {
-    setOpen(!open)
-    onToggle(event, !open)
+  const handleToggle = () => {
+    onToggle(!openProp)
   }
 
   const arrowDistanceProps = (() => {

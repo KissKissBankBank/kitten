@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { action } from '@storybook/addon-actions'
 import { DropdownMenu } from './index'
 import { COLORS, EllipsisIcon } from '../../../..'
@@ -68,39 +68,75 @@ const StyledWrapper = styled.div`
   }
 `
 
-export const Default = ({ menuPosition, ...args }) => (
-  <StyledWrapper>
-    <div>
-      <DropdownMenu {...args} menuPosition={menuPosition || 'right'}>
-        <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
-        <DropdownMenu.Button>Click this button</DropdownMenu.Button>
-        <DropdownMenu.Link href="#">
-          Another last very very very very very very very very very very long
-          link
-        </DropdownMenu.Link>
-      </DropdownMenu>
-    </div>
-    <div className="k-u-flex-justifyContent-center">
-      <DropdownMenu
-        {...args}
-        menuPosition={menuPosition || 'center'}
-        button={({ open }) => (
-          <span className="k-u-link k-u-link-primary1 k-u-small">
-            {open ? 'close menu' : 'open menu'}
-          </span>
-        )}
-      >
-        <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
-        <DropdownMenu.Button>Click this button</DropdownMenu.Button>
-        <DropdownMenu.Link href="#">Another last link</DropdownMenu.Link>
-      </DropdownMenu>
-    </div>
-    <div className="k-u-flex-justifyContent-end">
-      <DropdownMenu {...args} menuPosition={menuPosition || 'left'}>
-        <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
-        <DropdownMenu.Button>Click this button</DropdownMenu.Button>
-        <DropdownMenu.Link href="#">Another last link</DropdownMenu.Link>
-      </DropdownMenu>
-    </div>
-  </StyledWrapper>
-)
+export const Default = ({ menuPosition, ...args }) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [hasClicked, setHasClicked] = useState(false)
+
+  const onLinkClicked = () => {
+    setIsOpen(false)
+    setHasClicked(true)
+  }
+
+  return (
+    <StyledWrapper>
+      <div>
+        <DropdownMenu
+          {...args}
+          menuPosition={menuPosition || 'right'}
+          open={isOpen}
+          onToggle={isOpenProp => {
+            if (!hasClicked) {
+              return setIsOpen(isOpenProp)
+            }
+            return setHasClicked(false)
+          }}
+        >
+          <DropdownMenu.Link href="" onClick={onLinkClicked}>
+            A link
+          </DropdownMenu.Link>
+          <DropdownMenu.Button onClick={onLinkClicked}>
+            Click this button
+          </DropdownMenu.Button>
+          <DropdownMenu.Link href="" onClick={onLinkClicked}>
+            Another last very very very very very very very very very very long
+            link
+          </DropdownMenu.Link>
+        </DropdownMenu>
+      </div>
+      <div className="k-u-flex-justifyContent-center">
+        <DropdownMenu
+          {...args}
+          menuPosition={menuPosition || 'center'}
+          button={({ open }) => (
+            <span className="k-u-link k-u-link-primary1 k-u-small">
+              {open ? 'close menu' : 'open menu'}
+            </span>
+          )}
+        >
+          <DropdownMenu.Link href="#" onClick={onLinkClicked}>
+            A link
+          </DropdownMenu.Link>
+          <DropdownMenu.Button onClick={onLinkClicked}>
+            Click this button
+          </DropdownMenu.Button>
+          <DropdownMenu.Link href="#" onClick={onLinkClicked}>
+            Another last link
+          </DropdownMenu.Link>
+        </DropdownMenu>
+      </div>
+      <div className="k-u-flex-justifyContent-end">
+        <DropdownMenu {...args} menuPosition={menuPosition || 'left'}>
+          <DropdownMenu.Link href="#" onClick={onLinkClicked}>
+            A link
+          </DropdownMenu.Link>
+          <DropdownMenu.Button onClick={onLinkClicked}>
+            Click this button
+          </DropdownMenu.Button>
+          <DropdownMenu.Link href="#" onClick={onLinkClicked}>
+            Another last link
+          </DropdownMenu.Link>
+        </DropdownMenu>
+      </div>
+    </StyledWrapper>
+  )
+}
