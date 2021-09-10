@@ -273,12 +273,24 @@ export const StyledRewardSummaryCard = styled.div`
   }
 
   .k-RewardSummaryCard__options {
-    z-index: 2;
     place-self: stretch flex-end;
     display: flex;
     align-items: stretch;
     justify-content: stretch;
     margin: ${pxToRem(-20)} ${pxToRem(-30)};
+
+    &:nth-child(0) {
+      z-index: 5;
+    }
+    &:nth-child(1) {
+      z-index: 4;
+    }
+    &:nth-child(2) {
+      z-index: 3;
+    }
+    &:nth-child(3) {
+      z-index: 2;
+    }
 
     .k-DropdownMenu .k-DropdownMenu__button {
       box-sizing: border-box;
