@@ -29,7 +29,7 @@ export const useResizeObserver = () => {
   const ref = useCallback(
     node => {
       if (node !== null) {
-        if (resizeObserver.current) {
+        if (resizeObserver?.current) {
           resizeObserver.current.disconnect()
         }
         resizeObserver.current = new ResizeObserver(onResize)
@@ -41,7 +41,9 @@ export const useResizeObserver = () => {
 
   useEffect(
     () => () => {
-      resizeObserver.current.disconnect()
+      if (resizeObserver?.current) {
+        resizeObserver.current.disconnect()
+      }
     },
     [],
   )
