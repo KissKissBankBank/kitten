@@ -42,7 +42,7 @@ var useResizeObserver = function useResizeObserver() {
   }, []);
   var ref = (0, _react.useCallback)(function (node) {
     if (node !== null) {
-      if (resizeObserver.current) {
+      if (resizeObserver !== null && resizeObserver !== void 0 && resizeObserver.current) {
         resizeObserver.current.disconnect();
       }
 
@@ -52,7 +52,9 @@ var useResizeObserver = function useResizeObserver() {
   }, [onResize]);
   (0, _react.useEffect)(function () {
     return function () {
-      resizeObserver.current.disconnect();
+      if (resizeObserver !== null && resizeObserver !== void 0 && resizeObserver.current) {
+        resizeObserver.current.disconnect();
+      }
     };
   }, []);
   return {

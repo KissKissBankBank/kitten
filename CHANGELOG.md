@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [4.6.1] - 2021-09-13
+
 Fix:
 
 - `DropDownMenu`: Close menu on click.
