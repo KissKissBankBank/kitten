@@ -30,7 +30,7 @@ export var useResizeObserver = function useResizeObserver() {
   }, []);
   var ref = useCallback(function (node) {
     if (node !== null) {
-      if (resizeObserver.current) {
+      if (resizeObserver !== null && resizeObserver !== void 0 && resizeObserver.current) {
         resizeObserver.current.disconnect();
       }
 
@@ -40,7 +40,9 @@ export var useResizeObserver = function useResizeObserver() {
   }, [onResize]);
   useEffect(function () {
     return function () {
-      resizeObserver.current.disconnect();
+      if (resizeObserver !== null && resizeObserver !== void 0 && resizeObserver.current) {
+        resizeObserver.current.disconnect();
+      }
     };
   }, []);
   return {

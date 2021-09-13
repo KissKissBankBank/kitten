@@ -42,8 +42,7 @@ var DropdownMenu = function DropdownMenu(_ref) {
   var _ref$button = _ref.button,
       button = _ref$button === void 0 ? function () {} : _ref$button,
       openProp = _ref.open,
-      _ref$onToggle = _ref.onToggle,
-      onToggle = _ref$onToggle === void 0 ? function () {} : _ref$onToggle,
+      onToggle = _ref.onToggle,
       _ref$menuProps = _ref.menuProps,
       menuProps = _ref$menuProps === void 0 ? {} : _ref$menuProps,
       _ref$menuPosition = _ref.menuPosition,
@@ -51,20 +50,29 @@ var DropdownMenu = function DropdownMenu(_ref) {
       children = _ref.children,
       className = _ref.className,
       rest = (0, _objectWithoutProperties2.default)(_ref, ["button", "open", "onToggle", "menuProps", "menuPosition", "children", "className"]);
-
-  var _useState = (0, _react.useState)(openProp),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      open = _useState2[0],
-      setOpen = _useState2[1];
-
   var detailsElement = (0, _react.useRef)(null);
-  (0, _react.useEffect)(function () {
-    setOpen(openProp);
-  }, [openProp]);
 
-  var handleToggle = function handleToggle(event) {
-    setOpen(!open);
-    onToggle(event, !open);
+  var _useState = (0, _react.useState)(false),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      isOpen = _useState2[0],
+      setIsOpen = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(false),
+      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
+      hasClicked = _useState4[0],
+      setHasClicked = _useState4[1];
+
+  var onLinkClicked = function onLinkClicked() {
+    setIsOpen(false);
+    setHasClicked(true);
+  };
+
+  var handleToggle = function handleToggle() {
+    if (!hasClicked) {
+      return setIsOpen(!isOpen);
+    }
+
+    return setHasClicked(false);
   };
 
   var arrowDistanceProps = function () {
@@ -148,7 +156,7 @@ var DropdownMenu = function DropdownMenu(_ref) {
   return /*#__PURE__*/_react.default.createElement(StyledDropdownMenu, (0, _extends2.default)({
     ref: detailsElement,
     onToggle: handleToggle,
-    open: openProp,
+    open: isOpen,
     className: (0, _classnames.default)('k-DropdownMenu', className, "k-DropdownMenu--".concat(menuPosition)),
     role: "menu",
     onKeyDown: handleKeyDown
@@ -163,7 +171,8 @@ var DropdownMenu = function DropdownMenu(_ref) {
     borderRadius: 4,
     position: "top"
   }, arrowDistanceProps, menuProps, {
-    className: (0, _classnames.default)('k-DropdownMenu__menu', menuProps.className)
+    className: (0, _classnames.default)('k-DropdownMenu__menu', menuProps.className),
+    onClick: onLinkClicked
   }), children));
 };
 
