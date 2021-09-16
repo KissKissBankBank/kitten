@@ -156,7 +156,7 @@ const args = {
   sizeErrorText: 'File too large',
   quantityErrorText: 'Too many files',
   cancelButtonText: 'Cancel',
-  cropRatio: 19 / 10,
+  cropRatio: 16 / 10,
   canCrop: true,
   canCancel: true,
   fileInputProps: {},
