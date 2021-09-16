@@ -124,6 +124,7 @@ const StyledImageDropUploader = styled.div`
   }
   .k-ImageDropUploader__manager__cropper {
     background-color: ${COLORS.primary4};
+    flex: 0 0 ${pxToRem(CROP_WIDTH)};
     width: ${pxToRem(CROP_WIDTH)};
     height: var(--ImageDropUploader-cropHeight, ${pxToRem(CROP_WIDTH)});
     overflow: hidden;
