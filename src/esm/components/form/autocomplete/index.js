@@ -3,7 +3,7 @@ import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React, { useState, useRef, useEffect } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import isFunction from 'lodash/fp/isFunction';
 import PropTypes from 'prop-types';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';

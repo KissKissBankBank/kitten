@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `ImageDropUploader`: Fix issue with smaller screens and wrong crop.
+## [4.6.2] - 2021-09-16
+
+Fix:
+
+- `ImageDropUploader`: Fix issue with smaller screens and wrong crop.
 
 ## [4.6.1] - 2021-09-13
 
