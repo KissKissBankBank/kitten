@@ -19,6 +19,8 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
+
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var _typography = require("../../../helpers/utils/typography");
@@ -55,13 +57,14 @@ exports.IconBadge = IconBadge;
 IconBadge.defaultProps = {
   disabled: false,
   valid: false,
+  empty: false,
   size: 'normal'
 };
 IconBadge.propTypes = {
   disabled: _propTypes.default.bool,
   valid: _propTypes.default.bool,
   empty: _propTypes.default.bool,
-  big: _propTypes.default.bool,
-  huge: _propTypes.default.bool,
+  big: (0, _deprecated.default)(_propTypes.default.bool, 'Use `size` prop instead.'),
+  huge: (0, _deprecated.default)(_propTypes.default.bool, 'Use `size` prop instead.'),
   size: _propTypes.default.oneOf(['tiny', 'normal', 'big', 'huge'])
 };

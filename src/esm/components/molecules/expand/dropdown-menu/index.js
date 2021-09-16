@@ -2,7 +2,7 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import classNames from 'classnames';
 import styled, { keyframes } from 'styled-components';
 import { ArrowContainer } from '../../../../components/molecules/boxes/arrow-container';
@@ -18,8 +18,7 @@ export var DropdownMenu = function DropdownMenu(_ref) {
   var _ref$button = _ref.button,
       button = _ref$button === void 0 ? function () {} : _ref$button,
       openProp = _ref.open,
-      _ref$onToggle = _ref.onToggle,
-      onToggle = _ref$onToggle === void 0 ? function () {} : _ref$onToggle,
+      onToggle = _ref.onToggle,
       _ref$menuProps = _ref.menuProps,
       menuProps = _ref$menuProps === void 0 ? {} : _ref$menuProps,
       _ref$menuPosition = _ref.menuPosition,
@@ -28,19 +27,29 @@ export var DropdownMenu = function DropdownMenu(_ref) {
       className = _ref.className,
       rest = _objectWithoutProperties(_ref, ["button", "open", "onToggle", "menuProps", "menuPosition", "children", "className"]);
 
-  var _useState = useState(openProp),
-      _useState2 = _slicedToArray(_useState, 2),
-      open = _useState2[0],
-      setOpen = _useState2[1];
-
   var detailsElement = useRef(null);
-  useEffect(function () {
-    setOpen(openProp);
-  }, [openProp]);
 
-  var handleToggle = function handleToggle(event) {
-    setOpen(!open);
-    onToggle(event, !open);
+  var _useState = useState(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      isOpen = _useState2[0],
+      setIsOpen = _useState2[1];
+
+  var _useState3 = useState(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      hasClicked = _useState4[0],
+      setHasClicked = _useState4[1];
+
+  var onLinkClicked = function onLinkClicked() {
+    setIsOpen(false);
+    setHasClicked(true);
+  };
+
+  var handleToggle = function handleToggle() {
+    if (!hasClicked) {
+      return setIsOpen(!isOpen);
+    }
+
+    return setHasClicked(false);
   };
 
   var arrowDistanceProps = function () {
@@ -125,7 +134,7 @@ export var DropdownMenu = function DropdownMenu(_ref) {
   return /*#__PURE__*/React.createElement(StyledDropdownMenu, _extends({
     ref: detailsElement,
     onToggle: handleToggle,
-    open: openProp,
+    open: isOpen,
     className: classNames('k-DropdownMenu', className, "k-DropdownMenu--".concat(menuPosition)),
     role: "menu",
     onKeyDown: handleKeyDown
@@ -140,7 +149,8 @@ export var DropdownMenu = function DropdownMenu(_ref) {
     borderRadius: 4,
     position: "top"
   }, arrowDistanceProps, menuProps, {
-    className: classNames('k-DropdownMenu__menu', menuProps.className)
+    className: classNames('k-DropdownMenu__menu', menuProps.className),
+    onClick: onLinkClicked
   }), children));
 };
 

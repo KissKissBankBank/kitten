@@ -64,6 +64,7 @@ import { MaestroIcon } from './maestro-icon'
 import { MasterCardIcon } from './mastercard-icon'
 import { MenuIcon } from './menu-icon'
 import { MessengerIcon } from './messenger-icon'
+import { NoImageIcon } from './no-image-icon'
 import { ParagraphIcon } from './paragraph-icon'
 import { PasswordIcon } from './password-icon'
 import { PayPalIcon } from './paypal-icon'
@@ -368,6 +369,7 @@ export const AllIcons = ({ colorInput, bgColorInput }) => {
         <IconContainer children={<HourglassIcon color={colorInput} />} />
         <IconContainer children={<RefundIcon color={colorInput} />} />
         <IconContainer children={<EllipsisIcon color={colorInput} />} />
+        <IconContainer children={<NoImageIcon color={colorInput} />} />
       </Group>
       <Group title="Country flag icons">
         {flagList.map(country => (

@@ -75,7 +75,6 @@ export var Alert = function Alert(_ref) {
   })));
 };
 Alert.propTypes = {
-  className: PropTypes.string,
   show: PropTypes.bool,
   error: PropTypes.bool,
   success: PropTypes.bool,
@@ -85,7 +84,6 @@ Alert.propTypes = {
   onAfterClose: PropTypes.func
 };
 Alert.defaultProps = {
-  className: null,
   show: true,
   error: false,
   success: false,

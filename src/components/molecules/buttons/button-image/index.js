@@ -53,21 +53,15 @@ var ButtonImage = function ButtonImage(_ref) {
 exports.ButtonImage = ButtonImage;
 ButtonImage.defaultProps = {
   tag: 'button',
-  className: null,
   size: 'regular',
   withoutPointerEvents: false,
   withBorder: false,
-  img: {
-    className: null
-  }
+  img: {}
 };
 ButtonImage.propTypes = {
   tag: _propTypes.default.string,
-  className: _propTypes.default.string,
   size: _propTypes.default.oneOf(['tiny', 'regular', 'big', 'huge']),
   withoutPointerEvents: _propTypes.default.bool,
   withBorder: _propTypes.default.bool,
-  img: _propTypes.default.shape({
-    className: _propTypes.default.string
-  })
+  img: _propTypes.default.object
 };

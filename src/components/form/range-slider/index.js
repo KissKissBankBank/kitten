@@ -23,6 +23,8 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _isUndefined = _interopRequireDefault(require("lodash/fp/isUndefined"));
+
 var _typography = require("../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
@@ -47,7 +49,8 @@ var RangeSlider = function RangeSlider(_ref) {
       wrapperProps = _ref.wrapperProps,
       rangeThumbText = _ref.rangeThumbText,
       rangeThumbPosition = _ref.rangeThumbPosition,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["disabled", "onChange", "initialValue", "wrapperProps", "rangeThumbText", "rangeThumbPosition"]);
+      value = _ref.value,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["disabled", "onChange", "initialValue", "wrapperProps", "rangeThumbText", "rangeThumbPosition", "value"]);
 
   var _useState = (0, _react.useState)(0),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -56,7 +59,17 @@ var RangeSlider = function RangeSlider(_ref) {
 
   var inputEl = (0, _react.useRef)(null);
   var changeEvent = (0, _createEvent.createEvent)('change');
+  var isControlled = !(0, _isUndefined.default)(value);
+  var addProps = isControlled ? {
+    value: value
+  } : {};
   (0, _react.useEffect)(function () {
+    if (isControlled) {
+      setInputRatio(getRatioFrom(value));
+    }
+  }, []);
+  (0, _react.useEffect)(function () {
+    if (isControlled) return;
     (inputEl === null || inputEl === void 0 ? void 0 : inputEl.current) && _nativeInputValueSetter.nativeInputValueSetter && _nativeInputValueSetter.nativeInputValueSetter.call(inputEl.current, initialValue);
     (inputEl === null || inputEl === void 0 ? void 0 : inputEl.current) && inputEl.current.dispatchEvent(changeEvent);
   }, [initialValue, inputEl]);
@@ -64,7 +77,7 @@ var RangeSlider = function RangeSlider(_ref) {
   var getRatioFrom = function getRatioFrom(value) {
     var min = props.min,
         max = props.max;
-    return (value - min) / (max - min);
+    return Math.min(1, (value - min) / (max - min));
   };
 
   var handleChange = function handleChange(event) {
@@ -86,7 +99,7 @@ var RangeSlider = function RangeSlider(_ref) {
     ref: inputEl,
     type: "range",
     onChange: handleChange
-  }, props)), rangeThumbText && /*#__PURE__*/_react.default.createElement("span", {
+  }, props, addProps)), rangeThumbText && /*#__PURE__*/_react.default.createElement("span", {
     className: "k-RangeSlider__rangeThumbText"
   }, rangeThumbText));
 };

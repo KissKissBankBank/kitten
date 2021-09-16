@@ -49,15 +49,13 @@ var StyledText = (0, _styledComponents.default)(_text.Text).withConfig({
 var EngagementCardWithImage = function EngagementCardWithImage(_ref2) {
   var backgroundImage = _ref2.backgroundImage,
       children = _ref2.children,
-      isActive = _ref2.isActive,
       href = _ref2.href,
       as = _ref2.as,
       imageHeight = _ref2.imageHeight,
-      others = (0, _objectWithoutProperties2.default)(_ref2, ["backgroundImage", "children", "isActive", "href", "as", "imageHeight"]);
+      others = (0, _objectWithoutProperties2.default)(_ref2, ["backgroundImage", "children", "href", "as", "imageHeight"]);
   return /*#__PURE__*/_react.default.createElement(StyledContainer, (0, _extends2.default)({}, others, {
     as: href ? 'a' : 'div',
-    href: href,
-    isActive: isActive
+    href: href
   }), /*#__PURE__*/_react.default.createElement(StyledCard, null, /*#__PURE__*/_react.default.createElement(StyledImage, {
     src: backgroundImage,
     alt: "",
@@ -75,11 +73,9 @@ exports.EngagementCardWithImage = EngagementCardWithImage;
 EngagementCardWithImage.propTypes = {
   href: _propTypes.default.string,
   backgroundImage: _propTypes.default.string.isRequired,
-  isActive: _propTypes.default.bool,
   imageHeight: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
 };
 EngagementCardWithImage.defaultProps = {
   href: '',
-  isActive: false,
   imageHeight: ''
 };

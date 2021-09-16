@@ -317,7 +317,6 @@ DocumentsDropUploader.propTypes = {
   managerTitle: _propTypes.default.node,
   managerInfo: _propTypes.default.node,
   onChange: _propTypes.default.func,
-  quantityErrorText: _propTypes.default.node,
   sizeErrorText: _propTypes.default.func,
   status: _propTypes.default.oneOf(['ready', 'error']),
   typeErrorText: _propTypes.default.func,

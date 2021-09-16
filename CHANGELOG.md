@@ -4,13 +4,47 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `createRangeFromZeroTo` to ESM exports.
-- Feature: `IconBadge`: Deprecate `big` and `huge` props.
-- Fix: `EngagementCard`: Remove useless props `hoverBorder` and `isActive`.
-- Fix: `EngagementCardWithImage`: Remove useless prop `isActive`.
-- Fix: `ContributionCard`: Remove useless prop `imageBorderRadius`.
-- Feature: Add `mq` media query constant object.
-- Fix: `HorizontalCrowdfundingCard`: Fix hover styles.
+## [4.6.1] - 2021-09-13
+
+Fix:
+
+- `DropDownMenu`: Close menu on click.
+
+## [4.6.0] - 2021-09-09
+
+Tech: 
+- 
+- Bump to `node-sass@6`.
+
+## [4.5.2] - 2021-09-09
+
+Fix:
+
+- `RewardSummaryCard`: Responsive fixes.
+
+## [4.5.1] - 2021-09-08
+
+Fixes:
+
+- `RewardSummaryCard`: Various fixes.
+- `RangeSlider`: Turn to be controlled when `value` prop is passed.
+
+## [4.5.0] - 2021-09-02
+
+Features:
+
+- `NoImageIcon`: Add new component.
+- `RewardSummaryCard`: Add new component.
+- Add `createRangeFromZeroTo` to ESM exports.
+- `IconBadge`: Deprecate `big` and `huge` props.
+- Add `mq` media query constant object.
+
+Fixes:
+
+- `EngagementCard`: Remove useless props `hoverBorder` and `isActive`.
+- `EngagementCardWithImage`: Remove useless prop `isActive`.
+- `ContributionCard`: Remove useless prop `imageBorderRadius`.
+- `HorizontalCrowdfundingCard`: Fix hover styles.
 
 ## [4.4.0] - 2021-08-30
 

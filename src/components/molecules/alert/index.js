@@ -102,7 +102,6 @@ var Alert = function Alert(_ref) {
 
 exports.Alert = Alert;
 Alert.propTypes = {
-  className: _propTypes.default.string,
   show: _propTypes.default.bool,
   error: _propTypes.default.bool,
   success: _propTypes.default.bool,
@@ -112,7 +111,6 @@ Alert.propTypes = {
   onAfterClose: _propTypes.default.func
 };
 Alert.defaultProps = {
-  className: null,
   show: true,
   error: false,
   success: false,

@@ -1,6 +1,6 @@
 import React from 'react'
 import { ContributionCard } from './index'
-import { RocketIllustration, COLORS } from '../../../..'
+import { Container, RocketIllustration, COLORS } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 
@@ -76,7 +76,15 @@ export default {
       ),
     },
   },
-  decorators: [story => <div className="story-Container">{story()}</div>],
+  decorators: [
+    Story => (
+      <div className="k-u-margin-top-quadruple">
+        <Container className="k-u-margin-vertical-quadruple">
+          <Story />
+        </Container>
+      </div>
+    ),
+  ],
   args,
   argTypes,
 }

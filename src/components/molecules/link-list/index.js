@@ -41,8 +41,7 @@ var LinkList = function LinkList(_ref) {
       color = _ref.color,
       weight = _ref.weight,
       href = _ref.href,
-      active = _ref.active,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "margin", "items", "lineHeight", "itemMargin", "color", "weight", "href", "active"]);
+      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "margin", "items", "lineHeight", "itemMargin", "color", "weight", "href"]);
   return /*#__PURE__*/_react.default.createElement(StyledLinkList, (0, _extends2.default)({}, others, {
     className: (0, _classnames.default)('k-LinkList', others.className, {
       'k-LinkList--withoutMargin': !margin
@@ -87,6 +86,5 @@ LinkList.defaultProps = {
   color: 'dark',
   lineHeight: null,
   itemMargin: null,
-  weight: 'regular',
-  active: false
+  weight: 'regular'
 };

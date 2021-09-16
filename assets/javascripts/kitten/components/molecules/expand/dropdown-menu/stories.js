@@ -68,39 +68,41 @@ const StyledWrapper = styled.div`
   }
 `
 
-export const Default = ({ menuPosition, ...args }) => (
-  <StyledWrapper>
-    <div>
-      <DropdownMenu {...args} menuPosition={menuPosition || 'right'}>
-        <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
-        <DropdownMenu.Button>Click this button</DropdownMenu.Button>
-        <DropdownMenu.Link href="#">
-          Another last very very very very very very very very very very long
-          link
-        </DropdownMenu.Link>
-      </DropdownMenu>
-    </div>
-    <div className="k-u-flex-justifyContent-center">
-      <DropdownMenu
-        {...args}
-        menuPosition={menuPosition || 'center'}
-        button={({ open }) => (
-          <span className="k-u-link k-u-link-primary1 k-u-small">
-            {open ? 'close menu' : 'open menu'}
-          </span>
-        )}
-      >
-        <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
-        <DropdownMenu.Button>Click this button</DropdownMenu.Button>
-        <DropdownMenu.Link href="#">Another last link</DropdownMenu.Link>
-      </DropdownMenu>
-    </div>
-    <div className="k-u-flex-justifyContent-end">
-      <DropdownMenu {...args} menuPosition={menuPosition || 'left'}>
-        <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
-        <DropdownMenu.Button>Click this button</DropdownMenu.Button>
-        <DropdownMenu.Link href="#">Another last link</DropdownMenu.Link>
-      </DropdownMenu>
-    </div>
-  </StyledWrapper>
-)
+export const Default = ({ menuPosition, ...args }) => {
+  return (
+    <StyledWrapper>
+      <div>
+        <DropdownMenu {...args} menuPosition={menuPosition || 'right'}>
+          <DropdownMenu.Link href="">A link</DropdownMenu.Link>
+          <DropdownMenu.Button>Click this button</DropdownMenu.Button>
+          <DropdownMenu.Link href="">
+            Another last very very very very very very very very very very long
+            link
+          </DropdownMenu.Link>
+        </DropdownMenu>
+      </div>
+      <div className="k-u-flex-justifyContent-center">
+        <DropdownMenu
+          {...args}
+          menuPosition={menuPosition || 'center'}
+          button={({ open }) => (
+            <span className="k-u-link k-u-link-primary1 k-u-small">
+              {open ? 'close menu' : 'open menu'}
+            </span>
+          )}
+        >
+          <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
+          <DropdownMenu.Button>Click this button</DropdownMenu.Button>
+          <DropdownMenu.Link href="#">Another last link</DropdownMenu.Link>
+        </DropdownMenu>
+      </div>
+      <div className="k-u-flex-justifyContent-end">
+        <DropdownMenu {...args} menuPosition={menuPosition || 'left'}>
+          <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
+          <DropdownMenu.Button>Click this button</DropdownMenu.Button>
+          <DropdownMenu.Link href="#">Another last link</DropdownMenu.Link>
+        </DropdownMenu>
+      </div>
+    </StyledWrapper>
+  )
+}
