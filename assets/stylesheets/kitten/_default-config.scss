@@ -72,52 +72,52 @@ $k-fonts: (
 // Colors
 
 $k-colors: (
-  'font-1': #222, // Dark Grey
-  'font-2': #b8b8b8, // Semi Dark Grey
-  'font-3': #949494, // Extra semi dark grey, used for text
+  'font-1': var(--color-font1, #222), // Dark Grey
+  'font-2': var(--color-font2, #b8b8b8), // Semi Dark Grey
+  'font-3': var(--color-font3, #949494), // Extra semi dark grey, used for text
 
-  'background-1': #fff, // White
-  'background-2': #fbfbfb, // Extra Light Grey
-  'background-3': #f6f6f6, // Light Grey
+  'background-1': var(--color-background1, #fff), // White
+  'background-2': var(--color-background2, #fbfbfb), // Extra Light Grey
+  'background-3': var(--color-background3, #f6f6f6), // Light Grey
 
-  'line-1': #eee, // Semi Light Grey
-  'line-2': #d8d8d8, // Grey
-  'line-3': #2d2d2d, // Extra semi dark grey, not used for text
+  'line-1': var(--color-line1, #eee), // Semi Light Grey
+  'line-2': var(--color-line2, #d8d8d8), // Grey
+  'line-3': var(--color-line3, #2d2d2d), // Extra semi dark grey, not used for text
 
-  'grey-1': #636363, // Medium grey used for text or not
+  'grey-1': var(--color-grey1, #636363), // Medium grey used for text or not
 
-  'primary-1': #19b4fa, // Primary
-  'primary-2': #05a8e6, // Semi Dark Primary
-  'primary-3': #0496cc, // Dark Primary
-  'primary-4': #bae8fd, // Light Primary
-  'primary-5': #e8f7fe, // Extra Light Primary
-  'primary-6': #f3fbff, // Thin Primary
+  'primary-1': var(--color-primary1, #19b4fa), // Primary
+  'primary-2': var(--color-primary2, #05a8e6), // Semi Dark Primary
+  'primary-3': var(--color-primary3, #0496cc), // Dark Primary
+  'primary-4': var(--color-primary4, #bae8fd), // Light Primary
+  'primary-5': var(--color-primary5, #e8f7fe), // Extra Light Primary
+  'primary-6': var(--color-primary6, #f3fbff), // Thin Primary
 
-  // DEPRECATED: colors.
-  'secondary-1': #4bfffa,
-  'secondary-2': #3cf0eb,
-  'secondary-3': #2de1dc,
+  // DEPRECATED
+  'secondary-1': var(--color-secondary1, #4bfffa),
+  'secondary-2': var(--color-secondary2, #3cf0eb),
+  'secondary-3': var(--color-secondary3, #2de1dc),
 
-  'tertiary-1': #effaf1, // Light Green
-  'tertiary-2': #cff0d6, // Semi Light Green
+  'tertiary-1': var(--color-tertiary1, #effaf1), // Light Green
+  'tertiary-2': var(--color-tertiary2, #cff0d6), // Semi Light Green
 
-   // DEPRECATED: colors.
-  'tertiary-3': #4ae191,
+   // DEPRECATED
+  'tertiary-3': var(--color-tertiary3, #4ae191),
 
-  'valid': #61d079, // Green
+  'valid': var(--color-valid, #61d079), // Green
 
-  'error': #ff0046, // Red
-  'error-2': #ffe5ec, // Light Red
-  'error-3': #ffb2c7, // Semi Light Red
-  'error-4': #d8043e, // Semi Dark Red
-  'error-5': #a8002e, // Dark Red
+  'error': var(--color-error, #ff0046), // Red
+  'error-2': var(--color-error2, #ffe5ec), // Light Red
+  'error-3': var(--color-error3, #ffb2c7), // Semi Light Red
+  'error-4': var(--color-error4, #d8043e), // Semi Dark Red
+  'error-5': var(--color-error5, #a8002e), // Dark Red
 
-  'orange': #ff7800,
-  'orange-1': #fff2e7, // Orange light
-  'orange-2': #f57905, // Orange semi dark
-  'orange-3': #eb6e00, // Orange dark
+  'orange': var(--color-orange, #ff7800),
+  'orange-1': var(--color-orange1, #fff2e7), // Orange light
+  'orange-2': var(--color-orange2, #f57905), // Orange semi dark
+  'orange-3': var(--color-orange3, #eb6e00), // Orange dark
 
-  'red-light-mdc': #ffebe0,
-  'red-mdc': #ff0000,
-  'blue-light-mdc': #caf4fe,
+  'red-light-mdc': var(--color-redLightMdc, #ffebe0),
+  'red-mdc': var(--color-redMdc, #ff0000),
+  'blue-light-mdc': var(--color-blueLightMdc, #caf4fe),
 ) !default;
