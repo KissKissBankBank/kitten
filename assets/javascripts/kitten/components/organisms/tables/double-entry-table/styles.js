@@ -13,11 +13,7 @@ export const Styles = styled.div`
     border-left: ${pxToRem(2)} solid rgba(255, 255, 255, 0.0667);
     border-right: ${pxToRem(2)} solid rgba(255, 255, 255, 0.0667);
 
-    background: linear-gradient(
-        to right,
-        white 30%,
-        transparent
-      ),
+    background: linear-gradient(to right, white 30%, transparent),
       linear-gradient(to left, white 30%, transparent),
       radial-gradient(
         farthest-side at 0 50%,

@@ -55,11 +55,7 @@ export const scrollableContainerStyle = ({}) => css`
       &:after {
         right: 0;
         width: ${pxToRem(gradientWidth)};
-        background-image: linear-gradient(
-          to left,
-          ${shadowColor},
-          transparent
-        );
+        background-image: linear-gradient(to left, ${shadowColor}, transparent);
       }
     `}
 `
