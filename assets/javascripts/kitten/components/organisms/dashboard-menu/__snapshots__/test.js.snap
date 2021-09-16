@@ -2,7 +2,7 @@
 
 exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 {
-  color: #b8b8b8;
+  color: var(--color-font2,#b8b8b8);
 }
 
 .c0 .k-DashboardMenu__expandable__title,
@@ -11,7 +11,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__item:visited,
 .c0 .k-DashboardMenu__expandable__title:link,
 .c0 .k-DashboardMenu__item:link {
-  color: #b8b8b8;
+  color: var(--color-font2,#b8b8b8);
   font-size: 0.8888888888888888rem;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -23,12 +23,12 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__item:focus,
 .c0 .k-DashboardMenu__expandable__title:hover,
 .c0 .k-DashboardMenu__item:hover {
-  background-color: #2d2d2d !important;
+  background-color: var(--color-line3,#2d2d2d) !important;
 }
 
 .c0 .k-DashboardMenu__expandable__title:focus,
 .c0 .k-DashboardMenu__item:focus {
-  outline: #0496cc solid 0.125rem;
+  outline: var(--color-primary3,#0496cc) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -39,7 +39,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 
 .c0 .k-DashboardMenu__expandable__title:focus-visible,
 .c0 .k-DashboardMenu__item:focus-visible {
-  outline-color: #0496cc;
+  outline-color: var(--color-primary3,#0496cc);
 }
 
 .c0 .k-DashboardMenu__list,
@@ -54,7 +54,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DashboardMenu__expandable summary:focus {
-  outline: #0496cc solid 0.125rem;
+  outline: var(--color-primary3,#0496cc) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -63,7 +63,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DashboardMenu__expandable summary:focus-visible {
-  outline-color: #0496cc;
+  outline-color: var(--color-primary3,#0496cc);
 }
 
 .c0 .k-DashboardMenu__expandable summary::-webkit-details-marker {
@@ -79,7 +79,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 
 .c0 .k-DashboardMenu__expandable {
   border-radius: 0.375rem;
-  background-color: #2d2d2d;
+  background-color: var(--color-line3,#2d2d2d);
 }
 
 .c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__list {
@@ -130,15 +130,15 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  background-color: #222;
+  background-color: var(--color-font1,#222);
   cursor: pointer;
 }
 
 .c0 .k-DashboardMenu__expandable[open] .k-DashboardMenu__expandable__title,
 .c0 .k-DashboardMenu__expandable--hasActiveInside .k-DashboardMenu__expandable__title,
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item[aria-current='page'] {
-  color: #fff;
-  background-color: #2d2d2d;
+  color: var(--color-background1,#fff);
+  background-color: var(--color-line3,#2d2d2d);
 }
 
 .c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item {
@@ -152,7 +152,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item[aria-current='page'] {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  color: #fff;
+  color: var(--color-background1,#fff);
 }
 
 .c0 .k-DashboardMenu__iconWrapper {
@@ -282,7 +282,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
             >
               <svg
                 className=""
-                fill="#222"
+                fill="var(--color-font1, #222)"
                 height="5.64"
                 style={
                   Object {

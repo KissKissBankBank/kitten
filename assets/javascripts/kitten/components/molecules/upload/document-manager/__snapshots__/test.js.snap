@@ -2,7 +2,7 @@
 
 exports[`<DocumentManager /> should match snapshot 1`] = `
 <div
-  className="sc-bxivhb dEojoZ k-DocumentManager__uploader"
+  className="sc-bxivhb jYQRzC k-DocumentManager__uploader"
 >
   <input
     disabled={false}
@@ -11,7 +11,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa bAkRSz k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasBorderRadius"
+    className="sc-bdVaJa QSPav k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasBorderRadius"
     htmlFor="DocumentManager"
     style={
       Object {
@@ -27,7 +27,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
         className="k-DocumentManager__uploader__documentIcon"
       >
         <div
-          className="sc-bZQynM gqPMuD k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
+          className="sc-bZQynM SXZq k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
         >
           <svg
             className="sc-htpNat jpRHgA k-ColorSvg"
@@ -91,7 +91,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
 
 exports[`<DocumentManager /> should match snapshot with props 1`] = `
 <div
-  className="sc-bxivhb dEojoZ k-DocumentManager__uploader"
+  className="sc-bxivhb jYQRzC k-DocumentManager__uploader"
 >
   <input
     disabled={false}
@@ -101,7 +101,7 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa bAkRSz k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasBorderRadius"
+    className="sc-bdVaJa QSPav k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasBorderRadius"
     htmlFor="DocumentManager"
     style={
       Object {
@@ -117,7 +117,7 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
         className="k-DocumentManager__uploader__documentIcon"
       >
         <div
-          className="sc-bZQynM gqPMuD k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
+          className="sc-bZQynM SXZq k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
         >
           <svg
             className="sc-htpNat jpRHgA k-ColorSvg"

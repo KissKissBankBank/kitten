@@ -2,7 +2,7 @@
 
 exports[`<DocumentsStatusBox /> should match accepted snapshot 1`] = `
 <div
-  className="sc-bdVaJa jWNQhz k-DocumentsStatusBox k-DocumentsStatusBox--wait"
+  className="sc-bdVaJa etOTWq k-DocumentsStatusBox k-DocumentsStatusBox--wait"
 >
   <div
     className="k-DrocumentDropUploader__icon"
@@ -18,12 +18,12 @@ exports[`<DocumentsStatusBox /> should match accepted snapshot 1`] = `
       <circle
         cx="10"
         cy="10"
-        fill="#222"
+        fill="var(--color-font1, #222)"
         r="10"
       />
       <path
         d="M11 9h3v2H9V4h2v5z"
-        fill="#fff"
+        fill="var(--color-background1, #fff)"
       />
     </svg>
   </div>
@@ -55,7 +55,7 @@ exports[`<DocumentsStatusBox /> should match accepted snapshot 1`] = `
 
 exports[`<DocumentsStatusBox /> should match denied snapshot 1`] = `
 <div
-  className="sc-bdVaJa jWNQhz k-DocumentsStatusBox k-DocumentsStatusBox--wait"
+  className="sc-bdVaJa etOTWq k-DocumentsStatusBox k-DocumentsStatusBox--wait"
 >
   <div
     className="k-DrocumentDropUploader__icon"
@@ -71,12 +71,12 @@ exports[`<DocumentsStatusBox /> should match denied snapshot 1`] = `
       <circle
         cx="10"
         cy="10"
-        fill="#222"
+        fill="var(--color-font1, #222)"
         r="10"
       />
       <path
         d="M11 9h3v2H9V4h2v5z"
-        fill="#fff"
+        fill="var(--color-background1, #fff)"
       />
     </svg>
   </div>
@@ -113,7 +113,7 @@ exports[`<DocumentsStatusBox /> should match denied snapshot 1`] = `
 
 exports[`<DocumentsStatusBox /> should match empty snapshot 1`] = `
 <div
-  className="sc-bdVaJa jWNQhz k-DocumentsStatusBox k-DocumentsStatusBox--wait"
+  className="sc-bdVaJa etOTWq k-DocumentsStatusBox k-DocumentsStatusBox--wait"
 >
   <div
     className="k-DrocumentDropUploader__icon"
@@ -129,12 +129,12 @@ exports[`<DocumentsStatusBox /> should match empty snapshot 1`] = `
       <circle
         cx="10"
         cy="10"
-        fill="#222"
+        fill="var(--color-font1, #222)"
         r="10"
       />
       <path
         d="M11 9h3v2H9V4h2v5z"
-        fill="#fff"
+        fill="var(--color-background1, #fff)"
       />
     </svg>
   </div>
@@ -152,7 +152,7 @@ exports[`<DocumentsStatusBox /> should match empty snapshot 1`] = `
 
 exports[`<DocumentsStatusBox /> should match wait snapshot 1`] = `
 <div
-  className="sc-bdVaJa jWNQhz k-DocumentsStatusBox k-DocumentsStatusBox--wait"
+  className="sc-bdVaJa etOTWq k-DocumentsStatusBox k-DocumentsStatusBox--wait"
 >
   <div
     className="k-DrocumentDropUploader__icon"
@@ -168,12 +168,12 @@ exports[`<DocumentsStatusBox /> should match wait snapshot 1`] = `
       <circle
         cx="10"
         cy="10"
-        fill="#222"
+        fill="var(--color-font1, #222)"
         r="10"
       />
       <path
         d="M11 9h3v2H9V4h2v5z"
-        fill="#fff"
+        fill="var(--color-background1, #fff)"
       />
     </svg>
   </div>

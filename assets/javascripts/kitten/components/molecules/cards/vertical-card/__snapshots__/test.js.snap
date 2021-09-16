@@ -2,7 +2,7 @@
 
 exports[`<VerticalCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-EHOje kJvSfu"
+  className="sc-EHOje kSpZsd"
 >
   <img
     alt=""
@@ -10,7 +10,7 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
     src="#image"
   />
   <h1
-    className="sc-bwzfXH jNizUe k-Title k-Title--senary k-Title--noMargin"
+    className="sc-bwzfXH sqSxq k-Title k-Title--senary k-Title--noMargin"
     style={
       Object {
         "--Title-css-color": null,
@@ -25,7 +25,7 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
 
 exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-EHOje kJvSfu"
+  className="sc-EHOje kSpZsd"
 >
   <img
     alt="Image alt"
@@ -33,7 +33,7 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
     src="#image"
   />
   <h1
-    className="sc-bwzfXH jNizUe k-Title k-Title--senary k-Title--noMargin"
+    className="sc-bwzfXH sqSxq k-Title k-Title--senary k-Title--noMargin"
     style={
       Object {
         "--Title-css-color": null,

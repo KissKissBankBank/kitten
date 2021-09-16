@@ -19,7 +19,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -31,9 +31,9 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -57,7 +57,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -66,7 +66,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -163,19 +163,19 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -184,13 +184,13 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -376,7 +376,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -388,9 +388,9 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -414,7 +414,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -423,7 +423,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -520,19 +520,19 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -541,13 +541,13 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -734,7 +734,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -746,9 +746,9 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -772,7 +772,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -781,7 +781,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -878,19 +878,19 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -899,13 +899,13 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1092,7 +1092,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1104,9 +1104,9 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem dashed #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border: 0.125rem dashed var(--color-primary4,#bae8fd);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-primary1,#19b4fa);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1130,7 +1130,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -1139,7 +1139,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -1236,19 +1236,19 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -1257,13 +1257,13 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1450,7 +1450,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1462,9 +1462,9 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1488,7 +1488,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -1497,7 +1497,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -1594,19 +1594,19 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -1615,13 +1615,13 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1808,7 +1808,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1820,9 +1820,9 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1846,7 +1846,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -1855,7 +1855,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -1952,19 +1952,19 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -1973,13 +1973,13 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -2167,7 +2167,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2179,9 +2179,9 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -2205,7 +2205,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -2214,7 +2214,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -2311,19 +2311,19 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -2332,13 +2332,13 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -2525,7 +2525,7 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2537,9 +2537,9 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -2563,7 +2563,7 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -2572,7 +2572,7 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -2669,19 +2669,19 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -2690,13 +2690,13 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -2883,7 +2883,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2895,9 +2895,9 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -2921,7 +2921,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -2930,7 +2930,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -3027,19 +3027,19 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -3048,13 +3048,13 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -3241,7 +3241,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3253,9 +3253,9 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -3279,7 +3279,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -3288,7 +3288,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -3385,19 +3385,19 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -3406,13 +3406,13 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -3599,7 +3599,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3611,9 +3611,9 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -3637,7 +3637,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -3646,7 +3646,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -3743,19 +3743,19 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -3764,13 +3764,13 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -3957,7 +3957,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3969,9 +3969,9 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -3995,7 +3995,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -4004,7 +4004,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -4101,19 +4101,19 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -4122,13 +4122,13 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -4315,7 +4315,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4327,9 +4327,9 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -4353,7 +4353,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -4362,7 +4362,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -4459,19 +4459,19 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -4480,13 +4480,13 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -4673,7 +4673,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4685,9 +4685,9 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -4711,7 +4711,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -4720,7 +4720,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -4817,19 +4817,19 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -4838,13 +4838,13 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -5036,7 +5036,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5048,9 +5048,9 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -5074,7 +5074,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -5083,7 +5083,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -5180,19 +5180,19 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -5201,13 +5201,13 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -5394,7 +5394,7 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5406,9 +5406,9 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -5432,7 +5432,7 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -5441,7 +5441,7 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -5538,19 +5538,19 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -5559,13 +5559,13 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -5752,7 +5752,7 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5764,9 +5764,9 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -5790,7 +5790,7 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -5799,7 +5799,7 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0.k-Button--hasBorderRadius {
@@ -5896,19 +5896,19 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c0:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -5917,13 +5917,13 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {

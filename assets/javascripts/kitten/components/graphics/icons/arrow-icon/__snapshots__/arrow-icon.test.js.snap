@@ -3,7 +3,7 @@
 exports[`<ArrowIcon /> default props matches the snapshot 1`] = `
 <svg
   className=""
-  fill="#222"
+  fill="var(--color-font1, #222)"
   height="5.64"
   style={
     Object {
@@ -24,7 +24,7 @@ exports[`<ArrowIcon /> default props matches the snapshot 1`] = `
 exports[`<ArrowIcon /> when disabled matches the snapshot 1`] = `
 <svg
   className=""
-  fill="#fff"
+  fill="var(--color-background1, #fff)"
   height="5.64"
   style={
     Object {
@@ -45,7 +45,7 @@ exports[`<ArrowIcon /> when disabled matches the snapshot 1`] = `
 exports[`<ArrowIcon /> with the prop \`direction\` set to \`bottom\` matches the snapshot 1`] = `
 <svg
   className=""
-  fill="#222"
+  fill="var(--color-font1, #222)"
   height="5.64"
   style={
     Object {
@@ -66,7 +66,7 @@ exports[`<ArrowIcon /> with the prop \`direction\` set to \`bottom\` matches the
 exports[`<ArrowIcon /> with the prop \`direction\` set to \`left\` matches the snapshot 1`] = `
 <svg
   className=""
-  fill="#222"
+  fill="var(--color-font1, #222)"
   height="5.64"
   style={
     Object {
@@ -87,7 +87,7 @@ exports[`<ArrowIcon /> with the prop \`direction\` set to \`left\` matches the s
 exports[`<ArrowIcon /> with the prop \`direction\` set to \`right\` matches the snapshot 1`] = `
 <svg
   className=""
-  fill="#222"
+  fill="var(--color-font1, #222)"
   height="5.64"
   style={
     Object {

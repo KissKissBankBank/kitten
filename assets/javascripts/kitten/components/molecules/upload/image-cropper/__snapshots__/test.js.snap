@@ -2,7 +2,7 @@
 
 exports[`<ImageCropper /> matches with empty snapshot 1`] = `
 <div
-  className="sc-bZQynM bqJTVP k-UploadAndCropper"
+  className="sc-bZQynM jHILvg k-UploadAndCropper"
 >
   <label
     className="sc-bdVaJa cioPrE k-Label k-u-margin-bottom-singleHalf k-Label--normal"
@@ -12,7 +12,7 @@ exports[`<ImageCropper /> matches with empty snapshot 1`] = `
     Lorem ipsum…
   </label>
   <div
-    className="sc-ifAKCX eZQOng k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
+    className="sc-ifAKCX dJtPgF k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
   >
     <input
       accept=".jpg,.jpeg,.gif,.png"
@@ -22,7 +22,7 @@ exports[`<ImageCropper /> matches with empty snapshot 1`] = `
       type="file"
     />
     <label
-      className="sc-htpNat dVnnwM k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+      className="sc-htpNat hZDGlz k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
       htmlFor="cropper"
       style={
         Object {
@@ -64,7 +64,7 @@ exports[`<ImageCropper /> matches with empty snapshot 1`] = `
 
 exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
 <div
-  className="sc-bZQynM bqJTVP k-UploadAndCropper"
+  className="sc-bZQynM jHILvg k-UploadAndCropper"
 >
   <label
     className="sc-bdVaJa cioPrE k-Label k-u-margin-bottom-singleHalf k-Label--normal"
@@ -74,7 +74,7 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
     Lorem ipsum…
   </label>
   <div
-    className="sc-ifAKCX eZQOng k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
+    className="sc-ifAKCX dJtPgF k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
   >
     <input
       accept=".jpg,.jpeg,.gif,.png"
@@ -84,7 +84,7 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
       type="file"
     />
     <label
-      className="sc-htpNat dVnnwM k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fluid"
+      className="sc-htpNat hZDGlz k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fluid"
       htmlFor="cropper"
       style={
         Object {
@@ -161,7 +161,7 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
         Zoom…
       </label>
       <div
-        className="sc-EHOje kqHbFs k-RangeSlider"
+        className="sc-EHOje jZZJXb k-RangeSlider"
         style={
           Object {
             "--range-input-ratio": 0,

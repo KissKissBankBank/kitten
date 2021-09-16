@@ -2,7 +2,7 @@
 
 exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bwzfXH itXqPg k-Form-Dropdown k-Form-Dropdown--andromeda k-Form-Dropdown--normal k-Form-Dropdown--isOpen"
+  className="sc-bwzfXH iqtASP k-Form-Dropdown k-Form-Dropdown--andromeda k-Form-Dropdown--normal k-Form-Dropdown--isOpen"
   style={
     Object {
       "--menu-z-index": 1000,
@@ -39,7 +39,7 @@ exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
     >
       <svg
         className=""
-        fill="#222"
+        fill="var(--color-font1, #222)"
         height="5.64"
         style={
           Object {

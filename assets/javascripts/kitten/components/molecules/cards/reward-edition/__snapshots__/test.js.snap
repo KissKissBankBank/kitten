@@ -19,7 +19,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -31,9 +31,9 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   min-height: 3.125rem;
   padding: 0.625rem 1.875rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -57,7 +57,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 }
 
 .c2:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -66,7 +66,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 }
 
 .c2:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c2.k-Button--hasBorderRadius {
@@ -163,19 +163,19 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 
 .c2:hover,
 .c2:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c2:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c2:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -184,21 +184,21 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 }
 
 .c2:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c2:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 .c1 {
   border-bottom-width: 0.125rem;
   border-bottom-style: solid;
-  border-bottom-color: #eee;
+  border-bottom-color: var(--color-line1,#eee);
   padding: 0.9375rem;
-  background-color: #f6f6f6;
+  background-color: var(--color-background3,#f6f6f6);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -238,7 +238,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   height: 100%;
   border-width: 0.125rem;
   border-style: solid;
-  border-color: #eee;
+  border-color: var(--color-line1,#eee);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {

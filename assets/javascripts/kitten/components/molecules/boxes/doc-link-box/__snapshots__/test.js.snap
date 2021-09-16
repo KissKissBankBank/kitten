@@ -2,14 +2,14 @@
 
 exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa bVAtuB"
+  className="sc-bdVaJa iNPQyh"
   href="#"
 >
   <div
     className="k-LinkBox__link k-LinkBox__link--andromeda"
     style={
       Object {
-        "--LinkBox-background-color": "#fff",
+        "--LinkBox-background-color": "var(--color-background1, #fff)",
         "--LinkBox-text-color": null,
       }
     }
@@ -78,7 +78,7 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
     >
       <svg
         className=""
-        fill="#222"
+        fill="var(--color-font1, #222)"
         height="10"
         style={
           Object {
@@ -101,7 +101,7 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa bVAtuB"
+  className="sc-bdVaJa iNPQyh"
   href="#foobar"
   rel="noopener"
   target="_blank"
@@ -110,7 +110,7 @@ exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
     className="k-LinkBox__link k-LinkBox__link--andromeda"
     style={
       Object {
-        "--LinkBox-background-color": "#fff",
+        "--LinkBox-background-color": "var(--color-background1, #fff)",
         "--LinkBox-text-color": null,
       }
     }
@@ -183,7 +183,7 @@ exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
     >
       <svg
         className=""
-        fill="#222"
+        fill="var(--color-font1, #222)"
         height="10"
         style={
           Object {

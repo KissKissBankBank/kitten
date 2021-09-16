@@ -2,7 +2,7 @@
 
 exports[`<AvatarWithTextAndBadge /> with multiple lines and badge should match with snapshot 1`] = `
 <div
-  className="sc-bwzfXH hUyEaB k-Avatar__wrapper"
+  className="sc-bwzfXH doYVGJ k-Avatar__wrapper"
 >
   <div
     className="k-Avatar k-Avatar--big"
@@ -26,10 +26,10 @@ exports[`<AvatarWithTextAndBadge /> with multiple lines and badge should match w
     </span>
     <span
       aria-label="2 notifications"
-      className="sc-bdVaJa ednBsT k-Badge k-Avatar__badge"
+      className="sc-bdVaJa kUVyAv k-Badge k-Avatar__badge"
       style={
         Object {
-          "--Badge-background-color": "#19b4fa",
+          "--Badge-background-color": "var(--color-primary1, #19b4fa)",
         }
       }
     >
@@ -56,7 +56,7 @@ exports[`<AvatarWithTextAndBadge /> with multiple lines and badge should match w
 
 exports[`<AvatarWithTextAndBadge /> with simple props and avatar should match with snapshot 1`] = `
 <div
-  className="sc-bwzfXH hUyEaB k-Avatar__wrapper"
+  className="sc-bwzfXH doYVGJ k-Avatar__wrapper"
 >
   <div
     className="k-Avatar k-Avatar--regular"
@@ -64,8 +64,8 @@ exports[`<AvatarWithTextAndBadge /> with simple props and avatar should match wi
       Object {
         "--Avatar-height": undefined,
         "--Avatar-width": undefined,
-        "--k-Avatar-background-color": "#0496cc",
-        "--k-Avatar-color": "#fff",
+        "--k-Avatar-background-color": "var(--color-primary3, #0496cc)",
+        "--k-Avatar-color": "var(--color-background1, #fff)",
       }
     }
   >
@@ -89,7 +89,7 @@ exports[`<AvatarWithTextAndBadge /> with simple props and avatar should match wi
 
 exports[`<AvatarWithTextAndBadge /> with simple props and no avatar image should match with snapshot 1`] = `
 <div
-  className="sc-bwzfXH hUyEaB k-Avatar__wrapper"
+  className="sc-bwzfXH doYVGJ k-Avatar__wrapper"
 >
   <div
     className="k-Avatar k-Avatar--regular"
