@@ -451,7 +451,8 @@ const RewardsExample = () => {
           </RewardSummaryCard.Image>
           <div style={{ display: 'grid' }}>
             <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
-              Stickers Free Boobs Club  Stickers Free Boobs Club  Stickers Free Boobs Club.
+              Stickers Free Boobs Club Stickers Free Boobs Club Stickers Free
+              Boobs Club.
             </RewardSummaryCard.Title>
             <RewardSummaryCard.TitleTag text="Contrepartie star" />
           </div>
