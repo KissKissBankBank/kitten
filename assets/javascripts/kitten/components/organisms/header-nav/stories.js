@@ -4,6 +4,7 @@ import { HeaderNav } from './index'
 import { LendopolisHeaderNavStory } from './stories/lendopolis'
 import { KissKissBankBankHeaderNavStory } from './stories/kisskissbankbank'
 import { KissKissBankBankHeaderNavStoryNew } from './stories/kisskissbankbank-new'
+import { KissKissBankBankHeaderNavStoryv3 } from './stories/kisskissbankbank-v3'
 import { MinimalistHeaderNavStory } from './stories/minimalist'
 import { DocsPage } from 'storybook/docs-page'
 
@@ -101,6 +102,12 @@ export const KissKissBankBank = ({ whiteBg, ...args }) => (
 export const KissKissBankBankNew = ({ whiteBg, ...args }) => (
   <Container whiteBg={whiteBg}>
     <KissKissBankBankHeaderNavStoryNew {...args} />
+  </Container>
+)
+
+export const KissKissBankBankNewAgain = ({ whiteBg, ...args }) => (
+  <Container whiteBg={whiteBg}>
+    <KissKissBankBankHeaderNavStoryv3 {...args} />
   </Container>
 )
 

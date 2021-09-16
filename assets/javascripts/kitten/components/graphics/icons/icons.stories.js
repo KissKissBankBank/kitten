@@ -31,6 +31,7 @@ import { EditIcon } from './edit-icon'
 import { EllipsisIcon } from './ellipsis-icon'
 import { EmailIcon } from './email-icon'
 import { EmbedIcon } from './embed-icon'
+import { EnvelopeIcon } from './envelope-icon'
 import { ExportIcon } from './export-icon'
 import { ExportIconAlternate } from './export-icon-alternate'
 import { FacebookIcon } from './facebook-icon'
@@ -371,6 +372,7 @@ export const AllIcons = ({ colorInput, bgColorInput }) => {
         <IconContainer children={<RefundIcon color={colorInput} />} />
         <IconContainer children={<EllipsisIcon color={colorInput} />} />
         <IconContainer children={<NoImageIcon color={colorInput} />} />
+        <IconContainer children={<EnvelopeIcon color={colorInput} />} />
       </Group>
       <Group title="Country flag icons">
         {flagList.map(country => (
