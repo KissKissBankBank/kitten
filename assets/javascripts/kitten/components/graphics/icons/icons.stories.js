@@ -9,7 +9,7 @@ import { BlockquoteIcon } from './blockquote-icon'
 import { BoldIcon } from './bold-icon'
 import { BubbleIcon } from './bubble-icon'
 import { BurgerIcon } from './burger-icon/index'
-import { ButtonIcon } from './button-icon'
+import { ButtonIcon as EditorButtonIcon } from './button-icon'
 import { CameraIcon } from './camera-icon'
 import { Cart } from './cart'
 import { CbIcon } from './cb-icon'
@@ -223,7 +223,8 @@ export const AllIcons = ({ colorInput, bgColorInput }) => {
         <IconContainer children={<LinkIcon color={colorInput} />} />
         <IconContainer
           className="noMaxWidth"
-          children={<ButtonIcon color={colorInput} />}
+          children={<EditorButtonIcon color={colorInput} />}
+          suffix="as EditorButtonIcon in ESM export"
         />
         <IconContainer children={<AlignLeftIcon color={colorInput} />} />
         <IconContainer children={<AlignCenterIcon color={colorInput} />} />
