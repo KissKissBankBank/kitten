@@ -19,7 +19,7 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _isFunction = _interopRequireDefault(require("lodash/fp/isFunction"));
 
