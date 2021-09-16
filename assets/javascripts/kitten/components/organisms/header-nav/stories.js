@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { boolean, text, select } from '@storybook/addon-knobs'
 import { HeaderNav } from './index'
 import { LendopolisHeaderNavStory } from './stories/lendopolis'
 import { KissKissBankBankHeaderNavStory } from './stories/kisskissbankbank'
@@ -19,6 +18,24 @@ const Container = styled.div`
         rgba(240, 240, 240, 1) 100%
       );`};
 `
+
+const args = {
+  isLogged: false,
+  isFixed: true,
+  size: 'regular',
+  borderStyle: 'shadow',
+  whiteBg: false,
+}
+const argTypes = {
+  isLogged: { control: 'boolean' },
+  isFixed: { control: 'boolean' },
+  size: { control: 'inline-radio', options: ['regular', 'small'] },
+  borderStyle: {
+    control: 'inline-radio',
+    options: ['none', 'shadow', 'border'],
+  },
+  whiteBg: { name: 'white bagkground (story prop)', control: 'boolean' },
+}
 
 export default {
   title: 'Organisms/HeaderNav',
@@ -55,56 +72,50 @@ export default {
       ),
     },
   },
-  decorators: [
-    story => (
-      <div className="story-Container story-Grid story-Grid--large">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <>{story()}</>],
   component: HeaderNav,
+  args,
+  argTypes,
 }
 
-export const Lendopolis = () => (
-  <Container whiteBg={boolean('White bg', false)}>
-    <LendopolisHeaderNavStory
-      isLogged={boolean('Is logged', false)}
-      isFixed={boolean('Is fixed', false)}
-      stickyProps={boolean('null stickyProps?') ? null : {}}
-    />
+export const Lendopolis = ({ whiteBg, stickyProps, ...args }) => (
+  <Container whiteBg={whiteBg}>
+    <LendopolisHeaderNavStory {...args} stickyProps={stickyProps ? null : {}} />
+  </Container>
+)
+Lendopolis.args = {
+  ...args,
+  stickyProps: false,
+}
+Lendopolis.argTypes = {
+  ...argTypes,
+  stickyProps: { control: 'boolean' },
+}
+
+export const KissKissBankBank = ({ whiteBg, ...args }) => (
+  <Container whiteBg={whiteBg}>
+    <KissKissBankBankHeaderNavStory {...args} />
   </Container>
 )
 
-export const KissKissBankBank = () => (
-  <Container whiteBg={boolean('White bg', false)}>
-    <KissKissBankBankHeaderNavStory
-      isLogged={boolean('Is logged', false)}
-      isFixed={boolean('Is fixed', false)}
-    />
+export const KissKissBankBankNew = ({ whiteBg, ...args }) => (
+  <Container whiteBg={whiteBg}>
+    <KissKissBankBankHeaderNavStoryNew {...args} />
   </Container>
 )
 
-export const KissKissBankBankNew = () => (
-  <Container whiteBg={boolean('White bg', false)}>
-    <KissKissBankBankHeaderNavStoryNew
-      isLogged={boolean('Is logged', false)}
-      isFixed={boolean('Is fixed', false)}
-      size={select('Size', ['regular', 'small'], 'small')}
-      borderStyle={select(
-        'BorderStyle',
-        ['none', 'shadow', 'border'],
-        'border',
-      )}
-    />
+export const Minimalist = ({ whiteBg, text, subText, ...args }) => (
+  <Container whiteBg={whiteBg}>
+    <MinimalistHeaderNavStory {...args} text={text} subText={subText} />
   </Container>
 )
-
-export const Minimalist = () => (
-  <Container whiteBg={boolean('White bg', false)}>
-    <MinimalistHeaderNavStory
-      isFixed={boolean('Is fixed', true)}
-      text={text('Texte', 'Ma page mentor')}
-      subText={text('Sous texte', 'Créé le 12/02/2020')}
-    />
-  </Container>
-)
+Minimalist.args = {
+  ...args,
+  text: 'Ma page mentor',
+  subText: 'Créé le 12/02/2020',
+}
+Minimalist.argTypes = {
+  ...argTypes,
+  text: { control: 'text' },
+  subText: { control: 'text' },
+}

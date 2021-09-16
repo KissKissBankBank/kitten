@@ -27,20 +27,20 @@ export default {
   argTypes: {
     value: {
       name: 'value',
-      control: { type: 'number' },
+      control: 'number',
     },
     color: {
       name: 'color',
-      control: { type: 'color' },
+      control: 'color',
     },
     rampProps: {
       name: 'rampProps',
-      control: { type: 'object' },
+      control: 'object',
     },
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
   },
 }

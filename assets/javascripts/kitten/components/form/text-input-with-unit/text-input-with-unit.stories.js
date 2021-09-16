@@ -23,15 +23,15 @@ Default.argTypes = {
   ...TextInputStory.argTypes,
   unit: {
     name: 'unit',
-    control: { type: 'text' },
+    control: 'text',
   },
   unitWord: {
     name: 'unitWord',
-    control: { type: 'text' },
+    control: 'text',
   },
   wrapperProps: {
     name: 'wrapperProps',
     description: 'props object passed to the wrapper',
-    control: { type: 'object' },
+    control: 'object',
   },
 }

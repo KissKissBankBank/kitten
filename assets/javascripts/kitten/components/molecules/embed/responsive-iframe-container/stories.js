@@ -22,7 +22,7 @@ export default {
   argTypes: {
     ratio: {
       name: 'ratio',
-      control: { type: 'number' },
+      control: 'number',
     },
     children: {
       name: 'children',

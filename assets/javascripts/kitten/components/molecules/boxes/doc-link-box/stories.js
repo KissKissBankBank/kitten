@@ -24,15 +24,15 @@ Default.args = {
 
 Default.argTypes = {
   isExternal: {
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   href: {
-    control: { type: 'text' },
+    control: 'text',
   },
   title: {
-    control: { type: 'text' },
+    control: 'text',
   },
   text: {
-    control: { type: 'text' },
+    control: 'text',
   },
 }

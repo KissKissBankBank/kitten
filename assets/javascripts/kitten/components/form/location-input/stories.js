@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { LocationInput } from './index'
-import { text } from '@storybook/addon-knobs'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -16,24 +15,28 @@ export default {
     },
     defaultValue: {
       name: 'defaultValue',
-      control: { type: 'text' },
+      control: 'text',
     },
     inputProps: {
       name: 'inputProps',
-      control: { type: 'object' },
+      control: 'object',
     },
     name: {
       name: 'name',
-      control: { type: 'text' },
+      control: 'text',
     },
     loadingText: {
       name: 'loadingText',
-      control: { type: 'text' },
+      control: 'text',
     },
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
+    },
+    gPlaceApiKey: {
+      name: 'gPlaceApiKey (story prop)',
+      control: 'text',
     },
   },
   args: {
@@ -44,6 +47,7 @@ export default {
     name: 'location-input',
     loadingText: 'Loading',
     variant: 'andromeda',
+    gPlaceApiKey: 'YOUR KEY',
   },
   parameters: {
     docs: {
@@ -54,7 +58,7 @@ export default {
   },
 }
 
-export const Default = args => {
+export const Default = ({ gPlaceApiKey, ...args }) => {
   const [googleMapsReady, setGoogleMapsReadiness] = useState(false)
 
   useEffect(() => {
@@ -67,10 +71,7 @@ export const Default = args => {
     const existingScript = document.getElementById('googlePlacesScript')
     if (!existingScript) {
       const script = document.createElement('script')
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${text(
-        'GOOGLE_PLACES_API_KEY',
-        'YOUR_KEY',
-      )}&libraries=places`
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${gPlaceApiKey}&libraries=places`
       script.id = 'googleMaps'
       document.body.appendChild(script)
 

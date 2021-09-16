@@ -25,15 +25,15 @@ Default.argTypes = {
   ...TextInputStory.argTypes,
   inputValue: {
     name: 'inputValue',
-    control: { type: 'text' },
+    control: 'text',
   },
   buttonValue: {
     name: 'buttonValue',
-    control: { type: 'text' },
+    control: 'text',
   },
   inset: {
     name: 'inset',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   modifier: {
     name: 'modifier',
@@ -55,6 +55,6 @@ Default.argTypes = {
       'social_youtube',
       'social_pinterest',
     ],
-    control: { type: 'select' },
+    control: 'select',
   },
 }

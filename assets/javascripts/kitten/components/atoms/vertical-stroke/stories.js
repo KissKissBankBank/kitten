@@ -26,7 +26,7 @@ export default {
     size: {
       name: 'size',
       options: ['tiny', 'default', 'big', 'huge'],
-      control: { type: 'radio' },
+      control: 'radio',
     },
   },
 }

@@ -65,73 +65,73 @@ export default {
   argTypes: {
     id: {
       name: 'id',
-      control: { type: 'text' },
+      control: 'text',
     },
     error: {
       name: 'error',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     valid: {
       name: 'valid',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     hideLabel: {
       name: 'hideLabel',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     labelText: {
       name: 'labelText',
-      control: { type: 'text' },
+      control: 'text',
     },
     resetOnBackspace: {
       name: 'resetOnBackspace',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     highlightOptionBox: {
       name: 'highlightOptionBox',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     placeholder: {
       name: 'placeholder',
-      control: { type: 'text' },
+      control: 'text',
     },
     phoneProps: {
       name: 'phoneProps',
-      control: { type: 'object' },
+      control: 'object',
     },
     locale: {
       name: 'locale',
       options: ['fr', 'en', 'nl'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
     flagsUrl: {
       name: 'flagsUrl',
-      control: { type: 'text' },
+      control: 'text',
     },
     size: {
       name: 'size',
       options: ['tiny', 'normal', 'big', 'huge', 'giant'],
-      control: { type: 'select' },
+      control: 'select',
     },
     defaultCountry: {
       name: 'defaultCountry',
-      control: { type: 'text' },
+      control: 'text',
     },
     value: {
       name: 'value',
-      control: { type: 'text' },
+      control: 'text',
     },
     inputProps: {
       name: 'inputProps',
-      control: { type: 'object' },
+      control: 'object',
     },
     assumeCountry: {
       name: 'assumeCountry',
-      control: { type: 'text' },
+      control: 'text',
     },
   },
 }

@@ -35,31 +35,31 @@ WithDarkBackground.args = SimpleList.args
 SimpleList.argTypes = {
   margin: {
     name: 'margin',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   items: {
     name: 'items',
-    control: { type: 'object' },
+    control: 'object',
   },
   color: {
     name: 'color',
     options: ['light', 'dark'],
-    control: { type: 'inline-radio' },
+    control: 'inline-radio',
   },
   lineHeight: {
     name: 'lineHeight',
     options: [null, 'normal'],
-    control: { type: 'inline-radio' },
+    control: 'inline-radio',
   },
   itemMargin: {
     name: 'itemMargin',
     options: ['double', 'triple'],
-    control: { type: 'inline-radio' },
+    control: 'inline-radio',
   },
   weight: {
     name: 'weight',
     options: ['regular', 'light'],
-    control: { type: 'inline-radio' },
+    control: 'inline-radio',
   },
 }
 WithDarkBackground.argTypes = SimpleList.argTypes

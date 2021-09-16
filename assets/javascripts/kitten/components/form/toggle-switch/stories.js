@@ -26,35 +26,35 @@ export default {
   argTypes: {
     id: {
       name: 'id',
-      control: { type: 'text' },
+      control: 'text',
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     big: {
       name: 'big',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     label: {
       name: 'label',
-      control: { type: 'text' },
+      control: 'text',
     },
     isLabelVisible: {
       name: 'isLabelVisible',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     reverseOrder: {
       name: 'reverseOrder',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     locked: {
       name: 'locked',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     onChange: {
       name: 'onChange',
-      control: { type: 'function' },
+      control: null,
     },
   },
   parameters: {

@@ -29,48 +29,48 @@ Default.argTypes = {
   tag: {
     name: 'tag',
     options: ['input', 'textarea'],
-    control: { type: 'inline-radio' },
+    control: 'inline-radio',
   },
   variant: {
     name: 'variant',
     options: ['andromeda', 'orion'],
-    control: { type: 'inline-radio' },
+    control: 'inline-radio',
   },
   valid: {
     name: 'valid',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   error: {
     name: 'error',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   disabled: {
     name: 'disabled',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   size: {
     name: 'size',
     options: ['tiny', 'regular', 'big', 'huge', 'giant'],
-    control: { type: 'select' },
+    control: 'select',
   },
   center: {
     name: 'center',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   rounded: {
     name: 'rounded',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   placeholder: {
     name: 'placeholder',
-    control: { type: 'text' },
+    control: 'text',
   },
   digits: {
     name: 'digits',
-    control: { type: 'number' },
+    control: 'number',
   },
   name: {
     name: 'name',
-    control: { type: 'text' },
+    control: 'text',
   },
 }

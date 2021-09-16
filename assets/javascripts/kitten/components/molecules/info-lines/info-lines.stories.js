@@ -1,7 +1,7 @@
 import React from 'react'
 import { DocsPage } from 'storybook/docs-page'
 import { InfoLines } from './index'
-import { COLORS, TextInput, Text, } from '../../..'
+import { COLORS, TextInput, Text } from '../../..'
 
 export default {
   title: 'Molecules/InfoLines',
@@ -21,43 +21,42 @@ export default {
   argTypes: {
     infos: {
       name: 'infos',
-      control: { type: 'object' },
+      control: 'object',
     },
     borderColor: {
       name: 'borderColor',
-      control: { type: 'color' },
+      control: 'color',
     },
     withBorderRadius: {
       name: 'withBorderRadius',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     withLeftRightBorder: {
       name: 'withLeftRightBorder',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     withoutTopBottomBorder: {
       name: 'withoutTopBottomBorder',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     withoutResponsive: {
       name: 'withoutResponsive',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     descriptionTagList: {
       name: 'descriptionTagList',
-      control: { type: 'text' },
+      control: 'text',
     },
     titleTagList: {
       name: 'titleTagList',
-      control: { type: 'text' },
+      control: 'text',
     },
     itemTagList: {
       name: 'itemTagList',
-      control: { type: 'text' },
+      control: 'text',
     },
   },
 }
-
 
 export const Default = args => <InfoLines {...args} />
 
@@ -82,7 +81,29 @@ Default.args = args
 WithFormComponents.args = {
   ...args,
   infos: [
-    { key: <Text size="tiny">Lorem importString docs size amet</Text>, value: <TextInput name="input-item-1" size="tiny" variant="orion" placeholder="value 1" />, id: 'item-1' },
-    { key: <Text size="tiny">Dolor</Text>, value: <TextInput name="input-item-2" size="tiny" variant="orion" placeholder="value 2" />, id: 'item-2' },
+    {
+      key: <Text size="tiny">Lorem importString docs size amet</Text>,
+      value: (
+        <TextInput
+          name="input-item-1"
+          size="tiny"
+          variant="orion"
+          placeholder="value 1"
+        />
+      ),
+      id: 'item-1',
+    },
+    {
+      key: <Text size="tiny">Dolor</Text>,
+      value: (
+        <TextInput
+          name="input-item-2"
+          size="tiny"
+          variant="orion"
+          placeholder="value 2"
+        />
+      ),
+      id: 'item-2',
+    },
   ],
 }

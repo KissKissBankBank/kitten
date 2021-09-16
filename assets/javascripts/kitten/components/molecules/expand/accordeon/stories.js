@@ -22,15 +22,15 @@ export default {
   argTypes: {
     closeOnClick: {
       name: 'closeOnClick',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     id: {
       name: 'id',
-      control: { type: 'text' },
+      control: 'text',
     },
     isAnimated: {
       name: 'isAnimated',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     onChange: {
       name: 'onChange',
@@ -38,12 +38,12 @@ export default {
     },
     selectedItem: {
       name: 'selectedItem',
-      control: { type: 'number' },
+      control: 'number',
     },
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
     children: {
       name: 'children',

@@ -38,19 +38,19 @@ export default {
     },
     animationMaxHeight: {
       name: 'animationMaxHeight',
-      control: { type: 'text' },
+      control: 'text',
     },
     animationShrinkingDuration: {
       name: 'animationShrinkingDuration',
-      control: { type: 'number' },
+      control: 'number',
     },
     ariaId: {
       name: 'ariaId',
-      control: { type: 'text' },
+      control: 'text',
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     onClick: {
       name: 'onClick',
@@ -58,16 +58,16 @@ export default {
     },
     style: {
       name: 'style',
-      control: { type: 'object' },
+      control: 'object',
     },
     withAnimation: {
       name: 'withAnimation',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     buttonExpandChildren: {
       name: 'ExpandBoard.Button: expandChildren',
       description: 'Expanded button text',
-      control: { type: 'text' },
+      control: 'text',
     },
     buttonBorderRadius: {
       name: 'ExpandBoard.Button: borderRadius',
@@ -75,15 +75,15 @@ export default {
     },
     buttonBig: {
       name: 'ExpandBoard.Button: big',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     buttonChildren: {
       name: 'ExpandBoard.Button: children',
-      control: { type: 'text' },
+      control: 'text',
     },
     contentChildren: {
       name: 'ExpandBoard.Content: children',
-      control: { type: 'text' },
+      control: 'text',
     },
   },
   args: {

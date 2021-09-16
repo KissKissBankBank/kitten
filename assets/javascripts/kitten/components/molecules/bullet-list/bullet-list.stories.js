@@ -20,10 +20,10 @@ Default.argTypes = {
   size: {
     name: 'size',
     options: ['tiny', 'regular', 'large', 'big', 'huge'],
-    control: { type: 'select' },
+    control: 'select',
   },
   items: {
     name: 'items',
-    control: { type: 'object' },
+    control: 'object',
   },
 }

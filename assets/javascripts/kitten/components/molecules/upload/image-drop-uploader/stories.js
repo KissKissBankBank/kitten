@@ -27,75 +27,75 @@ export default {
   argTypes: {
     id: {
       name: 'id',
-      control: { type: 'text' },
+      control: 'text',
     },
     acceptedFileSize: {
       name: 'acceptedFileSize',
-      control: { type: 'number' },
+      control: 'number',
     },
     acceptedMimeTypes: {
       name: 'acceptedMimeTypes',
-      control: { type: 'object' },
+      control: 'object',
     },
     buttonProps: {
       name: 'buttonProps',
-      control: { type: 'object' },
+      control: 'object',
     },
     buttonText: {
       name: 'buttonText',
-      control: { type: 'text' },
+      control: 'text',
     },
     buttonTitle: {
       name: 'buttonTitle',
-      control: { type: 'text' },
+      control: 'text',
     },
     canCancel: {
       name: 'canCancel',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     canCrop: {
       name: 'canCrop',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     cancelButtonText: {
       name: 'cancelButtonText',
-      control: { type: 'text' },
+      control: 'text',
     },
     cropRatio: {
       name: 'cropRatio',
-      control: { type: 'number' },
+      control: 'number',
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     error: {
       name: 'error',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     errorMessage: {
       name: 'errorMessage',
-      control: { type: 'text' },
+      control: 'text',
     },
     fileInputProps: {
       name: 'fileInputProps',
-      control: { type: 'object' },
+      control: 'object',
     },
     initialCrop: {
       name: 'initialCrop',
-      control: { type: 'object' },
+      control: 'object',
     },
     initialValue: {
       name: 'initialValue',
-      control: { type: 'text' },
+      control: 'text',
     },
     managerText: {
       name: 'managerText',
-      control: { type: 'text' },
+      control: 'text',
     },
     managerTitle: {
       name: 'managerTitle',
-      control: { type: 'text' },
+      control: 'text',
     },
     onCancel: {
       name: 'onCancel',
@@ -111,20 +111,20 @@ export default {
     },
     quantityErrorText: {
       name: 'quantityErrorText',
-      control: { type: 'text' },
+      control: 'text',
     },
     sizeErrorText: {
       name: 'sizeErrorText',
-      control: { type: 'text' },
+      control: 'text',
     },
     status: {
       name: 'status',
       options: ['ready', 'error', 'manage'],
-      control: { type: 'select' },
+      control: 'select',
     },
     typeErrorText: {
       name: 'typeErrorText',
-      control: { type: 'text' },
+      control: 'text',
     },
   },
 }
@@ -156,7 +156,7 @@ const args = {
   sizeErrorText: 'File too large',
   quantityErrorText: 'Too many files',
   cancelButtonText: 'Cancel',
-  cropRatio: 19 / 10,
+  cropRatio: 16 / 10,
   canCrop: true,
   canCancel: true,
   fileInputProps: {},

@@ -49,55 +49,55 @@ Default.args = {
 Default.argTypes = {
   color: {
     name: 'color',
-    control: { type: 'color' },
+    control: 'color',
   },
   size: {
     name: 'size',
-    control: { type: 'number' },
+    control: 'number',
   },
   position: {
     name: 'position',
     options: ['left', 'top', 'right', 'bottom'],
-    control: { type: 'select' },
+    control: 'select',
   },
   distance: {
     name: 'distance',
-    control: { type: 'number' },
+    control: 'number',
   },
   centered: {
     name: 'centered',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   distanceAsPercentage: {
     name: 'distanceAsPercentage',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   distanceIsReverse: {
     name: 'distanceIsReverse',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   shadow: {
     name: 'shadow',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   borderRadius: {
     name: 'borderRadius',
-    control: { type: 'number' },
+    control: 'number',
   },
   borderColor: {
     name: 'borderColor',
-    control: { type: 'color' },
+    control: 'color',
   },
   borderWidth: {
     name: 'borderWidth',
-    control: { type: 'number' },
+    control: 'number',
   },
   padding: {
     name: 'padding',
-    control: { type: 'number' },
+    control: 'number',
   },
   children: {
     name: 'children',
-    control: { type: 'text' },
+    control: 'text',
   },
 }

@@ -26,12 +26,12 @@ export default {
     color: {
       name: 'color',
       description: 'Color of the dots.',
-      control: { type: 'color' },
+      control: 'color',
     },
     tag: {
       name: 'tag',
       description: 'Tag for the wrapper.',
-      control: { type: 'text' },
+      control: 'text',
     },
   },
 }

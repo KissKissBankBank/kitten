@@ -22,38 +22,38 @@ Default.args = {
 Default.argTypes = {
   value: {
     name: 'value',
-    control: { type: 'number' },
+    control: 'number',
   },
   min: {
     name: 'min',
-    control: { type: 'number' },
+    control: 'number',
   },
   max: {
     name: 'max',
-    control: { type: 'number' },
+    control: 'number',
   },
   step: {
     name: 'step',
-    control: { type: 'number' },
+    control: 'number',
   },
   disableInput: {
     name: 'disableInput',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   disabled: {
     name: 'disabled',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   inputProps: {
     name: 'inputProps',
-    control: { type: 'object' },
+    control: 'object',
   },
   minusButtonProps: {
     name: 'minusButtonProps',
-    control: { type: 'object' },
+    control: 'object',
   },
   plusButtonProps: {
     name: 'plusButtonProps',
-    control: { type: 'object' },
+    control: 'object',
   },
 }

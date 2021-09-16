@@ -44,32 +44,32 @@ Default.argTypes = {
     description:
       'Paragraphs have 4 modifiers, they define different sizes depending on the device (`desktop`, `tablet` and `mobile`).',
     options: ['primary', 'secondary', 'tertiary', 'quaternary'],
-    control: { type: 'select' },
+    control: 'select',
   },
   noMargin: {
     name: 'noMargin',
     description: 'Removes the default margins the element.',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   normalLineHeight: {
     name: 'normalLineHeight',
     description: 'Defines `line-height` property as `normal` (~1.2).',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   italic: {
     name: 'italic',
     description: 'Adds an italic style.',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   tag: {
     name: 'tag',
     description: 'Changes the paragraph’s element type.',
-    control: { type: 'text' },
+    control: 'text',
   },
   children: {
     name: 'children',
     description: 'Content of the paragraph.',
-    control: { type: 'text' },
+    control: 'text',
   },
 }
 

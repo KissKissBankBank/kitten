@@ -25,24 +25,24 @@ const args = {
 const argTypes = {
   actionLabel: {
     name: 'actionLabel',
-    control: { type: 'text' },
+    control: 'text',
   },
   id: {
     name: 'id',
-    control: { type: 'text' },
+    control: 'text',
   },
   modifier: {
     name: 'modifier',
     options: ['info', 'warning', 'error', 'success', 'disabled'],
-    control: { type: 'radio' },
+    control: 'radio',
   },
   children: {
     name: 'children',
-    control: { type: 'text' },
+    control: 'text',
   },
   targetElement: {
     name: 'targetElement',
-    control: { type: 'text' },
+    control: 'text',
   },
 }
 
