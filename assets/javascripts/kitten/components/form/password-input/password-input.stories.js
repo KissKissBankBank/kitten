@@ -22,14 +22,14 @@ Default.args = {
 Default.argTypes = {
   iconLabel: {
     name: 'iconLabel',
-    control: { type: 'text' },
+    control: 'text',
   },
   hiddenIconLabel: {
     name: 'hiddenIconLabel',
-    control: { type: 'text' },
+    control: 'text',
   },
   name: {
     name: 'name',
-    control: { type: 'text' },
+    control: 'text',
   },
 }

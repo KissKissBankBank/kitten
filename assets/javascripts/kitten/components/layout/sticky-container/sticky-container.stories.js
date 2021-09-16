@@ -93,16 +93,16 @@ export const StickyBottomOnScrollDown = args => (
 const argTypes = {
   top: {
     name: 'top',
-    control: { type: 'number' },
+    control: 'number',
   },
   bottom: {
     name: 'bottom',
-    control: { type: 'number' },
+    control: 'number',
   },
   isSticky: {
     name: 'isSticky',
     options: ['topOnScrollUp', 'bottomOnScrollDown', 'always', 'never'],
-    control: { type: 'select' },
+    control: 'select',
   },
 }
 

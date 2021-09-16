@@ -34,11 +34,11 @@ export default {
     },
     open: {
       name: 'open',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     summaryProps: {
       name: 'summaryProps',
-      control: { type: 'object' },
+      control: 'object',
     },
   },
 }

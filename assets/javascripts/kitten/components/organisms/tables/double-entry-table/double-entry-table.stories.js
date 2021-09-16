@@ -1,8 +1,23 @@
 import React from 'react'
 import { DoubleEntryTable } from './index'
 
-export const Default = () => (
-  <DoubleEntryTable id="TestDoubleEntryTable">
+export default {
+  title: 'Organisms/Tables/DoubleEntryTable',
+  component: DoubleEntryTable,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="DoubleEntryTable" />
+      ),
+    },
+  },
+  decorators: [story => <div className="story-Container">{story()}</div>],
+  args: { firstColWidth: 240 },
+  argTypes: { firstColWidth: { control: 'number' } },
+}
+
+export const Default = args => (
+  <DoubleEntryTable id="DoubleEntryTableStory" {...args}>
     <DoubleEntryTable.Header className="customHeaderClass">
       <DoubleEntryTable.HeaderCol>Header 0</DoubleEntryTable.HeaderCol>
       <DoubleEntryTable.HeaderCol>Header 1</DoubleEntryTable.HeaderCol>
@@ -120,5 +135,3 @@ export const Default = () => (
     </DoubleEntryTable.Body>
   </DoubleEntryTable>
 )
-
-Default.decorators = [story => <div className="story-Container">{story()}</div>]

@@ -33,31 +33,31 @@ export default {
     color: {
       name: 'color',
       description: 'ProgressRing color.',
-      control: { type: 'color' },
+      control: 'color',
     },
     value: {
       name: 'value',
       description: 'Percentage of progress %.',
-      control: { type: 'number' },
+      control: 'number',
     },
     width: {
       name: 'width',
       description: 'Width of ProgressRing.',
-      control: { type: 'number' },
+      control: 'number',
     },
     strokeWidth: {
       name: 'strokeWidth',
       description: 'Width of circle (stroke).',
-      control: { type: 'number' },
+      control: 'number',
     },
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
     animationSpeed: {
       name: 'animationSpeed',
-      control: { type: 'number' },
+      control: 'number',
     },
   },
 }

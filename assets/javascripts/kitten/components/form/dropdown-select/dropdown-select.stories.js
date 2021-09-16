@@ -28,30 +28,30 @@ const options = [
   },
 ]
 
-const argTypes= {
+const argTypes = {
   id: {
     name: 'id',
-    control: { type: 'text' },
+    control: 'text',
   },
   labelText: {
     name: 'labelText',
-    control: { type: 'text' },
+    control: 'text',
   },
   combobox: {
     name: 'combobox',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   hideLabel: {
     name: 'hideLabel',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   options: {
     name: 'options',
-    control: { type: 'object' },
+    control: 'object',
   },
   placeholder: {
     name: 'placeholder',
-    control: { type: 'text' },
+    control: 'text',
   },
   labelPropsGetter: {
     name: 'labelPropsGetter',
@@ -59,20 +59,20 @@ const argTypes= {
   variant: {
     name: 'variant',
     options: ['andromeda', 'orion'],
-    control: { type: 'inline-radio' },
+    control: 'inline-radio',
   },
   size: {
     name: 'size',
     options: ['tiny', 'normal', 'big', 'huge', 'giant'],
-    control: { type: 'select' },
+    control: 'select',
   },
   a11yStatusError: {
     name: 'a11yStatusError',
-    control: { type: 'text' },
+    control: 'text',
   },
   a11yStatusValid: {
     name: 'a11yStatusValid',
-    control: { type: 'text' },
+    control: 'text',
   },
   a11ySelectionMessageDisplayer: {
     name: 'a11ySelectionMessageDisplayer',
@@ -94,26 +94,26 @@ const argTypes= {
   },
   openOnLoad: {
     name: 'openOnLoad',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   uniqLabelOnSearch: {
     name: 'uniqLabelOnSearch',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   menuZIndex: {
     name: 'menuZIndex',
-    control: { type: 'number' },
+    control: 'number',
   },
   comboboxButtonLabelText: {
     name: 'comboboxButtonLabelText',
-    control: { type: 'text' },
+    control: 'text',
   },
   noResultText: {
     name: 'noResultText',
-    control: { type: 'text' },
+    control: 'text',
   },
 }
-const args= {
+const args = {
   id: 'dropdown-select',
   error: false,
   valid: false,
@@ -144,11 +144,7 @@ export default {
     },
   },
   decorators: [
-    story => (
-      <div className="story-Container story-Grid">
-        {story()}
-      </div>
-    ),
+    story => <div className="story-Container story-Grid">{story()}</div>,
   ],
   args,
   argTypes,
@@ -260,14 +256,8 @@ export const ControlledInput = args => {
         }}
         onBlur={action('onBlur')}
       />
-      <Button
-        onClick={() => setValue(getRandomOption())}
-      >
-        Change Value
-      </Button>
-      <Button onClick={() => setValue('')}>
-        Reset Value
-      </Button>
+      <Button onClick={() => setValue(getRandomOption())}>Change Value</Button>
+      <Button onClick={() => setValue('')}>Reset Value</Button>
     </>
   )
 }

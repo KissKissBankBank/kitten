@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import { boolean } from '@storybook/addon-knobs'
 import { DocumentManager } from './index'
 import {
   Loader,
@@ -35,23 +34,23 @@ const args = {
 const argTypes = {
   id: {
     name: 'id',
-    control: { type: 'text' },
+    control: 'text',
   },
   buttonProps: {
     name: 'buttonProps',
-    control: { type: 'object' },
+    control: 'object',
   },
   canCancel: {
     name: 'canCancel',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   cancelButtonText: {
     name: 'cancelButtonText',
-    control: { type: 'text' },
+    control: 'text',
   },
   disabled: {
     name: 'disabled',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   documentIcon: {
     name: 'documentIcon',
@@ -59,15 +58,15 @@ const argTypes = {
   },
   errorText: {
     name: 'errorText',
-    control: { type: 'text' },
+    control: 'text',
   },
   fileInputProps: {
     name: 'fileInputProps',
-    control: { type: 'object' },
+    control: 'object',
   },
   fileName: {
     name: 'fileName',
-    control: { type: 'text' },
+    control: 'text',
   },
   loaderAnimation: {
     name: 'loaderAnimation',
@@ -75,7 +74,7 @@ const argTypes = {
   },
   loaderText: {
     name: 'loaderText',
-    control: { type: 'text' },
+    control: 'text',
   },
   onCancel: {
     name: 'onCancel',
@@ -88,23 +87,23 @@ const argTypes = {
   status: {
     name: 'status',
     options: ['ready', 'error', 'valid', 'wait', 'loading'],
-    control: { type: 'radio' },
+    control: 'radio',
   },
   displaySubtitle: {
     name: 'subtitle',
-    control: { type: 'text' },
+    control: 'text',
   },
   displayTitle: {
     name: 'title',
-    control: { type: 'text' },
+    control: 'text',
   },
   buttonSubtitle: {
     name: 'subtitle',
-    control: { type: 'text' },
+    control: 'text',
   },
   buttonTitle: {
     name: 'title',
-    control: { type: 'text' },
+    control: 'text',
   },
 }
 
@@ -163,7 +162,6 @@ export const StatusWaiting = args => (
     displayTitle="Votre RIB est en cours de validation"
     displaySubtitle="document.pdf"
     status="wait"
-    canCancel={boolean('canCancel', false)}
     documentIcon={<DocumentIconEmpty />}
   />
 )

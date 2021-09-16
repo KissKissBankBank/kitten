@@ -1,17 +1,32 @@
 import React from 'react'
-import { boolean, number } from '@storybook/addon-knobs'
 import { SingleEntryTable } from './index'
 
-export const Default = () => (
-  <SingleEntryTable
-    id="TestSingleEntryTable"
-    isSliding={boolean('isSliding', false)}
-  >
+export default {
+  title: 'Organisms/Tables/SingleEntryTable',
+  component: SingleEntryTable,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="SingleEntryTable" />
+      ),
+    },
+  },
+  decorators: [story => <div className="story-Container">{story()}</div>],
+  args: {
+    isSliding: false,
+  },
+  argTypes: {
+    isSliding: { control: 'boolean' },
+  },
+}
+
+export const Default = args => (
+  <SingleEntryTable id="TestSingleEntryTable" {...args}>
     <SingleEntryTable.Header className="customHeaderClass">
-      {[...Array(6)].map((key, index) => (
+      {[...Array(8)].map((key, index) => (
         <SingleEntryTable.HeaderCol
           key={`header_${index}`}
-          style={{ width: number(`Column ${index + 1} width`, 100) }}
+          style={{ width: 200 }}
         >
           Header {index + 1}
         </SingleEntryTable.HeaderCol>
@@ -21,7 +36,7 @@ export const Default = () => (
     <SingleEntryTable.Body>
       {[...Array(12)].map((key, index) => (
         <SingleEntryTable.Row key={`row_${index}`}>
-          {[...Array(6)].map((key, jndex) => (
+          {[...Array(8)].map((key, jndex) => (
             <SingleEntryTable.Col key={`row_${index}_col_${jndex}`}>
               Content {jndex + 1}
             </SingleEntryTable.Col>
@@ -31,5 +46,3 @@ export const Default = () => (
     </SingleEntryTable.Body>
   </SingleEntryTable>
 )
-
-Default.decorators = [story => <div className="story-Container">{story()}</div>]

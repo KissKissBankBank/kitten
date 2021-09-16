@@ -32,15 +32,15 @@ export default {
   argTypes: {
     title: {
       name: 'title',
-      control: { type: 'text' },
+      control: 'text',
     },
     message: {
       name: 'message',
-      control: { type: 'text' },
+      control: 'text',
     },
     fileList: {
       name: 'fileList',
-      control: { type: 'object' },
+      control: 'object',
     },
     retryAction: {
       name: 'retryAction',
@@ -48,12 +48,12 @@ export default {
     },
     retryActionMessage: {
       name: 'retryActionMessage',
-      control: { type: 'text' },
+      control: 'text',
     },
     status: {
       name: 'status',
       options: ['wait', 'accepted', 'denied'],
-      control: { type: 'select' },
+      control: 'select',
     },
   },
 }

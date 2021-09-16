@@ -23,6 +23,6 @@ Default.argTypes = {
   ...TextInputStory.argTypes,
   limit: {
     name: 'limit',
-    control: { type: 'number' },
+    control: 'number',
   },
 }

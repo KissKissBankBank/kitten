@@ -172,15 +172,15 @@ const args = {
 const argTypes = {
   name: {
     name: 'name',
-    control: { type: 'text' },
+    control: 'text',
   },
   items: {
     name: 'items',
-    control: { type: 'object' },
+    control: 'object',
   },
   error: {
     name: 'error',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   icon: {
     name: 'icon',
@@ -188,18 +188,18 @@ const argTypes = {
   iconPosition: {
     name: 'iconPosition',
     options: ['left', 'right'],
-    control: { type: 'inline-radio' },
+    control: 'inline-radio',
   },
   updateSuggestionsStrategy: {
     name: 'updateSuggestionsStrategy',
   },
   noResultMessage: {
     name: 'noResultMessage',
-    control: { type: 'text' },
+    control: 'text',
   },
   shouldShowNoResultMessage: {
     name: 'shouldShowNoResultMessage',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   onChange: {
     name: 'onChange',
@@ -215,12 +215,12 @@ const argTypes = {
   },
   isLoading: {
     name: 'isLoading',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   variant: {
     control: 'inline-radio',
     options: ['andromeda', 'orion'],
-  }
+  },
 }
 
 Default.decorators = [storyDecorator]

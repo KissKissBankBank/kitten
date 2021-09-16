@@ -33,42 +33,42 @@ export default {
   argTypes: {
     error: {
       name: 'error',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     large: {
       name: 'large',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     largeContent: {
       name: 'largeContent',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     text: {
       name: 'text',
-      control: { type: 'text' },
+      control: 'text',
     },
     size: {
       name: 'size',
       options: ['regular', 'big'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
     design: {
       name: 'design',
       options: ['disc', 'check'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
     children: {
       name: 'children',
-      control: { type: 'text' },
+      control: 'text',
     },
   },
 }

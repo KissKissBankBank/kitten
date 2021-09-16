@@ -32,6 +32,6 @@ Default.args = {
 Default.argTypes = {
   autoPlay: {
     name: 'autoPlay',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
 }

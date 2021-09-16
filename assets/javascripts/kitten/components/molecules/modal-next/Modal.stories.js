@@ -70,82 +70,82 @@ const argTypes = {
   label: {
     name: 'label',
     description: 'Label for the modal. For accessibility purposes.',
-    control: { type: 'text' },
+    control: 'text',
   },
   labelledby: {
     name: 'labelledby',
     description:
       'ID for the element that labels the modal. For accessibility purposes.',
-    control: { type: 'text' },
+    control: 'text',
   },
   describedby: {
     name: 'describedby',
     description:
       'ID for the element that describes the content of the modal. For accessibility purposes.',
-    control: { type: 'text' },
+    control: 'text',
   },
   closeButtonLabel: {
     name: 'closeButtonLabel',
     description: 'Label for the close button. For accessibility purposes.',
-    control: { type: 'text' },
+    control: 'text',
   },
   fullSize: {
     name: 'fullSize',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   fullSizeOnMobile: {
     name: 'fullSizeOnMobile',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   modalProps: {
     name: 'modalProps',
-    control: { type: 'object' },
+    control: 'object',
   },
   hasCloseButton: {
     name: 'hasCloseButton',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   size: {
     name: 'size',
     options: ['regular', 'big', 'huge', 'giant'],
-    control: { type: 'select' },
+    control: 'select',
   },
   isOpen: {
     name: 'isOpen',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   zIndex: {
     name: 'zIndex',
-    control: { type: 'number' },
+    control: 'number',
   },
   variant: {
     name: 'variant',
     options: ['andromeda', 'orion'],
-    control: { type: 'inline-radio' },
+    control: 'inline-radio',
   },
   headerTitle: {
     name: 'headerTitle',
-    control: { type: 'object' },
+    control: 'object',
   },
   headerActions: {
     name: 'headerActions',
-    control: { type: 'object' },
+    control: 'object',
   },
   headerMessage: {
     name: 'headerMessage',
-    control: { type: 'object' },
+    control: 'object',
   },
   contentCols: {
     name: 'contentCols',
-    control: { type: 'object' },
+    control: 'object',
   },
   headerZIndex: {
     name: 'headerZIndex',
-    control: { type: 'number' },
+    control: 'number',
   },
   contentText: {
     name: 'content text (story prop)',
-    control: { type: 'text' },
+    control: 'text',
   },
 }
 
@@ -198,19 +198,19 @@ Default.argTypes = {
   },
   z_sticky: {
     name: 'Modal.Actions: sticky (story prop)',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   z_stickyOnMobile: {
     name: 'Modal.Actions: stickyOnMobile (story prop)',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   z_fullSize: {
     name: 'Modal.Actions: fullSize (story prop)',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   z_fullSizeOnMobile: {
     name: 'Modal.Actions: fullSizeOnMobile (story prop)',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
 }
 

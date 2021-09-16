@@ -44,38 +44,38 @@ export default {
   argTypes: {
     id: {
       name: 'id',
-      control: { type: 'text' },
+      control: 'text',
     },
     label: {
       name: 'label',
-      control: { type: 'text' },
+      control: 'text',
     },
     items: {
       name: 'items',
-      control: { type: 'object' },
+      control: 'object',
     },
     error: {
       name: 'error',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     size: {
       name: 'size',
       options: ['regular', 'big'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
     design: {
       name: 'design',
       options: ['disc', 'check'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
   },
 }

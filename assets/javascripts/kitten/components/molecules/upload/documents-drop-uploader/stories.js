@@ -23,23 +23,23 @@ export default {
   argTypes: {
     id: {
       name: 'id',
-      control: { type: 'text' },
+      control: 'text',
     },
     labelText: {
       name: 'labelText',
-      control: { type: 'text' },
+      control: 'text',
     },
     managerTitle: {
       name: 'managerTitle',
-      control: { type: 'text' },
+      control: 'text',
     },
     managerText: {
       name: 'managerText',
-      control: { type: 'text' },
+      control: 'text',
     },
     managerInfo: {
       name: 'managerInfo',
-      control: { type: 'text' },
+      control: 'text',
     },
     onChange: {
       name: 'onChange',
@@ -51,16 +51,16 @@ export default {
     },
     disabled: {
       name: 'disabled',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     status: {
       name: 'status',
       options: ['ready', 'error'],
-      control: { type: 'radio' },
+      control: 'radio',
     },
     errorMessage: {
       name: 'errorMessage',
-      control: { type: 'text' },
+      control: 'text',
     },
     typeErrorText: {
       name: 'typeErrorText',
@@ -76,11 +76,11 @@ export default {
     },
     acceptedFileSize: {
       name: 'acceptedFileSize',
-      control: { type: 'number' },
+      control: 'number',
     },
     acceptedMimeTypes: {
       name: 'acceptedMimeTypes',
-      control: { type: 'object' },
+      control: 'object',
     },
   },
 }

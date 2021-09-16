@@ -15,23 +15,23 @@ const argTypes = {
   direction: {
     name: 'direction',
     options: ['left', 'right'],
-    control: { type: 'select' },
+    control: 'select',
   },
   tiny: {
     name: 'tiny',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   imageSrc: {
     name: 'imageSrc',
-    control: { type: 'text' },
+    control: 'text',
   },
   contentBackgroundColor: {
     name: 'contentBackgroundColor',
-    control: { type: 'color' },
+    control: 'color',
   },
   contentColor: {
     name: 'contentColor',
-    control: { type: 'color' },
+    control: 'color',
   },
 }
 

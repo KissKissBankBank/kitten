@@ -21,12 +21,12 @@ export default {
     asidePosition: {
       name: 'asidePosition',
       options: ['end', 'start'],
-      control: { type: 'select' },
+      control: 'select',
     },
     asideSize: {
       name: 'asideSize',
       options: ['default', 'small', 'large'],
-      control: { type: 'select' },
+      control: 'select',
     },
   },
   parameters: {

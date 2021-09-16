@@ -7,7 +7,7 @@ const argTypes = {
   tag: {
     name: 'tag',
     description: 'Changes the title’s element type.',
-    control: { type: 'text' },
+    control: 'text',
   },
   modifier: {
     name: 'modifier',
@@ -22,26 +22,26 @@ const argTypes = {
       'senary',
       'septenary',
     ],
-    control: { type: 'select' },
+    control: 'select',
   },
   noMargin: {
     name: 'noMargin',
     description: 'Removes the default margins the element.',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   cssColor: {
     name: 'cssColor',
     description: 'Sets a color from a CSS color string.',
-    control: { type: 'color' },
+    control: 'color',
   },
   italic: {
     name: 'italic',
     description: 'Adds an underline style.',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   children: {
     name: 'children',
-    control: { type: 'text' },
+    control: 'text',
   },
 }
 

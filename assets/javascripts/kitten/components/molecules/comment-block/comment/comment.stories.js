@@ -70,27 +70,27 @@ Default.args = {
 Default.argTypes = {
   text: {
     name: 'text',
-    control: { type: 'text' },
+    control: 'text',
   },
   avatarImgProps: {
     name: 'avatarImgProps',
-    control: { type: 'object' },
+    control: 'object',
   },
   commentDate: {
     name: 'commentDate',
-    control: { type: 'text' },
+    control: 'text',
   },
   ownerName: {
     name: 'ownerName',
-    control: { type: 'text' },
+    control: 'text',
   },
   showBottomNotes: {
     name: 'showBottomNotes (story prop)',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   showAvatarBadge: {
     name: 'showAvatarBadge (story prop)',
-    control: { type: 'boolean' },
+    control: 'boolean',
   },
   bottomNotes: {
     name: 'bottomNotes',

@@ -25,27 +25,27 @@ export default {
     alertMessage: {
       name: 'alertMessage',
       description: 'Text displayed when a text is copied.',
-      control: { type: 'text' },
+      control: 'text',
     },
     textToCopy: {
       name: 'textToCopy',
       description:
         'Specify a text to copy (if not, it will use the value of the children)',
-      control: { type: 'text' },
+      control: 'text',
     },
     description: {
       name: 'description',
       description:
         'Screen-reader-only text description of the component. For accessibility purposes.',
-      control: { type: 'text' },
+      control: 'text',
     },
     forceOneLine: {
       name: 'forceOneLine',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     buttonText: {
       name: 'buttonText',
-      control: { type: 'text' },
+      control: 'text',
     },
     buttonModifier: {
       name: 'buttonModifier',
@@ -67,16 +67,16 @@ export default {
         'social_youtube',
         'social_pinterest',
       ],
-      control: { type: 'select' },
+      control: 'select',
     },
     variant: {
       name: 'variant',
       options: ['andromeda', 'orion'],
-      control: { type: 'inline-radio' },
+      control: 'inline-radio',
     },
     children: {
       name: 'children',
-      control: { type: 'text' },
+      control: 'text',
     },
   },
 }

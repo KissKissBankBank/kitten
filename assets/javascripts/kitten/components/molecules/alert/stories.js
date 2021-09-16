@@ -25,31 +25,31 @@ export default {
   argTypes: {
     show: {
       name: 'show',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     error: {
       name: 'error',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     success: {
       name: 'success',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     warning: {
       name: 'warning',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     closeButton: {
       name: 'closeButton',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
     closeButtonLabel: {
       name: 'closeButtonLabel',
-      control: { type: 'text' },
+      control: 'text',
     },
     children: {
       name: 'children',
-      control: { type: 'text' },
+      control: 'text',
     },
   },
 }
