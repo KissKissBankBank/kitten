@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
-import { hexToRgba as rgba } from '../../../../helpers/utils/hex-to-rgba'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
 export const Styles = styled.div`
@@ -11,24 +10,24 @@ export const Styles = styled.div`
   &.SingleEntryTable--isSliding .SingleEntryTable__TableContainer {
     overflow-x: scroll;
     margin-bottom: ${pxToRem(30)};
-    border-left: ${pxToRem(2)} solid ${rgba(COLORS.background1, 0.0667)};
-    border-right: ${pxToRem(2)} solid ${rgba(COLORS.background1, 0.0667)};
+    border-left: ${pxToRem(2)} solid rgba(255, 255, 255, 0.0667);
+    border-right: ${pxToRem(2)} solid rgba(255, 255, 255, 0.0667);
 
     background: linear-gradient(
         to right,
         white 30%,
-        ${rgba(COLORS.background1, 0)}
+        transparent
       ),
-      linear-gradient(to left, white 30%, ${rgba(COLORS.background1, 0)}),
+      linear-gradient(to left, white 30%, transparent),
       radial-gradient(
         farthest-side at 0 50%,
-        ${rgba(COLORS.font1, 0.2)},
-        ${rgba(COLORS.font1, 0)}
+        rgba(34, 34, 34, 0.2),
+        transparent
       ),
       radial-gradient(
         farthest-side at 100% 50%,
-        ${rgba(COLORS.font1, 0.2)},
-        ${rgba(COLORS.font1, 0)}
+        rgba(34, 34, 34, 0.2),
+        transparent
       );
 
     background-repeat: no-repeat;
