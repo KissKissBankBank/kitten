@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [4.6.3] - 2021-09-17
+
 Fix:
 
 - `LocationInput`: Add comma between city and country.
