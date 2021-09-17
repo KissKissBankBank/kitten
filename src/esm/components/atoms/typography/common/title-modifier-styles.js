@@ -1,3 +1,4 @@
+import "core-js/modules/es.array.map.js";
 import { css } from 'styled-components';
 import { stepToRem, pxToRem } from '../../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../../constants/screen-config';
@@ -47,8 +48,8 @@ var getLetterSpacingFromStep = function getLetterSpacingFromStep(step) {
 
 var getLineHeightFromStep = function getLineHeightFromStep(step) {
   if (step > 8) return '1em';
-  if (step > 4) return "calc(1em + ".concat(pxToRem(4), ")");
-  return "calc(1em + ".concat(pxToRem(2), ")");
+  if (step > 4) return "calc(1em + " + pxToRem(4) + ")";
+  return "calc(1em + " + pxToRem(2) + ")";
 };
 
 var getStyleFromStep = function getStyleFromStep(step) {
@@ -57,7 +58,7 @@ var getStyleFromStep = function getStyleFromStep(step) {
 
 export var titleModifierStyles = function titleModifierStyles(prefix) {
   return css(["", ""], titleModifiers.map(function (key, index) {
-    return css(["", "{", ";@media (min-width:", "){", ";}@media (min-width:", "){", ";}}"], "".concat(prefix, "--").concat(titleModifiersNames[index]), getStyleFromStep(key.fontStepOnMobile), pxToRem(ScreenConfig.S.min), getStyleFromStep(key.fontStepOnTablet), pxToRem(ScreenConfig.L.min), getStyleFromStep(key.fontStepOnDesktop));
+    return css(["", "{", ";@media (min-width:", "){", ";}@media (min-width:", "){", ";}}"], prefix + "--" + titleModifiersNames[index], getStyleFromStep(key.fontStepOnMobile), pxToRem(ScreenConfig.S.min), getStyleFromStep(key.fontStepOnTablet), pxToRem(ScreenConfig.L.min), getStyleFromStep(key.fontStepOnDesktop));
   }));
 };
 export var titleHelperModifierStyles = function titleHelperModifierStyles(modifier) {

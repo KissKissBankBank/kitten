@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["color1", "color2", "width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
@@ -8,7 +9,7 @@ export var MicrodonLogo = function MicrodonLogo(_ref) {
       color2 = _ref.color2,
       width = _ref.width,
       height = _ref.height,
-      props = _objectWithoutProperties(_ref, ["color1", "color2", "width", "height"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var DEFAULT_WIDTH = 339.18;
   var DEFAULT_HEIGHT = 64.02;
@@ -26,7 +27,7 @@ export var MicrodonLogo = function MicrodonLogo(_ref) {
     role: "img",
     "aria-label": "Microdon",
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 ".concat(viewBox.x, " ").concat(viewBox.y),
+    viewBox: "0 0 " + viewBox.x + " " + viewBox.y,
     width: computed.width,
     height: computed.height
   }, props), /*#__PURE__*/React.createElement("title", null, "Microdon"), /*#__PURE__*/React.createElement("path", {

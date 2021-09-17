@@ -1,5 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "modifier", "variant", "size", "className", "rounded", "fluid", "icon", "borderRadius", "tag"];
+import "core-js/modules/es.string.big.js";
 import React from 'react';
 import PropTypes from 'prop-types';
 import deprecated from 'prop-types-extra/lib/deprecated';
@@ -12,7 +14,7 @@ import { ScreenConfig } from '../../../../constants/screen-config';
 import classNames from 'classnames';
 var StyledButton = styled.button.withConfig({
   displayName: "button__StyledButton",
-  componentId: "no9p2t-0"
+  componentId: "sc-no9p2t-0"
 })(["display:inline-flex;align-items:center;justify-content:center;position:relative;box-sizing:border-box;", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appearance:none;cursor:pointer;&:disabled{cursor:not-allowed;}&:hover{text-decoration:none;}>:nth-child(n){margin-right:", ";text-align:left;}>:last-child{margin-right:0;}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&.k-Button--hasBorderRadius{border-radius:var(--border-radius);}", " &.k-Button--nano{", "}&.k-Button--micro{", "}&.k-Button--tiny{", "}&.k-Button--big{", "}&.k-Button--huge{", "}&.k-Button--giant{", "}&.k-Button--hasIcon:not(.k-Button--fluid){", " &.k-Button--nano{", "}&.k-Button--micro{", "}&.k-Button--tiny{", "}&.k-Button--big{", "}&.k-Button--huge{", "}&.k-Button--giant{", "}}&.k-Button--fluid{", "}&.k-Button--rounded{", "}&.k-Button--orion{border-radius:", ";@media (min-width:", "){border-radius:", ";}}", ""], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), COLORS.font1, pxToRem(10), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, function () {
   return DEFAULT;
 }, function () {
@@ -79,7 +81,7 @@ export var Button = function Button(_ref2) {
       icon = _ref2.icon,
       borderRadius = _ref2.borderRadius,
       tag = _ref2.tag,
-      props = _objectWithoutProperties(_ref2, ["children", "modifier", "variant", "size", "className", "rounded", "fluid", "icon", "borderRadius", "tag"]);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded);
 
   var actualSize = function () {
     switch (true) {
@@ -110,7 +112,7 @@ export var Button = function Button(_ref2) {
   }();
 
   return /*#__PURE__*/React.createElement(StyledButton, _extends({
-    className: classNames('k-Button', className, "k-Button--".concat(actualSize), "k-Button--".concat(modifier), "k-Button--".concat(variant), {
+    className: classNames('k-Button', className, "k-Button--" + actualSize, "k-Button--" + modifier, "k-Button--" + variant, {
       'k-Button--fluid': fluid,
       'k-Button--hasIcon': icon,
       'k-Button--rounded': rounded,

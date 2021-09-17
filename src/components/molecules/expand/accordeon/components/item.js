@@ -2,9 +2,7 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Item = void 0;
 
 var _react = _interopRequireDefault(require("react"));
@@ -31,10 +29,10 @@ var Item = function Item(_ref) {
   });
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Accordeon__item"
-  }, header[0] && _react.default.cloneElement(header[0], {
+  }, header[0] && /*#__PURE__*/_react.default.cloneElement(header[0], {
     id: id,
     index: index
-  }), content[0] && _react.default.cloneElement(content[0], {
+  }), content[0] && /*#__PURE__*/_react.default.cloneElement(content[0], {
     id: id,
     index: index
   }));

@@ -1,6 +1,8 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "dropdownContentWidth", "padding", "closeEvents", "buttonProps", "className"],
+    _excluded2 = ["children"];
+import "core-js/modules/es.array.concat.js";
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Dropdown } from './dropdown';
@@ -8,7 +10,7 @@ import { Context } from './context';
 import { getReactElementsByType } from '../../../../helpers/react/react-elements';
 import classNames from 'classnames';
 var namespace = 'kkbbAndCo';
-var CLOSE_EVENT = "".concat(namespace, ":userMenu:close");
+var CLOSE_EVENT = namespace + ":userMenu:close";
 export var UserMenu = function UserMenu(_ref) {
   var children = _ref.children,
       dropdownContentWidth = _ref.dropdownContentWidth,
@@ -16,7 +18,7 @@ export var UserMenu = function UserMenu(_ref) {
       closeEvents = _ref.closeEvents,
       buttonProps = _ref.buttonProps,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth", "padding", "closeEvents", "buttonProps", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var userDropdownRef = useRef(null);
 
@@ -27,7 +29,7 @@ export var UserMenu = function UserMenu(_ref) {
   };
 
   var getButtonId = function getButtonId(id) {
-    return "".concat(id, "UserMenu");
+    return id + "UserMenu";
   };
 
   var button = getReactElementsByType({
@@ -46,7 +48,7 @@ export var UserMenu = function UserMenu(_ref) {
       color = _button$props.color,
       colorHover = _button$props.colorHover,
       colorActive = _button$props.colorActive;
-  var dropdownClassName = classNames('k-HeaderNav__UserMenu', "".concat(namespace, "-UserMenu"), className);
+  var dropdownClassName = classNames('k-HeaderNav__UserMenu', namespace + "-UserMenu", className);
   var buttonStyles = {
     '--UserMenu-Button-backgroundColor': backgroundColor,
     '--UserMenu-Button-backgroundColorHover': backgroundColorHover,
@@ -68,7 +70,7 @@ export var UserMenu = function UserMenu(_ref) {
       buttonStyles: buttonStyles,
       buttonId: getButtonId(id),
       className: dropdownClassName,
-      closeEvents: [CLOSE_EVENT].concat(_toConsumableArray(closeEvents)),
+      closeEvents: [CLOSE_EVENT].concat(closeEvents),
       closeOnOuterClick: true,
       dropdownContent: navigation,
       dropdownContentWidth: dropdownContentWidth,
@@ -102,7 +104,7 @@ UserMenu.Button = function (_ref3) {
 
 UserMenu.Navigation = function (_ref4) {
   var children = _ref4.children,
-      props = _objectWithoutProperties(_ref4, ["children"]);
+      props = _objectWithoutPropertiesLoose(_ref4, _excluded2);
 
   return /*#__PURE__*/React.createElement("div", props, children);
 };

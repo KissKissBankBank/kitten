@@ -2,18 +2,20 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.FilterIcon = void 0;
+
+require("core-js/modules/es.function.name.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
+
+var _excluded = ["color", "duration", "type", "name", "begin", "animated", "title"];
 
 var FilterIcon = function FilterIcon(_ref) {
   var color = _ref.color,
@@ -23,7 +25,7 @@ var FilterIcon = function FilterIcon(_ref) {
       begin = _ref.begin,
       animated = _ref.animated,
       title = _ref.title,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["color", "duration", "type", "name", "begin", "animated", "title"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var animationDuration = animated ? duration : 0;
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",

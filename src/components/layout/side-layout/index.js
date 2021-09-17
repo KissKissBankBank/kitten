@@ -1,15 +1,27 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.SideLayout = void 0;
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+require("core-js/modules/es.regexp.exec.js");
+
+require("core-js/modules/es.string.search.js");
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -23,9 +35,13 @@ var _sideGrid = require("../../../components/layout/side-grid");
 
 var _elementHelper = _interopRequireDefault(require("../../../helpers/dom/element-helper"));
 
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var StyledSideLayout = (0, _styledComponents.default)(_sideGrid.SideGrid).withConfig({
   displayName: "side-layout__StyledSideLayout",
-  componentId: "ocof17-0"
+  componentId: "sc-ocof17-0"
 })([".k-VerticalGrid__fluid{flex-basis:100%;}.k-VerticalGrid__fullHeight{height:100vh;}.k-VerticalGrid__container{display:flex;height:100%;}.k-VerticalGrid__element{flex-grow:1;}"]);
 
 var SideLayout = function SideLayout(_ref) {
@@ -34,9 +50,8 @@ var SideLayout = function SideLayout(_ref) {
       sidebar = _ref.sidebar;
 
   var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      needsFullHeight = _useState2[0],
-      setNeedsFullHeight = _useState2[1];
+      needsFullHeight = _useState[0],
+      setNeedsFullHeight = _useState[1];
 
   (0, _react.useEffect)(function () {
     if (!_elementHelper.default.canUseDom()) return;

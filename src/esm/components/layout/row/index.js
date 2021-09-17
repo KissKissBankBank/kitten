@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "contentClassName", "centered", "light", "dark", "lightTopBorder", "lightBottomBorder", "padded", "children"];
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
@@ -10,7 +11,7 @@ import COLORS from '../../../constants/colors-config';
 import { ScreenConfig } from '../../../constants/screen-config';
 var StyledRow = styled.div.withConfig({
   displayName: "row__StyledRow",
-  componentId: "aqavk0-0"
+  componentId: "sc-aqavk0-0"
 })(["&.k-Row--centered{text-align:center;}&.k-Row--light{background:", ";}&.k-Row--dark{background:", ";color:", ";}&.k-Row--lightTopBorder{border-top:", " solid ", ";}&.k-Row--lightBottomBorder{border-bottom:", " solid ", ";}&.k-Row--padded .k-Row__content{padding-top:", ";padding-bottom:", ";@media (min-width:", "){padding-top:", ";padding-bottom:", ";}}"], COLORS.primary6, COLORS.line2, COLORS.background1, pxToRem(1), COLORS.line1, pxToRem(1), COLORS.line1, pxToRem(60), pxToRem(60), pxToRem(ScreenConfig.L.min), pxToRem(80), pxToRem(80));
 export var Row = function Row(_ref) {
   var className = _ref.className,
@@ -22,7 +23,7 @@ export var Row = function Row(_ref) {
       lightBottomBorder = _ref.lightBottomBorder,
       padded = _ref.padded,
       children = _ref.children,
-      others = _objectWithoutProperties(_ref, ["className", "contentClassName", "centered", "light", "dark", "lightTopBorder", "lightBottomBorder", "padded", "children"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledRow, _extends({
     className: classNames('k-Row', {

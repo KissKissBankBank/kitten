@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "dropdownContentWidth", "className"];
 import React, { useContext } from 'react';
 import { BurgerIcon } from '../../../../components/graphics/icons/burger-icon';
 import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden';
@@ -9,12 +10,12 @@ import classNames from 'classnames';
 import { useDropdown } from '../hooks/use-dropdown';
 import { DropdownButton } from './dropdown-button';
 var namespace = 'kkbbAndCo';
-var CLOSE_EVENT = "".concat(namespace, ":platformMenu:close");
+var CLOSE_EVENT = namespace + ":platformMenu:close";
 export var BurgerMenuNext = function BurgerMenuNext(_ref) {
   var children = _ref.children,
       dropdownContentWidth = _ref.dropdownContentWidth,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useContext = useContext(Context),
       id = _useContext.id,
@@ -25,8 +26,8 @@ export var BurgerMenuNext = function BurgerMenuNext(_ref) {
     callOnToggle: callOnToggle,
     dropdownAnchorSide: 'left',
     closeEvents: [CLOSE_EVENT],
-    buttonId: "".concat(id, "PlateformMenu"),
-    menuId: "".concat(id, "PlateformMenu__content")
+    buttonId: id + "PlateformMenu",
+    menuId: id + "PlateformMenu__content"
   }),
       dropdownProps = _useDropdown.dropdownProps,
       buttonProps = _useDropdown.buttonProps,

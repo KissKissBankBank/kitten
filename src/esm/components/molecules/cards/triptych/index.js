@@ -1,5 +1,5 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["secondElementMarginTop"];
 import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import debounce from 'lodash/fp/debounce';
@@ -14,7 +14,7 @@ var tabletGutter = 50 / 2;
 var desktopGutter = 40 / 2;
 var StyledTriptych = styled(function (_ref) {
   var secondElementMarginTop = _ref.secondElementMarginTop,
-      props = _objectWithoutProperties(_ref, ["secondElementMarginTop"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(Grid, props);
 }).withConfig({
@@ -31,9 +31,8 @@ export var Triptych = function Triptych(_ref3) {
       item3 = _ref3.item3;
 
   var _useState = useState(0),
-      _useState2 = _slicedToArray(_useState, 2),
-      secondElementMarginTop = _useState2[0],
-      setsecondElementMarginTop = _useState2[1];
+      secondElementMarginTop = _useState[0],
+      setsecondElementMarginTop = _useState[1];
 
   var titleElement = useRef(null);
   var firstElement = useRef(null);

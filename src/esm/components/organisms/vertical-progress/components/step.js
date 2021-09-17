@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["statusType", "statusProps", "progressTitle", "children"];
 import React from 'react';
 import styled from 'styled-components';
 import { pxToRem } from '../../../../helpers/utils/typography';
@@ -14,7 +15,7 @@ export var Step = function Step(_ref) {
       statusProps = _ref.statusProps,
       progressTitle = _ref.progressTitle,
       children = _ref.children,
-      other = _objectWithoutProperties(_ref, ["statusType", "statusProps", "progressTitle", "children"]);
+      other = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledItem, _extends({
     className: "k-VerticalProgress__item"

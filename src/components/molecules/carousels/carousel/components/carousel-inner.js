@@ -1,17 +1,29 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.CarouselInner = void 0;
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+require("core-js/modules/es.array.slice.js");
 
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
+require("core-js/modules/es.array.map.js");
+
+require("core-js/modules/es.array.concat.js");
+
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -24,6 +36,10 @@ var _carouselPage = require("./carousel-page");
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _usePreviousHook = require("../../../../../helpers/utils/use-previous-hook");
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 if (_elementHelper.domElementHelper.canUseDom()) {
   require('smoothscroll-polyfill').polyfill();
@@ -60,7 +76,7 @@ var getElementPadding = function getElementPadding(element) {
 };
 
 var getRangePageScrollLeft = function getRangePageScrollLeft(targetClientWidth, numberOfPages, itemMarginBetween, containerPadding) {
-  return (0, _toConsumableArray2.default)(Array(numberOfPages).keys()).map(function (page) {
+  return [].concat(Array(numberOfPages).keys()).map(function (page) {
     return page * (targetClientWidth + itemMarginBetween - containerPadding);
   });
 };
@@ -82,9 +98,7 @@ var CarouselInner = function CarouselInner(_ref) {
   var resizeObserver;
 
   var onResizeObserve = function onResizeObserve(_ref2) {
-    var _ref3 = (0, _slicedToArray2.default)(_ref2, 1),
-        entry = _ref3[0];
-
+    var entry = _ref2[0];
     var innerWidth = entry.contentRect.width;
     onResizeInner(innerWidth);
   };
@@ -167,7 +181,7 @@ var CarouselInner = function CarouselInner(_ref) {
     },
     onKeyDown: handleKeyDown,
     className: "k-Carousel__inner"
-  }, (0, _toConsumableArray2.default)(Array(numberOfPages).keys()).map(function (index) {
+  }, [].concat(Array(numberOfPages).keys()).map(function (index) {
     var isActivePage = currentPageIndex === index;
     var hasPageBeenViewed = viewedPages.has(index);
     return /*#__PURE__*/_react.default.createElement("div", {

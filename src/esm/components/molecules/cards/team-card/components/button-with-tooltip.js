@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["phoneNumber", "tooltipColor"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonIcon } from '../../../../molecules/buttons/button-icon';
@@ -23,10 +24,10 @@ var StyledTeamCardButtonWithTooltip = styled.a.withConfig({
 export var TeamCardButtonWithTooltip = function TeamCardButtonWithTooltip(_ref4) {
   var phoneNumber = _ref4.phoneNumber,
       tooltipColor = _ref4.tooltipColor,
-      props = _objectWithoutProperties(_ref4, ["phoneNumber", "tooltipColor"]);
+      props = _objectWithoutPropertiesLoose(_ref4, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledTeamCardButtonWithTooltip, _extends({
-    href: "tel:".concat(phoneNumber),
+    href: "tel:" + phoneNumber,
     tooltipColor: tooltipColor
   }, props), /*#__PURE__*/React.createElement("span", {
     className: "k-TeamCardButtonWithTooltip__tooltip"

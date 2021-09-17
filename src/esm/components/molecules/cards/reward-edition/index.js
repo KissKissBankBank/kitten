@@ -1,13 +1,4 @@
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
+import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import COLORS from '../../../../constants/colors-config';
@@ -22,22 +13,17 @@ var StyledContainer = styled.div.withConfig({
   componentId: "sc-1qdy2br-0"
 })(["width:100%;height:100%;border-width:", ";border-style:solid;border-color:", ";"], borderWidth, borderColor);
 export var RewardEdition = /*#__PURE__*/function (_PureComponent) {
-  _inherits(RewardEdition, _PureComponent);
-
-  var _super = _createSuper(RewardEdition);
+  _inheritsLoose(RewardEdition, _PureComponent);
 
   function RewardEdition() {
-    _classCallCheck(this, RewardEdition);
-
-    return _super.apply(this, arguments);
+    return _PureComponent.apply(this, arguments) || this;
   }
 
-  _createClass(RewardEdition, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement(StyledContainer, null, this.props.children);
-    }
-  }]);
+  var _proto = RewardEdition.prototype;
+
+  _proto.render = function render() {
+    return /*#__PURE__*/React.createElement(StyledContainer, null, this.props.children);
+  };
 
   return RewardEdition;
 }(PureComponent);

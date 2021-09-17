@@ -1,17 +1,27 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.SideGridAside = exports.SideGridContent = exports.SideGrid = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -31,13 +41,20 @@ var _container = require("../../../components/layout/container");
 
 var _gridConfig = require("../../../constants/grid-config");
 
-var Context = (0, _react.createContext)({
+var _excluded = ["className", "children"],
+    _excluded2 = ["className", "children", "contentClassName"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var Context = /*#__PURE__*/(0, _react.createContext)({
   asideSize: 'default'
 });
 
 var StyledSideGrid = _styledComponents.default.div.withConfig({
   displayName: "side-grid__StyledSideGrid",
-  componentId: "gp2qki-0"
+  componentId: "sc-gp2qki-0"
 })(["@media (min-width:", "){background:linear-gradient( to right,", " 0%,", " 50%,", " 50%,", " 100% );}.k-SideGrid__content{background-color:", ";padding-bottom:", ";@media (min-width:", "){padding-bottom:", ";}}.k-SideGrid__aside{display:none;@media (min-width:", "){display:flex;border-left:", " solid ", ";padding-left:0;padding-right:", ";}}.k-SideGrid__asideContent{display:flex;flex-direction:column;flex:1 1 auto;border-left:", " solid ", ";background-color:", ";}&.k-SideGrid--aside-start{@media (min-width:", "){background:linear-gradient( to left,", " 0%,", " 50%,", " 50%,", " 100% );}.k-SideGrid__row{flex-direction:row-reverse;}.k-SideGrid__aside{border-left:none;border-right:", " solid ", ";padding-left:", ";padding-right:0;}.k-SideGrid__asideContent{border-left:none;border-right:", " solid ", ";}}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.background2, _colorsConfig.default.background2, _colorsConfig.default.background1, (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(_gridConfig.GUTTER / 2), _colorsConfig.default.background1, (0, _typography.pxToRem)(_gridConfig.GUTTER / 2), (0, _typography.pxToRem)(1), _colorsConfig.default.line1, _colorsConfig.default.background2, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.background2, _colorsConfig.default.background2, (0, _typography.pxToRem)(_gridConfig.GUTTER / 2), _colorsConfig.default.background1, (0, _typography.pxToRem)(_gridConfig.GUTTER / 2), (0, _typography.pxToRem)(1), _colorsConfig.default.line1);
 
 var SideGrid = function SideGrid(_ref) {
@@ -47,7 +64,7 @@ var SideGrid = function SideGrid(_ref) {
       rowClassName = _ref.rowClassName,
       asidePosition = _ref.asidePosition,
       asideSize = _ref.asideSize;
-  var sideGridClassName = (0, _classnames.default)('k-SideGrid', className, "k-SideGrid--aside-".concat(asidePosition), "k-SideGrid--aside-".concat(asideSize));
+  var sideGridClassName = (0, _classnames.default)('k-SideGrid', className, "k-SideGrid--aside-" + asidePosition, "k-SideGrid--aside-" + asideSize);
   return /*#__PURE__*/_react.default.createElement(StyledSideGrid, {
     className: sideGridClassName
   }, /*#__PURE__*/_react.default.createElement(_container.Container, {
@@ -66,7 +83,7 @@ exports.SideGrid = SideGrid;
 var SideGridContent = function SideGridContent(_ref2) {
   var className = _ref2.className,
       children = _ref2.children,
-      props = (0, _objectWithoutProperties2.default)(_ref2, ["className", "children"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
 
   var _useContext = (0, _react.useContext)(Context),
       asideSize = _useContext.asideSize;
@@ -97,7 +114,7 @@ var SideGridAside = function SideGridAside(_ref3) {
   var className = _ref3.className,
       children = _ref3.children,
       contentClassName = _ref3.contentClassName,
-      props = (0, _objectWithoutProperties2.default)(_ref3, ["className", "children", "contentClassName"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded2);
 
   var _useContext2 = (0, _react.useContext)(Context),
       asideSize = _useContext2.asideSize;

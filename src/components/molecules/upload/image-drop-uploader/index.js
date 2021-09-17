@@ -1,17 +1,33 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.ImageDropUploader = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+require("core-js/modules/es.function.name.js");
+
+require("core-js/modules/es.array.includes.js");
+
+require("core-js/modules/es.string.includes.js");
+
+require("core-js/modules/es.array.join.js");
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -36,6 +52,10 @@ var _text = require("../../../../components/atoms/typography/text");
 var _imageCropper = require("./components/image-cropper");
 
 var _pauseEvent = require("./utils/pause-event");
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var CROP_WIDTH = 125;
 
@@ -102,48 +122,40 @@ var ImageDropUploader = function ImageDropUploader(_ref) {
       typeErrorText = _ref$typeErrorText === void 0 ? '' : _ref$typeErrorText;
 
   var _useState = (0, _react.useState)(status),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      internalStatus = _useState2[0],
-      setInternalStatus = _useState2[1];
+      internalStatus = _useState[0],
+      setInternalStatus = _useState[1];
 
   (0, _react.useEffect)(function () {
     return setInternalStatus(status);
   }, [status]);
 
-  var _useState3 = (0, _react.useState)(false),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      isDraggingOver = _useState4[0],
-      setDraggingOver = _useState4[1];
+  var _useState2 = (0, _react.useState)(false),
+      isDraggingOver = _useState2[0],
+      setDraggingOver = _useState2[1];
 
-  var _useState5 = (0, _react.useState)(null),
-      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
-      imageRawData = _useState6[0],
-      setImageRawData = _useState6[1];
+  var _useState3 = (0, _react.useState)(null),
+      imageRawData = _useState3[0],
+      setImageRawData = _useState3[1];
 
-  var _useState7 = (0, _react.useState)(initialValue),
-      _useState8 = (0, _slicedToArray2.default)(_useState7, 2),
-      imageDataURL = _useState8[0],
-      setImageDataURL = _useState8[1];
+  var _useState4 = (0, _react.useState)(initialValue),
+      imageDataURL = _useState4[0],
+      setImageDataURL = _useState4[1];
 
-  var _useState9 = (0, _react.useState)({}),
-      _useState10 = (0, _slicedToArray2.default)(_useState9, 2),
-      cropperData = _useState10[0],
-      setCropperData = _useState10[1];
+  var _useState5 = (0, _react.useState)({}),
+      cropperData = _useState5[0],
+      setCropperData = _useState5[1];
 
-  var _useState11 = (0, _react.useState)(initialCrop),
-      _useState12 = (0, _slicedToArray2.default)(_useState11, 2),
-      internalInitialCrop = _useState12[0],
-      setInternalInitialCrop = _useState12[1];
+  var _useState6 = (0, _react.useState)(initialCrop),
+      internalInitialCrop = _useState6[0],
+      setInternalInitialCrop = _useState6[1];
 
-  var _useState13 = (0, _react.useState)(error),
-      _useState14 = (0, _slicedToArray2.default)(_useState13, 2),
-      isError = _useState14[0],
-      setError = _useState14[1];
+  var _useState7 = (0, _react.useState)(error),
+      isError = _useState7[0],
+      setError = _useState7[1];
 
-  var _useState15 = (0, _react.useState)(errorMessage),
-      _useState16 = (0, _slicedToArray2.default)(_useState15, 2),
-      internalErrorMessage = _useState16[0],
-      setErrorMessage = _useState16[1];
+  var _useState8 = (0, _react.useState)(errorMessage),
+      internalErrorMessage = _useState8[0],
+      setErrorMessage = _useState8[1];
 
   (0, _react.useEffect)(function () {
     if (initialValue !== '') {
@@ -208,7 +220,7 @@ var ImageDropUploader = function ImageDropUploader(_ref) {
 
     onUpload({
       value: reader.result,
-      name: (imageRawData === null || imageRawData === void 0 ? void 0 : imageRawData.name) || null,
+      name: (imageRawData == null ? void 0 : imageRawData.name) || null,
       file: imageRawData || null
     });
   }, [imageRawData]);
@@ -216,7 +228,7 @@ var ImageDropUploader = function ImageDropUploader(_ref) {
     if (imageRawData && !isSelectedImageValid(imageRawData)) return;
     onChange({
       value: imageDataURL,
-      name: (imageRawData === null || imageRawData === void 0 ? void 0 : imageRawData.name) || null,
+      name: (imageRawData == null ? void 0 : imageRawData.name) || null,
       file: imageRawData || null,
       cropperData: cropperData // value: resultData?.target?.src || '',
       // base: getOr(resultData?.srcElement?.src)('originalTarget.src')(
@@ -276,7 +288,7 @@ var ImageDropUploader = function ImageDropUploader(_ref) {
     id: id,
     onChange: onFileInputChange,
     disabled: disabled,
-    "aria-describedby": isError && internalErrorMessage ? "".concat(id, "-error-description") : null,
+    "aria-describedby": isError && internalErrorMessage ? id + "-error-description" : null,
     accept: acceptedMimeTypes.join(', ')
   })), /*#__PURE__*/_react.default.createElement("label", (0, _extends2.default)({}, buttonProps, {
     htmlFor: id,
@@ -305,8 +317,8 @@ var ImageDropUploader = function ImageDropUploader(_ref) {
     },
     src: imageDataURL,
     onChange: handleCropperChange,
-    id: "".concat(id, "-cropper"),
-    "aria-describedby": "".concat(id, "-cropper-description"),
+    id: id + "-cropper",
+    "aria-describedby": id + "-cropper-description",
     initialCrop: internalInitialCrop,
     disabled: disabled
   }) : /*#__PURE__*/_react.default.createElement("div", {
@@ -323,7 +335,7 @@ var ImageDropUploader = function ImageDropUploader(_ref) {
     }
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-ImageDropUploader__manager__content",
-    id: "".concat(id, "-cropper-description")
+    id: id + "-cropper-description"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-ImageDropUploader__manager__title"
   }, managerTitle), /*#__PURE__*/_react.default.createElement("div", {
@@ -335,7 +347,7 @@ var ImageDropUploader = function ImageDropUploader(_ref) {
     size: "micro",
     closeButtonLabel: cancelButtonText
   })), isError && internalErrorMessage && /*#__PURE__*/_react.default.createElement(_text.Text, {
-    id: "".concat(id, "-error-description"),
+    id: id + "-error-description",
     as: "p",
     size: "micro",
     color: "error",

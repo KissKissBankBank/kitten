@@ -1,19 +1,41 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.DocumentsDropUploader = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
+require("core-js/modules/es.array.concat.js");
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+require("core-js/modules/es.array.filter.js");
+
+require("core-js/modules/web.dom-collections.for-each.js");
+
+require("core-js/modules/es.array.includes.js");
+
+require("core-js/modules/es.string.includes.js");
+
+require("core-js/modules/es.function.name.js");
+
+require("core-js/modules/es.array.map.js");
+
+require("core-js/modules/es.array.join.js");
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -36,6 +58,10 @@ var _crossIcon = require("../../../../components/graphics/icons/cross-icon");
 var _text = require("../../../../components/atoms/typography/text");
 
 var _tag = require("../../../../components/atoms/tag");
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var StyledDocumentsDropUploader = _styledComponents.default.div.withConfig({
   displayName: "documents-drop-uploader__StyledDocumentsDropUploader",
@@ -93,33 +119,28 @@ var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
       displayErrors = _ref$displayErrors === void 0 ? true : _ref$displayErrors;
 
   var _useState = (0, _react.useState)(status),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      internalStatus = _useState2[0],
-      setInternalStatus = _useState2[1];
+      internalStatus = _useState[0],
+      setInternalStatus = _useState[1];
 
   (0, _react.useEffect)(function () {
     return setInternalStatus(status);
   }, [status]);
 
-  var _useState3 = (0, _react.useState)(false),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      isDraggingOver = _useState4[0],
-      setDraggingOver = _useState4[1];
+  var _useState2 = (0, _react.useState)(false),
+      isDraggingOver = _useState2[0],
+      setDraggingOver = _useState2[1];
 
-  var _useState5 = (0, _react.useState)(initialValue),
-      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
-      fileList = _useState6[0],
-      setFileList = _useState6[1];
+  var _useState3 = (0, _react.useState)(initialValue),
+      fileList = _useState3[0],
+      setFileList = _useState3[1];
 
-  var _useState7 = (0, _react.useState)([]),
-      _useState8 = (0, _slicedToArray2.default)(_useState7, 2),
-      errorList = _useState8[0],
-      setErrorList = _useState8[1];
+  var _useState4 = (0, _react.useState)([]),
+      errorList = _useState4[0],
+      setErrorList = _useState4[1];
 
-  var _useState9 = (0, _react.useState)([errorMessageList]),
-      _useState10 = (0, _slicedToArray2.default)(_useState9, 2),
-      internalErrorMessageList = _useState10[0],
-      setErrorMessageList = _useState10[1];
+  var _useState5 = (0, _react.useState)([errorMessageList]),
+      internalErrorMessageList = _useState5[0],
+      setErrorMessageList = _useState5[1];
 
   var handleDragEnter = function handleDragEnter(e) {
     e.preventDefault();
@@ -149,13 +170,13 @@ var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
     e.stopPropagation();
     if (disabled) return;
     setDraggingOver(false);
-    addFilesToList((0, _toConsumableArray2.default)(e === null || e === void 0 ? void 0 : (_e$dataTransfer = e.dataTransfer) === null || _e$dataTransfer === void 0 ? void 0 : _e$dataTransfer.files));
+    addFilesToList([].concat(e == null ? void 0 : (_e$dataTransfer = e.dataTransfer) == null ? void 0 : _e$dataTransfer.files));
   };
 
   var onFileInputChange = function onFileInputChange(e) {
     var _e$target;
 
-    addFilesToList((0, _toConsumableArray2.default)(e === null || e === void 0 ? void 0 : (_e$target = e.target) === null || _e$target === void 0 ? void 0 : _e$target.files));
+    addFilesToList([].concat(e == null ? void 0 : (_e$target = e.target) == null ? void 0 : _e$target.files));
   };
 
   (0, _react.useEffect)(function () {
@@ -183,18 +204,18 @@ var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
     setErrorMessageList([]);
     setErrorList([]);
     setFileList(function (currentList) {
-      var newList = (0, _toConsumableArray2.default)(currentList);
+      var newList = [].concat(currentList);
       files.forEach(function (file) {
         var isValid = true;
 
         if ('File' in window && file instanceof File) {
           if (acceptedMimeTypes.length > 0 && !acceptedMimeTypes.includes(file.type)) {
             setErrorMessageList(function (current) {
-              return [].concat((0, _toConsumableArray2.default)(current), [typeErrorText(file.name)]);
+              return [].concat(current, [typeErrorText(file.name)]);
             });
             setInternalStatus('error');
             setErrorList(function (current) {
-              return [].concat((0, _toConsumableArray2.default)(current), [{
+              return [].concat(current, [{
                 file: file,
                 error: typeErrorText(file.name)
               }]);
@@ -204,11 +225,11 @@ var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
 
           if (!!acceptedFileSize && file.size > acceptedFileSize) {
             setErrorMessageList(function (current) {
-              return [].concat((0, _toConsumableArray2.default)(current), [sizeErrorText(file.name)]);
+              return [].concat(current, [sizeErrorText(file.name)]);
             });
             setInternalStatus('error');
             setErrorList(function (current) {
-              return [].concat((0, _toConsumableArray2.default)(current), [{
+              return [].concat(current, [{
                 file: file,
                 error: sizeErrorText(file.name)
               }]);
@@ -226,7 +247,7 @@ var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
   };
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledDocumentsDropUploader, {
-    className: (0, _classnames.default)('k-DocumentsDropUploader', className, "k-DocumentsDropUploader--".concat(internalStatus), {
+    className: (0, _classnames.default)('k-DocumentsDropUploader', className, "k-DocumentsDropUploader--" + internalStatus, {
       'k-DocumentsDropUploader--isDraggingOver': isDraggingOver,
       'k-DocumentsDropUploader--disabled': disabled
     }),
@@ -240,7 +261,7 @@ var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
     color: "currentColor"
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-DocumentsDropUploader__content",
-    id: "".concat(id, "-cropper-description")
+    id: id + "-cropper-description"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-DocumentsDropUploader__title"
   }, managerTitle), fileList.length === 0 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
@@ -272,7 +293,7 @@ var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
     id: id,
     onChange: onFileInputChange,
     disabled: disabled,
-    "aria-describedby": internalStatus === 'error' && internalErrorMessageList ? "".concat(id, "-error-description") : null,
+    "aria-describedby": internalStatus === 'error' && internalErrorMessageList ? id + "-error-description" : null,
     accept: acceptedMimeTypes.join(', '),
     multiple: true
   })), disabled || fileList.length === 0 ? /*#__PURE__*/_react.default.createElement("label", {
@@ -289,7 +310,7 @@ var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
     "aria-hidden": true
   }, "+\xA0"), labelText))), displayErrors && internalStatus === 'error' && internalErrorMessageList.length > 0 && /*#__PURE__*/_react.default.createElement(StyledErrorList, {
     className: "k-DocumentsDropUploader__errorList",
-    id: "".concat(id, "-error-description")
+    id: id + "-error-description"
   }, internalErrorMessageList.map(function (errorMsg, index) {
     return /*#__PURE__*/_react.default.createElement(_text.Text, {
       key: errorMsg + index,

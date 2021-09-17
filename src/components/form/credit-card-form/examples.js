@@ -1,19 +1,27 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.CustomExample = exports.DefaultExample = void 0;
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -22,6 +30,14 @@ var _index = require("./index");
 var _field = require("../field");
 
 var _isEmpty = _interopRequireDefault(require("lodash/fp/isEmpty"));
+
+var _excluded = ["children"],
+    _excluded2 = ["children"],
+    _excluded3 = ["children"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var DefaultExample = function DefaultExample() {
   return /*#__PURE__*/_react.default.createElement(_index.CreditCardForm, null, /*#__PURE__*/_react.default.createElement(_index.CreditCardForm.Number, null), /*#__PURE__*/_react.default.createElement(_index.CreditCardForm.Expiry, null), /*#__PURE__*/_react.default.createElement(_index.CreditCardForm.Cvc, null));
@@ -37,9 +53,8 @@ exports.CustomExample = CustomExample;
 
 var Number = function Number() {
   var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      error = _useState2[0],
-      setError = _useState2[1];
+      error = _useState[0],
+      setError = _useState[1];
 
   var handleBlur = function handleBlur(e) {
     setError((0, _isEmpty.default)(e.target.value));
@@ -54,7 +69,7 @@ var Number = function Number() {
     },
     labelComponent: function labelComponent(_ref) {
       var children = _ref.children,
-          props = (0, _objectWithoutProperties2.default)(_ref, ["children"]);
+          props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
       return /*#__PURE__*/_react.default.createElement(_field.Field.Label, {
         labelProps: props,
         children: children
@@ -74,10 +89,9 @@ var Number = function Number() {
 };
 
 var Expiry = function Expiry() {
-  var _useState3 = (0, _react.useState)(false),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      error = _useState4[0],
-      setError = _useState4[1];
+  var _useState2 = (0, _react.useState)(false),
+      error = _useState2[0],
+      setError = _useState2[1];
 
   var handleBlur = function handleBlur(e) {
     setError((0, _isEmpty.default)(e.target.value));
@@ -92,7 +106,7 @@ var Expiry = function Expiry() {
     },
     labelComponent: function labelComponent(_ref2) {
       var children = _ref2.children,
-          props = (0, _objectWithoutProperties2.default)(_ref2, ["children"]);
+          props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
       return /*#__PURE__*/_react.default.createElement(_field.Field.Label, {
         labelProps: props,
         children: children
@@ -114,10 +128,9 @@ var Expiry = function Expiry() {
 };
 
 var Cvc = function Cvc() {
-  var _useState5 = (0, _react.useState)(false),
-      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
-      error = _useState6[0],
-      setError = _useState6[1];
+  var _useState3 = (0, _react.useState)(false),
+      error = _useState3[0],
+      setError = _useState3[1];
 
   var handleBlur = function handleBlur(e) {
     setError((0, _isEmpty.default)(e.target.value));
@@ -132,7 +145,7 @@ var Cvc = function Cvc() {
     },
     labelComponent: function labelComponent(_ref3) {
       var children = _ref3.children,
-          props = (0, _objectWithoutProperties2.default)(_ref3, ["children"]);
+          props = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded3);
       return /*#__PURE__*/_react.default.createElement(_field.Field.Label, {
         labelProps: props,
         children: children

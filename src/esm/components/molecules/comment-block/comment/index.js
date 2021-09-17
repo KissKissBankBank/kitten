@@ -1,4 +1,3 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import React, { useEffect, useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
@@ -62,9 +61,8 @@ export var Comment = function Comment(_ref3) {
   var likeButtonElement = useRef(null);
 
   var _useState = useState(0),
-      _useState2 = _slicedToArray(_useState, 2),
-      likeButtonWidth = _useState2[0],
-      setLikeButtonWidth = _useState2[1];
+      likeButtonWidth = _useState[0],
+      setLikeButtonWidth = _useState[1];
 
   useEffect(function () {
     var marginLeftAndRight = 40;

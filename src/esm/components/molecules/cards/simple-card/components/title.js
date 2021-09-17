@@ -1,4 +1,4 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
+import _extends from "@babel/runtime/helpers/extends";
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';

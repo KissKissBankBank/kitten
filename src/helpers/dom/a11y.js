@@ -1,13 +1,15 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.keyboardNavigation = exports.getFocusableElementsFrom = void 0;
 
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
+require("core-js/modules/es.array.join.js");
+
+require("core-js/modules/es.array.map.js");
+
+require("core-js/modules/es.array.filter.js");
+
+require("core-js/modules/es.array.concat.js");
 
 var _events = require("./events");
 
@@ -15,7 +17,7 @@ var notMinusTabindex = ':not([tabindex="-1"])';
 var notDisabled = ':not([disabled])';
 var FOCUSABLE_ELEMENTS = ['[contenteditable="true"]', '[href]', '[tabindex]', 'area', 'button', 'details', 'iframe', 'input', 'select', 'textarea'];
 var focusableElements = FOCUSABLE_ELEMENTS.map(function (el) {
-  return "".concat(el).concat(notMinusTabindex).concat(notDisabled);
+  return "" + el + notMinusTabindex + notDisabled;
 }).join(', ');
 
 var isVisible = function isVisible(element) {
@@ -28,15 +30,15 @@ var isVisible = function isVisible(element) {
 };
 
 var getFocusableElementsFrom = function getFocusableElementsFrom(root) {
-  return (0, _toConsumableArray2.default)(root.querySelectorAll(focusableElements)).filter(function (el) {
+  return [].concat(root.querySelectorAll(focusableElements)).filter(function (el) {
     return isVisible(el);
   });
 };
 
 exports.getFocusableElementsFrom = getFocusableElementsFrom;
 
-var keyboardNavigation = function keyboardNavigation(elements) {
-  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+var keyboardNavigation = function keyboardNavigation(elements, _temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
       _ref$events = _ref.events,
       events = _ref$events === void 0 ? {
     prev: _events.A11Y_FIRST_FOCUS_REACHED_EVENT,

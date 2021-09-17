@@ -1,10 +1,12 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
-
-var _templateObject;
-
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "className"],
+    _excluded2 = ["children", "withoutMargin", "className", "align", "tag"],
+    _excluded3 = ["className", "sticky", "stickyOnMobile", "fullSize", "fullSizeOnMobile"],
+    _excluded4 = ["onClick"],
+    _excluded5 = ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "size", "isOpen", "zIndex", "fullSize", "fullSizeOnMobile", "fullSizeTitle", "variant", "headerTitle", "headerActions", "headerMessage", "contentCols", "headerZIndex"];
+import "core-js/modules/es.object.assign.js";
+import "core-js/modules/es.object.entries.js";
 import React, { useEffect, createContext, useReducer, useContext } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
@@ -24,13 +26,13 @@ import COLORS from '../../../constants/colors-config';
 import { CONTAINER_PADDING, CONTAINER_PADDING_THIN, GUTTER, CONTAINER_MAX_WIDTH } from '../../../constants/grid-config';
 import { domElementHelper } from '../../../helpers/dom/element-helper';
 var paddingPlusGutters = 2 * CONTAINER_PADDING + 11 * GUTTER;
-var oneGridCol = "calc((100vw - ".concat(pxToRem(paddingPlusGutters), ") / 12 + ").concat(pxToRem(GUTTER), ")");
-var oneGridColXl = "calc((".concat(pxToRem(CONTAINER_MAX_WIDTH), " - ").concat(pxToRem(paddingPlusGutters), ") / 12 + ").concat(pxToRem(GUTTER), ")");
+var oneGridCol = "calc((100vw - " + pxToRem(paddingPlusGutters) + ") / 12 + " + pxToRem(GUTTER) + ")";
+var oneGridColXl = "calc((" + pxToRem(CONTAINER_MAX_WIDTH) + " - " + pxToRem(paddingPlusGutters) + ") / 12 + " + pxToRem(GUTTER) + ")";
 var StyledParagraph = styled(Paragraph).withConfig({
   displayName: "modal-next__StyledParagraph",
   componentId: "sc-19t1c9d-0"
 })(["font-size:", ";@media (min-width:", "){font-size:", ";}"], pxToRem(12), pxToRem(ScreenConfig.S.min), pxToRem(14));
-var GlobalStyle = createGlobalStyle(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n\n  body.k-ModalNext__body--open {\n    overflow: hidden;\n  }\n\n  .k-ModalNext__content {\n    --Modal-colNumber: 6;\n    --Modal-wrapperMaxWidth: 100vw;\n    --Modal-contentCols: 4;\n    --Modal-contentMargin: 1;\n    --Modal-headerHeight: 0px;\n\n    flex: 1 0 auto;\n    position: relative;\n    background-color: ", ";\n    box-sizing: border-box;\n    transform: scale(0.94);\n    margin: auto;\n    width: calc(100vw - ", ");\n    display: flex;\n    flex-direction: column;\n\n    @media (min-width: ", ") {\n      width: calc(100vw - ", ")\n    }\n\n    @media (min-width: ", ") {\n      --Modal-contentMargin: calc((var(--Modal-colNumber) - var(--Modal-contentCols)) / 2);\n\n      width: calc(\n        ((var(--Modal-wrapperMaxWidth) - ", ") / 12\n        + ", ") * var(--Modal-colNumber) - ", "\n      );\n    }\n\n    @media (min-width: ", ") {\n      --Modal-wrapperMaxWidth: ", ";\n    }\n\n    &.k-ModalNext__content--big {\n      --Modal-colNumber: 8;\n\n      @media (min-width: ", ") {\n        --Modal-contentCols: 6;\n      }\n    }\n    &.k-ModalNext__content--huge {\n      --Modal-colNumber: 10;\n\n      @media (min-width: ", ") {\n        --Modal-contentCols: 6;\n      }\n    }\n    &.k-ModalNext__content--giant {\n      --Modal-colNumber: 12;\n\n      @media (min-width: ", ") {\n        --Modal-contentCols: 8;\n      }\n      @media (min-width: ", ") {\n        --Modal-contentCols: 6;\n      }\n    }\n    &.k-ModalNext__content--fullSize {\n      min-width: 100vw;\n      height: 100%;\n      margin: 0;\n    }\n\n    @media (max-width: ", ") {\n      &.k-ModalNext__content--fullSizeOnMobile {\n        min-width: 100vw;\n        height: 100%;\n        margin: 0;\n      }\n    }\n\n    &.k-ModalNext__content--customContentCols {\n      @media (min-width: ", ") {\n        --Modal-contentCols: var(--Modal-contentCols--s, var(--Modal-contentCols--default, 4));\n      }\n      @media (min-width: ", ") {\n        --Modal-contentCols: var(--Modal-contentCols--m);\n      }\n      @media (min-width: ", ") {\n        --Modal-contentCols: var(--Modal-contentCols--l);\n      }\n      @media (min-width: ", ") {\n        --Modal-contentCols: var(--Modal-contentCols--xl);\n      }\n    }\n\n    .k-ModalNext__header {\n      flex: 0 0 auto;\n      position: sticky;\n      z-index: var(--Modal-headerZIndex);\n      top: 0;\n      height: var(--Modal-headerHeight);\n      display: grid;\n      gap: ", ";\n      grid-template-columns: 1fr auto 1fr;\n      align-items: center;\n      padding-left: ", ";\n      padding-right: ", ";\n      background-color: ", ";\n\n      @media (min-width: ", ") {\n        padding-left: ", ";\n        padding-right: ", ";\n      }\n\n      .k-ModalNext__header__closeButton {\n        min-width: ", ";\n        text-align: left;\n      }\n\n      .k-ModalNext__header__title {\n        min-width: ", ";\n        text-align: center;\n      }\n\n      .k-ModalNext__header__actions {\n        min-width: ", ";\n        text-align: right;\n      }\n\n      .k-ModalNext__header__message {\n        position: absolute;\n        top: 0;\n        height: 100%;\n        display: flex;\n        align-items: center;\n        left: ", ";\n\n        &:empty {\n          display: none;\n        }\n\n        @media (min-width: ", ") {\n          left: ", ";\n        }\n      }\n    }\n\n    .k-ModalNext__closeButton {\n      position: absolute;\n      top: 0;\n      right: ", ";\n\n      @media (min-width: ", ") {\n        right: ", ";\n      }\n    }\n\n    .k-ModalNext__actions {\n      display: flex;\n      flex-direction: column;\n      background-color: ", ";\n\n      @media (min-width: ", ") {\n        gap: ", ";\n        flex-direction: row;\n      }\n\n      .k-Button {\n        margin-top: ", ";\n      }\n\n      &.k-ModalNext__actions--sticky {\n        position: sticky;\n        bottom: 0;\n      }\n      @media (max-width: ", ") {\n        &.k-ModalNext__actions--stickyOnMobile {\n          position: sticky;\n          bottom: 0;\n        }\n      }\n    }\n\n    .k-ModalNext__main {\n      flex: 1 0 auto;\n      display: flex;\n      flex-direction: column;\n      box-sizing: border-box;\n      padding: 0 ", ";\n\n      @media (min-width: ", ") {\n        padding: 0 calc(var(--Modal-contentMargin) * ", ");\n      }\n\n      @media (min-width: ", ") {\n        padding: 0 calc(var(--Modal-contentMargin) * ", ");\n      }\n\n      & > *:not(.k-ModalNext__block):first-child {\n        margin-top: ", ";\n\n        @media (min-width: ", ") {\n          margin-top: ", ";\n        }\n      }\n\n      & > * {\n        flex: 0 0 auto;\n      }\n\n      & > :nth-last-child(2) {\n        flex-grow: 1;\n      }\n\n      & > *:last-child {\n        margin-bottom: ", ";\n\n        @media (min-width: ", ") {\n          margin-bottom: ", ";\n        }\n      }\n    }\n\n    .k-ModalNext__header ~ .k-ModalNext__main > *:not(.k-ModalNext__block):first-child {\n      margin-top: 0;\n    }\n\n    .k-ModalNext__block {\n      margin-left: -", ";\n      margin-right: -", ";\n      padding-left: ", ";\n      padding-right: ", ";\n\n      @media (min-width: ", ") {\n        margin-left: calc(-1 * var(--Modal-contentMargin) * ", ");\n        margin-right: calc(-1 * var(--Modal-contentMargin) * ", ");\n        padding-left: ", ";\n        padding-right: ", ";\n      }\n      @media (min-width: ", ") {\n        margin-left: calc(-1 * var(--Modal-contentMargin) * ", ");\n        margin-right: calc(-1 * var(--Modal-contentMargin) * ", ");\n        padding-left: ", ";\n        padding-right: ", ";\n      }\n    }\n\n    .k-ModalNext__actions.k-ModalNext__actions--fullSize {\n      margin-left: -", ";\n      margin-right: -", ";\n      margin-bottom: 0;\n\n      @media (min-width: ", ") {\n        margin-left: calc(-1 * var(--Modal-contentMargin) * ", ");\n        margin-right: calc(-1 * var(--Modal-contentMargin) * ", ");\n      }\n      @media (min-width: ", ") {\n        margin-left: calc(-1 * var(--Modal-contentMargin) * ", ");\n        margin-right: calc(-1 * var(--Modal-contentMargin) * ", ");\n      }\n\n      .k-Button--orion:first-child:last-child {\n        border-radius: 0;\n      }\n    }\n    @media (max-width: ", ") {\n      .k-ModalNext__actions.k-ModalNext__actions--fullSizeOnMobile {\n        margin-left: -", ";\n        margin-right: -", ";\n        margin-bottom: 0;\n\n        .k-Button--orion:first-child:last-child {\n          border-radius: 0;\n        }\n      }\n    }\n\n    .k-ModalNext__main__title {\n      margin-bottom:\n    }\n  }\n\n  /* ANDROMEDA STYLES */\n\n  .k-ModalNext__content--andromeda {\n    .k-ModalNext__header {\n      border-bottom: ", " solid ", ";\n      margin-bottom: ", ";\n\n      @media (min-width: ", ") {\n        padding-left: ", ";\n        padding-right: ", ";\n      }\n    }\n\n    &.k-ModalNext__content--hasHeader {\n      --Modal-headerHeight: ", ";\n    }\n  }\n\n\n  /* ORION STYLES */\n\n  .k-ModalNext__content--orion {\n    padding-top: 0;\n    padding-left: 0;\n    padding-right: 0;\n\n    &:not(.k-ModalNext__content--fullSize) {\n      border-radius: ", ";\n\n      .k-ModalNext__closeButton .k-Button {\n        border-top-right-radius: ", ";\n      }\n    }\n    @media (max-width: ", ") {\n      &.k-ModalNext__content--fullSizeOnMobile {\n        border-radius: 0 !important;\n      }\n    }\n\n    &.k-ModalNext__content--hasHeader {\n      --Modal-headerHeight: ", ";\n\n      @media (min-width: ", ") {\n        --Modal-headerHeight: ", ";\n      }\n    }\n\n    .k-ModalNext__header {\n      border-top-left-radius: ", ";\n      border-top-right-radius: ", ";\n\n      .k-Button {\n        @media (max-width: ", ") {\n          ", "\n        }\n      }\n    }\n\n    &.k-ModalNext__content--giant {\n      @media (max-width: ", ") {\n        margin-left: 0;\n        margin-right: 0;\n        width: 100vw;\n        border-bottom-left-radius: 0;\n        border-bottom-right-radius: 0;\n      }\n\n      @media (max-width: ", ") {\n        overflow: auto;\n        min-height: calc(100% - ", ");\n        margin: 0;\n        min-height: 100%;\n        border-radius: 0;\n      }\n    }\n  }\n\n\n  /* OVERLAY STYLES */\n\n  .k-ModalNext__overlay {\n    position: fixed;\n    overflow: scroll;\n    display: flex;\n    flex-direction: column;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    opacity: 0;\n    background-color: rgba(34, 34, 34, .8);\n\n    &.k-ModalNext__overlay--andromeda {\n      &:not(.k-ModalNext__overlay--fullSize) {\n        &::before,\n        &::after {\n          content: '';\n          flex: 1 1 33%;\n          min-height: ", ";\n\n          @media (min-width: ", ") {\n            min-height: ", ";\n          }\n        }\n      }\n    }\n\n    &.k-ModalNext__overlay--orion {\n      &:not(.k-ModalNext__overlay--giant):not(.k-ModalNext__overlay--fullSize) {\n        &::before,\n        &::after {\n          content: '';\n          flex: 1 1 33%;\n          min-height: ", ";\n\n          @media (min-width: ", ") {\n            min-height: ", ";\n          }\n        }\n      }\n      &.k-ModalNext__overlay--giant {\n        &::before,\n        &::after {\n          @media (min-width: ", ") {\n            content: '';\n            flex: 1 1 33%;\n            min-height: ", ";\n          }\n\n          @media (min-width: ", ") {\n            min-height: ", ";\n          }\n        }\n      }\n    }\n\n    &.k-ModalNext__overlay--fullSize {\n      background: white;\n    }\n\n    @media (max-width: ", ") {\n      &.k-ModalNext__overlay--fullSizeOnMobile {\n        background: white;\n\n        .k-ModalNext__content {\n          flex: 1;\n        }\n\n        &::before, &::after {\n          min-height: 0 !important;\n          flex: 0 !important;\n        }\n      }\n    }\n\n    ", "\n  }\n\n  .k-ModalNext__overlay--afterOpen {\n    transition: opacity .3s ease;\n    opacity: 1;\n  }\n  .k-ModalNext--afterOpen {\n    transition: opacity .3s ease, transform .3s ease;\n    transform: scale(1);\n    opacity: 1;\n  }\n\n  .k-ModalNext__overlay--beforeClose {\n    opacity: 0;\n  }\n  .k-ModalNext--beforeClose {\n    transition: opacity .3s ease, transform .5s ease;\n    transform: scale(1.06);\n    opacity: 0;\n  }\n\n"])), COLORS.background1, pxToRem(2 * CONTAINER_PADDING_THIN), pxToRem(ScreenConfig.S.min), pxToRem(2 * CONTAINER_PADDING), pxToRem(ScreenConfig.L.min), pxToRem(paddingPlusGutters), pxToRem(GUTTER), pxToRem(GUTTER), pxToRem(ScreenConfig.XL.min), pxToRem(CONTAINER_MAX_WIDTH), pxToRem(ScreenConfig.L.min), pxToRem(ScreenConfig.L.min), pxToRem(ScreenConfig.L.min), pxToRem(ScreenConfig.XL.min), pxToRem(ScreenConfig.XS.max), pxToRem(ScreenConfig.S.min), pxToRem(ScreenConfig.M.min), pxToRem(ScreenConfig.L.min), pxToRem(ScreenConfig.XL.min), pxToRem(GUTTER), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), COLORS.background1, pxToRem(ScreenConfig.S.min), pxToRem(CONTAINER_PADDING), pxToRem(CONTAINER_PADDING), pxToRem(40), pxToRem(40), pxToRem(40), pxToRem(CONTAINER_PADDING_THIN + 40 + 35), pxToRem(ScreenConfig.S.min), pxToRem(CONTAINER_PADDING + 40 + 35), pxToRem(30), pxToRem(ScreenConfig.S.min), pxToRem(50), COLORS.background1, pxToRem(ScreenConfig.S.min), pxToRem(GUTTER), pxToRem(20), pxToRem(ScreenConfig.XS.max), pxToRem(CONTAINER_PADDING_THIN), pxToRem(ScreenConfig.S.min), oneGridCol, pxToRem(ScreenConfig.XL.min), oneGridColXl, pxToRem(50), pxToRem(ScreenConfig.S.min), pxToRem(80), pxToRem(50), pxToRem(ScreenConfig.S.min), pxToRem(80), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), pxToRem(ScreenConfig.S.min), oneGridCol, oneGridCol, pxToRem(CONTAINER_PADDING), pxToRem(CONTAINER_PADDING), pxToRem(ScreenConfig.XL.min), oneGridColXl, oneGridColXl, pxToRem(CONTAINER_PADDING), pxToRem(CONTAINER_PADDING), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), pxToRem(ScreenConfig.S.min), oneGridCol, oneGridCol, pxToRem(ScreenConfig.XL.min), oneGridColXl, oneGridColXl, pxToRem(ScreenConfig.XS.max), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), pxToRem(2), COLORS.line1, pxToRem(50), pxToRem(ScreenConfig.S.min), pxToRem(CONTAINER_PADDING), pxToRem(CONTAINER_PADDING), pxToRem(60), pxToRem(12), pxToRem(12), pxToRem(ScreenConfig.XS.max), pxToRem(80), pxToRem(ScreenConfig.S.min), pxToRem(100), pxToRem(12), pxToRem(12), pxToRem(ScreenConfig.XS.max), function () {
+var GlobalStyle = createGlobalStyle(["body.k-ModalNext__body--open{overflow:hidden;}.k-ModalNext__content{--Modal-colNumber:6;--Modal-wrapperMaxWidth:100vw;--Modal-contentCols:4;--Modal-contentMargin:1;--Modal-headerHeight:0px;flex:1 0 auto;position:relative;background-color:", ";box-sizing:border-box;transform:scale(0.94);margin:auto;width:calc(100vw - ", ");display:flex;flex-direction:column;@media (min-width:", "){width:calc(100vw - ", ")}@media (min-width:", "){--Modal-contentMargin:calc((var(--Modal-colNumber) - var(--Modal-contentCols)) / 2);width:calc( ((var(--Modal-wrapperMaxWidth) - ", ") / 12 + ", ") * var(--Modal-colNumber) - ", " );}@media (min-width:", "){--Modal-wrapperMaxWidth:", ";}&.k-ModalNext__content--big{--Modal-colNumber:8;@media (min-width:", "){--Modal-contentCols:6;}}&.k-ModalNext__content--huge{--Modal-colNumber:10;@media (min-width:", "){--Modal-contentCols:6;}}&.k-ModalNext__content--giant{--Modal-colNumber:12;@media (min-width:", "){--Modal-contentCols:8;}@media (min-width:", "){--Modal-contentCols:6;}}&.k-ModalNext__content--fullSize{min-width:100vw;height:100%;margin:0;}@media (max-width:", "){&.k-ModalNext__content--fullSizeOnMobile{min-width:100vw;height:100%;margin:0;}}&.k-ModalNext__content--customContentCols{@media (min-width:", "){--Modal-contentCols:var(--Modal-contentCols--s,var(--Modal-contentCols--default,4));}@media (min-width:", "){--Modal-contentCols:var(--Modal-contentCols--m);}@media (min-width:", "){--Modal-contentCols:var(--Modal-contentCols--l);}@media (min-width:", "){--Modal-contentCols:var(--Modal-contentCols--xl);}}.k-ModalNext__header{flex:0 0 auto;position:sticky;z-index:var(--Modal-headerZIndex);top:0;height:var(--Modal-headerHeight);display:grid;gap:", ";grid-template-columns:1fr auto 1fr;align-items:center;padding-left:", ";padding-right:", ";background-color:", ";@media (min-width:", "){padding-left:", ";padding-right:", ";}.k-ModalNext__header__closeButton{min-width:", ";text-align:left;}.k-ModalNext__header__title{min-width:", ";text-align:center;}.k-ModalNext__header__actions{min-width:", ";text-align:right;}.k-ModalNext__header__message{position:absolute;top:0;height:100%;display:flex;align-items:center;left:", ";&:empty{display:none;}@media (min-width:", "){left:", ";}}}.k-ModalNext__closeButton{position:absolute;top:0;right:", ";@media (min-width:", "){right:", ";}}.k-ModalNext__actions{display:flex;flex-direction:column;background-color:", ";@media (min-width:", "){gap:", ";flex-direction:row;}.k-Button{margin-top:", ";}&.k-ModalNext__actions--sticky{position:sticky;bottom:0;}@media (max-width:", "){&.k-ModalNext__actions--stickyOnMobile{position:sticky;bottom:0;}}}.k-ModalNext__main{flex:1 0 auto;display:flex;flex-direction:column;box-sizing:border-box;padding:0 ", ";@media (min-width:", "){padding:0 calc(var(--Modal-contentMargin) * ", ");}@media (min-width:", "){padding:0 calc(var(--Modal-contentMargin) * ", ");}& > *:not(.k-ModalNext__block):first-child{margin-top:", ";@media (min-width:", "){margin-top:", ";}}& > *{flex:0 0 auto;}& >:nth-last-child(2){flex-grow:1;}& > *:last-child{margin-bottom:", ";@media (min-width:", "){margin-bottom:", ";}}}.k-ModalNext__header ~ .k-ModalNext__main > *:not(.k-ModalNext__block):first-child{margin-top:0;}.k-ModalNext__block{margin-left:-", ";margin-right:-", ";padding-left:", ";padding-right:", ";@media (min-width:", "){margin-left:calc(-1 * var(--Modal-contentMargin) * ", ");margin-right:calc(-1 * var(--Modal-contentMargin) * ", ");padding-left:", ";padding-right:", ";}@media (min-width:", "){margin-left:calc(-1 * var(--Modal-contentMargin) * ", ");margin-right:calc(-1 * var(--Modal-contentMargin) * ", ");padding-left:", ";padding-right:", ";}}.k-ModalNext__actions.k-ModalNext__actions--fullSize{margin-left:-", ";margin-right:-", ";margin-bottom:0;@media (min-width:", "){margin-left:calc(-1 * var(--Modal-contentMargin) * ", ");margin-right:calc(-1 * var(--Modal-contentMargin) * ", ");}@media (min-width:", "){margin-left:calc(-1 * var(--Modal-contentMargin) * ", ");margin-right:calc(-1 * var(--Modal-contentMargin) * ", ");}.k-Button--orion:first-child:last-child{border-radius:0;}}@media (max-width:", "){.k-ModalNext__actions.k-ModalNext__actions--fullSizeOnMobile{margin-left:-", ";margin-right:-", ";margin-bottom:0;.k-Button--orion:first-child:last-child{border-radius:0;}}}.k-ModalNext__main__title{margin-bottom:}}.k-ModalNext__content--andromeda{.k-ModalNext__header{border-bottom:", " solid ", ";margin-bottom:", ";@media (min-width:", "){padding-left:", ";padding-right:", ";}}&.k-ModalNext__content--hasHeader{--Modal-headerHeight:", ";}}.k-ModalNext__content--orion{padding-top:0;padding-left:0;padding-right:0;&:not(.k-ModalNext__content--fullSize){border-radius:", ";.k-ModalNext__closeButton .k-Button{border-top-right-radius:", ";}}@media (max-width:", "){&.k-ModalNext__content--fullSizeOnMobile{border-radius:0 !important;}}&.k-ModalNext__content--hasHeader{--Modal-headerHeight:", ";@media (min-width:", "){--Modal-headerHeight:", ";}}.k-ModalNext__header{border-top-left-radius:", ";border-top-right-radius:", ";.k-Button{@media (max-width:", "){", "}}}&.k-ModalNext__content--giant{@media (max-width:", "){margin-left:0;margin-right:0;width:100vw;border-bottom-left-radius:0;border-bottom-right-radius:0;}@media (max-width:", "){overflow:auto;min-height:calc(100% - ", ");margin:0;min-height:100%;border-radius:0;}}}.k-ModalNext__overlay{position:fixed;overflow:scroll;display:flex;flex-direction:column;top:0;left:0;right:0;bottom:0;opacity:0;background-color:rgba(34,34,34,.8);&.k-ModalNext__overlay--andromeda{&:not(.k-ModalNext__overlay--fullSize){&::before,&::after{content:'';flex:1 1 33%;min-height:", ";@media (min-width:", "){min-height:", ";}}}}&.k-ModalNext__overlay--orion{&:not(.k-ModalNext__overlay--giant):not(.k-ModalNext__overlay--fullSize){&::before,&::after{content:'';flex:1 1 33%;min-height:", ";@media (min-width:", "){min-height:", ";}}}&.k-ModalNext__overlay--giant{&::before,&::after{@media (min-width:", "){content:'';flex:1 1 33%;min-height:", ";}@media (min-width:", "){min-height:", ";}}}}&.k-ModalNext__overlay--fullSize{background:white;}@media (max-width:", "){&.k-ModalNext__overlay--fullSizeOnMobile{background:white;.k-ModalNext__content{flex:1;}&::before,&::after{min-height:0 !important;flex:0 !important;}}}", "}.k-ModalNext__overlay--afterOpen{transition:opacity .3s ease;opacity:1;}.k-ModalNext--afterOpen{transition:opacity .3s ease,transform .3s ease;transform:scale(1);opacity:1;}.k-ModalNext__overlay--beforeClose{opacity:0;}.k-ModalNext--beforeClose{transition:opacity .3s ease,transform .5s ease;transform:scale(1.06);opacity:0;}"], COLORS.background1, pxToRem(2 * CONTAINER_PADDING_THIN), pxToRem(ScreenConfig.S.min), pxToRem(2 * CONTAINER_PADDING), pxToRem(ScreenConfig.L.min), pxToRem(paddingPlusGutters), pxToRem(GUTTER), pxToRem(GUTTER), pxToRem(ScreenConfig.XL.min), pxToRem(CONTAINER_MAX_WIDTH), pxToRem(ScreenConfig.L.min), pxToRem(ScreenConfig.L.min), pxToRem(ScreenConfig.L.min), pxToRem(ScreenConfig.XL.min), pxToRem(ScreenConfig.XS.max), pxToRem(ScreenConfig.S.min), pxToRem(ScreenConfig.M.min), pxToRem(ScreenConfig.L.min), pxToRem(ScreenConfig.XL.min), pxToRem(GUTTER), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), COLORS.background1, pxToRem(ScreenConfig.S.min), pxToRem(CONTAINER_PADDING), pxToRem(CONTAINER_PADDING), pxToRem(40), pxToRem(40), pxToRem(40), pxToRem(CONTAINER_PADDING_THIN + 40 + 35), pxToRem(ScreenConfig.S.min), pxToRem(CONTAINER_PADDING + 40 + 35), pxToRem(30), pxToRem(ScreenConfig.S.min), pxToRem(50), COLORS.background1, pxToRem(ScreenConfig.S.min), pxToRem(GUTTER), pxToRem(20), pxToRem(ScreenConfig.XS.max), pxToRem(CONTAINER_PADDING_THIN), pxToRem(ScreenConfig.S.min), oneGridCol, pxToRem(ScreenConfig.XL.min), oneGridColXl, pxToRem(50), pxToRem(ScreenConfig.S.min), pxToRem(80), pxToRem(50), pxToRem(ScreenConfig.S.min), pxToRem(80), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), pxToRem(ScreenConfig.S.min), oneGridCol, oneGridCol, pxToRem(CONTAINER_PADDING), pxToRem(CONTAINER_PADDING), pxToRem(ScreenConfig.XL.min), oneGridColXl, oneGridColXl, pxToRem(CONTAINER_PADDING), pxToRem(CONTAINER_PADDING), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), pxToRem(ScreenConfig.S.min), oneGridCol, oneGridCol, pxToRem(ScreenConfig.XL.min), oneGridColXl, oneGridColXl, pxToRem(ScreenConfig.XS.max), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), pxToRem(2), COLORS.line1, pxToRem(50), pxToRem(ScreenConfig.S.min), pxToRem(CONTAINER_PADDING), pxToRem(CONTAINER_PADDING), pxToRem(60), pxToRem(12), pxToRem(12), pxToRem(ScreenConfig.XS.max), pxToRem(80), pxToRem(ScreenConfig.S.min), pxToRem(100), pxToRem(12), pxToRem(12), pxToRem(ScreenConfig.XS.max), function () {
   return ICON_TINY;
 }, pxToRem(ScreenConfig.M.max), pxToRem(ScreenConfig.XS.max), pxToRem(50 * 2), pxToRem(50), pxToRem(ScreenConfig.S.min), pxToRem(100), pxToRem(50), pxToRem(ScreenConfig.L.min), pxToRem(80), pxToRem(ScreenConfig.S.min), pxToRem(50), pxToRem(ScreenConfig.L.min), pxToRem(80), pxToRem(ScreenConfig.XS.max), function (props) {
   return css(["z-index:", ";"], props.zIndex);
@@ -39,7 +41,7 @@ var GlobalStyle = createGlobalStyle(_templateObject || (_templateObject = _tagge
 var ModalTitle = function ModalTitle(_ref) {
   var children = _ref.children,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["children", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(Title, _extends({
     modifier: "quaternary",
@@ -55,13 +57,13 @@ var ModalParagraph = function ModalParagraph(_ref2) {
       className = _ref2.className,
       align = _ref2.align,
       tag = _ref2.tag,
-      props = _objectWithoutProperties(_ref2, ["children", "withoutMargin", "className", "align", "tag"]);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
 
   return /*#__PURE__*/React.createElement(StyledParagraph, _extends({
     modifier: "tertiary",
     noMargin: true,
     tag: tag || 'p',
-    className: classNames('k-ModalNext__main__paragraph', className, "k-u-align-".concat(align), {
+    className: classNames('k-ModalNext__main__paragraph', className, "k-u-align-" + align, {
       'k-u-margin-bottom-triple': !withoutMargin || !noMargin,
       'k-u-margin-bottom-quadruple@s-up': !withoutMargin || !noMargin
     })
@@ -84,7 +86,7 @@ var Actions = function Actions(_ref3) {
       stickyOnMobile = _ref3.stickyOnMobile,
       fullSize = _ref3.fullSize,
       fullSizeOnMobile = _ref3.fullSizeOnMobile,
-      props = _objectWithoutProperties(_ref3, ["className", "sticky", "stickyOnMobile", "fullSize", "fullSizeOnMobile"]);
+      props = _objectWithoutPropertiesLoose(_ref3, _excluded3);
 
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-ModalNext__actions', className, {
@@ -114,12 +116,12 @@ var Block = function Block(props) {
 var initialState = {
   show: false
 };
-var ModalContext = createContext(initialState);
+var ModalContext = /*#__PURE__*/createContext(initialState);
 
 var reducer = function reducer(state, action) {
   switch (action.type) {
     case 'update':
-      return _extends({}, state, action);
+      return Object.assign({}, state, action);
   }
 };
 
@@ -132,11 +134,10 @@ export var updateState = function updateState(show) {
 
 var CloseActionButton = function CloseActionButton(_ref4) {
   var _onClick = _ref4.onClick,
-      props = _objectWithoutProperties(_ref4, ["onClick"]);
+      props = _objectWithoutPropertiesLoose(_ref4, _excluded4);
 
   var _useContext = useContext(ModalContext),
-      _useContext2 = _slicedToArray(_useContext, 2),
-      dispatch = _useContext2[1];
+      dispatch = _useContext[1];
 
   return /*#__PURE__*/React.createElement(ModalButton, _extends({}, props, {
     onClick: function onClick(e) {
@@ -187,12 +188,11 @@ var InnerModal = function InnerModal(_ref6) {
       headerMessage = _ref6.headerMessage,
       contentCols = _ref6.contentCols,
       headerZIndex = _ref6.headerZIndex,
-      others = _objectWithoutProperties(_ref6, ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "size", "isOpen", "zIndex", "fullSize", "fullSizeOnMobile", "fullSizeTitle", "variant", "headerTitle", "headerActions", "headerMessage", "contentCols", "headerZIndex"]);
+      others = _objectWithoutPropertiesLoose(_ref6, _excluded5);
 
-  var _useContext3 = useContext(ModalContext),
-      _useContext4 = _slicedToArray(_useContext3, 2),
-      show = _useContext4[0].show,
-      dispatch = _useContext4[1];
+  var _useContext2 = useContext(ModalContext),
+      show = _useContext2[0].show,
+      dispatch = _useContext2[1];
 
   var close = function close() {
     dispatch(updateState(false));
@@ -216,22 +216,21 @@ var InnerModal = function InnerModal(_ref6) {
 
   if (!isEmpty(contentCols)) {
     for (var _i = 0, _Object$entries = Object.entries(contentCols); _i < _Object$entries.length; _i++) {
-      var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
+      var _Object$entries$_i = _Object$entries[_i],
           key = _Object$entries$_i[0],
           value = _Object$entries$_i[1];
-
-      customStyle["--Modal-contentCols--".concat(key)] = value;
+      customStyle["--Modal-contentCols--" + key] = value;
     }
   }
 
   var shouldDisplayHeader = !!headerTitle || !!fullSizeTitle || !!headerActions;
-  var ModalPortal = ReactDOM.createPortal( /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(GlobalStyle, {
+  var ModalPortal = /*#__PURE__*/ReactDOM.createPortal( /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(GlobalStyle, {
     zIndex: zIndex
   }), /*#__PURE__*/React.createElement(ReactModal, _extends({
     closeTimeoutMS: 500,
     role: "dialog",
     className: {
-      base: classNames('k-ModalNext__content', "k-ModalNext__content--".concat(size), "k-ModalNext__content--".concat(variant), {
+      base: classNames('k-ModalNext__content', "k-ModalNext__content--" + size, "k-ModalNext__content--" + variant, {
         'k-ModalNext__content--hasHeader': shouldDisplayHeader,
         'k-ModalNext__content--fullSize': fullSize,
         'k-ModalNext__content--fullSizeOnMobile': fullSizeOnMobile,
@@ -241,7 +240,7 @@ var InnerModal = function InnerModal(_ref6) {
       beforeClose: 'k-ModalNext--beforeClose'
     },
     overlayClassName: {
-      base: classNames('k-ModalNext__overlay', "k-ModalNext__overlay--".concat(size), "k-ModalNext__overlay--".concat(variant), {
+      base: classNames('k-ModalNext__overlay', "k-ModalNext__overlay--" + size, "k-ModalNext__overlay--" + variant, {
         'k-ModalNext__overlay--fullSize': fullSize,
         'k-ModalNext__overlay--fullSizeOnMobile': fullSizeOnMobile
       }),

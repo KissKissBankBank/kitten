@@ -1,3 +1,4 @@
+import "core-js/modules/es.string.bold.js";
 import styled from 'styled-components';
 import COLORS from '../../../../constants/colors-config';
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';

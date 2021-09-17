@@ -1,4 +1,5 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
+import _extends from "@babel/runtime/helpers/extends";
+import "core-js/modules/es.array.map.js";
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { useSelect } from 'downshift';
@@ -79,7 +80,7 @@ export var DropdownSelectWithInput = function DropdownSelectWithInput(_ref) {
   };
 
   var _useSelect = useSelect({
-    id: "".concat(id, "_element"),
+    id: id + "_element",
     toggleButtonId: id,
     items: options,
     getA11ySelectionMessage: getA11ySelectionMessage,
@@ -120,7 +121,7 @@ export var DropdownSelectWithInput = function DropdownSelectWithInput(_ref) {
   };
 
   return /*#__PURE__*/React.createElement(StyledDropdownSelectWithInput, {
-    className: classNames('k-Form-DropdownSelectWithInput', className, "k-Form-DropdownSelectWithInput--".concat(size), {
+    className: classNames('k-Form-DropdownSelectWithInput', className, "k-Form-DropdownSelectWithInput--" + size, {
       'k-Form-DropdownSelectWithInput--isOpen': isOpen,
       'k-Form-DropdownSelectWithInput--hasItemSelected': !!selectedItem,
       'k-Form-DropdownSelectWithInput--error': error,
@@ -175,14 +176,14 @@ export var DropdownSelectWithInput = function DropdownSelectWithInput(_ref) {
     className: "k-Form-DropdownSelectWithInput__input",
     placeholder: inputPlaceholder,
     disabled: disabled,
-    id: "".concat(id, "_element-input"),
-    "aria-labelledby": "".concat(id, "_element-label ").concat(id),
+    id: id + "_element-input",
+    "aria-labelledby": id + "_element-label " + id,
     onChange: handleInputChange
   }, inputProps))), /*#__PURE__*/React.createElement("ul", _extends({
     className: "k-Form-DropdownSelectWithInput__list"
   }, getMenuProps()), isOpen && !deactivateDropdown && options.map(function (item, index) {
     if (item.separator) return /*#__PURE__*/React.createElement("li", _extends({
-      key: "separator".concat(index),
+      key: "separator" + index,
       className: "k-Form-DropdownSelectWithInput__separator",
       "aria-hidden": true
     }, getItemProps({
@@ -195,7 +196,7 @@ export var DropdownSelectWithInput = function DropdownSelectWithInput(_ref) {
         'k-Form-DropdownSelectWithInput__item--separator': item.separator,
         'k-Form-DropdownSelectWithInput__item--higlighted': highlightedIndex === index
       }),
-      key: "".concat(item.value).concat(index),
+      key: "" + item.value + index,
       disabled: item.disabled
     }, getItemProps({
       item: item,

@@ -1,3 +1,6 @@
+import "core-js/modules/es.array.iterator.js";
+import "core-js/modules/es.object.to-string.js";
+import "core-js/modules/web.dom-collections.iterator.js";
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -14,36 +17,36 @@ export var TitleBar = function TitleBar(_ref) {
       contributions = values.contributions,
       availability = values.availability;
   return /*#__PURE__*/React.createElement(StyledRewardSummaryTitles, {
-    className: classNames('k-RewardSummaryCard-TitleBar', className, "k-RewardSummaryCard-Wrapper--".concat(size))
+    className: classNames('k-RewardSummaryCard-TitleBar', className, "k-RewardSummaryCard-Wrapper--" + size)
   }, /*#__PURE__*/React.createElement("div", {
     className: "k-RewardSummaryCard-Wrapper__imageWrapper"
   }, /*#__PURE__*/React.createElement(Text, {
     size: "micro",
     weight: "regular",
     className: "k-RewardSummaryCard-TitleBar__image",
-    id: "".concat(id, "-image")
+    id: id + "-image"
   }, image)), /*#__PURE__*/React.createElement("div", {
     className: "k-RewardSummaryCard-Wrapper__gridWrapper"
   }, /*#__PURE__*/React.createElement(Text, {
     size: "micro",
     weight: "regular",
     className: "k-RewardSummaryCard-TitleBar__title",
-    id: "".concat(id, "-title")
+    id: id + "-title"
   }, title), /*#__PURE__*/React.createElement(Text, {
     size: "micro",
     weight: "regular",
     className: "k-RewardSummaryCard-TitleBar__amount",
-    id: "".concat(id, "-amount")
+    id: id + "-amount"
   }, amount), /*#__PURE__*/React.createElement(Text, {
     size: "micro",
     weight: "regular",
     className: "k-RewardSummaryCard-TitleBar__contributions",
-    id: "".concat(id, "-contributions")
+    id: id + "-contributions"
   }, contributions), /*#__PURE__*/React.createElement(Text, {
     size: "micro",
     weight: "regular",
     className: "k-RewardSummaryCard-TitleBar__availability",
-    id: "".concat(id, "-availability")
+    id: id + "-availability"
   }, availability)));
 };
 TitleBar.defaultProps = {

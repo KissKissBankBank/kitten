@@ -1,5 +1,6 @@
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+import _extends from "@babel/runtime/helpers/extends";
+var _excluded = ["children", "dropdownContentWidth"];
 import React, { useRef } from 'react';
 import { BurgerIcon } from '../../../../components/graphics/icons/burger-icon';
 import { Dropdown } from './dropdown';
@@ -8,8 +9,8 @@ import COLORS from '../../../../constants/colors-config';
 import { Context } from './context';
 import classNames from 'classnames';
 var namespace = 'kkbbAndCo';
-var DROPDOWN_CLASS = "".concat(namespace, "-PlatformMenu");
-var CLOSE_EVENT = "".concat(namespace, ":platformMenu:close");
+var DROPDOWN_CLASS = namespace + "-PlatformMenu";
+var CLOSE_EVENT = namespace + ":platformMenu:close";
 
 var ButtonIcon = function ButtonIcon(props) {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(BurgerIcon, _extends({}, props, {
@@ -23,7 +24,7 @@ var buttonClassNames = classNames('k-HeaderNav__BurgerMenu__button', 'k-ButtonIc
 export var BurgerMenu = function BurgerMenu(_ref) {
   var children = _ref.children,
       dropdownContentWidth = _ref.dropdownContentWidth,
-      props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var dropdownComponent = useRef(null);
 
@@ -44,7 +45,7 @@ export var BurgerMenu = function BurgerMenu(_ref) {
       buttonContentOnExpanded: /*#__PURE__*/React.createElement(ButtonIcon, {
         isActive: true
       }),
-      buttonId: "".concat(id, "PlateformMenu"),
+      buttonId: id + "PlateformMenu",
       className: DROPDOWN_CLASS,
       closeEvents: [CLOSE_EVENT],
       closeOnOuterClick: true,

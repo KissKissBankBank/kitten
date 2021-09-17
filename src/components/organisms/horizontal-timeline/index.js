@@ -2,14 +2,16 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.HorizontalTimeline = void 0;
+
+require("core-js/modules/es.object.assign.js");
+
+require("core-js/modules/es.array.map.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -24,6 +26,8 @@ var _colorsConfig = _interopRequireDefault(require("./../../../constants/colors-
 var _typography = require("./../../../helpers/utils/typography");
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
+
+var _excluded = ["children", "className", "ellipsisColumns", "style"];
 
 var StyledHorizontalTimeline = _styledComponents.default.dl.withConfig({
   displayName: "horizontal-timeline__StyledHorizontalTimeline",
@@ -49,20 +53,20 @@ var HorizontalTimeline = function HorizontalTimeline(_ref2) {
       className = _ref2.className,
       ellipsisColumns = _ref2.ellipsisColumns,
       style = _ref2.style,
-      props = (0, _objectWithoutProperties2.default)(_ref2, ["children", "className", "ellipsisColumns", "style"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
 
   var columnsCount = _react.default.Children.count(children);
 
   return /*#__PURE__*/_react.default.createElement(StyledHorizontalTimeline, (0, _extends2.default)({
     className: (0, _classnames.default)('k-HorizontalTimeline', className),
-    style: (0, _extends2.default)({}, style, {
+    style: Object.assign({}, style, {
       '--HorizontalTimeline-columnsCount': columnsCount
     })
   }, props), children, /*#__PURE__*/_react.default.createElement("i", {
     className: "k-HorizontalTimeline__line"
-  }), ellipsisColumns === null || ellipsisColumns === void 0 ? void 0 : ellipsisColumns.map(function (value) {
+  }), ellipsisColumns == null ? void 0 : ellipsisColumns.map(function (value) {
     return /*#__PURE__*/_react.default.createElement("b", {
-      key: "ellipsis-marker-".concat(value),
+      key: "ellipsis-marker-" + value,
       className: "k-HorizontalTimeline__ellipsis",
       style: {
         '--HorizontalTimeline-ellipsis-column': value

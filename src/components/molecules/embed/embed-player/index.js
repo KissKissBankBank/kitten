@@ -1,19 +1,31 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.EmbedPlayer = void 0;
+
+require("core-js/modules/es.array.includes.js");
+
+require("core-js/modules/es.object.assign.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -33,13 +45,19 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _excluded = ["ratio", "previewProps", "iframeHtml", "playButtonLabel", "style", "className"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var actionKeys = ['Enter', ' '];
 var playerButtonSize = 90;
 var playerButtonXSSize = 70;
 
 var StyledEmbedPlayer = _styledComponents.default.div.withConfig({
   displayName: "embed-player__StyledEmbedPlayer",
-  componentId: "hpyyxa-0"
+  componentId: "sc-hpyyxa-0"
 })(["position:relative;display:block;width:100%;background-color:", ";.k-EmbedPlayer__thumbnail{display:block;width:100%;object-fit:cover;object-position:center;}.k-EmbedPlayer__embededPlayer{position:absolute;top:0;width:100%;height:100%;}&:hover .k-EmbedPlayer__button,&:focus .k-EmbedPlayer__button{background-color:", ";.k-EmbedPlayer__buttonPicto{fill:", ";}}&:active .k-EmbedPlayer__button{background-color:", ";.k-EmbedPlayer__buttonPicto{fill:", ";}}.k-EmbedPlayer__button{width:", ";height:", ";top:calc(50% - ", ");left:calc(50% - ", ");background:", ";position:absolute;display:flex;align-items:center;justify-content:center;z-index:1;@media (min-width:", "){width:", ";height:", ";top:calc(50% - ", ");left:calc(50% - ", ");}}.k-EmbedPlayer__buttonPicto{width:", ";height:", ";@media (min-width:", "){width:", ";height:", ";}}.k-EmbedPlayer__playerPreview{position:relative;transition:opacity ease 600ms;z-index:1;opacity:1;}&.k-EmbedPlayer--videoIsPlaying .k-EmbedPlayer__playerPreview{opacity:0;z-index:0;}&.k-EmbedPlayer--cursorPointer .k-EmbedPlayer__playerPreview{cursor:pointer;}"], _colorsConfig.default.font1, _colorsConfig.default.primary2, _colorsConfig.default.background1, _colorsConfig.default.primary3, _colorsConfig.default.background1, (0, _typography.pxToRem)(playerButtonXSSize), (0, _typography.pxToRem)(playerButtonXSSize), (0, _typography.pxToRem)(playerButtonXSSize / 2), (0, _typography.pxToRem)(playerButtonXSSize / 2), _colorsConfig.default.background1, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(playerButtonSize), (0, _typography.pxToRem)(playerButtonSize), (0, _typography.pxToRem)(playerButtonSize / 2), (0, _typography.pxToRem)(playerButtonSize / 2), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10));
 
 var EmbedPlayer = function EmbedPlayer(_ref) {
@@ -52,12 +70,11 @@ var EmbedPlayer = function EmbedPlayer(_ref) {
       _ref$style = _ref.style,
       mainStyle = _ref$style === void 0 ? void 0 : _ref$style,
       className = _ref.className,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["ratio", "previewProps", "iframeHtml", "playButtonLabel", "style", "className"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isPlayerVisible = _useState2[0],
-      setPlayerVisibility = _useState2[1];
+      isPlayerVisible = _useState[0],
+      setPlayerVisibility = _useState[1];
 
   var previewVideo = (0, _react.useRef)(null);
   var validRatio = parseInt(ratio, 10);
@@ -86,7 +103,7 @@ var EmbedPlayer = function EmbedPlayer(_ref) {
   return /*#__PURE__*/_react.default.createElement(StyledEmbedPlayer, (0, _extends2.default)({
     ref: previewVideo
   }, others, {
-    style: (0, _extends2.default)({}, mainStyle),
+    style: Object.assign({}, mainStyle),
     onClick: hasIframeHtml ? handleClick : null,
     onKeyPress: hasIframeHtml ? handleKeyPress : null,
     onFocus: hasIframeHtml ? handleFocus : null,
@@ -108,7 +125,7 @@ var EmbedPlayer = function EmbedPlayer(_ref) {
   }))), /*#__PURE__*/_react.default.createElement(_responsiveIframeContainer.ResponsiveIframeContainer, {
     ratio: validRatio
   }, /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, thumbnail, {
-    className: "k-EmbedPlayer__thumbnail ".concat(thumbnail.className || '')
+    className: "k-EmbedPlayer__thumbnail " + (thumbnail.className || '')
   }))), badgeComponent), hasIframeHtml && isPlayerVisible && /*#__PURE__*/_react.default.createElement("div", {
     className: "k-EmbedPlayer__embededPlayer"
   }, /*#__PURE__*/_react.default.createElement(_responsiveIframeContainer.ResponsiveIframeContainer, {

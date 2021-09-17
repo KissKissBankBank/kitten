@@ -1,5 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "className", "color", "size", "distance", "distanceAsPercentage", "distanceIsReverse", "position", "centered", "padding", "shadow", "borderRadius", "borderColor", "borderWidth", "style"];
+import "core-js/modules/es.object.assign.js";
 import React from 'react';
 import styled from 'styled-components';
 import COLORS from '../../../../constants/colors-config';
@@ -26,15 +28,15 @@ export var ArrowContainer = function ArrowContainer(_ref) {
       borderColor = _ref.borderColor,
       borderWidth = _ref.borderWidth,
       style = _ref.style,
-      props = _objectWithoutProperties(_ref, ["children", "className", "color", "size", "distance", "distanceAsPercentage", "distanceIsReverse", "position", "centered", "padding", "shadow", "borderRadius", "borderColor", "borderWidth", "style"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var arrowDistance = function () {
     switch (true) {
       case !!centered:
-        return "calc(50% - ".concat(pxToRem(size), ")");
+        return "calc(50% - " + pxToRem(size) + ")";
 
       case !!distanceAsPercentage:
-        return "calc(".concat(distance, "% - ").concat(pxToRem(size), ")");
+        return "calc(" + distance + "% - " + pxToRem(size) + ")";
 
       default:
         return pxToRem(distance);
@@ -45,12 +47,12 @@ export var ArrowContainer = function ArrowContainer(_ref) {
   var borderDistance = borderWidth % 2 === 0 ? Math.floor(rawDistanceValue) : Math.ceil(rawDistanceValue);
   var borderSize = borderDistance + size;
   return /*#__PURE__*/React.createElement(Container, _extends({
-    className: classNames('k-ArrowContainer', className, "k-ArrowContainer--".concat(position), {
+    className: classNames('k-ArrowContainer', className, "k-ArrowContainer--" + position, {
       'k-ArrowContainer--hasShadow': shadow,
       'k-ArrowContainer--hasBorder': borderWidth > 0,
       'k-ArrowContainer--reverseDistance': distanceIsReverse
     }),
-    style: _extends({}, style, {
+    style: Object.assign({}, style, {
       '--k-ArrowContainer-arrowDistance': arrowDistance,
       '--k-ArrowContainer-arrowSize': pxToRem(size),
       '--k-ArrowContainer-borderColor': borderColor,

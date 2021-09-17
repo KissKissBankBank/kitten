@@ -1,15 +1,29 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.ImageCropper = void 0;
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+require("core-js/modules/es.function.name.js");
+
+require("core-js/modules/es.symbol.js");
+
+require("core-js/modules/es.symbol.description.js");
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -30,6 +44,10 @@ var _rangeSlider = require("../../../../components/form/range-slider");
 var _elementHelper = require("../../../../helpers/dom/element-helper");
 
 var _styles = require("./styles");
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var ImageCropper = function ImageCropper(_ref) {
   var imageSrc = _ref.imageSrc,
@@ -54,69 +72,57 @@ var ImageCropper = function ImageCropper(_ref) {
   var cropperRef = (0, _react.useRef)(null);
 
   var _useState = (0, _react.useState)(imageSrc),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      imageSrcState = _useState2[0],
-      setImageSrc = _useState2[1];
+      imageSrcState = _useState[0],
+      setImageSrc = _useState[1];
 
-  var _useState3 = (0, _react.useState)(fileName),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      fileNameState = _useState4[0],
-      setFileName = _useState4[1];
+  var _useState2 = (0, _react.useState)(fileName),
+      fileNameState = _useState2[0],
+      setFileName = _useState2[1];
 
-  var _useState5 = (0, _react.useState)('ready'),
-      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
-      status = _useState6[0],
-      setStatus = _useState6[1];
+  var _useState3 = (0, _react.useState)('ready'),
+      status = _useState3[0],
+      setStatus = _useState3[1];
 
-  var _useState7 = (0, _react.useState)(''),
-      _useState8 = (0, _slicedToArray2.default)(_useState7, 2),
-      errorText = _useState8[0],
-      setErrorText = _useState8[1];
+  var _useState4 = (0, _react.useState)(''),
+      errorText = _useState4[0],
+      setErrorText = _useState4[1];
 
-  var _useState9 = (0, _react.useState)(0),
-      _useState10 = (0, _slicedToArray2.default)(_useState9, 2),
-      cropperWidth = _useState10[0],
-      setCropperWidth = _useState10[1];
+  var _useState5 = (0, _react.useState)(0),
+      cropperWidth = _useState5[0],
+      setCropperWidth = _useState5[1];
 
-  var _useState11 = (0, _react.useState)(0),
-      _useState12 = (0, _slicedToArray2.default)(_useState11, 2),
-      cropperHeight = _useState12[0],
-      setCropperHeight = _useState12[1];
+  var _useState6 = (0, _react.useState)(0),
+      cropperHeight = _useState6[0],
+      setCropperHeight = _useState6[1];
 
-  var _useState13 = (0, _react.useState)(null),
-      _useState14 = (0, _slicedToArray2.default)(_useState13, 2),
-      cropperInstance = _useState14[0],
-      setCropperInstance = _useState14[1];
+  var _useState7 = (0, _react.useState)(null),
+      cropperInstance = _useState7[0],
+      setCropperInstance = _useState7[1];
 
-  var _useState15 = (0, _react.useState)(0),
-      _useState16 = (0, _slicedToArray2.default)(_useState15, 2),
-      sliderMin = _useState16[0],
-      setSliderMin = _useState16[1];
+  var _useState8 = (0, _react.useState)(0),
+      sliderMin = _useState8[0],
+      setSliderMin = _useState8[1];
 
-  var _useState17 = (0, _react.useState)(100),
-      _useState18 = (0, _slicedToArray2.default)(_useState17, 2),
-      sliderMax = _useState18[0],
-      setSliderMax = _useState18[1];
+  var _useState9 = (0, _react.useState)(100),
+      sliderMax = _useState9[0],
+      setSliderMax = _useState9[1];
 
-  var _useState19 = (0, _react.useState)(0),
-      _useState20 = (0, _slicedToArray2.default)(_useState19, 2),
-      initialSliderValue = _useState20[0],
-      setInitialSliderValue = _useState20[1];
+  var _useState10 = (0, _react.useState)(0),
+      initialSliderValue = _useState10[0],
+      setInitialSliderValue = _useState10[1];
 
-  var _useState21 = (0, _react.useState)(null),
-      _useState22 = (0, _slicedToArray2.default)(_useState21, 2),
-      uploadedFile = _useState22[0],
-      setUploadedFile = _useState22[1];
+  var _useState11 = (0, _react.useState)(null),
+      uploadedFile = _useState11[0],
+      setUploadedFile = _useState11[1];
 
-  var _useState23 = (0, _react.useState)(null),
-      _useState24 = (0, _slicedToArray2.default)(_useState23, 2),
-      resultData = _useState24[0],
-      setResultData = _useState24[1];
+  var _useState12 = (0, _react.useState)(null),
+      resultData = _useState12[0],
+      setResultData = _useState12[1];
 
   var handleCalculateSliderValues = function handleCalculateSliderValues() {
     var _cropperInstance$imag;
 
-    if (cropperInstance && cropperInstance !== null && cropperInstance !== void 0 && (_cropperInstance$imag = cropperInstance.imageData) !== null && _cropperInstance$imag !== void 0 && _cropperInstance$imag.naturalWidth) {
+    if (cropperInstance && cropperInstance != null && (_cropperInstance$imag = cropperInstance.imageData) != null && _cropperInstance$imag.naturalWidth) {
       var imageData = cropperInstance.imageData;
       var naturalWidth = imageData.naturalWidth;
       var width = imageData.width;
@@ -134,7 +140,7 @@ var ImageCropper = function ImageCropper(_ref) {
   }, [(0, _getOr.default)(null)('imageData.naturalWidth')(cropperInstance)]);
 
   var setCropperSize = function setCropperSize() {
-    if (cropperContainerRef !== null && cropperContainerRef !== void 0 && cropperContainerRef.current) {
+    if (cropperContainerRef != null && cropperContainerRef.current) {
       var width = _elementHelper.domElementHelper.getComputedWidth(cropperContainerRef.current);
 
       var height = width / aspectRatio;
@@ -162,12 +168,12 @@ var ImageCropper = function ImageCropper(_ref) {
       var _resultData$target, _resultData$srcElemen, _cropperInstance$getC;
 
       onChange({
-        value: (resultData === null || resultData === void 0 ? void 0 : (_resultData$target = resultData.target) === null || _resultData$target === void 0 ? void 0 : _resultData$target.src) || '',
-        base: (0, _getOr.default)(resultData === null || resultData === void 0 ? void 0 : (_resultData$srcElemen = resultData.srcElement) === null || _resultData$srcElemen === void 0 ? void 0 : _resultData$srcElemen.src)('originalTarget.src')(resultData),
+        value: (resultData == null ? void 0 : (_resultData$target = resultData.target) == null ? void 0 : _resultData$target.src) || '',
+        base: (0, _getOr.default)(resultData == null ? void 0 : (_resultData$srcElemen = resultData.srcElement) == null ? void 0 : _resultData$srcElemen.src)('originalTarget.src')(resultData),
         name: fileNameState,
         file: uploadedFile,
         cropperData: resultData.detail,
-        croppedImageSrc: cropperInstance ? cropperInstance === null || cropperInstance === void 0 ? void 0 : (_cropperInstance$getC = cropperInstance.getCroppedCanvas()) === null || _cropperInstance$getC === void 0 ? void 0 : _cropperInstance$getC.toDataURL() : ''
+        croppedImageSrc: cropperInstance ? cropperInstance == null ? void 0 : (_cropperInstance$getC = cropperInstance.getCroppedCanvas()) == null ? void 0 : _cropperInstance$getC.toDataURL() : ''
       });
     }
   }, [resultData, fileNameState, uploadedFile]);
@@ -203,7 +209,7 @@ var ImageCropper = function ImageCropper(_ref) {
             setImageSrc(event.target.result);
             setFileName(file.name);
             handleCalculateSliderValues();
-            cropperInstance === null || cropperInstance === void 0 ? void 0 : cropperInstance.reset();
+            cropperInstance == null ? void 0 : cropperInstance.reset();
           };
 
           reader.readAsDataURL(file);
@@ -218,7 +224,7 @@ var ImageCropper = function ImageCropper(_ref) {
       }
     },
     onCancel: function onCancel() {
-      cropperInstance === null || cropperInstance === void 0 ? void 0 : cropperInstance.reset();
+      cropperInstance == null ? void 0 : cropperInstance.reset();
       setImageSrc(imageSrc);
       setFileName(fileName);
       setErrorText('');

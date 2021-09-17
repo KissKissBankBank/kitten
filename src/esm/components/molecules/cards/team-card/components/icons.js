@@ -1,5 +1,8 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["email", "phoneNumber", "links", "socialLink"];
+import "core-js/modules/es.array.map.js";
+import "core-js/modules/es.function.name.js";
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -19,7 +22,7 @@ export var TeamCardIcons = function TeamCardIcons(_ref) {
       phoneNumber = _ref.phoneNumber,
       links = _ref.links,
       socialLink = _ref.socialLink,
-      props = _objectWithoutProperties(_ref, ["email", "phoneNumber", "links", "socialLink"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var getSocialLinks = function getSocialLinks() {
     if (links.length > 0) return links; // handle deprecated `socialLink` prop
@@ -33,7 +36,7 @@ export var TeamCardIcons = function TeamCardIcons(_ref) {
   return /*#__PURE__*/React.createElement(StyledTeamCardIcons, null, email && /*#__PURE__*/React.createElement(ButtonIcon, {
     size: "tiny",
     tag: "a",
-    href: "mailto:".concat(email),
+    href: "mailto:" + email,
     modifier: "hydrogen",
     className: "k-ButtonIcon--phone k-TeamCardIcons__buttonIcon",
     "aria-label": "E-mail"
@@ -58,7 +61,7 @@ var SocialLinks = function SocialLinks(_ref2) {
       key: link.name,
       "aria-label": link.name,
       href: link.href,
-      modifier: "social_".concat(link.name),
+      modifier: "social_" + link.name,
       target: "_blank",
       rel: "noopener",
       className: "k-TeamCardIcons__buttonIcon",

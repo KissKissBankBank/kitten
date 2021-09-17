@@ -1,3 +1,5 @@
+import "core-js/modules/es.object.keys.js";
+import "core-js/modules/es.array.map.js";
 import domElementHelper from '../element-helper';
 import max from 'lodash/fp/max';
 import min from 'lodash/fp/min';
@@ -20,7 +22,7 @@ export var cssPropertyDistributor = function cssPropertyDistributor(_ref) {
   };
 
   if (!propertyGetter[property]) {
-    return console.warn("cssPropertyDistributor warning: property has a wrong value. Accepted values are ".concat(Object.keys(propertyGetter), "."));
+    return console.warn("cssPropertyDistributor warning: property has a wrong value. Accepted values are " + Object.keys(propertyGetter) + ".");
   }
 
   var propertyArray = elements.map(function (el) {

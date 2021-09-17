@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.HeadingTag = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -23,11 +21,13 @@ var _diamondIcon = require("../../../../../components/graphics/icons/diamond-ico
 
 var _starIcon = require("../../../../../components/graphics/icons/star-icon");
 
+var _excluded = ["text", "icon", "className"];
+
 var HeadingTag = function HeadingTag(_ref) {
   var text = _ref.text,
       icon = _ref.icon,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["text", "icon", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var iconDisplay = function () {
     switch (icon) {

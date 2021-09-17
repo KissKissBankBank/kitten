@@ -1,4 +1,6 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
+import "core-js/modules/es.function.name.js";
+import "core-js/modules/es.symbol.js";
+import "core-js/modules/es.symbol.description.js";
 import React, { useEffect, useState, useRef } from 'react';
 import classNames from 'classnames';
 import Cropper from 'react-cropper';
@@ -32,69 +34,57 @@ export var ImageCropper = function ImageCropper(_ref) {
   var cropperRef = useRef(null);
 
   var _useState = useState(imageSrc),
-      _useState2 = _slicedToArray(_useState, 2),
-      imageSrcState = _useState2[0],
-      setImageSrc = _useState2[1];
+      imageSrcState = _useState[0],
+      setImageSrc = _useState[1];
 
-  var _useState3 = useState(fileName),
-      _useState4 = _slicedToArray(_useState3, 2),
-      fileNameState = _useState4[0],
-      setFileName = _useState4[1];
+  var _useState2 = useState(fileName),
+      fileNameState = _useState2[0],
+      setFileName = _useState2[1];
 
-  var _useState5 = useState('ready'),
-      _useState6 = _slicedToArray(_useState5, 2),
-      status = _useState6[0],
-      setStatus = _useState6[1];
+  var _useState3 = useState('ready'),
+      status = _useState3[0],
+      setStatus = _useState3[1];
 
-  var _useState7 = useState(''),
-      _useState8 = _slicedToArray(_useState7, 2),
-      errorText = _useState8[0],
-      setErrorText = _useState8[1];
+  var _useState4 = useState(''),
+      errorText = _useState4[0],
+      setErrorText = _useState4[1];
 
-  var _useState9 = useState(0),
-      _useState10 = _slicedToArray(_useState9, 2),
-      cropperWidth = _useState10[0],
-      setCropperWidth = _useState10[1];
+  var _useState5 = useState(0),
+      cropperWidth = _useState5[0],
+      setCropperWidth = _useState5[1];
 
-  var _useState11 = useState(0),
-      _useState12 = _slicedToArray(_useState11, 2),
-      cropperHeight = _useState12[0],
-      setCropperHeight = _useState12[1];
+  var _useState6 = useState(0),
+      cropperHeight = _useState6[0],
+      setCropperHeight = _useState6[1];
 
-  var _useState13 = useState(null),
-      _useState14 = _slicedToArray(_useState13, 2),
-      cropperInstance = _useState14[0],
-      setCropperInstance = _useState14[1];
+  var _useState7 = useState(null),
+      cropperInstance = _useState7[0],
+      setCropperInstance = _useState7[1];
 
-  var _useState15 = useState(0),
-      _useState16 = _slicedToArray(_useState15, 2),
-      sliderMin = _useState16[0],
-      setSliderMin = _useState16[1];
+  var _useState8 = useState(0),
+      sliderMin = _useState8[0],
+      setSliderMin = _useState8[1];
 
-  var _useState17 = useState(100),
-      _useState18 = _slicedToArray(_useState17, 2),
-      sliderMax = _useState18[0],
-      setSliderMax = _useState18[1];
+  var _useState9 = useState(100),
+      sliderMax = _useState9[0],
+      setSliderMax = _useState9[1];
 
-  var _useState19 = useState(0),
-      _useState20 = _slicedToArray(_useState19, 2),
-      initialSliderValue = _useState20[0],
-      setInitialSliderValue = _useState20[1];
+  var _useState10 = useState(0),
+      initialSliderValue = _useState10[0],
+      setInitialSliderValue = _useState10[1];
 
-  var _useState21 = useState(null),
-      _useState22 = _slicedToArray(_useState21, 2),
-      uploadedFile = _useState22[0],
-      setUploadedFile = _useState22[1];
+  var _useState11 = useState(null),
+      uploadedFile = _useState11[0],
+      setUploadedFile = _useState11[1];
 
-  var _useState23 = useState(null),
-      _useState24 = _slicedToArray(_useState23, 2),
-      resultData = _useState24[0],
-      setResultData = _useState24[1];
+  var _useState12 = useState(null),
+      resultData = _useState12[0],
+      setResultData = _useState12[1];
 
   var handleCalculateSliderValues = function handleCalculateSliderValues() {
     var _cropperInstance$imag;
 
-    if (cropperInstance && cropperInstance !== null && cropperInstance !== void 0 && (_cropperInstance$imag = cropperInstance.imageData) !== null && _cropperInstance$imag !== void 0 && _cropperInstance$imag.naturalWidth) {
+    if (cropperInstance && cropperInstance != null && (_cropperInstance$imag = cropperInstance.imageData) != null && _cropperInstance$imag.naturalWidth) {
       var imageData = cropperInstance.imageData;
       var naturalWidth = imageData.naturalWidth;
       var width = imageData.width;
@@ -112,7 +102,7 @@ export var ImageCropper = function ImageCropper(_ref) {
   }, [getOr(null)('imageData.naturalWidth')(cropperInstance)]);
 
   var setCropperSize = function setCropperSize() {
-    if (cropperContainerRef !== null && cropperContainerRef !== void 0 && cropperContainerRef.current) {
+    if (cropperContainerRef != null && cropperContainerRef.current) {
       var width = domElementHelper.getComputedWidth(cropperContainerRef.current);
       var height = width / aspectRatio;
       setCropperWidth(width);
@@ -139,12 +129,12 @@ export var ImageCropper = function ImageCropper(_ref) {
       var _resultData$target, _resultData$srcElemen, _cropperInstance$getC;
 
       onChange({
-        value: (resultData === null || resultData === void 0 ? void 0 : (_resultData$target = resultData.target) === null || _resultData$target === void 0 ? void 0 : _resultData$target.src) || '',
-        base: getOr(resultData === null || resultData === void 0 ? void 0 : (_resultData$srcElemen = resultData.srcElement) === null || _resultData$srcElemen === void 0 ? void 0 : _resultData$srcElemen.src)('originalTarget.src')(resultData),
+        value: (resultData == null ? void 0 : (_resultData$target = resultData.target) == null ? void 0 : _resultData$target.src) || '',
+        base: getOr(resultData == null ? void 0 : (_resultData$srcElemen = resultData.srcElement) == null ? void 0 : _resultData$srcElemen.src)('originalTarget.src')(resultData),
         name: fileNameState,
         file: uploadedFile,
         cropperData: resultData.detail,
-        croppedImageSrc: cropperInstance ? cropperInstance === null || cropperInstance === void 0 ? void 0 : (_cropperInstance$getC = cropperInstance.getCroppedCanvas()) === null || _cropperInstance$getC === void 0 ? void 0 : _cropperInstance$getC.toDataURL() : ''
+        croppedImageSrc: cropperInstance ? cropperInstance == null ? void 0 : (_cropperInstance$getC = cropperInstance.getCroppedCanvas()) == null ? void 0 : _cropperInstance$getC.toDataURL() : ''
       });
     }
   }, [resultData, fileNameState, uploadedFile]);
@@ -180,7 +170,7 @@ export var ImageCropper = function ImageCropper(_ref) {
             setImageSrc(event.target.result);
             setFileName(file.name);
             handleCalculateSliderValues();
-            cropperInstance === null || cropperInstance === void 0 ? void 0 : cropperInstance.reset();
+            cropperInstance == null ? void 0 : cropperInstance.reset();
           };
 
           reader.readAsDataURL(file);
@@ -195,7 +185,7 @@ export var ImageCropper = function ImageCropper(_ref) {
       }
     },
     onCancel: function onCancel() {
-      cropperInstance === null || cropperInstance === void 0 ? void 0 : cropperInstance.reset();
+      cropperInstance == null ? void 0 : cropperInstance.reset();
       setImageSrc(imageSrc);
       setFileName(fileName);
       setErrorText('');

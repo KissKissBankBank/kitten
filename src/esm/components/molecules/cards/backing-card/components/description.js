@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "className", "moreButtonText", "truncateText"];
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -10,14 +10,13 @@ export var Description = function Description(_ref) {
       className = _ref.className,
       moreButtonText = _ref.moreButtonText,
       truncateText = _ref.truncateText,
-      props = _objectWithoutProperties(_ref, ["children", "className", "moreButtonText", "truncateText"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var descriptionElementRef = useRef(null);
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      displayMoreButton = _useState2[0],
-      setMoreButtonDisplay = _useState2[1];
+      displayMoreButton = _useState[0],
+      setMoreButtonDisplay = _useState[1];
 
   useEffect(function () {
     var _descriptionElementRe;
@@ -25,7 +24,7 @@ export var Description = function Description(_ref) {
     if (!truncateText) return;
     if (!descriptionElementRef) return;
     var parent = descriptionElementRef.current;
-    var child = (_descriptionElementRe = descriptionElementRef.current) === null || _descriptionElementRe === void 0 ? void 0 : _descriptionElementRe.children[0];
+    var child = (_descriptionElementRe = descriptionElementRef.current) == null ? void 0 : _descriptionElementRe.children[0];
     if (!child) return;
 
     if (parent.clientHeight < child.clientHeight) {

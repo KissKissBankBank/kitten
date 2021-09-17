@@ -1,19 +1,31 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.DashboardLayout = void 0;
+
+require("core-js/modules/es.array.map.js");
+
+require("core-js/modules/es.object.assign.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -43,23 +55,33 @@ var _flow = require("./flow");
 
 var _styles = require("./styles");
 
+var _excluded = ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent"],
+    _excluded2 = ["className", "hasButton", "buttonProps", "children", "isOpen"],
+    _excluded3 = ["openLabel", "closeLabel"],
+    _excluded4 = ["className", "children", "tag"],
+    _excluded5 = ["className"],
+    _excluded6 = ["className"],
+    _excluded7 = ["className"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var DashboardLayout = function DashboardLayout(_ref) {
   var children = _ref.children,
       backLinkProps = _ref.backLinkProps,
       buttonProps = _ref.buttonProps,
       quickAccessLinkText = _ref.quickAccessLinkText,
       fullHeightContent = _ref.fullHeightContent,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isOpen = _useState2[0],
-      setOpen = _useState2[1];
+      isOpen = _useState[0],
+      setOpen = _useState[1];
 
-  var _useState3 = (0, _react.useState)([]),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      touchCoords = _useState4[0],
-      setTouchCoords = _useState4[1];
+  var _useState2 = (0, _react.useState)([]),
+      touchCoords = _useState2[0],
+      setTouchCoords = _useState2[1];
 
   var sideBarElement = (0, _react.useRef)(null);
   var contentElement = (0, _react.useRef)(null);
@@ -69,8 +91,8 @@ var DashboardLayout = function DashboardLayout(_ref) {
       var _child$props;
 
       if (!child || !child.props) return null;
-      return (0, _isFunction.default)((_child$props = child.props) === null || _child$props === void 0 ? void 0 : _child$props.children) ? _react.default.cloneElement(child, {
-        children: child.props.children((0, _extends2.default)({
+      return (0, _isFunction.default)((_child$props = child.props) == null ? void 0 : _child$props.children) ? /*#__PURE__*/_react.default.cloneElement(child, {
+        children: child.props.children(Object.assign({
           openSideBar: function openSideBar() {
             return setOpen(true);
           },
@@ -79,14 +101,14 @@ var DashboardLayout = function DashboardLayout(_ref) {
           },
           isSidebarOpen: isOpen
         }, otherProps))
-      }) : _react.default.cloneElement(child, otherProps);
+      }) : /*#__PURE__*/_react.default.cloneElement(child, otherProps);
     });
   };
 
   var renderComponentArray = function renderComponentArray(childrenArray, otherProps) {
     return childrenArray.map(function (child, index) {
       if (!child) return null;
-      return (0, _isFunction.default)(child) ? child((0, _extends2.default)({
+      return (0, _isFunction.default)(child) ? child(Object.assign({
         openSideBar: function openSideBar() {
           return setOpen(true);
         },
@@ -94,8 +116,8 @@ var DashboardLayout = function DashboardLayout(_ref) {
           return setOpen(false);
         },
         isSidebarOpen: isOpen
-      }, otherProps)) : _react.default.cloneElement(child, (0, _extends2.default)({
-        key: "content_child_".concat(index)
+      }, otherProps)) : /*#__PURE__*/_react.default.cloneElement(child, Object.assign({
+        key: "content_child_" + index
       }, otherProps));
     });
   };
@@ -111,7 +133,7 @@ var DashboardLayout = function DashboardLayout(_ref) {
         var _sideBarElement$curre;
 
         (0, _events.dispatchEvent)(_events.DASHBOARD_HIDE_CONTENT_EVENT)();
-        sideBarElement === null || sideBarElement === void 0 ? void 0 : (_sideBarElement$curre = sideBarElement.current) === null || _sideBarElement$curre === void 0 ? void 0 : _sideBarElement$curre.focus();
+        sideBarElement == null ? void 0 : (_sideBarElement$curre = sideBarElement.current) == null ? void 0 : _sideBarElement$curre.focus();
         window.addEventListener('keydown', handleKeyDown);
         contentElement.current.addEventListener('click', handleMainClick);
         sideBarElement.current.addEventListener('touchstart', handleTouchStart);
@@ -128,7 +150,7 @@ var DashboardLayout = function DashboardLayout(_ref) {
         var _contentElement$curre;
 
         (0, _events.dispatchEvent)(_events.DASHBOARD_SHOW_CONTENT_EVENT)();
-        contentElement === null || contentElement === void 0 ? void 0 : (_contentElement$curre = contentElement.current) === null || _contentElement$curre === void 0 ? void 0 : _contentElement$curre.focus();
+        contentElement == null ? void 0 : (_contentElement$curre = contentElement.current) == null ? void 0 : _contentElement$curre.focus();
       }
     }
   }, [isOpen, sideBarElement, contentElement]);
@@ -136,14 +158,14 @@ var DashboardLayout = function DashboardLayout(_ref) {
   var handleTouchStart = function handleTouchStart(event) {
     var _event$touches$;
 
-    setTouchCoords([event === null || event === void 0 ? void 0 : (_event$touches$ = event.touches[0]) === null || _event$touches$ === void 0 ? void 0 : _event$touches$.clientX]);
+    setTouchCoords([event == null ? void 0 : (_event$touches$ = event.touches[0]) == null ? void 0 : _event$touches$.clientX]);
   };
 
   var handleTouchEnd = function handleTouchEnd(event) {
     setTouchCoords(function (current) {
       var _event$changedTouches;
 
-      return [current[0], event === null || event === void 0 ? void 0 : (_event$changedTouches = event.changedTouches[0]) === null || _event$changedTouches === void 0 ? void 0 : _event$changedTouches.clientX];
+      return [current[0], event == null ? void 0 : (_event$changedTouches = event.changedTouches[0]) == null ? void 0 : _event$changedTouches.clientX];
     });
   };
 
@@ -218,7 +240,7 @@ var DashboardLayout = function DashboardLayout(_ref) {
   }), {
     isOpen: isOpen,
     hasButton: true,
-    buttonProps: (0, _extends2.default)({}, buttonProps, {
+    buttonProps: Object.assign({}, buttonProps, {
       onClick: handleButtonClick,
       'aria-expanded': isOpen ? isOpen : null
     })
@@ -244,12 +266,12 @@ var Header = function Header(_ref2) {
       buttonProps = _ref2.buttonProps,
       children = _ref2.children,
       isOpen = _ref2.isOpen,
-      props = (0, _objectWithoutProperties2.default)(_ref2, ["className", "hasButton", "buttonProps", "children", "isOpen"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
 
   var _ref3 = buttonProps || {},
       openLabel = _ref3.openLabel,
       closeLabel = _ref3.closeLabel,
-      otherButtonProps = (0, _objectWithoutProperties2.default)(_ref3, ["openLabel", "closeLabel"]);
+      otherButtonProps = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded3);
 
   return /*#__PURE__*/_react.default.createElement("header", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__heading', className)
@@ -270,7 +292,7 @@ var SiteHeader = function SiteHeader(_ref4) {
       children = _ref4.children,
       _ref4$tag = _ref4.tag,
       tag = _ref4$tag === void 0 ? 'div' : _ref4$tag,
-      props = (0, _objectWithoutProperties2.default)(_ref4, ["className", "children", "tag"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref4, _excluded4);
   var SiteHeaderComponent = tag;
   return /*#__PURE__*/_react.default.createElement(SiteHeaderComponent, (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__siteHeader', className)
@@ -279,7 +301,7 @@ var SiteHeader = function SiteHeader(_ref4) {
 
 var SideContent = function SideContent(_ref5) {
   var className = _ref5.className,
-      props = (0, _objectWithoutProperties2.default)(_ref5, ["className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref5, _excluded5);
   return /*#__PURE__*/_react.default.createElement("section", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__navigation', className)
   }, props));
@@ -287,7 +309,7 @@ var SideContent = function SideContent(_ref5) {
 
 var SideFooter = function SideFooter(_ref6) {
   var className = _ref6.className,
-      props = (0, _objectWithoutProperties2.default)(_ref6, ["className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref6, _excluded6);
   return /*#__PURE__*/_react.default.createElement("footer", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__footer', className)
   }, props));
@@ -295,7 +317,7 @@ var SideFooter = function SideFooter(_ref6) {
 
 var Alerts = function Alerts(_ref7) {
   var className = _ref7.className,
-      props = (0, _objectWithoutProperties2.default)(_ref7, ["className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref7, _excluded7);
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__alerts', 'k-DashboardLayout__fullWidth', className)
   }, props));

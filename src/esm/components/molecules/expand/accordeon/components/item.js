@@ -17,10 +17,10 @@ export var Item = function Item(_ref) {
   });
   return /*#__PURE__*/React.createElement("div", {
     className: "k-Accordeon__item"
-  }, header[0] && React.cloneElement(header[0], {
+  }, header[0] && /*#__PURE__*/React.cloneElement(header[0], {
     id: id,
     index: index
-  }), content[0] && React.cloneElement(content[0], {
+  }), content[0] && /*#__PURE__*/React.cloneElement(content[0], {
     id: id,
     index: index
   }));

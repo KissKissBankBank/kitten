@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["mainColor", "hoverColor", "isActive", "iconTitle", "title", "width", "height", "isAnimatedOnHover"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -30,7 +31,7 @@ export var BurgerIcon = function BurgerIcon(_ref5) {
       width = _ref5.width,
       height = _ref5.height,
       isAnimatedOnHover = _ref5.isAnimatedOnHover,
-      props = _objectWithoutProperties(_ref5, ["mainColor", "hoverColor", "isActive", "iconTitle", "title", "width", "height", "isAnimatedOnHover"]);
+      props = _objectWithoutPropertiesLoose(_ref5, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledItem, _extends({
     role: "img",

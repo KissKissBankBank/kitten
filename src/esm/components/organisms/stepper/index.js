@@ -1,5 +1,8 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "state"],
+    _excluded2 = ["children", "state", "href", "external", "linkProps"],
+    _excluded3 = ["children", "items"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import deprecated from 'prop-types-extra/lib/deprecated';
@@ -13,15 +16,15 @@ import { StepperIcon } from '../../../components/atoms/stepper-icon';
 import { Stepper as DeprecatedStepper } from './deprecated';
 var Wrapper = styled.div.withConfig({
   displayName: "stepper__Wrapper",
-  componentId: "kuopc1-0"
+  componentId: "sc-kuopc1-0"
 })(["display:block;width:100%;overflow-x:scroll;scrollbar-width:thin;"]);
 var List = styled.ul.withConfig({
   displayName: "stepper__List",
-  componentId: "kuopc1-1"
+  componentId: "sc-kuopc1-1"
 })(["display:flex;align-items:center;justify-content:center;height:", ";flex-wrap:nowrap;box-sizing:border-box;min-width:min-content;padding-right:40px;background-color:", ";margin:0;gap:", ";@media (min-width:", "){height:", ";gap:", ";}"], pxToRem(65), COLORS.primary6, pxToRem(25), pxToRem(ScreenConfig.M.min), pxToRem(80), pxToRem(50));
 var ItemWrapper = styled.li.withConfig({
   displayName: "stepper__ItemWrapper",
-  componentId: "kuopc1-2"
+  componentId: "sc-kuopc1-2"
 })(["display:flex;align-items:center;.k-Stepper__icon{margin-right:", ";}", " ", ""], pxToRem(10), function (props) {
   return props.state === 'progress' && css(["color:", ";"], COLORS.primary1);
 }, function (props) {
@@ -29,12 +32,12 @@ var ItemWrapper = styled.li.withConfig({
 });
 var StepperText = styled(Text).withConfig({
   displayName: "stepper__StepperText",
-  componentId: "kuopc1-3"
+  componentId: "sc-kuopc1-3"
 })(["display:flex;align-items:center;white-space:nowrap;transition:color 0.2s ease;border-radius:", ";&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}"], pxToRem(6), COLORS.primary3, pxToRem(2), pxToRem(2), COLORS.primary4);
 export var StepperItem = function StepperItem(_ref) {
   var children = _ref.children,
       state = _ref.state,
-      props = _objectWithoutProperties(_ref, ["children", "state"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(ItemWrapper, _extends({
     state: state
@@ -61,7 +64,7 @@ export var StepperLink = function StepperLink(_ref2) {
       href = _ref2.href,
       external = _ref2.external,
       linkProps = _ref2.linkProps,
-      props = _objectWithoutProperties(_ref2, ["children", "state", "href", "external", "linkProps"]);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
 
   return /*#__PURE__*/React.createElement(ItemWrapper, _extends({
     state: state
@@ -95,7 +98,7 @@ StepperLink.defaultProps = {
 export var Stepper = function Stepper(_ref3) {
   var children = _ref3.children,
       items = _ref3.items,
-      others = _objectWithoutProperties(_ref3, ["children", "items"]);
+      others = _objectWithoutPropertiesLoose(_ref3, _excluded3);
 
   if (!!items) {
     return /*#__PURE__*/React.createElement(DeprecatedStepper, _extends({

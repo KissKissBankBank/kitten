@@ -1,5 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "as", "transform", "weight", "style"];
+import "core-js/modules/es.object.assign.js";
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -17,7 +19,7 @@ export var Text = function Text(_ref) {
       transform = _ref.transform,
       weight = _ref.weight,
       style = _ref.style,
-      others = _objectWithoutProperties(_ref, ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "as", "transform", "weight", "style"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var Tag = as || tag;
   var textClassName = classNames({
@@ -58,7 +60,7 @@ export var Text = function Text(_ref) {
   }, className);
   return /*#__PURE__*/React.createElement(Tag, _extends({}, others, {
     className: textClassName,
-    style: cssColor ? _extends({
+    style: cssColor ? Object.assign({
       color: cssColor
     }, style) : style
   }));

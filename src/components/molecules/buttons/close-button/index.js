@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.CloseButton = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -17,10 +15,12 @@ var _button = require("../../../../components/molecules/buttons/button");
 
 var _crossIcon = require("../../../../components/graphics/icons/cross-icon");
 
+var _excluded = ["closeButtonLabel", "buttonModifier"];
+
 var CloseButton = function CloseButton(_ref) {
   var closeButtonLabel = _ref.closeButtonLabel,
       buttonModifier = _ref.buttonModifier,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["closeButtonLabel", "buttonModifier"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
     icon: true,
     type: "button",

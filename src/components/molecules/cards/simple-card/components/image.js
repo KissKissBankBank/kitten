@@ -2,12 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Image = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+require("core-js/modules/es.object.assign.js");
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -35,7 +35,7 @@ var Image = function Image(_ref) {
     className: (0, _classnames.default)('k-SimpleCard__imageContainer', className, {
       'k-SimpleCard__imageContainer--ratio': !!imageContainerRatio
     }),
-    style: (0, _extends2.default)({}, style, {
+    style: Object.assign({}, style, {
       '--SimpleCard-image-container-background': imageContainerBackground,
       '--SimpleCard-image-container-ratio': imageContainerRatio
     })

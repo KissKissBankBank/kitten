@@ -2,14 +2,14 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.IconBadge = void 0;
+
+require("core-js/modules/es.string.big.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -25,6 +25,8 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typography = require("../../../helpers/utils/typography");
 
+var _excluded = ["className", "children", "disabled", "valid", "empty", "big", "huge", "size"];
+
 var StyledBadge = _styledComponents.default.span.withConfig({
   displayName: "icon-badge__StyledBadge",
   componentId: "sc-1nhhmea-0"
@@ -39,9 +41,9 @@ var IconBadge = function IconBadge(_ref) {
       big = _ref.big,
       huge = _ref.huge,
       size = _ref.size,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "children", "disabled", "valid", "empty", "big", "huge", "size"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledBadge, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-IconBadge', className, "k-IconBadge--".concat(size), {
+    className: (0, _classnames.default)('k-IconBadge', className, "k-IconBadge--" + size, {
       'k-IconBadge--disabled': disabled,
       'k-IconBadge--valid': valid,
       'k-IconBadge--empty': empty,

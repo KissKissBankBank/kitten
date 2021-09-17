@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["backgroundImage", "children", "href", "as", "imageHeight"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -31,7 +32,7 @@ export var EngagementCardWithImage = function EngagementCardWithImage(_ref2) {
       href = _ref2.href,
       as = _ref2.as,
       imageHeight = _ref2.imageHeight,
-      others = _objectWithoutProperties(_ref2, ["backgroundImage", "children", "href", "as", "imageHeight"]);
+      others = _objectWithoutPropertiesLoose(_ref2, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledContainer, _extends({}, others, {
     as: href ? 'a' : 'div',

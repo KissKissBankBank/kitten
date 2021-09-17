@@ -1,19 +1,27 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Progress = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -26,6 +34,12 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 var _typography = require("../../../helpers/utils/typography");
 
 var _classnames = _interopRequireDefault(require("classnames"));
+
+var _excluded = ["color", "className", "value", "rampProps", "variant", "disabled"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var valueMin = 0;
 var valueMax = 100;
@@ -48,12 +62,11 @@ var Progress = function Progress(_ref3) {
       rampProps = _ref3.rampProps,
       variant = _ref3.variant,
       disabled = _ref3.disabled,
-      others = (0, _objectWithoutProperties2.default)(_ref3, ["color", "className", "value", "rampProps", "variant", "disabled"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded);
 
   var _useState = (0, _react.useState)(0),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      progressValue = _useState2[0],
-      setProgressValue = _useState2[1];
+      progressValue = _useState[0],
+      setProgressValue = _useState[1];
 
   (0, _react.useEffect)(function () {
     var progress = 0;
@@ -66,11 +79,11 @@ var Progress = function Progress(_ref3) {
     "aria-valuemin": valueMin,
     "aria-valuemax": valueMax,
     "aria-valuenow": progressValue,
-    className: (0, _classnames.default)('k-Meters-Progress', className, "k-Meters-Progress--".concat(variant), {
+    className: (0, _classnames.default)('k-Meters-Progress', className, "k-Meters-Progress--" + variant, {
       'k-Meters-Progress--disabled': disabled
     }),
     sliderColor: color,
-    progressValue: "".concat(progressValue, "%")
+    progressValue: progressValue + "%"
   }), /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, rampProps, {
     className: (0, _classnames.default)('k-Meters-Progress__ramp', rampProps.className)
   })));

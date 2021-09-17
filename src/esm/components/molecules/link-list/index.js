@@ -1,5 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "margin", "items", "lineHeight", "itemMargin", "color", "weight", "href"];
+import "core-js/modules/es.array.map.js";
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
@@ -10,7 +12,7 @@ import TYPOGRAPHY from '../../../constants/typography-config';
 import COLORS from '../../../constants/colors-config';
 var StyledLinkList = styled.ul.withConfig({
   displayName: "link-list__StyledLinkList",
-  componentId: "hu9ye6-0"
+  componentId: "sc-hu9ye6-0"
 })(["text-align:center;list-style-type:none;padding:0;@media (min-width:", "px){text-align:left;}&.k-LinkList--withoutMargin{margin-top:0;margin-bottom:0;.k-LinkList__item:last-child{margin-bottom:0;}}.k-LinkList__item{margin-bottom:", ";}.k-LinkList__item--double{margin-bottom:", ";}.k-LinkList__item--triple{margin-bottom:", ";}.k-LinkList__link{", ";font-size:", ";text-decoration:none;&:active,&.k-LinkList__link--isActive{color:", ";}&:hover{color:", ";}transition:color 0.2s;}.k-LinkList__item--regular,.k-LinkList__link--regular{", ";}.k-LinkList__item--light,.k-LinkList__link--light{", ";}.k-LinkList__link--normalLineHeight{line-height:normal;}.k-LinkList__link--light{color:", ";}.k-LinkList__link--dark{color:", ";}"], ScreenConfig.S.min, pxToRem(5), pxToRem(10), pxToRem(15), TYPOGRAPHY.fontStyles.regular, stepToRem(-1), COLORS.primary3, COLORS.primary1, TYPOGRAPHY.fontStyles.regular, TYPOGRAPHY.fontStyles.light, COLORS.background1, COLORS.font1);
 export var LinkList = function LinkList(_ref) {
   var className = _ref.className,
@@ -21,7 +23,7 @@ export var LinkList = function LinkList(_ref) {
       color = _ref.color,
       weight = _ref.weight,
       href = _ref.href,
-      others = _objectWithoutProperties(_ref, ["className", "margin", "items", "lineHeight", "itemMargin", "color", "weight", "href"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledLinkList, _extends({}, others, {
     className: classNames('k-LinkList', others.className, {
@@ -33,11 +35,11 @@ export var LinkList = function LinkList(_ref) {
         href = _ref2.href,
         active = _ref2.active;
     return /*#__PURE__*/React.createElement("li", {
-      className: classNames('k-LinkList__item', "k-LinkList__item--".concat(itemMargin)),
+      className: classNames('k-LinkList__item', "k-LinkList__item--" + itemMargin),
       key: key
     }, /*#__PURE__*/React.createElement("a", {
       href: href,
-      className: classNames('k-LinkList__link', item.className, "k-LinkList__link--".concat(color), "k-LinkList__link--".concat(weight), "k-LinkList__item--".concat(weight), {
+      className: classNames('k-LinkList__link', item.className, "k-LinkList__link--" + color, "k-LinkList__link--" + weight, "k-LinkList__item--" + weight, {
         'k-LinkList__link--isActive': active
       })
     }, item));

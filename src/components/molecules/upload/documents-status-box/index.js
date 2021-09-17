@@ -2,10 +2,10 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.DocumentsStatusBox = void 0;
+
+require("core-js/modules/es.array.map.js");
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -46,7 +46,7 @@ var DocumentsStatusBox = function DocumentsStatusBox(_ref) {
       _ref$retryAction = _ref.retryAction,
       retryAction = _ref$retryAction === void 0 ? function () {} : _ref$retryAction;
   return /*#__PURE__*/_react.default.createElement(StyledDocumentsStatusBox, {
-    className: (0, _classnames.default)('k-DocumentsStatusBox', className, "k-DocumentsStatusBox--".concat(status))
+    className: (0, _classnames.default)('k-DocumentsStatusBox', className, "k-DocumentsStatusBox--" + status)
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-DrocumentDropUploader__icon"
   }, status === 'wait' && /*#__PURE__*/_react.default.createElement(_clockCircleIcon.ClockCircleIcon, {

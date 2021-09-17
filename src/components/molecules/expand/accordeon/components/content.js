@@ -1,15 +1,21 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+require("core-js/modules/es.object.to-string.js");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
+
+exports.__esModule = true;
 exports.Content = void 0;
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -17,15 +23,18 @@ var _context = require("./context");
 
 var _typography = require("../../../../../helpers/utils/typography");
 
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var Content = function Content(_ref) {
   var id = _ref.id,
       children = _ref.children,
       index = _ref.index;
 
   var _useState = (0, _react.useState)(0),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      maxHeight = _useState2[0],
-      setMaxHeight = _useState2[1];
+      maxHeight = _useState[0],
+      setMaxHeight = _useState[1];
 
   var contentEl = (0, _react.useRef)(null);
 
@@ -37,7 +46,7 @@ var Content = function Content(_ref) {
   (0, _react.useEffect)(function () {
     var _contentEl$current;
 
-    setMaxHeight((contentEl === null || contentEl === void 0 ? void 0 : (_contentEl$current = contentEl.current) === null || _contentEl$current === void 0 ? void 0 : _contentEl$current.scrollHeight) || 0);
+    setMaxHeight((contentEl == null ? void 0 : (_contentEl$current = contentEl.current) == null ? void 0 : _contentEl$current.scrollHeight) || 0);
   }, [selectedItem, accordeonWidth]);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Accordeon__content",
@@ -46,8 +55,8 @@ var Content = function Content(_ref) {
     style: {
       '--accordeon-content-max-height': (0, _typography.pxToRem)(maxHeight)
     },
-    id: "".concat(componentId, "-").concat(id, "_content"),
-    "aria-labelledby": "".concat(componentId, "-").concat(id, "_header")
+    id: componentId + "-" + id + "_content",
+    "aria-labelledby": componentId + "-" + id + "_header"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Accordeon__content_marger"
   }, children), /*#__PURE__*/_react.default.createElement("div", null));

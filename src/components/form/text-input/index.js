@@ -1,27 +1,33 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.TextInput = void 0;
+
+require("core-js/modules/es.function.name.js");
+
+require("core-js/modules/es.object.assign.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/inheritsLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -39,9 +45,11 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+var _excluded = ["valid", "error", "disabled", "name", "digits", "size", "center", "tag", "variant", "className", "style", "rounded"];
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var StyledInput = _styledComponents.default.input.withConfig({
   displayName: "text-input__StyledInput",
@@ -54,80 +62,77 @@ var StyledTextareaContainer = _styledComponents.default.div.withConfig({
 })(["position:relative;display:flex;textarea.k-Form-TextInput{height:initial;resize:vertical;line-height:1.3;&:disabled{resize:none;}padding-bottom:0;&.k-Form-TextInput--orion{&.k-Form-TextInput--tiny{padding-top:", ";padding-bottom:", ";}&.k-Form-TextInput--regular{padding-top:", ";padding-bottom:", ";}&.k-Form-TextInput--big{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}&.k-Form-TextInput--huge{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}&.k-Form-TextInput--giant{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}}}&.k-Form-TextInput--rounded{border-radius:var(--input-height);}.k-Form-TextInput__textareaGradient{position:absolute;left:", ";right:", ";bottom:", ";height:", ";background-image:linear-gradient( to bottom,rgba(255,255,255,0),", " );pointer-events:none;textarea.k-Form-TextInput:disabled + &{display:none;}}"], (0, _typography.pxToRem)(9), (0, _typography.pxToRem)(9), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(18), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(21), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(27), (0, _typography.pxToRem)(27), (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(21), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(32), (0, _typography.pxToRem)(32), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(10), _colorsConfig.default.background1);
 
 var TextInput = /*#__PURE__*/function (_PureComponent) {
-  (0, _inherits2.default)(TextInput, _PureComponent);
-
-  var _super = _createSuper(TextInput);
+  (0, _inheritsLoose2.default)(TextInput, _PureComponent);
 
   function TextInput() {
-    (0, _classCallCheck2.default)(this, TextInput);
-    return _super.apply(this, arguments);
+    return _PureComponent.apply(this, arguments) || this;
   }
 
-  (0, _createClass2.default)(TextInput, [{
-    key: "render",
-    value: function render() {
-      var _this = this;
+  var _proto = TextInput.prototype;
 
-      var _this$props = this.props,
-          valid = _this$props.valid,
-          error = _this$props.error,
-          disabled = _this$props.disabled,
-          name = _this$props.name,
-          digits = _this$props.digits,
-          size = _this$props.size,
-          center = _this$props.center,
-          tag = _this$props.tag,
-          variant = _this$props.variant,
-          className = _this$props.className,
-          style = _this$props.style,
-          rounded = _this$props.rounded,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "name", "digits", "size", "center", "tag", "variant", "className", "style", "rounded"]);
-      var digitsClass = !!digits ? "k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_".concat(digits) : null;
+  _proto.render = function render() {
+    var _this = this;
 
-      if (tag === 'textarea') {
-        return /*#__PURE__*/_react.default.createElement(StyledTextareaContainer, {
-          className: (0, _classnames.default)('k-Form-TextInput__textareaContainer')
-        }, /*#__PURE__*/_react.default.createElement(StyledInput, (0, _extends2.default)({
-          ref: function ref(input) {
-            return _this.input = input;
-          },
-          as: "textarea",
-          disabled: disabled,
-          name: name,
-          className: (0, _classnames.default)('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--".concat(variant), "k-Form-TextInput--".concat(size), {
-            'k-Form-TextInput--valid': valid,
-            'k-Form-TextInput--error': error,
-            'k-Form-TextInput--disabled': disabled,
-            'k-Form-TextInput--alignCenter': center,
-            'k-Form-TextInput--rounded': rounded
-          }),
-          style: !!digits ? (0, _extends2.default)({
-            '--input-content-width': digits
-          }, style) : style
-        }, others)), /*#__PURE__*/_react.default.createElement("div", {
-          className: "k-Form-TextInput__textareaGradient"
-        }));
-      } else {
-        return /*#__PURE__*/_react.default.createElement(StyledInput, (0, _extends2.default)({
-          ref: function ref(input) {
-            return _this.input = input;
-          },
-          disabled: disabled,
-          name: name,
-          className: (0, _classnames.default)('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--".concat(variant), "k-Form-TextInput--".concat(size), {
-            'k-Form-TextInput--valid': valid,
-            'k-Form-TextInput--error': error,
-            'k-Form-TextInput--disabled': disabled,
-            'k-Form-TextInput--alignCenter': center,
-            'k-Form-TextInput--rounded': rounded
-          }),
-          style: !!digits ? (0, _extends2.default)({
-            '--input-content-width': digits
-          }, style) : style
-        }, others));
-      }
+    var _this$props = this.props,
+        valid = _this$props.valid,
+        error = _this$props.error,
+        disabled = _this$props.disabled,
+        name = _this$props.name,
+        digits = _this$props.digits,
+        size = _this$props.size,
+        center = _this$props.center,
+        tag = _this$props.tag,
+        variant = _this$props.variant,
+        className = _this$props.className,
+        style = _this$props.style,
+        rounded = _this$props.rounded,
+        others = (0, _objectWithoutPropertiesLoose2.default)(_this$props, _excluded);
+    var digitsClass = !!digits ? "k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_" + digits : null;
+
+    if (tag === 'textarea') {
+      return /*#__PURE__*/_react.default.createElement(StyledTextareaContainer, {
+        className: (0, _classnames.default)('k-Form-TextInput__textareaContainer')
+      }, /*#__PURE__*/_react.default.createElement(StyledInput, (0, _extends2.default)({
+        ref: function ref(input) {
+          return _this.input = input;
+        },
+        as: "textarea",
+        disabled: disabled,
+        name: name,
+        className: (0, _classnames.default)('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--" + variant, "k-Form-TextInput--" + size, {
+          'k-Form-TextInput--valid': valid,
+          'k-Form-TextInput--error': error,
+          'k-Form-TextInput--disabled': disabled,
+          'k-Form-TextInput--alignCenter': center,
+          'k-Form-TextInput--rounded': rounded
+        }),
+        style: !!digits ? Object.assign({
+          '--input-content-width': digits
+        }, style) : style
+      }, others)), /*#__PURE__*/_react.default.createElement("div", {
+        className: "k-Form-TextInput__textareaGradient"
+      }));
+    } else {
+      return /*#__PURE__*/_react.default.createElement(StyledInput, (0, _extends2.default)({
+        ref: function ref(input) {
+          return _this.input = input;
+        },
+        disabled: disabled,
+        name: name,
+        className: (0, _classnames.default)('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--" + variant, "k-Form-TextInput--" + size, {
+          'k-Form-TextInput--valid': valid,
+          'k-Form-TextInput--error': error,
+          'k-Form-TextInput--disabled': disabled,
+          'k-Form-TextInput--alignCenter': center,
+          'k-Form-TextInput--rounded': rounded
+        }),
+        style: !!digits ? Object.assign({
+          '--input-content-width': digits
+        }, style) : style
+      }, others));
     }
-  }]);
+  };
+
   return TextInput;
 }(_react.PureComponent);
 

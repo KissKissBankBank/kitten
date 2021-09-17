@@ -2,10 +2,10 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.getScssPaths = void 0;
+
+require("core-js/modules/es.array.join.js");
 
 var _path = _interopRequireDefault(require("path"));
 

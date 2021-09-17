@@ -1,4 +1,3 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import { useState, useEffect } from 'react';
 import { useFocusTrap } from '../../dom/use-focus-trap';
 import { usePrevious } from '../../utils/use-previous-hook';
@@ -8,9 +7,8 @@ export var useModal = function useModal(_ref) {
       modalOpenText = _ref.modalOpenText;
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      show = _useState2[0],
-      setShow = _useState2[1];
+      show = _useState[0],
+      setShow = _useState[1];
 
   var modalRef = useFocusTrap({
     shouldTrapFocus: show
@@ -25,14 +23,14 @@ export var useModal = function useModal(_ref) {
 
   useEffect(function () {
     if (show || previousShowValue) {
-      document.getElementById("".concat(id, "__button")).focus();
+      document.getElementById(id + "__button").focus();
     } // Prevent scrolling when Modal is open
     // https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
 
 
     if (show) {
       document.addEventListener('keydown', keyDownHandler);
-      document.body.style.top = "-".concat(window.scrollY, "px");
+      document.body.style.top = "-" + window.scrollY + "px";
       document.body.style.position = 'fixed';
     } else {
       document.removeEventListener('keydown', keyDownHandler);
@@ -45,16 +43,16 @@ export var useModal = function useModal(_ref) {
   return {
     show: show,
     buttonProps: {
-      id: "".concat(id, "__button"),
+      id: id + "__button",
       'aria-label': show ? modalCloseText : modalOpenText,
-      'aria-controls': "".concat(id, "__modal"),
+      'aria-controls': id + "__modal",
       'aria-expanded': show ? 'true' : null,
       onClick: function onClick() {
         return setShow(!show);
       }
     },
     modalProps: {
-      id: "".concat(id, "__modal"),
+      id: id + "__modal",
       hidden: show ? null : 'hidden'
     },
     wrapperProps: {

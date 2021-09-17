@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.TextInputWithButton = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -33,6 +31,8 @@ var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecate
 
 var _screenConfig = require("../../../constants/screen-config");
 
+var _excluded = ["valid", "error", "disabled", "size", "value", "rounded", "buttonValue", "modifier", "buttonProps", "inputValue", "className", "inset"];
+
 var StyledTextInputWithButton = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-button__StyledTextInputWithButton",
   componentId: "sc-1yqni7d-0"
@@ -41,7 +41,7 @@ var StyledTextInputWithButton = _styledComponents.default.div.withConfig({
   return (0, _modifierStyles.modifierStyles)(modifier);
 }, (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), _colorsConfig.default.background1, _colorsConfig.default.line1, _colorsConfig.default.line2, _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary4, (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(6), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(60), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(70), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(70), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(90), _colorsConfig.default.valid, _colorsConfig.default.valid, _colorsConfig.default.error, _colorsConfig.default.error);
 
-var TextInputWithButton = _react.default.forwardRef(function (_ref2, ref) {
+var TextInputWithButton = /*#__PURE__*/_react.default.forwardRef(function (_ref2, ref) {
   var valid = _ref2.valid,
       error = _ref2.error,
       disabled = _ref2.disabled,
@@ -54,9 +54,9 @@ var TextInputWithButton = _react.default.forwardRef(function (_ref2, ref) {
       inputValue = _ref2.inputValue,
       className = _ref2.className,
       inset = _ref2.inset,
-      others = (0, _objectWithoutProperties2.default)(_ref2, ["valid", "error", "disabled", "size", "value", "rounded", "buttonValue", "modifier", "buttonProps", "inputValue", "className", "inset"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledTextInputWithButton, {
-    className: (0, _classnames.default)('k-Form-TextInputWithButton', "k-Form-TextInputWithButton--".concat(size), {
+    className: (0, _classnames.default)('k-Form-TextInputWithButton', "k-Form-TextInputWithButton--" + size, {
       'k-Form-TextInputWithButton--insetButton': inset,
       'k-Form-TextInputWithButton--roudedButton': rounded
     }),
@@ -74,7 +74,7 @@ var TextInputWithButton = _react.default.forwardRef(function (_ref2, ref) {
   })), /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
     type: "button"
   }, buttonProps, {
-    className: (0, _classnames.default)('k-Form-TextInputWithButton__button', buttonProps === null || buttonProps === void 0 ? void 0 : buttonProps.className, {
+    className: (0, _classnames.default)('k-Form-TextInputWithButton__button', buttonProps == null ? void 0 : buttonProps.className, {
       'k-Form-TextInputWithButton__button--valid': valid,
       'k-Form-TextInputWithButton__button--error': error,
       'k-Form-TextInputWithButton__button--disabled': disabled

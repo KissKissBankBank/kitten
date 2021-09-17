@@ -2,9 +2,7 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.StyledDashboard = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
@@ -19,9 +17,9 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _typography = require("../../../helpers/utils/typography");
 
-var ALL_COLS = "(100vw - ".concat((0, _typography.pxToRem)(2 * _gridConfig.CONTAINER_PADDING + (_gridConfig.NUM_COLUMNS - 1) * _gridConfig.GUTTER), ")");
-var ONE_COL = "(".concat(ALL_COLS, " / ").concat(_gridConfig.NUM_COLUMNS, ")");
-var SIX_COLS = "(".concat(ALL_COLS, " / 2 + ").concat((0, _typography.pxToRem)(5 * _gridConfig.GUTTER + _gridConfig.CONTAINER_PADDING), ")");
+var ALL_COLS = "(100vw - " + (0, _typography.pxToRem)(2 * _gridConfig.CONTAINER_PADDING + (_gridConfig.NUM_COLUMNS - 1) * _gridConfig.GUTTER) + ")";
+var ONE_COL = "(" + ALL_COLS + " / " + _gridConfig.NUM_COLUMNS + ")";
+var SIX_COLS = "(" + ALL_COLS + " / 2 + " + (0, _typography.pxToRem)(5 * _gridConfig.GUTTER + _gridConfig.CONTAINER_PADDING) + ")";
 
 var StyledDashboard = _styledComponents.default.div.withConfig({
   displayName: "styles__StyledDashboard",

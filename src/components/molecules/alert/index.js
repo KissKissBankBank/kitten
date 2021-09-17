@@ -1,19 +1,29 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Alert = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+require("core-js/modules/es.string.bold.js");
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -33,6 +43,12 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["className", "show", "error", "success", "warning", "closeButton", "closeButtonLabel", "children", "onAfterClose"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var fadeOut = (0, _styledComponents.keyframes)(["0%{opacity:1;}100%{opacity:0;}"]);
 
 var AlertWrapper = _styledComponents.default.div.withConfig({
@@ -50,17 +66,15 @@ var Alert = function Alert(_ref) {
       closeButtonLabel = _ref.closeButtonLabel,
       children = _ref.children,
       onAfterClose = _ref.onAfterClose,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "show", "error", "success", "warning", "closeButton", "closeButtonLabel", "children", "onAfterClose"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isTrashed = _useState2[0],
-      trashIt = _useState2[1];
+      isTrashed = _useState[0],
+      trashIt = _useState[1];
 
-  var _useState3 = (0, _react.useState)(true),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      isMounted = _useState4[0],
-      setMounted = _useState4[1];
+  var _useState2 = (0, _react.useState)(true),
+      isMounted = _useState2[0],
+      setMounted = _useState2[1];
 
   var alertRef = (0, _react.useRef)(null);
   (0, _react.useEffect)(function () {

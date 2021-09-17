@@ -1,5 +1,10 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["href", "iconType", "linkClassNames", "text"];
+import "core-js/modules/es.array.map.js";
+import "core-js/modules/es.regexp.exec.js";
+import "core-js/modules/es.string.split.js";
+import "core-js/modules/es.string.match.js";
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -36,7 +41,7 @@ export var Stepper = function Stepper(_ref) {
         iconType = _ref2.iconType,
         linkClassNames = _ref2.linkClassNames,
         text = _ref2.text,
-        other = _objectWithoutProperties(_ref2, ["href", "iconType", "linkClassNames", "text"]);
+        other = _objectWithoutPropertiesLoose(_ref2, _excluded);
 
     var Tag = href ? 'a' : 'span';
     var className = classNames('k-Stepper__link', linkClassNames);
@@ -45,7 +50,7 @@ export var Stepper = function Stepper(_ref) {
       href: href
     }, other), /*#__PURE__*/React.createElement(StepperIcon, {
       state: iconType,
-      className: classNames('k-Stepper__icon', "k-Stepper__icon--".concat(iconType))
+      className: classNames('k-Stepper__icon', "k-Stepper__icon--" + iconType)
     }), insertLineBreaks(text));
   };
 

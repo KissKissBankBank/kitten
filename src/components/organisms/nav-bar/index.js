@@ -2,14 +2,14 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.NavBar = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
+
+require("core-js/modules/es.string.link.js");
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -29,9 +29,12 @@ var _gridConfig = require("../../../constants/grid-config");
 
 var _screenConfig = require("../../../constants/screen-config");
 
+var _excluded = ["active", "children", "className", "linkProps"],
+    _excluded2 = ["children", "className", "navProps", "listProps", "colors", "modifier"];
+
 var StyledNavBar = _styledComponents.default.div.withConfig({
   displayName: "nav-bar__StyledNavBar",
-  componentId: "ui0yo2-0"
+  componentId: "sc-ui0yo2-0"
 })(["width:auto;flex-grow:1;.k-NavBar__nav{width:auto;margin:0;padding:0 ", ";background:", ";display:flex;justify-content:center;@media (min-width:", "){padding:0 ", ";}&::before,&::after{content:'';flex-grow:1;}}.k-NavBar__list{list-style-type:none;display:flex;align-items:center;margin:0;padding:0;}.k-NavBar__listItem + .k-NavBar__listItem{margin-left:", ";@media (min-width:", "){margin-left:", ";}}.k-NavBar__link{height:", ";box-sizing:border-box;", " font-size:", ";text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;flex-direction:row;position:relative;color:", ";border-bottom:", " solid ", ";transition:color 0.2s,border-color 0.2s;cursor:pointer;&:hover{color:", ";text-decoration:none;}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&:focus,&[aria-current='page']{border-color:", ";color:", ";border-width:", ";}@media (min-width:", "){height:", ";}}&.k-NavBar--big .k-NavBar__link{height:", ";@media (min-width:", "){height:", ";}}"], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), function (_ref) {
   var colors = _ref.colors;
   return colors.background || _colorsConfig.default.primary6;
@@ -57,7 +60,7 @@ var NavBarItem = function NavBarItem(_ref7) {
       children = _ref7.children,
       className = _ref7.className,
       linkProps = _ref7.linkProps,
-      props = (0, _objectWithoutProperties2.default)(_ref7, ["active", "children", "className", "linkProps"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref7, _excluded);
   return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-NavBar__listItem', className)
   }), /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
@@ -74,9 +77,9 @@ var NavBar = function NavBar(_ref8) {
       listProps = _ref8.listProps,
       colors = _ref8.colors,
       modifier = _ref8.modifier,
-      props = (0, _objectWithoutProperties2.default)(_ref8, ["children", "className", "navProps", "listProps", "colors", "modifier"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref8, _excluded2);
   return /*#__PURE__*/_react.default.createElement(StyledNavBar, (0, _extends2.default)({}, props, {
-    className: (0, _classnames.default)('k-NavBar', "k-NavBar--".concat(modifier), className),
+    className: (0, _classnames.default)('k-NavBar', "k-NavBar--" + modifier, className),
     colors: colors
   }), /*#__PURE__*/_react.default.createElement("nav", (0, _extends2.default)({}, navProps, {
     className: (0, _classnames.default)('k-NavBar__nav', navProps.className)

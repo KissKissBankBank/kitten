@@ -1,15 +1,10 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
+import _extends from "@babel/runtime/helpers/extends";
+import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
+import "core-js/modules/es.array.concat.js";
+import "core-js/modules/es.regexp.exec.js";
+import "core-js/modules/es.string.split.js";
+import "core-js/modules/es.object.assign.js";
+import "core-js/modules/es.array.map.js";
 import React, { Component } from 'react'; // Doc available here: http://react-day-picker.js.org/docs/getting-started
 
 import DayPickerInput from 'react-day-picker/DayPickerInput';
@@ -61,27 +56,22 @@ var StyledDatePicker = styled.div.withConfig({
   return css(["background-color:", ";color:", ";border:double ", " ", ";"], styles.day.hover.backgroundColor, styles.day.hover.color, styles.day.hover.backgroundColor, borderSize);
 });
 export var DatePicker = /*#__PURE__*/function (_Component) {
-  _inherits(DatePicker, _Component);
-
-  var _super = _createSuper(DatePicker);
+  _inheritsLoose(DatePicker, _Component);
 
   function DatePicker() {
     var _this;
-
-    _classCallCheck(this, DatePicker);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _super.call.apply(_super, [this].concat(args));
+    _this = _Component.call.apply(_Component, [this].concat(args)) || this;
 
     _this.parseDate = function (str) {
       var _str$split = str.split('/'),
-          _str$split2 = _slicedToArray(_str$split, 3),
-          day = _str$split2[0],
-          month = _str$split2[1],
-          year = _str$split2[2];
+          day = _str$split[0],
+          month = _str$split[1],
+          year = _str$split[2];
 
       return new Date(year, month - 1, day);
     };
@@ -93,50 +83,49 @@ export var DatePicker = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(DatePicker, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          locale = _this$props.locale,
-          datePickerProps = _this$props.datePickerProps,
-          styles = _this$props.styles,
-          previousMonth = _this$props.previousMonth,
-          nextMonth = _this$props.nextMonth,
-          weekDays = _this$props.weekDays,
-          months = _this$props.months,
-          children = _this$props.children;
-      return /*#__PURE__*/React.createElement(StyledDatePicker, {
-        styles: styles
-      }, /*#__PURE__*/React.createElement(DayPickerInput, {
-        formatDate: this.formatDate,
-        format: "dd/mm/yyyy",
-        placeholder: "dd/mm/yyyy",
-        parseDate: this.parseDate,
-        dayPickerProps: _extends({}, datePickerProps, {
-          locale: locale,
-          months: months,
-          weekdaysLong: weekDays,
-          weekdaysShort: weekDays && weekDays.map(function (str) {
-            return str.substr(0, 2);
-          }),
-          firstDayOfWeek: 1,
-          labels: {
-            previousMonth: previousMonth,
-            nextMonth: nextMonth
-          },
-          navbarElement: /*#__PURE__*/React.createElement(Navbar, {
-            iconColor: styles.header.icon.color
-          })
+  var _proto = DatePicker.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        locale = _this$props.locale,
+        datePickerProps = _this$props.datePickerProps,
+        styles = _this$props.styles,
+        previousMonth = _this$props.previousMonth,
+        nextMonth = _this$props.nextMonth,
+        weekDays = _this$props.weekDays,
+        months = _this$props.months,
+        children = _this$props.children;
+    return /*#__PURE__*/React.createElement(StyledDatePicker, {
+      styles: styles
+    }, /*#__PURE__*/React.createElement(DayPickerInput, {
+      formatDate: this.formatDate,
+      format: "dd/mm/yyyy",
+      placeholder: "dd/mm/yyyy",
+      parseDate: this.parseDate,
+      dayPickerProps: Object.assign({}, datePickerProps, {
+        locale: locale,
+        months: months,
+        weekdaysLong: weekDays,
+        weekdaysShort: weekDays && weekDays.map(function (str) {
+          return str.substr(0, 2);
+        }),
+        firstDayOfWeek: 1,
+        labels: {
+          previousMonth: previousMonth,
+          nextMonth: nextMonth
+        },
+        navbarElement: /*#__PURE__*/React.createElement(Navbar, {
+          iconColor: styles.header.icon.color
         })
-        /* `component` only accepts classes to prevent stateless function
-           `ref` error. A fix is currently in progress, see:
-           https://github.com/gpbl/react-day-picker/pull/862
-        */
-        ,
-        component: children ? children : TextInputWithUnit
-      }));
-    }
-  }]);
+      })
+      /* `component` only accepts classes to prevent stateless function
+         `ref` error. A fix is currently in progress, see:
+         https://github.com/gpbl/react-day-picker/pull/862
+      */
+      ,
+      component: children ? children : TextInputWithUnit
+    }));
+  };
 
   return DatePicker;
 }(Component);
@@ -181,26 +170,21 @@ DatePicker.defaultProps = {
 };
 
 var TextInputWithUnit = /*#__PURE__*/function (_Component2) {
-  _inherits(TextInputWithUnit, _Component2);
-
-  var _super2 = _createSuper(TextInputWithUnit);
+  _inheritsLoose(TextInputWithUnit, _Component2);
 
   function TextInputWithUnit() {
-    _classCallCheck(this, TextInputWithUnit);
-
-    return _super2.apply(this, arguments);
+    return _Component2.apply(this, arguments) || this;
   }
 
-  _createClass(TextInputWithUnit, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement(TextInputWithUnitBase, _extends({
-        type: "text",
-        unit: "\uD83D\uDCC5",
-        autoComplete: "off"
-      }, this.props));
-    }
-  }]);
+  var _proto2 = TextInputWithUnit.prototype;
+
+  _proto2.render = function render() {
+    return /*#__PURE__*/React.createElement(TextInputWithUnitBase, _extends({
+      type: "text",
+      unit: "\uD83D\uDCC5",
+      autoComplete: "off"
+    }, this.props));
+  };
 
   return TextInputWithUnit;
 }(Component);

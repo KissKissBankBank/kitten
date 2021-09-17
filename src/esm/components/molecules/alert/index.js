@@ -1,6 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "show", "error", "success", "warning", "closeButton", "closeButtonLabel", "children", "onAfterClose"];
+import "core-js/modules/es.string.bold.js";
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
@@ -25,17 +26,15 @@ export var Alert = function Alert(_ref) {
       closeButtonLabel = _ref.closeButtonLabel,
       children = _ref.children,
       onAfterClose = _ref.onAfterClose,
-      others = _objectWithoutProperties(_ref, ["className", "show", "error", "success", "warning", "closeButton", "closeButtonLabel", "children", "onAfterClose"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      isTrashed = _useState2[0],
-      trashIt = _useState2[1];
+      isTrashed = _useState[0],
+      trashIt = _useState[1];
 
-  var _useState3 = useState(true),
-      _useState4 = _slicedToArray(_useState3, 2),
-      isMounted = _useState4[0],
-      setMounted = _useState4[1];
+  var _useState2 = useState(true),
+      isMounted = _useState2[0],
+      setMounted = _useState2[1];
 
   var alertRef = useRef(null);
   useEffect(function () {

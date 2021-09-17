@@ -1,23 +1,29 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.ExpandBoard = exports.ExpandBoardContent = exports.ExpandBoardButton = void 0;
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+require("core-js/modules/es.array.concat.js");
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+require("core-js/modules/web.dom-collections.for-each.js");
 
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/inheritsLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -33,60 +39,57 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _typography = require("../../../../helpers/utils/typography");
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var StyledButton = (0, _styledComponents.default)(_button.Button).withConfig({
   displayName: "expand-board__StyledButton",
-  componentId: "x26zu0-0"
+  componentId: "sc-x26zu0-0"
 })(["width:100%;display:flex;align-items:center;justify-content:center;line-height:", ";", ""], (0, _typography.pxToRem)(21), function (_ref) {
   var expanded = _ref.expanded;
   return expanded && (0, _styledComponents.css)(["background-color:", ";border-color:", ";"], _colorsConfig.default.font1, _colorsConfig.default.font1);
 });
 var StyledArrowIcon = (0, _styledComponents.default)(_arrowIcon.ArrowIcon).withConfig({
   displayName: "expand-board__StyledArrowIcon",
-  componentId: "x26zu0-1"
+  componentId: "sc-x26zu0-1"
 })(["width:", ";height:", ";margin-left:", ";"], (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(10));
 
 var ExpandBoardButton = /*#__PURE__*/function (_PureComponent) {
-  (0, _inherits2.default)(ExpandBoardButton, _PureComponent);
-
-  var _super = _createSuper(ExpandBoardButton);
+  (0, _inheritsLoose2.default)(ExpandBoardButton, _PureComponent);
 
   function ExpandBoardButton() {
-    (0, _classCallCheck2.default)(this, ExpandBoardButton);
-    return _super.apply(this, arguments);
+    return _PureComponent.apply(this, arguments) || this;
   }
 
-  (0, _createClass2.default)(ExpandBoardButton, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          children = _this$props.children,
-          expandChildren = _this$props.expandChildren,
-          expanded = _this$props.expanded,
-          disabled = _this$props.disabled,
-          onClick = _this$props.onClick,
-          ariaId = _this$props.ariaId,
-          borderRadius = _this$props.borderRadius,
-          size = _this$props.size;
-      var defaultExpandChildren = expandChildren ? expandChildren : children;
-      return /*#__PURE__*/_react.default.createElement(StyledButton, {
-        size: size,
-        modifier: "helium",
-        disabled: disabled,
-        "aria-expanded": expanded,
-        "aria-controls": ariaId,
-        onClick: onClick,
-        type: "button",
-        borderRadius: borderRadius
-      }, /*#__PURE__*/_react.default.createElement("div", null, expanded ? defaultExpandChildren : children, /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
-        direction: expanded ? 'top' : 'bottom',
-        fill: _colorsConfig.default.background1
-      })));
-    }
-  }]);
+  var _proto = ExpandBoardButton.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        children = _this$props.children,
+        expandChildren = _this$props.expandChildren,
+        expanded = _this$props.expanded,
+        disabled = _this$props.disabled,
+        onClick = _this$props.onClick,
+        ariaId = _this$props.ariaId,
+        borderRadius = _this$props.borderRadius,
+        size = _this$props.size;
+    var defaultExpandChildren = expandChildren ? expandChildren : children;
+    return /*#__PURE__*/_react.default.createElement(StyledButton, {
+      size: size,
+      modifier: "helium",
+      disabled: disabled,
+      "aria-expanded": expanded,
+      "aria-controls": ariaId,
+      onClick: onClick,
+      type: "button",
+      borderRadius: borderRadius
+    }, /*#__PURE__*/_react.default.createElement("div", null, expanded ? defaultExpandChildren : children, /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
+      direction: expanded ? 'top' : 'bottom',
+      fill: _colorsConfig.default.background1
+    })));
+  };
+
   return ExpandBoardButton;
 }(_react.PureComponent);
 
@@ -112,26 +115,23 @@ ExpandBoardButton.defaultProps = {
 };
 
 var ExpandBoardContent = /*#__PURE__*/function (_PureComponent2) {
-  (0, _inherits2.default)(ExpandBoardContent, _PureComponent2);
-
-  var _super2 = _createSuper(ExpandBoardContent);
+  (0, _inheritsLoose2.default)(ExpandBoardContent, _PureComponent2);
 
   function ExpandBoardContent() {
-    (0, _classCallCheck2.default)(this, ExpandBoardContent);
-    return _super2.apply(this, arguments);
+    return _PureComponent2.apply(this, arguments) || this;
   }
 
-  (0, _createClass2.default)(ExpandBoardContent, [{
-    key: "render",
-    value: function render() {
-      var _this$props2 = this.props,
-          children = _this$props2.children,
-          ariaId = _this$props2.ariaId;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        id: ariaId
-      }, children);
-    }
-  }]);
+  var _proto2 = ExpandBoardContent.prototype;
+
+  _proto2.render = function render() {
+    var _this$props2 = this.props,
+        children = _this$props2.children,
+        ariaId = _this$props2.ariaId;
+    return /*#__PURE__*/_react.default.createElement("div", {
+      id: ariaId
+    }, children);
+  };
+
   return ExpandBoardContent;
 }(_react.PureComponent);
 
@@ -153,20 +153,16 @@ var shrinkAnimation = function shrinkAnimation() {
 };
 
 var ExpandBoard = /*#__PURE__*/function (_PureComponent3) {
-  (0, _inherits2.default)(ExpandBoard, _PureComponent3);
-
-  var _super3 = _createSuper(ExpandBoard);
+  (0, _inheritsLoose2.default)(ExpandBoard, _PureComponent3);
 
   function ExpandBoard() {
     var _this;
-
-    (0, _classCallCheck2.default)(this, ExpandBoard);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _super3.call.apply(_super3, [this].concat(args));
+    _this = _PureComponent3.call.apply(_PureComponent3, [this].concat(args)) || this;
     _this.state = {
       expanded: false,
       isShrinking: false,
@@ -241,7 +237,7 @@ var ExpandBoard = /*#__PURE__*/function (_PureComponent3) {
           '--ExpandBoard-animationMaxHeight': animationMaxHeight,
           maxHeight: animationMaxHeight,
           opacity: 1,
-          animationDuration: "".concat(animationShrinkingDuration, "s"),
+          animationDuration: animationShrinkingDuration + "s",
           animationDelay: 0,
           animationIterationCount: 1,
           animationFillMode: 'forwards',
@@ -266,45 +262,45 @@ var ExpandBoard = /*#__PURE__*/function (_PureComponent3) {
     return _this;
   }
 
-  (0, _createClass2.default)(ExpandBoard, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
+  var _proto3 = ExpandBoard.prototype;
 
-      var _this$props5 = this.props,
-          children = _this$props5.children,
-          style = _this$props5.style,
-          disabled = _this$props5.disabled,
-          ariaId = _this$props5.ariaId;
-      var button = null;
-      var content = null;
+  _proto3.render = function render() {
+    var _this2 = this;
 
-      _react.default.Children.forEach(children, function (child) {
-        if (!_react.default.isValidElement(child)) return null;
+    var _this$props5 = this.props,
+        children = _this$props5.children,
+        style = _this$props5.style,
+        disabled = _this$props5.disabled,
+        ariaId = _this$props5.ariaId;
+    var button = null;
+    var content = null;
 
-        if (_this2.isButtonComponent(child)) {
-          button = _react.default.cloneElement(child, {
-            disabled: disabled,
-            expanded: _this2.state.expanded,
-            onClick: _this2.handleClick,
-            style: /*#__PURE__*/_react.default.createElement(StyledButton, null),
-            ariaId: ariaId
-          });
-        }
+    _react.default.Children.forEach(children, function (child) {
+      if (! /*#__PURE__*/_react.default.isValidElement(child)) return null;
 
-        if (_this2.isContentComponent(child)) {
-          content = _react.default.cloneElement(child, {
-            ariaId: ariaId,
-            style: _this2.contentStyle()
-          });
-        }
-      });
+      if (_this2.isButtonComponent(child)) {
+        button = /*#__PURE__*/_react.default.cloneElement(child, {
+          disabled: disabled,
+          expanded: _this2.state.expanded,
+          onClick: _this2.handleClick,
+          style: /*#__PURE__*/_react.default.createElement(StyledButton, null),
+          ariaId: ariaId
+        });
+      }
 
-      return /*#__PURE__*/_react.default.createElement("div", {
-        style: style
-      }, button, this.state.expanded && content);
-    }
-  }]);
+      if (_this2.isContentComponent(child)) {
+        content = /*#__PURE__*/_react.default.cloneElement(child, {
+          ariaId: ariaId,
+          style: _this2.contentStyle()
+        });
+      }
+    });
+
+    return /*#__PURE__*/_react.default.createElement("div", {
+      style: style
+    }, button, this.state.expanded && content);
+  };
+
   return ExpandBoard;
 }(_react.PureComponent);
 

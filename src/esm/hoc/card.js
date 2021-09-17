@@ -1,5 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "light", "padded", "rounded", "translateOnHover", "withBorder", "withDarkBorder", "withShadow", "withVerticalPadding", "withoutBoxShadowOnHover"];
+import "core-js/modules/es.object.assign.js";
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -17,7 +19,7 @@ export var card = function card(WrappedComponent, wrappedProps) {
   };
 
   var Card = function Card(props) {
-    var _defaultProps$wrapped = _extends({}, defaultProps, wrappedProps, props),
+    var _defaultProps$wrapped = Object.assign({}, defaultProps, wrappedProps, props),
         className = _defaultProps$wrapped.className,
         light = _defaultProps$wrapped.light,
         padded = _defaultProps$wrapped.padded,
@@ -28,7 +30,7 @@ export var card = function card(WrappedComponent, wrappedProps) {
         withShadow = _defaultProps$wrapped.withShadow,
         withVerticalPadding = _defaultProps$wrapped.withVerticalPadding,
         withoutBoxShadowOnHover = _defaultProps$wrapped.withoutBoxShadowOnHover,
-        others = _objectWithoutProperties(_defaultProps$wrapped, ["className", "light", "padded", "rounded", "translateOnHover", "withBorder", "withDarkBorder", "withShadow", "withVerticalPadding", "withoutBoxShadowOnHover"]);
+        others = _objectWithoutPropertiesLoose(_defaultProps$wrapped, _excluded);
 
     var cardClassName = classNames('k-Card', {
       'k-Card--light': light,

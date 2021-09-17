@@ -1,6 +1,12 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["top", "bottom", "style"];
+import "core-js/modules/es.regexp.exec.js";
+import "core-js/modules/es.string.match.js";
+import "core-js/modules/es.array.filter.js";
+import "core-js/modules/es.array.map.js";
+import "core-js/modules/es.object.keys.js";
+import "core-js/modules/es.array.concat.js";
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -12,12 +18,12 @@ export var Marger = function Marger(props) {
   var top = props.top,
       bottom = props.bottom,
       style = props.style,
-      others = _objectWithoutProperties(props, ["top", "bottom", "style"]);
+      others = _objectWithoutPropertiesLoose(props, _excluded);
 
   var gutter = 10 / TYPOGRAPHY.root;
 
   var marginSize = function marginSize(value) {
-    return "".concat(value * gutter, "rem");
+    return value * gutter + "rem";
   };
 
   var valueIsNumber = function valueIsNumber(value) {
@@ -39,17 +45,17 @@ export var Marger = function Marger(props) {
   };
 
   var isPropWithViewportRange = function isPropWithViewportRange(propName, viewportRange) {
-    return props[propName] && props[propName]["from".concat(upcaseFirst(viewportRange))];
+    return props[propName] && props[propName]["from" + upcaseFirst(viewportRange)];
   };
 
   var viewportRangeCssRule = function viewportRangeCssRule(viewportRange) {
-    return "@media (min-width: ".concat(ScreenConfig[viewportRange.toUpperCase()].min, "px)");
+    return "@media (min-width: " + ScreenConfig[viewportRange.toUpperCase()].min + "px)";
   };
 
   var propCssDeclarationForViewportRange = function propCssDeclarationForViewportRange(propName, viewportRange) {
-    var size = props[propName]["from".concat(upcaseFirst(viewportRange))];
+    var size = props[propName]["from" + upcaseFirst(viewportRange)];
     if (!isSetValue(size)) return;
-    return "margin-".concat(propName, ": ").concat(marginSize(size), ";");
+    return "margin-" + propName + ": " + marginSize(size) + ";";
   };
 
   var viewportRangeStyleCondition = function viewportRangeStyleCondition(propName, viewportRange) {
@@ -58,7 +64,7 @@ export var Marger = function Marger(props) {
     var returnedViewportRangeCssRule = viewportRangeCssRule(viewportRange);
     var viewportRangeCssValue = propCssDeclarationForViewportRange(propName, viewportRange);
     if (!viewportRangeCssValue) return;
-    return "".concat(returnedViewportRangeCssRule, " { ").concat(viewportRangeCssValue, " }");
+    return returnedViewportRangeCssRule + " { " + viewportRangeCssValue + " }";
   };
 
   var hasDefaultProp = function hasDefaultProp(propName) {
@@ -77,7 +83,7 @@ export var Marger = function Marger(props) {
 
   var stylesForName = function stylesForName(propName) {
     var value = defaultValue(propName);
-    if (value) return "margin-".concat(propName, ": ").concat(defaultValue(propName), ";");
+    if (value) return "margin-" + propName + ": " + defaultValue(propName) + ";";
   };
 
   var viewportRanges = Object.keys(ScreenConfig).map(function (size) {
@@ -86,7 +92,7 @@ export var Marger = function Marger(props) {
     return size !== 'xxs';
   });
   var viewportRangesStyles = viewportRanges.reduce(function (acc, viewportRange) {
-    return [].concat(_toConsumableArray(acc), [viewportRangeStyleCondition('top', viewportRange), viewportRangeStyleCondition('bottom', viewportRange)]);
+    return [].concat(acc, [viewportRangeStyleCondition('top', viewportRange), viewportRangeStyleCondition('bottom', viewportRange)]);
   }, []);
   var styles = [stylesForName('top'), stylesForName('bottom'), viewportRangesStyles, style];
   return /*#__PURE__*/React.createElement(StyledMarger, _extends({

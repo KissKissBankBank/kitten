@@ -1,5 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "style"];
+import "core-js/modules/es.object.assign.js";
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -14,7 +16,7 @@ export var HeaderMenu = function HeaderMenu(_ref) {
       noBorder = _ref.noBorder,
       className = _ref.className,
       style = _ref.style,
-      props = _objectWithoutProperties(_ref, ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "style"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledList, _extends({
     className: classNames('k-HeaderMenu', className, {
@@ -25,8 +27,8 @@ export var HeaderMenu = function HeaderMenu(_ref) {
       'k-HeaderMenu--hasBorderOnSideOnHover': borderSideOnHover,
       'k-HeaderMenu--hasBigItems': largeItem
     }),
-    style: _extends({}, style, {
-      '--headerMenu-background-colors-hover': backgroundColors === null || backgroundColors === void 0 ? void 0 : backgroundColors.hover
+    style: Object.assign({}, style, {
+      '--headerMenu-background-colors-hover': backgroundColors == null ? void 0 : backgroundColors.hover
     })
   }, props));
 };

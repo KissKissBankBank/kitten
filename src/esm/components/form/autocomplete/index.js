@@ -1,7 +1,11 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "items", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage", "variant"];
+import "core-js/modules/es.array.filter.js";
+import "core-js/modules/es.array.includes.js";
+import "core-js/modules/es.string.includes.js";
+import "core-js/modules/es.function.name.js";
+import "core-js/modules/es.array.map.js";
 import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import isFunction from 'lodash/fp/isFunction';
@@ -18,7 +22,7 @@ var maxItemsVisibled = 3;
 var borderSize = 2;
 var Wrapper = styled.div.withConfig({
   displayName: "autocomplete__Wrapper",
-  componentId: "lfeqwe-0"
+  componentId: "sc-lfeqwe-0"
 })(["display:flex;position:relative;.k-Form-Autocomplete__input{display:block;width:100%;height:", ";box-sizing:border-box;background:", ";border:", " solid ", ";padding:0 ", ";", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}&:focus{border-color:", ";outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}::-ms-clear{display:none;}}&.k-Form-Autocomplete--error .k-Form-Autocomplete__input{border-color:", ";color:", ";:focus{border-color:", ";color:", ";}}.k-Form-Autocomplete__loader{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;right:0;}.k-Form-Autocomplete__icon{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;}.k-Form-Autocomplete__suggestions{position:absolute;top:", ";left:0;right:0;overflow-y:auto;margin:0;padding:0;background:", ";border:", " solid ", ";border-top:none;list-style:none;height:calc(", " * var(--Autocomplete-suggestions,1));max-height:", ";}.k-Form-Autocomplete__suggestion__item{padding:", " ", ";", ";font-size:", ";line-height:1.3;color:", ";&.k-Form-Autocomplete__suggestion__item--noresult{font-style:italic;}&:not(.k-Form-Autocomplete__suggestion__item--noresult){cursor:pointer;transition:background-color 0.2s;:hover,:focus,:active{background-color:", ";}:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&[aria-selected='true']{background-color:", ";}}}&.k-Form-Autocomplete--hasIcon-left{.k-Form-Autocomplete__input{padding-left:", ";}.k-Form-Autocomplete__icon{left:0;}}&.k-Form-Autocomplete--hasIcon-right{.k-Form-Autocomplete__input{padding-right:", ";}.k-Form-Autocomplete__loader{padding-right:", ";}.k-Form-Autocomplete__icon{right:0;}}&.k-Form-Autocomplete--disabled{.k-Form-Autocomplete__icon{& > svg [stroke]:not([stroke='none']){stroke:", ";}& > svg [fill]:not([fill='none']){fill:", ";}}}&.k-Form-Autocomplete--orion .k-Form-Autocomplete__input{border-radius:", ";}"], pxToRem(50), COLORS.background1, pxToRem(borderSize), COLORS.line1, pxToRem(15), TYPOGRAPHY.fontStyles.light, stepToRem(-1), COLORS.font1, COLORS.font2, COLORS.font2, COLORS.line2, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, COLORS.error3, COLORS.error3, COLORS.line2, COLORS.font1, pxToRem(18), pxToRem(18), pxToRem(50), COLORS.background1, pxToRem(2), COLORS.line1, pxToRem(itemHeight), pxToRem(itemHeight * maxItemsVisibled), pxToRem(10), pxToRem(15), TYPOGRAPHY.fontStyles.light, stepToRem(-1), COLORS.font1, COLORS.background3, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, COLORS.line1, pxToRem(45), pxToRem(45), pxToRem(45), COLORS.font2, COLORS.font2, pxToRem(4));
 export var Autocomplete = function Autocomplete(_ref) {
   var _classNames;
@@ -37,27 +41,23 @@ export var Autocomplete = function Autocomplete(_ref) {
       noResultMessage = _ref.noResultMessage,
       shouldShowNoResultMessage = _ref.shouldShowNoResultMessage,
       variant = _ref.variant,
-      props = _objectWithoutProperties(_ref, ["className", "items", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage", "variant"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(defaultItems),
-      _useState2 = _slicedToArray(_useState, 2),
-      items = _useState2[0],
-      setItems = _useState2[1];
+      items = _useState[0],
+      setItems = _useState[1];
 
-  var _useState3 = useState(props.defaultValue),
-      _useState4 = _slicedToArray(_useState3, 2),
-      value = _useState4[0],
-      setValue = _useState4[1];
+  var _useState2 = useState(props.defaultValue),
+      value = _useState2[0],
+      setValue = _useState2[1];
 
-  var _useState5 = useState(-1),
-      _useState6 = _slicedToArray(_useState5, 2),
-      selectedItemIndex = _useState6[0],
-      setSelectedItemIndex = _useState6[1];
+  var _useState3 = useState(-1),
+      selectedItemIndex = _useState3[0],
+      setSelectedItemIndex = _useState3[1];
 
-  var _useState7 = useState(false),
-      _useState8 = _slicedToArray(_useState7, 2),
-      showSuggestions = _useState8[0],
-      setShowSuggestions = _useState8[1];
+  var _useState4 = useState(false),
+      showSuggestions = _useState4[0],
+      setShowSuggestions = _useState4[1];
 
   var inputEl = useRef(null);
   var suggestionsEl = useRef(null);
@@ -122,7 +122,7 @@ export var Autocomplete = function Autocomplete(_ref) {
   };
 
   var updateSuggestions = function updateSuggestions() {
-    var search = "".concat(value).toLowerCase();
+    var search = ("" + value).toLowerCase();
     var newItems = updateSuggestionsStrategy ? updateSuggestionsStrategy({
       items: defaultItems,
       value: value
@@ -159,7 +159,7 @@ export var Autocomplete = function Autocomplete(_ref) {
   };
 
   return /*#__PURE__*/React.createElement(Wrapper, {
-    className: classNames('k-Form-Autocomplete', className, "k-Form-Autocomplete--".concat(variant), (_classNames = {}, _defineProperty(_classNames, "k-Form-Autocomplete--hasIcon-".concat(iconPosition), !!icon), _defineProperty(_classNames, 'k-Form-Autocomplete--disabled', props.disabled), _classNames))
+    className: classNames('k-Form-Autocomplete', className, "k-Form-Autocomplete--" + variant, (_classNames = {}, _classNames["k-Form-Autocomplete--hasIcon-" + iconPosition] = !!icon, _classNames['k-Form-Autocomplete--disabled'] = props.disabled, _classNames))
   }, /*#__PURE__*/React.createElement("input", _extends({}, props, {
     error: error,
     ref: inputEl,
@@ -168,10 +168,10 @@ export var Autocomplete = function Autocomplete(_ref) {
     onChange: handleChange,
     onBlur: handleBlur,
     onKeyDown: handleKeyDown,
-    "aria-owns": "".concat(props.name, "-results"),
+    "aria-owns": props.name + "-results",
     "aria-expanded": showSuggestions && items.length > 0,
     "aria-autocomplete": "both",
-    "aria-activedescendant": items[selectedItemIndex] ? slugify("".concat(items[selectedItemIndex], "-").concat(selectedItemIndex)) : '',
+    "aria-activedescendant": items[selectedItemIndex] ? slugify(items[selectedItemIndex] + "-" + selectedItemIndex) : '',
     className: "k-Form-Autocomplete__input"
   })), isLoading && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Loader, {
     className: "k-Form-Autocomplete__loader",
@@ -181,12 +181,12 @@ export var Autocomplete = function Autocomplete(_ref) {
   }, "loading")), icon && /*#__PURE__*/React.createElement("span", {
     className: "k-Form-Autocomplete__icon",
     "aria-hidden": "true"
-  }, React.cloneElement(icon, {
+  }, /*#__PURE__*/React.cloneElement(icon, {
     width: 15,
     height: 15
   })), showSuggestions && items.length === 0 && noResultMessage && showNoResultMessage && /*#__PURE__*/React.createElement("ul", {
     ref: suggestionsEl,
-    id: "".concat(props.name, "-results"),
+    id: props.name + "-results",
     role: "listbox",
     tabIndex: "-1",
     style: {
@@ -199,7 +199,7 @@ export var Autocomplete = function Autocomplete(_ref) {
     tabIndex: "-1"
   }, noResultMessage)), showSuggestions && items.length > 0 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("ul", {
     ref: suggestionsEl,
-    id: "".concat(props.name, "-results"),
+    id: props.name + "-results",
     role: "listbox",
     tabIndex: "-1",
     style: {
@@ -209,7 +209,7 @@ export var Autocomplete = function Autocomplete(_ref) {
   }, items.map(function (item, index) {
     return /*#__PURE__*/React.createElement("li", {
       key: item + index,
-      id: slugify("".concat(item, "-").concat(index)),
+      id: slugify(item + "-" + index),
       onClick: handleClickItem(item),
       role: "option",
       "aria-selected": selectedItemIndex === index,

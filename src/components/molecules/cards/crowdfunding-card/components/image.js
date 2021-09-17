@@ -2,14 +2,16 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.default = void 0;
+
+require("core-js/modules/es.object.assign.js");
+
+require("core-js/modules/es.array.map.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -25,12 +27,14 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _gifVideo = require("../../../../../components/atoms/video/gif-video");
 
+var _excluded = ["backgroundColor", "alt"];
+
 var Image = function Image(_ref) {
   var imageContainerBackground = _ref.imageContainerBackground,
       _ref$imageProps = _ref.imageProps,
       backgroundColor = _ref$imageProps.backgroundColor,
       alt = _ref$imageProps.alt,
-      otherImageProps = (0, _objectWithoutProperties2.default)(_ref$imageProps, ["backgroundColor", "alt"]),
+      otherImageProps = (0, _objectWithoutPropertiesLoose2.default)(_ref$imageProps, _excluded),
       videoProps = _ref.videoProps,
       videoSources = _ref.videoSources,
       avatarProps = _ref.avatarProps,
@@ -47,19 +51,19 @@ var Image = function Image(_ref) {
   }, !loading && videoSources.length == 0 && /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, otherImageProps, {
     alt: alt || '',
     className: (0, _classnames.default)('k-CrowdfundingCard__image__image', otherImageProps.className),
-    style: backgroundColor ? (0, _extends2.default)({
+    style: backgroundColor ? Object.assign({
       backgroundColor: backgroundColor
     }, otherImageProps.style) : otherImageProps.style
   })), !loading && videoSources.length > 0 && /*#__PURE__*/_react.default.createElement(_gifVideo.GifVideo, (0, _extends2.default)({
     poster: otherImageProps.src
   }, videoProps, {
     className: (0, _classnames.default)('k-CrowdfundingCard__image__image', videoProps.className),
-    style: backgroundColor ? (0, _extends2.default)({
+    style: backgroundColor ? Object.assign({
       backgroundColor: backgroundColor
     }, videoProps.style) : videoProps.style
   }), videoSources.map(function (sourceProps) {
     return /*#__PURE__*/_react.default.createElement("source", (0, _extends2.default)({
-      key: "video_source_".concat(sourceProps.src)
+      key: "video_source_" + sourceProps.src
     }, sourceProps));
   }))), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-CrowdfundingCard__image__ownerContainer"

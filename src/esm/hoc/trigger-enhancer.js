@@ -1,29 +1,16 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _assertThisInitialized from "@babel/runtime/helpers/esm/assertThisInitialized";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
+import _extends from "@babel/runtime/helpers/extends";
+import _assertThisInitialized from "@babel/runtime/helpers/assertThisInitialized";
+import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
 import React from 'react';
 import { domElementHelper } from '../helpers/dom/element-helper';
 export var triggerEnhancer = function triggerEnhancer(WrappedComponent, wrappedComponentProps) {
   var TriggerWrapper = /*#__PURE__*/function (_React$Component) {
-    _inherits(TriggerWrapper, _React$Component);
-
-    var _super = _createSuper(TriggerWrapper);
+    _inheritsLoose(TriggerWrapper, _React$Component);
 
     function TriggerWrapper(props) {
       var _this;
 
-      _classCallCheck(this, TriggerWrapper);
-
-      _this = _super.call(this, props);
+      _this = _React$Component.call(this, props) || this;
       _this.state = {
         play: false
       };
@@ -31,91 +18,82 @@ export var triggerEnhancer = function triggerEnhancer(WrappedComponent, wrappedC
       return _this;
     }
 
-    _createClass(TriggerWrapper, [{
-      key: "componentDidMount",
-      value: function componentDidMount() {
-        if (this.shouldStart()) {
-          this.start();
-        }
-      }
-    }, {
-      key: "handleStop",
-      value: function handleStop() {
-        this.stop();
-        this.dispatchEvent(this.props.stopEventName);
-      }
-    }, {
-      key: "dispatchEvent",
-      value: function dispatchEvent(eventLabel) {
-        if (!domElementHelper.canUseDom()) return;
-        var event = document.createEvent('Event');
-        event.initEvent(eventLabel, true, true);
-        window.dispatchEvent(event);
-      }
-    }, {
-      key: "hasPlayed",
-      value: function hasPlayed() {
-        // TODO: better implementation of localStorage as state store for React
-        // component.
-        var componentState = JSON.parse(localStorage.getItem(this.props.storeName));
-        return componentState && componentState.hasPlayed;
-      }
-    }, {
-      key: "shouldStart",
-      value: function shouldStart() {
-        if (!domElementHelper.canUseDom()) {
-          return false;
-        }
+    var _proto = TriggerWrapper.prototype;
 
-        if (!this.props.verifyStorageOnStart) {
-          return true;
-        }
-
-        return this.props.autorun && !this.hasPlayed();
+    _proto.componentDidMount = function componentDidMount() {
+      if (this.shouldStart()) {
+        this.start();
       }
-    }, {
-      key: "start",
-      value: function start() {
-        var _this2 = this;
+    };
 
-        setTimeout(function () {
-          return _this2.setState({
-            play: true
-          });
-        }, 10);
-        setTimeout(function () {
-          var componentState = JSON.stringify({
-            hasPlayed: true
-          });
-          var storeName = _this2.props.storeName;
-          localStorage.setItem(storeName, componentState);
-        }, 1000);
+    _proto.handleStop = function handleStop() {
+      this.stop();
+      this.dispatchEvent(this.props.stopEventName);
+    };
+
+    _proto.dispatchEvent = function dispatchEvent(eventLabel) {
+      if (!domElementHelper.canUseDom()) return;
+      var event = document.createEvent('Event');
+      event.initEvent(eventLabel, true, true);
+      window.dispatchEvent(event);
+    };
+
+    _proto.hasPlayed = function hasPlayed() {
+      // TODO: better implementation of localStorage as state store for React
+      // component.
+      var componentState = JSON.parse(localStorage.getItem(this.props.storeName));
+      return componentState && componentState.hasPlayed;
+    };
+
+    _proto.shouldStart = function shouldStart() {
+      if (!domElementHelper.canUseDom()) {
+        return false;
       }
-    }, {
-      key: "stop",
-      value: function stop() {
-        this.setState({
-          play: false
+
+      if (!this.props.verifyStorageOnStart) {
+        return true;
+      }
+
+      return this.props.autorun && !this.hasPlayed();
+    };
+
+    _proto.start = function start() {
+      var _this2 = this;
+
+      setTimeout(function () {
+        return _this2.setState({
+          play: true
         });
-      }
-    }, {
-      key: "handlerProps",
-      value: function handlerProps() {
-        var handlerProps = {};
+      }, 10);
+      setTimeout(function () {
+        var componentState = JSON.stringify({
+          hasPlayed: true
+        });
+        var storeName = _this2.props.storeName;
+        localStorage.setItem(storeName, componentState);
+      }, 1000);
+    };
 
-        if (this.props.stopHandlerName) {
-          handlerProps[this.props.stopHandlerName] = this.handleStop;
-        }
+    _proto.stop = function stop() {
+      this.setState({
+        play: false
+      });
+    };
 
-        return handlerProps;
+    _proto.handlerProps = function handlerProps() {
+      var handlerProps = {};
+
+      if (this.props.stopHandlerName) {
+        handlerProps[this.props.stopHandlerName] = this.handleStop;
       }
-    }, {
-      key: "render",
-      value: function render() {
-        if (!this.state.play) return null;
-        return /*#__PURE__*/React.createElement(WrappedComponent, _extends({}, this.handlerProps(), wrappedComponentProps));
-      }
-    }]);
+
+      return handlerProps;
+    };
+
+    _proto.render = function render() {
+      if (!this.state.play) return null;
+      return /*#__PURE__*/React.createElement(WrappedComponent, _extends({}, this.handlerProps(), wrappedComponentProps));
+    };
 
     return TriggerWrapper;
   }(React.Component);

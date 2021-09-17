@@ -2,14 +2,14 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.TagButton = void 0;
+
+require("core-js/modules/es.string.big.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -24,6 +24,8 @@ var _typographyConfig = _interopRequireDefault(require("../../../../constants/ty
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
+
+var _excluded = ["children", "modifier", "selected", "tiny", "big", "huge", "icon", "className", "variant", "size", "tag", "as"];
 
 var StyledTagButton = _styledComponents.default.button.withConfig({
   displayName: "tag-button__StyledTagButton",
@@ -43,10 +45,10 @@ var TagButton = function TagButton(_ref) {
       size = _ref.size,
       tag = _ref.tag,
       as = _ref.as,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["children", "modifier", "selected", "tiny", "big", "huge", "icon", "className", "variant", "size", "tag", "as"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledTagButton, (0, _extends2.default)({
     type: !tag && !as ? 'button' : null,
-    className: (0, _classnames.default)('k-Buttons__tagButton', className, "k-Buttons__tagButton--".concat(modifier), "k-Buttons__tagButton--".concat(variant), "k-Buttons__tagButton--".concat(size), {
+    className: (0, _classnames.default)('k-Buttons__tagButton', className, "k-Buttons__tagButton--" + modifier, "k-Buttons__tagButton--" + variant, "k-Buttons__tagButton--" + size, {
       'k-Buttons__tagButton--selected': selected,
       'k-Buttons__tagButton--icon': icon
     }),

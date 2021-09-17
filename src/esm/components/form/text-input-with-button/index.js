@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["valid", "error", "disabled", "size", "value", "rounded", "buttonValue", "modifier", "buttonProps", "inputValue", "className", "inset"];
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
@@ -18,7 +19,7 @@ var StyledTextInputWithButton = styled.div.withConfig({
   var modifier = _ref.modifier;
   return modifierStyles(modifier);
 }, pxToRem(15), pxToRem(4), pxToRem(4), pxToRem(4), pxToRem(4), COLORS.background1, COLORS.line1, COLORS.line2, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, pxToRem(4), pxToRem(6), ScreenConfig.M.min, pxToRem(8), pxToRem(40), pxToRem(50), pxToRem(60), ScreenConfig.M.min, pxToRem(70), pxToRem(70), ScreenConfig.M.min, pxToRem(80), pxToRem(70), ScreenConfig.M.min, pxToRem(90), COLORS.valid, COLORS.valid, COLORS.error, COLORS.error);
-export var TextInputWithButton = React.forwardRef(function (_ref2, ref) {
+export var TextInputWithButton = /*#__PURE__*/React.forwardRef(function (_ref2, ref) {
   var valid = _ref2.valid,
       error = _ref2.error,
       disabled = _ref2.disabled,
@@ -31,10 +32,10 @@ export var TextInputWithButton = React.forwardRef(function (_ref2, ref) {
       inputValue = _ref2.inputValue,
       className = _ref2.className,
       inset = _ref2.inset,
-      others = _objectWithoutProperties(_ref2, ["valid", "error", "disabled", "size", "value", "rounded", "buttonValue", "modifier", "buttonProps", "inputValue", "className", "inset"]);
+      others = _objectWithoutPropertiesLoose(_ref2, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledTextInputWithButton, {
-    className: classNames('k-Form-TextInputWithButton', "k-Form-TextInputWithButton--".concat(size), {
+    className: classNames('k-Form-TextInputWithButton', "k-Form-TextInputWithButton--" + size, {
       'k-Form-TextInputWithButton--insetButton': inset,
       'k-Form-TextInputWithButton--roudedButton': rounded
     }),
@@ -52,7 +53,7 @@ export var TextInputWithButton = React.forwardRef(function (_ref2, ref) {
   })), /*#__PURE__*/React.createElement("button", _extends({
     type: "button"
   }, buttonProps, {
-    className: classNames('k-Form-TextInputWithButton__button', buttonProps === null || buttonProps === void 0 ? void 0 : buttonProps.className, {
+    className: classNames('k-Form-TextInputWithButton__button', buttonProps == null ? void 0 : buttonProps.className, {
       'k-Form-TextInputWithButton__button--valid': valid,
       'k-Form-TextInputWithButton__button--error': error,
       'k-Form-TextInputWithButton__button--disabled': disabled

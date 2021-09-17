@@ -1,5 +1,8 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style", "className"];
+import "core-js/modules/es.string.trim.js";
+import "core-js/modules/es.object.assign.js";
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -23,11 +26,11 @@ export var Button = function Button(_ref) {
       as = _ref.as,
       style = _ref.style,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
-  var hiddenMin = min ? "k-u-hidden@".concat(min, "-up") : '';
-  var hiddenMax = max ? "k-u-hidden@".concat(max, "-down") : '';
-  var textClassName = "k-HeaderNav__Button__text ".concat(hiddenMin, " ").concat(hiddenMax).trim();
+  var hiddenMin = min ? "k-u-hidden@" + min + "-up" : '';
+  var hiddenMax = max ? "k-u-hidden@" + max + "-down" : '';
+  var textClassName = ("k-HeaderNav__Button__text " + hiddenMin + " " + hiddenMax).trim();
   var ButtonComponent = 'a';
   var buttonProps = {
     href: href
@@ -55,7 +58,7 @@ export var Button = function Button(_ref) {
       'k-HeaderNav__Button--hasIcon': !!icon,
       'k-HeaderNav__Button--hasText': !!text
     }),
-    style: _extends({
+    style: Object.assign({
       '--HeaderMenu-Button-backgroundColor': backgroundColor,
       '--HeaderMenu-Button-backgroundColorHover': backgroundColorHover,
       '--HeaderMenu-Button-color': color,
@@ -63,7 +66,7 @@ export var Button = function Button(_ref) {
     }, style)
   }), text && /*#__PURE__*/React.createElement("span", {
     className: textClassName
-  }), icon && React.cloneElement(icon, {
+  }), icon && /*#__PURE__*/React.cloneElement(icon, {
     'aria-hidden': true
   }), icon && a11yText && /*#__PURE__*/React.createElement(VisuallyHidden, null, a11yText), text && /*#__PURE__*/React.createElement("span", {
     className: textClassName

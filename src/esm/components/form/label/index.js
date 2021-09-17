@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["tag", "className", "children", "focusId", "size", "withoutPointerEvents", "htmlFor"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -10,7 +11,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../constants/screen-config';
 var StyledLabel = styled.label.withConfig({
   displayName: "label__StyledLabel",
-  componentId: "l6ih7y-0"
+  componentId: "sc-l6ih7y-0"
 })(["display:block;", " cursor:pointer;font-size:", ";@media (min-width:", "){font-size:", ";}&.k-Label--tiny{line-height:1.3;font-size:", ";}&.k-Label--micro{line-height:1.3;font-size:", ";}&.k-Label--withoutPointerEvents{pointer-events:none;}"], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), pxToRem(ScreenConfig.S.min), stepToRem(0), stepToRem(0), stepToRem(-1));
 export var Label = function Label(_ref) {
   var tag = _ref.tag,
@@ -20,7 +21,7 @@ export var Label = function Label(_ref) {
       size = _ref.size,
       withoutPointerEvents = _ref.withoutPointerEvents,
       htmlFor = _ref.htmlFor,
-      other = _objectWithoutProperties(_ref, ["tag", "className", "children", "focusId", "size", "withoutPointerEvents", "htmlFor"]);
+      other = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var handleClick = function handleClick(e) {
     if (domElementHelper.canUseDom() && focusId) {
@@ -30,7 +31,7 @@ export var Label = function Label(_ref) {
   };
 
   return /*#__PURE__*/React.createElement(StyledLabel, _extends({
-    className: classNames('k-Label', className, "k-Label--".concat(size), {
+    className: classNames('k-Label', className, "k-Label--" + size, {
       'k-Label--withoutPointerEvents': withoutPointerEvents
     }),
     htmlFor: focusId || htmlFor,

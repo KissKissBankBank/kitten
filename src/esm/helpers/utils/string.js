@@ -1,3 +1,4 @@
+import "core-js/modules/es.array.slice.js";
 export var stringUtils = {
   /**
    * Converts the first character to uppercase.

@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["color", "value", "width", "strokeWidth", "variant", "className", "animationSpeed"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
@@ -28,7 +29,7 @@ var rotateAnimate = function rotateAnimate(_ref2) {
 
 var StyledMeterCircle = styled.circle.withConfig({
   displayName: "progress-ring__StyledMeterCircle",
-  componentId: "sdx1nz-0"
+  componentId: "sc-sdx1nz-0"
 })(["stroke-linecap:butt;stroke-dasharray:", ";stroke-dashoffset:", ";transform:rotate(-90deg);transform-origin:", ";animation:", " ", "s ease-out;&.k-Meters__ProgressRing--orion{stroke-linecap:round;}"], function (_ref3) {
   var r = _ref3.r;
   return getDashLength(r);
@@ -42,7 +43,7 @@ var StyledMeterCircle = styled.circle.withConfig({
 }, function (_ref5) {
   var cx = _ref5.cx,
       cy = _ref5.cy;
-  return "".concat(pxToRem(cx), " ").concat(pxToRem(cy));
+  return pxToRem(cx) + " " + pxToRem(cy);
 }, rotateAnimate, function (_ref6) {
   var animationSpeed = _ref6.animationSpeed;
   return animationSpeed;
@@ -55,12 +56,12 @@ export var ProgressRing = function ProgressRing(_ref7) {
       variant = _ref7.variant,
       className = _ref7.className,
       animationSpeed = _ref7.animationSpeed,
-      others = _objectWithoutProperties(_ref7, ["color", "value", "width", "strokeWidth", "variant", "className", "animationSpeed"]);
+      others = _objectWithoutPropertiesLoose(_ref7, _excluded);
 
   var circleX = width / 2;
   var circleY = width / 2;
   var radius = circleX - strokeWidth;
-  var viewBox = "0 0 ".concat(width, " ").concat(width);
+  var viewBox = "0 0 " + width + " " + width;
   var progressValue = value < 100 ? value : 100;
   return /*#__PURE__*/React.createElement("svg", _extends({}, others, {
     width: width,
@@ -83,7 +84,7 @@ export var ProgressRing = function ProgressRing(_ref7) {
     fill: "transparent",
     stroke: color,
     progressValue: progressValue,
-    className: classNames('k-Meters__ProgressRing', className, "k-Meters__ProgressRing--".concat(variant))
+    className: classNames('k-Meters__ProgressRing', className, "k-Meters__ProgressRing--" + variant)
   }));
 };
 ProgressRing.defaultProps = {

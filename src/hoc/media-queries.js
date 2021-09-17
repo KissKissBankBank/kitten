@@ -1,29 +1,37 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.mediaQueries = exports.withMediaQueries = void 0;
 
-var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
+require("core-js/modules/web.dom-collections.for-each.js");
 
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+require("core-js/modules/es.object.keys.js");
 
-var _extends3 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+require("core-js/modules/es.object.assign.js");
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+require("core-js/modules/es.array.includes.js");
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+require("core-js/modules/es.string.includes.js");
 
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/inheritsLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -31,9 +39,9 @@ var _mediaQueries = require("../helpers/utils/media-queries");
 
 var _screenConfig = require("../constants/screen-config");
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var viewPortTable = {
   viewportIsMobile: _screenConfig.SCREEN_SIZE_XS,
@@ -53,18 +61,18 @@ var withMediaQueries = function withMediaQueries(hocProps) {
 
 exports.withMediaQueries = withMediaQueries;
 
-var mediaQueries = function mediaQueries(WrappedComponent) {
-  var hocProps = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  return /*#__PURE__*/function (_Component) {
-    (0, _inherits2.default)(_class2, _Component);
+var mediaQueries = function mediaQueries(WrappedComponent, hocProps) {
+  if (hocProps === void 0) {
+    hocProps = {};
+  }
 
-    var _super = _createSuper(_class2);
+  return /*#__PURE__*/function (_Component) {
+    (0, _inheritsLoose2.default)(_class2, _Component);
 
     function _class2(props) {
       var _this;
 
-      (0, _classCallCheck2.default)(this, _class2);
-      _this = _super.call(this, props);
+      _this = _Component.call(this, props) || this;
 
       _this.setExposedMethods = function (wrappedComponentInstance) {
         if (!wrappedComponentInstance) return;
@@ -76,78 +84,78 @@ var mediaQueries = function mediaQueries(WrappedComponent) {
 
       _this.viewports = {};
       _this.state = Object.keys(hocProps).reduce(function (result, prop) {
-        return _this.isInvalidProp(prop) ? result : (0, _extends3.default)({}, result, (0, _defineProperty2.default)({}, prop, false));
+        var _Object$assign;
+
+        return _this.isInvalidProp(prop) ? result : Object.assign({}, result, (_Object$assign = {}, _Object$assign[prop] = false, _Object$assign));
       }, {});
       return _this;
     }
 
-    (0, _createClass2.default)(_class2, [{
-      key: "isInvalidProp",
-      value: function isInvalidProp(prop) {
-        return typeof hocProps[prop] === 'boolean' && !viewPortTable[prop] || !['boolean', 'string'].includes((0, _typeof2.default)(hocProps[prop]));
-      }
-    }, {
-      key: "warnIfHocPropIsDeprecated",
-      value: function warnIfHocPropIsDeprecated(prop) {
-        if (process.env.NODE_ENV === 'development') {
-          var deprecatedPropsToNewProps = {
-            viewportIsMobile: 'viewportIsXSOrLess',
-            viewportIsTabletOrLess: 'viewportIsMOrLess'
-          };
+    var _proto = _class2.prototype;
 
-          if (Object.keys(deprecatedPropsToNewProps).includes(prop)) {
-            console.warn("".concat(prop, " is deprecated. Please use ").concat(deprecatedPropsToNewProps[prop], " instead now."));
-          }
-        }
-      }
-    }, {
-      key: "componentDidMount",
-      value: function componentDidMount() {
-        var _this2 = this;
+    _proto.isInvalidProp = function isInvalidProp(prop) {
+      return typeof hocProps[prop] === 'boolean' && !viewPortTable[prop] || !['boolean', 'string'].includes(typeof hocProps[prop]);
+    };
 
-        var _loop = function _loop(prop) {
-          var propValue = hocProps[prop];
-
-          if (_this2.isInvalidProp(prop)) {
-            return "break";
-          }
-
-          _this2.warnIfHocPropIsDeprecated(prop);
-
-          _this2.viewports[prop] = typeof propValue === 'boolean' ? (0, _mediaQueries.createMatchMediaMax)(viewPortTable[prop]) : (0, _mediaQueries.createMatchMedia)(propValue);
-
-          _this2.viewports[prop].cb = function (event) {
-            return _this2.setState((0, _defineProperty2.default)({}, prop, event.matches));
-          };
-
-          _this2.viewports[prop].addListener(_this2.viewports[prop].cb);
-
-          _this2.viewports[prop].cb(_this2.viewports[prop]);
+    _proto.warnIfHocPropIsDeprecated = function warnIfHocPropIsDeprecated(prop) {
+      if (process.env.NODE_ENV === 'development') {
+        var deprecatedPropsToNewProps = {
+          viewportIsMobile: 'viewportIsXSOrLess',
+          viewportIsTabletOrLess: 'viewportIsMOrLess'
         };
 
-        for (var prop in hocProps) {
-          var _ret = _loop(prop);
-
-          if (_ret === "break") break;
+        if (Object.keys(deprecatedPropsToNewProps).includes(prop)) {
+          console.warn(prop + " is deprecated. Please use " + deprecatedPropsToNewProps[prop] + " instead now.");
         }
       }
-    }, {
-      key: "componentWillUnmount",
-      value: function componentWillUnmount() {
-        var _this3 = this;
+    };
 
-        Object.keys(this.viewports).forEach(function (prop) {
-          return _this3.viewports[prop].removeListener(_this3.viewports[prop].cb);
-        });
+    _proto.componentDidMount = function componentDidMount() {
+      var _this2 = this;
+
+      var _loop = function _loop(prop) {
+        var propValue = hocProps[prop];
+
+        if (_this2.isInvalidProp(prop)) {
+          return "break";
+        }
+
+        _this2.warnIfHocPropIsDeprecated(prop);
+
+        _this2.viewports[prop] = typeof propValue === 'boolean' ? (0, _mediaQueries.createMatchMediaMax)(viewPortTable[prop]) : (0, _mediaQueries.createMatchMedia)(propValue);
+
+        _this2.viewports[prop].cb = function (event) {
+          var _this2$setState;
+
+          return _this2.setState((_this2$setState = {}, _this2$setState[prop] = event.matches, _this2$setState));
+        };
+
+        _this2.viewports[prop].addListener(_this2.viewports[prop].cb);
+
+        _this2.viewports[prop].cb(_this2.viewports[prop]);
+      };
+
+      for (var prop in hocProps) {
+        var _ret = _loop(prop);
+
+        if (_ret === "break") break;
       }
-    }, {
-      key: "render",
-      value: function render() {
-        return /*#__PURE__*/_react.default.createElement(WrappedComponent, (0, _extends3.default)({
-          ref: this.setExposedMethods
-        }, this.props, this.state));
-      }
-    }]);
+    };
+
+    _proto.componentWillUnmount = function componentWillUnmount() {
+      var _this3 = this;
+
+      Object.keys(this.viewports).forEach(function (prop) {
+        return _this3.viewports[prop].removeListener(_this3.viewports[prop].cb);
+      });
+    };
+
+    _proto.render = function render() {
+      return /*#__PURE__*/_react.default.createElement(WrappedComponent, (0, _extends2.default)({
+        ref: this.setExposedMethods
+      }, this.props, this.state));
+    };
+
     return _class2;
   }(_react.Component);
 };

@@ -1,5 +1,11 @@
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
+import "core-js/modules/es.string.bold.js";
+import "core-js/modules/es.array.concat.js";
+import "core-js/modules/es.array.slice.js";
+import "core-js/modules/es.array.filter.js";
+import "core-js/modules/es.array.includes.js";
+import "core-js/modules/es.string.includes.js";
+import "core-js/modules/es.string.trim.js";
+import "core-js/modules/es.array.map.js";
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -26,27 +32,25 @@ export var TagInput = function TagInput(_ref) {
       size = _ref.size,
       variant = _ref.variant;
 
-  var _useState = useState(_toConsumableArray(initialItemsList)),
-      _useState2 = _slicedToArray(_useState, 2),
-      itemsList = _useState2[0],
-      setItemList = _useState2[1];
+  var _useState = useState([].concat(initialItemsList)),
+      itemsList = _useState[0],
+      setItemList = _useState[1];
 
-  var _useState3 = useState(null),
-      _useState4 = _slicedToArray(_useState3, 2),
-      lastRemoved = _useState4[0],
-      setLastRemoved = _useState4[1];
+  var _useState2 = useState(null),
+      lastRemoved = _useState2[0],
+      setLastRemoved = _useState2[1];
 
   var inputEl = useRef(null);
 
   var focusInputEl = function focusInputEl() {
     var _inputEl$current;
 
-    return !disabled && (inputEl === null || inputEl === void 0 ? void 0 : (_inputEl$current = inputEl.current) === null || _inputEl$current === void 0 ? void 0 : _inputEl$current.focus());
+    return !disabled && (inputEl == null ? void 0 : (_inputEl$current = inputEl.current) == null ? void 0 : _inputEl$current.focus());
   };
 
   var addValueToList = function addValueToList(value) {
     setItemList(function (currentList) {
-      return [].concat(_toConsumableArray(currentList), [value]);
+      return [].concat(currentList, [value]);
     });
   };
 
@@ -100,13 +104,13 @@ export var TagInput = function TagInput(_ref) {
   };
 
   return /*#__PURE__*/React.createElement(StyledWrapper, {
-    className: classNames('k-Form-TagList', className, "k-Form-TagList--".concat(size), "k-Form-TagList--".concat(variant), {
+    className: classNames('k-Form-TagList', className, "k-Form-TagList--" + size, "k-Form-TagList--" + variant, {
       'k-Form-TagList--disabled': disabled
     }),
     onClick: focusInputEl
   }, /*#__PURE__*/React.createElement("p", {
     className: "k-u-a11y-visuallyHidden",
-    id: "".concat(id, "-legend")
+    id: id + "-legend"
   }, helpMessage), /*#__PURE__*/React.createElement("ul", {
     className: "k-Form-TagList__list"
   }, !disabled && /*#__PURE__*/React.createElement("li", {
@@ -116,7 +120,7 @@ export var TagInput = function TagInput(_ref) {
     id: id,
     contentEditable: true,
     role: "textbox",
-    "aria-describedby": "".concat(id, "-legend"),
+    "aria-describedby": id + "-legend",
     "aria-placeholder": placeholder,
     onKeyDown: onKeyDown,
     className: "k-Form-TagList__input"
@@ -145,7 +149,7 @@ export var TagInput = function TagInput(_ref) {
     "aria-relevant": "additions removals"
   }, itemsList.map(function (item) {
     return /*#__PURE__*/React.createElement("li", {
-      key: "visuallyHidden-".concat(item)
+      key: "visuallyHidden-" + item
     }, item);
   })));
 };

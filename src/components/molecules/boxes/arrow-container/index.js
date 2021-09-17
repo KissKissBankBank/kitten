@@ -2,14 +2,14 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.ArrowContainer = void 0;
+
+require("core-js/modules/es.object.assign.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -22,6 +22,8 @@ var _typography = require("../../../../helpers/utils/typography");
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
+
+var _excluded = ["children", "className", "color", "size", "distance", "distanceAsPercentage", "distanceIsReverse", "position", "centered", "padding", "shadow", "borderRadius", "borderColor", "borderWidth", "style"];
 
 var Container = _styledComponents.default.div.withConfig({
   displayName: "arrow-container__Container",
@@ -44,15 +46,15 @@ var ArrowContainer = function ArrowContainer(_ref) {
       borderColor = _ref.borderColor,
       borderWidth = _ref.borderWidth,
       style = _ref.style,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "className", "color", "size", "distance", "distanceAsPercentage", "distanceIsReverse", "position", "centered", "padding", "shadow", "borderRadius", "borderColor", "borderWidth", "style"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var arrowDistance = function () {
     switch (true) {
       case !!centered:
-        return "calc(50% - ".concat((0, _typography.pxToRem)(size), ")");
+        return "calc(50% - " + (0, _typography.pxToRem)(size) + ")";
 
       case !!distanceAsPercentage:
-        return "calc(".concat(distance, "% - ").concat((0, _typography.pxToRem)(size), ")");
+        return "calc(" + distance + "% - " + (0, _typography.pxToRem)(size) + ")";
 
       default:
         return (0, _typography.pxToRem)(distance);
@@ -63,12 +65,12 @@ var ArrowContainer = function ArrowContainer(_ref) {
   var borderDistance = borderWidth % 2 === 0 ? Math.floor(rawDistanceValue) : Math.ceil(rawDistanceValue);
   var borderSize = borderDistance + size;
   return /*#__PURE__*/_react.default.createElement(Container, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-ArrowContainer', className, "k-ArrowContainer--".concat(position), {
+    className: (0, _classnames.default)('k-ArrowContainer', className, "k-ArrowContainer--" + position, {
       'k-ArrowContainer--hasShadow': shadow,
       'k-ArrowContainer--hasBorder': borderWidth > 0,
       'k-ArrowContainer--reverseDistance': distanceIsReverse
     }),
-    style: (0, _extends2.default)({}, style, {
+    style: Object.assign({}, style, {
       '--k-ArrowContainer-arrowDistance': arrowDistance,
       '--k-ArrowContainer-arrowSize': (0, _typography.pxToRem)(size),
       '--k-ArrowContainer-borderColor': borderColor,

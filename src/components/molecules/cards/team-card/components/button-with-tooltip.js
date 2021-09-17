@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.TeamCardButtonWithTooltip = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -24,6 +22,8 @@ var _colorsConfig = _interopRequireDefault(require("../../../../../constants/col
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _typography = require("../../../../../helpers/utils/typography");
+
+var _excluded = ["phoneNumber", "tooltipColor"];
 
 var StyledTeamCardButtonWithTooltip = _styledComponents.default.a.withConfig({
   displayName: "button-with-tooltip__StyledTeamCardButtonWithTooltip",
@@ -42,9 +42,9 @@ var StyledTeamCardButtonWithTooltip = _styledComponents.default.a.withConfig({
 var TeamCardButtonWithTooltip = function TeamCardButtonWithTooltip(_ref4) {
   var phoneNumber = _ref4.phoneNumber,
       tooltipColor = _ref4.tooltipColor,
-      props = (0, _objectWithoutProperties2.default)(_ref4, ["phoneNumber", "tooltipColor"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref4, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledTeamCardButtonWithTooltip, (0, _extends2.default)({
-    href: "tel:".concat(phoneNumber),
+    href: "tel:" + phoneNumber,
     tooltipColor: tooltipColor
   }, props), /*#__PURE__*/_react.default.createElement("span", {
     className: "k-TeamCardButtonWithTooltip__tooltip"

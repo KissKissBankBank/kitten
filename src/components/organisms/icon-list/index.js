@@ -2,9 +2,7 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.IconList = void 0;
 
 var _react = _interopRequireDefault(require("react"));
@@ -29,10 +27,10 @@ IconList.Item = _item.Item;
 
 var StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "icon-list__StyledContainer",
-  componentId: "w4pzrv-0"
+  componentId: "sc-w4pzrv-0"
 })(["position:relative;padding:", " 0;"], (0, _typography.pxToRem)(1));
 
 var StyledList = _styledComponents.default.ul.withConfig({
   displayName: "icon-list__StyledList",
-  componentId: "w4pzrv-1"
+  componentId: "sc-w4pzrv-1"
 })(["margin:0;padding:", " 0;list-style:none;:before{position:absolute;top:0;bottom:0;left:", ";z-index:-1;content:'';border-left:2px dashed ", ";}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(24), _colorsConfig.default.line1);

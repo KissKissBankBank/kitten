@@ -1,6 +1,8 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["ratio", "previewProps", "iframeHtml", "playButtonLabel", "style", "className"];
+import "core-js/modules/es.array.includes.js";
+import "core-js/modules/es.object.assign.js";
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
@@ -15,7 +17,7 @@ var playerButtonSize = 90;
 var playerButtonXSSize = 70;
 var StyledEmbedPlayer = styled.div.withConfig({
   displayName: "embed-player__StyledEmbedPlayer",
-  componentId: "hpyyxa-0"
+  componentId: "sc-hpyyxa-0"
 })(["position:relative;display:block;width:100%;background-color:", ";.k-EmbedPlayer__thumbnail{display:block;width:100%;object-fit:cover;object-position:center;}.k-EmbedPlayer__embededPlayer{position:absolute;top:0;width:100%;height:100%;}&:hover .k-EmbedPlayer__button,&:focus .k-EmbedPlayer__button{background-color:", ";.k-EmbedPlayer__buttonPicto{fill:", ";}}&:active .k-EmbedPlayer__button{background-color:", ";.k-EmbedPlayer__buttonPicto{fill:", ";}}.k-EmbedPlayer__button{width:", ";height:", ";top:calc(50% - ", ");left:calc(50% - ", ");background:", ";position:absolute;display:flex;align-items:center;justify-content:center;z-index:1;@media (min-width:", "){width:", ";height:", ";top:calc(50% - ", ");left:calc(50% - ", ");}}.k-EmbedPlayer__buttonPicto{width:", ";height:", ";@media (min-width:", "){width:", ";height:", ";}}.k-EmbedPlayer__playerPreview{position:relative;transition:opacity ease 600ms;z-index:1;opacity:1;}&.k-EmbedPlayer--videoIsPlaying .k-EmbedPlayer__playerPreview{opacity:0;z-index:0;}&.k-EmbedPlayer--cursorPointer .k-EmbedPlayer__playerPreview{cursor:pointer;}"], COLORS.font1, COLORS.primary2, COLORS.background1, COLORS.primary3, COLORS.background1, pxToRem(playerButtonXSSize), pxToRem(playerButtonXSSize), pxToRem(playerButtonXSSize / 2), pxToRem(playerButtonXSSize / 2), COLORS.background1, pxToRem(ScreenConfig.S.min), pxToRem(playerButtonSize), pxToRem(playerButtonSize), pxToRem(playerButtonSize / 2), pxToRem(playerButtonSize / 2), pxToRem(8), pxToRem(8), pxToRem(ScreenConfig.S.min), pxToRem(10), pxToRem(10));
 export var EmbedPlayer = function EmbedPlayer(_ref) {
   var ratio = _ref.ratio,
@@ -27,12 +29,11 @@ export var EmbedPlayer = function EmbedPlayer(_ref) {
       _ref$style = _ref.style,
       mainStyle = _ref$style === void 0 ? void 0 : _ref$style,
       className = _ref.className,
-      others = _objectWithoutProperties(_ref, ["ratio", "previewProps", "iframeHtml", "playButtonLabel", "style", "className"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      isPlayerVisible = _useState2[0],
-      setPlayerVisibility = _useState2[1];
+      isPlayerVisible = _useState[0],
+      setPlayerVisibility = _useState[1];
 
   var previewVideo = useRef(null);
   var validRatio = parseInt(ratio, 10);
@@ -61,7 +62,7 @@ export var EmbedPlayer = function EmbedPlayer(_ref) {
   return /*#__PURE__*/React.createElement(StyledEmbedPlayer, _extends({
     ref: previewVideo
   }, others, {
-    style: _extends({}, mainStyle),
+    style: Object.assign({}, mainStyle),
     onClick: hasIframeHtml ? handleClick : null,
     onKeyPress: hasIframeHtml ? handleKeyPress : null,
     onFocus: hasIframeHtml ? handleFocus : null,
@@ -83,7 +84,7 @@ export var EmbedPlayer = function EmbedPlayer(_ref) {
   }))), /*#__PURE__*/React.createElement(ResponsiveIframeContainer, {
     ratio: validRatio
   }, /*#__PURE__*/React.createElement("img", _extends({}, thumbnail, {
-    className: "k-EmbedPlayer__thumbnail ".concat(thumbnail.className || '')
+    className: "k-EmbedPlayer__thumbnail " + (thumbnail.className || '')
   }))), badgeComponent), hasIframeHtml && isPlayerVisible && /*#__PURE__*/React.createElement("div", {
     className: "k-EmbedPlayer__embededPlayer"
   }, /*#__PURE__*/React.createElement(ResponsiveIframeContainer, {

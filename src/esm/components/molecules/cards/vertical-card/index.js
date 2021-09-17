@@ -1,5 +1,9 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["imageProps", "title", "titleTag", "description", "descriptionTag", "withTitleStroke", "textAlign"],
+    _excluded2 = ["style"];
+import "core-js/modules/es.symbol.js";
+import "core-js/modules/es.symbol.description.js";
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
@@ -56,10 +60,10 @@ export var VerticalCard = function VerticalCard(_ref4) {
       descriptionTag = _ref4.descriptionTag,
       withTitleStroke = _ref4.withTitleStroke,
       textAlign = _ref4.textAlign,
-      others = _objectWithoutProperties(_ref4, ["imageProps", "title", "titleTag", "description", "descriptionTag", "withTitleStroke", "textAlign"]);
+      others = _objectWithoutPropertiesLoose(_ref4, _excluded);
 
   var style = imageProps.style,
-      imgProps = _objectWithoutProperties(imageProps, ["style"]);
+      imgProps = _objectWithoutPropertiesLoose(imageProps, _excluded2);
 
   return /*#__PURE__*/React.createElement(Card, _extends({
     textAlign: textAlign

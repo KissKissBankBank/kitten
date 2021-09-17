@@ -1,5 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["ratio", "style", "className"];
+import "core-js/modules/es.object.assign.js";
 import React from 'react';
 import classNames from 'classnames';
 import styled from 'styled-components';
@@ -11,12 +13,12 @@ export var ResponsiveIframeContainer = function ResponsiveIframeContainer(_ref) 
   var ratio = _ref.ratio,
       style = _ref.style,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["ratio", "style", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledWrapper, _extends({
     className: classNames('k-ResponsiveIframeContainer', className),
-    style: _extends({}, style, {
-      '--ResponsiveImageContainer-ratio': "".concat(ratio, "%")
+    style: Object.assign({}, style, {
+      '--ResponsiveImageContainer-ratio': ratio + "%"
     })
   }, props));
 };

@@ -1,13 +1,5 @@
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
+import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
+import "core-js/modules/es.array.filter.js";
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
@@ -33,16 +25,12 @@ var StyledCartRewardCard = styled.div.withConfig({
   return pxToRem(elementHeight);
 }, garbageButtonKeyframes, pxToRem(20), pxToRem(20), pxToRem(500), pxToRem(ScreenConfig.S.min), pxToRem(40), pxToRem(40), pxToRem(-borderWidth), pxToRem(-borderWidth));
 export var CartRewardCard = /*#__PURE__*/function (_Component) {
-  _inherits(CartRewardCard, _Component);
-
-  var _super = _createSuper(CartRewardCard);
+  _inheritsLoose(CartRewardCard, _Component);
 
   function CartRewardCard(props) {
     var _this;
 
-    _classCallCheck(this, CartRewardCard);
-
-    _this = _super.call(this, props);
+    _this = _Component.call(this, props) || this;
 
     _this.handleCloseClick = function () {
       if (_this.props.onCloseClick) {
@@ -71,107 +59,103 @@ export var CartRewardCard = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(CartRewardCard, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
+  var _proto = CartRewardCard.prototype;
 
-      return /*#__PURE__*/React.createElement(StyledCartRewardCard, {
-        ref: function ref(div) {
-          _this2.container = div;
-        },
-        onAnimationEnd: this.handleAnimationEnd,
-        className: classNames('k-CartRewardCard', {
-          'k-CartRewardCard--hidden': this.state.isHidden
-        }),
-        elementHeight: this.state.height
-      }, this.renderGarbage(), this.renderDescription());
-    }
-  }, {
-    key: "renderDescription",
-    value: function renderDescription() {
-      var _this$props = this.props,
-          titleTag = _this$props.titleTag,
-          titleAmount = _this$props.titleAmount,
-          subtitle = _this$props.subtitle,
-          descriptionTag = _this$props.descriptionTag,
-          children = _this$props.children,
-          textDescription = _this$props.textDescription;
-      var description = React.Children.toArray(children).filter(function (child) {
-        return child.type === CartRewardCard.Description;
-      });
-      return /*#__PURE__*/React.createElement("div", {
-        className: "k-u-margin-bottom-quadruple k-CartRewardCard__description"
-      }, /*#__PURE__*/React.createElement("div", {
-        className: classNames('k-u-margin-bottom-double', {
-          'k-u-margin-bottom-single@xs-down': !subtitle
-        })
-      }, /*#__PURE__*/React.createElement(Title, {
-        italic: true,
-        modifier: "quinary",
-        noMargin: true,
-        tag: titleTag
-      }, titleAmount)), subtitle && /*#__PURE__*/React.createElement("div", {
-        className: "k-u-margin-bottom-single k-u-margin-top-double"
-      }, /*#__PURE__*/React.createElement(Text, {
-        weight: "bold",
-        size: "default"
-      }, subtitle)), /*#__PURE__*/React.createElement("div", {
-        className: classNames('k-u-margin-bottom-double', 'k-u-margin-top-double', {
-          'k-u-margin-top-single@xs-down': !subtitle
-        })
-      }, /*#__PURE__*/React.createElement(Paragraph, {
-        tag: descriptionTag,
-        noMargin: true,
-        modifier: "tertiary"
-      }, textDescription, description)), this.renderBottomContent());
-    }
-  }, {
-    key: "renderGarbage",
-    value: function renderGarbage() {
-      return /*#__PURE__*/React.createElement("div", {
-        className: "k-CartRewardCard__cart"
-      }, /*#__PURE__*/React.createElement(ButtonIcon, {
-        type: "button",
-        "aria-label": this.props.deleteButtonA11yText,
-        modifier: "hydrogen",
-        size: "micro",
-        onClick: this.handleCloseClick,
-        className: "k-CartRewardCard__garbage"
-      }, /*#__PURE__*/React.createElement(GarbageIcon, {
-        "aria-hidden": true,
-        className: "k-ButtonIcon__svg"
-      })));
-    }
-  }, {
-    key: "renderBottomContent",
-    value: function renderBottomContent() {
-      var _this$props2 = this.props,
-          shippingTitle = _this$props2.shippingTitle,
-          shippingValue = _this$props2.shippingValue,
-          updateAmountTitle = _this$props2.updateAmountTitle,
-          updateAmountLink = _this$props2.updateAmountLink,
-          children = _this$props2.children;
-      var informationElements = React.Children.toArray(children).filter(function (child) {
-        return child.type === CartRewardCard.Information;
-      });
-      return /*#__PURE__*/React.createElement(React.Fragment, null, shippingTitle && shippingValue && /*#__PURE__*/React.createElement(Marger, {
-        top: "2"
-      }, /*#__PURE__*/React.createElement(CartRewardCard.Information, {
-        title: shippingTitle,
-        value: shippingValue
-      })), informationElements, updateAmountTitle && /*#__PURE__*/React.createElement(Marger, {
-        top: "2"
-      }, /*#__PURE__*/React.createElement(Text, {
-        tag: "a",
-        href: updateAmountLink,
-        color: "primary1",
-        decoration: "none",
-        weight: "regular",
-        size: "tiny"
-      }, updateAmountTitle)));
-    }
-  }]);
+  _proto.render = function render() {
+    var _this2 = this;
+
+    return /*#__PURE__*/React.createElement(StyledCartRewardCard, {
+      ref: function ref(div) {
+        _this2.container = div;
+      },
+      onAnimationEnd: this.handleAnimationEnd,
+      className: classNames('k-CartRewardCard', {
+        'k-CartRewardCard--hidden': this.state.isHidden
+      }),
+      elementHeight: this.state.height
+    }, this.renderGarbage(), this.renderDescription());
+  };
+
+  _proto.renderDescription = function renderDescription() {
+    var _this$props = this.props,
+        titleTag = _this$props.titleTag,
+        titleAmount = _this$props.titleAmount,
+        subtitle = _this$props.subtitle,
+        descriptionTag = _this$props.descriptionTag,
+        children = _this$props.children,
+        textDescription = _this$props.textDescription;
+    var description = React.Children.toArray(children).filter(function (child) {
+      return child.type === CartRewardCard.Description;
+    });
+    return /*#__PURE__*/React.createElement("div", {
+      className: "k-u-margin-bottom-quadruple k-CartRewardCard__description"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: classNames('k-u-margin-bottom-double', {
+        'k-u-margin-bottom-single@xs-down': !subtitle
+      })
+    }, /*#__PURE__*/React.createElement(Title, {
+      italic: true,
+      modifier: "quinary",
+      noMargin: true,
+      tag: titleTag
+    }, titleAmount)), subtitle && /*#__PURE__*/React.createElement("div", {
+      className: "k-u-margin-bottom-single k-u-margin-top-double"
+    }, /*#__PURE__*/React.createElement(Text, {
+      weight: "bold",
+      size: "default"
+    }, subtitle)), /*#__PURE__*/React.createElement("div", {
+      className: classNames('k-u-margin-bottom-double', 'k-u-margin-top-double', {
+        'k-u-margin-top-single@xs-down': !subtitle
+      })
+    }, /*#__PURE__*/React.createElement(Paragraph, {
+      tag: descriptionTag,
+      noMargin: true,
+      modifier: "tertiary"
+    }, textDescription, description)), this.renderBottomContent());
+  };
+
+  _proto.renderGarbage = function renderGarbage() {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "k-CartRewardCard__cart"
+    }, /*#__PURE__*/React.createElement(ButtonIcon, {
+      type: "button",
+      "aria-label": this.props.deleteButtonA11yText,
+      modifier: "hydrogen",
+      size: "micro",
+      onClick: this.handleCloseClick,
+      className: "k-CartRewardCard__garbage"
+    }, /*#__PURE__*/React.createElement(GarbageIcon, {
+      "aria-hidden": true,
+      className: "k-ButtonIcon__svg"
+    })));
+  };
+
+  _proto.renderBottomContent = function renderBottomContent() {
+    var _this$props2 = this.props,
+        shippingTitle = _this$props2.shippingTitle,
+        shippingValue = _this$props2.shippingValue,
+        updateAmountTitle = _this$props2.updateAmountTitle,
+        updateAmountLink = _this$props2.updateAmountLink,
+        children = _this$props2.children;
+    var informationElements = React.Children.toArray(children).filter(function (child) {
+      return child.type === CartRewardCard.Information;
+    });
+    return /*#__PURE__*/React.createElement(React.Fragment, null, shippingTitle && shippingValue && /*#__PURE__*/React.createElement(Marger, {
+      top: "2"
+    }, /*#__PURE__*/React.createElement(CartRewardCard.Information, {
+      title: shippingTitle,
+      value: shippingValue
+    })), informationElements, updateAmountTitle && /*#__PURE__*/React.createElement(Marger, {
+      top: "2"
+    }, /*#__PURE__*/React.createElement(Text, {
+      tag: "a",
+      href: updateAmountLink,
+      color: "primary1",
+      decoration: "none",
+      weight: "regular",
+      size: "tiny"
+    }, updateAmountTitle)));
+  };
 
   return CartRewardCard;
 }(Component);

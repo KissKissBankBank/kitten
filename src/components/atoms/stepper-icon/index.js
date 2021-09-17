@@ -2,12 +2,10 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.StepperIcon = exports.StepperIconValidated = exports.StepperIconInProgress = exports.StepperIconDefault = void 0;
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -20,6 +18,8 @@ var _arrowIcon = require("../../../components/graphics/icons/arrow-icon");
 var _checkedIcon = require("../../../components/graphics/icons/checked-icon");
 
 var _iconBadge = require("../../../components/atoms/icon-badge");
+
+var _excluded = ["state"];
 
 var StepperIconDefault = function StepperIconDefault(props) {
   return /*#__PURE__*/_react.default.createElement(StepperIcon, (0, _extends2.default)({}, props, {
@@ -47,7 +47,7 @@ exports.StepperIconValidated = StepperIconValidated;
 
 var StepperIcon = function StepperIcon(_ref) {
   var state = _ref.state,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["state"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   if (state === 'inProgress' || state === 'progress') {
     return /*#__PURE__*/_react.default.createElement(_iconBadge.IconBadge, (0, _extends2.default)({

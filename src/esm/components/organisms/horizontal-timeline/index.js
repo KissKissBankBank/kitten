@@ -1,5 +1,8 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "className", "ellipsisColumns", "style"];
+import "core-js/modules/es.object.assign.js";
+import "core-js/modules/es.array.map.js";
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -30,19 +33,19 @@ export var HorizontalTimeline = function HorizontalTimeline(_ref2) {
       className = _ref2.className,
       ellipsisColumns = _ref2.ellipsisColumns,
       style = _ref2.style,
-      props = _objectWithoutProperties(_ref2, ["children", "className", "ellipsisColumns", "style"]);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded);
 
   var columnsCount = React.Children.count(children);
   return /*#__PURE__*/React.createElement(StyledHorizontalTimeline, _extends({
     className: classNames('k-HorizontalTimeline', className),
-    style: _extends({}, style, {
+    style: Object.assign({}, style, {
       '--HorizontalTimeline-columnsCount': columnsCount
     })
   }, props), children, /*#__PURE__*/React.createElement("i", {
     className: "k-HorizontalTimeline__line"
-  }), ellipsisColumns === null || ellipsisColumns === void 0 ? void 0 : ellipsisColumns.map(function (value) {
+  }), ellipsisColumns == null ? void 0 : ellipsisColumns.map(function (value) {
     return /*#__PURE__*/React.createElement("b", {
-      key: "ellipsis-marker-".concat(value),
+      key: "ellipsis-marker-" + value,
       className: "k-HorizontalTimeline__ellipsis",
       style: {
         '--HorizontalTimeline-ellipsis-column': value

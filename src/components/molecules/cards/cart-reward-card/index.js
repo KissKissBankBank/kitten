@@ -1,23 +1,27 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.CartRewardCard = void 0;
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+require("core-js/modules/es.array.filter.js");
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/inheritsLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -49,9 +53,9 @@ var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecate
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var garbageButtonKeyframes = (0, _styledComponents.keyframes)(["0%{opacity:1;}100%{opacity:0;height:0;}"]);
 var borderWidth = 2;
@@ -65,15 +69,12 @@ var StyledCartRewardCard = _styledComponents.default.div.withConfig({
 }, garbageButtonKeyframes, (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(500), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(-borderWidth), (0, _typography.pxToRem)(-borderWidth));
 
 var CartRewardCard = /*#__PURE__*/function (_Component) {
-  (0, _inherits2.default)(CartRewardCard, _Component);
-
-  var _super = _createSuper(CartRewardCard);
+  (0, _inheritsLoose2.default)(CartRewardCard, _Component);
 
   function CartRewardCard(props) {
     var _this;
 
-    (0, _classCallCheck2.default)(this, CartRewardCard);
-    _this = _super.call(this, props);
+    _this = _Component.call(this, props) || this;
 
     _this.handleCloseClick = function () {
       if (_this.props.onCloseClick) {
@@ -102,111 +103,108 @@ var CartRewardCard = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  (0, _createClass2.default)(CartRewardCard, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
+  var _proto = CartRewardCard.prototype;
 
-      return /*#__PURE__*/_react.default.createElement(StyledCartRewardCard, {
-        ref: function ref(div) {
-          _this2.container = div;
-        },
-        onAnimationEnd: this.handleAnimationEnd,
-        className: (0, _classnames.default)('k-CartRewardCard', {
-          'k-CartRewardCard--hidden': this.state.isHidden
-        }),
-        elementHeight: this.state.height
-      }, this.renderGarbage(), this.renderDescription());
-    }
-  }, {
-    key: "renderDescription",
-    value: function renderDescription() {
-      var _this$props = this.props,
-          titleTag = _this$props.titleTag,
-          titleAmount = _this$props.titleAmount,
-          subtitle = _this$props.subtitle,
-          descriptionTag = _this$props.descriptionTag,
-          children = _this$props.children,
-          textDescription = _this$props.textDescription;
+  _proto.render = function render() {
+    var _this2 = this;
 
-      var description = _react.default.Children.toArray(children).filter(function (child) {
-        return child.type === CartRewardCard.Description;
-      });
+    return /*#__PURE__*/_react.default.createElement(StyledCartRewardCard, {
+      ref: function ref(div) {
+        _this2.container = div;
+      },
+      onAnimationEnd: this.handleAnimationEnd,
+      className: (0, _classnames.default)('k-CartRewardCard', {
+        'k-CartRewardCard--hidden': this.state.isHidden
+      }),
+      elementHeight: this.state.height
+    }, this.renderGarbage(), this.renderDescription());
+  };
 
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "k-u-margin-bottom-quadruple k-CartRewardCard__description"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: (0, _classnames.default)('k-u-margin-bottom-double', {
-          'k-u-margin-bottom-single@xs-down': !subtitle
-        })
-      }, /*#__PURE__*/_react.default.createElement(_title.Title, {
-        italic: true,
-        modifier: "quinary",
-        noMargin: true,
-        tag: titleTag
-      }, titleAmount)), subtitle && /*#__PURE__*/_react.default.createElement("div", {
-        className: "k-u-margin-bottom-single k-u-margin-top-double"
-      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
-        weight: "bold",
-        size: "default"
-      }, subtitle)), /*#__PURE__*/_react.default.createElement("div", {
-        className: (0, _classnames.default)('k-u-margin-bottom-double', 'k-u-margin-top-double', {
-          'k-u-margin-top-single@xs-down': !subtitle
-        })
-      }, /*#__PURE__*/_react.default.createElement(_next.Paragraph, {
-        tag: descriptionTag,
-        noMargin: true,
-        modifier: "tertiary"
-      }, textDescription, description)), this.renderBottomContent());
-    }
-  }, {
-    key: "renderGarbage",
-    value: function renderGarbage() {
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "k-CartRewardCard__cart"
-      }, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
-        type: "button",
-        "aria-label": this.props.deleteButtonA11yText,
-        modifier: "hydrogen",
-        size: "micro",
-        onClick: this.handleCloseClick,
-        className: "k-CartRewardCard__garbage"
-      }, /*#__PURE__*/_react.default.createElement(_garbageIcon.GarbageIcon, {
-        "aria-hidden": true,
-        className: "k-ButtonIcon__svg"
-      })));
-    }
-  }, {
-    key: "renderBottomContent",
-    value: function renderBottomContent() {
-      var _this$props2 = this.props,
-          shippingTitle = _this$props2.shippingTitle,
-          shippingValue = _this$props2.shippingValue,
-          updateAmountTitle = _this$props2.updateAmountTitle,
-          updateAmountLink = _this$props2.updateAmountLink,
-          children = _this$props2.children;
+  _proto.renderDescription = function renderDescription() {
+    var _this$props = this.props,
+        titleTag = _this$props.titleTag,
+        titleAmount = _this$props.titleAmount,
+        subtitle = _this$props.subtitle,
+        descriptionTag = _this$props.descriptionTag,
+        children = _this$props.children,
+        textDescription = _this$props.textDescription;
 
-      var informationElements = _react.default.Children.toArray(children).filter(function (child) {
-        return child.type === CartRewardCard.Information;
-      });
+    var description = _react.default.Children.toArray(children).filter(function (child) {
+      return child.type === CartRewardCard.Description;
+    });
 
-      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, shippingTitle && shippingValue && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
-        top: "2"
-      }, /*#__PURE__*/_react.default.createElement(CartRewardCard.Information, {
-        title: shippingTitle,
-        value: shippingValue
-      })), informationElements, updateAmountTitle && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
-        top: "2"
-      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
-        tag: "a",
-        href: updateAmountLink,
-        color: "primary1",
-        decoration: "none",
-        weight: "regular",
-        size: "tiny"
-      }, updateAmountTitle)));
-    }
-  }]);
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: "k-u-margin-bottom-quadruple k-CartRewardCard__description"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: (0, _classnames.default)('k-u-margin-bottom-double', {
+        'k-u-margin-bottom-single@xs-down': !subtitle
+      })
+    }, /*#__PURE__*/_react.default.createElement(_title.Title, {
+      italic: true,
+      modifier: "quinary",
+      noMargin: true,
+      tag: titleTag
+    }, titleAmount)), subtitle && /*#__PURE__*/_react.default.createElement("div", {
+      className: "k-u-margin-bottom-single k-u-margin-top-double"
+    }, /*#__PURE__*/_react.default.createElement(_text.Text, {
+      weight: "bold",
+      size: "default"
+    }, subtitle)), /*#__PURE__*/_react.default.createElement("div", {
+      className: (0, _classnames.default)('k-u-margin-bottom-double', 'k-u-margin-top-double', {
+        'k-u-margin-top-single@xs-down': !subtitle
+      })
+    }, /*#__PURE__*/_react.default.createElement(_next.Paragraph, {
+      tag: descriptionTag,
+      noMargin: true,
+      modifier: "tertiary"
+    }, textDescription, description)), this.renderBottomContent());
+  };
+
+  _proto.renderGarbage = function renderGarbage() {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: "k-CartRewardCard__cart"
+    }, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
+      type: "button",
+      "aria-label": this.props.deleteButtonA11yText,
+      modifier: "hydrogen",
+      size: "micro",
+      onClick: this.handleCloseClick,
+      className: "k-CartRewardCard__garbage"
+    }, /*#__PURE__*/_react.default.createElement(_garbageIcon.GarbageIcon, {
+      "aria-hidden": true,
+      className: "k-ButtonIcon__svg"
+    })));
+  };
+
+  _proto.renderBottomContent = function renderBottomContent() {
+    var _this$props2 = this.props,
+        shippingTitle = _this$props2.shippingTitle,
+        shippingValue = _this$props2.shippingValue,
+        updateAmountTitle = _this$props2.updateAmountTitle,
+        updateAmountLink = _this$props2.updateAmountLink,
+        children = _this$props2.children;
+
+    var informationElements = _react.default.Children.toArray(children).filter(function (child) {
+      return child.type === CartRewardCard.Information;
+    });
+
+    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, shippingTitle && shippingValue && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
+      top: "2"
+    }, /*#__PURE__*/_react.default.createElement(CartRewardCard.Information, {
+      title: shippingTitle,
+      value: shippingValue
+    })), informationElements, updateAmountTitle && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
+      top: "2"
+    }, /*#__PURE__*/_react.default.createElement(_text.Text, {
+      tag: "a",
+      href: updateAmountLink,
+      color: "primary1",
+      decoration: "none",
+      weight: "regular",
+      size: "tiny"
+    }, updateAmountTitle)));
+  };
+
   return CartRewardCard;
 }(_react.Component);
 

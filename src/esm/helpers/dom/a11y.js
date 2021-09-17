@@ -1,10 +1,13 @@
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
+import "core-js/modules/es.array.join.js";
+import "core-js/modules/es.array.map.js";
+import "core-js/modules/es.array.filter.js";
+import "core-js/modules/es.array.concat.js";
 import { A11Y_FIRST_FOCUS_REACHED_EVENT, A11Y_LAST_FOCUS_REACHED_EVENT, dispatchEvent } from './events';
 var notMinusTabindex = ':not([tabindex="-1"])';
 var notDisabled = ':not([disabled])';
 var FOCUSABLE_ELEMENTS = ['[contenteditable="true"]', '[href]', '[tabindex]', 'area', 'button', 'details', 'iframe', 'input', 'select', 'textarea'];
 var focusableElements = FOCUSABLE_ELEMENTS.map(function (el) {
-  return "".concat(el).concat(notMinusTabindex).concat(notDisabled);
+  return "" + el + notMinusTabindex + notDisabled;
 }).join(', ');
 
 var isVisible = function isVisible(element) {
@@ -17,12 +20,12 @@ var isVisible = function isVisible(element) {
 };
 
 export var getFocusableElementsFrom = function getFocusableElementsFrom(root) {
-  return _toConsumableArray(root.querySelectorAll(focusableElements)).filter(function (el) {
+  return [].concat(root.querySelectorAll(focusableElements)).filter(function (el) {
     return isVisible(el);
   });
 };
-export var keyboardNavigation = function keyboardNavigation(elements) {
-  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+export var keyboardNavigation = function keyboardNavigation(elements, _temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
       _ref$events = _ref.events,
       events = _ref$events === void 0 ? {
     prev: A11Y_FIRST_FOCUS_REACHED_EVENT,

@@ -1,17 +1,31 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.DropdownCombobox = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+require("core-js/modules/es.string.starts-with.js");
+
+require("core-js/modules/es.object.assign.js");
+
+require("core-js/modules/es.array.map.js");
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -44,6 +58,10 @@ var _isEmpty = _interopRequireDefault(require("lodash/isEmpty"));
 var _isObject = _interopRequireDefault(require("lodash/fp/isObject"));
 
 var _styles = require("./styles");
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var getLabelToFilter = function getLabelToFilter(item) {
   if (item.searchableLabel || (0, _isObject.default)(item.label)) {
@@ -84,14 +102,12 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       controlled = _ref.controlled;
 
   var _useState = (0, _react.useState)([]),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      flattenedOptions = _useState2[0],
-      setFlattenedOptions = _useState2[1];
+      flattenedOptions = _useState[0],
+      setFlattenedOptions = _useState[1];
 
-  var _useState3 = (0, _react.useState)([]),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      filteredOptions = _useState4[0],
-      setFilteredOptions = _useState4[1];
+  var _useState2 = (0, _react.useState)([]),
+      filteredOptions = _useState2[0],
+      setFilteredOptions = _useState2[1];
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,
@@ -142,8 +158,8 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     });
   };
 
-  var _useCombobox = (0, _downshift.useCombobox)((0, _extends2.default)({
-    id: "".concat(id, "_element"),
+  var _useCombobox = (0, _downshift.useCombobox)(Object.assign({
+    id: id + "_element",
     inputId: id,
     items: filteredOptions,
     getA11ySelectionMessage: getA11ySelectionMessage,
@@ -192,7 +208,7 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     setFlattenedOptions(flatOptions);
   }, [options]);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledDropdown, {
-    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), className, {
+    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--" + variant, "k-Form-Dropdown--" + size, className, {
       'k-Form-Dropdown--isOpen': isOpen > 0,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
@@ -245,10 +261,10 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     className: "k-Form-Dropdown__list"
   }, getMenuProps()), isOpen && (filteredOptions.length > 0 ? filteredOptions.map(function (item, index) {
     return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
-      className: (0, _classnames.default)('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_".concat(item.level || 1), {
+      className: (0, _classnames.default)('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_" + (item.level || 1), {
         'k-Form-Dropdown__item--higlighted': highlightedIndex === index
       }),
-      key: "".concat(item.value).concat(index),
+      key: "" + item.value + index,
       disabled: item.disabled
     }, getItemProps({
       item: item,
@@ -273,7 +289,7 @@ DropdownCombobox.defaultProps = {
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
   a11ySelectionMessageDisplayer: function a11ySelectionMessageDisplayer(item) {
-    return "".concat(item, " is now selected.");
+    return item + " is now selected.";
   },
   onChange: function onChange() {},
   onBlur: function onBlur() {},

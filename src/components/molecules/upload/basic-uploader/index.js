@@ -1,19 +1,31 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.BasicUploader = void 0;
+
+require("core-js/modules/es.function.name.js");
+
+require("core-js/modules/es.array.includes.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -46,6 +58,12 @@ var _crossIcon = require("../../../../components/graphics/icons/cross-icon");
 var _visuallyHidden = require("../../../../components/accessibility/visually-hidden");
 
 var _loader = require("../../../../components/atoms/loader");
+
+var _excluded = ["id", "buttonProps", "buttonText", "canCancel", "cancelButtonText", "disabled", "errorText", "fileInputProps", "fileName", "loaderAnimation", "onCancel", "onUpload", "status", "statusText"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var StyledBasicUploader = _styledComponents.default.div.withConfig({
   displayName: "basic-uploader__StyledBasicUploader",
@@ -82,35 +100,31 @@ var BasicUploader = function BasicUploader(_ref) {
       status = _ref$status === void 0 ? 'ready' : _ref$status,
       _ref$statusText = _ref.statusText,
       statusText = _ref$statusText === void 0 ? '' : _ref$statusText,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["id", "buttonProps", "buttonText", "canCancel", "cancelButtonText", "disabled", "errorText", "fileInputProps", "fileName", "loaderAnimation", "onCancel", "onUpload", "status", "statusText"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(status),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      internalStatus = _useState2[0],
-      setInternalStatus = _useState2[1];
+      internalStatus = _useState[0],
+      setInternalStatus = _useState[1];
 
   (0, _react.useEffect)(function () {
     setInternalStatus(status);
   }, [status]);
 
-  var _useState3 = (0, _react.useState)(disabled),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      internalDisabled = _useState4[0],
-      setInternalDisabled = _useState4[1];
+  var _useState2 = (0, _react.useState)(disabled),
+      internalDisabled = _useState2[0],
+      setInternalDisabled = _useState2[1];
 
   (0, _react.useEffect)(function () {
     setInternalDisabled(disabled);
   }, [disabled]);
 
-  var _useState5 = (0, _react.useState)(''),
-      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
-      internalFileName = _useState6[0],
-      setInternalFileName = _useState6[1];
+  var _useState3 = (0, _react.useState)(''),
+      internalFileName = _useState3[0],
+      setInternalFileName = _useState3[1];
 
-  var _useState7 = (0, _react.useState)(canCancel),
-      _useState8 = (0, _slicedToArray2.default)(_useState7, 2),
-      internalCanCancel = _useState8[0],
-      setInternalCanCancel = _useState8[1];
+  var _useState4 = (0, _react.useState)(canCancel),
+      internalCanCancel = _useState4[0],
+      setInternalCanCancel = _useState4[1];
 
   (0, _react.useEffect)(function () {
     setInternalCanCancel(canCancel);
@@ -125,7 +139,7 @@ var BasicUploader = function BasicUploader(_ref) {
     var files = event.currentTarget.files;
     if (files.length < 1) return;
     var tempFileName = files[0].name;
-    var tempText = files.length > 1 ? "".concat(tempFileName, " + ").concat(files.length - 1) : tempFileName;
+    var tempText = files.length > 1 ? tempFileName + " + " + (files.length - 1) : tempFileName;
     setInternalStatus('file-selected');
     setInternalCanCancel(true);
     setInternalFileName(tempText);
@@ -142,7 +156,7 @@ var BasicUploader = function BasicUploader(_ref) {
   };
 
   return /*#__PURE__*/_react.default.createElement(StyledBasicUploader, (0, _extends2.default)({}, props, {
-    className: (0, _classnames.default)('k-BasicUploader', props.className, "k-BasicUploader--".concat(internalStatus))
+    className: (0, _classnames.default)('k-BasicUploader', props.className, "k-BasicUploader--" + internalStatus)
   }), /*#__PURE__*/_react.default.createElement("input", (0, _extends2.default)({}, fileInputProps, {
     type: "file",
     id: id,

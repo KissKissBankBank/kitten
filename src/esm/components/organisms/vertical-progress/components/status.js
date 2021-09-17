@@ -1,5 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["statusType", "progressTitle", "titleProps", "children"];
+import "core-js/modules/es.string.bold.js";
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -14,14 +16,14 @@ import { ScreenConfig } from '../../../../constants/screen-config';
 var STATUS_SIZE = 30;
 var StyledWrapper = styled.div.withConfig({
   displayName: "status__StyledWrapper",
-  componentId: "ksq19y-0"
+  componentId: "sc-ksq19y-0"
 })(["display:flex;flex:1;z-index:0;&.k-VerticalProgress__status--actions{.k-VerticalProgress__icon{background-color:", ";border-color:", ";}.k-VerticalProgress__title{color:", ";}}&.k-VerticalProgress__status--waiting{.k-VerticalProgress__icon{background-color:", ";border-color:", ";}.k-VerticalProgress__title{color:", ";}}&.k-VerticalProgress__status--publish{.k-VerticalProgress__icon{background-color:", ";border-color:", ";}.k-VerticalProgress__title{color:", ";}}&.k-VerticalProgress__status--valid{.k-VerticalProgress__icon{background-color:", ";border-color:", ";}.k-VerticalProgress__title{color:", ";}}&.k-VerticalProgress__status--disabled{.k-VerticalProgress__icon{border-color:", ";background-color:", ";}.k-VerticalProgress__title{color:", ";}}.k-VerticalProgress__icon{flex-shrink:0;display:flex;align-items:center;justify-content:center;width:", ";height:", ";border-radius:", ";border:", " solid ", ";box-sizing:border-box;margin-right:", ";background-color:", ";}.k-VerticalProgress__title{margin:0;", ";font-size:", ";align-self:center;@media (min-width:", "px){font-size:", ";}}"], COLORS.orange, COLORS.orange, COLORS.orange, COLORS.font3, COLORS.font3, COLORS.font3, COLORS.line3, COLORS.line3, COLORS.line3, COLORS.primary1, COLORS.primary1, COLORS.primary1, COLORS.line1, COLORS.background1, COLORS.font2, pxToRem(STATUS_SIZE), pxToRem(STATUS_SIZE), pxToRem(STATUS_SIZE), pxToRem(2), COLORS.background1, pxToRem(20), COLORS.background1, TYPOGRAPHY.fontStyles.bold, stepToRem(0), ScreenConfig.S.min, stepToRem(1));
 export var Status = function Status(_ref) {
   var statusType = _ref.statusType,
       progressTitle = _ref.progressTitle,
       titleProps = _ref.titleProps,
       children = _ref.children,
-      other = _objectWithoutProperties(_ref, ["statusType", "progressTitle", "titleProps", "children"]);
+      other = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var iconByStatus = function () {
     switch (statusType) {
@@ -60,7 +62,7 @@ export var Status = function Status(_ref) {
   }();
 
   return /*#__PURE__*/React.createElement(StyledWrapper, {
-    className: classNames('k-VerticalProgress__status', "k-VerticalProgress__status--".concat(statusType))
+    className: classNames('k-VerticalProgress__status', "k-VerticalProgress__status--" + statusType)
   }, /*#__PURE__*/React.createElement("span", _extends({}, other, {
     className: "k-VerticalProgress__icon"
   }), iconByStatus || children), /*#__PURE__*/React.createElement("p", _extends({

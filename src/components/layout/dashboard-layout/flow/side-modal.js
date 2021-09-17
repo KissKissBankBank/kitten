@@ -1,17 +1,25 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.MobileAside = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -39,9 +47,13 @@ var _lightbulbIllustration = require("../../../../components/graphics/illustrati
 
 var _events = require("../../../../helpers/dom/events");
 
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var Wrapper = _styledComponents.default.div.withConfig({
   displayName: "side-modal__Wrapper",
-  componentId: "qfidgo-0"
+  componentId: "sc-qfidgo-0"
 })(["position:fixed;top:0;left:0;right:0;bottom:0;padding-top:", ";padding-left:", ";padding-right:", ";padding-bottom:", ";z-index:var(--DashboardLayout-modal-zIndex,1000);display:flex;flex-direction:column-reverse;align-items:flex-end;pointer-events:none;&.k-DashboardLayout__flow--hideButtonAndModal{display:none;}@media (min-width:", "){padding:", " ", " ", ";}@media (min-width:", "){display:none;}.k-DashboardLayout__flow__mobileAsideButton{display:flex;align-items:center;justify-content:center;cursor:pointer;flex:0 0 ", ";width:", ";height:", ";background-color:", ";border-radius:100%;box-shadow:", " ", " ", " ", " rgba(0,0,0,0.15);pointer-events:all;border:none;transition:background-color 0.2s ease-in-out;&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}@media (min-width:", "){flex:0 0 ", ";width:", ";height:", ";}}.k-DashboardLayout__flow__mobileAsideContent{margin-bottom:", ";pointer-events:all;background-color:", ";padding:", ";border-radius:", ";overflow-y:scroll;opacity:1;transition:opacity 0.2s ease-in-out;@media (min-width:", "){max-width:", ";border-radius:", ";}&[hidden]{opacity:0;display:none;}& > *{max-height:calc(100vh - ", ");@media (min-width:", "){max-height:calc(100vh - ", ");}}}.k-DashboardLayout__flow__mobileAsideBackground{position:absolute;z-index:-1;top:0;left:0;width:100%;height:100%;background:", ";opacity:0;transition:opacity 0.2s ease-in-out;pointer-events:inherit;}&.k-DashboardLayout__flow__mobileAside--open{pointer-events:all;.k-DashboardLayout__flow__mobileAsideBackground{opacity:0.8;}.k-DashboardLayout__flow__mobileAsideButton{background-color:", ";}}.k-DashboardLayout__flow__mobileAsideButton__text{clip:rect(0 0 0 0);clip-path:inset(100%);height:", ";overflow:hidden;position:absolute;white-space:nowrap;width:", ";}"], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(105), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(135), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), _colorsConfig.default.primary5, (0, _typography.pxToRem)(0), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(5), _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary4, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(20), _colorsConfig.default.primary5, (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(350), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(20 + 105 + 50 + 20 + 2 * 30), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(40 + 135 + 50 + 20 + 2 * 30), _colorsConfig.default.font1, _colorsConfig.default.primary1, (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(1));
 
 var MobileAsideComponent = function MobileAsideComponent(_ref) {
@@ -50,9 +62,8 @@ var MobileAsideComponent = function MobileAsideComponent(_ref) {
       closeLabel = _ref.closeLabel;
 
   var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      shouldHideButton = _useState2[0],
-      setButtonAsHidden = _useState2[1];
+      shouldHideButton = _useState[0],
+      setButtonAsHidden = _useState[1];
 
   (0, _react.useEffect)(function () {
     if (!_elementHelper.domElementHelper.canUseDom()) return;
@@ -110,7 +121,7 @@ var MobileAsideComponent = function MobileAsideComponent(_ref) {
 
 var MobileAside = function MobileAside(props) {
   var bodyElement = _elementHelper.domElementHelper.canUseDom() && document.querySelector('#root');
-  return bodyElement ? _reactDom.default.createPortal( /*#__PURE__*/_react.default.createElement(MobileAsideComponent, props), bodyElement) : null;
+  return bodyElement ? /*#__PURE__*/_reactDom.default.createPortal( /*#__PURE__*/_react.default.createElement(MobileAsideComponent, props), bodyElement) : null;
 };
 
 exports.MobileAside = MobileAside;

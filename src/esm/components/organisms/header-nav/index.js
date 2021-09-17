@@ -1,5 +1,4 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
+import _extends from "@babel/runtime/helpers/extends";
 import React, { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -34,19 +33,16 @@ var HeaderNav = function HeaderNav(_ref) {
       borderStyle = _ref.borderStyle;
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      isMenuExpanded = _useState2[0],
-      setMenuExpanded = _useState2[1];
+      isMenuExpanded = _useState[0],
+      setMenuExpanded = _useState[1];
+
+  var _useState2 = useState(null),
+      menuExpandBy = _useState2[0],
+      setMenuExpandBy = _useState2[1];
 
   var _useState3 = useState(null),
-      _useState4 = _slicedToArray(_useState3, 2),
-      menuExpandBy = _useState4[0],
-      setMenuExpandBy = _useState4[1];
-
-  var _useState5 = useState(null),
-      _useState6 = _slicedToArray(_useState5, 2),
-      stickyState = _useState6[0],
-      setStickyState = _useState6[1];
+      stickyState = _useState3[0],
+      setStickyState = _useState3[1];
 
   var stickyContainerRef = useRef(null);
   var headerRef = useRef(null);
@@ -80,14 +76,14 @@ var HeaderNav = function HeaderNav(_ref) {
       '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu
     },
     zIndex: zIndexConfig,
-    className: classNames('k-HeaderNav__wrapper', "k-HeaderNav--".concat(size), "k-HeaderNav--".concat(borderStyle), {
+    className: classNames('k-HeaderNav__wrapper', "k-HeaderNav--" + size, "k-HeaderNav--" + borderStyle, {
       'k-HeaderNav--menuIsExpanded': isMenuExpanded
     })
   }, /*#__PURE__*/React.createElement(StickyContainer, _extends({
     ref: stickyContainerRef,
     isSticky: stickyState
   }, stickyProps, {
-    className: classNames('k-HeaderNav__stickyContainer', stickyProps === null || stickyProps === void 0 ? void 0 : stickyProps.className)
+    className: classNames('k-HeaderNav__stickyContainer', stickyProps == null ? void 0 : stickyProps.className)
   }), /*#__PURE__*/React.createElement("nav", {
     ref: headerRef,
     id: id,

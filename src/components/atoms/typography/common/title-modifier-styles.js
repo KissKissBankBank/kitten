@@ -1,9 +1,9 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.titleHelperModifierStyles = exports.titleModifierStyles = exports.titleModifiers = exports.titleModifiersNames = void 0;
+
+require("core-js/modules/es.array.map.js");
 
 var _styledComponents = require("styled-components");
 
@@ -59,8 +59,8 @@ var getLetterSpacingFromStep = function getLetterSpacingFromStep(step) {
 
 var getLineHeightFromStep = function getLineHeightFromStep(step) {
   if (step > 8) return '1em';
-  if (step > 4) return "calc(1em + ".concat((0, _typography.pxToRem)(4), ")");
-  return "calc(1em + ".concat((0, _typography.pxToRem)(2), ")");
+  if (step > 4) return "calc(1em + " + (0, _typography.pxToRem)(4) + ")";
+  return "calc(1em + " + (0, _typography.pxToRem)(2) + ")";
 };
 
 var getStyleFromStep = function getStyleFromStep(step) {
@@ -69,7 +69,7 @@ var getStyleFromStep = function getStyleFromStep(step) {
 
 var titleModifierStyles = function titleModifierStyles(prefix) {
   return (0, _styledComponents.css)(["", ""], titleModifiers.map(function (key, index) {
-    return (0, _styledComponents.css)(["", "{", ";@media (min-width:", "){", ";}@media (min-width:", "){", ";}}"], "".concat(prefix, "--").concat(titleModifiersNames[index]), getStyleFromStep(key.fontStepOnMobile), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), getStyleFromStep(key.fontStepOnTablet), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), getStyleFromStep(key.fontStepOnDesktop));
+    return (0, _styledComponents.css)(["", "{", ";@media (min-width:", "){", ";}@media (min-width:", "){", ";}}"], prefix + "--" + titleModifiersNames[index], getStyleFromStep(key.fontStepOnMobile), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), getStyleFromStep(key.fontStepOnTablet), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), getStyleFromStep(key.fontStepOnDesktop));
   }));
 };
 

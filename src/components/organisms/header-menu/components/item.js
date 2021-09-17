@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Item = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -23,6 +21,8 @@ var _arrowIcon = require("../../../graphics/icons/arrow-icon");
 
 var _button = require("../../../../components/molecules/buttons/button");
 
+var _excluded = ["children", "external", "liProps", "modifier", "button", "size", "isSelected", "as", "tag"];
+
 var Item = function Item(_ref) {
   var children = _ref.children,
       external = _ref.external,
@@ -33,12 +33,12 @@ var Item = function Item(_ref) {
       isSelected = _ref.isSelected,
       as = _ref.as,
       tag = _ref.tag,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["children", "external", "liProps", "modifier", "button", "size", "isSelected", "as", "tag"]);
+      other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var Component = as || tag;
   return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
     role: "menuitem"
   }, liProps, {
-    className: (0, _classnames.default)('k-HeaderMenu__item', liProps.className, "k-HeaderMenu__item--".concat(size), {
+    className: (0, _classnames.default)('k-HeaderMenu__item', liProps.className, "k-HeaderMenu__item--" + size, {
       'k-HeaderMenu__item--external': external,
       'k-HeaderMenu__item--isSelected': isSelected,
       'k-HeaderMenu__item--hasButton': button,

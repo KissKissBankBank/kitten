@@ -2,14 +2,14 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.HeaderMenu = void 0;
+
+require("core-js/modules/es.object.assign.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -23,6 +23,8 @@ var _badge = require("./components/badge");
 
 var _styles = require("./styles");
 
+var _excluded = ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "style"];
+
 var HeaderMenu = function HeaderMenu(_ref) {
   var backgroundColors = _ref.backgroundColors,
       borderSide = _ref.borderSide,
@@ -31,7 +33,7 @@ var HeaderMenu = function HeaderMenu(_ref) {
       noBorder = _ref.noBorder,
       className = _ref.className,
       style = _ref.style,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "style"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledList, (0, _extends2.default)({
     className: (0, _classnames.default)('k-HeaderMenu', className, {
       'k-HeaderMenu--hasBorders': !noBorder,
@@ -41,8 +43,8 @@ var HeaderMenu = function HeaderMenu(_ref) {
       'k-HeaderMenu--hasBorderOnSideOnHover': borderSideOnHover,
       'k-HeaderMenu--hasBigItems': largeItem
     }),
-    style: (0, _extends2.default)({}, style, {
-      '--headerMenu-background-colors-hover': backgroundColors === null || backgroundColors === void 0 ? void 0 : backgroundColors.hover
+    style: Object.assign({}, style, {
+      '--headerMenu-background-colors-hover': backgroundColors == null ? void 0 : backgroundColors.hover
     })
   }, props));
 };

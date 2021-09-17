@@ -1,6 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["activeColor", "big", "checkedColor", "defaultColor", "disabled", "disabledColor", "id", "isChecked", "isLabelVisible", "label", "labelProps", "locked", "reverseOrder", "switchProps", "onChange"];
+import "core-js/modules/es.string.big.js";
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -15,7 +16,7 @@ var borderSize = 2;
 var borderRadius = 18;
 var StyledSwitchContainer = styled.div.withConfig({
   displayName: "toggle-switch__StyledSwitchContainer",
-  componentId: "ski4b0-0"
+  componentId: "sc-ski4b0-0"
 })(["display:inline-flex;align-items:center;cursor:pointer;", " ", ""], function (_ref) {
   var isDisabled = _ref.isDisabled;
   return isDisabled && css(["cursor:not-allowed;"]);
@@ -25,7 +26,7 @@ var StyledSwitchContainer = styled.div.withConfig({
 });
 var StyledSwitch = styled.button.withConfig({
   displayName: "toggle-switch__StyledSwitch",
-  componentId: "ski4b0-1"
+  componentId: "sc-ski4b0-1"
 })(["display:inline-block;position:relative;box-sizing:border-box;width:", ";height:", ";color:", ";background-color:currentColor;border:", " solid ", ";border-radius:", ";transition:color ", " ease,border-color ", " ease,background-color ", " ease;cursor:pointer;&:focus{border-color:", ";outline:", " solid ", ";outline-offset:", ";.k-ToggleSwitch__circle{border-color:", ";}}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}.k-ToggleSwitch__circle{position:absolute;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;left:-", ";top:-", ";width:", ";height:", ";content:'';background-color:", ";border:", " solid ", ";border-radius:", ";transition:left ", " ease,color ", " ease,border-color ", " ease,background-color ", " ease;}&[aria-pressed='true']{color:", ";border-color:currentColor;.k-ToggleSwitch__circle{left:", ";border-color:currentColor;}}&:active{color:", ";&,.k-ToggleSwitch__circle{border-color:", ";}}&[disabled]{cursor:not-allowed;", " .k-ToggleSwitch__circle{pointer-events:none;}}"], pxToRem(switchWidth), pxToRem(switchHeight), function (_ref3) {
   var defaultColor = _ref3.defaultColor;
   return defaultColor;
@@ -47,7 +48,7 @@ var StyledSwitch = styled.button.withConfig({
 });
 var StyledLabel = styled.label.withConfig({
   displayName: "toggle-switch__StyledLabel",
-  componentId: "ski4b0-2"
+  componentId: "sc-ski4b0-2"
 })(["padding-left:", ";", " font-size:", ";line-height:", ";color:", ";transition:color ", " ease;cursor:pointer;::selection{background:transparent;}::-moz-selection{background:transparent;}", ":hover &{color:", ";}", ":active &{color:", ";}", " button[disabled] + &{color:", ";cursor:not-allowed;}"], pxToRem(10), TYPOGRAPHY.fontStyles.light, function (_ref9) {
   var big = _ref9.big;
   return stepToRem(big ? 3 : 0);
@@ -71,12 +72,11 @@ export var ToggleSwitch = function ToggleSwitch(_ref11) {
       reverseOrder = _ref11.reverseOrder,
       switchProps = _ref11.switchProps,
       onChange = _ref11.onChange,
-      others = _objectWithoutProperties(_ref11, ["activeColor", "big", "checkedColor", "defaultColor", "disabled", "disabledColor", "id", "isChecked", "isLabelVisible", "label", "labelProps", "locked", "reverseOrder", "switchProps", "onChange"]);
+      others = _objectWithoutPropertiesLoose(_ref11, _excluded);
 
   var _useState = useState(isChecked),
-      _useState2 = _slicedToArray(_useState, 2),
-      isPressed = _useState2[0],
-      setPressedState = _useState2[1];
+      isPressed = _useState[0],
+      setPressedState = _useState[1];
 
   var handleClick = function handleClick() {
     onChange && onChange(!isPressed);
@@ -95,7 +95,7 @@ export var ToggleSwitch = function ToggleSwitch(_ref11) {
     disabled: disabled || locked,
     "aria-pressed": isPressed,
     "aria-label": isLabelVisible ? null : label,
-    "aria-labelledby": isLabelVisible ? "".concat(id, "_label") : null,
+    "aria-labelledby": isLabelVisible ? id + "_label" : null,
     checkedColor: checkedColor,
     defaultColor: defaultColor,
     disabledColor: disabledColor,
@@ -109,7 +109,7 @@ export var ToggleSwitch = function ToggleSwitch(_ref11) {
     color: COLORS.font1
   }))), isLabelVisible && /*#__PURE__*/React.createElement(StyledLabel, _extends({
     htmlFor: id,
-    id: "".concat(id, "_label"),
+    id: id + "_label",
     disabledColor: disabledColor,
     big: big
   }, labelProps), label));

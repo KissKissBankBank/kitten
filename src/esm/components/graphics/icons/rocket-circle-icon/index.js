@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["color", "bgColor", "circleColor", "circleWidth", "circleWidthMobile", "rocketWidth", "rocketWidthMobile", "rocketHeight", "rocketHeightMobile", "rocketColor", "rocketTitle", "className"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -11,7 +12,7 @@ import deprecated from 'prop-types-extra/lib/deprecated';
 import classNames from 'classnames';
 var StyledRocketCircle = styled.div.withConfig({
   displayName: "rocket-circle-icon__StyledRocketCircle",
-  componentId: "hjcjwz-0"
+  componentId: "sc-hjcjwz-0"
 })(["display:flex;justify-content:center;align-items:center;width:", ";height:", ";border-radius:100%;background-color:", ";@media (min-width:", "){width:", ";height:", ";}.k-RocketCircleIcon__rocketIcon{padding-right:", ";padding-top:", ";width:", ";height:", ";@media (min-width:", "){width:", ";height:", ";}}"], function (_ref) {
   var circleWidthMobile = _ref.circleWidthMobile;
   return pxToRem(circleWidthMobile);
@@ -53,7 +54,7 @@ export var RocketCircleIcon = function RocketCircleIcon(_ref10) {
       rocketColor = _ref10.rocketColor,
       rocketTitle = _ref10.rocketTitle,
       className = _ref10.className,
-      others = _objectWithoutProperties(_ref10, ["color", "bgColor", "circleColor", "circleWidth", "circleWidthMobile", "rocketWidth", "rocketWidthMobile", "rocketHeight", "rocketHeightMobile", "rocketColor", "rocketTitle", "className"]);
+      others = _objectWithoutPropertiesLoose(_ref10, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledRocketCircle, _extends({
     circleWidth: circleWidth,

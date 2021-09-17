@@ -4,9 +4,9 @@ import COLORS from '../../../constants/colors-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { ScreenConfig } from '../../../constants/screen-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
-var ALL_COLS = "(100vw - ".concat(pxToRem(2 * CONTAINER_PADDING + (NUM_COLUMNS - 1) * GUTTER), ")");
-var ONE_COL = "(".concat(ALL_COLS, " / ").concat(NUM_COLUMNS, ")");
-var SIX_COLS = "(".concat(ALL_COLS, " / 2 + ").concat(pxToRem(5 * GUTTER + CONTAINER_PADDING), ")");
+var ALL_COLS = "(100vw - " + pxToRem(2 * CONTAINER_PADDING + (NUM_COLUMNS - 1) * GUTTER) + ")";
+var ONE_COL = "(" + ALL_COLS + " / " + NUM_COLUMNS + ")";
+var SIX_COLS = "(" + ALL_COLS + " / 2 + " + pxToRem(5 * GUTTER + CONTAINER_PADDING) + ")";
 export var StyledDashboard = styled.div.withConfig({
   displayName: "styles__StyledDashboard",
   componentId: "sc-1cjtn5x-0"

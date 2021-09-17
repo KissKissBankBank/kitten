@@ -1,4 +1,5 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
+import "core-js/modules/es.regexp.exec.js";
+import "core-js/modules/es.string.search.js";
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import styled from 'styled-components';
@@ -7,7 +8,7 @@ import { SideGrid, SideGridContent, SideGridAside } from '../../../components/la
 import domElementHelper from '../../../helpers/dom/element-helper';
 var StyledSideLayout = styled(SideGrid).withConfig({
   displayName: "side-layout__StyledSideLayout",
-  componentId: "ocof17-0"
+  componentId: "sc-ocof17-0"
 })([".k-VerticalGrid__fluid{flex-basis:100%;}.k-VerticalGrid__fullHeight{height:100vh;}.k-VerticalGrid__container{display:flex;height:100%;}.k-VerticalGrid__element{flex-grow:1;}"]);
 export var SideLayout = function SideLayout(_ref) {
   var className = _ref.className,
@@ -15,9 +16,8 @@ export var SideLayout = function SideLayout(_ref) {
       sidebar = _ref.sidebar;
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      needsFullHeight = _useState2[0],
-      setNeedsFullHeight = _useState2[1];
+      needsFullHeight = _useState[0],
+      setNeedsFullHeight = _useState[1];
 
   useEffect(function () {
     if (!domElementHelper.canUseDom()) return;

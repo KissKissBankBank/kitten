@@ -2,16 +2,24 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Marger = void 0;
+
+require("core-js/modules/es.regexp.exec.js");
+
+require("core-js/modules/es.string.match.js");
+
+require("core-js/modules/es.array.filter.js");
+
+require("core-js/modules/es.array.map.js");
+
+require("core-js/modules/es.object.keys.js");
+
+require("core-js/modules/es.array.concat.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -27,15 +35,17 @@ var _isStringANumber = _interopRequireDefault(require("is-string-a-number"));
 
 var _string = require("../../../helpers/utils/string");
 
+var _excluded = ["top", "bottom", "style"];
+
 var Marger = function Marger(props) {
   var top = props.top,
       bottom = props.bottom,
       style = props.style,
-      others = (0, _objectWithoutProperties2.default)(props, ["top", "bottom", "style"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded);
   var gutter = 10 / _typographyConfig.default.root;
 
   var marginSize = function marginSize(value) {
-    return "".concat(value * gutter, "rem");
+    return value * gutter + "rem";
   };
 
   var valueIsNumber = function valueIsNumber(value) {
@@ -57,17 +67,17 @@ var Marger = function Marger(props) {
   };
 
   var isPropWithViewportRange = function isPropWithViewportRange(propName, viewportRange) {
-    return props[propName] && props[propName]["from".concat((0, _string.upcaseFirst)(viewportRange))];
+    return props[propName] && props[propName]["from" + (0, _string.upcaseFirst)(viewportRange)];
   };
 
   var viewportRangeCssRule = function viewportRangeCssRule(viewportRange) {
-    return "@media (min-width: ".concat(_screenConfig.ScreenConfig[viewportRange.toUpperCase()].min, "px)");
+    return "@media (min-width: " + _screenConfig.ScreenConfig[viewportRange.toUpperCase()].min + "px)";
   };
 
   var propCssDeclarationForViewportRange = function propCssDeclarationForViewportRange(propName, viewportRange) {
-    var size = props[propName]["from".concat((0, _string.upcaseFirst)(viewportRange))];
+    var size = props[propName]["from" + (0, _string.upcaseFirst)(viewportRange)];
     if (!isSetValue(size)) return;
-    return "margin-".concat(propName, ": ").concat(marginSize(size), ";");
+    return "margin-" + propName + ": " + marginSize(size) + ";";
   };
 
   var viewportRangeStyleCondition = function viewportRangeStyleCondition(propName, viewportRange) {
@@ -76,7 +86,7 @@ var Marger = function Marger(props) {
     var returnedViewportRangeCssRule = viewportRangeCssRule(viewportRange);
     var viewportRangeCssValue = propCssDeclarationForViewportRange(propName, viewportRange);
     if (!viewportRangeCssValue) return;
-    return "".concat(returnedViewportRangeCssRule, " { ").concat(viewportRangeCssValue, " }");
+    return returnedViewportRangeCssRule + " { " + viewportRangeCssValue + " }";
   };
 
   var hasDefaultProp = function hasDefaultProp(propName) {
@@ -95,7 +105,7 @@ var Marger = function Marger(props) {
 
   var stylesForName = function stylesForName(propName) {
     var value = defaultValue(propName);
-    if (value) return "margin-".concat(propName, ": ").concat(defaultValue(propName), ";");
+    if (value) return "margin-" + propName + ": " + defaultValue(propName) + ";";
   };
 
   var viewportRanges = Object.keys(_screenConfig.ScreenConfig).map(function (size) {
@@ -104,7 +114,7 @@ var Marger = function Marger(props) {
     return size !== 'xxs';
   });
   var viewportRangesStyles = viewportRanges.reduce(function (acc, viewportRange) {
-    return [].concat((0, _toConsumableArray2.default)(acc), [viewportRangeStyleCondition('top', viewportRange), viewportRangeStyleCondition('bottom', viewportRange)]);
+    return [].concat(acc, [viewportRangeStyleCondition('top', viewportRange), viewportRangeStyleCondition('bottom', viewportRange)]);
   }, []);
   var styles = [stylesForName('top'), stylesForName('bottom'), viewportRangesStyles, style];
   return /*#__PURE__*/_react.default.createElement(StyledMarger, (0, _extends2.default)({

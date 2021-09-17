@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["onChange", "value", "step", "min", "max", "inputProps", "minusButtonProps", "plusButtonProps", "className", "disableInput", "disabled"];
 import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -12,7 +12,7 @@ import { nativeInputValueSetter } from '../../../helpers/dom/native-input-value-
 import { createEvent } from '../../../helpers/dom/create-event';
 var StyledPillNumberInput = styled.div.withConfig({
   displayName: "pill-number-input__StyledPillNumberInput",
-  componentId: "ujaaef-0"
+  componentId: "sc-ujaaef-0"
 })(["display:inline-flex;align-items:center;justify-content:stretch;height:", ";width:", ";padding:0 ", ";border:2px solid ", ";border-radius:", ";transition:border-color 0.2s ease;&:hover{border-color:", ";}&,& *{box-sizing:border-box;}.k-PillNumberInput__input{flex:1 1 auto;appearance:none;appearance:textfield;border:0;min-width:0;", " font-size:", ";text-align:center;&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&:disabled{background-color:", ";color:", ";}}.k-PillNumberInput__minusButton,.k-PillNumberInput__plusButton{flex:0 0 auto;padding:0 ", ";border:none;background:none;display:flex;align-items:center;justify-content:center;height:100%;cursor:pointer;svg{transition:fill 0.2s ease;}&:hover svg{fill:", ";}&:active svg{fill:", ";}&:disabled svg{fill:", ";}}&.k-PillNumberInput--disableInput .k-PillNumberInput__input:disabled{background-color:", ";color:", ";}"], pxToRem(40), pxToRem(85), pxToRem(10), COLORS.line1, pxToRem(20), COLORS.line2, TYPOGRAPHY.fontStyles.regular, stepToRem(-1), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, COLORS.background1, COLORS.font2, pxToRem(5), COLORS.primary1, COLORS.primary2, COLORS.line2, COLORS.background1, COLORS.font1);
 export var PillNumberInput = function PillNumberInput(_ref) {
   var _ref$onChange = _ref.onChange,
@@ -37,14 +37,13 @@ export var PillNumberInput = function PillNumberInput(_ref) {
       disableInput = _ref$disableInput === void 0 ? false : _ref$disableInput,
       _ref$disabled = _ref.disabled,
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      props = _objectWithoutProperties(_ref, ["onChange", "value", "step", "min", "max", "inputProps", "minusButtonProps", "plusButtonProps", "className", "disableInput", "disabled"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var inputRef = useRef(null);
 
   var _useState = useState(value),
-      _useState2 = _slicedToArray(_useState, 2),
-      currentValue = _useState2[0],
-      setCurrentValue = _useState2[1];
+      currentValue = _useState[0],
+      setCurrentValue = _useState[1];
 
   var changeEvent = createEvent('change');
 

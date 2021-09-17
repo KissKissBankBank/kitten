@@ -1,5 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "style", "size", "modifier", "customSize", "color"];
+import "core-js/modules/es.object.assign.js";
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -14,7 +16,7 @@ export var BIG = css(["width:", ";height:", ";"], pxToRem(50), pxToRem(4));
 export var HUGE = css(["width:", ";height:", ";"], pxToRem(100), pxToRem(6));
 export var StyledHorizontalStroke = styled.div.withConfig({
   displayName: "horizontal-stroke__StyledHorizontalStroke",
-  componentId: "eemjm6-0"
+  componentId: "sc-eemjm6-0"
 })(["border:none;background:", ";&.k-HorizontalStroke--size--micro{", "}&.k-HorizontalStroke--size--tiny{", "}&.k-HorizontalStroke--size--default{", "}&.k-HorizontalStroke--size--big{", "}&.k-HorizontalStroke--size--huge{", "}", ""], function (_ref) {
   var color = _ref.color;
   return color || COLORS.font1;
@@ -26,11 +28,11 @@ export var HorizontalStroke = function HorizontalStroke(_ref2) {
       modifier = _ref2.modifier,
       customSize = _ref2.customSize,
       color = _ref2.color,
-      props = _objectWithoutProperties(_ref2, ["className", "style", "size", "modifier", "customSize", "color"]);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded);
 
   var modifierClassName = function modifierClassName() {
-    if (!modifier) return "k-HorizontalStroke--size--".concat(size);
-    return "k-HorizontalStroke--modifier--".concat(modifier);
+    if (!modifier) return "k-HorizontalStroke--size--" + size;
+    return "k-HorizontalStroke--modifier--" + modifier;
   };
 
   var customStyles = function customStyles() {
@@ -43,7 +45,7 @@ export var HorizontalStroke = function HorizontalStroke(_ref2) {
 
   return /*#__PURE__*/React.createElement(StyledHorizontalStroke, _extends({}, props, {
     className: classNames('k-HorizontalStroke', className, modifierClassName()),
-    style: _extends({}, customStyles(), style),
+    style: Object.assign({}, customStyles(), style),
     color: color
   }));
 };

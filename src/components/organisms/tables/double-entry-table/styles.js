@@ -2,10 +2,10 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Styles = void 0;
+
+require("core-js/modules/es.string.bold.js");
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 

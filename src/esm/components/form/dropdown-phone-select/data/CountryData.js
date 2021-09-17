@@ -1,7 +1,17 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
+import "core-js/modules/es.string.pad-end.js";
+import "core-js/modules/es.array.concat.js";
+import "core-js/modules/es.array.map.js";
+import "core-js/modules/es.object.assign.js";
+import "core-js/modules/es.function.name.js";
+import "core-js/modules/es.array.includes.js";
+import "core-js/modules/es.string.includes.js";
+import "core-js/modules/es.object.keys.js";
+import "core-js/modules/es.object.values.js";
+import "core-js/modules/web.dom-collections.for-each.js";
+import "core-js/modules/es.array.find-index.js";
+import "core-js/modules/es.array.filter.js";
+import "core-js/modules/es.array.sort.js";
+import "core-js/modules/es.array.find.js";
 // Taken from react-phone-input2 v2.13.8
 // https://github.com/bl00mber/react-phone-input-2
 // The MIT License (MIT)
@@ -46,7 +56,7 @@ function initCountries(countries, enableAreaCodes, prefix, defaultMask, alwaysDe
     enableAllCodes = false;
   }
 
-  var initializedCountries = (_ref = []).concat.apply(_ref, _toConsumableArray(countries.map(function (country) {
+  var initializedCountries = (_ref = []).concat.apply(_ref, countries.map(function (country) {
     var countryItem = {
       name: country[0],
       regions: country[1],
@@ -58,8 +68,7 @@ function initCountries(countries, enableAreaCodes, prefix, defaultMask, alwaysDe
     };
     var areaItems = [];
     country[6] && country[6].map(function (areaCode) {
-      var areaItem = _extends({}, countryItem);
-
+      var areaItem = Object.assign({}, countryItem);
       areaItem.dialCode = country[3] + areaCode;
       areaItem.isAreaCode = true;
       areaItem.areaCodeLength = areaCode.length;
@@ -79,7 +88,7 @@ function initCountries(countries, enableAreaCodes, prefix, defaultMask, alwaysDe
     } else {
       return [countryItem];
     }
-  })));
+  }));
 
   return [initializedCountries, hiddenAreaCodes];
 }
@@ -139,8 +148,6 @@ function extendRawCountries(countries, userContent) {
 }
 
 var CountryData = function CountryData(enableAreaCodes, enableTerritories, _regions, _onlyCountries, preferredCountries, excludeCountries, _preserveOrder, masks, priority, _areaCodes, _localization, prefix, defaultMask, alwaysDefaultMask) {
-  _classCallCheck(this, CountryData);
-
   this.filterRegions = function (regions, countries) {
     if (typeof regions === 'string') {
       var region = regions;
@@ -164,7 +171,7 @@ var CountryData = function CountryData(enableAreaCodes, enableTerritories, _regi
   };
 
   this.sortTerritories = function (initializedTerritories, initializedCountries) {
-    var fullCountryList = [].concat(_toConsumableArray(initializedTerritories), _toConsumableArray(initializedCountries));
+    var fullCountryList = [].concat(initializedTerritories, initializedCountries);
     fullCountryList.sort(function (a, b) {
       if (a.name < b.name) {
         return -1;
@@ -258,15 +265,13 @@ var CountryData = function CountryData(enableAreaCodes, enableTerritories, _regi
   var rawTerritories = extendRawCountries(JSON.parse(JSON.stringify(_rawTerritories)), userContent);
 
   var _initCountries = initCountries(rawCountries, enableAreaCodes, prefix, defaultMask, alwaysDefaultMask),
-      _initCountries2 = _slicedToArray(_initCountries, 2),
-      _initializedCountries = _initCountries2[0],
-      hiddenAreaCodes = _initCountries2[1];
+      _initializedCountries = _initCountries[0],
+      hiddenAreaCodes = _initCountries[1];
 
   if (enableTerritories) {
-    var _initCountries3 = initCountries(rawTerritories, enableAreaCodes, prefix, defaultMask, alwaysDefaultMask),
-        _initCountries4 = _slicedToArray(_initCountries3, 2),
-        initializedTerritories = _initCountries4[0],
-        _hiddenAreaCodes = _initCountries4[1];
+    var _initCountries2 = initCountries(rawTerritories, enableAreaCodes, prefix, defaultMask, alwaysDefaultMask),
+        initializedTerritories = _initCountries2[0],
+        _hiddenAreaCodes = _initCountries2[1];
 
     _initializedCountries = this.sortTerritories(initializedTerritories, _initializedCountries);
   }

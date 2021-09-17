@@ -1,21 +1,31 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.SearchInput = void 0;
+
+require("core-js/modules/es.array.concat.js");
+
+require("core-js/modules/es.object.assign.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -35,8 +45,14 @@ var _context = require("./context");
 
 var _useDropdown2 = require("../hooks/use-dropdown");
 
+var _excluded = ["children", "className", "searchInputProps", "searchButtonProps", "onMenuToggle", "closeEvents"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var namespace = 'kkbbAndCo';
-var CLOSE_EVENT = "".concat(namespace, ":searchMenu:close");
+var CLOSE_EVENT = namespace + ":searchMenu:close";
 
 var SearchInput = function SearchInput(_ref) {
   var children = _ref.children,
@@ -49,25 +65,24 @@ var SearchInput = function SearchInput(_ref) {
       onMenuToggle = _ref$onMenuToggle === void 0 ? function () {} : _ref$onMenuToggle,
       _ref$closeEvents = _ref.closeEvents,
       closeEvents = _ref$closeEvents === void 0 ? [] : _ref$closeEvents,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "className", "searchInputProps", "searchButtonProps", "onMenuToggle", "closeEvents"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useContext = (0, _react.useContext)(_context.Context),
       id = _useContext.id,
       callOnToggle = _useContext.callOnToggle;
 
   var _useState = (0, _react.useState)(true),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isMobileInvisible = _useState2[0],
-      setMobileInvibility = _useState2[1];
+      isMobileInvisible = _useState[0],
+      setMobileInvibility = _useState[1];
 
   var buttonElement = (0, _react.useRef)(null);
 
   var _useDropdown = (0, _useDropdown2.useDropdown)({
     callOnToggle: callOnToggle,
     dropdownClass: 'k-HeaderNav__searchInputDropdown',
-    closeEvents: [CLOSE_EVENT].concat((0, _toConsumableArray2.default)(closeEvents)),
-    inputId: "".concat(id, "__SearchMenu__Input"),
-    menuId: "".concat(id, "__SearchMenu__Menu")
+    closeEvents: [CLOSE_EVENT].concat(closeEvents),
+    inputId: id + "__SearchMenu__Input",
+    menuId: id + "__SearchMenu__Menu"
   }),
       dropdownProps = _useDropdown.dropdownProps,
       menuProps = _useDropdown.menuProps,
@@ -90,7 +105,7 @@ var SearchInput = function SearchInput(_ref) {
       setTimeout(function () {
         var _dropdownProps$ref$cu;
 
-        dropdownProps === null || dropdownProps === void 0 ? void 0 : (_dropdownProps$ref$cu = dropdownProps.ref.current) === null || _dropdownProps$ref$cu === void 0 ? void 0 : _dropdownProps$ref$cu.querySelector('input').focus();
+        dropdownProps == null ? void 0 : (_dropdownProps$ref$cu = dropdownProps.ref.current) == null ? void 0 : _dropdownProps$ref$cu.querySelector('input').focus();
       }, 5);
     }
   }, [isMobileInvisible]);
@@ -100,24 +115,24 @@ var SearchInput = function SearchInput(_ref) {
     if (isDropdownExpanded) {
       var _dropdownProps$ref, _dropdownProps$ref$cu2;
 
-      dropdownProps === null || dropdownProps === void 0 ? void 0 : (_dropdownProps$ref = dropdownProps.ref) === null || _dropdownProps$ref === void 0 ? void 0 : (_dropdownProps$ref$cu2 = _dropdownProps$ref.current) === null || _dropdownProps$ref$cu2 === void 0 ? void 0 : _dropdownProps$ref$cu2.querySelector('input').focus();
+      dropdownProps == null ? void 0 : (_dropdownProps$ref = dropdownProps.ref) == null ? void 0 : (_dropdownProps$ref$cu2 = _dropdownProps$ref.current) == null ? void 0 : _dropdownProps$ref$cu2.querySelector('input').focus();
     } else {
       var _dropdownProps$ref2, _dropdownProps$ref2$c;
 
-      dropdownProps === null || dropdownProps === void 0 ? void 0 : (_dropdownProps$ref2 = dropdownProps.ref) === null || _dropdownProps$ref2 === void 0 ? void 0 : (_dropdownProps$ref2$c = _dropdownProps$ref2.current) === null || _dropdownProps$ref2$c === void 0 ? void 0 : _dropdownProps$ref2$c.addEventListener('focusin', handleFocusIn);
+      dropdownProps == null ? void 0 : (_dropdownProps$ref2 = dropdownProps.ref) == null ? void 0 : (_dropdownProps$ref2$c = _dropdownProps$ref2.current) == null ? void 0 : _dropdownProps$ref2$c.addEventListener('focusin', handleFocusIn);
     }
 
     return function () {
       var _dropdownProps$ref3, _dropdownProps$ref3$c;
 
-      dropdownProps === null || dropdownProps === void 0 ? void 0 : (_dropdownProps$ref3 = dropdownProps.ref) === null || _dropdownProps$ref3 === void 0 ? void 0 : (_dropdownProps$ref3$c = _dropdownProps$ref3.current) === null || _dropdownProps$ref3$c === void 0 ? void 0 : _dropdownProps$ref3$c.removeEventListener('focusin', handleFocusIn);
+      dropdownProps == null ? void 0 : (_dropdownProps$ref3 = dropdownProps.ref) == null ? void 0 : (_dropdownProps$ref3$c = _dropdownProps$ref3.current) == null ? void 0 : _dropdownProps$ref3$c.removeEventListener('focusin', handleFocusIn);
     };
   }, [isDropdownExpanded]);
 
   var handleFocusIn = function handleFocusIn() {
     var _dropdownProps$ref$cu3;
 
-    if ((dropdownProps === null || dropdownProps === void 0 ? void 0 : (_dropdownProps$ref$cu3 = dropdownProps.ref.current) === null || _dropdownProps$ref$cu3 === void 0 ? void 0 : _dropdownProps$ref$cu3.querySelector('input').value.length) > 0) {
+    if ((dropdownProps == null ? void 0 : (_dropdownProps$ref$cu3 = dropdownProps.ref.current) == null ? void 0 : _dropdownProps$ref$cu3.querySelector('input').value.length) > 0) {
       openDropdown();
     }
   };
@@ -141,7 +156,7 @@ var SearchInput = function SearchInput(_ref) {
     size: "tiny",
     rounded: true,
     buttonValue: /*#__PURE__*/_react.default.createElement(_searchIcon.SearchIcon, null),
-    buttonProps: (0, _extends2.default)({}, searchButtonProps, {
+    buttonProps: Object.assign({}, searchButtonProps, {
       ref: buttonElement
     }),
     autoComplete: "off",

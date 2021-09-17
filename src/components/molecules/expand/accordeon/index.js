@@ -1,15 +1,27 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Accordeon = void 0;
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+require("core-js/modules/web.dom-collections.for-each.js");
+
+require("core-js/modules/es.array.map.js");
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -41,6 +53,10 @@ var _debounce = require("../../../../helpers/utils/debounce");
 
 var _elementHelper = require("../../../../helpers/dom/element-helper");
 
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var StyledAccordeon = _styledComponents.default.div.withConfig({
   displayName: "accordeon__StyledAccordeon",
   componentId: "sc-11phwpm-0"
@@ -60,14 +76,12 @@ var Accordeon = function Accordeon(_ref) {
   });
 
   var _useState = (0, _react.useState)(selectedItem),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      internalSelectedItem = _useState2[0],
-      setSelectedItem = _useState2[1];
+      internalSelectedItem = _useState[0],
+      setSelectedItem = _useState[1];
 
-  var _useState3 = (0, _react.useState)(0),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      accordeonWidth = _useState4[0],
-      setAccordeonWidth = _useState4[1];
+  var _useState2 = (0, _react.useState)(0),
+      accordeonWidth = _useState2[0],
+      setAccordeonWidth = _useState2[1];
 
   var debouncedAccordeonWidth = (0, _debounce.useDebounce)(accordeonWidth, 200);
   var accordeonElement = (0, _react.useRef)(null);
@@ -81,7 +95,7 @@ var Accordeon = function Accordeon(_ref) {
     });
   }) : fakeResizeObserver;
   (0, _react.useEffect)(function () {
-    accordeonSizeObserver.observe((accordeonElement === null || accordeonElement === void 0 ? void 0 : accordeonElement.current) || null);
+    accordeonSizeObserver.observe((accordeonElement == null ? void 0 : accordeonElement.current) || null);
     return function () {
       return accordeonSizeObserver.disconnect();
     };
@@ -92,7 +106,7 @@ var Accordeon = function Accordeon(_ref) {
 
     var newItem = closeOnClick && newSelectedItem === internalSelectedItem ? null : newSelectedItem;
     setSelectedItem(newItem);
-    onChange(((_items$newItem = items[newItem]) === null || _items$newItem === void 0 ? void 0 : (_items$newItem$props = _items$newItem.props) === null || _items$newItem$props === void 0 ? void 0 : _items$newItem$props.id) || "".concat(id, "-").concat(newItem));
+    onChange(((_items$newItem = items[newItem]) == null ? void 0 : (_items$newItem$props = _items$newItem.props) == null ? void 0 : _items$newItem$props.id) || id + "-" + newItem);
   };
 
   var context = {
@@ -103,15 +117,15 @@ var Accordeon = function Accordeon(_ref) {
     accordeonWidth: debouncedAccordeonWidth
   };
   return /*#__PURE__*/_react.default.createElement(StyledAccordeon, {
-    className: (0, _classnames.default)('k-Accordeon', "k-Accordeon--".concat(variant), {
+    className: (0, _classnames.default)('k-Accordeon', "k-Accordeon--" + variant, {
       'k-Accordeon--isAnimated': isAnimated
     }),
     ref: accordeonElement
   }, /*#__PURE__*/_react.default.createElement(_context.Context.Provider, {
     value: context
   }, items.map(function (item, index) {
-    var elementId = item.props.id || "".concat(id, "-").concat(index);
-    return (0, _react.cloneElement)(item, {
+    var elementId = item.props.id || id + "-" + index;
+    return /*#__PURE__*/(0, _react.cloneElement)(item, {
       key: elementId,
       id: elementId,
       index: index

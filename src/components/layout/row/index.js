@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Row = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -27,9 +25,11 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _screenConfig = require("../../../constants/screen-config");
 
+var _excluded = ["className", "contentClassName", "centered", "light", "dark", "lightTopBorder", "lightBottomBorder", "padded", "children"];
+
 var StyledRow = _styledComponents.default.div.withConfig({
   displayName: "row__StyledRow",
-  componentId: "aqavk0-0"
+  componentId: "sc-aqavk0-0"
 })(["&.k-Row--centered{text-align:center;}&.k-Row--light{background:", ";}&.k-Row--dark{background:", ";color:", ";}&.k-Row--lightTopBorder{border-top:", " solid ", ";}&.k-Row--lightBottomBorder{border-bottom:", " solid ", ";}&.k-Row--padded .k-Row__content{padding-top:", ";padding-bottom:", ";@media (min-width:", "){padding-top:", ";padding-bottom:", ";}}"], _colorsConfig.default.primary6, _colorsConfig.default.line2, _colorsConfig.default.background1, (0, _typography.pxToRem)(1), _colorsConfig.default.line1, (0, _typography.pxToRem)(1), _colorsConfig.default.line1, (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(80));
 
 var Row = function Row(_ref) {
@@ -42,7 +42,7 @@ var Row = function Row(_ref) {
       lightBottomBorder = _ref.lightBottomBorder,
       padded = _ref.padded,
       children = _ref.children,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "contentClassName", "centered", "light", "dark", "lightTopBorder", "lightBottomBorder", "padded", "children"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledRow, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Row', {
       'k-Row--centered': centered,

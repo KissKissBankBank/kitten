@@ -2,14 +2,20 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Stepper = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
+
+require("core-js/modules/es.array.map.js");
+
+require("core-js/modules/es.regexp.exec.js");
+
+require("core-js/modules/es.string.split.js");
+
+require("core-js/modules/es.string.match.js");
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -28,6 +34,8 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 var _screenConfig = require("../../../constants/screen-config");
 
 var _stepperIcon = require("../../../components/atoms/stepper-icon");
+
+var _excluded = ["href", "iconType", "linkClassNames", "text"];
 
 var StyledStepper = _styledComponents.default.nav.withConfig({
   displayName: "deprecated__StyledStepper",
@@ -57,7 +65,7 @@ var Stepper = function Stepper(_ref) {
         iconType = _ref2.iconType,
         linkClassNames = _ref2.linkClassNames,
         text = _ref2.text,
-        other = (0, _objectWithoutProperties2.default)(_ref2, ["href", "iconType", "linkClassNames", "text"]);
+        other = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
     var Tag = href ? 'a' : 'span';
     var className = (0, _classnames.default)('k-Stepper__link', linkClassNames);
     return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
@@ -65,7 +73,7 @@ var Stepper = function Stepper(_ref) {
       href: href
     }, other), /*#__PURE__*/_react.default.createElement(_stepperIcon.StepperIcon, {
       state: iconType,
-      className: (0, _classnames.default)('k-Stepper__icon', "k-Stepper__icon--".concat(iconType))
+      className: (0, _classnames.default)('k-Stepper__icon', "k-Stepper__icon--" + iconType)
     }), insertLineBreaks(text));
   };
 

@@ -1,13 +1,6 @@
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
+import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
+import "core-js/modules/es.array.concat.js";
+import "core-js/modules/web.dom-collections.for-each.js";
 import React, { PureComponent } from 'react';
 import styled, { css, keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
@@ -17,54 +10,49 @@ import COLORS from '../../../../constants/colors-config';
 import { pxToRem } from '../../../../helpers/utils/typography';
 var StyledButton = styled(Button).withConfig({
   displayName: "expand-board__StyledButton",
-  componentId: "x26zu0-0"
+  componentId: "sc-x26zu0-0"
 })(["width:100%;display:flex;align-items:center;justify-content:center;line-height:", ";", ""], pxToRem(21), function (_ref) {
   var expanded = _ref.expanded;
   return expanded && css(["background-color:", ";border-color:", ";"], COLORS.font1, COLORS.font1);
 });
 var StyledArrowIcon = styled(ArrowIcon).withConfig({
   displayName: "expand-board__StyledArrowIcon",
-  componentId: "x26zu0-1"
+  componentId: "sc-x26zu0-1"
 })(["width:", ";height:", ";margin-left:", ";"], pxToRem(8), pxToRem(12), pxToRem(10));
 export var ExpandBoardButton = /*#__PURE__*/function (_PureComponent) {
-  _inherits(ExpandBoardButton, _PureComponent);
-
-  var _super = _createSuper(ExpandBoardButton);
+  _inheritsLoose(ExpandBoardButton, _PureComponent);
 
   function ExpandBoardButton() {
-    _classCallCheck(this, ExpandBoardButton);
-
-    return _super.apply(this, arguments);
+    return _PureComponent.apply(this, arguments) || this;
   }
 
-  _createClass(ExpandBoardButton, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          children = _this$props.children,
-          expandChildren = _this$props.expandChildren,
-          expanded = _this$props.expanded,
-          disabled = _this$props.disabled,
-          onClick = _this$props.onClick,
-          ariaId = _this$props.ariaId,
-          borderRadius = _this$props.borderRadius,
-          size = _this$props.size;
-      var defaultExpandChildren = expandChildren ? expandChildren : children;
-      return /*#__PURE__*/React.createElement(StyledButton, {
-        size: size,
-        modifier: "helium",
-        disabled: disabled,
-        "aria-expanded": expanded,
-        "aria-controls": ariaId,
-        onClick: onClick,
-        type: "button",
-        borderRadius: borderRadius
-      }, /*#__PURE__*/React.createElement("div", null, expanded ? defaultExpandChildren : children, /*#__PURE__*/React.createElement(StyledArrowIcon, {
-        direction: expanded ? 'top' : 'bottom',
-        fill: COLORS.background1
-      })));
-    }
-  }]);
+  var _proto = ExpandBoardButton.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        children = _this$props.children,
+        expandChildren = _this$props.expandChildren,
+        expanded = _this$props.expanded,
+        disabled = _this$props.disabled,
+        onClick = _this$props.onClick,
+        ariaId = _this$props.ariaId,
+        borderRadius = _this$props.borderRadius,
+        size = _this$props.size;
+    var defaultExpandChildren = expandChildren ? expandChildren : children;
+    return /*#__PURE__*/React.createElement(StyledButton, {
+      size: size,
+      modifier: "helium",
+      disabled: disabled,
+      "aria-expanded": expanded,
+      "aria-controls": ariaId,
+      onClick: onClick,
+      type: "button",
+      borderRadius: borderRadius
+    }, /*#__PURE__*/React.createElement("div", null, expanded ? defaultExpandChildren : children, /*#__PURE__*/React.createElement(StyledArrowIcon, {
+      direction: expanded ? 'top' : 'bottom',
+      fill: COLORS.background1
+    })));
+  };
 
   return ExpandBoardButton;
 }(PureComponent);
@@ -88,27 +76,22 @@ ExpandBoardButton.defaultProps = {
   size: 'big'
 };
 export var ExpandBoardContent = /*#__PURE__*/function (_PureComponent2) {
-  _inherits(ExpandBoardContent, _PureComponent2);
-
-  var _super2 = _createSuper(ExpandBoardContent);
+  _inheritsLoose(ExpandBoardContent, _PureComponent2);
 
   function ExpandBoardContent() {
-    _classCallCheck(this, ExpandBoardContent);
-
-    return _super2.apply(this, arguments);
+    return _PureComponent2.apply(this, arguments) || this;
   }
 
-  _createClass(ExpandBoardContent, [{
-    key: "render",
-    value: function render() {
-      var _this$props2 = this.props,
-          children = _this$props2.children,
-          ariaId = _this$props2.ariaId;
-      return /*#__PURE__*/React.createElement("div", {
-        id: ariaId
-      }, children);
-    }
-  }]);
+  var _proto2 = ExpandBoardContent.prototype;
+
+  _proto2.render = function render() {
+    var _this$props2 = this.props,
+        children = _this$props2.children,
+        ariaId = _this$props2.ariaId;
+    return /*#__PURE__*/React.createElement("div", {
+      id: ariaId
+    }, children);
+  };
 
   return ExpandBoardContent;
 }(PureComponent);
@@ -129,20 +112,16 @@ var shrinkAnimation = function shrinkAnimation() {
 };
 
 export var ExpandBoard = /*#__PURE__*/function (_PureComponent3) {
-  _inherits(ExpandBoard, _PureComponent3);
-
-  var _super3 = _createSuper(ExpandBoard);
+  _inheritsLoose(ExpandBoard, _PureComponent3);
 
   function ExpandBoard() {
     var _this;
-
-    _classCallCheck(this, ExpandBoard);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _super3.call.apply(_super3, [this].concat(args));
+    _this = _PureComponent3.call.apply(_PureComponent3, [this].concat(args)) || this;
     _this.state = {
       expanded: false,
       isShrinking: false,
@@ -217,7 +196,7 @@ export var ExpandBoard = /*#__PURE__*/function (_PureComponent3) {
           '--ExpandBoard-animationMaxHeight': animationMaxHeight,
           maxHeight: animationMaxHeight,
           opacity: 1,
-          animationDuration: "".concat(animationShrinkingDuration, "s"),
+          animationDuration: animationShrinkingDuration + "s",
           animationDelay: 0,
           animationIterationCount: 1,
           animationFillMode: 'forwards',
@@ -242,43 +221,42 @@ export var ExpandBoard = /*#__PURE__*/function (_PureComponent3) {
     return _this;
   }
 
-  _createClass(ExpandBoard, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
+  var _proto3 = ExpandBoard.prototype;
 
-      var _this$props5 = this.props,
-          children = _this$props5.children,
-          style = _this$props5.style,
-          disabled = _this$props5.disabled,
-          ariaId = _this$props5.ariaId;
-      var button = null;
-      var content = null;
-      React.Children.forEach(children, function (child) {
-        if (!React.isValidElement(child)) return null;
+  _proto3.render = function render() {
+    var _this2 = this;
 
-        if (_this2.isButtonComponent(child)) {
-          button = React.cloneElement(child, {
-            disabled: disabled,
-            expanded: _this2.state.expanded,
-            onClick: _this2.handleClick,
-            style: /*#__PURE__*/React.createElement(StyledButton, null),
-            ariaId: ariaId
-          });
-        }
+    var _this$props5 = this.props,
+        children = _this$props5.children,
+        style = _this$props5.style,
+        disabled = _this$props5.disabled,
+        ariaId = _this$props5.ariaId;
+    var button = null;
+    var content = null;
+    React.Children.forEach(children, function (child) {
+      if (! /*#__PURE__*/React.isValidElement(child)) return null;
 
-        if (_this2.isContentComponent(child)) {
-          content = React.cloneElement(child, {
-            ariaId: ariaId,
-            style: _this2.contentStyle()
-          });
-        }
-      });
-      return /*#__PURE__*/React.createElement("div", {
-        style: style
-      }, button, this.state.expanded && content);
-    }
-  }]);
+      if (_this2.isButtonComponent(child)) {
+        button = /*#__PURE__*/React.cloneElement(child, {
+          disabled: disabled,
+          expanded: _this2.state.expanded,
+          onClick: _this2.handleClick,
+          style: /*#__PURE__*/React.createElement(StyledButton, null),
+          ariaId: ariaId
+        });
+      }
+
+      if (_this2.isContentComponent(child)) {
+        content = /*#__PURE__*/React.cloneElement(child, {
+          ariaId: ariaId,
+          style: _this2.contentStyle()
+        });
+      }
+    });
+    return /*#__PURE__*/React.createElement("div", {
+      style: style
+    }, button, this.state.expanded && content);
+  };
 
   return ExpandBoard;
 }(PureComponent);

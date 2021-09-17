@@ -1,15 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
+var _excluded = ["children", "accessibilityLabel", "hasLiked"];
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -31,34 +23,29 @@ var StyledHeartIcon = styled(HeartIcon).withConfig({
   componentId: "sc-1pscjnx-1"
 })(["width:", ";height:", ";margin-right:", ";overflow:hidden;transition:fill 0.2s;"], pxToRem(14), pxToRem(12), pxToRem(10));
 export var LikeButton = /*#__PURE__*/function (_PureComponent) {
-  _inherits(LikeButton, _PureComponent);
-
-  var _super = _createSuper(LikeButton);
+  _inheritsLoose(LikeButton, _PureComponent);
 
   function LikeButton() {
-    _classCallCheck(this, LikeButton);
-
-    return _super.apply(this, arguments);
+    return _PureComponent.apply(this, arguments) || this;
   }
 
-  _createClass(LikeButton, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          children = _this$props.children,
-          accessibilityLabel = _this$props.accessibilityLabel,
-          hasLiked = _this$props.hasLiked,
-          props = _objectWithoutProperties(_this$props, ["children", "accessibilityLabel", "hasLiked"]);
+  var _proto = LikeButton.prototype;
 
-      return /*#__PURE__*/React.createElement(StyledButton, _extends({
-        role: "button",
-        "aria-pressed": "".concat(hasLiked)
-      }, props), accessibilityLabel && /*#__PURE__*/React.createElement(VisuallyHidden, null, accessibilityLabel), /*#__PURE__*/React.createElement(StyledHeartIcon, {
-        "aria-hidden": "true",
-        focusable: "false"
-      }), children);
-    }
-  }]);
+  _proto.render = function render() {
+    var _this$props = this.props,
+        children = _this$props.children,
+        accessibilityLabel = _this$props.accessibilityLabel,
+        hasLiked = _this$props.hasLiked,
+        props = _objectWithoutPropertiesLoose(_this$props, _excluded);
+
+    return /*#__PURE__*/React.createElement(StyledButton, _extends({
+      role: "button",
+      "aria-pressed": "" + hasLiked
+    }, props), accessibilityLabel && /*#__PURE__*/React.createElement(VisuallyHidden, null, accessibilityLabel), /*#__PURE__*/React.createElement(StyledHeartIcon, {
+      "aria-hidden": "true",
+      focusable: "false"
+    }), children);
+  };
 
   return LikeButton;
 }(PureComponent);

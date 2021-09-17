@@ -1,3 +1,6 @@
+import "core-js/modules/es.array.filter.js";
+import "core-js/modules/es.array.includes.js";
+import "core-js/modules/es.string.includes.js";
 import React from 'react';
 import isFunction from 'lodash/fp/isFunction';
 import filter from 'lodash/fp/filter';

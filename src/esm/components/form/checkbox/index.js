@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "id", "children", "inputClassName", "error", "disabled", "textProps", "onLabelClick", "indeterminate", "label", "variant"];
 import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -24,7 +25,7 @@ export var Checkbox = function Checkbox(_ref) {
       indeterminate = _ref.indeterminate,
       label = _ref.label,
       variant = _ref.variant,
-      inputProps = _objectWithoutProperties(_ref, ["className", "id", "children", "inputClassName", "error", "disabled", "textProps", "onLabelClick", "indeterminate", "label", "variant"]);
+      inputProps = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var inputElement = useRef(null);
   useEffect(function () {
@@ -33,7 +34,7 @@ export var Checkbox = function Checkbox(_ref) {
     }
   }, [indeterminate]);
   return /*#__PURE__*/React.createElement(StyledCheckbox, {
-    className: classNames('k-Form-Checkbox', "k-Form-Checkbox--".concat(variant), {
+    className: classNames('k-Form-Checkbox', "k-Form-Checkbox--" + variant, {
       'k-Form-Checkbox--error': error,
       'k-Form-Checkbox--disabled': disabled
     }, className)

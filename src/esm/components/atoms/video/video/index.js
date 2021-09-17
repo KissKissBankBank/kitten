@@ -1,6 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "children", "ariaLabel", "autoPlay", "poster", "src"];
+import "core-js/modules/es.array.includes.js";
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { pxToRem } from '../../../../helpers/utils/typography';
@@ -22,14 +23,13 @@ export var Video = function Video(_ref) {
       autoPlay = _ref.autoPlay,
       poster = _ref.poster,
       src = _ref.src,
-      props = _objectWithoutProperties(_ref, ["className", "children", "ariaLabel", "autoPlay", "poster", "src"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var videoElement = useRef(null);
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      isPlayerVisible = _useState2[0],
-      setPlayerVisibility = _useState2[1];
+      isPlayerVisible = _useState[0],
+      setPlayerVisibility = _useState[1];
 
   var loader = getReactElementsByType({
     children: children,

@@ -2,14 +2,16 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.HorizontalCrowdfundingCard = void 0;
+
+require("core-js/modules/es.symbol.js");
+
+require("core-js/modules/es.symbol.description.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -28,6 +30,8 @@ var _screenConfig = require("../../../../constants/screen-config");
 var _progress = require("../../../../components/atoms/progress");
 
 var _text = require("../../../../components/atoms/typography/text");
+
+var _excluded = ["href", "imageProps", "title", "titleTag", "description", "info", "progress", "progressColor", "className", "noProgressOnMobile"];
 
 var StyledCard = _styledComponents.default.a.withConfig({
   displayName: "horizontal-crowdfunding-card__StyledCard",
@@ -57,7 +61,7 @@ var HorizontalCrowdfundingCard = function HorizontalCrowdfundingCard(_ref) {
       className = _ref.className,
       _ref$noProgressOnMobi = _ref.noProgressOnMobile,
       noProgressOnMobile = _ref$noProgressOnMobi === void 0 ? false : _ref$noProgressOnMobi,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["href", "imageProps", "title", "titleTag", "description", "info", "progress", "progressColor", "className", "noProgressOnMobile"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledCard, (0, _extends2.default)({
     href: href,
     className: (0, _classnames.default)('k-HorizontalCrowdfundingCard', className, {

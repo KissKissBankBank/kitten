@@ -1,8 +1,6 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.CONTAINER_PADDING = exports.CONTAINER_PADDING_THIN = exports.GUTTER = exports.CONTAINER_MAX_WIDTH = exports.NUM_COLUMNS = void 0;
 var NUM_COLUMNS = 12;
 exports.NUM_COLUMNS = NUM_COLUMNS;

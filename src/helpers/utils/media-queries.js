@@ -1,20 +1,22 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.getScreenSizeFrom = exports.createMatchMediaWithin = exports.createMatchMediaMax = exports.createMatchMediaMin = exports.createMatchMedia = exports.getJoinedQueries = exports.getMaxQuery = exports.getMinQuery = void 0;
+
+require("core-js/modules/es.array.join.js");
+
+require("core-js/modules/es.array.filter.js");
 
 var _screenConfig = require("../../constants/screen-config");
 
 var getMinQuery = function getMinQuery(num) {
-  return "(min-width: ".concat(num, "px)");
+  return "(min-width: " + num + "px)";
 };
 
 exports.getMinQuery = getMinQuery;
 
 var getMaxQuery = function getMaxQuery(num) {
-  return "(max-width: ".concat(num, "px)");
+  return "(max-width: " + num + "px)";
 };
 
 exports.getMaxQuery = getMaxQuery;

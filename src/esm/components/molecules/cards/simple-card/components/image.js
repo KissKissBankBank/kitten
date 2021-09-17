@@ -1,4 +1,5 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
+import _extends from "@babel/runtime/helpers/extends";
+import "core-js/modules/es.object.assign.js";
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -19,7 +20,7 @@ export var Image = function Image(_ref) {
     className: classNames('k-SimpleCard__imageContainer', className, {
       'k-SimpleCard__imageContainer--ratio': !!imageContainerRatio
     }),
-    style: _extends({}, style, {
+    style: Object.assign({}, style, {
       '--SimpleCard-image-container-background': imageContainerBackground,
       '--SimpleCard-image-container-ratio': imageContainerRatio
     })

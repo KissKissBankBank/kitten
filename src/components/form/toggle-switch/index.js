@@ -1,19 +1,29 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.ToggleSwitch = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+require("core-js/modules/es.string.big.js");
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -29,6 +39,12 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _lockIcon = require("../../../components/graphics/icons/lock-icon");
 
+var _excluded = ["activeColor", "big", "checkedColor", "defaultColor", "disabled", "disabledColor", "id", "isChecked", "isLabelVisible", "label", "labelProps", "locked", "reverseOrder", "switchProps", "onChange"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var transitionDuration = '.15s';
 var switchWidth = 60;
 var switchHeight = 30;
@@ -37,7 +53,7 @@ var borderRadius = 18;
 
 var StyledSwitchContainer = _styledComponents.default.div.withConfig({
   displayName: "toggle-switch__StyledSwitchContainer",
-  componentId: "ski4b0-0"
+  componentId: "sc-ski4b0-0"
 })(["display:inline-flex;align-items:center;cursor:pointer;", " ", ""], function (_ref) {
   var isDisabled = _ref.isDisabled;
   return isDisabled && (0, _styledComponents.css)(["cursor:not-allowed;"]);
@@ -48,7 +64,7 @@ var StyledSwitchContainer = _styledComponents.default.div.withConfig({
 
 var StyledSwitch = _styledComponents.default.button.withConfig({
   displayName: "toggle-switch__StyledSwitch",
-  componentId: "ski4b0-1"
+  componentId: "sc-ski4b0-1"
 })(["display:inline-block;position:relative;box-sizing:border-box;width:", ";height:", ";color:", ";background-color:currentColor;border:", " solid ", ";border-radius:", ";transition:color ", " ease,border-color ", " ease,background-color ", " ease;cursor:pointer;&:focus{border-color:", ";outline:", " solid ", ";outline-offset:", ";.k-ToggleSwitch__circle{border-color:", ";}}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}.k-ToggleSwitch__circle{position:absolute;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;left:-", ";top:-", ";width:", ";height:", ";content:'';background-color:", ";border:", " solid ", ";border-radius:", ";transition:left ", " ease,color ", " ease,border-color ", " ease,background-color ", " ease;}&[aria-pressed='true']{color:", ";border-color:currentColor;.k-ToggleSwitch__circle{left:", ";border-color:currentColor;}}&:active{color:", ";&,.k-ToggleSwitch__circle{border-color:", ";}}&[disabled]{cursor:not-allowed;", " .k-ToggleSwitch__circle{pointer-events:none;}}"], (0, _typography.pxToRem)(switchWidth), (0, _typography.pxToRem)(switchHeight), function (_ref3) {
   var defaultColor = _ref3.defaultColor;
   return defaultColor;
@@ -71,7 +87,7 @@ var StyledSwitch = _styledComponents.default.button.withConfig({
 
 var StyledLabel = _styledComponents.default.label.withConfig({
   displayName: "toggle-switch__StyledLabel",
-  componentId: "ski4b0-2"
+  componentId: "sc-ski4b0-2"
 })(["padding-left:", ";", " font-size:", ";line-height:", ";color:", ";transition:color ", " ease;cursor:pointer;::selection{background:transparent;}::-moz-selection{background:transparent;}", ":hover &{color:", ";}", ":active &{color:", ";}", " button[disabled] + &{color:", ";cursor:not-allowed;}"], (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles.light, function (_ref9) {
   var big = _ref9.big;
   return (0, _typography.stepToRem)(big ? 3 : 0);
@@ -96,12 +112,11 @@ var ToggleSwitch = function ToggleSwitch(_ref11) {
       reverseOrder = _ref11.reverseOrder,
       switchProps = _ref11.switchProps,
       onChange = _ref11.onChange,
-      others = (0, _objectWithoutProperties2.default)(_ref11, ["activeColor", "big", "checkedColor", "defaultColor", "disabled", "disabledColor", "id", "isChecked", "isLabelVisible", "label", "labelProps", "locked", "reverseOrder", "switchProps", "onChange"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref11, _excluded);
 
   var _useState = (0, _react.useState)(isChecked),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isPressed = _useState2[0],
-      setPressedState = _useState2[1];
+      isPressed = _useState[0],
+      setPressedState = _useState[1];
 
   var handleClick = function handleClick() {
     onChange && onChange(!isPressed);
@@ -120,7 +135,7 @@ var ToggleSwitch = function ToggleSwitch(_ref11) {
     disabled: disabled || locked,
     "aria-pressed": isPressed,
     "aria-label": isLabelVisible ? null : label,
-    "aria-labelledby": isLabelVisible ? "".concat(id, "_label") : null,
+    "aria-labelledby": isLabelVisible ? id + "_label" : null,
     checkedColor: checkedColor,
     defaultColor: defaultColor,
     disabledColor: disabledColor,
@@ -134,7 +149,7 @@ var ToggleSwitch = function ToggleSwitch(_ref11) {
     color: _colorsConfig.default.font1
   }))), isLabelVisible && /*#__PURE__*/_react.default.createElement(StyledLabel, (0, _extends2.default)({
     htmlFor: id,
-    id: "".concat(id, "_label"),
+    id: id + "_label",
     disabledColor: disabledColor,
     big: big
   }, labelProps), label));

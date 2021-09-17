@@ -1,5 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "children"],
+    _excluded2 = ["className", "children", "contentClassName"];
 import React, { createContext, useContext } from 'react';
 import classNames from 'classnames';
 import styled from 'styled-components';
@@ -9,12 +11,12 @@ import { ScreenConfig } from '../../../constants/screen-config';
 import { Grid, GridCol } from '../../../components/layout/grid';
 import { Container } from '../../../components/layout/container';
 import { GUTTER } from '../../../constants/grid-config';
-var Context = createContext({
+var Context = /*#__PURE__*/createContext({
   asideSize: 'default'
 });
 var StyledSideGrid = styled.div.withConfig({
   displayName: "side-grid__StyledSideGrid",
-  componentId: "gp2qki-0"
+  componentId: "sc-gp2qki-0"
 })(["@media (min-width:", "){background:linear-gradient( to right,", " 0%,", " 50%,", " 50%,", " 100% );}.k-SideGrid__content{background-color:", ";padding-bottom:", ";@media (min-width:", "){padding-bottom:", ";}}.k-SideGrid__aside{display:none;@media (min-width:", "){display:flex;border-left:", " solid ", ";padding-left:0;padding-right:", ";}}.k-SideGrid__asideContent{display:flex;flex-direction:column;flex:1 1 auto;border-left:", " solid ", ";background-color:", ";}&.k-SideGrid--aside-start{@media (min-width:", "){background:linear-gradient( to left,", " 0%,", " 50%,", " 50%,", " 100% );}.k-SideGrid__row{flex-direction:row-reverse;}.k-SideGrid__aside{border-left:none;border-right:", " solid ", ";padding-left:", ";padding-right:0;}.k-SideGrid__asideContent{border-left:none;border-right:", " solid ", ";}}"], pxToRem(ScreenConfig.M.min), COLORS.background1, COLORS.background1, COLORS.background2, COLORS.background2, COLORS.background1, pxToRem(30), pxToRem(ScreenConfig.M.min), pxToRem(50), pxToRem(ScreenConfig.M.min), pxToRem(GUTTER / 2), COLORS.background1, pxToRem(GUTTER / 2), pxToRem(1), COLORS.line1, COLORS.background2, pxToRem(ScreenConfig.M.min), COLORS.background1, COLORS.background1, COLORS.background2, COLORS.background2, pxToRem(GUTTER / 2), COLORS.background1, pxToRem(GUTTER / 2), pxToRem(1), COLORS.line1);
 export var SideGrid = function SideGrid(_ref) {
   var children = _ref.children,
@@ -23,7 +25,7 @@ export var SideGrid = function SideGrid(_ref) {
       rowClassName = _ref.rowClassName,
       asidePosition = _ref.asidePosition,
       asideSize = _ref.asideSize;
-  var sideGridClassName = classNames('k-SideGrid', className, "k-SideGrid--aside-".concat(asidePosition), "k-SideGrid--aside-".concat(asideSize));
+  var sideGridClassName = classNames('k-SideGrid', className, "k-SideGrid--aside-" + asidePosition, "k-SideGrid--aside-" + asideSize);
   return /*#__PURE__*/React.createElement(StyledSideGrid, {
     className: sideGridClassName
   }, /*#__PURE__*/React.createElement(Container, {
@@ -39,7 +41,7 @@ export var SideGrid = function SideGrid(_ref) {
 export var SideGridContent = function SideGridContent(_ref2) {
   var className = _ref2.className,
       children = _ref2.children,
-      props = _objectWithoutProperties(_ref2, ["className", "children"]);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded);
 
   var _useContext = useContext(Context),
       asideSize = _useContext.asideSize;
@@ -67,7 +69,7 @@ export var SideGridAside = function SideGridAside(_ref3) {
   var className = _ref3.className,
       children = _ref3.children,
       contentClassName = _ref3.contentClassName,
-      props = _objectWithoutProperties(_ref3, ["className", "children", "contentClassName"]);
+      props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
 
   var _useContext2 = useContext(Context),
       asideSize = _useContext2.asideSize;

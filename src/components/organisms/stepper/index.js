@@ -1,17 +1,27 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Stepper = exports.StepperLink = exports.StepperItem = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -35,19 +45,27 @@ var _stepperIcon = require("../../../components/atoms/stepper-icon");
 
 var _deprecated2 = require("./deprecated");
 
+var _excluded = ["children", "state"],
+    _excluded2 = ["children", "state", "href", "external", "linkProps"],
+    _excluded3 = ["children", "items"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var Wrapper = _styledComponents.default.div.withConfig({
   displayName: "stepper__Wrapper",
-  componentId: "kuopc1-0"
+  componentId: "sc-kuopc1-0"
 })(["display:block;width:100%;overflow-x:scroll;scrollbar-width:thin;"]);
 
 var List = _styledComponents.default.ul.withConfig({
   displayName: "stepper__List",
-  componentId: "kuopc1-1"
+  componentId: "sc-kuopc1-1"
 })(["display:flex;align-items:center;justify-content:center;height:", ";flex-wrap:nowrap;box-sizing:border-box;min-width:min-content;padding-right:40px;background-color:", ";margin:0;gap:", ";@media (min-width:", "){height:", ";gap:", ";}"], (0, _typography.pxToRem)(65), _colorsConfig.default.primary6, (0, _typography.pxToRem)(25), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(50));
 
 var ItemWrapper = _styledComponents.default.li.withConfig({
   displayName: "stepper__ItemWrapper",
-  componentId: "kuopc1-2"
+  componentId: "sc-kuopc1-2"
 })(["display:flex;align-items:center;.k-Stepper__icon{margin-right:", ";}", " ", ""], (0, _typography.pxToRem)(10), function (props) {
   return props.state === 'progress' && (0, _styledComponents.css)(["color:", ";"], _colorsConfig.default.primary1);
 }, function (props) {
@@ -56,13 +74,13 @@ var ItemWrapper = _styledComponents.default.li.withConfig({
 
 var StepperText = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "stepper__StepperText",
-  componentId: "kuopc1-3"
+  componentId: "sc-kuopc1-3"
 })(["display:flex;align-items:center;white-space:nowrap;transition:color 0.2s ease;border-radius:", ";&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}"], (0, _typography.pxToRem)(6), _colorsConfig.default.primary3, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary4);
 
 var StepperItem = function StepperItem(_ref) {
   var children = _ref.children,
       state = _ref.state,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "state"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(ItemWrapper, (0, _extends2.default)({
     state: state
   }, props), /*#__PURE__*/_react.default.createElement(StepperText, {
@@ -91,7 +109,7 @@ var StepperLink = function StepperLink(_ref2) {
       href = _ref2.href,
       external = _ref2.external,
       linkProps = _ref2.linkProps,
-      props = (0, _objectWithoutProperties2.default)(_ref2, ["children", "state", "href", "external", "linkProps"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
   return /*#__PURE__*/_react.default.createElement(ItemWrapper, (0, _extends2.default)({
     state: state
   }, props), /*#__PURE__*/_react.default.createElement(StepperText, (0, _extends2.default)({
@@ -127,7 +145,7 @@ StepperLink.defaultProps = {
 var Stepper = function Stepper(_ref3) {
   var children = _ref3.children,
       items = _ref3.items,
-      others = (0, _objectWithoutProperties2.default)(_ref3, ["children", "items"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded3);
 
   if (!!items) {
     return /*#__PURE__*/_react.default.createElement(_deprecated2.Stepper, (0, _extends2.default)({

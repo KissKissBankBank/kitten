@@ -1,3 +1,4 @@
+import "core-js/modules/es.array.map.js";
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -26,7 +27,7 @@ export var DocumentsStatusBox = function DocumentsStatusBox(_ref) {
       _ref$retryAction = _ref.retryAction,
       retryAction = _ref$retryAction === void 0 ? function () {} : _ref$retryAction;
   return /*#__PURE__*/React.createElement(StyledDocumentsStatusBox, {
-    className: classNames('k-DocumentsStatusBox', className, "k-DocumentsStatusBox--".concat(status))
+    className: classNames('k-DocumentsStatusBox', className, "k-DocumentsStatusBox--" + status)
   }, /*#__PURE__*/React.createElement("div", {
     className: "k-DrocumentDropUploader__icon"
   }, status === 'wait' && /*#__PURE__*/React.createElement(ClockCircleIcon, {

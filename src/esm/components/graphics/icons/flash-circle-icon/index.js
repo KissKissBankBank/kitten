@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["bgColor", "color", "circleColor", "flashColor", "width", "height", "title", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
@@ -17,7 +18,7 @@ export var FlashCircleIcon = function FlashCircleIcon(_ref) {
       height = _ref.height,
       title = _ref.title,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["bgColor", "color", "circleColor", "flashColor", "width", "height", "title", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,

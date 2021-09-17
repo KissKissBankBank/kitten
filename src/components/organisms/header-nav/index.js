@@ -1,17 +1,25 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.default = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -55,6 +63,10 @@ var _usePreviousHook = require("../../../helpers/utils/use-previous-hook");
 
 var _styles = require("./styles");
 
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var HeaderNav = function HeaderNav(_ref) {
   var children = _ref.children,
       id = _ref.id,
@@ -67,19 +79,16 @@ var HeaderNav = function HeaderNav(_ref) {
       borderStyle = _ref.borderStyle;
 
   var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isMenuExpanded = _useState2[0],
-      setMenuExpanded = _useState2[1];
+      isMenuExpanded = _useState[0],
+      setMenuExpanded = _useState[1];
+
+  var _useState2 = (0, _react.useState)(null),
+      menuExpandBy = _useState2[0],
+      setMenuExpandBy = _useState2[1];
 
   var _useState3 = (0, _react.useState)(null),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      menuExpandBy = _useState4[0],
-      setMenuExpandBy = _useState4[1];
-
-  var _useState5 = (0, _react.useState)(null),
-      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
-      stickyState = _useState6[0],
-      setStickyState = _useState6[1];
+      stickyState = _useState3[0],
+      setStickyState = _useState3[1];
 
   var stickyContainerRef = (0, _react.useRef)(null);
   var headerRef = (0, _react.useRef)(null);
@@ -113,14 +122,14 @@ var HeaderNav = function HeaderNav(_ref) {
       '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu
     },
     zIndex: zIndexConfig,
-    className: (0, _classnames.default)('k-HeaderNav__wrapper', "k-HeaderNav--".concat(size), "k-HeaderNav--".concat(borderStyle), {
+    className: (0, _classnames.default)('k-HeaderNav__wrapper', "k-HeaderNav--" + size, "k-HeaderNav--" + borderStyle, {
       'k-HeaderNav--menuIsExpanded': isMenuExpanded
     })
   }, /*#__PURE__*/_react.default.createElement(_stickyContainer.StickyContainer, (0, _extends2.default)({
     ref: stickyContainerRef,
     isSticky: stickyState
   }, stickyProps, {
-    className: (0, _classnames.default)('k-HeaderNav__stickyContainer', stickyProps === null || stickyProps === void 0 ? void 0 : stickyProps.className)
+    className: (0, _classnames.default)('k-HeaderNav__stickyContainer', stickyProps == null ? void 0 : stickyProps.className)
   }), /*#__PURE__*/_react.default.createElement("nav", {
     ref: headerRef,
     id: id,

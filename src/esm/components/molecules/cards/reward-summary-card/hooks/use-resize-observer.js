@@ -1,4 +1,3 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import { useRef, useCallback, useEffect, useState } from 'react';
 import { domElementHelper } from '../../../../../helpers/dom/element-helper'; // https://gist.github.com/DominicTobias/c8579667e8a8bd7817c1b4d5b274eb4c
 
@@ -8,9 +7,8 @@ export var useResizeObserver = function useResizeObserver() {
   }
 
   var _useState = useState('large'),
-      _useState2 = _slicedToArray(_useState, 2),
-      size = _useState2[0],
-      setSize = _useState2[1];
+      size = _useState[0],
+      setSize = _useState[1];
 
   var resizeObserver = useRef(null);
   var onResize = useCallback(function (entries) {
@@ -30,7 +28,7 @@ export var useResizeObserver = function useResizeObserver() {
   }, []);
   var ref = useCallback(function (node) {
     if (node !== null) {
-      if (resizeObserver !== null && resizeObserver !== void 0 && resizeObserver.current) {
+      if (resizeObserver != null && resizeObserver.current) {
         resizeObserver.current.disconnect();
       }
 
@@ -40,7 +38,7 @@ export var useResizeObserver = function useResizeObserver() {
   }, [onResize]);
   useEffect(function () {
     return function () {
-      if (resizeObserver !== null && resizeObserver !== void 0 && resizeObserver.current) {
+      if (resizeObserver != null && resizeObserver.current) {
         resizeObserver.current.disconnect();
       }
     };

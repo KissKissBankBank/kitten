@@ -2,20 +2,22 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.card = void 0;
+
+require("core-js/modules/es.object.assign.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
+
+var _excluded = ["className", "light", "padded", "rounded", "translateOnHover", "withBorder", "withDarkBorder", "withShadow", "withVerticalPadding", "withoutBoxShadowOnHover"];
 
 var card = function card(WrappedComponent, wrappedProps) {
   var defaultProps = {
@@ -31,7 +33,7 @@ var card = function card(WrappedComponent, wrappedProps) {
   };
 
   var Card = function Card(props) {
-    var _defaultProps$wrapped = (0, _extends2.default)({}, defaultProps, wrappedProps, props),
+    var _defaultProps$wrapped = Object.assign({}, defaultProps, wrappedProps, props),
         className = _defaultProps$wrapped.className,
         light = _defaultProps$wrapped.light,
         padded = _defaultProps$wrapped.padded,
@@ -42,7 +44,7 @@ var card = function card(WrappedComponent, wrappedProps) {
         withShadow = _defaultProps$wrapped.withShadow,
         withVerticalPadding = _defaultProps$wrapped.withVerticalPadding,
         withoutBoxShadowOnHover = _defaultProps$wrapped.withoutBoxShadowOnHover,
-        others = (0, _objectWithoutProperties2.default)(_defaultProps$wrapped, ["className", "light", "padded", "rounded", "translateOnHover", "withBorder", "withDarkBorder", "withShadow", "withVerticalPadding", "withoutBoxShadowOnHover"]);
+        others = (0, _objectWithoutPropertiesLoose2.default)(_defaultProps$wrapped, _excluded);
 
     var cardClassName = (0, _classnames.default)('k-Card', {
       'k-Card--light': light,

@@ -1,19 +1,29 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.UserMenuNext = void 0;
+
+require("core-js/modules/es.array.concat.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -31,8 +41,14 @@ var _useDropdown2 = require("../hooks/use-dropdown");
 
 var _arrowIcon = require("../../../../components/graphics/icons/arrow-icon");
 
+var _excluded = ["children", "dropdownContentWidth", "closeEvents", "dropdownAnchorSide", "className", "padding", "mobilePadding"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var namespace = 'kkbbAndCo';
-var CLOSE_EVENT = "".concat(namespace, ":userMenu:close");
+var CLOSE_EVENT = namespace + ":userMenu:close";
 
 var UserMenuNext = function UserMenuNext(_ref) {
   var children = _ref.children,
@@ -42,7 +58,7 @@ var UserMenuNext = function UserMenuNext(_ref) {
       className = _ref.className,
       padding = _ref.padding,
       mobilePadding = _ref.mobilePadding,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "dropdownContentWidth", "closeEvents", "dropdownAnchorSide", "className", "padding", "mobilePadding"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useContext = (0, _react.useContext)(_context.Context),
       id = _useContext.id,
@@ -61,9 +77,9 @@ var UserMenuNext = function UserMenuNext(_ref) {
     dropdownContentWidth: dropdownContentWidth,
     callOnToggle: callOnToggle,
     dropdownAnchorSide: dropdownAnchorSide,
-    closeEvents: [CLOSE_EVENT].concat((0, _toConsumableArray2.default)(closeEvents)),
-    buttonId: "".concat(id, "__UserMenu__Button"),
-    menuId: "".concat(id, "__UserMenu__Menu")
+    closeEvents: [CLOSE_EVENT].concat(closeEvents),
+    buttonId: id + "__UserMenu__Button",
+    menuId: id + "__UserMenu__Menu"
   }),
       dropdownProps = _useDropdown.dropdownProps,
       buttonProps = _useDropdown.buttonProps,
@@ -86,11 +102,11 @@ var UserMenuNext = function UserMenuNext(_ref) {
       'k-HeaderNav__UserMenuButton--noPadding': !padding,
       'k-HeaderNav__UserMenuButton--noPaddingMobile': !mobilePadding
     })
-  }), (0, _react.cloneElement)(buttonChild), buttonChild.props.hasArrow && /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+  }), /*#__PURE__*/(0, _react.cloneElement)(buttonChild), buttonChild.props.hasArrow && /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
     direction: isDropdownExpanded ? 'top' : 'bottom',
     className: "k-u-margin-left-single k-u-hidden@xs-down",
     color: "currentColor"
-  })), /*#__PURE__*/_react.default.createElement("div", menuProps, (0, _react.cloneElement)(menuChild)));
+  })), /*#__PURE__*/_react.default.createElement("div", menuProps, /*#__PURE__*/(0, _react.cloneElement)(menuChild)));
 };
 
 exports.UserMenuNext = UserMenuNext;

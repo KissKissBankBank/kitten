@@ -1,13 +1,7 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.useDrag = void 0;
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = require("react");
 
@@ -19,33 +13,29 @@ var useDrag = function useDrag(_ref) {
       disabled = _ref.disabled;
 
   var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isDragging = _useState2[0],
-      setDragging = _useState2[1];
+      isDragging = _useState[0],
+      setDragging = _useState[1];
+
+  var _useState2 = (0, _react.useState)({
+    x: 0,
+    y: 0
+  }),
+      origin = _useState2[0],
+      setOrigin = _useState2[1];
 
   var _useState3 = (0, _react.useState)({
     x: 0,
     y: 0
   }),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      origin = _useState4[0],
-      setOrigin = _useState4[1];
+      translation = _useState3[0],
+      setTranslation = _useState3[1];
 
-  var _useState5 = (0, _react.useState)({
+  var _useState4 = (0, _react.useState)({
     x: 0,
     y: 0
   }),
-      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
-      translation = _useState6[0],
-      setTranslation = _useState6[1];
-
-  var _useState7 = (0, _react.useState)({
-    x: 0,
-    y: 0
-  }),
-      _useState8 = (0, _slicedToArray2.default)(_useState7, 2),
-      lastTranslation = _useState8[0],
-      setLastTranslation = _useState8[1];
+      lastTranslation = _useState4[0],
+      setLastTranslation = _useState4[1];
 
   (0, _react.useEffect)(function () {
     if (!imageDimensions) return;

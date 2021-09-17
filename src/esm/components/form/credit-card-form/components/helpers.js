@@ -1,4 +1,9 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
+import "core-js/modules/es.object.assign.js";
+import "core-js/modules/es.array.join.js";
+import "core-js/modules/es.array.map.js";
+import "core-js/modules/es.array.fill.js";
+import "core-js/modules/es.array.includes.js";
+import "core-js/modules/es.string.includes.js";
 import React from 'react';
 import isEmpty from 'lodash/fp/isEmpty';
 import max from 'lodash/fp/max';
@@ -17,11 +22,9 @@ creditCardType.addCard({
   lengths: [16],
   code: null
 });
-
-var creditCardTypes = _extends({}, types, {
+var creditCardTypes = Object.assign({}, types, {
   BANCONTACT: 'bcmc'
 });
-
 export var getCreditCardType = function getCreditCardType(number) {
   var types = creditCardType(number);
   return isEmpty(types) ? {} : types[0];
@@ -67,7 +70,7 @@ export var getCreditCardFormat = function getCreditCardFormat(type) {
   var maxLength = max(type.lengths) || 0;
   if (!maxLength) return '#### #### #### ####';
   return Array(maxLength).fill('#').map(function (v, i) {
-    return type.gaps.includes(i + 1) ? "".concat(v, " ") : v;
+    return type.gaps.includes(i + 1) ? v + " " : v;
   }).join('');
 };
 export var withCode = function withCode(number) {

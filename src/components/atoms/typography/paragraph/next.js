@@ -1,13 +1,8 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "Paragraph", {
-  enumerable: true,
-  get: function get() {
-    return _.Paragraph;
-  }
-});
+exports.__esModule = true;
+exports.Paragraph = void 0;
 
 var _ = require("./");
+
+exports.Paragraph = _.Paragraph;

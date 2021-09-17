@@ -1,77 +1,40 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "Info", {
-  enumerable: true,
-  get: function get() {
-    return _info.Info;
-  }
-});
-Object.defineProperty(exports, "Form", {
-  enumerable: true,
-  get: function get() {
-    return _form.Form;
-  }
-});
-Object.defineProperty(exports, "Title", {
-  enumerable: true,
-  get: function get() {
-    return _title.Title;
-  }
-});
-Object.defineProperty(exports, "Image", {
-  enumerable: true,
-  get: function get() {
-    return _image.Image;
-  }
-});
-Object.defineProperty(exports, "Amount", {
-  enumerable: true,
-  get: function get() {
-    return _amount.Amount;
-  }
-});
-Object.defineProperty(exports, "Button", {
-  enumerable: true,
-  get: function get() {
-    return _button.Button;
-  }
-});
-Object.defineProperty(exports, "TagList", {
-  enumerable: true,
-  get: function get() {
-    return _tagList.TagList;
-  }
-});
-Object.defineProperty(exports, "HeadingTag", {
-  enumerable: true,
-  get: function get() {
-    return _headingTag.HeadingTag;
-  }
-});
-Object.defineProperty(exports, "Description", {
-  enumerable: true,
-  get: function get() {
-    return _description.Description;
-  }
-});
+exports.__esModule = true;
+exports.Description = exports.HeadingTag = exports.TagList = exports.Button = exports.Amount = exports.Image = exports.Title = exports.Form = exports.Info = void 0;
 
 var _info = require("./info");
 
+exports.Info = _info.Info;
+
 var _form = require("./form");
+
+exports.Form = _form.Form;
 
 var _title = require("./title");
 
+exports.Title = _title.Title;
+
 var _image = require("./image");
+
+exports.Image = _image.Image;
 
 var _amount = require("./amount");
 
+exports.Amount = _amount.Amount;
+
 var _button = require("./button");
+
+exports.Button = _button.Button;
 
 var _tagList = require("./tag-list");
 
+exports.TagList = _tagList.TagList;
+
 var _headingTag = require("./heading-tag");
 
+exports.HeadingTag = _headingTag.HeadingTag;
+
 var _description = require("./description");
+
+exports.Description = _description.Description;

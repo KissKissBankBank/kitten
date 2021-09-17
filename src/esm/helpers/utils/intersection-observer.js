@@ -1,10 +1,26 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
+import "core-js/modules/es.array.iterator.js";
+import "core-js/modules/es.map.js";
+import "core-js/modules/es.object.to-string.js";
+import "core-js/modules/es.string.iterator.js";
+import "core-js/modules/esnext.map.delete-all.js";
+import "core-js/modules/esnext.map.every.js";
+import "core-js/modules/esnext.map.filter.js";
+import "core-js/modules/esnext.map.find.js";
+import "core-js/modules/esnext.map.find-key.js";
+import "core-js/modules/esnext.map.includes.js";
+import "core-js/modules/esnext.map.key-of.js";
+import "core-js/modules/esnext.map.map-keys.js";
+import "core-js/modules/esnext.map.map-values.js";
+import "core-js/modules/esnext.map.merge.js";
+import "core-js/modules/esnext.map.reduce.js";
+import "core-js/modules/esnext.map.some.js";
+import "core-js/modules/esnext.map.update.js";
+import "core-js/modules/web.dom-collections.iterator.js";
+import "core-js/modules/web.dom-collections.for-each.js";
+import "core-js/modules/es.object.assign.js";
 import { domElementHelper } from '../dom/element-helper';
 export var IntersectionObserverClass = function IntersectionObserverClass(options) {
   var _this = this;
-
-  _classCallCheck(this, IntersectionObserverClass);
 
   this.observedComponents = new Map();
 
@@ -19,8 +35,10 @@ export var IntersectionObserverClass = function IntersectionObserverClass(option
     });
   };
 
-  this.observe = function (elt) {
-    var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {};
+  this.observe = function (elt, callback) {
+    if (callback === void 0) {
+      callback = function callback() {};
+    }
 
     if (_this.observer === null) {
       callback();
@@ -40,7 +58,7 @@ export var IntersectionObserverClass = function IntersectionObserverClass(option
     _this.observer.unobserve(elt);
   };
 
-  this.options = _extends({
+  this.options = Object.assign({
     root: null,
     rootMargin: '0px 0px',
     threshold: 0.01

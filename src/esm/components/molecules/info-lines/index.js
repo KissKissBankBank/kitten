@@ -1,5 +1,8 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "style", "infos", "withBorderRadius", "withLeftRightBorder", "withoutTopBottomBorder", "withoutResponsive", "borderColor", "descriptionTagList", "titleTagList", "itemTagList"];
+import "core-js/modules/es.object.assign.js";
+import "core-js/modules/es.array.map.js";
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -23,7 +26,7 @@ export var InfoLines = function InfoLines(_ref) {
       descriptionTagList = _ref.descriptionTagList,
       titleTagList = _ref.titleTagList,
       itemTagList = _ref.itemTagList,
-      others = _objectWithoutProperties(_ref, ["className", "style", "infos", "withBorderRadius", "withLeftRightBorder", "withoutTopBottomBorder", "withoutResponsive", "borderColor", "descriptionTagList", "titleTagList", "itemTagList"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var TitleElement = titleTagList;
   var ItemElement = itemTagList;
@@ -34,7 +37,7 @@ export var InfoLines = function InfoLines(_ref) {
       'k-InfoLines--withoutTopBottomBorder': withoutTopBottomBorder,
       'k-InfoLines--withoutResponsive': withoutResponsive
     }),
-    style: _extends({}, style, {
+    style: Object.assign({}, style, {
       '--InfoLines-borderColor': borderColor
     }),
     as: descriptionTagList

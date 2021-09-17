@@ -1,5 +1,8 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["combobox"];
+import "core-js/modules/es.array.map.js";
+import "core-js/modules/es.object.assign.js";
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useSelect } from 'downshift';
@@ -14,7 +17,7 @@ import { StyledDropdown } from './styles';
 import COLORS from '../../../constants/colors-config';
 export var DropdownSelect = function DropdownSelect(_ref) {
   var combobox = _ref.combobox,
-      props = _objectWithoutProperties(_ref, ["combobox"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   if (combobox) return /*#__PURE__*/React.createElement(DropdownCombobox, props);
   var labelText = props.labelText,
@@ -94,8 +97,8 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     });
   };
 
-  var _useSelect = useSelect(_extends({
-    id: "".concat(id, "_element"),
+  var _useSelect = useSelect(Object.assign({
+    id: id + "_element",
     toggleButtonId: id,
     items: flattenedOptions,
     getA11ySelectionMessage: getA11ySelectionMessage,
@@ -119,7 +122,7 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     getLabelProps && labelPropsGetter(getLabelProps);
   }, [getLabelProps]);
   return /*#__PURE__*/React.createElement(StyledDropdown, {
-    className: classNames('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), className, {
+    className: classNames('k-Form-Dropdown', "k-Form-Dropdown--" + variant, "k-Form-Dropdown--" + size, className, {
       'k-Form-Dropdown--isOpen': isOpen,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
@@ -160,10 +163,10 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     className: "k-Form-Dropdown__list"
   }, getMenuProps()), isOpen && flattenedOptions.map(function (item, index) {
     return /*#__PURE__*/React.createElement("li", _extends({
-      className: classNames('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_".concat(item.level || 1), {
+      className: classNames('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_" + (item.level || 1), {
         'k-Form-Dropdown__item--higlighted': highlightedIndex === index
       }),
-      key: "".concat(item.value).concat(index),
+      key: "" + item.value + index,
       disabled: item.disabled
     }, getItemProps({
       item: item,
@@ -184,7 +187,7 @@ DropdownSelect.defaultProps = {
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
   a11ySelectionMessageDisplayer: function a11ySelectionMessageDisplayer(item) {
-    return "".concat(item, " is now selected.");
+    return item + " is now selected.";
   },
   onChange: function onChange() {},
   onBlur: function onBlur() {},

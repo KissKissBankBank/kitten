@@ -1,19 +1,29 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.SimplePopover = void 0;
+
+require("core-js/modules/es.array.map.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -39,16 +49,23 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _button = require("../../../components/molecules/buttons/button");
 
+var _excluded = ["isVisible", "onCloseClick", "titleId", "closeButtonLabel", "title", "text", "illustration", "illustrationBackground", "buttons"],
+    _excluded2 = ["label", "clickOptions"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var borderSize = 2;
 
 var PopoverContainer = _styledComponents.default.div.withConfig({
   displayName: "simple-popover__PopoverContainer",
-  componentId: "g4kqoa-0"
+  componentId: "sc-g4kqoa-0"
 })(["padding:", ";display:flex;align-items:center;position:relative;border:solid ", " ", ";box-sizing:border-box;max-width:", ";flex-basis:100%;margin-bottom:", ";background-color:", ";opacity:1;visibility:visible;transition:opacity 0.3s ease,visibility 0s ease;transition-delay:0s,0s;@media (min-width:", "){padding:", " ", ";}&[aria-hidden='true']{opacity:0;visibility:hidden;transition-delay:0s,0.3s;}"], (0, _typography.pxToRem)(40), _colorsConfig.default.line1, (0, _typography.pxToRem)(borderSize), (0, _typography.pxToRem)(555), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), _colorsConfig.default.background1, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(40));
 
 var IconContainer = _styledComponents.default.div.withConfig({
   displayName: "simple-popover__IconContainer",
-  componentId: "g4kqoa-1"
+  componentId: "sc-g4kqoa-1"
 })(["display:none;min-width:", ";min-height:", ";margin-right:", ";border-radius:100%;align-items:center;justify-content:center;background-color:", ";@media (min-width:", "px){display:flex;}"], (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(40), function (_ref) {
   var backgroundColor = _ref.backgroundColor;
   return backgroundColor;
@@ -56,11 +73,11 @@ var IconContainer = _styledComponents.default.div.withConfig({
 
 var CrossIconButton = (0, _styledComponents.default)(_button.Button).withConfig({
   displayName: "simple-popover__CrossIconButton",
-  componentId: "g4kqoa-2"
+  componentId: "sc-g4kqoa-2"
 })(["position:absolute;top:-", ";right:-", ";transition:background-color 0.2s,color 0.2s,border-color 0.2s;"], (0, _typography.pxToRem)(borderSize), (0, _typography.pxToRem)(borderSize));
 var ButtonsContainer = (0, _styledComponents.default)(_marger.Marger).withConfig({
   displayName: "simple-popover__ButtonsContainer",
-  componentId: "g4kqoa-3"
+  componentId: "sc-g4kqoa-3"
 })(["& > * + *{margin-top:", ";@media (min-width:", "px){margin-top:0;margin-left:", ";}}"], (0, _typography.pxToRem)(20), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(20));
 
 var SimplePopover = function SimplePopover(_ref2) {
@@ -73,17 +90,15 @@ var SimplePopover = function SimplePopover(_ref2) {
       illustration = _ref2.illustration,
       illustrationBackground = _ref2.illustrationBackground,
       buttons = _ref2.buttons,
-      simplePopoverProps = (0, _objectWithoutProperties2.default)(_ref2, ["isVisible", "onCloseClick", "titleId", "closeButtonLabel", "title", "text", "illustration", "illustrationBackground", "buttons"]);
+      simplePopoverProps = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
 
   var _useState = (0, _react.useState)(true),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isDisplayedInDOM = _useState2[0],
-      displayInDom = _useState2[1];
+      isDisplayedInDOM = _useState[0],
+      displayInDom = _useState[1];
 
-  var _useState3 = (0, _react.useState)(false),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      isAriaVisible = _useState4[0],
-      setAriaVisible = _useState4[1];
+  var _useState2 = (0, _react.useState)(false),
+      isAriaVisible = _useState2[0],
+      setAriaVisible = _useState2[1];
 
   var delayAfterMount = null;
   (0, _react.useEffect)(function () {
@@ -139,7 +154,7 @@ var SimplePopover = function SimplePopover(_ref2) {
   }, buttons.map(function (_ref3, i) {
     var label = _ref3.label,
         clickOptions = _ref3.clickOptions,
-        buttonProps = (0, _objectWithoutProperties2.default)(_ref3, ["label", "clickOptions"]);
+        buttonProps = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded2);
     var clickHandler = clickOptions && clickOptions.closeOnClick && onCloseClick;
     return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
       onClick: clickHandler,

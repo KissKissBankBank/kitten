@@ -1,8 +1,6 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.DESKTOP_HEADER_HEIGHT = exports.TABLET_HEADER_HEIGHT = exports.MOBILE_HEADER_HEIGHT = void 0;
 var MOBILE_HEADER_HEIGHT = 65;
 exports.MOBILE_HEADER_HEIGHT = MOBILE_HEADER_HEIGHT;

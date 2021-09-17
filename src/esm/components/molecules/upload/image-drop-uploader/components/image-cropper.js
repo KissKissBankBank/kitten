@@ -1,6 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["src", "onChange", "className", "initialCrop", "disabled"];
+import "core-js/modules/es.object.assign.js";
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { useDrag } from '../hooks/use-drag';
@@ -11,17 +12,15 @@ export var ImageCropper = function ImageCropper(_ref) {
       className = _ref.className,
       initialCrop = _ref.initialCrop,
       disabled = _ref.disabled,
-      props = _objectWithoutProperties(_ref, ["src", "onChange", "className", "initialCrop", "disabled"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(null),
-      _useState2 = _slicedToArray(_useState, 2),
-      imageDimensions = _useState2[0],
-      setImageDimensions = _useState2[1];
+      imageDimensions = _useState[0],
+      setImageDimensions = _useState[1];
 
-  var _useState3 = useState(null),
-      _useState4 = _slicedToArray(_useState3, 2),
-      scaledInitialCrop = _useState4[0],
-      setScaledInitialCrop = _useState4[1];
+  var _useState2 = useState(null),
+      scaledInitialCrop = _useState2[0],
+      setScaledInitialCrop = _useState2[1];
 
   useEffect(function () {
     if (!initialCrop || !imageDimensions) return;
@@ -44,7 +43,7 @@ export var ImageCropper = function ImageCropper(_ref) {
   var previousImagePosition = usePrevious(imagePosition);
   useEffect(function () {
     if (!imageDimensions) return;
-    if ((previousImagePosition === null || previousImagePosition === void 0 ? void 0 : previousImagePosition.x) === imagePosition.x && (previousImagePosition === null || previousImagePosition === void 0 ? void 0 : previousImagePosition.y) === imagePosition.y) return;
+    if ((previousImagePosition == null ? void 0 : previousImagePosition.x) === imagePosition.x && (previousImagePosition == null ? void 0 : previousImagePosition.y) === imagePosition.y) return;
     var cropValue = {
       x: Math.round(Math.abs(imagePosition.x * imageDimensions.scaleRatio)),
       y: Math.round(Math.abs(imagePosition.y * imageDimensions.scaleRatio)),
@@ -81,7 +80,7 @@ export var ImageCropper = function ImageCropper(_ref) {
     };
 
     if (getRatio(naturalSize) === getRatio(containedSize)) {
-      scaledSize = _extends({}, containedSize);
+      scaledSize = Object.assign({}, containedSize);
     } else if (getRatio(naturalSize) > getRatio(containedSize)) {
       scaledSize = {
         width: e.target.width,
@@ -111,8 +110,8 @@ export var ImageCropper = function ImageCropper(_ref) {
     alt: "",
     src: src,
     style: {
-      '--ImageDropUploader-cropX': "".concat(liveImagePosition.x, "px"),
-      '--ImageDropUploader-cropY': "".concat(liveImagePosition.y, "px")
+      '--ImageDropUploader-cropX': liveImagePosition.x + "px",
+      '--ImageDropUploader-cropY': liveImagePosition.y + "px"
     },
     onLoad: handleImageLoad
   }));

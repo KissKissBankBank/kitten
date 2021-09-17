@@ -1,9 +1,10 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.upcaseFirst = exports.stringUtils = void 0;
+
+require("core-js/modules/es.array.slice.js");
+
 var stringUtils = {
   /**
    * Converts the first character to uppercase.

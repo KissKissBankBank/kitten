@@ -1,3 +1,4 @@
+import "core-js/modules/es.array.join.js";
 import path from 'path';
 export var getScssPaths = function getScssPaths() {
   var kittenStylesheetsPath = path.join(__dirname, '../../assets/stylesheets');

@@ -1,15 +1,8 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
+var _excluded = ["onHaloAnimationEnd"];
+import "core-js/modules/es.array.concat.js";
 import React, { Component } from 'react';
 import styled, { css, keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
@@ -57,20 +50,16 @@ var StyledHighlightHalo = styled.div.withConfig({
   return css(["animation-delay:", "s,", "s,", "s;"], animationDelay + 0.2, animationDelay + 0.2 + 0.5, animationDelay + 0.2 + 0.5 + getAnimationDelay);
 });
 export var HighlightHalo = /*#__PURE__*/function (_Component) {
-  _inherits(HighlightHalo, _Component);
-
-  var _super = _createSuper(HighlightHalo);
+  _inheritsLoose(HighlightHalo, _Component);
 
   function HighlightHalo() {
     var _this;
-
-    _classCallCheck(this, HighlightHalo);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _super.call.apply(_super, [this].concat(args));
+    _this = _Component.call.apply(_Component, [this].concat(args)) || this;
 
     _this.highlightHaloAnimation = function () {
       var animationEasing = 'ease-in-out';
@@ -104,27 +93,26 @@ export var HighlightHalo = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(HighlightHalo, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
+  var _proto = HighlightHalo.prototype;
 
-      var _this$props = this.props,
-          onHaloAnimationEnd = _this$props.onHaloAnimationEnd,
-          other = _objectWithoutProperties(_this$props, ["onHaloAnimationEnd"]);
+  _proto.render = function render() {
+    var _this2 = this;
 
-      return /*#__PURE__*/React.createElement(StyledHighlightHalo, _extends({
-        highlightHaloAnimation: this.highlightHaloAnimation(),
-        getAnimationDelay: this.getAnimationDelay()
-      }, other, {
-        onAnimationEnd: this.handleAnimationEnd
-      }), /*#__PURE__*/React.createElement("div", null), /*#__PURE__*/React.createElement("div", null), /*#__PURE__*/React.createElement("div", {
-        ref: function ref(_ref8) {
-          return _this2.lastAnimatedDiv = _ref8;
-        }
-      }));
-    }
-  }]);
+    var _this$props = this.props,
+        onHaloAnimationEnd = _this$props.onHaloAnimationEnd,
+        other = _objectWithoutPropertiesLoose(_this$props, _excluded);
+
+    return /*#__PURE__*/React.createElement(StyledHighlightHalo, _extends({
+      highlightHaloAnimation: this.highlightHaloAnimation(),
+      getAnimationDelay: this.getAnimationDelay()
+    }, other, {
+      onAnimationEnd: this.handleAnimationEnd
+    }), /*#__PURE__*/React.createElement("div", null), /*#__PURE__*/React.createElement("div", null), /*#__PURE__*/React.createElement("div", {
+      ref: function ref(_ref8) {
+        return _this2.lastAnimatedDiv = _ref8;
+      }
+    }));
+  };
 
   return HighlightHalo;
 }(Component);

@@ -1,5 +1,8 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["items", "size", "className"],
+    _excluded2 = ["item", "key"];
+import "core-js/modules/es.array.map.js";
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
@@ -15,14 +18,14 @@ export var BulletList = function BulletList(_ref) {
   var items = _ref.items,
       size = _ref.size,
       className = _ref.className,
-      others = _objectWithoutProperties(_ref, ["items", "size", "className"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledBulletList, _extends({
-    className: classNames('k-BulletList', "k-BulletList--".concat(size), className)
+    className: classNames('k-BulletList', "k-BulletList--" + size, className)
   }, others), items.map(function (_ref2) {
     var item = _ref2.item,
         key = _ref2.key,
-        itemOthers = _objectWithoutProperties(_ref2, ["item", "key"]);
+        itemOthers = _objectWithoutPropertiesLoose(_ref2, _excluded2);
 
     return /*#__PURE__*/React.createElement("li", _extends({
       key: key

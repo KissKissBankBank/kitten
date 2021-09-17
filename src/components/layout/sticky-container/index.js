@@ -1,19 +1,29 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.StickyContainer = void 0;
+
+require("core-js/modules/es.array.includes.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -26,6 +36,12 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var _throttle = _interopRequireDefault(require("lodash/throttle"));
 
 var _typography = require("../../../helpers/utils/typography");
+
+var _excluded = ["children", "className", "top", "bottom", "isSticky"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var StyledStickyContainer = _styledComponents.default.div.withConfig({
   displayName: "sticky-container__StyledStickyContainer",
@@ -50,9 +66,8 @@ function useScrollDirection() {
   // See also https://www.iwakoscott.com/blog/useRef
   // save the new scroll position in state
   var _useState = (0, _react.useState)(0),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      scrollPos = _useState2[0],
-      setScrollPos = _useState2[1]; // useRef Hook to save the old scroll state.
+      scrollPos = _useState[0],
+      setScrollPos = _useState[1]; // useRef Hook to save the old scroll state.
 
 
   var oldScrollPos = (0, _react.useRef)(0);
@@ -80,28 +95,24 @@ var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
       top = _ref2.top,
       bottom = _ref2.bottom,
       isSticky = _ref2.isSticky,
-      other = (0, _objectWithoutProperties2.default)(_ref2, ["children", "className", "top", "bottom", "isSticky"]);
+      other = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
   var currentStickyContainer = (0, _react.useRef)(null);
 
-  var _useState3 = (0, _react.useState)(false),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      stuck = _useState4[0],
-      setStuckState = _useState4[1];
+  var _useState2 = (0, _react.useState)(false),
+      stuck = _useState2[0],
+      setStuckState = _useState2[1];
 
-  var _useState5 = (0, _react.useState)(0),
-      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
-      containerHeight = _useState6[0],
-      setContainerHeight = _useState6[1];
+  var _useState3 = (0, _react.useState)(0),
+      containerHeight = _useState3[0],
+      setContainerHeight = _useState3[1];
 
-  var _useState7 = (0, _react.useState)(false),
-      _useState8 = (0, _slicedToArray2.default)(_useState7, 2),
-      currentlyUnsticking = _useState8[0],
-      setCurrentlyUnstickingState = _useState8[1];
+  var _useState4 = (0, _react.useState)(false),
+      currentlyUnsticking = _useState4[0],
+      setCurrentlyUnstickingState = _useState4[1];
 
   var _useScrollDirection = useScrollDirection(),
-      _useScrollDirection2 = (0, _slicedToArray2.default)(_useScrollDirection, 2),
-      scrollDirectionDown = _useScrollDirection2[0],
-      scrollDirectionUp = _useScrollDirection2[1];
+      scrollDirectionDown = _useScrollDirection[0],
+      scrollDirectionUp = _useScrollDirection[1];
 
   (0, _react.useImperativeHandle)(ref, function () {
     return {
@@ -209,7 +220,7 @@ var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
   }, other), children));
 };
 
-var StickyContainer = (0, _react.forwardRef)(StickyContainerBase);
+var StickyContainer = /*#__PURE__*/(0, _react.forwardRef)(StickyContainerBase);
 exports.StickyContainer = StickyContainer;
 StickyContainer.propTypes = {
   top: _propTypes.default.number,

@@ -1,22 +1,53 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.IntersectionObserverClass = void 0;
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+require("core-js/modules/es.array.iterator.js");
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+require("core-js/modules/es.map.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/esnext.map.delete-all.js");
+
+require("core-js/modules/esnext.map.every.js");
+
+require("core-js/modules/esnext.map.filter.js");
+
+require("core-js/modules/esnext.map.find.js");
+
+require("core-js/modules/esnext.map.find-key.js");
+
+require("core-js/modules/esnext.map.includes.js");
+
+require("core-js/modules/esnext.map.key-of.js");
+
+require("core-js/modules/esnext.map.map-keys.js");
+
+require("core-js/modules/esnext.map.map-values.js");
+
+require("core-js/modules/esnext.map.merge.js");
+
+require("core-js/modules/esnext.map.reduce.js");
+
+require("core-js/modules/esnext.map.some.js");
+
+require("core-js/modules/esnext.map.update.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/web.dom-collections.for-each.js");
+
+require("core-js/modules/es.object.assign.js");
 
 var _elementHelper = require("../dom/element-helper");
 
 var IntersectionObserverClass = function IntersectionObserverClass(options) {
   var _this = this;
 
-  (0, _classCallCheck2.default)(this, IntersectionObserverClass);
   this.observedComponents = new Map();
 
   this.intersectionCallback = function (entries) {
@@ -30,8 +61,10 @@ var IntersectionObserverClass = function IntersectionObserverClass(options) {
     });
   };
 
-  this.observe = function (elt) {
-    var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {};
+  this.observe = function (elt, callback) {
+    if (callback === void 0) {
+      callback = function callback() {};
+    }
 
     if (_this.observer === null) {
       callback();
@@ -51,7 +84,7 @@ var IntersectionObserverClass = function IntersectionObserverClass(options) {
     _this.observer.unobserve(elt);
   };
 
-  this.options = (0, _extends2.default)({
+  this.options = Object.assign({
     root: null,
     rootMargin: '0px 0px',
     threshold: 0.01

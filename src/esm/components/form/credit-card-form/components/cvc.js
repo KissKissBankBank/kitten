@@ -1,3 +1,6 @@
+import "core-js/modules/es.array.iterator.js";
+import "core-js/modules/es.object.to-string.js";
+import "core-js/modules/web.dom-collections.iterator.js";
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import NumberFormat from 'react-number-format';

@@ -1,19 +1,27 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Description = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -23,18 +31,23 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _text = require("../../../../../components/atoms/typography/text");
 
+var _excluded = ["children", "className", "moreButtonText", "truncateText"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var Description = function Description(_ref) {
   var children = _ref.children,
       className = _ref.className,
       moreButtonText = _ref.moreButtonText,
       truncateText = _ref.truncateText,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "className", "moreButtonText", "truncateText"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var descriptionElementRef = (0, _react.useRef)(null);
 
   var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      displayMoreButton = _useState2[0],
-      setMoreButtonDisplay = _useState2[1];
+      displayMoreButton = _useState[0],
+      setMoreButtonDisplay = _useState[1];
 
   (0, _react.useEffect)(function () {
     var _descriptionElementRe;
@@ -42,7 +55,7 @@ var Description = function Description(_ref) {
     if (!truncateText) return;
     if (!descriptionElementRef) return;
     var parent = descriptionElementRef.current;
-    var child = (_descriptionElementRe = descriptionElementRef.current) === null || _descriptionElementRe === void 0 ? void 0 : _descriptionElementRe.children[0];
+    var child = (_descriptionElementRe = descriptionElementRef.current) == null ? void 0 : _descriptionElementRe.children[0];
     if (!child) return;
 
     if (parent.clientHeight < child.clientHeight) {

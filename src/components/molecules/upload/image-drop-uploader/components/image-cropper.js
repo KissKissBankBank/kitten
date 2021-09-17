@@ -1,19 +1,29 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.ImageCropper = void 0;
+
+require("core-js/modules/es.object.assign.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -23,23 +33,27 @@ var _useDrag2 = require("../hooks/use-drag");
 
 var _usePreviousHook = require("../../../../../helpers/utils/use-previous-hook");
 
+var _excluded = ["src", "onChange", "className", "initialCrop", "disabled"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var ImageCropper = function ImageCropper(_ref) {
   var src = _ref.src,
       onChange = _ref.onChange,
       className = _ref.className,
       initialCrop = _ref.initialCrop,
       disabled = _ref.disabled,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["src", "onChange", "className", "initialCrop", "disabled"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(null),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      imageDimensions = _useState2[0],
-      setImageDimensions = _useState2[1];
+      imageDimensions = _useState[0],
+      setImageDimensions = _useState[1];
 
-  var _useState3 = (0, _react.useState)(null),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      scaledInitialCrop = _useState4[0],
-      setScaledInitialCrop = _useState4[1];
+  var _useState2 = (0, _react.useState)(null),
+      scaledInitialCrop = _useState2[0],
+      setScaledInitialCrop = _useState2[1];
 
   (0, _react.useEffect)(function () {
     if (!initialCrop || !imageDimensions) return;
@@ -62,7 +76,7 @@ var ImageCropper = function ImageCropper(_ref) {
   var previousImagePosition = (0, _usePreviousHook.usePrevious)(imagePosition);
   (0, _react.useEffect)(function () {
     if (!imageDimensions) return;
-    if ((previousImagePosition === null || previousImagePosition === void 0 ? void 0 : previousImagePosition.x) === imagePosition.x && (previousImagePosition === null || previousImagePosition === void 0 ? void 0 : previousImagePosition.y) === imagePosition.y) return;
+    if ((previousImagePosition == null ? void 0 : previousImagePosition.x) === imagePosition.x && (previousImagePosition == null ? void 0 : previousImagePosition.y) === imagePosition.y) return;
     var cropValue = {
       x: Math.round(Math.abs(imagePosition.x * imageDimensions.scaleRatio)),
       y: Math.round(Math.abs(imagePosition.y * imageDimensions.scaleRatio)),
@@ -99,7 +113,7 @@ var ImageCropper = function ImageCropper(_ref) {
     };
 
     if (getRatio(naturalSize) === getRatio(containedSize)) {
-      scaledSize = (0, _extends2.default)({}, containedSize);
+      scaledSize = Object.assign({}, containedSize);
     } else if (getRatio(naturalSize) > getRatio(containedSize)) {
       scaledSize = {
         width: e.target.width,
@@ -129,8 +143,8 @@ var ImageCropper = function ImageCropper(_ref) {
     alt: "",
     src: src,
     style: {
-      '--ImageDropUploader-cropX': "".concat(liveImagePosition.x, "px"),
-      '--ImageDropUploader-cropY': "".concat(liveImagePosition.y, "px")
+      '--ImageDropUploader-cropX': liveImagePosition.x + "px",
+      '--ImageDropUploader-cropY': liveImagePosition.y + "px"
     },
     onLoad: handleImageLoad
   }));

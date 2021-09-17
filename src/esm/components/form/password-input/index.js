@@ -1,6 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["name", "iconLabel", "hiddenIconLabel"];
+import "core-js/modules/es.function.name.js";
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { TextInput } from '../../../components/form/text-input';
@@ -16,12 +17,11 @@ export var PasswordInput = function PasswordInput(_ref) {
   var name = _ref.name,
       iconLabel = _ref.iconLabel,
       hiddenIconLabel = _ref.hiddenIconLabel,
-      others = _objectWithoutProperties(_ref, ["name", "iconLabel", "hiddenIconLabel"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(true),
-      _useState2 = _slicedToArray(_useState, 2),
-      isHidden = _useState2[0],
-      setIsHidden = _useState2[1];
+      isHidden = _useState[0],
+      setIsHidden = _useState[1];
 
   var handleClick = function handleClick() {
     setIsHidden(!isHidden);

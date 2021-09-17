@@ -1,15 +1,28 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
+import _extends from "@babel/runtime/helpers/extends";
+import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
+import "core-js/modules/es.array.concat.js";
+import "core-js/modules/es.array.iterator.js";
+import "core-js/modules/es.object.to-string.js";
+import "core-js/modules/es.set.js";
+import "core-js/modules/es.string.iterator.js";
+import "core-js/modules/esnext.set.add-all.js";
+import "core-js/modules/esnext.set.delete-all.js";
+import "core-js/modules/esnext.set.difference.js";
+import "core-js/modules/esnext.set.every.js";
+import "core-js/modules/esnext.set.filter.js";
+import "core-js/modules/esnext.set.find.js";
+import "core-js/modules/esnext.set.intersection.js";
+import "core-js/modules/esnext.set.is-disjoint-from.js";
+import "core-js/modules/esnext.set.is-subset-of.js";
+import "core-js/modules/esnext.set.is-superset-of.js";
+import "core-js/modules/esnext.set.join.js";
+import "core-js/modules/esnext.set.map.js";
+import "core-js/modules/esnext.set.reduce.js";
+import "core-js/modules/esnext.set.some.js";
+import "core-js/modules/esnext.set.symmetric-difference.js";
+import "core-js/modules/esnext.set.union.js";
+import "core-js/modules/web.dom-collections.iterator.js";
+import "core-js/modules/es.array.map.js";
 import React, { Component, Fragment } from 'react';
 import deprecated from 'prop-types-extra/lib/deprecated';
 import PropTypes from 'prop-types';
@@ -64,20 +77,16 @@ var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToVi
 };
 
 var CarouselBase = /*#__PURE__*/function (_Component) {
-  _inherits(CarouselBase, _Component);
-
-  var _super = _createSuper(CarouselBase);
+  _inheritsLoose(CarouselBase, _Component);
 
   function CarouselBase() {
     var _this;
-
-    _classCallCheck(this, CarouselBase);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _super.call.apply(_super, [this].concat(args));
+    _this = _Component.call.apply(_Component, [this].concat(args)) || this;
     _this.state = {
       currentPageIndex: 0,
       numberOfItemsPerPage: _this.props.itemsPerPage > 0 ? _this.props.itemsPerPage : 3,
@@ -174,7 +183,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
       var items = children; // legacy mode
 
       if (!!data && !!renderItem) {
-        items = _toConsumableArray(data).map(function (item, index) {
+        items = [].concat(data).map(function (item, index) {
           return /*#__PURE__*/React.createElement(Fragment, {
             key: item
           }, renderItem({
@@ -227,7 +236,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
             className: classNames('k-Carousel__pageControl__pageDot', {
               'k-Carousel__pageControl__pageDot--isVisible': currentPageIndex === index
             }),
-            key: "pageDotIndex_".concat(index)
+            key: "pageDotIndex_" + index
           });
         }), /*#__PURE__*/React.createElement("div", {
           onClick: _this.goPrevPage,
@@ -279,56 +288,54 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(CarouselBase, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.viewedPages.add(0);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props4 = this.props,
-          data = _this$props4.data,
-          renderItem = _this$props4.renderItem,
-          withoutLeftOffset = _this$props4.withoutLeftOffset,
-          baseItemMarginBetween = _this$props4.baseItemMarginBetween,
-          children = _this$props4.children,
-          className = _this$props4.className,
-          paginationPosition = _this$props4.paginationPosition,
-          showOtherPages = _this$props4.showOtherPages,
-          itemMinWidth = _this$props4.itemMinWidth;
-      if (getDataLength({
-        data: data,
-        children: children
-      }) === 0) return null;
-      var commonProps = {
-        baseItemMarginBetween: baseItemMarginBetween,
-        itemMinWidth: itemMinWidth,
-        numberOfItemsPerPage: this.state.numberOfItemsPerPage,
-        numberOfPages: this.state.numberOfPages
-      }; // legacy mode
+  var _proto = CarouselBase.prototype;
 
-      if (!!data && !!renderItem) {
-        return /*#__PURE__*/React.createElement(StyledCarouselContainer, _extends({}, commonProps, {
-          className: classNames('k-Carousel', className, 'k-LegacyCarousel')
-        }), /*#__PURE__*/React.createElement(Grid, null, /*#__PURE__*/React.createElement(GridCol, {
-          col: "12",
-          "col-l": withoutLeftOffset ? '11' : '10',
-          "offset-l": withoutLeftOffset ? '0' : '1'
-        }, this.renderCarouselInner()), /*#__PURE__*/React.createElement(GridCol, {
-          col: "12",
-          "col-l": "1"
-        }, this.renderPagination())));
-      }
+  _proto.componentDidMount = function componentDidMount() {
+    this.viewedPages.add(0);
+  };
 
+  _proto.render = function render() {
+    var _this$props4 = this.props,
+        data = _this$props4.data,
+        renderItem = _this$props4.renderItem,
+        withoutLeftOffset = _this$props4.withoutLeftOffset,
+        baseItemMarginBetween = _this$props4.baseItemMarginBetween,
+        children = _this$props4.children,
+        className = _this$props4.className,
+        paginationPosition = _this$props4.paginationPosition,
+        showOtherPages = _this$props4.showOtherPages,
+        itemMinWidth = _this$props4.itemMinWidth;
+    if (getDataLength({
+      data: data,
+      children: children
+    }) === 0) return null;
+    var commonProps = {
+      baseItemMarginBetween: baseItemMarginBetween,
+      itemMinWidth: itemMinWidth,
+      numberOfItemsPerPage: this.state.numberOfItemsPerPage,
+      numberOfPages: this.state.numberOfPages
+    }; // legacy mode
+
+    if (!!data && !!renderItem) {
       return /*#__PURE__*/React.createElement(StyledCarouselContainer, _extends({}, commonProps, {
-        paginationPosition: paginationPosition,
-        className: classNames('k-Carousel', className, {
-          'k-Carousel--showOtherPages': showOtherPages
-        })
-      }), this.renderCarouselInner(), this.renderPagination());
+        className: classNames('k-Carousel', className, 'k-LegacyCarousel')
+      }), /*#__PURE__*/React.createElement(Grid, null, /*#__PURE__*/React.createElement(GridCol, {
+        col: "12",
+        "col-l": withoutLeftOffset ? '11' : '10',
+        "offset-l": withoutLeftOffset ? '0' : '1'
+      }, this.renderCarouselInner()), /*#__PURE__*/React.createElement(GridCol, {
+        col: "12",
+        "col-l": "1"
+      }, this.renderPagination())));
     }
-  }]);
+
+    return /*#__PURE__*/React.createElement(StyledCarouselContainer, _extends({}, commonProps, {
+      paginationPosition: paginationPosition,
+      className: classNames('k-Carousel', className, {
+        'k-Carousel--showOtherPages': showOtherPages
+      })
+    }), this.renderCarouselInner(), this.renderPagination());
+  };
 
   return CarouselBase;
 }(Component);
@@ -347,7 +354,7 @@ CarouselBase.defaultProps = {
   prevButtonText: 'Previous items',
   nextButtonText: 'Next items',
   pageClickText: function pageClickText(page) {
-    return "Page ".concat(page);
+    return "Page " + page;
   },
   firstButtonText: 'First items',
   lastButtonText: 'Last items',

@@ -1,15 +1,9 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
+var _excluded = ["children", "containerStyle", "activePaginationColor", "paginationColor", "paginationAlign", "paginationStyle", "bulletStyle"];
+import "core-js/modules/es.array.includes.js";
+import "core-js/modules/es.array.map.js";
 import React, { Component, createRef } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -42,16 +36,12 @@ var StyledPaginationButton = styled.button.withConfig({
   return activePaginationColor;
 });
 export var SimpleCarousel = /*#__PURE__*/function (_Component) {
-  _inherits(SimpleCarousel, _Component);
-
-  var _super = _createSuper(SimpleCarousel);
+  _inheritsLoose(SimpleCarousel, _Component);
 
   function SimpleCarousel(props) {
     var _this;
 
-    _classCallCheck(this, SimpleCarousel);
-
-    _this = _super.call(this, props);
+    _this = _Component.call(this, props) || this;
 
     _this.showPagination = function () {
       return _this.state.totalPagesCount > 1;
@@ -101,7 +91,7 @@ export var SimpleCarousel = /*#__PURE__*/function (_Component) {
       }
     };
 
-    _this.paginationRef = createRef();
+    _this.paginationRef = /*#__PURE__*/createRef();
     _this.state = {
       currentPageNumber: 0,
       totalPagesCount: React.Children.toArray(props.children).length
@@ -109,59 +99,58 @@ export var SimpleCarousel = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(SimpleCarousel, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
+  var _proto = SimpleCarousel.prototype;
 
-      var _this$props = this.props,
-          children = _this$props.children,
-          containerStyle = _this$props.containerStyle,
-          activePaginationColor = _this$props.activePaginationColor,
-          paginationColor = _this$props.paginationColor,
-          paginationAlign = _this$props.paginationAlign,
-          paginationStyle = _this$props.paginationStyle,
-          bulletStyle = _this$props.bulletStyle,
-          others = _objectWithoutProperties(_this$props, ["children", "containerStyle", "activePaginationColor", "paginationColor", "paginationAlign", "paginationStyle", "bulletStyle"]);
+  _proto.render = function render() {
+    var _this2 = this;
 
-      var _this$state2 = this.state,
-          totalPagesCount = _this$state2.totalPagesCount,
-          currentPageNumber = _this$state2.currentPageNumber;
-      var rangePage = createRangeFromZeroTo(totalPagesCount);
-      var id = this.props.id ? this.props.id + '_' : '';
-      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(StyledContainer, _extends({
-        style: containerStyle,
-        addBottomMargin: this.showPagination()
-      }, others), React.Children.map(children, function (item, index) {
-        return /*#__PURE__*/React.createElement("div", {
-          key: item.key,
-          "aria-hidden": index !== currentPageNumber,
-          id: "".concat(id, "carouselItem_").concat(index),
-          "aria-labelledby": "".concat(id, "carouselTab_").concat(index),
-          role: "tabpanel"
-        }, item);
-      })), this.showPagination() && /*#__PURE__*/React.createElement(StyledPagination, {
-        style: paginationStyle,
-        paginationAlign: paginationAlign,
-        role: "tablist",
-        onKeyDown: this.handleKeyDown,
-        ref: this.paginationRef
-      }, rangePage.map(function (numPage) {
-        return /*#__PURE__*/React.createElement(StyledPaginationButton, {
-          key: numPage,
-          id: "".concat(id, "carouselTab_").concat(numPage),
-          type: "button",
-          "aria-controls": "".concat(id, "carouselItem_").concat(numPage),
-          role: "tab",
-          "aria-selected": numPage === currentPageNumber,
-          paginationColor: paginationColor,
-          activePaginationColor: activePaginationColor,
-          style: bulletStyle,
-          onClick: _this2.handlePageClick(numPage)
-        }, /*#__PURE__*/React.createElement(VisuallyHidden, null, "Page ".concat(numPage + 1)));
-      })));
-    }
-  }]);
+    var _this$props = this.props,
+        children = _this$props.children,
+        containerStyle = _this$props.containerStyle,
+        activePaginationColor = _this$props.activePaginationColor,
+        paginationColor = _this$props.paginationColor,
+        paginationAlign = _this$props.paginationAlign,
+        paginationStyle = _this$props.paginationStyle,
+        bulletStyle = _this$props.bulletStyle,
+        others = _objectWithoutPropertiesLoose(_this$props, _excluded);
+
+    var _this$state2 = this.state,
+        totalPagesCount = _this$state2.totalPagesCount,
+        currentPageNumber = _this$state2.currentPageNumber;
+    var rangePage = createRangeFromZeroTo(totalPagesCount);
+    var id = this.props.id ? this.props.id + '_' : '';
+    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(StyledContainer, _extends({
+      style: containerStyle,
+      addBottomMargin: this.showPagination()
+    }, others), React.Children.map(children, function (item, index) {
+      return /*#__PURE__*/React.createElement("div", {
+        key: item.key,
+        "aria-hidden": index !== currentPageNumber,
+        id: id + "carouselItem_" + index,
+        "aria-labelledby": id + "carouselTab_" + index,
+        role: "tabpanel"
+      }, item);
+    })), this.showPagination() && /*#__PURE__*/React.createElement(StyledPagination, {
+      style: paginationStyle,
+      paginationAlign: paginationAlign,
+      role: "tablist",
+      onKeyDown: this.handleKeyDown,
+      ref: this.paginationRef
+    }, rangePage.map(function (numPage) {
+      return /*#__PURE__*/React.createElement(StyledPaginationButton, {
+        key: numPage,
+        id: id + "carouselTab_" + numPage,
+        type: "button",
+        "aria-controls": id + "carouselItem_" + numPage,
+        role: "tab",
+        "aria-selected": numPage === currentPageNumber,
+        paginationColor: paginationColor,
+        activePaginationColor: activePaginationColor,
+        style: bulletStyle,
+        onClick: _this2.handlePageClick(numPage)
+      }, /*#__PURE__*/React.createElement(VisuallyHidden, null, "Page " + (numPage + 1)));
+    })));
+  };
 
   return SimpleCarousel;
 }(Component);

@@ -2,14 +2,16 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Button = void 0;
+
+require("core-js/modules/es.string.trim.js");
+
+require("core-js/modules/es.object.assign.js");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -20,6 +22,8 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
 var _visuallyHidden = require("../../../../components/accessibility/visually-hidden");
+
+var _excluded = ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style", "className"];
 
 var Button = function Button(_ref) {
   var a11yText = _ref.a11yText,
@@ -38,10 +42,10 @@ var Button = function Button(_ref) {
       as = _ref.as,
       style = _ref.style,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style", "className"]);
-  var hiddenMin = min ? "k-u-hidden@".concat(min, "-up") : '';
-  var hiddenMax = max ? "k-u-hidden@".concat(max, "-down") : '';
-  var textClassName = "k-HeaderNav__Button__text ".concat(hiddenMin, " ").concat(hiddenMax).trim();
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+  var hiddenMin = min ? "k-u-hidden@" + min + "-up" : '';
+  var hiddenMax = max ? "k-u-hidden@" + max + "-down" : '';
+  var textClassName = ("k-HeaderNav__Button__text " + hiddenMin + " " + hiddenMax).trim();
   var ButtonComponent = 'a';
   var buttonProps = {
     href: href
@@ -69,7 +73,7 @@ var Button = function Button(_ref) {
       'k-HeaderNav__Button--hasIcon': !!icon,
       'k-HeaderNav__Button--hasText': !!text
     }),
-    style: (0, _extends2.default)({
+    style: Object.assign({
       '--HeaderMenu-Button-backgroundColor': backgroundColor,
       '--HeaderMenu-Button-backgroundColorHover': backgroundColorHover,
       '--HeaderMenu-Button-color': color,
@@ -77,7 +81,7 @@ var Button = function Button(_ref) {
     }, style)
   }), text && /*#__PURE__*/_react.default.createElement("span", {
     className: textClassName
-  }), icon && _react.default.cloneElement(icon, {
+  }), icon && /*#__PURE__*/_react.default.cloneElement(icon, {
     'aria-hidden': true
   }), icon && a11yText && /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, a11yText), text && /*#__PURE__*/_react.default.createElement("span", {
     className: textClassName

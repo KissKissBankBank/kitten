@@ -1,15 +1,35 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.getCodeFormat = exports.withCode = exports.getCreditCardFormat = exports.getIconSvgStringByType = exports.getCreditCardType = void 0;
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+require("core-js/modules/es.object.assign.js");
+
+require("core-js/modules/es.array.join.js");
+
+require("core-js/modules/es.array.map.js");
+
+require("core-js/modules/es.array.fill.js");
+
+require("core-js/modules/es.array.includes.js");
+
+require("core-js/modules/es.string.includes.js");
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -31,6 +51,10 @@ var _maestroIcon = require("../../../graphics/icons/maestro-icon");
 
 var _bancontactIcon = require("../../../graphics/icons/bancontact-icon");
 
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 _creditCardType.default.addCard({
   niceType: 'Bancontact',
   type: 'bcmc',
@@ -40,7 +64,7 @@ _creditCardType.default.addCard({
   code: null
 });
 
-var creditCardTypes = (0, _extends2.default)({}, _creditCardType.types, {
+var creditCardTypes = Object.assign({}, _creditCardType.types, {
   BANCONTACT: 'bcmc'
 });
 
@@ -95,7 +119,7 @@ var getCreditCardFormat = function getCreditCardFormat(type) {
   var maxLength = (0, _max.default)(type.lengths) || 0;
   if (!maxLength) return '#### #### #### ####';
   return Array(maxLength).fill('#').map(function (v, i) {
-    return type.gaps.includes(i + 1) ? "".concat(v, " ") : v;
+    return type.gaps.includes(i + 1) ? v + " " : v;
   }).join('');
 };
 

@@ -20,8 +20,8 @@ export var Header = function Header(_ref) {
     role: "button",
     "aria-expanded": selectedItem === index,
     "aria-disabled": closeOnClick ? null : selectedItem === index,
-    id: "".concat(componentId, "-").concat(id, "_header"),
-    "aria-controls": "".concat(componentId, "-").concat(id, "_content")
+    id: componentId + "-" + id + "_header",
+    "aria-controls": componentId + "-" + id + "_content"
   }, /*#__PURE__*/React.createElement("span", {
     className: "k-Accordeon__header__content"
   }, children), /*#__PURE__*/React.createElement("span", {

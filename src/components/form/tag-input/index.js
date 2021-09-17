@@ -1,17 +1,39 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.weak-map.js");
+
+require("core-js/modules/esnext.weak-map.delete-all.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.TagInput = void 0;
 
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
+require("core-js/modules/es.string.bold.js");
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+require("core-js/modules/es.array.concat.js");
+
+require("core-js/modules/es.array.slice.js");
+
+require("core-js/modules/es.array.filter.js");
+
+require("core-js/modules/es.array.includes.js");
+
+require("core-js/modules/es.string.includes.js");
+
+require("core-js/modules/es.string.trim.js");
+
+require("core-js/modules/es.array.map.js");
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -31,6 +53,10 @@ var _crossIcon = require("../../../components/graphics/icons/cross-icon");
 
 var _screenConfig = require("../../../constants/screen-config");
 
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var StyledWrapper = _styledComponents.default.div.withConfig({
   displayName: "tag-input__StyledWrapper",
   componentId: "sc-1iqglpj-0"
@@ -49,27 +75,25 @@ var TagInput = function TagInput(_ref) {
       size = _ref.size,
       variant = _ref.variant;
 
-  var _useState = (0, _react.useState)((0, _toConsumableArray2.default)(initialItemsList)),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      itemsList = _useState2[0],
-      setItemList = _useState2[1];
+  var _useState = (0, _react.useState)([].concat(initialItemsList)),
+      itemsList = _useState[0],
+      setItemList = _useState[1];
 
-  var _useState3 = (0, _react.useState)(null),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      lastRemoved = _useState4[0],
-      setLastRemoved = _useState4[1];
+  var _useState2 = (0, _react.useState)(null),
+      lastRemoved = _useState2[0],
+      setLastRemoved = _useState2[1];
 
   var inputEl = (0, _react.useRef)(null);
 
   var focusInputEl = function focusInputEl() {
     var _inputEl$current;
 
-    return !disabled && (inputEl === null || inputEl === void 0 ? void 0 : (_inputEl$current = inputEl.current) === null || _inputEl$current === void 0 ? void 0 : _inputEl$current.focus());
+    return !disabled && (inputEl == null ? void 0 : (_inputEl$current = inputEl.current) == null ? void 0 : _inputEl$current.focus());
   };
 
   var addValueToList = function addValueToList(value) {
     setItemList(function (currentList) {
-      return [].concat((0, _toConsumableArray2.default)(currentList), [value]);
+      return [].concat(currentList, [value]);
     });
   };
 
@@ -123,13 +147,13 @@ var TagInput = function TagInput(_ref) {
   };
 
   return /*#__PURE__*/_react.default.createElement(StyledWrapper, {
-    className: (0, _classnames.default)('k-Form-TagList', className, "k-Form-TagList--".concat(size), "k-Form-TagList--".concat(variant), {
+    className: (0, _classnames.default)('k-Form-TagList', className, "k-Form-TagList--" + size, "k-Form-TagList--" + variant, {
       'k-Form-TagList--disabled': disabled
     }),
     onClick: focusInputEl
   }, /*#__PURE__*/_react.default.createElement("p", {
     className: "k-u-a11y-visuallyHidden",
-    id: "".concat(id, "-legend")
+    id: id + "-legend"
   }, helpMessage), /*#__PURE__*/_react.default.createElement("ul", {
     className: "k-Form-TagList__list"
   }, !disabled && /*#__PURE__*/_react.default.createElement("li", {
@@ -139,7 +163,7 @@ var TagInput = function TagInput(_ref) {
     id: id,
     contentEditable: true,
     role: "textbox",
-    "aria-describedby": "".concat(id, "-legend"),
+    "aria-describedby": id + "-legend",
     "aria-placeholder": placeholder,
     onKeyDown: onKeyDown,
     className: "k-Form-TagList__input"
@@ -168,7 +192,7 @@ var TagInput = function TagInput(_ref) {
     "aria-relevant": "additions removals"
   }, itemsList.map(function (item) {
     return /*#__PURE__*/_react.default.createElement("li", {
-      key: "visuallyHidden-".concat(item)
+      key: "visuallyHidden-" + item
     }, item);
   })));
 };
