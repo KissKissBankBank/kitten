@@ -151,6 +151,11 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   border-radius: 50%;
 }
 
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
+}
+
 .c0.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -701,6 +706,11 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--rounded {
   border-radius: 50%;
+}
+
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -1255,6 +1265,11 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   border-radius: 50%;
 }
 
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
+}
+
 .c0.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -1807,6 +1822,11 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   border-radius: 50%;
 }
 
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
+}
+
 .c0.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -2357,6 +2377,11 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--rounded {
   border-radius: 50%;
+}
+
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
 }
 
 .c0.k-Button--orion {

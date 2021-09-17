@@ -151,6 +151,11 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   border-radius: 50%;
 }
 
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
+}
+
 .c0.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -520,6 +525,11 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 
 .c0.k-Button--rounded {
   border-radius: 50%;
+}
+
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -898,6 +908,11 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 
 .c0.k-Button--rounded {
   border-radius: 50%;
+}
+
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -1287,6 +1302,11 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   border-radius: 50%;
 }
 
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
+}
+
 .c0.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -1667,6 +1687,11 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   border-radius: 50%;
 }
 
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
+}
+
 .c0.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -2036,6 +2061,11 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 
 .c0.k-Button--rounded {
   border-radius: 50%;
+}
+
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -2409,6 +2439,11 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
   border-radius: 50%;
 }
 
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
+}
+
 .c0.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -2778,6 +2813,11 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
 
 .c0.k-Button--rounded {
   border-radius: 50%;
+}
+
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -3151,6 +3191,11 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   border-radius: 50%;
 }
 
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
+}
+
 .c0.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -3520,6 +3565,11 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 
 .c0.k-Button--rounded {
   border-radius: 50%;
+}
+
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -3893,6 +3943,11 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   border-radius: 50%;
 }
 
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
+}
+
 .c0.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -4262,6 +4317,11 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
 
 .c0.k-Button--rounded {
   border-radius: 50%;
+}
+
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
 }
 
 .c0.k-Button--orion {

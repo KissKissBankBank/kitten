@@ -151,6 +151,11 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   border-radius: 50%;
 }
 
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
+}
+
 .c0.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -523,6 +528,11 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 
 .c0.k-Button--rounded {
   border-radius: 50%;
+}
+
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -904,6 +914,11 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 
 .c0.k-Button--rounded {
   border-radius: 50%;
+}
+
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -1296,6 +1311,11 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   border-radius: 50%;
 }
 
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
+}
+
 .c0.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -1679,6 +1699,11 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   border-radius: 50%;
 }
 
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
+}
+
 .c0.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -2051,6 +2076,11 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 
 .c0.k-Button--rounded {
   border-radius: 50%;
+}
+
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -2427,6 +2457,11 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   border-radius: 50%;
 }
 
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
+}
+
 .c0.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -2799,6 +2834,11 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 
 .c0.k-Button--rounded {
   border-radius: 50%;
+}
+
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
 }
 
 .c0.k-Button--orion {

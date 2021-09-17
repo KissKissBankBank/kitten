@@ -151,6 +151,11 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   border-radius: 50%;
 }
 
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
+}
+
 .c0.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -524,6 +529,11 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 
 .c0.k-Button--rounded {
   border-radius: 50%;
+}
+
+.c0.k-Button--small {
+  min-width: auto;
+  padding: 0.75rem 1.125rem;
 }
 
 .c0.k-Button--orion {
