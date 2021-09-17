@@ -7,6 +7,7 @@ const args = {
   borderRadius: 0,
   fluid: false,
   icon: false,
+  small: false,
   modifier: 'hydrogen',
   rounded: false,
   disabled: false,
@@ -23,6 +24,10 @@ const argTypes = {
   },
   fluid: {
     name: 'fluid',
+    control: 'boolean',
+  },
+  small: {
+    name: 'small',
     control: 'boolean',
   },
   icon: {
