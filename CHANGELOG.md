@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ImageDropUploader`: Add image dimensions check.
+
 ## [4.6.2] - 2021-09-16
 
 Fix:
