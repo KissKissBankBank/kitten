@@ -25,8 +25,3 @@ EnvelopeIcon.defaultProps = {
   color: '#222',
   title: '',
 }
-
-
-
-
-

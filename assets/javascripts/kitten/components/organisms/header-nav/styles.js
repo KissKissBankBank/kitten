@@ -391,6 +391,8 @@ export const StyledHeader = styled.header`
     }
 
     .k-HeaderNav__Button--hasText {
+      margin-right: 0;
+      
       .k-HeaderNav__Button__text {
         &:first-child {
           margin-left: ${pxToRem(15)};
