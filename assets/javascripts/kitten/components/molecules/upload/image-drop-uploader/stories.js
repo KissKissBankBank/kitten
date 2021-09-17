@@ -126,6 +126,14 @@ export default {
       name: 'typeErrorText',
       control: 'text',
     },
+    dimensionErrorText: {
+      name: 'dimensionErrorText',
+      control: 'text',
+    },
+    acceptedImageDimensions: {
+      name: 'acceptedImageDimensions',
+      control: 'object',
+    },
   },
 }
 
@@ -155,6 +163,8 @@ const args = {
   typeErrorText: 'Wrong file type',
   sizeErrorText: 'File too large',
   quantityErrorText: 'Too many files',
+  dimensionErrorText: 'Image dimensions too big (4096x4096px max)',
+  acceptedImageDimensions: { width: 4096, height: 4096 },
   cancelButtonText: 'Cancel',
   cropRatio: 16 / 10,
   canCrop: true,
