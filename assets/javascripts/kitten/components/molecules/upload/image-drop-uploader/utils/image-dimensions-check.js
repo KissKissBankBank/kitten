@@ -1,5 +1,3 @@
-import 'babel-polyfill'
-
 // https://stackoverflow.com/a/47786555
 
 const getImageSize = url => {
