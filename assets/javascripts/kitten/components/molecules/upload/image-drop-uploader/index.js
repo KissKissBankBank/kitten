@@ -10,6 +10,7 @@ import { CloseButton } from '../../../../components/molecules/buttons/close-butt
 import { Text } from '../../../../components/atoms/typography/text'
 import { ImageCropper } from './components/image-cropper'
 import { pauseEvent } from './utils/pause-event'
+import { areImageDimensionsValid } from './utils/image-dimensions-check'
 
 const CROP_WIDTH = 125
 
@@ -177,6 +178,7 @@ export const ImageDropUploader = ({
   id,
   acceptedFileSize = 5 * 1024 * 1024,
   acceptedMimeTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'],
+  acceptedImageDimensions = { width: 4096, height: 4096 },
   buttonProps = {},
   buttonText = '',
   buttonTitle = '',
@@ -200,6 +202,7 @@ export const ImageDropUploader = ({
   sizeErrorText = '',
   status = 'ready',
   typeErrorText = '',
+  dimensionErrorText = '',
 }) => {
   const [internalStatus, setInternalStatus] = useState(status)
   useEffect(() => setInternalStatus(status), [status])
@@ -327,11 +330,23 @@ export const ImageDropUploader = ({
     return true
   }
 
-  const isSelectedImageValid = file => {
+  const isSelectedImageValid = async file => {
     if (file.size > acceptedFileSize) {
       setError(true)
       setInternalStatus('ready')
       setErrorMessage(sizeErrorText)
+      return false
+    }
+
+    const dimensionValidity = await areImageDimensionsValid(
+      file,
+      acceptedImageDimensions,
+    )
+
+    if (!dimensionValidity) {
+      setError(true)
+      setInternalStatus('ready')
+      setErrorMessage(dimensionErrorText)
       return false
     }
 
