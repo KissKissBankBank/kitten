@@ -191,7 +191,7 @@ export const StyledHeader = styled.header`
       .k-HeaderNav__Button:last-child {
         margin-right: ${pxToRem(-10)};
       }
-    ax {
+      @media (min-width: ${ScreenConfig.S.min}) {
         padding-right: ${pxToRem(15)};
         gap: ${pxToRem(15)};
 
@@ -396,8 +396,6 @@ export const StyledHeader = styled.header`
     }
 
     .k-HeaderNav__Button--hasText {
-      margin-right: 0;
-      
       .k-HeaderNav__Button__text {
         &:first-child {
           margin-left: ${pxToRem(15)};
