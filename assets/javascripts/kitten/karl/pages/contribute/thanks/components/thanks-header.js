@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
-import { pxToRem } from '../../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../../constants/screen-config'
-import COLORS from '../../../../../constants/colors-config'
+import { Text,
+pxToRem,
+ScreenConfig,
+COLORS,
+GridCol,
+Marger,
 
-import { GridCol } from '../../../../../components/layout/grid'
-import { Marger } from '../../../../../components/layout/marger'
-
-import { Text } from '../../../../../components/atoms/typography/text'
+ } from '../../../../..'
 
 const FlexTitleContainer = styled.div`
   display: flex;
@@ -54,9 +54,7 @@ const RocketIllustration = () => (
   </svg>
 )
 
-export class ThanksHeader extends Component {
-  render() {
-    return (
+export const ThanksHeader = () => (
       <GridCol offset-xs="0" col-m="9" offset-m="1" col-l="6" offset-l="3">
         <FlexTitleContainer>
           <RocketIllustration />
@@ -83,5 +81,3 @@ export class ThanksHeader extends Component {
         </Marger>
       </GridCol>
     )
-  }
-}

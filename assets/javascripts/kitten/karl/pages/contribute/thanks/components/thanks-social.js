@@ -1,19 +1,17 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 
-import { pxToRem } from '../../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../../constants/screen-config'
-
-import { GridCol } from '../../../../../components/layout/grid'
-import { Marger } from '../../../../../components/layout/marger'
-
-import { Text } from '../../../../../components/atoms/typography/text'
-
-import { Button } from '../../../../../components/molecules/buttons/button'
-
-import { FacebookIconWithBackground } from '../../../../../components/graphics/icons/facebook-icon-with-background'
-import { TwitterIcon } from '../../../../../components/graphics/icons/twitter-icon'
-import { EmailIcon } from '../../../../../components/graphics/icons/email-icon'
+import {
+pxToRem,
+ScreenConfig,
+GridCol,
+Marger,
+Text,
+Button,
+FacebookIconWithBackground,
+TwitterIcon,
+EmailIcon,
+ } from '../../../../..'
 
 const FlexButtonsContainer = styled.div`
   display: flex;
@@ -51,9 +49,7 @@ const PageSubTitles = styled(Text)`
   margin: 0;
 `
 
-export class ThanksSocial extends Component {
-  render() {
-    return (
+export const ThanksSocial = () => (
       <GridCol offset-xs="0" col-m="9" offset-m="1" col-l="5" offset-l="3">
         <Marger bottom="8">
           <Marger bottom="3">
@@ -98,5 +94,3 @@ export class ThanksSocial extends Component {
         </Marger>
       </GridCol>
     )
-  }
-}

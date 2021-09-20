@@ -1,18 +1,15 @@
-import React, { Component, Fragment } from 'react'
+import React from 'react'
 
-import { Container } from '../../../../components/layout/container'
-import { Grid } from '../../../../components/layout/grid'
+import { Container, Grid } from '../../../..'
 
 import { ThanksHeader } from './components/thanks-header'
 import { ThanksComment } from './components/thanks-comment'
 import { ThanksSocial } from './components/thanks-social'
 
-import ProjectsCarousel from '../../common/projects-carousel'
+import { ProjectsCarousel } from '../../common/projects-carousel'
 
-export class ThanksPage extends Component {
-  render() {
-    return (
-      <Fragment>
+export const ThanksPage = () => (
+      <>
         <Container>
           <Grid>
             <ThanksHeader />
@@ -22,7 +19,5 @@ export class ThanksPage extends Component {
         </Container>
 
         <ProjectsCarousel title="Test" buttonHref="#" buttonLabel="Voir plus" />
-      </Fragment>
+      </>
     )
-  }
-}
