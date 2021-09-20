@@ -38,7 +38,8 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -187,7 +188,8 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -410,7 +412,8 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -559,7 +562,8 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -789,7 +793,8 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   background-position: center;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -947,7 +952,8 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1177,7 +1183,8 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   background-position: center;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -1335,7 +1342,8 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1558,7 +1566,8 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -1707,7 +1716,8 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1930,7 +1940,8 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -2079,7 +2090,8 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -2302,7 +2314,8 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -2451,7 +2464,8 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -2674,7 +2688,8 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -2823,7 +2838,8 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;

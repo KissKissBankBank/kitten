@@ -10,8 +10,8 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
     onChange={[Function]}
     type="file"
   />
-  <label
-    className="sc-bdVaJa bAkRSz k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasBorderRadius"
+  <button
+    className="sc-bdVaJa JXwLd k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasBorderRadius"
     htmlFor="DocumentManager"
     style={
       Object {
@@ -85,7 +85,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
         </svg>
       </div>
     </div>
-  </label>
+  </button>
 </div>
 `;
 
@@ -100,8 +100,8 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
     onChange={[Function]}
     type="file"
   />
-  <label
-    className="sc-bdVaJa bAkRSz k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasBorderRadius"
+  <button
+    className="sc-bdVaJa JXwLd k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasBorderRadius"
     htmlFor="DocumentManager"
     style={
       Object {
@@ -175,6 +175,6 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
         </svg>
       </div>
     </div>
-  </label>
+  </button>
 </div>
 `;
