@@ -21,6 +21,7 @@ export const FileUrl = ({filepath, filenames = 'index.js'}) => {
           href={`${ghUrl}${item}`}
           weight="regular"
           className="k-u-link k-u-link-primary1 k-u-decoration-underline"
+          target="_blank"
         >
           {`${shortUrl}${item}`}
         </Text>
