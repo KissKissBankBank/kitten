@@ -136,7 +136,8 @@ export const FLUID = css`
 `
 export const SMALL = css`
   min-width: auto;
-  padding: ${pxToRem(12)} ${pxToRem(18)};
+  padding-right: ${pxToRem(18)};
+  padding-left: ${pxToRem(18)};
 `
 
 export const ROUNDED = css`

@@ -4,7 +4,6 @@ import HeaderNav from '../index'
 import {
   KissKissBankBankLogo,
   HeaderMenu,
-  SearchIcon,
   EnvelopeIcon,
   GiftIcon,
   COLORS,
@@ -73,7 +72,7 @@ const InnerUserMenu = () => (
 
 const Navigation = () => (
   <>
-    <HeaderNav.Nav.Item href="#" className="is-selected">
+    <HeaderNav.Nav.Item href="#">
       Découvrir les projets
     </HeaderNav.Nav.Item>
     {/* <HeaderNav.Nav.Item href="#">Lancer un projet</HeaderNav.Nav.Item> */}
@@ -257,7 +256,7 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
 
         <HeaderNav.Right padded>
           <SearchInput />
-
+  
           <HeaderNav.Logged>
             <HeaderNav.UserMenuNext dropdownAnchorSide="right" padding={false}>
               <HeaderNav.UserMenuNext.Button
@@ -292,7 +291,7 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
             </HeaderNav.UserMenuNext>
           </HeaderNav.Logged>
 
-          {/* <HeaderNav.Hidden max="s">
+          <HeaderNav.Hidden max="m">
             <Button
               icon
               size="tiny"
@@ -301,9 +300,9 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
             >
               <GiftIcon width={15} height={16} />
             </Button>
-          </HeaderNav.Hidden> */}
+          </HeaderNav.Hidden>
 
-          <HeaderNav.Hidden max="s">
+          {/* <HeaderNav.Hidden max="m">
             <Button
               icon
               size="tiny"
@@ -312,9 +311,9 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
             >
               <EnvelopeIcon />
             </Button>
-          </HeaderNav.Hidden>
+          </HeaderNav.Hidden> */}
 
-          <HeaderNav.Hidden max="s">
+          {/* <HeaderNav.Hidden max="m">
             <Button
               small
               size="tiny"
@@ -323,23 +322,21 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
             >
               Blog
             </Button>
-          </HeaderNav.Hidden>
+          </HeaderNav.Hidden> */}
 
           <HeaderNav.LoggedOut>
 
-          <HeaderNav.Hidden max="xs">  
-            <HeaderNav.Button
-              backgroundColor={COLORS.background1}
-              backgroundColorHover={COLORS.background1}
-              text="Se connecter"
-              href="#"
-              hiddenText={{ max: 'xs' }}
-            />
-          </HeaderNav.Hidden>
+          <HeaderNav.Hidden max="m"> 
+            <HeaderNav.Nav.Item href="#">
+              Se connecter
+            </HeaderNav.Nav.Item> 
+
+            </HeaderNav.Hidden>
           </HeaderNav.LoggedOut>
 
           <HeaderNav.Hidden max="m">
             <Button
+              size="tiny"
               modifier="helium"
               borderRadius={100}
               className="k-u-margin-left-single"
