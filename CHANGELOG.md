@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `ImageDropUploader`: Add image dimensions check.
+- Feature: `Button`: Apply `disabled` styles to any HTML element type.
 
 ## [4.6.3] - 2021-09-17
 

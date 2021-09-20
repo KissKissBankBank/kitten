@@ -15,8 +15,8 @@ exports[`<TextCopy /> should match snapshot 1`] = `
       Text To Copy
     </span>
   </div>
-  <span
-    className="sc-bwzfXH drjorK k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  <button
+    className="sc-bwzfXH gQJfmc k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
     style={
       Object {
         "--border-radius": 0,
@@ -36,7 +36,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
         fill="#000"
       />
     </svg>
-  </span>
+  </button>
 </button>
 `;
 
@@ -60,8 +60,8 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
       Text To Copy
     </span>
   </div>
-  <span
-    className="sc-bwzfXH kTFLmS k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--andromeda"
+  <button
+    className="sc-bwzfXH kwaNNI k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--andromeda"
     style={
       Object {
         "--border-radius": 0,
@@ -70,7 +70,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
     type="button"
   >
     Button text
-  </span>
+  </button>
 </button>
 `;
 
@@ -94,8 +94,8 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
       Text To Copy
     </span>
   </div>
-  <span
-    className="sc-bwzfXH drjorK k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  <button
+    className="sc-bwzfXH gQJfmc k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
     style={
       Object {
         "--border-radius": 0,
@@ -115,7 +115,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
         fill="#000"
       />
     </svg>
-  </span>
+  </button>
 </button>
 `;
 
@@ -139,8 +139,8 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
       Text To Copy
     </span>
   </div>
-  <span
-    className="sc-bwzfXH drjorK k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  <button
+    className="sc-bwzfXH gQJfmc k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
     style={
       Object {
         "--border-radius": 0,
@@ -160,7 +160,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
         fill="#000"
       />
     </svg>
-  </span>
+  </button>
 </button>
 `;
 
@@ -184,8 +184,8 @@ exports[`<TextCopy /> should match snapshot with variant etc. 1`] = `
       Text To Copy
     </span>
   </div>
-  <span
-    className="sc-bwzfXH kTFLmS k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--orion"
+  <button
+    className="sc-bwzfXH kwaNNI k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--orion"
     style={
       Object {
         "--border-radius": 0,
@@ -194,6 +194,6 @@ exports[`<TextCopy /> should match snapshot with variant etc. 1`] = `
     type="button"
   >
     Button text
-  </span>
+  </button>
 </button>
 `;

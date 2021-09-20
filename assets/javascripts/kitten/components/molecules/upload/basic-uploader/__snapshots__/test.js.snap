@@ -2,7 +2,7 @@
 
 exports[`<BasicUploader /> should match snapshot 1`] = `
 <div
-  className="sc-htpNat btRpdi k-BasicUploader k-BasicUploader--ready"
+  className="sc-htpNat dlqdjv k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -10,8 +10,8 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
     onChange={[Function]}
     type="file"
   />
-  <label
-    className="sc-bdVaJa bAkRSz k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+  <button
+    className="sc-bdVaJa JXwLd k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
     htmlFor="BasicUploader"
     style={
       Object {
@@ -37,13 +37,13 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
     <span>
       Document
     </span>
-  </label>
+  </button>
 </div>
 `;
 
 exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 <div
-  className="sc-htpNat btRpdi k-BasicUploader k-BasicUploader--ready"
+  className="sc-htpNat dlqdjv k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -51,8 +51,8 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
     onChange={[Function]}
     type="file"
   />
-  <label
-    className="sc-bdVaJa bAkRSz k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+  <button
+    className="sc-bdVaJa JXwLd k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
     htmlFor="BasicUploader"
     style={
       Object {
@@ -78,13 +78,13 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
     <span>
       Document
     </span>
-  </label>
+  </button>
 </div>
 `;
 
 exports[`<BasicUploader /> should match snapshot with props 1`] = `
 <div
-  className="sc-htpNat btRpdi k-BasicUploader k-BasicUploader--valid"
+  className="sc-htpNat dlqdjv k-BasicUploader k-BasicUploader--valid"
 >
   <input
     disabled={true}
@@ -93,8 +93,8 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     onChange={[Function]}
     type="file"
   />
-  <label
-    className="sc-bdVaJa bAkRSz k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+  <button
+    className="sc-bdVaJa JXwLd k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--fluid"
     htmlFor="BasicUploader"
     style={
       Object {
@@ -120,7 +120,7 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     <span>
       Document
     </span>
-  </label>
+  </button>
   <div
     className="k-BasicUploader__statusBlock"
   >

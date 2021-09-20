@@ -38,7 +38,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -187,7 +188,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -345,7 +347,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   }
 }
 
-<input
+<button
   className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
   style={
     Object {
@@ -395,7 +397,8 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -544,7 +547,8 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -753,7 +757,8 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -902,7 +907,8 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1111,7 +1117,8 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -1260,7 +1267,8 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1469,7 +1477,8 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -1618,7 +1627,8 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1827,7 +1837,8 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -1976,7 +1987,8 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -2136,6 +2148,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 
 <a
   className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  disabled={null}
   href="#helloWorld"
   style={
     Object {
@@ -2186,7 +2199,8 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -2335,7 +2349,8 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -2544,7 +2559,8 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -2693,7 +2709,8 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -2902,7 +2919,8 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -3051,7 +3069,8 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -3260,7 +3279,8 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -3409,7 +3429,8 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -3618,7 +3639,8 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -3767,7 +3789,8 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -3976,7 +3999,8 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -4125,7 +4149,8 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -4334,7 +4359,8 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -4483,7 +4509,8 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -4692,7 +4719,8 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -4841,7 +4869,8 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -5055,7 +5084,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -5204,7 +5234,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -5413,7 +5444,8 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -5562,7 +5594,8 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -5771,7 +5804,8 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -5920,7 +5954,8 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
