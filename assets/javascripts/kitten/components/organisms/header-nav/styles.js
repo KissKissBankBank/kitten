@@ -47,6 +47,11 @@ export const StyledHeader = styled.header`
     box-sizing: border-box;
     background: ${COLORS.background1};
     transition: background-color 0.2s ease;
+    padding: 0;
+
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      padding: 0 ${pxToRem(20)} 0 ${pxToRem(30)};
+    }
 
     .quickAccessLink {
       background: ${COLORS.background1};
@@ -186,7 +191,7 @@ export const StyledHeader = styled.header`
       .k-HeaderNav__Button:last-child {
         margin-right: ${pxToRem(-10)};
       }
-      @media (min-width: ${ScreenConfig.S.min}) {
+    ax {
         padding-right: ${pxToRem(15)};
         gap: ${pxToRem(15)};
 
@@ -420,6 +425,14 @@ export const StyledHeader = styled.header`
     }
     .k-HeaderNav-nav__item {
       padding: 0 ${pxToRem(40)};
+
+      &.smallPadding {
+        padding: 0 ${pxToRem(10)};
+      }
+    }
+
+    .k-HeaderNav__right .k-HeaderNav-nav__item {
+      padding: 0 ${pxToRem(10)};
     }
 
     .k-Dropdown__button,

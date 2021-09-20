@@ -417,7 +417,7 @@ Button.propTypes = {
   fluid: PropTypes.bool,
   icon: PropTypes.bool,
   rounded: PropTypes.bool,
-  small: PropTypes.string,
+  small: PropTypes.bool,
   size: PropTypes.oneOf([
     'nano',
     'micro',

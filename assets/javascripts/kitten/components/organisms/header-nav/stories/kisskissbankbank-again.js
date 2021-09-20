@@ -31,7 +31,7 @@ const getComputedLeft = id =>
 
 const InnerBurgerMenu = () => (
   <HeaderMenu borderSide="right" noBorder>
-    <HeaderNav.Hidden min="m">
+    <HeaderNav.Hidden min="l">
 			<HeaderMenu.Item href="#" isSelected>
 			  Lancer un projet
 			</HeaderMenu.Item>
@@ -72,10 +72,10 @@ const InnerUserMenu = () => (
 
 const Navigation = () => (
   <>
-    <HeaderNav.Nav.Item href="#">
+    <HeaderNav.Nav.Item href="#" smallPadding>
       Découvrir les projets
     </HeaderNav.Nav.Item>
-    {/* <HeaderNav.Nav.Item href="#">Lancer un projet</HeaderNav.Nav.Item> */}
+    <HeaderNav.Nav.Item href="#" smallPadding>Lancer un projet</HeaderNav.Nav.Item>
   </>
 )
 
@@ -234,9 +234,11 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
         isLogged={isLogged}
         {...args}
       >
-        <HeaderNav.BurgerMenuNext dropdownContentWidth={burgerMenuWidth}>
-          <InnerBurgerMenu />
-        </HeaderNav.BurgerMenuNext>
+        <HeaderNav.Hidden min="l">
+          <HeaderNav.BurgerMenuNext dropdownContentWidth={burgerMenuWidth}>
+            <InnerBurgerMenu />
+          </HeaderNav.BurgerMenuNext>
+        </HeaderNav.Hidden>
 
         <HeaderNav.Logo href="#">
           <HeaderNav.Hidden min="xs">
@@ -291,7 +293,7 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
             </HeaderNav.UserMenuNext>
           </HeaderNav.Logged>
 
-          <HeaderNav.Hidden max="m">
+          {/* <HeaderNav.Hidden max="m">
             <Button
               icon
               size="tiny"
@@ -300,20 +302,9 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
             >
               <GiftIcon width={15} height={16} />
             </Button>
-          </HeaderNav.Hidden>
-
-          {/* <HeaderNav.Hidden max="m">
-            <Button
-              icon
-              size="tiny"
-              rounded
-              className="k-u-margin-right-single"
-            >
-              <EnvelopeIcon />
-            </Button>
           </HeaderNav.Hidden> */}
-
-          {/* <HeaderNav.Hidden max="m">
+          
+          <HeaderNav.Hidden max="m">
             <Button
               small
               size="tiny"
@@ -322,7 +313,18 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
             >
               Blog
             </Button>
-          </HeaderNav.Hidden> */}
+          </HeaderNav.Hidden>
+
+          <HeaderNav.Hidden max="m">
+            <Button
+              icon
+              size="tiny"
+              rounded
+              className="k-u-margin-right-single"
+            >
+              <EnvelopeIcon />
+            </Button>
+          </HeaderNav.Hidden>
 
           <HeaderNav.LoggedOut>
 
@@ -334,7 +336,7 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
             </HeaderNav.Hidden>
           </HeaderNav.LoggedOut>
 
-          <HeaderNav.Hidden max="m">
+          {/* <HeaderNav.Hidden max="m">
             <Button
               size="tiny"
               modifier="helium"
@@ -343,7 +345,7 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
             >
               Lancer un projet
             </Button>
-          </HeaderNav.Hidden>
+          </HeaderNav.Hidden> */}
         </HeaderNav.Right>
       </HeaderNav>
     </>
