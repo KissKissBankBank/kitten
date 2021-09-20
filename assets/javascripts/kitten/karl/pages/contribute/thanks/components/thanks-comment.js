@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button,
-pxToRem,
-GridCol,
-Marger,
-Text,
-TextInput } from '../../../../..'
+import {
+  Button,
+  pxToRem,
+  GridCol,
+  Marger,
+  Text,
+  TextInput,
+} from '../../../../..'
 
 const PageSubTitles = styled(Text)`
   font-size: ${pxToRem(20)};
@@ -33,4 +35,4 @@ export const ThanksComment = () => (
       </Marger>
     </Marger>
   </GridCol>
-    )
+)

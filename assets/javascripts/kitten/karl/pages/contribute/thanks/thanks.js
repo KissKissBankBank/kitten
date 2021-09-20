@@ -9,15 +9,15 @@ import { ThanksSocial } from './components/thanks-social'
 import { ProjectsCarousel } from '../../common/projects-carousel'
 
 export const ThanksPage = () => (
-      <>
-        <Container>
-          <Grid>
-            <ThanksHeader />
-            <ThanksComment />
-            <ThanksSocial />
-          </Grid>
-        </Container>
+  <>
+    <Container>
+      <Grid>
+        <ThanksHeader />
+        <ThanksComment />
+        <ThanksSocial />
+      </Grid>
+    </Container>
 
-        <ProjectsCarousel title="Test" buttonHref="#" buttonLabel="Voir plus" />
-      </>
-    )
+    <ProjectsCarousel title="Test" buttonHref="#" buttonLabel="Voir plus" />
+  </>
+)

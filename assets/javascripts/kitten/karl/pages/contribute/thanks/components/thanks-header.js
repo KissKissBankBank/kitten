@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Text,
-pxToRem,
-ScreenConfig,
-COLORS,
-GridCol,
-Marger,
-
- } from '../../../../..'
+import {
+  Text,
+  pxToRem,
+  ScreenConfig,
+  COLORS,
+  GridCol,
+  Marger,
+} from '../../../../..'
 
 const FlexTitleContainer = styled.div`
   display: flex;
@@ -55,29 +55,29 @@ const RocketIllustration = () => (
 )
 
 export const ThanksHeader = () => (
-      <GridCol offset-xs="0" col-m="9" offset-m="1" col-l="6" offset-l="3">
-        <FlexTitleContainer>
-          <RocketIllustration />
-          <PageTitle
-            className="
+  <GridCol offset-xs="0" col-m="9" offset-m="1" col-l="6" offset-l="3">
+    <FlexTitleContainer>
+      <RocketIllustration />
+      <PageTitle
+        className="
             k-u-margin-top-double
             k-u-margin-top-none@m-up
             k-u-margin-left-none
             k-u-margin-left-quadruple@m-up
           "
-          >
-            Bravo, grâce à vous
-            <br />
-            la collecte progresse&nbsp;!
-          </PageTitle>
-        </FlexTitleContainer>
-        <Marger top="3" bottom="4">
-          <PageIntroText>
-            Vos contreparties seront délivrées par le créateur quand la collecte
-            sera réussie.
-            <br />
-            Vous pourrez également lui demander un reçu de don.
-          </PageIntroText>
-        </Marger>
-      </GridCol>
-    )
+      >
+        Bravo, grâce à vous
+        <br />
+        la collecte progresse&nbsp;!
+      </PageTitle>
+    </FlexTitleContainer>
+    <Marger top="3" bottom="4">
+      <PageIntroText>
+        Vos contreparties seront délivrées par le créateur quand la collecte
+        sera réussie.
+        <br />
+        Vous pourrez également lui demander un reçu de don.
+      </PageIntroText>
+    </Marger>
+  </GridCol>
+)
