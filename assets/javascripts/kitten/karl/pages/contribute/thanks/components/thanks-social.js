@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import {
   pxToRem,
@@ -25,23 +25,10 @@ const FlexButtonsContainer = styled.div`
   @media screen and (min-width: ${ScreenConfig.XS.min}px) {
     max-width: ${pxToRem(325)};
   }
-`
 
-/* `&&&` is used to increase specificity */
-const NoPaddingLeft = css`
-  &&& {
+  .k-Button__icon.noPadding {
     padding-left: 0;
   }
-`
-
-const FacebookIconWithBackgroundNoPadding = styled(FacebookIconWithBackground)`
-  ${NoPaddingLeft}
-`
-const TwitterIconNoPadding = styled(TwitterIcon)`
-  ${NoPaddingLeft}
-`
-const EmailIconNoPadding = styled(EmailIcon)`
-  ${NoPaddingLeft}
 `
 
 const PageSubTitles = styled(Text)`
@@ -60,7 +47,7 @@ export const ThanksSocial = () => (
       <FlexButtonsContainer>
         <Marger bottom="2">
           <Button icon modifier="facebook" tag="a" iconWithMinWidth={true}>
-            <FacebookIconWithBackgroundNoPadding className="k-Button__icon k-Button__icon--facebook" />
+            <FacebookIconWithBackground className="noPadding k-Button__icon k-Button__icon--facebook" />
             Partager sur Facebook
           </Button>
         </Marger>
@@ -73,7 +60,7 @@ export const ThanksSocial = () => (
             tag="a"
             iconWithMinWidth={true}
           >
-            <TwitterIconNoPadding className="k-Button__icon" />
+            <TwitterIcon className="noPadding k-Button__icon" />
             Partager sur Twitter
           </Button>
         </Marger>
@@ -86,7 +73,7 @@ export const ThanksSocial = () => (
             tag="a"
             iconWithMinWidth={true}
           >
-            <EmailIconNoPadding className="k-Button__icon" />
+            <EmailIcon className="noPadding k-Button__icon" />
             Partager par email
           </Button>
         </Marger>
