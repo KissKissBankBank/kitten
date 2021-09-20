@@ -288,7 +288,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 .c1.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c1.k-Button--orion {
@@ -487,7 +488,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 .c10.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c10.k-Button--orion {
@@ -1506,7 +1508,8 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 
 .c1.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c1.k-Button--orion {

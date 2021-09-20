@@ -85,10 +85,14 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
   >
     <button
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="sc-htpNat kbJDRB k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
 =======
       className="sc-htpNat xAhKr k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
 >>>>>>> ebed71072 (Test)
+=======
+      className="sc-htpNat jPaiVJ k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
+>>>>>>> 8c3cad0b4 (Update button test)
       href={null}
       onClick={null}
       style={

@@ -153,7 +153,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -880,7 +881,8 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -1245,7 +1247,8 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -1610,7 +1613,8 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -1975,7 +1979,8 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -2340,7 +2345,8 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -2707,7 +2713,8 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -3072,7 +3079,8 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -3437,7 +3445,8 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -3802,7 +3811,8 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -4167,7 +4177,8 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -4532,7 +4543,8 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -4897,7 +4909,8 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -5261,7 +5274,8 @@ exports[`<Button /> with small matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -5625,7 +5639,8 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -5995,7 +6010,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -6360,7 +6376,8 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {
@@ -6725,7 +6742,8 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
 
 .c0.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c0.k-Button--orion {

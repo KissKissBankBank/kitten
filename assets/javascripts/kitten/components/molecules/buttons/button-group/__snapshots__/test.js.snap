@@ -153,7 +153,8 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 
 .c1.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c1.k-Button--orion {
@@ -620,7 +621,8 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
 
 .c1.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c1.k-Button--orion {

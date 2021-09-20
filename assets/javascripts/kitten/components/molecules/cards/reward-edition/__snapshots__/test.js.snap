@@ -153,7 +153,8 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 
 .c2.k-Button--small {
   min-width: auto;
-  padding: 0.75rem 1.125rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .c2.k-Button--orion {

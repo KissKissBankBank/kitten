@@ -78,10 +78,14 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
     <button
       aria-label="Delete"
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="sc-bwzfXH gQJfmc k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
 =======
       className="sc-bwzfXH cVHzOh k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
 >>>>>>> ebed71072 (Test)
+=======
+      className="sc-bwzfXH cjUdCo k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+>>>>>>> 8c3cad0b4 (Update button test)
       onClick={[Function]}
       style={
         Object {
@@ -149,10 +153,14 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
     <button
       aria-label="Delete"
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="sc-bwzfXH gQJfmc k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
 =======
       className="sc-bwzfXH cVHzOh k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
 >>>>>>> ebed71072 (Test)
+=======
+      className="sc-bwzfXH cjUdCo k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+>>>>>>> 8c3cad0b4 (Update button test)
       onClick={[Function]}
       style={
         Object {
