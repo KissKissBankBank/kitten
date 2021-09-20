@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `ImageDropUploader`: Add image dimensions check.
 
+## [4.6.3] - 2021-09-17
+
+Fix:
+
+- `LocationInput`: Add comma between city and country.
+
 ## [4.6.2] - 2021-09-16
 
 Fix:
