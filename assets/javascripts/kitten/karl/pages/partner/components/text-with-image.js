@@ -8,10 +8,12 @@ import { Paragraph } from '../../../../components/atoms/typography/paragraph'
 import { Text } from '../../../../components/atoms/typography/text'
 import {
   Button,
+} from '../../../../components/molecules/buttons/button'
+import {
   FLUID,
   DEFAULT,
   BIG,
-} from '../../../../components/molecules/buttons/button'
+} from '../../../../components/molecules/buttons/button/standalone-styles'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
