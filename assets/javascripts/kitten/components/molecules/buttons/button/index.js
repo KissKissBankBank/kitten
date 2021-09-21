@@ -231,6 +231,8 @@ export const Button = ({
   tag,
   disabled,
   as,
+  fit,
+  mobileFit,
   ...props
 }) => {
   const actualSize = (() => {
