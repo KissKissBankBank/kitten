@@ -2,20 +2,23 @@
 
 exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -27,10 +30,6 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -48,15 +47,6 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -70,81 +60,63 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -385,149 +357,55 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   border-color: #19b4fa;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -539,11 +417,11 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 <button
   aria-checked={null}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none"
   disabled={false}
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -554,20 +432,23 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -579,10 +460,6 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
@@ -600,15 +477,6 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -622,81 +490,63 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -937,149 +787,55 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   border-color: #19b4fa;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -1091,11 +847,11 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--big k-Button--lithium k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--big k-Button--lithium k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none"
   disabled={false}
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -1106,20 +862,23 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1131,10 +890,6 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
@@ -1152,15 +907,6 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -1174,81 +920,63 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -1489,149 +1217,55 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   border-color: #19b4fa;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -1643,11 +1277,11 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--lithium k-Button--andromeda k-Button--disabled"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--lithium k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--disabled"
   disabled={true}
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -1658,20 +1292,23 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -1683,10 +1320,6 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #ffb2c7;
   background-color: #fff;
   color: #ff0046;
@@ -1704,15 +1337,6 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -1726,81 +1350,63 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -2041,149 +1647,55 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   border-color: #19b4fa;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -2195,11 +1707,11 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--copper k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--copper k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none"
   disabled={false}
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
@@ -2210,20 +1722,23 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -2235,10 +1750,6 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
@@ -2256,15 +1767,6 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
-}
-
 .c0:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
@@ -2278,81 +1780,63 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
   font-size: 0.7901234567901234rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
+}
+
+.c0.k-Button--hasBorderRadius {
+  border-radius: var(--Button-border-radius);
 }
 
 .c0.k-Button--rounded {
@@ -2593,149 +2077,55 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   border-color: #19b4fa;
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    font-size: 1rem;
+    --Button-padding: 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
@@ -2747,11 +2137,11 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--tiny k-Button--lithium k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--tiny k-Button--lithium k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none"
   disabled={false}
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": 0,
     }
   }
   type="button"
