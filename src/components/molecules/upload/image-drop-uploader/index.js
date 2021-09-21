@@ -9,7 +9,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ImageDropUploader = void 0;
 
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
@@ -37,6 +41,8 @@ var _imageCropper = require("./components/image-cropper");
 
 var _pauseEvent = require("./utils/pause-event");
 
+var _imageDimensionsCheck = require("./utils/image-dimensions-check");
+
 var CROP_WIDTH = 125;
 
 var StyledImageDropUploader = _styledComponents.default.div.withConfig({
@@ -54,6 +60,11 @@ var ImageDropUploader = function ImageDropUploader(_ref) {
       acceptedFileSize = _ref$acceptedFileSize === void 0 ? 5 * 1024 * 1024 : _ref$acceptedFileSize,
       _ref$acceptedMimeType = _ref.acceptedMimeTypes,
       acceptedMimeTypes = _ref$acceptedMimeType === void 0 ? ['image/jpeg', 'image/png', 'image/gif', 'image/webp'] : _ref$acceptedMimeType,
+      _ref$acceptedImageDim = _ref.acceptedImageDimensions,
+      acceptedImageDimensions = _ref$acceptedImageDim === void 0 ? {
+    width: 4096,
+    height: 4096
+  } : _ref$acceptedImageDim,
       _ref$buttonProps = _ref.buttonProps,
       buttonProps = _ref$buttonProps === void 0 ? {} : _ref$buttonProps,
       _ref$buttonText = _ref.buttonText,
@@ -99,7 +110,9 @@ var ImageDropUploader = function ImageDropUploader(_ref) {
       _ref$status = _ref.status,
       status = _ref$status === void 0 ? 'ready' : _ref$status,
       _ref$typeErrorText = _ref.typeErrorText,
-      typeErrorText = _ref$typeErrorText === void 0 ? '' : _ref$typeErrorText;
+      typeErrorText = _ref$typeErrorText === void 0 ? '' : _ref$typeErrorText,
+      _ref$dimensionErrorTe = _ref.dimensionErrorText,
+      dimensionErrorText = _ref$dimensionErrorTe === void 0 ? '' : _ref$dimensionErrorTe;
 
   var _useState = (0, _react.useState)(status),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -195,42 +208,101 @@ var ImageDropUploader = function ImageDropUploader(_ref) {
     onCancel(true);
   };
 
-  (0, _react.useEffect)(function () {
-    if (!imageRawData) return;
-    if (!isSelectedImageValid(imageRawData)) return;
-    setError(false);
-    var reader = new FileReader();
-    reader.readAsDataURL(imageRawData);
+  (0, _react.useEffect)( /*#__PURE__*/(0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+    var isValid, reader;
+    return _regenerator.default.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.t0 = imageRawData;
 
-    reader.onloadend = function () {
-      setImageDataURL(reader.result);
-    };
+            if (!_context.t0) {
+              _context.next = 5;
+              break;
+            }
 
-    onUpload({
-      value: reader.result,
-      name: (imageRawData === null || imageRawData === void 0 ? void 0 : imageRawData.name) || null,
-      file: imageRawData || null
-    });
-  }, [imageRawData]);
-  (0, _react.useEffect)(function () {
-    if (imageRawData && !isSelectedImageValid(imageRawData)) return;
-    onChange({
-      value: imageDataURL,
-      name: (imageRawData === null || imageRawData === void 0 ? void 0 : imageRawData.name) || null,
-      file: imageRawData || null,
-      cropperData: cropperData // value: resultData?.target?.src || '',
-      // base: getOr(resultData?.srcElement?.src)('originalTarget.src')(
-      //   resultData,
-      // ),
-      // name: fileNameState,
-      // file: uploadedFile,
-      // cropperData: resultData.detail,
-      // croppedImageSrc: cropperInstance
-      //   ? cropperInstance?.getCroppedCanvas()?.toDataURL()
-      //   : '',
+            _context.next = 4;
+            return isSelectedImageValid(imageRawData);
 
-    });
-  }, [imageDataURL, cropperData, imageRawData]);
+          case 4:
+            _context.t0 = _context.sent;
+
+          case 5:
+            isValid = _context.t0;
+
+            if (isValid) {
+              _context.next = 8;
+              break;
+            }
+
+            return _context.abrupt("return");
+
+          case 8:
+            setError(false);
+            reader = new FileReader();
+            reader.readAsDataURL(imageRawData);
+
+            reader.onloadend = function () {
+              setImageDataURL(reader.result);
+            };
+
+            onUpload({
+              value: reader.result,
+              name: (imageRawData === null || imageRawData === void 0 ? void 0 : imageRawData.name) || null,
+              file: imageRawData || null
+            });
+
+          case 13:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  })), [imageRawData]);
+  (0, _react.useEffect)( /*#__PURE__*/(0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+    var isValid;
+    return _regenerator.default.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.t0 = imageRawData;
+
+            if (!_context2.t0) {
+              _context2.next = 5;
+              break;
+            }
+
+            _context2.next = 4;
+            return isSelectedImageValid(imageRawData);
+
+          case 4:
+            _context2.t0 = _context2.sent;
+
+          case 5:
+            isValid = _context2.t0;
+
+            if (!(imageRawData && !isValid)) {
+              _context2.next = 8;
+              break;
+            }
+
+            return _context2.abrupt("return");
+
+          case 8:
+            onChange({
+              value: imageDataURL,
+              name: (imageRawData === null || imageRawData === void 0 ? void 0 : imageRawData.name) || null,
+              file: imageRawData || null,
+              cropperData: cropperData
+            });
+
+          case 9:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  })), [imageDataURL, cropperData, imageRawData]);
 
   var handleCropperChange = function handleCropperChange(exportedCropperData) {
     setCropperData(exportedCropperData);
@@ -254,16 +326,55 @@ var ImageDropUploader = function ImageDropUploader(_ref) {
     return true;
   };
 
-  var isSelectedImageValid = function isSelectedImageValid(file) {
-    if (file.size > acceptedFileSize) {
-      setError(true);
-      setInternalStatus('ready');
-      setErrorMessage(sizeErrorText);
-      return false;
-    }
+  var isSelectedImageValid = /*#__PURE__*/function () {
+    var _ref4 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3(file) {
+      var dimensionValidity;
+      return _regenerator.default.wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              if (!(file.size > acceptedFileSize)) {
+                _context3.next = 5;
+                break;
+              }
 
-    return true;
-  };
+              setError(true);
+              setInternalStatus('ready');
+              setErrorMessage(sizeErrorText);
+              return _context3.abrupt("return", false);
+
+            case 5:
+              _context3.next = 7;
+              return (0, _imageDimensionsCheck.areImageDimensionsValid)(file, acceptedImageDimensions);
+
+            case 7:
+              dimensionValidity = _context3.sent;
+
+              if (dimensionValidity) {
+                _context3.next = 13;
+                break;
+              }
+
+              setError(true);
+              setInternalStatus('ready');
+              setErrorMessage(dimensionErrorText);
+              return _context3.abrupt("return", false);
+
+            case 13:
+              return _context3.abrupt("return", true);
+
+            case 14:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }));
+
+    return function isSelectedImageValid(_x) {
+      return _ref4.apply(this, arguments);
+    };
+  }();
 
   return /*#__PURE__*/_react.default.createElement(StyledImageDropUploader, {
     className: (0, _classnames.default)('k-ImageDropUploader', className, {
