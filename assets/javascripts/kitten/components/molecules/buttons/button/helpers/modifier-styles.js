@@ -249,7 +249,8 @@ export const modifierStyles = modifier => {
       outline-color: ${COLORS.primary4};
     }
 
-    &:disabled {
+    &:disabled,
+    &.k-Button--disabled {
       border-color: ${COLORS.line2};
       background-color: ${COLORS.line2};
       color: ${COLORS.background1};
