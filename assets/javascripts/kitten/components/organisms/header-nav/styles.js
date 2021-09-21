@@ -47,12 +47,17 @@ export const StyledHeader = styled.header`
     box-sizing: border-box;
     background: ${COLORS.background1};
     transition: background-color 0.2s ease;
-    padding: 0;
 
     @media (min-width: ${ScreenConfig.L.min}px) {
       padding: 0 ${pxToRem(20)} 0 ${pxToRem(30)};
     }
 
+    &:not(.k-HeaderNav--kkbb__only){
+      @media (min-width: ${ScreenConfig.L.min}px) {
+        padding: 0;
+      }
+    }
+   
     .quickAccessLink {
       background: ${COLORS.background1};
       transition: background-color 0.2s ease;

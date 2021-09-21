@@ -32,14 +32,14 @@ const getComputedLeft = id =>
 const InnerBurgerMenu = () => (
   <HeaderMenu borderSide="right" noBorder>
     <HeaderNav.Hidden min="l">
-			<HeaderMenu.Item href="#" isSelected>
-			  Lancer un projet
-			</HeaderMenu.Item>
-			<HeaderMenu.Item href="#">Découvrir les projets</HeaderMenu.Item>
-			<HeaderMenu.Item href="#">Carte cadeau</HeaderMenu.Item>
-			<HeaderMenu.Item href="#">Vos questions</HeaderMenu.Item>
-			<HeaderMenu.Item href="#">Blog</HeaderMenu.Item>
-			<HeaderMenu.Item href="#" className="k-u-background-color-line1">
+      <HeaderMenu.Item href="#" isSelected>
+        Lancer un projet
+      </HeaderMenu.Item>
+      <HeaderMenu.Item href="#">Découvrir les projets</HeaderMenu.Item>
+      <HeaderMenu.Item href="#">Carte cadeau</HeaderMenu.Item>
+      <HeaderMenu.Item href="#">Vos questions</HeaderMenu.Item>
+      <HeaderMenu.Item href="#">Blog</HeaderMenu.Item>
+      <HeaderMenu.Item href="#" className="k-u-background-color-line1">
         Se déconnecter
       </HeaderMenu.Item>
       <HeaderMenu.Item href="#" className="k-u-background-color-primary5">
@@ -225,6 +225,7 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
       <Overlay zIndex={1} position="fixed" />
 
       <HeaderNav
+        className="k-HeaderNav--kkbb__only"
         id={HEADER_NAV_ID}
         quickAccessProps={{
           href: '#mainContent',
@@ -309,6 +310,7 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
               size="tiny"
               borderRadius={100}
               className="k-u-margin-right-single"
+              style={{ minWidth: 'auto', paddingLeft: '18px', paddingRight: '18px', borderRadius:'100px'}}
             >
               Blog
             </Button>
