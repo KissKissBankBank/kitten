@@ -1,5 +1,12 @@
 import React from 'react'
-import { Button } from './index'
+import {
+  Button,
+  buttonModifiers,
+  buttonFitOptions,
+  buttonMobileFitOptions,
+  buttonSizes,
+  buttonVariants,
+} from './index'
 import { HeartIcon, PayPalIcon, Badge, Cart } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 
@@ -14,6 +21,8 @@ const args = {
   tag: undefined,
   variant: 'andromeda',
   children: 'My Button',
+  fit: 'min-width',
+  mobileFit: undefined,
 }
 
 const argTypes = {
@@ -31,25 +40,7 @@ const argTypes = {
   },
   modifier: {
     name: 'modifier',
-    options: [
-      'hydrogen',
-      'helium',
-      'lithium',
-      'beryllium',
-      'carbon',
-      'oxygen',
-      'checked',
-      'copper',
-      'boron',
-      'neon',
-      'iron',
-      'social_facebook',
-      'social_twitter',
-      'social_linkedin',
-      'social_instagram',
-      'social_youtube',
-      'social_pinterest',
-    ],
+    options: buttonModifiers,
     control: 'select',
   },
   rounded: {
@@ -58,7 +49,7 @@ const argTypes = {
   },
   size: {
     name: 'size',
-    options: ['nano', 'micro', 'tiny', 'regular', 'big', 'huge', 'giant'],
+    options: buttonSizes,
     control: 'select',
   },
   tag: {
@@ -67,13 +58,23 @@ const argTypes = {
   },
   variant: {
     name: 'variant',
-    options: ['andromeda', 'orion'],
+    options: buttonVariants,
     control: 'inline-radio',
   },
   children: {
     name: 'children',
     control: 'text',
   },
+  fit: {
+    name: 'fit',
+    control: 'select',
+    options: buttonFitOptions,
+  },
+  mobileFit: {
+    name: 'mobileFit',
+    control: 'select',
+    options: buttonMobileFitOptions,
+  }
 }
 
 export default {
