@@ -21,8 +21,9 @@ exports[`<ImageCropper /> matches with empty snapshot 1`] = `
       onChange={[Function]}
       type="file"
     />
-    <button
+    <label
       className="sc-htpNat dQhgEt k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+      disabled={null}
       htmlFor="cropper"
       style={
         Object {
@@ -48,7 +49,7 @@ exports[`<ImageCropper /> matches with empty snapshot 1`] = `
       <span>
         Choose a file…
       </span>
-    </button>
+    </label>
   </div>
   <p
     className="sc-bwzfXH ggISLb k-Paragraph k-u-margin-top-single k-Paragraph--tertiary k-Paragraph--noMargin"
@@ -83,8 +84,9 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
       onChange={[Function]}
       type="file"
     />
-    <button
+    <label
       className="sc-htpNat dQhgEt k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fluid"
+      disabled={null}
       htmlFor="cropper"
       style={
         Object {
@@ -110,7 +112,7 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
       <span>
         Choose a file…
       </span>
-    </button>
+    </label>
   </div>
   <p
     className="sc-bwzfXH ggISLb k-Paragraph k-u-margin-top-single k-Paragraph--tertiary k-Paragraph--noMargin"

@@ -338,8 +338,8 @@ export const Button = ({
   fluid,
   icon,
   borderRadius,
-  tag,
   disabled,
+  tag,
   as,
   ...props
 }) => {
@@ -364,7 +364,7 @@ export const Button = ({
     }
   })()
 
-  const internalTag = tag || as || 'button'
+  const internalTag = as || tag
 
   return (
     <StyledButton
