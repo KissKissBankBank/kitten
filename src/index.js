@@ -1271,78 +1271,6 @@ Object.defineProperty(exports, "Button", {
     return _button.Button;
   }
 });
-Object.defineProperty(exports, "BUTTON_STYLE_FLUID", {
-  enumerable: true,
-  get: function get() {
-    return _button.FLUID;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_DEFAULT", {
-  enumerable: true,
-  get: function get() {
-    return _button.DEFAULT;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_TINY", {
-  enumerable: true,
-  get: function get() {
-    return _button.TINY;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_BIG", {
-  enumerable: true,
-  get: function get() {
-    return _button.BIG;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_HUGE", {
-  enumerable: true,
-  get: function get() {
-    return _button.HUGE;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_GIANT", {
-  enumerable: true,
-  get: function get() {
-    return _button.GIANT;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_ICON", {
-  enumerable: true,
-  get: function get() {
-    return _button.ICON;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_ICON_MICRO", {
-  enumerable: true,
-  get: function get() {
-    return _button.ICON_MICRO;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_ICON_TINY", {
-  enumerable: true,
-  get: function get() {
-    return _button.ICON_TINY;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_ICON_BIG", {
-  enumerable: true,
-  get: function get() {
-    return _button.ICON_BIG;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_ICON_HUGE", {
-  enumerable: true,
-  get: function get() {
-    return _button.ICON_HUGE;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_ICON_GIANT", {
-  enumerable: true,
-  get: function get() {
-    return _button.ICON_GIANT;
-  }
-});
 Object.defineProperty(exports, "ButtonIcon", {
   enumerable: true,
   get: function get() {
@@ -1869,6 +1797,78 @@ Object.defineProperty(exports, "dispatchEvent", {
   enumerable: true,
   get: function get() {
     return _events.dispatchEvent;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_FLUID", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.FLUID;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_DEFAULT", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.DEFAULT;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_TINY", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.TINY;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_BIG", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.BIG;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_HUGE", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.HUGE;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_GIANT", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.GIANT;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_ICON", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.ICON;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_ICON_MICRO", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.ICON_MICRO;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_ICON_TINY", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.ICON_TINY;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_ICON_BIG", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.ICON_BIG;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_ICON_HUGE", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.ICON_HUGE;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_ICON_GIANT", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.ICON_GIANT;
   }
 });
 Object.defineProperty(exports, "CAROUSEL_OUTLINE_PLUS_OFFSET", {
@@ -2607,6 +2607,8 @@ var _typographyConfig = _interopRequireDefault(require("./constants/typography-c
 var _dropdownConfig = require("./constants/dropdown-config");
 
 var _events = require("./helpers/dom/events");
+
+var _standaloneStyles = require("./components/molecules/buttons/button/standalone-styles");
 
 var _styles = require("./components/molecules/carousels/carousel/styles");
 
