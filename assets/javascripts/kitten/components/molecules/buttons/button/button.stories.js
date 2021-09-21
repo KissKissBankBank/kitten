@@ -74,7 +74,7 @@ const argTypes = {
     name: 'mobileFit',
     control: 'select',
     options: buttonMobileFitOptions,
-  }
+  },
 }
 
 export default {

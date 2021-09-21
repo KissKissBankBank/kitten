@@ -6,9 +6,7 @@ import { Grid, GridCol } from '../../../../components/layout/grid'
 import { Title } from '../../../../components/atoms/typography/title'
 import { Paragraph } from '../../../../components/atoms/typography/paragraph'
 import { Text } from '../../../../components/atoms/typography/text'
-import {
-  Button,
-} from '../../../../components/molecules/buttons/button'
+import { Button } from '../../../../components/molecules/buttons/button'
 import {
   FLUID,
   DEFAULT,
