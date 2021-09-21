@@ -62,12 +62,12 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-u-margin-top-triple k-u-align-center"
         >
           <button
-            className="sc-eqIVtm ilDxfW k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
+            className="sc-eqIVtm gykbFS k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none"
             href={null}
             onClick={null}
             style={
               Object {
-                "--border-radius": 0,
+                "--Button-border-radius": 0,
               }
             }
             type="button"
@@ -116,12 +116,12 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="sc-eqIVtm ilDxfW k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
+          className="sc-eqIVtm gykbFS k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none"
           href={null}
           onClick={null}
           style={
             Object {
-              "--border-radius": 0,
+              "--Button-border-radius": 0,
             }
           }
           type="button"
@@ -165,12 +165,12 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="sc-eqIVtm ilDxfW k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
+          className="sc-eqIVtm gykbFS k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none"
           href={null}
           onClick={null}
           style={
             Object {
-              "--border-radius": 0,
+              "--Button-border-radius": 0,
             }
           }
           type="button"

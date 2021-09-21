@@ -10,11 +10,11 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
   >
     <button
       aria-label="Delete"
-      className="sc-bwzfXH drjorK k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="sc-bwzfXH bwbcEX k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
       onClick={[Function]}
       style={
         Object {
-          "--border-radius": 0,
+          "--Button-border-radius": 0,
         }
       }
       type="button"
@@ -77,11 +77,11 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
   >
     <button
       aria-label="Delete"
-      className="sc-bwzfXH drjorK k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="sc-bwzfXH bwbcEX k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
       onClick={[Function]}
       style={
         Object {
-          "--border-radius": 0,
+          "--Button-border-radius": 0,
         }
       }
       type="button"
@@ -144,11 +144,11 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
   >
     <button
       aria-label="Delete"
-      className="sc-bwzfXH drjorK k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="sc-bwzfXH bwbcEX k-Button sc-htpNat eNOWYY k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
       onClick={[Function]}
       style={
         Object {
-          "--border-radius": 0,
+          "--Button-border-radius": 0,
         }
       }
       type="button"
