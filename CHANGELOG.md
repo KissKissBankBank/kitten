@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `ImageDropUploader`: Add image dimensions check.
+- Fix: `ImageDropUploader`: Fix `onChange` sequence.
 - Feature: `Button`: Apply `disabled` styles to any HTML element type.
 - Fix: `Button`: Fix `tag`.
 
