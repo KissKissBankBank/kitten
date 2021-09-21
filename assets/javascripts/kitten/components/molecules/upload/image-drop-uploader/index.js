@@ -272,7 +272,7 @@ export const ImageDropUploader = ({
 
   useEffect(async () => {
     const isValid = imageRawData && (await isSelectedImageValid(imageRawData))
-    if (imageRawData && !isValid) return
+    if (!isValid) return
 
     setError(false)
     const reader = new FileReader()
