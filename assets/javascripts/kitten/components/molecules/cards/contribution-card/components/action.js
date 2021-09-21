@@ -24,6 +24,7 @@ export const Action = ({ isInputValid, title, className, ...props }) => {
           className={classNames('k-ContributionCard__action', className)}
           modifier="helium"
           disabled={isInputEmpty}
+          fit="content"
           {...props}
         />
       )}
