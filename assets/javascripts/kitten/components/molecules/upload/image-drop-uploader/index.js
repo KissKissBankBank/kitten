@@ -272,7 +272,7 @@ export const ImageDropUploader = ({
 
   useEffect(async () => {
     const isValid = imageRawData && (await isSelectedImageValid(imageRawData))
-    if (!isValid) return
+    if (imageRawData && !isValid) return
 
     setError(false)
     const reader = new FileReader()
@@ -290,7 +290,7 @@ export const ImageDropUploader = ({
 
   useEffect(async () => {
     const isValid = imageRawData && (await isSelectedImageValid(imageRawData))
-    if (!isValid) return
+    if (imageRawData && !isValid) return
 
     onChange({
       value: imageDataURL,
