@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Button`: Add `fit` and `mobileFit` props, default to `min-width` and `null`.
+- Feature: `Button`: Refactor CSS Styles.
+
 - Feature: `ImageDropUploader`: Add image dimensions check.
 - Feature: `Button`: Apply `disabled` styles to any HTML element type.
 
