@@ -32,6 +32,22 @@ describe('<Button />', () => {
     })
   })
 
+  describe('with `as` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Button as="a" href="#helloWorld">
+            MyButton
+          </Button>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with `size` prop', () => {
     beforeEach(() => {
       component = renderer
