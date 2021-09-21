@@ -86,6 +86,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
     <button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="sc-htpNat kbJDRB k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
 =======
       className="sc-htpNat xAhKr k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
@@ -93,6 +94,9 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
 =======
       className="sc-htpNat jPaiVJ k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
 >>>>>>> 8c3cad0b4 (Update button test)
+=======
+      className="sc-htpNat kbJDRB k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
+>>>>>>> 56f82ed88 (Remove small prop)
       href={null}
       onClick={null}
       style={

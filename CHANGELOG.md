@@ -5,7 +5,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `HeaderNav`: Add `smallPadding` prop, defaults to `false`.
-- Feature: `Button`: Add `small` boolean prop, defaults to `false`.
 - Feature: `EnvelopeIcon`: Add new component.
 
 ## [4.7.0] - 2021-09-21

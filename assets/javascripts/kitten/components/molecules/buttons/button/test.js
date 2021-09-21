@@ -256,20 +256,4 @@ describe('<Button />', () => {
       expect(component).toMatchSnapshot()
     })
   })
-
-  describe('with small', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(
-          <Button small>
-            Small size
-          </Button>,
-        )
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
 })

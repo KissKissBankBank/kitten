@@ -873,12 +873,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   border-radius: 50%;
 }
 
-.c2.k-Button--small {
-  min-width: auto;
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
 .c2.k-Button--orion {
   border-radius: 0.375rem;
 }
@@ -1806,12 +1800,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 
 .c2.k-Button--rounded {
   border-radius: 50%;
-}
-
-.c2.k-Button--small {
-  min-width: auto;
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
 }
 
 .c2.k-Button--orion {
@@ -2743,12 +2731,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
 .c3.k-Button--rounded {
   border-radius: 50%;
-}
-
-.c3.k-Button--small {
-  min-width: auto;
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
 }
 
 .c3.k-Button--orion {

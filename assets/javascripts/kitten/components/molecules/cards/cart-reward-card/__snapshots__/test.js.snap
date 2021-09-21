@@ -79,6 +79,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       aria-label="Delete"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="sc-bwzfXH gQJfmc k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
 =======
       className="sc-bwzfXH cVHzOh k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
@@ -86,6 +87,9 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
 =======
       className="sc-bwzfXH cjUdCo k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
 >>>>>>> 8c3cad0b4 (Update button test)
+=======
+      className="sc-bwzfXH gQJfmc k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+>>>>>>> 56f82ed88 (Remove small prop)
       onClick={[Function]}
       style={
         Object {
@@ -154,6 +158,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       aria-label="Delete"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="sc-bwzfXH gQJfmc k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
 =======
       className="sc-bwzfXH cVHzOh k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
@@ -161,6 +166,9 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
 =======
       className="sc-bwzfXH cjUdCo k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
 >>>>>>> 8c3cad0b4 (Update button test)
+=======
+      className="sc-bwzfXH gQJfmc k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+>>>>>>> 56f82ed88 (Remove small prop)
       onClick={[Function]}
       style={
         Object {

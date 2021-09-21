@@ -115,10 +115,6 @@ const StyledButton = styled.button`
     ${() => ROUNDED}
   }
 
-  &.k-Button--small {
-    ${() => SMALL}
-  }
-
   &.k-Button--orion {
     border-radius: ${pxToRem(6)};
 
@@ -133,11 +129,6 @@ const StyledButton = styled.button`
 export const FLUID = css`
   min-width: initial;
   width: 100%;
-`
-export const SMALL = css`
-  min-width: auto;
-  padding-right: ${pxToRem(18)};
-  padding-left: ${pxToRem(18)};
 `
 
 export const ROUNDED = css`
@@ -345,7 +336,6 @@ export const Button = ({
   className,
   rounded,
   fluid,
-  small,
   icon,
   borderRadius,
   disabled,
@@ -387,7 +377,6 @@ export const Button = ({
         {
           'k-Button--disabled': disabled,
           'k-Button--fluid': fluid,
-          'k-Button--small': small,
           'k-Button--hasIcon': icon,
           'k-Button--rounded': rounded,
           'k-Button--hasBorderRadius': borderRadius > 0,
@@ -417,7 +406,6 @@ Button.propTypes = {
   fluid: PropTypes.bool,
   icon: PropTypes.bool,
   rounded: PropTypes.bool,
-  small: PropTypes.bool,
   size: PropTypes.oneOf([
     'nano',
     'micro',
@@ -452,7 +440,6 @@ Button.defaultProps = {
   fluid: false,
   icon: false,
   rounded: false,
-  small: false,
   borderRadius: 0,
   size: 'regular',
   modifier: 'hydrogen',

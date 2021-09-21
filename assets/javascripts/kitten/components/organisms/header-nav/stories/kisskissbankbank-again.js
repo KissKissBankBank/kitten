@@ -306,7 +306,6 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
           
           <HeaderNav.Hidden max="m">
             <Button
-              small
               size="tiny"
               borderRadius={100}
               className="k-u-margin-right-single"

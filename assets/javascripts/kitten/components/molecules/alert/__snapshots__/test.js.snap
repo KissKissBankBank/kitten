@@ -13,10 +13,14 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
   <button
     aria-label="Close"
 <<<<<<< HEAD
+<<<<<<< HEAD
     className="sc-bdVaJa jwgfDn k-Button k-Alert__button k-Button--regular k-Button--carbon k-Button--andromeda k-Button--hasIcon"
 =======
     className="sc-bdVaJa iuIsYD k-Button k-Alert__button k-Button--regular k-Button--carbon k-Button--andromeda k-Button--hasIcon"
 >>>>>>> 8c3cad0b4 (Update button test)
+=======
+    className="sc-bdVaJa jwgfDn k-Button k-Alert__button k-Button--regular k-Button--carbon k-Button--andromeda k-Button--hasIcon"
+>>>>>>> 56f82ed88 (Remove small prop)
     onClick={[Function]}
     style={
       Object {
