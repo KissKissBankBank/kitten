@@ -36,7 +36,7 @@ Fix:
 
 ## [4.6.0] - 2021-09-09
 
-Tech: 
+Tech:
 - 
 - Bump to `node-sass@6`.
 

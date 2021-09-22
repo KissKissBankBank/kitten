@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import PropTypes from 'prop-types'
-import { Button, ArrowContainer, GiftIcon } from '../../../../'
+import { Button, ArrowContainer, GiftIcon, COLORS } from '../../../../'
 import classNames from 'classnames'
 
 const zoomInAndOpacity = keyframes`
@@ -16,7 +16,7 @@ const zoomInAndOpacity = keyframes`
   }
 `
 
-const StyledToggleButton = styled(Button)`
+const StyledToggleButton = styled.details`
 
 `
 
@@ -31,10 +31,28 @@ export const ToggleButton = ({
         className,
         {...props}
       )}
-      icon
-      borderRadius={100}
     >
-      <GiftIcon width={19} height={16} title="Carte cadeau" />
+      <Button
+        className={classNames(
+          'k-ToggleButton__button',
+          className,
+          {...props}
+        )}
+        icon
+        borderRadius={100}
+      >
+        <GiftIcon width={19} height={16} title="Carte cadeau" />
+      </Button>
+      <ArrowContainer
+        color={COLORS.line1}
+        size={7}
+        padding={0}
+        borderRadius={4}
+        position="top"
+        {...arrowDistanceProps}
+      >
+        {children}
+      </ArrowContainer>
     </StyledToggleButton>
   )
 }
