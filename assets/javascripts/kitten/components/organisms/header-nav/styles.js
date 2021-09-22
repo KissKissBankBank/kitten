@@ -49,7 +49,7 @@ export const StyledHeader = styled.header`
     transition: background-color 0.2s ease;
 
     @media (min-width: ${ScreenConfig.L.min}px) {
-      padding: 0 ${pxToRem(20)} 0 ${pxToRem(30)};
+      padding: 0 ${pxToRem(40)} 0 ${pxToRem(30)};
     }
 
     &:not(.k-HeaderNav--kkbb__only){
@@ -459,11 +459,24 @@ export const StyledHeader = styled.header`
       }
     }
 
+    .k-HeaderNav__Button--smallPadding {
+      .k-HeaderNav__Button__text:first-child{
+        margin-left: 0;
+      }
+    }
+
     .k-HeaderNav__Button__text:last-child {
       margin-right: ${pxToRem(30)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         margin-right: ${pxToRem(40)};
+      }
+    }
+
+    .k-HeaderNav__Button--smallPadding {
+      .k-HeaderNav__Button__text:last-child {
+        margin-left: ${pxToRem(10)};
+        margin-right: 0;
       }
     }
   }

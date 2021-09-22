@@ -75,7 +75,9 @@ const Navigation = () => (
     <HeaderNav.Nav.Item href="#" smallPadding>
       Découvrir les projets
     </HeaderNav.Nav.Item>
-    <HeaderNav.Nav.Item href="#" smallPadding>Lancer un projet</HeaderNav.Nav.Item>
+    <HeaderNav.Nav.Item href="#" smallPadding>
+      Lancer un projet
+    </HeaderNav.Nav.Item>
   </>
 )
 
@@ -208,7 +210,7 @@ const SearchInput = () => {
   )
 }
 
-export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
+export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, size, ...args }) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const windowWidth = useWindowWidth()
 
@@ -233,6 +235,7 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
           zIndex: 300,
         }}
         isLogged={isLogged}
+        size="small"
         {...args}
       >
         <HeaderNav.Hidden min="l">
@@ -329,12 +332,18 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, args }) => {
 
           <HeaderNav.LoggedOut>
 
-          <HeaderNav.Hidden max="m"> 
-            <HeaderNav.Nav.Item href="#">
-              Se connecter
-            </HeaderNav.Nav.Item> 
+          <HeaderNav.Hidden max="m">
+            <HeaderNav.Button
+              backgroundColor={COLORS.background1}
+              backgroundColorHover={COLORS.background1}
+              color={COLORS.font1}
+              colorHover={COLORS.primary1}
+              text="Se connecter"
+              href="#"
+              smallPadding
+            />
+          </HeaderNav.Hidden>
 
-            </HeaderNav.Hidden>
           </HeaderNav.LoggedOut>
 
           {/* <HeaderNav.Hidden max="m">

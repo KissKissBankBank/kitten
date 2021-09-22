@@ -18,6 +18,7 @@ export const Button = ({
   as,
   style,
   className,
+  smallPadding,
   ...props
 }) => {
   const hiddenMin = min ? `k-u-hidden@${min}-up` : ''
@@ -47,6 +48,7 @@ export const Button = ({
       className={classNames('k-HeaderNav__Button', className, {
         'k-HeaderNav__Button--hasIcon': !!icon,
         'k-HeaderNav__Button--hasText': !!text,
+        'k-HeaderNav__Button--smallPadding': smallPadding,
       })}
       style={{
         '--HeaderMenu-Button-backgroundColor': backgroundColor,
@@ -83,6 +85,7 @@ Button.propTypes = {
     min: PropTypes.string,
     max: PropTypes.string,
   }),
+  smallPadding: PropTypes.bool,
 }
 
 Button.defaultProps = {
@@ -92,4 +95,5 @@ Button.defaultProps = {
   color: COLORS.font1,
   colorHover: null,
   text: null,
+  smallPadding: false,
 }
