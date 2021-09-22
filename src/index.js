@@ -575,6 +575,12 @@ Object.defineProperty(exports, "EmbedIcon", {
     return _embedIcon.EmbedIcon;
   }
 });
+Object.defineProperty(exports, "EnvelopeIcon", {
+  enumerable: true,
+  get: function get() {
+    return _envelopeIcon.EnvelopeIcon;
+  }
+});
 Object.defineProperty(exports, "ExportIcon", {
   enumerable: true,
   get: function get() {
@@ -2331,6 +2337,8 @@ var _ellipsisIcon = require("./components/graphics/icons/ellipsis-icon");
 var _emailIcon = require("./components/graphics/icons/email-icon");
 
 var _embedIcon = require("./components/graphics/icons/embed-icon");
+
+var _envelopeIcon = require("./components/graphics/icons/envelope-icon");
 
 var _exportIcon = require("./components/graphics/icons/export-icon");
 
