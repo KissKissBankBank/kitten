@@ -22,6 +22,8 @@ const zoomInAndOpacity = keyframes`
     opacity: 1;
   }
 `
+const buttonTinySize = 40
+const buttonRegularSize = 50
 
 const StyledToggleButton = styled.div`
   .k-ToggleButton__button {
@@ -30,6 +32,8 @@ const StyledToggleButton = styled.div`
       animation: 0.16s ease ${zoomInAndOpacity};
       margin-top: ${pxToRem(7)};
       width: max-content;
+      height: auto;
+      left: 50%;
     }
   }
   
