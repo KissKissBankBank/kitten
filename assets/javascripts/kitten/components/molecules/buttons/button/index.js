@@ -26,7 +26,8 @@ const StyledButton = styled.button`
   appearance: none;
   cursor: pointer;
 
-  &:disabled {
+  &:disabled,
+  &.k-Button--disabled {
     cursor: not-allowed;
   }
 
@@ -337,7 +338,9 @@ export const Button = ({
   fluid,
   icon,
   borderRadius,
+  disabled,
   tag,
+  as,
   ...props
 }) => {
   const actualSize = (() => {
@@ -361,6 +364,8 @@ export const Button = ({
     }
   })()
 
+  const internalTag = as || tag
+
   return (
     <StyledButton
       className={classNames(
@@ -370,6 +375,7 @@ export const Button = ({
         `k-Button--${modifier}`,
         `k-Button--${variant}`,
         {
+          'k-Button--disabled': disabled,
           'k-Button--fluid': fluid,
           'k-Button--hasIcon': icon,
           'k-Button--rounded': rounded,
@@ -379,7 +385,8 @@ export const Button = ({
       style={{ '--border-radius': pxToRem(borderRadius) }}
       modifier={modifier}
       type="button"
-      as={tag}
+      as={internalTag}
+      disabled={internalTag === 'button' ? disabled : null}
       {...props}
     >
       {children}

@@ -4,6 +4,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [4.8.0] - 2021-09-22
+
+Features: 
+
+- `HeaderNav.Nav`: Add `smallPadding` prop, defaults to `false`.
+- `HeaderNav.Button`: Add `smallPadding` prop, defaults to `false`.
+- `EnvelopeIcon`: Add new component.
+
+## [4.7.0] - 2021-09-21
+
+Features:
+
+- `ImageDropUploader`: Add image dimensions check.
+- `Button`: Apply `disabled` styles to any HTML element type.
+
+Fixes:
+
+- `ImageDropUploader`: Fix `onChange` sequence.
+- `Button`: Fix `tag`.
+
 ## [4.6.3] - 2021-09-17
 
 Fix:

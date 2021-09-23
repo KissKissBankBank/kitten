@@ -82,7 +82,7 @@ bin/cleanup
 To launch storybook locally:
 
 ```sh
-bin/start
+npm run storybook
 ```
 
 The page http://localhost:6006 will be opened automatically.

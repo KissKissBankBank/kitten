@@ -173,7 +173,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c1:disabled {
+.c1:disabled,
+.c1.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -322,7 +323,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   outline-color: #bae8fd;
 }
 
-.c1:disabled {
+.c1:disabled,
+.c1.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -365,7 +367,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c10:disabled {
+.c10:disabled,
+.c10.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -514,7 +517,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   outline-color: #bae8fd;
 }
 
-.c10:disabled {
+.c10:disabled,
+.c10.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1377,7 +1381,8 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c1:disabled {
+.c1:disabled,
+.c1.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -1526,7 +1531,8 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c1:disabled {
+.c1:disabled,
+.c1.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
