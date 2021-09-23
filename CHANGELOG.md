@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `HeaderNav.Button`: Add `cursor` to `onClick`.
+- Feature: `HeaderMenu`: Add `position` prop, default to `left`.
+- Fix: `HeaderNav.Button`: Add `cursor` to `onClick`. 
 - Feature: `EngagementCardWithImage`: Add `imgProps` and `textProps` props.
 
 ## [4.8.0] - 2021-09-22

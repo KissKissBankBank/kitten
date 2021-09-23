@@ -35,6 +35,7 @@ export default {
     borderSideOnHover: true,
     largeItem: false,
     noBorder: false,
+    position: 'right',
   },
   argTypes: {
     backgroundColors: { control: 'object' },
@@ -42,6 +43,7 @@ export default {
     borderSideOnHover: { control: 'boolean' },
     largeItem: { control: 'boolean' },
     noBorder: { control: 'boolean' },
+    position: { control: 'radio', options: ['left', 'right'] },
   },
 }
 
