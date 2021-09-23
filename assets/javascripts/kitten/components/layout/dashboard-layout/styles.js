@@ -78,6 +78,46 @@ export const StyledDashboard = styled.div`
     outline-color: ${COLORS.primary4};
   }
 
+  .k-DashboardLayout__toaster__wrapper {
+    position: fixed;
+    width: calc(100% - var(--DashboardLayout-side-width));
+    right: 0;
+    top: 100vh;
+    padding: ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(40)};
+    background: white;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), top 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    & + .k-DashboardLayout__toaster__spacer {
+      max-height: 0;
+      height: ${pxToRem(140)};
+      transition: max-height 0.4s ease;
+    }
+
+    &.k-DashboardLayout__toaster--isOpen {
+      top: calc(100vh - ${pxToRem(120)});
+      opacity: 1;
+
+      & + .k-DashboardLayout__toaster__spacer {
+        max-height: ${pxToRem(140)};
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: ${pxToRem(-20)};
+      height: ${pxToRem(20)};
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 1)
+      );
+    }
+  }
+
   /* TABLET + MOBILE */
 
   @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
@@ -88,9 +128,10 @@ export const StyledDashboard = styled.div`
       --DashboardLayout-main-margin: calc(
         ${ONE_COL} + ${pxToRem(GUTTER + CONTAINER_PADDING)}
       );
+      --DashboardLayout-side-width: calc(${SIX_COLS});
 
       width: calc(${SIX_COLS} + 100vw);
-      grid-template-columns: calc(${SIX_COLS}) calc(100vw + ${pxToRem(2)});
+      grid-template-columns: var(--DashboardLayout-side-width) calc(100vw + ${pxToRem(2)});
       transform: translateX(calc(-1 * ${SIX_COLS} - ${pxToRem(2)}));
       transition: transform 0.3s ease-in-out;
 
@@ -199,6 +240,10 @@ export const StyledDashboard = styled.div`
           }
         }
       }
+
+      .k-DashboardLayout__toaster__wrapper {
+        right: ${pxToRem(-2)};
+      }
     }
   }
 
@@ -207,8 +252,10 @@ export const StyledDashboard = styled.div`
   @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
     .k-DashboardLayout {
       --DashboardLayout-main-margin: ${pxToRem(CONTAINER_PADDING_THIN)};
+      --DashboardLayout-side-width: calc(100vw - ${pxToRem(50)});
+
       width: calc(200vw - ${pxToRem(50 + 2)});
-      grid-template-columns: calc(100vw - ${pxToRem(50)}) calc(
+      grid-template-columns: var(--DashboardLayout-side-width) calc(
           100vw + ${pxToRem(2)}
         );
       transform: translateX(calc(-100vw + ${pxToRem(50 - 2)}));
@@ -231,12 +278,25 @@ export const StyledDashboard = styled.div`
     }
   }
 
+  /* TABLET + DESKTOP */
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    .k-DashboardLayout__toaster {
+      background-color: ${COLORS.font1};
+      color: ${COLORS.background1};
+      border-radius: ${pxToRem(6)};
+      padding: ${pxToRem(20)};
+    }
+  }
+
   /* DESKTOP */
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     .k-DashboardLayout {
       --DashboardLayout-main-margin: 7.5vw;
-      grid-template-columns: min(${pxToRem(384)}, 25vw) 1fr;
+      --DashboardLayout-side-width: min(${pxToRem(384)}, 25vw);
+
+      grid-template-columns: var(--DashboardLayout-side-width) 1fr;
 
       .k-DashboardLayout__sideWrapper {
         display: flex;
