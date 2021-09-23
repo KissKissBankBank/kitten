@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from './index'
-import COLORS from '../../..'
+import { COLORS } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

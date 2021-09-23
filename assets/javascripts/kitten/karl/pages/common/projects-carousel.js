@@ -85,7 +85,7 @@ const StyledThanks = styled.div`
   }
 `
 
-const ProjectsCarousel = ({
+export const ProjectsCarousel = ({
   title,
   description,
   buttonHref,
