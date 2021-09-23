@@ -10,9 +10,11 @@ describe('<EngagementCardWithImage />', () => {
       component = renderer
         .create(
           <EngagementCardWithImage
-            backgroundImage="https://source.unsplash.com/WLUHO9A_xik/200x120"
+            backgroundImage="kitten.jpg"
             href="#"
             title="Hello word"
+            imgProps={{ srcSet: 'kitten.jpg 1x, kitten@2x.jpg 2x' }}
+            textProps={{ 'aria-label': 'test label' }}
           />,
         )
         .toJSON()
