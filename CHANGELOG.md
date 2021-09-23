@@ -4,6 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `HeaderMenu`: Add `position` prop, default to `left`.
+- Fix: `HeaderNav.Button`: Add `cursor` to `onClick`. 
+- Feature: `EngagementCardWithImage`: Add `imgProps` and `textProps` props.
+
+## [4.8.0] - 2021-09-22
+
+Features: 
+
+- `HeaderNav.Nav`: Add `smallPadding` prop, defaults to `false`.
+- `HeaderNav.Button`: Add `smallPadding` prop, defaults to `false`.
+- `EnvelopeIcon`: Add new component.
+
 ## [4.7.0] - 2021-09-21
 
 Features:

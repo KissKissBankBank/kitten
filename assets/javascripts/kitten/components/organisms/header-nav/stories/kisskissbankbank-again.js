@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { action } from '@storybook/addon-actions'
 import HeaderNav from '../index'
 import {
-  LendopolisLogo,
   KissKissBankBankLogo,
   HeaderMenu,
-  SearchIcon,
+  EnvelopeIcon,
+  GiftIcon,
   COLORS,
   Text,
   AvatarWithTextAndBadge,
@@ -20,7 +20,6 @@ import {
   CheckedCircleIcon,
   CLOSE_OVERLAY_EVENT,
   OPEN_OVERLAY_EVENT,
-  Badge,
 } from '../../../..'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
@@ -31,25 +30,22 @@ const getComputedLeft = id =>
   domElementHelper.getComputedLeft(getElementById(id))
 
 const InnerBurgerMenu = () => (
-  <HeaderMenu borderSide="right" largeItem noBorder>
+  <HeaderMenu borderSide="right" noBorder>
     <HeaderNav.Hidden min="l">
-      <HeaderMenu.Item href="#">Lancez votre projet</HeaderMenu.Item>
-      <HeaderMenu.Item href="#">Découvrez les projets</HeaderMenu.Item>
+      <HeaderMenu.Item href="#" isSelected>
+        Lancer un projet
+      </HeaderMenu.Item>
+      <HeaderMenu.Item href="#">Découvrir les projets</HeaderMenu.Item>
+      <HeaderMenu.Item href="#">Carte cadeau</HeaderMenu.Item>
+      <HeaderMenu.Item href="#">Vos questions</HeaderMenu.Item>
+      <HeaderMenu.Item href="#">Blog</HeaderMenu.Item>
+      <HeaderMenu.Item href="#" className="k-u-background-color-line1">
+        Se déconnecter
+      </HeaderMenu.Item>
+      <HeaderMenu.Item href="#" className="k-u-background-color-primary5">
+        Se connecter
+      </HeaderMenu.Item>
     </HeaderNav.Hidden>
-
-    <HeaderMenu.Item href="#" isSelected>
-      Vos questions
-    </HeaderMenu.Item>
-    <HeaderMenu.Item href="#">Blog</HeaderMenu.Item>
-    <HeaderMenu.Item external href="#">
-      <LendopolisLogo primaryColor="#000" />
-    </HeaderMenu.Item>
-    <HeaderMenu.Item external href="#">
-      <LendopolisLogo primaryColor="#000" />
-    </HeaderMenu.Item>
-    <HeaderMenu.Item external href="#">
-      <LendopolisLogo primaryColor="#000" />
-    </HeaderMenu.Item>
   </HeaderMenu>
 )
 
@@ -61,40 +57,26 @@ const InnerUserMenu = () => (
       hover: COLORS.background1,
     }}
   >
-    <HeaderMenu.Item href="#">Mon espace personnel</HeaderMenu.Item>
-    <HeaderMenu.Item href="#">Mes projets</HeaderMenu.Item>
-    <HeaderMenu.Item size="tiny" href="#">
-      Gluten Mag
-    </HeaderMenu.Item>
-    <HeaderMenu.Item size="tiny" href="#">
-      Kallix — Mobilier de bureau pour le télétravail
-    </HeaderMenu.Item>
-    <HeaderMenu.Item size="tiny" href="#">
-      Mon premier court-métrage
-    </HeaderMenu.Item>
+    <HeaderMenu.Item href="#">Mon profil</HeaderMenu.Item>
+    <HeaderMenu.Item href="#">Mes projets</HeaderMenu.Item> 
     <HeaderMenu.Item href="#">Mes contributions</HeaderMenu.Item>
-    <HeaderMenu.Item href="#">Mes messages</HeaderMenu.Item>
     <HeaderMenu.Item href="#">Modifier mon profil</HeaderMenu.Item>
-    <HeaderMenu.Item button modifier="helium" href="#">
-      Mon projet en cours
+    <HeaderMenu.Item href="#" className="k-u-background-color-line1">
+      Se déconnecter
     </HeaderMenu.Item>
-    <HeaderMenu.Item href="#" className="k-u-background-color-background3">
-      Déconnexion
+    <HeaderMenu.Item href="#" className="k-u-background-color-primary5">
+      Se connecter
     </HeaderMenu.Item>
   </HeaderMenu>
 )
 
 const Navigation = () => (
   <>
-    <HeaderNav.Nav.Item href="#">Lancez votre projet</HeaderNav.Nav.Item>
-    <HeaderNav.Nav.Item href="#" className="is-selected">
-      Découvrez les projets
+    <HeaderNav.Nav.Item href="#" smallPadding>
+      Découvrir les projets
     </HeaderNav.Nav.Item>
-    <HeaderNav.Nav.Item href="#">
-      Carte Cadeau&nbsp;
-      <Badge color={COLORS.primary1} className="k-u-transform-uppercase">
-        Nouveau
-      </Badge>
+    <HeaderNav.Nav.Item href="#" smallPadding>
+      Lancer un projet
     </HeaderNav.Nav.Item>
   </>
 )
@@ -228,7 +210,7 @@ const SearchInput = () => {
   )
 }
 
-export const KissKissBankBankHeaderNavStoryNew = ({ isLogged, ...args }) => {
+export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, size, ...args }) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const windowWidth = useWindowWidth()
 
@@ -245,6 +227,7 @@ export const KissKissBankBankHeaderNavStoryNew = ({ isLogged, ...args }) => {
       <Overlay zIndex={1} position="fixed" />
 
       <HeaderNav
+        className="k-HeaderNav--kkbb__only"
         id={HEADER_NAV_ID}
         quickAccessProps={{
           href: '#mainContent',
@@ -252,11 +235,14 @@ export const KissKissBankBankHeaderNavStoryNew = ({ isLogged, ...args }) => {
           zIndex: 300,
         }}
         isLogged={isLogged}
+        size="small"
         {...args}
       >
-        <HeaderNav.BurgerMenuNext dropdownContentWidth={burgerMenuWidth}>
-          <InnerBurgerMenu />
-        </HeaderNav.BurgerMenuNext>
+        <HeaderNav.Hidden min="l">
+          <HeaderNav.BurgerMenuNext dropdownContentWidth={burgerMenuWidth}>
+            <InnerBurgerMenu />
+          </HeaderNav.BurgerMenuNext>
+        </HeaderNav.Hidden>
 
         <HeaderNav.Logo href="#">
           <HeaderNav.Hidden min="xs">
@@ -268,7 +254,7 @@ export const KissKissBankBankHeaderNavStoryNew = ({ isLogged, ...args }) => {
           </HeaderNav.Hidden>
         </HeaderNav.Logo>
 
-        <HeaderNav.Hidden max="m">
+         <HeaderNav.Hidden max="m">
           <HeaderNav.Nav>
             <Navigation />
           </HeaderNav.Nav>
@@ -276,7 +262,7 @@ export const KissKissBankBankHeaderNavStoryNew = ({ isLogged, ...args }) => {
 
         <HeaderNav.Right padded>
           <SearchInput />
-
+  
           <HeaderNav.Logged>
             <HeaderNav.UserMenuNext dropdownAnchorSide="right" padding={false}>
               <HeaderNav.UserMenuNext.Button
@@ -305,28 +291,71 @@ export const KissKissBankBankHeaderNavStoryNew = ({ isLogged, ...args }) => {
                   </AvatarWithTextAndBadge.Text>
                 </AvatarWithTextAndBadge>
               </HeaderNav.UserMenuNext.Button>
-
               <HeaderNav.UserMenuNext.Navigation>
                 <InnerUserMenu />
               </HeaderNav.UserMenuNext.Navigation>
             </HeaderNav.UserMenuNext>
           </HeaderNav.Logged>
 
+          {/* <HeaderNav.Hidden max="m">
+            <Button
+              icon
+              size="tiny"
+              rounded
+              className="k-u-margin-right-single"
+            >
+              <GiftIcon width={15} height={16} />
+            </Button>
+          </HeaderNav.Hidden> */}
+          
+          <HeaderNav.Hidden max="m">
+            <Button
+              size="tiny"
+              borderRadius={100}
+              className="k-u-margin-right-single"
+              style={{ minWidth: 'auto', paddingLeft: '18px', paddingRight: '18px', borderRadius:'100px'}}
+            >
+              Blog
+            </Button>
+          </HeaderNav.Hidden>
+
+          <HeaderNav.Hidden max="m">
+            <Button
+              icon
+              size="tiny"
+              rounded
+              className="k-u-margin-right-single"
+            >
+              <EnvelopeIcon />
+            </Button>
+          </HeaderNav.Hidden>
+
           <HeaderNav.LoggedOut>
+
+          <HeaderNav.Hidden max="m">
             <HeaderNav.Button
-              icon={
-                <HeaderNav.Hidden min="s">
-                  <SearchIcon />
-                </HeaderNav.Hidden>
-              }
-              backgroundColor={COLORS.primary1}
-              backgroundColorHover={COLORS.primary2}
-              color={COLORS.background1}
-              text="Se connecter / S'inscrire"
+              backgroundColor={COLORS.background1}
+              backgroundColorHover={COLORS.background1}
+              color={COLORS.font1}
+              colorHover={COLORS.primary1}
+              text="Se connecter"
               href="#"
-              hiddenText={{ max: 'xs' }}
+              smallPadding
             />
+          </HeaderNav.Hidden>
+
           </HeaderNav.LoggedOut>
+
+          {/* <HeaderNav.Hidden max="m">
+            <Button
+              size="tiny"
+              modifier="helium"
+              borderRadius={100}
+              className="k-u-margin-left-single"
+            >
+              Lancer un projet
+            </Button>
+          </HeaderNav.Hidden> */}
         </HeaderNav.Right>
       </HeaderNav>
     </>

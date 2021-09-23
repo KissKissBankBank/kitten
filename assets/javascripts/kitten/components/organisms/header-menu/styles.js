@@ -12,11 +12,18 @@ export const StyledList = styled.ul`
   border: none;
   list-style: none;
 
+  &.k-HeaderMenu--left .k-HeaderMenu__item .k-HeaderMenu__item__link {
+    text-align: left;
+  }
+
+  &.k-HeaderMenu--right .k-HeaderMenu__item .k-HeaderMenu__item__link {
+    text-align: right;
+  }
+
   .k-HeaderMenu__item__link {
     display: block;
     position: relative;
     width: 100%;
-    text-align: left;
     border: none;
     height: ${pxToRem(50)};
     box-sizing: border-box;

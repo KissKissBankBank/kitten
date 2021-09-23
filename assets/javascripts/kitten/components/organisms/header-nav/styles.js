@@ -48,6 +48,16 @@ export const StyledHeader = styled.header`
     background: ${COLORS.background1};
     transition: background-color 0.2s ease;
 
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      padding: 0 ${pxToRem(40)} 0 ${pxToRem(30)};
+    }
+
+    &:not(.k-HeaderNav--kkbb__only){
+      @media (min-width: ${ScreenConfig.L.min}px) {
+        padding: 0;
+      }
+    }
+   
     .quickAccessLink {
       background: ${COLORS.background1};
       transition: background-color 0.2s ease;
@@ -388,6 +398,7 @@ export const StyledHeader = styled.header`
     .k-Dropdown__button,
     .k-HeaderNav__Button {
       min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+      cursor: pointer;
     }
 
     .k-HeaderNav__Button--hasText {
@@ -418,11 +429,20 @@ export const StyledHeader = styled.header`
     }
     .k-HeaderNav-nav__item {
       padding: 0 ${pxToRem(40)};
+
+      &.smallPadding {
+        padding: 0 ${pxToRem(10)};
+      }
+    }
+
+    .k-HeaderNav__right .k-HeaderNav-nav__item {
+      padding: 0 ${pxToRem(10)};
     }
 
     .k-Dropdown__button,
     .k-HeaderNav__Button {
       min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+      cursor: pointer;
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         min-width: ${pxToRem(TABLET_HEADER_HEIGHT)};
@@ -441,11 +461,24 @@ export const StyledHeader = styled.header`
       }
     }
 
+    .k-HeaderNav__Button--smallPadding {
+      .k-HeaderNav__Button__text:first-child{
+        margin-left: 0;
+      }
+    }
+
     .k-HeaderNav__Button__text:last-child {
       margin-right: ${pxToRem(30)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         margin-right: ${pxToRem(40)};
+      }
+    }
+
+    .k-HeaderNav__Button--smallPadding {
+      .k-HeaderNav__Button__text:last-child {
+        margin-left: ${pxToRem(10)};
+        margin-right: 0;
       }
     }
   }
