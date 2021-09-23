@@ -13,19 +13,24 @@ export const HeaderMenu = ({
   largeItem,
   noBorder,
   className,
+  position,
   style,
   ...props
 }) => {
   return (
     <StyledList
-      className={classNames('k-HeaderMenu', className, {
-        'k-HeaderMenu--hasBorders': !noBorder,
-        'k-HeaderMenu--hasBorderOnSide': !!borderSide,
-        'k-HeaderMenu--hasBorderOnSide-left': borderSide === 'left',
-        'k-HeaderMenu--hasBorderOnSide-right': borderSide === 'right',
-        'k-HeaderMenu--hasBorderOnSideOnHover': borderSideOnHover,
-        'k-HeaderMenu--hasBigItems': largeItem,
-      })}
+      className={classNames('k-HeaderMenu',
+        className,
+        `k-HeaderMenu--${position}`,
+        {
+          'k-HeaderMenu--hasBorders': !noBorder,
+          'k-HeaderMenu--hasBorderOnSide': !!borderSide,
+          'k-HeaderMenu--hasBorderOnSide-left': borderSide === 'left',
+          'k-HeaderMenu--hasBorderOnSide-right': borderSide === 'right',
+          'k-HeaderMenu--hasBorderOnSideOnHover': borderSideOnHover,
+          'k-HeaderMenu--hasBigItems': largeItem,  
+        }
+      )}
       style={{
         ...style,
         '--headerMenu-background-colors-hover': backgroundColors?.hover,
@@ -44,6 +49,7 @@ HeaderMenu.propTypes = {
   borderSideOnHover: PropTypes.bool,
   largeItem: PropTypes.bool,
   noBorder: PropTypes.bool,
+  position: PropTypes.oneOf(['left', 'right']),
 }
 
 HeaderMenu.defaultProps = {
@@ -52,4 +58,5 @@ HeaderMenu.defaultProps = {
   borderSideOnHover: true,
   largeItem: false,
   noBorder: false,
+  position: 'left',
 }
