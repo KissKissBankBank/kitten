@@ -5,9 +5,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `DashboardLayout`: Add `Toaster` subcomponent.
-- Feature: `HeaderMenu`: Add `position` prop, default to `left`.
-- Fix: `HeaderNav.Button`: Add `cursor` to `onClick`. 
-- Feature: `EngagementCardWithImage`: Add `imgProps` and `textProps` props.
+
+## [4.9.0] - 2021-09-24
+
+Features: 
+
+- `HeaderMenu`: Add `position` prop, default to `left`.
+- `EngagementCardWithImage`: Add `imgProps` and `textProps` props.
+
+Fixes:
+
+- `DashboardLayout`: Fix header elements dimensions.
+- `HeaderNav.Button`: Add `cursor` to `onClick`. 
 
 ## [4.8.0] - 2021-09-22
 
