@@ -62,6 +62,10 @@ export const StyledDashboard = styled.div`
     display: grid;
     background-color: ${COLORS.background1};
 
+    & > * {
+      min-width: 0;
+    }
+
     .k-DashboardLayout__sideWrapper {
       background-color: ${COLORS.font1};
     }
@@ -155,6 +159,7 @@ export const StyledDashboard = styled.div`
 
           > * {
             align-self: initial;
+            min-width: 0;
           }
         }
 

@@ -735,6 +735,10 @@ button:hover .c1 {
   background-color: #fff;
 }
 
+.c0 .k-DashboardLayout > * {
+  min-width: 0;
+}
+
 .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
   background-color: #222;
 }
@@ -958,6 +962,7 @@ button:hover .c1 {
     -webkit-align-self: initial;
     -ms-flex-item-align: initial;
     align-self: initial;
+    min-width: 0;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading__buttonWrapper {
@@ -1267,6 +1272,10 @@ button:hover .c1 {
   background-color: #fff;
 }
 
+.c0 .k-DashboardLayout > * {
+  min-width: 0;
+}
+
 .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
   background-color: #222;
 }
@@ -1490,6 +1499,7 @@ button:hover .c1 {
     -webkit-align-self: initial;
     -ms-flex-item-align: initial;
     align-self: initial;
+    min-width: 0;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading__buttonWrapper {
