@@ -40,7 +40,7 @@ describe('<DashboardLayout />', () => {
     })
   })
 
-  describe('with Header and Alert', () => {
+  describe('with Header, Toaster and Alert', () => {
     beforeEach(() => {
       component = renderer
         .create(
@@ -66,6 +66,9 @@ describe('<DashboardLayout />', () => {
             <DashboardLayout.Alerts>Alert!</DashboardLayout.Alerts>
 
             <p>Main content</p>
+            <DashboardLayout.Toaster>
+              Toaster
+            </DashboardLayout.Toaster>
           </DashboardLayout>,
         )
         .toJSON()

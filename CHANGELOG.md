@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DashboardLayout`: Add `Toaster` subcomponent.
+
 ## [4.9.0] - 2021-09-24
 
 Features: 
