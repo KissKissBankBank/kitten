@@ -696,7 +696,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 </div>
 `;
 
-exports[`<DashboardLayout /> with Header and Alert matches with snapshot 1`] = `
+exports[`<DashboardLayout /> with Header, Toaster and Alert matches with snapshot 1`] = `
 .c1 {
   overflow: visible;
   fill: #fff;
@@ -758,7 +758,7 @@ button:hover .c1 {
   right: 0;
   top: 100vh;
   padding: 1.25rem 1.25rem 2.5rem;
-  background: white;
+  background: #fff;
   opacity: 0;
   -webkit-transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),top 0.4s cubic-bezier(0.34,1.56,0.64,1);
   transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),top 0.4s cubic-bezier(0.34,1.56,0.64,1);
@@ -1276,6 +1276,19 @@ button:hover .c1 {
         <p>
           Main content
         </p>
+        <div
+          aria-live="polite"
+          className="k-DashboardLayout__toaster__wrapper k-DashboardLayout__fullWidth"
+        >
+          <div
+            className="k-DashboardLayout__toaster"
+          >
+            Toaster
+          </div>
+        </div>
+        <div
+          className="k-DashboardLayout__toaster__spacer"
+        />
       </main>
     </div>
   </div>
@@ -1344,7 +1357,7 @@ button:hover .c1 {
   right: 0;
   top: 100vh;
   padding: 1.25rem 1.25rem 2.5rem;
-  background: white;
+  background: #fff;
   opacity: 0;
   -webkit-transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),top 0.4s cubic-bezier(0.34,1.56,0.64,1);
   transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),top 0.4s cubic-bezier(0.34,1.56,0.64,1);
