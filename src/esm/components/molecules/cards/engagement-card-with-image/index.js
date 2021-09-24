@@ -31,27 +31,31 @@ export var EngagementCardWithImage = function EngagementCardWithImage(_ref2) {
       href = _ref2.href,
       as = _ref2.as,
       imageHeight = _ref2.imageHeight,
-      others = _objectWithoutProperties(_ref2, ["backgroundImage", "children", "href", "as", "imageHeight"]);
+      imgProps = _ref2.imgProps,
+      textProps = _ref2.textProps,
+      others = _objectWithoutProperties(_ref2, ["backgroundImage", "children", "href", "as", "imageHeight", "imgProps", "textProps"]);
 
   return /*#__PURE__*/React.createElement(StyledContainer, _extends({}, others, {
     as: href ? 'a' : 'div',
     href: href
-  }), /*#__PURE__*/React.createElement(StyledCard, null, /*#__PURE__*/React.createElement(StyledImage, {
+  }), /*#__PURE__*/React.createElement(StyledCard, null, /*#__PURE__*/React.createElement(StyledImage, _extends({
     src: backgroundImage,
     alt: "",
     imageHeight: imageHeight
-  })), /*#__PURE__*/React.createElement(StyledText, {
+  }, imgProps))), /*#__PURE__*/React.createElement(StyledText, _extends({
     size: "micro",
     weight: "regular",
     color: "font1",
     decoration: "none",
     lineHeight: "normal"
-  }, children));
+  }, textProps), children));
 };
 EngagementCardWithImage.propTypes = {
   href: PropTypes.string,
   backgroundImage: PropTypes.string.isRequired,
-  imageHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  imageHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  imgProps: PropTypes.object,
+  textProps: PropTypes.object
 };
 EngagementCardWithImage.defaultProps = {
   href: '',
