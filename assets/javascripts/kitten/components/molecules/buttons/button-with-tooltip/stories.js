@@ -1,4 +1,5 @@
 import React from 'react'
+import { GiftIcon } from '../../../..'
 import { ButtonWithTooltip } from './index'
 
 const args = {
@@ -30,4 +31,9 @@ export default {
   args: {},
 }
 
-export const Default = args => <ButtonWithTooltip {...args} />
+export const Default = args => (
+  <ButtonWithTooltip
+    {...args}
+    children={ <GiftIcon width="17" height="15" /> }
+  />
+)
