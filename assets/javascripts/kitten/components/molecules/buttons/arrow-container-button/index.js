@@ -29,7 +29,6 @@ const StyledArrowContainerButton = styled.div`
   --Button-regular-size: ${pxToRem(50)};
 
   .k-ArrowContainerButton__button {
-    width: var(--Button-regular-size) !important;
     display: inline-flex;
   
     &:hover + .k-ArrowContainerButton__container {
@@ -40,7 +39,7 @@ const StyledArrowContainerButton = styled.div`
       margin-top: ${pxToRem(7)};
       width: max-content;
       height: auto;
-      transform: translateX(calc(-50% + var(--Button-regular-size) / 2));
+      transform: translateX(calc(-50% + var(--Button-tiny-size) / 2));
     }
   }
   
@@ -66,6 +65,7 @@ export const ArrowContainerButton = ({
         aria-label={iconTitle}
         icon
         borderRadius={100}
+        size="tiny"
       >
         <GiftIcon width={19} height={16} title={iconTitle} />
       </Button>

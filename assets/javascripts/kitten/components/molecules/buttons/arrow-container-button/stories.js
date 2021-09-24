@@ -1,6 +1,17 @@
 import React from 'react'
 import { ArrowContainerButton } from './index'
 
+const args = {
+  iconTitle: 'Carte cadeau',
+}
+
+const argsTypes = {
+  iconTitle: {
+    name: 'iconTitle',
+    control: 'string',
+  }
+}
+
 export default {
   title: 'Molecules/Buttons/ArrowContainerButton',
   component: ArrowContainerButton,
