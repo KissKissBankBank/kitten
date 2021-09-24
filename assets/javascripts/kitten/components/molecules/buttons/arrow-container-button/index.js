@@ -11,22 +11,22 @@ import {
 } from '../../../..'
 import classNames from 'classnames'
 
-// const zoomInAndOpacity = keyframes`
-//   0% {
-//     transform: translateX(calc(-1 * var(--Dropdown-transform))) scale(.66);
-//     opacity: 0;
-//   }
-//   to
-//   {
-//     transform: translateX(calc(-1 * var(--Dropdown-transform))) scale(1);
-//     opacity: 1;
-//   }
-// `
+const zoomInAndOpacity = keyframes`
+  0% {
+    transform: translateY(calc(-1 * 100% scale(.66);
+    opacity: 0;
+  }
+  to
+  {
+    transform: translateY(calc(-1 * 50% scale(1);
+    opacity: 1;
+  }
+`
 
 const StyledArrowContainerButton = styled.div`
 
---Button-tiny-size: ${pxToRem(40)};
---Button-regular-size: ${pxToRem(50)};
+  --Button-tiny-size: ${pxToRem(40)};
+  --Button-regular-size: ${pxToRem(50)};
 
   .k-ArrowContainerButton__button {
     width: var(--Button-regular-size) !important;
@@ -36,11 +36,11 @@ const StyledArrowContainerButton = styled.div`
       position: absolute;
       flex-shrink: 0;
       display: block;
-      // animation: 0.16s ease ${zoomInAndOpacity};
+      animation: 0.16s ease ${zoomInAndOpacity};
       margin-top: ${pxToRem(7)};
       width: max-content;
       height: auto;
-      transform: translateX(calc(-50% + var(--Button-regular-size)) / 2);
+      transform: translateX(calc(-50% + var(--Button-regular-size) / 2));
     }
   }
   
