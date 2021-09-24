@@ -8,7 +8,7 @@ import {
   COLORS,
   pxToRem,
   Text
-} from '../../../../'
+} from '../../../..'
 import classNames from 'classnames'
 
 // const zoomInAndOpacity = keyframes`
@@ -23,16 +23,16 @@ import classNames from 'classnames'
 //   }
 // `
 
-const StyledToggleButton = styled.div`
+const StyledArrowContainerButton = styled.div`
 
 --Button-tiny-size: ${pxToRem(40)};
 --Button-regular-size: ${pxToRem(50)};
 
-  .k-ToggleButton__button {
+  .k-ArrowContainerButton__button {
     width: var(--Button-regular-size) !important;
     display: inline-flex;
   
-    &:hover + .k-ToggleButton__container {
+    &:hover + .k-ArrowContainerButton__container {
       position: absolute;
       flex-shrink: 0;
       display: block;
@@ -44,22 +44,22 @@ const StyledToggleButton = styled.div`
     }
   }
   
-  .k-ToggleButton__container {
+  .k-ArrowContainerButton__container {
     display: none;
   }
 `
 
-export const ToggleButton = ({
+export const ArrowContainerButton = ({
   className,
   iconTitle,
   ...props
 }) => {
 
   return (
-    <StyledToggleButton>
+    <StyledArrowContainerButton>
       <Button
         className={classNames(
-          'k-ToggleButton__button',
+          'k-ArrowContainerButton__button',
           className,
           {...props}
         )}
@@ -72,7 +72,7 @@ export const ToggleButton = ({
 
       <ArrowContainer
         className={classNames(
-          'k-ToggleButton__container'
+          'k-ArrowContainerButton__container'
         )}
         color={COLORS.line1}
         size={7}
@@ -86,14 +86,14 @@ export const ToggleButton = ({
           {iconTitle}
         </Text>
       </ArrowContainer>
-    </StyledToggleButton>
+    </StyledArrowContainerButton>
   )
 }
 
-ToggleButton.protoTypes = {
+ArrowContainerButton.protoTypes = {
   iconTitle: PropTypes.string,
 }
 
-ToggleButton.defaultProps = {
+ArrowContainerButton.defaultProps = {
   iconTitle: "Carte cadeau",
 }

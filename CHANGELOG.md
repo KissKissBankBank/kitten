@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ArrowContainerButton`: Add new component.
 - Feature: `HeaderMenu`: Add `position` prop, default to `left`.
 - Fix: `HeaderNav.Button`: Add `cursor` to `onClick`. 
 - Feature: `EngagementCardWithImage`: Add `imgProps` and `textProps` props.

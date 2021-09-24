@@ -258,6 +258,7 @@ export { InformationBox } from './components/molecules/boxes/information-box'
 export { LinkBox } from './components/molecules/boxes/link-box'
 
 // Molecules/Buttons
+export { ArrowContainerButton } from './components/molecules/buttons/arrow-container-button'
 export { Button } from './components/molecules/buttons/button'
 export { ButtonIcon } from './components/molecules/buttons/button-icon'
 export { ButtonGroup } from './components/molecules/buttons/button-group'
