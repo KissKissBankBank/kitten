@@ -84,7 +84,7 @@ export const StyledDashboard = styled.div`
     right: 0;
     top: 100vh;
     padding: ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(40)};
-    background: white;
+    background: ${COLORS.background1};
     opacity: 0;
     transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), top 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 
