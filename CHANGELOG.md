@@ -4,11 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `DashboardLayout`: Fix header elements dimensions.
+## [4.9.0] - 2021-09-24
 
-- Feature: `HeaderMenu`: Add `position` prop, default to `left`.
-- Fix: `HeaderNav.Button`: Add `cursor` to `onClick`. 
-- Feature: `EngagementCardWithImage`: Add `imgProps` and `textProps` props.
+Features: 
+
+- `HeaderMenu`: Add `position` prop, default to `left`.
+- `EngagementCardWithImage`: Add `imgProps` and `textProps` props.
+
+Fixes:
+
+- `DashboardLayout`: Fix header elements dimensions.
+- `HeaderNav.Button`: Add `cursor` to `onClick`. 
 
 ## [4.8.0] - 2021-09-22
 
