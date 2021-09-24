@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DropdownSelect`: Add `modifier` prop, defaults to `hydrogen`.
+- Feature: `DropdownSelect`: Add `direction` prop, defaults to `down`.
+- Feature: `DropdownSelect`: Add `micro` value to `size` prop.
+- Feature: `DropdownSelect`: Add `arrowPosition` prop (exclusive to `orion` variant), defaults to 'left'.
+
 - Feature: `HeaderMenu`: Add `position` prop, default to `left`.
 - Fix: `HeaderNav.Button`: Add `cursor` to `onClick`. 
 - Feature: `EngagementCardWithImage`: Add `imgProps` and `textProps` props.

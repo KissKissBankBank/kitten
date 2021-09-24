@@ -7,6 +7,9 @@ import { ScreenConfig } from '../../../constants/screen-config'
 export const StyledDropdown = styled.div`
   position: relative;
 
+  --DropdownSelect-buttonHeight: ${pxToRem(50)};
+  --DropdownSelect-border: ${pxToRem(2)};
+
   .k-Form-Dropdown__label--isHidden:not(:focus):not(:active) {
     clip: rect(0 0 0 0);
     clip-path: inset(100%);
@@ -23,30 +26,25 @@ export const StyledDropdown = styled.div`
     position: relative;
     appearance: none;
     width: 100%;
-    height: ${pxToRem(50)};
-    overflow: hidden;
+    height: var(--DropdownSelect-buttonHeight);
     padding: 0;
     margin: 0;
 
-    border: ${pxToRem(2)} solid ${COLORS.line1};
-    background-color: ${COLORS.background1};
+    border: var(--DropdownSelect-border) solid ${COLORS.line1};
 
     font-size: ${stepToRem(-1)};
     text-align: left;
-
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
 
   .k-Form-DropdownCombobox__input,
   .k-Form-DropdownSelect__content {
     ${TYPOGRAPHY.fontStyles.light}
-    padding: 0 ${pxToRem(15)};
-    color: ${COLORS.font1};
-  }
-  .k-Form-DropdownCombobox__input:placeholder,
-  .k-Form-DropdownSelect__placeholder {
-    color: ${COLORS.font2};
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
   }
 
   .k-Form-DropdownCombobox__arrowButton,
@@ -64,7 +62,6 @@ export const StyledDropdown = styled.div`
   .k-Form-DropdownSelect__button__statusBadges {
     position: absolute;
     top: 0;
-    right: ${pxToRem(40 + 10)};
     bottom: 0;
     display: flex;
     align-items: center;
@@ -77,33 +74,14 @@ export const StyledDropdown = styled.div`
     }
   }
 
-  .k-Form-DropdownCombobox {
-    display: flex;
-  }
-
   .k-Form-DropdownCombobox__input {
     flex: 1 0 auto;
     border: 0;
     font-size: inherit;
-
-    &:focus {
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(-4)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
-    }
-    &:disabled {
-      background-color: ${COLORS.line1};
-    }
   }
   .k-Form-DropdownCombobox__arrowButton {
     appearance: none;
     border: 0;
-    background-color: ${COLORS.background1};
     font-size: ${stepToRem(-1)};
     text-align: left;
     display: flex;
@@ -122,22 +100,10 @@ export const StyledDropdown = styled.div`
     padding: 0;
     margin: 0;
     overflow-y: scroll;
-    background-color: ${COLORS.background1};
     list-style: none;
 
     &:not(:empty) {
-      border: ${pxToRem(2)} solid ${COLORS.line1};
-      border-top: 0;
-    }
-    &:focus {
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
+      border: var(--DropdownSelect-border) solid ${COLORS.line1};
     }
   }
 
@@ -146,7 +112,6 @@ export const StyledDropdown = styled.div`
     box-sizing: border-box;
     padding: ${pxToRem(15)};
     min-height: ${pxToRem(50)};
-    color: ${COLORS.font1};
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-1)};
     user-select: none;
@@ -154,45 +119,12 @@ export const StyledDropdown = styled.div`
     display: flex;
     align-items: center;
 
-    &[aria-selected='true'] {
-      background-color: ${COLORS.background3};
-    }
-
-    &[disabled] {
-      color: ${COLORS.font2};
-    }
-
     &.k-Form-Dropdown__item--level_2 {
       padding-left: ${pxToRem(30)};
     }
   }
 
-  &:focus-within {
-    .k-Form-DropdownCombobox,
-    .k-Form-DropdownCombobox__arrowButton,
-    .k-Form-DropdownSelect__button,
-    .k-Form-DropdownSelect__button__arrowBox,
-    .k-Form-Dropdown__list {
-      border-color: ${COLORS.line2};
-    }
-  }
-  .k-Form-DropdownSelect__button:focus {
-    outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(2)};
-  }
-  .k-Form-DropdownSelect__button:focus:not(:focus-visible) {
-    outline-color: transparent;
-  }
-  .k-Form-DropdownSelect__button:focus-visible {
-    outline-color: ${COLORS.primary4};
-  }
-
   &.k-Form-Dropdown--error {
-    .k-Form-DropdownCombobox,
-    .k-Form-DropdownSelect__button {
-      padding-right: ${pxToRem(40 + 10 + 24 + 10)};
-    }
-
     .k-Form-DropdownCombobox,
     .k-Form-DropdownSelect__button,
     .k-Form-DropdownCombobox__arrowButton,
@@ -203,11 +135,6 @@ export const StyledDropdown = styled.div`
   }
   &.k-Form-Dropdown--valid {
     .k-Form-DropdownCombobox,
-    .k-Form-DropdownSelect__button {
-      padding-right: ${pxToRem(40 + 10 + 24 + 10)};
-    }
-
-    .k-Form-DropdownCombobox,
     .k-Form-DropdownSelect__button,
     .k-Form-DropdownCombobox__arrowButton,
     .k-Form-DropdownSelect__button__arrowBox,
@@ -215,26 +142,9 @@ export const StyledDropdown = styled.div`
       border-color: ${COLORS.tertiary2};
     }
   }
+
   &.k-Form-Dropdown--disabled {
-    .k-Form-DropdownCombobox,
-    .k-Form-DropdownSelect__button,
-    .k-Form-DropdownCombobox__arrowButton,
-    .k-Form-DropdownSelect__button__arrowBox,
-    .k-Form-Dropdown__list {
-      background-color: ${COLORS.line1};
-      border-color: ${COLORS.line2};
-    }
-    .k-Form-DropdownCombobox__input {
-      background-color: ${COLORS.line1};
-    }
-    .k-Form-DropdownCombobox__arrowButton svg,
-    .k-Form-DropdownSelect__button__arrowBox svg {
-      fill: ${COLORS.font2};
-    }
-    .k-Form-DropdownCombobox__input,
-    .k-Form-DropdownSelect__content {
-      color: ${COLORS.font2};
-    }
+    cursor: not-allowed;
   }
 
   /* VARIANT: ANDROMEDA */
@@ -243,6 +153,11 @@ export const StyledDropdown = styled.div`
     .k-Form-DropdownCombobox,
     .k-Form-DropdownSelect__button {
       padding: 0 ${pxToRem(40 + 10)} 0 0;
+    }
+
+    .k-Form-DropdownCombobox__input,
+    .k-Form-DropdownSelect__content {
+      padding: 0 ${pxToRem(15)};
     }
 
     .k-Form-DropdownCombobox__arrowButton {
@@ -256,12 +171,24 @@ export const StyledDropdown = styled.div`
       border-left: inherit;
     }
 
+    .k-Form-DropdownCombobox__statusBadges,
+    .k-Form-DropdownSelect__button__statusBadges {
+      right: ${pxToRem(40 + 10)};
+    }
+    &.k-Form-Dropdown--error,
+    &.k-Form-Dropdown--valid {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button {
+        padding-right: ${pxToRem(40 + 10 + 24 + 10)};
+      }
+    }
+
     /* ANDROMEDA SIZES */
 
     &.k-Form-Dropdown--tiny {
+      --DropdownSelect-buttonHeight: ${pxToRem(40)};
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
-        height: ${pxToRem(40)};
         padding-right: ${pxToRem(30 + 10)};
       }
 
@@ -299,9 +226,9 @@ export const StyledDropdown = styled.div`
 
     &.k-Form-Dropdown--big {
       @media (min-width: ${ScreenConfig.S.min}px) {
+        --DropdownSelect-buttonHeight: ${pxToRem(60)};
         .k-Form-DropdownCombobox,
         .k-Form-DropdownSelect__button {
-          height: ${pxToRem(60)};
           padding-right: ${pxToRem(50 + 10)};
         }
 
@@ -329,9 +256,9 @@ export const StyledDropdown = styled.div`
 
     &.k-Form-Dropdown--huge,
     &.k-Form-Dropdown--giant {
+      --DropdownSelect-buttonHeight: ${pxToRem(70)};
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
-        height: ${pxToRem(70)};
         padding-right: ${pxToRem(50 + 10)};
         font-size: ${stepToRem(0)};
       }
@@ -383,16 +310,10 @@ export const StyledDropdown = styled.div`
         }
 
         &.k-Form-Dropdown--huge {
-          .k-Form-DropdownCombobox,
-          .k-Form-DropdownSelect__button {
-            height: ${pxToRem(80)};
-          }
+          --DropdownSelect-buttonHeight: ${pxToRem(80)};
         }
         &.k-Form-Dropdown--giant {
-          .k-Form-DropdownCombobox,
-          .k-Form-DropdownSelect__button {
-            height: ${pxToRem(90)};
-          }
+          --DropdownSelect-buttonHeight: ${pxToRem(90)};
         }
       }
     }
@@ -401,171 +322,463 @@ export const StyledDropdown = styled.div`
   /* VARIANT: ORION */
 
   &.k-Form-Dropdown--orion {
+    --DropdownSelect-padding: ${pxToRem(10)};
+    --DropdownSelect-arrowContainerWidth: ${pxToRem(20)};
+    --DropdownSelect-statusPadding: 0px;
+
     .k-Form-DropdownCombobox,
     .k-Form-DropdownSelect__button {
-      height: ${pxToRem(50)};
       border-radius: ${pxToRem(4)};
-      padding-right: ${pxToRem(10)};
-    }
 
-    .k-Form-DropdownSelect__button__arrowBox {
-      left: ${pxToRem(17)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        left: ${pxToRem(21)};
-      }
-    }
-    .k-Form-DropdownCombobox__arrowButton {
-      padding: 0;
-      width: ${pxToRem(35)};
-    }
-    .k-Form-DropdownCombobox__arrowButton__arrowBox {
-      margin-left: ${pxToRem(6)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-left: ${pxToRem(16)};
-      }
+      display: flex;
+      gap: ${pxToRem(10)};
+      padding: 0 ${pxToRem(10)};
     }
 
     .k-Form-DropdownCombobox__input,
     .k-Form-DropdownSelect__content {
-      padding: 0 ${pxToRem(5)};
-      margin-left: ${pxToRem(24 + 10)};
+      position: relative;
+      box-sizing: border-box;
+      flex: 1 1 auto;
+      line-height: calc(
+        var(--DropdownSelect-buttonHeight) - 2 * var(--DropdownSelect-border)
+      );
+    }
 
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-left: ${pxToRem(30 + 10)};
+    .k-Form-DropdownSelect__button__arrowBox,
+    .k-Form-DropdownCombobox__arrowButton {
+      position: relative;
+      flex: 0 0 var(--DropdownSelect-arrowContainerWidth);
+      width: var(--DropdownSelect-arrowContainerWidth);
+    }
+
+    &.k-Form-Dropdown--error,
+    &.k-Form-Dropdown--valid {
+      --DropdownSelect-statusPadding: ${pxToRem(24 + 10)};
+      .k-Form-DropdownCombobox__statusBadges,
+      .k-Form-DropdownSelect__button__statusBadges {
+        position: relative;
+        flex: 0 0 ${pxToRem(24)};
       }
     }
 
     .k-Form-Dropdown__list {
-      box-shadow: 0 ${pxToRem(5)} ${pxToRem(5)} 0 rgba(0, 0, 0, 0.1);
-      border-bottom-left-radius: ${pxToRem(6)};
-      border-bottom-right-radius: ${pxToRem(6)};
+      border-radius: ${pxToRem(6)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
-        border-bottom-left-radius: ${pxToRem(8)};
-        border-bottom-right-radius: ${pxToRem(8)};
+        border-radius: ${pxToRem(8)};
       }
     }
+
     .k-Form-Dropdown__item {
       min-height: ${pxToRem(40)};
-      padding-top: ${pxToRem(8)};
-      padding-bottom: ${pxToRem(8)};
     }
 
-    .k-Form-DropdownCombobox__statusBadges,
-    .k-Form-DropdownSelect__button__statusBadges {
-      right: ${pxToRem(10)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        right: ${pxToRem(15)};
-      }
-    }
-    &.k-Form-Dropdown--error .k-Form-DropdownSelect__button,
-    &.k-Form-Dropdown--valid .k-Form-DropdownSelect__button {
-      padding-right: ${pxToRem(10 + 24 + 10)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        padding-right: ${pxToRem(10 + 24 + 15)};
-      }
-    }
-
+    &.k-Form-Dropdown--micro,
     &.k-Form-Dropdown--tiny {
-      .k-Form-DropdownCombobox,
-      .k-Form-DropdownSelect__button {
-        height: ${pxToRem(40)};
-        padding-right: ${pxToRem(10)};
-      }
-
-      .k-Form-DropdownSelect__button__arrowBox {
-        left: ${pxToRem(15)};
-      }
-      .k-Form-DropdownCombobox__input,
-      .k-Form-DropdownSelect__content {
-        margin-left: ${pxToRem(25 + 5)};
-      }
-
       .k-Form-DropdownCombobox__statusBadges,
       .k-Form-DropdownSelect__button__statusBadges {
-        right: ${pxToRem(10)};
-
         svg {
           width: ${pxToRem(20)};
           height: ${pxToRem(20)};
         }
       }
-      &.k-Form-Dropdown--error .k-Form-DropdownSelect__button,
-      &.k-Form-Dropdown--valid .k-Form-DropdownSelect__button {
-        padding-right: ${pxToRem(10 + 24 + 10)};
-      }
+    }
+
+    &.k-Form-Dropdown--micro {
+      --DropdownSelect-buttonHeight: ${pxToRem(30)};
+    }
+
+    &.k-Form-Dropdown--tiny {
+      --DropdownSelect-buttonHeight: ${pxToRem(40)};
+    }
+
+    &.k-Form-Dropdown--normal {
+      --DropdownSelect-buttonHeight: ${pxToRem(50)};
     }
 
     &.k-Form-Dropdown--big,
     &.k-Form-Dropdown--huge,
     &.k-Form-Dropdown--giant {
+      --DropdownSelect-buttonHeight: ${pxToRem(60)};
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        --DropdownSelect-buttonHeight: ${pxToRem(70)};
+        --DropdownSelect-arrowContainerWidth: ${pxToRem(50)};
+      }
+
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
-        height: ${pxToRem(60)};
         border-radius: ${pxToRem(6)};
-        padding-right: ${pxToRem(15)};
 
         @media (min-width: ${ScreenConfig.S.min}px) {
-          height: ${pxToRem(70)};
           border-radius: ${pxToRem(8)};
-          padding-right: ${pxToRem(20)};
-        }
-      }
-
-      &.k-Form-Dropdown--error .k-Form-DropdownSelect__button,
-      &.k-Form-Dropdown--valid .k-Form-DropdownSelect__button {
-        padding-right: ${pxToRem(10 + 24 + 10)};
-
-        @media (min-width: ${ScreenConfig.S.min}px) {
-          padding-right: ${pxToRem(10 + 24 + 20)};
-        }
-      }
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        .k-Form-DropdownSelect__button__arrowBox {
-          left: ${pxToRem(30)};
-        }
-        .k-Form-DropdownCombobox__arrowButton {
-          width: ${pxToRem(50)};
-        }
-        .k-Form-DropdownCombobox__input,
-        .k-Form-DropdownSelect__content {
-          margin-left: ${pxToRem(40 + 10)};
-        }
-
-        .k-Form-DropdownCombobox__statusBadges,
-        .k-Form-DropdownSelect__button__statusBadges {
-          right: ${pxToRem(20)};
         }
       }
     }
 
     &.k-Form-Dropdown--huge {
-      .k-Form-DropdownCombobox,
-      .k-Form-DropdownSelect__button {
-        @media (min-width: ${ScreenConfig.M.min}px) {
-          height: ${pxToRem(80)};
+      @media (min-width: ${ScreenConfig.M.min}px) {
+        --DropdownSelect-buttonHeight: ${pxToRem(80)};
+        .k-Form-DropdownCombobox,
+        .k-Form-DropdownSelect__button {
           font-size: ${stepToRem(0)};
         }
       }
     }
     &.k-Form-Dropdown--giant {
-      .k-Form-DropdownCombobox,
-      .k-Form-DropdownSelect__button {
-        @media (min-width: ${ScreenConfig.M.min}px) {
-          height: ${pxToRem(90)};
+      @media (min-width: ${ScreenConfig.M.min}px) {
+        --DropdownSelect-buttonHeight: ${pxToRem(90)};
+        .k-Form-DropdownCombobox,
+        .k-Form-DropdownSelect__button {
           font-size: ${stepToRem(0)};
         }
       }
     }
+  }
 
-    &.k-Form-Dropdown--isOpen {
+  /* ARROWPOSITION: LEFT */
+
+  &.k-Form-Dropdown--arrowPosition-left {
+    .k-Form-DropdownCombobox__input,
+    .k-Form-DropdownSelect__content {
+      order: 2;
+      padding-left: ${pxToRem(5)};
+      margin-left: ${pxToRem(-5)};
+    }
+
+    .k-Form-DropdownSelect__button__arrowBox,
+    .k-Form-DropdownCombobox__arrowButton {
+      order: 1;
+    }
+
+    .k-Form-DropdownCombobox__statusBadges,
+    .k-Form-DropdownSelect__button__statusBadges {
+      order: 3;
+    }
+  }
+
+  /* ARROWPOSITION: RIGHT */
+
+  &.k-Form-Dropdown--arrowPosition-right {
+    .k-Form-DropdownCombobox__input,
+    .k-Form-DropdownSelect__content {
+      order: 1;
+      padding-left: ${pxToRem(5)};
+    }
+
+    .k-Form-DropdownSelect__button__arrowBox,
+    .k-Form-DropdownCombobox__arrowButton {
+      order: 3;
+    }
+
+    .k-Form-DropdownCombobox__statusBadges,
+    .k-Form-DropdownSelect__button__statusBadges {
+      order: 2;
+    }
+  }
+
+  /* MODIFIER: HYDROGEN */
+
+  &.k-Form-Dropdown--hydrogen,
+  &.k-Form-Dropdown--nitrogen {
+    .k-Form-DropdownCombobox,
+    .k-Form-DropdownSelect__button {
+      border-color: ${COLORS.line1};
+      background-color: ${COLORS.background1};
+    }
+
+    .k-Form-DropdownCombobox__input,
+    .k-Form-DropdownSelect__content {
+      color: ${COLORS.font1};
+      background-color: ${COLORS.background1};
+    }
+
+    &.k-Form-Dropdown--nitrogen {
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
+        background-color: ${COLORS.primary5};
+      }
+
+      .k-Form-DropdownCombobox__input,
+      .k-Form-DropdownSelect__content {
+        background-color: ${COLORS.primary5};
+      }
+    }
+
+    .k-Form-DropdownCombobox__input:placeholder,
+    .k-Form-DropdownSelect__placeholder {
+      color: ${COLORS.font2};
+    }
+
+    .k-Form-DropdownCombobox__input {
+      &:focus {
+        outline: ${COLORS.primary4} solid ${pxToRem(2)};
+        outline-offset: ${pxToRem(-4)};
+      }
+      &:focus:not(:focus-visible) {
+        outline-color: transparent;
+      }
+      &:focus-visible {
+        outline-color: ${COLORS.primary4};
+      }
+      &:disabled {
+        background-color: ${COLORS.line1};
+      }
+    }
+
+    .k-Form-DropdownCombobox__arrowButton {
+      background-color: ${COLORS.background1};
+    }
+
+    .k-Form-Dropdown__list {
+      background-color: ${COLORS.background1};
+
+      &:not(:empty) {
+        border: ${pxToRem(2)} solid ${COLORS.line1};
+      }
+
+      &:focus {
+        outline: ${COLORS.primary4} solid ${pxToRem(2)};
+        outline-offset: ${pxToRem(2)};
+      }
+      &:focus:not(:focus-visible) {
+        outline-color: transparent;
+      }
+      &:focus-visible {
+        outline-color: ${COLORS.primary4};
+      }
+    }
+
+    .k-Form-Dropdown__item {
+      color: ${COLORS.font1};
+
+      &[aria-selected='true'] {
+        background-color: ${COLORS.background3};
+      }
+
+      &[disabled] {
+        color: ${COLORS.font2};
+      }
+    }
+
+    &:focus-within {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownCombobox__arrowButton,
+      .k-Form-DropdownSelect__button,
+      .k-Form-DropdownSelect__button__arrowBox,
+      .k-Form-Dropdown__list {
+        border-color: ${COLORS.line2};
+      }
+    }
+    .k-Form-DropdownSelect__button:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
+    .k-Form-DropdownSelect__button:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    .k-Form-DropdownSelect__button:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
+
+    &.k-Form-Dropdown--disabled {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button,
+      .k-Form-DropdownCombobox__arrowButton,
+      .k-Form-DropdownSelect__button__arrowBox,
+      .k-Form-Dropdown__list,
+      .k-Form-DropdownSelect__content {
+        background-color: ${COLORS.line1};
+        border-color: ${COLORS.line2};
+      }
+      .k-Form-DropdownCombobox__input {
+        background-color: ${COLORS.line1};
+      }
+      .k-Form-DropdownCombobox__arrowButton svg,
+      .k-Form-DropdownSelect__button__arrowBox svg {
+        fill: ${COLORS.font2};
+      }
+      .k-Form-DropdownCombobox__input,
+      .k-Form-DropdownSelect__content {
+        color: ${COLORS.font2};
+      }
+    }
+  }
+
+  /* MODIFIER: BORON */
+
+  &.k-Form-Dropdown--boron {
+    --DropdownSelect-border: ${pxToRem(1)};
+
+    .k-Form-DropdownCombobox,
+    .k-Form-DropdownSelect__button {
+      border-color: ${COLORS.line3};
+      background-color: ${COLORS.line3};
+    }
+
+    .k-Form-DropdownCombobox__input,
+    .k-Form-DropdownSelect__content {
+      background-color: ${COLORS.line3};
+      color: ${COLORS.background1};
+    }
+
+    .k-Form-DropdownCombobox__arrowButton svg,
+    .k-Form-DropdownSelect__button__arrowBox svg {
+      fill: ${COLORS.background1};
+    }
+
+    .k-Form-DropdownCombobox__input:placeholder,
+    .k-Form-DropdownSelect__placeholder {
+      color: ${COLORS.grey1};
+    }
+
+    .k-Form-DropdownCombobox__input {
+      &:focus {
+        outline: ${COLORS.primary4} solid ${pxToRem(2)};
+        outline-offset: ${pxToRem(-4)};
+      }
+      &:focus:not(:focus-visible) {
+        outline-color: transparent;
+      }
+      &:focus-visible {
+        outline-color: ${COLORS.primary4};
+      }
+      &:disabled {
+        background-color: ${COLORS.grey1};
+      }
+    }
+
+    .k-Form-DropdownCombobox__arrowButton {
+      background-color: ${COLORS.line3};
+    }
+
+    .k-Form-Dropdown__list {
+      background-color: ${COLORS.line3};
+      &:not(:empty) {
+        border: ${pxToRem(1)} solid ${COLORS.line2};
+      }
+
+      &:focus {
+        outline: ${COLORS.primary4} solid ${pxToRem(2)};
+        outline-offset: ${pxToRem(2)};
+      }
+      &:focus:not(:focus-visible) {
+        outline-color: transparent;
+      }
+      &:focus-visible {
+        outline-color: ${COLORS.primary4};
+      }
+    }
+
+    &.k-Form-Dropdown--normal,
+    &.k-Form-Dropdown--big,
+    &.k-Form-Dropdown--huge,
+    &.k-Form-Dropdown--giant {
+      .k-Form-DropdownCombobox__input,
+      .k-Form-DropdownSelect__content {
+        ${TYPOGRAPHY.fontStyles.regular}
+      }
+    }
+
+    .k-Form-Dropdown__item {
+      color: ${COLORS.background1};
+      &[aria-selected='true'] {
+        ${TYPOGRAPHY.fontStyles.regular}
+        background-color: ${COLORS.font1};
+      }
+      &[disabled] {
+        color: ${COLORS.font3};
+      }
+    }
+
+    &:focus-within {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button,
+      .k-Form-DropdownCombobox__arrowButton,
+      .k-Form-DropdownSelect__button__arrowBox,
+      .k-Form-Dropdown__list {
+        border-color: ${COLORS.line2};
+      }
+    }
+    .k-Form-DropdownSelect__button:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
+    .k-Form-DropdownSelect__button:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    .k-Form-DropdownSelect__button:focus-visible {
+      outline-color: ${COLORS.primary4};
+    }
+
+    &.k-Form-Dropdown--disabled {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button,
+      .k-Form-DropdownCombobox__arrowButton,
+      .k-Form-DropdownSelect__button__arrowBox,
+      .k-Form-Dropdown__list,
+      .k-Form-DropdownSelect__content {
+        background-color: ${COLORS.grey1};
+        border-color: ${COLORS.grey1};
+      }
+      .k-Form-DropdownCombobox__input {
+        background-color: ${COLORS.grey1};
+      }
+      .k-Form-DropdownCombobox__arrowButton svg,
+      .k-Form-DropdownSelect__button__arrowBox svg {
+        fill: ${COLORS.line1};
+      }
+      .k-Form-DropdownCombobox__input,
+      .k-Form-DropdownSelect__content {
+        color: ${COLORS.line1};
+      }
+    }
+  }
+
+  /* DIRECTION: DOWN */
+
+  &.k-Form-Dropdown--down {
+    .k-Form-Dropdown__list {
+      top: 100%;
+
+      &:not(:empty) {
+        border-top: 0;
+      }
+    }
+
+    &.k-Form-Dropdown--orion.k-Form-Dropdown--isOpen {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .k-Form-Dropdown__list {
+        box-shadow: 0 ${pxToRem(5)} ${pxToRem(5)} 0 rgba(0, 0, 0, 0.1);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+
+  /* DIRECTION: UP */
+
+  &.k-Form-Dropdown--up {
+    .k-Form-Dropdown__list {
+      bottom: var(--DropdownSelect-buttonHeight);
+
+      &:not(:empty) {
+        border-bottom: 0;
+      }
+    }
+
+    &.k-Form-Dropdown--orion.k-Form-Dropdown--isOpen {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+      .k-Form-Dropdown__list {
+        box-shadow: 0 ${pxToRem(-5)} ${pxToRem(5)} 0 rgba(0, 0, 0, 0.1);
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
       }

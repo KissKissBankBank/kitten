@@ -40,6 +40,9 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     className,
     value,
     controlled,
+    modifier,
+    direction,
+    arrowPosition,
   } = props
 
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
@@ -114,7 +117,10 @@ export const DropdownSelect = ({ combobox, ...props }) => {
       className={classNames(
         'k-Form-Dropdown',
         `k-Form-Dropdown--${variant}`,
+        `k-Form-Dropdown--${modifier}`,
+        `k-Form-Dropdown--${direction}`,
         `k-Form-Dropdown--${size}`,
+        `k-Form-Dropdown--arrowPosition-${arrowPosition}`,
         className,
         {
           'k-Form-Dropdown--isOpen': isOpen,
@@ -217,6 +223,9 @@ DropdownSelect.defaultProps = {
   openOnLoad: false,
   uniqLabelOnSearch: false,
   menuZIndex: 1000,
+  modifier: 'hydrogen',
+  direction: 'down',
+  arrowPosition: 'left',
 }
 
 DropdownSelect.propTypes = {
@@ -229,7 +238,7 @@ DropdownSelect.propTypes = {
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
-  size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge', 'giant']),
+  size: PropTypes.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
   a11yStatusError: PropTypes.string,
   a11yStatusValid: PropTypes.string,
   a11ySelectionMessageDisplayer: PropTypes.func,
@@ -241,4 +250,7 @@ DropdownSelect.propTypes = {
   openOnLoad: PropTypes.bool,
   uniqLabelOnSearch: PropTypes.bool,
   menuZIndex: PropTypes.number,
+  modifier: PropTypes.oneOf(['hydrogen', 'nitrogen', 'boron']),
+  direction: PropTypes.oneOf(['up', 'down']),
+  arrowPosition: PropTypes.oneOf(['left', 'right']),
 }
