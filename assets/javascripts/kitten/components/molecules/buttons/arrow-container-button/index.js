@@ -49,7 +49,6 @@ const StyledArrowContainerButton = styled.div`
       width: max-content;
       max-width: ${pxToRem(250)};
 
-      flex-shrink: 0;
       display: block;
 
       animation: 0.16s ease ${zoomOutAndOpacity};
