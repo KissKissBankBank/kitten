@@ -258,12 +258,12 @@ export { InformationBox } from './components/molecules/boxes/information-box'
 export { LinkBox } from './components/molecules/boxes/link-box'
 
 // Molecules/Buttons
-export { ArrowContainerButton } from './components/molecules/buttons/arrow-container-button'
 export { Button } from './components/molecules/buttons/button'
 export { ButtonIcon } from './components/molecules/buttons/button-icon'
 export { ButtonGroup } from './components/molecules/buttons/button-group'
 export { ButtonImage } from './components/molecules/buttons/button-image'
 export { ButtonQuestionMarkIcon } from './components/molecules/buttons/button-question-mark-icon'
+export { ButtonWithTooltip } from './components/molecules/buttons/button-with-tooltip'
 export { CheckableButton } from './components/molecules/buttons/checkable-button'
 export { CloseButton } from './components/molecules/buttons/close-button'
 export {

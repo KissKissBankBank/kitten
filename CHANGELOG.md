@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `ArrowContainerButton`: Add new component.
+- Feature: `ButtonWithTooltip`: Add new component.
 
 ## [4.9.0] - 2021-09-24
 

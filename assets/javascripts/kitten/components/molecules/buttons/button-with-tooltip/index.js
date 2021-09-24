@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import {
   Button,
   ArrowContainer,
-  GiftIcon,
   COLORS,
   pxToRem,
   Text
@@ -35,11 +34,11 @@ const zoomOutAndOpacity = keyframes`
   }
 `
 
-const StyledArrowContainerButton = styled.div`
+const StyledButtonWithTooltip = styled.div`
   display: inline-block;
   position: relative;
 
-  .k-ArrowContainerButton__container {
+  .k-ButtonWithTooltip__container {
       position: absolute;
       top: 100%;
       left: 50%;
@@ -55,9 +54,9 @@ const StyledArrowContainerButton = styled.div`
       opacity: 0;
   }
 
-  .k-ArrowContainerButton__button {
-    &:hover + .k-ArrowContainerButton__container,
-    &:focus + .k-ArrowContainerButton__container {
+  .k-ButtonWithTooltip__button {
+    &:hover + .k-ButtonWithTooltip__container,
+    &:focus + .k-ButtonWithTooltip__container {
       animation: 0.16s ease ${zoomInAndOpacity};
       transform: translateX(-50%) translateY(${pxToRem(7)}) scale(1);
       opacity: 1;
@@ -65,31 +64,34 @@ const StyledArrowContainerButton = styled.div`
   }
 `
 
-export const ArrowContainerButton = ({
+export const ButtonWithTooltip = ({
   className,
+  children,
   iconTitle,
+  buttonProps,
+  tooltipProps,
   ...props
 }) => {
 
   return (
-    <StyledArrowContainerButton>
+    <StyledButtonWithTooltip {...props}>
       <Button
         className={classNames(
-          'k-ArrowContainerButton__button',
+          'k-ButtonWithTooltip__button',
           className,
         )}
         aria-label={iconTitle}
         icon
         borderRadius={100}
         size="tiny"
-        {...props}
+        {...buttonProps}
       >
-        <GiftIcon width={19} height={16} title={iconTitle} />
+        {children}
       </Button>
 
       <ArrowContainer
         className={classNames(
-          'k-ArrowContainerButton__container'
+          'k-ButtonWithTooltip__container'
         )}
         color={COLORS.line1}
         size={7}
@@ -98,19 +100,21 @@ export const ArrowContainerButton = ({
         position="top"
         aria-hidden
         centered
+        {...tooltipProps}
       >
         <Text size="tiny" color="font1" weight="regular">
           {iconTitle}
         </Text>
       </ArrowContainer>
-    </StyledArrowContainerButton>
+    </StyledButtonWithTooltip>
   )
 }
 
-ArrowContainerButton.protoTypes = {
+ButtonWithTooltip.protoTypes = {
   iconTitle: PropTypes.string,
+  children: PropTypes.node,
 }
 
-ArrowContainerButton.defaultProps = {
+ButtonWithTooltip.defaultProps = {
   iconTitle: "Carte cadeau",
 }

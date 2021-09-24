@@ -1,15 +1,15 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
-import { ArrowContainerButton } from './index'
+import { ButtonWithTooltip } from './index'
 
-describe('<ArrowContainerButton />', () => {
+describe('<ButtonWithTooltip />', () => {
   let component
 
   describe('basic', () => {
     beforeEach(() => {
       component = renderer
-        .create(<ArrowContainerButton>MyArrowContainerButton</ArrowContainerButton>)
+        .create(<ButtonWithTooltip>MyButtonWithTooltip</ButtonWithTooltip>)
         .toJSON()
     })
 

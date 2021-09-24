@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowContainerButton } from './index'
+import { ButtonWithTooltip } from './index'
 
 const args = {
   iconTitle: 'Carte cadeau',
@@ -8,16 +8,16 @@ const args = {
 const argsTypes = {
   iconTitle: {
     name: 'iconTitle',
-    control: 'string',
+    control: 'text',
   }
 }
 
 export default {
-  title: 'Molecules/Buttons/ArrowContainerButton',
-  component: ArrowContainerButton,
+  title: 'Molecules/Buttons/ButtonWithTooltip',
+  component: ButtonWithTooltip,
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="ArrowContainerButton" />,
+      page: () => <DocsPage filepath={__filename} importString="ButtonWithTooltip" />,
     },
   },
   decorators: [
@@ -30,4 +30,4 @@ export default {
   args: {},
 }
 
-export const Default = args => <ArrowContainerButton {...args} />
+export const Default = args => <ButtonWithTooltip {...args} />
