@@ -36,7 +36,7 @@ const StyledToggleButton = styled.div`
       position: absolute;
       flex-shrink: 0;
       display: block;
-      animation: 0.16s ease ${zoomInAndOpacity};
+      // animation: 0.16s ease ${zoomInAndOpacity};
       margin-top: ${pxToRem(7)};
       width: max-content;
       height: auto;
