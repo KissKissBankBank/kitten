@@ -73,11 +73,11 @@ export const ButtonWithTooltip = ({
   return (
     <StyledButtonWithTooltip {...props}>
       <Button
-        className={classNames('k-ButtonWithTooltip__button', className)}
+        className={classNames(
+          'k-ButtonWithTooltip__button',
+          className,
+        )}
         aria-label={iconTitle}
-        icon
-        borderRadius={100}
-        size="tiny"
         {...buttonProps}
       >
         {children}

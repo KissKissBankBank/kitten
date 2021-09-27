@@ -34,5 +34,26 @@ export default {
 }
 
 export const Default = args => (
-  <ButtonWithTooltip {...args} children={<GiftIcon width="17" height="15" />} />
+  <ButtonWithTooltip
+    {...args}
+    children="Button"
+  />
 )
+
+export const WithButtonIcon = args => (
+  <ButtonWithTooltip
+    {...args}
+    children={ <GiftIcon width="17" height="15" /> }
+  />
+)
+
+WithButtonIcon.args = {
+  buttonProps: {
+    icon: true,
+    borderRadius: 100,
+    size: 'tiny',
+  },
+}
+WithButtonIcon.argTypes = {
+  buttonProps: { control: 'object' },
+}
