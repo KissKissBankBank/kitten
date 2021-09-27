@@ -1403,6 +1403,12 @@ Object.defineProperty(exports, "ButtonQuestionMarkIcon", {
     return _buttonQuestionMarkIcon.ButtonQuestionMarkIcon;
   }
 });
+Object.defineProperty(exports, "ButtonWithTooltip", {
+  enumerable: true,
+  get: function get() {
+    return _buttonWithTooltip.ButtonWithTooltip;
+  }
+});
 Object.defineProperty(exports, "CheckableButton", {
   enumerable: true,
   get: function get() {
@@ -2579,6 +2585,8 @@ var _buttonGroup = require("./components/molecules/buttons/button-group");
 var _buttonImage = require("./components/molecules/buttons/button-image");
 
 var _buttonQuestionMarkIcon = require("./components/molecules/buttons/button-question-mark-icon");
+
+var _buttonWithTooltip = require("./components/molecules/buttons/button-with-tooltip");
 
 var _checkableButton = require("./components/molecules/buttons/checkable-button");
 
