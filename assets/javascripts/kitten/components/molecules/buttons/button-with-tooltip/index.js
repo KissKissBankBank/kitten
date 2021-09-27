@@ -1,14 +1,12 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import PropTypes from 'prop-types'
-import {
-  Button,
-  ArrowContainer,
-  COLORS,
-  pxToRem,
-  Text
-} from '../../../..'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
+import COLORS from '../../../../constants/colors-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
+import { ArrowContainer } from '../../../../components/molecules/boxes/arrow-container'
+import { Button } from '../../../../components/molecules/buttons/button'
+import { Text } from '../../../../components/atoms/typography/text'
 
 const zoomInAndOpacity = keyframes`
   from {
@@ -39,19 +37,19 @@ const StyledButtonWithTooltip = styled.div`
   position: relative;
 
   .k-ButtonWithTooltip__container {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%) translateY(0) scale(0.66);
-      transform-origin: 50% ${pxToRem(7)};
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(0) scale(0.66);
+    transform-origin: 50% ${pxToRem(7)};
 
-      width: max-content;
-      max-width: ${pxToRem(250)};
+    width: max-content;
+    max-width: ${pxToRem(250)};
 
-      display: block;
+    display: block;
 
-      animation: 0.16s ease ${zoomOutAndOpacity};
-      opacity: 0;
+    animation: 0.16s ease ${zoomOutAndOpacity};
+    opacity: 0;
   }
 
   .k-ButtonWithTooltip__button {
@@ -72,14 +70,10 @@ export const ButtonWithTooltip = ({
   tooltipProps,
   ...props
 }) => {
-
   return (
     <StyledButtonWithTooltip {...props}>
       <Button
-        className={classNames(
-          'k-ButtonWithTooltip__button',
-          className,
-        )}
+        className={classNames('k-ButtonWithTooltip__button', className)}
         aria-label={iconTitle}
         icon
         borderRadius={100}
@@ -90,9 +84,7 @@ export const ButtonWithTooltip = ({
       </Button>
 
       <ArrowContainer
-        className={classNames(
-          'k-ButtonWithTooltip__container'
-        )}
+        className={classNames('k-ButtonWithTooltip__container')}
         color={COLORS.line1}
         size={7}
         padding={8}
@@ -116,5 +108,5 @@ ButtonWithTooltip.protoTypes = {
 }
 
 ButtonWithTooltip.defaultProps = {
-  iconTitle: "Carte cadeau",
+  iconTitle: 'Carte cadeau',
 }

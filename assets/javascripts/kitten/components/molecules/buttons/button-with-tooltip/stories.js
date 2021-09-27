@@ -10,7 +10,7 @@ const argsTypes = {
   iconTitle: {
     name: 'iconTitle',
     control: 'text',
-  }
+  },
 }
 
 export default {
@@ -18,7 +18,9 @@ export default {
   component: ButtonWithTooltip,
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="ButtonWithTooltip" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="ButtonWithTooltip" />
+      ),
     },
   },
   decorators: [
@@ -32,8 +34,5 @@ export default {
 }
 
 export const Default = args => (
-  <ButtonWithTooltip
-    {...args}
-    children={ <GiftIcon width="17" height="15" /> }
-  />
+  <ButtonWithTooltip {...args} children={<GiftIcon width="17" height="15" />} />
 )
