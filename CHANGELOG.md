@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `HeaderNav`: Various fixes.
 - Feature: `ButtonWithTooltip`: Add new component.
 - Feature: `DashboardLayout`: Add `Toaster` subcomponent.
 
