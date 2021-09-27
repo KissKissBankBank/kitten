@@ -495,7 +495,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   className="c0"
 >
   <button
-    aria-label="Carte cadeau"
+    aria-label="Text of the tooltip"
     className="c1 k-Button k-ButtonWithTooltip__button k-Button--regular k-Button--hydrogen k-Button--andromeda"
     style={
       Object {
@@ -526,7 +526,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
     <span
       className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
     >
-      Carte cadeau
+      Text of the tooltip
     </span>
     <span
       className="k-ArrowContainer__arrow"

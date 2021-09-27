@@ -3,12 +3,12 @@ import { GiftIcon } from '../../../..'
 import { ButtonWithTooltip } from './index'
 
 const args = {
-  iconTitle: 'Carte cadeau',
+  tooltipText: 'Carte cadeau',
 }
 
 const argsTypes = {
-  iconTitle: {
-    name: 'iconTitle',
+  tooltipText: {
+    name: 'tooltipText',
     control: 'text',
   },
 }

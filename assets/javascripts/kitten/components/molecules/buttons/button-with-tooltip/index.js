@@ -108,7 +108,3 @@ ButtonWithTooltip.protoTypes = {
   tooltipText: PropTypes.string.isRequired,
   children: PropTypes.node,
 }
-
-ButtonWithTooltip.defaultProps = {
-  tooltipText: 'Carte cadeau',
-}

@@ -9,7 +9,10 @@ describe('<ButtonWithTooltip />', () => {
   describe('basic', () => {
     beforeEach(() => {
       component = renderer
-        .create(<ButtonWithTooltip>MyButtonWithTooltip</ButtonWithTooltip>)
+        .create(
+          <ButtonWithTooltip tooltipText="Text of the tooltip">
+            MyButtonWithTooltip
+          </ButtonWithTooltip>)
         .toJSON()
     })
 
