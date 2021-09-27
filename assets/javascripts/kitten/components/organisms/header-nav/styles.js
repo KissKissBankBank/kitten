@@ -440,7 +440,7 @@ export const StyledHeader = styled.header`
 
     .k-Dropdown__button,
     .k-HeaderNav__Button {
-      min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+      min-width: ${pxToRem(52)};
       cursor: pointer;
 
       @media (min-width: ${ScreenConfig.S.min}px) {
