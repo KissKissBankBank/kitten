@@ -8,6 +8,8 @@ import { ArrowContainer } from '../../../../components/molecules/boxes/arrow-con
 import { Button } from '../../../../components/molecules/buttons/button'
 import { Text } from '../../../../components/atoms/typography/text'
 
+const ARROW_SIZE = 7
+
 const zoomInAndOpacity = keyframes`
   from {
     transform: translateX(-50%) translateY(0) scale(.66);
@@ -15,14 +17,14 @@ const zoomInAndOpacity = keyframes`
   }
   to
   {
-    transform: translateX(-50%) translateY(${pxToRem(7)}) scale(1);
+    transform: translateX(-50%) translateY(${pxToRem(ARROW_SIZE)}) scale(1);
     opacity: 1;
   }
 `
 
 const zoomOutAndOpacity = keyframes`
   from {
-    transform: translateX(-50%) translateY(${pxToRem(7)}) scale(1);
+    transform: translateX(-50%) translateY(${pxToRem(ARROW_SIZE)}) scale(1);
     opacity: 1;
   }
   to
@@ -41,7 +43,7 @@ const StyledButtonWithTooltip = styled.div`
     top: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(0) scale(0.66);
-    transform-origin: 50% ${pxToRem(7)};
+    transform-origin: 50% ${pxToRem(ARROW_SIZE)};
 
     width: max-content;
     max-width: ${pxToRem(250)};
@@ -56,7 +58,7 @@ const StyledButtonWithTooltip = styled.div`
     &:hover + .k-ButtonWithTooltip__container,
     &:focus + .k-ButtonWithTooltip__container {
       animation: 0.16s ease ${zoomInAndOpacity};
-      transform: translateX(-50%) translateY(${pxToRem(7)}) scale(1);
+      transform: translateX(-50%) translateY(${pxToRem(ARROW_SIZE)}) scale(1);
       opacity: 1;
     }
   }
@@ -65,7 +67,7 @@ const StyledButtonWithTooltip = styled.div`
 export const ButtonWithTooltip = ({
   className,
   children,
-  iconTitle,
+  tooltipText,
   buttonProps,
   tooltipProps,
   ...props
@@ -77,7 +79,7 @@ export const ButtonWithTooltip = ({
           'k-ButtonWithTooltip__button',
           className,
         )}
-        aria-label={iconTitle}
+        aria-label={tooltipText}
         {...buttonProps}
       >
         {children}
@@ -86,7 +88,7 @@ export const ButtonWithTooltip = ({
       <ArrowContainer
         className={classNames('k-ButtonWithTooltip__container')}
         color={COLORS.line1}
-        size={7}
+        size={ARROW_SIZE}
         padding={8}
         borderRadius={4}
         position="top"
@@ -95,7 +97,7 @@ export const ButtonWithTooltip = ({
         {...tooltipProps}
       >
         <Text size="tiny" color="font1" weight="regular">
-          {iconTitle}
+          {tooltipText}
         </Text>
       </ArrowContainer>
     </StyledButtonWithTooltip>
@@ -103,10 +105,10 @@ export const ButtonWithTooltip = ({
 }
 
 ButtonWithTooltip.protoTypes = {
-  iconTitle: PropTypes.string,
+  tooltipText: PropTypes.string.isRequired,
   children: PropTypes.node,
 }
 
 ButtonWithTooltip.defaultProps = {
-  iconTitle: 'Carte cadeau',
+  tooltipText: 'Carte cadeau',
 }
