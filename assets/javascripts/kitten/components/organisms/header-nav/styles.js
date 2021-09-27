@@ -92,7 +92,7 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__BurgerMenu__button {
-    padding: 0 ${pxToRem(10)} 0 ${pxToRem(CONTAINER_PADDING_THIN)};
+    padding: 0;
     height: 100%;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
@@ -129,13 +129,12 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__Logo {
-    padding: ${pxToRem(10)};
+    padding: 0;
     display: flex;
     align-items: center;
 
-    @media (max-width: ${ScreenConfig.XXS.max}) {
-      padding-left: ${pxToRem(5)};
-      padding-right: ${pxToRem(5)};
+  @media (min-width: ${ScreenConfig.S.min}px) {
+      padding: ${pxToRem(10)};
     }
   }
 
@@ -196,7 +195,7 @@ export const StyledHeader = styled.header`
       .k-HeaderNav__Button:last-child {
         margin-right: ${pxToRem(-10)};
       }
-      @media (min-width: ${ScreenConfig.S.min}) {
+      @media (min-width: ${ScreenConfig.S.min}px) {
         padding-right: ${pxToRem(15)};
         gap: ${pxToRem(15)};
 
