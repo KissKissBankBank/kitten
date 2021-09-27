@@ -301,6 +301,23 @@ var Alerts = function Alerts(_ref7) {
   }, props));
 };
 
+var Toaster = function Toaster(_ref8) {
+  var className = _ref8.className,
+      isOpen = _ref8.isOpen,
+      children = _ref8.children,
+      props = (0, _objectWithoutProperties2.default)(_ref8, ["className", "isOpen", "children"]);
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
+    className: (0, _classnames.default)('k-DashboardLayout__toaster__wrapper', 'k-DashboardLayout__fullWidth', className, {
+      'k-DashboardLayout__toaster--isOpen': isOpen
+    }),
+    "aria-live": "polite"
+  }, props), /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-DashboardLayout__toaster"
+  }, children)), /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-DashboardLayout__toaster__spacer"
+  }));
+};
+
 DashboardLayout.propTypes = {
   backLinkProps: _propTypes.default.object,
   buttonProps: _propTypes.default.shape({
@@ -324,3 +341,4 @@ DashboardLayout.SideContent = SideContent;
 DashboardLayout.SideFooter = SideFooter;
 DashboardLayout.Flow = _flow.Flow;
 DashboardLayout.Alerts = Alerts;
+DashboardLayout.Toaster = Toaster;
