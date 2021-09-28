@@ -6,7 +6,7 @@ exports[`<Overlay /> overlay with \`isActive\` prop and custom class matches wit
   top: 0;
   right: 100%;
   bottom: 100%;
-  z-index: 100;
+  z-index: var(--Overlay-zIndex,100);
   visibility: hidden;
   opacity: 0;
   background: rgba(0,0,0,0.4);
@@ -35,6 +35,11 @@ exports[`<Overlay /> overlay with \`isActive\` prop and custom class matches wit
 
 <div
   className="c0 fooBarTest k-Overlay k-Overlay--absolute k-Overlay--isActive"
+  style={
+    Object {
+      "--Overlay-zIndex": 100,
+    }
+  }
 />
 `;
 
@@ -44,7 +49,7 @@ exports[`<Overlay /> overlay with \`isActive\` prop matches with snapshot 1`] = 
   top: 0;
   right: 100%;
   bottom: 100%;
-  z-index: 100;
+  z-index: var(--Overlay-zIndex,100);
   visibility: hidden;
   opacity: 0;
   background: rgba(0,0,0,0.4);
@@ -73,6 +78,11 @@ exports[`<Overlay /> overlay with \`isActive\` prop matches with snapshot 1`] = 
 
 <div
   className="c0 k-Overlay k-Overlay--absolute k-Overlay--isActive"
+  style={
+    Object {
+      "--Overlay-zIndex": 100,
+    }
+  }
 />
 `;
 
@@ -82,7 +92,7 @@ exports[`<Overlay /> simple overlay with zIndex set to 105 matches with snapshot
   top: 0;
   right: 100%;
   bottom: 100%;
-  z-index: 105;
+  z-index: var(--Overlay-zIndex,100);
   visibility: hidden;
   opacity: 0;
   background: rgba(0,0,0,0.4);
@@ -111,5 +121,10 @@ exports[`<Overlay /> simple overlay with zIndex set to 105 matches with snapshot
 
 <div
   className="c0 k-Overlay k-Overlay--absolute"
+  style={
+    Object {
+      "--Overlay-zIndex": 105,
+    }
+  }
 />
 `;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
@@ -11,7 +11,7 @@ const StyledOverlay = styled.div`
   top: 0;
   right: 100%;
   bottom: 100%;
-  z-index: ${({ zIndex }) => zIndex};
+  z-index: var(--Overlay-zIndex, 100);
 
   visibility: hidden;
 
@@ -40,53 +40,63 @@ const StyledOverlay = styled.div`
   }
 `
 
-export class Overlay extends Component {
-  constructor(props) {
-    super(props)
+export const Overlay = ({
+  zIndex,
+  isActive,
+  toggleEvent,
+  closeEvent,
+  openEvent,
+  position,
+  onToggle,
+  className,
+  style,
+  ...other
+}) => {
+  const [internalIsActive, setInternalActive] = useState(isActive)
 
-    this.state = { isActive: props.isActive }
-  }
+  useEffect(() => {
+    !!toggleEvent &&
+      window.addEventListener(toggleEvent, () => setInternalActive(current => (!current)))
+    !!closeEvent &&
+      window.addEventListener(closeEvent, () => setInternalActive(false))
+    !!openEvent &&
+      window.addEventListener(openEvent, () => setInternalActive(true))
 
-  componentDidMount() {
-    this.props.toggleEvent &&
-      window.addEventListener(this.props.toggleEvent, this.toggleActiveState)
-    this.props.closeEvent &&
-      window.addEventListener(this.props.closeEvent, this.disableActiveState)
-    this.props.openEvent &&
-      window.addEventListener(this.props.openEvent, this.enableActiveState)
-  }
+    return () => {
+      !!toggleEvent &&
+        window.removeEventListener(toggleEvent, () => setInternalActive(current => (!current)))
+      !!closeEvent &&
+        window.removeEventListener(closeEvent, () => setInternalActive(false))
+      !!openEvent &&
+        window.removeEventListener(openEvent, () => setInternalActive(true))
+    }
+  }, [])
 
-  componentWillUnmount() {
-    this.props.toggleEvent &&
-      window.removeEventListener(this.props.toggleEvent, this.toggleActiveState)
-    this.props.closeEvent &&
-      window.removeEventListener(this.props.closeEvent, this.disableActiveState)
-    this.props.openEvent &&
-      window.removeEventListener(this.props.openEvent, this.enableActiveState)
-  }
+  useEffect(() => {
+    onToggle({ isActive: !!internalIsActive })
+  }, [internalIsActive])
 
-  toggleActiveState = () => this.setState({ isActive: !this.state.isActive })
-  disableActiveState = () => this.setState({ isActive: false })
-  enableActiveState = () => this.setState({ isActive: true })
+  useEffect(() => {
+    setInternalActive(!!isActive)
+  }, [isActive])
 
-  render() {
-    const { className, zIndex, position, ...other } = this.props
-    const { isActive } = this.state
-    return (
-      <StyledOverlay
-        zIndex={zIndex}
-        className={classNames(
-          className,
-          'k-Overlay',
-          `k-Overlay--${position}`,
-          {
-            'k-Overlay--isActive': isActive,
-          },
-        )}
-        {...other}
-      />
-    )
-  }
+  return (
+    <StyledOverlay
+      className={classNames(
+        className,
+        'k-Overlay',
+        `k-Overlay--${position}`,
+        {
+          'k-Overlay--isActive': internalIsActive,
+        },
+      )}
+      style={{
+        ...style,
+        '--Overlay-zIndex': zIndex,
+      }}
+      {...other}
+    />
+  )
 }
 
 Overlay.propTypes = {
@@ -96,6 +106,7 @@ Overlay.propTypes = {
   closeEvent: PropTypes.string,
   openEvent: PropTypes.string,
   position: PropTypes.oneOf(['absolute', 'fixed']),
+  onToggle: PropTypes.func,
 }
 
 Overlay.defaultProps = {
@@ -105,4 +116,5 @@ Overlay.defaultProps = {
   closeEvent: CLOSE_OVERLAY_EVENT,
   openEvent: OPEN_OVERLAY_EVENT,
   position: 'absolute',
+  onToggle: () => {},
 }

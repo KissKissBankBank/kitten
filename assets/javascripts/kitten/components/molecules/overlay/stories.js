@@ -1,7 +1,9 @@
 import React from 'react'
 import { Overlay } from './index'
-import { Button } from '../../..'
+import { Button } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
+import { action } from '@storybook/addon-actions'
+
 
 const TOGGLE_EVENT = 'event:toggle'
 const CLOSE_EVENT = 'event:close'
@@ -27,6 +29,7 @@ export default {
     closeEvent: CLOSE_EVENT,
     openEvent: OPEN_EVENT,
     position: 'absolute',
+    onToggle: action('onToggle'),
   },
 }
 
