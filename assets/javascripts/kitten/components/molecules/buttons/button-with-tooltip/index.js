@@ -73,20 +73,25 @@ export const ButtonWithTooltip = ({
   ...props
 }) => {
   return (
-    <StyledButtonWithTooltip {...props}>
+    <StyledButtonWithTooltip
+      {...props}
+      className={classNames(
+        'k-ButtonWithTooltip',
+        className,
+      )}
+    >
       <Button
-        className={classNames(
-          'k-ButtonWithTooltip__button',
-          className,
-        )}
         aria-label={tooltipText}
         {...buttonProps}
+        className={classNames(
+          'k-ButtonWithTooltip__button',
+          buttonProps?.className,
+        )}
       >
         {children}
       </Button>
 
       <ArrowContainer
-        className={classNames('k-ButtonWithTooltip__container')}
         color={COLORS.line1}
         size={ARROW_SIZE}
         padding={8}
@@ -95,6 +100,10 @@ export const ButtonWithTooltip = ({
         aria-hidden
         centered
         {...tooltipProps}
+        className={classNames(
+          'k-ButtonWithTooltip__container',
+          tooltipProps?.className,
+        )}
       >
         <Text size="tiny" color="font1" weight="regular">
           {tooltipText}
