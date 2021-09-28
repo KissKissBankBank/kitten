@@ -22,6 +22,7 @@ describe('<DashboardLayout />', () => {
               closeLabel: 'Custom close label',
             }}
             quickAccessLinkText="Custom quick access link text"
+            overlayZIndex={133}
           >
             <DashboardLayout.Header>Header content</DashboardLayout.Header>
             <DashboardLayout.SideContent>
