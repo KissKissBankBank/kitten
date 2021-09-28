@@ -4,15 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix: `ButtonWithTooltip`: Propagate `className` on parent.
+- Fix: `ButtonWithTooltip`: Propagate `className` on parent.
+- Fix: `HeaderNav`: Fix `BurgerMenuNext` button state.
+- Fix: `BurgerIcon`: Modernize styles.
 
 ## [4.10.0] - 2021-09-27
 
-- Features:
+Features:
+
 - `ButtonWithTooltip`: Add new component.
 - `DashboardLayout`: Add `Toaster` subcomponent.
 
 Fix:
+
 - `HeaderNav`: Various fixes.
 
 
@@ -69,7 +73,7 @@ Fix:
 ## [4.6.0] - 2021-09-09
 
 Tech:
-- 
+
 - Bump to `node-sass@6`.
 
 ## [4.5.2] - 2021-09-09

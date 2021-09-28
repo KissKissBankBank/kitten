@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
@@ -7,43 +8,39 @@ import deprecated from 'prop-types-extra/lib/deprecated'
 const StyledItem = styled.svg`
   overflow: visible;
 
-  fill: ${({ mainColor }) => mainColor};
+  fill: var(--burgerIcon-mainColor, ${COLORS.font1});
 
   :hover,
   button:hover & {
-    fill: ${({ hoverColor }) => hoverColor};
+    fill: var(--burgerIcon-hoverColor, ${COLORS.primary1});
   }
 
   rect {
     transition: transform 0.2s ease-out, fill 0.15s;
   }
 
-  ${({ isActive }) =>
-    isActive &&
-    css`
+  &.k-BurgerIcon--isActive {
+    .k-BurgerIcon__bun {
+      transform: translateX(2px);
+    }
+    .k-BurgerIcon__patty {
+      transform: translateX(-2px);
+    }
+  }
+
+  &.k-BurgerIcon--isAnimatedOnHover {
+    &:hover,
+    button:hover &,
+    &:focus,
+    button:focus & {
       .k-BurgerIcon__bun {
         transform: translateX(2px);
       }
       .k-BurgerIcon__patty {
         transform: translateX(-2px);
       }
-    `}
-
-  ${({ isAnimatedOnHover }) =>
-    isAnimatedOnHover &&
-    css`
-      &:hover,
-      button:hover &,
-      &:focus,
-      button:focus & {
-        .k-BurgerIcon__bun {
-          transform: translateX(2px);
-        }
-        .k-BurgerIcon__patty {
-          transform: translateX(-2px);
-        }
-      }
-    `}
+    }
+  }
 `
 
 export const BurgerIcon = ({
@@ -55,6 +52,8 @@ export const BurgerIcon = ({
   width,
   height,
   isAnimatedOnHover,
+  style,
+  className,
   ...props
 }) => (
   <StyledItem
@@ -64,10 +63,19 @@ export const BurgerIcon = ({
     viewBox="0 0 12 10"
     width={width}
     height={height}
-    isActive={isActive}
-    mainColor={mainColor}
-    hoverColor={hoverColor}
-    isAnimatedOnHover={isAnimatedOnHover}
+    style={{
+      ...style,
+      '--burgerIcon-mainColor': mainColor,
+      '--burgerIcon-hoverColor': hoverColor,
+    }}
+    className={classNames(
+      'k-BurgerIcon',
+      className,
+      {
+        'k-BurgerIcon--isActive': isActive,
+        'k-BurgerIcon--isAnimatedOnHover': isAnimatedOnHover,
+      }
+    )}
     {...props}
   >
     {(iconTitle || title) && <title>{iconTitle || title}</title>}
