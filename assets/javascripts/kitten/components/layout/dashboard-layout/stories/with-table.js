@@ -30,14 +30,21 @@ const StyledListTable = styled(ListTable)`
   );
 
   ${TYPOGRAPHY.fontStyles.light}
+  overflow-x: hidden;
+
+  .k-ListTable__Header {
+    z-index: 50;
+    top: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+    position: sticky;
+  }
+  @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+    top: 0;
+  }
 
   .k-ListTable__HeaderList {
     height: ${pxToRem(50)};
-    z-index: 50;
     background-color: ${COLORS.background3};
     color: ${COLORS.font1};
-    top: ${pxToRem(MOBILE_HEADER_HEIGHT)};
-    position: sticky;
   }
 
   .k-ListTable__Body {

@@ -48,6 +48,10 @@ const SiteHeaderComponent = () => {
       }}
       size="small"
       borderStyle="border"
+      zIndexConfig={{
+        header: 102,
+        headerWithOpenMenu: 105,
+      }}
     >
       <HeaderNav.Logo href="#">
         <KissKissBankBankLogo height="25" className="k-u-margin-left-double" />
