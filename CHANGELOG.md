@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix: `ButtonWithTooltip`: Propagate `className` on parent.
+
 ## [4.10.0] - 2021-09-27
 
 - Features:
