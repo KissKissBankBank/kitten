@@ -73,7 +73,13 @@ export const ButtonWithTooltip = ({
   ...props
 }) => {
   return (
-    <StyledButtonWithTooltip {...props}>
+    <StyledButtonWithTooltip
+      {...props}
+      className={classNames(
+        'k-ButtonWithTooltip',
+        className,
+      )}
+    >
       <Button
         className={classNames(
           'k-ButtonWithTooltip__button',
