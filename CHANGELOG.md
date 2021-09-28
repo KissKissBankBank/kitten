@@ -5,9 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `DashboardLayout`: Add `overlayZIndex` prop, defaults to 100.
-- Fix: `ButtonWithTooltip`: Propagate `className` on parent.
-- Fix: `HeaderNav`: Fix `BurgerMenuNext` button state.
-- Fix: `BurgerIcon`: Modernize styles.
+
+## [4.10.1] - 2021-09-28
+
+Fixes:
+
+- `HeaderNav`: Fix `borderStyle="border"` style.
+- `ButtonWithTooltip`: Propagate `className` on parent.
+- `HeaderNav`: Fix `BurgerMenuNext` button state.
+- `BurgerIcon`: Modernize styles.
 
 ## [4.10.0] - 2021-09-27
 
