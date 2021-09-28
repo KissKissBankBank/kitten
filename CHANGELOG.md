@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `HeaderNav`: Fix `borderStyle="border"` style.
 - Fix: `HeaderNav`: Fix `BurgerMenuNext` button state.
 - Fix: `BurgerIcon`: Modernize styles.
 
