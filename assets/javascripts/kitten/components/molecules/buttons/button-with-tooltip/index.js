@@ -85,7 +85,7 @@ export const ButtonWithTooltip = ({
         {...buttonProps}
         className={classNames(
           'k-ButtonWithTooltip__button',
-          buttonProps.className,
+          buttonProps?.className,
         )}
       >
         {children}
@@ -102,7 +102,7 @@ export const ButtonWithTooltip = ({
         {...tooltipProps}
         className={classNames(
           'k-ButtonWithTooltip__container',
-          tooltipProps.className,
+          tooltipProps?.className,
         )}
       >
         <Text size="tiny" color="font1" weight="regular">
