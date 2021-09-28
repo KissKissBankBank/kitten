@@ -81,12 +81,12 @@ export const ButtonWithTooltip = ({
       )}
     >
       <Button
+        {...buttonProps}
         className={classNames(
+          buttonProps?.className,
           'k-ButtonWithTooltip__button',
-          className,
         )}
         aria-label={tooltipText}
-        {...buttonProps}
       >
         {children}
       </Button>
