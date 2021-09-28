@@ -24,11 +24,13 @@ export var ButtonWithTooltip = function ButtonWithTooltip(_ref) {
       tooltipProps = _ref.tooltipProps,
       props = _objectWithoutProperties(_ref, ["className", "children", "tooltipText", "buttonProps", "tooltipProps"]);
 
-  return /*#__PURE__*/React.createElement(StyledButtonWithTooltip, props, /*#__PURE__*/React.createElement(Button, _extends({
-    className: classNames('k-ButtonWithTooltip__button', className),
+  return /*#__PURE__*/React.createElement(StyledButtonWithTooltip, _extends({}, props, {
+    className: classNames('k-ButtonWithTooltip', className)
+  }), /*#__PURE__*/React.createElement(Button, _extends({
     "aria-label": tooltipText
-  }, buttonProps), children), /*#__PURE__*/React.createElement(ArrowContainer, _extends({
-    className: classNames('k-ButtonWithTooltip__container'),
+  }, buttonProps, {
+    className: classNames('k-ButtonWithTooltip__button', buttonProps === null || buttonProps === void 0 ? void 0 : buttonProps.className)
+  }), children), /*#__PURE__*/React.createElement(ArrowContainer, _extends({
     color: COLORS.line1,
     size: ARROW_SIZE,
     padding: 8,
@@ -36,7 +38,9 @@ export var ButtonWithTooltip = function ButtonWithTooltip(_ref) {
     position: "top",
     "aria-hidden": true,
     centered: true
-  }, tooltipProps), /*#__PURE__*/React.createElement(Text, {
+  }, tooltipProps, {
+    className: classNames('k-ButtonWithTooltip__container', tooltipProps === null || tooltipProps === void 0 ? void 0 : tooltipProps.className)
+  }), /*#__PURE__*/React.createElement(Text, {
     size: "tiny",
     color: "font1",
     weight: "regular"
