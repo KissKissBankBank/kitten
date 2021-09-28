@@ -699,18 +699,48 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 exports[`<DashboardLayout /> with Header, Toaster and Alert matches with snapshot 1`] = `
 .c1 {
   overflow: visible;
-  fill: #fff;
+  fill: var(--burgerIcon-mainColor,#222);
 }
 
 .c1:hover,
 button:hover .c1 {
-  fill: #19b4fa;
+  fill: var(--burgerIcon-hoverColor,#19b4fa);
 }
 
 .c1 rect {
   -webkit-transition: -webkit-transform 0.2s ease-out,fill 0.15s;
   -webkit-transition: transform 0.2s ease-out,fill 0.15s;
   transition: transform 0.2s ease-out,fill 0.15s;
+}
+
+.c1.k-BurgerIcon--isActive .k-BurgerIcon__bun {
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+.c1.k-BurgerIcon--isActive .k-BurgerIcon__patty {
+  -webkit-transform: translateX(-2px);
+  -ms-transform: translateX(-2px);
+  transform: translateX(-2px);
+}
+
+.c1.k-BurgerIcon--isAnimatedOnHover:hover .k-BurgerIcon__bun,
+button:hover .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__bun,
+.c1.k-BurgerIcon--isAnimatedOnHover:focus .k-BurgerIcon__bun,
+button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__bun {
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+.c1.k-BurgerIcon--isAnimatedOnHover:hover .k-BurgerIcon__patty,
+button:hover .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty,
+.c1.k-BurgerIcon--isAnimatedOnHover:focus .k-BurgerIcon__patty,
+button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
+  -webkit-transform: translateX(-2px);
+  -ms-transform: translateX(-2px);
+  transform: translateX(-2px);
 }
 
 .c0 {
@@ -1234,9 +1264,15 @@ button:hover .c1 {
           >
             <svg
               aria-label={null}
-              className="c1"
+              className="c1 k-BurgerIcon"
               height={10}
               role="img"
+              style={
+                Object {
+                  "--burgerIcon-hoverColor": "#19b4fa",
+                  "--burgerIcon-mainColor": "#fff",
+                }
+              }
               viewBox="0 0 12 10"
               width={12}
               xmlns="http://www.w3.org/2000/svg"
@@ -1303,18 +1339,48 @@ button:hover .c1 {
 exports[`<DashboardLayout /> with default props matches with snapshot 1`] = `
 .c1 {
   overflow: visible;
-  fill: #fff;
+  fill: var(--burgerIcon-mainColor,#222);
 }
 
 .c1:hover,
 button:hover .c1 {
-  fill: #19b4fa;
+  fill: var(--burgerIcon-hoverColor,#19b4fa);
 }
 
 .c1 rect {
   -webkit-transition: -webkit-transform 0.2s ease-out,fill 0.15s;
   -webkit-transition: transform 0.2s ease-out,fill 0.15s;
   transition: transform 0.2s ease-out,fill 0.15s;
+}
+
+.c1.k-BurgerIcon--isActive .k-BurgerIcon__bun {
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+.c1.k-BurgerIcon--isActive .k-BurgerIcon__patty {
+  -webkit-transform: translateX(-2px);
+  -ms-transform: translateX(-2px);
+  transform: translateX(-2px);
+}
+
+.c1.k-BurgerIcon--isAnimatedOnHover:hover .k-BurgerIcon__bun,
+button:hover .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__bun,
+.c1.k-BurgerIcon--isAnimatedOnHover:focus .k-BurgerIcon__bun,
+button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__bun {
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+.c1.k-BurgerIcon--isAnimatedOnHover:hover .k-BurgerIcon__patty,
+button:hover .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty,
+.c1.k-BurgerIcon--isAnimatedOnHover:focus .k-BurgerIcon__patty,
+button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
+  -webkit-transform: translateX(-2px);
+  -ms-transform: translateX(-2px);
+  transform: translateX(-2px);
 }
 
 .c0 {
@@ -1833,9 +1899,15 @@ button:hover .c1 {
           >
             <svg
               aria-label={null}
-              className="c1"
+              className="c1 k-BurgerIcon"
               height={10}
               role="img"
+              style={
+                Object {
+                  "--burgerIcon-hoverColor": "#19b4fa",
+                  "--burgerIcon-mainColor": "#fff",
+                }
+              }
               viewBox="0 0 12 10"
               width={12}
               xmlns="http://www.w3.org/2000/svg"
