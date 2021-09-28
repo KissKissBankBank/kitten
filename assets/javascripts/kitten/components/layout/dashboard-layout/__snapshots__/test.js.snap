@@ -1064,7 +1064,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
     background-color: #fff;
     opacity: 0;
     pointer-events: none;
-    z-index: 100;
+    z-index: var(--DashboardLayout-overlay-zindex,100);
     -webkit-transition: background-color 0.2s ease-in-out,opacity 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out,opacity 0.2s ease-in-out;
   }
@@ -1196,6 +1196,11 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   </a>
   <div
     className="k-DashboardLayout"
+    style={
+      Object {
+        "--DashboardLayout-overlay-zindex": 100,
+      }
+    }
   >
     <div
       aria-hidden={true}
@@ -1704,7 +1709,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
     background-color: #fff;
     opacity: 0;
     pointer-events: none;
-    z-index: 100;
+    z-index: var(--DashboardLayout-overlay-zindex,100);
     -webkit-transition: background-color 0.2s ease-in-out,opacity 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out,opacity 0.2s ease-in-out;
   }
@@ -1831,6 +1836,11 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   </a>
   <div
     className="k-DashboardLayout"
+    style={
+      Object {
+        "--DashboardLayout-overlay-zindex": 133,
+      }
+    }
   >
     <div
       aria-hidden={true}
