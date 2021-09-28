@@ -81,18 +81,17 @@ export const ButtonWithTooltip = ({
       )}
     >
       <Button
+        aria-label={tooltipText}
         {...buttonProps}
         className={classNames(
-          buttonProps?.className,
           'k-ButtonWithTooltip__button',
+          buttonProps.className,
         )}
-        aria-label={tooltipText}
       >
         {children}
       </Button>
 
       <ArrowContainer
-        className={classNames('k-ButtonWithTooltip__container')}
         color={COLORS.line1}
         size={ARROW_SIZE}
         padding={8}
@@ -101,6 +100,10 @@ export const ButtonWithTooltip = ({
         aria-hidden
         centered
         {...tooltipProps}
+        className={classNames(
+          'k-ButtonWithTooltip__container',
+          tooltipProps.className,
+        )}
       >
         <Text size="tiny" color="font1" weight="regular">
           {tooltipText}
