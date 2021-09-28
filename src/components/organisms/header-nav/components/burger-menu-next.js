@@ -59,13 +59,8 @@ var BurgerMenuNext = function BurgerMenuNext(_ref) {
     className: (0, _classnames.default)(className, dropdownProps.className)
   }), /*#__PURE__*/_react.default.createElement(_dropdownButton.DropdownButton, (0, _extends2.default)({}, buttonProps, {
     className: (0, _classnames.default)(buttonProps.className, 'k-HeaderNav__BurgerMenu__button', 'k-ButtonIcon', 'k-ButtonIcon--tiny')
-  }), isDropdownExpanded ? /*#__PURE__*/_react.default.createElement(_burgerIcon.BurgerIcon, {
-    isActive: true,
-    hoverColor: _colorsConfig.default.font1,
-    className: "k-ButtonIcon__svg",
-    "aria-hidden": "true"
-  }) : /*#__PURE__*/_react.default.createElement(_burgerIcon.BurgerIcon, {
-    isAnimatedOnHover: true,
+  }), /*#__PURE__*/_react.default.createElement(_burgerIcon.BurgerIcon, {
+    isActive: isDropdownExpanded,
     hoverColor: _colorsConfig.default.font1,
     className: "k-ButtonIcon__svg",
     "aria-hidden": "true"

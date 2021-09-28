@@ -47,11 +47,13 @@ var ButtonWithTooltip = function ButtonWithTooltip(_ref) {
       buttonProps = _ref.buttonProps,
       tooltipProps = _ref.tooltipProps,
       props = (0, _objectWithoutProperties2.default)(_ref, ["className", "children", "tooltipText", "buttonProps", "tooltipProps"]);
-  return /*#__PURE__*/_react.default.createElement(StyledButtonWithTooltip, props, /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-ButtonWithTooltip__button', className),
+  return /*#__PURE__*/_react.default.createElement(StyledButtonWithTooltip, (0, _extends2.default)({}, props, {
+    className: (0, _classnames.default)('k-ButtonWithTooltip', className)
+  }), /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
     "aria-label": tooltipText
-  }, buttonProps), children), /*#__PURE__*/_react.default.createElement(_arrowContainer.ArrowContainer, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-ButtonWithTooltip__container'),
+  }, buttonProps, {
+    className: (0, _classnames.default)('k-ButtonWithTooltip__button', buttonProps === null || buttonProps === void 0 ? void 0 : buttonProps.className)
+  }), children), /*#__PURE__*/_react.default.createElement(_arrowContainer.ArrowContainer, (0, _extends2.default)({
     color: _colorsConfig.default.line1,
     size: ARROW_SIZE,
     padding: 8,
@@ -59,7 +61,9 @@ var ButtonWithTooltip = function ButtonWithTooltip(_ref) {
     position: "top",
     "aria-hidden": true,
     centered: true
-  }, tooltipProps), /*#__PURE__*/_react.default.createElement(_text.Text, {
+  }, tooltipProps, {
+    className: (0, _classnames.default)('k-ButtonWithTooltip__container', tooltipProps === null || tooltipProps === void 0 ? void 0 : tooltipProps.className)
+  }), /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "tiny",
     color: "font1",
     weight: "regular"
