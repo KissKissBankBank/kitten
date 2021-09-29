@@ -387,7 +387,13 @@ export const StyledHeader = styled.header`
 
     .k-HeaderNav__UserMenuButton {
       padding: 0 ${pxToRem(15)};
+     
+      &.k-Dropdown__button,
+      &.k-HeaderNav__Button {
+        min-width: ${pxToRem(40)};
+      }
     }
+    
     .k-HeaderNav-nav__item {
       padding: 0 ${pxToRem(15)};
     }
