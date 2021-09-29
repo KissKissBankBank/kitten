@@ -49,7 +49,10 @@ var DashboardLayout = function DashboardLayout(_ref) {
       buttonProps = _ref.buttonProps,
       quickAccessLinkText = _ref.quickAccessLinkText,
       fullHeightContent = _ref.fullHeightContent,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent"]);
+      _ref$overlayZIndex = _ref.overlayZIndex,
+      overlayZIndex = _ref$overlayZIndex === void 0 ? 100 : _ref$overlayZIndex,
+      style = _ref.style,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent", "overlayZIndex", "style"]);
 
   var _useState = (0, _react.useState)(false),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -185,6 +188,9 @@ var DashboardLayout = function DashboardLayout(_ref) {
   }, quickAccessLinkText), /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('k-DashboardLayout', props.className, {
       'k-DashboardLayout--isOpen': isOpen
+    }),
+    style: (0, _extends2.default)({}, style, {
+      '--DashboardLayout-overlay-zindex': overlayZIndex
     })
   }, /*#__PURE__*/_react.default.createElement("div", {
     ref: sideBarElement,
@@ -325,7 +331,8 @@ DashboardLayout.propTypes = {
     closeLabel: _propTypes.default.node.isRequired
   }),
   quickAccessLinkText: _propTypes.default.node.isRequired,
-  fullHeightContent: _propTypes.default.bool
+  fullHeightContent: _propTypes.default.bool,
+  overlayZIndex: _propTypes.default.number
 };
 Header.propTypes = {
   buttonProps: _propTypes.default.shape({

@@ -4,8 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `DashboardLayout`: Add `overlayZIndex` prop, defaults to 100.
-- Fix: `HeaderNav`: Various fixes.
+## [4.11.0] - 2021-09-29
+
+Feature: 
+
+- `DashboardLayout`: Add `overlayZIndex` prop, defaults to 100.
+
+Fix:
+
+- `HeaderNav`: Various fixes.
 
 ## [4.10.1] - 2021-09-28
 
