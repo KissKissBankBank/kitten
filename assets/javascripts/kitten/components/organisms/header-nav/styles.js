@@ -187,18 +187,18 @@ export const StyledHeader = styled.header`
     flex-grow: 1;
 
     &.k-HeaderNav__right--padded {
-      padding-right: ${pxToRem(10)};
+      padding-right: ${pxToRem(20)};
       gap: ${pxToRem(10)};
 
       .k-HeaderNav__Button:last-child {
         margin-right: ${pxToRem(-10)};
       }
       @media (min-width: ${ScreenConfig.S.min}px) {
-        padding-right: ${pxToRem(15)};
+        padding-right: ${pxToRem(10)};
         gap: ${pxToRem(15)};
 
         .k-HeaderNav__Button:last-child {
-          margin-right: ${pxToRem(-15)};
+          margin-right: ${pxToRem(-10)};
         }
       }
     }
@@ -394,7 +394,7 @@ export const StyledHeader = styled.header`
 
     .k-Dropdown__button,
     .k-HeaderNav__Button {
-      min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+      min-width: ${pxToRem(52)};
       cursor: pointer;
     }
 
@@ -404,7 +404,7 @@ export const StyledHeader = styled.header`
           margin-left: ${pxToRem(15)};
         }
         &:last-child {
-          margin-right: ${pxToRem(15)};
+          margin-right: ${pxToRem(10)};
         }
       }
     }
