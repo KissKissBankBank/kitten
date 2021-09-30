@@ -28,7 +28,7 @@ export const StyledList = styled.ul`
     height: ${pxToRem(50)};
     box-sizing: border-box;
 
-    padding: ${pxToRem(18)} ${pxToRem(30)} ${pxToRem(18)};
+    padding: ${pxToRem(18)} ${pxToRem(20)} ${pxToRem(18)};
 
     background-color: ${COLORS.background1};
 

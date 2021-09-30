@@ -24,7 +24,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   border: none;
   height: 3.125rem;
   box-sizing: border-box;
-  padding: 1.125rem 1.875rem 1.125rem;
+  padding: 1.125rem 1.25rem 1.125rem;
   background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -467,7 +467,7 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   border: none;
   height: 3.125rem;
   box-sizing: border-box;
-  padding: 1.125rem 1.875rem 1.125rem;
+  padding: 1.125rem 1.25rem 1.125rem;
   background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -877,7 +877,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   border: none;
   height: 3.125rem;
   box-sizing: border-box;
-  padding: 1.125rem 1.875rem 1.125rem;
+  padding: 1.125rem 1.25rem 1.125rem;
   background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -1150,7 +1150,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   border: none;
   height: 3.125rem;
   box-sizing: border-box;
-  padding: 1.125rem 1.875rem 1.125rem;
+  padding: 1.125rem 1.25rem 1.125rem;
   background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -1401,7 +1401,7 @@ exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
   border: none;
   height: 3.125rem;
   box-sizing: border-box;
-  padding: 1.125rem 1.875rem 1.125rem;
+  padding: 1.125rem 1.25rem 1.125rem;
   background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -1652,7 +1652,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   border: none;
   height: 3.125rem;
   box-sizing: border-box;
-  padding: 1.125rem 1.875rem 1.125rem;
+  padding: 1.125rem 1.25rem 1.125rem;
   background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
