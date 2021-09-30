@@ -112,6 +112,18 @@ var modifierStyles = function modifierStyles(modifier) {
       activeColor = _colorsConfig.default.background1;
       break;
 
+    case 'calcium':
+      borderColor = _colorsConfig.default.line1;
+      backgroundColor = _colorsConfig.default.background1;
+      color = _colorsConfig.default.font1;
+      hoverBorderColor = _colorsConfig.default.primary4;
+      hoverBgColor = _colorsConfig.default.background1;
+      hoverColor = _colorsConfig.default.font1;
+      activeBorderColor = _colorsConfig.default.primary1;
+      activeBgColor = _colorsConfig.default.primary5;
+      activeColor = _colorsConfig.default.font1;
+      break;
+
     /* Social modifiers */
 
     case 'social_facebook':

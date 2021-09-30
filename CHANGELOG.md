@@ -4,13 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `ListTable`: Fix `isHightlighted` prop style.
-- Fix: `DashboardLayout`: Fix styles.
-- Fix: `FilterIcon`: Remove console warning.
-- Feature: `Button`: Add `calcium` modifier prop.
-- Fix: `AvatarWithTextAndBadge`: Improve margin styles.
-- Fix: `HeaderMenu.item`: Fix `margin-right` style.
-- Fix: `HeaderNav.UserMenuNext.Button`: Fix `min-width` style.
+## [4.12.0] - 2021-09-30
+
+Feature:
+
+- `Button`: Add `calcium` modifier prop.
+
+Fixes:
+
+- `ListTable`: Fix `isHightlighted` prop style.
+- `DashboardLayout`: Fix styles.
+- `FilterIcon`: Remove console warning.
+- `AvatarWithTextAndBadge`: Improve margin styles.
+- `HeaderMenu.item`: Fix `margin-right` style.
+- `HeaderNav.UserMenuNext.Button`: Fix `min-width` style.
 
 ## [4.11.0] - 2021-09-29
 
