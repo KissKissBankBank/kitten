@@ -9,12 +9,9 @@ import {
   ScreenConfig,
   VisuallyHidden,
   pxToRem,
-  stepToRem,
-  ArrowIcon,
   COLORS,
   TYPOGRAPHY,
   CONTAINER_PADDING_THIN,
-  CONTAINER_PADDING,
   StatusWithBullet,
   Checkbox,
   DropdownSelect,
@@ -107,8 +104,8 @@ const StyledListTable = styled(ListTable)`
       display: none;
     }
     @media (min-width: ${ScreenConfig.L.min}px) {
-      flex-basis: calc(var(--ContributionsTable-variableWidth) * 0.40);
-      width: calc(var(--ContributionsTable-variableWidth) * 0.40);
+      flex-basis: calc(var(--ContributionsTable-variableWidth) * 0.4);
+      width: calc(var(--ContributionsTable-variableWidth) * 0.4);
     }
   }
 
@@ -126,8 +123,8 @@ const StyledListTable = styled(ListTable)`
       width: ${pxToRem(60)};
     }
     @media (min-width: ${ScreenConfig.L.min}px) {
-      flex-basis: calc(var(--ContributionsTable-variableWidth) * 0.20);
-      width: calc(var(--ContributionsTable-variableWidth) * 0.20);
+      flex-basis: calc(var(--ContributionsTable-variableWidth) * 0.2);
+      width: calc(var(--ContributionsTable-variableWidth) * 0.2);
     }
   }
 
@@ -212,7 +209,7 @@ const Row = () => {
           <button>Voir plus d'informations sur cette contribution</button>
         </VisuallyHidden>
         <Checkbox
-          onChange={(e) => setHighlight(e.target.checked)}
+          onChange={e => setHighlight(e.target.checked)}
           variant="orion"
           aria-label="Sélectionner toutes les contributions de la liste"
         />
@@ -224,10 +221,23 @@ const Row = () => {
             <time dateTime="2019-09-12">12/09/2019</time>
           </Text>
           <br />
-          <Text size="micro" className="k-u-hidden@m-down" lineHeight="1">#88888888</Text>
-          <Text size="micro" className="k-u-hidden@l-up" lineHeight="1">Prénom NOM</Text>
-          <br/>
-          <Text size="micro" weight="regular" lineHeight="1" as="a" href="#" className="k-u-link k-u-link-primary1">Détails</Text>
+          <Text size="micro" className="k-u-hidden@m-down" lineHeight="1">
+            #88888888
+          </Text>
+          <Text size="micro" className="k-u-hidden@l-up" lineHeight="1">
+            Prénom NOM
+          </Text>
+          <br />
+          <Text
+            size="micro"
+            weight="regular"
+            lineHeight="1"
+            as="a"
+            href="#"
+            className="k-u-link k-u-link-primary1"
+          >
+            Détails
+          </Text>
         </div>
       </ListTable.Col>
 
@@ -235,26 +245,43 @@ const Row = () => {
         <div>
           <Text weight="bold">Prénom Nom</Text>
           <br />
-          <Text size="micro" weight="light">Prenom-Nom</Text>
+          <Text size="micro" weight="light">
+            Prenom-Nom
+          </Text>
         </div>
       </ListTable.Col>
 
-      <ListTable.Col className="customCol_3"><Text size="tiny" weight="regular">72&nbsp;€</Text></ListTable.Col>
+      <ListTable.Col className="customCol_3">
+        <Text size="tiny" weight="regular">
+          72&nbsp;€
+        </Text>
+      </ListTable.Col>
 
       <ListTable.Col className="customCol_4">
         <StatusWithBullet statusType="success">Valid</StatusWithBullet>
       </ListTable.Col>
 
-      <ListTable.Col className="customCol_5"><Text size="tiny" weight="regular">Livraison</Text></ListTable.Col>
+      <ListTable.Col className="customCol_5">
+        <Text size="tiny" weight="regular">
+          Livraison
+        </Text>
+      </ListTable.Col>
 
       <ListTable.Col className="customCol_6">
-        <DropdownSelect id="DropdownSelect_1" hideLabel labelText="Sélectionnez le statut de livraison" options={[{label: 'À expédier', value: 1}, {label: 'Expédié', value: 2}]} variant="orion" />
+        <DropdownSelect
+          id="DropdownSelect_1"
+          hideLabel
+          labelText="Sélectionnez le statut de livraison"
+          options={[
+            { label: 'À expédier', value: 1 },
+            { label: 'Expédié', value: 2 },
+          ]}
+          variant="orion"
+        />
       </ListTable.Col>
     </ListTable.Row>
-
   )
 }
-
 
 export const StoryWithTable = () => {
   const [isOpen, setOpen] = useState(false)
@@ -273,10 +300,11 @@ export const StoryWithTable = () => {
         </Title>
       </div>
 
-      <StyledListTable id="CustomListTable" className="k-DashboardLayout__fullWidth">
-        <ListTable.Header
-          className="k-u-weight-regular"
-        >
+      <StyledListTable
+        id="CustomListTable"
+        className="k-DashboardLayout__fullWidth"
+      >
+        <ListTable.Header className="k-u-weight-regular">
           <ListTable.Col className="customCol_0">
             <VisuallyHidden>Sélection</VisuallyHidden>
             <Checkbox
@@ -286,29 +314,56 @@ export const StoryWithTable = () => {
           </ListTable.Col>
 
           <ListTable.Col className="customCol_1">
-            <Text weight="regular" color="font1" size="tiny" className="k-u-hidden@s-down k-u-hidden@m">
+            <Text
+              weight="regular"
+              color="font1"
+              size="tiny"
+              className="k-u-hidden@s-down k-u-hidden@m"
+            >
               Date
             </Text>
-            <Text weight="regular" color="font1" size="tiny" className="k-u-hidden@l-up">Contributeur</Text>
+            <Text
+              weight="regular"
+              color="font1"
+              size="tiny"
+              className="k-u-hidden@l-up"
+            >
+              Contributeur
+            </Text>
           </ListTable.Col>
 
-          <ListTable.Col className="customCol_2"><Text weight="regular" color="font1" size="tiny">Contributeur</Text></ListTable.Col>
+          <ListTable.Col className="customCol_2">
+            <Text weight="regular" color="font1" size="tiny">
+              Contributeur
+            </Text>
+          </ListTable.Col>
 
-          <ListTable.Col className="customCol_3"><Text weight="regular" color="font1" size="tiny">Montant</Text></ListTable.Col>
+          <ListTable.Col className="customCol_3">
+            <Text weight="regular" color="font1" size="tiny">
+              Montant
+            </Text>
+          </ListTable.Col>
 
           <ListTable.Col className="customCol_4">
-            <Text weight="regular" color="font1" size="tiny">Statut</Text>
+            <Text weight="regular" color="font1" size="tiny">
+              Statut
+            </Text>
           </ListTable.Col>
 
-          <ListTable.Col className="customCol_5"><Text weight="regular" color="font1" size="tiny">Mode de livraison</Text></ListTable.Col>
+          <ListTable.Col className="customCol_5">
+            <Text weight="regular" color="font1" size="tiny">
+              Mode de livraison
+            </Text>
+          </ListTable.Col>
 
           <ListTable.Col className="customCol_6">
-            <Text weight="regular" color="font1" size="tiny">Statut livraison</Text>
+            <Text weight="regular" color="font1" size="tiny">
+              Statut livraison
+            </Text>
           </ListTable.Col>
         </ListTable.Header>
 
         <ListTable.Body>
-
           <Row />
           <Row />
           <Row />
@@ -318,16 +373,26 @@ export const StoryWithTable = () => {
           <Row />
           <Row />
           <Row />
-
         </ListTable.Body>
       </StyledListTable>
 
       <DashboardLayout.Toaster isOpen={isOpen}>
-        <FlexWrapper gap={10} direction="row" className="k-u-flex-alignItems-center">
-          <div style={{flex: '1 0 auto'}} className="k-u-hidden@xs-down">
-            <Text color="background1" size="tiny" weight="regular">Text</Text>
+        <FlexWrapper
+          gap={10}
+          direction="row"
+          className="k-u-flex-alignItems-center"
+        >
+          <div style={{ flex: '1 0 auto' }} className="k-u-hidden@xs-down">
+            <Text color="background1" size="tiny" weight="regular">
+              Text
+            </Text>
           </div>
-          <Button modifier="boron" variant="orion" size="tiny" className="k-u-hidden@m-down">
+          <Button
+            modifier="boron"
+            variant="orion"
+            size="tiny"
+            className="k-u-hidden@m-down"
+          >
             Hello
           </Button>
           <Button modifier="helium" variant="orion" size="tiny">

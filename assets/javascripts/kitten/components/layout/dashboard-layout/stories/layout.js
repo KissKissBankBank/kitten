@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 import {
   DashboardLayout,
@@ -136,7 +136,6 @@ const SiteHeaderComponent = () => {
   )
 }
 
-
 export const StoryLayout = ({
   flowProps,
   status,
@@ -188,7 +187,7 @@ export const StoryLayout = ({
         </AvatarWithTextAndBadge>
       </DashboardLayout.Header>
       <DashboardLayout.SideContent>
-        {(props) => <StoryMenu {...props} />}
+        {props => <StoryMenu {...props} />}
       </DashboardLayout.SideContent>
       <DashboardLayout.SideFooter>
         <Button modifier="boron" fluid variant="orion">

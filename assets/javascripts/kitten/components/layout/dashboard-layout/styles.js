@@ -90,7 +90,8 @@ export const StyledDashboard = styled.div`
     padding: ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(40)};
     background: ${COLORS.background1};
     opacity: 0;
-    transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), bottom 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), left 0.3s ease-in-out;
+    transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+      bottom 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), left 0.3s ease-in-out;
 
     & + .k-DashboardLayout__toaster__spacer {
       max-height: 0;
@@ -108,7 +109,7 @@ export const StyledDashboard = styled.div`
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       width: 100%;
@@ -135,7 +136,9 @@ export const StyledDashboard = styled.div`
       --DashboardLayout-side-width: calc(${SIX_COLS});
 
       width: calc(${SIX_COLS} + 100vw);
-      grid-template-columns: var(--DashboardLayout-side-width) calc(100vw + ${pxToRem(2)});
+      grid-template-columns: var(--DashboardLayout-side-width) calc(
+          100vw + ${pxToRem(2)}
+        );
       left: calc(-1 * ${SIX_COLS} - ${pxToRem(2)});
       position: absolute;
       transition: left 0.3s ease-in-out;

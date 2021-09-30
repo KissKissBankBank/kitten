@@ -67,22 +67,13 @@ export const StoryMenu = ({ closeSideBar }) => (
       title="Admin"
       icon={() => <ShieldIcon color="currentColor" />}
     >
-      <DashboardMenu.Item
-        href="#"
-        onClick={() => closeSideBar()}
-      >
+      <DashboardMenu.Item href="#" onClick={() => closeSideBar()}>
         Destinataire des fonds
       </DashboardMenu.Item>
-      <DashboardMenu.Item
-        href="#"
-        onClick={() => closeSideBar()}
-      >
+      <DashboardMenu.Item href="#" onClick={() => closeSideBar()}>
         Confirmation d'identité
       </DashboardMenu.Item>
-      <DashboardMenu.Item
-        href="#"
-        onClick={() => closeSideBar()}
-      >
+      <DashboardMenu.Item href="#" onClick={() => closeSideBar()}>
         Documents justificatifs
       </DashboardMenu.Item>
     </DashboardMenu.Expandable>

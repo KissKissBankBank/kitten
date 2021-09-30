@@ -66,9 +66,7 @@ describe('<DashboardLayout />', () => {
             <DashboardLayout.Alerts>Alert!</DashboardLayout.Alerts>
 
             <p>Main content</p>
-            <DashboardLayout.Toaster>
-              Toaster
-            </DashboardLayout.Toaster>
+            <DashboardLayout.Toaster>Toaster</DashboardLayout.Toaster>
           </DashboardLayout>,
         )
         .toJSON()

@@ -1,49 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import { DashboardLayout } from './index'
-
-import {
-  AvatarWithTextAndBadge,
-  Text,
-  Title,
-  Button,
-  GlobeIcon,
-  COLORS,
-  pxToRem,
-  ScreenConfig,
-  StatusWithBullet,
-  DashboardMenu,
-  HomeIcon,
-  TagIcon,
-  FilterIcon,
-  FileIcon,
-  LoudspeakerIcon,
-  ShieldIcon,
-  PeopleIcon,
-  StatsIcon,
-  SpeechBubbleIcon,
-  HeaderNav,
-  HeaderMenu,
-  KissKissBankBankLogo,
-  domElementHelper,
-  PasswordIcon,
-  DropdownSelectWithInput,
-  FacebookIcon,
-  TwitterIcon,
-  LinkedinIcon,
-  InstagramIcon,
-  YoutubeIcon,
-  Alert,
-  useWindowWidth,
-  useDeepCompareEffect,
-  TextCopy,
-  FlexWrapper,
-  RewardSummaryCard,
-  useRewardSummaryCardResizeObserver,
-  DropdownMenu,
-  EllipsisIcon,
-} from 'kitten'
 
 import { StoryLayout } from './stories/layout'
 import { StoryWithTable } from './stories/with-table'
@@ -153,8 +111,7 @@ export const WithRewardContent = args => {
   )
 }
 
-
-export const WithFlowContent = ({ flowProps, ...args}) => {
+export const WithFlowContent = ({ flowProps, ...args }) => {
   return (
     <StoryLayout {...args}>
       <StoryWithFlow {...flowProps} />
@@ -167,9 +124,9 @@ const FlowStoryContainer = styled.div`
   margin: 0 auto;
 `
 
-export const SubcomponentFlow = (args) => (
+export const SubcomponentFlow = args => (
   <FlowStoryContainer>
-    <StoryWithFlow {...args}/>
+    <StoryWithFlow {...args} />
   </FlowStoryContainer>
 )
 
