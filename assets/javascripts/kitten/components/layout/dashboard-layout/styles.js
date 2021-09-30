@@ -84,31 +84,32 @@ export const StyledDashboard = styled.div`
 
   .k-DashboardLayout__toaster__wrapper {
     position: fixed;
-    width: calc(100% - var(--DashboardLayout-side-width));
     right: 0;
-    top: 100vh;
+    left: 0;
+    bottom: ${pxToRem(-120)};
     padding: ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(40)};
     background: ${COLORS.background1};
     opacity: 0;
-    transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), top 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+      bottom 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), left 0.3s ease-in-out;
 
     & + .k-DashboardLayout__toaster__spacer {
       max-height: 0;
-      height: ${pxToRem(140)};
+      height: ${pxToRem(100)};
       transition: max-height 0.4s ease;
     }
 
     &.k-DashboardLayout__toaster--isOpen {
-      top: calc(100vh - ${pxToRem(120)});
+      bottom: ${pxToRem(-20)};
       opacity: 1;
 
       & + .k-DashboardLayout__toaster__spacer {
-        max-height: ${pxToRem(140)};
+        max-height: ${pxToRem(100)};
       }
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       width: 100%;
@@ -125,7 +126,7 @@ export const StyledDashboard = styled.div`
   /* TABLET + MOBILE */
 
   @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 
     .k-DashboardLayout {
@@ -135,9 +136,12 @@ export const StyledDashboard = styled.div`
       --DashboardLayout-side-width: calc(${SIX_COLS});
 
       width: calc(${SIX_COLS} + 100vw);
-      grid-template-columns: var(--DashboardLayout-side-width) calc(100vw + ${pxToRem(2)});
-      transform: translateX(calc(-1 * ${SIX_COLS} - ${pxToRem(2)}));
-      transition: transform 0.3s ease-in-out;
+      grid-template-columns: var(--DashboardLayout-side-width) calc(
+          100vw + ${pxToRem(2)}
+        );
+      left: calc(-1 * ${SIX_COLS} - ${pxToRem(2)});
+      position: absolute;
+      transition: left 0.3s ease-in-out;
 
       .k-DashboardLayout__heading__button__text {
         clip: rect(0 0 0 0);
@@ -151,13 +155,17 @@ export const StyledDashboard = styled.div`
 
       &.k-DashboardLayout--isOpen {
         position: fixed;
-        transform: none;
-        transition: transform 0.3s ease-in-out;
+        left: 0;
+        transition: left 0.3s ease-in-out;
 
         .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before {
           opacity: 0.8;
           background-color: ${COLORS.font1};
           pointer-events: all;
+        }
+
+        .k-DashboardLayout__toaster__wrapper {
+          left: calc(${SIX_COLS} - ${pxToRem(2)});
         }
       }
 
@@ -248,6 +256,7 @@ export const StyledDashboard = styled.div`
 
       .k-DashboardLayout__toaster__wrapper {
         right: ${pxToRem(-2)};
+        width: 100vw;
       }
     }
   }
@@ -263,7 +272,13 @@ export const StyledDashboard = styled.div`
       grid-template-columns: var(--DashboardLayout-side-width) calc(
           100vw + ${pxToRem(2)}
         );
-      transform: translateX(calc(-100vw + ${pxToRem(50 - 2)}));
+      left: calc(-100vw + ${pxToRem(50 - 2)});
+
+      &.k-DashboardLayout--isOpen {
+        .k-DashboardLayout__toaster__wrapper {
+          left: calc(100vw - ${pxToRem(50 - 2)});
+        }
+      }
 
       .k-DashboardLayout__sideWrapper {
         padding: ${pxToRem(20)};
@@ -343,6 +358,10 @@ export const StyledDashboard = styled.div`
           }
         }
       }
+    }
+    .k-DashboardLayout__toaster__wrapper {
+      width: calc(100% - var(--DashboardLayout-side-width));
+      left: initial;
     }
   }
 

@@ -339,7 +339,6 @@ const Alerts = ({ className, ...props }) => (
 )
 
 const Toaster = ({ className, isOpen, children, ...props }) => {
-
   return (
     <>
       <div
@@ -349,20 +348,17 @@ const Toaster = ({ className, isOpen, children, ...props }) => {
           className,
           {
             'k-DashboardLayout__toaster--isOpen': isOpen,
-          }
+          },
         )}
         aria-live="polite"
         {...props}
       >
-        <div className="k-DashboardLayout__toaster">
-          {children}
-        </div>
+        <div className="k-DashboardLayout__toaster">{children}</div>
       </div>
       <div className="k-DashboardLayout__toaster__spacer" />
     </>
   )
 }
-
 
 DashboardLayout.propTypes = {
   backLinkProps: PropTypes.object,

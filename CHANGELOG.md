@@ -4,14 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `ListTable`: Fix `isHightlighted` prop style.
+- Fix: `DashboardLayout`: Fix styles.
+- Fix: `FilterIcon`: Remove console warning.
 - Feature: `Button`: Add `calcium` modifier prop.
 - Fix: `AvatarWithTextAndBadge`: Improve margin styles.
 - Fix: `HeaderMenu.item`: Fix `margin-right` style.
-- Fix: `HeaderNav.UserMenuNext.Button`: Fix `min-width` style. 
+- Fix: `HeaderNav.UserMenuNext.Button`: Fix `min-width` style.
 
 ## [4.11.0] - 2021-09-29
 
-Feature: 
+Feature:
 
 - `DashboardLayout`: Add `overlayZIndex` prop, defaults to 100.
 
@@ -38,7 +41,6 @@ Features:
 Fix:
 
 - `HeaderNav`: Various fixes.
-
 
 ## [4.9.0] - 2021-09-24
 
