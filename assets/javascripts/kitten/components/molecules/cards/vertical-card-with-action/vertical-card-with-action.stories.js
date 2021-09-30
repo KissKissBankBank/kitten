@@ -32,6 +32,7 @@ export default {
         'boron',
         'neon',
         'iron',
+        'calcium',
       ],
     },
     buttonProps: { control: 'object' },
