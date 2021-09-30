@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Button`: Add `calcium` modifier prop.
 - Fix: `AvatarWithTextAndBadge`: Improve margin styles.
 - Fix: `HeaderMenu.item`: Fix `margin-right` style.
 - Fix: `HeaderNav.UserMenuNext.Button`: Fix `min-width` style. 
