@@ -6,7 +6,6 @@ import {
   DashboardLayout,
   FlexWrapper,
   Text,
-  ScreenConfig,
   VisuallyHidden,
   pxToRem,
   COLORS,
@@ -17,6 +16,7 @@ import {
   DropdownSelect,
   ListTable,
   MOBILE_HEADER_HEIGHT,
+  mq,
 } from 'kitten'
 
 const StyledListTable = styled(ListTable)`
@@ -35,7 +35,7 @@ const StyledListTable = styled(ListTable)`
     color: ${COLORS.font1};
     top: ${pxToRem(MOBILE_HEADER_HEIGHT)};
 
-    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+    @media ${mq.mobileAndTablet} {
       top: 0;
     }
   }
@@ -56,7 +56,7 @@ const StyledListTable = styled(ListTable)`
     max-width: initial;
     padding-left: 0;
 
-    @media (max-width: ${ScreenConfig.XS.max}px) {
+    @media ${mq.mobile} {
       padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
     }
   }
@@ -67,14 +67,14 @@ const StyledListTable = styled(ListTable)`
     justify-content: flex-end;
     padding-right: ${pxToRem(10)};
 
-    @media (max-width: ${ScreenConfig.M.max}px) {
+    @media ${mq.mobileAndTablet} {
       flex-basis: ${pxToRem(20)};
       width: ${pxToRem(20)};
     }
-    @media (min-width: ${ScreenConfig.S.min}px) and  (max-width: ${ScreenConfig.M.max}px){
+    @media ${mq.tablet} {
       margin-left: var(--DashboardLayout-main-margin);
     }
-    @media (min-width: ${ScreenConfig.L.min}px) {
+    @media ${mq.desktop} {
       flex-basis: var(--DashboardLayout-main-margin);
       width: var(--DashboardLayout-main-margin);
     }
@@ -86,11 +86,12 @@ const StyledListTable = styled(ListTable)`
     position: relative;
     padding-left: 0;
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
+
+    @media ${mq.tabletAndDesktop} {
       flex-basis: calc(44% - ${pxToRem(170 + 60)});
       width: calc(44% - ${pxToRem(170 + 60)});
     }
-    @media (min-width: ${ScreenConfig.L.min}px) {
+    @media ${mq.desktop} {
       flex-basis: calc(var(--ContributionsTable-variableWidth) * 0.3);
       width: calc(var(--ContributionsTable-variableWidth) * 0.3);
     }
@@ -100,10 +101,10 @@ const StyledListTable = styled(ListTable)`
     flex-grow: 1;
     flex-shrink: 0;
     position: relative;
-    @media (max-width: ${ScreenConfig.M.max}px) {
+    @media ${mq.mobileAndTablet} {
       display: none;
     }
-    @media (min-width: ${ScreenConfig.L.min}px) {
+    @media ${mq.desktop} {
       flex-basis: calc(var(--ContributionsTable-variableWidth) * 0.4);
       width: calc(var(--ContributionsTable-variableWidth) * 0.4);
     }
@@ -118,11 +119,11 @@ const StyledListTable = styled(ListTable)`
     width: ${pxToRem(90)};
     min-width: ${pxToRem(60)};
 
-    @media (max-width: ${ScreenConfig.XS.max}px) {
+    @media ${mq.mobile} {
       flex-basis: ${pxToRem(60)};
       width: ${pxToRem(60)};
     }
-    @media (min-width: ${ScreenConfig.L.min}px) {
+    @media ${mq.desktop} {
       flex-basis: calc(var(--ContributionsTable-variableWidth) * 0.2);
       width: calc(var(--ContributionsTable-variableWidth) * 0.2);
     }
@@ -131,7 +132,7 @@ const StyledListTable = styled(ListTable)`
   .customCol_4 {
     flex-grow: 1;
     flex-shrink: 0;
-    @media (max-width: ${ScreenConfig.XS.max}px) {
+    @media ${mq.mobile} {
       flex-basis: ${pxToRem(40)};
       width: ${pxToRem(40)};
 
@@ -152,11 +153,11 @@ const StyledListTable = styled(ListTable)`
         width: 1px;
       }
     }
-    @media (min-width: ${ScreenConfig.M.min}px) {
+    @media ${mq.tabletAndDesktop} {
       flex-basis: 20%;
       width: 20%;
     }
-    @media (min-width: ${ScreenConfig.L.min}px) {
+    @media ${mq.desktop} {
       white-space: nowrap;
       flex-basis: ${pxToRem(100)};
       width: ${pxToRem(100)};
@@ -166,15 +167,15 @@ const StyledListTable = styled(ListTable)`
   .customCol_5 {
     flex-grow: 1;
     flex-shrink: 0;
-    @media (max-width: ${ScreenConfig.XS.max}px) {
+    @media ${mq.mobile} {
       display: none;
     }
-    @media (min-width: ${ScreenConfig.S.min}px) {
+    @media ${mq.tabletAndDesktop} {
       white-space: nowrap;
       flex-basis: ${pxToRem(160)};
       width: ${pxToRem(160)};
     }
-    @media (min-width: ${ScreenConfig.L.min}px) {
+    @media ${mq.desktop} {
       flex-basis: ${pxToRem(160)};
       width: ${pxToRem(160)};
     }
@@ -183,10 +184,10 @@ const StyledListTable = styled(ListTable)`
   .customCol_6 {
     flex-grow: 1;
     flex-shrink: 0;
-    @media (max-width: ${ScreenConfig.M.max}px) {
+    @media ${mq.mobileAndTablet} {
       display: none;
     }
-    @media (min-width: ${ScreenConfig.L.min}px) {
+    @media ${mq.desktop} {
       margin-right: var(--DashboardLayout-main-margin);
       flex-basis: ${pxToRem(130)};
       width: ${pxToRem(130)};
@@ -318,17 +319,19 @@ export const StoryWithTable = () => {
               weight="regular"
               color="font1"
               size="tiny"
-              className="k-u-hidden@s-down k-u-hidden@m"
             >
               Date
-            </Text>
-            <Text
-              weight="regular"
-              color="font1"
-              size="tiny"
-              className="k-u-hidden@l-up"
-            >
-              Contributeur
+              <br
+                className="k-u-hidden@l-up"
+              />
+              <Text
+                weight="regular"
+                color="font1"
+                size="tiny"
+                className="k-u-hidden@l-up"
+              >
+                et Contributeur
+              </Text>
             </Text>
           </ListTable.Col>
 
