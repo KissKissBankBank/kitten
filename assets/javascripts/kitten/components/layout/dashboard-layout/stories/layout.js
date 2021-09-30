@@ -40,7 +40,7 @@ const SiteHeaderComponent = () => {
     <HeaderNav
       id={HEADER_NAV_ID}
       isLogged={true}
-      isFixed="always"
+      isFixed={true}
       quickAccessProps={{
         href: '#mainContent',
         text: 'Aller au contenu principal',
