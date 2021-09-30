@@ -30,21 +30,21 @@ const StyledListTable = styled(ListTable)`
   );
 
   ${TYPOGRAPHY.fontStyles.light}
-  overflow-x: hidden;
 
   .k-ListTable__Header {
     z-index: 50;
-    top: ${pxToRem(MOBILE_HEADER_HEIGHT)};
     position: sticky;
-  }
-  @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-    top: 0;
+    background-color: ${COLORS.background3};
+    color: ${COLORS.font1};
+    top: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      top: 0;
+    }
   }
 
   .k-ListTable__HeaderList {
     height: ${pxToRem(50)};
-    background-color: ${COLORS.background3};
-    color: ${COLORS.font1};
   }
 
   .k-ListTable__Body {
@@ -55,6 +55,8 @@ const StyledListTable = styled(ListTable)`
 
   .k-ListTable__HeaderList,
   .k-ListTable__RowList {
+    overflow-x: hidden;
+    max-width: initial;
     padding-left: 0;
 
     @media (max-width: ${ScreenConfig.XS.max}px) {
@@ -71,6 +73,8 @@ const StyledListTable = styled(ListTable)`
     @media (max-width: ${ScreenConfig.M.max}px) {
       flex-basis: ${pxToRem(20)};
       width: ${pxToRem(20)};
+    }
+    @media (min-width: ${ScreenConfig.S.min}px) {
       margin-left: var(--DashboardLayout-main-margin);
     }
     @media (min-width: ${ScreenConfig.L.min}px) {
@@ -85,10 +89,6 @@ const StyledListTable = styled(ListTable)`
     position: relative;
     padding-left: 0;
 
-    @media (max-width: ${ScreenConfig.XS.max}px) {
-      flex-basis: calc(100% - ${pxToRem(20 + 20 + 60 + 10 + 40)});
-      width: calc(100% - ${pxToRem(20 + 20 + 60 + 10 + 40)});
-    }
     @media (min-width: ${ScreenConfig.M.min}px) {
       flex-basis: calc(44% - ${pxToRem(170 + 60)});
       width: calc(44% - ${pxToRem(170 + 60)});
@@ -135,8 +135,25 @@ const StyledListTable = styled(ListTable)`
     flex-grow: 1;
     flex-shrink: 0;
     @media (max-width: ${ScreenConfig.XS.max}px) {
-      flex-basis: ${pxToRem(10)};
-      width: ${pxToRem(10)};
+      flex-basis: ${pxToRem(40)};
+      width: ${pxToRem(40)};
+
+      &.k-ListTable__Col {
+        justify-content: center;
+      }
+
+      .k-StatusWithBullet__bullet {
+        margin: 0;
+      }
+      .k-StatusWithBullet__status {
+        clip: rect(0 0 0 0);
+        clip-path: inset(100%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+      }
     }
     @media (min-width: ${ScreenConfig.M.min}px) {
       flex-basis: 20%;
