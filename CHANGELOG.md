@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `ListTable`: Fix `isHightlighted` prop style.
+- Fix: `DashboardLayout`: Fix styles.
 
 - Fix: `HeaderNav`: Various fixes.
 - Feature: `ButtonWithTooltip`: Add new component.
