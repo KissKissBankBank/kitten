@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `ListTable`: Fix `isHightlighted` prop style.
 - Fix: `DashboardLayout`: Fix styles.
+- Fix: `FilterIcon`: Remove console warning.
 
 - Fix: `AvatarWithTextAndBadge`: Improve margin styles.
 - Fix: `HeaderMenu.item`: Fix `margin-right` style.
