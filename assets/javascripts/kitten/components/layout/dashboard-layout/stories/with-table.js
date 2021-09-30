@@ -71,7 +71,7 @@ const StyledListTable = styled(ListTable)`
       flex-basis: ${pxToRem(20)};
       width: ${pxToRem(20)};
     }
-    @media (min-width: ${ScreenConfig.S.min}px) {
+    @media (min-width: ${ScreenConfig.S.min}px) and  (max-width: ${ScreenConfig.M.max}px){
       margin-left: var(--DashboardLayout-main-margin);
     }
     @media (min-width: ${ScreenConfig.L.min}px) {
