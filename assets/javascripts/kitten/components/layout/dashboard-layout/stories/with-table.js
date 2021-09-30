@@ -10,6 +10,7 @@ import {
   pxToRem,
   COLORS,
   TYPOGRAPHY,
+  CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
   StatusWithBullet,
   Checkbox,
@@ -23,7 +24,7 @@ const StyledListTable = styled(ListTable)`
   /* variableWidth is the available content to be divided by variable columns
   /* Content Width (100%) minus fixed width columns (in pixels or in var()) */
   --ContributionsTable-variableWidth: calc(
-    100% - ${pxToRem(160 + 100 + 130)} - var(--DashboardLayout-main-margin) * 2
+    100% - ${pxToRem(160 + 100 + 130 + (5 * 40))} - var(--DashboardLayout-main-margin) * 2
   );
 
   ${TYPOGRAPHY.fontStyles.light}
@@ -54,7 +55,7 @@ const StyledListTable = styled(ListTable)`
   .k-ListTable__RowList {
     overflow-x: hidden;
     max-width: initial;
-    padding-left: 0;
+    padding: 0;
 
     @media ${mq.mobile} {
       padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
@@ -62,14 +63,14 @@ const StyledListTable = styled(ListTable)`
   }
 
   .customCol_0 {
-    flex-grow: 1;
+    flex-grow: 0;
     flex-shrink: 0;
     justify-content: flex-end;
     padding-right: ${pxToRem(10)};
 
     @media ${mq.mobileAndTablet} {
-      flex-basis: ${pxToRem(20)};
-      width: ${pxToRem(20)};
+      flex-basis: ${pxToRem(20 + 20)};
+      width: ${pxToRem(20 + 20)};
     }
     @media ${mq.tablet} {
       margin-left: var(--DashboardLayout-main-margin);
@@ -86,11 +87,6 @@ const StyledListTable = styled(ListTable)`
     position: relative;
     padding-left: 0;
 
-
-    @media ${mq.tabletAndDesktop} {
-      flex-basis: calc(44% - ${pxToRem(170 + 60)});
-      width: calc(44% - ${pxToRem(170 + 60)});
-    }
     @media ${mq.desktop} {
       flex-basis: calc(var(--ContributionsTable-variableWidth) * 0.3);
       width: calc(var(--ContributionsTable-variableWidth) * 0.3);
@@ -105,8 +101,8 @@ const StyledListTable = styled(ListTable)`
       display: none;
     }
     @media ${mq.desktop} {
-      flex-basis: calc(var(--ContributionsTable-variableWidth) * 0.4);
-      width: calc(var(--ContributionsTable-variableWidth) * 0.4);
+      flex-basis: calc(var(--ContributionsTable-variableWidth) * 0.5);
+      width: calc(var(--ContributionsTable-variableWidth) * 0.5);
     }
   }
 
@@ -115,13 +111,13 @@ const StyledListTable = styled(ListTable)`
     flex-shrink: 0;
     justify-content: flex-end;
 
-    flex-basis: ${pxToRem(90)};
-    width: ${pxToRem(90)};
-    min-width: ${pxToRem(60)};
+    flex-basis: ${pxToRem(60 + 20)};
+    width: ${pxToRem(60 + 20)};
+    min-width: ${pxToRem(60 + 20)};
 
-    @media ${mq.mobile} {
-      flex-basis: ${pxToRem(60)};
-      width: ${pxToRem(60)};
+    @media ${mq.tablet} {
+      flex-basis: ${pxToRem(90)};
+      width: ${pxToRem(90)};
     }
     @media ${mq.desktop} {
       flex-basis: calc(var(--ContributionsTable-variableWidth) * 0.2);
@@ -130,11 +126,11 @@ const StyledListTable = styled(ListTable)`
   }
 
   .customCol_4 {
-    flex-grow: 1;
+    flex-grow: 0;
     flex-shrink: 0;
     @media ${mq.mobile} {
-      flex-basis: ${pxToRem(40)};
-      width: ${pxToRem(40)};
+      flex-basis: ${pxToRem(40 + 20)};
+      width: ${pxToRem(40 + 20)};
 
       &.k-ListTable__Col {
         justify-content: center;
@@ -154,43 +150,41 @@ const StyledListTable = styled(ListTable)`
       }
     }
     @media ${mq.tabletAndDesktop} {
-      flex-basis: 20%;
-      width: 20%;
-    }
-    @media ${mq.desktop} {
       white-space: nowrap;
-      flex-basis: ${pxToRem(100)};
-      width: ${pxToRem(100)};
+      flex-basis: ${pxToRem(100 + 40)};
+      width: ${pxToRem(100 + 40)};
     }
   }
 
   .customCol_5 {
-    flex-grow: 1;
+    flex-grow: 0;
     flex-shrink: 0;
     @media ${mq.mobile} {
       display: none;
     }
-    @media ${mq.tabletAndDesktop} {
+    @media ${mq.tablet} {
       white-space: nowrap;
-      flex-basis: ${pxToRem(160)};
-      width: ${pxToRem(160)};
+      flex-basis: ${pxToRem(120 + 40)};
+      width: ${pxToRem(120 + 40)};
+      margin-right: ${pxToRem(CONTAINER_PADDING)};
     }
     @media ${mq.desktop} {
-      flex-basis: ${pxToRem(160)};
-      width: ${pxToRem(160)};
+      white-space: nowrap;
+      flex-basis: ${pxToRem(160 + 40)};
+      width: ${pxToRem(160 + 40)};
     }
   }
 
   .customCol_6 {
-    flex-grow: 1;
+    flex-grow: 0;
     flex-shrink: 0;
     @media ${mq.mobileAndTablet} {
       display: none;
     }
     @media ${mq.desktop} {
       margin-right: var(--DashboardLayout-main-margin);
-      flex-basis: ${pxToRem(130)};
-      width: ${pxToRem(130)};
+      flex-basis: ${pxToRem(130 + 40)};
+      width: ${pxToRem(130 + 40)};
 
       .k-Form-Dropdown {
         min-width: ${pxToRem(130)};
