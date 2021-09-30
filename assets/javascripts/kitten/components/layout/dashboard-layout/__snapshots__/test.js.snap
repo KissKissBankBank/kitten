@@ -785,7 +785,7 @@ button:hover .c1 {
 }
 
 .c0 .k-DashboardLayout__toaster__wrapper::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   width: 100%;
@@ -894,7 +894,7 @@ button:hover .c1 {
     --DashboardLayout-main-margin: calc( ((100vw - 18.75rem) / 12) + 3.75rem );
     --DashboardLayout-side-width: calc(((100vw - 18.75rem) / 2 + 8.75rem));
     width: calc(((100vw - 18.75rem) / 2 + 8.75rem) + 100vw);
-    grid-template-columns: var(--DashboardLayout-side-width) calc(100vw + 0.125rem);
+    grid-template-columns: var(--DashboardLayout-side-width) calc( 100vw + 0.125rem );
     left: calc(-1 * ((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem);
     position: absolute;
     -webkit-transition: left 0.3s ease-in-out;
@@ -1395,7 +1395,7 @@ button:hover .c1 {
 }
 
 .c0 .k-DashboardLayout__toaster__wrapper::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   width: 100%;
@@ -1504,7 +1504,7 @@ button:hover .c1 {
     --DashboardLayout-main-margin: calc( ((100vw - 18.75rem) / 12) + 3.75rem );
     --DashboardLayout-side-width: calc(((100vw - 18.75rem) / 2 + 8.75rem));
     width: calc(((100vw - 18.75rem) / 2 + 8.75rem) + 100vw);
-    grid-template-columns: var(--DashboardLayout-side-width) calc(100vw + 0.125rem);
+    grid-template-columns: var(--DashboardLayout-side-width) calc( 100vw + 0.125rem );
     left: calc(-1 * ((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem);
     position: absolute;
     -webkit-transition: left 0.3s ease-in-out;
