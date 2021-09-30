@@ -492,7 +492,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 k-ButtonWithTooltip"
 >
   <button
     aria-label="Text of the tooltip"

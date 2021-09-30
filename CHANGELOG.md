@@ -7,9 +7,39 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `ListTable`: Fix `isHightlighted` prop style.
 - Fix: `DashboardLayout`: Fix styles.
 
-- Fix: `HeaderNav`: Various fixes.
-- Feature: `ButtonWithTooltip`: Add new component.
-- Feature: `DashboardLayout`: Add `Toaster` subcomponent.
+- Fix: `AvatarWithTextAndBadge`: Improve margin styles.
+- Fix: `HeaderMenu.item`: Fix `margin-right` style.
+- Fix: `HeaderNav.UserMenuNext.Button`: Fix `min-width` style.
+
+## [4.11.0] - 2021-09-29
+
+Feature:
+
+- `DashboardLayout`: Add `overlayZIndex` prop, defaults to 100.
+
+Fix:
+
+- `HeaderNav`: Various fixes.
+
+## [4.10.1] - 2021-09-28
+
+Fixes:
+
+- `HeaderNav`: Fix `borderStyle="border"` style.
+- `ButtonWithTooltip`: Propagate `className` on parent.
+- `HeaderNav`: Fix `BurgerMenuNext` button state.
+- `BurgerIcon`: Modernize styles.
+
+## [4.10.0] - 2021-09-27
+
+Features:
+
+- `ButtonWithTooltip`: Add new component.
+- `DashboardLayout`: Add `Toaster` subcomponent.
+
+Fix:
+
+- `HeaderNav`: Various fixes.
 
 ## [4.9.0] - 2021-09-24
 
@@ -64,7 +94,7 @@ Fix:
 ## [4.6.0] - 2021-09-09
 
 Tech:
-- 
+
 - Bump to `node-sass@6`.
 
 ## [4.5.2] - 2021-09-09

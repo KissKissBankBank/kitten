@@ -30,6 +30,8 @@ export const DashboardLayout = ({
   buttonProps,
   quickAccessLinkText,
   fullHeightContent,
+  overlayZIndex = 100,
+  style,
   ...props
 }) => {
   const [isOpen, setOpen] = useState(false)
@@ -159,6 +161,10 @@ export const DashboardLayout = ({
         className={classNames('k-DashboardLayout', props.className, {
           'k-DashboardLayout--isOpen': isOpen,
         })}
+        style={{
+          ...style,
+          '--DashboardLayout-overlay-zindex': overlayZIndex,
+        }}
       >
         <div
           ref={sideBarElement}
@@ -362,6 +368,7 @@ DashboardLayout.propTypes = {
   }),
   quickAccessLinkText: PropTypes.node.isRequired,
   fullHeightContent: PropTypes.bool,
+  overlayZIndex: PropTypes.number,
 }
 
 Header.propTypes = {

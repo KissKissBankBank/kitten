@@ -237,7 +237,7 @@ export const StyledDashboard = styled.div`
             background-color: ${COLORS.background1};
             opacity: 0;
             pointer-events: none;
-            z-index: 100;
+            z-index: var(--DashboardLayout-overlay-zindex, 100);
             transition: background-color 0.2s ease-in-out,
               opacity 0.2s ease-in-out;
           }
