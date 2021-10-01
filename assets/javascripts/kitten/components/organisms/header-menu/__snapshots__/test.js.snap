@@ -838,7 +838,7 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
     role="menuitem"
   >
     <button
-      className="c1 k-Button k-HeaderMenu__item__button k-Button--regular k-Button--null k-Button--andromeda k-Button--fluid"
+      className="c1 k-Button k-HeaderMenu__item__button k-Button--regular k-Button--null k-Button--orion k-Button--fluid"
       href="#"
       style={
         Object {

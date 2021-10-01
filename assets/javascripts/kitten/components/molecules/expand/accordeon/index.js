@@ -261,6 +261,6 @@ Accordeon.defaultProps = {
   onChange: () => {},
   isAnimated: true,
   id: 'accordeon',
-  variant: 'andromeda',
+  variant: 'orion',
   closeOnClick: false,
 }

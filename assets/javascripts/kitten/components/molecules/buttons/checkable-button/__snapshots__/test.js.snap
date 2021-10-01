@@ -539,7 +539,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 <button
   aria-checked={null}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--hydrogen k-Button--orion"
   disabled={false}
   style={
     Object {
@@ -1091,7 +1091,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--big k-Button--lithium k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--big k-Button--lithium k-Button--orion"
   disabled={false}
   style={
     Object {
@@ -1643,7 +1643,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--lithium k-Button--andromeda k-Button--disabled"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--lithium k-Button--orion k-Button--disabled"
   disabled={true}
   style={
     Object {
@@ -2195,7 +2195,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--copper k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--copper k-Button--orion"
   disabled={false}
   style={
     Object {
@@ -2747,7 +2747,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--tiny k-Button--lithium k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--tiny k-Button--lithium k-Button--orion"
   disabled={false}
   style={
     Object {

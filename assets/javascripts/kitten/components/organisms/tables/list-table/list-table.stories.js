@@ -127,10 +127,7 @@ export const Default = () => (
       >
         <ListTable.Col className="customCol_1">
           <VisuallyHidden>Sélection</VisuallyHidden>
-          <Checkbox
-            variant="orion"
-            aria-label="Sélectionner toutes les contributions de la liste"
-          />
+          <Checkbox aria-label="Sélectionner toutes les contributions de la liste" />
         </ListTable.Col>
 
         <ListTable.Col className="customCol_2">
@@ -190,10 +187,7 @@ export const Default = () => (
               <h2>Contribution #888888 par Prénom NOM le 12 septembre 2019</h2>
               <button>Voir plus d'informations sur cette contribution</button>
             </VisuallyHidden>
-            <Checkbox
-              variant="orion"
-              aria-label="Sélectionner toutes les contributions de la liste"
-            />
+            <Checkbox aria-label="Sélectionner toutes les contributions de la liste" />
           </ListTable.Col>
 
           <ListTable.Col className="customCol_2">
@@ -257,7 +251,6 @@ export const Default = () => (
                 { label: 'À expédier', value: 1 },
                 { label: 'Expédié', value: 2 },
               ]}
-              variant="orion"
             />
           </ListTable.Col>
         </ListTable.Row>
@@ -271,10 +264,7 @@ export const Default = () => (
               <h2>Contribution #44654 par Prénom NOM le 12 septembre 2019</h2>
               <button>Voir plus d'informations sur cette contribution</button>
             </VisuallyHidden>
-            <Checkbox
-              variant="orion"
-              aria-label="Sélectionner toutes les contributions de la liste"
-            />
+            <Checkbox aria-label="Sélectionner toutes les contributions de la liste" />
           </ListTable.Col>
 
           <ListTable.Col className="customCol_2">
@@ -336,7 +326,6 @@ export const Default = () => (
                 { label: 'À expédier', value: 1 },
                 { label: 'Expédié', value: 2 },
               ]}
-              variant="orion"
             />
           </ListTable.Col>
         </ListTable.Row>

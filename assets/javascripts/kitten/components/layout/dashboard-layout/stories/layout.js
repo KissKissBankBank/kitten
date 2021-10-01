@@ -190,7 +190,7 @@ export const StoryLayout = ({
         {props => <StoryMenu {...props} />}
       </DashboardLayout.SideContent>
       <DashboardLayout.SideFooter>
-        <Button modifier="boron" fluid variant="orion">
+        <Button modifier="boron" fluid>
           <PasswordIcon />
           <span>Voir ma page projet</span>
         </Button>

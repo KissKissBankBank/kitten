@@ -423,11 +423,11 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 }
 
 <div
-  className="c0 k-ButtonGroup k-ButtonGroup--andromeda"
+  className="c0 k-ButtonGroup k-ButtonGroup--orion"
   role="group"
 >
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion"
     style={
       Object {
         "--border-radius": 0,
@@ -438,7 +438,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
     Button1
   </button>
   <button
-    className="c1 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--regular k-Button--hydrogen k-Button--andromeda"
+    className="c1 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--regular k-Button--hydrogen k-Button--orion"
     style={
       Object {
         "--border-radius": 0,
@@ -449,7 +449,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
     Button2
   </button>
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion"
     style={
       Object {
         "--border-radius": 0,
@@ -889,7 +889,7 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
   role="group"
 >
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion"
     style={
       Object {
         "--border-radius": 0,
@@ -900,7 +900,7 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
     Button1
   </button>
   <button
-    className="c1 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--regular k-Button--hydrogen k-Button--andromeda"
+    className="c1 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--regular k-Button--hydrogen k-Button--orion"
     style={
       Object {
         "--border-radius": 0,
@@ -911,7 +911,7 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
     Button2
   </button>
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion"
     style={
       Object {
         "--border-radius": 0,

@@ -348,7 +348,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 }
 
 <a
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion"
   disabled={null}
   href="#helloWorld"
   style={
@@ -710,7 +710,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
 }
 
 <input
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion"
   disabled={null}
   style={
     Object {
@@ -1070,7 +1070,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasBorderRadius"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--hasBorderRadius"
   style={
     Object {
       "--border-radius": "0.25rem",
@@ -1430,7 +1430,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fluid"
   style={
     Object {
       "--border-radius": 0,
@@ -1790,7 +1790,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--oxygen k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--oxygen k-Button--orion"
   style={
     Object {
       "--border-radius": 0,
@@ -2150,7 +2150,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--orion"
   style={
     Object {
       "--border-radius": 0,
@@ -2510,7 +2510,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 }
 
 <a
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion"
   disabled={null}
   href="#helloWorld"
   style={
@@ -2872,7 +2872,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--big k-Button--hydrogen k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -3232,7 +3232,7 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fluid k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -3592,7 +3592,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--giant k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--giant k-Button--hydrogen k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -3952,7 +3952,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--huge k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--huge k-Button--hydrogen k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -4312,7 +4312,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--micro k-Button--hydrogen k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -4672,7 +4672,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -5032,7 +5032,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -5392,7 +5392,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion"
   style={
     Object {
       "--border-radius": 0,
@@ -5757,7 +5757,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion"
   style={
     Object {
       "--border-radius": 0,

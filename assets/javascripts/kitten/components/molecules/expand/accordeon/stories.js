@@ -56,7 +56,7 @@ const args = {
   id: 'Accordeon',
   isAnimated: true,
   closeOnClick: false,
-  variant: 'andromeda',
+  variant: 'orion',
   onChange: action('onChange'),
 }
 

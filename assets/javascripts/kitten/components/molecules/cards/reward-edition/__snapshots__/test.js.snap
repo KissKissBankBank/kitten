@@ -414,7 +414,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
     </span>
     <button
       aria-label="Delete"
-      className="c2 k-Button k-RewardEdition__Header__Button k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="c2 k-Button k-RewardEdition__Header__Button k-Button--micro k-Button--hydrogen k-Button--orion k-Button--hasIcon"
       style={
         Object {
           "--border-radius": 0,

@@ -627,7 +627,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
-      className="c2 k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+      className="c2 k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
       role="progressbar"
     >
       <div
@@ -1563,7 +1563,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c2 k-Button k-Button--regular k-Button--helium k-Button--andromeda k-Button--fluid"
+      className="c2 k-Button k-Button--regular k-Button--helium k-Button--orion k-Button--fluid"
       style={
         Object {
           "--border-radius": 0,
@@ -2490,7 +2490,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c2 k-Button k-Button--regular k-Button--helium k-Button--andromeda k-Button--fluid"
+      className="c2 k-Button k-Button--regular k-Button--helium k-Button--orion k-Button--fluid"
       style={
         Object {
           "--border-radius": 0,
@@ -3435,7 +3435,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c3 k-Button k-Button--regular k-Button--helium k-Button--andromeda k-Button--fluid"
+      className="c3 k-Button k-Button--regular k-Button--helium k-Button--orion k-Button--fluid"
       style={
         Object {
           "--border-radius": 0,

@@ -67,36 +67,26 @@ describe('<VerticalStepper />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <VerticalStepper variant="orion">
-            <VerticalStepper.Step variant="orion" success href="#">
-              <VerticalStepper.Title variant="orion">
-                Title
-              </VerticalStepper.Title>
-              <VerticalStepper.Link variant="orion">Link</VerticalStepper.Link>
+          <VerticalStepper>
+            <VerticalStepper.Step success href="#">
+              <VerticalStepper.Title>Title</VerticalStepper.Title>
+              <VerticalStepper.Link>Link</VerticalStepper.Link>
             </VerticalStepper.Step>
 
-            <VerticalStepper.Step variant="orion" valid href="#">
-              <VerticalStepper.Title variant="orion">
-                Title
-              </VerticalStepper.Title>
+            <VerticalStepper.Step valid href="#">
+              <VerticalStepper.Title>Title</VerticalStepper.Title>
             </VerticalStepper.Step>
 
-            <VerticalStepper.Step variant="orion" error href="#">
-              <VerticalStepper.Title variant="orion">
-                Title
-              </VerticalStepper.Title>
+            <VerticalStepper.Step error href="#">
+              <VerticalStepper.Title>Title</VerticalStepper.Title>
             </VerticalStepper.Step>
 
-            <VerticalStepper.Step variant="orion" waiting href="#">
-              <VerticalStepper.Title variant="orion">
-                Title
-              </VerticalStepper.Title>
+            <VerticalStepper.Step waiting href="#">
+              <VerticalStepper.Title>Title</VerticalStepper.Title>
             </VerticalStepper.Step>
 
-            <VerticalStepper.Step variant="orion" href="#">
-              <VerticalStepper.Title variant="orion">
-                Title
-              </VerticalStepper.Title>
+            <VerticalStepper.Step href="#">
+              <VerticalStepper.Title>Title</VerticalStepper.Title>
             </VerticalStepper.Step>
           </VerticalStepper>,
         )

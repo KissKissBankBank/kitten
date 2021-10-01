@@ -213,6 +213,7 @@ TextCopy.propTypes = {
   forceOneLine: PropTypes.bool,
   buttonText: PropTypes.string,
   buttonModifier: PropTypes.string,
+  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }
 
 TextCopy.defaultProps = {
@@ -222,4 +223,5 @@ TextCopy.defaultProps = {
   forceOneLine: false,
   buttonText: undefined,
   buttonModifier: 'helium',
+  variant: 'orion',
 }
