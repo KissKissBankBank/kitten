@@ -24,7 +24,8 @@ const StyledListTable = styled(ListTable)`
   /* variableWidth is the available content to be divided by variable columns
   /* Content Width (100%) minus fixed width columns (in pixels or in var()) */
   --ContributionsTable-variableWidth: calc(
-    100% - ${pxToRem(160 + 100 + 130 + (5 * 40))} - var(--DashboardLayout-main-margin) * 2
+    100% - ${pxToRem(160 + 100 + 130 + 5 * 40)} -
+      var(--DashboardLayout-main-margin) * 2
   );
 
   ${TYPOGRAPHY.fontStyles.light}
@@ -309,15 +310,9 @@ export const StoryWithTable = () => {
           </ListTable.Col>
 
           <ListTable.Col className="customCol_1">
-            <Text
-              weight="regular"
-              color="font1"
-              size="tiny"
-            >
+            <Text weight="regular" color="font1" size="tiny">
               Date
-              <br
-                className="k-u-hidden@l-up"
-              />
+              <br className="k-u-hidden@l-up" />
               <Text
                 weight="regular"
                 color="font1"

@@ -2,10 +2,7 @@ import styled from 'styled-components'
 import { ScreenConfig } from '../../../constants/screen-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
-import {
-  CONTAINER_PADDING,
-  CONTAINER_PADDING_THIN,
-} from '../../../constants/grid-config'
+import { CONTAINER_PADDING } from '../../../constants/grid-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import {
   MOBILE_HEADER_HEIGHT,
@@ -50,12 +47,12 @@ export const StyledHeader = styled.header`
       padding: 0 ${pxToRem(40)} 0 ${pxToRem(30)};
     }
 
-    &:not(.k-HeaderNav--kkbb__only){
+    &:not(.k-HeaderNav--kkbb__only) {
       @media (min-width: ${ScreenConfig.L.min}px) {
         padding: 0;
       }
     }
-   
+
     .quickAccessLink {
       background: ${COLORS.background1};
       transition: background-color 0.2s ease;
@@ -131,7 +128,7 @@ export const StyledHeader = styled.header`
     display: flex;
     align-items: center;
 
-  @media (min-width: ${ScreenConfig.S.min}px) {
+    @media (min-width: ${ScreenConfig.S.min}px) {
       padding: ${pxToRem(10)};
     }
   }
@@ -387,13 +384,13 @@ export const StyledHeader = styled.header`
 
     .k-HeaderNav__UserMenuButton {
       padding: 0 ${pxToRem(15)};
-     
+
       &.k-Dropdown__button,
       &.k-HeaderNav__Button {
         min-width: ${pxToRem(40)};
       }
     }
-    
+
     .k-HeaderNav-nav__item {
       padding: 0 ${pxToRem(15)};
     }
@@ -465,7 +462,7 @@ export const StyledHeader = styled.header`
     }
 
     .k-HeaderNav__Button--smallPadding {
-      .k-HeaderNav__Button__text:first-child{
+      .k-HeaderNav__Button__text:first-child {
         margin-left: 0;
       }
     }
