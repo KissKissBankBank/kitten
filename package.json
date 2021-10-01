@@ -33,8 +33,6 @@
     "is-string-a-number": "^2.0.2",
     "js-base64": "^2.6.4",
     "lodash": "^4.17.21",
-    "modularscale-js": "^3.0.1",
-    "modularscale-sass": "^3.0.10",
     "prop-types": "^15.7.2",
     "prop-types-extra": "^1.1.1",
     "react-cropper": "2.1.1",

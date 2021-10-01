@@ -2,7 +2,7 @@
 
 exports[`<RewardSummaryCard /> default matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa keTJgb k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
+  className="sc-bdVaJa ftPROB k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
 >
   <a
     className="k-RewardSummaryCard__action"
@@ -34,7 +34,7 @@ exports[`<RewardSummaryCard /> default matches with snapshot 1`] = `
 
 exports[`<RewardSummaryCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa keTJgb k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
+  className="sc-bdVaJa ftPROB k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
 >
   <a
     className="k-RewardSummaryCard__action"
@@ -56,7 +56,7 @@ exports[`<RewardSummaryCard /> with some props matches with snapshot 1`] = `
       Stickers Free Boobs Club
     </span>
     <span
-      className="sc-htpNat eWjJeV k-Tag k-RewardSummaryCard__titleTag k-u-margin-top-single k-u-margin-top-single k-Tag--info"
+      className="sc-htpNat ieszJs k-Tag k-RewardSummaryCard__titleTag k-u-margin-top-single k-u-margin-top-single k-Tag--info"
     >
       <svg
         fill="#222"
@@ -91,7 +91,7 @@ exports[`<RewardSummaryCard /> with some props matches with snapshot 1`] = `
       className="k-RewardSummaryCard__options k-u-hidden@xs-down"
     >
       <details
-        className="sc-qrIAp jKQYHY k-DropdownMenu k-DropdownMenu--left"
+        className="sc-qrIAp jKoxkL k-DropdownMenu k-DropdownMenu--left"
         onKeyDown={[Function]}
         onToggle={[Function]}
         open={false}

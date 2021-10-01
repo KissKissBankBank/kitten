@@ -3,7 +3,6 @@ const TYPOGRAPHY = {
   fontSize: 1, // rem
   fontWeight: 400,
   lineHeight: 1.5, // rem
-  scaleMultiplier: 1.125,
   fontStyles: {
     light: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',

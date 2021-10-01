@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: Typography: Remove `modular-scale` dependency and logic.
+  All the font sizes previously defined as modular scale step (via `stepToRem`)
+  are now calculated from a table with integer pixel values.
 - Fix: `DownloadIcon`: Update icon.
 
 ## [4.12.0] - 2021-09-30
@@ -53,7 +56,7 @@ Fix:
 
 ## [4.9.0] - 2021-09-24
 
-Features: 
+Features:
 
 - `HeaderMenu`: Add `position` prop, default to `left`.
 - `EngagementCardWithImage`: Add `imgProps` and `textProps` props.
@@ -61,11 +64,11 @@ Features:
 Fixes:
 
 - `DashboardLayout`: Fix header elements dimensions.
-- `HeaderNav.Button`: Add `cursor` to `onClick`. 
+- `HeaderNav.Button`: Add `cursor` to `onClick`.
 
 ## [4.8.0] - 2021-09-22
 
-Features: 
+Features:
 
 - `HeaderNav.Nav`: Add `smallPadding` prop, defaults to `false`.
 - `HeaderNav.Button`: Add `smallPadding` prop, defaults to `false`.
