@@ -1,0 +1,17 @@
+:root {
+  --color-text: "color-grey-900";
+  --color-input-border-inactive: "color-grey-400";
+  --color-input-border-default: "color-grey-400";
+  --color-input-border-hover: "color-grey-500";
+  --color-input-border-active: "color-grey-900";
+  --color-input-border-error: "color-error-500";
+  --color-input-border-validated: "color-green-500";
+  --color-button-border-inactive: "color-grey-300";
+  --color-button-background-inactive: "color-grey-000";
+  --color-button-border-hover: "color-blue-400";
+  --color-button-background-hover: "color-grey-000";
+  --color-button-border-active: "color-blue-500";
+  --color-button-background-active: "color-grey-000";
+  --color-button-border-selected: "color-blue-500";
+  --color-button-background-selected: "color-grey-000";
+}
