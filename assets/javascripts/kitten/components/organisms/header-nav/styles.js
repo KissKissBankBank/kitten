@@ -34,10 +34,8 @@ export const StyledHeader = styled.header`
       box-shadow: 0 ${pxToRem(2)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
     }
   }
-  &.k-HeaderNav--border {
-    .k-Spacer + .k-HeaderNav__stickyContainer {
-      box-shadow: 0 ${pxToRem(1)} 0 rgba(0, 0, 0, 0.08);
-    }
+  &.k-HeaderNav--border .k-HeaderNav__stickyContainer {
+    box-shadow: 0 ${pxToRem(1)} 0 rgba(0, 0, 0, 0.08);
   }
 
   .k-HeaderNav {
@@ -92,7 +90,7 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__BurgerMenu__button {
-    padding: 0 ${pxToRem(10)} 0 ${pxToRem(CONTAINER_PADDING_THIN)};
+    padding: 0;
     height: 100%;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
@@ -129,13 +127,12 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__Logo {
-    padding: ${pxToRem(10)};
+    padding: 0;
     display: flex;
     align-items: center;
 
-    @media (max-width: ${ScreenConfig.XXS.max}) {
-      padding-left: ${pxToRem(5)};
-      padding-right: ${pxToRem(5)};
+  @media (min-width: ${ScreenConfig.S.min}px) {
+      padding: ${pxToRem(10)};
     }
   }
 
@@ -190,18 +187,18 @@ export const StyledHeader = styled.header`
     flex-grow: 1;
 
     &.k-HeaderNav__right--padded {
-      padding-right: ${pxToRem(10)};
+      padding-right: ${pxToRem(20)};
       gap: ${pxToRem(10)};
 
       .k-HeaderNav__Button:last-child {
         margin-right: ${pxToRem(-10)};
       }
-      @media (min-width: ${ScreenConfig.S.min}) {
-        padding-right: ${pxToRem(15)};
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        padding-right: ${pxToRem(10)};
         gap: ${pxToRem(15)};
 
         .k-HeaderNav__Button:last-child {
-          margin-right: ${pxToRem(-15)};
+          margin-right: ${pxToRem(-10)};
         }
       }
     }
@@ -390,14 +387,20 @@ export const StyledHeader = styled.header`
 
     .k-HeaderNav__UserMenuButton {
       padding: 0 ${pxToRem(15)};
+     
+      &.k-Dropdown__button,
+      &.k-HeaderNav__Button {
+        min-width: ${pxToRem(40)};
+      }
     }
+    
     .k-HeaderNav-nav__item {
       padding: 0 ${pxToRem(15)};
     }
 
     .k-Dropdown__button,
     .k-HeaderNav__Button {
-      min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+      min-width: ${pxToRem(52)};
       cursor: pointer;
     }
 
@@ -407,7 +410,7 @@ export const StyledHeader = styled.header`
           margin-left: ${pxToRem(15)};
         }
         &:last-child {
-          margin-right: ${pxToRem(15)};
+          margin-right: ${pxToRem(10)};
         }
       }
     }
@@ -441,7 +444,7 @@ export const StyledHeader = styled.header`
 
     .k-Dropdown__button,
     .k-HeaderNav__Button {
-      min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+      min-width: ${pxToRem(52)};
       cursor: pointer;
 
       @media (min-width: ${ScreenConfig.S.min}px) {

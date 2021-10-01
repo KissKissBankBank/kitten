@@ -24,7 +24,7 @@ var FilterIcon = function FilterIcon(_ref) {
       animated = _ref.animated,
       title = _ref.title,
       others = (0, _objectWithoutProperties2.default)(_ref, ["color", "duration", "type", "name", "begin", "animated", "title"]);
-  var animationDuration = animated ? duration : 0;
+  var animationDuration = animated ? duration : null;
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     x: "0px",

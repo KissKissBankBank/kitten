@@ -32,7 +32,6 @@ import { EllipsisIcon } from './ellipsis-icon'
 import { EmailIcon } from './email-icon'
 import { EmbedIcon } from './embed-icon'
 import { EnvelopeIcon } from './envelope-icon'
-import { ExportIcon } from './export-icon'
 import { ExportIconAlternate } from './export-icon-alternate'
 import { FacebookIcon } from './facebook-icon'
 import { FacebookIconWithBackground } from './facebook-icon-with-background'
@@ -335,7 +334,6 @@ export const AllIcons = ({ colorInput, bgColorInput }) => {
         />
         <IconContainer children={<CopyIcon color={colorInput} />} />
         <IconContainer children={<BubbleIcon color={colorInput} />} />
-        <IconContainer children={<ExportIcon color={colorInput} />} />
         <IconContainer children={<ExportIconAlternate color={colorInput} />} />
         <IconContainer children={<StrokeIcon color={colorInput} />} />
         <IconContainer

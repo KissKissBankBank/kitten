@@ -8,6 +8,52 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `DropdownSelect`: Add `direction` prop, defaults to `down`.
 - Feature: `DropdownSelect`: Add `micro` value to `size` prop.
 - Feature: `DropdownSelect`: Add `arrowPosition` prop (exclusive to `orion` variant), defaults to 'left'.
+- Fix: `DownloadIcon`: Update icon.
+
+## [4.12.0] - 2021-09-30
+
+Feature:
+
+- `Button`: Add `calcium` modifier prop.
+
+Fixes:
+
+- `ListTable`: Fix `isHightlighted` prop style.
+- `DashboardLayout`: Fix styles.
+- `FilterIcon`: Remove console warning.
+- `AvatarWithTextAndBadge`: Improve margin styles.
+- `HeaderMenu.item`: Fix `margin-right` style.
+- `HeaderNav.UserMenuNext.Button`: Fix `min-width` style.
+
+## [4.11.0] - 2021-09-29
+
+Feature:
+
+- `DashboardLayout`: Add `overlayZIndex` prop, defaults to 100.
+
+Fix:
+
+- `HeaderNav`: Various fixes.
+
+## [4.10.1] - 2021-09-28
+
+Fixes:
+
+- `HeaderNav`: Fix `borderStyle="border"` style.
+- `ButtonWithTooltip`: Propagate `className` on parent.
+- `HeaderNav`: Fix `BurgerMenuNext` button state.
+- `BurgerIcon`: Modernize styles.
+
+## [4.10.0] - 2021-09-27
+
+Features:
+
+- `ButtonWithTooltip`: Add new component.
+- `DashboardLayout`: Add `Toaster` subcomponent.
+
+Fix:
+
+- `HeaderNav`: Various fixes.
 
 ## [4.9.0] - 2021-09-24
 
@@ -61,8 +107,8 @@ Fix:
 
 ## [4.6.0] - 2021-09-09
 
-Tech: 
-- 
+Tech:
+
 - Bump to `node-sass@6`.
 
 ## [4.5.2] - 2021-09-09

@@ -15,6 +15,8 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireDefault(require("react"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
@@ -26,30 +28,20 @@ var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecate
 var StyledItem = _styledComponents.default.svg.withConfig({
   displayName: "burger-icon__StyledItem",
   componentId: "sc-122wqdc-0"
-})(["overflow:visible;fill:", ";:hover,button:hover &{fill:", ";}rect{transition:transform 0.2s ease-out,fill 0.15s;}", " ", ""], function (_ref) {
-  var mainColor = _ref.mainColor;
-  return mainColor;
-}, function (_ref2) {
-  var hoverColor = _ref2.hoverColor;
-  return hoverColor;
-}, function (_ref3) {
-  var isActive = _ref3.isActive;
-  return isActive && (0, _styledComponents.css)([".k-BurgerIcon__bun{transform:translateX(2px);}.k-BurgerIcon__patty{transform:translateX(-2px);}"]);
-}, function (_ref4) {
-  var isAnimatedOnHover = _ref4.isAnimatedOnHover;
-  return isAnimatedOnHover && (0, _styledComponents.css)(["&:hover,button:hover &,&:focus,button:focus &{.k-BurgerIcon__bun{transform:translateX(2px);}.k-BurgerIcon__patty{transform:translateX(-2px);}}"]);
-});
+})(["overflow:visible;fill:var(--burgerIcon-mainColor,", ");:hover,button:hover &{fill:var(--burgerIcon-hoverColor,", ");}rect{transition:transform 0.2s ease-out,fill 0.15s;}&.k-BurgerIcon--isActive{.k-BurgerIcon__bun{transform:translateX(2px);}.k-BurgerIcon__patty{transform:translateX(-2px);}}&.k-BurgerIcon--isAnimatedOnHover{&:hover,button:hover &,&:focus,button:focus &{.k-BurgerIcon__bun{transform:translateX(2px);}.k-BurgerIcon__patty{transform:translateX(-2px);}}}"], _colorsConfig.default.font1, _colorsConfig.default.primary1);
 
-var BurgerIcon = function BurgerIcon(_ref5) {
-  var mainColor = _ref5.mainColor,
-      hoverColor = _ref5.hoverColor,
-      isActive = _ref5.isActive,
-      iconTitle = _ref5.iconTitle,
-      title = _ref5.title,
-      width = _ref5.width,
-      height = _ref5.height,
-      isAnimatedOnHover = _ref5.isAnimatedOnHover,
-      props = (0, _objectWithoutProperties2.default)(_ref5, ["mainColor", "hoverColor", "isActive", "iconTitle", "title", "width", "height", "isAnimatedOnHover"]);
+var BurgerIcon = function BurgerIcon(_ref) {
+  var mainColor = _ref.mainColor,
+      hoverColor = _ref.hoverColor,
+      isActive = _ref.isActive,
+      iconTitle = _ref.iconTitle,
+      title = _ref.title,
+      width = _ref.width,
+      height = _ref.height,
+      isAnimatedOnHover = _ref.isAnimatedOnHover,
+      style = _ref.style,
+      className = _ref.className,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["mainColor", "hoverColor", "isActive", "iconTitle", "title", "width", "height", "isAnimatedOnHover", "style", "className"]);
   return /*#__PURE__*/_react.default.createElement(StyledItem, (0, _extends2.default)({
     role: "img",
     "aria-label": iconTitle || title,
@@ -57,10 +49,14 @@ var BurgerIcon = function BurgerIcon(_ref5) {
     viewBox: "0 0 12 10",
     width: width,
     height: height,
-    isActive: isActive,
-    mainColor: mainColor,
-    hoverColor: hoverColor,
-    isAnimatedOnHover: isAnimatedOnHover
+    style: (0, _extends2.default)({}, style, {
+      '--burgerIcon-mainColor': mainColor,
+      '--burgerIcon-hoverColor': hoverColor
+    }),
+    className: (0, _classnames.default)('k-BurgerIcon', className, {
+      'k-BurgerIcon--isActive': isActive,
+      'k-BurgerIcon--isAnimatedOnHover': isAnimatedOnHover
+    })
   }, props), (iconTitle || title) && /*#__PURE__*/_react.default.createElement("title", null, iconTitle || title), /*#__PURE__*/_react.default.createElement("rect", {
     y: "0",
     width: "12",

@@ -696,21 +696,51 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 </div>
 `;
 
-exports[`<DashboardLayout /> with Header and Alert matches with snapshot 1`] = `
+exports[`<DashboardLayout /> with Header, Toaster and Alert matches with snapshot 1`] = `
 .c1 {
   overflow: visible;
-  fill: #fff;
+  fill: var(--burgerIcon-mainColor,#222);
 }
 
 .c1:hover,
 button:hover .c1 {
-  fill: #19b4fa;
+  fill: var(--burgerIcon-hoverColor,#19b4fa);
 }
 
 .c1 rect {
   -webkit-transition: -webkit-transform 0.2s ease-out,fill 0.15s;
   -webkit-transition: transform 0.2s ease-out,fill 0.15s;
   transition: transform 0.2s ease-out,fill 0.15s;
+}
+
+.c1.k-BurgerIcon--isActive .k-BurgerIcon__bun {
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+.c1.k-BurgerIcon--isActive .k-BurgerIcon__patty {
+  -webkit-transform: translateX(-2px);
+  -ms-transform: translateX(-2px);
+  transform: translateX(-2px);
+}
+
+.c1.k-BurgerIcon--isAnimatedOnHover:hover .k-BurgerIcon__bun,
+button:hover .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__bun,
+.c1.k-BurgerIcon--isAnimatedOnHover:focus .k-BurgerIcon__bun,
+button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__bun {
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+.c1.k-BurgerIcon--isAnimatedOnHover:hover .k-BurgerIcon__patty,
+button:hover .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty,
+.c1.k-BurgerIcon--isAnimatedOnHover:focus .k-BurgerIcon__patty,
+button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
+  -webkit-transform: translateX(-2px);
+  -ms-transform: translateX(-2px);
+  transform: translateX(-2px);
 }
 
 .c0 {
@@ -754,6 +784,44 @@ button:hover .c1 {
 
 .c0 .k-DashboardLayout__backLink:focus-visible {
   outline-color: #bae8fd;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: -7.5rem;
+  padding: 1.25rem 1.25rem 2.5rem;
+  background: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),bottom 0.4s cubic-bezier(0.34,1.56,0.64,1),left 0.3s ease-in-out;
+  transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),bottom 0.4s cubic-bezier(0.34,1.56,0.64,1),left 0.3s ease-in-out;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper + .k-DashboardLayout__toaster__spacer {
+  max-height: 0;
+  height: 6.25rem;
+  -webkit-transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper.k-DashboardLayout__toaster--isOpen {
+  bottom: -1.25rem;
+  opacity: 1;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper.k-DashboardLayout__toaster--isOpen + .k-DashboardLayout__toaster__spacer {
+  max-height: 6.25rem;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: -1.25rem;
+  height: 1.25rem;
+  background: linear-gradient( to bottom,rgba(255,255,255,0),rgba(255,255,255,1) );
 }
 
 .c0 .k-DashboardLayout__sideWrapper:focus,
@@ -849,20 +917,18 @@ button:hover .c1 {
 
 @media (max-width:67.4375rem) {
   .c0 {
-    overflow: hidden;
     position: relative;
   }
 
   .c0 .k-DashboardLayout {
     --DashboardLayout-main-margin: calc( ((100vw - 18.75rem) / 12) + 3.75rem );
+    --DashboardLayout-side-width: calc(((100vw - 18.75rem) / 2 + 8.75rem));
     width: calc(((100vw - 18.75rem) / 2 + 8.75rem) + 100vw);
-    grid-template-columns: calc(((100vw - 18.75rem) / 2 + 8.75rem)) calc(100vw + 0.125rem);
-    -webkit-transform: translateX(calc(-1 * ((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem));
-    -ms-transform: translateX(calc(-1 * ((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem));
-    transform: translateX(calc(-1 * ((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem));
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    -webkit-transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
+    grid-template-columns: var(--DashboardLayout-side-width) calc( 100vw + 0.125rem );
+    left: calc(-1 * ((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem);
+    position: absolute;
+    -webkit-transition: left 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__heading__button__text {
@@ -879,18 +945,19 @@ button:hover .c1 {
 
   .c0 .k-DashboardLayout.k-DashboardLayout--isOpen {
     position: fixed;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    -webkit-transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
+    left: 0;
+    -webkit-transition: left 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
   }
 
   .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before {
     opacity: 0.8;
     background-color: #222;
     pointer-events: all;
+  }
+
+  .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__toaster__wrapper {
+    left: calc(((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem);
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
@@ -995,7 +1062,7 @@ button:hover .c1 {
     background-color: #fff;
     opacity: 0;
     pointer-events: none;
-    z-index: 100;
+    z-index: var(--DashboardLayout-overlay-zindex,100);
     -webkit-transition: background-color 0.2s ease-in-out,opacity 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out,opacity 0.2s ease-in-out;
   }
@@ -1009,16 +1076,24 @@ button:hover .c1 {
     margin-left: var(--DashboardLayout-main-margin);
     margin-right: var(--DashboardLayout-main-margin);
   }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__toaster__wrapper {
+    right: -0.125rem;
+    width: 100vw;
+  }
 }
 
 @media (max-width:39.9375rem) {
   .c0 .k-DashboardLayout {
     --DashboardLayout-main-margin: 1.25rem;
+    --DashboardLayout-side-width: calc(100vw - 3.125rem);
     width: calc(200vw - 3.25rem);
-    grid-template-columns: calc(100vw - 3.125rem) calc( 100vw + 0.125rem );
-    -webkit-transform: translateX(calc(-100vw + 3rem));
-    -ms-transform: translateX(calc(-100vw + 3rem));
-    transform: translateX(calc(-100vw + 3rem));
+    grid-template-columns: var(--DashboardLayout-side-width) calc( 100vw + 0.125rem );
+    left: calc(-100vw + 3rem);
+  }
+
+  .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__toaster__wrapper {
+    left: calc(100vw - 3rem);
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
@@ -1036,10 +1111,20 @@ button:hover .c1 {
   }
 }
 
+@media (min-width:40rem) {
+  .c0 .k-DashboardLayout__toaster {
+    background-color: #222;
+    color: #fff;
+    border-radius: 0.375rem;
+    padding: 1.25rem;
+  }
+}
+
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout {
     --DashboardLayout-main-margin: 7.5vw;
-    grid-template-columns: min(24rem,25vw) 1fr;
+    --DashboardLayout-side-width: min(24rem,25vw);
+    grid-template-columns: var(--DashboardLayout-side-width) 1fr;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
@@ -1094,6 +1179,11 @@ button:hover .c1 {
     margin-left: var(--DashboardLayout-main-margin);
     margin-right: var(--DashboardLayout-main-margin);
   }
+
+  .c0 .k-DashboardLayout__toaster__wrapper {
+    width: calc(100% - var(--DashboardLayout-side-width));
+    left: initial;
+  }
 }
 
 <div
@@ -1112,6 +1202,11 @@ button:hover .c1 {
   </a>
   <div
     className="k-DashboardLayout"
+    style={
+      Object {
+        "--DashboardLayout-overlay-zindex": 100,
+      }
+    }
   >
     <div
       aria-hidden={true}
@@ -1180,9 +1275,15 @@ button:hover .c1 {
           >
             <svg
               aria-label={null}
-              className="c1"
+              className="c1 k-BurgerIcon"
               height={10}
               role="img"
+              style={
+                Object {
+                  "--burgerIcon-hoverColor": "#19b4fa",
+                  "--burgerIcon-mainColor": "#fff",
+                }
+              }
               viewBox="0 0 12 10"
               width={12}
               xmlns="http://www.w3.org/2000/svg"
@@ -1227,6 +1328,19 @@ button:hover .c1 {
         <p>
           Main content
         </p>
+        <div
+          aria-live="polite"
+          className="k-DashboardLayout__toaster__wrapper k-DashboardLayout__fullWidth"
+        >
+          <div
+            className="k-DashboardLayout__toaster"
+          >
+            Toaster
+          </div>
+        </div>
+        <div
+          className="k-DashboardLayout__toaster__spacer"
+        />
       </main>
     </div>
   </div>
@@ -1236,18 +1350,48 @@ button:hover .c1 {
 exports[`<DashboardLayout /> with default props matches with snapshot 1`] = `
 .c1 {
   overflow: visible;
-  fill: #fff;
+  fill: var(--burgerIcon-mainColor,#222);
 }
 
 .c1:hover,
 button:hover .c1 {
-  fill: #19b4fa;
+  fill: var(--burgerIcon-hoverColor,#19b4fa);
 }
 
 .c1 rect {
   -webkit-transition: -webkit-transform 0.2s ease-out,fill 0.15s;
   -webkit-transition: transform 0.2s ease-out,fill 0.15s;
   transition: transform 0.2s ease-out,fill 0.15s;
+}
+
+.c1.k-BurgerIcon--isActive .k-BurgerIcon__bun {
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+.c1.k-BurgerIcon--isActive .k-BurgerIcon__patty {
+  -webkit-transform: translateX(-2px);
+  -ms-transform: translateX(-2px);
+  transform: translateX(-2px);
+}
+
+.c1.k-BurgerIcon--isAnimatedOnHover:hover .k-BurgerIcon__bun,
+button:hover .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__bun,
+.c1.k-BurgerIcon--isAnimatedOnHover:focus .k-BurgerIcon__bun,
+button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__bun {
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+.c1.k-BurgerIcon--isAnimatedOnHover:hover .k-BurgerIcon__patty,
+button:hover .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty,
+.c1.k-BurgerIcon--isAnimatedOnHover:focus .k-BurgerIcon__patty,
+button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
+  -webkit-transform: translateX(-2px);
+  -ms-transform: translateX(-2px);
+  transform: translateX(-2px);
 }
 
 .c0 {
@@ -1291,6 +1435,44 @@ button:hover .c1 {
 
 .c0 .k-DashboardLayout__backLink:focus-visible {
   outline-color: #bae8fd;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: -7.5rem;
+  padding: 1.25rem 1.25rem 2.5rem;
+  background: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),bottom 0.4s cubic-bezier(0.34,1.56,0.64,1),left 0.3s ease-in-out;
+  transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),bottom 0.4s cubic-bezier(0.34,1.56,0.64,1),left 0.3s ease-in-out;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper + .k-DashboardLayout__toaster__spacer {
+  max-height: 0;
+  height: 6.25rem;
+  -webkit-transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper.k-DashboardLayout__toaster--isOpen {
+  bottom: -1.25rem;
+  opacity: 1;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper.k-DashboardLayout__toaster--isOpen + .k-DashboardLayout__toaster__spacer {
+  max-height: 6.25rem;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: -1.25rem;
+  height: 1.25rem;
+  background: linear-gradient( to bottom,rgba(255,255,255,0),rgba(255,255,255,1) );
 }
 
 .c0 .k-DashboardLayout__sideWrapper:focus,
@@ -1386,20 +1568,18 @@ button:hover .c1 {
 
 @media (max-width:67.4375rem) {
   .c0 {
-    overflow: hidden;
     position: relative;
   }
 
   .c0 .k-DashboardLayout {
     --DashboardLayout-main-margin: calc( ((100vw - 18.75rem) / 12) + 3.75rem );
+    --DashboardLayout-side-width: calc(((100vw - 18.75rem) / 2 + 8.75rem));
     width: calc(((100vw - 18.75rem) / 2 + 8.75rem) + 100vw);
-    grid-template-columns: calc(((100vw - 18.75rem) / 2 + 8.75rem)) calc(100vw + 0.125rem);
-    -webkit-transform: translateX(calc(-1 * ((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem));
-    -ms-transform: translateX(calc(-1 * ((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem));
-    transform: translateX(calc(-1 * ((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem));
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    -webkit-transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
+    grid-template-columns: var(--DashboardLayout-side-width) calc( 100vw + 0.125rem );
+    left: calc(-1 * ((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem);
+    position: absolute;
+    -webkit-transition: left 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__heading__button__text {
@@ -1416,18 +1596,19 @@ button:hover .c1 {
 
   .c0 .k-DashboardLayout.k-DashboardLayout--isOpen {
     position: fixed;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    -webkit-transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
+    left: 0;
+    -webkit-transition: left 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
   }
 
   .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before {
     opacity: 0.8;
     background-color: #222;
     pointer-events: all;
+  }
+
+  .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__toaster__wrapper {
+    left: calc(((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem);
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
@@ -1532,7 +1713,7 @@ button:hover .c1 {
     background-color: #fff;
     opacity: 0;
     pointer-events: none;
-    z-index: 100;
+    z-index: var(--DashboardLayout-overlay-zindex,100);
     -webkit-transition: background-color 0.2s ease-in-out,opacity 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out,opacity 0.2s ease-in-out;
   }
@@ -1546,16 +1727,24 @@ button:hover .c1 {
     margin-left: var(--DashboardLayout-main-margin);
     margin-right: var(--DashboardLayout-main-margin);
   }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__toaster__wrapper {
+    right: -0.125rem;
+    width: 100vw;
+  }
 }
 
 @media (max-width:39.9375rem) {
   .c0 .k-DashboardLayout {
     --DashboardLayout-main-margin: 1.25rem;
+    --DashboardLayout-side-width: calc(100vw - 3.125rem);
     width: calc(200vw - 3.25rem);
-    grid-template-columns: calc(100vw - 3.125rem) calc( 100vw + 0.125rem );
-    -webkit-transform: translateX(calc(-100vw + 3rem));
-    -ms-transform: translateX(calc(-100vw + 3rem));
-    transform: translateX(calc(-100vw + 3rem));
+    grid-template-columns: var(--DashboardLayout-side-width) calc( 100vw + 0.125rem );
+    left: calc(-100vw + 3rem);
+  }
+
+  .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__toaster__wrapper {
+    left: calc(100vw - 3rem);
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
@@ -1573,10 +1762,20 @@ button:hover .c1 {
   }
 }
 
+@media (min-width:40rem) {
+  .c0 .k-DashboardLayout__toaster {
+    background-color: #222;
+    color: #fff;
+    border-radius: 0.375rem;
+    padding: 1.25rem;
+  }
+}
+
 @media (min-width:67.5rem) {
   .c0 .k-DashboardLayout {
     --DashboardLayout-main-margin: 7.5vw;
-    grid-template-columns: min(24rem,25vw) 1fr;
+    --DashboardLayout-side-width: min(24rem,25vw);
+    grid-template-columns: var(--DashboardLayout-side-width) 1fr;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
@@ -1631,6 +1830,11 @@ button:hover .c1 {
     margin-left: var(--DashboardLayout-main-margin);
     margin-right: var(--DashboardLayout-main-margin);
   }
+
+  .c0 .k-DashboardLayout__toaster__wrapper {
+    width: calc(100% - var(--DashboardLayout-side-width));
+    left: initial;
+  }
 }
 
 <div
@@ -1644,6 +1848,11 @@ button:hover .c1 {
   </a>
   <div
     className="k-DashboardLayout"
+    style={
+      Object {
+        "--DashboardLayout-overlay-zindex": 133,
+      }
+    }
   >
     <div
       aria-hidden={true}
@@ -1712,9 +1921,15 @@ button:hover .c1 {
           >
             <svg
               aria-label={null}
-              className="c1"
+              className="c1 k-BurgerIcon"
               height={10}
               role="img"
+              style={
+                Object {
+                  "--burgerIcon-hoverColor": "#19b4fa",
+                  "--burgerIcon-mainColor": "#fff",
+                }
+              }
               viewBox="0 0 12 10"
               width={12}
               xmlns="http://www.w3.org/2000/svg"

@@ -82,21 +82,66 @@ export const StyledDashboard = styled.div`
     outline-color: ${COLORS.primary4};
   }
 
+  .k-DashboardLayout__toaster__wrapper {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: ${pxToRem(-120)};
+    padding: ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(40)};
+    background: ${COLORS.background1};
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+      bottom 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), left 0.3s ease-in-out;
+
+    & + .k-DashboardLayout__toaster__spacer {
+      max-height: 0;
+      height: ${pxToRem(100)};
+      transition: max-height 0.4s ease;
+    }
+
+    &.k-DashboardLayout__toaster--isOpen {
+      bottom: ${pxToRem(-20)};
+      opacity: 1;
+
+      & + .k-DashboardLayout__toaster__spacer {
+        max-height: ${pxToRem(100)};
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: ${pxToRem(-20)};
+      height: ${pxToRem(20)};
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 1)
+      );
+    }
+  }
+
   /* TABLET + MOBILE */
 
   @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 
     .k-DashboardLayout {
       --DashboardLayout-main-margin: calc(
         ${ONE_COL} + ${pxToRem(GUTTER + CONTAINER_PADDING)}
       );
+      --DashboardLayout-side-width: calc(${SIX_COLS});
 
       width: calc(${SIX_COLS} + 100vw);
-      grid-template-columns: calc(${SIX_COLS}) calc(100vw + ${pxToRem(2)});
-      transform: translateX(calc(-1 * ${SIX_COLS} - ${pxToRem(2)}));
-      transition: transform 0.3s ease-in-out;
+      grid-template-columns: var(--DashboardLayout-side-width) calc(
+          100vw + ${pxToRem(2)}
+        );
+      left: calc(-1 * ${SIX_COLS} - ${pxToRem(2)});
+      position: absolute;
+      transition: left 0.3s ease-in-out;
 
       .k-DashboardLayout__heading__button__text {
         clip: rect(0 0 0 0);
@@ -110,13 +155,17 @@ export const StyledDashboard = styled.div`
 
       &.k-DashboardLayout--isOpen {
         position: fixed;
-        transform: none;
-        transition: transform 0.3s ease-in-out;
+        left: 0;
+        transition: left 0.3s ease-in-out;
 
         .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before {
           opacity: 0.8;
           background-color: ${COLORS.font1};
           pointer-events: all;
+        }
+
+        .k-DashboardLayout__toaster__wrapper {
+          left: calc(${SIX_COLS} - ${pxToRem(2)});
         }
       }
 
@@ -188,7 +237,7 @@ export const StyledDashboard = styled.div`
             background-color: ${COLORS.background1};
             opacity: 0;
             pointer-events: none;
-            z-index: 100;
+            z-index: var(--DashboardLayout-overlay-zindex, 100);
             transition: background-color 0.2s ease-in-out,
               opacity 0.2s ease-in-out;
           }
@@ -204,6 +253,11 @@ export const StyledDashboard = styled.div`
           }
         }
       }
+
+      .k-DashboardLayout__toaster__wrapper {
+        right: ${pxToRem(-2)};
+        width: 100vw;
+      }
     }
   }
 
@@ -212,11 +266,19 @@ export const StyledDashboard = styled.div`
   @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
     .k-DashboardLayout {
       --DashboardLayout-main-margin: ${pxToRem(CONTAINER_PADDING_THIN)};
+      --DashboardLayout-side-width: calc(100vw - ${pxToRem(50)});
+
       width: calc(200vw - ${pxToRem(50 + 2)});
-      grid-template-columns: calc(100vw - ${pxToRem(50)}) calc(
+      grid-template-columns: var(--DashboardLayout-side-width) calc(
           100vw + ${pxToRem(2)}
         );
-      transform: translateX(calc(-100vw + ${pxToRem(50 - 2)}));
+      left: calc(-100vw + ${pxToRem(50 - 2)});
+
+      &.k-DashboardLayout--isOpen {
+        .k-DashboardLayout__toaster__wrapper {
+          left: calc(100vw - ${pxToRem(50 - 2)});
+        }
+      }
 
       .k-DashboardLayout__sideWrapper {
         padding: ${pxToRem(20)};
@@ -236,12 +298,25 @@ export const StyledDashboard = styled.div`
     }
   }
 
+  /* TABLET + DESKTOP */
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    .k-DashboardLayout__toaster {
+      background-color: ${COLORS.font1};
+      color: ${COLORS.background1};
+      border-radius: ${pxToRem(6)};
+      padding: ${pxToRem(20)};
+    }
+  }
+
   /* DESKTOP */
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     .k-DashboardLayout {
       --DashboardLayout-main-margin: 7.5vw;
-      grid-template-columns: min(${pxToRem(384)}, 25vw) 1fr;
+      --DashboardLayout-side-width: min(${pxToRem(384)}, 25vw);
+
+      grid-template-columns: var(--DashboardLayout-side-width) 1fr;
 
       .k-DashboardLayout__sideWrapper {
         display: flex;
@@ -283,6 +358,10 @@ export const StyledDashboard = styled.div`
           }
         }
       }
+    }
+    .k-DashboardLayout__toaster__wrapper {
+      width: calc(100% - var(--DashboardLayout-side-width));
+      left: initial;
     }
   }
 
