@@ -119,6 +119,7 @@ export { DocumentIconPerson } from './components/graphics/icons/document-icon-pe
 export { DotIcon } from './components/graphics/icons/dot-icon'
 export { DoubleArrowIcon } from './components/graphics/icons/double-arrow-icon'
 export { DownloadIcon as ExportIcon } from './components/graphics/icons/download-icon'
+export { DownloadIcon } from './components/graphics/icons/download-icon'
 export { EditIcon } from './components/graphics/icons/edit-icon'
 export { EllipsisIcon } from './components/graphics/icons/ellipsis-icon'
 export { EmailIcon } from './components/graphics/icons/email-icon'
