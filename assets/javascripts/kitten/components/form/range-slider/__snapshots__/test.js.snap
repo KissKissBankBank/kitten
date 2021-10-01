@@ -44,7 +44,7 @@ exports[`<RangeSlider /> should match its snapshot with props 1`] = `
 
 exports[`<RangeSlider /> should set unbounded values when contolled with value 1`] = `
 <div
-  className="sc-bdVaJa eOaogP k-RangeSlider"
+  className="sc-bdVaJa bFKrgv k-RangeSlider"
   style={
     Object {
       "--range-input-ratio": 0,
