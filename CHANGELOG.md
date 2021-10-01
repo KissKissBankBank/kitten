@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `DownloadIcon`: Update icon.
+
 ## [4.12.0] - 2021-09-30
 
 Feature:
