@@ -88,6 +88,24 @@ describe('<HeaderMenu />', () => {
     })
   })
 
+  describe('with position to right', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <HeaderMenu position="right">
+            <HeaderMenu.Item href="#">Item 1</HeaderMenu.Item>
+            <HeaderMenu.Item href="#">Item 2</HeaderMenu.Item>
+            <HeaderMenu.Item href="#">Item 3</HeaderMenu.Item>
+          </HeaderMenu>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with button items', () => {
     beforeEach(() => {
       component = renderer

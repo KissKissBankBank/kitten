@@ -7,6 +7,161 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking Change: Typography: Remove `modular-scale` dependency and logic.
   All the font sizes previously defined as modular scale step (via `stepToRem`)
   are now calculated from a table with integer pixel values.
+- Fix: `DownloadIcon`: Update icon.
+
+## [4.12.0] - 2021-09-30
+
+Feature:
+
+- `Button`: Add `calcium` modifier prop.
+
+Fixes:
+
+- `ListTable`: Fix `isHightlighted` prop style.
+- `DashboardLayout`: Fix styles.
+- `FilterIcon`: Remove console warning.
+- `AvatarWithTextAndBadge`: Improve margin styles.
+- `HeaderMenu.item`: Fix `margin-right` style.
+- `HeaderNav.UserMenuNext.Button`: Fix `min-width` style.
+
+## [4.11.0] - 2021-09-29
+
+Feature:
+
+- `DashboardLayout`: Add `overlayZIndex` prop, defaults to 100.
+
+Fix:
+
+- `HeaderNav`: Various fixes.
+
+## [4.10.1] - 2021-09-28
+
+Fixes:
+
+- `HeaderNav`: Fix `borderStyle="border"` style.
+- `ButtonWithTooltip`: Propagate `className` on parent.
+- `HeaderNav`: Fix `BurgerMenuNext` button state.
+- `BurgerIcon`: Modernize styles.
+
+## [4.10.0] - 2021-09-27
+
+Features:
+
+- `ButtonWithTooltip`: Add new component.
+- `DashboardLayout`: Add `Toaster` subcomponent.
+
+Fix:
+
+- `HeaderNav`: Various fixes.
+
+## [4.9.0] - 2021-09-24
+
+Features:
+
+- `HeaderMenu`: Add `position` prop, default to `left`.
+- `EngagementCardWithImage`: Add `imgProps` and `textProps` props.
+
+Fixes:
+
+- `DashboardLayout`: Fix header elements dimensions.
+- `HeaderNav.Button`: Add `cursor` to `onClick`.
+
+## [4.8.0] - 2021-09-22
+
+Features:
+
+- `HeaderNav.Nav`: Add `smallPadding` prop, defaults to `false`.
+- `HeaderNav.Button`: Add `smallPadding` prop, defaults to `false`.
+- `EnvelopeIcon`: Add new component.
+
+## [4.7.0] - 2021-09-21
+
+Features:
+
+- `ImageDropUploader`: Add image dimensions check.
+- `Button`: Apply `disabled` styles to any HTML element type.
+
+Fixes:
+
+- `ImageDropUploader`: Fix `onChange` sequence.
+- `Button`: Fix `tag`.
+
+## [4.6.3] - 2021-09-17
+
+Fix:
+
+- `LocationInput`: Add comma between city and country.
+
+## [4.6.2] - 2021-09-16
+
+Fix:
+
+- `ImageDropUploader`: Fix issue with smaller screens and wrong crop.
+
+## [4.6.1] - 2021-09-13
+
+Fix:
+
+- `DropDownMenu`: Close menu on click.
+
+## [4.6.0] - 2021-09-09
+
+Tech:
+
+- Bump to `node-sass@6`.
+
+## [4.5.2] - 2021-09-09
+
+Fix:
+
+- `RewardSummaryCard`: Responsive fixes.
+
+## [4.5.1] - 2021-09-08
+
+Fixes:
+
+- `RewardSummaryCard`: Various fixes.
+- `RangeSlider`: Turn to be controlled when `value` prop is passed.
+
+## [4.5.0] - 2021-09-02
+
+Features:
+
+- `NoImageIcon`: Add new component.
+- `RewardSummaryCard`: Add new component.
+- Add `createRangeFromZeroTo` to ESM exports.
+- `IconBadge`: Deprecate `big` and `huge` props.
+- Add `mq` media query constant object.
+
+Fixes:
+
+- `EngagementCard`: Remove useless props `hoverBorder` and `isActive`.
+- `EngagementCardWithImage`: Remove useless prop `isActive`.
+- `ContributionCard`: Remove useless prop `imageBorderRadius`.
+- `HorizontalCrowdfundingCard`: Fix hover styles.
+
+## [4.4.0] - 2021-08-30
+
+Feature:
+
+- `InfoLines`: Modernize component and update styles.
+
+Fix:
+
+- `TextInput`: Update color styles to enhance accessibility.
+
+## [4.3.0] - 2021-08-27
+
+Features:
+
+- `Autocomplete`: Add `variant` prop, defaults to `andromeda`.
+- `DocumentsDropUploader`: Add `hover` style to document tag element.
+- `DropdownSelect`: Add explicit `controlled` prop. It is uncontrolled by default
+
+Fixes:
+
+- `TagInput`: Keep delete button when disabled.
+- `DropdownSelect`: Can be controlled.
 
 ## [4.2.1] - 2021-08-19
 

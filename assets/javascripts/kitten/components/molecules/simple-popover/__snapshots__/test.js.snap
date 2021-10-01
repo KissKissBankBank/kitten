@@ -173,7 +173,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c1:disabled {
+.c1:disabled,
+.c1.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -322,7 +323,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   outline-color: #bae8fd;
 }
 
-.c1:disabled {
+.c1:disabled,
+.c1.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -365,7 +367,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c10:disabled {
+.c10:disabled,
+.c10.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -514,7 +517,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   outline-color: #bae8fd;
 }
 
-.c10:disabled {
+.c10:disabled,
+.c10.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1119,7 +1123,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 >
   <button
     aria-label="Close"
-    className="c1 k-Button c2 k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+    className="c1 k-Button c2 k-Button--micro k-Button--hydrogen k-Button--orion k-Button--hasIcon"
     onClick={[Function]}
     style={
       Object {
@@ -1180,7 +1184,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c8 c9"
     >
       <button
-        className="c1 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda"
+        className="c1 k-Button k-Button--tiny k-Button--hydrogen k-Button--orion"
         onClick={[Function]}
         style={
           Object {
@@ -1192,7 +1196,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
         J’ai compris
       </button>
       <button
-        className="c10 k-Button k-Button--tiny k-Button--helium k-Button--andromeda"
+        className="c10 k-Button k-Button--tiny k-Button--helium k-Button--orion"
         onClick={[Function]}
         style={
           Object {
@@ -1377,7 +1381,8 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c1:disabled {
+.c1:disabled,
+.c1.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -1526,7 +1531,8 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c1:disabled {
+.c1:disabled,
+.c1.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1942,7 +1948,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 >
   <button
     aria-label="Close"
-    className="c1 k-Button c2 k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+    className="c1 k-Button c2 k-Button--micro k-Button--hydrogen k-Button--orion k-Button--hasIcon"
     onClick={[Function]}
     style={
       Object {

@@ -1,14 +1,16 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
 import * as stories from './link-list.stories.js'
 import { LinkList } from './index'
+import { FileUrl } from 'storybook/file-url'
+
 
 <Meta title="Molecules/LinkList" component={LinkList} />
 
 # LinkList
 
-<Canvas>
-  <Story name="SimpleList" story={stories.SimpleList} />
-</Canvas>
+## Source
+
+<FileUrl filepath={__filename} />
 
 ## Import
 
@@ -17,6 +19,10 @@ import { LinkList } from '@kisskissbankbank/kitten'
 ```
 
 ## Usage
+
+<Canvas>
+  <Story name="SimpleList" story={stories.SimpleList} />
+</Canvas>
 
 #### Default
 
@@ -31,10 +37,10 @@ import { LinkList } from '@kisskissbankbank/kitten'
 ```
 
 
-### With Background Dark
+### With Dark Background
 
 <Canvas>
-  <Story name="WithBackgroundDark" story={stories.WithBackgroundDark} />
+  <Story name="WithDarkBackground" story={stories.WithDarkBackground} />
 </Canvas>
 
 ```js

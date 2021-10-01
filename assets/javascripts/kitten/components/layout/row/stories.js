@@ -1,24 +1,52 @@
 import React from 'react'
 import { Row } from './index'
-import { boolean } from '@storybook/addon-knobs'
+import { Text } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Row,
   title: 'Layout/Row',
   parameters: {
-    component: Row,
+    docs: { page: () => <DocsPage filepath={__filename} importString="Row" /> },
+  },
+  args: {
+    centered: false,
+    light: false,
+    dark: false,
+    lightTopBorder: false,
+    lightBottomBorder: false,
+    padded: false,
+  },
+  argTypes: {
+    centered: {
+      name: 'centered',
+      control: 'boolean',
+    },
+    light: {
+      name: 'light',
+      control: 'boolean',
+    },
+    dark: {
+      name: 'dark',
+      control: 'boolean',
+    },
+    lightTopBorder: {
+      name: 'lightTopBorder',
+      control: 'boolean',
+    },
+    lightBottomBorder: {
+      name: 'lightBottomBorder',
+      control: 'boolean',
+    },
+    padded: {
+      name: 'padded',
+      control: 'boolean',
+    },
   },
 }
 
-export const Default = () => (
-  <Row
-    centered={boolean('centered', false)}
-    light={boolean('light', false)}
-    dark={boolean('dark', false)}
-    lightTopBorder={boolean('lightTopBorder', false)}
-    lightBottomBorder={boolean('lightBottomBorder', false)}
-    padded={boolean('padded', false)}
-  >
-    <div>FooBar</div>
+export const Default = args => (
+  <Row {...args}>
+    <Text weight="light">FooBar</Text>
   </Row>
 )

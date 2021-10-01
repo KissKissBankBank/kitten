@@ -1,42 +1,90 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
-import { boolean, select } from '@storybook/addon-knobs'
 import { TagInput } from './index'
-
-const Container = styled.div`
-  max-width: 650px;
-  margin: 30px auto;
-`
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Form/TagInput',
   component: TagInput,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="TagInput" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  args: {
+    id: 'TagInput',
+    initialItemsList: ['Black', 'Blue', 'Green and magenta'],
+    placeholder: 'Placeholder…',
+    disabled: false,
+    helpMessage: 'Press Enter or comma to add an item to the list.',
+    size: 'regular',
+    variant: 'orion',
+    addEventKeys: ['Enter', ','],
+    removeEventKeys: ['Backspace'],
+  },
+  argTypes: {
+    id: {
+      name: 'id',
+      control: 'text',
+    },
+    initialItemsList: {
+      name: 'initialItemsList',
+      control: 'object',
+    },
+    placeholder: {
+      name: 'placeholder',
+      control: 'text',
+    },
+    disabled: {
+      name: 'disabled',
+      control: 'boolean',
+    },
+    helpMessage: {
+      name: 'helpMessage',
+      control: 'text',
+    },
+    size: {
+      name: 'size',
+      options: ['tiny', 'regular', 'big', 'huge', 'giant'],
+      control: 'select',
+    },
+    variant: {
+      name: 'variant',
+      options: ['andromeda', 'orion'],
+      control: 'inline-radio',
+    },
+    addEventKeys: {
+      name: 'addEventKeys',
+      control: 'object',
+    },
+    removeEventKeys: {
+      name: 'removeEventKeys',
+      control: 'object',
+    },
+  },
 }
 
-export const Default = () => {
+export const Default = args => {
   const [tagList, setTagList] = useState([])
 
   return (
-    <Container>
+    <div>
       <TagInput
-        id="TagInput"
+        {...args}
         onChange={list => setTagList(list)}
-        initialItemsList={['Black', 'Blue', 'Green and magenta']}
-        placeholder="Placeholder…"
-        disabled={boolean('Disabled', false)}
         helpMessage={
-          boolean('Disabled', false)
+          args.disabled
             ? 'This input is disabled.'
             : 'Press Enter or comma to add an item to the list.'
         }
-        size={select(
-          'size',
-          ['tiny', 'regular', 'big', 'huge', 'giant'],
-          'regular',
-        )}
-        variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
       />
       <p className="k-u-weight-light">List: {tagList.join(', ')}</p>
-    </Container>
+    </div>
   )
 }

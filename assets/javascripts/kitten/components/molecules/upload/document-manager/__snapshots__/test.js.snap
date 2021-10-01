@@ -11,7 +11,8 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa hJVhuF k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasBorderRadius"
+    className="sc-bdVaJa JXwLd k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fluid k-Button--hasBorderRadius"
+    disabled={null}
     htmlFor="DocumentManager"
     style={
       Object {
@@ -101,7 +102,8 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa hJVhuF k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasBorderRadius"
+    className="sc-bdVaJa JXwLd k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--orion k-Button--fluid k-Button--hasBorderRadius"
+    disabled={null}
     htmlFor="DocumentManager"
     style={
       Object {

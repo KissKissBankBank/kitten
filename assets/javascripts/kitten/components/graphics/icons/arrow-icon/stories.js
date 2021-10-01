@@ -1,10 +1,16 @@
 import React from 'react'
 import { Grid, GridCol } from '../../../..'
 import { ArrowIcon } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Graphics/Icons/ArrowIcon',
   component: ArrowIcon,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="ArrowIcon" />,
+    },
+  },
 }
 
 export const Default = () => (

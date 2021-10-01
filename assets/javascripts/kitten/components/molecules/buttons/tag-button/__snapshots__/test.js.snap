@@ -226,7 +226,7 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--helium k-Buttons__tagButton--andromeda k-Buttons__tagButton--regular"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--helium k-Buttons__tagButton--orion k-Buttons__tagButton--regular"
   type="button"
 >
   MyButton
@@ -459,7 +459,7 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--andromeda k-Buttons__tagButton--regular k-Buttons__tagButton--selected"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--orion k-Buttons__tagButton--regular k-Buttons__tagButton--selected"
   type="button"
 >
   MyButton
@@ -692,7 +692,7 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--andromeda k-Buttons__tagButton--huge"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--orion k-Buttons__tagButton--huge"
   type="button"
 >
   MyButton
@@ -1158,7 +1158,7 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--andromeda k-Buttons__tagButton--regular k-Buttons__tagButton--icon"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--orion k-Buttons__tagButton--regular k-Buttons__tagButton--icon"
   type="button"
 >
   <svg
@@ -1408,7 +1408,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--andromeda k-Buttons__tagButton--regular"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--orion k-Buttons__tagButton--regular"
   type="button"
 >
   MyButton

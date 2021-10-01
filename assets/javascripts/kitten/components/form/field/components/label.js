@@ -13,6 +13,7 @@ export class FieldLabel extends Component {
       tooltipProps,
       labelProps,
       link,
+      tooltipLabel,
       ...others
     } = this.props
 
@@ -28,6 +29,7 @@ export class FieldLabel extends Component {
               <Toggletip
                 id={tooltipId}
                 bubbleProps={{ zIndex: 2 }}
+                actionLabel="Help"
                 {...tooltipProps}
               >
                 {tooltip}

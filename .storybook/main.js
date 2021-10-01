@@ -13,6 +13,7 @@ module.exports = {
         modules: ['node_modules'],
         alias: {
           ...config.resolve.alias,
+          storybook: path.join(__dirname, './includes'),
           kitten: path.join(__dirname, '../assets/javascripts/kitten'),
           icons: path.join(__dirname, '../assets/images/icons'),
         },
@@ -20,6 +21,10 @@ module.exports = {
           crypto: require.resolve('crypto-browserify'),
           stream: require.resolve('stream-browserify'),
         },
+      },
+      context: __dirname,
+      node: {
+        __filename: true,
       },
     }
     alteredConfig.module.rules.push({
@@ -51,7 +56,6 @@ module.exports = {
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-links',
-    '@storybook/addon-knobs',
     '@storybook/addon-a11y',
     '@storybook/addon-measure',
   ],

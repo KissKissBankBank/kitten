@@ -1,6 +1,6 @@
 import React from 'react'
-import { boolean, text, select } from '@storybook/addon-knobs'
 import { TextInputWithIcon } from './index'
+import { Default as TextInputStory } from '../text-input/text-input.stories.js'
 import {
   SearchIcon,
   CheckedCircleIcon,
@@ -9,29 +9,43 @@ import {
   COLORS,
 } from '../../..'
 
-const variantOptions = {
-  Andromeda: 'andromeda',
-  Orion: 'orion',
+export const Default = args => <TextInputWithIcon {...args} />
+
+Default.decorators = [
+  story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      {story()}
+    </div>
+  ),
+]
+
+Default.args = {
+  ...TextInputStory.args,
+  icon: <SearchIcon aria-label="Search icon" width="15" height="15" />,
+  iconPosition: 'left',
+  accessibilityLabel: 'Icon label',
 }
 
-export const Default = () => (
-  <TextInputWithIcon
-    disabled={boolean('Disabled', false)}
-    placeholder={text('Placeholder', 'Les props sont transmises')}
-    variant={select('Variant', variantOptions, 'andromeda')}
-    icon={<SearchIcon aria-label="Search icon" width="15" height="15" />}
-    iconPosition={select('iconPosition', ['left', 'right'], 'left')}
-    size={select(
-      'Size',
-      ['tiny', 'regular', 'big', 'huge', 'giant'],
-      'regular',
-    )}
-  />
-)
+Default.argTypes = {
+  ...TextInputStory.argTypes,
+  icon: {
+    name: 'icon',
+    control: 'object',
+  },
+  iconPosition: {
+    name: 'iconPosition',
+    options: ['left', 'right'],
+    control: 'inline-radio',
+  },
+  accessibilityLabel: {
+    name: 'accessibilityLabel',
+    control: 'text',
+  },
+}
 
-export const Validation = () => {
+export const Validation = args => {
   const IconComponent = () => {
-    switch (select('State', ['none', 'loading', 'valid', 'error'], 'none')) {
+    switch (args.state) {
       case 'loading':
         return <Loader />
       case 'valid':
@@ -55,28 +69,27 @@ export const Validation = () => {
 
   return (
     <TextInputWithIcon
-      disabled={boolean('Disabled', false)}
-      placeholder={text('Placeholder', 'Les props sont transmises')}
-      variant={select('Variant', variantOptions, 'andromeda')}
+      {...args}
       icon={<IconComponent />}
-      iconPosition="right"
-      valid={
-        select('State', ['none', 'loading', 'valid', 'error'], 'none') ===
-        'valid'
-      }
-      error={
-        select('State', ['none', 'loading', 'valid', 'error'], 'none') ===
-        'error'
-      }
-      accessibilityLabel={
-        select('State', ['none', 'loading', 'valid', 'error'], 'none') ===
-          'loading' && 'Loading'
-      }
-      size={select(
-        'Size',
-        ['tiny', 'regular', 'big', 'huge', 'giant'],
-        'regular',
-      )}
+      valid={args.state === 'valid'}
+      error={args.state === 'error'}
+      accessibilityLabel={args.state === 'loading' && 'Loading'}
     />
   )
+}
+
+Validation.decorators = Default.decorators
+
+Validation.args = {
+  ...Default.args,
+  state: 'none',
+}
+
+Validation.argTypes = {
+  ...Default.argTypes,
+  state: {
+    name: 'state (story prop)',
+    options: ['none', 'loading', 'valid', 'error'],
+    control: 'select',
+  },
 }

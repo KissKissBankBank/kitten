@@ -1,16 +1,24 @@
 import React from 'react'
 import { Grid, GridCol } from './index'
-import { Container } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Layout/Grid',
   component: Grid,
+  decorators: [story => <div className="story-Container">{story()}</div>],
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="Grid, GridCol" />
+      ),
+    },
+  },
 }
 
 const blockClasses = 'k-u-align-center has-overrides color-background'
 
 export const Default = () => (
-  <Container>
+  <>
     <Grid className="k-u-margin-top-double">
       <GridCol col="1">
         <div className={blockClasses}>col="1"</div>
@@ -116,5 +124,5 @@ export const Default = () => (
         <div className={blockClasses}>col-l="4" offset-l="2"</div>
       </GridCol>
     </Grid>
-  </Container>
+  </>
 )

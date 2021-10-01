@@ -1,41 +1,71 @@
 import React from 'react'
-import { text, boolean, select } from '@storybook/addon-knobs'
 import { CheckboxSet } from './index'
-import { Grid, GridCol } from '../../../components/layout/grid'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: CheckboxSet,
   title: 'Form/CheckboxSet',
   parameters: {
-    component: CheckboxSet,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="CheckboxSet" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  args: {
+    name: 'checkbox-set',
+    error: false,
+    label: 'Checkbox Set Label',
+    items: [
+      {
+        label: 'Option A',
+        id: 'option-a',
+        defaultChecked: true,
+      },
+      {
+        label: 'Option B',
+        id: 'option-b',
+      },
+      {
+        label: 'Option C',
+        id: 'option-c',
+      },
+    ],
+    disabled: false,
+    variant: 'orion',
+  },
+  argTypes: {
+    name: {
+      name: 'name',
+      control: 'text',
+    },
+    label: {
+      name: 'label',
+      control: 'text',
+    },
+    items: {
+      name: 'items',
+      control: 'object',
+    },
+    error: {
+      name: 'error',
+      control: 'boolean',
+    },
+    disabled: {
+      name: 'disabled',
+      control: 'boolean',
+    },
+    variant: {
+      name: 'variant',
+      options: ['andromeda', 'orion'],
+      control: 'inline-radio',
+    },
   },
 }
 
-export const Default = () => (
-  <Grid>
-    <GridCol offset="1" col="8">
-      <CheckboxSet
-        variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
-        id={text('ID', 'story-radio-button-set')}
-        label={text('Label', null)}
-        items={[
-          {
-            label: text('Option A', 'Option A'),
-            id: 'option-a',
-            defaultChecked: true,
-          },
-          {
-            label: text('Option B', 'Option B'),
-            id: 'option-b',
-          },
-          {
-            label: text('Option C', 'Option C'),
-            id: 'option-c',
-          },
-        ]}
-        error={boolean('Error?', false)}
-        disabled={boolean('Disabled', false)}
-      />
-    </GridCol>
-  </Grid>
-)
+export const Default = args => <CheckboxSet {...args} />

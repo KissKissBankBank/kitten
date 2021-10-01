@@ -1,34 +1,31 @@
 import React from 'react'
 import { CreditCardForm } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../layout/container'
 import { DefaultExample, CustomExample } from './examples'
-
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      {children}
-    </Marger>
-  </Container>
-)
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Form/CreditCardForm',
   component: CreditCardForm,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={[
+            'index.js',
+            'components/cvc.js',
+            'components/expiry.js',
+            'components/helpers.js',
+            'components/number.js',
+          ]}
+          importString="CreditCardForm"
+        />
+      ),
+    },
+  },
+  decorators: [story => <div className="story-Container">{story()}</div>],
 }
 
-export const Default = () => {
-  return (
-    <StoryContainer>
-      <DefaultExample />
-    </StoryContainer>
-  )
-}
+export const Default = args => <DefaultExample {...args} />
 
-export const withCustomComponents = () => {
-  return (
-    <StoryContainer>
-      <CustomExample />
-    </StoryContainer>
-  )
-}
+export const withCustomComponents = args => <CustomExample {...args} />

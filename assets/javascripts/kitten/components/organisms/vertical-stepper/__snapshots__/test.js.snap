@@ -400,7 +400,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   className="c0"
 >
   <ul
-    className="k-Steppers--VerticalStepper k-Steppers--VerticalStepper__andromeda"
+    className="k-Steppers--VerticalStepper k-Steppers--VerticalStepper__orion"
     role="tablist"
   >
     <li
@@ -411,10 +411,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
         >
           <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda k-Steppers--VerticalStepper__status--success"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--success"
           >
             <svg
               fill="#fff"
@@ -433,7 +433,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 k-Steppers--VerticalStepper__title--andromeda"
+            className="c4 k-Steppers--VerticalStepper__title--orion"
           >
             Title
           </p>
@@ -441,7 +441,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c5"
           >
             <span
-              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--andromeda"
+              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--orion"
             >
               Link
             </span>
@@ -457,20 +457,22 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
         >
           <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda k-Steppers--VerticalStepper__status--valid"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--valid"
           >
             <svg
-              fill="#fff"
-              height="8"
-              viewBox="0 0 11 8"
-              width="10"
+              height="6"
+              viewBox="0 0 6 6"
+              width="6"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
+              <circle
+                cx="3"
+                cy="3"
+                fill="#19b4fa"
+                r="3"
               />
             </svg>
           </span>
@@ -479,7 +481,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 k-Steppers--VerticalStepper__title--andromeda"
+            className="c4 k-Steppers--VerticalStepper__title--orion"
           >
             Title
           </p>
@@ -506,7 +508,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c5"
           >
             <span
-              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--andromeda"
+              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--orion"
             >
               Link
             </span>
@@ -522,10 +524,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
         >
           <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda k-Steppers--VerticalStepper__status--error"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--error"
           >
             <svg
               height="10"
@@ -544,7 +546,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 k-Steppers--VerticalStepper__title--andromeda"
+            className="c4 k-Steppers--VerticalStepper__title--orion"
           >
             Title
           </p>
@@ -567,7 +569,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           >
             <span
               as="a"
-              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--andromeda"
+              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--orion"
               href="#"
             >
               Link
@@ -584,30 +586,17 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
         >
           <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda k-Steppers--VerticalStepper__status--waiting"
-          >
-            <svg
-              height="4"
-              viewBox="0 0 13 3"
-              width="13"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5 0h3v3H5V0zM0 0h3v3H0V0zm10 0h3v3h-3V0z"
-                fill="#19b4fa"
-                fillRule="nonzero"
-              />
-            </svg>
-          </span>
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--waiting"
+          />
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 k-Steppers--VerticalStepper__title--andromeda"
+            className="c4 k-Steppers--VerticalStepper__title--orion"
           >
             Title
           </p>
@@ -615,7 +604,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c5"
           >
             <span
-              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--andromeda"
+              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--orion"
             >
               Link
             </span>
@@ -631,29 +620,17 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
         >
           <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda"
-          >
-            <svg
-              fill="#fff"
-              height="8"
-              viewBox="0 0 11 8"
-              width="10"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
-              />
-            </svg>
-          </span>
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion"
+          />
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 k-Steppers--VerticalStepper__title--andromeda"
+            className="c4 k-Steppers--VerticalStepper__title--orion"
           >
             Title
           </p>
@@ -661,7 +638,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c5"
           >
             <span
-              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--andromeda"
+              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--orion"
             >
               Link
             </span>

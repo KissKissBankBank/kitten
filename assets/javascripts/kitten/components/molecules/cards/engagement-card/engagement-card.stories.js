@@ -1,18 +1,44 @@
 import React from 'react'
 import styled from 'styled-components'
-import { text, color } from '@storybook/addon-knobs'
 import { EngagementCard } from './index'
 import {
-  Container,
   pxToRem,
   ScreenConfig,
-  Marger,
-  KissKissBankBankIcon,
+  LoudspeakerIllustration,
+  MixIllustration,
   PhoneIllustration,
+  COLORS,
 } from '../../../..'
 
+export default {
+  title: 'Molecules/Cards/EngagementCard',
+  component: EngagementCard,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="EngagementCard" />
+      ),
+    },
+  },
+  decorators: [
+    story => (
+      <StyledStory className="story-Container story-Grid story-Grid--thin">
+        {story()}
+      </StyledStory>
+    ),
+  ],
+  argTypes: {
+    icon: { control: null },
+    backgroundColor: { control: 'color' },
+    href: { control: 'text' },
+  },
+  args: {
+    backgroundColor: COLORS.primary4,
+    href: '#',
+  },
+}
+
 const StyledEngagementCard = styled(EngagementCard)`
-  display: flex;
   height: ${pxToRem(130)};
 
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
@@ -20,69 +46,36 @@ const StyledEngagementCard = styled(EngagementCard)`
   }
 `
 
-const StyledContainer = styled(Container)`
-  margin-top: ${pxToRem(20)};
-  box-sizing: border-box;
-`
-
-const StyledList = styled.ul`
-  display: flex;
-  list-style-type: none;
-  overflow: hidden;
-
-  li {
-    position: relative;
-  }
-
-  :hover li,
-  :active li {
+const StyledStory = styled.div`
+  &:hover a,
+  &:active a {
     opacity: 0.5;
   }
 
-  li:hover,
-  li:active {
+  & a:hover,
+  & a:active {
     opacity: 1;
   }
 `
 
-export const Default = () => (
-  <StyledContainer>
-    <Marger top="3">
-      <StyledList>
-        <li>
-          <StyledEngagementCard
-            isActive
-            href="#"
-            icon={<PhoneIllustration />}
-            backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
-            hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
-          >
-            {text('Categorie', 'Fabrication française')}
-          </StyledEngagementCard>
-        </li>
-        <li>
-          <StyledEngagementCard
-            className="k-u-hidden@s-down"
-            href="#"
-            icon={<KissKissBankBankIcon height="25" />}
-            backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
-            hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
-          >
-            {text('Categorie 2', 'Education')}
-          </StyledEngagementCard>
-        </li>
-        <li>
-          <StyledEngagementCard
-            className="k-u-hidden@s-down"
-            href="#"
-            icon={<KissKissBankBankIcon height="25" />}
-            backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
-            hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
-          >
-            {text('Categorie 3', 'Bio')}
-          </StyledEngagementCard>
-        </li>
-      </StyledList>
-    </Marger>
-  </StyledContainer>
+export const Default = args => (
+  <>
+    <StyledEngagementCard {...args} icon={<PhoneIllustration />}>
+      Fabrication française
+    </StyledEngagementCard>
+    <StyledEngagementCard
+      {...args}
+      className="k-u-hidden@s-down"
+      icon={<LoudspeakerIllustration />}
+    >
+      Éducation
+    </StyledEngagementCard>
+    <StyledEngagementCard
+      {...args}
+      className="k-u-hidden@s-down"
+      icon={<MixIllustration />}
+    >
+      Bio
+    </StyledEngagementCard>
+  </>
 )

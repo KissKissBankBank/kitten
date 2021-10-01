@@ -11,7 +11,7 @@ export const FilterIcon = ({
   title,
   ...others
 }) => {
-  const animationDuration = animated ? duration : 0
+  const animationDuration = animated ? duration : null
 
   return (
     <svg

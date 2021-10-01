@@ -92,11 +92,7 @@ const InnerAnonymousMenu = () => (
   </HeaderMenu>
 )
 
-export const LendopolisHeaderNavStory = ({
-  isLogged,
-  isFixed,
-  stickyProps,
-}) => {
+export const LendopolisHeaderNavStory = ({ isLogged, ...args }) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const [userMenuWidth, setUserMenuWidth] = useState(null)
 
@@ -117,14 +113,13 @@ export const LendopolisHeaderNavStory = ({
   return (
     <HeaderNav
       id={HEADER_NAV_ID}
-      isLogged={isLogged}
-      isFixed={isFixed}
       quickAccessProps={{
         href: '#view',
         text: 'Aller au contenu',
         zIndex: 300,
       }}
-      stickyProps={stickyProps}
+      isLogged={isLogged}
+      {...args}
     >
       <HeaderNav.BurgerMenu dropdownContentWidth={pxToRem(burgerMenuWidth)}>
         <InnerBurgerMenu />

@@ -22,6 +22,7 @@ describe('<DashboardLayout />', () => {
               closeLabel: 'Custom close label',
             }}
             quickAccessLinkText="Custom quick access link text"
+            overlayZIndex={133}
           >
             <DashboardLayout.Header>Header content</DashboardLayout.Header>
             <DashboardLayout.SideContent>
@@ -40,7 +41,7 @@ describe('<DashboardLayout />', () => {
     })
   })
 
-  describe('with Header and Alert', () => {
+  describe('with Header, Toaster and Alert', () => {
     beforeEach(() => {
       component = renderer
         .create(
@@ -66,6 +67,7 @@ describe('<DashboardLayout />', () => {
             <DashboardLayout.Alerts>Alert!</DashboardLayout.Alerts>
 
             <p>Main content</p>
+            <DashboardLayout.Toaster>Toaster</DashboardLayout.Toaster>
           </DashboardLayout>,
         )
         .toJSON()

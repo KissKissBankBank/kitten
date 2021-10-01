@@ -5,14 +5,14 @@ exports[`<ImageCropper /> matches with empty snapshot 1`] = `
   className="sc-bZQynM bqJTVP k-UploadAndCropper"
 >
   <label
-    className="sc-bdVaJa kJwiAq k-Label k-u-margin-bottom-singleHalf k-Label--normal"
+    className="sc-bdVaJa cioPrE k-Label k-u-margin-bottom-singleHalf k-Label--normal"
     htmlFor="cropper"
     onClick={[Function]}
   >
     Lorem ipsum…
   </label>
   <div
-    className="sc-ifAKCX eZQOng k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
+    className="sc-ifAKCX jYUOXE k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
   >
     <input
       accept=".jpg,.jpeg,.gif,.png"
@@ -22,7 +22,8 @@ exports[`<ImageCropper /> matches with empty snapshot 1`] = `
       type="file"
     />
     <label
-      className="sc-htpNat dGUNgr k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+      className="sc-htpNat dQhgEt k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fluid"
+      disabled={null}
       htmlFor="cropper"
       style={
         Object {
@@ -51,7 +52,7 @@ exports[`<ImageCropper /> matches with empty snapshot 1`] = `
     </label>
   </div>
   <p
-    className="sc-bwzfXH kbJdDO k-Paragraph k-u-margin-top-single k-Paragraph--tertiary k-Paragraph--noMargin"
+    className="sc-bwzfXH ggISLb k-Paragraph k-u-margin-top-single k-Paragraph--tertiary k-Paragraph--noMargin"
   >
     Lorem ipsum…
   </p>
@@ -67,14 +68,14 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
   className="sc-bZQynM bqJTVP k-UploadAndCropper"
 >
   <label
-    className="sc-bdVaJa kJwiAq k-Label k-u-margin-bottom-singleHalf k-Label--normal"
+    className="sc-bdVaJa cioPrE k-Label k-u-margin-bottom-singleHalf k-Label--normal"
     htmlFor="cropper"
     onClick={[Function]}
   >
     Lorem ipsum…
   </label>
   <div
-    className="sc-ifAKCX eZQOng k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
+    className="sc-ifAKCX jYUOXE k-BasicUploader k-u-margin-top-singleHalf k-u-margin-bottom-single k-BasicUploader--ready"
   >
     <input
       accept=".jpg,.jpeg,.gif,.png"
@@ -84,7 +85,8 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
       type="file"
     />
     <label
-      className="sc-htpNat dGUNgr k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fluid"
+      className="sc-htpNat dQhgEt k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fluid"
+      disabled={null}
       htmlFor="cropper"
       style={
         Object {
@@ -113,7 +115,7 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
     </label>
   </div>
   <p
-    className="sc-bwzfXH kbJdDO k-Paragraph k-u-margin-top-single k-Paragraph--tertiary k-Paragraph--noMargin"
+    className="sc-bwzfXH ggISLb k-Paragraph k-u-margin-top-single k-Paragraph--tertiary k-Paragraph--noMargin"
   >
     Lorem ipsum…
   </p>
@@ -149,19 +151,19 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
       className="k-Cropper__wrapper__slider"
     >
       <p
-        className="sc-bwzfXH kbJdDO k-Paragraph k-u-margin-bottom-singleHalf k-Paragraph--tertiary k-Paragraph--noMargin"
+        className="sc-bwzfXH ggISLb k-Paragraph k-u-margin-bottom-singleHalf k-Paragraph--tertiary k-Paragraph--noMargin"
       >
         Move the image…
       </p>
       <label
-        className="sc-bdVaJa kJwiAq k-Label k-u-margin-top-singleHalf k-u-margin-bottom-single k-Label--micro"
+        className="sc-bdVaJa cioPrE k-Label k-u-margin-top-singleHalf k-u-margin-bottom-single k-Label--micro"
         htmlFor="zoomSlider"
         onClick={[Function]}
       >
         Zoom…
       </label>
       <div
-        className="sc-EHOje cRzRXg k-RangeSlider"
+        className="sc-EHOje kqHbFs k-RangeSlider"
         style={
           Object {
             "--range-input-ratio": 0,

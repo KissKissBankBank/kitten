@@ -43,18 +43,18 @@ var IconContainer = function IconContainer(_ref) {
   }, children, statusesWithIcons.includes(status) && /*#__PURE__*/React.createElement("div", {
     className: "k-DocumentManager__iconContainer__statusIcon"
   }, status === 'valid' && /*#__PURE__*/React.createElement(CheckedCircleIcon, {
-    circleColor: COLORS.valid,
-    checkedColor: COLORS.background1,
+    bgColor: COLORS.valid,
+    color: COLORS.background1,
     width: 20,
     height: 20
   }), status === 'error' && /*#__PURE__*/React.createElement(CrossCircleIcon, {
-    circleColor: COLORS.error,
-    crossColor: COLORS.background1,
+    bgColor: COLORS.error,
+    color: COLORS.background1,
     width: 20,
     height: 20
   }), status === 'wait' && /*#__PURE__*/React.createElement(ClockCircleIcon, {
-    circleColor: COLORS.primary1,
-    clockColor: COLORS.background1,
+    bgColor: COLORS.primary1,
+    color: COLORS.background1,
     width: 20,
     height: 20
   })));
@@ -247,6 +247,8 @@ DocumentManager.propTypes = {
   onCancel: PropTypes.func,
   onUpload: PropTypes.func,
   status: PropTypes.oneOf(['ready', 'error', 'valid', 'wait', 'loading']),
-  subtitle: PropTypes.node,
-  title: PropTypes.node
+  displaySubtitle: PropTypes.node,
+  displayTitle: PropTypes.node,
+  buttonSubtitle: PropTypes.node,
+  buttonTitle: PropTypes.node
 };

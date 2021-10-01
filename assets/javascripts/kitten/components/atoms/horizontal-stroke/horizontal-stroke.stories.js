@@ -1,33 +1,50 @@
 import React from 'react'
-import { number, select, object } from '@storybook/addon-knobs'
+import { COLORS } from '../../..'
 import { HorizontalStroke } from './index'
 
-const sizeOptions = {
-  Tiny: 'tiny',
-  Default: 'default',
-  Big: 'big',
-  Huge: 'huge',
+export const Default = args => <HorizontalStroke {...args} />
+
+Default.decorators = [
+  story => (
+    <div className="story-Container">
+      <div>{story()}</div>
+    </div>
+  ),
+]
+
+Default.args = {
+  size: 'default',
+  modifier: null,
+  customSize: null,
+  color: COLORS.font1,
 }
 
-const modifierOptions = {
-  null: null,
-  primary: 'primary',
-  secondary: 'secondary',
-  tertiary: 'tertiary',
-  quaternary: 'quaternary',
-  quinary: 'quinary',
-  senary: 'senary',
-  septenary: 'septenary',
+Default.argTypes = {
+  size: {
+    name: 'size',
+    options: ['micro', 'tiny', 'default', 'big', 'huge'],
+    control: 'select',
+  },
+  modifier: {
+    name: 'modifier',
+    options: {
+      null: null,
+      primary: 'primary',
+      secondary: 'secondary',
+      tertiary: 'tertiary',
+      quaternary: 'quaternary',
+      quinary: 'quinary',
+      senary: 'senary',
+      septenary: 'septenary',
+    },
+    control: 'select',
+  },
+  customSize: {
+    name: 'customSize',
+    control: 'object',
+  },
+  color: {
+    name: 'color',
+    control: 'color',
+  },
 }
-
-export const Default = () => (
-  <HorizontalStroke
-    size={select('Size', sizeOptions, 'default')}
-    modifier={select('Modifier', modifierOptions)}
-    customSize={{
-      width: number('Width', ''),
-      height: number('Height', ''),
-    }}
-    style={object('Style object', { backgroundColor: '#333' })}
-  />
-)

@@ -1,5 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
+import _asyncToGenerator from "@babel/runtime/helpers/esm/asyncToGenerator";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
+import _regeneratorRuntime from "@babel/runtime/regenerator";
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -12,11 +14,12 @@ import { CloseButton } from '../../../../components/molecules/buttons/close-butt
 import { Text } from '../../../../components/atoms/typography/text';
 import { ImageCropper } from './components/image-cropper';
 import { pauseEvent } from './utils/pause-event';
+import { areImageDimensionsValid } from './utils/image-dimensions-check';
 var CROP_WIDTH = 125;
 var StyledImageDropUploader = styled.div.withConfig({
   displayName: "image-drop-uploader__StyledImageDropUploader",
   componentId: "sc-1xvyb92-0"
-})(["input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{outline:", " solid ", ";outline-offset:", ";}input[type='file']:focus:not(:focus-visible) + label{outline-color:transparent;}input[type='file']:focus-visible + label{outline-color:", ";}.k-ImageDropUploader__button{box-sizing:border-box;display:flex;width:100%;padding:", ";border-radius:", ";border:", " dashed ", ";flex-direction:column;align-items:center;gap:", ";text-align:center;color:", ";cursor:pointer;transition:border-color 0.2s ease,color 0.2s ease;> *{pointer-events:none;}&:hover{border-color:", ";color:", ";}}input[type='file']:active:not(:disabled) + .k-ImageDropUploader__button{border-color:", ";color:", ";}&.k-ImageDropUploader--isDraggingOver .k-ImageDropUploader__button{border-color:", ";color:", ";border-style:solid;}&.k-ImageDropUploader--error{.k-ImageDropUploader__button,.k-ImageDropUploader__manager{border-color:", ";border-style:solid;}}&.k-ImageDropUploader--disabled{.k-ImageDropUploader__button,.k-ImageDropUploader__manager{border-color:", ";background-color:", ";color:", ";cursor:not-allowed;}.k-ImageDropUploader__manager__cropper{pointer-events:none;background-color:", ";img{filter:grayscale(1) opacity(0.4);}}}.k-ImageDropUploader__button__title,.k-ImageDropUploader__manager__title{", " font-size:", ";}.k-ImageDropUploader__button__text,.k-ImageDropUploader__manager__text{", " font-size:", ";}.k-ImageDropUploader__manager{border-radius:", ";padding:", " ", " ", " ", ";width:100%;position:relative;box-sizing:border-box;border:", " solid ", ";display:flex;gap:", ";}.k-ImageDropUploader__manager__cropper{background-color:", ";width:", ";height:var(--ImageDropUploader-cropHeight,", ");overflow:hidden;position:relative;img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:var(--ImageDropUploader-cropX,0) var(--ImageDropUploader-cropY,0);pointer-events:none;-moz-user-select:none;}}.k-ImageDropUploader__manager__content{align-self:center;}.k-ImageDropUploader__manager__cancelButton{position:absolute;top:", ";right:", ";border-top-right-radius:", ";}.k-ImageDropUploader__imageCropper{cursor:grab;&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&.k-ImageDropUploader__imageCropper--isDragging{cursor:grabbing;}}"], COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, pxToRem(15), pxToRem(8), pxToRem(2), COLORS.line1, pxToRem(10), COLORS.font1, COLORS.primary4, COLORS.primary1, COLORS.primary1, COLORS.primary1, COLORS.primary1, COLORS.primary1, COLORS.error2, COLORS.line2, COLORS.background2, COLORS.grey1, COLORS.background2, TYPOGRAPHY.fontStyles.regular, stepToRem(-1), TYPOGRAPHY.fontStyles.light, stepToRem(-2), pxToRem(8), pxToRem(15), pxToRem(45), pxToRem(15), pxToRem(15), pxToRem(2), COLORS.line1, pxToRem(15), COLORS.primary4, pxToRem(CROP_WIDTH), pxToRem(CROP_WIDTH), pxToRem(-2), pxToRem(-2), pxToRem(8), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4);
+})(["input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{outline:", " solid ", ";outline-offset:", ";}input[type='file']:focus:not(:focus-visible) + label{outline-color:transparent;}input[type='file']:focus-visible + label{outline-color:", ";}.k-ImageDropUploader__button{box-sizing:border-box;display:flex;width:100%;padding:", ";border-radius:", ";border:", " dashed ", ";flex-direction:column;align-items:center;gap:", ";text-align:center;color:", ";cursor:pointer;transition:border-color 0.2s ease,color 0.2s ease;> *{pointer-events:none;}&:hover{border-color:", ";color:", ";}}input[type='file']:active:not(:disabled) + .k-ImageDropUploader__button{border-color:", ";color:", ";}&.k-ImageDropUploader--isDraggingOver .k-ImageDropUploader__button{border-color:", ";color:", ";border-style:solid;}&.k-ImageDropUploader--error{.k-ImageDropUploader__button,.k-ImageDropUploader__manager{border-color:", ";border-style:solid;}}&.k-ImageDropUploader--disabled{.k-ImageDropUploader__button,.k-ImageDropUploader__manager{border-color:", ";background-color:", ";color:", ";cursor:not-allowed;}.k-ImageDropUploader__manager__cropper{pointer-events:none;background-color:", ";img{filter:grayscale(1) opacity(0.4);}}}.k-ImageDropUploader__button__title,.k-ImageDropUploader__manager__title{", " font-size:", ";}.k-ImageDropUploader__button__text,.k-ImageDropUploader__manager__text{", " font-size:", ";}.k-ImageDropUploader__manager{border-radius:", ";padding:", " ", " ", " ", ";width:100%;position:relative;box-sizing:border-box;border:", " solid ", ";display:flex;gap:", ";}.k-ImageDropUploader__manager__cropper{background-color:", ";flex:0 0 ", ";width:", ";height:var(--ImageDropUploader-cropHeight,", ");overflow:hidden;position:relative;img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:var(--ImageDropUploader-cropX,0) var(--ImageDropUploader-cropY,0);pointer-events:none;-moz-user-select:none;}}.k-ImageDropUploader__manager__content{align-self:center;}.k-ImageDropUploader__manager__cancelButton{position:absolute;top:", ";right:", ";border-top-right-radius:", ";}.k-ImageDropUploader__imageCropper{cursor:grab;&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&.k-ImageDropUploader__imageCropper--isDragging{cursor:grabbing;}}"], COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, pxToRem(15), pxToRem(8), pxToRem(2), COLORS.line1, pxToRem(10), COLORS.font1, COLORS.primary4, COLORS.primary1, COLORS.primary1, COLORS.primary1, COLORS.primary1, COLORS.primary1, COLORS.error2, COLORS.line2, COLORS.background2, COLORS.grey1, COLORS.background2, TYPOGRAPHY.fontStyles.regular, stepToRem(-1), TYPOGRAPHY.fontStyles.light, stepToRem(-2), pxToRem(8), pxToRem(15), pxToRem(45), pxToRem(15), pxToRem(15), pxToRem(2), COLORS.line1, pxToRem(15), COLORS.primary4, pxToRem(CROP_WIDTH), pxToRem(CROP_WIDTH), pxToRem(CROP_WIDTH), pxToRem(-2), pxToRem(-2), pxToRem(8), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4);
 
 var getCropHeight = function getCropHeight(ratio) {
   return CROP_WIDTH / ratio;
@@ -28,6 +31,11 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
       acceptedFileSize = _ref$acceptedFileSize === void 0 ? 5 * 1024 * 1024 : _ref$acceptedFileSize,
       _ref$acceptedMimeType = _ref.acceptedMimeTypes,
       acceptedMimeTypes = _ref$acceptedMimeType === void 0 ? ['image/jpeg', 'image/png', 'image/gif', 'image/webp'] : _ref$acceptedMimeType,
+      _ref$acceptedImageDim = _ref.acceptedImageDimensions,
+      acceptedImageDimensions = _ref$acceptedImageDim === void 0 ? {
+    width: 4096,
+    height: 4096
+  } : _ref$acceptedImageDim,
       _ref$buttonProps = _ref.buttonProps,
       buttonProps = _ref$buttonProps === void 0 ? {} : _ref$buttonProps,
       _ref$buttonText = _ref.buttonText,
@@ -73,7 +81,9 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
       _ref$status = _ref.status,
       status = _ref$status === void 0 ? 'ready' : _ref$status,
       _ref$typeErrorText = _ref.typeErrorText,
-      typeErrorText = _ref$typeErrorText === void 0 ? '' : _ref$typeErrorText;
+      typeErrorText = _ref$typeErrorText === void 0 ? '' : _ref$typeErrorText,
+      _ref$dimensionErrorTe = _ref.dimensionErrorText,
+      dimensionErrorText = _ref$dimensionErrorTe === void 0 ? '' : _ref$dimensionErrorTe;
 
   var _useState = useState(status),
       _useState2 = _slicedToArray(_useState, 2),
@@ -169,42 +179,101 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
     onCancel(true);
   };
 
-  useEffect(function () {
-    if (!imageRawData) return;
-    if (!isSelectedImageValid(imageRawData)) return;
-    setError(false);
-    var reader = new FileReader();
-    reader.readAsDataURL(imageRawData);
+  useEffect( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {
+    var isValid, reader;
+    return _regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.t0 = imageRawData;
 
-    reader.onloadend = function () {
-      setImageDataURL(reader.result);
-    };
+            if (!_context.t0) {
+              _context.next = 5;
+              break;
+            }
 
-    onUpload({
-      value: reader.result,
-      name: (imageRawData === null || imageRawData === void 0 ? void 0 : imageRawData.name) || null,
-      file: imageRawData || null
-    });
-  }, [imageRawData]);
-  useEffect(function () {
-    if (imageRawData && !isSelectedImageValid(imageRawData)) return;
-    onChange({
-      value: imageDataURL,
-      name: (imageRawData === null || imageRawData === void 0 ? void 0 : imageRawData.name) || null,
-      file: imageRawData || null,
-      cropperData: cropperData // value: resultData?.target?.src || '',
-      // base: getOr(resultData?.srcElement?.src)('originalTarget.src')(
-      //   resultData,
-      // ),
-      // name: fileNameState,
-      // file: uploadedFile,
-      // cropperData: resultData.detail,
-      // croppedImageSrc: cropperInstance
-      //   ? cropperInstance?.getCroppedCanvas()?.toDataURL()
-      //   : '',
+            _context.next = 4;
+            return isSelectedImageValid(imageRawData);
 
-    });
-  }, [imageDataURL, cropperData, imageRawData]);
+          case 4:
+            _context.t0 = _context.sent;
+
+          case 5:
+            isValid = _context.t0;
+
+            if (isValid) {
+              _context.next = 8;
+              break;
+            }
+
+            return _context.abrupt("return");
+
+          case 8:
+            setError(false);
+            reader = new FileReader();
+            reader.readAsDataURL(imageRawData);
+
+            reader.onloadend = function () {
+              setImageDataURL(reader.result);
+            };
+
+            onUpload({
+              value: reader.result,
+              name: (imageRawData === null || imageRawData === void 0 ? void 0 : imageRawData.name) || null,
+              file: imageRawData || null
+            });
+
+          case 13:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  })), [imageRawData]);
+  useEffect( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee2() {
+    var isValid;
+    return _regeneratorRuntime.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.t0 = imageRawData;
+
+            if (!_context2.t0) {
+              _context2.next = 5;
+              break;
+            }
+
+            _context2.next = 4;
+            return isSelectedImageValid(imageRawData);
+
+          case 4:
+            _context2.t0 = _context2.sent;
+
+          case 5:
+            isValid = _context2.t0;
+
+            if (!(imageRawData && !isValid)) {
+              _context2.next = 8;
+              break;
+            }
+
+            return _context2.abrupt("return");
+
+          case 8:
+            onChange({
+              value: imageDataURL,
+              name: (imageRawData === null || imageRawData === void 0 ? void 0 : imageRawData.name) || null,
+              file: imageRawData || null,
+              cropperData: cropperData
+            });
+
+          case 9:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  })), [imageDataURL, cropperData, imageRawData]);
 
   var handleCropperChange = function handleCropperChange(exportedCropperData) {
     setCropperData(exportedCropperData);
@@ -228,16 +297,55 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
     return true;
   };
 
-  var isSelectedImageValid = function isSelectedImageValid(file) {
-    if (file.size > acceptedFileSize) {
-      setError(true);
-      setInternalStatus('ready');
-      setErrorMessage(sizeErrorText);
-      return false;
-    }
+  var isSelectedImageValid = /*#__PURE__*/function () {
+    var _ref4 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee3(file) {
+      var dimensionValidity;
+      return _regeneratorRuntime.wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              if (!(file.size > acceptedFileSize)) {
+                _context3.next = 5;
+                break;
+              }
 
-    return true;
-  };
+              setError(true);
+              setInternalStatus('ready');
+              setErrorMessage(sizeErrorText);
+              return _context3.abrupt("return", false);
+
+            case 5:
+              _context3.next = 7;
+              return areImageDimensionsValid(file, acceptedImageDimensions);
+
+            case 7:
+              dimensionValidity = _context3.sent;
+
+              if (dimensionValidity) {
+                _context3.next = 13;
+                break;
+              }
+
+              setError(true);
+              setInternalStatus('ready');
+              setErrorMessage(dimensionErrorText);
+              return _context3.abrupt("return", false);
+
+            case 13:
+              return _context3.abrupt("return", true);
+
+            case 14:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }));
+
+    return function isSelectedImageValid(_x) {
+      return _ref4.apply(this, arguments);
+    };
+  }();
 
   return /*#__PURE__*/React.createElement(StyledImageDropUploader, {
     className: classNames('k-ImageDropUploader', className, {

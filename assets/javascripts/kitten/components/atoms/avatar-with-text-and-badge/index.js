@@ -19,7 +19,6 @@ const StyledWrapper = styled.div`
   text-decoration: none;
 
   .k-Avatar {
-    margin-right: ${pxToRem(10)};
     position: relative;
     padding: 0;
   }
@@ -72,7 +71,7 @@ const StyledWrapper = styled.div`
   .k-Avatar__text {
     padding: pxToRem(10);
     padding-right: 0;
-    margin: 0;
+    margin: 0 0 0 ${pxToRem(10)};
     text-align: left;
     color: ${COLORS.font1};
     text-decoration: none;

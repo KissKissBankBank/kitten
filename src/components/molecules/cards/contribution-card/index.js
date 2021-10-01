@@ -43,13 +43,12 @@ var ContributionCard = function ContributionCard(_ref) {
       style = _ref.style,
       borderWidth = _ref.borderWidth,
       borderRadius = _ref.borderRadius,
-      imageBorderRadius = _ref.imageBorderRadius,
       borderColor = _ref.borderColor,
       borderStyle = _ref.borderStyle,
       onClose = _ref.onClose,
       largeInput = _ref.largeInput,
       largeTitle = _ref.largeTitle,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderWidth", "borderRadius", "imageBorderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderWidth", "borderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"]);
   var imageChild = (0, _reactElements.getReactElementsByType)({
     children: children,
     type: ContributionCard.Image
@@ -70,7 +69,6 @@ var ContributionCard = function ContributionCard(_ref) {
     style: (0, _extends2.default)({}, style, {
       '--contributionCard--border-width': (0, _typography.pxToRem)(borderWidth),
       '--contributionCard--border-radius': (0, _typography.pxToRem)(borderRadius),
-      '--contributionCard--image-border-radius': (0, _typography.pxToRem)(imageBorderRadius),
       '--contributionCard--border-color': borderColor,
       '--contributionCard--border-style': borderStyle
     })
@@ -110,7 +108,6 @@ ContributionCard.defaultProps = {
   borderRadius: 8,
   borderStyle: 'solid',
   borderWidth: 2,
-  imageBorderRadius: 5,
   onClose: undefined,
   largeInput: false,
   largeTitle: false
@@ -123,7 +120,6 @@ ContributionCard.propTypes = {
   borderRadius: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   borderStyle: _propTypes.default.string,
   borderWidth: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
-  imageBorderRadius: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   largeInput: _propTypes.default.bool,
   largeTitle: _propTypes.default.bool
 };

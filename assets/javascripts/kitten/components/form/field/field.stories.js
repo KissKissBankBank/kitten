@@ -1,136 +1,186 @@
 import React from 'react'
-import { text, number, boolean, select } from '@storybook/addon-knobs'
 import {
   FieldInputExample,
   FieldPasswordExample,
   FieldRadioButtonSetExample,
   FieldAutocompleteExample,
 } from './field.examples'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../layout/container'
-import { Grid, GridCol } from '../../layout/grid'
-
-const StoryGrid = ({ children }) => (
-  <Container>
-    <Grid>
-      <GridCol col="6">
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
-  </Container>
-)
 
 export default {
   title: 'Form/Field',
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={[
+            'index.js',
+            'components/autocomplete.js',
+            'components/checkbox.js',
+            'components/error.js',
+            'components/input.js',
+            'components/label.js',
+            'components/password.js',
+            'components/radio-button-set.js',
+          ]}
+          importString="Field"
+        />
+      ),
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <div>{story()}</div>
+      </div>
+    ),
+  ],
 }
 
-export const WithInput = () => {
-  return (
-    <StoryGrid>
-      <FieldInputExample
-        id={text('ID', 'input')}
-        size={select(
-          'Size',
-          ['tiny', 'regular', 'big', 'huge', 'giant'],
-          'regular',
-        )}
-        label={text('Label', 'Label')}
-        tooltip={text('Tooltip', null)}
-        tooltipProps={{ actionLabel: 'Learn more' }}
-        tooltipId={text('Tooltip ID', 'tooltip')}
-        placeholder={text('Placeholder', 'Placeholder…')}
-        error={boolean('Error?', false)}
-        errorMessage={text('Error', 'Error message…')}
-        limit={number('Limit', undefined)}
-        unit={text('Unit', undefined)}
-        noMargin={boolean('No margin only on Input', false)}
-        variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
-      />
-    </StoryGrid>
-  )
+export const WithInput = args => {
+  return <FieldInputExample {...args} />
+}
+WithInput.args = {
+  id: 'input',
+  size: 'regular',
+  label: 'Label',
+  tooltip: null,
+  tooltipProps: { actionLabel: 'Learn more' },
+  tooltipId: 'tooltip',
+  placeholder: 'Placeholder…',
+  error: false,
+  errorMessage: 'Error message…',
+  limit: undefined,
+  unit: undefined,
+  noMargin: false,
+  variant: 'orion',
+}
+WithInput.argTypes = {
+  id: { control: 'text' },
+  size: {
+    control: 'select',
+    options: ['tiny', 'regular', 'big', 'huge', 'giant'],
+  },
+  label: { control: 'text' },
+  tooltip: { control: 'text' },
+  tooltipProps: { control: 'object' },
+  tooltipId: { control: 'text' },
+  placeholder: { control: 'text' },
+  error: { control: 'boolean' },
+  errorMessage: { control: 'text' },
+  limit: { control: 'number' },
+  unit: { control: 'text' },
+  noMargin: { control: 'boolean' },
+  variant: { control: 'select', options: ['andromeda', 'orion'] },
 }
 
-export const WithPassword = () => {
-  return (
-    <StoryGrid>
-      <FieldPasswordExample
-        id={text('ID', 'input')}
-        size={boolean('Tiny', false) ? 'tiny' : null}
-        label={text('Label', 'Label')}
-        tooltip={text('Tooltip', null)}
-        tooltipProps={{ actionLabel: 'Learn more' }}
-        tooltipId={text('Tooltip ID', 'tooltip')}
-        placeholder={text('Placeholder', 'Placeholder…')}
-        error={boolean('Error?', false)}
-        errorMessage={text('Error', 'Error message…')}
-        variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
-      />
-    </StoryGrid>
-  )
+export const WithPassword = args => {
+  return <FieldPasswordExample {...args} />
+}
+WithPassword.args = {
+  id: 'input',
+  size: null,
+  label: 'Label',
+  tooltip: null,
+  tooltipProps: { actionLabel: 'Learn more' },
+  tooltipId: 'tooltip',
+  placeholder: 'Placeholder…',
+  error: false,
+  errorMessage: 'Error message…',
+  variant: 'orion',
+}
+WithPassword.argTypes = {
+  id: { control: 'text' },
+  size: { control: 'boolean' },
+  label: { control: 'text' },
+  tooltip: { control: 'text' },
+  tooltipProps: { control: 'object' },
+  tooltipId: { control: 'text' },
+  placeholder: { control: 'text' },
+  error: { control: 'boolean' },
+  errorMessage: { control: 'text' },
+  variant: { control: 'select', options: ['andromeda', 'orion'] },
 }
 
-export const WithRadioButtons = () => {
-  return (
-    <StoryGrid>
-      <FieldRadioButtonSetExample
-        id={text('ID', 'option-a')}
-        size={boolean('Tiny', false) ? 'tiny' : null}
-        label={text('Label', 'Label')}
-        tooltip={text('Tooltip', null)}
-        tooltipProps={{ actionLabel: 'Learn more' }}
-        tooltipId={text('Tooltip ID', 'tooltip')}
-        items={[
-          {
-            text: text('Option A', 'Option A'),
-            id: 'option-a',
-            defaultChecked: true,
-          },
-          {
-            text: text('Option B', 'Option B'),
-            id: 'option-b',
-          },
-          {
-            text: text('Option C', 'Option C'),
-            id: 'option-c',
-          },
-        ]}
-        error={boolean('Error?', false)}
-        errorMessage={text('Error', 'Error message…')}
-        variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
-      />
-    </StoryGrid>
-  )
+export const WithRadioButtons = args => {
+  return <FieldRadioButtonSetExample {...args} />
+}
+WithRadioButtons.args = {
+  id: 'option-a',
+  size: null,
+  label: 'Label',
+  tooltip: null,
+  tooltipProps: { actionLabel: 'Learn more' },
+  tooltipId: 'tooltip',
+  items: [
+    {
+      text: 'Option A',
+      id: 'option-a',
+      defaultChecked: true,
+    },
+    {
+      text: 'Option B',
+      id: 'option-b',
+    },
+    {
+      text: 'Option C',
+      id: 'option-c',
+    },
+  ],
+  error: false,
+  errorMessage: 'Error message…',
+  variant: 'orion',
+}
+WithRadioButtons.argTypes = {
+  id: { control: 'text' },
+  size: { control: 'boolean' },
+  label: { control: 'text' },
+  tooltip: { control: 'text' },
+  tooltipProps: { control: 'object' },
+  tooltipId: { control: 'text' },
+  items: { control: 'object' },
+  error: { control: 'boolean' },
+  errorMessage: { control: 'text' },
+  variant: { control: 'select', options: ['andromeda', 'orion'] },
 }
 
-export const WithAutocomplete = () => {
-  return (
-    <StoryGrid>
-      <FieldAutocompleteExample
-        id={text('ID', 'select')}
-        size={boolean('Tiny', false) ? 'tiny' : null}
-        label={text('Label', 'Label')}
-        tooltip={text('Tooltip', null)}
-        tooltipProps={{ actionLabel: 'Learn more' }}
-        tooltipId={text('Tooltip ID', 'tooltip')}
-        placeholder={text('Placeholder', 'Select…')}
-        items={[
-          'Abyssin',
-          'Anatoli',
-          'Angora turc',
-          'Asian',
-          'Chartreux',
-          'Cymric',
-          'Mandarin',
-          'Oriental shorthair',
-          'Persan',
-          'Sibérien',
-        ]}
-        error={boolean('Error?', false)}
-        errorMessage={text('Error', 'Error message…')}
-        variant={select('Variant', ['andromeda', 'orion'], 'andromeda')}
-      />
-    </StoryGrid>
-  )
+export const WithAutocomplete = args => {
+  return <FieldAutocompleteExample {...args} />
+}
+WithAutocomplete.args = {
+  id: 'select',
+  size: null,
+  label: 'Label',
+  tooltip: null,
+  tooltipProps: { actionLabel: 'Learn more' },
+  tooltipId: 'tooltip',
+  placeholder: 'Select…',
+  items: [
+    'Abyssin',
+    'Anatolien',
+    'Angora turc',
+    'Asian',
+    'Chartreux',
+    'Cymérien',
+    'Mandarin',
+    'Oriental shorthair',
+    'Persan',
+    'Sibérien',
+  ],
+  error: false,
+  errorMessage: 'Error message…',
+  variant: 'orion',
+}
+WithAutocomplete.argTypes = {
+  id: { control: 'text' },
+  size: { control: 'boolean' },
+  label: { control: 'text' },
+  tooltip: { control: 'text' },
+  tooltipProps: { control: 'object' },
+  tooltipId: { control: 'text' },
+  placeholder: { control: 'text' },
+  items: { control: 'object' },
+  error: { control: 'boolean' },
+  errorMessage: { control: 'text' },
+  variant: { control: 'select', options: ['andromeda', 'orion'] },
 }

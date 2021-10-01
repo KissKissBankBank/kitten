@@ -45,3 +45,11 @@ export const ScreenConfig = {
     max: null,
   },
 }
+
+export const mq = {
+  mobile: `(max-width: ${ScreenConfig.XS.max}px)`,
+  mobileAndTablet: `(max-width: ${ScreenConfig.M.max}px)`,
+  tablet: `(min-width: ${ScreenConfig.S.min}px) and (max-width: ${ScreenConfig.M.max}px)`,
+  tabletAndDesktop: `(min-width: ${ScreenConfig.S.min}px)`,
+  desktop: `(min-width: ${ScreenConfig.L.min}px)`,
+}

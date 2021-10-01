@@ -1,6 +1,8 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
 import * as stories from './standalone-range.stories.js'
 import { StandaloneRangeDatePicker } from './index'
+import { FileUrl } from 'storybook/file-url'
+
 
 <Meta
   title="Form/StandaloneRangeDatePicker"
@@ -9,9 +11,9 @@ import { StandaloneRangeDatePicker } from './index'
 
 # StandaloneRangeDatePicker
 
-<Canvas>
-  <Story name="Example" story={stories.StandaloneRangeDatepicker} />
-</Canvas>
+## Source
+
+<FileUrl filepath={__filename} />
 
 ## Import
 
@@ -20,6 +22,10 @@ import { StandaloneRangeDatePicker } from '@kisskissbankbank/kitten'
 ```
 
 ## Usage
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
 
 ```js
 <StandaloneRangeDatePicker

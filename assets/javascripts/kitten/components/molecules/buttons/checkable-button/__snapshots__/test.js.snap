@@ -38,7 +38,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -187,7 +188,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -537,7 +539,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 <button
   aria-checked={null}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--hydrogen k-Button--orion"
   disabled={false}
   style={
     Object {
@@ -588,7 +590,8 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -737,7 +740,8 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1087,7 +1091,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--big k-Button--lithium k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--big k-Button--lithium k-Button--orion"
   disabled={false}
   style={
     Object {
@@ -1138,7 +1142,8 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -1287,7 +1292,8 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1637,7 +1643,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--lithium k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--lithium k-Button--orion k-Button--disabled"
   disabled={true}
   style={
     Object {
@@ -1688,7 +1694,8 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -1837,7 +1844,8 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -2187,7 +2195,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--copper k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--copper k-Button--orion"
   disabled={false}
   style={
     Object {
@@ -2238,7 +2246,8 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -2387,7 +2396,8 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -2737,7 +2747,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--tiny k-Button--lithium k-Button--andromeda"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--tiny k-Button--lithium k-Button--orion"
   disabled={false}
   style={
     Object {

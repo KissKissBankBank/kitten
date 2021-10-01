@@ -23,11 +23,11 @@ export var useFocusTrap = function useFocusTrap(_ref) {
     }
     /* tab */
     else {
-        if (document.activeElement === lastFocusableEl) {
-          firstFocusableEl.focus();
-          e.preventDefault();
-        }
+      if (document.activeElement === lastFocusableEl) {
+        firstFocusableEl.focus();
+        e.preventDefault();
       }
+    }
   }
 
   useEffect(function () {

@@ -86,7 +86,6 @@ export const LinkList = ({
   color,
   weight,
   href,
-  active,
   ...others
 }) => {
   return (
@@ -149,5 +148,4 @@ LinkList.defaultProps = {
   lineHeight: null,
   itemMargin: null,
   weight: 'regular',
-  active: false,
 }

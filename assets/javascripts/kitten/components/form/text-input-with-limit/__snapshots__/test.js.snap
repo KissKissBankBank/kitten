@@ -2,10 +2,10 @@
 
 exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 <div
-  className="sc-htpNat cHIlEo k-Form-TextInputWithLimit"
+  className="sc-htpNat jYlDxq k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bdVaJa hpZCOr k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    className="sc-bdVaJa fwuTXa k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--orion k-Form-TextInput--regular"
     defaultValue=""
     disabled={false}
     name="text"
@@ -21,10 +21,10 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat cHIlEo k-Form-TextInputWithLimit"
+  className="sc-htpNat jYlDxq k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bdVaJa hpZCOr k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--disabled"
+    className="sc-bdVaJa fwuTXa k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--disabled"
     defaultValue=""
     disabled={true}
     name="text"
@@ -40,10 +40,10 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
 
 exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat cHIlEo k-Form-TextInputWithLimit"
+  className="sc-htpNat jYlDxq k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bdVaJa hpZCOr k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--regular k-Form-TextInput--error"
+    className="sc-bdVaJa fwuTXa k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--error"
     defaultValue=""
     disabled={false}
     name="text"
@@ -59,10 +59,10 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
 
 exports[`<TextInputWithLimit /> with \`size\` prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat cHIlEo k-Form-TextInputWithLimit"
+  className="sc-htpNat jYlDxq k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bdVaJa hpZCOr k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--tiny"
+    className="sc-bdVaJa fwuTXa k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--orion k-Form-TextInput--tiny"
     defaultValue=""
     disabled={false}
     name="text"

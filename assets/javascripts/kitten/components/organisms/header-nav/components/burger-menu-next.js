@@ -47,21 +47,12 @@ export const BurgerMenuNext = ({
           'k-ButtonIcon--tiny',
         )}
       >
-        {isDropdownExpanded ? (
-          <BurgerIcon
-            isActive
-            hoverColor={COLORS.font1}
-            className="k-ButtonIcon__svg"
-            aria-hidden="true"
-          />
-        ) : (
-          <BurgerIcon
-            isAnimatedOnHover
-            hoverColor={COLORS.font1}
-            className="k-ButtonIcon__svg"
-            aria-hidden="true"
-          />
-        )}
+        <BurgerIcon
+          isActive={isDropdownExpanded}
+          hoverColor={COLORS.font1}
+          className="k-ButtonIcon__svg"
+          aria-hidden="true"
+        />
         <VisuallyHidden>Menu</VisuallyHidden>
       </DropdownButton>
 

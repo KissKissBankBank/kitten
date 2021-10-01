@@ -38,7 +38,8 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -187,7 +188,8 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -347,7 +349,7 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 
 <button
   aria-label="Close"
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -411,7 +413,8 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -560,7 +563,8 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -720,7 +724,7 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 
 <button
   aria-label="close"
-  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,

@@ -28,3 +28,10 @@ export var ScreenConfig = (_ScreenConfig = {}, _defineProperty(_ScreenConfig, SC
   min: 1440,
   max: null
 }), _ScreenConfig);
+export var mq = {
+  mobile: "(max-width: ".concat(ScreenConfig.XS.max, "px)"),
+  mobileAndTablet: "(max-width: ".concat(ScreenConfig.M.max, "px)"),
+  tablet: "(min-width: ".concat(ScreenConfig.S.min, "px) and (max-width: ").concat(ScreenConfig.M.max, "px)"),
+  tabletAndDesktop: "(min-width: ".concat(ScreenConfig.S.min, "px)"),
+  desktop: "(min-width: ".concat(ScreenConfig.L.min, "px)")
+};

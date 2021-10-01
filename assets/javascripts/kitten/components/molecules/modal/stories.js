@@ -1,10 +1,6 @@
 import React from 'react'
-import { text, boolean } from '@storybook/addon-knobs'
-import { Button } from '../../../components/molecules/buttons/button'
-import { Title } from '../../../components/atoms/typography/title'
-import { Paragraph } from '../../../components/atoms/typography/paragraph/next'
-import { Modal } from '../../../components/molecules/modal'
-import { Marger } from '../../../components/layout/marger'
+import { Button, Title, Paragraph, Modal, Marger } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -65,19 +61,27 @@ const StoryButton = ({ children }) => (
 export default {
   title: 'Molecules/Modal',
   component: Modal,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Modal" />,
+    },
+  },
+  decorators: [
+    story => <div className="story-Container story-Grid">{story()}</div>,
+  ],
 }
 
 export const OldModal = () => (
-  <Marger top="2">
+  <>
     <p className="k-u-weight-light">
       This Modal will be deprecated in the future.
     </p>
 
     <Modal
       closeButtonLabel="Fermer"
-      trigger={<StoryButton children={text('bouton', 'open')} />}
-      content={<StoryContent content={text('content', paragraphContainer)} />}
-      disableOutsideScroll={boolean('Disable outside scroll', false)}
+      trigger={<StoryButton children="Open" />}
+      content={<StoryContent content={paragraphContainer} />}
+      disableOutsideScroll
     />
-  </Marger>
+  </>
 )

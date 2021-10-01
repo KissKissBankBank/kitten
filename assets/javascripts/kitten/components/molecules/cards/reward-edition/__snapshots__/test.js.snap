@@ -38,7 +38,8 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c2:disabled {
+.c2:disabled,
+.c2.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -187,7 +188,8 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c2:disabled {
+.c2:disabled,
+.c2.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -412,7 +414,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
     </span>
     <button
       aria-label="Delete"
-      className="c2 k-Button k-RewardEdition__Header__Button k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      className="c2 k-Button k-RewardEdition__Header__Button k-Button--micro k-Button--hydrogen k-Button--orion k-Button--hasIcon"
       style={
         Object {
           "--border-radius": 0,

@@ -9,7 +9,7 @@ import { BlockquoteIcon } from './blockquote-icon'
 import { BoldIcon } from './bold-icon'
 import { BubbleIcon } from './bubble-icon'
 import { BurgerIcon } from './burger-icon/index'
-import { ButtonIcon } from './button-icon'
+import { ButtonIcon as EditorButtonIcon } from './button-icon'
 import { CameraIcon } from './camera-icon'
 import { Cart } from './cart'
 import { CbIcon } from './cb-icon'
@@ -31,7 +31,7 @@ import { EditIcon } from './edit-icon'
 import { EllipsisIcon } from './ellipsis-icon'
 import { EmailIcon } from './email-icon'
 import { EmbedIcon } from './embed-icon'
-import { ExportIcon } from './export-icon'
+import { EnvelopeIcon } from './envelope-icon'
 import { ExportIconAlternate } from './export-icon-alternate'
 import { FacebookIcon } from './facebook-icon'
 import { FacebookIconWithBackground } from './facebook-icon-with-background'
@@ -64,6 +64,7 @@ import { MaestroIcon } from './maestro-icon'
 import { MasterCardIcon } from './mastercard-icon'
 import { MenuIcon } from './menu-icon'
 import { MessengerIcon } from './messenger-icon'
+import { NoImageIcon } from './no-image-icon'
 import { ParagraphIcon } from './paragraph-icon'
 import { PasswordIcon } from './password-icon'
 import { PayPalIcon } from './paypal-icon'
@@ -103,7 +104,6 @@ import flagFile from 'icons/flags.png'
 
 import { Text, pxToRem } from '../../..'
 import React from 'react'
-import { color } from '@storybook/addon-knobs'
 import LinkTo from '@storybook/addon-links/react'
 
 const Container = styled.div`
@@ -172,10 +172,7 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
   }
 `
 
-export const AllIcons = () => {
-  const colorInput = color('Main color', '#333')
-  const bgColorInput = color('Background color', '#FFF')
-
+export const AllIcons = ({ colorInput, bgColorInput }) => {
   return (
     <Container>
       <Group title="Bank">
@@ -226,7 +223,8 @@ export const AllIcons = () => {
         <IconContainer children={<LinkIcon color={colorInput} />} />
         <IconContainer
           className="noMaxWidth"
-          children={<ButtonIcon color={colorInput} />}
+          children={<EditorButtonIcon color={colorInput} />}
+          suffix="as EditorButtonIcon in ESM export"
         />
         <IconContainer children={<AlignLeftIcon color={colorInput} />} />
         <IconContainer children={<AlignCenterIcon color={colorInput} />} />
@@ -336,7 +334,6 @@ export const AllIcons = () => {
         />
         <IconContainer children={<CopyIcon color={colorInput} />} />
         <IconContainer children={<BubbleIcon color={colorInput} />} />
-        <IconContainer children={<ExportIcon color={colorInput} />} />
         <IconContainer children={<ExportIconAlternate color={colorInput} />} />
         <IconContainer children={<StrokeIcon color={colorInput} />} />
         <IconContainer
@@ -372,6 +369,8 @@ export const AllIcons = () => {
         <IconContainer children={<HourglassIcon color={colorInput} />} />
         <IconContainer children={<RefundIcon color={colorInput} />} />
         <IconContainer children={<EllipsisIcon color={colorInput} />} />
+        <IconContainer children={<NoImageIcon color={colorInput} />} />
+        <IconContainer children={<EnvelopeIcon color={colorInput} />} />
       </Group>
       <Group title="Country flag icons">
         {flagList.map(country => (
@@ -388,4 +387,14 @@ export const AllIcons = () => {
   )
 }
 
-export default { title: 'Graphics/Icons' }
+export default {
+  title: 'Graphics/Icons',
+  args: {
+    colorInput: '#333',
+    bgColorInput: '#FFF',
+  },
+  argTypes: {
+    colorInput: { control: 'color' },
+    bgColorInput: { control: 'color' },
+  },
+}

@@ -38,7 +38,8 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -187,7 +188,8 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -346,7 +348,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_facebook k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_facebook k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -407,7 +409,8 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -556,7 +559,8 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -715,7 +719,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_facebook k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--social_facebook k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -783,7 +787,8 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   background-position: center;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -941,7 +946,8 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1100,7 +1106,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_instagram k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_instagram k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -1168,7 +1174,8 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   background-position: center;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -1326,7 +1333,8 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1485,7 +1493,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_instagram k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--social_instagram k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -1546,7 +1554,8 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -1695,7 +1704,8 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1854,7 +1864,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_linkedin k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_linkedin k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -1915,7 +1925,8 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -2064,7 +2075,8 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -2223,7 +2235,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_linkedin k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--social_linkedin k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -2284,7 +2296,8 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -2433,7 +2446,8 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -2592,7 +2606,7 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_pinterest k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_pinterest k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -2653,7 +2667,8 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -2802,7 +2817,8 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -2961,7 +2977,7 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_pinterest k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--social_pinterest k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -3022,7 +3038,8 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -3171,7 +3188,8 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -3330,7 +3348,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_twitter k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_twitter k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -3391,7 +3409,8 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -3540,7 +3559,8 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -3699,7 +3719,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_twitter k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--social_twitter k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -3760,7 +3780,8 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -3909,7 +3930,8 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -4068,7 +4090,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_youtube k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--social_youtube k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -4129,7 +4151,8 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -4278,7 +4301,8 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   outline-color: #bae8fd;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -4437,7 +4461,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_youtube k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--social_youtube k-Button--orion k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,

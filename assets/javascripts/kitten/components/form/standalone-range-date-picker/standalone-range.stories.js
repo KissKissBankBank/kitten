@@ -1,17 +1,7 @@
 import React from 'react'
 import { StandaloneRangeDatePicker } from './index'
-import { date, text, object, array, number } from '@storybook/addon-knobs'
-import { Container } from '../../../components/layout/container'
-import { Marger } from '../../../components/layout/marger'
 import COLORS from '../../../constants/colors-config'
-
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      {children}
-    </Marger>
-  </Container>
-)
+import { action } from '@storybook/addon-actions'
 
 const today = new Date()
 
@@ -61,7 +51,8 @@ const weekDays = [
   'Samedi',
 ]
 
-const disabledDays = [new Date(2019, 7, 16)]
+// disable yesterday
+const disabledDays = [new Date(today.setDate(today.getDate() - 1))]
 
 const months = [
   'Janvier',
@@ -78,21 +69,83 @@ const months = [
   'Décembre',
 ]
 
-export const StandaloneRangeDatepicker = () => (
-  <StoryContainer>
-    <StandaloneRangeDatePicker
-      selectedDay={date('default selected Date', today)}
-      locale="fr"
-      disabledDays={array('Disabled days', disabledDays)}
-      weekDays={array('Week days', weekDays)}
-      months={array('Months', months)}
-      title={text('Title', 'Sélectionnez la période souhaitée')}
-      previousMonth={text('Aria-label for previous month', 'Mois précédent')}
-      nextMonth={text('Aria-label for next month', 'Mois suivant')}
-      styles={object('Styles', styles)}
-      firstDayOfWeek={number('First day of the week', 1)}
-      initialMonth={new Date('2019-01-01T03:24:00')}
-      numberOfMonths={number('Number of months', 2)}
-    />
-  </StoryContainer>
-)
+export const Default = args => <StandaloneRangeDatePicker {...args} />
+
+Default.decorators = [story => <div className="story-Container">{story()}</div>]
+
+Default.args = {
+  selectedDay: today,
+  locale: 'fr',
+  disabledDays: disabledDays,
+  weekDays: weekDays,
+  months: months,
+  title: 'Sélectionnez la période souhaitée',
+  previousMonth: 'Mois précédent',
+  nextMonth: 'Mois suivant',
+  styles: styles,
+  firstDayOfWeek: 1,
+  initialMonth: today,
+  numberOfMonths: 2,
+  onChange: action('onChange'),
+}
+
+Default.argTypes = {
+  selectedDay: {
+    name: 'selectedDay',
+    control: 'date',
+  },
+  locale: {
+    name: 'locale',
+    control: { type: 'text' },
+  },
+  disabledDays: {
+    name: 'disabledDays',
+    control: 'object',
+  },
+  weekDays: {
+    name: 'weekDays',
+    control: 'object',
+  },
+  months: {
+    name: 'months',
+    control: 'object',
+  },
+  title: {
+    name: 'title',
+    control: 'text',
+  },
+  previousMonth: {
+    name: 'previousMonth',
+    description: 'data-label for the previous month button',
+    control: 'text',
+  },
+  nextMonth: {
+    name: 'nextMonth',
+    description: 'data-label for the next month button',
+    control: 'text',
+  },
+  styles: {
+    name: 'styles',
+    control: 'object',
+  },
+  firstDayOfWeek: {
+    name: 'firstDayOfWeek',
+    control: 'number',
+  },
+  numberOfMonths: {
+    name: 'numberOfMonths',
+    control: 'number',
+  },
+  initialMonth: {
+    name: 'initialMonth',
+    control: 'date',
+  },
+  from: {
+    name: 'from',
+    control: 'date',
+  },
+  to: {
+    name: 'to',
+    control: 'date',
+  },
+}

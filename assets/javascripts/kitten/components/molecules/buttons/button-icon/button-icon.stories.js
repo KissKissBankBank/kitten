@@ -1,37 +1,42 @@
 import React from 'react'
-import { select } from '@storybook/addon-knobs'
 import { ButtonIcon } from './index'
-import { Marger, Container, Grid, GridCol, QuestionMarkIcon } from '../../../..'
+import { QuestionMarkIcon } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: ButtonIcon,
   title: 'Molecules/Buttons/ButtonIcon',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="ButtonIcon" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  argTypes: {
+    size: {
+      name: 'size',
+      options: ['nano', 'micro', 'tiny', 'regular', 'big', 'huge', 'giant'],
+      control: 'select',
+    },
+    withoutHover: {
+      name: 'withoutHover',
+      control: 'boolean',
+    },
+  },
+  args: {
+    size: 'regular',
+    withoutHover: false,
+  },
 }
 
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      <Grid>
-        <GridCol col-s="3" col-l="2">
-          {children}
-        </GridCol>
-      </Grid>
-    </Marger>
-  </Container>
-)
-
-const sizesObject = {
-  nano: 'nano',
-  micro: 'micro',
-  tiny: 'tiny',
-  regular: 'regular',
-  big: 'big',
-}
-
-export const Default = () => (
-  <StoryContainer>
-    <ButtonIcon modifier="helium" size={select('Size', sizesObject, 'regular')}>
-      <QuestionMarkIcon />
-    </ButtonIcon>
-  </StoryContainer>
+export const Default = args => (
+  <ButtonIcon {...args}>
+    <QuestionMarkIcon />
+  </ButtonIcon>
 )

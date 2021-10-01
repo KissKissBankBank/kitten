@@ -9,15 +9,22 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   list-style: none;
 }
 
+.c0.k-HeaderMenu--left .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: left;
+}
+
+.c0.k-HeaderMenu--right .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: right;
+}
+
 .c0 .k-HeaderMenu__item__link {
   display: block;
   position: relative;
   width: 100%;
-  text-align: left;
   border: none;
   height: 3.125rem;
   box-sizing: border-box;
-  padding: 1.125rem 1.875rem 1.125rem;
+  padding: 1.125rem 1.25rem 1.125rem;
   background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -198,7 +205,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 }
 
 <ul
-  className="c0 k-HeaderMenu k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-right k-HeaderMenu--hasBorderOnSideOnHover"
+  className="c0 k-HeaderMenu k-HeaderMenu--left k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-right k-HeaderMenu--hasBorderOnSideOnHover"
   style={
     Object {
       "--headerMenu-background-colors-hover": undefined,
@@ -280,7 +287,8 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c1:disabled {
+.c1:disabled,
+.c1.k-Button--disabled {
   cursor: not-allowed;
 }
 
@@ -429,7 +437,8 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   outline-color: #bae8fd;
 }
 
-.c1:disabled {
+.c1:disabled,
+.c1.k-Button--disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -443,15 +452,22 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   list-style: none;
 }
 
+.c0.k-HeaderMenu--left .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: left;
+}
+
+.c0.k-HeaderMenu--right .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: right;
+}
+
 .c0 .k-HeaderMenu__item__link {
   display: block;
   position: relative;
   width: 100%;
-  text-align: left;
   border: none;
   height: 3.125rem;
   box-sizing: border-box;
-  padding: 1.125rem 1.875rem 1.125rem;
+  padding: 1.125rem 1.25rem 1.125rem;
   background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -784,7 +800,7 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
 }
 
 <ul
-  className="c0 k-HeaderMenu k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-right k-HeaderMenu--hasBorderOnSideOnHover"
+  className="c0 k-HeaderMenu k-HeaderMenu--left k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-right k-HeaderMenu--hasBorderOnSideOnHover"
   style={
     Object {
       "--headerMenu-background-colors-hover": undefined,
@@ -822,7 +838,7 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
     role="menuitem"
   >
     <button
-      className="c1 k-Button k-HeaderMenu__item__button k-Button--regular k-Button--null k-Button--andromeda k-Button--fluid"
+      className="c1 k-Button k-HeaderMenu__item__button k-Button--regular k-Button--null k-Button--orion k-Button--fluid"
       href="#"
       style={
         Object {
@@ -846,15 +862,22 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   list-style: none;
 }
 
+.c0.k-HeaderMenu--left .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: left;
+}
+
+.c0.k-HeaderMenu--right .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: right;
+}
+
 .c0 .k-HeaderMenu__item__link {
   display: block;
   position: relative;
   width: 100%;
-  text-align: left;
   border: none;
   height: 3.125rem;
   box-sizing: border-box;
-  padding: 1.125rem 1.875rem 1.125rem;
+  padding: 1.125rem 1.25rem 1.125rem;
   background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -1035,7 +1058,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 }
 
 <ul
-  className="c0 k-HeaderMenu k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-left k-HeaderMenu--hasBorderOnSideOnHover"
+  className="c0 k-HeaderMenu k-HeaderMenu--left k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-left k-HeaderMenu--hasBorderOnSideOnHover"
   style={
     Object {
       "--headerMenu-background-colors-hover": undefined,
@@ -1112,15 +1135,22 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   list-style: none;
 }
 
+.c0.k-HeaderMenu--left .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: left;
+}
+
+.c0.k-HeaderMenu--right .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: right;
+}
+
 .c0 .k-HeaderMenu__item__link {
   display: block;
   position: relative;
   width: 100%;
-  text-align: left;
   border: none;
   height: 3.125rem;
   box-sizing: border-box;
-  padding: 1.125rem 1.875rem 1.125rem;
+  padding: 1.125rem 1.25rem 1.125rem;
   background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -1301,7 +1331,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 }
 
 <ul
-  className="c0 k-HeaderMenu k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-left k-HeaderMenu--hasBorderOnSideOnHover"
+  className="c0 k-HeaderMenu k-HeaderMenu--left k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-left k-HeaderMenu--hasBorderOnSideOnHover"
   style={
     Object {
       "--headerMenu-background-colors-hover": undefined,
@@ -1347,7 +1377,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 </ul>
 `;
 
-exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
+exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
 .c0 {
   --headerMenu-background-colors-hover: #fff;
   margin: 0;
@@ -1356,15 +1386,22 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   list-style: none;
 }
 
+.c0.k-HeaderMenu--left .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: left;
+}
+
+.c0.k-HeaderMenu--right .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: right;
+}
+
 .c0 .k-HeaderMenu__item__link {
   display: block;
   position: relative;
   width: 100%;
-  text-align: left;
   border: none;
   height: 3.125rem;
   box-sizing: border-box;
-  padding: 1.125rem 1.875rem 1.125rem;
+  padding: 1.125rem 1.25rem 1.125rem;
   background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -1545,7 +1582,258 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 }
 
 <ul
-  className="c0 k-HeaderMenu k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-left k-HeaderMenu--hasBorderOnSideOnHover"
+  className="c0 k-HeaderMenu k-HeaderMenu--right k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-left k-HeaderMenu--hasBorderOnSideOnHover"
+  style={
+    Object {
+      "--headerMenu-background-colors-hover": undefined,
+    }
+  }
+>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    role="menuitem"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 1
+    </a>
+  </li>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    role="menuitem"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 2
+    </a>
+  </li>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    role="menuitem"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 3
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
+.c0 {
+  --headerMenu-background-colors-hover: #fff;
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+}
+
+.c0.k-HeaderMenu--left .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: left;
+}
+
+.c0.k-HeaderMenu--right .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: right;
+}
+
+.c0 .k-HeaderMenu__item__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: none;
+  height: 3.125rem;
+  box-sizing: border-box;
+  padding: 1.125rem 1.25rem 1.125rem;
+  background-color: #fff;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  color: #222;
+  line-height: 1;
+  font-size: 0.875rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 0.2s,background-color 0.4s;
+  transition: color 0.2s,background-color 0.4s;
+}
+
+.c0 .k-HeaderMenu__item__link:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: -0.0625rem;
+}
+
+.c0 .k-HeaderMenu__item__link:hover,
+.c0 .k-HeaderMenu__item__link:focus {
+  color: #19b4fa;
+  background-color: var(--headerMenu-background-colors-hover);
+}
+
+.c0 .k-HeaderMenu__item__link:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0 .k-HeaderMenu__item__link:focus-visible {
+  outline-color: #bae8fd;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.875rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link .k-HeaderMenu__item__arrow {
+  margin-left: 1.25rem;
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.5rem;
+  width: auto;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:focus,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:hover {
+  color: #222;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:focus .k-HeaderMenu__item__arrow,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:hover .k-HeaderMenu__item__arrow {
+  left: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link::before {
+  display: none;
+}
+
+.c0 .k-HeaderMenu__item--hasButton {
+  padding: 1.25rem;
+  background-color: #fff;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link::before {
+  content: '';
+  position: absolute;
+  top: -0.0625rem;
+  bottom: 0;
+  width: 0;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s,width 0.2s;
+  transition: background-color 0.2s,width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link:hover::before,
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link:focus::before {
+  background-color: #19b4fa;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide-left .k-HeaderMenu__item__link::before {
+  left: -0.0625rem;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide-right .k-HeaderMenu__item__link::before {
+  right: -0.0625rem;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:hover,
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:focus {
+  color: #19b4fa;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:hover::before,
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:focus::before {
+  width: 0.25rem;
+  background-color: #19b4fa;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBigItems .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
+}
+
+.c0.k-HeaderMenu--hasBigItems .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0.625rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
+  padding-top: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--light {
+  color: #b8b8b8;
+}
+
+.c0 .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link {
+  color: #19b4fa;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link::before {
+  width: 0.25rem;
+  background-color: #19b4fa;
+}
+
+.c0.k-HeaderMenu--hasBorders {
+  border-left: 0.0625rem solid #eee;
+  border-right: 0.0625rem solid #eee;
+}
+
+.c0.k-HeaderMenu--hasBorders .k-HeaderMenu__item {
+  border-bottom: 0.0625rem solid #eee;
+}
+
+<ul
+  className="c0 k-HeaderMenu k-HeaderMenu--left k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-left k-HeaderMenu--hasBorderOnSideOnHover"
   style={
     Object {
       "--headerMenu-background-colors-hover": undefined,

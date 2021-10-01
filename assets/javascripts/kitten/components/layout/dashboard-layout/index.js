@@ -30,6 +30,8 @@ export const DashboardLayout = ({
   buttonProps,
   quickAccessLinkText,
   fullHeightContent,
+  overlayZIndex = 100,
+  style,
   ...props
 }) => {
   const [isOpen, setOpen] = useState(false)
@@ -159,6 +161,10 @@ export const DashboardLayout = ({
         className={classNames('k-DashboardLayout', props.className, {
           'k-DashboardLayout--isOpen': isOpen,
         })}
+        style={{
+          ...style,
+          '--DashboardLayout-overlay-zindex': overlayZIndex,
+        }}
       >
         <div
           ref={sideBarElement}
@@ -332,6 +338,28 @@ const Alerts = ({ className, ...props }) => (
   />
 )
 
+const Toaster = ({ className, isOpen, children, ...props }) => {
+  return (
+    <>
+      <div
+        className={classNames(
+          'k-DashboardLayout__toaster__wrapper',
+          'k-DashboardLayout__fullWidth',
+          className,
+          {
+            'k-DashboardLayout__toaster--isOpen': isOpen,
+          },
+        )}
+        aria-live="polite"
+        {...props}
+      >
+        <div className="k-DashboardLayout__toaster">{children}</div>
+      </div>
+      <div className="k-DashboardLayout__toaster__spacer" />
+    </>
+  )
+}
+
 DashboardLayout.propTypes = {
   backLinkProps: PropTypes.object,
   buttonProps: PropTypes.shape({
@@ -340,6 +368,7 @@ DashboardLayout.propTypes = {
   }),
   quickAccessLinkText: PropTypes.node.isRequired,
   fullHeightContent: PropTypes.bool,
+  overlayZIndex: PropTypes.number,
 }
 
 Header.propTypes = {
@@ -357,3 +386,4 @@ DashboardLayout.SideContent = SideContent
 DashboardLayout.SideFooter = SideFooter
 DashboardLayout.Flow = Flow
 DashboardLayout.Alerts = Alerts
+DashboardLayout.Toaster = Toaster

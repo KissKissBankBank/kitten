@@ -49,37 +49,37 @@ var StyledText = (0, _styledComponents.default)(_text.Text).withConfig({
 var EngagementCardWithImage = function EngagementCardWithImage(_ref2) {
   var backgroundImage = _ref2.backgroundImage,
       children = _ref2.children,
-      isActive = _ref2.isActive,
       href = _ref2.href,
       as = _ref2.as,
       imageHeight = _ref2.imageHeight,
-      others = (0, _objectWithoutProperties2.default)(_ref2, ["backgroundImage", "children", "isActive", "href", "as", "imageHeight"]);
+      imgProps = _ref2.imgProps,
+      textProps = _ref2.textProps,
+      others = (0, _objectWithoutProperties2.default)(_ref2, ["backgroundImage", "children", "href", "as", "imageHeight", "imgProps", "textProps"]);
   return /*#__PURE__*/_react.default.createElement(StyledContainer, (0, _extends2.default)({}, others, {
     as: href ? 'a' : 'div',
-    href: href,
-    isActive: isActive
-  }), /*#__PURE__*/_react.default.createElement(StyledCard, null, /*#__PURE__*/_react.default.createElement(StyledImage, {
+    href: href
+  }), /*#__PURE__*/_react.default.createElement(StyledCard, null, /*#__PURE__*/_react.default.createElement(StyledImage, (0, _extends2.default)({
     src: backgroundImage,
     alt: "",
     imageHeight: imageHeight
-  })), /*#__PURE__*/_react.default.createElement(StyledText, {
+  }, imgProps))), /*#__PURE__*/_react.default.createElement(StyledText, (0, _extends2.default)({
     size: "micro",
     weight: "regular",
     color: "font1",
     decoration: "none",
     lineHeight: "normal"
-  }, children));
+  }, textProps), children));
 };
 
 exports.EngagementCardWithImage = EngagementCardWithImage;
 EngagementCardWithImage.propTypes = {
   href: _propTypes.default.string,
   backgroundImage: _propTypes.default.string.isRequired,
-  isActive: _propTypes.default.bool,
-  imageHeight: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
+  imageHeight: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
+  imgProps: _propTypes.default.object,
+  textProps: _propTypes.default.object
 };
 EngagementCardWithImage.defaultProps = {
   href: '',
-  isActive: false,
   imageHeight: ''
 };
