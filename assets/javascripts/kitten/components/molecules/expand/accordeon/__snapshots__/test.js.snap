@@ -261,7 +261,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
   isAnimated={false}
   onChange={[Function]}
   selectedItem={null}
-
+  variant="orion"
 >
   <styled.div
     className="k-Accordeon k-Accordeon--orion"
@@ -748,7 +748,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
   isAnimated={true}
   onChange={[Function]}
   selectedItem={0}
-
+  variant="orion"
 >
   <styled.div
     className="k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
@@ -1167,7 +1167,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
   isAnimated={true}
   onChange={[Function]}
   selectedItem={null}
-
+  variant="orion"
 >
   <styled.div
     className="k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
