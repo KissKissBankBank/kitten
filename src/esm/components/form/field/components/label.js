@@ -36,7 +36,8 @@ export var FieldLabel = /*#__PURE__*/function (_Component) {
           tooltipProps = _this$props.tooltipProps,
           labelProps = _this$props.labelProps,
           link = _this$props.link,
-          others = _objectWithoutProperties(_this$props, ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link"]);
+          tooltipLabel = _this$props.tooltipLabel,
+          others = _objectWithoutProperties(_this$props, ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link", "tooltipLabel"]);
 
       return /*#__PURE__*/React.createElement("div", _extends({
         className: "k-u-margin-bottom-single"
@@ -48,7 +49,8 @@ export var FieldLabel = /*#__PURE__*/function (_Component) {
         id: tooltipId,
         bubbleProps: {
           zIndex: 2
-        }
+        },
+        actionLabel: "Help"
       }, tooltipProps), tooltip)), link && /*#__PURE__*/React.createElement(Line.Item, null, link)));
     }
   }]);

@@ -1,7 +1,5 @@
 import React from 'react'
-import { text, boolean, select } from '@storybook/addon-knobs'
 import { DropdownPhoneSelect } from './index'
-import { Grid, GridCol } from '../../../components/layout/grid'
 import flagFile from 'icons/flags.png'
 import { DocsPage } from 'storybook/docs-page'
 
@@ -25,93 +23,133 @@ export default {
       ),
     },
   },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  args: {
+    id: 'dropdown-select',
+    error: false,
+    valid: false,
+    disabled: false,
+    hideLabel: false,
+    labelText: 'label',
+    resetOnBackspace: true,
+    highlightOptionBox: true,
+    placeholder: 'Telephone',
+    phoneProps: {
+      preferredCountries: [
+        'fr',
+        'be',
+        'lu',
+        're',
+        'gp',
+        'mq',
+        'pf',
+        'nc',
+        'gf',
+        'yt',
+      ],
+    },
+    locale: 'fr',
+    flagsUrl: flagFile,
+    size: 'normal',
+    defaultCountry: '',
+    value: '',
+    inputProps: {},
+    assumeCountry: '',
+  },
+  argTypes: {
+    id: {
+      name: 'id',
+      control: 'text',
+    },
+    error: {
+      name: 'error',
+      control: 'boolean',
+    },
+    valid: {
+      name: 'valid',
+      control: 'boolean',
+    },
+    disabled: {
+      name: 'disabled',
+      control: 'boolean',
+    },
+    hideLabel: {
+      name: 'hideLabel',
+      control: 'boolean',
+    },
+    labelText: {
+      name: 'labelText',
+      control: 'text',
+    },
+    resetOnBackspace: {
+      name: 'resetOnBackspace',
+      control: 'boolean',
+    },
+    highlightOptionBox: {
+      name: 'highlightOptionBox',
+      control: 'boolean',
+    },
+    placeholder: {
+      name: 'placeholder',
+      control: 'text',
+    },
+    phoneProps: {
+      name: 'phoneProps',
+      control: 'object',
+    },
+    locale: {
+      name: 'locale',
+      options: ['fr', 'en', 'nl'],
+      control: 'inline-radio',
+    },
+    flagsUrl: {
+      name: 'flagsUrl',
+      control: 'text',
+    },
+    size: {
+      name: 'size',
+      options: ['tiny', 'normal', 'big', 'huge', 'giant'],
+      control: 'select',
+    },
+    defaultCountry: {
+      name: 'defaultCountry',
+      control: 'text',
+    },
+    value: {
+      name: 'value',
+      control: 'text',
+    },
+    inputProps: {
+      name: 'inputProps',
+      control: 'object',
+    },
+    assumeCountry: {
+      name: 'assumeCountry',
+      control: 'text',
+    },
+  },
 }
 
-export const Default = () => {
+export const Default = args => {
   return (
-    <Grid>
-      <GridCol offset-l="1" col-l="8">
-        <DropdownPhoneSelect
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={boolean('hide label?', false)}
-          labelText={text('LabelText', 'label')}
-          resetOnBackspace
-          highlightOptionBox
-          placeholder={text('placeholder', 'Téléphone')}
-          phoneProps={{
-            preferredCountries: [
-              'fr',
-              'be',
-              'lu',
-              're',
-              'gp',
-              'mq',
-              'pf',
-              'nc',
-              'gf',
-              'yt',
-            ],
-          }}
-          value={text('value', '+33 1 23 45 67 89')}
-          locale={select('locale', ['fr', 'en', 'nl'], 'fr')}
-          flagsUrl={flagFile}
-          size={select(
-            'size',
-            ['tiny', 'normal', 'big', 'huge', 'giant'],
-            'normal',
-          )}
-        />
-        <p>
-          Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-          Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Etiam porta sem malesuada magna mollis euismod.
-        </p>
-      </GridCol>
-    </Grid>
+    <div>
+      <DropdownPhoneSelect {...{ ...args, value: '+33 1 23 45 67 89' }} />
+      <p>
+        Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+        Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam
+        porta sem malesuada magna mollis euismod.
+      </p>
+    </div>
   )
 }
 
-export const WithoutValues = () => {
-  return (
-    <Grid>
-      <GridCol offset-l="1" col-l="8">
-        <DropdownPhoneSelect
-          id={text('id', 'dropdown-select')}
-          error={boolean('error', false)}
-          valid={boolean('valid', false)}
-          disabled={boolean('disabled', false)}
-          hideLabel={boolean('hide label?', false)}
-          labelText={text('LabelText', 'label')}
-          resetOnBackspace
-          highlightOptionBox
-          placeholder={text('placeholder', 'Téléphone')}
-          phoneProps={{
-            preferredCountries: [
-              'fr',
-              'be',
-              'lu',
-              're',
-              'gp',
-              'mq',
-              'pf',
-              'nc',
-              'gf',
-              'yt',
-            ],
-          }}
-          locale={select('locale', ['fr', 'en', 'nl'], 'fr')}
-          flagsUrl={flagFile}
-          size={select(
-            'size',
-            ['tiny', 'normal', 'big', 'huge', 'giant'],
-            'normal',
-          )}
-        />
-      </GridCol>
-    </Grid>
-  )
+export const WithoutValues = args => {
+  return <DropdownPhoneSelect {...args} />
 }

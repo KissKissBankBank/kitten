@@ -1,25 +1,61 @@
 import React from 'react'
-import { boolean, text, select } from '@storybook/addon-knobs'
-import { Loader } from '../../../components/atoms/loader'
+import { SearchIcon } from '../../../components/graphics/icons/search-icon'
 import { TextInputWithButton } from './index'
+import { Default as TextInputStory } from '../text-input/text-input.stories.js'
 
-const sizeOptions = {
-  Tiny: 'tiny',
-  Regular: 'regular',
-  Huge: 'huge',
-  Giant: 'giant',
+export const Default = args => <TextInputWithButton {...args} />
+
+Default.decorators = [
+  story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      {story()}
+    </div>
+  ),
+]
+
+Default.args = {
+  ...TextInputStory.args,
+  inputValue: 'Input Value',
+  inset: false,
+  buttonValue: <SearchIcon />,
+  modifier: 'helium',
 }
 
-export const Default = () => (
-  <TextInputWithButton
-    valid={boolean('Valid', false)}
-    error={boolean('Error', false)}
-    disabled={boolean('Disabled', false)}
-    size={select('Size', sizeOptions, 'regular')}
-    buttonValue={<Loader />}
-    inputValue={text('inputValue', 'Une valeur')}
-    placeholder={text('Les props sont transmises', 'Les props sont transmises')}
-    inset={boolean('Inset', false)}
-    rounded={boolean('Rounded', false)}
-  />
-)
+Default.argTypes = {
+  ...TextInputStory.argTypes,
+  inputValue: {
+    name: 'inputValue',
+    control: 'text',
+  },
+  buttonValue: {
+    name: 'buttonValue',
+    control: 'text',
+  },
+  inset: {
+    name: 'inset',
+    control: 'boolean',
+  },
+  modifier: {
+    name: 'modifier',
+    options: [
+      'hydrogen',
+      'helium',
+      'lithium',
+      'beryllium',
+      'carbon',
+      'oxygen',
+      'copper',
+      'boron',
+      'neon',
+      'iron',
+      'calcium',
+      'social_facebook',
+      'social_twitter',
+      'social_linkedin',
+      'social_instagram',
+      'social_youtube',
+      'social_pinterest',
+    ],
+    control: 'select',
+  },
+}

@@ -31,7 +31,7 @@ const StyledInput = styled.input`
   transition: border-color 0.2s ease;
 
   ::placeholder {
-    color: ${COLORS.font2};
+    color: ${COLORS.font3};
   }
 
   // SIZES
@@ -111,8 +111,8 @@ const StyledInput = styled.input`
   // STATES
 
   :disabled {
-    color: ${COLORS.font2};
-    border-color: ${COLORS.line1};
+    color: ${COLORS.font1};
+    border-color: ${COLORS.line2};
     background-color: ${COLORS.line1};
     cursor: not-allowed;
 
@@ -122,18 +122,18 @@ const StyledInput = styled.input`
   }
 
   &.k-Form-TextInput--valid {
-    color: ${COLORS.tertiary2};
+    color: ${COLORS.font1};
     border-color: ${COLORS.tertiary2};
   }
 
   &.k-Form-TextInput--error {
-    color: ${COLORS.error3};
+    color: ${COLORS.font1};
     border-color: ${COLORS.error3};
   }
 
   &:invalid {
     box-shadow: none;
-    color: ${COLORS.error3};
+    color: ${COLORS.font1};
     border-color: ${COLORS.error3};
   }
 
@@ -306,7 +306,7 @@ export class TextInput extends PureComponent {
     disabled: PropTypes.bool,
     name: PropTypes.string,
     digits: PropTypes.number,
-    variant: PropTypes.string,
+    variant: PropTypes.oneOf(['orion', 'andromeda']),
     rounded: PropTypes.bool,
   }
 
@@ -319,7 +319,7 @@ export class TextInput extends PureComponent {
     disabled: false,
     name: 'text',
     digits: null,
-    variant: 'andromeda',
+    variant: 'orion',
     rounded: false,
   }
 

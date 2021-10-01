@@ -65,5 +65,5 @@ Link.protoTypes = {
 }
 
 Link.defaultProps = {
-  variant: 'andromeda',
+  variant: 'orion',
 }

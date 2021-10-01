@@ -103,30 +103,27 @@ export class ExpandBoardContent extends PureComponent {
   }
 }
 
-const growAnimation = () =>
-  keyframes`
-    0%: {
-      opacity: 0;
-      maxHeight: 0;
-    }
-    100%: {
-     opacity: 1;
-     maxHeight: this.props.animationMaxHeight;
-    }
-  grow;
+const growAnimation = () => keyframes`
+  0%: {
+    opacity: 0;
+    max-height: 0;
+  }
+  100%: {
+   opacity: 1;
+   max-height: var(--ExpandBoard-animationMaxHeight);
+  };
 `
 
 const shrinkAnimation = () =>
   keyframes`
-    0%: {
-      opacity: 1;
-      maxHeight: this.props.animationMaxHeight;
-    }
-    100%: {
-      opacity: 0;
-      maxHeight: 0;
-    }
-  schrink;
+  0%: {
+    opacity: 1;
+    max-height: var(--ExpandBoard-animationMaxHeight);
+  }
+  100%: {
+    opacity: 0;
+    max-height: 0;
+  };
 `
 
 export class ExpandBoard extends PureComponent {
@@ -218,6 +215,7 @@ export class ExpandBoard extends PureComponent {
 
     if (this.state.isShrinking) {
       return {
+        '--ExpandBoard-animationMaxHeight': animationMaxHeight,
         maxHeight: animationMaxHeight,
         opacity: 1,
         animationDuration: `${animationShrinkingDuration}s`,
@@ -230,6 +228,7 @@ export class ExpandBoard extends PureComponent {
     }
 
     return {
+      '--ExpandBoard-animationMaxHeight': animationMaxHeight,
       maxHeight: 0,
       opacity: 0,
       animationDuration: '1s',

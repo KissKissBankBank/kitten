@@ -1,6 +1,5 @@
 import React from 'react'
 import { SideGrid, SideGridContent, SideGridAside } from './index'
-import { select } from '@storybook/addon-knobs'
 import {
   InformationBox,
   Marger,
@@ -14,6 +13,22 @@ import { DocsPage } from 'storybook/docs-page'
 export default {
   title: 'Layout/SideGrid',
   component: SideGrid,
+  args: {
+    asidePosition: 'end',
+    asideSize: 'default',
+  },
+  argTypes: {
+    asidePosition: {
+      name: 'asidePosition',
+      options: ['end', 'start'],
+      control: 'select',
+    },
+    asideSize: {
+      name: 'asideSize',
+      options: ['default', 'small', 'large'],
+      control: 'select',
+    },
+  },
   parameters: {
     docs: {
       page: () => <DocsPage filepath={__filename} importString="SideGrid" />,
@@ -21,11 +36,8 @@ export default {
   },
 }
 
-export const Default = () => (
-  <SideGrid
-    asidePosition={select('asidePosition', ['end', 'start'], 'end')}
-    asideSize={select('asideSize', ['default', 'small', 'large'], 'default')}
-  >
+export const Default = args => (
+  <SideGrid {...args}>
     <SideGridContent>
       <Grid>
         <GridCol col-s="10" offset-s="1">

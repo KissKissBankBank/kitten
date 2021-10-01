@@ -18,11 +18,11 @@ var Wrapper = styled.div.withConfig({
 var List = styled.ul.withConfig({
   displayName: "stepper__List",
   componentId: "kuopc1-1"
-})(["display:flex;align-items:center;justify-content:center;flex-wrap:nowrap;height:", ";box-sizing:border-box;min-width:min-content;padding-right:40px;background-color:", ";margin:0;@media (max-width:", "){height:", ";}"], pxToRem(80), COLORS.primary6, pxToRem(ScreenConfig.S.max), pxToRem(65));
+})(["display:flex;align-items:center;justify-content:center;height:", ";flex-wrap:nowrap;box-sizing:border-box;min-width:min-content;padding-right:40px;background-color:", ";margin:0;gap:", ";@media (min-width:", "){height:", ";gap:", ";}"], pxToRem(65), COLORS.primary6, pxToRem(25), pxToRem(ScreenConfig.M.min), pxToRem(80), pxToRem(50));
 var ItemWrapper = styled.li.withConfig({
   displayName: "stepper__ItemWrapper",
   componentId: "kuopc1-2"
-})(["display:flex;align-items:center;gap:", ";@media (min-width:", "){gap:", ";}.k-Stepper__icon{margin-right:", ";}", " ", ""], pxToRem(25), pxToRem(ScreenConfig.M.min), pxToRem(50), pxToRem(10), function (props) {
+})(["display:flex;align-items:center;.k-Stepper__icon{margin-right:", ";}", " ", ""], pxToRem(10), function (props) {
   return props.state === 'progress' && css(["color:", ";"], COLORS.primary1);
 }, function (props) {
   return props.pointer && css(["cursor:pointer;"]);

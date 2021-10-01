@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RewardSummaryCard /> default matches with snapshot 1`] = `
+<div
+  className="sc-bdVaJa ftPROB k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
+>
+  <a
+    className="k-RewardSummaryCard__action"
+  />
+  <div
+    className="k-RewardSummaryCard__imageWrapper k-RewardSummaryCard-Wrapper__imageWrapper"
+  >
+    <img
+      alt=""
+      src="/kitten.jpg"
+    />
+  </div>
+  <div
+    className="k-RewardSummaryCard__gridWrapper k-RewardSummaryCard-Wrapper__gridWrapper"
+  >
+    <span
+      className="k-u-color-font1 k-u-size-tiny k-u-weight-regular k-RewardSummaryCard__title"
+    >
+      Stickers Free Boobs Club
+    </span>
+    <span
+      className="k-u-color-font1 k-u-size-tiny k-u-weight-light k-RewardSummaryCard__amount"
+    >
+      10 000€
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<RewardSummaryCard /> with some props matches with snapshot 1`] = `
+<div
+  className="sc-bdVaJa ftPROB k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
+>
+  <a
+    className="k-RewardSummaryCard__action"
+  />
+  <div
+    className="k-RewardSummaryCard__imageWrapper k-RewardSummaryCard-Wrapper__imageWrapper"
+  >
+    <img
+      alt=""
+      src="/kitten.jpg"
+    />
+  </div>
+  <div
+    className="k-RewardSummaryCard__gridWrapper k-RewardSummaryCard-Wrapper__gridWrapper"
+  >
+    <span
+      className="k-u-color-font1 k-u-size-tiny k-u-weight-regular k-RewardSummaryCard__title"
+    >
+      Stickers Free Boobs Club
+    </span>
+    <span
+      className="sc-htpNat ieszJs k-Tag k-RewardSummaryCard__titleTag k-u-margin-top-single k-u-margin-top-single k-Tag--info"
+    >
+      <svg
+        fill="#222"
+        height="13"
+        viewBox="0 0 18 16"
+        width="14"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+        <path
+          d="M8.999 0l1.93 5.974c.028.09.112.15.206.15l6.274-.013-5.084 3.68a.216.216 0 0 0-.079.242L14.198 16l-5.072-3.7a.216.216 0 0 0-.255 0L3.801 16l1.953-5.967a.216.216 0 0 0-.079-.243L.591 6.111l6.274.012c.094 0 .178-.06.207-.15L8.999 0z"
+        />
+      </svg>
+      Contrepartie star
+    </span>
+    <span
+      className="k-u-color-font1 k-u-size-tiny k-u-weight-light k-RewardSummaryCard__amount"
+    >
+      10 000€
+    </span>
+    <span
+      className="k-u-color-font1 k-u-size-tiny k-u-weight-light k-RewardSummaryCard__contribution k-u-hidden@xs-down"
+    >
+      1 468 000
+    </span>
+    <span
+      className="k-u-color-font1 k-u-size-tiny k-u-weight-light k-RewardSummaryCard__availability k-u-hidden@xs-down"
+    >
+      Illimitée
+    </span>
+    <div
+      className="k-RewardSummaryCard__options k-u-hidden@xs-down"
+    >
+      <details
+        className="sc-qrIAp jKoxkL k-DropdownMenu k-DropdownMenu--left"
+        onKeyDown={[Function]}
+        onToggle={[Function]}
+        open={false}
+        role="menu"
+      >
+        <summary
+          className="k-DropdownMenu__button"
+        >
+          <svg
+            fill="none"
+            height="4"
+            viewBox="0 0 16 4"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            
+            <circle
+              cx="2"
+              cy="2"
+              fill="#222"
+              r="2"
+            />
+            <circle
+              cx="8"
+              cy="2"
+              fill="#222"
+              r="2"
+            />
+            <circle
+              cx="14"
+              cy="2"
+              fill="#222"
+              r="2"
+            />
+          </svg>
+        </summary>
+        <div
+          className="sc-esOvli AsmaA k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top k-ArrowContainer--reverseDistance"
+          onClick={[Function]}
+          style={
+            Object {
+              "--k-ArrowContainer-arrowDistance": "0.625rem",
+              "--k-ArrowContainer-arrowSize": "0.5rem",
+              "--k-ArrowContainer-borderColor": "#eee",
+              "--k-ArrowContainer-borderDistance": 0,
+              "--k-ArrowContainer-borderRadius": "0.25rem",
+              "--k-ArrowContainer-borderSize": "0.5rem",
+              "--k-ArrowContainer-borderWidth": 0,
+              "--k-ArrowContainer-color": "#222",
+              "--k-ArrowContainer-padding": 0,
+            }
+          }
+        >
+          <a
+            className="k-DropdownMenu__menu__item k-DropdownMenu__menu__link"
+            href="#"
+            role="menuitem"
+          >
+            Editer
+          </a>
+          <a
+            className="k-DropdownMenu__menu__item k-DropdownMenu__menu__link"
+            href="#"
+            role="menuitem"
+          >
+            Dupliquer
+          </a>
+          <a
+            className="k-DropdownMenu__menu__item k-DropdownMenu__menu__link"
+            href="#"
+            role="menuitem"
+          >
+            Désactiver
+          </a>
+          <button
+            className="k-DropdownMenu__menu__item k-DropdownMenu__menu__button k-u-reset-button"
+            role="menuitem"
+            type="button"
+          >
+            Supprimer
+          </button>
+          <span
+            className="k-ArrowContainer__arrow"
+          />
+        </div>
+      </details>
+    </div>
+  </div>
+</div>
+`;

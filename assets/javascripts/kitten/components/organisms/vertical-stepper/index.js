@@ -95,5 +95,5 @@ VerticalStepper.propTypes = {
 }
 
 VerticalStepper.defaultProps = {
-  variant: 'andromeda',
+  variant: 'orion',
 }

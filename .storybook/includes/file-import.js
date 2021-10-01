@@ -1,6 +1,4 @@
 import React from 'react'
-import { Text, List } from 'kitten'
-import concat from 'lodash/concat'
 import { Subheading } from '@storybook/addon-docs'
 
 export const FileImport = ({ importString }) => (

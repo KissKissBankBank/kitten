@@ -90,11 +90,11 @@ var CrowdfundingCard = function CrowdfundingCard(_ref) {
   (0, _react.useEffect)(function () {
     if (_elementHelper.domElementHelper.canUseDom() && typeof document !== 'undefined' && 'fonts' in document // IE11 Fix, tests `document.fonts.ready.then()`
     ) {
-        document.fonts.ready.then(function () {
-          setTitleTruncate(titleTruncate);
-          setSubTitleTruncate(subTitleTruncate);
-        });
-      }
+      document.fonts.ready.then(function () {
+        setTitleTruncate(titleTruncate);
+        setSubTitleTruncate(subTitleTruncate);
+      });
+    }
   }, []);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledCrowdfundingCard, (0, _extends2.default)({}, others, {
     as: href ? 'a' : 'div',

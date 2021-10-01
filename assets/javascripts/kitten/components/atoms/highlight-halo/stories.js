@@ -1,18 +1,8 @@
 import React from 'react'
-import { number, color } from '@storybook/addon-knobs'
 import { HighlightHalo } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../layout/container'
-import COLORS from '../../../constants/colors-config'
+import { COLORS } from '../../..'
+import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
-
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="10" style={{ marginLeft: 60 }}>
-      {children}
-    </Marger>
-  </Container>
-)
 
 export default {
   title: 'Atoms/HighlightHalo',
@@ -24,41 +14,45 @@ export default {
       ),
     },
   },
+  decorators: [
+    story => (
+      <div className="story-Container">
+        <div>{story()}</div>
+      </div>
+    ),
+  ],
+  args: {
+    haloColor: COLORS.primary1,
+    haloSize: 120,
+    animationCycles: 3,
+    animationCycleDuration: 4,
+    animationDelay: 0,
+    onHaloAnimationEnd: action('onHaloAnimationEnd'),
+  },
+  argTypes: {
+    haloColor: {
+      name: 'haloColor',
+      control: 'color',
+    },
+    haloSize: {
+      name: 'haloSize',
+      control: { type: 'range', min: 1, max: 500, step: 10 },
+    },
+    animationCycles: {
+      name: 'animationCycles',
+      control: { type: 'range', min: 0, max: 20, step: 1 },
+    },
+    animationCycleDuration: {
+      name: 'animationCycleDuration',
+      control: { type: 'range', min: 1, max: 20, step: 1 },
+    },
+    animationDelay: {
+      name: 'animationDelay',
+      control: { type: 'range', min: 0, max: 20, step: 1 },
+    },
+  },
 }
 
-export const Default = () => {
-  return (
-    <StoryContainer>
-      <HighlightHalo
-        haloColor={color('Halo Color:', COLORS.primary1)}
-        haloSize={number('Halo Size:', 120, {
-          range: true,
-          min: 1,
-          max: 500,
-          step: 10,
-        })}
-        animationCycles={number('Animation Cycles:', 3, {
-          range: true,
-          min: 0,
-          max: 20,
-          step: 1,
-        })}
-        animationCycleDuration={number('Cycle Duration:', 4, {
-          range: true,
-          min: 1,
-          max: 20,
-          step: 1,
-        })}
-        animationDelay={number('Animation Delay:', 0, {
-          range: true,
-          min: 0,
-          max: 20,
-          step: 1,
-        })}
-        onHaloAnimationEnd={() => {
-          console.warn('Animation has ended.')
-        }}
-      />
-    </StoryContainer>
-  )
+export const Default = args => {
+  return <HighlightHalo {...args} />
 }

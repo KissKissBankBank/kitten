@@ -57,7 +57,8 @@ var FieldLabel = /*#__PURE__*/function (_Component) {
           tooltipProps = _this$props.tooltipProps,
           labelProps = _this$props.labelProps,
           link = _this$props.link,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link"]);
+          tooltipLabel = _this$props.tooltipLabel,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link", "tooltipLabel"]);
       return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: "k-u-margin-bottom-single"
       }, others), /*#__PURE__*/_react.default.createElement(_line.Line, {
@@ -68,7 +69,8 @@ var FieldLabel = /*#__PURE__*/function (_Component) {
         id: tooltipId,
         bubbleProps: {
           zIndex: 2
-        }
+        },
+        actionLabel: "Help"
       }, tooltipProps), tooltip)), link && /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, link)));
     }
   }]);

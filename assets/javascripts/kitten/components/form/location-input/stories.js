@@ -1,11 +1,54 @@
 import React, { useState, useEffect } from 'react'
 import { LocationInput } from './index'
-import { text, select } from '@storybook/addon-knobs'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Form/LocationInput',
   component: LocationInput,
+  decorators: [story => <div className="story-Container">{story()}</div>],
+  argTypes: {
+    onChange: {
+      name: 'onChange',
+    },
+    onSelect: {
+      name: 'onSelect',
+    },
+    defaultValue: {
+      name: 'defaultValue',
+      control: 'text',
+    },
+    inputProps: {
+      name: 'inputProps',
+      control: 'object',
+    },
+    name: {
+      name: 'name',
+      control: 'text',
+    },
+    loadingText: {
+      name: 'loadingText',
+      control: 'text',
+    },
+    variant: {
+      name: 'variant',
+      options: ['andromeda', 'orion'],
+      control: 'inline-radio',
+    },
+    gPlaceApiKey: {
+      name: 'gPlaceApiKey (story prop)',
+      control: 'text',
+    },
+  },
+  args: {
+    onChange: e => console.warn(e),
+    onSelect: e => console.warn(e),
+    defaultValue: '',
+    inputProps: {},
+    name: 'location-input',
+    loadingText: 'Loading',
+    variant: 'orion',
+    gPlaceApiKey: 'YOUR KEY',
+  },
   parameters: {
     docs: {
       page: () => (
@@ -15,12 +58,7 @@ export default {
   },
 }
 
-const variantOptions = {
-  Andromeda: 'andromeda',
-  Orion: 'orion',
-}
-
-export const Default = () => {
+export const Default = ({ gPlaceApiKey, ...args }) => {
   const [googleMapsReady, setGoogleMapsReadiness] = useState(false)
 
   useEffect(() => {
@@ -33,10 +71,7 @@ export const Default = () => {
     const existingScript = document.getElementById('googlePlacesScript')
     if (!existingScript) {
       const script = document.createElement('script')
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${text(
-        'GOOGLE_PLACES_API_KEY',
-        'YOUR_KEY',
-      )}&libraries=places`
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${gPlaceApiKey}&libraries=places`
       script.id = 'googleMaps'
       document.body.appendChild(script)
 
@@ -58,11 +93,7 @@ export const Default = () => {
 
   return (
     <>
-      <LocationInput
-        onChange={e => console.warn(e)}
-        onSelect={e => console.warn(e)}
-        variant={select('Variant', variantOptions, 'andromeda')}
-      />
+      <LocationInput {...args} />
       😺😸😹😻😼😽🙀😿😾
     </>
   )

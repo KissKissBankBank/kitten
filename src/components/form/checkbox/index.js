@@ -93,7 +93,8 @@ Checkbox.defaultProps = {
   indeterminate: false,
   error: false,
   disabled: false,
-  variant: 'andromeda'
+  variant: 'andromeda',
+  onLabelClick: function onLabelClick() {}
 };
 Checkbox.propTypes = {
   textProps: _propTypes.default.object,
@@ -103,5 +104,6 @@ Checkbox.propTypes = {
   id: _propTypes.default.string.isRequired,
   children: _propTypes.default.node,
   label: _propTypes.default.string,
-  variant: _propTypes.default.oneOf(['andromeda', 'orion'])
+  variant: _propTypes.default.oneOf(['andromeda', 'orion']),
+  onLabelClick: _propTypes.default.func
 };

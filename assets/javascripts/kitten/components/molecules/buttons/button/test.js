@@ -32,6 +32,22 @@ describe('<Button />', () => {
     })
   })
 
+  describe('with `as` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Button as="a" href="#helloWorld">
+            MyButton
+          </Button>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with `size` prop', () => {
     beforeEach(() => {
       component = renderer
@@ -215,9 +231,7 @@ describe('<Button />', () => {
 
   describe('with variant', () => {
     beforeEach(() => {
-      component = renderer
-        .create(<Button variant="orion">Orion</Button>)
-        .toJSON()
+      component = renderer.create(<Button>Orion</Button>).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -227,13 +241,7 @@ describe('<Button />', () => {
 
   describe('with variant and fluid', () => {
     beforeEach(() => {
-      component = renderer
-        .create(
-          <Button variant="orion" fluid>
-            Orion fluid
-          </Button>,
-        )
-        .toJSON()
+      component = renderer.create(<Button fluid>Orion fluid</Button>).toJSON()
     })
 
     it('matches with snapshot', () => {

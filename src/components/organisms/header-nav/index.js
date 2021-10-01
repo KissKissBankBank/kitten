@@ -64,7 +64,8 @@ var HeaderNav = function HeaderNav(_ref) {
       stickyProps = _ref.stickyProps,
       zIndexConfig = _ref.zIndexConfig,
       size = _ref.size,
-      borderStyle = _ref.borderStyle;
+      borderStyle = _ref.borderStyle,
+      className = _ref.className;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -124,7 +125,7 @@ var HeaderNav = function HeaderNav(_ref) {
   }), /*#__PURE__*/_react.default.createElement("nav", {
     ref: headerRef,
     id: id,
-    className: "k-HeaderNav"
+    className: (0, _classnames.default)("k-HeaderNav", className)
   }, /*#__PURE__*/_react.default.createElement(_quickAccessLink.QuickAccessLink, quickAccessProps), children))));
 };
 

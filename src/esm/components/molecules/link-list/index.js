@@ -21,8 +21,7 @@ export var LinkList = function LinkList(_ref) {
       color = _ref.color,
       weight = _ref.weight,
       href = _ref.href,
-      active = _ref.active,
-      others = _objectWithoutProperties(_ref, ["className", "margin", "items", "lineHeight", "itemMargin", "color", "weight", "href", "active"]);
+      others = _objectWithoutProperties(_ref, ["className", "margin", "items", "lineHeight", "itemMargin", "color", "weight", "href"]);
 
   return /*#__PURE__*/React.createElement(StyledLinkList, _extends({}, others, {
     className: classNames('k-LinkList', others.className, {
@@ -66,6 +65,5 @@ LinkList.defaultProps = {
   color: 'dark',
   lineHeight: null,
   itemMargin: null,
-  weight: 'regular',
-  active: false
+  weight: 'regular'
 };

@@ -2,7 +2,7 @@
 
 exports[`<LocationInput /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa hNwhER k-LocationInput"
+  className="sc-bdVaJa jmVjtL k-LocationInput"
 >
   <div
     className="k-LocationInput__icon"
@@ -24,7 +24,7 @@ exports[`<LocationInput /> should match its snapshot with props 1`] = `
     aria-autocomplete="list"
     aria-expanded={false}
     autoComplete="off"
-    className="k-LocationInput__input custom-input-class-name k-LocationInput__input--andromeda"
+    className="k-LocationInput__input custom-input-class-name k-LocationInput__input--orion"
     disabled={false}
     onBlur={[Function]}
     onChange={[Function]}

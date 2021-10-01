@@ -19,7 +19,7 @@ export const Image = ({
   return (
     <div
       className={classNames('k-SimpleCard__imageContainer', className, {
-        'k-SimpleCard__imageContainer--ratio': imageContainerRatio,
+        'k-SimpleCard__imageContainer--ratio': !!imageContainerRatio,
       })}
       style={{
         ...style,

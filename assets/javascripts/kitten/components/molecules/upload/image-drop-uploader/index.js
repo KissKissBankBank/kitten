@@ -10,6 +10,7 @@ import { CloseButton } from '../../../../components/molecules/buttons/close-butt
 import { Text } from '../../../../components/atoms/typography/text'
 import { ImageCropper } from './components/image-cropper'
 import { pauseEvent } from './utils/pause-event'
+import { areImageDimensionsValid } from './utils/image-dimensions-check'
 
 const CROP_WIDTH = 125
 
@@ -124,6 +125,7 @@ const StyledImageDropUploader = styled.div`
   }
   .k-ImageDropUploader__manager__cropper {
     background-color: ${COLORS.primary4};
+    flex: 0 0 ${pxToRem(CROP_WIDTH)};
     width: ${pxToRem(CROP_WIDTH)};
     height: var(--ImageDropUploader-cropHeight, ${pxToRem(CROP_WIDTH)});
     overflow: hidden;
@@ -176,6 +178,7 @@ export const ImageDropUploader = ({
   id,
   acceptedFileSize = 5 * 1024 * 1024,
   acceptedMimeTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'],
+  acceptedImageDimensions = { width: 4096, height: 4096 },
   buttonProps = {},
   buttonText = '',
   buttonTitle = '',
@@ -199,6 +202,7 @@ export const ImageDropUploader = ({
   sizeErrorText = '',
   status = 'ready',
   typeErrorText = '',
+  dimensionErrorText = '',
 }) => {
   const [internalStatus, setInternalStatus] = useState(status)
   useEffect(() => setInternalStatus(status), [status])
@@ -266,9 +270,9 @@ export const ImageDropUploader = ({
     onCancel(true)
   }
 
-  useEffect(() => {
-    if (!imageRawData) return
-    if (!isSelectedImageValid(imageRawData)) return
+  useEffect(async () => {
+    const isValid = imageRawData && (await isSelectedImageValid(imageRawData))
+    if (!isValid) return
 
     setError(false)
     const reader = new FileReader()
@@ -284,24 +288,15 @@ export const ImageDropUploader = ({
     })
   }, [imageRawData])
 
-  useEffect(() => {
-    if (imageRawData && !isSelectedImageValid(imageRawData)) return
+  useEffect(async () => {
+    const isValid = imageRawData && (await isSelectedImageValid(imageRawData))
+    if (imageRawData && !isValid) return
 
     onChange({
       value: imageDataURL,
       name: imageRawData?.name || null,
       file: imageRawData || null,
       cropperData: cropperData,
-      // value: resultData?.target?.src || '',
-      // base: getOr(resultData?.srcElement?.src)('originalTarget.src')(
-      //   resultData,
-      // ),
-      // name: fileNameState,
-      // file: uploadedFile,
-      // cropperData: resultData.detail,
-      // croppedImageSrc: cropperInstance
-      //   ? cropperInstance?.getCroppedCanvas()?.toDataURL()
-      //   : '',
     })
   }, [imageDataURL, cropperData, imageRawData])
 
@@ -326,11 +321,23 @@ export const ImageDropUploader = ({
     return true
   }
 
-  const isSelectedImageValid = file => {
+  const isSelectedImageValid = async file => {
     if (file.size > acceptedFileSize) {
       setError(true)
       setInternalStatus('ready')
       setErrorMessage(sizeErrorText)
+      return false
+    }
+
+    const dimensionValidity = await areImageDimensionsValid(
+      file,
+      acceptedImageDimensions,
+    )
+
+    if (!dimensionValidity) {
+      setError(true)
+      setInternalStatus('ready')
+      setErrorMessage(dimensionErrorText)
       return false
     }
 

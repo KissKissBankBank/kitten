@@ -1,6 +1,6 @@
 import React from 'react'
 import { Alert } from './'
-import { boolean, text } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -11,59 +11,53 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="Alert" />,
     },
   },
+  args: {
+    show: true,
+    error: false,
+    success: false,
+    warning: false,
+    closeButton: true,
+    closeButtonLabel: 'Close Button label',
+    onAfterClose: action('onAfterClose'),
+    children:
+      'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.',
+  },
+  argTypes: {
+    show: {
+      name: 'show',
+      control: 'boolean',
+    },
+    error: {
+      name: 'error',
+      control: 'boolean',
+    },
+    success: {
+      name: 'success',
+      control: 'boolean',
+    },
+    warning: {
+      name: 'warning',
+      control: 'boolean',
+    },
+    closeButton: {
+      name: 'closeButton',
+      control: 'boolean',
+    },
+    closeButtonLabel: {
+      name: 'closeButtonLabel',
+      control: 'text',
+    },
+    children: {
+      name: 'children',
+      control: 'text',
+    },
+  },
 }
 
-export const Info = () => (
-  <Alert
-    show={boolean('Show', true)}
-    closeButton={boolean('Close Button', true)}
-    closeButtonLabel={text('Close Button Label', '')}
-  >
-    {text('Message', 'Alert info message')}
-  </Alert>
-)
+export const Default = args => <Alert {...args} />
 
-export const Success = () => (
-  <Alert
-    success
-    show={boolean('Show', true)}
-    closeButton={boolean('Close Button', true)}
-    closeButtonLabel={text('Close Button Label', '')}
-  >
-    {text('Message', 'Alert success message')}
-  </Alert>
-)
-
-export const Error = () => (
-  <Alert
-    error
-    show={boolean('Show', true)}
-    closeButton={boolean('Close Button', true)}
-    closeButtonLabel={text('Close Button Label', '')}
-  >
-    {text('Message', 'Alert error message')}
-  </Alert>
-)
-
-export const Warning = () => (
-  <Alert
-    warning
-    show={boolean('Show', true)}
-    closeButton={boolean('Close Button', true)}
-    closeButtonLabel={text('Close Button Label', '')}
-  >
-    {text('Message', 'Alert warning message')}
-  </Alert>
-)
-
-export const WithLink = () => (
-  <Alert
-    show={boolean('Show', true)}
-    closeButton={boolean('Close Button', true)}
-    closeButtonLabel={text('Close Button Label', '')}
-  >
-    <span>
-      Bonjour <a href="">clique ici</a>
-    </span>
+export const WithLink = args => (
+  <Alert {...args} show closeButton closeButtonLabel="Close Button Label">
+    Bonjour <a href="">clique ici</a>
   </Alert>
 )

@@ -82,7 +82,7 @@ export var LocationInput = function LocationInput(_ref) {
         className: className
       })), /*#__PURE__*/React.createElement("span", {
         className: "k-LocationInput__autocompleteItem__mainText"
-      }, suggestion.formattedSuggestion.mainText), ' ', /*#__PURE__*/React.createElement("span", {
+      }, suggestion.formattedSuggestion.mainText), ', ', /*#__PURE__*/React.createElement("span", {
         className: "k-LocationInput__autocompleteItem__secondaryText"
       }, suggestion.formattedSuggestion.secondaryText));
     })));

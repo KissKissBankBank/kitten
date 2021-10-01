@@ -1,7 +1,4 @@
-import { Container } from '../../layout/container'
-import { Text } from '../../atoms/typography/text'
 import React from 'react'
-import { select } from '@storybook/addon-knobs'
 import { Tag } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
@@ -11,20 +8,26 @@ export default {
   parameters: {
     docs: { page: () => <DocsPage filepath={__filename} importString="Tag" /> },
   },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid">
+        <div>{story()}</div>
+      </div>
+    ),
+  ],
+  args: {
+    type: 'info',
+    children: '5 contributors',
+  },
+  argTypes: {
+    type: {
+      name: 'type',
+      options: ['info', 'warning', 'success', 'error', 'disabled'],
+      control: 'radio',
+    },
+  },
 }
 
-export const Default = () => {
-  return (
-    <Container className="k-u-margin-vertical-quadruple">
-      <Tag
-        type={select(
-          'Type',
-          ['info', 'warning', 'success', 'error', 'disabled'],
-          'info',
-        )}
-      >
-        <Text weight="bold">5</Text> Contributeurs
-      </Tag>
-    </Container>
-  )
+export const Default = args => {
+  return <Tag {...args} />
 }

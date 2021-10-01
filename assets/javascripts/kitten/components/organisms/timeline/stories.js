@@ -1,8 +1,5 @@
 import React from 'react'
-import { select } from '@storybook/addon-knobs'
-import {} from '../../../components/layout/container'
 import { Timeline } from './index'
-import { Container, Grid, GridCol } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -13,23 +10,20 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="Timeline" />,
     },
   },
+  decorators: [story => <div className="story-Container">{story()}</div>],
+  args: {
+    itemHeight: 'large',
+  },
+  argTypes: {
+    itemHeight: { control: 'radio', options: ['large', 'thin'] },
+    children: { control: null },
+  },
 }
 
-const itemHeightChoices = {
-  Large: 'large',
-  Thin: 'thin',
-}
-
-export const Default = () => (
-  <Container>
-    <Grid className="k-u-margin-top-quadruple k-u-margin-bottom-quadruple">
-      <GridCol offset="1" col="6">
-        <Timeline itemHeight={select('itemHeight', itemHeightChoices, 'large')}>
-          <span>foo</span>
-          <span>bar</span>
-          <span>baz</span>
-        </Timeline>
-      </GridCol>
-    </Grid>
-  </Container>
+export const Default = args => (
+  <Timeline {...args}>
+    <span>foo</span>
+    <span>bar</span>
+    <span>baz</span>
+  </Timeline>
 )

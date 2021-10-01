@@ -16,7 +16,7 @@
   $font: 'regular';
 
   .k-u-link {
-    @include k-typographyFont($font, true);
+    @include k-typographyFont($font);
     text-decoration: none !important;
 
     &:focus {

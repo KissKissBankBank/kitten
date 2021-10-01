@@ -16,10 +16,17 @@ export default {
       ),
     },
   },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
   args: {
     href: '#',
     imageProps: {
-      src: '/kitten.jpg',
+      src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
     },
     title: 'Nulla vitae elit libero, a pharetra augue.',
     titleTag: 'h3',
@@ -32,41 +39,41 @@ export default {
   argTypes: {
     href: {
       name: 'href',
-      control: { type: 'text' },
+      control: 'text',
     },
     imageProps: {
       name: 'imageProps',
-      control: { type: 'object' },
+      control: 'object',
     },
     title: {
       name: 'title',
-      control: { type: 'text' },
+      control: 'text',
     },
     titleTag: {
       name: 'titleTag',
-      control: { type: 'text' },
+      control: 'text',
     },
     description: {
       name: 'description',
-      control: { type: 'text' },
+      control: 'text',
     },
     info: {
       name: 'info',
       options: ['lastday', 'lastdays', 'started', 'success', 'failed'],
       descrition: 'Any node will do, this select shows various possibilities',
-      control: { type: 'select' },
+      control: 'select',
     },
     progress: {
       name: 'progress',
-      control: { type: 'number' },
+      control: 'number',
     },
     progressColor: {
       name: 'progressColor',
-      control: { type: 'color' },
+      control: 'color',
     },
     noProgressOnMobile: {
       name: 'noProgressOnMobile',
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
   },
 }

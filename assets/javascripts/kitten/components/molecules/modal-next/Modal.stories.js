@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { text, boolean, number, select } from '@storybook/addon-knobs'
 import { Modal } from './index'
 import { Button, Text, SaveIcon, COLORS } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
@@ -51,83 +50,206 @@ export default {
     Button: Modal.Button,
     CloseButton: Modal.CloseButton,
   },
+  decorators: [
+    story => <div className="story-Container story-Grid">{story()}</div>,
+  ],
 }
 
-const buttonSelectionChoices = {
-  None: 0,
-  'One button': 1,
-  'Two with Close': 2,
+const args = {
+  ...Modal.defaultProps,
+  trigger: <Button modifier="helium">Open</Button>,
+  contentText: paragraphContainer,
 }
 
-export const Default = () => {
-  const buttonSelection = select('Display Buttons', buttonSelectionChoices, 1)
-
-  return (
-    <Modal
-      trigger={<Button modifier="helium">Open</Button>}
-      hasCloseButton={boolean('Has header close button', true)}
-      size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
-      variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
-      zIndex={number('Overlay z-index', 110)}
-      headerTitle={text('headerTitle', null)}
-      fullSizeOnMobile={boolean('Full size on Mobile', false)}
-    >
-      {() => (
-        <>
-          <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
-          <Modal.Paragraph>
-            {text('content', paragraphContainer)}
-          </Modal.Paragraph>
-          <Modal.Actions
-            sticky={boolean('Actions sticky', false)}
-            stickyOnMobile={boolean('Actions sticky on Mobile only', false)}
-            fullSize={boolean('Actions fullSize', false)}
-            fullSizeOnMobile={boolean('Actions fullSize on Mobile only', false)}
-          >
-            {buttonSelection > 0 && (
-              <Modal.Button modifier="helium">Modal.Button</Modal.Button>
-            )}
-            {buttonSelection > 1 && (
-              <Modal.CloseButton modifier="hydrogen">
-                Modal.CloseButton
-              </Modal.CloseButton>
-            )}
-          </Modal.Actions>
-        </>
-      )}
-    </Modal>
-  )
+const argTypes = {
+  trigger: {
+    name: 'trigger',
+    description: 'React element that is used as a trigger for the Modal.',
+    control: null,
+  },
+  label: {
+    name: 'label',
+    description: 'Label for the modal. For accessibility purposes.',
+    control: 'text',
+  },
+  labelledby: {
+    name: 'labelledby',
+    description:
+      'ID for the element that labels the modal. For accessibility purposes.',
+    control: 'text',
+  },
+  describedby: {
+    name: 'describedby',
+    description:
+      'ID for the element that describes the content of the modal. For accessibility purposes.',
+    control: 'text',
+  },
+  closeButtonLabel: {
+    name: 'closeButtonLabel',
+    description: 'Label for the close button. For accessibility purposes.',
+    control: 'text',
+  },
+  fullSize: {
+    name: 'fullSize',
+    control: 'boolean',
+  },
+  fullSizeOnMobile: {
+    name: 'fullSizeOnMobile',
+    control: 'boolean',
+  },
+  modalProps: {
+    name: 'modalProps',
+    control: 'object',
+  },
+  hasCloseButton: {
+    name: 'hasCloseButton',
+    control: 'boolean',
+  },
+  size: {
+    name: 'size',
+    options: ['regular', 'big', 'huge', 'giant'],
+    control: 'select',
+  },
+  isOpen: {
+    name: 'isOpen',
+    control: 'boolean',
+  },
+  zIndex: {
+    name: 'zIndex',
+    control: 'number',
+  },
+  variant: {
+    name: 'variant',
+    options: ['andromeda', 'orion'],
+    control: 'inline-radio',
+  },
+  headerTitle: {
+    name: 'headerTitle',
+    control: 'object',
+  },
+  headerActions: {
+    name: 'headerActions',
+    control: 'object',
+  },
+  headerMessage: {
+    name: 'headerMessage',
+    control: 'object',
+  },
+  contentCols: {
+    name: 'contentCols',
+    control: 'object',
+  },
+  headerZIndex: {
+    name: 'headerZIndex',
+    control: 'number',
+  },
+  contentText: {
+    name: 'content text (story prop)',
+    control: 'text',
+  },
 }
 
-export const Controlled = () => {
+export const Default = ({
+  z_sticky,
+  z_stickyOnMobile,
+  z_fullSize,
+  z_fullSizeOnMobile,
+  contentText,
+  buttonSelection,
+  ...args
+}) => (
+  <Modal {...args}>
+    {() => (
+      <>
+        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Paragraph>{contentText}</Modal.Paragraph>
+        <Modal.Actions
+          sticky={z_sticky}
+          stickyOnMobile={z_stickyOnMobile}
+          fullSize={z_fullSize}
+          fullSizeOnMobile={z_fullSizeOnMobile}
+        >
+          {buttonSelection > 0 && (
+            <Modal.Button modifier="helium">Modal.Button</Modal.Button>
+          )}
+          {buttonSelection > 1 && (
+            <Modal.CloseButton modifier="hydrogen">
+              Modal.CloseButton
+            </Modal.CloseButton>
+          )}
+        </Modal.Actions>
+      </>
+    )}
+  </Modal>
+)
+Default.args = {
+  ...args,
+  buttonSelection: 1,
+  z_sticky: false,
+  z_stickyOnMobile: false,
+  z_fullSize: false,
+  z_fullSizeOnMobile: false,
+}
+Default.argTypes = {
+  ...argTypes,
+  buttonSelection: {
+    name: 'number of action buttons to display (story prop)',
+    control: { type: 'range', min: 0, max: 2 },
+  },
+  z_sticky: {
+    name: 'Modal.Actions: sticky (story prop)',
+    control: 'boolean',
+  },
+  z_stickyOnMobile: {
+    name: 'Modal.Actions: stickyOnMobile (story prop)',
+    control: 'boolean',
+  },
+  z_fullSize: {
+    name: 'Modal.Actions: fullSize (story prop)',
+    control: 'boolean',
+  },
+  z_fullSizeOnMobile: {
+    name: 'Modal.Actions: fullSizeOnMobile (story prop)',
+    control: 'boolean',
+  },
+}
+
+export const Controlled = ({ contentText, ...args }) => {
   const [showModal, updateModalState] = useState(false)
+
   return (
-    <>
+    <div>
       <Button modifier="helium" onClick={() => updateModalState(!showModal)}>
         Open
       </Button>
       <Text tag="p" weight="light">
         The modal is controlled through a state that controls the{' '}
         <code>isOpen</code> prop.
+        <br />
+        Should Modal be shown? <code>{showModal.toString()}</code>
       </Text>
       <Modal
+        {...args}
+        trigger={null}
         isOpen={showModal}
-        hasCloseButton={true}
+        hasCloseButton
         onClose={() => updateModalState(false)}
       >
         {() => (
           <>
             <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
-            <Modal.Paragraph>{paragraphContainer}</Modal.Paragraph>
+            <Modal.Paragraph>{contentText}</Modal.Paragraph>
             <Modal.Actions>
-              <Modal.Button modifier="helium">Modal.Button</Modal.Button>
+              <Modal.Button modifier="hydrogen">Modal.Button</Modal.Button>
             </Modal.Actions>
           </>
         )}
       </Modal>
-    </>
+    </div>
   )
 }
+Controlled.args = args
+Controlled.argTypes = argTypes
 
 export const Multi = () => {
   return (
@@ -142,23 +264,16 @@ export const Multi = () => {
   )
 }
 
-export const FullSize = () => (
-  <Modal
-    trigger={<Button modifier="helium">Open</Button>}
-    hasCloseButton={boolean('Has close button', true)}
-    variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
-    fullSizeTitle={text('fullSizeTitle', 'Lorem ipsum dolor sit consectetuer')}
-    fullSize
-  >
+export const FullSize = ({ contentText, ...args }) => (
+  <Modal {...args}>
     {() => (
       <>
         <Modal.Title>This modal is full sized</Modal.Title>
         <Modal.Paragraph>
-          The display of a header depends on the <code>fullSizeTitle</code>{' '}
-          prop.
+          The display of a header depends on the <code>headerTitle</code> prop.
         </Modal.Paragraph>
-        <Modal.Paragraph>{paragraphContainer}</Modal.Paragraph>
-        <Modal.Paragraph>{paragraphContainer}</Modal.Paragraph>
+        <Modal.Paragraph>{contentText}</Modal.Paragraph>
+        <Modal.Paragraph>{contentText}</Modal.Paragraph>
         <Modal.Actions>
           <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
         </Modal.Actions>
@@ -166,93 +281,96 @@ export const FullSize = () => (
     )}
   </Modal>
 )
+FullSize.args = {
+  ...args,
+  fullSize: true,
+  headerTitle: (
+    <Text size="tiny" color="font1" weight="regular">
+      Lorem ipsum dolor sit consectetuer
+    </Text>
+  ),
+}
+FullSize.argTypes = argTypes
 
-const OrionHeaderActions = ({ close }) => (
-  <>
-    <Button
-      className="k-u-hidden@xs-down"
-      variant="orion"
-      modifier="helium"
-      type="button"
-      onClick={close}
-    >
-      <span>
-        <SaveIcon width="16" />
-      </span>
-      <span>Sauvegarder</span>
-    </Button>
-    <Button
-      className="k-u-hidden@s-up"
-      icon
-      variant="orion"
-      modifier="helium"
-      type="button"
-      onClick={close}
-      aria-label="Sauvegarder"
-    >
-      <SaveIcon width="16" />
-    </Button>
-  </>
-)
-
-export const ComplexWithOrion = () => (
-  <Modal
-    trigger={<Button modifier="helium">Open</Button>}
-    variant="orion"
-    headerTitle={
-      <Text weight="bold" size="giant">
-        Modal title
-      </Text>
-    }
-    headerActions={OrionHeaderActions}
-    headerMessage={
-      <Text size="micro" weight="light" cssColor={COLORS.grey1}>
-        {text('headerMessage', '')}
-      </Text>
-    }
-    size={select('Size', ['regular', 'big', 'huge', 'giant'], 'giant')}
-  >
+export const ComplexWithOrion = ({ contentText, ...args }) => (
+  <Modal {...args}>
     {() => (
       <>
         <Modal.Block className="k-u-background-color-background3">
           <Text weight="light" tag="p" className="k-u-margin-vertical-triple">
-            {text('content', paragraphContainer)}
+            <span>
+              Inside a <code>Modal.Block</code>
+            </span>
+            <br />
+            {contentText}
           </Text>
         </Modal.Block>
         <Modal.Paragraph align="left">
-          {text('content', paragraphContainer)}
+          <span>
+            Inside a <code>Modal.Paragraph</code>
+          </span>
+          <br />
+          {contentText}
         </Modal.Paragraph>
       </>
     )}
   </Modal>
 )
+ComplexWithOrion.args = {
+  ...args,
+  variant: 'orion',
+  headerTitle: (
+    <Text weight="bold" size="giant">
+      Modal title
+    </Text>
+  ),
+  headerActions: ({ close }) => (
+    <>
+      <Button
+        className="k-u-hidden@xs-down"
+        modifier="helium"
+        type="button"
+        onClick={close}
+      >
+        <span>
+          <SaveIcon width="16" />
+        </span>
+        <span>Sauvegarder</span>
+      </Button>
+      <Button
+        className="k-u-hidden@s-up"
+        icon
+        modifier="helium"
+        type="button"
+        onClick={close}
+        aria-label="Sauvegarder"
+      >
+        <SaveIcon width="16" />
+      </Button>
+    </>
+  ),
+  headerMessage: (
+    <Text size="micro" weight="light" cssColor={COLORS.grey1}>
+      This is a header message
+    </Text>
+  ),
+}
+ComplexWithOrion.argTypes = argTypes
 
-export const CustomInnerSize = () => (
-  <Modal
-    trigger={<Button modifier="helium">Open</Button>}
-    hasCloseButton={boolean('Has close button', true)}
-    size={select('Size', ['regular', 'big', 'huge', 'giant'], 'regular')}
-    variant={select('Variant', ['andromeda', 'orion', 'andromeda'])}
-    zIndex={number('Overlay z-index', 110)}
-    headerTitle={text('headerTitle', '')}
-    contentCols={{
-      xxs: 12,
-      s: 10,
-      l: 8,
-      xl: 6,
-    }}
-  >
+export const CustomInnerSize = ({ contentText, ...args }) => (
+  <Modal {...args}>
     {() => (
       <>
+        <Modal.Title>Custom inner size</Modal.Title>
         <Modal.Block className="k-u-background-color-background3">
           <Text weight="light" tag="p" className="k-u-margin-vertical-triple">
             This Modal has the following inner size, defined by{' '}
             <code>contentCols</code> prop:
             <br />
-            <code>{'{ xxs: 12, s: 10, l: 8, xl: 6 }'}</code>
+            <code>{JSON.stringify(args.contentCols)}</code>
           </Text>
         </Modal.Block>
-        <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
+        <Modal.Paragraph>{contentText}</Modal.Paragraph>
         <Modal.Actions>
           <Modal.CloseButton modifier="helium">
             Modal.CloseButton
@@ -262,3 +380,15 @@ export const CustomInnerSize = () => (
     )}
   </Modal>
 )
+
+CustomInnerSize.args = {
+  ...args,
+  variant: 'orion',
+  contentCols: {
+    xxs: 12,
+    s: 10,
+    l: 8,
+    xl: 6,
+  },
+}
+CustomInnerSize.argTypes = argTypes

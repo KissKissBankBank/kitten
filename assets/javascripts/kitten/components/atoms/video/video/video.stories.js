@@ -1,22 +1,15 @@
 import React from 'react'
-import { text, number, boolean } from '@storybook/addon-knobs'
 import { Video } from './index'
-import { Marger, Container, Grid, GridCol, Loader } from '../../../..'
+import { Loader } from '../../../..'
 
-export const Default = () => (
+export const Default = args => (
   <Video
-    autoPlay={boolean('Autoplay', false)}
+    {...args}
     playsInline
     loop
     muted
-    src={text(
-      'Src',
-      'https://d3v4jsc54141g1.cloudfront.net/atoms/video/home/home_v2.mp4',
-    )}
-    poster={text(
-      'Poster',
-      'https://source.unsplash.com/random/900x1600/?kitten',
-    )}
+    src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4"
+    poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
   >
     <Video.Loader>
       <Loader />
@@ -25,18 +18,20 @@ export const Default = () => (
 )
 
 Default.decorators = [
-  Story => (
-    <Marger top="3" bottom="3">
-      <Container>
-        <Grid>
-          <GridCol
-            col={number('Grid number', 3)}
-            style={{ height: number('Height', 400) }}
-          >
-            <Story />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
+  story => (
+    <div className="story-Container story-Grid">
+      <div>{story()}</div>
+    </div>
   ),
 ]
+
+Default.args = {
+  autoPlay: false,
+}
+
+Default.argTypes = {
+  autoPlay: {
+    name: 'autoPlay',
+    control: 'boolean',
+  },
+}
