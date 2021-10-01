@@ -67,7 +67,7 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
         className="sc-VigVT efojrA"
       >
         <span
-          className="k-u-color-font1 k-u-weight-light sc-htoDjs gPUvVR"
+          className="k-u-color-font1 k-u-weight-light sc-htoDjs ewVqcG"
         >
           Custom text
         </span>
@@ -126,7 +126,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
         className="sc-VigVT efojrA"
       >
         <span
-          className="k-u-color-font1 k-u-weight-light sc-htoDjs gPUvVR"
+          className="k-u-color-font1 k-u-weight-light sc-htoDjs ewVqcG"
         >
           Custom text
         </span>
@@ -214,7 +214,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
         className="sc-VigVT eWLelC"
       >
         <span
-          className="k-u-color-font1 k-u-weight-light sc-htoDjs gPUvVR"
+          className="k-u-color-font1 k-u-weight-light sc-htoDjs ewVqcG"
         >
           Custom text
         </span>

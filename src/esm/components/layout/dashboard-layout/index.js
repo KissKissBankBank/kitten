@@ -21,7 +21,10 @@ export var DashboardLayout = function DashboardLayout(_ref) {
       buttonProps = _ref.buttonProps,
       quickAccessLinkText = _ref.quickAccessLinkText,
       fullHeightContent = _ref.fullHeightContent,
-      props = _objectWithoutProperties(_ref, ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent"]);
+      _ref$overlayZIndex = _ref.overlayZIndex,
+      overlayZIndex = _ref$overlayZIndex === void 0 ? 100 : _ref$overlayZIndex,
+      style = _ref.style,
+      props = _objectWithoutProperties(_ref, ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent", "overlayZIndex", "style"]);
 
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -157,6 +160,9 @@ export var DashboardLayout = function DashboardLayout(_ref) {
   }, quickAccessLinkText), /*#__PURE__*/React.createElement("div", {
     className: classNames('k-DashboardLayout', props.className, {
       'k-DashboardLayout--isOpen': isOpen
+    }),
+    style: _extends({}, style, {
+      '--DashboardLayout-overlay-zindex': overlayZIndex
     })
   }, /*#__PURE__*/React.createElement("div", {
     ref: sideBarElement,
@@ -275,6 +281,24 @@ var Alerts = function Alerts(_ref7) {
   }, props));
 };
 
+var Toaster = function Toaster(_ref8) {
+  var className = _ref8.className,
+      isOpen = _ref8.isOpen,
+      children = _ref8.children,
+      props = _objectWithoutProperties(_ref8, ["className", "isOpen", "children"]);
+
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", _extends({
+    className: classNames('k-DashboardLayout__toaster__wrapper', 'k-DashboardLayout__fullWidth', className, {
+      'k-DashboardLayout__toaster--isOpen': isOpen
+    }),
+    "aria-live": "polite"
+  }, props), /*#__PURE__*/React.createElement("div", {
+    className: "k-DashboardLayout__toaster"
+  }, children)), /*#__PURE__*/React.createElement("div", {
+    className: "k-DashboardLayout__toaster__spacer"
+  }));
+};
+
 DashboardLayout.propTypes = {
   backLinkProps: PropTypes.object,
   buttonProps: PropTypes.shape({
@@ -282,7 +306,8 @@ DashboardLayout.propTypes = {
     closeLabel: PropTypes.node.isRequired
   }),
   quickAccessLinkText: PropTypes.node.isRequired,
-  fullHeightContent: PropTypes.bool
+  fullHeightContent: PropTypes.bool,
+  overlayZIndex: PropTypes.number
 };
 Header.propTypes = {
   buttonProps: PropTypes.shape({
@@ -298,3 +323,4 @@ DashboardLayout.SideContent = SideContent;
 DashboardLayout.SideFooter = SideFooter;
 DashboardLayout.Flow = Flow;
 DashboardLayout.Alerts = Alerts;
+DashboardLayout.Toaster = Toaster;

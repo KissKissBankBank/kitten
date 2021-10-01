@@ -33,6 +33,7 @@ const HeaderNav = ({
   zIndexConfig,
   size,
   borderStyle,
+  className,
 }) => {
   const [isMenuExpanded, setMenuExpanded] = useState(false)
   const [menuExpandBy, setMenuExpandBy] = useState(null)
@@ -87,7 +88,11 @@ const HeaderNav = ({
             stickyProps?.className,
           )}
         >
-          <nav ref={headerRef} id={id} className="k-HeaderNav">
+          <nav
+            ref={headerRef}
+            id={id}
+            className={classNames('k-HeaderNav', className)}
+          >
             <QuickAccessLink {...quickAccessProps} />
             {children}
           </nav>

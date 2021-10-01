@@ -12,9 +12,7 @@ var _path = _interopRequireDefault(require("path"));
 var getScssPaths = function getScssPaths() {
   var kittenStylesheetsPath = _path.default.join(__dirname, '../../assets/stylesheets');
 
-  var modularscalePath = require.resolve('modularscale-sass');
-
-  return [kittenStylesheetsPath, _path.default.join(modularscalePath, '..')];
+  return [kittenStylesheetsPath];
 };
 
 exports.getScssPaths = getScssPaths;

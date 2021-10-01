@@ -21,7 +21,7 @@ export default {
     variant: { control: 'inline-radio', options: ['andromeda', 'orion'] },
   },
   args: {
-    variant: 'andromeda',
+    variant: 'orion',
   },
 }
 

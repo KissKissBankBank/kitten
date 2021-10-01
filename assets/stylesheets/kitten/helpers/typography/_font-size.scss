@@ -1,13 +1,13 @@
-/// Apply a font size and line height computed using a modular scale.
+/// Apply a font size and line height computed using a table.
 ///
-/// Font size will be computed directly using the modular scale.
+/// Font size will be computed directly using the table.
 ///
 /// Line-height is optional. If it is not defined, it will be set to the
 /// closest multiple of the base line height above the computed font size.
 ///
 /// @group typography
 ///
-/// @parameter {Number} $step               - the modular scale step to compute
+/// @parameter {Number} $step               - the table step to compute
 /// @parameter {Number} $line-height [null] - the line-height
 /// @parameter {Boolean} $without-line-height [false]
 ///   - the boolean that lets the line height to be use
@@ -16,7 +16,6 @@
 ///   $k-typography: (
 ///     font-size:   1rem,
 ///     line-height: 1.5rem,
-///     scale-multiplier: 1.618,
 ///     …
 ///   );
 ///
@@ -30,32 +29,32 @@
   $step: 0,
   $line-height: null,
   $without-line-height: false,
-  $important: false
 ) {
-
-  // Modular scale multiplier
-  $multiplier: k-map-fetch($k-typography, 'scale-multiplier');
 
   $valid:
     k-all(
-      k-validate(
-        $multiplier, k-number-schema($unit: none),
-        'k-typographyFontSize', '$multiplier'
-      ),
       k-validate(
         $step, k-number-schema($unit: none),
         'k-typographyFontSize', '$step'
       )
     );
 
-  // The starting font size applied to the body element.
-  $base-font-size: k-map-fetch($k-typography, 'font-size');
+  // Get scale multiplier from table
+  $multiplier: k-map-fetch($k-typography-scale, #{$step});
+
+  $valid:
+    k-all(
+      k-validate(
+        $multiplier, k-number-schema($unit: px),
+        'k-typographyFontSize', '$multiplier'
+      )
+    );
 
   // The base line height.
   $base-line-height: k-map-fetch($k-typography, 'line-height');
 
-  // Given the requested step on our modular scale, compute font size.
-  $font-size: ms($step, $base-font-size, $multiplier);
+  // Given the requested step on our table, compute font size.
+  $font-size: k-px-to-rem($multiplier);
 
   @if not $line-height {
    // If line-height is not defined, we use the vertical rhythm rule to compute
@@ -63,12 +62,10 @@
     $line-height: ceil($font-size / $base-line-height) * $base-line-height;
   }
 
-  $is-important: if($important, !important, null);
-
   // Apply font size and line height.
-  font-size: $font-size $is-important;
+  font-size: $font-size !important;
 
   @if not $without-line-height {
-    line-height: $line-height $is-important;
+    line-height: $line-height !important;
   }
 }

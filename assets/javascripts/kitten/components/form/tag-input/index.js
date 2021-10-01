@@ -340,7 +340,7 @@ TagInput.defaultProps = {
   onChange: () => {},
   disabled: false,
   size: 'regular',
-  variant: 'andromeda',
+  variant: 'orion',
 }
 
 TagInput.propTypes = {

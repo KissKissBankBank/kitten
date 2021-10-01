@@ -214,7 +214,6 @@ const SearchInput = () => {
 
       <Button
         size="tiny"
-        variant="orion"
         type="submit"
         fluid
         className="k-u-margin-bottom-double k-u-margin-horizontal-double"
@@ -228,7 +227,7 @@ const SearchInput = () => {
   )
 }
 
-export const KissKissBankBankHeaderNavStoryNew = ({ isLogged, args }) => {
+export const KissKissBankBankHeaderNavStoryNew = ({ isLogged, ...args }) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const windowWidth = useWindowWidth()
 

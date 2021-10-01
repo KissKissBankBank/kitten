@@ -26,7 +26,7 @@ export default {
     largeContent: false,
     text: 'RadioButton label',
     size: 'regular',
-    variant: 'andromeda',
+    variant: 'orion',
     design: 'disc',
     children: null,
   },

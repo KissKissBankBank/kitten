@@ -63,11 +63,11 @@ export var CrowdfundingCard = function CrowdfundingCard(_ref) {
   useEffect(function () {
     if (domElementHelper.canUseDom() && typeof document !== 'undefined' && 'fonts' in document // IE11 Fix, tests `document.fonts.ready.then()`
     ) {
-        document.fonts.ready.then(function () {
-          setTitleTruncate(titleTruncate);
-          setSubTitleTruncate(subTitleTruncate);
-        });
-      }
+      document.fonts.ready.then(function () {
+        setTitleTruncate(titleTruncate);
+        setSubTitleTruncate(subTitleTruncate);
+      });
+    }
   }, []);
   return /*#__PURE__*/React.createElement(StyledCrowdfundingCard, _extends({}, others, {
     as: href ? 'a' : 'div',

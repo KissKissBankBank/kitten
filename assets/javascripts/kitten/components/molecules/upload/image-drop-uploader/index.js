@@ -270,9 +270,9 @@ export const ImageDropUploader = ({
     onCancel(true)
   }
 
-  useEffect(() => {
-    if (!imageRawData) return
-    if (!isSelectedImageValid(imageRawData)) return
+  useEffect(async () => {
+    const isValid = imageRawData && (await isSelectedImageValid(imageRawData))
+    if (!isValid) return
 
     setError(false)
     const reader = new FileReader()
@@ -288,24 +288,15 @@ export const ImageDropUploader = ({
     })
   }, [imageRawData])
 
-  useEffect(() => {
-    if (imageRawData && !isSelectedImageValid(imageRawData)) return
+  useEffect(async () => {
+    const isValid = imageRawData && (await isSelectedImageValid(imageRawData))
+    if (imageRawData && !isValid) return
 
     onChange({
       value: imageDataURL,
       name: imageRawData?.name || null,
       file: imageRawData || null,
       cropperData: cropperData,
-      // value: resultData?.target?.src || '',
-      // base: getOr(resultData?.srcElement?.src)('originalTarget.src')(
-      //   resultData,
-      // ),
-      // name: fileNameState,
-      // file: uploadedFile,
-      // cropperData: resultData.detail,
-      // croppedImageSrc: cropperInstance
-      //   ? cropperInstance?.getCroppedCanvas()?.toDataURL()
-      //   : '',
     })
   }, [imageDataURL, cropperData, imageRawData])
 

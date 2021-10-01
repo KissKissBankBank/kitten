@@ -123,7 +123,7 @@ const args = {
   labelText: 'label',
   options: options,
   size: 'normal',
-  variant: 'andromeda',
+  variant: 'orion',
   comboboxButtonLabelText: 'label',
   noResultText: 'No results',
   menuZIndex: 1000,

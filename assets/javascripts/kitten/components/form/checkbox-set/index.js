@@ -99,5 +99,5 @@ CheckboxSet.defaultProps = {
     },
   ],
   disabled: false,
-  variant: 'andromeda',
+  variant: 'orion',
 }

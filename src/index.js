@@ -575,6 +575,12 @@ Object.defineProperty(exports, "EmbedIcon", {
     return _embedIcon.EmbedIcon;
   }
 });
+Object.defineProperty(exports, "EnvelopeIcon", {
+  enumerable: true,
+  get: function get() {
+    return _envelopeIcon.EnvelopeIcon;
+  }
+});
 Object.defineProperty(exports, "ExportIcon", {
   enumerable: true,
   get: function get() {
@@ -1395,6 +1401,12 @@ Object.defineProperty(exports, "ButtonQuestionMarkIcon", {
   enumerable: true,
   get: function get() {
     return _buttonQuestionMarkIcon.ButtonQuestionMarkIcon;
+  }
+});
+Object.defineProperty(exports, "ButtonWithTooltip", {
+  enumerable: true,
+  get: function get() {
+    return _buttonWithTooltip.ButtonWithTooltip;
   }
 });
 Object.defineProperty(exports, "CheckableButton", {
@@ -2332,6 +2344,8 @@ var _emailIcon = require("./components/graphics/icons/email-icon");
 
 var _embedIcon = require("./components/graphics/icons/embed-icon");
 
+var _envelopeIcon = require("./components/graphics/icons/envelope-icon");
+
 var _exportIcon = require("./components/graphics/icons/export-icon");
 
 var _exportIconAlternate = require("./components/graphics/icons/export-icon-alternate");
@@ -2571,6 +2585,8 @@ var _buttonGroup = require("./components/molecules/buttons/button-group");
 var _buttonImage = require("./components/molecules/buttons/button-image");
 
 var _buttonQuestionMarkIcon = require("./components/molecules/buttons/button-question-mark-icon");
+
+var _buttonWithTooltip = require("./components/molecules/buttons/button-with-tooltip");
 
 var _checkableButton = require("./components/molecules/buttons/checkable-button");
 

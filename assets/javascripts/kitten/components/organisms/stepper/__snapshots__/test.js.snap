@@ -15,7 +15,7 @@ exports[`NEXT // <Stepper /> default item matches with snapshot 1`] = `
         tabIndex="0"
       >
         <span
-          className="sc-bdVaJa oCMmu k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty"
+          className="sc-bdVaJa ectNFc k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty"
         >
           <span
             className="k-IconBadge__content"
@@ -45,7 +45,7 @@ exports[`NEXT // <Stepper /> default link matches with snapshot 1`] = `
         target="_self"
       >
         <span
-          className="sc-bdVaJa oCMmu k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty"
+          className="sc-bdVaJa ectNFc k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty"
         >
           <span
             className="k-IconBadge__content"
@@ -75,7 +75,7 @@ exports[`NEXT // <Stepper /> external link matches with snapshot 1`] = `
         target="_blank"
       >
         <span
-          className="sc-bdVaJa oCMmu k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty"
+          className="sc-bdVaJa ectNFc k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty"
         >
           <span
             className="k-IconBadge__content"
@@ -106,7 +106,7 @@ exports[`NEXT // <Stepper /> link with linkProps matches with snapshot 1`] = `
         target="_blank"
       >
         <span
-          className="sc-bdVaJa oCMmu k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty"
+          className="sc-bdVaJa ectNFc k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty"
         >
           <span
             className="k-IconBadge__content"
@@ -134,7 +134,7 @@ exports[`NEXT // <Stepper /> pointer item matches with snapshot 1`] = `
         tabIndex="0"
       >
         <span
-          className="sc-bdVaJa oCMmu k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty"
+          className="sc-bdVaJa ectNFc k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty"
         >
           <span
             className="k-IconBadge__content"
@@ -162,7 +162,7 @@ exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
         tabIndex="0"
       >
         <span
-          className="sc-bdVaJa oCMmu k-IconBadge k-Stepper__icon k-IconBadge--tiny"
+          className="sc-bdVaJa ectNFc k-IconBadge k-Stepper__icon k-IconBadge--tiny"
         >
           <span
             className="k-IconBadge__content"
@@ -211,7 +211,7 @@ exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
         target="_self"
       >
         <span
-          className="sc-bdVaJa oCMmu k-IconBadge k-Stepper__icon k-IconBadge--tiny"
+          className="sc-bdVaJa ectNFc k-IconBadge k-Stepper__icon k-IconBadge--tiny"
         >
           <span
             className="k-IconBadge__content"
@@ -258,7 +258,7 @@ exports[`NEXT // <Stepper /> validated item matches with snapshot 1`] = `
         tabIndex="0"
       >
         <span
-          className="sc-bdVaJa oCMmu k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--valid"
+          className="sc-bdVaJa ectNFc k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--valid"
         >
           <span
             className="k-IconBadge__content"

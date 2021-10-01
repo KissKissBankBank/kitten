@@ -102,6 +102,18 @@ export const modifierStyles = modifier => {
       activeColor = COLORS.background1
       break
 
+    case 'calcium':
+      borderColor = COLORS.line1
+      backgroundColor = COLORS.background1
+      color = COLORS.font1
+      hoverBorderColor = COLORS.primary4
+      hoverBgColor = COLORS.background1
+      hoverColor = COLORS.font1
+      activeBorderColor = COLORS.primary1
+      activeBgColor = COLORS.primary5
+      activeColor = COLORS.font1
+      break
+
     /* Social modifiers */
     case 'social_facebook':
       borderColor = '#3b5998'

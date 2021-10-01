@@ -10,8 +10,9 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
     onChange={[Function]}
     type="file"
   />
-  <button
-    className="sc-bdVaJa bNAHbb k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-fluid"
+  <label
+    className="sc-bdVaJa ewURbK k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-fluid"
+    disabled={null}
     htmlFor="BasicUploader"
     style={
       Object {
@@ -37,7 +38,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
     <span>
       Document
     </span>
-  </button>
+  </label>
 </div>
 `;
 
@@ -51,8 +52,9 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
     onChange={[Function]}
     type="file"
   />
-  <button
-    className="sc-bdVaJa bNAHbb k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-fluid"
+  <label
+    className="sc-bdVaJa ewURbK k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-fluid"
+    disabled={null}
     htmlFor="BasicUploader"
     style={
       Object {
@@ -78,7 +80,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
     <span>
       Document
     </span>
-  </button>
+  </label>
 </div>
 `;
 
@@ -93,8 +95,9 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     onChange={[Function]}
     type="file"
   />
-  <button
-    className="sc-bdVaJa bNAHbb k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-fluid"
+  <label
+    className="sc-bdVaJa ewURbK k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-fluid"
+    disabled={null}
     htmlFor="BasicUploader"
     style={
       Object {
@@ -120,7 +123,7 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     <span>
       Document
     </span>
-  </button>
+  </label>
   <div
     className="k-BasicUploader__statusBlock"
   >

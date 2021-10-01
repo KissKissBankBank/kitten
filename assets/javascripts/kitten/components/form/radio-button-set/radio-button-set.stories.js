@@ -84,7 +84,7 @@ const defaultArgs = {
   id: 'story-radio-button-set',
   error: false,
   disabled: false,
-  variant: 'andromeda',
+  variant: 'orion',
   design: 'disc',
   size: 'regular',
 }
@@ -148,7 +148,6 @@ OrionGrid.args = {
       id: 'option-f',
     },
   ],
-  variant: 'orion',
 }
 
 export const OrionGridWithLabel = args => (
@@ -186,6 +185,5 @@ OrionGridWithLabel.args = {
       id: 'option-f',
     },
   ],
-  variant: 'orion',
   label: 'Test de label',
 }

@@ -24,7 +24,7 @@ export default {
     disabled: false,
     helpMessage: 'Press Enter or comma to add an item to the list.',
     size: 'regular',
-    variant: 'andromeda',
+    variant: 'orion',
     addEventKeys: ['Enter', ','],
     removeEventKeys: ['Backspace'],
   },

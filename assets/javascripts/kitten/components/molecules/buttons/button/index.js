@@ -18,6 +18,7 @@ export const buttonModifiers = [
   'oxygen',
   'copper',
   'boron',
+  'calcium',
   'neon',
   'iron',
   'social_facebook',
@@ -228,8 +229,8 @@ export const Button = ({
   fluid,
   icon,
   borderRadius,
-  tag,
   disabled,
+  tag,
   as,
   fit,
   mobileFit,
@@ -256,7 +257,7 @@ export const Button = ({
     }
   })()
 
-  const internalTag = tag || as || 'button'
+  const internalTag = as || tag
 
   return (
     <StyledButton
@@ -314,7 +315,7 @@ Button.defaultProps = {
   borderRadius: 0,
   size: 'regular',
   modifier: 'hydrogen',
-  variant: 'andromeda',
+  variant: 'orion',
   fit: 'min-width',
   mobileFit: null,
 }

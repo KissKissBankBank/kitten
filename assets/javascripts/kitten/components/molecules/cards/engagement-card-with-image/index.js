@@ -44,12 +44,19 @@ export const EngagementCardWithImage = ({
   href,
   as,
   imageHeight,
+  imgProps,
+  textProps,
   ...others
 }) => {
   return (
     <StyledContainer {...others} as={href ? 'a' : 'div'} href={href}>
       <StyledCard>
-        <StyledImage src={backgroundImage} alt="" imageHeight={imageHeight} />
+        <StyledImage
+          src={backgroundImage}
+          alt=""
+          imageHeight={imageHeight}
+          {...imgProps}
+        />
       </StyledCard>
       <StyledText
         size="micro"
@@ -57,6 +64,7 @@ export const EngagementCardWithImage = ({
         color="font1"
         decoration="none"
         lineHeight="normal"
+        {...textProps}
       >
         {children}
       </StyledText>
@@ -68,6 +76,8 @@ EngagementCardWithImage.propTypes = {
   href: PropTypes.string,
   backgroundImage: PropTypes.string.isRequired,
   imageHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  imgProps: PropTypes.object,
+  textProps: PropTypes.object,
 }
 
 EngagementCardWithImage.defaultProps = {

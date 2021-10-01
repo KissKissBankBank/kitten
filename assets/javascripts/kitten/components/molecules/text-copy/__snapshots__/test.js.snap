@@ -2,12 +2,12 @@
 
 exports[`<TextCopy /> should match snapshot 1`] = `
 <button
-  className="sc-ifAKCX eeGAAj k-TextCopy k-u-reset-button k-TextCopy--undefined"
+  className="sc-ifAKCX sgkzz k-TextCopy k-u-reset-button k-TextCopy--orion"
   onClick={[Function]}
   type="button"
 >
   <div
-    className="sc-htpNat ijjzbr k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    className="sc-htpNat ccMunf k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--orion k-Form-TextInput--regular"
     disabled={false}
     name="text"
   >
@@ -15,8 +15,9 @@ exports[`<TextCopy /> should match snapshot 1`] = `
       Text To Copy
     </span>
   </div>
-  <button
-    className="sc-bwzfXH kMpFKW k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  <span
+    className="sc-bwzfXH NJwAm k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+    disabled={null}
     style={
       Object {
         "--Button-border-radius": 0,
@@ -36,13 +37,13 @@ exports[`<TextCopy /> should match snapshot 1`] = `
         fill="#000"
       />
     </svg>
-  </button>
+  </span>
 </button>
 `;
 
 exports[`<TextCopy /> should match snapshot with button text 1`] = `
 <button
-  className="sc-ifAKCX eeGAAj k-TextCopy k-u-reset-button k-TextCopy--undefined"
+  className="sc-ifAKCX sgkzz k-TextCopy k-u-reset-button k-TextCopy--orion"
   onClick={[Function]}
   type="button"
 >
@@ -52,7 +53,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
     This is a description
   </span>
   <div
-    className="sc-htpNat ijjzbr k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    className="sc-htpNat ccMunf k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--orion k-Form-TextInput--regular"
     disabled={false}
     name="text"
   >
@@ -60,8 +61,9 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
       Text To Copy
     </span>
   </div>
-  <button
-    className="sc-bwzfXH cLPqBh k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none"
+  <span
+    className="sc-bwzfXH kZkdmu k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+    disabled={null}
     style={
       Object {
         "--Button-border-radius": 0,
@@ -70,13 +72,13 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
     type="button"
   >
     Button text
-  </button>
+  </span>
 </button>
 `;
 
 exports[`<TextCopy /> should match snapshot with description 1`] = `
 <button
-  className="sc-ifAKCX eeGAAj k-TextCopy k-u-reset-button k-TextCopy--undefined"
+  className="sc-ifAKCX sgkzz k-TextCopy k-u-reset-button k-TextCopy--orion"
   onClick={[Function]}
   type="button"
 >
@@ -86,7 +88,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
     This is a description
   </span>
   <div
-    className="sc-htpNat ijjzbr k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    className="sc-htpNat ccMunf k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--orion k-Form-TextInput--regular"
     disabled={false}
     name="text"
   >
@@ -94,8 +96,9 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
       Text To Copy
     </span>
   </div>
-  <button
-    className="sc-bwzfXH kMpFKW k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  <span
+    className="sc-bwzfXH NJwAm k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+    disabled={null}
     style={
       Object {
         "--Button-border-radius": 0,
@@ -115,13 +118,13 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
         fill="#000"
       />
     </svg>
-  </button>
+  </span>
 </button>
 `;
 
 exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
 <button
-  className="sc-ifAKCX eeGAAj k-TextCopy k-u-reset-button k-TextCopy--undefined"
+  className="sc-ifAKCX sgkzz k-TextCopy k-u-reset-button k-TextCopy--orion"
   onClick={[Function]}
   type="button"
 >
@@ -131,7 +134,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
     This is a description
   </span>
   <div
-    className="sc-htpNat ijjzbr k-Form-TextInput k-TextCopy__text k-u-reset-button k-TextCopy__text--forceOneLine k-Form-TextInput--andromeda k-Form-TextInput--regular"
+    className="sc-htpNat ccMunf k-Form-TextInput k-TextCopy__text k-u-reset-button k-TextCopy__text--forceOneLine k-Form-TextInput--orion k-Form-TextInput--regular"
     disabled={false}
     name="text"
   >
@@ -139,8 +142,9 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
       Text To Copy
     </span>
   </div>
-  <button
-    className="sc-bwzfXH kMpFKW k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  <span
+    className="sc-bwzfXH NJwAm k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+    disabled={null}
     style={
       Object {
         "--Button-border-radius": 0,
@@ -160,13 +164,13 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
         fill="#000"
       />
     </svg>
-  </button>
+  </span>
 </button>
 `;
 
 exports[`<TextCopy /> should match snapshot with variant etc. 1`] = `
 <button
-  className="sc-ifAKCX eeGAAj k-TextCopy k-u-reset-button k-TextCopy--orion"
+  className="sc-ifAKCX sgkzz k-TextCopy k-u-reset-button k-TextCopy--orion"
   onClick={[Function]}
   type="button"
 >
@@ -176,7 +180,7 @@ exports[`<TextCopy /> should match snapshot with variant etc. 1`] = `
     This is a description
   </span>
   <div
-    className="sc-htpNat ijjzbr k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--orion k-Form-TextInput--regular"
+    className="sc-htpNat ccMunf k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--orion k-Form-TextInput--regular"
     disabled={false}
     name="text"
   >
@@ -184,8 +188,9 @@ exports[`<TextCopy /> should match snapshot with variant etc. 1`] = `
       Text To Copy
     </span>
   </div>
-  <button
-    className="sc-bwzfXH cLPqBh k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+  <span
+    className="sc-bwzfXH kZkdmu k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+    disabled={null}
     style={
       Object {
         "--Button-border-radius": 0,
@@ -194,6 +199,6 @@ exports[`<TextCopy /> should match snapshot with variant etc. 1`] = `
     type="button"
   >
     Button text
-  </button>
+  </span>
 </button>
 `;

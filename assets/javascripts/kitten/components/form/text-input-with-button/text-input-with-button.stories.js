@@ -48,6 +48,7 @@ Default.argTypes = {
       'boron',
       'neon',
       'iron',
+      'calcium',
       'social_facebook',
       'social_twitter',
       'social_linkedin',

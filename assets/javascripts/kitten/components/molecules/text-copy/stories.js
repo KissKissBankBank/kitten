@@ -18,7 +18,7 @@ export default {
     forceOneLine: false,
     buttonText: 'Je suis un bouton',
     buttonModifier: undefined,
-    variant: 'andromeda',
+    variant: 'orion',
     children: 'My text to copy on click',
   },
   argTypes: {
@@ -60,6 +60,7 @@ export default {
         'boron',
         'neon',
         'iron',
+        'calcium',
         'social_facebook',
         'social_twitter',
         'social_linkedin',

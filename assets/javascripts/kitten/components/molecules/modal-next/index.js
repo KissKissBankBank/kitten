@@ -871,7 +871,7 @@ Modal.defaultProps = {
   size: 'regular',
   isOpen: false,
   zIndex: 110,
-  variant: 'andromeda',
+  variant: 'orion',
   headerTitle: null,
   headerActions: null,
   headerMessage: null,

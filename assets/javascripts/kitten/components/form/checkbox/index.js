@@ -226,7 +226,7 @@ Checkbox.defaultProps = {
   indeterminate: false,
   error: false,
   disabled: false,
-  variant: 'andromeda',
+  variant: 'orion',
   onLabelClick: () => {},
 }
 
