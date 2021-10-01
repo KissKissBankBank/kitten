@@ -22,7 +22,7 @@ describe('<TagInput />', () => {
           id="test-slider-input"
           helpMessage="Press Enter or Comma to add an item."
           size="huge"
-          variant="orion"
+
           addEventKeys={['Enter', ',', 'Space']}
           removeEventKeys={['e', '^', 'Backspace']}
           initialItemsList={['Black', 'Blue', 'Green and magenta']}

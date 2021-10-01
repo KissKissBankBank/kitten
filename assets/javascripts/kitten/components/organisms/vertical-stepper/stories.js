@@ -24,17 +24,17 @@ export default {
 
 export const WithOrionVariant = () => {
   return (
-    <VerticalStepper variant="orion">
+    <VerticalStepper >
       <VerticalStepper.Step
         success
         href="#"
         statusProps={{ title: 'Étape validée' }}
-        variant="orion"
+
       >
-        <VerticalStepper.Title variant="orion">ÉTAPE 1</VerticalStepper.Title>
+        <VerticalStepper.Title >ÉTAPE 1</VerticalStepper.Title>
         <Text weight="light" size="tiny" lineHeight="normal">
           Décrivez-nous votre projet
-          <VerticalStepper.Link variant="orion">Modifier</VerticalStepper.Link>
+          <VerticalStepper.Link >Modifier</VerticalStepper.Link>
         </Text>
       </VerticalStepper.Step>
 
@@ -42,22 +42,22 @@ export const WithOrionVariant = () => {
         valid
         href="#"
         statusProps={{ title: 'Étape complétée' }}
-        variant="orion"
+
       >
-        <VerticalStepper.Title variant="orion">ÉTAPE 2</VerticalStepper.Title>
+        <VerticalStepper.Title >ÉTAPE 2</VerticalStepper.Title>
         <Text weight="light" size="tiny" lineHeight="normal">
           Créez votre projet (nom, durée, ...)
         </Text>
       </VerticalStepper.Step>
 
-      <VerticalStepper.Step variant="orion" bridge />
+      <VerticalStepper.Step  bridge />
 
       <VerticalStepper.Step
         error
         statusProps={{ title: 'Étape à commencer' }}
-        variant="orion"
+
       >
-        <VerticalStepper.Title variant="orion">ÉTAPE 3</VerticalStepper.Title>
+        <VerticalStepper.Title >ÉTAPE 3</VerticalStepper.Title>
         <Text weight="light" size="tiny" lineHeight="normal">
           Préparez votre campagne (contenu de votre page, contreparties...)
         </Text>
@@ -67,9 +67,9 @@ export const WithOrionVariant = () => {
         disabled
         href="#"
         statusProps={{ title: 'Étape bloquée' }}
-        variant="orion"
+
       >
-        <VerticalStepper.Title variant="orion">ÉTAPE 4</VerticalStepper.Title>
+        <VerticalStepper.Title >ÉTAPE 4</VerticalStepper.Title>
 
         <Text weight="light" size="tiny" lineHeight="normal">
           Soumettez votre projet (votre coach vérifie votre projet et vous

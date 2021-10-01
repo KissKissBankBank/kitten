@@ -496,7 +496,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 >
   <button
     aria-label="Text of the tooltip"
-    className="c1 k-Button k-ButtonWithTooltip__button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+    className="c1 k-Button k-ButtonWithTooltip__button k-Button--regular k-Button--hydrogen k-Button--orion"
     style={
       Object {
         "--border-radius": 0,

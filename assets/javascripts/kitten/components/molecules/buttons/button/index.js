@@ -444,5 +444,5 @@ Button.defaultProps = {
   borderRadius: 0,
   size: 'regular',
   modifier: 'hydrogen',
-  variant: 'andromeda',
+  variant: 'orion',
 }

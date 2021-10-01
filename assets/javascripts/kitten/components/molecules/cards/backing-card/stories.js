@@ -441,7 +441,7 @@ export const InACarouselComponent = () => {
             </Label>
             <TextInputWithUnit
               id="text_input_with_unit"
-              variant="orion"
+
               unit="€"
             />
           </BackingCard.Form>

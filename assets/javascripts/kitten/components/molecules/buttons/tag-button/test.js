@@ -56,7 +56,7 @@ describe('<TagButton />', () => {
   describe('with `variant` prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(<TagButton variant="orion">MyButton</TagButton>)
+        .create(<TagButton >MyButton</TagButton>)
         .toJSON()
     })
 

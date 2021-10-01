@@ -87,7 +87,7 @@ WithFormComponents.args = {
         <TextInput
           name="input-item-1"
           size="tiny"
-          variant="orion"
+
           placeholder="value 1"
         />
       ),
@@ -99,7 +99,7 @@ WithFormComponents.args = {
         <TextInput
           name="input-item-2"
           size="tiny"
-          variant="orion"
+
           placeholder="value 2"
         />
       ),

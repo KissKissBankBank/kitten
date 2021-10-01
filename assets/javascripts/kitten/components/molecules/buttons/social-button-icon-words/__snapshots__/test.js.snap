@@ -348,7 +348,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_facebook k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--social_facebook k-Button--orion"
   style={
     Object {
       "--border-radius": 0,
@@ -722,7 +722,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--social_facebook k-Button--andromeda k-Button--fluid"
+  className="c0 k-Button k-Button--big k-Button--social_facebook k-Button--orion k-Button--fluid"
   style={
     Object {
       "--border-radius": 0,
@@ -1112,7 +1112,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_instagram k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--social_instagram k-Button--orion"
   style={
     Object {
       "--border-radius": 0,
@@ -1502,7 +1502,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--social_instagram k-Button--andromeda k-Button--fluid"
+  className="c0 k-Button k-Button--big k-Button--social_instagram k-Button--orion k-Button--fluid"
   style={
     Object {
       "--border-radius": 0,
@@ -1876,7 +1876,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_linkedin k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--social_linkedin k-Button--orion"
   style={
     Object {
       "--border-radius": 0,
@@ -2250,7 +2250,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--social_linkedin k-Button--andromeda k-Button--fluid"
+  className="c0 k-Button k-Button--big k-Button--social_linkedin k-Button--orion k-Button--fluid"
   style={
     Object {
       "--border-radius": 0,
@@ -2624,7 +2624,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_twitter k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--social_twitter k-Button--orion"
   style={
     Object {
       "--border-radius": 0,
@@ -2998,7 +2998,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--social_twitter k-Button--andromeda k-Button--fluid"
+  className="c0 k-Button k-Button--big k-Button--social_twitter k-Button--orion k-Button--fluid"
   style={
     Object {
       "--border-radius": 0,

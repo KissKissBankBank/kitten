@@ -132,7 +132,7 @@ export const Default = () => (
         <ListTable.Col className="customCol_1">
           <VisuallyHidden>Sélection</VisuallyHidden>
           <Checkbox
-            variant="orion"
+
             aria-label="Sélectionner toutes les contributions de la liste"
           />
         </ListTable.Col>
@@ -167,7 +167,7 @@ export const Default = () => (
               <button>Voir plus d'informations sur cette contribution</button>
             </VisuallyHidden>
             <Checkbox
-              variant="orion"
+
               aria-label="Sélectionner toutes les contributions de la liste"
             />
           </ListTable.Col>
@@ -202,7 +202,7 @@ export const Default = () => (
           <ListTable.Col className="customCol_6"><Text size="tiny" weight="regular">Livraison</Text></ListTable.Col>
 
           <ListTable.Col className="customCol_7">
-            <DropdownSelect id="DropdownSelect_1" hideLabel labelText="Sélectionnez le statut de livraison" options={[{label: 'À expédier', value: 1}, {label: 'Expédié', value: 2}]} variant="orion" />
+            <DropdownSelect id="DropdownSelect_1" hideLabel labelText="Sélectionnez le statut de livraison" options={[{label: 'À expédier', value: 1}, {label: 'Expédié', value: 2}]}  />
           </ListTable.Col>
         </ListTable.Row>
 
@@ -216,7 +216,7 @@ export const Default = () => (
               <button>Voir plus d'informations sur cette contribution</button>
             </VisuallyHidden>
             <Checkbox
-              variant="orion"
+
               aria-label="Sélectionner toutes les contributions de la liste"
             />
           </ListTable.Col>
@@ -251,7 +251,7 @@ export const Default = () => (
           <ListTable.Col className="customCol_6"><Text size="tiny" weight="regular">Livraison</Text></ListTable.Col>
 
           <ListTable.Col className="customCol_7">
-            <DropdownSelect id="DropdownSelect_2" hideLabel labelText="Sélectionnez le statut de livraison" options={[{label: 'À expédier', value: 1}, {label: 'Expédié', value: 2}]} variant="orion" />
+            <DropdownSelect id="DropdownSelect_2" hideLabel labelText="Sélectionnez le statut de livraison" options={[{label: 'À expédier', value: 1}, {label: 'Expédié', value: 2}]}  />
           </ListTable.Col>
         </ListTable.Row>
       </ListTable.Body>

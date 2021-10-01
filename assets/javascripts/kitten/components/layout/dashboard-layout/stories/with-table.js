@@ -205,7 +205,7 @@ const Row = () => {
         </VisuallyHidden>
         <Checkbox
           onChange={e => setHighlight(e.target.checked)}
-          variant="orion"
+
           aria-label="Sélectionner toutes les contributions de la liste"
         />
       </ListTable.Col>
@@ -271,7 +271,7 @@ const Row = () => {
             { label: 'À expédier', value: 1 },
             { label: 'Expédié', value: 2 },
           ]}
-          variant="orion"
+
         />
       </ListTable.Col>
     </ListTable.Row>
@@ -289,7 +289,7 @@ export const StoryWithTable = () => {
           className="k-u-margin-none k-u-margin-bottom-triple"
         >
           Curabitur blandit tempus porttitor.
-          <Button variant="orion" onClick={() => setOpen(!isOpen)}>
+          <Button  onClick={() => setOpen(!isOpen)}>
             Toggle Toaster
           </Button>
         </Title>
@@ -303,7 +303,7 @@ export const StoryWithTable = () => {
           <ListTable.Col className="customCol_0">
             <VisuallyHidden>Sélection</VisuallyHidden>
             <Checkbox
-              variant="orion"
+
               aria-label="Sélectionner toutes les contributions de la liste"
             />
           </ListTable.Col>
@@ -386,13 +386,13 @@ export const StoryWithTable = () => {
           </div>
           <Button
             modifier="boron"
-            variant="orion"
+
             size="tiny"
             className="k-u-hidden@m-down"
           >
             Hello
           </Button>
-          <Button modifier="helium" variant="orion" size="tiny">
+          <Button modifier="helium"  size="tiny">
             Hello
           </Button>
         </FlexWrapper>

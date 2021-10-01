@@ -91,7 +91,7 @@ Default.args = {
   href: 'https://www.kisskissbankbank.com',
   isExternal: true,
   linkProps: {},
-  variant: 'andromeda',
+  variant: 'orion',
   backgroundColor: COLORS.background1,
   textColor: COLORS.font1,
 }

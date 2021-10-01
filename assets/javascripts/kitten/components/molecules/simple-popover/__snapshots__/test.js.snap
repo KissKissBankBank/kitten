@@ -1123,7 +1123,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 >
   <button
     aria-label="Close"
-    className="c1 k-Button c2 k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+    className="c1 k-Button c2 k-Button--micro k-Button--hydrogen k-Button--orion k-Button--hasIcon"
     onClick={[Function]}
     style={
       Object {
@@ -1184,7 +1184,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c8 c9"
     >
       <button
-        className="c1 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda"
+        className="c1 k-Button k-Button--tiny k-Button--hydrogen k-Button--orion"
         onClick={[Function]}
         style={
           Object {
@@ -1196,7 +1196,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
         J’ai compris
       </button>
       <button
-        className="c10 k-Button k-Button--tiny k-Button--helium k-Button--andromeda"
+        className="c10 k-Button k-Button--tiny k-Button--helium k-Button--orion"
         onClick={[Function]}
         style={
           Object {
@@ -1948,7 +1948,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 >
   <button
     aria-label="Close"
-    className="c1 k-Button c2 k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+    className="c1 k-Button c2 k-Button--micro k-Button--hydrogen k-Button--orion k-Button--hasIcon"
     onClick={[Function]}
     style={
       Object {

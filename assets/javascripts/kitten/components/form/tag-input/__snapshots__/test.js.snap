@@ -2,7 +2,7 @@
 
 exports[`<TagInput /> should match its disabled snapshot with disabled props 1`] = `
 <div
-  className="sc-bdVaJa bJxyUR k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda k-Form-TagList--disabled"
+  className="sc-bdVaJa bJxyUR k-Form-TagList k-Form-TagList--regular k-Form-TagList--orion k-Form-TagList--disabled"
   onClick={[Function]}
 >
   <p
@@ -147,7 +147,7 @@ exports[`<TagInput /> should match its disabled snapshot with disabled props 1`]
 
 exports[`<TagInput /> should match its snapshot 1`] = `
 <div
-  className="sc-bdVaJa bJxyUR k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda"
+  className="sc-bdVaJa bJxyUR k-Form-TagList k-Form-TagList--regular k-Form-TagList--orion"
   onClick={[Function]}
 >
   <p

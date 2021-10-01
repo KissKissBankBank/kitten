@@ -12,7 +12,7 @@ const args = {
   disabled: false,
   size: 'regular',
   tag: undefined,
-  variant: 'andromeda',
+  variant: 'orion',
   children: 'My Button',
 }
 

@@ -232,7 +232,7 @@ describe('<Button />', () => {
   describe('with variant', () => {
     beforeEach(() => {
       component = renderer
-        .create(<Button variant="orion">Orion</Button>)
+        .create(<Button >Orion</Button>)
         .toJSON()
     })
 
@@ -245,7 +245,7 @@ describe('<Button />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button variant="orion" fluid>
+          <Button  fluid>
             Orion fluid
           </Button>,
         )

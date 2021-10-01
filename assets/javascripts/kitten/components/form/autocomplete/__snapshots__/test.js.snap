@@ -192,7 +192,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 }
 
 <div
-  className="c0 k-Form-Autocomplete k-Form-Autocomplete--andromeda"
+  className="c0 k-Form-Autocomplete k-Form-Autocomplete--orion"
 >
   <input
     aria-activedescendant=""
@@ -405,7 +405,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 }
 
 <div
-  className="c0 k-Form-Autocomplete k-Form-Autocomplete--andromeda k-Form-Autocomplete--hasIcon-left"
+  className="c0 k-Form-Autocomplete k-Form-Autocomplete--orion k-Form-Autocomplete--hasIcon-left"
 >
   <input
     aria-activedescendant=""
@@ -670,7 +670,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 }
 
 <div
-  className="c0 k-Form-Autocomplete k-Form-Autocomplete--andromeda"
+  className="c0 k-Form-Autocomplete k-Form-Autocomplete--orion"
 >
   <input
     aria-activedescendant=""

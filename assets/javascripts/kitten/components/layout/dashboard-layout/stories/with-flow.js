@@ -87,7 +87,7 @@ export const StoryWithFlow = ({
         mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
       <TextCopy
-        variant="orion"
+
         buttonText="Copier l’URL"
         textToCopy="https://www.kisskissbankbank.com/fr/projects/test-de-campagne-par-joachim/?secret-reward=hileo6"
       >
@@ -167,7 +167,7 @@ export const StoryWithFlow = ({
       {flowShowTwoButtons ? (
         <Button
           modifier="hydrogen"
-          variant="orion"
+
           type="button"
           disabled={flowLoading}
         >
@@ -186,7 +186,7 @@ export const StoryWithFlow = ({
       ) : null}
       <Button
         modifier="helium"
-        variant="orion"
+
         type="button"
         disabled={flowLoading}
       >
