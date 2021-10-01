@@ -1,16 +1,12 @@
-import React, { useState } from 'react'
-import styled, { css, createGlobalStyle } from 'styled-components'
+import React from 'react'
+import { createGlobalStyle } from 'styled-components'
 import { ListTable } from './index'
 import {
   ScreenConfig,
   VisuallyHidden,
   pxToRem,
-  stepToRem,
-  ArrowIcon,
   COLORS,
   TYPOGRAPHY,
-  CONTAINER_PADDING_THIN,
-  CONTAINER_PADDING,
   StatusWithBullet,
   Text,
   Checkbox,
@@ -138,24 +134,52 @@ export const Default = () => (
         </ListTable.Col>
 
         <ListTable.Col className="customCol_2">
-          <Text weight="regular" color="font1" size="tiny" className="k-u-hidden@s-down k-u-hidden@m">
+          <Text
+            weight="regular"
+            color="font1"
+            size="tiny"
+            className="k-u-hidden@s-down k-u-hidden@m"
+          >
             Date
           </Text>
-          <Text weight="regular" color="font1" size="tiny" className="k-u-hidden@l-up">Contributeur</Text>
+          <Text
+            weight="regular"
+            color="font1"
+            size="tiny"
+            className="k-u-hidden@l-up"
+          >
+            Contributeur
+          </Text>
         </ListTable.Col>
 
-        <ListTable.Col className="customCol_3"><Text weight="regular" color="font1" size="tiny">Contributeur</Text></ListTable.Col>
+        <ListTable.Col className="customCol_3">
+          <Text weight="regular" color="font1" size="tiny">
+            Contributeur
+          </Text>
+        </ListTable.Col>
 
-        <ListTable.Col className="customCol_4"><Text weight="regular" color="font1" size="tiny">Montant</Text></ListTable.Col>
+        <ListTable.Col className="customCol_4">
+          <Text weight="regular" color="font1" size="tiny">
+            Montant
+          </Text>
+        </ListTable.Col>
 
         <ListTable.Col className="customCol_5">
-          <Text weight="regular" color="font1" size="tiny">Statut</Text>
+          <Text weight="regular" color="font1" size="tiny">
+            Statut
+          </Text>
         </ListTable.Col>
 
-        <ListTable.Col className="customCol_6"><Text weight="regular" color="font1" size="tiny">Mode de livraison</Text></ListTable.Col>
+        <ListTable.Col className="customCol_6">
+          <Text weight="regular" color="font1" size="tiny">
+            Mode de livraison
+          </Text>
+        </ListTable.Col>
 
         <ListTable.Col className="customCol_7">
-          <Text weight="regular" color="font1" size="tiny">Statut livraison</Text>
+          <Text weight="regular" color="font1" size="tiny">
+            Statut livraison
+          </Text>
         </ListTable.Col>
       </ListTable.Header>
 
@@ -178,10 +202,23 @@ export const Default = () => (
                 <time dateTime="2019-09-12">12/09/2019</time>
               </Text>
               <br />
-              <Text size="micro" className="k-u-hidden@m-down" lineHeight="1">#88888888</Text>
-              <Text size="micro" className="k-u-hidden@l-up" lineHeight="1">Prénom NOM</Text>
-              <br/>
-              <Text size="micro" weight="regular" lineHeight="1" as="a" href="#" className="k-u-link k-u-link-primary1">Détails</Text>
+              <Text size="micro" className="k-u-hidden@m-down" lineHeight="1">
+                #88888888
+              </Text>
+              <Text size="micro" className="k-u-hidden@l-up" lineHeight="1">
+                Prénom NOM
+              </Text>
+              <br />
+              <Text
+                size="micro"
+                weight="regular"
+                lineHeight="1"
+                as="a"
+                href="#"
+                className="k-u-link k-u-link-primary1"
+              >
+                Détails
+              </Text>
             </div>
           </ListTable.Col>
 
@@ -189,20 +226,39 @@ export const Default = () => (
             <div>
               <Text weight="bold">Prénom Nom</Text>
               <br />
-              <Text size="micro" weight="light">Prenom-Nom</Text>
+              <Text size="micro" weight="light">
+                Prenom-Nom
+              </Text>
             </div>
           </ListTable.Col>
 
-          <ListTable.Col className="customCol_4"><Text size="tiny" weight="regular">72&nbsp;€</Text></ListTable.Col>
+          <ListTable.Col className="customCol_4">
+            <Text size="tiny" weight="regular">
+              72&nbsp;€
+            </Text>
+          </ListTable.Col>
 
           <ListTable.Col className="customCol_5">
             <StatusWithBullet statusType="success">Valid</StatusWithBullet>
           </ListTable.Col>
 
-          <ListTable.Col className="customCol_6"><Text size="tiny" weight="regular">Livraison</Text></ListTable.Col>
+          <ListTable.Col className="customCol_6">
+            <Text size="tiny" weight="regular">
+              Livraison
+            </Text>
+          </ListTable.Col>
 
           <ListTable.Col className="customCol_7">
-            <DropdownSelect id="DropdownSelect_1" hideLabel labelText="Sélectionnez le statut de livraison" options={[{label: 'À expédier', value: 1}, {label: 'Expédié', value: 2}]}  />
+            <DropdownSelect
+              id="DropdownSelect_1"
+              hideLabel
+              labelText="Sélectionnez le statut de livraison"
+              options={[
+                { label: 'À expédier', value: 1 },
+                { label: 'Expédié', value: 2 },
+              ]}
+              variant="orion"
+            />
           </ListTable.Col>
         </ListTable.Row>
 
@@ -227,10 +283,23 @@ export const Default = () => (
                 <time dateTime="2019-09-12">12/09/2019</time>
               </Text>
               <br />
-              <Text size="micro" className="k-u-hidden@m-down" lineHeight="1">#44654</Text>
-              <Text size="micro" className="k-u-hidden@l-up" lineHeight="1">Prénom NOM</Text>
-              <br/>
-              <Text size="micro" weight="regular" lineHeight="1" as="a" href="#" className="k-u-link k-u-link-primary1">Détails</Text>
+              <Text size="micro" className="k-u-hidden@m-down" lineHeight="1">
+                #44654
+              </Text>
+              <Text size="micro" className="k-u-hidden@l-up" lineHeight="1">
+                Prénom NOM
+              </Text>
+              <br />
+              <Text
+                size="micro"
+                weight="regular"
+                lineHeight="1"
+                as="a"
+                href="#"
+                className="k-u-link k-u-link-primary1"
+              >
+                Détails
+              </Text>
             </div>
           </ListTable.Col>
 
@@ -242,16 +311,33 @@ export const Default = () => (
             </div>
           </ListTable.Col>
 
-          <ListTable.Col className="customCol_4"><Text size="tiny" weight="regular">72&nbsp;€</Text></ListTable.Col>
+          <ListTable.Col className="customCol_4">
+            <Text size="tiny" weight="regular">
+              72&nbsp;€
+            </Text>
+          </ListTable.Col>
 
           <ListTable.Col className="customCol_5">
             <StatusWithBullet statusType="warning">Invalid</StatusWithBullet>
           </ListTable.Col>
 
-          <ListTable.Col className="customCol_6"><Text size="tiny" weight="regular">Livraison</Text></ListTable.Col>
+          <ListTable.Col className="customCol_6">
+            <Text size="tiny" weight="regular">
+              Livraison
+            </Text>
+          </ListTable.Col>
 
           <ListTable.Col className="customCol_7">
-            <DropdownSelect id="DropdownSelect_2" hideLabel labelText="Sélectionnez le statut de livraison" options={[{label: 'À expédier', value: 1}, {label: 'Expédié', value: 2}]}  />
+            <DropdownSelect
+              id="DropdownSelect_2"
+              hideLabel
+              labelText="Sélectionnez le statut de livraison"
+              options={[
+                { label: 'À expédier', value: 1 },
+                { label: 'Expédié', value: 2 },
+              ]}
+              variant="orion"
+            />
           </ListTable.Col>
         </ListTable.Row>
       </ListTable.Body>
@@ -259,7 +345,7 @@ export const Default = () => (
   </>
 )
 
-export const Toggleable = () => (<ToggleableStory />)
+export const Toggleable = () => <ToggleableStory />
 
 Toggleable.decorators = [
   story => <div className="story-Container">{story()}</div>,

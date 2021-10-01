@@ -5,7 +5,6 @@ import {
   KissKissBankBankLogo,
   HeaderMenu,
   EnvelopeIcon,
-  GiftIcon,
   COLORS,
   Text,
   AvatarWithTextAndBadge,
@@ -58,7 +57,7 @@ const InnerUserMenu = () => (
     }}
   >
     <HeaderMenu.Item href="#">Mon profil</HeaderMenu.Item>
-    <HeaderMenu.Item href="#">Mes projets</HeaderMenu.Item> 
+    <HeaderMenu.Item href="#">Mes projets</HeaderMenu.Item>
     <HeaderMenu.Item href="#">Mes contributions</HeaderMenu.Item>
     <HeaderMenu.Item href="#">Modifier mon profil</HeaderMenu.Item>
     <HeaderMenu.Item href="#" className="k-u-background-color-line1">
@@ -210,7 +209,11 @@ const SearchInput = () => {
   )
 }
 
-export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, size, ...args }) => {
+export const KissKissBankBankHeaderNavStoryAgain = ({
+  isLogged,
+  size,
+  ...args
+}) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const windowWidth = useWindowWidth()
 
@@ -254,7 +257,7 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, size, ...args })
           </HeaderNav.Hidden>
         </HeaderNav.Logo>
 
-         <HeaderNav.Hidden max="m">
+        <HeaderNav.Hidden max="m">
           <HeaderNav.Nav>
             <Navigation />
           </HeaderNav.Nav>
@@ -262,7 +265,7 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, size, ...args })
 
         <HeaderNav.Right padded>
           <SearchInput />
-  
+
           <HeaderNav.Logged>
             <HeaderNav.UserMenuNext dropdownAnchorSide="right" padding={false}>
               <HeaderNav.UserMenuNext.Button
@@ -307,13 +310,18 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, size, ...args })
               <GiftIcon width={15} height={16} />
             </Button>
           </HeaderNav.Hidden> */}
-          
+
           <HeaderNav.Hidden max="m">
             <Button
               size="tiny"
               borderRadius={100}
               className="k-u-margin-right-single"
-              style={{ minWidth: 'auto', paddingLeft: '18px', paddingRight: '18px', borderRadius:'100px'}}
+              style={{
+                minWidth: 'auto',
+                paddingLeft: '18px',
+                paddingRight: '18px',
+                borderRadius: '100px',
+              }}
             >
               Blog
             </Button>
@@ -331,19 +339,17 @@ export const KissKissBankBankHeaderNavStoryAgain = ({ isLogged, size, ...args })
           </HeaderNav.Hidden>
 
           <HeaderNav.LoggedOut>
-
-          <HeaderNav.Hidden max="m">
-            <HeaderNav.Button
-              backgroundColor={COLORS.background1}
-              backgroundColorHover={COLORS.background1}
-              color={COLORS.font1}
-              colorHover={COLORS.primary1}
-              text="Se connecter"
-              href="#"
-              smallPadding
-            />
-          </HeaderNav.Hidden>
-
+            <HeaderNav.Hidden max="m">
+              <HeaderNav.Button
+                backgroundColor={COLORS.background1}
+                backgroundColorHover={COLORS.background1}
+                color={COLORS.font1}
+                colorHover={COLORS.primary1}
+                text="Se connecter"
+                href="#"
+                smallPadding
+              />
+            </HeaderNav.Hidden>
           </HeaderNav.LoggedOut>
 
           {/* <HeaderNav.Hidden max="m">
