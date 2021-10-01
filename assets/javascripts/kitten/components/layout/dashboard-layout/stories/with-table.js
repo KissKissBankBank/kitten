@@ -206,7 +206,6 @@ const Row = () => {
         </VisuallyHidden>
         <Checkbox
           onChange={e => setHighlight(e.target.checked)}
-
           aria-label="Sélectionner toutes les contributions de la liste"
         />
       </ListTable.Col>
@@ -272,7 +271,6 @@ const Row = () => {
             { label: 'À expédier', value: 1 },
             { label: 'Expédié', value: 2 },
           ]}
-
         />
       </ListTable.Col>
     </ListTable.Row>
@@ -290,9 +288,7 @@ export const StoryWithTable = () => {
           className="k-u-margin-none k-u-margin-bottom-triple"
         >
           Curabitur blandit tempus porttitor.
-          <Button  onClick={() => setOpen(!isOpen)}>
-            Toggle Toaster
-          </Button>
+          <Button onClick={() => setOpen(!isOpen)}>Toggle Toaster</Button>
         </Title>
       </div>
 
@@ -303,10 +299,7 @@ export const StoryWithTable = () => {
         <ListTable.Header className="k-u-weight-regular">
           <ListTable.Col className="customCol_0">
             <VisuallyHidden>Sélection</VisuallyHidden>
-            <Checkbox
-
-              aria-label="Sélectionner toutes les contributions de la liste"
-            />
+            <Checkbox aria-label="Sélectionner toutes les contributions de la liste" />
           </ListTable.Col>
 
           <ListTable.Col className="customCol_1">
@@ -379,15 +372,10 @@ export const StoryWithTable = () => {
               Text
             </Text>
           </div>
-          <Button
-            modifier="boron"
-
-            size="tiny"
-            className="k-u-hidden@m-down"
-          >
+          <Button modifier="boron" size="tiny" className="k-u-hidden@m-down">
             Hello
           </Button>
-          <Button modifier="helium"  size="tiny">
+          <Button modifier="helium" size="tiny">
             Hello
           </Button>
         </FlexWrapper>

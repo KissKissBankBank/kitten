@@ -19,7 +19,6 @@ describe('<RadiButton />', () => {
             largeContent={false}
             text="RadioButton Label"
             size="regular"
-
             design="disc"
           >
             Children

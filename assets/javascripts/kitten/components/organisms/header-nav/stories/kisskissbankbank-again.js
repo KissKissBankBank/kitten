@@ -195,7 +195,6 @@ const SearchInput = () => {
 
       <Button
         size="tiny"
-
         type="submit"
         fluid
         className="k-u-margin-bottom-double k-u-margin-horizontal-double"

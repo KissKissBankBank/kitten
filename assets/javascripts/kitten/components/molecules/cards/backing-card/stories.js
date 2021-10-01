@@ -439,11 +439,7 @@ export const InACarouselComponent = () => {
             >
               Montant de votre don
             </Label>
-            <TextInputWithUnit
-              id="text_input_with_unit"
-
-              unit="€"
-            />
+            <TextInputWithUnit id="text_input_with_unit" unit="€" />
           </BackingCard.Form>
           <BackingCard.Button>Je soutiens</BackingCard.Button>
         </BackingCard>

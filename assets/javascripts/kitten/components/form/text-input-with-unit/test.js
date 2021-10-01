@@ -70,7 +70,7 @@ describe('<TextInputWithUnit />', () => {
   describe('with variant prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(<TextInputWithUnit >€</TextInputWithUnit>)
+        .create(<TextInputWithUnit>€</TextInputWithUnit>)
         .toJSON()
     })
 

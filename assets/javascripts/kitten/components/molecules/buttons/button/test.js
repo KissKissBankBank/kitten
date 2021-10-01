@@ -231,9 +231,7 @@ describe('<Button />', () => {
 
   describe('with variant', () => {
     beforeEach(() => {
-      component = renderer
-        .create(<Button >Orion</Button>)
-        .toJSON()
+      component = renderer.create(<Button>Orion</Button>).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -243,13 +241,7 @@ describe('<Button />', () => {
 
   describe('with variant and fluid', () => {
     beforeEach(() => {
-      component = renderer
-        .create(
-          <Button  fluid>
-            Orion fluid
-          </Button>,
-        )
-        .toJSON()
+      component = renderer.create(<Button fluid>Orion fluid</Button>).toJSON()
     })
 
     it('matches with snapshot', () => {

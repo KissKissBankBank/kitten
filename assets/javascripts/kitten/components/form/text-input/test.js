@@ -99,7 +99,7 @@ describe('<TextInput />', () => {
 
   describe('with `variant` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInput  />).toJSON()
+      component = renderer.create(<TextInput />).toJSON()
     })
 
     it('matches with snapshot', () => {

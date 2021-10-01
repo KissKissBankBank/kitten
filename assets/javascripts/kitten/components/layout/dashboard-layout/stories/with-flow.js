@@ -87,7 +87,6 @@ export const StoryWithFlow = ({
         mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
       <TextCopy
-
         buttonText="Copier l’URL"
         textToCopy="https://www.kisskissbankbank.com/fr/projects/test-de-campagne-par-joachim/?secret-reward=hileo6"
       >
@@ -165,12 +164,7 @@ export const StoryWithFlow = ({
     </DashboardLayout.Flow.Aside>
     <DashboardLayout.Flow.Nav twoButtons={flowShowTwoButtons}>
       {flowShowTwoButtons ? (
-        <Button
-          modifier="hydrogen"
-
-          type="button"
-          disabled={flowLoading}
-        >
+        <Button modifier="hydrogen" type="button" disabled={flowLoading}>
           Back
         </Button>
       ) : flowShowUnsavedText ? (
@@ -184,12 +178,7 @@ export const StoryWithFlow = ({
           You have unsaved changes
         </Text>
       ) : null}
-      <Button
-        modifier="helium"
-
-        type="button"
-        disabled={flowLoading}
-      >
+      <Button modifier="helium" type="button" disabled={flowLoading}>
         Save
       </Button>
     </DashboardLayout.Flow.Nav>

@@ -12,7 +12,6 @@ export const Input = ({ valid, onChange, className, ...props }) => {
           wrapperProps={{
             className: 'k-ContributionCard__inputWrapper',
           }}
-
           valid={valid}
           className={classNames('k-ContributionCard__input', className)}
           onChange={event => {

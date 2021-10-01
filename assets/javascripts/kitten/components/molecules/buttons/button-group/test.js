@@ -28,7 +28,7 @@ describe('<ButtonGroup />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <ButtonGroup >
+          <ButtonGroup>
             <ButtonGroup.Button>Button1</ButtonGroup.Button>
             <ButtonGroup.Button active>Button2</ButtonGroup.Button>
             <ButtonGroup.Button>Button3</ButtonGroup.Button>

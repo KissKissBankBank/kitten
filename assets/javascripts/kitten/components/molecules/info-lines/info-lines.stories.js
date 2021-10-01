@@ -84,24 +84,14 @@ WithFormComponents.args = {
     {
       key: <Text size="tiny">Lorem importString docs size amet</Text>,
       value: (
-        <TextInput
-          name="input-item-1"
-          size="tiny"
-
-          placeholder="value 1"
-        />
+        <TextInput name="input-item-1" size="tiny" placeholder="value 1" />
       ),
       id: 'item-1',
     },
     {
       key: <Text size="tiny">Dolor</Text>,
       value: (
-        <TextInput
-          name="input-item-2"
-          size="tiny"
-
-          placeholder="value 2"
-        />
+        <TextInput name="input-item-2" size="tiny" placeholder="value 2" />
       ),
       id: 'item-2',
     },

@@ -328,7 +328,6 @@ ComplexWithOrion.args = {
     <>
       <Button
         className="k-u-hidden@xs-down"
-
         modifier="helium"
         type="button"
         onClick={close}
@@ -341,7 +340,6 @@ ComplexWithOrion.args = {
       <Button
         className="k-u-hidden@s-up"
         icon
-
         modifier="helium"
         type="button"
         onClick={close}

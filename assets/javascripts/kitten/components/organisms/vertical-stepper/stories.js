@@ -24,17 +24,16 @@ export default {
 
 export const Default = () => {
   return (
-    <VerticalStepper >
+    <VerticalStepper>
       <VerticalStepper.Step
         success
         href="#"
         statusProps={{ title: 'Étape validée' }}
-
       >
-        <VerticalStepper.Title >ÉTAPE 1</VerticalStepper.Title>
+        <VerticalStepper.Title>ÉTAPE 1</VerticalStepper.Title>
         <Text weight="light" size="tiny" lineHeight="normal">
           Décrivez-nous votre projet
-          <VerticalStepper.Link >Modifier</VerticalStepper.Link>
+          <VerticalStepper.Link>Modifier</VerticalStepper.Link>
         </Text>
       </VerticalStepper.Step>
 
@@ -42,22 +41,17 @@ export const Default = () => {
         valid
         href="#"
         statusProps={{ title: 'Étape complétée' }}
-
       >
-        <VerticalStepper.Title >ÉTAPE 2</VerticalStepper.Title>
+        <VerticalStepper.Title>ÉTAPE 2</VerticalStepper.Title>
         <Text weight="light" size="tiny" lineHeight="normal">
           Créez votre projet (nom, durée, ...)
         </Text>
       </VerticalStepper.Step>
 
-      <VerticalStepper.Step  bridge />
+      <VerticalStepper.Step bridge />
 
-      <VerticalStepper.Step
-        error
-        statusProps={{ title: 'Étape à commencer' }}
-
-      >
-        <VerticalStepper.Title >ÉTAPE 3</VerticalStepper.Title>
+      <VerticalStepper.Step error statusProps={{ title: 'Étape à commencer' }}>
+        <VerticalStepper.Title>ÉTAPE 3</VerticalStepper.Title>
         <Text weight="light" size="tiny" lineHeight="normal">
           Préparez votre campagne (contenu de votre page, contreparties...)
         </Text>
@@ -67,9 +61,8 @@ export const Default = () => {
         disabled
         href="#"
         statusProps={{ title: 'Étape bloquée' }}
-
       >
-        <VerticalStepper.Title >ÉTAPE 4</VerticalStepper.Title>
+        <VerticalStepper.Title>ÉTAPE 4</VerticalStepper.Title>
 
         <Text weight="light" size="tiny" lineHeight="normal">
           Soumettez votre projet (votre coach vérifie votre projet et vous
@@ -89,7 +82,9 @@ export const WithAndromedaVariant = () => {
         href="#"
         statusProps={{ title: 'Étape validée' }}
       >
-        <VerticalStepper.Title variant="andromeda">Infos clés</VerticalStepper.Title>
+        <VerticalStepper.Title variant="andromeda">
+          Infos clés
+        </VerticalStepper.Title>
 
         <VerticalStepper.Link variant="andromeda">Éditer</VerticalStepper.Link>
       </VerticalStepper.Step>
@@ -100,7 +95,9 @@ export const WithAndromedaVariant = () => {
         href="#"
         statusProps={{ title: 'Étape complétée' }}
       >
-        <VerticalStepper.Title variant="andromeda">Réseaux</VerticalStepper.Title>
+        <VerticalStepper.Title variant="andromeda">
+          Réseaux
+        </VerticalStepper.Title>
 
         <VerticalStepper.Link variant="andromeda">Éditer</VerticalStepper.Link>
       </VerticalStepper.Step>
@@ -111,7 +108,9 @@ export const WithAndromedaVariant = () => {
         href="#"
         statusProps={{ title: 'Étape à améliorer' }}
       >
-        <VerticalStepper.Title variant="andromeda">Présentation du projet</VerticalStepper.Title>
+        <VerticalStepper.Title variant="andromeda">
+          Présentation du projet
+        </VerticalStepper.Title>
 
         <VerticalStepper.List error variant="andromeda">
           <VerticalStepper.List.Item>
@@ -122,7 +121,9 @@ export const WithAndromedaVariant = () => {
           </VerticalStepper.List.Item>
         </VerticalStepper.List>
 
-        <VerticalStepper.Link variant="andromeda">Compléter</VerticalStepper.Link>
+        <VerticalStepper.Link variant="andromeda">
+          Compléter
+        </VerticalStepper.Link>
       </VerticalStepper.Step>
 
       <VerticalStepper.Step
@@ -131,14 +132,22 @@ export const WithAndromedaVariant = () => {
         href="#"
         statusProps={{ title: 'Étape à compléter' }}
       >
-        <VerticalStepper.Title variant="andromeda">Contreparties</VerticalStepper.Title>
+        <VerticalStepper.Title variant="andromeda">
+          Contreparties
+        </VerticalStepper.Title>
 
-        <VerticalStepper.Link variant="andromeda">Commencer</VerticalStepper.Link>
+        <VerticalStepper.Link variant="andromeda">
+          Commencer
+        </VerticalStepper.Link>
       </VerticalStepper.Step>
 
       <VerticalStepper.Step
-        variant="andromeda" statusProps={{ title: 'Étape à commencer' }}>
-        <VerticalStepper.Title variant="andromeda">Statut et infos bancaires</VerticalStepper.Title>
+        variant="andromeda"
+        statusProps={{ title: 'Étape à commencer' }}
+      >
+        <VerticalStepper.Title variant="andromeda">
+          Statut et infos bancaires
+        </VerticalStepper.Title>
 
         <VerticalStepper.Link variant="andromeda" as="a" href="#">
           Compléter
@@ -146,8 +155,13 @@ export const WithAndromedaVariant = () => {
       </VerticalStepper.Step>
 
       <VerticalStepper.Step
-        variant="andromeda" disabled statusProps={{ title: 'Étape bloquée' }}>
-        <VerticalStepper.Title variant="andromeda">Réception des fonds</VerticalStepper.Title>
+        variant="andromeda"
+        disabled
+        statusProps={{ title: 'Étape bloquée' }}
+      >
+        <VerticalStepper.Title variant="andromeda">
+          Réception des fonds
+        </VerticalStepper.Title>
 
         <Text weight="light" size="micro">
           Pièces justificatives à compléter lorsque vous aurez atteint 50% de

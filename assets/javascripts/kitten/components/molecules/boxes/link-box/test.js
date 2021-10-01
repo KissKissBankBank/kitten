@@ -40,7 +40,7 @@ describe('<LinkBox />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <LinkBox href="#foobar" isExternal >
+          <LinkBox href="#foobar" isExternal>
             <LinkBox.Text>foobar</LinkBox.Text>
           </LinkBox>,
         )

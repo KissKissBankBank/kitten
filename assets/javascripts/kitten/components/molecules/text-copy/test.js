@@ -57,7 +57,6 @@ describe('<TextCopy />', () => {
           alertMessage="Text copied!"
           description="This is a description"
           buttonText="Button text"
-
         >
           Text To Copy
         </TextCopy>,
