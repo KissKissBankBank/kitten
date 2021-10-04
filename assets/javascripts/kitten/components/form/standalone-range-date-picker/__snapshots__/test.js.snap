@@ -23,7 +23,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
       >
         <button
           aria-label="Mois précédent, Décembre 2018"
-          className="sc-bdVaJa cOcLhO k-Button sc-bxivhb eCfryC k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
+          className="sc-bdVaJa jGjdXV k-Button sc-bxivhb eCfryC k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
           onClick={[Function]}
           style={
             Object {
@@ -53,7 +53,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         </button>
         <button
           aria-label="Mois suivant, Février 2019"
-          className="sc-bdVaJa cOcLhO k-Button sc-bxivhb eCfryC k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
+          className="sc-bdVaJa jGjdXV k-Button sc-bxivhb eCfryC k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
           onClick={[Function]}
           style={
             Object {
