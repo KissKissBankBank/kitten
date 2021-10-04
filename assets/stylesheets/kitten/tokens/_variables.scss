@@ -1,4 +1,22 @@
 :root {
+  /**
+  * @tokens Colors
+  * @presenter Color
+  */
+
+  --color-grey-000: "#FFFFFF"; /* Token Description Example @presenter Color */
+  --color-grey-100: "#FBFBFB";
+  --color-grey-200: "#F6F6F6";
+  --color-grey-300: "#EEEEEE";
+  --color-grey-400: "#D8D8D8";
+  --color-grey-500: "#B8B8B8";
+  --color-grey-600: "#949494";
+  --color-grey-700: "#636363";
+  --color-grey-800: "#2D2D2D";
+  --color-grey-900: "#222222";
+
+
+
   --color-text: "color-grey-900";
   --color-input-border-inactive: "color-grey-400";
   --color-input-border-default: "color-grey-400";
@@ -6,6 +24,7 @@
   --color-input-border-active: "color-grey-900";
   --color-input-border-error: "color-error-500";
   --color-input-border-validated: "color-green-500";
+  
   --color-button-border-inactive: "color-grey-300";
   --color-button-background-inactive: "color-grey-000";
   --color-button-border-hover: "color-blue-400";
