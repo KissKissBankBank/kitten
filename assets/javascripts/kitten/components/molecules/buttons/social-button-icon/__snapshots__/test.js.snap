@@ -30,6 +30,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -115,16 +116,12 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -221,15 +218,15 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_facebook k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  className="c0 k-Button k-Button--regular k-Button--social_facebook k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -279,6 +276,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -364,16 +362,12 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -470,15 +464,15 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_facebook k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  className="c0 k-Button k-Button--tiny k-Button--social_facebook k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -528,6 +522,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -620,16 +615,12 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -735,15 +726,15 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_instagram k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  className="c0 k-Button k-Button--regular k-Button--social_instagram k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -793,6 +784,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -885,16 +877,12 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1000,15 +988,15 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_instagram k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  className="c0 k-Button k-Button--tiny k-Button--social_instagram k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -1058,6 +1046,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #00669e;
   background-color: #00669e;
   color: #fff;
@@ -1143,16 +1132,12 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1249,15 +1234,15 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_linkedin k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  className="c0 k-Button k-Button--regular k-Button--social_linkedin k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -1307,6 +1292,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #00669e;
   background-color: #00669e;
   color: #fff;
@@ -1392,16 +1378,12 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1498,15 +1480,15 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_linkedin k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  className="c0 k-Button k-Button--tiny k-Button--social_linkedin k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -1556,6 +1538,7 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #bd081c;
   background-color: #bd081c;
   color: #fff;
@@ -1641,16 +1624,12 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1747,15 +1726,15 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_pinterest k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  className="c0 k-Button k-Button--regular k-Button--social_pinterest k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -1805,6 +1784,7 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #bd081c;
   background-color: #bd081c;
   color: #fff;
@@ -1890,16 +1870,12 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1996,15 +1972,15 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_pinterest k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  className="c0 k-Button k-Button--tiny k-Button--social_pinterest k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -2054,6 +2030,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #55acee;
   background-color: #55acee;
   color: #fff;
@@ -2139,16 +2116,12 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2245,15 +2218,15 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_twitter k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  className="c0 k-Button k-Button--regular k-Button--social_twitter k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -2303,6 +2276,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #55acee;
   background-color: #55acee;
   color: #fff;
@@ -2388,16 +2362,12 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2494,15 +2464,15 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_twitter k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  className="c0 k-Button k-Button--tiny k-Button--social_twitter k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -2552,6 +2522,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #ff0000;
   background-color: #ff0000;
   color: #fff;
@@ -2637,16 +2608,12 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2743,15 +2710,15 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_youtube k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  className="c0 k-Button k-Button--regular k-Button--social_youtube k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -2801,6 +2768,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #ff0000;
   background-color: #ff0000;
   color: #fff;
@@ -2886,16 +2854,12 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2992,15 +2956,15 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--social_youtube k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  className="c0 k-Button k-Button--tiny k-Button--social_youtube k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"

@@ -30,6 +30,7 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -115,16 +116,12 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -221,16 +218,16 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
   aria-label="Close"
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   title="Close"
@@ -283,6 +280,7 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -368,16 +366,12 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -474,16 +468,16 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
   aria-label="close"
-  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   title="Close"

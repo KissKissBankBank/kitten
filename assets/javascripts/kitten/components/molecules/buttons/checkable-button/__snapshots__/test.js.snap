@@ -30,6 +30,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -115,16 +116,12 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -411,7 +408,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -421,7 +418,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   disabled={false}
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -460,6 +457,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
@@ -545,16 +543,12 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -841,7 +835,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -851,7 +845,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   disabled={false}
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -890,6 +884,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
@@ -975,16 +970,12 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1271,7 +1262,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -1281,7 +1272,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   disabled={true}
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -1320,6 +1311,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #ffb2c7;
   background-color: #fff;
   color: #ff0046;
@@ -1405,16 +1397,12 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1701,7 +1689,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -1711,7 +1699,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   disabled={false}
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -1750,6 +1738,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
@@ -1835,16 +1824,12 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c0.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c0.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2131,7 +2116,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -2141,7 +2126,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   disabled={false}
   style={
     Object {
-      "--Button-border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"

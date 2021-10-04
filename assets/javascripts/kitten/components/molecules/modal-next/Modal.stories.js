@@ -339,7 +339,7 @@ ComplexWithOrion.args = {
       </Button>
       <Button
         className="k-u-hidden@s-up"
-        icon
+        fit="icon"
         modifier="helium"
         type="button"
         onClick={close}

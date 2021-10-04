@@ -165,6 +165,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -250,16 +251,12 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   width: 100%;
 }
 
-.c1.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c1.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c1.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c1.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c1 svg:not(.k-ColorSvg),
@@ -331,6 +328,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #19b4fa;
   background-color: #19b4fa;
   color: #fff;
@@ -416,16 +414,12 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   width: 100%;
 }
 
-.c10.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c10.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c10.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c10.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c10 svg:not(.k-ColorSvg),
@@ -787,7 +781,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 @media (min-width:40rem) {
   .c1.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -845,7 +839,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 @media (min-width:40rem) {
   .c10.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -879,11 +873,11 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 >
   <button
     aria-label="Close"
-    className="c1 k-Button c2 k-Button--micro k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+    className="c1 k-Button c2 k-Button--micro k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
     onClick={[Function]}
     style={
       Object {
-        "--Button-border-radius": 0,
+        "--Button-border-radius": null,
       }
     }
     type="button"
@@ -944,7 +938,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
         onClick={[Function]}
         style={
           Object {
-            "--Button-border-radius": 0,
+            "--Button-border-radius": null,
           }
         }
         type="button"
@@ -956,7 +950,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
         onClick={[Function]}
         style={
           Object {
-            "--Button-border-radius": 0,
+            "--Button-border-radius": null,
           }
         }
         type="button"
@@ -1129,6 +1123,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -1214,16 +1209,12 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c1.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c1.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c1.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c1.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c1 svg:not(.k-ColorSvg),
@@ -1564,7 +1555,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c1.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -1582,11 +1573,11 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 >
   <button
     aria-label="Close"
-    className="c1 k-Button c2 k-Button--micro k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+    className="c1 k-Button c2 k-Button--micro k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
     onClick={[Function]}
     style={
       Object {
-        "--Button-border-radius": 0,
+        "--Button-border-radius": null,
       }
     }
     type="button"

@@ -100,12 +100,12 @@ exports[`<ImageDropUploader /> should match snapshot with error 1`] = `
     </div>
     <button
       aria-label="Cancel"
-      className="sc-bdVaJa ewURbK k-Button k-ImageDropUploader__manager__cancelButton k-Button--micro k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+      className="sc-bdVaJa cOcLhO k-Button k-ImageDropUploader__manager__cancelButton k-Button--micro k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
       disabled={false}
       onClick={[Function]}
       style={
         Object {
-          "--Button-border-radius": 0,
+          "--Button-border-radius": null,
         }
       }
       title="Cancel"

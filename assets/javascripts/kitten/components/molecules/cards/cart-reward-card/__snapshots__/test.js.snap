@@ -10,11 +10,11 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
   >
     <button
       aria-label="Delete"
-      className="sc-bwzfXH NJwAm k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+      className="sc-bwzfXH kqaCxp k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
       onClick={[Function]}
       style={
         Object {
-          "--Button-border-radius": 0,
+          "--Button-border-radius": null,
         }
       }
       type="button"
@@ -77,11 +77,11 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
   >
     <button
       aria-label="Delete"
-      className="sc-bwzfXH NJwAm k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+      className="sc-bwzfXH kqaCxp k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
       onClick={[Function]}
       style={
         Object {
-          "--Button-border-radius": 0,
+          "--Button-border-radius": null,
         }
       }
       type="button"
@@ -144,11 +144,11 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
   >
     <button
       aria-label="Delete"
-      className="sc-bwzfXH NJwAm k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+      className="sc-bwzfXH kqaCxp k-Button sc-htpNat haRoEg k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro k-Button--micro k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
       onClick={[Function]}
       style={
         Object {
-          "--Button-border-radius": 0,
+          "--Button-border-radius": null,
         }
       }
       type="button"

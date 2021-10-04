@@ -135,7 +135,7 @@ export const RewardEditionKissKissCode = () => (
       </StyledContainer>
 
       <StyledContainer>
-        <Button fluid big modifier="helium">
+        <Button fit="fluid" big modifier="helium">
           <StyledIcon width="14" />
           Editer le code cadeau
         </Button>
@@ -199,7 +199,7 @@ export const RewardEditionKissKissCode = () => (
       </StyledContainer>
 
       <StyledContainer>
-        <Button fluid big modifier="helium">
+        <Button fit="fluid" big modifier="helium">
           Valider
         </Button>
       </StyledContainer>

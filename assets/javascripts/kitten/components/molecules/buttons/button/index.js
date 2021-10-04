@@ -65,6 +65,8 @@ const StyledButton = styled.button`
   appearance: none;
   cursor: pointer;
 
+  border-radius: var(--Button-border-radius, 0);
+
   &:disabled,
   &.k-Button--disabled {
     cursor: not-allowed;
@@ -194,20 +196,16 @@ const StyledButton = styled.button`
 
   /* BORDER RADIUS */
 
-  &.k-Button--hasBorderRadius {
-    border-radius: var(--Button-border-radius);
+  &.k-Button--orion {
+    --Button-border-radius: ${pxToRem(6)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      --Button-border-radius: ${pxToRem(8)};
+    }
   }
 
   &.k-Button--rounded {
-    border-radius: 50%;
-  }
-
-  &.k-Button--orion {
-    border-radius: ${pxToRem(6)};
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      border-radius: ${pxToRem(8)};
-    }
+    --Button-border-radius: 50%;
   }
 
   /* MODIFIERS */
@@ -274,11 +272,10 @@ export const Button = ({
           'k-Button--fit-fluid': fluid && !icon,
           'k-Button--fit-icon': icon && !fluid,
           'k-Button--rounded': rounded,
-          'k-Button--hasBorderRadius': borderRadius > 0,
         },
       )}
       modifier={modifier}
-      style={{ '--Button-border-radius': pxToRem(borderRadius) }}
+      style={{ '--Button-border-radius': borderRadius > 0 ? pxToRem(borderRadius) : null }}
       type="button"
       as={internalTag}
       disabled={internalTag === 'button' ? disabled : null}

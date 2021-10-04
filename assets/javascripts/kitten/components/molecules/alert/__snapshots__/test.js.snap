@@ -12,11 +12,11 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
   </div>
   <button
     aria-label="Close"
-    className="sc-bdVaJa kCgXaz k-Button k-Alert__button k-Button--regular k-Button--carbon k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+    className="sc-bdVaJa jRodEi k-Button k-Alert__button k-Button--regular k-Button--carbon k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
     onClick={[Function]}
     style={
       Object {
-        "--Button-border-radius": 0,
+        "--Button-border-radius": null,
       }
     }
     title="Close"

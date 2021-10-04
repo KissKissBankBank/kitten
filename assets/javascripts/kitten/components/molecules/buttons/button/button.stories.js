@@ -12,8 +12,6 @@ import { DocsPage } from 'storybook/docs-page'
 
 const args = {
   borderRadius: 0,
-  fluid: false,
-  icon: false,
   modifier: 'hydrogen',
   rounded: false,
   disabled: false,
@@ -29,14 +27,6 @@ const argTypes = {
   borderRadius: {
     name: 'borderRadius',
     control: 'number',
-  },
-  fluid: {
-    name: 'fluid',
-    control: 'boolean',
-  },
-  icon: {
-    name: 'icon',
-    control: 'boolean',
   },
   modifier: {
     name: 'modifier',
@@ -105,13 +95,13 @@ export default {
 export const Default = args => <Button {...args} />
 
 export const WithIcon = args => (
-  <Button {...args} icon>
+  <Button {...args} fit="icon">
     <HeartIcon width={15} height={15} />
   </Button>
 )
 
 export const WithColorIcon = args => (
-  <Button {...args} icon>
+  <Button {...args} fit="icon">
     <PayPalIcon />
   </Button>
 )

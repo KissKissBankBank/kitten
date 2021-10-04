@@ -43,7 +43,7 @@ export const WithButtonIcon = args => (
 WithButtonIcon.args = {
   ...args,
   buttonProps: {
-    icon: true,
+    fit: 'icon',
     borderRadius: 100,
     size: 'tiny',
   },

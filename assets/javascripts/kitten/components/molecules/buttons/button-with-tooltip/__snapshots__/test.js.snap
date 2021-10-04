@@ -139,6 +139,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -224,16 +225,12 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c1.k-Button--hasBorderRadius {
-  border-radius: var(--Button-border-radius);
+.c1.k-Button--orion {
+  --Button-border-radius: 0.375rem;
 }
 
 .c1.k-Button--rounded {
-  border-radius: 50%;
-}
-
-.c1.k-Button--orion {
-  border-radius: 0.375rem;
+  --Button-border-radius: 50%;
 }
 
 .c1 svg:not(.k-ColorSvg),
@@ -365,7 +362,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c1.k-Button--orion {
-    border-radius: 0.5rem;
+    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -377,7 +374,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
     className="c1 k-Button k-ButtonWithTooltip__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
     style={
       Object {
-        "--Button-border-radius": 0,
+        "--Button-border-radius": null,
       }
     }
     type="button"

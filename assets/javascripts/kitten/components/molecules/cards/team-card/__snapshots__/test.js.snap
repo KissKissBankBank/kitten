@@ -8,13 +8,13 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
   
   <a
     aria-label="linkedin"
-    className="sc-htpNat gBMBth k-Button sc-bxivhb gLBSEl k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_linkedin k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+    className="sc-htpNat fDOkfI k-Button sc-bxivhb gLBSEl k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_linkedin k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
     disabled={null}
     href="https://www.linkedin.com"
     rel="noopener"
     style={
       Object {
-        "--Button-border-radius": 0,
+        "--Button-border-radius": null,
       }
     }
     target="_blank"
@@ -62,12 +62,12 @@ Array [
   >
     <a
       aria-label="E-mail"
-      className="sc-htpNat lfJigb k-Button sc-bxivhb gLBSEl k-ButtonIcon k-ButtonIcon--phone k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+      className="sc-htpNat guTmQl k-Button sc-bxivhb gLBSEl k-ButtonIcon k-ButtonIcon--phone k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
       disabled={null}
       href="mailto:example@kisskissbankbank.com"
       style={
         Object {
-          "--Button-border-radius": 0,
+          "--Button-border-radius": null,
         }
       }
       type="button"
@@ -89,12 +89,12 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-htpNat lfJigb k-Button sc-bxivhb gLBSEl k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+      className="sc-htpNat guTmQl k-Button sc-bxivhb gLBSEl k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
       disabled={null}
       href="tel:06 00 00 00 00"
       style={
         Object {
-          "--Button-border-radius": 0,
+          "--Button-border-radius": null,
         }
       }
       type="button"
@@ -127,11 +127,11 @@ Array [
       </span>
       <span
         aria-label="06 00 00 00 00"
-        className="sc-htpNat lfJigb k-Button sc-bxivhb gLBSEl k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+        className="sc-htpNat guTmQl k-Button sc-bxivhb gLBSEl k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
         disabled={null}
         style={
           Object {
-            "--Button-border-radius": 0,
+            "--Button-border-radius": null,
           }
         }
         type="button"
@@ -151,13 +151,13 @@ Array [
     </a>
     <a
       aria-label="linkedin"
-      className="sc-htpNat gBMBth k-Button sc-bxivhb gLBSEl k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_linkedin k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+      className="sc-htpNat fDOkfI k-Button sc-bxivhb gLBSEl k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_linkedin k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
       disabled={null}
       href="https://www.linkedin.com"
       rel="noopener"
       style={
         Object {
-          "--Button-border-radius": 0,
+          "--Button-border-radius": null,
         }
       }
       target="_blank"
@@ -178,13 +178,13 @@ Array [
     </a>
     <a
       aria-label="twitter"
-      className="sc-htpNat gBzSgY k-Button sc-bxivhb gLBSEl k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_twitter k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none k-Button--fit-icon"
+      className="sc-htpNat cVljzs k-Button sc-bxivhb gLBSEl k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_twitter k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
       disabled={null}
       href="https://www.twitter.com"
       rel="noopener"
       style={
         Object {
-          "--Button-border-radius": 0,
+          "--Button-border-radius": null,
         }
       }
       target="_blank"

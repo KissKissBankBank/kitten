@@ -70,7 +70,7 @@ export const Default = args => {
         </CartRewardCard.Description>
       </CartRewardCard>
       <Button
-        fluid
+        fit="fluid"
         modifier="helium"
         onClick={() => cardComponent.current.close()}
       >

@@ -115,9 +115,9 @@ export const SearchInput = ({
       />
       {isMobileInvisible ? (
         <Button
-          icon
+          fit="icon"
           size="tiny"
-          borderRadius={20}
+          rounded
           onClick={handleFoldButtonClick}
           className="k-u-hidden@m-up"
         >
