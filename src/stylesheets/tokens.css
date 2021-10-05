@@ -1,0 +1,7 @@
+:root{--color-grey-000:#fff;/*!
+  * @tokens Colors
+  * @presenter Color
+  */--color-grey-100:#fbfbfb;--color-grey-200:#f6f6f6;--color-grey-300:#eee;--color-grey-400:#d8d8d8;--color-grey-500:#b8b8b8;--color-grey-600:#949494;--color-grey-700:#636363;--color-grey-800:#2d2d2d;--color-grey-900:#222;--color-text:var(--color-grey-900);--color-input-border-inactive:var(--color-grey-400);--color-input-border-default:var(--color-grey-400);--color-input-border-hover:var(--color-grey-500);--color-input-border-active:var(--color-grey-900);--color-input-border-error:var(--color-error-500);--color-input-border-validated:var(--color-green-500);--color-button-border-inactive:var(--color-grey-300);--color-button-background-inactive:var(--color-grey-000);--color-button-border-hover:var(--color-blue-400);--color-button-background-hover:var(--color-grey-000);--color-button-border-active:var(--color-blue-500);--color-button-background-active:var(--color-grey-000);--color-button-border-selected:var(--color-blue-500);--color-button-background-selected:var(--color-grey-000);/*!
+  * @tokens Borders
+  * @presenter Border
+  */--border:2px solid var(--color-button-border-inactive)}
