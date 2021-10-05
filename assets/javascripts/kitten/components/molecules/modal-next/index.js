@@ -824,7 +824,9 @@ const InnerModal = ({
         React.cloneElement(trigger, {
           onClick: () => {
             dispatch(updateState(true))
-            trigger.props?.onClick()
+            if ('onClick' in trigger.props && typeof(trigger.props.onClick) === 'function') {
+              trigger.props.onClick()
+            }
           },
         })
       )}
