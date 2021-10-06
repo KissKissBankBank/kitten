@@ -1,10 +1,12 @@
 :root {
+
   /*!
   * @tokens Colors
   * @presenter Color
   */
 
-  --color-grey-100: #FBFBFB; /* Token Description Example */
+  --color-grey-050: #FFFFFF;
+  --color-grey-100: #FBFBFB;
   --color-grey-200: #F6F6F6;
   --color-grey-300: #EEEEEE;
   --color-grey-400: #D8D8D8;
@@ -13,26 +15,21 @@
   --color-grey-700: #636363;
   --color-grey-800: #2D2D2D;
   --color-grey-900: #222222;
-  --color-grey-1000: #FFFFFF;
-
   --color-error-100: #FFE9EF;
   --color-error-300: #FFB8CB;
   --color-error-500: #F60044;
   --color-error-700: #D8043E;
   --color-error-900: #A8002E;
-
   --color-green-100: #E4FBF4;
   --color-green-300: #A4E7D3;
   --color-green-500: #08A777;
   --color-green-700: #0E7758;
   --color-green-900: #004933;
-
   --color-blue-100: #E7F1FF;
   --color-blue-300: #7BB3FF;
   --color-blue-500: #006CFF;
   --color-blue-700: #0050BD;
   --color-blue-900: #003A88;
-
   --color-yellow-100: #FFF9DC;
   --color-yellow-300: #FFE975;
   --color-yellow-500: #FFD600;
@@ -40,24 +37,21 @@
   --color-yellow-900: #5A4C00;
 
   --color-text: var(--color-grey-900);
-
+  
   --color-input-border-inactive: var(--color-grey-400);
   --color-input-border-default: var(--color-grey-400);
   --color-input-border-hover: var(--color-grey-500);
   --color-input-border-focus: var(--color-grey-500);
-
   --color-input-border-active: var(--color-grey-900);
   --color-input-border-error: var(--color-error-500);
   --color-input-border-validated: var(--color-green-500);
-
-  --color-input-background: var(--color-grey-000);
-  
+  --color-input-background: var(--color-grey-050);
   --color-button-border-inactive: var(--color-grey-300);
-  --color-button-background-inactive: var(--color-grey-000);
+  --color-button-background-inactive: var(--color-grey-050);
   --color-button-border-hover: var(--color-blue-500);
-  --color-button-background-hover: var(--color-grey-000);
+  --color-button-background-hover: var(--color-grey-050);
   --color-button-border-active: var(--color-blue-500);
-  --color-button-background-active: var(--color-grey-000);
+  --color-button-background-active: var(--color-grey-050);
   --color-button-border-selected: var(--color-blue-500);
-  --color-button-background-selected: var(--color-grey-000);
+  --color-button-background-selected: var(--color-grey-050);
 }
