@@ -4,11 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `DropdownSelect`: Add `modifier` prop, defaults to `hydrogen`.
-- Feature: `DropdownSelect`: Add `direction` prop, defaults to `down`.
-- Feature: `DropdownSelect`: Add `micro` value to `size` prop.
-- Feature: `DropdownSelect`: Add `arrowPosition` prop (exclusive to `orion` variant), defaults to 'left'.
-- Fix: `DownloadIcon`: Update icon.
+## [4.13.0] - 2021-10-06
+
+Features: 
+
+- `DropdownSelect`: Add `modifier` prop, defaults to `hydrogen`.
+- `DropdownSelect`: Add `direction` prop, defaults to `down`.
+- `DropdownSelect`: Add `micro` value to `size` prop.
+- `DropdownSelect`: Add `arrowPosition` prop (exclusive to `orion` variant), defaults to 'left'.
+
+Fix
+
+-`DownloadIcon`: Update icon.
 
 ## [4.12.0] - 2021-09-30
 
