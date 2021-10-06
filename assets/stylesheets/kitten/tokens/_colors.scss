@@ -4,8 +4,7 @@
   * @presenter Color
   */
 
-  --color-grey-000: #FFFFFF;
-  --color-grey-100: #FBFBFB;
+  --color-grey-100: #FBFBFB; /* Token Description Example */
   --color-grey-200: #F6F6F6;
   --color-grey-300: #EEEEEE;
   --color-grey-400: #D8D8D8;
@@ -14,6 +13,7 @@
   --color-grey-700: #636363;
   --color-grey-800: #2D2D2D;
   --color-grey-900: #222222;
+  --color-grey-1000: #FFFFFF;
 
   --color-error-100: #FFE9EF;
   --color-error-300: #FFB8CB;
@@ -38,7 +38,6 @@
   --color-yellow-500: #FFD600;
   --color-yellow-700: #B09401;
   --color-yellow-900: #5A4C00;
-
 
   --color-text: var(--color-grey-900);
 

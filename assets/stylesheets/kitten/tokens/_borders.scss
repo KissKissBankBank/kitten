@@ -3,8 +3,15 @@
   * @tokens Borders
   * @presenter Border
   */
+  --border-s: 1px solid var(--color-text);
 
-  --border: 1px solid var(--color-text);
+  /*!
+  * @tokens Border Radius
+  * @presenter BorderRaduis
+  */
 
-  
+  --border-radius-s: 4px;
+  --border-radius-m: 6px;
+  --border-radius-l: 8px;
+  --border-radius-xl: 100px;
 }
