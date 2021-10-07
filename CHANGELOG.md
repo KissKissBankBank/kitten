@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `TagInput`: `initialItemsList` can accept object like `{value: 'hello': disabled: true}` to disable an option.
+## [4.13.0] - 2021-10-07
+
+Feature:
+- `TagInput`: `initialItemsList` can accept object like `{value: 'hello': disabled: true}` to disable an option.
 
 ## [4.13.0] - 2021-10-06
 
