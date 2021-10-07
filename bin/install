@@ -2,7 +2,4 @@
 
 set -e
 
-npm i -g npm
-node -v
-npm -v
 npm install
