@@ -2,7 +2,7 @@
 
 exports[`<TagInput /> should match its disabled snapshot with disabled props 1`] = `
 <div
-  className="sc-bdVaJa dWJmYU k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda k-Form-TagList--disabled"
+  className="sc-bdVaJa qOIMU k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda k-Form-TagList--disabled"
   onClick={[Function]}
 >
   <p
@@ -147,7 +147,7 @@ exports[`<TagInput /> should match its disabled snapshot with disabled props 1`]
 
 exports[`<TagInput /> should match its disabled snapshot with objects on initialItemsList 1`] = `
 <div
-  className="sc-bdVaJa dWJmYU k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda k-Form-TagList--disabled"
+  className="sc-bdVaJa qOIMU k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda k-Form-TagList--disabled"
   onClick={[Function]}
 >
   <p
@@ -332,7 +332,7 @@ exports[`<TagInput /> should match its disabled snapshot with objects on initial
 
 exports[`<TagInput /> should match its snapshot 1`] = `
 <div
-  className="sc-bdVaJa dWJmYU k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda"
+  className="sc-bdVaJa qOIMU k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda"
   onClick={[Function]}
 >
   <p
@@ -369,7 +369,7 @@ exports[`<TagInput /> should match its snapshot 1`] = `
 
 exports[`<TagInput /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa dWJmYU k-Form-TagList k-Form-TagList--huge k-Form-TagList--orion"
+  className="sc-bdVaJa qOIMU k-Form-TagList k-Form-TagList--huge k-Form-TagList--orion"
   onClick={[Function]}
 >
   <p
