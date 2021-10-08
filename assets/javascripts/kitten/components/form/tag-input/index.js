@@ -348,7 +348,7 @@ export const TagInput = ({
         aria-relevant="additions removals"
       >
         {itemsList.map(item => {
-          const itemValue = item?.value ?? item
+          const itemValue = item?.value || item
           return <li key={`visuallyHidden-${itemValue}`}>{itemValue}</li>
         })}
       </ul>
