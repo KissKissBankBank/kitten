@@ -21,8 +21,6 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _isObject = _interopRequireDefault(require("lodash/fp/isObject"));
-
 var _typography = require("../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
@@ -82,12 +80,13 @@ var TagInput = function TagInput(_ref) {
     });
   };
 
-  var removeValueFromList = function removeValueFromList(value) {
-    setLastRemoved(value);
+  var removeValueFromList = function removeValueFromList(item) {
+    var valueToRemove = (item === null || item === void 0 ? void 0 : item.value) || item;
+    setLastRemoved(valueToRemove);
     setItemList(function (currentList) {
       return currentList.filter(function (item) {
-        var itemValue = (0, _isObject.default)(item) ? item === null || item === void 0 ? void 0 : item.value : item;
-        return itemValue !== value;
+        var itemValue = (item === null || item === void 0 ? void 0 : item.value) || item;
+        return itemValue !== valueToRemove;
       });
     });
   };
@@ -147,18 +146,8 @@ var TagInput = function TagInput(_ref) {
     onKeyDown: onKeyDown,
     className: "k-Form-TagList__input"
   })), itemsList.map(function (item) {
-    var itemValue, itemDisabled;
-
-    if ((0, _isObject.default)(item)) {
-      var _item$disabled;
-
-      itemValue = item === null || item === void 0 ? void 0 : item.value;
-      itemDisabled = (_item$disabled = item === null || item === void 0 ? void 0 : item.disabled) !== null && _item$disabled !== void 0 ? _item$disabled : false;
-    } else {
-      itemValue = item;
-      itemDisabled = false;
-    }
-
+    var itemValue = (item === null || item === void 0 ? void 0 : item.value) || item;
+    var itemDisabled = (item === null || item === void 0 ? void 0 : item.disabled) || false;
     return /*#__PURE__*/_react.default.createElement("li", {
       key: itemValue,
       className: (0, _classnames.default)('k-Form-TagList__item k-Form-TagList__tagItem', {
@@ -184,7 +173,7 @@ var TagInput = function TagInput(_ref) {
     "aria-atomic": "true",
     "aria-relevant": "additions removals"
   }, itemsList.map(function (item) {
-    var itemValue = (0, _isObject.default)(item) ? item === null || item === void 0 ? void 0 : item.value : item;
+    var itemValue = (item === null || item === void 0 ? void 0 : item.value) || item;
     return /*#__PURE__*/_react.default.createElement("li", {
       key: "visuallyHidden-".concat(itemValue)
     }, itemValue);
