@@ -23,9 +23,9 @@ Features:
 - `DropdownSelect`: Add `micro` value to `size` prop.
 - `DropdownSelect`: Add `arrowPosition` prop (exclusive to `orion` variant), defaults to 'left'.
 
-Fix
+Fix:
 
--`DownloadIcon`: Update icon.
+- `DownloadIcon`: Update icon.
 
 ## [4.12.0] - 2021-09-30
 
