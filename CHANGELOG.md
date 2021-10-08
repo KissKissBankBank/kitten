@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [4.14.1] - 2021-10-08
 
 Fix:
-- `TagInput`: I can delete an `object` item
+- `TagInput`: I can delete an `object` item.
 
 ## [4.14.0] - 2021-10-07
 
