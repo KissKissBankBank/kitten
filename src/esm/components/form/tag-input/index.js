@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styled from 'styled-components';
-import isObject from 'lodash/fp/isObject';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import COLORS from '../../../constants/colors-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
@@ -58,12 +57,13 @@ export var TagInput = function TagInput(_ref) {
     });
   };
 
-  var removeValueFromList = function removeValueFromList(value) {
-    setLastRemoved(value);
+  var removeValueFromList = function removeValueFromList(item) {
+    var valueToRemove = (item === null || item === void 0 ? void 0 : item.value) || item;
+    setLastRemoved(valueToRemove);
     setItemList(function (currentList) {
       return currentList.filter(function (item) {
-        var itemValue = isObject(item) ? item === null || item === void 0 ? void 0 : item.value : item;
-        return itemValue !== value;
+        var itemValue = (item === null || item === void 0 ? void 0 : item.value) || item;
+        return itemValue !== valueToRemove;
       });
     });
   };
@@ -123,18 +123,8 @@ export var TagInput = function TagInput(_ref) {
     onKeyDown: onKeyDown,
     className: "k-Form-TagList__input"
   })), itemsList.map(function (item) {
-    var itemValue, itemDisabled;
-
-    if (isObject(item)) {
-      var _item$disabled;
-
-      itemValue = item === null || item === void 0 ? void 0 : item.value;
-      itemDisabled = (_item$disabled = item === null || item === void 0 ? void 0 : item.disabled) !== null && _item$disabled !== void 0 ? _item$disabled : false;
-    } else {
-      itemValue = item;
-      itemDisabled = false;
-    }
-
+    var itemValue = (item === null || item === void 0 ? void 0 : item.value) || item;
+    var itemDisabled = (item === null || item === void 0 ? void 0 : item.disabled) || false;
     return /*#__PURE__*/React.createElement("li", {
       key: itemValue,
       className: classNames('k-Form-TagList__item k-Form-TagList__tagItem', {
@@ -160,7 +150,7 @@ export var TagInput = function TagInput(_ref) {
     "aria-atomic": "true",
     "aria-relevant": "additions removals"
   }, itemsList.map(function (item) {
-    var itemValue = isObject(item) ? item === null || item === void 0 ? void 0 : item.value : item;
+    var itemValue = (item === null || item === void 0 ? void 0 : item.value) || item;
     return /*#__PURE__*/React.createElement("li", {
       key: "visuallyHidden-".concat(itemValue)
     }, itemValue);
