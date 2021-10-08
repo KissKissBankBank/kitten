@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
-import isObject from 'lodash/fp/isObject'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
@@ -232,12 +231,13 @@ export const TagInput = ({
     setItemList(currentList => currentList.slice(0, -1))
   }
 
-  const removeValueFromList = value => {
-    setLastRemoved(value)
+  const removeValueFromList = item => {
+    const valueToRemove = item?.value || item
+    setLastRemoved(valueToRemove)
     setItemList(currentList =>
       currentList.filter(item => {
-        const itemValue = isObject(item) ? item?.value : item
-        return itemValue !== value
+        const itemValue = item?.value || item
+        return itemValue !== valueToRemove
       }),
     )
   }
@@ -312,14 +312,9 @@ export const TagInput = ({
           </li>
         )}
         {itemsList.map(item => {
-          let itemValue, itemDisabled
-          if (isObject(item)) {
-            itemValue = item?.value
-            itemDisabled = item?.disabled ?? false
-          } else {
-            itemValue = item
-            itemDisabled = false
-          }
+          const itemValue = item?.value || item
+          const itemDisabled = item?.disabled || false
+
           return (
             <li
               key={itemValue}
@@ -353,7 +348,7 @@ export const TagInput = ({
         aria-relevant="additions removals"
       >
         {itemsList.map(item => {
-          const itemValue = isObject(item) ? item?.value : item
+          const itemValue = item?.value ?? item
           return <li key={`visuallyHidden-${itemValue}`}>{itemValue}</li>
         })}
       </ul>
