@@ -136,7 +136,7 @@ IconBadge.defaultProps = {
   borderRadius: 30,
   borderWidth: null,
   borderColor: null,
-  borderStyle: null
+  borderStyle: null,
 }
 
 IconBadge.propTypes = {

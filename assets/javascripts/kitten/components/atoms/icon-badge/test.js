@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { IconBadge } from './index'
-import { pxToRem } from '../../../../helpers/utils/typography'
+import { pxToRem } from '../../../helpers/utils/typography'
 
 
 describe('<IconBadge />', () => {
@@ -27,9 +27,9 @@ describe('<IconBadge />', () => {
             children="Custom children"
             size="big"
             borderColor="#222"
-            borderRadius={pxToRem(30)}
+            borderRadius={30}
             borderStyle="solid"
-            borderWidth={pxToRem(2)}
+            borderWidth={2}
           />)
         .toJSON()
     })
