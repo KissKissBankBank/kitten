@@ -822,7 +822,14 @@ const InnerModal = ({
   return (
     <div className={classNames('k-ModalNext', className)} {...others}>
       {trigger && (
-        <span onClick={() => dispatch(updateState(true))}>{trigger}</span>
+        React.cloneElement(trigger, {
+          onClick: (clickEvent) => {
+            dispatch(updateState(true))
+            if ('onClick' in trigger.props && typeof(trigger.props.onClick) === 'function') {
+              trigger.props.onClick(clickEvent)
+            }
+          },
+        })
       )}
       {ModalPortal}
     </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Modal } from './index'
 import { Button, Text, SaveIcon, COLORS } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
+import { action } from '@storybook/addon-actions'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -57,7 +58,7 @@ export default {
 
 const args = {
   ...Modal.defaultProps,
-  trigger: <Button modifier="helium">Open</Button>,
+  trigger: <Button modifier="helium" onClick={action('Trigger clicked')}>Open</Button>,
   contentText: paragraphContainer,
 }
 
