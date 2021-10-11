@@ -15,8 +15,9 @@ const StyledBadge = styled.span`
   padding: 0;
   min-width: ${pxToRem(30)};
   min-height: ${pxToRem(30)};
-  border-radius: ${pxToRem(30)};
   background-color: ${COLORS.primary1};
+
+  border-radius: var(--border-radius);
 
   &.k-IconBadge--empty {
     border: ${pxToRem(2)} solid ${COLORS.line1};
@@ -78,6 +79,13 @@ const StyledBadge = styled.span`
   svg {
     fill: ${COLORS.background1};
   }
+
+  &.k-IconBadge--hasBorderStyle {
+    box-sizing: content-box;
+    border-width: var(--border-width);
+    border-color: var(--border-color);
+    border-style: var(--border-style);
+  }
 `
 
 export const IconBadge = ({
@@ -89,6 +97,10 @@ export const IconBadge = ({
   big,
   huge,
   size,
+  borderRadius,
+  borderWidth,
+  borderColor,
+  borderStyle,
   ...others
 }) => (
   <StyledBadge
@@ -98,7 +110,18 @@ export const IconBadge = ({
       'k-IconBadge--empty': empty,
       'k-IconBadge--big': big,
       'k-IconBadge--huge': huge,
+      'k-IconBadge--hasBorderStyle': 
+        [
+          borderRadius > 0,
+          borderWidth > 0,
+        ],
     })}
+    style={{
+      '--border-radius': pxToRem(borderRadius),
+      '--border-width': pxToRem(borderWidth),
+      '--border-color': borderColor,
+      '--border-style': borderStyle,
+    }}
     {...others}
   >
     <span className="k-IconBadge__content">{children}</span>
@@ -110,6 +133,10 @@ IconBadge.defaultProps = {
   valid: false,
   empty: false,
   size: 'normal',
+  borderRadius: 30,
+  borderWidth: null,
+  borderColor: null,
+  borderStyle: null
 }
 
 IconBadge.propTypes = {
@@ -119,4 +146,8 @@ IconBadge.propTypes = {
   big: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   huge: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge']),
+  borderRadius: PropTypes.number,
+  borderWidth: PropTypes.number,
+  borderColor: PropTypes.string,
+  borderStyle: PropTypes.string,
 }
