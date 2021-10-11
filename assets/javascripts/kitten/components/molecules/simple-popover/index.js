@@ -119,7 +119,7 @@ export const SimplePopover = ({
         type="button"
         modifier="hydrogen"
         size="micro"
-        icon
+        fit="icon"
       >
         <CrossIcon aria-hidden width="8" height="8" fill={COLORS.background1} />
       </CrossIconButton>

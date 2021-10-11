@@ -45,7 +45,7 @@ export const Header = ({
         aria-label={garbageButtonA11yText}
         modifier="hydrogen"
         size="micro"
-        icon
+        fit="icon"
         className="k-RewardEdition__Header__Button"
       >
         <GarbageIcon aria-hidden />

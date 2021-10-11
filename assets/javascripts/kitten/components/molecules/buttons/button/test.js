@@ -125,7 +125,7 @@ describe('<Button />', () => {
 
   describe('with icon', () => {
     beforeEach(() => {
-      component = renderer.create(<Button icon>!</Button>).toJSON()
+      component = renderer.create(<Button fit="icon">!</Button>).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -137,7 +137,7 @@ describe('<Button />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button icon size="micro">
+          <Button fit="icon" size="micro">
             !
           </Button>,
         )
@@ -153,7 +153,7 @@ describe('<Button />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button icon size="tiny">
+          <Button fit="icon" size="tiny">
             !
           </Button>,
         )
@@ -169,7 +169,7 @@ describe('<Button />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button icon size="big">
+          <Button fit="icon" size="big">
             !
           </Button>,
         )
@@ -185,7 +185,7 @@ describe('<Button />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button icon size="huge">
+          <Button fit="icon" size="huge">
             !
           </Button>,
         )
@@ -201,7 +201,7 @@ describe('<Button />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button icon size="giant">
+          <Button fit="icon" size="giant">
             !
           </Button>,
         )
@@ -213,11 +213,11 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with icon and fluid', () => {
+  describe('with fluid', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button icon fluid>
+          <Button fit="fluid">
             !
           </Button>,
         )
@@ -241,7 +241,7 @@ describe('<Button />', () => {
 
   describe('with variant and fluid', () => {
     beforeEach(() => {
-      component = renderer.create(<Button fluid>Orion fluid</Button>).toJSON()
+      component = renderer.create(<Button fit="fluid">Orion fluid</Button>).toJSON()
     })
 
     it('matches with snapshot', () => {

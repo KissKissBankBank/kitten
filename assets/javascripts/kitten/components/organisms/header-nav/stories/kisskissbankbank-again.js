@@ -196,7 +196,7 @@ const SearchInput = () => {
       <Button
         size="tiny"
         type="submit"
-        fluid
+        fit="fluid"
         className="k-u-margin-bottom-double k-u-margin-horizontal-double"
         style={{
           width: 'calc(100% - 40px)',

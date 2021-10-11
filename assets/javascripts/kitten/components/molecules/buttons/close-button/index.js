@@ -8,7 +8,7 @@ export const CloseButton = ({
   ...others
 }) => (
   <Button
-    icon
+    fit="icon"
     type="button"
     title={closeButtonLabel}
     aria-label={closeButtonLabel}

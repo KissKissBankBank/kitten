@@ -149,7 +149,6 @@ export const StyledContributionCard = styled.article`
 
   .k-ContributionCard__action {
     place-self: flex-start center;
-    min-width: auto;
 
     @media (min-width: ${ScreenConfig.M.min}px) {
       margin-right: ${pxToRem(10)};

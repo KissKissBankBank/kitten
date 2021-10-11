@@ -300,7 +300,7 @@ export const DocumentManager = ({
           disabled={internalDisabled}
         />
         <Button
-          fluid
+          fit="fluid"
           borderRadius={6}
           {...buttonProps}
           as="label"
@@ -361,7 +361,7 @@ export const DocumentManager = ({
         className={classNames('k-DocumentManager__loading', props.className)}
       >
         <Button
-          fluid
+          fit="fluid"
           borderRadius={6}
           {...buttonProps}
           as="div"

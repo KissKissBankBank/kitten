@@ -401,7 +401,7 @@ export {
   ICON_BIG as BUTTON_STYLE_ICON_BIG,
   ICON_HUGE as BUTTON_STYLE_ICON_HUGE,
   ICON_GIANT as BUTTON_STYLE_ICON_GIANT,
-} from './components/molecules/buttons/button'
+} from './components/molecules/buttons/button/standalone-styles'
 export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/molecules/carousels/carousel/styles'
 export {
   MICRO as HORIZONTAL_STROKE_STYLE_MICRO,

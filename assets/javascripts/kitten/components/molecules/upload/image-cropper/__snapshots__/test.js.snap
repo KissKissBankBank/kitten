@@ -22,12 +22,12 @@ exports[`<ImageCropper /> matches with empty snapshot 1`] = `
       type="file"
     />
     <label
-      className="sc-htpNat eZzWTD k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fluid"
+      className="sc-htpNat hnIjUx k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid k-Button--mobile-fit-none"
       disabled={null}
       htmlFor="cropper"
       style={
         Object {
-          "--border-radius": 0,
+          "--Button-border-radius": null,
         }
       }
       type="button"
@@ -85,12 +85,12 @@ exports[`<ImageCropper /> matches with snapshot with imageSrc 1`] = `
       type="file"
     />
     <label
-      className="sc-htpNat eZzWTD k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fluid"
+      className="sc-htpNat hnIjUx k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid k-Button--mobile-fit-none"
       disabled={null}
       htmlFor="cropper"
       style={
         Object {
-          "--border-radius": 0,
+          "--Button-border-radius": null,
         }
       }
       type="button"

@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Button`: Add `fit` and `mobileFit` props, default to `min-width` and `null`.
+- Breaking Change: `Button`: Refactor CSS Styles.
 - Breaking Change: `Modal/Next`: Improve trigger element accessibility.
 - Breaking Change: Typography: Remove `modular-scale` dependency and logic.
   All the font sizes previously defined as modular scale step (via `stepToRem`)

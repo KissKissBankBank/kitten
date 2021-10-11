@@ -39,7 +39,7 @@ export const ButtonIcon = ({ className, withoutHover, size, ...others }) => (
     })}
     size={size}
     {...others}
-    icon
+    fit="icon"
   />
 )
 

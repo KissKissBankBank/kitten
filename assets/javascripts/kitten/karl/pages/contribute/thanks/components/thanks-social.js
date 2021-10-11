@@ -46,7 +46,7 @@ export const ThanksSocial = () => (
       </Marger>
       <FlexButtonsContainer>
         <Marger bottom="2">
-          <Button icon modifier="facebook" tag="a" iconWithMinWidth={true}>
+          <Button fit="icon" modifier="facebook" tag="a" iconWithMinWidth={true}>
             <FacebookIconWithBackground className="noPadding k-Button__icon k-Button__icon--facebook" />
             Partager sur Facebook
           </Button>
@@ -54,7 +54,7 @@ export const ThanksSocial = () => (
 
         <Marger bottom="2">
           <Button
-            icon
+            fit="icon"
             size="big"
             modifier="twitter"
             tag="a"
@@ -67,7 +67,7 @@ export const ThanksSocial = () => (
 
         <Marger bottom="2">
           <Button
-            icon
+            fit="icon"
             modifier="lithium"
             size="big"
             tag="a"

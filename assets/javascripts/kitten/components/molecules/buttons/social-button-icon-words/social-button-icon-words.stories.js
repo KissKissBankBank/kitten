@@ -24,19 +24,19 @@ export default {
 export const SocialButtonIconWords = () => (
   <Grid>
     <GridCol col-s="6" col-l="3">
-      <FacebookButtonIconWords fluid>Facebook</FacebookButtonIconWords>
+      <FacebookButtonIconWords fit="fluid">Facebook</FacebookButtonIconWords>
     </GridCol>
 
     <GridCol col-s="6" col-l="3">
-      <TwitterButtonIconWords fluid>Twitter</TwitterButtonIconWords>
+      <TwitterButtonIconWords fit="fluid">Twitter</TwitterButtonIconWords>
     </GridCol>
 
     <GridCol col-s="6" col-l="3">
-      <InstagramButtonIconWords fluid>Instagram</InstagramButtonIconWords>
+      <InstagramButtonIconWords fit="fluid">Instagram</InstagramButtonIconWords>
     </GridCol>
 
     <GridCol col-s="6" col-l="3">
-      <LinkedinButtonIconWords fluid>Linkedin</LinkedinButtonIconWords>
+      <LinkedinButtonIconWords fit="fluid">Linkedin</LinkedinButtonIconWords>
     </GridCol>
   </Grid>
 )
