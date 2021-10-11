@@ -1,7 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { IconBadge } from './index'
-import { pxToRem } from '../../../helpers/utils/typography'
 
 
 describe('<IconBadge />', () => {
