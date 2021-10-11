@@ -80,7 +80,7 @@ const StyledBadge = styled.span`
     fill: ${COLORS.background1};
   }
 
-  &.k-IconBadge--hasBorderStyle {
+  &.k-IconBadge--hasBorderStyles {
     box-sizing: content-box;
     border-width: var(--border-width);
     border-color: var(--border-color);
@@ -110,7 +110,7 @@ export const IconBadge = ({
       'k-IconBadge--empty': empty,
       'k-IconBadge--big': big,
       'k-IconBadge--huge': huge,
-      'k-IconBadge--hasBorderStyle': 
+      'k-IconBadge--hasBorderStyles': 
         [
           borderRadius > 0,
           borderWidth > 0,

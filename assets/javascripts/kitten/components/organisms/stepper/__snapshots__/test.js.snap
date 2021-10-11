@@ -15,7 +15,7 @@ exports[`NEXT // <Stepper /> default item matches with snapshot 1`] = `
         tabIndex="0"
       >
         <span
-          className="sc-bdVaJa fDAnNR k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyle"
+          className="sc-bdVaJa eaUxre k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
           style={
             Object {
               "--border-color": null,
@@ -53,7 +53,7 @@ exports[`NEXT // <Stepper /> default link matches with snapshot 1`] = `
         target="_self"
       >
         <span
-          className="sc-bdVaJa fDAnNR k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyle"
+          className="sc-bdVaJa eaUxre k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
           style={
             Object {
               "--border-color": null,
@@ -91,7 +91,7 @@ exports[`NEXT // <Stepper /> external link matches with snapshot 1`] = `
         target="_blank"
       >
         <span
-          className="sc-bdVaJa fDAnNR k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyle"
+          className="sc-bdVaJa eaUxre k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
           style={
             Object {
               "--border-color": null,
@@ -130,7 +130,7 @@ exports[`NEXT // <Stepper /> link with linkProps matches with snapshot 1`] = `
         target="_blank"
       >
         <span
-          className="sc-bdVaJa fDAnNR k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyle"
+          className="sc-bdVaJa eaUxre k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
           style={
             Object {
               "--border-color": null,
@@ -166,7 +166,7 @@ exports[`NEXT // <Stepper /> pointer item matches with snapshot 1`] = `
         tabIndex="0"
       >
         <span
-          className="sc-bdVaJa fDAnNR k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyle"
+          className="sc-bdVaJa eaUxre k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
           style={
             Object {
               "--border-color": null,
@@ -202,7 +202,7 @@ exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
         tabIndex="0"
       >
         <span
-          className="sc-bdVaJa fDAnNR k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--hasBorderStyle"
+          className="sc-bdVaJa eaUxre k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--hasBorderStyles"
           style={
             Object {
               "--border-color": null,
@@ -259,7 +259,7 @@ exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
         target="_self"
       >
         <span
-          className="sc-bdVaJa fDAnNR k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--hasBorderStyle"
+          className="sc-bdVaJa eaUxre k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--hasBorderStyles"
           style={
             Object {
               "--border-color": null,
@@ -314,7 +314,7 @@ exports[`NEXT // <Stepper /> validated item matches with snapshot 1`] = `
         tabIndex="0"
       >
         <span
-          className="sc-bdVaJa fDAnNR k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyle"
+          className="sc-bdVaJa eaUxre k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
           style={
             Object {
               "--border-color": null,
