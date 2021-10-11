@@ -88,3 +88,21 @@ export const Default = args => {
     </div>
   )
 }
+
+export const WithNodeElements = args => {
+  return (
+    <TagInput
+      {...args}
+      initialItemsList={[
+        { value: 'object disabled', disabled: true },
+        'hey',
+        { value: 'object enabled', disabled: false },
+      ]}
+      helpMessage={
+        args.disabled
+          ? 'This input is disabled.'
+          : 'Press Enter or comma to add an item to the list.'
+      }
+    />
+  )
+}

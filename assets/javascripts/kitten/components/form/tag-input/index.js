@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import { CrossIcon } from '../../../components/graphics/icons/cross-icon'
+import { CrossIcon } from '../../graphics/icons/cross-icon'
 import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledWrapper = styled.div`
@@ -78,6 +78,16 @@ const StyledWrapper = styled.div`
     &:hover {
       background-color: ${COLORS.primary4};
     }
+
+    &.k-Form-TagList__tagItem--disabled {
+      color: ${COLORS.font2};
+      background-color: ${COLORS.line1};
+
+      .k-Form-TagList__tag,
+      .k-Form-TagList__button {
+        cursor: not-allowed;
+      }
+    }
   }
 
   .k-Form-TagList__tag {
@@ -89,7 +99,6 @@ const StyledWrapper = styled.div`
   .k-Form-TagList__button {
     ${TYPOGRAPHY.fontStyles.bold};
     border: 0;
-    padding: 0;
     background-color: transparent;
     color: inherit;
     padding: 0 ${pxToRem(12)} 0 ${pxToRem(10)};
@@ -222,9 +231,15 @@ export const TagInput = ({
     setItemList(currentList => currentList.slice(0, -1))
   }
 
-  const removeValueFromList = value => {
-    setLastRemoved(value)
-    setItemList(currentList => currentList.filter(item => item !== value))
+  const removeValueFromList = item => {
+    const valueToRemove = item?.value || item
+    setLastRemoved(valueToRemove)
+    setItemList(currentList =>
+      currentList.filter(item => {
+        const itemValue = item?.value || item
+        return itemValue !== valueToRemove
+      }),
+    )
   }
 
   const undoRemove = () => {
@@ -297,20 +312,28 @@ export const TagInput = ({
           </li>
         )}
         {itemsList.map(item => {
+          const itemValue = item?.value || item
+          const itemDisabled = item?.disabled || false
+
           return (
             <li
-              key={item}
-              className="k-Form-TagList__item k-Form-TagList__tagItem"
+              key={itemValue}
+              className={classNames(
+                'k-Form-TagList__item k-Form-TagList__tagItem',
+                {
+                  'k-Form-TagList__tagItem--disabled': itemDisabled,
+                },
+              )}
             >
-              <span className="k-Form-TagList__tag">{item}</span>
+              <span className="k-Form-TagList__tag">{itemValue}</span>
               <button
                 className="k-Form-TagList__button"
                 type="button"
-                disabled={disabled}
+                disabled={itemDisabled || disabled}
                 onClick={() => removeValueFromList(item)}
               >
                 <span className="k-u-a11y-visuallyHidden">
-                  Retirer {item} de la liste.
+                  Retirer {itemValue} de la liste.
                 </span>
                 <CrossIcon color="currentColor" />
               </button>
@@ -325,7 +348,8 @@ export const TagInput = ({
         aria-relevant="additions removals"
       >
         {itemsList.map(item => {
-          return <li key={`visuallyHidden-${item}`}>{item}</li>
+          const itemValue = item?.value || item
+          return <li key={`visuallyHidden-${itemValue}`}>{itemValue}</li>
         })}
       </ul>
     </StyledWrapper>
@@ -345,7 +369,7 @@ TagInput.defaultProps = {
 
 TagInput.propTypes = {
   id: PropTypes.string.isRequired,
-  initialItemsList: PropTypes.arrayOf(PropTypes.string),
+  initialItemsList: PropTypes.arrayOf(PropTypes.any),
   addEventKeys: PropTypes.arrayOf(PropTypes.string),
   removeEventKeys: PropTypes.arrayOf(PropTypes.string),
   placeholder: PropTypes.string,

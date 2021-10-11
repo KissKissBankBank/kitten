@@ -46,4 +46,23 @@ describe('<TagInput />', () => {
 
     expect(tree).toMatchSnapshot()
   })
+  it('should match its disabled snapshot with objects on initialItemsList', () => {
+    const tree = renderer
+      .create(
+        <TagInput
+          disabled
+          id="test-slider-input"
+          helpMessage="This list input is disabled."
+          initialItemsList={[
+            { value: 'Black', disabled: true },
+            'Blue',
+            'Green and magenta',
+            { value: 'Green and magenta', disabled: false },
+          ]}
+        />,
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
 })

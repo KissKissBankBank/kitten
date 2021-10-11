@@ -63,7 +63,7 @@ const argTypes = {
   },
   size: {
     name: 'size',
-    options: ['tiny', 'normal', 'big', 'huge', 'giant'],
+    options: ['micro', 'tiny', 'normal', 'big', 'huge', 'giant'],
     control: 'select',
   },
   a11yStatusError: {
@@ -112,6 +112,18 @@ const argTypes = {
     name: 'noResultText',
     control: 'text',
   },
+  modifier: {
+    control: 'radio',
+    options: ['hydrogen', 'nitrogen', 'boron'],
+  },
+  direction: {
+    control: 'inline-radio',
+    options: ['up', 'down'],
+  },
+  arrowPosition: {
+    control: 'inline-radio',
+    options: ['left', 'right'],
+  },
 }
 const args = {
   id: 'dropdown-select',
@@ -127,6 +139,9 @@ const args = {
   comboboxButtonLabelText: 'label',
   noResultText: 'No results',
   menuZIndex: 1000,
+  modifier: 'hydrogen',
+  direction: 'down',
+  arrowPosition: 'right',
 }
 
 export default {
@@ -160,7 +175,7 @@ export const Default = args => {
         labelPropsGetter={passedLabelProps => {
           passedLabelProps && setLabelProps(passedLabelProps())
         }}
-        defaultSelectedValue="focus"
+        defaultSelectedValue="fuji"
       />
       <p>
         Integer posuere erat a ante venenatis dapibus posuere velit aliquet.

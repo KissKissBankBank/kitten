@@ -11,7 +11,29 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   All the font sizes previously defined as modular scale step (via `stepToRem`)
   are now calculated from a table with integer pixel values.
 - Breaking Change: All components using `variant` now default to `orion`.
-- Fix: `DownloadIcon`: Update icon.
+
+## [4.14.1] - 2021-10-08
+
+Fix:
+- `TagInput`: I can delete an `object` item.
+
+## [4.14.0] - 2021-10-07
+
+Feature:
+- `TagInput`: `initialItemsList` can accept object like `{value: 'hello': disabled: true}` to disable an option.
+
+## [4.13.0] - 2021-10-06
+
+Features:
+
+- `DropdownSelect`: Add `modifier` prop, defaults to `hydrogen`.
+- `DropdownSelect`: Add `direction` prop, defaults to `down`.
+- `DropdownSelect`: Add `micro` value to `size` prop.
+- `DropdownSelect`: Add `arrowPosition` prop (exclusive to `orion` variant), defaults to 'left'.
+
+Fix:
+
+- `DownloadIcon`: Update icon.
 
 ## [4.12.0] - 2021-09-30
 
