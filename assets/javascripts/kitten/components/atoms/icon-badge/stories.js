@@ -79,4 +79,5 @@ WithBorder.args = {
   borderColor: '#222',
   borderWidth: 2,
   borderStyle: 'solid',
+  size: 'tiny',
 }

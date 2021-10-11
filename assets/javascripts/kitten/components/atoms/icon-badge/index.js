@@ -81,7 +81,6 @@ const StyledBadge = styled.span`
   }
 
   &.k-IconBadge--hasBorderStyles {
-    box-sizing: content-box;
     border-width: var(--border-width);
     border-color: var(--border-color);
     border-style: var(--border-style);
