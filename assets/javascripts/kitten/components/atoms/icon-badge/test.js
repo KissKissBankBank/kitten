@@ -2,7 +2,6 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { IconBadge } from './index'
 
-
 describe('<IconBadge />', () => {
   let component
 
