@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: `Modal/Next`: Improve trigger element accessibility.
 - Breaking Change: Typography: Remove `modular-scale` dependency and logic.
   All the font sizes previously defined as modular scale step (via `stepToRem`)
   are now calculated from a table with integer pixel values.
