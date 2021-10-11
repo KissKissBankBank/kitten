@@ -349,7 +349,7 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 
 <button
   aria-label="Close"
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -724,7 +724,7 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 
 <button
   aria-label="close"
-  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
