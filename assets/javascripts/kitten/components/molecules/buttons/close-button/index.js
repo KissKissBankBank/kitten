@@ -22,4 +22,5 @@ export const CloseButton = ({
 CloseButton.defaultProps = {
   closeButtonLabel: 'Close',
   buttonModifier: 'hydrogen',
+  variant: 'andromeda',
 }
