@@ -22,7 +22,8 @@ var Button = function Button(_ref) {
       props = (0, _objectWithoutProperties2.default)(_ref, ["className"]);
   return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
     borderRadius: 4,
-    modifier: "helium"
+    modifier: "helium",
+    fit: "fluid"
   }, props, {
     className: (0, _classnames.default)('k-BackingCard__button', 'k-BackingCard__drawer', className)
   }));
