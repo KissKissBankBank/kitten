@@ -20,7 +20,7 @@ var ButtonQuestionMarkIcon = function ButtonQuestionMarkIcon(props) {
     modifier: "helium",
     size: "nano",
     rounded: true,
-    icon: true,
+    fit: "icon",
     type: "button"
   }, props), /*#__PURE__*/_react.default.createElement(_questionMarkIcon.QuestionMarkIcon, {
     width: "10",

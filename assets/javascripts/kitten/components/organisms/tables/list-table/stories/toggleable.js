@@ -12,7 +12,6 @@ import {
   ArrowIcon,
 } from 'kitten'
 
-
 // Toggleable
 const linkclassNames = [
   'k-u-color-primary1',
@@ -153,7 +152,6 @@ const ToggleableTable = styled(ListTable)`
     flex-wrap: wrap;
   }
 `
-
 
 export const ToggleableStory = () => {
   const [displayed, setDisplayState] = useState(false)

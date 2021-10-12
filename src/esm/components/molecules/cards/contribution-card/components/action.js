@@ -25,7 +25,8 @@ export var Action = function Action(_ref) {
     type: "submit",
     className: classNames('k-ContributionCard__action', className),
     modifier: "helium",
-    disabled: isInputEmpty
+    disabled: isInputEmpty,
+    fit: "content"
   }, props)));
 };
 Action.defaultProps = {

@@ -1,6 +1,3 @@
-// Vendor dependencies
-@import '~modularscale-sass/stylesheets/modularscale';
-
 // Helpers
 @import './kitten/schema';
 @import './kitten/definitions';
@@ -14,7 +11,6 @@ $k-typography: k-typography-definition((
   font-size: 1rem,
   font-weight: 400,
   line-height: 1.5rem,
-  scale-multiplier: $major-second
 ));
 
 // Import utilities mixins.

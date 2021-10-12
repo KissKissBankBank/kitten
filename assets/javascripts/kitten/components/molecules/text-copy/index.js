@@ -47,7 +47,6 @@ const Wrapper = styled.button`
   }
 
   .k-TextCopy__buttonTextButton {
-    min-width: 0;
     flex: 1 0 auto;
     padding: 0 ${pxToRem(15)};
     align-self: stretch;
@@ -183,7 +182,7 @@ export const TextCopy = ({
         modifier={!!buttonText ? buttonModifier : 'hydrogen'}
         className="k-TextCopy__buttonTextButton"
         variant={variant}
-        icon={!buttonText}
+        fit={buttonText ? 'content' : 'icon'}
       >
         {!!buttonText ? buttonText : <CopyIcon />}
       </Button>
@@ -213,6 +212,7 @@ TextCopy.propTypes = {
   forceOneLine: PropTypes.bool,
   buttonText: PropTypes.string,
   buttonModifier: PropTypes.string,
+  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }
 
 TextCopy.defaultProps = {
@@ -222,4 +222,5 @@ TextCopy.defaultProps = {
   forceOneLine: false,
   buttonText: undefined,
   buttonModifier: 'helium',
+  variant: 'orion',
 }

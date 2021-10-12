@@ -141,7 +141,7 @@ TextInput.propTypes = {
   disabled: _propTypes.default.bool,
   name: _propTypes.default.string,
   digits: _propTypes.default.number,
-  variant: _propTypes.default.string,
+  variant: _propTypes.default.oneOf(['orion', 'andromeda']),
   rounded: _propTypes.default.bool
 };
 TextInput.defaultProps = {
@@ -154,6 +154,6 @@ TextInput.defaultProps = {
   disabled: false,
   name: 'text',
   digits: null,
-  variant: 'andromeda',
+  variant: 'orion',
   rounded: false
 };

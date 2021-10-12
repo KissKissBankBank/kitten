@@ -12,7 +12,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__expandable__title:link,
 .c0 .k-DashboardMenu__item:link {
   color: #b8b8b8;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: color 0.2s ease,background-color 0.2s ease;

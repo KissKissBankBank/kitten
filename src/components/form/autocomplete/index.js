@@ -276,5 +276,5 @@ Autocomplete.defaultProps = {
   onKeyDown: function onKeyDown() {},
   onSelect: function onSelect() {},
   isLoading: false,
-  variant: 'andromeda'
+  variant: 'orion'
 };

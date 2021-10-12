@@ -14,7 +14,7 @@ var Item = function Item(_ref) {
 
   var itemClassNames = classNames('k-HeaderNav-nav__item', {
     'is-selected': isSelected,
-    'smallPadding': smallPadding
+    smallPadding: smallPadding
   }, className);
   return /*#__PURE__*/React.createElement("li", {
     className: "k-HeaderNav-nav__element",

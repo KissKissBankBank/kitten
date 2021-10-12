@@ -2,10 +2,10 @@
 
 exports[`<ButtonIcon /> by default matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa JXwLd k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="sc-bdVaJa jGjdXV k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -18,10 +18,10 @@ exports[`<ButtonIcon /> by default matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> className prop matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa JXwLd k-Button sc-bwzfXH gXwLwm k-ButtonIcon test_className_prop k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="sc-bdVaJa jGjdXV k-Button sc-bwzfXH gXwLwm k-ButtonIcon test_className_prop k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -34,10 +34,10 @@ exports[`<ButtonIcon /> className prop matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> modifier prop matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa fCdtT k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--helium k-Button--andromeda k-Button--hasIcon"
+  className="sc-bdVaJa kgagnx k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--helium k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -50,10 +50,10 @@ exports[`<ButtonIcon /> modifier prop matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> rounded prop matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa JXwLd k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon k-Button--rounded"
+  className="sc-bdVaJa jGjdXV k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none k-Button--rounded"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -66,10 +66,10 @@ exports[`<ButtonIcon /> rounded prop matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> size prop matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa JXwLd k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--nano k-Button--nano k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="sc-bdVaJa jGjdXV k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--nano k-Button--nano k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -82,11 +82,11 @@ exports[`<ButtonIcon /> size prop matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> tag prop matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa JXwLd k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="sc-bdVaJa jGjdXV k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   disabled={null}
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -99,11 +99,11 @@ exports[`<ButtonIcon /> tag prop matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> with tag="a" and no href matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa JXwLd k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="sc-bdVaJa jGjdXV k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   disabled={null}
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -116,12 +116,12 @@ exports[`<ButtonIcon /> with tag="a" and no href matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> with tag="a" href="foo" matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa JXwLd k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="sc-bdVaJa jGjdXV k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   disabled={null}
   href="foo"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -134,10 +134,10 @@ exports[`<ButtonIcon /> with tag="a" href="foo" matches with snapshot 1`] = `
 
 exports[`<ButtonIcon /> without children matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa JXwLd k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="sc-bdVaJa jGjdXV k-Button sc-bwzfXH gXwLwm k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"

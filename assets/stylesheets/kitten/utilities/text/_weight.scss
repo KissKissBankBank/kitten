@@ -14,15 +14,15 @@
 
 @mixin k-utilities-weight {
   .k-u-weight-light {
-    @include k-typographyFont('light', $important: true);
+    @include k-typographyFont('light');
   }
 
   .k-u-weight-regular {
-    @include k-typographyFont('regular', $important: true);
+    @include k-typographyFont('regular');
   }
 
   .k-u-strong,
   .k-u-weight-bold {
-    @include k-typographyFont('bold', $important: true);
+    @include k-typographyFont('bold');
   }
 }

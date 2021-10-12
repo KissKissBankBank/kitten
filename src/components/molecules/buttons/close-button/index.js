@@ -22,7 +22,7 @@ var CloseButton = function CloseButton(_ref) {
       buttonModifier = _ref.buttonModifier,
       others = (0, _objectWithoutProperties2.default)(_ref, ["closeButtonLabel", "buttonModifier"]);
   return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
-    icon: true,
+    fit: "icon",
     type: "button",
     title: closeButtonLabel,
     "aria-label": closeButtonLabel,
@@ -36,5 +36,6 @@ var CloseButton = function CloseButton(_ref) {
 exports.CloseButton = CloseButton;
 CloseButton.defaultProps = {
   closeButtonLabel: 'Close',
-  buttonModifier: 'hydrogen'
+  buttonModifier: 'hydrogen',
+  variant: 'andromeda'
 };

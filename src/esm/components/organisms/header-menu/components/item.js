@@ -30,7 +30,7 @@ export var Item = function Item(_ref) {
     })
   }), button ? /*#__PURE__*/React.createElement(Button, _extends({
     modifier: modifier,
-    fluid: true
+    fit: "fluid"
   }, other, {
     className: classNames('k-HeaderMenu__item__button', other.className),
     as: as

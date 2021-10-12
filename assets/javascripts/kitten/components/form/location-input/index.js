@@ -214,7 +214,7 @@ LocationInput.defaultProps = {
   inputProps: {},
   name: 'location-input',
   loadingText: 'Loading...',
-  variant: 'andromeda',
+  variant: 'orion',
 }
 
 LocationInput.propTypes = {

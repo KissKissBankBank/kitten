@@ -20,11 +20,11 @@ var CardButton = function CardButton(_ref) {
     className: "k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   }, !loading && /*#__PURE__*/_react.default.createElement(_button.Button, {
     type: "button",
-    fluid: true,
+    fit: "fluid",
     modifier: "helium"
   }, text), loading && /*#__PURE__*/_react.default.createElement(_button.Button, {
     type: "button",
-    fluid: true,
+    fit: "fluid",
     className: "k-CrowdfundingCard__cardButton__loadingButton"
   }));
 };

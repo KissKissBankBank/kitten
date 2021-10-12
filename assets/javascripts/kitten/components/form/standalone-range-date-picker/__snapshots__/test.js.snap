@@ -2,7 +2,7 @@
 
 exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX jCHOrG"
+  className="sc-ifAKCX kdbczd"
 >
   <div
     className="DayPicker Selectable"
@@ -23,11 +23,11 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
       >
         <button
           aria-label="Mois précédent, Décembre 2018"
-          className="sc-bdVaJa JXwLd k-Button sc-bxivhb eCfryC k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+          className="sc-bdVaJa jGjdXV k-Button sc-bxivhb eCfryC k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
           onClick={[Function]}
           style={
             Object {
-              "--border-radius": 0,
+              "--Button-border-radius": null,
             }
           }
           type="button"
@@ -53,11 +53,11 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         </button>
         <button
           aria-label="Mois suivant, Février 2019"
-          className="sc-bdVaJa JXwLd k-Button sc-bxivhb eCfryC k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+          className="sc-bdVaJa jGjdXV k-Button sc-bxivhb eCfryC k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
           onClick={[Function]}
           style={
             Object {
-              "--border-radius": 0,
+              "--Button-border-radius": null,
             }
           }
           type="button"

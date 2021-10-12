@@ -90,11 +90,9 @@ const HeaderNav = ({
         >
           <nav
             ref={headerRef}
-            id={id} 
-            className={classNames(
-              "k-HeaderNav",
-              className,
-            )}>
+            id={id}
+            className={classNames('k-HeaderNav', className)}
+          >
             <QuickAccessLink {...quickAccessProps} />
             {children}
           </nav>

@@ -125,7 +125,7 @@ var HeaderNav = function HeaderNav(_ref) {
   }), /*#__PURE__*/_react.default.createElement("nav", {
     ref: headerRef,
     id: id,
-    className: (0, _classnames.default)("k-HeaderNav", className)
+    className: (0, _classnames.default)('k-HeaderNav', className)
   }, /*#__PURE__*/_react.default.createElement(_quickAccessLink.QuickAccessLink, quickAccessProps), children))));
 };
 

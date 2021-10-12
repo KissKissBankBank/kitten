@@ -65,7 +65,7 @@ LinkBox.propTypes = {
 LinkBox.defaultProps = {
   href: '#',
   isExternal: false,
-  variant: 'andromeda',
+  variant: 'orion',
   backgroundColor: COLORS.background1,
   textColor: null,
 }

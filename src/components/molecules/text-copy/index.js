@@ -42,7 +42,7 @@ var fadeInAndOut = (0, _styledComponents.keyframes)(["0%,100%{opacity:0;}10%,90%
 var Wrapper = _styledComponents.default.button.withConfig({
   displayName: "text-copy__Wrapper",
   componentId: "hjbj35-0"
-})(["position:relative;display:flex;width:100%;.k-TextCopy__text{display:flex;align-items:center;justify-content:flex-start;line-height:calc(1.15 * ", ");text-align:left;overflow:hidden;span{max-width:100%;max-height:calc(2 * 1.15 * ", ");overflow:hidden;text-overflow:ellipsis;}&.k-TextCopy__text--forceOneLine span{white-space:nowrap;}}.k-TextCopy__buttonTextButton{min-width:0;flex:1 0 auto;padding:0 ", ";align-self:stretch;box-sizing:border-box;}.k-TextCopy__iconButton{display:flex;cursor:pointer;align-items:center;padding:", ";border:", " solid ", ";align-self:stretch;box-sizing:border-box;}.k-TextCopy__tooltip{position:absolute;left:0;bottom:-", ";animation:3s ", " ease-out;}&.k-TextCopy--andromeda{.k-TextCopy__text{border-right:0;}}&.k-TextCopy--orion{gap:", ";&:hover{.k-Button{border-color:", ";background-color:", ";}}&:active{.k-Button{border-color:", ";background-color:", ";}}@media (max-width:", "){flex-direction:column;}.k-Button.k-Button--orion{border-radius:", ";}}"], (0, _typography.stepToRem)(-1), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(50), fadeInAndOut, (0, _typography.pxToRem)(5), _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.primary3, _colorsConfig.default.primary3, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.XS.max), (0, _typography.pxToRem)(4));
+})(["position:relative;display:flex;width:100%;.k-TextCopy__text{display:flex;align-items:center;justify-content:flex-start;line-height:calc(1.15 * ", ");text-align:left;overflow:hidden;span{max-width:100%;max-height:calc(2 * 1.15 * ", ");overflow:hidden;text-overflow:ellipsis;}&.k-TextCopy__text--forceOneLine span{white-space:nowrap;}}.k-TextCopy__buttonTextButton{flex:1 0 auto;padding:0 ", ";align-self:stretch;box-sizing:border-box;}.k-TextCopy__iconButton{display:flex;cursor:pointer;align-items:center;padding:", ";border:", " solid ", ";align-self:stretch;box-sizing:border-box;}.k-TextCopy__tooltip{position:absolute;left:0;bottom:-", ";animation:3s ", " ease-out;}&.k-TextCopy--andromeda{.k-TextCopy__text{border-right:0;}}&.k-TextCopy--orion{gap:", ";&:hover{.k-Button{border-color:", ";background-color:", ";}}&:active{.k-Button{border-color:", ";background-color:", ";}}@media (max-width:", "){flex-direction:column;}.k-Button.k-Button--orion{border-radius:", ";}}"], (0, _typography.stepToRem)(-1), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(50), fadeInAndOut, (0, _typography.pxToRem)(5), _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.primary3, _colorsConfig.default.primary3, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.XS.max), (0, _typography.pxToRem)(4));
 
 var TextCopy = function TextCopy(_ref) {
   var children = _ref.children,
@@ -123,7 +123,7 @@ var TextCopy = function TextCopy(_ref) {
     modifier: !!buttonText ? buttonModifier : 'hydrogen',
     className: "k-TextCopy__buttonTextButton",
     variant: variant,
-    icon: !buttonText
+    fit: buttonText ? 'content' : 'icon'
   }, !!buttonText ? buttonText : /*#__PURE__*/_react.default.createElement(_copyIcon.CopyIcon, null)), alertMessage && isMessageVisible && /*#__PURE__*/_react.default.createElement(_arrowContainer.ArrowContainer, {
     color: _colorsConfig.default.primary1,
     position: "top",
@@ -145,7 +145,8 @@ TextCopy.propTypes = {
   description: _propTypes.default.string,
   forceOneLine: _propTypes.default.bool,
   buttonText: _propTypes.default.string,
-  buttonModifier: _propTypes.default.string
+  buttonModifier: _propTypes.default.string,
+  variant: _propTypes.default.oneOf(['andromeda', 'orion'])
 };
 TextCopy.defaultProps = {
   alertMessage: undefined,
@@ -153,5 +154,6 @@ TextCopy.defaultProps = {
   description: undefined,
   forceOneLine: false,
   buttonText: undefined,
-  buttonModifier: 'helium'
+  buttonModifier: 'helium',
+  variant: 'orion'
 };

@@ -71,6 +71,12 @@ Object.defineProperty(exports, "IconBadge", {
     return _iconBadge.IconBadge;
   }
 });
+Object.defineProperty(exports, "KissKissLoadingAnimation", {
+  enumerable: true,
+  get: function get() {
+    return _kisskissLoadingAnimation.KissKissLoadingAnimation;
+  }
+});
 Object.defineProperty(exports, "Loader", {
   enumerable: true,
   get: function get() {
@@ -1127,18 +1133,6 @@ Object.defineProperty(exports, "ScrollableContainer", {
     return _scrollableContainer.ScrollableContainer;
   }
 });
-Object.defineProperty(exports, "SideGrid", {
-  enumerable: true,
-  get: function get() {
-    return _sideGrid.SideGrid;
-  }
-});
-Object.defineProperty(exports, "SideLayout", {
-  enumerable: true,
-  get: function get() {
-    return _sideLayout.SideLayout;
-  }
-});
 Object.defineProperty(exports, "StickyContainer", {
   enumerable: true,
   get: function get() {
@@ -1247,18 +1241,6 @@ Object.defineProperty(exports, "ResponsiveIframeContainer", {
     return _responsiveIframeContainer.ResponsiveIframeContainer;
   }
 });
-Object.defineProperty(exports, "SearchInput", {
-  enumerable: true,
-  get: function get() {
-    return _searchInput.SearchInput;
-  }
-});
-Object.defineProperty(exports, "SimplePopover", {
-  enumerable: true,
-  get: function get() {
-    return _simplePopover.SimplePopover;
-  }
-});
 Object.defineProperty(exports, "TextCopy", {
   enumerable: true,
   get: function get() {
@@ -1305,78 +1287,6 @@ Object.defineProperty(exports, "Button", {
   enumerable: true,
   get: function get() {
     return _button.Button;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_FLUID", {
-  enumerable: true,
-  get: function get() {
-    return _button.FLUID;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_DEFAULT", {
-  enumerable: true,
-  get: function get() {
-    return _button.DEFAULT;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_TINY", {
-  enumerable: true,
-  get: function get() {
-    return _button.TINY;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_BIG", {
-  enumerable: true,
-  get: function get() {
-    return _button.BIG;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_HUGE", {
-  enumerable: true,
-  get: function get() {
-    return _button.HUGE;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_GIANT", {
-  enumerable: true,
-  get: function get() {
-    return _button.GIANT;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_ICON", {
-  enumerable: true,
-  get: function get() {
-    return _button.ICON;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_ICON_MICRO", {
-  enumerable: true,
-  get: function get() {
-    return _button.ICON_MICRO;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_ICON_TINY", {
-  enumerable: true,
-  get: function get() {
-    return _button.ICON_TINY;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_ICON_BIG", {
-  enumerable: true,
-  get: function get() {
-    return _button.ICON_BIG;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_ICON_HUGE", {
-  enumerable: true,
-  get: function get() {
-    return _button.ICON_HUGE;
-  }
-});
-Object.defineProperty(exports, "BUTTON_STYLE_ICON_GIANT", {
-  enumerable: true,
-  get: function get() {
-    return _button.ICON_GIANT;
   }
 });
 Object.defineProperty(exports, "ButtonIcon", {
@@ -1505,12 +1415,6 @@ Object.defineProperty(exports, "BackingCard", {
     return _backingCard.BackingCard;
   }
 });
-Object.defineProperty(exports, "CartRewardCard", {
-  enumerable: true,
-  get: function get() {
-    return _cartRewardCard.CartRewardCard;
-  }
-});
 Object.defineProperty(exports, "ClickableCard", {
   enumerable: true,
   get: function get() {
@@ -1545,12 +1449,6 @@ Object.defineProperty(exports, "HorizontalCrowdfundingCard", {
   enumerable: true,
   get: function get() {
     return _horizontalCrowdfundingCard.HorizontalCrowdfundingCard;
-  }
-});
-Object.defineProperty(exports, "RewardEdition", {
-  enumerable: true,
-  get: function get() {
-    return _rewardEdition.RewardEdition;
   }
 });
 Object.defineProperty(exports, "RewardSummaryCard", {
@@ -1647,12 +1545,6 @@ Object.defineProperty(exports, "DocumentManager", {
   enumerable: true,
   get: function get() {
     return _documentManager.DocumentManager;
-  }
-});
-Object.defineProperty(exports, "ImageCropper", {
-  enumerable: true,
-  get: function get() {
-    return _imageCropper.ImageCropper;
   }
 });
 Object.defineProperty(exports, "ImageDropUploader", {
@@ -1943,6 +1835,78 @@ Object.defineProperty(exports, "dispatchEvent", {
     return _events.dispatchEvent;
   }
 });
+Object.defineProperty(exports, "BUTTON_STYLE_FLUID", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.FLUID;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_DEFAULT", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.DEFAULT;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_TINY", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.TINY;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_BIG", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.BIG;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_HUGE", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.HUGE;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_GIANT", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.GIANT;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_ICON", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.ICON;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_ICON_MICRO", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.ICON_MICRO;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_ICON_TINY", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.ICON_TINY;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_ICON_BIG", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.ICON_BIG;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_ICON_HUGE", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.ICON_HUGE;
+  }
+});
+Object.defineProperty(exports, "BUTTON_STYLE_ICON_GIANT", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneStyles.ICON_GIANT;
+  }
+});
 Object.defineProperty(exports, "CAROUSEL_OUTLINE_PLUS_OFFSET", {
   enumerable: true,
   get: function get() {
@@ -2025,6 +1989,12 @@ Object.defineProperty(exports, "useIntersectionObserver", {
   enumerable: true,
   get: function get() {
     return _intersectionHook.default;
+  }
+});
+Object.defineProperty(exports, "LazyLoader", {
+  enumerable: true,
+  get: function get() {
+    return _lazyComponent.LazyLoader;
   }
 });
 Object.defineProperty(exports, "useLazyObserver", {
@@ -2189,6 +2159,8 @@ var _highlightHalo = require("./components/atoms/highlight-halo");
 var _horizontalStroke = require("./components/atoms/horizontal-stroke");
 
 var _iconBadge = require("./components/atoms/icon-badge");
+
+var _kisskissLoadingAnimation = require("./components/atoms/kisskiss-loading-animation");
 
 var _loader = require("./components/atoms/loader");
 
@@ -2520,10 +2492,6 @@ var _row = require("./components/layout/row");
 
 var _scrollableContainer = require("./components/layout/scrollable-container");
 
-var _sideGrid = require("./components/layout/side-grid");
-
-var _sideLayout = require("./components/layout/side-layout");
-
 var _stickyContainer = require("./components/layout/sticky-container");
 
 var _alert = require("./components/molecules/alert");
@@ -2555,10 +2523,6 @@ var _modalNext = require("./components/molecules/modal-next");
 var _overlay = require("./components/molecules/overlay");
 
 var _responsiveIframeContainer = require("./components/molecules/embed/responsive-iframe-container");
-
-var _searchInput = require("./components/molecules/search-input");
-
-var _simplePopover = require("./components/molecules/simple-popover");
 
 var _textCopy = require("./components/molecules/text-copy");
 
@@ -2602,8 +2566,6 @@ var _backerCard = require("./components/molecules/cards/backer-card");
 
 var _backingCard = require("./components/molecules/cards/backing-card");
 
-var _cartRewardCard = require("./components/molecules/cards/cart-reward-card");
-
 var _clickableCard = require("./components/molecules/cards/clickable-card");
 
 var _contributionCard = require("./components/molecules/cards/contribution-card");
@@ -2615,8 +2577,6 @@ var _engagementCard = require("./components/molecules/cards/engagement-card");
 var _engagementCardWithImage = require("./components/molecules/cards/engagement-card-with-image");
 
 var _horizontalCrowdfundingCard = require("./components/molecules/cards/horizontal-crowdfunding-card");
-
-var _rewardEdition = require("./components/molecules/cards/reward-edition");
 
 var _rewardSummaryCard = require("./components/molecules/cards/reward-summary-card");
 
@@ -2647,8 +2607,6 @@ var _expandBoard = require("./components/molecules/expand/expand-board");
 var _basicUploader = require("./components/molecules/upload/basic-uploader");
 
 var _documentManager = require("./components/molecules/upload/document-manager");
-
-var _imageCropper = require("./components/molecules/upload/image-cropper");
 
 var _imageDropUploader = require("./components/molecules/upload/image-drop-uploader");
 
@@ -2700,6 +2658,8 @@ var _dropdownConfig = require("./constants/dropdown-config");
 
 var _events = require("./helpers/dom/events");
 
+var _standaloneStyles = require("./components/molecules/buttons/button/standalone-styles");
+
 var _styles = require("./components/molecules/carousels/carousel/styles");
 
 var _config = require("./components/organisms/header-nav/config");
@@ -2717,6 +2677,8 @@ var _reactElements = require("./helpers/react/react-elements");
 var _continuousIntersectionHook = _interopRequireDefault(require("./helpers/utils/continuous-intersection-hook"));
 
 var _intersectionHook = _interopRequireDefault(require("./helpers/utils/intersection-hook"));
+
+var _lazyComponent = require("./helpers/utils/lazy-component");
 
 var _lazyHook = _interopRequireDefault(require("./helpers/utils/lazy-hook"));
 

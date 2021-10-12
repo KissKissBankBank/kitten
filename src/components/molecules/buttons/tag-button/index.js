@@ -68,5 +68,5 @@ TagButton.defaultProps = {
   icon: false,
   size: 'regular',
   selected: false,
-  variant: 'andromeda'
+  variant: 'orion'
 };

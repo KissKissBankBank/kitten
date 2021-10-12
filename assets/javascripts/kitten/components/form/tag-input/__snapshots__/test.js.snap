@@ -2,7 +2,7 @@
 
 exports[`<TagInput /> should match its disabled snapshot with disabled props 1`] = `
 <div
-  className="sc-bdVaJa qOIMU k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda k-Form-TagList--disabled"
+  className="sc-bdVaJa fmSTsu k-Form-TagList k-Form-TagList--regular k-Form-TagList--orion k-Form-TagList--disabled"
   onClick={[Function]}
 >
   <p
@@ -147,7 +147,7 @@ exports[`<TagInput /> should match its disabled snapshot with disabled props 1`]
 
 exports[`<TagInput /> should match its disabled snapshot with objects on initialItemsList 1`] = `
 <div
-  className="sc-bdVaJa qOIMU k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda k-Form-TagList--disabled"
+  className="sc-bdVaJa fmSTsu k-Form-TagList k-Form-TagList--regular k-Form-TagList--orion k-Form-TagList--disabled"
   onClick={[Function]}
 >
   <p
@@ -166,6 +166,11 @@ exports[`<TagInput /> should match its disabled snapshot with objects on initial
         className="k-Form-TagList__tag"
       >
         Black
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Élément désactivé.
+        </span>
       </span>
       <button
         className="k-Form-TagList__button"
@@ -332,7 +337,7 @@ exports[`<TagInput /> should match its disabled snapshot with objects on initial
 
 exports[`<TagInput /> should match its snapshot 1`] = `
 <div
-  className="sc-bdVaJa qOIMU k-Form-TagList k-Form-TagList--regular k-Form-TagList--andromeda"
+  className="sc-bdVaJa fmSTsu k-Form-TagList k-Form-TagList--regular k-Form-TagList--orion"
   onClick={[Function]}
 >
   <p
@@ -369,7 +374,7 @@ exports[`<TagInput /> should match its snapshot 1`] = `
 
 exports[`<TagInput /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa qOIMU k-Form-TagList k-Form-TagList--huge k-Form-TagList--orion"
+  className="sc-bdVaJa fmSTsu k-Form-TagList k-Form-TagList--huge k-Form-TagList--orion"
   onClick={[Function]}
 >
   <p

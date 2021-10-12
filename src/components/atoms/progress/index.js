@@ -81,11 +81,11 @@ Progress.defaultProps = {
   color: _colorsConfig.default.primary1,
   value: 50,
   rampProps: {},
-  variant: 'andromeda'
+  variant: 'orion'
 };
 Progress.propTypes = {
   color: _propTypes.default.string,
   value: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   rampProps: _propTypes.default.object,
-  variant: _propTypes.default.string
+  variant: _propTypes.default.oneOf(['orion', 'andromeda'])
 };
