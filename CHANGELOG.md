@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `LazyLoader` component.
 - Fix: `TagInput`: Remove console warning.
 - Fix: `TagInput`: Add accessible information for disabled items.
 - Feature: `Button`: Add `fit` and `mobileFit` props, default to `min-width` and `null`.

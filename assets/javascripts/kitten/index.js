@@ -429,6 +429,7 @@ export {
 } from './helpers/react/react-elements'
 export { default as useContinuousIntersectionObserver } from './helpers/utils/continuous-intersection-hook'
 export { default as useIntersectionObserver } from './helpers/utils/intersection-hook'
+export { LazyLoader } from './helpers/utils/lazy-component'
 export { default as useLazyObserver } from './helpers/utils/lazy-hook'
 export { default as LazyObserver } from './helpers/utils/lazy-observer'
 export { default as margin } from './helpers/utils/margin'
