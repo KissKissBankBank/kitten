@@ -58,7 +58,6 @@ export const StyledBackingCard = styled.article`
   }
 
   .k-BackingCard__button {
-    min-width: 0;
     flex: 0 0 auto;
   }
 

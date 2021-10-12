@@ -6,6 +6,7 @@ export const Button = ({ className, ...props }) => (
   <KittenButton
     borderRadius={4}
     modifier="helium"
+    fit="fluid"
     {...props}
     className={classNames(
       'k-BackingCard__button',
