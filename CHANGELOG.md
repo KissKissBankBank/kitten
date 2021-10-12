@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `BackingCard`: Fix button fit.
+
 ## [5.0.0] - 2021-10-12
 
 Breaking Changes:
