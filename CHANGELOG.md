@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `LazyLoader` component.
 - Feature: `Button`: Add `fit` and `mobileFit` props, default to `min-width` and `null`.
 - Breaking Change: `Button`: Refactor CSS Styles.
 - Breaking Change: `Modal/Next`: Improve trigger element accessibility.
