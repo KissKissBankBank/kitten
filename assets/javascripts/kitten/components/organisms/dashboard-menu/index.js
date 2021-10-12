@@ -41,6 +41,11 @@ const StyledDashboardMenu = styled.nav`
     }
   }
 
+  .k-DashboardMenu__itemWrapper--subItem {
+    margin-left: ${pxToRem(35)};
+    margin-right: ${pxToRem(40)};
+  }
+
   .k-DashboardMenu__list,
   .k-DashboardMenu__expandable__list {
     margin: 0;
@@ -105,11 +110,6 @@ const StyledDashboardMenu = styled.nav`
     border-radius: ${pxToRem(6)};
   }
 
-  .k-DashboardMenu__iconWrapper,
-  .k-DashboardMenu__expandable__title__text {
-    margin-right: ${pxToRem(10)};
-  }
-
   /* TEXT STYLES */
   .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,
   .k-DashboardMenu__list > li > .k-DashboardMenu__item {
@@ -171,18 +171,37 @@ const StyledDashboardMenu = styled.nav`
   [open] .k-DashboardMenu__expandable__title__arrow svg {
     transform: rotate(360deg) !important;
   }
+
+  .k-DashboardMenu__separator {
+    margin-top: ${pxToRem(20)};
+    margin-bottom: ${pxToRem(15)};
+
+    hr {
+      border: 0;
+      border-top: ${pxToRem(1)} solid rgba(151, 151, 151, 0.2);
+      margin-bottom: ${pxToRem(15)};
+    }
+  }
 `
 
-export const DashboardMenu = ({ className, ...props }) => {
-  return (
-    <StyledDashboardMenu className={classNames('k-DashboardMenu', className)}>
-      <ul className="k-DashboardMenu__list" {...props} />
-    </StyledDashboardMenu>
-  )
-}
+export const DashboardMenu = ({ className, ...props }) =>  (
+  <StyledDashboardMenu
+    className={classNames('k-DashboardMenu', className)}
+    {...props}
+  />
+)
 
-const Item = ({ className, icon, isActive, children, ...props }) => (
-  <li className="k-DashboardMenu__itemWrapper">
+const List = ({className, ...props}) => (
+  <ul
+    className={classNames('k-DashboardMenu__list', className)}
+    {...props}
+  />
+)
+
+const Item = ({ className, icon, isActive, children, subItem, ...props }) => (
+  <li className={classNames('k-DashboardMenu__itemWrapper', {
+    'k-DashboardMenu__itemWrapper--subItem': subItem,
+  })}>
     <a
       className={classNames('k-DashboardMenu__item', className)}
       aria-current={isActive ? 'page' : null}
@@ -231,6 +250,20 @@ const Expandable = ({ className, children, icon, title, ...props }) => {
   )
 }
 
+const Separator = ({className, children, ...props}) => (
+  <div
+    className={classNames('k-DashboardMenu__separator', className)}
+    {...props}
+  >
+    <hr />
+    {children}
+  </div>
+)
+
+const Selector = props => (
+  <div {...props} />
+)
+
 Item.proptypes = {
   icon: PropTypes.func,
   isActive: PropTypes.bool,
@@ -241,5 +274,8 @@ Expandable.proptypes = {
   title: PropTypes.node,
 }
 
+DashboardMenu.List = List
 DashboardMenu.Item = Item
 DashboardMenu.Expandable = Expandable
+DashboardMenu.Separator = Separator
+DashboardMenu.Selector = Selector
