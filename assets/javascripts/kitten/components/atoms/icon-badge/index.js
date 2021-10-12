@@ -110,9 +110,9 @@ export const IconBadge = ({
       'k-IconBadge--hasBorderStyles'
     )}
     style={{
-      '--border-width': pxToRem(border?.width),
-      '--border-style': border?.style,
-      '--border-color': border?.color,
+      '--border-width': 'width' in border ? pxToRem(border.width) : null,
+      '--border-style': border?.style ?? null,
+      '--border-color': border?.color ?? null,
     }}
     {...others}
   >
