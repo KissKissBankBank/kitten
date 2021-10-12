@@ -99,13 +99,16 @@ export const IconBadge = ({
   ...others
 }) => (
   <StyledBadge
-    className={classNames('k-IconBadge', className, `k-IconBadge--${size}`, {
-      'k-IconBadge--disabled': disabled,
-      'k-IconBadge--valid': valid,
-      'k-IconBadge--empty': empty,
-      'k-IconBadge--big': big,
-      'k-IconBadge--huge': huge,
-    })}
+    className={classNames('k-IconBadge', className, `k-IconBadge--${size}`, 
+      {
+        'k-IconBadge--disabled': disabled,
+        'k-IconBadge--valid': valid,
+        'k-IconBadge--empty': empty,
+        'k-IconBadge--big': big,
+        'k-IconBadge--huge': huge,  
+      },
+      'k-IconBadge--hasBorderStyles'
+    )}
     style={{
       '--border-width': pxToRem(border?.width),
       '--border-style': border?.style,
@@ -122,9 +125,7 @@ IconBadge.defaultProps = {
   valid: false,
   empty: false,
   size: 'normal',
-  borderWidth: null,
-  borderColor: null,
-  borderStyle: null,
+  border: {},
 }
 
 IconBadge.propTypes = {
@@ -134,7 +135,9 @@ IconBadge.propTypes = {
   big: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   huge: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge']),
-  borderWidth: PropTypes.number,
-  borderColor: PropTypes.string,
-  borderStyle: PropTypes.string,
+  border: PropTypes.shape({ 
+    width: PropTypes.number,
+    color: PropTypes.node,
+    style: PropTypes.string,
+  }),
 }

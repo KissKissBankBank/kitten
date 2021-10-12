@@ -23,11 +23,12 @@ describe('<IconBadge />', () => {
         .create(
           <IconBadge 
             children="Custom children"
-            size="big"
-            borderColor="#222"
-            borderRadius={30}
-            borderStyle="solid"
-            borderWidth={2}
+            size="tiny"
+            border={{
+              width: 2,
+              style: 'solid',
+              color: '#e8f7fe',
+            }}
           />)
         .toJSON()
     })

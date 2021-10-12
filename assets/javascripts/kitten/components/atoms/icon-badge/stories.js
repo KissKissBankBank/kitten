@@ -33,7 +33,7 @@ export default {
     },
     border: {
       name: 'border',
-      control: 'number',
+      control: 'object',
     },
     size: {
       name: 'size',
@@ -60,4 +60,9 @@ export const WithBorder = args => <IconBadge {...args} />
 WithBorder.args = {
   ...args,
   size: 'tiny',
+  border: {
+    width: 2,
+    style: 'solid',
+    color: COLORS.primary5,
+  }
 }

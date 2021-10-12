@@ -2,13 +2,12 @@
 
 exports[`<StepperIcon /> StepperIconDefault matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa kWlMMP k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa fCEtyg k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--border-color": null,
-      "--border-radius": "1.875rem",
-      "--border-style": null,
-      "--border-width": "0rem",
+      "--border-color": undefined,
+      "--border-style": undefined,
+      "--border-width": "NaNrem",
     }
   }
 >
@@ -20,13 +19,12 @@ exports[`<StepperIcon /> StepperIconDefault matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> StepperIconInProgress matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa kWlMMP k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa fCEtyg k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--border-color": null,
-      "--border-radius": "1.875rem",
-      "--border-style": null,
-      "--border-width": "0rem",
+      "--border-color": undefined,
+      "--border-style": undefined,
+      "--border-width": "NaNrem",
     }
   }
 >
@@ -57,13 +55,12 @@ exports[`<StepperIcon /> StepperIconInProgress matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> StepperIconValidated matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa kWlMMP k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa fCEtyg k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--border-color": null,
-      "--border-radius": "1.875rem",
-      "--border-style": null,
-      "--border-width": "0rem",
+      "--border-color": undefined,
+      "--border-style": undefined,
+      "--border-width": "NaNrem",
     }
   }
 >
@@ -88,13 +85,12 @@ exports[`<StepperIcon /> StepperIconValidated matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> by default matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa kWlMMP k-IconBadge k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa fCEtyg k-IconBadge k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--border-color": null,
-      "--border-radius": "1.875rem",
-      "--border-style": null,
-      "--border-width": "0rem",
+      "--border-color": undefined,
+      "--border-style": undefined,
+      "--border-width": "NaNrem",
     }
   }
 >
@@ -106,13 +102,12 @@ exports[`<StepperIcon /> by default matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> state = progress matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa kWlMMP k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa fCEtyg k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--border-color": null,
-      "--border-radius": "1.875rem",
-      "--border-style": null,
-      "--border-width": "0rem",
+      "--border-color": undefined,
+      "--border-style": undefined,
+      "--border-width": "NaNrem",
     }
   }
 >
@@ -143,13 +138,12 @@ exports[`<StepperIcon /> state = progress matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> state = valid matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa kWlMMP k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa fCEtyg k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--border-color": null,
-      "--border-radius": "1.875rem",
-      "--border-style": null,
-      "--border-width": "0rem",
+      "--border-color": undefined,
+      "--border-style": undefined,
+      "--border-width": "NaNrem",
     }
   }
 >
