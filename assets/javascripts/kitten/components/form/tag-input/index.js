@@ -311,13 +311,13 @@ export const TagInput = ({
             />
           </li>
         )}
-        {itemsList.map(item => {
+        {itemsList.map((item, index) => {
           const itemValue = item?.value || item
           const itemDisabled = item?.disabled || false
 
           return (
             <li
-              key={itemValue}
+              key={itemValue + index}
               className={classNames(
                 'k-Form-TagList__item k-Form-TagList__tagItem',
                 {
@@ -325,7 +325,14 @@ export const TagInput = ({
                 },
               )}
             >
-              <span className="k-Form-TagList__tag">{itemValue}</span>
+              <span className="k-Form-TagList__tag">
+                {itemValue}
+                {itemDisabled && (
+                  <span className="k-u-a11y-visuallyHidden">
+                    Élément désactivé.
+                  </span>
+                )}
+              </span>
               <button
                 className="k-Form-TagList__button"
                 type="button"
@@ -347,9 +354,13 @@ export const TagInput = ({
         aria-atomic="true"
         aria-relevant="additions removals"
       >
-        {itemsList.map(item => {
+        {itemsList.map((item, index) => {
           const itemValue = item?.value || item
-          return <li key={`visuallyHidden-${itemValue}`}>{itemValue}</li>
+          return (
+            <li key={`visuallyHidden-${itemValue + index}`}>
+              {itemValue}
+            </li>
+          )
         })}
       </ul>
     </StyledWrapper>
