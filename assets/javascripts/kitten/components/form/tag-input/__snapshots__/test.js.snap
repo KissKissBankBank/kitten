@@ -166,6 +166,11 @@ exports[`<TagInput /> should match its disabled snapshot with objects on initial
         className="k-Form-TagList__tag"
       >
         Black
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Élément désactivé.
+        </span>
       </span>
       <button
         className="k-Form-TagList__button"
