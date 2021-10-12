@@ -442,5 +442,5 @@ Autocomplete.defaultProps = {
   onKeyDown: () => {},
   onSelect: () => {},
   isLoading: false,
-  variant: 'andromeda',
+  variant: 'orion',
 }

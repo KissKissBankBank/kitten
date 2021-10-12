@@ -2,7 +2,7 @@
 
 exports[`<StepperIcon /> StepperIconDefault matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa oCMmu k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--empty"
+  className="sc-bdVaJa ectNFc k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--empty"
 >
   <span
     className="k-IconBadge__content"
@@ -12,7 +12,7 @@ exports[`<StepperIcon /> StepperIconDefault matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> StepperIconInProgress matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa oCMmu k-IconBadge custom-class-name k-IconBadge--tiny"
+  className="sc-bdVaJa ectNFc k-IconBadge custom-class-name k-IconBadge--tiny"
 >
   <span
     className="k-IconBadge__content"
@@ -41,7 +41,7 @@ exports[`<StepperIcon /> StepperIconInProgress matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> StepperIconValidated matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa oCMmu k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid"
+  className="sc-bdVaJa ectNFc k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid"
 >
   <span
     className="k-IconBadge__content"
@@ -64,7 +64,7 @@ exports[`<StepperIcon /> StepperIconValidated matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> by default matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa oCMmu k-IconBadge k-IconBadge--tiny k-IconBadge--empty"
+  className="sc-bdVaJa ectNFc k-IconBadge k-IconBadge--tiny k-IconBadge--empty"
 >
   <span
     className="k-IconBadge__content"
@@ -74,7 +74,7 @@ exports[`<StepperIcon /> by default matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> state = progress matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa oCMmu k-IconBadge custom-class-name k-IconBadge--tiny"
+  className="sc-bdVaJa ectNFc k-IconBadge custom-class-name k-IconBadge--tiny"
 >
   <span
     className="k-IconBadge__content"
@@ -103,7 +103,7 @@ exports[`<StepperIcon /> state = progress matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> state = valid matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa oCMmu k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid"
+  className="sc-bdVaJa ectNFc k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid"
 >
   <span
     className="k-IconBadge__content"

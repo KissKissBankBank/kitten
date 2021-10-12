@@ -11,15 +11,15 @@ describe('typography helpers', () => {
   describe('stepToRem : 4', () => {
     const range = stepToRem(4)
 
-    it('returns "1.601806640625rem"', () => {
-      expect(range).toEqual('1.601806640625rem')
+    it('returns "1.5rem"', () => {
+      expect(range).toEqual('1.5rem')
     })
   })
   describe('stepToRem : -2', () => {
     const range = stepToRem(-2)
 
-    it('returns "0.7901234567901234rem"', () => {
-      expect(range).toEqual('0.7901234567901234rem')
+    it('returns "0.75rem"', () => {
+      expect(range).toEqual('0.75rem')
     })
   })
 })

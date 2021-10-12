@@ -245,7 +245,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/React.createElement(Button, {
         type: "button",
         className: "k-Carousel__pagination__button",
-        icon: true,
+        fit: "icon",
         modifier: "beryllium",
         size: tinyButtons ? 'tiny' : null,
         onClick: _this.goPrevPage,
@@ -256,7 +256,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
       })), /*#__PURE__*/React.createElement(Button, {
         type: "button",
         className: "k-Carousel__pagination__button",
-        icon: true,
+        fit: "icon",
         modifier: "beryllium",
         size: tinyButtons ? 'tiny' : null,
         onClick: _this.goNextPage,

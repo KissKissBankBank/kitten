@@ -24,7 +24,8 @@ const StyledListTable = styled(ListTable)`
   /* variableWidth is the available content to be divided by variable columns
   /* Content Width (100%) minus fixed width columns (in pixels or in var()) */
   --ContributionsTable-variableWidth: calc(
-    100% - ${pxToRem(160 + 100 + 130 + (5 * 40))} - var(--DashboardLayout-main-margin) * 2
+    100% - ${pxToRem(160 + 100 + 130 + 5 * 40)} -
+      var(--DashboardLayout-main-margin) * 2
   );
 
   ${TYPOGRAPHY.fontStyles.light}
@@ -205,7 +206,6 @@ const Row = () => {
         </VisuallyHidden>
         <Checkbox
           onChange={e => setHighlight(e.target.checked)}
-          variant="orion"
           aria-label="Sélectionner toutes les contributions de la liste"
         />
       </ListTable.Col>
@@ -271,7 +271,6 @@ const Row = () => {
             { label: 'À expédier', value: 1 },
             { label: 'Expédié', value: 2 },
           ]}
-          variant="orion"
         />
       </ListTable.Col>
     </ListTable.Row>
@@ -289,9 +288,7 @@ export const StoryWithTable = () => {
           className="k-u-margin-none k-u-margin-bottom-triple"
         >
           Curabitur blandit tempus porttitor.
-          <Button variant="orion" onClick={() => setOpen(!isOpen)}>
-            Toggle Toaster
-          </Button>
+          <Button onClick={() => setOpen(!isOpen)}>Toggle Toaster</Button>
         </Title>
       </div>
 
@@ -302,22 +299,13 @@ export const StoryWithTable = () => {
         <ListTable.Header className="k-u-weight-regular">
           <ListTable.Col className="customCol_0">
             <VisuallyHidden>Sélection</VisuallyHidden>
-            <Checkbox
-              variant="orion"
-              aria-label="Sélectionner toutes les contributions de la liste"
-            />
+            <Checkbox aria-label="Sélectionner toutes les contributions de la liste" />
           </ListTable.Col>
 
           <ListTable.Col className="customCol_1">
-            <Text
-              weight="regular"
-              color="font1"
-              size="tiny"
-            >
+            <Text weight="regular" color="font1" size="tiny">
               Date
-              <br
-                className="k-u-hidden@l-up"
-              />
+              <br className="k-u-hidden@l-up" />
               <Text
                 weight="regular"
                 color="font1"
@@ -384,15 +372,10 @@ export const StoryWithTable = () => {
               Text
             </Text>
           </div>
-          <Button
-            modifier="boron"
-            variant="orion"
-            size="tiny"
-            className="k-u-hidden@m-down"
-          >
+          <Button modifier="boron" size="tiny" className="k-u-hidden@m-down">
             Hello
           </Button>
-          <Button modifier="helium" variant="orion" size="tiny">
+          <Button modifier="helium" size="tiny">
             Hello
           </Button>
         </FlexWrapper>

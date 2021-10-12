@@ -150,9 +150,9 @@ var SearchInput = function SearchInput(_ref) {
     onChange: handleInputChange,
     className: (0, _classnames.default)('k-HeaderNav__searchInput__input', searchInputProps.className)
   })), isMobileInvisible ? /*#__PURE__*/_react.default.createElement(_button.Button, {
-    icon: true,
+    fit: "icon",
     size: "tiny",
-    borderRadius: 20,
+    rounded: true,
     onClick: handleFoldButtonClick,
     className: "k-u-hidden@m-up"
   }, /*#__PURE__*/_react.default.createElement(_searchIcon.SearchIcon, null)) : /*#__PURE__*/_react.default.createElement("button", {

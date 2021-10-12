@@ -45,7 +45,8 @@ var Action = function Action(_ref) {
     type: "submit",
     className: (0, _classnames.default)('k-ContributionCard__action', className),
     modifier: "helium",
-    disabled: isInputEmpty
+    disabled: isInputEmpty,
+    fit: "content"
   }, props)));
 };
 

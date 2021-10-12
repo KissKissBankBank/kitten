@@ -26,5 +26,5 @@ Link.protoTypes = {
   variant: PropTypes.oneOf(['andromeda', 'orion'])
 };
 Link.defaultProps = {
-  variant: 'andromeda'
+  variant: 'orion'
 };

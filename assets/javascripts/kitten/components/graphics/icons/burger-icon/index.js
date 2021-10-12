@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import deprecated from 'prop-types-extra/lib/deprecated'
 
@@ -68,14 +68,10 @@ export const BurgerIcon = ({
       '--burgerIcon-mainColor': mainColor,
       '--burgerIcon-hoverColor': hoverColor,
     }}
-    className={classNames(
-      'k-BurgerIcon',
-      className,
-      {
-        'k-BurgerIcon--isActive': isActive,
-        'k-BurgerIcon--isAnimatedOnHover': isAnimatedOnHover,
-      }
-    )}
+    className={classNames('k-BurgerIcon', className, {
+      'k-BurgerIcon--isActive': isActive,
+      'k-BurgerIcon--isAnimatedOnHover': isAnimatedOnHover,
+    })}
     {...props}
   >
     {(iconTitle || title) && <title>{iconTitle || title}</title>}

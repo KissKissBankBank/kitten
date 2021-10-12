@@ -15,7 +15,6 @@ export const Default = () => {
         </div>
 
         <LinkBox
-          variant="orion"
           backgroundColor="#fef1e7"
           textColor="#222"
           className="k-u-margin-bottom-noneHalf"
@@ -30,7 +29,6 @@ export const Default = () => {
         </LinkBox>
 
         <LinkBox
-          variant="orion"
           backgroundColor="#fef1e7"
           textColor="#222"
           className="k-u-margin-bottom-noneHalf"
@@ -43,12 +41,7 @@ export const Default = () => {
           </LinkBox.Text>
         </LinkBox>
 
-        <LinkBox
-          variant="orion"
-          backgroundColor="#fef1e7"
-          textColor="#222"
-          href="#"
-        >
+        <LinkBox backgroundColor="#fef1e7" textColor="#222" href="#">
           <LinkBox.Text>
             <Text size="tiny" weight="light" lineHeight="normal">
               <strong>Admin - </strong>Lieu de naissance
@@ -85,9 +78,7 @@ export const Default = () => {
             conseils pour améliorer votre campagne par mail.
           </Text>
           <div className="k-u-margin-top-double">
-            <Button variant="orion" modifier="helium">
-              Partager à mon coach
-            </Button>
+            <Button modifier="helium">Partager à mon coach</Button>
           </div>
         </div>
       </VerticalProgress.Step>

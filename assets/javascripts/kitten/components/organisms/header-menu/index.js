@@ -19,7 +19,8 @@ export const HeaderMenu = ({
 }) => {
   return (
     <StyledList
-      className={classNames('k-HeaderMenu',
+      className={classNames(
+        'k-HeaderMenu',
         className,
         `k-HeaderMenu--${position}`,
         {
@@ -28,8 +29,8 @@ export const HeaderMenu = ({
           'k-HeaderMenu--hasBorderOnSide-left': borderSide === 'left',
           'k-HeaderMenu--hasBorderOnSide-right': borderSide === 'right',
           'k-HeaderMenu--hasBorderOnSideOnHover': borderSideOnHover,
-          'k-HeaderMenu--hasBigItems': largeItem,  
-        }
+          'k-HeaderMenu--hasBigItems': largeItem,
+        },
       )}
       style={{
         ...style,

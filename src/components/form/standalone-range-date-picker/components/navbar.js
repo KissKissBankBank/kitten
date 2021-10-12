@@ -86,7 +86,7 @@ var Navbar = /*#__PURE__*/function (_PureComponent) {
         onClick: function onClick() {
           return onPreviousClick();
         },
-        icon: true
+        fit: "icon"
       }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         fill: iconColor,
         direction: "left",
@@ -97,7 +97,7 @@ var Navbar = /*#__PURE__*/function (_PureComponent) {
         onClick: function onClick() {
           return onNextClick();
         },
-        icon: true
+        fit: "icon"
       }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         fill: iconColor,
         direction: "right",

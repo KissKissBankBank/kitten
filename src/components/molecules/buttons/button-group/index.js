@@ -62,5 +62,5 @@ ButtonGroup.propTypes = {
   variant: _propTypes.default.oneOf(['andromeda', 'orion'])
 };
 ButtonGroup.defaultProps = {
-  variant: 'andromeda'
+  variant: 'orion'
 };

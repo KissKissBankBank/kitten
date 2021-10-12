@@ -26,7 +26,7 @@ var Item = function Item(_ref) {
       props = (0, _objectWithoutProperties2.default)(_ref, ["children", "href", "isSelected", "smallPadding", "className"]);
   var itemClassNames = (0, _classnames.default)('k-HeaderNav-nav__item', {
     'is-selected': isSelected,
-    'smallPadding': smallPadding
+    smallPadding: smallPadding
   }, className);
   return /*#__PURE__*/_react.default.createElement("li", {
     className: "k-HeaderNav-nav__element",

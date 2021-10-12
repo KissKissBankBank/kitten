@@ -28,7 +28,7 @@ var _pinterestIcon = require("../../../../components/graphics/icons/pinterest-ic
 var FacebookButtonIcon = function FacebookButtonIcon(props) {
   return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, props, {
     modifier: "social_facebook",
-    icon: true
+    fit: "icon"
   }), /*#__PURE__*/_react.default.createElement(_facebookIcon.FacebookIcon, {
     width: "14",
     height: "14"
@@ -40,7 +40,7 @@ exports.FacebookButtonIcon = FacebookButtonIcon;
 var TwitterButtonIcon = function TwitterButtonIcon(props) {
   return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, props, {
     modifier: "social_twitter",
-    icon: true
+    fit: "icon"
   }), /*#__PURE__*/_react.default.createElement(_twitterIcon.TwitterIcon, {
     width: "15",
     height: "15"
@@ -52,7 +52,7 @@ exports.TwitterButtonIcon = TwitterButtonIcon;
 var LinkedinButtonIcon = function LinkedinButtonIcon(props) {
   return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, props, {
     modifier: "social_linkedin",
-    icon: true
+    fit: "icon"
   }), /*#__PURE__*/_react.default.createElement(_linkedinIcon.LinkedinIcon, {
     width: "12",
     height: "12"
@@ -64,7 +64,7 @@ exports.LinkedinButtonIcon = LinkedinButtonIcon;
 var InstagramButtonIcon = function InstagramButtonIcon(props) {
   return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, props, {
     modifier: "social_instagram",
-    icon: true
+    fit: "icon"
   }), /*#__PURE__*/_react.default.createElement(_instagramIcon.InstagramIcon, {
     width: "16",
     height: "16"
@@ -76,7 +76,7 @@ exports.InstagramButtonIcon = InstagramButtonIcon;
 var YoutubeButtonIcon = function YoutubeButtonIcon(props) {
   return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, props, {
     modifier: "social_youtube",
-    icon: true
+    fit: "icon"
   }), /*#__PURE__*/_react.default.createElement(_youtubeIcon.YoutubeIcon, {
     width: "16",
     height: "16"
@@ -88,7 +88,7 @@ exports.YoutubeButtonIcon = YoutubeButtonIcon;
 var PinterestButtonIcon = function PinterestButtonIcon(props) {
   return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, props, {
     modifier: "social_pinterest",
-    icon: true
+    fit: "icon"
   }), /*#__PURE__*/_react.default.createElement(_pinterestIcon.PinterestIcon, {
     width: "16",
     height: "16"

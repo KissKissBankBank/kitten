@@ -306,7 +306,7 @@ export class TextInput extends PureComponent {
     disabled: PropTypes.bool,
     name: PropTypes.string,
     digits: PropTypes.number,
-    variant: PropTypes.string,
+    variant: PropTypes.oneOf(['orion', 'andromeda']),
     rounded: PropTypes.bool,
   }
 
@@ -319,7 +319,7 @@ export class TextInput extends PureComponent {
     disabled: false,
     name: 'text',
     digits: null,
-    variant: 'andromeda',
+    variant: 'orion',
     rounded: false,
   }
 

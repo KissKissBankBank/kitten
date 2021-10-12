@@ -3,7 +3,7 @@ import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutPr
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import COLORS from '../../../../constants/colors-config';
 import deprecated from 'prop-types-extra/lib/deprecated';
 var StyledItem = styled.svg.withConfig({
