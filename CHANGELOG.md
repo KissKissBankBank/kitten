@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `IconBadge`: Add `border` prop style.
+- Fix: `Button`: Fix mobile dimensions on bigger sizes.
 
 ## [5.0.0] - 2021-10-12
 

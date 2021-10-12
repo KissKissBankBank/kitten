@@ -117,6 +117,8 @@ const StyledButton = styled.button`
 
   &.k-Button--big {
     --Button-dimension: ${pxToRem(50)};
+    --Button-min-width: ${pxToRem(200)};
+    --Button-padding: ${pxToRem(10)} ${pxToRem(30)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       --Button-min-width: ${pxToRem(220)};
@@ -128,6 +130,7 @@ const StyledButton = styled.button`
 
   &.k-Button--huge {
     --Button-dimension: ${pxToRem(70)};
+    --Button-min-width: ${pxToRem(200)};
     --Button-padding: ${pxToRem(10)} ${pxToRem(10)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -140,6 +143,7 @@ const StyledButton = styled.button`
 
   &.k-Button--giant {
     --Button-dimension: ${pxToRem(70)};
+    --Button-min-width: ${pxToRem(200)};
     --Button-padding: ${pxToRem(10)} ${pxToRem(10)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
