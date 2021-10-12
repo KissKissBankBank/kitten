@@ -5,9 +5,9 @@ exports[`<IconBadge /> by default matches with snapshot 1`] = `
   className="sc-bdVaJa iwoGUX k-IconBadge k-IconBadge--big k-IconBadge--valid k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--border-color": undefined,
-      "--border-style": undefined,
-      "--border-width": "NaNrem",
+      "--border-color": null,
+      "--border-style": null,
+      "--border-width": null,
     }
   }
 >

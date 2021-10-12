@@ -5,9 +5,9 @@ exports[`<StepperIcon /> StepperIconDefault matches with snapshot 1`] = `
   className="sc-bdVaJa iwoGUX k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--border-color": undefined,
-      "--border-style": undefined,
-      "--border-width": "NaNrem",
+      "--border-color": null,
+      "--border-style": null,
+      "--border-width": null,
     }
   }
 >
@@ -22,9 +22,9 @@ exports[`<StepperIcon /> StepperIconInProgress matches with snapshot 1`] = `
   className="sc-bdVaJa iwoGUX k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--border-color": undefined,
-      "--border-style": undefined,
-      "--border-width": "NaNrem",
+      "--border-color": null,
+      "--border-style": null,
+      "--border-width": null,
     }
   }
 >
@@ -58,9 +58,9 @@ exports[`<StepperIcon /> StepperIconValidated matches with snapshot 1`] = `
   className="sc-bdVaJa iwoGUX k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--border-color": undefined,
-      "--border-style": undefined,
-      "--border-width": "NaNrem",
+      "--border-color": null,
+      "--border-style": null,
+      "--border-width": null,
     }
   }
 >
@@ -88,9 +88,9 @@ exports[`<StepperIcon /> by default matches with snapshot 1`] = `
   className="sc-bdVaJa iwoGUX k-IconBadge k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--border-color": undefined,
-      "--border-style": undefined,
-      "--border-width": "NaNrem",
+      "--border-color": null,
+      "--border-style": null,
+      "--border-width": null,
     }
   }
 >
@@ -105,9 +105,9 @@ exports[`<StepperIcon /> state = progress matches with snapshot 1`] = `
   className="sc-bdVaJa iwoGUX k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--border-color": undefined,
-      "--border-style": undefined,
-      "--border-width": "NaNrem",
+      "--border-color": null,
+      "--border-style": null,
+      "--border-width": null,
     }
   }
 >
@@ -141,9 +141,9 @@ exports[`<StepperIcon /> state = valid matches with snapshot 1`] = `
   className="sc-bdVaJa iwoGUX k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--border-color": undefined,
-      "--border-style": undefined,
-      "--border-width": "NaNrem",
+      "--border-color": null,
+      "--border-style": null,
+      "--border-width": null,
     }
   }
 >
