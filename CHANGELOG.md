@@ -16,6 +16,14 @@ Breaking Changes:
   All the font sizes previously defined as modular scale step (via `stepToRem`)
   are now calculated from a table with integer pixel values.
 - All components using `variant` now default to `orion`.
+- Remove the following unused components:
+  - `SearchInput`
+  - `RewardEdition`
+  - `CartRewardCard`
+  - `SideGrid`
+  - `SideLayout`
+  - `SimplePopover`
+  - `ImageCropper`
 
 Features:
 
