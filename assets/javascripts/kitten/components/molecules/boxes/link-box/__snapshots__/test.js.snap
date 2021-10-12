@@ -6,7 +6,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
   href="#"
 >
   <div
-    className="k-LinkBox__link k-LinkBox__link--andromeda"
+    className="k-LinkBox__link k-LinkBox__link--orion"
     style={
       Object {
         "--LinkBox-background-color": "#fff",
@@ -48,7 +48,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
   target="_blank"
 >
   <div
-    className="k-LinkBox__link k-LinkBox__link--andromeda"
+    className="k-LinkBox__link k-LinkBox__link--orion"
     style={
       Object {
         "--LinkBox-background-color": "#fff",

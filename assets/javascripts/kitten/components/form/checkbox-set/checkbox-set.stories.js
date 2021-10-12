@@ -37,7 +37,7 @@ export default {
       },
     ],
     disabled: false,
-    variant: 'andromeda',
+    variant: 'orion',
   },
   argTypes: {
     name: {

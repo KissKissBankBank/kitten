@@ -95,7 +95,7 @@ export const ProjectsCarousel = ({
 }) => {
   const renderButton = () => (
     <Button
-      icon
+      fit="icon"
       iconOnRight
       tag="a"
       href={buttonHref}

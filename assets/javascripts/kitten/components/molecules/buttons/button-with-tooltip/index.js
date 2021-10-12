@@ -75,10 +75,7 @@ export const ButtonWithTooltip = ({
   return (
     <StyledButtonWithTooltip
       {...props}
-      className={classNames(
-        'k-ButtonWithTooltip',
-        className,
-      )}
+      className={classNames('k-ButtonWithTooltip', className)}
     >
       <Button
         aria-label={tooltipText}

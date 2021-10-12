@@ -2,7 +2,7 @@
 
 exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 <div
-  className="sc-bwzfXH kuuzoS k-Alert k-Alert--hasCloseButton"
+  className="sc-bwzfXH eKkIhi k-Alert k-Alert--hasCloseButton"
   role="alert"
 >
   <div
@@ -12,11 +12,11 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
   </div>
   <button
     aria-label="Close"
-    className="sc-bdVaJa jwgfDn k-Button k-Alert__button k-Button--regular k-Button--carbon k-Button--andromeda k-Button--hasIcon"
+    className="sc-bdVaJa eHgOAT k-Button k-Alert__button k-Button--regular k-Button--carbon k-Button--andromeda k-Button--fit-icon k-Button--mobile-fit-none"
     onClick={[Function]}
     style={
       Object {
-        "--border-radius": 0,
+        "--Button-border-radius": null,
       }
     }
     title="Close"
@@ -42,7 +42,7 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 
 exports[`<Alert /> should matches with default snapshot 1`] = `
 <div
-  className="sc-bwzfXH kuuzoS k-Alert"
+  className="sc-bwzfXH eKkIhi k-Alert"
   role="alert"
 >
   <div
@@ -55,7 +55,7 @@ exports[`<Alert /> should matches with default snapshot 1`] = `
 
 exports[`<Alert /> should matches with error snapshot 1`] = `
 <div
-  className="sc-bwzfXH kuuzoS k-Alert k-Alert--error"
+  className="sc-bwzfXH eKkIhi k-Alert k-Alert--error"
   role="alert"
 >
   <div
@@ -68,7 +68,7 @@ exports[`<Alert /> should matches with error snapshot 1`] = `
 
 exports[`<Alert /> should matches with success snapshot 1`] = `
 <div
-  className="sc-bwzfXH kuuzoS k-Alert k-Alert--success"
+  className="sc-bwzfXH eKkIhi k-Alert k-Alert--success"
   role="alert"
 >
   <div
@@ -81,7 +81,7 @@ exports[`<Alert /> should matches with success snapshot 1`] = `
 
 exports[`<Alert /> should matches with warning snapshot 1`] = `
 <div
-  className="sc-bwzfXH kuuzoS k-Alert k-Alert--warning"
+  className="sc-bwzfXH eKkIhi k-Alert k-Alert--warning"
   role="alert"
 >
   <div

@@ -203,7 +203,7 @@ describe('<Accordeon />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Accordeon variant="orion">
+          <Accordeon>
             <Accordeon.Item>
               <Accordeon.Header>Header</Accordeon.Header>
               <Accordeon.Content>Content</Accordeon.Content>

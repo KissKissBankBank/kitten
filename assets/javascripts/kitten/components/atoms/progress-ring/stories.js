@@ -26,7 +26,7 @@ export default {
     value: 50,
     width: 160,
     strokeWidth: 5,
-    variant: 'andromeda',
+    variant: 'orion',
     animationSpeed: 1.4,
   },
   argTypes: {

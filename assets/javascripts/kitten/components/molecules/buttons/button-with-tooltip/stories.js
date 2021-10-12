@@ -6,7 +6,7 @@ const args = {
   tooltipText: 'Carte cadeau',
 }
 
-const argsTypes = {
+const argTypes = {
   tooltipText: {
     name: 'tooltipText',
     control: 'text',
@@ -30,30 +30,25 @@ export default {
       </div>
     ),
   ],
-  args: {},
+  args: args,
+  argTypes: argTypes,
 }
 
-export const Default = args => (
-  <ButtonWithTooltip
-    {...args}
-    children="Button"
-  />
-)
+export const Default = args => <ButtonWithTooltip {...args} children="Button" />
 
 export const WithButtonIcon = args => (
-  <ButtonWithTooltip
-    {...args}
-    children={ <GiftIcon width="17" height="15" /> }
-  />
+  <ButtonWithTooltip {...args} children={<GiftIcon width="17" height="15" />} />
 )
 
 WithButtonIcon.args = {
+  ...args,
   buttonProps: {
-    icon: true,
+    fit: 'icon',
     borderRadius: 100,
     size: 'tiny',
   },
 }
 WithButtonIcon.argTypes = {
+  ...argTypes,
   buttonProps: { control: 'object' },
 }

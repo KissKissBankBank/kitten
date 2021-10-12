@@ -43,5 +43,5 @@ Title.protoTypes = {
 }
 
 Title.defaultProps = {
-  variant: 'andromeda',
+  variant: 'orion',
 }

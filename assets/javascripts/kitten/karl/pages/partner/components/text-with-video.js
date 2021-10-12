@@ -13,7 +13,7 @@ import {
   Loader,
 } from '../../../../index'
 import { DEFAULT, BIG } from '../../../../components/atoms/horizontal-stroke'
-import { FLUID } from '../../../../components/molecules/buttons/button'
+import { FLUID } from '../../../../components/molecules/buttons/button/standalone-styles'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,

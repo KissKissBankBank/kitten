@@ -39,7 +39,7 @@ export const Item = ({
       {button ? (
         <Button
           modifier={modifier}
-          fluid
+          fit="fluid"
           {...other}
           className={classNames('k-HeaderMenu__item__button', other.className)}
           as={as}

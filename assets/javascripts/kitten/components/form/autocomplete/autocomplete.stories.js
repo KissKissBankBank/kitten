@@ -166,7 +166,7 @@ const args = {
   onKeyDown: () => {},
   onSelect: () => {},
   isLoading: false,
-  variant: 'andromeda',
+  variant: 'orion',
 }
 
 const argTypes = {

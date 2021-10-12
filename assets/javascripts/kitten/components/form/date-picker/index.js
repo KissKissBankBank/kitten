@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { TextInputWithUnit as TextInputWithUnitBase } from '../../../components/form/text-input-with-unit'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { Navbar } from './components/navbar'
 
@@ -14,10 +14,6 @@ const cellSize = pxToRem(50)
 const tinyCellSize = pxToRem(40)
 const dayPickerPadding = pxToRem(30)
 const tinyDayPickerPadding = pxToRem(20)
-
-const fontSize = css`
-  font-size: ${TYPOGRAPHY.fontSize / TYPOGRAPHY.scaleMultiplier}rem;
-`
 
 const StyledDatePicker = styled.div`
   box-sizing: border-box;
@@ -65,7 +61,7 @@ const StyledDatePicker = styled.div`
     & div {
       padding: ${pxToRem(23)} 0;
       margin: 0 ${pxToRem(63)};
-      ${fontSize}
+      font-size: ${stepToRem(1)};
     }
   }
 
@@ -84,7 +80,7 @@ const StyledDatePicker = styled.div`
     height: ${tinyCellSize};
     vertical-align: middle;
     box-sizing: border-box;
-    ${fontSize}
+    font-size: ${stepToRem(1)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: ${cellSize};
@@ -170,7 +166,7 @@ const StyledDatePicker = styled.div`
   }
 
   .DayPicker {
-    ${fontSize}
+    font-size: ${stepToRem(1)};
     ${TYPOGRAPHY.fontStyles.light}
 
     ${({ styles }) => css`

@@ -2,12 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-const Item = ({ children, href, isSelected, smallPadding, className, ...props }) => {
+const Item = ({
+  children,
+  href,
+  isSelected,
+  smallPadding,
+  className,
+  ...props
+}) => {
   const itemClassNames = classNames(
     'k-HeaderNav-nav__item',
     {
       'is-selected': isSelected,
-      'smallPadding': smallPadding,
+      smallPadding: smallPadding,
     },
     className,
   )

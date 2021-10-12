@@ -176,7 +176,7 @@ export const BasicUploader = ({
         disabled={internalDisabled || internalStatus === 'loading'}
       />
       <Button
-        fluid
+        fit="fluid"
         {...buttonProps}
         as="label"
         htmlFor={id}

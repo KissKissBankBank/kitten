@@ -5,7 +5,7 @@ import { Button } from '../../../../../components/molecules/buttons/button'
 const CardButton = ({ text, loading }) => (
   <div className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer">
     {!loading && (
-      <Button type="button" fluid modifier="helium">
+      <Button type="button" fit="fluid" modifier="helium">
         {text}
       </Button>
     )}
@@ -13,7 +13,7 @@ const CardButton = ({ text, loading }) => (
     {loading && (
       <Button
         type="button"
-        fluid
+        fit="fluid"
         className="k-CrowdfundingCard__cardButton__loadingButton"
       />
     )}

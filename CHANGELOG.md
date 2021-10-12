@@ -4,19 +4,44 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [5.0.0] - 2021-10-12
+
+Breaking Changes:
+
+- `Button`: Refactor CSS Styles.
+- `Modal/Next`: Improve trigger element accessibility.
+- Typography: Remove `modular-scale` dependency and logic.
+  All the font sizes previously defined as modular scale step (via `stepToRem`)
+  are now calculated from a table with integer pixel values.
+- All components using `variant` now default to `orion`.
+
+Features:
+
+- Add `KissKissLoadingAnimation`.
+- Add `LazyLoader` component.
+- `Button`: Add `fit` and `mobileFit` props, default to `min-width` and `null`.
+
+Fixes:
+
+- `TagInput`: Remove console warning.
+- `TagInput`: Add accessible information for disabled items.
+
+
 ## [4.14.1] - 2021-10-08
 
 Fix:
+
 - `TagInput`: I can delete an `object` item.
 
 ## [4.14.0] - 2021-10-07
 
 Feature:
+
 - `TagInput`: `initialItemsList` can accept object like `{value: 'hello': disabled: true}` to disable an option.
 
 ## [4.13.0] - 2021-10-06
 
-Features: 
+Features:
 
 - `DropdownSelect`: Add `modifier` prop, defaults to `hydrogen`.
 - `DropdownSelect`: Add `direction` prop, defaults to `down`.
@@ -74,7 +99,7 @@ Fix:
 
 ## [4.9.0] - 2021-09-24
 
-Features: 
+Features:
 
 - `HeaderMenu`: Add `position` prop, default to `left`.
 - `EngagementCardWithImage`: Add `imgProps` and `textProps` props.
@@ -82,11 +107,11 @@ Features:
 Fixes:
 
 - `DashboardLayout`: Fix header elements dimensions.
-- `HeaderNav.Button`: Add `cursor` to `onClick`. 
+- `HeaderNav.Button`: Add `cursor` to `onClick`.
 
 ## [4.8.0] - 2021-09-22
 
-Features: 
+Features:
 
 - `HeaderNav.Nav`: Add `smallPadding` prop, defaults to `false`.
 - `HeaderNav.Button`: Add `smallPadding` prop, defaults to `false`.

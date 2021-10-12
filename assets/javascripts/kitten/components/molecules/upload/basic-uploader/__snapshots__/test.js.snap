@@ -11,12 +11,12 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa JXwLd k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+    className="sc-bdVaJa jGjdXV k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid k-Button--mobile-fit-none"
     disabled={null}
     htmlFor="BasicUploader"
     style={
       Object {
-        "--border-radius": 0,
+        "--Button-border-radius": null,
       }
     }
     type="button"
@@ -53,12 +53,12 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa JXwLd k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+    className="sc-bdVaJa jGjdXV k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid k-Button--mobile-fit-none"
     disabled={null}
     htmlFor="BasicUploader"
     style={
       Object {
-        "--border-radius": 0,
+        "--Button-border-radius": null,
       }
     }
     type="button"
@@ -96,12 +96,12 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa JXwLd k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+    className="sc-bdVaJa jGjdXV k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--orion k-Button--fit-fluid k-Button--mobile-fit-none"
     disabled={null}
     htmlFor="BasicUploader"
     style={
       Object {
-        "--border-radius": 0,
+        "--Button-border-radius": null,
       }
     }
     type="button"

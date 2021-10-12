@@ -13,7 +13,7 @@ Default.decorators = [
 
 Default.args = {
   tag: 'input',
-  variant: 'andromeda',
+  variant: 'orion',
   valid: false,
   error: false,
   disabled: false,
