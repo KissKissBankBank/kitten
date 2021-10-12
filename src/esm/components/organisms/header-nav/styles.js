@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ScreenConfig } from '../../../constants/screen-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import COLORS from '../../../constants/colors-config';
-import { CONTAINER_PADDING, CONTAINER_PADDING_THIN } from '../../../constants/grid-config';
+import { CONTAINER_PADDING } from '../../../constants/grid-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import { MOBILE_HEADER_HEIGHT, TABLET_HEADER_HEIGHT, DESKTOP_HEADER_HEIGHT } from './config';
 export var StyledHeader = styled.header.withConfig({

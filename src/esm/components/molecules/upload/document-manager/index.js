@@ -148,7 +148,7 @@ export var DocumentManager = function DocumentManager(_ref2) {
       onChange: onFileInputChange,
       disabled: internalDisabled
     })), /*#__PURE__*/React.createElement(Button, _extends({
-      fluid: true,
+      fit: "fluid",
       borderRadius: 6
     }, buttonProps, {
       as: "label",
@@ -187,7 +187,7 @@ export var DocumentManager = function DocumentManager(_ref2) {
       id: id,
       className: classNames('k-DocumentManager__loading', props.className)
     }), /*#__PURE__*/React.createElement(Button, _extends({
-      fluid: true,
+      fit: "fluid",
       borderRadius: 6
     }, buttonProps, {
       as: "div",

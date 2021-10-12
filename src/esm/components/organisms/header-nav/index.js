@@ -92,7 +92,7 @@ var HeaderNav = function HeaderNav(_ref) {
   }), /*#__PURE__*/React.createElement("nav", {
     ref: headerRef,
     id: id,
-    className: classNames("k-HeaderNav", className)
+    className: classNames('k-HeaderNav', className)
   }, /*#__PURE__*/React.createElement(QuickAccessLink, quickAccessProps), children))));
 };
 

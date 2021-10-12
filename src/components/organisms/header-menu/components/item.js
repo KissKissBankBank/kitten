@@ -46,7 +46,7 @@ var Item = function Item(_ref) {
     })
   }), button ? /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
     modifier: modifier,
-    fluid: true
+    fit: "fluid"
   }, other, {
     className: (0, _classnames.default)('k-HeaderMenu__item__button', other.className),
     as: as

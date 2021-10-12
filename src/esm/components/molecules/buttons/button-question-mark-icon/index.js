@@ -7,7 +7,7 @@ export var ButtonQuestionMarkIcon = function ButtonQuestionMarkIcon(props) {
     modifier: "helium",
     size: "nano",
     rounded: true,
-    icon: true,
+    fit: "icon",
     type: "button"
   }, props), /*#__PURE__*/React.createElement(QuestionMarkIcon, {
     width: "10",
