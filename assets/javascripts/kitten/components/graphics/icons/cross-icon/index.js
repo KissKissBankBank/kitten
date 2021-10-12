@@ -22,6 +22,7 @@ export const CrossIcon = ({ color, title, width, height, size, ...props }) => {
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        {...props}
       >
         <path
           d="M7 7L17 17"
@@ -38,20 +39,37 @@ export const CrossIcon = ({ color, title, width, height, size, ...props }) => {
       </svg>
     )
   }
-
+  else if (size === 'big') {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 8 8"
+        width={computed.width}
+        height={computed.height}
+        fill={color}
+        {...props}
+      >
+        {title && <title>{title}</title>}
+        <path d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z" />
+        <path d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z" />
+      </svg>
+    )
+  }
   return (
-    <svg
+    <svg 
+      width="17"
+      height="18"
+      fill="none" 
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 8 8"
-      width={computed.width}
-      height={computed.height}
-      fill={color}
       {...props}
     >
-      {title && <title>{title}</title>}
-      <path d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z" />
-      <path d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z" />
-    </svg>
+      <path 
+        fill={color}
+        fill-rule="evenodd"
+        clip-rule="evenodd" 
+        d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+      />
+      </svg>
   )
 }
 
@@ -67,3 +85,5 @@ CrossIcon.defaultProps = {
   color: COLORS.font1,
   size: 'normal',
 }
+
+

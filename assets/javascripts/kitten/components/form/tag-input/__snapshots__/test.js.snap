@@ -36,17 +36,16 @@ exports[`<TagInput /> should match its disabled snapshot with disabled props 1`]
            de la liste.
         </span>
         <svg
-          fill="currentColor"
-          height={8}
-          viewBox="0 0 8 8"
-          width={8}
+          fill="none"
+          height="18"
+          width="17"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
-          />
-          <path
-            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+            clip-rule="evenodd"
+            d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+            fill="currentColor"
+            fill-rule="evenodd"
           />
         </svg>
       </button>
@@ -73,17 +72,16 @@ exports[`<TagInput /> should match its disabled snapshot with disabled props 1`]
            de la liste.
         </span>
         <svg
-          fill="currentColor"
-          height={8}
-          viewBox="0 0 8 8"
-          width={8}
+          fill="none"
+          height="18"
+          width="17"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
-          />
-          <path
-            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+            clip-rule="evenodd"
+            d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+            fill="currentColor"
+            fill-rule="evenodd"
           />
         </svg>
       </button>
@@ -110,17 +108,16 @@ exports[`<TagInput /> should match its disabled snapshot with disabled props 1`]
            de la liste.
         </span>
         <svg
-          fill="currentColor"
-          height={8}
-          viewBox="0 0 8 8"
-          width={8}
+          fill="none"
+          height="18"
+          width="17"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
-          />
-          <path
-            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+            clip-rule="evenodd"
+            d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+            fill="currentColor"
+            fill-rule="evenodd"
           />
         </svg>
       </button>
@@ -186,17 +183,16 @@ exports[`<TagInput /> should match its disabled snapshot with objects on initial
            de la liste.
         </span>
         <svg
-          fill="currentColor"
-          height={8}
-          viewBox="0 0 8 8"
-          width={8}
+          fill="none"
+          height="18"
+          width="17"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
-          />
-          <path
-            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+            clip-rule="evenodd"
+            d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+            fill="currentColor"
+            fill-rule="evenodd"
           />
         </svg>
       </button>
@@ -223,17 +219,16 @@ exports[`<TagInput /> should match its disabled snapshot with objects on initial
            de la liste.
         </span>
         <svg
-          fill="currentColor"
-          height={8}
-          viewBox="0 0 8 8"
-          width={8}
+          fill="none"
+          height="18"
+          width="17"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
-          />
-          <path
-            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+            clip-rule="evenodd"
+            d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+            fill="currentColor"
+            fill-rule="evenodd"
           />
         </svg>
       </button>
@@ -260,17 +255,16 @@ exports[`<TagInput /> should match its disabled snapshot with objects on initial
            de la liste.
         </span>
         <svg
-          fill="currentColor"
-          height={8}
-          viewBox="0 0 8 8"
-          width={8}
+          fill="none"
+          height="18"
+          width="17"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
-          />
-          <path
-            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+            clip-rule="evenodd"
+            d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+            fill="currentColor"
+            fill-rule="evenodd"
           />
         </svg>
       </button>
@@ -297,17 +291,16 @@ exports[`<TagInput /> should match its disabled snapshot with objects on initial
            de la liste.
         </span>
         <svg
-          fill="currentColor"
-          height={8}
-          viewBox="0 0 8 8"
-          width={8}
+          fill="none"
+          height="18"
+          width="17"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
-          />
-          <path
-            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+            clip-rule="evenodd"
+            d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+            fill="currentColor"
+            fill-rule="evenodd"
           />
         </svg>
       </button>
@@ -421,17 +414,16 @@ exports[`<TagInput /> should match its snapshot with props 1`] = `
            de la liste.
         </span>
         <svg
-          fill="currentColor"
-          height={8}
-          viewBox="0 0 8 8"
-          width={8}
+          fill="none"
+          height="18"
+          width="17"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
-          />
-          <path
-            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+            clip-rule="evenodd"
+            d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+            fill="currentColor"
+            fill-rule="evenodd"
           />
         </svg>
       </button>
@@ -458,17 +450,16 @@ exports[`<TagInput /> should match its snapshot with props 1`] = `
            de la liste.
         </span>
         <svg
-          fill="currentColor"
-          height={8}
-          viewBox="0 0 8 8"
-          width={8}
+          fill="none"
+          height="18"
+          width="17"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
-          />
-          <path
-            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+            clip-rule="evenodd"
+            d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+            fill="currentColor"
+            fill-rule="evenodd"
           />
         </svg>
       </button>
@@ -495,17 +486,16 @@ exports[`<TagInput /> should match its snapshot with props 1`] = `
            de la liste.
         </span>
         <svg
-          fill="currentColor"
-          height={8}
-          viewBox="0 0 8 8"
-          width={8}
+          fill="none"
+          height="18"
+          width="17"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
-          />
-          <path
-            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+            clip-rule="evenodd"
+            d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+            fill="currentColor"
+            fill-rule="evenodd"
           />
         </svg>
       </button>

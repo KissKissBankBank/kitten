@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
-import { CloseButton } from '../../../components/molecules/buttons/close-button'
+import { CrossIcon } from '../../../components/graphics/icons/cross-icon'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
@@ -15,6 +15,8 @@ const fadeOut = keyframes`
 
 const AlertWrapper = styled.div`
   ${TYPOGRAPHY.fontStyles.light};
+  margin: ${pxToRem(10)};
+  border-radius: ${pxToRem(8)};
   position: relative;
   overflow: hidden;
   background-color: ${COLORS.primary5};
@@ -33,8 +35,12 @@ const AlertWrapper = styled.div`
   }
 
   .k-Alert__button {
+    display: flex;
     flex: 0 0 auto;
     transition: all 0.2s ease;
+    align-self: center;
+    padding-right: ${pxToRem(20)};
+    cursor: pointer;
 
     svg,
     svg path {
@@ -134,11 +140,13 @@ export const Alert = ({
         <div className="k-Alert__text">{children}</div>
 
         {closeButton && (
-          <CloseButton
-            modifier="carbon"
-            closeButtonLabel={closeButtonLabel}
-            className="k-Alert__button"
+          <CrossIcon
+            color="currentColor"
             onClick={() => setMounted(false)}
+            title={closeButtonLabel}
+            className="k-Alert__button"
+            width={12}
+            height={12}
           />
         )}
       </>

@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Alert`: Improve new UI.
+- Fix: `CrossIcon`: New UI.
+
 ## [5.0.1] - 2021-10-12
 
 Fixes:
