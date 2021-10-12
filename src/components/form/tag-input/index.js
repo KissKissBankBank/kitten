@@ -145,17 +145,19 @@ var TagInput = function TagInput(_ref) {
     "aria-placeholder": placeholder,
     onKeyDown: onKeyDown,
     className: "k-Form-TagList__input"
-  })), itemsList.map(function (item) {
+  })), itemsList.map(function (item, index) {
     var itemValue = (item === null || item === void 0 ? void 0 : item.value) || item;
     var itemDisabled = (item === null || item === void 0 ? void 0 : item.disabled) || false;
     return /*#__PURE__*/_react.default.createElement("li", {
-      key: itemValue,
+      key: itemValue + index,
       className: (0, _classnames.default)('k-Form-TagList__item k-Form-TagList__tagItem', {
         'k-Form-TagList__tagItem--disabled': itemDisabled
       })
     }, /*#__PURE__*/_react.default.createElement("span", {
       className: "k-Form-TagList__tag"
-    }, itemValue), /*#__PURE__*/_react.default.createElement("button", {
+    }, itemValue, itemDisabled && /*#__PURE__*/_react.default.createElement("span", {
+      className: "k-u-a11y-visuallyHidden"
+    }, "\xC9l\xE9ment d\xE9sactiv\xE9.")), /*#__PURE__*/_react.default.createElement("button", {
       className: "k-Form-TagList__button",
       type: "button",
       disabled: itemDisabled || disabled,
@@ -172,10 +174,10 @@ var TagInput = function TagInput(_ref) {
     "aria-live": "polite",
     "aria-atomic": "true",
     "aria-relevant": "additions removals"
-  }, itemsList.map(function (item) {
+  }, itemsList.map(function (item, index) {
     var itemValue = (item === null || item === void 0 ? void 0 : item.value) || item;
     return /*#__PURE__*/_react.default.createElement("li", {
-      key: "visuallyHidden-".concat(itemValue)
+      key: "visuallyHidden-".concat(itemValue + index)
     }, itemValue);
   })));
 };
@@ -189,7 +191,7 @@ TagInput.defaultProps = {
   onChange: function onChange() {},
   disabled: false,
   size: 'regular',
-  variant: 'andromeda'
+  variant: 'orion'
 };
 TagInput.propTypes = {
   id: _propTypes.default.string.isRequired,

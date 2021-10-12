@@ -117,7 +117,7 @@ export var BasicUploader = function BasicUploader(_ref) {
     onChange: onFileInputChange,
     disabled: internalDisabled || internalStatus === 'loading'
   })), /*#__PURE__*/React.createElement(Button, _extends({
-    fluid: true
+    fit: "fluid"
   }, buttonProps, {
     as: "label",
     htmlFor: id,

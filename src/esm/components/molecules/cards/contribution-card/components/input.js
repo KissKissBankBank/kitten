@@ -17,7 +17,6 @@ export var Input = function Input(_ref) {
       wrapperProps: {
         className: 'k-ContributionCard__inputWrapper'
       },
-      variant: "orion",
       valid: valid,
       className: classNames('k-ContributionCard__input', className),
       onChange: function onChange(event) {

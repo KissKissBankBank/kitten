@@ -173,5 +173,5 @@ Status.defaultProps = {
   waiting: false,
   disabled: false,
   bridge: false,
-  variant: 'andromeda'
+  variant: 'orion'
 };

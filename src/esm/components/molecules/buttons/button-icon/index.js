@@ -21,7 +21,7 @@ export var ButtonIcon = function ButtonIcon(_ref) {
     }),
     size: size
   }, others, {
-    icon: true
+    fit: "icon"
   }));
 };
 ButtonIcon.defaultProps = {

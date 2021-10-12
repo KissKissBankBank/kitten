@@ -91,7 +91,7 @@ ProgressRing.defaultProps = {
   value: 0,
   width: 50,
   strokeWidth: 5,
-  variant: 'andromeda',
+  variant: 'orion',
   animationSpeed: 1.4
 };
 ProgressRing.propTypes = {
