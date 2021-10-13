@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import { CrossIcon } from '../../../components/graphics/icons/cross-icon'
+import { IconBadge } from '../../../components/atoms/icon-badge'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
@@ -30,8 +31,13 @@ const AlertWrapper = styled.div`
     font-size: ${stepToRem(-1)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      text-align: center;
+      display: flex;
+      justify-content: center;
     }
+  }
+
+  .k-Alert__iconBadge {
+    margin-right: ${pxToRem(20)};
   }
 
   .k-Alert__button {
@@ -137,7 +143,16 @@ export const Alert = ({
       {...others}
     >
       <>
-        <div className="k-Alert__text">{children}</div>
+        <div className="k-Alert__text">
+          <IconBadge className="k-Alert__iconBadge" size="tiny">
+            <CrossIcon
+              width={12}
+              height={12}
+              color={COLORS.background1}
+            />
+          </IconBadge>
+          {children}
+        </div>
 
         {closeButton && (
           <CrossIcon
