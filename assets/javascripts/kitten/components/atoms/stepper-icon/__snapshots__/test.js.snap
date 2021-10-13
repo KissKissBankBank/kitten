@@ -2,9 +2,10 @@
 
 exports[`<StepperIcon /> StepperIconDefault matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa iwoGUX k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa djWijN k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
   style={
     Object {
+      "--background-color": "#19b4fa",
       "--border-color": null,
       "--border-style": null,
       "--border-width": null,
@@ -19,9 +20,10 @@ exports[`<StepperIcon /> StepperIconDefault matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> StepperIconInProgress matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa iwoGUX k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa djWijN k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--hasBorderStyles"
   style={
     Object {
+      "--background-color": "#19b4fa",
       "--border-color": null,
       "--border-style": null,
       "--border-width": null,
@@ -55,9 +57,10 @@ exports[`<StepperIcon /> StepperIconInProgress matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> StepperIconValidated matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa iwoGUX k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa djWijN k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
   style={
     Object {
+      "--background-color": "#19b4fa",
       "--border-color": null,
       "--border-style": null,
       "--border-width": null,
@@ -85,9 +88,10 @@ exports[`<StepperIcon /> StepperIconValidated matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> by default matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa iwoGUX k-IconBadge k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa djWijN k-IconBadge k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
   style={
     Object {
+      "--background-color": "#19b4fa",
       "--border-color": null,
       "--border-style": null,
       "--border-width": null,
@@ -102,9 +106,10 @@ exports[`<StepperIcon /> by default matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> state = progress matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa iwoGUX k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa djWijN k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--hasBorderStyles"
   style={
     Object {
+      "--background-color": "#19b4fa",
       "--border-color": null,
       "--border-style": null,
       "--border-width": null,
@@ -138,9 +143,10 @@ exports[`<StepperIcon /> state = progress matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> state = valid matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa iwoGUX k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa djWijN k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
   style={
     Object {
+      "--background-color": "#19b4fa",
       "--border-color": null,
       "--border-style": null,
       "--border-width": null,

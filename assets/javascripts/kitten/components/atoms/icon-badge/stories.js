@@ -23,6 +23,10 @@ export default {
       name: 'disabled',
       control: 'boolean',
     },
+    backgroundColor: {
+      name: 'backgroundColor',
+      control: 'color',
+    },
     valid: {
       name: 'valid',
       control: 'boolean',
@@ -48,6 +52,7 @@ const args = {
   valid: false,
   empty: false,
   size: 'normal',
+  backgroundColor: COLORS.primary1,
   children: <StarIcon color={COLORS.background1} />,
 }
 

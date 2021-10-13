@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `IconBadge`: Add `border` prop style.
+- Feature: `IconBadge`: Add `border` and `backgroundColor` props style.
 
 ## [5.0.2] - 2021-10-13
 
