@@ -342,7 +342,7 @@ export const TagInput = ({
                 <span className="k-u-a11y-visuallyHidden">
                   Retirer {itemValue} de la liste.
                 </span>
-                <CrossIcon color="currentColor" />
+                <CrossIcon width={8} height={8} color="currentColor" />
               </button>
             </li>
           )

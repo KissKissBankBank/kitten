@@ -37,7 +37,9 @@ exports[`<TagInput /> should match its disabled snapshot with disabled props 1`]
         </span>
         <svg
           fill="none"
+          height={8}
           viewBox="0 0 17 18"
+          width={8}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -72,7 +74,9 @@ exports[`<TagInput /> should match its disabled snapshot with disabled props 1`]
         </span>
         <svg
           fill="none"
+          height={8}
           viewBox="0 0 17 18"
+          width={8}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -107,7 +111,9 @@ exports[`<TagInput /> should match its disabled snapshot with disabled props 1`]
         </span>
         <svg
           fill="none"
+          height={8}
           viewBox="0 0 17 18"
+          width={8}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -181,7 +187,9 @@ exports[`<TagInput /> should match its disabled snapshot with objects on initial
         </span>
         <svg
           fill="none"
+          height={8}
           viewBox="0 0 17 18"
+          width={8}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -216,7 +224,9 @@ exports[`<TagInput /> should match its disabled snapshot with objects on initial
         </span>
         <svg
           fill="none"
+          height={8}
           viewBox="0 0 17 18"
+          width={8}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -251,7 +261,9 @@ exports[`<TagInput /> should match its disabled snapshot with objects on initial
         </span>
         <svg
           fill="none"
+          height={8}
           viewBox="0 0 17 18"
+          width={8}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -286,7 +298,9 @@ exports[`<TagInput /> should match its disabled snapshot with objects on initial
         </span>
         <svg
           fill="none"
+          height={8}
           viewBox="0 0 17 18"
+          width={8}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -408,7 +422,9 @@ exports[`<TagInput /> should match its snapshot with props 1`] = `
         </span>
         <svg
           fill="none"
+          height={8}
           viewBox="0 0 17 18"
+          width={8}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -443,7 +459,9 @@ exports[`<TagInput /> should match its snapshot with props 1`] = `
         </span>
         <svg
           fill="none"
+          height={8}
           viewBox="0 0 17 18"
+          width={8}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -478,7 +496,9 @@ exports[`<TagInput /> should match its snapshot with props 1`] = `
         </span>
         <svg
           fill="none"
+          height={8}
           viewBox="0 0 17 18"
+          width={8}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
