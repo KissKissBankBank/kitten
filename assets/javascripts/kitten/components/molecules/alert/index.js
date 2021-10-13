@@ -21,7 +21,7 @@ const AlertWrapper = styled.div`
   position: relative;
   overflow: hidden;
   background-color: ${COLORS.primary5};
-  color: ${COLORS.primary1};
+  color: ${COLORS.font1};
   display: flex;
   align-items: flex-start;
 
@@ -47,6 +47,7 @@ const AlertWrapper = styled.div`
     align-self: center;
     padding-right: ${pxToRem(20)};
     cursor: pointer;
+    color: ${COLORS.primary1};
 
     svg,
     svg path {
@@ -72,18 +73,39 @@ const AlertWrapper = styled.div`
   }
 
   &.k-Alert--success {
-    color: ${COLORS.valid};
     background-color: ${COLORS.tertiary1};
+    
+    .k-Alert__iconBadge {
+      background-color: ${COLORS.valid};
+    }
+    
+    .k-Alert__button {
+      color: ${COLORS.valid};
+    }
   }
 
   &.k-Alert--error {
-    color: ${COLORS.error};
     background-color: ${COLORS.error2};
+    
+    .k-Alert__iconBadge {
+      background-color: ${COLORS.error};
+    }
+
+    .k-Alert__button {
+      color: ${COLORS.error};
+    }
   }
 
   &.k-Alert--warning {
-    color: ${COLORS.warning};
     background-color: ${COLORS.warning2};
+    
+    .k-Alert__iconBadge {
+      background-color: ${COLORS.warning};
+    }
+  
+    .k-Alert__button {
+      color: ${COLORS.warning};
+    }
   }
 
   &.k-Alert--hasCloseButton {
@@ -110,6 +132,7 @@ export const Alert = ({
   closeButtonLabel,
   children,
   onAfterClose,
+  iconSvg,
   ...others
 }) => {
   const [isTrashed, trashIt] = useState(false)
@@ -144,19 +167,16 @@ export const Alert = ({
     >
       <>
         <div className="k-Alert__text">
-          <IconBadge className="k-Alert__iconBadge" size="tiny">
-            <CrossIcon
-              width={12}
-              height={12}
-              color={COLORS.background1}
-            />
-          </IconBadge>
+          <IconBadge
+            className="k-Alert__iconBadge"
+            size="tiny"
+            children={iconSvg}
+          />
           {children}
         </div>
 
         {closeButton && (
           <CrossIcon
-            color="currentColor"
             onClick={() => setMounted(false)}
             title={closeButtonLabel}
             className="k-Alert__button"
@@ -177,6 +197,7 @@ Alert.propTypes = {
   closeButton: PropTypes.bool,
   closeButtonLabel: PropTypes.string,
   onAfterClose: PropTypes.func,
+  iconSvg: PropTypes.node,
 }
 
 Alert.defaultProps = {
@@ -187,4 +208,5 @@ Alert.defaultProps = {
   closeButton: false,
   closeButtonLabel: 'Close',
   onAfterClose: () => {},
+  iconSvg: '',
 }

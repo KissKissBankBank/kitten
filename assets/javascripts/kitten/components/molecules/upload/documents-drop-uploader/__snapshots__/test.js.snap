@@ -246,8 +246,7 @@ Array [
             </span>
             <svg
               fill="none"
-              height="18"
-              width="17"
+              viewBox="0 0 17 18"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -349,8 +348,7 @@ exports[`<DocumentsDropUploader /> should match snapshot with many props 1`] = `
           </span>
           <svg
             fill="none"
-            height="18"
-            width="17"
+            viewBox="0 0 17 18"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

@@ -251,8 +251,9 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 >
   <svg
     fill="none"
-    height="18"
-    width="17"
+    height="8"
+    viewBox="0 0 17 18"
+    width="8"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -516,8 +517,9 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 >
   <svg
     fill="none"
-    height="18"
-    width="17"
+    height="8"
+    viewBox="0 0 17 18"
+    width="8"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
