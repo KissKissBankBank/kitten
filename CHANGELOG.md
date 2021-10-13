@@ -4,7 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `BackingCard`: Rollback Fix button fit.
 - Feature: `Alert`: Improve new UI.
 - Fix: `CrossIcon`: New UI.
 
