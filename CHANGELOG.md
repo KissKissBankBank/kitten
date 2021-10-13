@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `BackingCard`: Rollback Fix button fit.
+## [5.0.2] - 2021-10-13
+
+Fix:
+
+- `BackingCard`: Rollback Fix button fit.
 
 ## [5.0.1] - 2021-10-12
 
