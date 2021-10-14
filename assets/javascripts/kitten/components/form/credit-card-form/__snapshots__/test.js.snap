@@ -20,11 +20,23 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-bwzfXH jxlnwC k-Label k-Label--normal"
+            className="sc-bwzfXH bvjRjH k-Label k-Label--normal"
             htmlFor="frmCCNum"
             onClick={[Function]}
           >
             Numéro de carte
+            <span
+              className="k-Label--pill"
+              style={
+                Object {
+                  "--pill-color": null,
+                  "--pill-height": null,
+                  "--pill-width": null,
+                }
+              }
+            >
+              •
+            </span>
           </label>
         </div>
       </div>
@@ -68,11 +80,23 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-bwzfXH jxlnwC k-Label k-Label--normal"
+            className="sc-bwzfXH bvjRjH k-Label k-Label--normal"
             htmlFor="frmCCExp"
             onClick={[Function]}
           >
             Date de validité
+            <span
+              className="k-Label--pill"
+              style={
+                Object {
+                  "--pill-color": null,
+                  "--pill-height": null,
+                  "--pill-width": null,
+                }
+              }
+            >
+              •
+            </span>
           </label>
         </div>
       </div>
@@ -121,11 +145,23 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-bwzfXH jxlnwC k-Label k-Label--normal"
+            className="sc-bwzfXH bvjRjH k-Label k-Label--normal"
             htmlFor="frmCCCVC"
             onClick={[Function]}
           >
             Cryptogramme visuel
+            <span
+              className="k-Label--pill"
+              style={
+                Object {
+                  "--pill-color": null,
+                  "--pill-height": null,
+                  "--pill-width": null,
+                }
+              }
+            >
+              •
+            </span>
           </label>
         </div>
       </div>

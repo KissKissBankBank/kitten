@@ -17,11 +17,23 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa kJwiAq k-Label k-Label--normal"
+          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
           htmlFor="autocomplete"
           onClick={[Function]}
         >
           Label
+          <span
+            className="k-Label--pill"
+            style={
+              Object {
+                "--pill-color": null,
+                "--pill-height": null,
+                "--pill-width": null,
+              }
+            }
+          >
+            •
+          </span>
         </label>
       </div>
     </div>
@@ -70,11 +82,23 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa kJwiAq k-Label k-Label--normal"
+          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
           Label
+          <span
+            className="k-Label--pill"
+            style={
+              Object {
+                "--pill-color": null,
+                "--pill-height": null,
+                "--pill-width": null,
+              }
+            }
+          >
+            •
+          </span>
         </label>
       </div>
       <div
@@ -169,11 +193,23 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa kJwiAq k-Label k-Label--normal"
+          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
           Label
+          <span
+            className="k-Label--pill"
+            style={
+              Object {
+                "--pill-color": null,
+                "--pill-height": null,
+                "--pill-width": null,
+              }
+            }
+          >
+            •
+          </span>
         </label>
       </div>
       <div
@@ -254,11 +290,23 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa kJwiAq k-Label k-Label--normal"
+          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
           Label
+          <span
+            className="k-Label--pill"
+            style={
+              Object {
+                "--pill-color": null,
+                "--pill-height": null,
+                "--pill-width": null,
+              }
+            }
+          >
+            •
+          </span>
         </label>
       </div>
       <div
@@ -350,11 +398,23 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa kJwiAq k-Label k-Label--normal"
+          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
           Label
+          <span
+            className="k-Label--pill"
+            style={
+              Object {
+                "--pill-color": null,
+                "--pill-height": null,
+                "--pill-width": null,
+              }
+            }
+          >
+            •
+          </span>
         </label>
       </div>
       <div
@@ -445,11 +505,23 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa kJwiAq k-Label k-Label--normal"
+          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
           Label
+          <span
+            className="k-Label--pill"
+            style={
+              Object {
+                "--pill-color": null,
+                "--pill-height": null,
+                "--pill-width": null,
+              }
+            }
+          >
+            •
+          </span>
         </label>
       </div>
       <div
@@ -573,11 +645,23 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa kJwiAq k-Label k-Label--normal"
+          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
           Label
+          <span
+            className="k-Label--pill"
+            style={
+              Object {
+                "--pill-color": null,
+                "--pill-height": null,
+                "--pill-width": null,
+              }
+            }
+          >
+            •
+          </span>
         </label>
       </div>
       <div
@@ -687,11 +771,23 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa kJwiAq k-Label k-Label--normal"
+          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
           htmlFor="option-a"
           onClick={[Function]}
         >
           Label
+          <span
+            className="k-Label--pill"
+            style={
+              Object {
+                "--pill-color": null,
+                "--pill-height": null,
+                "--pill-width": null,
+              }
+            }
+          >
+            •
+          </span>
         </label>
       </div>
     </div>

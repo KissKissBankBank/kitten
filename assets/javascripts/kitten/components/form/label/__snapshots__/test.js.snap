@@ -2,19 +2,43 @@
 
 exports[`<Label /> should match its empty snapshot 1`] = `
 <label
-  className="sc-bdVaJa kJwiAq k-Label k-Label--normal"
+  className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
   onClick={[Function]}
 >
   Label
+  <span
+    className="k-Label--pill"
+    style={
+      Object {
+        "--pill-color": null,
+        "--pill-height": null,
+        "--pill-width": null,
+      }
+    }
+  >
+    •
+  </span>
 </label>
 `;
 
 exports[`<Label /> should match its propped snapshot 1`] = `
 <span
-  className="sc-bdVaJa kJwiAq k-Label k-Label--tiny k-Label--withoutPointerEvents"
+  className="sc-bdVaJa jxfNPT k-Label k-Label--tiny k-Label--withoutPointerEvents"
   htmlFor="customId"
   onClick={[Function]}
 >
   Custom form label
+  <span
+    className="k-Label--pill"
+    style={
+      Object {
+        "--pill-color": "#ff7800",
+        "--pill-height": "0.4375rem",
+        "--pill-width": "0.4375rem",
+      }
+    }
+  >
+    •
+  </span>
 </span>
 `;

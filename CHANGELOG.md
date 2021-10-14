@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Label`: Add `pill` props.
+ 
 ## [5.0.2] - 2021-10-13
 
 Fix:

@@ -10,12 +10,24 @@ exports[`<DropdownPhoneSelect /> should match its snapshot with props 1`] = `
   }
 >
   <label
-    className="sc-bdVaJa kJwiAq k-Label k-Form-DropdownSelectWithInput__label k-u-margin-bottom-single k-Label--normal"
+    className="sc-bdVaJa jxfNPT k-Label k-Form-DropdownSelectWithInput__label k-u-margin-bottom-single k-Label--normal"
     htmlFor="dropdown-phone-select-test"
     id="dropdown-phone-select-test_element-label"
     onClick={[Function]}
   >
     DropdownPhoneSelect test
+    <span
+      className="k-Label--pill"
+      style={
+        Object {
+          "--pill-color": null,
+          "--pill-height": null,
+          "--pill-width": null,
+        }
+      }
+    >
+      •
+    </span>
   </label>
   <div
     className="k-Form-DropdownSelectWithInput__container"

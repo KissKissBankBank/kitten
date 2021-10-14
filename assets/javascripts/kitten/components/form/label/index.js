@@ -31,6 +31,14 @@ const StyledLabel = styled.label`
   &.k-Label--withoutPointerEvents {
     pointer-events: none;
   }
+
+  .k-Label--pill {
+    margin: ${pxToRem(10)};
+    border-radius: 100px;
+    width: var(--pill-width);
+    height: var(--pill-height);
+    color: var(--pill-color);
+  }
 `
 
 export const Label = ({
@@ -41,6 +49,8 @@ export const Label = ({
   size,
   withoutPointerEvents,
   htmlFor,
+  pill,
+  style,
   ...other
 }) => {
   const handleClick = e => {
@@ -62,6 +72,16 @@ export const Label = ({
       {...other}
     >
       {children}
+      <span 
+        className={classNames('k-Label--pill')}
+        style={{
+          '--pill-color': pill?.color ?? null,
+          '--pill-width': 'width' in pill ? pxToRem(pill.width) : null,
+          '--pill-height': 'width' in pill ? pxToRem(pill.width) : null,
+        }}
+      >
+        •
+      </span>
     </StyledLabel>
   )
 }
@@ -71,10 +91,15 @@ Label.defaultProps = {
   focusId: null,
   size: 'normal',
   withoutPointerEvents: false,
+  pill: {},
 }
 
 Label.propTypes = {
   focusId: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   size: PropTypes.oneOf([null, undefined, 'normal', 'tiny', 'micro']),
   withoutPointerEvents: PropTypes.bool,
+  pill: PropTypes.shape({
+    width: PropTypes.number,
+    color: PropTypes.node,
+  }),
 }

@@ -6,10 +6,22 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
   disabled={false}
 >
   <legend
-    className="sc-bwzfXH jxlnwC k-Label k-Form-CheckboxSet__label k-Label--normal"
+    className="sc-bwzfXH bvjRjH k-Label k-Form-CheckboxSet__label k-Label--normal"
     onClick={[Function]}
   >
     Label
+    <span
+      className="k-Label--pill"
+      style={
+        Object {
+          "--pill-color": null,
+          "--pill-height": null,
+          "--pill-width": null,
+        }
+      }
+    >
+      •
+    </span>
   </legend>
   <div
     className="sc-bdVaJa huwsVS k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
@@ -75,10 +87,22 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
   disabled={false}
 >
   <legend
-    className="sc-bwzfXH jxlnwC k-Label k-Form-CheckboxSet__label k-Label--normal"
+    className="sc-bwzfXH bvjRjH k-Label k-Form-CheckboxSet__label k-Label--normal"
     onClick={[Function]}
   >
     Label test
+    <span
+      className="k-Label--pill"
+      style={
+        Object {
+          "--pill-color": null,
+          "--pill-height": null,
+          "--pill-width": null,
+        }
+      }
+    >
+      •
+    </span>
   </legend>
   <div
     className="sc-bdVaJa huwsVS k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"

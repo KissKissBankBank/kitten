@@ -17,6 +17,11 @@ describe('<Label />', () => {
           focusId="customId"
           withoutPointerEvents
           tag="span"
+          pill={{
+            width: 7,
+            height: 7,
+            color: '#ff7800',
+          }}
         />,
       )
       .toJSON()
