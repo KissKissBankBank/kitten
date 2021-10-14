@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
-import { CrossIcon } from '../../../components/graphics/icons/cross-icon'
+import { CrossIcon } from '../../../components/graphics/icons-next/cross-icon'
 import { IconBadge } from '../../../components/atoms/icon-badge'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'

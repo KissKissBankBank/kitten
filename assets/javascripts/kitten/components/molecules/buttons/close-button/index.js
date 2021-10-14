@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button } from '../../../../components/molecules/buttons/button'
 import { CrossIcon } from '../../../../components/graphics/icons/cross-icon'
-import COLORS from '../../../../constants/colors-config'
 
 export const CloseButton = ({
   closeButtonLabel,
@@ -16,7 +15,7 @@ export const CloseButton = ({
     modifier={buttonModifier}
     {...others}
   >
-    <CrossIcon width="8" height="8" color={COLORS.font1} />
+    <CrossIcon width="8" height="8" />
   </Button>
 )
 
