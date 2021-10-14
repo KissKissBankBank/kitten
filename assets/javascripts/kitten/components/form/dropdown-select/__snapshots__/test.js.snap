@@ -10,7 +10,7 @@ exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
   }
 >
   <label
-    className="sc-bdVaJa jxfNPT k-Label k-Form-Dropdown__label k-u-margin-bottom-single k-Label--normal"
+    className="sc-bdVaJa ciAFWW k-Label k-Form-Dropdown__label k-u-margin-bottom-single k-Label--normal"
     htmlFor="dropdown-select-test"
     id="dropdown-select-test_element-label"
     onClick={[Function]}

@@ -20,7 +20,7 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-bwzfXH bvjRjH k-Label k-Label--normal"
+            className="sc-bwzfXH cMCtnU k-Label k-Label--normal"
             htmlFor="frmCCNum"
             onClick={[Function]}
           >
@@ -80,7 +80,7 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-bwzfXH bvjRjH k-Label k-Label--normal"
+            className="sc-bwzfXH cMCtnU k-Label k-Label--normal"
             htmlFor="frmCCExp"
             onClick={[Function]}
           >
@@ -145,7 +145,7 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-bwzfXH bvjRjH k-Label k-Label--normal"
+            className="sc-bwzfXH cMCtnU k-Label k-Label--normal"
             htmlFor="frmCCCVC"
             onClick={[Function]}
           >

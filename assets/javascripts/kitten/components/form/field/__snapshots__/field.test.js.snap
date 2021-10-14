@@ -17,7 +17,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
+          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
           htmlFor="autocomplete"
           onClick={[Function]}
         >
@@ -82,7 +82,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
+          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -193,7 +193,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
+          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -290,7 +290,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
+          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -398,7 +398,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
+          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -505,7 +505,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
+          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -645,7 +645,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
+          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -771,7 +771,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa jxfNPT k-Label k-Label--normal"
+          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
           htmlFor="option-a"
           onClick={[Function]}
         >

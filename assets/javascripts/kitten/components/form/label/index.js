@@ -34,7 +34,6 @@ const StyledLabel = styled.label`
 
   .k-Label--pill {
     margin: ${pxToRem(10)};
-    border-radius: 100px;
     width: var(--pill-width);
     height: var(--pill-height);
     color: var(--pill-color);
