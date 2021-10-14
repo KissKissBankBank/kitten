@@ -66,6 +66,7 @@ const StyledButton = styled.button`
   cursor: pointer;
 
   border-radius: var(--Button-border-radius, 0);
+  min-width: var(--Button-min-width, 0);
 
   &:disabled,
   &.k-Button--disabled {
@@ -91,37 +92,31 @@ const StyledButton = styled.button`
 
   &.k-Button--nano {
     --Button-dimension: ${pxToRem(20)};
-    --Button-min-width: ${pxToRem(100)};
     --Button-padding: 0 ${pxToRem(6)};
     font-size: ${stepToRem(-2)};
   }
 
   &.k-Button--micro {
     --Button-dimension: ${pxToRem(30)};
-    --Button-min-width: ${pxToRem(130)};
     --Button-padding: ${pxToRem(5)} ${pxToRem(10)};
     font-size: ${stepToRem(-2)};
   }
 
   &.k-Button--tiny {
     --Button-dimension: ${pxToRem(40)};
-    --Button-min-width: ${pxToRem(160)};
     --Button-padding: ${pxToRem(7)} ${pxToRem(20)};
   }
 
   &.k-Button--regular {
     --Button-dimension: ${pxToRem(50)};
-    --Button-min-width: ${pxToRem(200)};
     --Button-padding: ${pxToRem(10)} ${pxToRem(30)};
   }
 
   &.k-Button--big {
     --Button-dimension: ${pxToRem(50)};
-    --Button-min-width: ${pxToRem(200)};
     --Button-padding: ${pxToRem(10)} ${pxToRem(30)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      --Button-min-width: ${pxToRem(220)};
       --Button-dimension: ${pxToRem(70)};
       --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
       font-size: ${stepToRem(0)};
@@ -130,11 +125,9 @@ const StyledButton = styled.button`
 
   &.k-Button--huge {
     --Button-dimension: ${pxToRem(70)};
-    --Button-min-width: ${pxToRem(200)};
     --Button-padding: ${pxToRem(10)} ${pxToRem(10)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      --Button-min-width: ${pxToRem(220)};
       --Button-dimension: ${pxToRem(80)};
       --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
       font-size: ${stepToRem(0)};
@@ -143,11 +136,9 @@ const StyledButton = styled.button`
 
   &.k-Button--giant {
     --Button-dimension: ${pxToRem(70)};
-    --Button-min-width: ${pxToRem(200)};
     --Button-padding: ${pxToRem(10)} ${pxToRem(10)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      --Button-min-width: ${pxToRem(220)};
       --Button-dimension: ${pxToRem(90)};
       font-size: ${stepToRem(0)};
       --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
@@ -156,8 +147,33 @@ const StyledButton = styled.button`
 
   /* BESPOKE FIT */
 
-  &.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
-    min-width: var(--Button-min-width);
+  &.k-Button--fit-min-width {
+    &.k-Button--nano {
+      --Button-min-width: ${pxToRem(100)};
+    }
+
+    &.k-Button--micro {
+      --Button-min-width: ${pxToRem(130)};
+    }
+
+    &.k-Button--tiny {
+      --Button-min-width: ${pxToRem(160)};
+    }
+
+    &.k-Button--regular,
+    &.k-Button--big,
+    &.k-Button--huge,
+    &.k-Button--giant {
+      --Button-min-width: ${pxToRem(200)};
+    }
+
+    &.k-Button--big,
+    &.k-Button--huge,
+    &.k-Button--giant {
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        --Button-min-width: ${pxToRem(220)};
+      }
+    }
   }
 
   &.k-Button--fit-icon {
@@ -174,15 +190,32 @@ const StyledButton = styled.button`
   /* BESPOKE FIT for mobile */
 
   @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-    &[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
-      min-width: initial !important;
+    &[class*='k-Button--mobile-fit'] {
+      min-width: var(--Button-min-width-mobile, 0);
       padding: var(--Button-padding);
       width: initial;
       height: initial;
       width: initial;
 
       &.k-Button--mobile-fit-min-width {
-        min-width: var(--Button-min-width) !important;
+        &.k-Button--nano {
+          --Button-min-width-mobile: ${pxToRem(100)};
+        }
+
+        &.k-Button--micro {
+          --Button-min-width-mobile: ${pxToRem(130)};
+        }
+
+        &.k-Button--tiny {
+          --Button-min-width-mobile: ${pxToRem(160)};
+        }
+
+        &.k-Button--regular,
+        &.k-Button--big,
+        &.k-Button--huge,
+        &.k-Button--giant {
+          --Button-min-width-mobile: ${pxToRem(200)};
+        }
       }
 
       &.k-Button--mobile-fit-icon {
@@ -272,6 +305,17 @@ export const Button = ({
 
   const internalTag = as || tag
 
+  const fitClass = (() => {
+    switch(true) {
+      case fluid && !icon:
+        return 'fluid'
+      case icon && !fluid:
+        return 'icon'
+      default:
+        return fit
+    }
+  })()
+
   return (
     <StyledButton
       className={classNames(
@@ -280,12 +324,10 @@ export const Button = ({
         `k-Button--${actualSize}`,
         `k-Button--${modifier}`,
         `k-Button--${variant}`,
-        `k-Button--fit-${fit}`,
-        `k-Button--mobile-fit-${mobileFit || 'none'}`,
+        `k-Button--fit-${fitClass}`,
         {
+          [`k-Button--mobile-fit-${mobileFit}`]: !!mobileFit,
           'k-Button--disabled': disabled,
-          'k-Button--fit-fluid': fluid && !icon,
-          'k-Button--fit-icon': icon && !fluid,
           'k-Button--rounded': rounded,
         },
       )}

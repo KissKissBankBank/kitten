@@ -100,7 +100,7 @@ exports[`<ImageDropUploader /> should match snapshot with error 1`] = `
     </div>
     <button
       aria-label="Cancel"
-      className="sc-bdVaJa bhUvla k-Button k-ImageDropUploader__manager__cancelButton k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--fit-icon k-Button--mobile-fit-none"
+      className="sc-bdVaJa fEeMPo k-Button k-ImageDropUploader__manager__cancelButton k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--fit-icon"
       disabled={false}
       onClick={[Function]}
       style={
