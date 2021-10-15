@@ -16,7 +16,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
     </span>
   </div>
   <span
-    className="sc-bwzfXH gdarCU k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
+    className="sc-bwzfXH dQrceg k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon"
     disabled={null}
     style={
       Object {
@@ -62,7 +62,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
     </span>
   </div>
   <span
-    className="sc-bwzfXH ekeqqG k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--orion k-Button--fit-content k-Button--mobile-fit-none"
+    className="sc-bwzfXH dSBgpU k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--orion k-Button--fit-content"
     disabled={null}
     style={
       Object {
@@ -97,7 +97,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
     </span>
   </div>
   <span
-    className="sc-bwzfXH gdarCU k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
+    className="sc-bwzfXH dQrceg k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon"
     disabled={null}
     style={
       Object {
@@ -143,7 +143,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
     </span>
   </div>
   <span
-    className="sc-bwzfXH gdarCU k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon k-Button--mobile-fit-none"
+    className="sc-bwzfXH dQrceg k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon"
     disabled={null}
     style={
       Object {
@@ -189,7 +189,7 @@ exports[`<TextCopy /> should match snapshot with variant etc. 1`] = `
     </span>
   </div>
   <span
-    className="sc-bwzfXH ekeqqG k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--orion k-Button--fit-content k-Button--mobile-fit-none"
+    className="sc-bwzfXH dSBgpU k-Button k-TextCopy__buttonTextButton k-Button--regular k-Button--helium k-Button--orion k-Button--fit-content"
     disabled={null}
     style={
       Object {

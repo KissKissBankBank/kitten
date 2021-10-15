@@ -66,6 +66,7 @@ const StyledButton = styled.button`
   cursor: pointer;
 
   border-radius: var(--Button-border-radius, 0);
+  min-width: 0;
 
   &:disabled,
   &.k-Button--disabled {
@@ -149,14 +150,14 @@ const StyledButton = styled.button`
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       --Button-min-width: ${pxToRem(220)};
       --Button-dimension: ${pxToRem(90)};
-      font-size: ${stepToRem(0)};
       --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
+      font-size: ${stepToRem(0)};
     }
   }
 
   /* BESPOKE FIT */
 
-  &.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+  &.k-Button--fit-min-width {
     min-width: var(--Button-min-width);
   }
 
@@ -174,7 +175,7 @@ const StyledButton = styled.button`
   /* BESPOKE FIT for mobile */
 
   @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-    &[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+    &[class*='k-Button--mobile-fit'] {
       min-width: initial !important;
       padding: var(--Button-padding);
       width: initial;
@@ -272,6 +273,17 @@ export const Button = ({
 
   const internalTag = as || tag
 
+  const fitClass = (() => {
+    switch(true) {
+      case fluid && !icon:
+        return 'fluid'
+      case icon && !fluid:
+        return 'icon'
+      default:
+        return fit
+    }
+  })()
+
   return (
     <StyledButton
       className={classNames(
@@ -280,12 +292,10 @@ export const Button = ({
         `k-Button--${actualSize}`,
         `k-Button--${modifier}`,
         `k-Button--${variant}`,
-        `k-Button--fit-${fit}`,
-        `k-Button--mobile-fit-${mobileFit || 'none'}`,
+        `k-Button--fit-${fitClass}`,
         {
+          [`k-Button--mobile-fit-${mobileFit}`]: !!mobileFit,
           'k-Button--disabled': disabled,
-          'k-Button--fit-fluid': fluid && !icon,
-          'k-Button--fit-icon': icon && !fluid,
           'k-Button--rounded': rounded,
         },
       )}

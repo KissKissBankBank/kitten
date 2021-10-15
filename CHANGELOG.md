@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `Label`: Add `dot` props.
- 
+
 ## [5.0.2] - 2021-10-13
 
 Fix:
@@ -48,7 +48,6 @@ Fixes:
 
 - `TagInput`: Remove console warning.
 - `TagInput`: Add accessible information for disabled items.
-
 
 ## [4.14.1] - 2021-10-08
 
