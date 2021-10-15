@@ -177,6 +177,7 @@ export const Alert = ({
 
         {closeButton && (
           <CrossIcon
+            role="button"
             onClick={() => setMounted(false)}
             title={closeButtonLabel}
             className="k-Alert__button"
