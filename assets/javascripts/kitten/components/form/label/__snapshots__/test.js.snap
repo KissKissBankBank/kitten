@@ -29,7 +29,7 @@ exports[`<Label /> should match its propped snapshot 1`] = `
     className="k-Label--dot"
     style={
       Object {
-        "--dot-background-color": null,
+        "--dot-background-color": "#ff7800",
         "--dot-width": "0.4375rem",
       }
     }

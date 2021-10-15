@@ -20,7 +20,7 @@ describe('<Label />', () => {
           dot={{
             width: 7,
             height: 7,
-            color: '#ff7800',
+            backgroundColor: '#ff7800',
           }}
         />,
       )
