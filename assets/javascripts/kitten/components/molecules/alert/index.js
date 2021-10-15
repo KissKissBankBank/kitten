@@ -44,10 +44,8 @@ const AlertWrapper = styled.div`
     display: flex;
     flex: 0 0 auto;
     transition: all 0.2s ease;
-    align-self: stretch;
-    align-items: center;
+    align-self: center;
     padding-right: ${pxToRem(20)};
-    cursor: pointer;
     color: ${COLORS.primary1};
 
     svg,
@@ -176,7 +174,7 @@ export const Alert = ({
               children={icon}
               border={{
                 width: 2,
-                color: {iconBadgeBorderColor},
+                color: iconBadgeBorderColor,
                 style: 'solid',
               }}
             />
@@ -186,6 +184,7 @@ export const Alert = ({
 
         {closeButton && (
           <CrossIconNext
+            role="button"
             onClick={() => setMounted(false)}
             title={closeButtonLabel}
             className="k-Alert__button k-u-reset-button"
@@ -207,7 +206,7 @@ Alert.propTypes = {
   closeButtonLabel: PropTypes.string,
   onAfterClose: PropTypes.func,
   icon: PropTypes.node,
-  iconBadgeBorderColor: PropTypes.string
+  iconBadgeBorderColor: PropTypes.string,
 }
 
 Alert.defaultProps = {
@@ -219,5 +218,5 @@ Alert.defaultProps = {
   closeButtonLabel: 'Close',
   onAfterClose: () => {},
   icon: '',
-  iconBadgeBorderColor: COLORS.primary5,
+  iconBadgeBorderColor: COLORS.primary4,
 }
