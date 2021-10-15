@@ -33,6 +33,7 @@ exports[`<Label /> should match its propped snapshot 1`] = `
         "--dot-width": "0.4375rem",
       }
     }
+    title="champs obligatoire"
   />
 </span>
 `;

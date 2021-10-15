@@ -70,6 +70,7 @@ WithDot.args = {
   dot: {
     width: 7,
     backgroundColor: COLORS.orange,
+    title: 'champs obligatoire',
   }
 }
 

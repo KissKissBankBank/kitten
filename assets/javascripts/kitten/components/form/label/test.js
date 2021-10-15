@@ -21,6 +21,7 @@ describe('<Label />', () => {
             width: 7,
             height: 7,
             backgroundColor: '#ff7800',
+            title: 'champs obligatoire',
           }}
         />,
       )

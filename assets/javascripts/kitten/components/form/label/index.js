@@ -77,6 +77,7 @@ export const Label = ({
       {dot && (
         <span 
           className={classNames('k-Label--dot')}
+          title={dot.title}
           style={{
             '--dot-background-color': dot?.backgroundColor ?? null,
             '--dot-width': 'width' in dot ? pxToRem(dot.width) : null,
@@ -103,5 +104,6 @@ Label.propTypes = {
   dot: PropTypes.shape({
     width: PropTypes.number,
     backgroundColor: PropTypes.node,
+    title: PropTypes.string,
   }),
 }
