@@ -93,8 +93,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DashboardMenu__list--subList {
-  margin-left: 2.1875rem;
-  margin-right: 2.5rem;
+  margin-left: 1.5625rem;
 }
 
 .c0 .k-DashboardMenu__expandable summary {
@@ -121,9 +120,20 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__selectorButton__text,
 .c0 .k-DashboardMenu__item .k-DashboardMenu__item__text,
 .c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title__text {
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  -webkit-flex: 1 0 0;
+  -ms-flex: 1 0 0;
+  flex: 1 0 0;
+}
+
+.c0 .k-DashboardMenu__selectorButton__text,
+.c0 .k-DashboardMenu__item .k-DashboardMenu__item__text,
+.c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title__text,
+.c0 .k-DashboardMenu__selectorButton__text *,
+.c0 .k-DashboardMenu__item .k-DashboardMenu__item__text *,
+.c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title__text * {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 .c0 .k-DashboardMenu__expandable {
@@ -216,8 +226,6 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 2.5rem;
-  height: 2.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -226,6 +234,11 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-flex: 0 0 1.5625rem;
+  -ms-flex: 0 0 1.5625rem;
+  flex: 0 0 1.5625rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
 }
 
 .c0 .k-DashboardMenu__iconWrapper svg {
@@ -275,18 +288,6 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   position: relative;
 }
 
-.c0 .k-DashboardMenu__selectorWrapper[open] .k-DashboardMenu__selectorSummary::before {
-  position: fixed;
-  z-index: 3;
-  background: transparent;
-  content: '';
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  cursor: default;
-}
-
 .c0 .k-DashboardMenu__selectorWrapper[open] .k-DashboardMenu__selectorList {
   -webkit-animation: 0.16s ease-out kqywvJ;
   animation: 0.16s ease-out kqywvJ;
@@ -320,6 +321,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 
 .c0 .k-DashboardMenu__selectorSummary {
   position: relative;
+  z-index: 1;
   list-style: none;
   touch-callout: none;
   -webkit-user-select: none;
@@ -379,6 +381,23 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 
 .c0 .k-DashboardMenu__selectorList .k-DashboardMenu__selectorButton {
   pointer-events: auto;
+}
+
+@media (min-width:640px) {
+  .c0 .k-DashboardMenu__list--subList {
+    margin-left: 2.1875rem;
+    margin-right: 2.5rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c0 .k-DashboardMenu__iconWrapper {
+    -webkit-flex: 0 0 2.5rem;
+    -ms-flex: 0 0 2.5rem;
+    flex: 0 0 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 <nav
