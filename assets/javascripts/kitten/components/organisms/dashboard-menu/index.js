@@ -255,19 +255,6 @@ const StyledDashboardMenu = styled.nav`
   .k-DashboardMenu__selectorWrapper {
     position: relative;
 
-    &[open] .k-DashboardMenu__selectorSummary::before {
-      position: fixed;
-      z-index: 3;
-
-      background: transparent;
-      content: '';
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      cursor: default;
-    }
-
     &[open] .k-DashboardMenu__selectorList {
       animation: 0.16s ease-out ${zoomInAndOpacity};
     }
@@ -299,6 +286,7 @@ const StyledDashboardMenu = styled.nav`
 
   .k-DashboardMenu__selectorSummary {
     position: relative;
+    z-index: 1;
 
     list-style: none;
     touch-callout: none;
@@ -466,16 +454,24 @@ const Selector = ({ data, className, ...props }) => {
   const handleDetails = event => {
     if (event.target.open) {
       window.addEventListener('keydown', handleEsc)
+      window.addEventListener('click', handleClickOutside)
       event.target
         .querySelector('.k-DashboardMenu__selectorButton:first-child')
         .focus()
     } else {
       window.removeEventListener('keydown', handleEsc)
+      window.removeEventListener('click', handleClickOutside)
     }
   }
 
   const handleEsc = event => {
     if (event.key === 'Escape' && detailsElement?.current) {
+      detailsElement.current.open = false
+    }
+  }
+
+  const handleClickOutside = event => {
+    if (detailsElement?.current && !detailsElement.current.contains(event.target)) {
       detailsElement.current.open = false
     }
   }
