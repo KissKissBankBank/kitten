@@ -17,23 +17,20 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
+          className="sc-bdVaJa kadzti k-Label k-Label--normal"
           htmlFor="autocomplete"
           onClick={[Function]}
         >
           Label
           <span
-            className="k-Label--pill"
+            className="k-Label--dot"
             style={
               Object {
-                "--pill-color": null,
-                "--pill-height": null,
-                "--pill-width": null,
+                "--dot-background-color": null,
+                "--dot-width": null,
               }
             }
-          >
-            •
-          </span>
+          />
         </label>
       </div>
     </div>
@@ -82,23 +79,20 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
+          className="sc-bdVaJa kadzti k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
           Label
           <span
-            className="k-Label--pill"
+            className="k-Label--dot"
             style={
               Object {
-                "--pill-color": null,
-                "--pill-height": null,
-                "--pill-width": null,
+                "--dot-background-color": null,
+                "--dot-width": null,
               }
             }
-          >
-            •
-          </span>
+          />
         </label>
       </div>
       <div
@@ -193,23 +187,20 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
+          className="sc-bdVaJa kadzti k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
           Label
           <span
-            className="k-Label--pill"
+            className="k-Label--dot"
             style={
               Object {
-                "--pill-color": null,
-                "--pill-height": null,
-                "--pill-width": null,
+                "--dot-background-color": null,
+                "--dot-width": null,
               }
             }
-          >
-            •
-          </span>
+          />
         </label>
       </div>
       <div
@@ -290,23 +281,20 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
+          className="sc-bdVaJa kadzti k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
           Label
           <span
-            className="k-Label--pill"
+            className="k-Label--dot"
             style={
               Object {
-                "--pill-color": null,
-                "--pill-height": null,
-                "--pill-width": null,
+                "--dot-background-color": null,
+                "--dot-width": null,
               }
             }
-          >
-            •
-          </span>
+          />
         </label>
       </div>
       <div
@@ -398,23 +386,20 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
+          className="sc-bdVaJa kadzti k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
           Label
           <span
-            className="k-Label--pill"
+            className="k-Label--dot"
             style={
               Object {
-                "--pill-color": null,
-                "--pill-height": null,
-                "--pill-width": null,
+                "--dot-background-color": null,
+                "--dot-width": null,
               }
             }
-          >
-            •
-          </span>
+          />
         </label>
       </div>
       <div
@@ -505,23 +490,20 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
+          className="sc-bdVaJa kadzti k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
           Label
           <span
-            className="k-Label--pill"
+            className="k-Label--dot"
             style={
               Object {
-                "--pill-color": null,
-                "--pill-height": null,
-                "--pill-width": null,
+                "--dot-background-color": null,
+                "--dot-width": null,
               }
             }
-          >
-            •
-          </span>
+          />
         </label>
       </div>
       <div
@@ -645,23 +627,20 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
+          className="sc-bdVaJa kadzti k-Label k-Label--normal"
           htmlFor="input"
           onClick={[Function]}
         >
           Label
           <span
-            className="k-Label--pill"
+            className="k-Label--dot"
             style={
               Object {
-                "--pill-color": null,
-                "--pill-height": null,
-                "--pill-width": null,
+                "--dot-background-color": null,
+                "--dot-width": null,
               }
             }
-          >
-            •
-          </span>
+          />
         </label>
       </div>
       <div
@@ -771,23 +750,20 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdVaJa ciAFWW k-Label k-Label--normal"
+          className="sc-bdVaJa kadzti k-Label k-Label--normal"
           htmlFor="option-a"
           onClick={[Function]}
         >
           Label
           <span
-            className="k-Label--pill"
+            className="k-Label--dot"
             style={
               Object {
-                "--pill-color": null,
-                "--pill-height": null,
-                "--pill-width": null,
+                "--dot-background-color": null,
+                "--dot-width": null,
               }
             }
-          >
-            •
-          </span>
+          />
         </label>
       </div>
     </div>

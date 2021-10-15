@@ -6,22 +6,19 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
   disabled={false}
 >
   <legend
-    className="sc-bwzfXH cMCtnU k-Label k-Form-RadioButtonSet__label k-Label--normal"
+    className="sc-bwzfXH brTFTA k-Label k-Form-RadioButtonSet__label k-Label--normal"
     onClick={[Function]}
   >
     Label
     <span
-      className="k-Label--pill"
+      className="k-Label--dot"
       style={
         Object {
-          "--pill-color": null,
-          "--pill-height": null,
-          "--pill-width": null,
+          "--dot-background-color": null,
+          "--dot-width": null,
         }
       }
-    >
-      •
-    </span>
+    />
   </legend>
   <div
     className="k-Form-RadioButtonSet__radioContainer"
@@ -100,22 +97,19 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
   disabled={false}
 >
   <legend
-    className="sc-bwzfXH cMCtnU k-Label k-Form-RadioButtonSet__label k-Label--normal"
+    className="sc-bwzfXH brTFTA k-Label k-Form-RadioButtonSet__label k-Label--normal"
     onClick={[Function]}
   >
     Label test
     <span
-      className="k-Label--pill"
+      className="k-Label--dot"
       style={
         Object {
-          "--pill-color": null,
-          "--pill-height": null,
-          "--pill-width": null,
+          "--dot-background-color": null,
+          "--dot-width": null,
         }
       }
-    >
-      •
-    </span>
+    />
   </legend>
   <div
     className="k-Form-RadioButtonSet__radioContainer"

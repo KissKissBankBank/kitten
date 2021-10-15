@@ -13,6 +13,7 @@ const StyledLabel = styled.label`
   ${TYPOGRAPHY.fontStyles.regular}
   cursor: pointer;
   font-size: ${stepToRem(-1)};
+  display: flex;
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     font-size: ${stepToRem(0)};
@@ -32,11 +33,13 @@ const StyledLabel = styled.label`
     pointer-events: none;
   }
 
-  .k-Label--pill {
+  .k-Label--dot {
     margin: ${pxToRem(10)};
-    width: var(--pill-width);
-    height: var(--pill-height);
-    color: var(--pill-color);
+    width: var(--dot-width);
+    height: var(--dot-width);
+    background-color: var(--dot-background-color);
+    display: inline-block;
+    border-radius: 50%;
   }
 `
 
@@ -48,7 +51,7 @@ export const Label = ({
   size,
   withoutPointerEvents,
   htmlFor,
-  pill,
+  dot,
   style,
   ...other
 }) => {
@@ -71,16 +74,16 @@ export const Label = ({
       {...other}
     >
       {children}
-      <span 
-        className={classNames('k-Label--pill')}
-        style={{
-          '--pill-color': pill?.color ?? null,
-          '--pill-width': 'width' in pill ? pxToRem(pill.width) : null,
-          '--pill-height': 'width' in pill ? pxToRem(pill.width) : null,
-        }}
-      >
-        •
-      </span>
+      {dot && (
+        <span 
+          className={classNames('k-Label--dot')}
+          style={{
+            '--dot-background-color': dot?.backgroundColor ?? null,
+            '--dot-width': 'width' in dot ? pxToRem(dot.width) : null,
+            ...style
+          }}
+        />
+      )}
     </StyledLabel>
   )
 }
@@ -90,15 +93,15 @@ Label.defaultProps = {
   focusId: null,
   size: 'normal',
   withoutPointerEvents: false,
-  pill: {},
+  dot: {},
 }
 
 Label.propTypes = {
   focusId: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   size: PropTypes.oneOf([null, undefined, 'normal', 'tiny', 'micro']),
   withoutPointerEvents: PropTypes.bool,
-  pill: PropTypes.shape({
+  dot: PropTypes.shape({
     width: PropTypes.number,
-    color: PropTypes.node,
+    backgroundColor: PropTypes.node,
   }),
 }

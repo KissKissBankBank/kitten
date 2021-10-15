@@ -20,23 +20,20 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-bwzfXH cMCtnU k-Label k-Label--normal"
+            className="sc-bwzfXH brTFTA k-Label k-Label--normal"
             htmlFor="frmCCNum"
             onClick={[Function]}
           >
             Numéro de carte
             <span
-              className="k-Label--pill"
+              className="k-Label--dot"
               style={
                 Object {
-                  "--pill-color": null,
-                  "--pill-height": null,
-                  "--pill-width": null,
+                  "--dot-background-color": null,
+                  "--dot-width": null,
                 }
               }
-            >
-              •
-            </span>
+            />
           </label>
         </div>
       </div>
@@ -80,23 +77,20 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-bwzfXH cMCtnU k-Label k-Label--normal"
+            className="sc-bwzfXH brTFTA k-Label k-Label--normal"
             htmlFor="frmCCExp"
             onClick={[Function]}
           >
             Date de validité
             <span
-              className="k-Label--pill"
+              className="k-Label--dot"
               style={
                 Object {
-                  "--pill-color": null,
-                  "--pill-height": null,
-                  "--pill-width": null,
+                  "--dot-background-color": null,
+                  "--dot-width": null,
                 }
               }
-            >
-              •
-            </span>
+            />
           </label>
         </div>
       </div>
@@ -145,23 +139,20 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-bwzfXH cMCtnU k-Label k-Label--normal"
+            className="sc-bwzfXH brTFTA k-Label k-Label--normal"
             htmlFor="frmCCCVC"
             onClick={[Function]}
           >
             Cryptogramme visuel
             <span
-              className="k-Label--pill"
+              className="k-Label--dot"
               style={
                 Object {
-                  "--pill-color": null,
-                  "--pill-height": null,
-                  "--pill-width": null,
+                  "--dot-background-color": null,
+                  "--dot-width": null,
                 }
               }
-            >
-              •
-            </span>
+            />
           </label>
         </div>
       </div>

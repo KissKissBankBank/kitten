@@ -27,8 +27,8 @@ export default {
       name: 'withoutPointerEvents',
       control: 'boolean',
     },
-    pill: {
-      name: 'pill',
+    dot: {
+      name: 'dot',
       control: 'object',
     }
   },
@@ -63,14 +63,13 @@ export const Default = args => <Label {...args} />
 
 Default.storyName = 'Label'
 
-export const WithPill = args => <Label {...args} />
+export const WithDot = args => <Label {...args} />
 
-WithPill.args = {
+WithDot.args = {
   ...args,
-  pill: {
+  dot: {
     width: 7,
-    height: 7,
-    color: COLORS.orange,
+    backgroundColor: COLORS.orange,
   }
 }
 

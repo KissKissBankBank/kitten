@@ -17,7 +17,7 @@ describe('<Label />', () => {
           focusId="customId"
           withoutPointerEvents
           tag="span"
-          pill={{
+          dot={{
             width: 7,
             height: 7,
             color: '#ff7800',

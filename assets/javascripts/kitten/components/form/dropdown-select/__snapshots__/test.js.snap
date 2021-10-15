@@ -10,24 +10,21 @@ exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
   }
 >
   <label
-    className="sc-bdVaJa ciAFWW k-Label k-Form-Dropdown__label k-u-margin-bottom-single k-Label--normal"
+    className="sc-bdVaJa kadzti k-Label k-Form-Dropdown__label k-u-margin-bottom-single k-Label--normal"
     htmlFor="dropdown-select-test"
     id="dropdown-select-test_element-label"
     onClick={[Function]}
   >
     DropdownSelect test
     <span
-      className="k-Label--pill"
+      className="k-Label--dot"
       style={
         Object {
-          "--pill-color": null,
-          "--pill-height": null,
-          "--pill-width": null,
+          "--dot-background-color": null,
+          "--dot-width": null,
         }
       }
-    >
-      •
-    </span>
+    />
   </label>
   <button
     aria-expanded={true}
