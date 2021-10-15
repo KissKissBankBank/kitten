@@ -152,11 +152,10 @@ export const StoryMultiMenu = () => (
             action('selectorClick')
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
                 Don permanent
@@ -180,7 +179,7 @@ export const StoryMultiMenu = () => (
             action('selectorClick')
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="nano"
@@ -193,7 +192,6 @@ export const StoryMultiMenu = () => (
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
                 Nom de la campagne 2
@@ -217,7 +215,7 @@ export const StoryMultiMenu = () => (
             action('selectorClick')
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="nano"
@@ -230,10 +228,9 @@ export const StoryMultiMenu = () => (
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
-                Nom de la campagne 3
+                Un très long nom de la campagne 3
               </Text>
               <StatusWithBullet statusType="none" size="micro" weight="light">
                 Terminé
@@ -250,7 +247,7 @@ export const StoryMultiMenu = () => (
             action('selectorClick')
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="nano"
@@ -263,7 +260,6 @@ export const StoryMultiMenu = () => (
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
                 Nom de la campagne 4
@@ -287,7 +283,7 @@ export const StoryMultiMenu = () => (
             action('selectorClick')
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="nano"
@@ -300,7 +296,6 @@ export const StoryMultiMenu = () => (
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
                 Nom de la campagne 5
@@ -320,7 +315,7 @@ export const StoryMultiMenu = () => (
             action('selectorClick')
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="nano"
@@ -333,7 +328,6 @@ export const StoryMultiMenu = () => (
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
                 Nom de la campagne 6
@@ -357,7 +351,7 @@ export const StoryMultiMenu = () => (
             action('selectorClick')
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="nano"
@@ -370,7 +364,6 @@ export const StoryMultiMenu = () => (
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
                 Nom de la campagne 7

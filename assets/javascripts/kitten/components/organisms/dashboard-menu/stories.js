@@ -151,10 +151,10 @@ export const MultiMenu = () => (
           href: '#',
           onClick: e => {
             e.preventDefault()
-            action('selectorClick')
+            action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="nano"
@@ -167,7 +167,6 @@ export const MultiMenu = () => (
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
                 Nom de la campagne
@@ -194,14 +193,13 @@ export const MultiMenu = () => (
           href: '#',
           onClick: e => {
             e.preventDefault()
-            action('selectorClick')
+            action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
                 Don permanent
@@ -222,10 +220,10 @@ export const MultiMenu = () => (
           href: '#',
           onClick: e => {
             e.preventDefault()
-            action('selectorClick')
+            action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="nano"
@@ -238,7 +236,6 @@ export const MultiMenu = () => (
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
                 Nom de la campagne 2
@@ -259,10 +256,10 @@ export const MultiMenu = () => (
           href: '#',
           onClick: e => {
             e.preventDefault()
-            action('selectorClick')
+            action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="nano"
@@ -275,10 +272,9 @@ export const MultiMenu = () => (
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
-                Nom de la campagne 3
+                Un très très long nom de la campagne 3
               </Text>
               <StatusWithBullet statusType="none" size="micro" weight="light">
                 Terminé
@@ -292,10 +288,10 @@ export const MultiMenu = () => (
           href: '#',
           onClick: e => {
             e.preventDefault()
-            action('selectorClick')
+            action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="nano"
@@ -308,7 +304,6 @@ export const MultiMenu = () => (
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
                 Nom de la campagne 4
@@ -329,10 +324,10 @@ export const MultiMenu = () => (
           href: '#',
           onClick: e => {
             e.preventDefault()
-            action('selectorClick')
+            action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="nano"
@@ -345,7 +340,6 @@ export const MultiMenu = () => (
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
                 Nom de la campagne 5
@@ -362,10 +356,10 @@ export const MultiMenu = () => (
           href: '#',
           onClick: e => {
             e.preventDefault()
-            action('selectorClick')
+            action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="nano"
@@ -378,7 +372,6 @@ export const MultiMenu = () => (
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
                 Nom de la campagne 6
@@ -399,10 +392,10 @@ export const MultiMenu = () => (
           href: '#',
           onClick: e => {
             e.preventDefault()
-            action('selectorClick')
+            action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap={2}>
+            <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
                 size="nano"
@@ -415,7 +408,6 @@ export const MultiMenu = () => (
               <Text
                 weight="regular"
                 size="tiny"
-                lineHeight="1"
                 cssColor={COLORS.background1}
               >
                 Nom de la campagne 7

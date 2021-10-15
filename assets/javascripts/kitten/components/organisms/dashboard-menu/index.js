@@ -10,6 +10,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon'
 import { DoubleArrowIcon } from '../../../components/graphics/icons/double-arrow-icon'
 import { FlexWrapper } from '../../../components/layout/flex-wrapper'
+import { mq } from '../../../constants/screen-config'
 
 const zoomInAndOpacity = keyframes`
   0% {
@@ -105,8 +106,12 @@ const StyledDashboardMenu = styled.nav`
   }
 
   .k-DashboardMenu__list--subList {
-    margin-left: ${pxToRem(35)};
-    margin-right: ${pxToRem(40)};
+    margin-left: ${pxToRem(25)};
+
+    @media ${mq.tabletAndDesktop} {
+      margin-left: ${pxToRem(35)};
+      margin-right: ${pxToRem(40)};
+    }
   }
 
   .k-DashboardMenu__expandable summary {
@@ -133,7 +138,13 @@ const StyledDashboardMenu = styled.nav`
   .k-DashboardMenu__selectorButton__text,
   .k-DashboardMenu__item .k-DashboardMenu__item__text,
   .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title__text {
-    flex: 1 0 auto;
+    flex: 1 0 0;
+
+    &, * {
+      white-space: nowrap;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   .k-DashboardMenu__expandable {
@@ -208,10 +219,18 @@ const StyledDashboardMenu = styled.nav`
 
   .k-DashboardMenu__iconWrapper {
     display: inline-flex;
-    width: ${pxToRem(40)};
-    height: ${pxToRem(40)};
     align-items: center;
     justify-content: center;
+
+    flex: 0 0 ${pxToRem(25)};
+    width: ${pxToRem(25)};
+    height: ${pxToRem(25)};
+
+    @media ${mq.tabletAndDesktop} {
+      flex: 0 0 ${pxToRem(40)};
+      width: ${pxToRem(40)};
+      height: ${pxToRem(40)};
+    }
 
     svg {
       max-width: ${pxToRem(25)};
