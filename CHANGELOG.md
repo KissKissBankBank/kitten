@@ -6,7 +6,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `Alert`: Improve new UI.
 - Fix: `CrossIconNext`: New UI.
-- Fix: `ButtonFix`: Fix min width constraints
 
 ## [5.1.0] - 2021-10-15
 
