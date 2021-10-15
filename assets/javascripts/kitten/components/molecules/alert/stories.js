@@ -64,6 +64,6 @@ export const Default = args => <Alert {...args} />
 
 export const WithLink = args => (
   <Alert {...args} show closeButton closeButtonLabel="Close Button Label">
-    Bonjour <a href="">clique ici</a>
+    Bonjour <a href=""> clique ici</a>
   </Alert>
 )

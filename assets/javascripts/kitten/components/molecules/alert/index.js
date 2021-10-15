@@ -25,6 +25,10 @@ const AlertWrapper = styled.div`
   display: flex;
   align-items: flex-start;
 
+  [href] {
+    color: ${COLORS.primary1};
+  }
+
   .k-Alert__text {
     padding: ${pxToRem(13)} ${pxToRem(20)};
     flex: 1 0 0;
@@ -54,6 +58,10 @@ const AlertWrapper = styled.div`
     svg path {
       transition: fill 0.2s ease;
       fill: ${COLORS.primary1};
+      
+      :hover {
+        fill: ${COLORS.primary3};
+      }
     }
 
     &:focus {
@@ -77,6 +85,10 @@ const AlertWrapper = styled.div`
   &.k-Alert--success {
     background-color: ${COLORS.tertiary1};
     
+    [href] {
+      color: ${COLORS.valid};
+    }
+  
     .k-Alert__iconBadge {
       background-color: ${COLORS.valid};
       border-color: ${COLORS.tertiary2};
@@ -86,13 +98,21 @@ const AlertWrapper = styled.div`
       svg,
       svg path {
         fill: ${COLORS.valid};
+
+        :hover {
+          fill: ${COLORS.tertiary2};
+        }
       }
     }
   }
 
   &.k-Alert--error {
     background-color: ${COLORS.error2};
-    
+
+    [href] {
+      color: ${COLORS.error};
+    }
+  
     .k-Alert__iconBadge {
       background-color: ${COLORS.error};
       border-color: ${COLORS.error3};
@@ -102,13 +122,21 @@ const AlertWrapper = styled.div`
       svg,
       svg path {
         fill: ${COLORS.error};
+
+        :hover {
+          fill: ${COLORS.error4};
+        }
       }
     }
   }
 
   &.k-Alert--warning {
     background-color: ${COLORS.warning2};
-    
+
+    [href] {
+      color: ${COLORS.orange3};
+    }
+  
     .k-Alert__iconBadge {
       background-color: ${COLORS.orange3};
       border-color: ${COLORS.orange};
@@ -118,6 +146,10 @@ const AlertWrapper = styled.div`
       svg,
       svg path {
         fill: ${COLORS.warning};
+
+        :hover {
+          fill: "#A47600";
+        }
       }
     }
   }
