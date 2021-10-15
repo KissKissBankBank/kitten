@@ -38,19 +38,22 @@ const AlertWrapper = styled.div`
 
   .k-Alert__iconBadge {
     margin-right: ${pxToRem(20)};
+    background-color: ${COLORS.primary1};
+    border-color: ${COLORS.primary4};
   }
 
-  .k-Alert__button {
+  button {
     display: flex;
     flex: 0 0 auto;
     transition: all 0.2s ease;
-    align-self: center;
+    align-self: stretch;
+    align-items: center;
     padding-right: ${pxToRem(20)};
-    color: ${COLORS.primary1};
-
+    
     svg,
     svg path {
       transition: fill 0.2s ease;
+      fill: ${COLORS.primary1};
     }
 
     &:focus {
@@ -76,10 +79,14 @@ const AlertWrapper = styled.div`
     
     .k-Alert__iconBadge {
       background-color: ${COLORS.valid};
+      border-color: ${COLORS.tertiary2};
     }
     
-    .k-Alert__button {
-      color: ${COLORS.valid};
+    button {
+      svg,
+      svg path {
+        fill: ${COLORS.valid};
+      }
     }
   }
 
@@ -88,10 +95,14 @@ const AlertWrapper = styled.div`
     
     .k-Alert__iconBadge {
       background-color: ${COLORS.error};
+      border-color: ${COLORS.error3};
     }
 
-    .k-Alert__button {
-      color: ${COLORS.error};
+    button {
+      svg,
+      svg path {
+        fill: ${COLORS.error};
+      }
     }
   }
 
@@ -99,11 +110,15 @@ const AlertWrapper = styled.div`
     background-color: ${COLORS.warning2};
     
     .k-Alert__iconBadge {
-      background-color: ${COLORS.warning};
+      background-color: ${COLORS.orange3};
+      border-color: ${COLORS.orange};
     }
   
-    .k-Alert__button {
-      color: ${COLORS.warning};
+    button {
+      svg,
+      svg path {
+        fill: ${COLORS.warning};
+      }
     }
   }
 
@@ -183,14 +198,14 @@ export const Alert = ({
         </div>
 
         {closeButton && (
-          <CrossIconNext
-            role="button"
-            onClick={() => setMounted(false)}
-            title={closeButtonLabel}
-            className="k-Alert__button k-u-reset-button"
-            width={12}
-            height={12}
-          />
+          <button className="k-u-reset-button">
+            <CrossIconNext
+              onClick={() => setMounted(false)}
+              title={closeButtonLabel}
+              width={12}
+              height={12}
+            />
+          </button>
         )}
       </>
     </AlertWrapper>
