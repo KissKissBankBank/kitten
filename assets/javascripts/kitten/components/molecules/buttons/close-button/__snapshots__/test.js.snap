@@ -31,6 +31,7 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -105,7 +106,7 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c0.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -199,13 +200,13 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -213,18 +214,18 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
     width: initial;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -240,7 +241,7 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 
 <button
   aria-label="Close"
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-icon k-Button--mobile-fit-none"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -297,6 +298,7 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -371,7 +373,7 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c0.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -465,13 +467,13 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -479,18 +481,18 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
     width: initial;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -506,7 +508,7 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 
 <button
   aria-label="close"
-  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--fit-icon k-Button--mobile-fit-none"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
