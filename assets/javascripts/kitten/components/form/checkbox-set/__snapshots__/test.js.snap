@@ -10,15 +10,6 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
     onClick={[Function]}
   >
     Label
-    <span
-      className="k-Label--dot"
-      style={
-        Object {
-          "--dot-background-color": null,
-          "--dot-width": null,
-        }
-      }
-    />
   </legend>
   <div
     className="sc-bdVaJa huwsVS k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
@@ -88,15 +79,6 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
     onClick={[Function]}
   >
     Label test
-    <span
-      className="k-Label--dot"
-      style={
-        Object {
-          "--dot-background-color": null,
-          "--dot-width": null,
-        }
-      }
-    />
   </legend>
   <div
     className="sc-bdVaJa huwsVS k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"

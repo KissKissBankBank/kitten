@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
-
+import isEmpty from 'lodash/fp/isEmpty'
 import domElementHelper from '../../../helpers/dom/element-helper'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
@@ -74,10 +74,11 @@ export const Label = ({
       {...other}
     >
       {children}
-      {dot && (
+      {!isEmpty(dot) && (
         <span 
           className={classNames('k-Label--dot')}
           title={dot.title}
+          tabIndex="-1"
           style={{
             '--dot-background-color': dot?.backgroundColor ?? null,
             '--dot-width': 'width' in dot ? pxToRem(dot.width) : null,

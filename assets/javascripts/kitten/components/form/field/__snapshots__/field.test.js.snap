@@ -22,15 +22,6 @@ Array [
           onClick={[Function]}
         >
           Label
-          <span
-            className="k-Label--dot"
-            style={
-              Object {
-                "--dot-background-color": null,
-                "--dot-width": null,
-              }
-            }
-          />
         </label>
       </div>
     </div>
@@ -84,15 +75,6 @@ Array [
           onClick={[Function]}
         >
           Label
-          <span
-            className="k-Label--dot"
-            style={
-              Object {
-                "--dot-background-color": null,
-                "--dot-width": null,
-              }
-            }
-          />
         </label>
       </div>
       <div
@@ -192,15 +174,6 @@ Array [
           onClick={[Function]}
         >
           Label
-          <span
-            className="k-Label--dot"
-            style={
-              Object {
-                "--dot-background-color": null,
-                "--dot-width": null,
-              }
-            }
-          />
         </label>
       </div>
       <div
@@ -286,15 +259,6 @@ Array [
           onClick={[Function]}
         >
           Label
-          <span
-            className="k-Label--dot"
-            style={
-              Object {
-                "--dot-background-color": null,
-                "--dot-width": null,
-              }
-            }
-          />
         </label>
       </div>
       <div
@@ -391,15 +355,6 @@ Array [
           onClick={[Function]}
         >
           Label
-          <span
-            className="k-Label--dot"
-            style={
-              Object {
-                "--dot-background-color": null,
-                "--dot-width": null,
-              }
-            }
-          />
         </label>
       </div>
       <div
@@ -495,15 +450,6 @@ Array [
           onClick={[Function]}
         >
           Label
-          <span
-            className="k-Label--dot"
-            style={
-              Object {
-                "--dot-background-color": null,
-                "--dot-width": null,
-              }
-            }
-          />
         </label>
       </div>
       <div
@@ -632,15 +578,6 @@ Array [
           onClick={[Function]}
         >
           Label
-          <span
-            className="k-Label--dot"
-            style={
-              Object {
-                "--dot-background-color": null,
-                "--dot-width": null,
-              }
-            }
-          />
         </label>
       </div>
       <div
@@ -755,15 +692,6 @@ Array [
           onClick={[Function]}
         >
           Label
-          <span
-            className="k-Label--dot"
-            style={
-              Object {
-                "--dot-background-color": null,
-                "--dot-width": null,
-              }
-            }
-          />
         </label>
       </div>
     </div>

@@ -16,15 +16,6 @@ exports[`<DropdownPhoneSelect /> should match its snapshot with props 1`] = `
     onClick={[Function]}
   >
     DropdownPhoneSelect test
-    <span
-      className="k-Label--dot"
-      style={
-        Object {
-          "--dot-background-color": null,
-          "--dot-width": null,
-        }
-      }
-    />
   </label>
   <div
     className="k-Form-DropdownSelectWithInput__container"

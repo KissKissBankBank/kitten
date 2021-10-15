@@ -16,15 +16,6 @@ exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
     onClick={[Function]}
   >
     DropdownSelect test
-    <span
-      className="k-Label--dot"
-      style={
-        Object {
-          "--dot-background-color": null,
-          "--dot-width": null,
-        }
-      }
-    />
   </label>
   <button
     aria-expanded={true}

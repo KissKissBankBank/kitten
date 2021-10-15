@@ -25,15 +25,6 @@ Array [
             onClick={[Function]}
           >
             Numéro de carte
-            <span
-              className="k-Label--dot"
-              style={
-                Object {
-                  "--dot-background-color": null,
-                  "--dot-width": null,
-                }
-              }
-            />
           </label>
         </div>
       </div>
@@ -82,15 +73,6 @@ Array [
             onClick={[Function]}
           >
             Date de validité
-            <span
-              className="k-Label--dot"
-              style={
-                Object {
-                  "--dot-background-color": null,
-                  "--dot-width": null,
-                }
-              }
-            />
           </label>
         </div>
       </div>
@@ -144,15 +126,6 @@ Array [
             onClick={[Function]}
           >
             Cryptogramme visuel
-            <span
-              className="k-Label--dot"
-              style={
-                Object {
-                  "--dot-background-color": null,
-                  "--dot-width": null,
-                }
-              }
-            />
           </label>
         </div>
       </div>

@@ -10,15 +10,6 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
     onClick={[Function]}
   >
     Label
-    <span
-      className="k-Label--dot"
-      style={
-        Object {
-          "--dot-background-color": null,
-          "--dot-width": null,
-        }
-      }
-    />
   </legend>
   <div
     className="k-Form-RadioButtonSet__radioContainer"
@@ -101,15 +92,6 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
     onClick={[Function]}
   >
     Label test
-    <span
-      className="k-Label--dot"
-      style={
-        Object {
-          "--dot-background-color": null,
-          "--dot-width": null,
-        }
-      }
-    />
   </legend>
   <div
     className="k-Form-RadioButtonSet__radioContainer"

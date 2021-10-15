@@ -6,15 +6,6 @@ exports[`<Label /> should match its empty snapshot 1`] = `
   onClick={[Function]}
 >
   Label
-  <span
-    className="k-Label--dot"
-    style={
-      Object {
-        "--dot-background-color": null,
-        "--dot-width": null,
-      }
-    }
-  />
 </label>
 `;
 
@@ -33,6 +24,7 @@ exports[`<Label /> should match its propped snapshot 1`] = `
         "--dot-width": "0.4375rem",
       }
     }
+    tabIndex="-1"
     title="champs obligatoire"
   />
 </span>
