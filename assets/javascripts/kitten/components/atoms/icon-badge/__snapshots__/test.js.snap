@@ -2,7 +2,35 @@
 
 exports[`<IconBadge /> by default matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa ectNFc k-IconBadge k-IconBadge--big k-IconBadge--valid"
+  className="sc-bdVaJa gtfceU k-IconBadge k-IconBadge--big k-IconBadge--valid k-IconBadge--hasBorderStyles"
+  style={
+    Object {
+      "--background-color": "#19b4fa",
+      "--border-color": null,
+      "--border-style": null,
+      "--border-width": null,
+    }
+  }
+>
+  <span
+    className="k-IconBadge__content"
+  >
+    Custom children
+  </span>
+</span>
+`;
+
+exports[`<IconBadge /> with border style matches with snapshot 1`] = `
+<span
+  className="sc-bdVaJa gtfceU k-IconBadge k-IconBadge--tiny k-IconBadge--hasBorderStyles"
+  style={
+    Object {
+      "--background-color": "#19b4fa",
+      "--border-color": "#e8f7fe",
+      "--border-style": "solid",
+      "--border-width": "0.125rem",
+    }
+  }
 >
   <span
     className="k-IconBadge__content"
