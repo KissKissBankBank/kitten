@@ -2,29 +2,20 @@
 
 exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 <div
-  className="sc-bwzfXH flOBZY k-Alert k-Alert--hasCloseButton"
+  className="sc-bwzfXH bcFPKC k-Alert k-Alert--hasCloseButton"
   role="alert"
 >
   <div
     className="k-Alert__text"
   >
-    <span
-      className="sc-bdVaJa ectNFc k-IconBadge k-Alert__iconBadge k-IconBadge--tiny"
-    >
-      <span
-        className="k-IconBadge__content"
-      >
-        
-      </span>
-    </span>
+    
     Alert !
   </div>
   <svg
-    className="k-Alert__button"
+    className="k-Alert__button k-u-reset-button"
     fill="none"
     height={12}
     onClick={[Function]}
-    role="button"
     viewBox="0 0 17 18"
     width={12}
     xmlns="http://www.w3.org/2000/svg"
@@ -41,21 +32,13 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 
 exports[`<Alert /> should matches with default snapshot 1`] = `
 <div
-  className="sc-bwzfXH flOBZY k-Alert"
+  className="sc-bwzfXH bcFPKC k-Alert"
   role="alert"
 >
   <div
     className="k-Alert__text"
   >
-    <span
-      className="sc-bdVaJa ectNFc k-IconBadge k-Alert__iconBadge k-IconBadge--tiny"
-    >
-      <span
-        className="k-IconBadge__content"
-      >
-        
-      </span>
-    </span>
+    
     Alert !
   </div>
 </div>
@@ -63,21 +46,13 @@ exports[`<Alert /> should matches with default snapshot 1`] = `
 
 exports[`<Alert /> should matches with error snapshot 1`] = `
 <div
-  className="sc-bwzfXH flOBZY k-Alert k-Alert--error"
+  className="sc-bwzfXH bcFPKC k-Alert k-Alert--error"
   role="alert"
 >
   <div
     className="k-Alert__text"
   >
-    <span
-      className="sc-bdVaJa ectNFc k-IconBadge k-Alert__iconBadge k-IconBadge--tiny"
-    >
-      <span
-        className="k-IconBadge__content"
-      >
-        
-      </span>
-    </span>
+    
     Alert !
   </div>
 </div>
@@ -85,21 +60,13 @@ exports[`<Alert /> should matches with error snapshot 1`] = `
 
 exports[`<Alert /> should matches with success snapshot 1`] = `
 <div
-  className="sc-bwzfXH flOBZY k-Alert k-Alert--success"
+  className="sc-bwzfXH bcFPKC k-Alert k-Alert--success"
   role="alert"
 >
   <div
     className="k-Alert__text"
   >
-    <span
-      className="sc-bdVaJa ectNFc k-IconBadge k-Alert__iconBadge k-IconBadge--tiny"
-    >
-      <span
-        className="k-IconBadge__content"
-      >
-        
-      </span>
-    </span>
+    
     Alert !
   </div>
 </div>
@@ -107,21 +74,13 @@ exports[`<Alert /> should matches with success snapshot 1`] = `
 
 exports[`<Alert /> should matches with warning snapshot 1`] = `
 <div
-  className="sc-bwzfXH flOBZY k-Alert k-Alert--warning"
+  className="sc-bwzfXH bcFPKC k-Alert k-Alert--warning"
   role="alert"
 >
   <div
     className="k-Alert__text"
   >
-    <span
-      className="sc-bdVaJa ectNFc k-IconBadge k-Alert__iconBadge k-IconBadge--tiny"
-    >
-      <span
-        className="k-IconBadge__content"
-      >
-        
-      </span>
-    </span>
+    
     Alert !
   </div>
 </div>

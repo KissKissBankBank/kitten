@@ -2,8 +2,7 @@ import React from 'react'
 import { Alert } from './'
 import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
-import { CrossIcon } from '../../../components/graphics/icons/cross-icon'
-import COLORS from '../../../constants/colors-config'
+import { CrossIconNext, COLORS } from 'kitten'
 
 export default {
   title: 'Molecules/Alert',
@@ -23,7 +22,7 @@ export default {
     onAfterClose: action('onAfterClose'),
     children:
       'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.',
-    iconSvg: <CrossIcon width={12} height={12} color={COLORS.background1} />,
+    icon: <CrossIconNext width={12} height={12} color={COLORS.background1} />,
   },
   argTypes: {
     show: {
@@ -54,8 +53,8 @@ export default {
       name: 'children',
       control: 'text',
     },
-    iconSvg: {
-      name: 'iconSvg',
+    icon: {
+      name: 'icon',
       control: 'object',
     },
   },

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
-import { CrossIcon } from '../../../components/graphics/icons-next/cross-icon'
+import { CrossIconNext } from '../../../components/graphics/icons-next/cross-icon-next'
 import { IconBadge } from '../../../components/atoms/icon-badge'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
@@ -44,7 +44,8 @@ const AlertWrapper = styled.div`
     display: flex;
     flex: 0 0 auto;
     transition: all 0.2s ease;
-    align-self: center;
+    align-self: stretch;
+    align-items: center;
     padding-right: ${pxToRem(20)};
     cursor: pointer;
     color: ${COLORS.primary1};
@@ -132,7 +133,8 @@ export const Alert = ({
   closeButtonLabel,
   children,
   onAfterClose,
-  iconSvg,
+  icon,
+  iconBadgeBorderColor,
   ...others
 }) => {
   const [isTrashed, trashIt] = useState(false)
@@ -167,20 +169,26 @@ export const Alert = ({
     >
       <>
         <div className="k-Alert__text">
-          <IconBadge
-            className="k-Alert__iconBadge"
-            size="tiny"
-            children={iconSvg}
-          />
+          {icon && (
+            <IconBadge
+              className="k-Alert__iconBadge"
+              size="tiny"
+              children={icon}
+              border={{
+                width: 2,
+                color: {iconBadgeBorderColor},
+                style: 'solid',
+              }}
+            />
+          )}
           {children}
         </div>
 
         {closeButton && (
-          <CrossIcon
-            role="button"
+          <CrossIconNext
             onClick={() => setMounted(false)}
             title={closeButtonLabel}
-            className="k-Alert__button"
+            className="k-Alert__button k-u-reset-button"
             width={12}
             height={12}
           />
@@ -198,7 +206,8 @@ Alert.propTypes = {
   closeButton: PropTypes.bool,
   closeButtonLabel: PropTypes.string,
   onAfterClose: PropTypes.func,
-  iconSvg: PropTypes.node,
+  icon: PropTypes.node,
+  iconBadgeBorderColor: PropTypes.string
 }
 
 Alert.defaultProps = {
@@ -209,5 +218,6 @@ Alert.defaultProps = {
   closeButton: false,
   closeButtonLabel: 'Close',
   onAfterClose: () => {},
-  iconSvg: '',
+  icon: '',
+  iconBadgeBorderColor: COLORS.primary5,
 }

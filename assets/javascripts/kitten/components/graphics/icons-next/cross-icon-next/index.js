@@ -2,11 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import COLORS from '../../../../constants/colors-config'
 
-export const CrossIcon = ({ color, title, width, height, ...props }) => {
+export const CrossIconNext = ({ color, title, ...props }) => {
   return (
     <svg 
-      width={width}
-      height={height}
       viewBox="0 0 17 18"
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
@@ -22,13 +20,11 @@ export const CrossIcon = ({ color, title, width, height, ...props }) => {
   )
 }
 
-CrossIcon.prototype = {
+CrossIconNext.prototype = {
   color: PropTypes.string,
   title: PropTypes.string,
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }
 
-CrossIcon.defaultProps = {
+CrossIconNext.defaultProps = {
   color: COLORS.font1,
 }

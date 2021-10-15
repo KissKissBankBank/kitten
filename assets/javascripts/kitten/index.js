@@ -194,6 +194,10 @@ export { PeopleIcon } from './components/graphics/icons/people-icon'
 export { StatsIcon } from './components/graphics/icons/stats-icon'
 export { SpeechBubbleIcon } from './components/graphics/icons/speech-bubble-icon'
 
+// Graphics/IconsNext
+export { CrossIconNext } from './components/graphics/icons-next/cross-icon-next'
+
+
 // Graphics/Illustrations
 export { LightbulbIllustration } from './components/graphics/illustrations/lightbulb-illustration'
 export { LinkBoxIllustration } from './components/graphics/illustrations/link-box-illustration'
