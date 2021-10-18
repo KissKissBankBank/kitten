@@ -31,6 +31,10 @@ describe('<DropdownSelect />', () => {
             },
           ]}
           openOnLoad
+          labelProps={{
+            'data-custom-label': 'Hello World',
+            className: 'k-u-weight-light',
+          }}
         />,
       )
       .toJSON()

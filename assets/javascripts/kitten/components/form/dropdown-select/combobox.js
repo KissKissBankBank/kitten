@@ -54,6 +54,7 @@ export const DropdownCombobox = ({
   modifier,
   direction,
   arrowPosition,
+  labelProps,
 }) => {
   const [flattenedOptions, setFlattenedOptions] = useState([])
   const [filteredOptions, setFilteredOptions] = useState([])
@@ -174,9 +175,11 @@ export const DropdownCombobox = ({
       style={{ '--menu-z-index': menuZIndex }}
     >
       <Label
+        {...labelProps}
         className={classNames(
           'k-Form-Dropdown__label',
           'k-u-margin-bottom-single',
+          labelProps?.className,
           {
             'k-Form-Dropdown__label--isHidden': hideLabel,
           },
