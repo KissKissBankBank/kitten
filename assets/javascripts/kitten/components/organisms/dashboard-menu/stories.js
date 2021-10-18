@@ -199,10 +199,19 @@ export const MultiMenu = () => (
             <FlexWrapper as="span" gap="0px">
               <Text
                 weight="regular"
+                size="nano"
+                transform="uppercase"
+                cssColor={COLORS.font3}
+                lineHeight="1"
+              >
+                Don permanent
+              </Text>
+              <Text
+                weight="regular"
                 size="tiny"
                 cssColor={COLORS.background1}
               >
-                Don permanent
+                Nom de la campagne 1
               </Text>
               <StatusWithBullet
                 statusType="success"
