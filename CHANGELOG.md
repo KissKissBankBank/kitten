@@ -11,7 +11,7 @@ Features:
 - `ButtonWithTooltip`: Add `position` prop, defaults to `center`.
 - `DashboardMenu`: Add `List`, `Separator` and `Selector` subcomponents.
 - `Alert`: Improve new UI.
-- `Label`: Add `dot` props.
+- `Label`: Add `dot` prop.
 
 Fix:
 
