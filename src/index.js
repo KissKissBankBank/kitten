@@ -1001,6 +1001,12 @@ Object.defineProperty(exports, "SpeechBubbleIcon", {
     return _speechBubbleIcon.SpeechBubbleIcon;
   }
 });
+Object.defineProperty(exports, "CrossIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _crossIconNext.CrossIconNext;
+  }
+});
 Object.defineProperty(exports, "LightbulbIllustration", {
   enumerable: true,
   get: function get() {
@@ -2451,6 +2457,8 @@ var _peopleIcon = require("./components/graphics/icons/people-icon");
 var _statsIcon = require("./components/graphics/icons/stats-icon");
 
 var _speechBubbleIcon = require("./components/graphics/icons/speech-bubble-icon");
+
+var _crossIconNext = require("./components/graphics/icons-next/cross-icon-next");
 
 var _lightbulbIllustration = require("./components/graphics/illustrations/lightbulb-illustration");
 

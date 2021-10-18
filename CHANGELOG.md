@@ -4,11 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `ButtonWithTooltip`: Add `position` prop, defaults to `center`.
-- Feature: `DashboardMenu`: Add `List`, `Separator` and `Selector` subcomponents.
-- Feature: `Alert`: Improve new UI.
-- Fix: `CrossIconNext`: New UI.
-- Feature: `Label`: Add `dot` props.
+## [5.2.0] - 2021-10-18
+
+Features:
+
+- `ButtonWithTooltip`: Add `position` prop, defaults to `center`.
+- `DashboardMenu`: Add `List`, `Separator` and `Selector` subcomponents.
+- `Alert`: Improve new UI.
+- `Label`: Add `dot` props.
+
+Fix:
+- `CrossIconNext`: New UI.
 
 ## [5.1.0] - 2021-10-15
 
