@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `GifVideo`: Fix bug when `children` is empty.
+- Fix: `cssPropertyDistributor`: Fix bug when `elements` is null.
+
 ## [5.2.0] - 2021-10-18
 
 Features:
