@@ -14,6 +14,7 @@ Features:
 - `Label`: Add `dot` props.
 
 Fix:
+
 - `CrossIconNext`: New UI.
 
 ## [5.1.0] - 2021-10-15
