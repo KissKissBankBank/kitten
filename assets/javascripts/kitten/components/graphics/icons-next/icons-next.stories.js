@@ -82,7 +82,7 @@ export const AllIcons = ({ colorInput }) => {
 }
 
 export default {
-  title: 'Graphics/Icons-next',
+  title: 'Graphics/Icons Next',
   args: {
     colorInput: '#333',
   },
