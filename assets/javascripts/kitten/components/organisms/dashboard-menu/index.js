@@ -395,7 +395,7 @@ const Item = ({
       aria-current={isActive ? 'page' : null}
       {...props}
     >
-      {icon && (
+      {!!icon && (
         <span className="k-DashboardMenu__iconWrapper">
           {typeof icon === 'function' ? icon() : icon}
         </span>
