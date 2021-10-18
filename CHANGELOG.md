@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ButtonWithTooltip`: Add `position` prop, defaults to `center`.
 - Feature: `Alert`: Improve new UI.
 - Fix: `CrossIconNext`: New UI.
 - Feature: `Label`: Add `dot` props.
