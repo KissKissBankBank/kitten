@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DropdownSelect`: Add `labelProps` prop.
+
 ## [5.2.0] - 2021-10-18
 
 Features:
