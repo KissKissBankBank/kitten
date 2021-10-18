@@ -555,6 +555,7 @@ const Selector = ({ data, className, ...props }) => {
       <div className="k-DashboardMenu__selectorList">
         {data.map(({ icon, children, isActive, ...itemProps }, index) => {
           if (isActive) return
+
           return (
             <a
               key={children + index}
