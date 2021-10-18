@@ -325,12 +325,12 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 }
 
 .c0.k-ButtonWithTooltip--left {
-  --ButtonWithTooltip-translate: calc(-100% + 1.0625rem);
-  --ButtonWithTooltip-origin: calc(100% - 1.0625rem);
+  --ButtonWithTooltip-translate: calc( -100% + 1.0625rem );
+  --ButtonWithTooltip-origin: calc( 100% - 1.0625rem );
 }
 
 .c0.k-ButtonWithTooltip--right {
-  --ButtonWithTooltip-translate: calc(0% - 1.0625rem);
+  --ButtonWithTooltip-translate: calc( 0% - 1.0625rem );
   --ButtonWithTooltip-origin: 1.0625rem;
 }
 
