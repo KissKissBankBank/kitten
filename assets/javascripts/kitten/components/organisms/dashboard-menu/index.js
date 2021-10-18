@@ -428,8 +428,10 @@ const Expandable = ({ className, children, icon, title, ...props }) => {
       >
         <summary>
           <div className="k-DashboardMenu__expandable__title">
-            {icon && (
-              <span className="k-DashboardMenu__iconWrapper">{icon()}</span>
+            {!!icon && (
+              <span className="k-DashboardMenu__iconWrapper">
+                {typeof icon === 'function' ? icon() : icon}
+              </span>
             )}
             <span className="k-DashboardMenu__expandable__title__text">
               {title}
@@ -579,14 +581,22 @@ const Selector = ({ data, className, ...props }) => {
 }
 
 Item.proptypes = {
-  icon: PropTypes.func,
+  icon: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
   isActive: PropTypes.bool,
   size: PropTypes.oneOf(['default', 'small']),
 }
 
 Expandable.proptypes = {
-  icon: PropTypes.func,
+  icon: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
   title: PropTypes.node,
+}
+
+Selector.propTypes = {
+  data: PropTypes.shape({
+    children: PropTypes.node,
+    isActive: PropTypes.bool,
+    icon: PropTypes.node,
+  })
 }
 
 DashboardMenu.List = List
