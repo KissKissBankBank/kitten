@@ -128,6 +128,7 @@ export const StoryMultiMenu = () => (
           Projets
         </Text>
         <ButtonWithTooltip
+          position="left"
           buttonProps={{
             fit: 'icon',
             size: 'nano',

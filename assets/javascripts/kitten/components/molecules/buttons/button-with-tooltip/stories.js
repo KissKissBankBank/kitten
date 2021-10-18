@@ -4,12 +4,17 @@ import { ButtonWithTooltip } from './index'
 
 const args = {
   tooltipText: 'Carte cadeau',
+  position: 'center',
 }
 
 const argTypes = {
   tooltipText: {
     name: 'tooltipText',
     control: 'text',
+  },
+  position: {
+    control: 'radio',
+    options: ['left', 'center', 'right'],
   },
 }
 
