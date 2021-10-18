@@ -517,13 +517,11 @@ const Selector = ({ data, className, ...props }) => {
     )
   }
 
-  const activeItem = find(item => item.isActive === true)(data)
-
   const {
     className: activeClassName,
     icon: activeIcon,
     children: activeChildren,
-  } = activeItem
+  } = find(item => item.isActive === true)(data)
 
   return (
     <details
