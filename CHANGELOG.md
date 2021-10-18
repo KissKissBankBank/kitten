@@ -4,7 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Alert`: Improve new UI.
+- Fix: `CrossIconNext`: New UI.
 - Feature: `Label`: Add `dot` props.
+
+## [5.1.0] - 2021-10-15
+
+Feature:
+
+- `IconBadge`: Add `border` and `backgroundColor` props style.
+
+Fix:
+
+- `Button`: Fix min width constraints.
 
 ## [5.0.2] - 2021-10-13
 
