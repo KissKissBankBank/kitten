@@ -17,7 +17,7 @@ import {
   domElementHelper,
 } from 'kitten'
 
-import { StoryMenu } from './menu'
+import { StoryMenu, StoryMultiMenu } from './menu'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 const getElementById = id => document.getElementById(id)
@@ -143,6 +143,7 @@ export const StoryLayout = ({
   displayAlerts,
   displayHeader,
   children,
+  multiMenu,
   ...args
 }) => {
   return (
@@ -187,7 +188,7 @@ export const StoryLayout = ({
         </AvatarWithTextAndBadge>
       </DashboardLayout.Header>
       <DashboardLayout.SideContent>
-        {props => <StoryMenu {...props} />}
+        {multiMenu ? <StoryMultiMenu /> : <StoryMenu />}
       </DashboardLayout.SideContent>
       <DashboardLayout.SideFooter>
         <Button modifier="boron" fit="fluid">
