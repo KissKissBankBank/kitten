@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
-
+import isEmpty from 'lodash/fp/isEmpty'
 import domElementHelper from '../../../helpers/dom/element-helper'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
@@ -13,6 +13,7 @@ const StyledLabel = styled.label`
   ${TYPOGRAPHY.fontStyles.regular}
   cursor: pointer;
   font-size: ${stepToRem(-1)};
+  display: flex;
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     font-size: ${stepToRem(0)};
@@ -31,6 +32,15 @@ const StyledLabel = styled.label`
   &.k-Label--withoutPointerEvents {
     pointer-events: none;
   }
+
+  .k-Label--dot {
+    margin: ${pxToRem(10)};
+    width: var(--dot-width);
+    height: var(--dot-width);
+    background-color: var(--dot-background-color);
+    display: inline-block;
+    border-radius: 50%;
+  }
 `
 
 export const Label = ({
@@ -41,6 +51,8 @@ export const Label = ({
   size,
   withoutPointerEvents,
   htmlFor,
+  dot,
+  style,
   ...other
 }) => {
   const handleClick = e => {
@@ -62,6 +74,18 @@ export const Label = ({
       {...other}
     >
       {children}
+      {!isEmpty(dot) && (
+        <span 
+          className={classNames('k-Label--dot')}
+          title={dot.title}
+          tabIndex="-1"
+          style={{
+            '--dot-background-color': dot?.backgroundColor ?? null,
+            '--dot-width': 'width' in dot ? pxToRem(dot.width) : null,
+            ...style
+          }}
+        />
+      )}
     </StyledLabel>
   )
 }
@@ -71,10 +95,16 @@ Label.defaultProps = {
   focusId: null,
   size: 'normal',
   withoutPointerEvents: false,
+  dot: {},
 }
 
 Label.propTypes = {
   focusId: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   size: PropTypes.oneOf([null, undefined, 'normal', 'tiny', 'micro']),
   withoutPointerEvents: PropTypes.bool,
+  dot: PropTypes.shape({
+    width: PropTypes.number,
+    backgroundColor: PropTypes.node,
+    title: PropTypes.string,
+  }),
 }
