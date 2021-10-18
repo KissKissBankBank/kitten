@@ -2,9 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { Label } from './index'
 import { DocsPage } from 'storybook/docs-page'
+import COLORS from '../../../constants/colors-config'
 
 export default {
   title: 'Form/Label',
+  component: Label,
   parameters: {
     docs: {
       page: () => <DocsPage filepath={__filename} importString="Label" />,
@@ -25,13 +27,18 @@ export default {
       name: 'withoutPointerEvents',
       control: 'boolean',
     },
+    dot: {
+      name: 'dot',
+      control: 'object',
+    }
   },
-  args: {
-    children: 'Label',
-    focusId: null,
-    size: 'normal',
-    withoutPointerEvents: false,
-  },
+}
+
+const args = {
+  children: 'Label',
+  focusId: null,
+  size: 'normal',
+  withoutPointerEvents: false,
 }
 
 const FocusableComponent = styled.div`
@@ -55,6 +62,17 @@ const FocusableComponent = styled.div`
 export const Default = args => <Label {...args} />
 
 Default.storyName = 'Label'
+
+export const WithDot = args => <Label {...args} />
+
+WithDot.args = {
+  ...args,
+  dot: {
+    width: 7,
+    backgroundColor: COLORS.orange,
+    title: 'champs obligatoire',
+  }
+}
 
 export const WithFocusId = args => (
   <>

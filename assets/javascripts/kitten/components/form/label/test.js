@@ -17,6 +17,12 @@ describe('<Label />', () => {
           focusId="customId"
           withoutPointerEvents
           tag="span"
+          dot={{
+            width: 7,
+            height: 7,
+            backgroundColor: '#ff7800',
+            title: 'champs obligatoire',
+          }}
         />,
       )
       .toJSON()
