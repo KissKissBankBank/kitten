@@ -12,7 +12,7 @@ import { ScreenConfig } from '../../../constants/screen-config';
 var StyledLabel = styled.label.withConfig({
   displayName: "label__StyledLabel",
   componentId: "l6ih7y-0"
-})(["display:block;", " cursor:pointer;font-size:", ";display:flex;@media (min-width:", "){font-size:", ";}&.k-Label--tiny{line-height:1.3;font-size:", ";}&.k-Label--micro{line-height:1.3;font-size:", ";}&.k-Label--withoutPointerEvents{pointer-events:none;}.k-Label--dot{margin:", ";width:var(--dot-width);height:var(--dot-width);background-color:var(--dot-background-color);display:inline-block;border-radius:50%;}"], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), pxToRem(ScreenConfig.S.min), stepToRem(0), stepToRem(0), stepToRem(-1), pxToRem(10));
+})(["display:block;", " cursor:pointer;font-size:", ";display:flex;align-items:center;@media (min-width:", "){font-size:", ";}&.k-Label--tiny{line-height:1.3;font-size:", ";}&.k-Label--micro{line-height:1.3;font-size:", ";}&.k-Label--withoutPointerEvents{pointer-events:none;}.k-Label--dot{margin:0 0 0 ", ";width:var(--dot-width);height:var(--dot-width);background-color:var(--dot-background-color);display:inline-block;border-radius:50%;}"], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), pxToRem(ScreenConfig.S.min), stepToRem(0), stepToRem(0), stepToRem(-1), pxToRem(10));
 export var Label = function Label(_ref) {
   var _dot$backgroundColor;
 

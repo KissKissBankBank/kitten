@@ -4,10 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `GifVideo`: Fix bug when `children` is empty.
-- Fix: `cssPropertyDistributor`: Fix bug when `elements` is null.
-- Feature: `DropdownSelect`: Add `labelProps` prop.
-- Fix: `Label`: Fix styles.
+## [5.3.0] - 2021-10-19
+
+Feature:
+
+- `DropdownSelect`: Add `labelProps` prop.
+
+Fixes:
+
+- `GifVideo`: Fix bug when `children` is empty.
+- `cssPropertyDistributor`: Fix bug when `elements` is null.
+- `Label`: Fix styles.
 
 ## [5.2.0] - 2021-10-18
 
