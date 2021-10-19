@@ -84,7 +84,8 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       controlled = _ref.controlled,
       modifier = _ref.modifier,
       direction = _ref.direction,
-      arrowPosition = _ref.arrowPosition;
+      arrowPosition = _ref.arrowPosition,
+      labelProps = _ref.labelProps;
 
   var _useState = (0, _react.useState)([]),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -204,8 +205,8 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     style: {
       '--menu-z-index': menuZIndex
     }
-  }, /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-Form-Dropdown__label', 'k-u-margin-bottom-single', {
+  }, /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({}, labelProps, {
+    className: (0, _classnames.default)('k-Form-Dropdown__label', 'k-u-margin-bottom-single', labelProps === null || labelProps === void 0 ? void 0 : labelProps.className, {
       'k-Form-Dropdown__label--isHidden': hideLabel
     })
   }, getLabelProps()), labelText), /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({

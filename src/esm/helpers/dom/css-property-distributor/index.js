@@ -10,6 +10,8 @@ export var cssPropertyDistributor = function cssPropertyDistributor(_ref) {
       _ref$direction = _ref.direction,
       direction = _ref$direction === void 0 ? 'max' : _ref$direction;
   if (!domElementHelper.canUseDom()) return null;
+  if (property === '') return;
+  if (!!elements) return;
   var directionGetter = {
     min: min,
     max: max
