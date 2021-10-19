@@ -43,6 +43,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     modifier,
     direction,
     arrowPosition,
+    labelProps,
   } = props
 
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
@@ -132,9 +133,11 @@ export const DropdownSelect = ({ combobox, ...props }) => {
       style={{ '--menu-z-index': menuZIndex }}
     >
       <Label
+        {...labelProps}
         className={classNames(
           'k-Form-Dropdown__label',
           'k-u-margin-bottom-single',
+          labelProps?.className,
           {
             'k-Form-Dropdown__label--isHidden': hideLabel,
           },
