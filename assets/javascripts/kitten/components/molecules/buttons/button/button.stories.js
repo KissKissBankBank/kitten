@@ -83,7 +83,7 @@ export default {
   },
   decorators: [
     story => (
-      <div className="story-Container story-Grid story-Grid--large">
+      <div className="story-Container">
         <div>{story()}</div>
       </div>
     ),
@@ -94,6 +94,51 @@ export default {
 
 export const Default = args => <Button {...args} />
 
+export const AllModifiers = args => {
+  return (
+    <>
+      {buttonModifiers.map(modifier => (
+        <div className="k-u-flex k-u-flex-direction-column k-u-flex-alignItems-center">
+          <Button {...args} modifier={modifier}/>
+          <span className="k-u-margin-top-single k-u-margin-bottom-triple k-u-weight-light">
+            {modifier}
+          </span>
+        </div>
+      ))}
+    </>
+  )
+}
+
+AllModifiers.decorators = [
+  story => (
+    <div className="story-Grid story-Grid--small">
+      {story()}
+    </div>
+  ),
+]
+
+export const DarkModifiers = args => {
+  return (
+    <>
+      {['beryllium', 'boron', 'scandium'].map(modifier => (
+        <div className="k-u-margin-vertical-double k-u-flex k-u-flex-direction-column k-u-flex-alignItems-center">
+          <Button {...args} modifier={modifier}/>
+          <span className="k-u-margin-top-single k-u-margin-bottom-triple k-u-weight-light k-u-color-background1">
+            {modifier}
+          </span>
+        </div>
+      ))}
+    </>
+  )
+}
+
+DarkModifiers.decorators = [
+  story => (
+    <div className="story-Grid story-Grid--small has-overrides dark-background">
+      {story()}
+    </div>
+  ),
+]
 export const WithIcon = args => (
   <Button {...args} fit="icon">
     <HeartIcon width={15} height={15} />
@@ -109,12 +154,12 @@ export const WithColorIcon = args => (
 export const WithTextAndIcon = ({ iconPosition, children, ...args }) => {
   return (
     <Button {...args}>
-      {iconPosition === 'left' && <HeartIcon width={15} height={15} />}
+          {iconPosition === 'left' && <HeartIcon width={15} height={15} />}
 
-      <span>{children}</span>
+          <span>{children}</span>
 
-      {iconPosition === 'right' && <HeartIcon width={15} height={15} />}
-    </Button>
+          {iconPosition === 'right' && <HeartIcon width={15} height={15} />}
+        </Button>
   )
 }
 WithTextAndIcon.args = {
@@ -132,9 +177,9 @@ WithTextAndIcon.argTypes = {
 
 export const WithBadge = ({ children, ...args }) => (
   <Button {...args}>
-    <span>{children}</span>
-    <Badge color="red" Icon={Cart}>
-      2
-    </Badge>
-  </Button>
+      <span>{children}</span>
+      <Badge color="red" Icon={Cart}>
+        2
+      </Badge>
+    </Button>
 )

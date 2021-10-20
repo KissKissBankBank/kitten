@@ -19,6 +19,7 @@ export const buttonModifiers = [
   'copper',
   'boron',
   'calcium',
+  'scandium',
   'neon',
   'iron',
   'social_facebook',
