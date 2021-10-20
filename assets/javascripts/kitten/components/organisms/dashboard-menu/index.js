@@ -175,8 +175,8 @@ const StyledDashboardMenu = styled.nav`
     display: flex;
     height: ${pxToRem(50)};
     align-items: center;
-    gap: ${pxToRem(10)};
-    padding: 0 ${pxToRem(10)};
+    gap: ${pxToRem(15)};
+    padding: 0 ${pxToRem(15)};
     border-radius: ${pxToRem(4)};
   }
 
@@ -223,19 +223,13 @@ const StyledDashboardMenu = styled.nav`
     align-items: center;
     justify-content: center;
 
-    flex: 0 0 ${pxToRem(25)};
-    width: ${pxToRem(25)};
-    height: ${pxToRem(25)};
-
-    @media ${mq.tabletAndDesktop} {
-      flex: 0 0 ${pxToRem(40)};
-      width: ${pxToRem(40)};
-      height: ${pxToRem(40)};
-    }
+    flex: 0 0 ${pxToRem(20)};
+    width: ${pxToRem(20)};
+    height: ${pxToRem(20)};
 
     svg {
-      max-width: ${pxToRem(25)};
-      max-height: ${pxToRem(25)};
+      max-width: ${pxToRem(20)};
+      max-height: ${pxToRem(20)};
 
       &[fill],
       d[fill] {
@@ -313,7 +307,7 @@ const StyledDashboardMenu = styled.nav`
     user-select: none;
     cursor: pointer;
 
-    padding: 0 ${pxToRem(10)};
+    padding: 0 ${pxToRem(15)};
     height: ${pxToRem(70)};
     border-radius: ${pxToRem(4)};
 
@@ -540,7 +534,7 @@ const Selector = ({ data, className, ...props }) => {
         )}
       >
         <FlexWrapper
-          gap={10}
+          gap={15}
           direction="row"
           className="k-DashboardMenu__selectorSummary__flex"
         >
