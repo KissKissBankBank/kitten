@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CrossIconNext = void 0;
+exports.EyeIconNext = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -15,29 +15,30 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
-
-var CrossIconNext = function CrossIconNext(_ref) {
+var EyeIconNext = function EyeIconNext(_ref) {
   var color = _ref.color,
       title = _ref.title,
       props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title"]);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
-    viewBox: "0 0 17 18",
-    width: "17",
-    height: "18",
-    fill: "none",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), /*#__PURE__*/_react.default.createElement("path", {
-    fill: color,
-    d: "M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+  }, props), title && /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M12 4C3.75 4 1 12 1 12s2.75 8 11 8 11-8 11-8-2.75-8-11-8Zm0 14c-5.459 0-8-4.333-8.776-6C4.001 10.333 6.558 6 12 6s8 4.333 8.776 6c-.777 1.667-3.334 6-8.776 6Z",
+    fill: color
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0 5.818a1.819 1.819 0 1 1 0-3.637 1.819 1.819 0 0 1 0 3.637Z",
+    fill: color
   }));
 };
 
-exports.CrossIconNext = CrossIconNext;
-CrossIconNext.prototype = {
+exports.EyeIconNext = EyeIconNext;
+EyeIconNext.propTypes = {
   color: _propTypes.default.string,
   title: _propTypes.default.string
 };
-CrossIconNext.defaultProps = {
-  color: _colorsConfig.default.font1
+EyeIconNext.defaultProps = {
+  color: '#222',
+  title: null
 };

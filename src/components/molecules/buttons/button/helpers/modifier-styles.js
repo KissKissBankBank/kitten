@@ -88,6 +88,18 @@ var modifierStyles = function modifierStyles(modifier) {
       activeColor = _colorsConfig.default.font2;
       break;
 
+    case 'scandium':
+      borderColor = _colorsConfig.default.font1;
+      backgroundColor = _colorsConfig.default.font1;
+      color = _colorsConfig.default.font3;
+      hoverBorderColor = _colorsConfig.default.line3;
+      hoverBgColor = _colorsConfig.default.line3;
+      hoverColor = _colorsConfig.default.background1;
+      activeBorderColor = _colorsConfig.default.grey1;
+      activeBgColor = _colorsConfig.default.grey1;
+      activeColor = _colorsConfig.default.background1;
+      break;
+
     case 'neon':
       borderColor = _colorsConfig.default.orange;
       backgroundColor = _colorsConfig.default.orange;

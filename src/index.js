@@ -1001,10 +1001,88 @@ Object.defineProperty(exports, "SpeechBubbleIcon", {
     return _speechBubbleIcon.SpeechBubbleIcon;
   }
 });
+Object.defineProperty(exports, "CheckedShieldIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _checkedShieldIconNext.CheckedShieldIconNext;
+  }
+});
+Object.defineProperty(exports, "ChronoIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _chronoIconNext.ChronoIconNext;
+  }
+});
+Object.defineProperty(exports, "CogIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _cogIconNext.CogIconNext;
+  }
+});
 Object.defineProperty(exports, "CrossIconNext", {
   enumerable: true,
   get: function get() {
     return _crossIconNext.CrossIconNext;
+  }
+});
+Object.defineProperty(exports, "EyeIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _eyeIconNext.EyeIconNext;
+  }
+});
+Object.defineProperty(exports, "HomeIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _homeIconNext.HomeIconNext;
+  }
+});
+Object.defineProperty(exports, "InfiniteIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _infiniteIconNext.InfiniteIconNext;
+  }
+});
+Object.defineProperty(exports, "PlusIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _plusIconNext.PlusIconNext;
+  }
+});
+Object.defineProperty(exports, "SpeechBubbleIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _speechBubbleIconNext.SpeechBubbleIconNext;
+  }
+});
+Object.defineProperty(exports, "StatsIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _statsIconNext.StatsIconNext;
+  }
+});
+Object.defineProperty(exports, "TagIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _tagIconNext.TagIconNext;
+  }
+});
+Object.defineProperty(exports, "ThumbUpIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _thumbUpIconNext.ThumbUpIconNext;
+  }
+});
+Object.defineProperty(exports, "UsersIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _usersIconNext.UsersIconNext;
+  }
+});
+Object.defineProperty(exports, "WindowEditIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _windowEditIconNext.WindowEditIconNext;
   }
 });
 Object.defineProperty(exports, "LightbulbIllustration", {
@@ -2458,7 +2536,33 @@ var _statsIcon = require("./components/graphics/icons/stats-icon");
 
 var _speechBubbleIcon = require("./components/graphics/icons/speech-bubble-icon");
 
+var _checkedShieldIconNext = require("./components/graphics/icons-next/checked-shield-icon-next");
+
+var _chronoIconNext = require("./components/graphics/icons-next/chrono-icon-next");
+
+var _cogIconNext = require("./components/graphics/icons-next/cog-icon-next");
+
 var _crossIconNext = require("./components/graphics/icons-next/cross-icon-next");
+
+var _eyeIconNext = require("./components/graphics/icons-next/eye-icon-next");
+
+var _homeIconNext = require("./components/graphics/icons-next/home-icon-next");
+
+var _infiniteIconNext = require("./components/graphics/icons-next/infinite-icon-next");
+
+var _plusIconNext = require("./components/graphics/icons-next/plus-icon-next");
+
+var _speechBubbleIconNext = require("./components/graphics/icons-next/speech-bubble-icon-next");
+
+var _statsIconNext = require("./components/graphics/icons-next/stats-icon-next");
+
+var _tagIconNext = require("./components/graphics/icons-next/tag-icon-next");
+
+var _thumbUpIconNext = require("./components/graphics/icons-next/thumb-up-icon-next");
+
+var _usersIconNext = require("./components/graphics/icons-next/users-icon-next");
+
+var _windowEditIconNext = require("./components/graphics/icons-next/window-edit-icon-next");
 
 var _lightbulbIllustration = require("./components/graphics/illustrations/lightbulb-illustration");
 

@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CrossIconNext = void 0;
+exports.StatsIconNext = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -15,29 +15,27 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
-
-var CrossIconNext = function CrossIconNext(_ref) {
+var StatsIconNext = function StatsIconNext(_ref) {
   var color = _ref.color,
       title = _ref.title,
       props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title"]);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
-    viewBox: "0 0 17 18",
-    width: "17",
-    height: "18",
-    fill: "none",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), /*#__PURE__*/_react.default.createElement("path", {
-    fill: color,
-    d: "M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+  }, props), title && /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M22 8.074a2.592 2.592 0 0 0-2.593-2.593h-3.333V3.63a2.593 2.593 0 0 0-2.593-2.593h-2.963A2.593 2.593 0 0 0 7.926 3.63v4.814H4.593A2.593 2.593 0 0 0 2 11.037v8.519h20V8.074Zm-14.074 9.26H4.222v-6.297a.37.37 0 0 1 .37-.37h3.334v6.666Zm5.926 0h-3.704V3.63a.37.37 0 0 1 .37-.37h2.963a.37.37 0 0 1 .37.37v13.703Zm5.926 0h-3.704v-9.63h3.333a.37.37 0 0 1 .37.37v9.26ZM22 21.778H2V24h20v-2.222Z",
+    fill: color
   }));
 };
 
-exports.CrossIconNext = CrossIconNext;
-CrossIconNext.prototype = {
+exports.StatsIconNext = StatsIconNext;
+StatsIconNext.propTypes = {
   color: _propTypes.default.string,
   title: _propTypes.default.string
 };
-CrossIconNext.defaultProps = {
-  color: _colorsConfig.default.font1
+StatsIconNext.defaultProps = {
+  color: '#222',
+  title: null
 };
