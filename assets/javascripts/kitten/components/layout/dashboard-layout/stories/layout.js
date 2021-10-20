@@ -190,12 +190,14 @@ export const StoryLayout = ({
       <DashboardLayout.SideContent>
         {multiMenu ? <StoryMultiMenu /> : <StoryMenu />}
       </DashboardLayout.SideContent>
-      <DashboardLayout.SideFooter>
-        <Button modifier="boron" fit="fluid">
-          <PasswordIcon />
-          <span>Voir ma page projet</span>
-        </Button>
-      </DashboardLayout.SideFooter>
+      {!multiMenu && (
+        <DashboardLayout.SideFooter>
+          <Button modifier="boron" fit="fluid">
+            <PasswordIcon />
+            <span>Voir ma page projet</span>
+          </Button>
+        </DashboardLayout.SideFooter>
+      )}
 
       {displayAlerts && (
         <DashboardLayout.Alerts>
