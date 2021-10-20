@@ -307,7 +307,7 @@ const StyledDashboardMenu = styled.nav`
     user-select: none;
     cursor: pointer;
 
-    padding: 0 ${pxToRem(10)};
+    padding: 0 ${pxToRem(15)};
     height: ${pxToRem(70)};
     border-radius: ${pxToRem(4)};
 
@@ -534,7 +534,7 @@ const Selector = ({ data, className, ...props }) => {
         )}
       >
         <FlexWrapper
-          gap={10}
+          gap={15}
           direction="row"
           className="k-DashboardMenu__selectorSummary__flex"
         >
