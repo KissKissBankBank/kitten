@@ -25,20 +25,6 @@ const zoomInAndOpacity = keyframes`
   }
 `
 
-const zoomOutAndOpacity = keyframes`
-  from {
-    transform: translateX(var(--ButtonWithTooltip-translate)) translateY(${pxToRem(
-      ARROW_SIZE,
-    )}) scale(1);
-    opacity: 1;
-  }
-  to
-  {
-    transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0) scale(.66);
-    opacity: 0;
-  }
-`
-
 const StyledButtonWithTooltip = styled.div`
   --ButtonWithTooltip-translate: -50%;
   --ButtonWithTooltip-origin: 50%;
@@ -46,26 +32,24 @@ const StyledButtonWithTooltip = styled.div`
   display: inline-block;
   position: relative;
 
-  .k-ButtonWithTooltip__container {
+  .k-ButtonWithTooltip__tooltip {
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0)
       scale(0.66);
     transform-origin: var(--ButtonWithTooltip-origin) ${pxToRem(ARROW_SIZE)};
+    opacity: 0;
 
     width: max-content;
     max-width: ${pxToRem(250)};
 
     display: block;
-
-    animation: 0.16s ease ${zoomOutAndOpacity};
-    opacity: 0;
   }
 
   .k-ButtonWithTooltip__button {
-    &:hover + .k-ButtonWithTooltip__container,
-    &:focus + .k-ButtonWithTooltip__container {
+    &:hover + .k-ButtonWithTooltip__tooltip,
+    &:focus + .k-ButtonWithTooltip__tooltip {
       animation: 0.16s ease ${zoomInAndOpacity};
       transform: translateX(var(--ButtonWithTooltip-translate))
         translateY(${pxToRem(ARROW_SIZE)}) scale(1);
@@ -130,7 +114,7 @@ export const ButtonWithTooltip = ({
         distanceIsReverse={position === 'left' || null}
         {...tooltipProps}
         className={classNames(
-          'k-ButtonWithTooltip__container',
+          'k-ButtonWithTooltip__tooltip',
           tooltipProps?.className,
         )}
       >

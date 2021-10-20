@@ -294,7 +294,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   position: relative;
 }
 
-.c0 .k-ButtonWithTooltip__container {
+.c0 .k-ButtonWithTooltip__tooltip {
   position: absolute;
   top: 100%;
   left: 50%;
@@ -304,18 +304,16 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   -webkit-transform-origin: var(--ButtonWithTooltip-origin) 0.4375rem;
   -ms-transform-origin: var(--ButtonWithTooltip-origin) 0.4375rem;
   transform-origin: var(--ButtonWithTooltip-origin) 0.4375rem;
+  opacity: 0;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   max-width: 15.625rem;
   display: block;
-  -webkit-animation: 0.16s ease iNcAmp;
-  animation: 0.16s ease iNcAmp;
-  opacity: 0;
 }
 
-.c0 .k-ButtonWithTooltip__button:hover + .k-ButtonWithTooltip__container,
-.c0 .k-ButtonWithTooltip__button:focus + .k-ButtonWithTooltip__container {
+.c0 .k-ButtonWithTooltip__button:hover + .k-ButtonWithTooltip__tooltip,
+.c0 .k-ButtonWithTooltip__button:focus + .k-ButtonWithTooltip__tooltip {
   -webkit-animation: 0.16s ease bDmclk;
   animation: 0.16s ease bDmclk;
   -webkit-transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0.4375rem) scale(1);
@@ -412,7 +410,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   </button>
   <div
     aria-hidden={true}
-    className="c2 k-ArrowContainer k-ButtonWithTooltip__container k-ArrowContainer--top"
+    className="c2 k-ArrowContainer k-ButtonWithTooltip__tooltip k-ArrowContainer--top"
     style={
       Object {
         "--k-ArrowContainer-arrowDistance": "calc(50% - 0.4375rem)",
