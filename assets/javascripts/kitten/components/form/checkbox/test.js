@@ -24,7 +24,13 @@ describe('<Checkbox />', () => {
     let component
     beforeEach(() => {
       component = renderer
-        .create(<Checkbox id="test-checkbox" label="Test label" />)
+        .create(
+          <Checkbox
+            id="test-checkbox"
+            label="Test label"
+            labelProps={{ className: 'custom-label-className' }}
+          />,
+        )
         .toJSON()
     })
 
@@ -38,7 +44,12 @@ describe('<Checkbox />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Checkbox id="test-checkbox" label="Main label">
+          <Checkbox
+            id="test-checkbox"
+            label="Main label"
+            labelProps={{ className: 'custom-label-className' }}
+            textProps={{ className: 'custom-text-className' }}
+          >
             Secondary content
           </Checkbox>,
         )

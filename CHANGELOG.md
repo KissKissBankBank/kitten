@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Checkbox`: Add `labelProps` prop.
+- Fix: `Checkbox`: Fix `text` `max-width`.
 - Fix: `Alert`: Fix responsive styles.
 
 ## [5.3.0] - 2021-10-19
