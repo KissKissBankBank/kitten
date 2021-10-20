@@ -1,15 +1,19 @@
 import React from 'react'
 import {
   DashboardMenu,
-  SpeechBubbleIcon,
-  HomeIcon,
-  PeopleIcon,
-  TagIcon,
-  FilterIcon,
-  FileIcon,
-  StatsIcon,
-  LoudspeakerIcon,
-  ShieldIcon,
+  CheckedShieldIconNext,
+  ChronoIconNext,
+  CogIconNext,
+  EyeIconNext,
+  HomeIconNext,
+  InfiniteIconNext,
+  PlusIconNext,
+  SpeechBubbleIconNext,
+  StatsIconNext,
+  TagIconNext,
+  ThumbUpIconNext,
+  UsersIconNext,
+  WindowEditIconNext,
   COLORS,
   FlexWrapper,
   StatusWithBullet,
@@ -23,56 +27,56 @@ export const StoryMenu = ({ closeSideBar }) => (
     <DashboardMenu.List>
       <DashboardMenu.Item
         href="#"
-        icon={() => <HomeIcon color="currentColor" />}
+        icon={() => <HomeIconNext color="currentColor" />}
         onClick={() => closeSideBar()}
       >
         Accueil
       </DashboardMenu.Item>
       <DashboardMenu.Item
         href="#"
-        icon={() => <PeopleIcon color="currentColor" />}
+        icon={() => <UsersIconNext color="currentColor" />}
         onClick={() => closeSideBar()}
       >
-        Contributeurs
+        Contributions
       </DashboardMenu.Item>
       <DashboardMenu.Item
         href="#"
-        icon={() => <TagIcon color="currentColor" />}
+        icon={() => <TagIconNext color="currentColor" />}
         onClick={() => closeSideBar()}
       >
         Contreparties
       </DashboardMenu.Item>
       <DashboardMenu.Item
         href="#"
-        icon={() => <FilterIcon color="currentColor" />}
+        icon={() => <CogIconNext color="currentColor" />}
         onClick={() => closeSideBar()}
       >
         Paramètres
       </DashboardMenu.Item>
       <DashboardMenu.Item
         href="#"
-        icon={() => <FileIcon color="currentColor" />}
+        icon={() => <WindowEditIconNext color="currentColor" />}
         onClick={() => closeSideBar()}
       >
         Page Projet
       </DashboardMenu.Item>
       <DashboardMenu.Item
         href="#"
-        icon={() => <StatsIcon color="currentColor" />}
+        icon={() => <StatsIconNext color="currentColor" />}
         onClick={() => closeSideBar()}
       >
         Statistiques
       </DashboardMenu.Item>
       <DashboardMenu.Item
         href="#"
-        icon={() => <LoudspeakerIcon color="currentColor" />}
+        icon={() => <ThumbUpIconNext color="currentColor" />}
         onClick={() => closeSideBar()}
       >
         Marketing
       </DashboardMenu.Item>
       <DashboardMenu.Expandable
         title="Admin"
-        icon={() => <ShieldIcon color="currentColor" />}
+        icon={() => <CheckedShieldIconNext color="currentColor" />}
       >
         <DashboardMenu.Item href="#" onClick={() => closeSideBar()}>
           Destinataire des fonds
@@ -86,7 +90,7 @@ export const StoryMenu = ({ closeSideBar }) => (
       </DashboardMenu.Expandable>
       <DashboardMenu.Item
         href="#"
-        icon={() => <SpeechBubbleIcon color="currentColor" />}
+        icon={() => <SpeechBubbleIconNext color="currentColor" />}
         onClick={() => closeSideBar()}
       >
         Actualités
@@ -95,23 +99,22 @@ export const StoryMenu = ({ closeSideBar }) => (
   </DashboardMenu>
 )
 
-
 export const StoryMultiMenu = () => (
   <DashboardMenu>
     <DashboardMenu.List>
       <DashboardMenu.Item
         size="small"
         href="#"
-        icon={<HomeIcon color="currentColor" />}
+        icon={<CogIconNext color="currentColor" />}
       >
-        Accueil
+        Paramètres et membres
       </DashboardMenu.Item>
       <DashboardMenu.Item
         size="small"
         href="#"
-        icon={<PeopleIcon color="currentColor" />}
+        icon={<CheckedShieldIconNext color="currentColor" />}
       >
-        Contributeurs
+        Admin
       </DashboardMenu.Item>
     </DashboardMenu.List>
     <DashboardMenu.Separator>
@@ -136,10 +139,11 @@ export const StoryMultiMenu = () => (
           }}
           tooltipProps={{
             className: 'k-u-avoid-click',
+            style: { zIndex: 3 },
           }}
           tooltipText="Créer un nouveau projet"
         >
-          +
+          <PlusIconNext color="currentColor" />
         </ButtonWithTooltip>
       </FlexWrapper>
     </DashboardMenu.Separator>
@@ -163,11 +167,7 @@ export const StoryMultiMenu = () => (
               >
                 Don permanent
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 1
               </Text>
               <StatusWithBullet
@@ -180,7 +180,7 @@ export const StoryMultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: false,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <InfiniteIconNext color="currentColor" />,
         },
         {
           href: '#',
@@ -199,11 +199,7 @@ export const StoryMultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 2
               </Text>
               <StatusWithBullet
@@ -216,7 +212,7 @@ export const StoryMultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: true,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <ChronoIconNext color="currentColor" />,
         },
         {
           href: '#',
@@ -235,11 +231,7 @@ export const StoryMultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Un très long nom de la campagne 3
               </Text>
               <StatusWithBullet statusType="none" size="micro" weight="light">
@@ -248,7 +240,7 @@ export const StoryMultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: false,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <ChronoIconNext color="currentColor" />,
         },
         {
           href: '#',
@@ -267,11 +259,7 @@ export const StoryMultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 4
               </Text>
               <StatusWithBullet
@@ -284,7 +272,7 @@ export const StoryMultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: false,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <ChronoIconNext color="currentColor" />,
         },
         {
           href: '#',
@@ -303,11 +291,7 @@ export const StoryMultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 5
               </Text>
               <StatusWithBullet statusType="none" size="micro" weight="light">
@@ -316,7 +300,7 @@ export const StoryMultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: false,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <ChronoIconNext color="currentColor" />,
         },
         {
           href: '#',
@@ -335,11 +319,7 @@ export const StoryMultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 6
               </Text>
               <StatusWithBullet
@@ -352,7 +332,7 @@ export const StoryMultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: false,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <ChronoIconNext color="currentColor" />,
         },
         {
           href: '#',
@@ -371,11 +351,7 @@ export const StoryMultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 7
               </Text>
               <StatusWithBullet statusType="none" size="micro" weight="light">
@@ -384,7 +360,7 @@ export const StoryMultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: false,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <ChronoIconNext color="currentColor" />,
         },
       ]}
     />
@@ -392,50 +368,71 @@ export const StoryMultiMenu = () => (
       <DashboardMenu.Item
         size="small"
         href="#"
+        icon={<HomeIconNext color="currentColor" />}
+      >
+        Accueil
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="#"
+        icon={<UsersIconNext color="currentColor" />}
+      >
+        Contributions
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="#"
         isActive
-        icon={<TagIcon color="currentColor" />}
+        icon={<TagIconNext color="currentColor" />}
       >
         Contreparties
       </DashboardMenu.Item>
       <DashboardMenu.Item
         size="small"
         href="#"
-        icon={<FilterIcon color="currentColor" />}
+        icon={<CogIconNext color="currentColor" />}
       >
         Paramètres
       </DashboardMenu.Item>
       <DashboardMenu.Item
         size="small"
         href="https://www.kisskissbankbank.com"
-        icon={<FileIcon color="currentColor" />}
+        icon={<WindowEditIconNext color="currentColor" />}
       >
         Page Projet
       </DashboardMenu.Item>
       <DashboardMenu.Item
         size="small"
         href="https://www.kisskissbankbank.com"
-        icon={<StatsIcon color="currentColor" />}
+        icon={<StatsIconNext color="currentColor" />}
       >
         Statistiques
       </DashboardMenu.Item>
       <DashboardMenu.Item
         size="small"
         href="https://www.kisskissbankbank.com"
-        icon={<LoudspeakerIcon color="currentColor" />}
+        icon={<ThumbUpIconNext color="currentColor" />}
       >
         Marketing
       </DashboardMenu.Item>
       <DashboardMenu.Item
         size="small"
         href="https://www.kisskissbankbank.com"
-        icon={<SpeechBubbleIcon color="currentColor" />}
+        icon={<SpeechBubbleIconNext color="currentColor" />}
       >
         Actualités
       </DashboardMenu.Item>
       <DashboardMenu.Item
         size="small"
         href="https://www.kisskissbankbank.com"
-        icon={<SpeechBubbleIcon color="currentColor" />}
+        icon={<CheckedShieldIconNext color="currentColor" />}
+      >
+        Admin
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="https://www.kisskissbankbank.com"
+        icon={<EyeIconNext color="currentColor" />}
         endIcon={<LongArrowIcon direction="right" color="currentColor" />}
       >
         Voir ma page projet

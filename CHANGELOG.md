@@ -4,6 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Icons`: Add the following icons
+  - CheckedShieldIconNext
+  - ChronoIconNext
+  - CogIconNext
+  - EyeIconNext
+  - HomeIconNext
+  - InfiniteIconNext
+  - PlusIconNext
+  - SpeechBubbleIconNext
+  - StatsIconNext
+  - TagIconNext
+  - ThumbUpIconNext
+  - UsersIconNext
+  - WindowEditIconNext
+- Fix: `ButtonWithTooltip`: Prevent unwanted animation on load.
 - Fix: `Alert`: Fix responsive styles.
 
 ## [5.3.0] - 2021-10-19
