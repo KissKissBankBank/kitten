@@ -28,7 +28,7 @@ const AlertWrapper = styled.div`
   }
 
   .k-Alert__text {
-    padding: ${pxToRem(18)} ${pxToRem(10)};
+    padding: ${pxToRem(12)} ${pxToRem(10)};
     flex: 1 0 0;
     font-size: ${stepToRem(-1)};
     display: flex;
