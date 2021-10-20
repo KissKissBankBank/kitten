@@ -145,6 +145,7 @@ export const SimpleMultiMenu = () => (
           }}
           tooltipProps={{
             className: 'k-u-avoid-click',
+            style: { zIndex: 3 },
           }}
           tooltipText="Créer un nouveau projet"
         >
@@ -306,6 +307,7 @@ export const MultiMenu = () => (
           }}
           tooltipProps={{
             className: 'k-u-avoid-click',
+            style: { zIndex: 3 },
           }}
           tooltipText="Créer un nouveau projet"
         >

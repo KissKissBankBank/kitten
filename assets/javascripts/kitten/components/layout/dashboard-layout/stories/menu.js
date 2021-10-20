@@ -139,6 +139,7 @@ export const StoryMultiMenu = () => (
           }}
           tooltipProps={{
             className: 'k-u-avoid-click',
+            style: { zIndex: 3 },
           }}
           tooltipText="Créer un nouveau projet"
         >
