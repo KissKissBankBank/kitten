@@ -58,7 +58,11 @@ export default {
 
 const args = {
   ...Modal.defaultProps,
-  trigger: <Button modifier="helium" onClick={action('Trigger clicked')}>Open</Button>,
+  trigger: (
+    <Button modifier="helium" onClick={action('Trigger clicked')}>
+      Open
+    </Button>
+  ),
   contentText: paragraphContainer,
 }
 

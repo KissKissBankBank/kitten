@@ -44,7 +44,10 @@ export const KissKissLoadingAnimation = ({ color, svgProps, ...props }) => (
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 21 16"
       {...svgProps}
-      className={classNames('k-KissKissLoadingAnimation__svg', svgProps.className)}
+      className={classNames(
+        'k-KissKissLoadingAnimation__svg',
+        svgProps.className,
+      )}
     >
       <path
         className="k-KissKissLoadingAnimation__path k-KissKissLoadingAnimation__path-heart"

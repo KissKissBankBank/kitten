@@ -69,5 +69,5 @@ WithBorder.args = {
     width: 2,
     style: 'solid',
     color: COLORS.primary5,
-  }
+  },
 }

@@ -327,7 +327,6 @@ export const StyledDropdown = styled.div`
         border-right: inherit;
       }
     }
-
   }
 
   /* ARROWPOSITION: RIGHT */
@@ -356,7 +355,6 @@ export const StyledDropdown = styled.div`
         border-left: inherit;
       }
     }
-
   }
 
   /* MODIFIER: HYDROGEN */

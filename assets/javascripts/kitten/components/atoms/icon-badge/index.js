@@ -100,15 +100,18 @@ export const IconBadge = ({
   ...others
 }) => (
   <StyledBadge
-    className={classNames('k-IconBadge', className, `k-IconBadge--${size}`, 
+    className={classNames(
+      'k-IconBadge',
+      className,
+      `k-IconBadge--${size}`,
       {
         'k-IconBadge--disabled': disabled,
         'k-IconBadge--valid': valid,
         'k-IconBadge--empty': empty,
         'k-IconBadge--big': big,
-        'k-IconBadge--huge': huge,  
+        'k-IconBadge--huge': huge,
       },
-      'k-IconBadge--hasBorderStyles'
+      'k-IconBadge--hasBorderStyles',
     )}
     style={{
       '--background-color': backgroundColor,
@@ -139,7 +142,7 @@ IconBadge.propTypes = {
   huge: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge']),
   backgroundColor: PropTypes.node,
-  border: PropTypes.shape({ 
+  border: PropTypes.shape({
     width: PropTypes.number,
     color: PropTypes.node,
     style: PropTypes.string,

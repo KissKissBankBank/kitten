@@ -20,8 +20,7 @@ export default {
     closeButton: true,
     closeButtonLabel: 'Close Button label',
     onAfterClose: action('onAfterClose'),
-    children:
-      'Modifications effectuées, lien ici, Modifications effectuées,',
+    children: 'Modifications effectuées, lien ici, Modifications effectuées,',
     icon: <CrossIconNext width={12} height={12} color={COLORS.background1} />,
   },
   argTypes: {
@@ -64,7 +63,6 @@ export const Default = args => <Alert {...args} />
 
 export const WithLink = args => (
   <Alert {...args} show closeButton closeButtonLabel="Close Button Label">
-    Bonjour{' '}
-    <a href="#">clique ici</a>
+    Bonjour <a href="#">clique ici</a>
   </Alert>
 )
