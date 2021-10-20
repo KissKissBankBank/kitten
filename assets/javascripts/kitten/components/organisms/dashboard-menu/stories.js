@@ -141,7 +141,7 @@ export const SimpleMultiMenu = () => (
           buttonProps={{
             fit: 'icon',
             size: 'nano',
-            modifier: 'boron',
+            modifier: 'scandium',
           }}
           tooltipProps={{
             className: 'k-u-avoid-click',
@@ -303,7 +303,7 @@ export const MultiMenu = () => (
           buttonProps={{
             fit: 'icon',
             size: 'nano',
-            modifier: 'boron',
+            modifier: 'scandium',
           }}
           tooltipProps={{
             className: 'k-u-avoid-click',

@@ -135,7 +135,7 @@ export const StoryMultiMenu = () => (
           buttonProps={{
             fit: 'icon',
             size: 'nano',
-            modifier: 'boron',
+            modifier: 'scandium',
           }}
           tooltipProps={{
             className: 'k-u-avoid-click',
