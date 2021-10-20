@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Button`: Add `scandium` modifier.
 - Feature: `Checkbox`: Add `labelProps` prop.
 - Fix: `Checkbox`: Fix secondary text max width.
 - Feature: `Icons`: Add the following icons

@@ -78,6 +78,18 @@ export const modifierStyles = modifier => {
       activeColor = COLORS.font2
       break
 
+    case 'scandium':
+      borderColor = COLORS.font1
+      backgroundColor = COLORS.font1
+      color = COLORS.font3
+      hoverBorderColor = COLORS.line3
+      hoverBgColor = COLORS.line3
+      hoverColor = COLORS.background1
+      activeBorderColor = COLORS.grey1
+      activeBgColor = COLORS.grey1
+      activeColor = COLORS.background1
+      break
+
     case 'neon':
       borderColor = COLORS.orange
       backgroundColor = COLORS.orange

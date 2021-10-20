@@ -19,6 +19,7 @@ export const buttonModifiers = [
   'copper',
   'boron',
   'calcium',
+  'scandium',
   'neon',
   'iron',
   'social_facebook',
@@ -274,7 +275,7 @@ export const Button = ({
   const internalTag = as || tag
 
   const fitClass = (() => {
-    switch(true) {
+    switch (true) {
       case fluid && !icon:
         return 'fluid'
       case icon && !fluid:
@@ -300,7 +301,10 @@ export const Button = ({
         },
       )}
       modifier={modifier}
-      style={{ '--Button-border-radius': borderRadius > 0 ? pxToRem(borderRadius) : null }}
+      style={{
+        '--Button-border-radius':
+          borderRadius > 0 ? pxToRem(borderRadius) : null,
+      }}
       type="button"
       as={internalTag}
       disabled={internalTag === 'button' ? disabled : null}
