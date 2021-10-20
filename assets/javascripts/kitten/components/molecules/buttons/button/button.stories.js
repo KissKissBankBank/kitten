@@ -99,7 +99,7 @@ export const AllModifiers = args => {
     <>
       {buttonModifiers.map(modifier => (
         <div className="k-u-flex k-u-flex-direction-column k-u-flex-alignItems-center">
-          <Button {...args} modifier={modifier}/>
+          <Button {...args} modifier={modifier} />
           <span className="k-u-margin-top-single k-u-margin-bottom-triple k-u-weight-light">
             {modifier}
           </span>
@@ -110,11 +110,7 @@ export const AllModifiers = args => {
 }
 
 AllModifiers.decorators = [
-  story => (
-    <div className="story-Grid story-Grid--small">
-      {story()}
-    </div>
-  ),
+  story => <div className="story-Grid story-Grid--small">{story()}</div>,
 ]
 
 export const DarkModifiers = args => {
@@ -122,7 +118,7 @@ export const DarkModifiers = args => {
     <>
       {['beryllium', 'boron', 'scandium'].map(modifier => (
         <div className="k-u-margin-vertical-double k-u-flex k-u-flex-direction-column k-u-flex-alignItems-center">
-          <Button {...args} modifier={modifier}/>
+          <Button {...args} modifier={modifier} />
           <span className="k-u-margin-top-single k-u-margin-bottom-triple k-u-weight-light k-u-color-background1">
             {modifier}
           </span>
@@ -154,12 +150,12 @@ export const WithColorIcon = args => (
 export const WithTextAndIcon = ({ iconPosition, children, ...args }) => {
   return (
     <Button {...args}>
-          {iconPosition === 'left' && <HeartIcon width={15} height={15} />}
+      {iconPosition === 'left' && <HeartIcon width={15} height={15} />}
 
-          <span>{children}</span>
+      <span>{children}</span>
 
-          {iconPosition === 'right' && <HeartIcon width={15} height={15} />}
-        </Button>
+      {iconPosition === 'right' && <HeartIcon width={15} height={15} />}
+    </Button>
   )
 }
 WithTextAndIcon.args = {
@@ -177,9 +173,9 @@ WithTextAndIcon.argTypes = {
 
 export const WithBadge = ({ children, ...args }) => (
   <Button {...args}>
-      <span>{children}</span>
-      <Badge color="red" Icon={Cart}>
-        2
-      </Badge>
-    </Button>
+    <span>{children}</span>
+    <Badge color="red" Icon={Cart}>
+      2
+    </Badge>
+  </Button>
 )
