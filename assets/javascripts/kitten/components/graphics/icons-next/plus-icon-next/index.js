@@ -10,8 +10,8 @@ export const PlusIconNext = ({ color, title, ...props }) => (
     {...props}
   >
     {title && <title>{title}</title>}
-    <path d="M5 1v10a1 1 0 0 0 2 0V1a1 1 0 0 0-2 0Z" fill={color}/>
-    <path d="M11 4.75H1a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Z" fill={color}/>
+    <path d="M5 1v10a1 1 0 0 0 2 0V1a1 1 0 0 0-2 0Z" fill={color} />
+    <path d="M11 4.75H1a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Z" fill={color} />
   </svg>
 )
 

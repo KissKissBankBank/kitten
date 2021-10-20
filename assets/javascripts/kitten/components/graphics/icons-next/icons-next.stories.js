@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { CrossIconNext,
+import {
+  CrossIconNext,
   CheckedShieldIconNext,
   ChronoIconNext,
   CogIconNext,
@@ -88,20 +89,48 @@ export const AllIcons = ({ colorInput }) => {
   return (
     <Container>
       <Group>
-        <IconContainer><CrossIconNext color={colorInput} /></IconContainer>
-        <IconContainer><CheckedShieldIconNext color={colorInput} /></IconContainer>
-        <IconContainer><ChronoIconNext color={colorInput} /></IconContainer>
-        <IconContainer><CogIconNext color={colorInput} /></IconContainer>
-        <IconContainer><EyeIconNext color={colorInput} /></IconContainer>
-        <IconContainer><HomeIconNext color={colorInput} /></IconContainer>
-        <IconContainer><InfiniteIconNext color={colorInput} /></IconContainer>
-        <IconContainer><PlusIconNext color={colorInput} /></IconContainer>
-        <IconContainer><SpeechBubbleIconNext color={colorInput} /></IconContainer>
-        <IconContainer><StatsIconNext color={colorInput} /></IconContainer>
-        <IconContainer><TagIconNext color={colorInput} /></IconContainer>
-        <IconContainer><ThumbUpIconNext color={colorInput} /></IconContainer>
-        <IconContainer><UsersIconNext color={colorInput} /></IconContainer>
-        <IconContainer><WindowEditIconNext color={colorInput} /></IconContainer>
+        <IconContainer>
+          <CrossIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <CheckedShieldIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <ChronoIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <CogIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <EyeIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <HomeIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <InfiniteIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <PlusIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <SpeechBubbleIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <StatsIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <TagIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <ThumbUpIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <UsersIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <WindowEditIconNext color={colorInput} />
+        </IconContainer>
       </Group>
     </Container>
   )

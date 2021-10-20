@@ -49,7 +49,10 @@ export const Default = () => (
       <DashboardMenu.Item href="#" icon={<HomeIconNext color="currentColor" />}>
         Accueil
       </DashboardMenu.Item>
-      <DashboardMenu.Item href="#" icon={<UsersIconNext color="currentColor" />}>
+      <DashboardMenu.Item
+        href="#"
+        icon={<UsersIconNext color="currentColor" />}
+      >
         Contributions
       </DashboardMenu.Item>
       <DashboardMenu.Item
@@ -169,11 +172,7 @@ export const SimpleMultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne
               </Text>
               <StatusWithBullet
@@ -334,11 +333,7 @@ export const MultiMenu = () => (
               >
                 Don permanent
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 1
               </Text>
               <StatusWithBullet
@@ -370,11 +365,7 @@ export const MultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 2
               </Text>
               <StatusWithBullet
@@ -406,11 +397,7 @@ export const MultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Un très très long nom de la campagne 3
               </Text>
               <StatusWithBullet statusType="none" size="micro" weight="light">
@@ -438,11 +425,7 @@ export const MultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 4
               </Text>
               <StatusWithBullet
@@ -474,11 +457,7 @@ export const MultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 5
               </Text>
               <StatusWithBullet statusType="none" size="micro" weight="light">
@@ -506,11 +485,7 @@ export const MultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 6
               </Text>
               <StatusWithBullet
@@ -542,11 +517,7 @@ export const MultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 7
               </Text>
               <StatusWithBullet statusType="none" size="micro" weight="light">

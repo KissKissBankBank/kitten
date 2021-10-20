@@ -99,7 +99,6 @@ export const StoryMenu = ({ closeSideBar }) => (
   </DashboardMenu>
 )
 
-
 export const StoryMultiMenu = () => (
   <DashboardMenu>
     <DashboardMenu.List>
@@ -167,11 +166,7 @@ export const StoryMultiMenu = () => (
               >
                 Don permanent
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 1
               </Text>
               <StatusWithBullet
@@ -203,11 +198,7 @@ export const StoryMultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 2
               </Text>
               <StatusWithBullet
@@ -239,11 +230,7 @@ export const StoryMultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Un très long nom de la campagne 3
               </Text>
               <StatusWithBullet statusType="none" size="micro" weight="light">
@@ -271,11 +258,7 @@ export const StoryMultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 4
               </Text>
               <StatusWithBullet
@@ -307,11 +290,7 @@ export const StoryMultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 5
               </Text>
               <StatusWithBullet statusType="none" size="micro" weight="light">
@@ -339,11 +318,7 @@ export const StoryMultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 6
               </Text>
               <StatusWithBullet
@@ -375,11 +350,7 @@ export const StoryMultiMenu = () => (
               >
                 Campagne
               </Text>
-              <Text
-                weight="regular"
-                size="tiny"
-                cssColor={COLORS.background1}
-              >
+              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
                 Nom de la campagne 7
               </Text>
               <StatusWithBullet statusType="none" size="micro" weight="light">
