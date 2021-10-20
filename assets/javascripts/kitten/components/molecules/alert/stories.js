@@ -21,7 +21,7 @@ export default {
     closeButtonLabel: 'Close Button label',
     onAfterClose: action('onAfterClose'),
     children:
-      'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.',
+      'Modifications effectuées, lien ici, Modifications effectuées,',
     icon: <CrossIconNext width={12} height={12} color={COLORS.background1} />,
   },
   argTypes: {

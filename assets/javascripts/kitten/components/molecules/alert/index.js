@@ -18,32 +18,39 @@ const AlertWrapper = styled.div`
   ${TYPOGRAPHY.fontStyles.light};
   margin: ${pxToRem(10)};
   border-radius: ${pxToRem(8)};
-  position: relative;
   overflow: hidden;
   background-color: ${COLORS.primary5};
   color: ${COLORS.font1};
   display: flex;
-  align-items: flex-start;
 
   [href] {
     color: ${COLORS.primary1};
   }
 
   .k-Alert__text {
-    padding: ${pxToRem(13)} ${pxToRem(20)};
+    padding: ${pxToRem(12)} ${pxToRem(10)};
     flex: 1 0 0;
     font-size: ${stepToRem(-1)};
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      display: flex;
-      justify-content: center;
+      padding: ${pxToRem(18)} ${pxToRem(20)};
     }
   }
 
   .k-Alert__iconBadge {
-    margin-right: ${pxToRem(20)};
+    margin-right: ${pxToRem(10)};
     background-color: ${COLORS.primary1};
     border-color: ${COLORS.primary4};
+    min-width: ${pxToRem(24)};
+    min-height: ${pxToRem(24)};
+    border-radius: ${pxToRem(24)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      margin-right: ${pxToRem(20)};
+    }
   }
 
   button {
@@ -52,8 +59,11 @@ const AlertWrapper = styled.div`
     transition: all 0.2s ease;
     align-self: stretch;
     align-items: center;
-    padding-right: ${pxToRem(20)};
-    
+    padding-right: ${pxToRem(10)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      padding-right: ${pxToRem(20)};
+    }
     svg,
     svg path {
       transition: fill 0.2s ease;
@@ -212,12 +222,11 @@ export const Alert = ({
       })}
       {...others}
     >
-      <>
+      <>  
         <div className="k-Alert__text">
           {icon && (
             <IconBadge
               className="k-Alert__iconBadge"
-              size="tiny"
               children={icon}
               border={{
                 width: 2,
@@ -234,8 +243,6 @@ export const Alert = ({
             <CrossIconNext
               onClick={() => setMounted(false)}
               title={closeButtonLabel}
-              width={12}
-              height={12}
             />
           </button>
         )}

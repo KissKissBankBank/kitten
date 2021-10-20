@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Alert`: Fix responsive styles.
+
 ## [5.3.0] - 2021-10-19
 
 Feature:

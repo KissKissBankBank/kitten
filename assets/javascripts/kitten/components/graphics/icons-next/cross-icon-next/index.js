@@ -6,6 +6,8 @@ export const CrossIconNext = ({ color, title, ...props }) => {
   return (
     <svg 
       viewBox="0 0 17 18"
+      width="17"
+      height="18"
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
       {...props}
