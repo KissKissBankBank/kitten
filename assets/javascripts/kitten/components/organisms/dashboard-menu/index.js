@@ -140,7 +140,8 @@ const StyledDashboardMenu = styled.nav`
   .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title__text {
     flex: 1 0 0;
 
-    &, * {
+    &,
+    * {
       white-space: nowrap;
       overflow-x: hidden;
       text-overflow: ellipsis;
@@ -492,7 +493,10 @@ const Selector = ({ data, className, ...props }) => {
   }
 
   const handleClickOutside = event => {
-    if (detailsElement?.current && !detailsElement.current.contains(event.target)) {
+    if (
+      detailsElement?.current &&
+      !detailsElement.current.contains(event.target)
+    ) {
       detailsElement.current.open = false
     }
   }
@@ -595,7 +599,7 @@ Selector.propTypes = {
     children: PropTypes.node,
     isActive: PropTypes.bool,
     icon: PropTypes.node,
-  })
+  }),
 }
 
 DashboardMenu.List = List
