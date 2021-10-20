@@ -76,14 +76,14 @@ export const Label = ({
     >
       {children}
       {!isEmpty(dot) && (
-        <span 
+        <span
           className={classNames('k-Label--dot')}
           title={dot.title}
           tabIndex="-1"
           style={{
             '--dot-background-color': dot?.backgroundColor ?? null,
             '--dot-width': 'width' in dot ? pxToRem(dot.width) : null,
-            ...style
+            ...style,
           }}
         />
       )}

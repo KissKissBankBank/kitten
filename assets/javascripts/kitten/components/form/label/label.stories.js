@@ -30,7 +30,7 @@ export default {
     dot: {
       name: 'dot',
       control: 'object',
-    }
+    },
   },
 }
 
@@ -71,7 +71,7 @@ WithDot.args = {
     width: 7,
     backgroundColor: COLORS.orange,
     title: 'champs obligatoire',
-  }
+  },
 }
 
 export const WithFocusId = args => (

@@ -21,7 +21,7 @@ describe('<IconBadge />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <IconBadge 
+          <IconBadge
             children="Custom children"
             size="tiny"
             border={{
@@ -29,7 +29,8 @@ describe('<IconBadge />', () => {
               style: 'solid',
               color: '#e8f7fe',
             }}
-          />)
+          />,
+        )
         .toJSON()
     })
 

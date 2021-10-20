@@ -14,7 +14,9 @@ describe('<KissKissLoadingAnimation />', () => {
   describe('With custom props', () => {
     it('should match with snapshot', () => {
       const tree = renderer
-        .create(<KissKissLoadingAnimation color="red" className="customClassName" />)
+        .create(
+          <KissKissLoadingAnimation color="red" className="customClassName" />,
+        )
         .toJSON()
 
       expect(tree).toMatchSnapshot()
