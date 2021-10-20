@@ -33,7 +33,7 @@ var _screenConfig = require("../../../../constants/screen-config");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'boron', 'calcium', 'neon', 'iron', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube', 'social_pinterest'];
+var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'boron', 'calcium', 'scandium', 'neon', 'iron', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube', 'social_pinterest'];
 exports.buttonModifiers = buttonModifiers;
 var buttonFitOptions = ['icon', 'min-width', 'content', 'fluid'];
 exports.buttonFitOptions = buttonFitOptions;

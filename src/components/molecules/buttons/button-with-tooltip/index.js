@@ -34,12 +34,11 @@ var _text = require("../../../../components/atoms/typography/text");
 var ARROW_SIZE = 7;
 var ARROW_DISTANCE = 10;
 var zoomInAndOpacity = (0, _styledComponents.keyframes)(["from{transform:translateX(var(--ButtonWithTooltip-translate)) translateY(0) scale(.66);opacity:0;}to{transform:translateX(var(--ButtonWithTooltip-translate)) translateY(", ") scale(1);opacity:1;}"], (0, _typography.pxToRem)(ARROW_SIZE));
-var zoomOutAndOpacity = (0, _styledComponents.keyframes)(["from{transform:translateX(var(--ButtonWithTooltip-translate)) translateY(", ") scale(1);opacity:1;}to{transform:translateX(var(--ButtonWithTooltip-translate)) translateY(0) scale(.66);opacity:0;}"], (0, _typography.pxToRem)(ARROW_SIZE));
 
 var StyledButtonWithTooltip = _styledComponents.default.div.withConfig({
   displayName: "button-with-tooltip__StyledButtonWithTooltip",
   componentId: "gs3c1h-0"
-})(["--ButtonWithTooltip-translate:-50%;--ButtonWithTooltip-origin:50%;display:inline-block;position:relative;.k-ButtonWithTooltip__container{position:absolute;top:100%;left:50%;transform:translateX(var(--ButtonWithTooltip-translate)) translateY(0) scale(0.66);transform-origin:var(--ButtonWithTooltip-origin) ", ";width:max-content;max-width:", ";display:block;animation:0.16s ease ", ";opacity:0;}.k-ButtonWithTooltip__button{&:hover + .k-ButtonWithTooltip__container,&:focus + .k-ButtonWithTooltip__container{animation:0.16s ease ", ";transform:translateX(var(--ButtonWithTooltip-translate)) translateY(", ") scale(1);opacity:1;}}&.k-ButtonWithTooltip--left{--ButtonWithTooltip-translate:calc( -100% + ", " );--ButtonWithTooltip-origin:calc( 100% - ", " );}&.k-ButtonWithTooltip--right{--ButtonWithTooltip-translate:calc( 0% - ", " );--ButtonWithTooltip-origin:", ";}"], (0, _typography.pxToRem)(ARROW_SIZE), (0, _typography.pxToRem)(250), zoomOutAndOpacity, zoomInAndOpacity, (0, _typography.pxToRem)(ARROW_SIZE), (0, _typography.pxToRem)(ARROW_SIZE + ARROW_DISTANCE), (0, _typography.pxToRem)(ARROW_SIZE + ARROW_DISTANCE), (0, _typography.pxToRem)(ARROW_SIZE + ARROW_DISTANCE), (0, _typography.pxToRem)(ARROW_SIZE + ARROW_DISTANCE));
+})(["--ButtonWithTooltip-translate:-50%;--ButtonWithTooltip-origin:50%;display:inline-block;position:relative;.k-ButtonWithTooltip__tooltip{position:absolute;top:100%;left:50%;transform:translateX(var(--ButtonWithTooltip-translate)) translateY(0) scale(0.66);transform-origin:var(--ButtonWithTooltip-origin) ", ";opacity:0;width:max-content;max-width:", ";display:block;}.k-ButtonWithTooltip__button{&:hover + .k-ButtonWithTooltip__tooltip,&:focus + .k-ButtonWithTooltip__tooltip{animation:0.16s ease ", ";transform:translateX(var(--ButtonWithTooltip-translate)) translateY(", ") scale(1);opacity:1;}}&.k-ButtonWithTooltip--left{--ButtonWithTooltip-translate:calc( -100% + ", " );--ButtonWithTooltip-origin:calc( 100% - ", " );}&.k-ButtonWithTooltip--right{--ButtonWithTooltip-translate:calc( 0% - ", " );--ButtonWithTooltip-origin:", ";}"], (0, _typography.pxToRem)(ARROW_SIZE), (0, _typography.pxToRem)(250), zoomInAndOpacity, (0, _typography.pxToRem)(ARROW_SIZE), (0, _typography.pxToRem)(ARROW_SIZE + ARROW_DISTANCE), (0, _typography.pxToRem)(ARROW_SIZE + ARROW_DISTANCE), (0, _typography.pxToRem)(ARROW_SIZE + ARROW_DISTANCE), (0, _typography.pxToRem)(ARROW_SIZE + ARROW_DISTANCE));
 
 var ButtonWithTooltip = function ButtonWithTooltip(_ref) {
   var className = _ref.className,
@@ -67,7 +66,7 @@ var ButtonWithTooltip = function ButtonWithTooltip(_ref) {
     distance: position !== 'center' ? ARROW_DISTANCE : null,
     distanceIsReverse: position === 'left' || null
   }, tooltipProps, {
-    className: (0, _classnames.default)('k-ButtonWithTooltip__container', tooltipProps === null || tooltipProps === void 0 ? void 0 : tooltipProps.className)
+    className: (0, _classnames.default)('k-ButtonWithTooltip__tooltip', tooltipProps === null || tooltipProps === void 0 ? void 0 : tooltipProps.className)
   }), /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "tiny",
     color: "font1",

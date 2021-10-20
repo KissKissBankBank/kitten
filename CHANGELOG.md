@@ -4,10 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Button`: Add `scandium` modifier.
-- Feature: `Checkbox`: Add `labelProps` prop.
-- Fix: `Checkbox`: Fix secondary text max width.
-- Feature: `Icons`: Add the following icons
+## [5.4.0] - 2021-10-20
+
+Features:
+
+- `Button`: Add `scandium` modifier.
+- `Checkbox`: Add `labelProps` prop.
+- `Icons`: Add the following icons
   - CheckedShieldIconNext
   - ChronoIconNext
   - CogIconNext
@@ -21,8 +24,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - ThumbUpIconNext
   - UsersIconNext
   - WindowEditIconNext
-- Fix: `ButtonWithTooltip`: Prevent unwanted animation on load.
-- Fix: `Alert`: Fix responsive styles.
+
+Fixes:
+
+- `Checkbox`: Fix secondary text max width.
+- `ButtonWithTooltip`: Prevent unwanted animation on load.
+- `Alert`: Fix responsive styles.
 
 ## [5.3.0] - 2021-10-19
 

@@ -15,7 +15,7 @@ var fadeOut = keyframes(["0%{opacity:1;}100%{opacity:0;}"]);
 var AlertWrapper = styled.div.withConfig({
   displayName: "alert__AlertWrapper",
   componentId: "sc-1nkifwv-0"
-})(["", ";margin:", ";border-radius:", ";position:relative;overflow:hidden;background-color:", ";color:", ";display:flex;align-items:flex-start;[href]{color:", ";}.k-Alert__text{padding:", " ", ";flex:1 0 0;font-size:", ";@media (min-width:", "){display:flex;justify-content:center;}}.k-Alert__iconBadge{margin-right:", ";background-color:", ";border-color:", ";}button{display:flex;flex:0 0 auto;transition:all 0.2s ease;align-self:stretch;align-items:center;padding-right:", ";svg,svg path{transition:fill 0.2s ease;fill:", ";:hover{fill:", ";}}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}}a{", ";color:inherit;text-decoration:underline;}&.k-Alert--success{background-color:", ";[href]{color:", ";}.k-Alert__iconBadge{background-color:", ";border-color:", ";}button{svg,svg path{fill:", ";:hover{fill:", ";}}}}&.k-Alert--error{background-color:", ";[href]{color:", ";}.k-Alert__iconBadge{background-color:", ";border-color:", ";}button{svg,svg path{fill:", ";:hover{fill:", ";}}}}&.k-Alert--warning{background-color:", ";[href]{color:", ";}.k-Alert__iconBadge{background-color:", ";border-color:", ";}button{svg,svg path{fill:", ";:hover{fill:\"#A47600\";}}}}&.k-Alert--hasCloseButton{.k-Alert__text{@media (min-width:", "){margin-left:", ";}}}&.k-Alert--shouldHide{pointer-events:none;animation:", " 0.4s cubic-bezier(0.895,0.03,0.685,0.22) forwards;}"], TYPOGRAPHY.fontStyles.light, pxToRem(10), pxToRem(8), COLORS.primary5, COLORS.font1, COLORS.primary1, pxToRem(13), pxToRem(20), stepToRem(-1), pxToRem(ScreenConfig.S.min), pxToRem(20), COLORS.primary1, COLORS.primary4, pxToRem(20), COLORS.primary1, COLORS.primary3, COLORS.background1, pxToRem(2), pxToRem(-4), COLORS.primary4, TYPOGRAPHY.fontStyles.bold, COLORS.tertiary1, COLORS.valid, COLORS.valid, COLORS.tertiary2, COLORS.valid, COLORS.tertiary2, COLORS.error2, COLORS.error, COLORS.error, COLORS.error3, COLORS.error, COLORS.error4, COLORS.warning2, COLORS.orange3, COLORS.orange3, COLORS.orange, COLORS.warning, pxToRem(ScreenConfig.S.min), pxToRem(50), fadeOut);
+})(["", ";margin:", ";border-radius:", ";overflow:hidden;background-color:", ";color:", ";display:flex;[href]{color:", ";}.k-Alert__text{padding:", " ", ";flex:1 0 0;font-size:", ";display:flex;justify-content:center;align-items:center;@media (min-width:", "){padding:", " ", ";}}.k-Alert__iconBadge{margin-right:", ";background-color:", ";border-color:", ";min-width:", ";min-height:", ";border-radius:", ";@media (min-width:", "){margin-right:", ";}}button{display:flex;flex:0 0 auto;transition:all 0.2s ease;align-self:stretch;align-items:center;padding-right:", ";@media (min-width:", "){padding-right:", ";}svg,svg path{transition:fill 0.2s ease;fill:", ";:hover{fill:", ";}}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}}a{", ";color:inherit;text-decoration:underline;}&.k-Alert--success{background-color:", ";[href]{color:", ";}.k-Alert__iconBadge{background-color:", ";border-color:", ";}button{svg,svg path{fill:", ";:hover{fill:", ";}}}}&.k-Alert--error{background-color:", ";[href]{color:", ";}.k-Alert__iconBadge{background-color:", ";border-color:", ";}button{svg,svg path{fill:", ";:hover{fill:", ";}}}}&.k-Alert--warning{background-color:", ";[href]{color:", ";}.k-Alert__iconBadge{background-color:", ";border-color:", ";}button{svg,svg path{fill:", ";:hover{fill:'#A47600';}}}}&.k-Alert--hasCloseButton{.k-Alert__text{@media (min-width:", "){margin-left:", ";}}}&.k-Alert--shouldHide{pointer-events:none;animation:", " 0.4s cubic-bezier(0.895,0.03,0.685,0.22) forwards;}"], TYPOGRAPHY.fontStyles.light, pxToRem(10), pxToRem(8), COLORS.primary5, COLORS.font1, COLORS.primary1, pxToRem(12), pxToRem(10), stepToRem(-1), pxToRem(ScreenConfig.S.min), pxToRem(18), pxToRem(20), pxToRem(10), COLORS.primary1, COLORS.primary4, pxToRem(24), pxToRem(24), pxToRem(24), pxToRem(ScreenConfig.S.min), pxToRem(20), pxToRem(10), pxToRem(ScreenConfig.S.min), pxToRem(20), COLORS.primary1, COLORS.primary3, COLORS.background1, pxToRem(2), pxToRem(-4), COLORS.primary4, TYPOGRAPHY.fontStyles.bold, COLORS.tertiary1, COLORS.valid, COLORS.valid, COLORS.tertiary2, COLORS.valid, COLORS.tertiary2, COLORS.error2, COLORS.error, COLORS.error, COLORS.error3, COLORS.error, COLORS.error4, COLORS.warning2, COLORS.orange3, COLORS.orange3, COLORS.orange, COLORS.warning, pxToRem(ScreenConfig.S.min), pxToRem(50), fadeOut);
 export var Alert = function Alert(_ref) {
   var className = _ref.className,
       show = _ref.show,
@@ -70,7 +70,6 @@ export var Alert = function Alert(_ref) {
     className: "k-Alert__text"
   }, icon && /*#__PURE__*/React.createElement(IconBadge, {
     className: "k-Alert__iconBadge",
-    size: "tiny",
     children: icon,
     border: {
       width: 2,
@@ -83,9 +82,7 @@ export var Alert = function Alert(_ref) {
     onClick: function onClick() {
       return setMounted(false);
     },
-    title: closeButtonLabel,
-    width: 12,
-    height: 12
+    title: closeButtonLabel
   }))));
 };
 Alert.propTypes = {
