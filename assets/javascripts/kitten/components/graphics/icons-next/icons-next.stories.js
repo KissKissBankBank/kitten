@@ -1,7 +1,20 @@
 import styled from 'styled-components'
-import { CrossIconNext } from './cross-icon-next'
-
-import { Text, pxToRem } from '../../..'
+import { CrossIconNext,
+  CheckedShieldIconNext,
+  ChronoIconNext,
+  CogIconNext,
+  EyeIconNext,
+  HomeIconNext,
+  InfiniteIconNext,
+  PlusIconNext,
+  SpeechBubbleIconNext,
+  StatsIconNext,
+  TagIconNext,
+  ThumbUpIconNext,
+  UsersIconNext,
+  WindowEditIconNext,
+} from 'kitten'
+import { Text, pxToRem } from 'kitten'
 import React from 'react'
 import LinkTo from '@storybook/addon-links/react'
 
@@ -34,11 +47,11 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
           className="k-u-link k-u-link-font1 k-u-size-micro"
           aria-label="go to story"
         >
-          {children.type.name} <ArrowIcon direction="right" />
+          {children?.type?.name} <ArrowIcon direction="right" />
         </LinkTo>
       ) : (
         <Text weight="light" size="micro">
-          {children.type.name}
+          {children?.type?.name}
           {suffix && <> {suffix}</>}
         </Text>
       )}
@@ -75,7 +88,20 @@ export const AllIcons = ({ colorInput }) => {
   return (
     <Container>
       <Group>
-        <IconContainer children={<CrossIconNext color={colorInput} />} />
+        <IconContainer><CrossIconNext color={colorInput} /></IconContainer>
+        <IconContainer><CheckedShieldIconNext color={colorInput} /></IconContainer>
+        <IconContainer><ChronoIconNext color={colorInput} /></IconContainer>
+        <IconContainer><CogIconNext color={colorInput} /></IconContainer>
+        <IconContainer><EyeIconNext color={colorInput} /></IconContainer>
+        <IconContainer><HomeIconNext color={colorInput} /></IconContainer>
+        <IconContainer><InfiniteIconNext color={colorInput} /></IconContainer>
+        <IconContainer><PlusIconNext color={colorInput} /></IconContainer>
+        <IconContainer><SpeechBubbleIconNext color={colorInput} /></IconContainer>
+        <IconContainer><StatsIconNext color={colorInput} /></IconContainer>
+        <IconContainer><TagIconNext color={colorInput} /></IconContainer>
+        <IconContainer><ThumbUpIconNext color={colorInput} /></IconContainer>
+        <IconContainer><UsersIconNext color={colorInput} /></IconContainer>
+        <IconContainer><WindowEditIconNext color={colorInput} /></IconContainer>
       </Group>
     </Container>
   )
