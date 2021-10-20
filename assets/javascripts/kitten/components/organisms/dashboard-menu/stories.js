@@ -1,15 +1,19 @@
 import React from 'react'
 import { DashboardMenu } from './index'
 import {
-  HomeIcon,
-  TagIcon,
-  FilterIcon,
-  FileIcon,
-  LoudspeakerIcon,
-  ShieldIcon,
-  PeopleIcon,
-  StatsIcon,
-  SpeechBubbleIcon,
+  CheckedShieldIconNext,
+  ChronoIconNext,
+  CogIconNext,
+  EyeIconNext,
+  HomeIconNext,
+  InfiniteIconNext,
+  PlusIconNext,
+  SpeechBubbleIconNext,
+  StatsIconNext,
+  TagIconNext,
+  ThumbUpIconNext,
+  UsersIconNext,
+  WindowEditIconNext,
   Text,
   ButtonWithTooltip,
   COLORS,
@@ -42,43 +46,43 @@ export default {
 export const Default = () => (
   <DashboardMenu>
     <DashboardMenu.List>
-      <DashboardMenu.Item href="#" icon={<HomeIcon color="currentColor" />}>
+      <DashboardMenu.Item href="#" icon={<HomeIconNext color="currentColor" />}>
         Accueil
       </DashboardMenu.Item>
-      <DashboardMenu.Item href="#" icon={<PeopleIcon color="currentColor" />}>
-        Contributeurs
+      <DashboardMenu.Item href="#" icon={<UsersIconNext color="currentColor" />}>
+        Contributions
       </DashboardMenu.Item>
       <DashboardMenu.Item
         href="#"
         isActive
-        icon={<TagIcon color="currentColor" />}
+        icon={<TagIconNext color="currentColor" />}
       >
         Contreparties
       </DashboardMenu.Item>
-      <DashboardMenu.Item href="#" icon={<FilterIcon color="currentColor" />}>
+      <DashboardMenu.Item href="#" icon={<CogIconNext color="currentColor" />}>
         Paramètres
       </DashboardMenu.Item>
       <DashboardMenu.Item
         href="https://www.kisskissbankbank.com"
-        icon={<FileIcon color="currentColor" />}
+        icon={<WindowEditIconNext color="currentColor" />}
       >
         Page Projet
       </DashboardMenu.Item>
       <DashboardMenu.Item
         href="https://www.kisskissbankbank.com"
-        icon={<StatsIcon color="currentColor" />}
+        icon={<StatsIconNext color="currentColor" />}
       >
         Statistiques
       </DashboardMenu.Item>
       <DashboardMenu.Item
         href="https://www.kisskissbankbank.com"
-        icon={<LoudspeakerIcon color="currentColor" />}
+        icon={<ThumbUpIconNext color="currentColor" />}
       >
         Marketing
       </DashboardMenu.Item>
       <DashboardMenu.Expandable
         title="Admin"
-        icon={<ShieldIcon color="currentColor" />}
+        icon={<CheckedShieldIconNext color="currentColor" />}
       >
         <DashboardMenu.Item href="#">Destinataire des fonds</DashboardMenu.Item>
         <DashboardMenu.Item href="#" isActive>
@@ -90,7 +94,7 @@ export const Default = () => (
       </DashboardMenu.Expandable>
       <DashboardMenu.Item
         href="https://www.kisskissbankbank.com"
-        icon={<SpeechBubbleIcon color="currentColor" />}
+        icon={<SpeechBubbleIconNext color="currentColor" />}
       >
         Actualités
       </DashboardMenu.Item>
@@ -98,22 +102,22 @@ export const Default = () => (
   </DashboardMenu>
 )
 
-export const MultiMenu = () => (
+export const SimpleMultiMenu = () => (
   <DashboardMenu>
     <DashboardMenu.List>
       <DashboardMenu.Item
         size="small"
         href="#"
-        icon={<HomeIcon color="currentColor" />}
+        icon={<CogIconNext color="currentColor" />}
       >
-        Accueil
+        Paramètres et membres
       </DashboardMenu.Item>
       <DashboardMenu.Item
         size="small"
         href="#"
-        icon={<PeopleIcon color="currentColor" />}
+        icon={<CheckedShieldIconNext color="currentColor" />}
       >
-        Contributeurs
+        Admin
       </DashboardMenu.Item>
     </DashboardMenu.List>
     <DashboardMenu.Separator>
@@ -141,7 +145,7 @@ export const MultiMenu = () => (
           }}
           tooltipText="Créer un nouveau projet"
         >
-          +
+          <PlusIconNext color="currentColor" />
         </ButtonWithTooltip>
       </FlexWrapper>
     </DashboardMenu.Separator>
@@ -182,11 +186,134 @@ export const MultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: true,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <ChronoIconNext color="currentColor" />,
         },
       ]}
     />
-    <DashboardMenu.Separator />
+    <DashboardMenu.List subList hideable>
+      <DashboardMenu.Item
+        size="small"
+        href="#"
+        icon={<HomeIconNext color="currentColor" />}
+      >
+        Accueil
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="#"
+        icon={<UsersIconNext color="currentColor" />}
+      >
+        Contributions
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="#"
+        isActive
+        icon={<TagIconNext color="currentColor" />}
+      >
+        Contreparties
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="#"
+        icon={<CogIconNext color="currentColor" />}
+      >
+        Paramètres
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="https://www.kisskissbankbank.com"
+        icon={<WindowEditIconNext color="currentColor" />}
+      >
+        Page Projet
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="https://www.kisskissbankbank.com"
+        icon={<StatsIconNext color="currentColor" />}
+      >
+        Statistiques
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="https://www.kisskissbankbank.com"
+        icon={<ThumbUpIconNext color="currentColor" />}
+      >
+        Marketing
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="https://www.kisskissbankbank.com"
+        icon={<SpeechBubbleIconNext color="currentColor" />}
+      >
+        Actualités
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="https://www.kisskissbankbank.com"
+        icon={<CheckedShieldIconNext color="currentColor" />}
+      >
+        Admin
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="https://www.kisskissbankbank.com"
+        icon={<EyeIconNext color="currentColor" />}
+        endIcon={<LongArrowIcon direction="right" color="currentColor" />}
+      >
+        Voir ma page projet
+      </DashboardMenu.Item>
+    </DashboardMenu.List>
+  </DashboardMenu>
+)
+
+export const MultiMenu = () => (
+  <DashboardMenu>
+    <DashboardMenu.List>
+      <DashboardMenu.Item
+        size="small"
+        href="#"
+        icon={<CogIconNext color="currentColor" />}
+      >
+        Paramètres et membres
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="#"
+        icon={<CheckedShieldIconNext color="currentColor" />}
+      >
+        Admin
+      </DashboardMenu.Item>
+    </DashboardMenu.List>
+    <DashboardMenu.Separator>
+      <FlexWrapper
+        className="k-u-flex-alignItems-center k-u-flex-justifyContent-sb"
+        direction="row"
+      >
+        <Text
+          weight="regular"
+          size="nano"
+          transform="uppercase"
+          cssColor={COLORS.font3}
+        >
+          Projets
+        </Text>
+        <ButtonWithTooltip
+          position="left"
+          buttonProps={{
+            fit: 'icon',
+            size: 'nano',
+            modifier: 'boron',
+          }}
+          tooltipProps={{
+            className: 'k-u-avoid-click',
+          }}
+          tooltipText="Créer un nouveau projet"
+        >
+          <PlusIconNext color="currentColor" />
+        </ButtonWithTooltip>
+      </FlexWrapper>
+    </DashboardMenu.Separator>
     <DashboardMenu.Selector
       className="k-u-margin-bottom-singleHalf"
       data={[
@@ -224,7 +351,7 @@ export const MultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: false,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <InfiniteIconNext color="currentColor" />,
         },
         {
           href: '#',
@@ -260,7 +387,7 @@ export const MultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: true,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <ChronoIconNext color="currentColor" />,
         },
         {
           href: '#',
@@ -292,7 +419,7 @@ export const MultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: false,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <ChronoIconNext color="currentColor" />,
         },
         {
           href: '#',
@@ -328,7 +455,7 @@ export const MultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: false,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <ChronoIconNext color="currentColor" />,
         },
         {
           href: '#',
@@ -360,7 +487,7 @@ export const MultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: false,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <ChronoIconNext color="currentColor" />,
         },
         {
           href: '#',
@@ -396,7 +523,7 @@ export const MultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: false,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <ChronoIconNext color="currentColor" />,
         },
         {
           href: '#',
@@ -428,7 +555,7 @@ export const MultiMenu = () => (
             </FlexWrapper>
           ),
           isActive: false,
-          icon: <LoudspeakerIcon color="currentColor" />,
+          icon: <ChronoIconNext color="currentColor" />,
         },
       ]}
     />
@@ -436,50 +563,71 @@ export const MultiMenu = () => (
       <DashboardMenu.Item
         size="small"
         href="#"
+        icon={<HomeIconNext color="currentColor" />}
+      >
+        Accueil
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="#"
+        icon={<UsersIconNext color="currentColor" />}
+      >
+        Contributions
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="#"
         isActive
-        icon={<TagIcon color="currentColor" />}
+        icon={<TagIconNext color="currentColor" />}
       >
         Contreparties
       </DashboardMenu.Item>
       <DashboardMenu.Item
         size="small"
         href="#"
-        icon={<FilterIcon color="currentColor" />}
+        icon={<CogIconNext color="currentColor" />}
       >
         Paramètres
       </DashboardMenu.Item>
       <DashboardMenu.Item
         size="small"
         href="https://www.kisskissbankbank.com"
-        icon={<FileIcon color="currentColor" />}
+        icon={<WindowEditIconNext color="currentColor" />}
       >
         Page Projet
       </DashboardMenu.Item>
       <DashboardMenu.Item
         size="small"
         href="https://www.kisskissbankbank.com"
-        icon={<StatsIcon color="currentColor" />}
+        icon={<StatsIconNext color="currentColor" />}
       >
         Statistiques
       </DashboardMenu.Item>
       <DashboardMenu.Item
         size="small"
         href="https://www.kisskissbankbank.com"
-        icon={<LoudspeakerIcon color="currentColor" />}
+        icon={<ThumbUpIconNext color="currentColor" />}
       >
         Marketing
       </DashboardMenu.Item>
       <DashboardMenu.Item
         size="small"
         href="https://www.kisskissbankbank.com"
-        icon={<SpeechBubbleIcon color="currentColor" />}
+        icon={<SpeechBubbleIconNext color="currentColor" />}
       >
         Actualités
       </DashboardMenu.Item>
       <DashboardMenu.Item
         size="small"
         href="https://www.kisskissbankbank.com"
-        icon={<SpeechBubbleIcon color="currentColor" />}
+        icon={<CheckedShieldIconNext color="currentColor" />}
+      >
+        Admin
+      </DashboardMenu.Item>
+      <DashboardMenu.Item
+        size="small"
+        href="https://www.kisskissbankbank.com"
+        icon={<EyeIconNext color="currentColor" />}
         endIcon={<LongArrowIcon direction="right" color="currentColor" />}
       >
         Voir ma page projet
