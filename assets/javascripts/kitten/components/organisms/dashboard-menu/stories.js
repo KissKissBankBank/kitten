@@ -286,7 +286,7 @@ export const SimpleMultiMenu = () => (
         icon={<EyeIconNext color="currentColor" />}
         endIcon={<LongArrowIcon direction="right" color="currentColor" />}
       >
-        Voir ma page projet
+        Voir ma page
       </DashboardMenu.Item>
     </DashboardMenu.List>
   </DashboardMenu>
@@ -550,7 +550,7 @@ export const MultiMenu = () => (
         icon={<EyeIconNext color="currentColor" />}
         endIcon={<LongArrowIcon direction="right" color="currentColor" />}
       >
-        Voir ma page projet
+        Voir ma page
       </DashboardMenu.Item>
     </DashboardMenu.List>
   </DashboardMenu>

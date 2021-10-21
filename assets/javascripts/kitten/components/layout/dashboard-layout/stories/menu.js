@@ -394,7 +394,7 @@ export const StoryMultiMenu = () => (
         icon={<EyeIconNext color="currentColor" />}
         endIcon={<LongArrowIcon direction="right" color="currentColor" />}
       >
-        Voir ma page projet
+        Voir ma page
       </DashboardMenu.Item>
     </DashboardMenu.List>
   </DashboardMenu>
