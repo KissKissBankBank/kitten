@@ -221,6 +221,17 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   color: #fff;
 }
 
+.c0 .k-DashboardMenu__selectorSummary .k-DashboardMenu__selectorButton__arrow {
+  color: #b8b8b8;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.c0 .k-DashboardMenu__selectorSummary:hover .k-DashboardMenu__selectorButton__arrow,
+.c0 .k-DashboardMenu__selectorSummary:focus .k-DashboardMenu__selectorButton__arrow {
+  color: #fff;
+}
+
 .c0 .k-DashboardMenu__iconWrapper {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -274,7 +285,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DashboardMenu__separator {
-  margin-top: 1.25rem;
+  margin-top: 0.625rem;
   margin-bottom: 0.9375rem;
 }
 
@@ -286,6 +297,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 
 .c0 .k-DashboardMenu__selectorWrapper {
   position: relative;
+  margin: 0.625rem 0 0.3125rem;
 }
 
 .c0 .k-DashboardMenu__selectorWrapper[open] .k-DashboardMenu__selectorList {

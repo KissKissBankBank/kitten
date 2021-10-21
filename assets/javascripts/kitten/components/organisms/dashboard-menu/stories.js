@@ -20,9 +20,11 @@ import {
   FlexWrapper,
   StatusWithBullet,
   LongArrowIcon,
+  pxToRem,
 } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
+import styled from 'styled-components'
 
 export default {
   title: 'Organisms/DashboardMenu',
@@ -42,6 +44,34 @@ export default {
     ),
   ],
 }
+
+const StyledSelectorButton = styled(props => <FlexWrapper as="span" {...props} />)`
+  .selectorButton-supTitle {
+    letter-spacing: 0.1em;
+    line-height: 1em;
+  }
+  .selectorButton-title {
+    line-height: calc(1em + ${pxToRem(10)});
+  }
+`
+
+const SelectorButton = ({supTitle, title, statusProps}) => (
+  <StyledSelectorButton gap="0px">
+    <Text
+      weight="light"
+      size="nano"
+      transform="uppercase"
+      cssColor={COLORS.font3}
+      className="selectorButton-supTitle"
+    >
+      {supTitle}
+    </Text>
+    <Text weight="regular" size="tiny" cssColor={COLORS.background1} className="selectorButton-title">
+      {title}
+    </Text>
+    <StatusWithBullet size="micro" weight="light" {...statusProps} />
+  </StyledSelectorButton>
+)
 
 export const Default = () => (
   <DashboardMenu>
@@ -127,6 +157,7 @@ export const SimpleMultiMenu = () => (
       <FlexWrapper
         className="k-u-flex-alignItems-center k-u-flex-justifyContent-sb"
         direction="row"
+         padding={{right:pxToRem(15)}}
       >
         <Text
           weight="regular"
@@ -154,7 +185,6 @@ export const SimpleMultiMenu = () => (
       </FlexWrapper>
     </DashboardMenu.Separator>
     <DashboardMenu.Selector
-      className="k-u-margin-bottom-singleHalf"
       data={[
         {
           href: '#',
@@ -163,30 +193,17 @@ export const SimpleMultiMenu = () => (
             action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap="0px">
-              <Text
-                weight="regular"
-                size="nano"
-                transform="uppercase"
-                cssColor={COLORS.font3}
-                lineHeight="1"
-              >
-                Campagne
-              </Text>
-              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
-                Nom de la campagne
-              </Text>
-              <StatusWithBullet
-                statusType="success"
-                size="micro"
-                weight="light"
-              >
-                En ligne
-              </StatusWithBullet>
-            </FlexWrapper>
+            <SelectorButton
+              title="Nom de la campagne"
+              supTitle="Campagne"
+              statusProps={{
+                statusType: 'success',
+                children: 'En ligne',
+              }}
+            />
           ),
           isActive: true,
-          icon: <ChronoIconNext color="currentColor" />,
+          icon: <ChronoIconNext color={COLORS.background1} />,
         },
       ]}
     />
@@ -289,6 +306,7 @@ export const MultiMenu = () => (
       <FlexWrapper
         className="k-u-flex-alignItems-center k-u-flex-justifyContent-sb"
         direction="row"
+        padding={{right:pxToRem(15)}}
       >
         <Text
           weight="regular"
@@ -316,7 +334,6 @@ export const MultiMenu = () => (
       </FlexWrapper>
     </DashboardMenu.Separator>
     <DashboardMenu.Selector
-      className="k-u-margin-bottom-singleHalf"
       data={[
         {
           href: '#',
@@ -325,30 +342,17 @@ export const MultiMenu = () => (
             action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap="0px">
-              <Text
-                weight="regular"
-                size="nano"
-                transform="uppercase"
-                cssColor={COLORS.font3}
-                lineHeight="1"
-              >
-                Don permanent
-              </Text>
-              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
-                Nom de la campagne 1
-              </Text>
-              <StatusWithBullet
-                statusType="success"
-                size="micro"
-                weight="light"
-              >
-                En ligne
-              </StatusWithBullet>
-            </FlexWrapper>
+            <SelectorButton
+              title="Nom de la campagne 1"
+              supTitle="Don permanent"
+              statusProps={{
+                statusType: 'warning',
+                children: 'Brouillon',
+              }}
+            />
           ),
           isActive: false,
-          icon: <InfiniteIconNext color="currentColor" />,
+          icon: <InfiniteIconNext color={COLORS.background1} />,
         },
         {
           href: '#',
@@ -357,30 +361,17 @@ export const MultiMenu = () => (
             action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap="0px">
-              <Text
-                weight="regular"
-                size="nano"
-                transform="uppercase"
-                cssColor={COLORS.font3}
-                lineHeight="1"
-              >
-                Campagne
-              </Text>
-              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
-                Nom de la campagne 2
-              </Text>
-              <StatusWithBullet
-                statusType="success"
-                size="micro"
-                weight="light"
-              >
-                En ligne
-              </StatusWithBullet>
-            </FlexWrapper>
+            <SelectorButton
+              title="Nom de la campagne 2"
+              supTitle="Campagne"
+              statusProps={{
+                statusType: 'success',
+                children: 'En ligne',
+              }}
+            />
           ),
           isActive: true,
-          icon: <ChronoIconNext color="currentColor" />,
+          icon: <ChronoIconNext color={COLORS.background1} />,
         },
         {
           href: '#',
@@ -389,26 +380,17 @@ export const MultiMenu = () => (
             action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap="0px">
-              <Text
-                weight="regular"
-                size="nano"
-                transform="uppercase"
-                cssColor={COLORS.font3}
-                lineHeight="1"
-              >
-                Campagne
-              </Text>
-              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
-                Un très très long nom de la campagne 3
-              </Text>
-              <StatusWithBullet statusType="none" size="micro" weight="light">
-                Terminé
-              </StatusWithBullet>
-            </FlexWrapper>
+            <SelectorButton
+              title="Un très très long nom de la campagne 3 qui va dépasser de la largeur du menu allez encore un effort lorem ipsum"
+              supTitle="Campagne"
+              statusProps={{
+                statusType: 'neutral',
+                children: 'Prêt à être partagé',
+              }}
+            />
           ),
           isActive: false,
-          icon: <ChronoIconNext color="currentColor" />,
+          icon: <ChronoIconNext color={COLORS.background1} />,
         },
         {
           href: '#',
@@ -417,30 +399,17 @@ export const MultiMenu = () => (
             action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap="0px">
-              <Text
-                weight="regular"
-                size="nano"
-                transform="uppercase"
-                cssColor={COLORS.font3}
-                lineHeight="1"
-              >
-                Campagne
-              </Text>
-              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
-                Nom de la campagne 4
-              </Text>
-              <StatusWithBullet
-                statusType="success"
-                size="micro"
-                weight="light"
-              >
-                En ligne
-              </StatusWithBullet>
-            </FlexWrapper>
+            <SelectorButton
+              title="Nom de la campagne 4"
+              supTitle="Campagne"
+              statusProps={{
+                statusType: 'none',
+                children: 'Terminé',
+              }}
+            />
           ),
           isActive: false,
-          icon: <ChronoIconNext color="currentColor" />,
+          icon: <ChronoIconNext color={COLORS.background1} />,
         },
         {
           href: '#',
@@ -449,26 +418,17 @@ export const MultiMenu = () => (
             action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap="0px">
-              <Text
-                weight="regular"
-                size="nano"
-                transform="uppercase"
-                cssColor={COLORS.font3}
-                lineHeight="1"
-              >
-                Campagne
-              </Text>
-              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
-                Nom de la campagne 5
-              </Text>
-              <StatusWithBullet statusType="none" size="micro" weight="light">
-                Terminé
-              </StatusWithBullet>
-            </FlexWrapper>
+            <SelectorButton
+              title="Nom de la campagne 5"
+              supTitle="Campagne"
+              statusProps={{
+                statusType: 'none',
+                children: 'Terminé',
+              }}
+            />
           ),
           isActive: false,
-          icon: <ChronoIconNext color="currentColor" />,
+          icon: <ChronoIconNext color={COLORS.background1} />,
         },
         {
           href: '#',
@@ -477,30 +437,18 @@ export const MultiMenu = () => (
             action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap="0px">
-              <Text
-                weight="regular"
-                size="nano"
-                transform="uppercase"
-                cssColor={COLORS.font3}
-                lineHeight="1"
-              >
-                Campagne
-              </Text>
-              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
-                Nom de la campagne 6
-              </Text>
-              <StatusWithBullet
-                statusType="success"
-                size="micro"
-                weight="light"
-              >
-                En ligne
-              </StatusWithBullet>
-            </FlexWrapper>
+            <SelectorButton
+              title="Nom de la campagne 6"
+              supTitle="Campagne"
+              statusProps={{
+                statusType: 'success',
+                children: 'En ligne',
+              }}
+            />
+
           ),
           isActive: false,
-          icon: <ChronoIconNext color="currentColor" />,
+          icon: <ChronoIconNext color={COLORS.background1} />,
         },
         {
           href: '#',
@@ -509,26 +457,17 @@ export const MultiMenu = () => (
             action('Selector link click')(e)
           },
           children: (
-            <FlexWrapper as="span" gap="0px">
-              <Text
-                weight="regular"
-                size="nano"
-                transform="uppercase"
-                cssColor={COLORS.font3}
-                lineHeight="1"
-              >
-                Campagne
-              </Text>
-              <Text weight="regular" size="tiny" cssColor={COLORS.background1}>
-                Nom de la campagne 7
-              </Text>
-              <StatusWithBullet statusType="none" size="micro" weight="light">
-                Terminé
-              </StatusWithBullet>
-            </FlexWrapper>
+            <SelectorButton
+              title="Nom de la campagne 7"
+              supTitle="Campagne"
+              statusProps={{
+                statusType: 'success',
+                children: 'En ligne',
+              }}
+            />
           ),
           isActive: false,
-          icon: <ChronoIconNext color="currentColor" />,
+          icon: <ChronoIconNext color={COLORS.background1} />,
         },
       ]}
     />
