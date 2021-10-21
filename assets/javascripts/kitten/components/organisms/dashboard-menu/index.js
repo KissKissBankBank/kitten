@@ -270,7 +270,7 @@ const StyledDashboardMenu = styled.nav`
 
   .k-DashboardMenu__separator {
     margin-top: ${pxToRem(10)};
-    margin-bottom: ${pxToRem(15)};
+    margin-bottom: ${pxToRem(5)};
 
     hr {
       border: 0;

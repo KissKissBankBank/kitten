@@ -963,7 +963,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
     height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
     overflow-y: scroll;
-    padding: 1.875rem;
+    padding: 1.25rem 1.875rem 1.875rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -971,7 +971,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 1.875rem;
+    gap: 0.625rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {
@@ -1097,7 +1097,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
-    padding: 1.25rem;
+    padding: 0.625rem 1.25rem 1.25rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
@@ -1140,8 +1140,8 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
     position: sticky;
     top: var(--dashboardLayout-siteHeaderHeight);
     overflow: scroll;
-    padding: 1.875rem;
-    gap: 1.875rem;
+    padding: 1.25rem 1.875rem 1.875rem;
+    gap: 0.625rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {
@@ -1614,7 +1614,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
     height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
     overflow-y: scroll;
-    padding: 1.875rem;
+    padding: 1.25rem 1.875rem 1.875rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1622,7 +1622,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 1.875rem;
+    gap: 0.625rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {
@@ -1748,7 +1748,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
-    padding: 1.25rem;
+    padding: 0.625rem 1.25rem 1.25rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
@@ -1791,8 +1791,8 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
     position: sticky;
     top: var(--dashboardLayout-siteHeaderHeight);
     overflow: scroll;
-    padding: 1.875rem;
-    gap: 1.875rem;
+    padding: 1.25rem 1.875rem 1.875rem;
+    gap: 0.625rem;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {

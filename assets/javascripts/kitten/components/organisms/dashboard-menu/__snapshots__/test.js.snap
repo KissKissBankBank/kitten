@@ -286,7 +286,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 
 .c0 .k-DashboardMenu__separator {
   margin-top: 0.625rem;
-  margin-bottom: 0.9375rem;
+  margin-bottom: 0.3125rem;
 }
 
 .c0 .k-DashboardMenu__separator hr {
