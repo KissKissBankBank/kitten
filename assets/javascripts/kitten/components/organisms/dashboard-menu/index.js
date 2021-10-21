@@ -216,10 +216,10 @@ const StyledDashboardMenu = styled.nav`
     }
   }
 
-  .k-DashboardMenu__selectorSummary{
+  .k-DashboardMenu__selectorSummary {
     .k-DashboardMenu__selectorButton__arrow {
-        color: ${COLORS.font2};
-        transition: color 0.2s ease;
+      color: ${COLORS.font2};
+      transition: color 0.2s ease;
     }
     &:hover,
     &:focus {
@@ -610,7 +610,7 @@ Selector.propTypes = {
       children: PropTypes.node,
       isActive: PropTypes.bool,
       icon: PropTypes.node,
-    })
+    }),
   ),
 }
 

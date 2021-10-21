@@ -45,7 +45,9 @@ export default {
   ],
 }
 
-const StyledSelectorButton = styled(props => <FlexWrapper as="span" {...props} />)`
+const StyledSelectorButton = styled(props => (
+  <FlexWrapper as="span" {...props} />
+))`
   .selectorButton-supTitle {
     letter-spacing: 0.1em;
     line-height: 1em;
@@ -55,7 +57,7 @@ const StyledSelectorButton = styled(props => <FlexWrapper as="span" {...props} /
   }
 `
 
-const SelectorButton = ({supTitle, title, statusProps}) => (
+const SelectorButton = ({ supTitle, title, statusProps }) => (
   <StyledSelectorButton gap="0px">
     <Text
       weight="light"
@@ -66,7 +68,12 @@ const SelectorButton = ({supTitle, title, statusProps}) => (
     >
       {supTitle}
     </Text>
-    <Text weight="regular" size="tiny" cssColor={COLORS.background1} className="selectorButton-title">
+    <Text
+      weight="regular"
+      size="tiny"
+      cssColor={COLORS.background1}
+      className="selectorButton-title"
+    >
       {title}
     </Text>
     <StatusWithBullet size="micro" weight="light" {...statusProps} />
@@ -157,7 +164,7 @@ export const SimpleMultiMenu = () => (
       <FlexWrapper
         className="k-u-flex-alignItems-center k-u-flex-justifyContent-sb"
         direction="row"
-         padding={{right:pxToRem(15)}}
+        padding={{ right: pxToRem(15) }}
       >
         <Text
           weight="regular"
@@ -306,7 +313,7 @@ export const MultiMenu = () => (
       <FlexWrapper
         className="k-u-flex-alignItems-center k-u-flex-justifyContent-sb"
         direction="row"
-        padding={{right:pxToRem(15)}}
+        padding={{ right: pxToRem(15) }}
       >
         <Text
           weight="regular"
@@ -445,7 +452,6 @@ export const MultiMenu = () => (
                 children: 'En ligne',
               }}
             />
-
           ),
           isActive: false,
           icon: <ChronoIconNext color={COLORS.background1} />,
