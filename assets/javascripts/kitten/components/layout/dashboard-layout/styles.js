@@ -172,10 +172,10 @@ export const StyledDashboard = styled.div`
       .k-DashboardLayout__sideWrapper {
         height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
         overflow-y: scroll;
-        padding: ${pxToRem(30)};
+        padding: ${pxToRem(20)} ${pxToRem(30)} ${pxToRem(30)};
         display: flex;
         flex-direction: column;
-        gap: ${pxToRem(30)};
+        gap: ${pxToRem(10)};
 
         .k-DashboardLayout__heading {
           display: none;
@@ -281,7 +281,7 @@ export const StyledDashboard = styled.div`
       }
 
       .k-DashboardLayout__sideWrapper {
-        padding: ${pxToRem(20)};
+        padding: ${pxToRem(10)} ${pxToRem(20)} ${pxToRem(20)};
       }
       .k-DashboardLayout__mainWrapper {
         .k-DashboardLayout__heading {
@@ -325,8 +325,8 @@ export const StyledDashboard = styled.div`
         position: sticky;
         top: var(--dashboardLayout-siteHeaderHeight);
         overflow: scroll;
-        padding: ${pxToRem(30)};
-        gap: ${pxToRem(30)};
+        padding: ${pxToRem(20)} ${pxToRem(30)} ${pxToRem(30)};
+        gap: ${pxToRem(10)};
 
         .k-DashboardLayout__heading {
           flex: 0 1 auto;

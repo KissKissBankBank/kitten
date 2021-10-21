@@ -216,6 +216,19 @@ const StyledDashboardMenu = styled.nav`
     }
   }
 
+  .k-DashboardMenu__selectorSummary {
+    .k-DashboardMenu__selectorButton__arrow {
+      color: ${COLORS.font2};
+      transition: color 0.2s ease;
+    }
+    &:hover,
+    &:focus {
+      .k-DashboardMenu__selectorButton__arrow {
+        color: ${COLORS.background1};
+      }
+    }
+  }
+
   /* ICON STYLES */
 
   .k-DashboardMenu__iconWrapper {
@@ -256,8 +269,8 @@ const StyledDashboardMenu = styled.nav`
   }
 
   .k-DashboardMenu__separator {
-    margin-top: ${pxToRem(20)};
-    margin-bottom: ${pxToRem(15)};
+    margin-top: ${pxToRem(10)};
+    margin-bottom: ${pxToRem(5)};
 
     hr {
       border: 0;
@@ -268,6 +281,7 @@ const StyledDashboardMenu = styled.nav`
 
   .k-DashboardMenu__selectorWrapper {
     position: relative;
+    margin: ${pxToRem(10)} 0 ${pxToRem(5)};
 
     &[open] .k-DashboardMenu__selectorList {
       animation: 0.16s ease-out ${zoomInAndOpacity};
@@ -503,6 +517,8 @@ const Selector = ({ data, className, ...props }) => {
         {...dataProps}
         className={classNames(
           'k-DashboardMenu__selectorButton',
+          'k-u-margin-top-single',
+          'k-u-margin-bottom-noneHalf',
           dataProps.className,
           className,
         )}
@@ -544,7 +560,7 @@ const Selector = ({ data, className, ...props }) => {
           <span className="k-DashboardMenu__selectorButton__text">
             {activeChildren}
           </span>
-          <span className="k-DashboardMenu__iconWrapper">
+          <span className="k-DashboardMenu__iconWrapper k-DashboardMenu__selectorButton__arrow">
             <DoubleArrowIcon color="currentColor" />
           </span>
         </FlexWrapper>
@@ -589,11 +605,13 @@ Expandable.proptypes = {
 }
 
 Selector.propTypes = {
-  data: PropTypes.shape({
-    children: PropTypes.node,
-    isActive: PropTypes.bool,
-    icon: PropTypes.node,
-  }),
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      children: PropTypes.node,
+      isActive: PropTypes.bool,
+      icon: PropTypes.node,
+    }),
+  ),
 }
 
 DashboardMenu.List = List
