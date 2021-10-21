@@ -30,25 +30,8 @@
   $line-height: null,
   $without-line-height: false,
 ) {
-
-  $valid:
-    k-all(
-      k-validate(
-        $step, k-number-schema($unit: none),
-        'k-typographyFontSize', '$step'
-      )
-    );
-
   // Get scale multiplier from table
   $multiplier: k-map-fetch($k-typography-scale, #{$step});
-
-  $valid:
-    k-all(
-      k-validate(
-        $multiplier, k-number-schema($unit: px),
-        'k-typographyFontSize', '$multiplier'
-      )
-    );
 
   // The base line height.
   $base-line-height: k-map-fetch($k-typography, 'line-height');

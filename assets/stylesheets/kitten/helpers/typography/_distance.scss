@@ -15,14 +15,6 @@
 ///   margin-top: k-typography-distance(3);
 ///   // 4.5rem
 @function k-typography-distance($distance) {
-  $valid:
-    k-all(
-      k-validate(
-        $distance, k-number-schema($unit: none),
-        'k-typography-distance', '$distance'
-      )
-    );
-
   $base-line-height: k-map-fetch($k-typography, 'line-height');
 
   @return $base-line-height * $distance;
