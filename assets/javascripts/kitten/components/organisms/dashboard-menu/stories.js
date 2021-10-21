@@ -171,6 +171,7 @@ export const SimpleMultiMenu = () => (
           size="nano"
           transform="uppercase"
           cssColor={COLORS.font3}
+          style={{ letterSpacing: 1 }}
         >
           Projets
         </Text>
@@ -320,6 +321,7 @@ export const MultiMenu = () => (
           size="nano"
           transform="uppercase"
           cssColor={COLORS.font3}
+          style={{ letterSpacing: 1 }}
         >
           Projets
         </Text>

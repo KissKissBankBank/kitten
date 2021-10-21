@@ -165,6 +165,7 @@ export const StoryMultiMenu = () => (
           size="nano"
           transform="uppercase"
           cssColor={COLORS.font3}
+          style={{ letterSpacing: 1 }}
         >
           Projets
         </Text>
