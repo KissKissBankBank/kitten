@@ -256,7 +256,7 @@ exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
 
 exports[`<Accordeon /> with custom classNames matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa brrKKO k-Accordeon custom1 k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa brrKKO k-Accordeon custom1 k-Accordeon--andromeda k-Accordeon--isAnimated"
   data-test={true}
 >
   <div
