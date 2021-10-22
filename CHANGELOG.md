@@ -5,8 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `Alert`: Fix styles.
+
+## [5.4.1] - 2021-10-22
+
 - Fix: `DashboardMenu`: Style fixes.
-- Fix: `DashboardMenu`: Style fixes (2).
 
 ## [5.4.0] - 2021-10-20
 
