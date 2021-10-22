@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Accordeon`: Better `className` and other props propagation.
+## [4.15.0] - 2021-10-22
+
+Feature:
+
+- `Accordeon`: Better `className` and other props propagation.
 
 ## [4.14.1] - 2021-10-08
 
