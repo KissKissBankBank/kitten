@@ -203,7 +203,7 @@ describe('<Accordeon />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Accordeon variant="orion">
+          <Accordeon variant="andromeda">
             <Accordeon.Item>
               <Accordeon.Header>Header</Accordeon.Header>
               <Accordeon.Content>Content</Accordeon.Content>
@@ -212,6 +212,30 @@ describe('<Accordeon />', () => {
             <Accordeon.Item>
               <Accordeon.Header>Header</Accordeon.Header>
               <Accordeon.Content>Content</Accordeon.Content>
+            </Accordeon.Item>
+          </Accordeon>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with custom classNames', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Accordeon className="custom1" data-test>
+            <Accordeon.Item className="custom2">
+              <Accordeon.Header className="custom3">Header</Accordeon.Header>
+              <Accordeon.Content className="custom4">Content</Accordeon.Content>
+            </Accordeon.Item>
+
+            <Accordeon.Item data-test>
+              <Accordeon.Header data-test>Header</Accordeon.Header>
+              <Accordeon.Content data-test>Content</Accordeon.Content>
             </Accordeon.Item>
           </Accordeon>,
         )

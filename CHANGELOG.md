@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Accordeon`: Better `className` and other props propagation.
+
 ## [4.14.1] - 2021-10-08
 
 Fix:
@@ -16,7 +18,7 @@ Feature:
 
 ## [4.13.0] - 2021-10-06
 
-Features: 
+Features:
 
 - `DropdownSelect`: Add `modifier` prop, defaults to `hydrogen`.
 - `DropdownSelect`: Add `direction` prop, defaults to `down`.
@@ -74,7 +76,7 @@ Fix:
 
 ## [4.9.0] - 2021-09-24
 
-Features: 
+Features:
 
 - `HeaderMenu`: Add `position` prop, default to `left`.
 - `EngagementCardWithImage`: Add `imgProps` and `textProps` props.
@@ -82,11 +84,11 @@ Features:
 Fixes:
 
 - `DashboardLayout`: Fix header elements dimensions.
-- `HeaderNav.Button`: Add `cursor` to `onClick`. 
+- `HeaderNav.Button`: Add `cursor` to `onClick`.
 
 ## [4.8.0] - 2021-09-22
 
-Features: 
+Features:
 
 - `HeaderNav.Nav`: Add `smallPadding` prop, defaults to `false`.
 - `HeaderNav.Button`: Add `smallPadding` prop, defaults to `false`.
