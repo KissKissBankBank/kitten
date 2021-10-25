@@ -103,13 +103,10 @@ export const DragAndDropList = ({
 
   useEffect(() => {
     if (!listElement) return
-    const dragon = new DragonDrop(
-      listElement.current,
-      {
-        ...dragonOptions,
-        handle: showHandle && 'button.k-DragAndDropList__item__button',
-      }
-    )
+    const dragon = new DragonDrop(listElement.current, {
+      ...dragonOptions,
+      handle: showHandle && 'button.k-DragAndDropList__item__button',
+    })
     dragon.on('dropped', handleChange)
 
     setDragonInstance(dragon)
@@ -144,36 +141,35 @@ export const DragAndDropList = ({
         }}
         {...props}
       >
-        {children?.length > 0 && [...children].map((child, index) => (
-          <li
-            key={child.props.id + index}
-            className={classNames('k-DragAndDropList__item',
-              {
+        {children?.length > 0 &&
+          [...children].map((child, index) => (
+            <li
+              key={child.props.id + index}
+              className={classNames('k-DragAndDropList__item', {
                 'k-DragAndDropList__item--hasButton': !!showHandle,
-              }
-            )}
-            data-simple-name={child.props.simpleName}
-            data-id={child.props.id}
-          >
-            {!!showHandle && (
-              <Button
-                fit="content"
-                aria-label={a11yButtonLabel}
-                aria-describedby={a11yButtonDescElement}
-                className="k-DragAndDropList__item__button"
-              >
-                <MenuIcon width={10} height={10} />
-              </Button>
-            )}
-            {React.cloneElement(child, {
-              ...child.props,
-              className: classNames(
-                child.props.className,
-                'k-DragAndDropList__item__child',
-              ),
-            })}
-          </li>
-        ))}
+              })}
+              data-simple-name={child.props.simpleName}
+              data-id={child.props.id}
+            >
+              {!!showHandle && (
+                <Button
+                  fit="content"
+                  aria-label={a11yButtonLabel}
+                  aria-describedby={a11yButtonDescElement}
+                  className="k-DragAndDropList__item__button"
+                >
+                  <MenuIcon width={10} height={10} />
+                </Button>
+              )}
+              {React.cloneElement(child, {
+                ...child.props,
+                className: classNames(
+                  child.props.className,
+                  'k-DragAndDropList__item__child',
+                ),
+              })}
+            </li>
+          ))}
       </ol>
       <DragAndDropListStyles />
     </>

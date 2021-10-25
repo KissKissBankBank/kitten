@@ -21,7 +21,7 @@ exports[`<DragAndDropList /> with children matches with snapshot 1`] = `
   }
 >
   <li
-    className="k-DragAndDropList__item"
+    className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
     data-id="1"
     data-simple-name="Task #1"
   >
@@ -63,7 +63,7 @@ exports[`<DragAndDropList /> with children matches with snapshot 1`] = `
     </p>
   </li>
   <li
-    className="k-DragAndDropList__item"
+    className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
     data-id="2"
     data-simple-name="Task #2"
   >
@@ -105,7 +105,7 @@ exports[`<DragAndDropList /> with children matches with snapshot 1`] = `
     </p>
   </li>
   <li
-    className="k-DragAndDropList__item"
+    className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
     data-id="3"
     data-simple-name="Task #3"
   >
@@ -147,7 +147,7 @@ exports[`<DragAndDropList /> with children matches with snapshot 1`] = `
     </p>
   </li>
   <li
-    className="k-DragAndDropList__item"
+    className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
     data-id="4"
     data-simple-name="Task #4"
   >

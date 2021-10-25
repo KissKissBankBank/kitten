@@ -15,16 +15,15 @@ import {
 export default {
   title: 'Molecules/DragAndDropList',
   component: DragAndDropList,
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="DragAndDropList, DRAG_AND_DROP_LIST_BUTTON_SHIFT" />,
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          importString="DragAndDropList, DRAG_AND_DROP_LIST_BUTTON_SHIFT"
+        />
+      ),
     },
   },
 }
@@ -80,11 +79,17 @@ export const Default = () => {
 
   return (
     <div ref={ref}>
-      <p id="container_label_element" className="k-u-weight-light k-u-margin-bottom-double">
+      <p
+        id="container_label_element"
+        className="k-u-weight-light k-u-margin-bottom-double"
+      >
         Cette liste peut être réorganisée à l'aide des boutons.
       </p>
 
-      <p id="description_element" className="k-u-weight-light k-u-margin-bottom-double">
+      <p
+        id="description_element"
+        className="k-u-weight-light k-u-margin-bottom-double"
+      >
         Cliquez pour attraper/lâcher l'élément. Une fois attrapé, l'élément peut
         être déplacé à l'aide des flèches haut/bas du clavier.
       </p>
