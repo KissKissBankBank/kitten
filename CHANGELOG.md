@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Accordeon`: Better `className` and other props propagation.
+- Fix: `Alert`: Fix styles.
+
+## [5.4.1] - 2021-10-22
+
 - Fix: `DashboardMenu`: Style fixes.
 
 ## [5.4.0] - 2021-10-20

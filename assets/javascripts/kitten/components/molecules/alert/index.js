@@ -28,16 +28,11 @@ const AlertWrapper = styled.div`
   }
 
   .k-Alert__text {
-    padding: ${pxToRem(12)} ${pxToRem(10)};
+    padding: ${pxToRem(18)} ${pxToRem(20)};
     flex: 1 0 0;
     font-size: ${stepToRem(-1)};
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      padding: ${pxToRem(18)} ${pxToRem(20)};
-    }
   }
 
   .k-Alert__iconBadge {
@@ -160,14 +155,6 @@ const AlertWrapper = styled.div`
         :hover {
           fill: '#A47600';
         }
-      }
-    }
-  }
-
-  &.k-Alert--hasCloseButton {
-    .k-Alert__text {
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        margin-left: ${pxToRem(50)};
       }
     }
   }
