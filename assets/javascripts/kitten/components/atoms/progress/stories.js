@@ -1,24 +1,48 @@
 import React from 'react'
-import { number, color, select } from '@storybook/addon-knobs'
 import { Progress } from './index'
 import { COLORS } from '../../..'
-
-const variantOptions = {
-  Andromeda: 'andromeda',
-  Orion: 'orion',
-}
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Atoms/Progress',
   component: Progress,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Progress" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        <div>{story()}</div>
+      </div>
+    ),
+  ],
+  args: {
+    value: 50,
+    color: COLORS.primary1,
+    rampProps: { style: { height: 6 } },
+    variant: 'orion',
+  },
+  argTypes: {
+    value: {
+      name: 'value',
+      control: 'number',
+    },
+    color: {
+      name: 'color',
+      control: 'color',
+    },
+    rampProps: {
+      name: 'rampProps',
+      control: 'object',
+    },
+    variant: {
+      name: 'variant',
+      options: ['andromeda', 'orion'],
+      control: 'inline-radio',
+    },
+  },
 }
 
-export const Default = args => (
-  <Progress
-    {...args}
-    value={number('Value', 50)}
-    color={color('Color', COLORS.primary1)}
-    rampProps={{ style: { height: 6 } }}
-    variant={select('Variant', variantOptions, 'andromeda')}
-  />
-)
+export const Default = args => <Progress {...args} />

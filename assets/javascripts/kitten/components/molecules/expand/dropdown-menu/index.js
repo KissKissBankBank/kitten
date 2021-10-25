@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import classNames from 'classnames'
 import styled, { keyframes } from 'styled-components'
 import { ArrowContainer } from '../../../../components/molecules/boxes/arrow-container'
@@ -132,23 +132,27 @@ const StyledDropdownMenu = styled.details`
 export const DropdownMenu = ({
   button = () => {},
   open: openProp,
-  onToggle = () => {},
+  onToggle,
   menuProps = {},
   menuPosition = 'left',
   children,
   className,
   ...rest
 }) => {
-  const [open, setOpen] = useState(openProp)
   const detailsElement = useRef(null)
+  const [isOpen, setIsOpen] = useState(false)
+  const [hasClicked, setHasClicked] = useState(false)
 
-  useEffect(() => {
-    setOpen(openProp)
-  }, [openProp])
+  const onLinkClicked = () => {
+    setIsOpen(false)
+    setHasClicked(true)
+  }
 
-  const handleToggle = event => {
-    setOpen(!open)
-    onToggle(event, !open)
+  const handleToggle = () => {
+    if (!hasClicked) {
+      return setIsOpen(!isOpen)
+    }
+    return setHasClicked(false)
   }
 
   const arrowDistanceProps = (() => {
@@ -233,7 +237,7 @@ export const DropdownMenu = ({
     <StyledDropdownMenu
       ref={detailsElement}
       onToggle={handleToggle}
-      open={openProp}
+      open={isOpen}
       className={classNames(
         'k-DropdownMenu',
         className,
@@ -253,6 +257,7 @@ export const DropdownMenu = ({
         {...arrowDistanceProps}
         {...menuProps}
         className={classNames('k-DropdownMenu__menu', menuProps.className)}
+        onClick={onLinkClicked}
       >
         {children}
       </ArrowContainer>

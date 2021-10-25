@@ -3,15 +3,20 @@ import PropTypes from 'prop-types'
 
 export const DownloadIcon = ({ color, title, ...props }) => (
   <svg
-    width="12"
-    height="13"
-    viewBox="0 0 12 13"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
     fill={color}
     {...props}
   >
     {title && <title>{title}</title>}
-    <path d="M7 4V0H5v4L3.172 2.207l-1.415 1.38L6 8.207l4.243-4.62-1.415-1.38L7 4zM0 8h2v5H0V8zm10 0h2v5h-2V8zM0 11h12v2H0v-2z" />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M13 12.586V4h-2v8.586l-2.293-2.293-1.414 1.414L12 16.414l4.707-4.707-1.414-1.414L13 12.586ZM2 19v-4h2v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4h2v4a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3Z"
+      fill="#222"
+    />
   </svg>
 )
 

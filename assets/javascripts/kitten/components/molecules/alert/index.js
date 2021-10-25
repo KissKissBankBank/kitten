@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
-import { CloseButton } from '../../../components/molecules/buttons/close-button'
+import { CrossIconNext } from '../../../components/graphics/icons-next/cross-icon-next'
+import { IconBadge } from '../../../components/atoms/icon-badge'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
@@ -15,30 +16,57 @@ const fadeOut = keyframes`
 
 const AlertWrapper = styled.div`
   ${TYPOGRAPHY.fontStyles.light};
-  position: relative;
+  margin: ${pxToRem(10)};
+  border-radius: ${pxToRem(8)};
   overflow: hidden;
   background-color: ${COLORS.primary5};
-  color: ${COLORS.primary1};
+  color: ${COLORS.font1};
   display: flex;
-  align-items: flex-start;
+
+  [href] {
+    color: ${COLORS.primary1};
+  }
 
   .k-Alert__text {
-    padding: ${pxToRem(13)} ${pxToRem(20)};
+    padding: ${pxToRem(18)} ${pxToRem(20)};
     flex: 1 0 0;
     font-size: ${stepToRem(-1)};
+    display: flex;
+    align-items: center;
+  }
+
+  .k-Alert__iconBadge {
+    margin-right: ${pxToRem(10)};
+    background-color: ${COLORS.primary1};
+    border-color: ${COLORS.primary4};
+    min-width: ${pxToRem(24)};
+    min-height: ${pxToRem(24)};
+    border-radius: ${pxToRem(24)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      text-align: center;
+      margin-right: ${pxToRem(20)};
     }
   }
 
-  .k-Alert__button {
+  button {
+    display: flex;
     flex: 0 0 auto;
     transition: all 0.2s ease;
+    align-self: stretch;
+    align-items: center;
+    padding-right: ${pxToRem(10)};
 
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      padding-right: ${pxToRem(20)};
+    }
     svg,
     svg path {
       transition: fill 0.2s ease;
+      fill: ${COLORS.primary1};
+
+      :hover {
+        fill: ${COLORS.primary3};
+      }
     }
 
     &:focus {
@@ -60,24 +88,73 @@ const AlertWrapper = styled.div`
   }
 
   &.k-Alert--success {
-    color: ${COLORS.valid};
     background-color: ${COLORS.tertiary1};
+
+    [href] {
+      color: ${COLORS.valid};
+    }
+
+    .k-Alert__iconBadge {
+      background-color: ${COLORS.valid};
+      border-color: ${COLORS.tertiary2};
+    }
+
+    button {
+      svg,
+      svg path {
+        fill: ${COLORS.valid};
+
+        :hover {
+          fill: ${COLORS.tertiary2};
+        }
+      }
+    }
   }
 
   &.k-Alert--error {
-    color: ${COLORS.error};
     background-color: ${COLORS.error2};
+
+    [href] {
+      color: ${COLORS.error};
+    }
+
+    .k-Alert__iconBadge {
+      background-color: ${COLORS.error};
+      border-color: ${COLORS.error3};
+    }
+
+    button {
+      svg,
+      svg path {
+        fill: ${COLORS.error};
+
+        :hover {
+          fill: ${COLORS.error4};
+        }
+      }
+    }
   }
 
   &.k-Alert--warning {
-    color: ${COLORS.warning};
     background-color: ${COLORS.warning2};
-  }
 
-  &.k-Alert--hasCloseButton {
-    .k-Alert__text {
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        margin-left: ${pxToRem(50)};
+    [href] {
+      color: ${COLORS.orange3};
+    }
+
+    .k-Alert__iconBadge {
+      background-color: ${COLORS.orange3};
+      border-color: ${COLORS.orange};
+    }
+
+    button {
+      svg,
+      svg path {
+        fill: ${COLORS.warning};
+
+        :hover {
+          fill: '#A47600';
+        }
       }
     }
   }
@@ -98,6 +175,8 @@ export const Alert = ({
   closeButtonLabel,
   children,
   onAfterClose,
+  icon,
+  iconBadgeBorderColor,
   ...others
 }) => {
   const [isTrashed, trashIt] = useState(false)
@@ -131,15 +210,28 @@ export const Alert = ({
       {...others}
     >
       <>
-        <div className="k-Alert__text">{children}</div>
+        <div className="k-Alert__text">
+          {icon && (
+            <IconBadge
+              className="k-Alert__iconBadge"
+              children={icon}
+              border={{
+                width: 2,
+                color: iconBadgeBorderColor,
+                style: 'solid',
+              }}
+            />
+          )}
+          {children}
+        </div>
 
         {closeButton && (
-          <CloseButton
-            modifier="carbon"
-            closeButtonLabel={closeButtonLabel}
-            className="k-Alert__button"
-            onClick={() => setMounted(false)}
-          />
+          <button className="k-u-reset-button">
+            <CrossIconNext
+              onClick={() => setMounted(false)}
+              title={closeButtonLabel}
+            />
+          </button>
         )}
       </>
     </AlertWrapper>
@@ -147,7 +239,6 @@ export const Alert = ({
 }
 
 Alert.propTypes = {
-  className: PropTypes.string,
   show: PropTypes.bool,
   error: PropTypes.bool,
   success: PropTypes.bool,
@@ -155,10 +246,11 @@ Alert.propTypes = {
   closeButton: PropTypes.bool,
   closeButtonLabel: PropTypes.string,
   onAfterClose: PropTypes.func,
+  icon: PropTypes.node,
+  iconBadgeBorderColor: PropTypes.string,
 }
 
 Alert.defaultProps = {
-  className: null,
   show: true,
   error: false,
   success: false,
@@ -166,4 +258,6 @@ Alert.defaultProps = {
   closeButton: false,
   closeButtonLabel: 'Close',
   onAfterClose: () => {},
+  icon: '',
+  iconBadgeBorderColor: COLORS.primary4,
 }

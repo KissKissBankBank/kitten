@@ -9,36 +9,34 @@ import COLORS from '../../../constants/colors-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledRow = styled.div`
-  .k-Row--centered {
+  &.k-Row--centered {
     text-align: center;
   }
 
-  .k-Row--light {
+  &.k-Row--light {
     background: ${COLORS.primary6};
   }
 
-  .k-Row--dark {
+  &.k-Row--dark {
     background: ${COLORS.line2};
     color: ${COLORS.background1};
   }
 
-  .k-Row--lightTopBorder {
+  &.k-Row--lightTopBorder {
     border-top: ${pxToRem(1)} solid ${COLORS.line1};
   }
 
-  .k-Row--lightBottomBorder {
+  &.k-Row--lightBottomBorder {
     border-bottom: ${pxToRem(1)} solid ${COLORS.line1};
   }
 
-  .k-Row__content {
-    .k-Row--padded & {
-      padding-top: ${pxToRem(60)};
-      padding-bottom: ${pxToRem(60)};
+  &.k-Row--padded .k-Row__content {
+    padding-top: ${pxToRem(60)};
+    padding-bottom: ${pxToRem(60)};
 
-      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        padding-top: ${pxToRem(80)};
-        padding-bottom: ${pxToRem(80)};
-      }
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      padding-top: ${pxToRem(80)};
+      padding-bottom: ${pxToRem(80)};
     }
   }
 `

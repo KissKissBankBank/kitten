@@ -1,25 +1,42 @@
 import React from 'react'
-import { boolean } from '@storybook/addon-knobs'
 import { FilterIcon } from './index'
-import { Marger, Container } from '../../../..'
-
-const StoryGrid = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      {children}
-    </Marger>
-  </Container>
-)
+import { COLORS } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Graphics/Icons/FilterIcon',
   component: FilterIcon,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="FilterIcon" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  args: {
+    animated: false,
+    color: COLORS.font1,
+    duration: '1.5s',
+    animated: false,
+    type: 'xml',
+    name: 'y',
+    begin: '0',
+    title: '',
+  },
+  argTypes: {
+    animated: { control: 'boolean' },
+    duration: { control: 'text' },
+    color: { control: 'color' },
+    type: { control: 'text' },
+    name: { control: 'text' },
+    begin: { control: 'text' },
+    title: { control: 'text' },
+  },
 }
 
-export const Default = () => {
-  return (
-    <StoryGrid>
-      <FilterIcon animated={boolean('is animated ?', false)} />
-    </StoryGrid>
-  )
-}
+export const Default = args => <FilterIcon {...args} />

@@ -38,7 +38,7 @@ exports[`<Progress /> Progress with multiple props matches with snapshot 1`] = `
   aria-valuemax={100}
   aria-valuemin={0}
   aria-valuenow={50}
-  className="c0 k-Meters-Progress k-Meters-Progress--andromeda"
+  className="c0 k-Meters-Progress k-Meters-Progress--orion"
   role="progressbar"
 >
   <div
@@ -90,7 +90,7 @@ exports[`<Progress /> simple Progress  matches with snapshot 1`] = `
   aria-valuemax={100}
   aria-valuemin={0}
   aria-valuenow={0}
-  className="c0 k-Meters-Progress k-Meters-Progress--andromeda"
+  className="c0 k-Meters-Progress k-Meters-Progress--orion"
   role="progressbar"
 >
   <div

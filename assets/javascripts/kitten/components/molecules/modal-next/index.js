@@ -7,7 +7,8 @@ import ReactModal from 'react-modal'
 import isEmpty from 'lodash/fp/isEmpty'
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { CloseButton } from '../../../components/molecules/buttons/close-button'
-import { Button, ICON_TINY } from '../../../components/molecules/buttons/button'
+import { Button } from '../../../components/molecules/buttons/button'
+import { ICON_TINY } from '../../../components/molecules/buttons/button/standalone-styles'
 import { Paragraph } from '../../../components/atoms/typography/paragraph/next'
 import { Text } from '../../../components/atoms/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -577,7 +578,7 @@ const Actions = ({
 const ModalButton = props => (
   <Button
     size="big"
-    fluid
+    fit="fluid"
     {...props}
     className={classNames('k-ModalNext__buttons', props.className)}
   />
@@ -820,9 +821,18 @@ const InnerModal = ({
   )
   return (
     <div className={classNames('k-ModalNext', className)} {...others}>
-      {trigger && (
-        <span onClick={() => dispatch(updateState(true))}>{trigger}</span>
-      )}
+      {trigger &&
+        React.cloneElement(trigger, {
+          onClick: clickEvent => {
+            dispatch(updateState(true))
+            if (
+              'onClick' in trigger.props &&
+              typeof trigger.props.onClick === 'function'
+            ) {
+              trigger.props.onClick(clickEvent)
+            }
+          },
+        })}
       {ModalPortal}
     </div>
   )
@@ -870,7 +880,7 @@ Modal.defaultProps = {
   size: 'regular',
   isOpen: false,
   zIndex: 110,
-  variant: 'andromeda',
+  variant: 'orion',
   headerTitle: null,
   headerActions: null,
   headerMessage: null,

@@ -1,31 +1,39 @@
 import React from 'react'
-import styled from 'styled-components'
-import { text, number } from '@storybook/addon-knobs'
 import { EngagementCardWithImage } from './index'
-import { Marger, Container, pxToRem } from '../../../..'
-
-const StyledEngagementCardWithImage = styled(EngagementCardWithImage)`
-  width: ${pxToRem(200)};
-`
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: EngagementCardWithImage,
   title: 'Molecules/Cards/EngagementCardWithImage',
   parameters: {
-    component: EngagementCardWithImage,
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          importString="EngagementCardWithImage"
+        />
+      ),
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--thin">
+        {story()}
+      </div>
+    ),
+  ],
+  argTypes: {
+    backgroundImage: { control: 'text' },
+    imageHeight: { control: 'number' },
+    href: { control: 'text' },
+    children: { control: 'text' },
+  },
+  args: {
+    backgroundImage: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    imageHeight: 120,
+    href: '#',
+    children: 'Autoproduction culturelle',
   },
 }
 
-export const DefaultProps = () => (
-  <Container>
-    <Marger top={4}>
-      <StyledEngagementCardWithImage
-        href="#"
-        backgroundImage="https://source.unsplash.com/WLUHO9A_xik/200x120"
-        imageHeight={number('image height', 120)}
-      >
-        {text('Categorie', 'Autoproduction culturelle')}
-      </StyledEngagementCardWithImage>
-    </Marger>
-  </Container>
-)
+export const DefaultProps = args => <EngagementCardWithImage {...args} />

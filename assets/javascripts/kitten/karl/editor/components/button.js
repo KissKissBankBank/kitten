@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button, ICON } from '../../../components/molecules/buttons/button'
+import { Button } from '../../../components/molecules/buttons/button'
+import { ICON } from '../../../components/molecules/buttons/button/standalone-styles'
 import { modifierStyles } from '../../../components/molecules/buttons/button/helpers/modifier-styles'
 import COLORS from '../../../constants/colors-config'
 
-export default styled(({ tag, ...props }) => <Button as={tag} {...props} />)`
+export default styled(({ tag, ...props }) => (
+  <Button fit="icon" as={tag} {...props} />
+))`
   ${ICON};
   ${modifierStyles('hydrogen')};
 

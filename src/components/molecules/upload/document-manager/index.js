@@ -77,18 +77,18 @@ var IconContainer = function IconContainer(_ref) {
   }, children, statusesWithIcons.includes(status) && /*#__PURE__*/_react.default.createElement("div", {
     className: "k-DocumentManager__iconContainer__statusIcon"
   }, status === 'valid' && /*#__PURE__*/_react.default.createElement(_checkedCircleIcon.CheckedCircleIcon, {
-    circleColor: _colorsConfig.default.valid,
-    checkedColor: _colorsConfig.default.background1,
+    bgColor: _colorsConfig.default.valid,
+    color: _colorsConfig.default.background1,
     width: 20,
     height: 20
   }), status === 'error' && /*#__PURE__*/_react.default.createElement(_crossCircleIcon.CrossCircleIcon, {
-    circleColor: _colorsConfig.default.error,
-    crossColor: _colorsConfig.default.background1,
+    bgColor: _colorsConfig.default.error,
+    color: _colorsConfig.default.background1,
     width: 20,
     height: 20
   }), status === 'wait' && /*#__PURE__*/_react.default.createElement(_clockCircleIcon.ClockCircleIcon, {
-    circleColor: _colorsConfig.default.primary1,
-    clockColor: _colorsConfig.default.background1,
+    bgColor: _colorsConfig.default.primary1,
+    color: _colorsConfig.default.background1,
     width: 20,
     height: 20
   })));
@@ -182,7 +182,7 @@ var DocumentManager = function DocumentManager(_ref2) {
       onChange: onFileInputChange,
       disabled: internalDisabled
     })), /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
-      fluid: true,
+      fit: "fluid",
       borderRadius: 6
     }, buttonProps, {
       as: "label",
@@ -221,7 +221,7 @@ var DocumentManager = function DocumentManager(_ref2) {
       id: id,
       className: (0, _classnames.default)('k-DocumentManager__loading', props.className)
     }), /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
-      fluid: true,
+      fit: "fluid",
       borderRadius: 6
     }, buttonProps, {
       as: "div",
@@ -283,6 +283,8 @@ DocumentManager.propTypes = {
   onCancel: _propTypes.default.func,
   onUpload: _propTypes.default.func,
   status: _propTypes.default.oneOf(['ready', 'error', 'valid', 'wait', 'loading']),
-  subtitle: _propTypes.default.node,
-  title: _propTypes.default.node
+  displaySubtitle: _propTypes.default.node,
+  displayTitle: _propTypes.default.node,
+  buttonSubtitle: _propTypes.default.node,
+  buttonTitle: _propTypes.default.node
 };

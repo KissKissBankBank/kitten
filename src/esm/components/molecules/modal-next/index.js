@@ -14,7 +14,8 @@ import ReactModal from 'react-modal';
 import isEmpty from 'lodash/fp/isEmpty';
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { CloseButton } from '../../../components/molecules/buttons/close-button';
-import { Button, ICON_TINY } from '../../../components/molecules/buttons/button';
+import { Button } from '../../../components/molecules/buttons/button';
+import { ICON_TINY } from '../../../components/molecules/buttons/button/standalone-styles';
 import { Paragraph } from '../../../components/atoms/typography/paragraph/next';
 import { Text } from '../../../components/atoms/typography/text';
 import { pxToRem } from '../../../helpers/utils/typography';
@@ -99,7 +100,7 @@ var Actions = function Actions(_ref3) {
 var ModalButton = function ModalButton(props) {
   return /*#__PURE__*/React.createElement(Button, _extends({
     size: "big",
-    fluid: true
+    fit: "fluid"
   }, props, {
     className: classNames('k-ModalNext__buttons', props.className)
   }));
@@ -324,11 +325,15 @@ var InnerModal = function InnerModal(_ref6) {
   }))))), document.body);
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-ModalNext', className)
-  }, others), trigger && /*#__PURE__*/React.createElement("span", {
-    onClick: function onClick() {
-      return dispatch(updateState(true));
+  }, others), trigger && React.cloneElement(trigger, {
+    onClick: function onClick(clickEvent) {
+      dispatch(updateState(true));
+
+      if ('onClick' in trigger.props && typeof trigger.props.onClick === 'function') {
+        trigger.props.onClick(clickEvent);
+      }
     }
-  }, trigger), ModalPortal);
+  }), ModalPortal);
 };
 
 export var Modal = function Modal(props) {
@@ -367,7 +372,7 @@ Modal.defaultProps = {
   size: 'regular',
   isOpen: false,
   zIndex: 110,
-  variant: 'andromeda',
+  variant: 'orion',
   headerTitle: null,
   headerActions: null,
   headerMessage: null,

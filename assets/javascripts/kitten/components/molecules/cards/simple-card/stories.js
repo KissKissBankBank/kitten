@@ -1,66 +1,54 @@
 import React from 'react'
-import { text, boolean, color } from '@storybook/addon-knobs'
 import { SimpleCard } from './index'
-import { Container, Grid, GridCol, Marger } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
+import { COLORS } from '../../../..'
+
+const argTypes = {
+  imageProps: { control: 'object' },
+  withPlayerButtonOnImage: { control: 'bool' },
+  ariaLabel: { control: 'string' },
+  arrowColor: { control: 'string' },
+  href: { control: 'string' },
+  playerButtonSize: { control: 'number' },
+  imageContainerBackground: { control: 'string' },
+  imageContainerRatio: { control: 'number' },
+  title: { control: 'text' },
+  titleProps: { control: 'object' },
+  subtitle: { control: 'text' },
+  paragraph: { control: 'text' },
+}
+
+const args = {
+  imageProps: {
+    alt: '',
+    src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+  },
+  withPlayerButtonOnImage: false,
+  ariaLabel: 'Aria label',
+  arrowColor: COLORS.background1,
+  href: '#',
+  playerButtonSize: 70,
+  imageContainerBackground: COLORS.primary4,
+  imageContainerRatio: 16 / 9,
+  title: 'Title',
+  titleProps: {},
+  subtitle: 'Subtitle text',
+  paragraph: 'Paragraph content of card',
+}
 
 export default {
   title: 'Molecules/Cards/SimpleCard',
   component: SimpleCard,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="SimpleCard" />,
+    },
+  },
+  decorators: [
+    story => <div className="story-Container story-Grid">{story()}</div>,
+  ],
+  argTypes,
+  args,
 }
 
-export const Default = () => {
-  return (
-    <Marger top="4" bottom="4">
-      <Container>
-        <Grid>
-          <GridCol col="6" col-xs="4" col-m="3" col-l="2">
-            <SimpleCard
-              href="#"
-              imageProps={{
-                src: text('Image src', '/kitten.jpg'),
-              }}
-              title={text('Title', 'Title')}
-              subtitle={text('Subtitle', 'Subtitle')}
-              paragraph={text('Paragraph', 'Paragraph')}
-              withPlayerButtonOnImage={boolean(
-                'With player button on image?',
-                true,
-              )}
-            />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
-  )
-}
-
-export const WithImageContainerRatio = () => {
-  return (
-    <Marger top="4" bottom="4">
-      <Container>
-        <Grid>
-          <GridCol col="6" col-xs="4" col-m="3" col-l="2">
-            <SimpleCard
-              href="#"
-              imageProps={{
-                src: text(
-                  'Image src',
-                  'https://placehold.it/160x90/555/caf4fe',
-                ),
-              }}
-              title={text('Title', 'Title')}
-              subtitle={text('Subtitle', 'Subtitle')}
-              paragraph={text('Paragraph', 'Paragraph')}
-              withPlayerButtonOnImage={boolean(
-                'With player button on image?',
-                false,
-              )}
-              imageContainerRatio={text('Adjust Ratio', '16/9')}
-              imageContainerBackground={color('Adjust Color', '#eee')}
-            />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
-  )
-}
+export const Default = args => <SimpleCard {...args} />

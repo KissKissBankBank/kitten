@@ -52,7 +52,12 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       menuZIndex = _ref.menuZIndex,
       className = _ref.className,
       value = _ref.value,
-      _onBlur = _ref.onBlur;
+      _onBlur = _ref.onBlur,
+      controlled = _ref.controlled,
+      modifier = _ref.modifier,
+      direction = _ref.direction,
+      arrowPosition = _ref.arrowPosition,
+      labelProps = _ref.labelProps;
 
   var _useState = useState([]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -113,7 +118,7 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
     });
   };
 
-  var _useCombobox = useCombobox({
+  var _useCombobox = useCombobox(_extends({
     id: "".concat(id, "_element"),
     inputId: id,
     items: filteredOptions,
@@ -123,9 +128,10 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
     onSelectedItemChange: onSelectedItemChange,
     onInputValueChange: onInputValueChange,
     onIsOpenChange: onIsOpenChange,
-    initialIsOpen: openOnLoad,
+    initialIsOpen: openOnLoad
+  }, controlled && {
     selectedItem: selectedItemByValue
-  }),
+  })),
       isOpen = _useCombobox.isOpen,
       getToggleButtonProps = _useCombobox.getToggleButtonProps,
       getLabelProps = _useCombobox.getLabelProps,
@@ -162,7 +168,7 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
     setFlattenedOptions(flatOptions);
   }, [options]);
   return /*#__PURE__*/React.createElement(StyledDropdown, {
-    className: classNames('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), className, {
+    className: classNames('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(modifier), "k-Form-Dropdown--".concat(direction), "k-Form-Dropdown--".concat(size), "k-Form-Dropdown--arrowPosition-".concat(arrowPosition), className, {
       'k-Form-Dropdown--isOpen': isOpen > 0,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
@@ -171,8 +177,8 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
     style: {
       '--menu-z-index': menuZIndex
     }
-  }, /*#__PURE__*/React.createElement(Label, _extends({
-    className: classNames('k-Form-Dropdown__label', 'k-u-margin-bottom-single', {
+  }, /*#__PURE__*/React.createElement(Label, _extends({}, labelProps, {
+    className: classNames('k-Form-Dropdown__label', 'k-u-margin-bottom-single', labelProps === null || labelProps === void 0 ? void 0 : labelProps.className, {
       'k-Form-Dropdown__label--isHidden': hideLabel
     })
   }, getLabelProps()), labelText), /*#__PURE__*/React.createElement("div", _extends({
@@ -232,10 +238,11 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
 };
 DropdownCombobox.defaultProps = {
   hideLabel: false,
+  controlled: false,
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
-  variant: 'andromeda',
+  variant: 'orion',
   size: 'normal',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
@@ -248,7 +255,10 @@ DropdownCombobox.defaultProps = {
   onMenuClose: function onMenuClose() {},
   onMenuOpen: function onMenuOpen() {},
   openOnLoad: false,
-  menuZIndex: 1000
+  menuZIndex: 1000,
+  modifier: 'hydrogen',
+  direction: 'down',
+  arrowPosition: 'left'
 };
 DropdownCombobox.propTypes = {
   id: PropTypes.string.isRequired,
@@ -256,11 +266,12 @@ DropdownCombobox.propTypes = {
   comboboxButtonLabelText: PropTypes.string.isRequired,
   noResultText: PropTypes.string.isRequired,
   hideLabel: PropTypes.bool,
+  controlled: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.object),
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
-  size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge', 'giant']),
+  size: PropTypes.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
   a11yStatusError: PropTypes.string,
   a11yStatusValid: PropTypes.string,
   a11ySelectionMessageDisplayer: PropTypes.func,
@@ -269,5 +280,8 @@ DropdownCombobox.propTypes = {
   onMenuClose: PropTypes.func,
   onMenuOpen: PropTypes.func,
   openOnLoad: PropTypes.bool,
-  menuZIndex: PropTypes.number
+  menuZIndex: PropTypes.number,
+  modifier: PropTypes.oneOf(['hydrogen', 'nitrogen', 'boron']),
+  direction: PropTypes.oneOf(['up', 'down']),
+  arrowPosition: PropTypes.oneOf(['left', 'right'])
 };

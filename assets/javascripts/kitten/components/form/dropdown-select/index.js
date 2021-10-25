@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelect } from 'downshift'
-import { Label } from '../../../components/form/label'
+import { Label } from '../label'
 import classNames from 'classnames'
-import { WarningCircleIcon } from '../../../components/graphics/icons/warning-circle-icon'
-import { CheckedCircleIcon } from '../../../components/graphics/icons/checked-circle-icon'
-import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon'
+import { WarningCircleIcon } from '../../graphics/icons/warning-circle-icon'
+import { CheckedCircleIcon } from '../../graphics/icons/checked-circle-icon'
+import { ArrowIcon } from '../../graphics/icons/arrow-icon'
 import find from 'lodash/fp/find'
 import { DropdownCombobox } from './combobox'
 import { StyledDropdown } from './styles'
@@ -39,6 +39,11 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     menuZIndex,
     className,
     value,
+    controlled,
+    modifier,
+    direction,
+    arrowPosition,
+    labelProps,
   } = props
 
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
@@ -75,7 +80,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
   const initialSelectedItem = find(['value', defaultSelectedValue])(
     flattenedOptions,
   )
-  const selectedItemByValue = find(['value', value])(flattenedOptions)
+  const selectedItemByValue = find(['value', value])(flattenedOptions) || null
 
   const onIsOpenChange = changes => {
     if (changes.isOpen) return onMenuOpen({ changes })
@@ -101,7 +106,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     onSelectedItemChange,
     onIsOpenChange,
     initialIsOpen: openOnLoad,
-    ...(selectedItemByValue && { selectedItem: selectedItemByValue }),
+    ...(controlled && { selectedItem: selectedItemByValue }),
   })
 
   useEffect(() => {
@@ -113,7 +118,10 @@ export const DropdownSelect = ({ combobox, ...props }) => {
       className={classNames(
         'k-Form-Dropdown',
         `k-Form-Dropdown--${variant}`,
+        `k-Form-Dropdown--${modifier}`,
+        `k-Form-Dropdown--${direction}`,
         `k-Form-Dropdown--${size}`,
+        `k-Form-Dropdown--arrowPosition-${arrowPosition}`,
         className,
         {
           'k-Form-Dropdown--isOpen': isOpen,
@@ -125,9 +133,11 @@ export const DropdownSelect = ({ combobox, ...props }) => {
       style={{ '--menu-z-index': menuZIndex }}
     >
       <Label
+        {...labelProps}
         className={classNames(
           'k-Form-Dropdown__label',
           'k-u-margin-bottom-single',
+          labelProps?.className,
           {
             'k-Form-Dropdown__label--isHidden': hideLabel,
           },
@@ -199,10 +209,11 @@ export const DropdownSelect = ({ combobox, ...props }) => {
 DropdownSelect.defaultProps = {
   combobox: false,
   hideLabel: false,
+  controlled: false,
   options: [],
   placeholder: 'Select',
   labelPropsGetter: () => {},
-  variant: 'andromeda',
+  variant: 'orion',
   size: 'normal',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
@@ -215,6 +226,9 @@ DropdownSelect.defaultProps = {
   openOnLoad: false,
   uniqLabelOnSearch: false,
   menuZIndex: 1000,
+  modifier: 'hydrogen',
+  direction: 'down',
+  arrowPosition: 'left',
 }
 
 DropdownSelect.propTypes = {
@@ -222,11 +236,12 @@ DropdownSelect.propTypes = {
   labelText: PropTypes.string.isRequired,
   combobox: PropTypes.bool,
   hideLabel: PropTypes.bool,
+  controlled: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.object),
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
-  size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge', 'giant']),
+  size: PropTypes.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
   a11yStatusError: PropTypes.string,
   a11yStatusValid: PropTypes.string,
   a11ySelectionMessageDisplayer: PropTypes.func,
@@ -238,4 +253,7 @@ DropdownSelect.propTypes = {
   openOnLoad: PropTypes.bool,
   uniqLabelOnSearch: PropTypes.bool,
   menuZIndex: PropTypes.number,
+  modifier: PropTypes.oneOf(['hydrogen', 'nitrogen', 'boron']),
+  direction: PropTypes.oneOf(['up', 'down']),
+  arrowPosition: PropTypes.oneOf(['left', 'right']),
 }

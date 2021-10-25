@@ -12,7 +12,7 @@ export var FilterIcon = function FilterIcon(_ref) {
       title = _ref.title,
       others = _objectWithoutProperties(_ref, ["color", "duration", "type", "name", "begin", "animated", "title"]);
 
-  var animationDuration = animated ? duration : 0;
+  var animationDuration = animated ? duration : null;
   return /*#__PURE__*/React.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     x: "0px",

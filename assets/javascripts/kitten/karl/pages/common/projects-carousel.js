@@ -85,7 +85,7 @@ const StyledThanks = styled.div`
   }
 `
 
-const ProjectsCarousel = ({
+export const ProjectsCarousel = ({
   title,
   description,
   buttonHref,
@@ -95,7 +95,7 @@ const ProjectsCarousel = ({
 }) => {
   const renderButton = () => (
     <Button
-      icon
+      fit="icon"
       iconOnRight
       tag="a"
       href={buttonHref}

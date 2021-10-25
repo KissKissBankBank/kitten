@@ -48,16 +48,12 @@ var EngagementCard = function EngagementCard(_ref2) {
       backgroundColor = _ref2.backgroundColor,
       href = _ref2.href,
       children = _ref2.children,
-      hoverBorder = _ref2.hoverBorder,
-      isActive = _ref2.isActive,
       as = _ref2.as,
-      others = (0, _objectWithoutProperties2.default)(_ref2, ["icon", "backgroundColor", "href", "children", "hoverBorder", "isActive", "as"]);
+      others = (0, _objectWithoutProperties2.default)(_ref2, ["icon", "backgroundColor", "href", "children", "as"]);
   return /*#__PURE__*/_react.default.createElement(StyledCard, (0, _extends2.default)({}, others, {
     as: href ? 'a' : 'div',
     href: href,
-    backgroundColor: backgroundColor,
-    hoverBorder: hoverBorder,
-    isActive: isActive
+    backgroundColor: backgroundColor
   }), /*#__PURE__*/_react.default.createElement(StyledIcon, null, icon), /*#__PURE__*/_react.default.createElement(StyledText, {
     size: "micro",
     weight: "regular",
@@ -69,13 +65,9 @@ exports.EngagementCard = EngagementCard;
 EngagementCard.propTypes = {
   icon: _propTypes.default.element.isRequired,
   href: _propTypes.default.string,
-  backgroundColor: _propTypes.default.string,
-  hoverBorder: _propTypes.default.string,
-  isActive: _propTypes.default.bool
+  backgroundColor: _propTypes.default.string
 };
 EngagementCard.defaultProps = {
   href: '',
-  backgroundColor: '',
-  hoverBorder: '',
-  isActive: false
+  backgroundColor: ''
 };

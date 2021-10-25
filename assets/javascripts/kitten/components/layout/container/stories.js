@@ -1,10 +1,16 @@
 import React from 'react'
 import { Container } from './index'
-import COLORS from '../../../constants/colors-config'
+import { COLORS } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Layout/Container',
   component: Container,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Container" />,
+    },
+  },
 }
 
 export const Default = args => (

@@ -1,80 +1,82 @@
 import React from 'react'
-import { text, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { RadioButton } from './index'
-import { Grid, GridCol } from '../../../components/layout/grid'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: RadioButton,
   title: 'Form/RadioButton',
   parameters: {
-    component: RadioButton,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="RadioButton" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  args: {
+    onChange: action('change'),
+    error: false,
+    disabled: false,
+    large: false,
+    largeContent: false,
+    text: 'RadioButton label',
+    size: 'regular',
+    variant: 'orion',
+    design: 'disc',
+    children: null,
+  },
+  argTypes: {
+    error: {
+      name: 'error',
+      control: 'boolean',
+    },
+    disabled: {
+      name: 'disabled',
+      control: 'boolean',
+    },
+    large: {
+      name: 'large',
+      control: 'boolean',
+    },
+    largeContent: {
+      name: 'largeContent',
+      control: 'boolean',
+    },
+    text: {
+      name: 'text',
+      control: 'text',
+    },
+    size: {
+      name: 'size',
+      options: ['regular', 'big'],
+      control: 'inline-radio',
+    },
+    variant: {
+      name: 'variant',
+      options: ['andromeda', 'orion'],
+      control: 'inline-radio',
+    },
+    design: {
+      name: 'design',
+      options: ['disc', 'check'],
+      control: 'inline-radio',
+    },
+    children: {
+      name: 'children',
+      control: 'text',
+    },
   },
 }
 
-export const Default = () => (
-  <Grid>
-    <GridCol offset="1" col="8">
-      <RadioButton
-        id="test_1"
-        name="test"
-        onLabelClick={action('label-click')}
-        onChange={action('change')}
-        error={boolean('Error', false)}
-        disabled={boolean('Disabled', false)}
-        large={boolean('Large', false)}
-        largeContent={boolean('LargeContent', false)}
-        text={text('Text', 'RadioButton Label')}
-        size={select('Size', { regular: 'regular', big: 'big' }, 'regular')}
-        variant={select(
-          'Variant',
-          { andromeda: 'andromeda', orion: 'orion' },
-          'andromeda',
-        )}
-        design={select('Design', { disc: 'disc', check: 'check' }, 'radio')}
-      >
-        {text('Content', '')}
-      </RadioButton>
-      <RadioButton
-        id="test_2"
-        name="test"
-        onLabelClick={action('label-click')}
-        onChange={action('change')}
-        error={boolean('Error', false)}
-        disabled={boolean('Disabled', false)}
-        large={boolean('Large', false)}
-        largeContent={boolean('LargeContent', false)}
-        text={text('Text', 'RadioButton Label')}
-        variant={select(
-          'Variant',
-          { andromeda: 'andromeda', orion: 'orion' },
-          'andromeda',
-        )}
-        size={select('Size', { regular: 'regular', big: 'big' }, 'regular')}
-        design={select('Design', { disc: 'disc', check: 'check' }, 'radio')}
-      >
-        {text('Content', '')}
-      </RadioButton>
-      <RadioButton
-        id="test_3"
-        name="test"
-        onLabelClick={action('label-click')}
-        onChange={action('change')}
-        error={boolean('Error', false)}
-        disabled={boolean('Disabled', false)}
-        large={boolean('Large', false)}
-        largeContent={boolean('LargeContent', false)}
-        text={text('Text', 'RadioButton Label')}
-        variant={select(
-          'Variant',
-          { andromeda: 'andromeda', orion: 'orion' },
-          'andromeda',
-        )}
-        size={select('Size', { regular: 'regular', big: 'big' }, 'regular')}
-        design={select('Design', { disc: 'disc', check: 'check' }, 'radio')}
-      >
-        {text('Content', '')}
-      </RadioButton>
-    </GridCol>
-  </Grid>
+export const RadioButtonSet = args => (
+  <div>
+    <RadioButton name="test" {...args} id="test_1" />
+    <RadioButton name="test" {...args} id="test_2" />
+    <RadioButton name="test" {...args} id="test_3" />
+  </div>
 )

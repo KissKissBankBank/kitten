@@ -54,7 +54,7 @@ var GifVideo = function GifVideo(_ref) {
   (0, _react.useEffect)(function () {
     if (!children) return setPosterLoading(true);
     if (!videoElement || !videoElement.current) return;
-    var sources = videoElement.current.children;
+    var sources = Array.from(videoElement.current.children);
     setSourcesLength(sources.length);
     sources.forEach(function (source) {
       source.addEventListener('error', handleSourceError);

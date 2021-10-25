@@ -1,28 +1,73 @@
 import React from 'react'
-import { select, boolean } from '@storybook/addon-knobs'
-import styled from 'styled-components'
 import { IconBadge } from './index'
-import { StarIcon } from '../../../components/graphics/icons/star-icon'
-import COLORS from '../../../constants/colors-config'
-
-const Container = styled.div`
-  padding: 20px;
-`
+import { StarIcon, COLORS } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Atoms/IconBadge',
   component: IconBadge,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="IconBadge" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid">
+        <div>{story()}</div>
+      </div>
+    ),
+  ],
+  argTypes: {
+    disabled: {
+      name: 'disabled',
+      control: 'boolean',
+    },
+    backgroundColor: {
+      name: 'backgroundColor',
+      control: 'color',
+    },
+    valid: {
+      name: 'valid',
+      control: 'boolean',
+    },
+    empty: {
+      name: 'empty',
+      control: 'boolean',
+    },
+    border: {
+      name: 'border',
+      control: 'object',
+    },
+    size: {
+      name: 'size',
+      control: 'select',
+      options: ['tiny', 'normal', 'big', 'huge'],
+    },
+  },
 }
 
-export const Default = () => (
-  <Container>
-    <IconBadge
-      disabled={boolean('disabled', false)}
-      valid={boolean('valid', false)}
-      empty={boolean('empty', false)}
-      size={select('size', ['tiny', 'normal', 'big', 'huge'], 'normal')}
-    >
-      <StarIcon color={COLORS.background1} />
-    </IconBadge>
-  </Container>
-)
+const args = {
+  disabled: false,
+  valid: false,
+  empty: false,
+  size: 'normal',
+  backgroundColor: COLORS.primary1,
+  children: <StarIcon color={COLORS.background1} />,
+}
+
+export const Default = args => <IconBadge {...args} />
+
+Default.args = args
+
+export const WithBorder = args => <IconBadge {...args} />
+
+WithBorder.args = {
+  ...args,
+  size: 'tiny',
+  border: {
+    width: 2,
+    style: 'solid',
+    color: COLORS.primary5,
+  },
+}

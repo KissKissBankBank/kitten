@@ -39,7 +39,7 @@ export const Item = ({
       {button ? (
         <Button
           modifier={modifier}
-          fluid
+          fit="fluid"
           {...other}
           className={classNames('k-HeaderMenu__item__button', other.className)}
           as={as}
@@ -87,6 +87,7 @@ Item.propTypes = {
     'boron',
     'neon',
     'iron',
+    'calcium',
   ]),
   size: PropTypes.oneOf(['normal', 'tiny', 'big']),
   as: deprecated(PropTypes.string, 'Please use `tag` instead.'),

@@ -183,6 +183,8 @@ export const Accordeon = ({
   isAnimated,
   id,
   onChange,
+  className,
+  ...props
 }) => {
   const items = getReactElementsByType({ children, type: Accordeon.Item })
   const [internalSelectedItem, setSelectedItem] = useState(selectedItem)
@@ -227,10 +229,16 @@ export const Accordeon = ({
 
   return (
     <StyledAccordeon
-      className={classNames('k-Accordeon', `k-Accordeon--${variant}`, {
-        'k-Accordeon--isAnimated': isAnimated,
-      })}
+      className={classNames(
+        'k-Accordeon',
+        className,
+        `k-Accordeon--${variant}`,
+        {
+          'k-Accordeon--isAnimated': isAnimated,
+        },
+      )}
       ref={accordeonElement}
+      {...props}
     >
       <Context.Provider value={context}>
         {items.map((item, index) => {
@@ -261,6 +269,6 @@ Accordeon.defaultProps = {
   onChange: () => {},
   isAnimated: true,
   id: 'accordeon',
-  variant: 'andromeda',
+  variant: 'orion',
   closeOnClick: false,
 }

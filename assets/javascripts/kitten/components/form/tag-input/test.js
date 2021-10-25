@@ -22,7 +22,6 @@ describe('<TagInput />', () => {
           id="test-slider-input"
           helpMessage="Press Enter or Comma to add an item."
           size="huge"
-          variant="orion"
           addEventKeys={['Enter', ',', 'Space']}
           removeEventKeys={['e', '^', 'Backspace']}
           initialItemsList={['Black', 'Blue', 'Green and magenta']}
@@ -40,6 +39,26 @@ describe('<TagInput />', () => {
           disabled
           id="test-slider-input"
           helpMessage="This list input is disabled."
+          initialItemsList={['Black', 'Blue', 'Green and magenta']}
+        />,
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+  it('should match its disabled snapshot with objects on initialItemsList', () => {
+    const tree = renderer
+      .create(
+        <TagInput
+          disabled
+          id="test-slider-input"
+          helpMessage="This list input is disabled."
+          initialItemsList={[
+            { value: 'Black', disabled: true },
+            'Blue',
+            'Green and magenta',
+            { value: 'Green and magenta', disabled: false },
+          ]}
         />,
       )
       .toJSON()

@@ -4,6 +4,7 @@ module.exports = api => {
 
   const plugins = [
     ['@babel/plugin-transform-runtime', { useESModules: isESMBuild }],
+    '@babel/plugin-transform-async-to-generator',
     '@babel/plugin-transform-react-jsx',
     [
       '@babel/plugin-proposal-object-rest-spread',

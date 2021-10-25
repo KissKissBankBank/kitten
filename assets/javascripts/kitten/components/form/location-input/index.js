@@ -192,7 +192,8 @@ export const LocationInput = ({
                 >
                   <span className="k-LocationInput__autocompleteItem__mainText">
                     {suggestion.formattedSuggestion.mainText}
-                  </span>{' '}
+                  </span>
+                  {', '}
                   <span className="k-LocationInput__autocompleteItem__secondaryText">
                     {suggestion.formattedSuggestion.secondaryText}
                   </span>
@@ -213,7 +214,7 @@ LocationInput.defaultProps = {
   inputProps: {},
   name: 'location-input',
   loadingText: 'Loading...',
-  variant: 'andromeda',
+  variant: 'orion',
 }
 
 LocationInput.propTypes = {

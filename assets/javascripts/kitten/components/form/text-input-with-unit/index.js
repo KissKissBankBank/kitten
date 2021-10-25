@@ -177,6 +177,6 @@ TextInputWithUnit.defaultProps = {
   size: 'regular',
   disabled: false,
   digits: null,
-  variant: 'andromeda',
+  variant: 'orion',
   wrapperProps: {},
 }

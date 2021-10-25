@@ -50,6 +50,11 @@ export const DropdownCombobox = ({
   className,
   value,
   onBlur,
+  controlled,
+  modifier,
+  direction,
+  arrowPosition,
+  labelProps,
 }) => {
   const [flattenedOptions, setFlattenedOptions] = useState([])
   const [filteredOptions, setFilteredOptions] = useState([])
@@ -118,7 +123,7 @@ export const DropdownCombobox = ({
     onInputValueChange,
     onIsOpenChange,
     initialIsOpen: openOnLoad,
-    selectedItem: selectedItemByValue,
+    ...(controlled && { selectedItem: selectedItemByValue }),
   })
 
   useEffect(() => {
@@ -155,7 +160,10 @@ export const DropdownCombobox = ({
       className={classNames(
         'k-Form-Dropdown',
         `k-Form-Dropdown--${variant}`,
+        `k-Form-Dropdown--${modifier}`,
+        `k-Form-Dropdown--${direction}`,
         `k-Form-Dropdown--${size}`,
+        `k-Form-Dropdown--arrowPosition-${arrowPosition}`,
         className,
         {
           'k-Form-Dropdown--isOpen': isOpen > 0,
@@ -167,9 +175,11 @@ export const DropdownCombobox = ({
       style={{ '--menu-z-index': menuZIndex }}
     >
       <Label
+        {...labelProps}
         className={classNames(
           'k-Form-Dropdown__label',
           'k-u-margin-bottom-single',
+          labelProps?.className,
           {
             'k-Form-Dropdown__label--isHidden': hideLabel,
           },
@@ -254,10 +264,11 @@ export const DropdownCombobox = ({
 
 DropdownCombobox.defaultProps = {
   hideLabel: false,
+  controlled: false,
   options: [],
   placeholder: 'Select',
   labelPropsGetter: () => {},
-  variant: 'andromeda',
+  variant: 'orion',
   size: 'normal',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
@@ -269,6 +280,9 @@ DropdownCombobox.defaultProps = {
   onMenuOpen: () => {},
   openOnLoad: false,
   menuZIndex: 1000,
+  modifier: 'hydrogen',
+  direction: 'down',
+  arrowPosition: 'left',
 }
 
 DropdownCombobox.propTypes = {
@@ -277,11 +291,12 @@ DropdownCombobox.propTypes = {
   comboboxButtonLabelText: PropTypes.string.isRequired,
   noResultText: PropTypes.string.isRequired,
   hideLabel: PropTypes.bool,
+  controlled: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.object),
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
-  size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge', 'giant']),
+  size: PropTypes.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
   a11yStatusError: PropTypes.string,
   a11yStatusValid: PropTypes.string,
   a11ySelectionMessageDisplayer: PropTypes.func,
@@ -291,4 +306,7 @@ DropdownCombobox.propTypes = {
   onMenuOpen: PropTypes.func,
   openOnLoad: PropTypes.bool,
   menuZIndex: PropTypes.number,
+  modifier: PropTypes.oneOf(['hydrogen', 'nitrogen', 'boron']),
+  direction: PropTypes.oneOf(['up', 'down']),
+  arrowPosition: PropTypes.oneOf(['left', 'right']),
 }

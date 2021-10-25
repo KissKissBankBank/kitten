@@ -12,7 +12,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-bottom-double"
       >
         <h2
-          className="sc-bxivhb dxgSxl k-Title k-Title--secondary k-Title--noMargin"
+          className="sc-bxivhb cVBpxq k-Title k-Title--secondary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
@@ -47,7 +47,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
         >
           <h1
-            className="sc-bxivhb dxgSxl k-Title k-u-align-center k-Title--senary k-Title--noMargin"
+            className="sc-bxivhb cVBpxq k-Title k-u-align-center k-Title--senary k-Title--noMargin"
             style={
               Object {
                 "--Title-css-color": null,
@@ -62,12 +62,12 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-u-margin-top-triple k-u-align-center"
         >
           <button
-            className="sc-EHOje cxYDhF k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
+            className="sc-EHOje hFhVlM k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-min-width"
             href={null}
             onClick={null}
             style={
               Object {
-                "--border-radius": 0,
+                "--Button-border-radius": null,
               }
             }
             type="button"
@@ -97,7 +97,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-bxivhb dxgSxl k-Title k-u-align-center k-u-margin-bottom-singleHalf k-Title--senary k-Title--noMargin"
+          className="sc-bxivhb cVBpxq k-Title k-u-align-center k-u-margin-bottom-singleHalf k-Title--senary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
@@ -107,7 +107,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           Donsectetur adipiscing elit
         </h1>
         <p
-          className="sc-ifAKCX fnuyLy k-Paragraph k-u-align-center k-u-margin-top-singleHalf k-Paragraph--tertiary k-Paragraph--noMargin"
+          className="sc-ifAKCX bMHVtG k-Paragraph k-u-align-center k-u-margin-top-singleHalf k-Paragraph--tertiary k-Paragraph--noMargin"
         >
           Nulla ut orci velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
         </p>
@@ -116,12 +116,12 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="sc-EHOje cxYDhF k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
+          className="sc-EHOje hFhVlM k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-min-width"
           href={null}
           onClick={null}
           style={
             Object {
-              "--border-radius": 0,
+              "--Button-border-radius": null,
             }
           }
           type="button"
@@ -150,7 +150,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-bxivhb dxgSxl k-Title k-u-align-center k-Title--senary k-Title--noMargin"
+          className="sc-bxivhb cVBpxq k-Title k-u-align-center k-Title--senary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
@@ -165,12 +165,12 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="sc-EHOje cxYDhF k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--andromeda"
+          className="sc-EHOje hFhVlM k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-min-width"
           href={null}
           onClick={null}
           style={
             Object {
-              "--border-radius": 0,
+              "--Button-border-radius": null,
             }
           }
           type="button"

@@ -6,6 +6,7 @@
 // Custom styles for stories
 
 @import 'custom/flex';
+@import 'custom/story-helpers';
 @import 'custom/background';
 
 // Custom styles for StoryBook iFrame.
@@ -15,4 +16,34 @@ body, body.sb-show-main.sb-main-padded {
 
 html {
   overscroll-behavior: none;
+}
+
+details.docs-page-details {
+  margin: 28px 0;
+
+  summary {
+    display: block;
+    position: relative;
+
+    h2 {
+      cursor: pointer;
+
+      &::before {
+        display: inline-block;
+        content: "+";
+        width: 20px;
+      }
+
+      a {
+        position: absolute;
+        padding-right: 0;
+        margin-left: 0;
+        left: -20px;
+      }
+    }
+  }
+
+  &[open] summary h2::before {
+    content: "–";
+  }
 }

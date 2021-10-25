@@ -43,12 +43,12 @@ var Wrapper = _styledComponents.default.div.withConfig({
 var List = _styledComponents.default.ul.withConfig({
   displayName: "stepper__List",
   componentId: "kuopc1-1"
-})(["display:flex;align-items:center;justify-content:center;flex-wrap:nowrap;height:", ";box-sizing:border-box;min-width:min-content;padding-right:40px;background-color:", ";margin:0;@media (max-width:", "){height:", ";}"], (0, _typography.pxToRem)(80), _colorsConfig.default.primary6, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.max), (0, _typography.pxToRem)(65));
+})(["display:flex;align-items:center;justify-content:center;height:", ";flex-wrap:nowrap;box-sizing:border-box;min-width:min-content;padding-right:40px;background-color:", ";margin:0;gap:", ";@media (min-width:", "){height:", ";gap:", ";}"], (0, _typography.pxToRem)(65), _colorsConfig.default.primary6, (0, _typography.pxToRem)(25), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(50));
 
 var ItemWrapper = _styledComponents.default.li.withConfig({
   displayName: "stepper__ItemWrapper",
   componentId: "kuopc1-2"
-})(["display:flex;align-items:center;gap:", ";@media (min-width:", "){gap:", ";}.k-Stepper__icon{margin-right:", ";}", " ", ""], (0, _typography.pxToRem)(25), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(10), function (props) {
+})(["display:flex;align-items:center;.k-Stepper__icon{margin-right:", ";}", " ", ""], (0, _typography.pxToRem)(10), function (props) {
   return props.state === 'progress' && (0, _styledComponents.css)(["color:", ";"], _colorsConfig.default.primary1);
 }, function (props) {
   return props.pointer && (0, _styledComponents.css)(["cursor:pointer;"]);

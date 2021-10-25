@@ -124,14 +124,9 @@ const FormWithImage = () => (
                 À quel type de partenariat pensez-vous ?
               </Field.Label>
 
-              <Field.Select
+              <Field.Input
                 name="mentor"
                 placeholder="Sélectionner le type de partenariat"
-                options={[
-                  { value: '1', label: 'Mentors #1' },
-                  { value: '2', label: 'Mentors #2' },
-                  { value: '3', label: 'Mentors #3' },
-                ]}
               />
             </Field>
           </Marger>
@@ -156,7 +151,7 @@ const FormWithImage = () => (
             </Field>
           </Marger>
 
-          <Button big fluid modifier="helium">
+          <Button size="big" fit="fluid" modifier="helium">
             Envoyer
           </Button>
 

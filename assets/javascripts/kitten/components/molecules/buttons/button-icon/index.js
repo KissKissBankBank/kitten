@@ -4,9 +4,7 @@ import { Button } from '../../../../components/molecules/buttons/button'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import styled from 'styled-components'
 
-const StyledButton = styled(({ tag, ...props }) => (
-  <Button {...props} as={tag} />
-))`
+const StyledButton = styled(Button)`
   svg,
   .k-ButtonIcon__svg {
     display: block;
@@ -29,36 +27,23 @@ const StyledButton = styled(({ tag, ...props }) => (
     height: ${pxToRem(8)};
   }
 
-  .k-ButtonIcon--withoutHover {
+  &.k-ButtonIcon--withoutHover {
     pointer-events: none;
   }
 `
 
-export const ButtonIcon = ({
-  className,
-  tag,
-  withoutHover,
-  verticalArrow,
-  size,
-  ...others
-}) => (
+export const ButtonIcon = ({ className, withoutHover, size, ...others }) => (
   <StyledButton
     className={classNames('k-ButtonIcon', className, `k-ButtonIcon--${size}`, {
       'k-ButtonIcon--withoutHover': withoutHover,
-      'k-ButtonIcon--verticalArrow': verticalArrow,
     })}
     size={size}
-    tag={tag}
     {...others}
-    icon
+    fit="icon"
   />
 )
 
 ButtonIcon.defaultProps = {
-  tag: 'button',
   size: 'regular',
-  modifier: 'hydrogen',
   withoutHover: false,
-  verticalArrow: false,
-  rounded: false,
 }

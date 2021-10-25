@@ -23,26 +23,24 @@ const List = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
+  height: ${pxToRem(65)};
   flex-wrap: nowrap;
-  height: ${pxToRem(80)};
   box-sizing: border-box;
   min-width: min-content;
   padding-right: 40px;
   background-color: ${COLORS.primary6};
   margin: 0;
-  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-    height: ${pxToRem(65)};
+  gap: ${pxToRem(25)};
+
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    height: ${pxToRem(80)};
+    gap: ${pxToRem(50)};
   }
 `
 
 const ItemWrapper = styled.li`
   display: flex;
   align-items: center;
-  gap: ${pxToRem(25)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    gap: ${pxToRem(50)};
-  }
 
   .k-Stepper__icon {
     margin-right: ${pxToRem(10)};

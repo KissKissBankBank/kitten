@@ -1,92 +1,91 @@
 import React from 'react'
 import { Text } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
-const argTypes = {
-  color: {
-    name: 'color',
-    description: ' Available colors:',
-    options: ['font1', 'font2', 'primary1', 'background1', 'error', 'valid'],
-    control: { type: 'select' },
-  },
-  cssColor: {
-    name: 'cssColor',
-    description: 'Specify a color (use a CSS color string).',
-    control: { type: 'color' },
-  },
-  decoration: {
-    name: 'decoration',
-    description: 'If `tag="a"`, show underline.',
-    options: ['underline', 'none'],
-    control: { type: 'select' },
-  },
-  fontStyle: {
-    name: 'fontStyle',
-    description: 'Available font styles (`normal` or `italic`):',
-    options: ['normal', 'italic'],
-    control: { type: 'select' },
-  },
-  transform: {
-    name: 'transform',
-    description: '`text-transform: uppercase`',
-    options: ['uppercase'],
-    control: { type: 'select' },
-  },
-  lineHeight: {
-    name: 'lineHeight',
-    description: '`line-height: normal` correspond approximately to 1.2.',
-    options: ['normal', '1', '1.3'],
-    control: { type: 'select' },
-  },
-  size: {
-    name: 'size',
-    description: 'Available sizes:',
-    options: ['giant', 'huge', 'big', 'default', 'tiny', 'micro', 'nano'],
-    control: { type: 'select' },
-  },
-  weight: {
-    name: 'weight',
-    description: 'Available font weights (`light`, `regular` or `italic`):',
-    options: ['light', 'regular', 'bold'],
-    control: { type: 'select' },
-  },
-  text: {
-    control: { type: 'text' },
-  },
-  setting: {
-    name: 'setting',
-    description:
-      '`font-feature-settings: "tnum"` enables tabular (monospace) numerals.',
-    options: ['tnum'],
-    control: { type: 'select' },
-  },
-}
-
-const args = {
-  className: null,
-  color: null,
-  cssColor: null,
-  decoration: null,
-  lineHeight: null,
-  setting: null,
-  size: null,
-  fontStyle: null,
-  tag: 'span',
-  transform: null,
-  weight: 'light',
-  text: 'Lorem ipsum dolor sit amet…',
-}
-
-export const Default = ({ text, ...props }) => <Text {...props}>{text}</Text>
-
-Default.args = args
-Default.argTypes = argTypes
+export const Default = props => <Text {...props} />
 
 export default {
   component: Text,
-  title: 'Typography/Text',
+  title: 'Atoms/Typography/Text',
   parameters: {
-    component: Text,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Text" />,
+    },
   },
-  args,
-  argTypes,
+  decorators: [
+    story => <div className="story-Container story-Grid">{story()}</div>,
+  ],
+  args: {
+    color: null,
+    cssColor: null,
+    decoration: null,
+    lineHeight: null,
+    setting: null,
+    size: null,
+    fontStyle: null,
+    tag: 'span',
+    transform: null,
+    weight: 'light',
+    children: 'Lorem ipsum dolor sit amet…',
+  },
+  argTypes: {
+    color: {
+      name: 'color',
+      description: 'Sets the color, from a list.',
+      options: ['font1', 'font2', 'primary1', 'background1', 'error', 'valid'],
+      control: 'select',
+    },
+    cssColor: {
+      name: 'cssColor',
+      description: 'Sets a color from a CSS color string.',
+      control: 'color',
+    },
+    decoration: {
+      name: 'decoration',
+      description: 'Adds an underline style.',
+      options: ['underline', 'none'],
+      control: 'select',
+    },
+    fontStyle: {
+      name: 'fontStyle',
+      description: 'Adds an italic style.',
+      options: ['normal', 'italic'],
+      control: 'select',
+    },
+    transform: {
+      name: 'transform',
+      description: 'Adds an uppercase style.',
+      options: ['uppercase'],
+      control: 'select',
+    },
+    lineHeight: {
+      name: 'lineHeight',
+      description: 'Sets the line-height (`normal` is ~1.2em).',
+      options: ['normal', '1', '1.3'],
+      control: 'select',
+    },
+    size: {
+      name: 'size',
+      description: 'Sets the size from a list.',
+      options: ['giant', 'huge', 'big', 'default', 'tiny', 'micro', 'nano'],
+      control: 'select',
+    },
+    weight: {
+      name: 'weight',
+      description: 'Sets a weight.',
+      options: ['light', 'regular', 'bold'],
+      control: 'select',
+    },
+    children: {
+      name: 'children',
+      control: 'text',
+    },
+    setting: {
+      name: 'setting',
+      description:
+        '`font-feature-settings: "tnum"` enables tabular (monospace) numerals.',
+      options: [null, 'tnum'],
+      control: 'select',
+    },
+  },
 }

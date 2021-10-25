@@ -1,64 +1,65 @@
 import React from 'react'
-import { text, boolean } from '@storybook/addon-knobs'
 import { TeamCard } from './index'
-import { Container, Grid, GridCol, Marger } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: TeamCard,
   title: 'Molecules/Cards/TeamCard',
   parameters: {
-    component: TeamCard,
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="TeamCard" />,
+    },
+  },
+  decorators: [
+    story => <div className="story-Container story-Grid">{story()}</div>,
+  ],
+  argTypes: {
+    imageSrc: { name: 'TeamCard.Image: src', control: 'text' },
+    imageTitle: { name: 'TeamCard.Image: title', control: 'text' },
+    titleChildren: { name: 'TeamCard.Title: children', control: 'text' },
+    titleSubtitle: { name: 'TeamCard.Title: subtitle', control: 'text' },
+    iconsEmail: { name: 'TeamCard.Icons: email', control: 'text' },
+    iconsPhoneNumber: { name: 'TeamCard.Icons: phonenumber', control: 'text' },
+    iconsLinks: { name: 'TeamCard.Icons: links', control: 'object' },
+  },
+  args: {
+    imageSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    imageTitle: 'Title',
+    titleChildren: 'Lorem Ipsum',
+    titleSubtitle: 'Consectetur',
+    iconsEmail: 'example@kisskissbankbank.com',
+    iconsPhoneNumber: '06 00 00 00 00',
+    iconsLinks: [
+      {
+        name: 'linkedin',
+        href: 'https://www.linkedin.com',
+      },
+      {
+        name: 'twitter',
+        href: 'https://www.twitter.com',
+      },
+    ],
   },
 }
 
-export const Default = () => {
-  const useLegacy = boolean('Use Legacy socialLink', false)
-
-  return (
-    <Container>
-      <Grid>
-        <GridCol col="3">
-          <Marger top="5" bottom="5">
-            <TeamCard>
-              <TeamCard.Image
-                src={text(
-                  'Image url',
-                  'http://via.placeholder.com/500x500/caf4fe/caf4fe',
-                )}
-                title={text('Image title', 'Title')}
-              />
-              <TeamCard.Title
-                children={text('children', 'Lorem Ipsum')}
-                subTitle={text('Subtitle', 'Consectetur')}
-              />
-              <TeamCard.Icons
-                email={text('Email', 'example@kisskissbankbank.com')}
-                phoneNumber={text('Phone number', '06 00 00 00 00')}
-                links={
-                  !useLegacy
-                    ? [
-                        {
-                          name: 'linkedin',
-                          href: text(
-                            'Linkedin link',
-                            'https://www.linkedin.com',
-                          ),
-                        },
-                        {
-                          name: 'twitter',
-                          href: text('Twitter link', 'https://www.twitter.com'),
-                        },
-                      ]
-                    : []
-                }
-                socialLink={
-                  useLegacy ? 'https://www.linkedin.com/isLegacyLink' : null
-                }
-              />
-            </TeamCard>
-          </Marger>
-        </GridCol>
-      </Grid>
-    </Container>
-  )
-}
+export const Default = ({
+  imageSrc,
+  imageTitle,
+  titleChildren,
+  titleSubtitle,
+  iconsEmail,
+  iconsPhoneNumber,
+  iconsLinks,
+}) => (
+  <div aria-label="This card needs a wrapper">
+    <TeamCard>
+      <TeamCard.Image src={imageSrc} title={imageTitle} />
+      <TeamCard.Title children={titleChildren} subTitle={titleSubtitle} />
+      <TeamCard.Icons
+        email={iconsEmail}
+        phoneNumber={iconsPhoneNumber}
+        links={iconsLinks}
+      />
+    </TeamCard>
+  </div>
+)

@@ -1,73 +1,107 @@
 import React, { useState } from 'react'
-import { text, object, boolean } from '@storybook/addon-knobs'
 import { Comment } from './index'
-import { CheckedCircleIcon, Grid, GridCol } from '../../../..'
+import { CheckedCircleIcon } from '../../../..'
+import { action } from '@storybook/addon-actions'
 
-const CommentExample = props => {
+export const Default = ({ showAvatarBadge, showBottomNotes, ...args }) => {
   const [hasLiked, setHasLiked] = useState(false)
-  const [likeButtonChildren, setLikeButtonChildren] = useState('100')
 
   const handleClick = () => {
+    action('likeButton onClick')
     setHasLiked(!hasLiked)
-    setLikeButtonChildren(hasLiked ? '100' : '101')
     document.activeElement.blur()
   }
 
   return (
     <Comment
-      {...props}
+      {...args}
       likeButtonProps={{
         hasLiked,
-        children: likeButtonChildren,
+        children: hasLiked ? '101' : '100',
         onClick: handleClick,
       }}
+      avatarBadge={
+        showAvatarBadge && (
+          <span aria-label="Owner" role="aside">
+            <CheckedCircleIcon
+              width="25"
+              height="25"
+              circleColor="#19b4fa"
+              checkedColor="#fff"
+              aria-hidden="true"
+            />
+          </span>
+        )
+      }
+      bottomNotes={
+        showBottomNotes && (
+          <div>
+            <span>Bottom note #1</span>
+            <span>Bottom note #2</span>
+            <span>Bottom note #3</span>
+          </div>
+        )
+      }
     />
   )
 }
 
-export const Default = () => (
-  <CommentExample
-    avatarBadge={
-      boolean('Avatar badge', false) && (
-        <span aria-label="Owner" role="aside">
-          <CheckedCircleIcon
-            width="25"
-            height="25"
-            circleColor="#19b4fa"
-            checkedColor="#fff"
-            aria-hidden="true"
-          />
-        </span>
-      )
-    }
-    avatarImgProps={object('Src/Alt', {
-      src: 'https://placehold.it/80x80/caf4fe/caf4fe',
-      alt: '',
-    })}
-    commentDate={text('Comment date', '2 min')}
-    text={text(
-      'Text',
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
-    )}
-    ownerName={text('Owner name', 'Lorem ipsum')}
-    bottomNotes={
-      boolean('With bottom notes?', false) && (
-        <div>
-          <span>Bottom note #1</span>
-          <span>Bottom note #2</span>
-          <span>Bottom note #3</span>
-        </div>
-      )
-    }
-  />
-)
-
 Default.decorators = [
-  Story => (
-    <Grid style={{ marginTop: '5em' }}>
-      <GridCol offset="1" col="8">
-        <Story />
-      </GridCol>
-    </Grid>
+  story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      {story()}
+    </div>
   ),
 ]
+
+Default.args = {
+  text:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
+  avatarImgProps: {
+    src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    alt: '',
+  },
+  commentDate: '2 min',
+  ownerName: 'Lorem ipsum',
+  showBottomNotes: false,
+  showAvatarBadge: false,
+}
+
+Default.argTypes = {
+  text: {
+    name: 'text',
+    control: 'text',
+  },
+  avatarImgProps: {
+    name: 'avatarImgProps',
+    control: 'object',
+  },
+  commentDate: {
+    name: 'commentDate',
+    control: 'text',
+  },
+  ownerName: {
+    name: 'ownerName',
+    control: 'text',
+  },
+  showBottomNotes: {
+    name: 'showBottomNotes (story prop)',
+    control: 'boolean',
+  },
+  showAvatarBadge: {
+    name: 'showAvatarBadge (story prop)',
+    control: 'boolean',
+  },
+  bottomNotes: {
+    name: 'bottomNotes',
+    control: { type: null },
+  },
+  avatarBadge: {
+    name: 'avatarBadge',
+    control: { type: null },
+  },
+  likeButtonProps: {
+    name: 'likeButtonProps',
+    control: { type: null },
+  },
+}

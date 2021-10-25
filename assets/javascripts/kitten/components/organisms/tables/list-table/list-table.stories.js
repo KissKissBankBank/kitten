@@ -1,31 +1,42 @@
-import React, { useState } from 'react'
-import styled, { css, createGlobalStyle } from 'styled-components'
-import { select } from '@storybook/addon-knobs'
+import React from 'react'
+import { createGlobalStyle } from 'styled-components'
 import { ListTable } from './index'
 import {
-  Marger,
-  Container,
   ScreenConfig,
   VisuallyHidden,
   pxToRem,
-  stepToRem,
-  ArrowIcon,
   COLORS,
   TYPOGRAPHY,
-  CONTAINER_PADDING_THIN,
-  CONTAINER_PADDING,
   StatusWithBullet,
-} from '../../../..'
+  Text,
+  Checkbox,
+  DropdownSelect,
+} from 'kitten'
 
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      {children}
-    </Marger>
-  </Container>
-)
+import { ToggleableStory } from './stories/toggleable'
+
+export default {
+  title: 'Organisms/Tables/ListTable',
+  component: ListTable,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="ListTable" />,
+    },
+  },
+  decorators: [story => <div className="story-Container">{story()}</div>],
+}
 
 const ListTableStyles = createGlobalStyle`
+  #CustomListTable {
+    ${TYPOGRAPHY.fontStyles.light}
+
+    .k-ListTable__HeaderList {
+      height: ${pxToRem(50)};
+      background-color: ${COLORS.background3};
+      color: ${COLORS.font1};
+    }
+  }
+
   .customCol_1 {
     text-align: center;
 
@@ -76,7 +87,7 @@ const ListTableStyles = createGlobalStyle`
   }
   .customCol_5 {
     @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-      display: none;
+      flex-basis: 20%;
     }
     @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
       flex-basis: 20%;
@@ -104,152 +115,6 @@ const ListTableStyles = createGlobalStyle`
       flex-basis: 12%;
     }
   }
-  .customCol_8 {
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      display: none;
-    }
-  }
-`
-
-// Toggleable
-const linkclassNames = [
-  'k-u-color-primary1',
-  'k-u-decoration-none',
-  'k-u-size-tiny k-u-weight-regular',
-].join(' ')
-
-const defaultHeaderColWidth = {
-  default: '100%',
-  fromXs: '50%',
-  fromS: '25%',
-  fromL: '20%',
-}
-const defaultColWidth = {
-  default: '100%',
-  fromXs: '50%',
-  fromM: '25%',
-  fromL: '20%',
-}
-const defaultActionColWidth = { default: '100%', fromM: '50%', fromL: '20%' }
-
-const HeaderRow = styled(ListTable.Header)`
-  background-color: ${COLORS.background1};
-  color: ${COLORS.font1};
-  border-bottom: solid ${pxToRem(2)} ${COLORS.line1};
-  padding-left: ${pxToRem(CONTAINER_PADDING_THIN / 2)};
-  padding-right: ${pxToRem(CONTAINER_PADDING_THIN / 2)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    padding-left: ${pxToRem(CONTAINER_PADDING / 2)};
-    padding-right: ${pxToRem(CONTAINER_PADDING / 2)};
-  }
-
-  ul {
-    padding: 0;
-  }
-`
-
-const Col = styled(({ align, width, ...props }) => (
-  <ListTable.Col {...props} />
-))`
-  min-height: ${pxToRem(90)};
-  flex-basis: auto;
-  flex-grow: 1;
-  width: ${({ width }) => (width ? width.default : '50%')};
-  font-size: ${stepToRem(-1)};
-
-  padding-left: ${pxToRem(CONTAINER_PADDING_THIN / 2)} !important;
-  padding-right: ${pxToRem(CONTAINER_PADDING_THIN / 2)} !important;
-
-  @media (min-width: ${pxToRem(ScreenConfig.XS.min)}) {
-    width: ${({ width }) => (width ? width.fromXs : '50%')};
-  }
-
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    width: ${({ width }) => (width ? width.fromS : '20%')};
-
-    ${({ align }) =>
-      align === 'right' &&
-      css`
-        justify-content: flex-end;
-      `}
-  }
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    width: ${({ width }) => (width ? width.fromM : '20%')};
-    padding-left: ${pxToRem(CONTAINER_PADDING / 2)} !important;
-    padding-right: ${pxToRem(CONTAINER_PADDING / 2)} !important;
-  }
-
-  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    width: ${({ width }) => (width ? width.fromL : '20%')};
-  }
-
-  .nowrap {
-    white-space: nowrap;
-  }
-`
-
-const Row = styled(ListTable.Row)`
-  background-color: ${COLORS.background3};
-  padding-left: ${pxToRem(CONTAINER_PADDING_THIN / 2)};
-  padding-right: ${pxToRem(CONTAINER_PADDING_THIN / 2)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    padding-left: ${pxToRem(CONTAINER_PADDING / 2)};
-    padding-right: ${pxToRem(CONTAINER_PADDING / 2)};
-  }
-
-  &:nth-of-type(even) {
-    background-color: ${COLORS.background2};
-  }
-
-  &:last {
-    border-bottom: 0;
-  }
-
-  ul {
-    padding: 0;
-  }
-`
-
-const ToggleButton = styled.button`
-  border: 0;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  ${TYPOGRAPHY.fontStyles.regular}
-  font-size: ${stepToRem(-1)};
-
-  svg {
-    margin-left: ${pxToRem(5)};
-  }
-`
-
-const CellWithLabelValue = styled(({ label, value, thead, ...props }) => (
-  <p {...props}>
-    <strong>{value}</strong>
-    <br />
-    <span>{label}</span>
-  </p>
-))`
-  strong {
-    font-size: ${({ thead }) => (thead ? stepToRem(2) : stepToRem(0))};
-  }
-
-  span {
-    font-size: ${stepToRem(-1)};
-  }
-`
-
-const ToggleableTable = styled(ListTable)`
-  border: solid ${pxToRem(2)} ${COLORS.line1};
-  border-bottom: 0;
-
-  ul {
-    height: auto;
-    flex-wrap: wrap;
-  }
 `
 
 export const Default = () => (
@@ -257,39 +122,62 @@ export const Default = () => (
     <ListTableStyles />
     <ListTable id="CustomListTable">
       <ListTable.Header
-        className="customHeaderClass"
+        className="customHeaderClass k-u-weight-regular"
         listProps={{ className: 'customListClass' }}
       >
         <ListTable.Col className="customCol_1">
           <VisuallyHidden>Sélection</VisuallyHidden>
-          <input
-            type="checkbox"
-            aria-label="Sélectionner toutes les contributions de la liste"
-          />
+          <Checkbox aria-label="Sélectionner toutes les contributions de la liste" />
         </ListTable.Col>
 
         <ListTable.Col className="customCol_2">
-          <span className="k-u-hidden@s-down k-u-hidden@m">
-            Date contribution
-          </span>
-          <span className="k-u-hidden@l-up">Contributeur</span>
+          <Text
+            weight="regular"
+            color="font1"
+            size="tiny"
+            className="k-u-hidden@s-down k-u-hidden@m"
+          >
+            Date
+          </Text>
+          <Text
+            weight="regular"
+            color="font1"
+            size="tiny"
+            className="k-u-hidden@l-up"
+          >
+            Contributeur
+          </Text>
         </ListTable.Col>
 
-        <ListTable.Col className="customCol_3">Contributeur</ListTable.Col>
+        <ListTable.Col className="customCol_3">
+          <Text weight="regular" color="font1" size="tiny">
+            Contributeur
+          </Text>
+        </ListTable.Col>
 
-        <ListTable.Col className="customCol_4">Montant</ListTable.Col>
+        <ListTable.Col className="customCol_4">
+          <Text weight="regular" color="font1" size="tiny">
+            Montant
+          </Text>
+        </ListTable.Col>
 
         <ListTable.Col className="customCol_5">
-          Statut de paiement
+          <Text weight="regular" color="font1" size="tiny">
+            Statut
+          </Text>
         </ListTable.Col>
 
-        <ListTable.Col className="customCol_6">Mode de livraison</ListTable.Col>
+        <ListTable.Col className="customCol_6">
+          <Text weight="regular" color="font1" size="tiny">
+            Mode de livraison
+          </Text>
+        </ListTable.Col>
 
         <ListTable.Col className="customCol_7">
-          Statut de livraison
+          <Text weight="regular" color="font1" size="tiny">
+            Statut livraison
+          </Text>
         </ListTable.Col>
-
-        <ListTable.Col className="customCol_8"></ListTable.Col>
       </ListTable.Header>
 
       <ListTable.Body>
@@ -299,60 +187,72 @@ export const Default = () => (
               <h2>Contribution #888888 par Prénom NOM le 12 septembre 2019</h2>
               <button>Voir plus d'informations sur cette contribution</button>
             </VisuallyHidden>
-            <input
-              type="checkbox"
-              aria-label="Sélectionner toutes les contributions de la liste"
-            />
+            <Checkbox aria-label="Sélectionner toutes les contributions de la liste" />
           </ListTable.Col>
 
           <ListTable.Col className="customCol_2">
-            <p>
-              <strong>
+            <div>
+              <Text size="tiny" weight="regular">
                 <time dateTime="2019-09-12">12/09/2019</time>
-              </strong>
+              </Text>
               <br />
-              <span className="k-u-hidden@m-down">#88888888</span>
-              <span className="k-u-hidden@l-up">Prénom NOM</span>
-            </p>
-            <a
-              href="#"
-              className="lien_message k-u-hidden@l-up"
-              title="2 messages"
-            >
-              2
-            </a>
+              <Text size="micro" className="k-u-hidden@m-down" lineHeight="1">
+                #88888888
+              </Text>
+              <Text size="micro" className="k-u-hidden@l-up" lineHeight="1">
+                Prénom NOM
+              </Text>
+              <br />
+              <Text
+                size="micro"
+                weight="regular"
+                lineHeight="1"
+                as="a"
+                href="#"
+                className="k-u-link k-u-link-primary1"
+              >
+                Détails
+              </Text>
+            </div>
           </ListTable.Col>
 
           <ListTable.Col className="customCol_3">
-            <p>
-              <strong>Prénom NOM</strong>
+            <div>
+              <Text weight="bold">Prénom Nom</Text>
               <br />
-              Prenom-Nom
-            </p>
-            <a
-              href="#"
-              className="lien_message k-u-hidden@s-down k-u-hidden@m"
-              title="2 messages"
-            >
-              2
-            </a>
+              <Text size="micro" weight="light">
+                Prenom-Nom
+              </Text>
+            </div>
           </ListTable.Col>
 
-          <ListTable.Col className="customCol_4">72&nbsp;€</ListTable.Col>
+          <ListTable.Col className="customCol_4">
+            <Text size="tiny" weight="regular">
+              72&nbsp;€
+            </Text>
+          </ListTable.Col>
 
           <ListTable.Col className="customCol_5">
             <StatusWithBullet statusType="success">Valid</StatusWithBullet>
           </ListTable.Col>
 
-          <ListTable.Col className="customCol_6">Livraison</ListTable.Col>
-
-          <ListTable.Col className="customCol_7">
-            <select name="" id="">
-              <option value="">À expédier</option>
-            </select>
+          <ListTable.Col className="customCol_6">
+            <Text size="tiny" weight="regular">
+              Livraison
+            </Text>
           </ListTable.Col>
 
-          <ListTable.Col className="customCol_8">&gt;</ListTable.Col>
+          <ListTable.Col className="customCol_7">
+            <DropdownSelect
+              id="DropdownSelect_1"
+              hideLabel
+              labelText="Sélectionnez le statut de livraison"
+              options={[
+                { label: 'À expédier', value: 1 },
+                { label: 'Expédié', value: 2 },
+              ]}
+            />
+          </ListTable.Col>
         </ListTable.Row>
 
         <ListTable.Row
@@ -364,233 +264,78 @@ export const Default = () => (
               <h2>Contribution #44654 par Prénom NOM le 12 septembre 2019</h2>
               <button>Voir plus d'informations sur cette contribution</button>
             </VisuallyHidden>
-            <input
-              type="checkbox"
-              aria-label="Sélectionner toutes les contributions de la liste"
-            />
+            <Checkbox aria-label="Sélectionner toutes les contributions de la liste" />
           </ListTable.Col>
 
           <ListTable.Col className="customCol_2">
-            <p>
-              <strong>
+            <div>
+              <Text size="tiny" weight="regular">
                 <time dateTime="2019-09-12">12/09/2019</time>
-              </strong>
+              </Text>
               <br />
-              <span className="k-u-hidden@m-down">#44654</span>
-              <span className="k-u-hidden@l-up">Prénom NOM</span>
-            </p>
-            <a
-              href="#"
-              className="lien_message k-u-hidden@l-up"
-              title="2 messages"
-            >
-              2
-            </a>
+              <Text size="micro" className="k-u-hidden@m-down" lineHeight="1">
+                #44654
+              </Text>
+              <Text size="micro" className="k-u-hidden@l-up" lineHeight="1">
+                Prénom NOM
+              </Text>
+              <br />
+              <Text
+                size="micro"
+                weight="regular"
+                lineHeight="1"
+                as="a"
+                href="#"
+                className="k-u-link k-u-link-primary1"
+              >
+                Détails
+              </Text>
+            </div>
           </ListTable.Col>
 
           <ListTable.Col className="customCol_3">
-            <p>
-              <strong>Prénom NOM</strong>
+            <div>
+              <Text weight="bold">Prénom Nom</Text>
               <br />
-              Prenom-Nom
-            </p>
-            <a
-              href="#"
-              className="lien_message k-u-hidden@s-down k-u-hidden@m"
-              title="2 messages"
-            >
-              2
-            </a>
+              <Text size="micro">Prenom-Nom</Text>
+            </div>
           </ListTable.Col>
 
-          <ListTable.Col className="customCol_4">72&nbsp;€</ListTable.Col>
+          <ListTable.Col className="customCol_4">
+            <Text size="tiny" weight="regular">
+              72&nbsp;€
+            </Text>
+          </ListTable.Col>
 
           <ListTable.Col className="customCol_5">
             <StatusWithBullet statusType="warning">Invalid</StatusWithBullet>
           </ListTable.Col>
 
-          <ListTable.Col className="customCol_6">Livraison</ListTable.Col>
-
-          <ListTable.Col className="customCol_7">
-            <select name="" id="">
-              <option value="">À expédier</option>
-            </select>
+          <ListTable.Col className="customCol_6">
+            <Text size="tiny" weight="regular">
+              Livraison
+            </Text>
           </ListTable.Col>
 
-          <ListTable.Col className="customCol_8">&gt;</ListTable.Col>
+          <ListTable.Col className="customCol_7">
+            <DropdownSelect
+              id="DropdownSelect_2"
+              hideLabel
+              labelText="Sélectionnez le statut de livraison"
+              options={[
+                { label: 'À expédier', value: 1 },
+                { label: 'Expédié', value: 2 },
+              ]}
+            />
+          </ListTable.Col>
         </ListTable.Row>
       </ListTable.Body>
     </ListTable>
   </>
 )
 
-export const Toggleable = () => {
-  const [displayed, setDisplayState] = useState(false)
-  return (
-    <StoryContainer>
-      <ToggleableTable id="CustomToggleableTable">
-        <HeaderRow
-          className="customHeaderClass"
-          listProps={{ className: 'customListClass' }}
-        >
-          <Col width={defaultHeaderColWidth}>
-            <CellWithLabelValue thead label="Projets" value="4" />
-          </Col>
-          <Col width={defaultHeaderColWidth}>
-            <CellWithLabelValue thead label="Montant investi" value="1 000 €" />
-          </Col>
-          <Col width={defaultHeaderColWidth}>
-            <CellWithLabelValue thead label="TRI cible" value="3 %" />
-          </Col>
-          <Col
-            align="right"
-            width={{
-              default: '100%',
-              fromXs: '50%',
-              fromS: '25%',
-              fromL: '40%',
-            }}
-          >
-            <ToggleButton
-              type="button"
-              onClick={() => setDisplayState(!displayed)}
-              aria-expanded={displayed}
-              aria-controls="toggleableListTable"
-            >
-              Voir les détails
-              <ArrowIcon direction={displayed ? 'top' : 'bottom'} />
-            </ToggleButton>
-          </Col>
-        </HeaderRow>
-        {displayed && (
-          <ListTable.Body id="toggleableListTable">
-            <Row>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Photosol Invest 2"
-                  value="Centrale solaire Parc du Petit Prince"
-                />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="Montant investi" value="200 €" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="TRI cible" value="3 %" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Horizon d'investissement"
-                  value="5 ans"
-                />
-              </Col>
-              <Col width={defaultActionColWidth}>
-                <p className="nowrap">
-                  <a className={linkclassNames} href="#">
-                    Page projet
-                  </a>
-                  <br />
-                  <a className={linkclassNames} href="#">
-                    Attestation de propriété
-                  </a>
-                </p>
-              </Col>
-            </Row>
-            <Row>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Urba 133"
-                  value="Centrale solaire Urbasolar Istres"
-                />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="Montant investi" value="300 €" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="TRI cible" value="3 %" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Horizon d'investissement"
-                  value="5 ans"
-                />
-              </Col>
-              <Col width={defaultActionColWidth}>
-                <p className="nowrap">
-                  <a className={linkclassNames} href="#">
-                    Page projet
-                  </a>
-                  <br />
-                  <a className={linkclassNames} href="#">
-                    Attestation de propriété
-                  </a>
-                </p>
-              </Col>
-            </Row>
-            <Row>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Photosol Invest 2"
-                  value="Centrale solaire Parc du Petit Prince"
-                />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="Montant investi" value="200 €" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="TRI cible" value="3 %" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Horizon d'investissement"
-                  value="5 ans"
-                />
-              </Col>
-              <Col width={defaultActionColWidth}>
-                <p className="nowrap">
-                  <a className={linkclassNames} href="#">
-                    Page projet
-                  </a>
-                  <br />
-                  <a className={linkclassNames} href="#">
-                    Attestation de propriété
-                  </a>
-                </p>
-              </Col>
-            </Row>
-            <Row>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Urba 133"
-                  value="Centrale solaire Urbasolar Istres"
-                />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="Montant investi" value="300 €" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue label="TRI cible" value="3 %" />
-              </Col>
-              <Col width={defaultColWidth}>
-                <CellWithLabelValue
-                  label="Horizon d'investissement"
-                  value="5 ans"
-                />
-              </Col>
-              <Col width={defaultActionColWidth}>
-                <p className="nowrap">
-                  <a className={linkclassNames} href="#">
-                    Page projet
-                  </a>
-                  <br />
-                  <a className={linkclassNames} href="#">
-                    Attestation de propriété
-                  </a>
-                </p>
-              </Col>
-            </Row>
-          </ListTable.Body>
-        )}
-      </ToggleableTable>
-    </StoryContainer>
-  )
-}
+export const Toggleable = () => <ToggleableStory />
+
+Toggleable.decorators = [
+  story => <div className="story-Container">{story()}</div>,
+]

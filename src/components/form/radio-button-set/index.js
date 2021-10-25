@@ -91,7 +91,7 @@ RadioButtonSet.defaultProps = {
     id: 'myRadioButton' // Replace by a real value
 
   }],
-  variant: 'andromeda',
+  variant: 'orion',
   design: 'disc',
   disabled: false
 };

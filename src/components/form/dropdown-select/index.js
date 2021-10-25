@@ -19,15 +19,15 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _downshift = require("downshift");
 
-var _label = require("../../../components/form/label");
+var _label = require("../label");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _warningCircleIcon = require("../../../components/graphics/icons/warning-circle-icon");
+var _warningCircleIcon = require("../../graphics/icons/warning-circle-icon");
 
-var _checkedCircleIcon = require("../../../components/graphics/icons/checked-circle-icon");
+var _checkedCircleIcon = require("../../graphics/icons/checked-circle-icon");
 
-var _arrowIcon = require("../../../components/graphics/icons/arrow-icon");
+var _arrowIcon = require("../../graphics/icons/arrow-icon");
 
 var _find = _interopRequireDefault(require("lodash/fp/find"));
 
@@ -64,7 +64,12 @@ var DropdownSelect = function DropdownSelect(_ref) {
       openOnLoad = props.openOnLoad,
       menuZIndex = props.menuZIndex,
       className = props.className,
-      value = props.value;
+      value = props.value,
+      controlled = props.controlled,
+      modifier = props.modifier,
+      direction = props.direction,
+      arrowPosition = props.arrowPosition,
+      labelProps = props.labelProps;
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,
@@ -103,7 +108,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
   }();
 
   var initialSelectedItem = (0, _find.default)(['value', defaultSelectedValue])(flattenedOptions);
-  var selectedItemByValue = (0, _find.default)(['value', value])(flattenedOptions);
+  var selectedItemByValue = (0, _find.default)(['value', value])(flattenedOptions) || null;
 
   var onIsOpenChange = function onIsOpenChange(changes) {
     if (changes.isOpen) return onMenuOpen({
@@ -127,7 +132,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
     onSelectedItemChange: onSelectedItemChange,
     onIsOpenChange: onIsOpenChange,
     initialIsOpen: openOnLoad
-  }, selectedItemByValue && {
+  }, controlled && {
     selectedItem: selectedItemByValue
   })),
       isOpen = _useSelect.isOpen,
@@ -142,7 +147,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
     getLabelProps && labelPropsGetter(getLabelProps);
   }, [getLabelProps]);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledDropdown, {
-    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), className, {
+    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(modifier), "k-Form-Dropdown--".concat(direction), "k-Form-Dropdown--".concat(size), "k-Form-Dropdown--arrowPosition-".concat(arrowPosition), className, {
       'k-Form-Dropdown--isOpen': isOpen,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
@@ -151,8 +156,8 @@ var DropdownSelect = function DropdownSelect(_ref) {
     style: {
       '--menu-z-index': menuZIndex
     }
-  }, /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-Form-Dropdown__label', 'k-u-margin-bottom-single', {
+  }, /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({}, labelProps, {
+    className: (0, _classnames.default)('k-Form-Dropdown__label', 'k-u-margin-bottom-single', labelProps === null || labelProps === void 0 ? void 0 : labelProps.className, {
       'k-Form-Dropdown__label--isHidden': hideLabel
     })
   }, getLabelProps()), labelText), /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
@@ -200,10 +205,11 @@ exports.DropdownSelect = DropdownSelect;
 DropdownSelect.defaultProps = {
   combobox: false,
   hideLabel: false,
+  controlled: false,
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
-  variant: 'andromeda',
+  variant: 'orion',
   size: 'normal',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
@@ -217,18 +223,22 @@ DropdownSelect.defaultProps = {
   onMenuOpen: function onMenuOpen() {},
   openOnLoad: false,
   uniqLabelOnSearch: false,
-  menuZIndex: 1000
+  menuZIndex: 1000,
+  modifier: 'hydrogen',
+  direction: 'down',
+  arrowPosition: 'left'
 };
 DropdownSelect.propTypes = {
   id: _propTypes.default.string.isRequired,
   labelText: _propTypes.default.string.isRequired,
   combobox: _propTypes.default.bool,
   hideLabel: _propTypes.default.bool,
+  controlled: _propTypes.default.bool,
   options: _propTypes.default.arrayOf(_propTypes.default.object),
   placeholder: _propTypes.default.string,
   labelPropsGetter: _propTypes.default.func,
   variant: _propTypes.default.oneOf(['andromeda', 'orion']),
-  size: _propTypes.default.oneOf(['tiny', 'normal', 'big', 'huge', 'giant']),
+  size: _propTypes.default.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
   a11yStatusError: _propTypes.default.string,
   a11yStatusValid: _propTypes.default.string,
   a11ySelectionMessageDisplayer: _propTypes.default.func,
@@ -239,5 +249,8 @@ DropdownSelect.propTypes = {
   onMenuOpen: _propTypes.default.func,
   openOnLoad: _propTypes.default.bool,
   uniqLabelOnSearch: _propTypes.default.bool,
-  menuZIndex: _propTypes.default.number
+  menuZIndex: _propTypes.default.number,
+  modifier: _propTypes.default.oneOf(['hydrogen', 'nitrogen', 'boron']),
+  direction: _propTypes.default.oneOf(['up', 'down']),
+  arrowPosition: _propTypes.default.oneOf(['left', 'right'])
 };

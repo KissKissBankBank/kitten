@@ -1,107 +1,132 @@
 import React from 'react'
-import { text, number, color, array } from '@storybook/addon-knobs'
 import { NavTabCarousel } from './index'
-import { Marger, Container, Grid, GridCol, COLORS } from '../../../..'
-
-const StoryGrid = ({ children }) => (
-  <Container>
-    <Grid>
-      <GridCol offset="2" col="8">
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
-  </Container>
-)
-
-const links = [
-  'http://www.google.com',
-  'http://www.foo.bar',
-  'http://www.bar.foo',
-]
+import { COLORS } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Molecules/Carousels/NavTabCarousel',
   component: NavTabCarousel,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={[
+            'index.js',
+            'components/next.js',
+            'components/pagination.js',
+            'components/prev.js',
+            'components/styled-components.js',
+          ]}
+          importString="NavTabCarousel"
+        />
+      ),
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  argTypes: {
+    prevHoverColor: { control: 'color' },
+    prevChildren: { control: 'text' },
+    nextHoverColor: { control: 'color' },
+    nextChildren: { control: 'text' },
+    paginationActiveColor: { control: 'color' },
+    paginationLinks: { control: 'object' },
+    paginationActiveIndex: { control: 'number' },
+    paginationTotalIndex: { control: 'number' },
+  },
+  args: {
+    prevHoverColor: COLORS.primary1,
+    prevChildren: 'Previous Button',
+    nextHoverColor: COLORS.primary1,
+    nextChildren: 'Next Button',
+    paginationActiveColor: COLORS.primary1,
+    paginationLinks: [
+      'http://www.kisskissbankbank.com',
+      'http://www.lendopolis.com',
+      'http://www.goodeed.com',
+      'https://www.microdon.org',
+    ],
+    paginationActiveIndex: 2,
+    paginationTotalIndex: 5,
+  },
 }
 
-export const WithLinks = () => {
-  return (
-    <StoryGrid>
-      <NavTabCarousel>
-        <NavTabCarousel.Prev
-          hoverColor={color('Prev hover color', '#fff')}
-          children={text('Prev text', 'Foobar 1')}
-        />
-        <NavTabCarousel.Pagination
-          activeIndex={number('Active index', 2)}
-          links={array('links', links)}
-          activeColor={color('Pagination active color', COLORS.primary1)}
-        />
-        <NavTabCarousel.Next
-          hoverColor={color('Next hover color', '#fff')}
-          children={text('Next text', 'Foobar 2')}
-        />
-      </NavTabCarousel>
-    </StoryGrid>
-  )
-}
+export const WithLinks = ({
+  prevHoverColor,
+  prevChildren,
+  paginationActiveIndex,
+  paginationLinks,
+  paginationActiveColor,
+  nextHoverColor,
+  nextChildren,
+}) => (
+  <NavTabCarousel>
+    <NavTabCarousel.Prev hoverColor={prevHoverColor} children={prevChildren} />
+    <NavTabCarousel.Pagination
+      activeIndex={paginationActiveIndex}
+      links={paginationLinks}
+      activeColor={paginationActiveColor}
+    />
+    <NavTabCarousel.Next hoverColor={nextHoverColor} children={nextChildren} />
+  </NavTabCarousel>
+)
 
-export const WithNoPrev = () => {
-  return (
-    <StoryGrid>
-      <NavTabCarousel>
-        <NavTabCarousel.Pagination
-          activeIndex={number('Active index', 2)}
-          totalIndex={number('total index', 2)}
-          activeColor={color('Pagination active color', COLORS.primary1)}
-        />
-        <NavTabCarousel.Next
-          hoverColor={color('Prev hover color', '#fff')}
-          children={text('Prev text', 'Foobar 1')}
-        />
-      </NavTabCarousel>
-    </StoryGrid>
-  )
-}
+export const WithNoPrev = ({
+  paginationActiveIndex,
+  paginationTotalIndex,
+  paginationActiveColor,
+  prevHoverColor,
+  prevChildren,
+}) => (
+  <NavTabCarousel>
+    <NavTabCarousel.Pagination
+      activeIndex={paginationActiveIndex}
+      totalIndex={paginationTotalIndex}
+      activeColor={paginationActiveColor}
+    />
+    <NavTabCarousel.Next hoverColor={prevHoverColor} children={prevChildren} />
+  </NavTabCarousel>
+)
 
-export const WithNoNext = () => {
-  return (
-    <StoryGrid>
-      <NavTabCarousel>
-        <NavTabCarousel.Prev
-          hoverColor={color('Prev hover color', '#fff')}
-          children={text('Prev text', 'Foobar 1')}
-        />
-        <NavTabCarousel.Pagination
-          activeIndex={number('Active index', 2)}
-          totalIndex={number('total index', 2)}
-          activeColor={color('Pagination active color', COLORS.primary1)}
-        />
-      </NavTabCarousel>
-    </StoryGrid>
-  )
-}
+export const WithNoNext = ({
+  prevHoverColor,
+  prevChildren,
+  paginationActiveIndex,
+  paginationTotalIndex,
+  paginationActiveColor,
+}) => (
+  <NavTabCarousel>
+    <NavTabCarousel.Prev hoverColor={prevHoverColor} children={prevChildren} />
+    <NavTabCarousel.Pagination
+      activeIndex={paginationActiveIndex}
+      totalIndex={paginationTotalIndex}
+      activeColor={paginationActiveColor}
+    />
+  </NavTabCarousel>
+)
 
-export const WithTotalIndex = () => {
-  return (
-    <StoryGrid>
-      <NavTabCarousel>
-        <NavTabCarousel.Prev
-          hoverColor={color('Prev hover color', '#fff')}
-          children={text('Prev text', 'Foobar 1')}
-        />
-        <NavTabCarousel.Pagination
-          activeIndex={number('Active index', 2)}
-          totalIndex={number('total index', 3)}
-          activeColor={color('Pagination active color', COLORS.primary1)}
-        />
-        <NavTabCarousel.Next
-          hoverColor={color('Next hover color', '#fff')}
-          children={text('Next text', 'Foobar 2')}
-        />
-      </NavTabCarousel>
-    </StoryGrid>
-  )
-}
+export const WithTotalIndex = ({
+  prevHoverColor,
+  prevChildren,
+  paginationActiveIndex,
+  paginationTotalIndex,
+  paginationActiveColor,
+  nextHoverColor,
+  nextChildren,
+}) => (
+  <NavTabCarousel>
+    <NavTabCarousel.Prev hoverColor={prevHoverColor} children={prevChildren} />
+    <NavTabCarousel.Pagination
+      activeIndex={paginationActiveIndex}
+      totalIndex={paginationTotalIndex}
+      activeColor={paginationActiveColor}
+    />
+    <NavTabCarousel.Next hoverColor={nextHoverColor} children={nextChildren} />
+  </NavTabCarousel>
+)

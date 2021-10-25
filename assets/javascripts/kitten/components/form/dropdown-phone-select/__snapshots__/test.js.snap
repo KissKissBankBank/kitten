@@ -2,7 +2,7 @@
 
 exports[`<DropdownPhoneSelect /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bwzfXH ikolgU k-Form-DropdownSelectWithInput k-Form-DropdownSelectWithInput--normal k-Form-DropdownSelectWithInput--isOpen"
+  className="sc-bwzfXH ctFYzU k-Form-DropdownSelectWithInput k-Form-DropdownSelectWithInput--normal k-Form-DropdownSelectWithInput--isOpen"
   style={
     Object {
       "--menu-z-index": 1000,
@@ -10,7 +10,7 @@ exports[`<DropdownPhoneSelect /> should match its snapshot with props 1`] = `
   }
 >
   <label
-    className="sc-bdVaJa cioPrE k-Label k-Form-DropdownSelectWithInput__label k-u-margin-bottom-single k-Label--normal"
+    className="sc-bdVaJa fBvzMx k-Label k-Form-DropdownSelectWithInput__label k-u-margin-bottom-single k-Label--normal"
     htmlFor="dropdown-phone-select-test"
     id="dropdown-phone-select-test_element-label"
     onClick={[Function]}

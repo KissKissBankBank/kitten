@@ -1,8 +1,9 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
+import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React, { useState, useRef, useEffect } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import isFunction from 'lodash/fp/isFunction';
 import PropTypes from 'prop-types';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
@@ -11,86 +12,32 @@ import COLORS from '../../../constants/colors-config';
 import { VisuallyHidden } from '../../accessibility/visually-hidden';
 import slugify from 'slugify';
 import { Loader } from '../../atoms/loader';
+import classNames from 'classnames';
 var itemHeight = 38;
 var maxItemsVisibled = 3;
 var borderSize = 2;
-var Container = styled.div.withConfig({
-  displayName: "autocomplete__Container",
+var Wrapper = styled.div.withConfig({
+  displayName: "autocomplete__Wrapper",
   componentId: "lfeqwe-0"
-})(["display:flex;position:relative;"]);
-var Input = styled.input.withConfig({
-  displayName: "autocomplete__Input",
-  componentId: "lfeqwe-1"
-})(["display:block;width:100%;height:", ";box-sizing:border-box;background:", ";border:", " solid ", ";padding:0 ", ";", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}&:focus{border-color:", ";outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}::-ms-clear{display:none;}", " ", ""], pxToRem(50), COLORS.background1, pxToRem(borderSize), COLORS.line1, pxToRem(15), TYPOGRAPHY.fontStyles.light, stepToRem(-1), COLORS.font1, COLORS.font2, COLORS.font2, COLORS.line2, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, function (_ref) {
-  var error = _ref.error;
-  return error && css(["border-color:", ";color:", ";:focus{border-color:", ";color:", ";}"], COLORS.error3, COLORS.error3, COLORS.line2, COLORS.font1);
-}, function (_ref2) {
-  var hasIcon = _ref2.hasIcon,
-      iconPosition = _ref2.iconPosition;
+})(["display:flex;position:relative;.k-Form-Autocomplete__input{display:block;width:100%;height:", ";box-sizing:border-box;background:", ";border:", " solid ", ";padding:0 ", ";", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}&:focus{border-color:", ";outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}::-ms-clear{display:none;}}&.k-Form-Autocomplete--error .k-Form-Autocomplete__input{border-color:", ";color:", ";:focus{border-color:", ";color:", ";}}.k-Form-Autocomplete__loader{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;right:0;}.k-Form-Autocomplete__icon{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;}.k-Form-Autocomplete__suggestions{position:absolute;top:", ";left:0;right:0;overflow-y:auto;margin:0;padding:0;background:", ";border:", " solid ", ";border-top:none;list-style:none;height:calc(", " * var(--Autocomplete-suggestions,1));max-height:", ";}.k-Form-Autocomplete__suggestion__item{padding:", " ", ";", ";font-size:", ";line-height:1.3;color:", ";&.k-Form-Autocomplete__suggestion__item--noresult{font-style:italic;}&:not(.k-Form-Autocomplete__suggestion__item--noresult){cursor:pointer;transition:background-color 0.2s;:hover,:focus,:active{background-color:", ";}:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&[aria-selected='true']{background-color:", ";}}}&.k-Form-Autocomplete--hasIcon-left{.k-Form-Autocomplete__input{padding-left:", ";}.k-Form-Autocomplete__icon{left:0;}}&.k-Form-Autocomplete--hasIcon-right{.k-Form-Autocomplete__input{padding-right:", ";}.k-Form-Autocomplete__loader{padding-right:", ";}.k-Form-Autocomplete__icon{right:0;}}&.k-Form-Autocomplete--disabled{.k-Form-Autocomplete__icon{& > svg [stroke]:not([stroke='none']){stroke:", ";}& > svg [fill]:not([fill='none']){fill:", ";}}}&.k-Form-Autocomplete--orion .k-Form-Autocomplete__input{border-radius:", ";}"], pxToRem(50), COLORS.background1, pxToRem(borderSize), COLORS.line1, pxToRem(15), TYPOGRAPHY.fontStyles.light, stepToRem(-1), COLORS.font1, COLORS.font2, COLORS.font2, COLORS.line2, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, COLORS.error3, COLORS.error3, COLORS.line2, COLORS.font1, pxToRem(18), pxToRem(18), pxToRem(50), COLORS.background1, pxToRem(2), COLORS.line1, pxToRem(itemHeight), pxToRem(itemHeight * maxItemsVisibled), pxToRem(10), pxToRem(15), TYPOGRAPHY.fontStyles.light, stepToRem(-1), COLORS.font1, COLORS.background3, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, COLORS.line1, pxToRem(45), pxToRem(45), pxToRem(45), COLORS.font2, COLORS.font2, pxToRem(4));
+export var Autocomplete = function Autocomplete(_ref) {
+  var _classNames;
 
-  if (!hasIcon) {
-    return false;
-  }
-
-  return iconPosition === 'left' ? css(["padding-left:", ";"], pxToRem(45)) : css(["padding-right:", ";"], pxToRem(45));
-});
-var StyledLoader = styled(function (_ref3) {
-  var addRightPadding = _ref3.addRightPadding,
-      others = _objectWithoutProperties(_ref3, ["addRightPadding"]);
-
-  return /*#__PURE__*/React.createElement(Loader, others);
-}).withConfig({
-  displayName: "autocomplete__StyledLoader",
-  componentId: "lfeqwe-2"
-})(["display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;right:0;", ""], pxToRem(18), function (_ref4) {
-  var addRightPadding = _ref4.addRightPadding;
-  return addRightPadding && css(["padding-right:", ";"], pxToRem(45));
-});
-var StyledIcon = styled(function (_ref5) {
-  var disabled = _ref5.disabled,
-      iconPosition = _ref5.iconPosition,
-      others = _objectWithoutProperties(_ref5, ["disabled", "iconPosition"]);
-
-  return /*#__PURE__*/React.createElement("span", others);
-}).withConfig({
-  displayName: "autocomplete__StyledIcon",
-  componentId: "lfeqwe-3"
-})(["display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;left:0;", " ", ""], pxToRem(18), function (_ref6) {
-  var disabled = _ref6.disabled;
-  return disabled && css(["& > svg [stroke]:not([stroke='none']){stroke:", ";}& > svg [fill]:not([fill='none']){fill:", ";}"], COLORS.font2, COLORS.font2);
-}, function (_ref7) {
-  var iconPosition = _ref7.iconPosition;
-  return iconPosition === 'right' && css(["left:initial;right:0;"]);
-});
-var Suggestions = styled.ul.withConfig({
-  displayName: "autocomplete__Suggestions",
-  componentId: "lfeqwe-4"
-})(["position:absolute;top:", ";left:0;right:0;overflow-y:auto;margin:0;padding:0;background:", ";border:", " solid ", ";border-top:none;list-style:none;", ""], pxToRem(50), COLORS.background1, pxToRem(2), COLORS.line1, function (_ref8) {
-  var itemsLength = _ref8.itemsLength;
-  return itemsLength > 0 && css(["height:", ";"], pxToRem(itemHeight * (itemsLength > 2 ? maxItemsVisibled : itemsLength)));
-});
-var NoResultItem = styled.li.withConfig({
-  displayName: "autocomplete__NoResultItem",
-  componentId: "lfeqwe-5"
-})(["padding:", " ", ";", ";font-size:", ";font-style:italic;line-height:1.3;color:", ";"], pxToRem(10), pxToRem(15), TYPOGRAPHY.fontStyles.light, stepToRem(-1), COLORS.font1);
-var Item = styled.li.withConfig({
-  displayName: "autocomplete__Item",
-  componentId: "lfeqwe-6"
-})(["padding:", " ", ";", ";font-size:", ";line-height:1.3;color:", ";cursor:pointer;transition:background-color 0.2s;:hover,:focus,:active{background-color:", ";}:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&[aria-selected='true']{background-color:", ";}"], pxToRem(10), pxToRem(15), TYPOGRAPHY.fontStyles.light, stepToRem(-1), COLORS.font1, COLORS.background3, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, COLORS.line1);
-export var Autocomplete = function Autocomplete(_ref9) {
-  var defaultItems = _ref9.items,
-      error = _ref9.error,
-      onChange = _ref9.onChange,
-      onBlur = _ref9.onBlur,
-      onKeyDown = _ref9.onKeyDown,
-      onSelect = _ref9.onSelect,
-      icon = _ref9.icon,
-      iconPosition = _ref9.iconPosition,
-      updateSuggestionsStrategy = _ref9.updateSuggestionsStrategy,
-      isLoading = _ref9.isLoading,
-      noResultMessage = _ref9.noResultMessage,
-      shouldShowNoResultMessage = _ref9.shouldShowNoResultMessage,
-      props = _objectWithoutProperties(_ref9, ["items", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage"]);
+  var className = _ref.className,
+      defaultItems = _ref.items,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      onKeyDown = _ref.onKeyDown,
+      onSelect = _ref.onSelect,
+      icon = _ref.icon,
+      iconPosition = _ref.iconPosition,
+      updateSuggestionsStrategy = _ref.updateSuggestionsStrategy,
+      isLoading = _ref.isLoading,
+      noResultMessage = _ref.noResultMessage,
+      shouldShowNoResultMessage = _ref.shouldShowNoResultMessage,
+      variant = _ref.variant,
+      props = _objectWithoutProperties(_ref, ["className", "items", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage", "variant"]);
 
   var _useState = useState(defaultItems),
       _useState2 = _slicedToArray(_useState, 2),
@@ -211,7 +158,9 @@ export var Autocomplete = function Autocomplete(_ref9) {
     suggestionsEl.current.scrollTop = value > 0 ? value : 0;
   };
 
-  return /*#__PURE__*/React.createElement(Container, null, /*#__PURE__*/React.createElement(Input, _extends({}, props, {
+  return /*#__PURE__*/React.createElement(Wrapper, {
+    className: classNames('k-Form-Autocomplete', className, "k-Form-Autocomplete--".concat(variant), (_classNames = {}, _defineProperty(_classNames, "k-Form-Autocomplete--hasIcon-".concat(iconPosition), !!icon), _defineProperty(_classNames, 'k-Form-Autocomplete--disabled', props.disabled), _classNames))
+  }, /*#__PURE__*/React.createElement("input", _extends({}, props, {
     error: error,
     ref: inputEl,
     type: "text",
@@ -222,44 +171,50 @@ export var Autocomplete = function Autocomplete(_ref9) {
     "aria-owns": "".concat(props.name, "-results"),
     "aria-expanded": showSuggestions && items.length > 0,
     "aria-autocomplete": "both",
-    hasIcon: !!icon,
-    iconPosition: iconPosition,
-    "aria-activedescendant": items[selectedItemIndex] ? slugify("".concat(items[selectedItemIndex], "-").concat(selectedItemIndex)) : ''
-  })), isLoading && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(StyledLoader, {
-    color: COLORS.font2,
-    addRightPadding: icon && iconPosition === 'right'
+    "aria-activedescendant": items[selectedItemIndex] ? slugify("".concat(items[selectedItemIndex], "-").concat(selectedItemIndex)) : '',
+    className: "k-Form-Autocomplete__input"
+  })), isLoading && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Loader, {
+    className: "k-Form-Autocomplete__loader",
+    color: COLORS.font2
   }), /*#__PURE__*/React.createElement(VisuallyHidden, {
     lang: "en"
-  }, "loading")), icon && /*#__PURE__*/React.createElement(StyledIcon, {
-    "aria-hidden": "true",
-    disabled: props.disabled,
-    iconPosition: iconPosition
+  }, "loading")), icon && /*#__PURE__*/React.createElement("span", {
+    className: "k-Form-Autocomplete__icon",
+    "aria-hidden": "true"
   }, React.cloneElement(icon, {
     width: 15,
     height: 15
-  })), showSuggestions && items.length === 0 && noResultMessage && showNoResultMessage && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Suggestions, {
+  })), showSuggestions && items.length === 0 && noResultMessage && showNoResultMessage && /*#__PURE__*/React.createElement("ul", {
     ref: suggestionsEl,
     id: "".concat(props.name, "-results"),
     role: "listbox",
     tabIndex: "-1",
-    itemsLength: "1"
-  }, /*#__PURE__*/React.createElement(NoResultItem, {
+    style: {
+      '--Autocomplete-suggestions': '1'
+    },
+    className: "k-Form-Autocomplete__suggestions"
+  }, /*#__PURE__*/React.createElement("li", {
+    className: "k-Form-Autocomplete__suggestion__item k-Form-Autocomplete__suggestion__item--noresult",
     role: "option",
     tabIndex: "-1"
-  }, noResultMessage))), showSuggestions && items.length > 0 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Suggestions, {
+  }, noResultMessage)), showSuggestions && items.length > 0 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("ul", {
     ref: suggestionsEl,
     id: "".concat(props.name, "-results"),
     role: "listbox",
     tabIndex: "-1",
-    itemsLength: items.length
+    style: {
+      '--Autocomplete-suggestions': items.length
+    },
+    className: "k-Form-Autocomplete__suggestions"
   }, items.map(function (item, index) {
-    return /*#__PURE__*/React.createElement(Item, {
+    return /*#__PURE__*/React.createElement("li", {
       key: item + index,
       id: slugify("".concat(item, "-").concat(index)),
       onClick: handleClickItem(item),
       role: "option",
       "aria-selected": selectedItemIndex === index,
-      tabIndex: "-1"
+      tabIndex: "-1",
+      className: "k-Form-Autocomplete__suggestion__item"
     }, item);
   })), /*#__PURE__*/React.createElement(VisuallyHidden, {
     lang: "en",
@@ -279,7 +234,8 @@ Autocomplete.propTypes = {
   onBlur: PropTypes.func,
   onKeyDown: PropTypes.func,
   onSelect: PropTypes.func,
-  isLoading: PropTypes.bool
+  isLoading: PropTypes.bool,
+  variant: PropTypes.oneOf(['andromeda', 'orion'])
 };
 Autocomplete.defaultProps = {
   error: false,
@@ -289,5 +245,6 @@ Autocomplete.defaultProps = {
   onBlur: function onBlur() {},
   onKeyDown: function onKeyDown() {},
   onSelect: function onSelect() {},
-  isLoading: false
+  isLoading: false,
+  variant: 'orion'
 };

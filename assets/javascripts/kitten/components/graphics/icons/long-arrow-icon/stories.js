@@ -1,10 +1,18 @@
 import React from 'react'
 import { Grid, GridCol } from '../../../..'
 import { LongArrowIcon } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Graphics/Icons/LongArrowIcon',
   component: LongArrowIcon,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="LongArrowIcon" />
+      ),
+    },
+  },
 }
 
 export const Default = () => (

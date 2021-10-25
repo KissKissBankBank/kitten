@@ -88,37 +88,16 @@ export var ProgressRing = function ProgressRing(_ref7) {
 };
 ProgressRing.defaultProps = {
   color: COLORS.primary1,
-  value: '',
+  value: 0,
   width: 50,
-  radius: null,
   strokeWidth: 5,
-  variant: 'andromeda',
+  variant: 'orion',
   animationSpeed: 1.4
 };
 ProgressRing.propTypes = {
-  /**
-    ProgressRing color
-  */
   color: PropTypes.string,
-
-  /**
-    Percentage of progress %
-  */
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-
-  /**
-    Width of ProgressRing
-  */
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-
-  /**
-    Radius value of ProgressRing
-  */
-  radius: PropTypes.number,
-
-  /**
-    Width of circle (stroke)
-  */
   strokeWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   animationSpeed: PropTypes.number

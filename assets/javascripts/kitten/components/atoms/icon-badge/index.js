@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
@@ -15,7 +16,7 @@ const StyledBadge = styled.span`
   min-width: ${pxToRem(30)};
   min-height: ${pxToRem(30)};
   border-radius: ${pxToRem(30)};
-  background-color: ${COLORS.primary1};
+  background-color: var(--background-color, ${COLORS.primary1});
 
   &.k-IconBadge--empty {
     border: ${pxToRem(2)} solid ${COLORS.line1};
@@ -77,6 +78,12 @@ const StyledBadge = styled.span`
   svg {
     fill: ${COLORS.background1};
   }
+
+  &.k-IconBadge--hasBorderStyles {
+    border-width: var(--border-width, 0);
+    border-color: var(--border-color);
+    border-style: var(--border-style);
+  }
 `
 
 export const IconBadge = ({
@@ -88,16 +95,30 @@ export const IconBadge = ({
   big,
   huge,
   size,
+  border,
+  backgroundColor,
   ...others
 }) => (
   <StyledBadge
-    className={classNames('k-IconBadge', className, `k-IconBadge--${size}`, {
-      'k-IconBadge--disabled': disabled,
-      'k-IconBadge--valid': valid,
-      'k-IconBadge--empty': empty,
-      'k-IconBadge--big': big,
-      'k-IconBadge--huge': huge,
-    })}
+    className={classNames(
+      'k-IconBadge',
+      className,
+      `k-IconBadge--${size}`,
+      {
+        'k-IconBadge--disabled': disabled,
+        'k-IconBadge--valid': valid,
+        'k-IconBadge--empty': empty,
+        'k-IconBadge--big': big,
+        'k-IconBadge--huge': huge,
+      },
+      'k-IconBadge--hasBorderStyles',
+    )}
+    style={{
+      '--background-color': backgroundColor,
+      '--border-width': 'width' in border ? pxToRem(border.width) : null,
+      '--border-style': border?.style ?? null,
+      '--border-color': border?.color ?? null,
+    }}
     {...others}
   >
     <span className="k-IconBadge__content">{children}</span>
@@ -107,14 +128,23 @@ export const IconBadge = ({
 IconBadge.defaultProps = {
   disabled: false,
   valid: false,
+  empty: false,
   size: 'normal',
+  border: {},
+  backgroundColor: COLORS.primary1,
 }
 
 IconBadge.propTypes = {
   disabled: PropTypes.bool,
   valid: PropTypes.bool,
   empty: PropTypes.bool,
-  big: PropTypes.bool,
-  huge: PropTypes.bool,
+  big: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
+  huge: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge']),
+  backgroundColor: PropTypes.node,
+  border: PropTypes.shape({
+    width: PropTypes.number,
+    color: PropTypes.node,
+    style: PropTypes.string,
+  }),
 }

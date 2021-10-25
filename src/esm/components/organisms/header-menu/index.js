@@ -13,11 +13,12 @@ export var HeaderMenu = function HeaderMenu(_ref) {
       largeItem = _ref.largeItem,
       noBorder = _ref.noBorder,
       className = _ref.className,
+      position = _ref.position,
       style = _ref.style,
-      props = _objectWithoutProperties(_ref, ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "style"]);
+      props = _objectWithoutProperties(_ref, ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "position", "style"]);
 
   return /*#__PURE__*/React.createElement(StyledList, _extends({
-    className: classNames('k-HeaderMenu', className, {
+    className: classNames('k-HeaderMenu', className, "k-HeaderMenu--".concat(position), {
       'k-HeaderMenu--hasBorders': !noBorder,
       'k-HeaderMenu--hasBorderOnSide': !!borderSide,
       'k-HeaderMenu--hasBorderOnSide-left': borderSide === 'left',
@@ -37,12 +38,14 @@ HeaderMenu.propTypes = {
   borderSide: PropTypes.oneOf(['left', 'right', false]),
   borderSideOnHover: PropTypes.bool,
   largeItem: PropTypes.bool,
-  noBorder: PropTypes.bool
+  noBorder: PropTypes.bool,
+  position: PropTypes.oneOf(['left', 'right'])
 };
 HeaderMenu.defaultProps = {
   backgroundColors: {},
   borderSide: 'left',
   borderSideOnHover: true,
   largeItem: false,
-  noBorder: false
+  noBorder: false,
+  position: 'left'
 };

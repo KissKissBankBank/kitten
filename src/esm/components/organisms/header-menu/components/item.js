@@ -30,7 +30,7 @@ export var Item = function Item(_ref) {
     })
   }), button ? /*#__PURE__*/React.createElement(Button, _extends({
     modifier: modifier,
-    fluid: true
+    fit: "fluid"
   }, other, {
     className: classNames('k-HeaderMenu__item__button', other.className),
     as: as
@@ -48,7 +48,7 @@ Item.propTypes = {
   href: PropTypes.string,
   isSelected: PropTypes.bool,
   liProps: PropTypes.object,
-  modifier: PropTypes.oneOf([null, undefined, 'light', 'default', 'hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked', 'boron', 'neon', 'iron']),
+  modifier: PropTypes.oneOf([null, undefined, 'light', 'default', 'hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked', 'boron', 'neon', 'iron', 'calcium']),
   size: PropTypes.oneOf(['normal', 'tiny', 'big']),
   as: deprecated(PropTypes.string, 'Please use `tag` instead.'),
   tag: PropTypes.string

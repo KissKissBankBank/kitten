@@ -50,9 +50,11 @@ var List = function List(_ref3) {
     className: (0, _classnames.default)('k-List', className),
     styles: style,
     radiusValue: radiusValue
-  }), _react.default.Children.map(children, function (child) {
+  }), _react.default.Children.map(children, function (child, index) {
     if (!_react.default.isValidElement(child)) return null;
-    return /*#__PURE__*/_react.default.createElement("li", null, child);
+    return /*#__PURE__*/_react.default.createElement("li", {
+      key: index
+    }, child);
   }));
 };
 

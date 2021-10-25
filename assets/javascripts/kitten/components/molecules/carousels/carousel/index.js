@@ -266,7 +266,7 @@ class CarouselBase extends Component {
           <Button
             type="button"
             className="k-Carousel__pagination__button"
-            icon
+            fit="icon"
             modifier="beryllium"
             size={tinyButtons ? 'tiny' : null}
             onClick={this.goPrevPage}
@@ -283,7 +283,7 @@ class CarouselBase extends Component {
           <Button
             type="button"
             className="k-Carousel__pagination__button"
-            icon
+            fit="icon"
             modifier="beryllium"
             size={tinyButtons ? 'tiny' : null}
             onClick={this.goNextPage}

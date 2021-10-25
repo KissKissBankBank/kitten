@@ -1,225 +1,181 @@
 import React from 'react'
-import { text, boolean, number, radios, select } from '@storybook/addon-knobs'
-import { Button } from './index'
 import {
-  Marger,
-  Container,
-  Grid,
-  GridCol,
-  HeartIcon,
-  PayPalIcon,
-  Badge,
-  Cart,
-} from '../../../..'
+  Button,
+  buttonModifiers,
+  buttonFitOptions,
+  buttonMobileFitOptions,
+  buttonSizes,
+  buttonVariants,
+} from './index'
+import { HeartIcon, PayPalIcon, Badge, Cart } from '../../../..'
+import { DocsPage } from 'storybook/docs-page'
 
-const svgSizeRange = {
-  range: true,
-  min: 5,
-  max: 60,
-  step: 5,
+const args = {
+  borderRadius: 0,
+  modifier: 'hydrogen',
+  rounded: false,
+  disabled: false,
+  size: 'regular',
+  tag: undefined,
+  variant: 'orion',
+  children: 'My Button',
+  fit: 'min-width',
+  mobileFit: undefined,
 }
 
-const radiusBorderRange = {
-  range: true,
-  min: 0,
-  max: 25,
-  step: 1,
+const argTypes = {
+  borderRadius: {
+    name: 'borderRadius',
+    control: 'number',
+  },
+  modifier: {
+    name: 'modifier',
+    options: buttonModifiers,
+    control: 'select',
+  },
+  rounded: {
+    name: 'rounded',
+    control: 'boolean',
+  },
+  size: {
+    name: 'size',
+    options: buttonSizes,
+    control: 'select',
+  },
+  tag: {
+    name: 'tag',
+    control: 'text',
+  },
+  variant: {
+    name: 'variant',
+    options: buttonVariants,
+    control: 'inline-radio',
+  },
+  children: {
+    name: 'children',
+    control: 'text',
+  },
+  fit: {
+    name: 'fit',
+    control: 'select',
+    options: buttonFitOptions,
+  },
+  mobileFit: {
+    name: 'mobileFit',
+    control: 'select',
+    options: buttonMobileFitOptions,
+  },
 }
 
-const svgPositionOptions = {
-  Left: 'left',
-  Right: 'right',
+export default {
+  title: 'Molecules/Buttons/Button',
+  component: Button,
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={['index.js', 'helpers/modifier-styles.js']}
+          importString="Button"
+        />
+      ),
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container">
+        <div>{story()}</div>
+      </div>
+    ),
+  ],
+  argTypes: argTypes,
+  args: args,
 }
 
-const variantOptions = {
-  Andromeda: 'andromeda',
-  Orion: 'orion',
+export const Default = args => <Button {...args} />
+
+export const AllModifiers = args => {
+  return (
+    <>
+      {buttonModifiers.map(modifier => (
+        <div className="k-u-flex k-u-flex-direction-column k-u-flex-alignItems-center">
+          <Button {...args} modifier={modifier} />
+          <span className="k-u-margin-top-single k-u-margin-bottom-triple k-u-weight-light">
+            {modifier}
+          </span>
+        </div>
+      ))}
+    </>
+  )
 }
 
-const modifierOptions = {
-  Hydrogen: 'hydrogen',
-  Helium: 'helium',
-  Lithium: 'lithium',
-  Beryllium: 'beryllium',
-  Carbon: 'carbon',
-  Oxygen: 'oxygen',
-  Checked: 'checked',
-  Copper: 'copper',
-  Boron: 'boron',
-  Neon: 'neon',
-  Iron: 'iron',
-  Social_facebook: 'social_facebook',
-  Social_twitter: 'social_twitter',
-  Social_linkedin: 'social_linkedin',
-  Social_instagram: 'social_instagram',
-  Social_youtube: 'social_youtube',
-  Social_pinterest: 'social_pinterest',
+AllModifiers.decorators = [
+  story => <div className="story-Grid story-Grid--small">{story()}</div>,
+]
+
+export const DarkModifiers = args => {
+  return (
+    <>
+      {['beryllium', 'boron', 'scandium'].map(modifier => (
+        <div className="k-u-margin-vertical-double k-u-flex k-u-flex-direction-column k-u-flex-alignItems-center">
+          <Button {...args} modifier={modifier} />
+          <span className="k-u-margin-top-single k-u-margin-bottom-triple k-u-weight-light k-u-color-background1">
+            {modifier}
+          </span>
+        </div>
+      ))}
+    </>
+  )
 }
 
-const sizeOptions = {
-  Nano: 'nano',
-  Micro: 'micro',
-  Tiny: 'tiny',
-  Regular: 'regular',
-  Big: 'big',
-  Huge: 'huge',
-  Giant: 'giant',
-}
-
-export const WithText = () => (
-  <Button
-    size={select('Size', sizeOptions, 'regular')}
-    fluid={boolean('Fluid', false)}
-    modifier={select('Modifier', modifierOptions, 'hydrogen')}
-    variant={select('Variant', variantOptions, 'andromeda')}
-    disabled={boolean('Disabled', false)}
-    borderRadius={number('Border radius', 0, radiusBorderRange)}
-  >
-    {text('Text', 'MyButton')}
+DarkModifiers.decorators = [
+  story => (
+    <div className="story-Grid story-Grid--small has-overrides dark-background">
+      {story()}
+    </div>
+  ),
+]
+export const WithIcon = args => (
+  <Button {...args} fit="icon">
+    <HeartIcon width={15} height={15} />
   </Button>
 )
 
-WithText.decorators = [
-  Story => (
-    <Marger top="4" bottom="4">
-      <Container>
-        <Grid>
-          <GridCol>
-            <Story />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
-  ),
-]
-
-export const WithIcon = () => (
-  <Button
-    size={select('Size', sizeOptions, 'regular')}
-    rounded={boolean('Rounded', false)}
-    modifier={select('Modifier', modifierOptions, 'hydrogen')}
-    variant={select('Variant', variantOptions, 'andromeda')}
-    fluid={boolean('Fluid', false)}
-    disabled={boolean('Disabled', false)}
-    borderRadius={number('Border radius', 0, radiusBorderRange)}
-    icon
-  >
-    <HeartIcon
-      width={number('Icon size', 15, svgSizeRange)}
-      height={number('Icon size', 15, svgSizeRange)}
-    />
-  </Button>
-)
-
-WithIcon.decorators = [
-  Story => (
-    <Marger top="4" bottom="4">
-      <Container>
-        <Grid>
-          <GridCol>
-            <Story />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
-  ),
-]
-
-export const WithColorIcon = () => (
-  <Button
-    size={select('Size', sizeOptions, 'regular')}
-    rounded={boolean('Rounded', false)}
-    modifier={select('Modifier', modifierOptions, 'hydrogen')}
-    variant={select('Variant', variantOptions, 'andromeda')}
-    fluid={boolean('Fluid', false)}
-    disabled={boolean('Disabled', false)}
-    borderRadius={number('Border radius', 0, radiusBorderRange)}
-  >
+export const WithColorIcon = args => (
+  <Button {...args} fit="icon">
     <PayPalIcon />
   </Button>
 )
 
-WithColorIcon.decorators = [
-  Story => (
-    <Marger top="4" bottom="4">
-      <Container>
-        <Grid>
-          <GridCol>
-            <Story />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
-  ),
-]
-
-export const WithTextAndIcon = () => {
-  const iconPosition = radios('Icon position', svgPositionOptions, 'left')
+export const WithTextAndIcon = ({ iconPosition, children, ...args }) => {
   return (
-    <Button
-      size={select('Size', sizeOptions, 'regular')}
-      fluid={boolean('Fluid', false)}
-      modifier={select('Modifier', modifierOptions, 'hydrogen')}
-      variant={select('Variant', variantOptions, 'andromeda')}
-      disabled={boolean('Disabled', false)}
-      borderRadius={number('Border radius', 0, radiusBorderRange)}
-    >
-      {iconPosition === 'left' && (
-        <HeartIcon
-          width={number('Icon size', 15, svgSizeRange)}
-          height={number('Icon size', 15, svgSizeRange)}
-        />
-      )}
+    <Button {...args}>
+      {iconPosition === 'left' && <HeartIcon width={15} height={15} />}
 
-      <span>{text('Text', 'MyButton')}</span>
+      <span>{children}</span>
 
-      {iconPosition === 'right' && (
-        <HeartIcon
-          width={number('Icon size', 15, svgSizeRange)}
-          height={number('Icon size', 15, svgSizeRange)}
-        />
-      )}
+      {iconPosition === 'right' && <HeartIcon width={15} height={15} />}
     </Button>
   )
 }
-WithTextAndIcon.decorators = [
-  Story => (
-    <Marger top="4" bottom="4">
-      <Container>
-        <Grid>
-          <GridCol>
-            <Story />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
-  ),
-]
+WithTextAndIcon.args = {
+  ...args,
+  iconPosition: 'left',
+}
+WithTextAndIcon.argTypes = {
+  ...argTypes,
+  iconPosition: {
+    name: 'iconPosition (story prop)',
+    options: ['left', 'right'],
+    control: 'inline-radio',
+  },
+}
 
-export const WithBadge = () => (
-  <Button
-    size={select('Size', sizeOptions, 'regular')}
-    modifier={select('Modifier', modifierOptions, 'helium')}
-    variant={select('Variant', variantOptions, 'andromeda')}
-    disabled={boolean('Disabled', false)}
-  >
-    <span>{text('Text', 'MyButton')}</span>
-    <Badge color={text('Badge color', 'red')} Icon={Cart}>
-      {text('Count', '2')}
+export const WithBadge = ({ children, ...args }) => (
+  <Button {...args}>
+    <span>{children}</span>
+    <Badge color="red" Icon={Cart}>
+      2
     </Badge>
   </Button>
 )
-
-WithBadge.decorators = [
-  Story => (
-    <Marger top="4" bottom="4">
-      <Container>
-        <Grid>
-          <GridCol>
-            <Story />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
-  ),
-]

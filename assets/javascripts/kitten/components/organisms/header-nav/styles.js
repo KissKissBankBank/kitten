@@ -2,10 +2,7 @@ import styled from 'styled-components'
 import { ScreenConfig } from '../../../constants/screen-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
-import {
-  CONTAINER_PADDING,
-  CONTAINER_PADDING_THIN,
-} from '../../../constants/grid-config'
+import { CONTAINER_PADDING } from '../../../constants/grid-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import {
   MOBILE_HEADER_HEIGHT,
@@ -34,10 +31,8 @@ export const StyledHeader = styled.header`
       box-shadow: 0 ${pxToRem(2)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
     }
   }
-  &.k-HeaderNav--border {
-    .k-Spacer + .k-HeaderNav__stickyContainer {
-      box-shadow: 0 ${pxToRem(1)} 0 rgba(0, 0, 0, 0.08);
-    }
+  &.k-HeaderNav--border .k-HeaderNav__stickyContainer {
+    box-shadow: 0 ${pxToRem(1)} 0 rgba(0, 0, 0, 0.08);
   }
 
   .k-HeaderNav {
@@ -47,6 +42,16 @@ export const StyledHeader = styled.header`
     box-sizing: border-box;
     background: ${COLORS.background1};
     transition: background-color 0.2s ease;
+
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      padding: 0 ${pxToRem(40)} 0 ${pxToRem(30)};
+    }
+
+    &:not(.k-HeaderNav--kkbb__only) {
+      @media (min-width: ${ScreenConfig.L.min}px) {
+        padding: 0;
+      }
+    }
 
     .quickAccessLink {
       background: ${COLORS.background1};
@@ -82,7 +87,7 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__BurgerMenu__button {
-    padding: 0 ${pxToRem(10)} 0 ${pxToRem(CONTAINER_PADDING_THIN)};
+    padding: 0;
     height: 100%;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
@@ -119,13 +124,12 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__Logo {
-    padding: ${pxToRem(10)};
+    padding: 0;
     display: flex;
     align-items: center;
 
-    @media (max-width: ${ScreenConfig.XXS.max}) {
-      padding-left: ${pxToRem(5)};
-      padding-right: ${pxToRem(5)};
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      padding: ${pxToRem(10)};
     }
   }
 
@@ -180,18 +184,18 @@ export const StyledHeader = styled.header`
     flex-grow: 1;
 
     &.k-HeaderNav__right--padded {
-      padding-right: ${pxToRem(10)};
+      padding-right: ${pxToRem(20)};
       gap: ${pxToRem(10)};
 
       .k-HeaderNav__Button:last-child {
         margin-right: ${pxToRem(-10)};
       }
-      @media (min-width: ${ScreenConfig.S.min}) {
-        padding-right: ${pxToRem(15)};
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        padding-right: ${pxToRem(10)};
         gap: ${pxToRem(15)};
 
         .k-HeaderNav__Button:last-child {
-          margin-right: ${pxToRem(-15)};
+          margin-right: ${pxToRem(-10)};
         }
       }
     }
@@ -380,14 +384,21 @@ export const StyledHeader = styled.header`
 
     .k-HeaderNav__UserMenuButton {
       padding: 0 ${pxToRem(15)};
+
+      &.k-Dropdown__button,
+      &.k-HeaderNav__Button {
+        min-width: ${pxToRem(40)};
+      }
     }
+
     .k-HeaderNav-nav__item {
       padding: 0 ${pxToRem(15)};
     }
 
     .k-Dropdown__button,
     .k-HeaderNav__Button {
-      min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+      min-width: ${pxToRem(52)};
+      cursor: pointer;
     }
 
     .k-HeaderNav__Button--hasText {
@@ -396,7 +407,7 @@ export const StyledHeader = styled.header`
           margin-left: ${pxToRem(15)};
         }
         &:last-child {
-          margin-right: ${pxToRem(15)};
+          margin-right: ${pxToRem(10)};
         }
       }
     }
@@ -418,11 +429,20 @@ export const StyledHeader = styled.header`
     }
     .k-HeaderNav-nav__item {
       padding: 0 ${pxToRem(40)};
+
+      &.smallPadding {
+        padding: 0 ${pxToRem(10)};
+      }
+    }
+
+    .k-HeaderNav__right .k-HeaderNav-nav__item {
+      padding: 0 ${pxToRem(10)};
     }
 
     .k-Dropdown__button,
     .k-HeaderNav__Button {
-      min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+      min-width: ${pxToRem(52)};
+      cursor: pointer;
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         min-width: ${pxToRem(TABLET_HEADER_HEIGHT)};
@@ -441,11 +461,24 @@ export const StyledHeader = styled.header`
       }
     }
 
+    .k-HeaderNav__Button--smallPadding {
+      .k-HeaderNav__Button__text:first-child {
+        margin-left: 0;
+      }
+    }
+
     .k-HeaderNav__Button__text:last-child {
       margin-right: ${pxToRem(30)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         margin-right: ${pxToRem(40)};
+      }
+    }
+
+    .k-HeaderNav__Button--smallPadding {
+      .k-HeaderNav__Button__text:last-child {
+        margin-left: ${pxToRem(10)};
+        margin-right: 0;
       }
     }
   }

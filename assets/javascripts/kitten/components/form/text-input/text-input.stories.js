@@ -1,35 +1,76 @@
 import React from 'react'
-import { boolean, text, number, select } from '@storybook/addon-knobs'
 import { TextInput } from './index'
 
-const tagOptions = {
-  Input: 'input',
-  Textarea: 'textarea',
+export const Default = args => <TextInput {...args} />
+
+Default.decorators = [
+  story => (
+    <div className="story-Container story-Grid story-Grid--large">
+      {story()}
+    </div>
+  ),
+]
+
+Default.args = {
+  tag: 'input',
+  variant: 'orion',
+  valid: false,
+  error: false,
+  disabled: false,
+  size: 'regular',
+  center: false,
+  rounded: false,
+  placeholder: 'Les props sont transmises',
+  digits: null,
+  name: 'text-input',
 }
 
-const sizeOptions = {
-  Tiny: 'tiny',
-  Regular: 'regular',
-  Big: 'big',
-  Huge: 'huge',
-  Giant: 'giant',
+Default.argTypes = {
+  tag: {
+    name: 'tag',
+    options: ['input', 'textarea'],
+    control: 'inline-radio',
+  },
+  variant: {
+    name: 'variant',
+    options: ['andromeda', 'orion'],
+    control: 'inline-radio',
+  },
+  valid: {
+    name: 'valid',
+    control: 'boolean',
+  },
+  error: {
+    name: 'error',
+    control: 'boolean',
+  },
+  disabled: {
+    name: 'disabled',
+    control: 'boolean',
+  },
+  size: {
+    name: 'size',
+    options: ['tiny', 'regular', 'big', 'huge', 'giant'],
+    control: 'select',
+  },
+  center: {
+    name: 'center',
+    control: 'boolean',
+  },
+  rounded: {
+    name: 'rounded',
+    control: 'boolean',
+  },
+  placeholder: {
+    name: 'placeholder',
+    control: 'text',
+  },
+  digits: {
+    name: 'digits',
+    control: 'number',
+  },
+  name: {
+    name: 'name',
+    control: 'text',
+  },
 }
-
-const variantOptions = {
-  Andromeda: 'andromeda',
-  Orion: 'orion',
-}
-
-export const Default = () => (
-  <TextInput
-    tag={select('Tag', tagOptions, 'input')}
-    variant={select('Variant', variantOptions, 'andromeda')}
-    valid={boolean('Valid', false)}
-    error={boolean('Error', false)}
-    disabled={boolean('Disabled', false)}
-    size={select('Size', sizeOptions, 'regular')}
-    center={boolean('Center', false)}
-    placeholder={text('Placeholder', 'Les props sont transmises')}
-    digits={number('Digits', 12)}
-  />
-)

@@ -9,3 +9,7 @@ export const Default = () => (
     <CheckList.Item>Un chiffre</CheckList.Item>
   </CheckList>
 )
+
+Default.decorators = [
+  story => <div className="story-Container story-Grid">{story()}</div>,
+]

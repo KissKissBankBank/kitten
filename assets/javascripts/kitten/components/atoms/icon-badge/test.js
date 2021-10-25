@@ -16,4 +16,26 @@ describe('<IconBadge />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with border style', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <IconBadge
+            children="Custom children"
+            size="tiny"
+            border={{
+              width: 2,
+              style: 'solid',
+              color: '#e8f7fe',
+            }}
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })

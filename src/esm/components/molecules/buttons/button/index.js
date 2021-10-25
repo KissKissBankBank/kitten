@@ -1,74 +1,34 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
+import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
 import PropTypes from 'prop-types';
 import deprecated from 'prop-types-extra/lib/deprecated';
-import styled, { css } from 'styled-components';
 import COLORS from '../../../../constants/colors-config';
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';
 import TYPOGRAPHY from '../../../../constants/typography-config';
+import styled from 'styled-components';
 import { modifierStyles } from './helpers/modifier-styles';
 import { ScreenConfig } from '../../../../constants/screen-config';
 import classNames from 'classnames';
+export var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'boron', 'calcium', 'scandium', 'neon', 'iron', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube', 'social_pinterest'];
+export var buttonFitOptions = ['icon', 'min-width', 'content', 'fluid'];
+export var buttonMobileFitOptions = [null].concat(buttonFitOptions);
+export var buttonSizes = ['nano', 'micro', 'tiny', 'big', 'huge', 'giant', 'regular'];
+export var buttonVariants = ['andromeda', 'orion'];
 var StyledButton = styled.button.withConfig({
   displayName: "button__StyledButton",
   componentId: "no9p2t-0"
-})(["display:inline-flex;align-items:center;justify-content:center;position:relative;box-sizing:border-box;", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appearance:none;cursor:pointer;&:disabled{cursor:not-allowed;}&:hover{text-decoration:none;}>:nth-child(n){margin-right:", ";text-align:left;}>:last-child{margin-right:0;}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&.k-Button--hasBorderRadius{border-radius:var(--border-radius);}", " &.k-Button--nano{", "}&.k-Button--micro{", "}&.k-Button--tiny{", "}&.k-Button--big{", "}&.k-Button--huge{", "}&.k-Button--giant{", "}&.k-Button--hasIcon:not(.k-Button--fluid){", " &.k-Button--nano{", "}&.k-Button--micro{", "}&.k-Button--tiny{", "}&.k-Button--big{", "}&.k-Button--huge{", "}&.k-Button--giant{", "}}&.k-Button--fluid{", "}&.k-Button--rounded{", "}&.k-Button--orion{border-radius:", ";@media (min-width:", "){border-radius:", ";}}", ""], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), COLORS.font1, pxToRem(10), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, function () {
-  return DEFAULT;
-}, function () {
-  return NANO;
-}, function () {
-  return MICRO;
-}, function () {
-  return TINY;
-}, function () {
-  return BIG;
-}, function () {
-  return HUGE;
-}, function () {
-  return GIANT;
-}, function () {
-  return ICON;
-}, function () {
-  return ICON_NANO;
-}, function () {
-  return ICON_MICRO;
-}, function () {
-  return ICON_TINY;
-}, function () {
-  return ICON_BIG;
-}, function () {
-  return ICON_HUGE;
-}, function () {
-  return ICON_GIANT;
-}, function () {
-  return FLUID;
-}, function () {
-  return ROUNDED;
-}, pxToRem(6), pxToRem(ScreenConfig.S.min), pxToRem(8), function (_ref) {
+})(["position:relative;box-sizing:border-box;min-height:var(--Button-dimension);padding:var(--Button-padding);display:inline-flex;justify-content:center;align-items:center;gap:", ";", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appearance:none;cursor:pointer;border-radius:var(--Button-border-radius,0);min-width:0;&:disabled,&.k-Button--disabled{cursor:not-allowed;}&:hover{text-decoration:none;}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&.k-Button--nano{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:0 ", ";font-size:", ";}&.k-Button--micro{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";font-size:", ";}&.k-Button--tiny{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";}&.k-Button--regular{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";}&.k-Button--big{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";@media (min-width:", "){--Button-min-width:", ";--Button-dimension:", ";--Button-padding:", " ", ";font-size:", ";}}&.k-Button--huge{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";@media (min-width:", "){--Button-min-width:", ";--Button-dimension:", ";--Button-padding:", " ", ";font-size:", ";}}&.k-Button--giant{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";@media (min-width:", "){--Button-min-width:", ";--Button-dimension:", ";--Button-padding:", " ", ";font-size:", ";}}&.k-Button--fit-min-width{min-width:var(--Button-min-width);}&.k-Button--fit-icon{padding:0;overflow:hidden;width:var(--Button-dimension);height:var(--Button-dimension);}&.k-Button--fit-fluid{width:100%;}@media (max-width:", "){&[class*='k-Button--mobile-fit']{min-width:initial !important;padding:var(--Button-padding);width:initial;height:initial;width:initial;&.k-Button--mobile-fit-min-width{min-width:var(--Button-min-width) !important;}&.k-Button--mobile-fit-icon{padding:0;overflow:hidden;width:var(--Button-dimension);height:var(--Button-dimension);}&.k-Button--mobile-fit-fluid{width:100%;}}}&.k-Button--orion:not(.k-Button--rounded){&.k-Button--nano,&.k-Button--micro,&.k-Button--tiny{--Button-border-radius:", ";}&.k-Button--regular,&.k-Button--big,&.k-Button--huge,&.k-Button--giant{--Button-border-radius:", ";@media (min-width:", "){--Button-border-radius:", ";}}}&.k-Button--rounded{--Button-border-radius:50%;}", ""], pxToRem(10), TYPOGRAPHY.fontStyles.regular, stepToRem(-1), COLORS.font1, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, pxToRem(20), pxToRem(100), pxToRem(6), stepToRem(-2), pxToRem(30), pxToRem(130), pxToRem(5), pxToRem(10), stepToRem(-2), pxToRem(40), pxToRem(160), pxToRem(7), pxToRem(20), pxToRem(50), pxToRem(200), pxToRem(10), pxToRem(30), pxToRem(50), pxToRem(200), pxToRem(10), pxToRem(30), pxToRem(ScreenConfig.S.min), pxToRem(220), pxToRem(70), pxToRem(10), pxToRem(40), stepToRem(0), pxToRem(70), pxToRem(200), pxToRem(10), pxToRem(10), pxToRem(ScreenConfig.S.min), pxToRem(220), pxToRem(80), pxToRem(10), pxToRem(40), stepToRem(0), pxToRem(70), pxToRem(200), pxToRem(10), pxToRem(10), pxToRem(ScreenConfig.S.min), pxToRem(220), pxToRem(90), pxToRem(10), pxToRem(40), stepToRem(0), pxToRem(ScreenConfig.XS.max), pxToRem(4), pxToRem(6), pxToRem(ScreenConfig.S.min), pxToRem(8), function (_ref) {
   var modifier = _ref.modifier;
   return modifierStyles(modifier);
-});
-export var FLUID = css(["min-width:initial;width:100%;"]);
-export var ROUNDED = css(["border-radius:50%;"]);
-export var DEFAULT = css(["min-width:", ";min-height:", ";padding:", " ", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(200), pxToRem(50), pxToRem(10), pxToRem(30), stepToRem(-1), pxToRem(200), pxToRem(50));
-export var NANO = css(["min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(100), pxToRem(20), pxToRem(6), stepToRem(-2), pxToRem(100), pxToRem(20));
-export var MICRO = css(["min-width:", ";min-height:", ";padding:", " ", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(130), pxToRem(30), pxToRem(5), pxToRem(10), stepToRem(-2), pxToRem(100), pxToRem(20));
-export var TINY = css(["min-width:", ";min-height:", ";padding:", " ", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(160), pxToRem(40), pxToRem(7), pxToRem(20), stepToRem(-1), pxToRem(160), pxToRem(40));
-export var BIG = css(["@media (min-width:", "){min-width:", ";min-height:", ";padding:", " ", ";font-size:", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(ScreenConfig.S.min), pxToRem(220), pxToRem(70), pxToRem(10), pxToRem(40), stepToRem(0), pxToRem(ScreenConfig.S.min), pxToRem(220), pxToRem(70));
-export var HUGE = css(["min-height:", ";font-size:", ";padding:", " ", ";@media (min-width:", "px){min-width:", ";min-height:", ";font-size:", ";padding:", " ", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(70), stepToRem(-1), pxToRem(10), pxToRem(10), ScreenConfig.M.min, pxToRem(220), pxToRem(80), stepToRem(0), pxToRem(10), pxToRem(40), pxToRem(ScreenConfig.M.min), pxToRem(220), pxToRem(80));
-export var GIANT = css(["min-height:", ";font-size:", ";padding:", " ", ";@media (min-width:", "px){min-width:", ";min-height:", ";font-size:", ";padding:", " ", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(70), stepToRem(-1), pxToRem(10), pxToRem(10), ScreenConfig.M.min, pxToRem(220), pxToRem(90), stepToRem(0), pxToRem(10), pxToRem(40), pxToRem(ScreenConfig.M.min), pxToRem(220), pxToRem(90));
-export var ICON = css(["min-width:initial;min-height:initial;width:", ";height:", ";padding:0;@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";min-width:0;min-height:0;}"], pxToRem(50), pxToRem(50), pxToRem(50));
-export var ICON_NANO = css(["width:", ";height:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], pxToRem(20), pxToRem(20), pxToRem(20));
-export var ICON_MICRO = css(["width:", ";height:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], pxToRem(30), pxToRem(30), pxToRem(30));
-export var ICON_TINY = css(["width:", ";height:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], pxToRem(40), pxToRem(40), pxToRem(40));
-export var ICON_BIG = css(["@media (min-width:", "){min-width:0;min-height:0;padding:0;width:", ";height:", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], pxToRem(ScreenConfig.S.min), pxToRem(70), pxToRem(70), pxToRem(ScreenConfig.S.min), pxToRem(70));
-export var ICON_HUGE = css(["min-width:initial;width:", ";height:", ";@media (min-width:", "){min-width:initial;width:", ";height:", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], pxToRem(70), pxToRem(70), pxToRem(ScreenConfig.M.min), pxToRem(80), pxToRem(80), pxToRem(ScreenConfig.M.min), pxToRem(80));
-export var ICON_GIANT = css(["min-width:initial;width:", ";height:", ";@media (min-width:", "){min-width:initial;width:", ";height:", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], pxToRem(70), pxToRem(70), pxToRem(ScreenConfig.M.min), pxToRem(90), pxToRem(90), pxToRem(ScreenConfig.M.min), pxToRem(90)); // const ForwardedButtonComponent = forwardRef((props, ref) => {
+}); // const ForwardedButtonComponent = forwardRef((props, ref) => {
 //   return <button ref={ref} {...props}/>
 // })
 
 export var Button = function Button(_ref2) {
+  var _classNames;
+
   var children = _ref2.children,
       modifier = _ref2.modifier,
       variant = _ref2.variant,
@@ -78,8 +38,12 @@ export var Button = function Button(_ref2) {
       fluid = _ref2.fluid,
       icon = _ref2.icon,
       borderRadius = _ref2.borderRadius,
+      disabled = _ref2.disabled,
       tag = _ref2.tag,
-      props = _objectWithoutProperties(_ref2, ["children", "modifier", "variant", "size", "className", "rounded", "fluid", "icon", "borderRadius", "tag"]);
+      as = _ref2.as,
+      fit = _ref2.fit,
+      mobileFit = _ref2.mobileFit,
+      props = _objectWithoutProperties(_ref2, ["children", "modifier", "variant", "size", "className", "rounded", "fluid", "icon", "borderRadius", "disabled", "tag", "as", "fit", "mobileFit"]);
 
   var actualSize = function () {
     switch (true) {
@@ -109,19 +73,30 @@ export var Button = function Button(_ref2) {
     }
   }();
 
+  var internalTag = as || tag;
+
+  var fitClass = function () {
+    switch (true) {
+      case fluid && !icon:
+        return 'fluid';
+
+      case icon && !fluid:
+        return 'icon';
+
+      default:
+        return fit;
+    }
+  }();
+
   return /*#__PURE__*/React.createElement(StyledButton, _extends({
-    className: classNames('k-Button', className, "k-Button--".concat(actualSize), "k-Button--".concat(modifier), "k-Button--".concat(variant), {
-      'k-Button--fluid': fluid,
-      'k-Button--hasIcon': icon,
-      'k-Button--rounded': rounded,
-      'k-Button--hasBorderRadius': borderRadius > 0
-    }),
-    style: {
-      '--border-radius': pxToRem(borderRadius)
-    },
+    className: classNames('k-Button', className, "k-Button--".concat(actualSize), "k-Button--".concat(modifier), "k-Button--".concat(variant), "k-Button--fit-".concat(fitClass), (_classNames = {}, _defineProperty(_classNames, "k-Button--mobile-fit-".concat(mobileFit), !!mobileFit), _defineProperty(_classNames, 'k-Button--disabled', disabled), _defineProperty(_classNames, 'k-Button--rounded', rounded), _classNames)),
     modifier: modifier,
+    style: {
+      '--Button-border-radius': borderRadius > 0 ? pxToRem(borderRadius) : null
+    },
     type: "button",
-    as: tag
+    as: internalTag,
+    disabled: internalTag === 'button' ? disabled : null
   }, props), children);
 };
 Button.propTypes = {
@@ -136,9 +111,11 @@ Button.propTypes = {
   fluid: PropTypes.bool,
   icon: PropTypes.bool,
   rounded: PropTypes.bool,
-  size: PropTypes.oneOf(['nano', 'micro', 'tiny', 'big', 'huge', 'giant', 'regular']),
-  modifier: PropTypes.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'boron', 'neon', 'iron', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube', 'social_pinterest']),
-  variant: PropTypes.oneOf(['andromeda', 'orion'])
+  size: PropTypes.oneOf(buttonSizes),
+  fit: PropTypes.oneOf(buttonFitOptions),
+  mobileFit: PropTypes.oneOf(buttonMobileFitOptions),
+  modifier: PropTypes.oneOf(buttonModifiers),
+  variant: PropTypes.oneOf(buttonVariants)
 };
 Button.defaultProps = {
   tag: 'button',
@@ -148,5 +125,7 @@ Button.defaultProps = {
   borderRadius: 0,
   size: 'regular',
   modifier: 'hydrogen',
-  variant: 'andromeda'
+  variant: 'orion',
+  fit: 'min-width',
+  mobileFit: null
 };

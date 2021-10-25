@@ -1,127 +1,100 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
+import COLORS from '../../../constants/colors-config'
 
-const StyledInfoLines = styled.div`
-  ${({ borderColor }) =>
-    borderColor &&
-    css`
-      border-top: ${pxToRem(1)} solid ${borderColor};
-      border-bottom: ${pxToRem(1)} solid ${borderColor};
+const StyledInfoLines = styled.dl`
+  &.k-InfoLines--withBorderRadius {
+    border-radius: ${pxToRem(8)};
+  }
 
-      & > * + * {
-        border-top: ${pxToRem(1)} solid ${borderColor};
-      }
-    `}
+  &.k-InfoLines--withLeftRightBorder {
+    border-left: ${pxToRem(1)} solid var(--InfoLines-borderColor);
+    border-right: ${pxToRem(1)} solid var(--InfoLines-borderColor);
 
-  ${({ withBorderRadius }) =>
-    withBorderRadius &&
-    css`
-      border-radius: ${pxToRem(8)};
-    `}
+    .k-InfoLines__line {
+      padding: ${pxToRem(10)} ${pxToRem(15)};
+    }
+  }
 
-  ${({ withLeftRightBorder, borderColor }) =>
-    withLeftRightBorder &&
-    borderColor &&
-    css`
-      border-left: ${pxToRem(1)} solid ${borderColor};
-      border-right: ${pxToRem(1)} solid ${borderColor};
-    `}
+  &:not(.k-InfoLines--withoutTopBottomBorder) {
+    border-top: ${pxToRem(1)} solid var(--InfoLines-borderColor);
+    border-bottom: ${pxToRem(1)} solid var(--InfoLines-borderColor);
+  }
 
-  ${({ withoutTopBottomBorder }) =>
-    withoutTopBottomBorder &&
-    css`
-      border-top: none;
-      border-bottom: none;
-    `}
-
-  ${({ withoutResponsive }) =>
-    withoutResponsive &&
-    css`
-      ${StyledLine} {
-        flex-direction: row;
-      }
-      ${StyledKey} {
-        flex: auto;
-      }
-    `}
-`
-
-const StyledLine = styled.div`
-  flex-direction: column;
-  display: flex;
-  padding: ${pxToRem(15)};
-
-  @media (min-width: ${ScreenConfig.M.min}px) {
+  .k-InfoLines__line {
+    box-sizing: border-box;
+    display: flex;
+    padding: ${pxToRem(10)} 0;
+    min-height: ${pxToRem(60)};
+    gap: ${pxToRem(5)} ${pxToRem(15)};
+    align-items: center;
     flex-direction: row;
+    justify-content: space-between;
+
+    &:not(:first-child) {
+      border-top: ${pxToRem(1)} solid var(--InfoLines-borderColor);
+    }
+  }
+
+  .k-InfoLines__key,
+  .k-InfoLines__value {
+    margin: 0;
+  }
+
+  &:not(.k-InfoLines--withoutResponsive) {
+    @media (max-width: ${ScreenConfig.S.max}px) {
+      .k-InfoLines__line {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .k-InfoLines__key {
+        flex: 0;
+      }
+    }
   }
 `
 
-const StyledKey = styled.span`
-  @media (min-width: ${ScreenConfig.M.min}px) {
-    flex: auto;
-  }
-`
-const StyledValue = styled.span`
-  margin: ${pxToRem(0)};
-`
-
-const InfoList = ({
-  title,
-  value,
-  id,
+export const InfoLines = ({
+  className,
+  style,
+  infos,
+  withBorderRadius,
+  withLeftRightBorder,
+  withoutTopBottomBorder,
+  withoutResponsive,
+  borderColor,
+  descriptionTagList,
   titleTagList,
   itemTagList,
   ...others
 }) => {
-  return React.Children.toArray(
-    <StyledLine {...others} key={id}>
-      <StyledKey as={titleTagList}>{title}</StyledKey>
-      <StyledValue as={itemTagList}>{value}</StyledValue>
-    </StyledLine>,
+  const TitleElement = titleTagList
+  const ItemElement = itemTagList
+
+  return (
+    <StyledInfoLines
+      className={classNames('k-Infolines', className, {
+        'k-InfoLines--withBorderRadius': withBorderRadius,
+        'k-InfoLines--withLeftRightBorder': withLeftRightBorder,
+        'k-InfoLines--withoutTopBottomBorder': withoutTopBottomBorder,
+        'k-InfoLines--withoutResponsive': withoutResponsive,
+      })}
+      style={{ ...style, '--InfoLines-borderColor': borderColor }}
+      as={descriptionTagList}
+      {...others}
+    >
+      {infos.map(info => (
+        <div className="k-InfoLines__line" key={info.id || info.key}>
+          <TitleElement className="k-InfoLines__key">{info.key}</TitleElement>
+          <ItemElement className="k-InfoLines__value">{info.value}</ItemElement>
+        </div>
+      ))}
+    </StyledInfoLines>
   )
-}
-
-export class InfoLines extends PureComponent {
-  render() {
-    const {
-      infos,
-      withBorderRadius,
-      withLeftRightBorder,
-      withoutTopBottomBorder,
-      withoutResponsive,
-      borderColor,
-      descriptionTagList,
-      titleTagList,
-      itemTagList,
-      ...others
-    } = this.props
-
-    return (
-      <StyledInfoLines
-        {...others}
-        as={descriptionTagList}
-        borderColor={borderColor}
-        withBorderRadius={withBorderRadius}
-        withLeftRightBorder={withLeftRightBorder}
-        withoutTopBottomBorder={withoutTopBottomBorder}
-        withoutResponsive={withoutResponsive}
-      >
-        {infos.map(info => (
-          <InfoList
-            key={info.id}
-            title={info.key}
-            value={info.value}
-            id={info.id}
-            titleTagList={titleTagList}
-            itemTagList={itemTagList}
-          />
-        ))}
-      </StyledInfoLines>
-    )
-  }
 }
 
 InfoLines.propTypes = {
@@ -137,7 +110,7 @@ InfoLines.propTypes = {
 }
 
 InfoLines.defaultProps = {
-  borderColor: '#eee',
+  borderColor: COLORS.line1,
   withBorderRadius: false,
   withLeftRightBorder: false,
   withoutTopBottomBorder: false,

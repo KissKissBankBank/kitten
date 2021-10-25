@@ -1,17 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { DatePicker } from './index'
-import { date, text, object, array } from '@storybook/addon-knobs'
-import { Container, Marger, COLORS } from '../../..'
+import { COLORS } from '../../..'
+import { DocsPage } from 'storybook/docs-page'
 
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      {children}
-    </Marger>
-  </Container>
-)
-
-const today = new Date()
 const styles = {
   header: {
     backgroundColor: COLORS.font1,
@@ -40,67 +31,94 @@ const styles = {
   },
 }
 
-const weekDays = [
-  'Dimanche',
-  'Lundi',
-  'Mardi',
-  'Mercredi',
-  'Jeudi',
-  'Vendredi',
-  'Samedi',
-]
-
-const months = [
-  'Janvier',
-  'Février',
-  'Mars',
-  'Avril',
-  'Mai',
-  'Juin',
-  'Juillet',
-  'Août',
-  'Septembre',
-  'Octobre',
-  'Novembre',
-  'Décembre',
-]
-
-class CustomInput extends Component {
-  render() {
-    return <input type="text" autoComplete="off" {...this.props} />
-  }
+const CustomInput = props => {
+  return <input type="text" autoComplete="off" {...props} />
 }
 
 export default {
   title: 'Form/DatePicker',
   component: DatePicker,
+  decorators: [story => <div className="story-Container">{story()}</div>],
+  args: {
+    selectedDay: new Date(),
+    locale: 'fr',
+    weekDays: [
+      'Dimanche',
+      'Lundi',
+      'Mardi',
+      'Mercredi',
+      'Jeudi',
+      'Vendredi',
+      'Samedi',
+    ],
+    months: [
+      'Janvier',
+      'Février',
+      'Mars',
+      'Avril',
+      'Mai',
+      'Juin',
+      'Juillet',
+      'Août',
+      'Septembre',
+      'Octobre',
+      'Novembre',
+      'Décembre',
+    ],
+    previousMonth: 'Mois précédent',
+    nextMonth: 'Mois suivant',
+    styles: styles,
+    datePickerProps: null,
+  },
+  argTypes: {
+    selectedDay: {
+      name: 'selectedDay',
+    },
+    locale: {
+      name: 'locale',
+    },
+    weekDays: {
+      name: 'weekDays',
+    },
+    months: {
+      name: 'months',
+    },
+    previousMonth: {
+      name: 'previousMonth',
+      description: 'Aria-label for previous month',
+    },
+    nextMonth: {
+      name: 'nextMonth',
+      description: 'Aria-label for next month',
+    },
+    styles: {
+      name: 'styles',
+      control: {
+        type: 'object',
+      },
+    },
+    datePickerProps: {
+      name: 'datePickerProps',
+      control: {
+        type: 'object',
+      },
+    },
+  },
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          filenames={['index.js', 'components/navbar.js']}
+          importString="DatePicker"
+        />
+      ),
+    },
+  },
 }
 
-export const WithTextInputWithUnit = () => {
-  return (
-    <StoryContainer>
-      <DatePicker
-        selectedDay={date('default selected Date', today)}
-        locale="fr"
-        weekDays={array('Week days', weekDays)}
-        months={array('Months', months)}
-        previousMonth={text('Aria-label for previous month', 'Mois suivant')}
-        nextMonth={text('Aria-label for next month', 'Mois précédent')}
-        styles={object('Styles', styles)}
-      />
-    </StoryContainer>
-  )
-}
+export const WithTextInputWithUnit = args => <DatePicker {...args} />
 
-export const WithCustomInput = () => {
-  return (
-    <StoryContainer>
-      <DatePicker
-        selectedDay={date('default selected Date', today)}
-        styles={object('Styles', styles)}
-      >
-        {CustomInput}
-      </DatePicker>
-    </StoryContainer>
-  )
-}
+export const WithCustomInput = args => (
+  <DatePicker {...args}>{CustomInput}</DatePicker>
+)

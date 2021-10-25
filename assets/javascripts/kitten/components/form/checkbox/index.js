@@ -124,7 +124,7 @@ const StyledCheckbox = styled.div`
   }
 
   .k-Form-Checkbox__content {
-    flex: 1 0 100%;
+    flex: 1 0 calc(100% - ${pxToRem(20 + 10)});
     margin: ${pxToRem(5)} 0 0 ${pxToRem(20 + 10)};
   }
 `
@@ -137,6 +137,7 @@ export const Checkbox = ({
   error,
   disabled,
   textProps,
+  labelProps,
   onLabelClick,
   indeterminate,
   label,
@@ -176,9 +177,14 @@ export const Checkbox = ({
         <Text
           tag="label"
           htmlFor={id}
-          className="k-Form-Checkbox__label"
           onClick={onLabelClick}
+          {...labelProps}
           {...textProps}
+          className={classNames(
+            'k-Form-Checkbox__label',
+            textProps?.className,
+            labelProps?.className,
+          )}
         >
           {children}
         </Text>
@@ -188,9 +194,14 @@ export const Checkbox = ({
         <Text
           tag="label"
           htmlFor={id}
-          className="k-Form-Checkbox__label"
           onClick={onLabelClick}
+          {...labelProps}
           {...textProps}
+          className={classNames(
+            'k-Form-Checkbox__label',
+            textProps?.className,
+            labelProps?.className,
+          )}
         >
           {label}
         </Text>
@@ -201,16 +212,23 @@ export const Checkbox = ({
           <Text
             tag="label"
             htmlFor={id}
-            className="k-Form-Checkbox__label"
             onClick={onLabelClick}
             weight="regular"
+            {...labelProps}
+            className={classNames(
+              'k-Form-Checkbox__label',
+              labelProps?.className,
+            )}
           >
             {label}
           </Text>
           <Text
-            className="k-Form-Checkbox__content"
             onClick={onLabelClick}
             {...textProps}
+            className={classNames(
+              'k-Form-Checkbox__content',
+              textProps?.className,
+            )}
           >
             {children}
           </Text>
@@ -223,14 +241,17 @@ export const Checkbox = ({
 Checkbox.defaultProps = {
   id: 'checkbox',
   textProps: {},
+  labelProps: {},
   indeterminate: false,
   error: false,
   disabled: false,
-  variant: 'andromeda',
+  variant: 'orion',
+  onLabelClick: () => {},
 }
 
 Checkbox.propTypes = {
   textProps: PropTypes.object,
+  labelProps: PropTypes.object,
   indeterminate: PropTypes.bool,
   error: PropTypes.bool,
   disabled: PropTypes.bool,
@@ -238,4 +259,5 @@ Checkbox.propTypes = {
   children: PropTypes.node,
   label: PropTypes.string,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
+  onLabelClick: PropTypes.func,
 }

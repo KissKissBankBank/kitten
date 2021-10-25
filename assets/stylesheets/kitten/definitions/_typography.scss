@@ -15,10 +15,6 @@
     line-height: k-number-definition(
       k-default(map-get($typography, 'line-height'), 1.5rem),
       $unit: 'rem'
-    ),
-    scale-multiplier: k-number-definition(
-      k-map-fetch($typography, 'scale-multiplier'),
-      $unit: 'none'
     )
   );
 }
