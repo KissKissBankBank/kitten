@@ -12,6 +12,8 @@ import {
   DragAndDropList,
   DRAG_AND_DROP_LIST_BUTTON_SHIFT,
   mq,
+  useWindowWidth,
+  ScreenConfig,
 } from 'kitten'
 
 const StyledDragAndDropList = styled(DragAndDropList)`
@@ -78,6 +80,9 @@ const RewardCardComponent = ({
 export const StoryWithReward = () => {
   const { ref, size } = useRewardSummaryCardResizeObserver()
 
+  // on KissKiss, use `viewportIsSOrLess` from `useMediaQuery()`
+  const windowWidth = useWindowWidth()
+
   return (
     <div ref={ref}>
       <Title
@@ -122,6 +127,7 @@ export const StoryWithReward = () => {
           },
           cancel: 'Réorganisation annulée.'
         }}
+        showHandle={windowWidth >= ScreenConfig.S.min}
       >
         <RewardCardComponent
           size={size}

@@ -8,6 +8,8 @@ import {
   DropdownMenu,
   EllipsisIcon,
   COLORS,
+  useWindowWidth,
+  ScreenConfig,
 } from 'kitten'
 
 export default {
@@ -37,7 +39,7 @@ const RewardCardComponent = ({
   id,
   ...props
 }) => (
-  <RewardSummaryCard id={id} {...props}>
+  <RewardSummaryCard id={id} {...props} onClick={() => action('Clicked')()}>
     <RewardSummaryCard.Image>
       <img alt="" {...imageProps} />
     </RewardSummaryCard.Image>
@@ -73,6 +75,9 @@ const RewardCardComponent = ({
 export const Default = () => {
   const { ref, size } = useRewardSummaryCardResizeObserver()
 
+  // on KissKiss, use `viewportIsSOrLess` from `useMediaQuery()`
+  const windowWidth = useWindowWidth()
+
   return (
     <div ref={ref}>
       <p id="container_label_element" className="k-u-weight-light k-u-margin-bottom-double">
@@ -97,6 +102,7 @@ export const Default = () => {
           },
           cancel: 'Réorganisation annulée.',
         }}
+        showHandle={windowWidth >= ScreenConfig.S.min}
       >
         <RewardCardComponent
           size={size}

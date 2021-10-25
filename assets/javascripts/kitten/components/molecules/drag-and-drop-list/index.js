@@ -32,6 +32,7 @@ const DragAndDropListStyles = createGlobalStyle`
 
     &.gu-transit {
       opacity: 0.2;
+      cursor: move;
     }
 
     &.gu-mirror {
@@ -46,12 +47,20 @@ const DragAndDropListStyles = createGlobalStyle`
       display: none !important;
     }
 
+    .k-DragAndDropList__item__child {
+      flex: 1 0 100%;
+      max-width: 100%;
+    }
+
+  }
+  .k-DragAndDropList__item--hasButton {
     .k-DragAndDropList__item__button {
       flex: 0 0 ${pxToRem(40)};
       padding: 0;
       width: ${pxToRem(40)};
       box-sizing: border-box;
       border-radius: ${pxToRem(20)};
+      cursor: move;
     }
 
     .k-DragAndDropList__item__child {
@@ -71,6 +80,7 @@ export const DragAndDropList = ({
   a11yContainerLabelElement,
   gap,
   style,
+  showHandle,
   ...props
 }) => {
   const listElement = useRef(null)
@@ -92,11 +102,18 @@ export const DragAndDropList = ({
   }
 
   useEffect(() => {
-    const dragon = new DragonDrop(listElement.current, dragonOptions)
+    if (!listElement) return
+    const dragon = new DragonDrop(
+      listElement.current,
+      {
+        ...dragonOptions,
+        handle: showHandle && 'button.k-DragAndDropList__item__button',
+      }
+    )
     dragon.on('dropped', handleChange)
 
     setDragonInstance(dragon)
-  }, [listElement])
+  }, [listElement, showHandle])
 
   useEffect(() => {
     if (!dragonInstance) return
@@ -104,7 +121,7 @@ export const DragAndDropList = ({
     if (children.length == 0) return
 
     dragonInstance.initElements(listElement.current)
-  }, [children, listElement])
+  }, [children, listElement, showHandle])
 
   const handleChange = (container, item) => {
     const newPosition = [...container.children].indexOf(item) + 1
@@ -130,18 +147,24 @@ export const DragAndDropList = ({
         {children?.length > 0 && [...children].map((child, index) => (
           <li
             key={child.props.id + index}
-            className="k-DragAndDropList__item"
+            className={classNames('k-DragAndDropList__item',
+              {
+                'k-DragAndDropList__item--hasButton': !!showHandle,
+              }
+            )}
             data-simple-name={child.props.simpleName}
             data-id={child.props.id}
           >
-            <Button
-              fit="content"
-              aria-label={a11yButtonLabel}
-              aria-describedby={a11yButtonDescElement}
-              className="k-DragAndDropList__item__button"
-            >
-              <MenuIcon width={10} height={10} />
-            </Button>
+            {!!showHandle && (
+              <Button
+                fit="content"
+                aria-label={a11yButtonLabel}
+                aria-describedby={a11yButtonDescElement}
+                className="k-DragAndDropList__item__button"
+              >
+                <MenuIcon width={10} height={10} />
+              </Button>
+            )}
             {React.cloneElement(child, {
               ...child.props,
               className: classNames(
@@ -169,6 +192,7 @@ DragAndDropList.defaultProps = {
   },
   onChange: () => {},
   gap: 15,
+  showHandle: true,
 }
 
 DragAndDropList.propTypes = {
@@ -181,4 +205,5 @@ DragAndDropList.propTypes = {
   }),
   onChange: PropTypes.func,
   gap: PropTypes.number,
+  showHandle: PropTypes.bool,
 }
