@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
 import DragonDrop from 'drag-on-drop'
 import { createGlobalStyle } from 'styled-components'
 
@@ -7,12 +8,16 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import { Button } from '../../../components/molecules/buttons/button'
 import { MenuIcon } from '../../../components/graphics/icons/menu-icon'
 
-const ListStyles = createGlobalStyle`
+export const BUTTON_SHIFT = pxToRem(40 + 15)
+
+const DragAndDropListStyles = createGlobalStyle`
   .k-DragAndDropList {
     display: flex;
     flex-direction: column;
-    gap: ${pxToRem(15)};
+    gap: var(--dragAndDropList-gap, ${pxToRem(15)});
     list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
   .k-DragAndDropList__item {
@@ -41,86 +46,138 @@ const ListStyles = createGlobalStyle`
       display: none !important;
     }
 
-    .k-DragAndDropList__button {
+    .k-DragAndDropList__item__button {
       flex: 0 0 ${pxToRem(40)};
-      min-width: fit-content;
       padding: 0;
       width: ${pxToRem(40)};
       box-sizing: border-box;
       border-radius: ${pxToRem(20)};
     }
-  }
 
+    .k-DragAndDropList__item__child {
+      flex: 1 0 calc(100% - ${BUTTON_SHIFT});
+      max-width: calc(100% - ${BUTTON_SHIFT});
+    }
+  }
 `
 
 export const DragAndDropList = ({
   children,
   className,
-  onChange = () => {},
+  onChange,
+  a11yButtonLabel,
+  a11yAnnouncement,
+  a11yButtonDescElement,
+  a11yContainerLabelElement,
+  gap,
+  style,
   ...props
 }) => {
   const listElement = useRef(null)
   const [dragonInstance, setDragonInstance] = useState(null)
 
   const dragonOptions = {
-    activeClass: 'button-active',
-    inactiveClass: 'button-inactive',
+    activeClass: 'k-DragAndDropList__item__button--active',
+    inactiveClass: 'k-DragAndDropList__item__button--inactive',
     announcement: {
+      grabbed: element => a11yAnnouncement.grabbed(element.dataset.simpleName),
+      dropped: element => a11yAnnouncement.dropped(element.dataset.simpleName),
+      reorder: (element, items) => {
+        const position = items.indexOf(element) + 1
+        const name = element.dataset.simpleName
+        return a11yAnnouncement.reorder(name, position, items.length)
+      },
+      cancel: a11yAnnouncement.cancel,
     },
   }
 
   useEffect(() => {
-    const dragon = new DragonDrop(listElement.current)
-    dragon
-      .on('grabbed', handleChange)
-      .on('dropped', handleChange)
-      .on('reorder', handleChange)
+    const dragon = new DragonDrop(listElement.current, dragonOptions)
+    dragon.on('dropped', handleChange)
 
     setDragonInstance(dragon)
   }, [listElement])
 
   useEffect(() => {
-    if (listElement && children.length > 0) {
-      dragonInstance?.initElements(listElement.current)
-    }
+    if (!dragonInstance) return
+    if (!listElement) return
+    if (children.length == 0) return
+
+    dragonInstance.initElements(listElement.current)
   }, [children, listElement])
 
-  const handleChange = (container, item) => {
-    let newChildrenList = []
-    let newIdList = []
-
-    container.children.forEach(child => {
-      newChildrenList.push(
-        child.querySelector('.k-DragAndDropList__button + *:last-child')
-      )
-      newIdList.push(
-        child.dataset?.id
-      )
+  const handleChange = container => {
+    const newIdList = [...container.children].map(child => {
+      return child.dataset?.id
     })
-    onChange(newChildrenList, newIdList)
+
+    onChange(newIdList)
   }
 
-  return(
+  return (
     <>
       <ol
         ref={listElement}
         className={classNames('k-DragAndDropList', className)}
+        aria-labelledby={a11yContainerLabelElement}
+        style={{
+          ...style,
+          '--dragAndDropList-gap': pxToRem(gap),
+        }}
+        {...props}
       >
-        {[...children].map((child, index) => (
+        {children?.length > 0 && [...children].map((child, index) => (
           <li
-            key={child.props['data-simple-name'] + index}
+            key={child.props.id + index}
             className="k-DragAndDropList__item"
-            data-simple-name={child.props['data-simple-name']}
-            data-id={child.props['data-id']}
+            data-simple-name={child.props.simpleName}
+            data-id={child.props.id}
           >
-            <Button aria-label="Reorder" className="k-DragAndDropList__button">
+            <Button
+              fit="content"
+              aria-label={a11yButtonLabel}
+              aria-describedby={a11yButtonDescElement}
+              className="k-DragAndDropList__item__button"
+            >
               <MenuIcon width={10} height={10} />
             </Button>
-            {child}
+            {React.cloneElement(child, {
+              ...child.props,
+              className: classNames(
+                child.props.className,
+                'k-DragAndDropList__item__child',
+              ),
+            })}
           </li>
         ))}
       </ol>
-      <ListStyles />
+      <DragAndDropListStyles />
     </>
   )
+}
+
+DragAndDropList.defaultProps = {
+  a11yButtonLabel: 'Reorder',
+  a11yAnnouncement: {
+    grabbed: name => `${name} grabbed`,
+    dropped: name => `${name} dropped`,
+    reorder: (name, position, length) => {
+      return `The rankings have been updated, ${name} is now ranked #${position} out of ${length}`
+    },
+    cancel: 'Reranking cancelled.',
+  },
+  onChange: () => {},
+  gap: 15,
+}
+
+DragAndDropList.propTypes = {
+  a11yButtonLabel: PropTypes.string,
+  a11yAnnouncement: PropTypes.shape({
+    grabbed: PropTypes.func,
+    dropped: PropTypes.func,
+    reorder: PropTypes.func,
+    cancel: PropTypes.string,
+  }),
+  onChange: PropTypes.func,
+  gap: PropTypes.number,
 }
