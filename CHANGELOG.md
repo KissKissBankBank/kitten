@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `Accordeon`: Better `className` and other props propagation.
 - Fix: `Alert`: Fix styles.
+- Feature: Tooling: Use `Dart Sass` instead of `LibSass`.
 
 ## [5.4.1] - 2021-10-22
 
