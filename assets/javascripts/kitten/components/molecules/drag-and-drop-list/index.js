@@ -106,12 +106,13 @@ export const DragAndDropList = ({
     dragonInstance.initElements(listElement.current)
   }, [children, listElement])
 
-  const handleChange = container => {
-    const newIdList = [...container.children].map(child => {
+  const handleChange = (container, item) => {
+    const newPosition = [...container.children].indexOf(item) + 1
+    const newList = [...container.children].map(child => {
       return child.dataset?.id
     })
 
-    onChange(newIdList)
+    onChange({ movedItem: item.dataset.id, newPosition, newList })
   }
 
   return (
