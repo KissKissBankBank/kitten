@@ -5,7 +5,7 @@ import { CrossIconNext } from '../../../components/graphics/icons-next/cross-ico
 import { IconBadge } from '../../../components/atoms/icon-badge'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import { ScreenConfig } from '../../../constants/screen-config'
+import { mq } from '../../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import classNames from 'classnames'
 
@@ -21,44 +21,71 @@ const AlertWrapper = styled.div`
   overflow: hidden;
   background-color: ${COLORS.primary5};
   color: ${COLORS.font1};
-  display: flex;
 
-  [href] {
-    color: ${COLORS.primary1};
+  display: flex;
+  align-items: center;
+
+  --alert-gap: ${pxToRem(10)};
+  gap: var(--alert-gap);
+  padding: ${pxToRem(18)} var(--alert-gap);
+
+  @media ${mq.tabletAndDesktop} {
+    --alert-gap: ${pxToRem(20)};
+  }
+
+  &.k-Alert--hasCloseButton {
+    --alert-close-width: calc(var(--alert-gap) + ${pxToRem(17)});
+  }
+  &.k-Alert--hasIcon {
+    --alert-icon-width: calc(var(--alert-gap) + ${pxToRem(30)});
+  }
+
+  &.k-Alert--center {
+    &.k-Alert--hasIcon:not(.k-Alert--hasCloseButton) .k-Alert__text {
+      padding-right: var(--alert-icon-width);
+    }
+
+    &.k-Alert--hasCloseButton:not(.k-Alert--hasIcon) .k-Alert__text {
+      padding-left: var(--alert-close-width);
+    }
+
+    &.k-Alert--hasCloseButton.k-Alert--hasIcon .k-Alert__text {
+      padding-right: calc(var(--alert-icon-width) - var(--alert-close-width));
+    }
+
+    .k-Alert__text {
+      text-align: center;
+      flex-basis: auto;
+    }
   }
 
   .k-Alert__text {
-    padding: ${pxToRem(18)} ${pxToRem(20)};
-    flex: 1 0 0;
+    flex: 1 0
+      calc(100% - var(--alert-close-width, 0px) - var(--alert-icon-width, 0px));
     font-size: ${stepToRem(-1)};
-    display: flex;
-    align-items: center;
   }
 
-  .k-Alert__iconBadge {
-    margin-right: ${pxToRem(10)};
-    background-color: ${COLORS.primary1};
-    border-color: ${COLORS.primary4};
-    min-width: ${pxToRem(24)};
-    min-height: ${pxToRem(24)};
-    border-radius: ${pxToRem(24)};
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      margin-right: ${pxToRem(20)};
+  .k-Alert__icon {
+    .k-Alert__iconBadge {
+      background-color: ${COLORS.primary1};
+      border-color: ${COLORS.primary4};
+      min-width: ${pxToRem(24)};
+      min-height: ${pxToRem(24)};
+      border-radius: ${pxToRem(24)};
     }
   }
 
-  button {
-    display: flex;
-    flex: 0 0 auto;
+  .k-Alert__closeButton {
+    flex: 0 0 ${pxToRem(17)};
     transition: all 0.2s ease;
+
+    display: flex;
     align-self: stretch;
     align-items: center;
-    padding-right: ${pxToRem(10)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      padding-right: ${pxToRem(20)};
-    }
+    margin: ${pxToRem(-18)} calc(var(--alert-gap) * -1);
+    padding: ${pxToRem(18)} var(--alert-gap);
+
     svg,
     svg path {
       transition: fill 0.2s ease;
@@ -71,7 +98,7 @@ const AlertWrapper = styled.div`
 
     &:focus {
       outline: ${COLORS.background1} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(-4)};
+      outline-offset: ${pxToRem(-2)};
     }
     &:focus:not(:focus-visible) {
       outline-color: transparent;
@@ -83,7 +110,7 @@ const AlertWrapper = styled.div`
 
   a {
     ${TYPOGRAPHY.fontStyles.bold};
-    color: inherit;
+    color: ${COLORS.primary1};
     text-decoration: underline;
   }
 
@@ -99,7 +126,7 @@ const AlertWrapper = styled.div`
       border-color: ${COLORS.tertiary2};
     }
 
-    button {
+    .k-Alert__closeButton {
       svg,
       svg path {
         fill: ${COLORS.valid};
@@ -123,7 +150,7 @@ const AlertWrapper = styled.div`
       border-color: ${COLORS.error3};
     }
 
-    button {
+    .k-Alert__closeButton {
       svg,
       svg path {
         fill: ${COLORS.error};
@@ -147,7 +174,7 @@ const AlertWrapper = styled.div`
       border-color: ${COLORS.orange};
     }
 
-    button {
+    .k-Alert__closeButton {
       svg,
       svg path {
         fill: ${COLORS.warning};
@@ -177,6 +204,7 @@ export const Alert = ({
   onAfterClose,
   icon,
   iconBadgeBorderColor,
+  center,
   ...others
 }) => {
   const [isTrashed, trashIt] = useState(false)
@@ -201,39 +229,40 @@ export const Alert = ({
       ref={alertRef}
       role="alert"
       className={classNames('k-Alert', className, {
+        'k-Alert--center': center,
         'k-Alert--success': success,
         'k-Alert--error': error,
         'k-Alert--warning': warning,
-        'k-Alert--hasCloseButton': closeButton,
+        'k-Alert--hasCloseButton': !!closeButton,
+        'k-Alert--hasIcon': !!icon,
         'k-Alert--shouldHide': !isMounted,
       })}
       {...others}
     >
-      <>
-        <div className="k-Alert__text">
-          {icon && (
-            <IconBadge
-              className="k-Alert__iconBadge"
-              children={icon}
-              border={{
-                width: 2,
-                color: iconBadgeBorderColor,
-                style: 'solid',
-              }}
-            />
-          )}
-          {children}
+      {!!icon && (
+        <div className="k-Alert__icon">
+          <IconBadge
+            className="k-Alert__iconBadge"
+            children={icon}
+            border={{
+              width: 2,
+              color: iconBadgeBorderColor,
+              style: 'solid',
+            }}
+          />
         </div>
+      )}
 
-        {closeButton && (
-          <button className="k-u-reset-button">
-            <CrossIconNext
-              onClick={() => setMounted(false)}
-              title={closeButtonLabel}
-            />
-          </button>
-        )}
-      </>
+      <div className="k-Alert__text">{children}</div>
+
+      {closeButton && (
+        <button className="k-Alert__closeButton k-u-reset-button">
+          <CrossIconNext
+            onClick={() => setMounted(false)}
+            title={closeButtonLabel}
+          />
+        </button>
+      )}
     </AlertWrapper>
   )
 }
@@ -248,6 +277,7 @@ Alert.propTypes = {
   onAfterClose: PropTypes.func,
   icon: PropTypes.node,
   iconBadgeBorderColor: PropTypes.string,
+  center: PropTypes.bool,
 }
 
 Alert.defaultProps = {
@@ -258,6 +288,7 @@ Alert.defaultProps = {
   closeButton: false,
   closeButtonLabel: 'Close',
   onAfterClose: () => {},
-  icon: '',
+  icon: null,
   iconBadgeBorderColor: COLORS.primary4,
+  center: false,
 }

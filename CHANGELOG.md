@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Alert`: Add `center` prop.
+- Fix: `Alert`: Fix flex regressions.
+
 ## [5.5.0] - 2021-10-26
 
 Feature:
