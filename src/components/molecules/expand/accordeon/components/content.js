@@ -9,7 +9,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Content = void 0;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -17,10 +21,14 @@ var _context = require("./context");
 
 var _typography = require("../../../../../helpers/utils/typography");
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var Content = function Content(_ref) {
   var id = _ref.id,
       children = _ref.children,
-      index = _ref.index;
+      index = _ref.index,
+      className = _ref.className,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["id", "children", "index", "className"]);
 
   var _useState = (0, _react.useState)(0),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -39,8 +47,8 @@ var Content = function Content(_ref) {
 
     setMaxHeight((contentEl === null || contentEl === void 0 ? void 0 : (_contentEl$current = contentEl.current) === null || _contentEl$current === void 0 ? void 0 : _contentEl$current.scrollHeight) || 0);
   }, [selectedItem, accordeonWidth]);
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "k-Accordeon__content",
+  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
+    className: (0, _classnames.default)('k-Accordeon__content', className),
     "aria-hidden": selectedItem !== index,
     ref: contentEl,
     style: {
@@ -48,7 +56,7 @@ var Content = function Content(_ref) {
     },
     id: "".concat(componentId, "-").concat(id, "_content"),
     "aria-labelledby": "".concat(componentId, "-").concat(id, "_header")
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, props), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Accordeon__content_marger"
   }, children), /*#__PURE__*/_react.default.createElement("div", null));
 };

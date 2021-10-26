@@ -9,7 +9,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Accordeon = void 0;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -53,7 +57,9 @@ var Accordeon = function Accordeon(_ref) {
       selectedItem = _ref.selectedItem,
       isAnimated = _ref.isAnimated,
       id = _ref.id,
-      onChange = _ref.onChange;
+      onChange = _ref.onChange,
+      className = _ref.className,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["closeOnClick", "variant", "children", "selectedItem", "isAnimated", "id", "onChange", "className"]);
   var items = (0, _reactElements.getReactElementsByType)({
     children: children,
     type: Accordeon.Item
@@ -102,12 +108,12 @@ var Accordeon = function Accordeon(_ref) {
     closeOnClick: closeOnClick,
     accordeonWidth: debouncedAccordeonWidth
   };
-  return /*#__PURE__*/_react.default.createElement(StyledAccordeon, {
-    className: (0, _classnames.default)('k-Accordeon', "k-Accordeon--".concat(variant), {
+  return /*#__PURE__*/_react.default.createElement(StyledAccordeon, (0, _extends2.default)({
+    className: (0, _classnames.default)('k-Accordeon', className, "k-Accordeon--".concat(variant), {
       'k-Accordeon--isAnimated': isAnimated
     }),
     ref: accordeonElement
-  }, /*#__PURE__*/_react.default.createElement(_context.Context.Provider, {
+  }, props), /*#__PURE__*/_react.default.createElement(_context.Context.Provider, {
     value: context
   }, items.map(function (item, index) {
     var elementId = item.props.id || "".concat(id, "-").concat(index);
