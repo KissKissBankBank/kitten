@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `Alert`: Fix styles.
 - Feature: Tooling: Use `Dart Sass` instead of `LibSass`.
 - Fix: `DropdownMenu`: Fix Safari display.
+- Fix: `DropdownSelect`: Fix combobox input width calculation.
 
 ## [5.4.1] - 2021-10-22
 
