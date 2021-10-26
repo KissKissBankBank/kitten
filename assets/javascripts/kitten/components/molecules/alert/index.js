@@ -15,6 +15,11 @@ const fadeOut = keyframes`
 `
 
 const AlertWrapper = styled.div`
+  --alert-gap: ${pxToRem(10)};
+  @media ${mq.tabletAndDesktop} {
+    --alert-gap: ${pxToRem(20)};
+  }
+
   ${TYPOGRAPHY.fontStyles.light};
   margin: ${pxToRem(10)};
   border-radius: ${pxToRem(8)};
@@ -24,14 +29,9 @@ const AlertWrapper = styled.div`
 
   display: flex;
   align-items: center;
-
-  --alert-gap: ${pxToRem(10)};
   gap: var(--alert-gap);
   padding: ${pxToRem(18)} var(--alert-gap);
 
-  @media ${mq.tabletAndDesktop} {
-    --alert-gap: ${pxToRem(20)};
-  }
 
   &.k-Alert--hasCloseButton {
     --alert-close-width: calc(var(--alert-gap) + ${pxToRem(17)});
