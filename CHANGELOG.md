@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `Alert`: Add `center` prop.
 - Fix: `Alert`: Fix flex regressions.
+- Feature: `DropdownPhoneSelect`: Add leading `0` to the number format.
 
 ## [5.5.0] - 2021-10-26
 
