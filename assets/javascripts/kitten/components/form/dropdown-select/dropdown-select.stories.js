@@ -141,7 +141,7 @@ const args = {
   menuZIndex: 1000,
   modifier: 'hydrogen',
   direction: 'down',
-  arrowPosition: 'right',
+  arrowPosition: 'left',
 }
 
 export default {
