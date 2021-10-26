@@ -32,7 +32,6 @@ const AlertWrapper = styled.div`
   gap: var(--alert-gap);
   padding: ${pxToRem(18)} var(--alert-gap);
 
-
   &.k-Alert--hasCloseButton {
     --alert-close-width: calc(var(--alert-gap) + ${pxToRem(17)});
   }
