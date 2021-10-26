@@ -60,7 +60,11 @@ const DragAndDropListStyles = createGlobalStyle`
       width: ${pxToRem(40)};
       box-sizing: border-box;
       border-radius: ${pxToRem(20)};
-      cursor: move;
+      cursor: grab;
+    }
+
+    &.gu-mirror .k-DragAndDropList__item__button {
+      cursor: grabbing;
     }
 
     .k-DragAndDropList__item__child {
@@ -87,8 +91,8 @@ export const DragAndDropList = ({
   const [dragonInstance, setDragonInstance] = useState(null)
 
   const dragonOptions = {
-    activeClass: 'k-DragAndDropList__item__button--active',
-    inactiveClass: 'k-DragAndDropList__item__button--inactive',
+    activeClass: 'k-DragAndDropList__item--active',
+    inactiveClass: 'k-DragAndDropList__item--inactive',
     announcement: {
       grabbed: element => a11yAnnouncement.grabbed(element.dataset.simpleName),
       dropped: element => a11yAnnouncement.dropped(element.dataset.simpleName),
