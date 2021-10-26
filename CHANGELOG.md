@@ -5,14 +5,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `DragAndDropList`: Add component.
-- Feature: `Accordeon`: Better `className` and other props propagation.
-- Fix: `Alert`: Fix styles.
-- Fix: `DropdownMenu`: Fix Safari display.
-- Fix: `DropdownSelect`: Fix combobox input width calculation.
+
+## [5.5.0] - 2021-10-26
+
+Feature:
+
+- `Accordeon`: Better `className` and other props propagation.
+
+Fixes:
+
+- `Alert`: Fix styles.
+- `DropdownMenu`: Fix Safari display.
+- `DropdownSelect`: Fix combobox input width calculation.
 
 ## [5.4.1] - 2021-10-22
 
-- Fix: `DashboardMenu`: Style fixes.
+Fix:
+
+- `DashboardMenu`: Style fixes.
 
 ## [5.4.0] - 2021-10-20
 
