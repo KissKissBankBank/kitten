@@ -210,7 +210,7 @@ const rawCountries = [
   ['Ethiopia', ['africa'], 'et', '251'],
   ['Fiji', ['oceania'], 'fj', '679'],
   ['Finland', ['europe', 'eu-union', 'baltic'], 'fi', '358', '.. ... .. ..'],
-  ['France', ['europe', 'eu-union'], 'fr', '33', '. .. .. .. ..'],
+  ['France', ['europe', 'eu-union'], 'fr', '33', '.. .. .. .. ..'],
   ['French Guiana', ['america', 'south-america'], 'gf', '594'],
   ['French Polynesia', ['oceania'], 'pf', '689'],
   ['Gabon', ['africa'], 'ga', '241'],
