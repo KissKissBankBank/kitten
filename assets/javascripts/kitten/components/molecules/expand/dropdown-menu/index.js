@@ -27,16 +27,21 @@ const StyledDropdownMenu = styled.details`
     touch-callout: none;
     user-select: none;
     cursor: pointer;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     ::-webkit-details-marker,
     ::before {
       display: none;
     }
+  }
+  .k-DropdownMenu__button__inside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &[open] > .k-DropdownMenu__button::before {
@@ -247,7 +252,11 @@ export const DropdownMenu = ({
       onKeyDown={handleKeyDown}
       {...rest}
     >
-      <summary className="k-DropdownMenu__button">{button({ open })}</summary>
+      <summary className="k-DropdownMenu__button">
+        <span className="k-DropdownMenu__button__inside">
+          {button({ open })}
+        </span>
+      </summary>
       <ArrowContainer
         color={COLORS.font1}
         size={8}
