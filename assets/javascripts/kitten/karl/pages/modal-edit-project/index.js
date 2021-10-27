@@ -8,6 +8,7 @@ import { InfiniteIconNext } from '../../../components/graphics/icons-next/infini
 import { ChronoIconNext } from '../../../components/graphics/icons-next/chrono-icon-next'
 import { CheckedIcon } from '../../../components/graphics/icons/checked-icon'
 import { pxToRem } from '../../../helpers/utils/typography'
+import classNames from 'classnames'
 
 const StyledContainer = styled.div`
   display: flex;
@@ -29,7 +30,11 @@ const ModalEditProject = () => {
             <Title
               tag="h1"
               modifier="quaternary"
-              className="k-u-align-left k-u-margin-top-none"
+              className={classNames(
+                'k-u-align-left@m-up',
+                'k-u-align-center@s-down',
+                'k-u-margin-top-none',
+              )}
             >
               Créer un nouveau projet
             </Title>
@@ -71,7 +76,7 @@ const ModalEditProject = () => {
                           size="micro"
                           className="k-u-margin-none"
                         >
-                          (ex :&nbsp;1€/mois)
+                          (ex&nbsp;: 1€/mois)
                         </Text>
                       </Text>
                     </div>
@@ -89,7 +94,7 @@ const ModalEditProject = () => {
                           size="micro"
                           className="k-u-margin-none"
                         >
-                        (ex :&nbsp;un magazine par trimestre)
+                          (ex&nbsp;: un magazine par trimestre)
                         </Text>
                       </Text>
                     </div>
@@ -139,7 +144,7 @@ const ModalEditProject = () => {
                           size="micro"
                           className="k-u-margin-none"
                         >
-                          (ex:&nbsp;5€)
+                          (ex&nbsp;: 5€)
                         </Text>
                       </Text>
                     </div>
@@ -157,7 +162,7 @@ const ModalEditProject = () => {
                           size="micro"
                           className="k-u-margin-none"
                         >
-                        (ex :&nbsp;un livre)
+                        (ex&nbsp;: un livre)
                         </Text>
                       </Text>
                     </div>
@@ -175,7 +180,7 @@ const ModalEditProject = () => {
                           size="micro"
                           className="k-u-margin-none"
                         >
-                        (ex :&nbsp;un livre)
+                        (ex&nbsp;: un livre)
                         </Text>
                       </Text>
                     </div>
@@ -189,7 +194,6 @@ const ModalEditProject = () => {
               </Modal.Paragraph>
             </GridCol>
           </Grid>
-
         </>
       )}
     </Modal>
