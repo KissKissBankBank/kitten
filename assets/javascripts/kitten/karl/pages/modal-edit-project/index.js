@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Grid, GridCol } from '../../../components/layout/grid'
+// import { Grid, GridCol } from '../../../components/layout/grid'
 import { Modal } from '../../../components/molecules/modal-next'
 import { Text } from '../../../components/atoms/typography/text'
 import { Title } from '../../../components/atoms/typography/title'
@@ -9,6 +9,7 @@ import { ChronoIconNext } from '../../../components/graphics/icons-next/chrono-i
 import { CheckedIcon } from '../../../components/graphics/icons/checked-icon'
 import { pxToRem } from '../../../helpers/utils/typography'
 import classNames from 'classnames'
+import { COLORS } from '../../..'
 
 const StyledContainer = styled.div`
   display: flex;
@@ -39,16 +40,17 @@ const ModalEditProject = () => {
               Créer un nouveau projet
             </Title>
           </Modal.Title>
-          <Grid>
-            <GridCol col-s="6">
+          {/* <Grid>
+            <GridCol col-s="6"> */}
+            <Modal.Block>
               <Modal.Paragraph
                 className="k-u-margin-left-double k-u-margin-right-double"
               >
-                <InfiniteIconNext width="47" height="47" color="#bae8fd" />
+                <InfiniteIconNext width="47" height="47" color={COLORS.primary4} />
                 <Title
                   tag="p"
                   modifier="senary"
-                  cssColor="#19b4fa"
+                  cssColor={COLORS.primary1}
                   className="k-u-margin-top-none k-u-margin-bottom-double"
                 >
                   Don permanent
@@ -65,14 +67,14 @@ const ModalEditProject = () => {
                     durée grâce au système de&nbsp;:
                   </Text>
                   <StyledContainer>
-                    <CheckedIcon color="#19b4fa" width="12" height="12" />
+                    <CheckedIcon color={COLORS.primary1} width="12" height="12" />
                     <div className="k-u-margin-left-single">
                       <Text weight="bold" size="tiny" color="font1">
                         Don libre récurrent
                         <Text
                           tag="p"
                           weight="light"
-                          cssColor="#636363"
+                          cssColor={COLORS.grey1}
                           size="micro"
                           className="k-u-margin-none"
                         >
@@ -83,14 +85,14 @@ const ModalEditProject = () => {
                   </StyledContainer>
                   
                   <StyledContainer>
-                    <CheckedIcon color="#19b4fa" width="12" height="12" />
+                    <CheckedIcon color={COLORS.primary1} width="12" height="12" />
                     <div className="k-u-margin-left-single">
                       <Text weight="bold" size="tiny" color="font1">
                         Abonnement contre contrepartie
                         <Text
                           tag="p"
                           weight="light"
-                          cssColor="#636363"
+                          cssColor={COLORS.grey1}
                           size="micro"
                           className="k-u-margin-none"
                         >
@@ -106,17 +108,18 @@ const ModalEditProject = () => {
                 </Modal.Button>
               </div>
               </Modal.Paragraph>
-            </GridCol>
-
-            <GridCol col-s="6">
+            {/* </GridCol>*/}
+            </Modal.Block>
+            <Modal.Block>
+            {/* <GridCol col-s="6"> */}
               <Modal.Paragraph
                 className="k-u-margin-left-double k-u-margin-right-double"
               >
-                <ChronoIconNext width="40" height="45" color="#bae8fd" />
+                <ChronoIconNext width="40" height="45" color={COLORS.primary4} />
                 <Title
                   tag="p"
                   modifier="senary"
-                  cssColor="#19b4fa"
+                  cssColor={COLORS.primary1}
                   className="k-u-margin-top-none"
                 >
                   Campagne
@@ -133,14 +136,14 @@ const ModalEditProject = () => {
                     période donnée grâce au système de&nbsp;:
                   </Text>
                   <StyledContainer>
-                    <CheckedIcon color="#19b4fa" width="12" height="12" />
+                    <CheckedIcon color={COLORS.primary1} width="12" height="12" />
                     <div className="k-u-margin-left-single">
                       <Text weight="bold" size="tiny" color="font1">
                         Don libre récurrent
                         <Text
                           tag="p"
                           weight="light"
-                          cssColor="#636363"
+                          cssColor={COLORS.grey1}
                           size="micro"
                           className="k-u-margin-none"
                         >
@@ -151,14 +154,14 @@ const ModalEditProject = () => {
                   </StyledContainer>
                   
                   <StyledContainer>
-                    <CheckedIcon color="#19b4fa" width="12" height="12" />
+                    <CheckedIcon color={COLORS.primary1} width="12" height="12" />
                     <div className="k-u-margin-left-single">
                       <Text weight="bold" size="tiny" color="font1">
                         Don contre contrepartie
                         <Text
                           tag="p"
                           weight="light"
-                          cssColor="#636363"
+                          cssColor={COLORS.grey1}
                           size="micro"
                           className="k-u-margin-none"
                         >
@@ -169,14 +172,14 @@ const ModalEditProject = () => {
                   </StyledContainer>
 
                   <StyledContainer>
-                    <CheckedIcon color="#19b4fa" width="12" height="12" />
+                    <CheckedIcon color={COLORS.primary1} width="12" height="12" />
                     <div className="k-u-margin-left-single">
                       <Text weight="bold" size="tiny" color="font1">
                         Prévente
                         <Text
                           tag="p"
                           weight="light"
-                          cssColor="#636363"
+                          cssColor={COLORS.grey1}
                           size="micro"
                           className="k-u-margin-none"
                         >
@@ -192,8 +195,9 @@ const ModalEditProject = () => {
                 </Modal.Button>
               </div>
               </Modal.Paragraph>
-            </GridCol>
-          </Grid>
+            </Modal.Block>
+            {/* </GridCol>
+          </Grid> */}
         </>
       )}
     </Modal>
