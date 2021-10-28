@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-// import { Grid, GridCol } from '../../../components/layout/grid'
+import { Grid, GridCol } from '../../../components/layout/grid'
 import { Modal } from '../../../components/molecules/modal-next'
 import { Text } from '../../../components/atoms/typography/text'
 import { Title } from '../../../components/atoms/typography/title'
@@ -40,9 +40,8 @@ const ModalEditProject = () => {
               Créer un nouveau projet
             </Title>
           </Modal.Title>
-          {/* <Grid>
-            <GridCol col-s="6"> */}
-            <Modal.Block>
+          <Grid>
+            <GridCol col-s="6">
               <Modal.Paragraph
                 className="k-u-margin-left-double k-u-margin-right-double"
               >
@@ -61,7 +60,7 @@ const ModalEditProject = () => {
                     size="tiny"
                     color="font1"
                     className="k-u-margin-none"
-                    lineHeight="normal"
+                    lineHeight="1.3"
                   >
                     La campagne vous permet de récolter des fonds sur la
                     durée grâce au système de&nbsp;:
@@ -69,13 +68,14 @@ const ModalEditProject = () => {
                   <StyledContainer>
                     <CheckedIcon color={COLORS.primary1} width="12" height="12" />
                     <div className="k-u-margin-left-single">
-                      <Text weight="bold" size="tiny" color="font1">
+                      <Text weight="bold" size="tiny" color="font1" lineHeight="1.3">
                         Don libre récurrent
                         <Text
                           tag="p"
                           weight="light"
                           cssColor={COLORS.grey1}
                           size="micro"
+                          lineHeight="1.3"
                           className="k-u-margin-none"
                         >
                           (ex&nbsp;: 1€/mois)
@@ -87,13 +87,14 @@ const ModalEditProject = () => {
                   <StyledContainer>
                     <CheckedIcon color={COLORS.primary1} width="12" height="12" />
                     <div className="k-u-margin-left-single">
-                      <Text weight="bold" size="tiny" color="font1">
+                      <Text weight="bold" size="tiny" color="font1" lineHeight="1.3">
                         Abonnement contre contrepartie
                         <Text
                           tag="p"
                           weight="light"
                           cssColor={COLORS.grey1}
                           size="micro"
+                          lineHeight="1.3"
                           className="k-u-margin-none"
                         >
                           (ex&nbsp;: un magazine par trimestre)
@@ -108,10 +109,9 @@ const ModalEditProject = () => {
                 </Modal.Button>
               </div>
               </Modal.Paragraph>
-            {/* </GridCol>*/}
-            </Modal.Block>
-            <Modal.Block>
-            {/* <GridCol col-s="6"> */}
+            </GridCol>
+            
+            <GridCol col-s="6">
               <Modal.Paragraph
                 className="k-u-margin-left-double k-u-margin-right-double"
               >
@@ -130,7 +130,7 @@ const ModalEditProject = () => {
                     size="tiny"
                     color="font1"
                     className="k-u-margin-none"
-                    lineHeight="normal"
+                    lineHeight="1.3"
                   >
                     La campagne vous permet de récolter des fonds sur une
                     période donnée grâce au système de&nbsp;:
@@ -138,13 +138,14 @@ const ModalEditProject = () => {
                   <StyledContainer>
                     <CheckedIcon color={COLORS.primary1} width="12" height="12" />
                     <div className="k-u-margin-left-single">
-                      <Text weight="bold" size="tiny" color="font1">
+                      <Text weight="bold" size="tiny" color="font1" lineHeight="1.3">
                         Don libre récurrent
                         <Text
                           tag="p"
                           weight="light"
                           cssColor={COLORS.grey1}
                           size="micro"
+                          lineHeight="1.3"
                           className="k-u-margin-none"
                         >
                           (ex&nbsp;: 5€)
@@ -156,13 +157,14 @@ const ModalEditProject = () => {
                   <StyledContainer>
                     <CheckedIcon color={COLORS.primary1} width="12" height="12" />
                     <div className="k-u-margin-left-single">
-                      <Text weight="bold" size="tiny" color="font1">
+                      <Text weight="bold" size="tiny" color="font1" lineHeight="1.3">
                         Don contre contrepartie
                         <Text
                           tag="p"
                           weight="light"
                           cssColor={COLORS.grey1}
                           size="micro"
+                          lineHeight="1.3"
                           className="k-u-margin-none"
                         >
                         (ex&nbsp;: un livre)
@@ -174,13 +176,14 @@ const ModalEditProject = () => {
                   <StyledContainer>
                     <CheckedIcon color={COLORS.primary1} width="12" height="12" />
                     <div className="k-u-margin-left-single">
-                      <Text weight="bold" size="tiny" color="font1">
+                      <Text weight="bold" size="tiny" color="font1" lineHeight="1.3">
                         Prévente
                         <Text
                           tag="p"
                           weight="light"
                           cssColor={COLORS.grey1}
                           size="micro"
+                          lineHeight="1.3"
                           className="k-u-margin-none"
                         >
                         (ex&nbsp;: un livre)
@@ -195,9 +198,8 @@ const ModalEditProject = () => {
                 </Modal.Button>
               </div>
               </Modal.Paragraph>
-            </Modal.Block>
-            {/* </GridCol>
-          </Grid> */}
+            </GridCol>
+          </Grid> 
         </>
       )}
     </Modal>
