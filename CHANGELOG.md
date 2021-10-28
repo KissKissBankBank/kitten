@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `RadioButtonSet`: Add `labelProps` prop, propagated to label.
+
 ## [5.6.0] - 2021-10-28
 
 Feature:
