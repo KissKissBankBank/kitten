@@ -6,7 +6,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
   disabled={false}
 >
   <legend
-    className="sc-bwzfXH eTTkzV k-Label k-Form-RadioButtonSet__label k-Label--normal"
+    className="sc-bwzfXH KMlEy k-Label k-Form-RadioButtonSet__label k-Label--normal"
     onClick={[Function]}
   >
     Label
@@ -88,7 +88,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
   disabled={false}
 >
   <legend
-    className="sc-bwzfXH eTTkzV k-Label k-Form-RadioButtonSet__label k-Label--normal"
+    className="sc-bwzfXH KMlEy k-Label k-Form-RadioButtonSet__label k-Label--normal"
     onClick={[Function]}
   >
     Label test

@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `DropdownPhoneSelect`: Add leading `0` to the number format.
+- Fix: `Label`: Fix display.
 
 ## [5.5.0] - 2021-10-26
 
