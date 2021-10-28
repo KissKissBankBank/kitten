@@ -13,8 +13,6 @@ const StyledLabel = styled.label`
   ${TYPOGRAPHY.fontStyles.regular}
   cursor: pointer;
   font-size: ${stepToRem(-1)};
-  display: flex;
-  align-items: center;
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     font-size: ${stepToRem(0)};
@@ -39,6 +37,7 @@ const StyledLabel = styled.label`
     width: var(--dot-width);
     height: var(--dot-width);
     background-color: var(--dot-background-color);
+    vertical-align: middle;
     display: inline-block;
     border-radius: 50%;
   }

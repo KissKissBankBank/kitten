@@ -4,7 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `DropdownPhoneSelect`: Add leading `0` to the number format.
+- Fix: `HeaderNav`: Fix user menu warning in console.
+
+## [5.6.0] - 2021-10-28
+
+Feature:
+
+- `Alert`: Add `center` prop.
+
+Fixes
+
+- `Alert`: Fix flex regressions.
+- `Label`: Fix display.
 
 ## [5.5.0] - 2021-10-26
 
