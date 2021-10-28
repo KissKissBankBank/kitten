@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `HeaderNav`: Fix user menu warning in console.
+
 ## [5.6.0] - 2021-10-28
 
 Feature:
