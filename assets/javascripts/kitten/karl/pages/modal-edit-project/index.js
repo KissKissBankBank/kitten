@@ -55,171 +55,173 @@ const ModalEditProject = () => {
                 Créer un nouveau projet
               </Title>
             </Modal.Title>
-            <Grid>
-              <GridCol col-s="6">
-                <Modal.Paragraph
-                  className="k-u-margin-left-double k-u-margin-right-double"
-                >
-                  <InfiniteIconNext width="47" height="47" color={COLORS.primary4} />
-                  <Title
-                    tag="p"
-                    modifier="senary"
-                    className="k-u-margin-top-none k-u-margin-bottom-double"
+            <Modal.Block>
+              <Grid>
+                <GridCol col-s="6">
+                  <Modal.Paragraph
+                    className="k-u-margin-left-double k-u-margin-right-double"
                   >
-                    Don permanent
-                  </Title>
-                  <div className="k-u-align-left">
-                    <Text
+                    <InfiniteIconNext width="47" height="47" color={COLORS.primary4} />
+                    <Title
                       tag="p"
-                      size="tiny"
-                      color="font1"
-                      className="k-u-margin-none"
+                      modifier="senary"
+                      className="k-u-margin-top-none k-u-margin-bottom-double"
                     >
-                      La campagne vous permet de récolter des fonds sur la
-                      durée grâce au système de&nbsp;:
-                    </Text>
-                    <div className="k-ModalEditProject--container">
-                      <CheckedIcon color={COLORS.primary1} width="12" height="12" />
-                      <div className="k-u-margin-left-single">
-                        <Text weight="bold" size="tiny" color="font1">
-                          Don libre récurrent
-                          <Text
-                            tag="p"
-                            weight="light"
-                            cssColor={COLORS.grey1}
-                            size="micro"
-                            className="k-u-margin-none"
-                          >
-                            (ex&nbsp;: 1€/mois)
+                      Don permanent
+                    </Title>
+                    <div className="k-u-align-left">
+                      <Text
+                        tag="p"
+                        size="tiny"
+                        color="font1"
+                        className="k-u-margin-none"
+                      >
+                        La campagne vous permet de récolter des fonds sur la
+                        durée grâce au système de&nbsp;:
+                      </Text>
+                      <div className="k-ModalEditProject--container">
+                        <CheckedIcon color={COLORS.primary1} width="12" height="12" />
+                        <div className="k-u-margin-left-single">
+                          <Text weight="bold" size="tiny" color="font1">
+                            Don libre récurrent
+                            <Text
+                              tag="p"
+                              weight="light"
+                              cssColor={COLORS.grey1}
+                              size="micro"
+                              className="k-u-margin-none"
+                            >
+                              (ex&nbsp;: 1€/mois)
+                            </Text>
                           </Text>
-                        </Text>
+                        </div>
+                      </div>
+                      
+                      <div className="k-ModalEditProject--container">
+                        <CheckedIcon color={COLORS.primary1} width="12" height="12" />
+                        <div className="k-u-margin-left-single">
+                          <Text
+                            weight="bold"
+                            size="tiny"
+                            color="font1"
+                          >
+                            Abonnement contre contrepartie
+                            <Text
+                              tag="p"
+                              weight="light"
+                              cssColor={COLORS.grey1}
+                              size="micro"
+                              className="k-u-margin-none"
+                            >
+                              (ex&nbsp;: un magazine par trimestre)
+                            </Text>
+                          </Text>
+                        </div>
                       </div>
                     </div>
-                    
-                    <div className="k-ModalEditProject--container">
-                      <CheckedIcon color={COLORS.primary1} width="12" height="12" />
-                      <div className="k-u-margin-left-single">
-                        <Text
-                          weight="bold"
-                          size="tiny"
-                          color="font1"
-                        >
-                          Abonnement contre contrepartie
-                          <Text
-                            tag="p"
-                            weight="light"
-                            cssColor={COLORS.grey1}
-                            size="micro"
-                            className="k-u-margin-none"
-                          >
-                            (ex&nbsp;: un magazine par trimestre)
-                          </Text>
-                        </Text>
-                      </div>
-                    </div>
+                    <div className="k-u-align-center k-u-margin-top-double">
+                    <Modal.Button
+                      modifier="helium"
+                      fit="content"
+                      size="tiny"
+                      className="k-ModalEditProject--button"
+                    >
+                      Enregistrer
+                    </Modal.Button>
                   </div>
-                  <div className="k-u-align-center k-u-margin-top-double">
-                  <Modal.Button
-                    modifier="helium"
-                    fit="content"
-                    size="tiny"
-                    className="k-ModalEditProject--button"
+                  </Modal.Paragraph>
+                </GridCol>
+                
+                <GridCol col-s="6">
+                  <Modal.Paragraph
+                    className="k-u-margin-left-double k-u-margin-right-double"
                   >
-                    Enregistrer
-                  </Modal.Button>
-                </div>
-                </Modal.Paragraph>
-              </GridCol>
-              
-              <GridCol col-s="6">
-                <Modal.Paragraph
-                  className="k-u-margin-left-double k-u-margin-right-double"
-                >
-                  <ChronoIconNext width="40" height="45" color={COLORS.primary4} />
-                  <Title
-                    tag="p"
-                    modifier="senary"
-                    className="k-u-margin-top-none"
-                  >
-                    Campagne
-                  </Title>
-                  <div className="k-u-align-left">
-                    <Text
+                    <ChronoIconNext width="40" height="45" color={COLORS.primary4} />
+                    <Title
                       tag="p"
-                      size="tiny"
-                      color="font1"
-                      className="k-u-margin-none"
+                      modifier="senary"
+                      className="k-u-margin-top-none"
                     >
-                      La campagne vous permet de récolter des fonds sur une
-                      période donnée grâce au système de&nbsp;:
-                    </Text>
-                    <div className="k-ModalEditProject--container">
-                      <CheckedIcon color={COLORS.primary1} width="12" height="12" />
-                      <div className="k-u-margin-left-single">
-                        <Text weight="bold" size="tiny" color="font1">
-                          Don libre récurrent
-                          <Text
-                            tag="p"
-                            weight="light"
-                            cssColor={COLORS.grey1}
-                            size="micro"
-                            className="k-u-margin-none"
-                          >
-                            (ex&nbsp;: 5€)
+                      Campagne
+                    </Title>
+                    <div className="k-u-align-left">
+                      <Text
+                        tag="p"
+                        size="tiny"
+                        color="font1"
+                        className="k-u-margin-none"
+                      >
+                        La campagne vous permet de récolter des fonds sur une
+                        période donnée grâce au système de&nbsp;:
+                      </Text>
+                      <div className="k-ModalEditProject--container">
+                        <CheckedIcon color={COLORS.primary1} width="12" height="12" />
+                        <div className="k-u-margin-left-single">
+                          <Text weight="bold" size="tiny" color="font1">
+                            Don libre récurrent
+                            <Text
+                              tag="p"
+                              weight="light"
+                              cssColor={COLORS.grey1}
+                              size="micro"
+                              className="k-u-margin-none"
+                            >
+                              (ex&nbsp;: 5€)
+                            </Text>
                           </Text>
-                        </Text>
+                        </div>
                       </div>
-                    </div>
-                    
-                    <div className="k-ModalEditProject--container">
-                      <CheckedIcon color={COLORS.primary1} width="12" height="12" />
-                      <div className="k-u-margin-left-single">
-                        <Text weight="bold" size="tiny" color="font1">
-                          Don contre contrepartie
-                          <Text
-                            tag="p"
-                            weight="light"
-                            cssColor={COLORS.grey1}
-                            size="micro"
-                            className="k-u-margin-none"
-                          >
-                          (ex&nbsp;: un livre)
+                      
+                      <div className="k-ModalEditProject--container">
+                        <CheckedIcon color={COLORS.primary1} width="12" height="12" />
+                        <div className="k-u-margin-left-single">
+                          <Text weight="bold" size="tiny" color="font1">
+                            Don contre contrepartie
+                            <Text
+                              tag="p"
+                              weight="light"
+                              cssColor={COLORS.grey1}
+                              size="micro"
+                              className="k-u-margin-none"
+                            >
+                            (ex&nbsp;: un livre)
+                            </Text>
                           </Text>
-                        </Text>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="k-ModalEditProject--container">
-                      <CheckedIcon color={COLORS.primary1} width="12" height="12" />
-                      <div className="k-u-margin-left-single">
-                        <Text weight="bold" size="tiny" color="font1">
-                          Prévente
-                          <Text
-                            tag="p"
-                            weight="light"
-                            cssColor={COLORS.grey1}
-                            size="micro"
-                            className="k-u-margin-none"
-                          >
-                          (ex&nbsp;: un livre)
+                      <div className="k-ModalEditProject--container">
+                        <CheckedIcon color={COLORS.primary1} width="12" height="12" />
+                        <div className="k-u-margin-left-single">
+                          <Text weight="bold" size="tiny" color="font1">
+                            Prévente
+                            <Text
+                              tag="p"
+                              weight="light"
+                              cssColor={COLORS.grey1}
+                              size="micro"
+                              className="k-u-margin-none"
+                            >
+                            (ex&nbsp;: un livre)
+                            </Text>
                           </Text>
-                        </Text>
+                        </div>
                       </div>
                     </div>
+                    <div className="k-u-align-center k-u-margin-top-double">
+                    <Modal.Button
+                      modifier="helium"
+                      fit="content"
+                      size="tiny"
+                      className="k-ModalEditProject--button"
+                    >
+                      Enregistrer
+                    </Modal.Button>
                   </div>
-                  <div className="k-u-align-center k-u-margin-top-double">
-                  <Modal.Button
-                    modifier="helium"
-                    fit="content"
-                    size="tiny"
-                    className="k-ModalEditProject--button"
-                  >
-                    Enregistrer
-                  </Modal.Button>
-                </div>
-                </Modal.Paragraph>
-              </GridCol>
-            </Grid> 
+                  </Modal.Paragraph>
+                </GridCol>
+              </Grid>
+            </Modal.Block>
           </>
         )}
       </Modal>
