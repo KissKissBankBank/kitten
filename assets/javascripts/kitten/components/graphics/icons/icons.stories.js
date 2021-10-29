@@ -114,7 +114,7 @@ const Container = styled.div`
 const Group = styled(({ className, children, title }) => {
   return (
     <>
-      <h2>{title}</h2>
+      <Text tag="h2" weight="bold">{title}</Text>
       <div className={className}>{children}</div>
     </>
   )
