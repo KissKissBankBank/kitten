@@ -3,7 +3,13 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-
+- `Icons`: Add the following icons
+  - FacebookIconNext
+  - InstagramIconNext
+  - TwitterIconNext
+  - WhatsappIconNext
+  - MessengerIconNext
+  - LinkedinIconNext
 - Fix: `HeaderNav`: Fix user menu warning in console.
 
 ## [5.6.0] - 2021-10-28
