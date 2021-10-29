@@ -66,7 +66,6 @@ export default {
         'social_linkedin',
         'social_instagram',
         'social_youtube',
-        'social_pinterest',
       ],
       control: 'select',
     },
