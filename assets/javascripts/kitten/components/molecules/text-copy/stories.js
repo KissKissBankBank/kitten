@@ -1,6 +1,7 @@
 import React from 'react'
 import { TextCopy } from './index'
 import { DocsPage } from 'storybook/docs-page'
+import { buttonModifiers } from '../../../components/molecules/buttons/button'
 
 export default {
   title: 'Molecules/TextCopy',
@@ -48,25 +49,8 @@ export default {
       control: 'text',
     },
     buttonModifier: {
-      name: 'buttonModifier',
-      options: [
-        'hydrogen',
-        'helium',
-        'lithium',
-        'beryllium',
-        'carbon',
-        'oxygen',
-        'copper',
-        'boron',
-        'neon',
-        'iron',
-        'calcium',
-        'social_facebook',
-        'social_twitter',
-        'social_linkedin',
-        'social_instagram',
-        'social_youtube',
-      ],
+      name: 'modifier',
+      options: buttonModifiers,
       control: 'select',
     },
     variant: {

@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `PinterestIcon` and `PinterestButtonIcon`: Remove components.
+- Feature: `Button`: Remove `social_pinterest` modifier.
 - Fix: `HeaderNav`: Fix user menu warning in console.
 
 ## [5.6.0] - 2021-10-28
