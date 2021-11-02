@@ -5,7 +5,6 @@ import {
   LinkedinButtonIcon,
   InstagramButtonIcon,
   YoutubeButtonIcon,
-  PinterestButtonIcon,
 } from './index'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
@@ -122,31 +121,6 @@ describe('SocialButtonIcon', () => {
     beforeEach(() => {
       component = renderer
         .create(<YoutubeButtonIcon size="tiny">Youtube</YoutubeButtonIcon>)
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('<PinterestButtonIcon />', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(<PinterestButtonIcon>Pinterest</PinterestButtonIcon>)
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-  describe('<PinterestButtonIcon /> with props', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(
-          <PinterestButtonIcon size="tiny">Pinterest</PinterestButtonIcon>,
-        )
         .toJSON()
     })
 

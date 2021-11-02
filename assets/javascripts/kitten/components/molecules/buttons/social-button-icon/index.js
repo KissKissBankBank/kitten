@@ -5,7 +5,6 @@ import { TwitterIcon } from '../../../../components/graphics/icons/twitter-icon'
 import { LinkedinIcon } from '../../../../components/graphics/icons/linkedin-icon'
 import { InstagramIcon } from '../../../../components/graphics/icons/instagram-icon'
 import { YoutubeIcon } from '../../../../components/graphics/icons/youtube-icon'
-import { PinterestIcon } from '../../../../components/graphics/icons/pinterest-icon'
 
 export const FacebookButtonIcon = props => (
   <Button {...props} modifier="social_facebook" fit="icon">
@@ -34,11 +33,5 @@ export const InstagramButtonIcon = props => (
 export const YoutubeButtonIcon = props => (
   <Button {...props} modifier="social_youtube" fit="icon">
     <YoutubeIcon width="16" height="16" />
-  </Button>
-)
-
-export const PinterestButtonIcon = props => (
-  <Button {...props} modifier="social_pinterest" fit="icon">
-    <PinterestIcon width="16" height="16" />
   </Button>
 )
