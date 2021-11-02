@@ -3,7 +3,6 @@ import renderer from 'react-test-renderer'
 import { DropdownSelect } from './index'
 
 describe('<DropdownSelect />', () => {
-
   beforeEach(() => {
     // The Comobobox test gives out this known error
     // https://github.com/downshift-js/downshift/issues/1272
@@ -82,7 +81,7 @@ describe('<DropdownSelect />', () => {
           comboboxButtonLabelText="Button label text"
           noResultText="No results"
           inputProps={{
-            'data-test': 'Custom Data Test Value'
+            'data-test': 'Custom Data Test Value',
           }}
         />,
       )

@@ -201,7 +201,10 @@ export const DropdownCombobox = ({
               onBlur(find(['label', inputValue])(flattenedOptions) || null)
             },
           })}
-          className={classNames('k-Form-DropdownCombobox__input', inputProps.className,)}
+          className={classNames(
+            'k-Form-DropdownCombobox__input',
+            inputProps.className,
+          )}
         />
         <button
           className="k-Form-DropdownCombobox__arrowButton"
