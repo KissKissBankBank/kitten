@@ -21,7 +21,7 @@ import {
   WhatsappIconNext,
   WindowEditIconNext,
 } from 'kitten'
-import { Text, pxToRem } from 'kitten'
+import { Text, Title, pxToRem } from 'kitten'
 import React from 'react'
 import LinkTo from '@storybook/addon-links/react'
 
@@ -33,7 +33,7 @@ const Container = styled.div`
 const Group = styled(({ className, children, title }) => {
   return (
     <>
-      <Text tag="h2" weight="bold">{title}</Text>
+      <Title tag="h2" modifier="septenary">{title}</Title>
       <div className={className}>{children}</div>
     </>
   )
