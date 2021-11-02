@@ -1,5 +1,98 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<DropdownSelect /> should match its snapshot with combobox props 1`] = `
+<div
+  className="sc-bwzfXH HLqLx k-Form-Dropdown k-Form-Dropdown--orion k-Form-Dropdown--hydrogen k-Form-Dropdown--down k-Form-Dropdown--normal k-Form-Dropdown--arrowPosition-left k-Form-Dropdown--isOpen"
+  style={
+    Object {
+      "--menu-z-index": 1000,
+    }
+  }
+>
+  <label
+    className="sc-bdVaJa ezwUcC k-Label k-Form-Dropdown__label k-u-margin-bottom-single k-Label--normal"
+    htmlFor="dropdown-select-test"
+    id="dropdown-select-test_element-label"
+    onClick={[Function]}
+  >
+    DropdownSelect test
+  </label>
+  <div
+    aria-expanded={true}
+    aria-haspopup="listbox"
+    aria-owns="dropdown-select-test_element-menu"
+    className="k-Form-DropdownCombobox"
+    role="combobox"
+  >
+    <input
+      aria-autocomplete="list"
+      aria-controls="dropdown-select-test_element-menu"
+      aria-labelledby="dropdown-select-test_element-label"
+      autoComplete="off"
+      className="k-Form-DropdownCombobox__input"
+      data-test="Custom Data Test Value"
+      id="dropdown-select-test"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Select"
+      value=""
+    />
+    <button
+      aria-label="Button label text"
+      className="k-Form-DropdownCombobox__arrowButton"
+      id="dropdown-select-test_element-toggle-button"
+      onClick={[Function]}
+      tabIndex={-1}
+      type="button"
+    >
+      <span
+        aria-hidden={true}
+        className="k-Form-DropdownCombobox__arrowButton__arrowBox"
+      >
+        <svg
+          className=""
+          fill="#222"
+          height="5.64"
+          style={
+            Object {
+              "transform": null,
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </span>
+    </button>
+    <span
+      className="k-Form-DropdownCombobox__statusBadges"
+    />
+  </div>
+  <ul
+    aria-labelledby="dropdown-select-test_element-label"
+    className="k-Form-Dropdown__list"
+    id="dropdown-select-test_element-menu"
+    onMouseLeave={[Function]}
+    role="listbox"
+  >
+    <li
+      className="k-Form-Dropdown__item"
+      disabled={true}
+    >
+      No results
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
 <div
   className="sc-bwzfXH HLqLx k-Form-Dropdown k-Form-Dropdown--orion k-Form-Dropdown--hydrogen k-Form-Dropdown--down k-Form-Dropdown--normal k-Form-Dropdown--arrowPosition-left k-Form-Dropdown--isOpen"

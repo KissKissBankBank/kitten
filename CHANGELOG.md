@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DropdownSelect`: Add `inputProps` to Combobox input.
 - Fix: `HeaderNav`: Fix user menu warning in console.
 
 ## [5.6.0] - 2021-10-28
