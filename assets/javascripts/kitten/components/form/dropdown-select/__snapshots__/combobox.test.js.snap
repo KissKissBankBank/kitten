@@ -30,6 +30,7 @@ exports[`<DropdownSelect combobox /> should match its snapshot with props 1`] = 
       aria-labelledby="dropdown-select-test_2_element-label"
       autoComplete="off"
       className="k-Form-DropdownCombobox__input"
+      data-test="Custom Data Test Value"
       id="dropdown-select-test_2"
       onBlur={[Function]}
       onChange={[Function]}

@@ -34,6 +34,9 @@ describe('<DropdownSelect combobox />', () => {
             },
           ]}
           openOnLoad
+          inputProps={{
+            'data-test': 'Custom Data Test Value',
+          }}
         />,
       )
       .toJSON()
