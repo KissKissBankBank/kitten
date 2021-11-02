@@ -54,8 +54,15 @@ export const StyledDropdown = styled.div`
     border: 0;
     font-size: inherit;
 
-    max-width: calc(100% - var(--DropdownSelect-arrowContainerWidth) - var(--DropdownSelect-statusPadding));
-    flex: 1 1 calc(100% - var(--DropdownSelect-arrowContainerWidth) - var(--DropdownSelect-statusPadding));
+    max-width: calc(
+      100% - var(--DropdownSelect-arrowContainerWidth) -
+        var(--DropdownSelect-statusPadding)
+    );
+    flex: 1 1
+      calc(
+        100% - var(--DropdownSelect-arrowContainerWidth) -
+          var(--DropdownSelect-statusPadding)
+      );
     line-height: calc(
       var(--DropdownSelect-buttonHeight) - 2 * var(--DropdownSelect-border)
     );

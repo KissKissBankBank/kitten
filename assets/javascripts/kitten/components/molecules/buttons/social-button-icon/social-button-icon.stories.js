@@ -5,7 +5,6 @@ import {
   LinkedinButtonIcon,
   InstagramButtonIcon,
   YoutubeButtonIcon,
-  PinterestButtonIcon,
 } from './index'
 import { Grid, GridCol } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
@@ -43,10 +42,6 @@ export const SocialButtonIcon = () => (
 
     <GridCol col-s="3" col-l="2">
       <YoutubeButtonIcon>Youtube</YoutubeButtonIcon>
-    </GridCol>
-
-    <GridCol col-s="3" col-l="2">
-      <PinterestButtonIcon>Pinterest</PinterestButtonIcon>
     </GridCol>
   </Grid>
 )
