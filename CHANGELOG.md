@@ -3,7 +3,13 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-
+- Feature: `Icons`: Add the following icons
+  - FacebookIconNext
+  - InstagramIconNext
+  - TwitterIconNext
+  - WhatsappIconNext
+  - MessengerIconNext
+  - LinkedinIconNext
 - Feature: `RadioButtonSet`: Add `labelProps` prop, propagated to label.
 - Feature: `DropdownSelect`: Add `inputProps` to Combobox input.
 - Feature: `PinterestIcon` and `PinterestButtonIcon`: Remove components.

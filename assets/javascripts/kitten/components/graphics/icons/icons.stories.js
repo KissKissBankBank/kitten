@@ -101,7 +101,7 @@ import { YoutubeIcon } from './youtube-icon'
 
 import flagFile from 'icons/flags.png'
 
-import { Text, pxToRem } from '../../..'
+import { Text, Title, pxToRem } from '../../..'
 import React from 'react'
 import LinkTo from '@storybook/addon-links/react'
 
@@ -113,7 +113,7 @@ const Container = styled.div`
 const Group = styled(({ className, children, title }) => {
   return (
     <>
-      <h2>{title}</h2>
+      <Title tag="h2" modifier="septenary">{title}</Title>
       <div className={className}>{children}</div>
     </>
   )
