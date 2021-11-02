@@ -41,6 +41,7 @@ export const RadioButtonSet = ({
   design,
   label,
   children,
+  labelProps,
   ...props
 }) => (
   <StyledRadioButtonSet
@@ -53,7 +54,14 @@ export const RadioButtonSet = ({
     {...props}
   >
     {label && (
-      <Label tag="legend" className="k-Form-RadioButtonSet__label">
+      <Label
+        tag="legend"
+        {...labelProps}
+        className={classNames(
+          'k-Form-RadioButtonSet__label',
+          labelProps.className,
+        )}
+      >
         {label}
       </Label>
     )}
@@ -92,6 +100,7 @@ RadioButtonSet.propTypes = {
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
+  labelProps: PropTypes.object,
 }
 
 RadioButtonSet.defaultProps = {
@@ -109,4 +118,5 @@ RadioButtonSet.defaultProps = {
   variant: 'orion',
   design: 'disc',
   disabled: false,
+  labelProps: {},
 }

@@ -85,7 +85,8 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       modifier = _ref.modifier,
       direction = _ref.direction,
       arrowPosition = _ref.arrowPosition,
-      labelProps = _ref.labelProps;
+      labelProps = _ref.labelProps,
+      inputProps = _ref.inputProps;
 
   var _useState = (0, _react.useState)([]),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -212,9 +213,9 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
   }, getLabelProps()), labelText), /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: "k-Form-DropdownCombobox"
   }, getComboboxProps()), /*#__PURE__*/_react.default.createElement("input", (0, _extends2.default)({
-    className: "k-Form-DropdownCombobox__input",
     placeholder: placeholder,
-    disabled: disabled,
+    disabled: disabled
+  }, inputProps, {
     onFocus: function onFocus() {
       return !isOpen && openMenu();
     },
@@ -225,7 +226,9 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     onBlur: function onBlur() {
       _onBlur((0, _find.default)(['label', inputValue])(flattenedOptions) || null);
     }
-  }))), /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
+  }), {
+    className: (0, _classnames.default)('k-Form-DropdownCombobox__input', inputProps.className)
+  })), /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
     className: "k-Form-DropdownCombobox__arrowButton",
     type: "button",
     "aria-label": comboboxButtonLabelText,
@@ -288,7 +291,8 @@ DropdownCombobox.defaultProps = {
   menuZIndex: 1000,
   modifier: 'hydrogen',
   direction: 'down',
-  arrowPosition: 'left'
+  arrowPosition: 'left',
+  inputProps: {}
 };
 DropdownCombobox.propTypes = {
   id: _propTypes.default.string.isRequired,
@@ -313,5 +317,6 @@ DropdownCombobox.propTypes = {
   menuZIndex: _propTypes.default.number,
   modifier: _propTypes.default.oneOf(['hydrogen', 'nitrogen', 'boron']),
   direction: _propTypes.default.oneOf(['up', 'down']),
-  arrowPosition: _propTypes.default.oneOf(['left', 'right'])
+  arrowPosition: _propTypes.default.oneOf(['left', 'right']),
+  inputProps: _propTypes.default.object
 };
