@@ -141,19 +141,6 @@ const StyledInput = styled.input`
     border-color: ${COLORS.line2};
   }
 
-  &:focus {
-    color: ${COLORS.font1};
-    border-color: ${COLORS.font2};
-    outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(2)};
-  }
-  &:focus:not(:focus-visible) {
-    outline-color: transparent;
-  }
-  &:focus-visible {
-    outline-color: ${COLORS.primary4};
-  }
-
   // DIGITS
 
   &.k-Form-TextInput-hasDigits {

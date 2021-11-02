@@ -1,0 +1,156 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs'
+import {
+  CurrentStyle,
+  BasicStyle,
+  BorderStyle,
+  DefaultStyle,
+} from './focus-outline.js'
+import { Text } from 'kitten'
+
+<Meta title="Documentation/Accessibilité/Indicateurs de focus" />
+
+# Accessibilité: Indicateurs de focus
+
+## Ressources
+
+- [Critères et tests - RGAA](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#crit-10-7)
+- [Guide de l’intégrateur RGAA 3](https://disic.github.io/guide-integrateur/7-focus.html#outline)
+- [A guide to designing accessible, WCAG-compliant focus indicators](https://www.sarasoueidan.com/blog/focus-indicators/)
+
+## Critère de conformité
+
+> **Critère 10.7. Dans chaque page web, pour chaque élément recevant le focus, la [prise de focus](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/glossaire/#prise-de-focus) est-elle visible ?**<br/>
+> Test 10.7.1 :<br/>
+> Pour chaque élément recevant le focus, la [prise de focus](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/glossaire/#prise-de-focus) vérifie-t-elle une de ces conditions ?
+>
+>  • Le style du focus natif du navigateur n’est pas supprimé ou dégradé ;<br/>
+>  • Un style du focus défini par l’auteur est visible.
+>
+
+### Design
+
+La règle *2.4.11:Focus Appearance (Minimum)* requiert qu'il y ait **une zone de la surface de l’indication de focus** (à l’intérieur de la surface de l’indication du focus) qui a **un contraste avec un rapport de 3:1** entre les couleurs dans l’état non-focus et l’état focus. Cette surface est appelée la **zone de contraste**.
+
+Cette zone de contraste peut potentiellement recouvrir l’intégralité de la surface d’indication de focus.
+
+Plus le contraste est important entre la couleur de non-focus et la couleur de focus, plus c'est facile pour les utilisateurs de voir la différence.
+
+#### Surface de la zone de contraste
+
+La règle 2.4.11 définit aussi que la zone de contraste couvre une **étendue minimum**. Ce minimum est déterminé en faisant un calcul basé sur le périmètre du composant.
+
+Il y a deux choix :
+
+- Cette étendue minimum est égale à une ligne d’un pixel autour de l’extérieur du composant non-focus.<br/>Si la surface de contraste se situe à l’intérieur du bouton, une ligne d’un pixel d’épaisseur sera inférieure à l’étendue minimum, donc il faut que cette ligne ait une épaisseur de 2px.
+- L'aire de contraste doit être au moins aussi large que l’étendue d’une ligne de 4px d’épaisseur le long du plus petit côté du composant.
+
+
+
+**La zone de contraste peut satisfaire la première ou la deuxième règle pour être valide.**
+
+#### Couleur de la zone de contraste
+
+La couleur de la zone de contraste doit présenter **un contraste entre l’état focus et l’état non-focus**. La zone de contraste doit aussi présenter **un contraste entre la couleur de l’état focus, et les couleurs adjacentes au sein du composant**.
+
+Un composant est conforme à la règle si, au choix :
+
+- La couleur de la zone de contraste présente un contraste minimum de 3:1 avec la zone adjacente ;
+- La zone de contraste a une épaisseur de 2px minimum ;
+- La zone de contraste est séparée du composant.
+
+#### Remarque
+
+Le composant qui reçoit le focus ne doit pas être partiellement caché par des autres contenus.
+
+#### Pour aller plus loin
+
+La règle 2.4.12 permet d’atteindre un niveau AAA (contre AA pour la 2.4.11), pour cela elle renforce le contraste :
+
+- La surface de la zone de contraste est égale au **double de la surface d’une ligne d’un pixel autour de l’extérieur du composant non-focus**.
+- Les contrastes de couleurs (entre zone de contraste non-focus et focus, et entre zone de contraste et éléments adjacents) sont montés à **4,5:1**.
+- Aucune partie de l’élément qui reçoit le focus ne doit être cachée par des autres contenus.
+
+### Code
+
+> **Le RGAA impose de conserver la propriété outline**. Dans les feuilles de style, il est interdit de trouver des propriétés visant à supprimer cet outline à la prise de focus (`:focus`).<br/>
+> …<br/>
+> Même si vous utilisez une bordure (`border`) pour signifier la prise de focus, cette alternative n'est pas considérée comme pertinente.
+En effet, outline est une propriété gérée par le navigateur. Certains navigateurs proposent des mécanismes qui permettent d’augmenter la visibilité de cet outline. Ainsi, si dans vos feuilles de style, vous indiquez `outline:0`, les paramètres du navigateur visant à augmenter l’outline seront invisibles.
+
+
+Pour limiter l’apparition des outlines à la seule navigation au clavier, et non plus au clic, l’usage de `focus-visible` est conseillé :
+
+```css
+button:focus {
+  /* des styles de focus */
+}
+
+button:focus:not(:focus-visible) {
+ /* annulation des styles de focus */
+}
+
+button:focus-visible {
+ /* des styles de focus qui n'apparaissent qu'à la navigation au clavier */
+}
+```
+
+Ce pattern de code est déjà en place sur la majeure partie des éléments focusables de Kitten.
+
+## Tests
+
+Pour se rendre compte des styles de focus de chaque composant, utilisez la touche `Tab` (⇥) pour l’élément suivant, ou `Maj Tab` (⇧ ⇥) pour le précédent.
+
+🔰 Le bouton Hydrogen (fond blanc) respecte le style hover/active de la prochaine mise à jour des couleurs, comme vu dans les maquettes du Design System.
+
+----
+
+### Style Actuel
+
+Bordure de 2px de large, de couleur primary4 (correspondra au "blue 300, light blue"), située à 2px de distance à l’extérieur du composant.
+
+<CurrentStyle />
+
+- ✔️ Surface OK (La surface est égale à 2px autour de l’extérieur du composant non-focus)
+- ✔️ Couleur OK (La zone de contraste a une épaisseur de 2px minimum et la zone de contraste est séparée du composant)
+
+----
+
+### Style A : Contour basique
+
+Bordure de 2px de large, de couleur primary3 (correspondra au "blue 900, very dark blue"), située contre le composant.
+
+<BasicStyle />
+
+- ✔️ Surface OK (La surface est égale à 2px autour de l’extérieur du composant non-focus)
+- ✔️ Couleur OK (La zone de contraste a une épaisseur de 2px minimum)
+
+
+----
+
+
+### Style B : Bordure
+
+Bordure de 2px de large, de couleur primary3 (correspondra au "blue 900, very dark blue"), située à la place de la bordure (donc à l’intérieur du composant).
+
+<BorderStyle />
+
+- ✔️ Surface OK (La surface est égale à 2px autour de l’extérieur du composant non-focus)
+- ✖️ Couleur NOK (Sur les boutons Helium, il n'y a pas pas assez de contraste entre la zone de contraste et la couleur adjacente du composant)
+
+
+
+----
+
+
+### Style C : Par défaut
+
+Le comportement par défaut de ces composants peut être testé avec cet exemple. L’apparence varie selon le navigateur, et il est possible que certains navigateurs ne fournissent pas une expérience accessible.
+
+<DefaultStyle />
+
+<div className="has-overrides dark-background" style={{ padding: '2em 0' }}>
+  <Text weight="regular" color="background1" className="k-u-margin-bottom-triple k-u-margin-left-quadruple">
+    Sur fond noir, les navigateurs ne rendent pas l’outline de la même manière.
+  </Text>
+  <DefaultStyle />
+</div>

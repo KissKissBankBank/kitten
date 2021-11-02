@@ -236,32 +236,7 @@ export const modifierStyles = modifier => {
       }
     `}
 
-    ${modifier !== 'checked' &&
-    css`
-      &:hover,
-      &:focus {
-        border-color: ${hoverBorderColor};
-        background-color: ${hoverBgColor};
-        color: ${hoverColor};
-      }
 
-      &:active {
-        border-color: ${activeBorderColor};
-        background-color: ${activeBgColor};
-        color: ${activeColor};
-      }
-    `}
-
-    &:focus {
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
-    }
 
     &:disabled,
     &.k-Button--disabled {
