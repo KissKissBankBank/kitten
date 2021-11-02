@@ -69,22 +69,6 @@ export var UserMenuNext = function UserMenuNext(_ref) {
     color: "currentColor"
   })), /*#__PURE__*/React.createElement("div", menuProps, cloneElement(menuChild)));
 };
-UserMenuNext.propTypes = {
-  dropdownContentWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  padding: PropTypes.bool,
-  mobilePadding: PropTypes.bool,
-  closeEvents: PropTypes.arrayOf(PropTypes.string),
-  hasArrow: PropTypes.bool,
-  dropdownAnchorSide: PropTypes.oneOf(['left', 'right'])
-};
-UserMenuNext.defaultProps = {
-  dropdownContentWidth: null,
-  padding: true,
-  mobilePadding: true,
-  closeEvents: [],
-  hasArrow: false,
-  dropdownAnchorSide: 'left'
-};
 
 UserMenuNext.Button = function (_ref2) {
   var children = _ref2.children;
@@ -94,4 +78,25 @@ UserMenuNext.Button = function (_ref2) {
 UserMenuNext.Navigation = function (_ref3) {
   var children = _ref3.children;
   return /*#__PURE__*/React.createElement(React.Fragment, null, children);
+};
+
+UserMenuNext.propTypes = {
+  dropdownContentWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  padding: PropTypes.bool,
+  mobilePadding: PropTypes.bool,
+  closeEvents: PropTypes.arrayOf(PropTypes.string),
+  dropdownAnchorSide: PropTypes.oneOf(['left', 'right'])
+};
+UserMenuNext.defaultProps = {
+  dropdownContentWidth: null,
+  padding: true,
+  mobilePadding: true,
+  closeEvents: [],
+  dropdownAnchorSide: 'left'
+};
+UserMenuNext.Button.propTypes = {
+  hasArrow: PropTypes.bool
+};
+UserMenuNext.Button.defaultProps = {
+  hasArrow: false
 };
