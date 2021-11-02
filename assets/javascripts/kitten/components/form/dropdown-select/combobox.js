@@ -55,6 +55,7 @@ export const DropdownCombobox = ({
   direction,
   arrowPosition,
   labelProps,
+  inputProps,
 }) => {
   const [flattenedOptions, setFlattenedOptions] = useState([])
   const [filteredOptions, setFilteredOptions] = useState([])
@@ -190,9 +191,9 @@ export const DropdownCombobox = ({
       </Label>
       <div className="k-Form-DropdownCombobox" {...getComboboxProps()}>
         <input
-          className="k-Form-DropdownCombobox__input"
           placeholder={placeholder}
           disabled={disabled}
+          {...inputProps}
           onFocus={() => !isOpen && openMenu()}
           onClick={() => !isOpen && openMenu()}
           {...getInputProps({
@@ -200,6 +201,10 @@ export const DropdownCombobox = ({
               onBlur(find(['label', inputValue])(flattenedOptions) || null)
             },
           })}
+          className={classNames(
+            'k-Form-DropdownCombobox__input',
+            inputProps.className,
+          )}
         />
         <button
           className="k-Form-DropdownCombobox__arrowButton"
@@ -283,6 +288,7 @@ DropdownCombobox.defaultProps = {
   modifier: 'hydrogen',
   direction: 'down',
   arrowPosition: 'left',
+  inputProps: {},
 }
 
 DropdownCombobox.propTypes = {
@@ -309,4 +315,5 @@ DropdownCombobox.propTypes = {
   modifier: PropTypes.oneOf(['hydrogen', 'nitrogen', 'boron']),
   direction: PropTypes.oneOf(['up', 'down']),
   arrowPosition: PropTypes.oneOf(['left', 'right']),
+  inputProps: PropTypes.object,
 }
