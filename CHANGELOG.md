@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `RadioButtonSet`: Add `labelProps` prop, propagated to label.
 - Feature: `DropdownSelect`: Add `inputProps` to Combobox input.
 - Feature: `PinterestIcon` and `PinterestButtonIcon`: Remove components.
 - Feature: `Button`: Remove `social_pinterest` modifier.
