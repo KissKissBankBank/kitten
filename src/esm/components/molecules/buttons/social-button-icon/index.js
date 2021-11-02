@@ -6,7 +6,6 @@ import { TwitterIcon } from '../../../../components/graphics/icons/twitter-icon'
 import { LinkedinIcon } from '../../../../components/graphics/icons/linkedin-icon';
 import { InstagramIcon } from '../../../../components/graphics/icons/instagram-icon';
 import { YoutubeIcon } from '../../../../components/graphics/icons/youtube-icon';
-import { PinterestIcon } from '../../../../components/graphics/icons/pinterest-icon';
 export var FacebookButtonIcon = function FacebookButtonIcon(props) {
   return /*#__PURE__*/React.createElement(Button, _extends({}, props, {
     modifier: "social_facebook",
@@ -48,15 +47,6 @@ export var YoutubeButtonIcon = function YoutubeButtonIcon(props) {
     modifier: "social_youtube",
     fit: "icon"
   }), /*#__PURE__*/React.createElement(YoutubeIcon, {
-    width: "16",
-    height: "16"
-  }));
-};
-export var PinterestButtonIcon = function PinterestButtonIcon(props) {
-  return /*#__PURE__*/React.createElement(Button, _extends({}, props, {
-    modifier: "social_pinterest",
-    fit: "icon"
-  }), /*#__PURE__*/React.createElement(PinterestIcon, {
     width: "16",
     height: "16"
   }));

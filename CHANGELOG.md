@@ -3,18 +3,26 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-- Feature: `Icons`: Add the following icons
+
+## [5.7.0] - 2021-11-02
+
+Features:
+
+- `Icons`: Add the following icons
   - FacebookIconNext
   - InstagramIconNext
   - TwitterIconNext
   - WhatsappIconNext
   - MessengerIconNext
   - LinkedinIconNext
-- Feature: `RadioButtonSet`: Add `labelProps` prop, propagated to label.
-- Feature: `DropdownSelect`: Add `inputProps` to Combobox input.
-- Feature: `PinterestIcon` and `PinterestButtonIcon`: Remove components.
-- Feature: `Button`: Remove `social_pinterest` modifier.
-- Fix: `HeaderNav`: Fix user menu warning in console.
+- `RadioButtonSet`: Add `labelProps` prop, propagated to label.
+- `DropdownSelect`: Add `inputProps` to Combobox input.
+- `PinterestIcon` and `PinterestButtonIcon`: Remove components.
+- `Button`: Remove `social_pinterest` modifier.
+
+Fix:
+
+- `HeaderNav`: Fix user menu warning in console.
 
 ## [5.6.0] - 2021-10-28
 

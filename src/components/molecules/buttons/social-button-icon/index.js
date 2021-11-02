@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.PinterestButtonIcon = exports.YoutubeButtonIcon = exports.InstagramButtonIcon = exports.LinkedinButtonIcon = exports.TwitterButtonIcon = exports.FacebookButtonIcon = void 0;
+exports.YoutubeButtonIcon = exports.InstagramButtonIcon = exports.LinkedinButtonIcon = exports.TwitterButtonIcon = exports.FacebookButtonIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -22,8 +22,6 @@ var _linkedinIcon = require("../../../../components/graphics/icons/linkedin-icon
 var _instagramIcon = require("../../../../components/graphics/icons/instagram-icon");
 
 var _youtubeIcon = require("../../../../components/graphics/icons/youtube-icon");
-
-var _pinterestIcon = require("../../../../components/graphics/icons/pinterest-icon");
 
 var FacebookButtonIcon = function FacebookButtonIcon(props) {
   return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, props, {
@@ -84,15 +82,3 @@ var YoutubeButtonIcon = function YoutubeButtonIcon(props) {
 };
 
 exports.YoutubeButtonIcon = YoutubeButtonIcon;
-
-var PinterestButtonIcon = function PinterestButtonIcon(props) {
-  return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, props, {
-    modifier: "social_pinterest",
-    fit: "icon"
-  }), /*#__PURE__*/_react.default.createElement(_pinterestIcon.PinterestIcon, {
-    width: "16",
-    height: "16"
-  }));
-};
-
-exports.PinterestButtonIcon = PinterestButtonIcon;

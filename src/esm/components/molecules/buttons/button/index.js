@@ -11,7 +11,7 @@ import styled from 'styled-components';
 import { modifierStyles } from './helpers/modifier-styles';
 import { ScreenConfig } from '../../../../constants/screen-config';
 import classNames from 'classnames';
-export var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'boron', 'calcium', 'scandium', 'neon', 'iron', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube', 'social_pinterest'];
+export var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'boron', 'calcium', 'scandium', 'neon', 'iron', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube'];
 export var buttonFitOptions = ['icon', 'min-width', 'content', 'fluid'];
 export var buttonMobileFitOptions = [null].concat(buttonFitOptions);
 export var buttonSizes = ['nano', 'micro', 'tiny', 'big', 'huge', 'giant', 'regular'];
