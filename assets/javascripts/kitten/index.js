@@ -160,7 +160,6 @@ export { ParagraphIcon } from './components/graphics/icons/paragraph-icon'
 export { PasswordIcon } from './components/graphics/icons/password-icon'
 export { PayPalIcon } from './components/graphics/icons/paypal-icon'
 export { PhoneIcon } from './components/graphics/icons/phone-icon'
-export { PinterestIcon } from './components/graphics/icons/pinterest-icon'
 export { QuestionMarkIcon } from './components/graphics/icons/question-mark-icon'
 export { RefundIcon } from './components/graphics/icons/refund-icon'
 export { RocketCircleIcon } from './components/graphics/icons/rocket-circle-icon'
@@ -297,7 +296,6 @@ export {
   LinkedinButtonIcon,
   InstagramButtonIcon,
   YoutubeButtonIcon,
-  PinterestButtonIcon,
 } from './components/molecules/buttons/social-button-icon'
 export { TagButton } from './components/molecules/buttons/tag-button'
 

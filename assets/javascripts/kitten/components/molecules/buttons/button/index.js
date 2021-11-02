@@ -27,7 +27,6 @@ export const buttonModifiers = [
   'social_linkedin',
   'social_instagram',
   'social_youtube',
-  'social_pinterest',
 ]
 
 export const buttonFitOptions = ['icon', 'min-width', 'content', 'fluid']

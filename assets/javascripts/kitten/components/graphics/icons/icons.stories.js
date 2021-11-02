@@ -70,7 +70,6 @@ import { PasswordIcon } from './password-icon'
 import { PayPalIcon } from './paypal-icon'
 import { PeopleIcon } from './people-icon'
 import { PhoneIcon } from './phone-icon'
-import { PinterestIcon } from './pinterest-icon'
 import { QuestionMarkIcon } from './question-mark-icon'
 import { RefundIcon } from './refund-icon'
 import { RocketCircleIcon } from './rocket-circle-icon'
@@ -202,7 +201,6 @@ export const AllIcons = ({ colorInput, bgColorInput }) => {
         <IconContainer children={<InstagramIcon color={colorInput} />} />
         <IconContainer children={<LinkedinIcon color={colorInput} />} />
         <IconContainer children={<MessengerIcon color={colorInput} />} />
-        <IconContainer children={<PinterestIcon color={colorInput} />} />
         <IconContainer children={<TwitterIcon color={colorInput} />} />
         <IconContainer children={<WhatsAppIcon color={colorInput} />} />
         <IconContainer children={<YoutubeIcon color={colorInput} />} />
