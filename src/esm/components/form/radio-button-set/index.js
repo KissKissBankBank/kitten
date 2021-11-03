@@ -21,15 +21,17 @@ export var RadioButtonSet = function RadioButtonSet(_ref) {
       design = _ref.design,
       label = _ref.label,
       children = _ref.children,
-      props = _objectWithoutProperties(_ref, ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children"]);
+      labelProps = _ref.labelProps,
+      props = _objectWithoutProperties(_ref, ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "labelProps"]);
 
   return /*#__PURE__*/React.createElement(StyledRadioButtonSet, _extends({
     className: classNames('k-Form-RadioButtonSet', className, "k-Form-RadioButtonSet--".concat(variant)),
     disabled: disabled
-  }, props), label && /*#__PURE__*/React.createElement(Label, {
-    tag: "legend",
-    className: "k-Form-RadioButtonSet__label"
-  }, label), children && !label && /*#__PURE__*/React.createElement("legend", null, children), /*#__PURE__*/React.createElement("div", {
+  }, props), label && /*#__PURE__*/React.createElement(Label, _extends({
+    tag: "legend"
+  }, labelProps, {
+    className: classNames('k-Form-RadioButtonSet__label', labelProps.className)
+  }), label), children && !label && /*#__PURE__*/React.createElement("legend", null, children), /*#__PURE__*/React.createElement("div", {
     className: "k-Form-RadioButtonSet__radioContainer"
   }, items.map(function (_ref2) {
     var id = _ref2.id,
@@ -59,7 +61,8 @@ RadioButtonSet.propTypes = {
   })),
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   design: PropTypes.oneOf(['disc', 'check']),
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  labelProps: PropTypes.object
 };
 RadioButtonSet.defaultProps = {
   name: 'radioButtonSet',
@@ -74,5 +77,6 @@ RadioButtonSet.defaultProps = {
   }],
   variant: 'orion',
   design: 'disc',
-  disabled: false
+  disabled: false,
+  labelProps: {}
 };

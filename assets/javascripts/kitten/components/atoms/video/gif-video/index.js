@@ -21,7 +21,7 @@ export const GifVideo = ({ poster, children, ...props }) => {
     if (!children) return setPosterLoading(true)
     if (!videoElement || !videoElement.current) return
 
-    const sources = videoElement.current.children
+    const sources = Array.from(videoElement.current.children)
     setSourcesLength(sources.length)
 
     sources.forEach(source => {

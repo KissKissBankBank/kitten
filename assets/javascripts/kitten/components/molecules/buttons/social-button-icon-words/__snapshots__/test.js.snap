@@ -31,6 +31,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -89,19 +90,23 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
 
 .c0.k-Button--big {
   --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c0.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -195,13 +200,13 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -209,18 +214,18 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
     width: initial;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -235,7 +240,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_facebook k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+  className="c0 k-Button k-Button--regular k-Button--social_facebook k-Button--orion k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,
@@ -292,6 +297,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -350,19 +356,23 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 
 .c0.k-Button--big {
   --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c0.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -456,13 +466,13 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -470,18 +480,18 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
     width: initial;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -496,7 +506,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--social_facebook k-Button--orion k-Button--fit-fluid k-Button--mobile-fit-none"
+  className="c0 k-Button k-Button--big k-Button--social_facebook k-Button--orion k-Button--fit-fluid"
   style={
     Object {
       "--Button-border-radius": null,
@@ -553,6 +563,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -618,19 +629,23 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 
 .c0.k-Button--big {
   --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c0.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -733,13 +748,13 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -747,18 +762,18 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
     width: initial;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -773,7 +788,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_instagram k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+  className="c0 k-Button k-Button--regular k-Button--social_instagram k-Button--orion k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,
@@ -830,6 +845,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
@@ -895,19 +911,23 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 
 .c0.k-Button--big {
   --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c0.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -1010,13 +1030,13 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -1024,18 +1044,18 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
     width: initial;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -1050,7 +1070,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--social_instagram k-Button--orion k-Button--fit-fluid k-Button--mobile-fit-none"
+  className="c0 k-Button k-Button--big k-Button--social_instagram k-Button--orion k-Button--fit-fluid"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1107,6 +1127,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #00669e;
   background-color: #00669e;
   color: #fff;
@@ -1165,19 +1186,23 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 
 .c0.k-Button--big {
   --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c0.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -1271,13 +1296,13 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -1285,18 +1310,18 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
     width: initial;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -1311,7 +1336,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_linkedin k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+  className="c0 k-Button k-Button--regular k-Button--social_linkedin k-Button--orion k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1368,6 +1393,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #00669e;
   background-color: #00669e;
   color: #fff;
@@ -1426,19 +1452,23 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 
 .c0.k-Button--big {
   --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c0.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -1532,13 +1562,13 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -1546,18 +1576,18 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
     width: initial;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -1572,7 +1602,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--social_linkedin k-Button--orion k-Button--fit-fluid k-Button--mobile-fit-none"
+  className="c0 k-Button k-Button--big k-Button--social_linkedin k-Button--orion k-Button--fit-fluid"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1629,6 +1659,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #55acee;
   background-color: #55acee;
   color: #fff;
@@ -1687,19 +1718,23 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 
 .c0.k-Button--big {
   --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c0.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -1793,13 +1828,13 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -1807,18 +1842,18 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
     width: initial;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -1833,7 +1868,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--social_twitter k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+  className="c0 k-Button k-Button--regular k-Button--social_twitter k-Button--orion k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1890,6 +1925,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #55acee;
   background-color: #55acee;
   color: #fff;
@@ -1948,19 +1984,23 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 
 .c0.k-Button--big {
   --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c0.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -2054,13 +2094,13 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -2068,18 +2108,18 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
     width: initial;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c0[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -2094,7 +2134,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--social_twitter k-Button--orion k-Button--fit-fluid k-Button--mobile-fit-none"
+  className="c0 k-Button k-Button--big k-Button--social_twitter k-Button--orion k-Button--fit-fluid"
   style={
     Object {
       "--Button-border-radius": null,

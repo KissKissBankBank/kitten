@@ -52,6 +52,7 @@ export default {
       flowShowUnsavedText: false,
     },
     toasterIsOpen: false,
+    multiMenu: false,
   },
   argTypes: {
     quickAccessLinkText: { control: 'text' },
@@ -76,6 +77,7 @@ export default {
       options: ['danger', 'success', 'warning', 'neutral', 'none'],
     },
     flowProps: { name: 'Flow Props (story prop)', control: 'object' },
+    multiMenu: { name: 'MultiMenu (story prop)', control: 'boolean' },
   },
 }
 

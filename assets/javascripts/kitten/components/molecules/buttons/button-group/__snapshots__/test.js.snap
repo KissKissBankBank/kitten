@@ -31,6 +31,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -89,19 +90,23 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 
 .c1.k-Button--big {
   --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c1.k-Button--huge {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
 .c1.k-Button--giant {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c1.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c1.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -270,13 +275,13 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   .c1.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c1[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c1[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -284,18 +289,18 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
     width: initial;
   }
 
-  .c1[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c1[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c1[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -314,7 +319,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   role="group"
 >
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,
@@ -325,7 +330,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
     Button1
   </button>
   <button
-    className="c1 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+    className="c1 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,
@@ -336,7 +341,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
     Button2
   </button>
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,
@@ -380,6 +385,7 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -438,19 +444,23 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
 
 .c1.k-Button--big {
   --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c1.k-Button--huge {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
 .c1.k-Button--giant {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c1.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c1.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -619,13 +629,13 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
   .c1.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c1[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c1[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -633,18 +643,18 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
     width: initial;
   }
 
-  .c1[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c1[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c1[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -663,7 +673,7 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
   role="group"
 >
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,
@@ -674,7 +684,7 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
     Button1
   </button>
   <button
-    className="c1 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+    className="c1 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,
@@ -685,7 +695,7 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
     Button2
   </button>
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,

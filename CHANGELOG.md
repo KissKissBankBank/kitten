@@ -4,6 +4,130 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [5.7.0] - 2021-11-02
+
+Features:
+
+- `Icons`: Add the following icons
+  - FacebookIconNext
+  - InstagramIconNext
+  - TwitterIconNext
+  - WhatsappIconNext
+  - MessengerIconNext
+  - LinkedinIconNext
+- `RadioButtonSet`: Add `labelProps` prop, propagated to label.
+- `DropdownSelect`: Add `inputProps` to Combobox input.
+- `PinterestIcon` and `PinterestButtonIcon`: Remove components.
+- `Button`: Remove `social_pinterest` modifier.
+
+Fix:
+
+- `HeaderNav`: Fix user menu warning in console.
+
+## [5.6.0] - 2021-10-28
+
+Feature:
+
+- `Alert`: Add `center` prop.
+
+Fixes
+
+- `Alert`: Fix flex regressions.
+- `Label`: Fix display.
+
+## [5.5.0] - 2021-10-26
+
+Feature:
+
+- `Accordeon`: Better `className` and other props propagation.
+
+Fixes:
+
+- `Alert`: Fix styles.
+- `DropdownMenu`: Fix Safari display.
+- `DropdownSelect`: Fix combobox input width calculation.
+
+## [5.4.1] - 2021-10-22
+
+Fix:
+
+- `DashboardMenu`: Style fixes.
+
+## [5.4.0] - 2021-10-20
+
+Features:
+
+- `Button`: Add `scandium` modifier.
+- `Checkbox`: Add `labelProps` prop.
+- `Icons`: Add the following icons
+  - CheckedShieldIconNext
+  - ChronoIconNext
+  - CogIconNext
+  - EyeIconNext
+  - HomeIconNext
+  - InfiniteIconNext
+  - PlusIconNext
+  - SpeechBubbleIconNext
+  - StatsIconNext
+  - TagIconNext
+  - ThumbUpIconNext
+  - UsersIconNext
+  - WindowEditIconNext
+
+Fixes:
+
+- `Checkbox`: Fix secondary text max width.
+- `ButtonWithTooltip`: Prevent unwanted animation on load.
+- `Alert`: Fix responsive styles.
+
+## [5.3.0] - 2021-10-19
+
+Feature:
+
+- `DropdownSelect`: Add `labelProps` prop.
+
+Fixes:
+
+- `GifVideo`: Fix bug when `children` is empty.
+- `cssPropertyDistributor`: Fix bug when `elements` is null.
+- `Label`: Fix styles.
+
+## [5.2.0] - 2021-10-18
+
+Features:
+
+- `ButtonWithTooltip`: Add `position` prop, defaults to `center`.
+- `DashboardMenu`: Add `List`, `Separator` and `Selector` subcomponents.
+- `Alert`: Improve new UI.
+- `Label`: Add `dot` prop.
+
+Fix:
+
+- `CrossIconNext`: New UI.
+
+## [5.1.0] - 2021-10-15
+
+Feature:
+
+- `IconBadge`: Add `border` and `backgroundColor` props style.
+
+Fix:
+
+- `Button`: Fix min width constraints.
+
+## [5.0.2] - 2021-10-13
+
+Fix:
+
+- `BackingCard`: Rollback Fix button fit.
+
+## [5.0.1] - 2021-10-12
+
+Fixes:
+
+- `BackingCard`: Fix button fit.
+- `Button`: Fix mobile dimensions on bigger sizes.
+
 ## [5.0.0] - 2021-10-12
 
 Breaking Changes:
@@ -14,6 +138,14 @@ Breaking Changes:
   All the font sizes previously defined as modular scale step (via `stepToRem`)
   are now calculated from a table with integer pixel values.
 - All components using `variant` now default to `orion`.
+- Remove the following unused components:
+  - `SearchInput`
+  - `RewardEdition`
+  - `CartRewardCard`
+  - `SideGrid`
+  - `SideLayout`
+  - `SimplePopover`
+  - `ImageCropper`
 
 Features:
 
@@ -25,7 +157,6 @@ Fixes:
 
 - `TagInput`: Remove console warning.
 - `TagInput`: Add accessible information for disabled items.
-
 
 ## [4.14.1] - 2021-10-08
 

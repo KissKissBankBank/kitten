@@ -2,7 +2,7 @@
 
 exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 <div
-  className="sc-bwzfXH eKkIhi k-Alert k-Alert--hasCloseButton"
+  className="sc-bwzfXH hlFKUh k-Alert k-Alert--hasCloseButton"
   role="alert"
 >
   <div
@@ -11,29 +11,19 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
     Alert !
   </div>
   <button
-    aria-label="Close"
-    className="sc-bdVaJa eHgOAT k-Button k-Alert__button k-Button--regular k-Button--carbon k-Button--andromeda k-Button--fit-icon k-Button--mobile-fit-none"
-    onClick={[Function]}
-    style={
-      Object {
-        "--Button-border-radius": null,
-      }
-    }
-    title="Close"
-    type="button"
+    className="k-Alert__closeButton k-u-reset-button"
   >
     <svg
-      fill="#222"
-      height="8"
-      viewBox="0 0 8 8"
-      width="8"
+      fill="none"
+      height="18"
+      onClick={[Function]}
+      viewBox="0 0 17 18"
+      width="17"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
-      />
-      <path
-        d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+        d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+        fill="#222"
       />
     </svg>
   </button>
@@ -42,7 +32,7 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 
 exports[`<Alert /> should matches with default snapshot 1`] = `
 <div
-  className="sc-bwzfXH eKkIhi k-Alert"
+  className="sc-bwzfXH hlFKUh k-Alert"
   role="alert"
 >
   <div
@@ -55,7 +45,7 @@ exports[`<Alert /> should matches with default snapshot 1`] = `
 
 exports[`<Alert /> should matches with error snapshot 1`] = `
 <div
-  className="sc-bwzfXH eKkIhi k-Alert k-Alert--error"
+  className="sc-bwzfXH hlFKUh k-Alert k-Alert--error"
   role="alert"
 >
   <div
@@ -68,7 +58,7 @@ exports[`<Alert /> should matches with error snapshot 1`] = `
 
 exports[`<Alert /> should matches with success snapshot 1`] = `
 <div
-  className="sc-bwzfXH eKkIhi k-Alert k-Alert--success"
+  className="sc-bwzfXH hlFKUh k-Alert k-Alert--success"
   role="alert"
 >
   <div
@@ -81,7 +71,7 @@ exports[`<Alert /> should matches with success snapshot 1`] = `
 
 exports[`<Alert /> should matches with warning snapshot 1`] = `
 <div
-  className="sc-bwzfXH eKkIhi k-Alert k-Alert--warning"
+  className="sc-bwzfXH hlFKUh k-Alert k-Alert--warning"
   role="alert"
 >
   <div

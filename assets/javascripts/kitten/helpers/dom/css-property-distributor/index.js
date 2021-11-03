@@ -9,6 +9,8 @@ export const cssPropertyDistributor = ({
   direction = 'max',
 }) => {
   if (!domElementHelper.canUseDom()) return null
+  if (property === '') return
+  if (!!elements) return
 
   const directionGetter = {
     min: min,

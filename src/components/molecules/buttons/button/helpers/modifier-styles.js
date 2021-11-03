@@ -88,6 +88,18 @@ var modifierStyles = function modifierStyles(modifier) {
       activeColor = _colorsConfig.default.font2;
       break;
 
+    case 'scandium':
+      borderColor = _colorsConfig.default.font1;
+      backgroundColor = _colorsConfig.default.font1;
+      color = _colorsConfig.default.font3;
+      hoverBorderColor = _colorsConfig.default.line3;
+      hoverBgColor = _colorsConfig.default.line3;
+      hoverColor = _colorsConfig.default.background1;
+      activeBorderColor = _colorsConfig.default.grey1;
+      activeBgColor = _colorsConfig.default.grey1;
+      activeColor = _colorsConfig.default.background1;
+      break;
+
     case 'neon':
       borderColor = _colorsConfig.default.orange;
       backgroundColor = _colorsConfig.default.orange;
@@ -164,16 +176,6 @@ var modifierStyles = function modifierStyles(modifier) {
       hoverBgColor = '#2c4a89';
       activeBorderColor = '#1d3b7a';
       activeBgColor = '#1d3b7a';
-      break;
-
-    case 'social_pinterest':
-      borderColor = '#bd081c';
-      backgroundColor = '#bd081c';
-      color = _colorsConfig.default.background1;
-      hoverBorderColor = '#ae000d';
-      hoverBgColor = '#ae000d';
-      activeBorderColor = '#9f0000';
-      activeBgColor = '#9f0000';
       break;
 
     case 'social_youtube':

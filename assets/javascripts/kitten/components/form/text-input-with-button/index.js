@@ -99,7 +99,8 @@ const StyledTextInputWithButton = styled.div`
       }
     }
 
-    &.k-Form-TextInputWithButton--roudedButton .k-Form-TextInputWithButton__button {
+    &.k-Form-TextInputWithButton--roudedButton
+      .k-Form-TextInputWithButton__button {
       --text-input-button-radius: var(--text-input-size);
     }
   }

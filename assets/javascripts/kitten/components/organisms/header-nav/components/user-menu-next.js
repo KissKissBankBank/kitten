@@ -92,6 +92,9 @@ export const UserMenuNext = ({
   )
 }
 
+UserMenuNext.Button = ({ children }) => <>{children}</>
+UserMenuNext.Navigation = ({ children }) => <>{children}</>
+
 UserMenuNext.propTypes = {
   dropdownContentWidth: PropTypes.oneOfType([
     PropTypes.number,
@@ -100,19 +103,20 @@ UserMenuNext.propTypes = {
   padding: PropTypes.bool,
   mobilePadding: PropTypes.bool,
   closeEvents: PropTypes.arrayOf(PropTypes.string),
-  hasArrow: PropTypes.bool,
   dropdownAnchorSide: PropTypes.oneOf(['left', 'right']),
 }
-
 UserMenuNext.defaultProps = {
   dropdownContentWidth: null,
   padding: true,
   mobilePadding: true,
   closeEvents: [],
-  hasArrow: false,
   dropdownAnchorSide: 'left',
 }
 
-UserMenuNext.Button = ({ children }) => <>{children}</>
+UserMenuNext.Button.propTypes = {
+  hasArrow: PropTypes.bool,
+}
+UserMenuNext.Button.defaultProps = {
+  hasArrow: false,
+}
 
-UserMenuNext.Navigation = ({ children }) => <>{children}</>

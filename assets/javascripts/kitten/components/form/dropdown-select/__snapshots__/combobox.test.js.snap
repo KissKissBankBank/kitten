@@ -2,7 +2,7 @@
 
 exports[`<DropdownSelect combobox /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bwzfXH kIQXnK k-Form-Dropdown k-Form-Dropdown--orion k-Form-Dropdown--hydrogen k-Form-Dropdown--down k-Form-Dropdown--normal k-Form-Dropdown--arrowPosition-left k-Form-Dropdown--isOpen"
+  className="sc-bwzfXH dxFcei k-Form-Dropdown k-Form-Dropdown--orion k-Form-Dropdown--hydrogen k-Form-Dropdown--down k-Form-Dropdown--normal k-Form-Dropdown--arrowPosition-left k-Form-Dropdown--isOpen"
   style={
     Object {
       "--menu-z-index": 1000,
@@ -10,7 +10,7 @@ exports[`<DropdownSelect combobox /> should match its snapshot with props 1`] = 
   }
 >
   <label
-    className="sc-bdVaJa kJwiAq k-Label k-Form-Dropdown__label k-u-margin-bottom-single k-Label--normal"
+    className="sc-bdVaJa ezwUcC k-Label k-Form-Dropdown__label k-u-margin-bottom-single k-Label--normal"
     htmlFor="dropdown-select-test_2"
     id="dropdown-select-test_2_element-label"
     onClick={[Function]}
@@ -30,6 +30,7 @@ exports[`<DropdownSelect combobox /> should match its snapshot with props 1`] = 
       aria-labelledby="dropdown-select-test_2_element-label"
       autoComplete="off"
       className="k-Form-DropdownCombobox__input"
+      data-test="Custom Data Test Value"
       id="dropdown-select-test_2"
       onBlur={[Function]}
       onChange={[Function]}

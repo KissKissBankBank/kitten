@@ -78,6 +78,18 @@ export const modifierStyles = modifier => {
       activeColor = COLORS.font2
       break
 
+    case 'scandium':
+      borderColor = COLORS.font1
+      backgroundColor = COLORS.font1
+      color = COLORS.font3
+      hoverBorderColor = COLORS.line3
+      hoverBgColor = COLORS.line3
+      hoverColor = COLORS.background1
+      activeBorderColor = COLORS.grey1
+      activeBgColor = COLORS.grey1
+      activeColor = COLORS.background1
+      break
+
     case 'neon':
       borderColor = COLORS.orange
       backgroundColor = COLORS.orange
@@ -153,16 +165,6 @@ export const modifierStyles = modifier => {
       hoverBgColor = '#2c4a89'
       activeBorderColor = '#1d3b7a'
       activeBgColor = '#1d3b7a'
-      break
-
-    case 'social_pinterest':
-      borderColor = '#bd081c'
-      backgroundColor = '#bd081c'
-      color = COLORS.background1
-      hoverBorderColor = '#ae000d'
-      hoverBgColor = '#ae000d'
-      activeBorderColor = '#9f0000'
-      activeBgColor = '#9f0000'
       break
 
     case 'social_youtube':

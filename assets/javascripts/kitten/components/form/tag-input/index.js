@@ -357,9 +357,7 @@ export const TagInput = ({
         {itemsList.map((item, index) => {
           const itemValue = item?.value || item
           return (
-            <li key={`visuallyHidden-${itemValue + index}`}>
-              {itemValue}
-            </li>
+            <li key={`visuallyHidden-${itemValue + index}`}>{itemValue}</li>
           )
         })}
       </ul>

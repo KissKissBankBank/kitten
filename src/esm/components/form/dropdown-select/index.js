@@ -44,7 +44,8 @@ export var DropdownSelect = function DropdownSelect(_ref) {
       controlled = props.controlled,
       modifier = props.modifier,
       direction = props.direction,
-      arrowPosition = props.arrowPosition;
+      arrowPosition = props.arrowPosition,
+      labelProps = props.labelProps;
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,
@@ -131,8 +132,8 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     style: {
       '--menu-z-index': menuZIndex
     }
-  }, /*#__PURE__*/React.createElement(Label, _extends({
-    className: classNames('k-Form-Dropdown__label', 'k-u-margin-bottom-single', {
+  }, /*#__PURE__*/React.createElement(Label, _extends({}, labelProps, {
+    className: classNames('k-Form-Dropdown__label', 'k-u-margin-bottom-single', labelProps === null || labelProps === void 0 ? void 0 : labelProps.className, {
       'k-Form-Dropdown__label--isHidden': hideLabel
     })
   }, getLabelProps()), labelText), /*#__PURE__*/React.createElement("button", _extends({

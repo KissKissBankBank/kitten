@@ -753,6 +753,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #19b4fa;
   background-color: #19b4fa;
   color: #fff;
@@ -811,19 +812,23 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 
 .c2.k-Button--big {
   --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c2.k-Button--huge {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
 .c2.k-Button--giant {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c2.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c2.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -1272,13 +1277,13 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   .c2.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c2[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c2[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -1286,18 +1291,18 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
     width: initial;
   }
 
-  .c2[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c2[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c2[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c2[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c2[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c2[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -1450,7 +1455,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c2 k-Button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-fluid k-Button--mobile-fit-none"
+      className="c2 k-Button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-fluid"
       style={
         Object {
           "--Button-border-radius": null,
@@ -1569,6 +1574,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #19b4fa;
   background-color: #19b4fa;
   color: #fff;
@@ -1627,19 +1633,23 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 
 .c2.k-Button--big {
   --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c2.k-Button--huge {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
 .c2.k-Button--giant {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c2.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c2.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -2162,13 +2172,13 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   .c2.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c2[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c2[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -2176,18 +2186,18 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
     width: initial;
   }
 
-  .c2[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c2[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c2[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c2[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c2[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c2[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -2264,7 +2274,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c2 k-Button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-fluid k-Button--mobile-fit-none"
+      className="c2 k-Button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-fluid"
       style={
         Object {
           "--Button-border-radius": null,
@@ -2387,6 +2397,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #19b4fa;
   background-color: #19b4fa;
   color: #fff;
@@ -2445,19 +2456,23 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
 .c3.k-Button--big {
   --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c3.k-Button--huge {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
 .c3.k-Button--giant {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c3.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c3.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -2906,13 +2921,13 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   .c3.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c3[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c3[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -2920,18 +2935,18 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     width: initial;
   }
 
-  .c3[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c3[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c3[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c3[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c3[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c3[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -3096,7 +3111,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c3 k-Button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-fluid k-Button--mobile-fit-none"
+      className="c3 k-Button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-fluid"
       style={
         Object {
           "--Button-border-radius": null,

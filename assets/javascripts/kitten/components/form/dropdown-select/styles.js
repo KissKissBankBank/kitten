@@ -51,9 +51,18 @@ export const StyledDropdown = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100%;
+    border: 0;
+    font-size: inherit;
 
-    flex: 1 1 auto;
+    max-width: calc(
+      100% - var(--DropdownSelect-arrowContainerWidth) -
+        var(--DropdownSelect-statusPadding)
+    );
+    flex: 1 1
+      calc(
+        100% - var(--DropdownSelect-arrowContainerWidth) -
+          var(--DropdownSelect-statusPadding)
+      );
     line-height: calc(
       var(--DropdownSelect-buttonHeight) - 2 * var(--DropdownSelect-border)
     );
@@ -70,11 +79,6 @@ export const StyledDropdown = styled.div`
     justify-content: center;
   }
 
-  .k-Form-DropdownCombobox__input {
-    flex: 1 0 auto;
-    border: 0;
-    font-size: inherit;
-  }
   .k-Form-DropdownCombobox__arrowButton {
     appearance: none;
     border: 0;
@@ -327,7 +331,6 @@ export const StyledDropdown = styled.div`
         border-right: inherit;
       }
     }
-
   }
 
   /* ARROWPOSITION: RIGHT */
@@ -356,7 +359,6 @@ export const StyledDropdown = styled.div`
         border-left: inherit;
       }
     }
-
   }
 
   /* MODIFIER: HYDROGEN */

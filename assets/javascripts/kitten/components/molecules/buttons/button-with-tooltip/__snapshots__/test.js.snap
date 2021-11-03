@@ -140,6 +140,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   appearance: none;
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -198,19 +199,23 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 
 .c1.k-Button--big {
   --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c1.k-Button--huge {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
 .c1.k-Button--giant {
   --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 0.625rem;
 }
 
-.c1.k-Button--fit-min-width:not(.k-Button--fit-icon):not(.k-Button--fit-fluid) {
+.c1.k-Button--fit-min-width {
   min-width: var(--Button-min-width);
 }
 
@@ -283,38 +288,48 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 }
 
 .c0 {
+  --ButtonWithTooltip-translate: -50%;
+  --ButtonWithTooltip-origin: 50%;
   display: inline-block;
   position: relative;
 }
 
-.c0 .k-ButtonWithTooltip__container {
+.c0 .k-ButtonWithTooltip__tooltip {
   position: absolute;
   top: 100%;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(0) scale(0.66);
-  -ms-transform: translateX(-50%) translateY(0) scale(0.66);
-  transform: translateX(-50%) translateY(0) scale(0.66);
-  -webkit-transform-origin: 50% 0.4375rem;
-  -ms-transform-origin: 50% 0.4375rem;
-  transform-origin: 50% 0.4375rem;
+  -webkit-transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0) scale(0.66);
+  -ms-transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0) scale(0.66);
+  transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0) scale(0.66);
+  -webkit-transform-origin: var(--ButtonWithTooltip-origin) 0.4375rem;
+  -ms-transform-origin: var(--ButtonWithTooltip-origin) 0.4375rem;
+  transform-origin: var(--ButtonWithTooltip-origin) 0.4375rem;
+  opacity: 0;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   max-width: 15.625rem;
   display: block;
-  -webkit-animation: 0.16s ease hPMQiV;
-  animation: 0.16s ease hPMQiV;
-  opacity: 0;
 }
 
-.c0 .k-ButtonWithTooltip__button:hover + .k-ButtonWithTooltip__container,
-.c0 .k-ButtonWithTooltip__button:focus + .k-ButtonWithTooltip__container {
-  -webkit-animation: 0.16s ease cLGzht;
-  animation: 0.16s ease cLGzht;
-  -webkit-transform: translateX(-50%) translateY(0.4375rem) scale(1);
-  -ms-transform: translateX(-50%) translateY(0.4375rem) scale(1);
-  transform: translateX(-50%) translateY(0.4375rem) scale(1);
+.c0 .k-ButtonWithTooltip__button:hover + .k-ButtonWithTooltip__tooltip,
+.c0 .k-ButtonWithTooltip__button:focus + .k-ButtonWithTooltip__tooltip {
+  -webkit-animation: 0.16s ease bDmclk;
+  animation: 0.16s ease bDmclk;
+  -webkit-transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0.4375rem) scale(1);
+  -ms-transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0.4375rem) scale(1);
+  transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0.4375rem) scale(1);
   opacity: 1;
+}
+
+.c0.k-ButtonWithTooltip--left {
+  --ButtonWithTooltip-translate: calc( -100% + 1.0625rem );
+  --ButtonWithTooltip-origin: calc( 100% - 1.0625rem );
+}
+
+.c0.k-ButtonWithTooltip--right {
+  --ButtonWithTooltip-translate: calc( 0% - 1.0625rem );
+  --ButtonWithTooltip-origin: 1.0625rem;
 }
 
 @media (min-width:40rem) {
@@ -339,13 +354,13 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   .c1.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
-    font-size: 1rem;
     --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width:39.9375rem) {
-  .c1[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none) {
+  .c1[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
     width: initial;
@@ -353,18 +368,18 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
     width: initial;
   }
 
-  .c1[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-min-width {
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
     min-width: var(--Button-min-width) !important;
   }
 
-  .c1[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-icon {
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
   }
 
-  .c1[class*='k-Button--mobile-fit']:not(.k-Button--mobile-fit-none).k-Button--mobile-fit-fluid {
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
   }
 }
@@ -379,11 +394,11 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 }
 
 <div
-  className="c0 k-ButtonWithTooltip"
+  className="c0 k-ButtonWithTooltip k-ButtonWithTooltip--center"
 >
   <button
     aria-label="Text of the tooltip"
-    className="c1 k-Button k-ButtonWithTooltip__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width k-Button--mobile-fit-none"
+    className="c1 k-Button k-ButtonWithTooltip__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,
@@ -395,7 +410,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   </button>
   <div
     aria-hidden={true}
-    className="c2 k-ArrowContainer k-ButtonWithTooltip__container k-ArrowContainer--top"
+    className="c2 k-ArrowContainer k-ButtonWithTooltip__tooltip k-ArrowContainer--top"
     style={
       Object {
         "--k-ArrowContainer-arrowDistance": "calc(50% - 0.4375rem)",

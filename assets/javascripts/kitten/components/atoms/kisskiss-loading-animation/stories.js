@@ -8,7 +8,12 @@ export default {
   component: KissKissLoadingAnimation,
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="KissKissLoadingAnimation" />,
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          importString="KissKissLoadingAnimation"
+        />
+      ),
     },
   },
   decorators: [

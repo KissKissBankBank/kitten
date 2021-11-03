@@ -2,6 +2,7 @@ import React from 'react'
 import { Alert } from './'
 import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
+import { CrossIconNext, COLORS } from 'kitten'
 
 export default {
   title: 'Molecules/Alert',
@@ -19,8 +20,9 @@ export default {
     closeButton: true,
     closeButtonLabel: 'Close Button label',
     onAfterClose: action('onAfterClose'),
-    children:
-      'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.',
+    children: 'Modifications effectuées, lien ici, Modifications effectuées,',
+    icon: <CrossIconNext width={12} height={12} color={COLORS.background1} />,
+    center: false,
   },
   argTypes: {
     show: {
@@ -51,6 +53,13 @@ export default {
       name: 'children',
       control: 'text',
     },
+    icon: {
+      name: 'icon',
+      control: 'object',
+    },
+    center: {
+      control: 'boolean',
+    },
   },
 }
 
@@ -58,6 +67,6 @@ export const Default = args => <Alert {...args} />
 
 export const WithLink = args => (
   <Alert {...args} show closeButton closeButtonLabel="Close Button Label">
-    Bonjour <a href="">clique ici</a>
+    Bonjour <a href="#">clique ici</a>
   </Alert>
 )

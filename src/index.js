@@ -803,12 +803,6 @@ Object.defineProperty(exports, "PhoneIcon", {
     return _phoneIcon.PhoneIcon;
   }
 });
-Object.defineProperty(exports, "PinterestIcon", {
-  enumerable: true,
-  get: function get() {
-    return _pinterestIcon.PinterestIcon;
-  }
-});
 Object.defineProperty(exports, "QuestionMarkIcon", {
   enumerable: true,
   get: function get() {
@@ -999,6 +993,126 @@ Object.defineProperty(exports, "SpeechBubbleIcon", {
   enumerable: true,
   get: function get() {
     return _speechBubbleIcon.SpeechBubbleIcon;
+  }
+});
+Object.defineProperty(exports, "CheckedShieldIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _checkedShieldIconNext.CheckedShieldIconNext;
+  }
+});
+Object.defineProperty(exports, "ChronoIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _chronoIconNext.ChronoIconNext;
+  }
+});
+Object.defineProperty(exports, "CogIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _cogIconNext.CogIconNext;
+  }
+});
+Object.defineProperty(exports, "CrossIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _crossIconNext.CrossIconNext;
+  }
+});
+Object.defineProperty(exports, "EyeIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _eyeIconNext.EyeIconNext;
+  }
+});
+Object.defineProperty(exports, "FacebookIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _facebookIconNext.FacebookIconNext;
+  }
+});
+Object.defineProperty(exports, "HomeIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _homeIconNext.HomeIconNext;
+  }
+});
+Object.defineProperty(exports, "InfiniteIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _infiniteIconNext.InfiniteIconNext;
+  }
+});
+Object.defineProperty(exports, "InstagramIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _instagramIconNext.InstagramIconNext;
+  }
+});
+Object.defineProperty(exports, "LinkedinIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _linkedinIconNext.LinkedinIconNext;
+  }
+});
+Object.defineProperty(exports, "MessengerIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _messengerIconNext.MessengerIconNext;
+  }
+});
+Object.defineProperty(exports, "PlusIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _plusIconNext.PlusIconNext;
+  }
+});
+Object.defineProperty(exports, "SpeechBubbleIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _speechBubbleIconNext.SpeechBubbleIconNext;
+  }
+});
+Object.defineProperty(exports, "StatsIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _statsIconNext.StatsIconNext;
+  }
+});
+Object.defineProperty(exports, "TagIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _tagIconNext.TagIconNext;
+  }
+});
+Object.defineProperty(exports, "ThumbUpIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _thumbUpIconNext.ThumbUpIconNext;
+  }
+});
+Object.defineProperty(exports, "TwitterIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _twitterIconNext.TwitterIconNext;
+  }
+});
+Object.defineProperty(exports, "UsersIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _usersIconNext.UsersIconNext;
+  }
+});
+Object.defineProperty(exports, "WhatsappIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _whatsappIconNext.WhatsappIconNext;
+  }
+});
+Object.defineProperty(exports, "WindowEditIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _windowEditIconNext.WindowEditIconNext;
   }
 });
 Object.defineProperty(exports, "LightbulbIllustration", {
@@ -1383,12 +1497,6 @@ Object.defineProperty(exports, "YoutubeButtonIcon", {
   enumerable: true,
   get: function get() {
     return _socialButtonIcon.YoutubeButtonIcon;
-  }
-});
-Object.defineProperty(exports, "PinterestButtonIcon", {
-  enumerable: true,
-  get: function get() {
-    return _socialButtonIcon.PinterestButtonIcon;
   }
 });
 Object.defineProperty(exports, "TagButton", {
@@ -2386,8 +2494,6 @@ var _paypalIcon = require("./components/graphics/icons/paypal-icon");
 
 var _phoneIcon = require("./components/graphics/icons/phone-icon");
 
-var _pinterestIcon = require("./components/graphics/icons/pinterest-icon");
-
 var _questionMarkIcon = require("./components/graphics/icons/question-mark-icon");
 
 var _refundIcon = require("./components/graphics/icons/refund-icon");
@@ -2451,6 +2557,46 @@ var _peopleIcon = require("./components/graphics/icons/people-icon");
 var _statsIcon = require("./components/graphics/icons/stats-icon");
 
 var _speechBubbleIcon = require("./components/graphics/icons/speech-bubble-icon");
+
+var _checkedShieldIconNext = require("./components/graphics/icons-next/checked-shield-icon-next");
+
+var _chronoIconNext = require("./components/graphics/icons-next/chrono-icon-next");
+
+var _cogIconNext = require("./components/graphics/icons-next/cog-icon-next");
+
+var _crossIconNext = require("./components/graphics/icons-next/cross-icon-next");
+
+var _eyeIconNext = require("./components/graphics/icons-next/eye-icon-next");
+
+var _facebookIconNext = require("./components/graphics/icons-next/facebook-icon-next");
+
+var _homeIconNext = require("./components/graphics/icons-next/home-icon-next");
+
+var _infiniteIconNext = require("./components/graphics/icons-next/infinite-icon-next");
+
+var _instagramIconNext = require("./components/graphics/icons-next/instagram-icon-next");
+
+var _linkedinIconNext = require("./components/graphics/icons-next/linkedin-icon-next");
+
+var _messengerIconNext = require("./components/graphics/icons-next/messenger-icon-next");
+
+var _plusIconNext = require("./components/graphics/icons-next/plus-icon-next");
+
+var _speechBubbleIconNext = require("./components/graphics/icons-next/speech-bubble-icon-next");
+
+var _statsIconNext = require("./components/graphics/icons-next/stats-icon-next");
+
+var _tagIconNext = require("./components/graphics/icons-next/tag-icon-next");
+
+var _thumbUpIconNext = require("./components/graphics/icons-next/thumb-up-icon-next");
+
+var _twitterIconNext = require("./components/graphics/icons-next/twitter-icon-next");
+
+var _usersIconNext = require("./components/graphics/icons-next/users-icon-next");
+
+var _whatsappIconNext = require("./components/graphics/icons-next/whatsapp-icon-next");
+
+var _windowEditIconNext = require("./components/graphics/icons-next/window-edit-icon-next");
 
 var _lightbulbIllustration = require("./components/graphics/illustrations/lightbulb-illustration");
 
