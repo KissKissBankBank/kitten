@@ -29,18 +29,19 @@ const GlobalStyle = createGlobalStyle`
     border-radius: ${pxToRem(8)};
     border-color: ${COLORS.line1};
     padding: ${pxToRem(20)};
-    min-height: ${pxToRem(370)};
+    min-height: ${pxToRem(355)};
     display: flex;
     flex-direction: column;
 
     @media ${mq.mobile} {
-      min-height: ${pxToRem(300)};
+      min-height: ${pxToRem(285)};
     }
   }
 
   .k-ModalEditProject--paragraph {
     flex: 1;
-    margin-bottom: ${pxToRem(20)} !important;
+    margin-bottom: ${pxToRem(20)}!important;
+    margin-top: 0;
   }
 
   .k-ModalEditProject--blockText {
@@ -88,14 +89,7 @@ const ModalEditProject = () => {
                     'k-u-margin-right-noneHalf@m-up',
                     'k-u-margin-bottom-double@s-down',
                   )}>
-                    <Modal.Paragraph
-                      className={classNames(
-                        'k-u-margin-left-double',
-                        'k-u-margin-right-double',
-                        'k-u-margin-top-none',
-                        'k-ModalEditProject--paragraph',
-                      )}
-                    >
+                    <Modal.Paragraph className="k-ModalEditProject--paragraph">
                       <InfiniteIconNext width="47" height="47" color={COLORS.primary1} />
                       <Title
                         tag="p"
@@ -170,15 +164,11 @@ const ModalEditProject = () => {
                 </GridCol>
                 
                 <GridCol col-s="6">
-                  <div className="k-ModalEditProject--container k-u-margin-left-noneHalf@m-up">
-                    <Modal.Paragraph
-                      className={classNames(
-                        'k-u-margin-left-double',
-                        'k-u-margin-right-double',
-                        'k-u-margin-top-none',
-                        'k-ModalEditProject--paragraph',
-                      )}
-                    >
+                  <div className={classNames(
+                    'k-ModalEditProject--container',
+                    'k-u-margin-left-noneHalf@m-up',
+                  )}>
+                    <Modal.Paragraph className="k-ModalEditProject--paragraph">
                       <ChronoIconNext width="40" height="45" color={COLORS.primary1} />
                       <Title
                         tag="p"
