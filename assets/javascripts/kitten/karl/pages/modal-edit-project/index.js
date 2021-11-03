@@ -29,20 +29,25 @@ const GlobalStyle = createGlobalStyle`
     border-radius: ${pxToRem(8)};
     border-color: ${COLORS.line1};
     padding: ${pxToRem(20)};
-    min-height: ${pxToRem(400)};
+    min-height: ${pxToRem(370)};
     display: flex;
     flex-direction: column;
-    flex: 1;
 
     @media ${mq.mobile} {
       min-height: ${pxToRem(300)};
     }
   }
 
+  .k-ModalEditProject--paragraph {
+    flex: 1;
+    margin-bottom: ${pxToRem(20)} !important;
+  }
+
   .k-ModalEditProject--blockText {
     display: flex;
     align-items: baseline;
     margin-top: ${pxToRem(10)};
+    line-height: normal;
   }
 `
 
@@ -88,6 +93,7 @@ const ModalEditProject = () => {
                         'k-u-margin-left-double',
                         'k-u-margin-right-double',
                         'k-u-margin-top-none',
+                        'k-ModalEditProject--paragraph',
                       )}
                     >
                       <InfiniteIconNext width="47" height="47" color={COLORS.primary1} />
@@ -170,6 +176,7 @@ const ModalEditProject = () => {
                         'k-u-margin-left-double',
                         'k-u-margin-right-double',
                         'k-u-margin-top-none',
+                        'k-ModalEditProject--paragraph',
                       )}
                     >
                       <ChronoIconNext width="40" height="45" color={COLORS.primary1} />
