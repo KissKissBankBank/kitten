@@ -22,16 +22,16 @@ const StyledInput = styled.input`
   border-radius: 0;
   width: 100%;
   appearance: none;
-  background-color: var(--color-input-background);
-  color: var(--color-text);
-  border-color: var(--color-input-border-default);
+  background-color: ${COLORS.background1};
+  color: ${COLORS.font1};
+  border-color: ${COLORS.line1};
   height: var(--input-height);
   min-height: var(--input-height);
 
   transition: border-color 0.2s ease;
 
   ::placeholder {
-    color: var(--color-text);
+    color: ${COLORS.font3};
   }
 
   // SIZES
@@ -111,39 +111,39 @@ const StyledInput = styled.input`
   // STATES
 
   :disabled {
-    color: var(--color-text);
-    border-color: var(--color-input-border-inactive);
-    background-color: var(--color-input-background);
+    color: ${COLORS.font1};
+    border-color: ${COLORS.line2};
+    background-color: ${COLORS.line1};
     cursor: not-allowed;
 
     ::placeholder {
-      color: var(--color-text);
+      color: ${COLORS.line3};
     }
   }
 
   &.k-Form-TextInput--valid {
-    color: var(--color-text);
-    border-color: var(--color-input-border-validated);
+    color: ${COLORS.font1};
+    border-color: ${COLORS.tertiary2};
   }
 
   &.k-Form-TextInput--error {
-    color: var(--color-text);
-    border-color: var(--color-input-border-error);
+    color: ${COLORS.font1};
+    border-color: ${COLORS.error3};
   }
 
   &:invalid {
     box-shadow: none;
-    color: var(--color-text);
-    border-color: var(--color-input-border-error);
+    color: ${COLORS.font1};
+    border-color: ${COLORS.error3};
   }
 
   &:hover {
-    border-color: var(--color-input-border-hover);
+    border-color: ${COLORS.line2};
   }
 
   &:focus {
-    color: var(--color-text);
-    border-color: var(--color-input-border-focus);
+    color: ${COLORS.font1};
+    border-color: ${COLORS.font2};
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
   }
@@ -285,7 +285,7 @@ const StyledTextareaContainer = styled.div`
     background-image: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0),
-      var(--color-grey-100)
+      ${COLORS.background1}
     );
 
     pointer-events: none;
