@@ -15,4 +15,15 @@
   --border-radius-m: 6px;
   --border-radius-l: 8px;
   --border-radius-xl: 100px;
+
+
+  --border-radius-button: var(--border-radius-s);
+  --border-radius-button-icon: var(--border-radius-xl);
+
+  --border-radius-tag-button: var(--border-radius-l);
+  --border-radius-checkbox: var(--border-radius-s);
+
+  --border-radius-input: var(--border-radius-s);
+
+  --border-radius-input-header: var(--border-radius-xl);
 }
