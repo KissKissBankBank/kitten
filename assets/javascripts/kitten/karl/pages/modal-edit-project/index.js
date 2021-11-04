@@ -29,13 +29,30 @@ const GlobalStyle = createGlobalStyle`
       min-height: ${pxToRem(285)};
     }
 
-    :hover,
-    :focus {
+    :hover {
       cursor: pointer;
-
       .k-ModalEditProject--button {
         border-color: ${COLORS.primary2};
         background-color: ${COLORS.primary2};
+      }
+    }
+
+    :focus {
+      .k-ModalEditProject--button {
+        outline: ${COLORS.primary4} solid ${pxToRem(2)};
+        outline-offset:  ${pxToRem(2)};
+      }
+    }
+
+    :focus:not(:focus-visible) {
+      .k-ModalEditProject--button {
+        outline-color: transparent;
+      }
+    }
+
+    :focus-visible {
+      .k-ModalEditProject--button {
+        outline-color: ${COLORS.primary4};
       }
     }
   }
