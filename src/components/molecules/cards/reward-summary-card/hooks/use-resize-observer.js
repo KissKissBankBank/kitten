@@ -15,7 +15,7 @@ var _elementHelper = require("../../../../../helpers/dom/element-helper");
 
 // https://gist.github.com/DominicTobias/c8579667e8a8bd7817c1b4d5b274eb4c
 var useResizeObserver = function useResizeObserver() {
-  if (!_elementHelper.domElementHelper.canUseDom() && !'ResizeObserver' in window) {
+  if (!_elementHelper.domElementHelper.canUseDom() || !('ResizeObserver' in window)) {
     return {};
   }
 

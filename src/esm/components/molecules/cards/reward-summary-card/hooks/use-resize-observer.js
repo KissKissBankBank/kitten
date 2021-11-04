@@ -3,7 +3,7 @@ import { useRef, useCallback, useEffect, useState } from 'react';
 import { domElementHelper } from '../../../../../helpers/dom/element-helper'; // https://gist.github.com/DominicTobias/c8579667e8a8bd7817c1b4d5b274eb4c
 
 export var useResizeObserver = function useResizeObserver() {
-  if (!domElementHelper.canUseDom() && !'ResizeObserver' in window) {
+  if (!domElementHelper.canUseDom() || !('ResizeObserver' in window)) {
     return {};
   }
 
