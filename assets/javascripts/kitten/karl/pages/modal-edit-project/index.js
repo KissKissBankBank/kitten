@@ -13,15 +13,17 @@ import { COLORS } from '../../..'
 import { mq } from '../../../constants/screen-config'
 
 const GlobalStyle = createGlobalStyle`
-  .k-ModalEditProject--container {
+  button {
     border-width: ${pxToRem(2)};
     border-style: solid;
     border-radius: ${pxToRem(8)};
+    background-color: ${COLORS.background1};
     border-color: ${COLORS.line1};
     padding: ${pxToRem(20)};
-    min-height: ${pxToRem(355)};
+    min-height: ${pxToRem(395)};
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     @media ${mq.mobile} {
       min-height: ${pxToRem(285)};
@@ -84,11 +86,10 @@ const ModalEditProject = () => {
             <Modal.Block>
               <Grid>
                 <GridCol col-s="6">
-                  <div
-                    as="a"
+                  <button
+                    type="button"
                     href="#"
                     className={classNames(
-                      'k-ModalEditProject--container',
                       'k-u-margin-right-noneHalf@m-up',
                       'k-u-margin-bottom-double@s-down',  
                     )}
@@ -154,27 +155,23 @@ const ModalEditProject = () => {
                         </div>
                       </div>
                     </Modal.Paragraph>
-                    <div className="k-u-align-center">
                       <Modal.Button
+                        as="span"
                         modifier="helium"
                         fit="content"
                         size="tiny"
                         className="k-ModalEditProject--button"
                       >
                         Créer
-                      </Modal.Button>
-                    </div>
-                  </div>
+                    </Modal.Button>
+                  </button>
                 </GridCol>
                 
                 <GridCol col-s="6">
-                  <div
-                    as="a"
+                  <button
+                    type="button"
                     href="#"
-                    className={classNames(
-                      'k-ModalEditProject--container',
-                      'k-u-margin-left-noneHalf@m-up',
-                    )}
+                    className="k-u-margin-left-noneHalf@m-up"
                   >
                     <Modal.Paragraph className="k-ModalEditProject--paragraph">
                       <ChronoIconNext width="40" height="45" color={COLORS.primary1} />
@@ -251,17 +248,16 @@ const ModalEditProject = () => {
                         </div>
                       </div>
                     </Modal.Paragraph>
-                    <div className="k-u-align-center">
-                      <Modal.Button
-                        modifier="helium"
-                        fit="content"
-                        size="tiny"
-                        className="k-ModalEditProject--button"
-                      >
-                        Créer
-                      </Modal.Button>
-                    </div>
-                  </div>
+                    <Modal.Button
+                      as="span"
+                      modifier="helium"
+                      fit="content"
+                      size="tiny"
+                      className="k-ModalEditProject--button"
+                    >
+                      Créer
+                    </Modal.Button>
+                  </button>
                 </GridCol>
               </Grid>
             </Modal.Block>
