@@ -13,16 +13,6 @@ import { COLORS } from '../../..'
 import { mq } from '../../../constants/screen-config'
 
 const GlobalStyle = createGlobalStyle`
-  :hover,
-  :focus {
-    cursor: pointer;
-
-    .k-ModalEditProject--button {
-      border-color: ${COLORS.primary2};
-      background-color: ${COLORS.primary2};
-    }
-  }
-
   .k-ModalEditProject--container {
     border-width: ${pxToRem(2)};
     border-style: solid;
@@ -35,6 +25,16 @@ const GlobalStyle = createGlobalStyle`
 
     @media ${mq.mobile} {
       min-height: ${pxToRem(285)};
+    }
+
+    :hover,
+    :focus {
+      cursor: pointer;
+
+      .k-ModalEditProject--button {
+        border-color: ${COLORS.primary2};
+        background-color: ${COLORS.primary2};
+      }
     }
   }
 
@@ -84,11 +84,15 @@ const ModalEditProject = () => {
             <Modal.Block>
               <Grid>
                 <GridCol col-s="6">
-                  <div className={classNames(
-                    'k-ModalEditProject--container',
-                    'k-u-margin-right-noneHalf@m-up',
-                    'k-u-margin-bottom-double@s-down',
-                  )}>
+                  <div
+                    as="a"
+                    href="#"
+                    className={classNames(
+                      'k-ModalEditProject--container',
+                      'k-u-margin-right-noneHalf@m-up',
+                      'k-u-margin-bottom-double@s-down',  
+                    )}
+                  >
                     <Modal.Paragraph className="k-ModalEditProject--paragraph">
                       <InfiniteIconNext width="47" height="47" color={COLORS.primary1} />
                       <Title
@@ -164,10 +168,14 @@ const ModalEditProject = () => {
                 </GridCol>
                 
                 <GridCol col-s="6">
-                  <div className={classNames(
-                    'k-ModalEditProject--container',
-                    'k-u-margin-left-noneHalf@m-up',
-                  )}>
+                  <div
+                    as="a"
+                    href="#"
+                    className={classNames(
+                      'k-ModalEditProject--container',
+                      'k-u-margin-left-noneHalf@m-up',
+                    )}
+                  >
                     <Modal.Paragraph className="k-ModalEditProject--paragraph">
                       <ChronoIconNext width="40" height="45" color={COLORS.primary1} />
                       <Title
