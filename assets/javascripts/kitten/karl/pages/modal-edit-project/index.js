@@ -1,26 +1,29 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
-import { Grid, GridCol } from '../../../components/layout/grid'
-import { Modal } from '../../../components/molecules/modal-next'
-import { Text } from '../../../components/atoms/typography/text'
-import { Title } from '../../../components/atoms/typography/title'
-import { InfiniteIconNext } from '../../../components/graphics/icons-next/infinite-icon-next'
-import { ChronoIconNext } from '../../../components/graphics/icons-next/chrono-icon-next'
-import { CheckedIcon } from '../../../components/graphics/icons/checked-icon'
-import { pxToRem } from '../../../helpers/utils/typography'
+import {
+  Grid,
+  GridCol,
+  Text,
+  Title,
+  Paragraph,
+  Button,
+  InfiniteIconNext,
+  ChronoIconNext,
+  CheckedIcon,
+  pxToRem,
+  COLORS,
+  mq,
+  ModalNext as Modal,
+} from 'kitten'
 import classNames from 'classnames'
-import { COLORS } from '../../..'
-import { mq } from '../../../constants/screen-config'
 
 const GlobalStyle = createGlobalStyle`
-  button {
-    border-width: ${pxToRem(2)};
-    border-style: solid;
+  .k-ModalEditProject--container {
+    border: ${pxToRem(2)} solid ${COLORS.line1};
     border-radius: ${pxToRem(8)};
     background-color: ${COLORS.background1};
-    border-color: ${COLORS.line1};
     padding: ${pxToRem(20)};
-    min-height: ${pxToRem(395)};
+    min-height: ${pxToRem(410)};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,14 +108,19 @@ const ModalEditProject = () => {
                 <GridCol col-s="6">
                   <button
                     type="button"
-                    href="#"
                     className={classNames(
                       'k-u-margin-right-noneHalf@m-up',
-                      'k-u-margin-bottom-double@s-down',  
+                      'k-u-margin-bottom-double@s-down',
+                      'k-ModalEditProject--container',
                     )}
                   >
-                    <Modal.Paragraph className="k-ModalEditProject--paragraph">
-                      <InfiniteIconNext width="47" height="47" color={COLORS.primary1} />
+                    <Paragraph className="k-ModalEditProject--paragraph">
+                      <InfiniteIconNext
+                        width="47"
+                        height="47"
+                        color={COLORS.primary1}
+                        aria-hidden
+                      />
                       <Title
                         tag="p"
                         modifier="septenary"
@@ -132,7 +140,12 @@ const ModalEditProject = () => {
                           fonds sur la durée grâce au système de&nbsp;:
                         </Text>
                         <div className="k-ModalEditProject--blockText">
-                          <CheckedIcon color={COLORS.primary1} width="12" height="12" />
+                          <CheckedIcon
+                            color={COLORS.primary1}
+                            width="12"
+                            height="12"
+                            aria-hidden  
+                          />
                           <div className="k-u-margin-left-single">
                             <Text weight="bold" size="tiny" color="font1">
                               Don libre récurrent
@@ -150,7 +163,12 @@ const ModalEditProject = () => {
                         </div>
                         
                         <div className="k-ModalEditProject--blockText">
-                          <CheckedIcon color={COLORS.primary1} width="12" height="12" />
+                          <CheckedIcon
+                            color={COLORS.primary1}
+                            width="12"
+                            height="12"
+                            aria-hidden  
+                          />
                           <div className="k-u-margin-left-single">
                             <Text
                               weight="bold"
@@ -171,8 +189,8 @@ const ModalEditProject = () => {
                           </div>
                         </div>
                       </div>
-                    </Modal.Paragraph>
-                      <Modal.Button
+                    </Paragraph>
+                      <Button
                         as="span"
                         modifier="helium"
                         fit="content"
@@ -180,18 +198,25 @@ const ModalEditProject = () => {
                         className="k-ModalEditProject--button"
                       >
                         Créer
-                    </Modal.Button>
+                    </Button>
                   </button>
                 </GridCol>
                 
                 <GridCol col-s="6">
                   <button
                     type="button"
-                    href="#"
-                    className="k-u-margin-left-noneHalf@m-up"
+                    className={classNames(
+                      'k-u-margin-left-noneHalf@m-up',
+                      'k-ModalEditProject--container',
+                    )}
                   >
-                    <Modal.Paragraph className="k-ModalEditProject--paragraph">
-                      <ChronoIconNext width="40" height="45" color={COLORS.primary1} />
+                    <Paragraph className="k-ModalEditProject--paragraph">
+                      <ChronoIconNext
+                        width="40"
+                        height="45"
+                        color={COLORS.primary1}
+                        aria-hidden
+                      />
                       <Title
                         tag="p"
                         modifier="septenary"
@@ -211,7 +236,12 @@ const ModalEditProject = () => {
                           période donnée grâce au système de&nbsp;:
                         </Text>
                         <div className="k-ModalEditProject--blockText">
-                          <CheckedIcon color={COLORS.primary1} width="12" height="12" />
+                          <CheckedIcon
+                            color={COLORS.primary1}
+                            width="12"
+                            height="12"
+                            aria-hidden  
+                          />
                           <div className="k-u-margin-left-single">
                             <Text weight="bold" size="tiny" color="font1">
                               Don libre
@@ -229,7 +259,12 @@ const ModalEditProject = () => {
                         </div>
                         
                         <div className="k-ModalEditProject--blockText">
-                          <CheckedIcon color={COLORS.primary1} width="12" height="12" />
+                          <CheckedIcon
+                            color={COLORS.primary1}
+                            width="12"
+                            height="12"
+                            aria-hidden  
+                          />
                           <div className="k-u-margin-left-single">
                             <Text weight="bold" size="tiny" color="font1">
                               Don contre contrepartie
@@ -247,7 +282,12 @@ const ModalEditProject = () => {
                         </div>
 
                         <div className="k-ModalEditProject--blockText">
-                          <CheckedIcon color={COLORS.primary1} width="12" height="12" />
+                          <CheckedIcon
+                            color={COLORS.primary1}
+                            width="12"
+                            height="12"
+                            aria-hidden
+                          />
                           <div className="k-u-margin-left-single">
                             <Text weight="bold" size="tiny" color="font1">
                               Précommande
@@ -264,8 +304,8 @@ const ModalEditProject = () => {
                           </div>
                         </div>
                       </div>
-                    </Modal.Paragraph>
-                    <Modal.Button
+                    </Paragraph>
+                    <Button
                       as="span"
                       modifier="helium"
                       fit="content"
@@ -273,7 +313,7 @@ const ModalEditProject = () => {
                       className="k-ModalEditProject--button"
                     >
                       Créer
-                    </Modal.Button>
+                    </Button>
                   </button>
                 </GridCol>
               </Grid>
