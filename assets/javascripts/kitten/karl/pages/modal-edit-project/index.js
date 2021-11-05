@@ -10,10 +10,10 @@ import {
   InfiniteIconNext,
   ChronoIconNext,
   CheckedIcon,
+  ModalNext as Modal,
   pxToRem,
   COLORS,
   mq,
-  ModalNext as Modal,
 } from 'kitten'
 import classNames from 'classnames'
 
@@ -23,13 +23,24 @@ const GlobalStyle = createGlobalStyle`
     border-radius: ${pxToRem(8)};
     background-color: ${COLORS.background1};
     padding: ${pxToRem(20)};
-    min-height: ${pxToRem(410)};
+    min-height: ${pxToRem(421)};
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @media ${mq.mobile} {
       min-height: ${pxToRem(285)};
+    }
+
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset:  ${pxToRem(2)};
+    }
+    &:focus:not(:focus-visible) {
+      outline-color: transparent;
+    }
+    &:focus-visible {
+      outline-color: ${COLORS.primary4};
     }
 
     :hover {
@@ -39,20 +50,17 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${COLORS.primary2};
       }
     }
-
     :focus {
       .k-ModalEditProject--button {
         outline: ${COLORS.primary4} solid ${pxToRem(2)};
         outline-offset:  ${pxToRem(2)};
       }
     }
-
     :focus:not(:focus-visible) {
       .k-ModalEditProject--button {
         outline-color: transparent;
       }
     }
-
     :focus-visible {
       .k-ModalEditProject--button {
         outline-color: ${COLORS.primary4};
