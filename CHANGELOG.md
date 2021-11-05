@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [5.7.1] - 2021-11-04
+
+Fix:
+
+- `useResizeObserver`: Fix use condition for older browsers.
+
 ## [5.7.0] - 2021-11-02
 
 Features:
