@@ -50,22 +50,6 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${COLORS.primary2};
       }
     }
-    :focus {
-      .k-ModalEditProject--button {
-        outline: ${COLORS.primary4} solid ${pxToRem(2)};
-        outline-offset:  ${pxToRem(2)};
-      }
-    }
-    :focus:not(:focus-visible) {
-      .k-ModalEditProject--button {
-        outline-color: transparent;
-      }
-    }
-    :focus-visible {
-      .k-ModalEditProject--button {
-        outline-color: ${COLORS.primary4};
-      }
-    }
   }
 
   .k-ModalEditProject--paragraph {
@@ -122,7 +106,10 @@ const ModalEditProject = () => {
                       'k-ModalEditProject--container',
                     )}
                   >
-                    <Paragraph className="k-ModalEditProject--paragraph">
+                    <Paragraph
+                      tag="div"
+                      className="k-ModalEditProject--paragraph"
+                    >
                       <InfiniteIconNext
                         width="47"
                         height="47"
@@ -218,7 +205,10 @@ const ModalEditProject = () => {
                       'k-ModalEditProject--container',
                     )}
                   >
-                    <Paragraph className="k-ModalEditProject--paragraph">
+                    <Paragraph
+                      tag="div"
+                      className="k-ModalEditProject--paragraph"
+                    >
                       <ChronoIconNext
                         width="40"
                         height="45"
