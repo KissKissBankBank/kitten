@@ -96,6 +96,17 @@ button:focus-visible {
 
 Ce pattern de code est déjà en place sur la majeure partie des éléments focusables de Kitten.
 
+## Remarques
+
+Si on regarde le **critère 3.1.4 du RGAA** (<https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#test-3-1-4>)
+
+> **3.1.4** : Pour chaque propriété CSS déterminant une couleur et véhiculant une information, l’information ne doit pas être donnée uniquement par la couleur.
+>
+
+L'outline est une propriété CSS véhiculant une information sur l'état du composant (état focus, ou état non-focus). Si l'outline prend la place du border, à ce moment-là **l'information sur l'état du composant n'est véhiculée que par la couleur, ce qui est à éviter**.
+
+Le mode **contraste élevé de Windows** affiche tous les contenus de l'écran avec un fond noir et les éléments très contrastés. Tous les styles de couleurs sont remplacés. Dans le cas d'un remplacement du border par l'outline, les styles d'outline ne seront pas assez différents des styles de border dans ce mode et ça ne sera donc pas accessible.
+
 ## Tests
 
 Pour se rendre compte des styles de focus de chaque composant, utilisez la touche `Tab` (⇥) pour l’élément suivant, ou `Maj Tab` (⇧ ⇥) pour le précédent.
@@ -135,7 +146,10 @@ Bordure de 2px de large, de couleur primary3 (correspondra au "blue 900, very da
 <BorderStyle />
 
 - ✔️ Surface OK (La surface est égale à 2px autour de l’extérieur du composant non-focus)
-- ✖️ Couleur NOK (Sur les boutons Helium, il n'y a pas pas assez de contraste entre la zone de contraste et la couleur adjacente)
+- ✖️ Couleur NOK :
+    - Sur les boutons Helium, il n'y a pas pas assez de contraste entre la zone de contraste et la couleur adjacente
+    - L’information n’est véhiculée que via la couleur (voir remarque 1)
+    - On risque une baisse d'accessibilité en mode High Contrast (voir remarque 2)
 
 
 
