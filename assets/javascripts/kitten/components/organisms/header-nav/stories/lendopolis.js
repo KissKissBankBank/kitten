@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import HeaderNav from '../index'
 import {
   LendopolisLogo,
-  KissKissBankBankLogo,
   HeaderMenu,
   COLORS,
   Text,
@@ -10,7 +9,9 @@ import {
   LoginIcon,
   domElementHelper,
   pxToRem,
-} from '../../../..'
+  Badge,
+  Button,
+} from 'kitten'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 const getElementById = id => document.getElementById(id)
@@ -19,82 +20,209 @@ const getComputedWidthElement = id =>
 const getComputedLeft = id =>
   domElementHelper.getComputedLeft(getElementById(id))
 
-const InnerBurgerMenu = () => (
-  <HeaderMenu borderSide="right" borderSideOnHover={false} largeItem noBorder>
-    <HeaderNav.Hidden min="l">
-      <HeaderMenu.Item href="#comment_investir">
-        Comment investir
-      </HeaderMenu.Item>
-      <HeaderMenu.Item href="#decouvrez_les_projets">
-        Découvrez les projets
-      </HeaderMenu.Item>
-    </HeaderNav.Hidden>
+const InnerBurgerMenu = ({ isLogged }) => (
+  <HeaderMenu borderSide="right" borderSideOnHover={false} noBorder>
+    {!isLogged && (
+      <>
+        <HeaderMenu.Item
+          href="#64435"
+          className="k-u-background-color-primary6 k-u-hidden@s-up"
+        >
+          Se connecter
+        </HeaderMenu.Item>
+        <HeaderMenu.Item href="#54354" className="k-u-hidden@s-up">
+          S'inscrire
+        </HeaderMenu.Item>
+      </>
+    )}
 
-    <HeaderMenu.Item href="#comment_emprunter">
-      Comment emprunter
+    <HeaderMenu.Item href="5441" className="k-u-hidden@l-up">
+      Découvrir les projets
     </HeaderMenu.Item>
-    <HeaderMenu.Item href="#a_propos" isSelected>
-      À propos
+    <HeaderMenu.Item href="5442" className="k-u-hidden@l-up">
+      Comment investir
     </HeaderMenu.Item>
-    <HeaderMenu.Item href="#blog">Blog</HeaderMenu.Item>
-    <HeaderMenu.Item external href="#">
-      <KissKissBankBankLogo />
+
+    <HeaderMenu.Item href="#987641" target="_blank" rel="noopener">
+      Vos questions
     </HeaderMenu.Item>
-    <HeaderMenu.Item external href="#">
-      <KissKissBankBankLogo />
+    <HeaderMenu.Item href="#987642" target="_blank" rel="noopener">
+      Blog
     </HeaderMenu.Item>
-    <HeaderMenu.Item external href="#">
-      <KissKissBankBankLogo />
+    <HeaderMenu.Item href="#987643">Le crowdequity</HeaderMenu.Item>
+    <HeaderMenu.Item href="#987644">
+      Le financement participatif
     </HeaderMenu.Item>
   </HeaderMenu>
 )
 
-const Navigation = () => (
+const Navigation = ({ isLogged, isPreRegistered }) => (
   <>
     <HeaderNav.Nav.Item href="#">Comment investir</HeaderNav.Nav.Item>
-    <HeaderNav.Nav.Item href="#" isSelected>
-      Découvrez les projets
-    </HeaderNav.Nav.Item>
+    <HeaderNav.Nav.Item href="#">Découvrir les projets</HeaderNav.Nav.Item>
+    {isLogged && !isPreRegistered && (
+      <HeaderNav.Nav.Item href="#">
+        Parrainage&nbsp;
+        <Badge color={COLORS.primary1}>OFFRE</Badge>
+      </HeaderNav.Nav.Item>
+    )}
   </>
 )
 
-const InnerUserMenu = () => (
-  <HeaderMenu
-    noBorder
-    borderSide={false}
-    backgroundColors={{
-      hover: COLORS.background1,
-    }}
-  >
-    <HeaderMenu.Item href="#">
-      Mon espace personnel
-      <HeaderMenu.Badge a11yText="2 notifications">2</HeaderMenu.Badge>
-      <div className="k-u-hidden@xs-up k-u-margin-top-noneHalf">
-        <Text weight="light">Solde&nbsp;: 24&nbsp;093,39&nbsp;€</Text>
-      </div>
-    </HeaderMenu.Item>
-    <HeaderMenu.Item className="k-u-background-color-background3" href="#">
-      Déconnexion
-    </HeaderMenu.Item>
-  </HeaderMenu>
+const LoggedOutMenu = () => (
+  <>
+    <Button
+      as="a"
+      fit="content"
+      size="tiny"
+      modifier="calcium"
+      borderRadius={100}
+      href="#87641"
+      className="k-u-hidden@xs-down"
+    >
+      Se connecter
+    </Button>
+
+    <Button
+      as="a"
+      fit="content"
+      size="tiny"
+      modifier="helium"
+      borderRadius={100}
+      href="#87642"
+      className="k-u-hidden@xs-down"
+    >
+      S'inscrire
+    </Button>
+  </>
 )
 
-const InnerAnonymousMenu = () => (
-  <HeaderMenu
-    noBorder
-    borderSide={false}
-    backgroundColors={{
-      hover: COLORS.background1,
-    }}
-  >
-    <HeaderMenu.Item href="#">Se connecter</HeaderMenu.Item>
-    <HeaderMenu.Item href="#">S'inscrire</HeaderMenu.Item>
-  </HeaderMenu>
+const PreRegisteredMenu = () => (
+  <>
+    <Button
+      as="a"
+      fit="content"
+      size="tiny"
+      modifier="helium"
+      className="k-u-hidden@m-down"
+      borderRadius={100}
+      href="#6684654"
+    >
+      Mon inscription
+    </Button>
+
+    <HeaderNav.UserMenuNext dropdownAnchorSide="right">
+      <HeaderNav.UserMenuNext.Button
+        backgroundColor={COLORS.background1}
+        backgroundColorHover="transparent"
+        backgroundColorActive="transparent"
+      >
+        <Button
+          as="span"
+          icon={true}
+          size="tiny"
+          rounded={true}
+          modifier="hydrogen"
+          aria-label="Menu"
+        >
+          <LoginIcon width={15} height={16} />
+        </Button>
+      </HeaderNav.UserMenuNext.Button>
+
+      <HeaderNav.UserMenuNext.Navigation>
+        <HeaderMenu
+          noBorder
+          borderSide={false}
+          backgroundColors={{
+            hover: COLORS.background1,
+          }}
+          position="right"
+        >
+          <HeaderMenu.Item className="k-u-hidden@l-up" href="#64">
+            Compléter mon profil
+          </HeaderMenu.Item>
+          <HeaderMenu.Item
+            className="k-u-background-color-background3"
+            href="#68464"
+          >
+            Déconnexion
+          </HeaderMenu.Item>
+        </HeaderMenu>
+      </HeaderNav.UserMenuNext.Navigation>
+    </HeaderNav.UserMenuNext>
+  </>
+)
+const LoggedInMenu = () => (
+  <>
+    <HeaderNav.UserMenuNext dropdownAnchorSide="right">
+      <HeaderNav.UserMenuNext.Button
+        backgroundColor={COLORS.background1}
+        backgroundColorHover="transparent"
+        backgroundColorActive="transparent"
+        color={COLORS.font1}
+        colorHover={COLORS.primary1}
+        colorActive={COLORS.font1}
+      >
+        <AvatarWithTextAndBadge>
+          <AvatarWithTextAndBadge.Image text="JR" src="/kitten.jpg">
+            <AvatarWithTextAndBadge.Badge a11yText="1 notification">
+              1
+            </AvatarWithTextAndBadge.Badge>
+          </AvatarWithTextAndBadge.Image>
+
+          <AvatarWithTextAndBadge.Text
+            className="k-u-hidden@xs-down"
+            withEllipsisOverflow
+          >
+            <Text
+              lineHeight="normal"
+              weight="regular"
+              tag="div"
+              style={{ marginBottom: pxToRem(2) }}
+            >
+              Hello world
+            </Text>
+            <span className="k-u-weight-light">
+              <span className="k-u-weight-light k-u-hidden@xs-down">
+                Solde&nbsp;:
+              </span>
+              {` 15 2568 €`}
+            </span>
+          </AvatarWithTextAndBadge.Text>
+        </AvatarWithTextAndBadge>
+      </HeaderNav.UserMenuNext.Button>
+
+      <HeaderNav.UserMenuNext.Navigation>
+        <HeaderMenu
+          noBorder
+          borderSide={false}
+          backgroundColors={{ hover: COLORS.background1 }}
+        >
+          <HeaderMenu.Item href="#643435">
+            Compléter mon profil
+            <HeaderMenu.Badge a11yText="1 notification">1</HeaderMenu.Badge>
+          </HeaderMenu.Item>
+
+          <HeaderMenu.Item href="#5354354">Espace personnel</HeaderMenu.Item>
+
+          <HeaderMenu.Item
+            className="k-u-background-color-background3"
+            href="#logout"
+          >
+            Déconnexion
+          </HeaderMenu.Item>
+        </HeaderMenu>
+      </HeaderNav.UserMenuNext.Navigation>
+    </HeaderNav.UserMenuNext>
+  </>
 )
 
-export const LendopolisHeaderNavStory = ({ isLogged, ...args }) => {
+export const LendopolisHeaderNavStory = ({
+  isLogged,
+  isPreRegistered,
+  ...args
+}) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
-  const [userMenuWidth, setUserMenuWidth] = useState(null)
 
   useEffect(() => {
     setBurgerMenuWidth(
@@ -102,12 +230,6 @@ export const LendopolisHeaderNavStory = ({ isLogged, ...args }) => {
         getComputedWidthElement(`${HEADER_NAV_ID}PlateformMenu`) +
         getComputedWidthElement(`${HEADER_NAV_ID}Logo`),
     )
-
-    if (isLogged) {
-      setTimeout(() => {
-        setUserMenuWidth(getComputedWidthElement(`${HEADER_NAV_ID}UserMenu`))
-      }, 100)
-    }
   }, [isLogged])
 
   return (
@@ -122,106 +244,21 @@ export const LendopolisHeaderNavStory = ({ isLogged, ...args }) => {
       {...args}
     >
       <HeaderNav.BurgerMenu dropdownContentWidth={pxToRem(burgerMenuWidth)}>
-        <InnerBurgerMenu />
+        <InnerBurgerMenu isLogged={isLogged} />
       </HeaderNav.BurgerMenu>
 
       <HeaderNav.Logo href="#">
-        <HeaderNav.Hidden min="xs">
-          <LendopolisLogo height="25" primaryColor="#000" />
-        </HeaderNav.Hidden>
-
-        <HeaderNav.Hidden max="xxs">
-          <LendopolisLogo primaryColor="#000" />
-        </HeaderNav.Hidden>
+        <LendopolisLogo primaryColor="#000" />
       </HeaderNav.Logo>
 
-      <HeaderNav.Hidden max="m">
-        <HeaderNav.Nav>
-          <Navigation />
-        </HeaderNav.Nav>
-      </HeaderNav.Hidden>
+      <HeaderNav.Nav className="k-u-hidden@m-down">
+        <Navigation isLogged={isLogged} isPreRegistered={isPreRegistered} />
+      </HeaderNav.Nav>
 
       <HeaderNav.Right>
-        <HeaderNav.Logged>
-          <HeaderNav.UserMenu dropdownContentWidth={pxToRem(userMenuWidth)}>
-            <HeaderNav.UserMenu.Button>
-              <AvatarWithTextAndBadge>
-                <AvatarWithTextAndBadge.Image
-                  text="JC"
-                  backgroundColor="#002e7d"
-                >
-                  <AvatarWithTextAndBadge.Badge a11yText="2 notifications">
-                    2
-                  </AvatarWithTextAndBadge.Badge>
-                </AvatarWithTextAndBadge.Image>
-
-                <AvatarWithTextAndBadge.Text
-                  textClassName="k-u-hidden@xxs-down"
-                  withEllipsisOverflow={true}
-                >
-                  <Text lineHeight="normal" weight="regular">
-                    Jean Charles Édouard
-                  </Text>
-                  <br />
-                  <Text weight="light">
-                    <Text className="k-u-weight-light k-u-hidden@xs-down">
-                      Solde&nbsp;:
-                    </Text>{' '}
-                    24&nbsp;093,39&nbsp;€
-                  </Text>
-                </AvatarWithTextAndBadge.Text>
-              </AvatarWithTextAndBadge>
-            </HeaderNav.UserMenu.Button>
-
-            <HeaderNav.UserMenu.Navigation>
-              <InnerUserMenu />
-            </HeaderNav.UserMenu.Navigation>
-          </HeaderNav.UserMenu>
-        </HeaderNav.Logged>
-
-        <HeaderNav.LoggedOut>
-          <HeaderNav.Hidden max="xxs">
-            <HeaderNav.Button
-              backgroundColor={COLORS.background3}
-              backgroundColorHover={COLORS.line1}
-              color={COLORS.font1}
-              colorHover={COLORS.font1}
-              text="Se connecter"
-              href="#"
-            />
-            <HeaderNav.Button
-              backgroundColor={COLORS.primary1}
-              backgroundColorHover={COLORS.primary2}
-              color={COLORS.background1}
-              colorHover={COLORS.background1}
-              text="S'inscrire"
-              href="#"
-            />
-          </HeaderNav.Hidden>
-
-          <HeaderNav.Hidden min="xs">
-            <HeaderNav.UserMenu
-              dropdownContentWidth={pxToRem(userMenuWidth)}
-              padding={false}
-            >
-              <HeaderNav.UserMenu.Button>
-                <HeaderNav.Button
-                  icon={<LoginIcon />}
-                  a11yText="Se connecter / S'inscrire"
-                  backgroundColor={COLORS.primary1}
-                  backgroundColorHover={COLORS.primary2}
-                  color={COLORS.background1}
-                  colorHover={COLORS.background1}
-                  as="span"
-                />
-              </HeaderNav.UserMenu.Button>
-
-              <HeaderNav.UserMenu.Navigation>
-                <InnerAnonymousMenu />
-              </HeaderNav.UserMenu.Navigation>
-            </HeaderNav.UserMenu>
-          </HeaderNav.Hidden>
-        </HeaderNav.LoggedOut>
+        {!isLogged && <LoggedOutMenu />}
+        {isLogged &&
+          (isPreRegistered ? <PreRegisteredMenu /> : <LoggedInMenu />)}
       </HeaderNav.Right>
     </HeaderNav>
   )

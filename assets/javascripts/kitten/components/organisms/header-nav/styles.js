@@ -1,14 +1,9 @@
 import styled from 'styled-components'
-import { ScreenConfig } from '../../../constants/screen-config'
+import { ScreenConfig, mq } from '../../../constants/screen-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
-import { CONTAINER_PADDING } from '../../../constants/grid-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import {
-  MOBILE_HEADER_HEIGHT,
-  TABLET_HEADER_HEIGHT,
-  DESKTOP_HEADER_HEIGHT,
-} from './config'
+import { HEADER_HEIGHT } from './config'
 
 export const StyledHeader = styled.header`
   position: relative;
@@ -16,6 +11,7 @@ export const StyledHeader = styled.header`
 
   .k-HeaderNav__stickyContainer {
     width: 100%;
+    box-shadow: 0 ${pxToRem(1)} 0 rgba(0, 0, 0, 0.08);
   }
 
   &.k-HeaderNav--menuIsExpanded {
@@ -26,15 +22,6 @@ export const StyledHeader = styled.header`
     }
   }
 
-  &.k-HeaderNav--shadow {
-    .k-Spacer + .k-HeaderNav__stickyContainer {
-      box-shadow: 0 ${pxToRem(2)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
-    }
-  }
-  &.k-HeaderNav--border .k-HeaderNav__stickyContainer {
-    box-shadow: 0 ${pxToRem(1)} 0 rgba(0, 0, 0, 0.08);
-  }
-
   .k-HeaderNav {
     display: flex;
     align-items: center;
@@ -42,16 +29,6 @@ export const StyledHeader = styled.header`
     box-sizing: border-box;
     background: ${COLORS.background1};
     transition: background-color 0.2s ease;
-
-    @media (min-width: ${ScreenConfig.L.min}px) {
-      padding: 0 ${pxToRem(40)} 0 ${pxToRem(30)};
-    }
-
-    &:not(.k-HeaderNav--kkbb__only) {
-      @media (min-width: ${ScreenConfig.L.min}px) {
-        padding: 0;
-      }
-    }
 
     .quickAccessLink {
       background: ${COLORS.background1};
@@ -91,7 +68,7 @@ export const StyledHeader = styled.header`
     height: 100%;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
-      padding: 0 ${pxToRem(15)} 0 ${pxToRem(CONTAINER_PADDING)};
+      padding: 0 ${pxToRem(10)} 0 ${pxToRem(20)};
     }
   }
 
@@ -128,8 +105,15 @@ export const StyledHeader = styled.header`
     display: flex;
     align-items: center;
 
-    @media (min-width: ${ScreenConfig.S.min}px) {
+    @media ${mq.tabletAndDesktop} {
       padding: ${pxToRem(10)};
+    }
+  }
+
+  @media ${mq.desktop} {
+    /* Using an attribute selector because "@" causes trouble */
+    .k-HeaderNavDropdown[class*='k-u-hidden@l-up'] + .k-HeaderNav__Logo {
+      padding-left: ${pxToRem(40)};
     }
   }
 
@@ -182,22 +166,11 @@ export const StyledHeader = styled.header`
   .k-HeaderNav__right {
     justify-content: flex-end;
     flex-grow: 1;
+    gap: ${pxToRem(10)};
+    margin-right: ${pxToRem(20)};
 
-    &.k-HeaderNav__right--padded {
-      padding-right: ${pxToRem(20)};
-      gap: ${pxToRem(10)};
-
-      .k-HeaderNav__Button:last-child {
-        margin-right: ${pxToRem(-10)};
-      }
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        padding-right: ${pxToRem(10)};
-        gap: ${pxToRem(15)};
-
-        .k-HeaderNav__Button:last-child {
-          margin-right: ${pxToRem(-10)};
-        }
-      }
+    @media ${mq.desktop} {
+      margin-right: ${pxToRem(40)};
     }
   }
 
@@ -227,6 +200,14 @@ export const StyledHeader = styled.header`
     }
   }
 
+  .k-HeaderNav__UserMenu {
+    margin-right: ${pxToRem(-50)};
+
+    @media ${mq.tabletAndDesktop} {
+      margin-right: ${pxToRem(-40)};
+    }
+  }
+
   .k-HeaderNav__UserMenuButton {
     align-self: center;
     display: flex;
@@ -241,6 +222,8 @@ export const StyledHeader = styled.header`
       --UserMenu-Button-backgroundColor,
       ${COLORS.background3}
     );
+
+    padding-right: ${pxToRem(50)};
 
     .k-Badge {
       border-color: ${COLORS.background3};
@@ -315,20 +298,6 @@ export const StyledHeader = styled.header`
     }
   }
 
-  .k-HeaderNav__UserMenuButton--hasArrow {
-    padding-right: ${pxToRem(30)};
-  }
-
-  .k-HeaderNav__UserMenuButton--noPadding {
-    padding: 0 !important;
-  }
-
-  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-    .k-HeaderNav__UserMenuButton--noPaddingMobile {
-      padding: 0 !important;
-    }
-  }
-
   .k-HeaderNav-nav--center {
     justify-content: center;
   }
@@ -349,6 +318,7 @@ export const StyledHeader = styled.header`
     align-items: center;
 
     border-top: ${pxToRem(4)} solid transparent;
+    border-bottom: ${pxToRem(4)} solid transparent;
 
     ${TYPOGRAPHY.fontStyles.regular};
     font-size: ${stepToRem(-1)};
@@ -373,18 +343,16 @@ export const StyledHeader = styled.header`
     }
 
     &.is-selected {
-      border-color: currentColor;
+      border-top-color: currentColor;
       color: ${COLORS.primary1};
     }
   }
 
   /* SIZES */
-  &.k-HeaderNav--small .k-HeaderNav {
-    height: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+  .k-HeaderNav {
+    height: ${pxToRem(HEADER_HEIGHT)};
 
     .k-HeaderNav__UserMenuButton {
-      padding: 0 ${pxToRem(15)};
-
       &.k-Dropdown__button,
       &.k-HeaderNav__Button {
         min-width: ${pxToRem(40)};
@@ -392,7 +360,7 @@ export const StyledHeader = styled.header`
     }
 
     .k-HeaderNav-nav__item {
-      padding: 0 ${pxToRem(15)};
+      padding: 0 ${pxToRem(10)};
     }
 
     .k-Dropdown__button,
@@ -409,76 +377,6 @@ export const StyledHeader = styled.header`
         &:last-child {
           margin-right: ${pxToRem(10)};
         }
-      }
-    }
-  }
-
-  &.k-HeaderNav--regular .k-HeaderNav {
-    height: ${pxToRem(MOBILE_HEADER_HEIGHT)};
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      height: ${pxToRem(TABLET_HEADER_HEIGHT)};
-    }
-
-    @media (min-width: ${ScreenConfig.L.min}px) {
-      height: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
-    }
-
-    .k-HeaderNav__UserMenuButton {
-      padding: 0 ${pxToRem(40)};
-    }
-    .k-HeaderNav-nav__item {
-      padding: 0 ${pxToRem(40)};
-
-      &.smallPadding {
-        padding: 0 ${pxToRem(10)};
-      }
-    }
-
-    .k-HeaderNav__right .k-HeaderNav-nav__item {
-      padding: 0 ${pxToRem(10)};
-    }
-
-    .k-Dropdown__button,
-    .k-HeaderNav__Button {
-      min-width: ${pxToRem(52)};
-      cursor: pointer;
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        min-width: ${pxToRem(TABLET_HEADER_HEIGHT)};
-      }
-
-      @media (min-width: ${ScreenConfig.L.min}px) {
-        min-width: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
-      }
-    }
-
-    .k-HeaderNav__Button__text:first-child {
-      margin-left: ${pxToRem(30)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-left: ${pxToRem(40)};
-      }
-    }
-
-    .k-HeaderNav__Button--smallPadding {
-      .k-HeaderNav__Button__text:first-child {
-        margin-left: 0;
-      }
-    }
-
-    .k-HeaderNav__Button__text:last-child {
-      margin-right: ${pxToRem(30)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-right: ${pxToRem(40)};
-      }
-    }
-
-    .k-HeaderNav__Button--smallPadding {
-      .k-HeaderNav__Button__text:last-child {
-        margin-left: ${pxToRem(10)};
-        margin-right: 0;
       }
     }
   }
@@ -551,7 +449,7 @@ export const StyledHeader = styled.header`
       position: relative;
 
       .k-HeaderNavDropdown__menu {
-        min-width: max(${pxToRem(200)}, 100%);
+        min-width: max(${pxToRem(250)}, 100%);
 
         &.k-HeaderNavDropdown__menu--is-left {
           left: 0;
