@@ -29,6 +29,7 @@ export const StyledHeader = styled.header`
     box-sizing: border-box;
     background: ${COLORS.background1};
     transition: background-color 0.2s ease;
+    height: ${pxToRem(HEADER_HEIGHT)};
 
     .quickAccessLink {
       background: ${COLORS.background1};
@@ -54,6 +55,12 @@ export const StyledHeader = styled.header`
     }
     *:not(input):focus-visible {
       outline-color: ${COLORS.primary4};
+    }
+
+    .k-Dropdown__button,
+    .k-HeaderNav__Button {
+      min-width: ${pxToRem(52)};
+      cursor: pointer;
     }
   }
 
@@ -151,8 +158,16 @@ export const StyledHeader = styled.header`
       background-color: var(--HeaderMenu-Button-backgroundColorHover);
     }
 
-    .k-HeaderNav__Button__text:first-child {
-      margin-right: ${pxToRem(-10)}; /* gap compensation */
+    &.k-HeaderNav__Button--hasText {
+      .k-HeaderNav__Button__text {
+        &:first-child {
+          margin-left: ${pxToRem(15)};
+          margin-right: ${pxToRem(-10)}; /* gap compensation */
+        }
+        &:last-child {
+          margin-right: ${pxToRem(10)};
+        }
+      }
     }
   }
 
@@ -224,6 +239,11 @@ export const StyledHeader = styled.header`
     );
 
     padding-right: ${pxToRem(50)};
+
+    &.k-Dropdown__button,
+    &.k-HeaderNav__Button {
+      min-width: ${pxToRem(40)};
+    }
 
     .k-Badge {
       border-color: ${COLORS.background3};
@@ -316,6 +336,7 @@ export const StyledHeader = styled.header`
   .k-HeaderNav-nav__item {
     display: flex;
     align-items: center;
+    padding: 0 ${pxToRem(10)};
 
     border-top: ${pxToRem(4)} solid transparent;
     border-bottom: ${pxToRem(4)} solid transparent;
@@ -345,39 +366,6 @@ export const StyledHeader = styled.header`
     &.is-selected {
       border-top-color: currentColor;
       color: ${COLORS.primary1};
-    }
-  }
-
-  /* SIZES */
-  .k-HeaderNav {
-    height: ${pxToRem(HEADER_HEIGHT)};
-
-    .k-HeaderNav__UserMenuButton {
-      &.k-Dropdown__button,
-      &.k-HeaderNav__Button {
-        min-width: ${pxToRem(40)};
-      }
-    }
-
-    .k-HeaderNav-nav__item {
-      padding: 0 ${pxToRem(10)};
-    }
-
-    .k-Dropdown__button,
-    .k-HeaderNav__Button {
-      min-width: ${pxToRem(52)};
-      cursor: pointer;
-    }
-
-    .k-HeaderNav__Button--hasText {
-      .k-HeaderNav__Button__text {
-        &:first-child {
-          margin-left: ${pxToRem(15)};
-        }
-        &:last-child {
-          margin-right: ${pxToRem(10)};
-        }
-      }
     }
   }
 

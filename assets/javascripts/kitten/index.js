@@ -424,11 +424,7 @@ export {
   BIG as HORIZONTAL_STROKE_STYLE_BIG,
   HUGE as HORIZONTAL_STROKE_STYLE_HUGE,
 } from './components/atoms/horizontal-stroke'
-export {
-  MOBILE_HEADER_HEIGHT,
-  TABLET_HEADER_HEIGHT,
-  DESKTOP_HEADER_HEIGHT,
-} from './components/organisms/header-nav/config'
+export { HEADER_HEIGHT } from './components/organisms/header-nav/config'
 export {
   CLOSE_OVERLAY_EVENT,
   OPEN_OVERLAY_EVENT,
