@@ -111,8 +111,8 @@ const PreRegisteredMenu = () => (
       Mon inscription
     </Button>
 
-    <HeaderNav.UserMenuNext dropdownAnchorSide="right">
-      <HeaderNav.UserMenuNext.Button
+    <HeaderNav.UserMenu dropdownAnchorSide="right">
+      <HeaderNav.UserMenu.Button
         backgroundColor={COLORS.background1}
         backgroundColorHover="transparent"
         backgroundColorActive="transparent"
@@ -127,9 +127,9 @@ const PreRegisteredMenu = () => (
         >
           <LoginIcon width={15} height={16} />
         </Button>
-      </HeaderNav.UserMenuNext.Button>
+      </HeaderNav.UserMenu.Button>
 
-      <HeaderNav.UserMenuNext.Navigation>
+      <HeaderNav.UserMenu.Navigation>
         <HeaderMenu
           noBorder
           borderSide={false}
@@ -148,14 +148,14 @@ const PreRegisteredMenu = () => (
             Déconnexion
           </HeaderMenu.Item>
         </HeaderMenu>
-      </HeaderNav.UserMenuNext.Navigation>
-    </HeaderNav.UserMenuNext>
+      </HeaderNav.UserMenu.Navigation>
+    </HeaderNav.UserMenu>
   </>
 )
 const LoggedInMenu = () => (
   <>
-    <HeaderNav.UserMenuNext dropdownAnchorSide="right">
-      <HeaderNav.UserMenuNext.Button
+    <HeaderNav.UserMenu dropdownAnchorSide="right">
+      <HeaderNav.UserMenu.Button
         backgroundColor={COLORS.background1}
         backgroundColorHover="transparent"
         backgroundColorActive="transparent"
@@ -190,9 +190,9 @@ const LoggedInMenu = () => (
             </span>
           </AvatarWithTextAndBadge.Text>
         </AvatarWithTextAndBadge>
-      </HeaderNav.UserMenuNext.Button>
+      </HeaderNav.UserMenu.Button>
 
-      <HeaderNav.UserMenuNext.Navigation>
+      <HeaderNav.UserMenu.Navigation>
         <HeaderMenu
           noBorder
           borderSide={false}
@@ -212,8 +212,8 @@ const LoggedInMenu = () => (
             Déconnexion
           </HeaderMenu.Item>
         </HeaderMenu>
-      </HeaderNav.UserMenuNext.Navigation>
-    </HeaderNav.UserMenuNext>
+      </HeaderNav.UserMenu.Navigation>
+    </HeaderNav.UserMenu>
   </>
 )
 

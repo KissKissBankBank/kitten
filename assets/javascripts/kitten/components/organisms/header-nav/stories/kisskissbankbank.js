@@ -244,12 +244,12 @@ export const KissKissBankBankHeaderNavStory = ({
         isLogged={isLogged}
         {...args}
       >
-        <HeaderNav.BurgerMenuNext
+        <HeaderNav.BurgerMenu
           dropdownContentWidth={burgerMenuWidth}
           className="k-u-hidden@l-up"
         >
           <InnerBurgerMenu />
-        </HeaderNav.BurgerMenuNext>
+        </HeaderNav.BurgerMenu>
 
         <HeaderNav.Logo href="#logo">
           <KissKissBankBankLogo height="25" />
@@ -305,8 +305,8 @@ export const KissKissBankBankHeaderNavStory = ({
               </Button>
             )}
 
-            <HeaderNav.UserMenuNext dropdownAnchorSide="right">
-              <HeaderNav.UserMenuNext.Button
+            <HeaderNav.UserMenu dropdownAnchorSide="right">
+              <HeaderNav.UserMenu.Button
                 hasArrow
                 backgroundColor={COLORS.background1}
                 backgroundColorHover="transparent"
@@ -331,11 +331,11 @@ export const KissKissBankBankHeaderNavStory = ({
                     </Text>
                   </AvatarWithTextAndBadge.Text>
                 </AvatarWithTextAndBadge>
-              </HeaderNav.UserMenuNext.Button>
-              <HeaderNav.UserMenuNext.Navigation>
+              </HeaderNav.UserMenu.Button>
+              <HeaderNav.UserMenu.Navigation>
                 <InnerUserMenu />
-              </HeaderNav.UserMenuNext.Navigation>
-            </HeaderNav.UserMenuNext>
+              </HeaderNav.UserMenu.Navigation>
+            </HeaderNav.UserMenu>
           </HeaderNav.Logged>
 
           <HeaderNav.LoggedOut>
