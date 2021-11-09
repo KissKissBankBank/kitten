@@ -135,7 +135,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -398,7 +398,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -668,7 +668,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -947,7 +947,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1219,7 +1219,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1482,7 +1482,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1745,7 +1745,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2008,7 +2008,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2271,7 +2271,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2534,7 +2534,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),

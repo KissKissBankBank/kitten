@@ -135,7 +135,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -579,7 +579,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1023,7 +1023,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1467,7 +1467,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1911,7 +1911,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
