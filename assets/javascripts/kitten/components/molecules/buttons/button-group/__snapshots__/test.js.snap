@@ -135,7 +135,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 }
 
 .c1.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c1 svg:not(.k-ColorSvg),
@@ -489,7 +489,7 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
 }
 
 .c1.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c1 svg:not(.k-ColorSvg),

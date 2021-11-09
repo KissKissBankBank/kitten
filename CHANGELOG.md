@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `HeaderNav`: Remove `size` prop defaults to `small`.
 - Feature: `HeaderNav`: Move `UserMenuNext` to `UserMenu` and `BurgerMenuNext` to `BurgerMenu`.
 - Feature: `HeaderNav.UserMenuNext.Button`: remove `hasArrow` prop, now defaults to `true`.
+- Feature: `Button`: Fix `rounded` style.
 
 ## [5.7.1] - 2021-11-04
 

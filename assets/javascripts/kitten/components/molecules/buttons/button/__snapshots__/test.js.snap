@@ -135,7 +135,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -389,7 +389,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -641,7 +641,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -893,7 +893,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1145,7 +1145,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1397,7 +1397,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1649,7 +1649,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1903,7 +1903,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2155,7 +2155,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2407,7 +2407,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2659,7 +2659,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2911,7 +2911,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -3163,7 +3163,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -3415,7 +3415,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -3667,7 +3667,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -3924,7 +3924,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -4176,7 +4176,7 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -4428,7 +4428,7 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),

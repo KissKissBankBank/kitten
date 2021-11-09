@@ -90,8 +90,8 @@ Button.propTypes = {
 
 Button.defaultProps = {
   icon: null,
-  backgroundColor: "transparent",
-  backgroundColorHover: "transparent",
+  backgroundColor: 'transparent',
+  backgroundColorHover: 'transparent',
   color: COLORS.font1,
   colorHover: COLORS.primary1,
   text: null,
