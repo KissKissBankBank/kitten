@@ -2,11 +2,13 @@ import React from 'react'
 import HeaderNav from '../index'
 import {
   KissKissBankBankLogo,
-  SearchIcon,
+  SaveIcon,
   COLORS,
   Text,
   parseHtml,
-} from '../../../..'
+  Button,
+  UsersIconNext
+} from 'kitten'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 
@@ -20,8 +22,8 @@ export const MinimalistHeaderNavStory = ({ text, subText, ...args }) => (
       zIndex: 300,
     }}
   >
-    <HeaderNav.Logo href="#">
-      <KissKissBankBankLogo />
+    <HeaderNav.Logo href="#" className="k-u-margin-left-double k-u-margin-left-quadruple@s-up">
+      <KissKissBankBankLogo tiny height={6} />
     </HeaderNav.Logo>
 
     <HeaderNav.Centered display="column">
@@ -47,21 +49,19 @@ export const MinimalistHeaderNavStory = ({ text, subText, ...args }) => (
     </HeaderNav.Centered>
 
     <HeaderNav.Right>
-      <HeaderNav.LoggedOut>
-        <HeaderNav.Button
-          icon={
-            <HeaderNav.Hidden min="s">
-              <SearchIcon />
-            </HeaderNav.Hidden>
-          }
-          backgroundColor={COLORS.primary1}
-          backgroundColorHover={COLORS.primary2}
-          color={COLORS.background1}
-          text="Sauvegarder"
-          href="#"
-          hiddenText={{ max: 'xs' }}
-        />
-      </HeaderNav.LoggedOut>
+      <HeaderNav.Button
+        icon={
+          <SaveIcon />
+        }
+        text="Sauvegarder"
+        href="#"
+        hiddenText={{ max: 'xs' }}
+      />
+      <Button rounded modifier="helium" fit="content" mobileFit="icon">
+        <UsersIconNext />
+        <span className="k-u-hidden@s-up k-u-a11y-visuallyHidden">Hello world</span>
+        <span className="k-u-hidden@xs-down">Hello world</span>
+      </Button>
     </HeaderNav.Right>
   </HeaderNav>
 )
