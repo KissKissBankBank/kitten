@@ -16,7 +16,7 @@ Breaking Changes:
 Features:
 
 - `HeaderNav`: Add `HEADER_HEIGHT` to exports.
-- `HeaderNav.UserMenu.Button`: remove `hasArrow` prop, now defaults to `true`.
+- `HeaderNav.UserMenu.Button`: Remove `hasArrow` prop, now defaults to `true`.
 
 Fix:
 
