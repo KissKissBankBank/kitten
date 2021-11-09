@@ -2021,22 +2021,10 @@ Object.defineProperty(exports, "CAROUSEL_OUTLINE_PLUS_OFFSET", {
     return _styles.OUTLINE_PLUS_OFFSET;
   }
 });
-Object.defineProperty(exports, "MOBILE_HEADER_HEIGHT", {
+Object.defineProperty(exports, "HEADER_HEIGHT", {
   enumerable: true,
   get: function get() {
-    return _config.MOBILE_HEADER_HEIGHT;
-  }
-});
-Object.defineProperty(exports, "TABLET_HEADER_HEIGHT", {
-  enumerable: true,
-  get: function get() {
-    return _config.TABLET_HEADER_HEIGHT;
-  }
-});
-Object.defineProperty(exports, "DESKTOP_HEADER_HEIGHT", {
-  enumerable: true,
-  get: function get() {
-    return _config.DESKTOP_HEADER_HEIGHT;
+    return _config.HEADER_HEIGHT;
   }
 });
 Object.defineProperty(exports, "createEvent", {

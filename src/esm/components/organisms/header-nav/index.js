@@ -7,10 +7,8 @@ import { StickyContainer } from '../../../components/layout/sticky-container';
 import { Button } from './components/button';
 import { Logo } from './components/logo';
 import { BurgerMenu } from './components/burger-menu';
-import { BurgerMenuNext } from './components/burger-menu-next';
 import { Nav } from './components/nav';
 import { UserMenu } from './components/user-menu';
-import { UserMenuNext } from './components/user-menu-next';
 import { Context } from './components/context';
 import { Right } from './components/right';
 import { Centered } from './components/centered';
@@ -30,8 +28,6 @@ var HeaderNav = function HeaderNav(_ref) {
       quickAccessProps = _ref.quickAccessProps,
       stickyProps = _ref.stickyProps,
       zIndexConfig = _ref.zIndexConfig,
-      size = _ref.size,
-      borderStyle = _ref.borderStyle,
       className = _ref.className;
 
   var _useState = useState(false),
@@ -81,7 +77,7 @@ var HeaderNav = function HeaderNav(_ref) {
       '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu
     },
     zIndex: zIndexConfig,
-    className: classNames('k-HeaderNav__wrapper', "k-HeaderNav--".concat(size), "k-HeaderNav--".concat(borderStyle), {
+    className: classNames('k-HeaderNav__wrapper', {
       'k-HeaderNav--menuIsExpanded': isMenuExpanded
     })
   }, /*#__PURE__*/React.createElement(StickyContainer, _extends({
@@ -99,10 +95,8 @@ var HeaderNav = function HeaderNav(_ref) {
 HeaderNav.Button = Button;
 HeaderNav.Logo = Logo;
 HeaderNav.BurgerMenu = BurgerMenu;
-HeaderNav.BurgerMenuNext = BurgerMenuNext;
 HeaderNav.Nav = Nav;
 HeaderNav.UserMenu = UserMenu;
-HeaderNav.UserMenuNext = UserMenuNext;
 HeaderNav.Right = Right;
 HeaderNav.Centered = Centered;
 HeaderNav.LoggedOut = LoggedOut;
@@ -124,9 +118,7 @@ HeaderNav.propTypes = {
   zIndexConfig: PropTypes.shape({
     header: PropTypes.number,
     headerWithOpenMenu: PropTypes.number
-  }),
-  size: PropTypes.oneOf(['small', 'regular']),
-  borderStyle: PropTypes.oneOf(['none', 'shadow', 'border'])
+  })
 };
 HeaderNav.defaultProps = {
   id: 'kkbbAndCoHeaderNav',
@@ -137,8 +129,6 @@ HeaderNav.defaultProps = {
   zIndexConfig: {
     header: 1,
     headerWithOpenMenu: 3
-  },
-  size: 'regular',
-  borderStyle: 'shadow'
+  }
 };
 export default HeaderNav;

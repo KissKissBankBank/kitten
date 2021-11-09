@@ -89,10 +89,10 @@ Button.propTypes = {
 };
 Button.defaultProps = {
   icon: null,
-  backgroundColor: COLORS.line1,
-  backgroundColorHover: COLORS.line2,
+  backgroundColor: 'transparent',
+  backgroundColorHover: 'transparent',
   color: COLORS.font1,
-  colorHover: null,
+  colorHover: COLORS.primary1,
   text: null,
   smallPadding: false
 };

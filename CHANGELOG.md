@@ -4,13 +4,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking Change: `HeaderNav`: Remove `MOBILE_HEADER_HEIGHT`, `TABLET_HEADER_HEIGHT`, `DESKTOP_HEADER_HEIGHT` exports.
-- Breaking Change: `HeaderNav`: Move `UserMenuNext` to `UserMenu` and `BurgerMenuNext` to `BurgerMenu`.
-- Feature: `HeaderNav`: Add `HEADER_HEIGHT` to exports.
-- Breaking Change: `HeaderNav`: Remove `borderStyle` prop defaults to `border`.
-- Breaking Change: `HeaderNav`: Remove `size` prop defaults to `small`.
-- Feature: `HeaderNav.UserMenu.Button`: remove `hasArrow` prop, now defaults to `true`.
-- Feature: `Button`: Fix `rounded` style.
+## [6.0.0] - 2021-11-09
+
+Breaking Changes:
+
+- `HeaderNav`: Remove `MOBILE_HEADER_HEIGHT`, `TABLET_HEADER_HEIGHT`, `DESKTOP_HEADER_HEIGHT` exports.
+- `HeaderNav`: Move `UserMenuNext` to `UserMenu` and `BurgerMenuNext` to `BurgerMenu`.
+- `HeaderNav`: Remove `borderStyle` prop defaults to `border`.
+- `HeaderNav`: Remove `size` prop defaults to `small`.
+
+Features:
+
+- `HeaderNav`: Add `HEADER_HEIGHT` to exports.
+- `HeaderNav.UserMenu.Button`: remove `hasArrow` prop, now defaults to `true`.
+
+Fix:
+
+- `Button`: Fix `rounded` style.
 
 ## [5.7.1] - 2021-11-04
 
