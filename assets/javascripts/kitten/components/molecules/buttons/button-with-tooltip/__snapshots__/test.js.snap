@@ -131,7 +131,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -141,9 +141,9 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -159,7 +159,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 }
 
 .c1:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -168,7 +168,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 }
 
 .c1:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c1.k-Button--nano {
@@ -256,19 +256,19 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 
 .c1:hover,
 .c1:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
 }
 
 .c1:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
 }
 
 .c1:focus {
-  outline: #bae8fd solid 0.125rem;
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -277,14 +277,14 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 }
 
 .c1:focus-visible {
-  outline-color: #bae8fd;
+  outline-color: var(--color-primary4,#bae8fd);
 }
 
 .c1:disabled,
 .c1.k-Button--disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
 }
 
 .c0 {
@@ -415,12 +415,12 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
       Object {
         "--k-ArrowContainer-arrowDistance": "calc(50% - 0.4375rem)",
         "--k-ArrowContainer-arrowSize": "0.4375rem",
-        "--k-ArrowContainer-borderColor": "#eee",
+        "--k-ArrowContainer-borderColor": "var(--color-line1, #eee)",
         "--k-ArrowContainer-borderDistance": 0,
         "--k-ArrowContainer-borderRadius": "0.25rem",
         "--k-ArrowContainer-borderSize": "0.4375rem",
         "--k-ArrowContainer-borderWidth": 0,
-        "--k-ArrowContainer-color": "#eee",
+        "--k-ArrowContainer-color": "var(--color-line1, #eee)",
         "--k-ArrowContainer-padding": "0.5rem",
       }
     }
