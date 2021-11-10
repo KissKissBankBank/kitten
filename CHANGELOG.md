@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Design`: use browser default styles for focus outlines.
+
 ## [6.0.0] - 2021-11-09
 
 Breaking Changes:
