@@ -1,60 +1,46 @@
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import _extends from "@babel/runtime/helpers/esm/extends";
-import React, { useRef } from 'react';
+import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import React, { useContext } from 'react';
 import { BurgerIcon } from '../../../../components/graphics/icons/burger-icon';
-import { Dropdown } from './dropdown';
 import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden';
 import COLORS from '../../../../constants/colors-config';
 import { Context } from './context';
 import classNames from 'classnames';
+import { useDropdown } from '../hooks/use-dropdown';
+import { DropdownButton } from './dropdown-button';
 var namespace = 'kkbbAndCo';
-var DROPDOWN_CLASS = "".concat(namespace, "-PlatformMenu");
 var CLOSE_EVENT = "".concat(namespace, ":platformMenu:close");
-
-var ButtonIcon = function ButtonIcon(props) {
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(BurgerIcon, _extends({}, props, {
-    hoverColor: COLORS.font1,
-    className: "k-ButtonIcon__svg",
-    "aria-hidden": "true"
-  })), /*#__PURE__*/React.createElement(VisuallyHidden, null, "Menu"));
-};
-
-var buttonClassNames = classNames('k-HeaderNav__BurgerMenu__button', 'k-ButtonIcon', 'k-ButtonIcon--tiny');
 export var BurgerMenu = function BurgerMenu(_ref) {
   var children = _ref.children,
       dropdownContentWidth = _ref.dropdownContentWidth,
-      props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth"]);
+      className = _ref.className,
+      props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth", "className"]);
 
-  var dropdownComponent = useRef(null);
+  var _useContext = useContext(Context),
+      id = _useContext.id,
+      callOnToggle = _useContext.callOnToggle;
 
-  var getElementById = function getElementById(id) {
-    return function () {
-      return document.getElementById(id);
-    };
-  };
+  var _useDropdown = useDropdown({
+    dropdownContentWidth: dropdownContentWidth,
+    callOnToggle: callOnToggle,
+    dropdownAnchorSide: 'left',
+    closeEvents: [CLOSE_EVENT],
+    buttonId: "".concat(id, "PlateformMenu"),
+    menuId: "".concat(id, "PlateformMenu__content")
+  }),
+      dropdownProps = _useDropdown.dropdownProps,
+      buttonProps = _useDropdown.buttonProps,
+      menuProps = _useDropdown.menuProps,
+      isDropdownExpanded = _useDropdown.isDropdownExpanded;
 
-  return /*#__PURE__*/React.createElement(Context.Consumer, null, function (_ref2) {
-    var id = _ref2.id,
-        callOnToggle = _ref2.callOnToggle;
-    return /*#__PURE__*/React.createElement(Dropdown, _extends({}, props, {
-      buttonClassName: buttonClassNames,
-      buttonContentOnCollapsed: /*#__PURE__*/React.createElement(ButtonIcon, {
-        isAnimatedOnHover: true
-      }),
-      buttonContentOnExpanded: /*#__PURE__*/React.createElement(ButtonIcon, {
-        isActive: true
-      }),
-      buttonId: "".concat(id, "PlateformMenu"),
-      className: DROPDOWN_CLASS,
-      closeEvents: [CLOSE_EVENT],
-      closeOnOuterClick: true,
-      dropdownContent: children,
-      dropdownContentWidth: dropdownContentWidth,
-      onToggle: callOnToggle,
-      positionedVerticallyWith: getElementById(id),
-      positionedWithBorder: true,
-      ref: dropdownComponent,
-      refreshEvents: ['resize']
-    }));
-  });
+  return /*#__PURE__*/React.createElement("div", _extends({}, dropdownProps, props, {
+    className: classNames(className, dropdownProps.className)
+  }), /*#__PURE__*/React.createElement(DropdownButton, _extends({}, buttonProps, {
+    className: classNames(buttonProps.className, 'k-HeaderNav__BurgerMenu__button', 'k-ButtonIcon', 'k-ButtonIcon--tiny')
+  }), /*#__PURE__*/React.createElement(BurgerIcon, {
+    isActive: isDropdownExpanded,
+    hoverColor: COLORS.font1,
+    className: "k-ButtonIcon__svg",
+    "aria-hidden": "true"
+  }), /*#__PURE__*/React.createElement(VisuallyHidden, null, "Menu")), /*#__PURE__*/React.createElement("div", menuProps, children));
 };

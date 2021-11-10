@@ -27,7 +27,6 @@ export const buttonModifiers = [
   'social_linkedin',
   'social_instagram',
   'social_youtube',
-  'social_pinterest',
 ]
 
 export const buttonFitOptions = ['icon', 'min-width', 'content', 'fluid']
@@ -222,7 +221,7 @@ const StyledButton = styled.button`
   }
 
   &.k-Button--rounded {
-    --Button-border-radius: 50%;
+    --Button-border-radius: var(--Button-dimension);
   }
 
   /* MODIFIERS */

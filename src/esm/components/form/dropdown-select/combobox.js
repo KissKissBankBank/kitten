@@ -57,7 +57,8 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       modifier = _ref.modifier,
       direction = _ref.direction,
       arrowPosition = _ref.arrowPosition,
-      labelProps = _ref.labelProps;
+      labelProps = _ref.labelProps,
+      inputProps = _ref.inputProps;
 
   var _useState = useState([]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -184,9 +185,9 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
   }, getLabelProps()), labelText), /*#__PURE__*/React.createElement("div", _extends({
     className: "k-Form-DropdownCombobox"
   }, getComboboxProps()), /*#__PURE__*/React.createElement("input", _extends({
-    className: "k-Form-DropdownCombobox__input",
     placeholder: placeholder,
-    disabled: disabled,
+    disabled: disabled
+  }, inputProps, {
     onFocus: function onFocus() {
       return !isOpen && openMenu();
     },
@@ -197,7 +198,9 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
     onBlur: function onBlur() {
       _onBlur(find(['label', inputValue])(flattenedOptions) || null);
     }
-  }))), /*#__PURE__*/React.createElement("button", _extends({
+  }), {
+    className: classNames('k-Form-DropdownCombobox__input', inputProps.className)
+  })), /*#__PURE__*/React.createElement("button", _extends({
     className: "k-Form-DropdownCombobox__arrowButton",
     type: "button",
     "aria-label": comboboxButtonLabelText,
@@ -258,7 +261,8 @@ DropdownCombobox.defaultProps = {
   menuZIndex: 1000,
   modifier: 'hydrogen',
   direction: 'down',
-  arrowPosition: 'left'
+  arrowPosition: 'left',
+  inputProps: {}
 };
 DropdownCombobox.propTypes = {
   id: PropTypes.string.isRequired,
@@ -283,5 +287,6 @@ DropdownCombobox.propTypes = {
   menuZIndex: PropTypes.number,
   modifier: PropTypes.oneOf(['hydrogen', 'nitrogen', 'boron']),
   direction: PropTypes.oneOf(['up', 'down']),
-  arrowPosition: PropTypes.oneOf(['left', 'right'])
+  arrowPosition: PropTypes.oneOf(['left', 'right']),
+  inputProps: PropTypes.object
 };

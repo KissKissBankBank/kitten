@@ -6,10 +6,8 @@ import { StickyContainer } from '../../../components/layout/sticky-container'
 import { Button } from './components/button'
 import { Logo } from './components/logo'
 import { BurgerMenu } from './components/burger-menu'
-import { BurgerMenuNext } from './components/burger-menu-next'
 import { Nav } from './components/nav'
 import { UserMenu } from './components/user-menu'
-import { UserMenuNext } from './components/user-menu-next'
 import { Context } from './components/context'
 import { Right } from './components/right'
 import { Centered } from './components/centered'
@@ -31,8 +29,6 @@ const HeaderNav = ({
   quickAccessProps,
   stickyProps,
   zIndexConfig,
-  size,
-  borderStyle,
   className,
 }) => {
   const [isMenuExpanded, setMenuExpanded] = useState(false)
@@ -70,14 +66,9 @@ const HeaderNav = ({
           '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu,
         }}
         zIndex={zIndexConfig}
-        className={classNames(
-          'k-HeaderNav__wrapper',
-          `k-HeaderNav--${size}`,
-          `k-HeaderNav--${borderStyle}`,
-          {
-            'k-HeaderNav--menuIsExpanded': isMenuExpanded,
-          },
-        )}
+        className={classNames('k-HeaderNav__wrapper', {
+          'k-HeaderNav--menuIsExpanded': isMenuExpanded,
+        })}
       >
         <StickyContainer
           ref={stickyContainerRef}
@@ -105,10 +96,8 @@ const HeaderNav = ({
 HeaderNav.Button = Button
 HeaderNav.Logo = Logo
 HeaderNav.BurgerMenu = BurgerMenu
-HeaderNav.BurgerMenuNext = BurgerMenuNext
 HeaderNav.Nav = Nav
 HeaderNav.UserMenu = UserMenu
-HeaderNav.UserMenuNext = UserMenuNext
 HeaderNav.Right = Right
 HeaderNav.Centered = Centered
 HeaderNav.LoggedOut = LoggedOut
@@ -132,8 +121,6 @@ HeaderNav.propTypes = {
     header: PropTypes.number,
     headerWithOpenMenu: PropTypes.number,
   }),
-  size: PropTypes.oneOf(['small', 'regular']),
-  borderStyle: PropTypes.oneOf(['none', 'shadow', 'border']),
 }
 
 HeaderNav.defaultProps = {
@@ -146,8 +133,6 @@ HeaderNav.defaultProps = {
     header: 1,
     headerWithOpenMenu: 3,
   },
-  size: 'regular',
-  borderStyle: 'shadow',
 }
 
 export default HeaderNav

@@ -134,7 +134,6 @@ export { ParagraphIcon } from './components/graphics/icons/paragraph-icon';
 export { PasswordIcon } from './components/graphics/icons/password-icon';
 export { PayPalIcon } from './components/graphics/icons/paypal-icon';
 export { PhoneIcon } from './components/graphics/icons/phone-icon';
-export { PinterestIcon } from './components/graphics/icons/pinterest-icon';
 export { QuestionMarkIcon } from './components/graphics/icons/question-mark-icon';
 export { RefundIcon } from './components/graphics/icons/refund-icon';
 export { RocketCircleIcon } from './components/graphics/icons/rocket-circle-icon';
@@ -173,14 +172,20 @@ export { ChronoIconNext } from './components/graphics/icons-next/chrono-icon-nex
 export { CogIconNext } from './components/graphics/icons-next/cog-icon-next';
 export { CrossIconNext } from './components/graphics/icons-next/cross-icon-next';
 export { EyeIconNext } from './components/graphics/icons-next/eye-icon-next';
+export { FacebookIconNext } from './components/graphics/icons-next/facebook-icon-next';
 export { HomeIconNext } from './components/graphics/icons-next/home-icon-next';
 export { InfiniteIconNext } from './components/graphics/icons-next/infinite-icon-next';
+export { InstagramIconNext } from './components/graphics/icons-next/instagram-icon-next';
+export { LinkedinIconNext } from './components/graphics/icons-next/linkedin-icon-next';
+export { MessengerIconNext } from './components/graphics/icons-next/messenger-icon-next';
 export { PlusIconNext } from './components/graphics/icons-next/plus-icon-next';
 export { SpeechBubbleIconNext } from './components/graphics/icons-next/speech-bubble-icon-next';
 export { StatsIconNext } from './components/graphics/icons-next/stats-icon-next';
 export { TagIconNext } from './components/graphics/icons-next/tag-icon-next';
 export { ThumbUpIconNext } from './components/graphics/icons-next/thumb-up-icon-next';
+export { TwitterIconNext } from './components/graphics/icons-next/twitter-icon-next';
 export { UsersIconNext } from './components/graphics/icons-next/users-icon-next';
+export { WhatsappIconNext } from './components/graphics/icons-next/whatsapp-icon-next';
 export { WindowEditIconNext } from './components/graphics/icons-next/window-edit-icon-next'; // Graphics/Illustrations
 
 export { LightbulbIllustration } from './components/graphics/illustrations/lightbulb-illustration';
@@ -242,7 +247,7 @@ export { ButtonWithTooltip } from './components/molecules/buttons/button-with-to
 export { CheckableButton } from './components/molecules/buttons/checkable-button';
 export { CloseButton } from './components/molecules/buttons/close-button';
 export { FacebookButtonIconWords, TwitterButtonIconWords, LinkedinButtonIconWords, InstagramButtonIconWords } from './components/molecules/buttons/social-button-icon-words';
-export { FacebookButtonIcon, TwitterButtonIcon, LinkedinButtonIcon, InstagramButtonIcon, YoutubeButtonIcon, PinterestButtonIcon } from './components/molecules/buttons/social-button-icon';
+export { FacebookButtonIcon, TwitterButtonIcon, LinkedinButtonIcon, InstagramButtonIcon, YoutubeButtonIcon } from './components/molecules/buttons/social-button-icon';
 export { TagButton } from './components/molecules/buttons/tag-button';
 export { modifierStyles as buttonModifierStyles } from './components/molecules/buttons/button/helpers/modifier-styles'; // Molecules/Cards
 
@@ -308,7 +313,7 @@ export { domEvents, A11Y_EVENT, FOCUS_EVENT, A11Y_FIRST_FOCUS_REACHED_EVENT, A11
 export { FLUID as BUTTON_STYLE_FLUID, DEFAULT as BUTTON_STYLE_DEFAULT, TINY as BUTTON_STYLE_TINY, BIG as BUTTON_STYLE_BIG, HUGE as BUTTON_STYLE_HUGE, GIANT as BUTTON_STYLE_GIANT, ICON as BUTTON_STYLE_ICON, ICON_MICRO as BUTTON_STYLE_ICON_MICRO, ICON_TINY as BUTTON_STYLE_ICON_TINY, ICON_BIG as BUTTON_STYLE_ICON_BIG, ICON_HUGE as BUTTON_STYLE_ICON_HUGE, ICON_GIANT as BUTTON_STYLE_ICON_GIANT } from './components/molecules/buttons/button/standalone-styles';
 export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/molecules/carousels/carousel/styles';
 export { MICRO as HORIZONTAL_STROKE_STYLE_MICRO, TINY as HORIZONTAL_STROKE_STYLE_TINY, DEFAULT as HORIZONTAL_STROKE_STYLE_DEFAULT, BIG as HORIZONTAL_STROKE_STYLE_BIG, HUGE as HORIZONTAL_STROKE_STYLE_HUGE } from './components/atoms/horizontal-stroke';
-export { MOBILE_HEADER_HEIGHT, TABLET_HEADER_HEIGHT, DESKTOP_HEADER_HEIGHT } from './components/organisms/header-nav/config';
+export { HEADER_HEIGHT } from './components/organisms/header-nav/config';
 export { CLOSE_OVERLAY_EVENT, OPEN_OVERLAY_EVENT } from './components/molecules/overlay'; // -------
 // HELPERS
 // -------

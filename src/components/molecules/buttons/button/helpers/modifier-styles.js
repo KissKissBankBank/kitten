@@ -178,16 +178,6 @@ var modifierStyles = function modifierStyles(modifier) {
       activeBgColor = '#1d3b7a';
       break;
 
-    case 'social_pinterest':
-      borderColor = '#bd081c';
-      backgroundColor = '#bd081c';
-      color = _colorsConfig.default.background1;
-      hoverBorderColor = '#ae000d';
-      hoverBgColor = '#ae000d';
-      activeBorderColor = '#9f0000';
-      activeBgColor = '#9f0000';
-      break;
-
     case 'social_youtube':
       borderColor = '#ff0000';
       backgroundColor = '#ff0000';

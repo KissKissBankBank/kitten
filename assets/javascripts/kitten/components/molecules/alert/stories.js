@@ -22,6 +22,7 @@ export default {
     onAfterClose: action('onAfterClose'),
     children: 'Modifications effectuées, lien ici, Modifications effectuées,',
     icon: <CrossIconNext width={12} height={12} color={COLORS.background1} />,
+    center: false,
   },
   argTypes: {
     show: {
@@ -55,6 +56,9 @@ export default {
     icon: {
       name: 'icon',
       control: 'object',
+    },
+    center: {
+      control: 'boolean',
     },
   },
 }
