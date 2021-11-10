@@ -56,17 +56,6 @@ $k-fonts: (
     letter-spacing: .01rem,
     weight: 600
   ),
-  regular-uppercase: (
-    family: ("Maax", Helvetica, Arial, sans-serif),
-    weight: 500,
-    transform: uppercase
-  ),
-  bold-uppercase: (
-    family: ("Maax", Helvetica, Arial, sans-serif),
-    weight: 600,
-    letter-spacing: .1rem,
-    transform: uppercase
-  ),
 ) !default;
 
 // Colors

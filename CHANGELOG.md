@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `Design`: use browser default styles for focus outlines.
+- Feature: `DragAndDropList`: Add component.
+- Feature: Tooling: Use `Dart Sass` instead of `LibSass`.
 
 ## [6.0.0] - 2021-11-09
 

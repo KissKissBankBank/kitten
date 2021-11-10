@@ -1,35 +1,32 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
-import styled from 'styled-components'
+import { DocsPage } from 'storybook/docs-page'
+import { DragAndDropList } from './index'
 import {
   RewardSummaryCard,
   useRewardSummaryCardResizeObserver,
-  Title,
   DropdownMenu,
-  COLORS,
   EllipsisIcon,
-  DragAndDropList,
-  DRAG_AND_DROP_LIST_BUTTON_SHIFT,
-  mq,
+  COLORS,
   useWindowWidth,
   ScreenConfig,
 } from 'kitten'
 
-const StyledDragAndDropList = styled(DragAndDropList)`
-  @media ${mq.tabletAndDesktop} {
-    margin-left: -${DRAG_AND_DROP_LIST_BUTTON_SHIFT};
-  }
-
-  @media ${mq.mobile} {
-    .k-DragAndDropList__item__button {
-      display: none;
-    }
-    .k-DragAndDropList__item__child {
-      flex-basis: 100%;
-      max-width: 100%;
-    }
-  }
-`
+export default {
+  title: 'Molecules/DragAndDropList',
+  component: DragAndDropList,
+  decorators: [story => <div className="story-Container">{story()}</div>],
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          importString="DragAndDropList, DRAG_AND_DROP_LIST_BUTTON_SHIFT"
+        />
+      ),
+    },
+  },
+}
 
 const RewardCardComponent = ({
   imageProps,
@@ -41,7 +38,7 @@ const RewardCardComponent = ({
   id,
   ...props
 }) => (
-  <RewardSummaryCard id={id} {...props}>
+  <RewardSummaryCard id={id} {...props} onClick={() => action('Clicked')()}>
     <RewardSummaryCard.Image>
       <img alt="" {...imageProps} />
     </RewardSummaryCard.Image>
@@ -74,7 +71,7 @@ const RewardCardComponent = ({
   </RewardSummaryCard>
 )
 
-export const StoryWithReward = () => {
+export const Default = () => {
   const { ref, size } = useRewardSummaryCardResizeObserver()
 
   // on KissKiss, use `viewportIsSOrLess` from `useMediaQuery()`
@@ -82,42 +79,22 @@ export const StoryWithReward = () => {
 
   return (
     <div ref={ref}>
-      <Title
-        modifier="quinary"
-        className="k-u-margin-none k-u-margin-bottom-triple"
-      >
-        Curabitur blandit tempus porttitor.
-      </Title>
-
       <p
         id="container_label_element"
-        className="k-u-hidden@xs-down k-u-a11y-visuallyHidden"
+        className="k-u-weight-light k-u-margin-bottom-double"
       >
         Cette liste peut être réorganisée à l'aide des boutons.
       </p>
 
       <p
         id="description_element"
-        className="k-u-hidden@xs-down k-u-a11y-visuallyHidden"
+        className="k-u-weight-light k-u-margin-bottom-double"
       >
         Cliquez pour attraper/lâcher l'élément. Une fois attrapé, l'élément peut
         être déplacé à l'aide des flèches haut/bas du clavier.
       </p>
 
-      <RewardSummaryCard.TitleBar
-        values={{
-          image: 'Visuel de la contrepartie',
-          title: 'Titre de la contrepartie',
-          amount: 'Montant',
-          contributions: 'Contributions',
-          availability: 'Disponibilités',
-        }}
-        className="k-u-hidden@xs-down k-u-margin-bottom-double"
-        id="RewardSummaryList"
-        size={size}
-      />
-
-      <StyledDragAndDropList
+      <DragAndDropList
         onChange={action('onChange')}
         a11yButtonDescElement="description_element"
         a11yContainerLabelElement="container_label_element"
@@ -166,7 +143,7 @@ export const StoryWithReward = () => {
           id="72ce89ff-6592-4b9a-9e5f-7f7b3ddd7b26"
           simpleName="Anim enim deserunt ut mollit"
         />
-      </StyledDragAndDropList>
+      </DragAndDropList>
     </div>
   )
 }
