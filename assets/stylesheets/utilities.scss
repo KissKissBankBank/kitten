@@ -1,17 +1,17 @@
+$k-module: 'utilities';
+
 // Helpers
-@import './kitten/schema';
-@import './kitten/definitions';
 @import './kitten/helpers';
 
 // Default config
 @import 'kitten/default-config';
 
-$k-typography: k-typography-definition((
+$k-typography: (
   root: 16px,
   font-size: 1rem,
   font-weight: 400,
   line-height: 1.5rem,
-));
+);
 
 // Import utilities mixins.
 @import './kitten/utilities';
