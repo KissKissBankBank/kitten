@@ -76,6 +76,18 @@ export var modifierStyles = function modifierStyles(modifier) {
       activeColor = COLORS.font2;
       break;
 
+    case 'scandium':
+      borderColor = COLORS.font1;
+      backgroundColor = COLORS.font1;
+      color = COLORS.font3;
+      hoverBorderColor = COLORS.line3;
+      hoverBgColor = COLORS.line3;
+      hoverColor = COLORS.background1;
+      activeBorderColor = COLORS.grey1;
+      activeBgColor = COLORS.grey1;
+      activeColor = COLORS.background1;
+      break;
+
     case 'neon':
       borderColor = COLORS.orange;
       backgroundColor = COLORS.orange;
@@ -98,6 +110,18 @@ export var modifierStyles = function modifierStyles(modifier) {
       activeBorderColor = COLORS.error5;
       activeBgColor = COLORS.error5;
       activeColor = COLORS.background1;
+      break;
+
+    case 'calcium':
+      borderColor = COLORS.line1;
+      backgroundColor = COLORS.background1;
+      color = COLORS.font1;
+      hoverBorderColor = COLORS.primary4;
+      hoverBgColor = COLORS.background1;
+      hoverColor = COLORS.font1;
+      activeBorderColor = COLORS.primary1;
+      activeBgColor = COLORS.primary5;
+      activeColor = COLORS.font1;
       break;
 
     /* Social modifiers */
@@ -142,16 +166,6 @@ export var modifierStyles = function modifierStyles(modifier) {
       activeBgColor = '#1d3b7a';
       break;
 
-    case 'social_pinterest':
-      borderColor = '#bd081c';
-      backgroundColor = '#bd081c';
-      color = COLORS.background1;
-      hoverBorderColor = '#ae000d';
-      hoverBgColor = '#ae000d';
-      activeBorderColor = '#9f0000';
-      activeBgColor = '#9f0000';
-      break;
-
     case 'social_youtube':
       borderColor = '#ff0000';
       backgroundColor = '#ff0000';
@@ -163,5 +177,5 @@ export var modifierStyles = function modifierStyles(modifier) {
       break;
   }
 
-  return css(["border:", " ", " ", ";background-color:", ";color:", ";svg:not(.k-ColorSvg){&,path{fill:currentColor;transition:fill 0.2s;}}transition:background-color 0.2s,color 0.2s,border-color 0.2s;", " ", " &:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&:disabled{border-color:", ";background-color:", ";color:", ";}"], pxToRem(2), borderStyle, borderColor, backgroundColor, color, modifier === 'social_instagram' && css(["transition:background 0.2s,color 0.2s;border:0 !important;background-repeat:no-repeat;background-image:radial-gradient( farthest-side at 32% 100%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82% ),linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);background-size:160% 100%;background-position:center;&:hover,&:focus{background-image:radial-gradient( farthest-side at 32% 100%,#f0d26e 0%,#f0be5a 10%,#eb8228 28%,#dc3232 42%,transparent 82% ),linear-gradient(135deg,#143cc8 12%,#b42daf 58%);}&:active{background-image:radial-gradient( farthest-side at 32% 100%,#e1c35f 0%,#e1af4b 10%,#dc7319 28%,#cd2323 42%,transparent 82% ),linear-gradient(135deg,#052db9 12%,#a51ea0 58%);}"]), modifier !== 'checked' && css(["&:hover,&:focus{border-color:", ";background-color:", ";color:", ";}&:active{border-color:", ";background-color:", ";color:", ";}"], hoverBorderColor, hoverBgColor, hoverColor, activeBorderColor, activeBgColor, activeColor), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, COLORS.line2, COLORS.line2, COLORS.background1);
+  return css(["border:", " ", " ", ";background-color:", ";color:", ";svg:not(.k-ColorSvg){&,path{fill:currentColor;transition:fill 0.2s;}}transition:background-color 0.2s,color 0.2s,border-color 0.2s;", " ", " &:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&:disabled,&.k-Button--disabled{border-color:", ";background-color:", ";color:", ";}"], pxToRem(2), borderStyle, borderColor, backgroundColor, color, modifier === 'social_instagram' && css(["transition:background 0.2s,color 0.2s;border:0 !important;background-repeat:no-repeat;background-image:radial-gradient( farthest-side at 32% 100%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82% ),linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);background-size:160% 100%;background-position:center;&:hover,&:focus{background-image:radial-gradient( farthest-side at 32% 100%,#f0d26e 0%,#f0be5a 10%,#eb8228 28%,#dc3232 42%,transparent 82% ),linear-gradient(135deg,#143cc8 12%,#b42daf 58%);}&:active{background-image:radial-gradient( farthest-side at 32% 100%,#e1c35f 0%,#e1af4b 10%,#dc7319 28%,#cd2323 42%,transparent 82% ),linear-gradient(135deg,#052db9 12%,#a51ea0 58%);}"]), modifier !== 'checked' && css(["&:hover,&:focus{border-color:", ";background-color:", ";color:", ";}&:active{border-color:", ";background-color:", ";color:", ";}"], hoverBorderColor, hoverBgColor, hoverColor, activeBorderColor, activeBgColor, activeColor), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, COLORS.line2, COLORS.line2, COLORS.background1);
 };

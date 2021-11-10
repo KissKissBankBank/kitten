@@ -14,15 +14,21 @@
 
 @mixin k-utilities-weight {
   .k-u-weight-light {
-    @include k-typographyFont('light', $important: true);
+    font-family: map-get(k-map-fetch($k-fonts, 'light'), 'family') !important;
+    font-weight: map-get(k-map-fetch($k-fonts, 'light'), 'weight') !important;
   }
 
   .k-u-weight-regular {
-    @include k-typographyFont('regular', $important: true);
+    font-family: map-get(k-map-fetch($k-fonts, 'regular'), 'family') !important;
+    font-weight: map-get(k-map-fetch($k-fonts, 'regular'), 'weight') !important;
   }
 
   .k-u-strong,
   .k-u-weight-bold {
-    @include k-typographyFont('bold', $important: true);
+    font-family: map-get(k-map-fetch($k-fonts, 'bold'), 'family') !important;
+    font-weight: map-get(k-map-fetch($k-fonts, 'bold'), 'weight') !important;
+    letter-spacing: map-get(
+      k-map-fetch($k-fonts, 'bold'), 'letter-spacing'
+    ) !important;
   }
 }

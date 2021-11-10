@@ -31,7 +31,7 @@ import { EditIcon } from './edit-icon'
 import { EllipsisIcon } from './ellipsis-icon'
 import { EmailIcon } from './email-icon'
 import { EmbedIcon } from './embed-icon'
-import { ExportIcon } from './export-icon'
+import { EnvelopeIcon } from './envelope-icon'
 import { ExportIconAlternate } from './export-icon-alternate'
 import { FacebookIcon } from './facebook-icon'
 import { FacebookIconWithBackground } from './facebook-icon-with-background'
@@ -70,7 +70,6 @@ import { PasswordIcon } from './password-icon'
 import { PayPalIcon } from './paypal-icon'
 import { PeopleIcon } from './people-icon'
 import { PhoneIcon } from './phone-icon'
-import { PinterestIcon } from './pinterest-icon'
 import { QuestionMarkIcon } from './question-mark-icon'
 import { RefundIcon } from './refund-icon'
 import { RocketCircleIcon } from './rocket-circle-icon'
@@ -102,7 +101,7 @@ import { YoutubeIcon } from './youtube-icon'
 
 import flagFile from 'icons/flags.png'
 
-import { Text, pxToRem } from '../../..'
+import { Text, Title, pxToRem } from '../../..'
 import React from 'react'
 import LinkTo from '@storybook/addon-links/react'
 
@@ -114,7 +113,7 @@ const Container = styled.div`
 const Group = styled(({ className, children, title }) => {
   return (
     <>
-      <h2>{title}</h2>
+      <Title tag="h2" modifier="septenary">{title}</Title>
       <div className={className}>{children}</div>
     </>
   )
@@ -202,7 +201,6 @@ export const AllIcons = ({ colorInput, bgColorInput }) => {
         <IconContainer children={<InstagramIcon color={colorInput} />} />
         <IconContainer children={<LinkedinIcon color={colorInput} />} />
         <IconContainer children={<MessengerIcon color={colorInput} />} />
-        <IconContainer children={<PinterestIcon color={colorInput} />} />
         <IconContainer children={<TwitterIcon color={colorInput} />} />
         <IconContainer children={<WhatsAppIcon color={colorInput} />} />
         <IconContainer children={<YoutubeIcon color={colorInput} />} />
@@ -334,7 +332,6 @@ export const AllIcons = ({ colorInput, bgColorInput }) => {
         />
         <IconContainer children={<CopyIcon color={colorInput} />} />
         <IconContainer children={<BubbleIcon color={colorInput} />} />
-        <IconContainer children={<ExportIcon color={colorInput} />} />
         <IconContainer children={<ExportIconAlternate color={colorInput} />} />
         <IconContainer children={<StrokeIcon color={colorInput} />} />
         <IconContainer
@@ -371,6 +368,7 @@ export const AllIcons = ({ colorInput, bgColorInput }) => {
         <IconContainer children={<RefundIcon color={colorInput} />} />
         <IconContainer children={<EllipsisIcon color={colorInput} />} />
         <IconContainer children={<NoImageIcon color={colorInput} />} />
+        <IconContainer children={<EnvelopeIcon color={colorInput} />} />
       </Group>
       <Group title="Country flag icons">
         {flagList.map(country => (

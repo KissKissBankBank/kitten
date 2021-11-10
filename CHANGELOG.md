@@ -4,6 +4,295 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DragAndDropList`: Add component.
+- Feature: Tooling: Use `Dart Sass` instead of `LibSass`.
+
+## [6.0.0] - 2021-11-09
+
+Breaking Changes:
+
+- `HeaderNav`: Remove `MOBILE_HEADER_HEIGHT`, `TABLET_HEADER_HEIGHT`, `DESKTOP_HEADER_HEIGHT` exports.
+- `HeaderNav`: Move `UserMenuNext` to `UserMenu` and `BurgerMenuNext` to `BurgerMenu`.
+- `HeaderNav`: Remove `borderStyle` prop defaults to `border`.
+- `HeaderNav`: Remove `size` prop defaults to `small`.
+
+Features:
+
+- `HeaderNav`: Add `HEADER_HEIGHT` to exports.
+- `HeaderNav.UserMenu.Button`: Remove `hasArrow` prop, now defaults to `true`.
+
+Fix:
+
+- `Button`: Fix `rounded` style.
+
+## [5.7.1] - 2021-11-04
+
+Fix:
+
+- `useResizeObserver`: Fix use condition for older browsers.
+
+## [5.7.0] - 2021-11-02
+
+Features:
+
+- `Icons`: Add the following icons
+  - FacebookIconNext
+  - InstagramIconNext
+  - TwitterIconNext
+  - WhatsappIconNext
+  - MessengerIconNext
+  - LinkedinIconNext
+- `RadioButtonSet`: Add `labelProps` prop, propagated to label.
+- `DropdownSelect`: Add `inputProps` to Combobox input.
+- `PinterestIcon` and `PinterestButtonIcon`: Remove components.
+- `Button`: Remove `social_pinterest` modifier.
+
+Fix:
+
+- `HeaderNav`: Fix user menu warning in console.
+
+## [5.6.0] - 2021-10-28
+
+Feature:
+
+- `Alert`: Add `center` prop.
+
+Fixes
+
+- `Alert`: Fix flex regressions.
+- `Label`: Fix display.
+
+## [5.5.0] - 2021-10-26
+
+Feature:
+
+- `Accordeon`: Better `className` and other props propagation.
+
+Fixes:
+
+- `Alert`: Fix styles.
+- `DropdownMenu`: Fix Safari display.
+- `DropdownSelect`: Fix combobox input width calculation.
+
+## [5.4.1] - 2021-10-22
+
+Fix:
+
+- `DashboardMenu`: Style fixes.
+
+## [5.4.0] - 2021-10-20
+
+Features:
+
+- `Button`: Add `scandium` modifier.
+- `Checkbox`: Add `labelProps` prop.
+- `Icons`: Add the following icons
+  - CheckedShieldIconNext
+  - ChronoIconNext
+  - CogIconNext
+  - EyeIconNext
+  - HomeIconNext
+  - InfiniteIconNext
+  - PlusIconNext
+  - SpeechBubbleIconNext
+  - StatsIconNext
+  - TagIconNext
+  - ThumbUpIconNext
+  - UsersIconNext
+  - WindowEditIconNext
+
+Fixes:
+
+- `Checkbox`: Fix secondary text max width.
+- `ButtonWithTooltip`: Prevent unwanted animation on load.
+- `Alert`: Fix responsive styles.
+
+## [5.3.0] - 2021-10-19
+
+Feature:
+
+- `DropdownSelect`: Add `labelProps` prop.
+
+Fixes:
+
+- `GifVideo`: Fix bug when `children` is empty.
+- `cssPropertyDistributor`: Fix bug when `elements` is null.
+- `Label`: Fix styles.
+
+## [5.2.0] - 2021-10-18
+
+Features:
+
+- `ButtonWithTooltip`: Add `position` prop, defaults to `center`.
+- `DashboardMenu`: Add `List`, `Separator` and `Selector` subcomponents.
+- `Alert`: Improve new UI.
+- `Label`: Add `dot` prop.
+
+Fix:
+
+- `CrossIconNext`: New UI.
+
+## [5.1.0] - 2021-10-15
+
+Feature:
+
+- `IconBadge`: Add `border` and `backgroundColor` props style.
+
+Fix:
+
+- `Button`: Fix min width constraints.
+
+## [5.0.2] - 2021-10-13
+
+Fix:
+
+- `BackingCard`: Rollback Fix button fit.
+
+## [5.0.1] - 2021-10-12
+
+Fixes:
+
+- `BackingCard`: Fix button fit.
+- `Button`: Fix mobile dimensions on bigger sizes.
+
+## [5.0.0] - 2021-10-12
+
+Breaking Changes:
+
+- `Button`: Refactor CSS Styles.
+- `Modal/Next`: Improve trigger element accessibility.
+- Typography: Remove `modular-scale` dependency and logic.
+  All the font sizes previously defined as modular scale step (via `stepToRem`)
+  are now calculated from a table with integer pixel values.
+- All components using `variant` now default to `orion`.
+- Remove the following unused components:
+  - `SearchInput`
+  - `RewardEdition`
+  - `CartRewardCard`
+  - `SideGrid`
+  - `SideLayout`
+  - `SimplePopover`
+  - `ImageCropper`
+
+Features:
+
+- Add `KissKissLoadingAnimation`.
+- Add `LazyLoader` component.
+- `Button`: Add `fit` and `mobileFit` props, default to `min-width` and `null`.
+
+Fixes:
+
+- `TagInput`: Remove console warning.
+- `TagInput`: Add accessible information for disabled items.
+
+## [4.14.1] - 2021-10-08
+
+Fix:
+
+- `TagInput`: I can delete an `object` item.
+
+## [4.14.0] - 2021-10-07
+
+Feature:
+
+- `TagInput`: `initialItemsList` can accept object like `{value: 'hello': disabled: true}` to disable an option.
+
+## [4.13.0] - 2021-10-06
+
+Features:
+
+- `DropdownSelect`: Add `modifier` prop, defaults to `hydrogen`.
+- `DropdownSelect`: Add `direction` prop, defaults to `down`.
+- `DropdownSelect`: Add `micro` value to `size` prop.
+- `DropdownSelect`: Add `arrowPosition` prop (exclusive to `orion` variant), defaults to 'left'.
+
+Fix:
+
+- `DownloadIcon`: Update icon.
+
+## [4.12.0] - 2021-09-30
+
+Feature:
+
+- `Button`: Add `calcium` modifier prop.
+
+Fixes:
+
+- `ListTable`: Fix `isHightlighted` prop style.
+- `DashboardLayout`: Fix styles.
+- `FilterIcon`: Remove console warning.
+- `AvatarWithTextAndBadge`: Improve margin styles.
+- `HeaderMenu.item`: Fix `margin-right` style.
+- `HeaderNav.UserMenuNext.Button`: Fix `min-width` style.
+
+## [4.11.0] - 2021-09-29
+
+Feature:
+
+- `DashboardLayout`: Add `overlayZIndex` prop, defaults to 100.
+
+Fix:
+
+- `HeaderNav`: Various fixes.
+
+## [4.10.1] - 2021-09-28
+
+Fixes:
+
+- `HeaderNav`: Fix `borderStyle="border"` style.
+- `ButtonWithTooltip`: Propagate `className` on parent.
+- `HeaderNav`: Fix `BurgerMenuNext` button state.
+- `BurgerIcon`: Modernize styles.
+
+## [4.10.0] - 2021-09-27
+
+Features:
+
+- `ButtonWithTooltip`: Add new component.
+- `DashboardLayout`: Add `Toaster` subcomponent.
+
+Fix:
+
+- `HeaderNav`: Various fixes.
+
+## [4.9.0] - 2021-09-24
+
+Features:
+
+- `HeaderMenu`: Add `position` prop, default to `left`.
+- `EngagementCardWithImage`: Add `imgProps` and `textProps` props.
+
+Fixes:
+
+- `DashboardLayout`: Fix header elements dimensions.
+- `HeaderNav.Button`: Add `cursor` to `onClick`.
+
+## [4.8.0] - 2021-09-22
+
+Features:
+
+- `HeaderNav.Nav`: Add `smallPadding` prop, defaults to `false`.
+- `HeaderNav.Button`: Add `smallPadding` prop, defaults to `false`.
+- `EnvelopeIcon`: Add new component.
+
+## [4.7.0] - 2021-09-21
+
+Features:
+
+- `ImageDropUploader`: Add image dimensions check.
+- `Button`: Apply `disabled` styles to any HTML element type.
+
+Fixes:
+
+- `ImageDropUploader`: Fix `onChange` sequence.
+- `Button`: Fix `tag`.
+
+## [4.6.3] - 2021-09-17
+
+Fix:
+
+- `LocationInput`: Add comma between city and country.
+
 ## [4.6.2] - 2021-09-16
 
 Fix:
@@ -18,8 +307,8 @@ Fix:
 
 ## [4.6.0] - 2021-09-09
 
-Tech: 
-- 
+Tech:
+
 - Bump to `node-sass@6`.
 
 ## [4.5.2] - 2021-09-09

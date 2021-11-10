@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
-import { pxToRem } from '../../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../../constants/screen-config'
-import COLORS from '../../../../../constants/colors-config'
-
-import { GridCol } from '../../../../../components/layout/grid'
-import { Marger } from '../../../../../components/layout/marger'
-
-import { Text } from '../../../../../components/atoms/typography/text'
+import {
+  Text,
+  pxToRem,
+  ScreenConfig,
+  COLORS,
+  GridCol,
+  Marger,
+} from '../../../../..'
 
 const FlexTitleContainer = styled.div`
   display: flex;
@@ -54,34 +54,30 @@ const RocketIllustration = () => (
   </svg>
 )
 
-export class ThanksHeader extends Component {
-  render() {
-    return (
-      <GridCol offset-xs="0" col-m="9" offset-m="1" col-l="6" offset-l="3">
-        <FlexTitleContainer>
-          <RocketIllustration />
-          <PageTitle
-            className="
+export const ThanksHeader = () => (
+  <GridCol offset-xs="0" col-m="9" offset-m="1" col-l="6" offset-l="3">
+    <FlexTitleContainer>
+      <RocketIllustration />
+      <PageTitle
+        className="
             k-u-margin-top-double
             k-u-margin-top-none@m-up
             k-u-margin-left-none
             k-u-margin-left-quadruple@m-up
           "
-          >
-            Bravo, grâce à vous
-            <br />
-            la collecte progresse&nbsp;!
-          </PageTitle>
-        </FlexTitleContainer>
-        <Marger top="3" bottom="4">
-          <PageIntroText>
-            Vos contreparties seront délivrées par le créateur quand la collecte
-            sera réussie.
-            <br />
-            Vous pourrez également lui demander un reçu de don.
-          </PageIntroText>
-        </Marger>
-      </GridCol>
-    )
-  }
-}
+      >
+        Bravo, grâce à vous
+        <br />
+        la collecte progresse&nbsp;!
+      </PageTitle>
+    </FlexTitleContainer>
+    <Marger top="3" bottom="4">
+      <PageIntroText>
+        Vos contreparties seront délivrées par le créateur quand la collecte
+        sera réussie.
+        <br />
+        Vous pourrez également lui demander un reçu de don.
+      </PageIntroText>
+    </Marger>
+  </GridCol>
+)

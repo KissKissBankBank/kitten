@@ -23,6 +23,10 @@
   grid-template-columns: 1fr;
   align-items: start;
 
+  & > * {
+    min-width: 0;
+  }
+
   @include k-media-min('s') {
     grid-template-columns: repeat(3, 1fr);
   }

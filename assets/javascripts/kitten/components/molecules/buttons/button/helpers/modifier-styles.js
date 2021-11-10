@@ -78,6 +78,18 @@ export const modifierStyles = modifier => {
       activeColor = COLORS.font2
       break
 
+    case 'scandium':
+      borderColor = COLORS.font1
+      backgroundColor = COLORS.font1
+      color = COLORS.font3
+      hoverBorderColor = COLORS.line3
+      hoverBgColor = COLORS.line3
+      hoverColor = COLORS.background1
+      activeBorderColor = COLORS.grey1
+      activeBgColor = COLORS.grey1
+      activeColor = COLORS.background1
+      break
+
     case 'neon':
       borderColor = COLORS.orange
       backgroundColor = COLORS.orange
@@ -100,6 +112,18 @@ export const modifierStyles = modifier => {
       activeBorderColor = COLORS.error5
       activeBgColor = COLORS.error5
       activeColor = COLORS.background1
+      break
+
+    case 'calcium':
+      borderColor = COLORS.line1
+      backgroundColor = COLORS.background1
+      color = COLORS.font1
+      hoverBorderColor = COLORS.primary4
+      hoverBgColor = COLORS.background1
+      hoverColor = COLORS.font1
+      activeBorderColor = COLORS.primary1
+      activeBgColor = COLORS.primary5
+      activeColor = COLORS.font1
       break
 
     /* Social modifiers */
@@ -141,16 +165,6 @@ export const modifierStyles = modifier => {
       hoverBgColor = '#2c4a89'
       activeBorderColor = '#1d3b7a'
       activeBgColor = '#1d3b7a'
-      break
-
-    case 'social_pinterest':
-      borderColor = '#bd081c'
-      backgroundColor = '#bd081c'
-      color = COLORS.background1
-      hoverBorderColor = '#ae000d'
-      hoverBgColor = '#ae000d'
-      activeBorderColor = '#9f0000'
-      activeBgColor = '#9f0000'
       break
 
     case 'social_youtube':
@@ -249,7 +263,8 @@ export const modifierStyles = modifier => {
       outline-color: ${COLORS.primary4};
     }
 
-    &:disabled {
+    &:disabled,
+    &.k-Button--disabled {
       border-color: ${COLORS.line2};
       background-color: ${COLORS.line2};
       color: ${COLORS.background1};

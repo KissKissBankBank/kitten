@@ -2,7 +2,7 @@
 
 exports[`<RewardSummaryCard /> default matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa jeAaYn k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
+  className="sc-bdVaJa OczPd k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
 >
   <a
     className="k-RewardSummaryCard__action"
@@ -34,7 +34,7 @@ exports[`<RewardSummaryCard /> default matches with snapshot 1`] = `
 
 exports[`<RewardSummaryCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa jeAaYn k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
+  className="sc-bdVaJa OczPd k-RewardSummaryCard k-RewardSummaryCard-Wrapper--large"
 >
   <a
     className="k-RewardSummaryCard__action"
@@ -56,7 +56,7 @@ exports[`<RewardSummaryCard /> with some props matches with snapshot 1`] = `
       Stickers Free Boobs Club
     </span>
     <span
-      className="sc-htpNat ijoNsM k-Tag k-RewardSummaryCard__titleTag k-u-margin-top-single k-u-margin-top-single k-Tag--info"
+      className="sc-htpNat eUtXUJ k-Tag k-RewardSummaryCard__titleTag k-u-margin-top-single k-u-margin-top-single k-Tag--info"
     >
       <svg
         fill="#222"
@@ -91,7 +91,7 @@ exports[`<RewardSummaryCard /> with some props matches with snapshot 1`] = `
       className="k-RewardSummaryCard__options k-u-hidden@xs-down"
     >
       <details
-        className="sc-kLIISr gZoBvs k-DropdownMenu k-DropdownMenu--left"
+        className="sc-gPWkxV jAcmfd k-DropdownMenu k-DropdownMenu--left"
         onKeyDown={[Function]}
         onToggle={[Function]}
         open={false}
@@ -100,36 +100,40 @@ exports[`<RewardSummaryCard /> with some props matches with snapshot 1`] = `
         <summary
           className="k-DropdownMenu__button"
         >
-          <svg
-            fill="none"
-            height="4"
-            viewBox="0 0 16 4"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="k-DropdownMenu__button__inside"
           >
-            
-            <circle
-              cx="2"
-              cy="2"
-              fill="#222"
-              r="2"
-            />
-            <circle
-              cx="8"
-              cy="2"
-              fill="#222"
-              r="2"
-            />
-            <circle
-              cx="14"
-              cy="2"
-              fill="#222"
-              r="2"
-            />
-          </svg>
+            <svg
+              fill="none"
+              height="4"
+              viewBox="0 0 16 4"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              
+              <circle
+                cx="2"
+                cy="2"
+                fill="#222"
+                r="2"
+              />
+              <circle
+                cx="8"
+                cy="2"
+                fill="#222"
+                r="2"
+              />
+              <circle
+                cx="14"
+                cy="2"
+                fill="#222"
+                r="2"
+              />
+            </svg>
+          </span>
         </summary>
         <div
-          className="sc-esOvli AsmaA k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top k-ArrowContainer--reverseDistance"
+          className="sc-epnACN mxKDo k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top k-ArrowContainer--reverseDistance"
           onClick={[Function]}
           style={
             Object {

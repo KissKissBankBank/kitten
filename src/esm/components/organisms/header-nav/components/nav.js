@@ -8,11 +8,13 @@ var Item = function Item(_ref) {
   var children = _ref.children,
       href = _ref.href,
       isSelected = _ref.isSelected,
+      smallPadding = _ref.smallPadding,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["children", "href", "isSelected", "className"]);
+      props = _objectWithoutProperties(_ref, ["children", "href", "isSelected", "smallPadding", "className"]);
 
   var itemClassNames = classNames('k-HeaderNav-nav__item', {
-    'is-selected': isSelected
+    'is-selected': isSelected,
+    smallPadding: smallPadding
   }, className);
   return /*#__PURE__*/React.createElement("li", {
     className: "k-HeaderNav-nav__element",
@@ -27,7 +29,8 @@ var Item = function Item(_ref) {
 Item.proptypes = {
   href: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-  isSelected: PropTypes.bool
+  isSelected: PropTypes.bool,
+  smallPadding: PropTypes.bool
 };
 export var Nav = function Nav(_ref2) {
   var children = _ref2.children,

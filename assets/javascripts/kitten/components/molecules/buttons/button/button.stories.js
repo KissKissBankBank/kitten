@@ -1,19 +1,26 @@
 import React from 'react'
-import { Button } from './index'
+import {
+  Button,
+  buttonModifiers,
+  buttonFitOptions,
+  buttonMobileFitOptions,
+  buttonSizes,
+  buttonVariants,
+} from './index'
 import { HeartIcon, PayPalIcon, Badge, Cart } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 const args = {
   borderRadius: 0,
-  fluid: false,
-  icon: false,
   modifier: 'hydrogen',
   rounded: false,
   disabled: false,
   size: 'regular',
   tag: undefined,
-  variant: 'andromeda',
+  variant: 'orion',
   children: 'My Button',
+  fit: 'min-width',
+  mobileFit: undefined,
 }
 
 const argTypes = {
@@ -21,35 +28,9 @@ const argTypes = {
     name: 'borderRadius',
     control: 'number',
   },
-  fluid: {
-    name: 'fluid',
-    control: 'boolean',
-  },
-  icon: {
-    name: 'icon',
-    control: 'boolean',
-  },
   modifier: {
     name: 'modifier',
-    options: [
-      'hydrogen',
-      'helium',
-      'lithium',
-      'beryllium',
-      'carbon',
-      'oxygen',
-      'checked',
-      'copper',
-      'boron',
-      'neon',
-      'iron',
-      'social_facebook',
-      'social_twitter',
-      'social_linkedin',
-      'social_instagram',
-      'social_youtube',
-      'social_pinterest',
-    ],
+    options: buttonModifiers,
     control: 'select',
   },
   rounded: {
@@ -58,7 +39,7 @@ const argTypes = {
   },
   size: {
     name: 'size',
-    options: ['nano', 'micro', 'tiny', 'regular', 'big', 'huge', 'giant'],
+    options: buttonSizes,
     control: 'select',
   },
   tag: {
@@ -67,12 +48,22 @@ const argTypes = {
   },
   variant: {
     name: 'variant',
-    options: ['andromeda', 'orion'],
+    options: buttonVariants,
     control: 'inline-radio',
   },
   children: {
     name: 'children',
     control: 'text',
+  },
+  fit: {
+    name: 'fit',
+    control: 'select',
+    options: buttonFitOptions,
+  },
+  mobileFit: {
+    name: 'mobileFit',
+    control: 'select',
+    options: buttonMobileFitOptions,
   },
 }
 
@@ -92,7 +83,7 @@ export default {
   },
   decorators: [
     story => (
-      <div className="story-Container story-Grid story-Grid--large">
+      <div className="story-Container">
         <div>{story()}</div>
       </div>
     ),
@@ -103,14 +94,55 @@ export default {
 
 export const Default = args => <Button {...args} />
 
+export const AllModifiers = args => {
+  return (
+    <>
+      {buttonModifiers.map(modifier => (
+        <div className="k-u-flex k-u-flex-direction-column k-u-flex-alignItems-center">
+          <Button {...args} modifier={modifier} />
+          <span className="k-u-margin-top-single k-u-margin-bottom-triple k-u-weight-light">
+            {modifier}
+          </span>
+        </div>
+      ))}
+    </>
+  )
+}
+
+AllModifiers.decorators = [
+  story => <div className="story-Grid story-Grid--small">{story()}</div>,
+]
+
+export const DarkModifiers = args => {
+  return (
+    <>
+      {['beryllium', 'boron', 'scandium'].map(modifier => (
+        <div className="k-u-margin-vertical-double k-u-flex k-u-flex-direction-column k-u-flex-alignItems-center">
+          <Button {...args} modifier={modifier} />
+          <span className="k-u-margin-top-single k-u-margin-bottom-triple k-u-weight-light k-u-color-background1">
+            {modifier}
+          </span>
+        </div>
+      ))}
+    </>
+  )
+}
+
+DarkModifiers.decorators = [
+  story => (
+    <div className="story-Grid story-Grid--small has-overrides dark-background">
+      {story()}
+    </div>
+  ),
+]
 export const WithIcon = args => (
-  <Button {...args} icon>
+  <Button {...args} fit="icon">
     <HeartIcon width={15} height={15} />
   </Button>
 )
 
 export const WithColorIcon = args => (
-  <Button {...args} icon>
+  <Button {...args} fit="icon">
     <PayPalIcon />
   </Button>
 )

@@ -23,7 +23,8 @@ export var Button = function Button(_ref) {
       as = _ref.as,
       style = _ref.style,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style", "className"]);
+      smallPadding = _ref.smallPadding,
+      props = _objectWithoutProperties(_ref, ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style", "className", "smallPadding"]);
 
   var hiddenMin = min ? "k-u-hidden@".concat(min, "-up") : '';
   var hiddenMax = max ? "k-u-hidden@".concat(max, "-down") : '';
@@ -53,7 +54,8 @@ export var Button = function Button(_ref) {
   return /*#__PURE__*/React.createElement(ButtonComponent, _extends({}, props, buttonProps, {
     className: classNames('k-HeaderNav__Button', className, {
       'k-HeaderNav__Button--hasIcon': !!icon,
-      'k-HeaderNav__Button--hasText': !!text
+      'k-HeaderNav__Button--hasText': !!text,
+      'k-HeaderNav__Button--smallPadding': smallPadding
     }),
     style: _extends({
       '--HeaderMenu-Button-backgroundColor': backgroundColor,
@@ -82,13 +84,15 @@ Button.propTypes = {
   hiddenText: PropTypes.shape({
     min: PropTypes.string,
     max: PropTypes.string
-  })
+  }),
+  smallPadding: PropTypes.bool
 };
 Button.defaultProps = {
   icon: null,
-  backgroundColor: COLORS.line1,
-  backgroundColorHover: COLORS.line2,
+  backgroundColor: 'transparent',
+  backgroundColorHover: 'transparent',
   color: COLORS.font1,
-  colorHover: null,
-  text: null
+  colorHover: COLORS.primary1,
+  text: null,
+  smallPadding: false
 };

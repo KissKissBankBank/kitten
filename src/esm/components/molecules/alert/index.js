@@ -4,17 +4,18 @@ import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutPr
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
-import { CloseButton } from '../../../components/molecules/buttons/close-button';
+import { CrossIconNext } from '../../../components/graphics/icons-next/cross-icon-next';
+import { IconBadge } from '../../../components/atoms/icon-badge';
 import COLORS from '../../../constants/colors-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
-import { ScreenConfig } from '../../../constants/screen-config';
+import { mq } from '../../../constants/screen-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import classNames from 'classnames';
 var fadeOut = keyframes(["0%{opacity:1;}100%{opacity:0;}"]);
 var AlertWrapper = styled.div.withConfig({
   displayName: "alert__AlertWrapper",
   componentId: "sc-1nkifwv-0"
-})(["", ";position:relative;overflow:hidden;background-color:", ";color:", ";display:flex;align-items:flex-start;.k-Alert__text{padding:", " ", ";flex:1 0 0;font-size:", ";@media (min-width:", "){text-align:center;}}.k-Alert__button{flex:0 0 auto;transition:all 0.2s ease;svg,svg path{transition:fill 0.2s ease;}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}}a{", ";color:inherit;text-decoration:underline;}&.k-Alert--success{color:", ";background-color:", ";}&.k-Alert--error{color:", ";background-color:", ";}&.k-Alert--warning{color:", ";background-color:", ";}&.k-Alert--hasCloseButton{.k-Alert__text{@media (min-width:", "){margin-left:", ";}}}&.k-Alert--shouldHide{pointer-events:none;animation:", " 0.4s cubic-bezier(0.895,0.03,0.685,0.22) forwards;}"], TYPOGRAPHY.fontStyles.light, COLORS.primary5, COLORS.primary1, pxToRem(13), pxToRem(20), stepToRem(-1), pxToRem(ScreenConfig.S.min), COLORS.background1, pxToRem(2), pxToRem(-4), COLORS.primary4, TYPOGRAPHY.fontStyles.bold, COLORS.valid, COLORS.tertiary1, COLORS.error, COLORS.error2, COLORS.warning, COLORS.warning2, pxToRem(ScreenConfig.S.min), pxToRem(50), fadeOut);
+})(["--alert-gap:", ";@media ", "{--alert-gap:", ";}", ";margin:", ";border-radius:", ";overflow:hidden;background-color:", ";color:", ";display:flex;align-items:center;gap:var(--alert-gap);padding:", " var(--alert-gap);&.k-Alert--hasCloseButton{--alert-close-width:calc(var(--alert-gap) + ", ");}&.k-Alert--hasIcon{--alert-icon-width:calc(var(--alert-gap) + ", ");}&.k-Alert--center{&.k-Alert--hasIcon:not(.k-Alert--hasCloseButton) .k-Alert__text{padding-right:var(--alert-icon-width);}&.k-Alert--hasCloseButton:not(.k-Alert--hasIcon) .k-Alert__text{padding-left:var(--alert-close-width);}&.k-Alert--hasCloseButton.k-Alert--hasIcon .k-Alert__text{padding-right:calc(var(--alert-icon-width) - var(--alert-close-width));}.k-Alert__text{text-align:center;flex-basis:auto;}}.k-Alert__text{flex:1 0 calc(100% - var(--alert-close-width,0px) - var(--alert-icon-width,0px));font-size:", ";}.k-Alert__icon{.k-Alert__iconBadge{background-color:", ";border-color:", ";min-width:", ";min-height:", ";border-radius:", ";}}.k-Alert__closeButton{flex:0 0 ", ";transition:all 0.2s ease;display:flex;align-self:stretch;align-items:center;margin:", " calc(var(--alert-gap) * -1);padding:", " var(--alert-gap);svg,svg path{transition:fill 0.2s ease;fill:", ";:hover{fill:", ";}}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}}a{", ";color:", ";text-decoration:underline;}&.k-Alert--success{background-color:", ";[href]{color:", ";}.k-Alert__iconBadge{background-color:", ";border-color:", ";}.k-Alert__closeButton{svg,svg path{fill:", ";:hover{fill:", ";}}}}&.k-Alert--error{background-color:", ";[href]{color:", ";}.k-Alert__iconBadge{background-color:", ";border-color:", ";}.k-Alert__closeButton{svg,svg path{fill:", ";:hover{fill:", ";}}}}&.k-Alert--warning{background-color:", ";[href]{color:", ";}.k-Alert__iconBadge{background-color:", ";border-color:", ";}.k-Alert__closeButton{svg,svg path{fill:", ";:hover{fill:'#A47600';}}}}&.k-Alert--shouldHide{pointer-events:none;animation:", " 0.4s cubic-bezier(0.895,0.03,0.685,0.22) forwards;}"], pxToRem(10), mq.tabletAndDesktop, pxToRem(20), TYPOGRAPHY.fontStyles.light, pxToRem(10), pxToRem(8), COLORS.primary5, COLORS.font1, pxToRem(18), pxToRem(17), pxToRem(30), stepToRem(-1), COLORS.primary1, COLORS.primary4, pxToRem(24), pxToRem(24), pxToRem(24), pxToRem(17), pxToRem(-18), pxToRem(18), COLORS.primary1, COLORS.primary3, COLORS.background1, pxToRem(2), pxToRem(-2), COLORS.primary4, TYPOGRAPHY.fontStyles.bold, COLORS.primary1, COLORS.tertiary1, COLORS.valid, COLORS.valid, COLORS.tertiary2, COLORS.valid, COLORS.tertiary2, COLORS.error2, COLORS.error, COLORS.error, COLORS.error3, COLORS.error, COLORS.error4, COLORS.warning2, COLORS.orange3, COLORS.orange3, COLORS.orange, COLORS.warning, fadeOut);
 export var Alert = function Alert(_ref) {
   var className = _ref.className,
       show = _ref.show,
@@ -25,7 +26,10 @@ export var Alert = function Alert(_ref) {
       closeButtonLabel = _ref.closeButtonLabel,
       children = _ref.children,
       onAfterClose = _ref.onAfterClose,
-      others = _objectWithoutProperties(_ref, ["className", "show", "error", "success", "warning", "closeButton", "closeButtonLabel", "children", "onAfterClose"]);
+      icon = _ref.icon,
+      iconBadgeBorderColor = _ref.iconBadgeBorderColor,
+      center = _ref.center,
+      others = _objectWithoutProperties(_ref, ["className", "show", "error", "success", "warning", "closeButton", "closeButtonLabel", "children", "onAfterClose", "icon", "iconBadgeBorderColor", "center"]);
 
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -57,21 +61,33 @@ export var Alert = function Alert(_ref) {
     ref: alertRef,
     role: "alert",
     className: classNames('k-Alert', className, {
+      'k-Alert--center': center,
       'k-Alert--success': success,
       'k-Alert--error': error,
       'k-Alert--warning': warning,
-      'k-Alert--hasCloseButton': closeButton,
+      'k-Alert--hasCloseButton': !!closeButton,
+      'k-Alert--hasIcon': !!icon,
       'k-Alert--shouldHide': !isMounted
     })
-  }, others), /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+  }, others), !!icon && /*#__PURE__*/React.createElement("div", {
+    className: "k-Alert__icon"
+  }, /*#__PURE__*/React.createElement(IconBadge, {
+    className: "k-Alert__iconBadge",
+    children: icon,
+    border: {
+      width: 2,
+      color: iconBadgeBorderColor,
+      style: 'solid'
+    }
+  })), /*#__PURE__*/React.createElement("div", {
     className: "k-Alert__text"
-  }, children), closeButton && /*#__PURE__*/React.createElement(CloseButton, {
-    modifier: "carbon",
-    closeButtonLabel: closeButtonLabel,
-    className: "k-Alert__button",
+  }, children), closeButton && /*#__PURE__*/React.createElement("button", {
+    className: "k-Alert__closeButton k-u-reset-button"
+  }, /*#__PURE__*/React.createElement(CrossIconNext, {
     onClick: function onClick() {
       return setMounted(false);
-    }
+    },
+    title: closeButtonLabel
   })));
 };
 Alert.propTypes = {
@@ -81,7 +97,10 @@ Alert.propTypes = {
   warning: PropTypes.bool,
   closeButton: PropTypes.bool,
   closeButtonLabel: PropTypes.string,
-  onAfterClose: PropTypes.func
+  onAfterClose: PropTypes.func,
+  icon: PropTypes.node,
+  iconBadgeBorderColor: PropTypes.string,
+  center: PropTypes.bool
 };
 Alert.defaultProps = {
   show: true,
@@ -90,5 +109,8 @@ Alert.defaultProps = {
   warning: false,
   closeButton: false,
   closeButtonLabel: 'Close',
-  onAfterClose: function onAfterClose() {}
+  onAfterClose: function onAfterClose() {},
+  icon: null,
+  iconBadgeBorderColor: COLORS.primary4,
+  center: false
 };

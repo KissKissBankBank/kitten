@@ -1,21 +1,60 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
-import styled, { css } from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
+import styled from 'styled-components'
 import { modifierStyles } from './helpers/modifier-styles'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import classNames from 'classnames'
 
-const StyledButton = styled.button`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+export const buttonModifiers = [
+  'hydrogen',
+  'helium',
+  'lithium',
+  'beryllium',
+  'carbon',
+  'oxygen',
+  'copper',
+  'boron',
+  'calcium',
+  'scandium',
+  'neon',
+  'iron',
+  'social_facebook',
+  'social_twitter',
+  'social_linkedin',
+  'social_instagram',
+  'social_youtube',
+]
 
+export const buttonFitOptions = ['icon', 'min-width', 'content', 'fluid']
+
+export const buttonMobileFitOptions = [null, ...buttonFitOptions]
+
+export const buttonSizes = [
+  'nano',
+  'micro',
+  'tiny',
+  'big',
+  'huge',
+  'giant',
+  'regular',
+]
+
+export const buttonVariants = ['andromeda', 'orion']
+
+const StyledButton = styled.button`
+  position: relative;
   box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: ${pxToRem(10)};
 
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${stepToRem(-1)};
@@ -26,21 +65,16 @@ const StyledButton = styled.button`
   appearance: none;
   cursor: pointer;
 
-  &:disabled {
+  border-radius: var(--Button-border-radius, 0);
+  min-width: 0;
+
+  &:disabled,
+  &.k-Button--disabled {
     cursor: not-allowed;
   }
 
   &:hover {
     text-decoration: none;
-  }
-
-  > :nth-child(n) {
-    margin-right: ${pxToRem(10)};
-    text-align: left;
-  }
-
-  > :last-child {
-    margin-right: 0;
   }
 
   &:focus {
@@ -54,273 +88,145 @@ const StyledButton = styled.button`
     outline-color: ${COLORS.primary4};
   }
 
-  /* BORDER RADIUS */
-
-  &.k-Button--hasBorderRadius {
-    border-radius: var(--border-radius);
-  }
-
   /* SIZES */
 
-  ${() => DEFAULT}
-
   &.k-Button--nano {
-    ${() => NANO}
+    --Button-dimension: ${pxToRem(20)};
+    --Button-min-width: ${pxToRem(100)};
+    --Button-padding: 0 ${pxToRem(6)};
+    font-size: ${stepToRem(-2)};
   }
+
   &.k-Button--micro {
-    ${() => MICRO}
+    --Button-dimension: ${pxToRem(30)};
+    --Button-min-width: ${pxToRem(130)};
+    --Button-padding: ${pxToRem(5)} ${pxToRem(10)};
+    font-size: ${stepToRem(-2)};
   }
+
   &.k-Button--tiny {
-    ${() => TINY}
+    --Button-dimension: ${pxToRem(40)};
+    --Button-min-width: ${pxToRem(160)};
+    --Button-padding: ${pxToRem(7)} ${pxToRem(20)};
   }
+
+  &.k-Button--regular {
+    --Button-dimension: ${pxToRem(50)};
+    --Button-min-width: ${pxToRem(200)};
+    --Button-padding: ${pxToRem(10)} ${pxToRem(30)};
+  }
+
   &.k-Button--big {
-    ${() => BIG}
+    --Button-dimension: ${pxToRem(50)};
+    --Button-min-width: ${pxToRem(200)};
+    --Button-padding: ${pxToRem(10)} ${pxToRem(30)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      --Button-min-width: ${pxToRem(220)};
+      --Button-dimension: ${pxToRem(70)};
+      --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
+      font-size: ${stepToRem(0)};
+    }
   }
+
   &.k-Button--huge {
-    ${() => HUGE}
+    --Button-dimension: ${pxToRem(70)};
+    --Button-min-width: ${pxToRem(200)};
+    --Button-padding: ${pxToRem(10)} ${pxToRem(10)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      --Button-min-width: ${pxToRem(220)};
+      --Button-dimension: ${pxToRem(80)};
+      --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
+      font-size: ${stepToRem(0)};
+    }
   }
+
   &.k-Button--giant {
-    ${() => GIANT}
+    --Button-dimension: ${pxToRem(70)};
+    --Button-min-width: ${pxToRem(200)};
+    --Button-padding: ${pxToRem(10)} ${pxToRem(10)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      --Button-min-width: ${pxToRem(220)};
+      --Button-dimension: ${pxToRem(90)};
+      --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
+      font-size: ${stepToRem(0)};
+    }
   }
 
-  &.k-Button--hasIcon:not(.k-Button--fluid) {
-    ${() => ICON}
+  /* BESPOKE FIT */
 
-    &.k-Button--nano {
-      ${() => ICON_NANO}
+  &.k-Button--fit-min-width {
+    min-width: var(--Button-min-width);
+  }
+
+  &.k-Button--fit-icon {
+    padding: 0;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
+  }
+
+  &.k-Button--fit-fluid {
+    width: 100%;
+  }
+
+  /* BESPOKE FIT for mobile */
+
+  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+    &[class*='k-Button--mobile-fit'] {
+      min-width: initial !important;
+      padding: var(--Button-padding);
+      width: initial;
+      height: initial;
+      width: initial;
+
+      &.k-Button--mobile-fit-min-width {
+        min-width: var(--Button-min-width) !important;
+      }
+
+      &.k-Button--mobile-fit-icon {
+        padding: 0;
+        overflow: hidden;
+        width: var(--Button-dimension);
+        height: var(--Button-dimension);
+      }
+
+      &.k-Button--mobile-fit-fluid {
+        width: 100%;
+      }
     }
-    &.k-Button--micro {
-      ${() => ICON_MICRO}
-    }
+  }
+
+  /* BORDER RADIUS */
+
+  &.k-Button--orion:not(.k-Button--rounded) {
+    &.k-Button--nano,
+    &.k-Button--micro,
     &.k-Button--tiny {
-      ${() => ICON_TINY}
+      --Button-border-radius: ${pxToRem(4)};
     }
-    &.k-Button--big {
-      ${() => ICON_BIG}
-    }
-    &.k-Button--huge {
-      ${() => ICON_HUGE}
-    }
-    &.k-Button--giant {
-      ${() => ICON_GIANT}
-    }
-  }
 
-  &.k-Button--fluid {
-    ${() => FLUID}
+    &.k-Button--regular,
+    &.k-Button--big,
+    &.k-Button--huge,
+    &.k-Button--giant {
+      --Button-border-radius: ${pxToRem(6)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        --Button-border-radius: ${pxToRem(8)};
+      }
+    }
   }
 
   &.k-Button--rounded {
-    ${() => ROUNDED}
+    --Button-border-radius: var(--Button-dimension);
   }
 
-  &.k-Button--orion {
-    border-radius: ${pxToRem(6)};
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      border-radius: ${pxToRem(8)};
-    }
-  }
+  /* MODIFIERS */
 
   ${({ modifier }) => modifierStyles(modifier)}
-`
-
-export const FLUID = css`
-  min-width: initial;
-  width: 100%;
-`
-
-export const ROUNDED = css`
-  border-radius: 50%;
-`
-
-export const DEFAULT = css`
-  min-width: ${pxToRem(200)};
-  min-height: ${pxToRem(50)};
-  padding: ${pxToRem(10)} ${pxToRem(30)};
-  font-size: ${stepToRem(-1)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(200)};
-    height: ${pxToRem(50)};
-  }
-`
-
-export const NANO = css`
-  min-width: ${pxToRem(100)};
-  min-height: ${pxToRem(20)};
-  padding: 0 ${pxToRem(6)};
-  font-size: ${stepToRem(-2)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(100)};
-    height: ${pxToRem(20)};
-  }
-`
-
-export const MICRO = css`
-  min-width: ${pxToRem(130)};
-  min-height: ${pxToRem(30)};
-  padding: ${pxToRem(5)} ${pxToRem(10)};
-  font-size: ${stepToRem(-2)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(100)};
-    height: ${pxToRem(20)};
-  }
-`
-
-export const TINY = css`
-  min-width: ${pxToRem(160)};
-  min-height: ${pxToRem(40)};
-  padding: ${pxToRem(7)} ${pxToRem(20)};
-  font-size: ${stepToRem(-1)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(160)};
-    height: ${pxToRem(40)};
-  }
-`
-
-export const BIG = css`
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    min-width: ${pxToRem(220)};
-    min-height: ${pxToRem(70)};
-    padding: ${pxToRem(10)} ${pxToRem(40)};
-    font-size: ${stepToRem(0)};
-  }
-  @media screen and (min-width: ${pxToRem(
-      ScreenConfig.S.min,
-    )}) and (-ms-high-contrast: active),
-    (-ms-high-contrast: none) {
-    width: ${pxToRem(220)};
-    height: ${pxToRem(70)};
-  }
-`
-
-export const HUGE = css`
-  min-height: ${pxToRem(70)};
-  font-size: ${stepToRem(-1)};
-  padding: ${pxToRem(10)} ${pxToRem(10)};
-
-  @media (min-width: ${ScreenConfig.M.min}px) {
-    min-width: ${pxToRem(220)};
-    min-height: ${pxToRem(80)};
-    font-size: ${stepToRem(0)};
-    padding: ${pxToRem(10)} ${pxToRem(40)};
-  }
-  @media screen and (min-width: ${pxToRem(
-      ScreenConfig.M.min,
-    )}) and (-ms-high-contrast: active),
-    (-ms-high-contrast: none) {
-    width: ${pxToRem(220)};
-    height: ${pxToRem(80)};
-  }
-`
-
-export const GIANT = css`
-  min-height: ${pxToRem(70)};
-  font-size: ${stepToRem(-1)};
-  padding: ${pxToRem(10)} ${pxToRem(10)};
-
-  @media (min-width: ${ScreenConfig.M.min}px) {
-    min-width: ${pxToRem(220)};
-    min-height: ${pxToRem(90)};
-    font-size: ${stepToRem(0)};
-    padding: ${pxToRem(10)} ${pxToRem(40)};
-  }
-  @media screen and (min-width: ${pxToRem(
-      ScreenConfig.M.min,
-    )}) and (-ms-high-contrast: active),
-    (-ms-high-contrast: none) {
-    width: ${pxToRem(220)};
-    height: ${pxToRem(90)};
-  }
-`
-
-export const ICON = css`
-  min-width: initial;
-  min-height: initial;
-  width: ${pxToRem(50)};
-  height: ${pxToRem(50)};
-  padding: 0;
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(50)};
-    min-width: 0;
-    min-height: 0;
-  }
-`
-
-export const ICON_NANO = css`
-  width: ${pxToRem(20)};
-  height: ${pxToRem(20)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(20)};
-  }
-`
-
-export const ICON_MICRO = css`
-  width: ${pxToRem(30)};
-  height: ${pxToRem(30)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(30)};
-  }
-`
-
-export const ICON_TINY = css`
-  width: ${pxToRem(40)};
-  height: ${pxToRem(40)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(40)};
-  }
-`
-
-export const ICON_BIG = css`
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    width: ${pxToRem(70)};
-    height: ${pxToRem(70)};
-  }
-  @media screen and (min-width: ${pxToRem(
-      ScreenConfig.S.min,
-    )}) and (-ms-high-contrast: active),
-    (-ms-high-contrast: none) {
-    width: ${pxToRem(70)};
-  }
-`
-
-export const ICON_HUGE = css`
-  min-width: initial;
-  width: ${pxToRem(70)};
-  height: ${pxToRem(70)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    min-width: initial;
-    width: ${pxToRem(80)};
-    height: ${pxToRem(80)};
-  }
-  @media screen and (min-width: ${pxToRem(
-      ScreenConfig.M.min,
-    )}) and (-ms-high-contrast: active),
-    (-ms-high-contrast: none) {
-    width: ${pxToRem(80)};
-  }
-`
-
-export const ICON_GIANT = css`
-  min-width: initial;
-  width: ${pxToRem(70)};
-  height: ${pxToRem(70)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    min-width: initial;
-    width: ${pxToRem(90)};
-    height: ${pxToRem(90)};
-  }
-  @media screen and (min-width: ${pxToRem(
-      ScreenConfig.M.min,
-    )}) and (-ms-high-contrast: active),
-    (-ms-high-contrast: none) {
-    width: ${pxToRem(90)};
-  }
 `
 
 // const ForwardedButtonComponent = forwardRef((props, ref) => {
@@ -337,7 +243,11 @@ export const Button = ({
   fluid,
   icon,
   borderRadius,
+  disabled,
   tag,
+  as,
+  fit,
+  mobileFit,
   ...props
 }) => {
   const actualSize = (() => {
@@ -361,6 +271,19 @@ export const Button = ({
     }
   })()
 
+  const internalTag = as || tag
+
+  const fitClass = (() => {
+    switch (true) {
+      case fluid && !icon:
+        return 'fluid'
+      case icon && !fluid:
+        return 'icon'
+      default:
+        return fit
+    }
+  })()
+
   return (
     <StyledButton
       className={classNames(
@@ -369,17 +292,21 @@ export const Button = ({
         `k-Button--${actualSize}`,
         `k-Button--${modifier}`,
         `k-Button--${variant}`,
+        `k-Button--fit-${fitClass}`,
         {
-          'k-Button--fluid': fluid,
-          'k-Button--hasIcon': icon,
+          [`k-Button--mobile-fit-${mobileFit}`]: !!mobileFit,
+          'k-Button--disabled': disabled,
           'k-Button--rounded': rounded,
-          'k-Button--hasBorderRadius': borderRadius > 0,
         },
       )}
-      style={{ '--border-radius': pxToRem(borderRadius) }}
       modifier={modifier}
+      style={{
+        '--Button-border-radius':
+          borderRadius > 0 ? pxToRem(borderRadius) : null,
+      }}
       type="button"
-      as={tag}
+      as={internalTag}
+      disabled={internalTag === 'button' ? disabled : null}
       {...props}
     >
       {children}
@@ -399,34 +326,11 @@ Button.propTypes = {
   fluid: PropTypes.bool,
   icon: PropTypes.bool,
   rounded: PropTypes.bool,
-  size: PropTypes.oneOf([
-    'nano',
-    'micro',
-    'tiny',
-    'big',
-    'huge',
-    'giant',
-    'regular',
-  ]),
-  modifier: PropTypes.oneOf([
-    'hydrogen',
-    'helium',
-    'lithium',
-    'beryllium',
-    'carbon',
-    'oxygen',
-    'copper',
-    'boron',
-    'neon',
-    'iron',
-    'social_facebook',
-    'social_twitter',
-    'social_linkedin',
-    'social_instagram',
-    'social_youtube',
-    'social_pinterest',
-  ]),
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
+  size: PropTypes.oneOf(buttonSizes),
+  fit: PropTypes.oneOf(buttonFitOptions),
+  mobileFit: PropTypes.oneOf(buttonMobileFitOptions),
+  modifier: PropTypes.oneOf(buttonModifiers),
+  variant: PropTypes.oneOf(buttonVariants),
 }
 Button.defaultProps = {
   tag: 'button',
@@ -436,5 +340,7 @@ Button.defaultProps = {
   borderRadius: 0,
   size: 'regular',
   modifier: 'hydrogen',
-  variant: 'andromeda',
+  variant: 'orion',
+  fit: 'min-width',
+  mobileFit: null,
 }

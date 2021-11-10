@@ -22,7 +22,7 @@ export default {
     value: 50,
     color: COLORS.primary1,
     rampProps: { style: { height: 6 } },
-    variant: 'andromeda',
+    variant: 'orion',
   },
   argTypes: {
     value: {

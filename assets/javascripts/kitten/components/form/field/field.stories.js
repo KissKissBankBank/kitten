@@ -53,7 +53,7 @@ WithInput.args = {
   limit: undefined,
   unit: undefined,
   noMargin: false,
-  variant: 'andromeda',
+  variant: 'orion',
 }
 WithInput.argTypes = {
   id: { control: 'text' },
@@ -87,7 +87,7 @@ WithPassword.args = {
   placeholder: 'Placeholder…',
   error: false,
   errorMessage: 'Error message…',
-  variant: 'andromeda',
+  variant: 'orion',
 }
 WithPassword.argTypes = {
   id: { control: 'text' },
@@ -129,7 +129,7 @@ WithRadioButtons.args = {
   ],
   error: false,
   errorMessage: 'Error message…',
-  variant: 'andromeda',
+  variant: 'orion',
 }
 WithRadioButtons.argTypes = {
   id: { control: 'text' },
@@ -169,7 +169,7 @@ WithAutocomplete.args = {
   ],
   error: false,
   errorMessage: 'Error message…',
-  variant: 'andromeda',
+  variant: 'orion',
 }
 WithAutocomplete.argTypes = {
   id: { control: 'text' },

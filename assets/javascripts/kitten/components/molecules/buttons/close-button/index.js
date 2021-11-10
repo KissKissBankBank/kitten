@@ -8,7 +8,7 @@ export const CloseButton = ({
   ...others
 }) => (
   <Button
-    icon
+    fit="icon"
     type="button"
     title={closeButtonLabel}
     aria-label={closeButtonLabel}
@@ -22,4 +22,5 @@ export const CloseButton = ({
 CloseButton.defaultProps = {
   closeButtonLabel: 'Close',
   buttonModifier: 'hydrogen',
+  variant: 'andromeda',
 }

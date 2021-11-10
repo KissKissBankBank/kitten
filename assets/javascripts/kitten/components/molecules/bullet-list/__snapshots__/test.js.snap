@@ -31,7 +31,7 @@ exports[`<BulletList /> default matches with snapshot 1`] = `
 }
 
 .c0.k-BulletList--tiny .k-BulletList__item {
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-BulletList--tiny .k-BulletList__item:before {
@@ -40,7 +40,7 @@ exports[`<BulletList /> default matches with snapshot 1`] = `
 }
 
 .c0.k-BulletList--regular .k-BulletList__item {
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-BulletList--large .k-BulletList__item {
@@ -53,7 +53,7 @@ exports[`<BulletList /> default matches with snapshot 1`] = `
 }
 
 .c0.k-BulletList--huge .k-BulletList__item {
-  font-size: 1.265625rem;
+  font-size: 1.25rem;
   margin: 0.625rem 0;
 }
 

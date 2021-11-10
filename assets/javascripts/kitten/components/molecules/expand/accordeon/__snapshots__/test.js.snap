@@ -2,7 +2,7 @@
 
 exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+  className="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -129,7 +129,7 @@ exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
 
 exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -254,6 +254,137 @@ exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
 </div>
 `;
 
+exports[`<Accordeon /> with custom classNames matches with snapshot 1`] = `
+<div
+  className="sc-bdVaJa gziHVz k-Accordeon custom1 k-Accordeon--orion k-Accordeon--isAnimated"
+  data-test={true}
+>
+  <div
+    className="k-Accordeon__item custom2"
+  >
+    <button
+      aria-controls="accordeon-accordeon-0_content"
+      aria-disabled={false}
+      aria-expanded={false}
+      className="k-Accordeon__header custom3"
+      id="accordeon-accordeon-0_header"
+      onClick={[Function]}
+      role="button"
+    >
+      <span
+        className="k-Accordeon__header__content"
+      >
+        Header
+      </span>
+      <span
+        className="k-Accordeon__header__arrow"
+      >
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-font1, #222)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(180deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      aria-hidden={true}
+      aria-labelledby="accordeon-accordeon-0_header"
+      className="k-Accordeon__content custom4"
+      id="accordeon-accordeon-0_content"
+      style={
+        Object {
+          "--accordeon-content-max-height": 0,
+        }
+      }
+    >
+      <div
+        className="k-Accordeon__content_marger"
+      >
+        Content
+      </div>
+      <div />
+    </div>
+  </div>
+  <div
+    className="k-Accordeon__item"
+    data-test={true}
+  >
+    <button
+      aria-controls="accordeon-accordeon-1_content"
+      aria-disabled={false}
+      aria-expanded={false}
+      className="k-Accordeon__header"
+      data-test={true}
+      id="accordeon-accordeon-1_header"
+      onClick={[Function]}
+      role="button"
+    >
+      <span
+        className="k-Accordeon__header__content"
+      >
+        Header
+      </span>
+      <span
+        className="k-Accordeon__header__arrow"
+      >
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-font1, #222)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(180deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      aria-hidden={true}
+      aria-labelledby="accordeon-accordeon-1_header"
+      className="k-Accordeon__content"
+      data-test={true}
+      id="accordeon-accordeon-1_content"
+      style={
+        Object {
+          "--accordeon-content-max-height": 0,
+        }
+      }
+    >
+      <div
+        className="k-Accordeon__content_marger"
+      >
+        Content
+      </div>
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapshot 1`] = `
 <Accordeon
   closeOnClick={false}
@@ -261,13 +392,13 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
   isAnimated={false}
   onChange={[Function]}
   selectedItem={null}
-  variant="andromeda"
+  variant="orion"
 >
   <styled.div
-    className="k-Accordeon k-Accordeon--andromeda"
+    className="k-Accordeon k-Accordeon--orion"
   >
     <StyledComponent
-      className="k-Accordeon k-Accordeon--andromeda"
+      className="k-Accordeon k-Accordeon--orion"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -381,7 +512,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--andromeda"
+            class="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--orion"
           >
             <div
               class="k-Accordeon__item"
@@ -490,7 +621,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
       }
     >
       <div
-        className="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--andromeda"
+        className="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--orion"
       >
         <Item
           id="accordeon-0"
@@ -676,7 +807,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
 
 exports[`<Accordeon /> with one item matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+  className="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -748,13 +879,13 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
   isAnimated={true}
   onChange={[Function]}
   selectedItem={0}
-  variant="andromeda"
+  variant="orion"
 >
   <styled.div
-    className="k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+    className="k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
   >
     <StyledComponent
-      className="k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+      className="k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -868,7 +999,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+            class="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
           >
             <div
               class="k-Accordeon__item"
@@ -976,7 +1107,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
       }
     >
       <div
-        className="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+        className="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
       >
         <Item
           id="accordeon-0"
@@ -1167,13 +1298,13 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
   isAnimated={true}
   onChange={[Function]}
   selectedItem={null}
-  variant="andromeda"
+  variant="orion"
 >
   <styled.div
-    className="k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+    className="k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
   >
     <StyledComponent
-      className="k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+      className="k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -1287,7 +1418,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+            class="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
           >
             <div
               class="k-Accordeon__item"
@@ -1396,7 +1527,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
       }
     >
       <div
-        className="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+        className="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
       >
         <Item
           id="accordeon-0"
@@ -1582,7 +1713,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
 
 exports[`<Accordeon /> with two items matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+  className="sc-bdVaJa gziHVz k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"

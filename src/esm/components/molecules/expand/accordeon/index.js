@@ -1,4 +1,6 @@
+import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
+import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React, { useState, cloneElement, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Item } from './components/item';
@@ -25,7 +27,10 @@ export var Accordeon = function Accordeon(_ref) {
       selectedItem = _ref.selectedItem,
       isAnimated = _ref.isAnimated,
       id = _ref.id,
-      onChange = _ref.onChange;
+      onChange = _ref.onChange,
+      className = _ref.className,
+      props = _objectWithoutProperties(_ref, ["closeOnClick", "variant", "children", "selectedItem", "isAnimated", "id", "onChange", "className"]);
+
   var items = getReactElementsByType({
     children: children,
     type: Accordeon.Item
@@ -74,12 +79,12 @@ export var Accordeon = function Accordeon(_ref) {
     closeOnClick: closeOnClick,
     accordeonWidth: debouncedAccordeonWidth
   };
-  return /*#__PURE__*/React.createElement(StyledAccordeon, {
-    className: classNames('k-Accordeon', "k-Accordeon--".concat(variant), {
+  return /*#__PURE__*/React.createElement(StyledAccordeon, _extends({
+    className: classNames('k-Accordeon', className, "k-Accordeon--".concat(variant), {
       'k-Accordeon--isAnimated': isAnimated
     }),
     ref: accordeonElement
-  }, /*#__PURE__*/React.createElement(Context.Provider, {
+  }, props), /*#__PURE__*/React.createElement(Context.Provider, {
     value: context
   }, items.map(function (item, index) {
     var elementId = item.props.id || "".concat(id, "-").concat(index);
@@ -106,6 +111,6 @@ Accordeon.defaultProps = {
   onChange: function onChange() {},
   isAnimated: true,
   id: 'accordeon',
-  variant: 'andromeda',
+  variant: 'orion',
   closeOnClick: false
 };

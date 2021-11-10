@@ -40,14 +40,16 @@ var RadioButtonSet = function RadioButtonSet(_ref) {
       design = _ref.design,
       label = _ref.label,
       children = _ref.children,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children"]);
+      labelProps = _ref.labelProps,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "labelProps"]);
   return /*#__PURE__*/_react.default.createElement(StyledRadioButtonSet, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Form-RadioButtonSet', className, "k-Form-RadioButtonSet--".concat(variant)),
     disabled: disabled
-  }, props), label && /*#__PURE__*/_react.default.createElement(_label.Label, {
-    tag: "legend",
-    className: "k-Form-RadioButtonSet__label"
-  }, label), children && !label && /*#__PURE__*/_react.default.createElement("legend", null, children), /*#__PURE__*/_react.default.createElement("div", {
+  }, props), label && /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({
+    tag: "legend"
+  }, labelProps, {
+    className: (0, _classnames.default)('k-Form-RadioButtonSet__label', labelProps.className)
+  }), label), children && !label && /*#__PURE__*/_react.default.createElement("legend", null, children), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Form-RadioButtonSet__radioContainer"
   }, items.map(function (_ref2) {
     var id = _ref2.id,
@@ -78,7 +80,8 @@ RadioButtonSet.propTypes = {
   })),
   variant: _propTypes.default.oneOf(['andromeda', 'orion']),
   design: _propTypes.default.oneOf(['disc', 'check']),
-  disabled: _propTypes.default.bool
+  disabled: _propTypes.default.bool,
+  labelProps: _propTypes.default.object
 };
 RadioButtonSet.defaultProps = {
   name: 'radioButtonSet',
@@ -91,7 +94,8 @@ RadioButtonSet.defaultProps = {
     id: 'myRadioButton' // Replace by a real value
 
   }],
-  variant: 'andromeda',
+  variant: 'orion',
   design: 'disc',
-  disabled: false
+  disabled: false,
+  labelProps: {}
 };

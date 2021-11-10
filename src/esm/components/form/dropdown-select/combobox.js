@@ -53,7 +53,12 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       className = _ref.className,
       value = _ref.value,
       _onBlur = _ref.onBlur,
-      controlled = _ref.controlled;
+      controlled = _ref.controlled,
+      modifier = _ref.modifier,
+      direction = _ref.direction,
+      arrowPosition = _ref.arrowPosition,
+      labelProps = _ref.labelProps,
+      inputProps = _ref.inputProps;
 
   var _useState = useState([]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -164,7 +169,7 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
     setFlattenedOptions(flatOptions);
   }, [options]);
   return /*#__PURE__*/React.createElement(StyledDropdown, {
-    className: classNames('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), className, {
+    className: classNames('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(modifier), "k-Form-Dropdown--".concat(direction), "k-Form-Dropdown--".concat(size), "k-Form-Dropdown--arrowPosition-".concat(arrowPosition), className, {
       'k-Form-Dropdown--isOpen': isOpen > 0,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
@@ -173,16 +178,16 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
     style: {
       '--menu-z-index': menuZIndex
     }
-  }, /*#__PURE__*/React.createElement(Label, _extends({
-    className: classNames('k-Form-Dropdown__label', 'k-u-margin-bottom-single', {
+  }, /*#__PURE__*/React.createElement(Label, _extends({}, labelProps, {
+    className: classNames('k-Form-Dropdown__label', 'k-u-margin-bottom-single', labelProps === null || labelProps === void 0 ? void 0 : labelProps.className, {
       'k-Form-Dropdown__label--isHidden': hideLabel
     })
   }, getLabelProps()), labelText), /*#__PURE__*/React.createElement("div", _extends({
     className: "k-Form-DropdownCombobox"
   }, getComboboxProps()), /*#__PURE__*/React.createElement("input", _extends({
-    className: "k-Form-DropdownCombobox__input",
     placeholder: placeholder,
-    disabled: disabled,
+    disabled: disabled
+  }, inputProps, {
     onFocus: function onFocus() {
       return !isOpen && openMenu();
     },
@@ -193,7 +198,9 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
     onBlur: function onBlur() {
       _onBlur(find(['label', inputValue])(flattenedOptions) || null);
     }
-  }))), /*#__PURE__*/React.createElement("button", _extends({
+  }), {
+    className: classNames('k-Form-DropdownCombobox__input', inputProps.className)
+  })), /*#__PURE__*/React.createElement("button", _extends({
     className: "k-Form-DropdownCombobox__arrowButton",
     type: "button",
     "aria-label": comboboxButtonLabelText,
@@ -238,7 +245,7 @@ DropdownCombobox.defaultProps = {
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
-  variant: 'andromeda',
+  variant: 'orion',
   size: 'normal',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
@@ -251,7 +258,11 @@ DropdownCombobox.defaultProps = {
   onMenuClose: function onMenuClose() {},
   onMenuOpen: function onMenuOpen() {},
   openOnLoad: false,
-  menuZIndex: 1000
+  menuZIndex: 1000,
+  modifier: 'hydrogen',
+  direction: 'down',
+  arrowPosition: 'left',
+  inputProps: {}
 };
 DropdownCombobox.propTypes = {
   id: PropTypes.string.isRequired,
@@ -264,7 +275,7 @@ DropdownCombobox.propTypes = {
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
-  size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge', 'giant']),
+  size: PropTypes.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
   a11yStatusError: PropTypes.string,
   a11yStatusValid: PropTypes.string,
   a11ySelectionMessageDisplayer: PropTypes.func,
@@ -273,5 +284,9 @@ DropdownCombobox.propTypes = {
   onMenuClose: PropTypes.func,
   onMenuOpen: PropTypes.func,
   openOnLoad: PropTypes.bool,
-  menuZIndex: PropTypes.number
+  menuZIndex: PropTypes.number,
+  modifier: PropTypes.oneOf(['hydrogen', 'nitrogen', 'boron']),
+  direction: PropTypes.oneOf(['up', 'down']),
+  arrowPosition: PropTypes.oneOf(['left', 'right']),
+  inputProps: PropTypes.object
 };

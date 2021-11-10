@@ -56,7 +56,7 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
@@ -251,7 +251,7 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
@@ -446,7 +446,7 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;

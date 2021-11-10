@@ -5,7 +5,7 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   min-height: 2.5rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -27,7 +27,7 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -119,21 +119,21 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Buttons__tagButton--big {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Buttons__tagButton--huge {
   min-height: 3.75rem;
   min-width: 5rem;
   padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Buttons__tagButton--helium,
@@ -226,7 +226,7 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--helium k-Buttons__tagButton--andromeda k-Buttons__tagButton--regular"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--helium k-Buttons__tagButton--orion k-Buttons__tagButton--regular"
   type="button"
 >
   MyButton
@@ -238,7 +238,7 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   min-height: 2.5rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -260,7 +260,7 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -352,21 +352,21 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Buttons__tagButton--big {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Buttons__tagButton--huge {
   min-height: 3.75rem;
   min-width: 5rem;
   padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Buttons__tagButton--helium,
@@ -459,7 +459,7 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--andromeda k-Buttons__tagButton--regular k-Buttons__tagButton--selected"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--orion k-Buttons__tagButton--regular k-Buttons__tagButton--selected"
   type="button"
 >
   MyButton
@@ -471,7 +471,7 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   min-height: 2.5rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -493,7 +493,7 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -585,21 +585,21 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Buttons__tagButton--big {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Buttons__tagButton--huge {
   min-height: 3.75rem;
   min-width: 5rem;
   padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Buttons__tagButton--helium,
@@ -692,7 +692,7 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--andromeda k-Buttons__tagButton--huge"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--orion k-Buttons__tagButton--huge"
   type="button"
 >
   MyButton
@@ -704,7 +704,7 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
   min-height: 2.5rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -726,7 +726,7 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -818,21 +818,21 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Buttons__tagButton--big {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Buttons__tagButton--huge {
   min-height: 3.75rem;
   min-width: 5rem;
   padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Buttons__tagButton--helium,
@@ -937,7 +937,7 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   min-height: 2.5rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -959,7 +959,7 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1051,21 +1051,21 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Buttons__tagButton--big {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Buttons__tagButton--huge {
   min-height: 3.75rem;
   min-width: 5rem;
   padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Buttons__tagButton--helium,
@@ -1158,7 +1158,7 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--andromeda k-Buttons__tagButton--regular k-Buttons__tagButton--icon"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--orion k-Buttons__tagButton--regular k-Buttons__tagButton--icon"
   type="button"
 >
   <svg
@@ -1187,7 +1187,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   min-height: 2.5rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1209,7 +1209,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1301,21 +1301,21 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.7901234567901234rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Buttons__tagButton--big {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Buttons__tagButton--huge {
   min-height: 3.75rem;
   min-width: 5rem;
   padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Buttons__tagButton--helium,
@@ -1408,7 +1408,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--andromeda k-Buttons__tagButton--regular"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--orion k-Buttons__tagButton--regular"
   type="button"
 >
   MyButton

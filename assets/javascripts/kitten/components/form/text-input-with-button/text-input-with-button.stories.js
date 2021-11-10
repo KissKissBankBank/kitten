@@ -2,6 +2,7 @@ import React from 'react'
 import { SearchIcon } from '../../../components/graphics/icons/search-icon'
 import { TextInputWithButton } from './index'
 import { Default as TextInputStory } from '../text-input/text-input.stories.js'
+import { buttonModifiers } from '../../../components/molecules/buttons/button'
 
 export const Default = args => <TextInputWithButton {...args} />
 
@@ -37,24 +38,7 @@ Default.argTypes = {
   },
   modifier: {
     name: 'modifier',
-    options: [
-      'hydrogen',
-      'helium',
-      'lithium',
-      'beryllium',
-      'carbon',
-      'oxygen',
-      'copper',
-      'boron',
-      'neon',
-      'iron',
-      'social_facebook',
-      'social_twitter',
-      'social_linkedin',
-      'social_instagram',
-      'social_youtube',
-      'social_pinterest',
-    ],
+    options: buttonModifiers,
     control: 'select',
   },
 }

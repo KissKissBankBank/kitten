@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Modal } from './index'
 import { Button, Text, SaveIcon, COLORS } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
+import { action } from '@storybook/addon-actions'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -57,7 +58,11 @@ export default {
 
 const args = {
   ...Modal.defaultProps,
-  trigger: <Button modifier="helium">Open</Button>,
+  trigger: (
+    <Button modifier="helium" onClick={action('Trigger clicked')}>
+      Open
+    </Button>
+  ),
   contentText: paragraphContainer,
 }
 
@@ -328,7 +333,6 @@ ComplexWithOrion.args = {
     <>
       <Button
         className="k-u-hidden@xs-down"
-        variant="orion"
         modifier="helium"
         type="button"
         onClick={close}
@@ -340,8 +344,7 @@ ComplexWithOrion.args = {
       </Button>
       <Button
         className="k-u-hidden@s-up"
-        icon
-        variant="orion"
+        fit="icon"
         modifier="helium"
         type="button"
         onClick={close}

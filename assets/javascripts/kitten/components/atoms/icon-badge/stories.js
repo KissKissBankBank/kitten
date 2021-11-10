@@ -18,17 +18,14 @@ export default {
       </div>
     ),
   ],
-  args: {
-    disabled: false,
-    valid: false,
-    empty: false,
-    size: 'normal',
-    children: <StarIcon color={COLORS.background1} />,
-  },
   argTypes: {
     disabled: {
       name: 'disabled',
       control: 'boolean',
+    },
+    backgroundColor: {
+      name: 'backgroundColor',
+      control: 'color',
     },
     valid: {
       name: 'valid',
@@ -38,6 +35,10 @@ export default {
       name: 'empty',
       control: 'boolean',
     },
+    border: {
+      name: 'border',
+      control: 'object',
+    },
     size: {
       name: 'size',
       control: 'select',
@@ -46,4 +47,27 @@ export default {
   },
 }
 
+const args = {
+  disabled: false,
+  valid: false,
+  empty: false,
+  size: 'normal',
+  backgroundColor: COLORS.primary1,
+  children: <StarIcon color={COLORS.background1} />,
+}
+
 export const Default = args => <IconBadge {...args} />
+
+Default.args = args
+
+export const WithBorder = args => <IconBadge {...args} />
+
+WithBorder.args = {
+  ...args,
+  size: 'tiny',
+  border: {
+    width: 2,
+    style: 'solid',
+    color: COLORS.primary5,
+  },
+}

@@ -1,17 +1,9 @@
 import styled from 'styled-components'
-import { ScreenConfig } from '../../../constants/screen-config'
+import { ScreenConfig, mq } from '../../../constants/screen-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
-import {
-  CONTAINER_PADDING,
-  CONTAINER_PADDING_THIN,
-} from '../../../constants/grid-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import {
-  MOBILE_HEADER_HEIGHT,
-  TABLET_HEADER_HEIGHT,
-  DESKTOP_HEADER_HEIGHT,
-} from './config'
+import { HEADER_HEIGHT } from './config'
 
 export const StyledHeader = styled.header`
   position: relative;
@@ -19,6 +11,7 @@ export const StyledHeader = styled.header`
 
   .k-HeaderNav__stickyContainer {
     width: 100%;
+    box-shadow: 0 ${pxToRem(1)} 0 rgba(0, 0, 0, 0.08);
   }
 
   &.k-HeaderNav--menuIsExpanded {
@@ -29,17 +22,6 @@ export const StyledHeader = styled.header`
     }
   }
 
-  &.k-HeaderNav--shadow {
-    .k-Spacer + .k-HeaderNav__stickyContainer {
-      box-shadow: 0 ${pxToRem(2)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
-    }
-  }
-  &.k-HeaderNav--border {
-    .k-Spacer + .k-HeaderNav__stickyContainer {
-      box-shadow: 0 ${pxToRem(1)} 0 rgba(0, 0, 0, 0.08);
-    }
-  }
-
   .k-HeaderNav {
     display: flex;
     align-items: center;
@@ -47,6 +29,7 @@ export const StyledHeader = styled.header`
     box-sizing: border-box;
     background: ${COLORS.background1};
     transition: background-color 0.2s ease;
+    height: ${pxToRem(HEADER_HEIGHT)};
 
     .quickAccessLink {
       background: ${COLORS.background1};
@@ -73,6 +56,12 @@ export const StyledHeader = styled.header`
     *:not(input):focus-visible {
       outline-color: ${COLORS.primary4};
     }
+
+    .k-Dropdown__button,
+    .k-HeaderNav__Button {
+      min-width: ${pxToRem(52)};
+      cursor: pointer;
+    }
   }
 
   &.k-HeaderNav--inactiveBackground .k-HeaderNav,
@@ -82,11 +71,11 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__BurgerMenu__button {
-    padding: 0 ${pxToRem(10)} 0 ${pxToRem(CONTAINER_PADDING_THIN)};
+    padding: 0;
     height: 100%;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
-      padding: 0 ${pxToRem(15)} 0 ${pxToRem(CONTAINER_PADDING)};
+      padding: 0 ${pxToRem(10)} 0 ${pxToRem(20)};
     }
   }
 
@@ -119,13 +108,19 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__Logo {
-    padding: ${pxToRem(10)};
+    padding: 0;
     display: flex;
     align-items: center;
 
-    @media (max-width: ${ScreenConfig.XXS.max}) {
-      padding-left: ${pxToRem(5)};
-      padding-right: ${pxToRem(5)};
+    @media ${mq.tabletAndDesktop} {
+      padding: ${pxToRem(10)};
+    }
+  }
+
+  @media ${mq.desktop} {
+    /* Using an attribute selector because "@" causes trouble */
+    .k-HeaderNavDropdown[class*='k-u-hidden@l-up'] + .k-HeaderNav__Logo {
+      padding-left: ${pxToRem(40)};
     }
   }
 
@@ -163,8 +158,16 @@ export const StyledHeader = styled.header`
       background-color: var(--HeaderMenu-Button-backgroundColorHover);
     }
 
-    .k-HeaderNav__Button__text:first-child {
-      margin-right: ${pxToRem(-10)}; /* gap compensation */
+    &.k-HeaderNav__Button--hasText {
+      .k-HeaderNav__Button__text {
+        &:first-child {
+          margin-left: ${pxToRem(15)};
+          margin-right: ${pxToRem(-10)}; /* gap compensation */
+        }
+        &:last-child {
+          margin-right: ${pxToRem(10)};
+        }
+      }
     }
   }
 
@@ -178,22 +181,11 @@ export const StyledHeader = styled.header`
   .k-HeaderNav__right {
     justify-content: flex-end;
     flex-grow: 1;
+    gap: ${pxToRem(10)};
+    margin-right: ${pxToRem(20)};
 
-    &.k-HeaderNav__right--padded {
-      padding-right: ${pxToRem(10)};
-      gap: ${pxToRem(10)};
-
-      .k-HeaderNav__Button:last-child {
-        margin-right: ${pxToRem(-10)};
-      }
-      @media (min-width: ${ScreenConfig.S.min}) {
-        padding-right: ${pxToRem(15)};
-        gap: ${pxToRem(15)};
-
-        .k-HeaderNav__Button:last-child {
-          margin-right: ${pxToRem(-15)};
-        }
-      }
+    @media ${mq.desktop} {
+      margin-right: ${pxToRem(40)};
     }
   }
 
@@ -223,6 +215,14 @@ export const StyledHeader = styled.header`
     }
   }
 
+  .k-HeaderNav__UserMenu {
+    margin-right: ${pxToRem(-50)};
+
+    @media ${mq.tabletAndDesktop} {
+      margin-right: ${pxToRem(-40)};
+    }
+  }
+
   .k-HeaderNav__UserMenuButton {
     align-self: center;
     display: flex;
@@ -237,6 +237,13 @@ export const StyledHeader = styled.header`
       --UserMenu-Button-backgroundColor,
       ${COLORS.background3}
     );
+
+    padding-right: ${pxToRem(50)};
+
+    &.k-Dropdown__button,
+    &.k-HeaderNav__Button {
+      min-width: ${pxToRem(40)};
+    }
 
     .k-Badge {
       border-color: ${COLORS.background3};
@@ -311,20 +318,6 @@ export const StyledHeader = styled.header`
     }
   }
 
-  .k-HeaderNav__UserMenuButton--hasArrow {
-    padding-right: ${pxToRem(30)};
-  }
-
-  .k-HeaderNav__UserMenuButton--noPadding {
-    padding: 0 !important;
-  }
-
-  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-    .k-HeaderNav__UserMenuButton--noPaddingMobile {
-      padding: 0 !important;
-    }
-  }
-
   .k-HeaderNav-nav--center {
     justify-content: center;
   }
@@ -343,8 +336,10 @@ export const StyledHeader = styled.header`
   .k-HeaderNav-nav__item {
     display: flex;
     align-items: center;
+    padding: 0 ${pxToRem(10)};
 
     border-top: ${pxToRem(4)} solid transparent;
+    border-bottom: ${pxToRem(4)} solid transparent;
 
     ${TYPOGRAPHY.fontStyles.regular};
     font-size: ${stepToRem(-1)};
@@ -369,84 +364,8 @@ export const StyledHeader = styled.header`
     }
 
     &.is-selected {
-      border-color: currentColor;
+      border-top-color: currentColor;
       color: ${COLORS.primary1};
-    }
-  }
-
-  /* SIZES */
-  &.k-HeaderNav--small .k-HeaderNav {
-    height: ${pxToRem(MOBILE_HEADER_HEIGHT)};
-
-    .k-HeaderNav__UserMenuButton {
-      padding: 0 ${pxToRem(15)};
-    }
-    .k-HeaderNav-nav__item {
-      padding: 0 ${pxToRem(15)};
-    }
-
-    .k-Dropdown__button,
-    .k-HeaderNav__Button {
-      min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
-    }
-
-    .k-HeaderNav__Button--hasText {
-      .k-HeaderNav__Button__text {
-        &:first-child {
-          margin-left: ${pxToRem(15)};
-        }
-        &:last-child {
-          margin-right: ${pxToRem(15)};
-        }
-      }
-    }
-  }
-
-  &.k-HeaderNav--regular .k-HeaderNav {
-    height: ${pxToRem(MOBILE_HEADER_HEIGHT)};
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      height: ${pxToRem(TABLET_HEADER_HEIGHT)};
-    }
-
-    @media (min-width: ${ScreenConfig.L.min}px) {
-      height: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
-    }
-
-    .k-HeaderNav__UserMenuButton {
-      padding: 0 ${pxToRem(40)};
-    }
-    .k-HeaderNav-nav__item {
-      padding: 0 ${pxToRem(40)};
-    }
-
-    .k-Dropdown__button,
-    .k-HeaderNav__Button {
-      min-width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        min-width: ${pxToRem(TABLET_HEADER_HEIGHT)};
-      }
-
-      @media (min-width: ${ScreenConfig.L.min}px) {
-        min-width: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
-      }
-    }
-
-    .k-HeaderNav__Button__text:first-child {
-      margin-left: ${pxToRem(30)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-left: ${pxToRem(40)};
-      }
-    }
-
-    .k-HeaderNav__Button__text:last-child {
-      margin-right: ${pxToRem(30)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-right: ${pxToRem(40)};
-      }
     }
   }
 
@@ -518,7 +437,7 @@ export const StyledHeader = styled.header`
       position: relative;
 
       .k-HeaderNavDropdown__menu {
-        min-width: max(${pxToRem(200)}, 100%);
+        min-width: max(${pxToRem(250)}, 100%);
 
         &.k-HeaderNavDropdown__menu--is-left {
           left: 0;

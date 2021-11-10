@@ -2,7 +2,7 @@
 
 exports[`<BasicUploader /> should match snapshot 1`] = `
 <div
-  className="sc-htpNat jKYdli k-BasicUploader k-BasicUploader--ready"
+  className="sc-htpNat ffYZRO k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -11,11 +11,12 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa QSPav k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+    className="sc-bdVaJa hTjjZW k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
+    disabled={null}
     htmlFor="BasicUploader"
     style={
       Object {
-        "--border-radius": 0,
+        "--Button-border-radius": null,
       }
     }
     type="button"
@@ -43,7 +44,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 <div
-  className="sc-htpNat jKYdli k-BasicUploader k-BasicUploader--ready"
+  className="sc-htpNat ffYZRO k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -52,11 +53,12 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa QSPav k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+    className="sc-bdVaJa hTjjZW k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
+    disabled={null}
     htmlFor="BasicUploader"
     style={
       Object {
-        "--border-radius": 0,
+        "--Button-border-radius": null,
       }
     }
     type="button"
@@ -84,7 +86,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with props 1`] = `
 <div
-  className="sc-htpNat jKYdli k-BasicUploader k-BasicUploader--valid"
+  className="sc-htpNat ffYZRO k-BasicUploader k-BasicUploader--valid"
 >
   <input
     disabled={true}
@@ -94,11 +96,12 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa QSPav k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+    className="sc-bdVaJa hTjjZW k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
+    disabled={null}
     htmlFor="BasicUploader"
     style={
       Object {
-        "--border-radius": 0,
+        "--Button-border-radius": null,
       }
     }
     type="button"

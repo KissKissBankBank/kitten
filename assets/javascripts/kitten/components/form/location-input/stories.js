@@ -46,7 +46,7 @@ export default {
     inputProps: {},
     name: 'location-input',
     loadingText: 'Loading',
-    variant: 'andromeda',
+    variant: 'orion',
     gPlaceApiKey: 'YOUR KEY',
   },
   parameters: {

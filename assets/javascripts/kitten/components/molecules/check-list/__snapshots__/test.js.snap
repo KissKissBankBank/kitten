@@ -2,13 +2,13 @@
 
 exports[`<LinkBox /> by default matches with snapshot 1`] = `
 <ul
-  className="sc-bdVaJa kAygwq"
+  className="sc-bdVaJa enzQRl"
 />
 `;
 
 exports[`<LinkBox /> with CheckList.Item matches with snapshot 1`] = `
 <ul
-  className="sc-bdVaJa kAygwq"
+  className="sc-bdVaJa enzQRl"
 >
   <li
     aria-label="Élément validé"

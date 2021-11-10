@@ -46,7 +46,7 @@ var Item = function Item(_ref) {
     })
   }), button ? /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
     modifier: modifier,
-    fluid: true
+    fit: "fluid"
   }, other, {
     className: (0, _classnames.default)('k-HeaderMenu__item__button', other.className),
     as: as
@@ -66,7 +66,7 @@ Item.propTypes = {
   href: _propTypes.default.string,
   isSelected: _propTypes.default.bool,
   liProps: _propTypes.default.object,
-  modifier: _propTypes.default.oneOf([null, undefined, 'light', 'default', 'hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked', 'boron', 'neon', 'iron']),
+  modifier: _propTypes.default.oneOf([null, undefined, 'light', 'default', 'hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked', 'boron', 'neon', 'iron', 'calcium']),
   size: _propTypes.default.oneOf(['normal', 'tiny', 'big']),
   as: (0, _deprecated.default)(_propTypes.default.string, 'Please use `tag` instead.'),
   tag: _propTypes.default.string

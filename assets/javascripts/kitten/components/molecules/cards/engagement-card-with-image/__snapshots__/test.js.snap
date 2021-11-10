@@ -12,10 +12,12 @@ exports[`<EngagementCardWithImage /> by default matches with snapshot 1`] = `
     <img
       alt=""
       className="sc-htpNat bvrdCN"
-      src="https://source.unsplash.com/WLUHO9A_xik/200x120"
+      src="kitten.jpg"
+      srcSet="kitten.jpg 1x, kitten@2x.jpg 2x"
     />
   </div>
   <span
+    aria-label="test label"
     className="k-u-color-font1 k-u-decoration-none k-u-line-height-normal k-u-size-micro k-u-weight-regular sc-bxivhb iSbjCA"
   />
 </a>

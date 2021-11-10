@@ -81,7 +81,12 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       className = _ref.className,
       value = _ref.value,
       _onBlur = _ref.onBlur,
-      controlled = _ref.controlled;
+      controlled = _ref.controlled,
+      modifier = _ref.modifier,
+      direction = _ref.direction,
+      arrowPosition = _ref.arrowPosition,
+      labelProps = _ref.labelProps,
+      inputProps = _ref.inputProps;
 
   var _useState = (0, _react.useState)([]),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -192,7 +197,7 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     setFlattenedOptions(flatOptions);
   }, [options]);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledDropdown, {
-    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), className, {
+    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(modifier), "k-Form-Dropdown--".concat(direction), "k-Form-Dropdown--".concat(size), "k-Form-Dropdown--arrowPosition-".concat(arrowPosition), className, {
       'k-Form-Dropdown--isOpen': isOpen > 0,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
@@ -201,16 +206,16 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     style: {
       '--menu-z-index': menuZIndex
     }
-  }, /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-Form-Dropdown__label', 'k-u-margin-bottom-single', {
+  }, /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({}, labelProps, {
+    className: (0, _classnames.default)('k-Form-Dropdown__label', 'k-u-margin-bottom-single', labelProps === null || labelProps === void 0 ? void 0 : labelProps.className, {
       'k-Form-Dropdown__label--isHidden': hideLabel
     })
   }, getLabelProps()), labelText), /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: "k-Form-DropdownCombobox"
   }, getComboboxProps()), /*#__PURE__*/_react.default.createElement("input", (0, _extends2.default)({
-    className: "k-Form-DropdownCombobox__input",
     placeholder: placeholder,
-    disabled: disabled,
+    disabled: disabled
+  }, inputProps, {
     onFocus: function onFocus() {
       return !isOpen && openMenu();
     },
@@ -221,7 +226,9 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     onBlur: function onBlur() {
       _onBlur((0, _find.default)(['label', inputValue])(flattenedOptions) || null);
     }
-  }))), /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
+  }), {
+    className: (0, _classnames.default)('k-Form-DropdownCombobox__input', inputProps.className)
+  })), /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
     className: "k-Form-DropdownCombobox__arrowButton",
     type: "button",
     "aria-label": comboboxButtonLabelText,
@@ -268,7 +275,7 @@ DropdownCombobox.defaultProps = {
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
-  variant: 'andromeda',
+  variant: 'orion',
   size: 'normal',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
@@ -281,7 +288,11 @@ DropdownCombobox.defaultProps = {
   onMenuClose: function onMenuClose() {},
   onMenuOpen: function onMenuOpen() {},
   openOnLoad: false,
-  menuZIndex: 1000
+  menuZIndex: 1000,
+  modifier: 'hydrogen',
+  direction: 'down',
+  arrowPosition: 'left',
+  inputProps: {}
 };
 DropdownCombobox.propTypes = {
   id: _propTypes.default.string.isRequired,
@@ -294,7 +305,7 @@ DropdownCombobox.propTypes = {
   placeholder: _propTypes.default.string,
   labelPropsGetter: _propTypes.default.func,
   variant: _propTypes.default.oneOf(['andromeda', 'orion']),
-  size: _propTypes.default.oneOf(['tiny', 'normal', 'big', 'huge', 'giant']),
+  size: _propTypes.default.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
   a11yStatusError: _propTypes.default.string,
   a11yStatusValid: _propTypes.default.string,
   a11ySelectionMessageDisplayer: _propTypes.default.func,
@@ -303,5 +314,9 @@ DropdownCombobox.propTypes = {
   onMenuClose: _propTypes.default.func,
   onMenuOpen: _propTypes.default.func,
   openOnLoad: _propTypes.default.bool,
-  menuZIndex: _propTypes.default.number
+  menuZIndex: _propTypes.default.number,
+  modifier: _propTypes.default.oneOf(['hydrogen', 'nitrogen', 'boron']),
+  direction: _propTypes.default.oneOf(['up', 'down']),
+  arrowPosition: _propTypes.default.oneOf(['left', 'right']),
+  inputProps: _propTypes.default.object
 };

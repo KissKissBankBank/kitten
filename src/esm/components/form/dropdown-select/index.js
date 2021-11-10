@@ -41,7 +41,11 @@ export var DropdownSelect = function DropdownSelect(_ref) {
       menuZIndex = props.menuZIndex,
       className = props.className,
       value = props.value,
-      controlled = props.controlled;
+      controlled = props.controlled,
+      modifier = props.modifier,
+      direction = props.direction,
+      arrowPosition = props.arrowPosition,
+      labelProps = props.labelProps;
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,
@@ -119,7 +123,7 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     getLabelProps && labelPropsGetter(getLabelProps);
   }, [getLabelProps]);
   return /*#__PURE__*/React.createElement(StyledDropdown, {
-    className: classNames('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(size), className, {
+    className: classNames('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(modifier), "k-Form-Dropdown--".concat(direction), "k-Form-Dropdown--".concat(size), "k-Form-Dropdown--arrowPosition-".concat(arrowPosition), className, {
       'k-Form-Dropdown--isOpen': isOpen,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
@@ -128,8 +132,8 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     style: {
       '--menu-z-index': menuZIndex
     }
-  }, /*#__PURE__*/React.createElement(Label, _extends({
-    className: classNames('k-Form-Dropdown__label', 'k-u-margin-bottom-single', {
+  }, /*#__PURE__*/React.createElement(Label, _extends({}, labelProps, {
+    className: classNames('k-Form-Dropdown__label', 'k-u-margin-bottom-single', labelProps === null || labelProps === void 0 ? void 0 : labelProps.className, {
       'k-Form-Dropdown__label--isHidden': hideLabel
     })
   }, getLabelProps()), labelText), /*#__PURE__*/React.createElement("button", _extends({
@@ -179,7 +183,7 @@ DropdownSelect.defaultProps = {
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
-  variant: 'andromeda',
+  variant: 'orion',
   size: 'normal',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
@@ -193,7 +197,10 @@ DropdownSelect.defaultProps = {
   onMenuOpen: function onMenuOpen() {},
   openOnLoad: false,
   uniqLabelOnSearch: false,
-  menuZIndex: 1000
+  menuZIndex: 1000,
+  modifier: 'hydrogen',
+  direction: 'down',
+  arrowPosition: 'left'
 };
 DropdownSelect.propTypes = {
   id: PropTypes.string.isRequired,
@@ -205,7 +212,7 @@ DropdownSelect.propTypes = {
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
-  size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge', 'giant']),
+  size: PropTypes.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
   a11yStatusError: PropTypes.string,
   a11yStatusValid: PropTypes.string,
   a11ySelectionMessageDisplayer: PropTypes.func,
@@ -216,5 +223,8 @@ DropdownSelect.propTypes = {
   onMenuOpen: PropTypes.func,
   openOnLoad: PropTypes.bool,
   uniqLabelOnSearch: PropTypes.bool,
-  menuZIndex: PropTypes.number
+  menuZIndex: PropTypes.number,
+  modifier: PropTypes.oneOf(['hydrogen', 'nitrogen', 'boron']),
+  direction: PropTypes.oneOf(['up', 'down']),
+  arrowPosition: PropTypes.oneOf(['left', 'right'])
 };

@@ -49,7 +49,10 @@ var DashboardLayout = function DashboardLayout(_ref) {
       buttonProps = _ref.buttonProps,
       quickAccessLinkText = _ref.quickAccessLinkText,
       fullHeightContent = _ref.fullHeightContent,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent"]);
+      _ref$overlayZIndex = _ref.overlayZIndex,
+      overlayZIndex = _ref$overlayZIndex === void 0 ? 100 : _ref$overlayZIndex,
+      style = _ref.style,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent", "overlayZIndex", "style"]);
 
   var _useState = (0, _react.useState)(false),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -185,6 +188,9 @@ var DashboardLayout = function DashboardLayout(_ref) {
   }, quickAccessLinkText), /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('k-DashboardLayout', props.className, {
       'k-DashboardLayout--isOpen': isOpen
+    }),
+    style: (0, _extends2.default)({}, style, {
+      '--DashboardLayout-overlay-zindex': overlayZIndex
     })
   }, /*#__PURE__*/_react.default.createElement("div", {
     ref: sideBarElement,
@@ -301,6 +307,23 @@ var Alerts = function Alerts(_ref7) {
   }, props));
 };
 
+var Toaster = function Toaster(_ref8) {
+  var className = _ref8.className,
+      isOpen = _ref8.isOpen,
+      children = _ref8.children,
+      props = (0, _objectWithoutProperties2.default)(_ref8, ["className", "isOpen", "children"]);
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
+    className: (0, _classnames.default)('k-DashboardLayout__toaster__wrapper', 'k-DashboardLayout__fullWidth', className, {
+      'k-DashboardLayout__toaster--isOpen': isOpen
+    }),
+    "aria-live": "polite"
+  }, props), /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-DashboardLayout__toaster"
+  }, children)), /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-DashboardLayout__toaster__spacer"
+  }));
+};
+
 DashboardLayout.propTypes = {
   backLinkProps: _propTypes.default.object,
   buttonProps: _propTypes.default.shape({
@@ -308,7 +331,8 @@ DashboardLayout.propTypes = {
     closeLabel: _propTypes.default.node.isRequired
   }),
   quickAccessLinkText: _propTypes.default.node.isRequired,
-  fullHeightContent: _propTypes.default.bool
+  fullHeightContent: _propTypes.default.bool,
+  overlayZIndex: _propTypes.default.number
 };
 Header.propTypes = {
   buttonProps: _propTypes.default.shape({
@@ -324,3 +348,4 @@ DashboardLayout.SideContent = SideContent;
 DashboardLayout.SideFooter = SideFooter;
 DashboardLayout.Flow = _flow.Flow;
 DashboardLayout.Alerts = Alerts;
+DashboardLayout.Toaster = Toaster;

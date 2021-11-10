@@ -24,7 +24,7 @@ export default {
     disabled: false,
     helpMessage: 'Press Enter or comma to add an item to the list.',
     size: 'regular',
-    variant: 'andromeda',
+    variant: 'orion',
     addEventKeys: ['Enter', ','],
     removeEventKeys: ['Backspace'],
   },
@@ -86,5 +86,23 @@ export const Default = args => {
       />
       <p className="k-u-weight-light">List: {tagList.join(', ')}</p>
     </div>
+  )
+}
+
+export const WithNodeElements = args => {
+  return (
+    <TagInput
+      {...args}
+      initialItemsList={[
+        { value: 'object disabled', disabled: true },
+        'hey',
+        { value: 'object enabled', disabled: false },
+      ]}
+      helpMessage={
+        args.disabled
+          ? 'This input is disabled.'
+          : 'Press Enter or comma to add an item to the list.'
+      }
+    />
   )
 }

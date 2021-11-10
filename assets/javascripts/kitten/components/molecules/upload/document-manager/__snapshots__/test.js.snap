@@ -11,11 +11,12 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa QSPav k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasBorderRadius"
+    className="sc-bdVaJa hTjjZW k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
+    disabled={null}
     htmlFor="DocumentManager"
     style={
       Object {
-        "--border-radius": "0.375rem",
+        "--Button-border-radius": "0.375rem",
       }
     }
     type="button"
@@ -101,11 +102,12 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa QSPav k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasBorderRadius"
+    className="sc-bdVaJa hTjjZW k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
+    disabled={null}
     htmlFor="DocumentManager"
     style={
       Object {
-        "--border-radius": "0.375rem",
+        "--Button-border-radius": "0.375rem",
       }
     }
     type="button"

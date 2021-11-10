@@ -106,7 +106,7 @@ var LocationInput = function LocationInput(_ref) {
         className: className
       })), /*#__PURE__*/_react.default.createElement("span", {
         className: "k-LocationInput__autocompleteItem__mainText"
-      }, suggestion.formattedSuggestion.mainText), ' ', /*#__PURE__*/_react.default.createElement("span", {
+      }, suggestion.formattedSuggestion.mainText), ', ', /*#__PURE__*/_react.default.createElement("span", {
         className: "k-LocationInput__autocompleteItem__secondaryText"
       }, suggestion.formattedSuggestion.secondaryText));
     })));
@@ -121,7 +121,7 @@ LocationInput.defaultProps = {
   inputProps: {},
   name: 'location-input',
   loadingText: 'Loading...',
-  variant: 'andromeda'
+  variant: 'orion'
 };
 LocationInput.propTypes = {
   onChange: _propTypes.default.func,

@@ -123,6 +123,17 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
+}
+
+.c0 .k-DropdownMenu__button::-webkit-details-marker,
+.c0 .k-DropdownMenu__button::before {
+  display: none;
+}
+
+.c0 .k-DropdownMenu__button__inside {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -137,11 +148,6 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.c0 .k-DropdownMenu__button::-webkit-details-marker,
-.c0 .k-DropdownMenu__button::before {
-  display: none;
 }
 
 .c0[open] > .k-DropdownMenu__button::before {
@@ -212,7 +218,7 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   display: block;
   padding: 0.4375rem 0.9375rem;
   line-height: 1;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   text-align: left;
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
@@ -257,8 +263,12 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   <summary
     className="k-DropdownMenu__button"
   >
-    <span>
-      Open me!
+    <span
+      className="k-DropdownMenu__button__inside"
+    >
+      <span>
+        Open me!
+      </span>
     </span>
   </summary>
   <div

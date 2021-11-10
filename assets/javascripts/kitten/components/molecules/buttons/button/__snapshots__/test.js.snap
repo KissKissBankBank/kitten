@@ -2,23 +2,26 @@
 
 exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -27,10 +30,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -38,22 +39,14 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -69,89 +62,80 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -187,169 +171,334 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
+  }
+}
+
+<a
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
+  disabled={null}
+  href="#helloWorld"
+  style={
+    Object {
+      "--Button-border-radius": null,
+    }
+  }
+  type="button"
+>
+  MyButton
+</a>
+`;
+
+exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
+.c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-font1,#222);
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
+  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-background1,#fff);
+  color: var(--color-font1,#222);
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled,
+.c0.k-Button--disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:focus {
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: var(--color-primary4,#bae8fd);
+}
+
+.c0.k-Button--nano {
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
+}
+
+.c0.k-Button--micro {
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
+}
+
+.c0.k-Button--tiny {
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--huge {
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
+}
+
+.c0.k-Button--giant {
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
+}
+
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
+  padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
+}
+
+.c0.k-Button--fit-fluid {
+  width: 100%;
+}
+
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
+}
+
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
+}
+
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: var(--color-primary2,#05a8e6);
+  background-color: var(--color-primary2,#05a8e6);
+  color: var(--color-background1,#fff);
+}
+
+.c0:active {
+  border-color: var(--color-primary3,#0496cc);
+  background-color: var(--color-primary3,#0496cc);
+  color: var(--color-background1,#fff);
+}
+
+.c0:focus {
+  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline-color: transparent;
+}
+
+.c0:focus-visible {
+  outline-color: var(--color-primary4,#bae8fd);
+}
+
+.c0:disabled,
+.c0.k-Button--disabled {
+  border-color: var(--color-line2,#d8d8d8);
+  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-background1,#fff);
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--huge {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
+    padding: 0;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <input
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
+  disabled={null}
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="submit"
@@ -359,23 +508,26 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 
 exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -384,10 +536,8 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -395,22 +545,14 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -426,89 +568,80 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -544,169 +677,79 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasBorderRadius"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
   style={
     Object {
-      "--border-radius": "0.25rem",
+      "--Button-border-radius": "0.25rem",
     }
   }
   type="button"
@@ -717,23 +760,26 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 
 exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -742,10 +788,8 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -753,22 +797,14 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -784,89 +820,80 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -902,169 +929,79 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -1075,23 +1012,26 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 
 exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1100,10 +1040,8 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem dashed var(--color-primary4,#bae8fd);
   background-color: var(--color-background1,#fff);
   color: var(--color-primary1,#19b4fa);
@@ -1111,22 +1049,14 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -1142,89 +1072,80 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1260,169 +1181,79 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--oxygen k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--oxygen k-Button--orion k-Button--fit-min-width"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -1433,23 +1264,26 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 
 exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1458,10 +1292,8 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -1469,22 +1301,14 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -1500,89 +1324,80 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1618,169 +1433,79 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -1791,23 +1516,26 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 
 exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1816,10 +1544,8 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -1827,22 +1553,14 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -1858,89 +1576,80 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1976,170 +1685,81 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <a
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
+  disabled={null}
   href="#helloWorld"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -2148,25 +1768,28 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 </a>
 `;
 
-exports[`<Button /> with icon and big matches with snapshot 1`] = `
+exports[`<Button /> with fluid matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -2175,10 +1798,8 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -2186,22 +1807,14 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -2217,89 +1830,80 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2335,169 +1939,79 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -2506,25 +2020,28 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
+exports[`<Button /> with icon and big matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -2533,10 +2050,8 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -2544,22 +2059,14 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -2575,89 +2082,80 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2693,169 +2191,79 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fluid k-Button--hasIcon"
+  className="c0 k-Button k-Button--big k-Button--hydrogen k-Button--orion k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -2866,23 +2274,26 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 
 exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -2891,10 +2302,8 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -2902,22 +2311,14 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -2933,89 +2334,80 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -3051,169 +2443,79 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--giant k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--giant k-Button--hydrogen k-Button--orion k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -3224,23 +2526,26 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 
 exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -3249,10 +2554,8 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -3260,22 +2563,14 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -3291,89 +2586,80 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -3409,169 +2695,79 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--huge k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--huge k-Button--hydrogen k-Button--orion k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -3582,23 +2778,26 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 
 exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -3607,10 +2806,8 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -3618,22 +2815,14 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -3649,89 +2838,80 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -3767,169 +2947,79 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--micro k-Button--hydrogen k-Button--orion k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -3940,23 +3030,26 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 
 exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -3965,10 +3058,8 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -3976,22 +3067,14 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -4007,89 +3090,80 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -4125,169 +3199,79 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -4298,23 +3282,26 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 
 exports[`<Button /> with icon matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -4323,10 +3310,8 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -4334,22 +3319,14 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -4365,89 +3342,80 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -4483,169 +3451,79 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -4656,23 +3534,26 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 
 exports[`<Button /> with some elements matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -4681,10 +3562,8 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -4692,22 +3571,14 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -4723,89 +3594,80 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -4841,169 +3703,79 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -5019,23 +3791,26 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 
 exports[`<Button /> with text matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -5044,10 +3819,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -5055,22 +3828,14 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -5086,89 +3851,80 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -5204,169 +3960,79 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -5377,23 +4043,26 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 
 exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -5402,10 +4071,8 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -5413,22 +4080,14 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -5444,89 +4103,80 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -5562,169 +4212,79 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fluid"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
@@ -5735,23 +4295,26 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 
 exports[`<Button /> with variant matches with snapshot 1`] = `
 .c0 {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.8888888888888888rem;
+  font-size: 0.875rem;
   color: var(--color-font1,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -5760,10 +4323,8 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0.625rem 1.875rem;
-  font-size: 0.8888888888888888rem;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
   border: 0.125rem solid var(--color-line1,#eee);
   background-color: var(--color-background1,#fff);
   color: var(--color-font1,#222);
@@ -5771,22 +4332,14 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   cursor: not-allowed;
 }
 
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c0 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c0 >:last-child {
-  margin-right: 0;
 }
 
 .c0:focus {
@@ -5802,89 +4355,80 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0.k-Button--hasBorderRadius {
-  border-radius: var(--border-radius);
-}
-
 .c0.k-Button--nano {
-  min-width: 6.25rem;
-  min-height: 1.25rem;
-  padding: 0 0.375rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--micro {
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0.3125rem 0.625rem;
-  font-size: 0.7901234567901234rem;
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
 }
 
 .c0.k-Button--tiny {
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0.4375rem 1.25rem;
-  font-size: 0.8888888888888888rem;
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
 }
 
 .c0.k-Button--huge {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
 .c0.k-Button--giant {
-  min-height: 4.375rem;
-  font-size: 0.8888888888888888rem;
-  padding: 0.625rem 0.625rem;
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid) {
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
   padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
 }
 
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-  min-width: initial;
-  width: 4.375rem;
-  height: 4.375rem;
-}
-
-.c0.k-Button--fluid {
-  min-width: initial;
+.c0.k-Button--fit-fluid {
   width: 100%;
 }
 
-.c0.k-Button--rounded {
-  border-radius: 50%;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
+  --Button-border-radius: 0.25rem;
 }
 
-.c0.k-Button--orion {
-  border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+  --Button-border-radius: 0.375rem;
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -5920,169 +4464,79 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   outline-color: var(--color-primary4,#bae8fd);
 }
 
-.c0:disabled {
+.c0:disabled,
+.c0.k-Button--disabled {
   border-color: var(--color-line2,#d8d8d8);
   background-color: var(--color-line2,#d8d8d8);
   color: var(--color-background1,#fff);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--nano {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--micro {
-    width: 6.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--tiny {
-    width: 10rem;
-    height: 2.5rem;
+@media (min-width:40rem) {
+  .c0.k-Button--big {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
-    min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--big {
-    width: 13.75rem;
-    height: 4.375rem;
-  }
-}
-
-@media (min-width:768px) {
   .c0.k-Button--huge {
-    min-width: 13.75rem;
-    min-height: 5rem;
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
     font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--huge {
-    width: 13.75rem;
-    height: 5rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c0.k-Button--giant {
-    min-width: 13.75rem;
-    min-height: 5.625rem;
-    font-size: 1rem;
-    padding: 0.625rem 2.5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--giant {
-    width: 13.75rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid) {
-    width: 3.125rem;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
-    width: 1.25rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
-    width: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
-    width: 2.5rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    min-width: 0;
-    min-height: 0;
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
     padding: 0;
-    width: 4.375rem;
-    height: 4.375rem;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
   }
-}
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
-    width: 4.375rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    min-width: initial;
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
-    width: 5rem;
-  }
-}
-
-@media (min-width:48rem) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    min-width: initial;
-    width: 5.625rem;
-    height: 5.625rem;
-  }
-}
-
-@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
-    width: 5.625rem;
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
   }
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--orion {
-    border-radius: 0.5rem;
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
+  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
+    --Button-border-radius: 0.5rem;
   }
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
   style={
     Object {
-      "--border-radius": 0,
+      "--Button-border-radius": null,
     }
   }
   type="button"
