@@ -13,10 +13,10 @@
 
 @mixin k-utilities-link {
   $transition-speed: 0.3s;
-  $font: 'regular';
 
   .k-u-link {
-    @include k-typographyFont($font);
+    font-family: map-get(k-map-fetch($k-fonts, 'regular'), 'family') !important;
+    font-weight: map-get(k-map-fetch($k-fonts, 'regular'), 'weight') !important;
     text-decoration: none !important;
 
     &:focus {
