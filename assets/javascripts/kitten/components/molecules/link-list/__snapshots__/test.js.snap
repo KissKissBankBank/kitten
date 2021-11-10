@@ -40,11 +40,11 @@ exports[`<LinkList /> default matches with snapshot 1`] = `
 
 .c0 .k-LinkList__link:active,
 .c0 .k-LinkList__link.k-LinkList__link--isActive {
-  color: var(--color-primary3,#0496cc);
+  color: var(--color-primary-900,#0496cc);
 }
 
 .c0 .k-LinkList__link:hover {
-  color: var(--color-primary1,#19b4fa);
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c0 .k-LinkList__item--regular,
@@ -64,11 +64,11 @@ exports[`<LinkList /> default matches with snapshot 1`] = `
 }
 
 .c0 .k-LinkList__link--light {
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0 .k-LinkList__link--dark {
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
 }
 
 @media (min-width:640px) {

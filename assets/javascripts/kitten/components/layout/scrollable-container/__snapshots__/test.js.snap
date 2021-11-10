@@ -5,7 +5,7 @@ exports[`<ScrollableContainer /> by default matches with snapshot 1`] = `
   className="sc-bdVaJa mTdHm sc-bwzfXH hWGVlc"
 >
   <div
-    className="sc-htpNat kyJYCI"
+    className="sc-htpNat hRixZf"
   />
 </div>
 `;
@@ -15,7 +15,7 @@ exports[`<ScrollableContainer /> with children matches with snapshot 1`] = `
   className="sc-bdVaJa mTdHm sc-bwzfXH hWGVlc"
 >
   <div
-    className="sc-htpNat kyJYCI"
+    className="sc-htpNat hRixZf"
   >
     <nav>
       <ul>

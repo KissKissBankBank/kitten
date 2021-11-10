@@ -27,12 +27,12 @@ exports[`<IconContainer/> should match snapshot when we add an icon description 
       <circle
         cx="10"
         cy="10"
-        fill="var(--color-background1, #fff)"
+        fill="var(--color-grey-000, #fff)"
         r="10"
       />
       <path
         d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
-        fill="var(--color-font1, #222)"
+        fill="var(--color-grey-900, #222)"
       />
     </svg>
   </div>
@@ -61,12 +61,12 @@ exports[`<IconContainer/> should match snapshot when we change color 1`] = `
       <circle
         cx="10"
         cy="10"
-        fill="var(--color-background1, #fff)"
+        fill="var(--color-grey-000, #fff)"
         r="10"
       />
       <path
         d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
-        fill="var(--color-font1, #222)"
+        fill="var(--color-grey-900, #222)"
       />
     </svg>
   </div>
@@ -95,12 +95,12 @@ exports[`<IconContainer/> should match snapshot when we change position 1`] = `
       <circle
         cx="10"
         cy="10"
-        fill="var(--color-background1, #fff)"
+        fill="var(--color-grey-000, #fff)"
         r="10"
       />
       <path
         d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
-        fill="var(--color-font1, #222)"
+        fill="var(--color-grey-900, #222)"
       />
     </svg>
   </div>
@@ -129,12 +129,12 @@ exports[`<IconContainer/> should match snapshot when we change width and height 
       <circle
         cx="10"
         cy="10"
-        fill="var(--color-background1, #fff)"
+        fill="var(--color-grey-000, #fff)"
         r="10"
       />
       <path
         d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
-        fill="var(--color-font1, #222)"
+        fill="var(--color-grey-900, #222)"
       />
     </svg>
   </div>
@@ -163,12 +163,12 @@ exports[`<IconContainer/> should match snapshot with default behavior 1`] = `
       <circle
         cx="10"
         cy="10"
-        fill="var(--color-background1, #fff)"
+        fill="var(--color-grey-000, #fff)"
         r="10"
       />
       <path
         d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
-        fill="var(--color-font1, #222)"
+        fill="var(--color-grey-900, #222)"
       />
     </svg>
   </div>

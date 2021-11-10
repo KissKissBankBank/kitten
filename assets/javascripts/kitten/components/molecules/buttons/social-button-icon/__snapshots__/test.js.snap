@@ -22,7 +22,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -34,7 +34,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   min-width: 0;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -50,7 +50,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -59,7 +59,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0.k-Button--nano {
@@ -149,17 +149,17 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 .c0:focus {
   border-color: #2c4a89;
   background-color: #2c4a89;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -168,14 +168,14 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-line2,#d8d8d8);
-  background-color: var(--color-line2,#d8d8d8);
-  color: var(--color-background1,#fff);
+  border-color: var(--color-grey-400,#d8d8d8);
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -285,7 +285,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -297,7 +297,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   min-width: 0;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -313,7 +313,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -322,7 +322,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0.k-Button--nano {
@@ -412,17 +412,17 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 .c0:focus {
   border-color: #2c4a89;
   background-color: #2c4a89;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -431,14 +431,14 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-line2,#d8d8d8);
-  background-color: var(--color-line2,#d8d8d8);
-  color: var(--color-background1,#fff);
+  border-color: var(--color-grey-400,#d8d8d8);
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -548,7 +548,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -560,7 +560,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   min-width: 0;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   -webkit-transition: background 0.2s,color 0.2s;
@@ -583,7 +583,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -592,7 +592,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0.k-Button--nano {
@@ -691,17 +691,17 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 .c0:focus {
   border-color: #2c4a89;
   background-color: #2c4a89;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -710,14 +710,14 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-line2,#d8d8d8);
-  background-color: var(--color-line2,#d8d8d8);
-  color: var(--color-background1,#fff);
+  border-color: var(--color-grey-400,#d8d8d8);
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -827,7 +827,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -839,7 +839,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   min-width: 0;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   -webkit-transition: background 0.2s,color 0.2s;
@@ -862,7 +862,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -871,7 +871,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0.k-Button--nano {
@@ -970,17 +970,17 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
 .c0:focus {
   border-color: #2c4a89;
   background-color: #2c4a89;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -989,14 +989,14 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-line2,#d8d8d8);
-  background-color: var(--color-line2,#d8d8d8);
-  color: var(--color-background1,#fff);
+  border-color: var(--color-grey-400,#d8d8d8);
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -1106,7 +1106,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1118,7 +1118,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   min-width: 0;
   border: 0.125rem solid #00669e;
   background-color: #00669e;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1134,7 +1134,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -1143,7 +1143,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0.k-Button--nano {
@@ -1233,17 +1233,17 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 .c0:focus {
   border-color: #00578f;
   background-color: #00578f;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
   border-color: #004880;
   background-color: #004880;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -1252,14 +1252,14 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-line2,#d8d8d8);
-  background-color: var(--color-line2,#d8d8d8);
-  color: var(--color-background1,#fff);
+  border-color: var(--color-grey-400,#d8d8d8);
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -1369,7 +1369,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1381,7 +1381,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   min-width: 0;
   border: 0.125rem solid #00669e;
   background-color: #00669e;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1397,7 +1397,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -1406,7 +1406,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0.k-Button--nano {
@@ -1496,17 +1496,17 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 .c0:focus {
   border-color: #00578f;
   background-color: #00578f;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
   border-color: #004880;
   background-color: #004880;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -1515,14 +1515,14 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-line2,#d8d8d8);
-  background-color: var(--color-line2,#d8d8d8);
-  color: var(--color-background1,#fff);
+  border-color: var(--color-grey-400,#d8d8d8);
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -1632,7 +1632,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1644,7 +1644,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   min-width: 0;
   border: 0.125rem solid #55acee;
   background-color: #55acee;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1660,7 +1660,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -1669,7 +1669,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0.k-Button--nano {
@@ -1759,17 +1759,17 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 .c0:focus {
   border-color: #469ddf;
   background-color: #469ddf;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
   border-color: #388ed0;
   background-color: #388ed0;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -1778,14 +1778,14 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-line2,#d8d8d8);
-  background-color: var(--color-line2,#d8d8d8);
-  color: var(--color-background1,#fff);
+  border-color: var(--color-grey-400,#d8d8d8);
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -1895,7 +1895,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1907,7 +1907,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   min-width: 0;
   border: 0.125rem solid #55acee;
   background-color: #55acee;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1923,7 +1923,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -1932,7 +1932,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0.k-Button--nano {
@@ -2022,17 +2022,17 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 .c0:focus {
   border-color: #469ddf;
   background-color: #469ddf;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
   border-color: #388ed0;
   background-color: #388ed0;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -2041,14 +2041,14 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-line2,#d8d8d8);
-  background-color: var(--color-line2,#d8d8d8);
-  color: var(--color-background1,#fff);
+  border-color: var(--color-grey-400,#d8d8d8);
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -2158,7 +2158,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2170,7 +2170,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   min-width: 0;
   border: 0.125rem solid #ff0000;
   background-color: #ff0000;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -2186,7 +2186,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -2195,7 +2195,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0.k-Button--nano {
@@ -2285,17 +2285,17 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 .c0:focus {
   border-color: #f00000;
   background-color: #f00000;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
   border-color: #e10000;
   background-color: #e10000;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -2304,14 +2304,14 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-line2,#d8d8d8);
-  background-color: var(--color-line2,#d8d8d8);
-  color: var(--color-background1,#fff);
+  border-color: var(--color-grey-400,#d8d8d8);
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -2421,7 +2421,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2433,7 +2433,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   min-width: 0;
   border: 0.125rem solid #ff0000;
   background-color: #ff0000;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -2449,7 +2449,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -2458,7 +2458,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0.k-Button--nano {
@@ -2548,17 +2548,17 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
 .c0:focus {
   border-color: #f00000;
   background-color: #f00000;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
   border-color: #e10000;
   background-color: #e10000;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -2567,14 +2567,14 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
 }
 
 .c0:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-line2,#d8d8d8);
-  background-color: var(--color-line2,#d8d8d8);
-  color: var(--color-background1,#fff);
+  border-color: var(--color-grey-400,#d8d8d8);
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {

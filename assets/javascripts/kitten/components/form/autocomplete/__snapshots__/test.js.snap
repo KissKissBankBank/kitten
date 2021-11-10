@@ -14,41 +14,41 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   width: 100%;
   height: 3.125rem;
   box-sizing: border-box;
-  background: var(--color-background1,#fff);
-  border: 0.125rem solid var(--color-line1,#eee);
+  background: var(--color-grey-000,#fff);
+  border: 0.125rem solid var(--color-grey-300,#eee);
   padding: 0 0.9375rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.3;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
   -webkit-transition: border-color 0.4s;
   transition: border-color 0.4s;
 }
 
 .c0 .k-Form-Autocomplete__input::-webkit-input-placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input::-moz-placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input:-ms-input-placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input::placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input::-moz-placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-line2,#d8d8d8);
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  border-color: var(--color-grey-400,#d8d8d8);
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -57,7 +57,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 }
 
 .c0 .k-Form-Autocomplete__input:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0 .k-Form-Autocomplete__input::-ms-clear {
@@ -65,13 +65,13 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
-  border-color: var(--color-error3,#ffb2c7);
-  color: var(--color-error3,#ffb2c7);
+  border-color: var(--color-danger-300,#ffb2c7);
+  color: var(--color-danger-300,#ffb2c7);
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-line2,#d8d8d8);
-  color: var(--color-font1,#222);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-900,#222);
 }
 
 .c0 .k-Form-Autocomplete__loader {
@@ -109,8 +109,8 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   overflow-y: auto;
   margin: 0;
   padding: 0;
-  background: var(--color-background1,#fff);
-  border: 0.125rem solid var(--color-line1,#eee);
+  background: var(--color-grey-000,#fff);
+  border: 0.125rem solid var(--color-grey-300,#eee);
   border-top: none;
   list-style: none;
   height: calc(2.375rem * var(--Autocomplete-suggestions,1));
@@ -123,7 +123,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.3;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item.k-Form-Autocomplete__suggestion__item--noresult {
@@ -139,11 +139,11 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):hover,
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus,
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):active {
-  background-color: var(--color-background3,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -152,11 +152,11 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult)[aria-selected='true'] {
-  background-color: var(--color-line1,#eee);
+  background-color: var(--color-grey-300,#eee);
 }
 
 .c0.k-Form-Autocomplete--hasIcon-left .k-Form-Autocomplete__input {
@@ -180,11 +180,11 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__icon > svg [stroke]:not([stroke='none']) {
-  stroke: var(--color-font2,#b8b8b8);
+  stroke: var(--color-grey-500,#b8b8b8);
 }
 
 .c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__icon > svg [fill]:not([fill='none']) {
-  fill: var(--color-font2,#b8b8b8);
+  fill: var(--color-grey-500,#b8b8b8);
 }
 
 .c0.k-Form-Autocomplete--orion .k-Form-Autocomplete__input {
@@ -227,41 +227,41 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   width: 100%;
   height: 3.125rem;
   box-sizing: border-box;
-  background: var(--color-background1,#fff);
-  border: 0.125rem solid var(--color-line1,#eee);
+  background: var(--color-grey-000,#fff);
+  border: 0.125rem solid var(--color-grey-300,#eee);
   padding: 0 0.9375rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.3;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
   -webkit-transition: border-color 0.4s;
   transition: border-color 0.4s;
 }
 
 .c0 .k-Form-Autocomplete__input::-webkit-input-placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input::-moz-placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input:-ms-input-placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input::placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input::-moz-placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-line2,#d8d8d8);
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  border-color: var(--color-grey-400,#d8d8d8);
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -270,7 +270,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 }
 
 .c0 .k-Form-Autocomplete__input:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0 .k-Form-Autocomplete__input::-ms-clear {
@@ -278,13 +278,13 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
-  border-color: var(--color-error3,#ffb2c7);
-  color: var(--color-error3,#ffb2c7);
+  border-color: var(--color-danger-300,#ffb2c7);
+  color: var(--color-danger-300,#ffb2c7);
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-line2,#d8d8d8);
-  color: var(--color-font1,#222);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-900,#222);
 }
 
 .c0 .k-Form-Autocomplete__loader {
@@ -322,8 +322,8 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   overflow-y: auto;
   margin: 0;
   padding: 0;
-  background: var(--color-background1,#fff);
-  border: 0.125rem solid var(--color-line1,#eee);
+  background: var(--color-grey-000,#fff);
+  border: 0.125rem solid var(--color-grey-300,#eee);
   border-top: none;
   list-style: none;
   height: calc(2.375rem * var(--Autocomplete-suggestions,1));
@@ -336,7 +336,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.3;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item.k-Form-Autocomplete__suggestion__item--noresult {
@@ -352,11 +352,11 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):hover,
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus,
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):active {
-  background-color: var(--color-background3,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -365,11 +365,11 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult)[aria-selected='true'] {
-  background-color: var(--color-line1,#eee);
+  background-color: var(--color-grey-300,#eee);
 }
 
 .c0.k-Form-Autocomplete--hasIcon-left .k-Form-Autocomplete__input {
@@ -393,11 +393,11 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__icon > svg [stroke]:not([stroke='none']) {
-  stroke: var(--color-font2,#b8b8b8);
+  stroke: var(--color-grey-500,#b8b8b8);
 }
 
 .c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__icon > svg [fill]:not([fill='none']) {
-  fill: var(--color-font2,#b8b8b8);
+  fill: var(--color-grey-500,#b8b8b8);
 }
 
 .c0.k-Form-Autocomplete--orion .k-Form-Autocomplete__input {
@@ -492,41 +492,41 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   width: 100%;
   height: 3.125rem;
   box-sizing: border-box;
-  background: var(--color-background1,#fff);
-  border: 0.125rem solid var(--color-line1,#eee);
+  background: var(--color-grey-000,#fff);
+  border: 0.125rem solid var(--color-grey-300,#eee);
   padding: 0 0.9375rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.3;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
   -webkit-transition: border-color 0.4s;
   transition: border-color 0.4s;
 }
 
 .c0 .k-Form-Autocomplete__input::-webkit-input-placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input::-moz-placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input:-ms-input-placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input::placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input::-moz-placeholder {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-line2,#d8d8d8);
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  border-color: var(--color-grey-400,#d8d8d8);
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -535,7 +535,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 }
 
 .c0 .k-Form-Autocomplete__input:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0 .k-Form-Autocomplete__input::-ms-clear {
@@ -543,13 +543,13 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
-  border-color: var(--color-error3,#ffb2c7);
-  color: var(--color-error3,#ffb2c7);
+  border-color: var(--color-danger-300,#ffb2c7);
+  color: var(--color-danger-300,#ffb2c7);
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-line2,#d8d8d8);
-  color: var(--color-font1,#222);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-900,#222);
 }
 
 .c0 .k-Form-Autocomplete__loader {
@@ -587,8 +587,8 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   overflow-y: auto;
   margin: 0;
   padding: 0;
-  background: var(--color-background1,#fff);
-  border: 0.125rem solid var(--color-line1,#eee);
+  background: var(--color-grey-000,#fff);
+  border: 0.125rem solid var(--color-grey-300,#eee);
   border-top: none;
   list-style: none;
   height: calc(2.375rem * var(--Autocomplete-suggestions,1));
@@ -601,7 +601,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.3;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item.k-Form-Autocomplete__suggestion__item--noresult {
@@ -617,11 +617,11 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):hover,
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus,
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):active {
-  background-color: var(--color-background3,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -630,11 +630,11 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult)[aria-selected='true'] {
-  background-color: var(--color-line1,#eee);
+  background-color: var(--color-grey-300,#eee);
 }
 
 .c0.k-Form-Autocomplete--hasIcon-left .k-Form-Autocomplete__input {
@@ -658,11 +658,11 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__icon > svg [stroke]:not([stroke='none']) {
-  stroke: var(--color-font2,#b8b8b8);
+  stroke: var(--color-grey-500,#b8b8b8);
 }
 
 .c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__icon > svg [fill]:not([fill='none']) {
-  fill: var(--color-font2,#b8b8b8);
+  fill: var(--color-grey-500,#b8b8b8);
 }
 
 .c0.k-Form-Autocomplete--orion .k-Form-Autocomplete__input {
@@ -693,7 +693,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   >
     <svg
       className="k-Loader__circle"
-      fill="var(--color-font2, #b8b8b8)"
+      fill="var(--color-grey-500, #b8b8b8)"
       viewBox="0 0 5 5"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -705,7 +705,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
     </svg>
     <svg
       className="k-Loader__circle"
-      fill="var(--color-font2, #b8b8b8)"
+      fill="var(--color-grey-500, #b8b8b8)"
       viewBox="0 0 5 5"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -717,7 +717,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
     </svg>
     <svg
       className="k-Loader__circle"
-      fill="var(--color-font2, #b8b8b8)"
+      fill="var(--color-grey-500, #b8b8b8)"
       viewBox="0 0 5 5"
       xmlns="http://www.w3.org/2000/svg"
     >

@@ -2,7 +2,7 @@
 
 exports[`<Video /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa bKzYkr k-Video k-Video--hasPointerCursor k-Video--objectFitCover"
+  className="sc-bdVaJa gKxMzg k-Video k-Video--hasPointerCursor k-Video--objectFitCover"
   onClick={[Function]}
   onKeyDown={[Function]}
   role="button"
@@ -35,7 +35,7 @@ exports[`<Video /> by default matches with snapshot 1`] = `
 
 exports[`<Video /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa bKzYkr k-Video k-Video--hasPointerCursor k-Video--objectFitCover"
+  className="sc-bdVaJa gKxMzg k-Video k-Video--hasPointerCursor k-Video--objectFitCover"
   onClick={[Function]}
   onKeyDown={[Function]}
   role="button"
@@ -49,7 +49,7 @@ exports[`<Video /> with some props matches with snapshot 1`] = `
     >
       <svg
         className="k-Loader__circle"
-        fill="var(--color-font1, #222)"
+        fill="var(--color-grey-900, #222)"
         viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -61,7 +61,7 @@ exports[`<Video /> with some props matches with snapshot 1`] = `
       </svg>
       <svg
         className="k-Loader__circle"
-        fill="var(--color-font1, #222)"
+        fill="var(--color-grey-900, #222)"
         viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -73,7 +73,7 @@ exports[`<Video /> with some props matches with snapshot 1`] = `
       </svg>
       <svg
         className="k-Loader__circle"
-        fill="var(--color-font1, #222)"
+        fill="var(--color-grey-900, #222)"
         viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >

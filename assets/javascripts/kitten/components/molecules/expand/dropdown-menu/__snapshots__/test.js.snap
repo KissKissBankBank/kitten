@@ -212,7 +212,7 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DropdownMenu__menu__item {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  color: var(--color-background1,#fff);
+  color: var(--color-grey-000,#fff);
   -webkit-text-decoration: none;
   text-decoration: none;
   display: block;
@@ -225,16 +225,16 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DropdownMenu__menu__item:hover {
-  color: var(--color-primary1,#19b4fa);
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c0 .k-DropdownMenu__menu__item:active {
-  color: var(--color-primary4,#bae8fd);
+  color: var(--color-primary-300,#bae8fd);
 }
 
 .c0 .k-DropdownMenu__menu__item:focus {
-  color: var(--color-primary4,#bae8fd);
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  color: var(--color-primary-300,#bae8fd);
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: -0.125rem;
 }
 
@@ -243,12 +243,12 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DropdownMenu__menu__item:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0 .k-DropdownMenu__menu__separator {
   height: 0.125rem;
-  background: var(--color-grey1,#636363);
+  background: var(--color-grey-700,#636363);
   padding: 0;
   margin: 0.3125rem 0;
 }
@@ -278,12 +278,12 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
       Object {
         "--k-ArrowContainer-arrowDistance": "0.625rem",
         "--k-ArrowContainer-arrowSize": "0.5rem",
-        "--k-ArrowContainer-borderColor": "var(--color-line1, #eee)",
+        "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
         "--k-ArrowContainer-borderDistance": 0,
         "--k-ArrowContainer-borderRadius": "0.25rem",
         "--k-ArrowContainer-borderSize": "0.5rem",
         "--k-ArrowContainer-borderWidth": 0,
-        "--k-ArrowContainer-color": "var(--color-font1, #222)",
+        "--k-ArrowContainer-color": "var(--color-grey-900, #222)",
         "--k-ArrowContainer-padding": 0,
       }
     }

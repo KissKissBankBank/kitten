@@ -2,10 +2,10 @@
 
 exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
 <div
-  className="sc-dnqmqq ifUHdB"
+  className="sc-dnqmqq bIRGVN"
 >
   <button
-    className="sc-bxivhb jDCCqb k-u-reset-button"
+    className="sc-bxivhb hutFiD k-u-reset-button"
   >
     <svg
       className="sc-ifAKCX jyHSSs"
@@ -36,25 +36,25 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
   >
     <a
       aria-current={false}
-      className="sc-gzVnrw jWmnCs"
+      className="sc-gzVnrw kljbUU"
       href="http://www.google.com"
       tabIndex="0"
     />
     <a
       aria-current={true}
-      className="sc-gzVnrw iAaNfm"
+      className="sc-gzVnrw eFZeJk"
       href="http://www.cowboybebop.com"
       tabIndex="0"
     />
     <a
       aria-current={false}
-      className="sc-gzVnrw jWmnCs"
+      className="sc-gzVnrw kljbUU"
       href="http://www.starwars.com"
       tabIndex="0"
     />
   </div>
   <button
-    className="sc-htpNat saupJ k-u-reset-button"
+    className="sc-htpNat ioZZhs k-u-reset-button"
   >
     <div
       className="sc-bZQynM hJDVrx"
@@ -63,7 +63,7 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
     </div>
     <svg
       className="sc-ifAKCX jyHSSs"
-      fill="var(--color-font1, #222)"
+      fill="var(--color-grey-900, #222)"
       height="5.64"
       style={
         Object {
@@ -85,10 +85,10 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
 
 exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
 <div
-  className="sc-dnqmqq ifUHdB"
+  className="sc-dnqmqq bIRGVN"
 >
   <button
-    className="sc-bxivhb jDCCqb k-u-reset-button"
+    className="sc-bxivhb hutFiD k-u-reset-button"
   >
     <svg
       className="sc-ifAKCX jyHSSs"
@@ -119,22 +119,22 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
   >
     <div
       aria-current={false}
-      className="sc-gzVnrw jWmnCs"
+      className="sc-gzVnrw kljbUU"
       tabIndex="0"
     />
     <div
       aria-current={true}
-      className="sc-gzVnrw iAaNfm"
+      className="sc-gzVnrw eFZeJk"
       tabIndex="0"
     />
     <div
       aria-current={false}
-      className="sc-gzVnrw jWmnCs"
+      className="sc-gzVnrw kljbUU"
       tabIndex="0"
     />
   </div>
   <button
-    className="sc-htpNat saupJ k-u-reset-button"
+    className="sc-htpNat ioZZhs k-u-reset-button"
   >
     <div
       className="sc-bZQynM hJDVrx"
@@ -143,7 +143,7 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
     </div>
     <svg
       className="sc-ifAKCX jyHSSs"
-      fill="var(--color-font1, #222)"
+      fill="var(--color-grey-900, #222)"
       height="5.64"
       style={
         Object {

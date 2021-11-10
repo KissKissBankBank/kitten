@@ -4,7 +4,7 @@ exports[`<VerticalStroke /> by default matches with snapshot 1`] = `
 .c0.k-VerticalStroke {
   display: block;
   border: none;
-  background: var(--color-font1,#222);
+  background: var(--color-grey-900,#222);
 }
 
 .c0.k-VerticalStroke--tiny {
@@ -36,7 +36,7 @@ exports[`<VerticalStroke /> with className prop matches with snapshot 1`] = `
 .c0.k-VerticalStroke {
   display: block;
   border: none;
-  background: var(--color-font1,#222);
+  background: var(--color-grey-900,#222);
 }
 
 .c0.k-VerticalStroke--tiny {
@@ -68,7 +68,7 @@ exports[`<VerticalStroke /> with size="big" prop matches with snapshot 1`] = `
 .c0.k-VerticalStroke {
   display: block;
   border: none;
-  background: var(--color-font1,#222);
+  background: var(--color-grey-900,#222);
 }
 
 .c0.k-VerticalStroke--tiny {
@@ -100,7 +100,7 @@ exports[`<VerticalStroke /> with size="default" prop matches with snapshot 1`] =
 .c0.k-VerticalStroke {
   display: block;
   border: none;
-  background: var(--color-font1,#222);
+  background: var(--color-grey-900,#222);
 }
 
 .c0.k-VerticalStroke--tiny {
@@ -132,7 +132,7 @@ exports[`<VerticalStroke /> with size="huge" prop matches with snapshot 1`] = `
 .c0.k-VerticalStroke {
   display: block;
   border: none;
-  background: var(--color-font1,#222);
+  background: var(--color-grey-900,#222);
 }
 
 .c0.k-VerticalStroke--tiny {
@@ -164,7 +164,7 @@ exports[`<VerticalStroke /> with size="tiny" prop matches with snapshot 1`] = `
 .c0.k-VerticalStroke {
   display: block;
   border: none;
-  background: var(--color-font1,#222);
+  background: var(--color-grey-900,#222);
 }
 
 .c0.k-VerticalStroke--tiny {

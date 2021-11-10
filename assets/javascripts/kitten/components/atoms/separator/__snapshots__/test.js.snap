@@ -4,12 +4,12 @@ exports[`<Separator /> by default matches with snapshot 1`] = `
 .c0 {
   margin: 0;
   border: none;
-  background: var(--color-line1,#eee);
+  background: var(--color-grey-300,#eee);
   height: 0.0625rem;
 }
 
 .c0.k-Separator--darker {
-  background: var(--color-line2,#d8d8d8);
+  background: var(--color-grey-400,#d8d8d8);
 }
 
 <hr
@@ -21,12 +21,12 @@ exports[`<Separator /> with className prop matches with snapshot 1`] = `
 .c0 {
   margin: 0;
   border: none;
-  background: var(--color-line1,#eee);
+  background: var(--color-grey-300,#eee);
   height: 0.0625rem;
 }
 
 .c0.k-Separator--darker {
-  background: var(--color-line2,#d8d8d8);
+  background: var(--color-grey-400,#d8d8d8);
 }
 
 <hr
@@ -38,12 +38,12 @@ exports[`<Separator /> with darker prop matches with snapshot 1`] = `
 .c0 {
   margin: 0;
   border: none;
-  background: var(--color-line1,#eee);
+  background: var(--color-grey-300,#eee);
   height: 0.0625rem;
 }
 
 .c0.k-Separator--darker {
-  background: var(--color-line2,#d8d8d8);
+  background: var(--color-grey-400,#d8d8d8);
 }
 
 <hr
@@ -55,12 +55,12 @@ exports[`<Separator /> with other prop matches with snapshot 1`] = `
 .c0 {
   margin: 0;
   border: none;
-  background: var(--color-line1,#eee);
+  background: var(--color-grey-300,#eee);
   height: 0.0625rem;
 }
 
 .c0.k-Separator--darker {
-  background: var(--color-line2,#d8d8d8);
+  background: var(--color-grey-400,#d8d8d8);
 }
 
 <hr

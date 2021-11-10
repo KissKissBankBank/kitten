@@ -2,14 +2,14 @@
 
 exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bxivhb euoRkk k-SimpleCard"
+  className="sc-bxivhb bZCXFW k-SimpleCard"
   href="#"
 >
   <div
     className="k-SimpleCard__imageContainer"
     style={
       Object {
-        "--SimpleCard-image-container-background": "var(--color-line1, #eee)",
+        "--SimpleCard-image-container-background": "var(--color-grey-300, #eee)",
         "--SimpleCard-image-container-ratio": null,
       }
     }
@@ -25,14 +25,14 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 
 exports[`<SimpleCard /> with imageContainerRatio props matches with snapshot 1`] = `
 <a
-  className="sc-bxivhb euoRkk k-SimpleCard"
+  className="sc-bxivhb bZCXFW k-SimpleCard"
   href="#"
 >
   <div
     className="k-SimpleCard__imageContainer k-SimpleCard__imageContainer--ratio"
     style={
       Object {
-        "--SimpleCard-image-container-background": "var(--color-line1, #eee)",
+        "--SimpleCard-image-container-background": "var(--color-grey-300, #eee)",
         "--SimpleCard-image-container-ratio": 1.7777777777777777,
       }
     }
@@ -48,14 +48,14 @@ exports[`<SimpleCard /> with imageContainerRatio props matches with snapshot 1`]
 
 exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot 1`] = `
 <a
-  className="sc-bxivhb euoRkk k-SimpleCard"
+  className="sc-bxivhb bZCXFW k-SimpleCard"
   href="#"
 >
   <div
     className="k-SimpleCard__imageContainer"
     style={
       Object {
-        "--SimpleCard-image-container-background": "var(--color-line1, #eee)",
+        "--SimpleCard-image-container-background": "var(--color-grey-300, #eee)",
         "--SimpleCard-image-container-ratio": null,
       }
     }
@@ -85,14 +85,14 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
 
 exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
 <a
-  className="sc-bxivhb euoRkk k-SimpleCard"
+  className="sc-bxivhb bZCXFW k-SimpleCard"
   href="#"
 >
   <div
     className="k-SimpleCard__imageContainer"
     style={
       Object {
-        "--SimpleCard-image-container-background": "var(--color-line1, #eee)",
+        "--SimpleCard-image-container-background": "var(--color-grey-300, #eee)",
         "--SimpleCard-image-container-ratio": null,
       }
     }

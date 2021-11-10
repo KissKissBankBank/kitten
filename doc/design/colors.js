@@ -24,16 +24,8 @@ const sass = {
   'primary-5': '#e8f7fe', // Extra Light Primary
   'primary-6': '#f3fbff', // Thin Primary
 
-  // DEPRECATED: colors.
-  'secondary-1': '#4bfffa',
-  'secondary-2': '#3cf0eb',
-  'secondary-3': '#2de1dc',
-
   'tertiary-1': '#effaf1', // Light Green
   'tertiary-2': '#cff0d6', // Semi Light Green
-
-   // DEPRECATED: colors.
-  'tertiary-3': '#4ae191',
 
   'valid': '#61d079', // Green
   'valid1': 'hsl(133, 54%, 94%)', // Green Light
@@ -48,10 +40,6 @@ const sass = {
   'orange-1': '#fff2e7', // Orange light
   'orange-2': '#f57905', // Orange semi dark
   'orange-3': '#eb6e00', // Orange dark
-
-  'red-light-mdc': '#ffebe0',
-  'red-mdc': '#ff0000',
-  'blue-light-mdc': '#caf4fe',
 }
 
 

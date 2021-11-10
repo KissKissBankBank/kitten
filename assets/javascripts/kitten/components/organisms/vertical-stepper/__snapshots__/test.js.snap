@@ -4,7 +4,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c3.k-Steppers--VerticalStepper__statusContainer--orion {
   border-width: 0.25rem;
   border-style: solid;
-  border-color: var(--color-background1,#fff);
+  border-color: var(--color-grey-000,#fff);
 }
 
 .c3 .k-Steppers--VerticalStepper__status {
@@ -28,43 +28,43 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border-radius: 1.875rem;
   box-sizing: border-box;
   margin-right: 0.6875rem;
-  background-color: var(--color-background1,#fff);
-  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-grey-000,#fff);
+  border: 0.125rem solid var(--color-grey-300,#eee);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--success {
-  background-color: var(--color-valid,#61d079);
-  border-color: var(--color-valid,#61d079);
+  background-color: var(--color-success-500,#61d079);
+  border-color: var(--color-success-500,#61d079);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--valid {
-  background-color: var(--color-primary1,#19b4fa);
-  border-color: var(--color-primary1,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-primary-500,#19b4fa);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--error {
-  color: var(--color-error,#ff0046);
-  border-color: var(--color-error3,#ffb2c7);
+  color: var(--color-danger-500,#ff0046);
+  border-color: var(--color-danger-300,#ffb2c7);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--waiting {
-  color: var(--color-primary1,#19b4fa);
-  border-color: var(--color-primary4,#bae8fd);
+  color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-primary-300,#bae8fd);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--disabled {
-  color: var(--color-background1,#fff);
-  border-color: var(--color-line2,#d8d8d8);
-  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-grey-000,#fff);
+  border-color: var(--color-grey-400,#d8d8d8);
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
   box-sizing: border-box;
   width: 100%;
-  border: 0.1875rem solid var(--color-background1,#fff);
+  border: 0.1875rem solid var(--color-grey-000,#fff);
   z-index: 1;
   padding: 0.1875rem;
   width: 1.5rem;
@@ -73,28 +73,28 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
-  background-color: var(--color-primary1,#19b4fa);
-  border-color: var(--color-primary1,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-primary-500,#19b4fa);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--valid {
-  background-color: var(--color-background1,#fff);
-  border-color: var(--color-primary1,#19b4fa);
+  background-color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500,#19b4fa);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--waiting {
-  background-color: var(--color-background1,#fff);
-  border-color: var(--color-line1,#eee);
+  background-color: var(--color-grey-000,#fff);
+  border-color: var(--color-grey-300,#eee);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--error {
-  color: var(--color-error,#ff0046);
-  border-color: var(--color-error,#ff0046);
+  color: var(--color-danger-500,#ff0046);
+  border-color: var(--color-danger-500,#ff0046);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
-  background-color: var(--color-background1,#fff);
-  border-color: var(--color-line1,#eee);
+  background-color: var(--color-grey-000,#fff);
+  border-color: var(--color-grey-300,#eee);
   border-width: 0.125rem;
   width: 0.75rem;
   height: 0.75rem;
@@ -114,7 +114,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   content: '';
   position: absolute;
   height: 100%;
-  border-left: 0.1875rem dotted var(--color-line1,#eee);
+  border-left: 0.1875rem dotted var(--color-grey-300,#eee);
   margin-left: 0.1875rem;
 }
 
@@ -135,7 +135,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c1 [role='button']:focus,
 .c1 a:focus,
 .c1 button:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -148,7 +148,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c1 [role='button']:focus-visible,
 .c1 a:focus-visible,
 .c1 button:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c1 li:not(:last-of-type) {
@@ -200,7 +200,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c2:hover .VerticalStepper__link,
 .c2:focus .VerticalStepper__link,
 .c2:active .VerticalStepper__link {
-  color: var(--color-primary3,#0496cc);
+  color: var(--color-primary-900,#0496cc);
 }
 
 .c2 .k-Steppers--VerticalStepper__step--link--content {
@@ -218,11 +218,11 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
 }
 
 .c2 .k-Steppers--VerticalStepper__step--link--content.k-Steppers--VerticalStepper__step--link--content--disabled {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c4 {
@@ -251,7 +251,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   font-weight: 500;
   font-size: 0.75rem;
   line-height: normal;
-  color: var(--color-primary1,#19b4fa);
+  color: var(--color-primary-500,#19b4fa);
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: color 0.4s;
@@ -261,7 +261,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c5 .k-Steppers--VerticalStepper__link:hover,
 .c5 .k-Steppers--VerticalStepper__link:focus,
 .c5 .k-Steppers--VerticalStepper__link:active {
-  color: var(--color-primary3,#0496cc);
+  color: var(--color-primary-900,#0496cc);
 }
 
 .c5 .k-Steppers--VerticalStepper__link--orion {
@@ -272,7 +272,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   padding: 0 0.5rem;
   content: '●';
   font-size: 0.5rem;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
 }
 
 .c6 {
@@ -322,7 +322,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   left: 0.875rem;
   z-index: -1;
   content: '';
-  border-left: 0.125rem dashed var(--color-line1,#eee);
+  border-left: 0.125rem dashed var(--color-grey-300,#eee);
 }
 
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion {
@@ -342,14 +342,14 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   position: absolute;
   left: 1rem;
   top: 1.875rem;
-  background-color: var(--color-line1,#eee);
+  background-color: var(--color-grey-300,#eee);
   width: 0.125rem;
   height: 100%;
   z-index: -1;
 }
 
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
-  background-color: var(--color-primary1,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
 }
 
 @media (min-width:640px) {
@@ -471,7 +471,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
               <circle
                 cx="3"
                 cy="3"
-                fill="var(--color-primary1, #19b4fa)"
+                fill="var(--color-primary-500, #19b4fa)"
                 r="3"
               />
             </svg>
@@ -536,7 +536,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             >
               <path
                 d="M1.82 6.86H.168V0H1.82v6.86zM0 8.96c0-.28.098-.518.294-.714a.972.972 0 0 1 .714-.294c.28 0 .518.098.714.294a.972.972 0 0 1 .294.714c0 .27-.098.504-.294.7a.972.972 0 0 1-.714.294.972.972 0 0 1-.714-.294.956.956 0 0 1-.294-.7z"
-                fill="var(--color-error, #ff0046)"
+                fill="var(--color-danger-500, #ff0046)"
                 fillRule="evenodd"
               />
             </svg>
@@ -654,7 +654,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c3.k-Steppers--VerticalStepper__statusContainer--orion {
   border-width: 0.25rem;
   border-style: solid;
-  border-color: var(--color-background1,#fff);
+  border-color: var(--color-grey-000,#fff);
 }
 
 .c3 .k-Steppers--VerticalStepper__status {
@@ -678,43 +678,43 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   border-radius: 1.875rem;
   box-sizing: border-box;
   margin-right: 0.6875rem;
-  background-color: var(--color-background1,#fff);
-  border: 0.125rem solid var(--color-line1,#eee);
+  background-color: var(--color-grey-000,#fff);
+  border: 0.125rem solid var(--color-grey-300,#eee);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--success {
-  background-color: var(--color-valid,#61d079);
-  border-color: var(--color-valid,#61d079);
+  background-color: var(--color-success-500,#61d079);
+  border-color: var(--color-success-500,#61d079);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--valid {
-  background-color: var(--color-primary1,#19b4fa);
-  border-color: var(--color-primary1,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-primary-500,#19b4fa);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--error {
-  color: var(--color-error,#ff0046);
-  border-color: var(--color-error3,#ffb2c7);
+  color: var(--color-danger-500,#ff0046);
+  border-color: var(--color-danger-300,#ffb2c7);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--waiting {
-  color: var(--color-primary1,#19b4fa);
-  border-color: var(--color-primary4,#bae8fd);
+  color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-primary-300,#bae8fd);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--disabled {
-  color: var(--color-background1,#fff);
-  border-color: var(--color-line2,#d8d8d8);
-  background-color: var(--color-line2,#d8d8d8);
+  color: var(--color-grey-000,#fff);
+  border-color: var(--color-grey-400,#d8d8d8);
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
   box-sizing: border-box;
   width: 100%;
-  border: 0.1875rem solid var(--color-background1,#fff);
+  border: 0.1875rem solid var(--color-grey-000,#fff);
   z-index: 1;
   padding: 0.1875rem;
   width: 1.5rem;
@@ -723,28 +723,28 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
-  background-color: var(--color-primary1,#19b4fa);
-  border-color: var(--color-primary1,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-primary-500,#19b4fa);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--valid {
-  background-color: var(--color-background1,#fff);
-  border-color: var(--color-primary1,#19b4fa);
+  background-color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500,#19b4fa);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--waiting {
-  background-color: var(--color-background1,#fff);
-  border-color: var(--color-line1,#eee);
+  background-color: var(--color-grey-000,#fff);
+  border-color: var(--color-grey-300,#eee);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--error {
-  color: var(--color-error,#ff0046);
-  border-color: var(--color-error,#ff0046);
+  color: var(--color-danger-500,#ff0046);
+  border-color: var(--color-danger-500,#ff0046);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
-  background-color: var(--color-background1,#fff);
-  border-color: var(--color-line1,#eee);
+  background-color: var(--color-grey-000,#fff);
+  border-color: var(--color-grey-300,#eee);
   border-width: 0.125rem;
   width: 0.75rem;
   height: 0.75rem;
@@ -764,7 +764,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   content: '';
   position: absolute;
   height: 100%;
-  border-left: 0.1875rem dotted var(--color-line1,#eee);
+  border-left: 0.1875rem dotted var(--color-grey-300,#eee);
   margin-left: 0.1875rem;
 }
 
@@ -785,7 +785,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c1 [role='button']:focus,
 .c1 a:focus,
 .c1 button:focus {
-  outline: var(--color-primary4,#bae8fd) solid 0.125rem;
+  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -798,7 +798,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c1 [role='button']:focus-visible,
 .c1 a:focus-visible,
 .c1 button:focus-visible {
-  outline-color: var(--color-primary4,#bae8fd);
+  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c1 li:not(:last-of-type) {
@@ -850,7 +850,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c2:hover .VerticalStepper__link,
 .c2:focus .VerticalStepper__link,
 .c2:active .VerticalStepper__link {
-  color: var(--color-primary3,#0496cc);
+  color: var(--color-primary-900,#0496cc);
 }
 
 .c2 .k-Steppers--VerticalStepper__step--link--content {
@@ -868,11 +868,11 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
 }
 
 .c2 .k-Steppers--VerticalStepper__step--link--content.k-Steppers--VerticalStepper__step--link--content--disabled {
-  color: var(--color-font2,#b8b8b8);
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c4 {
@@ -901,7 +901,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   font-weight: 500;
   font-size: 0.75rem;
   line-height: normal;
-  color: var(--color-primary1,#19b4fa);
+  color: var(--color-primary-500,#19b4fa);
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: color 0.4s;
@@ -911,7 +911,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c5 .k-Steppers--VerticalStepper__link:hover,
 .c5 .k-Steppers--VerticalStepper__link:focus,
 .c5 .k-Steppers--VerticalStepper__link:active {
-  color: var(--color-primary3,#0496cc);
+  color: var(--color-primary-900,#0496cc);
 }
 
 .c5 .k-Steppers--VerticalStepper__link--orion {
@@ -922,7 +922,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   padding: 0 0.5rem;
   content: '●';
   font-size: 0.5rem;
-  color: var(--color-font1,#222);
+  color: var(--color-grey-900,#222);
 }
 
 .c0 {
@@ -943,7 +943,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   left: 0.875rem;
   z-index: -1;
   content: '';
-  border-left: 0.125rem dashed var(--color-line1,#eee);
+  border-left: 0.125rem dashed var(--color-grey-300,#eee);
 }
 
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion {
@@ -963,14 +963,14 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   position: absolute;
   left: 1rem;
   top: 1.875rem;
-  background-color: var(--color-line1,#eee);
+  background-color: var(--color-grey-300,#eee);
   width: 0.125rem;
   height: 100%;
   z-index: -1;
 }
 
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
-  background-color: var(--color-primary1,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
 }
 
 @media (min-width:640px) {
@@ -1092,7 +1092,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
               <circle
                 cx="3"
                 cy="3"
-                fill="var(--color-primary1, #19b4fa)"
+                fill="var(--color-primary-500, #19b4fa)"
                 r="3"
               />
             </svg>
@@ -1129,7 +1129,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
             >
               <path
                 d="M1.82 6.86H.168V0H1.82v6.86zM0 8.96c0-.28.098-.518.294-.714a.972.972 0 0 1 .714-.294c.28 0 .518.098.714.294a.972.972 0 0 1 .294.714c0 .27-.098.504-.294.7a.972.972 0 0 1-.714.294.972.972 0 0 1-.714-.294.956.956 0 0 1-.294-.7z"
-                fill="var(--color-error, #ff0046)"
+                fill="var(--color-danger-500, #ff0046)"
                 fillRule="evenodd"
               />
             </svg>

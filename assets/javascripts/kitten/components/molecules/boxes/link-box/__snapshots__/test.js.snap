@@ -2,14 +2,14 @@
 
 exports[`<LinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa iNPQyh"
+  className="sc-bdVaJa oKjAC"
   href="#"
 >
   <div
     className="k-LinkBox__link k-LinkBox__link--orion"
     style={
       Object {
-        "--LinkBox-background-color": "var(--color-background1, #fff)",
+        "--LinkBox-background-color": "var(--color-grey-000, #fff)",
         "--LinkBox-text-color": null,
       }
     }
@@ -19,7 +19,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
     >
       <svg
         className=""
-        fill="var(--color-font1, #222)"
+        fill="var(--color-grey-900, #222)"
         height="10"
         style={
           Object {
@@ -42,7 +42,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa iNPQyh"
+  className="sc-bdVaJa oKjAC"
   href="#foobar"
   rel="noopener"
   target="_blank"
@@ -51,7 +51,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
     className="k-LinkBox__link k-LinkBox__link--orion"
     style={
       Object {
-        "--LinkBox-background-color": "var(--color-background1, #fff)",
+        "--LinkBox-background-color": "var(--color-grey-000, #fff)",
         "--LinkBox-text-color": null,
       }
     }
@@ -69,12 +69,12 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         <circle
           cx="10"
           cy="10"
-          fill="var(--color-background1, #fff)"
+          fill="var(--color-grey-000, #fff)"
           r="10"
         />
         <path
           d="m6 10 6-6-1.25 6h3.25l-6 6 1.25-6z"
-          fill="var(--color-font1, #222)"
+          fill="var(--color-grey-900, #222)"
           fillRule="evenodd"
         />
       </svg>
@@ -89,7 +89,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
     >
       <svg
         className=""
-        fill="var(--color-font1, #222)"
+        fill="var(--color-grey-900, #222)"
         height="10"
         style={
           Object {
@@ -112,7 +112,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 
 exports[`<LinkBox /> with variant prop matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa iNPQyh"
+  className="sc-bdVaJa oKjAC"
   href="#foobar"
   rel="noopener"
   target="_blank"
@@ -121,7 +121,7 @@ exports[`<LinkBox /> with variant prop matches with snapshot 1`] = `
     className="k-LinkBox__link k-LinkBox__link--orion"
     style={
       Object {
-        "--LinkBox-background-color": "var(--color-background1, #fff)",
+        "--LinkBox-background-color": "var(--color-grey-000, #fff)",
         "--LinkBox-text-color": null,
       }
     }
@@ -136,7 +136,7 @@ exports[`<LinkBox /> with variant prop matches with snapshot 1`] = `
     >
       <svg
         className=""
-        fill="var(--color-font1, #222)"
+        fill="var(--color-grey-900, #222)"
         height="10"
         style={
           Object {
