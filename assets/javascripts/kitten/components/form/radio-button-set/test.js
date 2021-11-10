@@ -77,6 +77,7 @@ describe('<RadioButtonSet />', () => {
           <RadioButtonSet
             name="test-radio-button-set"
             label="Label test"
+            labelProps={{ 'data-test': true, className: 'customClass' }}
             items={[
               {
                 text: 'Option A',

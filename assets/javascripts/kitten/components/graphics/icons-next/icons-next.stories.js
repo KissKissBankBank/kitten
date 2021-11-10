@@ -5,17 +5,23 @@ import {
   ChronoIconNext,
   CogIconNext,
   EyeIconNext,
+  FacebookIconNext,
   HomeIconNext,
   InfiniteIconNext,
+  InstagramIconNext,
+  LinkedinIconNext,
+  MessengerIconNext,
   PlusIconNext,
   SpeechBubbleIconNext,
   StatsIconNext,
   TagIconNext,
   ThumbUpIconNext,
+  TwitterIconNext,
   UsersIconNext,
+  WhatsappIconNext,
   WindowEditIconNext,
 } from 'kitten'
-import { Text, pxToRem } from 'kitten'
+import { Text, Title, pxToRem } from 'kitten'
 import React from 'react'
 import LinkTo from '@storybook/addon-links/react'
 
@@ -27,7 +33,7 @@ const Container = styled.div`
 const Group = styled(({ className, children, title }) => {
   return (
     <>
-      <h2>{title}</h2>
+      <Title tag="h2" modifier="septenary">{title}</Title>
       <div className={className}>{children}</div>
     </>
   )
@@ -72,8 +78,8 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
   svg {
     width: auto;
     height: auto;
-    max-width: ${pxToRem(25)};
-    max-height: ${pxToRem(25)};
+    max-width: ${pxToRem(27)};
+    max-height: ${pxToRem(27)};
   }
 
   &.noMaxDimensions svg {
@@ -130,6 +136,26 @@ export const AllIcons = ({ colorInput }) => {
         </IconContainer>
         <IconContainer>
           <WindowEditIconNext color={colorInput} />
+        </IconContainer>
+      </Group>
+      <Group title="Social">
+        <IconContainer>
+          <FacebookIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <TwitterIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <InstagramIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <WhatsappIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <MessengerIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <LinkedinIconNext color={colorInput} />
         </IconContainer>
       </Group>
     </Container>

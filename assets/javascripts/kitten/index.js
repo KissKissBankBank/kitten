@@ -160,7 +160,6 @@ export { ParagraphIcon } from './components/graphics/icons/paragraph-icon'
 export { PasswordIcon } from './components/graphics/icons/password-icon'
 export { PayPalIcon } from './components/graphics/icons/paypal-icon'
 export { PhoneIcon } from './components/graphics/icons/phone-icon'
-export { PinterestIcon } from './components/graphics/icons/pinterest-icon'
 export { QuestionMarkIcon } from './components/graphics/icons/question-mark-icon'
 export { RefundIcon } from './components/graphics/icons/refund-icon'
 export { RocketCircleIcon } from './components/graphics/icons/rocket-circle-icon'
@@ -200,14 +199,20 @@ export { ChronoIconNext } from './components/graphics/icons-next/chrono-icon-nex
 export { CogIconNext } from './components/graphics/icons-next/cog-icon-next'
 export { CrossIconNext } from './components/graphics/icons-next/cross-icon-next'
 export { EyeIconNext } from './components/graphics/icons-next/eye-icon-next'
+export { FacebookIconNext } from './components/graphics/icons-next/facebook-icon-next'
 export { HomeIconNext } from './components/graphics/icons-next/home-icon-next'
 export { InfiniteIconNext } from './components/graphics/icons-next/infinite-icon-next'
+export { InstagramIconNext } from './components/graphics/icons-next/instagram-icon-next'
+export { LinkedinIconNext } from './components/graphics/icons-next/linkedin-icon-next'
+export { MessengerIconNext } from './components/graphics/icons-next/messenger-icon-next'
 export { PlusIconNext } from './components/graphics/icons-next/plus-icon-next'
 export { SpeechBubbleIconNext } from './components/graphics/icons-next/speech-bubble-icon-next'
 export { StatsIconNext } from './components/graphics/icons-next/stats-icon-next'
 export { TagIconNext } from './components/graphics/icons-next/tag-icon-next'
 export { ThumbUpIconNext } from './components/graphics/icons-next/thumb-up-icon-next'
+export { TwitterIconNext } from './components/graphics/icons-next/twitter-icon-next'
 export { UsersIconNext } from './components/graphics/icons-next/users-icon-next'
+export { WhatsappIconNext } from './components/graphics/icons-next/whatsapp-icon-next'
 export { WindowEditIconNext } from './components/graphics/icons-next/window-edit-icon-next'
 
 // Graphics/Illustrations
@@ -291,7 +296,6 @@ export {
   LinkedinButtonIcon,
   InstagramButtonIcon,
   YoutubeButtonIcon,
-  PinterestButtonIcon,
 } from './components/molecules/buttons/social-button-icon'
 export { TagButton } from './components/molecules/buttons/tag-button'
 
@@ -420,11 +424,7 @@ export {
   BIG as HORIZONTAL_STROKE_STYLE_BIG,
   HUGE as HORIZONTAL_STROKE_STYLE_HUGE,
 } from './components/atoms/horizontal-stroke'
-export {
-  MOBILE_HEADER_HEIGHT,
-  TABLET_HEADER_HEIGHT,
-  DESKTOP_HEADER_HEIGHT,
-} from './components/organisms/header-nav/config'
+export { HEADER_HEIGHT } from './components/organisms/header-nav/config'
 export {
   CLOSE_OVERLAY_EVENT,
   OPEN_OVERLAY_EVENT,

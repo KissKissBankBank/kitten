@@ -2,17 +2,16 @@
 
 exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 <div
-  className="sc-bwzfXH brXJAh k-Alert k-Alert--hasCloseButton"
+  className="sc-bwzfXH hlFKUh k-Alert k-Alert--hasCloseButton"
   role="alert"
 >
   <div
     className="k-Alert__text"
   >
-    
     Alert !
   </div>
   <button
-    className="k-u-reset-button"
+    className="k-Alert__closeButton k-u-reset-button"
   >
     <svg
       fill="none"
@@ -33,13 +32,12 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 
 exports[`<Alert /> should matches with default snapshot 1`] = `
 <div
-  className="sc-bwzfXH brXJAh k-Alert"
+  className="sc-bwzfXH hlFKUh k-Alert"
   role="alert"
 >
   <div
     className="k-Alert__text"
   >
-    
     Alert !
   </div>
 </div>
@@ -47,13 +45,12 @@ exports[`<Alert /> should matches with default snapshot 1`] = `
 
 exports[`<Alert /> should matches with error snapshot 1`] = `
 <div
-  className="sc-bwzfXH brXJAh k-Alert k-Alert--error"
+  className="sc-bwzfXH hlFKUh k-Alert k-Alert--error"
   role="alert"
 >
   <div
     className="k-Alert__text"
   >
-    
     Alert !
   </div>
 </div>
@@ -61,13 +58,12 @@ exports[`<Alert /> should matches with error snapshot 1`] = `
 
 exports[`<Alert /> should matches with success snapshot 1`] = `
 <div
-  className="sc-bwzfXH brXJAh k-Alert k-Alert--success"
+  className="sc-bwzfXH hlFKUh k-Alert k-Alert--success"
   role="alert"
 >
   <div
     className="k-Alert__text"
   >
-    
     Alert !
   </div>
 </div>
@@ -75,13 +71,12 @@ exports[`<Alert /> should matches with success snapshot 1`] = `
 
 exports[`<Alert /> should matches with warning snapshot 1`] = `
 <div
-  className="sc-bwzfXH brXJAh k-Alert k-Alert--warning"
+  className="sc-bwzfXH hlFKUh k-Alert k-Alert--warning"
   role="alert"
 >
   <div
     className="k-Alert__text"
   >
-    
     Alert !
   </div>
 </div>
