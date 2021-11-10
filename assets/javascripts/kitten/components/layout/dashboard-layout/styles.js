@@ -71,17 +71,6 @@ export const StyledDashboard = styled.div`
     }
   }
 
-  .k-DashboardLayout__backLink:focus {
-    outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(2)};
-  }
-  .k-DashboardLayout__backLink:focus:not(:focus-visible) {
-    outline-color: transparent;
-  }
-  .k-DashboardLayout__backLink:focus-visible {
-    outline-color: ${COLORS.primary4};
-  }
-
   .k-DashboardLayout__toaster__wrapper {
     position: fixed;
     right: 0;
@@ -365,13 +354,6 @@ export const StyledDashboard = styled.div`
     }
   }
 
-  .k-DashboardLayout__sideWrapper,
-  .k-DashboardLayout__mainWrapper {
-    &:focus {
-      outline: ${pxToRem(2)} solid ${COLORS.primary4};
-    }
-  }
-
   .k-DashboardLayout__quickAccessLink {
     position: absolute;
     top: 0;
@@ -393,7 +375,7 @@ export const StyledDashboard = styled.div`
       left: 0;
       opacity: 1;
       transition-delay: 0, 0.2s;
-      outline: ${pxToRem(2)} solid ${COLORS.primary4};
+      border: ${pxToRem(2)} solid ${COLORS.primary4};
     }
   }
 

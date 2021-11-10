@@ -28,14 +28,10 @@ const StyledDocumentUploader = styled.div`
   }
 
   input[type='file']:focus + label {
-    outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(2)};
-  }
-  input[type='file']:focus:not(:focus-visible) + label {
-    outline-color: transparent;
+    border: ${pxToRem(2)} solid ${COLORS.primary4};
   }
   input[type='file']:focus-visible + label {
-    outline-color: ${COLORS.primary4};
+    outline: auto;
   }
 
   input[type='file']:focus,
@@ -137,15 +133,8 @@ const StyledDocumentDisplay = styled.div`
       color: ${COLORS.primary3};
     }
 
-    &:focus {
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
     &:focus-visible {
-      outline-color: ${COLORS.primary4};
+      outline: auto;
     }
 
     &:active {

@@ -37,15 +37,16 @@ const StyledDocumentsDropUploader = styled.div`
     width: 1px;
   }
 
-  input[type='file']:focus + label {
-    outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(2)};
+  input[type='file']:focus + label.k-DocumentsDropUploader__button {
+    border: ${pxToRem(2)} solid ${COLORS.primary4};
   }
-  input[type='file']:focus:not(:focus-visible) + label {
-    outline-color: transparent;
+  input[type='file']:focus-visible + label.k-DocumentsDropUploader__button {
+    outline: auto;
   }
-  input[type='file']:focus-visible + label {
-    outline-color: ${COLORS.primary4};
+
+  input[type='file']:focus-visible + label.k-DocumentsDropUploader__label {
+    outline: auto;
+    outline-offset: ${pxToRem(-2)};
   }
 
   .k-DrocumentDropUploader__icon {
@@ -145,6 +146,10 @@ const StyledDocumentsDropUploader = styled.div`
   .k-DocumentsDropUploader__file__button {
     padding: 0 ${pxToRem(10)};
     margin-right: ${pxToRem(-10)};
+
+    :focus, :focus-visible {
+      outline-offset: ${pxToRem(-2)};
+    }
   }
 
   .k-DocumentsDropUploader__content,

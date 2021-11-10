@@ -31,19 +31,14 @@ const StyledBasicUploader = styled.div`
     background-color: ${COLORS.primary2};
     border-color: ${COLORS.primary2};
     color: ${COLORS.background1};
-    outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(2)};
 
     svg,
     path {
       fill: ${COLORS.background1};
     }
   }
-  input[type='file']:focus:not(:focus-visible) + label {
-    outline-color: transparent;
-  }
   input[type='file']:focus-visible + label {
-    outline-color: ${COLORS.primary4};
+    outline: auto;
   }
 
   &:not(.k-BasicUploader--loading) {
@@ -78,17 +73,6 @@ const StyledBasicUploader = styled.div`
     justify-content: center;
     align-items: center;
     ${modifierStyles('beryllium')}
-
-    &:focus {
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
-    }
   }
 `
 
