@@ -49,17 +49,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -156,19 +147,6 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,
@@ -315,20 +293,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   color: #05a8e6;
 }
 
-.c1.k-Button--andromeda:focus {
-  outline-offset: -0.125rem;
-}
-
-.c1.k-Button--andromeda:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c1.k-Button--andromeda:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c1.k-Button--andromeda[aria-checked]:focus {
-  outline: #19b4fa solid 0.125rem;
   border-color: #19b4fa;
   color: #19b4fa;
 }
@@ -493,17 +458,8 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -600,19 +556,6 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,
@@ -759,20 +702,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   color: #05a8e6;
 }
 
-.c1.k-Button--andromeda:focus {
-  outline-offset: -0.125rem;
-}
-
-.c1.k-Button--andromeda:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c1.k-Button--andromeda:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c1.k-Button--andromeda[aria-checked]:focus {
-  outline: #19b4fa solid 0.125rem;
   border-color: #19b4fa;
   color: #19b4fa;
 }
@@ -937,17 +867,8 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -1044,19 +965,6 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,
@@ -1203,20 +1111,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   color: #05a8e6;
 }
 
-.c1.k-Button--andromeda:focus {
-  outline-offset: -0.125rem;
-}
-
-.c1.k-Button--andromeda:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c1.k-Button--andromeda:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c1.k-Button--andromeda[aria-checked]:focus {
-  outline: #19b4fa solid 0.125rem;
   border-color: #19b4fa;
   color: #19b4fa;
 }
@@ -1381,17 +1276,8 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -1488,19 +1374,6 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   border-color: currentColor;
   background-color: #fff;
   color: #ff0046;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,
@@ -1647,20 +1520,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   color: #05a8e6;
 }
 
-.c1.k-Button--andromeda:focus {
-  outline-offset: -0.125rem;
-}
-
-.c1.k-Button--andromeda:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c1.k-Button--andromeda:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c1.k-Button--andromeda[aria-checked]:focus {
-  outline: #19b4fa solid 0.125rem;
   border-color: #19b4fa;
   color: #19b4fa;
 }
@@ -1825,17 +1685,8 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -1932,19 +1783,6 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,
@@ -2091,20 +1929,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   color: #05a8e6;
 }
 
-.c1.k-Button--andromeda:focus {
-  outline-offset: -0.125rem;
-}
-
-.c1.k-Button--andromeda:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c1.k-Button--andromeda:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c1.k-Button--andromeda[aria-checked]:focus {
-  outline: #19b4fa solid 0.125rem;
   border-color: #19b4fa;
   color: #19b4fa;
 }

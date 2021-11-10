@@ -30,18 +30,11 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__item:focus {
   z-index: 1;
   position: relative;
-  outline: #0496cc solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0 .k-DashboardMenu__expandable__title:focus:not(:focus-visible),
-.c0 .k-DashboardMenu__item:focus:not(:focus-visible) {
-  outline-color: transparent;
 }
 
 .c0 .k-DashboardMenu__expandable__title:focus-visible,
 .c0 .k-DashboardMenu__item:focus-visible {
-  outline-color: #0496cc;
+  outline: auto;
 }
 
 .c0 summary.k-DashboardMenu__selectorSummary,
@@ -69,18 +62,11 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 a.k-DashboardMenu__selectorButton:focus {
   z-index: 1;
   position: relative;
-  outline: #0496cc solid 0.125rem;
-  outline-offset: 0;
-}
-
-.c0 summary.k-DashboardMenu__selectorSummary:focus:not(:focus-visible),
-.c0 a.k-DashboardMenu__selectorButton:focus:not(:focus-visible) {
-  outline-color: transparent;
 }
 
 .c0 summary.k-DashboardMenu__selectorSummary:focus-visible,
 .c0 a.k-DashboardMenu__selectorButton:focus-visible {
-  outline-color: #0496cc;
+  outline: auto;
 }
 
 .c0 .k-DashboardMenu__list,
@@ -100,17 +86,8 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   list-style: none;
 }
 
-.c0 .k-DashboardMenu__expandable summary:focus {
-  outline: #0496cc solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0 .k-DashboardMenu__expandable summary:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0 .k-DashboardMenu__expandable summary:focus-visible {
-  outline-color: #0496cc;
+  outline: auto;
 }
 
 .c0 .k-DashboardMenu__expandable summary::-webkit-details-marker {
