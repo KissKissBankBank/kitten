@@ -256,6 +256,7 @@ export { CheckList } from './components/molecules/check-list'
 export { CommentAvatar } from './components/molecules/comment-block/comment-avatar'
 export { CommentForm } from './components/molecules/comment-block/comment-form'
 export { Comment } from './components/molecules/comment-block/comment'
+export { DragAndDropList } from './components/molecules/drag-and-drop-list'
 export { EmbedPlayer } from './components/molecules/embed/embed-player'
 export { InfoLines } from './components/molecules/info-lines'
 export { Line } from './components/molecules/line'
@@ -424,11 +425,8 @@ export {
   BIG as HORIZONTAL_STROKE_STYLE_BIG,
   HUGE as HORIZONTAL_STROKE_STYLE_HUGE,
 } from './components/atoms/horizontal-stroke'
-export {
-  MOBILE_HEADER_HEIGHT,
-  TABLET_HEADER_HEIGHT,
-  DESKTOP_HEADER_HEIGHT,
-} from './components/organisms/header-nav/config'
+export { BUTTON_SHIFT as DRAG_AND_DROP_LIST_BUTTON_SHIFT } from './components/molecules/drag-and-drop-list'
+export { HEADER_HEIGHT } from './components/organisms/header-nav/config'
 export {
   CLOSE_OVERLAY_EVENT,
   OPEN_OVERLAY_EVENT,

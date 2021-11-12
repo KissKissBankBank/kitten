@@ -1,108 +1,90 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import React, { useRef } from 'react';
+import React, { cloneElement, useContext } from 'react';
 import PropTypes from 'prop-types';
-import { Dropdown } from './dropdown';
 import { Context } from './context';
 import { getReactElementsByType } from '../../../../helpers/react/react-elements';
 import classNames from 'classnames';
+import { DropdownButton } from './dropdown-button';
+import { useDropdown } from '../hooks/use-dropdown';
+import { ArrowIcon } from '../../../../components/graphics/icons/arrow-icon';
 var namespace = 'kkbbAndCo';
 var CLOSE_EVENT = "".concat(namespace, ":userMenu:close");
 export var UserMenu = function UserMenu(_ref) {
   var children = _ref.children,
       dropdownContentWidth = _ref.dropdownContentWidth,
-      padding = _ref.padding,
       closeEvents = _ref.closeEvents,
-      buttonProps = _ref.buttonProps,
+      dropdownAnchorSide = _ref.dropdownAnchorSide,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth", "padding", "closeEvents", "buttonProps", "className"]);
+      padding = _ref.padding,
+      mobilePadding = _ref.mobilePadding,
+      props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth", "closeEvents", "dropdownAnchorSide", "className", "padding", "mobilePadding"]);
 
-  var userDropdownRef = useRef(null);
+  var _useContext = useContext(Context),
+      id = _useContext.id,
+      callOnToggle = _useContext.callOnToggle;
 
-  var getElementById = function getElementById(id) {
-    return function () {
-      return document.getElementById(id);
-    };
-  };
-
-  var getButtonId = function getButtonId(id) {
-    return "".concat(id, "UserMenu");
-  };
-
-  var button = getReactElementsByType({
+  var buttonChild = getReactElementsByType({
     children: children,
     type: UserMenu.Button
   })[0];
-  var navigation = getReactElementsByType({
+  var menuChild = getReactElementsByType({
     children: children,
     type: UserMenu.Navigation
   })[0];
-  var _button$props = button.props,
-      hasArrow = _button$props.hasArrow,
-      backgroundColor = _button$props.backgroundColor,
-      backgroundColorHover = _button$props.backgroundColorHover,
-      backgroundColorActive = _button$props.backgroundColorActive,
-      color = _button$props.color,
-      colorHover = _button$props.colorHover,
-      colorActive = _button$props.colorActive;
-  var dropdownClassName = classNames('k-HeaderNav__UserMenu', "".concat(namespace, "-UserMenu"), className);
-  var buttonStyles = {
-    '--UserMenu-Button-backgroundColor': backgroundColor,
-    '--UserMenu-Button-backgroundColorHover': backgroundColorHover,
-    '--UserMenu-Button-backgroundColorActive': backgroundColorActive,
-    '--UserMenu-Button-color': color,
-    '--UserMenu-Button-colorHover': colorHover,
-    '--UserMenu-Button-colorActive': colorActive
-  };
-  var buttonClassName = classNames('k-HeaderNav__UserMenuButton', {
-    'k-HeaderNav__UserMenuButton--hasArrow': hasArrow,
-    'k-HeaderNav__UserMenuButton--noPadding': !padding
-  });
-  return /*#__PURE__*/React.createElement(Context.Consumer, null, function (_ref2) {
-    var id = _ref2.id,
-        callOnToggle = _ref2.callOnToggle;
-    return /*#__PURE__*/React.createElement(Dropdown, _extends({}, props, {
-      button: button,
-      buttonClassName: buttonClassName,
-      buttonStyles: buttonStyles,
-      buttonId: getButtonId(id),
-      className: dropdownClassName,
-      closeEvents: [CLOSE_EVENT].concat(_toConsumableArray(closeEvents)),
-      closeOnOuterClick: true,
-      dropdownContent: navigation,
-      dropdownContentWidth: dropdownContentWidth,
-      hasArrow: hasArrow,
-      keepInitialButtonAction: true,
-      onToggle: callOnToggle,
-      positionedHorizontallyWith: getElementById(getButtonId(id)),
-      positionedVerticallyWith: getElementById(id),
-      ref: userDropdownRef,
-      refreshEvents: ['resize']
-    }));
-  });
-};
-UserMenu.propTypes = {
-  dropdownContentWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  padding: PropTypes.bool,
-  closeEvents: PropTypes.arrayOf(PropTypes.string),
-  hasArrow: PropTypes.bool
-};
-UserMenu.defaultProps = {
-  dropdownContentWidth: null,
-  padding: true,
-  closeEvents: [],
-  hasArrow: false
+
+  var _useDropdown = useDropdown({
+    dropdownContentWidth: dropdownContentWidth,
+    callOnToggle: callOnToggle,
+    dropdownAnchorSide: dropdownAnchorSide,
+    closeEvents: [CLOSE_EVENT].concat(_toConsumableArray(closeEvents)),
+    buttonId: "".concat(id, "__UserMenu__Button"),
+    menuId: "".concat(id, "__UserMenu__Menu")
+  }),
+      dropdownProps = _useDropdown.dropdownProps,
+      buttonProps = _useDropdown.buttonProps,
+      menuProps = _useDropdown.menuProps,
+      isDropdownExpanded = _useDropdown.isDropdownExpanded;
+
+  return /*#__PURE__*/React.createElement("div", _extends({}, dropdownProps, props, {
+    className: classNames('k-HeaderNav__UserMenu', className, dropdownProps.className)
+  }), /*#__PURE__*/React.createElement(DropdownButton, _extends({}, buttonProps, {
+    style: {
+      '--UserMenu-Button-backgroundColor': buttonChild.props.backgroundColor || null,
+      '--UserMenu-Button-backgroundColorHover': buttonChild.props.backgroundColorHover || null,
+      '--UserMenu-Button-backgroundColorActive': buttonChild.props.backgroundColorActive || null,
+      '--UserMenu-Button-color': buttonChild.props.color || null,
+      '--UserMenu-Button-colorHover': buttonChild.props.colorHover || null,
+      '--UserMenu-Button-colorActive': buttonChild.props.colorActive || null
+    },
+    className: classNames('k-HeaderNav__UserMenuButton', buttonChild.props.className, buttonProps.className)
+  }), cloneElement(buttonChild), /*#__PURE__*/React.createElement(ArrowIcon, {
+    direction: isDropdownExpanded ? 'top' : 'bottom',
+    className: "k-u-margin-left-single k-u-hidden@xs-down",
+    color: "currentColor"
+  })), /*#__PURE__*/React.createElement("div", menuProps, cloneElement(menuChild)));
 };
 
-UserMenu.Button = function (_ref3) {
+UserMenu.Button = function (_ref2) {
+  var children = _ref2.children;
+  return /*#__PURE__*/React.createElement(React.Fragment, null, children);
+};
+
+UserMenu.Navigation = function (_ref3) {
   var children = _ref3.children;
   return /*#__PURE__*/React.createElement(React.Fragment, null, children);
 };
 
-UserMenu.Navigation = function (_ref4) {
-  var children = _ref4.children,
-      props = _objectWithoutProperties(_ref4, ["children"]);
-
-  return /*#__PURE__*/React.createElement("div", props, children);
+UserMenu.propTypes = {
+  dropdownContentWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  padding: PropTypes.bool,
+  mobilePadding: PropTypes.bool,
+  closeEvents: PropTypes.arrayOf(PropTypes.string),
+  dropdownAnchorSide: PropTypes.oneOf(['left', 'right'])
+};
+UserMenu.defaultProps = {
+  dropdownContentWidth: null,
+  closeEvents: [],
+  dropdownAnchorSide: 'left'
 };

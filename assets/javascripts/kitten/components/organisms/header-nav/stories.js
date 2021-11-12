@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import { HeaderNav } from './index'
 import { LendopolisHeaderNavStory } from './stories/lendopolis'
 import { KissKissBankBankHeaderNavStory } from './stories/kisskissbankbank'
-import { KissKissBankBankHeaderNavStoryNew } from './stories/kisskissbankbank-new'
-import { KissKissBankBankHeaderNavStoryAgain } from './stories/kisskissbankbank-again'
 import { MinimalistHeaderNavStory } from './stories/minimalist'
 import { DocsPage } from 'storybook/docs-page'
 
@@ -23,18 +21,11 @@ const Container = styled.div`
 const args = {
   isLogged: false,
   isFixed: true,
-  size: 'regular',
-  borderStyle: 'shadow',
   whiteBg: false,
 }
 const argTypes = {
   isLogged: { control: 'boolean' },
   isFixed: { control: 'boolean' },
-  size: { control: 'inline-radio', options: ['regular', 'small'] },
-  borderStyle: {
-    control: 'inline-radio',
-    options: ['none', 'shadow', 'border'],
-  },
   whiteBg: { name: 'white bagkground (story prop)', control: 'boolean' },
 }
 
@@ -87,10 +78,12 @@ export const Lendopolis = ({ whiteBg, stickyProps, ...args }) => (
 Lendopolis.args = {
   ...args,
   stickyProps: false,
+  isPreRegistered: false,
 }
 Lendopolis.argTypes = {
   ...argTypes,
   stickyProps: { control: 'boolean' },
+  isPreRegistered: { control: 'boolean' },
 }
 
 export const KissKissBankBank = ({ whiteBg, ...args }) => (
@@ -98,18 +91,14 @@ export const KissKissBankBank = ({ whiteBg, ...args }) => (
     <KissKissBankBankHeaderNavStory {...args} />
   </Container>
 )
-
-export const KissKissBankBankNew = ({ whiteBg, ...args }) => (
-  <Container whiteBg={whiteBg}>
-    <KissKissBankBankHeaderNavStoryNew {...args} />
-  </Container>
-)
-
-export const KissKissBankBankNewAgain = ({ whiteBg, ...args }) => (
-  <Container whiteBg={whiteBg}>
-    <KissKissBankBankHeaderNavStoryAgain {...args} />
-  </Container>
-)
+KissKissBankBank.args = {
+  ...args,
+  hasMentorEditButton: false,
+}
+KissKissBankBank.argTypes = {
+  ...argTypes,
+  hasMentorEditButton: { control: 'boolean' },
+}
 
 export const Minimalist = ({ whiteBg, text, subText, ...args }) => (
   <Container whiteBg={whiteBg}>

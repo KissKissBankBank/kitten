@@ -4,6 +4,33 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DragAndDropList`: Add component.
+- Feature: Tooling: Use `Dart Sass` instead of `LibSass`.
+
+## [6.0.0] - 2021-11-09
+
+Breaking Changes:
+
+- `HeaderNav`: Remove `MOBILE_HEADER_HEIGHT`, `TABLET_HEADER_HEIGHT`, `DESKTOP_HEADER_HEIGHT` exports.
+- `HeaderNav`: Move `UserMenuNext` to `UserMenu` and `BurgerMenuNext` to `BurgerMenu`.
+- `HeaderNav`: Remove `borderStyle` prop defaults to `border`.
+- `HeaderNav`: Remove `size` prop defaults to `small`.
+
+Features:
+
+- `HeaderNav`: Add `HEADER_HEIGHT` to exports.
+- `HeaderNav.UserMenu.Button`: Remove `hasArrow` prop, now defaults to `true`.
+
+Fix:
+
+- `Button`: Fix `rounded` style.
+
+## [5.7.1] - 2021-11-04
+
+Fix:
+
+- `useResizeObserver`: Fix use condition for older browsers.
+
 ## [5.7.0] - 2021-11-02
 
 Features:

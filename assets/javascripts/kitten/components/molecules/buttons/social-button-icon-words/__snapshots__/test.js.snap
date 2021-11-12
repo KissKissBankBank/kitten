@@ -135,7 +135,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -401,7 +401,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -674,7 +674,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -956,7 +956,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1231,7 +1231,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1497,7 +1497,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1763,7 +1763,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2029,7 +2029,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: 50%;
+  --Button-border-radius: var(--Button-dimension);
 }
 
 .c0 svg:not(.k-ColorSvg),

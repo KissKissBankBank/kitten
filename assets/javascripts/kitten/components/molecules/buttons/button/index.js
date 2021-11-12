@@ -221,7 +221,7 @@ const StyledButton = styled.button`
   }
 
   &.k-Button--rounded {
-    --Button-border-radius: 50%;
+    --Button-border-radius: var(--Button-dimension);
   }
 
   /* MODIFIERS */

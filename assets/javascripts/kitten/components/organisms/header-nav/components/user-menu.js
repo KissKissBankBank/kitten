@@ -1,9 +1,11 @@
-import React, { useRef } from 'react'
+import React, { cloneElement, useContext } from 'react'
 import PropTypes from 'prop-types'
-import { Dropdown } from './dropdown'
 import { Context } from './context'
 import { getReactElementsByType } from '../../../../helpers/react/react-elements'
 import classNames from 'classnames'
+import { DropdownButton } from './dropdown-button'
+import { useDropdown } from '../hooks/use-dropdown'
+import { ArrowIcon } from '../../../../components/graphics/icons/arrow-icon'
 
 const namespace = 'kkbbAndCo'
 const CLOSE_EVENT = `${namespace}:userMenu:close`
@@ -11,77 +13,84 @@ const CLOSE_EVENT = `${namespace}:userMenu:close`
 export const UserMenu = ({
   children,
   dropdownContentWidth,
-  padding,
   closeEvents,
-  buttonProps,
+  dropdownAnchorSide,
   className,
+  padding,
+  mobilePadding,
   ...props
 }) => {
-  const userDropdownRef = useRef(null)
-  const getElementById = id => () => document.getElementById(id)
-  const getButtonId = id => `${id}UserMenu`
-  const button = getReactElementsByType({ children, type: UserMenu.Button })[0]
-  const navigation = getReactElementsByType({
+  const { id, callOnToggle } = useContext(Context)
+
+  const buttonChild = getReactElementsByType({
+    children,
+    type: UserMenu.Button,
+  })[0]
+
+  const menuChild = getReactElementsByType({
     children,
     type: UserMenu.Navigation,
   })[0]
 
   const {
-    hasArrow,
-    backgroundColor,
-    backgroundColorHover,
-    backgroundColorActive,
-    color,
-    colorHover,
-    colorActive,
-  } = button.props
-
-  const dropdownClassName = classNames(
-    'k-HeaderNav__UserMenu',
-    `${namespace}-UserMenu`,
-    className,
-  )
-
-  const buttonStyles = {
-    '--UserMenu-Button-backgroundColor': backgroundColor,
-    '--UserMenu-Button-backgroundColorHover': backgroundColorHover,
-    '--UserMenu-Button-backgroundColorActive': backgroundColorActive,
-    '--UserMenu-Button-color': color,
-    '--UserMenu-Button-colorHover': colorHover,
-    '--UserMenu-Button-colorActive': colorActive,
-  }
-
-  const buttonClassName = classNames('k-HeaderNav__UserMenuButton', {
-    'k-HeaderNav__UserMenuButton--hasArrow': hasArrow,
-    'k-HeaderNav__UserMenuButton--noPadding': !padding,
+    dropdownProps,
+    buttonProps,
+    menuProps,
+    isDropdownExpanded,
+  } = useDropdown({
+    dropdownContentWidth,
+    callOnToggle,
+    dropdownAnchorSide,
+    closeEvents: [CLOSE_EVENT, ...closeEvents],
+    buttonId: `${id}__UserMenu__Button`,
+    menuId: `${id}__UserMenu__Menu`,
   })
 
   return (
-    <Context.Consumer>
-      {({ id, callOnToggle }) => (
-        <Dropdown
-          {...props}
-          button={button}
-          buttonClassName={buttonClassName}
-          buttonStyles={buttonStyles}
-          buttonId={getButtonId(id)}
-          className={dropdownClassName}
-          closeEvents={[CLOSE_EVENT, ...closeEvents]}
-          closeOnOuterClick
-          dropdownContent={navigation}
-          dropdownContentWidth={dropdownContentWidth}
-          hasArrow={hasArrow}
-          keepInitialButtonAction
-          onToggle={callOnToggle}
-          positionedHorizontallyWith={getElementById(getButtonId(id))}
-          positionedVerticallyWith={getElementById(id)}
-          ref={userDropdownRef}
-          refreshEvents={['resize']}
-        />
+    <div
+      {...dropdownProps}
+      {...props}
+      className={classNames(
+        'k-HeaderNav__UserMenu',
+        className,
+        dropdownProps.className,
       )}
-    </Context.Consumer>
+    >
+      <DropdownButton
+        {...buttonProps}
+        style={{
+          '--UserMenu-Button-backgroundColor':
+            buttonChild.props.backgroundColor || null,
+          '--UserMenu-Button-backgroundColorHover':
+            buttonChild.props.backgroundColorHover || null,
+          '--UserMenu-Button-backgroundColorActive':
+            buttonChild.props.backgroundColorActive || null,
+          '--UserMenu-Button-color': buttonChild.props.color || null,
+          '--UserMenu-Button-colorHover': buttonChild.props.colorHover || null,
+          '--UserMenu-Button-colorActive':
+            buttonChild.props.colorActive || null,
+        }}
+        className={classNames(
+          'k-HeaderNav__UserMenuButton',
+          buttonChild.props.className,
+          buttonProps.className,
+        )}
+      >
+        {cloneElement(buttonChild)}
+        <ArrowIcon
+          direction={isDropdownExpanded ? 'top' : 'bottom'}
+          className="k-u-margin-left-single k-u-hidden@xs-down"
+          color="currentColor"
+        />
+      </DropdownButton>
+
+      <div {...menuProps}>{cloneElement(menuChild)}</div>
+    </div>
   )
 }
+
+UserMenu.Button = ({ children }) => <>{children}</>
+UserMenu.Navigation = ({ children }) => <>{children}</>
 
 UserMenu.propTypes = {
   dropdownContentWidth: PropTypes.oneOfType([
@@ -89,19 +98,12 @@ UserMenu.propTypes = {
     PropTypes.string,
   ]),
   padding: PropTypes.bool,
+  mobilePadding: PropTypes.bool,
   closeEvents: PropTypes.arrayOf(PropTypes.string),
-  hasArrow: PropTypes.bool,
+  dropdownAnchorSide: PropTypes.oneOf(['left', 'right']),
 }
-
 UserMenu.defaultProps = {
   dropdownContentWidth: null,
-  padding: true,
   closeEvents: [],
-  hasArrow: false,
+  dropdownAnchorSide: 'left',
 }
-
-UserMenu.Button = ({ children }) => <>{children}</>
-
-UserMenu.Navigation = ({ children, ...props }) => (
-  <div {...props}>{children}</div>
-)
