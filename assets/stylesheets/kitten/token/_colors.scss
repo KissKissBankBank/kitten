@@ -20,8 +20,8 @@
   --color-red-100: #FFE9EF;
   --color-red-300: #FFB8CB;
   --color-red-500: #F60044;
-  --color-red-700: #D8043E;
-  --color-red-900: #A8002E;
+  --color-red-700: #D10039;
+  --color-red-900: #970029;
 
   // GREEN
   --color-green-100: #E4FBF4;
@@ -82,16 +82,16 @@
   --color-input-border-error: var(--color-error-500);
   --color-input-border-validated: var(--color-green-500);
 
-  --color-input-background: var(--color-grey-050);
+  --color-input-background: var(--color-grey-000);
   
   --color-input-outline: var(--color-blue-300);
   
   --color-button-border-inactive: var(--color-grey-300);
-  --color-button-background-inactive: var(--color-grey-050);
+  --color-button-background-inactive: var(--color-grey-000);
   --color-button-border-hover: var(--color-blue-500);
-  --color-button-background-hover: var(--color-grey-050);
+  --color-button-background-hover: var(--color-grey-000);
   --color-button-border-active: var(--color-blue-500);
-  --color-button-background-active: var(--color-grey-050);
+  --color-button-background-active: var(--color-grey-000);
   --color-button-border-selected: var(--color-blue-500);
-  --color-button-background-selected: var(--color-grey-050);
+  --color-button-background-selected: var(--color-grey-000);
 }
