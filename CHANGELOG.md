@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add Design Token feature through CSS vars.
 - Feature: `DragAndDropList`: Add component.
 - Feature: Tooling: Use `Dart Sass` instead of `LibSass`.
 
