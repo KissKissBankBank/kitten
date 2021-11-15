@@ -49,7 +49,7 @@ export var Step = function Step(_ref) {
 var StyledItem = styled.li.withConfig({
   displayName: "step__StyledItem",
   componentId: "fltihg-0"
-})(["padding:", " 0;&:first-of-type{margin-top:0;padding-top:0;}&:last-of-type{margin-bottom:0;padding-bottom:0;}[role='button']:focus,a:focus,button:focus{outline:", " solid ", ";outline-offset:", ";}[role='button']:focus:not(:focus-visible),a:focus:not(:focus-visible),button:focus:not(:focus-visible){outline-color:transparent;}[role='button']:focus-visible,a:focus-visible,button:focus-visible{outline-color:", ";}li:not(:last-of-type){margin:0 !important;&::after{display:none;}}&.k-Steppers--VerticalStepper__item--bridge{padding:", " 0;}"], pxToRem(15), COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, pxToRem(8));
+})(["padding:", " 0;&:first-of-type{margin-top:0;padding-top:0;}&:last-of-type{margin-bottom:0;padding-bottom:0;}& li:not(:last-of-type){margin:0 !important;&::after{display:none;}}&.k-Steppers--VerticalStepper__item--bridge{padding:", " 0;}"], pxToRem(15), pxToRem(8));
 var StyledLink = styled.a.withConfig({
   displayName: "step__StyledLink",
   componentId: "fltihg-1"

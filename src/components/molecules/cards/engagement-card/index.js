@@ -28,7 +28,7 @@ var _screenConfig = require("../../../../constants/screen-config");
 var StyledCard = _styledComponents.default.div.withConfig({
   displayName: "engagement-card__StyledCard",
   componentId: "sc-184n7il-0"
-})(["box-sizing:border-box;display:flex;flex-direction:column;border-radius:", ";position:relative;overflow:hidden;background-repeat:no-repeat;background-color:", ";background-size:contain;padding:", ";text-decoration:none;border-color:", ";@media (min-width:", "){padding:", ";}"], (0, _typography.pxToRem)(15), function (_ref) {
+})(["box-sizing:border-box;display:flex;flex-direction:column;border-radius:", ";position:relative;overflow:hidden;background-repeat:no-repeat;background-color:", ";background-size:contain;padding:", ";text-decoration:none;border-color:", ";:focus-visible{outline:auto;}@media (min-width:", "){padding:", ";}"], (0, _typography.pxToRem)(15), function (_ref) {
   var backgroundColor = _ref.backgroundColor;
   return backgroundColor;
 }, (0, _typography.pxToRem)(5), _colorsConfig.default.background1, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(10));

@@ -28,7 +28,7 @@ var tinyDayPickerPadding = pxToRem(20);
 var StyledDatePicker = styled.div.withConfig({
   displayName: "date-picker__StyledDatePicker",
   componentId: "sc-1jr1agu-0"
-})(["box-sizing:border-box;.DayPickerInput-Overlay{box-shadow:none;margin-top:18px;min-width:calc(7 * ", " + 2 * ", ");@media (min-width:", "px){min-width:calc(7 * ", " + 2 * ", ");}&:before{content:'';width:0;height:0;border-left:", " solid transparent;border-right:", " solid transparent;", " position:absolute;top:-", ";left:", ";}}.DayPicker-Caption{text-align:center;height:", ";margin:-", " -", " 0;overflow:hidden;@media (min-width:", "px){margin:-", " -", " 0;}", " & div{padding:", " 0;margin:0 ", ";font-size:", ";}}.DayPicker-Weekday{", " ", "}.DayPicker-Weekday,.DayPicker-Day{padding:0;width:", ";height:", ";vertical-align:middle;box-sizing:border-box;font-size:", ";@media (min-width:", "px){width:", ";height:", ";}}.DayPicker-Day{", " border-radius:0;&.DayPicker-Day--outside{border:0;}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}}.DayPicker-Day--today{", " ", "}.DayPicker-Day--selected{&:not(.DayPicker-Day--disabled){&:not(.DayPicker-Day--outside){", " &:hover{", "}}}}.DayPicker-Day--disabled{", "}.DayPicker-Month{margin:0;}.DayPicker-wrapper{padding:0 ", " ", " ", ";@media (min-width:", "px){padding:0 ", " ", " ", ";}&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}}.DayPicker{font-size:", ";", " ", " &:not(.DayPicker--interactionDisabled){.DayPicker-Day{&:not(.DayPicker-Day--disabled){&:not(.DayPicker-Day--selected){&:not(.DayPicker-Day--outside){&:hover{", " ", "}}}}}}}"], tinyCellSize, tinyDayPickerPadding, ScreenConfig.S.min, cellSize, dayPickerPadding, pxToRem(9), pxToRem(9), function (_ref) {
+})(["box-sizing:border-box;.DayPickerInput-Overlay{box-shadow:none;margin-top:18px;min-width:calc(7 * ", " + 2 * ", ");@media (min-width:", "px){min-width:calc(7 * ", " + 2 * ", ");}&:before{content:'';width:0;height:0;border-left:", " solid transparent;border-right:", " solid transparent;", " position:absolute;top:-", ";left:", ";}}.DayPicker-Caption{text-align:center;height:", ";margin:-", " -", " 0;overflow:hidden;@media (min-width:", "px){margin:-", " -", " 0;}", " & div{padding:", " 0;margin:0 ", ";font-size:", ";}}.DayPicker-Weekday{", " ", "}.DayPicker-Weekday,.DayPicker-Day{padding:0;width:", ";height:", ";vertical-align:middle;box-sizing:border-box;font-size:", ";@media (min-width:", "px){width:", ";height:", ";}}.DayPicker-Day{", " border-radius:0;&.DayPicker-Day--outside{border:0;}}.DayPicker-Day--today{", " ", "}.DayPicker-Day--selected{&:not(.DayPicker-Day--disabled){&:not(.DayPicker-Day--outside){", " &:hover{", "}}}}.DayPicker-Day--disabled{", "}.DayPicker-Month{margin:0;}.DayPicker-wrapper{padding:0 ", " ", " ", ";@media (min-width:", "px){padding:0 ", " ", " ", ";}}.DayPicker{font-size:", ";", " ", " &:not(.DayPicker--interactionDisabled){.DayPicker-Day{&:not(.DayPicker-Day--disabled){&:not(.DayPicker-Day--selected){&:not(.DayPicker-Day--outside){&:hover{", " ", "}}}}}}}"], tinyCellSize, tinyDayPickerPadding, ScreenConfig.S.min, cellSize, dayPickerPadding, pxToRem(9), pxToRem(9), function (_ref) {
   var styles = _ref.styles;
   return css(["border-bottom:", " solid ", ";"], pxToRem(8), styles.header.backgroundColor);
 }, pxToRem(8), pxToRem(15), pxToRem(70), pxToRem(2), pxToRem(22), ScreenConfig.S.min, pxToRem(2), pxToRem(32), function (_ref2) {
@@ -40,7 +40,7 @@ var StyledDatePicker = styled.div.withConfig({
 }, tinyCellSize, tinyCellSize, stepToRem(1), ScreenConfig.S.min, cellSize, cellSize, function (_ref4) {
   var styles = _ref4.styles;
   return css(["border:solid ", " ", ";"], styles.borderColor, borderSize);
-}, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, TYPOGRAPHY.fontStyles.regular, function (_ref5) {
+}, TYPOGRAPHY.fontStyles.regular, function (_ref5) {
   var styles = _ref5.styles;
   return css(["color:", ";"], styles.day.today.color);
 }, function (_ref6) {
@@ -52,7 +52,7 @@ var StyledDatePicker = styled.div.withConfig({
 }, function (_ref8) {
   var styles = _ref8.styles;
   return css(["color:", ";"], styles.day.disabled.color);
-}, tinyDayPickerPadding, tinyDayPickerPadding, tinyDayPickerPadding, ScreenConfig.S.min, dayPickerPadding, dayPickerPadding, dayPickerPadding, COLORS.primary4, pxToRem(2), pxToRem(2), COLORS.primary4, stepToRem(1), TYPOGRAPHY.fontStyles.light, function (_ref9) {
+}, tinyDayPickerPadding, tinyDayPickerPadding, tinyDayPickerPadding, ScreenConfig.S.min, dayPickerPadding, dayPickerPadding, dayPickerPadding, stepToRem(1), TYPOGRAPHY.fontStyles.light, function (_ref9) {
   var styles = _ref9.styles;
   return css(["border:solid ", " ", ";"], styles.borderColor, borderSize);
 }, TYPOGRAPHY.fontStyles.light, function (_ref10) {

@@ -9,7 +9,7 @@ import { ScreenConfig } from '../../../../constants/screen-config';
 var StyledContainer = styled.div.withConfig({
   displayName: "engagement-card-with-image__StyledContainer",
   componentId: "sc-1617mnj-0"
-})(["display:flex;flex-direction:column;text-decoration:none;"]);
+})(["display:flex;flex-direction:column;text-decoration:none;:focus-visible{border-top-left-radius:", ";border-top-right-radius:", ";outline:auto;}"], pxToRem(15), pxToRem(15));
 var StyledCard = styled.div.withConfig({
   displayName: "engagement-card-with-image__StyledCard",
   componentId: "sc-1617mnj-1"

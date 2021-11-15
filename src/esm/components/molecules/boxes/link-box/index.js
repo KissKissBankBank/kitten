@@ -23,13 +23,13 @@ export var LinkBox = function LinkBox(_ref) {
   return /*#__PURE__*/React.createElement(StyledLinkBox, _extends({}, props, target, {
     href: href,
     className: className
-  }), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement("span", {
     className: classNames('k-LinkBox__link', className, "k-LinkBox__link--".concat(variant)),
     style: _extends({}, style, {
       '--LinkBox-background-color': backgroundColor,
       '--LinkBox-text-color': textColor
     })
-  }, props.children, /*#__PURE__*/React.createElement("div", {
+  }, props.children, /*#__PURE__*/React.createElement("span", {
     className: "k-LinkBox__arrow"
   }, /*#__PURE__*/React.createElement(ArrowIcon, {
     height: "10",
