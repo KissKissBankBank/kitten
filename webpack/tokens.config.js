@@ -5,7 +5,7 @@ const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries')
 module.exports = {
   mode: 'production',
   entry: {
-    token: './assets/stylesheets/token.scss',
+    tokens: './assets/stylesheets/tokens.scss',
   },
   output: {
     path: path.resolve(__dirname, '../src/stylesheets'),
