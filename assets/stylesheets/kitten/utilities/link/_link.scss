@@ -19,9 +19,8 @@
     font-weight: map-get(k-map-fetch($k-fonts, 'regular'), 'weight') !important;
     text-decoration: none !important;
 
-    &:focus {
-      outline: map-get($k-colors, 'primary-4') solid k-px-to-rem(2px) !important;
-      outline-offset: k-px-to-rem(2px) !important;
+    &:focus-visible {
+      outline: auto !important;
     }
   }
 

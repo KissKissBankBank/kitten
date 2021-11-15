@@ -316,23 +316,11 @@ export const StyledCarouselContainer = styled.div`
 
   .k-Carousel__inner {
     margin: ${pxToRem(-4)};
-    &:focus {
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(-2)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
-    }
-
     display: grid;
     grid-template-columns: repeat(
       ${({ numberOfPages }) => numberOfPages},
       100%
     );
-
     grid-gap: ${pxToRem(CONTAINER_PADDING_THIN / 2 - OUTLINE_PLUS_OFFSET * 2)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -445,18 +433,6 @@ export const StyledCarouselContainer = styled.div`
     .k-Carousel__page__item {
       overflow: hidden;
       padding: ${pxToRem(OUTLINE_PLUS_OFFSET)};
-    }
-    .k-Carousel__page__item > a {
-      &:focus {
-        outline: ${COLORS.primary4} solid ${pxToRem(2)};
-        outline-offset: ${pxToRem(2)};
-      }
-      &:focus:not(:focus-visible) {
-        outline-color: transparent;
-      }
-      &:focus-visible {
-        outline-color: ${COLORS.primary4};
-      }
     }
 
     /* IE11 support */

@@ -2,7 +2,7 @@
 
 exports[`<DocumentManager /> should match snapshot 1`] = `
 <div
-  className="sc-bxivhb kKTBMn k-DocumentManager__uploader"
+  className="sc-bxivhb jAuQfH k-DocumentManager__uploader"
 >
   <input
     disabled={false}
@@ -11,7 +11,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa dqdSiG k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
+    className="sc-bdVaJa bhCkFV k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
     disabled={null}
     htmlFor="DocumentManager"
     style={
@@ -92,7 +92,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
 
 exports[`<DocumentManager /> should match snapshot with props 1`] = `
 <div
-  className="sc-bxivhb kKTBMn k-DocumentManager__uploader"
+  className="sc-bxivhb jAuQfH k-DocumentManager__uploader"
 >
   <input
     disabled={false}
@@ -102,7 +102,7 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa dqdSiG k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
+    className="sc-bdVaJa bhCkFV k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
     disabled={null}
     htmlFor="DocumentManager"
     style={

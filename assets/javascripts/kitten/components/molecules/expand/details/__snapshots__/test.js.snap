@@ -20,6 +20,10 @@ exports[`<Details /> with default props matches with snapshot 1`] = `
   display: none;
 }
 
+.c0:focus-visible {
+  outline: auto;
+}
+
 <details
   onToggle={[Function]}
   open={false}

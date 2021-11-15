@@ -137,18 +137,7 @@ const StyledCheckableButton = styled(Button)`
       }
     }
 
-    &:focus {
-      outline-offset: ${pxToRem(-2)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
-    }
-
     &[aria-checked]:focus {
-      outline: ${COLORS.primary1} solid ${pxToRem(2)};
       border-color: ${COLORS.primary1};
       color: ${COLORS.primary1};
     }

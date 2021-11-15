@@ -158,17 +158,8 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c1:focus {
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c1:focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
+  outline: auto;
 }
 
 .c1.k-Button--nano {
@@ -265,19 +256,6 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   border-color: var(--color-primary-900,#0496cc);
   background-color: var(--color-primary-900,#0496cc);
   color: var(--color-grey-000,#fff);
-}
-
-.c1:focus {
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c1:focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c1:disabled,

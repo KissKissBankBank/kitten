@@ -5,7 +5,7 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
   className="sc-dnqmqq bIRGVN"
 >
   <button
-    className="sc-bxivhb hutFiD k-u-reset-button"
+    className="sc-bxivhb bRvliI k-u-reset-button"
   >
     <svg
       className="sc-ifAKCX jyHSSs"
@@ -36,25 +36,25 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
   >
     <a
       aria-current={false}
-      className="sc-gzVnrw kljbUU"
+      className="sc-gzVnrw gDLVFt"
       href="http://www.google.com"
       tabIndex="0"
     />
     <a
       aria-current={true}
-      className="sc-gzVnrw eFZeJk"
+      className="sc-gzVnrw eGVjLW"
       href="http://www.cowboybebop.com"
       tabIndex="0"
     />
     <a
       aria-current={false}
-      className="sc-gzVnrw kljbUU"
+      className="sc-gzVnrw gDLVFt"
       href="http://www.starwars.com"
       tabIndex="0"
     />
   </div>
   <button
-    className="sc-htpNat ioZZhs k-u-reset-button"
+    className="sc-htpNat gLegyR k-u-reset-button"
   >
     <div
       className="sc-bZQynM hJDVrx"
@@ -88,7 +88,7 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
   className="sc-dnqmqq bIRGVN"
 >
   <button
-    className="sc-bxivhb hutFiD k-u-reset-button"
+    className="sc-bxivhb bRvliI k-u-reset-button"
   >
     <svg
       className="sc-ifAKCX jyHSSs"
@@ -119,22 +119,22 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
   >
     <div
       aria-current={false}
-      className="sc-gzVnrw kljbUU"
+      className="sc-gzVnrw gDLVFt"
       tabIndex="0"
     />
     <div
       aria-current={true}
-      className="sc-gzVnrw eFZeJk"
+      className="sc-gzVnrw eGVjLW"
       tabIndex="0"
     />
     <div
       aria-current={false}
-      className="sc-gzVnrw kljbUU"
+      className="sc-gzVnrw gDLVFt"
       tabIndex="0"
     />
   </div>
   <button
-    className="sc-htpNat ioZZhs k-u-reset-button"
+    className="sc-htpNat gLegyR k-u-reset-button"
   >
     <div
       className="sc-bZQynM hJDVrx"

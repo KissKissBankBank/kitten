@@ -128,15 +128,8 @@ export const StyledRewardSummaryCard = styled.div`
     cursor: pointer;
     z-index: 1;
 
-    &:focus {
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: 0;
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
+    :focus-visible {
+      outline: auto;
     }
   }
 
@@ -284,15 +277,9 @@ export const StyledRewardSummaryCard = styled.div`
       box-sizing: border-box;
       padding: 0 ${pxToRem(30)};
 
-      &:focus {
-        outline: ${COLORS.primary4} solid ${pxToRem(2)};
-        outline-offset: 0;
-      }
-      &:focus:not(:focus-visible) {
-        outline-color: transparent;
-      }
-      &:focus-visible {
-        outline-color: ${COLORS.primary4};
+      &:focus-visible .k-DropdownMenu__button__inside {
+        outline: auto;
+        outline-offset: ${pxToRem(-2)};
       }
     }
   }

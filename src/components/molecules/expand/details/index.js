@@ -30,7 +30,7 @@ if (_elementHelper.default.canUseDom() && typeof document !== 'undefined') {
 var Summary = _styledComponents.default.summary.withConfig({
   displayName: "details__Summary",
   componentId: "sc-6eno39-0"
-})(["display:inline-flex;list-style:none;touch-callout:none;user-select:none;cursor:pointer;::-webkit-details-marker,::before{display:none;}"]);
+})(["display:inline-flex;list-style:none;touch-callout:none;user-select:none;cursor:pointer;::-webkit-details-marker,::before{display:none;}:focus-visible{outline:auto;}"]);
 
 var Details = function Details(_ref) {
   var children = _ref.children,

@@ -38,19 +38,6 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   cursor: pointer;
 }
 
-.c0:focus {
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
-}
-
 .c0.k-Buttons__tagButton--orion {
   border-radius: 0.5rem;
 }
@@ -269,19 +256,6 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   -moz-appareance: none;
   appareance: none;
   cursor: pointer;
-}
-
-.c0:focus {
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0.k-Buttons__tagButton--orion {
@@ -504,19 +478,6 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   cursor: pointer;
 }
 
-.c0:focus {
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
-}
-
 .c0.k-Buttons__tagButton--orion {
   border-radius: 0.5rem;
 }
@@ -737,19 +698,6 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
   cursor: pointer;
 }
 
-.c0:focus {
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
-}
-
 .c0.k-Buttons__tagButton--orion {
   border-radius: 0.5rem;
 }
@@ -968,19 +916,6 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   -moz-appareance: none;
   appareance: none;
   cursor: pointer;
-}
-
-.c0:focus {
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0.k-Buttons__tagButton--orion {
@@ -1218,19 +1153,6 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   -moz-appareance: none;
   appareance: none;
   cursor: pointer;
-}
-
-.c0:focus {
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0.k-Buttons__tagButton--orion {

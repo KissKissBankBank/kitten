@@ -2,7 +2,7 @@
 
 exports[`<HorizontalCrowdfundingCard /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bwzfXH fkRunU k-HorizontalCrowdfundingCard k-HorizontalCrowdfundingCard--noProgressOnMobile"
+  className="sc-bwzfXH fGwhSw k-HorizontalCrowdfundingCard k-HorizontalCrowdfundingCard--noProgressOnMobile"
   href="#"
 >
   <div

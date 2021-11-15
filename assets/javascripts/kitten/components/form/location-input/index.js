@@ -39,8 +39,6 @@ const StyledLocationInput = styled.div`
     &:focus {
       color: ${COLORS.font1};
       border-color: ${COLORS.line2};
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
     }
 
     &:disabled {

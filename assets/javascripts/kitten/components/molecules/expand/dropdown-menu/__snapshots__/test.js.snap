@@ -130,6 +130,15 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   display: none;
 }
 
+.c0 .k-DropdownMenu__button:focus-visible {
+  outline-offset: -0.125rem;
+}
+
+.c0 .k-DropdownMenu__button:focus-visible,
+.c0 .k-DropdownMenu__button:focus-visible .k-DropdownMenu__button__inside {
+  outline: auto;
+}
+
 .c0 .k-DropdownMenu__button__inside {
   position: absolute;
   left: 0;
@@ -234,16 +243,10 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
 
 .c0 .k-DropdownMenu__menu__item:focus {
   color: var(--color-primary-300,#bae8fd);
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: -0.125rem;
-}
-
-.c0 .k-DropdownMenu__menu__item:focus:not(:focus-visible) {
-  outline-color: transparent;
 }
 
 .c0 .k-DropdownMenu__menu__item:focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
+  outline: auto;
 }
 
 .c0 .k-DropdownMenu__menu__separator {

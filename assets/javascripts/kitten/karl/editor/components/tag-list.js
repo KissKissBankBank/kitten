@@ -41,14 +41,6 @@ const List = styled.ul`
 
     &:focus {
       z-index: 3;
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
     }
 
     &[aria-selected='true'] {
@@ -69,8 +61,6 @@ const StyledDetails = styled(Details)`
 
     &:focus {
       z-index: 3;
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
 
       .Editor__toolbar__tagListToggle__button {
         border-color: ${COLORS.primary4};
@@ -82,12 +72,6 @@ const StyledDetails = styled(Details)`
           fill: ${COLORS.primary1};
         }
       }
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
     }
   }
 `

@@ -21,6 +21,10 @@ const StyledWrapper = styled.div`
   padding: var(--tagInput-padding-vertical, ${pxToRem(10)})
     var(--tagInput-padding-horizontal, ${pxToRem(10)});
 
+  :focus-within {
+    outline-style: auto;
+  }
+
   .k-Form-TagList__list {
     width: 100%;
     display: flex;
@@ -58,10 +62,6 @@ const StyledWrapper = styled.div`
     &:empty::before {
       color: ${COLORS.font2};
       content: ' ';
-    }
-
-    :focus {
-      outline-color: transparent;
     }
   }
 
@@ -106,22 +106,7 @@ const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
     cursor: pointer;
-
-    &:focus {
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(-2)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
-    }
-  }
-
-  &:focus-within {
-    outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(2)};
+    outline-offset: ${pxToRem(-2)};
   }
 
   &.k-Form-TagList--disabled {

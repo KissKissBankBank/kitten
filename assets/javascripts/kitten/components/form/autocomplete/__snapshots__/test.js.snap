@@ -48,16 +48,6 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 
 .c0 .k-Form-Autocomplete__input:focus {
   border-color: var(--color-grey-400,#d8d8d8);
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0 .k-Form-Autocomplete__input:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0 .k-Form-Autocomplete__input:focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0 .k-Form-Autocomplete__input::-ms-clear {
@@ -140,19 +130,6 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus,
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):active {
   background-color: var(--color-grey-200,#f6f6f6);
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus {
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult)[aria-selected='true'] {
@@ -261,16 +238,6 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 
 .c0 .k-Form-Autocomplete__input:focus {
   border-color: var(--color-grey-400,#d8d8d8);
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0 .k-Form-Autocomplete__input:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0 .k-Form-Autocomplete__input:focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0 .k-Form-Autocomplete__input::-ms-clear {
@@ -353,19 +320,6 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus,
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):active {
   background-color: var(--color-grey-200,#f6f6f6);
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus {
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult)[aria-selected='true'] {
@@ -526,16 +480,6 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 
 .c0 .k-Form-Autocomplete__input:focus {
   border-color: var(--color-grey-400,#d8d8d8);
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0 .k-Form-Autocomplete__input:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0 .k-Form-Autocomplete__input:focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0 .k-Form-Autocomplete__input::-ms-clear {
@@ -618,19 +562,6 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus,
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):active {
   background-color: var(--color-grey-200,#f6f6f6);
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus {
-  outline: var(--color-primary-300,#bae8fd) solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus-visible {
-  outline-color: var(--color-primary-300,#bae8fd);
 }
 
 .c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult)[aria-selected='true'] {

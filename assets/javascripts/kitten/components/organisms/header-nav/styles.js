@@ -43,20 +43,6 @@ export const StyledHeader = styled.header`
       box-sizing: border-box;
     }
 
-    *:not(input):focus {
-      outline-offset: ${pxToRem(-2)};
-
-      outline-width: ${pxToRem(2)};
-      outline-style: solid;
-      outline-color: ${COLORS.primary4};
-    }
-    *:not(input):focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    *:not(input):focus-visible {
-      outline-color: ${COLORS.primary4};
-    }
-
     .k-Dropdown__button,
     .k-HeaderNav__Button {
       min-width: ${pxToRem(52)};
@@ -137,17 +123,6 @@ export const StyledHeader = styled.header`
     background-color: var(--HeaderMenu-Button-backgroundColor);
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease;
-
-    &:focus {
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(-4)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
-    }
 
     &:hover,
     &:focus {

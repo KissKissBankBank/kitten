@@ -12,7 +12,7 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
     Label
   </legend>
   <div
-    className="sc-bdVaJa fQyxJW k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
+    className="sc-bdVaJa hOddZZ k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -31,7 +31,7 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bdVaJa fQyxJW k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
+    className="sc-bdVaJa hOddZZ k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -49,7 +49,7 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bdVaJa fQyxJW k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
+    className="sc-bdVaJa hOddZZ k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -81,7 +81,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
     Label test
   </legend>
   <div
-    className="sc-bdVaJa fQyxJW k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
+    className="sc-bdVaJa hOddZZ k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -100,7 +100,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bdVaJa fQyxJW k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
+    className="sc-bdVaJa hOddZZ k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -118,7 +118,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bdVaJa fQyxJW k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
+    className="sc-bdVaJa hOddZZ k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -149,7 +149,7 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
     </h1>
   </legend>
   <div
-    className="sc-bdVaJa fQyxJW k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
+    className="sc-bdVaJa hOddZZ k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -168,7 +168,7 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bdVaJa fQyxJW k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
+    className="sc-bdVaJa hOddZZ k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -186,7 +186,7 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bdVaJa fQyxJW k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
+    className="sc-bdVaJa hOddZZ k-Form-Checkbox k-Form-Checkbox--orion k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"

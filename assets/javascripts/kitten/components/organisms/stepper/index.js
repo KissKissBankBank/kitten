@@ -65,17 +65,6 @@ const StepperText = styled(Text)`
   white-space: nowrap;
   transition: color 0.2s ease;
   border-radius: ${pxToRem(6)};
-
-  &:focus {
-    outline: ${COLORS.primary3} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(2)};
-  }
-  &:focus:not(:focus-visible) {
-    outline-color: transparent;
-  }
-  &:focus-visible {
-    outline-color: ${COLORS.primary4};
-  }
 `
 
 export const StepperItem = ({ children, state, ...props }) => {
