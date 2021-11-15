@@ -57,7 +57,7 @@ var ItemWrapper = _styledComponents.default.li.withConfig({
 var StepperText = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "stepper__StepperText",
   componentId: "kuopc1-3"
-})(["display:flex;align-items:center;white-space:nowrap;transition:color 0.2s ease;border-radius:", ";&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}"], (0, _typography.pxToRem)(6), _colorsConfig.default.primary3, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary4);
+})(["display:flex;align-items:center;white-space:nowrap;transition:color 0.2s ease;border-radius:", ";"], (0, _typography.pxToRem)(6));
 
 var StepperItem = function StepperItem(_ref) {
   var children = _ref.children,

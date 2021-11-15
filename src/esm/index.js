@@ -220,6 +220,7 @@ export { CheckList } from './components/molecules/check-list';
 export { CommentAvatar } from './components/molecules/comment-block/comment-avatar';
 export { CommentForm } from './components/molecules/comment-block/comment-form';
 export { Comment } from './components/molecules/comment-block/comment';
+export { DragAndDropList } from './components/molecules/drag-and-drop-list';
 export { EmbedPlayer } from './components/molecules/embed/embed-player';
 export { InfoLines } from './components/molecules/info-lines';
 export { Line } from './components/molecules/line';
@@ -313,6 +314,7 @@ export { domEvents, A11Y_EVENT, FOCUS_EVENT, A11Y_FIRST_FOCUS_REACHED_EVENT, A11
 export { FLUID as BUTTON_STYLE_FLUID, DEFAULT as BUTTON_STYLE_DEFAULT, TINY as BUTTON_STYLE_TINY, BIG as BUTTON_STYLE_BIG, HUGE as BUTTON_STYLE_HUGE, GIANT as BUTTON_STYLE_GIANT, ICON as BUTTON_STYLE_ICON, ICON_MICRO as BUTTON_STYLE_ICON_MICRO, ICON_TINY as BUTTON_STYLE_ICON_TINY, ICON_BIG as BUTTON_STYLE_ICON_BIG, ICON_HUGE as BUTTON_STYLE_ICON_HUGE, ICON_GIANT as BUTTON_STYLE_ICON_GIANT } from './components/molecules/buttons/button/standalone-styles';
 export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/molecules/carousels/carousel/styles';
 export { MICRO as HORIZONTAL_STROKE_STYLE_MICRO, TINY as HORIZONTAL_STROKE_STYLE_TINY, DEFAULT as HORIZONTAL_STROKE_STYLE_DEFAULT, BIG as HORIZONTAL_STROKE_STYLE_BIG, HUGE as HORIZONTAL_STROKE_STYLE_HUGE } from './components/atoms/horizontal-stroke';
+export { BUTTON_SHIFT as DRAG_AND_DROP_LIST_BUTTON_SHIFT } from './components/molecules/drag-and-drop-list';
 export { HEADER_HEIGHT } from './components/organisms/header-nav/config';
 export { CLOSE_OVERLAY_EVENT, OPEN_OVERLAY_EVENT } from './components/molecules/overlay'; // -------
 // HELPERS

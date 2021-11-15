@@ -44,10 +44,10 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 var StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "simple-carousel__StyledContainer",
   componentId: "sc-1bgum05-0"
-})(["", " display:-ms-grid;display:grid;grid-gap:0;gap:0;> div{grid-column:1;grid-row:1;visibility:visible;opacity:1;transition:all 0.8s ease-in-out;&[aria-hidden='true']{visibility:hidden;opacity:0;pointer-events:none;}}button,a{&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}}"], function (_ref) {
+})(["", " display:-ms-grid;display:grid;grid-gap:0;gap:0;> div{grid-column:1;grid-row:1;visibility:visible;opacity:1;transition:all 0.8s ease-in-out;&[aria-hidden='true']{visibility:hidden;opacity:0;pointer-events:none;}}"], function (_ref) {
   var addBottomMargin = _ref.addBottomMargin;
   return addBottomMargin && (0, _styledComponents.css)(["margin-bottom:", ";"], (0, _typography.pxToRem)(40));
-}, _colorsConfig.default.primary3, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary3);
+});
 
 var StyledPagination = _styledComponents.default.div.withConfig({
   displayName: "simple-carousel__StyledPagination",
@@ -60,10 +60,10 @@ var StyledPagination = _styledComponents.default.div.withConfig({
 var StyledPaginationButton = _styledComponents.default.button.withConfig({
   displayName: "simple-carousel__StyledPaginationButton",
   componentId: "sc-1bgum05-2"
-})(["margin-right:", ";width:", ";height:", ";border:0;padding:0;border-radius:0;appearance:none;cursor:pointer;transition:background 0.4s ease-in-out;background:", ";vertical-align:top;&:focus{outline:", " solid ", ";outline-offset:", ";}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{outline-color:", ";}&[aria-selected='true']{background:", ";}"], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(6), function (_ref3) {
+})(["margin-right:", ";width:", ";height:", ";border:0;padding:0;border-radius:0;appearance:none;cursor:pointer;transition:background 0.4s ease-in-out;background:", ";vertical-align:top;&[aria-selected='true']{background:", ";}"], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(6), function (_ref3) {
   var paginationColor = _ref3.paginationColor;
   return paginationColor;
-}, _colorsConfig.default.primary4, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), _colorsConfig.default.primary4, function (_ref4) {
+}, function (_ref4) {
   var activePaginationColor = _ref4.activePaginationColor;
   return activePaginationColor;
 });

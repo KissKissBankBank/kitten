@@ -13,7 +13,7 @@ if (domElementHelper.canUseDom() && typeof document !== 'undefined') {
 var Summary = styled.summary.withConfig({
   displayName: "details__Summary",
   componentId: "sc-6eno39-0"
-})(["display:inline-flex;list-style:none;touch-callout:none;user-select:none;cursor:pointer;::-webkit-details-marker,::before{display:none;}"]);
+})(["display:inline-flex;list-style:none;touch-callout:none;user-select:none;cursor:pointer;::-webkit-details-marker,::before{display:none;}:focus-visible{outline:auto;}"]);
 export var Details = function Details(_ref) {
   var children = _ref.children,
       summaryRender = _ref.summaryRender,
