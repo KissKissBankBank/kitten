@@ -4,12 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Start using Design Tokens for colors config (with fallback).
+
 ## [6.1.0] - 2021-11-15
 
 Features:
 
 - Tooling: Use `Dart Sass` instead of `LibSass`.
-- Token: Add Design Token feature through CSS vars.
+- Tokens: Add Design Tokens feature through CSS vars.
 - Design: use browser default styles for focus outlines.
 - `DragAndDropList`: Add component.
 
