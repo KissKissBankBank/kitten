@@ -20,6 +20,10 @@ const StyledCard = styled.div`
   text-decoration: none;
   border-color: ${COLORS.background1};
 
+  :focus-visible {
+    outline: auto;
+  }
+
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     padding: ${pxToRem(10)};
   }

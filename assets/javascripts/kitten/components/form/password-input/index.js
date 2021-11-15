@@ -25,16 +25,7 @@ const StyledPasswordInput = styled.div`
     cursor: pointer;
     align-items: center;
 
-    &:focus {
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
-    }
+    border-radius: ${pxToRem(4)};
 
     &[aria-pressed='true'] {
       svg {

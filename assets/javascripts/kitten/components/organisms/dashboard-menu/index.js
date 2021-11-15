@@ -56,14 +56,9 @@ const StyledDashboardMenu = styled.nav`
     &:focus {
       z-index: 1;
       position: relative;
-      outline: ${COLORS.primary3} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
     }
     &:focus-visible {
-      outline-color: ${COLORS.primary3};
+      outline: auto;
     }
   }
 
@@ -86,14 +81,9 @@ const StyledDashboardMenu = styled.nav`
     &:focus {
       z-index: 1;
       position: relative;
-      outline: ${COLORS.primary3} solid ${pxToRem(2)};
-      outline-offset: 0;
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
     }
     &:focus-visible {
-      outline-color: ${COLORS.primary3};
+      outline: auto;
     }
   }
 
@@ -117,15 +107,8 @@ const StyledDashboardMenu = styled.nav`
   .k-DashboardMenu__expandable summary {
     list-style: none;
 
-    &:focus {
-      outline: ${COLORS.primary3} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
     &:focus-visible {
-      outline-color: ${COLORS.primary3};
+      outline: auto;
     }
 
     &::-webkit-details-marker {

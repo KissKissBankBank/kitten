@@ -19,7 +19,7 @@ const StyledItem = styled.li`
     padding-bottom: 0;
   }
 
-  li:not(:last-of-type) {
+  & li:not(:last-of-type) {
     margin: 0 !important;
 
     &::after {

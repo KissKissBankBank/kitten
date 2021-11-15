@@ -24,19 +24,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   opacity: 0.8;
 }
 
-.c1:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c1:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c1.k-ButtonImage--tiny {
   width: 1.875rem;
   height: 1.875rem;
@@ -134,19 +121,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 .c0[href]:hover .k-CrowdfundingCard__title__title,
 .c0[href]:focus .k-CrowdfundingCard__title__title {
   color: #19b4fa;
-}
-
-.c0[href]:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0[href]:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0[href]:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {
@@ -682,19 +656,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   opacity: 0.8;
 }
 
-.c1:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c1:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c1.k-ButtonImage--tiny {
   width: 1.875rem;
   height: 1.875rem;
@@ -771,17 +732,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   text-decoration: none;
 }
 
-.c2:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c2:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c2:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c2.k-Button--nano {
@@ -880,19 +832,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   color: #fff;
 }
 
-.c2:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c2:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c2:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c2:disabled,
 .c2.k-Button--disabled {
   border-color: #d8d8d8;
@@ -936,19 +875,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 .c0[href]:hover .k-CrowdfundingCard__title__title,
 .c0[href]:focus .k-CrowdfundingCard__title__title {
   color: #19b4fa;
-}
-
-.c0[href]:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0[href]:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0[href]:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {
@@ -1503,19 +1429,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   opacity: 0.8;
 }
 
-.c1:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c1:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c1.k-ButtonImage--tiny {
   width: 1.875rem;
   height: 1.875rem;
@@ -1592,17 +1505,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   text-decoration: none;
 }
 
-.c2:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c2:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c2:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c2.k-Button--nano {
@@ -1701,19 +1605,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   color: #fff;
 }
 
-.c2:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c2:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c2:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c2:disabled,
 .c2.k-Button--disabled {
   border-color: #d8d8d8;
@@ -1757,19 +1648,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 .c0[href]:hover .k-CrowdfundingCard__title__title,
 .c0[href]:focus .k-CrowdfundingCard__title__title {
   color: #19b4fa;
-}
-
-.c0[href]:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0[href]:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0[href]:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {
@@ -2322,19 +2200,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   opacity: 0.8;
 }
 
-.c2:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c2:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c2:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c2.k-ButtonImage--tiny {
   width: 1.875rem;
   height: 1.875rem;
@@ -2415,17 +2280,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   text-decoration: none;
 }
 
-.c3:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c3:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c3:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c3.k-Button--nano {
@@ -2524,19 +2380,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   color: #fff;
 }
 
-.c3:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c3:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c3:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c3:disabled,
 .c3.k-Button--disabled {
   border-color: #d8d8d8;
@@ -2580,19 +2423,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 .c0[href]:hover .k-CrowdfundingCard__title__title,
 .c0[href]:focus .k-CrowdfundingCard__title__title {
   color: #19b4fa;
-}
-
-.c0[href]:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0[href]:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0[href]:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {

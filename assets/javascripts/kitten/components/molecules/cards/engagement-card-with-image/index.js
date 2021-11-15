@@ -9,6 +9,12 @@ const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-decoration: none;
+
+  :focus-visible {
+    border-top-left-radius: ${pxToRem(15)};
+    border-top-right-radius: ${pxToRem(15)};
+    outline: auto;
+  }
 `
 
 const StyledCard = styled.div`

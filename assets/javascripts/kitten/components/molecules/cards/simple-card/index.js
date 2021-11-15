@@ -75,17 +75,6 @@ const ContainerStyle = styled.a`
       color: ${COLORS.primary1};
     }
   }
-
-  &[href]:focus {
-    outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(2)};
-  }
-  &[href]:focus:not(:focus-visible) {
-    outline-color: transparent;
-  }
-  &[href]:focus-visible {
-    outline-color: ${COLORS.primary4};
-  }
 `
 
 export const SimpleCard = ({

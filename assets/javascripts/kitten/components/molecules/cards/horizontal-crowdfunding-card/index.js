@@ -38,15 +38,8 @@ const StyledCard = styled.a`
     background-color: ${COLORS.background3};
   }
 
-  &[href]:focus {
-    outline: ${COLORS.line1} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(-2)};
-  }
-  &[href]:focus:not(:focus-visible) {
-    outline-color: transparent;
-  }
   &[href]:focus-visible {
-    outline-color: ${COLORS.line1};
+    outline: auto;
   }
 
   .k-HorizontalCrowdfundingCard__imageWrapper {
