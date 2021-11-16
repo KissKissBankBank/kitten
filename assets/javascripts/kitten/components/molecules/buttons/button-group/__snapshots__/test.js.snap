@@ -32,7 +32,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -203,7 +203,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 .c0.k-ButtonGroup--orion .k-ButtonGroup__button {
   border-radius: 0.25rem;
   color: #222;
-  border-color: #eee;
+  border-color: var(--color-grey-400);
   background-color: #fff;
 }
 
@@ -364,7 +364,7 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -535,7 +535,7 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
 .c0.k-ButtonGroup--orion .k-ButtonGroup__button {
   border-radius: 0.25rem;
   color: #222;
-  border-color: #eee;
+  border-color: var(--color-grey-400);
   background-color: #fff;
 }
 

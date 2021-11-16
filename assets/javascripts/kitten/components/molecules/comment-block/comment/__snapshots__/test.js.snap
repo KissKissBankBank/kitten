@@ -228,7 +228,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     >
       <button
         aria-pressed="true"
-        className="sc-bZQynM emAOFY"
+        className="sc-bZQynM dHsMAp"
         role="button"
       >
         

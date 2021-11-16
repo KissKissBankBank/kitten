@@ -15,7 +15,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   height: 3.125rem;
   box-sizing: border-box;
   background: #fff;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid var(--color-grey-400);
   padding: 0 0.9375rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -100,7 +100,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   background: #fff;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #eee;
   border-top: none;
   list-style: none;
   height: calc(2.375rem * var(--Autocomplete-suggestions,1));
@@ -205,7 +205,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   height: 3.125rem;
   box-sizing: border-box;
   background: #fff;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid var(--color-grey-400);
   padding: 0 0.9375rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -290,7 +290,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   background: #fff;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #eee;
   border-top: none;
   list-style: none;
   height: calc(2.375rem * var(--Autocomplete-suggestions,1));
@@ -447,7 +447,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   height: 3.125rem;
   box-sizing: border-box;
   background: #fff;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid var(--color-grey-400);
   padding: 0 0.9375rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -532,7 +532,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   background: #fff;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #eee;
   border-top: none;
   list-style: none;
   height: calc(2.375rem * var(--Autocomplete-suggestions,1));

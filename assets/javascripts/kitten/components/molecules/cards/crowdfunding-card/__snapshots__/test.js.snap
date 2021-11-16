@@ -715,7 +715,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #19b4fa;
+  border: 0.0625rem solid #19b4fa;
   background-color: #19b4fa;
   color: #fff;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1488,7 +1488,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #19b4fa;
+  border: 0.0625rem solid #19b4fa;
   background-color: #19b4fa;
   color: #fff;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -2263,7 +2263,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #19b4fa;
+  border: 0.0625rem solid #19b4fa;
   background-color: #19b4fa;
   color: #fff;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;

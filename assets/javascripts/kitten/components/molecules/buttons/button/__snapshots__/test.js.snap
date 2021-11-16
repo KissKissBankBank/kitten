@@ -32,7 +32,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -264,7 +264,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -494,7 +494,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -724,7 +724,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -954,7 +954,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem dashed #bae8fd;
+  border: 0.0625rem dashed #bae8fd;
   background-color: #fff;
   color: #19b4fa;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1184,7 +1184,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1414,7 +1414,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1646,7 +1646,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1876,7 +1876,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -2106,7 +2106,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -2336,7 +2336,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -2566,7 +2566,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -2796,7 +2796,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -3026,7 +3026,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -3256,7 +3256,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -3491,7 +3491,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -3721,7 +3721,7 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -3951,7 +3951,7 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid #d8d8d8;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;

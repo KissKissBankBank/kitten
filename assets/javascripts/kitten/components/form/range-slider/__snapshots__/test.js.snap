@@ -2,7 +2,7 @@
 
 exports[`<RangeSlider /> should match its disabled snapshot with disabled props 1`] = `
 <div
-  className="sc-bdVaJa gOBAeV k-RangeSlider k-RangeSlider--disabled"
+  className="sc-bdVaJa cLJpsJ k-RangeSlider k-RangeSlider--disabled"
   style={
     Object {
       "--range-input-ratio": 0,
@@ -23,7 +23,7 @@ exports[`<RangeSlider /> should match its disabled snapshot with disabled props 
 
 exports[`<RangeSlider /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa gOBAeV k-RangeSlider"
+  className="sc-bdVaJa cLJpsJ k-RangeSlider"
   style={
     Object {
       "--range-input-ratio": 0,
@@ -44,7 +44,7 @@ exports[`<RangeSlider /> should match its snapshot with props 1`] = `
 
 exports[`<RangeSlider /> should set unbounded values when contolled with value 1`] = `
 <div
-  className="sc-bdVaJa gOBAeV k-RangeSlider"
+  className="sc-bdVaJa cLJpsJ k-RangeSlider"
   style={
     Object {
       "--range-input-ratio": 0,

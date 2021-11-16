@@ -303,7 +303,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   bottom: -0.3125rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  border: 0.125rem solid #636363;
+  border: 0.0625rem solid #636363;
   border-bottom: 0;
   opacity: 0;
 }
@@ -375,7 +375,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   pointer-events: none;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  border: 0.125rem solid #636363;
+  border: 0.0625rem solid #636363;
   border-top: 0;
 }
 
