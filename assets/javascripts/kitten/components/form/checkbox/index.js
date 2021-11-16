@@ -45,7 +45,7 @@ const StyledCheckbox = styled.div`
     margin: 0 ${pxToRem(10)} 0 0;
 
     background-color: ${COLORS.background1};
-    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border: ${pxToRem(1)} solid ${COLORS.line1};
     cursor: pointer;
     transition: border-color 0.2s, background-color 0.2s;
 

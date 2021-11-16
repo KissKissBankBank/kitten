@@ -27,7 +27,7 @@ export const StyledLinkBox = styled.a`
     box-sizing: border-box;
     color: ${COLORS.font1};
     background-color: var(--LinkBox-background-color);
-    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border: ${pxToRem(1)} solid ${COLORS.line1};
     border-radius: ${pxToRem(4)};
     transition: background-color 0.2s ease;
 
@@ -77,14 +77,14 @@ export const StyledLinkBox = styled.a`
   .k-LinkBox__link--orion {
     /* IE11 defaults */
     background-color: ${COLORS.background1};
-    border: ${pxToRem(2)} solid ${COLORS.background1};
+    border: ${pxToRem(1)} solid ${COLORS.background1};
 
     min-height: ${pxToRem(60)};
     padding-top: ${pxToRem(7)};
     padding-bottom: ${pxToRem(7)};
     border-radius: ${pxToRem(8)};
     background-color: var(--LinkBox-background-color);
-    border: ${pxToRem(2)} solid var(--LinkBox-background-color);
+    border: ${pxToRem(1)} solid var(--LinkBox-background-color);
 
     &:hover {
       background-color: var(--LinkBox-background-color);

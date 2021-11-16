@@ -16,7 +16,7 @@ const CardHolder = styled.div`
   }
 
   > div {
-    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border: ${pxToRem(1)} solid ${COLORS.line1};
     border-radius: ${pxToRem(6)};
     padding: ${pxToRem(20)};
 

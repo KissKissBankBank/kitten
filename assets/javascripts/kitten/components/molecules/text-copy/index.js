@@ -58,7 +58,7 @@ const Wrapper = styled.button`
     cursor: pointer;
     align-items: center;
     padding: ${pxToRem(10)};
-    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border: ${pxToRem(1)} solid ${COLORS.line1};
     align-self: stretch;
     box-sizing: border-box;
   }

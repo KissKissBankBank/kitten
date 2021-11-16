@@ -107,7 +107,7 @@ const StyledContainerStatus = styled.div`
     margin-right: ${pxToRem(11)};
 
     background-color: ${COLORS.background1};
-    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border: ${pxToRem(1)} solid ${COLORS.line1};
 
     ${TYPOGRAPHY.fontStyles.regular};
     font-size: ${pxToRem(14)};

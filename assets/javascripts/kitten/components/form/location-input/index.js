@@ -26,7 +26,7 @@ const StyledLocationInput = styled.div`
     width: 100%;
     height: ${pxToRem(50)};
     background: ${COLORS.background1};
-    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border: ${pxToRem(1)} solid ${COLORS.line1};
     border-radius: 0;
     color: ${COLORS.font1};
 
@@ -63,7 +63,7 @@ const StyledLocationInput = styled.div`
   .k-LocationInput__autocomplete {
     box-sizing: border-box;
     background-color: ${COLORS.background1};
-    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border: ${pxToRem(1)} solid ${COLORS.line1};
     border-top: 0;
     position: absolute;
     z-index: 1000;

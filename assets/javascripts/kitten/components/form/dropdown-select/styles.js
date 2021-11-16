@@ -8,7 +8,7 @@ export const StyledDropdown = styled.div`
   position: relative;
 
   --DropdownSelect-buttonHeight: ${pxToRem(50)};
-  --DropdownSelect-border: ${pxToRem(2)};
+  --DropdownSelect-border: ${pxToRem(1)};
   --DropdownSelect-padding: ${pxToRem(10)};
   --DropdownSelect-arrowContainerWidth: ${pxToRem(20)};
   --DropdownSelect-statusPadding: 0px;
@@ -412,7 +412,7 @@ export const StyledDropdown = styled.div`
       background-color: ${COLORS.background1};
 
       &:not(:empty) {
-        border: ${pxToRem(2)} solid ${COLORS.line1};
+        border: ${pxToRem(1)} solid ${COLORS.line1};
       }
     }
 

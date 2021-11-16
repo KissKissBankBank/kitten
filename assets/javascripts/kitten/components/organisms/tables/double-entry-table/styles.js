@@ -65,7 +65,7 @@ export const Styles = styled.div`
   .DoubleEntryTable__Column {
     height: ${pxToRem(68)};
     padding: 0 ${pxToRem(20)};
-    border: ${pxToRem(2)} solid rgba(0, 0, 0, 0.067);
+    border: ${pxToRem(1)} solid rgba(0, 0, 0, 0.067);
     font-size: ${stepToRem(-1)};
     line-height: 1.3;
     box-sizing: border-box;
@@ -75,7 +75,7 @@ export const Styles = styled.div`
 
     @media screen and (min-width: 0\0) {
       /* IE */
-      border: ${pxToRem(2)} solid ${COLORS.line1};
+      border: ${pxToRem(1)} solid ${COLORS.line1};
     }
 
     &.DoubleEntryTable__Column--Col {

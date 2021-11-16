@@ -62,7 +62,7 @@ const StyledRangeSlider = styled.div`
       cursor: pointer;
       -moz-appearance: none;
       appearance: none;
-      border: ${pxToRem(2)} solid ${COLORS.background1};
+      border: ${pxToRem(1)} solid ${COLORS.background1};
       border-top: 0;
       border-bottom: 0;
       border-radius: ${pxToRem(15)};
@@ -85,7 +85,7 @@ const StyledRangeSlider = styled.div`
       cursor: pointer;
       -webkit-appearance: none;
       appearance: none;
-      border: ${pxToRem(2)} solid ${COLORS.background1};
+      border: ${pxToRem(1)} solid ${COLORS.background1};
       border-top: 0;
       border-bottom: 0;
       border-radius: ${pxToRem(15)};

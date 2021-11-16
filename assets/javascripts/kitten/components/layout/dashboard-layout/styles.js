@@ -378,7 +378,7 @@ export const StyledDashboard = styled.div`
       left: 0;
       opacity: 1;
       transition-delay: 0, 0.2s;
-      border: ${pxToRem(2)} solid ${COLORS.primary4};
+      border: ${pxToRem(1)} solid ${COLORS.primary4};
     }
   }
 

@@ -65,7 +65,7 @@ const StyledWrapper = styled.div`
     position: absolute;
     top: ${pxToRem(-4)};
     right: ${pxToRem(-8)};
-    border: ${pxToRem(2)} solid white;
+    border: ${pxToRem(1)} solid white;
   }
 
   .k-Avatar__text {

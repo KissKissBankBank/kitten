@@ -39,7 +39,7 @@ const StyledRadioButton = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-color: ${COLORS.background1};
-    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border: ${pxToRem(1)} solid ${COLORS.line1};
     border-radius: 50%;
 
     transition: border 0.2s, background 0.2s;

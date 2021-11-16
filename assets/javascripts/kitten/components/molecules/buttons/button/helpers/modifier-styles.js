@@ -179,7 +179,7 @@ export const modifierStyles = modifier => {
   }
 
   return css`
-    border: ${pxToRem(2)} ${borderStyle} ${borderColor};
+    border: ${pxToRem(1)} ${borderStyle} ${borderColor};
     background-color: ${backgroundColor};
     color: ${color};
 

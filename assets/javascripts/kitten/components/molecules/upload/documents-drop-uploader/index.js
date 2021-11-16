@@ -16,7 +16,7 @@ const StyledDocumentsDropUploader = styled.div`
   width: 100%;
   position: relative;
   box-sizing: border-box;
-  border: ${pxToRem(2)} solid ${COLORS.line1};
+  border: ${pxToRem(1)} solid ${COLORS.line1};
   position: relative;
 
   display: flex;
@@ -63,7 +63,7 @@ const StyledDocumentsDropUploader = styled.div`
     bottom: ${pxToRem(-2)};
     color: transparent;
     cursor: pointer;
-    border: ${pxToRem(2)} solid transparent;
+    border: ${pxToRem(1)} solid transparent;
     transition: border-color 0.2s ease;
     border-radius: ${pxToRem(8)};
   }
