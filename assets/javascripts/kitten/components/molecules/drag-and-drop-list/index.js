@@ -30,6 +30,8 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import { Button } from '../../../components/molecules/buttons/button'
 import { MenuIcon } from '../../../components/graphics/icons/menu-icon'
 
+export const BUTTON_SHIFT = pxToRem(15 + 40)
+
 const DragAndDropListStyles = createGlobalStyle`
   .k-DragAndDropList {
     display: flex;
@@ -96,7 +98,7 @@ const DragAndDropListStyles = createGlobalStyle`
       }
 
       .k-DragAndDropList__item__child {
-        --dragAndDropList-button-shift: ${pxToRem(40 + 15)};
+        --dragAndDropList-button-shift: ${BUTTON_SHIFT};
       }
     }
   }
