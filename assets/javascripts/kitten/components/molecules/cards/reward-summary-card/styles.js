@@ -124,6 +124,8 @@ export const StyledRewardSummaryCard = styled.div`
     right: 0;
     top: 0;
     bottom: 0;
+    width: 100%;
+    height: 100%;
     border-radius: var(--rewardSummaryCard--border-radius);
     cursor: pointer;
     z-index: 1;

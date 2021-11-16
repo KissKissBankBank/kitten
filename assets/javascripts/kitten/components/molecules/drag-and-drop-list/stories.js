@@ -38,7 +38,7 @@ const RewardCardComponent = ({
   id,
   ...props
 }) => (
-  <RewardSummaryCard id={id} {...props} onClick={() => action('Clicked')()}>
+  <RewardSummaryCard id={id} {...props}>
     <RewardSummaryCard.Image>
       <img alt="" {...imageProps} />
     </RewardSummaryCard.Image>
@@ -86,24 +86,22 @@ export const Default = () => {
         Cette liste peut être réorganisée à l'aide des boutons.
       </p>
 
-      <p
-        id="description_element"
-        className="k-u-weight-light k-u-margin-bottom-double"
-      >
-        Cliquez pour attraper/lâcher l'élément. Une fois attrapé, l'élément peut
-        être déplacé à l'aide des flèches haut/bas du clavier.
-      </p>
-
       <DragAndDropList
         onChange={action('onChange')}
-        a11yButtonDescElement="description_element"
+        a11yInstructions={`Pour attraper un élément déplaçable, pressez Espace ou Entrée.
+          Pendant le déplacement, utilisez les flèches haut/bas.
+          Pressez Entrée ou Espace à nouveau pour relâcher l’élément
+          dans sa nouvelle position ou Echap pour annuler le déplaacement.`}
         a11yContainerLabelElement="container_label_element"
         a11yButtonLabel="Réorganiser"
         a11yAnnouncement={{
-          grabbed: name => `${name} attrapé`,
-          dropped: name => `${name} relâché`,
-          reorder: (name, position, length) => {
-            return `L’ordre a été changé, ${name} est maintenant en position ${position} sur ${length}`
+          onDragStart: (name, position, length) =>
+            `${name} a été attrapé à la position ${position} sur ${length}`,
+          onDragOver: (name, position, length) => {
+            return `${name} a été déplacé à la position ${position} sur ${length}`
+          },
+          onDragEnd: (name, position, length) => {
+            return `${name} a été relâché à la position ${position} sur ${length}`
           },
           cancel: 'Réorganisation annulée.',
         }}
@@ -120,6 +118,12 @@ export const Default = () => {
           availability="Illimitée"
           id="911c90cc-311e-478f-9730-872c468bb9e0"
           simpleName="Aliquip aliqua excepteur quis"
+          actionProps={{
+            as: 'button',
+            type: 'button',
+            onClick: action('911c90cc-311e-478f-9730-872c468bb9e0 clicked'),
+            className: 'k-u-reset-button',
+          }}
         />
         <RewardCardComponent
           size={size}
@@ -131,6 +135,12 @@ export const Default = () => {
           availability="Illimitée"
           id="ad9eb082-1d78-47cb-af56-8a7e9659cf03"
           simpleName="Eiusmod enim officia sed"
+          actionProps={{
+            as: 'button',
+            type: 'button',
+            onClick: action('ad9eb082-1d78-47cb-af56-8a7e9659cf03 clicked'),
+            className: 'k-u-reset-button',
+          }}
         />
         <RewardCardComponent
           size={size}
@@ -142,8 +152,71 @@ export const Default = () => {
           availability="5"
           id="72ce89ff-6592-4b9a-9e5f-7f7b3ddd7b26"
           simpleName="Anim enim deserunt ut mollit"
+          actionProps={{
+            as: 'button',
+            type: 'button',
+            onClick: action('72ce89ff-6592-4b9a-9e5f-7f7b3ddd7b26 clicked'),
+            className: 'k-u-reset-button',
+          }}
         />
       </DragAndDropList>
     </div>
+  )
+}
+
+export const Simple = () => {
+  // on KissKiss, use `viewportIsSOrLess` from `useMediaQuery()`
+  const windowWidth = useWindowWidth()
+
+  return (
+    <>
+      <p
+        id="container_label_element"
+        className="k-u-weight-light k-u-margin-bottom-double"
+      >
+        Cette liste peut être réorganisée à l'aide des boutons.
+      </p>
+
+      <DragAndDropList
+        onChange={action('onChange')}
+        a11yInstructions={`Pour attraper un élément déplaçable, pressez Espace ou Entrée.
+          Pendant le déplacement, utilisez les flèches haut/bas.
+          Pressez Entrée ou Espace à nouveau pour relâcher l’élément
+          dans sa nouvelle position ou Echap pour annuler le déplaacement.`}
+        a11yContainerLabelElement="container_label_element"
+        a11yButtonLabel="Réorganiser"
+        a11yAnnouncement={{
+          onDragStart: (name, position, length) =>
+            `${name} a été attrapé à la position ${position} sur ${length}`,
+          onDragOver: (name, position, length) => {
+            return `${name} a été déplacé à la position ${position} sur ${length}`
+          },
+          onDragEnd: (name, position, length) => {
+            return `${name} a été relâché à la position ${position} sur ${length}`
+          },
+          cancel: 'Réorganisation annulée.',
+        }}
+        showHandle={windowWidth >= ScreenConfig.S.min}
+      >
+        <div id="el_1" simpleName="Element 1">
+          Element 1
+        </div>
+        <div id="el_2" simpleName="Element 2">
+          Element 2
+        </div>
+        <div id="el_3" simpleName="Element 3">
+          Element 3
+        </div>
+        <div id="el_4" simpleName="Element 4">
+          Element 4
+        </div>
+        <div id="el_5" simpleName="Element 5">
+          Element 5
+        </div>
+        <div id="el_6" simpleName="Element 6">
+          Element 6
+        </div>
+      </DragAndDropList>
+    </>
   )
 }
