@@ -7,7 +7,7 @@ import { DocsPage, DocsContainer } from '@storybook/addon-docs'
 import { themes } from '@storybook/theming';
 
 const tokenContext = require.context(
-  '!!raw-loader!../src',
+  '!!raw-loader!../assets/stylesheets',
   true,
   /.\.(css|less|scss|svg)$/
 );
