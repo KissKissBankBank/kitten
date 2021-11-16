@@ -5,46 +5,44 @@
   */
 
   // GREY
-  --color-grey-050: #FFFFFF; /* Token Description Example  @presenter Color */
-
-  --color-grey-000: #FFFFFF;
-  --color-grey-100: #FBFBFB;
-  --color-grey-200: #F6F6F6;
-  --color-grey-300: #EEEEEE;
-  --color-grey-400: #D8D8D8;
-  --color-grey-500: #B8B8B8;
-  --color-grey-600: #949494;
-  --color-grey-700: #636363;
-  --color-grey-800: #2D2D2D;
-  --color-grey-900: #222222;
+  --color-grey-000: #FFFFFF; /* White */
+  --color-grey-100: #FBFBFB; /* Almost White */
+  --color-grey-200: #F6F6F6; /* Ultra Super Light Grey */
+  --color-grey-300: #EEEEEE; /* Super Light Grey */
+  --color-grey-400: #D8D8D8; /* Light Grey */
+  --color-grey-500: #B8B8B8; /* Simply Grey */
+  --color-grey-600: #949494; /* Grey Grey */
+  --color-grey-700: #636363; /* Dark Grey */
+  --color-grey-800: #2D2D2D; /* Very Dark Grey */
+  --color-grey-900: #222222; /* Almost Black */
 
   // RED
-  --color-red-100: #FFE9EF;
-  --color-red-300: #FFB8CB;
-  --color-red-500: #F60044;
-  --color-red-700: #D10039;
-  --color-red-900: #970029;
+  --color-red-100: #FFE9EF; /* Very Light Red Alert (error) */
+  --color-red-300: #FFB8CB; /* Light Red Alert (error) */
+  --color-red-500: #F60044; /* Red Alert (error) */
+  --color-red-700: #D10039; /* Dark Red Alert (error) */
+  --color-red-900: #970029; /* Very Dark Red Alert (error) */
 
   // GREEN
-  --color-green-100: #E4FBF4;
-  --color-green-300: #A4E7D3;
-  --color-green-500: #08A777;
-  --color-green-700: #0E7758;
-  --color-green-900: #004933;
+  --color-green-100: #E4FBF4; /* Very Light Green */
+  --color-green-300: #A4E7D3; /* Light Green */
+  --color-green-500: #08A777; /* Green */
+  --color-green-700: #0E7758; /* Dark Green */
+  --color-green-900: #004933; /* Very Dark Green */
 
   // BLUE
-  --color-blue-100: #E7F1FF;
-  --color-blue-300: #7BB3FF;
-  --color-blue-500: #006CFF;
-  --color-blue-700: #0050BD;
-  --color-blue-900: #003A88;
+  --color-blue-100: #E7F1FF; /* Very Light Blue */
+  --color-blue-300: #7BB3FF; /* Light Blue */
+  --color-blue-500: #006CFF; /* Blue */
+  --color-blue-700: #0050BD; /* Dark Blue */
+  --color-blue-900: #003A88; /* Very Dark Blue */
 
   // YELLOW
-  --color-yellow-100: #FFF3D2;
-  --color-yellow-300: #FFDD84;
-  --color-yellow-500: #FFB800;
-  --color-yellow-700: #A47600;
-  --color-yellow-900: #4E3800;
+  --color-yellow-100: #FFF3D2; /* Very Light Yellow */
+  --color-yellow-300: #FFDD84; /* Light Yellow */
+  --color-yellow-500: #FFB800; /* Yellow */
+  --color-yellow-700: #A47600; /* Dark Yellow */
+  --color-yellow-900: #4E3800; /* Very Dark Yellow */
 
   // PRIMARY
   --color-primary-100: #e8f7fe; // old value, use var(--color-blue-100);
