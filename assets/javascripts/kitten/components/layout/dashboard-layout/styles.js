@@ -34,6 +34,9 @@ export const StyledDashboard = styled.div`
       display: none;
     }
   }
+  .k-DashboardLayout__mainWrapper:focus {
+    outline-offset: ${pxToRem(2)};
+  }
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     .k-DashboardLayout__siteHeader {

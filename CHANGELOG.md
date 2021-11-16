@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `DragAndDropList`: Change lib.
 - Feature: `DragAndDropList`: Change `a11yAnnouncement` prop format.
 - Feature: `DragAndDropList`: Add `a11yInstructions` prop.
+- Feature: `DashboardMenu`: Add `size` prop to `DashboardMenu.Expandable`, defaults to `default`.
+- Fix: `DashboardMenu`: Style fixes.
 
 ## [6.1.0] - 2021-11-15
 
