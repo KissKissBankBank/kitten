@@ -15,7 +15,7 @@ const StyledPillNumberInput = styled.div`
   height: ${pxToRem(40)};
   width: ${pxToRem(85)};
   padding: 0 ${pxToRem(10)};
-  border: 2px solid ${COLORS.line1};
+  border: ${pxToRem(1)} solid var(--color-grey-400);
   border-radius: ${pxToRem(20)};
   transition: border-color 0.2s ease;
 

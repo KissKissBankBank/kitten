@@ -13,11 +13,11 @@ const StyledWrapper = styled.div`
   align-items: center;
   font-size: ${stepToRem(-1)};
   box-sizing: border-box;
-  border-width: ${pxToRem(2)};
+  border-width: ${pxToRem(1)};
   border-style: solid;
   border-radius: 0;
   width: 100%;
-  border-color: ${COLORS.line1};
+  border-color: var(--color-grey-400);
   padding: var(--tagInput-padding-vertical, ${pxToRem(10)})
     var(--tagInput-padding-horizontal, ${pxToRem(10)});
 

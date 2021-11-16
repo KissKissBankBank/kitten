@@ -34,9 +34,9 @@ const StyledTextarea = styled.textarea`
   overflow-y: hidden;
   resize: none;
   box-sizing: border-box;
-  border-width: ${pxToRem(2)};
+  border-width: ${pxToRem(1)};
   border-style: solid;
-  border-color: ${COLORS.line1};
+  border-color: var(--color-grey-400);
   color: ${COLORS.font1};
   padding: ${pxToRem(30)};
   font-size: ${stepToRem(-1)};
@@ -106,7 +106,7 @@ const StyledArrowBefore = styled.span`
   border-style: solid;
   border-color: transparent;
   border-right-color: ${COLORS.background1};
-  left: -${pxToRem(7)};
+  left: -${pxToRem(8)};
 `
 
 export class CommentForm extends PureComponent {

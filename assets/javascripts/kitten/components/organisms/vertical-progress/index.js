@@ -9,7 +9,7 @@ import COLORS from '../../../constants/colors-config'
 
 const StyledContainer = styled.div`
   &:not(.k-VerticalProgress__wrapper--withoutBorder) {
-    border: ${pxToRem(1)} solid ${COLORS.line1};
+    border: ${pxToRem(2)} solid ${COLORS.line1};
     padding: ${pxToRem(15)};
     border-radius: ${pxToRem(8)};
 
@@ -36,7 +36,7 @@ const StyledContainer = styled.div`
       left: ${pxToRem(14)};
 
       content: '';
-      border-left: ${pxToRem(1)} dotted ${COLORS.line1};
+      border-left: ${pxToRem(2)} dotted ${COLORS.line1};
     }
   }
 `

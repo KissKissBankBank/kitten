@@ -96,10 +96,10 @@ ContributionCard.Action = Action
 ContributionCard.defaultProps = {
   show: true,
   closeButtonLabel: 'Close',
-  borderColor: COLORS.line1,
+  borderColor: COLORS.line2,
   borderRadius: 8,
   borderStyle: 'solid',
-  borderWidth: 2,
+  borderWidth: 1,
   onClose: undefined,
   largeInput: false,
   largeTitle: false,

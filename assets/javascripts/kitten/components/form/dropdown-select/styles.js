@@ -36,7 +36,7 @@ export const StyledDropdown = styled.div`
     gap: ${pxToRem(10)};
     padding: 0 ${pxToRem(10)};
 
-    border: var(--DropdownSelect-border) solid ${COLORS.line1};
+    border: var(--DropdownSelect-border) solid var(--color-grey-400);
 
     font-size: ${stepToRem(-1)};
     text-align: left;

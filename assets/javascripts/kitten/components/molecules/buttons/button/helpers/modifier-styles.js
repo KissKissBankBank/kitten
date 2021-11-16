@@ -17,7 +17,7 @@ export const modifierStyles = modifier => {
 
   switch (modifier) {
     case 'hydrogen':
-      borderColor = COLORS.line1
+      borderColor = COLORS.line2
       backgroundColor = COLORS.background1
       color = COLORS.font1
       break
@@ -115,7 +115,7 @@ export const modifierStyles = modifier => {
       break
 
     case 'calcium':
-      borderColor = COLORS.line1
+      borderColor = COLORS.line2
       backgroundColor = COLORS.background1
       color = COLORS.font1
       hoverBorderColor = COLORS.primary4

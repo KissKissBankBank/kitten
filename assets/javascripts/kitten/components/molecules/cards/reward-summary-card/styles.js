@@ -86,7 +86,7 @@ const commonStyles = css`
 `
 
 export const StyledRewardSummaryCard = styled.div`
-  --rewardSummaryCard--border-width: ${pxToRem(2)};
+  --rewardSummaryCard--border-width: ${pxToRem(1)};
   --rewardSummaryCard--border-radius: ${pxToRem(8)};
 
   /* CARD STYLE */
@@ -109,7 +109,7 @@ export const StyledRewardSummaryCard = styled.div`
 
   border-width: var(--rewardSummaryCard--border-width);
   border-style: solid;
-  border-color: ${COLORS.line1};
+  border-color: var(--color-grey-400);
   border-radius: var(--rewardSummaryCard--border-radius);
 
   @media (min-width: ${ScreenConfig.S.min}px) {

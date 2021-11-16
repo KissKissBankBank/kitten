@@ -24,7 +24,7 @@ const StyledDropdownSelectWithInput = styled.div`
     overflow: hidden;
     padding: 0 ${pxToRem(10)} 0 0;
     margin: 0;
-    border: ${pxToRem(1)} solid ${COLORS.line1};
+    border: ${pxToRem(1)} solid var(--color-grey-400);
     background-color: ${COLORS.background1};
     font-size: ${stepToRem(-1)};
   }

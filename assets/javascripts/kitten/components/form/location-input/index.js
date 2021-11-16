@@ -26,7 +26,7 @@ const StyledLocationInput = styled.div`
     width: 100%;
     height: ${pxToRem(50)};
     background: ${COLORS.background1};
-    border: ${pxToRem(1)} solid ${COLORS.line1};
+    border: ${pxToRem(1)} solid var(--color-grey-400);
     border-radius: 0;
     color: ${COLORS.font1};
 

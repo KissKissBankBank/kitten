@@ -7,7 +7,7 @@ export const StyledBackingCard = styled.article`
   --backingCard--border-width: 0;
   --backingCard--border-radius: 0;
   --backingCard--grid-col: repeat(auto-fit, minmax(${pxToRem(120)}, 1fr));
-  --backingCard--border-color: ${COLORS.line1};
+  --backingCard--border-color: var(--color-grey-400);
 
   /* CARD STYLE */
 
@@ -20,7 +20,7 @@ export const StyledBackingCard = styled.article`
   transition: border-color 0.2s ease-in-out;
 
   &.k-BackingCard--hasBorder {
-    --backingCard--border-width: ${pxToRem(2)};
+    --backingCard--border-width: ${pxToRem(1)};
     --backingCard--border-radius: ${pxToRem(8)};
   }
 

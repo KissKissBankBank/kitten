@@ -110,7 +110,7 @@ InfoLines.propTypes = {
 }
 
 InfoLines.defaultProps = {
-  borderColor: COLORS.line1,
+  borderColor: COLORS.line2,
   withBorderRadius: false,
   withLeftRightBorder: false,
   withoutTopBottomBorder: false,
