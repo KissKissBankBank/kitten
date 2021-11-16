@@ -537,13 +537,22 @@ export const MultiMenu = () => (
       >
         Actualités
       </DashboardMenu.Item>
-      <DashboardMenu.Item
+      <DashboardMenu.Expandable
+        title="Admin"
         size="small"
-        href="https://www.kisskissbankbank.com"
         icon={<CheckedShieldIconNext color="currentColor" />}
       >
-        Admin
-      </DashboardMenu.Item>
+        <DashboardMenu.Item href="#">Destinataire des fonds</DashboardMenu.Item>
+        <DashboardMenu.Item href="#">
+          Confirmation d'identité
+        </DashboardMenu.Item>
+        <DashboardMenu.Item href="#">
+          Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac
+          cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+          justo sit amet risus. Duis mollis, est non commodo luctus, nisi erat
+          porttitor ligula, eget lacinia odio sem nec elit.
+        </DashboardMenu.Item>
+      </DashboardMenu.Expandable>
       <DashboardMenu.Item
         size="small"
         href="https://www.kisskissbankbank.com"
