@@ -381,13 +381,19 @@ export const StoryMultiMenu = () => (
       >
         Actualités
       </DashboardMenu.Item>
-      <DashboardMenu.Item
+      <DashboardMenu.Expandable
+        title="Admin"
         size="small"
-        href="https://www.kisskissbankbank.com"
         icon={<CheckedShieldIconNext color="currentColor" />}
       >
-        Admin
-      </DashboardMenu.Item>
+        <DashboardMenu.Item href="#">Destinataire des fonds</DashboardMenu.Item>
+        <DashboardMenu.Item href="#">
+          Confirmation d'identité
+        </DashboardMenu.Item>
+        <DashboardMenu.Item href="#">
+          Documents justificatifs
+        </DashboardMenu.Item>
+      </DashboardMenu.Expandable>
       <DashboardMenu.Item
         size="small"
         href="https://www.kisskissbankbank.com"

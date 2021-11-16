@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DashboardMenu`: Add `size` prop to `DashboardMenu.Expandable`, defaults to `default`.
+- Fix: `DashboardMenu`: Style fixes.
+
 ## [6.1.0] - 2021-11-15
 
 Features:
