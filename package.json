@@ -23,6 +23,7 @@
   "author": "KissKissBankBank & Co",
   "homepage": "https://github.com/KissKissBankBank/kitten#readme",
   "dependencies": {
+    "@dnd-kit/core": "^4.0.1",
     "@dnd-kit/modifiers": "^4.0.0",
     "@dnd-kit/sortable": "^5.0.0",
     "classnames": "^2.2.6",
@@ -67,7 +68,6 @@
     "@storybook/manager-webpack5": "6.3.10",
     "@storybook/react": "6.3.10",
     "@storybook/storybook-deployer": "2.8.10",
-    "storybook-design-token": "1.4.0",
     "@storybook/theming": "6.3.10",
     "@wojtekmaj/enzyme-adapter-react-17": "0.6.0",
     "autoprefixer": "10.3.4",
@@ -107,6 +107,7 @@
     "sass-loader": "11.0.1",
     "sinon": "10.0.0",
     "sinon-test": "3.0.0",
+    "storybook-design-token": "1.4.0",
     "style-loader": "3.2.1",
     "terser-webpack-plugin": "5.2.3",
     "webpack": "5.52.0",
