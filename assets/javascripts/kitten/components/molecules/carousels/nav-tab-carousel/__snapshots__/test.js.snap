@@ -5,7 +5,7 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
   className="sc-dnqmqq jWSrvv"
 >
   <button
-    className="sc-bxivhb iOVgPK k-u-reset-button"
+    className="sc-bxivhb bRvliI k-u-reset-button"
   >
     <svg
       className="sc-ifAKCX jyHSSs"
@@ -36,25 +36,25 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
   >
     <a
       aria-current={false}
-      className="sc-gzVnrw flJjHW"
+      className="sc-gzVnrw DSxsg"
       href="http://www.google.com"
       tabIndex="0"
     />
     <a
       aria-current={true}
-      className="sc-gzVnrw yEbPT"
+      className="sc-gzVnrw etwgon"
       href="http://www.cowboybebop.com"
       tabIndex="0"
     />
     <a
       aria-current={false}
-      className="sc-gzVnrw flJjHW"
+      className="sc-gzVnrw DSxsg"
       href="http://www.starwars.com"
       tabIndex="0"
     />
   </div>
   <button
-    className="sc-htpNat KYEku k-u-reset-button"
+    className="sc-htpNat gLegyR k-u-reset-button"
   >
     <div
       className="sc-bZQynM hJDVrx"
@@ -88,7 +88,7 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
   className="sc-dnqmqq jWSrvv"
 >
   <button
-    className="sc-bxivhb iOVgPK k-u-reset-button"
+    className="sc-bxivhb bRvliI k-u-reset-button"
   >
     <svg
       className="sc-ifAKCX jyHSSs"
@@ -119,22 +119,22 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
   >
     <div
       aria-current={false}
-      className="sc-gzVnrw flJjHW"
+      className="sc-gzVnrw DSxsg"
       tabIndex="0"
     />
     <div
       aria-current={true}
-      className="sc-gzVnrw yEbPT"
+      className="sc-gzVnrw etwgon"
       tabIndex="0"
     />
     <div
       aria-current={false}
-      className="sc-gzVnrw flJjHW"
+      className="sc-gzVnrw DSxsg"
       tabIndex="0"
     />
   </div>
   <button
-    className="sc-htpNat KYEku k-u-reset-button"
+    className="sc-htpNat gLegyR k-u-reset-button"
   >
     <div
       className="sc-bZQynM hJDVrx"

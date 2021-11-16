@@ -74,24 +74,7 @@ const StyledItem = styled.li`
     padding-bottom: 0;
   }
 
-  [role='button']:focus,
-  a:focus,
-  button:focus {
-    outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(2)};
-  }
-  [role='button']:focus:not(:focus-visible),
-  a:focus:not(:focus-visible),
-  button:focus:not(:focus-visible) {
-    outline-color: transparent;
-  }
-  [role='button']:focus-visible,
-  a:focus-visible,
-  button:focus-visible {
-    outline-color: ${COLORS.primary4};
-  }
-
-  li:not(:last-of-type) {
+  & li:not(:last-of-type) {
     margin: 0 !important;
 
     &::after {

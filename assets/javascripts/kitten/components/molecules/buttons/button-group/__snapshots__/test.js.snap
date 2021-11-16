@@ -49,17 +49,8 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c1:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c1:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c1.k-Button--nano {
@@ -156,19 +147,6 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
-}
-
-.c1:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c1:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c1:disabled,
@@ -403,17 +381,8 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c1:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c1:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c1.k-Button--nano {
@@ -510,19 +479,6 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
-}
-
-.c1:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c1:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c1:disabled,

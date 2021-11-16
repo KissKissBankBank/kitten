@@ -2,10 +2,10 @@
 
 exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa bVAtuB"
+  className="sc-bdVaJa jvdxLu"
   href="#"
 >
-  <div
+  <span
     className="k-LinkBox__link k-LinkBox__link--orion"
     style={
       Object {
@@ -73,7 +73,7 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
         className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
       />
     </div>
-    <div
+    <span
       className="k-LinkBox__arrow"
     >
       <svg
@@ -94,19 +94,19 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
           d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
         />
       </svg>
-    </div>
-  </div>
+    </span>
+  </span>
 </a>
 `;
 
 exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa bVAtuB"
+  className="sc-bdVaJa jvdxLu"
   href="#foobar"
   rel="noopener"
   target="_blank"
 >
-  <div
+  <span
     className="k-LinkBox__link k-LinkBox__link--orion"
     style={
       Object {
@@ -178,7 +178,7 @@ exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
         text
       </span>
     </div>
-    <div
+    <span
       className="k-LinkBox__arrow"
     >
       <svg
@@ -199,7 +199,7 @@ exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
           d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
         />
       </svg>
-    </div>
-  </div>
+    </span>
+  </span>
 </a>
 `;

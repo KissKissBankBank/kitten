@@ -12,7 +12,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
       role="tablist"
     >
       <li
-        className="sc-bwzfXH bihtVf k-VerticalProgress__item"
+        className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
       >
         <div
           className="sc-bdVaJa gpMzQU k-VerticalProgress__status k-VerticalProgress__status--actions"
@@ -50,7 +50,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         />
       </li>
       <li
-        className="sc-bwzfXH bihtVf k-VerticalProgress__item"
+        className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
       >
         <div
           className="sc-bdVaJa gpMzQU k-VerticalProgress__status k-VerticalProgress__status--waiting"
@@ -81,7 +81,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         />
       </li>
       <li
-        className="sc-bwzfXH bihtVf k-VerticalProgress__item"
+        className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
       >
         <div
           className="sc-bdVaJa gpMzQU k-VerticalProgress__status k-VerticalProgress__status--publish"
@@ -112,7 +112,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         />
       </li>
       <li
-        className="sc-bwzfXH bihtVf k-VerticalProgress__item"
+        className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
       >
         <div
           className="sc-bdVaJa gpMzQU k-VerticalProgress__status k-VerticalProgress__status--valid"
@@ -150,7 +150,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         />
       </li>
       <li
-        className="sc-bwzfXH bihtVf k-VerticalProgress__item"
+        className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
       >
         <div
           className="sc-bdVaJa gpMzQU k-VerticalProgress__status k-VerticalProgress__status--disabled"

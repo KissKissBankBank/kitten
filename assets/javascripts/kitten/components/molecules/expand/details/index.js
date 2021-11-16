@@ -18,6 +18,10 @@ const Summary = styled.summary`
   ::before {
     display: none;
   }
+
+  :focus-visible {
+    outline: auto;
+  }
 `
 
 export const Details = ({

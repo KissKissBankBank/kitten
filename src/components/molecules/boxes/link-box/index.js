@@ -39,13 +39,13 @@ var LinkBox = function LinkBox(_ref) {
   return /*#__PURE__*/_react.default.createElement(_styles.StyledLinkBox, (0, _extends2.default)({}, props, target, {
     href: href,
     className: className
-  }), /*#__PURE__*/_react.default.createElement("div", {
+  }), /*#__PURE__*/_react.default.createElement("span", {
     className: (0, _classnames.default)('k-LinkBox__link', className, "k-LinkBox__link--".concat(variant)),
     style: (0, _extends2.default)({}, style, {
       '--LinkBox-background-color': backgroundColor,
       '--LinkBox-text-color': textColor
     })
-  }, props.children, /*#__PURE__*/_react.default.createElement("div", {
+  }, props.children, /*#__PURE__*/_react.default.createElement("span", {
     className: "k-LinkBox__arrow"
   }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
     height: "10",

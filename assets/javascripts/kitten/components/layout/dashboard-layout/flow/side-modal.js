@@ -60,17 +60,6 @@ const Wrapper = styled.div`
     border: none;
     transition: background-color 0.2s ease-in-out;
 
-    &:focus {
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
-    }
-
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       flex: 0 0 ${pxToRem(70)};
       width: ${pxToRem(70)};

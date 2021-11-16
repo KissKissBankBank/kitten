@@ -38,23 +38,16 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   transition: color 0.2s,background-color 0.4s;
 }
 
-.c0 .k-HeaderMenu__item__link:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: -0.0625rem;
-}
-
 .c0 .k-HeaderMenu__item__link:hover,
 .c0 .k-HeaderMenu__item__link:focus {
   color: #19b4fa;
   background-color: var(--headerMenu-background-colors-hover);
 }
 
-.c0 .k-HeaderMenu__item__link:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0 .k-HeaderMenu__item__link:focus-visible {
-  outline-color: #bae8fd;
+  z-index: 1;
+  position: relative;
+  outline: auto;
 }
 
 .c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
@@ -298,17 +291,8 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c1:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c1:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c1.k-Button--nano {
@@ -407,19 +391,6 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c1:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c1:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c1:focus-visible {
-  outline-color: #bae8fd;
-}
-
 .c1:disabled,
 .c1.k-Button--disabled {
   border-color: #d8d8d8;
@@ -464,23 +435,16 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   transition: color 0.2s,background-color 0.4s;
 }
 
-.c0 .k-HeaderMenu__item__link:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: -0.0625rem;
-}
-
 .c0 .k-HeaderMenu__item__link:hover,
 .c0 .k-HeaderMenu__item__link:focus {
   color: #19b4fa;
   background-color: var(--headerMenu-background-colors-hover);
 }
 
-.c0 .k-HeaderMenu__item__link:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0 .k-HeaderMenu__item__link:focus-visible {
-  outline-color: #bae8fd;
+  z-index: 1;
+  position: relative;
+  outline: auto;
 }
 
 .c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
@@ -783,23 +747,16 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   transition: color 0.2s,background-color 0.4s;
 }
 
-.c0 .k-HeaderMenu__item__link:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: -0.0625rem;
-}
-
 .c0 .k-HeaderMenu__item__link:hover,
 .c0 .k-HeaderMenu__item__link:focus {
   color: #19b4fa;
   background-color: var(--headerMenu-background-colors-hover);
 }
 
-.c0 .k-HeaderMenu__item__link:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0 .k-HeaderMenu__item__link:focus-visible {
-  outline-color: #bae8fd;
+  z-index: 1;
+  position: relative;
+  outline: auto;
 }
 
 .c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
@@ -1056,23 +1013,16 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   transition: color 0.2s,background-color 0.4s;
 }
 
-.c0 .k-HeaderMenu__item__link:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: -0.0625rem;
-}
-
 .c0 .k-HeaderMenu__item__link:hover,
 .c0 .k-HeaderMenu__item__link:focus {
   color: #19b4fa;
   background-color: var(--headerMenu-background-colors-hover);
 }
 
-.c0 .k-HeaderMenu__item__link:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0 .k-HeaderMenu__item__link:focus-visible {
-  outline-color: #bae8fd;
+  z-index: 1;
+  position: relative;
+  outline: auto;
 }
 
 .c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
@@ -1307,23 +1257,16 @@ exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
   transition: color 0.2s,background-color 0.4s;
 }
 
-.c0 .k-HeaderMenu__item__link:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: -0.0625rem;
-}
-
 .c0 .k-HeaderMenu__item__link:hover,
 .c0 .k-HeaderMenu__item__link:focus {
   color: #19b4fa;
   background-color: var(--headerMenu-background-colors-hover);
 }
 
-.c0 .k-HeaderMenu__item__link:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0 .k-HeaderMenu__item__link:focus-visible {
-  outline-color: #bae8fd;
+  z-index: 1;
+  position: relative;
+  outline: auto;
 }
 
 .c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
@@ -1558,23 +1501,16 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   transition: color 0.2s,background-color 0.4s;
 }
 
-.c0 .k-HeaderMenu__item__link:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: -0.0625rem;
-}
-
 .c0 .k-HeaderMenu__item__link:hover,
 .c0 .k-HeaderMenu__item__link:focus {
   color: #19b4fa;
   background-color: var(--headerMenu-background-colors-hover);
 }
 
-.c0 .k-HeaderMenu__item__link:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0 .k-HeaderMenu__item__link:focus-visible {
-  outline-color: #bae8fd;
+  z-index: 1;
+  position: relative;
+  outline: auto;
 }
 
 .c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {

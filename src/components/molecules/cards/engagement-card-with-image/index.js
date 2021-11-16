@@ -26,7 +26,7 @@ var _screenConfig = require("../../../../constants/screen-config");
 var StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "engagement-card-with-image__StyledContainer",
   componentId: "sc-1617mnj-0"
-})(["display:flex;flex-direction:column;text-decoration:none;"]);
+})(["display:flex;flex-direction:column;text-decoration:none;:focus-visible{border-top-left-radius:", ";border-top-right-radius:", ";outline:auto;}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(15));
 
 var StyledCard = _styledComponents.default.div.withConfig({
   displayName: "engagement-card-with-image__StyledCard",

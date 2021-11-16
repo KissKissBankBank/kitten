@@ -32,6 +32,15 @@ const StyledDropdownMenu = styled.details`
     ::before {
       display: none;
     }
+
+    :focus-visible {
+      outline-offset: ${pxToRem(-2)};
+
+      &, & .k-DropdownMenu__button__inside {
+        outline: auto;
+
+      }
+    }
   }
   .k-DropdownMenu__button__inside {
     position: absolute;
@@ -115,14 +124,10 @@ const StyledDropdownMenu = styled.details`
 
     &:focus {
       color: ${COLORS.primary4};
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(-2)};
     }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
+
     &:focus-visible {
-      outline-color: ${COLORS.primary4};
+      outline: auto;
     }
   }
 

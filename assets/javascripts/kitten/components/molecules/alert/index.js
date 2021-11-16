@@ -85,6 +85,10 @@ const AlertWrapper = styled.div`
     margin: ${pxToRem(-18)} calc(var(--alert-gap) * -1);
     padding: ${pxToRem(18)} var(--alert-gap);
 
+    border-top-right-radius: ${pxToRem(8)};
+    border-bottom-right-radius: ${pxToRem(8)};
+    outline-offset: ${pxToRem(-2)};
+
     svg,
     svg path {
       transition: fill 0.2s ease;
@@ -93,17 +97,6 @@ const AlertWrapper = styled.div`
       :hover {
         fill: ${COLORS.primary3};
       }
-    }
-
-    &:focus {
-      outline: ${COLORS.background1} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(-2)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
     }
   }
 

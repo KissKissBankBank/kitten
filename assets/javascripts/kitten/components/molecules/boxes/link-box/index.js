@@ -19,7 +19,7 @@ export const LinkBox = ({
 
   return (
     <StyledLinkBox {...props} {...target} href={href} className={className}>
-      <div
+      <span
         className={classNames(
           'k-LinkBox__link',
           className,
@@ -33,10 +33,10 @@ export const LinkBox = ({
       >
         {props.children}
 
-        <div className="k-LinkBox__arrow">
+        <span className="k-LinkBox__arrow">
           <ArrowIcon height="10" width="10" />
-        </div>
-      </div>
+        </span>
+      </span>
     </StyledLinkBox>
   )
 }

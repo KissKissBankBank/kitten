@@ -67,6 +67,10 @@ export const StyledDropdown = styled.div`
       var(--DropdownSelect-buttonHeight) - 2 * var(--DropdownSelect-border)
     );
   }
+  .k-Form-DropdownCombobox__input:focus {
+    outline-offset: ${pxToRem(-2)};
+  }
+
 
   .k-Form-DropdownCombobox__arrowButton,
   .k-Form-DropdownSelect__button__arrowBox {
@@ -395,16 +399,6 @@ export const StyledDropdown = styled.div`
     }
 
     .k-Form-DropdownCombobox__input {
-      &:focus {
-        outline: ${COLORS.primary4} solid ${pxToRem(2)};
-        outline-offset: ${pxToRem(-4)};
-      }
-      &:focus:not(:focus-visible) {
-        outline-color: transparent;
-      }
-      &:focus-visible {
-        outline-color: ${COLORS.primary4};
-      }
       &:disabled {
         background-color: ${COLORS.line1};
       }
@@ -419,17 +413,6 @@ export const StyledDropdown = styled.div`
 
       &:not(:empty) {
         border: ${pxToRem(2)} solid ${COLORS.line1};
-      }
-
-      &:focus {
-        outline: ${COLORS.primary4} solid ${pxToRem(2)};
-        outline-offset: ${pxToRem(2)};
-      }
-      &:focus:not(:focus-visible) {
-        outline-color: transparent;
-      }
-      &:focus-visible {
-        outline-color: ${COLORS.primary4};
       }
     }
 
@@ -453,16 +436,6 @@ export const StyledDropdown = styled.div`
       .k-Form-Dropdown__list {
         border-color: ${COLORS.line2};
       }
-    }
-    .k-Form-DropdownSelect__button:focus {
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
-    }
-    .k-Form-DropdownSelect__button:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    .k-Form-DropdownSelect__button:focus-visible {
-      outline-color: ${COLORS.primary4};
     }
 
     &.k-Form-Dropdown--disabled {
@@ -517,16 +490,6 @@ export const StyledDropdown = styled.div`
     }
 
     .k-Form-DropdownCombobox__input {
-      &:focus {
-        outline: ${COLORS.primary4} solid ${pxToRem(2)};
-        outline-offset: ${pxToRem(-4)};
-      }
-      &:focus:not(:focus-visible) {
-        outline-color: transparent;
-      }
-      &:focus-visible {
-        outline-color: ${COLORS.primary4};
-      }
       &:disabled {
         background-color: ${COLORS.grey1};
       }
@@ -540,17 +503,6 @@ export const StyledDropdown = styled.div`
       background-color: ${COLORS.line3};
       &:not(:empty) {
         border: ${pxToRem(1)} solid ${COLORS.line2};
-      }
-
-      &:focus {
-        outline: ${COLORS.primary4} solid ${pxToRem(2)};
-        outline-offset: ${pxToRem(2)};
-      }
-      &:focus:not(:focus-visible) {
-        outline-color: transparent;
-      }
-      &:focus-visible {
-        outline-color: ${COLORS.primary4};
       }
     }
 
@@ -583,16 +535,6 @@ export const StyledDropdown = styled.div`
       .k-Form-Dropdown__list {
         border-color: ${COLORS.line2};
       }
-    }
-    .k-Form-DropdownSelect__button:focus {
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
-    }
-    .k-Form-DropdownSelect__button:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    .k-Form-DropdownSelect__button:focus-visible {
-      outline-color: ${COLORS.primary4};
     }
 
     &.k-Form-Dropdown--disabled {

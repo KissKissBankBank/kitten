@@ -45,14 +45,6 @@ const Wrapper = styled.div`
 
     &:focus {
       border-color: ${COLORS.line2};
-      outline: ${COLORS.primary4} solid ${pxToRem(2)};
-      outline-offset: ${pxToRem(2)};
-    }
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
-    &:focus-visible {
-      outline-color: ${COLORS.primary4};
     }
 
     ::-ms-clear {
@@ -62,6 +54,7 @@ const Wrapper = styled.div`
   &.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
     border-color: ${COLORS.error3};
     color: ${COLORS.error3};
+
     :focus {
       border-color: ${COLORS.line2};
       color: ${COLORS.font1};
@@ -124,17 +117,6 @@ const Wrapper = styled.div`
       :focus,
       :active {
         background-color: ${COLORS.background3};
-      }
-
-      :focus {
-        outline: ${COLORS.primary4} solid ${pxToRem(2)};
-        outline-offset: ${pxToRem(2)};
-      }
-      &:focus:not(:focus-visible) {
-        outline-color: transparent;
-      }
-      &:focus-visible {
-        outline-color: ${COLORS.primary4};
       }
 
       &[aria-selected='true'] {

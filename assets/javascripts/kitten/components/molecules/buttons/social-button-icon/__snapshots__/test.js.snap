@@ -49,17 +49,8 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -156,19 +147,6 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,
@@ -312,17 +290,8 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -419,19 +388,6 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,
@@ -582,17 +538,8 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -698,19 +645,6 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,
@@ -861,17 +795,8 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -977,19 +902,6 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,
@@ -1133,17 +1045,8 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -1240,19 +1143,6 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   border-color: #004880;
   background-color: #004880;
   color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,
@@ -1396,17 +1286,8 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -1503,19 +1384,6 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   border-color: #004880;
   background-color: #004880;
   color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,
@@ -1659,17 +1527,8 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -1766,19 +1625,6 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   border-color: #388ed0;
   background-color: #388ed0;
   color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,
@@ -1922,17 +1768,8 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -2029,19 +1866,6 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   border-color: #388ed0;
   background-color: #388ed0;
   color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,
@@ -2185,17 +2009,8 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -2292,19 +2107,6 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   border-color: #e10000;
   background-color: #e10000;
   color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,
@@ -2448,17 +2250,8 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   text-decoration: none;
 }
 
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
 .c0:focus-visible {
-  outline-color: #bae8fd;
+  outline: auto;
 }
 
 .c0.k-Button--nano {
@@ -2555,19 +2348,6 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   border-color: #e10000;
   background-color: #e10000;
   color: #fff;
-}
-
-.c0:focus {
-  outline: #bae8fd solid 0.125rem;
-  outline-offset: 0.125rem;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline-color: transparent;
-}
-
-.c0:focus-visible {
-  outline-color: #bae8fd;
 }
 
 .c0:disabled,

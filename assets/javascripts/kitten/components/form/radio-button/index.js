@@ -57,8 +57,7 @@ const StyledRadioButton = styled.div`
 
   .k-Form-RadioButton__input:focus + .k-Form-RadioButton__label::before {
     border-color: ${COLORS.primary1};
-    outline: ${COLORS.primary4} solid ${pxToRem(2)};
-    outline-offset: ${pxToRem(2)};
+    outline-style: auto;
   }
   .k-Form-RadioButton__input:focus:not(:focus-visible)
     + .k-Form-RadioButton__label::before {
@@ -66,7 +65,7 @@ const StyledRadioButton = styled.div`
   }
   .k-Form-RadioButton__input:focus-visible
     + .k-Form-RadioButton__label::before {
-    outline-color: ${COLORS.primary4};
+    outline-style: auto;
   }
 
   .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {

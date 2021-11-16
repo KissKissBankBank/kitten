@@ -33,6 +33,10 @@ const StyledEmbedPlayer = styled.div`
     height: 100%;
   }
 
+  &:focus-visible {
+    outline: auto;
+  }
+
   &:hover .k-EmbedPlayer__button,
   &:focus .k-EmbedPlayer__button {
     background-color: ${COLORS.primary2};
