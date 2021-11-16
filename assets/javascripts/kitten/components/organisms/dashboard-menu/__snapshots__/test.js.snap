@@ -444,7 +444,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
       className="k-DashboardMenu__expandableWrapper"
     >
       <details
-        className="k-DashboardMenu__expandable k-DashboardMenu__expandable--undefined"
+        className="k-DashboardMenu__expandable k-DashboardMenu__expandable--default"
         open={null}
       >
         <summary>
