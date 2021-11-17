@@ -39,7 +39,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 .c1.k-ButtonImage--withBorder {
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid var(--color-grey-400);
 }
 
 .c1 .k-ButtonImage__img {
@@ -671,7 +671,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 }
 
 .c1.k-ButtonImage--withBorder {
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid var(--color-grey-400);
 }
 
 .c1 .k-ButtonImage__img {
@@ -1444,7 +1444,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 }
 
 .c1.k-ButtonImage--withBorder {
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid var(--color-grey-400);
 }
 
 .c1 .k-ButtonImage__img {
@@ -2215,7 +2215,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 }
 
 .c2.k-ButtonImage--withBorder {
-  border: 0.125rem solid #eee;
+  border: 0.0625rem solid var(--color-grey-400);
 }
 
 .c2 .k-ButtonImage__img {
