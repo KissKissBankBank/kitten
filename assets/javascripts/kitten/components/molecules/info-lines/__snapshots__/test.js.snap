@@ -5,7 +5,7 @@ exports[`<InfoLines /> should match its empty snapshot 1`] = `
   className="sc-bdVaJa kbuifU k-Infolines"
   style={
     Object {
-      "--InfoLines-borderColor": "#d8d8d8",
+      "--InfoLines-borderColor": "var(--color-grey-400)",
     }
   }
 >

@@ -288,7 +288,7 @@ StandaloneRangeDatePicker.defaultProps = {
         color: COLORS.font1,
       },
     },
-    borderColor: COLORS.line2,
+    borderColor: 'var(--color-grey-400)',
     weekdaysColor: COLORS.font1,
     day: {
       focus: {

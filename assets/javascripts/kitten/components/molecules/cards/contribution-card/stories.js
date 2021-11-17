@@ -57,7 +57,7 @@ const argTypes = {
 const args = {
   show: true,
   closeButtonLabel: 'Close',
-  borderColor: COLORS.line2,
+  borderColor: 'var(--color-grey-400)',
   borderRadius: 8,
   borderStyle: 'solid',
   borderWidth: 1,

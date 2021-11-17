@@ -197,7 +197,7 @@ export class DatePicker extends Component {
           color: COLORS.background1,
         },
       },
-      borderColor: COLORS.line2,
+      borderColor: 'var(--color-grey-400)',
       weekdaysColor: COLORS.font1,
       day: {
         hover: {
