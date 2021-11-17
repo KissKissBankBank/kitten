@@ -25,7 +25,7 @@ const StyledTeamCardButtonWithTooltip = styled.a`
     transition: opacity 0.2s, visibility 0.2s;
 
     background-color: ${({ tooltipColor }) => tooltipColor};
-    border: ${pxToRem(1)} solid ${({ tooltipColor }) => tooltipColor};
+    border: ${pxToRem(2)} solid ${({ tooltipColor }) => tooltipColor};
   }
 
   &:hover .k-TeamCardButtonWithTooltip__tooltip,

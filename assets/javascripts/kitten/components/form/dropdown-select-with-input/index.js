@@ -165,7 +165,7 @@ const StyledDropdownSelectWithInput = styled.div`
     }
 
     &:not(:empty) {
-      border: ${pxToRem(1)} solid ${COLORS.line1};
+      border: ${pxToRem(1)} solid var(--color-grey-400);
       border-top: 0;
     }
 

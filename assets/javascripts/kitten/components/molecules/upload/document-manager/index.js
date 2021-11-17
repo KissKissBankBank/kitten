@@ -38,7 +38,7 @@ const StyledDocumentUploader = styled.div`
   input[type='file']:hover {
     & + label {
       background-color: ${COLORS.background2};
-      border-color: ${COLORS.line1};
+      border-color: var(--color-grey-400);
       color: ${COLORS.font1};
 
       svg,

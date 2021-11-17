@@ -88,7 +88,7 @@ const Wrapper = styled.div`
     padding: 0;
 
     background: ${COLORS.background1};
-    border: ${pxToRem(1)} solid ${COLORS.line1};
+    border: ${pxToRem(1)} solid var(--color-grey-400);
     border-top: none;
 
     list-style: none;

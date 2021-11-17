@@ -65,7 +65,7 @@ export const Styles = styled.div`
   .DoubleEntryTable__Column {
     height: ${pxToRem(68)};
     padding: 0 ${pxToRem(20)};
-    border: ${pxToRem(1)} solid rgba(0, 0, 0, 0.067);
+    border: ${pxToRem(1)} solid var(--color-grey-400);
     font-size: ${stepToRem(-1)};
     line-height: 1.3;
     box-sizing: border-box;
@@ -75,7 +75,7 @@ export const Styles = styled.div`
 
     @media screen and (min-width: 0\0) {
       /* IE */
-      border: ${pxToRem(1)} solid ${COLORS.line1};
+      border: ${pxToRem(1)} solid ${COLORS.line2};
     }
 
     &.DoubleEntryTable__Column--Col {
@@ -89,7 +89,7 @@ export const Styles = styled.div`
       ${TYPOGRAPHY.fontStyles.regular}
       background: ${COLORS.background1};
       border-top-width: 0;
-      border-left-width: ${pxToRem(2)};
+      border-left-width: ${pxToRem(1)};
 
       position: sticky;
       left: 0;
@@ -112,8 +112,8 @@ export const Styles = styled.div`
 
       &:first-child {
         background: ${COLORS.background2};
-        border-color: ${COLORS.line1};
-        border-left-width: ${pxToRem(2)};
+        border-color: var(--color-grey-400);
+        border-left-width: ${pxToRem(1)};
 
         position: sticky;
         left: 0;

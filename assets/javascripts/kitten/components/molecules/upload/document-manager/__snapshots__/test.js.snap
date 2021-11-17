@@ -2,7 +2,7 @@
 
 exports[`<DocumentManager /> should match snapshot 1`] = `
 <div
-  className="sc-bxivhb fiCNDn k-DocumentManager__uploader"
+  className="sc-bxivhb kpmGS k-DocumentManager__uploader"
 >
   <input
     disabled={false}
@@ -92,7 +92,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
 
 exports[`<DocumentManager /> should match snapshot with props 1`] = `
 <div
-  className="sc-bxivhb fiCNDn k-DocumentManager__uploader"
+  className="sc-bxivhb kpmGS k-DocumentManager__uploader"
 >
   <input
     disabled={false}

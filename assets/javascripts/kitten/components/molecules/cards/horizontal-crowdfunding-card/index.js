@@ -9,7 +9,7 @@ import { Progress } from '../../../../components/atoms/progress'
 import { Text } from '../../../../components/atoms/typography/text'
 
 const StyledCard = styled.a`
-  border: ${pxToRem(1)} solid transparent;
+  border: ${pxToRem(2)} solid transparent;
   background-color: ${COLORS.background1};
   box-sizing: border-box;
   height: ${pxToRem(70)};

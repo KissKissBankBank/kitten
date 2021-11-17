@@ -105,7 +105,7 @@ export const StyledDropdown = styled.div`
     list-style: none;
 
     &:not(:empty) {
-      border: var(--DropdownSelect-border) solid ${COLORS.line1};
+      border: var(--DropdownSelect-border) solid var(--color-grey-400);
     }
   }
 
@@ -371,7 +371,7 @@ export const StyledDropdown = styled.div`
   &.k-Form-Dropdown--nitrogen {
     .k-Form-DropdownCombobox,
     .k-Form-DropdownSelect__button {
-      border-color: ${COLORS.line1};
+      border-color: var(--color-grey-400);
       background-color: ${COLORS.background1};
     }
 
@@ -412,7 +412,7 @@ export const StyledDropdown = styled.div`
       background-color: ${COLORS.background1};
 
       &:not(:empty) {
-        border: ${pxToRem(1)} solid ${COLORS.line1};
+        border: ${pxToRem(1)} solid var(--color-grey-400);
       }
     }
 

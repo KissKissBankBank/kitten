@@ -16,7 +16,7 @@ const StyledDocumentsDropUploader = styled.div`
   width: 100%;
   position: relative;
   box-sizing: border-box;
-  border: ${pxToRem(1)} solid ${COLORS.line1};
+  border: ${pxToRem(1)} solid var(--color-grey-400);
   position: relative;
 
   display: flex;

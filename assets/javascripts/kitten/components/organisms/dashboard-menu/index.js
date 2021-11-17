@@ -294,7 +294,7 @@ const StyledDashboardMenu = styled.nav`
       bottom: ${pxToRem(-5)};
       border-top-left-radius: ${pxToRem(8)};
       border-top-right-radius: ${pxToRem(8)};
-      border: ${pxToRem(1)} solid ${COLORS.grey1};
+      border: ${pxToRem(2)} solid ${COLORS.grey1};
       border-bottom: 0;
       opacity: 0;
     }
@@ -356,7 +356,7 @@ const StyledDashboardMenu = styled.nav`
 
     border-bottom-left-radius: ${pxToRem(8)};
     border-bottom-right-radius: ${pxToRem(8)};
-    border: ${pxToRem(1)} solid ${COLORS.grey1};
+    border: ${pxToRem(2)} solid ${COLORS.grey1};
     border-top: 0;
 
     .k-DashboardMenu__selectorButton {

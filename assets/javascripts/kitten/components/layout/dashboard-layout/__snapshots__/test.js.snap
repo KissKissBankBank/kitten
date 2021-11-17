@@ -842,7 +842,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   opacity: 1;
   -webkit-transition-delay: 0,0.2s;
   transition-delay: 0,0.2s;
-  border: 0.0625rem solid #bae8fd;
+  border: 0.125rem solid #bae8fd;
 }
 
 .c0 .k-DashboardLayout__backLink {
@@ -1479,7 +1479,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   opacity: 1;
   -webkit-transition-delay: 0,0.2s;
   transition-delay: 0,0.2s;
-  border: 0.0625rem solid #bae8fd;
+  border: 0.125rem solid #bae8fd;
 }
 
 .c0 .k-DashboardLayout__backLink {
