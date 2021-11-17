@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Design: Change `borderWidth` in `1px` and `borderColor` in `--color-grey-400`.
+- Feature: Design: Change `borderWidth` in `1px` and used A11Y color standards.
 - Feature: `DashboardMenu`: Add `size` prop to `DashboardMenu.Expandable`, defaults to `default`.
 - Fix: `DashboardMenu`: Style fixes.
 
