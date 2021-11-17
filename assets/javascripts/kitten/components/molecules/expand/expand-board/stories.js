@@ -1,16 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ExpandBoard } from './index'
-import { COLORS } from '../../../..'
+import { pxToRem } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 
 const Styles = styled.div`
   .ExpandBoardStory__content {
     padding: 1.5em;
-    border-left: ${COLORS.line1} 0.125rem solid;
-    border-right: ${COLORS.line1} 0.125rem solid;
-    border-bottom: ${COLORS.line1} 0.125rem solid;
+    border-left: ${pxToRem(1)} solid var(--color-grey-400);
+    border-right: ${pxToRem(1)} solid var(--color-grey-400);
+    border-bottom: ${pxToRem(1)} solid var(--color-grey-400);
   }
 `
 

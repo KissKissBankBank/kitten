@@ -57,10 +57,10 @@ const argTypes = {
 const args = {
   show: true,
   closeButtonLabel: 'Close',
-  borderColor: COLORS.line1,
+  borderColor: COLORS.line2,
   borderRadius: 8,
   borderStyle: 'solid',
-  borderWidth: 2,
+  borderWidth: 1,
   onClose: action('onClose'),
   largeInput: false,
   largeTitle: false,

@@ -79,7 +79,7 @@ const StyledArrow = styled.div`
   border-width: ${pxToRem(10)};
   border-style: solid;
   border-color: transparent;
-  border-right-color: ${COLORS.line1};
+  border-right-color: var(--color-grey-400);
   left: -${pxToRem(20)};
 
   @media (min-width: ${ScreenConfig.S.min}px) {

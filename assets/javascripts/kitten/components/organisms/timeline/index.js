@@ -48,7 +48,7 @@ const StyledTimeline = styled.div`
     box-sizing: border-box;
     height: ${pxToRem(circleSize)};
     width: ${pxToRem(circleSize)};
-    border: ${pxToRem(1)} solid ${COLORS.line1};
+    border: ${pxToRem(1)} solid var(--color-grey-400);
     background-color: ${COLORS.background1};
     border-radius: 50%;
     display: flex;

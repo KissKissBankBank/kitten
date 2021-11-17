@@ -78,7 +78,7 @@ const StyledNav = styled.nav`
     border-width: 0;
     border-style: solid;
     color: ${COLORS.font1};
-    border-color: ${COLORS.line1};
+    border-color: var(--color-grey-400);
     background-color: ${COLORS.background1};
     transition: background-color 0.2s ease, border-color 0.2s ease,
       color 0.2s ease;
@@ -86,7 +86,7 @@ const StyledNav = styled.nav`
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: ${pxToRem(50)};
       height: ${pxToRem(50)};
-      border-width: ${pxToRem(2)};
+      border-width: ${pxToRem(1)};
     }
 
     &:hover,

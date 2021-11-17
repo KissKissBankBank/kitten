@@ -63,7 +63,7 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         rows="1"
       />
       <div
-        className="sc-gZMcBi inrZDX"
+        className="sc-gZMcBi dvfDMl"
       >
         <span
           className="sc-gqjmRU czAFVG"
@@ -125,7 +125,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         rows="1"
       />
       <div
-        className="sc-gZMcBi inrZDX"
+        className="sc-gZMcBi dvfDMl"
       >
         <span
           className="sc-gqjmRU czAFVG"

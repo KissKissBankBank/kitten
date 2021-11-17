@@ -67,7 +67,7 @@ const args = {
     { key: 'Lorem', value: 'Ipsum', id: 'item-1' },
     { key: 'Dolor', value: 'Sit amet', id: 'item-2' },
   ],
-  borderColor: COLORS.line1,
+  borderColor: COLORS.line2,
   withBorderRadius: false,
   withLeftRightBorder: false,
   withoutTopBottomBorder: false,

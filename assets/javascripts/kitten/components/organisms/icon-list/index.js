@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
-import COLORS from '../../../constants/colors-config'
 import { Item } from './components/item'
 
 export const IconList = ({ children, containerProps, listProps }) => {
@@ -33,6 +32,6 @@ const StyledList = styled.ul`
     z-index: -1;
 
     content: '';
-    border-left: 2px dashed ${COLORS.line1};
+    border-left: ${pxToRem(1)} dashed var(--color-grey-400);
   }
 `

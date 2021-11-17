@@ -324,7 +324,7 @@ const GlobalStyle = createGlobalStyle`
 
   .k-ModalNext__content--andromeda {
     .k-ModalNext__header {
-      border-bottom: ${pxToRem(2)} solid ${COLORS.line1};
+      border-bottom: ${pxToRem(1)} solid var(--color-grey-400);
       margin-bottom: ${pxToRem(50)};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
