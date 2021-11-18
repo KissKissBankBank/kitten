@@ -169,7 +169,7 @@ const StyledIconContainer = styled.div`
     position: absolute;
     right: ${pxToRem(-12)};
     top: ${pxToRem(-4)};
-    border: ${pxToRem(1)} solid ${COLORS.background1};
+    border: var(--border-width-1) solid ${COLORS.background1};
     width: ${pxToRem(20)};
     height: ${pxToRem(20)};
     border-radius: 50%;

@@ -14,7 +14,7 @@ const StyledButton = styled.button`
   position: relative;
   height: ${pxToRem(40)};
   padding: 0 ${pxToRem(15)};
-  border: ${pxToRem(1)} solid var(--color-grey-400);
+  border: var(--border-width-1) solid var(--color-grey-400);
   background-color: ${COLORS.background1};
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${pxToRem(12)};

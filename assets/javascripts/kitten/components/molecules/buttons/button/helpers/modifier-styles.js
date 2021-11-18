@@ -5,6 +5,7 @@ import { pxToRem } from '../../../../../helpers/utils/typography'
 export const modifierStyles = modifier => {
   let borderColor
   let borderStyle = 'solid'
+  let borderWidth = 'var(--border-width-1)'
   let backgroundColor
   let color
 
@@ -179,7 +180,7 @@ export const modifierStyles = modifier => {
   }
 
   return css`
-    border: ${pxToRem(1)} ${borderStyle} ${borderColor};
+    border: ${borderWidth} ${borderStyle} ${borderColor};
     background-color: ${backgroundColor};
     color: ${color};
 

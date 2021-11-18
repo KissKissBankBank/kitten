@@ -64,7 +64,7 @@ export const Styles = styled.div`
   .SingleEntryTable__Column {
     height: ${pxToRem(68)};
     padding: ${pxToRem(20)};
-    border: ${pxToRem(1)} solid rgba(0, 0, 0, 0.067);
+    border: var(--border-width-1) solid rgba(0, 0, 0, 0.067);
     font-size: ${stepToRem(-1)};
     line-height: 1.3;
     box-sizing: border-box;

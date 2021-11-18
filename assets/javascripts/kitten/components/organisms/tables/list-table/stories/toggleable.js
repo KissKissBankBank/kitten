@@ -144,7 +144,7 @@ const CellWithLabelValue = styled(({ label, value, thead, ...props }) => (
 `
 
 const ToggleableTable = styled(ListTable)`
-  border: ${pxToRem(1)} solid var(--color-grey-400);
+  border: var(--border-width-1) solid var(--color-grey-400);
   border-bottom: 0;
 
   ul {

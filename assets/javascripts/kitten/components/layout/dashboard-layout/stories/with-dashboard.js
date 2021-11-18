@@ -16,7 +16,7 @@ const CardHolder = styled.div`
   }
 
   > div {
-    border: ${pxToRem(1)} solid var(--color-grey-400);
+    border: var(--border-width-1) solid var(--color-grey-400);
     border-radius: ${pxToRem(6)};
     padding: ${pxToRem(20)};
 
