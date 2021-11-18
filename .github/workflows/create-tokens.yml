@@ -3,7 +3,6 @@ on:
   push:
     paths:
       - 'data/tokens.json'
-      - '.github/workflows/create-tokens.yml'
       - 'sd.config.js'
 
 jobs:
