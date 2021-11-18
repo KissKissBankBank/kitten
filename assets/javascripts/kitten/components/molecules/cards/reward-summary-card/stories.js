@@ -59,7 +59,7 @@ const args = {
   borderColor: 'var(--color-grey-400)',
   borderRadius: 8,
   borderStyle: 'solid',
-  borderWidth: 1,
+  borderWidth: 'var(--border-width-1)',
   imageBorderRadius: 5,
   actionProps: {
     href: '#',

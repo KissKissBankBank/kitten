@@ -34,7 +34,7 @@ const StyledTextarea = styled.textarea`
   overflow-y: hidden;
   resize: none;
   box-sizing: border-box;
-  border-width: ${pxToRem(1)};
+  border-width: var(--border-width-1);
   border-style: solid;
   border-color: var(--color-grey-400);
   color: ${COLORS.font1};

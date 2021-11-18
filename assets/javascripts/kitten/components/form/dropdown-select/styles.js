@@ -8,7 +8,7 @@ export const StyledDropdown = styled.div`
   position: relative;
 
   --DropdownSelect-buttonHeight: ${pxToRem(50)};
-  --DropdownSelect-border: var(--border-width-1)
+  --DropdownSelect-border: var(--border-width-1);
   --DropdownSelect-padding: ${pxToRem(10)};
   --DropdownSelect-arrowContainerWidth: ${pxToRem(20)};
   --DropdownSelect-statusPadding: 0px;
@@ -412,7 +412,7 @@ export const StyledDropdown = styled.div`
       background-color: ${COLORS.background1};
 
       &:not(:empty) {
-        border: var(--border-width-1) solid var(--color-grey-400);
+        border: var(--DropdownSelect-border) solid var(--color-grey-400);
       }
     }
 
@@ -465,8 +465,6 @@ export const StyledDropdown = styled.div`
   /* MODIFIER: BORON */
 
   &.k-Form-Dropdown--boron {
-    --DropdownSelect-border: var(--border-width-1);
-
     .k-Form-DropdownCombobox,
     .k-Form-DropdownSelect__button {
       border-color: ${COLORS.line3};
@@ -502,7 +500,7 @@ export const StyledDropdown = styled.div`
     .k-Form-Dropdown__list {
       background-color: ${COLORS.line3};
       &:not(:empty) {
-        border: var(--border-width-1) solid ${COLORS.line2};
+        border: var(--DropdownSelect-border) solid ${COLORS.line2};
       }
     }
 

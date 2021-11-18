@@ -12,7 +12,7 @@ import classNames from 'classnames'
 
 const itemHeight = 38
 const maxItemsVisibled = 3
-const borderSize = 1
+const borderSize = 'var(--border-width-1)'
 
 const Wrapper = styled.div`
   display: flex;
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
     box-sizing: border-box;
 
     background: ${COLORS.background1};
-    border: ${pxToRem(borderSize)} solid var(--color-grey-400);
+    border: ${borderSize} solid var(--color-grey-400);
     padding: 0 ${pxToRem(15)};
 
     ${TYPOGRAPHY.fontStyles.light};
@@ -88,7 +88,7 @@ const Wrapper = styled.div`
     padding: 0;
 
     background: ${COLORS.background1};
-    border: var(--border-width-1) solid var(--color-grey-400);
+    border: ${borderSize} solid var(--color-grey-400);
     border-top: none;
 
     list-style: none;

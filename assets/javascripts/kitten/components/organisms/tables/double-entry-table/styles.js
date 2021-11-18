@@ -89,7 +89,7 @@ export const Styles = styled.div`
       ${TYPOGRAPHY.fontStyles.regular}
       background: ${COLORS.background1};
       border-top-width: 0;
-      border-left-width: ${pxToRem(1)};
+      border-left-width: var(--border-width-1);
 
       position: sticky;
       left: 0;
@@ -113,7 +113,7 @@ export const Styles = styled.div`
       &:first-child {
         background: ${COLORS.background2};
         border-color: var(--color-grey-400);
-        border-left-width: ${pxToRem(1)};
+        border-left-width: var(--border-width-1);
 
         position: sticky;
         left: 0;

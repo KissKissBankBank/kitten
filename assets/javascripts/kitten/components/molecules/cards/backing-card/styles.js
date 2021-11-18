@@ -20,7 +20,7 @@ export const StyledBackingCard = styled.article`
   transition: border-color 0.2s ease-in-out;
 
   &.k-BackingCard--hasBorder {
-    --backingCard--border-width: ${pxToRem(1)};
+    --backingCard--border-width: var(--border-width-1);
     --backingCard--border-radius: ${pxToRem(8)};
   }
 

@@ -11,7 +11,7 @@ const styles = {
       color: '#fff',
     },
   },
-  borderColor: COLORS.line1,
+  borderColor: COLORS.line2,
   weekdaysColor: COLORS.font1,
   day: {
     hover: {

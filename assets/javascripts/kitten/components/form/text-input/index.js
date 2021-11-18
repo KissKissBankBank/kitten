@@ -9,14 +9,14 @@ import classNames from 'classnames'
 
 const StyledInput = styled.input`
   --input-padding-horizontal: ${pxToRem(15)};
-  --input-border-width: ${pxToRem(1)};
+  --input-border-width: var(--border-width-1);
   --input-height: ${pxToRem(50)};
 
   font-size: ${stepToRem(-1)};
   line-height: 1em;
   ${TYPOGRAPHY.fontStyles.light};
   box-sizing: border-box;
-  border-width: ${pxToRem(2)}; /* IE11 */
+  border-width: ${pxToRem(1)}; /* IE11 */
   border-width: var(--input-border-width);
   border-style: solid;
   border-radius: 0;

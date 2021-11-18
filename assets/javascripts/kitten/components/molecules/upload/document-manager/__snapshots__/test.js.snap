@@ -11,7 +11,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa lgfXSE k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
+    className="sc-bdVaJa iGiTBm k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
     disabled={null}
     htmlFor="DocumentManager"
     style={
@@ -28,7 +28,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
         className="k-DocumentManager__uploader__documentIcon"
       >
         <div
-          className="sc-bZQynM bJgRaV k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
+          className="sc-bZQynM gfnFLL k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
         >
           <svg
             className="sc-htpNat jpRHgA k-ColorSvg"
@@ -102,7 +102,7 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa lgfXSE k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
+    className="sc-bdVaJa iGiTBm k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
     disabled={null}
     htmlFor="DocumentManager"
     style={
@@ -119,7 +119,7 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
         className="k-DocumentManager__uploader__documentIcon"
       >
         <div
-          className="sc-bZQynM bJgRaV k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
+          className="sc-bZQynM gfnFLL k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
         >
           <svg
             className="sc-htpNat jpRHgA k-ColorSvg"

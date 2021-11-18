@@ -9,7 +9,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { Navbar } from './components/navbar'
 
-const borderSize = pxToRem(1)
+const borderSize = 'var(--border-width-1)'
 const cellSize = pxToRem(50)
 const tinyCellSize = pxToRem(40)
 const dayPickerPadding = pxToRem(30)

@@ -60,7 +60,7 @@ const args = {
   borderColor: 'var(--color-grey-400)',
   borderRadius: 8,
   borderStyle: 'solid',
-  borderWidth: 1,
+  borderWidth: 'var(--border-width-1)',
   onClose: action('onClose'),
   largeInput: false,
   largeTitle: false,
