@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v2.4.0
       - run: npm i
       # Transform Figma Tokens JSON to something Style Dictionary can read
-      - run: npm token-transformer data/tokens.json data/output.json
+      - run: token-transformer data/tokens.json data/output.json
       # Convert tokens according to Style Dictionary config
       - run: npm run build:style-dictionary
       # Build SCSS Tokens file
