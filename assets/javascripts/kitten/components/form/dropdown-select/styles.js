@@ -434,7 +434,7 @@ export const StyledDropdown = styled.div`
       .k-Form-DropdownSelect__button,
       .k-Form-DropdownSelect__button__arrowBox,
       .k-Form-Dropdown__list {
-        border-color: ${COLORS.line2};
+        border-color: var(--color-grey-400);
       }
     }
 
@@ -446,7 +446,7 @@ export const StyledDropdown = styled.div`
       .k-Form-Dropdown__list,
       .k-Form-DropdownSelect__content {
         background-color: ${COLORS.line1};
-        border-color: ${COLORS.line2};
+        border-color: var(--color-grey-400);
       }
       .k-Form-DropdownCombobox__input {
         background-color: ${COLORS.line1};
@@ -500,7 +500,7 @@ export const StyledDropdown = styled.div`
     .k-Form-Dropdown__list {
       background-color: ${COLORS.line3};
       &:not(:empty) {
-        border: var(--DropdownSelect-border) solid ${COLORS.line2};
+        border: var(--DropdownSelect-border) solid var(--color-grey-400);
       }
     }
 
@@ -531,7 +531,7 @@ export const StyledDropdown = styled.div`
       .k-Form-DropdownCombobox__arrowButton,
       .k-Form-DropdownSelect__button__arrowBox,
       .k-Form-Dropdown__list {
-        border-color: ${COLORS.line2};
+        border-color: var(--color-grey-400);
       }
     }
 
