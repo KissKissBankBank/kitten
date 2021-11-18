@@ -24,8 +24,10 @@ module.exports = {
       files: [{
         destination: '_colors.scss',
         format: 'colorCss',
-        filter: (token) => {
-          return token.attributes.category === 'color';
+        filter: {
+          attributes: {
+            category: 'color',
+          }
         }
       }],
     },
