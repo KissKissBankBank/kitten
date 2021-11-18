@@ -1,4 +1,4 @@
-name: CI
+name: Build Figma Tokens to CSS
 on:
   push:
     paths:
@@ -15,7 +15,7 @@ jobs:
       # Transform Figma Tokens JSON to something Style Dictionary can read
       - run: npx token-transformer data/tokens.json data/output.json
       # Convert tokens according to Style Dictionary config
-      - run: npx style-dictionary build --config sd.config.json
+      - run: npx style-dictionary build --config sd.config.js
       # Remove compiled tokens CSS file
       - run: rm -rf src/stylesheets/tokens.css
       # Compile tokens CSS file
