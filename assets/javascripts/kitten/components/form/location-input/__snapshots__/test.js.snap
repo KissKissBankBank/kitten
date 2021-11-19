@@ -2,7 +2,7 @@
 
 exports[`<LocationInput /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa cbScAZ k-LocationInput"
+  className="sc-bdVaJa ijwQkO k-LocationInput"
 >
   <div
     className="k-LocationInput__icon"

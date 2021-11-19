@@ -24,7 +24,7 @@ const StyledDropdownSelectWithInput = styled.div`
     overflow: hidden;
     padding: 0 ${pxToRem(10)} 0 0;
     margin: 0;
-    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border: var(--border-width) solid var(--color-grey-400);
     background-color: ${COLORS.background1};
     font-size: ${stepToRem(-1)};
   }
@@ -165,7 +165,7 @@ const StyledDropdownSelectWithInput = styled.div`
     }
 
     &:not(:empty) {
-      border: ${pxToRem(2)} solid ${COLORS.line1};
+      border: var(--border-width) solid var(--color-grey-400);
       border-top: 0;
     }
 
@@ -226,7 +226,7 @@ const StyledDropdownSelectWithInput = styled.div`
   &:focus-within {
     .k-Form-DropdownSelectWithInput__container,
     .k-Form-DropdownSelectWithInput__list {
-      border-color: ${COLORS.line2};
+      border-color: var(--color-grey-500);
     }
 
     .k-Form-DropdownSelectWithInput__button:focus,

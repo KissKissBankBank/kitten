@@ -56,10 +56,10 @@ const argTypes = {
 
 const args = {
   show: true,
-  borderColor: COLORS.line1,
+  borderColor: 'var(--color-grey-400)',
   borderRadius: 8,
   borderStyle: 'solid',
-  borderWidth: 2,
+  borderWidth: 'var(--border-width)',
   imageBorderRadius: 5,
   actionProps: {
     href: '#',

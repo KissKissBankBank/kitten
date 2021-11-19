@@ -28,7 +28,7 @@ const StyledDocumentUploader = styled.div`
   }
 
   input[type='file']:focus + label {
-    border: ${pxToRem(2)} solid ${COLORS.primary4};
+    border: ${pxToRem(1)} solid ${COLORS.primary4};
   }
   input[type='file']:focus-visible + label {
     outline: auto;
@@ -38,7 +38,7 @@ const StyledDocumentUploader = styled.div`
   input[type='file']:hover {
     & + label {
       background-color: ${COLORS.background2};
-      border-color: ${COLORS.line1};
+      border-color: var(--color-grey-400);
       color: ${COLORS.font1};
 
       svg,
@@ -169,7 +169,7 @@ const StyledIconContainer = styled.div`
     position: absolute;
     right: ${pxToRem(-12)};
     top: ${pxToRem(-4)};
-    border: ${pxToRem(2)} solid ${COLORS.background1};
+    border: var(--border-width) solid ${COLORS.background1};
     width: ${pxToRem(20)};
     height: ${pxToRem(20)};
     border-radius: 50%;

@@ -32,7 +32,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #3b5998;
+  border: var(--border-width) solid #3b5998;
   background-color: #3b5998;
   color: #fff;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -276,7 +276,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #3b5998;
+  border: var(--border-width) solid #3b5998;
   background-color: #3b5998;
   color: #fff;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -520,7 +520,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #3b5998;
+  border: var(--border-width) solid #3b5998;
   background-color: #3b5998;
   color: #fff;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -780,7 +780,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #3b5998;
+  border: var(--border-width) solid #3b5998;
   background-color: #3b5998;
   color: #fff;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1040,7 +1040,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #00669e;
+  border: var(--border-width) solid #00669e;
   background-color: #00669e;
   color: #fff;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1284,7 +1284,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #00669e;
+  border: var(--border-width) solid #00669e;
   background-color: #00669e;
   color: #fff;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1528,7 +1528,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #55acee;
+  border: var(--border-width) solid #55acee;
   background-color: #55acee;
   color: #fff;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1772,7 +1772,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #55acee;
+  border: var(--border-width) solid #55acee;
   background-color: #55acee;
   color: #fff;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;

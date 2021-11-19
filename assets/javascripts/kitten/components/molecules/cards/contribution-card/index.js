@@ -26,7 +26,6 @@ export const ContributionCard = ({
   children,
   show,
   style,
-  borderWidth,
   borderRadius,
   borderColor,
   borderStyle,
@@ -52,7 +51,6 @@ export const ContributionCard = ({
       className={classNames('k-ContributionCard', className)}
       style={{
         ...style,
-        '--contributionCard--border-width': pxToRem(borderWidth),
         '--contributionCard--border-radius': pxToRem(borderRadius),
         '--contributionCard--border-color': borderColor,
         '--contributionCard--border-style': borderStyle,
@@ -96,10 +94,9 @@ ContributionCard.Action = Action
 ContributionCard.defaultProps = {
   show: true,
   closeButtonLabel: 'Close',
-  borderColor: COLORS.line1,
+  borderColor: 'var(--color-grey-400)',
   borderRadius: 8,
   borderStyle: 'solid',
-  borderWidth: 2,
   onClose: undefined,
   largeInput: false,
   largeTitle: false,
@@ -112,7 +109,6 @@ ContributionCard.propTypes = {
   borderColor: PropTypes.string,
   borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   borderStyle: PropTypes.string,
-  borderWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   largeInput: PropTypes.bool,
   largeTitle: PropTypes.bool,
 }

@@ -9,7 +9,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { Navbar } from './components/navbar'
 
-const borderSize = pxToRem(2)
+const borderSize = 'var(--border-width)'
 const cellSize = pxToRem(50)
 const tinyCellSize = pxToRem(40)
 const dayPickerPadding = pxToRem(30)
@@ -197,7 +197,7 @@ export class DatePicker extends Component {
           color: COLORS.background1,
         },
       },
-      borderColor: COLORS.line1,
+      borderColor: 'var(--color-grey-400)',
       weekdaysColor: COLORS.font1,
       day: {
         hover: {

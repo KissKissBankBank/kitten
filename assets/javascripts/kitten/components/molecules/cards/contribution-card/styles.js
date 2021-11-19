@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import COLORS from '../../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
 export const StyledContributionCard = styled.article`
@@ -13,18 +13,18 @@ export const StyledContributionCard = styled.article`
   box-sizing: border-box;
 
   /* IE11 defaults */
-  border-width: ${pxToRem(2)};
+  border-width: ${pxToRem(1)};
   border-style: solid;
-  border-color: ${COLORS.line1};
+  border-color: ${COLORS.line2};
   border-radius: ${pxToRem(8)};
 
-  border-width: var(--contributionCard--border-width);
+  border-width: var(--border-width);
   border-style: var(--contributionCard--border-style);
   border-color: var(--contributionCard--border-color);
   border-radius: var(--contributionCard--border-radius);
 
   @media (min-width: ${ScreenConfig.M.min}px) {
-    height: calc(${pxToRem(100)} + 2 * var(--contributionCard--border-width));
+    height: calc(${pxToRem(100)} + 2 * var(--border-width));
     display: flex;
   }
 

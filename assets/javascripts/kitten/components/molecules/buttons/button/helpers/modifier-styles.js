@@ -5,6 +5,7 @@ import { pxToRem } from '../../../../../helpers/utils/typography'
 export const modifierStyles = modifier => {
   let borderColor
   let borderStyle = 'solid'
+  let borderSize = 'var(--border-width)'
   let backgroundColor
   let color
 
@@ -17,7 +18,7 @@ export const modifierStyles = modifier => {
 
   switch (modifier) {
     case 'hydrogen':
-      borderColor = COLORS.line1
+      borderColor = 'var(--color-grey-400)'
       backgroundColor = COLORS.background1
       color = COLORS.font1
       break
@@ -115,7 +116,7 @@ export const modifierStyles = modifier => {
       break
 
     case 'calcium':
-      borderColor = COLORS.line1
+      borderColor = 'var(--color-grey-400)'
       backgroundColor = COLORS.background1
       color = COLORS.font1
       hoverBorderColor = COLORS.primary4
@@ -179,7 +180,7 @@ export const modifierStyles = modifier => {
   }
 
   return css`
-    border: ${pxToRem(2)} ${borderStyle} ${borderColor};
+    border: ${borderSize} ${borderStyle} ${borderColor};
     background-color: ${backgroundColor};
     color: ${color};
 
