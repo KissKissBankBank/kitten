@@ -38,7 +38,7 @@ const StyledLocationInput = styled.div`
 
     &:focus {
       color: ${COLORS.font1};
-      border-color: ${COLORS.line2};
+      border-color: var(--color-grey-500);
     }
 
     &:disabled {

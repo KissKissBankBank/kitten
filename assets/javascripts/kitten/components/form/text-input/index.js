@@ -138,7 +138,7 @@ const StyledInput = styled.input`
   }
 
   &:hover {
-    border-color: ${COLORS.line2};
+    border-color: var(--color-grey-500);
   }
 
   &:focus {

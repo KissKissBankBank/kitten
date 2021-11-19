@@ -87,7 +87,7 @@ const StyledArrow = styled.div`
   }
 
   ${StyledTextarea}:focus + & {
-    border-right-color: ${COLORS.line2};
+    border-right-color: var(--color-grey-500);
   }
 
   ${({ error }) =>

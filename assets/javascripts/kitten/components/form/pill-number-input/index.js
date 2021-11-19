@@ -20,7 +20,7 @@ const StyledPillNumberInput = styled.div`
   transition: border-color 0.2s ease;
 
   &:hover {
-    border-color: ${COLORS.line2};
+    border-color: var(--color-grey-500);
   }
 
   &,

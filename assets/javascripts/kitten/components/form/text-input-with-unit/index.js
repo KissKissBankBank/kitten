@@ -82,7 +82,7 @@ const StyledTextInputWithUnit = styled.div`
 
   &:focus-within {
     .k-Form-TextInputWithUnit__unit {
-      border-color: ${COLORS.line2};
+      border-color: var(--color-grey-500);
       color: ${COLORS.font1};
     }
   }

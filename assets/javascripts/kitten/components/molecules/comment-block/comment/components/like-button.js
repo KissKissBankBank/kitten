@@ -43,7 +43,7 @@ const StyledButton = styled.button`
 
       :focus,
       :active {
-        border-color: ${COLORS.line2};
+        border-color: var(--color-grey-500);
       }
     `}
 `

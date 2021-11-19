@@ -44,7 +44,7 @@ const Wrapper = styled.div`
     }
 
     &:focus {
-      border-color: ${COLORS.line2};
+      border-color: var(--color-grey-500);
     }
 
     ::-ms-clear {
@@ -56,7 +56,7 @@ const Wrapper = styled.div`
     color: ${COLORS.error3};
 
     :focus {
-      border-color: ${COLORS.line2};
+      border-color: var(--color-grey-500);
       color: ${COLORS.font1};
     }
   }

@@ -47,7 +47,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 }
 
 .c0 .k-Form-Autocomplete__input:focus {
-  border-color: #d8d8d8;
+  border-color: var(--color-grey-500);
 }
 
 .c0 .k-Form-Autocomplete__input::-ms-clear {
@@ -60,7 +60,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input:focus {
-  border-color: #d8d8d8;
+  border-color: var(--color-grey-500);
   color: #222;
 }
 
@@ -237,7 +237,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 }
 
 .c0 .k-Form-Autocomplete__input:focus {
-  border-color: #d8d8d8;
+  border-color: var(--color-grey-500);
 }
 
 .c0 .k-Form-Autocomplete__input::-ms-clear {
@@ -250,7 +250,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input:focus {
-  border-color: #d8d8d8;
+  border-color: var(--color-grey-500);
   color: #222;
 }
 
@@ -479,7 +479,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 }
 
 .c0 .k-Form-Autocomplete__input:focus {
-  border-color: #d8d8d8;
+  border-color: var(--color-grey-500);
 }
 
 .c0 .k-Form-Autocomplete__input::-ms-clear {
@@ -492,7 +492,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input:focus {
-  border-color: #d8d8d8;
+  border-color: var(--color-grey-500);
   color: #222;
 }
 

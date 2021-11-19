@@ -9,7 +9,7 @@ import { Progress } from '../../../../components/atoms/progress'
 import { Text } from '../../../../components/atoms/typography/text'
 
 const StyledCard = styled.a`
-  border: ${pxToRem(2)} solid transparent;
+  border: ${pxToRem(1)} solid transparent;
   background-color: ${COLORS.background1};
   box-sizing: border-box;
   height: ${pxToRem(70)};
@@ -29,12 +29,12 @@ const StyledCard = styled.a`
   transition: background-color 0.2s ease, border-color 0.2s ease;
 
   &[href]:hover {
-    border-color: ${COLORS.line1};
+    border-color: var(--color-grey-400);
     background-color: ${COLORS.background2};
   }
 
   &[href]:active {
-    border-color: ${COLORS.line2};
+    border-color: var(--color-grey-500);
     background-color: ${COLORS.background3};
   }
 

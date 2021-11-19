@@ -226,7 +226,7 @@ const StyledDropdownSelectWithInput = styled.div`
   &:focus-within {
     .k-Form-DropdownSelectWithInput__container,
     .k-Form-DropdownSelectWithInput__list {
-      border-color: ${COLORS.line2};
+      border-color: var(--color-grey-500);
     }
 
     .k-Form-DropdownSelectWithInput__button:focus,

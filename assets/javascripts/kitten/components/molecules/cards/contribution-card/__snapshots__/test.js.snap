@@ -34,10 +34,10 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
       </p>
     </span>
     <div
-      className="sc-EHOje dnLPFT k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion k-ContributionCard__inputWrapper"
+      className="sc-EHOje cHQuFl k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion k-ContributionCard__inputWrapper"
     >
       <input
-        className="sc-bxivhb bOYgzK k-Form-TextInput k-Form-TextInputWithUnit__input k-ContributionCard__input k-Form-TextInput--orion k-Form-TextInput--regular"
+        className="sc-bxivhb fOkFUo k-Form-TextInput k-Form-TextInputWithUnit__input k-ContributionCard__input k-Form-TextInput--orion k-Form-TextInput--regular"
         disabled={false}
         name="text"
         onChange={[Function]}
