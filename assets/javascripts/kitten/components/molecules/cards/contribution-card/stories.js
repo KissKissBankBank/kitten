@@ -30,11 +30,6 @@ const argTypes = {
     description: 'border style',
     control: 'text',
   },
-  borderWidth: {
-    name: 'borderWidth',
-    description: 'border width',
-    control: { type: 'text', type: 'number' },
-  },
   onClose: {
     name: 'close',
     description:
@@ -60,7 +55,6 @@ const args = {
   borderColor: 'var(--color-grey-400)',
   borderRadius: 8,
   borderStyle: 'solid',
-  borderWidth: 'var(--border-width)',
   onClose: action('onClose'),
   largeInput: false,
   largeTitle: false,

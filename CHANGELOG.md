@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `ContributionCard`: Remove buggy `borderWidth` prop.
 - Fix: `ToggleSwith`: Modernize components styles.
 - Feature: Design: Used `--border-width` and used A11Y color standards.
 - Feature: Token: Add `--border-width` variable.

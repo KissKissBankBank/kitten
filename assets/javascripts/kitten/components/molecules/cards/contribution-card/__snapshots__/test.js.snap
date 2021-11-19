@@ -2,13 +2,12 @@
 
 exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
 <article
-  className="sc-bwzfXH gBKKJk k-ContributionCard"
+  className="sc-bwzfXH jEkFbZ k-ContributionCard"
   style={
     Object {
       "--contributionCard--border-color": "var(--color-grey-400)",
       "--contributionCard--border-radius": "0.5rem",
       "--contributionCard--border-style": "dashed",
-      "--contributionCard--border-width": "NaNrem",
     }
   }
 >
@@ -67,13 +66,12 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
 
 exports[`<ContributionCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bwzfXH gBKKJk k-ContributionCard"
+  className="sc-bwzfXH jEkFbZ k-ContributionCard"
   style={
     Object {
       "--contributionCard--border-color": "var(--color-grey-400)",
       "--contributionCard--border-radius": "0.5rem",
       "--contributionCard--border-style": "solid",
-      "--contributionCard--border-width": "NaNrem",
     }
   }
 >

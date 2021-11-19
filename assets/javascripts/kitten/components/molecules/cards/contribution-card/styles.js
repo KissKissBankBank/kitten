@@ -18,13 +18,13 @@ export const StyledContributionCard = styled.article`
   border-color: ${COLORS.line2};
   border-radius: ${pxToRem(8)};
 
-  border-width: var(--contributionCard--border-width);
+  border-width: var(--border-width);
   border-style: var(--contributionCard--border-style);
   border-color: var(--contributionCard--border-color);
   border-radius: var(--contributionCard--border-radius);
 
   @media (min-width: ${ScreenConfig.M.min}px) {
-    height: calc(${pxToRem(100)} + 2 * var(--contributionCard--border-width));
+    height: calc(${pxToRem(100)} + 2 * var(--border-width));
     display: flex;
   }
 
