@@ -1,8 +1,8 @@
-name: Build Figma Tokens to CSS
+name: Test React components
 on: [pull_request]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
