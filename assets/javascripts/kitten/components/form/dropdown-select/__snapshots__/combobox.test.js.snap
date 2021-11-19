@@ -2,7 +2,7 @@
 
 exports[`<DropdownSelect combobox /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bwzfXH eRMaEH k-Form-Dropdown k-Form-Dropdown--orion k-Form-Dropdown--hydrogen k-Form-Dropdown--down k-Form-Dropdown--normal k-Form-Dropdown--arrowPosition-left k-Form-Dropdown--isOpen"
+  className="sc-bwzfXH kSjWfi k-Form-Dropdown k-Form-Dropdown--orion k-Form-Dropdown--hydrogen k-Form-Dropdown--down k-Form-Dropdown--normal k-Form-Dropdown--arrowPosition-left k-Form-Dropdown--isOpen"
   style={
     Object {
       "--menu-z-index": 1000,

@@ -24,7 +24,7 @@ const StyledDropdownSelectWithInput = styled.div`
     overflow: hidden;
     padding: 0 ${pxToRem(10)} 0 0;
     margin: 0;
-    border: var(--border-width-1) solid var(--color-grey-400);
+    border: var(--border-width) solid var(--color-grey-400);
     background-color: ${COLORS.background1};
     font-size: ${stepToRem(-1)};
   }
@@ -165,7 +165,7 @@ const StyledDropdownSelectWithInput = styled.div`
     }
 
     &:not(:empty) {
-      border: var(--border-width-1) solid var(--color-grey-400);
+      border: var(--border-width) solid var(--color-grey-400);
       border-top: 0;
     }
 

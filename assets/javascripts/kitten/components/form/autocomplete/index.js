@@ -12,7 +12,7 @@ import classNames from 'classnames'
 
 const itemHeight = 38
 const maxItemsVisibled = 3
-const borderSize = 'var(--border-width-1)'
+const borderSize = 'var(--border-width)'
 
 const Wrapper = styled.div`
   display: flex;

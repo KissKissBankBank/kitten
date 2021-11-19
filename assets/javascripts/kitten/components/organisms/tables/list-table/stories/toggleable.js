@@ -36,7 +36,7 @@ const defaultActionColWidth = { default: '100%', fromM: '50%', fromL: '20%' }
 const HeaderRow = styled(ListTable.Header)`
   background-color: ${COLORS.background1};
   color: ${COLORS.font1};
-  border-bottom: var(--border-width-1) solid var(--color-grey-400);
+  border-bottom: var(--border-width) solid var(--color-grey-400);
   padding-left: ${pxToRem(CONTAINER_PADDING_THIN / 2)};
   padding-right: ${pxToRem(CONTAINER_PADDING_THIN / 2)};
 
@@ -144,7 +144,7 @@ const CellWithLabelValue = styled(({ label, value, thead, ...props }) => (
 `
 
 const ToggleableTable = styled(ListTable)`
-  border: var(--border-width-1) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-400);
   border-bottom: 0;
 
   ul {

@@ -8,7 +8,7 @@ import { ButtonImage } from '../../../../components/molecules/buttons/button-ima
 
 const StyledCard = styled.div`
   padding: 0 ${pxToRem(20)};
-  border: var(--border-width-1) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-400);
   text-align: center;
   word-break: break-word;
 `

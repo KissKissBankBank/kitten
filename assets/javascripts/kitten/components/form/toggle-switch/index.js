@@ -9,7 +9,7 @@ import { LockIcon } from '../../../components/graphics/icons/lock-icon'
 const transitionDuration = '.15s'
 const switchWidth = 60
 const switchHeight = 30
-const borderSize = 'var(--border-width-1)'
+const borderSize = 'var(--border-width)'
 const borderRadius = 18
 
 const StyledSwitchContainer = styled.div`

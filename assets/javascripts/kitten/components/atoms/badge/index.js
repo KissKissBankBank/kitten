@@ -25,7 +25,7 @@ const StyledBadge = styled.span`
   font-size: ${stepToRem(-4)};
   line-height: 1.2;
 
-  border: var(--border-width-1) solid white;
+  border: var(--border-width) solid white;
 
   background-color: var(--Badge-background-color);
 

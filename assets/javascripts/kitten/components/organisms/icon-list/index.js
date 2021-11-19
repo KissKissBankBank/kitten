@@ -32,6 +32,6 @@ const StyledList = styled.ul`
     z-index: -1;
 
     content: '';
-    border-left: var(--border-width-1) dashed var(--color-grey-400);
+    border-left: var(--border-width) dashed var(--color-grey-400);
   }
 `

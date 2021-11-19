@@ -19,7 +19,7 @@ const StyledBadge = styled.span`
   background-color: var(--background-color, ${COLORS.primary1});
 
   &.k-IconBadge--empty {
-    border: var(--border-width-1) solid var(--color-grey-400);
+    border: var(--border-width) solid var(--color-grey-400);
     background-color: ${COLORS.background1};
   }
 

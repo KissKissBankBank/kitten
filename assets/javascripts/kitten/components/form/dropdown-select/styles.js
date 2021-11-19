@@ -8,7 +8,7 @@ export const StyledDropdown = styled.div`
   position: relative;
 
   --DropdownSelect-buttonHeight: ${pxToRem(50)};
-  --DropdownSelect-border: var(--border-width-1);
+  --DropdownSelect-border: var(--border-width);
   --DropdownSelect-padding: ${pxToRem(10)};
   --DropdownSelect-arrowContainerWidth: ${pxToRem(20)};
   --DropdownSelect-statusPadding: 0px;

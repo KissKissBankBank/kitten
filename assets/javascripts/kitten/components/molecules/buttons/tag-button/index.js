@@ -22,7 +22,7 @@ const StyledTagButton = styled.button`
   justify-content: center;
   position: relative;
   border-radius: ${pxToRem(4)};
-  border-width: var(--border-width-1);
+  border-width: var(--border-width);
   border-style: solid;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   box-sizing: border-box;

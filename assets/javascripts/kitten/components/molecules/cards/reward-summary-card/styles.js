@@ -86,7 +86,7 @@ const commonStyles = css`
 `
 
 export const StyledRewardSummaryCard = styled.div`
-  --rewardSummaryCard--border-width: var(--border-width-1);
+  --rewardSummaryCard--border-width: var(--border-width);
   --rewardSummaryCard--border-radius: ${pxToRem(8)};
 
   /* CARD STYLE */

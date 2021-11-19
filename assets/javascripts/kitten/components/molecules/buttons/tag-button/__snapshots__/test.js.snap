@@ -20,7 +20,7 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   border-radius: 0.25rem;
-  border-width: var(--border-width-1);
+  border-width: var(--border-width);
   border-style: solid;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -240,7 +240,7 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   border-radius: 0.25rem;
-  border-width: var(--border-width-1);
+  border-width: var(--border-width);
   border-style: solid;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -460,7 +460,7 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   border-radius: 0.25rem;
-  border-width: var(--border-width-1);
+  border-width: var(--border-width);
   border-style: solid;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -680,7 +680,7 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   border-radius: 0.25rem;
-  border-width: var(--border-width-1);
+  border-width: var(--border-width);
   border-style: solid;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -900,7 +900,7 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   border-radius: 0.25rem;
-  border-width: var(--border-width-1);
+  border-width: var(--border-width);
   border-style: solid;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1137,7 +1137,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   border-radius: 0.25rem;
-  border-width: var(--border-width-1);
+  border-width: var(--border-width);
   border-style: solid;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;

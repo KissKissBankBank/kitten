@@ -13,7 +13,7 @@ const StyledWrapper = styled.div`
   align-items: center;
   font-size: ${stepToRem(-1)};
   box-sizing: border-box;
-  border-width: var(--border-width-1);
+  border-width: var(--border-width);
   border-style: solid;
   border-radius: 0;
   width: 100%;

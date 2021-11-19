@@ -9,7 +9,7 @@ import classNames from 'classnames'
 
 const StyledInput = styled.input`
   --input-padding-horizontal: ${pxToRem(15)};
-  --input-border-width: var(--border-width-1);
+  --input-border-width: var(--border-width);
   --input-height: ${pxToRem(50)};
 
   font-size: ${stepToRem(-1)};

@@ -99,7 +99,7 @@ ContributionCard.defaultProps = {
   borderColor: 'var(--color-grey-400)',
   borderRadius: 8,
   borderStyle: 'solid',
-  borderWidth: 'var(--border-width-1)',
+  borderWidth: 'var(--border-width)',
   onClose: undefined,
   largeInput: false,
   largeTitle: false,

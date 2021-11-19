@@ -86,7 +86,7 @@ const StyledNav = styled.nav`
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: ${pxToRem(50)};
       height: ${pxToRem(50)};
-      border-width: var(--border-width-1)};
+      border-width: var(--border-width);
     }
 
     &:hover,

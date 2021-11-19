@@ -65,7 +65,7 @@ export const Styles = styled.div`
   .DoubleEntryTable__Column {
     height: ${pxToRem(68)};
     padding: 0 ${pxToRem(20)};
-    border: var(--border-width-1) solid var(--color-grey-400);
+    border: var(--border-width) solid var(--color-grey-400);
     font-size: ${stepToRem(-1)};
     line-height: 1.3;
     box-sizing: border-box;
@@ -89,7 +89,7 @@ export const Styles = styled.div`
       ${TYPOGRAPHY.fontStyles.regular}
       background: ${COLORS.background1};
       border-top-width: 0;
-      border-left-width: var(--border-width-1);
+      border-left-width: var(--border-width);
 
       position: sticky;
       left: 0;
@@ -113,7 +113,7 @@ export const Styles = styled.div`
       &:first-child {
         background: ${COLORS.background2};
         border-color: var(--color-grey-400);
-        border-left-width: var(--border-width-1);
+        border-left-width: var(--border-width);
 
         position: sticky;
         left: 0;
