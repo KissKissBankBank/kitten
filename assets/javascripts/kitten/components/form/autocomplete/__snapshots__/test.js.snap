@@ -15,7 +15,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   height: 3.125rem;
   box-sizing: border-box;
   background: var(--color-grey-000,#fff);
-  border: 0.125rem solid var(--color-grey-300,#eee);
+  border: var(--border-width) solid var(--color-grey-400);
   padding: 0 0.9375rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -47,7 +47,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 }
 
 .c0 .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-500);
 }
 
 .c0 .k-Form-Autocomplete__input::-ms-clear {
@@ -60,7 +60,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-500);
   color: var(--color-grey-900,#222);
 }
 
@@ -100,7 +100,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   background: var(--color-grey-000,#fff);
-  border: 0.125rem solid var(--color-grey-300,#eee);
+  border: var(--border-width) solid var(--color-grey-400);
   border-top: none;
   list-style: none;
   height: calc(2.375rem * var(--Autocomplete-suggestions,1));
@@ -205,7 +205,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   height: 3.125rem;
   box-sizing: border-box;
   background: var(--color-grey-000,#fff);
-  border: 0.125rem solid var(--color-grey-300,#eee);
+  border: var(--border-width) solid var(--color-grey-400);
   padding: 0 0.9375rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -237,7 +237,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 }
 
 .c0 .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-500);
 }
 
 .c0 .k-Form-Autocomplete__input::-ms-clear {
@@ -250,7 +250,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-500);
   color: var(--color-grey-900,#222);
 }
 
@@ -290,7 +290,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   background: var(--color-grey-000,#fff);
-  border: 0.125rem solid var(--color-grey-300,#eee);
+  border: var(--border-width) solid var(--color-grey-400);
   border-top: none;
   list-style: none;
   height: calc(2.375rem * var(--Autocomplete-suggestions,1));
@@ -447,7 +447,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   height: 3.125rem;
   box-sizing: border-box;
   background: var(--color-grey-000,#fff);
-  border: 0.125rem solid var(--color-grey-300,#eee);
+  border: var(--border-width) solid var(--color-grey-400);
   padding: 0 0.9375rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -479,7 +479,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 }
 
 .c0 .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-500);
 }
 
 .c0 .k-Form-Autocomplete__input::-ms-clear {
@@ -492,7 +492,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-500);
   color: var(--color-grey-900,#222);
 }
 
@@ -532,7 +532,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   background: var(--color-grey-000,#fff);
-  border: 0.125rem solid var(--color-grey-300,#eee);
+  border: var(--border-width) solid var(--color-grey-400);
   border-top: none;
   list-style: none;
   height: calc(2.375rem * var(--Autocomplete-suggestions,1));

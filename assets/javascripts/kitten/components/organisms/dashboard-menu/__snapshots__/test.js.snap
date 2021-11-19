@@ -100,6 +100,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   -webkit-flex: 1 0 0;
   -ms-flex: 1 0 0;
   flex: 1 0 0;
+  line-height: 1.4;
 }
 
 .c0 .k-DashboardMenu__selectorButton__text,
@@ -130,6 +131,10 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   gap: 0.625rem;
 }
 
+.c0 .k-DashboardMenu__expandable.k-DashboardMenu__expandable--small .k-DashboardMenu__expandable__list {
+  padding: 0 0.625rem 1.25rem 3.125rem;
+}
+
 .c0 .k-DashboardMenu__list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -158,6 +163,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
+.c0 .k-DashboardMenu__list > li > .k-DashboardMenu__expandable--small .k-DashboardMenu__expandable__title,
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item--small {
   height: 2.5rem;
 }
@@ -188,6 +194,11 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
   line-height: 1.125rem;
+  max-width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item:hover,
@@ -433,7 +444,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
       className="k-DashboardMenu__expandableWrapper"
     >
       <details
-        className="k-DashboardMenu__expandable"
+        className="k-DashboardMenu__expandable k-DashboardMenu__expandable--default"
         open={null}
       >
         <summary>

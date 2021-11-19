@@ -29,7 +29,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   box-sizing: border-box;
   margin-right: 0.6875rem;
   background-color: var(--color-grey-000,#fff);
-  border: 0.125rem solid var(--color-grey-300,#eee);
+  border: var(--border-width) solid var(--color-grey-400);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
@@ -660,7 +660,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   box-sizing: border-box;
   margin-right: 0.6875rem;
   background-color: var(--color-grey-000,#fff);
-  border: 0.125rem solid var(--color-grey-300,#eee);
+  border: var(--border-width) solid var(--color-grey-400);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;

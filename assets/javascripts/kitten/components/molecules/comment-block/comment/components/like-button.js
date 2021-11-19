@@ -14,7 +14,7 @@ const StyledButton = styled.button`
   position: relative;
   height: ${pxToRem(40)};
   padding: 0 ${pxToRem(15)};
-  border: ${pxToRem(2)} solid ${COLORS.line1};
+  border: var(--border-width) solid var(--color-grey-400);
   background-color: ${COLORS.background1};
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${pxToRem(12)};
@@ -43,7 +43,7 @@ const StyledButton = styled.button`
 
       :focus,
       :active {
-        border-color: ${COLORS.line2};
+        border-color: var(--color-grey-500);
       }
     `}
 `

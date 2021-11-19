@@ -8,7 +8,7 @@ export const StyledDropdown = styled.div`
   position: relative;
 
   --DropdownSelect-buttonHeight: ${pxToRem(50)};
-  --DropdownSelect-border: ${pxToRem(2)};
+  --DropdownSelect-border: var(--border-width);
   --DropdownSelect-padding: ${pxToRem(10)};
   --DropdownSelect-arrowContainerWidth: ${pxToRem(20)};
   --DropdownSelect-statusPadding: 0px;
@@ -36,7 +36,7 @@ export const StyledDropdown = styled.div`
     gap: ${pxToRem(10)};
     padding: 0 ${pxToRem(10)};
 
-    border: var(--DropdownSelect-border) solid ${COLORS.line1};
+    border: var(--DropdownSelect-border) solid var(--color-grey-400);
 
     font-size: ${stepToRem(-1)};
     text-align: left;
@@ -105,7 +105,7 @@ export const StyledDropdown = styled.div`
     list-style: none;
 
     &:not(:empty) {
-      border: var(--DropdownSelect-border) solid ${COLORS.line1};
+      border: var(--DropdownSelect-border) solid var(--color-grey-400);
     }
   }
 
@@ -371,7 +371,7 @@ export const StyledDropdown = styled.div`
   &.k-Form-Dropdown--nitrogen {
     .k-Form-DropdownCombobox,
     .k-Form-DropdownSelect__button {
-      border-color: ${COLORS.line1};
+      border-color: var(--color-grey-400);
       background-color: ${COLORS.background1};
     }
 
@@ -412,7 +412,7 @@ export const StyledDropdown = styled.div`
       background-color: ${COLORS.background1};
 
       &:not(:empty) {
-        border: ${pxToRem(2)} solid ${COLORS.line1};
+        border: var(--DropdownSelect-border) solid var(--color-grey-400);
       }
     }
 
@@ -434,7 +434,7 @@ export const StyledDropdown = styled.div`
       .k-Form-DropdownSelect__button,
       .k-Form-DropdownSelect__button__arrowBox,
       .k-Form-Dropdown__list {
-        border-color: ${COLORS.line2};
+        border-color: var(--color-grey-400);
       }
     }
 
@@ -446,7 +446,7 @@ export const StyledDropdown = styled.div`
       .k-Form-Dropdown__list,
       .k-Form-DropdownSelect__content {
         background-color: ${COLORS.line1};
-        border-color: ${COLORS.line2};
+        border-color: var(--color-grey-400);
       }
       .k-Form-DropdownCombobox__input {
         background-color: ${COLORS.line1};
@@ -465,8 +465,6 @@ export const StyledDropdown = styled.div`
   /* MODIFIER: BORON */
 
   &.k-Form-Dropdown--boron {
-    --DropdownSelect-border: ${pxToRem(1)};
-
     .k-Form-DropdownCombobox,
     .k-Form-DropdownSelect__button {
       border-color: ${COLORS.line3};
@@ -502,7 +500,7 @@ export const StyledDropdown = styled.div`
     .k-Form-Dropdown__list {
       background-color: ${COLORS.line3};
       &:not(:empty) {
-        border: ${pxToRem(1)} solid ${COLORS.line2};
+        border: var(--DropdownSelect-border) solid var(--color-grey-400);
       }
     }
 
@@ -533,7 +531,7 @@ export const StyledDropdown = styled.div`
       .k-Form-DropdownCombobox__arrowButton,
       .k-Form-DropdownSelect__button__arrowBox,
       .k-Form-Dropdown__list {
-        border-color: ${COLORS.line2};
+        border-color: var(--color-grey-400);
       }
     }
 

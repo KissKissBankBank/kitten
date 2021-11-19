@@ -32,7 +32,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #3b5998;
+  border: var(--border-width) solid #3b5998;
   background-color: #3b5998;
   color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -273,7 +273,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #3b5998;
+  border: var(--border-width) solid #3b5998;
   background-color: #3b5998;
   color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -514,7 +514,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #3b5998;
+  border: var(--border-width) solid #3b5998;
   background-color: #3b5998;
   color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -771,7 +771,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #3b5998;
+  border: var(--border-width) solid #3b5998;
   background-color: #3b5998;
   color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1028,7 +1028,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #00669e;
+  border: var(--border-width) solid #00669e;
   background-color: #00669e;
   color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1269,7 +1269,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #00669e;
+  border: var(--border-width) solid #00669e;
   background-color: #00669e;
   color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1510,7 +1510,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #55acee;
+  border: var(--border-width) solid #55acee;
   background-color: #55acee;
   color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1751,7 +1751,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #55acee;
+  border: var(--border-width) solid #55acee;
   background-color: #55acee;
   color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1992,7 +1992,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #ff0000;
+  border: var(--border-width) solid #ff0000;
   background-color: #ff0000;
   color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -2233,7 +2233,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #ff0000;
+  border: var(--border-width) solid #ff0000;
   background-color: #ff0000;
   color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;

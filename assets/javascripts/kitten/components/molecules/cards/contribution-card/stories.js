@@ -30,11 +30,6 @@ const argTypes = {
     description: 'border style',
     control: 'text',
   },
-  borderWidth: {
-    name: 'borderWidth',
-    description: 'border width',
-    control: { type: 'text', type: 'number' },
-  },
   onClose: {
     name: 'close',
     description:
@@ -57,10 +52,9 @@ const argTypes = {
 const args = {
   show: true,
   closeButtonLabel: 'Close',
-  borderColor: COLORS.line1,
+  borderColor: 'var(--color-grey-400)',
   borderRadius: 8,
   borderStyle: 'solid',
-  borderWidth: 2,
   onClose: action('onClose'),
   largeInput: false,
   largeTitle: false,

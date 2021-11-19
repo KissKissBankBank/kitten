@@ -122,6 +122,7 @@ const StyledDashboardMenu = styled.nav`
   .k-DashboardMenu__item .k-DashboardMenu__item__text,
   .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title__text {
     flex: 1 0 0;
+    line-height: 1.4;
 
     &,
     * {
@@ -140,6 +141,10 @@ const StyledDashboardMenu = styled.nav`
       display: flex;
       flex-direction: column;
       gap: ${pxToRem(10)};
+    }
+
+    &.k-DashboardMenu__expandable--small .k-DashboardMenu__expandable__list {
+      padding: 0 ${pxToRem(10)} ${pxToRem(20)} ${pxToRem(50)};
     }
   }
 
@@ -163,6 +168,10 @@ const StyledDashboardMenu = styled.nav`
     border-radius: ${pxToRem(4)};
   }
 
+  .k-DashboardMenu__list
+    > li
+    > .k-DashboardMenu__expandable--small
+    .k-DashboardMenu__expandable__title,
   .k-DashboardMenu__list > li > .k-DashboardMenu__item--small {
     height: ${pxToRem(40)};
   }
@@ -190,6 +199,11 @@ const StyledDashboardMenu = styled.nav`
   .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item {
     ${TYPOGRAPHY.fontStyles.light}
     line-height: ${pxToRem(18)};
+    max-width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     &:hover,
     &:focus,
@@ -400,7 +414,14 @@ const Item = ({
   </li>
 )
 
-const Expandable = ({ className, children, icon, title, ...props }) => {
+const Expandable = ({
+  className,
+  children,
+  icon,
+  title,
+  size = 'default',
+  ...props
+}) => {
   const [hasActiveInside, setActiveInside] = useState(false)
 
   useEffect(() => {
@@ -412,9 +433,14 @@ const Expandable = ({ className, children, icon, title, ...props }) => {
   return (
     <li className="k-DashboardMenu__expandableWrapper">
       <details
-        className={classNames('k-DashboardMenu__expandable', className, {
-          'k-DashboardMenu__expandable--hasActiveInside': hasActiveInside,
-        })}
+        className={classNames(
+          'k-DashboardMenu__expandable',
+          className,
+          `k-DashboardMenu__expandable--${size}`,
+          {
+            'k-DashboardMenu__expandable--hasActiveInside': hasActiveInside,
+          },
+        )}
         open={hasActiveInside ? hasActiveInside : null}
         {...props}
       >
@@ -585,6 +611,7 @@ Item.proptypes = {
 Expandable.proptypes = {
   icon: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
   title: PropTypes.node,
+  size: PropTypes.oneOf(['default', 'small']),
 }
 
 Selector.propTypes = {

@@ -141,7 +141,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid var(--color-grey-300,#eee);
+  border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;

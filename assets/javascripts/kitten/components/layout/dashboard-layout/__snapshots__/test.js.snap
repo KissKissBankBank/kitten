@@ -758,6 +758,10 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   display: none;
 }
 
+.c0 .k-DashboardLayout__mainWrapper:focus {
+  outline-offset: 0.125rem;
+}
+
 .c0 .k-DashboardLayout {
   min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
   min-height: -webkit-fill-available;
@@ -1389,6 +1393,10 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
 .c0 .k-DashboardLayout__siteHeader,
 .c0 .k-DashboardLayout__siteHeader ~ .k-DashboardLayout__quickAccessLink {
   display: none;
+}
+
+.c0 .k-DashboardLayout__mainWrapper:focus {
+  outline-offset: 0.125rem;
 }
 
 .c0 .k-DashboardLayout {
