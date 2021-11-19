@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: IE11: Remove all IE11 css.
+- Fix: `ContributionCard`: Remove buggy `borderWidth` prop.
+- Fix: `ToggleSwith`: Modernize components styles.
+- Feature: Design: Used `--border-width` and used A11Y color standards.
+- Feature: Token: Add `--border-width` variable.
 - Feature: Tooling: Add Figma Tokens automatic integration.
 - Feature: `DashboardMenu`: Add `size` prop to `DashboardMenu.Expandable`, defaults to `default`.
 - Fix: `DashboardMenu`: Style fixes.

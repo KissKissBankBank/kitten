@@ -47,7 +47,7 @@ const StyledButtonImage = styled.button`
   }
 
   &.k-ButtonImage--withBorder {
-    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border: var(--border-width) solid var(--color-grey-400);
   }
 
   .k-ButtonImage__img {

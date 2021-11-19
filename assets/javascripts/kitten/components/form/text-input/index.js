@@ -9,7 +9,7 @@ import classNames from 'classnames'
 
 const StyledInput = styled.input`
   --input-padding-horizontal: ${pxToRem(15)};
-  --input-border-width: ${pxToRem(2)};
+  --input-border-width: var(--border-width);
   --input-height: ${pxToRem(50)};
 
   font-size: ${stepToRem(-1)};
@@ -23,7 +23,7 @@ const StyledInput = styled.input`
   appearance: none;
   background-color: ${COLORS.background1};
   color: ${COLORS.font1};
-  border-color: ${COLORS.line1};
+  border-color: var(--color-grey-400);
   height: var(--input-height);
   min-height: var(--input-height);
 
@@ -130,7 +130,7 @@ const StyledInput = styled.input`
   }
 
   &:hover {
-    border-color: ${COLORS.line2};
+    border-color: var(--color-grey-500);
   }
 
   &:focus {

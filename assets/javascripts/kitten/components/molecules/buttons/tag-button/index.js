@@ -17,7 +17,7 @@ const StyledTagButton = styled.button`
   justify-content: center;
   position: relative;
   border-radius: ${pxToRem(4)};
-  border-width: ${pxToRem(2)};
+  border-width: var(--border-width);
   border-style: solid;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   box-sizing: border-box;
@@ -34,7 +34,7 @@ const StyledTagButton = styled.button`
 
     &.k-Buttons__tagButton--hydrogen {
       background-color: ${COLORS.background1};
-      border-color: ${COLORS.line1};
+      border-color: var(--color-grey-400);
       color: ${COLORS.font1};
 
       &:hover,
@@ -75,7 +75,7 @@ const StyledTagButton = styled.button`
   }
   &.k-Buttons__tagButton--icon {
     color: ${COLORS.font1};
-    border-color: ${COLORS.line1};
+    border-color: var(--color-grey-400);
     background-color: ${COLORS.background1};
 
     &:hover,
@@ -124,7 +124,7 @@ const StyledTagButton = styled.button`
   &.k-Buttons__tagButton--helium,
   &.k-Buttons__tagButton--hydrogen {
     color: ${COLORS.font1};
-    border-color: ${COLORS.line1};
+    border-color: var(--color-grey-400);
     background-color: ${COLORS.background1};
     &:hover,
     &:focus {

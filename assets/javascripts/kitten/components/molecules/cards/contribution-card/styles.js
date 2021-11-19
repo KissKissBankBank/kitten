@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import COLORS from '../../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
 export const StyledContributionCard = styled.article`
@@ -18,7 +18,7 @@ export const StyledContributionCard = styled.article`
   border-radius: var(--contributionCard--border-radius);
 
   @media (min-width: ${ScreenConfig.M.min}px) {
-    height: calc(${pxToRem(100)} + 2 * var(--contributionCard--border-width));
+    height: calc(${pxToRem(100)} + 2 * var(--border-width));
     display: flex;
   }
 

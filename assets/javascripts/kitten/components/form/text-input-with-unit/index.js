@@ -39,7 +39,7 @@ const StyledTextInputWithUnit = styled.div`
     min-width: ${pxToRem(42)};
     align-items: center;
     justify-content: center;
-    border-left: ${pxToRem(2)} solid ${COLORS.line1};
+    border-left: var(--border-width) solid var(--color-grey-400);
     border-radius: 0;
     box-sizing: border-box;
     color: ${COLORS.font1};
@@ -82,7 +82,7 @@ const StyledTextInputWithUnit = styled.div`
 
   &:focus-within {
     .k-Form-TextInputWithUnit__unit {
-      border-color: ${COLORS.line2};
+      border-color: var(--color-grey-500);
       color: ${COLORS.font1};
     }
   }

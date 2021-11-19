@@ -11,7 +11,7 @@ const styles = {
       color: '#fff',
     },
   },
-  borderColor: COLORS.line1,
+  borderColor: 'var(--color-grey-400)',
   weekdaysColor: COLORS.font1,
   day: {
     hover: {
@@ -22,7 +22,7 @@ const styles = {
       color: COLORS.primary1,
     },
     disabled: {
-      color: COLORS.line2,
+      color: 'var(--color-grey-400)',
     },
     selected: {
       backgroundColor: COLORS.primary1,

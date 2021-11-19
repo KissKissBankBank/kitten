@@ -19,7 +19,7 @@ import classNames from 'classnames'
 
 const GlobalStyle = createGlobalStyle`
   .k-ModalEditProject--container {
-    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border: var(--border-width) solid var(--color-grey-400);
     border-radius: ${pxToRem(8)};
     background-color: ${COLORS.background1};
     padding: ${pxToRem(20)};

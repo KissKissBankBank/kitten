@@ -7,12 +7,12 @@ PACKAGE_VERSION=$(cat package.json \
   | sed 's/[",]//g' \
   | tr -d '[[:space:]]')
 
-REALEASE_TAG="v$PACKAGE_VERSION"
+RELEASE_TAG="v$PACKAGE_VERSION"
 
-echo "Preparing to publish $PACKAGE_VERSION version linked to tag $REALEASE_TAG."
+echo "Preparing to publish $PACKAGE_VERSION version linked to tag $RELEASE_TAG."
 
-git tag -a ${REALEASE_TAG} -m "create new release $REALEASE_TAG"
-git push origin ${REALEASE_TAG}
+git tag -a ${RELEASE_TAG} -m "create new release $RELEASE_TAG"
+git push origin ${RELEASE_TAG}
 npm publish
 
 echo "Done! kitten v$PACKAGE_VERSION is published! 🚀"

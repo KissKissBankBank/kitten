@@ -49,7 +49,7 @@ const StyledButtonGroup = styled.div`
     .k-ButtonGroup__button {
       border-radius: ${pxToRem(4)};
       color: ${COLORS.font1};
-      border-color: ${COLORS.line1};
+      border-color: var(--color-grey-400);
       background-color: ${COLORS.background1};
 
       &:hover,
