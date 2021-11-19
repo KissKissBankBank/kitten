@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '14'
           cache: 'npm'
-      - run: npm install --no-save
+      - run: npm ci
       # Transform Figma Tokens JSON to something Style Dictionary can read
       - run: npx token-transformer data/tokens.json data/output.json global
       # Convert tokens according to Style Dictionary config
