@@ -46,10 +46,10 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 var StyledButton = _styledComponents.default.button.withConfig({
   displayName: "like-button__StyledButton",
   componentId: "sc-1pscjnx-0"
-})(["display:inline-flex;align-items:center;justify-content:center;position:relative;height:", ";padding:0 ", ";border:", " solid ", ";background-color:", ";", ";font-size:", ";color:", ";text-decoration:none;appareance:none;box-sizing:border-box;&[aria-pressed='true']{svg{fill:", ";}}", ""], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(2), _colorsConfig.default.line1, _colorsConfig.default.background1, _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(12), _colorsConfig.default.font1, _colorsConfig.default.error, function (_ref) {
+})(["display:inline-flex;align-items:center;justify-content:center;position:relative;height:", ";padding:0 ", ";border:var(--border-width) solid var(--color-grey-400);background-color:", ";", ";font-size:", ";color:", ";text-decoration:none;appareance:none;box-sizing:border-box;&[aria-pressed='true']{svg{fill:", ";}}", ""], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(15), _colorsConfig.default.background1, _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(12), _colorsConfig.default.font1, _colorsConfig.default.error, function (_ref) {
   var as = _ref.as,
       onClick = _ref.onClick;
-  return (as === 'a' || onClick) && (0, _styledComponents.css)(["cursor:pointer;:hover{svg{fill:", ";}}:focus,:active{border-color:", ";}"], _colorsConfig.default.error, _colorsConfig.default.line2);
+  return (as === 'a' || onClick) && (0, _styledComponents.css)(["cursor:pointer;:hover{svg{fill:", ";}}:focus,:active{border-color:var(--color-grey-500);}"], _colorsConfig.default.error);
 });
 
 var StyledHeartIcon = (0, _styledComponents.default)(_heartIcon.HeartIcon).withConfig({

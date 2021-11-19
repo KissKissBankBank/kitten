@@ -17,14 +17,13 @@ export var ContributionCard = function ContributionCard(_ref) {
       children = _ref.children,
       show = _ref.show,
       style = _ref.style,
-      borderWidth = _ref.borderWidth,
       borderRadius = _ref.borderRadius,
       borderColor = _ref.borderColor,
       borderStyle = _ref.borderStyle,
       onClose = _ref.onClose,
       largeInput = _ref.largeInput,
       largeTitle = _ref.largeTitle,
-      props = _objectWithoutProperties(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderWidth", "borderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"]);
+      props = _objectWithoutProperties(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"]);
 
   var imageChild = getReactElementsByType({
     children: children,
@@ -44,7 +43,6 @@ export var ContributionCard = function ContributionCard(_ref) {
   return /*#__PURE__*/React.createElement(StyledContributionCard, _extends({
     className: classNames('k-ContributionCard', className),
     style: _extends({}, style, {
-      '--contributionCard--border-width': pxToRem(borderWidth),
       '--contributionCard--border-radius': pxToRem(borderRadius),
       '--contributionCard--border-color': borderColor,
       '--contributionCard--border-style': borderStyle
@@ -79,10 +77,9 @@ ContributionCard.Action = Action;
 ContributionCard.defaultProps = {
   show: true,
   closeButtonLabel: 'Close',
-  borderColor: COLORS.line1,
+  borderColor: 'var(--color-grey-400)',
   borderRadius: 8,
   borderStyle: 'solid',
-  borderWidth: 2,
   onClose: undefined,
   largeInput: false,
   largeTitle: false
@@ -94,7 +91,6 @@ ContributionCard.propTypes = {
   borderColor: PropTypes.string,
   borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   borderStyle: PropTypes.string,
-  borderWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   largeInput: PropTypes.bool,
   largeTitle: PropTypes.bool
 };
