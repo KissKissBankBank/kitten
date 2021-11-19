@@ -28,7 +28,7 @@ const StyledAccordeon = styled.div`
     overflow: visible;
 
     background: transparent;
-    border: var(--border-width) solid var(--color-grey-400);
+    border: var(--border);
 
     font: inherit;
     color: inherit;
@@ -43,7 +43,7 @@ const StyledAccordeon = styled.div`
     visibility: visible;
     overflow: visible;
     height: auto;
-    border: var(--border-width) solid var(--color-grey-400);
+    border: var(--border);
     border-top: 0;
 
     visibility: visible;

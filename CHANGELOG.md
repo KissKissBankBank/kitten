@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Tokens: Add `--border` token with variations.
+
 ## [6.2.0] - 2021-11-19
 
 Features:

@@ -45,7 +45,7 @@ export const ListTableStyles = createGlobalStyle`
   }
 
   .k-ListTable__Row {
-    border-bottom: var(--border-width) solid var(--color-grey-400);
+    border-bottom: var(--border);
 
     &.k-ListTable__Row--is_highlighted {
       background: ${COLORS.primary5};

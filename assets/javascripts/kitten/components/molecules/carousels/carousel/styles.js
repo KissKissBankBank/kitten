@@ -362,33 +362,6 @@ export const StyledCarouselContainer = styled.div`
       }
     }
 
-    /* IE11 support */
-    display: -ms-grid;
-    -ms-grid-columns: (100% ${pxToRem(CONTAINER_PADDING_THIN / 2)}) [
-      ${({ numberOfPages }) => numberOfPages - 1}] 100%;
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      -ms-grid-columns: (100% ${pxToRem(CONTAINER_PADDING / 2)}) [
-        ${({ numberOfPages }) => numberOfPages - 1}] 100%;
-    }
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      -ms-grid-columns: (
-          100% ${({ baseItemMarginBetween }) => pxToRem(baseItemMarginBetween)}
-        )
-        [ ${({ numberOfPages }) => numberOfPages - 1}] 100%;
-    }
-
-    .k-Carousel__inner__pageContainer {
-      ${({ numberOfPages }) =>
-        [...Array(numberOfPages).keys()].map(
-          item => css`
-            &:nth-child(${item + 1}) {
-              -ms-grid-column: ${item * 2 + 1};
-            }
-          `,
-        )}
-      -ms-grid-column-span: 1;
-    }
   }
 
   &.k-Carousel--showOtherPages .k-Carousel__inner {
