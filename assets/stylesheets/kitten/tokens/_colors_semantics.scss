@@ -1,0 +1,34 @@
+:root {
+  /*!
+  * @tokens Colors
+  * @presenter Color
+  */
+
+  // PRIMARY
+  --color-primary-100: #e8f7fe; // old value, use var(--color-blue-100);
+  --color-primary-300: #bae8fd; // old value, use var(--color-blue-300);
+  --color-primary-500: #19b4fa; // old value, use var(--color-blue-500);
+  --color-primary-700: #05a8e6; // old value, use var(--color-blue-700);
+  --color-primary-900: #0496cc; // old value, use var(--color-blue-900);
+
+  // DANGER
+  --color-danger-100: #ffe5ec; // old value, use var(--color-red-100);
+  --color-danger-300: #ffb2c7; // old value, use var(--color-red-300);
+  --color-danger-500: #ff0046; // old value, use var(--color-red-500);
+  --color-danger-700: #d8043e; // old value, use var(--color-red-700);
+  --color-danger-900: #a8002e; // old value, use var(--color-red-900);
+
+  // SUCCESS
+  --color-success-100: #effaf1; // old value, use var(--color-green-100);
+  --color-success-300: #cff0d6; // old value, use var(--color-green-300);
+  --color-success-500: #61d079; // old value, use var(--color-green-500);
+  --color-success-700: var(--color-green-700);
+  --color-success-900: var(--color-green-900);
+
+  // WARNING
+  --color-warning-100: #fff2e7; // old value, use var(--color-yellow-100);
+  --color-warning-300: var(--color-yellow-300);
+  --color-warning-500: #ff7800; // old value, use var(--color-yellow-500);
+  --color-warning-700: #f57905; // old value, use var(--color-yellow-700);
+  --color-warning-900: #eb6e00; // old value, use var(--color-yellow-900);
+}
