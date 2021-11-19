@@ -2,7 +2,6 @@ import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutPr
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import COLORS from '../../../../constants/colors-config';
 import { pxToRem } from '../../../../helpers/utils/typography';
 import { Marger } from '../../../../components/layout/marger';
 import { Text } from '../../../../components/atoms/typography/text';
@@ -10,7 +9,7 @@ import { ButtonImage } from '../../../../components/molecules/buttons/button-ima
 var StyledCard = styled.div.withConfig({
   displayName: "backer-card__StyledCard",
   componentId: "sc-11um5n7-0"
-})(["padding:0 ", ";border:", " solid ", ";text-align:center;word-break:break-word;"], pxToRem(20), pxToRem(2), COLORS.line1);
+})(["padding:0 ", ";border:var(--border-width) solid var(--color-grey-400);text-align:center;word-break:break-word;"], pxToRem(20));
 var StyledSubtitle = styled(Text).withConfig({
   displayName: "backer-card__StyledSubtitle",
   componentId: "sc-11um5n7-1"

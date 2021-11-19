@@ -45,7 +45,7 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-var borderSize = (0, _typography.pxToRem)(2);
+var borderSize = 'var(--border-width)';
 var cellSize = (0, _typography.pxToRem)(50);
 var tinyCellSize = (0, _typography.pxToRem)(40);
 var dayPickerPadding = (0, _typography.pxToRem)(30);
@@ -186,7 +186,7 @@ DatePicker.defaultProps = {
         color: _colorsConfig.default.background1
       }
     },
-    borderColor: _colorsConfig.default.line1,
+    borderColor: 'var(--color-grey-400)',
     weekdaysColor: _colorsConfig.default.font1,
     day: {
       hover: {

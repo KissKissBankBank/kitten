@@ -41,14 +41,13 @@ var ContributionCard = function ContributionCard(_ref) {
       children = _ref.children,
       show = _ref.show,
       style = _ref.style,
-      borderWidth = _ref.borderWidth,
       borderRadius = _ref.borderRadius,
       borderColor = _ref.borderColor,
       borderStyle = _ref.borderStyle,
       onClose = _ref.onClose,
       largeInput = _ref.largeInput,
       largeTitle = _ref.largeTitle,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderWidth", "borderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"]);
   var imageChild = (0, _reactElements.getReactElementsByType)({
     children: children,
     type: ContributionCard.Image
@@ -67,7 +66,6 @@ var ContributionCard = function ContributionCard(_ref) {
   return /*#__PURE__*/_react.default.createElement(_styles.StyledContributionCard, (0, _extends2.default)({
     className: (0, _classnames.default)('k-ContributionCard', className),
     style: (0, _extends2.default)({}, style, {
-      '--contributionCard--border-width': (0, _typography.pxToRem)(borderWidth),
       '--contributionCard--border-radius': (0, _typography.pxToRem)(borderRadius),
       '--contributionCard--border-color': borderColor,
       '--contributionCard--border-style': borderStyle
@@ -104,10 +102,9 @@ ContributionCard.Action = _components.Action;
 ContributionCard.defaultProps = {
   show: true,
   closeButtonLabel: 'Close',
-  borderColor: _colorsConfig.default.line1,
+  borderColor: 'var(--color-grey-400)',
   borderRadius: 8,
   borderStyle: 'solid',
-  borderWidth: 2,
   onClose: undefined,
   largeInput: false,
   largeTitle: false
@@ -119,7 +116,6 @@ ContributionCard.propTypes = {
   borderColor: _propTypes.default.string,
   borderRadius: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   borderStyle: _propTypes.default.string,
-  borderWidth: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   largeInput: _propTypes.default.bool,
   largeTitle: _propTypes.default.bool
 };

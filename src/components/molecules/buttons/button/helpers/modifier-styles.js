@@ -16,6 +16,7 @@ var _typography = require("../../../../../helpers/utils/typography");
 var modifierStyles = function modifierStyles(modifier) {
   var borderColor;
   var borderStyle = 'solid';
+  var borderSize = 'var(--border-width)';
   var backgroundColor;
   var color;
   var hoverBorderColor = _colorsConfig.default.primary2;
@@ -27,7 +28,7 @@ var modifierStyles = function modifierStyles(modifier) {
 
   switch (modifier) {
     case 'hydrogen':
-      borderColor = _colorsConfig.default.line1;
+      borderColor = 'var(--color-grey-400)';
       backgroundColor = _colorsConfig.default.background1;
       color = _colorsConfig.default.font1;
       break;
@@ -125,7 +126,7 @@ var modifierStyles = function modifierStyles(modifier) {
       break;
 
     case 'calcium':
-      borderColor = _colorsConfig.default.line1;
+      borderColor = 'var(--color-grey-400)';
       backgroundColor = _colorsConfig.default.background1;
       color = _colorsConfig.default.font1;
       hoverBorderColor = _colorsConfig.default.primary4;
@@ -189,7 +190,7 @@ var modifierStyles = function modifierStyles(modifier) {
       break;
   }
 
-  return (0, _styledComponents.css)(["border:", " ", " ", ";background-color:", ";color:", ";svg:not(.k-ColorSvg){&,path{fill:currentColor;transition:fill 0.2s;}}transition:background-color 0.2s,color 0.2s,border-color 0.2s;", " ", " &:disabled,&.k-Button--disabled{border-color:", ";background-color:", ";color:", ";}"], (0, _typography.pxToRem)(2), borderStyle, borderColor, backgroundColor, color, modifier === 'social_instagram' && (0, _styledComponents.css)(["transition:background 0.2s,color 0.2s;border:0 !important;background-repeat:no-repeat;background-image:radial-gradient( farthest-side at 32% 100%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82% ),linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);background-size:160% 100%;background-position:center;&:hover,&:focus{background-image:radial-gradient( farthest-side at 32% 100%,#f0d26e 0%,#f0be5a 10%,#eb8228 28%,#dc3232 42%,transparent 82% ),linear-gradient(135deg,#143cc8 12%,#b42daf 58%);}&:active{background-image:radial-gradient( farthest-side at 32% 100%,#e1c35f 0%,#e1af4b 10%,#dc7319 28%,#cd2323 42%,transparent 82% ),linear-gradient(135deg,#052db9 12%,#a51ea0 58%);}"]), modifier !== 'checked' && (0, _styledComponents.css)(["&:hover,&:focus{border-color:", ";background-color:", ";color:", ";}&:active{border-color:", ";background-color:", ";color:", ";}"], hoverBorderColor, hoverBgColor, hoverColor, activeBorderColor, activeBgColor, activeColor), _colorsConfig.default.line2, _colorsConfig.default.line2, _colorsConfig.default.background1);
+  return (0, _styledComponents.css)(["border:", " ", " ", ";background-color:", ";color:", ";svg:not(.k-ColorSvg){&,path{fill:currentColor;transition:fill 0.2s;}}transition:background-color 0.2s,color 0.2s,border-color 0.2s;", " ", " &:disabled,&.k-Button--disabled{border-color:", ";background-color:", ";color:", ";}"], borderSize, borderStyle, borderColor, backgroundColor, color, modifier === 'social_instagram' && (0, _styledComponents.css)(["transition:background 0.2s,color 0.2s;border:0 !important;background-repeat:no-repeat;background-image:radial-gradient( farthest-side at 32% 100%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82% ),linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);background-size:160% 100%;background-position:center;&:hover,&:focus{background-image:radial-gradient( farthest-side at 32% 100%,#f0d26e 0%,#f0be5a 10%,#eb8228 28%,#dc3232 42%,transparent 82% ),linear-gradient(135deg,#143cc8 12%,#b42daf 58%);}&:active{background-image:radial-gradient( farthest-side at 32% 100%,#e1c35f 0%,#e1af4b 10%,#dc7319 28%,#cd2323 42%,transparent 82% ),linear-gradient(135deg,#052db9 12%,#a51ea0 58%);}"]), modifier !== 'checked' && (0, _styledComponents.css)(["&:hover,&:focus{border-color:", ";background-color:", ";color:", ";}&:active{border-color:", ";background-color:", ";color:", ";}"], hoverBorderColor, hoverBgColor, hoverColor, activeBorderColor, activeBgColor, activeColor), _colorsConfig.default.line2, _colorsConfig.default.line2, _colorsConfig.default.background1);
 };
 
 exports.modifierStyles = modifierStyles;
