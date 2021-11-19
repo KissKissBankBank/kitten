@@ -13,8 +13,6 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
-
 var _item = require("./components/item");
 
 var IconList = function IconList(_ref) {
@@ -35,4 +33,4 @@ var StyledContainer = _styledComponents.default.div.withConfig({
 var StyledList = _styledComponents.default.ul.withConfig({
   displayName: "icon-list__StyledList",
   componentId: "w4pzrv-1"
-})(["margin:0;padding:", " 0;list-style:none;:before{position:absolute;top:0;bottom:0;left:", ";z-index:-1;content:'';border-left:2px dashed ", ";}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(24), _colorsConfig.default.line1);
+})(["margin:0;padding:", " 0;list-style:none;:before{position:absolute;top:0;bottom:0;left:", ";z-index:-1;content:'';border-left:var(--border-width) dashed var(--color-grey-400);}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(24));

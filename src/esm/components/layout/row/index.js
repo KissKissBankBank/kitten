@@ -11,7 +11,7 @@ import { ScreenConfig } from '../../../constants/screen-config';
 var StyledRow = styled.div.withConfig({
   displayName: "row__StyledRow",
   componentId: "aqavk0-0"
-})(["&.k-Row--centered{text-align:center;}&.k-Row--light{background:", ";}&.k-Row--dark{background:", ";color:", ";}&.k-Row--lightTopBorder{border-top:", " solid ", ";}&.k-Row--lightBottomBorder{border-bottom:", " solid ", ";}&.k-Row--padded .k-Row__content{padding-top:", ";padding-bottom:", ";@media (min-width:", "){padding-top:", ";padding-bottom:", ";}}"], COLORS.primary6, COLORS.line2, COLORS.background1, pxToRem(1), COLORS.line1, pxToRem(1), COLORS.line1, pxToRem(60), pxToRem(60), pxToRem(ScreenConfig.L.min), pxToRem(80), pxToRem(80));
+})(["&.k-Row--centered{text-align:center;}&.k-Row--light{background:", ";}&.k-Row--dark{background:", ";color:", ";}&.k-Row--lightTopBorder{border-top:var(--border-width) solid var(--color-grey-400);}&.k-Row--lightBottomBorder{border-bottom:var(--border-width) solid var(--color-grey-400);}&.k-Row--padded .k-Row__content{padding-top:", ";padding-bottom:", ";@media (min-width:", "){padding-top:", ";padding-bottom:", ";}}"], COLORS.primary6, COLORS.line2, COLORS.background1, pxToRem(60), pxToRem(60), pxToRem(ScreenConfig.L.min), pxToRem(80), pxToRem(80));
 export var Row = function Row(_ref) {
   var className = _ref.className,
       contentClassName = _ref.contentClassName,

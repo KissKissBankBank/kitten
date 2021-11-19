@@ -32,7 +32,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #eee;
+  border: var(--border-width) solid var(--color-grey-400);
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -231,7 +231,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c1.k-CheckableButton--left::after {
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
-  border: 0.125rem solid #d8d8d8;
+  border: var(--border-width) solid var(--color-grey-400);
   background-color: #fff;
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;
@@ -441,7 +441,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #bae8fd;
+  border: var(--border-width) solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -640,7 +640,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c1.k-CheckableButton--left::after {
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
-  border: 0.125rem solid #d8d8d8;
+  border: var(--border-width) solid var(--color-grey-400);
   background-color: #fff;
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;
@@ -850,7 +850,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #bae8fd;
+  border: var(--border-width) solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1049,7 +1049,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 .c1.k-CheckableButton--left::after {
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
-  border: 0.125rem solid #d8d8d8;
+  border: var(--border-width) solid var(--color-grey-400);
   background-color: #fff;
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;
@@ -1259,7 +1259,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #ffb2c7;
+  border: var(--border-width) solid #ffb2c7;
   background-color: #fff;
   color: #ff0046;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1458,7 +1458,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c1.k-CheckableButton--left::after {
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
-  border: 0.125rem solid #d8d8d8;
+  border: var(--border-width) solid var(--color-grey-400);
   background-color: #fff;
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;
@@ -1668,7 +1668,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: 0.125rem solid #bae8fd;
+  border: var(--border-width) solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1867,7 +1867,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c1.k-CheckableButton--left::after {
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
-  border: 0.125rem solid #d8d8d8;
+  border: var(--border-width) solid var(--color-grey-400);
   background-color: #fff;
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;

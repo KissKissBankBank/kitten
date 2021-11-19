@@ -75,7 +75,7 @@ export const StyledHeader = styled.header`
     z-index: var(--HeaderNav_quickAccessLink_zIndex, 2);
     padding: 0 ${pxToRem(30)};
     background-color: ${COLORS.background1};
-    border-right: ${pxToRem(1)} solid ${COLORS.line1};
+    border-right: var(--border-width) solid var(--color-grey-400);
     ${TYPOGRAPHY.fontStyles.regular}
     color: ${COLORS.font1};
     line-height: 1;

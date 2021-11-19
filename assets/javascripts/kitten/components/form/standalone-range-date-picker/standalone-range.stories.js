@@ -13,7 +13,7 @@ const styles = {
       color: COLORS.font1,
     },
   },
-  borderColor: COLORS.line1,
+  borderColor: 'var(--color-grey-400)',
   weekdaysColor: COLORS.font1,
   day: {
     focus: {

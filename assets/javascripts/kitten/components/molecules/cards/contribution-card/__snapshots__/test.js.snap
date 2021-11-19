@@ -2,13 +2,12 @@
 
 exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
 <article
-  className="sc-bwzfXH hMjWaa k-ContributionCard"
+  className="sc-bwzfXH jEkFbZ k-ContributionCard"
   style={
     Object {
-      "--contributionCard--border-color": "#eee",
+      "--contributionCard--border-color": "var(--color-grey-400)",
       "--contributionCard--border-radius": "0.5rem",
       "--contributionCard--border-style": "dashed",
-      "--contributionCard--border-width": "0.125rem",
     }
   }
 >
@@ -34,10 +33,10 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
       </p>
     </span>
     <div
-      className="sc-EHOje gIabll k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion k-ContributionCard__inputWrapper"
+      className="sc-EHOje gdYAPv k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion k-ContributionCard__inputWrapper"
     >
       <input
-        className="sc-bxivhb boXQtP k-Form-TextInput k-Form-TextInputWithUnit__input k-ContributionCard__input k-Form-TextInput--orion k-Form-TextInput--regular"
+        className="sc-bxivhb cTlIzl k-Form-TextInput k-Form-TextInputWithUnit__input k-ContributionCard__input k-Form-TextInput--orion k-Form-TextInput--regular"
         disabled={false}
         name="text"
         onChange={[Function]}
@@ -50,7 +49,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
       </span>
     </div>
     <button
-      className="sc-bdVaJa fkGlVX k-Button k-ContributionCard__action k-Button--regular k-Button--helium k-Button--orion k-Button--fit-content k-Button--disabled"
+      className="sc-bdVaJa dagNMC k-Button k-ContributionCard__action k-Button--regular k-Button--helium k-Button--orion k-Button--fit-content k-Button--disabled"
       disabled={true}
       style={
         Object {
@@ -67,13 +66,12 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
 
 exports[`<ContributionCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bwzfXH hMjWaa k-ContributionCard"
+  className="sc-bwzfXH jEkFbZ k-ContributionCard"
   style={
     Object {
-      "--contributionCard--border-color": "#eee",
+      "--contributionCard--border-color": "var(--color-grey-400)",
       "--contributionCard--border-radius": "0.5rem",
       "--contributionCard--border-style": "solid",
-      "--contributionCard--border-width": "0.125rem",
     }
   }
 >

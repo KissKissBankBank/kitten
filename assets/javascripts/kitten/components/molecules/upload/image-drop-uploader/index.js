@@ -40,7 +40,7 @@ const StyledImageDropUploader = styled.div`
     width: 100%;
     padding: ${pxToRem(15)};
     border-radius: ${pxToRem(8)};
-    border: ${pxToRem(2)} dashed ${COLORS.line1};
+    border: var(--border-width) dashed var(--color-grey-400);
 
     flex-direction: column;
     align-items: center;
@@ -115,7 +115,7 @@ const StyledImageDropUploader = styled.div`
     width: 100%;
     position: relative;
     box-sizing: border-box;
-    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border: var(--border-width) solid var(--color-grey-400);
 
     display: flex;
     gap: ${pxToRem(15)};

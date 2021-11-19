@@ -76,7 +76,7 @@ const StyledCheckableButton = styled(Button)`
     &::after {
       margin: 0 ${pxToRem(15)};
       margin: 0 var(--CheckableButton-checkMargin);
-      border: ${pxToRem(2)} solid ${COLORS.line2};
+      border: var(--border-width) solid var(--color-grey-400);
       background-color: ${COLORS.background1};
 
       transition: border-color 0.2s ease, background 0.2s ease;

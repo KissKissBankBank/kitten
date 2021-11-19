@@ -9,12 +9,12 @@ import { Progress } from '../../../../components/atoms/progress'
 import { Text } from '../../../../components/atoms/typography/text'
 
 const StyledCard = styled.a`
-  border: ${pxToRem(2)} solid transparent;
+  border: var(--border-width) solid transparent;
   background-color: ${COLORS.background1};
   box-sizing: border-box;
   height: ${pxToRem(70)};
   width: 100%;
-  padding: ${pxToRem(3)};
+  padding: ${pxToRem(4)};
 
   display: grid;
   gap: ${pxToRem(5)} ${pxToRem(10)};
@@ -24,17 +24,17 @@ const StyledCard = styled.a`
   text-decoration: none;
   color: ${COLORS.font1};
   /* Border Radius should Image border radius (4) plus padding plus border. */
-  border-radius: ${pxToRem(4 + 3 + 2)};
+  border-radius: calc(${pxToRem(4 + 4)} + var(--border-width));
 
   transition: background-color 0.2s ease, border-color 0.2s ease;
 
   &[href]:hover {
-    border-color: ${COLORS.line1};
+    border-color: var(--color-grey-400);
     background-color: ${COLORS.background2};
   }
 
   &[href]:active {
-    border-color: ${COLORS.line2};
+    border-color: var(--color-grey-500);
     background-color: ${COLORS.background3};
   }
 

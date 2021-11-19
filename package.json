@@ -1,6 +1,6 @@
 {
   "name": "@kisskissbankbank/kitten",
-  "version": "6.1.0",
+  "version": "6.2.0",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src",
@@ -108,8 +108,10 @@
     "sinon": "10.0.0",
     "sinon-test": "3.0.0",
     "storybook-design-token": "1.4.0",
+    "style-dictionary": "^3.0.3",
     "style-loader": "3.2.1",
     "terser-webpack-plugin": "5.2.3",
+    "token-transformer": "^0.0.13",
     "webpack": "5.52.0",
     "webpack-cli": "4.8.0",
     "webpack-fix-style-only-entries": "0.6.1"
@@ -133,6 +135,7 @@
     "build:css": "webpack --config webpack/sass.config.js",
     "build:utilities": "rm -rf src/stylesheets/utilities.css && webpack --config webpack/utilities.config.js",
     "build:tokens": "rm -rf src/stylesheets/tokens.css && webpack --config webpack/tokens.config.js",
+    "build:style-dictionary": "style-dictionary build --config ./sd.config.js",
     "eslint": "eslint --fix assets/javascripts/**",
     "prettier": "find ./assets/javascripts -regex '.*.js' | xargs prettier --config prettier.config.js --write"
   },

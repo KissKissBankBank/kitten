@@ -3,7 +3,7 @@
 exports[`<Pagination /> by default should match its empty snapshot 1`] = `
 <nav
   aria-label="Pagination navigation"
-  className="sc-bdVaJa jOfhNF Pagination Pagination--isAligned-undefined"
+  className="sc-bdVaJa gDKvcV Pagination Pagination--isAligned-undefined"
   role="navigation"
 >
   <ul

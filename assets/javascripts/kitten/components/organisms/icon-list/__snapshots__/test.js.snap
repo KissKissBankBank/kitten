@@ -83,7 +83,7 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
   left: 1.5rem;
   z-index: -1;
   content: '';
-  border-left: 2px dashed #eee;
+  border-left: var(--border-width) dashed var(--color-grey-400);
 }
 
 @media (min-width:640px) {

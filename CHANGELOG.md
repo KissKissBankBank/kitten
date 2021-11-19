@@ -9,6 +9,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `DragAndDropList`: Add `a11yInstructions` prop.
 - Feature: `DashboardMenu`: Add `size` prop to `DashboardMenu.Expandable`, defaults to `default`.
 - Fix: `DashboardMenu`: Style fixes.
+- `ToggleSwitch`: Fix controlled switch.
+
+## [6.2.0] - 2021-11-19
+
+Features:
+
+- Tooling: Add Figma Tokens automatic integration.
+- Token: Add `--border-width` variable on all borders.
+- Design: Use new `--border-width` along with value with A11Y color standards.
+- `DashboardMenu`: Add `size` prop to `DashboardMenu.Expandable`, defaults to `default`.
+
+Fixes:
+
+- `DashboardMenu`: Style fixes.
+- `ContributionCard`: Remove buggy `borderWidth` prop.
+- `ToggleSwitch`: Modernize components styles.
 
 ## [6.1.0] - 2021-11-15
 

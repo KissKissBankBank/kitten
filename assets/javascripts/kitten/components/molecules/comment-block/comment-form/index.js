@@ -34,9 +34,9 @@ const StyledTextarea = styled.textarea`
   overflow-y: hidden;
   resize: none;
   box-sizing: border-box;
-  border-width: ${pxToRem(2)};
+  border-width: var(--border-width);
   border-style: solid;
-  border-color: ${COLORS.line1};
+  border-color: var(--color-grey-400);
   color: ${COLORS.font1};
   padding: ${pxToRem(30)};
   font-size: ${stepToRem(-1)};
@@ -79,7 +79,7 @@ const StyledArrow = styled.div`
   border-width: ${pxToRem(10)};
   border-style: solid;
   border-color: transparent;
-  border-right-color: ${COLORS.line1};
+  border-right-color: var(--color-grey-400);
   left: -${pxToRem(20)};
 
   @media (min-width: ${ScreenConfig.S.min}px) {
@@ -87,7 +87,7 @@ const StyledArrow = styled.div`
   }
 
   ${StyledTextarea}:focus + & {
-    border-right-color: ${COLORS.line2};
+    border-right-color: var(--color-grey-500);
   }
 
   ${({ error }) =>
@@ -106,7 +106,7 @@ const StyledArrowBefore = styled.span`
   border-style: solid;
   border-color: transparent;
   border-right-color: ${COLORS.background1};
-  left: -${pxToRem(7)};
+  left: -${pxToRem(8)};
 `
 
 export class CommentForm extends PureComponent {
