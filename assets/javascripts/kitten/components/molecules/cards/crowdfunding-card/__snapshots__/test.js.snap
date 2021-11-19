@@ -134,7 +134,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 .c0 .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
   position: relative;
-  padding-top: calc( (0.625) * 100% );
+  padding-top: calc(var(--Image-container-ratio) * 100%);
 }
 
 .c0 .k-CrowdfundingCard__image__imageContainer > .k-CrowdfundingCard__image__image {
@@ -504,6 +504,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   className="c0 k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
   href={null}
   onClick={[Function]}
+  style={
+    Object {
+      "--Image-container-ratio": 0.625,
+    }
+  }
   title="Lorem ipsum…"
 >
   <div
@@ -885,7 +890,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 .c0 .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
   position: relative;
-  padding-top: calc( (0.625) * 100% );
+  padding-top: calc(var(--Image-container-ratio) * 100%);
 }
 
 .c0 .k-CrowdfundingCard__image__imageContainer > .k-CrowdfundingCard__image__image {
@@ -1316,6 +1321,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   className="c0 k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
   href={null}
   onClick={[Function]}
+  style={
+    Object {
+      "--Image-container-ratio": 0.625,
+    }
+  }
   title="Lorem ipsum…"
 >
   <div
@@ -1655,7 +1665,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 .c0 .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
   position: relative;
-  padding-top: calc( (0.625) * 100% );
+  padding-top: calc(var(--Image-container-ratio) * 100%);
 }
 
 .c0 .k-CrowdfundingCard__image__imageContainer > .k-CrowdfundingCard__image__image {
@@ -2084,6 +2094,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   className="c0 k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
   href={null}
   onClick={[Function]}
+  style={
+    Object {
+      "--Image-container-ratio": 0.625,
+    }
+  }
   title="Lorem ipsum…"
 >
   <div
@@ -2427,7 +2442,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 .c0 .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
   position: relative;
-  padding-top: calc( (0.625) * 100% );
+  padding-top: calc(var(--Image-container-ratio) * 100%);
 }
 
 .c0 .k-CrowdfundingCard__image__imageContainer > .k-CrowdfundingCard__image__image {
@@ -2858,6 +2873,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   className="c0 k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
   href={null}
   onClick={[Function]}
+  style={
+    Object {
+      "--Image-container-ratio": 0.625,
+    }
+  }
   title="Lorem ipsum…"
 >
   <div

@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
 export const StyledContributionCard = styled.article`
@@ -12,7 +11,7 @@ export const StyledContributionCard = styled.article`
   overflow: hidden;
   box-sizing: border-box;
 
-  border-width: var(--contributionCard--border-width);
+  border-width: var(--border-width);
   border-style: var(--contributionCard--border-style);
   border-color: var(--contributionCard--border-color);
   border-radius: var(--contributionCard--border-radius);

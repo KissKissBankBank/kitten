@@ -54,9 +54,7 @@ const mobileStyles = css`
     overflow: hidden;
     position: relative;
 
-    padding-top: calc(
-      (${({ imageContainerRatio }) => imageContainerRatio}) * 100%
-    );
+    padding-top: calc(var(--Image-container-ratio) * 100%);
 
     & > .k-CrowdfundingCard__image__image {
       display: block;
@@ -368,7 +366,7 @@ const tabletStyles = css`
 const desktopStyles = css``
 
 export const StyledCrowdfundingCard = styled(
-  ({ imageContainerRatio, forceVersion, ...props }) => <div {...props} />,
+  ({ forceVersion, ...props }) => <div {...props} />,
 )`
   ${({ forceVersion }) => {
     return (() => {
