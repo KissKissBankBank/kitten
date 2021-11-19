@@ -177,11 +177,11 @@ export const ToggleSwitch = ({
         type="button"
         disabled={disabled || locked}
         aria-pressed={isPressed}
-        {...switchProps}
         aria-label={isLabelVisible ? null : label}
         aria-labelledby={isLabelVisible ? `${id}_label` : null}
         id={id}
         onClick={handleClick}
+        {...switchProps}
       >
         <span className="k-ToggleSwitch__circle" aria-hidden="true">
           {locked && <LockIcon width="12" color={COLORS.font1} />}
