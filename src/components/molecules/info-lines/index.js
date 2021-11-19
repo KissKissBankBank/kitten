@@ -81,7 +81,7 @@ InfoLines.propTypes = {
   itemTagList: _propTypes.default.string
 };
 InfoLines.defaultProps = {
-  borderColor: _colorsConfig.default.line1,
+  borderColor: 'var(--color-grey-400)',
   withBorderRadius: false,
   withLeftRightBorder: false,
   withoutTopBottomBorder: false,

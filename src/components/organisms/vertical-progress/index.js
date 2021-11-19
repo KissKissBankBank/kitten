@@ -30,7 +30,7 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 var StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "vertical-progress__StyledContainer",
   componentId: "sc-1rbh3oq-0"
-})(["&:not(.k-VerticalProgress__wrapper--withoutBorder){border:", " solid ", ";padding:", ";border-radius:", ";@media (min-width:", "px){padding:", ";}}.k-VerticalProgress{position:relative;padding:0;}.k-VerticalProgress__list{margin:0;padding:0;list-style:none;:before{position:absolute;top:0;bottom:0;left:", ";content:'';border-left:", " dotted ", ";}}"], (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(8), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(2), _colorsConfig.default.line1);
+})(["&:not(.k-VerticalProgress__wrapper--withoutBorder){border:var(--border-width) solid var(--color-grey-400);padding:", ";border-radius:", ";@media (min-width:", "px){padding:", ";}}.k-VerticalProgress{position:relative;padding:0;}.k-VerticalProgress__list{margin:0;padding:0;list-style:none;:before{position:absolute;top:0;bottom:0;left:", ";content:'';border-left:", " dotted ", ";}}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(8), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(2), _colorsConfig.default.line1);
 
 var VerticalProgress = function VerticalProgress(_ref) {
   var children = _ref.children,

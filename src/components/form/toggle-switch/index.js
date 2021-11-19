@@ -17,6 +17,8 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
@@ -29,74 +31,29 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _lockIcon = require("../../../components/graphics/icons/lock-icon");
 
-var transitionDuration = '.15s';
-var switchWidth = 60;
-var switchHeight = 30;
-var borderSize = 2;
-var borderRadius = 18;
-
-var StyledSwitchContainer = _styledComponents.default.div.withConfig({
-  displayName: "toggle-switch__StyledSwitchContainer",
+var SwitchWrapper = _styledComponents.default.div.withConfig({
+  displayName: "toggle-switch__SwitchWrapper",
   componentId: "ski4b0-0"
-})(["display:inline-flex;align-items:center;cursor:pointer;", " ", ""], function (_ref) {
-  var isDisabled = _ref.isDisabled;
-  return isDisabled && (0, _styledComponents.css)(["cursor:not-allowed;"]);
-}, function (_ref2) {
-  var reverseOrder = _ref2.reverseOrder;
-  return reverseOrder && (0, _styledComponents.css)(["flex-direction:row-reverse;& ", "{padding-right:", ";padding-left:0;}"], StyledLabel, (0, _typography.pxToRem)(10));
-});
+})(["--toggleSwitch-width:", ";--toggleSwitch-height:", ";--toggleSwitch-border:var(--border-width);--toggleSwitch-borderRadius:", ";--toggleSwitch-duration:0.15s;display:inline-flex;align-items:center;cursor:pointer;gap:", ";.k-ToggleSwitch--disabled{cursor:not-allowed;}.k-ToggleSwitch--reverseOrder{flex-direction:row-reverse;}.k-ToggleSwitch--locked .k-ToggleSwitch__button{color:var(--toggleSwitch-disabledColor);border-color:currentColor;}.k-ToggleSwitch__button{display:inline-block;position:relative;box-sizing:border-box;width:var(--toggleSwitch-width);height:var(--toggleSwitch-height);color:var(--toggleSwitch-defaultColor);background-color:currentColor;border:var(--toggleSwitch-border) solid ", ";border-radius:var(--toggleSwitch-borderRadius);transition:color var(--toggleSwitch-duration) ease,border-color var(--toggleSwitch-duration) ease,background-color var(--toggleSwitch-duration) ease;cursor:pointer;&:focus{border-color:", ";.k-ToggleSwitch__circle{border-color:", ";}}.k-ToggleSwitch__circle{position:absolute;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;left:calc(-1 * var(--toggleSwitch-border));top:calc(-1 * var(--toggleSwitch-border));width:var(--toggleSwitch-height);height:var(--toggleSwitch-height);background-color:", ";border:var(--toggleSwitch-border) solid ", ";border-radius:var(--toggleSwitch-height);transition:left var(--toggleSwitch-duration) ease,color var(--toggleSwitch-duration) ease,border-color var(--toggleSwitch-duration) ease,background-color var(--toggleSwitch-duration) ease;}&[aria-pressed='true']{color:var(--toggleSwitch-checkedColor);border-color:currentColor;.k-ToggleSwitch__circle{left:calc(var(--toggleSwitch-width) - var(--toggleSwitch-height) - var(--toggleSwitch-border));border-color:currentColor;}}&:active{color:var(--toggleSwitch-activeColor);&,.k-ToggleSwitch__circle{border-color:var(--toggleSwitch-activeColor);}}&[disabled]{cursor:not-allowed;.k-ToggleSwitch__circle{pointer-events:none;}}}.k-ToggleSwitch__label{padding-left:", ";", " font-size:", ";color:", ";transition:color var(--toggleSwitch-duration) ease;cursor:pointer;::selection{background:transparent;}::-moz-selection{background:transparent;}}.k-ToggleSwitch--big .k-ToggleSwitch__label{font-size:", ";}&:hover .k-ToggleSwitch__label{color:", ";}&:active .k-ToggleSwitch__label{color:", ";}& button[disabled] + .k-ToggleSwitch__label{color:var(--toggleSwitch-disabledColor);cursor:not-allowed;}"], (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(10), _colorsConfig.default.line2, _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.line2, (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(0), _colorsConfig.default.font1, (0, _typography.stepToRem)(3), _colorsConfig.default.primary1, _colorsConfig.default.primary3);
 
-var StyledSwitch = _styledComponents.default.button.withConfig({
-  displayName: "toggle-switch__StyledSwitch",
-  componentId: "ski4b0-1"
-})(["display:inline-block;position:relative;box-sizing:border-box;width:", ";height:", ";color:", ";background-color:currentColor;border:", " solid ", ";border-radius:", ";transition:color ", " ease,border-color ", " ease,background-color ", " ease;cursor:pointer;&:focus{border-color:", ";.k-ToggleSwitch__circle{border-color:", ";}}.k-ToggleSwitch__circle{position:absolute;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;left:-", ";top:-", ";width:", ";height:", ";content:'';background-color:", ";border:", " solid ", ";border-radius:", ";transition:left ", " ease,color ", " ease,border-color ", " ease,background-color ", " ease;}&[aria-pressed='true']{color:", ";border-color:currentColor;.k-ToggleSwitch__circle{left:", ";border-color:currentColor;}}&:active{color:", ";&,.k-ToggleSwitch__circle{border-color:", ";}}&[disabled]{cursor:not-allowed;", " .k-ToggleSwitch__circle{pointer-events:none;}}"], (0, _typography.pxToRem)(switchWidth), (0, _typography.pxToRem)(switchHeight), function (_ref3) {
-  var defaultColor = _ref3.defaultColor;
-  return defaultColor;
-}, (0, _typography.pxToRem)(borderSize), _colorsConfig.default.line2, (0, _typography.pxToRem)(borderRadius), transitionDuration, transitionDuration, transitionDuration, _colorsConfig.default.primary1, _colorsConfig.default.primary1, (0, _typography.pxToRem)(borderSize), (0, _typography.pxToRem)(borderSize), (0, _typography.pxToRem)(switchHeight), (0, _typography.pxToRem)(switchHeight), _colorsConfig.default.background1, (0, _typography.pxToRem)(borderSize), _colorsConfig.default.line2, (0, _typography.pxToRem)(switchHeight), transitionDuration, transitionDuration, transitionDuration, transitionDuration, function (_ref4) {
-  var checkedColor = _ref4.checkedColor;
-  return checkedColor;
-}, (0, _typography.pxToRem)(switchWidth - switchHeight - borderSize), function (_ref5) {
-  var activeColor = _ref5.activeColor;
-  return activeColor;
-}, function (_ref6) {
-  var activeColor = _ref6.activeColor;
-  return activeColor;
-}, function (_ref7) {
-  var locked = _ref7.locked;
-  return !locked && (0, _styledComponents.css)(["color:", ";border-color:currentColor;"], function (_ref8) {
-    var disabledColor = _ref8.disabledColor;
-    return disabledColor;
-  });
-});
-
-var StyledLabel = _styledComponents.default.label.withConfig({
-  displayName: "toggle-switch__StyledLabel",
-  componentId: "ski4b0-2"
-})(["padding-left:", ";", " font-size:", ";line-height:", ";color:", ";transition:color ", " ease;cursor:pointer;::selection{background:transparent;}::-moz-selection{background:transparent;}", ":hover &{color:", ";}", ":active &{color:", ";}", " button[disabled] + &{color:", ";cursor:not-allowed;}"], (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles.light, function (_ref9) {
-  var big = _ref9.big;
-  return (0, _typography.stepToRem)(big ? 3 : 0);
-}, (0, _typography.pxToRem)(switchHeight), _colorsConfig.default.font1, transitionDuration, StyledSwitchContainer, _colorsConfig.default.primary1, StyledSwitchContainer, _colorsConfig.default.primary3, StyledSwitchContainer, function (_ref10) {
-  var disabledColor = _ref10.disabledColor;
-  return disabledColor;
-});
-
-var ToggleSwitch = function ToggleSwitch(_ref11) {
-  var activeColor = _ref11.activeColor,
-      big = _ref11.big,
-      checkedColor = _ref11.checkedColor,
-      defaultColor = _ref11.defaultColor,
-      disabled = _ref11.disabled,
-      disabledColor = _ref11.disabledColor,
-      id = _ref11.id,
-      isChecked = _ref11.isChecked,
-      isLabelVisible = _ref11.isLabelVisible,
-      label = _ref11.label,
-      labelProps = _ref11.labelProps,
-      locked = _ref11.locked,
-      reverseOrder = _ref11.reverseOrder,
-      switchProps = _ref11.switchProps,
-      onChange = _ref11.onChange,
-      others = (0, _objectWithoutProperties2.default)(_ref11, ["activeColor", "big", "checkedColor", "defaultColor", "disabled", "disabledColor", "id", "isChecked", "isLabelVisible", "label", "labelProps", "locked", "reverseOrder", "switchProps", "onChange"]);
+var ToggleSwitch = function ToggleSwitch(_ref) {
+  var activeColor = _ref.activeColor,
+      big = _ref.big,
+      checkedColor = _ref.checkedColor,
+      defaultColor = _ref.defaultColor,
+      disabled = _ref.disabled,
+      disabledColor = _ref.disabledColor,
+      id = _ref.id,
+      isChecked = _ref.isChecked,
+      isLabelVisible = _ref.isLabelVisible,
+      label = _ref.label,
+      labelProps = _ref.labelProps,
+      locked = _ref.locked,
+      reverseOrder = _ref.reverseOrder,
+      switchProps = _ref.switchProps,
+      onChange = _ref.onChange,
+      style = _ref.style,
+      others = (0, _objectWithoutProperties2.default)(_ref, ["activeColor", "big", "checkedColor", "defaultColor", "disabled", "disabledColor", "id", "isChecked", "isLabelVisible", "label", "labelProps", "locked", "reverseOrder", "switchProps", "onChange", "style"]);
 
   var _useState = (0, _react.useState)(isChecked),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -110,34 +67,41 @@ var ToggleSwitch = function ToggleSwitch(_ref11) {
     });
   };
 
-  return /*#__PURE__*/_react.default.createElement(StyledSwitchContainer, (0, _extends2.default)({
-    isDisabled: disabled || locked,
-    reverseOrder: reverseOrder
-  }, others), /*#__PURE__*/_react.default.createElement(StyledSwitch, (0, _extends2.default)({
-    onClick: handleClick,
+  return /*#__PURE__*/_react.default.createElement(SwitchWrapper, (0, _extends2.default)({
+    className: (0, _classnames.default)('k-ToggleSwitch', {
+      'k-ToggleSwitch--disabled': disabled || locked,
+      'k-ToggleSwitch--reverseOrder': reverseOrder,
+      'k-ToggleSwitch--locked': locked,
+      'k-ToggleSwitch--big': big
+    }),
+    style: (0, _extends2.default)({
+      '--toggleSwitch-activeColor': activeColor,
+      '--toggleSwitch-checkedColor': checkedColor,
+      '--toggleSwitch-defaultColor': defaultColor,
+      '--toggleSwitch-disabledColor': disabledColor
+    }, style)
+  }, others), /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
+    className: (0, _classnames.default)('k-ToggleSwitch__button'),
     type: "button",
-    id: id,
     disabled: disabled || locked,
-    "aria-pressed": isPressed,
+    "aria-pressed": isPressed
+  }, switchProps, {
     "aria-label": isLabelVisible ? null : label,
     "aria-labelledby": isLabelVisible ? "".concat(id, "_label") : null,
-    checkedColor: checkedColor,
-    defaultColor: defaultColor,
-    disabledColor: disabledColor,
-    activeColor: activeColor,
-    locked: locked
-  }, switchProps), /*#__PURE__*/_react.default.createElement("div", {
+    id: id,
+    onClick: handleClick
+  }), /*#__PURE__*/_react.default.createElement("span", {
     className: "k-ToggleSwitch__circle",
     "aria-hidden": "true"
   }, locked && /*#__PURE__*/_react.default.createElement(_lockIcon.LockIcon, {
     width: "12",
     color: _colorsConfig.default.font1
-  }))), isLabelVisible && /*#__PURE__*/_react.default.createElement(StyledLabel, (0, _extends2.default)({
+  }))), isLabelVisible && /*#__PURE__*/_react.default.createElement("label", (0, _extends2.default)({
+    className: (0, _classnames.default)('k-ToggleSwitch__label')
+  }, labelProps, {
     htmlFor: id,
-    id: "".concat(id, "_label"),
-    disabledColor: disabledColor,
-    big: big
-  }, labelProps), label));
+    id: "".concat(id, "_label")
+  }), label));
 };
 
 exports.ToggleSwitch = ToggleSwitch;

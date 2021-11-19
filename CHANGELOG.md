@@ -4,13 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `ContributionCard`: Remove buggy `borderWidth` prop.
-- Fix: `ToggleSwith`: Modernize components styles.
-- Feature: Design: Used `--border-width` and used A11Y color standards.
-- Feature: Token: Add `--border-width` variable.
-- Feature: Tooling: Add Figma Tokens automatic integration.
-- Feature: `DashboardMenu`: Add `size` prop to `DashboardMenu.Expandable`, defaults to `default`.
-- Fix: `DashboardMenu`: Style fixes.
+## [6.2.0] - 2021-11-19
+
+Features:
+
+- Tooling: Add Figma Tokens automatic integration.
+- Token: Add `--border-width` variable on all borders.
+- Design: Use new `--border-width` along with value with A11Y color standards.
+- `DashboardMenu`: Add `size` prop to `DashboardMenu.Expandable`, defaults to `default`.
+
+Fixes:
+
+- `DashboardMenu`: Style fixes.
+- `ContributionCard`: Remove buggy `borderWidth` prop.
+- `ToggleSwith`: Modernize components styles.
 
 ## [6.1.0] - 2021-11-15
 
