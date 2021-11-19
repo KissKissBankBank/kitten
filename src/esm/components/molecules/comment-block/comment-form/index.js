@@ -37,7 +37,7 @@ var StyledInput = styled.div.withConfig({
 var StyledTextarea = styled.textarea.withConfig({
   displayName: "comment-form__StyledTextarea",
   componentId: "sc-1hg07ex-3"
-})(["color:", ";", ";width:100%;overflow-y:hidden;resize:none;box-sizing:border-box;border-width:", ";border-style:solid;border-color:", ";color:", ";padding:", ";font-size:", ";@media (min-width:", "px){font-size:", ";}&:focus{border-color:", ";color:", ";}::placeholder{color:", ";}", " ", ""], COLORS.font2, TYPOGRAPHY.fontStyles.light, pxToRem(2), COLORS.line1, COLORS.font1, pxToRem(30), stepToRem(-1), ScreenConfig.S.min, stepToRem(0), COLORS.line2, COLORS.font1, COLORS.font2, function (_ref) {
+})(["color:", ";", ";width:100%;overflow-y:hidden;resize:none;box-sizing:border-box;border-width:var(--border-width);border-style:solid;border-color:var(--color-grey-400);color:", ";padding:", ";font-size:", ";@media (min-width:", "px){font-size:", ";}&:focus{border-color:", ";color:", ";}::placeholder{color:", ";}", " ", ""], COLORS.font2, TYPOGRAPHY.fontStyles.light, COLORS.font1, pxToRem(30), stepToRem(-1), ScreenConfig.S.min, stepToRem(0), COLORS.line2, COLORS.font1, COLORS.font2, function (_ref) {
   var isDisabled = _ref.isDisabled;
   return isDisabled && css(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n      border-color: ", ";\n      color: ", ";\n      background-color: ", ";\n    "])), COLORS.line1, COLORS.font2, COLORS.line1);
 }, function (_ref2) {
@@ -47,14 +47,14 @@ var StyledTextarea = styled.textarea.withConfig({
 var StyledArrow = styled.div.withConfig({
   displayName: "comment-form__StyledArrow",
   componentId: "sc-1hg07ex-4"
-})(["position:absolute;top:", ";display:block;width:0;height:0;border-width:", ";border-style:solid;border-color:transparent;border-right-color:", ";left:-", ";@media (min-width:", "px){top:", ";}", ":focus + &{border-right-color:", ";}", ""], pxToRem(20), pxToRem(10), COLORS.line1, pxToRem(20), ScreenConfig.S.min, pxToRem(35), StyledTextarea, COLORS.line2, function (_ref3) {
+})(["position:absolute;top:", ";display:block;width:0;height:0;border-width:", ";border-style:solid;border-color:transparent;border-right-color:var(--color-grey-400);left:-", ";@media (min-width:", "px){top:", ";}", ":focus + &{border-right-color:var(--color-grey-500);}", ""], pxToRem(20), pxToRem(10), pxToRem(20), ScreenConfig.S.min, pxToRem(35), StyledTextarea, function (_ref3) {
   var error = _ref3.error;
   return error && css(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n      border-right-color: ", ";\n    "])), COLORS.error3);
 });
 var StyledArrowBefore = styled.span.withConfig({
   displayName: "comment-form__StyledArrowBefore",
   componentId: "sc-1hg07ex-5"
-})(["position:absolute;width:0;height:0;margin-top:-", ";border-width:", ";border-style:solid;border-color:transparent;border-right-color:", ";left:-", ";"], pxToRem(10), pxToRem(10), COLORS.background1, pxToRem(7));
+})(["position:absolute;width:0;height:0;margin-top:-", ";border-width:", ";border-style:solid;border-color:transparent;border-right-color:", ";left:-", ";"], pxToRem(10), pxToRem(10), COLORS.background1, pxToRem(8));
 export var CommentForm = /*#__PURE__*/function (_PureComponent) {
   _inherits(CommentForm, _PureComponent);
 

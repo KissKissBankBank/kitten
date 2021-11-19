@@ -10,7 +10,7 @@ import { ScreenConfig } from '../../../../constants/screen-config';
 var StyledButtonImage = styled.button.withConfig({
   displayName: "button-image__StyledButtonImage",
   componentId: "sc-78jbm8-0"
-})(["width:", ";height:", ";border-radius:50%;box-sizing:border-box;display:flex;overflow:hidden;cursor:pointer;border:0;padding:0;opacity:1;transition:opacity 0.2s;&:hover,&:focus{opacity:0.8;}&.k-ButtonImage--tiny{width:", ";height:", ";}&.k-ButtonImage--big{@media (min-width:", "px){width:", ";height:", ";}}&.k-ButtonImage--huge{width:", ";height:", ";}&.k-ButtonImage--withoutPointerEvents{pointer-events:none;}&.k-ButtonImage--withBorder{border:", " solid ", ";}.k-ButtonImage__img{display:block;margin:0;padding:0;border:0;width:100%;height:100%;object-fit:cover;}"], pxToRem(40), pxToRem(40), pxToRem(30), pxToRem(30), ScreenConfig.S.min, pxToRem(50), pxToRem(50), pxToRem(80), pxToRem(80), pxToRem(2), COLORS.line1);
+})(["width:", ";height:", ";border-radius:50%;box-sizing:border-box;display:flex;overflow:hidden;cursor:pointer;border:0;padding:0;opacity:1;transition:opacity 0.2s;&:hover,&:focus{opacity:0.8;}&.k-ButtonImage--tiny{width:", ";height:", ";}&.k-ButtonImage--big{@media (min-width:", "px){width:", ";height:", ";}}&.k-ButtonImage--huge{width:", ";height:", ";}&.k-ButtonImage--withoutPointerEvents{pointer-events:none;}&.k-ButtonImage--withBorder{border:var(--border-width) solid var(--color-grey-400);}.k-ButtonImage__img{display:block;margin:0;padding:0;border:0;width:100%;height:100%;object-fit:cover;}"], pxToRem(40), pxToRem(40), pxToRem(30), pxToRem(30), ScreenConfig.S.min, pxToRem(50), pxToRem(50), pxToRem(80), pxToRem(80));
 export var ButtonImage = function ButtonImage(_ref) {
   var tag = _ref.tag,
       className = _ref.className,

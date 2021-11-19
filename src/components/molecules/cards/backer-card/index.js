@@ -15,8 +15,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
-
 var _typography = require("../../../../helpers/utils/typography");
 
 var _marger = require("../../../../components/layout/marger");
@@ -28,7 +26,7 @@ var _buttonImage = require("../../../../components/molecules/buttons/button-imag
 var StyledCard = _styledComponents.default.div.withConfig({
   displayName: "backer-card__StyledCard",
   componentId: "sc-11um5n7-0"
-})(["padding:0 ", ";border:", " solid ", ";text-align:center;word-break:break-word;"], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(2), _colorsConfig.default.line1);
+})(["padding:0 ", ";border:var(--border-width) solid var(--color-grey-400);text-align:center;word-break:break-word;"], (0, _typography.pxToRem)(20));
 
 var StyledSubtitle = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "backer-card__StyledSubtitle",

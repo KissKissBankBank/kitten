@@ -20,7 +20,7 @@ import { TextInputWithUnit as TextInputWithUnitBase } from '../../../components/
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../constants/screen-config';
 import { Navbar } from './components/navbar';
-var borderSize = pxToRem(2);
+var borderSize = 'var(--border-width)';
 var cellSize = pxToRem(50);
 var tinyCellSize = pxToRem(40);
 var dayPickerPadding = pxToRem(30);
@@ -158,7 +158,7 @@ DatePicker.defaultProps = {
         color: COLORS.background1
       }
     },
-    borderColor: COLORS.line1,
+    borderColor: 'var(--color-grey-400)',
     weekdaysColor: COLORS.font1,
     day: {
       hover: {

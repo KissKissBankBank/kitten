@@ -67,7 +67,7 @@ var StyledInput = _styledComponents.default.div.withConfig({
 var StyledTextarea = _styledComponents.default.textarea.withConfig({
   displayName: "comment-form__StyledTextarea",
   componentId: "sc-1hg07ex-3"
-})(["color:", ";", ";width:100%;overflow-y:hidden;resize:none;box-sizing:border-box;border-width:", ";border-style:solid;border-color:", ";color:", ";padding:", ";font-size:", ";@media (min-width:", "px){font-size:", ";}&:focus{border-color:", ";color:", ";}::placeholder{color:", ";}", " ", ""], _colorsConfig.default.font2, _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, _colorsConfig.default.font1, (0, _typography.pxToRem)(30), (0, _typography.stepToRem)(-1), _screenConfig.ScreenConfig.S.min, (0, _typography.stepToRem)(0), _colorsConfig.default.line2, _colorsConfig.default.font1, _colorsConfig.default.font2, function (_ref) {
+})(["color:", ";", ";width:100%;overflow-y:hidden;resize:none;box-sizing:border-box;border-width:var(--border-width);border-style:solid;border-color:var(--color-grey-400);color:", ";padding:", ";font-size:", ";@media (min-width:", "px){font-size:", ";}&:focus{border-color:", ";color:", ";}::placeholder{color:", ";}", " ", ""], _colorsConfig.default.font2, _typographyConfig.default.fontStyles.light, _colorsConfig.default.font1, (0, _typography.pxToRem)(30), (0, _typography.stepToRem)(-1), _screenConfig.ScreenConfig.S.min, (0, _typography.stepToRem)(0), _colorsConfig.default.line2, _colorsConfig.default.font1, _colorsConfig.default.font2, function (_ref) {
   var isDisabled = _ref.isDisabled;
   return isDisabled && css(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n      border-color: ", ";\n      color: ", ";\n      background-color: ", ";\n    "])), _colorsConfig.default.line1, _colorsConfig.default.font2, _colorsConfig.default.line1);
 }, function (_ref2) {
@@ -78,7 +78,7 @@ var StyledTextarea = _styledComponents.default.textarea.withConfig({
 var StyledArrow = _styledComponents.default.div.withConfig({
   displayName: "comment-form__StyledArrow",
   componentId: "sc-1hg07ex-4"
-})(["position:absolute;top:", ";display:block;width:0;height:0;border-width:", ";border-style:solid;border-color:transparent;border-right-color:", ";left:-", ";@media (min-width:", "px){top:", ";}", ":focus + &{border-right-color:", ";}", ""], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(10), _colorsConfig.default.line1, (0, _typography.pxToRem)(20), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(35), StyledTextarea, _colorsConfig.default.line2, function (_ref3) {
+})(["position:absolute;top:", ";display:block;width:0;height:0;border-width:", ";border-style:solid;border-color:transparent;border-right-color:var(--color-grey-400);left:-", ";@media (min-width:", "px){top:", ";}", ":focus + &{border-right-color:var(--color-grey-500);}", ""], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(35), StyledTextarea, function (_ref3) {
   var error = _ref3.error;
   return error && css(_templateObject3 || (_templateObject3 = (0, _taggedTemplateLiteral2.default)(["\n      border-right-color: ", ";\n    "])), _colorsConfig.default.error3);
 });
@@ -86,7 +86,7 @@ var StyledArrow = _styledComponents.default.div.withConfig({
 var StyledArrowBefore = _styledComponents.default.span.withConfig({
   displayName: "comment-form__StyledArrowBefore",
   componentId: "sc-1hg07ex-5"
-})(["position:absolute;width:0;height:0;margin-top:-", ";border-width:", ";border-style:solid;border-color:transparent;border-right-color:", ";left:-", ";"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), _colorsConfig.default.background1, (0, _typography.pxToRem)(7));
+})(["position:absolute;width:0;height:0;margin-top:-", ";border-width:", ";border-style:solid;border-color:transparent;border-right-color:", ";left:-", ";"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), _colorsConfig.default.background1, (0, _typography.pxToRem)(8));
 
 var CommentForm = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(CommentForm, _PureComponent);
