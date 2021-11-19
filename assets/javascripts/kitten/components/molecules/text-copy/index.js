@@ -125,21 +125,7 @@ export const TextCopy = ({
   }, [isMessageVisible])
 
   const copyToClipboard = text => {
-    if (!navigator.clipboard && window.isSecureContext) {
-      return navigator.clipboard.writeText(text)
-    } else {
-      // IE11
-      const hiddenElement = document.createElement('textarea')
-      hiddenElement.style.position = 'absolute'
-      hiddenElement.style.opacity = 0
-      hiddenElement.value = text
-      document.body.appendChild(hiddenElement)
-      hiddenElement.select()
-      return new Promise((res, rej) => {
-        document.execCommand('copy') ? res() : rej()
-        document.body.removeChild(hiddenElement)
-      })
-    }
+    return navigator.clipboard.writeText(text)
   }
 
   const copyText = useCallback(() => {

@@ -12,12 +12,6 @@ export const StyledContributionCard = styled.article`
   overflow: hidden;
   box-sizing: border-box;
 
-  /* IE11 defaults */
-  border-width: ${pxToRem(2)};
-  border-style: solid;
-  border-color: ${COLORS.line1};
-  border-radius: ${pxToRem(8)};
-
   border-width: var(--contributionCard--border-width);
   border-style: var(--contributionCard--border-style);
   border-color: var(--contributionCard--border-color);

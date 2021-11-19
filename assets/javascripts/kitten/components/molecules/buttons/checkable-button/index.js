@@ -23,10 +23,6 @@ const StyledCheckableButton = styled(Button)`
     box-sizing: border-box;
     border-radius: 50%;
 
-    /* IE11 */
-    width: ${pxToRem(20)};
-    height: ${pxToRem(20)};
-
     width: var(--CheckableButton-radius);
     height: var(--CheckableButton-radius);
 

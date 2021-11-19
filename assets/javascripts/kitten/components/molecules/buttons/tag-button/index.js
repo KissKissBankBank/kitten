@@ -9,11 +9,6 @@ import classNames from 'classnames'
 const StyledTagButton = styled.button`
   min-height: ${pxToRem(40)};
   min-width: ${pxToRem(60)};
-  /* IE11 */
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    height: ${pxToRem(40)};
-    width: ${pxToRem(60)};
-  }
 
   padding: 0 ${pxToRem(20)};
   font-size: ${stepToRem(-2)};

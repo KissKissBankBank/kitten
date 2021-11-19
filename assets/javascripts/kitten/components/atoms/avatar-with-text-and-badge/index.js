@@ -33,9 +33,6 @@ const StyledWrapper = styled.div`
     border: 0;
     padding: 0;
 
-    /* IE11 defaults */
-    color: ${COLORS.background1};
-    background-color: ${COLORS.primary3};
     color: var(--k-Avatar-color);
     background-color: var(--k-Avatar-background-color);
   }
