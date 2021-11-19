@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Tooling: Add Figma Tokens automatic integration.
 - Feature: `DashboardMenu`: Add `size` prop to `DashboardMenu.Expandable`, defaults to `default`.
 - Fix: `DashboardMenu`: Style fixes.
 
