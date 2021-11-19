@@ -134,6 +134,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 .c0 .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
   position: relative;
+  padding-top: calc( (0.625) * 100% );
 }
 
 .c0 .k-CrowdfundingCard__image__imageContainer > .k-CrowdfundingCard__image__image {
@@ -414,10 +415,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   right: 0;
   top: 0;
   padding: 0.625rem 1.25rem;
-}
-
-.c0 .k-CrowdfundingCard__image__imageContainer {
-  padding-top: calc( (0.625) * 100% );
 }
 
 @media (min-width:640px) {
@@ -888,6 +885,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 .c0 .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
   position: relative;
+  padding-top: calc( (0.625) * 100% );
 }
 
 .c0 .k-CrowdfundingCard__image__imageContainer > .k-CrowdfundingCard__image__image {
@@ -1168,10 +1166,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   right: 0;
   top: 0;
   padding: 0.625rem 1.25rem;
-}
-
-.c0 .k-CrowdfundingCard__image__imageContainer {
-  padding-top: calc( (0.625) * 100% );
 }
 
 @media (min-width:640px) {
@@ -1661,6 +1655,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 .c0 .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
   position: relative;
+  padding-top: calc( (0.625) * 100% );
 }
 
 .c0 .k-CrowdfundingCard__image__imageContainer > .k-CrowdfundingCard__image__image {
@@ -2015,10 +2010,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c0 .k-CrowdfundingCard__image__imageContainer {
-  padding-top: calc( (0.625) * 100% );
 }
 
 @media (min-width:640px) {
@@ -2436,6 +2427,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 .c0 .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
   position: relative;
+  padding-top: calc( (0.625) * 100% );
 }
 
 .c0 .k-CrowdfundingCard__image__imageContainer > .k-CrowdfundingCard__image__image {
@@ -2716,10 +2708,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   right: 0;
   top: 0;
   padding: 0.625rem 1.25rem;
-}
-
-.c0 .k-CrowdfundingCard__image__imageContainer {
-  padding-top: calc( (0.625) * 100% );
 }
 
 @media (min-width:640px) {

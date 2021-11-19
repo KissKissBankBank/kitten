@@ -163,8 +163,6 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   content: '';
   box-sizing: border-box;
   border-radius: 50%;
-  width: 1.25rem;
-  height: 1.25rem;
   width: var(--CheckableButton-radius);
   height: var(--CheckableButton-radius);
   background-repeat: no-repeat;
@@ -572,8 +570,6 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   content: '';
   box-sizing: border-box;
   border-radius: 50%;
-  width: 1.25rem;
-  height: 1.25rem;
   width: var(--CheckableButton-radius);
   height: var(--CheckableButton-radius);
   background-repeat: no-repeat;
@@ -981,8 +977,6 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   content: '';
   box-sizing: border-box;
   border-radius: 50%;
-  width: 1.25rem;
-  height: 1.25rem;
   width: var(--CheckableButton-radius);
   height: var(--CheckableButton-radius);
   background-repeat: no-repeat;
@@ -1390,8 +1384,6 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   content: '';
   box-sizing: border-box;
   border-radius: 50%;
-  width: 1.25rem;
-  height: 1.25rem;
   width: var(--CheckableButton-radius);
   height: var(--CheckableButton-radius);
   background-repeat: no-repeat;
@@ -1799,8 +1791,6 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   content: '';
   box-sizing: border-box;
   border-radius: 50%;
-  width: 1.25rem;
-  height: 1.25rem;
   width: var(--CheckableButton-radius);
   height: var(--CheckableButton-radius);
   background-repeat: no-repeat;

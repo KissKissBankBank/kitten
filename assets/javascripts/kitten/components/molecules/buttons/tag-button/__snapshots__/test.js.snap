@@ -185,13 +185,6 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Buttons__tagButton--tiny {
     height: 2.5rem;
     width: 3.75rem;
@@ -402,13 +395,6 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   color: #fff;
   border-color: #19b4fa;
   background-color: #19b4fa;
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -625,13 +611,6 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Buttons__tagButton--tiny {
     height: 2.5rem;
     width: 3.75rem;
@@ -845,13 +824,6 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0.k-Buttons__tagButton--tiny {
     height: 2.5rem;
     width: 3.75rem;
@@ -1062,13 +1034,6 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   color: #fff;
   border-color: #19b4fa;
   background-color: #19b4fa;
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1299,13 +1264,6 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   color: #fff;
   border-color: #19b4fa;
   background-color: #19b4fa;
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
