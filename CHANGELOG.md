@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Tokens: Add `--border` token with variations.
+- Fix: `ToggleSwitch`: Fix controlled switch.
 
 ## [6.2.0] - 2021-11-19
 
@@ -19,7 +20,7 @@ Fixes:
 
 - `DashboardMenu`: Style fixes.
 - `ContributionCard`: Remove buggy `borderWidth` prop.
-- `ToggleSwith`: Modernize components styles.
+- `ToggleSwitch`: Modernize components styles.
 
 ## [6.1.0] - 2021-11-15
 
