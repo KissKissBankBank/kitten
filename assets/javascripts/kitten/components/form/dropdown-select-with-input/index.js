@@ -278,7 +278,7 @@ const StyledDropdownSelectWithInput = styled.div`
   &.k-Form-DropdownSelectWithInput--tiny {
     .k-Form-DropdownSelectWithInput__container {
       height: ${pxToRem(40)};
-      border-radius: ${pxToRem(4)};
+      border-radius: var(--border-radius-s);
     }
     .k-Form-DropdownSelectWithInput__button__arrowBox {
       left: ${pxToRem(15 + 2)};
@@ -287,7 +287,7 @@ const StyledDropdownSelectWithInput = styled.div`
       margin: 0 ${pxToRem(5)} 0 ${pxToRem(40)};
     }
     .k-Form-DropdownSelectWithInput__content--selectedItem {
-      border-radius: ${pxToRem(2)};
+      border-radius: var(--border-radius-xs);
       height: ${pxToRem(28)};
     }
 
@@ -301,7 +301,7 @@ const StyledDropdownSelectWithInput = styled.div`
   &.k-Form-DropdownSelectWithInput--normal {
     .k-Form-DropdownSelectWithInput__container {
       height: ${pxToRem(50)};
-      border-radius: ${pxToRem(4)};
+      border-radius: var(--border-radius-s);
     }
     .k-Form-DropdownSelectWithInput__button__arrowBox {
       left: ${pxToRem(15 + 2)};
@@ -310,7 +310,7 @@ const StyledDropdownSelectWithInput = styled.div`
       margin: 0 ${pxToRem(5)} 0 ${pxToRem(40)};
     }
     .k-Form-DropdownSelectWithInput__content--selectedItem {
-      border-radius: ${pxToRem(2)};
+      border-radius: var(--border-radius-xs);
       height: ${pxToRem(36)};
     }
 
@@ -326,7 +326,7 @@ const StyledDropdownSelectWithInput = styled.div`
   &.k-Form-DropdownSelectWithInput--giant {
     .k-Form-DropdownSelectWithInput__container {
       height: ${pxToRem(60)};
-      border-radius: ${pxToRem(6)};
+      border-radius: var(--border-radius-m);
       padding: 0 ${pxToRem(10 + 10)} 0 0;
     }
 
@@ -337,7 +337,7 @@ const StyledDropdownSelectWithInput = styled.div`
       margin: 0 ${pxToRem(10)} 0 ${pxToRem(40)};
     }
     .k-Form-DropdownSelectWithInput__content--selectedItem {
-      border-radius: ${pxToRem(4)};
+      border-radius: var(--border-radius-s);
       height: ${pxToRem(40)};
     }
 
@@ -353,7 +353,7 @@ const StyledDropdownSelectWithInput = styled.div`
     &.k-Form-DropdownSelectWithInput--huge,
     &.k-Form-DropdownSelectWithInput--giant {
       .k-Form-DropdownSelectWithInput__container {
-        border-radius: ${pxToRem(8)};
+        border-radius: var(--border-radius-l);
       }
       .k-Form-DropdownSelectWithInput__input {
         font-size: ${stepToRem(0)};

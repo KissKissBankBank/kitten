@@ -231,14 +231,14 @@ export const StyledDropdown = styled.div`
   &.k-Form-Dropdown--orion {
     .k-Form-DropdownCombobox,
     .k-Form-DropdownSelect__button {
-      border-radius: ${pxToRem(4)};
+      border-radius: var(--border-radius-s);
     }
 
     .k-Form-Dropdown__list {
-      border-radius: ${pxToRem(6)};
+      border-radius: var(--border-radius-m);
 
       @media (min-width: ${ScreenConfig.S.min}px) {
-        border-radius: ${pxToRem(8)};
+        border-radius: var(--border-radius-l);
       }
     }
 
@@ -280,10 +280,10 @@ export const StyledDropdown = styled.div`
 
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
-        border-radius: ${pxToRem(6)};
+        border-radius: var(--border-radius-m);
 
         @media (min-width: ${ScreenConfig.S.min}px) {
-          border-radius: ${pxToRem(8)};
+          border-radius: var(--border-radius-l);
         }
       }
     }
