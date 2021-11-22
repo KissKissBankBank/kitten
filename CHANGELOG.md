@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Feature: Design: Use new `--border-radius-*` variables.
+
 ## [6.3.0] - 2021-11-22
 
 Features:
