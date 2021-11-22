@@ -134,16 +134,18 @@ const StyledInput = styled.input`
   &:invalid {
     box-shadow: none;
     color: ${COLORS.font1};
-    border-color: ${COLORS.error3};
+    border: var(--border-danger);
   }
 
   &:hover {
-    border-color: var(--color-grey-500);
+    border: var(--border-hover);
   }
 
   &:focus {
     color: ${COLORS.font1};
     border-color: ${COLORS.font2};
+    outline: var(--outline-input);
+    outline-offset: var(--outline-offset-input)
   }
 
   // DIGITS
