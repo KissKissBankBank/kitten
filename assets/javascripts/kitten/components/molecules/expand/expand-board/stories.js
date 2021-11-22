@@ -8,9 +8,9 @@ import { action } from '@storybook/addon-actions'
 const Styles = styled.div`
   .ExpandBoardStory__content {
     padding: 1.5em;
-    border-left: var(--border-width) solid var(--color-grey-400);
-    border-right: var(--border-width) solid var(--color-grey-400);
-    border-bottom: var(--border-width) solid var(--color-grey-400);
+    border-left: var(--border);
+    border-right: var(--border);
+    border-bottom: var(--border);
   }
 `
 

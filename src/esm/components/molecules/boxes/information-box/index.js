@@ -11,7 +11,7 @@ import { pxToRem } from '../../../../helpers/utils/typography';
 var StyledInformationBox = styled.div.withConfig({
   displayName: "information-box__StyledInformationBox",
   componentId: "cr7cpl-0"
-})(["&.k-InformationBox{display:inline-block;", "}.k-InformationBox__container{padding:", " ", " ", " ", ";color:", ";background-color:", ";border:var(--border-width) solid var(--color-grey-400);}"], TYPOGRAPHY.fontStyles.light, pxToRem(10), pxToRem(20), pxToRem(20), pxToRem(20), COLORS.font1, COLORS.background1);
+})(["&.k-InformationBox{display:inline-block;", "}.k-InformationBox__container{padding:", " ", " ", " ", ";color:", ";background-color:", ";border:var(--border);}"], TYPOGRAPHY.fontStyles.light, pxToRem(10), pxToRem(20), pxToRem(20), pxToRem(20), COLORS.font1, COLORS.background1);
 export var InformationBox = function InformationBox(_ref) {
   var title = _ref.title,
       titleProps = _ref.titleProps,

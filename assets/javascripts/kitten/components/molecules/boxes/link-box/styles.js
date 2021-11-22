@@ -21,7 +21,7 @@ export const StyledLinkBox = styled.a`
     box-sizing: border-box;
     color: ${COLORS.font1};
     background-color: var(--LinkBox-background-color);
-    border: var(--border-width) solid var(--color-grey-400);
+    border: var(--border);
     border-radius: ${pxToRem(4)};
     transition: background-color 0.2s ease;
 

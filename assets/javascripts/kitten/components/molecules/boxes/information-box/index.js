@@ -18,7 +18,7 @@ const StyledInformationBox = styled.div`
     padding: ${pxToRem(10)} ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(20)};
     color: ${COLORS.font1};
     background-color: ${COLORS.background1};
-    border: var(--border-width) solid var(--color-grey-400);
+    border: var(--border);
   }
 `
 

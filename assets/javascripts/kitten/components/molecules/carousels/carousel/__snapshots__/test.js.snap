@@ -55,7 +55,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-bxivhb dMtDni k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-bxivhb iJBkkM k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -192,7 +192,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-bxivhb dMtDni k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-bxivhb iJBkkM k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -358,7 +358,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-bxivhb dMtDni k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-bxivhb iJBkkM k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -495,7 +495,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-bxivhb dMtDni k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-bxivhb iJBkkM k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -673,7 +673,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                       className="k-u-margin-top-single"
                     >
                       <span
-                        className="sc-bxivhb dMtDni k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                        className="sc-bxivhb iJBkkM k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                       >
                         <img
                           alt=""
@@ -792,7 +792,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                       className="k-u-margin-top-single"
                     >
                       <span
-                        className="sc-bxivhb dMtDni k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                        className="sc-bxivhb iJBkkM k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                       >
                         <img
                           alt=""
@@ -911,7 +911,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                       className="k-u-margin-top-single"
                     >
                       <span
-                        className="sc-bxivhb dMtDni k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                        className="sc-bxivhb iJBkkM k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                       >
                         <img
                           alt=""
@@ -1020,7 +1020,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-bxivhb dMtDni k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-bxivhb iJBkkM k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -1157,7 +1157,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-bxivhb dMtDni k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-bxivhb iJBkkM k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -1323,7 +1323,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-bxivhb dMtDni k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-bxivhb iJBkkM k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -1460,7 +1460,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-bxivhb dMtDni k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-bxivhb iJBkkM k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -1632,7 +1632,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-bxivhb dMtDni k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-bxivhb iJBkkM k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""
@@ -1769,7 +1769,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   className="k-u-margin-top-single"
                 >
                   <span
-                    className="sc-bxivhb dMtDni k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                    className="sc-bxivhb iJBkkM k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
                   >
                     <img
                       alt=""

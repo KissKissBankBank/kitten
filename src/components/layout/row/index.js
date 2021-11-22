@@ -30,7 +30,7 @@ var _screenConfig = require("../../../constants/screen-config");
 var StyledRow = _styledComponents.default.div.withConfig({
   displayName: "row__StyledRow",
   componentId: "aqavk0-0"
-})(["&.k-Row--centered{text-align:center;}&.k-Row--light{background:", ";}&.k-Row--dark{background:", ";color:", ";}&.k-Row--lightTopBorder{border-top:var(--border-width) solid var(--color-grey-400);}&.k-Row--lightBottomBorder{border-bottom:var(--border-width) solid var(--color-grey-400);}&.k-Row--padded .k-Row__content{padding-top:", ";padding-bottom:", ";@media (min-width:", "){padding-top:", ";padding-bottom:", ";}}"], _colorsConfig.default.primary6, _colorsConfig.default.line2, _colorsConfig.default.background1, (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(80));
+})(["&.k-Row--centered{text-align:center;}&.k-Row--light{background:", ";}&.k-Row--dark{background:", ";color:", ";}&.k-Row--lightTopBorder{border-top:var(--border);}&.k-Row--lightBottomBorder{border-bottom:var(--border);}&.k-Row--padded .k-Row__content{padding-top:", ";padding-bottom:", ";@media (min-width:", "){padding-top:", ";padding-bottom:", ";}}"], _colorsConfig.default.primary6, _colorsConfig.default.line2, _colorsConfig.default.background1, (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(80));
 
 var Row = function Row(_ref) {
   var className = _ref.className,

@@ -39,7 +39,7 @@ const StyledTextInputWithUnit = styled.div`
     min-width: ${pxToRem(42)};
     align-items: center;
     justify-content: center;
-    border-left: var(--border-width) solid var(--color-grey-400);
+    border-left: var(--border);
     border-radius: 0;
     box-sizing: border-box;
     color: ${COLORS.font1};

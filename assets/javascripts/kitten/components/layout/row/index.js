@@ -23,11 +23,11 @@ const StyledRow = styled.div`
   }
 
   &.k-Row--lightTopBorder {
-    border-top: var(--border-width) solid var(--color-grey-400);
+    border-top: var(--border);
   }
 
   &.k-Row--lightBottomBorder {
-    border-bottom: var(--border-width) solid var(--color-grey-400);
+    border-bottom: var(--border);
   }
 
   &.k-Row--padded .k-Row__content {
