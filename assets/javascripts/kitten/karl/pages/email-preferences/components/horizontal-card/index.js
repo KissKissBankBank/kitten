@@ -18,21 +18,13 @@ const HorizontalCard = styled.div`
     'hc-image hc-action'
     'hc-text  hc-text';
 
-  -ms-grid-columns: ${pxToRem(136)} ${pxToRem(40)} auto;
-  -ms-grid-rows: auto ${pxToRem(20)} auto;
-
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     grid-template-columns: ${pxToRem(157)} repeat(2, auto);
     grid-template-areas: 'hc-image hc-text hc-action';
-
-    -ms-grid-columns: ${pxToRem(157)} ${pxToRem(40)} 1fr ${pxToRem(40)} auto;
-    -ms-grid-rows: auto;
   }
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     grid-template-columns: ${pxToRem(200)} 1fr auto;
-
-    -ms-grid-columns: ${pxToRem(200)} ${pxToRem(40)} 1fr ${pxToRem(40)} auto;
   }
 
   & + & {
@@ -42,36 +34,12 @@ const HorizontalCard = styled.div`
 
 const Image = styled.div`
   grid-area: hc-image;
-
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-`
-
-const TextContainer = styled.div`
-  grid-area: hc-text;
-
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-  }
 `
 
 const Action = styled.div`
   grid-area: hc-action;
   align-self: center;
   justify-self: end;
-
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  -ms-grid-row-align: center;
-  -ms-grid-column-align: end;
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    -ms-grid-column: 5;
-  }
 `
 
 const TextContent = styled.div`
@@ -81,9 +49,9 @@ const TextContent = styled.div`
 `
 
 const Text = props => (
-  <TextContainer>
+  <div>
     <TextContent {...props} />
-  </TextContainer>
+  </div>
 )
 
 HorizontalCard.Image = Image
