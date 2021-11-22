@@ -33,7 +33,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
       </p>
     </span>
     <div
-      className="sc-EHOje gdYAPv k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion k-ContributionCard__inputWrapper"
+      className="sc-EHOje dnfYnO k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion k-ContributionCard__inputWrapper"
     >
       <input
         className="sc-bxivhb cTlIzl k-Form-TextInput k-Form-TextInputWithUnit__input k-ContributionCard__input k-Form-TextInput--orion k-Form-TextInput--regular"

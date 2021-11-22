@@ -65,7 +65,7 @@ export const Styles = styled.div`
   .DoubleEntryTable__Column {
     height: ${pxToRem(68)};
     padding: 0 ${pxToRem(20)};
-    border: var(--border-width) solid var(--color-grey-400);
+    border: var(--border);
     font-size: ${stepToRem(-1)};
     line-height: 1.3;
     box-sizing: border-box;

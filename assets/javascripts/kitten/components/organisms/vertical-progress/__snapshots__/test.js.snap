@@ -2,7 +2,7 @@
 
 exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jGLyJZ k-VerticalProgress__wrapper"
+  className="sc-htpNat jQHgxo k-VerticalProgress__wrapper"
 >
   <nav
     className="k-VerticalProgress"

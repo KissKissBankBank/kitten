@@ -115,7 +115,7 @@ const StyledImageDropUploader = styled.div`
     width: 100%;
     position: relative;
     box-sizing: border-box;
-    border: var(--border-width) solid var(--color-grey-400);
+    border: var(--border);
 
     display: flex;
     gap: ${pxToRem(15)};
