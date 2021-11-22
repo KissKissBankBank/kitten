@@ -1,4 +1,4 @@
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
+import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
@@ -6,124 +6,218 @@ import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLit
 
 var _templateObject;
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
+import { DndContext, closestCenter, KeyboardSensor, MouseSensor, TouchSensor, useSensor, useSensors, DragOverlay } from '@dnd-kit/core';
+import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';
+import { restrictToWindowEdges, restrictToVerticalAxis } from '@dnd-kit/modifiers';
+import { createPortal } from 'react-dom';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import DragonDrop from 'drag-on-drop';
 import { createGlobalStyle } from 'styled-components';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { Button } from '../../../components/molecules/buttons/button';
 import { MenuIcon } from '../../../components/graphics/icons/menu-icon';
-export var BUTTON_SHIFT = pxToRem(40 + 15);
-var DragAndDropListStyles = createGlobalStyle(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  .k-DragAndDropList {\n    display: flex;\n    flex-direction: column;\n    gap: var(--dragAndDropList-gap, ", ");\n    list-style: none;\n    padding: 0;\n    margin: 0;\n  }\n\n  .k-DragAndDropList__item {\n    display: flex;\n    gap: ", ";\n    align-items: center;\n    transition: opacity 0.2s ease;\n\n    &.gu-unselectable {\n      user-select: none !important;\n    }\n\n    &.gu-transit {\n      opacity: 0.2;\n      cursor: move;\n    }\n\n    &.gu-mirror {\n      box-sizing: border-box;\n      position: fixed !important;\n      margin: 0 !important;\n      z-index: 9999 !important;\n      opacity: 0.9;\n    }\n\n    &.gu-hide {\n      display: none !important;\n    }\n\n    .k-DragAndDropList__item__child {\n      flex: 1 0 100%;\n      max-width: 100%;\n    }\n\n  }\n  .k-DragAndDropList__item--hasButton {\n    .k-DragAndDropList__item__button {\n      flex: 0 0 ", ";\n      padding: 0;\n      width: ", ";\n      box-sizing: border-box;\n      border-radius: ", ";\n      cursor: grab;\n    }\n\n    &.gu-mirror .k-DragAndDropList__item__button {\n      cursor: grabbing;\n    }\n\n    .k-DragAndDropList__item__child {\n      flex: 1 0 calc(100% - ", ");\n      max-width: calc(100% - ", ");\n    }\n  }\n"])), pxToRem(15), pxToRem(15), pxToRem(40), pxToRem(40), pxToRem(20), BUTTON_SHIFT, BUTTON_SHIFT);
+export var BUTTON_SHIFT = pxToRem(15 + 40);
+var DragAndDropListStyles = createGlobalStyle(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  .k-DragAndDropList {\n    display: flex;\n    flex-direction: column;\n    gap: var(--dragAndDropList-gap, ", ");\n    list-style: none;\n    padding: 0;\n    margin: 0;\n  }\n\n  .k-DragAndDropList__itemWrapper {\n    list-style: none;\n    display: block;\n    transform: translate3d(var(--translate-x, 0), var(--translate-y, 0), 0);\n    transform-origin: 0 0;\n    position: relative;\n    z-index: 1;\n\n    &:focus-within {\n      z-index: 2;\n    }\n  }\n\n  .k-DragAndDropList__item {\n    display: flex;\n    gap: ", ";\n    align-items: center;\n\n    &.k-DragAndDropList__item--isDragging:not(.k-DragAndDropList__item--dragOverlay) {\n      opacity: 0.4;\n\n      .k-DragAndDropList__item__button {\n        opacity: 0;\n      }\n    }\n\n    &.k-DragAndDropList__item--dragOverlay {\n      cursor: move;\n      z-index: 150;\n\n      .k-DragAndDropList__item__button {\n        cursor: move;\n      }\n    }\n\n    .k-DragAndDropList__item__child {\n      flex: 1 0 calc(100% - var(--dragAndDropList-button-shift, 0));\n      width: calc(100% - var(--dragAndDropList-button-shift, 0));\n      flex-grow: 1;\n    }\n\n    &.k-DragAndDropList__item--hasButton {\n      .k-DragAndDropList__item__button {\n        flex: 0 0 ", ";\n        padding: 0;\n        width: ", ";\n        box-sizing: border-box;\n        border-radius: ", ";\n        cursor: grab;\n      }\n\n      &.gu-mirror .k-DragAndDropList__item__button {\n        cursor: grabbing;\n      }\n\n      .k-DragAndDropList__item__child {\n        --dragAndDropList-button-shift: ", ";\n      }\n    }\n  }\n"])), pxToRem(15), pxToRem(15), pxToRem(40), pxToRem(40), pxToRem(20), BUTTON_SHIFT);
 export var DragAndDropList = function DragAndDropList(_ref) {
   var children = _ref.children,
       className = _ref.className,
       onChange = _ref.onChange,
       a11yButtonLabel = _ref.a11yButtonLabel,
       a11yAnnouncement = _ref.a11yAnnouncement,
-      a11yButtonDescElement = _ref.a11yButtonDescElement,
       a11yContainerLabelElement = _ref.a11yContainerLabelElement,
+      a11yInstructions = _ref.a11yInstructions,
       gap = _ref.gap,
       style = _ref.style,
       showHandle = _ref.showHandle,
-      props = _objectWithoutProperties(_ref, ["children", "className", "onChange", "a11yButtonLabel", "a11yAnnouncement", "a11yButtonDescElement", "a11yContainerLabelElement", "gap", "style", "showHandle"]);
+      props = _objectWithoutProperties(_ref, ["children", "className", "onChange", "a11yButtonLabel", "a11yAnnouncement", "a11yContainerLabelElement", "a11yInstructions", "gap", "style", "showHandle"]);
 
-  var listElement = useRef(null);
-
-  var _useState = useState(null),
+  var _useState = useState(React.Children.toArray(children).map(function (child) {
+    return child.props.id;
+  })),
       _useState2 = _slicedToArray(_useState, 2),
-      dragonInstance = _useState2[0],
-      setDragonInstance = _useState2[1];
+      items = _useState2[0],
+      setItems = _useState2[1];
 
-  var dragonOptions = {
-    activeClass: 'k-DragAndDropList__item--active',
-    inactiveClass: 'k-DragAndDropList__item--inactive',
-    announcement: {
-      grabbed: function grabbed(element) {
-        return a11yAnnouncement.grabbed(element.dataset.simpleName);
-      },
-      dropped: function dropped(element) {
-        return a11yAnnouncement.dropped(element.dataset.simpleName);
-      },
-      reorder: function reorder(element, items) {
-        var position = items.indexOf(element) + 1;
-        var name = element.dataset.simpleName;
-        return a11yAnnouncement.reorder(name, position, items.length);
-      },
-      cancel: a11yAnnouncement.cancel
+  var _useState3 = useState(React.Children.toArray(children).reduce(function (acc, current) {
+    return _extends({}, acc, _defineProperty({}, current.props.id, current));
+  }, {})),
+      _useState4 = _slicedToArray(_useState3, 1),
+      childrenDict = _useState4[0];
+
+  var _useState5 = useState(null),
+      _useState6 = _slicedToArray(_useState5, 2),
+      activeId = _useState6[0],
+      setActiveId = _useState6[1];
+
+  var sensors = useSensors(useSensor(MouseSensor, {
+    activationConstraint: {
+      distance: 5
+    }
+  }), useSensor(TouchSensor, {
+    activationConstraint: {
+      delay: 250,
+      tolerance: 5
+    }
+  }), useSensor(KeyboardSensor, {
+    coordinateGetter: sortableKeyboardCoordinates
+  }));
+  var announcements = {
+    onDragStart: function onDragStart(id) {
+      var position = items.indexOf(id) + 1;
+      var name = childrenDict[id].props.simpleName || id;
+      return a11yAnnouncement.onDragStart(name, position, items.length);
+    },
+    onDragOver: function onDragOver(id, overId) {
+      var position = items.indexOf(overId) + 1;
+      var name = childrenDict[id].props.simpleName || id;
+      return a11yAnnouncement.onDragOver(name, position, items.length);
+    },
+    onDragEnd: function onDragEnd(id, overId) {
+      var position = items.indexOf(overId) + 1;
+      var name = childrenDict[id].props.simpleName || id;
+      return a11yAnnouncement.onDragEnd(name, position, items.length);
+    },
+    onDragCancel: function onDragCancel() {
+      return a11yAnnouncement.cancel;
     }
   };
-  useEffect(function () {
-    if (!listElement) return;
-    var dragon = new DragonDrop(listElement.current, _extends({}, dragonOptions, {
-      handle: showHandle && 'button.k-DragAndDropList__item__button'
-    }));
-    dragon.on('dropped', handleChange);
-    setDragonInstance(dragon);
-  }, [listElement, showHandle]);
-  useEffect(function () {
-    if (!dragonInstance) return;
-    if (!listElement) return;
-    if (children.length == 0) return;
-    dragonInstance.initElements(listElement.current);
-  }, [children, listElement, showHandle]);
 
-  var handleChange = function handleChange(container, item) {
-    var newPosition = _toConsumableArray(container.children).indexOf(item) + 1;
+  var handleDragEnd = function handleDragEnd(_ref2) {
+    var active = _ref2.active,
+        over = _ref2.over;
+    setActiveId(null);
 
-    var newList = _toConsumableArray(container.children).map(function (child) {
-      var _child$dataset;
-
-      return (_child$dataset = child.dataset) === null || _child$dataset === void 0 ? void 0 : _child$dataset.id;
-    });
-
-    onChange({
-      movedItem: item.dataset.id,
-      newPosition: newPosition,
-      newList: newList
-    });
+    if (over && active.id !== over.id) {
+      var oldIndex = items.indexOf(active.id);
+      var newIndex = items.indexOf(over.id);
+      setItems(function (items) {
+        return arrayMove(items, oldIndex, newIndex);
+      });
+      onChange({
+        movedItem: active.id,
+        newPosition: newIndex + 1
+      });
+    }
   };
 
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("ol", _extends({
-    ref: listElement,
+  var handleDragStart = function handleDragStart(_ref3) {
+    var active = _ref3.active;
+    if (!active) return;
+    setActiveId(active.id);
+  };
+
+  var handleDragCancel = function handleDragCancel() {
+    return setActiveId(null);
+  };
+
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(DndContext, {
+    sensors: sensors,
+    collisonDetection: closestCenter,
+    onDragStart: handleDragStart,
+    onDragEnd: handleDragEnd,
+    onDragCancel: handleDragCancel,
+    modifiers: [restrictToVerticalAxis, restrictToWindowEdges],
+    announcements: announcements,
+    screenReaderInstructions: a11yInstructions
+  }, /*#__PURE__*/React.createElement("ol", _extends({
     className: classNames('k-DragAndDropList', className),
     "aria-labelledby": a11yContainerLabelElement,
     style: _extends({}, style, {
       '--dragAndDropList-gap': pxToRem(gap)
     })
-  }, props), (children === null || children === void 0 ? void 0 : children.length) > 0 && _toConsumableArray(children).map(function (child, index) {
-    return /*#__PURE__*/React.createElement("li", {
-      key: child.props.id + index,
-      className: classNames('k-DragAndDropList__item', {
-        'k-DragAndDropList__item--hasButton': !!showHandle
-      }),
-      "data-simple-name": child.props.simpleName,
-      "data-id": child.props.id
-    }, !!showHandle && /*#__PURE__*/React.createElement(Button, {
-      fit: "content",
-      "aria-label": a11yButtonLabel,
-      "aria-describedby": a11yButtonDescElement,
-      className: "k-DragAndDropList__item__button"
-    }, /*#__PURE__*/React.createElement(MenuIcon, {
-      width: 10,
-      height: 10
-    })), React.cloneElement(child, _extends({}, child.props, {
-      className: classNames(child.props.className, 'k-DragAndDropList__item__child')
-    })));
-  })), /*#__PURE__*/React.createElement(DragAndDropListStyles, null));
+  }, props), /*#__PURE__*/React.createElement(SortableContext, {
+    items: items,
+    strategy: verticalListSortingStrategy
+  }, items.map(function (id) {
+    return /*#__PURE__*/React.createElement(SortableItem, {
+      key: id,
+      id: id,
+      showHandle: showHandle,
+      a11yButtonLabel: a11yButtonLabel
+    }, React.cloneElement(childrenDict[id]));
+  }))), createPortal( /*#__PURE__*/React.createElement(DragOverlay, null, activeId ? /*#__PURE__*/React.createElement(Item, {
+    showHandle: showHandle,
+    dragOverlay: true
+  }, React.cloneElement(childrenDict[activeId])) : null), document.body)), /*#__PURE__*/React.createElement(DragAndDropListStyles, null));
 };
+
+var SortableItem = function SortableItem(_ref4) {
+  var id = _ref4.id,
+      props = _objectWithoutProperties(_ref4, ["id"]);
+
+  var _useSortable = useSortable({
+    id: id
+  }),
+      attributes = _useSortable.attributes,
+      listeners = _useSortable.listeners,
+      setNodeRef = _useSortable.setNodeRef,
+      transform = _useSortable.transform,
+      transition = _useSortable.transition,
+      isSorting = _useSortable.isSorting,
+      isDragging = _useSortable.isDragging;
+
+  return /*#__PURE__*/React.createElement("li", {
+    ref: setNodeRef,
+    id: id,
+    className: classNames('k-DragAndDropList__itemWrapper'),
+    style: {
+      transition: transition,
+      '--translate-x': transform ? "".concat(Math.round(transform.x), "px") : undefined,
+      '--translate-y': transform ? "".concat(Math.round(transform.y), "px") : undefined
+    }
+  }, /*#__PURE__*/React.createElement(Item, _extends({
+    listeners: listeners,
+    attributes: attributes,
+    isSorting: isSorting,
+    isDragging: isDragging
+  }, props)));
+};
+
+var Item = function Item(_ref5) {
+  var showHandle = _ref5.showHandle,
+      listeners = _ref5.listeners,
+      attributes = _ref5.attributes,
+      a11yButtonLabel = _ref5.a11yButtonLabel,
+      children = _ref5.children,
+      _ref5$dragOverlay = _ref5.dragOverlay,
+      dragOverlay = _ref5$dragOverlay === void 0 ? false : _ref5$dragOverlay,
+      isSorting = _ref5.isSorting,
+      isDragging = _ref5.isDragging;
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: classNames('k-DragAndDropList__item', {
+      'k-DragAndDropList__item--hasButton': !!showHandle,
+      'k-DragAndDropList__item--dragOverlay': !!dragOverlay,
+      'k-DragAndDropList__item--isSorting': !!isSorting,
+      'k-DragAndDropList__item--isDragging': !!isDragging
+    })
+  }, !showHandle ? listeners : undefined, {
+    tabIndex: !showHandle ? 0 : undefined
+  }, attributes), !!showHandle && /*#__PURE__*/React.createElement(Button, _extends({
+    fit: "content",
+    "aria-label": a11yButtonLabel,
+    className: "k-DragAndDropList__item__button",
+    modifier: !!dragOverlay ? 'helium' : 'hydrogen'
+  }, listeners), /*#__PURE__*/React.createElement(MenuIcon, {
+    width: 10,
+    height: 10
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "k-DragAndDropList__item__child"
+  }, children));
+};
+
 DragAndDropList.defaultProps = {
+  a11yInstructions: "To pick up a draggable item, press space or enter.\n    While dragging, use the arrow keys to move the item in any given direction.\n    Press space or enter again to drop the item in its new position,\n    or press escape to cancel.",
   a11yButtonLabel: 'Reorder',
   a11yAnnouncement: {
-    grabbed: function grabbed(name) {
-      return "".concat(name, " grabbed");
+    onDragStart: function onDragStart(name, position, length) {
+      return "".concat(name, " grabbed from position ").concat(position, " of ").concat(length);
     },
-    dropped: function dropped(name) {
-      return "".concat(name, " dropped");
+    onDragOver: function onDragOver(name, position, length) {
+      return "".concat(name, " was moved to position ").concat(position, " of ").concat(length);
     },
-    reorder: function reorder(name, position, length) {
-      return "The rankings have been updated, ".concat(name, " is now ranked #").concat(position, " out of ").concat(length);
+    onDragEnd: function onDragEnd(name, position, length) {
+      return "".concat(name, " was dropped at position ").concat(position, " of ").concat(length);
     },
     cancel: 'Reranking cancelled.'
   },
@@ -132,11 +226,12 @@ DragAndDropList.defaultProps = {
   showHandle: true
 };
 DragAndDropList.propTypes = {
+  a11yInstructions: PropTypes.string,
   a11yButtonLabel: PropTypes.string,
   a11yAnnouncement: PropTypes.shape({
-    grabbed: PropTypes.func,
-    dropped: PropTypes.func,
-    reorder: PropTypes.func,
+    onDragStart: PropTypes.func,
+    onDragOver: PropTypes.func,
+    onDragEnd: PropTypes.func,
     cancel: PropTypes.string
   }),
   onChange: PropTypes.func,

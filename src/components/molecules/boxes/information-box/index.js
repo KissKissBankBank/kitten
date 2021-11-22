@@ -30,7 +30,7 @@ var _typography = require("../../../../helpers/utils/typography");
 var StyledInformationBox = _styledComponents.default.div.withConfig({
   displayName: "information-box__StyledInformationBox",
   componentId: "cr7cpl-0"
-})(["&.k-InformationBox{display:inline-block;", "}.k-InformationBox__container{padding:", " ", " ", " ", ";color:", ";background-color:", ";border:var(--border-width) solid var(--color-grey-400);}"], _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), _colorsConfig.default.font1, _colorsConfig.default.background1);
+})(["&.k-InformationBox{display:inline-block;", "}.k-InformationBox__container{padding:", " ", " ", " ", ";color:", ";background-color:", ";border:var(--border);}"], _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), _colorsConfig.default.font1, _colorsConfig.default.background1);
 
 var InformationBox = function InformationBox(_ref) {
   var title = _ref.title,
