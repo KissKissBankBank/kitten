@@ -151,7 +151,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -560,7 +560,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -969,7 +969,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -1378,7 +1378,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -1787,7 +1787,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }

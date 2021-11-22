@@ -151,7 +151,7 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -396,7 +396,7 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }

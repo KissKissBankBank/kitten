@@ -44,33 +44,33 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
   background-color: #fff;
-  border-color: var(--color-grey-400);
+  border: var(--border);
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:focus {
-  border-color: #bae8fd;
+  border: var(--border-hover);
   background-color: #fff;
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:active {
   background-color: #fff;
-  border-color: #19b4fa;
+  border: var(--border-active);
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:disabled {
   cursor: not-allowed;
-  border-color: #eee;
+  border: var(--border-disabled);
   background-color: #eee;
   color: #949494;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
   background-color: #e8f7fe;
-  border-color: #19b4fa;
+  border-color: var(--border-active);
   color: #222;
 }
 
@@ -180,7 +180,7 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--selected {
   color: #fff;
-  border-color: #19b4fa;
+  border: #19b4fa;
   background-color: #19b4fa;
 }
 
@@ -264,33 +264,33 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
   background-color: #fff;
-  border-color: var(--color-grey-400);
+  border: var(--border);
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:focus {
-  border-color: #bae8fd;
+  border: var(--border-hover);
   background-color: #fff;
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:active {
   background-color: #fff;
-  border-color: #19b4fa;
+  border: var(--border-active);
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:disabled {
   cursor: not-allowed;
-  border-color: #eee;
+  border: var(--border-disabled);
   background-color: #eee;
   color: #949494;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
   background-color: #e8f7fe;
-  border-color: #19b4fa;
+  border-color: var(--border-active);
   color: #222;
 }
 
@@ -400,7 +400,7 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--selected {
   color: #fff;
-  border-color: #19b4fa;
+  border: #19b4fa;
   background-color: #19b4fa;
 }
 
@@ -484,33 +484,33 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
   background-color: #fff;
-  border-color: var(--color-grey-400);
+  border: var(--border);
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:focus {
-  border-color: #bae8fd;
+  border: var(--border-hover);
   background-color: #fff;
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:active {
   background-color: #fff;
-  border-color: #19b4fa;
+  border: var(--border-active);
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:disabled {
   cursor: not-allowed;
-  border-color: #eee;
+  border: var(--border-disabled);
   background-color: #eee;
   color: #949494;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
   background-color: #e8f7fe;
-  border-color: #19b4fa;
+  border-color: var(--border-active);
   color: #222;
 }
 
@@ -620,7 +620,7 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--selected {
   color: #fff;
-  border-color: #19b4fa;
+  border: #19b4fa;
   background-color: #19b4fa;
 }
 
@@ -704,33 +704,33 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
   background-color: #fff;
-  border-color: var(--color-grey-400);
+  border: var(--border);
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:focus {
-  border-color: #bae8fd;
+  border: var(--border-hover);
   background-color: #fff;
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:active {
   background-color: #fff;
-  border-color: #19b4fa;
+  border: var(--border-active);
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:disabled {
   cursor: not-allowed;
-  border-color: #eee;
+  border: var(--border-disabled);
   background-color: #eee;
   color: #949494;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
   background-color: #e8f7fe;
-  border-color: #19b4fa;
+  border-color: var(--border-active);
   color: #222;
 }
 
@@ -840,7 +840,7 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--selected {
   color: #fff;
-  border-color: #19b4fa;
+  border: #19b4fa;
   background-color: #19b4fa;
 }
 
@@ -924,33 +924,33 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
   background-color: #fff;
-  border-color: var(--color-grey-400);
+  border: var(--border);
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:focus {
-  border-color: #bae8fd;
+  border: var(--border-hover);
   background-color: #fff;
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:active {
   background-color: #fff;
-  border-color: #19b4fa;
+  border: var(--border-active);
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:disabled {
   cursor: not-allowed;
-  border-color: #eee;
+  border: var(--border-disabled);
   background-color: #eee;
   color: #949494;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
   background-color: #e8f7fe;
-  border-color: #19b4fa;
+  border-color: var(--border-active);
   color: #222;
 }
 
@@ -1060,7 +1060,7 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--selected {
   color: #fff;
-  border-color: #19b4fa;
+  border: #19b4fa;
   background-color: #19b4fa;
 }
 
@@ -1161,33 +1161,33 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
   background-color: #fff;
-  border-color: var(--color-grey-400);
+  border: var(--border);
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:focus {
-  border-color: #bae8fd;
+  border: var(--border-hover);
   background-color: #fff;
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:active {
   background-color: #fff;
-  border-color: #19b4fa;
+  border: var(--border-active);
   color: #222;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:disabled {
   cursor: not-allowed;
-  border-color: #eee;
+  border: var(--border-disabled);
   background-color: #eee;
   color: #949494;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
   background-color: #e8f7fe;
-  border-color: #19b4fa;
+  border-color: var(--border-active);
   color: #222;
 }
 
@@ -1297,7 +1297,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--selected {
   color: #fff;
-  border-color: #19b4fa;
+  border: #19b4fa;
   background-color: #19b4fa;
 }
 
