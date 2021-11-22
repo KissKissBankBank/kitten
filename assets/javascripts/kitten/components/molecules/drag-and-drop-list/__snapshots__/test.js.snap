@@ -12,181 +12,293 @@ exports[`<DragAndDropList /> by default matches with snapshot 1`] = `
 `;
 
 exports[`<DragAndDropList /> with children matches with snapshot 1`] = `
-<ol
-  className="k-DragAndDropList"
-  style={
-    Object {
-      "--dragAndDropList-gap": "0.9375rem",
+Array [
+  <ol
+    className="k-DragAndDropList"
+    style={
+      Object {
+        "--dragAndDropList-gap": "0.9375rem",
+      }
     }
-  }
->
-  <li
-    className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
-    data-id="1"
-    data-simple-name="Task #1"
   >
-    <button
-      aria-label="Reorder"
-      className="sc-bdVaJa hMGUlo k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
-      style={
-        Object {
-          "--Button-border-radius": null,
-        }
-      }
-      type="button"
-    >
-      <svg
-        fill="#222"
-        height={10}
-        viewBox="0 0 100 100"
-        width={10}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        
-        <path
-          d="M0 0 v20 h100 v-20 z"
-        />
-        <path
-          d="M0 40 v20 h100 v-20 z"
-        />
-        <path
-          d="M0 80 v20 h100 v-20 z"
-        />
-      </svg>
-    </button>
-    <p
-      className="k-DragAndDropList__item__child"
+    <li
+      className="k-DragAndDropList__itemWrapper"
       id="1"
-      simpleName="Task #1"
-    >
-      Task #1
-    </p>
-  </li>
-  <li
-    className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
-    data-id="2"
-    data-simple-name="Task #2"
-  >
-    <button
-      aria-label="Reorder"
-      className="sc-bdVaJa hMGUlo k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
       style={
         Object {
-          "--Button-border-radius": null,
+          "--translate-x": undefined,
+          "--translate-y": undefined,
+          "transition": undefined,
         }
       }
-      type="button"
     >
-      <svg
-        fill="#222"
-        height={10}
-        viewBox="0 0 100 100"
-        width={10}
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        aria-describedby="DndDescribedBy-1"
+        aria-roledescription="sortable"
+        className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
+        role="button"
+        tabIndex={0}
       >
-        
-        <path
-          d="M0 0 v20 h100 v-20 z"
-        />
-        <path
-          d="M0 40 v20 h100 v-20 z"
-        />
-        <path
-          d="M0 80 v20 h100 v-20 z"
-        />
-      </svg>
-    </button>
-    <p
-      className="k-DragAndDropList__item__child"
+        <button
+          aria-label="Reorder"
+          className="sc-bdVaJa hMGUlo k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "--Button-border-radius": null,
+            }
+          }
+          type="button"
+        >
+          <svg
+            fill="#222"
+            height={10}
+            viewBox="0 0 100 100"
+            width={10}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            
+            <path
+              d="M0 0 v20 h100 v-20 z"
+            />
+            <path
+              d="M0 40 v20 h100 v-20 z"
+            />
+            <path
+              d="M0 80 v20 h100 v-20 z"
+            />
+          </svg>
+        </button>
+        <div
+          className="k-DragAndDropList__item__child"
+        >
+          <p
+            id="1"
+            simpleName="Task #1"
+          >
+            Task #1
+          </p>
+        </div>
+      </div>
+    </li>
+    <li
+      className="k-DragAndDropList__itemWrapper"
       id="2"
-      simpleName="Task #2"
-    >
-      Task #2
-    </p>
-  </li>
-  <li
-    className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
-    data-id="3"
-    data-simple-name="Task #3"
-  >
-    <button
-      aria-label="Reorder"
-      className="sc-bdVaJa hMGUlo k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
       style={
         Object {
-          "--Button-border-radius": null,
+          "--translate-x": undefined,
+          "--translate-y": undefined,
+          "transition": undefined,
         }
       }
-      type="button"
     >
-      <svg
-        fill="#222"
-        height={10}
-        viewBox="0 0 100 100"
-        width={10}
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        aria-describedby="DndDescribedBy-1"
+        aria-roledescription="sortable"
+        className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
+        role="button"
+        tabIndex={0}
       >
-        
-        <path
-          d="M0 0 v20 h100 v-20 z"
-        />
-        <path
-          d="M0 40 v20 h100 v-20 z"
-        />
-        <path
-          d="M0 80 v20 h100 v-20 z"
-        />
-      </svg>
-    </button>
-    <p
-      className="k-DragAndDropList__item__child"
+        <button
+          aria-label="Reorder"
+          className="sc-bdVaJa hMGUlo k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "--Button-border-radius": null,
+            }
+          }
+          type="button"
+        >
+          <svg
+            fill="#222"
+            height={10}
+            viewBox="0 0 100 100"
+            width={10}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            
+            <path
+              d="M0 0 v20 h100 v-20 z"
+            />
+            <path
+              d="M0 40 v20 h100 v-20 z"
+            />
+            <path
+              d="M0 80 v20 h100 v-20 z"
+            />
+          </svg>
+        </button>
+        <div
+          className="k-DragAndDropList__item__child"
+        >
+          <p
+            id="2"
+            simpleName="Task #2"
+          >
+            Task #2
+          </p>
+        </div>
+      </div>
+    </li>
+    <li
+      className="k-DragAndDropList__itemWrapper"
       id="3"
-      simpleName="Task #3"
-    >
-      Task #3
-    </p>
-  </li>
-  <li
-    className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
-    data-id="4"
-    data-simple-name="Task #4"
-  >
-    <button
-      aria-label="Reorder"
-      className="sc-bdVaJa hMGUlo k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
       style={
         Object {
-          "--Button-border-radius": null,
+          "--translate-x": undefined,
+          "--translate-y": undefined,
+          "transition": undefined,
         }
       }
-      type="button"
     >
-      <svg
-        fill="#222"
-        height={10}
-        viewBox="0 0 100 100"
-        width={10}
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        aria-describedby="DndDescribedBy-1"
+        aria-roledescription="sortable"
+        className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
+        role="button"
+        tabIndex={0}
       >
-        
-        <path
-          d="M0 0 v20 h100 v-20 z"
-        />
-        <path
-          d="M0 40 v20 h100 v-20 z"
-        />
-        <path
-          d="M0 80 v20 h100 v-20 z"
-        />
-      </svg>
-    </button>
-    <p
-      className="k-DragAndDropList__item__child"
+        <button
+          aria-label="Reorder"
+          className="sc-bdVaJa hMGUlo k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "--Button-border-radius": null,
+            }
+          }
+          type="button"
+        >
+          <svg
+            fill="#222"
+            height={10}
+            viewBox="0 0 100 100"
+            width={10}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            
+            <path
+              d="M0 0 v20 h100 v-20 z"
+            />
+            <path
+              d="M0 40 v20 h100 v-20 z"
+            />
+            <path
+              d="M0 80 v20 h100 v-20 z"
+            />
+          </svg>
+        </button>
+        <div
+          className="k-DragAndDropList__item__child"
+        >
+          <p
+            id="3"
+            simpleName="Task #3"
+          >
+            Task #3
+          </p>
+        </div>
+      </div>
+    </li>
+    <li
+      className="k-DragAndDropList__itemWrapper"
       id="4"
-      simpleName="Task #4"
+      style={
+        Object {
+          "--translate-x": undefined,
+          "--translate-y": undefined,
+          "transition": undefined,
+        }
+      }
     >
-      Task #4
-    </p>
-  </li>
-</ol>
+      <div
+        aria-describedby="DndDescribedBy-1"
+        aria-roledescription="sortable"
+        className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
+        role="button"
+        tabIndex={0}
+      >
+        <button
+          aria-label="Reorder"
+          className="sc-bdVaJa hMGUlo k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "--Button-border-radius": null,
+            }
+          }
+          type="button"
+        >
+          <svg
+            fill="#222"
+            height={10}
+            viewBox="0 0 100 100"
+            width={10}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            
+            <path
+              d="M0 0 v20 h100 v-20 z"
+            />
+            <path
+              d="M0 40 v20 h100 v-20 z"
+            />
+            <path
+              d="M0 80 v20 h100 v-20 z"
+            />
+          </svg>
+        </button>
+        <div
+          className="k-DragAndDropList__item__child"
+        >
+          <p
+            id="4"
+            simpleName="Task #4"
+          >
+            Task #4
+          </p>
+        </div>
+      </div>
+    </li>
+  </ol>,
+  <div
+    id="DndDescribedBy-1"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />,
+  <div
+    aria-atomic={true}
+    aria-live="assertive"
+    id="DndLiveRegion-1"
+    role="status"
+    style={
+      Object {
+        "border": 0,
+        "clip": "rect(0 0 0 0)",
+        "clipPath": "inset(100%)",
+        "height": 1,
+        "margin": -1,
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "absolute",
+        "whiteSpace": "nowrap",
+        "width": 1,
+      }
+    }
+  >
+    
+  </div>,
+]
 `;
