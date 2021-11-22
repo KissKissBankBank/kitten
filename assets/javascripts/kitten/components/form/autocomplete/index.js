@@ -46,10 +46,6 @@ const Wrapper = styled.div`
     &:focus {
       border-color: var(--color-grey-500);
     }
-
-    ::-ms-clear {
-      display: none;
-    }
   }
   &.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
     border-color: ${COLORS.error3};

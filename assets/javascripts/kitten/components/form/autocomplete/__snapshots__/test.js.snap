@@ -50,10 +50,6 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   border-color: var(--color-grey-500);
 }
 
-.c0 .k-Form-Autocomplete__input::-ms-clear {
-  display: none;
-}
-
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
   border-color: #ffb2c7;
   color: #ffb2c7;
@@ -238,10 +234,6 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 
 .c0 .k-Form-Autocomplete__input:focus {
   border-color: var(--color-grey-500);
-}
-
-.c0 .k-Form-Autocomplete__input::-ms-clear {
-  display: none;
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
@@ -480,10 +472,6 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 
 .c0 .k-Form-Autocomplete__input:focus {
   border-color: var(--color-grey-500);
-}
-
-.c0 .k-Form-Autocomplete__input::-ms-clear {
-  display: none;
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input {

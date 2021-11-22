@@ -35,11 +35,6 @@ const HorizontalCard = styled.div`
     -ms-grid-columns: ${pxToRem(200)} ${pxToRem(40)} 1fr ${pxToRem(40)} auto;
   }
 
-  /* IE 11 */
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    display: -ms-grid;
-  }
-
   & + & {
     border-top: ${pxToRem(2)} solid ${COLORS.line1};
   }
