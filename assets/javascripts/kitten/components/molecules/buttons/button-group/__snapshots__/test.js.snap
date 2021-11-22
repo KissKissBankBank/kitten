@@ -112,21 +112,12 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c1.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c1.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-xl);
 }
 
 .c1 svg:not(.k-ColorSvg),
@@ -179,29 +170,29 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 }
 
 .c0 .k-ButtonGroup__button:first-child {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: var(--border-radius-s);
+  border-bottom-left-radius: var(--border-radius-s);
 }
 
 .c0 .k-ButtonGroup__button:last-child {
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: var(--border-radius-s);
+  border-bottom-right-radius: var(--border-radius-s);
 }
 
 .c0 .k-ButtonGroup__button.k-ButtonGroup__button--isActive {
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
   z-index: 1;
 }
 
 .c0 .k-ButtonGroup__button:active,
 .c0 .k-ButtonGroup__button:hover,
 .c0 .k-ButtonGroup__button:focus {
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
   z-index: 2;
 }
 
 .c0.k-ButtonGroup--orion .k-ButtonGroup__button {
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
   color: #222;
   border-color: var(--color-grey-400);
   background-color: #fff;
@@ -280,15 +271,6 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 
   .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c1.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c1.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c1.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c1.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -444,21 +426,12 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c1.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c1.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-xl);
 }
 
 .c1 svg:not(.k-ColorSvg),
@@ -511,29 +484,29 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
 }
 
 .c0 .k-ButtonGroup__button:first-child {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: var(--border-radius-s);
+  border-bottom-left-radius: var(--border-radius-s);
 }
 
 .c0 .k-ButtonGroup__button:last-child {
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: var(--border-radius-s);
+  border-bottom-right-radius: var(--border-radius-s);
 }
 
 .c0 .k-ButtonGroup__button.k-ButtonGroup__button--isActive {
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
   z-index: 1;
 }
 
 .c0 .k-ButtonGroup__button:active,
 .c0 .k-ButtonGroup__button:hover,
 .c0 .k-ButtonGroup__button:focus {
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
   z-index: 2;
 }
 
 .c0.k-ButtonGroup--orion .k-ButtonGroup__button {
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
   color: #222;
   border-color: var(--color-grey-400);
   background-color: #fff;
@@ -612,15 +585,6 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
 
   .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c1.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c1.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c1.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c1.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 

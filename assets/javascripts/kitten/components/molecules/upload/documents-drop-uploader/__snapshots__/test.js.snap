@@ -161,7 +161,7 @@ exports[`<DocumentsDropUploader /> should match snapshot disabled 2`] = `
       className="k-DocumentsDropUploader__fileList"
     >
       <li
-        className="sc-bdVaJa kfGCwB k-Tag k-DocumentsDropUploader__file k-Tag--info"
+        className="sc-bdVaJa dFgUQM k-Tag k-DocumentsDropUploader__file k-Tag--info"
       >
         <span
           className="k-DocumentsDropUploader__file__text"
@@ -227,7 +227,7 @@ Array [
         className="k-DocumentsDropUploader__fileList"
       >
         <li
-          className="sc-bdVaJa kfGCwB k-Tag k-DocumentsDropUploader__file k-Tag--info"
+          className="sc-bdVaJa dFgUQM k-Tag k-DocumentsDropUploader__file k-Tag--info"
         >
           <span
             className="k-DocumentsDropUploader__file__text"
@@ -331,7 +331,7 @@ exports[`<DocumentsDropUploader /> should match snapshot with many props 1`] = `
       className="k-DocumentsDropUploader__fileList"
     >
       <li
-        className="sc-bdVaJa kfGCwB k-Tag k-DocumentsDropUploader__file k-Tag--info"
+        className="sc-bdVaJa dFgUQM k-Tag k-DocumentsDropUploader__file k-Tag--info"
       >
         <span
           className="k-DocumentsDropUploader__file__text"

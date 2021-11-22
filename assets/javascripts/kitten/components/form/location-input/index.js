@@ -56,7 +56,7 @@ const StyledLocationInput = styled.div`
     // VARIANT
 
     &.k-LocationInput__input--orion {
-      border-radius: ${pxToRem(4)};
+      border-radius: var(--border-radius-s);
     }
   }
 

@@ -112,21 +112,12 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-xl);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -205,15 +196,6 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -357,21 +339,12 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-xl);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -450,15 +423,6 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 

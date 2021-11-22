@@ -70,7 +70,7 @@ const StyledHighlightHalo = styled.div`
     top: 0;
 
     opacity: 0;
-    border-radius: 50%;
+    border-radius: var(--border-radius-xl);
     background-color: ${({ haloColor }) => haloColor};
 
     transform: scale(0);

@@ -6,9 +6,6 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 import classNames from 'classnames'
 
-const borderRadius = pxToRem(4)
-const borderSize = pxToRem(2)
-
 const StyledButtonGroup = styled.div`
   display: flex;
   justify-content: center;
@@ -20,34 +17,34 @@ const StyledButtonGroup = styled.div`
     width: auto;
 
     &:not(:last-child) {
-      margin-right: -${borderSize};
+      margin-right: ${pxToRem(-2)};
     }
 
     &:first-child {
-      border-top-left-radius: ${borderRadius};
-      border-bottom-left-radius: ${borderRadius};
+      border-top-left-radius: var(--border-radius-s);
+      border-bottom-left-radius: var(--border-radius-s);
     }
 
     &:last-child {
-      border-top-right-radius: ${borderRadius};
-      border-bottom-right-radius: ${borderRadius};
+      border-top-right-radius: var(--border-radius-s);
+      border-bottom-right-radius: var(--border-radius-s);
     }
 
     &.k-ButtonGroup__button--isActive {
-      border-radius: ${borderRadius};
+      border-radius: var(--border-radius-s);
       z-index: 1;
     }
     &:active,
     &:hover,
     &:focus {
-      border-radius: ${borderRadius};
+      border-radius: var(--border-radius-s);
       z-index: 2;
     }
   }
 
   &.k-ButtonGroup--orion {
     .k-ButtonGroup__button {
-      border-radius: ${pxToRem(4)};
+      border-radius: var(--border-radius-s);
       color: ${COLORS.font1};
       border-color: var(--color-grey-400);
       background-color: ${COLORS.background1};

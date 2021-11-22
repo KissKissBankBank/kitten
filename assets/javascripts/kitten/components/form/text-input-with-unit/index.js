@@ -89,7 +89,7 @@ const StyledTextInputWithUnit = styled.div`
 
   &.k-Form-TextInputWithUnit--orion {
     .k-Form-TextInputWithUnit__input {
-      border-radius: ${pxToRem(4)};
+      border-radius: var(--border-radius-s);
       padding-right: ${pxToRem(42)};
     }
     .k-Form-TextInputWithUnit__unit {

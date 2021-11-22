@@ -28,7 +28,7 @@ export const StyledLinkBox = styled.a`
     color: ${COLORS.font1};
     background-color: var(--LinkBox-background-color);
     border: var(--border);
-    border-radius: ${pxToRem(4)};
+    border-radius: var(--border-radius-s);
     transition: background-color 0.2s ease;
 
     &:hover {
@@ -82,7 +82,6 @@ export const StyledLinkBox = styled.a`
     min-height: ${pxToRem(60)};
     padding-top: ${pxToRem(7)};
     padding-bottom: ${pxToRem(7)};
-    border-radius: ${pxToRem(8)};
     background-color: var(--LinkBox-background-color);
     border: var(--border-width) solid var(--LinkBox-background-color);
 
