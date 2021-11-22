@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DragAndDropList`: Change lib.
+- Feature: `DragAndDropList`: Change `a11yAnnouncement` prop format.
+- Feature: `DragAndDropList`: Add `a11yInstructions` prop.
+- Feature: `DashboardMenu`: Add `size` prop to `DashboardMenu.Expandable`, defaults to `default`.
+- Fix: `DashboardMenu`: Style fixes.
 - `ToggleSwitch`: Fix controlled switch.
 
 ## [6.2.0] - 2021-11-19
