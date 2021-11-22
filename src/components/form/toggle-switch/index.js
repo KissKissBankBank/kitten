@@ -84,13 +84,12 @@ var ToggleSwitch = function ToggleSwitch(_ref) {
     className: (0, _classnames.default)('k-ToggleSwitch__button'),
     type: "button",
     disabled: disabled || locked,
-    "aria-pressed": isPressed
-  }, switchProps, {
+    "aria-pressed": isPressed,
     "aria-label": isLabelVisible ? null : label,
     "aria-labelledby": isLabelVisible ? "".concat(id, "_label") : null,
     id: id,
     onClick: handleClick
-  }), /*#__PURE__*/_react.default.createElement("span", {
+  }, switchProps), /*#__PURE__*/_react.default.createElement("span", {
     className: "k-ToggleSwitch__circle",
     "aria-hidden": "true"
   }, locked && /*#__PURE__*/_react.default.createElement(_lockIcon.LockIcon, {

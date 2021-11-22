@@ -9,7 +9,7 @@ import { ButtonImage } from '../../../../components/molecules/buttons/button-ima
 var StyledCard = styled.div.withConfig({
   displayName: "backer-card__StyledCard",
   componentId: "sc-11um5n7-0"
-})(["padding:0 ", ";border:var(--border-width) solid var(--color-grey-400);text-align:center;word-break:break-word;"], pxToRem(20));
+})(["padding:0 ", ";border:var(--border);text-align:center;word-break:break-word;"], pxToRem(20));
 var StyledSubtitle = styled(Text).withConfig({
   displayName: "backer-card__StyledSubtitle",
   componentId: "sc-11um5n7-1"
