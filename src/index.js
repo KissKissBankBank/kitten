@@ -77,6 +77,12 @@ Object.defineProperty(exports, "KissKissLoadingAnimation", {
     return _kisskissLoadingAnimation.KissKissLoadingAnimation;
   }
 });
+Object.defineProperty(exports, "LendoLoadingAnimation", {
+  enumerable: true,
+  get: function get() {
+    return _lendoLoadingAnimation.LendoLoadingAnimation;
+  }
+});
 Object.defineProperty(exports, "Loader", {
   enumerable: true,
   get: function get() {
@@ -2269,6 +2275,8 @@ var _horizontalStroke = require("./components/atoms/horizontal-stroke");
 var _iconBadge = require("./components/atoms/icon-badge");
 
 var _kisskissLoadingAnimation = require("./components/atoms/kisskiss-loading-animation");
+
+var _lendoLoadingAnimation = require("./components/atoms/lendo-loading-animation");
 
 var _loader = require("./components/atoms/loader");
 

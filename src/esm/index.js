@@ -12,6 +12,7 @@ export { HighlightHalo } from './components/atoms/highlight-halo';
 export { HorizontalStroke } from './components/atoms/horizontal-stroke';
 export { IconBadge } from './components/atoms/icon-badge';
 export { KissKissLoadingAnimation } from './components/atoms/kisskiss-loading-animation';
+export { LendoLoadingAnimation } from './components/atoms/lendo-loading-animation';
 export { Loader } from './components/atoms/loader';
 export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph';
 export { Progress } from './components/atoms/progress';

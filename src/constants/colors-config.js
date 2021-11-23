@@ -5,66 +5,64 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _default = {
-  font1: '#222',
+  font1: 'var(--color-grey-900, #222)',
   // Dark Grey
-  font2: '#b8b8b8',
+  font2: 'var(--color-grey-500, #b8b8b8)',
   // Semi Dark Grey
-  font3: '#949494',
+  font3: 'var(--color-grey-600, #949494)',
   // Extra semi dark grey, used for text
-  background1: '#fff',
+  background1: 'var(--color-grey-000, #fff)',
   // White
-  background2: '#fbfbfb',
+  background2: 'var(--color-grey-100, #fbfbfb)',
   // Extra Light Grey
-  background3: '#f6f6f6',
+  background3: 'var(--color-grey-200, #f6f6f6)',
   // Light Grey
-  lightRed: '#ffebe0',
-  // Light Red
-  line1: '#eee',
+  line1: 'var(--color-grey-300, #eee)',
   // Semi Light Grey
-  line2: '#d8d8d8',
+  line2: 'var(--color-grey-400, #d8d8d8)',
   // Grey
-  line3: '#2d2d2d',
+  line3: 'var(--color-grey-800, #2d2d2d)',
   // Extra semi dark grey, not used for text
-  grey1: '#636363',
+  grey1: 'var(--color-grey-700, #636363)',
   // Medium grey used for text or not
-  primary1: '#19b4fa',
+  primary1: 'var(--color-primary-500, #19b4fa)',
   // Primary
-  primary2: '#05a8e6',
+  primary2: 'var(--color-primary-700, #05a8e6)',
   // Semi Dark Primary
-  primary3: '#0496cc',
+  primary3: 'var(--color-primary-900, #0496cc)',
   // Dark Primary
-  primary4: '#bae8fd',
+  primary4: 'var(--color-primary-300, #bae8fd)',
   // Light Primary
-  primary5: '#e8f7fe',
+  primary5: 'var(--color-primary-100, #e8f7fe)',
   // Extra Light Primary
-  primary6: '#f3fbff',
+  primary6: 'var(--color-primary-100, #f3fbff)',
   // Thin Primary
-  tertiary1: '#effaf1',
+  tertiary1: 'var(--color-success-100, #effaf1)',
   // Light Green
-  tertiary2: '#cff0d6',
+  tertiary2: 'var(--color-success-300, #cff0d6)',
   // Semi Light Green
-  valid: '#61d079',
+  valid: 'var(--color-success-500, #61d079)',
   // Green
-  valid1: 'hsl(133, 54%, 94%)',
+  valid1: 'var(--color-success-300, hsl(133, 54%, 94%))',
   // Green Light
-  error: '#ff0046',
+  error: 'var(--color-danger-500, #ff0046)',
   // Red
-  error2: '#ffe5ec',
+  error2: 'var(--color-danger-100, #ffe5ec)',
   // Light Red
-  error3: '#ffb2c7',
+  error3: 'var(--color-danger-300, #ffb2c7)',
   // Semi Light Red
-  error4: '#d8043e',
+  error4: 'var(--color-danger-700, #d8043e)',
   // Semi Dark Red
-  error5: '#a8002e',
+  error5: 'var(--color-danger-900, #a8002e)',
   // Dark Red
-  orange: '#ff7800',
-  orange1: '#fff2e7',
+  orange: 'var(--color-warning-500, #ff7800)',
+  orange1: 'var(--color-warning-100, #fff2e7)',
   // Orange light
-  orange2: '#f57905',
+  orange2: 'var(--color-warning-700, #f57905)',
   // Orange semi dark
-  orange3: '#eb6e00',
+  orange3: 'var(--color-warning-900, #eb6e00)',
   // Orange dark
-  warning: '#8a6d3b',
-  warning2: '#fcf8e3'
+  warning: 'var(--color-warning-500, #8a6d3b)',
+  warning2: 'var(--color-warning-100, #fcf8e3)'
 };
 exports.default = _default;
