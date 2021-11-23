@@ -298,8 +298,6 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav-nav__element {
-    -ms-overflow-x: hidden;
-
     display: flex;
     align-items: stretch;
   }

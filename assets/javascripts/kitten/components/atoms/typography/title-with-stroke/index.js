@@ -13,7 +13,6 @@ import { strokeModifierStyles } from '../../../atoms/horizontal-stroke/common/st
 const StyledTitleWithStroke = styled.div`
   --TitleWithStroke-css-color: ${COLORS.font1};
 
-  color: ${COLORS.font1}; /* IE11 */
   color: var(--TitleWithStroke-css-color);
 
   &.k-TitleWithStroke--align-left {

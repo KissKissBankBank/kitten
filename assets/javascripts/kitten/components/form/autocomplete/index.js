@@ -48,10 +48,6 @@ const Wrapper = styled.div`
       outline: var(--outline-input);
       outline-offset: var(--outline-offset-input);
     }
-
-    ::-ms-clear {
-      display: none;
-    }
   }
   &.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
     border: var(--border-danger);

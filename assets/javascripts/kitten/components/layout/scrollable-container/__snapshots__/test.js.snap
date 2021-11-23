@@ -5,7 +5,7 @@ exports[`<ScrollableContainer /> by default matches with snapshot 1`] = `
   className="sc-bdVaJa mTdHm sc-bwzfXH hWGVlc"
 >
   <div
-    className="sc-htpNat hRixZf"
+    className="sc-htpNat dTIKuu"
   />
 </div>
 `;
@@ -15,7 +15,7 @@ exports[`<ScrollableContainer /> with children matches with snapshot 1`] = `
   className="sc-bdVaJa mTdHm sc-bwzfXH hWGVlc"
 >
   <div
-    className="sc-htpNat hRixZf"
+    className="sc-htpNat dTIKuu"
   >
     <nav>
       <ul>
@@ -40,7 +40,7 @@ exports[`<ScrollableContainer /> with some props matches with snapshot 1`] = `
   className="sc-bdVaJa qHGnQ sc-bwzfXH hWGVlc custom__class"
 >
   <div
-    className="sc-htpNat hOuSoI"
+    className="sc-htpNat bEOKkq"
   />
 </div>
 `;

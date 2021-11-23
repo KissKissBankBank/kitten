@@ -54,6 +54,8 @@ const mobileStyles = css`
     overflow: hidden;
     position: relative;
 
+    padding-top: calc(var(--Image-container-ratio) * 100%);
+
     & > .k-CrowdfundingCard__image__image {
       display: block;
       position: absolute;
@@ -364,7 +366,7 @@ const tabletStyles = css`
 const desktopStyles = css``
 
 export const StyledCrowdfundingCard = styled(
-  ({ imageContainerRatio, forceVersion, ...props }) => <div {...props} />,
+  ({ forceVersion, ...props }) => <div {...props} />,
 )`
   ${({ forceVersion }) => {
     return (() => {
@@ -399,11 +401,4 @@ export const StyledCrowdfundingCard = styled(
       }
     })()
   }}
-
-  .k-CrowdfundingCard__image__imageContainer {
-    /* When IE11 depreciates, replace prop with CSS custom property */
-    padding-top: calc(
-      (${({ imageContainerRatio }) => imageContainerRatio}) * 100%
-    );
-  }
 `

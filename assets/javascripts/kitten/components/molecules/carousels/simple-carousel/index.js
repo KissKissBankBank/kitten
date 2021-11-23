@@ -12,9 +12,7 @@ const StyledContainer = styled.div`
     css`
       margin-bottom: ${pxToRem(40)};
     `}
-  display: -ms-grid;
   display: grid;
-  grid-gap: 0;
   gap: 0;
 
   > div {

@@ -16,8 +16,6 @@ export const scrollableContainerStyle = ({}) => css`
   white-space: nowrap;
   overflow-x: auto;
 
-  /* Hide scrollbar on IE and Edge. */
-  -ms-overflow-style: none;
   /* Mandatory to combine scroll with this property on iOS. */
   -webkit-overflow-scrolling: touch;
   /* Hide scrollbar on Chrome and Safari. */

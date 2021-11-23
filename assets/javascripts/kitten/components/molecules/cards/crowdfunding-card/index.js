@@ -68,7 +68,6 @@ export const CrowdfundingCard = ({
     <StyledCrowdfundingCard
       {...others}
       as={href ? 'a' : 'div'}
-      imageContainerRatio={imageContainerRatio}
       onClick={removeCurrentFocus}
       className={classNames(
         'k-CrowdfundingCard',
@@ -80,6 +79,7 @@ export const CrowdfundingCard = ({
           'k-CrowdfundingCard--isStretched': stretch,
         },
       )}
+      style={{ '--Image-container-ratio': imageContainerRatio }}
       href={href}
       forceVersion={forceVersion}
     >
