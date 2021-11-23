@@ -5,6 +5,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Start using Design Tokens for colors config (with fallback).
+
+## [6.3.0] - 2021-11-22
+
+Features:
+
+- Tokens: Add `--border` token with variations.
+- `DragAndDropList`: Change lib.
+- `DragAndDropList`: Change `a11yAnnouncement` prop format.
+- `DragAndDropList`: Add `a11yInstructions` prop.
+- `DashboardMenu`: Add `size` prop to `DashboardMenu.Expandable`, defaults to `default`.
+
+Fixes:
+
+- `DashboardMenu`: Style fixes.
 - `ToggleSwitch`: Fix controlled switch.
 
 ## [6.2.0] - 2021-11-19

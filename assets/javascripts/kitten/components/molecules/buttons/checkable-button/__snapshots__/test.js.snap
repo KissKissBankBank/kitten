@@ -231,7 +231,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c1.k-CheckableButton--left::after {
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border);
   background-color: var(--color-grey-000,#fff);
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;
@@ -640,7 +640,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c1.k-CheckableButton--left::after {
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border);
   background-color: var(--color-grey-000,#fff);
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;
@@ -1049,7 +1049,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 .c1.k-CheckableButton--left::after {
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border);
   background-color: var(--color-grey-000,#fff);
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;
@@ -1458,7 +1458,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c1.k-CheckableButton--left::after {
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border);
   background-color: var(--color-grey-000,#fff);
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;
@@ -1867,7 +1867,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c1.k-CheckableButton--left::after {
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border);
   background-color: var(--color-grey-000,#fff);
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;

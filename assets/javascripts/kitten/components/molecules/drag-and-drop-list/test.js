@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
 import { DragAndDropList } from './index'
 
@@ -7,7 +8,15 @@ describe('<DragAndDropList />', () => {
 
   describe('by default', () => {
     beforeEach(() => {
+      ReactDOM.createPortal = jest.fn((element, node) => {
+        return element
+      })
+
       component = renderer.create(<DragAndDropList />).toJSON()
+    })
+
+    afterEach(() => {
+      ReactDOM.createPortal.mockClear()
     })
 
     it('matches with snapshot', () => {
@@ -17,6 +26,10 @@ describe('<DragAndDropList />', () => {
 
   describe('with children', () => {
     beforeEach(() => {
+      ReactDOM.createPortal = jest.fn((element, node) => {
+        return element
+      })
+
       component = renderer
         .create(
           <DragAndDropList>
@@ -35,6 +48,10 @@ describe('<DragAndDropList />', () => {
           </DragAndDropList>,
         )
         .toJSON()
+    })
+
+    afterEach(() => {
+      ReactDOM.createPortal.mockClear()
     })
 
     it('matches with snapshot', () => {

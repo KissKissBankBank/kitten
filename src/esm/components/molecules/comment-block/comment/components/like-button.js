@@ -21,7 +21,7 @@ import { VisuallyHidden } from '../../../../accessibility/visually-hidden';
 var StyledButton = styled.button.withConfig({
   displayName: "like-button__StyledButton",
   componentId: "sc-1pscjnx-0"
-})(["display:inline-flex;align-items:center;justify-content:center;position:relative;height:", ";padding:0 ", ";border:var(--border-width) solid var(--color-grey-400);background-color:", ";", ";font-size:", ";color:", ";text-decoration:none;appareance:none;box-sizing:border-box;&[aria-pressed='true']{svg{fill:", ";}}", ""], pxToRem(40), pxToRem(15), COLORS.background1, TYPOGRAPHY.fontStyles.regular, pxToRem(12), COLORS.font1, COLORS.error, function (_ref) {
+})(["display:inline-flex;align-items:center;justify-content:center;position:relative;height:", ";padding:0 ", ";border:var(--border);background-color:", ";", ";font-size:", ";color:", ";text-decoration:none;appareance:none;box-sizing:border-box;&[aria-pressed='true']{svg{fill:", ";}}", ""], pxToRem(40), pxToRem(15), COLORS.background1, TYPOGRAPHY.fontStyles.regular, pxToRem(12), COLORS.font1, COLORS.error, function (_ref) {
   var as = _ref.as,
       onClick = _ref.onClick;
   return (as === 'a' || onClick) && css(["cursor:pointer;:hover{svg{fill:", ";}}:focus,:active{border-color:var(--color-grey-500);}"], COLORS.error);

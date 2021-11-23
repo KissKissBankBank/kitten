@@ -9,7 +9,7 @@ import classNames from 'classnames'
 const Item = styled.div`
   display: flex;
   position: relative;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border);
   border-top: none;
   cursor: pointer;
   padding-left: ${pxToRem(20)};
@@ -26,7 +26,7 @@ const Item = styled.div`
   }
 
   &.k-List__button--withTopBorder {
-    border-top: var(--border-width) solid var(--color-grey-400);
+    border-top: var(--border);
   }
 
   &[aria-disabled='true'] {

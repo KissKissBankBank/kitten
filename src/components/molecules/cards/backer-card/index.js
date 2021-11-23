@@ -26,7 +26,7 @@ var _buttonImage = require("../../../../components/molecules/buttons/button-imag
 var StyledCard = _styledComponents.default.div.withConfig({
   displayName: "backer-card__StyledCard",
   componentId: "sc-11um5n7-0"
-})(["padding:0 ", ";border:var(--border-width) solid var(--color-grey-400);text-align:center;word-break:break-word;"], (0, _typography.pxToRem)(20));
+})(["padding:0 ", ";border:var(--border);text-align:center;word-break:break-word;"], (0, _typography.pxToRem)(20));
 
 var StyledSubtitle = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "backer-card__StyledSubtitle",
