@@ -151,7 +151,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 
 .c1:disabled,
 .c1.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -203,7 +203,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 .c0.k-ButtonGroup--orion .k-ButtonGroup__button {
   border-radius: 0.25rem;
   color: #222;
-  border-color: var(--color-grey-400);
+  border: var(--border);
   background-color: #fff;
 }
 
@@ -211,13 +211,13 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 .c0.k-ButtonGroup--orion .k-ButtonGroup__button:focus,
 .c0.k-ButtonGroup--orion .k-ButtonGroup__button:active {
   color: #222;
-  border-color: #05a8e6;
+  border: var(--border-hover);
   background-color: #fff;
 }
 
 .c0.k-ButtonGroup--orion .k-ButtonGroup__button.k-ButtonGroup__button--isActive {
   color: #222;
-  border-color: #19b4fa;
+  border: var(--border-active);
   background-color: #e8f7fe;
 }
 
@@ -483,7 +483,7 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
 
 .c1:disabled,
 .c1.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -535,7 +535,7 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
 .c0.k-ButtonGroup--orion .k-ButtonGroup__button {
   border-radius: 0.25rem;
   color: #222;
-  border-color: var(--color-grey-400);
+  border: var(--border);
   background-color: #fff;
 }
 
@@ -543,13 +543,13 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
 .c0.k-ButtonGroup--orion .k-ButtonGroup__button:focus,
 .c0.k-ButtonGroup--orion .k-ButtonGroup__button:active {
   color: #222;
-  border-color: #05a8e6;
+  border: var(--border-hover);
   background-color: #fff;
 }
 
 .c0.k-ButtonGroup--orion .k-ButtonGroup__button.k-ButtonGroup__button--isActive {
   color: #222;
-  border-color: #19b4fa;
+  border: var(--border-active);
   background-color: #e8f7fe;
 }
 
