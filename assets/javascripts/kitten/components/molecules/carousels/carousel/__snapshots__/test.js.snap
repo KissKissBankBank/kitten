@@ -127,7 +127,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw hwlBmK k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw hUUvlh k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
               >
                 <div
@@ -264,7 +264,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw fDxguE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw hvxKyV k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
               >
                 <div
@@ -430,7 +430,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw hwlBmK k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw hUUvlh k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
               >
                 <div
@@ -567,7 +567,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw fDxguE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw hvxKyV k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
               >
                 <div
@@ -661,7 +661,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                       src="https://placehold.it/160x100/caf4fe/caf4fe"
                       style={
                         Object {
-                          "backgroundColor": "#d8d8d8",
+                          "backgroundColor": "var(--color-grey-400, #d8d8d8)",
                         }
                       }
                     />
@@ -780,7 +780,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                       src="https://placehold.it/160x100/caf4fe/caf4fe"
                       style={
                         Object {
-                          "backgroundColor": "#d8d8d8",
+                          "backgroundColor": "var(--color-grey-400, #d8d8d8)",
                         }
                       }
                     />
@@ -899,7 +899,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                       src="https://placehold.it/160x100/caf4fe/caf4fe"
                       style={
                         Object {
-                          "backgroundColor": "#d8d8d8",
+                          "backgroundColor": "var(--color-grey-400, #d8d8d8)",
                         }
                       }
                     />
@@ -1092,7 +1092,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw hwlBmK k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw hUUvlh k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
               >
                 <div
@@ -1229,7 +1229,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw fDxguE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw hvxKyV k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
               >
                 <div
@@ -1395,7 +1395,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw hwlBmK k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw hUUvlh k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
               >
                 <div
@@ -1532,7 +1532,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw fDxguE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw hvxKyV k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
               >
                 <div
@@ -1704,7 +1704,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw hwlBmK k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw hUUvlh k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
               >
                 <div
@@ -1841,7 +1841,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw fDxguE k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw hvxKyV k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
               >
                 <div

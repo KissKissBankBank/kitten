@@ -59,7 +59,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 .c2 .k-Meters-Progress__ramp {
   position: relative;
   height: 0.125rem;
-  background: #eee;
+  background: var(--color-grey-300,#eee);
 }
 
 .c2 .k-Meters-Progress__ramp::after {
@@ -72,12 +72,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   max-width: 0%;
   -webkit-transition: max-width 1s cubic-bezier(0,0.5,0.3,1);
   transition: max-width 1s cubic-bezier(0,0.5,0.3,1);
-  background: #19b4fa;
+  background: var(--color-primary-500,#19b4fa);
 }
 
 .c2.k-Meters-Progress--disabled .k-Meters-Progress__ramp::after,
 .c2.is-disabled .k-Meters-Progress__ramp::after {
-  background: #d8d8d8;
+  background: var(--color-grey-400,#d8d8d8);
 }
 
 .c2.k-Meters-Progress--orion .k-Meters-Progress__ramp,
@@ -90,8 +90,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   padding-bottom: 0.3125rem;
   overflow: hidden;
   display: block;
-  background: #fff;
-  color: #222;
+  background: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0[href] {
@@ -120,7 +120,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 
 .c0[href]:hover .k-CrowdfundingCard__title__title,
 .c0[href]:focus .k-CrowdfundingCard__title__title {
-  color: #19b4fa;
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {
@@ -151,7 +151,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 
 .c0 .k-CrowdfundingCard__image__avatar {
   margin-left: 0.625rem;
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0 .k-CrowdfundingCard__image__owner {
@@ -165,7 +165,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   position: relative;
   top: 0;
   margin-top: -1.875rem;
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0 .k-CrowdfundingCard__title {
@@ -183,14 +183,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 
 .c0 .k-CrowdfundingCard__title__loadingElement {
   display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   height: 1.5rem;
 }
 
 .c0 .k-CrowdfundingCard__title__loadingElement:last-of-type {
   width: 70%;
-  border-top: 0.0625rem solid #fff;
+  border-top: 0.0625rem solid var(--color-grey-000,#fff);
   border-bottom: 0;
 }
 
@@ -235,7 +235,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 
 .c0 .k-CrowdfundingCard__subtitle__loadingElement {
   display: block;
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
   width: 5rem;
   height: 0.75rem;
 }
@@ -268,15 +268,15 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 
 .c0 .k-CrowdfundingCard__informations__loadingElement {
   display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   width: 2.5rem;
   height: 1rem;
 }
 
 .c0 .k-CrowdfundingCard__informations__loadingElement:last-of-type {
   width: 4.0625rem;
-  border-top: 0.0625rem solid #fff;
+  border-top: 0.0625rem solid var(--color-grey-000,#fff);
   border-bottom: 0;
 }
 
@@ -329,38 +329,38 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__title {
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   width: 4.375rem;
   height: 0.875rem;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__subtitle__horizontalStroke {
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__description {
-  background-color: #d8d8d8;
-  border-top: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-top: 0.0625rem solid var(--color-grey-000,#fff);
   width: 6.25rem;
   height: 0.875rem;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__progressBar__loadingPercent {
   display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   width: 2.5rem;
   height: 1rem;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__cardButton__loadingButton {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
@@ -398,7 +398,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   top: 0;
   right: 0;
   display: none;
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   padding: 0.625rem;
   line-height: 1;
 }
@@ -409,7 +409,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  background: #222;
+  background: var(--color-grey-900,#222);
   border-radius: 1.5625rem;
   margin: 0.625rem 0.625rem 0 0;
   right: 0;
@@ -707,7 +707,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -717,9 +717,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid #19b4fa;
-  background-color: #19b4fa;
-  color: #fff;
+  border: var(--border-width) solid var(--color-primary-500,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -823,22 +823,22 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 
 .c2:hover,
 .c2:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c2:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c2:disabled,
 .c2.k-Button--disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border: var(--border-disabled);
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0 {
@@ -846,8 +846,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   padding-bottom: 0.3125rem;
   overflow: hidden;
   display: block;
-  background: #fff;
-  color: #222;
+  background: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0[href] {
@@ -876,7 +876,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 
 .c0[href]:hover .k-CrowdfundingCard__title__title,
 .c0[href]:focus .k-CrowdfundingCard__title__title {
-  color: #19b4fa;
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {
@@ -907,7 +907,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 
 .c0 .k-CrowdfundingCard__image__avatar {
   margin-left: 0.625rem;
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0 .k-CrowdfundingCard__image__owner {
@@ -921,7 +921,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   position: relative;
   top: 0;
   margin-top: -1.875rem;
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0 .k-CrowdfundingCard__title {
@@ -939,14 +939,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 
 .c0 .k-CrowdfundingCard__title__loadingElement {
   display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   height: 1.5rem;
 }
 
 .c0 .k-CrowdfundingCard__title__loadingElement:last-of-type {
   width: 70%;
-  border-top: 0.0625rem solid #fff;
+  border-top: 0.0625rem solid var(--color-grey-000,#fff);
   border-bottom: 0;
 }
 
@@ -991,7 +991,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 
 .c0 .k-CrowdfundingCard__subtitle__loadingElement {
   display: block;
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
   width: 5rem;
   height: 0.75rem;
 }
@@ -1024,15 +1024,15 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 
 .c0 .k-CrowdfundingCard__informations__loadingElement {
   display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   width: 2.5rem;
   height: 1rem;
 }
 
 .c0 .k-CrowdfundingCard__informations__loadingElement:last-of-type {
   width: 4.0625rem;
-  border-top: 0.0625rem solid #fff;
+  border-top: 0.0625rem solid var(--color-grey-000,#fff);
   border-bottom: 0;
 }
 
@@ -1085,38 +1085,38 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__title {
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   width: 4.375rem;
   height: 0.875rem;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__subtitle__horizontalStroke {
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__description {
-  background-color: #d8d8d8;
-  border-top: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-top: 0.0625rem solid var(--color-grey-000,#fff);
   width: 6.25rem;
   height: 0.875rem;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__progressBar__loadingPercent {
   display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   width: 2.5rem;
   height: 1rem;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__cardButton__loadingButton {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
@@ -1154,7 +1154,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   top: 0;
   right: 0;
   display: none;
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   padding: 0.625rem;
   line-height: 1;
 }
@@ -1165,7 +1165,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  background: #222;
+  background: var(--color-grey-900,#222);
   border-radius: 1.5625rem;
   margin: 0.625rem 0.625rem 0 0;
   right: 0;
@@ -1482,7 +1482,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1492,9 +1492,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid #19b4fa;
-  background-color: #19b4fa;
-  color: #fff;
+  border: var(--border-width) solid var(--color-primary-500,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1598,22 +1598,22 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 
 .c2:hover,
 .c2:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c2:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c2:disabled,
 .c2.k-Button--disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border: var(--border-disabled);
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0 {
@@ -1621,8 +1621,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   padding-bottom: 0.3125rem;
   overflow: hidden;
   display: block;
-  background: #fff;
-  color: #222;
+  background: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0[href] {
@@ -1651,7 +1651,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 
 .c0[href]:hover .k-CrowdfundingCard__title__title,
 .c0[href]:focus .k-CrowdfundingCard__title__title {
-  color: #19b4fa;
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {
@@ -1682,7 +1682,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 
 .c0 .k-CrowdfundingCard__image__avatar {
   margin-left: 0.625rem;
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0 .k-CrowdfundingCard__image__owner {
@@ -1696,7 +1696,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   position: relative;
   top: 0;
   margin-top: -1.875rem;
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0 .k-CrowdfundingCard__title {
@@ -1714,14 +1714,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 
 .c0 .k-CrowdfundingCard__title__loadingElement {
   display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   height: 1.5rem;
 }
 
 .c0 .k-CrowdfundingCard__title__loadingElement:last-of-type {
   width: 70%;
-  border-top: 0.0625rem solid #fff;
+  border-top: 0.0625rem solid var(--color-grey-000,#fff);
   border-bottom: 0;
 }
 
@@ -1766,7 +1766,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 
 .c0 .k-CrowdfundingCard__subtitle__loadingElement {
   display: block;
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
   width: 5rem;
   height: 0.75rem;
 }
@@ -1799,15 +1799,15 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 
 .c0 .k-CrowdfundingCard__informations__loadingElement {
   display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   width: 2.5rem;
   height: 1rem;
 }
 
 .c0 .k-CrowdfundingCard__informations__loadingElement:last-of-type {
   width: 4.0625rem;
-  border-top: 0.0625rem solid #fff;
+  border-top: 0.0625rem solid var(--color-grey-000,#fff);
   border-bottom: 0;
 }
 
@@ -1860,38 +1860,38 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__title {
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   width: 4.375rem;
   height: 0.875rem;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__subtitle__horizontalStroke {
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__description {
-  background-color: #d8d8d8;
-  border-top: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-top: 0.0625rem solid var(--color-grey-000,#fff);
   width: 6.25rem;
   height: 0.875rem;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__progressBar__loadingPercent {
   display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   width: 2.5rem;
   height: 1rem;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__cardButton__loadingButton {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
@@ -1929,7 +1929,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   top: 0;
   right: 0;
   display: none;
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   padding: 0.625rem;
   line-height: 1;
 }
@@ -1940,7 +1940,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  background: #222;
+  background: var(--color-grey-900,#222);
   border-radius: 1.5625rem;
   margin: 0.625rem 0.625rem 0 0;
   right: 0;
@@ -2259,7 +2259,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2269,9 +2269,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid #19b4fa;
-  background-color: #19b4fa;
-  color: #fff;
+  border: var(--border-width) solid var(--color-primary-500,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-grey-000,#fff);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -2375,22 +2375,22 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
 .c3:hover,
 .c3:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c3:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c3:disabled,
 .c3.k-Button--disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border: var(--border-disabled);
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0 {
@@ -2398,8 +2398,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   padding-bottom: 0.3125rem;
   overflow: hidden;
   display: block;
-  background: #fff;
-  color: #222;
+  background: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0[href] {
@@ -2428,7 +2428,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
 .c0[href]:hover .k-CrowdfundingCard__title__title,
 .c0[href]:focus .k-CrowdfundingCard__title__title {
-  color: #19b4fa;
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {
@@ -2459,7 +2459,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
 .c0 .k-CrowdfundingCard__image__avatar {
   margin-left: 0.625rem;
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0 .k-CrowdfundingCard__image__owner {
@@ -2473,7 +2473,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   position: relative;
   top: 0;
   margin-top: -1.875rem;
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0 .k-CrowdfundingCard__title {
@@ -2491,14 +2491,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
 .c0 .k-CrowdfundingCard__title__loadingElement {
   display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   height: 1.5rem;
 }
 
 .c0 .k-CrowdfundingCard__title__loadingElement:last-of-type {
   width: 70%;
-  border-top: 0.0625rem solid #fff;
+  border-top: 0.0625rem solid var(--color-grey-000,#fff);
   border-bottom: 0;
 }
 
@@ -2543,7 +2543,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
 .c0 .k-CrowdfundingCard__subtitle__loadingElement {
   display: block;
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
   width: 5rem;
   height: 0.75rem;
 }
@@ -2576,15 +2576,15 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
 .c0 .k-CrowdfundingCard__informations__loadingElement {
   display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   width: 2.5rem;
   height: 1rem;
 }
 
 .c0 .k-CrowdfundingCard__informations__loadingElement:last-of-type {
   width: 4.0625rem;
-  border-top: 0.0625rem solid #fff;
+  border-top: 0.0625rem solid var(--color-grey-000,#fff);
   border-bottom: 0;
 }
 
@@ -2637,38 +2637,38 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__title {
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   width: 4.375rem;
   height: 0.875rem;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__subtitle__horizontalStroke {
-  background-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__description {
-  background-color: #d8d8d8;
-  border-top: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-top: 0.0625rem solid var(--color-grey-000,#fff);
   width: 6.25rem;
   height: 0.875rem;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__progressBar__loadingPercent {
   display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-bottom: 0.0625rem solid var(--color-grey-000,#fff);
   width: 2.5rem;
   height: 1rem;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__cardButton__loadingButton {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
@@ -2706,7 +2706,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   top: 0;
   right: 0;
   display: none;
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   padding: 0.625rem;
   line-height: 1;
 }
@@ -2717,7 +2717,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  background: #222;
+  background: var(--color-grey-900,#222);
   border-radius: 1.5625rem;
   margin: 0.625rem 0.625rem 0 0;
   right: 0;

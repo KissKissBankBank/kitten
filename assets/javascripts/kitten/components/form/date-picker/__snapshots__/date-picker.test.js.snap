@@ -2,13 +2,13 @@
 
 exports[`<DatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX jkjXAZ"
+  className="sc-ifAKCX MOzZa"
 >
   <div
     className="DayPickerInput"
   >
     <div
-      className="sc-htpNat hoXdzh k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion"
+      className="sc-htpNat kdhEao k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion"
     >
       <input
         autoComplete="off"
@@ -37,7 +37,7 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
 
 exports[`<DatePicker /> with custom input matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX jkjXAZ"
+  className="sc-ifAKCX MOzZa"
 >
   <div
     className="DayPickerInput"

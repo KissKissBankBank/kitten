@@ -2,7 +2,7 @@
 
 exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jIHmsO k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+  className="sc-htpNat sDuNA k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
 >
   <input
     className="sc-bdVaJa lbEWsC k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular"
@@ -21,14 +21,12 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jIHmsO k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+  className="sc-htpNat sDuNA k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
 >
   <input
     className="sc-bdVaJa lbEWsC k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular"
+    className="sc-bdVaJa ggDwLg k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular"
     disabled={false}
-    name="text"
-  />
-  <button
     className="k-Form-TextInputWithButton__button"
     disabled={false}
     onClick={[Function]}
@@ -41,7 +39,7 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
 
 exports[`<TextInputWithButton /> with component inside button value matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jIHmsO k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+  className="sc-htpNat sDuNA k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
 >
   <input
     className="sc-bdVaJa lbEWsC k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular"
@@ -59,7 +57,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
     >
       <svg
         className="k-Loader__circle"
-        fill="#222"
+        fill="var(--color-grey-900, #222)"
         viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -71,7 +69,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
       </svg>
       <svg
         className="k-Loader__circle"
-        fill="#222"
+        fill="var(--color-grey-900, #222)"
         viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -83,7 +81,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
       </svg>
       <svg
         className="k-Loader__circle"
-        fill="#222"
+        fill="var(--color-grey-900, #222)"
         viewBox="0 0 5 5"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -100,7 +98,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
 
 exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jIHmsO k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+  className="sc-htpNat sDuNA k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
 >
   <input
     className="sc-bdVaJa lbEWsC k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--disabled"
@@ -119,7 +117,7 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
 
 exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jIHmsO k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+  className="sc-htpNat sDuNA k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
 >
   <input
     className="sc-bdVaJa lbEWsC k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--error"
@@ -138,7 +136,7 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jIHmsO k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+  className="sc-htpNat sDuNA k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
 >
   <input
     className="sc-bdVaJa lbEWsC k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular"
@@ -159,7 +157,7 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jIHmsO k-Form-TextInputWithButton k-Form-TextInputWithButton--tiny"
+  className="sc-htpNat sDuNA k-Form-TextInputWithButton k-Form-TextInputWithButton--tiny"
 >
   <input
     className="sc-bdVaJa lbEWsC k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--tiny"
@@ -178,7 +176,7 @@ exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jIHmsO k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+  className="sc-htpNat sDuNA k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
 >
   <input
     className="sc-bdVaJa lbEWsC k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--valid"

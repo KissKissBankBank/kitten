@@ -34,32 +34,32 @@ const StyledTagButton = styled.button`
 
     &.k-Buttons__tagButton--hydrogen {
       background-color: ${COLORS.background1};
-      border-color: var(--color-grey-400);
+      border: var(--border);
       color: ${COLORS.font1};
 
       &:hover,
       &:focus {
-        border-color: ${COLORS.primary4};
+        border: var(--border-hover);
         background-color: ${COLORS.background1};
         color: ${COLORS.font1};
       }
 
       &:active {
         background-color: ${COLORS.background1};
-        border-color: ${COLORS.primary1};
+        border: var(--border-active);
         color: ${COLORS.font1};
       }
 
       &:disabled {
         cursor: not-allowed;
-        border-color: ${COLORS.line1};
+        border: var(--border-disabled);
         background-color: ${COLORS.line1};
         color: ${COLORS.font3};
       }
 
       &.k-Buttons__tagButton--selected {
         background-color: ${COLORS.primary5};
-        border-color: ${COLORS.primary1};
+        border: var(--border-active);
         color: ${COLORS.font1};
       }
     }
@@ -154,7 +154,7 @@ const StyledTagButton = styled.button`
   }
   &.k-Buttons__tagButton--selected {
     color: ${COLORS.background1};
-    border-color: ${COLORS.primary1};
+    border: var(--border-active);
     background-color: ${COLORS.primary1};
   }
 `

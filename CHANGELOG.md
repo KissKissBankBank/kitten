@@ -6,6 +6,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: IE11: Remove all IE11 css.
 
+## [6.4.0] - 2021-11-23
+
+Features:
+
+- Tokens: Start using Design Tokens for colors config (with fallback).
+- Tokens: Update use of border tokens with states.
+- Tokens: Update `--color-yellow-700` value.
+- `LendopolisLoadingAnimation`: Add component.
+
 ## [6.3.0] - 2021-11-22
 
 Features:
@@ -41,7 +50,7 @@ Fixes:
 Features:
 
 - Tooling: Use `Dart Sass` instead of `LibSass`.
-- Token: Add Design Token feature through CSS vars.
+- Tokens: Add Design Tokens feature through CSS vars.
 - Design: use browser default styles for focus outlines.
 - `DragAndDropList`: Add component.
 

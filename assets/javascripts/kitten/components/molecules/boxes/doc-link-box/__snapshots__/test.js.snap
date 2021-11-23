@@ -9,7 +9,7 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
     className="k-LinkBox__link k-LinkBox__link--orion"
     style={
       Object {
-        "--LinkBox-background-color": "#fff",
+        "--LinkBox-background-color": "var(--color-grey-000, #fff)",
         "--LinkBox-text-color": null,
       }
     }
@@ -78,7 +78,7 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
     >
       <svg
         className=""
-        fill="#222"
+        fill="var(--color-grey-900, #222)"
         height="10"
         style={
           Object {
@@ -110,7 +110,7 @@ exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
     className="k-LinkBox__link k-LinkBox__link--orion"
     style={
       Object {
-        "--LinkBox-background-color": "#fff",
+        "--LinkBox-background-color": "var(--color-grey-000, #fff)",
         "--LinkBox-text-color": null,
       }
     }
@@ -183,7 +183,7 @@ exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
     >
       <svg
         className=""
-        fill="#222"
+        fill="var(--color-grey-900, #222)"
         height="10"
         style={
           Object {

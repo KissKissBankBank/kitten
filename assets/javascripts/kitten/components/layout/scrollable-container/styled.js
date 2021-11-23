@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { Container } from '../../../components/layout/container'
-import { hexToRgba } from '../../../helpers/utils/hex-to-rgba'
 
 const gradientWidth = 20
 
@@ -43,8 +42,8 @@ export const scrollableContainerStyle = ({}) => css`
         width: ${pxToRem(gradientWidth)};
         background-image: linear-gradient(
           to right,
-          ${hexToRgba(shadowColor, 1)},
-          ${hexToRgba(shadowColor, 0)}
+          ${shadowColor},
+          transparent
         );
       }
     `}
@@ -54,11 +53,7 @@ export const scrollableContainerStyle = ({}) => css`
       &:after {
         right: 0;
         width: ${pxToRem(gradientWidth)};
-        background-image: linear-gradient(
-          to left,
-          ${hexToRgba(shadowColor, 1)},
-          ${hexToRgba(shadowColor, 0)}
-        );
+        background-image: linear-gradient(to left, ${shadowColor}, transparent);
       }
     `}
 `

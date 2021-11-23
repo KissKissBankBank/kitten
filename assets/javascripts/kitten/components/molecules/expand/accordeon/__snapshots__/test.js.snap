@@ -2,7 +2,7 @@
 
 exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa gCLRCg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -27,7 +27,7 @@ exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
         <svg
           aria-hidden={true}
           className=""
-          fill="#222"
+          fill="var(--color-grey-900, #222)"
           height="5.64"
           style={
             Object {
@@ -87,7 +87,7 @@ exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
         <svg
           aria-hidden={true}
           className=""
-          fill="#222"
+          fill="var(--color-grey-900, #222)"
           height="5.64"
           style={
             Object {
@@ -129,7 +129,7 @@ exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
 
 exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa gCLRCg k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+  className="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -154,7 +154,7 @@ exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
         <svg
           aria-hidden={true}
           className=""
-          fill="#222"
+          fill="var(--color-grey-900, #222)"
           height="5.64"
           style={
             Object {
@@ -214,7 +214,7 @@ exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
         <svg
           aria-hidden={true}
           className=""
-          fill="#222"
+          fill="var(--color-grey-900, #222)"
           height="5.64"
           style={
             Object {
@@ -256,7 +256,7 @@ exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
 
 exports[`<Accordeon /> with custom classNames matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa gCLRCg k-Accordeon custom1 k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa iUUASg k-Accordeon custom1 k-Accordeon--orion k-Accordeon--isAnimated"
   data-test={true}
 >
   <div
@@ -282,7 +282,7 @@ exports[`<Accordeon /> with custom classNames matches with snapshot 1`] = `
         <svg
           aria-hidden={true}
           className=""
-          fill="#222"
+          fill="var(--color-grey-900, #222)"
           height="5.64"
           style={
             Object {
@@ -344,7 +344,7 @@ exports[`<Accordeon /> with custom classNames matches with snapshot 1`] = `
         <svg
           aria-hidden={true}
           className=""
-          fill="#222"
+          fill="var(--color-grey-900, #222)"
           height="5.64"
           style={
             Object {
@@ -406,7 +406,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "gCLRCg",
+            "lastClassName": "iUUASg",
             "rules": Array [
               ".k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
               "0.9375rem",
@@ -423,7 +423,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
               ";border-radius:",
               "0.1875rem",
               ";.k-Accordeon__header__arrow{display:none;}}.k-Accordeon__content{background-color:",
-              "#f6f6f6",
+              "var(--color-grey-200, #f6f6f6)",
               ";border-bottom-left-radius:",
               "0.1875rem",
               ";border-bottom-right-radius:",
@@ -460,11 +460,11 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
               ";border-radius:",
               "0.5rem",
               ";}&[aria-expanded='true']{border-bottom-color:",
-              "#fff",
+              "var(--color-grey-000, #fff)",
               ";}.k-Accordeon__header__arrow{position:absolute;top:0;bottom:0;right:",
               "1.25rem",
               ";display:flex;align-items:center;}}.k-Accordeon__content{background-color:",
-              "#fff",
+              "var(--color-grey-000, #fff)",
               ";border-bottom-left-radius:",
               "0.375rem",
               ";border-bottom-right-radius:",
@@ -496,7 +496,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa gCLRCg k-Accordeon k-Accordeon--orion"
+            class="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion"
           >
             <div
               class="k-Accordeon__item"
@@ -520,7 +520,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
                   <svg
                     aria-hidden="true"
                     class=""
-                    fill="#222"
+                    fill="var(--color-grey-900, #222)"
                     height="5.64"
                     style="transform: rotate(180deg);"
                     viewBox="0 0 8.48 5.64"
@@ -571,7 +571,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
                   <svg
                     aria-hidden="true"
                     class=""
-                    fill="#222"
+                    fill="var(--color-grey-900, #222)"
                     height="5.64"
                     style="transform: rotate(180deg);"
                     viewBox="0 0 8.48 5.64"
@@ -605,7 +605,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
       }
     >
       <div
-        className="sc-bdVaJa gCLRCg k-Accordeon k-Accordeon--orion"
+        className="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion"
       >
         <Item
           id="accordeon-0"
@@ -640,7 +640,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
                   <ArrowIcon
                     aria-hidden={true}
                     className=""
-                    color="#222"
+                    color="var(--color-grey-900, #222)"
                     direction="bottom"
                     disabled={false}
                     height="5.64"
@@ -650,7 +650,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
                     <svg
                       aria-hidden={true}
                       className=""
-                      fill="#222"
+                      fill="var(--color-grey-900, #222)"
                       height="5.64"
                       style={
                         Object {
@@ -728,7 +728,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
                   <ArrowIcon
                     aria-hidden={true}
                     className=""
-                    color="#222"
+                    color="var(--color-grey-900, #222)"
                     direction="bottom"
                     disabled={false}
                     height="5.64"
@@ -738,7 +738,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
                     <svg
                       aria-hidden={true}
                       className=""
-                      fill="#222"
+                      fill="var(--color-grey-900, #222)"
                       height="5.64"
                       style={
                         Object {
@@ -791,7 +791,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
 
 exports[`<Accordeon /> with one item matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa gCLRCg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -816,7 +816,7 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
         <svg
           aria-hidden={true}
           className=""
-          fill="#222"
+          fill="var(--color-grey-900, #222)"
           height="5.64"
           style={
             Object {
@@ -877,7 +877,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "gCLRCg",
+            "lastClassName": "iUUASg",
             "rules": Array [
               ".k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
               "0.9375rem",
@@ -894,7 +894,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
               ";border-radius:",
               "0.1875rem",
               ";.k-Accordeon__header__arrow{display:none;}}.k-Accordeon__content{background-color:",
-              "#f6f6f6",
+              "var(--color-grey-200, #f6f6f6)",
               ";border-bottom-left-radius:",
               "0.1875rem",
               ";border-bottom-right-radius:",
@@ -931,11 +931,11 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
               ";border-radius:",
               "0.5rem",
               ";}&[aria-expanded='true']{border-bottom-color:",
-              "#fff",
+              "var(--color-grey-000, #fff)",
               ";}.k-Accordeon__header__arrow{position:absolute;top:0;bottom:0;right:",
               "1.25rem",
               ";display:flex;align-items:center;}}.k-Accordeon__content{background-color:",
-              "#fff",
+              "var(--color-grey-000, #fff)",
               ";border-bottom-left-radius:",
               "0.375rem",
               ";border-bottom-right-radius:",
@@ -967,7 +967,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa gCLRCg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+            class="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
           >
             <div
               class="k-Accordeon__item"
@@ -991,7 +991,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
                   <svg
                     aria-hidden="true"
                     class=""
-                    fill="#222"
+                    fill="var(--color-grey-900, #222)"
                     height="5.64"
                     viewBox="0 0 8.48 5.64"
                     width="8.48"
@@ -1041,7 +1041,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
                   <svg
                     aria-hidden="true"
                     class=""
-                    fill="#222"
+                    fill="var(--color-grey-900, #222)"
                     height="5.64"
                     style="transform: rotate(180deg);"
                     viewBox="0 0 8.48 5.64"
@@ -1075,7 +1075,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
       }
     >
       <div
-        className="sc-bdVaJa gCLRCg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+        className="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
       >
         <Item
           id="accordeon-0"
@@ -1110,7 +1110,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
                   <ArrowIcon
                     aria-hidden={true}
                     className=""
-                    color="#222"
+                    color="var(--color-grey-900, #222)"
                     direction="top"
                     disabled={false}
                     height="5.64"
@@ -1120,7 +1120,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
                     <svg
                       aria-hidden={true}
                       className=""
-                      fill="#222"
+                      fill="var(--color-grey-900, #222)"
                       height="5.64"
                       style={
                         Object {
@@ -1198,7 +1198,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
                   <ArrowIcon
                     aria-hidden={true}
                     className=""
-                    color="#222"
+                    color="var(--color-grey-900, #222)"
                     direction="bottom"
                     disabled={false}
                     height="5.64"
@@ -1208,7 +1208,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
                     <svg
                       aria-hidden={true}
                       className=""
-                      fill="#222"
+                      fill="var(--color-grey-900, #222)"
                       height="5.64"
                       style={
                         Object {
@@ -1280,7 +1280,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "gCLRCg",
+            "lastClassName": "iUUASg",
             "rules": Array [
               ".k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
               "0.9375rem",
@@ -1297,7 +1297,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
               ";border-radius:",
               "0.1875rem",
               ";.k-Accordeon__header__arrow{display:none;}}.k-Accordeon__content{background-color:",
-              "#f6f6f6",
+              "var(--color-grey-200, #f6f6f6)",
               ";border-bottom-left-radius:",
               "0.1875rem",
               ";border-bottom-right-radius:",
@@ -1334,11 +1334,11 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
               ";border-radius:",
               "0.5rem",
               ";}&[aria-expanded='true']{border-bottom-color:",
-              "#fff",
+              "var(--color-grey-000, #fff)",
               ";}.k-Accordeon__header__arrow{position:absolute;top:0;bottom:0;right:",
               "1.25rem",
               ";display:flex;align-items:center;}}.k-Accordeon__content{background-color:",
-              "#fff",
+              "var(--color-grey-000, #fff)",
               ";border-bottom-left-radius:",
               "0.375rem",
               ";border-bottom-right-radius:",
@@ -1370,7 +1370,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa gCLRCg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+            class="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
           >
             <div
               class="k-Accordeon__item"
@@ -1394,7 +1394,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
                   <svg
                     aria-hidden="true"
                     class=""
-                    fill="#222"
+                    fill="var(--color-grey-900, #222)"
                     height="5.64"
                     style="transform: rotate(180deg);"
                     viewBox="0 0 8.48 5.64"
@@ -1445,7 +1445,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
                   <svg
                     aria-hidden="true"
                     class=""
-                    fill="#222"
+                    fill="var(--color-grey-900, #222)"
                     height="5.64"
                     style=""
                     viewBox="0 0 8.48 5.64"
@@ -1479,7 +1479,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
       }
     >
       <div
-        className="sc-bdVaJa gCLRCg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+        className="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
       >
         <Item
           id="accordeon-0"
@@ -1514,7 +1514,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
                   <ArrowIcon
                     aria-hidden={true}
                     className=""
-                    color="#222"
+                    color="var(--color-grey-900, #222)"
                     direction="bottom"
                     disabled={false}
                     height="5.64"
@@ -1524,7 +1524,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
                     <svg
                       aria-hidden={true}
                       className=""
-                      fill="#222"
+                      fill="var(--color-grey-900, #222)"
                       height="5.64"
                       style={
                         Object {
@@ -1602,7 +1602,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
                   <ArrowIcon
                     aria-hidden={true}
                     className=""
-                    color="#222"
+                    color="var(--color-grey-900, #222)"
                     direction="top"
                     disabled={false}
                     height="5.64"
@@ -1612,7 +1612,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
                     <svg
                       aria-hidden={true}
                       className=""
-                      fill="#222"
+                      fill="var(--color-grey-900, #222)"
                       height="5.64"
                       style={
                         Object {
@@ -1665,7 +1665,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
 
 exports[`<Accordeon /> with two items matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa gCLRCg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -1690,7 +1690,7 @@ exports[`<Accordeon /> with two items matches with snapshot 1`] = `
         <svg
           aria-hidden={true}
           className=""
-          fill="#222"
+          fill="var(--color-grey-900, #222)"
           height="5.64"
           style={
             Object {
@@ -1750,7 +1750,7 @@ exports[`<Accordeon /> with two items matches with snapshot 1`] = `
         <svg
           aria-hidden={true}
           className=""
-          fill="#222"
+          fill="var(--color-grey-900, #222)"
           height="5.64"
           style={
             Object {

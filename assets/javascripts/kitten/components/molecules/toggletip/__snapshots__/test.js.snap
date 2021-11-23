@@ -2,7 +2,7 @@
 
 exports[`<Toggletip /> CustomTargetElement matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa fRSZzu k-Toggletip k-Toggletip--info"
+  className="sc-bdVaJa eWwRuz k-Toggletip k-Toggletip--info"
   id="Toggletip-demo"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -32,7 +32,7 @@ exports[`<Toggletip /> CustomTargetElement matches with snapshot 1`] = `
 
 exports[`<Toggletip /> Default matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa fRSZzu k-Toggletip k-Toggletip--info"
+  className="sc-bdVaJa eWwRuz k-Toggletip k-Toggletip--info"
   id="Toggletip-demo"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -56,7 +56,7 @@ exports[`<Toggletip /> Default matches with snapshot 1`] = `
     type="button"
   >
     <svg
-      fill="#fff"
+      fill="var(--color-grey-000, #fff)"
       height={10}
       viewBox="0 0 6 10"
       width={6}
@@ -76,7 +76,7 @@ exports[`<Toggletip /> Default matches with snapshot 1`] = `
 
 exports[`<Toggletip /> With props matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa fRSZzu k-Toggletip k-Toggletip--warning"
+  className="sc-bdVaJa eWwRuz k-Toggletip k-Toggletip--warning"
   id="Toggletip-demo"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -107,7 +107,7 @@ exports[`<Toggletip /> With props matches with snapshot 1`] = `
       
       <path
         d="M1.82 6.86H.168V0H1.82v6.86zM0 8.96c0-.28.098-.518.294-.714a.972.972 0 0 1 .714-.294c.28 0 .518.098.714.294a.972.972 0 0 1 .294.714c0 .27-.098.504-.294.7a.972.972 0 0 1-.714.294.972.972 0 0 1-.714-.294.956.956 0 0 1-.294-.7z"
-        fill="#fff"
+        fill="var(--color-grey-000, #fff)"
         fillRule="evenodd"
       />
     </svg>

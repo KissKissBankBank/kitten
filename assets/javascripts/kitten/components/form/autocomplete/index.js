@@ -45,10 +45,12 @@ const Wrapper = styled.div`
 
     &:focus {
       border-color: var(--color-grey-500);
+      outline: var(--outline-input);
+      outline-offset: var(--outline-offset-input);
     }
   }
   &.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
-    border-color: ${COLORS.error3};
+    border: var(--border-danger);
     color: ${COLORS.error3};
 
     :focus {

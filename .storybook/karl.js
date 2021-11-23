@@ -1,13 +1,12 @@
 // Karl.js
 
 import { create } from '@storybook/theming/create'
-import COLORS from '../assets/javascripts/kitten/constants/colors-config'
 
 export default create({
   base: 'light',
 
-  colorPrimary: COLORS.primary1,
-  colorSecondary: COLORS.primary3,
+  colorPrimary: '#19b4fa',
+  colorSecondary: '#0496cc',
 
   // UI
   // appBg: 'white',
@@ -20,8 +19,8 @@ export default create({
   fontCode: 'monospace',
 
   // Text colors
-  textColor: COLORS.font1,
-  textInverseColor: COLORS.background1,
+  textColor: '#222',
+  textInverseColor: '#fff',
 
   // Toolbar default and active colors
   // barTextColor: 'silver',
@@ -29,9 +28,9 @@ export default create({
   // barBg: 'hotpink',
 
   // Form colors
-  inputBg: COLORS.background1,
-  inputBorder: COLORS.line1,
-  inputTextColor: COLORS.font1,
+  inputBg: '#fff',
+  inputBorder: '#eee',
+  inputTextColor: '#222',
   inputBorderRadius: 4,
 
   brandTitle: 'Kitten, by KissKissBankBank & Co.',

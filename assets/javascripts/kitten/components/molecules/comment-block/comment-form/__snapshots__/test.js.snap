@@ -54,7 +54,7 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="sc-iwsKbI jBcCIC"
+        className="sc-iwsKbI bURgQd"
         defaultValue=""
         disabled={false}
         id={null}
@@ -66,7 +66,7 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         className="sc-gZMcBi iAzyAA"
       >
         <span
-          className="sc-gqjmRU czAFVG"
+          className="sc-gqjmRU gCluel"
         />
       </div>
     </div>
@@ -116,7 +116,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="sc-iwsKbI jBcCIC"
+        className="sc-iwsKbI bURgQd"
         defaultValue=""
         disabled={false}
         id="custom-textarea-id"
@@ -128,7 +128,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         className="sc-gZMcBi iAzyAA"
       >
         <span
-          className="sc-gqjmRU czAFVG"
+          className="sc-gqjmRU gCluel"
         />
       </div>
     </div>

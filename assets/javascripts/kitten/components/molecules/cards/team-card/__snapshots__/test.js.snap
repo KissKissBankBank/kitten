@@ -8,7 +8,7 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
   
   <a
     aria-label="linkedin"
-    className="sc-htpNat lofwTs k-Button sc-bxivhb gLBSEl k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_linkedin k-Button--orion k-Button--fit-icon"
+    className="sc-htpNat gwTOIm k-Button sc-bxivhb gLBSEl k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_linkedin k-Button--orion k-Button--fit-icon"
     disabled={null}
     href="https://www.linkedin.com"
     rel="noopener"
@@ -39,7 +39,7 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
 exports[`<TeamCard /> with some props matches with snapshot 1`] = `
 Array [
   <div
-    className="sc-bwzfXH cnBWiK k-u-margin-bottom-double"
+    className="sc-bwzfXH ccOHwR k-u-margin-bottom-double"
     title="Title"
   />,
   <div
@@ -62,7 +62,7 @@ Array [
   >
     <a
       aria-label="E-mail"
-      className="sc-htpNat kHFTBH k-Button sc-bxivhb gLBSEl k-ButtonIcon k-ButtonIcon--phone k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-icon"
+      className="sc-htpNat eMzgOs k-Button sc-bxivhb gLBSEl k-ButtonIcon k-ButtonIcon--phone k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-icon"
       disabled={null}
       href="mailto:example@kisskissbankbank.com"
       style={
@@ -89,7 +89,7 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-htpNat kHFTBH k-Button sc-bxivhb gLBSEl k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-icon"
+      className="sc-htpNat eMzgOs k-Button sc-bxivhb gLBSEl k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-icon"
       disabled={null}
       href="tel:06 00 00 00 00"
       style={
@@ -114,7 +114,7 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-ifAKCX fZoPmN k-u-hidden@xs-down k-TeamCardIcons__buttonIcon"
+      className="sc-ifAKCX fgWFLA k-u-hidden@xs-down k-TeamCardIcons__buttonIcon"
       href="tel:06 00 00 00 00"
     >
       <span
@@ -127,7 +127,7 @@ Array [
       </span>
       <span
         aria-label="06 00 00 00 00"
-        className="sc-htpNat kHFTBH k-Button sc-bxivhb gLBSEl k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-icon"
+        className="sc-htpNat eMzgOs k-Button sc-bxivhb gLBSEl k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-icon"
         disabled={null}
         style={
           Object {
@@ -151,7 +151,7 @@ Array [
     </a>
     <a
       aria-label="linkedin"
-      className="sc-htpNat lofwTs k-Button sc-bxivhb gLBSEl k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_linkedin k-Button--orion k-Button--fit-icon"
+      className="sc-htpNat gwTOIm k-Button sc-bxivhb gLBSEl k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_linkedin k-Button--orion k-Button--fit-icon"
       disabled={null}
       href="https://www.linkedin.com"
       rel="noopener"
@@ -178,7 +178,7 @@ Array [
     </a>
     <a
       aria-label="twitter"
-      className="sc-htpNat hHEinK k-Button sc-bxivhb gLBSEl k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_twitter k-Button--orion k-Button--fit-icon"
+      className="sc-htpNat eMitTS k-Button sc-bxivhb gLBSEl k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--social_twitter k-Button--orion k-Button--fit-icon"
       disabled={null}
       href="https://www.twitter.com"
       rel="noopener"
